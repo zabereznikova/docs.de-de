@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-ms.openlocfilehash: 0fd9409a5157e1013365c94f01631f130a76f54b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d31b0190ef9a697fb27c849db080bec6c57618ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131218"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616384"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories-Enumeration
 Beschreibt die Kategorien von Funktionen, die der Host für die Ausführung in teilweise vertrauenswürdigem Code blockieren kann.  
@@ -46,7 +46,7 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`eAll`|Gibt an, dass alle verwalteten Klassen und Member, die von anderen `EApiCategories` Feldern abgedeckt werden, für die Ausführung in teilweise vertrauenswürdigem Code blockiert werden.|  
+|`eAll`|Gibt an, dass alle verwalteten Klassen und Member, die von anderen Feldern abgedeckt werden, `EApiCategories` in teilweise vertrauenswürdigem Code nicht ausgeführt werden können.|  
 |`eExternalProcessMgmt`|Gibt an, dass verwaltete Klassen und Member, die das Erstellen, manipulieren und zerstören externer Prozesse zulassen, für die Ausführung in teilweise vertrauenswürdigem Code blockiert werden.|  
 |`eExternalThreading`|Gibt an, dass verwaltete Klassen und Member, die das Erstellen, manipulieren und löschen externer Threads zulassen, für die Ausführung in teilweise vertrauenswürdigem Code blockiert werden.|  
 |`eMayLeakOnAbort`|Gibt an, dass verwaltete Typen und Member, die ggf. beim Abbruch Speicher abbrechen können, in teilweise vertrauenswürdigem Code blockiert werden.|  
@@ -59,20 +59,20 @@ typedef enum {
 |`eUI`|Gibt an, dass verwaltete Klassen und Member, die eine Benutzerinteraktion zulassen oder erfordern, in teilweise vertrauenswürdigem Code blockiert werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [iclrhostschutzmanager:: SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) -Methode nimmt einen Parameter vom Typ "`EApiCategories`" an.  
+ Die [iclrhostschutzmanager:: SetProtectedCategories](iclrhostprotectionmanager-setprotectedcategories-method.md) -Methode nimmt einen Parameter vom Typ an `EApiCategories` .  
   
- Die `EApiCategories`-Enumeration und die `SetProtectedCategories`-Methode sind direkt mit der verwalteten <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>-Klasse verknüpft. Die verwaltete Klasse wird mit der <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>-Enumeration verwendet, deren Werte direkt den `EApiCategories` Werten entsprechen, um verwaltete Typen und Member zu markieren, die Funktionen verfügbar machen, die den in `EApiCategories`beschriebenen Kategorien entsprechen.  
+ Die `EApiCategories` -Enumeration und die- `SetProtectedCategories` Methode sind direkt mit der verwalteten- <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> Klasse verknüpft. Die verwaltete Klasse wird mit der- <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> Enumeration verwendet, deren Werte direkt den `EApiCategories` Werten entsprechen, um verwaltete Typen und Member zu markieren, die Funktionen verfügbar machen, die den in beschriebenen Kategorien entsprechen `EApiCategories` .  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Mscoree. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICLRHostProtectionManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
-- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRHostProtectionManager-Schnittstelle](iclrhostprotectionmanager-interface.md)
+- [Hosten von Enumerationen](hosting-enumerations.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: f3b51c1b376fa9c664de53aa76ec724ca305ae6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178182"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617199"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion-Funktion
-Ruft die CLR-Versionsinformationen (Common Language Runtime) der angegebenen Datei mithilfe des angegebenen Puffers ab.  
+Ruft die Common Language Runtime (CLR)-Versionsinformationen der angegebenen Datei unter Verwendung des angegebenen Puffers ab.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,24 +39,24 @@ HRESULT GetFileVersion (
   
 ## <a name="parameters"></a>Parameter  
  `szFilename`  
- [in] Der Pfad der zu untersuchenden Datei.  
+ in Der Pfad der Datei, die überprüft werden soll.  
   
  `szBuffer`  
- [in, out] Der Puffer, der für die zurückgegebenen Versionsinformationen reserviert ist.  
+ [in, out] Der Puffer, der den zurückgegebenen Versionsinformationen zugeordnet ist.  
   
  `cchBuffer`  
- [in] Die Größe von in `szBuffer`weiten Zeichen von .  
+ in Die Größe von in breit Zeichen `szBuffer` .  
   
  `dwLength`  
- [out] Die Größe der zurückgegebenen `szBuffer`in Bytes .  
+ vorgenommen Die Größe (in Bytes) des zurückgegebenen `szBuffer` .  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

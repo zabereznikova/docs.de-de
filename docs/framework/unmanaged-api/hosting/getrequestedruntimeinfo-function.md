@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: db721e1ef774c87de0fa7da178463d832a3da756
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0efda458d51677fcd16140cd0f0a835b76c20173
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178155"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617177"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo-Funktion
-Ruft Versions- und Verzeichnisinformationen über die von einer Anwendung angeforderte Common Language Runtime (CLR) ab.  
+Ruft Informationen zur Version und zum Verzeichnis der von einer Anwendung angeforderten Common Language Runtime (CLR) ab.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,64 +47,64 @@ HRESULT GetRequestedRuntimeInfo (
   
 ## <a name="parameters"></a>Parameter  
  `pExe`  
- [in] Der Name der Anwendung.  
+ in Der Name der Anwendung.  
   
  `pwszVersion`  
- [in] Eine Zeichenfolge, die die Versionsnummer der Laufzeit angibt.  
+ in Eine Zeichenfolge, die die Versionsnummer der Laufzeit angibt.  
   
  `pConfigurationFile`  
- [in] Der Name der Konfigurationsdatei, `pExe`die mit verknüpft ist.  
+ in Der Name der Konfigurationsdatei, die zugeordnet ist `pExe` .  
   
  `startupFlags`  
- [in] Mindestens einer der [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) STARTUP_FLAGS-Enumerationswerte.  
+ in Mindestens ein [STARTUP_FLAGS](startup-flags-enumeration.md) Enumerationswert.  
   
  `runtimeInfoFlags`  
- [in] Mindestens einer der [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) RUNTIME_INFO_FLAGS-Enumerationswerte.  
+ in Mindestens ein [RUNTIME_INFO_FLAGS](runtime-info-flags-enumeration.md) Enumerationswert.  
   
  `pDirectory`  
- [out] Ein Puffer, der den Verzeichnispfad zur Laufzeit nach erfolgreichem Abschluss enthält.  
+ vorgenommen Ein Puffer, der nach erfolgreichem Abschluss den Verzeichnispfad zur Laufzeit enthält.  
   
  `dwDirectory`  
- [in] Die Länge des Verzeichnispuffers.  
+ in Die Länge des Verzeichnis Puffers.  
   
  `dwDirectoryLength`  
- [out] Ein Zeiger auf die Länge der Verzeichnispfadzeichenfolge.  
+ vorgenommen Ein Zeiger auf die Länge der Verzeichnispfad Zeichenfolge.  
   
  `pVersion`  
- [out] Ein Puffer, der die Versionsnummer der Laufzeit nach erfolgreichem Abschluss enthält.  
+ vorgenommen Ein Puffer, der die Versionsnummer der Laufzeit nach erfolgreichem Abschluss enthält.  
   
  `cchBuffer`  
- [in] Die Länge des Versionszeichenfolgenpuffers.  
+ in Die Länge des Versions Zeichen folgen Puffers.  
   
  `dwlength`  
- [out] Ein Zeiger auf die Länge der Versionszeichenfolge.  
+ vorgenommen Ein Zeiger auf die Länge der Versions Zeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt zusätzlich zu den folgenden Werten Com-Fehlercodes (Standard Component Object Model, COM) zurück, wie in WinError.h definiert.  
+ Diese Methode gibt zusätzlich zu den folgenden Werten in WinError. h definierte Standard-Component Object Model (com)-Fehlercodes zurück.  
   
-|Rückgabecode|Beschreibung|  
+|Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|ERROR_INSUFFICIENT_BUFFER|Der Verzeichnispuffer ist nicht groß genug, um den Verzeichnispfad zu speichern.<br /><br /> - oder -<br /><br /> Der Versionspuffer ist nicht groß genug, um die Versionszeichenfolge zu speichern.|  
+|ERROR_INSUFFICIENT_BUFFER|Der Verzeichnis Puffer ist nicht groß genug zum Speichern des Verzeichnis Pfads.<br /><br /> - oder -<br /><br /> Der Versions Puffer ist nicht groß genug, um die Versions Zeichenfolge zu speichern.|  
   
-## <a name="remarks"></a>Bemerkungen  
- Die `GetRequestedRuntimeInfo` Methode gibt Laufzeitinformationen über die in den Prozess geladene Version zurück, die nicht unbedingt die neueste Version ist, die auf dem Computer installiert ist.  
+## <a name="remarks"></a>Hinweise  
+ Die- `GetRequestedRuntimeInfo` Methode gibt Laufzeitinformationen zu der in den-Prozess geladenen Version zurück, die nicht notwendigerweise die neueste Version ist, die auf dem Computer installiert ist.  
   
- In .NET Framework Version 2.0 können Sie Informationen über die `GetRequestedRuntimeInfo` neueste installierte Version abrufen, indem Sie die Methode wie folgt verwenden:  
+ In der .NET Framework Version 2,0 können Sie mithilfe der-Methode wie folgt Informationen zur neuesten installierten Version erhalten `GetRequestedRuntimeInfo` :  
   
-- Geben `pExe`Sie `pwszVersion`die `pConfigurationFile` , und die Parameter als null an.  
+- Geben Sie `pExe` die `pwszVersion` Parameter, und `pConfigurationFile` als NULL an.  
   
-- Geben Sie das `RUNTIME_INFO_FLAGS` RUNTIME_INFO_UPGRADE_VERSION-Flag in `runtimeInfoFlags` den Enumerationen für den Parameter an.  
+- Geben Sie das RUNTIME_INFO_UPGRADE_VERSION-Flag in den `RUNTIME_INFO_FLAGS` Enumerationen für den- `runtimeInfoFlags` Parameter an.  
   
- Die `GetRequestedRuntimeInfo` Methode gibt unter den folgenden Umständen nicht die neueste CLR-Version zurück:  
+ Die- `GetRequestedRuntimeInfo` Methode gibt in den folgenden Situationen nicht die neueste CLR-Version zurück:  
   
-- Eine Anwendungskonfigurationsdatei, die das Laden einer bestimmten CLR-Version angibt, ist vorhanden. Beachten Sie, dass .NET Framework die Konfigurationsdatei auch `pConfigurationFile` dann verwendet, wenn Sie null für den Parameter angeben.  
+- Es ist eine Anwendungs Konfigurationsdatei vorhanden, die das Laden einer bestimmten CLR-Version angibt. Beachten Sie, dass die .NET Framework die Konfigurationsdatei auch dann verwendet, wenn Sie für den Parameter NULL angeben `pConfigurationFile` .  
   
-- Die [CorBindToRuntimeEx-Methode](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) wurde aufgerufen, die eine frühere CLR-Version angibt.  
+- Die [CorBindToRuntimeEx](corbindtoruntimeex-function.md) -Methode wurde aufgerufen, um eine frühere CLR-Version anzugeben.  
   
-- Eine Anwendung, die für eine frühere CLR-Version kompiliert wurde, wird derzeit ausgeführt.  
+- Eine Anwendung, die für eine frühere CLR-Version kompiliert wurde, wird zurzeit ausgeführt.  
   
- Für `runtimeInfoFlags` den Parameter können Sie jeweils nur eine `RUNTIME_INFO_FLAGS` der Architekturkonstanten der Enumeration angeben:  
+ Für den- `runtimeInfoFlags` Parameter können Sie jeweils nur eine der Architektur Konstanten der- `RUNTIME_INFO_FLAGS` Enumeration angeben:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -112,17 +112,17 @@ HRESULT GetRequestedRuntimeInfo (
   
 - RUNTIME_INFO_REQUEST_X86  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [GetRequestedRuntimeVersion-Funktion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [GetVersionFromProcess-Funktion](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
-- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [GetRequestedRuntimeVersion-Funktion](getrequestedruntimeversion-function.md)
+- [GetVersionFromProcess-Funktion](getversionfromprocess-function.md)
+- [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

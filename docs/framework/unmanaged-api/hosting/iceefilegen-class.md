@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc0de164b9489c9661bc6cb0ffb681f75e88ea26
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176395"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617008"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen-Klasse
-Bietet Funktionen zum Erstellen einer nativen portablen ausführbaren Datei (PE). Die Schnittstelle wird in der Regel von Compilern verwendet, um ihre ausführbare Ausgabe dateiierbar zu generieren.  
+Stellt Funktionen zum Erstellen einer nativen PE-Datei (Portable portable ausführbare Datei) bereit. Die-Schnittstelle wird in der Regel von Compilern verwendet, um Ihre kompilierte ausführbare Ausgabedatei zu generieren  
   
 > [!NOTE]
-> `ICeeFileGen`unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung aus dem Code vorgesehen.  
+> `ICeeFileGen`unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.  
   
- Diese Schnittstelle wurde veraltet und wird in einer zukünftigen Version entfernt.  
+ Diese Schnittstelle ist veraltet und wird in einer zukünftigen Version entfernt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -234,13 +234,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** ICeeFileGen.h  
+ **Header:** ICeeFileGen. h  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework Version:** 1,0  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](hosting-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7e99879-421f-43ce-b193-34733cf30085
 topic_type:
 - apiref
-ms.openlocfilehash: dbf876a514ce106c566a168f688eb3a22d3a1ea2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 06a331e24622e0a155d974ca869818a6532baa1f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449045"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615539"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum-Methode
 Legt Prüfsummeninformationen fest.  
@@ -39,7 +39,7 @@ HRESULT SetCheckSum(
  in Die GUID, die den Algorithmusbezeichner darstellt.  
   
  `checkSumSize`  
- in Ein-`ULONG32`, der die Größe des `checkSum` Puffers in Bytes angibt.  
+ in Eine `ULONG32` , die die Größe des Puffers in Bytes angibt `checkSum` .  
   
  `checkSum`  
  in Der Puffer, der die Prüfsummeninformationen speichert.  
@@ -47,9 +47,9 @@ HRESULT SetCheckSum(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedDocumentWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+- [ISymUnmanagedDocumentWriter-Schnittstelle](isymunmanageddocumentwriter-interface.md)

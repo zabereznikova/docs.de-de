@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: a04a0c5e6865c3664d2cb5fb341c3625e35d4d7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbaf45da0902ded8a2f7bf0d470aaed3b5f531aa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178128"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617125"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess-Funktion
-Ruft die Versionsnummer der Common Language Runtime (CLR) ab, die dem angegebenen Prozesshandle zugeordnet ist.  
+Ruft die Versionsnummer der Common Language Runtime (CLR) ab, die dem angegebenen Prozess Handle zugeordnet ist.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,38 +40,38 @@ HRESULT GetVersionFromProcess (
   
 ## <a name="parameters"></a>Parameter  
  `hProcess`  
- [in] Ein Handle für einen Prozess.  
+ in Ein Handle für einen Prozess.  
   
  `pVersion`  
- [out] Ein Puffer, der die Versionsnummernzeichenfolge nach erfolgreichem Abschluss der Methode enthält.  
+ vorgenommen Ein Puffer, der die Versionsnummern Zeichenfolge nach erfolgreichem Abschluss der Methode enthält.  
   
  `cchBuffer`  
- [in] Die Länge des Versionspuffers.  
+ in Die Länge des Versions Puffers.  
   
  `pdwLength`  
- [out] Ein Zeiger auf die Länge der Versionsnummernzeichenfolge.  
+ vorgenommen Ein Zeiger auf die Länge der Versionsnummern Zeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt zusätzlich zu den folgenden Werten Com-Fehlercodes (Standard Component Object Model, COM) zurück, wie in WinError.h definiert.  
+ Diese Methode gibt zusätzlich zu den folgenden Werten in WinError. h definierte Standard-Component Object Model (com)-Fehlercodes zurück.  
   
-|Rückgabecode|Beschreibung|  
+|Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`pVersion`ist null `cchBuffer` und ist nicht null oder umgekehrt.<br /><br /> Oder<br /><br /> `hProcess`ist kein gültiges Handle für einen Prozess.<br /><br /> Oder<br /><br /> Die CLR wird nicht geladen.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`null oder kleiner als die Länge der Versionszeichenfolge ist.|  
-|E_NOTIMPL|Diese Methode ist für das Betriebssystem Microsoft Windows 95, Microsoft Windows 98 oder Microsoft Windows Millennium Edition nicht verfügbar.|  
+|E_INVALIDARG|`pVersion`ist NULL und `cchBuffer` ist nicht NULL (oder umgekehrt).<br /><br /> - oder -<br /><br /> `hProcess`ist kein gültiges Handle für einen Prozess.<br /><br /> - oder -<br /><br /> Die CLR ist nicht geladen.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`ist NULL oder kleiner als die Länge der Versions Zeichenfolge.|  
+|E_NOTIMPL|Diese Methode ist nicht im Betriebssystem Microsoft Windows 95, Microsoft Windows 98 oder Microsoft Windows Millennium Edition verfügbar.|  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [GetRequestedRuntimeInfo-Funktion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [GetRequestedRuntimeVersion-Funktion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [GetRequestedRuntimeInfo-Funktion](getrequestedruntimeinfo-function.md)
+- [GetRequestedRuntimeVersion-Funktion](getrequestedruntimeversion-function.md)
+- [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-ms.openlocfilehash: ebbbdf02837cb1257ec4756c9d67f5a1ac0136fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12a1142759532890f541a7c81006f8b3aed4d299
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131188"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616267"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind-Enumeration
-Reserviert für zukünftige Erweiterungen der [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) -Struktur.  
+Reserviert für zukünftige Erweiterungen der [CustomDumpItem](customdumpitem-structure.md) -Struktur.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,18 +36,18 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|Für zukünftige Verwendung reserviert.|  
+|`DUMP_ITEM_None`|Für die zukünftige Verwendung reserviert.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Mscoree. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICLRErrorReportingManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRErrorReportingManager-Schnittstelle](iclrerrorreportingmanager-interface.md)
+- [Hosten von Enumerationen](hosting-enumerations.md)

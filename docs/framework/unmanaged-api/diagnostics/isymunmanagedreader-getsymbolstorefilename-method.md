@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-ms.openlocfilehash: b3674c4058dba2f6185418b55b35eefb14c312f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6ffab3b2f81680404f870cfd63ae5125173a346c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431240"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615513"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName-Methode
 Gibt den Dateinamen des Symbol Speicher auf dem Datenträger an.  
@@ -40,7 +40,7 @@ HRESULT GetSymbolStoreFileName (
  in Die Größe des `szName` Puffers.  
   
  `pcchName`  
- vorgenommen Ein Zeiger auf die Variable, die die Länge des in `szName`zurückgegebenen Namens einschließlich der NULL-Beendigung empfängt.  
+ vorgenommen Ein Zeiger auf die Variable, die die Länge des in zurückgegebenen namens `szName` einschließlich der NULL-Beendigung empfängt.  
   
  `szName`  
  vorgenommen Ein Zeiger auf die Variable, die den Dateinamen des Symbol Speicher empfängt.  
@@ -48,9 +48,9 @@ HRESULT GetSymbolStoreFileName (
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)

@@ -14,40 +14,40 @@ helpviewer_keywords:
 ms.assetid: ea8af0d5-4133-4472-8a1f-50570d7e85fa
 topic_type:
 - apiref
-ms.openlocfilehash: 49a60b6b9b076138d8ff1f8a15041e9a6bacfede
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dbe4129cf4160a1a9b31bc6f418095ea4b392d57
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129243"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616995"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager-Schnittstelle
 Stellt Methoden bereit, die es dem Host ermöglichen, benutzerdefinierte stackdumps für die Fehlerberichterstattung zu konfigurieren.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[BeginCustomDump-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|Gibt die Konfiguration von benutzerdefinierten stackdumps für die Fehlerberichterstattung an.|  
-|[EndCustomDump-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Löscht die benutzerdefinierte Stapel Sicherungs Konfiguration, die durch einen früheren-`BeginCustomDump`festgelegt wurde.|  
-|[GetBucketParametersForCurrentException-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Ruft den Watson-Bucket für die aktuelle Ausnahme im aufrufenden Thread ab.|  
+|[BeginCustomDump-Methode](iclrerrorreportingmanager-begincustomdump-method.md)|Gibt die Konfiguration von benutzerdefinierten stackdumps für die Fehlerberichterstattung an.|  
+|[EndCustomDump-Methode](iclrerrorreportingmanager-endcustomdump-method.md)|Löscht die benutzerdefinierte Stapel Sicherungs Konfiguration, die durch einen früheren-Aufrufsatz festgelegt wurde `BeginCustomDump` .|  
+|[GetBucketParametersForCurrentException-Methode](iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Ruft den Watson-Bucket für die aktuelle Ausnahme im aufrufenden Thread ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `BeginCustomDump`-Methode legt die benutzerdefinierte Stapel Sicherungs Konfiguration fest. Die `EndCustomDump`-Methode löscht die benutzerdefinierte Stapel Sicherungs Konfiguration und gibt jeden zugeordneten Zustand frei. Er sollte aufgerufen werden, nachdem der benutzerdefinierte Dump fertiggestellt wurde.  
+ Die- `BeginCustomDump` Methode legt die benutzerdefinierte Stapel Sicherungs Konfiguration fest. Die `EndCustomDump` -Methode löscht die benutzerdefinierte Stapel Sicherungs Konfiguration und gibt jeden zugeordneten Zustand frei. Er sollte aufgerufen werden, nachdem der benutzerdefinierte Dump fertiggestellt wurde.  
   
 > [!IMPORTANT]
-> Wenn `EndCustomDump` nicht aufgerufen wird, verursacht der Speicher einen Fehler.  
+> Wenn Sie den Vorgang nicht aufzurufen, ist der `EndCustomDump` Speicherfehler  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ECustomDumpItemKind-Enumeration](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ECustomDumpItemKind-Enumeration](ecustomdumpitemkind-enumeration.md)
+- [Hostingschnittstellen](hosting-interfaces.md)

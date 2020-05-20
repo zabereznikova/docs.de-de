@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-ms.openlocfilehash: da14d159b1933112e95a9a8973b2fad62f25288f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b3c5fc4731029561129609601b8e0635f6a9516c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126854"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617034"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices-Schnittstelle
 Stellt Methoden für das Katalogisieren von Diensten bereit.  
@@ -28,11 +28,11 @@ Stellt Methoden für das Katalogisieren von Diensten bereit.
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[Autodone-Methode](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[NotAutodone-Methode](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[Autodone-Methode](icatalogservices-autodone-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[NotAutodone-Methode](icatalogservices-notautodone-method.md)|Nur für die interne Verwendung vorgesehen.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](hosting-interfaces.md)

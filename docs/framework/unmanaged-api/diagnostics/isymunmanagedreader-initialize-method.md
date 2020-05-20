@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429739"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615474"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize-Methode
 Initialisiert den Symbol Reader mit der metadatenimporterschnittstelle, der dieser Reader zugeordnet ist, zusammen mit dem Dateinamen des Moduls.  
@@ -43,7 +43,7 @@ HRESULT Initialize (
  in Die metadatenimporterschnittstelle, der dieser Reader zugeordnet wird.  
   
  `filename`  
- in Der Dateiname des Moduls. Sie können stattdessen den `pIStream`-Parameter verwenden.  
+ in Der Dateiname des Moduls. Stattdessen können Sie den- `pIStream` Parameter verwenden.  
   
  `searchPath`  
  in Der zu durchsuchende Pfad. Dieser Parameter ist optional.  
@@ -55,11 +55,11 @@ HRESULT Initialize (
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie müssen nur einen der `filename` oder die `pIStream` Parameter angeben, nicht beides. Der Parameter `searchPath` ist optional.  
+ Sie müssen nur einen der `filename` Parameter oder angeben `pIStream` , nicht beides. Das `searchPath` ist optional.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)

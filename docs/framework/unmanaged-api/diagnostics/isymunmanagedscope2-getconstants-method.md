@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f558d209d13fae93bd3a6f5e0e653afb91371a6a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176616"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615331"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants-Methode
 Ruft die in diesem Bereich definierten lokalen Konstanten ab.  
@@ -38,20 +38,20 @@ HRESULT GetConstants(
   
 ## <a name="parameters"></a>Parameter  
  `cConstants`  
- [in] Die Länge des Puffers, auf den der `pcConstants` Parameter zeigt.  
+ in Die Länge des Puffers, auf den der- `pcConstants` Parameter verweist.  
   
  `pcConstants`  
- [out] Ein Zeiger auf `ULONG32` eine, der die Größe des Puffers in Zeichen empfängt, der erforderlich ist, um die Konstanten zu enthalten.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers in Zeichen empfängt, der zum enthalten der Konstanten erforderlich ist.  
   
  `constants`  
- [out] Der Puffer, der die Konstanten speichert.  
+ vorgenommen Der Puffer, in dem die Konstanten gespeichert werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, ob die Methode erfolgreich ist. andernfalls E_FAIL oder einem anderen Fehlercode.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Kopfzeile:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedScope2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [ISymUnmanagedScope2-Schnittstelle](isymunmanagedscope2-interface.md)

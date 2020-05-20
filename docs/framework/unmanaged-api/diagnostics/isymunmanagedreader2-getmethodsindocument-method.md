@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-ms.openlocfilehash: 70c1d87ae32fb70f8d9f6e32b527394022459526
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 68a0f9ec8793d465a6fa3b1cb6936eddd7be4c8f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446432"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615409"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument-Methode
 Ruft jede Methode ab, die im angegebenen Dokument über Zeilen Informationen verfügt.  
@@ -41,10 +41,10 @@ HRESULT GetMethodsInDocument(
  in Ein Zeiger auf das Dokument.  
   
  `cMethod`  
- in Ein-`ULONG32`, der die Größe des `pRetVal` Arrays angibt.  
+ in Ein-Wert `ULONG32` , der die Größe des `pRetVal` Arrays angibt.  
   
  `pcMethod`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers empfängt, der zum enthalten der Methoden erforderlich ist.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers empfängt, der zum enthalten der Methoden erforderlich ist.  
   
  `pRetVal`  
  vorgenommen Ein Zeiger auf den Puffer, der die Methoden empfängt.  
@@ -52,9 +52,9 @@ HRESULT GetMethodsInDocument(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedReader2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2-Schnittstelle](isymunmanagedreader2-interface.md)

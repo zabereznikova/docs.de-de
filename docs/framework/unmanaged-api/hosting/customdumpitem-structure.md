@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c77a332593ba470d2e29b87cba182a770d5db7e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176473"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616436"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem-Struktur
 Beschreibt ein Element, das einem benutzerdefinierten Dump in der Fehlerberichterstattung hinzugefügt werden soll.  
@@ -35,25 +35,25 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`itemKind`|Ein [ECustomDumpItemKind-Wert,](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) der die Art des hinzuzufügenden Elements angibt.|  
-|`pReserved`|Derzeit nicht verwendet. Alle Elemente, die der Union hinzugefügt werden, dürfen nicht größer als die Zeigergröße sein. Wenn `struct` a erforderlich ist, müssen Sie es separat zuweisen und darauf zeigen.|  
+|`itemKind`|Ein [ECustomDumpItemKind](ecustomdumpitemkind-enumeration.md) -Wert, der die Art des hinzu zufügenden Elements angibt.|  
+|`pReserved`|Derzeit nicht verwendet. Alle Elemente, die der Union hinzugefügt werden, dürfen nicht größer als die Zeiger Größe sein. Wenn eine `struct` erforderlich ist, müssen Sie Sie separat zuordnen und darauf verweisen.|  
   
-## <a name="remarks"></a>Bemerkungen  
- [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) nimmt einen `CustomDumpItem`Parameter vom Typ an.  
+## <a name="remarks"></a>Hinweise  
+ [ICLRErrorReportingManager:: BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md) nimmt einen Parameter vom Typ an `CustomDumpItem` .  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** MSCorEE.idl  
+ **Header:** Mscoree. idl  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Hostingstrukturen](hosting-structures.md)

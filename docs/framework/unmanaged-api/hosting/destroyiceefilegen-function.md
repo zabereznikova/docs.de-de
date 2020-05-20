@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-ms.openlocfilehash: 4eb878b61b72378bc6870af7f2cd09f0b6943b13
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff7e7b299d185b8db263d2076c1e075b87b487fc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136500"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616397"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen-Funktion
-Zerstört ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) -Objekt.  
+Zerstört ein [ICeeFileGen](iceefilegen-class.md) -Objekt.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
@@ -44,17 +44,17 @@ HRESULT DestroyICeeFileGen (
  Diese Methode gibt com-Standard Fehlercodes zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- `DestroyICeeFileGen` zerstört das `ICeeFileGen` Objekt [, das von der Funktion "](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) -Funktion" erstellt wurde.  
+ `DestroyICeeFileGen`zerstört das-Objekt, das `ICeeFileGen` von der Funktion " [kreateiceefilegen](createiceefilegen-function.md) " erstellt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** ICeeFileGen. h  
   
  **Bibliothek:** Mscorpe. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

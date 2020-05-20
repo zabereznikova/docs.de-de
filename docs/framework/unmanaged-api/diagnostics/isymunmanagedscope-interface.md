@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: 3db7a220-cfe9-4810-8ca8-a094bb8e0f5b
 topic_type:
 - apiref
-ms.openlocfilehash: 8da4da38d23ed65a0fdc44a0f919ee8cad2fe18e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1ee406c97fa4ccb7f87098cba2925568d8ce069f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446266"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615344"
 ---
 # <a name="isymunmanagedscope-interface"></a>ISymUnmanagedScope-Schnittstelle
 Stellt einen lexikalischen Gültigkeitsbereich innerhalb einer Methode dar.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[GetChildren-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)|Ruft die untergeordneten Elemente dieses Gültigkeits Bereichs ab.|  
-|[GetEndOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)|Ruft den Endoffset für diesen Bereich ab.|  
-|[GetLocalCount-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocalcount-method.md)|Ruft die Anzahl der in diesem Bereich definierten lokalen Variablen ab.|  
-|[GetLocals-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocals-method.md)|Ruft die in diesem Bereich definierten lokalen Variablen ab.|  
-|[GetMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getmethod-method.md)|Ruft die Methode ab, die diesen Bereich enthält.|  
-|[GetNamespaces-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getnamespaces-method.md)|Ruft die Namespaces ab, die in diesem Bereich verwendet werden.|  
-|[GetParent-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)|Ruft den übergeordneten Gültigkeitsbereich dieses Bereichs ab.|  
-|[GetStartOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)|Ruft den Start Offset für diesen Bereich ab.|  
+|[GetChildren-Methode](isymunmanagedscope-getchildren-method.md)|Ruft die untergeordneten Elemente dieses Gültigkeits Bereichs ab.|  
+|[GetEndOffset-Methode](isymunmanagedscope-getendoffset-method.md)|Ruft den Endoffset für diesen Bereich ab.|  
+|[GetLocalCount-Methode](isymunmanagedscope-getlocalcount-method.md)|Ruft die Anzahl der in diesem Bereich definierten lokalen Variablen ab.|  
+|[GetLocals-Methode](isymunmanagedscope-getlocals-method.md)|Ruft die in diesem Bereich definierten lokalen Variablen ab.|  
+|[GetMethod-Methode](isymunmanagedscope-getmethod-method.md)|Ruft die Methode ab, die diesen Bereich enthält.|  
+|[GetNamespaces-Methode](isymunmanagedscope-getnamespaces-method.md)|Ruft die Namespaces ab, die in diesem Bereich verwendet werden.|  
+|[GetParent-Methode](isymunmanagedscope-getparent-method.md)|Ruft den übergeordneten Gültigkeitsbereich dieses Bereichs ab.|  
+|[GetStartOffset-Methode](isymunmanagedscope-getstartoffset-method.md)|Ruft den Start Offset für diesen Bereich ab.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedScope2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedScope2-Schnittstelle](isymunmanagedscope2-interface.md)
