@@ -110,7 +110,7 @@ Das Testprojekt kann derzeit nicht die Typen in `NewTypes` testen und benötigt 
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
-Alternativ haben Sie auch die Möglichkeit, den Projektverweis manuell hinzuzufügen, indem Sie der `<ItemGroup>`NewTypesTests.csproj *-Datei einen* -Knoten hinzufügen:
+Alternativ haben Sie auch die Möglichkeit, den Projektverweis manuell hinzuzufügen, indem Sie der *NewTypesTests.csproj*-Datei einen `<ItemGroup>`-Knoten hinzufügen:
 
 ```xml
 <ItemGroup>

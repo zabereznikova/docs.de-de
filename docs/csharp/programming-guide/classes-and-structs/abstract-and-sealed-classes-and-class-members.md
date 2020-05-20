@@ -37,7 +37,7 @@ Das Schlüsselwort [abstract](../../language-reference/keywords/abstract.md) erm
  Wenn eine `virtual`-Methode als `abstract` deklariert ist, bleibt sie für alle Klassen virtuell, die von der abstrakten Klasse erben. Eine Klasse, die eine abstrakte Methode erbt, kann nicht auf die ursprüngliche Implementierung der Methode zugreifen. Im vorherigen Beispiel konnte `DoWork` auf Klasse F `DoWork` auf Klasse D nicht aufrufen. So kann eine abstrakte Klasse abgeleitete Klassen dazu zwingen, neue Methodenimplementierungen für virtuelle Methoden bereitzustellen.  
   
 ## <a name="sealed-classes-and-class-members"></a>Versiegelte Klassen und Klassenmember  
- Klassen können durch Festlegen des Schlüsselworts [ vor der Klassendefinition als ](../../language-reference/keywords/sealed.md)sealed`sealed` deklariert werden. Beispiel:  
+ Klassen können durch Festlegen des Schlüsselworts `sealed` vor der Klassendefinition als [sealed](../../language-reference/keywords/sealed.md) deklariert werden. Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  
   

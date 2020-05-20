@@ -104,7 +104,7 @@ float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + th
 
 ## <a name="inspect-values-in-a-single-column"></a>Überprüfen von Werten in einer einzelnen Spalte
 
-Mit der [`IDataView`](xref:Microsoft.ML.IDataView)-Methode kann zu jedem beliebigen Zeitpunkt im Modellerstellungsprozess auf Werte in einer einzelnen Spalte einer [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) zugegriffen werden. Die [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode gibt alle Werte in einer einzelne Spalte als [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) wieder.
+Mit der [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode kann zu jedem beliebigen Zeitpunkt im Modellerstellungsprozess auf Werte in einer einzelnen Spalte einer [`IDataView`](xref:Microsoft.ML.IDataView) zugegriffen werden. Die [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode gibt alle Werte in einer einzelne Spalte als [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) wieder.
 
 ```csharp
 IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();

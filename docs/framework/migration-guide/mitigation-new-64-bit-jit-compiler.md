@@ -61,9 +61,9 @@ Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für 
     </configuration>  
     ```  
   
-- Auf Benutzerbasis können Sie dem `REG_DWORD`-Wert der Registrierung einen `useLegacyJit`-Wert mit dem Namen `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` hinzufügen. Der Wert 1 aktiviert den 64-Bit-Legacy-JIT-Compiler, der Wert 0 deaktiviert ihn und aktiviert stattdessen den neuen 64-Bit-JIT-Compiler.  
+- Auf Benutzerbasis können Sie dem `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`-Wert der Registrierung einen `REG_DWORD`-Wert mit dem Namen `useLegacyJit` hinzufügen. Der Wert 1 aktiviert den 64-Bit-Legacy-JIT-Compiler, der Wert 0 deaktiviert ihn und aktiviert stattdessen den neuen 64-Bit-JIT-Compiler.  
   
-- Auf Computerbasis können Sie dem `REG_DWORD`-Schlüssel der Registrierung einen `useLegacyJit`-Wert mit dem Namen `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` hinzufügen. Der Wert 1 aktiviert den 64-Bit-Legacy-JIT-Compiler, der Wert 0 deaktiviert ihn und aktiviert stattdessen den neuen 64-Bit-JIT-Compiler.  
+- Auf Computerbasis können Sie dem `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`-Schlüssel der Registrierung einen `REG_DWORD`-Wert mit dem Namen `useLegacyJit` hinzufügen. Der Wert 1 aktiviert den 64-Bit-Legacy-JIT-Compiler, der Wert 0 deaktiviert ihn und aktiviert stattdessen den neuen 64-Bit-JIT-Compiler.  
   
  Ferner können Sie uns über das Problem informieren, indem Sie einen Bug auf [Microsoft Connect](https://connect.microsoft.com/VisualStudio) melden.  
   

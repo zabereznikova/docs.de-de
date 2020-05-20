@@ -57,7 +57,7 @@ class DerivedClass : BaseClass
 
 Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly2.cs`.
 Die erste Datei enthält eine öffentliche Basisklasse, `BaseClass`, und eine weitere Klasse, `TestAccess`. `BaseClass` besitzt einen Member vom Typ „protected internal“, `myValue`, auf den über den Typ `TestAccess` zugegriffen wird.
-In der zweiten Datei verursacht ein Versuch, über eine `myValue`-Instanz auf `BaseClass` zuzugreifen, einen Fehler, während ein Zugriff auf diesen Member über eine Instanz einer abgeleiteten Klasse `DerivedClass` gelingt.
+In der zweiten Datei verursacht ein Versuch, über eine `BaseClass`-Instanz auf `myValue` zuzugreifen, einen Fehler, während ein Zugriff auf diesen Member über eine Instanz einer abgeleiteten Klasse `DerivedClass` gelingt.
 
 Strukturmember können nicht vom Typ `protected internal` sein, da die Struktur nicht vererbt werden kann.
 

@@ -45,9 +45,9 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
 2. Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in Visual Basic) ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
   
-3. Fügen Sie dem <xref:System.Windows.Forms.ToolStripButton>-Steuerelement ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Ordner auswählen** fest.  
+3. Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Ordner auswählen** fest.  
   
-4. Fügen Sie dem <xref:System.Windows.Forms.ToolStripButton>-Steuerelement ein zweites <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Abbrechen** und die <xref:System.Windows.Forms.ToolStripItem.Enabled%2A>-Eigenschaft auf `False` fest.  
+4. Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein zweites <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Abbrechen** und die <xref:System.Windows.Forms.ToolStripItem.Enabled%2A>-Eigenschaft auf `False` fest.  
   
 5. Fügen Sie dem Hauptformular ein <xref:System.Windows.Forms.PictureBox>-Objekt hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill> fest.  
   
@@ -67,7 +67,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4. Fügen Sie der `CreateImageProcessingNetwork`-Klasse die folgende `Form1`-Methode hinzu: Diese Methode erstellt das Bildverarbeitungsnetzwerk.  
+4. Fügen Sie der `Form1`-Klasse die folgende `CreateImageProcessingNetwork`-Methode hinzu: Diese Methode erstellt das Bildverarbeitungsnetzwerk.  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   

@@ -110,7 +110,7 @@ In den folgenden Abschnitten werden die Vorgehensweisen beschrieben, denen das C
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > Achten Sie darauf, nicht versehentlich den Typ eines Elements in der Iterable-Sammlung zu ändern. Beispielsweise ist es einfach, in einer <xref:System.Linq.IQueryable?displayProperty=nameWithType>-Anweisung von <xref:System.Collections.IEnumerable?displayProperty=nameWithType> zu `foreach` zu wechseln, was die Ausführung einer Abfrage ändert.
+     > Achten Sie darauf, nicht versehentlich den Typ eines Elements in der Iterable-Sammlung zu ändern. Beispielsweise ist es einfach, in einer `foreach`-Anweisung von <xref:System.Linq.IQueryable?displayProperty=nameWithType> zu <xref:System.Collections.IEnumerable?displayProperty=nameWithType> zu wechseln, was die Ausführung einer Abfrage ändert.
 
 ### <a name="unsigned-data-type"></a>Datentyp ohne Vorzeichen  
   

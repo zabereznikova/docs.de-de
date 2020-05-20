@@ -43,7 +43,7 @@ Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compile
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung von [seealso> finden Sie unter \<](./summary.md)summary>\<.
+Ein Beispiel für die Verwendung von \<seealso> finden Sie unter [\<summary>](./summary.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

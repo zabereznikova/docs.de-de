@@ -34,8 +34,8 @@ Das Ausführen von `restore` als Teil des `publish`-Vorgangs kann für Ihr Szena
 
 Wenn Sie sowohl eigenständige Anwendungen und [Framework-abhängige Anwendungen](index.md) mit derselben Projektdatei erstellen und das Argument `--no-restore` mit `dotnet publish` verwenden möchten, wählen Sie eine der folgenden Optionen aus:
 
-1. Framework-abhängiges Verhalten bevorzugen. Wenn die Anwendung Framework-abhängig ist, ist dies das Standardverhalten. Wenn die Anwendung eigenständig ist und eine nicht gepatchte lokale Runtime (2.1.0) verwenden kann, legen Sie `TargetLatestRuntimePatch` für `false` in der Projektdatei fest.
+1. Framework-abhängiges Verhalten bevorzugen. Wenn die Anwendung Framework-abhängig ist, ist dies das Standardverhalten. Wenn die Anwendung eigenständig ist und eine nicht gepatchte lokale Runtime (2.1.0) verwenden kann, legen Sie `false` für `TargetLatestRuntimePatch` in der Projektdatei fest.
 
-2. Eigenständiges Verhalten bevorzugen. Wenn die Anwendung eigenständig ist, ist dies das Standardverhalten. Wenn die Anwendung Framework-abhängig ist und den neuesten Patch erfordert, legen Sie `TargetLatestRuntimePatch` für `true` in der Projektdatei fest.
+2. Eigenständiges Verhalten bevorzugen. Wenn die Anwendung eigenständig ist, ist dies das Standardverhalten. Wenn die Anwendung Framework-abhängig ist und den neuesten Patch erfordert, legen Sie `true` für `TargetLatestRuntimePatch` in der Projektdatei fest.
 
 3. Übernehmen Sie die explizite Kontrolle über die Runtime-Framework-Version, indem Sie für `RuntimeFrameworkVersion` die spezifische Patchversion in der Projektdatei festlegen.

@@ -45,7 +45,7 @@ Im nächste Verfahren finden Sie einige einfache Schritte zum Erstellen einer As
 
 3. Wählen Sie das Feld **Sign the assembly** (Assembly signieren) aus.
 
-4. Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen\<** **Neu>** aus.
+4. Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen****\<Neu>** aus.
 
      Das Dialogfeld **Schlüssel für einen starken Namen erstellen** wird geöffnet.
 

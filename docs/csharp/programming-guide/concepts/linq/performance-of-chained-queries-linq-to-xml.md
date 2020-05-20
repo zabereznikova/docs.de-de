@@ -47,7 +47,7 @@ Diese verkettete Abfrage bietet dasselbe Leistungsprofil wie das Durchlaufen ein
 
 - In `query1` wird von der Abfrage durch die `where`-Klausel die <xref:System.Linq.Enumerable.Where%2A>-Methode aufgerufen. Diese Methode ist auch als Iterator implementiert. Die Einrichtung besteht neben den normalen Einrichtungsschritten für einen Iterator aus dem Instanziieren des Delegaten, der auf den Lambdaausdruck verweist. Der Delegat wird bei jeder Iteration aufgerufen, um das Prädikat auszuführen. Diese Einrichtungsschritte und die Arbeitsschritte, die in jeder Iteration durchgeführt werden, ähneln den Arbeitsschritten, die beim Durchlaufen einer Iteration der Achse durchgeführt werden.
 
-- In `query1` wird von der Abfrage durch die <xref:System.Linq.Enumerable.Select%2A>select{3}-Klausel die {4}-Methode aufgerufen. Diese Methode weist dasselbe Leistungsprofil wie die <xref:System.Linq.Enumerable.Where%2A>-Methode auf.
+- In `query1` wird von der Abfrage durch die <xref:System.Linq.Enumerable.Select%2A>select<xref:System.Linq.Enumerable.Select%2A>-Klausel die {3}-Methode aufgerufen. Diese Methode weist dasselbe Leistungsprofil wie die <xref:System.Linq.Enumerable.Where%2A>-Methode auf.
 
 - In `query2` verfügen sowohl die `where`-Klausel als auch die `select`-Klausel über dasselbe Leistungsprofil wie in `query1`.
 

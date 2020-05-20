@@ -13,7 +13,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048273"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Gewusst wie: Überschreiben einer globalen Proxyauswahl
-In diesem Beispiel wird an **eine**WebRequest`www.contoso.com` gesendet, die die globale Proxyauswahl mit einem Proxyserver namens `alternateproxy` auf Port 80 überschreibt.  
+In diesem Beispiel wird an `www.contoso.com` eine **WebRequest** gesendet, die die globale Proxyauswahl mit einem Proxyserver namens `alternateproxy` auf Port 80 überschreibt.  
   
 ## <a name="example"></a>Beispiel  
   

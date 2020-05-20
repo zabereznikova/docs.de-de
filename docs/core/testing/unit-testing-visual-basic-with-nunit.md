@@ -157,7 +157,7 @@ Statt neue Tests zu erstellen, wenden Sie diese beiden Attribute zum Erstellen e
 
 [!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-Führen Sie `dotnet test` aus und zwei dieser Tests schlagen fehl. Damit alle Tests erfolgreich sind, ändern Sie in der Datei `if`PrimeServices.cs`Main` am Anfang der Methode *die*-Klausel:
+Führen Sie `dotnet test` aus und zwei dieser Tests schlagen fehl. Damit alle Tests erfolgreich sind, ändern Sie in der Datei *PrimeServices.cs* am Anfang der Methode `Main` die `if`-Klausel:
 
 ```vb
 if candidate < 2

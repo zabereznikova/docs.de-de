@@ -53,7 +53,7 @@ Umgekehrt kann eine implizite Konvertierung dynamisch auf einen Ausdruck vom Typ
 
 ## <a name="overload-resolution-with-arguments-of-type-dynamic"></a>Überladungsauflösung mit Argumenten vom Typ „dynamic“
 
-Überladungsauflösung erfolgt zur Laufzeit anstatt zur Kompilierzeit, wenn eines oder mehrere der Argumente in einem Methodenaufruf vom Typ `dynamic` sind, oder wenn der Empfänger des Methodenaufrufs vom Typ `dynamic` ist. Im folgenden Beispiel wird durch das Senden von `exampleMethod2` als Argument kein Compilerfehler ausgelöst, wenn die einzige zugängliche `d1`-Methode so definiert wird, dass sie ein Zeichenfolgenargument akzeptiert. Allerdings wird eine Laufzeitausnahme ausgelöst. Die Überladungsauflösung schlägt zur Laufzeit fehl, da der Laufzeittyp von `d1``int` ist und `exampleMethod2` eine Zeichenfolge benötigt.
+Überladungsauflösung erfolgt zur Laufzeit anstatt zur Kompilierzeit, wenn eines oder mehrere der Argumente in einem Methodenaufruf vom Typ `dynamic` sind, oder wenn der Empfänger des Methodenaufrufs vom Typ `dynamic` ist. Im folgenden Beispiel wird durch das Senden von `d1` als Argument kein Compilerfehler ausgelöst, wenn die einzige zugängliche `exampleMethod2`-Methode so definiert wird, dass sie ein Zeichenfolgenargument akzeptiert. Allerdings wird eine Laufzeitausnahme ausgelöst. Die Überladungsauflösung schlägt zur Laufzeit fehl, da der Laufzeittyp von `d1``int` ist und `exampleMethod2` eine Zeichenfolge benötigt.
 
 [!code-csharp[CsProgGuideTypes#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#55)]
 

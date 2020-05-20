@@ -63,7 +63,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Wenn beim Abschließen der Aufgabe ein Fehler aufgetreten ist, sollte auf die Ergebnisse nicht zugegriffen werden können. Wenn die Eigenschaft <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> nicht `null` entspricht, stellen Sie sicher, dass der Zugriff auf eine beliebige Eigenschaft in der <xref:System.EventArgs>-Struktur eine Ausnahme auslöst. Verwenden Sie die Methode <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A>, um diese Überprüfung durchzuführen.  
   
-- Modellieren Sie einen Timeout als Fehler. Wenn es zu einem Timeout kommt, lösen Sie das <em>MethodName</em>**Completed**-Ereignis aus und weisen der Eigenschaft <xref:System.TimeoutException> eine <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> zu.  
+- Modellieren Sie einen Timeout als Fehler. Wenn es zu einem Timeout kommt, lösen Sie das <em>MethodName</em>**Completed**-Ereignis aus und weisen der Eigenschaft <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> eine <xref:System.TimeoutException> zu.  
   
 - Wenn Ihre Klasse mehrere gleichzeitige Aufrufe unterstützt, stellen Sie sicher, dass das <em>MethodName</em>**Completed**-Ereignis das geeignete `userSuppliedState`-Objekt enthält.  
   

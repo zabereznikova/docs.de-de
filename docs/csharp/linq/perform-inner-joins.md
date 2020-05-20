@@ -56,7 +56,7 @@ Die zweite `join`-Klausel in C# verknüpft die von der ersten Verknüpfung zurü
 
 In den folgenden Beispielen wird Ihnen gezeigt, wie eine innere Verknüpfung mithilfe einer Gruppenverknüpfung implementiert wird.
 
-Die Liste von `query1`-Objekten in `Person` ist über eine Gruppenverknüpfung mit der Liste von `Pet`-Objekten verknüpft, basierend auf der `Person`, die mit der Eigenschaft `Pet.Owner` übereinstimmt. Die Gruppeverknüpfung erstellt eine Auflistung von Zwischengruppen, bei der jede Gruppe aus einem `Person`-Objekt und einer Sequenz von übereinstimmenden `Pet`-Objekten besteht.
+Die Liste von `Person`-Objekten in `query1` ist über eine Gruppenverknüpfung mit der Liste von `Pet`-Objekten verknüpft, basierend auf der `Person`, die mit der Eigenschaft `Pet.Owner` übereinstimmt. Die Gruppeverknüpfung erstellt eine Auflistung von Zwischengruppen, bei der jede Gruppe aus einem `Person`-Objekt und einer Sequenz von übereinstimmenden `Pet`-Objekten besteht.
 
 Durch das Hinzufügen einer zweiten `from`-Klausel zur Abfrage, wird diese Sequenz von Sequenzen in eine längere Sequenz vereint (oder vereinfacht). Der Typ der Elemente der endgültigen Sequenz wird von der `select`-Klausel festgelegt. In diesem Beispiel ist dieser Typ ein anonymer Typ, der aus der Eigenschaft `Person.FirstName` und `Pet.Name` für jedes übereinstimmende Paar besteht.
 

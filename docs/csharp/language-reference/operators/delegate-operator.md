@@ -30,7 +30,7 @@ Bei Verwendung des Operators `delegate` können Sie die Parameterliste weglassen
 
 Dies ist die einzige Funktion anonymer Methoden, die von Lambdaausdrücken nicht unterstützt wird. In allen anderen Fällen ist ein Lambdaausdruck eine bevorzugte Methode zum Schreiben von Inlinecode.
 
-Zum Deklarieren eines `delegate`Delegattyps[ wird auch das Schlüsselwort ](../builtin-types/reference-types.md#the-delegate-type) verwendet.
+Zum Deklarieren eines [Delegattyps](../builtin-types/reference-types.md#the-delegate-type) wird auch das Schlüsselwort `delegate` verwendet.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

@@ -14,7 +14,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712441"
 ---
 # <a name="undef-c-reference"></a>#undef (C#-Referenz)
-Mit `#undef` können Sie ein Symbol definieren. Wenn dieses Symbol dann als Ausdruck in einer [#if](./preprocessor-if.md)-Anweisung verwendet wird, wird der Ausdruck als `false` ausgewertet.  
+Mit `#undef` können Sie ein Symbol definieren. Wenn dieses Symbol dann als Ausdruck in einer [#if`false`-Anweisung verwendet wird, wird der Ausdruck als ](./preprocessor-if.md) ausgewertet.  
   
  Ein Symbol kann entweder mit der Anweisung [#define](./preprocessor-define.md) oder der Compileroption [-define](../compiler-options/define-compiler-option.md) definiert werden. Die `#undef`-Anweisung muss in einer Datei vor allen Anweisungen erscheinen, bei denen es sich nicht ebenfalls um Anweisungen handelt.  
   

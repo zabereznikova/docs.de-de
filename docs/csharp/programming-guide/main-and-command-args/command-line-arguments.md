@@ -20,7 +20,7 @@ Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf e
 [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
 
 > [!NOTE]
-> Sie müssen die Signatur von `Main` manuell in `Main`program.cs*ändern, um in der*-Methode in einer Windows Forms-Anwendung Befehlszeilenargumente zu aktivieren. Im vom Windows Forms-Designer generierten Code wird ein `Main` ohne einen Eingabeparameter erstellt. Sie können auch <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> oder <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> verwenden, um von einem beliebigen Punkt in einer Konsolen- oder Windows-Anwendung auf die Befehlszeilenargumente zuzugreifen.
+> Sie müssen die Signatur von `Main` manuell in *program.cs* ändern, um in der `Main`-Methode in einer Windows Forms-Anwendung Befehlszeilenargumente zu aktivieren. Im vom Windows Forms-Designer generierten Code wird ein `Main` ohne einen Eingabeparameter erstellt. Sie können auch <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> oder <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> verwenden, um von einem beliebigen Punkt in einer Konsolen- oder Windows-Anwendung auf die Befehlszeilenargumente zuzugreifen.
 
 Der Parameter der `Main`-Methode ist ein <xref:System.String>-Array, das die Befehlszeilenargumente darstellt. Normalerweise bestimmen Sie, ob Argumente vorhanden sind, indem Sie z. B. die `Length`-Eigenschaft testen:
 

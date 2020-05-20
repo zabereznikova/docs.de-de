@@ -53,7 +53,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 
 Ausnahmefilter sind dem Abfangen und erneuten Auslösen vorzuziehen (siehe nachfolgende Erläuterung), da der Filter den Stapel nicht beschädigt.  Wenn ein späterer Handler den Stapel löscht, können Sie feststellen, wo die Ausnahme ursprünglich herkam, und nicht nur die letzte Stelle, an der sie erneut ausgelöst wurde.  Filterausdrücke für Ausnahmen werden häufig zu Protokollierungszwecken eingesetzt.  Sie können einen Filter erstellen, der immer FALSE zurückgibt und außerdem Ausgaben in ein Protokoll schreibt, und Sie können Ausnahmen protokollieren, wenn sie auftreten, ohne sie zu behandeln und erneut auszulösen.
 
-Eine [throw](throw.md)-Anweisung kann in einem `catch`-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen. Im folgenden Beispiel werden Quellinformationen aus einer <xref:System.IO.IOException>-Ausnahme extrahiert, anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.
+Eine [throw`catch`-Anweisung kann in einem ](throw.md)-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen. Im folgenden Beispiel werden Quellinformationen aus einer <xref:System.IO.IOException>-Ausnahme extrahiert, anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.
 
 ```csharp
 catch (FileNotFoundException e)

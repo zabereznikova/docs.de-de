@@ -148,7 +148,7 @@ if (command == null)
 command.Execute();
 ```
 
-Fügen Sie schließlich die statischen Methoden namens `Program` und `LoadPlugin` wie folgt zur `CreateCommands`-Klasse hinzu.
+Fügen Sie schließlich die statischen Methoden namens `LoadPlugin` und `CreateCommands` wie folgt zur `Program`-Klasse hinzu.
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -261,7 +261,7 @@ Das Element `<Private>false</Private>` ist wichtig. Es weist MSBuild dazu an, di
 
 Ebenso ist das Element `<ExcludeAssets>runtime</ExcludeAssets>` wichtig, wenn `PluginBase` auf andere Paket verweist. Diese Einstellung hat denselben Effekt wie `<Private>false</Private>`, funktioniert aber in Paketverweisen, die im `PluginBase`-Projekt oder einer der zugehörigen Abhängigkeiten enthalten sein können.
 
-Nach Fertigstellung des `HelloPlugin`-Projekts sollten Sie das `AppWithPlugin`-Projekt aktualisieren, um in Erfahrung zu bringen, wo sich das `HelloPlugin` befindet. Fügen Sie `// Paths to plugins to load` als ein Element des `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"`-Arrays nach dem Kommentar `pluginPaths` hinzu.
+Nach Fertigstellung des `HelloPlugin`-Projekts sollten Sie das `AppWithPlugin`-Projekt aktualisieren, um in Erfahrung zu bringen, wo sich das `HelloPlugin` befindet. Fügen Sie `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` als ein Element des `pluginPaths`-Arrays nach dem Kommentar `// Paths to plugins to load` hinzu.
 
 ## <a name="plugin-with-library-dependencies"></a>Plug-In mit Bibliotheksabhängigkeiten
 

@@ -68,7 +68,7 @@ Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von 
     }
     ```
 
-3. Nehmen Sie die folgenden Änderungen in **vor, dem Ereignishandler für die Schaltfläche**Start`startButton_Click`.
+3. Nehmen Sie die folgenden Änderungen in `startButton_Click` vor, dem Ereignishandler für die Schaltfläche **Start**.
 
     - Instanziieren Sie die `CancellationTokenSource`, `cts`.
 

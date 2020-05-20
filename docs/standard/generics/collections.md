@@ -45,7 +45,7 @@ ms.locfileid: "75708409"
   
  Die generische <xref:System.ArraySegment%601>-Struktur bietet eine Möglichkeit, einen Bereich von Elementen in einem eindimensionalen nullbasierten Array eines beliebigen Typs abzugrenzen. Der generische Typparameter ist der Typ der Elemente des Arrays.  
   
- Wird der generische <xref:System.EventHandler%601>-Delegat verwendet, muss kein Delegattyp zum Behandeln von Ereignissen mehr deklariert werden, wenn für das Ereignis das von .NET Framework verwendete Muster für die Ereignisbehandlung befolgt wird. Angenommen, Sie haben die von `MyEventArgs` abgeleitete <xref:System.EventArgs>-Klasse erstellt, um die Daten für das Ereignis zu speichern. Sie können das Ereignis dann wie folgt deklarieren:  
+ Wird der generische <xref:System.EventHandler%601>-Delegat verwendet, muss kein Delegattyp zum Behandeln von Ereignissen mehr deklariert werden, wenn für das Ereignis das von .NET Framework verwendete Muster für die Ereignisbehandlung befolgt wird. Angenommen, Sie haben die von <xref:System.EventArgs> abgeleitete `MyEventArgs`-Klasse erstellt, um die Daten für das Ereignis zu speichern. Sie können das Ereignis dann wie folgt deklarieren:  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]

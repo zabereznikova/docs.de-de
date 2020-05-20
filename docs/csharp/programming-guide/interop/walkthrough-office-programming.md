@@ -76,7 +76,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]
 
-3. Fügen Sie den folgenden Code in die `bankAccounts`-Methode in `ThisAddIn_Startup`ThisAddIn.vb*oder*ThisAddIn.cs*ein, um eine*-Liste mit zwei Konten zu erstellen. Die Listendeklarationen verwenden *Auflistungsinitialisierer*. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+3. Fügen Sie den folgenden Code in die `ThisAddIn_Startup`-Methode in *ThisAddIn.vb* oder *ThisAddIn.cs* ein, um eine `bankAccounts`-Liste mit zwei Konten zu erstellen. Die Listendeklarationen verwenden *Auflistungsinitialisierer*. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
 
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 

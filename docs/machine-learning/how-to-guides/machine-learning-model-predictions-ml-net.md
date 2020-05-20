@@ -90,7 +90,7 @@ Wenn Sie auf die `Score`-Eigenschaft des `prediction`-Objekts zugreifen, sollten
 
 ## <a name="multiple-predictions"></a>Mehrere Vorhersagen
 
-Laden Sie die folgenden Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView). In diesem Fall ist [ der Name von `IDataView`](xref:Microsoft.ML.IDataView)`inputData`. Da `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
+Laden Sie die folgenden Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView). In diesem Fall ist `inputData` der Name von [`IDataView`](xref:Microsoft.ML.IDataView). Da `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
 
 ```csharp
 // Actual data

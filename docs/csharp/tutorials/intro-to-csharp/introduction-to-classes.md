@@ -73,7 +73,7 @@ namespace classes
 
 Bevor wir fortfahren, lassen Sie uns anschauen, was Sie erstellt haben.  Die `namespace`-Deklaration ist eine Möglichkeit, Ihren Code logisch zu organisieren. Da dieses Tutorial relativ klein ist, platzieren Sie den gesamten Code in einen einzigen Namespace.
 
-`public class BankAccount` definiert die Klasse oder den Typ, die/den Sie erstellen. Sämtliche Inhalte zwischen `{` und `}`, die der Klassendeklaration folgen, definieren den Zustand und das Verhalten der Klasse. Die ***-Klasse verfügt über fünf*** Member`BankAccount`. Die ersten drei sind ***Eigenschaften***. Eigenschaften sind Datenelemente und können Code aufweisen, der eine Überprüfung oder andere Regeln erzwingt. Die letzten beiden sind ***Methoden***. Methoden sind Codeblöcke, die eine einzelne Funktion ausführen. Das Lesen der Namen der einzelnen Member sollte Ihnen oder anderen Entwicklern genug Informationen liefern, um zu verstehen, welche Aufgabe die Klasse hat.
+`public class BankAccount` definiert die Klasse oder den Typ, die/den Sie erstellen. Sämtliche Inhalte zwischen `{` und `}`, die der Klassendeklaration folgen, definieren den Zustand und das Verhalten der Klasse. Die `BankAccount`-Klasse verfügt über fünf ***Member***. Die ersten drei sind ***Eigenschaften***. Eigenschaften sind Datenelemente und können Code aufweisen, der eine Überprüfung oder andere Regeln erzwingt. Die letzten beiden sind ***Methoden***. Methoden sind Codeblöcke, die eine einzelne Funktion ausführen. Das Lesen der Namen der einzelnen Member sollte Ihnen oder anderen Entwicklern genug Informationen liefern, um zu verstehen, welche Aufgabe die Klasse hat.
 
 ## <a name="open-a-new-account"></a>Eröffnen eines neuen Kontos
 

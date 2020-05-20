@@ -270,7 +270,7 @@ private string TrimInput(string input)
 }
 ```
 
-Möglicherweise versuchen Sie zunächst, einen Test für `TrimInput` zu schreiben, da Sie sicherstellen möchten, dass die Methode wie erwartet funktioniert. Es ist jedoch auch möglich, dass `ParseLogLine` von `sanitizedInput` auf unerwartete Weise manipuliert wird, wodurch das Rendern eines Tests für `TrimInput` nutzlos ist.
+Möglicherweise versuchen Sie zunächst, einen Test für `TrimInput` zu schreiben, da Sie sicherstellen möchten, dass die Methode wie erwartet funktioniert. Es ist jedoch auch möglich, dass `sanitizedInput` von `ParseLogLine` auf unerwartete Weise manipuliert wird, wodurch das Rendern eines Tests für `TrimInput` nutzlos ist.
 
 Der echte Test sollte für die öffentliche Methode, `ParseLogLine`, ausgeführt werden, denn darum sollten Sie sich letztendlich kümmern.
 

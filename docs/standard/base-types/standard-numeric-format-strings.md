@@ -300,7 +300,7 @@ Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem Prozentformatbeze
 
 Der Formatbezeichner für Roundtrips „R“ stellt sicher, dass ein in eine Zeichenfolge konvertierter numerischer Wert wieder in denselben numerischen Wert zurück konvertiert wird. Dieses Format wird nur für folgende Typen unterstützt: <xref:System.Single>, <xref:System.Double> und <xref:System.Numerics.BigInteger>.
 
-Bei <xref:System.Double>-Werten kann der Formatbezeichner „R“ in einigen Fällen keinen Roundtrip für den ursprünglichen Wert durchführen. Für die Werte <xref:System.Double> und <xref:System.Single> bietet er auch eine relativ schlechte Leistung. Stattdessen empfehlen wir zur erfolgreichen Durchführung von Roundtrips für [-Werte, den Formatbezeichner ](#GFormatString)„G17“<xref:System.Double> für [-Werte und den Formatbezeichner ](#GFormatString)„G9“<xref:System.Single> zu verwenden.
+Bei <xref:System.Double>-Werten kann der Formatbezeichner „R“ in einigen Fällen keinen Roundtrip für den ursprünglichen Wert durchführen. Für die Werte <xref:System.Double> und <xref:System.Single> bietet er auch eine relativ schlechte Leistung. Stattdessen empfehlen wir zur erfolgreichen Durchführung von Roundtrips für <xref:System.Single>-Werte, den Formatbezeichner [„G17“](#GFormatString) für <xref:System.Double>-Werte und den Formatbezeichner [„G9“](#GFormatString) zu verwenden.
 
 Wenn ein <xref:System.Numerics.BigInteger>-Wert mit diesem Bezeichner formatiert wird, enthält seine Zeichenfolgendarstellung alle signifikanten Stellen im <xref:System.Numerics.BigInteger>-Wert.
 

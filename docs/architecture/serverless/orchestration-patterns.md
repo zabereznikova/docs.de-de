@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-Die `DurableOrchestrationContext`-Methode von `CreateTimer` richtet den Zeitplan für den nächsten Aufruf der Schleife ein, um auf Aktienkursänderungen zu prüfen. `DurableOrchestrationContext` verfügt auch über eine `CurrentUtcDateTime`-Eigenschaft, um den aktuellen DateTime-Wert in UTC abzurufen. Es ist besser, diese Eigenschaft anstelle von `DateTime.UtcNow` zu verwenden, da sie leicht zu Testzwecken simuliert werden kann.
+Die `CreateTimer`-Methode von `DurableOrchestrationContext` richtet den Zeitplan für den nächsten Aufruf der Schleife ein, um auf Aktienkursänderungen zu prüfen. `DurableOrchestrationContext` verfügt auch über eine `CurrentUtcDateTime`-Eigenschaft, um den aktuellen DateTime-Wert in UTC abzurufen. Es ist besser, diese Eigenschaft anstelle von `DateTime.UtcNow` zu verwenden, da sie leicht zu Testzwecken simuliert werden kann.
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 

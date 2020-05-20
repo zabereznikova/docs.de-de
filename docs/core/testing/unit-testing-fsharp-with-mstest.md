@@ -106,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-Das `[<TestClass>]`-Attribut gibt eine Klasse an, die Tests enthält. Das `[<TestMethod>]`-Attribut kennzeichnet eine Testmethode, die von Test Runner ausgeführt wird. Führen Sie *im Verzeichnis*unit-testing-with-fsharp`dotnet test` aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
+Das `[<TestClass>]`-Attribut gibt eine Klasse an, die Tests enthält. Das `[<TestMethod>]`-Attribut kennzeichnet eine Testmethode, die von Test Runner ausgeführt wird. Führen Sie `dotnet test` im Verzeichnis *unit-testing-with-fsharp* aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 
 Diese zwei Tests geben jeweils den grundlegendsten bestandenen und fehlerhaften Test an. `My test` wurde erfolgreich und `Fail every time` fehlerhaft abgeschlossen. Erstellen Sie jetzt einen Test für die `squaresOfOdds`-Methode. Die `squaresOfOdds`-Methode gibt eine Liste der Quadrate aller ungeraden ganzzahligen Werte zurück, die Teil der Eingabesequenz sind. Anstatt zu versuchen, alle diese Funktionen gleichzeitig zu schreiben, können Sie iterativ Tests zum Überprüfen der Funktionalität erstellen. Damit jeder Test erfolgreich abgeschlossen wird, muss die erforderliche Funktionalität für die Methode erstellt werden.
 

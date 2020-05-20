@@ -33,7 +33,7 @@ C# enthält eine Reihe von integrierten Verweistypen. Diese enthalten Schlüssel
 
 ## <a name="the-object-type"></a>Der Objekttyp
 
-Der `object`-Typ ist ein Alias für <xref:System.Object?displayProperty=nameWithType> in .NET. Im vereinheitlichen Typsystem von C# erben alle Typen, vordefiniert und benutzerdefiniert sowie Verweis- und Werttypen, direkt oder indirekt von <xref:System.Object?displayProperty=nameWithType>. Sie können Werte eines beliebigen Typs Variablen des Typs `object` zuweisen. Diesem Standardwert kann mithilfe des Literals `object` eine beliebige `null`-Variable zugewiesen werden. Wenn eine Variable eines Werttyps in ein Objekt konvertiert wird, gilt es als *geschachtelt*. Wenn eine Variable des Typs `object` in ein Wertobjekt konvertiert wird, gilt es als *nicht geschachtelt*. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../programming-guide/types/boxing-and-unboxing.md).
+Der `object`-Typ ist ein Alias für <xref:System.Object?displayProperty=nameWithType> in .NET. Im vereinheitlichen Typsystem von C# erben alle Typen, vordefiniert und benutzerdefiniert sowie Verweis- und Werttypen, direkt oder indirekt von <xref:System.Object?displayProperty=nameWithType>. Sie können Werte eines beliebigen Typs Variablen des Typs `object` zuweisen. Diesem Standardwert kann mithilfe des Literals `null` eine beliebige `object`-Variable zugewiesen werden. Wenn eine Variable eines Werttyps in ein Objekt konvertiert wird, gilt es als *geschachtelt*. Wenn eine Variable des Typs `object` in ein Wertobjekt konvertiert wird, gilt es als *nicht geschachtelt*. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../programming-guide/types/boxing-and-unboxing.md).
 
 ## <a name="the-string-type"></a>Der Zeichenfolgentyp
 

@@ -21,11 +21,11 @@ Wenn Sie eine Klasse oder Struktur definieren, entscheiden Sie, ob es sinnvoll i
 
 In beiden Fällen und in beiden Klassen und Strukturen sollte Ihre Implementierung den fünf Garantien der Äquivalenz folgen (für die folgenden Regeln wird angenommen, dass `x`, `y` und `z` nicht NULL sind):  
   
-1. `x.Equals(x)` gibt `true` zurück. Dies wird als reflexive Eigenschaft bezeichnet.  
+1. `true` gibt `x.Equals(x)` zurück. Dies wird als reflexive Eigenschaft bezeichnet.  
   
 2. `x.Equals(y)` gibt denselben Wert zurück wie `y.Equals(x)`. Die wird als symmetrische Eigenschaft bezeichnet.  
   
-3. Wenn `(x.Equals(y) && y.Equals(z))` von `true` zurückgegeben wird, wird `x.Equals(z)` von `true` zurückgegeben. Dies wird als transitive Eigenschaft bezeichnet.  
+3. Wenn `true` von `(x.Equals(y) && y.Equals(z))` zurückgegeben wird, wird `true` von `x.Equals(z)` zurückgegeben. Dies wird als transitive Eigenschaft bezeichnet.  
   
 4. Aufeinander folgende Aufrufe von `x.Equals(y)` geben immer denselben Wert zurück, es sei denn, die Objekte, auf die x und y verweisen, werden geändert.  
   

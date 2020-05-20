@@ -25,7 +25,7 @@ In Windows Forms-Apps für .NET Framework-Versionen ab .NET Framework 4.6.1 
 
 Diese Änderung betrifft nur Windows Forms-Apps, die auf Versionen von .NET Framework ab .NET Framework 4.6.1 ausgerichtet sind.
 
-Für Windows Forms-Apps, die auf vorherige Versionen von .NET Framework ausgerichtet sind, lösen solche Implementierungen in einigen Fällen beim Aufrufen der <xref:System.IndexOutOfRangeException>-Methode eine <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType>-Ausnahme aus.
+Für Windows Forms-Apps, die auf vorherige Versionen von .NET Framework ausgerichtet sind, lösen solche Implementierungen in einigen Fällen beim Aufrufen der <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType>-Methode eine <xref:System.IndexOutOfRangeException>-Ausnahme aus.
 
 ## <a name="mitigation"></a>Minderung
 

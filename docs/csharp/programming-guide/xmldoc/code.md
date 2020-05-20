@@ -37,7 +37,7 @@ Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compile
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung des [code>-Tags finden Sie unter dem Thema \<](./example.md)example>\<.
+Ein Beispiel zur Verwendung des \<code>-Tags finden Sie unter dem Thema [\<example>](./example.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

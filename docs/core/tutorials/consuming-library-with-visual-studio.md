@@ -44,7 +44,7 @@ Ebenso wie Sie unter [Testen einer .NET Standard-Bibliothek in Visual Studio](te
 
    ![Visual Studio-Projektkontextmenü zum Festlegen des Startprojekts](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Zunächst hat Ihr Projekt keinen Zugriff auf unsere Klassenbibliothek. Damit es Methoden in Ihrer Klassenbibliothek aufrufen kann, erstellen Sie einen Verweis auf die Klassenbibliothek. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten `ShowCase`Abhängigkeiten**des**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
+1. Zunächst hat Ihr Projekt keinen Zugriff auf unsere Klassenbibliothek. Damit es Methoden in Ihrer Klassenbibliothek aufrufen kann, erstellen Sie einen Verweis auf die Klassenbibliothek. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten **Abhängigkeiten** des `ShowCase`-Projekts, und wählen Sie **Verweis hinzufügen** aus.
 
    ![Kontextmenü „Verweis hinzufügen“ in Visual Studio](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 

@@ -181,7 +181,7 @@ Normalerweise verwenden Sie bitweise logische Operatoren mit einem Enumerationst
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Ein benutzerdefinierter Typ kann die Operatoren [, ](operator-overloading.md), `~`, `<<`, `>>` und `&``|`überladen`^`. Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
+Ein benutzerdefinierter Typ kann die Operatoren `~`, `<<`, `>>`, `&`, `|` und `^`[überladen](operator-overloading.md). Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
 
 Wenn ein benutzerdefinierter Typ `T` den Operator `<<` oder `>>` überlädt, muss der Typ des linken Operanden `T` und der Typ des rechten Operanden `int` lauten.
 

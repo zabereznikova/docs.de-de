@@ -22,11 +22,11 @@ Alle Attributklassen werden von der <xref:System.Attribute> Basisklasse abgeleit
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 
-In diesem Beispiel wird `HelpAttribute` an die `Widget`-Klasse angefügt. Darüber hinaus wird der `HelpAttribute`-Methode in der Klasse ein weiteres `Display` hinzugefügt. Die öffentlichen Konstruktoren einer Attributklasse steuern die Informationen, die beim Anfügen des Attributs an eine Programmentität angegeben werden müssen. Zusätzliche Informationen können angegeben werden, indem auf öffentliche Eigenschaften mit Lese-/Schreibzugriff der Attributklasse verwiesen wird (z.B. wie der obige Verweis auf die `Topic`-Eigenschaft).
+In diesem Beispiel wird `HelpAttribute` an die `Widget`-Klasse angefügt. Darüber hinaus wird der `Display`-Methode in der Klasse ein weiteres `HelpAttribute` hinzugefügt. Die öffentlichen Konstruktoren einer Attributklasse steuern die Informationen, die beim Anfügen des Attributs an eine Programmentität angegeben werden müssen. Zusätzliche Informationen können angegeben werden, indem auf öffentliche Eigenschaften mit Lese-/Schreibzugriff der Attributklasse verwiesen wird (z.B. wie der obige Verweis auf die `Topic`-Eigenschaft).
 
 Die durch Attribute definierten Metadaten können zur Laufzeit mittels Reflektion gelesen und bearbeitet werden. Wenn mithilfe dieser Technik ein bestimmtes Attribut angefordert wird, wird der Konstruktor für die Attributklasse mit den in der Programmquelle angegebenen Informationen aufgerufen, und die resultierende Attributinstanz wird zurückgegeben. Wenn zusätzliche Informationen über Eigenschaften bereitgestellt wurden, werden diese Eigenschaften auf die vorgegebenen Werte festgelegt, bevor die Attributinstanz zurückgegeben wird.
 
-Das folgende Codebeispiel zeigt, wie die der `HelpAttribute`-Klasse zugeordneten `Widget`-Instanzen und die dazugehörige `Display`-Methode abgerufen wird.
+Das folgende Codebeispiel zeigt, wie die der `Widget`-Klasse zugeordneten `HelpAttribute`-Instanzen und die dazugehörige `Display`-Methode abgerufen wird.
 
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 

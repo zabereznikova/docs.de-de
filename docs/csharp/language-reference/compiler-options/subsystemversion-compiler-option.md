@@ -62,7 +62,7 @@ Der Standardwert der Compileroption **-subsystemversion** hängt von den Bedingu
 
 ## <a name="setting-this-option"></a>Festlegen dieser Option
 
-Sie müssen die CSPROJ-Datei öffnen und einen Wert für die Eigenschaft **im MSBuild-XML angeben, um die Compileroption**-subsystemversion`SubsystemVersion` in Visual Studio festzulegen. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
+Sie müssen die CSPROJ-Datei öffnen und einen Wert für die Eigenschaft `SubsystemVersion` im MSBuild-XML angeben, um die Compileroption **-subsystemversion** in Visual Studio festzulegen. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Weitere Informationen
 

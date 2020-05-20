@@ -199,7 +199,7 @@ catch(Exception exc)
 }
 ```
 
- Wenn in diesem Fall ein Fehler bei asynchronen Vorgängen auftritt, werden sämtliche Ausnahmen in einer <xref:System.AggregateException>-Ausnahme konsolidiert, die in der von der <xref:System.Threading.Tasks.Task>-Methode zurückgegebenen <xref:System.Threading.Tasks.Task.WhenAll%2A>-Klasse gespeichert wird.  Über das `await`-Schlüsselwort wird jedoch nur eine dieser Ausnahmen weitergegeben.  Wenn Sie alle Ausnahmen auswerten möchten, können Sie den vorherigen Code wie folgt neu schreiben:
+ Wenn in diesem Fall ein Fehler bei asynchronen Vorgängen auftritt, werden sämtliche Ausnahmen in einer <xref:System.AggregateException>-Ausnahme konsolidiert, die in der von der <xref:System.Threading.Tasks.Task.WhenAll%2A>-Methode zurückgegebenen <xref:System.Threading.Tasks.Task>-Klasse gespeichert wird.  Über das `await`-Schlüsselwort wird jedoch nur eine dieser Ausnahmen weitergegeben.  Wenn Sie alle Ausnahmen auswerten möchten, können Sie den vorherigen Code wie folgt neu schreiben:
 
 ```csharp
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();

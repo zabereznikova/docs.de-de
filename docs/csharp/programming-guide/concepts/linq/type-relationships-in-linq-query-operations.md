@@ -44,7 +44,7 @@ Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, w
   
 1. Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
   
-2. Die `select`-Anweisung gibt die `Name`-Eigenschaft statt des vollständigen `Customer`-Objekts zurück. Da `Name` eine Zeichenfolge ist, lautet das Typargument von `custNameQuery` nicht `string`, sondern `Customer`.  
+2. Die `select`-Anweisung gibt die `Name`-Eigenschaft statt des vollständigen `Customer`-Objekts zurück. Da `Name` eine Zeichenfolge ist, lautet das Typargument von `custNameQuery` nicht `Customer`, sondern `string`.  
   
 3. Da `custNameQuery` eine Sequenz von Zeichenfolgen ist, muss die Iterationsvariable der `foreach`-Schleife auch ein `string` sein.  
   

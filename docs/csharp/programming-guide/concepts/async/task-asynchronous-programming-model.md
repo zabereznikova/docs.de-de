@@ -70,7 +70,7 @@ async Task<int> AccessTheWebAsync()
 }
 ```
 
-Sie können dem vorherigen Beispiel mehrere Methoden entnehmen. Starten Sie mit der Methodensignatur. Sie enthält den `async`-Modifizierer. Der Rückgabetyp lautet `Task<int>` (weitere Optionen finden Sie im Abschnitt „Rückgabetypen“). Der Methodenname endet auf `Async`. Im Text der Methode gibt `GetStringAsync` einen `Task<string>`-Wert zurück. Das bedeutet, dass Sie `await` (`string`) erhalten, wenn Sie auf die Aufgabe warten (`urlContents`).  Bevor Sie auf die Aufgabe warten, können Sie Arbeiten ausführen, die nicht auf einem `string`-Wert von `GetStringAsync` basieren.
+Sie können dem vorherigen Beispiel mehrere Methoden entnehmen. Starten Sie mit der Methodensignatur. Sie enthält den `async`-Modifizierer. Der Rückgabetyp lautet `Task<int>` (weitere Optionen finden Sie im Abschnitt „Rückgabetypen“). Der Methodenname endet auf `Async`. Im Text der Methode gibt `GetStringAsync` einen `Task<string>`-Wert zurück. Das bedeutet, dass Sie `string` (`urlContents`) erhalten, wenn Sie auf die Aufgabe warten (`await`).  Bevor Sie auf die Aufgabe warten, können Sie Arbeiten ausführen, die nicht auf einem `string`-Wert von `GetStringAsync` basieren.
 
 Achten Sie besonders auf den `await`-Operator. Er hält `AccessTheWebAsync` an.
 

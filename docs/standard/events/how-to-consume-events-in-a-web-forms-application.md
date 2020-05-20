@@ -24,7 +24,7 @@ Ein häufiges Szenario in ASP.NET Web Forms-Anwendungen ist das Auffüllen einer
   
 ### <a name="to-handle-a-button-click-event-on-a-webpage"></a>So behandeln Sie ein Click-Ereignis auf einer Webseite  
   
-1. Erstellen Sie eine ASP.NET Web Forms-Seite (Webseite), bei der der <xref:System.Web.UI.WebControls.Button>-Wert des `OnClick`-Steuerelements auf den Namen der Methode festgelegt ist, die Sie im nächsten Schritt definieren.  
+1. Erstellen Sie eine ASP.NET Web Forms-Seite (Webseite), bei der der `OnClick`-Wert des <xref:System.Web.UI.WebControls.Button>-Steuerelements auf den Namen der Methode festgelegt ist, die Sie im nächsten Schritt definieren.  
   
     ```xml  
     <asp:Button ID="Button1" runat="server" Text="Click Me" OnClick="Button1_Click" />  

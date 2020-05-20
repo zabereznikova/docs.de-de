@@ -160,7 +160,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-Das `[Fact]`-Attribut deklariert eine Testmethode, die vom Test Runner ausgeführt wird. Führen Sie *im Ordner*PrimeService.Tests`dotnet test` aus. Der Befehl [dotnet test](../tools/dotnet-test.md) erstellt beide Projekte und führt die Tests aus. Der Test Runner für xUnit enthält den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet den Test Runner mithilfe des Komponententestprojekts.
+Das `[Fact]`-Attribut deklariert eine Testmethode, die vom Test Runner ausgeführt wird. Führen Sie `dotnet test` im Ordner *PrimeService.Tests* aus. Der Befehl [dotnet test](../tools/dotnet-test.md) erstellt beide Projekte und führt die Tests aus. Der Test Runner für xUnit enthält den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet den Test Runner mithilfe des Komponententestprojekts.
 
 Der Test schlägt fehl, da `IsPrime` nicht implementiert wurde. Schreiben Sie bei Befolgen des Ansatzes zur testgesteuerten Entwicklung nur so viel Code, dass dieser Test bestanden wird. Aktualisieren Sie `IsPrime` mit folgendem Code:
 

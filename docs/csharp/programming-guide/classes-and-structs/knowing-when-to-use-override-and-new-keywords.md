@@ -116,7 +116,7 @@ public new void Method2()
   
  Führen Sie das Programm erneut aus, um sicherzustellen, dass die Ausgabe gleich geblieben ist. Überprüfen Sie außerdem, ob die Warnung weiterhin angezeigt wird. Wenn Sie `new` verwenden, bestätigen Sie, dass Ihnen bewusst ist, dass der davon modifizierte Member einen Member verbirgt, der von der Basisklasse vererbt wird. Weitere Informationen zum Verbergen von Namen durch die Vererbung finden Sie unter [new-Modifizierer](../../language-reference/keywords/new-modifier.md).  
   
- Fügen Sie die folgende Methode in `override` ein, um dieses Verhalten den Auswirkungen durch das Verwenden von `DerivedClass` gegenüberzustellen. Der `override`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
+ Fügen Sie die folgende Methode in `DerivedClass` ein, um dieses Verhalten den Auswirkungen durch das Verwenden von `override` gegenüberzustellen. Der `override`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
   
 ```csharp  
 public override void Method1()  
@@ -125,7 +125,7 @@ public override void Method1()
 }  
 ```  
   
- Fügen Sie der Definition von `virtual` in `Method1` den `BaseClass`-Modifizierer hinzu. Der `virtual`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
+ Fügen Sie der Definition von `Method1` in `BaseClass` den `virtual`-Modifizierer hinzu. Der `virtual`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
   
 ```csharp  
 public virtual void Method1()  
@@ -146,7 +146,7 @@ public virtual void Method1()
 // Base - Method2  
 ```  
   
- Durch den `override`-Modifizierer kann `bcdc` auf die in `Method1` definierte `DerivedClass`-Methode zugreifen. Normalerweise ist dies das gewünschte Verhalten in Vererbungshierarchien. Objekte sollten Werte aufweisen, die aus der abgeleiteten Klasse erzeugt werden, um die Methoden, die in der abgeleiteten Klasse definiert sind, verwenden zu können. Dieses Verhalten erzielen Sie, indem Sie `override` verwenden, um die Methode der Basisklasse zu erweitern.  
+ Durch den `override`-Modifizierer kann `bcdc` auf die in `DerivedClass` definierte `Method1`-Methode zugreifen. Normalerweise ist dies das gewünschte Verhalten in Vererbungshierarchien. Objekte sollten Werte aufweisen, die aus der abgeleiteten Klasse erzeugt werden, um die Methoden, die in der abgeleiteten Klasse definiert sind, verwenden zu können. Dieses Verhalten erzielen Sie, indem Sie `override` verwenden, um die Methode der Basisklasse zu erweitern.  
   
  Der folgende Code umfasst das vollständige Beispiel.  
   

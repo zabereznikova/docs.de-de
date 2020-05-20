@@ -200,7 +200,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-Laden Sie die in-Memory-Sammlung mit der [`IDataView`](xref:Microsoft.ML.IDataView)-Methode in eine [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):
+Laden Sie die in-Memory-Sammlung mit der [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)-Methode in eine [`IDataView`](xref:Microsoft.ML.IDataView):
 
 > [!IMPORTANT]
 > [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) geht davon aus, dass das [`IEnumerable`](xref:System.Collections.IEnumerable)-Element, aus dem es geladen wird, threadsicher ist.

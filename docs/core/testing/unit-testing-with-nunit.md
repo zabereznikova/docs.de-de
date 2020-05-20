@@ -149,7 +149,7 @@ Statt neue Tests zu erstellen, wenden Sie dieses Attribut zum Erstellen eines ei
 
 [!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Führen Sie `dotnet test` aus und zwei dieser Tests schlagen fehl. Damit alle Tests erfolgreich sind, müssen Sie in der Datei `if`PrimeService.cs`Main` am Anfang der Methode *die*-Klausel ändern:
+Führen Sie `dotnet test` aus und zwei dieser Tests schlagen fehl. Damit alle Tests erfolgreich sind, müssen Sie in der Datei *PrimeService.cs* am Anfang der Methode `Main` die `if`-Klausel ändern:
 
 ```csharp
 if (candidate < 2)

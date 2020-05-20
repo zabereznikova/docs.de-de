@@ -142,11 +142,11 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 2. Erstellen Sie einen `SelectedIndexChanged`-Ereignishandler für `filesListBox`, indem Sie auf das Steuerelement `ListBox` im Formular doppelklicken.  
   
-3. Fügen Sie im Ereignishandler `SetEnabled` einen Aufruf von `filesListBox_SelectedIndexChanged` hinzu.  
+3. Fügen Sie im Ereignishandler `filesListBox_SelectedIndexChanged` einen Aufruf von `SetEnabled` hinzu.  
   
-4. Fügen Sie am Ende des Ereignishandlers `SetEnabled` einen Aufruf von `browseButton_Click` hinzu.  
+4. Fügen Sie am Ende des Ereignishandlers `browseButton_Click` einen Aufruf von `SetEnabled` hinzu.  
   
-5. Fügen Sie am Ende des Ereignishandlers `SetEnabled` einen Aufruf von `Form1_Load` hinzu.  
+5. Fügen Sie am Ende des Ereignishandlers `Form1_Load` einen Aufruf von `SetEnabled` hinzu.  
   
 6. Führen Sie die Anwendung aus. Das Kontrollkästchen **Save Results** (Ergebnisse speichern) und die Schaltfläche **Examine** (Untersuchen) sind deaktiviert, wenn ein Element nicht in `ListBox` ausgewählt ist.  
   

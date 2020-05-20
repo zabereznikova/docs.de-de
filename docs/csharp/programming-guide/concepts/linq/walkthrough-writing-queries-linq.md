@@ -141,7 +141,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>So sortieren Sie die Gruppen nach ihren Schlüsselwerten  
   
-1. Wenn Sie die vorherige Abfrage ausführen, werden Sie feststellen, dass die Gruppen nicht alphabetischer angeordnet sind. Um dies zu ändern, müssen Sie eine `orderby`-Klausel nach der `group`-Klausel angeben. Sie benötigen aber zuerst einen Bezeichner, der als Verweis auf die durch die `orderby`-Klausel erstellte Gruppe dient, bevor Sie eine `group`-Klausel verwenden können. Geben Sie den Bezeichner mithilfe des Schlüsselworts `into` wie folgt an:  
+1. Wenn Sie die vorherige Abfrage ausführen, werden Sie feststellen, dass die Gruppen nicht alphabetischer angeordnet sind. Um dies zu ändern, müssen Sie eine `orderby`-Klausel nach der `group`-Klausel angeben. Sie benötigen aber zuerst einen Bezeichner, der als Verweis auf die durch die `group`-Klausel erstellte Gruppe dient, bevor Sie eine `orderby`-Klausel verwenden können. Geben Sie den Bezeichner mithilfe des Schlüsselworts `into` wie folgt an:  
   
      [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
