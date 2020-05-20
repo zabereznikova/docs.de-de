@@ -15,12 +15,12 @@
       href: microservices/
     - name: 'Serverlose Apps: Architektur, Muster und Azure-Implementierung'
       href: serverless/
+    - name: Architektur von cloudnativen .NET-Apps für Azure
+      href: cloud-native/
     - name: "Modernisieren von Desktop-Apps unter Windows\_10 mit .NET Core\_3.1"
       href: modernize-desktop/
 - name: E-Books in der Vorschau anzeigen
   expanded: true
   items:
-    - name: Architektur von cloudnativen .NET-Apps für Azure
-      href: cloud-native/
     - name: Blazor für ASP.NET Web Forms-Entwickler
       href: blazor-for-web-forms-developers/
