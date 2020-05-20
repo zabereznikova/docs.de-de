@@ -1,16 +1,17 @@
 ---
 title: Windows Workflow Foundation
+description: Dieser Artikel enthält Ressourcen, in denen das Programmiermodell, die Beispiele und die Tools der Windows Workflow Foundation beschrieben werden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 159af9941e8e44defbdd01ed3c128c8327836f7a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 177c9edbd25b003129079ee4d758e79841420d54
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141988"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419485"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 In diesem Abschnitt werden das Programmiermodell, Beispiele und Tools des Windows Workflow Foundation (WF) beschrieben.  
@@ -31,7 +32,7 @@ In diesem Abschnitt werden das Programmiermodell, Beispiele und Tools des Window
  [Konzeptionelle Übersicht über Windows-Workflow](conceptual-overview.md)  
  Eine Reihe von Themen, in denen die größeren Konzepte hinter Windows Workflow Foundation erläutert werden.  
   
- [Tutorial mit ersten Schritten](getting-started-tutorial.md)  
+ [Tutorial zu den ersten Schritten](getting-started-tutorial.md)  
  Eine Reihe von exemplarischen Vorgehensweisen, in denen die Programmierung von Windows Workflow Foundation-Anwendungen vorgestellt wird.  
   
  [Windows Workflow Foundation-Programmierung](programming.md)  

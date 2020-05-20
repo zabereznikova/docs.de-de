@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d9f9e16d243c0f3b45ac24776caea5bb9c32dcc1
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: d546cda5c68732e75550a3de286089f7df261c91
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395750"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420902"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>Ixclrdatamethodinstance:: getrepresentativeentryaddress-Methode
 
@@ -41,13 +41,13 @@ HRESULT GetRepresentativeEntryAddress(
 `addr`\
 vorgenommen Die Adresse des repräsentativsten systemeigenen Einstiegs Punkts für die Methode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die bereitgestellte Methode ist Teil der- [ `IXCLRDataMethodInstance` Schnittstelle](ixclrdatamethodinstance-interface.md) und entspricht dem 20. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
 **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

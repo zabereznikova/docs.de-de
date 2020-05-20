@@ -1,38 +1,39 @@
 ---
 title: Anleitung zur Windows-Workflow-Dokumentation
+description: Dieser Artikel enthält Informationen zur Verwendung der Windows Workflow Foundation Dokumentation, gruppiert nach Interessen und Fachkenntnissen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF], guide to
 - Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-ms.openlocfilehash: 7697b5ab61d4be19223dc912900595f5431109fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9d9bf834946233e176abc463d31a99d476b86be
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753832"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419771"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Anleitung zur Windows-Workflow-Dokumentation
 Dieses Thema enthält Informationen zum Verwenden der Windows Workflow Foundation-Dokumentation. Die verknüpften Dokumente sind empfohlene Startpunkte, die nach Sachgebiet und Niveau gruppiert sind.  
   
 ## <a name="new-to-windows-workflow-foundation-programming"></a>Einsteiger in die Windows Workflow Foundation-Programmierung  
   
-- Wenn Sie in der Programmierung mit Windows Workflow Foundation und möchten finden einige Beispielanwendungen, die funktionieren, finden Sie unter den Themen unter [Windows-Workflowbeispiele](./samples/index.md).  
+- Wenn Sie noch nicht mit der Programmierung mit Windows Workflow Foundation vertraut sind und nur einige Beispielanwendungen sehen möchten, die funktionieren, finden Sie weitere Informationen in den unter [Windows Workflow Samples](./samples/index.md)aufgeführten Themen.  
   
-- Eine Erläuterung der verschiedenen Modelle des Windows Workflow Foundation-flusssteuerung, finden Sie unter [Entwerfen von Workflows](designing-workflows.md).  
+- Eine Erläuterung der verschiedenen Windows Workflow Foundation Fluss Steuerungsmodelle finden Sie unter Entwerfen von [Workflows](designing-workflows.md).  
   
-- Ein Lernprogramm, das durch die grundlegenden Schritte zum Erstellen einer Windows Workflow Foundation-Anwendung führt, finden Sie unter [Getting Started Tutorial](getting-started-tutorial.md).  
+- Ein Tutorial, in dem die grundlegenden Schritte zum Erstellen einer Windows Workflow Foundation Anwendung erläutert werden, finden Sie im [Tutorial zu](getting-started-tutorial.md)den ersten Schritten.  
   
-- Wenn Sie die Konzepte hinter Windows Workflow Foundation interessiert sind, finden Sie unter den Themen in der [konzeptionelle Übersicht über Windows Workflow](conceptual-overview.md) Abschnitt.  
+- Wenn Sie an den Konzepten hinter Windows Workflow Foundation interessiert sind, lesen Sie die Themen im Abschnitt [konzeptionelle Übersicht über Windows-Workflow](conceptual-overview.md) .  
   
-- Eine Liste von Begriffen, die in der Dokumentation zu Windows Workflow Foundation verwendet, finden Sie unter [Windows Workflow Foundation-Glossar für .NET Framework 4.5](glossary.md).  
+- Eine Liste der in der Windows Workflow Foundation-Dokumentation verwendeten Begriffe finden Sie unter [Windows Workflow Foundation Glossar für .NET Framework 4,5](glossary.md).  
   
-- Eine Liste der neuen Konzepte und Funktionen, finden Sie unter [Neuigkeiten in Windows Workflow Foundation](whats-new.md).  
+- Eine Liste der neuen Konzepte und Funktionalitäten finden Sie unter [What es New in Windows Workflow Foundation](whats-new.md).  
   
 ## <a name="programming-in-depth"></a>Programmierung im Detail  
   
-- Eine ausführliche Erläuterung des Windows Workflow Foundation-Objektmodells finden Sie unter [Windows Workflow-Architektur](architecture.md).  
+- Eine ausführliche Erörterung des Windows Workflow Foundation-Objektmodells finden Sie unter [Windows-Workflow Architektur](architecture.md).  
   
-- Wenn Sie bereit sind, mit der Entwicklung einer Anwendungs beginnen, finden Sie unter [Windows Workflow Foundation-Programmierung](programming.md).  
+- Wenn Sie bereit sind, mit der Entwicklung einer Anwendung zu beginnen, finden Sie weitere Informationen unter [Windows Workflow Foundation Programming](programming.md)  
   
-- Wenn Sie möchten, erweitern oder Anpassen von Windows Workflow Foundation entsprechend Ihren Anforderungen, finden Sie unter [Erweitern von Windows Workflow Foundation](extend.md).
+- Wenn Sie Windows Workflow Foundation entsprechend Ihren Anforderungen erweitern oder anpassen möchten, finden Sie weitere Informationen unter [erweitern Windows Workflow Foundation](extend.md).

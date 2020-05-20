@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e28fa73300e147ac07a2d325fbf517480bb73797
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 52d533f1c86b34b7b9febade8590e7ab58d8221e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394948"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420733"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>Ixclrdataprocess:: startenummethodinstancesbyaddress-Methode
 
@@ -49,13 +49,13 @@ in Die AppDomain der Methoden Instanzen.
 `handle`\
 vorgenommen Ein Handle zum Auflisten der Methoden Instanzen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die bereitgestellte Methode ist Teil der `IXCLRDataProcess` -Schnittstelle und entspricht dem 28. Slot der virtuellen Methoden Tabelle.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
 **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

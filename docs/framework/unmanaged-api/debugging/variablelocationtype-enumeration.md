@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: e2fa5d5a998f51e0e90cfde22b40ec12f278307b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 455fd06dbdbfd5d9753f3d7270647a742751d804
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178363"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420655"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType-Enumeration
-Gibt den systemeigenen Positionstyp einer Variablen an.  
+Gibt den Typ des systemeigenen Standorts einer Variablen an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,26 +35,26 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`VLT_REGISTER`|Die Variable befindet sich in einem Register.|  
-|`VLT_REGISTER_RELATIVE`|Die Variable befindet sich an einem registerrelativen Speicherspeicherort.|  
-|`VLT_INVALID`|Die Variable wird nicht in einem Register oder einem registerrelativen Speicherspeicherort gespeichert.|  
+|`VLT_REGISTER_RELATIVE`|Die Variable befindet sich in einer Register-relativen Speicheradresse.|  
+|`VLT_INVALID`|Die Variable wird nicht in einer Register-oder Register-relativen Speicheradresse gespeichert.|  
   
-## <a name="remarks"></a>Bemerkungen  
- Ein Member `VariableLocationType` der Enumeration wird von der [ICorDebugVariableHome::GetLocationType-Methode](icordebugvariablehome-getlocationtype-method.md) zurückgegeben.  
+## <a name="remarks"></a>Hinweise  
+ Ein Member der- `VariableLocationType` Enumeration wird von der [icordebugvariablehome:: getlocationtype](icordebugvariablehome-getlocationtype-method.md) -Methode zurückgegeben.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Enumerationen](debugging-enumerations.md)
+- [Debugenumerationen](debugging-enumerations.md)

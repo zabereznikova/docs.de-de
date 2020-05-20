@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: c81a5787eb06971e3d52aff5d1c1154a72564daf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 45ae947cda5b4ddadfb10f5b2bdc78a95f031703
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790333"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420686"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext-Struktur
 Stellt einen einfachen Kontext bereit, der statt einer vollständigen `CONTEXT`-Struktur verwendet werden kann.  
@@ -47,12 +47,12 @@ struct StackTrace_SimpleContext
 ## <a name="remarks"></a>Hinweise  
  Da Stapel Überwachungsfunktionen in der Regel nur die Adresse, den Frame Offset und die Stapel Adresse zurückgeben müssen, können Sie optional die `SimpleContext` Struktur anstelle einer großen `CONTEXT` Struktur verwenden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** SOS_Stacktrace. h  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EndEnumModules-Methode
+title: 'Ixclrdataprocess:: sdenummodules-Methode'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumModules Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: de30384b4c12c4fcac3eafe580484685f8a43fa4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a7a23e53f5c2bc7d643046830cf335fec780f11
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775426"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420837"
 ---
-# <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess::EndEnumModules-Methode
+# <a name="ixclrdataprocessendenummodules-method"></a>Ixclrdataprocess:: sdenummodules-Methode
 
-Gibt die Ressourcen, die von internen Iteratoren, die verwendet werden, während der Modul-Enumeration verwendet.
+Gibt die von internen Iteratoren verwendeten Ressourcen frei, die während der modulenumeration verwendet werden.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,16 +39,16 @@ HRESULT EndEnumModules(
 ## <a name="parameters"></a>Parameter
 
 `handle`\
-[out] Ein Handle für das Auflisten der Module.
+vorgenommen Ein Handle zum Auflisten der Module.
 
 ## <a name="remarks"></a>Hinweise
 
-Die angegebene Methode ist Teil der `IXCLRDataProcess` Schnittstelle, und mit dem 26. Steckplatz der virtuellen Methodentabelle entspricht.
+Die bereitgestellte Methode ist Teil der `IXCLRDataProcess` -Schnittstelle und entspricht dem 26. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
-**Header:** Keine **Bibliothek:** Keine **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Header:** Keine **Bibliothek:** keine **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

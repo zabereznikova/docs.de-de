@@ -1,13 +1,14 @@
 ---
 title: Grundlegende Konzepte für Windows-Workflows
+description: In diesem Artikel werden einige der Konzepte der Workflow Entwicklung in den .NET Framework 4.6.1 beschrieben, die einigen Entwicklern möglicherweise nicht vertraut sind.
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07498241280191fb62a35a559a3391f7148c05b9
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650935"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419888"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Grundlegende Konzepte für Windows-Workflows
 Bei der Workflowentwicklung in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] werden Konzepte verwendet, die für einige Entwickler möglicherweise neu sind. In diesem Thema werden einige dieser Konzepte und ihre Implementierung beschrieben.  
@@ -22,7 +23,7 @@ Bei der Workflowentwicklung in [!INCLUDE[netfx_current_long](../../../includes/n
 |-|-|  
 |Variable|Speichert Daten in einer Aktivität.|  
 |Argument|Verschiebt Daten in eine bzw. aus einer Aktivität.|  
-|Ausdruck|Eine Aktivität mit einem eskalierten Rückgabewert in Argumentbindungen.|  
+|Ausdruck (Expression)|Eine Aktivität mit einem eskalierten Rückgabewert in Argumentbindungen.|  
   
 ## <a name="workflow-runtime"></a>Workflow-Laufzeit  
  Die Workflowlaufzeit ist die Umgebung, in der Workflows ausgeführt werden. <xref:System.Activities.WorkflowInvoker> ist die einfachste Möglichkeit, einen Workflow auszuführen. Der Host verwendet <xref:System.Activities.WorkflowInvoker> für folgende Aktionen:  
@@ -52,7 +53,7 @@ Bei der Workflowentwicklung in [!INCLUDE[netfx_current_long](../../../includes/n
  Aktivitäten erhalten Zugriff auf die Workflowlaufzeitumgebung, indem sie die entsprechende abgeleitete <xref:System.Activities.ActivityContext>-Klasse wie <xref:System.Activities.NativeActivityContext> oder <xref:System.Activities.CodeActivityContext> verwenden. Sie verwenden diese zum Auflösen von Argumenten und Variablen, zum Planen von untergeordneten Aktivitäten und zu vielen anderen Zwecken.  
   
 ## <a name="services"></a>Dienste  
- Workflows bieten eine natürliche Möglichkeit zum Implementieren von und zum Zugreifen auf lose verknüpfte Dienste mithilfe von Messagingaktivitäten. Messaging-Aktivitäten basieren auf WCF und der primäre Mechanismus zum Abrufen von Daten in und aus einem Workflow verwendet werden. Sie können Messagingaktivitäten kombinieren, um beliebige Arten von Nachrichtenaustauschmustern zu modellieren. Weitere Informationen finden Sie unter [Messagingaktivitäten](../wcf/feature-details/messaging-activities.md). Workflowdienste werden mit der <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse gehostet. Weitere Informationen finden Sie unter [Übersicht über Hosting von Workflowdiensten](../wcf/feature-details/hosting-workflow-services-overview.md). Weitere Informationen zum Workflow-Dienste finden Sie unter [Workflowdienste](../wcf/feature-details/workflow-services.md)  
+ Workflows bieten eine natürliche Möglichkeit zum Implementieren von und zum Zugreifen auf lose verknüpfte Dienste mithilfe von Messagingaktivitäten. Messaging Aktivitäten basieren auf WCF und sind der primäre Mechanismus, der verwendet wird, um Daten in einen und aus einem Workflow zu übernehmen. Sie können Messagingaktivitäten kombinieren, um beliebige Arten von Nachrichtenaustauschmustern zu modellieren. Weitere Informationen finden Sie unter [Messaging Aktivitäten](../wcf/feature-details/messaging-activities.md). Workflowdienste werden mit der <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse gehostet. Weitere Informationen finden Sie unter [Hosting Workflow Services Overview](../wcf/feature-details/hosting-workflow-services-overview.md). Weitere Informationen zu Workflow Diensten finden Sie unter [Workflow Dienste](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistenz, Entladen und langfristige Workflows  
  Windows Workflow vereinfacht die Erstellung von langfristigen reaktiven Programmen durch die folgenden Punkte:  

@@ -1,23 +1,24 @@
 ---
 title: Neues in Windows Workflow Foundation
+description: Erfahren Sie mehr über Windows Workflow Foundation Änderungen in .NET Framework 4. Workflows sind einfacher zu erstellen, auszuführen und zu warten.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 8f79c6d2a564571f8b753f322a79e91a01b1cf2f
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b25b71a61f8a96d59c79e780d9fe5cd03abfa299
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142003"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419342"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Neues in Windows Workflow Foundation
 
 Windows Workflow Foundation (WF) in .NET Framework 4 ändert mehrere Entwicklungsparadigmen aus früheren Versionen. Workflows sind jetzt einfacher zu erstellen, auszuführen und zu warten und implementieren eine Vielzahl neuer Funktionen. Weitere Informationen zum Migrieren von .NET 3,0-und .NET 3,5-Workflow Anwendungen, um die neueste Version zu verwenden, finden Sie in der [Migrations Anleitung](migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Workflowaktivitätsmodell  
- Statt der <xref:System.Workflow.Activities.SequentialWorkflowActivity>-Klasse oder der <xref:System.Workflow.Activities.StateMachineWorkflowActivity>-Klasse ist die Aktivität jetzt die Basiseinheit beim Erstellen eines Workflows. Die <xref:System.Activities.Activity>-Klasse stellt die Basisabstraktion des Workflowverhaltens bereit. Aktivitätsautoren können dann <xref:System.Activities.CodeActivity> für eine grundlegende benutzerdefinierte Aktivitätsfunktionalität oder <xref:System.Activities.NativeActivity> für eine benutzerdefinierte Aktivitätsfunktionalität, die alle zur Laufzeit verfügbaren Funktionen verwendet, implementieren. <xref:System.Activities.Activity> ist eine Klasse, die von Aktivitäts Autoren verwendet wird, um neue Verhalten deklarativ in Bezug auf andere <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>oder <xref:System.Activities.DynamicActivity> Objekte auszudrücken, unabhängig davon, ob Sie Benutzer definiert oder in der [integrierten Aktivitäts Bibliothek](net-framework-4-5-built-in-activity-library.md)enthalten sind.  
+ Statt der <xref:System.Workflow.Activities.SequentialWorkflowActivity>-Klasse oder der <xref:System.Workflow.Activities.StateMachineWorkflowActivity>-Klasse ist die Aktivität jetzt die Basiseinheit beim Erstellen eines Workflows. Die <xref:System.Activities.Activity>-Klasse stellt die Basisabstraktion des Workflowverhaltens bereit. Aktivitätsautoren können dann <xref:System.Activities.CodeActivity> für eine grundlegende benutzerdefinierte Aktivitätsfunktionalität oder <xref:System.Activities.NativeActivity> für eine benutzerdefinierte Aktivitätsfunktionalität, die alle zur Laufzeit verfügbaren Funktionen verwendet, implementieren. <xref:System.Activities.Activity>ist eine Klasse, die von Aktivitäts Autoren verwendet wird, um neue Verhalten deklarativ in Bezug auf andere-,-,- <xref:System.Activities.NativeActivity> <xref:System.Activities.CodeActivity> <xref:System.Activities.AsyncCodeActivity> oder <xref:System.Activities.DynamicActivity> -Objekte auszudrücken, unabhängig davon, ob Sie Benutzer definiert oder in der [integrierten Aktivitäts Bibliothek](net-framework-4-5-built-in-activity-library.md)enthalten sind.  
   
 ## <a name="rich-composite-activity-options"></a>Umfangreiche zusammengesetzte Aktivitätsoptionen  
  <xref:System.Activities.Statements.Flowchart> ist eine leistungsstarke neue Ablaufsteuerungsaktivität, die es Autoren ermöglicht, beliebige Schleifen und bedingte Verzweigungen zu modellieren. <xref:System.Activities.Statements.Flowchart> stellt ein ereignisgesteuertes Programmiermodell bereit, das zuvor nur mit <xref:System.Workflow.Activities.StateMachineWorkflowActivity> implementiert werden konnte. Verfahrensworkflows profitieren von neuen Flusssteuerungsaktivitäten, die herkömmliche Flusssteuerungsstrukturen modellieren, z. B. <xref:System.Activities.Statements.TryCatch> und <xref:System.Activities.Statements.Switch%601>.  

@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::GetAppDomainByUniqueId Method
+title: 'Ixclrdataprocess:: getappdomainbyuniqueid-Methode'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::GetAppDomainByUniqueId Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8b468d40ef8eb523ba8881627fae15cf9b7c7b80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb02ffed09cbcc31e653bfd3165050c247908c5d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775258"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420782"
 ---
-# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess::GetAppDomainByUniqueId Method
+# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>Ixclrdataprocess:: getappdomainbyuniqueid-Methode
 
-Ruft eine `AppDomain` in einem Prozess, der auf Grundlage seines eindeutigen Bezeichners.
+Ruft ein-Attribut `AppDomain` in einem Prozess auf der Grundlage seines eindeutigen Bezeichners ab.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,19 +40,19 @@ HRESULT GetAppDomainByUniqueID(
 ## <a name="parameters"></a>Parameter
 
 `id`\
-[in] Der eindeutige Bezeichner der Anwendungsdomäne
+in Der eindeutige Bezeichner der AppDomain.
 
 `appDomain`\
-[out] Der AppDomain
+vorgenommen Die AppDomain
 
 ## <a name="remarks"></a>Hinweise
 
-Die angegebene Methode ist Teil der `IXCLRDataProcess` Schnittstelle und zum 20. Steckplatz der virtuellen Methodentabelle entspricht. Die `IXCLRDataAppDomain*` zurückgegeben, die für die Interaktion mit anderen APIs verwendet wird.
+Die bereitgestellte Methode ist Teil der `IXCLRDataProcess` -Schnittstelle und entspricht dem 20. Slot der Tabelle der virtuellen Methode. Der `IXCLRDataAppDomain*` zurückgegebene wird für die Interaktion mit anderen APIs verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
-**Header:** Keine **Bibliothek:** Keine **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Header:** Keine **Bibliothek:** keine **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

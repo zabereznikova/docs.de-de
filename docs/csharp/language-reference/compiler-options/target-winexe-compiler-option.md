@@ -33,7 +33,7 @@ Die Option **-target:winexe** bewirkt, dass der Compiler ein ausführbares Windo
   
  Wenn es in der Befehlszeile angegeben wurde, werden alle Dateien bis zur nächsten Option **-out** oder [-target](./target-compiler-option.md) verwendet, um das Windows-Programm zu erstellen.  
   
- Nur eine **Main**-Methode wird in den Quellcodedateien benötigt, die in eine EXE-Datei kompiliert werden. Sollte Ihr Code mehr als eine Klasse mit einer [Main](./main-compiler-option.md)-Methode enthalten, können Sie mit der Option **-main** angeben, welche Klasse die **Main**-Methode enthält.  
+ Nur eine **Main**-Methode wird in den Quellcodedateien benötigt, die in eine EXE-Datei kompiliert werden. Sollte Ihr Code mehr als eine Klasse mit einer **Main**-Methode enthalten, können Sie mit der Option [-main](./main-compiler-option.md) angeben, welche Klasse die **Main**-Methode enthält.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   

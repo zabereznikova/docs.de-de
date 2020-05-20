@@ -1,13 +1,14 @@
 ---
 title: Architektur von Windows-Workflows
+description: Windows Workflow Foundation kapselt Arbeitseinheiten als Aktivitäten ein, die in einer Umgebung mit Fluss Steuerung, Ausnahmebehandlung und anderen Features ausgeführt werden.
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: e2effc0f53153057b8a9034e4dc80cb19bbe7685
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 22ebeb7d95342ad6843e0721da8b213ed4a4d9b6
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834864"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420135"
 ---
 # <a name="windows-workflow-architecture"></a>Architektur von Windows-Workflows
 Windows Workflow Foundation (WF) erhöht die Abstraktions Ebene für die Entwicklung interaktiver Anwendungen mit langer Ausführungszeit. Arbeitseinheiten werden als Aktivitäten gekapselt. Aktivitäten werden in einer Umgebung ausgeführt, die Funktionen für Flusssteuerung, Ausnahmebehandlung, Fehlerweitergabe, Persistenz von Zustandsdaten, Laden und Entladen von aktuell verarbeiteten Workflows aus dem Arbeitsspeicher, Nachverfolgung und Transaktionsfluss bietet.  
@@ -43,10 +44,10 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-life-cycle"></a>Aktivitätslebenszyklus  
  Eine Instanz einer Aktivität startet mit dem <xref:System.Activities.ActivityInstanceState.Executing>-Zustand. Wenn keine Ausnahmen auftreten, verbleibt die Instanz in diesem Zustand, bis die Ausführung aller untergeordneten Aktivitäten beendet wurde und alle weiteren ausstehenden Arbeitsvorgänge (z. B. <xref:System.Activities.Bookmark>-Objekte) abgeschlossen sind. An diesem Punkt geht die Instanz in den <xref:System.Activities.ActivityInstanceState.Closed>-Zustand über. Das übergeordnete Element einer Aktivitätsinstanz kann den Abbruch eines untergeordneten Elements anfordern. Wenn das untergeordnete Element abgebrochen werden kann, wird es mit dem <xref:System.Activities.ActivityInstanceState.Canceled>-Zustand abgeschlossen. Wenn während der Ausführung eine Ausnahme ausgelöst wird, versetzt die Laufzeit die Aktivität in den <xref:System.Activities.ActivityInstanceState.Faulted>-Zustand und gibt die Ausnahme an die Kette übergeordneter Aktivitäten weiter. Im folgenden sind die drei Vervollständigungs Zustände einer Aktivität aufgeführt:
   
-- **Geschlossen** Die Aktivität hat ihre Arbeit abgeschlossen und wurde beendet.  
+- **Geschlossen:** Die Aktivität hat ihre Arbeit abgeschlossen und wurde beendet.  
   
-- **Hob** Die Aktivität hat ihre Arbeit ordnungsgemäß abgebrochen und wurde beendet. Für die Arbeit wird kein expliziter Rollback ausgeführt, wenn dieser Zustand eintritt.  
+- **Abgebrochen:** Die Aktivität hat ihre Arbeit ordnungsgemäß abgebrochen und wurde beendet. Für die Arbeit wird kein expliziter Rollback ausgeführt, wenn dieser Zustand eintritt.  
   
-- **Faulted** Die Aktivität hat einen Fehler ermittelt und wurde beendet, ohne die Arbeit abzuschließen.  
+- **Faulted:** Die Aktivität hat einen Fehler ermittelt und wurde beendet, ohne die Arbeit abzuschließen.  
   
  Beim dauerhaften Speichern und Entladen verbleiben Aktivitäten im <xref:System.Activities.ActivityInstanceState.Executing>-Zustand.

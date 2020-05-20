@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: f3800a5980304394dd648111fe23a3bb0890c575
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 142099ae5cf9637cc28e8c82aabcd831cc8f0f52
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395111"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420798"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Ixclrdataprocess:: enummethodinstancebyaddress-Methode
 
@@ -45,13 +45,13 @@ in Ein Handle zum Auflisten der Methoden Instanzen.
 `mod`\
 vorgenommen Die enumerationsmethodeninstanz.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die bereitgestellte Methode ist Teil der `IXCLRDataProcess` -Schnittstelle und entspricht dem 29. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 **Header:** Keine **Bibliothek:** keine **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Siehe auch
