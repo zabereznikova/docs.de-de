@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e1968f0b-2675-4dc2-8507-46164e1df154
 topic_type:
 - apiref
-ms.openlocfilehash: 8151531e470b149012b2dd4fca918c8937f13918
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f32381dc40a744157e46780e59b83efd63e58dcb
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133342"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762642"
 ---
-# <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a><span data-ttu-id="c528a-102">ICorRuntimeHost::SwitchOutLogicalThreadState-Methode</span><span class="sxs-lookup"><span data-stu-id="c528a-102">ICorRuntimeHost::SwitchOutLogicalThreadState Method</span></span>
-<span data-ttu-id="c528a-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="c528a-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a><span data-ttu-id="08aa4-102">ICorRuntimeHost::SwitchOutLogicalThreadState-Methode</span><span class="sxs-lookup"><span data-stu-id="08aa4-102">ICorRuntimeHost::SwitchOutLogicalThreadState Method</span></span>
+<span data-ttu-id="08aa4-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="08aa4-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c528a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c528a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08aa4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="08aa4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SwitchOutLogicalThreadState(  
@@ -33,19 +33,19 @@ HRESULT SwitchOutLogicalThreadState(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c528a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c528a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="08aa4-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="08aa4-105">Parameters</span></span>  
  `pFiberCookie`  
- <span data-ttu-id="c528a-106">vorgenommen Ein Cookie, das angibt, dass die Fiber ausgeschaltet wird.</span><span class="sxs-lookup"><span data-stu-id="c528a-106">[out] Cookie that indicates the fiber being switched out.</span></span>  
+ <span data-ttu-id="08aa4-106">vorgenommen Ein Cookie, das angibt, dass die Fiber ausgeschaltet wird.</span><span class="sxs-lookup"><span data-stu-id="08aa4-106">[out] Cookie that indicates the fiber being switched out.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c528a-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c528a-107">Requirements</span></span>  
- <span data-ttu-id="c528a-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c528a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08aa4-107">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="08aa4-107">Requirements</span></span>  
+ <span data-ttu-id="08aa4-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08aa4-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c528a-109">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="c528a-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="08aa4-109">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="08aa4-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c528a-110">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="c528a-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="08aa4-110">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="08aa4-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c528a-111">**.NET Framework Version:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="c528a-111">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="08aa4-111">**.NET Framework Version:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="08aa4-111">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c528a-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c528a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08aa4-112">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="08aa4-112">See also</span></span>
 
-- [<span data-ttu-id="c528a-113">ICorRuntimeHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c528a-113">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="08aa4-113">ICorRuntimeHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="08aa4-113">ICorRuntimeHost Interface</span></span>](icorruntimehost-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2861533a-cda0-47b3-b716-0d363505289b
 topic_type:
 - apiref
-ms.openlocfilehash: c3de2a063030d5169c6ff69e8db72e8be3ae22a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 46ffdb21c1f3b501cc28afffc224349887af5644
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133281"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762748"
 ---
-# <a name="icorthreadpoolcorgetmaxthreads-method"></a><span data-ttu-id="cc90d-102">ICorThreadpool::CorGetMaxThreads-Methode</span><span class="sxs-lookup"><span data-stu-id="cc90d-102">ICorThreadpool::CorGetMaxThreads Method</span></span>
-<span data-ttu-id="cc90d-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="cc90d-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorgetmaxthreads-method"></a><span data-ttu-id="6f937-102">ICorThreadpool::CorGetMaxThreads-Methode</span><span class="sxs-lookup"><span data-stu-id="6f937-102">ICorThreadpool::CorGetMaxThreads Method</span></span>
+<span data-ttu-id="6f937-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="6f937-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc90d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cc90d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f937-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6f937-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CorGetMaxThreads (  
@@ -34,15 +34,15 @@ HRESULT CorGetMaxThreads (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="cc90d-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cc90d-105">Requirements</span></span>  
- <span data-ttu-id="cc90d-106">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cc90d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f937-105">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="6f937-105">Requirements</span></span>  
+ <span data-ttu-id="6f937-106">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f937-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cc90d-107">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="cc90d-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6f937-107">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="6f937-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cc90d-108">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="cc90d-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6f937-108">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="6f937-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cc90d-109">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc90d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6f937-109">**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f937-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc90d-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cc90d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f937-110">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="6f937-110">See also</span></span>
 
-- [<span data-ttu-id="cc90d-111">ICorThreadpool-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="cc90d-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [<span data-ttu-id="6f937-111">ICorThreadpool-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6f937-111">ICorThreadpool Interface</span></span>](icorthreadpool-interface.md)
