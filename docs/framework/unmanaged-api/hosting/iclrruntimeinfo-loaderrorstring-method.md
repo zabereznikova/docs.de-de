@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da6efae38cd70a68feea56b12e86be23fde7f0cb
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195926"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762187"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString-Methode
 Übersetzt einen HRESULT-Wert in eine entsprechende Fehlermeldung für die angegebene Kultur.  
   
  Diese Methode ersetzt die folgenden Funktionen:  
   
-- [LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+- [LoadStringRC](loadstringrc-function.md)  
   
-- [LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+- [LoadStringRCEx](loadstringrcex-function.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ HRESULT LoadErrorString(
  vorgenommen Die dem angegebenen HRESULT zugeordnete Meldungs Zeichenfolge.  
   
  `pcchBuffer`  
- [in, out] Die Größe der `pwzbuffer`, um Pufferüberläufe zu vermeiden. Wenn `pwzbuffer` NULL ist, stellt `pcchBuffer` die erwartete Größe `pwzbuffer` bereit, um die vorab Zuordnung zuzulassen.  
+ [in, out] Die Größe von `pwzbuffer` , um Pufferüberläufe zu vermeiden. Wenn `pwzbuffer` NULL ist, wird `pcchBuffer` die erwartete Größe von bereitgestellt `pwzbuffer` , um die vorab Zuordnung zuzulassen.  
   
  `iLocaleID`  
  in Der Kultur Bezeichner. Wenn Sie die Standard Kultur verwenden möchten, müssen Sie-1 angeben.  
@@ -57,23 +57,23 @@ HRESULT LoadErrorString(
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
 |E_POINTER|`pcchBuffer` ist NULL.|  
 |E_INVALIDARG|`pwzBuffer` ist NULL.|  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo-Schnittstelle](iclrruntimeinfo-interface.md)
+- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosting](index.md)

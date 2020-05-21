@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd9e9204-a80d-44f3-8192-779224b35056
 topic_type:
 - apiref
-ms.openlocfilehash: dfdcb9b8aedeb3ccbbd27864e79ce43338942922
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 558b6e4c6ac369e33be3d45b7241e8b11db8bfae
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133359"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760393"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::CurrentDomain-Methode
 Entlädt die angegebene Anwendungsdomäne aus dem aktuellen Prozess.  
@@ -35,19 +35,19 @@ HRESULT UnloadDomain (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomain`  
- in Ein Zeiger vom Typ <xref:System._AppDomain?displayProperty=nameWithType>, der die zu entladende Domäne darstellt.  
+ in Ein Zeiger vom Typ <xref:System._AppDomain?displayProperty=nameWithType> , der die zu entladende Domäne darstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|Der Vorgang war erfolgreich.|  
+|S_OK|Der Vorgang wurde durchgeführt.|  
 |S_FALSE|Der Vorgang konnte nicht ausgeführt werden.|  
-|E_FAIL|Ein unbekannter, schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die Common Language Runtime (CLR) im Prozess nicht mehr verwendet werden. Nachfolgende Aufrufe von Hosting-APIs geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_FAIL|Ein unbekannter, schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die Common Language Runtime (CLR) im Prozess nicht mehr verwendbar. Nachfolgende Aufrufe von Hosting-APIs geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
@@ -55,8 +55,8 @@ HRESULT UnloadDomain (
   
  **.NET Framework Version:** 1,0, 1,1  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [ICorRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost-Schnittstelle](icorruntimehost-interface.md)

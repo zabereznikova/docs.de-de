@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 9a911b99b4543ae7957b685df06b4d85f13c7790
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644055"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762239"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
 Windows Presentation Foundation (WPF) bietet eine Reihe von Diensten, die zum Erweitern der Funktionalität einer [Eigenschaft](../../../standard/base-types/common-type-system.md#properties) eines Typs verwendet werden können. Zusammen werden diese Dienste normalerweise als WPF-Eigenschaftensystem bezeichnet. Eine Eigenschaft, die von der WPF-Eigenschaft unterstützt wird, wird als Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht wird das WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft beschrieben. Dies schließt die Verwendung vorhandener Abhängigkeitseigenschaften in XAML und Code ein. In dieser Übersicht werden auch spezielle Aspekte von Abhängigkeitseigenschaften wie die Metadaten von Abhängigkeitseigenschaften sowie die Erstellung einer eigenen Abhängigkeitseigenschaft in einer benutzerdefinierten Klasse eingeführt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
-In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: meine erste WPF-Desktop Anwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Abhängigkeitseigenschaften und CLR-Eigenschaften
  Eigenschaften werden in der Regel als .NET-[Standardeigenschaften](../../../standard/base-types/common-type-system.md#properties) verfügbar gemacht. Grundsätzlich können Sie direkt mit diesen Eigenschaften direkt interagieren, ohne zu wissen, dass sie als Abhängigkeitseigenschaft implementiert werden. Sie sollten aber mit einigen oder allen Funktionen des WPF-Eigenschaftensystems vertraut sein, damit Sie sie nutzen können.
@@ -68,7 +68,7 @@ Im folgende XAML-Beispiel wird ein Beispiel für eine Syntax ohne Attribut und e
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>Festlegen von Eigenschaften im Code
- Das Festlegen von Abhängigkeitseigenschaftswerten im Code ist in der Regel nur ein Aufruf der Setimplementierung, die vom CLR-"Wrapper" verfügbar gemacht wird.
+ Beim Festlegen von Abhängigkeits Eigenschafts Werten im Code handelt es sich in der Regel nur um einen aufzurufenden Satz von CLR-Wrapper.
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ Das Abrufen eines Eigenschaftswerts besteht auch im Grunde aus einem Aufruf der 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-Sie können auch die Eigenschaftensystem-APIs <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> und direkt aufrufen. Dies ist in der Regel nicht erforderlich, wenn Sie vorhandene Eigenschaften verwenden (die Wrapper sind bequemer und bieten eine bessere Belichtung der Eigenschaft für Entwicklertools), aber das direkte Aufrufen der APIs ist für bestimmte Szenarien geeignet.
+Sie können auch die Eigenschaften System-APIs <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> direkt aufzurufen. Dies ist in der Regel nicht erforderlich, wenn Sie vorhandene Eigenschaften verwenden (die Wrapper sind bequemer und bieten eine bessere Verfügbarkeit der Eigenschaft für Entwicklertools), aber der direkte Aufruf der APIs ist für bestimmte Szenarien geeignet.
 
 Eigenschaften können auch in XAML festgelegt und später über den Code (über die CodeBehind-Datei) darauf zugegriffen werden. Weitere Informationen finden Sie unter [Code-Behind und XAML in WPF](code-behind-and-xaml-in-wpf.md).
 
@@ -95,7 +95,7 @@ Eine Abhängigkeitseigenschaft stellt Funktionen bereit, die die Funktionalität
 
 - [Überschreiben von Metadaten](#metadata-overrides)
 
-- [Vererbung von Eigenschaftswerten](#property-value-inheritance)
+- [Eigenschafts Wert Vererbung](#property-value-inheritance)
 
 - [WPF-Designer-Integration](#wpf-designer-integration)
 
@@ -108,7 +108,7 @@ Nachdem die Ressource definiert wurde, können Sie auf die Ressource verweisen u
 
 [!code-xaml[PropertiesOvwSupport#ResourcesReference](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
 
-Auf diese spezielle Ressource wird als ein [DynamicResource-Markuperweiterung](dynamicresource-markup-extension.md) verwiesen (in WPF-XAML können Sie entweder einen statischen oder dynamischen Ressourcenverweis verwenden). Um einen dynamischen Ressourcenverweis zu verwenden, müssen Sie die Ressource auf eine Abhängigkeitseigenschaft festlegen. Daher wird vom WPF-Eigenschaftensystem insbesondere die Verwendung dynamischer Ressourcenverweise ermöglicht. Weitere Informationen finden Sie unter [XAML-Ressourcen](xaml-resources.md).
+Auf diese spezielle Ressource wird als ein [DynamicResource-Markuperweiterung](dynamicresource-markup-extension.md) verwiesen (in WPF-XAML können Sie entweder einen statischen oder dynamischen Ressourcenverweis verwenden). Um einen dynamischen Ressourcenverweis zu verwenden, müssen Sie die Ressource auf eine Abhängigkeitseigenschaft festlegen. Daher wird vom WPF-Eigenschaftensystem insbesondere die Verwendung dynamischer Ressourcenverweise ermöglicht. Weitere Informationen finden Sie unter [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md).
 
 > [!NOTE]
 > Ressourcen werden als ein lokaler Wert behandelt. Wenn Sie also einen anderen lokalen Wert festgelegt haben, beseitigen Sie den Verweis auf die Ressource. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md).
@@ -128,7 +128,7 @@ Die Abhängigkeitseigenschaften (oder die <xref:System.Windows.DependencyObject>
 ### <a name="styles"></a>Stile
 Stile und Vorlagen sind zwei Hauptgründe für die Verwendung von Abhängigkeitseigenschaften. Stile eignen sich besonders für das Festlegen von Eigenschaften, die die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] der Anwendung definieren. Stile werden in XAML in der Regel als Ressourcen definiert. Stile interagieren mit dem Eigenschaftensystem, weil sie normalerweise sowohl „Setter“ für bestimmte Eigenschaften als auch „Trigger“ enthalten, die einen Eigenschaftswert basierend auf dem Echtzeitwert einer anderen Eigenschaft ändern.
 
-Im folgenden Beispiel wird ein einfacher Stil <xref:System.Windows.FrameworkElement.Resources%2A> erstellt (der in einem Wörterbuch definiert <xref:System.Windows.FrameworkElement.Style%2A> und <xref:System.Windows.Controls.Button>nicht angezeigt wird), und wendet diesen Stil dann direkt auf die Eigenschaft für eine an. Der Setter innerhalb des Stils legt die Eigenschaft <xref:System.Windows.Controls.Control.Background%2A> für eine formatierte <xref:System.Windows.Controls.Button> auf „green“ (grün) fest.
+Im folgenden Beispiel wird ein einfaches Format erstellt (das in einem <xref:System.Windows.FrameworkElement.Resources%2A> Wörterbuch definiert, nicht angezeigt wird), und dann wird dieses Format direkt auf die- <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft für ein-Objekt angewendet <xref:System.Windows.Controls.Button> . Der Setter innerhalb des Stils legt die Eigenschaft <xref:System.Windows.Controls.Control.Background%2A> für eine formatierte <xref:System.Windows.Controls.Button> auf „green“ (grün) fest.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -136,7 +136,7 @@ Im folgenden Beispiel wird ein einfacher Stil <xref:System.Windows.FrameworkElem
 
 Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
-### <a name="animations"></a>Animations
+### <a name="animations"></a>Animationen
 Abhängigkeitseigenschaften können animiert werden. Wenn eine Animation angewendet wurde und ausgeführt wird, verfügt der animierte Wert über eine höhere Priorität als alle anderen Werte (z.B. ein lokaler Wert), über die die Eigenschaft sonst verfügt.
 
 Im folgenden Beispiel wird die <xref:System.Windows.Controls.Control.Background%2A>-Eigenschaft auf einer <xref:System.Windows.Controls.Button>-Eigenschaft animiert (genau genommen wird <xref:System.Windows.Controls.Control.Background%2A> über die Eigenschaftenelementsyntax animiert, um eine leere <xref:System.Windows.Media.SolidColorBrush>-Klasse als <xref:System.Windows.Controls.Control.Background%2A> anzugeben. Die <xref:System.Windows.Media.SolidColorBrush.Color%2A>-Eigenschaft dieser <xref:System.Windows.Media.SolidColorBrush> ist somit die Eigenschaft, die direkt animiert wird).
@@ -146,7 +146,7 @@ Im folgenden Beispiel wird die <xref:System.Windows.Controls.Control.Background%
 Weitere Informationen zur Animation von Eigenschaften finden Sie unter [Übersicht über Animationen](../graphics-multimedia/animation-overview.md) und [Übersicht über Storyboards](../graphics-multimedia/storyboards-overview.md).
 
 ### <a name="metadata-overrides"></a>Überschreiben von Metadaten
-Sie können bestimmte Verhaltensweisen einer Abhängigkeitseigenschaft ändern, indem Sie die Metadaten für diese Eigenschaft überschreiben, wenn Sie von der Klasse ableiten, die die Abhängigkeitseigenschaft ursprünglich registriert. Das Überschreiben von Metadaten basiert auf dem Bezeichner <xref:System.Windows.DependencyProperty>. Das Überschreiben von Metadaten erfordert keine erneute Implementierung der Eigenschaft. Die Metadatenänderung wird vom Eigenschaftensystem nativ verarbeitet. Jede Klasse kann potenziell individuelle Metadaten für alle Eigenschaften enthalten, die von den Basisklassen jeweils pro Typ geerbt werden.
+Sie können bestimmte Verhaltensweisen einer Abhängigkeitseigenschaft ändern, indem Sie die Metadaten für diese Eigenschaft überschreiben, wenn Sie von der Klasse ableiten, die die Abhängigkeitseigenschaft ursprünglich registriert. Das Überschreiben von Metadaten basiert auf dem Bezeichner <xref:System.Windows.DependencyProperty>. Das Überschreiben von Metadaten erfordert keine Neuimplementierung der Eigenschaft. Die Metadatenänderung wird vom Eigenschaftensystem nativ verarbeitet. Jede Klasse kann potenziell individuelle Metadaten für alle Eigenschaften enthalten, die von den Basisklassen jeweils pro Typ geerbt werden.
 
 Das folgende Beispiel überschreibt Metadaten für eine <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>-Abhängigkeitseigenschaft. Das Überschreiben der Metadaten dieser Abhängigkeitseigenschaft ist Teil eines Implementierungsmusters, das Steuerelemente erstellt, die Standardstile aus Designs verwenden können.
 
@@ -168,7 +168,7 @@ Im folgenden Beispiel wird eine Bindung gezeigt und die <xref:System.Windows.Fra
 Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>WPF-Designer-Integration
-Ein benutzerdefiniertes Steuerelement mit Eigenschaften, die als Abhängigkeitseigenschaften implementiert sind, wird von WPF Designer für Visual Studio unterstützt. Ein Beispiel hierfür ist die Fähigkeit, direkte und angefügte Abhängigkeitseigenschaften mit dem **Eigenschaften**-Fenster zu bearbeiten. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).
+Ein benutzerdefiniertes Steuerelement mit Eigenschaften, die als Abhängigkeits Eigenschaften implementiert werden, empfängt den entsprechenden WPF-Designer für Visual Studio-Unterstützung Ein Beispiel hierfür ist die Fähigkeit, direkte und angefügte Abhängigkeitseigenschaften mit dem **Eigenschaften**-Fenster zu bearbeiten. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 Wenn Sie den Wert einer Abhängigkeitseigenschaft abrufen, erhalten Sie möglicherweise einen Wert, der mithilfe einer der anderen auf Eigenschaften basierenden Eingaben, die Bestandteil des WPF-Systems sind, für die Eigenschaft festgelegt wurde. Abhängigkeitseigenschaftswerten werden Prioritäten zugewiesen, damit eine Vielzahl von Szenarios zur Art und Weise, wie Eigenschaften ihre Werte erhalten, in einer vorhersagbaren Weise interagieren können.
@@ -183,22 +183,22 @@ Im Prinzip wird die Eigenschaft für die erste Schaltfläche zweimal festgelegt,
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>Warum haben Abhängigkeitseigenschaften Prioritäten?
-In der Regel möchten Sie nicht, dass Stile immer angewendet werden und sogar einen lokal festgelegten Wert eines einzelnen Elements verdecken (andernfalls wäre es schwierig, Stile oder Elemente im Allgemeinen zu verwenden). Aus diesem Grund operieren die Werte, die von Stilen abstammen, mit einer niedrigeren Priorität als lokal festgelegte Werte. Eine ausführliche Liste der Abhängigkeitseigenschaften und Angaben dazu, woher der effektive Wert einer Abhängigkeitseigenschaft möglicherweise stammt, finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md).
+Normalerweise möchten Sie nicht, dass Stile immer angewendet werden und sogar einen lokal festgelegten Wert eines einzelnen Elements verbergen (Andernfalls wäre es schwierig, entweder Stile oder Elemente im Allgemeinen zu verwenden). Aus diesem Grund operieren die Werte, die von Stilen abstammen, mit einer niedrigeren Priorität als lokal festgelegte Werte. Eine ausführliche Liste der Abhängigkeitseigenschaften und Angaben dazu, woher der effektive Wert einer Abhängigkeitseigenschaft möglicherweise stammt, finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md).
 
 > [!NOTE]
 > Es gibt eine Reihe von Eigenschaften, die für WPF-Elemente definiert sind, die keine Abhängigkeitseigenschaften sind. Im Großen und Ganzen wurden Eigenschaften nur als Abhängigkeitseigenschaften implementiert, wenn mindestens eines der Szenarios unterstützt werden musste, das vom Eigenschaftensystem aktiviert wurde: Datenbindungen, Stile, Animationen, die standardmäßige Wertunterstützung, die Vererbung, angefügte Eigenschaften oder Invalidierungen.
 
 ## <a name="learning-more-about-dependency-properties"></a>Wissenswertes zu Abhängigkeitseigenschaften  
 
-- Eine angefügte Eigenschaft ist ein Eigenschaftstyp, die eine spezielle Syntax in XAML unterstützt. Eine angefügte Eigenschaft verfügt häufig nicht über eine 1:1-Entsprechung mit einer CLR-Eigenschaft (Common Language Runtime) und ist nicht notwendigerweise eine Abhängigkeitseigenschaft. Der typische Zweck einer angefügten Eigenschaft besteht darin, untergeordneten Elementen das Melden von Eigenschaftswerten an ein übergeordnetes Element zu ermöglichen, auch wenn das übergeordnete Element und das untergeordnete Element nicht beide diese Eigenschaft als Teil der Auflistungen von Klassenmembern besitzen. Ein primäres Szenario ist das Aktivieren von untergeordneten Elementen, um das übergeordnete Element darüber zu informieren, wie die untergeordneten Elemente in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dargestellt werden sollen. Ein Beispiel finden Sie unter <xref:System.Windows.Controls.DockPanel.Dock%2A> oder <xref:System.Windows.Controls.Canvas.Left%2A>. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](attached-properties-overview.md).
+- Eine angefügte Eigenschaft ist ein Eigenschaftstyp, die eine spezielle Syntax in XAML unterstützt. Eine angefügte Eigenschaft verfügt häufig nicht über eine 1:1-Entsprechung mit einer Common Language Runtime (CLR)-Eigenschaft und ist nicht notwendigerweise eine Abhängigkeits Eigenschaft. Der typische Zweck einer angefügten Eigenschaft besteht darin, den untergeordneten Elementen zu gestatten, Eigenschaftswerte an ein übergeordnetes Element zu melden, auch wenn das übergeordnete Element und das untergeordnete Element diese Eigenschaft nicht beide als Teil der Auflistungen der Klassenmember besitzen. Ein primäres Szenario ist das Aktivieren von untergeordneten Elementen, um das übergeordnete Element darüber zu informieren, wie die untergeordneten Elemente in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dargestellt werden sollen. Ein Beispiel finden Sie unter <xref:System.Windows.Controls.DockPanel.Dock%2A> oder <xref:System.Windows.Controls.Canvas.Left%2A>. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](attached-properties-overview.md).
 
 - Komponenten- oder Anwendungsentwickler können ihre eigene Abhängigkeitseigenschaft erstellen, um Funktionen wie die Datenbindung oder die Unterstützung von Stilen oder die Invalidierung und die Erzwingung von Werten zu unterstützen. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).
 
-- Betrachten Sie Abhängigkeitseigenschaften als öffentliche Eigenschaften, auf die zugegriffen werden kann oder zumindest von jedem Aufrufer erkannt werden kann, der Zugriff auf eine Instanz hat. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
+- Beachten Sie, dass Abhängigkeits Eigenschaften öffentliche Eigenschaften sind, auf die zugegriffen werden kann oder zumindest von jedem Aufrufer, der Zugriff auf eine Instanz hat, auffallen Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
+- [Benutzerdefinierte Abhängigkeits Eigenschaften](custom-dependency-properties.md)
 - [Schreibgeschützte Abhängigkeitseigenschaften](read-only-dependency-properties.md)
 - [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [WPF-Architektur](wpf-architecture.md)

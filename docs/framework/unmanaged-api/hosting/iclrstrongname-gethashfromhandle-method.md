@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3bedbb7d-3cdd-4175-b370-10ae734062db
 topic_type:
 - apiref
-ms.openlocfilehash: c095c99ee60d6b2ea0e5bce7010a66d40160443d
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e2d71f7c61b02273bdcaf182f6f79ca3c2a2c75f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899685"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762080"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle-Methode
 Generiert einen Hash über den Inhalt der Datei mit dem angegebenen Datei Handle unter Verwendung des angegebenen Hash Algorithmus.  
@@ -38,7 +38,7 @@ HRESULT GetHashFromHandle (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `hFile`  
  in Das Handle der Datei, für die der Hashwert verwendet werden soll.  
   
@@ -49,23 +49,23 @@ HRESULT GetHashFromHandle (
  vorgenommen Der zurückgegebene Hash Puffer.  
   
  `cchHash`  
- in Die angeforderte maximale Größe `pbHash`.  
+ in Die angeforderte maximale Größe von `pbHash` .  
   
  `pchHash`  
- vorgenommen Die Größe (in Bytes) des zurückgegebenen `pbHash`.  
+ vorgenommen Die Größe (in Bytes) des zurückgegebenen `pbHash` .  
   
 ## <a name="return-value"></a>Rückgabewert  
  `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](/windows/win32/seccrypto/common-hresult-values) für eine Liste).  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [ICLRStrongName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [ICLRStrongName-Schnittstelle](iclrstrongname-interface.md)

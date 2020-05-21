@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c431617a-b055-44a0-8730-48b7a86d9610
 topic_type:
 - apiref
-ms.openlocfilehash: 87549118742da797ef0dd1b08ae9e72c466f7841
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 88abdbc62c8b27f48c5629afb99ab6e30ee67e00
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139564"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762265"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>ICorRuntimeHost::GetConfiguration-Methode
 Ruft ein Objekt ab, mit dem der Host die Rückruf Konfiguration des Common Language Runtime (CLR) angeben kann.  
@@ -35,13 +35,13 @@ HRESULT GetConfiguration(
   
 ## <a name="parameters"></a>Parameter  
  `pConfiguration`  
- vorgenommen Ein Zeiger auf die Adresse eines [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) -Objekts, das verwendet werden kann, um die CLR zu konfigurieren.  
+ vorgenommen Ein Zeiger auf die Adresse eines [ICorConfiguration](icorconfiguration-interface.md) -Objekts, das verwendet werden kann, um die CLR zu konfigurieren.  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR muss vor der Initialisierung konfiguriert werden. Andernfalls gibt die `GetConfiguration`-Methode ein HRESULT zurück, das auf einen Fehler hinweist.  
+ Die CLR muss vor der Initialisierung konfiguriert werden. Andernfalls gibt die `GetConfiguration` Methode ein HRESULT zurück, das auf einen Fehler hinweist.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
@@ -49,6 +49,6 @@ HRESULT GetConfiguration(
   
  **.NET Framework Versionen:** 1,0, 1,1  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [ICorRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost-Schnittstelle](icorruntimehost-interface.md)
