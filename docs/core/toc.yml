@@ -365,32 +365,40 @@
     - name: Portieren von C++/CLI-Projekten
       href: porting/cpp-cli.md
 - name: Komponententest
-  href: testing/index.md
+  displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
   items:
     - name: Übersicht
       href: testing/index.md
     - name: Bewährte Methoden für Komponententests
       href: testing/unit-testing-best-practices.md
-    - name: 'Komponententests in C# mit xUnit'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: 'Komponententests in C# mit NUnit'
-      href: testing/unit-testing-with-nunit.md
-    - name: 'Komponententests in C# mit MSTest'
-      href: testing/unit-testing-with-mstest.md
-    - name: 'Komponententests in F# mit xUnit'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: 'Komponententests in F# mit NUnit'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: 'Komponententests in F# mit MSTest'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: Komponententests in VB mit xUnit
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: Komponententests in VB mit NUnit
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: Komponententests in VB mit MSTest
-      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: xUnit
+      items:
+        - name: 'C#-Komponententest'
+          href: testing/unit-testing-with-dotnet-test.md
+        - name: 'F#-Komponententest'
+          href: testing/unit-testing-fsharp-with-dotnet-test.md
+        - name: VB-Komponententest
+          href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit
+      items:
+        - name: 'C#-Komponententest'
+          href: testing/unit-testing-with-nunit.md
+        - name: 'F#-Komponententest'
+          href: testing/unit-testing-fsharp-with-nunit.md
+        - name: VB-Komponententest
+          href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest
+      items:
+        - name: 'C#-Komponententest'
+          href: testing/unit-testing-with-mstest.md
+        - name: 'F#-Komponententest'
+          href: testing/unit-testing-fsharp-with-mstest.md
+        - name: VB-Komponententest
+          href: testing/unit-testing-visual-basic-with-mstest.md
     - name: Ausführen selektiver Komponententests
       href: testing/selective-unit-tests.md
+    - name: Beauftragen von Komponententests
+      href: testing/order-unit-tests.md
     - name: Veröffentlichte Ausgabe von Komponententests
       href: testing/unit-testing-published-output.md
     - name: Live-Komponententests von .NET Core-Projekten mit Visual Studio

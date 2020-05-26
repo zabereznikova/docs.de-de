@@ -740,18 +740,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: Verketten von Standardabfrageoperatoren
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 'Tutorial: Verketten von Abfragen'
-                              items:
-                                - name: Verzögerte Ausführung und Auswertung in LINQ to XML
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: Beispiel für eine verzögerte Ausführung
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: Beispiel für das Verketten von Abfragen
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: Zwischenmaterialisierung
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: Verketten von Standardabfrageoperatoren
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 'Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument'
                               items:
                                 - name: Form von WordprocessingML-Dokumenten
