@@ -4,12 +4,12 @@ description: In diesem Tutorial für Fortgeschrittene wird veranschaulicht, wie 
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200105"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420369"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generieren und Nutzen asynchroner Datenströme mit C# 8.0 und .NET Core 3.0
 
@@ -42,7 +42,7 @@ In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Vis
 
 ## <a name="run-the-starter-application"></a>Ausführen der Startanwendung
 
-Sie können den Code für die in diesem Tutorial verwendete Startanwendung aus unserem Repository [dotnet/docs](https://github.com/dotnet/docs) im Ordner [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) abrufen.
+Sie können den Code für die in diesem Tutorial verwendete Startanwendung aus unserem Repository [dotnet/docs](https://github.com/dotnet/docs) im Ordner [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) abrufen.
 
 Die Startanwendung ist eine Konsolenanwendung, die die [GitHub GraphQL](https://developer.github.com/v4/)-Schnittstelle zum Abrufen aktueller Issues verwendet, die in das Repository [dotnet/docs](https://github.com/dotnet/docs) geschrieben wurden. Sehen Sie sich zunächst folgenden Code für die `Main`-Methode der Starter-App an:
 
@@ -144,7 +144,7 @@ Eine andere Erweiterungsmethode (<xref:System.Threading.Tasks.TaskAsyncEnumerabl
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-Sie können den Code für das abgeschlossene Tutorial aus dem Repository [dotnet/docs](https://github.com/dotnet/docs) im Ordner [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) abrufen.
+Sie können den Code für das abgeschlossene Tutorial aus dem Repository [dotnet/docs](https://github.com/dotnet/docs) im Ordner [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) abrufen.
 
 ## <a name="run-the-finished-application"></a>Ausführen der fertig gestellten Anwendung
 

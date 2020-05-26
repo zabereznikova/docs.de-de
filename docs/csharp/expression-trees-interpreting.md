@@ -4,12 +4,12 @@ description: Weitere Informationen zum Schreiben von Code, um die Struktur einer
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146007"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761862"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -51,7 +51,7 @@ Beginnen wir mit dem Hinzufügen-Beispiel aus der Einführung zu diesem Abschnit
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> Ich verwende kein `var`, um diese Ausdrucksbaumstruktur zu deklarieren, da es nicht möglich ist, weil die rechte Seite der Zuweisung implizit typisiert ist. Um dies besser zu verstehen, lesen Sie [hier](implicitly-typed-lambda-expressions.md).
+> Ich verwende kein `var`, um diese Ausdrucksbaumstruktur zu deklarieren, da es nicht möglich ist, weil die rechte Seite der Zuweisung implizit typisiert ist.
 
 Der Stammknoten ist ein `LambdaExpression`. Um interessanten Code auf der rechten Seite des `=>`-Operators zu erhalten, müssen Sie eines der untergeordneten Elemente des `LambdaExpression` finden. Wir werden dies mit allen Ausdrücken in diesem Abschnitt durchführen. Der übergeordnete Knoten hilft uns beim Finden des Rückgabetyps des `LambdaExpression`.
 

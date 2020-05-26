@@ -3,12 +3,12 @@ title: Erstellen von Mixin-Typen mithilfe von Standardschnittstellenmethoden
 description: Mithilfe von Standardschnittstellenmembern können Sie Schnittstellen mit optionalen Standardimplementierungen für Implementierungpsprogramme erweitern.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 0095d76eadfe0c6a1b30bf8a0c5000509f5e1bf9
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134379"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396708"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Untermischen von Funktionalität beim Erstellen von Klassen mithilfe von Schnittstellen mit Standardschnittstellenmethoden
 
@@ -53,21 +53,21 @@ Erstellen wir den Code, um diese Unterschiede zu veranschaulichen.
 
 Beginnen Sie, indem Sie die Schnittstelle erstellen, die das Verhalten für alle Leuchten definiert:
 
-[!code-csharp[Declare base interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
+[!code-csharp[Declare base interface](./snippets/mixins-with-default-interface-methods/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
 
 Eine einfache Deckenleuchte könnte diese Schnittstelle wie im folgenden Code dargestellt implementieren:
 
-[!code-csharp[First overhead light](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
+[!code-csharp[First overhead light](./snippets/mixins-with-default-interface-methods/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
 
 In diesem Tutorial werden keine IoT-Geräte durch den Code gesteuert, sondern diese Aktivitäten werden emuliert, indem Nachrichten in die Konsole geschrieben werden. Sie können den Code untersuchen, ohne Ihr Haus zu automatisieren.
 
 Definieren wir nun die Schnittstelle für eine Leuchte, die nach einem Timeout automatisch ausgeschaltet werden kann:
 
-[!code-csharp[pure Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
+[!code-csharp[pure Timer interface](./snippets/mixins-with-default-interface-methods/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
 Sie könnten eine Basisimplementierung zur Deckenleuchte hinzufügen, aber eine bessere Lösung besteht darin, diese Schnittstellendefinition zu ändern, um eine `virtual`-Standardimplementierung bereitzustellen:
 
-[!code-csharp[Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
+[!code-csharp[Timer interface](./snippets/mixins-with-default-interface-methods/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
 Durch Hinzufügen dieser Änderung kann die `OverheadLight`-Klasse die Timerfunktion implementieren, indem sie Unterstützung für die Schnittstelle deklariert:
 
@@ -77,7 +77,7 @@ public class OverheadLight : ITimerLight { }
 
 Ein anderer Leuchtentyp unterstützt möglicherweise ein anspruchsvolleres Protokoll. Er kann seine eigene Implementierung für `TurnOnFor` bereitstellen, wie im folgenden Code gezeigt:
 
-[!code-csharp[Override the timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
+[!code-csharp[Override the timer function](./snippets/mixins-with-default-interface-methods/HalogenLight.cs?name=SnippetHalogenLight)]
 
 Im Gegensatz zum Überschreiben von Methoden der virtuellen Klasse verwendet die Deklaration von `TurnOnFor` in der `HalogenLight`-Klasse nicht das Schlüsselwort `override`.
 
@@ -85,19 +85,19 @@ Im Gegensatz zum Überschreiben von Methoden der virtuellen Klasse verwendet die
 
 Die Vorteile von Standardschnittstellenmethoden werden deutlicher, wenn Sie erweiterte Funktionen einführen. Durch die Verwendung von Schnittstellen können Sie Mix-und-Match-Funktionen verwenden. Außerdem kann jeder Klassenautor zwischen der Standardimplementierung und einer benutzerdefinierten Implementierung wählen. Fügen wir eine Schnittstelle mit einer Standardimplementierung für eine blinkende Leuchte hinzu:
 
-[!code-csharp[Define the blinking light interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
+[!code-csharp[Define the blinking light interface](./snippets/mixins-with-default-interface-methods/IBlinkingLight.cs?name=SnippetBlinkingLight)]
 
 Die Standardimplementierung ermöglicht jeder Leuchte das Blinken. Die Deckenleuchte kann sowohl Timer- als auch Blinkfunktionen mit der Standardimplementierung hinzufügen:
 
-[!code-csharp[Use the default blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
+[!code-csharp[Use the default blink function](./snippets/mixins-with-default-interface-methods/OverheadLight.cs?name=SnippetOverheadLight)]
 
 Ein neuer Leuchtentyp (`LEDLight`) unterstützt die Timerfunktion und die Blinkfunktion direkt. Dieser Leuchtenstil implementiert sowohl die `ITimerLight`- als auch die `IBlinkingLight`-Schnittstelle und überschreibt die `Blink`-Methode:
 
-[!code-csharp[Override the blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
+[!code-csharp[Override the blink function](./snippets/mixins-with-default-interface-methods/LEDLight.cs?name=SnippetLEDLight)]
 
 Ein `ExtraFancyLight`-Element unterstützt ggf. Blink- und Timerfunktionen direkt:
 
-[!code-csharp[Override the blink and timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
+[!code-csharp[Override the blink and timer function](./snippets/mixins-with-default-interface-methods/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
 Das `HalogenLight`-Element, das Sie zuvor erstellt haben, unterstützt kein Blinken. Fügen Sie `IBlinkingLight` daher nicht der Liste der unterstützten Schnittstellen dieses Elements hinzu.
 
@@ -105,21 +105,21 @@ Das `HalogenLight`-Element, das Sie zuvor erstellt haben, unterstützt kein Blin
 
 Schreiben wir nun etwas Testcode. Sie können das Feature [Musterabgleich](../pattern-matching.md) von C# verwenden, um die Funktionen einer Leuchte zu ermitteln, indem Sie untersuchen, welche Schnittstellen sie unterstützt.  Die folgende Methode gibt die unterstützten Fähigkeiten der einzelnen Leuchten aus:
 
-[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
+[!code-csharp[Test a light's capabilities](./snippets/mixins-with-default-interface-methods/Program.cs?name=SnippetTestLightFunctions)]
 
 Der folgende Code in der `Main`-Methode erstellt alle Leuchtentypen nacheinander und testet die einzelnen Leuchten:
 
-[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
+[!code-csharp[Test a light's capabilities](./snippets/mixins-with-default-interface-methods/Program.cs?name=SnippetMainMethod)]
 
 ## <a name="how-the-compiler-determines-best-implementation"></a>So ermittelt der Compiler die beste Implementierung
 
 Dieses Szenario zeigt eine Basisschnittstelle ohne Implementierungen. Durch das Hinzufügen einer Methode zur `ILight`-Schnittstelle werden neue Komplexitäten eingeführt. Die Sprachregeln, die für Standardschnittstellenmethoden gelten, minimieren die Auswirkungen auf die konkreten Klassen, die mehrere abgeleitete Schnittstellen implementieren. Erweitern wir die ursprüngliche Schnittstelle durch eine neue Methode, um zu zeigen, wie sich dadurch ihre Verwendung ändert. Jede Indikatorleuchte kann ihren Energiestatus als Enumerationswert melden:
 
-[!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
+[!code-csharp[Enumeration for power status](./snippets/mixins-with-default-interface-methods/ILight.cs?name=SnippetPowerStatus)]
 
 Die Standardimplementierung geht von einer fehlenden Stromversorgung aus:
 
-[!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
+[!code-csharp[Report a default power status](./snippets/mixins-with-default-interface-methods/ILight.cs?name=SnippetILightInterface)]
 
 Diese Änderungen werden ordnungsgemäß kompiliert, auch wenn `ExtraFancyLight` Unterstützung für die `ILight`-Schnittstelle und die beiden abgeleiteten Schnittstellen `ITimerLight` und `IBlinkingLight` deklariert. Es gibt nur eine „nächste“ Implementierung, die in der `ILight`-Schnittstelle deklariert ist. Jede Klasse, die eine Überschreibung deklariert hat, würde zur „nächsten“ Implementierung werden. Sie haben in den vorhergehenden Klassen Beispiele gesehen, die die Member anderer abgeleiteter Schnittstellen überschreiben.
 

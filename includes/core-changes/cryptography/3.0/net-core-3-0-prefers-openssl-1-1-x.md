@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 65d8ca480d41a3807473583355fe8be41e0e9701
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 877f9d99b660c4af843e4d8d525219c1df6c99a9
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81274737"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721119"
 ---
 ### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0 zieht OpenSSL 1.1.x OpenSSL 1.0.x vor
 
@@ -51,7 +51,7 @@ Kryptografie
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Security.Cryptography.SafeEvpPKeyHandle.#ctor`
 - `M:System.Security.Cryptography.RSAOpenSsl.#ctor(System.IntPtr)`

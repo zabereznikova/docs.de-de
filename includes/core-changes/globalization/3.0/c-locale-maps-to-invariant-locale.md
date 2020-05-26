@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0551fa086644497c631cd9b6d7058398ff9ccfa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567785"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702281"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>Gebietsschema „C“ wird dem invarianten Gebietsschema zugeordnet
 
@@ -20,18 +20,20 @@ Die Zuordnung von „C“ zu „en_US_POSIX“ sorgte bei Kunden für Verwirrung
 
 3.0
 
-### <a name="recommended-action"></a>Empfohlene Aktion
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Es ist keine spezifische Maßnahme erforderlich. Sie sollten lediglich über die Änderung informiert sein. Diese Änderung wirkt sich nur auf Anwendungen aus, die die Zuordnung des Gebietsschemas „C“ verwenden.
 
-### <a name="category"></a>Kategorie
+#### <a name="category"></a>Kategorie
 
 Globalisierung
 
-### <a name="affected-apis"></a>Betroffene APIs
+#### <a name="affected-apis"></a>Betroffene APIs
 
 Diese Änderung wirkt sich auf alle Sortierungs- und Kultur-APIs aus.
 
 <!--
+
+#### Affected APIs
 
 -->

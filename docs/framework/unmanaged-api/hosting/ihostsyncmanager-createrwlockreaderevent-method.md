@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68c4ea19-c47c-45c6-b420-d3a2ba1c2d50
 topic_type:
 - apiref
-ms.openlocfilehash: 64cf6c80ab1cf4b3ca52c60d6e72b54c438f9f4a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f3e7456c3f992527981a15b3b1835e1ca72603ad
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195836"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803293"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>IHostSyncManager::CreateRWLockReaderEvent-Methode
 Erstellt ein manuelles Zurücksetzungs Ereignis Objekt für die Implementierung einer Lesesperre.  
@@ -37,41 +37,41 @@ HRESULT CreateRWLockReaderEvent (
   
 ## <a name="parameters"></a>Parameter  
  `bInitialState`  
- [in] `true`, wenn `ppEvent` signalisiert werden soll. Andernfalls `false`.  
+ [in] `true` , wenn `ppEvent` signalisiert werden soll, andernfalls `false` .  
   
  `cookie`  
  in Ein Cookie, das der Lesesperre zugeordnet werden soll.  
   
  `ppEvent`  
- vorgenommen Ein Zeiger auf die Adresse einer [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) -Instanz oder NULL, wenn das Ereignis Objekt nicht erstellt werden konnte.  
+ vorgenommen Ein Zeiger auf die Adresse einer [IHostManualEvent](ihostmanualevent-interface.md) -Instanz oder NULL, wenn das Ereignis Objekt nicht erstellt werden konnte.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockReaderEvent` erfolgreich zurückgegeben.|  
+|S_OK|`CreateRWLockReaderEvent`wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
 |HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
-|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um das angeforderte Ereignis Objekt zu erstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR ruft `CreateRWLockReaderEvent` auf, um einen Verweis auf eine `IHostManualEvent` Instanz zu erhalten, die bei der Implementierung einer Lesesperre verwendet werden soll. Der Host kann das Cookie verwenden, um zu bestimmen, welche Tasks auf die Lesesperre warten, indem die [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) -Schnittstelle abgefragt wird.  
+ Die CLR ruft `CreateRWLockReaderEvent` auf, um einen Verweis auf eine- `IHostManualEvent` Instanz zu erhalten, die bei der Implementierung einer Lesesperre verwendet werden soll. Der Host kann das Cookie verwenden, um zu bestimmen, welche Tasks auf die Lesesperre warten, indem die [ICLRSyncManager](iclrsyncmanager-interface.md) -Schnittstelle abgefragt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostAutoEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [IHostManualEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [IHostSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager-Schnittstelle](iclrsyncmanager-interface.md)
+- [IHostAutoEvent-Schnittstelle](ihostautoevent-interface.md)
+- [IHostManualEvent-Schnittstelle](ihostmanualevent-interface.md)
+- [IHostSyncManager-Schnittstelle](ihostsyncmanager-interface.md)

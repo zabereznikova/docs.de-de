@@ -7,12 +7,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157038"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442201"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierleitfaden)
 
@@ -58,4 +58,4 @@ In der folgenden Tabelle werden einige der Methoden aus der <xref:System.Convert
 
 - [Typen](./index.md)
 - [Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)

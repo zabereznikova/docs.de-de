@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7cdc3fe9d52db56d0280bc602d3a9f2f54e8246
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134938"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805251"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>IDebuggerThreadControl::ThreadIsBlockingForDebugger-Methode
 Benachrichtigt den Host, dass der Thread, der diesen Rückruf sendet, innerhalb der Debugdienste blockiert wird.  
@@ -32,19 +32,19 @@ HRESULT ThreadIsBlockingForDebugger ( );
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ThreadIsBlockingForDebugger`-Methode wird immer für einen Lauf Zeit Thread aufgerufen.  
+ Die- `ThreadIsBlockingForDebugger` Methode wird immer in einem Lauf Zeit Thread aufgerufen.  
   
- Die `ThreadIsBlockingForDebugger`-Methode bietet dem Host die Möglichkeit, eine andere Aktion auszuführen, während der Thread blockiert wird.  
+ Die- `ThreadIsBlockingForDebugger` Methode gibt dem Host die Möglichkeit, eine andere Aktion auszuführen, während der Thread blockiert wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- .Net **Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ .Net **Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [IDebuggerThreadControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [IDebuggerThreadControl-Schnittstelle](idebuggerthreadcontrol-interface.md)

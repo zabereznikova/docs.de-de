@@ -3,13 +3,14 @@ title: Komponententests in .NET Core und .NET Standard
 description: Dieser Artikel bietet eine kurze Übersicht über Komponententests für .NET Core- und .NET Standard-Projekte.
 author: ardalis
 ms.author: wiwagn
-ms.date: 08/30/2017
-ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/18/2020
+zone_pivot_groups: unit-testing-framework-set-one
+ms.openlocfilehash: e15f80b173389cdff86c6e62013e9c0f21171dd6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78157400"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703108"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
 
@@ -42,23 +43,35 @@ Mehr Informationen zu Unittests in .NET Core-Projekten:
 - [F#](../../fsharp/index.yml)
 - [Visual Basic](../../visual-basic/index.yml)
 
-Sie können außerdem zwischen folgenden Frameworks wählen:
+Sie können auch zwischen mehreren Komponententestframeworks auswählen:
 
-- [xUnit](https://xunit.github.io)
+- [xUnit](https://xunit.net/)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 
 In den folgenden exemplarischen Vorgehensweisen erfahren Sie mehr:
 
-- Erstellen von Komponententests mit [*xUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-dotnet-test.md).
-- Erstellen von Komponententests mit [*NUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-nunit.md).
+:::zone pivot="mstest"
+
 - Erstellen von Komponententests mit [*MSTest* und *C#* mit der .NET Core-CLI](unit-testing-with-mstest.md).
-- Erstellen von Komponententests mit [*xUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-dotnet-test.md).
-- Erstellen von Komponententests mit [*NUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-nunit.md).
 - Erstellen von Komponententests mit [*MSTest* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-mstest.md).
-- Erstellen von Komponententests mit [*xUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-dotnet-test.md).
-- Erstellen von Komponententests mit [*NUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-nunit.md).
 - Erstellen von Komponententests mit [*MSTest* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-mstest.md).
+
+:::zone-end
+:::zone pivot="xunit"
+
+- Erstellen von Komponententests mit [*xUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-dotnet-test.md).
+- Erstellen von Komponententests mit [*xUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-dotnet-test.md).
+- Erstellen von Komponententests mit [*xUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-dotnet-test.md).
+
+:::zone-end
+:::zone pivot="nunit"
+
+- Erstellen von Komponententests mit [*NUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-nunit.md).
+- Erstellen von Komponententests mit [*NUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-nunit.md).
+- Erstellen von Komponententests mit [*NUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-nunit.md).
+
+:::zone-end
 
 In den folgenden Artikeln erfahren Sie mehr:
 

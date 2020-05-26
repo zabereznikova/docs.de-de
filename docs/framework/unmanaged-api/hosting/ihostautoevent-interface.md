@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-ms.openlocfilehash: 2b191243ea03adcfecaadbd3a5871e1773b28bb1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a24939ac0b0808546ef3615fae4909c6c3cf8a2e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124462"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804994"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent-Schnittstelle
 Stellt eine Darstellung der Host Implementierung eines automatischen Zurücksetzungs Ereignisses bereit.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[Set-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Legt die aktuelle `IHostAutoEvent` Instanz auf einen signalisierten Zustand fest.|  
-|[Wait-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Bewirkt, dass die aktuelle `IHostAutoEvent` Instanz wartet, bis das Ereignis im Besitz des Ereignisses ist oder eine angegebene Zeitspanne abläuft.|  
+|[Set-Methode](ihostautoevent-set-method.md)|Legt die aktuelle `IHostAutoEvent` Instanz auf einen signalisierten Zustand fest.|  
+|[Wait-Methode](ihostautoevent-wait-method.md)|Bewirkt, dass die aktuelle `IHostAutoEvent` Instanz wartet, bis das Ereignis im Besitz des Ereignisses ist oder eine angegebene Zeitspanne abläuft.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostManualEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [IHostSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ICLRSyncManager-Schnittstelle](iclrsyncmanager-interface.md)
+- [IHostManualEvent-Schnittstelle](ihostmanualevent-interface.md)
+- [IHostSyncManager-Schnittstelle](ihostsyncmanager-interface.md)
+- [Hostingschnittstellen](hosting-interfaces.md)

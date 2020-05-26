@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: 0a270c42-a7d1-45f1-a64d-fa3e84d14532
 topic_type:
 - apiref
-ms.openlocfilehash: a65f9f0f29a43cf3d26b4b2bc5f6f594f0557009
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82c6113f4df3334500128df22f7e9ce8d4bf151f
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133161"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805278"
 ---
 # <a name="idebuggerthreadcontrol-interface"></a>IDebuggerThreadControl-Schnittstelle
 Stellt Methoden bereit, mit denen der Host über die Blockierung und Aufhebung der Blockierung von Threads durch die Debugdienste benachrichtigt wird.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[ThreadIsBlockingForDebugger-Methode](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|Benachrichtigt den Host, dass der Thread, der diesen Rückruf sendet, innerhalb der Debugdienste blockiert wird.|  
-|[ReleaseAllRuntimeThreads-Methode](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-releaseallruntimethreads-method.md)|Benachrichtigt den Host, dass die debuggingdienste alle blockierten Threads freigeben.|  
-|[StartBlockingForDebugger-Methode](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-startblockingfordebugger-method.md)|Benachrichtigt den Host, dass die debuggingdienste damit beginnen, alle Threads zu blockieren.|  
+|[ThreadIsBlockingForDebugger-Methode](idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|Benachrichtigt den Host, dass der Thread, der diesen Rückruf sendet, innerhalb der Debugdienste blockiert wird.|  
+|[ReleaseAllRuntimeThreads-Methode](idebuggerthreadcontrol-releaseallruntimethreads-method.md)|Benachrichtigt den Host, dass die debuggingdienste alle blockierten Threads freigeben.|  
+|[StartBlockingForDebugger-Methode](idebuggerthreadcontrol-startblockingfordebugger-method.md)|Benachrichtigt den Host, dass die debuggingdienste damit beginnen, alle Threads zu blockieren.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](hosting-interfaces.md)

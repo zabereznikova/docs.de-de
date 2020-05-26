@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: 107644270dbc9b14912dac9b97fc716aaeba7f4f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133216"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805347"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool-Schnittstelle
 Stellt Methoden für den Zugriff auf den Thread Pool bereit.  
@@ -29,29 +29,29 @@ Stellt Methoden für den Zugriff auf den Thread Pool bereit.
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[CorRegisterWaitForSingleObject-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorUnregisterWait-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorQueueUserWorkItem-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorCreateTimer-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorChangeTimer-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorDeleteTimer-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorBindIoCompletionCallback-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorCallOrQueueUserWorkItem-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorSetMaxThreads-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorGetMaxThreads-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
-|[CorGetAvailableThreads-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorRegisterWaitForSingleObject-Methode](icorthreadpool-corregisterwaitforsingleobject-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorUnregisterWait-Methode](icorthreadpool-corunregisterwait-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorQueueUserWorkItem-Methode](icorthreadpool-corqueueuserworkitem-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorCreateTimer-Methode](icorthreadpool-corcreatetimer-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorChangeTimer-Methode](icorthreadpool-corchangetimer-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorDeleteTimer-Methode](icorthreadpool-cordeletetimer-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorBindIoCompletionCallback-Methode](icorthreadpool-corbindiocompletioncallback-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorCallOrQueueUserWorkItem-Methode](icorthreadpool-corcallorqueueuserworkitem-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorSetMaxThreads-Methode](icorthreadpool-corsetmaxthreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorGetMaxThreads-Methode](icorthreadpool-corgetmaxthreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
+|[CorGetAvailableThreads-Methode](icorthreadpool-corgetavailablethreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](hosting-interfaces.md)
