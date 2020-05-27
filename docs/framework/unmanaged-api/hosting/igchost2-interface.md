@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-ms.openlocfilehash: 43c16415c91521194e0d88be84dd176c3fdadad1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 976673a0caab4e041cc80e5536544c195fcf692a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134833"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805181"
 ---
 # <a name="igchost2-interface"></a>IGCHost2-Schnittstelle
 Bietet Methoden zum Abrufen von Informationen über das Garbage Collection System und zum Steuern einiger Aspekte von Garbage Collection.  
   
 > [!NOTE]
-> Für eine neue Entwicklung empfiehlt es sich, stattdessen die [ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md) -Schnittstelle zu verwenden.  
+> Für eine neue Entwicklung empfiehlt es sich, stattdessen die [ICLRGCManager2](iclrgcmanager2-interface.md) -Schnittstelle zu verwenden.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[SetGCStartupLimitsEx-Methode](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Legt die Segmentgröße und die maximale Größe für die Generation 0 fest. Aktiviert Generation 0 und Segment Größen, die größer als `DWORD`sind.|  
+|[SetGCStartupLimitsEx-Methode](igchost2-setgcstartuplimitsex-method.md)|Legt die Segmentgröße und die maximale Größe für die Generation 0 fest. Aktiviert die Generation 0 und die Segment Größen größer als `DWORD` .|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Gchost. idl, gchost. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [CorRuntimeHost-Co-Klasse](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [Hostingschnittstellen](hosting-interfaces.md)
+- [CLR-Hostingschnittstellen](clr-hosting-interfaces.md)
+- [CorRuntimeHost-Co-Klasse](corruntimehost-coclass.md)

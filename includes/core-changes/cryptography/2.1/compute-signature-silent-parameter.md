@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b861dbaa02c97a03c015fdf4e63d25c40c90ea0a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449217"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721675"
 ---
 ### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>Der boolesche Parameter von SignedCms.ComputeSignature wird beachtet
 
@@ -24,17 +24,17 @@ Unterstützung für CMS/PKCS #7-Nachrichten wurde in .NET Core 2.1 eingeführt.
 
 Um sicherzustellen, dass bei Bedarf eine PIN-Eingabeaufforderung angezeigt wird, sollten Desktopanwendungen <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> aufrufen und den booleschen Parameter auf `false` festlegen. Das resultierende Verhalten ist das gleiche wie bei .NET Framework, und zwar unabhängig davon, ob der Kontext „silent“ dort deaktiviert ist.
 
-### <a name="category"></a>Kategorie
+#### <a name="category"></a>Kategorie
 
 Kryptografie
 
-### <a name="affected-apis"></a>Betroffene APIs
+#### <a name="affected-apis"></a>Betroffene APIs
 
 - <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)`
 

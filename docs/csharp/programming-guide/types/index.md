@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615214"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802933"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -92,10 +92,10 @@ Werttypen werden von <xref:System.ValueType?displayProperty=nameWithType> abgele
 
 Zwei Kategorien von Werttypen sind verfügbar: [struct](../../language-reference/builtin-types/struct.md) und [enum](../../language-reference/builtin-types/enum.md).
 
-Die integrierten numerischen Typen sind Strukturen und verfügen über Eigenschaften und Methoden, auf die Sie zugreifen können:
+Die integrierten numerischen Typen sind Strukturen und verfügen über Felder und Methoden, auf die Sie zugreifen können:
 
 ```csharp
-// Static method on type byte.
+// constant field on type byte.
 byte b = byte.MaxValue;
 ```
 

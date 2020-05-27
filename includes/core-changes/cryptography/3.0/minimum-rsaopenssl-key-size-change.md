@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b5b724afefcce69df706f2bea0b1612db653af03
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 3d94023fc508a56304587121c6cf1444c87b0d52
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81274798"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721273"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>Die Mindestgröße für die Generierung von RSAOpenSsl-Schlüsseln wurde heraufgesetzt
 
@@ -41,7 +41,7 @@ Kryptografie
 - <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A>
 
 <!--
-### Affected APIs
+#### Affected APIs
 
 - `P:System.Security.Cryptography.AsymmetricAlgorithm.LegalKeySizes`
 - `Overload:System.Security.Cryptography.RSA.Create`

@@ -1,17 +1,17 @@
 ---
-title: Verwalten von Abhängigkeiten in .NET Core
-description: In diesem Artikel wird erläutert, wie Projektabhängigkeiten für eine .NET Core-Anwendung verwaltet werden.
+title: ''
+description: ''
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
-ms.date: 02/25/2020
-ms.openlocfilehash: 3e1d807ea69e66e31b277a92cd6a1dc0e76531b5
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.date: ''
+ms.openlocfilehash: 667b2d4d68edd82a4d18c370e45ea18f4d4b379a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795546"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702836"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>Verwalten von Abhängigkeiten in .NET Core-Anwendungen
 
@@ -78,5 +78,5 @@ dotnet remove package Microsoft.EntityFrameworkCore
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Paketverweise in Projektdateien](../project-sdk/msbuild-props.md#reference-properties)
-* [dotnet list package-Befehl](dotnet-remove-package.md)
+* [Paketverweise in Projektdateien](../project-sdk/msbuild-props.md#reference-properties-and-items)
+* [dotnet list package-Befehl](dotnet-list-package.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7f528510e4158dad71280a7b1f269a231b8c60f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a35de09b9a7bb9686433205359c3cc55954c29c3
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116328"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721151"
 ---
 ### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Typen im Microsoft.VisualBasic.Devices-Namespace nicht verfügbar
 
@@ -34,7 +34,7 @@ Visual Basic
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `N:Microsoft.VisualBasic.Devices`
 

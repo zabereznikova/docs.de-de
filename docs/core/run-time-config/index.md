@@ -2,12 +2,12 @@
 title: Runtimekonfigurationsoptionen
 description: Hier erfahren Sie, wie Sie .NET Core-Anwendungen mithilfe von Runtimekonfigurationseinstellungen konfigurieren.
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506780"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761953"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Konfigurationseinstellungen für die .NET Core-Runtime
 
@@ -20,13 +20,16 @@ ms.locfileid: "82506780"
 > [!NOTE]
 > Diese Dokumentation ist in Bearbeitung. Wenn Sie bemerken, dass die Informationen in diesem Artikel entweder unvollständig oder falsch sind, [öffnen Sie ein Issue](https://github.com/dotnet/docs/issues), um uns darüber zu informieren, oder [reichen Sie einen Pull Request ein](https://github.com/dotnet/docs/pulls), um das Problem zu beheben. Weitere Informationen zum Einreichen von Pull Requests für das dotnet/docs-Repository finden Sie im [Leitfaden für Mitwirkende](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute).
 
-.NET Core bietet die folgenden Mechanismen zum Konfigurieren des Verhaltens von Runtimeanwendungen:
+.NET Core bietet die folgenden Mechanismen zum Konfigurieren des Anwendungsverhaltens zur Laufzeit:
 
 - die [runtimeconfig.json](#runtimeconfigjson)-Datei
 
 - [MSBuild-Eigenschaften](#msbuild-properties)
 
 - [Umgebungsvariablen](#environment-variables)
+
+> [!TIP]
+> Wenn Sie eine Laufzeitoption mithilfe einer Umgebungsvariablen konfigurieren, wird diese Einstellung auf alle .NET Core-Apps angewendet. Wenn Sie eine Laufzeitoption in der Datei *runtimeconfig.json* oder in der Projektdatei konfigurieren, wird die Einstellung nur auf diese Anwendung angewendet.
 
 Einige Konfigurationswerte können auch programmgesteuert festgelegt werden, indem die <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>-Methode aufgerufen wird.
 
@@ -106,11 +109,11 @@ Hier sehen Sie ein Beispiel für eine Projektdatei im SDK-Stil mit MSBuild-Eigen
 </Project>
 ```
 
-Die MSBuild-Eigenschaften zum Konfigurieren des Runtimeverhaltens finden Sie in den Artikeln für die einzelnen Bereiche, z. B. [Garbage Collection](garbage-collector.md).
+Die MSBuild-Eigenschaften zum Konfigurieren des Runtimeverhaltens finden Sie in den Artikeln für die einzelnen Bereiche, z. B. [Garbage Collection](garbage-collector.md). Sie werden auch im Abschnitt [Laufzeitkonfiguration](../project-sdk/msbuild-props.md#run-time-configuration-properties) der Referenz zu MSBuild-Eigenschaften für SDK-Projekte aufgeführt.
 
 ## <a name="environment-variables"></a>Umgebungsvariablen
 
-Umgebungsvariablen können verwendet werden, um einige Informationen zur Runtimekonfiguration bereitzustellen. Konfigurationseinstellungen, die als Umgebungsvariablen angegeben werden, verfügen generell über das Präfix **COMPlus_** .
+Umgebungsvariablen können verwendet werden, um einige Informationen zur Runtimekonfiguration bereitzustellen. Wenn Sie eine Laufzeitoption mithilfe einer Umgebungsvariablen konfigurieren, wird diese Einstellung auf alle .NET Core-Apps angewendet. Konfigurationseinstellungen, die als Umgebungsvariablen angegeben werden, verfügen generell über das Präfix **COMPlus_** .
 
 Sie können Umgebungsvariablen über die Windows-Systemsteuerung, die Befehlszeile oder programmgesteuert durch Aufruf der <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType>-Methode jeweils auf den Windows- und Linux-basierten Systemen definieren.
 

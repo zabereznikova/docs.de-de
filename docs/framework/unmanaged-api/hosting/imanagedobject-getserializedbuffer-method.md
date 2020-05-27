@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c17105bb-b49f-434e-8f9b-77f8c85b9220
 topic_type:
 - apiref
-ms.openlocfilehash: 4a55ae265230c4da3cc0a19b06a7597be8661beb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c68ec0b41bb38afc7cefaf47df718fffcf42d250
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103244"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842428"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>IManagedObject::GetSerializedBuffer-Methode
 Ruft die Zeichen folgen Darstellung dieses verwalteten Objekts ab.  
@@ -38,17 +38,17 @@ HRESULT GetSerializedBuffer (
  vorgenommen Ein Zeiger auf eine Zeichenfolge, die das serialisierte Objekt ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetSerializedBuffer`-Methode serialisiert das-Objekt, sodass es an den Client gemarshallt werden kann.  
+ Die- `GetSerializedBuffer` Methode serialisiert das-Objekt, sodass es an den Client gemarshallt werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IManagedObject-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+- [IManagedObject-Schnittstelle](imanagedobject-interface.md)

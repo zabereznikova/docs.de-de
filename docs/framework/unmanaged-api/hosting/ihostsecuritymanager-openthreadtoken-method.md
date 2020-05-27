@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-ms.openlocfilehash: 11d042ea9eecc8d428761da6eaa15f7c2907ebd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 85c7308f794929d753b50f58f69168f67a31cb85
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176265"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803873"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken-Methode
-Öffnet das diskretionäre Zugriffstoken, das dem aktuell ausgeführten Thread zugeordnet ist.  
+Öffnet das freigegebene Zugriffs Token, das dem aktuell ausgeführten Thread zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,40 +37,40 @@ HRESULT OpenThreadToken (
   
 ## <a name="parameters"></a>Parameter  
  `dwDesiredAccess`  
- [in] Eine Maske von Zugriffswerten, die die angeforderten Zugriffstypen für das Threadtoken angeben. Diese Werte werden in der `OpenThreadToken` Win32-Funktion definiert. Die angeforderten Zugriffstypen werden mit der DACL (Discretionary Access Control List) des Tokens abgeglichen, um zu bestimmen, welche Zugriffstypen gewährt oder verweigert werden sollen.  
+ in Eine Maske von Zugriffs Werten, die die angeforderten Zugriffs Typen für das Thread Token angeben. Diese Werte werden in der Win32- `OpenThreadToken` Funktion definiert. Die angeforderten Zugriffs Typen werden mit der Zugriffs Steuerungs Liste (DACL) des Tokens abgestimmt, um zu bestimmen, welche Typen von Zugriff erteilt oder verweigert werden.  
   
  `bOpenAsSelf`  
- [in] `true` angabe, ob die Zugriffsüberprüfung mithilfe des Sicherheitskontexts des Prozesses für den aufrufenden Thread erfolgen soll; `false` , um anzugeben, dass die Zugriffsüberprüfung mithilfe des Sicherheitskontexts für den aufrufenden Thread selbst durchgeführt werden soll. Wenn der Thread die Identität eines Clients annimmt, kann der Sicherheitskontext der eines Clientprozesses sein.  
+ [in] `true` , um anzugeben, dass die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts des Prozesses für den aufrufenden Thread durchgeführt werden soll. `false`, um anzugeben, dass die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts für den aufrufenden Thread selbst durchgeführt werden soll. Wenn der Thread die Identität eines Clients annimmt, kann der Sicherheitskontext der eines Client Prozesses sein.  
   
  `phThreadToken`  
- [out] Ein Zeiger auf das neu geöffnete Zugriffstoken.  
+ vorgenommen Ein Zeiger auf das neu geöffnete Zugriffs Token.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`OpenThreadToken`erfolgreich zurückgegeben werden.|  
-|HOST_E_CLRNOTAVAILABLE|Die Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem sie keinen verwalteten Code ausführen oder den Aufruf erfolgreich verarbeiten kann.|  
-|HOST_E_TIMEOUT|Timeout für den Anruf.|  
-|HOST_E_NOT_OWNER|Der Aufrufer besitzt die Sperre nicht.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine blockierte Faser darauf wartete.|  
-|E_FAIL|Ein unbekannter katastrophaler Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|S_OK|`OpenThreadToken`wurde erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
+|HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
-## <a name="remarks"></a>Bemerkungen  
- `IHostSecurityManager::OpenThreadToken`verhält sich ähnlich wie die entsprechende Win32-Funktion mit demselben Namen, mit der Ausnahme, dass die Win32-Funktion dem Aufrufer erlaubt, ein Handle an einen beliebigen Thread zu übergeben, während `IHostSecurityManager::OpenThreadToken` nur das Token geöffnet wird, das dem aufrufenden Thread zugeordnet ist.  
+## <a name="remarks"></a>Hinweise  
+ `IHostSecurityManager::OpenThreadToken`verhält sich ähnlich wie die entsprechende Win32-Funktion mit dem gleichen Namen, mit der Ausnahme, dass die Win32-Funktion dem Aufrufer ermöglicht, ein Handle an einen beliebigen Thread zu übergeben, während `IHostSecurityManager::OpenThreadToken` nur das Token öffnet, das dem aufrufenden Thread zugeordnet ist.  
   
- Der `HANDLE` Typ ist nicht COM-kompatibel, d. h. seine Größe ist systemspezifisch und erfordert ein benutzerdefiniertes Marshalling. Daher ist dieses Token nur für die Verwendung innerhalb des Prozesses zwischen der CLR und dem Host.  
+ Der `HANDLE` Typ ist nicht com-kompatibel, d. h. seine Größe ist für das betriebssystemspezifisch und erfordert ein benutzerdefiniertes Marshalling. Daher ist dieses Token nur für die Verwendung innerhalb des Prozesses zwischen der CLR und dem Host vorgesehen.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [IHostSecurityContext-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [IHostSecurityManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [IHostSecurityContext-Schnittstelle](ihostsecuritycontext-interface.md)
+- [IHostSecurityManager-Schnittstelle](ihostsecuritymanager-interface.md)

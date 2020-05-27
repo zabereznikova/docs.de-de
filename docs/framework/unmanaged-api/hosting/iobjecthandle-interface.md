@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: 436683ef-9849-4b24-89a9-28c06d148dce
 topic_type:
 - apiref
-ms.openlocfilehash: 954043414b7cdbbf701f34375372f91dd68a359c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a342abd12cf75b6f7c38a5103ad7cbed49c0d5f
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73102715"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842217"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle-Schnittstelle
 Stellt eine Methode zum Entpacken von Marshal-by-Value-Objekten aus der Dereferenzierung bereit.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[Unwrap-Methode](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Entpackt ein Marshal-by-Value-Objekt von der Dereferenzierung.|  
+|[Unwrap-Methode](iobjecthandle-unwrap-method.md)|Entpackt ein Marshal-by-Value-Objekt von der Dereferenzierung.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](hosting-interfaces.md)

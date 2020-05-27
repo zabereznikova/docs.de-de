@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e21872f-602f-411a-a423-bff5cdf27000
 topic_type:
 - apiref
-ms.openlocfilehash: cbd6fa5f7935a57799d695c3ebb617d856e6dbd9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95b7a2f6d35104c3353853549dacc783355feb5b
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133174"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805333"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>IDebuggerInfo::IsDebuggerAttached-Methode
 Ruft einen Wert ab, der angibt, ob ein verwalteter Debugger an diesen Prozess angefügt ist.  
@@ -35,17 +35,17 @@ HRESULT IsDebuggerAttached (
   
 ## <a name="parameters"></a>Parameter  
  `pbAttached`  
- vorgenommen Ein Zeiger auf einen Wert, der `true` wird, wenn ein verwalteter Debugger an den Prozess angefügt ist. Andernfalls `false`.  
+ vorgenommen Ein Zeiger auf einen-Wert, der ist, `true` Wenn ein verwalteter Debugger an den Prozess angefügt ist, andernfalls `false` .  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [IDebuggerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)
+- [IDebuggerInfo-Schnittstelle](idebuggerinfo-interface.md)
