@@ -18,7 +18,7 @@ Das Auslösen einer <xref:System.ArgumentNullException>-Ausnahme entspricht dem 
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
-.NET 5.0 Preview 1
+.NET 5.0 Preview 1\
 .NET 5.0 Preview 2
 
 #### <a name="recommended-action"></a>Empfohlene Aktion

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175784"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009376"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty-Methode
-Erstellt eine Eigenschaftsdefinition für den `get` angegebenen `set` Typ mit den angegebenen und Methodenaccessoren und ruft ein Token für diese Eigenschaftsdefinition ab.  
+Erstellt eine Eigenschafts Definition für den angegebenen Typ mit dem angegebenen `get` und den `set` Methoden Accessoren und ruft ein Token für diese Eigenschafts Definition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] Das Token für die Klasse oder Schnittstelle, für die die Eigenschaft definiert wird.  
+ in Das Token für die Klasse oder Schnittstelle, für die die Eigenschaft definiert wird.  
   
  `szProperty`  
  [in] Der Name der Eigenschaft.  
   
  `dwPropFlags`  
- [in] Die Eigenschaftsflags.  
+ in Die Eigenschaftenflags.  
   
  `pvSig`  
- [in] Die Eigenschaftssignatur.  
+ in Die Eigenschaften Signatur.  
   
  `cbSig`  
- [in] Die Anzahl der `pvSig`Bytes in .  
+ in Die Anzahl von Bytes in `pvSig` .  
   
  `dwCPlusTypeFlag`  
- [in] Der Typ des Standardwerts der Eigenschaft.  
+ in Der Typ des Standardwerts der Eigenschaft.  
   
  `pValue`  
- [in] Der Standardwert für die Eigenschaft.  
+ in Der Standardwert für die-Eigenschaft.  
   
  `cchValue`  
- [in] Die Anzahl der (Unicode)-Zeichen in `pValue`.  
+ in Die Anzahl von (Unicode-) Zeichen in `pValue` .  
   
  `mdSetter`  
- [in] Die Methode, die den Eigenschaftswert festlegt.  
+ in Die Methode, die den Eigenschafts Wert festlegt.  
   
  `mdGetter`  
- [in] Die Methode, die den Eigenschaftswert abruft.  
+ in Die Methode, die den Eigenschafts Wert abruft.  
   
  `rmdOtherMethods[]`  
- [in] Ein Array anderer Methoden, die der Eigenschaft zugeordnet sind. Beenden Sie das `mdTokenNil`Array mit einer .  
+ in Ein Array von anderen Methoden, die der-Eigenschaft zugeordnet sind. Beenden Sie das Array mit einem `mdTokenNil` .  
   
  `pmdProp`  
- [out] Das `mdProperty` token zugewiesen.  
+ vorgenommen Das `mdProperty` zugewiesene Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

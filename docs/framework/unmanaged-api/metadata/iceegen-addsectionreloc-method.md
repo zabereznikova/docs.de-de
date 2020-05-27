@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176109"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008897"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc-Methode
-Fügt der Codebasis eine .reloc-Anweisung hinzu.  
+Fügt der Codebasis eine reloc-Anweisung hinzu.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
@@ -40,26 +40,26 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in] Der Abschnitt des In-Memory-Codes, dem eine .reloc-Anweisung hinzugefügt werden soll.  
+ in Der Abschnitt des in-Memory-Codes, dem eine reloc-Anweisung hinzugefügt werden soll.  
   
  `offset`  
- [in] Der Offset des Abschnitts.  
+ in Der Offset des Abschnitts.  
   
  `relativeTo`  
- [in] Der Abschnitt, `offset` auf den sich bezieht.  
+ in Der Abschnitt, auf den `offset` verweist.  
   
  `relocType`  
- [in] Einer der [CeeSectionRelocType-Werte,](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) der die Art der hinzuzufügenden .reloc-Anweisung angibt.  
+ in Einer der [CeeSectionRelocType](ceesectionreloctype-enumeration.md) -Werte, der die Art der hinzu zufügenden reloc-Anweisung angibt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen-Schnittstelle](iceegen-interface.md)

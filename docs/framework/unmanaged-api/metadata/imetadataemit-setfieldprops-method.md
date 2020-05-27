@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 220556ec130c7bff7c413405820c4fee0582b051
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177552"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008013"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps-Methode
-Legt den Standardwert für das Feld fest, auf das vom angegebenen Feldtoken verwiesen wird, oder aktualisiert er.  
+Legt den Standardwert für das Feld fest, auf das durch das angegebene Feld Token verwiesen wird, oder aktualisiert dieses.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,30 +39,30 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>Parameter  
  `fd`  
- [in] Das Token für das Zielfeld.  
+ in Das Token für das Zielfeld.  
   
  `dwFieldFlags`  
- [in] Feldattribute. Dies ist eine `CorFieldAttr` Bitmaske von Werten.  
+ in Feld Attribute. Dies ist eine Bitmaske von `CorFieldAttr` Werten.  
   
  `dwCPlusTypeFlag`  
- [in] Die `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies `CorElementType` ist ein Wert. Wenn keine Konstante definiert wird, legen `ELEMENT_TYPE_END`Sie diesen Wert auf fest.  
+ in Der `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist ein- `CorElementType` Wert. Wenn keine Konstante definiert ist, legen Sie diesen Wert auf fest `ELEMENT_TYPE_END` .  
   
  `pValue`  
- [in] Der konstante Wert für das Feld.  
+ in Der Konstante Wert für das Feld.  
   
  `cchValue`  
- [in] Die Größe von in Unicode-Zeichen von `pValue`.  
+ in Die Größe von in Unicode-Zeichen `pValue` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: 9370b27fd385b0223b354365d64aa57048f4ec69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74111a175b0decbc1beef7c8df5ade59d31d845b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177844"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009144"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps-Methode
 Ändert die angegebene `ManifestResource`-Metadatenstruktur.  
@@ -38,29 +38,29 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>Parameter  
  `mr`  
- [in] Das Token, das `ManifestResource` die zu ändernde Metadatenstruktur angibt.  
+ in Das Token, das die `ManifestResource` zu ändernde Metadatenstruktur angibt.  
   
  `tkImplementation`  
- [in] Das Token vom `File` `AssemblyRef`Typ oder , das dem Ressourcenanbieter zugeordnet ist.  
+ in Das Token vom Typ `File` oder, `AssemblyRef` das dem Ressourcenanbieter zugeordnet wird.  
   
  `dwOffset`  
- [in] Der Offset zum Anfang der Ressource in der Datei.  
+ in Der Offset zum Anfang der Ressource innerhalb der Datei.  
   
  `dwResourceFlags`  
- [in] Eine bitweise Kombination von Flagwerten, die die Attribute der Ressource angeben.  
+ in Eine bitweise Kombination von Flagwerten, die die Attribute der Ressource angeben.  
   
-## <a name="remarks"></a>Bemerkungen  
- Um eine `ManifestResource` Metadatenstruktur zu erstellen, verwenden Sie die [IMetaDataAssemblyEmit::DefineManifestResource-Methode.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie zum Erstellen einer `ManifestResource` Metadatenstruktur die [IMetaDataAssemblyEmit::D efinemanifestresource](imetadataassemblyemit-definemanifestresource-method.md) -Methode.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

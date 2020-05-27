@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ef6dbc46806febc6fba89b39a8b894377225c23
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175550"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003960"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope-Methode
-Importiert eine Assembly in den aktuellen Bereich und ruft eine neue Metadatensignatur für den zusammengeführten Bereich ab.  
+Importiert eine Assembly in den aktuellen Gültigkeitsbereich und ruft eine neue Metadatensignatur für den zusammengeführten Bereich ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,51 +45,51 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>Parameter  
  `pAssemImport`  
- [in] Die Schnittstelle für die Importassembly (wobei die Signatur definiert ist).  
+ in Die Schnittstelle für die importierungsassembly (in der die Signatur definiert ist).  
   
  `pbHashValue`  
- [in] Das Hash-Blob für die Assembly.  
+ in Das hashblob für die Assembly.  
   
  `cbHashValue`  
- [in] Die Anzahl der `pbHashValue`Bytes in .  
+ in Die Anzahl von Bytes in `pbHashValue` .  
   
  `import`  
- [in] Die Schnittstelle für den Importmetadatenbereich.  
+ in Die-Schnittstelle für den Import Metadatenbereich.  
   
  `pbSigBlob`  
- [in] Die zu importierende Signatur.  
+ in Die Signatur, die importiert werden soll.  
   
  `cbSigBlob`  
- [in] Die Größe von in `pbSigBlob`Bytes von .  
+ in Die Größe von in Bytes `pbSigBlob` .  
   
  `pAssemEmit`  
- [in] Die Schnittstelle für die Exportassembly.  
+ in Die Schnittstelle für die exportierungsassembly.  
   
  `emit`  
- [in] Die Schnittstelle für den Export metadatenbereich.  
+ in Die-Schnittstelle für den Export Metadatenbereich.  
   
  `pvTranslatedSig`  
- [out] Der Puffer, der das übersetzte Signaturblob enthalten soll.  
+ vorgenommen Der Puffer, der das übersetzte Signatur-BLOB enthalten soll.  
   
  `cbTranslatedSigMax`  
- [in] Die Kapazität (in `pvTranslatedSig`Bytes) von .  
+ in Die Kapazität von in Byte `pvTranslatedSig` .  
   
  `pcbTranslatedSig`  
- [out] Die Anzahl der tatsächlichen Bytes in der übersetzten Signatur.  
+ vorgenommen Die Anzahl der tatsächlichen Bytes in der übersetzten Signatur.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

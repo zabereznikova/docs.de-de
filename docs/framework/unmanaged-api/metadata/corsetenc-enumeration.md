@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432776"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009157"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC-Enumeration
 Enthält Werte, mit denen das Verhalten während der Generierung von Metadaten beeinflusst wird.  
@@ -53,15 +53,15 @@ typedef enum CorSetENC {
 |`MDUpdateExtension`|Gibt an, dass Updates nur aus Ergänzungen bestehen können. Token können nicht verschoben werden.|  
 |`MDUpdateIncremental`|Gibt an, dass Kompilierung inkrementell|  
 |`MDUpdateDelta`|Gibt an, dass nur geänderte Metadaten gespeichert werden sollen.|  
-|`MDUpdateMask`|Umfasst `MDUpdateENC`, `MDUpdateFull` und `MDUpdateIncremental`.|  
+|`MDUpdateMask`|Umfasst `MDUpdateENC` , `MDUpdateFull` und `MDUpdateIncremental` .|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

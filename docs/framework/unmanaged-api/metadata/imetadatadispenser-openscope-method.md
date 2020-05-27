@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 5185fb6663910c85ce5dae1225b9b10c5dd8bb28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d9de753f1c44338a96e990def80643d591f2a8b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175940"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007467"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope-Methode
-Öffnet eine vorhandene Datei auf der Festplatte und ordnet ihre Metadaten dem Speicher zu.  
+Öffnet eine vorhandene Datei auf dem Datenträger und ordnet Ihre Metadaten dem Arbeitsspeicher zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,44 +38,44 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>Parameter  
  `szScope`  
- [in] Der Name der zu öffnenden Datei. Die Datei muss CLR-Metadaten (Common Language Runtime) enthalten.  
+ in Der Name der Datei, die geöffnet werden soll. Die Datei muss Common Language Runtime (CLR)-Metadaten enthalten.  
   
  `dwOpenFlags`  
- [in] Ein Wert der CorOpenFlags-Enumeration, um den Modus (Lesen, Schreiben usw.) zum Öffnen anzugeben. [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)  
+ in Ein Wert der [CorOpenFlags](coropenflags-enumeration.md) -Enumeration, mit dem der Modus (lesen, schreiben usw.) zum Öffnen angegeben wird.  
   
  `riid`  
- [in] Die IID der gewünschten Metadatenschnittstelle, die zurückgegeben werden soll; Der Aufrufer verwendet die Schnittstelle, um Metadaten zu importieren (lesen) oder auszusenden (schreiben).  
+ in Die IID der gewünschten Metadatenschnittstelle, die zurückgegeben werden soll. der Aufrufer verwendet die-Schnittstelle, um Metadaten zu importieren (lesen) oder auszugeben (schreiben).  
   
- Der Wert `riid` von muss eine der Schnittstellen "import" oder "emit" angeben. Gültige Werte sind IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 oder IID_IMetaDataImport2.  
+ Der Wert von `riid` muss eine der Schnittstellen "Import" oder "ausgeben" angeben. Gültige Werte sind IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 oder IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] Der Zeiger auf die zurückgegebene Schnittstelle.  
+ vorgenommen Der Zeiger auf die zurückgegebene Schnittstelle.  
   
-## <a name="remarks"></a>Bemerkungen  
- Die In-Memory-Kopie der Metadaten kann mithilfe von Methoden von einer der "Import"-Schnittstellen abgefragt oder mit Methoden aus einer der "emit"-Schnittstellen hinzugefügt werden.  
+## <a name="remarks"></a>Hinweise  
+ Die in-Memory-Kopie der Metadaten kann mithilfe von Methoden einer der "Import"-Schnittstellen abgefragt oder mithilfe von Methoden aus einer der "Ausgabe"-Schnittstellen hinzugefügt werden.  
   
- Wenn die Zieldatei keine CLR-Metadaten enthält, schlägt die `OpenScope` Methode fehl.  
+ Wenn die Zieldatei keine CLR-Metadaten enthält, kann die Methode nicht ausgeführt `OpenScope` werden.  
   
- Wenn in .NET Framework Version 1.0 und Version 1.1 ein Bereich mit `dwOpenFlags` Satz auf Read geöffnet wird, kann er freigegeben werden. Das heißt, wenn `OpenScope` nachfolgende Aufrufe im Namen einer zuvor geöffneten Datei übergeben werden, wird der vorhandene Bereich wiederverwendet, und es wird kein neuer Satz von Datenstrukturen erstellt. Aufgrund dieser Freigabe können jedoch Probleme auftreten.  
+ Wenn in der .NET Framework Version 1,0 und Version 1,1 ein Bereich geöffnet wird und `dwOpenFlags` auf ofRead festgelegt ist, ist er für die Freigabe berechtigt. Das heißt, wenn nachfolgende Aufrufe `OpenScope` von den Namen einer Datei übergeben, die zuvor geöffnet war, wird der vorhandene Bereich wieder verwendet, und es wird kein neuer Satz von Datenstrukturen erstellt. Probleme können jedoch aufgrund dieser Freigabe auftreten.  
   
- In .NET Framework Version 2.0 werden `dwOpenFlags` Bereiche, die mit Set auf Read geöffnet wurden, nicht mehr freigegeben. Verwenden Sie den Wert ofReadOnly, damit der Bereich freigegeben werden kann. Wenn ein Bereich freigegeben wird, schlagen Abfragen fehl, die "Lese-/Schreib"-Metadatenschnittstellen verwenden.  
+ In der Version 2,0 von .NET Framework werden Bereiche, `dwOpenFlags` die mit auf ofRead festgelegt wurden, nicht mehr freigegeben. Verwenden Sie den ofReadOnly-Wert, damit der Bereich freigegeben werden kann. Wenn ein Bereich freigegeben wird, schlagen Abfragen, die "Lese-/Schreib-Metadatenschnittstellen" verwenden, fehl.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataDispenser-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataDispenser-Schnittstelle](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx-Schnittstelle](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177713"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004815"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField-Methode
 Erstellt eine Definition für ein Feld mit der angegebenen Metadatensignatur und ruft ein Token für diese Felddefinition ab.  
@@ -43,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] Das `mdTypeDef` Token für die einschließende Klasse oder Schnittstelle.  
+ in Das `mdTypeDef` Token für die einschließende Klasse oder Schnittstelle.  
   
  `szName`  
- [in] Der Feldname in Unicode.  
+ in Der Feldname in Unicode.  
   
  `dwFieldFlags`  
- [in] Die Feldattribute. Dies ist eine `CorFieldAttr` Bitmaske von Werten.  
+ in Die Feld Attribute. Dies ist eine Bitmaske von `CorFieldAttr` Werten.  
   
  `pvSigBlob`  
- [in] Die Feldsignatur als BLOB.  
+ in Die Feld Signatur als BLOB.  
   
  `cbSigBlob`  
- [in] Die Anzahl der `pvSigBlob`Bytes in .  
+ in Die Anzahl von Bytes in `pvSigBlob` .  
   
  `dwCPlusTypeFlag`  
- [in] Die `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies `CorElementType` ist ein Wert. Wenn Sie keinen konstanten Wert `ELEMENT_TYPE_END`für das Feld definieren, verwenden Sie .  
+ in Der `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist ein- `CorElementType` Wert. Wenn Sie keinen konstanten Wert für das Feld definieren, verwenden Sie `ELEMENT_TYPE_END` .  
   
  `pValue`  
- [in] Der konstante Wert für das Feld.  
+ in Der Konstante Wert für das Feld.  
   
  `cchValue`  
- [in] Die Größe in (Unicode)-Zeichen von `pValue`.  
+ in Die Größe in (Unicode) Zeichen von `pValue` .  
   
  `pmd`  
- [out] Das `mdFieldDef` token zugewiesen.  
+ vorgenommen Das `mdFieldDef` zugewiesene Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

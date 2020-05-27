@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2858e924ab6effe192955ce53dad9d333d2d244d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175966"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009066"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps-Methode
 Ruft den Satz von Eigenschaften für den Assemblyverweis mit der angegebenen Metadatensignatur ab.  
@@ -44,47 +44,47 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parameter  
  `mdar`  
- [in] Das `mdAssemblyRef` Metadatentoken, das den Assemblyverweis darstellt, für den die Eigenschaften abgerufen werden sollen.  
+ in Das `mdAssemblyRef` Metadatentoken, das den Assemblyverweis darstellt, für den die Eigenschaften zu erhalten sind.  
   
  `ppbPublicKeyOrToken`  
- [out] Ein Zeiger auf den öffentlichen Schlüssel oder das Metadatentoken.  
+ vorgenommen Ein Zeiger auf den öffentlichen Schlüssel oder das Metadatentoken.  
   
  `pcbPublicKeyOrToken`  
- [out] Die Anzahl der Bytes im zurückgegebenen öffentlichen Schlüssel oder Token.  
+ vorgenommen Die Anzahl der Bytes im zurückgegebenen öffentlichen Schlüssel oder Token.  
   
  `szName`  
- [out] Der einfache Name der Assembly.  
+ vorgenommen Der einfache Name der Assembly.  
   
  `cchName`  
- [in] Die Größe, in breiten `szName`Zeichen, von .  
+ in Die Größe von in breit Zeichen `szName` .  
   
  `pchName`  
- [out] Ein Zeiger auf die Anzahl der breiten `szName`Zeichen, die tatsächlich in zurückgegeben wurden.  
+ vorgenommen Ein Zeiger auf die Anzahl der breit Zeichen, die tatsächlich in zurückgegeben werden `szName` .  
   
  `pMetaData`  
- [out] Ein Zeiger auf eine ASSEMBLYMETADATA-Struktur, die die Assemblymetadaten enthält.  
+ vorgenommen Ein Zeiger auf eine ASSEMBLYMETADATA-Struktur, die die Assemblymetadaten enthält.  
   
  `ppbHashValue`  
- [out] Ein Zeiger auf den Hashwert. Dies ist der Hash mithilfe des SHA-1-Algorithmus der `PublicKey` Eigenschaft der Assembly, auf die verwiesen wird, es sei denn, das arfFullOriginator-Flag der [AssemblyRefFlags-Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) wird festgelegt.  
+ vorgenommen Ein Zeiger auf den Hashwert. Dabei handelt es sich um den Hash mit dem SHA-1-Algorithmus der `PublicKey` Eigenschaft der Assembly, auf die verwiesen wird, es sei denn, das arffulloriginator-Flag der [AssemblyRefFlags](assemblyrefflags-enumeration.md) -Enumeration wurde festgelegt.  
   
  `pcbHashValue`  
- [out] Die Anzahl der breiten Zeichen im zurückgegebenen Hashwert.  
+ vorgenommen Die Anzahl der breiten Zeichen im zurückgegebenen Hashwert.  
   
  `pdwAssemblyRefFlags`  
- [out] Ein Zeiger auf Flags, die die Metadaten beschreiben, die auf eine Assembly angewendet werden. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags-Werten.](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)  
+ vorgenommen Ein Zeiger auf Flags, die die auf eine Assembly angewendeten Metadaten beschreiben. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags](corassemblyflags-enumeration.md) -Werten.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt S_OK zurück, wenn sie erfolgreich ist. Andernfalls wird einer der in der Winerror.h-Headerdatei definierten Fehlercodes zurückgegeben.  
+ Diese Methode gibt S_OK zurück, wenn Sie erfolgreich ausgeführt wird. Andernfalls wird einer der in der Header Datei "Winerror. h" definierten Fehlercodes zurückgegeben.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)

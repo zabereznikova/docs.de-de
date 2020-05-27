@@ -51,7 +51,7 @@ Der Zugriff auf Key Vault erfordert ordnungsgemäße Aufrufer Authentifizierung 
 
 Die eshoponcontainers-Anwendung enthält lokale Anwendungseinstellungs-Dateien mit jedem-mikrodienst. Diese Dateien werden in die Quell Code Verwaltung eingecheckt, enthalten aber keine Produktionsgeheimnisse wie Verbindungs Zeichenfolgen oder API-Schlüssel. In der Produktionsumgebung können einzelne Einstellungen mit Umgebungsvariablen pro Dienst überschrieben werden. Das Einfügen von Geheimnissen in Umgebungsvariablen ist eine gängige Vorgehensweise bei gehosteten Anwendungen, bietet aber keinen zentralen Konfigurations Speicher. Zur Unterstützung der zentralisierten Verwaltung von Konfigurationseinstellungen enthält jeder-Dienst eine Einstellung zum Umschalten zwischen der Verwendung lokaler Einstellungen oder Azure Key Vault Einstellungen.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - [Die eshoponcontainers-Architektur](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
 - [Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)

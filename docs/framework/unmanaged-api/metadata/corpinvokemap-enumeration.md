@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 8216dc3030b18428ab52fbf8385d392f81057aa0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176148"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007545"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap-Enumeration
-Gibt Optionen für einen PInvoke-Aufruf an.  
+Gibt Optionen für einen PInvoke-Befehl an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,40 +61,40 @@ typedef enum  CorPinvokeMap {
 } CorPinvokeMap;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`pmNoMangle`|Verwenden Sie jeden Mitgliedsnamen wie angegeben.|  
+|`pmNoMangle`|Verwenden Sie die einzelnen Elementnamen wie angegeben.|  
 |`pmCharSetMask`|Reserviert.|  
 |`pmCharSetNotSpec`|Reserviert.|  
 |`pmCharSetAnsi`|Marshallt Zeichenfolgen als Mehrfachbyte-Zeichenfolgen.|  
 |`pmCharSetUnicode`|Marshallt Zeichenfolgen als 2-Byte-Unicode-Zeichen.|  
-|`pmCharSetAuto`|Marshallt Zeichenfolgen automatisch entsprechend dem Zielbetriebssystem. Der Standardwert ist Unicode unter Windows NT, Windows 2000, Windows XP und der Windows Server 2003-Produktreihe. Der Standardwert ist ANSI unter Windows 98 und Windows Me.|  
+|`pmCharSetAuto`|Marshallt Zeichenfolgen automatisch entsprechend dem Zielbetriebssystem. Der Standardwert ist Unicode unter Windows NT, Windows 2000, Windows XP und der Windows Server 2003-Familie. der Standardwert ist ANSI unter Windows 98 und Windows Me.|  
 |`pmBestFitUseAssem`|Reserviert.|  
-|`pmBestFitEnabled`|Führen Sie die optimale Zuordnung von Unicode-Zeichen durch, denen eine exakte Übereinstimmung im ANSI-Zeichensatz fehlt.|  
-|`pmBestFitDisabled`|Führen Sie keine optimale Zuordnung von Unicode-Zeichen durch. In diesem Fall werden alle nicht bespielbaren Zeichen durch ein '?' ersetzt.|  
+|`pmBestFitEnabled`|Führt eine Zuordnung mit einer optimalen Anpassung von Unicode-Zeichen durch, bei denen keine genaue Entsprechung im ANSI-Zeichensatz vorliegt.|  
+|`pmBestFitDisabled`|Führen Sie keine Zuordnung mit einer optimalen Anpassung von Unicode-Zeichen durch. In diesem Fall werden alle nicht mappbaren Zeichen durch ein "?" ersetzt.|  
 |`pmBestFitMask`|Reserviert.|  
 |`pmThrowOnUnmappableCharUseAssem`|Reserviert.|  
-|`pmThrowOnUnmappableCharEnabled`|Auslösen einer Ausnahme, wenn der Interop-Marshaller auf ein nicht zu treffendes Zeichen trifft.|  
-|`pmThrowOnUnmappableCharDisabled`|Werfen Sie keine Ausnahme aus, wenn der Interop-Marshaller auf ein nicht bewertes Zeichen trifft.|  
+|`pmThrowOnUnmappableCharEnabled`|Löst eine Ausnahme aus, wenn der Interop-Mars Haller auf ein nicht mappbares Zeichen stößt.|  
+|`pmThrowOnUnmappableCharDisabled`|Lösen Sie keine Ausnahme aus, wenn der Interop-Mars Haller auf ein nicht mappbares Zeichen stößt.|  
 |`pmThrowOnUnmappableCharMask`|Reserved|  
-|`pmSupportsLastError`|Erlauben Sie dem Angerufenen, die `SetLastError` Win32-Funktion aufzurufen, bevor er von der attributierten Methode zurückkehrt.|  
+|`pmSupportsLastError`|Ermöglicht dem aufgerufenen das Abrufen der Win32- `SetLastError` Funktion vor der Rückgabe von der attributierten Methode.|  
 |`pmCallConvMask`|Reserved|  
-|`pmCallConvWinapi`|Verwenden Sie die Standardplattformaufrufkonvention. Unter Windows ist `StdCall` z. B. der Standardwert `Cdecl`und unter Windows CE .NET ist es .|  
-|`pmCallConvCdecl`|Verwenden `Cdecl` Sie die Aufrufkonvention. In diesem Fall reinigt der Aufrufer den Stapel. Dadurch werden Aufruffunktionen mit `varargs` (d. h. Funktionen, die eine variable Anzahl von Parametern akzeptieren) aktiviert.|  
-|`pmCallConvStdcall`|Verwenden `StdCall` Sie die Aufrufkonvention. In diesem Fall reinigt der Angerufene den Stapel. Dies ist die Standardkonvention für das Aufrufen nicht verwalteter Funktionen mit Plattformaufruf.|  
-|`pmCallConvThiscall`|Verwenden `ThisCall` Sie die Aufrufkonvention. In diesem Fall ist der `this` erste Parameter der Zeiger und wird im Register ECX gespeichert. Weitere Parameter werden in den Stapel verschoben. Die `ThisCall` aufrufende Konvention wird verwendet, um Methoden für Klassen aufzurufen, die aus einer nicht verwalteten DLL exportiert werden.|  
+|`pmCallConvWinapi`|Verwenden Sie die standardmäßige Platt Form Aufruf Konvention. Beispielsweise ist unter Windows der Standardwert, `StdCall` und auf Windows CE .net ist er `Cdecl` .|  
+|`pmCallConvCdecl`|Verwenden Sie die `Cdecl` Aufruf Konvention. In diesem Fall bereinigt der Aufrufer den Stapel. Dies ermöglicht das Aufrufen von Funktionen mit `varargs` (d. h. Funktionen, die eine Variable Anzahl von Parametern akzeptieren).|  
+|`pmCallConvStdcall`|Verwenden Sie die `StdCall` Aufruf Konvention. In diesem Fall bereinigt der aufgerufene den Stapel. Dies ist die Standardkonvention für das Aufrufen nicht verwalteter Funktionen mit Plattformaufruf.|  
+|`pmCallConvThiscall`|Verwenden Sie die `ThisCall` Aufruf Konvention. In diesem Fall ist der erste Parameter der `this` Zeiger und wird in Register ECX gespeichert. Weitere Parameter werden in den Stapel verschoben. Die `ThisCall` Aufruf Konvention wird zum Aufrufen von Methoden für Klassen verwendet, die aus einer nicht verwalteten DLL exportiert wurden.|  
 |`pmCallConvFastcall`|Reserviert.|  
 |`pmMaxValue`|Reserviert.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** CorHdr.h  
+ **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

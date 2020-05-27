@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-ms.openlocfilehash: 9b3a6bab8672f3ef3fca5f89c60b03a43477cce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0c60631b5e034bc46d74412440d35d526359d043
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123301"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008572"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo-Methode
 Ruft die Fehlermeldung ab, die dem angegebenen Validierungs Fehler entspricht.  
@@ -42,7 +42,7 @@ HRESULT FormatEventInfo(
  in Der HRESULT-Wert, der an den Validierungs Fehlerhandler übermittelt wurde.  
   
  `Context`  
- in Eine `VEContext`-Instanz, die Kontextinformationen über den Validierungs Fehler enthält.  
+ in Eine- `VEContext` Instanz, die Kontextinformationen über den Validierungs Fehler enthält.  
   
  `msg`  
  [in, out] Eine Zeichenfolge, die die zurückgegebene Fehlermeldung enthält.  
@@ -53,11 +53,11 @@ HRESULT FormatEventInfo(
  `psa`  
  in Ein sicheres Array, das zusätzliche Parameter enthält, die den Fehler beschreiben.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** IValidator. idl, IValidator. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

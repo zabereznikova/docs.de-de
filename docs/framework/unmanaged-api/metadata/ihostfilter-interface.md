@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: e79456b1-045b-4a84-9714-2ea560ff75ea
 topic_type:
 - apiref
-ms.openlocfilehash: 90f7899beea204ea53a587200807ccd807cd6c11
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c9cc545f0b3fbe20ef6eb2a72aadf8d6b4374867
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426140"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008234"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter-Schnittstelle
 Stellt eine Methode bereit, mit der angegeben wird, dass ein angegebenes Token verarbeitet wird.  
   
 > [!NOTE]
-> Die `IHostFilter`-Schnittstelle muss vom Client implementiert werden.  
+> Die `IHostFilter` Schnittstelle muss vom Client implementiert werden.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[MarkToken-Methode](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Gibt an, dass das angegebene Metadatentoken verarbeitet wird.|  
+|[MarkToken-Methode](ihostfilter-marktoken-method.md)|Gibt an, dass das angegebene Metadatentoken verarbeitet wird.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Metadatenschnittstellen](metadata-interfaces.md)
