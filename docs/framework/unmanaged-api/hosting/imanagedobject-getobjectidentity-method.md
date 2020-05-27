@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-ms.openlocfilehash: 8c884569a452fb2985713956f942205cda6ea1ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1b40ed8e107d30c22b4ade25d29376b1b74583d1
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141245"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842412"
 ---
-# <a name="imanagedobjectgetobjectidentity-method"></a><span data-ttu-id="02632-102">IManagedObject::GetObjectIdentity-Methode</span><span class="sxs-lookup"><span data-stu-id="02632-102">IManagedObject::GetObjectIdentity Method</span></span>
-<span data-ttu-id="02632-103">Ruft die Identität dieses verwalteten Objekts ab.</span><span class="sxs-lookup"><span data-stu-id="02632-103">Gets the identity of this managed object.</span></span>  
+# <a name="imanagedobjectgetobjectidentity-method"></a><span data-ttu-id="43db8-102">IManagedObject::GetObjectIdentity-Methode</span><span class="sxs-lookup"><span data-stu-id="43db8-102">IManagedObject::GetObjectIdentity Method</span></span>
+<span data-ttu-id="43db8-103">Ruft die Identität dieses verwalteten Objekts ab.</span><span class="sxs-lookup"><span data-stu-id="43db8-103">Gets the identity of this managed object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02632-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="02632-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43db8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="43db8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObjectIdentity (  
@@ -35,28 +35,28 @@ HRESULT GetObjectIdentity (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="02632-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="02632-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="43db8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="43db8-105">Parameters</span></span>  
  `pBSTRGUID`  
- <span data-ttu-id="02632-106">vorgenommen Ein Zeiger auf die GUID des Prozesses, in dem sich das Objekt befindet.</span><span class="sxs-lookup"><span data-stu-id="02632-106">[out] A pointer to the GUID of the process in which the object resides.</span></span>  
+ <span data-ttu-id="43db8-106">vorgenommen Ein Zeiger auf die GUID des Prozesses, in dem sich das Objekt befindet.</span><span class="sxs-lookup"><span data-stu-id="43db8-106">[out] A pointer to the GUID of the process in which the object resides.</span></span>  
   
  `AppDomainID`  
- <span data-ttu-id="02632-107">vorgenommen Ein Zeiger auf die ID der Anwendungsdomäne des Objekts.</span><span class="sxs-lookup"><span data-stu-id="02632-107">[out] A pointer to the ID of the object's application domain.</span></span>  
+ <span data-ttu-id="43db8-107">vorgenommen Ein Zeiger auf die ID der Anwendungsdomäne des Objekts.</span><span class="sxs-lookup"><span data-stu-id="43db8-107">[out] A pointer to the ID of the object's application domain.</span></span>  
   
  `pCCW`  
- <span data-ttu-id="02632-108">vorgenommen Ein Zeiger auf den Index des Objekts in der klassischen com-Tabelle.</span><span class="sxs-lookup"><span data-stu-id="02632-108">[out] A pointer to object's index in the COM classic v-table.</span></span>  
+ <span data-ttu-id="43db8-108">vorgenommen Ein Zeiger auf den Index des Objekts in der klassischen com-Tabelle.</span><span class="sxs-lookup"><span data-stu-id="43db8-108">[out] A pointer to object's index in the COM classic v-table.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="02632-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="02632-109">Remarks</span></span>  
- <span data-ttu-id="02632-110">Die Identität eines verwalteten Objekts umfasst die Prozess-GUID, die Anwendungs Domänen-ID und den Index des Objekts in der klassischen com-Tabelle.</span><span class="sxs-lookup"><span data-stu-id="02632-110">The identity of a managed object includes process GUID, application domain ID, and the object's index in the COM classic v-table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43db8-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="43db8-109">Remarks</span></span>  
+ <span data-ttu-id="43db8-110">Die Identität eines verwalteten Objekts umfasst die Prozess-GUID, die Anwendungs Domänen-ID und den Index des Objekts in der klassischen com-Tabelle.</span><span class="sxs-lookup"><span data-stu-id="43db8-110">The identity of a managed object includes process GUID, application domain ID, and the object's index in the COM classic v-table.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02632-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="02632-111">Requirements</span></span>  
- <span data-ttu-id="02632-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02632-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43db8-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="43db8-111">Requirements</span></span>  
+ <span data-ttu-id="43db8-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43db8-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02632-113">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="02632-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="43db8-113">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="43db8-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="02632-114">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="02632-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="43db8-114">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="43db8-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="02632-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02632-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="43db8-115">**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43db8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02632-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="02632-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43db8-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="43db8-116">See also</span></span>
 
-- [<span data-ttu-id="02632-117">IManagedObject-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="02632-117">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+- [<span data-ttu-id="43db8-117">IManagedObject-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="43db8-117">IManagedObject Interface</span></span>](imanagedobject-interface.md)
