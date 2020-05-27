@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: c9a8178d-be1f-4ad4-abdb-d38470659b82
 topic_type:
 - apiref
-ms.openlocfilehash: 502f5773fc783cad3f19fa8b48226cc252ce3122
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b083b5225b500fa19ed40cc6550630e155e8c52
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125267"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008689"
 ---
-# <a name="itypenamebuilderclosegenericargument-method"></a><span data-ttu-id="fe5d1-102">ITypeNameBuilder::CloseGenericArgument-Methode</span><span class="sxs-lookup"><span data-stu-id="fe5d1-102">ITypeNameBuilder::CloseGenericArgument Method</span></span>
-<span data-ttu-id="fe5d1-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="fe5d1-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderclosegenericargument-method"></a><span data-ttu-id="99228-102">ITypeNameBuilder::CloseGenericArgument-Methode</span><span class="sxs-lookup"><span data-stu-id="99228-102">ITypeNameBuilder::CloseGenericArgument Method</span></span>
+<span data-ttu-id="99228-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="99228-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe5d1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fe5d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99228-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="99228-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseGenericArgument ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="fe5d1-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fe5d1-105">Requirements</span></span>  
- <span data-ttu-id="fe5d1-106">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe5d1-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99228-105">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="99228-105">Requirements</span></span>  
+ <span data-ttu-id="99228-106">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99228-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fe5d1-107">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="fe5d1-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="99228-107">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="99228-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fe5d1-108">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="fe5d1-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="99228-108">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="99228-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fe5d1-109">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe5d1-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="99228-109">**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99228-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe5d1-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fe5d1-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99228-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="99228-110">See also</span></span>
 
-- [<span data-ttu-id="fe5d1-111">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="fe5d1-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="99228-111">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="99228-111">Hosting Interfaces</span></span>](hosting-interfaces.md)
