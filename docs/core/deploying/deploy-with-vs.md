@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607861"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614356"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -38,8 +38,8 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
 
    Öffnen Sie die Datei *Program.cs* oder *Program.vb* im Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+   [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
+   [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. Erstellen Sie ein Debugbuild Ihrer App.
 
@@ -89,8 +89,8 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Öffnen Sie die Datei *Program.cs* oder *Program.vb* in Ihrem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+   [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
+   [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. Bestimmen Sie, ob Sie den invarianten Globalisierungsmodus verwenden möchten.
 
@@ -98,7 +98,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf Ihr Projekt (nicht auf die Projektmappe), und klicken Sie auf **SCD.csproj bearbeiten** oder **SCD.vbproj bearbeiten**. Fügen Sie der Datei dann die folgenden hervorgehobenen Zeilen hinzu:
 
-   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
 
 1. Erstellen Sie einen Debugbuild Ihrer Anwendung.
 

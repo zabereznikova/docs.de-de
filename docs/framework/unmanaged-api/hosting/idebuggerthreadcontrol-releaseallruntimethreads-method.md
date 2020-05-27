@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a2995ff-5f02-4b49-84dc-3a5f9cfd7d55
 topic_type:
 - apiref
-ms.openlocfilehash: 9ae1aa6590366468166916e6a92d0b356eb37c27
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50ffb33456f942a71089f9bc44daa07f6b77ab21
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133151"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805298"
 ---
 # <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a>IDebuggerThreadControl::ReleaseAllRuntimeThreads-Methode
 Benachrichtigt den Host, dass die debuggingdienste alle blockierten Threads freigeben.  
@@ -32,17 +32,17 @@ HRESULT ReleaseAllRuntimeThreads ( );
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ReleaseAllRuntimeThreads`-Methode wird in einem Lauf Zeit Thread nie aufgerufen. Wenn für den Host ein Laufzeitthread blockiert ist, sollte er jetzt freigegeben werden.  
+ Die- `ReleaseAllRuntimeThreads` Methode wird nie für einen Lauf Zeit Thread aufgerufen. Wenn für den Host ein Laufzeitthread blockiert ist, sollte er jetzt freigegeben werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [IDebuggerThreadControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [IDebuggerThreadControl-Schnittstelle](idebuggerthreadcontrol-interface.md)
