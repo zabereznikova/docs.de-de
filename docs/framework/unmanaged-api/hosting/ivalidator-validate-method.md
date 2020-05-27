@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae47eac713fbee30ea543538957b12460b8e1fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 688abd210cca193bf03c40f000b74ecb66eb8ede
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123270"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008546"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate-Methode
 Überprüft die angegebene PE-Datei (portable ausführbare Datei) oder die MSIL-Datei (Microsoft Intermediate Language).  
@@ -42,19 +42,19 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parameter  
  `veh`  
- in Ein Zeiger auf eine `IVEHandler`-Instanz, die Validierungs Fehler behandelt.  
+ in Ein Zeiger auf eine- `IVEHandler` Instanz, die Validierungs Fehler behandelt.  
   
  `pAppDomain`  
  in Ein Zeiger auf die Anwendungsdomäne, in der die Datei geladen wird.  
   
  `ulFlags`  
- in Eine bitweise Kombination von [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) -Werten, die die auszuführenden Validierungen angeben.  
+ in Eine bitweise Kombination von [ValidatorFlags](validatorflags-enumeration.md) -Werten, die die auszuführenden Validierungen angeben.  
   
  `ulMaxError`  
  in Die maximal zulässige Anzahl von Fehlern, bevor die Überprüfung beendet wird.  
   
  `token`  
- in Nicht verwendet.  
+ [in] Wird nicht verwendet.  
   
  `fileName`  
  in Eine Zeichenfolge, die den Namen der zu validierenden Datei angibt.  
@@ -65,11 +65,11 @@ HRESULT Validate (
  `ulSize`  
  in Die Größe (in Bytes) der zu validierenden Datei.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** IValidator. idl, IValidator. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

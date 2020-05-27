@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-ms.openlocfilehash: a0fd3fdb6dde9fd6b88ea6c64ed907c8a3e9e46d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a069e2f4ec5d4114e9504fa5a58c5066fdfd7249
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175797"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008039"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet-Methode
-Erstellt eine Definition für einen Berechtigungssatz mit der angegebenen Metadatensignatur und ruft ein Token für diese Berechtigungssatzdefinition ab.  
+Erstellt eine Definition für einen Berechtigungs Satz mit der angegebenen Metadatensignatur und ruft ein Token für diese Berechtigungs Satz Definition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,30 +39,30 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] Das zu verzierende Objekt.  
+ in Das zu ergänzte-Objekt.  
   
  `dwAction`  
- [in] Ein [CorDeclSecurity-Wert,](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) der den Typ der zu verwendenden deklarativen Sicherheit angibt.  
+ in Ein [CorDeclSecurity](cordeclsecurity-enumeration.md) -Wert, der den Typ der zu verwendenden deklarativen Sicherheit angibt.  
   
  `pvPermission`  
- [in] Die Berechtigung BLOB.  
+ in Das Berechtigungs-BLOB.  
   
  `cbPermission`  
- [in] Die Größe von in `pvPermission`Bytes von .  
+ in Die Größe von in Bytes `pvPermission` .  
   
  `ppm`  
- [out] Das zurückgegebene Berechtigungstoken.  
+ vorgenommen Das zurückgegebene Berechtigungs Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

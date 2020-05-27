@@ -32,7 +32,7 @@ Wenn Sie die Anweisungen in den letzten 15 Jahren befolgen, werden Sie wahrschei
 
 Sie erstellen eine große Kernanwendung, die ihre gesamte Domänen Logik enthält. Es umfasst Module wie z. b. Identität, Katalog, Reihenfolge und mehr. Die Core-App kommuniziert mit einer großen relationalen Datenbank. Der Kern macht Funktionen über eine HTML-Schnittstelle verfügbar.
 
-Herzlichen Glückwunsch!  Sie haben soeben eine monolithische Anwendung erstellt.
+Glückwunsch!  Sie haben soeben eine monolithische Anwendung erstellt.
 
 Nicht alle ist schlecht. Monolithen bieten einige unterschiedliche Vorteile. Sie sind z. b. unkompliziert...
 

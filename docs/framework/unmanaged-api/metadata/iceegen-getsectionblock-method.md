@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: a494b1aaa762549528e92ab93d18929ef73eb8da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed534890fc90d3b8543a1166c85903f10163f0a8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176083"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008321"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock-Methode
-Ruft einen Abschnittsblock der Codebasis ab.  
+Ruft einen Abschnitts Block der Codebasis ab.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
@@ -40,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in] Der Abschnitt, aus dem ein Block der Codebasis abgerufen werden soll.  
+ in Der Abschnitt, aus dem ein Block der Codebasis abgerufen wird.  
   
  `len`  
- [in] Die Länge des abrufbaren Blocks.  
+ in Die Länge des abzurufenden Blocks.  
   
  `align`  
- [in] Das Byte relativ zum Anfang des Abschnitts, mit dem das erste Byte des Blocks ausgerichtet werden soll. Dies ist die Position des Blocks innerhalb des Abschnitts.  
+ in Das Byte relativ zum Anfang des Abschnitts, mit dem das erste Byte des Blocks ausgerichtet werden soll. Dies ist die Position des-Blocks innerhalb des-Abschnitts.  
   
  `ppBytes`  
- [out] Ein Zeiger auf eine Position, die die Adresse des abgerufenen Blocks empfängt.  
+ vorgenommen Ein Zeiger auf einen Speicherort, der die Adresse des abgerufenen Blocks empfängt.  
   
-## <a name="remarks"></a>Bemerkungen  
- Rufen `GetSectionBlock` Sie nur an, wenn Sie spezielle Abschnittsanforderungen haben, die nicht von anderen Methoden verarbeitet werden.  
+## <a name="remarks"></a>Hinweise  
+ `GetSectionBlock`Wird nur aufgerufen, wenn Sie besondere Abschnitts Anforderungen haben, die nicht von anderen Methoden behandelt werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen-Schnittstelle](iceegen-interface.md)

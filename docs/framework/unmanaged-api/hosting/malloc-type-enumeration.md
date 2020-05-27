@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c02476f9-23a2-4af7-9282-aa9c42c7429b
 topic_type:
 - apiref
-ms.openlocfilehash: 16f56809b4db159c71b06b3bb9d969f8a8f8fc54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 630fe4e79b369bfdefc19be72780f1893090895e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090821"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008455"
 ---
 # <a name="malloc_type-enumeration"></a>MALLOC_TYPE-Enumeration
 Enthält Werte, die die Merkmale des zugeordneten Arbeitsspeichers angeben.  
@@ -40,15 +40,15 @@ typedef enum {
 |`MALLOC_EXECUTABLE`|Der zugewiesene Arbeitsspeicher kann eine ausführbare Datei enthalten.|  
 |`MALLOC_THREADSAFE`|Der zugewiesene Arbeitsspeicher ist Thread sicher. Das heißt, dass auf den Speicher durch mehrere Threads ohne Synchronisierung zugegriffen werden kann.<br /><br /> Wenn dieses Flag nicht festgelegt ist, müssen Aufrufe für das-Objekt serialisiert werden.|  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Mscoree. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hosten von Enumerationen](hosting-enumerations.md)

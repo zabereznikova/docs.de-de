@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177529"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008754"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps-Methode
-Legt das angegebene Feature eines Ereignisses fest, das durch einen vorherigen Aufruf von [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)definiert wurde, oder aktualisiert es.  
+Legt die angegebene Funktion eines Ereignisses fest, das durch einen vorherigen [IMetaDataEmit::D efineevent](imetadataemit-defineevent-method.md)definiert ist, oder aktualisiert sie.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Parameter  
  `ev`  
- [in] Das Ereignistoken.  
+ in Das Ereignis Token.  
   
  `dwEventFlags`  
- [in] Ereignisflags. Dies ist eine `CorEventAttr` Bitmaske von Werten.  
+ in Ereignisflags. Dies ist eine Bitmaske von `CorEventAttr` Werten.  
   
  `tkEventType`  
- [in] Das Token für die Ereignisklasse. Dies ist `mdTypeDef` entweder `mdTypeRef` ein oder ein Token.  
+ in Das Token für die Ereignisklasse. Dabei handelt es sich entweder um ein- `mdTypeDef` oder- `mdTypeRef` Token.  
   
  `mdAddOn`  
- [in] Die Methode, die zum Abonnieren des Ereignisses verwendet wird, oder NULL.  
+ in Die Methode, die zum Abonnieren des Ereignisses verwendet wird, oder NULL.  
   
  `mdRemoveOn`  
- [in] Die Methode, die zum Abbestellen des Ereignisses verwendet wird, oder null.  
+ in Die Methode, die zum Kündigen des Ereignisses verwendet wird, oder NULL.  
   
  `mdFire`  
- [in] Die Methode, die (von einer abgeleiteten Klasse) verwendet wird, um das Ereignis zu erhöhen.  
+ in Die Methode, die (von einer abgeleiteten Klasse) verwendet wird, um das Ereignis zu erhöhen.  
   
  `rmdOtherMethods[]`  
- [in] Ein Array von Token für andere Methoden, die dem Ereignis zugeordnet sind. Das letzte Element des `mdMethodDefNil`Arrays muss .  
+ in Ein Array von Token für andere Methoden, die dem Ereignis zugeordnet sind. Das letzte Element des Arrays muss sein `mdMethodDefNil` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

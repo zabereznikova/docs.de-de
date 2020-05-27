@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2985c419b25b8bf76df8fee0f0f37ba9ebee3df7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176187"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007900"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor-Enumeration
-Gibt die Metadatentoken an, die auf Duplikate überprüft werden.  
+Gibt die Metadatentoken an, die auf Duplikate geprüft werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,45 +64,45 @@ typedef enum CorCheckDuplicatesFor {
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`MDDupAll`|Überprüfen Sie alle Metadatentoken auf Duplikate.|  
 |`MDDupENC`|Wird nicht verwendet.|  
-|`MDNoDupChecks`|Überprüfen Sie Metadatentoken nicht auf Duplikate.|  
-|`MDDupTypeDef`|Überprüfen Sie, `mdTypeDef` ob Duplikate von Token vorhanden sind.|  
-|`MDDupInterfaceImpl`|Überprüfen Sie, `mdInterfaceImpl` ob Duplikate von Token vorhanden sind.|  
-|`MDDupMethodDef`|Überprüfen Sie, `mdMethodDef` ob Duplikate von Token vorhanden sind.|  
-|`MDDupTypeRef`|Überprüfen Sie, `mdTypeRef` ob Duplikate von Token vorhanden sind.|  
-|`MDDupMemberRef`|Überprüfen Sie, `mdMemberRef` ob Duplikate von Token vorhanden sind.|  
-|`MDDupCustomAttribute`|Überprüfen Sie, `mdCustomAttribute` ob Duplikate von Token vorhanden sind.|  
-|`MDDupParamDef`|Überprüfen Sie, `mdParamDef` ob Duplikate von Token vorhanden sind.|  
-|`MDDupPermission`|Überprüfen Sie, `mdPermission` ob Duplikate von Token vorhanden sind.|  
-|`MDDupProperty`|Überprüfen Sie, `mdProperty` ob Duplikate von Token vorhanden sind.|  
-|`MDDupEvent`|Überprüfen Sie, `mdEvent` ob Duplikate von Token vorhanden sind.|  
-|`MDDupFieldDef`|Überprüfen Sie, `mdFieldDef` ob Duplikate von Token vorhanden sind.|  
-|`MDDupSignature`|Überprüfen Sie, `mdSignature` ob Duplikate von Token vorhanden sind.|  
-|`MDDupModuleRef`|Überprüfen Sie, `mdModuleRef` ob Duplikate von Token vorhanden sind.|  
-|`MDDupTypeSpec`|Überprüfen Sie, `mdTypeSpec` ob Duplikate von Token vorhanden sind.|  
-|`MDDupImplMap`|Überprüfen Sie, `mdImplMap` ob Duplikate von Token vorhanden sind.|  
-|`MDDupAssemblyRef`|Überprüfen Sie, `mdAssemblyRef` ob Duplikate von Token vorhanden sind.|  
-|`MDDupFile`|Überprüfen Sie, `mdFile` ob Duplikate von Token vorhanden sind.|  
-|`MDDupExportedType`|Überprüfen Sie, `mdExportedType` ob Duplikate von Token vorhanden sind.|  
-|`MDDupManifestResource`|Überprüfen Sie, `mdManifestResource` ob Duplikate von Token vorhanden sind.|  
-|`MDDupGenericParam`|Überprüfen Sie, `mdGenericParam` ob Duplikate von Token vorhanden sind.|  
-|`MDDupMethodSpec`|Überprüfen Sie, `mdMethodSpec` ob Duplikate von Token vorhanden sind.|  
-|`MDDupGenericParamConstraint`|Überprüfen Sie, `mdGenericParamConstraint` ob Duplikate von Token vorhanden sind.|  
-|`MDDupAssembly`|Überprüfen Sie, `mdAssembly` ob Duplikate von Token vorhanden sind.|  
-|`MDDupDefault`|Überprüfen Sie, `mdMemberRef`ob `mdTypeRef` `mdSignature`Duplikate von , , , `mdTypeSpec`und `mdMethodSpec` Token vorhanden sind.|  
+|`MDNoDupChecks`|Überprüfen Sie die Metadatentoken nicht auf Duplikate.|  
+|`MDDupTypeDef`|Überprüfen Sie auf Duplikate von `mdTypeDef` Token.|  
+|`MDDupInterfaceImpl`|Überprüfen Sie auf Duplikate von `mdInterfaceImpl` Token.|  
+|`MDDupMethodDef`|Überprüfen Sie auf Duplikate von `mdMethodDef` Token.|  
+|`MDDupTypeRef`|Überprüfen Sie auf Duplikate von `mdTypeRef` Token.|  
+|`MDDupMemberRef`|Überprüfen Sie auf Duplikate von `mdMemberRef` Token.|  
+|`MDDupCustomAttribute`|Überprüfen Sie auf Duplikate von `mdCustomAttribute` Token.|  
+|`MDDupParamDef`|Überprüfen Sie auf Duplikate von `mdParamDef` Token.|  
+|`MDDupPermission`|Überprüfen Sie auf Duplikate von `mdPermission` Token.|  
+|`MDDupProperty`|Überprüfen Sie auf Duplikate von `mdProperty` Token.|  
+|`MDDupEvent`|Überprüfen Sie auf Duplikate von `mdEvent` Token.|  
+|`MDDupFieldDef`|Überprüfen Sie auf Duplikate von `mdFieldDef` Token.|  
+|`MDDupSignature`|Überprüfen Sie auf Duplikate von `mdSignature` Token.|  
+|`MDDupModuleRef`|Überprüfen Sie auf Duplikate von `mdModuleRef` Token.|  
+|`MDDupTypeSpec`|Überprüfen Sie auf Duplikate von `mdTypeSpec` Token.|  
+|`MDDupImplMap`|Überprüfen Sie auf Duplikate von `mdImplMap` Token.|  
+|`MDDupAssemblyRef`|Überprüfen Sie auf Duplikate von `mdAssemblyRef` Token.|  
+|`MDDupFile`|Überprüfen Sie auf Duplikate von `mdFile` Token.|  
+|`MDDupExportedType`|Überprüfen Sie auf Duplikate von `mdExportedType` Token.|  
+|`MDDupManifestResource`|Überprüfen Sie auf Duplikate von `mdManifestResource` Token.|  
+|`MDDupGenericParam`|Überprüfen Sie auf Duplikate von `mdGenericParam` Token.|  
+|`MDDupMethodSpec`|Überprüfen Sie auf Duplikate von `mdMethodSpec` Token.|  
+|`MDDupGenericParamConstraint`|Überprüfen Sie auf Duplikate von `mdGenericParamConstraint` Token.|  
+|`MDDupAssembly`|Überprüfen Sie auf Duplikate von `mdAssembly` Token.|  
+|`MDDupDefault`|Überprüfen Sie auf Duplikate von `mdMemberRef` `mdTypeRef` -,-,-, `mdSignature` `mdTypeSpec` -und- `mdMethodSpec` Token.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** CorHdr.h  
+ **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

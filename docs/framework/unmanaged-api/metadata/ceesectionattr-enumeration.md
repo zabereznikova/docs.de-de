@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0db51881-b869-4677-a715-1726a9216489
 topic_type:
 - apiref
-ms.openlocfilehash: 97b28c961f43388679615ac0d5b19c4c69df1e3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6da8a111f716906e403d85bc0b1a29eba7238100
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444248"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006063"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr-Enumeration
-Stellt Werte bereit, die Attribute eines Abschnitts zur Verwendung durch die [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) -Schnittstelle angeben.  
+Stellt Werte bereit, die Attribute eines Abschnitts zur Verwendung durch die [ICeeGen](iceegen-interface.md) -Schnittstelle angeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,15 +46,15 @@ typedef enum  {
 |`sdReadWrite`|Der Abschnitt enthält initialisierte Daten, die gelesen oder aktualisiert werden können.|  
 |`sdExecute`|Der Abschnitt enthält ausführbaren Code, der gelesen und ausgeführt werden darf.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

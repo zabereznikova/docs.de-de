@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: fa4247c4-f4f1-4855-9241-e04d737f5f73
 topic_type:
 - apiref
-ms.openlocfilehash: f224ecc60822862d7c587d7094011d8232fb2b09
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5356ae201dcab423bcb9539031a1a61d23cbb131
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123330"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008611"
 ---
 # <a name="itypenamefactory-interface"></a>ITypeNameFactory-Schnittstelle
 Stellt Methoden zum dekonstruieren eines Typnamens bereit.  
   
  Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [TypeNameFactory-Co-Klasse](../../../../docs/framework/unmanaged-api/hosting/typenamefactory-coclass.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
+- [TypeNameFactory-Co-Klasse](typenamefactory-coclass.md)

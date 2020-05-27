@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-ms.openlocfilehash: c0f236bf6b4d9280945270ada36545cbf0c8a5dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7245a4c222e2ad3ef1854f3c9e2d0abe37e0650a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141436"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009482"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory-Co-Klasse
 Stellt eine Schnittstelle zum Verwalten der Dekonstruktion eines Typnamens bereit.  
@@ -34,19 +34,19 @@ coclass TypeNameFactory {
   
 ## <a name="interfaces"></a>Schnittstellen  
   
-|Interface|Beschreibung|  
+|Schnittstelle|BESCHREIBUNG|  
 |---------------|-----------------|  
-|[ITypeNameFactory-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.|  
+|[ITypeNameFactory-Schnittstelle](itypenamefactory-interface.md)|Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.|  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. idl  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [Hosten von Co-Klassen](hosting-coclasses.md)

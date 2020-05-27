@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442465"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007506"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions-Enumeration
 
@@ -35,22 +35,22 @@ typedef enum CorThreadSafetyOptions {
 } CorThreadSafetyOptions;
 ```
 
-## <a name="members"></a>Mitglieder
+## <a name="members"></a>Member
 
 |Member|Beschreibung|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Standardwert Identisch mit `MDThreadSafetyOff`.|
+|`MDThreadSafetyDefault`|Standardwert. Wie in `MDThreadSafetyOff`.|
 |`MDThreadSafetyOff`|Gibt an, dass keine Lese-/Schreibsperre festgelegt werden kann.|
 |`MDThreadSafetyOn`|Gibt an, dass eine Lese-/Schreibsperre festgelegt werden kann.|
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** Corhdr. h
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436446"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008962"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr-Enumeration
 Enthält Werte, die Typmetadaten angeben.  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|Gibt an, dass dieser Typ LPTSTR als ANSI interpretiert.|  
 |`tdUnicodeClass`|Gibt an, dass dieser Typ LPTSTR als Unicode interpretiert.|  
 |`tdAutoClass`|Gibt an, dass dieser Typ LPTSTR automatisch interpretiert.|  
-|`tdCustomFormatClass`|Gibt an, dass der Typ eine nicht standardmäßige Codierung hat, wie in `CustomFormatMask`angegeben.|  
+|`tdCustomFormatClass`|Gibt an, dass der Typ über eine nicht standardmäßige Codierung verfügt, wie von angegeben `CustomFormatMask` .|  
 |`tdCustomFormatMask`|Verwenden Sie diese Maske, um nicht standardmäßige Codierungsinformationen für systemeigene Interop zu erhalten. Die Bedeutung der Werte dieser beiden Bits ist nicht angegeben.|  
 |`tdBeforeFieldInit`|Gibt an, dass der Typ vor dem ersten Versuch, auf ein statisches Feld zuzugreifen, initialisiert werden muss.|  
 |`tdForwarder`|Gibt an, dass der Typ exportiert wird, und eine Typweiterleitung.|  
@@ -111,13 +111,13 @@ typedef enum CorTypeAttr {
 |`tdRTSpecialName`|Gibt an, dass die Common Language Runtime die namens Codierung überprüfen soll.|  
 |`tdHasSecurity`|Gibt an, dass der Typ mit der Sicherheit verknüpft ist.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

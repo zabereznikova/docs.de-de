@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-ms.openlocfilehash: 94261b7796166cf482a7de990551890e4722dd3b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efff491d92ac7910f43f76965ef98d1d0e4ba0aa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177735"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004425"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef-Methode
 Erstellt die Metadatensignatur für ein Modul mit dem angegebenen Namen.  
@@ -36,21 +36,21 @@ HRESULT DefineModuleRef (
   
 ## <a name="parameters"></a>Parameter  
  `szName`  
- [in] Der Name der anderen Metadatendatei, in der Regel eine DLL. Dies ist nur der Dateiname. Verwenden Sie keinen vollständigen Pfadnamen.  
+ in Der Name der anderen Metadatendatei, in der Regel eine DLL. Dies ist nur der Dateiname. Verwenden Sie keinen vollständigen Pfadnamen.  
   
  `pmur`  
- [out] Das `mdModuleRef` zugewiesene Token.  
+ vorgenommen Das zugewiesene `mdModuleRef` Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

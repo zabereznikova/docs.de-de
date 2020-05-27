@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-ms.openlocfilehash: dfa900e2184a8c415d75f5702c572b14c4018749
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a90deaf3e9ddf326c6fca558cbb4681fc40e022d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177786"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009053"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps-Methode
 Ruft den Satz von Eigenschaften für die Assembly mit der angegebenen Metadatensignatur ab.  
@@ -43,41 +43,41 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parameter  
  `mda`  
- [in] Das `mdAssembly` Metadatentoken, das die Assembly darstellt, für die die Eigenschaften abgerufen werden sollen.  
+ [in] Das `mdAssembly` Metadatentoken, das die Assembly darstellt, für die die Eigenschaften zu erhalten sind.  
   
  `ppbPublicKey`  
- [out] Ein Zeiger auf den öffentlichen Schlüssel oder das Metadatentoken.  
+ vorgenommen Ein Zeiger auf den öffentlichen Schlüssel oder das Metadatentoken.  
   
  `pcbPublicKey`  
- [out] Die Anzahl der Bytes im zurückgegebenen öffentlichen Schlüssel.  
+ vorgenommen Die Anzahl der Bytes im zurückgegebenen öffentlichen Schlüssel.  
   
  `pulHashAlgId`  
- [out] Ein Zeiger auf den Algorithmus, der zum Hashen der Dateien in der Assembly verwendet wird.  
+ vorgenommen Ein Zeiger auf den Algorithmus, der zum Hash der Dateien in der Assembly verwendet wird.  
   
  `szName`  
- [out] Der einfache Name der Assembly.  
+ vorgenommen Der einfache Name der Assembly.  
   
  `cchName`  
- [in] Die Größe, in breiten `szName`Zeichen, von .  
+ in Die Größe von in breit Zeichen `szName` .  
   
  `pchName`  
- [out] Die Anzahl der breiten Zeichen, die tatsächlich in `szName`zurückgegeben wurden.  
+ vorgenommen Die Anzahl der breit Zeichen, die in tatsächlich zurückgegeben wurden `szName` .  
   
  `pMetaData`  
- [out] Ein Zeiger auf eine ASSEMBLYMETADATA-Struktur, die die Assemblymetadaten enthält.  
+ vorgenommen Ein Zeiger auf eine ASSEMBLYMETADATA-Struktur, die die Assemblymetadaten enthält.  
   
  `pdwAssemblyFlags`  
- [out] Flags, die die Metadaten beschreiben, die auf eine Assembly angewendet werden. Dieser Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags-Werten.](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)  
+ vorgenommen Flags, die die auf eine Assembly angewendeten Metadaten beschreiben. Dieser Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags](corassemblyflags-enumeration.md) -Werten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)

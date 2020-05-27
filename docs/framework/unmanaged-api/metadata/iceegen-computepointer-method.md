@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 9587bbe8f087fd9a51bba67492af1d5acb53ae4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 206dcd3a0a82da9b6211c8c2045e4e9d3d991973
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176096"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008871"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer-Methode
-Bestimmt den Puffer für den angegebenen Codeabschnitt.  
+Bestimmt den Puffer für den angegebenen Code Abschnitt.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
@@ -39,23 +39,23 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in] Der Codeabschnitt, für den ein Puffer zurückgegeben werden soll.  
+ in Der Code Abschnitt, für den ein Puffer zurückgegeben werden soll.  
   
  `RVA`  
- [in] Die relative virtuelle Adresse der Methode, für die ein Zeiger abruft.  
+ in Die relative virtuelle Adresse der Methode, für die ein Zeiger erhalten werden soll.  
   
  `lpBuffer`  
- [out] Ein Zeiger auf den zurückgegebenen Puffer.  
+ vorgenommen Ein Zeiger auf den zurückgegebenen Puffer.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen-Schnittstelle](iceegen-interface.md)

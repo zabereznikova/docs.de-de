@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: e855868d18fc6cffdd5d92cfa401606caf45b76c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a18583ce807ffa672811f3a0cd1e744233f6eb30
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177560"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008829"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout-Methode
-Schließt das Layout von Feldern für eine Klasse ab, die durch einen vorherigen Aufruf der [DefineTypeDef-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)definiert wurde.  
+Schließt das Layout der Felder für eine Klasse ab, die durch einen vorherigen-Rückruf der [DefineTypeDef-Methode](imetadataemit-definetypedef-method.md)definiert wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,36 +38,36 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] Ein `mdTypeDef` Token, das die zu legende Klasse angibt.  
+ in Ein `mdTypeDef` Token, das die Klasse angibt, die angelegt werden soll.  
   
  `dwPackSize`  
- [in] Die Packungsgröße: 1, 2, 4, 8 oder 16 Bytes. Die Verpackungsgröße ist die Anzahl der Bytes zwischen benachbarten Feldern.  
+ in Die Komprimierungs Größe: 1, 2, 4, 8 oder 16 Bytes. Bei der Komprimierungs Größe handelt es sich um die Anzahl von Bytes zwischen angrenzenden Feldern.  
   
  `rFieldOffsets`  
- [in] Ein Array [von COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) Strukturen, von denen jede ein Feld der Klasse und den Offset des Felds innerhalb der Klasse angibt. Beenden Sie `mdTokenNil`das Array mit .  
+ in Ein Array von [COR_FIELD_OFFSET](cor-field-offset-structure.md) Strukturen, von denen jede ein Feld der Klasse und den Offset des Felds innerhalb der Klasse angibt. Beenden Sie das Array mit `mdTokenNil` .  
   
  `ulClassSize`  
- [in] Die Größe der Klasse in Bytes.  
+ in Die Größe (in Bytes) der-Klasse.  
   
-## <a name="remarks"></a>Bemerkungen  
- Die Klasse wird zunächst definiert, indem die [IMetaDataEmit::DefineTypeDef-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) aufgerufen und eines von drei Layouts für die Felder der Klasse angegeben wird: automatisch, sequenziell oder explizit. Normalerweise würden Sie das automatische Layout verwenden und die Laufzeit den besten Weg zum Layout der Felder auswählen lassen.  
+## <a name="remarks"></a>Hinweise  
+ Die-Klasse wird anfänglich durch Aufrufen der [IMetaDataEmit::D efinetypedef](imetadataemit-definetypedef-method.md) -Methode definiert, wobei eines von drei Layouts für die Felder der-Klasse angegeben wird: automatisch, sequenziell oder explizit. Normalerweise verwenden Sie das automatische Layout und lassen die Common Language Runtime die beste Möglichkeit zum Anordnen der Felder auswählen.  
   
- Möglicherweise möchten Sie jedoch, dass die Felder entsprechend der Anordnung angeordnet sind, die nicht verwalteter Code verwendet. Wählen Sie in diesem Fall entweder `SetClassLayout` sequenzielles oder explizites Layout aus, und rufen Sie auf, um das Layout der Felder abzuschließen:  
+ Möglicherweise möchten Sie jedoch, dass die Felder entsprechend der von nicht verwaltetem Code verwendeten Anordnung angeordnet werden. Wählen Sie in diesem Fall entweder sequenzielles oder explizites Layout aus, und führen Sie aus `SetClassLayout` , um das Layout der Felder abzuschließen:  
   
-- Sequenzielles Layout: Geben Sie die Verpackungsgröße an. Ein Feld wird entweder an seiner natürlichen Größe oder der Verpackungsgröße ausgerichtet, je nachdem, was zu dem kleineren Versatz des Feldes führt. Legen `rFieldOffsets` `ulClassSize` Sie fest und auf Null.  
+- Sequenzielles Layout: Geben Sie die Verpackungsgröße an. Ein Feld wird entweder nach seiner natürlichen Größe oder der Komprimierungs Größe ausgerichtet, je nachdem, was zu einem kleineren Offset des Felds führt. Legen `rFieldOffsets` `ulClassSize` Sie und auf NULL fest.  
   
-- Explizites Layout: Geben Sie entweder den Versatz jedes Feldes an, oder geben Sie die Klassengröße und die Verpackungsgröße an.  
+- Explizites Layout: Geben Sie entweder den Offset jedes Felds an, oder geben Sie die Klassengröße und die Komprimierungs Größe an.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

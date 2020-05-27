@@ -57,7 +57,7 @@ Diese Diagramme können dann mithilfe der dashboardfunktion in den Azure-Portal 
 ![Ein Beispiel Power BI ](./media/azure-monitor.png)
  **dashboardabbildung 7-15**. Ein Beispiel Power BI-Dashboard.
 
-## <a name="alerts"></a>Warnungen
+## <a name="alerts"></a>Alerts
 
 Manchmal reicht es nicht aus, Daten Dashboards zu haben. Wenn niemand aktiv ist, um die Dashboards zu beobachten, kann es nach wie vor viele Stunden dauern, bis ein Problem behoben oder sogar erkannt wird. Zu diesem Zweck stellt Azure Monitor auch eine Lösung mit der höchsten [Lösung](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)bereit. Warnungen können durch eine Vielzahl von Bedingungen ausgelöst werden, darunter:
 
@@ -73,7 +73,7 @@ Da häufig Warnungen identifiziert werden, können die Warnungen mit Details zu 
 
 Azure Monitor nutzt Machine Learning automatisch, um die normalen Betriebsparameter von bereitgestellten Anwendungen zu verstehen. Dadurch können Dienste erkannt werden, die außerhalb ihrer normalen Parameter ausgeführt werden. Beispielsweise kann der typische wochentagsdatenverkehr auf der Website 10.000 Anforderungen pro Minute betragen. In einer bestimmten Woche trifft die Anzahl der Anforderungen plötzlich auf sehr ungewöhnliche 20.000-Anforderungen pro Minute. Die [intelligente Erkennung](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) bemerkt diese Abweichung von der Norm und löst eine Warnung aus. Gleichzeitig ist die Trendanalyse intelligent genug, um zu vermeiden, dass falsch positive Ergebnisse ausgelöst werden, wenn die Auslastung des Datenverkehrs erwartet wird.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
 

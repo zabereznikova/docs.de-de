@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 25fb3278e576ebe4a538379918e868b2e5f87911
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937951"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007870"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType-Enumeration
 
-Gibt eine Common Language Runtime <xref:System.Type>, einen Typmodifizierer oder Informationen zu einem Typ in einer Signatur des metadatentyps an.
+Gibt eine Common Language Runtime <xref:System.Type> , einen Typmodifizierer oder Informationen zu einem Typ in einer Signatur des metadatentyps an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -118,34 +118,34 @@ typedef enum CorElementType {
 
 ## <a name="remarks"></a>Hinweise
 
-Die typmodifiziererer bilden die Grundlage für das darstellen komplexer Typen. Ein `CorElementType` Typmodifiziererwert wird auf den Wert angewendet, der in der Typsignatur unmittelbar darauf folgt. Der Wert, der auf den `CorElementType` Typmodifiziererwert folgt, kann ein `CorElementType` einfacher Typwert, ein Metadatentoken oder ein anderer Wert sein, wie in der folgenden Tabelle angegeben.
+Die typmodifiziererer bilden die Grundlage für das darstellen komplexer Typen. Ein `CorElementType` Typmodifiziererwert wird auf den Wert angewendet, der in der Typsignatur unmittelbar darauf folgt. Der Wert, der `CorElementType` auf den Typmodifiziererwert folgt, kann ein `CorElementType` einfacher Typwert, ein Metadatentoken oder ein anderer Wert sein, wie in der folgenden Tabelle angegeben.
 
 > [!NOTE]
-> Alle Zahlen (*Anzahl*, *Argument Anzahl*,Metadatentoken, *Rang*, *Anzahl*und *gebunden*) werden als komprimierte ganze Zahlen gespeichert. Weitere Informationen finden Sie in der ECMA [-Website Standard-ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) .
+> Alle Zahlen (*Anzahl*, *Argument Anzahl*, *metadata token*Metadatentoken, *Rang*, *Anzahl*und *gebunden*) werden als komprimierte ganze Zahlen gespeichert. Weitere Informationen finden Sie in der ECMA [-Website Standard-ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) .
 
 |Typmodifizierer|Format|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<einen `CorElementType` Wert >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<einen `CorElementType` Wert >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<ein `mdTypeDef` Metadatentoken aus >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<ein `mdTypeDef` Metadatentoken aus >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<Anzahl >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<einen `CorElementType` Wert > \<Rank > \<> \<> bound1 \<... > rattn \<> boundn|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<ein `mdTypeDef` Metadatentoken > \<Argument Anzahl > \<arg1 >... \<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<die gesamte Signatur für die Funktion, einschließlich der Aufruf Konvention >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<einen `CorElementType` Wert >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<Anzahl >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<eine `mdTypeRef` oder `mdTypeDef` Metadatentoken >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<eine `mdTypeRef` oder `mdTypeDef` Metadatentoken >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR\<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF\<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR\<number>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN>\<boundN>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ...\<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR\<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY\<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR\<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT\<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** Corhdr. h
 
-**.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

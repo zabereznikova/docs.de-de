@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436464"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007493"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType-Enumeration
 Gibt den Typ eines Metadatentokens an.  
@@ -63,43 +63,43 @@ typedef enum CorTokenType {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`mdtModule`|Ein `mdModule`-Token.|  
-|`mdtTypeRef`|Ein `mdTypeRef`-Token.|  
-|`mdtTypeDef`|Ein `mdTypeDef`-Token.|  
-|`mdtFieldDef`|Ein `mdFieldDef`-Token.|  
-|`mdtMethodDef`|Ein `mdMethodDef`-Token.|  
-|`mdtParamDef`|Ein `mdParamDef`-Token.|  
-|`mdtInterfaceImpl`|Ein `mdInterfaceImpl`-Token.|  
-|`mdtMemberRef`|Ein `mdMemberRef`-Token.|  
-|`mdtCustomAttribute`|Ein `mdCustomAttribute`-Token.|  
-|`mdtPermission`|Ein `mdPermission`-Token.|  
-|`mdtSignature`|Ein `mdSignature`-Token.|  
-|`mdtEvent`|Ein `mdEvent`-Token.|  
-|`mdtProperty`|Ein `mdProperty`-Token.|  
-|`mdtModuleRef`|Ein `mdModuleRef`-Token.|  
-|`mdtTypeSpec`|Ein `mdTypeSpec`-Token.|  
-|`mdtAssembly`|Ein `mdAssembly`-Token.|  
-|`mdtAssemblyRef`|Ein `mdAssemblyRef`-Token.|  
-|`mdtFile`|Ein `mdFile`-Token.|  
-|`mdtExportedType`|Ein `mdExportedType`-Token.|  
-|`mdtManifestResource`|Ein `mdManifestResource`-Token.|  
-|`mdtGenericParam`|Ein `mdGenericParam`-Token.|  
-|`mdtMethodSpec`|Ein `mdMethodSpec`-Token.|  
-|`mdtGenericParamConstraint`|Ein `mdGenericParamConstraint`-Token.|  
-|`mdtString`|Ein `mdString`-Token.|  
-|`mdtName`|Ein `mdName`-Token.|  
-|`mdtBaseType`|Nicht verwendet.|  
+|`mdtModule`|Ein- `mdModule` Token.|  
+|`mdtTypeRef`|Ein- `mdTypeRef` Token.|  
+|`mdtTypeDef`|Ein- `mdTypeDef` Token.|  
+|`mdtFieldDef`|Ein- `mdFieldDef` Token.|  
+|`mdtMethodDef`|Ein- `mdMethodDef` Token.|  
+|`mdtParamDef`|Ein- `mdParamDef` Token.|  
+|`mdtInterfaceImpl`|Ein- `mdInterfaceImpl` Token.|  
+|`mdtMemberRef`|Ein- `mdMemberRef` Token.|  
+|`mdtCustomAttribute`|Ein- `mdCustomAttribute` Token.|  
+|`mdtPermission`|Ein- `mdPermission` Token.|  
+|`mdtSignature`|Ein- `mdSignature` Token.|  
+|`mdtEvent`|Ein- `mdEvent` Token.|  
+|`mdtProperty`|Ein- `mdProperty` Token.|  
+|`mdtModuleRef`|Ein- `mdModuleRef` Token.|  
+|`mdtTypeSpec`|Ein- `mdTypeSpec` Token.|  
+|`mdtAssembly`|Ein- `mdAssembly` Token.|  
+|`mdtAssemblyRef`|Ein- `mdAssemblyRef` Token.|  
+|`mdtFile`|Ein- `mdFile` Token.|  
+|`mdtExportedType`|Ein- `mdExportedType` Token.|  
+|`mdtManifestResource`|Ein- `mdManifestResource` Token.|  
+|`mdtGenericParam`|Ein- `mdGenericParam` Token.|  
+|`mdtMethodSpec`|Ein- `mdMethodSpec` Token.|  
+|`mdtGenericParamConstraint`|Ein- `mdGenericParamConstraint` Token.|  
+|`mdtString`|Ein- `mdString` Token.|  
+|`mdtName`|Ein- `mdName` Token.|  
+|`mdtBaseType`|Wird nicht verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
  Jeder Wert entspricht dem Wert des obersten Bytes im entsprechenden Metadatentoken.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

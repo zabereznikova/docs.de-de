@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 4c68754bc44fe035fd8e7143c52895928beae395
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d34c7a2992a2779b96ec87f1a0175d8fcbce34a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175589"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007792"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap-Methode
-Legt Features der PInvoke-Signatur einer Methode fest oder ändert diese, wie durch einen vorherigen Aufruf von [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)definiert.  
+Legt die Features der PInvoke-Signatur einer Methode fest, wie durch einen vorherigen Aufruf von [IMetaDataEmit::D efinepinvokemap](imetadataemit-definepinvokemap-method.md)definiert, oder ändert Sie.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,27 +38,27 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] Die `mdToken` Zuordnungsinformationen, auf die angewendet wird.  
+ in Der `mdToken` , auf den die Mapping-Informationen angewendet werden.  
   
  `dwMappingFlags`  
- [in] Flags, die von PInvoke für die Zuordnung verwendet werden. Dies ist eine `CorPinvokeMap` Bitmaske von Werten.  
+ in Flags, die von PInvoke zum Durchführen der Zuordnung verwendet werden. Dies ist eine Bitmaske von `CorPinvokeMap` Werten.  
   
  `szImportName`  
- [in] Der Name des Zielexports in der systemeigenen DLL.  
+ in Der Name des Ziel Exports in der systemeigenen DLL.  
   
  `mrImportDLL`  
- [in] Das `mdModuleRef` Token für die nicht verwaltete Ziel-DLL.  
+ in Das `mdModuleRef` Token für die nicht verwaltete Ziel-dll.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

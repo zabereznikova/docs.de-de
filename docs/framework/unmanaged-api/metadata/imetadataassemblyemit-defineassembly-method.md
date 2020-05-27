@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c91200730431c4c6e230b8c1561ce7c4863868
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177886"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008182"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly-Methode
-Erstellt `Assembly` eine Struktur, die Metadaten für die angegebene Assembly enthält, und gibt das zugeordnete Metadatentoken zurück.  
+Erstellt eine `Assembly` -Struktur, die Metadaten für die angegebene Assembly enthält, und gibt das zugeordnete Metadatentoken zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Parameter  
  `pbPublicKey`  
- [in] Der öffentliche Schlüssel, der den Herausgeber der Assembly identifiziert, oder NULL, wenn die Assembly nicht stark benannt ist.  
+ in Der öffentliche Schlüssel, der den Verleger der Assembly identifiziert, oder NULL, wenn die Assembly nicht den starken Namen hat.  
   
  `cbPublicKey`  
- [in] Die Größe in `pbPublicKey`Bytes von .  
+ in Die Größe von in Bytes `pbPublicKey` .  
   
  `uHashAlgId`  
- [in] Der Bezeichner des Hashalgorithmus, der zum Verschlüsseln der Dateien in der Assembly verwendet werden soll, oder NULL, um den SHA-1-Algorithmus anzugeben.  
+ in Der Bezeichner des Hash Algorithmus, der zum Verschlüsseln der Dateien in der Assembly verwendet werden soll, oder NULL, um den SHA-1-Algorithmus anzugeben.  
   
  `szName`  
- [in] Der vom Menschen lesbare Textname der Assembly. Dieser Wert darf 1024 Zeichen nicht überschreiten.  
+ in Der lesbare Textname der Assembly. Dieser Wert darf nicht länger als 1024 Zeichen sein.  
   
  `pMetaData`  
- [in] Ein Zeiger auf eine ASSEMBLYMETADATA-Instanz, die die Versions-, Plattform- und Gebietsschemainformationen für die Assembly enthält.  
+ in Ein Zeiger auf eine ASSEMBLYMETADATA-Instanz, die die Versions-, Platt Form-und Gebiets Schema Informationen für die Assembly enthält.  
   
  `dwAssemblyFlags`  
- [in] Eine Kombination von [CorAssemblyFlags-Werten,](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) die Features der Assembly beschreiben.  
+ in Eine Kombination aus [CorAssemblyFlags](corassemblyflags-enumeration.md) -Werten, mit denen die Funktionen der Assembly beschrieben werden.  
   
  `pmda`  
- [out] Ein Zeiger auf das Metadatentoken.  
+ vorgenommen Ein Zeiger auf das Metadatentoken.  
   
-## <a name="remarks"></a>Bemerkungen  
- Innerhalb `Assembly` eines Manifests kann nur eine Metadatenstruktur definiert werden.  
+## <a name="remarks"></a>Hinweise  
+ `Assembly`In einem Manifest kann nur eine Metadatenstruktur definiert werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

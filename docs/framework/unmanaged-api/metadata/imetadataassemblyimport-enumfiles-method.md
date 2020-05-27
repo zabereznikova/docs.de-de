@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-ms.openlocfilehash: 70f76318f51047cb81262f744a6fbed5fe401692
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed8bafd67b5d55a5116111b7721fbdc31c52aca6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177818"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009094"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles-Methode
-Zählt die Dateien auf, auf die im aktuellen Assemblymanifest verwiesen wird.  
+Listet die Dateien auf, auf die im aktuellen Assemblymanifest verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,33 +38,33 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss ein NULL-Wert für den ersten Aufruf dieser Methode sein.  
+ [in, out] Ein Zeiger auf den Enumerator. Dies muss ein NULL-Wert für den ersten-Rückruf dieser Methode sein.  
   
  `rFiles`  
- [out] Das Array, das `mdFile` zum Speichern der Metadatentoken verwendet wird.  
+ vorgenommen Das Array, das zum Speichern der `mdFile` Metadatentoken verwendet wird.  
   
  `cMax`  
- [in] Die maximale `mdFile` Anzahl von Token, `rFiles`die in platziert werden können.  
+ in Die maximale Anzahl von `mdFile` Token, die in platziert werden können `rFiles` .  
   
  `pcTokens`  
- [out] Die Anzahl `mdFile` der Token, `rFiles`die tatsächlich in platziert wurden.  
+ vorgenommen Die Anzahl der `mdFile` Token, die tatsächlich in platziert wurden `rFiles` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|Es sind keine Token zum Aufzählen vorhanden. In diesem `pcTokens` Fall ist auf Null gesetzt.|  
+|`S_OK`|`EnumFiles`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` wird auf 0 (null) festgelegt.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)

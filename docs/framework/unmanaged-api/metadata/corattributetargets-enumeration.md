@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176200"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007922"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets-Enumeration
 Gibt die Anwendungselemente an, auf die Attribute angewendet werden können.  
@@ -58,12 +58,12 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`catAssembly`|Auf Assemblys können Attribute angewendet werden.|  
-|`catModule`|Attribute können auf ein portables ausführbares Modul (.dll oder .exe) angewendet werden.|  
+|`catModule`|Das Attribut kann auf ein ausführbares ausführbares ausführbares Modul (. dll oder. exe) angewendet werden.|  
 |`catClass`|Auf Klassen können Attribute angewendet werden.|  
 |`catStruct`|Auf Strukturen, d. h. auf Werttypen, können Attribute angewendet werden.|  
 |`catEnum`|Auf Enumerationen können Attribute angewendet werden.|  
@@ -77,20 +77,20 @@ typedef enum CorAttributeTargets
 |`catDelegate`|Auf Delegaten können Attribute angewendet werden.|  
 |`catGenericParameter`|Auf generische Parameter können Attribute angewendet werden.|  
 |`catAll`|Auf jedes Anwendungselement können Attribute angewendet werden.|  
-|`catClassMembers`|Attribute können auf einen Member einer Klasse angewendet werden.|  
+|`catClassMembers`|Das Attribut kann auf einen Member einer Klasse angewendet werden.|  
   
-## <a name="remarks"></a>Bemerkungen  
- Die `CorAttributeTargets` Enumerationswerte können mit einem bitweisen ODER-Vorgang kombiniert werden, um die bevorzugte Kombination zu erhalten.  
+## <a name="remarks"></a>Hinweise  
+ Die `CorAttributeTargets` Enumerationswerte können mit einer bitweisen OR-Operation kombiniert werden, um die bevorzugte Kombination zu erhalten.  
   
- Die `CorAttributeTargets` Parallelen <xref:System.AttributeTargets?displayProperty=nameWithType> zur verwalteten Enumeration.  
+ Der entspricht `CorAttributeTargets` der verwalteten <xref:System.AttributeTargets?displayProperty=nameWithType> Enumeration.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** CorHdr.h  
+ **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

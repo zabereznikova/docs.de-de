@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 9c4ed282e259aa46fc0cb0175214dc51d3d5fbee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17757df566ba8d141e7adec00dcc1f75959d0e00
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175888"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005626"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute-Methode
-Erstellt eine Definition für ein benutzerdefiniertes Attribut mit der angegebenen Metadatensignatur, die dem angegebenen Objekt zugeordnet werden soll, und ruft ein Token zu dieser benutzerdefinierten Attributdefinition ab.  
+Erstellt eine Definition für ein benutzerdefiniertes Attribut mit der angegebenen Metadatensignatur, das an das angegebene Objekt angefügt werden soll, und ruft ein Token für die Definition des benutzerdefinierten Attributs ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,30 +39,30 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>Parameter  
  `tkObj`  
- [in] Das Token für das Besitzerelement.  
+ in Das Token für das Besitzer Element.  
   
  `tkType`  
- [in] Das Token, das das benutzerdefinierte Attribut identifiziert.  
+ in Das Token, das das benutzerdefinierte Attribut identifiziert.  
   
  `pCustomAttribute`  
- [in] Ein Zeiger auf das benutzerdefinierte Attribut.  
+ in Ein Zeiger auf das benutzerdefinierte Attribut.  
   
  `cbCustomAttribute`  
- [in] Die Anzahl der `pCustomAttribute`Bytes in .  
+ in Die Anzahl von Bytes in `pCustomAttribute` .  
   
  `pcv`  
- [out] Das `mdCustomAttribute` token zugewiesen.  
+ vorgenommen Das `mdCustomAttribute` zugewiesene Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

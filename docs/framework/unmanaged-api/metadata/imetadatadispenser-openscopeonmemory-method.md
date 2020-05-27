@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 492c37540ad68b5b134520218eedc59013c68519
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69e5e05012d2b44a76a986591ec990f66bf8ae20
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175927"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007324"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory-Methode
-Öffnet einen Speicherbereich, der vorhandene Metadaten enthält. Das heißt, diese Methode öffnet einen angegebenen Speicherbereich, in dem die vorhandenen Daten als Metadaten behandelt werden.  
+Öffnet einen Arbeitsspeicher Bereich, der vorhandene Metadaten enthält. Das heißt, diese Methode öffnet einen angegebenen Bereich des Speichers, in dem die vorhandenen Daten als Metadaten behandelt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,45 +39,45 @@ HRESULT OpenScopeOnMemory (
   
 ## <a name="parameters"></a>Parameter  
  `pData`  
- [in] Ein Zeiger, der die Startadresse des Speicherbereichs angibt.  
+ in Ein-Zeiger, der die Startadresse des Speicherbereichs angibt.  
   
  `cbData`  
- [in] Die Größe des Speicherbereichs in Bytes.  
+ in Die Größe des Arbeitsspeicher Bereichs in Bytes.  
   
  `dwOpenFlags`  
- [in] Ein Wert der CorOpenFlags-Enumeration, um den Modus (Lesen, Schreiben usw.) zum Öffnen anzugeben. [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)  
+ in Ein Wert der [CorOpenFlags](coropenflags-enumeration.md) -Enumeration, mit dem der Modus (lesen, schreiben usw.) zum Öffnen angegeben wird.  
   
  `riid`  
- [in] Die IID der gewünschten Metadatenschnittstelle, die zurückgegeben werden soll; Der Aufrufer verwendet die Schnittstelle, um Metadaten zu importieren (lesen) oder auszusenden (schreiben).  
+ in Die IID der gewünschten Metadatenschnittstelle, die zurückgegeben werden soll. der Aufrufer verwendet die-Schnittstelle, um Metadaten zu importieren (lesen) oder auszugeben (schreiben).  
   
- Der Wert `riid` von muss eine der Schnittstellen "import" oder "emit" angeben. Gültige Werte sind IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 oder IID_IMetaDataImport2.  
+ Der Wert von `riid` muss eine der Schnittstellen "Import" oder "ausgeben" angeben. Gültige Werte sind IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 oder IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] Der Zeiger auf die zurückgegebene Schnittstelle.  
+ vorgenommen Der Zeiger auf die zurückgegebene Schnittstelle.  
   
-## <a name="remarks"></a>Bemerkungen  
- Die In-Memory-Kopie der Metadaten kann mithilfe von Methoden von einer der "Import"-Schnittstellen abgefragt oder mit Methoden aus einer der "emit"-Schnittstellen hinzugefügt werden.  
+## <a name="remarks"></a>Hinweise  
+ Die in-Memory-Kopie der Metadaten kann mithilfe von Methoden einer der "Import"-Schnittstellen abgefragt oder mithilfe von Methoden aus einer der "Ausgabe"-Schnittstellen hinzugefügt werden.  
   
- Die `OpenScopeOnMemory` Methode ähnelt der [IMetaDataDispenser::OpenScope-Methode,](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) mit der Ausnahme, dass die Metadaten, die von Interesse sind, bereits im Arbeitsspeicher und nicht in einer Datei auf dem Datenträger vorhanden sind.  
+ Die- `OpenScopeOnMemory` Methode ähnelt der [IMetaDataDispenser:: OpenScope](imetadatadispenser-openscope-method.md) -Methode, mit der Ausnahme, dass die relevanten Metadaten bereits im Arbeitsspeicher vorhanden sind, und nicht in einer Datei auf dem Datenträger.  
   
- Wenn der Zielspeicherbereich keine CLR-Metadaten (Common Language `OpenScopeOnMemory` Runtime) enthält, schlägt die Methode fehl.  
+ Wenn der Zielspeicher Bereich keine Common Language Runtime (CLR)-Metadaten enthält, schlägt die `OpenScopeOnMemory` Methode fehl.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattform:** Siehe [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataDispenser-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataDispenser-Schnittstelle](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx-Schnittstelle](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

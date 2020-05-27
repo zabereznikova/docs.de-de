@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-ms.openlocfilehash: f09c6bb79d7bd28f4d8b74237b6f343a07b79062
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f399d33dbe05cb5768aa45533ef30d28409e18e2
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141470"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006466"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType-Enumeration
 Enthält Werte, die die zugrunde liegende Ursache eines Stapelüberlauf Ereignisses angeben.  
@@ -43,17 +43,17 @@ typedef enum {
 |`SO_Other`|Der Stapelüberlauf wurde durch nicht verwalteten Code verursacht.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Informationen werden an den Host über einen aufzurufenden Befehl der [iaktiononclrevent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) -Methode übermittelt.  
+ Diese Informationen werden an den Host über einen aufzurufenden Befehl der [iaktiononclrevent:: OnEvent](iactiononclrevent-onevent-method.md) -Methode übermittelt.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Mscoree. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hosten von Enumerationen](hosting-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-ms.openlocfilehash: 25baa6ffda3d50915cc7898275d6a557c1b3e947
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9990daea1b097532de53684921d3f10c520a3b1a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176031"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008065"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps-Methode
 Ändert die angegebene `File`-Metadatenstruktur.  
@@ -38,29 +38,29 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Parameter  
  `file`  
- [in] Das Metadatentoken, das `File` die zu ändernde Metadatenstruktur angibt.  
+ in Das Metadatentoken, das die `File` zu ändernde Metadatenstruktur angibt.  
   
  `pbHashValue`  
- [in] Ein Zeiger auf die Hashdaten, die der Datei zugeordnet sind.  
+ in Ein Zeiger auf die Hashdaten, die der Datei zugeordnet sind.  
   
  `cbHashValue`  
- [in] Die Größe in `pbHashValue`Bytes von .  
+ in Die Größe von in Bytes `pbHashValue` .  
   
  `dwFileFlags`  
- [in] Eine bitweise Kombination von [CorFileFlags-Werten,](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) die verschiedene Attribute der Datei angeben.  
+ in Eine bitweise Kombination von [CorFileFlags](corfileflags-enumeration.md) -Werten, die verschiedene Attribute der Datei angeben.  
   
-## <a name="remarks"></a>Bemerkungen  
- Um eine `File` Metadatenstruktur zu erstellen, verwenden Sie die [IMetaDataAssemblyEmit::DefineFile-Methode.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie zum Erstellen einer `File` Metadatenstruktur die [IMetaDataAssemblyEmit::D efinefile](imetadataassemblyemit-definefile-method.md) -Methode.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

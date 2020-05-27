@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78c192f10f629a0c1316ae7af7fc774819f4de8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175979"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007480"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps-Methode
 Ruft die Eigenschaften der Datei mit der angegebenen Metadatensignatur ab.  
@@ -41,35 +41,35 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parameter  
  `mdf`  
- [in] Das `mdFile` Metadatentoken, das die Datei darstellt, für die die Eigenschaften abgerufen werden sollen.  
+ in Das `mdFile` Metadatentoken, das die Datei darstellt, für die die Eigenschaften zu erhalten sind.  
   
  `szName`  
- [out] Der einfache Name der Datei.  
+ vorgenommen Der einfache Name der Datei.  
   
  `cchName`  
- [in] Die Größe, in breiten `szName`Zeichen, von .  
+ in Die Größe von in breit Zeichen `szName` .  
   
  `pchName`  
- [out] Die Anzahl der breiten Zeichen, die tatsächlich in `szName`zurückgegeben wurden.  
+ vorgenommen Die Anzahl der breit Zeichen, die in tatsächlich zurückgegeben wurden `szName` .  
   
  `ppbHashValue`  
- [out] Ein Zeiger auf den Hashwert. Dies ist der Hash der Datei mit dem SHA-1-Algorithmus.  
+ vorgenommen Ein Zeiger auf den Hashwert. Dies ist der Hash, der den SHA-1-Algorithmus der Datei verwendet.  
   
  `pcbHashValue`  
- [out] Die Anzahl der breiten Zeichen im zurückgegebenen Hashwert.  
+ vorgenommen Die Anzahl der breiten Zeichen im zurückgegebenen Hashwert.  
   
  `pdwFileFlags`  
- [out] Ein Zeiger auf die Flags, die die Metadaten beschreiben, die auf eine Datei angewendet werden. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorFileFlags-Werten.](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
+ vorgenommen Ein Zeiger auf die Flags, die die auf eine Datei angewendeten Metadaten beschreiben. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorFileFlags](corfileflags-enumeration.md) -Werten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattform:** Siehe [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1a83f07f03ddb17d5c306453cf838101a77ed65
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443907"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007935"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags-Enumeration
 Enthält Werte, die die auf eine Assemblykompilierung angewendeten Metadaten beschreiben.  
@@ -64,25 +64,25 @@ typedef enum CorAssemblyFlags {
 |`afPA_IA64`|Gibt an, dass die Prozessorarchitektur Itanium (das Format PE32 +) ist.|  
 |`afPA_AMD64`|Gibt an, dass die Prozessorarchitektur AMD x64 (das Format PE32 +) ist.|  
 |`afPA_ARM`|Gibt an, dass die Prozessorarchitektur Arm (das Format PE32) ist.|  
-|`afPA_NoPlatform`|Gibt an, dass die Assembly eine Verweisassembly ist. Das heißt, es gilt für jede Architektur, kann aber nicht in einer Architektur ausgeführt werden. Folglich ist das Flag identisch mit `afPA_Mask`.|  
-|`afPA_Specified`|Gibt an, dass die Prozessorarchitektur-Flags an den `AssemblyRef` Datensatz weitergegeben werden sollen.|  
+|`afPA_NoPlatform`|Gibt an, dass die Assembly eine Verweisassembly ist. Das heißt, es gilt für jede Architektur, kann aber nicht in einer Architektur ausgeführt werden. Folglich ist das-Flag identisch mit `afPA_Mask` .|  
+|`afPA_Specified`|Gibt an, dass die Flags der Prozessorarchitektur an den Datensatz weitergegeben werden sollen `AssemblyRef` .|  
 |`afPA_Mask`|Eine Maske, die die Prozessorarchitektur beschreibt.|  
 |`afPA_FullMask`|Gibt an, dass die Beschreibung der Prozessorarchitektur enthalten ist.|  
 |`afPA_Shift`|Gibt eine Verschiebungs Anzahl in der Prozessorarchitektur-Flags zum und aus dem Index an.|  
-|`afEnableJITcompileTracking`|Gibt den entsprechenden Wert aus dem <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> des <xref:System.Diagnostics.DebuggableAttribute>an.|  
-|`afDisableJITcompileOptimizer`|Gibt den entsprechenden Wert aus dem <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> des <xref:System.Diagnostics.DebuggableAttribute>an.|  
+|`afEnableJITcompileTracking`|Gibt den entsprechenden Wert aus der <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> von an <xref:System.Diagnostics.DebuggableAttribute> .|  
+|`afDisableJITcompileOptimizer`|Gibt den entsprechenden Wert aus der <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> von an <xref:System.Diagnostics.DebuggableAttribute> .|  
 |`afRetargetable`|Gibt an, dass die Assembly zur Laufzeit auf eine Assembly von einem anderen Verleger neu zugewiesen werden kann.|  
 |`afContentType_Mask`|Eine Maske, die den Inhaltstyp beschreibt.|  
 |`afContentType_Default`|Gibt den Standard Inhaltstyp an.|  
 |`afContentType_WindowsRuntime`|Gibt den Windows-Runtime Inhaltstyp an.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

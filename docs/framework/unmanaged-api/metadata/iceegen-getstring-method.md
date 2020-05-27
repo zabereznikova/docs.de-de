@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: ada126b41f1c634f7d8daa58480406ac26f92377
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7b15261d825c1bd5f217c4cecd82ed36a716d0e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177905"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008260"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString-Methode
-Ruft die Zeichenfolge ab, die an der angegebenen relativen virtuellen Adresse gespeichert ist.  
+Ruft die Zeichenfolge ab, die bei der angegebenen relativen virtuellen Adresse gespeichert wird.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
@@ -38,20 +38,20 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parameter  
  `RVA`  
- [in] Die relative virtuelle Adresse der zurückzugebenden Zeichenfolge.  
+ in Die relative virtuelle Adresse der zurück zugebende Zeichenfolge.  
   
  `lpString`  
- [out] Die zurückgegebene Zeichenfolge.  
+ vorgenommen Die zurückgegebene Zeichenfolge.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen-Schnittstelle](iceegen-interface.md)
