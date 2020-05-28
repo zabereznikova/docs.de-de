@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120883"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842009"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalisieren und Lokalisieren von .NET-Anwendungen
 
@@ -50,6 +50,10 @@ Weitere Informationen finden Sie in der [Dokumentation zur Globalisierung](/glob
 
 Erläutert die erste Phase der Erstellung einer weltweit einsetzbaren Anwendung, die das Entfernen und Codieren einer Anwendung involviert, die kultur- und sprachneutral ist.
 
+[.NET-Globalisierung und ICU](globalization-icu.md)
+
+Hier wird beschrieben, wie [International Components for Unicode (ICU)](http://site.icu-project.org/home) bei der .NET-Globalisierung zum Einsatz kommen.
+
 [Überprüfung der Lokalisierbarkeit](localizability-review.md)
 
 Erläutert die zweite Phase der Erstellung einer lokalisierten Anwendung, die das Identifizieren möglicher Hindernisse bei der Lokalisierung beinhaltet.
@@ -66,7 +70,7 @@ Beschreibt die Verwendung von standardmäßig kulturabhängigen .NET-Methoden un
 
 Beschreibt empfohlene Vorgehensweisen zur Durchführung der Globalisierung, Lokalisierung und Entwicklung weltweit einsatzfähiger ASP.NET-Anwendungen.
 
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Referenz
 
 - <xref:System.Globalization?displayProperty=nameWithType>-Namespace
 

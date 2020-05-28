@@ -4,50 +4,56 @@ description: Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bi
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77625933"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840922"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Kennenlernen der .NET Core- und .NET Core SDK-Tools mithilfe der folgenden Tutorials
 
 Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 
-## <a name="create-applications-with-visual-studio"></a>Erstellen von Anwendungen mit Visual Studio
+## <a name="use-visual-studio"></a>Verwenden von Visual Studio
 
-- [Erstellen einer Hallo Welt-Konsolen-Anwendung](with-visual-studio.md)
-- [Debuggen Ihrer „Hallo Welt“-Anwendung mit Visual Studio](debugging-with-visual-studio.md)
-- [Veröffentlichen Ihrer „Hallo Welt“-Anwendung](publishing-with-visual-studio.md)
+- [Erstellen einer Konsolen-App](with-visual-studio.md)
+- [Erstellen einer F#-Konsolen-App](../../fsharp/get-started/get-started-visual-studio.md)
+- [Debuggen einer App](debugging-with-visual-studio.md)
+- [Veröffentlichen einer App](publishing-with-visual-studio.md)
 - [Erstellen einer Klassenbibliothek](library-with-visual-studio.md)
-- [Testen einer Klassenbibliothek](testing-library-with-visual-studio.md)
-- [Nutzen einer Klassenbibliothek](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB: Erste Schritte mit der SQL-API und .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Komponententest für eine Klassenbibliothek](testing-library-with-visual-studio.md)
+- [Verwenden einer Klassenbibliothek](consuming-library-with-visual-studio.md)
+- [Installieren und Verwenden eines Pakets](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [Erstellen und Veröffentlichen eines Pakets](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-## <a name="build-applications-with-visual-studio-code"></a>Erstellen von Anwendungen mit Visual Studio Code
+## <a name="use-visual-studio-code"></a>Verwenden von Visual Studio Code
 
-- [Erste Schritte mit C# und Visual Studio Code](with-visual-studio-code.md)
-- [Erste Schritte mit .NET Core unter macOS](using-on-macos.md)
+In diesen Tutorials lernen Sie, wie Sie Visual Studio Code oder andere Code-Editoren verwenden können. Bei allen wird die CLI für .NET-Entwicklungsprojekte verwendet, sodass Sie den Code-Editor Ihrer Wahl nutzen können.
 
-## <a name="build-applications-with-visual-studio-for-mac"></a>Erstellen von Anwendungen mit Visual Studio für Mac
+- [Erstellen einer Konsolen-App](with-visual-studio-code.md)
+- [Erstellen und Veröffentlichen einer Konsolen-App](cli-create-console-app.md)
+- [Erstellen einer F#-Konsolen-App](../../fsharp/get-started/get-started-vscode.md)
+- [Erstellen einer Bibliothek und Durchführen von Komponententests (macOS)](using-on-macos.md)
+- [Installieren und Verwenden eines Pakets](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+- [Erstellen und Veröffentlichen eines Pakets](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-- [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](using-on-mac-vs.md)
-- [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](using-on-mac-vs-full-solution.md)
+## <a name="use-visual-studio-for-mac"></a>Verwenden Sie Visual Studio für Mac
 
-## <a name="build-applications-with-the-net-core-cli"></a>Erstellen von Anwendungen mit der .NET Core-CLI
+- [Erstellen einer Konsolen-App](using-on-mac-vs.md)
+- [Erstellen einer Bibliothek und Durchführen von Komponententests](using-on-mac-vs-full-solution.md)
+- [Installieren und Verwenden eines Pakets](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-- [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der .NET Core-CLI](cli-create-console-app.md)
-- [Organisieren und Testen von Projekten mit der .NET Core-CLI](testing-with-cli.md)
-- [Erste Schritte mit F#](../../fsharp/get-started/get-started-command-line.md)
+## <a name="advanced-topics"></a>Weiterführende Themen
 
-## <a name="other"></a>Andere
-
-- [Unittests in .NET Core mit dotnet-test](../testing/unit-testing-with-dotnet-test.md)
-- [Unittests mit MSTest und .NET Core](../testing/unit-testing-with-mstest.md)
-- [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](libraries.md)
-- [Hosten von .NET Core von nativem Code](netcore-hosting.md)
+- [Erstellen von Bibliotheken](libraries.md)
+- [Komponententest für eine App mit xUnit](testing-with-cli.md)
+- [Komponententest mit C#/VB/F# und NUnit/xUnit/MSTest](../testing/index.md)
+- [Live Unit Testing mit Visual Studio](/visualstudio/test/live-unit-testing-start)
 - [Vorlagenerstellung für die CLI](cli-templates-create-item-template.md)
 - [Erstellen und Verwenden von Tools für die CLI](../tools/global-tools-how-to-create.md)
+- [Erstellen einer App mit Plug-Ins](creating-app-with-plugin-support.md)
+
+## <a name="create-web-apps"></a>Erstellen von Web-Apps
 
 Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen finden Sie in der [ASP.NET Core-Dokumentation](/aspnet/core/).
