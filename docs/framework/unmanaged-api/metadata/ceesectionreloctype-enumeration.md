@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 44a84e0752eecc1c694f3b8cf6e568b72b7d0f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176213"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006029"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType-Enumeration
-Stellt Werte bereit, `reloc` um den Typ der Anweisung zu beeinflussen, die in einem Aufruf von [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)abgegeben wird.  
+Stellt Werte bereit, die den Typ der Anweisung beeinflussen, die `reloc` bei einem [callegen:: AddSectionReloc](iceegen-addsectionreloc-method.md)-Befehl ausgegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,37 +48,37 @@ typedef enum  {
     } CeeSectionRelocType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Generiert nur einen `reloc`Abschnitt-Verwandten , der nichts in einen .reloc-Abschnitt sendet.|  
-|`srRelocHighLow`|Generiert `reloc` eine für eine Position in Zeigergröße. Dies wird je nach Plattform in BASED_HIGHLOW oder BASED_DIR64 umgewandelt.|  
-|`srRelocHighAdj`|Generiert `reloc` eine für die obersten 16 Bits einer 32-Bit-Zahl, wobei die unteren 16 Bits im nächsten Wort in der .reloc-Tabelle enthalten sind.|  
-|`srRelocMapToken`|Generiert eine Tokenzuordnungsverlagerung, die nichts in einen .reloc-Abschnitt sendet.|  
-|`srRelocRelative`|Gibt an, dass es sich bei dem Wert um eine relative Adresskorrektur handelt.|  
-|`srRelocFilePos`|Generiert nur einen `reloc`Abschnitt-Verwandten , der nichts in einen .reloc-Abschnitt sendet. Dies `reloc` ist relativ zur Dateiposition des Abschnitts, nicht zur virtuellen Adresse des Abschnitts.|  
-|`srRelocCodeRelative`|Gibt ein coderelatives Adressfixup an.|  
-|`srRelocIA64Imm64`|Generiert `reloc` eine für eine 64-Bit-Adresse `movl` in einer ia64-Anweisung.|  
-|`srRelocDir64`|Generiert `reloc` eine für eine 64-Bit-Adresse.|  
-|`srRelocIA64PcRel25`|Generieren `reloc` Sie eine für eine 25-Bit-PC-relative `br.call` Adresse in einer ia64-Anweisung.|  
-|`srRelocIA64PcRel64`|Generiert `reloc` eine für eine 64-Bit-PC-relative Adresse `brl.call` in einer ia64-Anweisung.|  
-|`srRelocAbsoluteTagged`|Generiert einen 30-Bit-Abschnittsrelativ, `reloc`der für markierte Zeigerwerte verwendet wird.|  
-|`srRelocSentinel`|Ein Sentinelwert, mit dem sichergestellt werden soll, dass `reloc` alle Hinzufügungen zu dieser Enumerat im internen Namensarray widergespiegelt werden.|  
-|`srNoBaseReloc`|Gibt an, keine Basis `reloc`auszusenden.|  
-|`srRelocPtr`|Ein Wert, der angibt, dass der Vorfixupinhalt des Speichers ein Zeiger und kein Abschnittsversatz ist.|  
+|`srRelocAbsolute`|Generiert nur einen Abschnitt (relativ) `reloc` und sendet nichts an einen. reloc-Abschnitt.|  
+|`srRelocHighLow`|Generiert einen `reloc` für einen Speicherort mit Zeiger Größen. Dies wird abhängig von der Plattform in BASED_HIGHLOW oder BASED_DIR64 transformiert.|  
+|`srRelocHighAdj`|Generiert ein `reloc` -Wert für die oberen 16 Bits einer 32-Bit-Zahl, wobei die unteren 16 Bits im nächsten Wort in der reloc-Tabelle enthalten sind.|  
+|`srRelocMapToken`|Generiert eine tokenzuordnungs-Verlagerung und sendet nichts an einen. reloc-Abschnitt.|  
+|`srRelocRelative`|Gibt an, dass der Wert ein relativer Adress Fixup ist.|  
+|`srRelocFilePos`|Generiert nur einen Abschnitt (relativ) `reloc` und sendet nichts an einen. reloc-Abschnitt. Dies `reloc` ist relativ zur Dateiposition des Abschnitts, nicht zur virtuellen Adresse des Abschnitts.|  
+|`srRelocCodeRelative`|Gibt einen Code relativen Adress Fixup an.|  
+|`srRelocIA64Imm64`|Generiert einen `reloc` für eine 64-Bit-Adresse in einer ia64- `movl` Anweisung.|  
+|`srRelocDir64`|Generiert einen `reloc` für eine 64-Bit-Adresse.|  
+|`srRelocIA64PcRel25`|Generieren eines `reloc` für eine 25-Bit-PC-relative Adresse in einer ia64- `br.call` Anweisung.|  
+|`srRelocIA64PcRel64`|Generiert einen `reloc` für eine 64-Bit-PC-relative Adresse in einer ia64- `brl.call` Anweisung.|  
+|`srRelocAbsoluteTagged`|Generiert einen 30-Bit-Abschnitt `reloc` , der für markierte Zeiger Werte verwendet wird.|  
+|`srRelocSentinel`|Ein Sentinelwert, mit dem sichergestellt wird, dass Ergänzungen zu dieser Enumeration dem internen namens Array widergespiegelt werden `reloc` .|  
+|`srNoBaseReloc`|Gibt an, dass keine Basis ausgegeben werden soll `reloc` .|  
+|`srRelocPtr`|Ein-Wert, der angibt, dass der vorfixupinhalt des Arbeitsspeichers ein Zeiger anstelle eines Abschnitts Offsets ist.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
-- [AddSectionReloc-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
+- [Metadatenenumerationen](metadata-enumerations.md)
+- [ICeeGen-Schnittstelle](iceegen-interface.md)
+- [AddSectionReloc-Methode](iceegen-addsectionreloc-method.md)

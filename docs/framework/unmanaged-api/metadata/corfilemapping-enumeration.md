@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ca41592-b8da-475a-8032-a15627730003
 topic_type:
 - apiref
-ms.openlocfilehash: f85a36c810df52f871ecc75b92a3b4440455c66b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0ed1579886f1682348a136be3391f6bdc2543d26
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450298"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007389"
 ---
 # <a name="corfilemapping-enumeration"></a>CorFileMapping-Enumeration
-Enthält Werte, die den Typ der Datei Zuordnung beschreiben, der von einem Aufrufen der [IMetaDataInfo:: GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) -Methode zurückgegeben wird.  
+Enthält Werte, die den Typ der Datei Zuordnung beschreiben, der von einem Aufrufen der [IMetaDataInfo:: GetFileMapping](imetadatainfo-getfilemapping-method.md) -Methode zurückgegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,17 +39,17 @@ typedef enum CorFileMapping {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`fmFlat`|Die Datei wird als Datendatei zugeordnet. Das heißt, das `SEC_IMAGE`-Flag wurde nicht an die Microsoft Win32 `CreateFileMapping`-Funktion übermittelt.|  
-|`fmExecutableImage`|Die Datei wird für die Ausführung zugeordnet, entweder mithilfe der `LoadLibrary`-Funktion oder der `CreateFileMapping`-Funktion mit dem `SEC_IMAGE`-Flag.|  
+|`fmFlat`|Die Datei wird als Datendatei zugeordnet. Das heißt, dass das `SEC_IMAGE` Flag nicht an die Microsoft Win32-Funktion übermittelt wurde `CreateFileMapping` .|  
+|`fmExecutableImage`|Die Datei wird für die Ausführung zugeordnet, entweder mithilfe der- `LoadLibrary` Funktion oder der- `CreateFileMapping` Funktion mit dem- `SEC_IMAGE` Flag.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [GetFileMapping-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)
+- [Metadatenenumerationen](metadata-enumerations.md)
+- [GetFileMapping-Methode](imetadatainfo-getfilemapping-method.md)

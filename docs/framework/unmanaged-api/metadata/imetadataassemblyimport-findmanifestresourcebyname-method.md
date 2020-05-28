@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-ms.openlocfilehash: ae9097725aecd21e910e49a78d81951df39e9b2d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef6f7a1a6e86b45acce91792385bc3761dfb4c39
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177779"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009079"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName-Methode
 Ruft einen Zeiger auf die Manifestressource mit dem angegebenen Namen ab.  
@@ -39,21 +39,21 @@ HRESULT FindManifestResourceByName (
  [in] Der Name der Ressource.  
   
  `ptkManifestResource`  
- [out] Das Array, das `mdManifestResource` zum Speichern der Metadatentoken verwendet wird, von denen jedes eine Manifestressource darstellt.  
+ vorgenommen Das Array, das zum Speichern der `mdManifestResource` Metadatentoken verwendet wird, von denen jedes eine Manifestressource darstellt.  
   
-## <a name="remarks"></a>Bemerkungen  
- Die `FindManifestResourceByName` Methode verwendet die Standardregeln, die von der Common Language Runtime zum Auflösen von Verweisen verwendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Die- `FindManifestResourceByName` Methode verwendet die Standardregeln, die vom-Common Language Runtime zum Auflösen von Verweisen verwendet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattform:** Siehe [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [So sucht die Laufzeit Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)
+- [So sucht Common Language Runtime nach Assemblys](../../deployment/how-the-runtime-locates-assemblies.md)

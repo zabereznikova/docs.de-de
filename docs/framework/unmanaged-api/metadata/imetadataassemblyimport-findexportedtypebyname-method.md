@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac6de9a16fad6ba9d14f3960ddd28c42c111f254
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175992"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009391"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName-Methode
-Ruft einen Zeiger auf einen exportierten Typ ab, der seinen Namen und den einschließenden Typ angegeben hat.  
+Ruft bei Angabe des Namens und des einschließenden Typs einen Zeiger auf einen exportierten Typ ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parameter  
  `szName`  
- [in] Der Name des exportierten Typs.  
+ in Der Name des exportierten Typs.  
   
  `mdtExportedType`  
- [in] Das Metadatentoken für die einschließende Klasse des exportierten Typs. Dieser Wert `mdExportedTypeNil` ist, wenn der angeforderte exportierte Typ kein geschachtelter Typ ist.  
+ in Das Metadatentoken für die einschließende Klasse des exportierten Typs. Dieser Wert ist, wenn es sich `mdExportedTypeNil` bei dem angeforderten exportierten Typ nicht um einen Typ handelt.  
   
  `ptkExportedType`  
- [out] Ein Zeiger auf `mdExportedType` das Token, das den exportierten Typ darstellt.  
+ vorgenommen Ein Zeiger auf das `mdExportedType` Token, das den exportierten Typ darstellt.  
   
-## <a name="remarks"></a>Bemerkungen  
- Die `FindExportedTypeByName` Methode verwendet die Standardregeln, die von der Common Language Runtime zum Auflösen von Verweisen verwendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Die- `FindExportedTypeByName` Methode verwendet die Standardregeln, die vom-Common Language Runtime zum Auflösen von Verweisen verwendet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [So sucht die Laufzeit Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)
+- [So sucht Common Language Runtime nach Assemblys](../../deployment/how-the-runtime-locates-assemblies.md)

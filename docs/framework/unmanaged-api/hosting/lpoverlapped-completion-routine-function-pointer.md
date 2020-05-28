@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c0bdd9e59f5794dbb0d447dc2cc6cb682bfdf09f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090909"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008481"
 ---
 # <a name="lpoverlapped_completion_routine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE-Funktionszeiger
 Zeigt auf eine Funktion, die den Host benachrichtigt, wenn eine überlappende (d. h. asynchrone) E/A auf einem Gerät abgeschlossen ist.  
@@ -49,17 +49,17 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  in Ein Zeiger auf eine-Struktur, die Informationen enthält, die verwendet werden, um die e/a-Anforderung abzuschließen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion, zu der `LPOVERLAPPED_COMPLETION_ROUTINE` Punkte eine Rückruffunktion ist und vom Writer der Hostinganwendung implementiert werden muss. Die Rückruffunktion ermöglicht es dem Host, die abgeschlossene e/a-Anforderung zu verarbeiten.  
+ Die Funktion, auf die `LPOVERLAPPED_COMPLETION_ROUTINE` verweist, ist eine Rückruffunktion und muss vom Writer der Hostinganwendung implementiert werden. Die Rückruffunktion ermöglicht es dem Host, die abgeschlossene e/a-Anforderung zu verarbeiten.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Mscorwert. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

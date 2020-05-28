@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176057"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008143"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile-Methode
 Erstellt eine `File`-Metadatenstruktur, die Metadaten für die Assembly enthält, auf die diese Assembly verweist, und gibt das zugeordnete Metadatentoken zurück.  
@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parameter  
  `szName`  
- [in] Der Name der zu verbrauchenden Datei.  
+ in Der Name der zu verwendenden Datei.  
   
  `pbHashValue`  
- [in] Ein Zeiger auf die Hashdaten, die der Assembly zugeordnet sind.  
+ in Ein Zeiger auf die Hashdaten, die der Assembly zugeordnet sind.  
   
  `cbHashValue`  
- [in] Die Größe in `pbHashValue`Bytes von .  
+ in Die Größe von in Bytes `pbHashValue` .  
   
  `dwFileFlags`  
- [in] Eine bitweise `FileFlags` Kombination von Werten, die Eigenschafteneinstellungen angeben.  
+ in Eine bitweise Kombination von- `FileFlags` Werten, die Eigenschafts Einstellungen angeben.  
   
  `pmdf`  
- [out] Ein Zeiger auf `File` das zurückgegebene Token.  
+ vorgenommen Ein Zeiger auf das zurückgegebene `File` Token.  
   
-## <a name="remarks"></a>Bemerkungen  
- Für `File` jede Datei, die zum Zeitpunkt der Gründung dieser Assembly Teil dieser Assembly war, muss eine Metadatenstruktur definiert werden, mit Ausnahme der Datei, die die Metadaten enthält.  
+## <a name="remarks"></a>Hinweise  
+ Für jede Datei, die zum Zeitpunkt der Erstellung `File` dieser Assembly Bestandteil dieser Assembly war, muss eine Metadatenstruktur definiert werden, ausgenommen die Datei, die die Metadaten enthält.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattform:** Siehe [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

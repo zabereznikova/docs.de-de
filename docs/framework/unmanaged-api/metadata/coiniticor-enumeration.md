@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-ms.openlocfilehash: bb9fcc4c6e1fd495e95caa1d2200d9fd516a7748
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7851ddb33003b0b4b51065cf1fea3696ca6abd
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444282"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005946"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR-Enumeration
-Gibt Konstanten an, die von [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) verwendet werden, wenn die Common Language Runtime initialisiert wird.  
+Gibt Konstanten an, die von [CoInitializeCor](../hosting/coinitializecor-function.md) verwendet werden, wenn die Common Language Runtime initialisiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,15 +39,15 @@ typedef enum tagCOINITCOR
 |------------|-----------------|  
 |`COINITCOR`|Gibt den Standard Initialisierungs Modus an.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

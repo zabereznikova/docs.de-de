@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 74088d1cd018bb07406fc7d00ff83d783a98b663
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450227"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007675"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr-Enumeration
 Enthält Werte, die die Funktionen einer Methode beschreiben.  
@@ -79,7 +79,7 @@ typedef enum CorMethodAttr {
 |`mdVirtual`|Gibt an, dass die Methode überschrieben werden kann.|  
 |`mdHideBySig`|Gibt an, dass die Methode nach Name und Signatur und nicht nur nach Namen ausgeblendet wird.|  
 |`mdVtableLayoutMask`|Gibt das Layout der virtuellen Tabelle an.|  
-|`mdReuseSlot`|Gibt an, dass der für diese Methode in der virtuellen Tabelle verwendete Slot wieder verwendet werden soll. Dies ist die Standardeinstellung.|  
+|`mdReuseSlot`|Gibt an, dass der für diese Methode in der virtuellen Tabelle verwendete Slot wieder verwendet werden soll. Dies ist der Standardwert.|  
 |`mdNewSlot`|Gibt an, dass die Methode immer einen neuen Slot in der virtuellen Tabelle erhält.|  
 |`mdCheckAccessOnOverride`|Gibt an, dass die Methode von denselben Typen überschrieben werden kann, auf die Sie sichtbar ist.|  
 |`mdAbstract`|Gibt an, dass die Methode nicht implementiert ist.|  
@@ -91,13 +91,13 @@ typedef enum CorMethodAttr {
 |`mdHasSecurity`|Gibt an, dass der Methode Sicherheit zugeordnet ist.|  
 |`mdRequireSecObject`|Gibt an, dass die Methode eine andere Methode aufruft, die Sicherheitscode enthält.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

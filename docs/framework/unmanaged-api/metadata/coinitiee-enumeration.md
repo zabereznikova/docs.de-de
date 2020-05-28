@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64264238-3b68-4bac-a887-36b552426a6c
 topic_type:
 - apiref
-ms.openlocfilehash: 2ccc038b4420040779dae70f15e3a8827ba94180
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f4d1c2f105abb64bf196d0dd8371c2788c97336e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444105"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005907"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE-Enumeration
-Gibt Konstanten an, die von [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) beim Initialisieren der Common Language Runtime verwendet werden.  
+Gibt Konstanten an, die von [CoInitializeEE](../hosting/coinitializeee-function.md) beim Initialisieren der Common Language Runtime verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,19 +38,19 @@ typedef enum tagCOINITEE {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|Standard Initialisierungs Modus. Dadurch wird die Laufzeit initialisiert und die Standard <xref:System.AppDomain>erstellt.|  
+|`COINITEE_DEFAULT`|Standard Initialisierungs Modus. Dadurch wird die Laufzeit initialisiert und der Standardwert erstellt <xref:System.AppDomain> .|  
 |`COINITEE_DLL`|Initialisiert, um eine verwaltete DLL auszuführen.|  
-|`COINITEE_MAIN`|Initialisiert, um eine verwaltete exe auszuführen. Dadurch wird die Common Language Runtime initialisiert, aber nicht die Standard <xref:System.AppDomain>erstellt, die nach der Eingabe der Haupt Routine der exe-Datei erstellt wird.|  
+|`COINITEE_MAIN`|Initialisiert, um eine verwaltete exe auszuführen. Dies initialisiert die Laufzeit, erstellt jedoch nicht den Standardwert <xref:System.AppDomain> , der nach der Eingabe der Haupt Routine der exe-Datei erstellt wird.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 027694cee1b3e4d990796ba31300918f6d859679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176070"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008195"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map-Methode
-Ordnet eine Beziehung zwischen den Assemblys mithilfe von Metadatensignaturen zu.  
+Ordnet mithilfe von Metadatensignaturen eine Beziehung zwischen den Assemblys zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Parameter  
  `tkImp`  
- [in] Das Metadatentoken, das das importierte Codeobjekt darstellt.  
+ in Das Metadatentoken, das das importierte Code Objekt darstellt.  
   
  `tkEmit`  
- [in] Das Metadatentoken, das das emittierte Codeobjekt darstellt.  
+ in Das Metadatentoken, das das ausgegebene Code Objekt darstellt.  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn die Neuzuordnung des Tokens während einer Zusammenführung auftritt, wird das ursprüngliche Token im importierten (Quell-)Metadatenbereich und das neue Token im emittierten (Ziel-)Metadatenbereich bereichiert.  
+## <a name="remarks"></a>Hinweise  
+ Wenn die erneute Zuordnung des Tokens während einer Zusammenführung auftritt, wird das ursprüngliche Token in den importierten (Quell-) Metadatenbereich festgelegt, und das neue Token wird im ausgegebenen (Ziel-) Metadatenbereich festgelegt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [IMapToken-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [IMapToken-Schnittstelle](imaptoken-interface.md)

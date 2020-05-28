@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: 95a798d662b44cf2e088af84d3b1eec97da8e7fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b6651f30e0df3a5ffc29d310b9067e76761dcf01
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177944"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007532"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr-Enumeration
 Enthält Werte, in denen die Metadaten einer Eigenschaft beschrieben werden.  
@@ -38,23 +38,23 @@ typedef enum CorPropertyAttr {
 } CorPropertyAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`prSpecialName`|Gibt an, dass die Eigenschaft speziell ist und dass ihr Name beschreibt, wie.|  
-|`prReservedMask`|Reserviert für die interne Verwendung durch die Common Language Runtime.|  
-|`prRTSpecialName`|Gibt an, dass die internen APIs für Common Language-Laufzeitmetadaten die Codierung des Eigenschaftennamens überprüfen sollen.|  
+|`prSpecialName`|Gibt an, dass die Eigenschaft speziell ist, und dass Ihr Name beschreibt, wie.|  
+|`prReservedMask`|Reserviert für die interne Verwendung durch den Common Language Runtime.|  
+|`prRTSpecialName`|Gibt an, dass die Common Language Runtime Metadaten-internen APIs die Codierung des Eigenschafts namens überprüfen sollen.|  
 |`prHasDefault`|Gibt an, dass die Eigenschaft einen Standardwert besitzt.|  
 |`prUnused`|Nicht verwendet.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** CorHdr.h  
+ **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141464"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006414"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS-Enumeration
 Enthält Werte, die das Startverhalten der Common Language Runtime (CLR) angeben. Standardmäßig erfolgt die Garbage Collection nicht gleichzeitig, und nur die Basisklassenbibliothek wird in den domänenneutralen Bereich geladen.  
@@ -69,18 +69,18 @@ typedef enum {
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|Gibt an, dass der vollständige Threadstapel nicht übergeben werden sollte, wenn die Ausführung des Threads beginnt.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Gibt an, dass verwaltete Identitätswechsel und durch Plattformaufruf erreichte Identitätswechsel über asynchrone Punkte übergeben werden. Standardmäßig werden nur verwaltete Identitätswechsel über asynchrone Punkte übergeben.|  
 |`STARTUP_TRIM_GC_COMMIT`|Gibt an, dass von der Garbage Collection weniger belegter Speicher verwendet wird, wenn der verfügbare Systemarbeitsspeicher zu gering ist. Siehe `gcTrimCommitOnLowMemory` in [Optimierung für](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)frei gegebenes Webhosting.|  
-|`STARTUP_ETW`|Gibt an, dass die Ereignisablaufverfolgung für Windows (ETW) für Common Language Runtime-Ereignisse aktiviert ist. Ab Windows Vista ist die Ereignis Ablauf Verfolgung immer aktiviert, sodass dieses Flag keine Auswirkung hat. Siehe [Steuern der .NET Framework Protokollierung](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Gibt an, dass die Ressourcenüberwachung der Anwendungsdomäne aktiviert ist. Weitere Informationen finden Sie in der <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>-Eigenschaft und [\<appdomainresourcemonitoring >-Elements](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_ETW`|Gibt an, dass die Ereignisablaufverfolgung für Windows (ETW) für Common Language Runtime-Ereignisse aktiviert ist. Mit Windows Vista beginnend ist die Ereignisablaufverfolgung immer aktiviert, deshalb hat dieses Flag keine Auswirkungen. Siehe [Steuern der .NET Framework Protokollierung](../../performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Gibt an, dass die Ressourcenüberwachung der Anwendungsdomäne aktiviert ist. Siehe die <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> -Eigenschaft und das- [ \<appDomainResourceMonitoring> Element](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **Bibliothek:** Mscoree. dll  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hosten von Enumerationen](hosting-enumerations.md)

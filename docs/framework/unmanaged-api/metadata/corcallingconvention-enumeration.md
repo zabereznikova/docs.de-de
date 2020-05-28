@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443833"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007904"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention-Enumeration
 Enthält Werte, die die Typen der Aufrufkonventionen beschreiben, die in verwaltetem Code durchgeführt werden.  
@@ -48,7 +48,7 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
@@ -62,17 +62,17 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Gibt einen 64-Bit-PInvoke-Aufrufe an eine Methode an, die eine Variable Anzahl von Parametern annimmt.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|Beschreibt einen ungültigen 4-Bit-Wert.|  
 |`IMAGE_CEE_CS_CALLCONV_MASK`|Gibt an, dass die Aufruf Konvention durch die untersten vier Bits beschrieben wird.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Gibt an, dass im oberen Bit ein `this` Parameter beschrieben wird.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Gibt an, dass ein `this`-Parameter explizit in der Signatur beschrieben wird.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Gibt an, dass das oberste Bit einen `this` Parameter beschreibt.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Gibt an, dass ein `this` Parameter explizit in der Signatur beschrieben wird.|  
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|Gibt eine generische Methoden Signatur mit einer expliziten Anzahl von Typargumenten an. Dabei geht es um eine normale Parameter Anzahl.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)

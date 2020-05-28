@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-ms.openlocfilehash: 19ee3097dfe80ba9dcbdaf316db0fd165b50abc6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84791eba7c95d3278bd4650bd7d660e98fcb79d8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436430"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008916"
 ---
 # <a name="cvstruct-structure"></a>CVStruct-Struktur
 Enthält Informationen, die bei der Installation eines Moduls oder eines zusammengesetzten Abbilds verwendet werden.  
@@ -35,24 +35,24 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|Major|Buildnummer der Hauptversion.|  
-|„Kleinere Änderung“|Buildnummer der neben Version.|  
-|Abonnement|Subbuildnummer.|  
-|Erstellen|Buildnummer.|  
+|Hauptversion|Buildnummer der Hauptversion.|  
+|Nebenversion|Buildnummer der neben Version.|  
+|Sub|Subbuildnummer.|  
+|Entwickeln|Buildnummer.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenstrukturen](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [Metadatenstrukturen](metadata-structures.md)

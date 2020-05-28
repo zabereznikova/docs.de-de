@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-ms.openlocfilehash: 57460ba30a8ce974b5ca89f76796c4dcf49ffecf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fec049297bfa12d86cb2a7f7950e84ae540832b1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443584"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007431"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder-Enumeration
 Enthält Flagwerte, die die Bedingungen angeben, bei denen eine Fehlermeldung generiert werden soll, wenn Metadaten nicht in der richtigen Reihenfolge ausgegeben werden.  
@@ -41,7 +41,7 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
@@ -54,13 +54,13 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |`MDPropertyOutOfOrder`|Gibt an, dass der Compiler eine Fehlermeldung generieren soll, wenn eine Eigenschaft nicht in der richtigen Reihenfolge ausgegeben wird.|  
 |`MDEventOutOfOrder`|Gibt an, dass der Compiler eine Fehlermeldung generieren soll, wenn ein Ereignis außerhalb der Reihenfolge ausgegeben wird.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Metadatenenumerationen](metadata-enumerations.md)
