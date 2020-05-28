@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972445"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144707"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
-Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendungen das Aufrufen von WCF-Diensten. Die meisten WCF-Dienste erfordern, dass der Client Anmelde Informationen für die Authentifizierung und Autorisierung angibt. Wenn Sie einen WCF-Dienst von einem WCF-Client aufrufen, können Sie diese Anmelde Informationen in verwaltetem Code oder in einer Anwendungs Konfigurationsdatei angeben. Wenn Sie einen WCF-Dienst aus einer COM-Anwendung aufrufen, können <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Sie die-Schnittstelle verwenden, um Anmelde Informationen anzugeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
+Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendungen das Aufrufen von WCF-Diensten. Die meisten WCF-Dienste erfordern, dass der Client Anmelde Informationen für die Authentifizierung und Autorisierung angibt. Wenn Sie einen WCF-Dienst von einem WCF-Client aufrufen, können Sie diese Anmelde Informationen in verwaltetem Code oder in einer Anwendungs Konfigurationsdatei angeben. Wenn Sie einen WCF-Dienst aus einer COM-Anwendung aufrufen, können Sie die- <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Schnittstelle verwenden, um Anmelde Informationen anzugeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
   
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials> ist eine IDispatch-basierte Schnittstelle, und Sie erhalten keine IntelliSense-Funktionen in der Visual Studio-Umgebung.  
@@ -23,11 +23,11 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendu
   
 2. Öffnen Sie das Nachrichtensicherheitsprojekt.  
   
-3. Fügen `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` Sie der `ICalculator` Schnittstellen Definition hinzu.  
+3. Fügen Sie `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` der `ICalculator` Schnittstellen Definition hinzu.  
   
-4. Fügen `bindingNamespace="http://Microsoft.ServiceModel.Samples"` Sie dem Endpunkt-Tag in der app. config-Datei für den Dienst hinzu.  
+4. Fügen Sie dem `bindingNamespace="http://Microsoft.ServiceModel.Samples"` Endpunkt-Tag in der app. config-Datei für den Dienst hinzu.  
   
-5. Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des http://localhost:8000/ServiceModelSamples/Service) Dienstanbieter (um sicherzustellen, dass der Dienst funktioniert.  
+5. Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des dienstangs ( `http://localhost:8000/ServiceModelSamples/Service` ), um sicherzustellen, dass der Dienst funktioniert.  
   
 6. Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
@@ -134,7 +134,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendu
 ## <a name="see-also"></a>Siehe auch
 
 - [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Vorgehensweise: Konfigurieren von Anmelde Informationen für eine Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Vorgehensweise: Erstellen eines Verbund Clients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

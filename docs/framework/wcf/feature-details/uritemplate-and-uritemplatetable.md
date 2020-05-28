@@ -2,15 +2,15 @@
 title: UriTemplate und UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: da34753867db17fd8ea1bd36bc705b3518d6d650
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2742217cb082f5c0354510a7e66818bafd6f1393
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976010"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144694"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
-Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. Windows Communication Foundation (WCF) hat zwei neue Klassen hinzugefügt, um Entwicklern die Kontrolle über Ihre URIs zu verschaffen. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Basis des URI-basierten Dispatchmoduls in WCF. Diese Klassen können auch eigenständig verwendet werden, sodass Entwickler Vorlagen und den URI-Zuordnungsmechanismus nutzen können, ohne einen WCF-Dienst implementieren zu müssen.  
+Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. Windows Communication Foundation (WCF) hat zwei neue Klassen hinzugefügt, um Entwicklern die Kontrolle über Ihre URIs zu verschaffen. <xref:System.UriTemplate>und <xref:System.UriTemplateTable> bilden die Basis des URI-basierten Dispatchmoduls in WCF. Diese Klassen können auch eigenständig verwendet werden, sodass Entwickler Vorlagen und den URI-Zuordnungsmechanismus nutzen können, ohne einen WCF-Dienst implementieren zu müssen.  
   
 ## <a name="templates"></a>Vorlagen  
  Eine Vorlage ist eine Möglichkeit, einen Satz relativer URIs zu beschreiben. Der Satz von URI-Vorlagen in der folgenden Tabelle zeigt, wie ein System, das verschiedene Arten von Wetterdaten abruft, definiert werden könnte.  
@@ -42,15 +42,15 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
  <xref:System.UriTemplate> wurde für die Zusammenarbeit mit einem URI-Schema entwickelt, das der HTTP URI-Grammatik entspricht. Im Folgenden finden Sie Beispiele für unterstützte URI-Schemas:  
   
-- http://  
+- `http://`  
   
-- https://  
+- `https://`  
   
-- net.tcp://  
+- `net.tcp://`  
   
-- net.pipe://  
+- `net.pipe://`  
   
-- sb://  
+- `sb://`  
   
  Schemas wie "file://" und "urn://" entsprechen nicht der HTTP-URI-Grammatik und führen bei der Verwendung mit URI-Vorlagen zu unvorhersehbaren Ergebnissen.  
   
@@ -61,7 +61,7 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
  Der Pfad besteht aus "/Wetter/{Bundesland}/{Ort}", die Abfrage besteht aus "?forecast={Länge}, und das Fragment besteht aus "#frag1."  
   
- Führende und nachstehende Schrägstriche sind im Pfadausdruck optional. Sowohl der Abfrage- als auch der Fragmentausdruck kann vollständig weggelassen werden. Ein Pfad besteht aus einer Reihe von Segmenten, die durch '/' getrennt sind, wobei jedes Segment einen Literalwert, einen Variablennamen (geschrieben in {geschweiften Klammern}) oder einen Platzhalter (als '\*' geschrieben) aufweisen kann. In der vorherigen Vorlage ist das "\Wetter\"-Segment ein Literalwert, während "{Bundesland}" und "{Ort}" Variablen sind. Variablen nehmen Ihren Namen aus dem Inhalt Ihrer geschweiften Klammern und können später durch einen konkreten Wert ersetzt werden, um einen *geschlossenen URI*zu erstellen. Der Platzhalter ist optional, kann jedoch nur am Ende des URIs angezeigt werden, wo er "der restliche Pfad" logisch entspricht.  
+ Führende und nachstehende Schrägstriche sind im Pfadausdruck optional. Sowohl der Abfrage- als auch der Fragmentausdruck kann vollständig weggelassen werden. Ein Pfad besteht aus einer Reihe von Segmenten, die durch '/' getrennt sind, wobei jedes Segment einen Literalwert, einen Variablennamen (geschrieben in {geschweiften Klammern}) oder einen Platzhalter (geschrieben als ' \* ') aufweisen kann. In der vorherigen Vorlage ist das "\Wetter\"-Segment ein Literalwert, während "{Bundesland}" und "{Ort}" Variablen sind. Variablen nehmen Ihren Namen aus dem Inhalt Ihrer geschweiften Klammern und können später durch einen konkreten Wert ersetzt werden, um einen *geschlossenen URI*zu erstellen. Der Platzhalter ist optional, kann jedoch nur am Ende des URIs angezeigt werden, wo er "der restliche Pfad" logisch entspricht.  
   
  Der Abfrage Ausdruck gibt, sofern vorhanden, eine Reihe von ungeordneten Name-Wert-Paaren an, die durch ' & ' getrennt sind. Bei den Elementen des Abfrageausdrucks kann es sich entweder um Literalpaare (x=2) oder ein Variablenpaar (x={var}) handeln. Nur die rechte Seite der Abfrage kann einen variablen Ausdruck enthalten. ({someName} = {someValue} ist nicht zulässig. Ungepaarte Werte (?x) sind nicht zulässig. Es besteht kein Unterschied zwischen einem leeren Abfrageausdruck und einem Abfrageausdruck, der aus einem einzelnen "?" besteht (beide stehen für "jede Abfrage").  
   
@@ -75,7 +75,7 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
 - "/Schuh"  
   
-- "/Shoe/\*"  
+- "/Shoe/ \* "  
   
 - "{Schuh}/Boot"  
   
@@ -83,17 +83,17 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
 - "Schuh/{Boots}"  
   
-- "Schuh/{Boots}/\*"  
+- "Schuh/{Boots}/ \* "  
   
 - "Schuh/Boot? x = 2"  
   
 - "Schuh/{Boot}? x = {Bed}"  
   
-- "Schuh/{Boot}? x = {Bed} & y = Band"  
+- "Schuh/{Boot}? x = {Bed} &y = Band"  
   
 - "? x = {Schuh}"  
   
-- "Schuh? x = 3 & y = {var}  
+- "Schuh? x = 3&y = {var}  
   
  Beispiele für ungültige Vorlagenzeichenfolgen sind:  
   
@@ -101,13 +101,13 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
 - "{Schuh}/Boat/? Bed = {Schuh}" – doppelte Variablennamen.  
   
-- "? x = 2 & x = 3" – Name/Wert-Paare innerhalb einer Abfrage Zeichenfolge müssen eindeutig sein, auch wenn Sie Literale sind.  
+- "? x = 2&x = 3" – Name/Wert-Paare innerhalb einer Abfrage Zeichenfolge müssen eindeutig sein, auch wenn Sie Literale sind.  
   
-- "? x = 2 &" – Abfrage Zeichenfolge ist falsch formatiert.  
+- "? x = 2&" – Abfrage Zeichenfolge ist falsch formatiert.  
   
-- "? 2 & x = {Schuh}" – Abfrage Zeichenfolge muss Name-Wert-Paare sein.  
+- "? 2&x = {Schuh}" – Abfrage Zeichenfolge muss Name-Wert-Paare sein.  
   
-- "? y = 2 & & X = 3" – Abfrage Zeichenfolge muss Name-Wert-Paare sein, Namen dürfen nicht mit "&" beginnen.  
+- "? y = 2&&X = 3" – Abfrage Zeichenfolge muss Name-Wert-Paare sein, Namen dürfen nicht mit "&" beginnen.  
   
 ### <a name="compound-path-segments"></a>Zusammengesetzte Pfadsegmente  
  Bei zusammengesetzten Pfadsegmenten kann ein einzelnes URI-Pfadsegment mehrere Variablen sowie mit Literalwerten kombinierte Variablen enhalten. Im Folgenden finden Sie Beispiele für gültige zusammengesetzte Pfadsegmente:  
@@ -122,15 +122,15 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
  Im Folgenden finden Sie Beispiele für ungültige Pfadsegmente:  
   
-- /{}-Variablen müssen benannt werden.  
+- / {} -Variablen müssen benannt werden.  
   
 - /{Schuh}{Boot} – Variablen müssen durch einen Literalwert getrennt werden.  
   
 ### <a name="matching-and-compound-path-segments"></a>Zuordnung und zusammengesetzte Pfadsegmente  
- Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment. Beispielsweise in der folgenden Vorlagen Zeichenfolge: "Adressen/{State}". {City} "zwei Variablen (State und City) werden innerhalb desselben Segments definiert. Diese Vorlage entspricht einer URL, z. b. `http://example.com/Washington.Redmond`, aber Sie entspricht auch einer URL wie `http://example.com/Washington.Redmond.Microsoft`. Im letzteren Fall enthält die Zustands Variable "Washington", und die City-Variable enthält "Redmond. Microsoft". In diesem Fall entspricht jeder Text (mit Ausnahme von "/") der {city}-Variable. Wenn Sie eine Vorlage erstellen möchten, die nicht dem "zusätzlichen" Text entspricht, platzieren Sie die Variable in einem separaten Vorlagen Segment, z. b. "Adressen/{State}/{City}".  
+ Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment. Beispielsweise in der folgenden Vorlagen Zeichenfolge: "Adressen/{State}". {City} "zwei Variablen (State und City) werden innerhalb desselben Segments definiert. Diese Vorlage entspricht einer URL wie, `http://example.com/Washington.Redmond` aber Sie entspricht auch einer URL wie `http://example.com/Washington.Redmond.Microsoft` . Im letzteren Fall enthält die Zustands Variable "Washington", und die City-Variable enthält "Redmond. Microsoft". In diesem Fall entspricht jeder Text (mit Ausnahme von "/") der {city}-Variable. Wenn Sie eine Vorlage erstellen möchten, die nicht dem "zusätzlichen" Text entspricht, platzieren Sie die Variable in einem separaten Vorlagen Segment, z. b. "Adressen/{State}/{City}".  
   
 ### <a name="named-wildcard-segments"></a>Benannte Platzhaltersegmente  
- Ein benanntes Platzhalter Segment ist ein beliebiges Pfad Variablen Segment, dessen Variablenname mit dem Platzhalter Zeichen "\*" beginnt. Die folgende Vorlagenzeichenfolge enthält ein benanntes Platzhaltersegment mit dem Namen "Schuh".  
+ Ein benanntes Platzhalter Segment ist ein beliebiges Pfad Variablen Segment, dessen Variablenname mit dem Platzhalter Zeichen " \* " beginnt. Die folgende Vorlagenzeichenfolge enthält ein benanntes Platzhaltersegment mit dem Namen "Schuh".  
   
 `"literal/{*shoe}"`  
   
@@ -188,7 +188,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
-> Ein URI, wie z. b. `http://localhost:8000///`, stimmt nicht mit der im vorangehenden Code aufgelisteten Vorlage, es gibt jedoch einen URI wie `http://localhost:8000/`.  
+> Ein URI, wie z `http://localhost:8000///` . b., stimmt nicht mit der im vorangehenden Code aufgelisteten Vorlage, jedoch mit einem URI wie z `http://localhost:8000/` . b..  
   
  Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Erstellen eines URI mit einer Vorlage veranschaulicht:  
   
@@ -226,7 +226,7 @@ Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einsch
   
 - `UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");`
 
- Im folgenden sind ungültige Vorlagen Zeichenfolgen mit den Standardwerten `null`aufgeführt:  
+ Im folgenden sind ungültige Vorlagen Zeichenfolgen mit den Standardwerten von aufgeführt `null` :  
   
 - `UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment`
   
@@ -238,11 +238,11 @@ Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einsch
 ### <a name="template-equivalence"></a>Vorlagenäquivalenz  
  Zwei Vorlagen werden als *strukturell äquivalent* bezeichnet, wenn alle Literale der Vorlage übereinstimmen und Sie Variablen in denselben Segmenten aufweisen. Beispielsweise sind die folgenden Vorlagen strukturell äquivalent:  
   
-- /a/{var1}/b b/{var2}? x = 1 & y = 2  
+- /a/{var1}/b b/{var2}? x = 1&y = 2  
   
-- a/{x}/b% 20b/{var1}? y = 2 & x = 1  
+- a/{x}/b% 20b/{var1}? y = 2&x = 1  
   
-- a/{y}/B% 20b/{z}/? y = 2 & x = 1  
+- a/{y}/B% 20b/{z}/? y = 2&x = 1  
   
  Hierbei müssen noch einige Punkte beachtet werden:  
   
@@ -275,9 +275,9 @@ Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einsch
   
 - ?x=3  
   
-- ? x = 1 & y = {var}  
+- ? x = 1&y = {var}  
   
-- ? x = 2 & z = {var}  
+- ? x = 2&z = {var}  
   
 - ?x=3  
   
@@ -289,13 +289,13 @@ Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einsch
   
 - ?  
   
-- ? m = get & c = RSS  
+- ? m = Get&c = RSS  
   
-- ? m = Put & c = RSS  
+- ? m = Put&c = RSS  
   
-- ? m = get & c = Atom  
+- ? m = Get&c = Atom  
   
-- ? m = Put & c = Atom  
+- ? m = Put&c = Atom  
   
  Die folgenden Abfragezeichenfolgenvorlagen sind in sich selbst mehrdeutig:  
   
@@ -309,24 +309,24 @@ Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einsch
   
 - ?y=2  
   
- "x = 1 & y = 2" entspricht beiden Vorlagen. Das liegt daran, dass eine Abfragezeichenfolge mehr Abfragezeichenfolgen-Variablen enthalten kann als die Vorlage, zu der sie passt.  
+ "x = 1&y = 2" entspricht beiden Vorlagen. Das liegt daran, dass eine Abfragezeichenfolge mehr Abfragezeichenfolgen-Variablen enthalten kann als die Vorlage, zu der sie passt.  
   
 - ?x=1  
   
-- ? x = 1 & y = {var}  
+- ? x = 1&y = {var}  
   
- "x = 1 & y = 3" entspricht beiden Vorlagen.  
+ "x = 1&y = 3" entspricht beiden Vorlagen.  
   
-- ? x = 3 & y = 4  
+- ? x = 3&y = 4  
   
-- ? x = 3 & z = 5  
+- ? x = 3&z = 5  
   
 > [!NOTE]
 > Die Zeichen "á" und "Á" gelten als unterschiedliche Zeichen, wenn sie als Teil eines URI-Pfads oder eines <xref:System.UriTemplate>-Pfadsegmentliterals verwendet werden. (Die Zeichen "a" und "A" gelten hingegen als gleich.) Die Zeichen á und Á gelten als gleiche Zeichen, wenn sie als Teil einer <xref:System.UriTemplate> {Variablenname} oder einer Abfragezeichenfolge erscheinen (a und A gelten ebenfalls als gleiche Zeichen).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Überblick über WCF-Web-HTTP-Programmiermodelle](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
 - [UriTemplate-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)

@@ -2,18 +2,18 @@
 title: Zuverlässiges Messaging-Protokoll, Version 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 6fceb49d107e4268a4b9fad6197335ff9e2af9ab
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ef45df0f1cae1f20cf34d07d154baee2cad34b29
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662796"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84143444"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Zuverlässiges Messaging-Protokoll, Version 1.0
 
-Dieses Thema enthält Details zur Implementierung von Windows Communication Foundation (WCF) für die WS-Reliable Messaging Februar-2005 (Version 1.0)-Protokoll für die Interoperation mithilfe des HTTP-Transports erforderlich sind. WCF folgt die WS-ReliableMessaging-Spezifikation mit den Einschränkungen und klarstellungen, die in diesem Thema erläutert. Beachten Sie, dass das Protokoll, Version 1.0 WS-ReliableMessaging beginnend mit dem WinFX implementiert wird.
+Dieses Thema behandelt Windows Communication Foundation (WCF)-Implementierungsdetails für das WS-zuverlässige Messaging-Protokoll vom Februar 2005 (Version 1,0), das für die Interoperation mithilfe des http-Transports erforderlich ist. WCF befolgt die Spezifikation für zuverlässiges WS-Messaging mit den in diesem Thema erläuterten Einschränkungen und Erläuterungen. Beachten Sie, dass das WS-ReliableMessaging-Protokoll, Version 1,0, ab dem WinFX implementiert wird.
 
-Die WS-Reliable Messaging Februar 2005 Protokoll wird in WCF von implementiert die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.
+Das WS-zuverlässiges Messaging-Protokoll vom Februar 2005 wird in WCF vom implementiert <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> .
 
 Der Einfachheit halber verwendet dieses Thema die folgenden Rollen:
 
@@ -25,43 +25,43 @@ In diesem Dokument werden die in der folgenden Tabelle aufgeführten Präfixe un
 
 |Präfix|Namespace|
 |------------|---------------|
-|wsrm|http://schemas.xmlsoap.org/ws/2005/02/rm|
-|netrm|http://schemas.microsoft.com/ws/2006/05/rm|
-|s|http://www.w3.org/2003/05/soap-envelope|
-|wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|
-|wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|
+|wsrm|`http://schemas.xmlsoap.org/ws/2005/02/rm`|
+|netrm|`http://schemas.microsoft.com/ws/2006/05/rm`|
+|s|`http://www.w3.org/2003/05/soap-envelope`|
+|wsa|`http://schemas.xmlsoap.org/ws/2005/08/addressing|
+|wsse|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd`|
 
-## <a name="messaging"></a>Messaging
+## <a name="messaging"></a>Nachrichten
 
 ### <a name="sequence-establishment-messages"></a>Sequenzeinrichtungsnachrichten
 
-WCF implementiert `CreateSequence` und `CreateSequenceResponse` Nachrichten an eine zuverlässige nachrichtensequenz einzurichten. Es gelten die folgenden Einschränkungen:
+WCF implementiert `CreateSequence` -und- `CreateSequenceResponse` Nachrichten, um eine zuverlässige Nachrichten Sequenz einzurichten. Es gelten die folgenden Einschränkungen:
 
-- B1101: Der WCF--Initiator generiert nicht das optionale Expires-Element in der `CreateSequence` Nachricht oder, in den Fällen bei der `CreateSequence` Nachricht enthält ein `Offer` -Element, das optionale `Expires` Element in der `Offer` Element.
+- B1101: der WCF-Initiator generiert das optionale abläuft-Element nicht in der `CreateSequence` Nachricht oder, wenn die `CreateSequence` Nachricht ein-Element enthält `Offer` , das optionale- `Expires` Element im- `Offer` Element.
 
-- B1102: Beim Zugriff auf die `CreateSequence` Nachricht, die WCF`Responder` sendet und empfängt sowohl `Expires` Elementen, wenn sie vorhanden sind, jedoch nicht deren Werte verwendet.
+- B1102: Wenn Sie auf die `CreateSequence` Nachricht zugreifen, `Responder` sendet und empfängt der WCF beide `Expires` Elemente, wenn Sie vorhanden sind, verwendet jedoch ihre Werte nicht.
 
 Zuverlässiges WS-Messaging führt den `Offer`-Mechanismus ein, um zwei umgekehrt korrelierende Sequenzen einzurichten, die eine Sitzung bilden.
 
-- R1103: Wenn `CreateSequence` enthält ein `Offer` -Element, das zuverlässige Messaging-Beantworter muss entweder die Sequenz akzeptieren und reagieren Sie mit `CreateSequenceResponse` , enthält eine `wsrm:Accept` -Element, erstellen zwei umgekehrte Sequenzen oder Ablehnen der `CreateSequence`Anforderung.
+- R1103: Wenn `CreateSequence` ein `Offer`-Element enthält, muss der zuverlässige Messaging-Beantworter entweder die Sequenz akzeptieren und mit `CreateSequenceResponse` antworten (enthält ein `wsrm:Accept`-Element), wodurch die zwei umgekehrt korrelierenden Sequenzen gebildet werden, oder er muss die `CreateSequence`-Anforderung zurückweisen.
 
 - R1104: `SequenceAcknowledgement` und die in umgekehrter Sequenz fließenden Anwendungsnachrichten müssen an den `ReplyTo`-Endpunktverweis der `CreateSequence` gesendet werden.
 
 - R1105: `AcksTo`- und `ReplyTo`-Endpunktverweise in der `CreateSequence` müssen Adresswerte aufweisen, die sich oktettweise entsprechen.
 
-  Der WCF-Beantworter überprüft, ob die URI-Teil der `AcksTo` und `ReplyTo` EPRs identisch sind, bevor die Sequenz.
+  Der WCF-Responder überprüft, ob der URI-Teil des `AcksTo` -und des- `ReplyTo` EPRS vor dem Erstellen einer Sequenz identisch ist.
 
 - R1106: `AcksTo`- und `ReplyTo`-Endpunktverweise in der `CreateSequence` sollten den gleichen Satz von Verweisparametern aufweisen.
 
-  WCF wird nicht erzwungen, sondern setzt voraus, [Verweisparameter] `AcksTo` und `ReplyTo` auf `CreateSequence` identisch sind und verwendet [Verweisparameter] aus `ReplyTo` -Endpunktverweis für Bestätigungen und Nachrichten umgekehrter Sequenz.
+  WCF erzwingt nicht, sondern geht davon aus, dass [Verweis Parameter] von `AcksTo` und `ReplyTo` auf `CreateSequence` identisch sind und [Verweis Parameter] aus dem `ReplyTo` Endpunkt Verweis für Bestätigungen und umgekehrte Sequenz Nachrichten verwendet.
 
-- R1107: Bei zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus `SequenceAcknowledgement` und in umgekehrter fließenden Anwendungsnachrichten müssen an der `ReplyTo` -Endpunktverweis der `CreateSequence`.
+- R1107: Wenn mithilfe des `Offer`-Mechanismus zwei umgekehrte Sequenzen eingerichtet sind, müssen `SequenceAcknowledgement` und die in umgekehrter Sequenz fließenden Anwendungsnachrichten an den `ReplyTo`-Endpunktverweis der `CreateSequence` gesendet werden.
 
-- R1108: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe des Offer-Mechanismus, der `[address]` Eigenschaft der `wsrm:AcksTo` Endpunktverweis untergeordnetes Element des der `wsrm:Accept` Element der `CreateSequenceResponse` müssen byteweise das Ziel-URI von der übereinstimmen`CreateSequence`.
+- R1108: Wenn mithilfe des Offer-Mechanismus zwei umgekehrte Sequenzen eingerichtet sind, muss die `[address]`-Eigenschaft des `wsrm:AcksTo`-Endpunktverweises, ein dem `wsrm:Accept`-Element von `CreateSequenceResponse` untergeordnetes Element, mit dem Ziel-URI von `CreateSequence` byteweise übereinstimmen.
 
-- R1109: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus, der vom Initiator und Bestätigungen der Nachrichten vom Beantworter gesendeten Nachrichten müssen an den gleichen Endpunktverweis gesendet werden.
+- R1109: Wenn mithilfe des `Offer`-Mechanismus zwei umgekehrte Sequenzen eingerichtet sind, müssen die vom Initiator gesendeten Nachrichten und die vom Beantworter gesendeten Bestätigungen der Nachrichten an den gleichen Endpunktverweis gesendet werden.
 
-  WCF verwendet WS-Reliable Messaging, um zuverlässige Sitzungen zwischen dem Initiator und Beantworter einzurichten. WS-Reliable Messaging von WCF-Implementierung bietet zuverlässige Sitzungen für unidirektionale, Anforderung-Antwort- und Vollduplex-Nachrichtenmuster. Das WS-Reliable Messaging `Offer` Mechanismus auf `CreateSequence` / `CreateSequenceResponse` können Sie die zwei korrelierter umgekehrter Sequenzen einzurichten, und bietet ein, die für alle nachrichtenendpunkte geeignet ist. Da WCF eine Sicherheitsgarantie für solcher Sitzungen sowie End-to-End-Schutz bietet, ist es ratsam, um sicherzustellen, dass Nachrichten, die den gleichen Teilnehmer sollen auf dem gleichen Ziel eintreffen. Dies lässt auch Piggyback-Übertragung von Sequenzbestätigungen auf Anwendungsnachrichten zu. Daher gelten die Einschränkungen R1104, R1105 und R1108 für WCF.
+  WCF verwendet zuverlässiges WS-Messaging, um zuverlässige Sitzungen zwischen dem Initiator und dem Beantworter einzurichten. Die WS-zuverlässige WS-Messaging-Implementierung von WCF bietet eine zuverlässige Sitzung für unidirektionale, Anforderungs-Antwort-und vollständige Duplex Nachrichten Muster. Der zuverlässige WS-Messaging- `Offer` Mechanismus `CreateSequence` / `CreateSequenceResponse` ermöglicht Ihnen das Einrichten von zwei korrelierten umgekehrten Sequenzen und stellt ein Sitzungsprotokoll bereit, das für alle Nachrichten Endpunkte geeignet ist. Da WCF eine Sicherheitsgarantie für eine solche Sitzung bietet, einschließlich End-to-End-Schutz für die Sitzungs Integrität, ist es praktisch, sicherzustellen, dass Nachrichten, die für dieselbe Partei vorgesehen sind, am gleichen Ziel ankommen. Dies lässt auch Piggyback-Übertragung von Sequenzbestätigungen auf Anwendungsnachrichten zu. Daher gelten die Einschränkungen R1104, R1105 und R1108 für WCF.
 
 Ein Beispiel für eine `CreateSequence`-Nachricht.
 
@@ -136,11 +136,11 @@ Ein Beispiel für eine `CreateSequence`-Nachricht.
 
 Die folgende Liste enthält die Einschränkungen, die für Sequenzen gelten:
 
-- B1201:WCF generiert und Zugriffe Sequenznummern nicht höher als `xs:long`des inklusive Maximalwert 9223372036854775807.
+- B1201: WCF generiert und greift auf Sequenznummern zu `xs:long` , die nicht größer sind als der maximale inklusivwert, 9223372036854775807.
 
-- B1202:WCF generiert immer eine leere letzte Nachricht mit der Aktions-URI des `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.
+- B1202: WCF generiert immer eine letzte leere Nachricht mit dem Aktions-URI von `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage` .
 
-- B1203: WCF empfängt und sendet eine Nachricht mit einem sequenzheader, der enthält eine `LastMessage` Element, sofern der Aktions-URI nicht ist `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.
+- B1203: WCF empfängt und übermittelt eine Nachricht mit einem Sequenz Header, der ein-Element enthält, solange `LastMessage` der Aktions-URI nicht ist `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage` .
 
 Ein Beispiel für einen Sequenzheader.
 
@@ -158,7 +158,7 @@ Ein Beispiel für einen Sequenzheader.
 
 ### <a name="ackrequested-header"></a>AckRequested-Header
 
-WCF verwendet `AckRequested` -Header als Keep-alive-Mechanismus. WCF generiert nicht das optionale `MessageNumber` Element. Nach Erhalt einer Nachricht mit einer `AckRequested` Header, enthält die `MessageNumber` -Element WCF ignoriert den `MessageNumber` der Wert des Elements, wie im folgenden Beispiel gezeigt.
+WCF verwendet den `AckRequested` -Header als Keep-Alive-Mechanismus. WCF generiert nicht das optionale- `MessageNumber` Element. Beim Empfang einer Nachricht mit einem- `AckRequested` Header, der das- `MessageNumber` Element enthält, ignoriert WCF den Wert des `MessageNumber` -Elements, wie im folgenden Beispiel gezeigt.
 
 ```xml
 <wsrm:AckRequested>
@@ -170,11 +170,11 @@ WCF verwendet `AckRequested` -Header als Keep-alive-Mechanismus. WCF generiert n
 
 ### <a name="sequenceacknowledgement-header"></a>SequenceAcknowledgement-Header
 
-WCF verwendet den Piggyback-Mechanismus für die im zuverlässigen WS-Messaging bereitgestellten sequenzbestätigungen.
+WCF verwendet den Piggy-back-Mechanismus für Sequenz Bestätigungen, die im zuverlässigen WS-Messaging bereitgestellt werden.
 
-- R1401: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus, der `SequenceAcknowledgement` Header kann in jede Anwendungsnachricht mit dem beabsichtigten Empfänger enthalten sein.
+- R1401: Wenn mithilfe des `Offer`-Mechanismus zwei umgekehrte Sequenzen erstellt werden, kann der `SequenceAcknowledgement`-Header in jede an den vorgesehenen Empfänger gesendete Anwendungsnachricht aufgenommen werden.
 
-- B1402: Wenn WCF eine Bestätigung empfangen von sequenznachrichten generieren muss (beispielsweise erfüllt ein `AckRequested` Nachricht), WCF generiert eine `SequenceAcknowledgement` Header, der den Bereich 0-0, enthält, wie im folgenden Beispiel gezeigt.
+- B1402: Wenn WCF vor dem empfangen von Sequenz Nachrichten eine Bestätigung generieren muss (z. b. um eine `AckRequested` Nachricht zu erfüllen), generiert WCF einen `SequenceAcknowledgement` Header, der den Bereich 0-0 enthält, wie im folgenden Beispiel gezeigt.
 
   ```xml
   <wsrm:SequenceAcknowledgement>
@@ -185,17 +185,17 @@ WCF verwendet den Piggyback-Mechanismus für die im zuverlässigen WS-Messaging 
   </wsrm:SequenceAcknowledgement>
   ```
 
-- B1403: WCF generiert keine `SequenceAcknowledgement` -Header mit einem `Nack` unterstützt jedoch Element `Nack` Elemente.
+- B1403: WCF generiert keine `SequenceAcknowledgement` Header, die ein- `Nack` Element enthalten, aber-Elemente unterstützen `Nack` .
 
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging-Fehler
 
-Im folgenden finden eine Liste der Einschränkungen, die für die WCF-Implementierung des WS-ReliableMessaging-Fehler gelten:
+Im folgenden finden Sie eine Liste der Einschränkungen, die für die WCF-Implementierung von WS-zuverlässigen Messaging Fehlern gelten:
 
 - B1501: WCF generiert keine `MessageNumberRollover` Fehler.
 
-- B1502:WCF-Endpunkt generiert möglicherweise `CreateSequenceRefused` wie in der Spezifikation beschrieben.
+- B1502: der WCF-Endpunkt generiert möglicherweise `CreateSequenceRefused` Fehler, wie in der Spezifikation beschrieben.
 
-- B1503:when der Dienstendpunkt seine Verbindungsgrenze erreicht und keine weiteren Verbindungen verarbeiten, WCF generiert einen zusätzlichen `CreateSequenceRefused` -Fehlersubcode `netrm:ConnectionLimitReached`, wie im folgenden Beispiel gezeigt.
+- B1503: Wenn der Dienst Endpunkt das Verbindungs Limit erreicht und keine neuen Verbindungen verarbeiten kann, generiert WCF einen zusätzlichen `CreateSequenceRefused` Fehlersubcode, `netrm:ConnectionLimitReached` , wie im folgenden Beispiel gezeigt.
 
   ```xml
   <s:Envelope>
@@ -233,9 +233,9 @@ Im folgenden finden eine Liste der Einschränkungen, die für die WCF-Implementi
 
 ### <a name="ws-addressing-faults"></a>WS-Adressierungsfehler
 
-Da zuverlässiges WS-Messaging WS-Adressierung verwendet, kann WCF WS-Reliable-Messaging-Implementierung mit WS-Adressierungsfehler generieren. Dieser Abschnitt behandelt die WS-Adressierungsfehler, die von WCF explizit auf der WS-Reliable Messaging-Schicht generiert:
+Da das zuverlässige WS-Messaging WS-Adressierung verwendet, kann die Implementierung der zuverlässigen WS-Messaging-Implementierung WS-Adressierungs Fehler generieren. In diesem Abschnitt werden die WS-Adressierungs Fehler erläutert, die von WCF explizit auf der zuverlässigen WS-Messaging-Schicht generiert werden:
 
-- B1601:WCF generiert den Fehler, die Nachrichtenadressierungs-Header erforderlich, wenn eine der folgenden Bedingungen zutrifft:
+- B1601: WCF generiert den Fehlermeldungs Adressierungs Header, der erforderlich ist, wenn einer der folgenden Punkte zutrifft:
 
   - Eine Nachricht hat keinen `Sequence`-Header und keinen `Action`-Header.
 
@@ -243,55 +243,55 @@ Da zuverlässiges WS-Messaging WS-Adressierung verwendet, kann WCF WS-Reliable-M
 
   - Eine `CreateSequence`-Nachricht hat keinen `ReplyTo`-Header.
 
-- B1602:WCF generiert den Fehler, die Aktion nicht unterstützt, als Antwort auf eine Nachricht, die nicht vorhanden ist eine `Sequence` Header und verfügt über eine `Action` Header, der nicht erkannten in der WS-ReliableMessaging-Spezifikation ist.
+- B1602: WCF generiert die Fehler Aktion, die in der Antwort auf eine Nachricht, die keinen Header enthält, nicht unterstützt wird `Sequence` und über einen- `Action` Header verfügt, der in der WS-zuverlässigen Messaging Spezifikation nicht erkannt wird.
 
-- B1603:WCF generiert den Fehler, der Endpunkt nicht verfügbar, um anzugeben, dass der Endpunkt die Sequenz basierend auf einer Untersuchung der keine verarbeitet die `CreateSequence` Nachricht Adressheader.
+- B1603: WCF generiert den Fehler Endpunkt nicht verfügbar, um anzugeben, dass der Endpunkt die Sequenz nicht auf der Grundlage der Untersuchung der `CreateSequence` Adressierungs Header der Nachricht verarbeitet.
 
 ## <a name="protocol-composition"></a>Protokollkomposition
 
 ### <a name="composition-with-ws-addressing"></a>Komposition mit WS-Adressierung
 
-WCF unterstützt zwei Versionen der WS-Adressierung: WS-Adressierung 2004/08 [WS-ADDR] und W3C WS-Adressierung 1.0 Empfehlungen [WS-ADDR-CORE] und [WS-ADDR-SOAP].
+WCF unterstützt zwei Versionen der WS-Adressierung: WS-Adressierung 2004/08 [ws-addr] und W3C WS-Adressierung 1,0 Empfehlungen [ws-addr-core] und [ws-addr-SOAP].
 
-Zwar erwähnt die WS-ReliableMessaging-Spezifikation nur die WS-Adressierung&#160;2004/08, schränkt jedoch die verwendete Version der WS-Adressierung nicht ein. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:
+Zwar erwähnt die WS-ReliableMessaging-Spezifikation nur die WS-Adressierung&#160;2004/08, schränkt jedoch die verwendete Version der WS-Adressierung nicht ein. Im folgenden finden Sie eine Liste der Einschränkungen, die für WCF gelten:
 
-- R2101: sowohl WS-Adressierung 2004/08 und WS-Adressierung 1.0 können mit zuverlässigem WS-Messaging verwendet werden.
+- R2101:Sowohl WS-Adressierung&#160;2004/08 als auch WS-Adressierung&#160;1.0 können mit zuverlässigem WS-Messaging verwendet werden.
 
-- Einzelne R2102:A-Version der WS-Adressierung muss verwendet werden, während des gesamten eine gegebene WS-ReliableMessaging-Sequenz oder ein Paar umgekehrter Sequenzen korreliert mit der `wsrm:Offer` Mechanismus.
+- R2102: für eine bestimmte zuverlässige WS-Messaging-Sequenz oder ein Paar umgekehrter Sequenzen, die mithilfe des-Mechanismus korreliert werden, muss eine einzelne Version der WS-Adressierung verwendet werden `wsrm:Offer` .
 
 ### <a name="composition-with-soap"></a>Komposition mit SOAP
 
-WCF unterstützt die Verwendung von SOAP 1.1 und SOAP 1.2 mit zuverlässigem WS-Messaging.
+WCF unterstützt die Verwendung von SOAP 1,1 und SOAP 1,2 mit zuverlässigem WS-Messaging.
 
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>Komposition mit WS-Sicherheit und WS-SecureConversation
 
-WCF bietet Schutz für die WS-ReliableMessaging-Sequenzen unter Verwendung von sicheren Transportmethode (HTTPS), Komposition mit WS-Security und Komposition mit WS-Secure Conversation. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:
+WCF bietet Schutz für zuverlässige WS-Messaging-Sequenzen mithilfe von Secure Transport (HTTPS), Komposition mit WS-Sicherheit und Komposition mit WS-Secure Conversation. Im folgenden finden Sie eine Liste der Einschränkungen, die für WCF gelten:
 
-- R2301: um die Integrität einer WS-ReliableMessaging-Sequenz sowie die Integrität und Vertraulichkeit einzelner Nachrichten zu schützen, WCF erfordert, dass WS-Secure Conversation verwendet werden muss.
+- R2301: um die Integrität einer zuverlässigen WS-Messaging-Sequenz zusätzlich zur Integrität und Vertraulichkeit einzelner Nachrichten zu schützen, erfordert WCF, dass eine WS-Secure-Konversation verwendet werden muss.
 
-- R2302:AWS-Secure Conversation-Sitzung muss vor der Erstellung von WS-ReliableMessaging-Sequenzen eingerichtet werden.
+- R2302:EineWS-Secure Conversation-Sitzung muss vor der Erstellung von zuverlässigen WS-Messaging-Sequenzen eingerichtet werden.
 
-- R2303: Wenn die WS-Reliable Messaging-Sequenz-Lebensdauer der WS-Secure Conversation Sitzung überschreitet die `SecurityContextToken` hergestellt, indem Sie mithilfe von WS-Secure Conversation muss mithilfe der entsprechenden WS-Secure Conversation Renewal-Bindung erneuert werden.
+- R2303: Wenn die Lebensdauer einer zuverlässigen WS-Messaging-Sequenz die Lebensdauer der WS-Secure Conversation-Sitzung überschreitet, muss das mithilfe von WS-Secure Conversation eingerichtete `SecurityContextToken` unter Verwendung der entsprechenden WS-Secure Conversation Renewal-Bindung erneuert werden.
 
-- B2304:WS-Reliable Messaging-Sequenz bzw. das Paar korrelierter umgekehrter Sequenzen ist immer an eine einzelne WS-SecureConversation-Sitzung gebunden.
+- B2304:Die zuverlässige WS-Messaging-Sequenz bzw. das Paar korrelierter umgekehrter Sequenzen ist immer an eine einzelne WS-SecureConversation-Sitzung gebunden.
 
-  Die WCF-Quelle generiert die `wsse:SecurityTokenReference` Element im Abschnitt elementerweiterbarkeit der der `CreateSequence` Nachricht.
+  Die WCF-Quelle generiert das- `wsse:SecurityTokenReference` Element im Abschnitt Element Erweiterbarkeit der `CreateSequence` Nachricht.
 
-- R2305:when mit WS-Secure Conversation verfasst eine `CreateSequence` Nachricht darf die `wsse:SecurityTokenReference` Element.
+- R2305: Wenn eine Nachricht mit WS-Secure Conversation zusammengesetzt wird, `CreateSequence` muss Sie das- `wsse:SecurityTokenReference` Element enthalten.
 
 ## <a name="ws-reliable-messaging-ws-policy-assertion"></a>Zuverlässige WS-Messaging WS-Richtlinienassertion
 
-WCF verwendet die WS-Reliable-Messaging WS-Richtlinienassertion `wsrm:RMAssertion` Fähigkeiten von Endpunkten zu beschreiben. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:
+WCF verwendet WS-zuverlässiges WS-Policy-Assertionen `wsrm:RMAssertion` zum Beschreiben von Endpunkten-Funktionen. Im folgenden finden Sie eine Liste der Einschränkungen, die für WCF gelten:
 
-- B3001: Fügt WCF `wsrm:RMAssertion` WS-Richtlinienassertion `wsdl:binding` Elemente. WCF unterstützt sowohl Anlagen in `wsdl:binding` und `wsdl:port` Elemente.
+- B3001: WCF fügt `wsrm:RMAssertion` die WS-Policy-Assertionen an `wsdl:binding` Elemente an. WCF unterstützt sowohl Anhänge für `wsdl:binding` -als auch- `wsdl:port` Elemente.
 
-- B3002: WCF unterstützt die folgenden optionalen Eigenschaften der WS-ReliableMessaging-Assertion und unter der Kontrolle bietet, auf die WCF`ReliableMessagingBindingElement`:
+- B3002: WCF unterstützt die folgenden optionalen Eigenschaften der zuverlässigen WS-Messaging-Assertion und ermöglicht Ihnen die Kontrolle über die WCF `ReliableMessagingBindingElement` :
 
   - `wsrm:InactivityTimeout`
 
   - `wsrm:AcknowledgementInterval`
 
-  Nachfolgend finden Sie ein Beispiel:
+  Im Folgenden finden Sie ein Beispiel.
 
   ```xml
   <wsrm:RMAssertion>
@@ -302,13 +302,13 @@ WCF verwendet die WS-Reliable-Messaging WS-Richtlinienassertion `wsrm:RMAssertio
 
 ## <a name="flow-control-ws-reliable-messaging-extension"></a>Zuverlässige WS-Messaging-Erweiterung zur Ablaufsteuerung
 
-WCF verwendet die WS-ReliableMessaging-Erweiterbarkeit optionales Steuerung des sequenznachrichtenflusses Nachrichtenfluss Sequenz bereitstellen.
+WCF verwendet die Erweiterbarkeit von zuverlässigem WS-Messaging, um eine optionale zusätzliche strengere Kontrolle über den Sequenz Nachrichtenfluss bereitzustellen.
 
-Flusssteuerung aktiviert ist, durch Festlegen der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> Eigenschaft `true`. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:
+Die Fluss Steuerung wird aktiviert, indem die-Eigenschaft auf festgelegt wird <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> `true` . Im folgenden finden Sie eine Liste der Einschränkungen, die für WCF gelten:
 
-- B4001: WCF wird generiert, wenn die zuverlässige Messaging-Ablaufsteuerung aktiviert ist, eine `netrm:BufferRemaining` Element in der elementerweiterbarkeit des der `SequenceAcknowledgement` Header.
+- B4001: Wenn die zuverlässige Messaging-Ablauf Steuerung aktiviert ist, generiert WCF ein- `netrm:BufferRemaining` Element in der Element Erweiterbarkeit des- `SequenceAcknowledgement` Headers.
 
-- B4002: Wenn die zuverlässige Messaging-Ablaufsteuerung aktiviert ist, WCF erfordert keine `netrm:BufferRemaining` Element vorhanden sein `SequenceAcknowledgement` -Header, wie im folgenden Beispiel gezeigt.
+- B4002: Wenn die zuverlässige Messaging-Ablauf Steuerung aktiviert ist, erfordert WCF nicht `netrm:BufferRemaining` , dass ein-Element im-Header vorhanden ist `SequenceAcknowledgement` , wie im folgenden Beispiel gezeigt.
 
   ```xml
   <wsrm:SequenceAcknowledgement>
@@ -322,105 +322,105 @@ Flusssteuerung aktiviert ist, durch Festlegen der <xref:System.ServiceModel.Chan
   </wsrm:SequenceAcknowledgement>
   ```
 
-- B4003: WCF verwendet `netrm:BufferRemaining` um anzugeben, wie viele der neue Nachrichten das zuverlässige Messaging-Ziel Puffern kann.
+- B4003: WCF verwendet `netrm:BufferRemaining` , um anzugeben, wie viele neue Nachrichten das zuverlässige Messaging Ziel Puffern kann.
 
-- B4004: WCF Reliable Messaging-Dienst drosselt die Anzahl der Nachrichten, die übertragen werden, wenn die zuverlässige Messaging-Zielanwendung schnell keine Nachrichten empfangen kann. Das zuverlässige Messaging-Ziel puffert Nachrichten, und der Wert des Elements sinkt auf&#160;0.
+- B4004: der WCF-Dienst für zuverlässiges Messaging schränkt die Anzahl der übermittelten Nachrichten ein, wenn die zuverlässige Messaging-Zielanwendung keine Nachrichten mehr schnell empfangen kann. Das zuverlässige Messaging-Ziel puffert Nachrichten, und der Wert des Elements sinkt auf&#160;0.
 
-- B4005: WCF generiert `netrm:BufferRemaining` ganzzahlige Werte zwischen 0 und 4096 einschließlich und liest Ganzzahlwerte zwischen 0 und `xs:int`des `maxInclusive` Wert (214748364) einschließlich.
+- B4005: WCF generiert `netrm:BufferRemaining` ganzzahlige Werte zwischen 0 und 4096 einschließlich und liest ganzzahlige Werte zwischen 0 und `xs:int` dem `maxInclusive` Wert 214748364 einschließlich.
 
 ## <a name="message-exchange-patterns"></a>Nachrichtenaustauschmuster
 
-Dieser Abschnitt beschreibt WCFs-Verhalten, wenn WS-Reliable Messaging für verschiedene Nachrichtenaustauschmuster verwendet wird. Für jedes Nachrichtenaustauschmuster werden die folgenden zwei Bereitstellungsszenarios erläutert:
+In diesem Abschnitt wird das Verhalten von WCF beschrieben, wenn das zuverlässige WS-Messaging für verschiedene Nachrichtenaustausch Muster verwendet wird. Für jedes Nachrichtenaustauschmuster werden die folgenden zwei Bereitstellungsszenarios erläutert:
 
-- Nicht Adressierbarer Initiator: Initiator befindet sich hinter der Firewall; Beantworter kann Nachrichten an den Initiator nur über HTTP-Antworten zustellen.
+- Nicht adressierbarer Initiator: Der Initiator befindet sich hinter einer Firewall, der Beantworter kann Nachrichten an den Initiator nur über HTTP-Antworten zustellen.
 
-- Adressierbarer Initiator: Initiator und Beantworter können HTTP-Anforderungen gesendet werden. Anders gesagt können zwei entgegengesetzte HTTP-Verbindungen hergestellt werden.
+- Adressierbarer Initiator: Sowohl an den Initiator als auch den Beantworter können HTTP-Anforderungen gesendet werden, d.&#160;h., es können zwei entgegengesetzte HTTP-Verbindungen eingerichtet werden.
 
 ### <a name="one-way-non-addressable-initiator"></a>Unidirektionaler, nicht adressierbarer Initiator
 
 #### <a name="binding"></a>Bindung
 
-WCF bietet ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen HTTP-Kanal. WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten vom RMS zum RMD und die HTTP-Antwort zur Übertragung aller Nachrichten vom RMD zum RMS.
+WCF bietet ein unidirektionales Nachrichtenaustausch Muster unter Verwendung einer Sequenz über einen HTTP-Kanal. WCF verwendet die HTTP-Anforderungen, um alle Nachrichten vom RMS zum RMD zu übertragen, und die HTTP-Antwort, um alle Nachrichten vom RMD zum RMS zu übertragen.
 
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch
 
-Der WCF--Initiator generiert eine `CreateSequence` -Nachricht ohne Angebot. Der WCF-Beantworter stellt sicher die `CreateSequence` kein Angebot vor dem Erstellen einer Sequenz aufweist. Der WCF-Beantworter reagiert auf die `CreateSequence` Anforderungen, bei denen eine `CreateSequenceResponse` Nachricht.
+Der WCF-Initiator generiert eine `CreateSequence` Nachricht ohne Angebot. Der WCF-Responder stellt `CreateSequence` vor dem Erstellen einer Sequenz sicher, dass kein Angebot hat. Der WCF-Responder antwortet `CreateSequence` mit einer Meldung auf die Anforderung `CreateSequenceResponse` .
 
 #### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement
 
-Der WCF-Initiator erstellt Bestätigungen als Antwort alle Nachrichten mit Ausnahme der `CreateSequence` -Nachrichten und Fehlernachrichten. Der WCF-Beantworter generiert eine eigenständige Bestätigung in der Antwort auf Sequenzen und `AckRequested` Nachrichten.
+Der WCF-Initiator verarbeitet Bestätigungen für die Antwort aller Meldungen außer der `CreateSequence` Nachricht und den Fehlermeldungen. Der WCF-Responder generiert stets eine eigenständige Bestätigung in der Antwort auf die Sequenz und die `AckRequested` Nachrichten.
 
 #### <a name="terminatesequence-message"></a>TerminateSequence-Nachricht
 
-WCF behandelt `TerminateSequence` als einen unidirektionalen Vorgang, was bedeutet der HTTP-Antwort hat, leerem Textbereich und dem HTTP 202-Statuscode.
+WCF behandelt als unidirektionalen `TerminateSequence` Vorgang, d. h. die HTTP-Antwort weist einen leeren Textkörper und HTTP 202-Statuscode auf.
 
 ### <a name="one-way-addressable-initiator"></a>Unidirektionaler, adressierbarer Initiator
 
 #### <a name="binding"></a>Bindung
 
-WCF bietet ein unidirektionales Nachrichtenaustauschmuster, die mit einer einzigen Sequenz über einen eingehenden und einen ausgehenden Http-Kanal. WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.
+WCF bietet ein unidirektionales Nachrichtenaustausch Muster unter Verwendung einer Sequenz über einen eingehenden und einen ausgehenden HTTP-Kanal. WCF verwendet die HTTP-Anforderungen, um alle Nachrichten zu übertragen. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.
 
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch
 
-Der WCF--Initiator generiert eine `CreateSequence` -Nachricht ohne Angebot. Der WCF-Beantworter stellt sicher, dass die `CreateSequence` kein Angebot vor dem Erstellen einer Sequenz aufweist. Der WCF-Beantworter überträgt die `CreateSequenceResponse` Nachricht in einer HTTP-Anforderung adressiert wird, mit der `ReplyTo` Endpunktverweis.
+Der WCF-Initiator generiert eine `CreateSequence` Nachricht ohne Angebot. Der WCF-Beantworter stellt `CreateSequence` vor dem Erstellen einer Sequenz sicher, dass kein Angebot hat. Der WCF-Responder überträgt die `CreateSequenceResponse` Nachricht über eine HTTP-Anforderung, die mit dem Endpunkt Verweis adressiert wird `ReplyTo` .
 
 ### <a name="duplex-addressable-initiator"></a>Adressierbarer Duplex-Initiator
 
 #### <a name="binding"></a>Bindung
 
-WCF bietet ein vollständig asynchrones bidirektionales Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.
+WCF bietet ein vollständig asynchrones bidirektionales Nachrichtenaustausch Muster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. WCF verwendet die HTTP-Anforderungen, um alle Nachrichten zu übertragen. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.
 
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch
 
-Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot. Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist. WCF sendet die `CreateSequenceResponse` behoben die HTTP-Anforderung die `CreateSequence`des `ReplyTo` Endpunktverweis.
+Der WCF-Initiator generiert eine `CreateSequence` Nachricht mit einem Angebot. Der WCF- `CreateSequence` Beantworter stellt vor dem Erstellen einer Sequenz sicher, dass die über ein Angebot verfügt. WCF sendet den `CreateSequenceResponse` in der HTTP-Anforderung, die an den `CreateSequence` -Endpunkt Verweis adressiert ist `ReplyTo` .
 
 #### <a name="sequence-lifetime"></a>Sequenzlebensdauer
 
-WCF behandelt die beiden Sequenzen als eine vollduplexsitzung.
+WCF behandelt die beiden Sequenzen als eine Vollduplex Sitzung.
 
-Nach dem Generieren eines Fehlers, der eine Sequenz einen Fehler an, erwartet, dass WCF den Remoteendpunkt für beide Sequenzen auslöst. Nach dem Lesen eines Fehlers, der eine Sequenz einen Fehler, Fehler WCF für beide Sequenzen.
+Wenn Sie einen Fehler erzeugen, der eine Sequenz Fehler erzeugt, erwartet WCF, dass der Remote Endpunkt beide Sequenzen als fehlerhaft eingibt. Beim Lesen eines Fehlers, bei dem ein Fehler auftritt, gibt WCF beide Sequenzen aus.
 
-WCF kann seine ausgehende Sequenz schließen und zum Verarbeiten von Nachrichten in seiner eingehenden Sequenz fortsetzen. Im Gegensatz dazu kann WCF das Schließen der eingehenden Sequenz und weiter Nachrichten in seiner ausgehenden Sequenz senden.
+WCF kann seine ausgehende Sequenz schließen und die Verarbeitung von Nachrichten in der eingehenden Sequenz fortsetzen. Umgekehrt kann WCF das Ende der eingehenden Sequenz verarbeiten und weiterhin Nachrichten in der ausgehenden Sequenz senden.
 
 ### <a name="request-reply-non-addressable-initiator"></a>Nicht adressierbarer Anforderung-Antwort-Initiator
 
 #### <a name="binding"></a>Bindung
 
-WCF stellt einen unidirektionalen und Anforderung-Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen HTTP-Kanal. WCF HTTP-Anforderungen verwendet, um die anforderungssequenznachrichten zu übertragen und die HTTP-Antworten verwendet, um die Antwortsequenznachrichten zu übertragen.
+WCF bietet ein unidirektionales Anforderungs-/Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen HTTP-Kanal. WCF verwendet die HTTP-Anforderungen zum Übertragen der Anforderungs Sequenz Nachrichten und verwendet die HTTP-Antworten, um die Nachrichten der Antwort Sequenz zu übertragen.
 
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch
 
-Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot. Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist. Der WCF-Beantworter reagiert auf die `CreateSequence` Anforderungen, bei denen eine `CreateSequenceResponse` Nachricht.
+Der WCF-Initiator generiert eine `CreateSequence` Nachricht mit einem Angebot. Der WCF- `CreateSequence` Beantworter stellt vor dem Erstellen einer Sequenz sicher, dass die über ein Angebot verfügt. Der WCF-Responder antwortet `CreateSequence` mit einer Meldung auf die Anforderung `CreateSequenceResponse` .
 
 #### <a name="one-way-message"></a>Unidirektionale Nachricht
 
-Um ein unidirektionales Nachrichtenaustauschprotokoll erfolgreich abgeschlossen haben, den WCF-Initiator eine anforderungssequenznachricht in der HTTP-Anforderung sendet und empfängt eine eigenständige `SequenceAcknowledgement` -Nachricht in der HTTP-Antwort. Die `SequenceAcknowledgement`-Nachricht muss die Nachrichtenübertragung bestätigen.
+Zum erfolgreichen Abschluss eines unidirektionalen Nachrichtenaustausch Protokolls überträgt der WCF-Initiator eine Anforderungs Sequenz Nachricht in der HTTP-Anforderung und empfängt eine eigenständige `SequenceAcknowledgement` Nachricht in der HTTP-Antwort. Die `SequenceAcknowledgement`-Nachricht muss die Nachrichtenübertragung bestätigen.
 
-Der WCF-Beantworter kann mit einer Bestätigung, einem Fehler oder eine Antwort mit leerem Textbereich und dem HTTP 202-Statuscode auf die Anforderung antworten.
+Der WCF-Responder kann auf die Anforderung mit einer Bestätigung, einem Fehler oder einer Antwort mit einem leeren Text-und HTTP 202-Statuscode Antworten.
 
 #### <a name="two-way-messages"></a>Bidirektionale Nachrichten
 
-Um eine zwei-Wege-Nachrichtenaustauschprotokoll erfolgreich abgeschlossen haben, den WCF-Initiator eine anforderungssequenznachricht in der HTTP-Anforderung sendet und empfängt eine antwortsequenznachricht in der HTTP-Antwort. Die Antwort muss eine `SequenceAcknowledgement` enthalten, die die Übertragung der Anforderungssequenznachricht bestätigt.
+Um ein bidirektionales Nachrichtenaustausch Protokoll erfolgreich abzuschließen, überträgt der WCF-Initiator eine Anforderungs Sequenz Nachricht in der HTTP-Anforderung und empfängt eine Antwort Sequenz Nachricht in der HTTP-Antwort. Die Antwort muss eine `SequenceAcknowledgement` enthalten, die die Übertragung der Anforderungssequenznachricht bestätigt.
 
-Der WCF-Beantworter kann mit einer Anwendungsantwort, einem Fehler oder eine Antwort mit leerem Textbereich und dem HTTP 202-Statuscode auf die Anforderung antworten.
+Der WCF-Responder kann auf die Anforderung mit einer Anwendungs Antwort, einem Fehler oder einer Antwort mit leerem Text und HTTP 202-Statuscode Antworten.
 
 Aufgrund des Vorhandenseins unidirektionaler Nachrichten und des zeitlichen Ablaufs von Anwendungsantworten verfügen die Sequenznummern der Anforderungssequenznachricht und der Antwortsequenznachricht über keine Korrelation.
 
 #### <a name="retrying-replies"></a>Wiederholen von Antworten
 
-WCF basiert auf HTTP-Anforderung-Antwort-Korrelation für bidirektionale Nachrichtenaustauschprotokoll. Aus diesem Grund wird der WCF-Initiator nicht beendet eine anforderungssequenznachricht wiederholen, wenn die anforderungssequenznachricht bestätigt wird, sondern wenn die HTTP-Antwort eine Bestätigung, die Meldung für den Benutzer oder den Fehler enthält. Der WCF-Beantworter wiederholt die Antworten auf den HTTP-Anforderungsabschnitt der Anforderung mit der die Antwort korreliert ist.
+WCF basiert auf einer HTTP-Anforderung-Antwort-Korrelation für die bidirektionale Nachrichtenaustausch-Protokoll Korrelation. Aus diesem Grund beendet der WCF-Initiator den Wiederholungsversuch einer Anforderungs Sequenz Nachricht nicht, wenn die Anforderungs Sequenz Nachricht bestätigt wird, sondern wenn die HTTP-Antwort eine Bestätigung, eine Benutzer Nachricht oder einen Fehler enthält. Der WCF-Responder wiederholt Antworten auf den HTTP-Anforderungs Abschnitt der Anforderung, mit der die Antwort korreliert wird.
 
 #### <a name="lastmessage-exchange"></a>LastMessage-Austausch
 
-Der WCF-Initiator generiert und überträgt eine letzte Nachricht ohne Text auf den HTTP-Anforderungsabschnitt. WCF erfordert eine Antwort ignoriert jedoch diese Antwortnachricht. Der WCF-Beantworter reagiert auf die anforderungssequenz leere letzte Nachricht mit der Antwortsequenz leere letzte Nachricht.
+Der WCF-Initiator generiert und überträgt eine leere Körper letzte Nachricht auf dem HTTP-Anforderungs Abschnitt. WCF erfordert eine Antwort, ignoriert jedoch die tatsächliche Antwortnachricht. Der WCF-Responder antwortet auf die letzte Nachricht mit dem leeren Körper der Anforderungs Sequenz mit der letzten Meldung der Antwort Sequenz.
 
-Wenn der WCF-Beantworter eine letzte Nachricht empfängt, in dem der Aktions-URI nicht ist `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`, WCF-Antworten mit einer letzten Nachricht. Im Fall eines bidirektionalen Nachrichtenaustauschprotokolls enthält die letzte Nachricht die Anwendungsnachricht, im Falle eines unidirektionalen Nachrichtenaustauschprotokolls ist die letzte Nachricht leer.
+Wenn der WCF-Responder eine letzte Nachricht empfängt, bei der der Aktions-URI nicht ist `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage` , antwortet WCF mit einer letzten Meldung. Im Fall eines bidirektionalen Nachrichtenaustauschprotokolls enthält die letzte Nachricht die Anwendungsnachricht, im Falle eines unidirektionalen Nachrichtenaustauschprotokolls ist die letzte Nachricht leer.
 
-Der WCF-Beantworter erfordert keine Bestätigung für die Antwortsequenz leere letzte Nachricht.
+Der WCF-Responder erfordert keine Bestätigung für die letzte Nachricht der Antwort Sequenz.
 
 #### <a name="terminatesequence-exchange"></a>TerminateSequence-Austausch
 
-Wenn alle Anforderungen eine gültige Antwort erhalten haben, wird der WCF-Initiator generiert und überträgt der anforderungssequenz `TerminateSequence` Nachricht auf den HTTP-Anforderungsabschnitt. WCF erfordert eine Antwort ignoriert jedoch diese Antwortnachricht. Der WCF-Beantworter reagiert auf der anforderungssequenz `TerminateSequence` Nachricht mit der Antwortsequenz `TerminateSequence` Nachricht.
+Wenn alle Anforderungen eine gültige Antwort erhalten haben, generiert und überträgt der WCF-Initiator die Nachricht der Anforderungs Sequenz `TerminateSequence` auf den HTTP-Anforderungs Abschnitt. WCF erfordert eine Antwort, ignoriert jedoch die tatsächliche Antwortnachricht. Der WCF-Responder antwortet `TerminateSequence` mit der Meldung der Antwort Sequenz auf die Nachricht der Anforderungs Sequenz `TerminateSequence` .
 
 In einer normalen Abschlusssequenz enthalten beide `TerminateSequence`-Nachrichten einen vollständigen Bereich von `SequenceAcknowledgement`.
 
@@ -428,12 +428,12 @@ In einer normalen Abschlusssequenz enthalten beide `TerminateSequence`-Nachricht
 
 #### <a name="binding"></a>Bindung
 
-WCF bietet ein Anforderung-Antwort-Nachrichtenaustauschmuster, die Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.
+WCF bietet ein Anforderung-Antwort-Nachrichtenaustausch Muster mithilfe von zwei Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. WCF verwendet die HTTP-Anforderungen, um alle Nachrichten zu übertragen. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.
 
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch
 
-Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot. Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist. WCF sendet die `CreateSequenceResponse` behoben die HTTP-Anforderung die `CreateSequence`des `ReplyTo` Endpunktverweis.
+Der WCF-Initiator generiert eine `CreateSequence` Nachricht mit einem Angebot. Der WCF- `CreateSequence` Beantworter stellt vor dem Erstellen einer Sequenz sicher, dass die über ein Angebot verfügt. WCF sendet den `CreateSequenceResponse` in der HTTP-Anforderung, die an den `CreateSequence` -Endpunkt Verweis adressiert ist `ReplyTo` .
 
 #### <a name="requestreply-correlation"></a>Anforderung/Antwort-Korrelation
 
-Der WCF-Initiator wird sichergestellt, alle anwendungsanforderungsnachrichten eine `MessageId` und `ReplyTo` Endpunktverweis. Der WCF--Initiator wendet den `CreateSequence` Nachricht `ReplyTo` Endpunktverweis für jede anwendungsanforderungsnachricht an. Der WCF-Beantworter erfordert, dass eingehende Anforderungsnachrichten beachten einer `MessageId` und `ReplyTo`. Der WCF-Beantworter stellt sicher, dass der Endpunktverweis-URIS der Endpunktverweise der `CreateSequence` und aller anwendungsanforderungsnachrichten identisch sind.
+Der WCF-Initiator stellt sicher, dass alle Anwendungs Anforderungs Nachrichten einen `MessageId` und einen `ReplyTo` Endpunkt Verweis tragen. Der WCF-Initiator wendet den `CreateSequence` `ReplyTo` Endpunkt Verweis der Nachricht auf jede Anwendungs Anforderungs Nachricht an. Der WCF-Responder erfordert, dass eingehende Anforderungs Nachrichten einen `MessageId` und einen tragen `ReplyTo` . Der WCF-Responder stellt sicher, dass der URI des Endpunkt Verweises sowohl von `CreateSequence` als auch von allen Anwendungs Anforderungs Nachrichten identisch ist.

@@ -2,12 +2,12 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094578"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144889"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 
@@ -47,11 +47,11 @@ Der Überwachungsteilnehmer abonniert eine Teilmenge der ausgegebenen Überwachu
 
 3. Drücken Sie F5, um die Projektmappe auszuführen.
 
-    Standardmäßig lauscht der Dienst an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
+    Standardmäßig lauscht der Dienst an Port 53797 ( `http://localhost:53797/SampleWorkflowService.xamlx` ).
 
 4. Öffnen Sie im Datei-Explorer den WCF-Test Client.
 
-    Der WCF-Test Client (WcfTestClient. exe) befindet sich im \<Visual Studio 2010-Installationsordner > Ordner "\common7\ide\".
+    Der WCF-Test Client (WcfTestClient. exe) befindet sich im \<Visual Studio 2010 installation folder> Ordner "\common7\ide\".
 
     Der Standard Installationsordner von Visual Studio 2010 ist c:\Programme\Microsoft Visual Studio 10,0.
 
@@ -61,7 +61,7 @@ Der Überwachungsteilnehmer abonniert eine Teilmenge der ausgegebenen Überwachu
 
 6. Öffnen Sie die Ereignisanzeige.
 
-    Bevor Sie den Dienst aufrufen, starten Sie Ereignisanzeige über das **Startmenü** , wählen Sie **Ausführen** aus, und geben Sie `eventvwr.exe`ein. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
+    Bevor Sie den Dienst aufrufen, starten Sie Ereignisanzeige über das **Startmenü** , wählen Sie **Ausführen** aus, und geben Sie ein `eventvwr.exe` . Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
 
 7. Navigieren Sie in der Strukturansicht des Ereignisanzeige zu **Ereignisanzeige**, **Anwendungs-und Dienst Protokolle**und **Microsoft**. Klicken Sie mit der rechten Maustaste auf **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle anzeigen** , um die analytischen und Debugprotokolle
 
@@ -138,7 +138,7 @@ Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatens
 > [!NOTE]
 > Es gibt ein bekanntes Problem in der Ereignisanzeige, bei dem bei der Decodierung von ETW-Ereignissen ein Fehler auftritt. Möglicherweise wird eine Fehlermeldung ähnlich der Folgenden angezeigt.
 >
-> Die Beschreibung für die Ereignis-ID \<ID > von der Quelle "Microsoft-Windows-Application Server-Applications" wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, auf Ihrem lokalen Computer nicht installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
+> Die Beschreibung für die Ereignis \<id> -ID von der Quelle Microsoft-Windows-Anwendungs Server-Anwendungen wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, auf Ihrem lokalen Computer nicht installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
 >
 > Wenn dieser Fehler auftritt, klicken Sie im Aktionsbereich auf "Aktualisieren". Das Ereignis sollte jetzt ordnungsgemäß decodiert werden.
 
@@ -147,10 +147,10 @@ Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatens
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Überwachungs Beispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric-Überwachungsbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

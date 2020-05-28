@@ -3,12 +3,12 @@ title: Verteilte Daten
 description: Vergleichen Sie die Datenspeicherung in monolithischen und cloudbasierten Anwendungen.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614135"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144395"
 ---
 # <a name="distributed-data"></a>Verteilte Daten
 
@@ -120,7 +120,7 @@ In Abbildung 5-7 wird eine Implementierung des cqrs-Musters gezeigt.
 
 **Abbildung 5-7**. Cqrs-Implementierung
 
-In der vorherigen Abbildung werden separate Befehls-und Abfrage Modelle implementiert. Jeder Daten Schreibvorgang wird im Schreib Speicher gespeichert und dann an den Lese Speicher weitergegeben. Achten Sie genau darauf, wie der Daten propagierungs Prozess auf das Prinzip der [letztlichen Konsistenz](http://www.cloudcomputingpatterns.org/eventual_consistency/)angewendet wird. Das Lese Modell wird schließlich mit dem schreibmodell synchronisiert, es kann jedoch eine gewisse Verzögerung beim Prozess auftreten. Im nächsten Abschnitt wird die letztliche Konsistenz erörtert.
+In der vorherigen Abbildung werden separate Befehls-und Abfrage Modelle implementiert. Jeder Daten Schreibvorgang wird im Schreib Speicher gespeichert und dann an den Lese Speicher weitergegeben. Achten Sie genau darauf, wie der Daten propagierungs Prozess auf das Prinzip der [letztlichen Konsistenz](https://www.cloudcomputingpatterns.org/eventual_consistency/)angewendet wird. Das Lese Modell wird schließlich mit dem schreibmodell synchronisiert, es kann jedoch eine gewisse Verzögerung beim Prozess auftreten. Im nächsten Abschnitt wird die letztliche Konsistenz erörtert.
 
 Diese Trennung ermöglicht die unabhängige Skalierung von Lese-und Schreibvorgängen. Lesevorgänge verwenden ein Schema, das für Abfragen optimiert ist, während die Schreibvorgänge ein Schema verwenden, das für Updates optimiert ist. Lese Abfragen gelten für Denormalisierte Daten, während komplexe Geschäftslogik auf das schreibmodell angewendet werden kann. Außerdem können Sie eine strengere Sicherheit bei Schreibvorgängen erzwingen als bei der Bereitstellung von Lesevorgängen.
 
