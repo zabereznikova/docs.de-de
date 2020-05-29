@@ -3,12 +3,12 @@ title: gRPC
 description: Erfahren Sie mehr über GrpC, seine Rolle in Cloud native-Anwendungen und die Unterschiede zwischen der http-Rest-Kommunikation.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614044"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201334"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -41,7 +41,7 @@ GrpC umfasst eine Open Source-Technologie namens [Protokollpuffer](https://devel
 
 Wenn Sie die Datei "proto" verwenden, generiert der protobuf-compiler `protoc` sowohl Client-als auch Dienst Code für die Zielplattform. Der Code enthält die folgenden Komponenten:
 
-- Stark typisierte Objekte, die vom Client und Dienst gemeinsam verwendet werden und die Dienst Vorgänge und Datenelemente für eine Nachricht darstellen.
+- Stark typisierte-Objekte, die vom Client und Dienst gemeinsam verwendet werden und die Dienst Vorgänge und Datenelemente für eine Nachricht darstellen.
 - Eine stark typisierte Basisklasse mit der erforderlichen Netzwerk Versorgung, die vom Remote-GrpC-Dienst geerbt und erweitert werden kann.
 - Ein Clientstub, der die erforderlichen Grundlagen zum Aufrufen des Remote-GrpC-Dienstanbieter enthält.
 

@@ -2,12 +2,12 @@
 title: Eigenständige JSON-Serialisierung mit DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 259d5da544262b5cae08e1be9e8ea6e077d5b947
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144928"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202391"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Eigenständige JSON-Serialisierung mit DataContractJsonSerializer
 
@@ -26,11 +26,11 @@ Bei der Arbeit mit JSON werden mit wenigen Ausnahmen dieselben .NET-Typen unters
 
 Die folgende Tabelle zeigt die Entsprechungen zwischen .NET-Typen und JSON/JavaScript-Typen, die für die Zuordnung während der Serialisierung und Deserialisierung gelten.
 
-|.NET-Typen|JSON/JavaScript|Hinweise|
+|.NET-Typen|JSON/JavaScript|Notizen|
 |----------------|----------------------|-----------|
-|Alle numerischen Typen, z.&#160;B. <xref:System.Int32>, <xref:System.Decimal> oder <xref:System.Double>|Zahl|Spezielle Werte, z.&#160;B. `Double.NaN`, `Double.PositiveInfinity` und `Double.NegativeInfinity` werden nicht unterstützt und führen zu ungültigen JSON-Daten.|
-|<xref:System.Enum>|Zahl|Siehe "Enumerationen und JSON" weiter unten in diesem Thema.|
-|<xref:System.Boolean>|Boolescher Wert|--|
+|Alle numerischen Typen, z.&#160;B. <xref:System.Int32>, <xref:System.Decimal> oder <xref:System.Double>|Number|Spezielle Werte, z.&#160;B. `Double.NaN`, `Double.PositiveInfinity` und `Double.NegativeInfinity` werden nicht unterstützt und führen zu ungültigen JSON-Daten.|
+|<xref:System.Enum>|Number|Siehe "Enumerationen und JSON" weiter unten in diesem Thema.|
+|<xref:System.Boolean>|Boolean|--|
 |<xref:System.String>, <xref:System.Char>|String|--|
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Das Format dieser Typen in JSON entspricht dem Format in XML (im wesentlichen TimeSpan im Format der ISO 8601-Dauer, GUID im Format "12345678-ABCD-ABCD-ABCD-1234567890AB" und URI in der natürlichen Zeichen folgen Form wie " http://www.example.com "). Genaue Informationen finden Sie unter [Daten Vertrags Schema-Referenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|
 |<xref:System.Xml.XmlQualifiedName>|String|Das Format ist "name:namespace" (sämtliche Zeichen vor dem ersten Doppelpunkt bilden den Namen). Der Name oder der Namespace kann fehlen. Wenn kein Namespace angegeben wird, kann auch der Doppelpunkt weggelassen werden.|
@@ -189,7 +189,7 @@ Der Typ <xref:System.Xml.XmlElement> wird ohne Einbindung serialisiert wie er is
 
 #### <a name="preserving-type-information"></a>Bewahren von Typinformationen
 
-Wie schon vorher festgestellt, wird Polymorphie in JSON mit einigen Einschränkungen unterstützt. JavaScript ist eine schwach typisierte Sprache, und Typidentität stellt normalerweise kein Problem dar. Wird jedoch JSON verwendet, um zwischen einem stark typisierten System (.NET) und einem schwach typisierten System (JavaScript) zu kommunizieren, ist es sinnvoll, die Typidentität zu bewahren. Die Typen mit den Datenvertragsnamen "Square" und "Circle" sind beispielsweise von einem Typ mit dem Datenvertragsnamen "Shape" abgeleitet. Wenn "Circle" von .NET zu JavaScript gesendet und später wieder an eine .NET-Methode übergeben wird, die "Shape" erwartet, ist es für .NET sinnvoll zu wissen, dass das fragliche Objekt ursprünglich ein "Circle" war. Andernfalls gehen eventuell alle für den abgeleiteten Typ spezifischen Informationen (z. B. der Datenmember "radius" von "Circle") verloren.
+Wie schon vorher festgestellt, wird Polymorphie in JSON mit einigen Einschränkungen unterstützt. JavaScript ist eine schwach typisierte Sprache, und Typidentität stellt normalerweise kein Problem dar. Bei der Verwendung von JSON für die Kommunikation zwischen einem stark typisierten System (.net) und einem schwach typisierten System (JavaScript) ist es jedoch hilfreich, die Typidentität beizubehalten. Die Typen mit den Datenvertragsnamen "Square" und "Circle" sind beispielsweise von einem Typ mit dem Datenvertragsnamen "Shape" abgeleitet. Wenn "Circle" von .NET zu JavaScript gesendet und später wieder an eine .NET-Methode übergeben wird, die "Shape" erwartet, ist es für .NET sinnvoll zu wissen, dass das fragliche Objekt ursprünglich ein "Circle" war. Andernfalls gehen eventuell alle für den abgeleiteten Typ spezifischen Informationen (z. B. der Datenmember "radius" von "Circle") verloren.
 
 Um bei der Serialisierung komplexer Typen zu JSON die Typidentität zu bewahren, kann ein "Typhinweis" hinzugefügt werden, den das Deserialisierungsprogramm erkennen und auf den es entsprechend reagieren kann. Der "Type Hint" ist ein JSON-Schlüssel/Wert-Paar mit dem Schlüsselnamen " \_ \_ Type" (zwei Unterstriche, gefolgt vom Wort "Type"). Der Wert ist eine JSON-Zeichenfolge der Form "DataContractName:DataContractNamespace" (alles vor dem ersten Doppelpunkt bildet den Namen). Bei dem schon früher verwendeten Beispiel kann "Circle" wie folgt serialisiert werden.
 
@@ -229,7 +229,7 @@ Es gibt keine Möglichkeit, einen Typhinweis für nicht-komplexe Typen auszugebe
 
 Typhinweise können die Nachrichtengröße beträchtlich erhöhen. Dieses Problem kann durch die Verwendung kürzerer Datenvertragsnamespaces (wenn möglich) vermieden werden. Deshalb bestimmen die folgenden Regeln, ob Typhinweise ausgegeben werden:
 
-- Bei Verwendung von ASP.NET AJAX werden Typhinweise nach Möglichkeit ausgegeben, auch wenn keine Zuweisung von Basistypen zu abgeleiteten Typen besteht. Dies gilt auch, wenn beispielsweise ein Circle einem Circle zugewiesen ist. (Dies ist erforderlich, um den Aufruf aus der schwach typisierten JSON-Umgebung in die stark typisierte .NET-Umgebung vollständig zu unterstützen und den versehentlichen Verlust von Informationen zu vermeiden.)
+- Bei Verwendung von ASP.NET AJAX werden Typhinweise nach Möglichkeit ausgegeben, auch wenn keine Zuweisung von Basistypen zu abgeleiteten Typen besteht. Dies gilt auch, wenn beispielsweise ein Circle einem Circle zugewiesen ist. (Dies ist erforderlich, um den Vorgang des Abrufs aus der schwach typisierten JSON-Umgebung in die stark typisierte .NET-Umgebung ohne überraschenden Informationsverlust vollständig zu aktivieren.)
 
 - Bei Verwendung von AJAX-Diensten ohne ASP.NET-Integration werden Typhinweise nur dann ausgegeben, wenn es eine Zuweisung von Basistypen zu abgeleiteten Typen gibt &#8211; also wenn Circle einem Shape-Typ oder einem <xref:System.Object> zugewiesen ist, nicht aber, wenn Circle einem Circle zugewiesen ist. Dies stellt die zur korrekten Implementierung eines JavaScript-Clients notwendigen Mindestinformationen bereit und verbessert so die Leistung, schützt jedoch nicht vor dem Verlust von Typinformationen in nicht ordnungsgemäß implementierten Clients. Vermeiden Sie Zuweisungen von Basistypen zu abgeleiteten Typen auf dem Server, damit Sie diese Probleme nicht beim Client behandeln müssen.
 

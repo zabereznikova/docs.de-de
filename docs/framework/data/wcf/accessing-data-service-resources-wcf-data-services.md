@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6a44d61f29fad7fa7d5304deb8b1e329478bc5b4
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569403"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201998"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Zugreifen auf Datendienstressourcen (WCF Data Services)
 WCF Data Services unterstützt die Open Data Protocol (odata), um Ihre Daten als Feed mit Ressourcen verfügbar zu machen, die durch URIs adressierbar sind. Diese Ressourcen werden entsprechend den Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md)dargestellt. In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
   
 ## <a name="addressing-resources"></a>Adressieren von Ressourcen  
- In odata adressieren Sie alle Daten, die vom Datenmodell mithilfe eines URI verfügbar gemacht werden. Der folgende URI gibt z. b. einen Feed zurück, bei dem es sich um die Entitätenmenge Customers handelt, die Einträge für alle Instanzen des Customer-Entitäts Typs enthält:  
+ In odata adressieren Sie alle Daten, die vom Datenmodell mithilfe eines URI verfügbar gemacht werden. So gibt der folgende URI z. B. einen Feed zurück, bei dem es sich um die Customers-Entitätenmenge handelt, die Einträge für alle Instanzen des Customer-Entitätstyps enthält:  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers>
   
@@ -43,16 +43,16 @@ WCF Data Services unterstützt die Open Data Protocol (odata), um Ihre Daten als
   
 <https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer>
   
- Odata ermöglicht Ihnen außerdem das Adressieren von Ressourcen auf der Grundlage der Ergebnisse von Abfrage Ausdrücken. Dies ermöglicht es, Ressourcen Sätze auf der Grundlage eines ausgewerteten Ausdrucks zu filtern. Der folgende URI filtert z. B. die Ressourcen, um nur die Bestellungen für den angegebenen Kunden zurückzugeben, die seit dem 22. September 1997 ausgeliefert wurden:  
+ Odata ermöglicht Ihnen außerdem das Adressieren von Ressourcen auf der Grundlage der Ergebnisse von Abfrage Ausdrücken. Dies ermöglicht das Filtern mehrerer Ressourcensätze anhand eines ausgewerteten Ausdrucks. Der folgende URI filtert z. B. die Ressourcen, um nur die Bestellungen für den angegebenen Kunden zurückzugeben, die seit dem 22. September 1997 ausgeliefert wurden:  
   
-<https://services.odata.org/Northwind/Northwind.svc/Customers( "ALFKI")/Bestellungen? $Filter = ShippedDate gt DateTime "1997-09-22t00:00:00" >
+`https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'`
   
  Weitere Informationen finden Sie unter [odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="system-query-options"></a>Systemabfrageoptionen  
- Odata definiert einen Satz von System Abfrage Optionen, mit denen Sie herkömmliche Abfrage Vorgänge für Ressourcen ausführen können, z. b. Filtern, Sortieren und Paging. Der folgende URI gibt z. b. den Satz aller `Order` Entitäten zusammen mit verknüpften `Order_Detail` Entitäten zurück, deren Postleitzahlen nicht auf `100`enden:  
+ Odata definiert einen Satz von System Abfrage Optionen, mit denen Sie herkömmliche Abfrage Vorgänge für Ressourcen ausführen können, z. b. Filtern, Sortieren und Paging. Der folgende URI gibt z. b. den Satz aller `Order` Entitäten zusammen mit verknüpften `Order_Detail` Entitäten zurück, deren Postleitzahlen nicht auf enden `100` :  
   
-<https://services.odata.org/Northwind/Northwind.svc/Orders? $Filter = not EndsWith (shipPostalCode, ' 100 ') & $Expand = Order_Details & $OrderBy = ShipCity >
+`https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity`
   
  Die Einträge des zurückgegebenen Feeds werden zudem nach dem Wert der ShipCity-Eigenschaft der Bestellungen geordnet.  
   
@@ -60,23 +60,23 @@ WCF Data Services unterstützt die Open Data Protocol (odata), um Ihre Daten als
   
 |Abfrageoption|Beschreibung|  
 |------------------|-----------------|  
-|`$orderby`|Definiert im zurückgegebenen Feed eine Standardsortierreihenfolge für Entitäten. Die folgende Abfrage sortiert den zurückgegebenen Kundenfeed nach Landkreis und Ort:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers?$orderby=Country,City>|  
-|`$top`|Gibt die Anzahl der Entitäten an, die in den zurückgegebenen Feed eingeschlossen werden soll. Im folgenden Beispiel werden die ersten zehn Kunden übersprungen und die folgenden zehn zurückgegeben:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10>|  
-|`$skip`|Gibt die Anzahl der Entitäten an, die vor dem Beginn der Rückgabe der Entitäten im Feed übersprungen werden sollen. Im folgenden Beispiel werden die ersten zehn Kunden übersprungen und die folgenden zehn zurückgegeben:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10>|  
-|`$filter`|Definiert einen Ausdruck, der die im Feed zurückgegebenen Entitäten anhand bestimmter Kriterien filtert. Diese Abfrageoption unterstützt einen Satz logischer Vergleichsoperatoren, arithmetische Operatoren und vordefinierte Abfragefunktionen, die zur Auswertung des Filterausdrucks verwendet werden. Im folgenden Beispiel werden alle Bestellungen zurückgegeben, deren Postleitzahlen nicht mit "100" enden:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Orders? $Filter = nicht EndsWith (shipPostalCode, ' 100 ') >|  
-|`$expand`|Gibt an, welche verknüpften Entitäten von der Abfrage zurückgegeben werden. Verknüpfte Entitäten sind entweder als Feed oder als Eintrag in der von der Abfrage zurückgegebenen Entität inline enthalten. Im folgenden Beispiel werden die Bestellungen des Kunden "ALFKI" zusammen mit den Artikeldetails der einzelnen Bestellungen zurückgegeben:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details>|  
-|`$select`|Gibt eine Projektion an, die die Eigenschaften der Entität definiert, die in der Projektion zurückgegeben werden. In der Standardeinstellung werden alle Eigenschaften einer Entität in einem Feed zurückgegeben. Die folgende Abfrage gibt nur drei Eigenschaften der `Customer`-Entität zurück:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City>|  
+|`$orderby`|Definiert im zurückgegebenen Feed eine Standardsortierreihenfolge für Entitäten. Die folgende Abfrage sortiert den zurückgegebenen Kundenfeed nach Landkreis und Ort:<br /><br /> `https://services.odata.org/Northwind/Northwind.svc/Customers?$orderby=Country,City>`|  
+|`$top`|Gibt die Anzahl der Entitäten an, die in den zurückgegebenen Feed eingeschlossen werden soll. Im folgenden Beispiel werden die ersten zehn Kunden übersprungen und die folgenden zehn zurückgegeben:<br /><br /> `https://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`|  
+|`$skip`|Gibt die Anzahl der Entitäten an, die vor dem Beginn der Rückgabe der Entitäten im Feed übersprungen werden sollen. Im folgenden Beispiel werden die ersten zehn Kunden übersprungen und die folgenden zehn zurückgegeben:<br /><br /> `https://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`|  
+|`$filter`|Definiert einen Ausdruck, der die im Feed zurückgegebenen Entitäten anhand bestimmter Kriterien filtert. Diese Abfrageoption unterstützt einen Satz logischer Vergleichsoperatoren, arithmetische Operatoren und vordefinierte Abfragefunktionen, die zur Auswertung des Filterausdrucks verwendet werden. Im folgenden Beispiel werden alle Bestellungen zurückgegeben, deren Postleitzahlen nicht mit "100" enden:<br /><br /> `https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')`|  
+|`$expand`|Gibt an, welche verknüpften Entitäten von der Abfrage zurückgegeben werden. Verknüpfte Entitäten sind entweder als Feed oder als Eintrag in der von der Abfrage zurückgegebenen Entität inline enthalten. Im folgenden Beispiel werden die Bestellungen des Kunden "ALFKI" zusammen mit den Artikeldetails der einzelnen Bestellungen zurückgegeben:<br /><br /> `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details`|  
+|`$select`|Gibt eine Projektion an, die die Eigenschaften der Entität definiert, die in der Projektion zurückgegeben werden. In der Standardeinstellung werden alle Eigenschaften einer Entität in einem Feed zurückgegeben. Die folgende Abfrage gibt nur drei Eigenschaften der `Customer`-Entität zurück:<br /><br /> `https://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City`|  
 |`$inlinecount`|Fordert an, dass die Anzahl der im Feed zurückgegebenen Entitäten im Feed enthalten sein muss.|  
   
 ## <a name="addressing-relationships"></a>Behandeln von Beziehungen  
- Zusätzlich zum Adressieren von Entitätenmengen und Entitäts Instanzen ermöglicht odata auch das adressieren der Zuordnungen, die Beziehungen zwischen Entitäten darstellen. Diese Funktionalität ist erforderlich, um eine Beziehung zwischen zwei Entitätsinstanzen erstellen oder ändern zu können, z. B. das Versandunternehmen, das sich auf eine angegebene Bestellung in der Northwind-Beispieldatenbank bezieht. Odata unterstützt einen `$link` Operator, um speziell die Zuordnungen zwischen Entitäten zu adressieren. Der folgende URI wird z. B. in einer HTTP PUT-Anforderungsnachricht angegeben, um das Versandunternehmen für die angegebene Bestellung in ein neues Versandunternehmen zu ändern.  
+ Zusätzlich zum Adressieren von Entitätenmengen und Entitäts Instanzen ermöglicht odata auch das adressieren der Zuordnungen, die Beziehungen zwischen Entitäten darstellen. Diese Funktionalität ist erforderlich, um eine Beziehung zwischen zwei Entitätsinstanzen erstellen oder ändern zu können, z. B. das Versandunternehmen, das sich auf eine angegebene Bestellung in der Northwind-Beispieldatenbank bezieht. Odata unterstützt einen- `$link` Operator, um die Zuordnungen zwischen Entitäten zu adressieren. Der folgende URI wird z. B. in einer HTTP PUT-Anforderungsnachricht angegeben, um das Versandunternehmen für die angegebene Bestellung in ein neues Versandunternehmen zu ändern.  
   
-<https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper>
+`https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper`
   
  Weitere Informationen finden Sie im Abschnitt `3.2. Addressing Links between Entries` unter [odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="consuming-the-returned-feed"></a>Verwenden des zurückgegebenen Feeds  
- Der URI einer odata-Ressource ermöglicht es Ihnen, vom Dienst verfügbar gemachte Entitäts Daten zu adressieren. Wenn Sie einen URI in das Adressfeld eines Webbrowsers eingeben, wird eine odata-Feed-Darstellung der angeforderten Ressource zurückgegeben. Weitere Informationen finden Sie in der [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)Anleitung. Obwohl ein Webbrowser nützlich sein kann, um zu testen, ob eine Datendienst Ressource die erwarteten Daten zurückgibt, erfolgt der Zugriff auf Produktionsdaten Dienste, die auch Daten erstellen, aktualisieren und löschen können, im Allgemeinen über Anwendungscode oder Skriptsprachen auf einer Webseite. Weitere Informationen finden Sie unter [Verwenden eines Daten Dienstanbieter in einer Client Anwendung](using-a-data-service-in-a-client-application-wcf-data-services.md).  
+ Der URI einer odata-Ressource ermöglicht es Ihnen, vom Dienst verfügbar gemachte Entitäts Daten zu adressieren. Wenn Sie einen URI in das Adressfeld eines Webbrowsers eingeben, wird eine odata-Feed-Darstellung der angeforderten Ressource zurückgegeben. Weitere Informationen finden Sie in der [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)Anleitung. Obwohl ein Webbrowser nützlich sein kann, um zu testen, ob eine Datendienstressource die erwarteten Daten zurückgibt, wird auf Produktionsdatendiensten, die Daten auch erstellen, aktualisieren und löschen können, im Allgemeinen mit Anwendungscode oder Skriptsprachen auf einer Webseite zugegriffen. Weitere Informationen finden Sie unter [Verwenden eines Daten Dienstanbieter in einer Client Anwendung](using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

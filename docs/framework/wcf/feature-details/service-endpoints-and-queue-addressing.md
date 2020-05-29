@@ -2,17 +2,17 @@
 title: Dienstendpunkte und Adressieren von Warteschlangen
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744617"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202426"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Dienstendpunkte und Adressieren von Warteschlangen
 In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus Warteschlangen auslesen, und wie Dienstendpunkte Warteschlangen zugeordnet werden. Zur Erinnerung: die folgende Abbildung zeigt die Bereitstellung der Bereitstellung der klassischen Windows Communication Foundation (WCF) in der Warteschlange.  
   
- ![Anwendungs Diagramm in der Warteschlange](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Verteilte Warteschlangen (Abbildung)")  
+ ![In die Warteschlange gestelltes Anwendungsdiagramm](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Verteilte Warteschlangen (Abbildung)")  
   
  Damit der Client die Nachricht an den Dienst senden kann, richtet der Client die Nachricht an die Zielwarteschlange. Damit der Dienst Nachrichten aus der Warteschlange lesen kann, legt er als Abhöradresse die Zielwarteschlange fest. Die Adressierung in WCF ist Uniform Resource Identifier (URI)-basiert, während Message Queuing (MSMQ)-Warteschlangen Namen nicht URI-basiert sind. Daher ist es erforderlich, dass Sie wissen, wie in MSMQ mithilfe von WCF erstellte Warteschlangen adressiert werden.  
   
@@ -30,15 +30,15 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  Die Adressierung einer Warteschlange in WCF basiert auf dem folgenden Muster:  
   
- NET. MSMQ://\<*Hostname*>/[privat/] \<*Warteschlangen Name*>  
+ NET. MSMQ:// \<*host-name*> /[privat/]\<*queue-name*>  
   
  Dabei gilt:  
   
-- \<*Hostname*> ist der Name des Computers, der die Ziel Warteschlange hostet.  
+- \<*host-name*>der Name des Computers, der die Ziel Warteschlange hostet.  
   
 - [privat] ist optional. Dies wird verwendet, wenn eine Zielwarteschlange adressiert wird, bei der es sich um eine private Warteschlange handelt. Um eine öffentliche Warteschlange zu adressieren, dürfen Sie nicht "privat" angeben. Beachten Sie, dass im Gegensatz zu MSMQ-Pfaden im WCF-URI-Formular kein "$" vorhanden ist.  
   
-- \<*Warteschlangen Name*> ist der Name der Warteschlange. Der Warteschlangenname kann auch auf eine Unterwarteschlange verweisen. Daher ist \<*Queue Name*> = \<*Name-of-Queue*-> [; *unter Warteschlangen Name*].  
+- \<*queue-name*>der Name der Warteschlange. Der Warteschlangenname kann auch auf eine Unterwarteschlange verweisen. Daher ist \<*queue-name*>  =  \<*name-of-queue*> [;* unter Warteschlangen Name*].  
   
  Beispiel1: Für die Adressierung einer privaten Warteschlange PurchaseOrders, die auf dem Computer abc atadatum.com gehostet wird, wäre der URI net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -72,9 +72,9 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
 |WCF URI-basierte Warteschlangenadresse|Verwenden Sie die Active Directory-Eigenschaft|Warteschlangen-Übertragungsprotokoll-Eigenschaft|Resultierende MSMQ-Formatnamen|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|NET. MSMQ://\<Computername >/Private/ABC|False (Standardwert)|Systemeigen (Standardwert)|DIRECT=OS:Computername\privat$\abc|  
-|NET. MSMQ://\<Computername >/Private/ABC|False|SRMP|Direct =http://machine/msmq/private$/ABC|  
-|NET. MSMQ://\<Computername >/Private/ABC|True|Systemeigenes Format|PUBLIC=some-guid (die GUID der Warteschlange)|  
+|`Net.msmq://<machine-name>/private/abc`|False (Standardwert)|Systemeigen (Standardwert)|`DIRECT=OS:machine-name\private$\abc`|  
+|`Net.msmq://<machine-name>/private/abc`|False|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
+|`Net.msmq://<machine-name>/private/abc`|True|Systemeigen|`PUBLIC=some-guid`(die GUID der Warteschlange)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lesen von Nachrichten aus der Warteschlange für unzustellbare Nachrichten oder der Warteschlange für potenziell schädliche Nachrichten  
  Zum Lesen von Nachrichten aus einer Warteschlange für potenziell schädliche Nachrichten, bei der es sich um eine Unterwarteschlange der Zielwarteschlange handelt, öffnen Sie den `ServiceHost` mit der Adresse der Unterwarteschlange.  
@@ -87,23 +87,23 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  Wenn Sie eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten verwenden, beachten Sie, dass sich die Warteschlange für unzustellbare Nachrichten auf dem lokalen Computer befinden muss. Deshalb ist der URI für die Warteschlange für unzustellbare Nachrichten auf das folgende Format beschränkt:  
   
- NET. MSMQ://localhost/[private/] \<*benutzerdefinierte Warteschlangen Name*>.  
+ NET. MSMQ://localhost/[private/] \<*custom-dead-letter-queue-name*> .  
   
  Ein WCF-Dienst überprüft, ob alle empfangenen Nachrichten an die jeweilige Warteschlange adressiert wurden, die er überwacht. Wenn die Zielwarteschlange der Nachricht nicht mit der Warteschlange übereinstimmt, in der sie gefunden wird, verarbeitet der Dienst die Nachricht nicht. Dies ist ein Problem, das Dienste, die eine Warteschlange für unzustellbare Nachrichten abhören, behandeln müssen, da alle Nachrichten in der Warteschlange für unzustellbare Nachrichten für eine andere Adresse bestimmt waren. Um Nachrichten aus einer Warteschlange für unzustellbare Nachrichten oder einer Warteschlange für potenziell schädliche Nachrichten zu lesen, muss ein `ServiceBehavior` mit dem <xref:System.ServiceModel.AddressFilterMode.Any>-Parameter verwendet werden. Ein Beispiel finden Sie unter [Warteschlangen](../../../../docs/framework/wcf/samples/dead-letter-queues.md)für unzustellbare Nachrichten.  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>NetMsmqBinding und Dienstadressierung  
  Die `MsmqIntegrationBinding` wird für die Kommunikation mit herkömmlichen MSMQ-Anwendungen verwendet. Um die Interoperation mit einer vorhandenen MSMQ-Anwendung zu vereinfachen, unterstützt WCF nur die Format Namen Adressierung. Folglich müssen Nachrichten, die mithilfe dieser Bindung gesendet werden, dem URI-Schema entsprechen:  
   
- MSMQ. Format Name:\<*MSMQ-Format-Name*>>  
+ MSMQ. Format Name:\<*MSMQ-format-name*>>  
   
  Der MSMQ-Format-Name hat das von MSMQ in [Informationen zu Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))angegebene Format.  
   
  Beachten Sie, dass Sie nur direkte Formatnamen verwenden können und dass Sie öffentliche und private Formatnamen (dies erfordert die Integration von Active Directory) verwenden können, wenn Nachrichten von einer Warteschlange mithilfe von `MsmqIntegrationBinding` empfangen werden. Es wird jedoch empfohlen, direkte Formatnamen zu verwenden. Beispielsweise verursacht unter Windows Vista die Verwendung eines beliebigen anderen Format namens einen Fehler, da das System versucht, eine unter Warteschlange zu öffnen, die nur mit direkten Format Namen geöffnet werden kann.  
   
- Bei der Adressierung von SRMP mithilfe von `MsmqIntegrationBinding` ist es nicht erforderlich, /msmq/ zu dem direkten Formatnamen hinzuzufügen, um das Senden durch Internetinformationsdienste (Internet Information Services, IIS) zu unterstützen. Beispiel: Wenn Sie eine Warteschlange mit dem SRMP-Protokoll anstelle von Direct =http://adatum.com/msmq/private$/ABC adressieren, sollten Sie Direct =http://adatum.com/private$/ABC. verwenden.  
+ Bei der Adressierung von SRMP mithilfe von `MsmqIntegrationBinding` ist es nicht erforderlich, /msmq/ zu dem direkten Formatnamen hinzuzufügen, um das Senden durch Internetinformationsdienste (Internet Information Services, IIS) zu unterstützen. Beispiel: Wenn Sie eine Warteschlange abc mithilfe des SRMP-Protokolls adressieren, `DIRECT=http://adatum.com/msmq/private$/abc` sollten Sie anstelle von verwenden `DIRECT=http://adatum.com/private$/abc` .  
   
- Beachten Sie, dass Sie net.msmq:// nicht für die Adressierung mit `MsmqIntegrationBinding` verwenden können. Da `MsmqIntegrationBinding` die Verwendung von MSMQ-Format Namen Adressierung unterstützt, können Sie einen WCF-Dienst verwenden, der diese Bindung verwendet, um Multicast-und Verteilerlisten Features in MSMQ zu verwenden. Eine Ausnahme ist das Angeben von `CustomDeadLetterQueue` bei der Verwendung von `MsmqIntegrationBinding`. Das Format muss net.msmq sein:// sein, ähnlich wie bei der Verwendung von `NetMsmqBinding` festgelegt.  
+ Beachten Sie, dass Sie net.msmq:// nicht für die Adressierung mit `MsmqIntegrationBinding` verwenden können. Da `MsmqIntegrationBinding` unterstützt die Verwendung von MSMQ-Format Namen (Free-Form), können Sie einen WCF-Dienst verwenden, der diese Bindung verwendet, um Multicast-und Verteilerlisten Features in MSMQ zu verwenden. Eine Ausnahme ist das Angeben von `CustomDeadLetterQueue` bei der Verwendung von `MsmqIntegrationBinding`. Das Format muss net.msmq sein:// sein, ähnlich wie bei der Verwendung von `NetMsmqBinding` festgelegt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Webhosting einer Anwendung mit Queuing](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

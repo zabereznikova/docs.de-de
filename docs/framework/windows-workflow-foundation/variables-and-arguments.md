@@ -3,17 +3,17 @@ title: Variablen und Argumente
 description: In diesem Artikel werden die Variablen, die die Speicherung von Daten darstellen, und Argumente beschrieben, die den Datenfluss in eine bzw. aus einer Aktivität in Workflow Foundation darstellen.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5cce9931e9b0a37d5fafbfb84527ffd543a0a50f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421305"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201956"
 ---
 # <a name="variables-and-arguments"></a>Variablen und Argumente
 In Windows Workflow Foundation (WF) stellen Variablen die Speicherung von Daten dar, und Argumente stellen den Datenfluss in eine und aus einer Aktivität dar. Eine Aktivität verfügt über einen Satz von Argumenten, die die Signatur der Aktivität ausmachen. Darüber hinaus kann eine Aktivität eine Liste von Variablen verwalten. Ein Entwickler kann während des Entwurfs eines Workflows Variablen zu dieser Liste hinzufügen oder daraus löschen. Ein Argument wird mit einem Ausdruck gebunden, der einen Wert zurückgibt.  
   
-## <a name="variables"></a>Variablen  
+## <a name="variables"></a>Variables  
  Variablen sind Speicherorte für Daten. Variablen werden als Teil der Definition eines Workflows deklariert. Variablen nehmen zur Laufzeit Werte an, die dann als Teil des Zustands einer Workflowinstanz gespeichert werden. Eine Variablendefinition gibt den Typ der Variable und optional auch ihren Namen an. Im folgenden Code wird gezeigt, wie eine Variable deklariert und ihr mit einer <xref:System.Activities.Statements.Assign%601>-Aktivität ein Wert zugewiesen wird und wie der Wert mithilfe einer <xref:System.Activities.Statements.WriteLine>-Aktivität in der Konsole angezeigt wird.  
   
 ```csharp  
@@ -70,7 +70,7 @@ Variable<string> var = new Variable<string>
   
 3. Für Argumente kann optional <xref:System.Activities.Argument.EvaluationOrder%2A> angegeben werden. <xref:System.Activities.Argument.EvaluationOrder%2A> ist ein nullbasierter Wert, der die Reihenfolge angibt, in der das Argument ausgewertet wird. Standardmäßig ist die Auswertungsreihenfolge des Arguments nicht angegeben und entspricht dem <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>-Wert. Legen Sie <xref:System.Activities.Argument.EvaluationOrder%2A> auf einen Wert fest, der größer oder gleich null ist, um eine Auswertungsreihenfolge für dieses Argument anzugeben. Windows Workflow Foundation wertet Argumente mit einer angegebenen Auswertungs Reihenfolge in aufsteigender Reihenfolge aus. Beachten Sie, dass Argumente mit einer nicht angegebenen Auswertungsreihenfolge vor Argumenten mit einer angegebenen Auswertungsreihenfolge ausgewertet werden.  
   
- Ein Aktivitätsautor kann einen stark typisierten Mechanismus zur Bereitstellung seiner Argumente verwenden. Dazu werden Eigenschaften von Typ <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> und <xref:System.Activities.InOutArgument%601> deklariert. Auf diese Weise kann ein Aktivitätsautor einen bestimmten Vertrag für die ein- und ausgehenden Daten einer Aktivität einrichten.  
+ Ein Aktivitäts Autor kann einen stark typisierten Mechanismus verwenden, um seine Argumente verfügbar zu machen. Dazu werden Eigenschaften von Typ <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> und <xref:System.Activities.InOutArgument%601> deklariert. Auf diese Weise kann ein Aktivitätsautor einen bestimmten Vertrag für die ein- und ausgehenden Daten einer Aktivität einrichten.  
   
 ### <a name="defining-the-arguments-on-an-activity"></a>Definieren der Argumente einer Aktivität  
  Argumente können für eine Aktivität definiert werden, indem Eigenschaften vom Typ <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> und <xref:System.Activities.InOutArgument%601> angegeben werden. Im folgenden Code wird gezeigt, wie die Argumente für eine `Prompt`-Aktivität definiert werden, die eine Zeichenfolge akzeptiert und Benutzer anzeigt und eine Zeichenfolge zurückgibt, die die Antwort des Benutzers enthält.  

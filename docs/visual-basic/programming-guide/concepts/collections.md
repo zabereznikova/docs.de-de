@@ -1,19 +1,19 @@
 ---
-title: Auflistungen
+title: Sammlungen
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: d27761ba7a955d1dc8843ad168a82a9c9c27a6f6
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646346"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202448"
 ---
 # <a name="collections-visual-basic"></a>Auflistungen (Visual Basic)
 
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.
 
-Arrays am besten zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ geeignet. Weitere Informationen zu Arrays finden Sie unter [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Arrays eignen sich bestens zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ. Weitere Informationen zu Arrays finden Sie unter [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
 Auflistungen ermöglichen ein flexibleres Arbeiten mit Objektgruppen. Im Gegensatz zu Arrays kann sich die Gruppe von Objekten, mit denen Sie arbeiten, in Abhängigkeit von den sich ändernden Anforderungen der Anwendung dynamisch vergrößern bzw. verkleinern. Bei einigen Auflistungen können Sie jedem Objekt, das Sie in die Auflistung einfügen, einen Schlüssel zuweisen, sodass das Objekt anhand des Schlüssels schnell abgerufen werden kann.
 
@@ -22,7 +22,7 @@ Eine Auflistung ist eine Klasse. Daher müssen Sie eine Instanzen der Klasse dek
 Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.
 
 > [!NOTE]
-> Fügen Sie in den Beispielen in `System.Collections.Generic` `System.Linq` diesem Thema [Imports-Anweisungen](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für die und Namespaces ein.
+> Schließen Sie für die Beispiele in diesem Thema [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) -Anweisungen für `System.Collections.Generic` die `System.Linq` Namespaces und ein.
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klas
 
 In den Beispielen in diesem Abschnitt wird die generische Klasse <xref:System.Collections.Generic.List%601> verwendet, die es Ihnen ermöglicht, mit einer stark typisierten Liste von Objekten zu arbeiten.
 
-Im folgenden Beispiel wird eine Liste von Zeichenfolgen erstellt und anschließend durch die Zeichenfolgen durchlaufen, indem ein [For Each... Nächste](../../../visual-basic/language-reference/statements/for-each-next-statement.md) Anweisung.
+Im folgenden Beispiel wird eine Liste von Zeichen folgen erstellt und dann Durchlaufen der Zeichen folgen mithilfe eines [for each... Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) -Anweisung.
 
 ```vb
 ' Create a list of strings.
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Sie können eine [For... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Anweisung anstelle `For Each` einer Anweisung, die durch eine Auflistung iteriert wird. Sie erreichen dies, indem Sie durch die Indexposition auf die Auflistungselemente zugreifen. Der Index der Elemente beginnt mit 0 und endet an der Elementanzahl minus 1.
+Sie können eine [for... Next](../../../visual-basic/language-reference/statements/for-next-statement.md) -Anweisung anstelle einer- `For Each` Anweisung, um eine Auflistung zu durchlaufen. Sie erreichen dies, indem Sie durch die Indexposition auf die Auflistungselemente zugreifen. Der Index der Elemente beginnt mit 0 und endet an der Elementanzahl minus 1.
 
 Im folgenden Beispiel werden die Elemente einer Auflistung unter Verwendung von `For…Next` anstelle von `For Each` durchlaufen.
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-Im folgenden Beispiel werden alle Elemente aus einer generischen Liste entfernt. Anstelle einer `For Each` Aussage, ein [Für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Anweisung, dass iteriert in absteigender Reihenfolge wird verwendet. Dies liegt daran, dass die <xref:System.Collections.Generic.List%601.RemoveAt%2A>-Methode dazu führt, dass Elemente nach einem entfernten Element einen niedrigeren Indexwert haben.
+Im folgenden Beispiel werden alle Elemente aus einer generischen Liste entfernt. Anstelle einer- `For Each` Anweisung, a [für... Die nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Anweisung, die in absteigender Reihenfolge iteriert, wird verwendet. Dies liegt daran, dass die <xref:System.Collections.Generic.List%601.RemoveAt%2A>-Methode dazu führt, dass Elemente nach einem entfernten Element einen niedrigeren Indexwert haben.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -296,7 +296,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function
 ```
 
-Im folgenden Beispiel werden die <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>-Methode und die <xref:System.Collections.Generic.Dictionary%602.Item%2A>-Eigenschaft von `Dictionary` verwendet, um anhand des Schlüssels schnell nach einem Element zu suchen. Mit `Item` der Eigenschaft können Sie `elements` mithilfe des `elements(symbol)` Codes in Visual Basic auf ein Element in der Auflistung zugreifen.
+Im folgenden Beispiel werden die <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>-Methode und die <xref:System.Collections.Generic.Dictionary%602.Item%2A>-Eigenschaft von `Dictionary` verwendet, um anhand des Schlüssels schnell nach einem Element zu suchen. Mit der- `Item` Eigenschaft können Sie auf ein Element in der Auflistung zugreifen, `elements` indem Sie den `elements(symbol)` Code in Visual Basic verwenden.
 
 ```vb
 Private Sub FindInDictionary(ByVal symbol As String)
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>Verwenden von LINQ zum Zugriff auf eine Auflistung
 
-LINQ (Language-Integrated Query) kann verwendet werden, um auf Auflistungen zuzugreifen. LINQ-Abfragen stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [Erste Schritte mit LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
+LINQ (Language-Integrated Query) kann verwendet werden, um auf Auflistungen zuzugreifen. LINQ-Abfragen stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [Getting Started with LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
 
 Im folgenden Beispiel wird eine LINQ-Abfrage für eine generische `List` ausgeführt. Die LINQ-Abfrage gibt eine andere Auflistung zurück, die die Ergebnisse enthält.
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>Definieren einer benutzerdefinierten Auflistung
 
-Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie [unter Aufzählen einer Sammlung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
+Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter Auflisten [einer Auflistung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 Sie können zwar eine benutzerdefinierte Auflistung definieren, in der Regel ist es aber besser, die in .NET Framework enthaltenen Auflistungen zu verwenden. Diese werden unter [Arten von Auflistungen](#kinds-of-collections) weiter oben in diesem Thema beschrieben.
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>Iterators
 
-Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) verwendet eine Yield-Anweisung, um jedes Element der Auflistung nacheinander zurückzugeben.
+Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) -Anweisung, um jedes Element der Auflistung einzeln zurückzugeben.
 
-Sie rufen einen Iterator auf, indem Sie eine [For Each... Nächste](../../../visual-basic/language-reference/statements/for-each-next-statement.md) Anweisung. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. Wenn eine `Yield`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
+Sie nennen einen Iterator mithilfe eines [for each-... Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) -Anweisung. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. Wenn eine `Yield`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
 
 Weitere Informationen finden Sie unter [Iteratoren (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
 
-Im folgenden Beispiel wird eine Iteratormethode verwendet. Die Iterator-Methode `Yield` hat eine Anweisung, die sich in einem [For... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Schleife. In der `ListEvenNumbers`-Methode erstellt jede Iteration des `For Each`-Anweisungstexts einen Aufruf der Iteratormethode, der zur nächsten `Yield`-Anweisung übergeht.
+Im folgenden Beispiel wird eine Iteratormethode verwendet. Die Iteratormethode verfügt über eine- `Yield` Anweisung, die sich innerhalb einer [for... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Schleife. In der `ListEvenNumbers`-Methode erstellt jede Iteration des `For Each`-Anweisungstexts einen Aufruf der Iteratormethode, der zur nächsten `Yield`-Anweisung übergeht.
 
 ```vb
 Public Sub ListEvenNumbers()
@@ -570,9 +570,9 @@ End Function
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Sammlunginitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Programmierkonzepte (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Sammlungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Programmier Konzepte (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Sammlungen und Datenstrukturen](../../../standard/collections/index.md)

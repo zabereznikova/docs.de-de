@@ -2,12 +2,12 @@
 title: Technologieoptionen und-Richtlinien
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 1996a5f5b86715db099e52e163fd23be2497f5eb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: e4016511920904ea14eac844a2564d6a77d9a817
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094461"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202294"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Optionen und Richtlinien der ADO.NET-Technologie
 
@@ -23,7 +23,7 @@ Die ADO.NET-Datenplattform ist eine Multiversionsstrategie, die die Menge an erf
  Object Services ermöglicht den Programmierern die Interaktion mit einem konzeptionellen Modell mithilfe eines Satzes von CLR-Klassen. Diese Klassen können automatisch aus dem konzeptionellen Modell generiert oder unabhängig entwickelt werden, um die Struktur des konzeptionellen Modells widerzuspiegeln. Object Services bietet darüber hinaus Infrastrukturunterstützung für das Entity Framework, indem es verschiedene Dienste wie Zustandsverwaltung, Änderungsnachverfolgung, Identitätsauflösung, Laden von und Navigieren in Beziehungen, Weitergeben von Objektänderungen an Datenbankmodifikationen und Abfrageerstellungsunterstützung für Entity SQL bereitstellt. Weitere Informationen finden Sie unter [Übersicht über Object Services (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
 ### <a name="linq-to-entities"></a>LINQ to Entities  
- LINQ to Entities ist eine LINQ-Implementierung (Language-Integrated Query), die Entwicklern ermöglicht, stark typisierte Abfragen zu erstellen, die mithilfe von LINQ-Ausdrücken und LINQ-Abfrageoperatoren auf den Objektkontext des Entity Framework angewendet werden. LINQ to Entities ermöglicht Entwicklern das Arbeiten mit einem konzeptionellen Modell mit einer flexiblen Objekt relationalen Zuordnung über Microsoft SQL Server und Datenbanken von Drittanbietern. Weitere Informationen finden Sie unter [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
+ LINQ to Entities ist eine LINQ-Implementierung (Language-Integrated Query), die es Entwicklern ermöglicht, mithilfe von LINQ-Ausdrücken und LINQ-Standard Abfrage Operatoren stark typisierte Abfragen für den Entity Framework Objekt Kontext zu erstellen. LINQ to Entities ermöglicht Entwicklern das Arbeiten mit einem konzeptionellen Modell mit einer flexiblen Objekt relationalen Zuordnung über Microsoft SQL Server und Datenbanken von Drittanbietern. Weitere Informationen finden Sie unter [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
   
 ### <a name="entity-sql"></a>Entity SQL  
  Entity SQL ist eine textbasierte Abfragesprache, die zur Interaktion mit einem Entity Data Model entwickelt wurde. Entity SQL ist ein SQL-Dialekt, der Abfragekonstrukte für übergeordnete Modellkonzepte wie Vererbung, komplexe Typen und explizite Beziehungen enthält. Entwickler können Entity SQL auch direkt in Verbindung mit Object Services verwenden. Weitere Informationen finden Sie unter [Entity SQL Sprache](./ef/language-reference/entity-sql-language.md).  
@@ -40,7 +40,7 @@ Die ADO.NET-Datenplattform ist eine Multiversionsstrategie, die die Menge an erf
 ## <a name="wcf-data-services"></a>WCF Data Services  
  WCF Data Services stellt Datendienste im Internet oder in einem Intranet bereit. Die Daten werden gemäß den Spezifikationen des Entity Data Model in Entitäten und Beziehungen strukturiert. Die in diesem Modell bereitgestellten Daten sind durch das Standard-HTTP-Protokoll adressierbar. Weitere Informationen finden Sie unter [WCF Data Services 4.5](../wcf/index.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über ADO.NET](ado-net-overview.md)
 - [Neues in ADO.NET](whats-new.md)

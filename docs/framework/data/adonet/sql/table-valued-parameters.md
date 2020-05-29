@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2917a8d9b42d831566855271a2f2110637db586f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174471"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202171"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
 Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer Datenzeilen aus einer Clientanwendung nach SQL Server, ohne dass mehrere Roundtrips oder eine spezielle serverseitige Logik für die Verarbeitung der Daten erforderlich sind. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und die Daten in einem einzigen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die Sie dann mithilfe von Transact-SQL bearbeiten können.  
@@ -39,7 +39,7 @@ Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer 
 - Verwenden des `bcp`-Hilfsprogramms oder des <xref:System.Data.SqlClient.SqlBulkCopy>-Objekts, um eine Vielzahl von Datenzeilen in eine Tabelle zu laden. Wenngleich dieses Verfahren sehr effizient ist, wird die serverseitige Verarbeitung nur dann unterstützt, wenn die Daten in eine temporäre Tabelle oder Tabellenvariable geladen werden.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Erstellen von Tabellenwertparameter-Typen  
- Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mit CREATE TYPE-Anweisungen in Transact-SQL definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen zum Erstellen von Tabellentypen finden Sie unter [Benutzerdefinierte Tabellentypen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
+ Tabellenwert Parameter basieren auf stark typisierten Tabellenstrukturen, die mithilfe von Transact-SQL-Anweisungen zum Erstellen von Typen definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen zum Erstellen von Tabellentypen finden Sie unter [Benutzerdefinierte Tabellentypen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
   
  Mit der folgenden Anweisung wird ein Tabellentyp namens „CategoryTableType“ erstellt, der aus den Spalten „CategoryID“ und „CategoryName“ besteht:  
   
@@ -128,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Übergeben eines Tabellenwertparameters an eine gespeicherte Prozedur  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Übergeben eines Tabellenwert Parameters an eine gespeicherte Prozedur  
  In diesem Beispiel wird veranschaulicht, wie Daten aus Tabellenwertparametern an eine gespeicherte Prozedur übergeben werden. Der Code extrahiert hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable.GetChanges%2A>-Methode in eine neue <xref:System.Data.DataTable>. Im Code wird dann ein <xref:System.Data.SqlClient.SqlCommand> definiert, wobei für die Eigenschaft <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> der Wert <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:System.Data.SqlClient.SqlParameter> wird mit der <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt und für <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> wird `Structured` festgelegt. Anschließend wird der <xref:System.Data.SqlClient.SqlCommand> mit der Methode <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> ausgeführt.  
   
 ```csharp  
@@ -272,10 +272,10 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Konfigurieren von Parametern und Parameterdatentypen](../configuring-parameters-and-parameter-data-types.md)
 - [Befehle und Parameter](../commands-and-parameters.md)
 - [DataAdapter-Parameter](../dataadapter-parameters.md)
-- [SQL Server-Datenvorgänge in ADO.NET](sql-server-data-operations.md)
+- [SQL Server von Daten Vorgängen in ADO.net](sql-server-data-operations.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

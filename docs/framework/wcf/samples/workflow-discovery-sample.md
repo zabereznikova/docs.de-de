@@ -2,12 +2,12 @@
 title: Beispiel für Workflowsuche
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: b3a2d88028f3854746d4e1d2fad80aae4f6be7be
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c6210472b594aec02bdf47f472a1a8b1823230c
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143485"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202074"
 ---
 # <a name="workflow-discovery-sample"></a>Beispiel für Workflowsuche
 Dieses Beispiel veranschaulicht, wie ein Workflowdienst erkennbar gemacht wird, und wie eine benutzerdefinierte Codeaktivität erstellt wird, die nach einem bestimmten Dienst sucht.  
@@ -20,15 +20,15 @@ Dieses Beispiel veranschaulicht, wie ein Workflowdienst erkennbar gemacht wird, 
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. In diesem Beispiel werden HTTP-Endpunkte verwendet, für die die Ausführung über die richtigen URL-ACLs verfügen muss (Details finden Sie unter [Konfigurieren von HTTP und HTTPS).](../feature-details/configuring-http-and-https.md) Wenn der folgende Befehl an einer Eingabeaufforderung auf höherer Ebene ausgeführt wird, sollten die entsprechenden ACLs hinzugefügt werden. Wenn Ihre Shell das Variablenformat nicht versteht, ersetzen Sie Ihre Domäne und Ihren Benutzernamen durch die folgenden Argumente.  
+1. In diesem Beispiel werden HTTP-Endpunkte verwendet, die zum Ausführen der richtigen URL-ACLs erforderlich sind (Weitere Informationen finden Sie unter [Konfigurieren von http und HTTPS](../feature-details/configuring-http-and-https.md) ). Wenn der folgende Befehl an einer Eingabeaufforderung auf höherer Ebene ausgeführt wird, sollten die entsprechenden ACLs hinzugefügt werden. Wenn die Shell das Variablen Format nicht versteht, ersetzen Sie die Domäne und den Benutzernamen durch die folgenden Argumente.  
   
-     **netsh http urlaclhttp://+:8000/ url= user=%DOMAIN%\\%UserName%**  
+    `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\WorkflowDiscovery`

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 635c06a03107b33134b015e2643c5281dd86798b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a3338a08d06320acdc2acb0647bc91541448d7d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180013"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201072"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Übersicht über TextPattern und eingebettete Objekte
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "79180013"
   
  In dieser Übersicht wird beschrieben, wie von der [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] eingebettete Objekte oder untergeordnete Elemente innerhalb eines Textdokuments oder Containers verfügbar gemacht werden.  
   
- In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] einem eingebetteten Objekt ist jedes Element, das nicht textbezogene Grenzen hat. z. B. ein Bild, ein Hyperlink, eine Tabelle oder ein Dokumenttyp, z. B. eine Microsoft Excel-Tabelle oder eine Microsoft Windows Media-Datei. Dies weicht von der Standarddefinition ab, in der Elemente in einer Anwendung erstellt und einer anderen eingebettet bzw. mit einer anderen verknüpft sind. Ob das Objekt innerhalb der ursprünglichen Anwendung bearbeitet werden kann, ist im Kontext der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]nicht relevant.  
+ Bei [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] einem eingebetteten Objekt handelt es sich um ein beliebiges Element mit nicht-Text Grenzen, z. b. ein Bild, einen Hyperlink, eine Tabelle oder einen Dokumenttyp, z. b. eine Microsoft Excel-Tabelle oder eine Microsoft Windows Media-Datei Dies weicht von der Standarddefinition ab, in der Elemente in einer Anwendung erstellt und einer anderen eingebettet bzw. mit einer anderen verknüpft sind. Ob das Objekt innerhalb der ursprünglichen Anwendung bearbeitet werden kann, ist im Kontext der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]nicht relevant.  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Eingebettete Objekte und die Benutzeroberflächenautomatisierungs-Struktur  
@@ -43,7 +43,7 @@ Beispiel für einen Textstream mit eingebetteten Objekten und deren Bereichsabsc
   
  Wenn der Inhalt eines Textbereichs durchlaufen werden muss, ist eine Reihe von Hintergrundschritten erforderlich, um die <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> -Methode erfolgreich auszuführen.  
   
-1. Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist notwendig, um Mehrdeutigkeiten in <xref:System.Windows.Automation.Text.TextUnit> Situationen zu entfernen, in denen ein Textbereich Grenzen überschreitet, z. B. `{The URL https://www.microsoft.com is embedded in text` wenn "-" und "-" die Textbereichsendpunkte sind.  
+1. Der Textbereich ist normalisiert. Dies bedeutet, dass dieser auf einen degenerierten Bereich am <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> -Endpunkt reduziert ist, wodurch der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt überflüssig wird. Dieser Schritt ist erforderlich, um Mehrdeutigkeit in Situationen zu beseitigen, in denen ein Textbereich <xref:System.Windows.Automation.Text.TextUnit> Grenzen umfasst, z `{The URL https://www.microsoft.com is embedded in text` . b. wobei "{" und "}" die Endpunkte des Text Bereichs sind.  
   
 2. Der resultierende Bereich wird im <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> zurück an den Anfang der angeforderten <xref:System.Windows.Automation.Text.TextUnit> -Grenze verschoben.  
   
@@ -51,7 +51,7 @@ Beispiel für einen Textstream mit eingebetteten Objekten und deren Bereichsabsc
   
 4. Anschließend wird der Bereich von einem degenerierten Bereichszustand erweitert, indem der <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkt um eine angeforderte <xref:System.Windows.Automation.Text.TextUnit> -Grenze verschoben wird.  
   
- ![Bereichsanpassungen durch Verschieben & ExpandToEnclosingUnit](./media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
+ ![Bereichs Anpassungen durch Verschieben & expandumeinclosingunit](./media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosingUnit()  
   
 <a name="Common_Scenarios"></a>
@@ -64,7 +64,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-### <a name="hyperlink"></a>Link  
+### <a name="hyperlink"></a>Hyperlink  
 
 **Beispiel 1: Ein Textbereich, der einen eingebetteten Textlink enthält**
   
@@ -75,11 +75,11 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Gibt die Zeichenfolge `The URL https://www.microsoft.com is embedded in text` zurück.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Gibt das den Textbereich einschließende, innerste <xref:System.Windows.Automation.AutomationElement> zurück, in diesem Fall das <xref:System.Windows.Automation.AutomationElement> , das den Textanbieter darstellt.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Gibt ein <xref:System.Windows.Automation.AutomationElement> zurück, das das Linksteuerelement darstellt.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetChildren` -Methode zurückgegebene Objekt ist.|Gibt den Bereichhttps://www.microsoft.comzurück, der " darstellt.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetChildren` -Methode zurückgegebene Objekt ist.|Gibt den Bereich zurück, der darstellt `https://www.microsoft.com` .|  
   
  **Beispiel 2: Ein Textbereich, der einen eingebetteten Textlink nur teilweise enthält**  
   
- Die `https://{[www]}` URL ist in Text eingebettet.  
+ Die URL `https://{[www]}` ist in den Text eingebettet.  
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
@@ -87,7 +87,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Gibt das den Textbereich einschließende, innerste <xref:System.Windows.Automation.AutomationElement> zurück, in diesem Fall das Linksteuerelement.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Gibt `null` zurück, da der Textbereich nicht die gesamte URL-Zeichenfolge umfasst.|  
   
-**Beispiel 3 : Ein Textbereich, der teilweise den Inhalt eines Textcontainers umfasst. Der Textcontainer verfügt über einen eingebetteten Text-Hyperlink, der nicht Teil des Textbereichs ist.**  
+**Beispiel 3: ein Textbereich, der den Inhalt eines Text Containers teilweise umfasst. Der Text Container enthält einen eingebetteten Text Hyperlink, der nicht Teil des Text Bereichs ist.**  
   
 `{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
@@ -95,24 +95,24 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Gibt die Zeichenfolge „Die URL“ zurück.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Gibt das den Textbereich einschließende, innerste <xref:System.Windows.Automation.AutomationElement> zurück, in diesem Fall das <xref:System.Windows.Automation.AutomationElement> , das den Textanbieter darstellt.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> mit den Parametern (TextUnit.Word, 1).|Verschiebt den Textbereichsabschnitt nach „http“, da der Text des Links aus einzelnen Wörtern besteht. In diesem Fall wird der Link nicht als einzelnes Objekt behandelt.<br /><br /> Die URL "[http]" ist in Text eingebettet.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> mit den Parametern (TextUnit.Word, 1).|Verschiebt den Textbereichsabschnitt nach „http“, da der Text des Links aus einzelnen Wörtern besteht. In diesem Fall wird der Link nicht als einzelnes Objekt behandelt.<br /><br /> Die URL {[http]} ist in den Text eingebettet.|  
   
 <a name="Image"></a>
 ### <a name="image"></a>Image  
  **Beispiel 1: Ein Textbereich, der ein eingebettetes Bild enthält**  
   
- "Das ![eingebettete Bildbeispiel](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") ist in Text eingebettet.  
+ {Das ![Beispiel Image Embedded Image](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") ist in Text eingebettet.  
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Gibt die Zeichenfolge „Das Bild ist in den Text eingebettet“ zurück. Ein dem Bild zugeordneter Alternativtext (ALT) kann nicht im Textstream miteingeschlossen werden.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Gibt das den Textbereich einschließende, innerste <xref:System.Windows.Automation.AutomationElement> zurück, in diesem Fall das <xref:System.Windows.Automation.AutomationElement> , das den Textanbieter darstellt.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Gibt ein <xref:System.Windows.Automation.AutomationElement> zurück, das das Bildsteuerelement darstellt.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> -Methode zurückgegebene Objekt ist.|Gibt den degenerierten Bereich zurück, der "![Embedded Image Example](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")" darstellt.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> -Methode zurückgegebene Objekt ist.|Gibt den degenerierten Bereich zurück, der "![eingebettetes Bildbeispiel](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")" darstellt.|  
   
- **Beispiel 2 : Ein Textbereich, der teilweise den Inhalt eines Textcontainers umfasst. Der Textcontainer verfügt über ein eingebettetes Bild, das nicht Teil des Textbereichs ist.**  
+ **Beispiel 2: ein Textbereich, der den Inhalt eines Text Containers teilweise umfasst. Der Text Container verfügt über ein eingebettetes Bild, das nicht Teil des Text Bereichs ist.**  
   
- "Das Bild" ![Eingebettetes Bildbeispiel](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") ist in Text eingebettet.  
+ {Das Image} Das ![eingebettete Bildbeispiel](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") ist in den Text eingebettet.  
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
@@ -128,7 +128,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |Zelle mit Bild|Zelle mit Text|  
 |---------------------|--------------------|  
 |![Beispiel für eingebettetes Bild](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
-|![Beispiel 2 für eingebettetes Bild](./media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|J|  
+|![Beispiel 2 für eingebettetes Bild](./media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
 |![Beispiel 3 für eingebettetes Bild](./media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Bild für Z|Z|  
   
  **Beispiel 1: Abrufen des Textcontainers aus dem Inhalt einer Zelle**  
@@ -136,7 +136,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> mit den Parametern (0,0)|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Inhalt der Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetItem` -Methode zurückgegebene Objekt ist.|Gibt den Bereich zurück, der das ![Bild Embedded Image Example](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")umfasst.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetItem` -Methode zurückgegebene Objekt ist.|Gibt den Bereich zurück, der das Bildbeispiel für Bild ![eingebettete Bilder](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")umfasst.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `RangeFromChild` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement, das TableItemPattern unterstützt.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `GetEnclosingElement` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabelle darstellt.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `GetEnclosingElement` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Textanbieter darstellt.|  
@@ -148,7 +148,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> mit den Parametern {1,1}.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Inhalt der Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetItem` -Methode zurückgegebene Objekt ist.|Gibt „Y“ zurück.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Automation.TextPattern>
 - <xref:System.Windows.Automation.Text.TextPatternRange>
@@ -157,4 +157,4 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 - [Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung](access-embedded-objects-using-ui-automation.md)
 - [Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung](expose-the-content-of-a-table-using-ui-automation.md)
 - [Durchlaufen von Text mit Benutzeroberflächenautomatisierung](traverse-text-using-ui-automation.md)
-- [TextPattern-Such- und Auswahlbeispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
+- [Beispiel für TextPattern-Suche und-Auswahl](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
