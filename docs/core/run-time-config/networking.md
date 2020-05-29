@@ -3,12 +3,12 @@ title: Netzwerkkonfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die das Netzwerk für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 8d02087ad7260cc78c096090bf3b06a716d34678
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6b5e03b127f95911b712b66c0be8a4f5a2929fc2
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989102"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761940"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>Laufzeitkonfigurationsoptionen für Netzwerke
 
@@ -16,7 +16,7 @@ ms.locfileid: "80989102"
 
 - Konfiguriert, ob der Support für das HTTP/2-Protokoll aktiviert ist
 
-- Standard: Deaktiviert (`false`)
+- Wenn Sie diese Einstellung weglassen, ist die Unterstützung für das HTTP/2-Protokoll deaktiviert. Dies entspricht der Einstellung des Werts auf `false`.
 
 - Eingeführt in .NET Core 3.0
 
@@ -32,7 +32,7 @@ ms.locfileid: "80989102"
   > [!NOTE]
   > Möglicherweise verwenden Sie allgemeine Netzwerk-APIs, anstatt die <xref:System.Net.Http.HttpClientHandler>-Klasse direkt zu instanziieren. Diese Einstellung wirkt sich auch darauf aus, welcher HTTP-Protokollstapel von allgemeinen Netzwerk-APIs verwendet wird, einschließlich <xref:System.Net.Http.HttpClient> und [HttpClientFactory](https://docs.microsoft.com/previous-versions/aspnet/hh995280(v%3dvs.118)).
 
-- Standard: Verwenden von <xref:System.Net.Http.SocketsHttpHandler> (`true`)
+- Wenn Sie diese Einstellung weglassen, verwendet <xref:System.Net.Http.HttpClientHandler> <xref:System.Net.Http.SocketsHttpHandler>. Dies entspricht der Einstellung des Werts auf `true`.
 
 - Sie können diese Einstellung programmgesteuert konfigurieren, indem Sie die <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>-Methode aufrufen.
 

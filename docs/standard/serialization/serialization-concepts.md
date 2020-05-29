@@ -1,13 +1,14 @@
 ---
 title: Serialisierungskonzepte
+description: Mit der Serialisierung kann der Zustand eines Objekts erfasst werden, sodass eine Kopie erstellt oder ein Objekt nach Wert von einer Anwendungsdomäne an eine andere gesendet werden kann.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 1a7fa7c3e5561fc9e48cf627a703abc747a72ba0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 0592dee188f1c1e5a429438c594d045f8ba268c6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159831"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378738"
 ---
 # <a name="serialization-concepts"></a>Serialisierungskonzepte
 Warum ist es sinnvoll, die Serialisierung zu verwenden? Die beiden wichtigsten Gründe bestehen darin, dass der Objektstatus auf einem Speichermedium dauerhaft gespeichert werden soll, damit zu einem späteren Zeitpunkt eine genaue Kopie angefertigt werden kann, und dass das Objekt als Wert von einer Anwendungsdomäne zu einer anderen Anwendungsdomäne übertragen werden soll. Die Serialisierung wird beispielsweise eingesetzt, um den Sitzungsstatus in ASP.NET zu speichern und Objekte in die Zwischenablage von Windows&#160;Forms zu kopieren. Sie wird auch vom Remotingsystem verwendet, um Objekte als Wert von einer Anwendungsdomäne an eine andere zu übergeben.

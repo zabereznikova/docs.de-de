@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Serialisieren eines Objekts'
+description: In diesem Artikel wird das Serialisieren eines Objekts gezeigt. Wählen Sie ein Transportformat aus, in dem der XML-Stream entweder als Stream oder Datei gespeichert werden soll.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 3e24d890d47747c51086214530073fc551321079
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 63446df3fa2c931c839eda91c648cee961715f93
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159883"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377558"
 ---
 # <a name="how-to-serialize-an-object"></a>Vorgehensweise: Serialisieren eines Objekts
 Wenn Sie ein Objekt serialisieren möchten, erstellen Sie zuerst das zu serialisierende Objekt und legen dann dessen öffentliche Eigenschaften und Felder fest. Dazu müssen Sie das Transportformat angeben, in dem der XML-Stream gespeichert werden soll: als Stream oder als Datei. Wenn der XML-Stream beispielsweise in einer permanenten Form gespeichert werden muss, erstellen Sie ein <xref:System.IO.FileStream>-Objekt.  
@@ -53,4 +54,4 @@ Wenn Sie ein Objekt serialisieren möchten, erstellen Sie zuerst das zu serialis
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [How to: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [How to: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md).

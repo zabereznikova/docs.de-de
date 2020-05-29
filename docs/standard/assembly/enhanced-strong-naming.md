@@ -1,16 +1,17 @@
 ---
 title: Verbesserte starke Namen
+description: Herkömmliche Signaturen mit starken Namen für Assemblys in .NET Framework haben Einschränkungen. Erfahren Sie mehr über verbesserte starke Namen.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 720eda86ef0555127da422b2f44a414e8bbfb1b7
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141170"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378953"
 ---
 # <a name="enhanced-strong-naming"></a>Verbesserte starke Namen
 Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum Identifizieren von Assemblys. In der Regel wird eine digitale Signatur mit öffentlichem Schlüssel verwendet, um die Integrität von Daten sicherzustellen, die von einem Absender (Signaturgeber) an einen Empfänger (Überprüfer) übergeben werden. Diese Signatur wird als eindeutige Identität für eine Assembly verwendet und gewährleistet, dass Verweise auf die Assembly nicht mehrdeutig sind. Die Assembly wird als Teil des Buildprozesses signiert und anschließend überprüft, wenn sie geladen wird.  
@@ -131,6 +132,6 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](create-use-strong-named.md)

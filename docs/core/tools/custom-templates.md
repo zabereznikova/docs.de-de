@@ -2,13 +2,13 @@
 title: Benutzerdefinierte Vorlagen für dotnet new
 description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten von .NET-Projekten und -Dateien.
 author: thraka
-ms.date: 06/14/2019
-ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/20/2020
+ms.openlocfilehash: 19855c99b240b66dfa819e70d4a1bee5c8ed14ed
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73420882"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761914"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
@@ -16,7 +16,10 @@ Das [.NET Core SDK](https://dotnet.microsoft.com/download) enthält viele Vorlag
 
 Sie können benutzerdefinierte Vorlagen aus NuGet-Paketen in jedem NuGet-Feed installieren, indem Sie direkt auf eine NuGet-Datei des Typs *.nupkg* verweisen, oder indem Sie ein Dateisystemverzeichnis angeben, das die Vorlage enthält. Das Vorlagenmodul bietet Features, mit denen Sie Werte ersetzen, Dateien ein- oder ausschließen und benutzerdefinierte Verarbeitungsvorgänge ausführen können, wenn Ihre Vorlage verwendet wird.
 
-Die Vorlagen-Engine ist Open Source, und das Onlinecoderepository befindet sich unter [dotnet/templating](https://github.com/dotnet/templating/) auf GitHub. Navigieren Sie zum Repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples), wo sie Beispielvorlagen finden. Weitere Vorlagen, einschließlich Drittanbietervorlagen, finden Sie auf GitHub unter [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new). Weitere Informationen zum Erstellen und Verwenden von benutzerdefinierten Vorlagen finden Sie unter [How to create your own templates for dotnet new (Erstellen Ihrer eigenen Vorlage für dotnet new)](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) und im [GitHub-Repositorywiki dotnet/templating](https://github.com/dotnet/templating/wiki).
+Die Vorlagen-Engine ist Open Source, und das Onlinecoderepository befindet sich unter [dotnet/templating](https://github.com/dotnet/templating/) auf GitHub. Weitere Vorlagen, einschließlich Drittanbietervorlagen, finden Sie auf GitHub unter [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new). Weitere Informationen zum Erstellen und Verwenden von benutzerdefinierten Vorlagen finden Sie unter [How to create your own templates for dotnet new (Erstellen Ihrer eigenen Vorlage für dotnet new)](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) und im [GitHub-Repositorywiki dotnet/templating](https://github.com/dotnet/templating/wiki).
+
+> [!NOTE]
+> Vorlagenbeispiele finden Sie im [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)-GitHub-Repository. Obwohl diese Beispiele eine gute Ressource sind, um zu lernen, wie die Vorlagen funktionieren, wird das Repository archiviert und nicht mehr verwaltet. Die Beispiele sind möglicherweise veraltet und funktionieren nicht mehr.
 
 Eine exemplarische Vorgehensweise zum Erstellen einer Vorlage finden Sie im Tutorial [Create a custom template for dotnet new (in englischer Sprache)](../tutorials/cli-templates-create-item-template.md).
 
@@ -35,7 +38,7 @@ Eine Vorlage besteht aus den folgenden Teilen:
 - Quelldateien und -ordner
 - Konfigurationsdatei (*template.json*)
 
-### <a name="source-files-and-folders"></a>Quelldateien und -ordnern
+### <a name="source-files-and-folders"></a>Quelldateien und -ordner
 
 Die Quelldateien und -ordner enthalten die Dateien und Ordner, von denen Sie möchten, dass sie vom Vorlagenmodul verwendet werden, wenn der `dotnet new <TEMPLATE>`-Befehl ausgeführt wird. Die Vorlagen-Engine wurde so entwickelt, dass sie *ausführbare Projekte* als Quellcode verwendet, um Projekte zu erzeugen. Dies hat mehrere Vorteile:
 
@@ -52,7 +55,7 @@ Dateien, die anhand der Vorlage generiert werden, können basierend auf der Logi
 
 Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichnis der Vorlage platziert. Die Datei bietet der Vorlagen-Engine Konfigurationsinformationen. Die Mindestkonfiguration erfordert die in der folgenden Tabelle aufgelisteten Member, was zum Erstellen einer funktionsfähigen Vorlage ausreicht.
 
-| Member            | Geben Sie Folgendes ein:          | Beschreibung |
+| Member            | Typ          | Beschreibung |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Das JSON-Schema für die Datei *template.json*. Editor, die JSON-Schemas unterstützen, ermöglichen Features zum Bearbeiten von JSON-Dateien, wenn das Schema angegeben ist. [Visual Studio-Code](https://code.visualstudio.com/) erfordert z.B., dass dieser Member IntelliSense aktiviert. Verwenden Sie den Wert `http://json.schemastore.org/template`. |
 | `author`          | string        | Der Autor der Vorlage. |
@@ -248,7 +251,7 @@ Nachdem eine Vorlage installiert wurde, verwenden Sie die Vorlage, indem Sie den
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Create a custom template for dotnet new (tutorial) (Erstellen einer benutzerdefinierten Vorlage für dotnet new (Tutorial))](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/templating GitHub repo Wiki (GitHub-Repositorywiki dotnet/templating)](https://github.com/dotnet/templating/wiki)

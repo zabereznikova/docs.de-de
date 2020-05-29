@@ -2,12 +2,12 @@
 title: Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung der Abfrageseite von CQRS im Microservice für Bestellungen in eShopOnContainers mit Dapper
 ms.date: 10/08/2018
-ms.openlocfilehash: 49f42a5035bab38f800f3ec5ea24b01fde0d2964
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 71db95e6fc17475693183be9c6854884cd331ce1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988751"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614408"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 
@@ -19,11 +19,11 @@ Dieser Ansatz ist einfach, wie in Abbildung 7-3 zu sehen ist. Die API-Schnittste
 
 **Abbildung 7-3**. Der einfachste Ansatz für Abfragen in einem CQRS-Microservice
 
-Der einfachste Ansatz für die Abfrageseite in einem vereinfachten CQRS-Ansatz kann durch einfaches Abfragen der Datenbank mit einem Micro-ORM wie Dapper und Rückgabe dynamischer ViewModels implementiert werden. Durch Abfragedefinitionen wird die Datenbank abgefragt und ein ViewModel dynamisch für jede Abfrage erstellt. Da Abfragen idempotent sind, ändern sie Daten auch bei mehrmaliger Ausführung nicht. Daher sind keine Einschränkungen durch DDD-Muster (beispielsweise Aggregate und andere Muster) notwendig, die auf der Transaktionsseite verwendet werden. Dies ist auch der Grund, weshalb Abfragen vom Transaktionsbereich getrennt sind. Die von der Benutzeroberfläche benötigten Daten können durch eine einfache Abfrage der Datenbank abgerufen werden. Außerdem wird ein dynamisches ViewModel zurückgegeben, das über keine Klasse verfügt und nur in den SQL-Anweisungen statisch definiert werden muss.
+Der einfachste Ansatz für die Abfrageseite in einem vereinfachten CQRS-Ansatz kann durch Abfragen der Datenbank mit einem Micro-ORM wie Dapper und Rückgabe dynamischer ViewModels implementiert werden. Durch Abfragedefinitionen wird die Datenbank abgefragt und ein ViewModel dynamisch für jede Abfrage erstellt. Da Abfragen idempotent sind, ändern sie Daten auch bei mehrmaliger Ausführung nicht. Daher sind keine Einschränkungen durch DDD-Muster (beispielsweise Aggregate und andere Muster) notwendig, die auf der Transaktionsseite verwendet werden. Dies ist auch der Grund, weshalb Abfragen vom Transaktionsbereich getrennt sind. Die von der Benutzeroberfläche benötigten Daten können durch eine Abfrage der Datenbank abgerufen werden. Außerdem wird ein dynamisches ViewModel zurückgegeben, das über keine Klasse verfügt und nur in den SQL-Anweisungen statisch definiert werden muss.
 
-Da dieser Ansatz sehr einfach ist, kann der für die Abfrageseite benötigte Code (beispielsweise Code, der auf Micro-ORMs wie [Dapper](https://github.com/StackExchange/Dapper) zurückgreift) [innerhalb desselben WEB-API-Projekts](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) implementiert werden. Dies ist in Abbildung 7-4 zu sehen. Die Abfragen werden im **Ordering.API**-Microserviceprojekt in der Projektmappe „eShopOnContainers“ definiert.
+Da dieser Ansatz einfach ist, kann der für die Abfrageseite benötigte Code (beispielsweise Code, der auf Micro-ORMs wie [Dapper](https://github.com/StackExchange/Dapper) zurückgreift) [innerhalb desselben Web-API-Projekts](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) implementiert werden. Dies ist in Abbildung 7-4 zu sehen. Die Abfragen werden im **Ordering.API**-Microserviceprojekt in der Projektmappe „eShopOnContainers“ definiert.
 
-![Screenshot des Ordners „Abfragen“ des Ordering.API-Projekts.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
+![Screenshot des Ordners „Queries“ des Ordering.API-Projekts.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Abbildung 7-4**. Abfragen im Microservice für Bestellungen in eShopOnContainers
 
@@ -31,27 +31,27 @@ Da dieser Ansatz sehr einfach ist, kann der für die Abfrageseite benötigte Cod
 
 Da durch Abfragen Daten abgerufen werden, die für die Clientanwendungen erforderlich sind, kann der Rückgabetyp auf der Grundlage der zurückgegebenen Daten speziell auf Clients festgelegt werden. Diese Modelle bzw. Datentransferobjekte (DTOs) werden als ViewModels bezeichnet.
 
-Die zurückgegebenen Daten (also die ViewModels) können das Ergebnis einer Verknüpfung von Daten aus mehreren Entitäten oder Tabellen in der Datenbank oder einer Verknüpfung mehrerer Aggregate sein, die im Domänenmodell für den Transaktionsbereich definiert wurden. Da Sie in diesem Fall Abfragen unabhängig vom Domänenmodell erstellen, werden die Aggregatsgrenzen und -einschränkungen vollständig ignoriert, sodass alle erforderlichen Tabellen und Spalten abgefragt werden können. Dieser Ansatz sorgt dafür, dass Entwickler, die Abfragen erstellen oder aktualisieren, flexibler und produktiver arbeiten können.
+Die zurückgegebenen Daten (also die ViewModels) können das Ergebnis einer Verknüpfung von Daten aus mehreren Entitäten oder Tabellen in der Datenbank oder einer Verknüpfung mehrerer Aggregate sein, die im Domänenmodell für den Transaktionsbereich definiert wurden. Da Sie in diesem Fall Abfragen unabhängig vom Domänenmodell erstellen, werden die Aggregatsgrenzen und -einschränkungen ignoriert, sodass alle erforderlichen Tabellen und Spalten abgefragt werden können. Dieser Ansatz sorgt dafür, dass Entwickler, die Abfragen erstellen oder aktualisieren, flexibler und produktiver arbeiten können.
 
 Die ViewModels können als statische Typen in Klassen definiert werden. Alternativ lassen sie sich auch auf der Grundlage bereits durchgeführter Abfragen dynamisch erstellen, was im Microservice für Bestellungen implementiert wurde. Hierdurch wird die Entwicklungsagilität gefördert.
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Verwenden von Dapper als Micro-ORM zum Ausführen von Abfragen
 
-Für Abfragen kann ein beliebiges Micro-ORM, Entity Framework Core oder sogar einfaches „ADO.NET für Abfragen“ verwendet werden. In der Beispielanwendung wurde Dapper für den Microservice für Bestellungen in eShopOnContainers ausgewählt, da dieses Tool ein gutes Beispiel für einen bekannten Micro-ORM ist. Da es sich um ein sehr schlankes Framework handelt, lassen sich mit diesen SQL-Abfragen leistungseffizient ausführen. Mit Dapper können Sie eine SQL-Abfrage schreiben, die auf mehrere Tabellen zugreifen und diese verknüpfen kann.
+Für Abfragen kann ein beliebiges Micro-ORM, Entity Framework Core oder sogar einfaches „ADO.NET für Abfragen“ verwendet werden. In der Beispielanwendung wurde Dapper für den Microservice für Bestellungen in eShopOnContainers ausgewählt, da dieses Tool ein gutes Beispiel für einen bekannten Micro-ORM ist. Da es sich um ein schlankes Framework handelt, lassen sich damit SQL-Abfragen leistungseffizient ausführen. Mit Dapper können Sie eine SQL-Abfrage schreiben, die auf mehrere Tabellen zugreifen und diese verknüpfen kann.
 
 Bei dem Framework handelt es sich um ein Open Source-Projekt, das ursprünglich von Sam Saffron entworfen wurde und nun Teil des Grundgerüsts von [Stack Overflow](https://stackoverflow.com/) ist. Um Dapper zu verwenden, müssen Sie das Tool mithilfe des [Dapper-NuGet-Pakets](https://www.nuget.org/packages/Dapper) (s. Abbildung unten) installieren:
 
 ![Screenshot des Dapper-Pakets in der NuGet-Paketeansicht.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
-Außerdem ist das Hinzufügen einer using-Anweisung erforderlich, damit der Code auf die Dapper-Erweiterungsmethoden zugreifen kann.
+Außerdem ist das Hinzufügen einer `using`-Anweisung erforderlich, damit der Code auf die Dapper-Erweiterungsmethoden zugreifen kann.
 
-Wenn Sie Dapper in Ihrem Code verwenden, nutzen Sie direkt die <xref:System.Data.SqlClient.SqlConnection>-Klasse im <xref:System.Data.SqlClient>-Namespace. Über die QueryAsync-Methode und andere Erweiterungsmethoden, die die <xref:System.Data.SqlClient.SqlConnection>-Klasse erweitern, können Sie Abfragen leicht und schnell ausführen.
+Wenn Sie Dapper in Ihrem Code verwenden, nutzen Sie direkt die <xref:System.Data.SqlClient.SqlConnection>-Klasse im <xref:System.Data.SqlClient>-Namespace. Über die QueryAsync-Methode und andere Erweiterungsmethoden, die die <xref:System.Data.SqlClient.SqlConnection>-Klasse erweitern, können Sie Abfragen schnell ausführen.
 
 ## <a name="dynamic-versus-static-viewmodels"></a>Dynamische und statische ViewModels im Vergleich
 
 ViewModels, die von serverseitigen Anwendungen an Client-Apps zurückgegeben werden, können als DTOs (Datentransferobjekte) betrachtet werden, die sich möglicherweise von den internen Domänenentitäten des Entitätsmodells unterscheiden, da ViewModels die für die Anwendung benötigten Daten enthalten. In vielen Fällen können Sie daher Daten aus unterschiedlichen Domänenentitäten aggregieren und die ViewModels so erstellen, dass die Datenanforderungen der Clientanwendung erfüllt werden.
 
-Die ViewModels bzw. DTOs können explizit als Klassen zur Verwaltung von Daten definiert werden. Ein Beispiel dafür ist die `OrderSummary`-Klasse, die im Codeausschnitt unten gezeigt wird. Alternativ können Sie auch dynamische ViewModels oder DTOs basierend auf den von Ihren Abfragen zurückgegebenen Attributen als dynamischer Typ zurückgeben.
+Diese ViewModels oder DTOs können explizit (als Dateninhaberklassen) definiert werden, wie z. B. die `OrderSummary`-Klasse, die in einem späteren Codeausschnitt dargestellt wird. Alternativ können Sie einfach dynamische ViewModels oder dynamische DTOs zurückgeben, die auf den Attributen basieren, die von den Abfragen als dynamischer Typ zurückgegeben werden.
 
 ### <a name="viewmodel-as-dynamic-type"></a>ViewModel als dynamischer Typ
 
@@ -134,7 +134,7 @@ public class OrderQueries : IOrderQueries
 
 #### <a name="describe-response-types-of-web-apis"></a>Beschreiben von Web-API-Antworttypen
 
-Entwickler, die Web-APIs und Microservices nutzen, interessieren sich v.a. für die zurückgegebenen Antworttypen und Fehlercodes (wenn diese nicht den Standardwerten entsprechen). Diese werden in XML-Kommentaren und Datenanmerkungen verarbeitet.
+Entwickler, die Web-APIs und Microservices nutzen, interessieren sich vor allem für die zurückgegebenen Antworttypen und Fehlercodes (wenn diese nicht den Standardwerten entsprechen). Diese Antworttypen werden in XML-Kommentaren und Datenanmerkungen verarbeitet.
 
 Ohne eine geeignete Dokumentation auf der Swagger-Benutzeroberfläche weiß der Consumer nicht, welche Typen zurückgegeben werden oder welche HTTP-Statuscodes zurückgegeben werden können. Dieses Problem lässt sich durch Hinzufügen von <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType> beheben, wodurch Swashbuckle umfangreichere Informationen über das API-Rückgabemodell und die API-Rückgabewerte generiert. Dies wird im folgenden Codeausschnitt gezeigt:
 
@@ -181,7 +181,7 @@ In der folgenden Abbildung wird gezeigt, wie ResponseType-Informationen auf der 
 
 **Abbildung 7-5**. Swagger-Benutzeroberfläche mit Antworttypen und möglichen HTTP-Statuscodes von einer Web-API
 
-In der Abbildung werden mehrere Beispielwerte, die auf den ViewModel-Typen basieren, und mögliche HTTP-Statuscodes angezeigt, die zurückgegeben werden können.
+Die Abbildung zeigt mehrere Beispielwerte, die auf den ViewModel-Typen basieren, und mögliche HTTP-Statuscodes, die zurückgegeben werden können.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

@@ -1,5 +1,6 @@
 ---
 title: Versionstolerante Serialisierung
+description: In .NET Framework 2.0 wurde Version Tolerant Serialization eingeführt, eine Gruppe von Funktionen, die das Ändern serialisierbarer Typen vereinfachen.
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348434"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762590"
 ---
 # <a name="version-tolerant-serialization"></a>Versionstolerante Serialisierung
 
@@ -27,7 +28,7 @@ In Version&#160;1.0 und Version 1.1 von .NET&#160;Framework war das Erstellen se
 - Ältere Versionen einer Anwendung lösten bei dem Versuch, neue Versionen des alten Typs zu deserialisieren, Ausnahmen aus.
 - Neuere Versionen einer Anwendung lösten bei dem Versuch, ältere Versionen eines Typs mit fehlenden Daten zu deserialisieren, Ausnahmen aus.
 
-Bei VTS (Version Tolerant Serialization) handelt es sich um eine Gruppe von Funktionen, die in .NET&#160;Framework&#160;2.0 eingeführt wurde, um das möglicherweise im Laufe der Zeit erforderliche Ändern serialisierbarer Typen zu vereinfachen. Die VTS-Funktionen sind insbesondere für Klassen aktiviert, auf die das <xref:System.SerializableAttribute>-Attribut angewendet wurde, einschließlich generischer Typen. VTS ermöglicht das Hinzufügen neuer Felder zu diesen Klassen, ohne die Kompatibilität mit anderen Versionen des Typs zu beeinträchtigen. Informationen zu einer funktionierenden Beispielanwendung finden Sie unter [Technologiebeispiel für versionstolerante Serialisierung](version-tolerant-serialization-technology-sample.md).
+Bei VTS (Version Tolerant Serialization) handelt es sich um eine Gruppe von Funktionen, die in .NET&#160;Framework&#160;2.0 eingeführt wurde, um das möglicherweise im Laufe der Zeit erforderliche Ändern serialisierbarer Typen zu vereinfachen. Die VTS-Funktionen sind insbesondere für Klassen aktiviert, auf die das <xref:System.SerializableAttribute>-Attribut angewendet wurde, einschließlich generischer Typen. VTS ermöglicht das Hinzufügen neuer Felder zu diesen Klassen, ohne die Kompatibilität mit anderen Versionen des Typs zu beeinträchtigen. Informationen zu einer funktionierenden Beispielanwendung finden Sie unter [Technologiebeispiel für versionstolerante Serialisierung](basic-serialization-technology-sample.md).
 
 Die VTS-Funktionen werden bei der Verwendung von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> aktiviert. Zudem sind alle Funktionen mit Ausnahme der Toleranz für externe Daten auch bei der Verwendung von <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> aktiviert. Weitere Informationen zur Verwendung dieser Klassen für die Serialisierung finden Sie unter [Binäre Serialisierung](binary-serialization.md).
 

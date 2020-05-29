@@ -3,12 +3,12 @@ title: Klassen und Objekte – Tutorial zur Einführung in C#
 description: Erstellen Ihres ersten C#-Programms und Erforschen objektorientierter Konzepte
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5edb2d7b11caace2d794b7958dfeb75ef502ee2b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156592"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396865"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Erkunden der objektorientierten Programmierung mit Klassen und Objekten
 
@@ -47,7 +47,7 @@ Diese Datei enthält die Definition eines ***Bankkontos***. In der objektorienti
 
 ## <a name="define-the-bank-account-type"></a>Definieren des Bankkontotyps
 
-Sie können beginnen, indem Sie die Grundlagen einer Klasse erstellen, die dieses Verhalten definiert. Die sollte wie folgt aussehen:
+Sie können beginnen, indem Sie die Grundlagen einer Klasse erstellen, die dieses Verhalten definiert. Erstellen Sie eine neue Datei mit dem Befehl **File:New**. Nennen Sie sie *BankAccount.cs*. Fügen Sie der Datei *BankAccount.cs* folgenden Code hinzu:
 
 ```csharp
 using System;
@@ -79,7 +79,7 @@ Bevor wir fortfahren, lassen Sie uns anschauen, was Sie erstellt haben.  Die `na
 
 Die erste zu implementierende Funktion ist das Eröffnen eines Bankkontos. Wenn ein Kunde ein Konto eröffnet, muss er einen anfänglichen Kontostand bereitstellen und Informationen über den/die Besitzer dieses Kontos angeben.
 
-Das Erstellen eines neuen Objekts des `BankAccount`-Typs bedeutet Definieren eines ***Konstruktors***, der diese Werte zuweist. Ein ***Konstruktor*** ist ein Member, der den gleichen Namen wie die Klasse hat. Er wird verwendet, um Objekte dieses Klassentyps zu initialisieren. Fügen Sie dem `BankAccount`-Typ folgenden Konstruktor hinzu:
+Das Erstellen eines neuen Objekts des `BankAccount`-Typs bedeutet Definieren eines ***Konstruktors***, der diese Werte zuweist. Ein ***Konstruktor*** ist ein Member, der den gleichen Namen wie die Klasse hat. Er wird verwendet, um Objekte dieses Klassentyps zu initialisieren. Fügen Sie dem `BankAccount`-Typ den folgenden Konstruktor hinzu,. Platzieren Sie folgenden Code oberhalb der Deklaration von `MakeDeposit`:
 
 ```csharp
 public BankAccount(string name, decimal initialBalance)
@@ -96,17 +96,17 @@ var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
-Geben Sie `dotnet run` ein, und beobachten Sie, was passiert.  
+Wir führen nun aus, was wir bisher erstellt haben. Wenn Sie Visual Studio verwenden, wählen Sie **Ohne Debuggen starten** im Menü **Ausführen** aus. Wenn Sie eine Befehlszeile verwenden, geben Sie `dotnet run` in dem Verzeichnis ein, wo Sie das Projekt erstellt haben.
 
 Haben Sie bemerkt, dass die Kontonummer leer ist? Es ist höchste Zeit, dies zu ändern. Die Kontonummer sollten zugewiesen werden, wenn das Objekt erstellt wird. Jedoch sollte nicht der Aufrufende für das Erstellen verantwortlich sein. Der `BankAccount`-Klassencode sollte wissen, wie neue Kontonummern zugewiesen werden.  Eine einfache Möglichkeit hierzu ist, mit einer 10-stelligen Zahl zu beginnen. Lassen Sie sie bei jeder Erstellung eines neuen Kontos erhöhen. Speichern Sie schließlich die aktuelle Kontonummer, wenn ein Objekt erstellt wird.
 
-Fügen Sie der `BankAccount`-Klasse die folgende Memberdeklaration hinzu:
+Fügen Sie der `BankAccount`-Klasse eine Memberdeklaration hinzu. Platzieren Sie die folgende Codezeile nach der öffnenden geschweiften Klammer `{` am Anfang der `BankAccount`-Klasse:
 
 ```csharp
 private static int accountNumberSeed = 1234567890;
 ```
 
-Dies ist ein Datenelement. Es ist `private`, d.h. der Zugriff darauf ist nur über Code in der `BankAccount`-Klasse möglich. Dies ist eine Möglichkeit, die öffentlichen Verantwortlichkeiten (z. B. Besitz einer Kontonummer) von der privaten Implementierung (wie Kontonummern generiert werden) zu trennen. Es ist auch als `static` definiert, wird also von allen `BankAccount`-Objekten gemeinsam genutzt. Der Wert einer nicht statischen Variable ist für jede Instanz des `BankAccount`-Objekts eindeutig. Fügen Sie dem Konstruktor die folgenden zwei Zeilen hinzu, um die Kontonummer zuzuweisen:
+Dies ist ein Datenelement. Es ist `private`, d.h. der Zugriff darauf ist nur über Code in der `BankAccount`-Klasse möglich. Dies ist eine Möglichkeit, die öffentlichen Verantwortlichkeiten (z. B. Besitz einer Kontonummer) von der privaten Implementierung (wie Kontonummern generiert werden) zu trennen. Es ist auch als `static` definiert, wird also von allen `BankAccount`-Objekten gemeinsam genutzt. Der Wert einer nicht statischen Variable ist für jede Instanz des `BankAccount`-Objekts eindeutig. Fügen Sie dem Konstruktor die folgenden zwei Zeilen hinzu, um die Kontonummer zuzuweisen. Platzieren Sie sie nach der Zeile, die `this.Balance = initialBalance` enthält:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -123,7 +123,7 @@ Zunächst erstellen wir einen neuen Typ, um eine Transaktion darzustellen. Dies 
 
 [!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-Nun fügen wir eine <xref:System.Collections.Generic.List%601> von `Transaction`-Objekten der `BankAccount`-Klasse hinzu. Fügen Sie die folgende Deklaration hinzu:
+Nun fügen wir eine <xref:System.Collections.Generic.List%601> von `Transaction`-Objekten der `BankAccount`-Klasse hinzu. Fügen Sie die folgende Deklaration nach dem Konstruktor in ihrer *BankAccount.cs*-Datei hinzu:
 
 [!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
@@ -141,7 +141,7 @@ Dieses Beispiel zeigt einen wichtigen Aspekt der ***Eigenschaften***. Jetzt bere
 
 Implementieren Sie nun die `MakeDeposit`- und `MakeWithdrawal`-Methode. Diese Methoden erzwingen die letzten beiden Regeln: Der anfängliche Kontostand muss positiv sein, und eine Abbuchung darf nicht in einem negativen Kontostand resultieren.
 
-Dies führt das Konzept der ***Ausnahmen*** ein. Standardmäßig wird eine Ausnahme ausgelöst, um anzuzeigen, dass eine Methode ihre Aufgabe nicht erfolgreich ausführen kann. Der Typ der Ausnahme und die zugeordnete Nachricht beschreiben den Fehler. Hier löst die `MakeDeposit`-Methode eine Ausnahme aus, wenn der Einzahlungsbetrag negativ ist. Die `MakeWithdrawal`-Methode löst eine Ausnahme aus, wenn der Abbuchungsbetrag negativ ist, oder wenn aus der Abbuchung ein negativer Kontostand resultiert:
+Dies führt das Konzept der ***Ausnahmen*** ein. Standardmäßig wird eine Ausnahme ausgelöst, um anzuzeigen, dass eine Methode ihre Aufgabe nicht erfolgreich ausführen kann. Der Typ der Ausnahme und die zugeordnete Nachricht beschreiben den Fehler. Hier löst die `MakeDeposit`-Methode eine Ausnahme aus, wenn der Einzahlungsbetrag negativ ist. Die `MakeWithdrawal`-Methode löst eine Ausnahme aus, wenn der Abbuchungsbetrag negativ ist, oder wenn aus der Abbuchung ein negativer Kontostand resultiert. Fügen Sie nach der Deklaration der `allTransactions`-Liste den folgenden Code hinzu:
 
 [!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
@@ -151,7 +151,7 @@ Der Konstruktor sollte so geändert werden, dass er eine anfängliche Transaktio
 
 [!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
-<xref:System.DateTime.Now?displayProperty=nameWithType> ist eine Eigenschaft, die das aktuelle Datum und die Uhrzeit zurückgibt. Testen Sie dies durch Hinzufügen von ein paar Einzahlungen und Abbuchungen in Ihrer `Main`-Methode:
+<xref:System.DateTime.Now?displayProperty=nameWithType> ist eine Eigenschaft, die das aktuelle Datum und die Uhrzeit zurückgibt. Testen Sie dies durch Hinzufügen von ein paar Einzahlungen und Abbuchungen in Ihrer `Main`-Methode und verfolgen Sie den Code, der einen neuen `BankAccount` erstellt:
 
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
@@ -160,7 +160,7 @@ account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
-Testen Sie anschließend, ob Sie Fehlerbedingungen abfangen, indem Sie versuchen, ein Konto mit einem negativen Kontostand zu erstellen:
+Testen Sie anschließend, ob Sie Fehlerbedingungen abfangen, indem Sie versuchen, ein Konto mit einem negativen Kontostand zu erstellen. Fügen Sie den folgenden Code nach dem vorhergehenden Code hinzu:
 
 ```csharp
 // Test that the initial balances must be positive.
@@ -175,7 +175,7 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-Sie verwenden die [Anweisungen `try` und `catch`](../../language-reference/keywords/try-catch.md), um einen Codeblock zu markieren, der Ausnahmen auslösen kann, und um die erwarteten Fehler abzufangen. Mit dem gleichen Verfahren können Sie den Code testen, der bei einem negativen Kontostand eine Ausnahme auslöst:
+Sie verwenden die [Anweisungen `try` und `catch`](../../language-reference/keywords/try-catch.md), um einen Codeblock zu markieren, der Ausnahmen auslösen kann, und um die erwarteten Fehler abzufangen. Mit dem gleichen Verfahren können Sie den Code testen, der bei einem negativen Kontostand eine Ausnahme auslöst. Fügen Sie den folgenden Code am Ende der `Main`-Methode hinzu:
 
 ```csharp
 // Test for a negative balance.
@@ -206,10 +206,10 @@ Fügen Sie diese Zeile *Program.cs* zum Testen hinzu:
 Console.WriteLine(account.GetAccountHistory());
 ```
 
-Geben Sie `dotnet run` ein, um die Ergebnisse anzuzeigen.
+Führen Sie das Programm aus, um die Ergebnisse zu sehen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie nicht weiterkommen, sehen Sie sich die Quelle für dieses Tutorial [in unserem GitHub-Repository](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/) an.
+Wenn Sie nicht weiterkommen, sehen Sie sich die Quelle für dieses Tutorial [in unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/) an.
 
 Herzlichen Glückwunsch! Sie haben unsere Tutorials zur Einführung in C# vollständig abgeschlossen. Wenn Sie mehr erfahren möchten, sehen Sie sich weitere [Tutorials](../index.md) an.

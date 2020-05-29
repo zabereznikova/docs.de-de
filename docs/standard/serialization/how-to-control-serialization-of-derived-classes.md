@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen'
+description: Sie können den XML-Stream anpassen, indem Sie eine Klasse von einer vorhandenen Klasse ableiten und die XmlSerializer-Instanz anweisen, wie die neue Klasse serialisiert werden soll.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: b9a8bd52b7dfe7a9bf43061d8f44747b3a847c68
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159922"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379125"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen
 Neben der Verwendung des **XmlElementAttribute**-Attributs zum Ändern eines XML-Elementnamens lässt sich die Objektserialisierung auch auf andere Weise anpassen. Sie können den XML-Stream ebenfalls anpassen, indem Sie von einer vorhandenen Klasse ableiten und die <xref:System.Xml.Serialization.XmlSerializer>-Instanz anweisen, wie die neue Klasse serialisiert werden soll.  
@@ -239,5 +240,5 @@ public class Run
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [How to: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [How to: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md).
 - [How to: Angeben eines alternativen Elementnamens für einen XML-Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

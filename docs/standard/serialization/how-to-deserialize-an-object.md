@@ -1,5 +1,6 @@
 ---
 title: 'Gewusst wie: Deserialisieren eines Objekts mithilfe von XMlSerializer'
+description: Erfahren Sie, wie ein Objekt deserialisiert wird. Das Transportformat bestimmt, ob ein Stream- oder Dateiobjekt erstellt wird.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: c24ba466a208fe5abdbf565169c41c4ee3f47482
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559897"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379115"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>Gewusst wie: Deserialisieren eines Objekts mithilfe von XMlSerializer
 

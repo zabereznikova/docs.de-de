@@ -1,16 +1,17 @@
 ---
 title: Assemblyspeicherort
+description: Der Speicherort einer .NET-Assembly bestimmt, wie die CLR sie findet, und ob sie für andere Assemblys freigegeben werden kann.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-ms.openlocfilehash: 0b84aba749625f0f86027cd9d09a5e9a2229a3f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ab3804b14b586e1430d654f4da32a310bcb6cc9
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73733125"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379897"
 ---
 # <a name="assembly-location"></a>Assemblyspeicherort
 Der Speicherort einer Assembly bestimmt, ob die Common Language Runtime diese finden kann, wenn auf sie verwiesen wird. Ebenso bestimmt er, ob die Assembly für andere Assemblys freigegeben werden kann. Sie können eine Assembly in den folgenden Speicherorten bereitstellen:
@@ -27,7 +28,7 @@ Der Speicherort einer Assembly bestimmt, ob die Common Language Runtime diese fi
 
      Eine auf einem HTTP-Server bereitgestellte Assembly muss einen starken Namen haben. Sie zeigen im Codebasisabschnitt Ihrer Anwendungskonfigurationsdatei auf die Assembly.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von Assemblys](create.md)
 - [Globaler Assemblycache](../../framework/app-domains/gac.md)

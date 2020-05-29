@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Deaktivieren des Features zur Umgehung von starken Namen'
+description: Die Umgehung von starken Namen überspringt die Signaturüberprüfung in voll vertrauenswürdigen Domänen in .NET. Sie können diese Funktion für eine einzelne Anwendung oder alle Anwendungen außer Kraft setzen.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-name bypass feature
 - strong-named assemblies, loading into trusted application domains
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
-ms.openlocfilehash: a4c4ae7ea61a659d3bede532da3c1bdaea448873
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1914997b322591d8deda13d00192bc5f60d81ca2
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141098"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378483"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Vorgehensweise: Deaktivieren des Features zur Umgehung von starken Namen
 Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in ein vollständig vertrauenswürdiges <xref:System.AppDomain>-Objekt geladen wird, wie etwa die Standard-<xref:System.AppDomain> für die `MyComputer`-Zone. Dies wird Strong-Name-Bypass-Funktion genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Einzige Einschränkung ist die Tatsache, dass die Assembly vollständig vertrauenswürdig sein muss, da deren Zone vollständig vertrauenswürdig ist. Da der starke Name unter diesen Bedingungen kein bestimmender Faktor ist, gibt es auch keinen Grund, ihn zu validieren. Das Umgehen der Validierung einer Signatur mit starkem Namen führt zu deutlichen Verbesserungen in der Leistung.  

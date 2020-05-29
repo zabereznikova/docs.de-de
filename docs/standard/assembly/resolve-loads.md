@@ -1,5 +1,6 @@
 ---
 title: Auflösen von Assemblyladevorgängen
+description: Dieser Artikel beschreibt das .NET-Ereignis AppDomain.AssemblyResolve. Verwenden Sie das Ereignis für Anwendungen, die Kontrolle beim Laden von Assemblys benötigen.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], resolving loads
@@ -12,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d6314fae266505fbb4410aaaa351973070ab3811
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36f36b60a3a113c6b020cc1042c786c4091e567b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156438"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378665"
 ---
 # <a name="resolve-assembly-loads"></a>Auflösen von Assemblyladevorgängen
 .NET stellt das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> für Anwendungen bereit, die mehr Kontrolle beim Laden von Assemblys benötigen. Durch das Behandeln dieses Ereignisses kann Ihre Anwendung eine Assembly außerhalb der Prüfpfade in einen Kontext laden, vor dem Laden zwischen verschiedenen Assemblyversionen wählen, eine dynamische Assembly ausgeben und diese zurückgeben und so weiter. In diesem Thema erhalten Sie eine Anleitung zum Behandeln des Ereignisses <xref:System.AppDomain.AssemblyResolve>.  

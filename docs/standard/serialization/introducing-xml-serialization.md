@@ -1,5 +1,6 @@
 ---
 title: Details der XML-Serialisierung
+description: Durch Serialisierung wird ein Objekt in ein Format konvertiert, das transportiert werden kann. Dieser Artikel bietet eine Übersicht über die XML-Serialisierung und die XmlSerializer-Klasse.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d644e80cbf5ac17fca4df039d915c847a1936217
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588457"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421266"
 ---
 # <a name="xml-serialization"></a>XML-Serialisierung
 

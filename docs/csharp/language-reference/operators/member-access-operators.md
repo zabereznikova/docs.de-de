@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: 59e01b17d78032714803629d503a92ba86a20fdc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624864"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394645"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatoren und Ausdrücke für den Memberzugriff (C#-Referenz)
 
@@ -159,7 +159,7 @@ if (handler != null)
 }
 ```
 
-Dies ist eine threadsichere Möglichkeit, um sicherzustellen, dass nur ein `handler` ungleich NULL aufgerufen wird. Da Delegatinstanzen unveränderlich sind, kann kein Thread den Wert ändern, auf den von der lokalen `handler`-Variable verwiesen wird. Insbesondere wenn der von einem anderen Thread ausgeführte Code das Abonnement des `PropertyChanged`-Ereignisses aufhebt und `PropertyChanged` zu `null` wird, bevor `handler` aufgerufen wird, bleibt der Wert unverändert, auf den von `handler` verwiesen wird. Der `?.`-Operator wertet seinen linken Operanden nicht mehr als einmal aus, um sicherzustellen, dass er nicht in `null` geändert werden kann, nachdem bestätigt wurde, dass er ungleich NULL ist.
+Dies ist eine threadsichere Möglichkeit, um sicherzustellen, dass nur ein `handler` ungleich NULL aufgerufen wird. Da Delegatinstanzen unveränderlich sind, kann kein Thread das Objekt ändern, auf das von der lokalen `handler`-Variable verwiesen wird. Insbesondere wenn der von einem anderen Thread ausgeführte Code das Abonnement des `PropertyChanged`-Ereignisses aufhebt und `PropertyChanged` zu `null` wird, bevor `handler` aufgerufen wird, bleibt das Objekt unverändert, auf das von `handler` verwiesen wird. Der `?.`-Operator wertet seinen linken Operanden nicht mehr als einmal aus, um sicherzustellen, dass er nicht in `null` geändert werden kann, nachdem bestätigt wurde, dass er ungleich NULL ist.
 
 ## <a name="invocation-expression-"></a>Aufrufausdruck „()“
 

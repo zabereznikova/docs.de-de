@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d3cfce474023907eda0bc40b692e4bbb65ffb96
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602723"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802833"
 ---
 # <a name="-main-c-compiler-options"></a>-main (C#-Compileroptionen)
 Diese Option gibt die Klasse an, die den Einstiegspunkt des Programms enthält, wenn mehr als eine Klasse eine **Main**-Methode enthält.  
@@ -42,8 +42,19 @@ Diese Option gibt die Klasse an, die den Einstiegspunkt des Programms enthält, 
   
 3. Ändern Sie die Eigenschaft **Startobjekt**.  
   
-     Um diese Compileroption programmgesteuert festzulegen, sehen Sie sich <xref:VSLangProj80.ProjectProperties3.StartupObject%2A> an.  
+     Wie Sie diese Compileroption programmgesteuert festlegen, erfahren Sie unter <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.  
   
+### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>So legen Sie diese Compileroption fest, indem Sie die CSPROJ-Datei manuell bearbeiten
+  
+Sie können diese Option festlegen, indem Sie die CSPROJ-Datei bearbeiten und innerhalb des `PropertyGroup`-Abschnitts ein Element `StartupObject` hinzufügen. Zum Beispiel:
+
+```
+  <PropertyGroup>
+    ...
+    <StartupObject>MyApplication.Core.Program</StartupObject>
+  </PropertyGroup>
+```
+
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie `t2.cs` und `t3.cs`, und geben Sie so an, dass die Methode **Main** in `Test2` gefunden wird:  
   
@@ -51,7 +62,7 @@ Diese Option gibt die Klasse an, die den Einstiegspunkt des Programms enthält, 
 csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

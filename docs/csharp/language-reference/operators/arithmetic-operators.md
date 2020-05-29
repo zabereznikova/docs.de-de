@@ -1,7 +1,7 @@
 ---
 title: 'Arithmetische Operatoren: C#-Referenz'
 description: Erfahren Sie mehr über C#-Operatoren, die Multiplikations-, Divisions-, Rest-, Additions- und Subtraktionsoperationen mit numerischen Typen ausführen.
-ms.date: 03/27/2019
+ms.date: 05/11/2020
 author: pkulikov
 f1_keywords:
 - ++_CSharpKeyword
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d004ab466bc053ed286d85bcbee2766d8a087286
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738731"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207244"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Arithmetische Operatoren (C#-Referenz)
 
@@ -42,6 +42,8 @@ Die folgenden Operatoren führen arithmetische Operationen mit Operanden des num
 - Binäre Operatoren: [`*` (Multiplikation)](#multiplication-operator-), [`/` (Division)](#division-operator-), [`%` (Rest)](#remainder-operator-), [`+` (Addition)](#addition-operator-) und [`-` (Subtraktion)](#subtraction-operator--)
 
 Diese Operatoren werden alle von numerischen [Ganzzahl](../builtin-types/integral-numeric-types.md)- und [Gleitkommatypen](../builtin-types/floating-point-numeric-types.md) unterstützt.
+
+Bei integralen Typen werden diese Operatoren (außer den Operatoren `++` und `--`) für die Typen `int`, `uint`, `long` und `ulong` definiert. Wenn Operanden andere integrale Typen aufweisen (`sbyte`, `byte`, `short`, `ushort` oder `char`), werden ihre Werte in den Typ `int` konvertiert. Hierbei handelt es sich auch um den Ergebnistyp einer Operation. Wenn Operanden abweichende integrale Typen oder Gleitkommatypen aufweisen, werden ihre Werte in den am besten geeigneten enthaltenden Typ konvertiert, falls solch ein Typ vorhanden ist. Weitere Informationen finden Sie im Abschnitt [Numerische Heraufstufungen](~/_csharplang/spec/expressions.md#numeric-promotions) der [Spezifikation für die Sprache C#](~/_csharplang/spec/introduction.md). Die `++`- und `--`-Operatoren werden für alle numerischen integralen und Gleitkommatypen sowie den [char](../builtin-types/char.md)-Typ definiert.
 
 ## <a name="increment-operator-"></a>Inkrementoperator ++
 

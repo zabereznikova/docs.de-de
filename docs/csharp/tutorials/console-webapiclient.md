@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249167"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420382"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -77,9 +77,7 @@ using System.Threading.Tasks;
 
 Wenn Sie zu diesem Zeitpunkt Ihr Projekt erstellen, erhalten Sie eine Warnung für diese Methode, weil sie keine `await`-Operatoren enthält und synchron ausgeführt wird. Ignorieren Sie dies für den Moment. Sie fügen `await`-Operatoren hinzu, wenn Sie die Methode vervollständigen.
 
-Als Nächstes benennen Sie den in der `namespace`-Anweisung definierten Namespace vom Standardwert `ConsoleApp` in `WebAPIClient` um. Später definieren wir eine `repo`-Klasse in diesem Namespace.
-
-Aktualisieren Sie jetzt die `Main`-Methode, um diese Methode aufzurufen. Die `ProcessRepositories`-Methode gibt einen Task zurück. Sie dürfen das Programm nicht beenden, bevor dieser Task abgeschlossen wurde. Daher müssen Sie die Signatur von `Main` ändern. Fügen Sie den `async`-Modifizierer hinzu, und ändern Sie den Rückgabetyp in `Task`. Fügen Sie dann im Textkörper der Methode einen Aufruf von `ProcessRepositories`hinzu. Fügen Sie diesem Methodenaufruf das Schlüsselwort `await` hinzu:
+Aktualisieren Sie als Nächstes die Methode `Main`, um die Methode `ProcessRepositories` aufzurufen. Die `ProcessRepositories`-Methode gibt einen Task zurück. Sie dürfen das Programm nicht beenden, bevor dieser Task abgeschlossen wurde. Daher müssen Sie die Signatur von `Main` ändern. Fügen Sie den `async`-Modifizierer hinzu, und ändern Sie den Rückgabetyp in `Task`. Fügen Sie dann im Textkörper der Methode einen Aufruf von `ProcessRepositories`hinzu. Fügen Sie diesem Methodenaufruf das Schlüsselwort `await` hinzu:
 
 ```csharp
 static async Task Main(string[] args)
@@ -170,9 +168,10 @@ var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos
 var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 ```
 
-Sie verwenden einen neuen Namespace, sodass Sie diesen ebenfalls am Anfang der Datei hinzufügen müssen:
+Sie verwenden neue Namespaces, sodass Sie diesen ebenfalls am Anfang der Datei hinzufügen müssen:
 
 ```csharp
+using System.Collections.Generic;
 using System.Text.Json;
 ```
 

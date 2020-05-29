@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124584"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209642"
 ---
 # <a name="net-class-libraries"></a>.NET-Klassenbibliotheken
 
@@ -32,11 +32,11 @@ Plattformspezifische Bibliotheken waren der primäre Klassenbibliothekstyp für 
 
 ## <a name="portable-class-libraries"></a>Portable Klassenbibliotheken
 
-Portable Bibliotheken werden auf mehreren .NET-Implementierungen unterstützt. Sie können dennoch Abhängigkeiten von einer bekannten Ausführungsumgebung annehmen, die Umgebung ist jedoch eine synthetische, die durch die Schnittmenge konkreter .NET-Implementierungen gebildet wird. Dies bedeutet, dass es sich bei verfügbar gemachten APIs und Plattformannahmen um eine Teilmenge dessen handelt, was einer plattformspezifischen Bibliothek zur Verfügung stünde.
+Portable Bibliotheken werden auf mehreren .NET-Implementierungen unterstützt. Sie können dennoch Abhängigkeiten von einer bekannten Ausführungsumgebung annehmen, die Umgebung ist jedoch eine synthetische, die durch die Schnittmenge konkreter .NET-Implementierungen gebildet wird. Verfügbar gemachte APIs und Plattformannahmen sind eine Teilmenge dessen, was einer plattformspezifischen Bibliothek zur Verfügung stünde.
 
-Wenn Sie eine portable Bibliothek erstellen, wählen Sie eine Plattformkonfiguration. Dabei handelt es sich um den Satz von Plattformen, die Sie unterstützen müssen (z.B. .NET Framework 4.5 +, Windows Phone 8.0 +). Je höher die Zahl der Plattformen ist, für deren Unterstützung Sie sich entscheiden, desto weniger APIs und Plattformannahmen sind möglich, der kleinste gemeinsame Nenner. Dieses Merkmal erscheint vielleicht auf den ersten Blick verwirrend, da Benutzer häufig denken: „Mehr ist besser“ und dann feststellen müssen, dass eine höhere Zahl unterstützter Plattformen zu weniger verfügbaren APIs führt.
+Wenn Sie eine portable Bibliothek erstellen, wählen Sie eine Plattformkonfiguration. Die Plattformkonfiguration ist ein Satz von Plattformen, die Sie unterstützen müssen (z. B. .NET Framework 4.5+, Windows Phone 8.0+). Je höher die Zahl der Plattformen ist, für deren Unterstützung Sie sich entscheiden, desto weniger APIs und Plattformannahmen sind möglich, der kleinste gemeinsame Nenner. Dieses Merkmal erscheint vielleicht auf den ersten Blick verwirrend, da Benutzer häufig denken: „Mehr ist besser“ und dann feststellen müssen, dass eine höhere Zahl unterstützter Plattformen zu weniger verfügbaren APIs führt.
 
-Viele Bibliotheksentwickler sind von der Produktion mehrerer plattformspezifischer Bibliotheken aus einer Quelle (mit bedingten Kompilierungsdirektiven) zu portablen Bibliotheken gewechselt. Es gibt [mehrere Ansätze](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) für den Zugriff auf plattformspezifische Funktionalität in portablen Bibliotheken, wobei das [Lockvogelangebot](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) im Moment das gängigste Verfahren ist.
+Viele Bibliotheksentwickler sind von der Produktion mehrerer plattformspezifischer Bibliotheken aus einer Quelle (mit bedingten Kompilierungsdirektiven) zu portablen Bibliotheken gewechselt. Es gibt [mehrere Ansätze](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) für den Zugriff auf plattformspezifische Funktionalität in portablen Bibliotheken, wobei das Lockvogelangebot im Moment das gängigste Verfahren ist.
 
 ## <a name="net-standard-class-libraries"></a>.NET Standard-Klassenbibliotheken
 
@@ -49,7 +49,7 @@ Der .NET Standard macht nicht die gesamte Funktionalität von .NET Framework ver
 Die folgenden Plattformen unterstützen .NET Standard-Bibliotheken:
 
 * .NET Core
-* .NET Framework
+* .NET Framework
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android
 * Universelle Windows-Plattform (UWP)
@@ -57,8 +57,8 @@ Die folgenden Plattformen unterstützen .NET Standard-Bibliotheken:
 * Windows Phone
 * Windows Phone Silverlight
 
-Weitere Informationen finden Sie im Artikel [.NET Standard](net-standard.md).
+Weitere Informationen finden Sie unter [.NET Standard](net-standard.md).
 
 ## <a name="mono-class-libraries"></a>Mono-Klassenbibliotheken
 
-Klassenbibliotheken, einschließlich der drei oben beschriebenen Typen von Bibliotheken, werden unter Mono unterstützt. Mono ist häufig (richtigerweise) als eine plattformübergreifende Implementierung von Microsoft .NET Framework angesehen worden. Dies lag teilweise daran, dass plattformspezifische .NET Framework-Bibliotheken in der Mono-Runtime ohne Änderung oder erneute Kompilierung ausgeführt werden konnten. Dieses Merkmal existierte vor der Erstellung portabler Klassenbibliotheken, und es war naheliegend, so binäre Portabilität zwischen .NET Framework und Mono zu ermöglichen (obwohl es nur in einer Richtung funktionierte).
+Klassenbibliotheken, einschließlich der drei zuvor beschriebenen Typen von Bibliotheken, werden unter Mono unterstützt. Mono ist häufig (richtigerweise) als eine plattformübergreifende Implementierung von .NET Framework angesehen worden. Dies lag teilweise daran, dass plattformspezifische .NET Framework-Bibliotheken in der Mono-Runtime ohne Änderung oder erneute Kompilierung ausgeführt werden konnten. Dieses Merkmal existierte vor der Erstellung portabler Klassenbibliotheken, und es war naheliegend, so binäre Portabilität zwischen .NET Framework und Mono zu ermöglichen (obwohl es nur in einer Richtung funktionierte).

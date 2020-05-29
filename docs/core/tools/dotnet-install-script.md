@@ -1,13 +1,13 @@
 ---
 title: Dotnet-Installationsskripts
 description: Erfahren Sie mehr über die dotnet-Installationsskripts zur Installation des .NET Core SDK und der Shared Runtime.
-ms.date: 01/23/2020
-ms.openlocfilehash: 591413a17db577560bd0324995066c8ea7a35895
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.date: 04/30/2020
+ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463677"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802724"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -63,6 +63,8 @@ Bevor Sie das Skript ausführen, installieren Sie die erforderlichen [Abhängigk
 
 Installieren Sie eine bestimmte Version mithilfe des Arguments `-Version|--version`. Die Version muss als dreiteilige Version (z. B. `2.1.0`) angegeben werden. Wenn nicht angegeben, wird die `latest`-Version verwendet.
 
+Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Sie laden nur die gezippten Binärdateien herunter und kopieren sie in einen Ordner. Wenn Sie möchten, dass die Registrierungsschlüsselwerte aktualisiert werden, verwenden Sie die .NET Core-Installationsprogramme.
+
 ## <a name="options"></a>Optionen
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
@@ -98,7 +100,7 @@ Installieren Sie eine bestimmte Version mithilfe des Arguments `-Version|--versi
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  Gibt den Installationspfad an. Das Verzeichnis wird erstellt, wenn es nicht vorhanden ist. Der Standardwert ist *%LocalAppData%\Microsoft\dotnet*. Binärdateien werden direkt im Verzeichnis platziert.
+  Gibt den Installationspfad an. Das Verzeichnis wird erstellt, wenn es nicht vorhanden ist. Der Standardwert ist *%LocalAppData%\Microsoft\dotnet* unter Windows und */usr/share/dotnet* unter Linux/macOS. Binärdateien werden direkt im Verzeichnis platziert.
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 

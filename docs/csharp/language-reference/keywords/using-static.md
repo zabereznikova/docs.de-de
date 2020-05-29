@@ -4,12 +4,12 @@ ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bffbc026e8f7937db91d42b7a06a5b7bba3bc2f8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712948"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396157"
 ---
 # <a name="using-static-directive-c-reference"></a>using static-Anweisung (C#-Referenz)
 
@@ -19,7 +19,7 @@ Die `using static`-Anweisung legt einen Typ fest, auf dessen statische Member un
 using static <fully-qualified-type-name>;
 ```
 
-Hier steht *fully-qualified-type-name* für den Namen des Typs, auf dessen statische Member und geschachtelte Typen verwiesen werden kann, ohne einen Typnamen anzugeben. Wenn Sie keinen vollqualifizierten Typnamen angeben (der vollständige Namespacename mit dem Typnamen), generiert C# den Compilerfehler [CS0246](../compiler-messages/cs0246.md): „The type or namespace name 'type/namespace' could not be found (are you missing a using directive or an assembly reference?)“ (Der Typ- oder Namespacename „Typ/Namespace“ konnte nicht gefunden werden (haben Sie eine using-Anweisung oder einen Assemblyverweis vergessen?)).
+Hier steht *fully-qualified-type-name* für den Namen des Typs, auf dessen statische Member und geschachtelte Typen verwiesen werden kann, ohne einen Typnamen anzugeben. Wenn Sie keinen vollqualifizierten Typnamen angeben (der vollständige Namespacename zusammen mit dem Typnamen), generiert C# den Compilerfehler [CS0246](../compiler-messages/cs0246.md): Der Typ- oder Namespacename "type/namespace" konnte nicht gefunden werden (fehlt eine using-Direktive oder ein Assemblyverweis?).
 
 Die `using static`-Anweisung gilt für jeden Typ, der über statische Member (oder geschachtelte Typen) verfügt, auch wenn er ebenfalls über Instanzmember verfügt. Instanzmember können jedoch nur über die Typinstanz aufgerufen werden.
 
@@ -49,7 +49,7 @@ Im folgenden Beispiele wird die `using static`-Direktive verwendet, um die stati
 
 In diesem Beispiel hätte die `using static`-Direktive auch auf den Typ <xref:System.Double> angewendet werden können. Dadurch wäre es möglich geworden, die Methode <xref:System.Double.TryParse(System.String,System.Double@)> aufzurufen, ohne einen Typnamen anzugeben. Hierdurch wird allerdings weniger lesbarer Code generiert, da die `using static`-Anweisungen überprüft werden müssen, um zu bestimmen, welche `TryParse`-Methode eines numerischen Typs aufgerufen wird.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [using-Anweisung](using-directive.md)
 - [C#-Referenz](../index.md)

@@ -1,5 +1,6 @@
 ---
 title: Versionsverwaltung für Assemblys
+description: Weitere Informationen zur Versionsverwaltung für .NET-Assemblys. Jede Version einer Assembly, die die CLR verwendet, wird auf Assemblyebene erstellt.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - informational versions
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdffbcc0bbafed62228cba35e8f85fbec7f7fbab
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140182"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380084"
 ---
 # <a name="assembly-versioning"></a>Versionsverwaltung für Assemblys
 
@@ -71,7 +72,7 @@ Die Informationsversion ist eine Zeichenfolge, die zusätzliche Versionsinformat
   
 Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> dargestellt. Weitere Informationen über das Informationsversionsattribut finden Sie unter [Festlegen von Assemblyattributen](set-attributes.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [So sucht Common Language Runtime nach Assemblys](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurieren von Apps](../../framework/configure-apps/index.md)

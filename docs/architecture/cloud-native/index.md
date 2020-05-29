@@ -3,12 +3,12 @@ title: Entwickeln cloudnativer .NET-Anwendungen für Azure
 description: Leitfaden zum Erstellen cloudnativer Anwendungen, die Container, Microservices und serverlose Features von Azure nutzen.
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: 196671468e56147f714078d1671f44af21bcf327
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840883"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144382"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Entwickeln cloudnativer .NET-Anwendungen für Azure
 
@@ -34,7 +34,7 @@ Dieses Buch wird unverändert bereitgestellt und drückt die Ansichten und Meinu
 
 Einige der hier dargestellten Beispiele dienen nur zu Illustrationszwecken und sind fiktiv. Keinerlei Zuordnung oder Verbindung zu realen Gegebenheiten ist beabsichtigt oder sollte gefolgert werden.
 
-Microsoft und die auf der Webseite „Marken“ unter [https://www.microsoft.com](https://www.microsoft.com) aufgelisteten Marken sind Marken der Microsoft-Unternehmensgruppe.
+Microsoft und die auf der Webseite „Marken“ unter <https://www.microsoft.com> aufgelisteten Marken sind Marken der Microsoft-Unternehmensgruppe.
 
 Mac und macOS sind Marken von Apple Inc.
 
@@ -44,7 +44,7 @@ Alle anderen Marken und Logos sind Eigentum der jeweiligen Besitzer.
 
 Autoren:
 
-> **Rob Vettor**, Principal Cloud System Architect und IP Architect bei Microsoft – [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> **Rob Vettor**, Principal Cloud System Architect und IP Architect bei Microsoft – [thinkingincloudnative.com](https://thinkingincloudnative.com/about/)
 >
 > **Steve „ardalis“ Smith**, Software Architect und Trainer – [Ardalis.com](https://ardalis.com)
 

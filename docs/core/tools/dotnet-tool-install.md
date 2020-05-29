@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool install“
 description: Der Befehl „dotnet tool install“ installiert das angegebene .NET Core-Tool auf Ihrem Computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463362"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702817"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -55,7 +55,7 @@ Globale Tools werden standardmäßig in den folgenden Verzeichnissen installiert
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-Lokale Tools werden zur Datei *tool-manifest.json* im Verzeichnis *.config* unter dem aktuellen Verzeichnis hinzugefügt. Wenn noch keine Manifestdatei vorhanden ist, erstellen Sie sie, indem Sie den folgenden Befehl ausführen:
+Lokale Tools werden der Datei *dotnet-tools.json* im Verzeichnis *.config* unter dem aktuellen Verzeichnis hinzugefügt. Wenn noch keine Manifestdatei vorhanden ist, erstellen Sie sie, indem Sie den folgenden Befehl ausführen:
 
 ```dotnetcli
 dotnet new tool-manifest

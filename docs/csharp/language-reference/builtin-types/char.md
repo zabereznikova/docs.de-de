@@ -1,18 +1,18 @@
 ---
 title: char-Typ – C#-Referenz
-ms.date: 11/22/2019
+ms.date: 05/11/2020
 f1_keywords:
 - char
 - char_CSharpKeyword
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: a07cae6e607bb6cda965240c669c655207632298
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f771626e9777deab30e798559d847615d6124e6d
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739063"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205782"
 ---
 # <a name="char-c-reference"></a>char (C#-Referenz)
 
@@ -23,6 +23,8 @@ Das Schlüsselwort vom Typ `char` ist ein Alias für den .NET-<xref:System.Char?
 |`char`|U+0000 in U+FFFF|16 Bit|<xref:System.Char?displayProperty=nameWithType>|
 
 Der Standardwert des `char`-Typs ist `\0`, d. h. U+0000.
+
+Der `char`-Typ unterstützt [Vergleichs](../operators/comparison-operators.md)-, [Gleichheits](../operators/equality-operators.md)-, [Inkrement](../operators/arithmetic-operators.md#increment-operator-)- und [Dekrement](../operators/arithmetic-operators.md#decrement-operator---)-Operatoren. Außerdem wird für `char`-Operanden, [arithmetische](../operators/arithmetic-operators.md) und [bitweise logische](../operators/bitwise-and-shift-operators.md) Operatoren ein Vorgang für die entsprechenden Zeichencodes durchgeführt und ein Ergebnis des `int`-Typs erzeugt.
 
 Der [string](reference-types.md#the-string-type)-Typ stellt Text als Sequenz von `char`-Werten dar.
 

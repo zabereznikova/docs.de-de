@@ -1,5 +1,6 @@
 ---
 title: Serialisieren und Deserialisieren von JSON mit C# – .NET
+description: In dieser Übersicht wird die Funktionalität des System.Text.Json-Namespace zum Serialisieren in JSON und Deserialisieren aus JSON in .NET beschrieben.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 660a2831aa6a807486fc47eae880bcd11347c547
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159545"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380126"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>JSON-Serialisierung und -Deserialisierung (Marshalling und Rückgängigmachen von Marshalling) in .NET: Überblick
 
@@ -39,5 +40,5 @@ Die Bibliothek stellt außerdem Klassen für die Arbeit mit einem In-Memory-Doku
 * [Schreiben von benutzerdefinierten Konvertern für JSON-Serialisierung (Marshalling) in .NET](system-text-json-converters-how-to.md)
 * [System.Text.Json-Quellcode](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
 * [System.Text.Json-API-Referenz](xref:System.Text.Json)
-* [System.Text.Json.Serialization-API-Referenz](xref:System.Text.Json.Serialization)
+* [System.Text.Json-Serialisierungs-API-Referenz](xref:System.Text.Json.Serialization)
 <!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

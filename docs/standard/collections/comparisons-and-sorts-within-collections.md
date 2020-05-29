@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 932a5abfaf2a6cc972e84cbc3d6b930cdd716f71
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 8e4530063f14211688e5ef2d2ec4ed7e4834cdf1
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728173"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212966"
 ---
-# <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Sammlungen
+# <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Auflistungen
 
 Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Verwaltung von Auflistungen Vergleiche durch, sei es bei der Suche nach zu entfernenden Elementen oder bei der Rückgabe eines Schlüssel-Wert-Paars.
 
@@ -28,7 +28,7 @@ Auflistungen verwenden in der Regel einen Gleichheitsvergleich und/oder einen Re
 <a name="BKMK_Checkingforequality"></a>
 ## <a name="check-for-equality"></a>Durchführen von Gleichheitsüberprüfungen
 
-Methoden wie `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>und `Remove` verwenden einen Gleichheitsvergleich für die Elemente der Auflistung. Wenn die Auflistung generisch ist, werden die Elemente anhand der folgenden Richtlinien auf Gleichheit hin verglichen:
+Methoden wie `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>und `Remove` verwenden einen Gleichheitsvergleich für die Elemente der Auflistung. Wenn die Sammlung generisch ist, werden die Elemente anhand der folgenden Richtlinien auf Gleichheit verglichen:
 
 - Wenn Typ T die generische Schnittstelle <xref:System.IEquatable%601> implementiert, dann ist der Gleichheitsvergleich die <xref:System.IEquatable%601.Equals%2A> -Methode dieser Schnittstelle.
 

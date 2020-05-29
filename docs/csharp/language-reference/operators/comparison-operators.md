@@ -1,7 +1,7 @@
 ---
 title: 'Vergleichsoperatoren: C#-Referenz'
 description: Erfahren Sie mehr über C#-Vergleichsoperatoren, mit denen Sie die Reihenfolge numerischer Werte überprüfen können.
-ms.date: 04/25/2019
+ms.date: 05/11/2020
 author: pkulikov
 f1_keywords:
 - <_CSharpKeyword
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 68502205193a1fc8ab7410053e13274560ffffb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eda039d950e4be13d9c041c8bb95b6ea773b83f6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398052"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207225"
 ---
 # <a name="comparison-operators-c-reference"></a>Vergleichsoperatoren (C#-Referenz)
 
@@ -32,6 +32,8 @@ Die Vergleichsoperatoren [`<` (kleiner als)](#less-than-operator-), [`>` (größ
 
 > [!NOTE]
 > Bei den Operatoren `==`, `<`, `>`, `<=` und `>=` ist das Ergebnis eines Vorgangs gleich `false`, wenn einer der Operanden keine Zahl ist (<xref:System.Double.NaN?displayProperty=nameWithType> oder <xref:System.Single.NaN?displayProperty=nameWithType>). Das bedeutet, dass der `NaN`-Wert weder größer als noch kleiner als noch gleich einem anderen `double`-Wert (oder `float`-Wert) ist, einschließlich `NaN`. Weitere Informationen und Beispiele finden Sie im <xref:System.Double.NaN?displayProperty=nameWithType>- oder <xref:System.Single.NaN?displayProperty=nameWithType>-Referenzartikel.
+
+Der [char](../builtin-types/char.md)-Typ unterstützt auch Vergleichsoperatoren. Im Fall von `char`-Operanden werden die entsprechenden Zeichencodes verglichen.
 
 Enumerationstypen unterstützen auch Vergleichsoperatoren. Für Operanden desselben [enum](../builtin-types/enum.md)-Typs werden die entsprechenden Werte des zugrunde liegenden integralen Typs verglichen.
 
@@ -71,7 +73,7 @@ Wenn ein Typ einen der `<`- oder `>`-Operatoren überlädt, muss er sowohl `<` a
 
 Weitere Informationen finden Sie im Abschnitt [Relationale und Typtestoperatoren](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

@@ -1,5 +1,6 @@
 ---
 title: Beispiele für die XML-Serialisierung
+description: Diese Codebeispiele zeigen komplexe Szenarios, einschließlich der Verwendung der XML-Serialisierung zur Generierung eines XML-Streams, der einem XML Schema-Dokument entspricht.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 73f21c7f7d0670022d757e6c4c00280bb79709b8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349774"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379175"
 ---
 # <a name="examples-of-xml-serialization"></a>Beispiele für die XML-Serialisierung
 

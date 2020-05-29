@@ -5,25 +5,25 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bcc7e68810c97142cebca7595266a0e4a69ed51
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705391"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207936"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
   
  In C# können abgeleitete Klassen Methoden mit dem gleichen Namen wie Basisklassen-Methoden enthalten.  
-  
-- Die Basisklasse muss als [virtual](../../language-reference/keywords/virtual.md) definiert werden.  
-  
+
 - Wenn der Methode in der abgeleiteten Klasse nicht die Schlüsselwörter [new](../../language-reference/keywords/new-modifier.md) oder [override](../../language-reference/keywords/override.md) vorangestellt sind, gibt der Compiler eine Warnung aus, und die Methode verhält sich, als ob das Schlüsselwort `new` vorhanden wäre.  
   
 - Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `new` vorangestellt ist, wird die Methode als unabhängig von der Methode in der Basisklasse definiert.  
   
 - Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `override` vorangestellt ist, rufen Objekte der abgeleiteten Klasse diese Methode anstatt der Methode der Basisklasse auf.  
+
+- Um das `override`-Schlüsselwort auf die Methode in der abgeleiteten Klasse anzuwenden, muss die Basisklassenmethode [virtuell](../../language-reference/keywords/virtual.md) definiert werden.
   
 - Die Methode der Basisklasse kann mithilfe des Schlüsselworts `base` aus der Basisklasse heraus aufgerufen werden.  
   
@@ -68,17 +68,17 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../langua
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- Wenn `DoWork` für eine Instanz von `Derived` aufgerufen wird, versucht der C#-Compiler zuerst, den Aufruf mit den Versionen von `DoWork` kompatibel zu machen, die ursprünglich für `Derived` deklariert wurden. Override-Methoden werden nicht als Methoden angesehen, die für eine Klasse deklariert sind. Stattdessen sind sie neue Implementierungen einer Methode, die für eine Basisklasse deklariert wurde. Nur wenn der C#-Compiler keine Übereinstimmung des Methodenaufrufs mit dem Aufruf einer ursprünglichen Methode in `Derived` feststellen kann, versucht er, den Aufruf mit einer überschriebenen Methode mit dem gleichen Namen und kompatiblen Parametern übereinzustimmen. Beispiel:  
+ Wenn `DoWork` für eine Instanz von `Derived` aufgerufen wird, versucht der C#-Compiler zuerst, den Aufruf mit den Versionen von `DoWork` kompatibel zu machen, die ursprünglich für `Derived` deklariert wurden. Override-Methoden werden nicht als Methoden angesehen, die für eine Klasse deklariert sind. Stattdessen sind sie neue Implementierungen einer Methode, die für eine Basisklasse deklariert wurde. Nur wenn der C#-Compiler keine Übereinstimmung des Methodenaufrufs mit dem Aufruf einer ursprünglichen Methode in `Derived` feststellen kann, versucht er, den Aufruf mit einer überschriebenen Methode mit dem gleichen Namen und kompatiblen Parametern übereinzustimmen. Zum Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- Da die Variable `val` implizit in einen Double-Wert konvertiert werden kann, ruft der C#-Compiler `DoWork(double)` anstelle von `DoWork(int)` auf. Es gibt zwei Möglichkeiten, das zu vermeiden. Vermeiden Sie zuerst das Deklarieren neuer Methoden mit dem gleichen Namen wie virtuelle Methoden. Zweitens können Sie den C#-Compiler anweisen, die virtuelle Methode aufzurufen, indem Sie eine Suche nach der Liste der Basisklassenmethode durchführen lassen. Dies geschieht durch umwandeln der Instanz von `Derived` in `Base`. Da es sich um eine virtuelle Methode handelt, wird die Implementierung von `DoWork(int)` auf `Derived` aufgerufen. Beispiel:  
+ Da die Variable `val` implizit in einen Double-Wert konvertiert werden kann, ruft der C#-Compiler `DoWork(double)` anstelle von `DoWork(int)` auf. Es gibt zwei Möglichkeiten, das zu vermeiden. Vermeiden Sie zuerst das Deklarieren neuer Methoden mit dem gleichen Namen wie virtuelle Methoden. Zweitens können Sie den C#-Compiler anweisen, die virtuelle Methode aufzurufen, indem Sie eine Suche nach der Liste der Basisklassenmethode durchführen lassen. Dies geschieht durch umwandeln der Instanz von `Derived` in `Base`. Da es sich um eine virtuelle Methode handelt, wird die Implementierung von `DoWork(int)` auf `Derived` aufgerufen. Zum Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
  Weitere Beispiele für `new` und `override` finden Sie unter [Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?](./knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)

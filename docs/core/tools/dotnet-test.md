@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 04/29/2020
-ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975432"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802677"
 ---
 # <a name="dotnet-test"></a>dotnet test
 

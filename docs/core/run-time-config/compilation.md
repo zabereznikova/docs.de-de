@@ -3,12 +3,12 @@ title: Kompilierungskonfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die die Funktionsweise des JIT-Compilers für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506843"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762005"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Laufzeitkonfigurationsoptionen für die Kompilierung
 
@@ -98,7 +98,7 @@ Projektdatei:
 - Hiermit wird konfiguriert, ob der JIT-Compiler Quick JIT bei Methoden verwendet, die Schleifen enthalten.
 - Die Aktivierung von Quick JIT für Schleifen kann die Startleistung verbessern. Lange Schleifen können jedoch für lange Zeiträume in weniger optimiertem Code hängen bleiben.
 - Wenn [Quick JIT](#quick-jit) deaktiviert ist, hat diese Einstellung keine Auswirkung.
-- Standard: Deaktiviert (`false`)
+- Wenn Sie diese Einstellung weglassen, wird Quick JIT nicht für Methoden verwendet, die Schleifen enthalten. Dies entspricht der Einstellung des Werts auf `false`.
 
 | | Einstellungsname | Werte |
 | - | - | - |
@@ -136,7 +136,7 @@ Projektdatei:
 
 - Das ReadyToRun-Image konfiguriert, ob die .NET Core-Runtime vorkompilierten Code für Images mit verfügbaren ReadyToRun-Daten verwendet. Wenn Sie diese Option deaktivieren, erzwingt die Runtime eine JIT-Kompilierung für Frameworkcode.
 - Weitere Informationen finden Sie unter [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
-- Standard: Aktiviert (`1`)
+- Wenn Sie diese Einstellung weglassen, verwendet .NET ReadyToRun-Daten, sofern verfügbar. Dies entspricht der Einstellung des Werts auf `1`.
 
 | | Einstellungsname | Werte |
 | - | - | - |

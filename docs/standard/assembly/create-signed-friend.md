@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Erstellen von signierten Friend-Assemblys'
+description: Dieser Artikel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Er enthält Informationen zur .NET-Sicherheit.
 ms.date: 08/19/2019
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9912fa70014a8828e994cf528644aaa7cb351fea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b6176afed44e32911a37a0d753cea2bae7d8554e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159493"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378539"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Vorgehensweise: Erstellen von signierten Friend-Assemblys
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Beide Assemblys müssen starke Namen erhalten. Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.  

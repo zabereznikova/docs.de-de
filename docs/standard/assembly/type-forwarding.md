@@ -1,5 +1,6 @@
 ---
 title: Typweiterleitung in der Common Language Runtime
+description: Durch Typweiterleitung können Sie einen Typ in eine andere .NET-Assembly verschieben, ohne Anwendungen, die die ursprüngliche Assembly verwenden, neu kompilieren zu müssen.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], type forwarding
@@ -8,12 +9,12 @@ ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 215636a9617a2723d8ab69640c1d3e69491a7d87
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0be61bd4ce88569e22a350a9ea9490d67e74ff3
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160364"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378595"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Typweiterleitung in der Common Language Runtime
 Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben, ohne Anwendungen, die die ursprüngliche Assembly verwenden, neu kompilieren zu müssen.  
@@ -44,7 +45,7 @@ Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben
 
 4. Führen Sie für die Assembly, in der sich der Typ befand, eine Neukompilierung mit einem Verweis auf die Assembly durch, die jetzt den Typ enthält. Wenn Sie z.B. eine C#-Datei über die Befehlszeile kompilieren, geben Sie mit [-reference (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) die Assembly an, die den Typ enthält. In C++ verwenden Sie die [#using](/cpp/preprocessor/hash-using-directive-cpp)-Direktive in der Quelldatei, um die Assembly anzugeben, die den Typ enthält.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
 - [Typweiterleitung (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)

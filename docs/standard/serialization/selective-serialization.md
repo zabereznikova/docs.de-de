@@ -1,5 +1,6 @@
 ---
 title: Selektive Serialisierung
+description: In diesem Artikel wird gezeigt, wie Sie Felder mit dem NonSerialized-Attribut markieren, wodurch die Serialisierung des Feldes verhindert wird.
 ms.date: 08/07/2017
 dev_langs:
 - CSharp
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: cc5d7964d5f3268f08721593fefc07e3eff853ca
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c7203c4ea13c65f8d88c55de96988d3b1d9e9611
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159597"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379163"
 ---
 # <a name="selective-serialization"></a>Selektive Serialisierung
 Eine Klasse enthält oft Felder, die nicht serialisiert werden sollten. Angenommen, eine Klasse speichert in einer Membervariablen eine Thread-ID. Wenn die Klasse deserialisiert wird, wird der Thread, dessen ID bei der Serialisierung der Klasse gespeichert wurde, möglicherweise nicht mehr ausgeführt. Daher ist es nicht sinnvoll, diesen Wert zu serialisieren. Sie können verhindern, dass Membervariablen serialisiert werden, indem Sie sie wie folgt mit dem [NonSerialized](xref:System.NonSerializedAttribute)-Attribut markieren.  

@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989167"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378823"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -233,6 +233,8 @@ Rollforward zur höchsten Hauptversion und höchsten Nebenversion – auch dann,
 Kein Rollforward. Nur Binden an angegebene Version. Diese Richtlinie wird nicht zur allgemeinen Verwendung empfohlen, da sie die Möglichkeit eines Rollforwards zu den neuesten Patches ausschließt. Dieser Wert wird nur zu Testzwecken empfohlen.
 
 Abgesehen von der **Disable**-Einstellung verwenden alle Einstellungen die höchste verfügbare Patchversion.
+
+Wenn die angeforderte Version (wie in `.runtimeconfig.json` für die Anwendung angegeben) eine endgültige Produktversion ist, werden standardmäßig nur endgültige Produktversionen für das Rollforward berücksichtigt. Vorabversionen werden ignoriert. Wenn keine passende endgültige Produktversion vorhanden ist, werden Vorabversionen berücksichtigt. Dieses Verhalten kann durch Festlegen von `DOTNET_ROLL_FORWARD_TO_PRERELEASE=1` geändert werden. In diesem Fall werden immer alle Versionen berücksichtigt.
 
 ### <a name="build-copies-dependencies"></a>Build kopiert Abhängigkeiten
 

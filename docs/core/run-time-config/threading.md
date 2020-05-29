@@ -3,19 +3,19 @@ title: Konfigurationseinstellungen für das Threading
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die das Threading für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 68b8e93ca6ec3f708a7a627307655ada1955500a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c7c16993a07ef95223481791153b75ab2f61533
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789855"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761927"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>Laufzeitkonfigurationsoptionen für das Threading
 
 ## <a name="cpu-groups"></a>CPU-Gruppen
 
 - Hiermit wird konfiguriert, ob Threads automatisch über CPU-Gruppen verteilt werden.
-- Standard: Deaktiviert (`0`)
+- Wenn Sie diese Einstellung weglassen, werden Threads nicht über CPU-Gruppen verteilt. Dies entspricht der Einstellung des Werts auf `0`.
 
 | | Einstellungsname | Werte |
 | - | - | - |

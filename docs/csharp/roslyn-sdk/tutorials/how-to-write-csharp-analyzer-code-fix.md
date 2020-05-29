@@ -3,12 +3,12 @@ title: 'Tutorial: Schreiben Ihres ersten Analysetools und Codefixes'
 description: Dieses Tutorial enthält Schritt-für-Schritt-Anleitungen zum Erstellen eines Analysetools und eines Codefixes mithilfe des .NET Compiler SDK (Roslyn-APIs).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895448"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396279"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Schreiben Ihres ersten Analysetools und Codefixes
 
@@ -235,7 +235,7 @@ Formatieren Sie anschließend die neue Deklaration gemäß den C#-Formatierungsr
 
 [!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
-Für diesen Code ist ein neuer Namespace erforderlich. Fügen Sie die folgende `using`-Anweisung am Anfang der Datei hinzu:
+Für diesen Code ist ein neuer Namespace erforderlich. Fügen Sie am Anfang der Datei die folgende `using`-Anweisung hinzu:
 
 ```csharp
 using Microsoft.CodeAnalysis.Formatting;

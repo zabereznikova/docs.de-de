@@ -1,18 +1,18 @@
 ---
 title: MSBuild-Eigenschaften für Microsoft.NET.Sdk
-description: Referenz für MSBuild-Eigenschaften, die vom .NET Core SDK verstanden werden.
+description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET Core SDK verstanden werden.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795572"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206108"
 ---
-# <a name="msbuild-properties-for-net-core-sdk-projects"></a>MSBuild-Eigenschaften für .NET Core SDK-Projekte
+# <a name="msbuild-reference-for-net-core-sdk-projects"></a>MSBuild-Referenz für .NET Core SDK-Projekte
 
-Auf dieser Seite werden die MSBuild-Eigenschaften für das Konfigurieren von .NET Core-Projekten beschrieben. Sie können *Metadaten* für jede Eigenschaft als untergeordnete Elemente der Eigenschaft angeben.
+Diese Seite ist eine Referenz für die MSBuild-Eigenschaften und -Elemente, mit denen Sie .NET Core-Projekte konfigurieren können.
 
 > [!NOTE]
 > Diese Seite befindet sich noch in Bearbeitung und führt nicht sämtlich nützlichen MSBuild-Eigenschaften für das .NET Core SDK auf. Eine Liste der gängigen MSBuild-Eigenschaften finden Sie unter [Gemeinsame MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
@@ -78,7 +78,7 @@ Sie können Eigenschaften wie `PackageId`, `PackageVersion`, `PackageIcon`, `Tit
 </PropertyGroup>
 ```
 
-## <a name="publish-properties"></a>Eigenschaften veröffentlichen
+## <a name="publish-properties-and-items"></a>Veröffentlichen von Eigenschaften und Elementen
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
@@ -136,7 +136,23 @@ Weitere Informationen zur Bereitstellung finden Sie unter [.NET Core-Anwendungsb
 
 ## <a name="compile-properties"></a>Kompilierungseigenschaften
 
+- [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
+
+### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
+
+Die `EmbeddedResourceUseDependentUponConvention`-Eigenschaft definiert, ob Ressourcenmanifest-Dateinamen aus Typinformationen in Quelldateien generiert werden, die mit Ressourcendateien angeordnet werden. Wenn sich beispielsweise *Form1.resx* im selben Ordner wie *Form1.cs* befindet und `EmbeddedResourceUseDependentUponConvention` auf `true` festgelegt ist, nimmt die generierte *.resources*-Datei den Namen des ersten Typs an, der in *Form1.cs* definiert ist. Wenn z. B. `MyNamespace.Form1` der erste in *Form1.cs* definierte Typ ist, lautet der generierte Dateiname *MyNamespace.Form1.resources*.
+
+> [!NOTE]
+> Wenn `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für ein `EmbeddedResource`-Element angegeben werden, basiert der generierte Manifestdateiname für diese Ressourcendatei stattdessen auf diesen Metadaten.
+
+Standardmäßig ist diese Eigenschaft in einem neuen .NET Core-Projekt auf `true` festgelegt. Wenn bei Festlegung auf `false` keine `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für das `EmbeddedResource`-Element in der Projektdatei angegeben werden, basiert der Ressourcenmanifest-Dateiname auf dem Stammnamespace für das Projekt und dem relativen Dateipfad zur *.resx*-Datei. Weitere Informationen finden Sie unter [Benennung von Ressourcenmanifestdateien](../resources/manifest-file-names.md).
+
+```xml
+<PropertyGroup>
+  <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+</PropertyGroup>
+```
 
 ### <a name="langversion"></a>LangVersion
 
@@ -254,7 +270,7 @@ Mit der `TieredCompilationQuickJitForLoops`-Eigenschaft wird konfiguriert, ob de
 </PropertyGroup>
 ```
 
-## <a name="reference-properties"></a>Verweiseigenschaften
+## <a name="reference-properties-and-items"></a>Referenz für Eigenschaften und Elemente
 
 - [AssetTargetFallback](#assettargetfallback)
 - [PackageReference](#packagereference)
@@ -276,7 +292,7 @@ Sie können die Eigenschaft `AssetTargetFallback` auf eine oder mehrere [Zielfra
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference` definiert einen Verweis auf ein NuGet-Paket. Beispiel: Sie möchten auf ein einzelnes Paket verweisen statt auf ein [Metapaket](../packages.md#metapackages).
+Das `PackageReference`-Element definiert einen Verweis auf ein NuGet-Paket. Beispiel: Sie möchten auf ein einzelnes Paket verweisen statt auf ein [Metapaket](../packages.md#metapackages).
 
 Das `Include`-Attribut gibt die Paket-ID an. Das `Version`-Attribut gibt die Version oder den Versionsbereich an. Informationen, wie Sie eine Mindestversion, Maximalversion, einen Versionsbereich oder eine exakte Versionsübereinstimmung angeben, finden Sie unter [Versionsbereiche](/nuget/concepts/package-versioning#version-ranges). Sie können auch die folgenden Metadaten zu einem Projektverweis hinzufügen: `IncludeAssets`, `ExcludeAssets` und `PrivateAssets`.
 
@@ -308,7 +324,7 @@ Der Codeausschnitt für die Projektdatei im folgenden Beispiel verweist auf ein 
 
 Das `Reference`-Element definiert einen Verweis auf eine Assemblydatei.
 
-Das `Include`-Attribut gibt den Namen der Datei an, und das untergeordnete `HintPath`-Element gibt den Pfad zu der Assembly an.
+Das `Include`-Attribut gibt den Namen der Datei an, und die `HintPath`-Metadaten geben den Pfad zu der Assembly an.
 
 ```xml
 <ItemGroup>

@@ -1,5 +1,6 @@
 ---
 title: Einfache Serialisierung
+description: In diesem Artikel wird gezeigt, wie Sie eine Klasse mit dem SerializableAttribute serialisierbar machen, und er enthält Beispiele für Serialisierung und Deserialisierung.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binary serialization, basic serialization
@@ -7,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248029"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378425"
 ---
 # <a name="basic-serialization"></a>Einfache Serialisierung
 

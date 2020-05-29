@@ -3,12 +3,12 @@ title: Verzweigungen und Schleifen – Einführung in das C#-Tutorial
 description: In diesem Tutorial über Verzweigungen und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Verzweigungen und Schleifen zum wiederholten Ausführen von Anweisungen unterstützt.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: d67cfe359634783bb542e9ac34df52a095b45c20
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135944"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396881"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Bedingungen für Verzweigungs- und Schleifenanweisungen
 
@@ -48,9 +48,9 @@ Geben Sie erneut `dotnet run` ein. Da die Antwort kleiner als 10 ist, wird nicht
 > [!TIP]
 > Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der Compiler findet und meldet die Fehler. Sehen Sie sich die Fehlerausgabe und den Code, der den Fehler erzeugt hat, genau an. Der Compilerfehler kann Ihnen in der Regel helfen, das Problem zu erkennen.
 
-Das erste Beispiel veranschaulicht die Vorteile von `if`-Anweisungen und Boolean-Typen. Ein *boolean*-Typ ist eine Variable, die einen der folgenden zwei Werte enthalten kann: `true` oder `false`. In C# ist ein besonderer Typ für boolesche Variablen, `bool`, definiert. Die `if`-Anweisung überprüft den Wert eines `bool`-Typs. Wenn der Wert `true` lautet, wird die nach `if` folgende Anweisung ausgeführt. Andernfalls wird diese übersprungen.
+Das erste Beispiel veranschaulicht die Vorteile von `if`-Anweisungen und Boolean-Typen. Ein *boolean*-Typ ist eine Variable, die einen der folgenden zwei Werte enthalten kann: `true` oder `false`. In C# ist ein besonderer Typ für boolesche Variablen, `bool`, definiert. Die `if`-Anweisung überprüft den Wert eines `bool`-Typs. Wenn der Wert `true` lautet, wird die nach `if` folgende Anweisung ausgeführt. Andernfalls wird sie übersprungen.
 
-Dieser Vorgang zum Überprüfen von Bedingungen und Ausführen von Anweisungen basierend auf diesen Bedingungen ist sehr nützlich.
+Dieser Vorgang zum Überprüfen von Bedingungen und Ausführen von Anweisungen basierend auf diesen Bedingungen ist wirkungsvoll.
 
 ## <a name="make-if-and-else-work-together"></a>Kombinieren von if- und else-Anweisungen
 
@@ -72,7 +72,7 @@ Die Anweisung, die nach dem Schlüsselwort `else` folgt, wird nur ausgeführt, w
 > In der Programmiersprache C# werden Einzüge oder Leerräume nicht berücksichtigt.
 > Die Anweisung nach dem Schlüsselwort `if` bzw. `else` wird basierend auf der Bedingung ausgeführt. Alle Beispiele in diesem Tutorial folgen der gängigen Vorgehensweise, Zeilen basierend auf der Ablaufsteuerung von Anweisungen mit einem Einzug zu versehen.
 
-Da Einzüge nicht relevant sind, müssen Sie mit `{` und `}` angeben, dass Sie mehr als eine Anweisung im Rahmen des bedingt ausgeführten Blocks verwenden möchten. C#-Programmierer verwenden solche geschweifte Klammern in der Regel bei allen `if`- und `else`-Anweisungen. Das folgende Beispiel ist identisch mit dem Inhalt, den Sie soeben erstellt haben. Ändern Sie den obigen Code dahingehend, dass er mit dem folgenden Code übereinstimmt:
+Da Einzüge nicht relevant sind, müssen Sie mit `{` und `}` angeben, dass Sie mehr als eine Anweisung im Rahmen des bedingt ausgeführten Blocks verwenden möchten. C#-Programmierer verwenden solche geschweifte Klammern in der Regel bei allen `if`- und `else`-Anweisungen. Das folgende Beispiel ist identisch mit dem Inhalt, den Sie erstellt haben. Ändern Sie den obigen Code dahingehend, dass er mit dem folgenden Code übereinstimmt:
 
 ```csharp
 int a = 5;
@@ -209,7 +209,7 @@ In diesem Beispiel kommt ein weiterer neuer Operator vor. Das `++`-Zeichen nach 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass die Schleifenbedingung `while` zu „false“ wechselt, nachdem Sie den Code ausgeführt haben. Erstellen Sie anderenfalls eine **Endlosschleife**, durch die das Programm niemals beendet wird. Das wird in diesem Beispiel nicht gezeigt, weil Sie die programmseitige Verwendung von **STRG+C** oder anderen Mitteln unterbinden müssen.
 
-Die `while`-Schleife testet die Bedingung, bevor der Code nach `while` ausgeführt wird. Die `do` ... `while`-Schleife führt den Code zuerst aus und überprüft anschließend die Bedingung. Die do while-Schleife wird im folgenden Code gezeigt:
+Die `while`-Schleife testet die Bedingung, bevor der Code nach `while` ausgeführt wird. Die `do` ... `while`-Schleife führt den Code zuerst aus und überprüft anschließend die Bedingung. Die *do while*-Schleife wird im folgenden Code gezeigt:
 
 ```csharp
 int counter = 0;
@@ -233,7 +233,7 @@ for (int index = 0; index < 10; index++)
 }
 ```
 
-Dieser funktioniert auf dieselbe Weise wie die `while`-Schleife und die `do`-Schleife, die Sie bereits verwendet haben. Die `for`-Anweisung besteht aus drei Teilen, die steuern, wie sie ausgeführt wird.
+Der vorherige Code funktioniert auf dieselbe Weise wie die `while`-Schleife und die `do`-Schleife, die Sie bereits verwendet haben. Die `for`-Anweisung besteht aus drei Teilen, die steuern, wie sie ausgeführt wird.
 
 Der erste Teil ist der **for-Initialisierer**: `int index = 0;` deklariert, dass `index` die Schleifenvariable ist, und legt den Anfangswert auf `0` fest.
 
@@ -241,12 +241,14 @@ Der mittlere Teil ist die **for-Bedingung**: `index < 10` deklariert, dass diese
 
 Der letzte Teil ist der **for-Iterator**: `index++` gibt an, wie die Schleifenvariable geändert wird, nachdem der Block nach der `for`-Anweisung ausgeführt wurde. Hier gibt dieser an, dass `index` bei jeder Blockausführung um 1 erhöht werden soll.
 
-Experimentieren Sie selbst damit. Testen Sie Folgendes:
+Experimentieren Sie selbst. Testen Sie jede der folgenden Variationen:
 
 - Ändern Sie den Initialisierer, um mit einem anderen Wert zu beginnen.
 - Ändern Sie die Bedingung, um an einem anderen Wert anzuhalten.
 
 Wenn Sie fertig sind, fahren Sie damit fort, mithilfe der erworbenen Kenntnisse selbst Codes zu schreiben.
+
+Eine andere Schleifenanweisung wird in diesem Tutorial nicht behandelt: die `foreach`-Anweisung. Mit der `foreach`-Anweisung wird die Anweisung für jedes Element in einer Sequenz von Elementen ausgeführt. Da sie am häufigsten mit *Sammlungen* verwendet wird, wird sie im nächsten Tutorial behandelt.
 
 ## <a name="created-nested-loops"></a>Erstellte geschachtelte Schleifen
 
@@ -298,7 +300,7 @@ Sie haben das Tutorial „Verzweigungen und Schleifen“ abgeschlossen.
 
 Sie können mit dem Tutorial [Arrays und Auflistungen](arrays-and-collections.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
-Weitere Informationen zu diesen Begriffen finden Sie unter folgenden Themen:
+Weitere Informationen zu diesen Begriffen finden Sie in diesen Artikeln:
 
 - [if- und else-Anweisung](../../language-reference/keywords/if-else.md)
 - [while-Anweisung](../../language-reference/keywords/while.md)

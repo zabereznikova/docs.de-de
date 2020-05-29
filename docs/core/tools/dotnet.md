@@ -2,12 +2,12 @@
 title: dotnet-Befehl
 description: Erfahren Sie mehr über den dotnet-Befehl (den generischen Treiber für die .NET Core-CLI) und dessen Verwendung.
 ms.date: 02/13/2020
-ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739077"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378842"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -110,7 +110,7 @@ Die folgenden Optionen gelten für `dotnet` mit einem Befehl. Beispielsweise `do
 
 ### <a name="runtime-options"></a>Laufzeitoptionen
 
-Die folgenden Optionen sind verfügbar, wenn `dotnet` eine Anwendung ausführt. Beispielsweise `dotnet myapp.dll --fx-version 3.1.1`.
+Die folgenden Optionen sind verfügbar, wenn `dotnet` eine Anwendung ausführt. Beispielsweise `dotnet myapp.dll --roll-forward Major`.
 
 - **`--additionalprobingpath <PATH>`**
 
@@ -120,23 +120,13 @@ Die folgenden Optionen sind verfügbar, wenn `dotnet` eine Anwendung ausführt. 
 
   Pfad zu einer zusätzlichen *.deps.json*-Datei. Eine *deps.json*-Datei enthält eine Liste mit Abhängigkeiten, Kompilierungsabhängigkeiten und Versionsinformationen, die verwendet werden, um Assemblykonflikte zu bearbeiten. Weitere Informationen finden Sie auf GitHub unter [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
-- **`--fx-version <VERSION>`**
+- **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  Version der .NET Core-Runtime, die zum Ausführen der Anwendung verwendet werden soll.
+  Pfad zur *deps.json*-Datei. Eine Datei mit Namen *deps.json* ist eine Konfigurationsdatei, die Informationen zu Abhängigkeiten enthält, die zum Ausführen der Anwendung erforderlich sind. Diese Datei wird vom .NET Core SDK generiert.
 
 - **`--runtimeconfig`**
 
   Der Pfad zu einer *runtimeconfig.json*-Datei. Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Runtime. Weitere Informationen finden Sie unter [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md#runtimeconfigjson).
-
-- **`--roll-forward-on-no-candidate-fx <N>`** **Verfügbar im .NET Core 2.x SDK.**
-
-  Definiert ein Verhalten, wenn das erforderliche freigegebene Framework nicht verfügbar ist. `N` kann Folgendes sein:
-
-  - `0` - Das Ausführen von Rollforward ist auch für die Nebenversion deaktiviert.
-  - `1` - Rollforward wird in der Nebenversion, nicht aber in der Hauptversion, ausgeführt. Dies ist das Standardverhalten.
-  - `2` - Rollforward wird in Neben- und Hauptversionen ausgeführt.
-
-   Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 - **`--roll-forward <SETTING>`** **Verfügbar ab .NET Core SDK 3.0.**
 
@@ -149,9 +139,27 @@ Die folgenden Optionen sind verfügbar, wenn `dotnet` eine Anwendung ausführt. 
   - `LatestMajor`: Rollforward zur höchsten Hauptversion und höchsten Nebenversion – auch dann, wenn die angeforderte Hauptversion vorhanden ist. Für Komponentenhostingszenarien vorgesehen.
   - `Disable`: Kein Rollforward. Nur Binden an angegebene Version. Diese Richtlinie wird nicht zur allgemeinen Verwendung empfohlen, da sie die Möglichkeit eines Rollforwards zu den neuesten Patches ausschließt. Dieser Wert wird nur zu Testzwecken empfohlen.
 
-Mit Ausnahme von `Disable` wird für alle Einstellungen die höchste verfügbare Patchversion verwendet.
+  Mit Ausnahme von `Disable` wird für alle Einstellungen die höchste verfügbare Patchversion verwendet.
 
-Das Rollforwardverhalten kann auch in einer Projektdateieigenschaft, einer Runtime-Konfigurationsdateieigenschaft und einer Umgebungsvariablen konfiguriert werden. Weitere Informationen finden Sie unter [Runtimerollforward der Hauptversion](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+  Das Rollforwardverhalten kann auch in einer Projektdateieigenschaft, einer Runtime-Konfigurationsdateieigenschaft und einer Umgebungsvariablen konfiguriert werden. Weitere Informationen finden Sie unter [Runtimerollforward der Hauptversion](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+
+- **`--roll-forward-on-no-candidate-fx <N>`** **Verfügbar im .NET Core 2.x SDK.**
+
+  Definiert ein Verhalten, wenn das erforderliche freigegebene Framework nicht verfügbar ist. `N` kann Folgendes sein:
+
+  - `0` - Das Ausführen von Rollforward ist auch für die Nebenversion deaktiviert.
+  - `1` - Rollforward wird in der Nebenversion, nicht aber in der Hauptversion, ausgeführt. Dies ist das Standardverhalten.
+  - `2` - Rollforward wird in Neben- und Hauptversionen ausgeführt.
+
+  Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
+
+  Ab .NET Core 3.0 wird diese Option durch `--roll-forward` abgelöst, und diese Option sollte stattdessen verwendet werden.
+
+- **`--fx-version <VERSION>`**
+
+  Version der .NET Core-Runtime, die zum Ausführen der Anwendung verwendet werden soll.
+
+  Diese Option überschreibt die Version des ersten Frameworkverweises in der `.runtimeconfig.json`-Datei der Anwendung. Dies bedeutet, dass sie nur dann wie erwartet funktioniert, wenn nur ein Frameworkverweis vorliegt. Wenn die Anwendung über mehrere Frameworkverweise verfügt, kann die Verwendung dieser Option zu Fehlern führen.
 
 ## <a name="dotnet-commands"></a>dotnet-Befehle
 
@@ -274,13 +282,21 @@ dotnet myapp.dll
 
   Gibt an, ob die .NET Core-Runtime, das freigegebene Framework oder das SDK vom globalen Speicherort aus aufgelöst werden. Ohne Festlegung ist der Standardwert 1 (logisch `true`). Auf 0 (logisch `false`) festgelegt, um nicht vom globalen Speicherort aus aufzulösen und isolierte .NET Core-Installationen zu verwenden. Weitere Informationen zu Lookup mit mehreren Ebenen finden Sie unter [Multi-level SharedFX lookup (SharedFX-Lookup mit mehreren Ebenen)](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
-- `DOTNET_ROLL_FORWARD` **Verfügbar ab .NET Core 3.x SDK.**
+- `DOTNET_ROLL_FORWARD` **Verfügbar ab .NET Core 3.x.**
 
   Bestimmt das Rollforwardverhalten. Weitere Informationen finden Sie unter der Option `--roll-forward` weiter oben in diesem Artikel.
 
-- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **Verfügbar im .NET Core 2.x SDK.**
+- `DOTNET_ROLL_FORWARD_TO_PRERELEASE` **Verfügbar ab .NET Core 3.x.**
+
+  Wenn diese Option auf `1` (aktiviert) festgelegt ist, wird das Rollforward von einer endgültigen Produktversion zu einer Vorabversion aktiviert. Wenn eine endgültige Produktversion der .NET Core-Runtime angefordert wird, werden standardmäßig (`0` – deaktiviert) nur installierte endgültige Produktversionen beim Rollforward berücksichtigt.
+
+  Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **Verfügbar in .NET Core 2.x.**
 
   Deaktiviert Rollforward der Nebenversion, wenn `0` festgelegt ist. Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
+
+  Diese Einstellung wird in .NET Core 3.0 durch `DOTNET_ROLL_FORWARD` abgelöst. Stattdessen sollten die neuen Einstellungen verwendet werden.
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
@@ -306,9 +322,25 @@ dotnet myapp.dll
 
   Liste der Assemblys zum Laden und Ausführen von Startuphooks.
 
+- `DOTNET_BUNDLE_EXTRACT_BASE_DIR` **Verfügbar ab .NET Core 3.x.**
+
+  Gibt ein Verzeichnis an, in das eine Einzeldateianwendung vor der Ausführung extrahiert wird.
+
+  Weitere Informationen finden Sie unter [Ausführbare Einzeldateien](../whats-new/dotnet-core-3-0.md#single-file-executables).
+
 - `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
 
   Steuert die Diagnoseablaufverfolgung von den Hostingkomponenten wie `dotnet.exe`, `hostfxr` und `hostpolicy`.
+
+  * `COREHOST_TRACE=[0/1]` – Standardwert ist `0` – Ablaufverfolgung deaktiviert. Wenn auf `1` festgelegt, ist die Diagnoseablaufverfolgung aktiviert.
+  * `COREHOST_TRACEFILE=<file path>` – ist nur wirksam, wenn die Ablaufverfolgung über `COREHOST_TRACE=1` aktiviert wird. Wenn festgelegt, werden die Ablaufverfolgungsinformationen in die angegebene Datei geschrieben, andernfalls in `stderr`. **Verfügbar ab .NET Core 3.x.**
+  * `COREHOST_TRACE_VERBOSITY=[1/2/3/4]` – Standardwert ist `4`. Die Einstellung wird nur verwendet, wenn die Ablaufverfolgung über `COREHOST_TRACE=1` aktiviert wird. **Verfügbar ab .NET Core 3.x.**
+    * `4` – alle Ablaufverfolgungsinformationen werden geschrieben
+    * `3` – nur Informationen, Warn- und Fehlermeldungen werden geschrieben
+    * `2` – nur Warn- und Fehlermeldungen werden geschrieben
+    * `1` – nur Fehlermeldungen werden geschrieben
+
+  Die übliche Methode, ausführliche Ablaufverfolgungsinformationen zum Starten der Anwendung zu erhalten, besteht darin, vor der Ausführung der Anwendung `COREHOST_TRACE=1` und `COREHOST_TRACEFILE=host_trace.txt` festzulegen. Im aktuellen Verzeichnis wird eine neue Datei `host_trace.txt` mit detaillierten Informationen erstellt.
 
 ## <a name="see-also"></a>Siehe auch
 

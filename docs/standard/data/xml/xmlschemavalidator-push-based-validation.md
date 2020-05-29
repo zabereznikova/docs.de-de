@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d5b2fe4325000023acc98580a2a6d014f56fecbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709802"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419108"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Pushbasierte Validierung mit „XmlSchemaValidator“
 
@@ -456,7 +456,7 @@ In der folgenden Tabelle wird beschrieben, welche Auswirkungen die Satzzeichen i
 |------------|-----------------|
 |&#124;|Entweder die Methode bzw. der Zustand vor oder die Methode bzw. der Zustand nach dem senkrechten Strich, kann aufgerufen werden.|
 |?|Die Methode oder der Zustand nach dem Fragezeichen ist optional, es kann jedoch nur ein Aufruf der Methode bzw. des Zustands erfolgen.|
-|*|Die Methode bzw. der Zustand nach dem Zeichen "*" ist optional und kann mehr als einmal aufgerufen werden.|
+|\*|Die Methode bzw. der Zustand nach dem Zeichen \* ist optional und kann mehr als einmal aufgerufen werden.|
 
 ## <a name="validation-context"></a>Validierungskontext
 

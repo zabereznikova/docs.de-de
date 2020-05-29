@@ -3,12 +3,12 @@ title: Übersicht zum WCF-Tool „svcutil“
 description: Übersicht zum Microsoft-WCF-Tool „dotnet-svcutil“, über das Funktionen für .NET Core- und ASP.NET Core-Projekte hinzugefügt werden, z.B. das WCF-Tool „svcutil“ für .NET Framework-Projekte.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: 1f500c9355112183a135c2b639807c7cd62fbbfc
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021255"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396222"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>WCF-Tool „dotnet-svcutil“ für .NET Core
 
@@ -119,7 +119,7 @@ Die generierte Datei wird als _HelloSvcutil/ServiceReference/Reference.cs_ gespe
 
 2. Suchen Sie den Namen der Clientklasse und den Vorgang, den Sie verwenden möchten. `Reference.cs` enthält eine Klasse, die von `System.ServiceModel.ClientBase` erbt, mit Methoden, die zum Aufrufen von Vorgängen für den Dienst verwendet werden können. In diesem Beispiel rufen Sie den Vorgang _SayHello_ des Diensts _Hello_ auf. `ServiceReference.SayHelloClient` ist der Name der Clientklasse und hat eine Methode `HelloAsync` aufgerufen, die verwendet werden kann, um den Vorgang aufzurufen.
 
-3. Öffnen Sie die `Startup.cs`-Datei in einem Editor, und fügen Sie eine using-Anweisung für den Dienstverweisnamespace oben hinzu:
+3. Öffnen Sie die `Startup.cs`-Datei in einem Editor, und fügen Sie eine `using`-Anweisung für den Dienstverweisnamespace oben hinzu:
 
     ```csharp
     using ServiceReference;
@@ -153,7 +153,7 @@ Die generierte Datei wird als _HelloSvcutil/ServiceReference/Reference.cs_ gespe
 
 6. Navigieren Sie in Ihrem Webbrowser zu der URL, die in der Konsole aufgelistet ist, (z.B. `http://localhost:5000`).
 
-Sie sollten die folgende Ausgabe erhalten: „Hello dotnet-svcutil!“
+Die folgende Ausgabe wird angezeigt: „Hello dotnet-svcutil!“
 
 Um eine ausführliche Beschreibung der Parameter des `dotnet-svcutil`-Tools zu erhalten, rufen Sie das Tool wie folgt mit Übergabe des Hilfeparameters auf:
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)

@@ -1,13 +1,13 @@
 ---
 title: Objektorientiertes Programmieren (C#)
-ms.date: 02/08/2020
+ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200092"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396689"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
@@ -92,7 +92,6 @@ Die meisten Eigenschaften verfügen über Methoden oder Prozeduren zum Festlegen
 Weitere Informationen finden Sie unter:
 
 - [get](../../language-reference/keywords/get.md)
-
 - [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Methoden
@@ -104,7 +103,7 @@ So definieren Sie eine Methode einer Klasse:
 ```csharp
 class SampleClass
 {
-    public int sampleMethod(string sampleParam)
+    public int SampleMethod(string sampleParam)
     {
         // Insert code here
     }
@@ -116,8 +115,8 @@ Eine Klasse kann über mehrere Implementierungen oder *Überladungen* der gleich
 So überladen Sie eine Methode
 
 ```csharp
-public int sampleMethod(string sampleParam) {}
-public int sampleMethod(int sampleParam) {}
+public int SampleMethod(string sampleParam) { }
+public int SampleMethod(int sampleParam) { }
 ```
 
 In den meisten Fällen deklarieren Sie eine Methode innerhalb einer Klassendefinition. Auch C# unterstützt jedoch *Erweiterungsmethoden*, mit denen Sie einer vorhandenen Klasse außerhalb der eigentlichen Klassendefinition Methoden hinzuzufügen können.
@@ -156,9 +155,7 @@ Weitere Informationen zu Finalizern und der Garbage Collection in .NET Framework
 Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder auslöst), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder verarbeiten), werden als *Abonnenten* bezeichnet. Weitere Informationen zu Ereignissen sowie zu ihrer Auslösung und Behandlung finden Sie unter [Ereignisse](../../../standard/events/index.md).
 
 - Verwenden Sie das Schlüsselwort [event](../../language-reference/keywords/event.md), um ein Ereignis in einer Klasse zu deklarieren.
-
 - Um ein Ereignis auszulösen, rufen Sie den Ereignisdelegaten auf.
-
 - Verwenden Sie den `+=`-Operator, um ein Ereignis zu abonnieren, und verwenden Sie den `-=`-Operator, um das Abonnement eines Ereignisses zu kündigen.
 
 #### <a name="nested-classes"></a>Geschachtelte Klassen
@@ -187,14 +184,14 @@ Alle Klassen und Klassenmember können mit *Zugriffsmodifizierern* angeben, welc
 
 Die folgenden Zugriffsmodifizierer sind verfügbar:
 
-|C#-Modifizierer|Definition|
-|------------------|----------------|
-|[public](../../language-reference/keywords/public.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder einer anderen Assembly, die darauf verweist, zugegriffen werden.|
-|[private](../../language-reference/keywords/private.md)|Auf den Typ oder Member kann nur von Code in der gleichen Klasse zugegriffen werden.|
-|[protected](../../language-reference/keywords/protected.md)|Auf den Typ oder Member kann nur von Code in der gleichen Klasse oder in einer abgeleiteten Klasse zugegriffen werden.|
-|[internal](../../language-reference/keywords/internal.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly.|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder von jeder abgeleiteten Klasse in einer anderen Assembly zugegriffen werden.|
-|[private protected](../../language-reference/keywords/private-protected.md)|Auf den Typ oder Member kann nur über Code in der gleichen Klasse, in einer abgeleiteten Klasse oder innerhalb der Basisklassenassembly zugegriffen werden.|
+| C#-Modifizierer | Definition |
+|--|--|
+| [public](../../language-reference/keywords/public.md) | Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder einer anderen Assembly, die darauf verweist, zugegriffen werden. |
+| [private](../../language-reference/keywords/private.md) | Auf den Typ oder Member kann nur von Code in der gleichen Klasse zugegriffen werden. |
+| [protected](../../language-reference/keywords/protected.md) | Auf den Typ oder Member kann nur von Code in der gleichen Klasse oder in einer abgeleiteten Klasse zugegriffen werden. |
+| [internal](../../language-reference/keywords/internal.md) | Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly. |
+| [protected internal](../../language-reference/keywords/protected-internal.md) | Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder von jeder abgeleiteten Klasse in einer anderen Assembly zugegriffen werden. |
+| [private protected](../../language-reference/keywords/private-protected.md) | Auf den Typ oder Member kann nur über Code in der gleichen Klasse, in einer abgeleiteten Klasse oder innerhalb der Basisklassenassembly zugegriffen werden. |
 
 Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../classes-and-structs/access-modifiers.md).
 
@@ -212,15 +209,18 @@ Nachdem Sie eine Klasse instanziiert haben, können Sie den Eigenschaften und Fe
 // Set a property value.
 sampleObject.sampleProperty = "Sample String";
 // Call a method.
-sampleObject.sampleMethod();
+sampleObject.SampleMethod();
 ```
 
 Verwenden Sie Objektinitialisierer, um Eigenschaften im Rahmen des Klasseninstanziierungsprozesses Werte zuzuweisen:
 
 ```csharp
 // Set a property value.
-SampleClass sampleObject = new SampleClass
-    { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new SampleClass
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Weitere Informationen finden Sie unter:
@@ -259,8 +259,11 @@ So erstellen Sie eine Instanz eines anonymen Typs
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
-var sampleObject =
-    new { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Weitere Informationen finden Sie unter: [Anonyme Typen](../classes-and-structs/anonymous-types.md).
@@ -275,7 +278,7 @@ Vererbung ermöglicht die Erstellung neuer Klassen, die in anderen Klassen defin
 So erben Sie von einer Basisklasse
 
 ```csharp
-class DerivedClass:BaseClass {}
+class DerivedClass:BaseClass { }
 ```
 
 Standardmäßig können alle Klassen geerbt werden. Sie können jedoch angeben, dass eine Klasse nicht als Basisklasse verwendet werden darf, oder eine Klasse erstellen, die nur als Basisklasse verwendet werden kann.
@@ -295,7 +298,6 @@ public abstract class B { }
 Weitere Informationen finden Sie unter:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-
 - [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Überschreiben von Membern
@@ -304,12 +306,12 @@ Standardmäßig erbt eine abgeleitete Klasse alle Member von ihrer Basisklasse. 
 
 Mit folgenden Modifizierern steuern Sie das Überschreiben von Eigenschaften und Methoden:
 
-|C#-Modifizierer|Definition|
-|------------------|----------------|
-|[virtual](../../language-reference/keywords/virtual.md)|Ermöglicht das Überschreiben eines Klassenmembers in einer abgeleiteten Klasse.|
-|[override](../../language-reference/keywords/override.md)|Überschreibt einen virtuellen (überschreibbaren) Member, der in der Basisklasse definiert wurde.|
-|[abstract](../../language-reference/keywords/abstract.md)|Erfordert das Überschreiben eines Klassenmembers in der abgeleiteten Klasse.|
-|[new-Modifizierer](../../language-reference/keywords/new-modifier.md)|Blendet einen von einer Basisklasse geerbten Member aus.|
+| C#-Modifizierer | Definition |
+|--|--|
+| [virtual](../../language-reference/keywords/virtual.md) | Ermöglicht das Überschreiben eines Klassenmembers in einer abgeleiteten Klasse. |
+| [override](../../language-reference/keywords/override.md) | Überschreibt einen virtuellen (überschreibbaren) Member, der in der Basisklasse definiert wurde. |
+| [abstract](../../language-reference/keywords/abstract.md) | Erfordert das Überschreiben eines Klassenmembers in der abgeleiteten Klasse. |
+| [new-Modifizierer](../../language-reference/keywords/new-modifier.md) | Blendet einen von einer Basisklasse geerbten Member aus. |
 
 ## <a name="interfaces"></a>Schnittstellen
 
@@ -320,7 +322,7 @@ So definieren Sie eine Schnittstelle
 ```csharp
 interface ISampleInterface
 {
-    void doSomething();
+    void DoSomething();
 }
 ```
 
@@ -329,7 +331,7 @@ So implementieren Sie eine Schnittstelle in einer Klasse
 ```csharp
 class SampleClass : ISampleInterface
 {
-    void ISampleInterface.doSomething()
+    void ISampleInterface.DoSomething()
     {
         // Method implementation.
     }
@@ -354,15 +356,14 @@ public class SampleGeneric<T>
 So erstellen Sie eine Instanz einer generischen Klasse
 
 ```csharp
-SampleGeneric<string> sampleObject = new SampleGeneric<string>();
+var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
 Weitere Informationen finden Sie unter:
 
-- [Generics](../../../standard/generics/index.md)
-
-- [Generics](../generics/index.md)
+- [Generics in .NET](../../../standard/generics/index.md)
+- [Generics (C#-Programmierhandbuch)](../generics/index.md)
 
 ## <a name="delegates"></a>Delegaten
 
@@ -383,10 +384,11 @@ So erstellen Sie einen Verweis auf eine Methode, die der vom Delegaten angegeben
 class SampleClass
 {
     // Method that matches the SampleDelegate signature.
-    public static void sampleMethod(string message)
+    public static void SampleMethod(string message)
     {
         // Add code here.
     }
+
     // Method that instantiates the delegate.
     void SampleDelegate()
     {

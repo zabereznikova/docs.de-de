@@ -2,12 +2,12 @@
 title: ASP.NET Core gRPC für WCF-Entwickler – gRPC für WCF-Entwickler
 description: Einführung in die Erstellung von gRPC-Diensten in ASP.NET Core 3.0 für WCF-Entwickler
 ms.date: 09/02/2019
-ms.openlocfilehash: 175dfbf1880a0937615543c248fba3bed0e25c23
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6e18ecfdb8fcbe20f71fd0a7c77076166451427a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988959"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144356"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC für WCF-Entwickler
 
@@ -31,7 +31,7 @@ Dieses Buch wird unverändert bereitgestellt und drückt die Ansichten und Meinu
 
 Einige der hier dargestellten Beispiele dienen nur zu Illustrationszwecken und sind fiktiv. Keinerlei Zuordnung oder Verbindung zu realen Gegebenheiten ist beabsichtigt oder sollte gefolgert werden.
 
-Microsoft und die auf der Webseite „Marken“ unter https://www.microsoft.com aufgelisteten Marken sind Marken der Microsoft-Unternehmensgruppe.
+Microsoft und die auf der Webseite „Marken“ unter <https://www.microsoft.com> aufgelisteten Marken sind Marken der Microsoft-Unternehmensgruppe.
 
 Das Logo des Docker-Wals ist eine registrierte Marke von Docker, Inc. Verwendet mit Genehmigung.
 

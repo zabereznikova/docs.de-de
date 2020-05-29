@@ -3,12 +3,12 @@ title: Was ist der Modell-Generator und wie funktioniert er?
 description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators zum automatischen Trainieren eines Machine Learning-Modells.
 ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344765"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616928"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -114,7 +114,7 @@ Wenn Sie noch keine eigenen Daten haben, probieren Sie eines dieser Datasets aus
 ||Vorhersage betrügerischer Kreditkartentransaktionen|[credit card data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasse (1, wenn betrügerisch, andernfalls 0)|Betrag, V1-V28 (anonymisierte Features)|
 ||Vorhersage des Issuetyps in einem GitHub-Repository|[GitHub issue data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Bereich|Titel, Beschreibung|
 |Wertvorhersage|Vorhersage des Preises für eine Taxifahrt|[taxi fare data](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Preis|Fahrtzeit, Strecke|
-|Bildklassifizierung|Vorhersage der Kategorie eines Bilds|[flower images](http://download.tensorflow.org/example_images/flower_photos.tgz)|Der Typ Blume: Gänseblümchen, Löwenzahn, Rosen, Sonnenblumen, Tulpen|Die Bilddaten selbst|
+|Bildklassifizierung|Vorhersage der Kategorie einer Blume |[flower images](http://download.tensorflow.org/example_images/flower_photos.tgz)|Der Typ Blume: Gänseblümchen, Löwenzahn, Rosen, Sonnenblumen, Tulpen|Die Bilddaten selbst|
 |Empfehlung|Vorhersage von Filmen, die einer Person gefallen|[movie ratings](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Benutzer, Filme|Altersfreigabe|
 
 ## <a name="train"></a>Training

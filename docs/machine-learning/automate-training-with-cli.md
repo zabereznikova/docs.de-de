@@ -3,12 +3,12 @@ title: Automatisieren des Modelltrainings mit der ML.NET-CLI
 description: Erfahren Sie, wie Sie mit dem ML.NET-CLI-Tool automatisch das beste Modell über die Befehlszeile trainieren können.
 ms.date: 12/17/2019
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 3344ed15266503d4d5c7cd9db0a0596f58a904fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185884"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212411"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatisieren des Modelltrainings mit der ML.NET-CLI
 
@@ -46,7 +46,7 @@ mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" 
 
 ![Bild](media/automate-training-with-cli/cli-model-generation.gif)
 
-Sie können sie auf die gleiche Weise auf *Windows PowerShell*, *macOS-/Linux-Bash oder *Windows CMD* ausführen. Die tabellarische automatische Vervollständigung (Parametervorschläge) funktioniert jedoch nicht unter *Windows-CMD*.
+Sie können sie auf die gleiche Weise auf *Windows PowerShell*, *macOS-/Linux-Bash* oder *Windows CMD* ausführen. Die tabellarische automatische Vervollständigung (Parametervorschläge) funktioniert jedoch nicht unter *Windows-CMD*.
 
 ## <a name="output-assets-generated"></a>Generierte Ausgabeobjekte
 

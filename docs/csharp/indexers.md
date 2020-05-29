@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über C#-Indexer und wie sie indizierte Eigenscha
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145683"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394699"
 ---
 # <a name="indexers"></a>Indexer
 
@@ -313,7 +313,7 @@ public class HistoricalWeatherData
 
 In diesem Beispiel wird ein Indexer erstellt, der Wetterdaten zwei Argumenten zuordnet: eine Stadt (repräsentiert durch `string`) und ein Datum (repräsentiert durch `DateTime`). Der interne Speicher verwendet zwei `Dictionary`-Klassen, die das zweidimensionale Wörterbuch repräsentieren. Die öffentliche API repräsentiert nicht mehr den zugrundeliegenden Speicher. Stattdessen können Sie mit den Sprachfunktionen der Indexer eine öffentliche Schnittstelle erstellen, die Ihre Abstraktion repräsentiert, auch wenn der zugrundeliegende Speicher unterschiedliche Kernauflistungstypen verwenden muss.
 
-Es gibt zwei Teile dieses Codes, die Entwicklern möglicherweise unbekannt sind. Diese zwei `using`-Anweisungen:
+Es gibt zwei Teile dieses Codes, die Entwicklern möglicherweise unbekannt sind. Diese beiden `using`-Anweisungen:
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;

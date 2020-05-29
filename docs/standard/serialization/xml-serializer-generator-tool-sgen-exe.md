@@ -1,13 +1,14 @@
 ---
 title: XML Serializer Generator-Tool (Sgen.exe)
+description: Das XML Serializer Generator-Tool erstellt eine XML-Serialisierungsassembly zur Verbesserung der Startleistung von XmlSerializer für Typen in einer Assembly.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: bc1a0abaeef9a9244aa83941e590063c7ef167d1
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588360"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380042"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer Generator-Tool (Sgen.exe)
 

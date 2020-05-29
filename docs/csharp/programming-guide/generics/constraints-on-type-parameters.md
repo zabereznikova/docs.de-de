@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 376befe4c969ac653e234479c8946d7fd4242999
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738251"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442214"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
@@ -113,7 +113,7 @@ Ab C# 7.3 können Sie auch den <xref:System.Enum?displayProperty=nameWithType>-T
 
 [!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-Die verwendeten Methoden nutzen Reflexion, die Auswirkungen auf die Leistung hat. Sie können diese Methode aufrufen, um eine Sammlung zu erstellen, die zwischengespeichert und wiederverwendet wird, anstatt die Aufrufe zu wiederholen, die eine Reflektion erfordern.
+`Enum.GetValues` und `Enum.GetName` nutzen Reflektion, die Auswirkungen auf die Leistung hat. Sie können `EnumNamedValues` aufrufen, um eine Sammlung zu erstellen, die zwischengespeichert und wiederverwendet wird, anstatt die Aufrufe zu wiederholen, die eine Reflektion erfordern.
 
 Sie könnten dies wie im folgenden Beispiel gezeigt verwenden, um eine Enumeration und ein Wörterbuch der Werte und Namen zu erstellen:
 

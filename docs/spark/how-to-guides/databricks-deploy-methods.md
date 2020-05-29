@@ -1,19 +1,19 @@
 ---
-title: Übermitteln eines .NET für Apache Spark-Auftrags an Databricks
+title: Senden eines .NET für Apache Spark-Auftrags an Databricks
 description: Erfahren Sie, wie Sie mit spark-submit und Set JAR einen .NET für Apache Spark-Auftrag an Databricks übermitteln.
-ms.date: 12/05/2019
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 65976f9095ecef66e0538c398492033c612c1430
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a158110854f80921740954403a8fd51b30cbcb12
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187612"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379654"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Übermitteln eines .NET für Apache Spark-Auftrags an Databricks
 
-Es gibt zwei Möglichkeiten, einen .NET für Apache Spark-Auftrag für Databricks bereitzustellen: `spark-submit` und Set JAR.
+Sie können .NET für Apache Spark-Aufträge in Databricks-Clustern ausführen, jedoch ist dies nicht sofort verfügbar. Es gibt zwei Möglichkeiten, einen .NET für Apache Spark-Auftrag für Databricks bereitzustellen: `spark-submit` und Set JAR.
 
 ## <a name="deploy-using-spark-submit"></a>Bereitstellen mit spark-submit
 

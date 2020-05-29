@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arch
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975406"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396247"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
@@ -22,9 +22,9 @@ Sie sollten Softwarelösungen mit der Verwaltbarkeit im Hinterkopf entwickeln un
 
 ### <a name="separation-of-concerns"></a>Separation of Concerns
 
-Ein Leitprinzip beim Entwickeln ist das **Separation of Concerns**. Dieses Prinzip macht geltend, dass Software basierend auf der Arbeit, die von dieser ausgeführt wird, getrennt werden soll. Ein Beispiel hierfür ist eine Anwendung, die Logik zur Identifizierung von wichtigen Elementen enthält, die dem Benutzer angezeigt werden sollen, und die diese Elemente in einer Art und Weise formatiert, sodass diese auffälliger werden. Das Verhalten, das dafür verantwortlich ist, welche Elemente formatiert werden, sollte vom für das Formatieren der Elemente verantwortliche Verhalten getrennt werden, da dies separate Aspekte sind, die nur zufällig miteinander in Verbindung stehen.
+Ein Leitprinzip beim Entwickeln ist das **Separation of Concerns**. Dieses Prinzip macht geltend, dass Software basierend auf der Arbeit, die von dieser ausgeführt wird, getrennt werden soll. Ein Beispiel hierfür ist eine Anwendung, die Logik zur Identifizierung von wichtigen Elementen enthält, die dem Benutzer angezeigt werden sollen, und die diese Elemente in einer Art und Weise formatiert, sodass diese auffälliger werden. Das Verhalten, das dafür verantwortlich ist, welche Elemente formatiert werden, sollte von dem Verhalten getrennt werden, das für das Formatieren der Elemente verantwortlich ist, da diese Verhaltensweisen separate Aspekte sind, die nur zufällig miteinander in Verbindung stehen.
 
-Anwendungen können – architektonisch gesehen – logisch erstellt werden, um diesen Prinzipien zu folgen, indem das grundlegende Geschäftsverhalten von der Infrastruktur und der Logik der Benutzeroberfläche getrennt wird. Im Idealfall sollten sich Geschäftsregeln und Logik in einem separaten Projekt befinden, das nicht von anderen Projekten in der Anwendung abhängig sein darf. Dadurch kann sichergestellt werden, dass das Geschäftsmodell einfach zu testen ist und sich entwickeln kann, ohne eng an Details der untergeordneten Implementierung geknüpft zu sein. Die Separation of Concerns spielt im Hinblick auf die Verwendung von Schichten in Anwendungsarchitekturen eine wichtige Rolle.
+Anwendungen können – architektonisch gesehen – logisch erstellt werden, um diesen Prinzipien zu folgen, indem das grundlegende Geschäftsverhalten von der Infrastruktur und der Logik der Benutzeroberfläche getrennt wird. Im Idealfall sollten sich Geschäftsregeln und Logik in einem separaten Projekt befinden, das nicht von anderen Projekten in der Anwendung abhängig sein darf. Diese Trennung stellt sicher, dass das Geschäftsmodell einfach zu testen ist und sich entwickeln kann, ohne eng an Details der untergeordneten Implementierung geknüpft zu sein. Die Separation of Concerns spielt im Hinblick auf die Verwendung von Schichten in Anwendungsarchitekturen eine wichtige Rolle.
 
 ### <a name="encapsulation"></a>Kapselung
 
@@ -34,7 +34,7 @@ In Klassen erfolgt die Kapselung durch Verringern des Zugriffs auf den internen 
 
 ### <a name="dependency-inversion"></a>Abhängigkeitsumkehr
 
-Die Abhängigkeitsrichtung innerhalb der Anwendung sollte sich in Richtung der Abstraktion bewegen, nicht in Richtung Implementierungsdetails. Die meisten Anwendungen werden so geschrieben, dass die Kompilierzeitabhängigkeit in Richtung der Laufzeitausführung geht. Dadurch wird ein direktes Abhängigkeitsdiagramm erzeugt. Das heißt, wenn Modul A eine Funktion in Modul B aufruft, die eine Funktion in Modul C aufruft, hängt A zur Kompilierzeit von B ab, das von C abhängt, wie in Abbildung 4-1 gezeigt.
+Die Abhängigkeitsrichtung innerhalb der Anwendung sollte sich in Richtung der Abstraktion bewegen, nicht in Richtung Implementierungsdetails. Die meisten Anwendungen werden so geschrieben, dass die Kompilierzeitabhängigkeit in Richtung der Runtimeausführung geht und ein Diagramm der direkten Abhängigkeit produziert. Das heißt, wenn Modul A eine Funktion in Modul B aufruft, die eine Funktion in Modul C aufruft, hängt A zur Kompilierzeit von B ab, das von C abhängt, wie in Abbildung 4-1 gezeigt.
 
 ![Diagramm der direkten Abhängigkeit](./media/image4-1.png)
 
@@ -52,7 +52,7 @@ Die **Abhängigkeitsumkehrung** ist ein wichtiger Bestandteil beim Erstellen von
 
 **Methoden und Klassen sollten explizit alle benötigten zusammenarbeitenden Objekte erfordern, um ordnungsgemäß zu funktionieren.** Damit Klassen sich in einem gültigen Zustand befinden bzw. ordnungsgemäß funktionieren können, bieten Klassenkonstruktoren die Möglichkeit, dass Klassen die dafür benötigen Elemente identifizieren können. Wenn Sie Klassen identifizieren, die konstruiert und aufgerufen werden können, die jedoch nur ordnungsgemäß funktionieren, wenn bestimmte globale Komponenten bzw. Komponenten der Infrastruktur vorhanden sind, sind diese Klassen Ihren Kunden gegenüber *unehrlich*. Der Konstruktorvertrag sagt aus, dass der Kunde nur die angegebenen Elemente benötigt (wenn möglich auch nichts, wenn die Klasse nur einen parameterlosen Konstruktor verwendet), aber zur Laufzeit wird angegeben, dass das Objekt etwas anderes benötigt.
 
-Durch Befolgen des expliziten Abhängigkeitsprinzips sind Ihre Klassen und Methoden gegenüber den Kunden ehrlich, wenn es um die Elemente geht, die sie benötigen, um ordnungsgemäß zu arbeiten. Dadurch dokumentiert Ihr Code vermehrt selbst, und Ihr Codierungsvertrag wird benutzerfreundlicher, da Benutzer größeres Vertrauen in dem Zusammenhang entwickeln, dass wenn sie das bereitstellen, was für Methoden oder Konstruktorparameter erforderlich ist, sich die Objekte, mit denen sie arbeiten, zur Laufzeit ordnungsgemäß verhalten.
+Durch Befolgen des expliziten Abhängigkeitsprinzips sind Ihre Klassen und Methoden gegenüber den Kunden ehrlich, wenn es um die Elemente geht, die sie benötigen, um ordnungsgemäß zu arbeiten. Bei Befolgen dieses Prinzips wird Ihr Code selbstdokumentierender und Ihr Codierungsvertrag benutzerfreundlicher, da Benutzer darauf vertrauen werden, dass die Objekte, mit denen sie arbeiten, sich zur Runtime ordnungsgemäß verhalten, solange sie die erforderlichen Methoden oder Konstruktorparameter bereitstellen.
 
 ### <a name="single-responsibility"></a>Prinzip der einzigen Verantwortung (Single Responsibility)
 
@@ -66,7 +66,7 @@ Wenn dieses Prinzip auf die Anwendungsarchitektur angewendet wird und bis zu ihr
 
 ### <a name="dont-repeat-yourself-dry"></a>Don't Repeat Yourself (DRY)
 
-Die Anwendung sollte kein Verhalten angeben, das mit einem bestimmten Konzept in mehreren Bereichen im Zusammenhang steht, da dies eine bekannte Fehlerquelle ist. Zu einem späteren Zeitpunkt können geänderte Anforderungen dazu führen, dass dieses Verhalten geändert werden muss. Es ist wahrscheinlich, dass mindestens eine Instanz des Verhaltens nicht aktualisiert werden kann, und das führt zu einem inkonsistenten Verhalten des Systems.
+Die Anwendung sollte kein Verhalten angeben, das mit einem bestimmten Konzept in mehreren Bereichen im Zusammenhang steht, da diese Methode eine bekannte Fehlerquelle ist. Zu einem späteren Zeitpunkt können geänderte Anforderungen dazu führen, dass dieses Verhalten geändert werden muss. Es ist wahrscheinlich, dass mindestens eine Instanz des Verhaltens nicht aktualisiert werden kann, und das System wird sich inkonsistent verhalten.
 
 Kapseln Sie die Logik in einem Programmierungskonstrukt anstatt sie zu duplizieren. Machen Sie dieses Konstrukt zur einzelnen Autorität über dieses Verhalten. Ein anderer Teil der Anwendung, die dieses Verhalten erfordert, verwendet dann dieses neue Konstrukt.
 

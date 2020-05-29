@@ -2,12 +2,12 @@
 title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
 ms.date: 04/28/2020
-ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595753"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442227"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -64,7 +64,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 `PROJECT | SOLUTION`
 
-  Das Projekt oder die Projektmappe, die gepackt werden soll. Es ist entweder ein Pfad zu einer [CSPROJ-Datei](csproj.md), einer Projektmappendatei oder zu einem Verzeichnis. Ist dieses Argument nicht angegeben, sucht der Befehl im aktuellen Verzeichnis nach einem Projekt oder einer Projektmappendatei.
+  Das Projekt oder die Projektmappe, die gepackt werden soll. Es ist entweder ein Pfad zu einer [CSPROJ-Datei](csproj.md), VBPROJ-Datei, FSPROJ-Datei, Projektmappendatei oder einem Verzeichnis. Ist dieses Argument nicht angegeben, sucht der Befehl im aktuellen Verzeichnis nach einem Projekt oder einer Projektmappendatei.
 
 ## <a name="options"></a>Optionen
 

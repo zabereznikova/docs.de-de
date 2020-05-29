@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f24a29a00a1bff34a452c43716d76bf72ef277b5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78968110"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206213"
 ---
-### <a name="resource-manifest-file-names"></a>Manifestdateinamen von Ressourcen
+### <a name="resource-manifest-file-name-change"></a>Änderung des Manifestdateinamens der Ressource
 
-Ab .Net Core 3.0 hat sich der generierte Manifestdateiname von Ressourcen geändert.
+Ab .NET Core 3.0 generiert MSBuild im Standardfall einen anderen Manifestdateinamen für Ressourcendateien.
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -16,70 +16,28 @@ Ab .Net Core 3.0 hat sich der generierte Manifestdateiname von Ressourcen geän
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-Wenn vor . NET Core 3.0 [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile)-Metadaten für eine Ressourcendatei ( *.resx*) in der MSBuild-Projektdatei festgelegt wurden, lautete der generierte Manifestname *Namespace.Classname.resources*. Wenn [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) nicht festgelegt wurde, lautete der generierte Manifestname *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources*.
+Vor .NET Core 3.0 hat MSBuild im Muster `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources` einen Manifestdateinamen generiert, wenn für ein `EmbeddedResource`-Element in der Projektdatei nicht `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten angegeben wurden. Wenn `RootNamespace` nicht in der Projektdatei definiert ist, wird standardmäßig der Projektname verwendet. Beispielsweise lautete der Name des generierten Manifests für eine Ressourcendatei mit dem Namen *Form1.resx* im Stammverzeichnis des Projekts *MyProject.Form1.resources*.
 
-Ab .NET Core 3.0 wird, wenn eine *RESX*-Datei mit einer gleichnamigen Quelldatei zusammengestellt wird, z. B. in Windows Forms-Anwendungen, der Manifestname der Ressource aus dem vollständigen Namen des ersten Typs in der Quelldatei generiert. Wenn beispielsweise *Type.cs* mit *Type.resx* zusammengestellt wird, lautet der generierte Manifestname *Namespace.Classname.resources*. Wenn Sie jedoch eines der Attribute der `EmbeddedResource`-Eigenschaft in der *RESX*-Datei ändern, kann der generierte Manifestdateiname anders lauten:
+Ab .NET Core 3.0 verwendet MSBuild Typinformationen aus der Quelldatei, wenn eine Ressourcendatei mit einer Quelldatei desselben Namens (z. B. *Form1.resx* und *Form1.cs*) angeordnet wird, um den Manifestdateinamen im Muster `<Namespace>.<ClassName>.resources` zu generieren. Der Namespace- und Klassenname werden aus dem ersten Typ in der angeordneten Quelldatei extrahiert. Beispielsweise lautet der generierte Manifestname für eine Ressourcendatei mit dem Namen *Form1.resx*, die mit einer Quelldatei mit dem Namen *Form1.cs* angeordnet wird, *MyNamespace.Form1.resources*. Wichtig ist zu beachten, dass der erste Teil des Dateinamens sich von früheren Versionen von .NET Core unterscheidet (*MyNamespace* anstelle von *MyProject*).
 
-- Wenn das `LogicalName`-Attribut der `EmbeddedResource`-Eigenschaft festgelegt ist, wird dieser Wert als Manifestdateiname der Ressource verwendet.
+> [!NOTE]
+> Wenn `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für ein `EmbeddedResource`-Element in der Projektdatei angegeben sind, wirkt sich diese Änderung nicht auf diese Ressourcendatei aus.
 
-  Beispiele:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
-  ```
-
-  **Generierter Manifestdateiname der Ressource**: *SomeName.resources* (unabhängig vom *RESX*-Dateinamen oder der Kultur oder anderen Metadaten).
-
-- Falls `LogicalName` nicht festgelegt ist, aber das `ManifestResourceName`-Attribut der `EmbeddedResource`-Eigenschaft festgelegt ist, wird sein Wert in Kombination mit der Dateierweiterung *.resources* als Manifestdateiname der Ressource verwendet.
-
-  Beispiele:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" ManifestResourceName="SomeName" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
-  ```
-
-  **Generierter Manifestdateiname der Ressource**: *SomeName.resources* oder *SomeName.fr-FR.resources*.
-
-- Wenn die vorherigen Regeln nicht zutreffen und das `DependentUpon`-Attribut des `EmbeddedResource`-Elements auf eine Quelldatei festgelegt ist, wird der Typname der ersten Klasse in der Quelldatei im Manifestdateinamen der Ressource verwendet. Genauer gesagt lautet der generierte Dateiname *Namespace.Classname\[.Culture].resources*.
-
-  Beispiele:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" DependentUpon="MyTypes.cs">
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
-  ```
-
-  **Generierter Manifestdateiname der Ressource**: *Namespace.Classname.resources* oder *Namespace.Classname.fr-FR.resources* (wobei `Namespace.Classname` der Name der ersten Klasse in *MyTypes.cs* ist).
-
-- Wenn die vorherigen Regeln nicht zutreffen, ist `EmbeddedResourceUseDependentUponConvention` gleich `true` (Standard für .NET Core), und es eine mit einer *RESX*-Datei zusammengestellte Quelldatei gibt, die den gleichen Basisdateinamen hat, wird die *RESX*-Datei von der übereinstimmenden Quelldatei abhängig gemacht. Der generierte Name ist der gleiche wie in der vorherigen Regel. Dies ist die Standardeinstellungsregel für .NET Core-Projekte.
-  
-  Beispiele:
-  
-  Die Dateien *MyTypes.cs* und *MyTypes.resx* oder *MyTypes.fr-FR.resx* befinden sich im gleichen Ordner.
-  
-  **Generierter Manifestdateiname der Ressource**: *Namespace.Classname.resources* oder *Namespace.Classname.fr-FR.resources* (wobei `Namespace.Classname` der Name der ersten Klasse in *MyTypes.cs* ist).
-
-- Wenn keine der vorherigen Regeln zutrifft, lautet der Name der generierten Manifestdatei der Ressource *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources*. Der relative Pfad ist der Wert des `Link`-Attributs des `EmbeddedResource`-Elements, falls festgelegt. Andernfalls ist der relative Pfad der Wert des `Identity`-Attributs des `EmbeddedResource`-Elements. In Visual Studio ist dies der Pfad vom Projektstamm zur Datei im Projektmappen-Explorer.
+Dieser Breaking Change wurde mit dem Hinzufügen der `EmbeddedResourceUseDependentUponConvention`-Eigenschaft zu .NET Core-Projekten eingeführt. Standardmäßig werden Ressourcendateien nicht explizit in einer .NET Core-Projektdatei aufgelistet, sodass Ihnen keine `DependentUpon`-Metadaten zur Verfügung stehen, um anzugeben, wie die generierte *RESOURCES*-Datei benannt werden soll. Wenn `EmbeddedResourceUseDependentUponConvention` dem Standard entsprechend auf `true` festgelegt ist, sucht MSBuild nach einer angeordneten Quelldatei und extrahiert einen Namespace- und Klassennamen aus dieser Datei. Wenn Sie `EmbeddedResourceUseDependentUponConvention` auf `false` festlegen, generiert MSBuild den Namen des Manifests gemäß dem vorherigen Verhalten, wobei `RootNamespace` und der relative Dateipfad kombiniert werden.
 
 #### <a name="recommended-action"></a>Empfohlene Aktion
 
-Wenn Sie mit den generierten Manifestnamen unzufrieden sind, haben Sie folgende Möglichkeiten:
+In den meisten Fällen ist keine Aktion seitens des Entwicklers erforderlich, und Ihre App sollte weiterhin funktionieren. Wenn diese Änderung jedoch Ihre App beeinträchtigt, haben Sie folgende Möglichkeiten:
 
-- Ändern Sie die Metadaten Ihrer Ressourcendatei gemäß einer der zuvor beschriebenen Benennungsregeln.
+- Ändern Sie den Code so, dass er den neuen Manifestnamen erwartet.
 
-- Legen Sie in Ihrer Projektdatei `EmbeddedResourceUseDependentUponConvention` auf `false` fest, um die neue Konvention vollständig abzulehnen:
+- Um die neue Namenskonvention zu umgehen, legen Sie in Ihrer Projektdatei `EmbeddedResourceUseDependentUponConvention` auf `false` fest.
 
-   ```xml
-   <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
-   ```
-
-   > [!NOTE]
-   > Wenn die Attribute `LogicalName` oder `ManifestResourceName` vorhanden sind, werden ihre Werte weiterhin für den generierten Dateinamen verwendet.
+  ```xml
+  <PropertyGroup>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
+  ```
 
 #### <a name="category"></a>Kategorie
 

@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Überschreiben von codierter SOAP-XML-Serialisierung'
+description: Erfahren Sie mehr über das Überschreiben der XML-Serialisierung von Objekten als SOAP-Nachrichten, das mit dem Überschreiben der Standard-XML-Serialisierung vergleichbar ist.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76e8009b83182d8517ff403f4f1e67bf0e7846b8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922589"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375834"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Vorgehensweise: Überschreiben von codierter SOAP-XML-Serialisierung
 
@@ -283,6 +284,6 @@ public class Run
 - [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - [Attribute zur Steuerung der Serialisierung von codiertem SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
 - [XML-Serialisierung mit XML-Webdiensten](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [How to: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [How to: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md).
 - [How to: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [How to: Serialisieren eines Objekts als einen durch SOAP codierten XML-Stream](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md).

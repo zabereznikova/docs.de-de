@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie eine .NET Framework Windows Forms-Anwend
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635512"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206135"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Portieren einer Windows Forms-Desktop-App zu .NET Core 3.0
 
@@ -26,9 +26,10 @@ In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migr
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) oder höher für alle Aufgaben, die Sie mit dem Designer durchführen möchten. Es wird empfohlen, ein Update auf die neueste [Vorschauversion von Visual Studio](https://visualstudio.microsoft.com/vs/preview/) durchzuführen.
+- [Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) oder höher für alle Aufgaben, die Sie mit dem Designer durchführen möchten. Sie sollten ein Update auf die neueste [Vorschauversion von Visual Studio](https://visualstudio.microsoft.com/vs/preview/) durchführen.
 
   Installieren Sie die folgenden Visual Studio-Workloads:
+  
   - .NET-Desktopentwicklung
   - Plattformübergreifende .NET Core-Entwicklung
 

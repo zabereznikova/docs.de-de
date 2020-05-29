@@ -3,12 +3,12 @@ title: Garbage-Collector-Konfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, um zu konfigurieren, wie der Garbage Collector Arbeitsspeicher für .NET Core-Apps verwaltet.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d7e3d040cd634eeb020beff806c60f834cc02585
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102865"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761979"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Laufzeitkonfigurationsoptionen für die Garbage Collection
 
@@ -33,7 +33,7 @@ Verwenden Sie die folgenden Einstellungen, um Varianten der Garbage Collection a
 ### <a name="systemgcservercomplus_gcserver"></a>System.GC.Server/COMPlus_gcServer
 
 - Konfiguriert, ob die Anwendung die Arbeitsstation-GC oder die Server-GC verwendet
-- Standard: Arbeitsstation-Garbage-Collection (`false`)
+- Standard: Arbeitsstation-Garbage Collection. Dies entspricht der Einstellung des Werts auf `false`.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
@@ -71,7 +71,7 @@ Projektdatei:
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - Konfiguriert, ob die (gleichzeitige) Hintergrund-GC aktiviert ist
-- Standard: Aktiviert (`true`)
+- Standard: Garbage Collection im Hintergrund verwenden. Dies entspricht der Einstellung des Werts auf `true`.
 - Weitere Informationen finden Sie unter [Hintergrund der Garbage Collection](../../standard/garbage-collection/background-gc.md).
 
 | | Einstellungsname | Werte | Eingeführt in Version |
@@ -200,7 +200,7 @@ Beispiel:
   Wenn ein 64-Bit-Windows-Computer über mehrere CPU-Gruppen verfügt, d. h. mehr als 64 Prozessoren vorhanden sind, dann wird durch die Aktivierung dieses Elements die Garbage Collection in allen CPU-Gruppen erweitert. Der Garbage Collector verwendet alle Kerne zum Erstellen und Ausgleichen von Heaps.
 
 - Gilt nur für Garbage Collection des Servers auf 64-Bit-Windows-Betriebssystemen.
-- Standard: Deaktiviert (`0`)
+- Standard: GC wird nicht über CPU-Gruppen hinweg erweitert. Dies entspricht der Einstellung des Werts auf `0`.
 - Weitere Informationen finden Sie unter [Optimieren der CPU-Konfiguration für GC auf Computern mit mehr als 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) im Blog von Maoni Stephens.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
@@ -216,7 +216,7 @@ Beispiel:
 
 - Gibt an, ob Garbage-Collection-Threads Prozessoren *zugeordnet* werden sollen. Einen GC-Thread zuzuordnen, bedeutet, dass dieser nur auf der jeweiligen CPU ausgeführt werden kann. Für jeden GC-Thread wird ein Heap erstellt.
 - Gilt nur für die Garbage Collection des Servers.
-- Standard: Garbage-Collection-Threads werden Prozessoren zugeordnet (`false`).
+- Standard: Garbage Collection-Threads werden Prozessoren zugeordnet. Dies entspricht der Einstellung des Werts auf `false`.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
@@ -299,7 +299,7 @@ Beispiel:
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 
 - Konfiguriert, ob Segmente, die gelöscht werden sollen, zur späteren Verwendung auf eine Standbyliste aufgenommen oder an das Betriebssystem zurückgegeben werden
-- Standard: Segmente werden an das Betriebssystem zurückgegeben (`false`).
+- Standard: Segmente werden an das Betriebssystem zurückgegeben. Dies entspricht der Einstellung des Werts auf `false`.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
@@ -338,7 +338,7 @@ Projektdatei:
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - Gibt an, ob umfangreiche Seiten verwendet werden sollen, wenn eine feste Heapgrenze festgelegt wird
-- Standard: Deaktiviert (`0`)
+- Standard: Verwenden Sie keine großen Seiten, wenn eine feste Heapgrenze festgelegt ist. Dies entspricht der Einstellung des Werts auf `0`.
 - Dies ist eine experimentelle Einstellung.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
@@ -351,7 +351,7 @@ Projektdatei:
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - Konfiguriert die Garbage-Collector-Unterstützung auf 64-Bit-Plattformen für Arrays mit einer Gesamtgröße von mehr als 2 Gigabytes (GB)
-- Standard: Aktiviert (`1`)
+- Standard: GC unterstützt Arrays, die größer als 2 GB sind. Dies entspricht der Einstellung des Werts auf `1`.
 - Diese Option wird in einer zukünftigen Version von .NET möglicherweise veraltet sein.
 
 | | Einstellungsname | Werte | Eingeführt in Version |

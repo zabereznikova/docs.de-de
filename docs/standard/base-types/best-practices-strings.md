@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523973"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441005"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
 
@@ -317,18 +317,20 @@ Wenn Sie explizit angeben möchten, dass eine Zeichenfolge unter Verwendung der 
 
 - Rufen Sie bei Verwendung der Methoden <xref:System.String.Format%2A?displayProperty=nameWithType> und `ToString` eine Überladung mit einem Parameter vom Typ `provider` (beispielsweise <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> oder <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>) auf, und übergeben Sie die Eigenschaft <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, eine Instanz vom Typ <xref:System.Globalization.CultureInfo>, die die gewünschte Kultur darstellt, oder die Eigenschaft <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.
 
-- Lassen Sie bei der Verkettung von Zeichenfolgen keine impliziten Konvertierungen durch den Compiler zu. Rufen Sie stattdessen eine Überladung vom Typ `ToString` mit einem Parameter vom Typ `provider` auf, um eine explizite Konvertierung durchzuführen. Im folgenden C#-Code verwendet der Compiler beispielsweise implizit die aktuelle Kultur, wenn ein Wert vom Typ <xref:System.Double> in eine Zeichenfolge konvertiert wird:
+- Lassen Sie bei der Verkettung von Zeichenfolgen keine impliziten Konvertierungen durch den Compiler zu. Rufen Sie stattdessen eine Überladung vom Typ `ToString` mit einem Parameter vom Typ `provider` auf, um eine explizite Konvertierung durchzuführen. Der Compiler verwendet beispielsweise implizit die aktuelle Kultur, wenn ein Wert vom Typ <xref:System.Double> in folgendem Code in eine Zeichenfolge konvertiert wird:
 
-  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+  [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
 
-  Alternativ können Sie explizit die Kultur angeben, deren Formatierungskonventionen bei der Konvertierung verwendet werden sollen. Rufen Sie hierzu die Methode <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> auf, wie im folgenden C#-Code zu sehen:
+  Alternativ können Sie explizit die Kultur angeben, deren Formatierungskonventionen bei der Konvertierung verwendet werden sollen. Rufen Sie hierzu die Methode <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> auf, wie im folgenden Code zu sehen:
 
-  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+  [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
 
 - Weisen Sie für die Zeichenfolgeninterpolation eine interpolierte Zeichenfolge einer Instanz vom Typ <xref:System.FormattableString> (anstatt einer Instanz vom Typ <xref:System.String>) zu. Anschließend können Sie die Methode <xref:System.FormattableString.ToString?displayProperty=nameWithType> aufrufen, um eine Ergebniszeichenfolge zu erzeugen, die den Konventionen der aktuellen Kultur entspricht, oder die Methode <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType>, um eine Ergebniszeichenfolge zu erzeugen, die den Konventionen einer angegebenen Kultur entspricht. Sie können auch die formatierbare Zeichenfolge an die statische Methode <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> übergeben, um eine Ergebniszeichenfolge zu erzeugen, die den Konventionen der invarianten Kultur entspricht. Dieser Ansatz wird anhand des folgenden Beispiels veranschaulicht. (Bei der Ausgabe des Beispiels wird als aktuelle Kultur „en-US“ verwendet.)
 
-  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
-  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+  [!code-csharp[String interpolation](./snippets/best-practices-strings/csharp/formattable/Program.cs)]
+  [!code-vb[String interpolation](./snippets/best-practices-strings/vb/formattable/Program.vb)]
 
 Sie können Daten, die keine Zeichenfolge sind, entweder als Binärdaten oder als formatierte Daten beibehalten. Wenn Sie möchten, dass sie als formatierte Daten gespeichert werden, sollten Sie eine Überladung einer Formatierungsmethode aufrufen, die einen `provider` -Parameter einschließt, und dabei die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> -Eigenschaft übergeben. Die invariante Kultur stellt ein konsistentes Format für formatierte Daten bereit, das unabhängig von der Kultur und dem Computers ist. Im Gegensatz dazu bringt das Beibehalten von Daten, die mit anderen Kulturen als der invarianten Kultur formatiert werden, einige Einschränkungen mit sich:
 

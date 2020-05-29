@@ -3,29 +3,29 @@ title: Verwenden des .NET Compiler Platform SDK-Syntaxmodells
 description: Diese Übersicht bietet einen Überblick über die Typen, die Sie zum Verstehen und Bearbeiten von Syntaxknoten verwenden.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 87b79c3af4958299fcd966dcc4b04868f88675c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: fdb13095c2b91e54d58988a51a51b05652e57ea6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975913"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208394"
 ---
 # <a name="work-with-syntax"></a>Arbeiten mit der Syntax
 
-Die **Syntaxstruktur** ist eine grundlegende Datenstruktur, die von Compiler-APIs verfügbar gemacht wird. Diese Strukturen stellen die lexikalische und syntaktische Struktur des Quellcodes dar. Sie erfüllen zwei wichtige Aufgaben:
+Die *Syntaxstruktur* ist eine grundlegende Datenstruktur, die von Compiler-APIs verfügbar gemacht wird. Diese Strukturen stellen die lexikalische und syntaktische Struktur des Quellcodes dar. Sie erfüllen zwei wichtige Aufgaben:
 
-1. Damit Tools wie zum Beispiel eine IDE, Add-Ins, Codeanalysetools und Refactorings die syntaktische Struktur von Quellcode in dem Projekt eines Benutzers anzeigen und verarbeiten können.
-2. Damit Tools wie zum Beispiel Refactorings und eine IDE ermöglicht wird, Quellcode auf natürliche Weise zu erstellen, zu ändern und neu anzuordnen, ohne den Text direkt zu bearbeiten. Durch Erstellen und Bearbeiten von Strukturen können Tools einfach Quellcode erstellen und neu anordnen.
+- Damit Tools wie zum Beispiel eine IDE, Add-Ins, Codeanalysetools und Refactorings die syntaktische Struktur von Quellcode in dem Projekt eines Benutzers anzeigen und verarbeiten können.
+- Damit Tools wie zum Beispiel Refactorings und eine IDE ermöglicht wird, Quellcode auf natürliche Weise zu erstellen, zu ändern und neu anzuordnen, ohne den Text direkt zu bearbeiten. Durch Erstellen und Bearbeiten von Strukturen können Tools einfach Quellcode erstellen und neu anordnen.
 
 ## <a name="syntax-trees"></a>Syntaxstrukturen
 
 Syntaxstrukturen sind die primär verwendete Struktur für Kompilierung, Codeanalyse, Bindung, Refactoring, IDE-Funktionen und Codegenerierung. Kein Teil des Quellcodes kann verstanden werden, ohne zunächst als eines von vielen bekannten strukturellen Sprachelementen identifiziert und kategorisiert worden zu sein.
 
-Syntaxstrukturen verfügen über drei wichtige Attribute. Das erste Attribut ist, dass Syntaxstrukturen alle Quellinformationen in voller Genauigkeit enthalten. Das bedeutet, dass die Syntaxstruktur jede Information aus dem Quelltext, jedes grammatische Konstrukt, jedes lexikalische Token und alles, was dazwischen liegt, enthält, einschließlich Leerzeichen, Kommentaren und Präprozessordirektiven. Zum Beispiel wird jedes Literal, das in der Quelle erwähnt wird, so dargestellt, wie es eingegeben wurde. Die Syntaxstrukturen stellen Fehler im Quellcode auch dar, wenn das Programm unvollständig oder falsch formatiert ist, indem es übersprungene oder fehlende Token in der Syntaxstruktur anzeigt.
+Syntaxstrukturen verfügen über drei wichtige Attribute. Das erste Attribut ist, dass Syntaxstrukturen alle Quellinformationen in voller Genauigkeit enthalten. Volle Genauigkeit bedeutet: Die Syntaxstruktur enthält jede Information aus dem Quelltext, jedes grammatische Konstrukt, jedes lexikalische Token und alles, was dazwischen liegt – einschließlich Leerzeichen, Kommentaren und Präprozessordirektiven. Zum Beispiel wird jedes Literal, das in der Quelle erwähnt wird, so dargestellt, wie es eingegeben wurde. Syntaxstrukturen erfassen auch Fehler im Quellcode, wenn das Programm unvollständig oder falsch formatiert ist, indem übersprungene oder fehlende Token angezeigt werden.
 
-Dadurch wird das zweite Attribut von Syntaxstrukturen ermöglicht. Eine Syntaxstruktur, die von dem Parser abgerufen wurde, kann den genauen Text erzeugen, aus dem sie ausgelesen wurde. Es ist möglich, die im Knoten verankerte Textdarstellung der Teilstruktur aus einem beliebigen Syntaxknoten zu erhalten. Das bedeutet, dass Syntaxstrukturen dazu verwendet werden können, Quelltext zu Erstellen und zu Bearbeiten. Durch das Erstellen einer Struktur erstellen Sie gleichzeitig auch den entsprechenden Text, und durch das Bearbeiten einer Syntaxstruktur (d.h. das Erstellen einer neuen Struktur durch das Ändern einer vorhandenen Struktur) nehmen Sie Änderungen am Text vor.
+Das zweite Attribut von Syntaxstrukturen ist, dass sie den exakten Text, aus dem sie analysiert wurden, produzieren können. Es ist möglich, die im Knoten verankerte Textdarstellung der Teilstruktur aus einem beliebigen Syntaxknoten zu erhalten. Diese Fähigkeit bedeutet, dass Syntaxstrukturen verwendet werden können, um Quelltext zu erstellen und zu bearbeiten. Durch das Erstellen einer Struktur erstellen Sie gleichzeitig auch den entsprechenden Text, und durch das Bearbeiten einer Syntaxstruktur (d. h. das Erstellen einer neuen Struktur durch das Ändern einer vorhandenen Struktur) nehmen Sie Änderungen am Text vor.
 
-Das dritte Attribut von Syntaxstrukturen ist, dass sie unveränderlich und threadsicher sind.  Das bedeutet, dass eine Struktur, die erstellt wurde, eine Momentaufnahme des aktuellen Zustands des Codes ist, die sich nie ändert. Dadurch können mehrere Benutzer gleichzeitig mit der selben Syntaxstruktur in verschiedenen Threads interagieren, ohne etwas sperren oder duplizieren zu müssen. Da Strukturen unveränderlich sind, und keine direkten Änderungen an ihnen vorgenommen werden können, sind Factorymethoden hilfreich beim Erstellen und Bearbeiten von Syntaxstrukturen, weil sie zusätzliche Momentaufnahmen von der Struktur erstellen. Strukturen sind bei der Wiederverwendung von grundlegenden Knoten effizient, weshalb eine neue Version schnell und mit geringem zusätzlichem Speicherplatz neu erstellt werden kann.
+Das dritte Attribut von Syntaxstrukturen ist, dass sie unveränderlich und threadsicher sind. Nach dem Erstellen ist eine Struktur eine Momentaufnahme des aktuellen Zustands des Codes, die sich nie ändert. Dadurch können mehrere Benutzer gleichzeitig mit der selben Syntaxstruktur in verschiedenen Threads interagieren, ohne etwas sperren oder duplizieren zu müssen. Da Strukturen unveränderlich sind, und keine direkten Änderungen an ihnen vorgenommen werden können, sind Factorymethoden hilfreich beim Erstellen und Bearbeiten von Syntaxstrukturen, weil sie zusätzliche Momentaufnahmen von der Struktur erstellen. Strukturen sind bei der Wiederverwendung von grundlegenden Knoten effizient, weshalb eine neue Version schnell und mit geringem zusätzlichem Speicherplatz neu erstellt werden kann.
 
 Eine Syntaxstruktur ist eine Datenstruktur, in der nichtterminale Strukturelemente anderen Elementen übergeordnet sind. Jede Syntaxstruktur besteht aus Knoten, Token und Trivia.
 
@@ -35,7 +35,7 @@ Syntaxknoten gehören zu den Hauptelementen der Syntaxstrukturen. Diese Knoten s
 
 Alle Syntaxknoten sind nichtterminale Knoten in der Syntaxstruktur, was bedeutet, dass ihnen immer andere Knoten und Token untergeordnet sind. Als untergeordnetes Element eines anderen Knotens hat jeder Knoten einen übergeordneten Knoten, auf den mit der Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> zugegriffen werden kann. Da Knoten und Strukturen unveränderlich sind, ändert sich das übergeordnete Element eines Knotens nie. Das übergeordnete Element des Stamms der Struktur ist NULL.
 
-Jeder Knoten verfügt über die Methode <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, die die untergeordneten Knoten sequenziell, je nach ihrer Position im Quelltext, auflistet. Diese Auflistung enthält keine Token. Alle Knoten verfügen auch über Methoden zum Untersuchen von Nachfolgern, wie <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> oder <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>, die eine Liste aller Knoten, Token oder Trivia darstellen, die in der Unterstruktur vorhanden sind, die von dem Knoten abstammen.
+Jeder Knoten verfügt über die Methode <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, die die untergeordneten Knoten sequenziell, je nach ihrer Position im Quelltext, auflistet. Diese Auflistung enthält keine Token. Alle Knoten verfügen auch über Methoden zum Untersuchen von Nachfolgern, wie <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> oder <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>, die eine Liste aller Knoten, Token oder Trivia darstellen, die in der Unterstruktur vorhanden sind, die von dem Knoten abstammt.
 
 Darüber hinaus macht jede Unterklasse der Syntaxknoten alle identischen untergeordneten Elemente durch stark typisierte Eigenschaften verfügbar. Zum Beispiel verfügt eine Knotenklasse <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> über drei zusätzliche Eigenschaften, die auf binäre Operatoren beschränkt sind: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> und <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Der Typ von <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> und <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> ist <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>, und der Typ von <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> ist <xref:Microsoft.CodeAnalysis.SyntaxToken>.
 
@@ -69,7 +69,7 @@ Jeder Knoten verfügt über zwei <xref:Microsoft.CodeAnalysis.Text.TextSpan>-Eig
 
 Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> bezeichnet die Textspanne vom ersten Token in der Unterstruktur des Knotens bis zum Ende des letzten Tokens. Diese Spanne umfasst keine führenden oder nachgestellten Trivia.
 
-Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> bezeichnet die Textspanne, die die normale Spanne des Knotens und die Spannen jeglicher führenden oder nachgestellten Trivia, enthält.
+Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> bezeichnet die Textspanne, die die normale Spanne des Knotens und die Spannen jeglicher führenden oder nachgestellten Trivia enthält.
 
 Zum Beispiel:
 
@@ -93,8 +93,8 @@ Angenommen, eine einzelne <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpre
 
 ## <a name="errors"></a>Fehler
 
-Auch wenn der Quelltext Syntaxfehler enthält, wird eine vollständige Syntaxstruktur verfügbar gemacht, die auf die Quelle zurückführbar ist. Wenn der Parser auf Code trifft, der nicht der definierten Syntax der Programmiersprache entspricht, nutzt er eine von zwei Verfahren, um eine Syntaxstruktur zu erstellen.
+Auch wenn der Quelltext Syntaxfehler enthält, wird eine vollständige Syntaxstruktur verfügbar gemacht, die auf die Quelle zurückführbar ist. Wenn der Parser auf Code trifft, der nicht der definierten Syntax der Programmiersprache entspricht, nutzt er eines von zwei Verfahren, um eine Syntaxstruktur zu erstellen:
 
-Erstens, wenn der Parser eine bestimmte Art von Token erwartet, es aber nicht vorhanden ist, kann er dort, wo er das Token erwartet hat, ein fehlendes Token in die Syntaxstruktur einfügen. Ein fehlendes Token stellt das Token dar, das vom Parser erwartet wurde, es besitzt jedoch eine leere Span-Eigenschaft, und die zugehörige <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType>-Eigenschaft gibt `true` an.
+- Wenn der Parser eine bestimmte Art von Token erwartet, es aber nicht vorhanden ist, kann er dort, wo er das Token erwartet hat, ein fehlendes Token in die Syntaxstruktur einfügen. Ein fehlendes Token stellt das Token dar, das vom Parser erwartet wurde, es besitzt jedoch eine leere Span-Eigenschaft, und die zugehörige <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType>-Eigenschaft gibt `true` an.
 
-Zweitens kann der Parser Token überspringen, bis er ein Token findet, bei dem er mit der Analyse fortsetzen kann. Wenn das der Fall ist, werden die übersprungenen Token als Triviaknoten mit der Eigenschaft <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia> angefügt.
+- Der Parser kann Token überspringen, bis er ein Token findet, bei dem er mit der Analyse fortfahren kann. Wenn das der Fall ist, werden die übersprungenen Token als Triviaknoten mit der Eigenschaft <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia> angefügt.

@@ -1,5 +1,6 @@
 ---
 title: Assemblymanifest
+description: Ein .NET-Assemblymanifest gibt seine Versionsanforderungen, die Sicherheitsidentität und den Gültigkeitsbereich der Assembly sowie Informationen zum Auflösen von Verweisen an.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f4d09f559ac66e1f3bc38af0781f7e01e7461d5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73107150"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380172"
 ---
 # <a name="assembly-manifest"></a>Assemblymanifest
 Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, in der beschrieben ist, wie die Elemente in der Assembly miteinander verknüpft sind. Das Assemblymanifest enthält diese Assemblymetadaten. Ein Assemblymanifest enthält alle Metadaten, die zum Angeben von Versionsanforderungen und Sicherheitsidentität der Assembly erforderlich sind, sowie alle Metadaten, die zum Definieren des Gültigkeitsbereichs der Assembly und zum Auflösen von Verweisen auf Ressourcen und Klassen benötigt werden. Das Assemblymanifest kann entweder in einer PE-Datei (eine *EXE*- oder *DLL*-Datei) mit MSIL-Code (Microsoft Intermediate Language) oder in einer eigenständigen PE-Datei gespeichert sein, die ausschließlich Informationen aus dem Assemblymanifest enthält.  
@@ -51,7 +52,7 @@ Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, i
   
  Im Assemblymanifest können Sie Informationen hinzufügen oder ändern. Dazu müssen Sie Assemblyattribute im Code verwenden. Sie können Versionsinformationen und Informationsattribute ändern, einschließlich Marke, Urheberrecht, Produkt, Firma und Informationsversion. Eine vollständige Liste von Assemblyattributen finden Sie unter [Festlegen von Assemblyattributen](set-attributes.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Assemblyinhalte](contents.md)
 - [Assemblyversionsverwaltung](versioning.md)

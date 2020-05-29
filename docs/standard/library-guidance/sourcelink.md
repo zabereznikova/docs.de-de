@@ -2,12 +2,12 @@
 title: SourceLink und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Verwenden von SourceLink zur Verbesserung des Debuggens für .NET-Bibliotheken.
 ms.date: 01/15/2019
-ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744549"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212424"
 ---
 # <a name="source-link"></a>SourceLink
 
@@ -37,6 +37,10 @@ Sie können mit dem [NuGet-Paket-Explorer](https://github.com/NuGetPackageExplor
 ✔️ Erwägen Sie, Symboldateien zu veröffentlichen (`*.pdb`).
 
 > Für das beste Debugergebnis sollte Ihre Bibliothek sowohl Symboldateien veröffentlichen als auch SourceLink verwenden. Weitere Informationen zu Symboldateien und Symbolpaketen finden Sie unter [Symbolpakete](./nuget.md#symbol-packages).
+
+✔️ ERWÄGEN SIE, deterministische Builds zu aktivieren.
+
+> Deterministische Builds ermöglichen die Überprüfung, ob die resultierende Binärdatei aus der angegebenen Quelle erstellt wurde, und die Nachverfolgbarkeit. Weitere Informationen zu deterministischen Builds und Anweisungen zu deren Aktivierung finden Sie unter [Deterministic Builds](https://github.com/clairernovotny/DeterministicBuilds) (Deterministische Builds).
 
 >[!div class="step-by-step"]
 >[Zurück](dependencies.md)

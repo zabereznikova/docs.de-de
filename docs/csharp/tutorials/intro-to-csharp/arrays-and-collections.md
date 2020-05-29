@@ -3,12 +3,12 @@ title: Arbeiten mit Sammlungen – Tutorial zur Einführung in C#
 description: Machen Sie sich mit C# vertraut, indem Sie die Listenauflistung in diesem Tutorial erkunden.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635651"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396892"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informationen zum Verwalten von Datensammlungen mithilfe des generischen Listentyps
 
@@ -44,7 +44,7 @@ namespace list_tutorial
 
 Ersetzen Sie `<name>` durch Ihren eigenen Namen. Speichern Sie *Program.cs*. Geben Sie `dotnet run` in Ihrem Konsolenfenster ein, um es zu testen.
 
-Sie haben gerade eine Liste von Zeichenfolgen erstellt, dieser Liste drei Namen hinzugefügt und die Namen in GROSSBUCHSTABEN ausgegeben. Sie verwenden Konzepte, die Sie in früheren Tutorials kennengelernt haben, um die Liste zu durchlaufen.
+Sie haben eine Liste mit Zeichenfolgen erstellt, dieser Liste drei Namen hinzugefügt und die Namen in Großbuchstaben ausgegeben. Sie verwenden Konzepte, die Sie in früheren Tutorials kennengelernt haben, um die Liste zu durchlaufen.
 
 Im Code zum Anzeigen von Namen wird das Feature [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md) genutzt.  Wenn Sie einem `string` ein `$`-Zeichen voranstellen, können Sie C#-Code in die Zeichenfolgendeklaration einbetten. Der Wert, den dieser C#-Code generiert, ist eine Zeichenfolge, durch die der C#-Code ersetzt wird. In diesem Beispiel wird `{name.ToUpper()}` mit dem jeweiligen in Großbuchstaben konvertierten Namen ersetzt, da Sie die <xref:System.String.ToUpper%2A>-Methode aufgerufen haben.
 
@@ -86,7 +86,7 @@ Speichern Sie die Datei, und geben Sie `dotnet run` erneut ein, um die Ergebniss
 
 ## <a name="search-and-sort-lists"></a>Suchen in und Sortieren von Listen
 
-In unseren Beispielen werden relativ kleine Listen verwendet, aber Ihre Anwendungen erstellen möglicherweise häufig Listen mit viel mehr Elementen, die manchmal in die Tausende gehen. Um in diesen größeren Sammlungen Elemente zu finden, müssen Sie die Liste nach verschiedenen Elementen durchsuchen. Die <xref:System.Collections.Generic.List%601.IndexOf%2A>-Methode sucht nach einem Element und gibt den Index des Elements zurück. Fügen Sie diesen Code am Ende der `Main`-Methode hinzu:
+In unseren Beispielen werden relativ kleine Listen verwendet, aber Ihre Anwendungen erstellen möglicherweise häufig Listen mit viel mehr Elementen, die manchmal in die Tausende gehen. Um in diesen größeren Sammlungen Elemente zu finden, müssen Sie die Liste nach verschiedenen Elementen durchsuchen. Die <xref:System.Collections.Generic.List%601.IndexOf%2A>-Methode sucht nach einem Element und gibt den Index des Elements zurück. Wenn das Element nicht in der Liste enthalten ist, gibt `IndexOf` `-1` zurück. Fügen Sie diesen Code am Ende der `Main`-Methode hinzu:
 
 ```csharp
 var index = names.IndexOf("Felipe");

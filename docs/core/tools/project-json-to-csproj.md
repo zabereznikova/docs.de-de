@@ -3,12 +3,12 @@ title: Vergleich von project.json und csproj
 description: Informationen zur Zuordnung zwischen project.json und csproj-Elementen.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794623"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205833"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
 
@@ -38,7 +38,7 @@ Das neue Format \*.csproj, ist ein XML-basiertes Format. Im folgenden Beispiel w
 }
 ```
 
-Wird nicht mehr unterstützt. In csproj wird dies durch den Dateinamen des Projekts festgelegt, der in der Regel mit dem Namen des Verzeichnisses übereinstimmt. Beispiel: `MyProjectName.csproj`.
+Wird nicht mehr unterstützt. In csproj wird dies durch den Dateinamen des Projekts festgelegt, der in der Regel mit dem Namen des Verzeichnisses übereinstimmt. Beispielsweise `MyProjectName.csproj`.
 
 Standardmäßig gibt der Dateiname des Projekts auch den Wert der `<AssemblyName>`- und `<PackageId>`- Eigenschaften an.
 
@@ -179,7 +179,7 @@ Verwenden Sie die `TargetFrameworks`-Eigenschaft, um Ihre Liste der Zielframewor
 </PropertyGroup>
 ```
 
-Beachten Sie, dass sich der `<RuntimeFrameworkVersion>`-Wert im migrierten Projekt nach der Version des SDK richtet, das Sie installiert haben.
+Der `<RuntimeFrameworkVersion>`-Wert im migrierten Projekt richtet sich nach der installierten SDK-Version.
 
 ### <a name="top-level-dependencies"></a>Abhängigkeiten der obersten Ebene
 
@@ -485,8 +485,7 @@ Siehe auch [Dateien](#files).
 </PropertyGroup>
 ```
 
-Es gibt keine Entsprechung für das `owners`-Element in MSBuild.
-Für `summary` können Sie die `<Description>`-Eigenschaft von MSBuild verwenden, obwohl der Wert der `summary` nicht automatisch zur Eigenschaft migriert wird, da die Eigenschaft dem [`description`](#other-common-root-level-options)-Element zugeordnet ist.
+Es gibt keine Entsprechung für das `owners`-Element in MSBuild. Für `summary` können Sie die MSBuild-Eigenschaft `<Description>` verwenden. Der Wert von `summary` wird nicht automatisch zu dieser Eigenschaft migriert, da die Eigenschaft dem [`description`](#other-common-root-level-options)-Element zugeordnet ist.
 
 ## <a name="scripts"></a>Skripts
 
@@ -528,7 +527,7 @@ Ihre Entsprechungen in MSBuild sind [Ziele](/visualstudio/msbuild/msbuild-target
 }
 ```
 
-Alle Einstellungen in dieser Gruppe, außer für die Eigenschaft „System.GC.Server“ befinden sich in einer Datei namens *runtimeconfig.template.json* im Projektordner mit den Optionen, die während der Migration auf das Stammobjekt transformiert werden:
+Alle Einstellungen in dieser Gruppe, außer für die Eigenschaft `System.GC.Server`, befinden sich in einer Datei namens *runtimeconfig.template.json* im Projektordner mit den Optionen, die während der Migration auf das Stammobjekt transformiert werden:
 
 ```json
 {
@@ -541,7 +540,7 @@ Alle Einstellungen in dieser Gruppe, außer für die Eigenschaft „System.GC.Se
 }
 ```
 
-Die Eigenschaft „System.GC.Server“ ist in die csproj-Datei migriert:
+Die Eigenschaft `System.GC.Server` wird in die CSPROJ-Datei migriert:
 
 ```xml
 <PropertyGroup>
@@ -569,7 +568,7 @@ Allerdings können Sie alle diese Werte in der csproj sowie den MSBuild-Eigensch
 }
 ```
 
-Wird nicht in csproj unterstützt. Stattdessen müssen Sie Dateien zum Einschließen von Inhalten in Ihrer *.nuspec*-Datei erstellen.
+Wird nicht in csproj unterstützt. Erstellen Sie stattdessen Include-Inhaltsdateien in Ihrer *.nuspec*-Datei.
 Weitere Informationen finden Sie unter [Inhaltsdateien einschließen](/nuget/schema/nuspec#including-content-files).
 
 ## <a name="files"></a>Dateien
@@ -621,8 +620,7 @@ In MSBuild wird dies unter Verwendung von [Elementen](/visualstudio/msbuild/comm
 ```
 
 > [!NOTE]
-> Viele der [Standardglobmuster](https://en.wikipedia.org/wiki/Glob_(programming)) werden automatisch durch das .NET Core SDK hinzugefügt.
-> Weitere Informationen finden Sie unter [Werte für Standardkompilierungselemente](https://aka.ms/sdkimplicititems).
+> Viele der [Standardglobmuster](https://en.wikipedia.org/wiki/Glob_(programming)) werden automatisch durch das .NET Core SDK hinzugefügt. Weitere Informationen finden Sie unter [Standardmäßige Includedateien für die Kompilierung](../project-sdk/overview.md#default-compilation-includes).
 
 Alle `ItemGroup`-Elemente von MSBuild unterstützen `Include`, `Exclude` und `Remove`.
 
@@ -673,6 +671,6 @@ Weitere Informationen finden Sie unter [Inhalt in ein Paket einschließen](/nuge
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Allgemeine Übersicht über Änderungen in CLI](cli-msbuild-architecture.md)
