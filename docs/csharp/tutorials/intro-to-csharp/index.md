@@ -3,32 +3,39 @@ title: Einführung in C# – interaktive Tutorials
 description: Lernen Sie C# in Ihrem Browser kennen, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c9fc8dadac373445a5bb132b25ab25676c5230c7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73423100"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007701"
 ---
 # <a name="introduction-to-c"></a>Einführung in C\#
 
-Willkommen bei der Einführung in die C#-Tutorials. Sie beginnen mit interaktiven Lektionen, die Sie in Ihrem Browser ausführen können. Bevor Sie diese interaktiven Lektionen starten, können Sie die Grundlagen von C# in der [C# 101-Videoreihe](https://aka.ms/dotnet3-csharp) erlernen.
+Willkommen bei der Einführung in die C#-Tutorials. Die Lektionen beginnen mit interaktivem Code, den Sie in Ihrem Browser ausführen können. Bevor Sie diese interaktiven Lektionen starten, können Sie die Grundlagen von C# in der [C# 101-Videoreihe](https://aka.ms/dotnet3-csharp) erlernen.
 
 > [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 In der ersten Lektion werden C#-Konzepte anhand kleiner Codeausschnitte erläutert. Sie lernen die Grundlagen der C#-Syntax kennen und wie Sie mit Datentypen wie Zeichenfolgen, Zahlen und booleschen Werten arbeiten. Komplett interaktiv, und Ihr Code ist innerhalb weniger Minuten geschrieben und zur Ausführung bereit. Diese erste Lektionen setzen keine Vorkenntnisse in der Programmierung oder C#-Sprache voraus.
 
+Sie können diese Tutorials in verschiedenen Umgebungen ausprobieren. Die erlernten Konzepte bleiben gleich. Es gibt jedoch Unterschiede bei den Umgebungen:
+
+- [Im Browser auf der Microsoft Dokumentation-Plattform:](hello-world.yml) Hier wird ein ausführbares C#-Codefenster in die Dokumentationsseiten eingebunden. Sie schreiben C# Code im Browser und führen ihn dort aus.
+- [Auf Microsoft Learn:](https://docs.microsoft.com/learn/paths/csharp-first-steps/) Dieser Lernpfad enthält mehrere Module, die die Grundlagen von C# vermitteln.
+- [In Jupyter auf Binder:](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb) Sie können mit C#-Code in einem Jupyter-Notebook auf Binder experimentieren.
+- [Auf einem lokalen Computer:](numbers-in-csharp-local.md) Sie können das .NET Core SDK [herunterladen](https://dotnet.microsoft.com/download) und die Programme auf Ihrem Computer entwickeln.
+
 Alle einführenden Tutorials, die auf die „Hallo Welt“-Lektion folgen, sind über einen Onlinebrowser oder [in Ihrer eigenen lokalen Entwicklungsumgebung](local-environment.md) verfügbar. Am Ende jedes Tutorials entscheiden Sie, ob Sie mit der nächsten Lektion online oder auf Ihrem eigenen Computer fortfahren möchten. Es sind Links verfügbar, die Ihnen helfen, Ihre Umgebung einzurichten und mit dem nächsten Tutorial auf Ihrem Computer fortzufahren.
 
 ## <a name="hello-world"></a>[Hallo Welt](hello-world.yml)
 
-Im [Hallo Welt](hello-world.yml)-Tutorial erstellen Sie das einfachste C#-Programm. Sie untersuchen den `string`-Typ und lernen, mit Text zu arbeiten.
+Im [Hallo Welt](hello-world.yml)-Tutorial erstellen Sie das einfachste C#-Programm. Sie untersuchen den `string`-Typ und lernen, mit Text zu arbeiten. Sie können auch den Pfad auf [Microsoft Learn](https://docs.microsoft.com/learn/paths/csharp-first-steps/) oder [Jupyter auf Binder](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb) verwenden.
 
 ## <a name="numbers-in-c"></a>[Zahlen in C#](numbers-in-csharp.yml)
 
 Im Tutorial [Zahlen in C#](numbers-in-csharp.yml) erfahren Sie, wie Computer Zahlen speichern und wie Sie Berechnungen mit verschiedenen Zahlentypen ausführen. Sie lernen die Grundlagen der Rundung und das Ausführen mathematischer Berechnungen mithilfe von C#. Dieses Tutorial ist auch für die [lokale Ausführung auf Ihrem Computer](numbers-in-csharp-local.md) verfügbar.
 
-Für dieses Tutorial wird vorausgesetzt, dass Sie die [Hallo Welt](hello-world.yml)-Lektion abgeschlossen haben.
+Für dieses Tutorial wird vorausgesetzt, dass Sie die Lektion [Hallo Welt](hello-world.yml) abgeschlossen haben.
 
 ## <a name="branches-and-loops"></a>[Verzweigungen und Schleifen](branches-and-loops.yml)
 
