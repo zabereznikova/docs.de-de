@@ -109,6 +109,9 @@
         - name: Erstellen einer Konsolenanwendung
           href: tutorials/with-visual-studio-code.md
           displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: Debuggen einer App
+          href: tutorials/debugging-with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code'
         - name: Erstellen und Veröffentlichen einer Konsolen-App
           href: tutorials/cli-create-console-app.md
           displayName: 'tutorials, cli'
