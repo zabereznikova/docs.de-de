@@ -2,12 +2,12 @@
 title: Allgemeine Anleitung
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Allgemeine Anleitung
 ms.date: 09/11/2018
-ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089647"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144564"
 ---
 # <a name="general-guidance"></a>Allgemeine Anleitung
 
@@ -38,10 +38,10 @@ Das Verwenden von .NET Framework auf Docker kann Ihre Bereitstellungen verbesser
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **E-Book: Modernize existing .NET Framework applications with Azure and Windows Containers** (E-Book: Modernisieren vorhandener .NET Framework-Anwendungen mit Azure und Windows-Containern)  
-    https://aka.ms/liftandshiftwithcontainersebook
+    <https://aka.ms/liftandshiftwithcontainersebook>
 
 - **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Beispiel-Apps: Modernisieren von veralteten ASP.NET-Web-Apps mithilfe von Windows-Containern)  
-    https://aka.ms/eshopmodernizing
+    <https://aka.ms/eshopmodernizing>
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)
