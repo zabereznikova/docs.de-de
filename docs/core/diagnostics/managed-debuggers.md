@@ -2,12 +2,12 @@
 title: Verwaltete Debugger – .NET Core
 description: Eine Übersicht über die verwalteten Debugger in Visual Studio und Visual Studio Code.
 ms.date: 08/05/2019
-ms.openlocfilehash: 065b1b0fc32eb76b398cb3821c8592a1955c9359
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28cc21980bc78234f7af3b4668e2fa77fbf8ce5b
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715564"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200858"
 ---
 # <a name="net-core-managed-debuggers"></a>Verwaltete Debugger in .NET Core
 
@@ -33,5 +33,5 @@ Obwohl Visual Studio eine Windows-Anwendung ist, können hiermit auch Linux- und
 
 **Visual Studio Code** ist ein einfacher Code-Editor für alle Plattformen. Er nutzt die gleiche Implementierung des .NET Core-Debuggers wie Visual Studio, jedoch mit einer vereinfachten Benutzeroberfläche.
 
-- [Tutorial: Debuggen einer .NET Core-Anwendung mit Visual Studio Code](../tutorials/with-visual-studio-code.md#debug)
+- [Tutorial: Debuggen einer .NET Core-Anwendung mit Visual Studio Code](../tutorials/debugging-with-visual-studio-code.md)
 - [Debuggen in Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)

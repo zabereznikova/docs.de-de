@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 955d4ec4a0bd0ddf2d022d4154fc6528b2abf3d0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987906"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144551"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -422,7 +422,7 @@ Gehen Sie insbesondere mit Bedacht vor, wenn Sie eigene Kryptografien, Benutzerm
 > ### <a name="references--security"></a>Ressourcen: Sicherheit
 >
 > - **Übersicht über die Dokumentation zur Sicherheit**  
->   https://docs.microsoft.com/aspnet/core/security/
+>   <https://docs.microsoft.com/aspnet/core/security/>
 > - **Enforcing SSL in an ASP.NET Core App (Erzwingen von SSL in einer ASP.NET Core-App)**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Einführung in Identity**  
@@ -493,7 +493,7 @@ Ziehen Sie Möglichkeiten in Betracht, über die Anwendungen direkt mit Clientan
 > - **ASP.NET Core SignalR**  
 >   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **WebSocket-Manager**  
->   https://github.com/radu-matei/websocket-manager
+>   <https://github.com/radu-matei/websocket-manager>
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Sollten Sie die Methode „Domain-Driven Design“ verwenden?
 

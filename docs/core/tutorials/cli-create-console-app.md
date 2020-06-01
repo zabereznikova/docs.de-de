@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7658f2498b87a90b3925d83628f6ea9247a2fc15
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240856"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840870"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Erste Schritte mit .NET Core unter Verwendung der .NET Core-CLI
 
@@ -204,7 +204,21 @@ dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
 Sie erhalten die folgende Ausgabe.
 
 ```console
-Hello World!
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
 ```
 
 Wie am Anfang dieses Artikels erwähnt, wurde beim Kompilieren der App neben `Hello.dll` eine betriebssystemspezifische ausführbare Datei erstellt. Unter Windows lautet ihr Name `Hello.exe`, unter Linux oder macOS `hello`. Im obigen Beispiel wird die Datei mit `Hello.exe` oder `Hello` benannt. Sie können diese veröffentlichte ausführbare Datei direkt ausführen.
@@ -212,7 +226,21 @@ Wie am Anfang dieses Artikels erwähnt, wurde beim Kompilieren der App neben `He
 ```console
 .\bin\Debug\netcoreapp3.1\publish\Hello.exe
 
-Hello World!
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
 ```
 
 ## <a name="conclusion"></a>Zusammenfassung

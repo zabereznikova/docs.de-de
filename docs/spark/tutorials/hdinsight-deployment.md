@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in HDIn
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6b8dbe395a5db9631433a5821f5ef2b9ade556f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895693"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144759"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: Bereitstellen einer .NET für Apache Spark-Anwendung in Azure HDInsight
 
@@ -152,7 +152,7 @@ Sobald der Cluster ausgeführt wird und Sie Ihre Dateien in Azure hochgeladen ha
    |---------|---------|
    | Skripttyp |Benutzerdefiniert|
    | name | Installieren des Workers|
-   | Bash-Skript-URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Klicken Sie zum Bestätigen dieses URIs in Azure Storage-Explorer mit der rechten Maustaste auf „install-Worker.sh“, und wählen Sie „Eigenschaften“ aus. |
+   | Bash-Skript-URI |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> Klicken Sie zum Bestätigen dieses URIs in Azure Storage-Explorer mit der rechten Maustaste auf „install-Worker.sh“, und wählen Sie „Eigenschaften“ aus. |
    | Knotentyp(en)| Worker|
    | Parameter | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 

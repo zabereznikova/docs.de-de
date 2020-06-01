@@ -2,12 +2,12 @@
 title: Entwerfen eines Domänenmodells für Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Grundkonzepte beim Entwerfen eines DDD-orientierten Domänenmodells
 ms.date: 01/30/2020
-ms.openlocfilehash: 64860d75dca645904e973a4b8927a716a1603394
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988413"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144590"
 ---
 # <a name="design-a-microservice-domain-model"></a>Entwerfen eines Microservicedomänenmodells
 
@@ -133,14 +133,14 @@ Für das Identifizieren von und Arbeiten mit Aggregaten sind Recherchen und Erfa
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Effektive Aggregatentwicklung, Teil 1: Modellieren eines einzelnen Aggregats)** (von <http://dddcommunity.org/>) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
+- **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Effektive Aggregatentwicklung, Teil 1: Modellieren eines einzelnen Aggregats)** (von <https://dddcommunity.org/>) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)** (von <http://dddcommunity.org/>) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
+- **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)** (von <https://dddcommunity.org/>) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery (Effektive Aggregatentwicklung – Teil III: Gewinnen von Erkenntnissen durch Ermittlung)** (von <http://dddcommunity.org/>) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
+- **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery (Effektive Aggregatentwicklung – Teil III: Gewinnen von Erkenntnissen durch Ermittlung)** (von <https://dddcommunity.org/>) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. DDD Tactical Design Patterns (Taktische DDD-Entwurfsmuster)**  \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
