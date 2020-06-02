@@ -8,40 +8,40 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 8abe64476a5d3d1319dfa30dd7a06dc2bb541a0f
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 5a4edca70844a2b2a3972381b34efe85664f353d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904613"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276035"
 ---
 # <a name="framework-design-guidelines"></a>Frameworkentwurfsrichtlinien
 Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die die .NET Framework erweitern und mit ihnen interagieren. Ziel ist es, Bibliotheks-Designern zu helfen, die API-Konsistenz und Benutzerfreundlichkeit sicherzustellen, indem Sie ein einheitliches Programmiermodell bereitstellen, das von der für die Entwicklung verwendeten Programmiersprache unabhängig ist. Es wird empfohlen, dass Sie diese Entwurfs Richtlinien befolgen, wenn Sie Klassen und Komponenten entwickeln, mit denen die .NET Framework erweitert wird. Inkonsistentes Bibliotheks Design wirkt sich negativ auf die Produktivität von Entwicklern aus und verhindert die Übernahme  
   
- Die Richtlinien sind als einfache Empfehlungen organisiert, die den Begriffen `Do`, `Consider`, `Avoid`und `Do not`als Präfix vorangestellt sind. Diese Richtlinien sollen Entwicklern von Klassenbibliotheken helfen, die Kompromisse zwischen verschiedenen Lösungen nachzuvollziehen. Es kann Situationen geben, in denen ein guter Bibliotheks Entwurf erfordert, dass Sie diese Entwurfs Richtlinien verletzen. Solche Fälle sollten selten auftreten, und es ist wichtig, dass Sie einen klaren und überzeugenden Grund für Ihre Entscheidung haben.  
+ Die Richtlinien sind als einfache Empfehlungen organisiert, die die Begriffe,, und als Präfix haben `Do` `Consider` `Avoid` `Do not` . Diese Richtlinien sollen Entwicklern von Klassenbibliotheken helfen, die Kompromisse zwischen verschiedenen Lösungen nachzuvollziehen. Es kann Situationen geben, in denen ein guter Bibliotheks Entwurf erfordert, dass Sie diese Entwurfs Richtlinien verletzen. Solche Fälle sollten selten auftreten, und es ist wichtig, dass Sie einen klaren und überzeugenden Grund für Ihre Entscheidung haben.  
   
  Diese Richtlinien werden aus den Buch Framework- *Entwurfs Richtlinien entnommen: Konventionen, Idioms und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition*, von Krzysztof Cwalina und Brad Abrams.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)  
+ [Benennungs Richtlinien](naming-guidelines.md)  
  Enthält Richtlinien zum Benennen von Assemblys, Namespaces, Typen und Membern in Klassenbibliotheken.  
   
- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  
+ [Typentwurfs Richtlinien](type.md)  
  Stellt Richtlinien für die Verwendung statischer und abstrakter Klassen, Schnittstellen, Enumerationen, Strukturen und anderer Typen bereit.  
   
- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
+ [Entwurfs Richtlinien für Member](member.md)  
  Stellt Richtlinien zum Entwerfen und Verwenden von Eigenschaften, Methoden, Konstruktoren, Feldern, Ereignissen, Operatoren und Parametern bereit.  
   
- [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Entwerfen für Erweiterbarkeit](designing-for-extensibility.md)  
  Erläutert Erweiterungs Mechanismen, wie z. b. Unterklassen, using-Ereignisse, Virtual Members und Rückrufe, und erläutert, wie Sie die Mechanismen auswählen, die die Anforderungen Ihres Frameworks am besten erfüllen.  
   
- [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md)  
+ [Entwurfsrichtlinien für Ausnahmen](exceptions.md)  
  Beschreibt Entwurfs Richtlinien zum Entwerfen, auslösen und Abfangen von Ausnahmen.  
   
- [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)  
+ [Verwendungs Richtlinien](usage-guidelines.md)  
  Beschreibt Richtlinien für die Verwendung allgemeiner Typen wie Arrays, Attribute und Auflistungen, unterstützen der Serialisierung und Überladen von Gleichheits Operatoren.  
   
- [Allgemeine Entwurfsmuster](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [Allgemeine Entwurfsmuster](common-design-patterns.md)  
  Stellt Richtlinien für das auswählen und Implementieren von Abhängigkeits Eigenschaften bereit.  
   
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
@@ -50,5 +50,5 @@ Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die die .N
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht](../../../docs/framework/get-started/overview.md)
-- [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
+- [Übersicht](../../framework/get-started/overview.md)
+- [Entwicklungshandbuch](../../framework/development-guide.md)

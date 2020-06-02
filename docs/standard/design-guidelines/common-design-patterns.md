@@ -6,18 +6,18 @@ helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-ms.openlocfilehash: 2c51b1c9bc970d6ff143fa5986eade4a8b69f25a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9b9525a7597f7df6c9a554b51160a99f0e06232c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709503"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290966"
 ---
 # <a name="common-design-patterns"></a>Allgemeine Entwurfsmuster
 Es gibt zahlreiche Bücher über Software Muster, Muster Sprachen und Antimuster, die den sehr breiten Betreff von Mustern behandeln. Dieses Kapitel enthält daher Richtlinien und Diskussionen im Zusammenhang mit einem sehr begrenzten Satz von Mustern, die häufig beim Entwerfen der .NET Framework-APIs verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Abhängigkeitseigenschaften](../../../docs/standard/design-guidelines/dependency-properties.md)  
+ [Abhängigkeits Eigenschaften](dependency-properties.md)  
  [Dispose-Muster](../garbage-collection/implementing-dispose.md)  
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
@@ -25,4 +25,4 @@ Es gibt zahlreiche Bücher über Software Muster, Muster Sprachen und Antimuster
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+- [Framework-Entwurfs Richtlinien](index.md)

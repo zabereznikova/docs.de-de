@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen eines WindowsPrincipal-Objekts'
+title: 'Vorgehensweise: Erstellen eines WindowsPrincipal-Objekts'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 30af18b7d7b86621586c7da66eda1b37356d5565
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6064c98c4e1e5153f4e0de4849de196228972a89
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159779"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284428"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>Gewusst wie: Erstellen eines WindowsPrincipal-Objekts
+# <a name="how-to-create-a-windowsprincipal-object"></a>Vorgehensweise: Erstellen eines WindowsPrincipal-Objekts
 Es gibt zwei Möglichkeiten, ein <xref:System.Security.Principal.WindowsPrincipal>-Objekt zu erstellen. Diese hängen davon ab, ob Code eine rollenbasierte Validierung mehrfach oder nur einmal ausführen muss.  
   
  Wenn Code eine rollenbasierte Validierung mehrfach ausführen muss, verursacht die erste der folgenden Methoden einen geringeren Mehraufwand. Wenn Code eine rollenbasierte Validierung nur einmal ausführen muss, können Sie ein <xref:System.Security.Principal.WindowsPrincipal>-Objekt mit dem zweiten der folgenden Verfahren erstellen.  
@@ -77,4 +77,4 @@ Es gibt zwei Möglichkeiten, ein <xref:System.Security.Principal.WindowsPrincipa
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Principal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Principal- und Identitätsobjekte](principal-and-identity-objects.md)

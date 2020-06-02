@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 8ae4b4b9938f72f4f4fc011e180cd69440ec3dd9
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 13334f6425c47e45d729d606d99602a99f35d8e6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201755"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286157"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Abfragen des Datendiensts (WCF Data Services)
 
@@ -67,7 +67,7 @@ Weitere Informationen finden Sie unter [LINQ-Überlegungen](linq-considerations-
 
 ## <a name="adding-query-options"></a>Hinzufügen von Abfrageoptionen
 
-Data Service-Abfragen unterstützen alle Abfrage Optionen, die von WCF Data Servicess bereitstellt werden. Sie rufen die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode auf, um einer <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz Abfrageoptionen hinzuzufügen. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> gibt eine neue <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz zurück, die der ursprünglichen Abfrage entspricht, aber die neuen Abfrageoptionen enthält. Wenn die folgende Abfrage ausgeführt wird, gibt sie `Orders`-Objekte zurück, die nach dem `Freight`-Wert gefiltert und in absteigender Reihenfolge nach dem Wert von `OrderID` sortiert werden:
+Data Service-Abfragen unterstützen alle Abfrage Optionen, die WCF Data Services bereitstellt. Sie rufen die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode auf, um einer <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz Abfrageoptionen hinzuzufügen. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> gibt eine neue <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz zurück, die der ursprünglichen Abfrage entspricht, aber die neuen Abfrageoptionen enthält. Wenn die folgende Abfrage ausgeführt wird, gibt sie `Orders`-Objekte zurück, die nach dem `Freight`-Wert gefiltert und in absteigender Reihenfolge nach dem Wert von `OrderID` sortiert werden:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]

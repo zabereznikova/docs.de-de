@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Direktes Ausführen von SQL-Abfragen'
+description: Erfahren Sie, wie Sie mithilfe von ExecuteQuery eine Abfrage ausführen und die Ergebnisse in Fällen, in denen eine LINQ to SQL Abfrage unzureichend ist, direkt in Objekte konvertieren.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: a4971bc05b22c38790c5fd1493e70cccf5eaae16
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 59bd404e41f6be1181d6a625c31ee23358db0df3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793785"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286364"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Vorgehensweise: Direktes Ausführen von SQL-Abfragen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt die Abfragen, die von Ihnen (in Textform) in parametrisierte SQL-Abfragen geschrieben wurden, und sendet diese zur Verarbeitung an den SQL-Server.  
@@ -33,7 +34,7 @@ ms.locfileid: "70793785"
  [!code-csharp[DLinqQuerying#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#5)]
  [!code-vb[DLinqQuerying#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#5)]  
   
- Die Parameter werden im Abfragetext mithilfe der gleichen verschachtelten Schreibweise wie in `Console.WriteLine()` und `String.Format()` ausgedrückt. Tatsächlich wird tatsächlich für die von Ihnen bereitgestellte Abfrage Zeichenfolge aufgerufen, wobei die Parameter mit den geschweiften Klammern durch generierte Parameternamen @p0ersetzt @p1 werden, wie z @p. b.,..., (n). `String.Format()`  
+ Die Parameter werden im Abfragetext mithilfe der gleichen verschachtelten Schreibweise wie in `Console.WriteLine()` und `String.Format()` ausgedrückt. Tatsächlich `String.Format()` wird tatsächlich für die von Ihnen bereitgestellte Abfrage Zeichenfolge aufgerufen, wobei die Parameter mit den geschweiften Klammern durch generierte Parameternamen ersetzt werden, wie z. b @p0 @p1 .,..., @p (n).  
   
 ## <a name="see-also"></a>Siehe auch
 

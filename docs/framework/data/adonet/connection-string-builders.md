@@ -1,19 +1,20 @@
 ---
 title: Verbindungszeichenfolgen-Generatoren
+description: Erfahren Sie mehr über die Verbindungs Zeichenfolgen-Generator-Klassen, die für verschiedene Anbieter in ADO.NET verwendet werden, die alle von DbConnectionStringBuilder erben.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8cadeac0bcbf301f7d973e93435885de82052603
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e493140b4cf5a939e8ae8f42b617fb739ed09dec
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151662"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287063"
 ---
 # <a name="connection-string-builders"></a>Verbindungszeichenfolgen-Generatoren
-In früheren Versionen von ADO.NET wurde keine Überprüfung von Verbindungszeichenfolgen mit verketteten Zeichenfolgenwerten zur Kompilierungszeit durchgeführt, sodass zur Laufzeit ein falsches Schlüsselwort eine <xref:System.ArgumentException>generierte. Jeder der .NET Framework-Datenanbieter unterstützte verschiedene Syntax enthatoren für Verbindungszeichenfolgenschlüsselwörter, was das Erstellen gültiger Verbindungszeichenfolgen erschwerte, wenn sie manuell durchgeführt wurden. Um dieses Problem zu beheben, führte ADO.NET 2.0 neue Verbindungszeichenfolgen-Builder für jeden .NET Framework-Datenanbieter ein. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die .NET Framework-Datenanbieter und ihre jeweiligen ConnectionStringBuilder-Klassen aufgelistet.  
+In früheren Versionen von ADO.net erfolgte die Kompilierzeit Überprüfung von Verbindungs Zeichenfolgen mit verketteten Zeichen folgen Werten nicht, sodass zur Laufzeit ein falsches Schlüsselwort einen generiert hat <xref:System.ArgumentException> . Jeder .NET Framework Datenanbieter unterstützte eine andere Syntax für Verbindungs Zeichenfolgen-Schlüsselwörter, die das Erstellen gültiger Verbindungs Zeichenfolgen erschweren, wenn dies manuell geschehen ist. Um dieses Problem zu beheben, führte ADO.NET 2,0 neue Verbindungs Zeichenfolgen-Generatoren für jeden .NET Framework Datenanbieter ein. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die .NET Framework-Datenanbieter und ihre jeweiligen ConnectionStringBuilder-Klassen aufgelistet.  
   
 |Anbieter|ConnectionStringBuilder-Klasse|  
 |--------------|-----------------------------------|  
@@ -59,7 +60,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  Einer der überladenen Konstruktoren für einen Verbindungszeichenfolgen-Generator verwendet eine <xref:System.String> als Argument, sodass Sie eine Teilverbindungszeichenfolge bereitstellen können, die dann zur Vervollständigung der Benutzereingabe verwendet wird. Die Teilverbindungszeichenfolge kann in einer Konfigurationsdatei gespeichert und zur Laufzeit abgerufen werden.  
   
 > [!NOTE]
-> Der <xref:System.Configuration>-Namespace ermöglicht den programmgesteuerten Zugriff auf Konfigurationsdateien unter Verwendung des <xref:System.Web.Configuration.WebConfigurationManager> bei Webanwendungen und des <xref:System.Configuration.ConfigurationManager> bei Windows-Anwendungen. Weitere Informationen zum Arbeiten mit Verbindungszeichenfolgen und Konfigurationsdateien finden Sie unter [Verbindungszeichenfolgen und Konfigurationsdateien](connection-strings-and-configuration-files.md).  
+> Der <xref:System.Configuration>-Namespace ermöglicht den programmgesteuerten Zugriff auf Konfigurationsdateien unter Verwendung des <xref:System.Web.Configuration.WebConfigurationManager> bei Webanwendungen und des <xref:System.Configuration.ConfigurationManager> bei Windows-Anwendungen. Weitere Informationen zum Arbeiten mit Verbindungs Zeichenfolgen und Konfigurationsdateien finden Sie unter Verbindungs Zeichenfolgen [und Konfigurationsdateien](connection-strings-and-configuration-files.md).  
   
 ### <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie durch Festlegen der Eigenschaften <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A> und <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> des <xref:System.Data.SqlClient.SqlConnectionStringBuilder> eine Teilverbindungszeichenfolge aus einer Konfigurationsdatei abrufen und vervollständigen können. Die Konfigurationsdatei ist wie folgt definiert:  
@@ -79,8 +80,8 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Verbindungszeichenfolgen](connection-strings.md)
+- [Verbindungs Zeichenfolgen](connection-strings.md)
 - [Datenschutz und -sicherheit](privacy-and-data-security.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

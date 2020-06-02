@@ -1,16 +1,17 @@
 ---
 title: Leistungsindikatoren
+description: Verwenden Sie ADO.NET-Leistungsindikatoren zum Überwachen des Anwendungs Status und der zugehörigen Verbindungs Ressourcen mithilfe von Windows Performance Monitor oder Programm gesteuert.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: b68787980a8b64d9ee90ed8d834fab2c5c69006b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149335"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286675"
 ---
 # <a name="performance-counters-in-adonet"></a>Leistungsindikatoren in ADO.NET
 Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren. Dazu gehört auch die Unterstützung für <xref:System.Data.SqlClient> und <xref:System.Data.OracleClient>. Die in früheren ADO.NET-Versionen verfügbaren <xref:System.Data.SqlClient>-Leistungsindikatoren wurden durch neue Leistungsindikatoren ersetzt, die in diesem Thema beschrieben werden. Mit den ADO.NET-Leistungsindikatoren können Sie den Status Ihrer Anwendung und die Verbindungsressourcen überwachen, die die Anwendung verwendet. Für die Überwachung der Leistungsindikatoren kann der Windows-Leistungsmonitor verwendet werden, und die <xref:System.Diagnostics.PerformanceCounter>-Klasse im <xref:System.Diagnostics>-Namespace ermöglicht den programmgesteuerten Zugriff auf diese Indikatoren.  
@@ -18,25 +19,25 @@ Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren.
 ## <a name="available-performance-counters"></a>Verfügbare Leistungsindikatoren  
  Derzeit sind für <xref:System.Data.SqlClient> und <xref:System.Data.OracleClient> 14 verschiedene Leistungsindikatoren verfügbar (siehe Beschreibung in der folgenden Tabelle). Die Indikatoren behalten in allen lokalisierten Microsoft .NET Framework-Versionen ihre englischen Namen.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------------------|-----------------|  
 |`HardConnectsPerSecond`|Anzahl der Verbindungen, die pro Sekunde mit einem Datenbankserver hergestellt wurden|  
 |`HardDisconnectsPerSecond`|Anzahl der Verbindungen mit einem Datenbankserver, die pro Sekunde getrennt wurden|  
 |`NumberOfActiveConnectionPoolGroups`|Anzahl der eindeutigen Verbindungspoolgruppen, die aktiv sind. Dieser Indikator wird von der Anzahl der eindeutigen Verbindungszeichenfolgen gesteuert, die in der Anwendungsdomäne (AppDomain) gefunden werden.|  
 |`NumberOfActiveConnectionPools`|Gesamtzahl der Verbindungspools|  
-|`NumberOfActiveConnections`|Anzahl der aktiven Verbindungen, die gerade genutzt werden **Hinweis:**  Dieser Leistungsindikator ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Off-By-Standard-Zählern](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|Anzahl der Verbindungen, die für die Verwendung in den Verbindungspools verfügbar sind **Hinweis:**  Dieser Leistungsindikator ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Off-By-Standard-Zählern](#ActivatingOffByDefault).|  
+|`NumberOfActiveConnections`|Anzahl der aktiven Verbindungen, die gerade genutzt werden **Hinweis:**  Dieser Leistungswert ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Standard](#ActivatingOffByDefault)mäßigen Leistungsindikatoren.|  
+|`NumberOfFreeConnections`|Anzahl der Verbindungen, die für die Verwendung in den Verbindungspools verfügbar sind **Hinweis:**  Dieser Leistungswert ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Standard](#ActivatingOffByDefault)mäßigen Leistungsindikatoren.|  
 |`NumberOfInactiveConnectionPoolGroups`|Anzahl der eindeutigen Verbindungspoolgruppen, die zum Löschen gekennzeichnet sind. Dieser Indikator wird von der Anzahl der eindeutigen Verbindungszeichenfolgen gesteuert, die in der Anwendungsdomäne (AppDomain) gefunden werden.|  
 |`NumberOfInactiveConnectionPools`|Anzahl der inaktiven Verbindungspools, die in letzter Zeit keine Aktivitäten zu verzeichnen hatten und darauf warten, gelöscht zu werden|  
 |`NumberOfNonPooledConnections`|Anzahl der aktiven Verbindungen, die sich nicht in einem Pool befinden|  
 |`NumberOfPooledConnections`|Anzahl der aktiven Verbindungen, die von der Verbindungspooling-Infrastruktur verwaltet werden|  
 |`NumberOfReclaimedConnections`|Anzahl der Verbindungen, die durch die Garbage Collection (automatische Speicherbereinigung) wieder verfügbar gemacht wurden, bei denen die Anwendung weder `Close` noch `Dispose` aufgerufen hat. Nicht mehr benötigte Verbindungen, die weiterbestehen, weil sie nicht explizit geschlossen oder gelöscht wurden, beeinträchtigen die Arbeitsgeschwindigkeit.|  
 |`NumberOfStasisConnections`|Anzahl der Verbindungen, die derzeit den Abschluss einer Aktion erwarten und die daher für die Verwendung durch Ihre Anwendung nicht zur Verfügung stehen|  
-|`SoftConnectsPerSecond`|Anzahl der aktiven Verbindungen, die aus dem Verbindungspool herausgezogen werden. **Hinweis:**  Dieser Leistungsindikator ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Off-By-Standard-Zählern](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|Anzahl der aktiven Verbindungen, die an den Verbindungspool zurückgegeben werden **Hinweis:**  Dieser Leistungsindikator ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Off-By-Standard-Zählern](#ActivatingOffByDefault).|  
+|`SoftConnectsPerSecond`|Anzahl der aktiven Verbindungen, die aus dem Verbindungspool herausgezogen werden. **Hinweis:**  Dieser Leistungswert ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Standard](#ActivatingOffByDefault)mäßigen Leistungsindikatoren.|  
+|`SoftDisconnectsPerSecond`|Anzahl der aktiven Verbindungen, die an den Verbindungspool zurückgegeben werden **Hinweis:**  Dieser Leistungswert ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Standard](#ActivatingOffByDefault)mäßigen Leistungsindikatoren.|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Verbindungspoolgruppen und Verbindungspools  
- Bei der Verwendung der Windows-Authentifizierung (integrierte Sicherheit) müssen die folgenden beiden Leistungsindikatoren überwacht werden: `NumberOfActiveConnectionPoolGroups` und `NumberOfActiveConnectionPools`. Dies liegt daran, dass Verbindungspoolgruppen eindeutigen Verbindungszeichenfolgen zugeordnet werden. Bei Verwendung der integrierten Sicherheit werden die Verbindungspools den Verbindungszeichenfolgen zugeordnet, und zusätzlich werden separate Pools für einzelne Windows-Identitäten erstellt. Wenn Fred und Julie z. B. innerhalb derselben Anwendungsdomäne beide die `"Data Source=MySqlServer;Integrated Security=true"`-Verbindungszeichenfolge verwenden, wird für die Verbindungszeichenfolge eine Verbindungspoolgruppe erstellt, und es werden zwei zusätzliche Pools erstellt: einer für Fred und einer für Julie. Wenn John und Martha eine Verbindungszeichenfolge mit `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`einer identischen SQL Server-Anmeldung verwenden, wird nur ein einzelner Pool für die **lowPrivUser-Identität** erstellt.  
+ Bei der Verwendung der Windows-Authentifizierung (integrierte Sicherheit) müssen die folgenden beiden Leistungsindikatoren überwacht werden: `NumberOfActiveConnectionPoolGroups` und `NumberOfActiveConnectionPools`. Dies liegt daran, dass Verbindungspoolgruppen eindeutigen Verbindungszeichenfolgen zugeordnet werden. Bei Verwendung der integrierten Sicherheit werden die Verbindungspools den Verbindungszeichenfolgen zugeordnet, und zusätzlich werden separate Pools für einzelne Windows-Identitäten erstellt. Wenn Fred und Julie z. B. innerhalb derselben Anwendungsdomäne beide die `"Data Source=MySqlServer;Integrated Security=true"`-Verbindungszeichenfolge verwenden, wird für die Verbindungszeichenfolge eine Verbindungspoolgruppe erstellt, und es werden zwei zusätzliche Pools erstellt: einer für Fred und einer für Julie. Wenn John und Martha eine Verbindungs Zeichenfolge mit einem identischen SQL Server-Anmelde Namen verwenden, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` wird nur ein einzelner Pool für die **lowPrivUser** -Identität erstellt.  
   
 <a name="ActivatingOffByDefault"></a>
 ### <a name="activating-off-by-default-counters"></a>Aktivieren von Indikatoren, die standardmäßig deaktiviert sind  
@@ -55,7 +56,7 @@ Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren.
  Die folgende Konsolenanwendung zeigt, wie Sie in Ihrer Anwendung Leistungsindikatorwerte abrufen können. Die Verbindungen müssen offen und aktiv sein, damit Informationen für alle ADO.NET-Leistungsindikatoren zurückgegeben werden.  
   
 > [!NOTE]
-> In diesem Beispiel wird die **Beispieldatenbank AdventureWorks** verwendet, die in SQL Server enthalten ist. In der Verbindungszeichenfolge im Beispielcode wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und mit dem Instanznamen SqlExpress verfügbar ist. Außerdem wird davon ausgegangen, dass Sie SQL Server-Anmeldungen erstellt haben, die mit denen in den Verbindungszeichenfolgen übereinstimmen. Falls Ihr Server mit den Standardsicherheitseinstellungen konfiguriert ist, die nur die Windows-Authentifizierung zulassen, müssen Sie die SQL Server-Anmeldungen u. U. erst aktivieren. Passen Sie die Verbindungszeichenfolgen an Ihre Umgebung an.  
+> In diesem Beispiel wird die **AdventureWorks** -Beispieldatenbank verwendet, die in SQL Server enthalten ist. In der Verbindungszeichenfolge im Beispielcode wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und mit dem Instanznamen SqlExpress verfügbar ist. Außerdem wird davon ausgegangen, dass Sie SQL Server-Anmeldungen erstellt haben, die mit denen in den Verbindungszeichenfolgen übereinstimmen. Falls Ihr Server mit den Standardsicherheitseinstellungen konfiguriert ist, die nur die Windows-Authentifizierung zulassen, müssen Sie die SQL Server-Anmeldungen u. U. erst aktivieren. Passen Sie die Verbindungszeichenfolgen an Ihre Umgebung an.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -394,11 +395,11 @@ class Program
 }  
 ```  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Herstellen der Verbindung mit einer Datenquelle](connecting-to-a-data-source.md)
 - [OLE DB-, ODBC- und Oracle-Verbindungspooling](ole-db-odbc-and-oracle-connection-pooling.md)
 - [Leistungsindikatoren für ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [Laufzeitprofilierung](../../debug-trace-profile/runtime-profiling.md)
-- [Einführung in die Überwachung von Leistungsschwellenwerten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Laufzeit-Profilerstellung](../../debug-trace-profile/runtime-profiling.md)
+- [Einführung in die Überwachung von Leistungs Schwellenwerten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Übersicht über ADO.NET](ado-net-overview.md)

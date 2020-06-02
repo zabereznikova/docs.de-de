@@ -1,21 +1,22 @@
 ---
 title: Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
+description: Dieser Artikel fasst die Standard Abfrage Operatoren zusammen, die in LINQ to Entities Abfragen unterstützt werden und nicht unterstützt werden.
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 54805e8d3f0d5081c2d7d8fdbdcfbdcb63f9bcb6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0d01cc6ccecef0f10aed48fa7475ad1a16ad4ea1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249008"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286778"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
-Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-Standard Abfrage Operatoren, die in LINQ to Entities-Abfragen unterstützt oder nicht unterstützt werden. Viele der LINQ-Standardabfrageoperatoren verfügen über eine überladene Version, der ein ganzzahliges Argument übergeben werden kann. Das ganzzahlige Argument entspricht einem NULL basierten Index in der Sequenz, die betrieben wird, <xref:System.Collections.Generic.IEqualityComparer%601>oder. <xref:System.Collections.Generic.IComparer%601> Sofern nicht anders angegeben, werden diese überladenen Versionen der LINQ-Standardabfrageoperatoren nicht unterstützt, und bei ihrer Verwendung wird eine Ausnahme ausgelöst.  
+Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-Standard Abfrage Operatoren, die in LINQ to Entities-Abfragen unterstützt oder nicht unterstützt werden. Viele der LINQ-Standardabfrageoperatoren verfügen über eine überladene Version, der ein ganzzahliges Argument übergeben werden kann. Das ganzzahlige Argument entspricht einem NULL basierten Index in der Sequenz, die betrieben wird, <xref:System.Collections.Generic.IEqualityComparer%601> oder <xref:System.Collections.Generic.IComparer%601> . Sofern nicht anders angegeben, werden diese überladenen Versionen der LINQ-Standardabfrageoperatoren nicht unterstützt, und bei ihrer Verwendung wird eine Ausnahme ausgelöst.  
   
 ## <a name="projection-and-restriction-methods"></a>Projektions- und Einschränkungsmethoden  
  Die meisten LINQ-Projektions-und Einschränkungs Methoden werden in LINQ to Entities Abfragen unterstützt, mit Ausnahme derjenigen, die ein Positions Argument akzeptieren. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Projektions- und Einschränkungsmethoden aufgeführt.  
   
-|Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
+|Methode|Support|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Select%2A>|Unterstützt|`Function Select(Of TSource, TResult) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Select<TSource, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TResult>> selector )`|  
 |<xref:System.Linq.Queryable.Select%2A>|Nicht unterstützt|`Function Select(Of TSource, TResult) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Integer, TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Select<TSource, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, int, TResult>> selector )`|  
@@ -27,9 +28,9 @@ Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-
 |<xref:System.Linq.Queryable.Where%2A>|Nicht unterstützt|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>Methoden zur Verknüpfung  
- Die LINQ Join-Methoden werden in LINQ to Entities unterstützt, mit Ausnahme derjenigen, die eine `IEqualityComparer` akzeptieren, da der Vergleich nicht in die Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Joinmethoden aufgeführt.  
+ Die LINQ Join-Methoden werden in LINQ to Entities unterstützt, mit Ausnahme derjenigen, die eine akzeptieren, `IEqualityComparer` da der Vergleich nicht in die Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Joinmethoden aufgeführt.  
   
-|Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
+|Methode|Support|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.GroupJoin%2A>|Unterstützt|`Function GroupJoin(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, IEnumerable(Of TInner), TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupJoin<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func<TOuter, TKey>> outerKeySelector, Expression<Func<TInner, TKey>> innerKeySelector, Expression<Func<TOuter, IEnumerable<TInner>, TResult>> resultSelector )`|  
 |<xref:System.Linq.Queryable.GroupJoin%2A>|Nicht unterstützt|`Function GroupJoin(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, IEnumerable(Of TInner), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupJoin\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func<TOuter, IEnumerable<TInner>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
@@ -37,9 +38,9 @@ Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-
 |<xref:System.Linq.Queryable.Join%2A>|Nicht unterstützt|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>Methoden für Mengen  
- Die meisten LINQ-Set-Methoden werden in LINQ to Entities Abfragen unterstützt, mit Ausnahme derjenigen, die eine <xref:System.Collections.Generic.EqualityComparer%601>verwenden. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Set-Methoden aufgeführt.  
+ Die meisten LINQ-Set-Methoden werden in LINQ to Entities Abfragen unterstützt, mit Ausnahme derjenigen, die eine verwenden <xref:System.Collections.Generic.EqualityComparer%601> . Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Set-Methoden aufgeführt.  
   
-|Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
+|Methode|Support|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.All%2A>|Unterstützt|`Function All(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As Boolean`|`bool All<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.Any%2A>|Unterstützt|`Function Any(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As Boolean`|`bool Any<TSource>( this IQueryable<TSource> source )`|  
@@ -59,9 +60,9 @@ Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-
 |<xref:System.Linq.Queryable.Union%2A>|Nicht unterstützt|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>Sortiermethoden  
- Die meisten LINQ-Reihenfolge Methoden werden in LINQ to Entities unterstützt, mit Ausnahme derjenigen, die einen <xref:System.Collections.Generic.IComparer%601>akzeptieren, da der Vergleich nicht in die Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Sortierungsmethoden aufgeführt.  
+ Die meisten LINQ-Reihenfolge Methoden werden in LINQ to Entities unterstützt, mit Ausnahme derjenigen, die einen akzeptieren <xref:System.Collections.Generic.IComparer%601> , da der Vergleich nicht in die Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Sortierungsmethoden aufgeführt.  
   
-|Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
+|Methode|Support|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.OrderBy%2A>|Unterstützt|`Function OrderBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> OrderBy<TSource, TKey>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector )`|  
 |<xref:System.Linq.Queryable.OrderBy%2A>|Nicht unterstützt|`Function OrderBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ comparer As IComparer(Of TKey) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> OrderBy\<TSource, TKey>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, IComparer<TKey> comparer )`|  
@@ -74,9 +75,9 @@ Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-
 |<xref:System.Linq.Queryable.Reverse%2A>|Nicht unterstützt|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>Gruppierungsmethoden  
- Die meisten LINQ-Gruppierungs Methoden werden in LINQ to Entities unterstützt, mit Ausnahme derjenigen, die einen <xref:System.Collections.Generic.IEqualityComparer%601>akzeptieren, da der Vergleich nicht in die Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Gruppierungsmethoden aufgeführt.  
+ Die meisten LINQ-Gruppierungs Methoden werden in LINQ to Entities unterstützt, mit Ausnahme derjenigen, die einen akzeptieren <xref:System.Collections.Generic.IEqualityComparer%601> , da der Vergleich nicht in die Datenquelle übersetzt werden kann. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Gruppierungsmethoden aufgeführt.  
   
-|Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
+|Methode|Support|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|Unterstützt|`Function GroupBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)) _ ) As IQueryable(Of IGrouping(Of TKey, TSource))`|`IQueryable<IGrouping<TKey, TSource>> GroupBy<TSource, TKey>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector )`|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|Nicht unterstützt|`Function GroupBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of IGrouping(Of TKey, TSource))`|`IQueryable<IGrouping\<TKey, TSource>> GroupBy\<TSource, TKey>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, IEqualityComparer<TKey> comparer )`|  
@@ -90,7 +91,7 @@ Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-
 ## <a name="aggregate-methods"></a>Aggregatmethoden  
  Die meisten Aggregat Methoden, die primitive Datentypen akzeptieren, werden in LINQ to Entities unterstützt. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Aggregationsmethoden aufgeführt.  
   
-|Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
+|Methode|Support|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Aggregate%2A>|Nicht unterstützt|`Function Aggregate(Of TSource) ( _ source As IQueryable(Of TSource), _ func As Expression(Of Func(Of TSource, TSource, TSource)) _ ) As TSource`|`TSource Aggregate<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, TSource, TSource>> func )`|  
 |<xref:System.Linq.Queryable.Aggregate%2A>|Nicht unterstützt|`Function Aggregate(Of TSource, TAccumulate) ( _ source As IQueryable(Of TSource), _ seed As TAccumulate, _ func As Expression(Of Func(Of TAccumulate, TSource, TAccumulate)) _ ) As TAccumulate`|`TAccumulate Aggregate<TSource, TAccumulate>( this IQueryable<TSource> source, TAccumulate seed, Expression<Func<TAccumulate, TSource, TAccumulate>> func )`|  
@@ -147,7 +148,7 @@ Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-
 ## <a name="type-methods"></a>Typmethoden  
  Die LINQ-Standard Abfrage Operatoren, die die CLR-Typkonvertierung und-Tests behandeln, werden in der Entity Framework unterstützt. Nur CLR-Typen, die den konzeptionellen Modelltypen zugeordnet werden, werden in LINQ to Entities unterstützt. Eine Liste der konzeptionellen Modelltypen finden Sie unter [konzeptionelle Modelltypen (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Typmethoden aufgeführt.  
   
-|Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
+|Methode|Support|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|Unterstützt für primitive Typen des EDM|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
 |<xref:System.Linq.Queryable.OfType%2A>|Unterstützt für <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
@@ -155,7 +156,7 @@ Dieser Abschnitt enthält Informationen zu den LINQ (Language-Integrated Query)-
 ## <a name="paging-methods"></a>Pagingmethoden  
  Eine Reihe von LINQ-Pagingmethoden werden in LINQ to Entities Abfragen nicht unterstützt. Weitere Informationen finden Sie unter [Standard Abfrage Operatoren in LINQ to Entities Abfragen](standard-query-operators-in-linq-to-entities-queries.md). In der folgenden Tabelle sind die unterstützten und nicht unterstützten Pagingmethoden aufgeführt.  
   
-|Methode|Unterstützung|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
+|Methode|Support|Visual Basic-Funktionssignatur|C#-Methodensignatur|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.ElementAt%2A>|Nicht unterstützt|`Function ElementAt(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAt<TSource>( this IQueryable<TSource> source, int index )`|  
 |<xref:System.Linq.Queryable.ElementAtOrDefault%2A>|Nicht unterstützt|`Function ElementAtOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAtOrDefault<TSource>( this IQueryable<TSource> source, int index )`|  

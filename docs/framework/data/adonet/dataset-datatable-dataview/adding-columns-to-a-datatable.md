@@ -1,21 +1,22 @@
 ---
 title: Hinzufügen von Spalten zu einer "DataTable"
+description: Eine Datentabelle enthält datacolenn-Objekte, auf die von der Columns-Eigenschaft der Tabelle verwiesen wird. Verwenden Sie diesen Beispielcode zum Hinzufügen von Spalten zu einer Tabelle in ADO.net.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784858"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286946"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Hinzufügen von Spalten zu einer "DataTable"
-Eine <xref:System.Data.DataTable> enthält eine Auflistung von <xref:System.Data.DataColumn> -Objekten, auf die von der **Columns** -Eigenschaft der Tabelle verwiesen wird. Diese Auflistung von Spalten, zusammen mit allen Einschränkungen, definiert das Schema oder die Struktur der Tabelle.  
+Eine <xref:System.Data.DataTable> enthält eine Auflistung von-Objekten, auf <xref:System.Data.DataColumn> die von der **Columns** -Eigenschaft der Tabelle verwiesen wird. Diese Auflistung von Spalten, zusammen mit allen Einschränkungen, definiert das Schema oder die Struktur der Tabelle.  
   
- Sie erstellen **datacolenn** -Objekte innerhalb einer Tabelle mithilfe des **datacolumschlag** -Konstruktors oder durch Aufrufen der **Add** -Methode der **Columns** -Eigenschaft der Tabelle, bei der es sich <xref:System.Data.DataColumnCollection>um eine handelt. Die **Add** -Methode akzeptiert optionale **ColumnName**-, **DataType**-und **Expression** -Argumente und erstellt eine neue **datacolenn** als Member der Auflistung. Außerdem akzeptiert Sie ein vorhandenes **datacolenumn** -Objekt und fügt es der Collection hinzu und gibt bei Bedarf einen Verweis auf die hinzugefügte **datacolenn** zurück. Da **Daten** Tabelle nicht spezifisch für Datenquellen ist, werden .NET Framework Typen beim Angeben des Datentyps einer **datacolenumn**verwendet.  
+ Sie erstellen **datacolenn** -Objekte innerhalb einer Tabelle mithilfe des **datacolumschlag** -Konstruktors oder durch Aufrufen der **Add** -Methode der **Columns** -Eigenschaft der Tabelle, bei der es sich um eine handelt <xref:System.Data.DataColumnCollection> . Die **Add** -Methode akzeptiert optionale **ColumnName**-, **DataType**-und **Expression** -Argumente und erstellt eine neue **datacolenn** als Member der Auflistung. Außerdem akzeptiert Sie ein vorhandenes **datacolenumn** -Objekt und fügt es der Collection hinzu und gibt bei Bedarf einen Verweis auf die hinzugefügte **datacolenn** zurück. Da **Daten** Tabelle nicht spezifisch für Datenquellen ist, werden .NET Framework Typen beim Angeben des Datentyps einer **datacolenumn**verwendet.  
   
  Im folgenden Beispiel werden vier Spalten zu einer **Daten**Tabelle hinzugefügt.  
   
@@ -57,5 +58,5 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
 - [DataTable-Schemadefinition](datatable-schema-definition.md)
-- [DataTables](datatables.md)
+- ["DataTables"](datatables.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

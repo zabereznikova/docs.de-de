@@ -8,15 +8,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6a4f511af72aad916d367153090504e2a8e11cb8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fd5b8fe10d0dcca5da3a2093f7be37f6d88b382a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741814"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280613"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstraktionen (abstrakte Typen und Schnittstellen)
-Eine Abstraktion ist ein Typ, der einen Vertrag beschreibt, aber keine vollständige Implementierung des Vertrags bereitstellt. Abstraktionen werden normalerweise als abstrakte Klassen oder Schnittstellen implementiert, und Sie verfügen über eine klar definierte Referenz Dokumentation, die die erforderliche Semantik der Typen beschreibt, die den Vertrag implementieren. Zu den wichtigsten Abstraktionen in der .NET Framework zählen <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>und <xref:System.Object>.
+Eine Abstraktion ist ein Typ, der einen Vertrag beschreibt, aber keine vollständige Implementierung des Vertrags bereitstellt. Abstraktionen werden normalerweise als abstrakte Klassen oder Schnittstellen implementiert, und Sie verfügen über eine klar definierte Referenz Dokumentation, die die erforderliche Semantik der Typen beschreibt, die den Vertrag implementieren. Zu den wichtigsten Abstraktionen in der .NET Framework zählen <xref:System.IO.Stream> , <xref:System.Collections.Generic.IEnumerable%601> und <xref:System.Object> .
 
  Sie können Frameworks erweitern, indem Sie einen konkreten Typ implementieren, der den Vertrag einer Abstraktion unterstützt, und diesen konkreten Typ mit Framework-APIs verwenden, die die Abstraktion verwenden (Betriebssystem).
 
@@ -26,7 +26,7 @@ Eine Abstraktion ist ein Typ, der einen Vertrag beschreibt, aber keine vollstän
 
  Abstraktionen bieten jedoch eine äußerst leistungsstarke Erweiterbarkeit, die anderen Erweiterbarkeits Mechanismen nicht häufig entsprechen. Sie sind im Kern vieler Architekturmuster, z. b. Plug-ins, Inversion of Control (IOC), Pipelines usw. Sie sind auch für die Testability von Frameworks äußerst wichtig. Gute Abstraktionen ermöglichen es, große Abhängigkeiten für Komponententests auszulagern. Zusammenfassend sind Abstraktionen für den gesuchten Umfang der modernen objektorientierten Frameworks verantwortlich.
 
- ❌ bieten keine Abstraktionen, es sei denn, Sie werden getestet, indem Sie mehrere konkrete Implementierungen und APIs entwickeln, die die Abstraktionen verbrauchen.
+ ❌Stellen Sie keine Abstraktionen bereit, es sei denn, Sie werden getestet, indem Sie mehrere konkrete Implementierungen und APIs für die Abstraktionen entwickeln.
 
  beim Entwerfen einer Abstraktion sollten ✔️ sorgfältig zwischen einer abstrakten Klasse und einer Schnittstelle auswählen.
 
@@ -36,7 +36,7 @@ Eine Abstraktion ist ein Typ, der einen Vertrag beschreibt, aber keine vollstän
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
-- [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Framework-Entwurfs Richtlinien](index.md)
+- [Entwerfen für Erweiterbarkeit](designing-for-extensibility.md)

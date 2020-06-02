@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 6e2d9b8bebdfd2ea5d5507cc73d444fa8bf785fb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705833"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289706"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung
 Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt und entschlüsselt wird. Die Codebeispiele sind für eine Windows Forms-Anwendung vorgesehen. Diese Anwendung zeigt keine realen Szenarien wie die Verwendung von Smartcards. Stattdessen veranschaulicht sie die Grundlagen der Ver- und Entschlüsselung.  
@@ -31,7 +31,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
  In der folgenden Tabelle sind die kryptografischen Aufgaben in diesem Thema zusammengefasst.  
   
-|Task|Beschreibung|  
+|Aufgabe|BESCHREIBUNG|  
 |----------|-----------------|  
 |Erstellen einer Windows Forms-Anwendung|Listet die Steuerelemente auf, die zum Ausführen der Anwendung erforderlich sind.|  
 |Deklarieren von globalen Objekten|Deklariert Zeichenfolgenpfadvariablen, die <xref:System.Security.Cryptography.CspParameters> und den <xref:System.Security.Cryptography.RSACryptoServiceProvider>, um den globalen Kontext der <xref:System.Windows.Forms.Form>-Klasse zu erhalten.|  
@@ -43,15 +43,15 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
 |Importieren eines öffentlichen Schlüssels|Lädt den Schlüssel aus einer XML-Datei in den Schlüsselcontainer.|  
 |Testen der Anwendung|Listet Verfahren zum Testen dieser Anwendung auf.|  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
- Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
+## <a name="prerequisites"></a>Voraussetzungen  
+ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
 - Verweise auf die Namespaces <xref:System.IO> und <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Erstellen einer Windows Forms-Anwendung  
  Die meisten Codebeispiele in dieser exemplarischen Vorgehensweise sind als Ereignishandler für Button-Steuerelemente konzipiert. In der folgenden Tabelle sind die Steuerelemente aufgelistet, die für die Beispielanwendung und die erforderlichen Namen benötigt werden, um mit den Codebeispielen übereinzustimmen.  
   
-|Steuerelement|-Name|Texteigenschaft (nach Bedarf)|  
+|Control|Name|Texteigenschaft (nach Bedarf)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Datei verschlüsseln|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Datei entschlüsseln|  
@@ -80,7 +80,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Verschlüsseln einer Datei  
- Diese Aufgabe umfasst zwei Methoden: die Ereignishandlermethode für die `Encrypt File` Schaltfläche (`buttonEncryptFile_Click`) und die `EncryptFile`-Methode. Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Verschlüsselung ausführt.  
+ Diese Aufgabe umfasst zwei Methoden: die Ereignishandlermethode für die `Encrypt File` Schaltfläche ( `buttonEncryptFile_Click` ) und die- `EncryptFile` Methode. Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Verschlüsselung ausführt.  
   
  Der verschlüsselte Inhalt, der Schlüssel und der IV werden zusammen in einem <xref:System.IO.FileStream>-Objekt gespeichert, das als Verschlüsselungspaket bezeichnet wird.  
   
@@ -88,7 +88,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
 1. Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>-Algorithmus, um den Inhalt zu verschlüsseln.  
   
-2. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu verschlüsseln.  
+2. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu verschlüsseln.   
   
 3. Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den <xref:System.IO.FileStream> der Quelldatei in Byteblöcken in ein Ziel-<xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei zu lesen und zu verschlüsseln.  
   
@@ -131,7 +131,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
 3. Sie extrahiert den Schlüssel und den IV aus dem Verschlüsselungspaket in Bytearrays hinein.  
   
-4. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu entschlüsseln.  
+4. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu entschlüsseln.   
   
 5. Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den Verschlüsselungsverfahrenstext-Abschnitt des <xref:System.IO.FileStream>-Verschlüsselungspakets als Byteblöcke in das <xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei einzulesen und zu entschlüsseln. Nach Beendigung dieses Vorgangs ist die Entschlüsselung abgeschlossen.  
   
@@ -210,4 +210,4 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Kryptografiedienste](cryptographic-services.md)
