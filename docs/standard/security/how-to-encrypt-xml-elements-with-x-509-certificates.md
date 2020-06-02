@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten'
+title: 'Vorgehensweise: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: 7f74e4e46ba760b7a943b2e2728e487ee87ae204
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9cdd8e52be11eeba86ec406510f40f1a08809ff8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706070"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277218"
 ---
-# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Gewusst wie: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten
-Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zum XML-Verschlüsselungsstandard finden Sie in der World Wide Web Consortium (W3C)-Spezifikation für die XML-Verschlüsselung unter <https://www.w3.org/TR/xmldsig-core/>.  
+# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Vorgehensweise: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten
+Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zum XML-Verschlüsselungsstandard finden Sie in der World Wide Web Consortium (W3C)-Spezifikation für die XML-Verschlüsselung unter <https://www.w3.org/TR/xmldsig-core/> .  
   
  Sie können die XML-Verschlüsselung verwenden, um jedes XML-Element oder XML-Dokument durch ein <`EncryptedData`>-Element zu ersetzen, das die verschlüsselten XML-Daten enthält. Das <`EncryptedData`>-Element kann auch Unterelemente mit Informationen über die bei der Verschlüsselung verwendeten Schlüssel und Prozesse enthalten.  XML-Verschlüsselung unterstützt, dass ein Dokument mehrere verschlüsselte Elemente enthält und dass ein Element mehrfach verschlüsselt ist.  Das Codebeispiel in dieser Vorgehensweise veranschaulicht das Erstellen eines <`EncryptedData`>-Elements zusammen mit weiteren Unterelementen, die Sie später bei der Entschlüsselung verwenden können.  
   
  In diesem Beispiel wird ein XML-Element mithilfe zweier Schlüssel verschlüsselt. Es wird ein X.509-Testzertifikat mithilfe von [Makecert.exe (Certificate Creation-Tool)](/windows/desktop/SecCrypto/makecert) generiert, und das Zertifikat wird in einem Zertifikatspeicher gespeichert. Im Beispiel wird das Zertifikat dann programmgesteuert abgerufen und verwendet, um ein XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>-Methode zu verschlüsseln. Die <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>-Methode erstellt intern einen separaten Sitzungsschlüssel und verwendet diesen, um das XML-Dokument zu verschlüsseln. Diese Methode verschlüsselt den Sitzungsschlüssel und speichert ihn mit dem verschlüsselten XML-Dokument in einem neuen <`EncryptedData`>-Element.  
   
- Um das XML-Element zu entschlüsseln, rufen Sie einfach die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>-Methode auf, die automatisch das X.509-Zertifikat aus dem Speicher abruft und die notwendige Entschlüsselung vornimmt.  Weitere Informationen zum Entschlüsseln eines XML-Elements, das mit dieser Vorgehensweise verschlüsselt wurde, finden Sie unter [Gewusst wie: Entschlüsseln von XML-Elementen mit X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)-Zertifikaten.  
+ Um das XML-Element zu entschlüsseln, rufen Sie einfach die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>-Methode auf, die automatisch das X.509-Zertifikat aus dem Speicher abruft und die notwendige Entschlüsselung vornimmt.  Weitere Informationen zum Entschlüsseln eines XML-Elements, das mit dieser Vorgehensweise verschlüsselt wurde, finden Sie unter [Gewusst wie: Entschlüsseln von XML-Elementen mit X.509](how-to-decrypt-xml-elements-with-x-509-certificates.md)-Zertifikaten.  
   
  Das Beispiel eignet sich für Situationen, in denen mehrere Anwendungen verschlüsselte Daten gemeinsam nutzen müssen, oder in denen eine Anwendung verschlüsselte Daten zwischen den Zeiten speichern muss, in denen sie ausgeführt wird.  
   
@@ -111,10 +111,10 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 - Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Das in diesem Beispiel verwendete X.509-Zertifikat ist nur für Testzwecke vorgesehen.  Anwendungen sollten ein X.059-Zertifikat verwenden, das entweder von einer vertrauenswürdigen Zertifizierungsstelle oder vom Microsoft Windows-Zertifikatsserver generiert wurde.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.Cryptography.Xml>
-- [Gewusst wie: Entschlüsseln von XML-Elementen mit X.509-Zertifikaten](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+- [Vorgehensweise: Entschlüsseln von XML-Elementen mit X.509-Zertifikaten](how-to-decrypt-xml-elements-with-x-509-certificates.md)

@@ -1,18 +1,19 @@
 ---
-title: Aktivieren mehrerer aktiver Resultsets
+title: Aktivieren von Multiple Active Result Sets
+description: Erfahren Sie, wie Sie Mars in einer Verbindungs Zeichenfolge aktivieren bzw. deaktivieren, die mit SQL Server funktioniert, sodass Sie mehrere Batches in einer einzelnen Verbindung in ADO.net ausführen können.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 72125be835298218e5445fe1915d6a17f5008bb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43bdfebce291c3c1d6c90104c5fef440b295934b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148724"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286480"
 ---
-# <a name="enabling-multiple-active-result-sets"></a>Aktivieren mehrerer aktiver Resultsets
+# <a name="enabling-multiple-active-result-sets"></a>Aktivieren von Multiple Active Result Sets
 MARS ist eine Funktion, die mit SQL Server verwendet wird und das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. Wenn MARS für die Verwendung mit SQL Server aktiviert wird, fügen die einzelnen verwendeten Befehlsobjekte der Verbindung eine Sitzung hinzu.  
   
 > [!NOTE]
@@ -94,7 +95,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Meldung: Der Transaktionskontext wird von einer anderen Sitzung verwendet.  
   
- Quelle: .NET SqlClient Data Provider  
+ Quelle: .NET SqlClient-Datenanbieter  
   
  Erwartet: (NULL)  
   
@@ -111,7 +112,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="detecting-mars-support"></a>Ermitteln der MARS-Unterstützung  
  Eine Anwendung kann auf MARS-Unterstützung prüfen, indem sie den Wert `SqlConnection.ServerVersion` liest. Die Hauptnummer muss 9 für SQL Server 2005 und 10 für SQL Server 2008 lauten.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Mehrere aktive Result Sets (MARS)](multiple-active-result-sets-mars.md)
+- [Multiple Active Result Sets (MARS)](multiple-active-result-sets-mars.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

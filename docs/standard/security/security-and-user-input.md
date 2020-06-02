@@ -1,6 +1,6 @@
 ---
 title: Sicherheit und Benutzereingaben
-description: Der Code kann vom Benutzer eingegebene Daten als Parameter an anderen Code übergeben, was sich auf die Sicherheit auswirken kann. Sie können bereichsprüfung, um problematische Eingaben abzulehnen.
+description: Der Code übergibt möglicherweise vom Benutzer eingegebene Daten als Parameter an anderen Code, was sich auf die Sicherheit auswirken kann. Sie können Bereichs Überprüfungen durchführen, um problematische Eingaben abzulehnen.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: fa9f8d4708e928c51e446d8369c9b4556fc6fb77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 995af30385790a88718193e7abad1db7bc4b56c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186106"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275944"
 ---
 # <a name="security-and-user-input"></a>Sicherheit und Benutzereingaben
 
@@ -24,7 +24,7 @@ Diese Sicherheitslücken sind am schwierigsten zu finden, denn obwohl sie sich i
 
 Im Folgenden sind einige wichtige Überlegungen zu Benutzerdaten aufgeführt:
 
-- Alle Benutzerdaten in einer Serverantwort werden auf dem Client im Kontext der Site des Servers. Wenn Ihr Webserver Benutzerdaten verwendet und in die zurückgegebene Webseite einfügt, kann er z. B. ein ** \<Skript>-Tag** enthalten und wie vom Server ausgeführt werden.
+- Alle Benutzerdaten in einer Serverantwort werden auf dem Client im Kontext der Site des Servers. Wenn Ihr Webserver Benutzerdaten annimmt und Sie in die zurückgegebene Webseite einfügt, kann er beispielsweise ein **\<script>** Tag einschließen und als if vom Server ausgeführt werden.
 
 - Beachten Sie, dass der Client beliebige URLs anfordern kann.
 
@@ -58,6 +58,6 @@ Im Folgenden sind einige wichtige Überlegungen zu Benutzerdaten aufgeführt:
 
 - Besondere Vorsicht ist bei Benutzernamen geboten, die mehrere kanonische Formen haben können. Beispielsweise können Sie häufig entweder die Form MYDOMAIN\\*Benutzername* oder die Form *Benutzername*@mydomain.example.com verwenden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Richtlinien für das Schreiben von sicherem Code](secure-coding-guidelines.md)

@@ -1,13 +1,14 @@
 ---
-title: Neuerungen
+title: Neues
+description: Erfahren Sie mehr über die neuen Features in ADO.net im .NET Framework 4,5, einschließlich der neuen Features für SqlClient-Datenanbieter und ADO.NET Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2ac8ebced700dc6c874ac22304773b3b9c19f8b3
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979771"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286170"
 ---
 # <a name="whats-new-in-adonet"></a>Neues in ADO.NET
 
@@ -27,9 +28,9 @@ Die folgenden Features sind neu in den .NET Framework Datenanbieter für SQL Ser
 
 - SqlClient bietet jetzt Unterstützung für die Hochverfügbarkeit, die Notfall Wiederherstellung (AlwaysOn) SQL Server. Weitere Informationen finden Sie [unter SqlClient-Unterstützung für hohe Verfügbarkeit, Notfall Wiederherstellung](./sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
-- Ein Kennwort kann bei Verwendung SQL Server Authentifizierung als <xref:System.Security.SecureString> übermittelt werden. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlCredential>.
+- Ein Kennwort kann als <xref:System.Security.SecureString> bei Verwendung der SQL Server Authentifizierung als angegeben werden. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlCredential>.
 
-- Wenn `TrustServerCertificate` false ist und `Encrypt` true ist, muss der Servername (oder die IP-Adresse) in einem SQL Server SSL-Zertifikat genau mit dem in der Verbindungs Zeichenfolge angegebenen Servernamen (oder der IP-Adresse) übereinstimmen. Andernfalls schlägt die Verbindung fehl. Weitere Informationen finden Sie in der Beschreibung der `Encrypt`-Verbindungsoption in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- Wenn `TrustServerCertificate` false ist und `Encrypt` true ist, muss der Servername (oder die IP-Adresse) in einem SQL Server SSL-Zertifikat genau mit dem Servernamen (oder der IP-Adresse) übereinstimmen, der in der Verbindungs Zeichenfolge angegeben ist. Andernfalls schlägt die Verbindung fehl. Weitere Informationen finden Sie in der Beschreibung der `Encrypt`-Verbindungsoption in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
   Wenn diese Änderung dazu führt, dass eine vorhandene Anwendung keine Verbindung mehr herstellen kann, können Sie das Problem mithilfe eines der folgenden Verfahren beheben:
 
@@ -45,9 +46,9 @@ Die folgenden Features sind neu in den .NET Framework Datenanbieter für SQL Ser
 
 - `Type System Version=SQL Server 2012;` ist der neue Wert, der an die `Type System Version`-Verbindungseigenschaft übergeben wird. Der `Type System Version=Latest;`-Wert ist jetzt veraltet und wurde `Type System Version=SQL Server 2008;` angeglichen. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- SqlClient bietet zusätzliche Unterstützung für Sparsespalten, eine Funktion, die in SQL Server 2008 hinzugefügt wurde. Wenn Ihre Anwendung bereits auf Daten in einer Tabelle zugreift, die Sparsespalten verwendet, sollten Sie einen Leistungszuwachs feststellen können. Die IsColumnSet-Spalte von <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> gibt an, ob eine Spalte eine Sparsespalte ist und einem Spaltensatz angehört. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> gibt an, ob eine Spalte eine sparsespalte ist (Weitere Informationen finden Sie unter [SQL Server Schema](sql-server-schema-collections.md) Auflistungen). Weitere Informationen zu sparsespalten finden Sie unter [Verwenden von sparsespalten](/sql/relational-databases/tables/use-sparse-columns).
+- SqlClient bietet zusätzliche Unterstützung für Sparsespalten, eine Funktion, die in SQL Server 2008 hinzugefügt wurde. Wenn die Anwendung bereits auf Daten in einer Tabelle zugreift, die Sparsespalten verwendet, sollten Sie eine Leistungsverbesserung feststellen. Die IsColumnSet-Spalte von <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> gibt an, ob eine Spalte eine Sparsespalte ist und einem Spaltensatz angehört. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>Gibt an, ob eine Spalte eine sparsespalte ist (Weitere Informationen finden Sie unter [SQL Server Schema](sql-server-schema-collections.md) Auflistungen). Weitere Informationen zu sparsespalten finden Sie unter [Verwenden von sparsespalten](/sql/relational-databases/tables/use-sparse-columns).
 
-- Die Assembly Microsoft.SqlServer.Types.dll, die räumliche Datentypen enthält, wurde von Version 10.0 auf Version 11.0 aktualisiert. Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl. Weitere Informationen finden Sie unter [Breaking Changes to Datenbank-Engine Features](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
+- Für die Microsoft.SqlServer.Types.dll-Assembly, die die räumlichen Datentypen enthält, wurde ein Upgrade von Version 10.0 auf Version 11.0 vorgenommen. Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl. Weitere Informationen finden Sie unter [Breaking Changes to Datenbank-Engine Features](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 

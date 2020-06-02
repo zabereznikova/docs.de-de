@@ -1,12 +1,12 @@
 ---
 title: Serialisierung (C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167594"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241980"
 ---
 # <a name="serialization-c"></a>Serialisierung (C#)
 
@@ -65,7 +65,7 @@ Wenn eine serialisierte Klasse Verweise auf Objekte anderer Klassen enthält, di
 
 Die Binär- und XML-Serialisierung kann auf zwei Arten ausgeführt werden: einfach und benutzerdefiniert.
 
-Die einfache Serialisierung verwendet .NET Framework, um ein Objekt automatisch zu serialisieren. Die einzige Voraussetzung ist, dass die Klasse über das <xref:System.SerializableAttribute>-Attribut verfügt. Das Attribut <xref:System.NonSerializedAttribute> kann verwendet werden, um die Serialisierung bestimmter Felder zu verhindern.
+Die einfache Serialisierung verwendet .NET, um ein Objekt automatisch zu serialisieren. Die einzige Voraussetzung ist, dass die Klasse über das <xref:System.SerializableAttribute>-Attribut verfügt. Das Attribut <xref:System.NonSerializedAttribute> kann verwendet werden, um die Serialisierung bestimmter Felder zu verhindern.
 
 Wenn Sie einfache Serialisierung verwenden, kann die Versionsverwaltung von Objekten Probleme bereiten. Sie sollten benutzerdefinierte Serialisierung verwenden, wenn die Versionsverwaltung wichtig ist. Die einfache Serialisierung ist die einfachste Möglichkeit zur Serialisierung, bietet allerdings nicht viel Steuerungsmöglichkeiten für den Prozess.
 
@@ -75,14 +75,14 @@ Bei der benutzerdefinierten Serialisierung können Sie genau angeben, welche Obj
 
 Die Designerserialisierung ist eine besondere Form der Serialisierung, die auch die Art der Objektpersistenz einbezieht, die mit Entwicklungstools verknüpft ist. Bei der Designerserialisierung handelt es sich um den Prozess der Konvertierung eines Objektdiagramms in eine Quelldatei, die später zum Wiederherstellen des Objektdiagramms verwendet werden kann. Eine Quelldatei kann Code-, Markup- oder sogar SQL-Tabelleninformationen enthalten.
 
-## <a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele  
 
 Die [System.Text.Json-Übersicht](../../../../standard/serialization/system-text-json-overview.md) verdeutlicht, wie Sie die `System.Text.Json`-Bibliothek erhalten.
 
 [Serialisieren und Deserialisieren von JSON-Daten in .NET](../../../../standard/serialization/system-text-json-how-to.md):
 Veranschaulicht, wie Objektdaten in und aus JSON mithilfe der <xref:System.Text.Json.JsonSerializer>-Klasse gelesen und geschrieben werden.
 
-[Walkthrough: Persisting an Object in Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md) (Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#))  
+[Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio](walkthrough-persisting-an-object-in-visual-studio.md)  
 Veranschaulicht, wie die Serialisierung verwendet werden kann, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.
 
 [Lesen von Objektdaten aus einer XML-Datei (C#)](how-to-read-object-data-from-an-xml-file.md)  

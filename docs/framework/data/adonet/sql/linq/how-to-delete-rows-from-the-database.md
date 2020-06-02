@@ -1,20 +1,21 @@
 ---
 title: 'Vorgehensweise: Löschen von Zeilen aus der Datenbank'
+description: Erfahren Sie, wie Zeilen in einer Datenbank gelöscht werden, indem LINQ to SQL Objekte aus einer Tabellen bezogenen Auflistung entfernt werden. LINQ to SQL übersetzt Löschungen in SQL DELETE-Befehle.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d08621e834961e1db9312cac36bd2e69133142b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782001"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286390"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Vorgehensweise: Löschen von Zeilen aus der Datenbank
 
-Sie können Zeilen in einer Datenbank löschen, indem Sie die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entsprechenden Objekte aus der Tabellen bezogenen Auflistung entfernen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]übersetzt die Änderungen in die entsprechenden SQL `DELETE` -Befehle.
+Sie können Zeilen in einer Datenbank löschen, indem Sie die entsprechenden [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objekte aus der Tabellen bezogenen Auflistung entfernen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]übersetzt die Änderungen in die entsprechenden SQL- `DELETE` Befehle.
 
 Kaskadierte Löschvorgänge werden von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht unterstützt bzw. erkannt. Wenn Sie eine Zeile in einer Tabelle löschen möchten, für die Einschränkungen gelten, führen Sie eines der folgenden Verfahren aus:
 
@@ -29,13 +30,13 @@ Kaskadierte Löschvorgänge werden von [!INCLUDE[vbtecdlinq](../../../../../../i
 >
 > Entwickler, die Visual Studio verwenden, können den objektrelationaler Designer verwenden, um gespeicherte Prozeduren für denselben Zweck zu entwickeln.
 
-In den folgenden Schritten wird davon ausgegangen, dass Sie ein gültiger <xref:System.Data.Linq.DataContext> mit der Datenbank Northwind verbindet. Weitere Informationen finden Sie unter [Vorgehensweise: Verbindung mit einer Datenbank](how-to-connect-to-a-database.md)herstellen.
+In den folgenden Schritten wird davon ausgegangen, dass Sie ein gültiger <xref:System.Data.Linq.DataContext> mit der Datenbank Northwind verbindet. Weitere Informationen finden Sie unter Gewusst [wie: Herstellen einer Verbindung mit einer Datenbank](how-to-connect-to-a-database.md).
 
 ### <a name="to-delete-a-row-in-the-database"></a>So löschen Sie eine Zeile aus der Datenbank
 
 1. Rufen Sie die zu löschende Zeile aus der Datenbank ab.
 
-2. Rufen Sie die <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>-Methode auf.
+2. Rufen Sie die <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> -Methode auf.
 
 3. Übergeben Sie die Änderung an die Datenbank.
 
@@ -55,6 +56,6 @@ In diesem zweiten Beispiel besteht das Ziel darin, eine Bestellung (10250) zu en
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Verwalten von Änderungs Konflikten](how-to-manage-change-conflicts.md)
+- [Vorgehensweise: Verwalten von Änderungskonflikten](how-to-manage-change-conflicts.md)
 - [Vorgehensweise: Zuweisen von gespeicherten Prozeduren zum Durchführen von Aktionen zum Aktualisieren, Einfügen und Löschen (O/R-Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
 - [Vornehmen und Übergeben von Datenänderungen](making-and-submitting-data-changes.md)

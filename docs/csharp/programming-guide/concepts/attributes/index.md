@@ -1,12 +1,12 @@
 ---
 title: Attribute (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645487"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241577"
 ---
 # <a name="attributes-c"></a>Attribute (C#)
 
@@ -41,7 +41,7 @@ Einige Attribute können für eine bestimmte Entität mehrmals angegeben werden.
 [!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> Alle Attributnamen enden laut Konvention mit dem Wort „Attribute“, um sie von anderen Elementen in .NET-Bibliotheken zu unterscheiden. Sie müssen das Attributsuffix allerdings nicht angeben, wenn Sie Attribute im Code verwenden. Beispiel: `[DllImport]` entspricht `[DllImportAttribute]`, aber `DllImportAttribute` ist der tatsächliche Name des Attributs in der .NET Framework-Klassenbibliothek.
+> Alle Attributnamen enden laut Konvention mit dem Wort „Attribute“, um sie von anderen Elementen in .NET-Bibliotheken zu unterscheiden. Sie müssen das Attributsuffix allerdings nicht angeben, wenn Sie Attribute im Code verwenden. Beispiel: `[DllImport]` entspricht `[DllImportAttribute]`, aber `DllImportAttribute` ist der tatsächliche Name des Attributs in der .NET-Klassenbibliothek.
 
 ### <a name="attribute-parameters"></a>Attributparameter
 

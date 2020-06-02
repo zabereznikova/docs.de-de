@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75337255"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241655"
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
 
-Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.  
+Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET für C# verfügbar sind.  
   
  In diesem Abschnitt wird größtenteils davon ausgegangen, dass Sie bereits über einige Kenntnisse zu C# und allgemeinen Programmierkonzepten verfügen. Wenn Sie Einsteiger beim Programmieren oder bei C# sind, sind die [Tutorials zur Einführung in C#](../tutorials/intro-to-csharp/index.md) oder das [Tutorial zu .NET im Browser](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) am besten für Sie geeignet, da für diese keine Programmierkenntnisse erforderlich sind.  
   
@@ -84,6 +84,6 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
   
  [Reflexion](./concepts/reflection.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../language-reference/index.md)

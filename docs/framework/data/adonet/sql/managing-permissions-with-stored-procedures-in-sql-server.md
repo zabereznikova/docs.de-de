@@ -1,13 +1,14 @@
 ---
 title: Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server
+description: Erfahren Sie, wie Sie den Zugriff auf Ihre Daten und Datenbankobjekte einschränken, indem Sie den Zugriff mithilfe von gespeicherten Prozeduren oder benutzerdefinierten Funktionen implementieren.
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 890c1c6dd7003f3abd684d6c827b6a77a3a019c1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452382"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286287"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server
 Eine Möglichkeit, eine Bastion aus mehreren Verteidigungslinien um Ihre Datenbank aufzubauen, besteht darin, den Zugriff auf Daten so zu implementieren, dass er nur über gespeicherte Prozeduren oder benutzerdefinierten Funktionen läuft. Sie können alle Berechtigungen für die zugrunde liegenden Objekte, z. B. Tabellen, widerrufen oder verweigern, und Sie können EXECUTE-Berechtigungen für gespeicherte Prozeduren gewähren. Auf diese Weise wird um Ihre Daten und Datenbankobjekte herum ein wirksamer Sicherheitszaun aufgebaut.  
@@ -37,7 +38,7 @@ Eine Möglichkeit, eine Bastion aus mehreren Verteidigungslinien um Ihre Datenba
   
 - Erteilen Sie EXECUTE-Berechtigungen für die gespeicherten Prozeduren für die Datenbankrollen, die auf die Daten zugreifen können sollen.  
   
-- Widerrufen oder verweigern Sie alle Berechtigungen für die zugrunde liegenden Tabellen, und zwar für alle Rollen und Benutzer in der Datenbank, darunter auch für die `public`-Rolle. Alle Benutzer erben die Berechtigungen der {1}public{2}-Rolle. Wenn Sie also die Berechtigungen für `public` verweigern, erhalten nur die Besitzer und die `sysadmin`-Member Zugriff. Alle anderen Benutzer können aus ihrer Zugehörigkeit zu anderen Rollen keine Berechtigungen erben.  
+- Widerrufen oder verweigern Sie alle Berechtigungen für die zugrunde liegenden Tabellen, und zwar für alle Rollen und Benutzer in der Datenbank, darunter auch für die `public`-Rolle. Alle Benutzer erben die Berechtigungen der public-Rolle. Wenn Sie also die Berechtigungen für `public` verweigern, erhalten nur die Besitzer und die `sysadmin`-Member Zugriff. Alle anderen Benutzer können aus ihrer Zugehörigkeit zu anderen Rollen keine Berechtigungen erben.  
   
 - Fügen Sie den Rollen `sysadmin` und `db_owner` keine Benutzer oder Rollen hinzu. Systemadministratoren und Datenbankbesitzer können auf alle Datenbankobjekte zugreifen.  
   
@@ -52,7 +53,7 @@ Eine Möglichkeit, eine Bastion aus mehreren Verteidigungslinien um Ihre Datenba
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Gespeicherte Prozeduren](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) und [SQL Injection](/sql/relational-databases/security/sql-injection)|In den Artikeln wird beschrieben, wie gespeicherte Prozeduren erstellt werden und wie SQL Injection funktioniert.|  
   

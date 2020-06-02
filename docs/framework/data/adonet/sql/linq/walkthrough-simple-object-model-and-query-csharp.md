@@ -1,13 +1,14 @@
 ---
 title: 'Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (C#)'
+description: Befolgen Sie diese exemplarische Vorgehensweise, um eine Entitäts Klasse zu erstellen, die eine Tabelle in einer Beispieldatenbank modelliert. Erstellen Sie dann eine einfache Abfrage, um Kunden an einem bestimmten Speicherort aufzulisten.
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4637fabecc1726d8fec12857a667073912cfbed5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792134"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286300"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (C#)
 
@@ -19,7 +20,7 @@ Diese exemplarische Vorgehensweise ist codeorientiert, um [!INCLUDE[vbtecdlinq](
 
 Diese exemplarische Vorgehensweise wurde mithilfe von Visual C#-Entwicklungseinstellungen geschrieben.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest5") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.
 
@@ -29,7 +30,7 @@ Diese exemplarische Vorgehensweise wurde mithilfe von Visual C#-Entwicklungseins
 
 Diese exemplarische Vorgehensweise umfasst sechs Hauptaufgaben:
 
-- Erstellen einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt Mappe in Visual Studio
+- Erstellen einer Projekt Mappe [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in Visual Studio
 
 - Zuordnen einer Datenbanktabelle zu einer Klasse.
 
@@ -43,13 +44,13 @@ Diese exemplarische Vorgehensweise umfasst sechs Hauptaufgaben:
 
 ## <a name="creating-a-linq-to-sql-solution"></a>Erstellen einer LINQ to SQL-Lösung
 
-In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projekt Mappe, die die erforderlichen Verweise zum Erstellen und Ausführen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eines Projekts enthält.
+In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projekt Mappe, die die erforderlichen Verweise zum Erstellen und Ausführen eines [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekts enthält.
 
 ### <a name="to-create-a-linq-to-sql-solution"></a>So erstellen Sie eine LINQ to SQL-Lösung
 
 1. Zeigen Sie im Menü **Datei** von Visual Studio auf **neu**, und klicken Sie dann auf **Projekt**.
 
-2. Klicken Sie im Bereich **Projekttypen** des Dialog Felds **Neues Projekt** auf **C#Visualisierung**.
+2. Klicken Sie im Bereich **Projekttypen** des Dialog Felds **Neues Projekt** auf **Visual c#**.
 
 3. Klicken Sie im Bereich **Vorlagen** auf **Konsolenanwendung**.
 
@@ -160,7 +161,7 @@ In diesem Schritt führen Sie die Abfrage aus. Die in den vorherigen Schritten e
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Die [Exemplarische Vorgehensweise: Das Thema Beziehungs übergreifende AbfragenC#(](walkthrough-querying-across-relationships-csharp.md) ) wird fortgesetzt, wo diese exemplarische Vorgehensweise endet. Die exemplarische Vorgehensweise für Beziehungen zwischen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Beziehungen veranschaulicht, wie Tabellen übergreifend abgefragt werden können, ähnlich wie *Joins* in einer relationalen Datenbank.
+Im Thema Exemplarische Vorgehensweise [: Beziehungs übergreifendes Abfragen (c#)](walkthrough-querying-across-relationships-csharp.md) wird fortgesetzt, wo diese exemplarische Vorgehensweise endet. Die exemplarische Vorgehensweise für Beziehungen zwischen Beziehungen veranschaulicht [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , wie Tabellen übergreifend abgefragt werden können, ähnlich wie *Joins* in einer relationalen Datenbank.
 
 Wenn Sie die exemplarische Vorgehensweise zu beziehungsübergreifenden Abfragen absolvieren möchten, stellen Sie sicher, dass Sie die gerade erstellte Lösung speichern, da diese benötigt wird.
 

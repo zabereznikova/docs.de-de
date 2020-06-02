@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: c2d28abacd34736764b69be750a850a0f2e8db85
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095267"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288380"
 ---
 # <a name="net-framework-cryptography-model"></a>Das Kryptografiemodell in .NET Framework
 
@@ -49,7 +49,7 @@ Die Common Language Runtime verwendet ein streamorientiertes Design für die Imp
 
 ## <a name="cryptographic-configuration"></a>Kryptografische Konfiguration
 
-Mit einer kryptografischen Konfiguration können Sie eine bestimmte Implementierung eines Algorithmus zu einem Algorithmusnamen auflösen, wodurch Erweiterbarkeit der Kryptografieklassen von .NET Framework ermöglicht wird. Sie können Ihre eigene Hardware- oder Softwareimplementierung eines Algorithmus hinzufügen und die Implementierung dem von Ihnen gewählten Algorithmusnamen zuordnen. Ist in der Konfigurationsdatei kein Algorithmus angegeben, werden die Standardeinstellungen verwendet. Weitere Informationen zur Kryptografiekonfiguration finden Sie unter [Konfigurieren von Kryptografieklassen](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
+Mit einer kryptografischen Konfiguration können Sie eine bestimmte Implementierung eines Algorithmus zu einem Algorithmusnamen auflösen, wodurch Erweiterbarkeit der Kryptografieklassen von .NET Framework ermöglicht wird. Sie können Ihre eigene Hardware- oder Softwareimplementierung eines Algorithmus hinzufügen und die Implementierung dem von Ihnen gewählten Algorithmusnamen zuordnen. Ist in der Konfigurationsdatei kein Algorithmus angegeben, werden die Standardeinstellungen verwendet. Weitere Informationen zur Kryptografiekonfiguration finden Sie unter [Konfigurieren von Kryptografieklassen](../../framework/configure-apps/configure-cryptography-classes.md).
 
 ## <a name="choosing-an-algorithm"></a>Auswählen eines Algorithmus
 
@@ -73,7 +73,7 @@ Es folgt eine Liste empfohlener Algorithmen nach Anwendung:
 - Generieren eines Schlüssels aus einem Kennwort:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)
+- [Kryptografiedienste](cryptographic-services.md)
 - [Angewendete Kryptografieprotokolle, Algorithmen und Quellcode in C, von Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

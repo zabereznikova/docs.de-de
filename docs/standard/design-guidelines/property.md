@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 8b6570b1b7c292729b78f2fe52f24f73319efe6c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c49b42ab369ace582c76d7f326da309415e8c45b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743656"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291941"
 ---
 # <a name="property-design"></a>Eigenschaftenentwurf
 Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, unterscheiden Sie sich in Bezug auf Ihre Verwendungs Szenarien erheblich. Sie sollten als intelligente Felder betrachtet werden. Sie verfügen über die Aufruf Syntax der Felder und die Flexibilität der Methoden.
@@ -20,11 +20,11 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
 
  Beachten Sie, dass der Eigenschafts Wert auch dann geändert werden kann, wenn es sich bei dem Typ der Eigenschaft um einen änderbaren Referenztyp handelt.
 
- ❌ keine festgelegten Eigenschaften oder Eigenschaften bereitstellen, die den Setter mit breiteren Zugriffsmöglichkeiten als der Getter haben.
+ ❌Stellen Sie keine festgelegten Eigenschaften oder Eigenschaften mit dem Setter bereit, der über breitere Zugriffsmöglichkeiten verfügt als der Getter.
 
  Verwenden Sie z. b. keine Eigenschaften mit einem öffentlichen Setter und einem geschützten Getter.
 
- Wenn der Getter der Eigenschaft nicht bereitgestellt werden kann, implementieren Sie die Funktionalität stattdessen als Methode. Starten Sie den Methodennamen mit `Set`, und folgen Sie den Anweisungen, die Sie als Eigenschaft bezeichnet haben. <xref:System.AppDomain> hat beispielsweise eine Methode mit dem Namen `SetCachePath`, anstatt eine nur-Eigenschaft mit dem Namen `CachePath`zu verwenden.
+ Wenn der Getter der Eigenschaft nicht bereitgestellt werden kann, implementieren Sie die Funktionalität stattdessen als Methode. Starten Sie ggf. den Methodennamen mit, `Set` und befolgen Sie den Namen der Eigenschaft. Beispielsweise <xref:System.AppDomain> verfügt über eine Methode, die aufgerufen wird, `SetCachePath` anstatt eine nur-Eigenschaft mit dem Namen zu verwenden `CachePath` .
 
  ✔️ Stellen sinnvolle Standardwerte für alle Eigenschaften bereit, um sicherzustellen, dass die Standardwerte nicht zu einer Sicherheitslücke oder zu einem äußerst ineffizienten Code führen.
 
@@ -34,59 +34,59 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
 
  ✔️ behalten Sie den vorherigen Wert bei, wenn ein Eigenschaften Setter eine Ausnahme auslöst.
 
- ❌ vermeiden Sie das Auslösen von Ausnahmen von Eigenschaften Getters.
+ ❌Vermeiden Sie das Auslösen von Ausnahmen von Eigenschaften Getter.
 
  Eigenschaften Getter sollten einfache Vorgänge sein und sollten keine Vorbedingungen aufweisen. Wenn ein Getter eine Ausnahme auslösen kann, sollte er wahrscheinlich neu gestaltet werden, um eine Methode zu sein. Beachten Sie, dass diese Regel nicht für Indexer gilt, bei denen Ausnahmen aufgrund der Validierung der Argumente erwartet werden.
 
 ### <a name="indexed-property-design"></a>Design der indizierten Eigenschaft
  Eine indizierte Eigenschaft ist eine spezielle Eigenschaft, die über Parameter verfügen kann und mit spezieller Syntax ähnlich der Array Indizierung aufgerufen werden kann.
 
- Indizierte Eigenschaften werden im Allgemeinen als Indexer bezeichnet. Indexer sollten nur in APIs verwendet werden, die den Zugriff auf Elemente in einer logischen Auflistung ermöglichen. Beispielsweise ist eine Zeichenfolge eine Auflistung von Zeichen, und der Indexer auf <xref:System.String?displayProperty=nameWithType> wurde hinzugefügt, um auf seine Zeichen zuzugreifen.
+ Indizierte Eigenschaften werden im Allgemeinen als Indexer bezeichnet. Indexer sollten nur in APIs verwendet werden, die den Zugriff auf Elemente in einer logischen Auflistung ermöglichen. Beispielsweise ist eine Zeichenfolge eine Auflistung von Zeichen, und der Indexer für <xref:System.String?displayProperty=nameWithType> wurde hinzugefügt, um auf seine Zeichen zuzugreifen.
 
  ✔️ können Indexer verwenden, um den Zugriff auf Daten bereitzustellen, die in einem internen Array gespeichert sind.
 
  ✔️ sollten Indexer für Typen bereitgestellt werden, die Element Auflistungen darstellen.
 
- ❌ vermeiden Sie die Verwendung indizierter Eigenschaften mit mehr als einem Parameter.
+ ❌Vermeiden Sie die Verwendung von indizierten Eigenschaften mit mehr als einem Parameter.
 
- Wenn der Entwurf mehrere Parameter erfordert, überdenken Sie, ob die-Eigenschaft tatsächlich einen Accessor für eine logische Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie stattdessen-Methoden. Sie sollten den Methodennamen ggf. mit `Get` oder `Set`beginnen.
+ Wenn der Entwurf mehrere Parameter erfordert, überdenken Sie, ob die-Eigenschaft tatsächlich einen Accessor für eine logische Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie stattdessen-Methoden. Sie sollten den Methodennamen ggf `Get` . mit oder Starten `Set` .
 
- ❌ vermeiden Sie Indexer mit anderen Parametertypen als <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>oder einer Enumeration.
+ ❌Vermeiden Sie Indexer mit anderen Parametertypen als <xref:System.Int32?displayProperty=nameWithType> , <xref:System.Int64?displayProperty=nameWithType> , <xref:System.String?displayProperty=nameWithType> , <xref:System.Object?displayProperty=nameWithType> oder einer Enumeration.
 
- Wenn der Entwurf andere Typen von Parametern erfordert, sollten Sie nachdrücklich neu auswerten, ob die API tatsächlich einen Accessor für eine logische Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie eine-Methode. Sie sollten den Methodennamen ggf. mit `Get` oder `Set`beginnen.
+ Wenn der Entwurf andere Typen von Parametern erfordert, sollten Sie nachdrücklich neu auswerten, ob die API tatsächlich einen Accessor für eine logische Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie eine-Methode. Sie sollten den Methodennamen ggf `Get` . mit oder Starten `Set` .
 
- ✔️ den Namen `Item` für indizierte Eigenschaften verwenden, es sei denn, es gibt einen offensichtlich besseren Namen (z. b. die <xref:System.String.Chars%2A>-Eigenschaft auf `System.String`).
+ ✔️ den Namen `Item` für indizierte Eigenschaften verwenden, es sei denn, es gibt einen offensichtlich besseren Namen (z. b. siehe die- <xref:System.String.Chars%2A> Eigenschaft für `System.String` ).
 
- In C#sind Indexer standardmäßig benannte Elemente. Der <xref:System.Runtime.CompilerServices.IndexerNameAttribute> kann zum Anpassen dieses Namens verwendet werden.
+ In c# sind Indexer standardmäßig benannte Elemente. <xref:System.Runtime.CompilerServices.IndexerNameAttribute>Kann verwendet werden, um diesen Namen anzupassen.
 
- ❌ nicht sowohl einen Indexer als auch Methoden bereitstellen, die semantisch äquivalent sind.
+ ❌Geben Sie keinen Indexer und keine Methoden an, die semantisch äquivalent sind.
 
- ❌ geben nicht mehr als eine Familie überladener Indexer in einem Typ an.
+ ❌Geben Sie nicht mehr als eine Familie überladener Indexer in einem Typ an.
 
- Dies wird vom C# Compiler erzwungen.
+ Dies wird vom c#-Compiler erzwungen.
 
- ❌ nicht standardmäßige indizierte Eigenschaften verwenden.
+ ❌Verwenden Sie keine nicht standardmäßigen indizierten Eigenschaften.
 
- Dies wird vom C# Compiler erzwungen.
+ Dies wird vom c#-Compiler erzwungen.
 
 ### <a name="property-change-notification-events"></a>Benachrichtigungs Ereignisse für Eigenschafts Änderungen
- Manchmal ist es hilfreich, ein Ereignis anzugeben, das den Benutzer über Änderungen in einem Eigenschafts Wert benachrichtigt. `System.Windows.Forms.Control` löst z. b. ein `TextChanged`-Ereignis aus, nachdem sich der Wert der `Text`-Eigenschaft geändert hat.
+ Manchmal ist es hilfreich, ein Ereignis anzugeben, das den Benutzer über Änderungen in einem Eigenschafts Wert benachrichtigt. Beispielsweise löst `System.Windows.Forms.Control` ein- `TextChanged` Ereignis aus, nachdem sich der Wert der- `Text` Eigenschaft geändert hat.
 
  ✔️ sollten Änderungs Benachrichtigungs Ereignisse in Erwägung ziehen, wenn Eigenschaftswerte in APIs auf hoher Ebene (normalerweise Designer Komponenten) geändert werden.
 
  Wenn ein Benutzer ein gutes Szenario kennt, wenn eine Eigenschaft eines Objekts geändert wird, sollte das Objekt ein Änderungs Benachrichtigungs Ereignis für die Eigenschaft angeben.
 
- Es ist jedoch unwahrscheinlich, dass Sie den Aufwand für die Anwendung solcher Ereignisse für APIs auf niedriger Ebene, wie z. b. Basis Typen oder Sammlungen, erhöhen sollten. Beispielsweise würden <xref:System.Collections.Generic.List%601> solche Ereignisse nicht aufschlagen, wenn der Liste ein neues Element hinzugefügt wird und die `Count`-Eigenschaft geändert wird.
+ Es ist jedoch unwahrscheinlich, dass Sie den Aufwand für die Anwendung solcher Ereignisse für APIs auf niedriger Ebene, wie z. b. Basis Typen oder Sammlungen, erhöhen sollten. Beispielsweise werden <xref:System.Collections.Generic.List%601> solche Ereignisse nicht durch das Hinzufügen eines neuen Elements zur Liste, und die- `Count` Eigenschaft wird geändert.
 
  ✔️ sollten Änderungs Benachrichtigungs Ereignisse in Erwägung ziehen, wenn sich der Wert einer Eigenschaft über externe Erzwingung ändert.
 
- Wenn sich ein Eigenschafts Wert über eine externe Kraft ändert (anders als durch Aufrufen von Methoden für das Objekt), geben Sie Ereignisse an den Entwickler an, dass sich der Wert ändert und sich geändert hat. Ein gutes Beispiel hierfür ist die `Text`-Eigenschaft eines Textfeld-Steuer Elements. Wenn der Benutzer Text in einem `TextBox`eingibt, ändert sich der Eigenschafts Wert automatisch.
+ Wenn sich ein Eigenschafts Wert über eine externe Kraft ändert (anders als durch Aufrufen von Methoden für das Objekt), geben Sie Ereignisse an den Entwickler an, dass sich der Wert ändert und sich geändert hat. Ein gutes Beispiel ist die- `Text` Eigenschaft eines Textfeld-Steuer Elements. Wenn der Benutzer Text in ein- `TextBox` Objekt eingibt, wird der-Eigenschafts Wert automatisch geändert.
 
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+- [Entwurfs Richtlinien für Member](member.md)
+- [Framework-Entwurfs Richtlinien](index.md)

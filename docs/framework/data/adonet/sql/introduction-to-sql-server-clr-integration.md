@@ -1,13 +1,14 @@
 ---
 title: Einführung in die CLR-Integration in SQL Server
+description: Die CLR-Integration in SQL Server unterstützt gespeicherte Prozeduren, Trigger, benutzerdefinierte Funktionen, benutzerdefinierte Typen und benutzerdefinierte Aggregate in verwaltetem Code.
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 41dd89af4f45c673cf6b7283fc39aaf91fd9963c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: fa2ef68792d09cf94b3e0680a14bd79f9b593999
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452408"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286429"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Einführung in die CLR-Integration in SQL Server
 CLR (Common Language Runtime) steht im Mittelpunkt von Microsoft .NET Framework und stellt die Ausführungsumgebung für sämtlichen .NET Framework-Code bereit. In CLR geschriebener Code wird als verwalteter Code bezeichnet. CLR stellt verschiedene Funktionen und Dienste für die Programmausführung bereit, unter anderem Just-In-Time-Kompilierung (JIT), Speicherzuordnung und -verwaltung, Erzwingen der Typsicherheit, Ausnahmebehandlung, Threadverwaltung und Sicherheit.  
@@ -18,7 +19,7 @@ CLR (Common Language Runtime) steht im Mittelpunkt von Microsoft .NET Framework 
   
  In diesem Abschnitt sollen die Informationen bereitgestellt werden, die für den Einstieg in das Programmieren mit der CLR-Integration in SQL Server erforderlich sind. Es ist nicht Ziel dieses Abschnitts, das Thema umfassend abzudecken. Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.  
   
- **SQL Server-Dokumentation**  
+ **Dokumentation zu SQL Server**  
   
 - [Übersicht über die CLR-Integration (Common Language Runtime)](/sql/relational-databases/clr-integration/common-language-runtime-integration-overview)  
   
@@ -36,14 +37,14 @@ GO
   
  Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.  
   
- **SQL Server-Dokumentation**  
+ **Dokumentation zu SQL Server**  
   
 - [Aktivieren der CLR-Integration](/sql/relational-databases/clr-integration/clr-integration-enabling)  
   
 ## <a name="deploying-a-clr-assembly"></a>Bereitstellen einer CLR-Assembly  
  Sobald die CLR-Methoden auf dem Testserver getestet und verifiziert wurden, können sie mit einem Bereitstellungsskript auf die Produktionsserver verteilt werden. Das Bereitstellungsskript kann manuell oder mit SQL Server Management Studio generiert werden. Ausführlichere Informationen finden Sie in der-Version SQL Server Dokumentation für die verwendete Version von SQL Server.  
   
- **SQL Server-Dokumentation**  
+ **Dokumentation zu SQL Server**  
   
 1. [Bereitstellen von CLR-Datenbankobjekten](/sql/relational-databases/clr-integration/deploying-clr-database-objects)  
   
@@ -52,7 +53,7 @@ GO
   
  Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.  
   
- **SQL Server-Dokumentation**  
+ **Dokumentation zu SQL Server**  
   
 - [Sicherheit der CLR-Integration](/sql/relational-databases/clr-integration/security/clr-integration-security)  
   
@@ -61,7 +62,7 @@ GO
   
  Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.  
   
- **SQL Server-Dokumentation**  
+ **Dokumentation zu SQL Server**  
   
 - [Debuggen von CLR-Datenbankobjekten](/sql/relational-databases/clr-integration/debugging-clr-database-objects)  
   

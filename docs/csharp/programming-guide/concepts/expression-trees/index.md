@@ -2,19 +2,19 @@
 title: Ausdrucksbaumstrukturen (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: f425ab38bf7bb54814fe777b7cb02180d022a8af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c260e649e7bd285a6bd07b5a1cd7fc1a7f75b82a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169635"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241551"
 ---
 # <a name="expression-trees-c"></a>Ausdrucksbaumstrukturen (C#)
 Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, in denen jeder Knoten ein Ausdruck ist, z. B. ein Methodenaufruf oder eine binäre Operation wie `x < y`.  
   
  Sie können Code kompilieren und ausführen, der von Ausdrucksbaumstrukturen dargestellt wird. Dies ermöglicht dynamische Änderungen des ausführbaren Codes, die Ausführung von LINQ-Abfragen in verschiedenen Datenbanken und die Erstellung von dynamischen Abfragen. Weitere Informationen zu Ausdrucksbaumstrukturen in LINQ finden Sie unter [Verwenden von Ausdrucksbaumstrukturen zum Erstellen von dynamischen Abfragen (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md).
   
- Ausdrucksbaumstrukturen werden auch in der Dynamic Language Runtime (DLR) verwendet, um Interoperabilität zwischen dynamischen Sprachen und dem .NET-Framework zu gewährleisten und ermöglicht Entwicklern von Compilern, Ausdrucksbaumstrukturen anstelle der Microsoft Intermediate Language (MSIL) auszugeben. Weitere Informationen zur DLR finden Sie unter [Übersicht über die Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
+ Ausdrucksbaumstrukturen werden auch in der Dynamic Language Runtime (DLR) verwendet, um Interoperabilität zwischen dynamischen Sprachen und .NET zu gewährleisten. Dies ermöglicht Entwicklern von Compilern, Ausdrucksbaumstrukturen anstelle der Microsoft Intermediate Language (MSIL) auszugeben. Weitere Informationen zur DLR finden Sie unter [Übersicht über die Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
  Sie können den C#- oder Visual Basic-Compiler zur Erstellung einer Ausdrucksbaumstruktur veranlassen, basierend auf einem anonymen Lambda-Ausdruck oder Sie können Ausdrucksbaumstrukturen durch Verwendung des Namespace <xref:System.Linq.Expressions> manuell erstellen.  
   
@@ -147,11 +147,11 @@ Console.WriteLine(expr.Compile()(4));
   
  Weitere Informationen finden Sie unter [ Ausführen von Ausdrucksbaumstrukturen (C#)](./how-to-execute-expression-trees.md).
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.Expressions>
 - [Ausführen von Ausdrucksbaumstrukturen (C#)](./how-to-execute-expression-trees.md)
 - [Ändern von Ausdrucksbaumstrukturen (C#)](./how-to-modify-expression-trees.md)
 - [Lambda-Ausdrücke](../../statements-expressions-operators/lambda-expressions.md)
 - [Übersicht über die Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
-- [Programming Concepts (C#) (Programmierkonzepte (C#))](../index.md)
+- [Programmierkonzepte (C#)](../index.md)

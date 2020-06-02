@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: 0ad98af240cf8d1041d6a8b64ab71a56e763f76f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419056"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290200"
 ---
 # <a name="names-of-namespaces"></a>Namen von Namespaces
 Wie bei anderen Benennungs Richtlinien ist das Ziel bei der Benennung von Namespaces, dass der Programmierer, der das Framework verwendet, ausreichend Klarheit schafft, um sofort zu wissen, welcher Inhalt des Namespace wahrscheinlich ist. Die folgende Vorlage gibt die allgemeine Regel für das Benennen von Namespaces an:
@@ -84,5 +84,5 @@ Wie bei anderen Benennungs Richtlinien ist das Ziel bei der Benennung von Namesp
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Framework-Entwurfs Richtlinien](../../../docs/standard/design-guidelines/index.md)
-- [Benennungs Richtlinien](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Framework-Entwurfs Richtlinien](index.md)
+- [Benennungs Richtlinien](naming-guidelines.md)

@@ -1,16 +1,17 @@
 ---
 title: Abfrageausführung
+description: Erfahren Sie mehr über die verschiedenen Möglichkeiten, wie eine LINQ to Entities Abfrage ausgeführt wird, einschließlich verzögerter Abfrage Ausführung, sofortiger Ausführung von Abfragen und Speicher Ausführung.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: e372744eea3eed7fc3f7ee9c8bbdd711c95b586e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e776df6d35b6cc8c24cd83e902bc4d050347343b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149972"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286791"
 ---
 # <a name="query-execution"></a>Abfrageausführung
 Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Befehlsstruktur konvertiert. Eine Befehlsstruktur ist eine Darstellung einer Abfrage, die mit dem Entity Framework kompatibel ist. Die Befehlsstruktur wird dann für die Datenquelle ausgeführt. Während der Ausführung der Abfrage werden alle Abfrageausdrücke (d. h. alle Komponenten der Abfrage) ausgewertet, einschließlich der Ausdrücke, die für die Materialisierung der Ergebnisse verwendet werden.  
@@ -20,10 +21,10 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
  Beim Ausführen einer LINQ to Entities-Abfrage werden möglicherweise einige Ausdrücke auf dem Server und andere lokal auf dem Client ausgeführt. Ein Ausdruck wird auf dem Client ausgewertet, bevor die Abfrage auf dem Server ausgeführt wird. Wenn ein Ausdruck auf dem Client ausgewertet wird, wird dieser Ausdruck in der Abfrage durch das Ergebnis der Auswertung ersetzt. Anschließend wird die Abfrage auf dem Server ausgeführt. Da Abfragen für die Datenquelle ausgeführt werden, wird das auf dem Client festgelegte Verhalten von der Konfiguration der Datenquelle überschrieben. Zum Beispiel hängen die Behandlung von NULL-Werten und die numerische Genauigkeit von den Servereinstellungen ab. Alle Ausnahmen, die bei der Abfrageausführung auf dem Server ausgelöst wurden, werden direkt an den Client weitergegeben.  
 
 > [!TIP]
-> Eine praktische Zusammenfassung der Abfrageoperatoren im Tabellenformat, mit der Sie das Ausführungsverhalten eines Operators schnell identifizieren können, finden Sie unter [Klassifizierung von Standardabfrageoperatoren nach Ausführungsweisen (C)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+> Eine bequeme Zusammenfassung der Abfrage Operatoren im Tabellenformat, mit der Sie das Ausführungs Verhalten eines Operators schnell ermitteln können, finden Sie [unter Klassifizierung von Standard Abfrage Operatoren nach Ausführungs Arten (c#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Verzögerte Abfrageausführung  
- In einer Abfrage, die eine Sequenz von Werten zurückgibt, enthält die Abfragevariable selbst niemals die Abfrageergebnisse, sondern immer nur die Abfragebefehle. Die Ausführung der Abfrage wird verzögert, bis die Abfragevariable in einer `foreach`- oder `For Each`-Schleife durchlaufen wird. Dies wird als *verzögerte Ausführung*bezeichnet; Das heißt, die Abfrageausführung erfolgt einige Zeit nach dem Erstellen der Abfrage. Auf diese Weise können Sie die Abfrage so häufig ausführen, wie Sie dies wünschen. Dies bietet sich z. B. dann an, wenn Sie eine Datenbank haben, die von anderen Anwendungen aktualisiert wird. Sie können in Ihrer Anwendung eine Abfrage erstellen, mit der die neuesten Informationen abgerufen werden, und diese Abfrage wiederholt ausführen, wobei jedes Mal die aktualisierten Informationen zurückgegeben werden.  
+ In einer Abfrage, die eine Sequenz von Werten zurückgibt, enthält die Abfragevariable selbst niemals die Abfrageergebnisse, sondern immer nur die Abfragebefehle. Die Ausführung der Abfrage wird verzögert, bis die Abfragevariable in einer `foreach`- oder `For Each`-Schleife durchlaufen wird. Dies wird als *verzögerte Ausführung*bezeichnet. Das heißt, dass die Abfrage Ausführung einige Zeit nach dem Konstruieren der Abfrage erfolgt. Auf diese Weise können Sie die Abfrage so häufig ausführen, wie Sie dies wünschen. Dies bietet sich z. B. dann an, wenn Sie eine Datenbank haben, die von anderen Anwendungen aktualisiert wird. Sie können in Ihrer Anwendung eine Abfrage erstellen, mit der die neuesten Informationen abgerufen werden, und diese Abfrage wiederholt ausführen, wobei jedes Mal die aktualisierten Informationen zurückgegeben werden.  
   
  Die verzögerte Ausführung ermöglicht die Kombination mehrerer Abfragen oder die Erweiterung einer bestehenden Abfrage. durch das Hinzufügen neuer Operationen. Die Änderungen werden dann bei der Ausführung der Abfrage berücksichtigt. Im folgenden Beispiel gibt die erste Abfrage alle Produkte zurück. Die zweite Abfrage erweitert die erste, indem sie `Where` verwendet, um alle Produkte der Größe "L" zurückzugeben:  
   
@@ -47,7 +48,7 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
   
  Bestimmte Operationen werden stets auf dem Client ausgeführt. Dazu gehören die Bindung von Werten, Unterausdrücken und Unterabfragen von Abschlüssen sowie die Materialisierung von Objekten in Abfrageergebnisse. Das bedeutet, dass diese Elemente (beispielsweise Parameterwerte) während der Ausführung nicht aktualisiert werden können. Anonyme Typen können inline in der Datenquelle erstellt werden. Davon sollte jedoch nicht ausgegangen werden. Inlinegruppierungen können ebenfalls in der Datenquelle erstellt werden. Davon sollte jedoch ebenfalls nicht in jedem Fall ausgegangen werden. Im Allgemeinen sollten keine Annahmen darüber gemacht werden, was auf dem Server erstellt wird.  
   
- In diesem Abschnitt werden die Szenarios, in denen Code lokal auf dem Client ausgeführt wird, beschrieben. Weitere Informationen darüber, welche Arten von Ausdrücken lokal ausgeführt werden, finden Sie unter [Ausdrücke in LINQ to Entities Queries](expressions-in-linq-to-entities-queries.md).  
+ In diesem Abschnitt werden die Szenarios, in denen Code lokal auf dem Client ausgeführt wird, beschrieben. Weitere Informationen darüber, welche Typen von Ausdrücken lokal ausgeführt werden, finden Sie unter [Ausdrücke in LINQ to Entities Abfragen](expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Literale und Parameter  
  Lokale Variablen, wie die `orderID`-Variable im folgenden Beispiel, werden auf dem Client ausgewertet.  

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159402"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288354"
 ---
 # <a name="encrypting-data"></a>Verschlüsseln von Daten
 Symmetrische Verschlüsselung und asymmetrische Verschlüsselung werden mit unterschiedlichen Prozesse ausgeführt. Die symmetrische Verschlüsselung wird für Streams ausgeführt und ist daher für die Verschlüsselung großer Datenmengen geeignet. Die asymmetrische Verschlüsselung wird für eine kleine Anzahl von Bytes ausgeführt und ist daher nur für kleine Datenmengen geeignet.  
   
 ## <a name="symmetric-encryption"></a>Symmetrische Verschlüsselung  
- Die verwalteten symmetrischen Kryptografieklassen werden mit einer speziellen Streamklasse namens <xref:System.Security.Cryptography.CryptoStream> verwendet, die Daten verschlüsselt, die in den jeweiligen Stream eingelesen wurden. Die **CryptoStream** -Klasse wird mit einer verwalteten Streamklasse, mit einer Klasse, die die <xref:System.Security.Cryptography.ICryptoTransform> -Schnittstelle (erstellt aus einer Klasse, durch die ein kryptografischer Algorithmus implementiert wird) implementiert, und mit einer <xref:System.Security.Cryptography.CryptoStreamMode> -Enumeration implementiert, die die zulässige Art des Zugriffs auf die **CryptoStream**-Klasse beschreibt. Die **CryptoStream** -Klasse kann mit jeder Klasse initialisiert werden, die aus der <xref:System.IO.Stream> -Klasse abgeleitet wurde. Dazu zählen auch die Klassen <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>und <xref:System.Net.Sockets.NetworkStream>. Mit diesen Klassen können Sie die unterschiedlichsten Streamobjekte symmetrisch verschlüsseln.  
+ Die verwalteten symmetrischen Kryptografieklassen werden mit einer speziellen Streamklasse namens <xref:System.Security.Cryptography.CryptoStream> verwendet, die Daten verschlüsselt, die in den jeweiligen Stream eingelesen wurden. Die **CryptoStream** -Klasse wird mit einer verwalteten Streamklasse, mit einer Klasse, die die <xref:System.Security.Cryptography.ICryptoTransform> -Schnittstelle (erstellt aus einer Klasse, durch die ein kryptografischer Algorithmus implementiert wird) implementiert, und mit einer <xref:System.Security.Cryptography.CryptoStreamMode> -Enumeration implementiert, die die zulässige Art des Zugriffs auf die **CryptoStream**-Klasse beschreibt. Die **CryptoStream** -Klasse kann mit jeder Klasse initialisiert werden, die von der-Klasse abgeleitet wird <xref:System.IO.Stream> , einschließlich <xref:System.IO.FileStream> , <xref:System.IO.MemoryStream> und <xref:System.Net.Sockets.NetworkStream> . Mit diesen Klassen können Sie die unterschiedlichsten Streamobjekte symmetrisch verschlüsseln.  
   
  Das folgende Beispiel veranschaulicht, wie eine neue Instanz der <xref:System.Security.Cryptography.RijndaelManaged> -Klasse, durch die der Rijndael-Verschlüsselungsalgorithmus implementiert wird, erstellt und zum Verschlüsseln einer **CryptoStream** -Klasse verwendet wird. In diesem Beispiel wird die **CryptoStream** -Klasse mit einem Streamobjekt namens `myStream` initialisiert, bei dem es sich um einen beliebigen Typ eines verwalteten Streams handeln kann. Der **CreateEncryptor** -Methode der **RijndaelManaged** -Klasse werden der Schlüssel und der Initialisierungsvektor (IV) übergeben, die für die Verschlüsselung benötigt werden. In diesem Fall werden der Standardschlüssel und der IV verwendet, die von `rmCrypto` erzeugt wurden. Schließlich wird **CryptoStreamMode.Write** übergeben, wodurch Schreibzugriff auf den Stream angegeben ist.  
   
@@ -262,6 +262,6 @@ class Class1
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [Entschlüsseln von Daten](../../../docs/standard/security/decrypting-data.md)
-- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)
+- [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](generating-keys-for-encryption-and-decryption.md)
+- [Entschlüsseln von Daten](decrypting-data.md)
+- [Kryptografiedienste](cryptographic-services.md)

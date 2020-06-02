@@ -1,13 +1,14 @@
 ---
-title: Übersicht über
+title: Übersicht
+description: Ausführliche Erläuterungen und Beispiele finden Sie in der Übersicht über ADO.net in .NET Framework.
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 2ff3b7ad197bfe1e1c12e382f3a59bd470c57a75
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980339"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287154"
 ---
 # <a name="adonet-overview"></a>Übersicht über ADO.NET
 ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowie auf Datenquellen bereit, die durch OLE DB und ODBC verfügbar gemacht werden. Verbraucheranwendungen mit Datenfreigabe können mit ADO.NET eine Verbindung mit diesen Datenquellen herstellen und die enthaltenen Daten abrufen, verarbeiten und aktualisieren.  

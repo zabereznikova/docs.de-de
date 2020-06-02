@@ -1,14 +1,15 @@
 ---
 title: ADO.NET
+description: Erfahren Sie mehr über ADO.net, Klassen, die Datenzugriffs Dienste für .NET Framework Programmierer zum Erstellen verteilter Datenfreigabe Anwendungen verfügbar machen.
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094396"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286727"
 ---
 # <a name="adonet"></a>ADO.NET
 
@@ -30,14 +31,14 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  [Datentypzuordnungen in ADO.NET](data-type-mappings-in-ado-net.md)  
  Beschreibt Datentypzuordnungen zwischen .NET Framework-Datentypen und den .NET Framework-Datenanbietern.  
   
- [DataSets, DataTables und DataViews](./dataset-datatable-dataview/index.md)  
+ ["DataSets", "DataTables" und "DataViews"](./dataset-datatable-dataview/index.md)  
  Beschreibt das Erstellen und Verwenden von `DataSets`, typisierten `DataSets`, `DataTables` und `DataViews`.  
   
  [LINQ to DataSet](linq-to-dataset.md)  
  Enthält Informationen zu LINQ to DataSet, einschließlich entsprechender Programmierbeispiele.  
   
  [Abrufen und Ändern von Daten in ADO.NET](retrieving-and-modifying-data.md)  
- Beschreibt das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen und Ändern von Daten mit `Commands`, `DataReaders`und `DataAdapters`.  
+ Beschreibt das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen und Ändern von Daten mit `Commands` , `DataReaders` und `DataAdapters` .  
   
  [SQL Server und ADO.NET](./sql/index.md)  
  Beschreibt das Arbeiten mit Funktionen und Funktionalität, die spezifisch für SQL Server sind.  
@@ -47,7 +48,7 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Language Integrated Query (LINQ) – C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- Enthält Links zu LINQ-Themen und- C#Beispielen mithilfe von.  
+ Enthält Links zu LINQ-Themen und-Beispielen mit c#.  
   
  [Language Integrated Query (LINQ) – Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Enthält Links zu LINQ-Themen und-Beispielen mithilfe von Visual Basic.  
@@ -61,7 +62,7 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  [Beispiele und Tutorials](../../../samples-and-tutorials/index.md)  
  Enthält eine Liste der .net-Beispiele und-Tutorials.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Übersicht über ADO.NET](ado-net-overview.md)

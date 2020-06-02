@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-ms.openlocfilehash: 44d342662e1aaeb51f14470f354f2dadd9a6f18d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: afcb92e48996d594fcedc5b579922b179f754b9d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743643"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286118"
 ---
 # <a name="protected-members"></a>Geschützte Member
 Geschützte Member selbst bieten keine Erweiterbarkeit, Sie können jedoch die Erweiterbarkeit durch Unterklassen erhöhen. Sie können verwendet werden, um erweiterte Anpassungsoptionen verfügbar zu machen, ohne die öffentliche Hauptschnittstelle unnötig zu verkomplizieren.
@@ -32,7 +32,7 @@ Geschützte Member selbst bieten keine Erweiterbarkeit, Sie können jedoch die E
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
-- [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Framework-Entwurfs Richtlinien](index.md)
+- [Entwerfen für Erweiterbarkeit](designing-for-extensibility.md)

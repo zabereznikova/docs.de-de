@@ -14,85 +14,85 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ef4a8f571a67477739bbc59d3103ba78dea47177
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c90987fd28d5157cfb7f7eea4680b5ab4be1a200
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635917"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290953"
 ---
 # <a name="general-naming-conventions"></a>Allgemeine Benennungskonventionen
 
-In diesem Abschnitt werden allgemeine Namenskonventionen beschrieben, die sich auf die Wortauswahl beziehen, Richtlinien zur Verwendung von Abkürzungen und Akronymen sowie Empfehlungen, wie die Verwendung sprachspezifischer Namen vermieden werden kann.
+In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mit der Wort Auswahl, Richtlinien zur Verwendung von Abkürzungen und Akronymen und Empfehlungen zur Vermeidung der Verwendung von sprachspezifischen Namen beschrieben.
 
-## <a name="word-choice"></a>Word-Auswahl
- ✔️ do wählen Sie leicht lesbare Bezeichnernamen.
+## <a name="word-choice"></a>Wort Auswahl
+ ✔️ Wählen Sie leicht lesbare Bezeichnernamen aus.
 
- Eine benannte `HorizontalAlignment` Eigenschaft ist z. B. besser englisch lesbar als `AlignmentHorizontal`.
+ Beispielsweise ist eine Eigenschaft mit dem Namen `HorizontalAlignment` besser lesbar als `AlignmentHorizontal` .
 
- ✔️ do bevorzugen Lesbarkeit gegenüber Kürze.
+ ✔️ bevorzugen die Lesbarkeit gegenüber der Übersichtlichkeit.
 
- Der Eigenschaftsname `CanScrollHorizontally` `ScrollableX` ist besser als (ein obskurer Verweis auf die X-Achse).
+ Der Eigenschaftsname `CanScrollHorizontally` ist besser als `ScrollableX` (ein undurchsichtiger Verweis auf die X-Achse).
 
- ❌Verwenden Sie KEINE Unterstriche, Bindestriche oder andere nicht-alphanumerische Zeichen.
+ ❌Verwenden Sie keine Unterstriche, Bindestriche oder andere nicht alphanumerische Zeichen.
 
- ❌Verwenden Sie NICHT die ungarische Notation.
+ ❌Verwenden Sie keine ungarische Notation.
 
- ❌AVOID mit Bezeichnern, die mit Schlüsselwörtern weit verbreiteter Programmiersprachen in Konflikt stehen.
+ ❌Vermeiden Sie die Verwendung von bezeichlern, die mit Schlüsselwörtern häufig verwendeter Programmiersprachen in Konflikt stehen
 
- Gemäß Regel 4 der Common Language Specification (CLS) müssen alle konformen Sprachen einen Mechanismus bereitstellen, der den Zugriff auf benannte Elemente ermöglicht, die ein Schlüsselwort dieser Sprache als Bezeichner verwenden. In diesem Fall wird z. B. das Zeichen " - als Escape-Mechanismus verwendet. Es ist jedoch immer noch eine gute Idee, häufige Schlüsselwörter zu vermeiden, da es viel schwieriger ist, eine Methode mit der Escape-Sequenz zu verwenden als eine ohne sie.
+ Gemäß Regel 4 der Common Language Specification (CLS) müssen alle kompatiblen Sprachen einen Mechanismus bereitstellen, der den Zugriff auf benannte Elemente ermöglicht, die ein Schlüsselwort dieser Sprache als Bezeichner verwenden. C# verwendet in diesem Fall z. b. das @-Zeichen als Escapezeichen. Es ist jedoch immer noch eine gute Idee, gängige Schlüsselwörter zu vermeiden, da es weitaus schwieriger ist, eine Methode mit der Escapesequenz zu verwenden, als Sie ohne Sie.
 
 ## <a name="using-abbreviations-and-acronyms"></a>Verwenden von Abkürzungen und Akronymen
- ❌Verwenden Sie KEINE Abkürzungen oder Kontraktionen als Teil von Bezeichnernamen.
+ ❌Verwenden Sie keine Abkürzungen oder gegen übereinstigkeiten als Teil der Bezeichnernamen.
 
- Verwenden Sie `GetWindow` z. `GetWin`B. anstelle von .
+ Verwenden Sie z `GetWindow` . b. anstelle von `GetWin` .
 
- ❌Verwenden Sie KEINE Akronyme, die nicht allgemein akzeptiert werden, und auch wenn sie es sind, nur wenn nötig.
+ ❌Verwenden Sie keine Akronyme, die nicht weitgehend akzeptiert werden, und auch dann nicht, wenn dies der Fall ist.
 
-## <a name="avoiding-language-specific-names"></a>Vermeiden sprachspezifischer Namen
+## <a name="avoiding-language-specific-names"></a>Vermeiden von sprachspezifischen Namen
  ✔️ verwenden semantisch interessante Namen anstelle von sprachspezifischen Schlüsselwörtern für Typnamen.
 
- Ist z. B. `GetLength` `GetInt`ein besserer Name als .
+ Beispielsweise `GetLength` ist ein besserer Name als `GetInt` .
 
- ✔️ verwenden einen generischen CLR-Typnamen anstelle eines sprachspezifischen Namens, in den seltenen Fällen, in denen ein Bezeichner keine semantische Bedeutung hat, der über seinen Typ hinausgeht.
+ ✔️ verwenden einen generischen CLR-Typnamen anstelle eines sprachspezifischen namens, in den seltenen Fällen, in denen ein Bezeichner über den Typ hinaus keine semantische Bedeutung hat.
 
- Eine Methode, die in <xref:System.Int64> konvertiert `ToInt64`wird, `ToLong` sollte <xref:System.Int64> z. B. den Namen " `long`""" und """" """" (weil es sich um einen CLR-Namen für den Alias "C"" handelt) nennen. In der folgenden Tabelle werden mehrere Basisdatentypen mit den CLR-Typnamen (sowie die entsprechenden Typnamen für C-, Visual Basic- und C++-Typen) dargestellt.
+ Beispielsweise sollte eine Methode, die in <xref:System.Int64> die-Klasse umwandelt, den Namen `ToInt64` hat, nicht `ToLong` (da <xref:System.Int64> ein CLR-Name für den c#-spezifischen Alias ist `long` ). In der folgenden Tabelle werden mehrere Basis Datentypen mit den CLR-Typnamen (sowie die entsprechenden Typnamen für c#, Visual Basic und C++) dargestellt.
 
 |C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
 |**Byte**|**Byte**|**unsigned char**|**Byte**|
-|**short**|**kurz**|**short**|**Int16**|
+|**short**|**Kurzem**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
 |**int**|**Integer**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
-|**Lange**|**Lange**|**__int64**|**Int64**|
-|**Ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
+|**long**|**Long**|**__int64**|**Int64**|
+|**ulong**|**UInt64**|**__int64 ohne Vorzeichen**|**UInt64**|
 |**float**|**Single**|**float**|**Single**|
 |**double**|**Double**|**double**|**Double**|
 |**bool**|**Boolean**|**bool**|**Boolean**|
-|**char**|**Char**|**Wchar_t**|**Char**|
-|**string**|**String**|**String**|**String**|
-|**Objekt**|**Object**|**Object**|**Object**|
+|**char**|**Char**|**wchar_t**|**Char**|
+|**string**|**Zeichenfolge**|**Zeichenfolge**|**Zeichenfolge**|
+|**object**|**Object**|**Object**|**Object**|
 
- ✔️ verwenden einen allgemeinen Namen, z. `value` B. oder , `item`anstatt den Typnamen zu wiederholen, in den seltenen Fällen, in denen ein Bezeichner keine semantische Bedeutung hat und der Typ des Parameters nicht wichtig ist.
+ ✔️ einen allgemeinen Namen verwenden, z. b. `value` oder `item` , anstatt den Typnamen zu wiederholen, in den seltenen Fällen, in denen ein Bezeichner keine Semantik Bedeutung hat und der Typ des Parameters nicht wichtig ist.
 
 ## <a name="naming-new-versions-of-existing-apis"></a>Benennen neuer Versionen vorhandener APIs
- ✔️ verwenden beim Erstellen neuer Versionen einer vorhandenen API einen Namen, der der alten API ähnelt.
+ ✔️ einen Namen verwenden, der der alten API ähnelt, wenn neue Versionen einer vorhandenen API erstellt werden.
 
- Dies hilft, die Beziehung zwischen den APIs hervorzuheben.
+ Dadurch wird die Beziehung zwischen den APIs hervorgehoben.
 
- ✔️ möchten lieber ein Suffix als ein Präfix hinzufügen, um eine neue Version einer vorhandenen API anzugeben.
+ ✔️ lieber ein Suffix anstelle eines Präfixes hinzufügen, um eine neue Version einer vorhandenen API anzugeben.
 
- Dies unterstützt die Erkennung beim Durchsuchen der Dokumentation oder bei der Verwendung von IntelliSense. Die alte Version der API wird in der Nähe der neuen APIs organisiert, da die meisten Browser und IntelliSense Bezeichner in alphabetischer Reihenfolge anzeigen.
+ Dadurch wird die Ermittlung beim Durchsuchen der Dokumentation oder bei Verwendung von IntelliSense unterstützt. Die alte Version der API wird in der Nähe der neuen APIs organisiert, da die meisten Browser und IntelliSense Bezeichner in alphabetischer Reihenfolge anzeigen.
 
- ✔️ CONSIDER mit einem brandneuen, aber aussagekräftigen Bezeichner, anstatt ein Suffix oder ein Präfix hinzuzufügen.
+ ✔️ sollten Sie die Verwendung eines ganz neuen, aber aussagekräftigen Bezeichners in Erwägung gezogen, anstatt ein Suffix oder ein Präfix hinzuzufügen.
 
- ✔️ verwenden Sie ein numerisches Suffix, um eine neue Version einer vorhandenen API anzugeben, insbesondere wenn der vorhandene Name der API der einzige Name ist, der sinnvoll ist (d. h. wenn es sich um einen Industriestandard handelt) und wenn das Hinzufügen eines aussagekräftigen Suffixes (oder Ändern des Namens) nicht geeignet ist.
+ in ✔️ wird ein numerisches Suffix verwendet, um eine neue Version einer vorhandenen API anzugeben. Dies gilt insbesondere, wenn der vorhandene Name der API der einzige Name ist, der sinnvoll ist (d. h., wenn es sich um einen Industriestandard handelt) und das Hinzufügen eines sinnvollen Suffixes (oder Ändern des Namens) keine geeignete Option ist.
 
- ❌Verwenden Sie NICHT das Suffix "Ex" (oder ein ähnliches Suffix) für einen Bezeichner, um ihn von einer früheren Version derselben API zu unterscheiden.
+ ❌Verwenden Sie das Suffix "ex" (oder ein ähnliches Suffix) nicht für einen Bezeichner, um ihn von einer früheren Version derselben API zu unterscheiden.
 
- ✔️ DO verwenden das Suffix "64", wenn Versionen von APIs eingeführt werden, die auf einer 64-Bit-Ganzzahl (einer langen Ganzzahl) anstelle einer 32-Bit-Ganzzahl arbeiten. Sie müssen diesen Ansatz nur wählen, wenn die vorhandene 32-Bit-API vorhanden ist. Tun Sie es nicht für brandneue APIs mit nur einer 64-Bit-Version.
+ in ✔️ wird das Suffix "64" verwendet, wenn Versionen von APIs eingeführt werden, die mit einer 64-Bit-Ganzzahl (Long Integer) anstelle einer 32-Bit-Ganzzahl arbeiten. Diese Vorgehensweise ist nur dann erforderlich, wenn die vorhandene 32-Bit-API vorhanden ist. Verwenden Sie dies nicht für neue APIs mit einer 64-Bit-Version.
 
  *Teile &copy; 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
@@ -100,6 +100,6 @@ In diesem Abschnitt werden allgemeine Namenskonventionen beschrieben, die sich a
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Framework-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
-- [Benennungsrichtlinien](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Framework-Entwurfsrichtlinien](index.md)
+- [Richtlinien für die Benennung](naming-guidelines.md)
 - [.NET-Namenskonventionen für EditorConfig](/visualstudio/ide/editorconfig-naming-conventions)

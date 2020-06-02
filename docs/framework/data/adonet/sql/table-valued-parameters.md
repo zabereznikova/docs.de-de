@@ -1,16 +1,17 @@
 ---
 title: Tabellenwertparameter
+description: Erfahren Sie, wie Sie mithilfe von Tabellenwert Parametern mehrere Daten Zeilen aus einer Client Anwendung in SQL Server Mars Hallen.
 ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202171"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286196"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
 Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer Datenzeilen aus einer Clientanwendung nach SQL Server, ohne dass mehrere Roundtrips oder eine spezielle serverseitige Logik für die Verarbeitung der Daten erforderlich sind. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und die Daten in einem einzigen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die Sie dann mithilfe von Transact-SQL bearbeiten können.  
@@ -22,7 +23,7 @@ Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer 
   
  Weitere Informationen zu Tabellenwertparametern finden Sie in den folgenden Ressourcen.  
   
-|Resource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Verwenden von Tabellenwertparameter (Datenbank-Engine)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.|  
 |[Benutzerdefinierte Tabellentypen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden.|  
@@ -75,7 +76,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ```  
   
 ## <a name="limitations-of-table-valued-parameters"></a>Einschränkungen von Tabellenwertparametern  
- Für Tabellenwertparameter gelten verschiedene Einschränkungen:  
+ Bei Verwendung von Tabellenwertparametern müssen eine Reihe von Einschränkungen berücksichtigt werden:  
   
 - Tabellenwertparameter können nicht an [benutzerdefinierte CLR-Funktionen](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions) übergeben werden.  
   
@@ -129,7 +130,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Übergeben eines Tabellenwert Parameters an eine gespeicherte Prozedur  
- In diesem Beispiel wird veranschaulicht, wie Daten aus Tabellenwertparametern an eine gespeicherte Prozedur übergeben werden. Der Code extrahiert hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable.GetChanges%2A>-Methode in eine neue <xref:System.Data.DataTable>. Im Code wird dann ein <xref:System.Data.SqlClient.SqlCommand> definiert, wobei für die Eigenschaft <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> der Wert <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:System.Data.SqlClient.SqlParameter> wird mit der <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt und für <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> wird `Structured` festgelegt. Anschließend wird der <xref:System.Data.SqlClient.SqlCommand> mit der Methode <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> ausgeführt.  
+ In diesem Beispiel wird veranschaulicht, wie Daten aus Tabellenwertparametern an eine gespeicherte Prozedur übergeben werden. Der Code extrahiert hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable>-Methode in eine neue <xref:System.Data.DataTable.GetChanges%2A>. Im Code wird dann ein <xref:System.Data.SqlClient.SqlCommand> definiert, wobei für die Eigenschaft <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> der Wert <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:System.Data.SqlClient.SqlParameter> wird mit der <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt und für <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> wird `Structured` festgelegt. Anschließend wird der <xref:System.Data.SqlClient.SqlCommand> mit der Methode <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> ausgeführt.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  

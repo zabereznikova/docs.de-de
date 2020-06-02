@@ -12,17 +12,17 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 76042bef1475f2fdf14e309390dcba6654ccfaa9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741745"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280360"
 ---
 # <a name="choosing-between-class-and-struct"></a>Auswählen zwischen Klasse und Struktur
 Eine der grundlegenden Entwurfsentscheidungen jedes Framework-Designers besteht darin, einen Typ als Klasse (einen Verweistyp) oder als Struktur (Werttyp) zu entwerfen. Ein gutes Verständnis der Unterschiede im Verhalten von Verweis Typen und Werttypen ist wichtig für diese Auswahl.
 
- Der erste Unterschied zwischen Verweis Typen und Werttypen, die wir in Erwägung gezogen werden, besteht darin, dass Verweis Typen auf dem Heap und der Garbage Collection zugeordnet werden, wohingegen Werttypen entweder im Stapel oder Inline in enthaltenden Typen zugeordnet werden und die Zuordnung aufgehoben wird, die Zuordnung des enthaltenden Typs wird aufgehoben Daher sind Zuordnungen und Aufhebungen von Werttypen im allgemeinen günstiger als Zuordnungen und Aufhebungen von Verweis Typen.
+ Der erste Unterschied zwischen Verweis Typen und Werttypen, die wir in Erwägung gezogen werden, besteht darin, dass Verweis Typen auf dem Heap und der Garbage Collection zugeordnet werden, wohingegen Werttypen entweder auf dem Stapel oder Inline in enthaltenden Typen zugeordnet werden und die Zuordnung aufgehoben wird, wenn der Stapel entladen wird oder wenn deren Zuordnung aufgehoben wird. Daher sind Zuordnungen und Aufhebungen von Werttypen im allgemeinen günstiger als Zuordnungen und Aufhebungen von Verweis Typen.
 
  Als nächstes werden Arrays von Verweis Typen out-of-Line zugeordnet, was bedeutet, dass die Array Elemente lediglich Verweise auf Instanzen des Verweis Typs sind, die sich auf dem Heap befinden. Werttyp Arrays werden Inline zugeordnet, d. h., die Array Elemente sind die tatsächlichen Instanzen des Werttyps. Daher sind Zuordnungen und Aufhebungen von Werttyp Arrays weitaus günstiger als Zuordnungen und Aufhebungen von Verweistyp Arrays. Außerdem weisen Werttyp Arrays in den meisten Fällen eine viel bessere Lokalität auf.
 
@@ -36,9 +36,9 @@ Eine der grundlegenden Entwurfsentscheidungen jedes Framework-Designers besteht 
 
  ✔️ sollten eine Struktur anstelle einer Klasse definieren, wenn Instanzen des Typs klein und häufig kurzlebig sind oder häufig in andere Objekte eingebettet sind.
 
- ❌ vermeiden Sie das Definieren einer Struktur, es sei denn, der Typ hat alle der folgenden Eigenschaften:
+ ❌Vermeiden Sie die Definition einer Struktur, es sei denn, der Typ hat alle der folgenden Eigenschaften:
 
-- Sie stellt logisch einen einzelnen Wert dar, ähnlich wie primitive Typen (`int`, `double`usw.).
+- Sie stellt logisch einen einzelnen Wert dar, ähnlich wie primitive Typen ( `int` , `double` usw.).
 
 - Sie verfügt über eine instanzgröße von weniger als 16 Bytes.
 
@@ -52,7 +52,7 @@ Eine der grundlegenden Entwurfsentscheidungen jedes Framework-Designers besteht 
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+- [Typentwurfs Richtlinien](type.md)
+- [Framework-Entwurfs Richtlinien](index.md)
