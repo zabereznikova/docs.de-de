@@ -1,21 +1,22 @@
 ---
 title: 'Beispiele für die methodenbasierte Abfragesyntax: Joinoperatoren'
+description: Verwenden Sie diese Beispiele, um zu erfahren, wie Sie mithilfe der Join-Methode und der GroupJoin-Methode ein Modell mithilfe von Methoden basierter Abfrage Syntax in LINQ to Entities Abfragen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: c7dafae846a30424f008cce5f597efbdefa4bdf8
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3b1445b39bdcd9a9b4d0672be0598233319cb85d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397357"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286830"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>Beispiele für die methodenbasierte Abfragesyntax: Joinoperatoren
-In den Beispielen in diesem Thema wird gezeigt, wie <xref:System.Linq.Enumerable.Join%2A> die <xref:System.Linq.Enumerable.GroupJoin%2A> -Methode und die-Methode verwendet werden, um das [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) mithilfe von Methoden basierter Abfrage Syntax abzufragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
+In den Beispielen in diesem Thema wird gezeigt, wie die <xref:System.Linq.Enumerable.Join%2A> -Methode und die-Methode verwendet werden <xref:System.Linq.Enumerable.GroupJoin%2A> , um das [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) mithilfe von Methoden basierter Abfrage Syntax abzufragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   
- In den Beispielen in diesem Thema werden die `using` folgenden / `Imports` -Anweisungen verwendet:  
+ In den Beispielen in diesem Thema werden die folgenden- `using` / `Imports` Anweisungen verwendet:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  

@@ -1,22 +1,23 @@
 ---
 title: Momentaufnahmenisolation in SQL Server
+description: Lesen Sie eine Übersicht über die Momentaufnahme Isolation und die Zeilen Versionsverwaltung in SQL Server, und erfahren Sie, wie Sie Parallelität mit Isolations Stufen verwalten.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 8313ffc8eef70c1e5efc24b09a160edb7cec1595
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fa769448dd922925a5eccf4c85bd1840155df68
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174263"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286246"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Momentaufnahmenisolation in SQL Server
 Die Momentaufnahmenisolation verbessert die Parallelität für OLTP-Anwendungen.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Informationen zur Snapshot-Isolation und Zeilenversionserstellung  
- Sobald die Snapshot-Isolation aktiviert ist, müssen aktualisierte Zeilenversionen für jede Transaktion beibehalten werden.  Vor SQL Server 2019 wurden diese Versionen in **tempdb**gespeichert. SQL Server 2019 führt eine neue Funktion ein, Accelerated Database Recovery (ADR), die einen eigenen Satz von Zeilenversionen erfordert.  Wenn Also ab SQL Server 2019 ADR nicht aktiviert ist, werden Zeilenversionen wie immer in **tempdb** beibehalten.  Wenn ADR aktiviert ist, werden alle Zeilenversionen, die sich beide auf die Snapshot-Isolation und ADR beziehen, im Persistent Version Store (PVS) von ADR gespeichert, der sich in der Benutzerdatenbank in einer Dateigruppe befindet, die der Benutzer angibt. Eine eindeutige Transaktionssequenznummer identifiziert jede Transaktion, wobei diese eindeutigen Nummern für jede Zeilenversion aufgezeichnet werden. Die Transaktion arbeitet mit den neuesten Zeilenversionen, die eine Sequenznummer vor der Sequenznummer der Transaktion haben. Neuere Zeilenversionen, die nach Beginn der Transaktion erstellt wurden, werden von der Transaktion ignoriert.  
+ Sobald die Momentaufnahme Isolation aktiviert ist, müssen die aktualisierten Zeilen Versionen für jede Transaktion beibehalten werden.  Vor SQL Server 2019 wurden diese Versionen in **tempdb**gespeichert. In SQL Server 2019 wird eine neue Funktion eingeführt, Accelerated Database Recovery (ADR), die einen eigenen Satz von Zeilen Versionen erfordert.  Ab SQL Server 2019 werden Zeilen Versionen in **tempdb** wie immer beibehalten, wenn die ADR nicht aktiviert ist.  Wenn die automatische Bereitstellungs Funktion aktiviert ist, werden alle Zeilen Versionen, die mit der Momentaufnahme Isolation und der AdR verknüpft sind, im permanenten Versionsspeicher der AdR (PVS) gespeichert, der sich in der Benutzerdatenbank in einer Datei Gruppe befindet, die der Benutzer angibt. Eine eindeutige Transaktionssequenznummer identifiziert jede Transaktion, wobei diese eindeutigen Nummern für jede Zeilenversion aufgezeichnet werden. Die Transaktion arbeitet mit den neuesten Zeilenversionen, die eine Sequenznummer vor der Sequenznummer der Transaktion haben. Neuere Zeilenversionen, die nach Beginn der Transaktion erstellt wurden, werden von der Transaktion ignoriert.  
   
  Der Begriff „Momentaufnahme“ spiegelt die Tatsache wider, dass alle Abfragen in der Transaktion die gleiche Version bzw. Momentaufnahme der Datenbank sehen, und zwar basierend auf dem Zustand der Datenbank zum Zeitpunkt des Transaktionsbeginns. In einer Snapshot-Transaktion werden für die zugrunde liegenden Datenzeilen oder Datenseiten keine Sperren bezogen, wodurch andere Transaktionen ausgeführt werden können, ohne durch eine vorherige, nicht vollständig ausgeführte Transaktion blockiert zu werden. Transaktionen, die Daten ändern, blockieren keine Transaktionen, die Daten lesen. Transaktionen, die Daten lesen, blockieren keine Transaktionen, die Daten schreiben. Dies ist bei der Standardisolationsstufe READ COMMITTED in SQL Server normalerweise der Fall. Dieses nicht blockierende Verhalten verringert auch beträchtlich die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen.  
   
@@ -97,7 +98,7 @@ SqlTransaction sqlTran =
   
 - Der Code öffnet eine zweite Verbindung und initiiert eine zweite Transaktion mit der SNAPSHOT-Isolationsstufe zum Lesen der Daten in der **TestSnapshot**-Tabelle. Da die Momentaufnahmenisolation aktiviert ist, kann diese Transaktion die Daten lesen, die vor dem Start von sqlTransaction1 vorhanden waren.  
   
-- Der Code öffnet eine dritte Verbindung und leitet eine Transaktion mit der Isolationsstufe READ COMMITTED ein, um zu versuchen, die Daten in der Tabelle zu lesen. In diesem Fall kann der Code die Daten nicht lesen, da er nicht über die Sperren lesen kann, die in der ersten Transaktion für die Tabelle platziert wurden, und eine Zeitauferung. Das gleiche Ergebnis würde auftreten, wenn die Isolationsstufen REPEATABLE READ und SERIALIZABLE verwendet würden, da diese Isolationsstufen auch nicht über die in der ersten Transaktion platzierten Sperren lesen können.  
+- Der Code öffnet eine dritte Verbindung und leitet eine Transaktion mit der Isolationsstufe READ COMMITTED ein, um zu versuchen, die Daten in der Tabelle zu lesen. In diesem Fall kann der Code die Daten nicht lesen, da er nicht über die Sperren hinaus lesen kann, die in der ersten Transaktion in der Tabelle abgelegt werden, und ein Timeout auftritt. Das gleiche Ergebnis tritt auf, wenn die wiederholbaren Lese-und serialisierbaren Isolations Stufen verwendet wurden, da diese Isolations Stufen auch nicht über die Sperren hinaus lesen können, die in der ersten Transaktion platziert wurden.  
   
 - Der Code öffnet eine vierte Verbindung und leitet eine Transaktion mit der Isolationsstufe READ UNCOMMITTED ein, die einen Dirty Read des nicht committeten Werts in sqlTransaction1 durchführt. Dieser Wert ist möglicherweise nie wirklich in der Datenbank vorhanden, wenn die erste Transaktion nicht committet wird.  
   
@@ -141,7 +142,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  Wenn Ihre Anwendung viele Konflikte aufweist, ist die Momentaufnahmenisolation möglicherweise nicht die beste Wahl. Hinweise sollten nur verwendet werden, wenn unbedingt nötig. Ihre Anwendung sollte nicht so konzipiert sein, dass ihr Betrieb ständig auf Sperrhinweise angewiesen ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [SQL Server und ADO.NET](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

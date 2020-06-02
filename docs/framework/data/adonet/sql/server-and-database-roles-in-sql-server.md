@@ -1,13 +1,14 @@
 ---
 title: Server- und Datenbankrollen in SQL Server
+description: Erfahren Sie mehr über die Rollen fester Server und fester Daten Bank, denen ein fester Satz von Berechtigungen zugewiesen ist. SQL Server verwendet rollenbasierte Sicherheit.
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9c3725b0404a5b3c754a53fa56f4a22497afee70
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791780"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286235"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Server- und Datenbankrollen in SQL Server
 Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie einer Rolle, also einer ganzen Gruppe von Benutzern, Berechtigungen zuweisen können, statt Berechtigungen individuell für jeden Benutzer einzeln festzulegen. Feste Server- und feste Datenbankrollen besitzen einen festen Satz von ihnen übertragenen Berechtigungen.  
@@ -25,9 +26,9 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
   
  Weitere Informationen zu den vordefinierten SQL Server-Rollen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Rollen auf Server Ebene](/sql/relational-databases/security/authentication-access/server-level-roles)|Beschreibt die Fixed Server-Rollen und die Berechtigungen, die Ihnen in SQL Server zugeordnet sind.|  
+|[Rollen auf Serverebene](/sql/relational-databases/security/authentication-access/server-level-roles)|Beschreibt die Fixed Server-Rollen und die Berechtigungen, die Ihnen in SQL Server zugeordnet sind.|  
 |[Rollen auf Datenbankebene](/sql/relational-databases/security/authentication-access/database-level-roles)|Beschreibt die festen Datenbankrollen und die mit ihnen verknüpften Berechtigungen.|  
   
 ## <a name="database-roles-and-users"></a>Datenbankrollen und Benutzer  
@@ -56,10 +57,10 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
   
  Weitere Informationen zu SQL Server-Anmeldungen, -Benutzern und -Rollen finden Sie in den folgenden Ressourcen:  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Ersten Schritte mit Datenbank-Engine Berechtigungen](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Enthält Links zu Themen, in denen Prinzipale, Rollen, Anmeldeinformationen, sicherungsfähige Elemente und Berechtigungen beschrieben werden.|  
-|[Prinzipale](/sql/relational-databases/security/authentication-access/principals-database-engine)|Beschreibt Prinzipale und enthält Links zu Themen, in denen Server- und Datenbankrollen beschrieben werden.|  
+|[Erste Schritte mit Berechtigungen für die Datenbank-Engine](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Enthält Links zu Themen, in denen Prinzipale, Rollen, Anmeldeinformationen, sicherungsfähige Elemente und Berechtigungen beschrieben werden.|  
+|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|Beschreibt Prinzipale und enthält Links zu Themen, in denen Server- und Datenbankrollen beschrieben werden.|  
   
 ## <a name="see-also"></a>Siehe auch
 

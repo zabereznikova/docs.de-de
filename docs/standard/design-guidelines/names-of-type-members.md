@@ -12,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744176"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290187"
 ---
 # <a name="names-of-type-members"></a>Namen von Typmembern
 Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien zum Benennen von Typmembern beschrieben.
@@ -36,11 +36,11 @@ public class String {
 ```
 
 ## <a name="names-of-properties"></a>Namen von Eigenschaften
- Anders als andere Member sollten Eigenschaften mit Substantivphrasen oder Adjektivnamen benannt werden. Das liegt daran, dass eine Eigenschaft auf Daten verweist, und der Name der Eigenschaft gibt dies wieder. Für Eigenschaftsnamen wird immer PascalCasing verwendet.
+ Anders als bei anderen Membern sollten Sie Eigenschaften einen Namen geben, der eine Nominal- oder Adjektivphrase ist. Der Grund dafür ist, dass sich eine Eigenschaft auf Daten bezieht, und der Name der Eigenschaft dies widerspiegelt. Eigenschaftennamen werden immer in Pascal-Schreibweise geschrieben.
 
  ✔️ Sie namens Eigenschaften mit einem Substantiv, nominalen Ausdruck oder Adjektiv.
 
- ❌ haben keine Eigenschaften, die mit dem Namen der Get-Methoden identisch sind, wie im folgenden Beispiel gezeigt:
+ ❌Verwenden Sie keine Eigenschaften, die mit dem Namen der Get-Methoden identisch sind, wie im folgenden Beispiel gezeigt:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -48,7 +48,7 @@ public class String {
 
  ✔️ namens Sammlungs Eigenschaften mit einem Plural Ausdruck, der die Elemente in der Auflistung beschreibt, anstatt einen Singular Ausdruck, gefolgt von "List" oder "Collection" zu verwenden.
 
- ✔️ die boolesche Eigenschaften mit einem positiven Ausdruck (`CanSeek` anstelle `CantSeek`) benennen. Optional können Sie auch boolesche Eigenschaften mit "is", "Can" oder "has" versehen, aber nur an der Stelle, an der der Wert hinzugefügt wird.
+ ✔️ die boolesche Eigenschaften mit einem positiven Ausdruck ( `CanSeek` anstelle von `CantSeek` ) benennen. Optional können Sie auch boolesche Eigenschaften mit "is", "Can" oder "has" versehen, aber nur an der Stelle, an der der Wert hinzugefügt wird.
 
  ✔️ sollten Sie eine Eigenschaft mit dem gleichen Namen wie der Typ eingeben.
 
@@ -72,26 +72,26 @@ public class Control {
 
  Beispielsweise wird ein Schließereignis, das ausgelöst wird, bevor ein Fenster geschlossen wird, als `Closing` bezeichnet. Ein Ereignis, das nach dem Schließen des Fensters ausgelöst wird, wird als `Closed` bezeichnet.
 
- ❌ nicht die Präfixe oder postfixes "Before" oder "After" verwenden, um Pre-und Post-Ereignisse anzugeben. Verwenden Sie wie oben beschrieben die Gegenwarts- und Vergangenheitsformen.
+ ❌Verwenden Sie nicht die Präfixe "Before" oder "After" oder postfixes, um Pre-und Post-Ereignisse anzugeben. Verwenden Sie wie oben beschrieben die Gegenwarts- und Vergangenheitsformen.
 
  ✔️ Do-Ereignishandler (Delegaten, die als Typen von Ereignissen verwendet werden) mit dem Suffix "EventHandler", wie im folgenden Beispiel gezeigt:
 
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 
- ✔️ Verwenden Sie zwei Parameter mit dem Namen `sender` und `e` in Ereignis Handlern.
+ in ✔️ werden zwei Parameter mit dem Namen `sender` und `e` in Ereignis Handlern verwendet.
 
  Der sender-Parameter stellt das Objekt dar, das das Ereignis ausgelöst hat. Der sender-Parameter ist in der Regel vom Typ `object`, auch wenn es möglich ist, einen spezifischeren Typ zu verwenden.
 
  ✔️ Do Event Argument-Klassen mit dem Suffix "EventArgs".
 
 ## <a name="names-of-fields"></a>Feldnamen
- Die Richtlinien für die Benennung von Feldern gelten für statische öffentliche und geschützte Felder. Interne und private Felder sind nicht Gegenstand von Richtlinien, und öffentliche oder geschützte Instanzfelder sind laut den [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md) nicht zulässig.
+ Die Richtlinien für die Benennung von Feldern gelten für statische öffentliche und geschützte Felder. Interne und private Felder sind nicht Gegenstand von Richtlinien, und öffentliche oder geschützte Instanzfelder sind laut den [Entwurfsrichtlinien für Member](member.md) nicht zulässig.
 
  ✔️ Verwenden Sie die pascalschreibweise in Feldnamen.
 
  ✔️ Felder mit einem Substantiv, Substantiv Ausdruck oder Adjektiv benennen.
 
- ❌ kein Präfix für Feldnamen verwenden.
+ ❌Verwenden Sie kein Präfix für Feldnamen.
 
  Verwenden Sie beispielsweise nicht „g_“ oder „s_“, um statische Felder anzugeben.
 
@@ -99,7 +99,7 @@ public class Control {
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
-- [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Framework-Entwurfs Richtlinien](index.md)
+- [Benennungs Richtlinien](naming-guidelines.md)

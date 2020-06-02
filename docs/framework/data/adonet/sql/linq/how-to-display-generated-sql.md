@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Anzeigen von generiertem SQL'
+description: Erfahren Sie, wie Sie den für Abfragen generierten SQL-Code anzeigen, indem Sie die Log-Eigenschaft verwenden, um LINQ to SQL Funktionalität und Debuggen besser zu verstehen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 15fc6a50d232ea12b229b7b2790c0398bc1c370d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002978"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286377"
 ---
 # <a name="how-to-display-generated-sql"></a>Vorgehensweise: Anzeigen von generiertem SQL
 Sie können den für Abfragen und Änderungsverarbeitung erzeugten SQL-Code mithilfe der <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft anzeigen. Dieser Ansatz kann zum Verständnis der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Funktionalität und zum Debugging spezifischer Probleme beitragen.  
@@ -18,7 +19,7 @@ Sie können den für Abfragen und Änderungsverarbeitung erzeugten SQL-Code mith
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft verwendet, um SQL-Code im Konsolenfenster anzuzeigen, bevor der Code ausgeführt wird.  Sie können diese Eigenschaft mit den Abfrage-, Einfüge-, Update- und Löschbefehlen verwenden.  
   
- Die Zeilen aus dem Konsolenfenster werden angezeigt, wenn Sie die Visual Basic oder C# den folgenden Code ausführen.  
+ Die Zeilen aus dem Konsolenfenster werden angezeigt, wenn Sie den folgenden Visual Basic oder c#-Code ausführen.  
   
 ```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  

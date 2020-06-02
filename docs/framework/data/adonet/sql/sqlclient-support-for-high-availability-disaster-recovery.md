@@ -1,23 +1,24 @@
 ---
 title: SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
+description: Erfahren Sie mehr über die Unterstützung der SqlClient-Anwendung für hohe Verfügbarkeit, Notfall Wiederherstellung in SQL Server mit AlwaysOn-Verfügbarkeitsgruppen.
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eba243d37db8262970d161cfa786d3aee4462950
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791611"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286209"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
-In diesem Thema wird die SqlClient-Unterstützung (in .NET Framework 4,5) für hohe Verfügbarkeit, Notfall Wiederherstellung (AlwaysOn-Verfügbarkeitsgruppen) erläutert.  AlwaysOn-Verfügbarkeitsgruppen Funktion wurde SQL Server 2012 hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie unter SQL Server-Onlinedokumentation.  
+In diesem Thema wird die SqlClient-Unterstützung (in .NET Framework 4,5) für hohe Verfügbarkeit, Notfall Wiederherstellung (AlwaysOn-Verfügbarkeitsgruppen) erläutert.  Die Funktion für AlwaysOn-Verfügbarkeitsgruppen wurde SQL Server 2012 hinzugefügt. Weitere Informationen über AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
   
- Sie können jetzt den verfügbarkeitsgruppenlistener einer Verfügbarkeits Gruppe (hohe Verfügbarkeit, Notfall Wiederherstellung) oder SQL Server 2012-Failoverclusterinstanz in der Connection-Eigenschaft angeben. Wenn eine SqlClient-Anwendung mit einer AlwaysOn-Datenbank verbunden ist, die einen Failover ausführt, ist die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung öffnen, um die Arbeit nach dem Failover fortzusetzen.  
+ Sie können jetzt den Verfügbarkeitsgruppenlistener einer Verfügbarkeitsgruppe (für hohe Verfügbarkeit und Notfallwiederherstellung) oder eine SQL Server 2012-Failoverclusterinstanz in der Verbindungseigenschaft angeben. Wenn eine SqlClient-Anwendung mit einer Always On-Datenbank verbunden ist, für die ein Failover ausgeführt wird, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung öffnen, damit ihre Ausführung nach dem Failover fortgesetzt werden kann.  
   
- Wenn Sie keine Verbindung mit einem verfügbarkeitsgruppenlistener oder SQL Server 2012-Failoverclusterinstanz herstellen und mehrere IP-Adressen einem Hostnamen zugeordnet sind, durchläuft SqlClient sequenziell alle IP-Adressen, die dem DNS-Eintrag zugeordnet sind. Dies kann zeitaufwändig sein, wenn die erste IP-Adresse, die vom DNS-Server zurückgegeben wird, an keine Netzwerkschnittstellenkarte (NIC) gebunden ist. Beim Herstellen einer Verbindung mit einem verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failoverclusterinstanz wird von SqlClient versucht, Verbindungen mit allen IP-Adressen parallel herzustellen. Wenn ein Verbindungsversuch erfolgreich ist, verwirft der Treiber alle ausstehenden Verbindungen. unternommen.  
+ Wenn Sie keine Verbindung mit einem Verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failoverclusterinstanz herstellen und mehrere IP-Adressen einem Hostnamen zugeordnet sind, durchläuft SqlClient nacheinander alle IP-Adressen, die dem DNS-Eintrag zugeordnet sind. Dies kann zeitaufwändig sein, wenn die erste vom DNS-Server zurückgegebene IP-Adresse an keine Netzwerkschnittstellenkarte (NIC) gebunden ist. Beim Herstellen einer Verbindung mit einem Verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failoverclusterinstanz versucht SqlClient, Verbindungen mit allen IP-Adressen gleichzeitig herzustellen, und wenn ein Verbindungsversuch erfolgreich war, verwirft der Treiber alle ausstehenden Verbindungsversuche.  
   
 > [!NOTE]
-> Ein höheres Verbindungstimeout und das Implementieren einer Logik für die Verbindungswiederholung erhöht die Wahrscheinlichkeit, dass eine Anwendung eine Verbindung mit einer Verfügbarkeitsgruppe herstellt. Da eine Verbindung aufgrund eines Failovers fehlschlagen kann, sollte auch eine Logik für Verbindungswiederholungen implementiert werden, die bis zur erfolgreichen Verbindung Verbindungswiederholungen durchführt.  
+> Das Erhöhen des Verbindungstimeouts sowie die Implementierung von Verbindungswiederholungslogik erhöhen die Wahrscheinlichkeit, dass eine Anwendung eine Verbindung zu einer Verfügbarkeitsgruppe herstellt. Da zudem eine Verbindung aufgrund eines Failovers fehlschlagen kann, empfiehlt sich die Implementierung von Verbindungswiederholungslogik, wodurch im Fall einer fehlgeschlagenen Verbindung bis zur erneuten Verbindung Wiederholungsversuche erfolgen.  
   
  Die folgenden Verbindungs Eigenschaften wurden SqlClient in .NET Framework 4,5 hinzugefügt:  
   
@@ -25,78 +26,78 @@ In diesem Thema wird die SqlClient-Unterstützung (in .NET Framework 4,5) für h
   
 - `MultiSubnetFailover`  
   
- Sie können diese Schlüsselwörter für Verbindungszeichenfolgen programmgesteuert ändern:  
+ Sie können diese Schlüsselwörter für Verbindungszeichenfolgen folgendermaßen programmgesteuert ändern:  
   
 1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
-> Das `MultiSubnetFailover` festlegen `true` von auf ist für .NET Framework 4.6.1 oder höhere Versionen nicht erforderlich.
+> Das Festlegen `MultiSubnetFailover` von auf `true` ist für .NET Framework 4.6.1 oder höhere Versionen nicht erforderlich.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit MultiSubnetFailover  
- Geben `MultiSubnetFailover=True` Sie immer an, wenn Sie eine Verbindung mit einem 2012 SQL Server verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failovercluster `MultiSubnetFailover`ermöglicht ein schnelleres Failover für alle Verfügbarkeits Gruppen und oder Failoverclusterinstanzen in SQL Server 2012 und reduziert die Failoverzeit für einzelne und multisubnetz-AlwaysOn-Topologien erheblich. Während eines Multisubnetzfailovers versucht der Client parallel, Verbindungen herzustellen. Während eines Subnetzfailovers wird die Herstellung der TCP-Verbindung aggressiv neu versucht.  
+ Geben Sie immer `MultiSubnetFailover=True` an, wenn Sie eine Verbindung mit einem SQL Server 2012-Verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failoverclusterinstanz herstellen. `MultiSubnetFailover` aktiviert schnelleres Failover für alle Verfügbarkeitsgruppen und die Failoverclusterinstanz in SQL Server 2012 und reduziert die Failoverzeit für einzelne und Multisubnetz-AlwaysOn-Topologien erheblich. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines Subnetzfailovers wird der TCP-Verbindungsversuch aggressiv wiederholt.  
   
- Die `MultiSubnetFailover` -Verbindungs Eigenschaft gibt an, dass die Anwendung in einer Verfügbarkeits Gruppe oder SQL Server 2012-Failoverclusterinstanz bereitgestellt wird und dass SqlClient versucht, eine Verbindung mit der Datenbank auf der primären SQL Server Instanz herzustellen. Stellen Sie eine Verbindung mit allen IP-Adressen her. Wenn `MultiSubnetFailover=True` für eine Verbindung angegeben wird, versucht der Client, TCP-Verbindungen schneller wiederherzustellen, als in den standardmäßigen TCP-Neuverbindungsintervallen des Betriebssystems angegeben. Dies ermöglicht die schnellere Wiederverbindung nach einem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz und ist auf Verfügbarkeitsgruppen und Failoverclusterinstanzen mit einem oder mehreren Subnetzen anwendbar.  
+ Die `MultiSubnetFailover`-Verbindungseigenschaft gibt an, dass die Anwendung in einer Verfügbarkeitsgruppe oder SQL Server 2012-Failoverclusterinstanz bereitgestellt wird und dass SqlClient versucht, eine Verbindung mit der Datenbank auf der primären SQL Server-Instanz herzustellen, indem eine Verbindung mit allen IP-Adressen versucht wird. Wenn `MultiSubnetFailover=True` für eine Verbindung angegeben wird, wiederholt der Client TCP-Verbindungsversuche schneller als dies bei den standardmäßigen TCP-Neuübertragungsintervallen des Betriebssystems der Fall ist. Auf diese Weise kann die Verbindung nach einem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz schneller wiederhergestellt werden. Diese Einstellung gilt sowohl für Einzelsubnetz- als auch Multisubnetz-Verfügbarkeitsgruppen und -Failoverclusterinstanzen.  
   
- Weitere Informationen über Schlüsselwörter für Verbindungszeichenfolgen in SqlClient finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+ Weitere Informationen zu den Schlüsselwörtern für Verbindungszeichenfolgen, die in SqlClient unterstützt werden, finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- Wenn `MultiSubnetFailover=True` Sie angeben, dass eine Verbindung mit einem anderen als einem verfügbarkeitsgruppenlistener oder SQL Server 2012-Failoverclusterinstanz hergestellt werden kann, kann dies zu negativen Auswirkungen auf die Leistung führen.  
+ Das Angeben von `MultiSubnetFailover=True` wenn eine Verbindung mit anderen Komponenten als einem Verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failoverclusterinstanz hergestellt wird, führt zu verminderter Leistung und wird nicht unterstützt.  
   
- Verwenden Sie die folgenden Richtlinien zum Herstellen einer Verbindung mit einem Server in einer Verfügbarkeits Gruppe oder SQL Server 2012-Failoverclusterinstanz:  
+ Befolgen Sie beim Herstellen einer Verbindung mit einem Server in einer Verfügbarkeitsgruppe oder einer SQL Server 2012-Failoverclusterinstanz die folgenden Richtlinien:  
   
-- Verwenden Sie die `MultiSubnetFailover`-Verbindungseigenschaft beim Herstellen der Verbindung mit einem einzelnen oder mehreren Subnetzen. Die Leistung wird in beiden Fällen gesteigert.  
+- Verwenden Sie die `MultiSubnetFailover`-Verbindungseigenschaft, wenn Sie eine Verbindung mit einem Einzelsubnetz oder Multisubnetz herstellen. Dadurch wird die Leistung für beide verbessert.  
   
-- Um eine Verbindung mit einer Verfügbarkeitsgruppe herzustellen, geben Sie den Verfügbarkeitsgruppenlistener der Verfügbarkeitsgruppe als Server in der Verbindungszeichenfolge an.  
+- Um eine Verbindung mit einer Verfügbarkeitsgruppe herzustellen, geben Sie in der Verbindungszeichenfolge den Verfügbarkeitsgruppenlistener der Verfügbarkeitsgruppe als Server an.  
   
-- Das Herstellen einer Verbindung mit einer SQL Server-Instanz, die mit mehr als 64 IP-Adressen konfiguriert ist, verursacht einen Verbindungsfehler  
+- Ein Verbindungsversuch mit einer mit mehr als 64 IP-Adressen konfigurierten SQL Server-Instanz verursacht einen Verbindungsfehler.  
   
-- Das Verhalten einer Anwendung, die die `MultiSubnetFailover` -Verbindungs Eigenschaft verwendet, wird nicht vom Authentifizierungstyp beeinflusst: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
+- Das Verhalten einer Anwendung, die die `MultiSubnetFailover`-Verbindungseigenschaft verwendet, wird nicht vom Authentifizierungstyp beeinflusst: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
-- Erhöhen Sie den Wert von `Connect Timeout`, um die Failoverzeit anzupassen und die Wiederholungsversuche für die Verbindung mit der Anwendung zu verringern.  
+- Vergrößern Sie den Wert von `Connect Timeout`, um eine ausreichende Failoverzeit zu konfigurieren und die Anzahl der Verbindungsherstellungsversuche der Anwendung zu reduzieren.  
   
 - Verteilte Transaktionen werden nicht unterstützt.  
   
- Wenn das schreibgeschützte Routing nicht aktiviert ist, schlägt die Verbindung mit dem Speicherort eines sekundären Replikats in folgenden Situationen fehl:  
+ Wenn das schreibgeschützte Routing nicht in Kraft ist, scheitert das Herstellen einer Verbindung mit einem sekundären Replikatspeicherort in den folgenden Situationen:  
   
-1. Wenn der Speicherort des sekundären Replikats keine Verbindungen akzeptiert.  
+1. Wenn der sekundäre Replikatspeicherort nicht zum Akzeptieren von Verbindungen konfiguriert ist.  
   
-2. Wenn eine Anwendung `ApplicationIntent=ReadWrite` (unten erläutert) verwendet und der Speicherort des sekundären Replikats für den schreibgeschützten Zugriff konfiguriert ist.  
+2. Wenn eine Anwendung `ApplicationIntent=ReadWrite` verwendet (weiter unten erläutert), und der sekundäre Replikatspeicherort für schreibgeschützten Zugriff konfiguriert ist.  
   
- <xref:System.Data.SqlClient.SqlDependency> wird für schreibgeschützte sekundäre Replikate nicht unterstützt.  
+ <xref:System.Data.SqlClient.SqlDependency> wird bei schreibgeschützten sekundären Replikaten nicht unterstützt.  
   
- Ein Verbindungsfehler tritt auf, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitslasten abgelehnt werden und die Verbindungszeichenfolge `ApplicationIntent=ReadOnly` enthält.  
+ Es kann keine Verbindung hergestellt werden, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitslasten abgelehnt werden, und die Verbindungszeichenfolge `ApplicationIntent=ReadOnly` enthält.  
   
-## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Upgrade von der Datenbankspiegelung auf die Verwendung von Multisubnetz-Clustern  
- Ein Verbindungsfehler (<xref:System.ArgumentException>) tritt auf, wenn die Verbindungsschlüsselwörter `MultiSubnetFailover` und `Failover Partner` in der Verbindungszeichenfolge vorhanden sind oder wenn `MultiSubnetFailover=True` und ein anderes Protokoll als TCP verwendet werden. Ein Fehler (<xref:System.Data.SqlClient.SqlException>) tritt auch auf, `MultiSubnetFailover` wenn verwendet wird und das SQL Server eine failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Daten Bank Spiegelungs Paars ist.  
+## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aktualisieren zur Verwendung von Multisubnetzclustern aus Datenbankspiegelung  
+ Ein Verbindungsfehler (<xref:System.ArgumentException>) tritt auf, wenn die Verbindungsschlüsselwörter `MultiSubnetFailover` und `Failover Partner` in der Verbindungszeichenfolge vorhanden sind oder wenn `MultiSubnetFailover=True` und ein anderes Protokoll als TCP verwendet wird. Es tritt auch ein Fehler (<xref:System.Data.SqlClient.SqlException>) auf, wenn `MultiSubnetFailover` verwendet wird und SQL Server eine Failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Datenbankspiegelungspaars ist.  
   
- Wenn Sie eine SqlClient-Anwendung, die aktuell die Datenbankspiegelung verwendet, auf ein Multisubnetz-Szenario aktualisieren, sollten Sie die `Failover Partner`-Verbindungseigenschaft entfernen und durch `MultiSubnetFailover` = `True` ersetzen und anstelle des Servernamens in der Verbindungszeichenfolge einen Verfügbarkeitsgruppenlistener verwenden. Wenn eine Verbindungszeichenfolge `Failover Partner` und `MultiSubnetFailover=True` verwendet, generiert der Treiber einen Fehler. Wenn jedoch eine Verbindungszeichenfolge `Failover Partner` und `MultiSubnetFailover=False` (oder `ApplicationIntent=ReadWrite`) verwendet, unterliegt die Anwendung der Datenbankspiegelung.  
+ Wenn Sie eine SqlClient-Anwendung aktualisieren, die derzeit Datenbankspiegelung in einem Multisubnetz-Szenario verwendet, müssen Sie die `Failover Partner`-Verbindungseigenschaft entfernen und mit `MultiSubnetFailover`, festgelegt auf `True`, ersetzen, sowie den Servernamen in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppenlistener ersetzen. Wenn eine Verbindungszeichenfolge `Failover Partner` und `MultiSubnetFailover=True` verwendet, generiert der Treiber einen Fehler. Wenn eine Verbindungszeichenfolge jedoch `Failover Partner` und `MultiSubnetFailover=False` (oder `ApplicationIntent=ReadWrite`) verwendet, verwendet die Anwendung Datenbankspiegelung.  
   
- Der Treiber gibt einen Fehler zurück, wenn die Datenbankspiegelung auf der primären Datenbank in der Verfügbarkeitsgruppe verwendet wird und wenn `MultiSubnetFailover=True` in der Verbindungszeichenfolge verwendet wird, wodurch eine Verbindung mit einer primären Datenbank und nicht mit einem Verfügbarkeitsgruppenlistener hergestellt wird.  
+ Der Treiber gibt einen Fehler zurück, wenn die Datenbankspiegelung für die primäre Datenbank in der Verfügbarkeitsgruppe verwendet wird und wenn `MultiSubnetFailover=True` in der Verbindungszeichenfolge angegeben ist, wodurch eine Verbindung mit einer primären Datenbank und nicht mit einem Verfügbarkeitsgruppen-Listener hergestellt wird.  
   
 ## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks  
- Bei `ApplicationIntent=ReadOnly` fordert der Client eine Lesearbeitslast an, wenn er eine Verbindung mit einer AlwaysOn-fähigen Datenbank herstellt. Der Server erzwingt den Zweck zur Verbindungszeit und während einer USE-Datenbankanweisung, aber nur für eine AlwaysOn-fähige Datenbank.  
+ Im Fall von `ApplicationIntent=ReadOnly` fordert der Client eine Lesearbeitslast an, wenn eine Verbindung mit einer AlwaysOn-Datenbank hergestellt wird. Der Server erzwingt den Versuch zur Verbindungszeit und während einer USE-Datenbankanweisung, aber nur für eine AlwaysOn-aktivierte Datenbank.  
   
  Das `ApplicationIntent`-Schlüsselwort funktioniert nicht mit schreibgeschützten Legacy-Datenbanken.  
   
- Eine Datenbank kann Lesearbeitslasten für die AlwaysOn-Zieldatenbank zulassen oder ablehnen. (Dies erfolgt mit der `ALLOW_CONNECTIONS` `PRIMARY_ROLE` -Klausel der-Anweisung `SECONDARY_ROLE`und der Transact-SQL-Anweisung.)  
+ Eine Datenbank kann Lesearbeitslasten auf der AlwaysOn-Zieldatenbank zulassen bzw. nicht zulassen. (Dies geschieht über die `ALLOW_CONNECTIONS`-Klausel der Transact-SQL-Anweisungen `PRIMARY_ROLE` und `SECONDARY_ROLE`.)  
   
- Das `ApplicationIntent`-Schlüsselwort wird verwendet, um das schreibgeschützte Routing zu aktivieren.  
+ Das `ApplicationIntent`-Schlüsselwort wird verwendet, um schreibgeschütztes Routing zu aktivieren.  
   
 ## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
- Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit eines schreibgeschützten Replikats einer Datenbank sicherstellt. So aktivieren Sie das schreibgeschützte Routing  
+ Schreibgeschütztes Routing ist eine Funktion, die die Verfügbarkeit eines schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
   
-1. Sie müssen eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
+1. Sie müssen eine Verbindung zum Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
   
-2. Das `ApplicationIntent`-Schlüsselwort der Verbindungszeichenfolge muss auf `ReadOnly` festgelegt werden.  
+2. Das Schlüsselwort der `ApplicationIntent`-Verbindungszeichenfolge muss auf `ReadOnly` festgelegt werden.  
   
-3. Die Verfügbarkeitsgruppe muss vom Datenbankadministrator so konfiguriert werden, dass schreibgeschütztes Routing aktiviert ist.  
+3. Die Verfügbarkeitsgruppe muss vom Datenbankadministrator konfiguriert werden, um schreibgeschütztes Routing zu aktivieren.  
   
- Es ist möglich, dass mehrere Verbindungen, die das schreibgeschützte Routing verwenden, nicht alle eine Verbindung mit demselben schreibgeschützten Replikat herstellen. Änderungen in der Datenbanksynchronisierung oder Änderungen an der Routingkonfiguration des Servers können dazu führen, dass Clientverbindungen mit anderen schreibgeschützten Replikaten hergestellt werden. Um sicherzustellen, dass alle schreibgeschützten Anforderungen an dasselbe schreibgeschützte Replikat gerichtet werden, übergeben Sie keinen Verfügbarkeitsgruppenlistener an das `Data Source`-Schlüsselwort der Verbindungszeichenfolge. Stattdessen geben Sie den Namen der schreibgeschützten Instanz an.  
+ Möglicherweise werden bei mehreren Verbindungen mithilfe von schreibgeschütztem Routing nicht alle mit demselben schreibgeschützten Replikat verbunden. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Sie gewährleisten, dass alle schreibgeschützten Anforderungen Verbindungen mit demselben schreibgeschützten Replikat herstellen, indem Sie keinen Verfügbarkeitsgruppenlistener an das Schlüsselwort der `Data Source`-Verbindungszeichenfolge übermitteln. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.  
   
- Das schreibgeschützte Routing dauert möglicherweise länger als die Verbindung mit der primären Datenbank, da zuerst eine Verbindung mit der primären Datenbank hergestellt und dann nach dem besten verfügbaren lesbaren sekundären Replikat gesucht wird. Aus diesem Grund sollten Sie das Anmeldetimeout erhöhen.  
+ Schreibgeschütztes Routing dauert möglicherweise länger als das Herstellen einer primären Verbindung, da schreibgeschütztes Routing zuerst eine primäre Verbindung herstellt und dann nach der besten verfügbaren lesbaren Sekundärverbindung sucht. Deswegen sollten Sie das Anmeldetimeout vergrößern.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](sql-server-features-and-adonet.md)
+- [SQL Server Features und ADO.net](sql-server-features-and-adonet.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

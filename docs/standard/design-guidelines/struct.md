@@ -11,21 +11,21 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: b6d06bc8a1e8535f1452af0726138abaebfd4951
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c6ac53014e048da3a90dd7b8e961176f61e90355
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743610"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290810"
 ---
 # <a name="struct-design"></a>Strukturentwurf
-Der allgemeine Werttyp wird am häufigsten als struct C# bezeichnet. Dieser Abschnitt enthält Richtlinien für allgemeine Struktur Entwürfe.
+Der allgemeine Werttyp wird am häufigsten als eine Struktur bezeichnet, dessen c#-Schlüsselwort. Dieser Abschnitt enthält Richtlinien für allgemeine Struktur Entwürfe.
 
- ❌ keinen Parameter losen Konstruktor für eine Struktur bereitstellen.
+ ❌Stellen Sie keinen Parameter losen Konstruktor für eine Struktur bereit.
 
- Durch Befolgen dieser Richtlinie können Arrays von Strukturen erstellt werden, ohne dass der Konstruktor für jedes Element des Arrays ausgeführt werden muss. Beachten Sie C# , dass Strukturen keine Parameter losen Konstruktoren aufweisen können.
+ Durch Befolgen dieser Richtlinie können Arrays von Strukturen erstellt werden, ohne dass der Konstruktor für jedes Element des Arrays ausgeführt werden muss. Beachten Sie, dass es in c# nicht zulässig ist, dass Strukturen Parameter lose Konstruktoren aufweisen.
 
- ❌ definieren keine änderbaren Werttypen.
+ ❌Definieren Sie keine änderbaren Werttypen.
 
  Änderbare Werttypen haben mehrere Probleme. Wenn z. b. ein Eigenschaften Getter einen Werttyp zurückgibt, empfängt der Aufrufer eine Kopie. Da die Kopie implizit erstellt wird, wissen Entwickler möglicherweise nicht, dass Sie die Kopie und nicht den ursprünglichen Wert muziieren. Außerdem haben einige Sprachen (insbesondere dynamische Sprachen) Probleme bei der Verwendung änderbarer Werttypen, da bei der Dereferenzierung auch lokale Variablen dazu führen, dass eine Kopie erstellt wird.
 
@@ -33,11 +33,11 @@ Der allgemeine Werttyp wird am häufigsten als struct C# bezeichnet. Dieser Absc
 
  Dadurch wird verhindert, dass ungültige Instanzen versehentlich erstellt werden, wenn ein Array der Strukturen erstellt wird.
 
- ✔️ Implementieren <xref:System.IEquatable%601> für Werttypen.
+ ✔️ Implementieren Sie <xref:System.IEquatable%601> für Werttypen.
 
- Die <xref:System.Object.Equals%2A?displayProperty=nameWithType>-Methode für Werttypen bewirkt das Boxing, und die Standard Implementierung ist nicht sehr effizient, da Sie Reflektion verwendet. <xref:System.IEquatable%601.Equals%2A> kann eine viel bessere Leistung aufweisen und so implementiert werden, dass kein Boxing ausgelöst wird.
+ Die <xref:System.Object.Equals%2A?displayProperty=nameWithType> -Methode für Werttypen bewirkt Boxing, und die Standard Implementierung ist nicht sehr effizient, da Sie Reflektion verwendet. <xref:System.IEquatable%601.Equals%2A>kann eine viel bessere Leistung aufweisen und so implementiert werden, dass keine Boxing ausgelöst werden kann.
 
- <xref:System.ValueType>werden ❌ nicht explizit erweitert. In den meisten Sprachen wird dies verhindert.
+ ❌Erweitern Sie nicht explizit <xref:System.ValueType> . In den meisten Sprachen wird dies verhindert.
 
  Im Allgemeinen können Strukturen sehr nützlich sein, sollten aber nur für kleine, einzelne, unveränderliche Werte verwendet werden, die nicht häufig geschachtelt werden.
 
@@ -45,8 +45,8 @@ Der allgemeine Werttyp wird am häufigsten als struct C# bezeichnet. Dieser Absc
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
-- [Auswählen zwischen Klasse und Struktur](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+- [Typentwurfs Richtlinien](type.md)
+- [Framework-Entwurfs Richtlinien](index.md)
+- [Auswählen zwischen Klasse und Struktur](choosing-between-class-and-struct.md)

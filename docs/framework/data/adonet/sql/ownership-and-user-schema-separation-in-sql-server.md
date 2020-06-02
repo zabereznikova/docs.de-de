@@ -1,13 +1,14 @@
 ---
 title: Objektbesitz und Trennung von Benutzer und Schema in SQL Server
+description: Erfahren Sie, wie Sie durch die Trennung von Benutzer Schemas Flexibilität beim Verwalten von SQL Server Berechtigungen für Datenbankobjekte Schemas gruppieren Objekte in separaten Namespaces.
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894424"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286261"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 Eines der Hauptkonzepte der SQL Server-Sicherheit besteht darin, dass die Besitzer von Objekten unwiderrufbare Berechtigungen für deren Verwaltung besitzen. Es ist nicht möglich, dem Besitzer eines Objekts dessen Privilegien zu entziehen, und Sie können auch keine Besitzer aus der Datenbank entfernen, wenn diese Objekte in der Datenbank besitzen.  
@@ -53,7 +54,7 @@ Server.Database.DatabaseSchema.DatabaseObject
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen zu Objektbesitz und Schemas finden Sie in den folgenden Ressourcen:  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Trennung von Benutzer und Schema](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Beschreibt die Änderungen, die die Trennung von Benutzer und Schema zur Folge hat. Enthält Informationen zum neuen Verhalten, seinen Auswirkungen auf den Objektbesitz, zu Katalogsichten und zu Berechtigungen.|  
   

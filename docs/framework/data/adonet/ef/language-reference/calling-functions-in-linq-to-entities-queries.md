@@ -1,18 +1,19 @@
 ---
 title: Aufrufen von Funktionen in LINQ to Entities-Abfragen
+description: Verwenden Sie diese Artikel, um zu erfahren, wie die Klassen EntityFunctions und SqlFunctions Zugriff auf kanonische Funktionen und Datenbankfunktionen als Teil der Entity Framework bereitstellen.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 267bb393d9e75c66eb18139e8897da34bd86e159
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: faa6406713592f10e5e7371cd73f29bec4b03b7b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251264"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286856"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Aufrufen von Funktionen in LINQ to Entities-Abfragen
 In den Themen in diesem Abschnitt wird beschrieben, wie Funktionen in LINQ to Entities-Abfragen aufgerufen werden.  
   
- Die <xref:System.Data.Objects.EntityFunctions>-Klasse und die <xref:System.Data.Objects.SqlClient.SqlFunctions>-Klasse bieten im Rahmen des Entity Framework Zugriff auf kanonische Funktionen und Datenbankfunktionen. Weitere Informationen finden Sie unter [Vorgehensweise: Kanonische Funktionen](how-to-call-canonical-functions.md) und [Gewusst wie: Ruft Daten Bank](how-to-call-database-functions.md)Funktionen auf.  
+ Die <xref:System.Data.Objects.EntityFunctions>-Klasse und die <xref:System.Data.Objects.SqlClient.SqlFunctions>-Klasse bieten im Rahmen des Entity Framework Zugriff auf kanonische Funktionen und Datenbankfunktionen. Weitere Informationen finden Sie unter Gewusst [wie: Abrufen von kanonischen Funktionen](how-to-call-canonical-functions.md) und Gewusst [wie: Abrufen von Datenbankfunktionen](how-to-call-database-functions.md).  
   
  Zum Aufrufen einer benutzerdefinierten Funktion sind drei grundlegende Schritte erforderlich:  
   
@@ -25,19 +26,19 @@ In den Themen in diesem Abschnitt wird beschrieben, wie Funktionen in LINQ to En
  Weitere Informationen hierzu finden Sie in diesem Abschnitt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Kanonische Funktionen aufzurufen](how-to-call-canonical-functions.md)  
+ [Vorgehensweise: Aufrufen kanonischer Funktionen](how-to-call-canonical-functions.md)  
   
- [Vorgehensweise: Datenbankfunktionen aufzurufen](how-to-call-database-functions.md)  
+ [Vorgehensweise: Aufrufen von Datenbankfunktionen](how-to-call-database-functions.md)  
   
- [Vorgehensweise: Benutzerdefinierte Datenbankfunktionen aufzurufen](how-to-call-custom-database-functions.md)  
+ [Vorgehensweise: Aufrufen benutzerdefinierter Datenbankfunktionen](how-to-call-custom-database-functions.md)  
   
- [Vorgehensweise: Modell definierte Funktionen in Abfragen abrufen](how-to-call-model-defined-functions-in-queries.md)  
+ [Vorgehensweise: Aufrufen modelldefinierter Funktionen in Abfragen](how-to-call-model-defined-functions-in-queries.md)  
   
- [Vorgehensweise: Aufgerufen Modell definierter Funktionen als Objektmethoden](how-to-call-model-defined-functions-as-object-methods.md)  
+ [Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden](how-to-call-model-defined-functions-as-object-methods.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Abfragen in LINQ to Entities](queries-in-linq-to-entities.md)
-- [Canonical Functions (Kanonische Funktionen)](canonical-functions.md)
+- [Kanonische Funktionen](canonical-functions.md)
 - [Übersicht über die EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Vorgehensweise: Definieren von benutzerdefinierten Funktionen im konzeptionellen Modell](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))
+- [Gewusst wie: Definieren von benutzerdefinierten Funktionen im konzeptionellen Modell](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

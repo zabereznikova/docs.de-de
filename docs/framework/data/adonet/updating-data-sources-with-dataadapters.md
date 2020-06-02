@@ -1,16 +1,17 @@
 ---
 title: Aktualisieren von Datenquellen mit "DataAdapters"
+description: Erfahren Sie, wie die Update-Methode von DataAdapter Änderungen von einem DataSet zurück in die Datenquelle in ADO.NET-Anwendungen auflöst.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 4a6e22352a309f9d624c6922abc531cb31a5baf1
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: e2348a3a89aa1c28856bfc21aaa25f2c8327aac7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736684"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286183"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aktualisieren von Datenquellen mit "DataAdapters"
 
@@ -30,11 +31,11 @@ Wenn Ihre `DataTable` einer einzelnen Datenbanktabelle zugeordnet ist oder aus e
 
 ## <a name="using-updatedrowsource-to-map-values-to-a-dataset"></a>Verwenden von "UpdatedRowSource" zum Zuordnen von Werten zu einem "DataSet"
 
-Mit der `DataTable`-Eigenschaft eines `DataAdapter`-Objekts können Sie steuern, wie die von der Datenquelle zurückgegebenen Werte nach einem Aufruf der Update<xref:System.Data.Common.DbCommand.UpdatedRowSource%2A>-Methode eines <xref:System.Data.Common.DbCommand> der  erneut zugeordnet werden. Durch Festlegen eines der `UpdatedRowSource`-Enumerationswerte für die <xref:System.Data.UpdateRowSource>-Eigenschaft kann gesteuert werden, ob die von den `DataAdapter`-Befehlen zurückgegebenen Ausgabeparameter ignoriert oder auf die geänderte Zeile im `DataSet` angewendet werden. Es kann auch festgelegt werden, ob die erste zurückgegebene Zeile (wenn vorhanden) auf die geänderte Zeile in der `DataTable` angewendet wird.
+Mit der -Eigenschaft eines -Objekts können Sie steuern, wie die von der Datenquelle zurückgegebenen Werte nach einem Aufruf der Update-Methode eines  der  erneut zugeordnet werden. Durch Festlegen eines der `UpdatedRowSource`-Enumerationswerte für die <xref:System.Data.UpdateRowSource>-Eigenschaft kann gesteuert werden, ob die von den `DataAdapter`-Befehlen zurückgegebenen Ausgabeparameter ignoriert oder auf die geänderte Zeile im `DataSet` angewendet werden. Es kann auch festgelegt werden, ob die erste zurückgegebene Zeile (wenn vorhanden) auf die geänderte Zeile in der `DataTable` angewendet wird.
 
 In der folgenden Tabelle werden die verschiedenen Werte der `UpdateRowSource`-Enumeration und deren Auswirkungen auf das Verhalten eines mit einem `DataAdapter` verwendeten Befehls beschrieben.
 
-|"UpdatedRowSource"-Enumeration|Beschreibung|
+|"UpdatedRowSource"-Enumeration|BESCHREIBUNG|
 |----------------------------------|-----------------|
 |<xref:System.Data.UpdateRowSource.Both>|Sowohl die Ausgabeparameter als auch die erste Zeile eines zurückgegebenen Resultset können der geänderten Zeile im `DataSet` zugeordnet werden.|
 |<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Nur die Daten in der ersten Zeile eines zurückgegebenen Resultset können der geänderten Zeile im `DataSet` zugeordnet werden.|
@@ -46,14 +47,14 @@ Die `Update`-Methode aktualisiert die Datenquelle mit den vorgenommenen Änderun
 > [!NOTE]
 > Wenn der `SelectCommand` die Ergebnisse eines OUTER JOIN zurückgibt, legt der `DataAdapter` keinen `PrimaryKey`-Wert für die resultierende `DataTable` fest. Sie müssen den `PrimaryKey` selbst definieren, um sicherzustellen, dass doppelte Zeilen ordnungsgemäß aufgelöst werden. Weitere Informationen finden Sie unter [Definieren von primär Schlüsseln](./dataset-datatable-dataview/defining-primary-keys.md).
 
-Um Ausnahmen zu behandeln, die beim Aufrufen der `Update` -Methode auftreten können, können `RowUpdated` Sie das-Ereignis verwenden, um auf Fehler beim Aktualisieren von Zeilen zu reagieren (siehe [Verarbeiten von DataAdapter](handling-dataadapter-events.md)- `DataAdapter.ContinueUpdateOnError` Ereignissen), oder Sie können auf `true` festlegen. Aufrufen `Update`von und reagieren auf die Fehlerinformationen, die in `RowError` der-Eigenschaft einer bestimmten Zeile gespeichert sind, wenn das Update beendet ist (siehe [Zeilen Fehlerinformationen](./dataset-datatable-dataview/row-error-information.md)).
+Um Ausnahmen zu behandeln, die beim Aufrufen der-Methode auftreten können `Update` , können Sie das-Ereignis verwenden, `RowUpdated` um auf Fehler beim Aktualisieren von Zeilen zu reagieren (siehe [Handling DataAdapter-Ereignisse](handling-dataadapter-events.md)), oder Sie können auf festlegen, `DataAdapter.ContinueUpdateOnError` bevor Sie `true` aufrufen `Update` , und auf die in der-Eigenschaft einer bestimmten Zeile gespeicherten Fehlerinformationen reagieren, `RowError` Wenn das Update fertig ist (siehe [Zeilen Fehlerinformationen](./dataset-datatable-dataview/row-error-information.md)).
 
 > [!NOTE]
-> `AcceptChanges` `DataTable` `Current` `DataRow`Wenn Sie `DataRow` für ,oder`DataRow` aufrufen, werden alle `Original` Werte für ein mit den Werten für die überschrieben. `DataSet` Wenn die Feldwerte, mit denen die Zeile als eindeutig identifiziert wird, geändert wurden, stimmen die `AcceptChanges`-Werte nicht mehr mit den Werten in der Datenquelle überein, nachdem `Original` aufgerufen wurde. `AcceptChanges` wird während eines Aufrufs der Update-Methode eines `DataAdapter` automatisch für jede Zeile aufgerufen. Sie können die Originalwerte während eines Aufrufs der Update`AcceptChangesDuringUpdate`-Methode beibehalten, indem Sie zuerst die `DataAdapter`-Eigenschaft des `RowUpdated` auf false<xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> setzen oder indem Sie einen Ereignishandler für das <xref:System.Data.UpdateStatus.SkipCurrentRow>-Ereignis erstellen und den  auf  festlegen. Weitere Informationen finden Sie unter Zusammenführen von [DataSet-Inhalten](./dataset-datatable-dataview/merging-dataset-contents.md) und [Verarbeiten von DataAdapter-Ereignissen](handling-dataadapter-events.md).
+> `AcceptChanges` `DataSet` Wenn Sie für, oder aufrufen, werden `DataTable` `DataRow` alle `Original` Werte für ein `DataRow` mit den `Current` Werten für die überschrieben `DataRow` . Wenn die Feldwerte, mit denen die Zeile als eindeutig identifiziert wird, geändert wurden, stimmen die `AcceptChanges`-Werte nicht mehr mit den Werten in der Datenquelle überein, nachdem `Original` aufgerufen wurde. `AcceptChanges` wird während eines Aufrufs der Update-Methode eines `DataAdapter` automatisch für jede Zeile aufgerufen. Sie können die Originalwerte während eines Aufrufs der Update-Methode beibehalten, indem Sie zuerst die -Eigenschaft des  auf false setzen oder indem Sie einen Ereignishandler für das -Ereignis erstellen und den  auf  festlegen. Weitere Informationen finden Sie unter Zusammenführen von [DataSet-Inhalten](./dataset-datatable-dataview/merging-dataset-contents.md) und [Verarbeiten von DataAdapter-Ereignissen](handling-dataadapter-events.md).
 
 ## <a name="example"></a>Beispiel
 
-In den folgenden Beispielen wird veranschaulicht, wie Updates für geänderte Zeilen durch explizites Festlegen `DataAdapter` des von und `Update` durch Aufrufen der `UpdateCommand` -Methode durchgeführt werden. Beachten Sie, dass der in der WHERE-Klausel der UPDATE-Anweisung festgelegte Parameterwert angibt, dass der `Original`-Wert der `SourceColumn` verwendet wird. Dies ist wichtig, weil der `Current`-Wert möglicherweise geändert wurde und u. U. nicht mehr mit dem Wert in der Datenquelle übereinstimmt. Beim `Original`-Wert handelt es sich um den Wert, mit dem die `DataTable` aus der Datenquelle aufgefüllt wurde.
+In den folgenden Beispielen wird veranschaulicht, wie Updates für geänderte Zeilen durch explizites Festlegen des `UpdateCommand` von `DataAdapter` und durch Aufrufen der-Methode durchgeführt werden `Update` . Beachten Sie, dass der in der WHERE-Klausel der UPDATE-Anweisung festgelegte Parameterwert angibt, dass der `Original`-Wert der `SourceColumn` verwendet wird. Dies ist wichtig, weil der `Current`-Wert möglicherweise geändert wurde und u. U. nicht mehr mit dem Wert in der Datenquelle übereinstimmt. Beim `Original`-Wert handelt es sich um den Wert, mit dem die `DataTable` aus der Datenquelle aufgefüllt wurde.
 
 [!code-csharp[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/CS/source.cs#1)]
 [!code-vb[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/VB/source.vb#1)]
@@ -180,7 +181,7 @@ ALTER TABLE [dbo].[Course] CHECK CONSTRAINT [FK_Course_Department]
 GO
 ```
 
-C#und Visual Basic Projekte mit diesem Codebeispiel finden Sie unter [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D).
+C#-und Visual Basic Projekte mit diesem Codebeispiel finden Sie unter [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D).
 
 ```csharp
 using System;
@@ -378,9 +379,9 @@ class Program {
 
 ## <a name="see-also"></a>Siehe auch
 
-- [DataAdapters und DataReaders](dataadapters-and-datareaders.md)
+- ["DataAdapters" und "DataReaders"](dataadapters-and-datareaders.md)
 - [Zeilenstatus und Zeilenversionen](./dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChanges und RejectChanges](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [Merging DataSet Contents (Zusammenführen von DataSet-Inhalten)](./dataset-datatable-dataview/merging-dataset-contents.md)
+- ["AcceptChanges" und "RejectChanges"](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [Zusammenführen von DataSet-Inhalten](./dataset-datatable-dataview/merging-dataset-contents.md)
 - [Abrufen von Identity- oder Autonumber-Werten](retrieving-identity-or-autonumber-values.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

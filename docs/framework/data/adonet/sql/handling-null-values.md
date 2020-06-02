@@ -1,22 +1,23 @@
 ---
 title: Behandeln von NULL-Werten
+description: Erfahren Sie, wie die .NET Framework Datenanbieter für SQL Server den Wert NULL verarbeitet, und lesen Sie Informationen zu NULL und SqlBoolean, drei wertiger Logik und zum Zuweisen von NULL-Werten.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4d086d81f1c2c959780366cfeb59f2d265bc40c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249076"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286454"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Ein NULL-Wert wird in einer relationalen Datenbank verwendet, wenn der Wert in einer Spalte unbekannt ist oder fehlt. Ein NULL-Wert ist weder eine leere Zeichenfolge (für Zeichen- oder datetime-Datentypen) noch der Wert 0 (für numerische Datentypen). Die ANSI-Spezifikation SQL-92 besagt, dass ein NULL-Wert für alle Datentypen gleich sein muss, damit alle NULL-Werte einheitlich behandelt werden. Der Namespace <xref:System.Data.SqlTypes> bietet Semantik für NULL-Werte, indem die Schnittstelle <xref:System.Data.SqlTypes.INullable> implementiert wird. Jeder der Datentypen in <xref:System.Data.SqlTypes> hat seine eigene `IsNull`-Eigenschaft und einen `Null`-Wert, der einer Instanz dieses Datentyps zugewiesen werden kann.  
   
 > [!NOTE]
-> Mit .NET Framework Version 2.0 wurde die Unterstützung für nullfähige Werttypen eingeführt, die es Programmierern ermöglichen, einen Werttyp zu erweitern, um alle Werte des zugrunde liegenden Typs darzustellen. Diese CLR-Nullwerttypen stellen eine <xref:System.Nullable> Instanz der Struktur dar. Diese Fähigkeit ist besonders nützlich, wenn Werttypen geschachtelt oder ungeschachtelt sind, was eine verbesserte Kompatibilität mit Objekttypen ermöglicht. CLR-NULLwerttypen sind nicht für die Speicherung von Datenbanknulls vorgesehen, da sich ein `null` ANSI SQL-NULL-Wert nicht wie ein Verweis (oder `Nothing` in Visual Basic) verhält. Verwenden Sie zum Arbeiten mit ANSI-SQL-NULL-Werten in Datenbanken NULL-Werte des Typs <xref:System.Data.SqlTypes> anstelle von <xref:System.Nullable>. Weitere Informationen zum Arbeiten mit CLR-Wert nullablen Typen in Visual Basic finden Sie unter [Nullable Value Types](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), und für C-Wertetypen unter [Nullable Value Types](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
+> In der .NET Framework Version 2,0 wurde die Unterstützung für Werttypen, die NULL-Werte zulassen, eingeführt, die es Programmierern ermöglichen, einen Werttyp so zu erweitern, dass alle Werte Diese CLR-Typen, die NULL-Werte zulassen, stellen eine Instanz der- <xref:System.Nullable> Struktur dar. Diese Fähigkeit ist besonders nützlich, wenn Werttypen geschachtelt oder ungeschachtelt sind, was eine verbesserte Kompatibilität mit Objekttypen ermöglicht. CLR-Typen, die NULL-Werte zulassen, sind nicht für die Speicherung von Daten Bank Nullen gedacht, weil sich ein ANSI-SQL-NULL-Wert nicht wie ein `null` Verweis (oder `Nothing` in Visual Basic) verhält. Verwenden Sie zum Arbeiten mit ANSI-SQL-NULL-Werten in Datenbanken NULL-Werte des Typs <xref:System.Data.SqlTypes> anstelle von <xref:System.Nullable>. Weitere Informationen zum Arbeiten mit CLR-Werten, die NULL-Werte zulassen, in Visual Basic finden Sie Untertypen, [die NULL-](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)Werte zulassen, und für c# siehe [Werte zulässt-Werttypen](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)  
   
 ## <a name="nulls-and-three-valued-logic"></a>NULL-Werte und dreiwertige Logik  
  Durch das Zulassen von NULL-Werten in Spaltendefinitionen wird in Ihre Anwendung dreiwertige Logik eingeführt. Ein Vergleich kann anhand einer von drei Bedingungen ausgewertet werden:  
@@ -25,7 +26,7 @@ Ein NULL-Wert wird in einer relationalen Datenbank verwendet, wenn der Wert in e
   
 - False  
   
-- Unknown  
+- Unbekannt  
   
  Da NULL als unbekannt betrachtet wird, werden zwei miteinander verglichene NULL-Werte nicht als gleich angesehen. Wenn in Ausdrücken mit arithmetischen Operatoren einer der Operanden NULL ist, ist das Ergebnis ebenfalls NULL.  
   
@@ -35,7 +36,7 @@ Ein NULL-Wert wird in einer relationalen Datenbank verwendet, wenn der Wert in e
  ![Wahrheitstabelle](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>Informationen zur ANSI_NULLS-Option  
- <xref:System.Data.SqlTypes> bietet die gleiche Semantik wie bei aktivierter Option ANSI_NULLS in SQL Server. Alle arithmetischen Operatoren (+, -, \*, /, %), \|bitweise Operatoren (, &, ), und die meisten Funktionen `IsNull`geben NULL zurück, wenn einer der Operanden oder Argumente null ist, mit Ausnahme der Eigenschaft .  
+ <xref:System.Data.SqlTypes> bietet die gleiche Semantik wie bei aktivierter Option ANSI_NULLS in SQL Server. Alle arithmetischen Operatoren (+,-, \* ,/,%), bitweise Operatoren (~, &, \| ) und die meisten Funktionen geben NULL zurück, wenn einer der Operanden oder Argumente NULL ist, mit Ausnahme der-Eigenschaft `IsNull` .  
   
  Der ANSI SQL-92-Standard unterstützt *columnName* = NULL in einer WHERE-Klausel nicht. In SQL Server steuert die Option ANSI_NULLS sowohl die standardmäßige NULL-Zulässigkeit in der Datenbank als auch die Auswertung von Vergleichen mit NULL-Werten. Wenn ANSI_NULLS auf ON festgelegt ist (Standardeinstellung), muss in Ausdrücken bei Prüfen auf NULL-Werte der Operator IS NULL verwendet werden. Der folgende Vergleich gibt z. B. immer UNKNOWN zurück, wenn ANSI_NULLS auf ON festgelegt ist:  
   
@@ -143,5 +144,5 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server-Datentypen und ADO.NET](sql-server-data-types.md)
+- [SQL Server-Datentypen und ADO.net](sql-server-data-types.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 3b24bfefd3edb0585e9c6369e9b8151b17151661
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: efdfcda95a67941f0fde5f7a96467af7dd374396
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741715"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280139"
 ---
 # <a name="enum-design"></a>Enum-Entwurf
 
@@ -28,17 +28,17 @@ Flag-Enumerationen sind so konzipiert, dass bitweise Vorgänge für die Enumerat
 
 ✔️ bevorzugen die Verwendung einer Enumeration anstelle von statischen Konstanten.
 
-❌ keine Enumeration für geöffnete Sätze verwenden (z. b. die Betriebssystemversion, die Namen Ihrer Freunde usw.).
+❌Verwenden Sie keine Enumeration für geöffnete Sätze (z. b. die Betriebssystemversion, die Namen der Freunde usw.).
 
-❌ keine reservierten Enumerationswerte bereit, die für die zukünftige Verwendung vorgesehen sind.
+❌Geben Sie keine reservierten Enumerationswerte an, die für die zukünftige Verwendung vorgesehen sind.
 
 Sie können der vorhandenen Enumeration jederzeit einfach Werte hinzufügen. Weitere Informationen zum Hinzufügen von Werten zu enumeraten finden [Sie unter Hinzufügen von Werten zu](#add_value) Enumerationswerten Reservierte Werte verschmutzen lediglich den Satz realer Werte und führen tendenziell zu Benutzerfehlern.
 
-❌ vermeiden, dass Enumerationswerte nur mit einem Wert öffentlich verfügbar gemacht werden
+❌Vermeiden Sie die öffentliche Offenlegung von Enumerationswerten mit nur einem Wert
 
 Eine gängige Vorgehensweise, um die zukünftige Erweiterbarkeit von C-APIs sicherzustellen, besteht darin, den Methoden Signaturen reservierte Parameter hinzuzufügen. Solche reservierten Parameter können als Enumerationswerte mit einem einzelnen Standardwert ausgedrückt werden. Dies sollte nicht in verwalteten APIs erfolgen. Die Methoden Überladung ermöglicht das Hinzufügen von Parametern in zukünftigen Versionen.
 
-❌ keine Sentinel-Werte in Enumerationswerte einschließen.
+❌Fügen Sie keine Sentinel-Werte in Enumerationswerte ein.
 
 Obwohl Sie für Frameworkentwickler manchmal hilfreich sind, sind Sentinel-Werte für Benutzer des Frameworks verwirrend. Sie werden verwendet, um den Zustand der Enumeration zu verfolgen, anstatt einen der Werte aus dem Satz zu verwenden, der durch die Enumeration repräsentiert wird.
 
@@ -46,11 +46,11 @@ Obwohl Sie für Frameworkentwickler manchmal hilfreich sind, sind Sentinel-Werte
 
 Es empfiehlt sich, den Wert in etwa "None" zu aufrufen. Wenn ein solcher Wert für diese bestimmte Enumeration nicht geeignet ist, sollte dem am häufigsten voreingestellten Standardwert für die Enumeration der zugrunde liegende Wert 0 (null) zugewiesen werden.
 
-✔️ sollten Sie in Erwägung gezogen werden, in den meisten Programmiersprachen <xref:System.Int32> als zugrunde liegenden Typ einer-Aufzählung zu verwenden, es sei denn, eine der folgenden Werte ist true:
+✔️ sollten Sie die Verwendung von <xref:System.Int32> (standardmäßig in den meisten Programmiersprachen) als zugrunde liegenden Typ einer-Aufzählung in Erwägung gezogen, es sei denn, eine der folgenden ist true
 
 - Die Enumeration ist eine Flags-Enumeration, und Sie verfügen über mehr als 32 Flags oder erwarten, dass in der Zukunft mehr vorhanden sind.
 
-- Der zugrunde liegende Typ muss sich von der <xref:System.Int32> unterscheiden, um die Interoperabilität mit nicht verwaltetem Code zu verbessern, der unterschiedliche enums erwartet.
+- Der zugrunde liegende Typ muss sich von der <xref:System.Int32> einfacheren Interoperabilität mit nicht verwaltetem Code unterscheiden, der andere enums erwartet.
 
 - Ein kleinerer zugrunde liegender Typ führt zu erheblichen Einsparungen im Bereich. Wenn Sie davon ausgehen, dass die Aufzählung hauptsächlich als Argument für die Ablauf Steuerung verwendet werden soll, hat die Größe kaum einen Unterschied. Die Größen Einsparungen können in folgenden Größen erheblich sein:
 
@@ -60,31 +60,31 @@ Es empfiehlt sich, den Wert in etwa "None" zu aufrufen. Wenn ein solcher Wert f�
 
   - Sie erwarten, dass eine große Anzahl von Instanzen der Enumeration serialisiert wird.
 
-Beachten Sie bei der in-Memory-Verwendung, dass verwaltete Objekte stets `DWORD`ausgerichtet sind, sodass Sie tatsächlich mehrere Enumerationen oder andere kleine Strukturen in einer Instanz benötigen, um eine kleinere Aufzählung mit zu erstellen, um einen Unterschied zu schaffen, da die gesamte instanzgröße immer auf einen `DWORD`aufgerundet wird.
+Beachten Sie bei der in-Memory-Verwendung, dass verwaltete Objekte immer `DWORD` ausgerichtet sind, sodass Sie in einer Instanz tatsächlich mehrere Enumerationen oder andere kleine Strukturen benötigen, um einen Unterschied zu erstellen, da die gesamte instanzgröße immer auf einen aufgerundet wird `DWORD` .
 
 ✔️ durch eine namensflag-Enumerationen mit Plural-Nomen oder nominalen Ausdrücken und einfachen Enumerationen mit Singular-Nomen oder Substantiv Ausdrücken.
 
-❌ <xref:System.Enum?displayProperty=nameWithType> nicht direkt erweitern.
+❌Nicht direkt erweitern <xref:System.Enum?displayProperty=nameWithType> .
 
-<xref:System.Enum?displayProperty=nameWithType> ist ein spezieller Typ, der von der CLR verwendet wird, um benutzerdefinierte Enumerationen zu erstellen. Die meisten Programmiersprachen bieten ein Programmier Element, das Ihnen den Zugriff auf diese Funktionalität ermöglicht. Beispielsweise wird im C# `enum`-Schlüsselwort verwendet, um eine Enumeration zu definieren.
+<xref:System.Enum?displayProperty=nameWithType>ist ein spezieller Typ, der von der CLR verwendet wird, um benutzerdefinierte Enumerationen zu erstellen. Die meisten Programmiersprachen bieten ein Programmier Element, das Ihnen den Zugriff auf diese Funktionalität ermöglicht. Beispielsweise wird in c# das- `enum` Schlüsselwort verwendet, um eine Enumeration zu definieren.
 
 <a name="design"></a>
 
 ### <a name="designing-flag-enums"></a>Entwerfen von Flag-Aufständen
 
-✔️ die <xref:System.FlagsAttribute?displayProperty=nameWithType> zum Markieren von Aufständen anwenden. Wenden Sie dieses Attribut nicht auf einfache auffüge Aufgaben an.
+✔️ anwenden, um auf-auf-auf-auf-auf- <xref:System.FlagsAttribute?displayProperty=nameWithType> Wenden Sie dieses Attribut nicht auf einfache auffüge Aufgaben an.
 
 ✔️ für die Flag-Enumerationswerte zwei Möglichkeiten verwenden, damit Sie mit der bitweisen OR-Operation frei kombiniert werden können.
 
 ✔️ sollten besondere Enumerationswerte für häufig verwendete Kombinationen von Flags bereitgestellt werden.
 
-Bitweise Vorgänge sind ein erweitertes Konzept, das für einfache Aufgaben nicht erforderlich ist. <xref:System.IO.FileAccess.ReadWrite> ist ein Beispiel für einen solchen besonderen Wert.
+Bitweise Vorgänge sind ein erweitertes Konzept, das für einfache Aufgaben nicht erforderlich ist. <xref:System.IO.FileAccess.ReadWrite>ein Beispiel für einen solchen besonderen Wert.
 
-❌ vermeiden Sie das Erstellen von Flag-enumeraten, wenn bestimmte Kombinationen von Werten ungültig sind
+❌Vermeiden Sie das Erstellen von Flag-enumeraten, wenn bestimmte Kombinationen von Werten ungültig sind
 
-❌ vermeiden Sie die Verwendung von Flag-Enumerationswerten von 0 (null), es sei denn, der Wert steht für "alle Flags sind gelöscht" und entsprechend der Bezeichnung durch die nächste Richtlinie
+❌Vermeiden Sie die Verwendung von Flag-Enumerationswerten von 0 (null), es sei denn, der Wert steht für "alle Flags sind gelöscht" und entsprechend der Bezeichnung durch die nächste Richtlinie
 
-✔️ den Wert 0 (null) der Flag-enumerationszeichen `None`. Bei einer Flag-Enumeration muss der Wert immer lauten, dass alle Flags gelöscht werden.
+✔️ den Wert 0 (null) der Flag-Enumerationsnamen `None` . Bei einer Flag-Enumeration muss der Wert immer lauten, dass alle Flags gelöscht werden.
 
 <a name="add_value"></a>
 
@@ -100,7 +100,7 @@ Wenn Sie über echte Daten über Anwendungs Inkompatibilitäten verfügen, die d
 
 *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+- [Typentwurfs Richtlinien](type.md)
+- [Framework-Entwurfs Richtlinien](index.md)

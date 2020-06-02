@@ -1,13 +1,14 @@
 ---
 title: LINQ to Entities
+description: Erfahren Sie, wie Sie LINQ to Entities Abfragen erstellen und ausführen, mit denen Sie mithilfe von Visual Basic oder Visual c# Abfragen für das Entity Framework konzeptionelle Modell schreiben können.
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: bc568cb9dff170062651c908471a36cd17eac980
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 389a81872f4652c69e2b845359cf4e5a275aed5c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854365"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286843"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es Entwicklern ermöglicht, in Visual Basic oder Visual C# Abfragen für das konzeptionelle Modell im Entity Framework zu schreiben. Abfragen für das Entity Framework werden als Befehlsstrukturabfragen dargestellt, die für den Objektkontext ausgeführt werden. LINQ to Entities wandelt LINQ (Language-Integrated Queries)-Abfragen in Befehlsstrukturabfragen um, führt die Abfragen für das Entity Framework aus und gibt Objekte zurück, die sowohl vom Entity Framework als auch von LINQ verwendet werden können. Mit folgendem Vorgang können Sie eine LINQ to Entities-Abfrage erstellen und ausführen:  
@@ -35,7 +36,7 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
 ## <a name="query-conversion"></a>Konvertieren von Abfragen  
  Um eine LINQ to Entities-Abfrage für das Entity Framework auszuführen, muss die LINQ-Abfrage in eine Befehlsstrukturdarstellung umgewandelt werden, die für das Entity Framework ausgeführt werden kann.  
   
- LINQ to Entities Abfragen bestehen aus LINQ-Standard Abfrage Operatoren (z <xref:System.Linq.Queryable.Select%2A>. <xref:System.Linq.Queryable.Where%2A>b. <xref:System.Linq.Queryable.GroupBy%2A>, und) und Ausdrücken (x > 10, Contact. LastName usw.). LINQ-Operatoren werden nicht von einer Klasse definiert, sondern sind Methoden für eine Klasse. In LINQ können Ausdrücke alles enthalten, was für Typen im <xref:System.Linq.Expressions>-Namespace zulässig ist, und durch Erweiterung alles, was als Lambda-Funktion dargestellt werden kann. Damit sind sie den Ausdrücken übergeordnet, die im Entity Framework verwendet werden können. Diese sind per Definition auf Operationen beschränkt, die auf der Datenbank zulässig sind und von <xref:System.Data.Objects.ObjectQuery%601> unterstützt werden.  
+ LINQ to Entities Abfragen bestehen aus LINQ-Standard Abfrage Operatoren (z <xref:System.Linq.Queryable.Select%2A> . b., <xref:System.Linq.Queryable.Where%2A> und <xref:System.Linq.Queryable.GroupBy%2A> ) und Ausdrücken (x > 10, Contact. LastName usw.). LINQ-Operatoren werden nicht von einer Klasse definiert, sondern sind Methoden für eine Klasse. In LINQ können Ausdrücke alles enthalten, was für Typen im <xref:System.Linq.Expressions>-Namespace zulässig ist, und durch Erweiterung alles, was als Lambda-Funktion dargestellt werden kann. Damit sind sie den Ausdrücken übergeordnet, die im Entity Framework verwendet werden können. Diese sind per Definition auf Operationen beschränkt, die auf der Datenbank zulässig sind und von <xref:System.Data.Objects.ObjectQuery%601> unterstützt werden.  
   
  Im Entity Framework werden sowohl Operatoren als auch Ausdrücke in einer einzigen Typhierarchie dargestellt, die anschließend in die Befehlsstruktur eingefügt wird. Mithilfe der Befehlsstruktur führt das Entity Framework die Abfrage aus. Wenn die LINQ-Abfrage nicht als Befehlsstruktur ausgedrückt werden kann, wird beim Konvertieren der Abfrage eine Ausnahme ausgelöst. Zur Konvertierung von LINQ to Entities-Abfragen gehören die folgenden zwei untergeordneten Konvertierungen: die Umwandlung der Standardabfrageoperatoren und die Konvertierung der Ausdrücke.  
   

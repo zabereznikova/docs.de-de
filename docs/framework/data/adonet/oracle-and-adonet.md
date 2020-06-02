@@ -1,17 +1,18 @@
 ---
 title: Oracle und ADO.NET
+description: Erfahren Sie mehr über Features und Verhalten der .NET Framework Datenanbieter für Oracle, die den Zugriff auf eine Oracle-Datenbank mithilfe der Oracle-Benutzeroberfläche ermöglicht.
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 5683f2b4ba57021ff6dda3a51baca016f886b605
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980079"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286688"
 ---
 # <a name="oracle-and-adonet"></a>Oracle und ADO.NET
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "76980079"
   
  Der .NET Framework Datenanbieter für Oracle ermöglicht den Zugriff auf eine Oracle-Datenbank mithilfe von OCI (Oracle callinterface), wie von der Oracle-Client Software bereitgestellt. Die Funktionalität des Datenanbieters ist so konzipiert, dass Sie mit der .NET Framework Datenanbieter für SQL Server, OLE DB und ODBC vergleichbar ist.  
   
- Um die .NET Framework Datenanbieter für Oracle zu verwenden, muss eine Anwendung wie folgt auf den <xref:System.Data.OracleClient> Namespace verweisen:  
+ Um die .NET Framework Datenanbieter für Oracle zu verwenden, muss eine Anwendung wie folgt auf den- <xref:System.Data.OracleClient> Namespace verweisen:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -66,7 +67,7 @@ csc /r:System.Data.OracleClient.dll
  [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)  
  Beschreibt sichere Programmiermethoden für ADO.NET.  
   
- [DataSets, DataTables und DataViews](./dataset-datatable-dataview/index.md)  
+ ["DataSets", "DataTables" und "DataViews"](./dataset-datatable-dataview/index.md)  
  Beschreibt das Erstellen und Verwenden von `DataSets`, typisierten `DataSets`, `DataTables` und `DataViews`.  
   
  [Abrufen und Ändern von Daten in ADO.NET](retrieving-and-modifying-data.md)  

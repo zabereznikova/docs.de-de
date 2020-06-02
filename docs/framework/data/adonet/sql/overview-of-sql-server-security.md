@@ -1,13 +1,14 @@
 ---
 title: Übersicht über die SQL Server-Sicherheit
+description: Erfahren Sie mehr über die SQL Server Sicherheitsarchitektur, um zu verstehen, welche Features und Funktionen bekannte Bedrohungen erkennen, und um zukünftige Bedrohungen zu antizipieren.
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c423a408e607c51c048ad08b91122a1fe06e31b2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780936"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286274"
 ---
 # <a name="overview-of-sql-server-security"></a>Übersicht über die SQL Server-Sicherheit
 Sicherheitsbedrohungen können Sie am besten mit einer tiefgestaffelten Verteidigungsstrategie mit sich überschneidenden Sicherheitsebenen begegnen. SQL Server bietet eine Sicherheitsarchitektur, die es Datenbankadministratoren und Entwicklern erlaubt, sichere Datenbankanwendungen zu erstellen und ihre Anwendungen vor Sicherheitsrisiken zu schützen. Jede neue SQL Server-Version ist durch die Einführung neuer Funktionen und Funktionalität besser als die vorherige Version. Aber Sicherheit gibt es nicht einfach ab Fabrik. Jede Anwendung hat ihre eigenen Sicherheitsanforderungen. Entwickler müssen ein klares Bild davon haben, welche Kombination aus Funktionen und Funktionalität sich zur Abwehr der bekannten Risiken am besten eignet, und sie müssen zukünftig auftretende Risiken vorhersehen können.  
@@ -16,13 +17,13 @@ Sicherheitsbedrohungen können Sie am besten mit einer tiefgestaffelten Verteidi
   
 - Die Authentifizierung ist der Prozess der Anmeldung bei SQL Server. Ein Prinzipal fordert dabei unter Angabe seiner Anmeldeinformationen, die vom Server ausgewertet werden, den Zugriff an. Die Authentifizierung stellt die Identität des Benutzers oder Prozesses her, der authentifiziert wird.  
   
-- Bei der Autorisierung wird ermittelt, auf welche sicherungsfähigen Ressourcen ein Prinzipal zugreifen kann und welche Vorgänge für diese Ressourcen erlaubt sind.  
+- Im Zuge der Autorisierung wird bestimmt, auf welche sicherungsfähigen Ressourcen ein Prinzipal zugreifen kann und welche Vorgänge für diese Ressourcen zulässig sind.  
   
  Die Themen in diesem Abschnitt enthalten grundlegende Informationen zur SQL Server-Sicherheit sowie Links zur jeweiligen vollständigen SQL Server-Onlinedokumentation.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Authentifizierung in SQL Server](authentication-in-sql-server.md)  
- Beschreibt die Anmeldungen und die Authentifizierung in SQL Server und enthält Links zu weiteren Ressourcen.  
+ Beschreibt die Anmeldung und Authentifizierung bei SQL Server und bietet Links zu weiteren Ressourcen.  
   
  [Server- und Datenbankrollen in SQL Server](server-and-database-roles-in-sql-server.md)  
  Beschreibt feste Serverrollen und Datenbankrollen, benutzerdefinierte Datenbankrollen sowie integrierte Konten und enthält Links zu weiteren Ressourcen.  
@@ -42,6 +43,6 @@ Sicherheitsbedrohungen können Sie am besten mit einer tiefgestaffelten Verteidi
 ## <a name="see-also"></a>Siehe auch
 
 - [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
-- [SQL Server Security (SQL Server-Sicherheit)](sql-server-security.md)
+- [SQL Server Sicherheit](sql-server-security.md)
 - [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

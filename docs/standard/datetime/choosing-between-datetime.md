@@ -13,12 +13,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 5425d94daf8ab023bef4a1a68f06d5c276499825
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5091d7104f400ae186d1a0ca94df9d2722f95b20
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132579"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286144"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
 
@@ -38,14 +38,14 @@ ms.locfileid: "73132579"
 
 - Durchführen von Datums- und Uhrzeitberechnungen, möglicherweise mit einem Ergebnis, das einen einzigen Zeitpunkt eindeutig identifiziert.
 
-.Net schließt die Typen <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>und <xref:System.TimeZoneInfo> ein, die alle zum Erstellen von Anwendungen verwendet werden können, die mit Datums-und Uhrzeitangaben arbeiten.
+.NET enthält die <xref:System.DateTime> <xref:System.DateTimeOffset> Typen,, <xref:System.TimeSpan> und <xref:System.TimeZoneInfo> , die alle zum Erstellen von Anwendungen verwendet werden können, die mit Datums-und Uhrzeitangaben arbeiten.
 
 > [!NOTE]
-> In diesem Thema wird <xref:System.TimeZone> nicht erörtert, da seine Funktionalität fast vollständig in der <xref:System.TimeZoneInfo>-Klasse integriert ist. Verwenden Sie nach Möglichkeit immer die <xref:System.TimeZoneInfo>-Klasse anstelle der <xref:System.TimeZone>-Klasse.
+> In diesem Thema wird nicht erläutert, <xref:System.TimeZone> weil seine Funktionalität fast vollständig in die-Klasse integriert ist <xref:System.TimeZoneInfo> . Verwenden Sie nach Möglichkeit die- <xref:System.TimeZoneInfo> Klasse anstelle der- <xref:System.TimeZone> Klasse.
 
 ## <a name="the-datetime-structure"></a>Die DateTime-Struktur
 
-Ein <xref:System.DateTime> -Wert definiert ein bestimmtes Datum und eine Uhrzeit. Sie enthält eine <xref:System.DateTime.Kind%2A>-Eigenschaft, die eingeschränkte Informationen über die Zeitzone bietet, zu der dieses Datum und die Uhrzeit gehören. Der von der <xref:System.DateTimeKind> -Eigenschaft zurückgegebene <xref:System.DateTime.Kind%2A> Wert zeigt an, ob der <xref:System.DateTime> -Wert eine lokale Uhrzeit darstellt (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), eine Zeit im UTC-Format (Coordinated Universal Time) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) oder eine unspezifische Uhrzeit (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+Ein <xref:System.DateTime> -Wert definiert ein bestimmtes Datum und eine Uhrzeit. Sie enthält eine- <xref:System.DateTime.Kind%2A> Eigenschaft, die eingeschränkte Informationen über die Zeitzone bereitstellt, zu der dieses Datum und die Uhrzeit gehören. Der von der <xref:System.DateTimeKind> -Eigenschaft zurückgegebene <xref:System.DateTime.Kind%2A> Wert zeigt an, ob der <xref:System.DateTime> -Wert eine lokale Uhrzeit darstellt (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), eine Zeit im UTC-Format (Coordinated Universal Time) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) oder eine unspezifische Uhrzeit (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
 Die <xref:System.DateTime> -Struktur eignet sich für Anwendungen, die Folgendes können:
 
@@ -96,9 +96,9 @@ Die <xref:System.TimeSpan> -Struktur stellt ein Zeitintervall dar. Sein zwei typ
 
 - Darstellen des Zeitintervalls zwischen zwei Datums- und Uhrzeitwerten. Beispielsweise gibt die Subtraktion eines <xref:System.DateTime> -Werts von einem anderen einen <xref:System.TimeSpan> -Wert zurück.
 
-- Messen der verstrichenen Zeit. Die <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>-Eigenschaft gibt beispielsweise einen <xref:System.TimeSpan>-Wert zurück, der das Zeitintervall angibt, das seit dem Aufruf einer der <xref:System.Diagnostics.Stopwatch> Methoden, die die verstrichene Zeit zu messen beginnen, verstrichen ist.
+- Messen der verstrichenen Zeit. Beispielsweise gibt die- <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> Eigenschaft einen <xref:System.TimeSpan> Wert zurück, der das Zeitintervall angibt, das seit dem Aufruf einer der <xref:System.Diagnostics.Stopwatch> Methoden, die die verstrichene Zeit zu messen beginnen, verstrichen ist.
 
-Ein <xref:System.TimeSpan> Wert kann auch als Ersatz für einen <xref:System.DateTime> Wert verwendet werden, wenn dieser Wert eine Uhrzeit ohne Verweis auf einen bestimmten Tag widerspiegelt. Diese Verwendung ähnelt den Eigenschaften <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> und <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, die einen <xref:System.TimeSpan> Wert zurückgeben, der die Uhrzeit ohne Verweis auf ein Datum darstellt. Beispielsweise kann die <xref:System.TimeSpan> -Struktur verwendet werden, um die täglichen Öffnungszeiten eines Geschäfts darzustellen oder um die Uhrzeit darzustellen, zu der alle regulären Ereignisse auftreten.
+Ein- <xref:System.TimeSpan> Wert kann auch als Ersatz für einen-Wert verwendet werden <xref:System.DateTime> , wenn dieser Wert eine Uhrzeit ohne Verweis auf einen bestimmten Tag widerspiegelt. Diese Verwendung ähnelt der-Eigenschaft <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> und der-Eigenschaft <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> , die einen Wert zurückgeben, <xref:System.TimeSpan> der die Uhrzeit ohne Verweis auf ein Datum darstellt. Beispielsweise kann die <xref:System.TimeSpan> -Struktur verwendet werden, um die täglichen Öffnungszeiten eines Geschäfts darzustellen oder um die Uhrzeit darzustellen, zu der alle regulären Ereignisse auftreten.
 
 Das folgende Beispiel definiert eine `StoreInfo` -Struktur, die <xref:System.TimeSpan> -Objekte für Öffnungszeiten von Geschäften enthält sowie ein <xref:System.TimeZoneInfo> -Objekt, das die Zeitzone des Geschäfts darstellt. Die Struktur enthält außerdem zwei Methoden, `IsOpenNow` und `IsOpenAt`, die angeben, ob das Geschäft zu einem vom Benutzer angegebenen Zeitpunkt geöffnet ist, wobei angenommen wird, dass er sich in der lokalen Zeitzone aufhält.
 
@@ -120,4 +120,4 @@ Die Zeitzonenunterstützung in .NET kann nur genutzt werden, wenn die Zeitzone, 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+- [Datumsangaben, Uhrzeiten und Zeitzonen](index.md)

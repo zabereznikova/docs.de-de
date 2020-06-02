@@ -1,13 +1,14 @@
 ---
 title: Autorisierung und Berechtigungen in SQL Server
+description: Erfahren Sie, wie Sie explizit Berechtigungen für die Erstellung von Datenbankobjekten, die Sie erstellen, für Benutzer in SQL Server mit ADO.net erteilen.
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eb01e29b36da5e1793b9176301a968a42115d19c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782586"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286532"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisierung und Berechtigungen in SQL Server
 Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähren, damit die Benutzer auch auf die Datenbankobjekte zugreifen können. Jedes sicherungsfähige Objekt verfügt über Berechtigungen, die einem Prinzipal mithilfe von Berechtigungsanweisungen gewährt werden können.  
@@ -31,11 +32,11 @@ Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähr
 ## <a name="permission-statements"></a>Berechtigungsanweisungen  
  In der folgenden Tabelle werden die drei Transact-SQL-Berechtigungsanweisungen beschrieben:  
   
-|Berechtigungsanweisung|Beschreibung|  
+|Berechtigungsanweisung|BESCHREIBUNG|  
 |--------------------------|-----------------|  
 |GRANT|Gewährt eine Berechtigung.|  
 |REVOKE|Widerruft eine Berechtigung. Dies ist der Standardzustand für ein neues Objekt. Eine für einen Benutzer oder eine Rolle widerrufene Berechtigung kann von anderen Gruppen oder Rollen, denen der Prinzipal zugewiesen ist, weiter geerbt werden.|  
-|DENY|Widerruft eine Berechtigung, sodass sie nicht geerbt werden kann. DENY hat gegenüber allen Berechtigungen absolute Priorität. DENY gilt jedoch nicht für Objektbesitzer oder `sysadmin`-Member. Wenn Sie der Rolle `public` mit DENY Berechtigungen für ein Objekt verweigern, gilt dies, mit Ausnahme der Objektbesitzer und der `sysadmin`-Member, für alle Benutzer und Rollen.|  
+|VERWEIGERN|Widerruft eine Berechtigung, sodass sie nicht geerbt werden kann. DENY hat gegenüber allen Berechtigungen absolute Priorität. DENY gilt jedoch nicht für Objektbesitzer oder `sysadmin`-Member. Wenn Sie der Rolle `public` mit DENY Berechtigungen für ein Objekt verweigern, gilt dies, mit Ausnahme der Objektbesitzer und der `sysadmin`-Member, für alle Benutzer und Rollen.|  
   
 - Die GRANT-Anweisung kann Berechtigungen für eine Gruppe oder Rolle zuweisen, die von Datenbankbenutzern geerbt werden können. Die DENY-Anweisung hat aber gegenüber allen anderen Berechtigungsanweisungen Vorrang. Ein Benutzer, dem eine Berechtigung verweigert wurde, kann daher diese Berechtigung nicht von einer anderen Rolle erben.  
   
@@ -54,7 +55,7 @@ Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähr
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Berechtigungen](/sql/relational-databases/security/permissions-database-engine)|Enthält Themen, in denen die Berechtigungshierarchie, Katalogsichten und Berechtigungen fester Serverrollen und fester Datenbankrollen beschrieben werden.|
   

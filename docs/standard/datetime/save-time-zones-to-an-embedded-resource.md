@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Speichern von Zeitzonen in einer eingebetteten Ressource'
+title: 'Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - time zone objects [.NET Framework], serializing
 - time zone objects [.NET Framework], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: aaee4e82d09e8b604d06dadb5a5eefe8d2e1f307
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8084cb8edff64b9d598f4fd0a62a362491c7aa7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123772"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281244"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Gewusst wie: Speichern von Zeitzonen in einer eingebetteten Ressource
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource
 
-Bei einer Zeit Zonen fähigen Anwendung ist es häufig erforderlich, dass eine bestimmte Zeitzone vorhanden ist. Da die Verfügbarkeit von einzelnen <xref:System.TimeZoneInfo> Objekten jedoch von Informationen abhängig ist, die in der Registrierung des lokalen Systems gespeichert sind, sind möglicherweise auch für die Kunden verfügbare Zeitzonen nicht vorhanden. Außerdem werden Informationen über benutzerdefinierte Zeitzonen, die mithilfe der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>-Methode instanziiert werden, nicht mit anderen Zeitzoneninformationen in der Registrierung gespeichert. Um sicherzustellen, dass diese Zeitzonen bei Bedarf verfügbar sind, können Sie Sie durch serialisieren speichern und später wiederherstellen, indem Sie Sie deserialisieren.
+Bei einer Zeit Zonen fähigen Anwendung ist es häufig erforderlich, dass eine bestimmte Zeitzone vorhanden ist. Da die Verfügbarkeit einzelner Objekte jedoch von <xref:System.TimeZoneInfo> Informationen abhängig ist, die in der Registrierung des lokalen Systems gespeichert sind, sind möglicherweise auch für die Kunden verfügbare Zeitzonen nicht vorhanden. Außerdem werden Informationen über benutzerdefinierte Zeitzonen, die mithilfe der-Methode instanziiert werden, <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> nicht mit anderen Zeitzoneninformationen in der Registrierung gespeichert. Um sicherzustellen, dass diese Zeitzonen bei Bedarf verfügbar sind, können Sie Sie durch serialisieren speichern und später wiederherstellen, indem Sie Sie deserialisieren.
 
-In der Regel erfolgt die Serialisierung eines <xref:System.TimeZoneInfo> Objekts von der Zeit Zonen fähigen Anwendung. Abhängig vom Datenspeicher, der zum Speichern serialisierter <xref:System.TimeZoneInfo> Objekte verwendet wird, werden Zeit Zonendaten möglicherweise als Teil einer Setup-oder Installationsroutine serialisiert (z. b. wenn die Daten in einem Anwendungs Schlüssel der Registrierung gespeichert sind) oder als Teil einer hilfsprogrammroutine, die vor ausgeführt wird. die endgültige Anwendung wird kompiliert (z. b. wenn die serialisierten Daten in einer .NET-XML-Ressourcen Datei (. resx) gespeichert sind).
+In der Regel erfolgt die Serialisierung eines- <xref:System.TimeZoneInfo> Objekts von der Zeit Zonen fähigen Anwendung. Abhängig vom Datenspeicher, der für serialisierte Objekte verwendet wird <xref:System.TimeZoneInfo> , Zeit Zonendaten können als Teil einer Setup-oder Installationsroutine (z. b. wenn die Daten in einem Anwendungs Schlüssel der Registrierung gespeichert sind) oder als Teil einer hilfsprogrammroutine serialisiert werden, die vor der Kompilierung der endgültigen Anwendung ausgeführt wird (z. b. wenn die serialisierten Daten in einer .NET-XML-Ressourcen Datei (. resx) gespeichert sind).
 
 Zusätzlich zu einer Ressourcen Datei, die mit der Anwendung kompiliert wird, können auch mehrere andere Datenspeicher für Zeitzoneninformationen verwendet werden. Hierzu gehört Folgendes:
 
-- Die Registrierung. Beachten Sie, dass eine Anwendung die untergeordneten Schlüssel Ihres eigenen Anwendungs Schlüssels verwenden sollte, um benutzerdefinierte Zeit Zonendaten zu speichern, anstatt die Unterschlüssel von HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows nt\currentversion\zeitzonen zu verwenden.
+- Die Registrierung. Beachten Sie, dass eine Anwendung die untergeordneten Schlüssel des eigenen Anwendungs Schlüssels verwenden sollte, um benutzerdefinierte Zeit Zonendaten zu speichern, anstatt die Unterschlüssel HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones zu verwenden.
 
 - Konfigurationsdateien.
 
@@ -35,23 +35,23 @@ Zusätzlich zu einer Ressourcen Datei, die mit der Anwendung kompiliert wird, k�
 
 1. Rufen Sie eine vorhandene Zeitzone ab, oder erstellen Sie eine neue Zeitzone.
 
-   Informationen zum Abrufen einer vorhandenen Zeitzone finden Sie unter Gewusst [wie: Zugreifen auf die vordefinierte UTC und lokale Zeit Zonen Objekte](../../../docs/standard/datetime/access-utc-and-local.md) und Gewusst [wie: Instanziieren eines TimeZoneInfo-Objekts](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Informationen zum Abrufen einer vorhandenen Zeitzone finden Sie unter Gewusst [wie: Zugreifen auf die vordefinierte UTC und lokale Zeit Zonen Objekte](access-utc-and-local.md) und Gewusst [wie: Instanziieren eines TimeZoneInfo-Objekts](instantiate-time-zone-info.md).
 
-   Um eine neue Zeitzone zu erstellen, rufen Sie eine der über Ladungen der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>-Methode auf. Weitere Informationen finden Sie unter Vorgehens [Weise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) und Gewusst [wie: Erstellen von Zeitzonen mit Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Um eine neue Zeitzone zu erstellen, rufen Sie eine der über Ladungen der- <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode auf. Weitere Informationen finden Sie unter Vorgehens [Weise: Erstellen von Zeitzonen ohne Anpassungsregeln](create-time-zones-without-adjustment-rules.md) und Gewusst [wie: Erstellen von Zeitzonen mit Anpassungsregeln](create-time-zones-with-adjustment-rules.md).
 
-2. Rufen Sie die <xref:System.TimeZoneInfo.ToSerializedString%2A>-Methode auf, um eine Zeichenfolge zu erstellen, die die Daten der Zeitzone enthält.
+2. Rufen <xref:System.TimeZoneInfo.ToSerializedString%2A> Sie die-Methode auf, um eine Zeichenfolge zu erstellen, die die Daten der Zeitzone enthält.
 
-3. Instanziieren Sie ein <xref:System.IO.StreamWriter> Objekt, indem Sie den Namen und optional den Pfad der RESX-Datei für den <xref:System.IO.StreamWriter>-Klassenkonstruktor bereitstellen.
+3. Instanziieren <xref:System.IO.StreamWriter> Sie ein-Objekt, indem Sie den Namen und optional den Pfad der RESX-Datei dem- <xref:System.IO.StreamWriter> Klassenkonstruktor bereitstellen.
 
-4. Instanziieren Sie ein <xref:System.Resources.ResXResourceWriter> Objekt, indem Sie das <xref:System.IO.StreamWriter>-Objekt an den <xref:System.Resources.ResXResourceWriter>-Klassenkonstruktor übergeben.
+4. Instanziieren Sie ein- <xref:System.Resources.ResXResourceWriter> Objekt, indem Sie das- <xref:System.IO.StreamWriter> Objekt an den- <xref:System.Resources.ResXResourceWriter> Klassenkonstruktor übergeben.
 
-5. Übergeben Sie die serialisierte Zeichenfolge der Zeitzone an die <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType>-Methode.
+5. Übergeben Sie die serialisierte Zeichenfolge der Zeitzone an die- <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> Methode.
 
-6. Rufen Sie die <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType>-Methode auf.
+6. Rufen Sie die <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> -Methode auf.
 
-7. Rufen Sie die <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType>-Methode auf.
+7. Rufen Sie die <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> -Methode auf.
 
-8. Schließen Sie das <xref:System.IO.StreamWriter>-Objekt, indem Sie dessen <xref:System.IO.StreamWriter.Close%2A>-Methode aufrufen.
+8. Schließen Sie das <xref:System.IO.StreamWriter> Objekt, indem Sie seine-Methode aufrufen <xref:System.IO.StreamWriter.Close%2A> .
 
 9. Fügen Sie die generierte RESX-Datei zum Visual Studio-Projekt der Anwendung hinzu.
 
@@ -59,16 +59,16 @@ Zusätzlich zu einer Ressourcen Datei, die mit der Anwendung kompiliert wird, k�
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird ein <xref:System.TimeZoneInfo> Objekt, das die Central Standard Time darstellt, und ein <xref:System.TimeZoneInfo> Objekt, das die Palmer Station darstellt, der Antarktis-Zeit in eine .NET-XML-Ressourcen Datei mit dem Namen SerializedTimeZones. resx, serialisiert. Central Standard Time wird normalerweise in der Registrierung definiert. Palmer Station, Antarktis ist eine benutzerdefinierte Zeitzone.
+Im folgenden Beispiel <xref:System.TimeZoneInfo> wird ein-Objekt, das die Central Standard Time darstellt, und ein-Objekt, das <xref:System.TimeZoneInfo> die Palmer Station darstellt, in der Antarktis-Zeit in eine .NET-XML-Ressourcen Datei mit dem Namen SerializedTimeZones. resx serialisiert. Central Standard Time wird normalerweise in der Registrierung definiert. Palmer Station, Antarktis ist eine benutzerdefinierte Zeitzone.
 
 [!code-csharp[TimeZone2.Serialization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#1)]
 [!code-vb[TimeZone2.Serialization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#1)]
 
-In diesem Beispiel werden <xref:System.TimeZoneInfo> Objekte serialisiert, sodass Sie zum Zeitpunkt der Kompilierung in einer Ressourcen Datei verfügbar sind.
+In diesem Beispiel <xref:System.TimeZoneInfo> werden-Objekte so serialisiert, dass Sie zum Zeitpunkt der Kompilierung in einer Ressourcen Datei verfügbar sind.
 
-Da die <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType>-Methode einer .NET-XML-Ressourcen Datei umfassende Header Informationen hinzufügt, kann Sie nicht zum Hinzufügen von Ressourcen zu einer vorhandenen Datei verwendet werden. Im Beispiel wird dies behandelt, indem die Datei "SerializedTimeZones. resx" überprüft wird und, falls vorhanden, alle anderen Ressourcen als die beiden serialisierten Zeitzonen in einem generischen <xref:System.Collections.Generic.Dictionary%602> Objekt gespeichert werden. Die vorhandene Datei wird dann gelöscht, und die vorhandenen Ressourcen werden der neuen Datei "SerializedTimeZones. resx" hinzugefügt. Die serialisierten Zeit Zonendaten werden dieser Datei ebenfalls hinzugefügt.
+Da die- <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> Methode einer .NET-XML-Ressourcen Datei umfassende Header Informationen hinzufügt, kann Sie nicht zum Hinzufügen von Ressourcen zu einer vorhandenen Datei verwendet werden. Im Beispiel wird dies behandelt, indem die Datei "SerializedTimeZones. resx" überprüft und, falls vorhanden, alle anderen Ressourcen als die beiden serialisierten Zeitzonen in einem generischen Objekt gespeichert werden <xref:System.Collections.Generic.Dictionary%602> . Die vorhandene Datei wird dann gelöscht, und die vorhandenen Ressourcen werden der neuen Datei "SerializedTimeZones. resx" hinzugefügt. Die serialisierten Zeit Zonendaten werden dieser Datei ebenfalls hinzugefügt.
 
-Die Schlüsselfelder (oder **Namen**) der Ressourcen dürfen keine eingebetteten Leerzeichen enthalten. Die <xref:System.String.Replace%28System.String%2CSystem.String%29>-Methode wird aufgerufen, um alle eingebetteten Leerzeichen in den Zeit Zonen bezeichgern zu entfernen, bevor Sie der Ressourcen Datei zugewiesen werden.
+Die Schlüsselfelder (oder **Namen**) der Ressourcen dürfen keine eingebetteten Leerzeichen enthalten. Die- <xref:System.String.Replace%28System.String%2CSystem.String%29> Methode wird aufgerufen, um alle eingebetteten Leerzeichen in den Zeit Zonen bezeichgern zu entfernen, bevor Sie der Ressourcen Datei zugewiesen werden.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
@@ -83,6 +83,6 @@ Für dieses Beispiel benötigen Sie Folgendes:
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
-- [Übersicht über Zeitzonen](../../../docs/standard/datetime/time-zone-overview.md)
-- [Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Datumsangaben, Uhrzeiten und Zeitzonen](index.md)
+- [Übersicht über Zeitzonen](time-zone-overview.md)
+- [Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource](restore-time-zones-from-an-embedded-resource.md)

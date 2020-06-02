@@ -1,23 +1,24 @@
 ---
 title: Abfragen in LINQ to DataSet
+description: Erfahren Sie, wie Sie Abfragen in LINQ to DataSet verfassen, indem Sie die Datenquelle oder die Quellen abrufen, die Abfrage erstellen und die Abfrage ausführen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 092dbb5227e5f9e0ae2a62656a300d2367bcf16b
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 829e7dce4801508a8311f7bcbfeccbc36184cffc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634793"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286636"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Abfragen in LINQ to DataSet
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. Language-Integrated Query (LINQ) bietet ein einfacheres, konsistenteres Modell zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer LINQ-Abfrage arbeiten Sie immer mit Programmierobjekten.  
   
  Eine LINQ-Abfrageoperation besteht aus drei Aktionen: Abrufen der Datenquelle(n), Erstellen der Abfrage und Ausführen der Abfrage.  
   
- Datenquellen, die den <xref:System.Collections.Generic.IEnumerable%601> generischen Schnittstelle implementieren, können über LINQ abgefragt werden. Beim Aufrufen von <xref:System.Data.DataTableExtensions.AsEnumerable%2A> auf einem <xref:System.Data.DataTable> wird ein Objekt zurückgegeben, das die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert, die als Datenquelle für LINQ to DataSet Abfragen dient.  
+ Datenquellen, die die <xref:System.Collections.Generic.IEnumerable%601> generische-Schnittstelle implementieren, können über LINQ abgefragt werden. <xref:System.Data.DataTableExtensions.AsEnumerable%2A>Beim Aufrufen von für einen <xref:System.Data.DataTable> wird ein Objekt zurückgegeben, das die generische- <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle implementiert, die als Datenquelle für LINQ to DataSet Abfragen dient.  
   
  In der Abfrage geben Sie genau die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. In LINQ wird eine Abfrage in einer Variablen gespeichert. Wenn die Abfrage so eingerichtet ist, dass sie eine Sequenz von Werten zurückgibt, muss die Abfragevariable selbst ein aufzählbarer Typ sein. Diese Abfragevariable führt keine Aktion aus und gibt keine Daten zurück. Sie dient lediglich zur Speicherung der Abfrageinformationen. Nachdem Sie eine Abfrage erstellt haben, müssen Sie sie ausführen, damit Daten abgerufen werden.  
   
@@ -28,7 +29,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
 ## <a name="queries"></a>Abfragen  
  LINQ to DataSet Abfragen können in zwei verschiedenen Syntaxen formuliert werden: Abfrage Ausdruckssyntax und Methoden basierte Abfrage Syntax.  
   
-### <a name="query-expression-syntax"></a>-Abfrageausdruckssyntax  
+### <a name="query-expression-syntax"></a>Syntax für Abfrageausdrücke  
  Abfrageausdrücke sind eine deklarative Abfragesyntax. Mit dieser Syntax kann der Entwickler Abfragen in einem SQL-ähnlichen Format in C# oder Visual Basic schreiben. Die Abfrageausdruckssyntax ermöglicht die Ausführung komplexer Filter-, Sortier- und Gruppiervorgänge mit minimalem Codeeinsatz. Weitere Informationen finden Sie unter [LINQ-Abfrage Ausdrücke](../../../csharp/linq/index.md#query-expression-overview) und [grundlegende Abfrage Vorgänge (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
   
  Die .NET Framework Common Language Runtime (CLR) kann die Abfrage Ausdruckssyntax selbst nicht lesen. Daher werden die Abfrageausdrücke beim Kompilieren in etwas übersetzt, was die CLR versteht: Methodenaufrufe. Diese Methoden werden als *Standard Abfrage Operatoren*bezeichnet. Als Entwickler können Sie entscheiden, ob Sie die Methoden mittels Methodensyntax direkt aufrufen möchten oder ob dafür die Abfragesyntax verwendet werden soll. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Weitere Informationen zu den Standard Abfrage Operatoren finden Sie unter [Übersicht über Standard Abfrage Operatoren](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
@@ -39,7 +40,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Methodenbasierte Abfragesyntax  
- Die andere Möglichkeit, LINQ to DataSet Abfragen zu formulieren, ist die Verwendung von Methoden basierten Abfragen. Bei der Methoden basierten Abfrage Syntax handelt es sich um eine Abfolge direkter Methodenaufrufe an LINQ-Operator Methoden, wobei als Parameter Lambda-Ausdrücke übergeben werden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Die andere Möglichkeit, LINQ to DataSet Abfragen zu formulieren, ist die Verwendung von Methoden basierten Abfragen. Dabei handelt es sich um eine Abfolge direkter Methodenaufrufe der LINQ-Operatormethoden, wobei als Parameter Lambdaausdrücke übergeben werden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  In diesem Beispiel wird <xref:System.Linq.Enumerable.Select%2A> verwendet, um alle Zeilen aus der `Product`-Tabelle zurückzugeben und die Produktnamen anzuzeigen.  
   
@@ -52,7 +53,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- Nach Ausführung der Abfrage können keine weiteren Abfragen mehr verfasst werden. Alle nachfolgenden Abfragen verwenden die im Arbeitsspeicher abgelegten LINQ-Operatoren. Die Abfrage Ausführung tritt auf, wenn Sie die Abfrage Variable in einer `foreach`-oder `For Each`-Anweisung durchlaufen oder einen der LINQ-Konvertierungs Operatoren aufruft, die eine sofortige Ausführung bewirken. Dabei kann es sich um einen der folgenden Operatoren handeln: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> und <xref:System.Linq.Enumerable.ToDictionary%2A>.  
+ Nach Ausführung der Abfrage können keine weiteren Abfragen mehr verfasst werden. Alle nachfolgenden Abfragen verwenden die im Arbeitsspeicher abgelegten LINQ-Operatoren. Die Abfrage Ausführung tritt auf, wenn Sie die Abfrage Variable in einer- `foreach` oder- `For Each` Anweisung durchlaufen oder einen der LINQ-Konvertierungs Operatoren aufruft, die eine sofortige Ausführung bewirken. Dabei kann es sich um einen der folgenden Operatoren handeln: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> und <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
  Im folgenden Beispiel gibt die erste Abfrage alle Produkte zurück und sortiert sie nach dem Listenpreis. Um die sofortige Abfrageausführung zu erzwingen, wird die <xref:System.Linq.Enumerable.ToArray%2A>-Methode verwendet:  
   
@@ -64,4 +65,4 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
 - [Programmierhandbuch](programming-guide-linq-to-dataset.md)
 - [Abfragen von DataSets](querying-datasets-linq-to-dataset.md)
 - [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/index.md)
-- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Erste Schritte mit LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

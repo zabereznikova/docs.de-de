@@ -11,12 +11,12 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-ms.openlocfilehash: 1dfb1f6246e86d6f565c9338fb09f34a1608e9b0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8986e778e84fdf211d11fd7a897508acc7412207
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705924"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291200"
 ---
 # <a name="role-based-security"></a>Rollenbasierte Sicherheit
 Rollen werden häufig in Finanz-oder Geschäftsanwendungen verwendet, um Richtlinien durchzusetzen. Beispielsweise könnte eine Anwendung Beschränkungen der Größe der Transaktion, die verarbeitet wird, abhängig davon erzwingen, ob der anfordernde Benutzer ein Mitglied einer bestimmten Rolle ist. Angestellte können zum Verarbeiten von Transaktionen autorisiert sein, die unter einem bestimmten Schwellenwert liegen, für Abteilungsleiter kann eine höhere Grenze und für Mitglieder der Geschäftsleitung eine noch höhere (oder keine) Grenze angegeben sein. Rollenbasierte Sicherheit kann auch verwendet werden, wenn eine Anwendung mehrere Bestätigungen für das Abschließen einer Aktion benötigt. Ein solcher Fall könnte ein Beschaffungssystem sein, in dem jeder Mitarbeiter eine Bestellanforderung generieren kann, aber nur ein Einkaufssachbearbeiter diese Anforderung in eine Bestellung umwandeln kann, die an einen Lieferanten gesendet werden kann.  
@@ -27,14 +27,14 @@ Rollen werden häufig in Finanz-oder Geschäftsanwendungen verwendet, um Richtli
   
  .NET Framework bietet Unterstützung für rollenbasierte Sicherheit, die genügend flexibel und erweiterbar ist, um die Anforderungen einer großen Bandbreite von Anwendungen zu erfüllen. Sie haben die Wahl, auf vorhandene Authentifizierunginfrastrukturen zurückzugreifen, etwa COM+ 1.0 Services, oder ein benutzerdefiniertes Authentifizierungssystem zu erstellen. Rollenbasierte Sicherheit ist besonders gut geeignet für die Verwendung in ASP.NET-Webanwendungen, die hauptsächlich auf dem Server verarbeitet werden. Die rollenbasierte Sicherheit von .NET Framework kann aber sowohl auf dem Client als auch auf dem Server verwendet werden.  
   
- Vergewissern Sie sich vor dem Lesen dieses Abschnitts, dass Sie sich mit dem Material vertraut gemacht haben, das in den [wichtigsten Sicherheitskonzepten](../../../docs/standard/security/key-security-concepts.md)  
+ Vergewissern Sie sich vor dem Lesen dieses Abschnitts, dass Sie sich mit dem Material vertraut gemacht haben, das in den [wichtigsten Sicherheitskonzepten](key-security-concepts.md)  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Title|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Principal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md)|Erläutert das Einrichten und Verwalten von Windows- und generischen Identitäten und Prinzipalen.|  
-|[Schlüsselbegriffe der Sicherheit](../../../docs/standard/security/key-security-concepts.md)|Stellt die grundlegenden Konzepte vor, die Sie verstehen müssen, bevor Sie .NET Framework-Sicherheit verwenden.|  
+|[Principal- und Identitätsobjekte](principal-and-identity-objects.md)|Erläutert das Einrichten und Verwalten von Windows- und generischen Identitäten und Prinzipalen.|  
+|[Schlüsselbegriffe der Sicherheit](key-security-concepts.md)|Stellt die grundlegenden Konzepte vor, die Sie verstehen müssen, bevor Sie .NET Framework-Sicherheit verwenden.|  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

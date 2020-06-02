@@ -1,23 +1,24 @@
 ---
 title: Erstellen einer DataTable aus einer Abfrage (LINQ to DataSet)
+description: Erfahren Sie, wie Sie die copytodatabel-Methode verwenden, um die Ergebnisse einer Abfrage zu übernehmen und die Daten in eine Datentabelle zu kopieren, die dann für die Datenbindung verwendet werden kann.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 46e977088cd6eca7842565ae6b258f70ca5920a9
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 0a7c8f005b90484ef2f9c7e48218bda40533696a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111815"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287011"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Erstellen einer DataTable aus einer Abfrage (LINQ to DataSet)
 Das <xref:System.Data.DataTable>-Objekt wird häufig zur Datenbindung eingesetzt. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode kopiert die Ergebnisse einer Abfrage in eine <xref:System.Data.DataTable>, die dann für die Datenbindung verwendet werden kann. Wenn die Datenoperationen ausgeführt wurden, wird die neue <xref:System.Data.DataTable> wieder mit der ursprünglichen <xref:System.Data.DataTable> zusammengeführt.  
   
  Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode verwendet den folgenden Prozess, um aus einer Abfrage eine <xref:System.Data.DataTable> zu erstellen:  
   
-1. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode klont eine <xref:System.Data.DataTable> aus der Quelltabelle (ein <xref:System.Data.DataTable>-Objekt, das die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert). Die <xref:System.Collections.IEnumerable> Quelle stammt im Allgemeinen aus einem LINQ-DataSet-Ausdruck oder einer Methodenabfrage.  
+1. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode klont eine <xref:System.Data.DataTable> aus der Quelltabelle (ein <xref:System.Data.DataTable>-Objekt, das die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert). Die <xref:System.Collections.IEnumerable> Quelle stammt im Allgemeinen von einem LINQ to DataSet Ausdruck oder einer Methoden Abfrage.  
   
 2. Das Schema der geklonten <xref:System.Data.DataTable> wird aus den Spalten des ersten aufgezählten <xref:System.Data.DataRow>-Objekts in der Quelltabelle generiert, und als Name für die geklonte Tabelle wird der Name der Quelltabelle mit dem Zusatz "Abfrage" verwendet.  
   
@@ -25,7 +26,7 @@ Das <xref:System.Data.DataTable>-Objekt wird häufig zur Datenbindung eingesetzt
   
 4. Nachdem alle <xref:System.Data.DataTable>-Objekte in der abfragbaren Eingabetabelle kopiert wurden, wird die geklonte <xref:System.Data.DataRow> zurückgegeben. Wenn die Ausgangsfolge keine <xref:System.Data.DataRow>-Objekte enthält, gibt die Methode eine leere <xref:System.Data.DataTable> zurück.  
   
-Wenn <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> sie die Methode aufruft, wird die an die Quelltabelle gebundene Abfrage ausgeführt.  
+Das Aufrufen der- <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Methode bewirkt, dass die an die Quell Tabelle gebundene Abfrage ausgeführt wird.  
   
  Wenn die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode in einer Zeile der Quelltabelle auf einen NULL-Verweis oder einen Wert trifft, der NULL zulässt, wird der Wert durch <xref:System.DBNull.Value> ersetzt. Auf diese Weise werden die NULL-Werte in der zurückgegebenen <xref:System.Data.DataTable> korrekt behandelt.  
   
@@ -36,8 +37,8 @@ Wenn <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> sie die Methode a
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
-## <a name="creating-a-custom-copytodatatablet-method"></a>Erstellen einer benutzerdefinierten\<CopyToDataTable T->-Methode  
- Die vorhandenen <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methoden arbeiten nur mit einer <xref:System.Collections.Generic.IEnumerable%601>-Quelle, bei der der generische Parameter `T` den Typ <xref:System.Data.DataRow> aufweist. Obwohl dies hilfreich ist, können Tabellen dabei nicht aus einer Sequenz von Skalartypen, aus Abfragen, die anonyme Typen zurückgeben, oder aus Abfragen, die Tabellenjoins durchführen, erstellt werden. Ein Beispiel für das Implementieren `CopyToDataTable` von zwei benutzerdefinierten Methoden, die eine Tabelle aus einer Sequenz von skalaren oder anonymen Typen laden, finden Sie unter [Gewusst wie: Implementieren von CopyToDataTable\<T> Wobei der generische Typ T kein DataRow](implement-copytodatatable-where-type-not-a-datarow.md)s ist.  
+## <a name="creating-a-custom-copytodatatablet-method"></a>Erstellen einer benutzerdefinierten copydedatdatababel- \<T> Methode  
+ Die vorhandenen <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methoden arbeiten nur mit einer <xref:System.Collections.Generic.IEnumerable%601>-Quelle, bei der der generische Parameter `T` den Typ <xref:System.Data.DataRow> aufweist. Obwohl dies hilfreich ist, können Tabellen dabei nicht aus einer Sequenz von Skalartypen, aus Abfragen, die anonyme Typen zurückgeben, oder aus Abfragen, die Tabellenjoins durchführen, erstellt werden. Ein Beispiel für die Implementierung von zwei benutzerdefinierten `CopyToDataTable` Methoden, die eine Tabelle aus einer Sequenz von skalaren oder anonymen Typen laden, finden Sie unter Gewusst [wie: Implementieren von copytodatable, \<T> wobei der generische Typ T keine DataRow s ist](implement-copytodatatable-where-type-not-a-datarow.md).  
   
  Für die Beispiele in diesem Abschnitt werden die folgenden benutzerdefinierten Typen verwendet:  
   
@@ -74,7 +75,7 @@ Wenn <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> sie die Methode a
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Programmierhandbuch](programming-guide-linq-to-dataset.md)
 - [Generische Field- und SetField-Methoden](generic-field-and-setfield-methods-linq-to-dataset.md)

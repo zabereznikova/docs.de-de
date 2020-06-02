@@ -1,22 +1,23 @@
 ---
 title: Abrufen und Ändern von Daten
+description: In der .NET Framework fungieren Datenanbieter in ADO.net als Brücke zwischen einer Anwendung und einer Datenquelle, um Daten zu lesen und zu aktualisieren.
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 65c373ecff004e219527754bf2e9cc56837dc305
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: f916324dc829526a5e6b0078021b09786755f666
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980053"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286610"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
-Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten. Die .NET Framework-Datenanbieter von ADO.net dienen als Brücke zwischen einer Anwendung und einer Datenquelle und ermöglichen Ihnen das Ausführen von Befehlen sowie das Abrufen von Daten mithilfe eines **DataReader** oder eines **DataAdapter**. Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren. In ADO.NET umfasst das Aktualisieren von Daten die Verwendung der **DataAdapter** -und <xref:System.Data.DataSet>-und **Command** -Objekte. Außerdem können Transaktionen verwendet werden.  
+Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten. Die .NET Framework-Datenanbieter von ADO.net dienen als Brücke zwischen einer Anwendung und einer Datenquelle und ermöglichen Ihnen das Ausführen von Befehlen sowie das Abrufen von Daten mithilfe eines **DataReader** oder eines **DataAdapter**. Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren. In ADO.NET umfasst das Aktualisieren von Daten die Verwendung der **DataAdapter** -und <xref:System.Data.DataSet> - **Command** -Objekte sowie die Verwendung von Transaktionen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Aufbauen der Verbindung zu einer Datenquelle](connecting-to-a-data-source.md)  
+ [Herstellen der Verbindung mit einer Datenquelle](connecting-to-a-data-source.md)  
  Beschreibt, wie eine Verbindung zu einer Datenquelle hergestellt wird und wie mit Verbindungsereignissen gearbeitet wird.  
   
- [Verbindungszeichenfolgen](connection-strings.md)  
+ [Verbindungs Zeichenfolgen](connection-strings.md)  
  Enthält Themen, die verschiedene Aspekte der Verwendung von Verbindungszeichenfolgen beschreiben, einschließlich der Schlüsselwörter für Verbindungszeichenfolgen und Sicherheitsinformationen sowie das Speichern und Abrufen von Verbindungszeichenfolgen.  
   
  [Verbindungspooling](connection-pooling.md)  
@@ -25,7 +26,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  [Befehle und Parameter](commands-and-parameters.md)  
  Enthält Themen, in denen beschrieben wird, wie Befehlen und Befehlsgeneratoren erstellt und Parameter konfiguriert werden und welche Vorgehensweise beim Ausführen von Befehlen zum Abrufen und Bearbeiten von Daten ausgeführt werden muss.  
   
- [DataAdapters und DataReaders](dataadapters-and-datareaders.md)  
+ ["DataAdapters" und "DataReaders"](dataadapters-and-datareaders.md)  
  Enthält Themen, in denen DataReader, DataAdapter, Parameter und die Vorgehensweise bei DataAdapter-Ereignissen und beim Ausführen von Batchvorgängen beschrieben werden.  
   
  [Transaktionen und Parallelität](transactions-and-concurrency.md)  
@@ -35,7 +36,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  Enthält ein Beispiel für die Zuordnung der Werte, die für eine **Identitäts** Spalte in einer SQL Server Tabelle oder **für ein automatisches** Nummerierungs Feld in einer Microsoft Access-Tabelle generiert werden, zu einer Spalte einer eingefügten Zeile in einer Tabelle. Erläutert das Zusammenführen von Identitätswerten in einer `DataTable`.  
   
  [Abrufen von Binärdaten](retrieving-binary-data.md)  
- Beschreibt, wie Binärdaten oder große Datenstrukturen mithilfe von `CommandBehavior`abgerufen werden.`SequentialAccess` , um das Standardverhalten einer `DataReader`zu ändern.  
+ Beschreibt, wie Binärdaten oder große Datenstrukturen mithilfe von abgerufen werden `CommandBehavior` .`SequentialAccess` , um das Standardverhalten eines zu ändern `DataReader` .  
   
  [Ändern von Daten mit gespeicherten Prozeduren](modifying-data-with-stored-procedures.md)  
  Beschreibt, wie mit Eingabe- und Ausgabeparametern von gespeicherten Prozeduren eine Zeile in eine Datenbank eingefügt wird, wodurch ein neuer Identitätswert zurückgegeben wird.  
@@ -49,7 +50,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  [Datenablaufverfolgung in ADO.NET](data-tracing.md)  
  Beschreibt, wie ADO.NET eine integrierte Funktionalität für die Datenablaufverfolgung bereitstellt.  
   
- [Performance Counters](performance-counters.md)  
+ [Leistungsindikatoren](performance-counters.md)  
  Beschreibt für `SqlClient` und `OracleClient` verfügbare Leistungsindikatoren.  
   
  [Asynchrone Programmierung](asynchronous-programming.md)  
@@ -61,7 +62,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
 ## <a name="see-also"></a>Siehe auch
 
 - [Datentypzuordnungen in ADO.NET](data-type-mappings-in-ado-net.md)
-- [DataSets, DataTables und DataViews](./dataset-datatable-dataview/index.md)
+- ["DataSets", "DataTables" und "DataViews"](./dataset-datatable-dataview/index.md)
 - [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
 - [SQL Server und ADO.NET](./sql/index.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

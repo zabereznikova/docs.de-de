@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Verwenden von benutzerdefinierten Tabellenwertfunktionen'
+description: Verwenden Sie diese Beispiele, um zu erfahren, wie Sie eine Tabellenwert Funktion erstellen, die ein einzelnes Rowset zurückgibt. Verwenden Sie eine solche Tabellenwert Funktion genau wie eine Tabelle.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: c4b5290e4f1aa69c7f55951d526ccb303a5a95ec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 44866367393e321d7dd2db965e2fad8a2e6b63e9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003182"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286325"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Vorgehensweise: Verwenden von benutzerdefinierten Tabellenwertfunktionen
 Eine Tabellenwertfunktion gibt ein einzelnes Rowset (im Gegensatz zu gespeicherten Prozeduren, die mehrere Ergebnisformen zurückgeben können) zurück. Da der Rückgabetyp einer Tabellenwertfunktion `Table` lautet, können Sie eine Tabellenwertfunktion überall dort in SQL nutzen, wo Sie eine Tabelle verwenden können. Außerdem können Sie die Tabellenwertfunktion so wie eine Tabelle behandeln.  

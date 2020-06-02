@@ -1,13 +1,14 @@
 ---
 title: Entity Data Model
+description: Das Entity Data Model beschreibt die Struktur der Daten, unabhängig von Ihrer gespeicherten Form, die Herausforderungen behandelt, die sich aus der Speicherung von Daten in vielen Formularen ergeben.
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: ed834c57104e9f03ac337f6c1d30a0498bd42a06
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738411"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286739"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur unabhängig von der gespeicherten Form beschreiben. Das EDM ist aus dem 1976 von Peter Chen beschriebenen Entitätsbeziehungsmodell ausgeliehen, baut aber auch auf dem Entitätsbeziehungsmodell auf und erweitert seine herkömmliche Verwendung.  
@@ -23,7 +24,7 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Entity Data Model: Namespaces](entity-data-model-namespaces.md)  
   
- [Entity Data Model: Primitive Datentypen](entity-data-model-primitive-data-types.md)  
+ [Entity Data Model: primitive Datentypen](entity-data-model-primitive-data-types.md)  
   
  [Entity Data Model: Vererbung](entity-data-model-inheritance.md)  
   
@@ -33,11 +34,11 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Zuordnungssatz](association-set.md)  
   
- [Ende des Zuordnungssatzes](association-set-end.md)  
+ [Zuordnungssatzende](association-set-end.md)  
   
  [Zuordnungstyp](association-type.md)  
   
- [Komplexer Typ](complex-type.md)  
+ [komplexer Typ](complex-type.md)  
   
  [Entitätscontainer](entity-container.md)  
   
@@ -53,11 +54,11 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Im Modell deklarierte Funktion](model-declared-function.md)  
   
- [Im Modell definierte Funktion](model-defined-function.md)  
+ [Modelldefinierte Funktion](model-defined-function.md)  
   
  [Navigationseigenschaft](navigation-property.md)  
   
- [Eigenschaft](property.md)  
+ [property](property.md)  
   
  [Einschränkung der referenziellen Integrität](referential-integrity-constraint.md)  
   
