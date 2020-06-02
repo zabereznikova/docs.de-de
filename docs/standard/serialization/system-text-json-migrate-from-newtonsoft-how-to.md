@@ -1,17 +1,21 @@
 ---
 title: Migrieren von Newtonsoft.Json zu System.Text.Json – .NET
-author: ''
-ms.author: ''
+author: tdykstra
+ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: ''
-helpviewer_keywords: []
+ms.date: 01/10/2020
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
 ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
+ms.lasthandoff: 05/29/2020
 ms.locfileid: "83703580"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Migration von Newtonsoft.Json zu System.Text.Json
@@ -39,339 +43,43 @@ In der folgenden Tabelle sind die `Newtonsoft.Json`-Funktionen mit ihren Entspre
 * Nicht unterstützt, Problemumgehung ist nicht praktikabel oder nicht möglich. Wenn Sie von diesen `Newtonsoft.Json`-Funktionen abhängig sind, ist die Migration nicht ohne wesentliche Änderungen möglich.
 
 | Feature in Newtonsoft.Json                               | Äquivalent in System.Text.Json |
-|---
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
-----------------------------|--- title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: 'Migrieren von Newtonsoft.Json zu System.Text.Json – .NET' author: ms.author: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
-- 
-- 
-- 
-- 
-
----------------| | Deserialisierung standardmäßig ohne Beachtung der Groß-/Kleinschreibung           | ✔️ [Globale Einstellung PropertyNameCaseInsensitive](#case-insensitive-deserialization) | | Binnenmajuskel bei Eigenschaftennamen                             | ✔️ [Globale Einstellung PropertyNamingPolicy](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) | | Minimales Escapen von Zeichen                            | ✔️ [Striktes Escapen von Zeichen, konfigurierbar](#minimal-character-escaping) | | `NullValueHandling.Ignore` globale Einstellung             | ✔️ [Globale Option IgnoreNullValues](system-text-json-how-to.md#exclude-all-null-value-properties) | | Kommentare zulassen                                        | ✔️ [Globale Einstellung ReadCommentHandling](#comments) | | Nachstehende Kommas zulassen                                 | ✔️ [Globale Einstellung AllowTrailingCommas](#trailing-commas) | | Benutzerdefinierte Registrierung von Konvertern                         | ✔️ [Abweichende Rangfolge](#converter-registration-precedence) | | Standardmäßig keine maximale Tiefe                           | ✔️ [Maximale Standardtiefe von 64, konfigurierbar](#maximum-depth) | | Unterstützung für eine Vielzahl von Typen                    | ⚠️ [Benutzerdefinierte Konverter für einige Typen erforderlich](#types-without-built-in-support) | | Zeichenfolgen als Zahlen deserialisieren                        | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#quoted-numbers) | | `Dictionary` mit Schlüssel deserialisieren, der keine Zeichenfolge ist          | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#dictionary-with-non-string-key) | | Polymorphe Serialisierung                             | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#polymorphic-serialization) | | Polymorphe Deserialisierung                           | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#polymorphic-deserialization) | | Abgeleiteten Typ in `object`-Eigenschaften deserialisieren      | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#deserialization-of-object-properties) | | JSON-Literal `null` in Non-Nullable-Werttypen deserialisieren | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#deserialize-null-to-non-nullable-type) | | In unveränderliche Klassen und Strukturen deserialisieren          | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#deserialize-to-immutable-classes-and-structs) | | `[JsonConstructor]`-Attribut                         | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#specify-constructor-to-use) | | `Required`-Einstellung im `[JsonProperty]`-Attribut        | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#required-properties) | | `NullValueHandling`-Einstellung im `[JsonProperty]`-Attribut | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#conditionally-ignore-a-property)  | | `DefaultValueHandling`-Einstellung im `[JsonProperty]`-Attribut | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#conditionally-ignore-a-property)  | | `DefaultValueHandling` Globale Einstellung                 | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#conditionally-ignore-a-property) | | `DefaultContractResolver` zum Ausschließen von Eigenschaften       | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#conditionally-ignore-a-property) | | Einstellungen `DateTimeZoneHandling` und `DateFormatString`   | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#specify-date-format) | | Rückrufe                                             | ⚠️ [Nicht unterstützt, Umgehung, Beispiel](#callbacks) | | Unterstützung für öffentliche und nicht öffentliche Felder              | ⚠️ [Nicht unterstützt, Umgehung](#public-and-non-public-fields) | | Unterstützung für Getter und Setter für interne und private Eigenschaften | ⚠️ [Nicht unterstützt, Umgehung](#internal-and-private-property-setters-and-getters) | | `JsonConvert.PopulateObject`-Methode                   | ⚠️ [Nicht unterstützt, Umgehung](#populate-existing-objects) | | Globale Einstellung `ObjectCreationHandling`               | ⚠️ [Nicht unterstützt, Umgehung](#reuse-rather-than-replace-properties) | | Ohne Setter zu Sammlungen hinzufügen                    | ⚠️ [Nicht unterstützt, Umgehung](#add-to-collections-without-setters) | | Globale Einstellung `PreserveReferencesHandling`           | ❌ [Nicht unterstützt](#preserve-object-references-and-handle-loops) | | Globale Einstellung `ReferenceLoopHandling`                | ❌ [Nicht unterstützt](#preserve-object-references-and-handle-loops) | | Unterstützung für `System.Runtime.Serialization`-Attribute | ❌ [Nicht unterstützt](#systemruntimeserialization-attributes) | | Globale Einstellung `MissingMemberHandling`                | ❌ [Nicht unterstützt](#missingmemberhandling) | | Eigenschaftennamen ohne Anführungszeichen zulassen                   | ❌ [Nicht unterstützt](#json-strings-property-names-and-string-values) | | Einzelne Anführungszeichen um Zeichenfolgenwerte zulassen              | ❌ [Nicht unterstützt](#json-strings-property-names-and-string-values) | | JSON-Werte, die keine Zeichenfolgen sind, für Zeichenfolgeneigenschaften zulassen    | ❌ [Nicht unterstützt](#non-string-values-for-string-properties) |
+|-------------------------------------------------------|-----------------------------|
+| Standardmäßige Deserialisierung ohne Berücksichtigung von Groß-/Kleinschreibung           | ✔️ [Globale Einstellung „PropertyNameCaseInsensitive“](#case-insensitive-deserialization) |
+| Eigenschaftsnamen mit Camel-Case-Schreibweise                             | ✔️ [Globale Einstellung „PropertyNamingPolicy“](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
+| Minimales Escapen von Zeichen                            | ✔️ [Strenges Escapen von Zeichen, konfigurierbar](#minimal-character-escaping) |
+| Globale Einstellung `NullValueHandling.Ignore`             | ✔️ [Globale Option „IgnoreNullValues“](system-text-json-how-to.md#exclude-all-null-value-properties) |
+| Kommentare zulassen                                        | ✔️ [Globale Einstellung „ReadCommentHandling“](#comments) |
+| Nachfolgende Kommas zulassen                                 | ✔️ [Globale Einstellung „AllowTrailingCommas“](#trailing-commas) |
+| Registrierung benutzerdefinierter Konverter                         | ✔️ [Rangordnung weicht ab](#converter-registration-precedence) |
+| Keine standardmäßige maximale Tiefe                           | ✔️ [Standardmäßige maximale Tiefe von  64, konfigurierbar](#maximum-depth) |
+| Unterstützung für ein breites Spektrum von Typen                    | ⚠️ [Einige Typen erfordern benutzerdefinierte Konverter](#types-without-built-in-support) |
+| Deserialisieren von Zeichenfolgen als Zahlen                        | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#quoted-numbers) |
+| Deserialisieren von `Dictionary` mit Nicht-Zeichenfolgen-Schlüssel          | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#dictionary-with-non-string-key) |
+| Polymorphe Serialisierung                             | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#polymorphic-serialization) |
+| Polymorphe Deserialisierung                           | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#polymorphic-deserialization) |
+| Deserialisieren eines abgeleiteten Typs in `object`-Eigenschaften      | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#deserialization-of-object-properties) |
+| Deserialisieren des JSON-Literals `null` in Non-Nullable-Werttypen | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#deserialize-null-to-non-nullable-type) |
+| Deserialisieren in unveränderliche Klassen und Strukturen          | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#deserialize-to-immutable-classes-and-structs) |
+| `[JsonConstructor]`-Attribut                         | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#specify-constructor-to-use) |
+| `Required`-Einstellung für `[JsonProperty]`-Attribut        | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#required-properties) |
+| `NullValueHandling`-Einstellung für `[JsonProperty]`-Attribut | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#conditionally-ignore-a-property)  |
+| `DefaultValueHandling`-Einstellung für `[JsonProperty]`-Attribut | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#conditionally-ignore-a-property)  |
+| Globale Einstellung `DefaultValueHandling`                 | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#conditionally-ignore-a-property) |
+| `DefaultContractResolver` zum Ausschließen von Eigenschaften       | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#conditionally-ignore-a-property) |
+| Einstellungen `DateTimeZoneHandling` und `DateFormatString`   | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#specify-date-format) |
+| Rückrufe                                             | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#callbacks) |
+| Unterstützung für öffentliche und nicht öffentliche Felder              | ⚠️ [Nicht unterstützt, Problemumgehung, Beispiel](#public-and-non-public-fields) |
+| Unterstützung für interne und private Eigenschaften-Setter und -Getter | ⚠️ [Nicht unterstützt, Problemumgehung](#internal-and-private-property-setters-and-getters) |
+| `JsonConvert.PopulateObject`-Methode                   | ⚠️ [Nicht unterstützt, Problemumgehung](#populate-existing-objects) |
+| Globale Einstellung `ObjectCreationHandling`               | ⚠️ [Nicht unterstützt, Problemumgehung](#reuse-rather-than-replace-properties) |
+| Zu Sammlungen hinzufügen ohne Setter                    | ⚠️ [Nicht unterstützt, Problemumgehung](#add-to-collections-without-setters) |
+| Globale Einstellung `PreserveReferencesHandling`           | ❌ [Nicht unterstützt](#preserve-object-references-and-handle-loops) |
+| Globale Einstellung `ReferenceLoopHandling`                | ❌ [Nicht unterstützt](#preserve-object-references-and-handle-loops) |
+| Unterstützung für `System.Runtime.Serialization`-Attribute | ❌ [Nicht unterstützt](#systemruntimeserialization-attributes) |
+| Globale Einstellung `MissingMemberHandling`                | ❌ [Nicht unterstützt](#missingmemberhandling) |
+| Eigenschaftsnamen ohne Anführungszeichen zulassen                   | ❌ [Nicht unterstützt](#json-strings-property-names-and-string-values) |
+| Einschließen von Zeichenfolgenwerten in einfache Anführungszeichen zulassen              | ❌ [Nicht unterstützt](#json-strings-property-names-and-string-values) |
+| JSON-Werte, die keine Zeichenfolgen sind, für Zeichenfolgeneigenschaften zulassen    | ❌ [Nicht unterstützt](#non-string-values-for-string-properties) |
 
 Dies ist keine vollständige Liste der `Newtonsoft.Json`-Funktionen. Die Liste enthält viele der Szenarien, die in [GitHub-Issues](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) oder [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json)-Beiträgen angefordert wurden. Wenn Sie eine Problemumgehung für eins der hier aufgelisteten Szenarien implementieren, für das derzeit kein Beispielcode vorhanden ist, und wenn Sie Ihre Lösung teilen möchten, wählen Sie **Diese Seite** im Abschnitt **Feedback** unten auf dieser Seite aus. Dadurch wird ein Issue im GitHub-Repository dieser Dokumentation erstellt und dieses ebenfalls im Abschnitt **Feedback** auf dieser Seite aufgeführt.
 
@@ -796,7 +504,7 @@ Ein Codebeispiel finden Sie unter [Verwenden von „JsonDocument“ für den Zug
 
 ## <a name="utf8jsonreader-compared-to-jsontextreader"></a>„Utf8JsonReader“ im Vergleich zu „JsonTextReader“
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> ist ein leistungsstarker, rein vorwärtsgerichteter Reader mit geringer Zuordnung für UTF-8-kodierten JSON-Text, der aus einem [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601) oder [ReadOnlySequence\<byte>](xref:System.Buffers.ReadOnlySequence%601) gelesen wird. Der `Utf8JsonReader` ist ein Low-Level-Typ, der zum Erstellen von benutzerdefinierten Parsern und Deserialisierungsprogrammen genutzt werden kann.
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> ist ein leistungsstarker, rein vorwärtsgerichteter Reader mit geringer Zuordnung für UTF-8-codierten JSON-Text, der aus [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601) oder [ReadOnlySequence\<byte>](xref:System.Buffers.ReadOnlySequence%601) gelesen wird. Der `Utf8JsonReader` ist ein Low-Level-Typ, der zum Erstellen von benutzerdefinierten Parsern und Deserialisierungsprogrammen genutzt werden kann.
 
 In den folgenden Abschnitten werden empfohlene Programmiermuster für die Verwendung von `Utf8JsonReader` erläutert.
 

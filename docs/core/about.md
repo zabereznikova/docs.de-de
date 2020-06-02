@@ -2,12 +2,12 @@
 title: Übersicht über .NET Core
 description: Hier lernen Sie Merkmale und Zusammensetzung von .NET Core kennen und vergleichen .NET Core mit anderen .NET-Implementierungen.
 ms.date: 03/26/2020
-ms.openlocfilehash: c9a63ddba14cf176be529e9520027c0610cfc087
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: e57451968ed8c4d5457acea084d3c6c9f998b8da
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391168"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144525"
 ---
 # <a name="net-core-overview"></a>Übersicht über .NET Core
 
@@ -28,7 +28,7 @@ ms.locfileid: "80391168"
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 
-Die Editor-Integration wird zum Teil durch die Mitwirkenden der [OmniSharp](https://www.omnisharp.net/)- und [Ionide](http://ionide.io)-Projekte ermöglicht.
+Die Editor-Integration wird zum Teil durch die Mitwirkenden der [OmniSharp](https://www.omnisharp.net/)- und [Ionide](https://ionide.io)-Projekte ermöglicht.
 
 ## <a name="apis"></a>APIs
 
@@ -69,6 +69,6 @@ Durch die Implementierung der [.NET Standard](../standard/net-standard.md)-Spezi
 
 Binäre .NET Core-Distributionen von Microsoft werden auf von Microsoft verwalteten Servern in Azure entwickelt und getestet und entsprechen den Best Practices von Microsoft in Bezug auf Entwicklung und Sicherheit.
 
-[Red Hat unterstützt .NET Core](http://redhatloves.net/) auf Red Hat Enterprise Linux 7 (RHEL). Red Hat erstellt .NET Core aus einer Quelle und stellt es in den [Red Hat Software Collections](https://developers.redhat.com/products/softwarecollections/overview/) zur Verfügung. Red Hat und Microsoft arbeiten eng zusammen, um sicherzustellen, dass .NET Core ebenso auf RHEL funktioniert.
+[Red Hat unterstützt .NET Core](https://developers.redhat.com/topics/dotnet/) auf Red Hat Enterprise Linux 7 (RHEL). Red Hat erstellt .NET Core aus einer Quelle und stellt es in den [Red Hat Software Collections](https://developers.redhat.com/products/softwarecollections/overview/) zur Verfügung. Red Hat und Microsoft arbeiten eng zusammen, um sicherzustellen, dass .NET Core ebenso auf RHEL funktioniert.
 
 [Tizen unterstützt .NET Core](https://developer.tizen.org/development/training/.net-application) auf Tizen-Plattformen.

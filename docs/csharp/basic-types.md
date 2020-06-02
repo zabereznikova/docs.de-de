@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die grundlegenden Typen (numerische Werte, 
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 89b5cebdc887db808db8abb1fa9eda34e2bec9e5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205814"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202209"
 ---
 # <a name="types-variables-and-values"></a>Typen, Variablen und Werte
 
@@ -66,7 +66,7 @@ Ein Typ kann mit einem oder mehreren *Typparametern* deklariert werden, die als 
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-Die Verwendung des Typparameters ermöglicht die Wiederverwendung der Klasse für beliebige Elementtypen, ohne die einzelnen Elemente in [object](language-reference/builtin-types/reference-types.md#the-object-type) konvertieren zu müssen. Generische Auflistungsklassen werden als *stark typisierte Auflistungen* bezeichnet, weil der Compiler den jeweiligen Typ der Elemente in der Auflistung kennt und zur Kompilierzeit einen Fehler auslösen kann, wenn Sie beispielsweise versuchen, dem `strings`-Objekt im vorherigen Beispiel eine ganze Zahl hinzuzufügen. Weitere Informationen finden Sie unter [Generics](programming-guide/generics/index.md).
+Die Verwendung des Typparameters ermöglicht die Wiederverwendung der Klasse für beliebige Elementtypen, ohne die einzelnen Elemente in [object](language-reference/builtin-types/reference-types.md#the-object-type) konvertieren zu müssen. Generische Sammlungsklassen werden als *stark typisierte Sammlungen* bezeichnet, weil der Compiler den jeweiligen Typ der Elemente in der Sammlung kennt und zur Kompilierzeit einen Fehler auslösen kann, wenn Sie beispielsweise versuchen, dem `strings`-Objekt im vorherigen Beispiel eine ganze Zahl hinzuzufügen. Weitere Informationen finden Sie unter [Generics](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Implizite Typen, anonyme Typen und Tupel-Typen
 

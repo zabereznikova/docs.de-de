@@ -4,12 +4,12 @@ description: Weitere Informationen zum Schreiben von Code, um die Struktur einer
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761862"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004646"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -215,7 +215,7 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Dieser Algorithmus ist die Grundlage für einen Algorithmus, der jeden beliebigen `LambdaExpression` besuchen kann. Es gibt viele Löcher, da der Code, den ich erstellt habe, nur nach einem kleinen Teil der möglichen Sätze von Knoten in der Ausdrucksbaumstruktur sucht, die auftreten können. Allerdings können Sie dennoch etwas von dem lernen, was er produziert. (Der Standardfall in der `Visitor.CreateFromExpression`-Methode gibt eine Meldung an die Fehlerkonsole, wenn ein neuer Knotentyp gefunden wird. Auf diese Weise wissen Sie, dass Sie einen neuen Ausdruck hinzufügen können.)
+Dieser Algorithmus ist die Grundlage für einen Algorithmus, der jeden beliebigen `LambdaExpression` besuchen kann. Es gibt zahlreiche Löcher, da der Code, den ich erstellt habe, nur nach einem kleinen Teil der möglichen Sätze von Knoten in der Ausdrucksbaumstruktur sucht, die auftreten können. Allerdings können Sie dennoch etwas von dem lernen, was er produziert. (Der Standardfall in der `Visitor.CreateFromExpression`-Methode gibt eine Meldung an die Fehlerkonsole, wenn ein neuer Knotentyp gefunden wird. Auf diese Weise wissen Sie, dass Sie einen neuen Ausdruck hinzufügen können.)
 
 Beim Ausführen dieser Besucher auf dem oben gezeigten Additionsausdruck erhalten Sie die folgende Ausgabe:
 
@@ -355,7 +355,7 @@ Expression<Func<int, int>> factorial = (n) =>
 ```
 
 Dieser Code stellt eine mögliche Implementierung für die mathematische *Fakultät*-Funktion dar. So wie ich diesen Code geschrieben habe, werden zwei Einschränkungen beim Erstellen von Ausdrucksbaumstrukturen durch die Zuweisung von Lambdaausdrücken an Ausdrücke hervorgehoben. Erstens sind Anweisungslambdas nicht zulässig. Das bedeutet, ich kann keine Schleifen, Blöcke, if/else-Anweisungen und anderen allgemeinen Steuerungsstrukturen in C# verwenden. Ich kann nur Ausdrücke verwenden. Zweitens kann ich nicht denselben Ausdruck rekursiv aufrufen.
-Ich könnte dies, wenn er bereits ein Delegat wäre, aber ich kann ihn nicht in seiner Form der Ausdrucksbaumstruktur aufrufen. Im Abschnitt zu [building expression trees (Erstellen von Ausdrucksbaumstrukturen)](expression-trees-building.md) werden Sie Techniken erlernen, um diese Einschränkung zu umgehen.
+Ich könnte dies, wenn er bereits ein Delegat wäre, aber ich kann ihn nicht in seiner Form der Ausdrucksbaumstruktur aufrufen. Im Abschnitt zum [Erstellen von Ausdrucksbaumstrukturen](expression-trees-building.md) werden Sie Techniken erlernen, um diese Einschränkung zu umgehen.
 
 In diesem Ausdruck können Knoten all dieser Typen auftreten:
 

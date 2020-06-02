@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c203716d9bb8298c934a999a496793c294949ddb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093509"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007753"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Befehlszeilenargumente (C#-Programmierhandbuch)
 
@@ -25,6 +25,9 @@ Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf e
 Der Parameter der `Main`-Methode ist ein <xref:System.String>-Array, das die Befehlszeilenargumente darstellt. Normalerweise bestimmen Sie, ob Argumente vorhanden sind, indem Sie z. B. die `Length`-Eigenschaft testen:
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
+
+> [!TIP]
+> Das `args`-Array darf nicht NULL sein. Daher ist es sicher, ohne Überprüfung auf NULL auf die `Length`-Eigenschaft zuzugreifen.
 
 Sie können die Zeichenfolgenargumente auch mit der <xref:System.Convert>-Klasse oder der `Parse`-Methode in numerische Typen konvertieren. Die folgende Anweisung konvertiert z. B. `string` mithilfe der `long`-Methode in eine <xref:System.Int64.Parse%2A>-Zahl:
 
@@ -73,7 +76,7 @@ Führen Sie die folgenden Schritte aus, um die Anwendung von einer Eingabeauffor
 > [!NOTE]
 > Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](/visualstudio/ide/reference/debug-page-project-designer) angeben.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C#-Programmierhandbuch](../index.md)

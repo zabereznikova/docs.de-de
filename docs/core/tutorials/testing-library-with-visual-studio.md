@@ -1,91 +1,92 @@
 ---
 title: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio
 description: Erstellen Sie ein Komponententestprojekt für Ihre .NET Core-Klassenbibliothek. Stellen Sie sicher, dass Ihre .NET Core-Klassenbibliothek mit Komponententests funktioniert.
-ms.date: 12/24/2019
+ms.date: 05/21/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.custom: vs-dotnet
+ms.openlocfilehash: 79b680022484bb9222b66c3df76bdd5a06de8117
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156620"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005010"
 ---
-# <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio
+# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio
 
-In [Erstellen einer .NET Standard-Bibliothek in Visual Studio](library-with-visual-studio.md) haben Sie eine einfache Klassenbibliothek erstellt, die der <xref:System.String>-Klasse eine Erweiterungsmethode hinzufügt. Jetzt erstellen Sie einen Komponententest, um sicherzustellen, dass es wie erwartet funktioniert. Sie fügen Ihr Komponententestprojekt der Projektmappe hinzu, die Sie im vorherigen Artikel erstellt haben.
+In diesem Tutorial wird gezeigt, wie Sie Komponententests automatisieren, indem Sie einer Projektmappe ein Testprojekt hinzufügen.
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Erstellen einer .NET Standard-Bibliothek in Visual Studio](library-with-visual-studio.md) erstellen.
 
 ## <a name="create-a-unit-test-project"></a>Ein Komponententestprojekt erstellen
 
-Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
-
-1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie im Artikel [Erstellen einer .NET Standard-Bibliothek in Visual Studio](library-with-visual-studio.md) erstellt haben.
+1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Erstellen einer .NET Standard-Bibliothek in Visual Studio](library-with-visual-studio.md) erstellt haben.
 
 1. Fügen Sie der Projektmappe ein neues Komponententestprojekt mit dem Namen „StringLibraryTest“ hinzu.
 
    1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Hinzufügen** > **Neues Projekt** aus.
 
-   1. Geben Sie auf der Seite **Neues Projekt hinzufügen** **mstest** in das Suchfeld ein. Wählen Sie **C#** oder **Visual Basic** in der Liste der Sprachen und dann in der Liste der Plattformen **Alle Plattformen** aus. Klicken Sie auf die Vorlage **MsTest-Testprojekt (.NET Core)** und dann auf **Weiter**.
+   1. Geben Sie auf der Seite **Neues Projekt hinzufügen** **mstest** in das Suchfeld ein. Wählen Sie **C#** oder **Visual Basic** in der Liste der Sprachen und dann in der Liste der Plattformen **Alle Plattformen** aus.
+
+   1. Klicken Sie auf die Vorlage **MSTest-Testprojekt (.NET Core)** und dann auf **Weiter**.
 
    1. Geben Sie im auf der Seite **Neues Projekt konfigurieren** im Feld **Projektname** den Namen **StringLibraryTest** ein. Wählen Sie dann **Erstellen** aus.
 
    > [!NOTE]
-   > Neben einem MSTest-Testprojekt können Sie auch xUnit- und nUnit-Testprojekte für .NET Core in Visual Studio erstellen.
+   > MSTest ist eines von drei Testframeworks, unter denen Sie wählen können. Die beiden anderen sind xUnit und nUnit.
 
-1. Visual Studio erstellt das Projekt und öffnet die Klassendatei mit dem folgenden Code im Codefenster:
+1. Visual Studio erstellt das Projekt und öffnet die Klassendatei mit dem folgenden Code im Codefenster. Wenn die gewünschte Sprache nicht angezeigt wird, ändern Sie die Sprachauswahl am oberen Rand der Seite.
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    namespace StringLibraryTest
-    {
-        [TestClass]
-        public class UnitTest1
-        {
-            [TestMethod]
-            public void TestMethod1()
-            {
-            }
-        }
-    }
-    ```
+   namespace StringLibraryTest
+   {
+       [TestClass]
+       public class UnitTest1
+       {
+           [TestMethod]
+           public void TestMethod1()
+           {
+           }
+       }
+   }
+   ```
 
-    ```vb
-    Imports Microsoft.VisualStudio.TestTools.UnitTesting
+   ```vb
+   Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
-    Namespace StringLibraryTest
-        <TestClass>
-        Public Class UnitTest1
-            <TestMethod>
-            Sub TestSub()
+   Namespace StringLibraryTest
+       <TestClass>
+       Public Class UnitTest1
+           <TestMethod>
+           Sub TestSub()
 
-            End Sub
-        End Class
-    End Namespace
-    ```
+           End Sub
+       End Class
+   End Namespace
+   ```
 
    Der von der Vorlage für Komponententests erstellte Quellcode führt Folgendes aus:
 
    - Er importiert den Namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, der für Komponententests verwendeten Typen enthält.
+   - Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> auf die Klasse `UnitTest1` an.
+   - Er wendet das <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>-Attribut an, um `TestMethod1` in C# oder `TestSub` in Visual Basic zu definieren.
 
-   - Er wendet das [TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)-Attribut auf die `UnitTest1`-Klasse an. Jede mit dem [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)-Attribut markierte Testmethode in einer Testklasse wird automatisch ausgeführt, wenn der Komponententest ausgeführt wird.
+   Jede mit [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) gekennzeichnete Methode in einer mit [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) gekennzeichneten Testklasse wird automatisch ausgeführt, wenn der Komponententest ausgeführt wird.
 
-   - Er wendet das Attribut [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) an, um `TestMethod1` in C# oder `TestSub` in Visual Basic als Testmethode für die automatische Ausführung beim Ausführen des Komponententests zu definieren.
+1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für den Knoten **Abhängigkeiten** des **StringLibraryTest**-Projekts, und wählen Sie **Projektverweis hinzufügen** aus.
 
-1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für den Knoten **Abhängigkeiten** des **StringLibraryTest**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
+1. Erweitern Sie im Dialogfeld **Verweis-Manager** den Knoten **Projekte**, und aktivieren Sie das Kontrollkästchen neben **StringLibrary**. Das Hinzufügen eines Verweises auf die `StringLibrary`-Assembly ermöglicht dem Compiler, **StringLibrary**-Methoden zu finden, wenn das **StringLibraryTest**-Projekt kompiliert wird.
 
-   > [!div class="mx-imgBorder"]
-   > ![Kontextmenü der StringLibraryTest-Abhängigkeiten](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
-
-1. Erweitern Sie im Dialogfeld **Reference Manager** den Knoten **Projekte** und aktivieren Sie das Feld neben **StringLibrary**. Das Hinzufügen eines Verweises auf die `StringLibrary`-Assembly ermöglicht dem Compiler, **StringLibrary**-Methoden zu finden. Klicken Sie auf die Schaltfläche **OK**. Ein Verweis auf Ihr Klassenbibliotheksprojekt (`StringLibrary`) wird hinzugefügt.
-
-   ![Dialogfeld „Verweis-Manager“ in Visual Studio](./media/testing-library-with-visual-studio/project-reference-manager.png)
+1. Klicken Sie auf **OK**.
 
 ## <a name="add-and-run-unit-test-methods"></a>Hinzufügen und Ausführen von Komponententestmethoden
 
-Wenn Visual Studio einen Komponententest ausführt, wird jede Methode ausgeführt, die mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> in einer Komponententestklasse markiert ist: der Klasse, auf die das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> angewendet wird. Eine Testmethode endet, wenn der erste Fehler gefunden wird, oder wenn alle in der Methode enthaltenen Tests erfolgreich ausgeführt wurden.
+Wenn Visual Studio einen Komponententest ausführt, erfolgt die Ausführung jeder Methode, die mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> gekennzeichnet ist, in einer Klasse, die mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> gekennzeichnet ist. Eine Testmethode endet, wenn der erste Fehler gefunden wird, oder wenn alle in der Methode enthaltenen Tests erfolgreich ausgeführt wurden.
 
 In den am häufigsten verwendeten Tests werden Member der Klasse <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> aufgerufen. Viele Assert-Methoden enthalten mindestens zwei Parameter, von denen einer das erwartete und der andere das tatsächliche Testergebnis ist. Die am häufigsten aufgerufenen Methoden der `Assert`-Klasse werden in der nachfolgenden Tabelle aufgeführt:
 
@@ -96,9 +97,9 @@ In den am häufigsten verwendeten Tests werden Member der Klasse <xref:Microsoft
 | `Assert.IsFalse`   | Überprüft, ob eine Bedingung `false` ist. Die Bestätigung ist nicht erfolgreich, wenn die Bedingung `true` ist. |
 | `Assert.IsNotNull` | Überprüft, ob ein Objekt nicht `null` ist. Die Bestätigung ist nicht erfolgreich, wenn das Objekt `null` ist. |
 
-Sie können auch die <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A>-Methode in einer Testmethode verwenden, um den Typ der Ausnahme anzugeben, die ausgelöst werden soll. Der Test ist nicht erfolgreich, wenn die angegebene Ausnahme nicht ausgelöst wird.
+Sie können auch die <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType>-Methode in einer Testmethode verwenden, um den Typ der Ausnahme anzugeben, die ausgelöst werden soll. Der Test ist nicht erfolgreich, wenn die angegebene Ausnahme nicht ausgelöst wird.
 
-Beim Testen der `StringLibrary.StartsWithUpper`-Methode möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `true` zurückgibt, also können Sie die Methode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> aufrufen. Außerdem möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die nicht mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `false` zurückgibt, also können Sie die Methode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> aufrufen.
+Beim Testen der `StringLibrary.StartsWithUpper`-Methode möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `true` zurückgibt, also können Sie die Methode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> aufrufen. Außerdem möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die nicht mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `false` zurückgibt, also können Sie die Methode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> aufrufen.
 
 Da Ihre Bibliotheksmethode Zeichenfolgen verarbeitet, möchten Sie auch sicherstellen, dass sie eine [leere Zeichenfolge (`String.Empty`)](xref:System.String.Empty), eine gültige Zeichenfolge, die keine Zeichen enthält und deren <xref:System.String.Length> 0 ist, und eine `null`-Zeichenfolge, die nicht initialisiert wurde, erfolgreich verarbeitet. Wenn `StartsWithUpper` als eine Erweiterungsmethode für eine <xref:System.String>-Instanz aufgerufen wird, kann ihr keine `null`-Zeichenfolge übergeben werden. Allerdings kann sie auch direkt als statische Methode aufgerufen und ihr ein einzelnes <xref:System.String>-Argument übergeben werden.
 
@@ -127,7 +128,7 @@ So erstellen Sie die Testmethoden:
 
    Wenn Sie den Quellcode nicht in einer UTF8-codierten Datei speichern, kann Visual Studio ihn als ASCII-Datei speichern. Wenn dies geschieht, decodiert die Laufzeit die UTF8-Zeichen außerhalb des ASCII-Bereichs nicht ordnungsgemäß, und die Testergebnisse sind nicht richtig.
 
-1. Wählen Sie auf der Menüleiste **Test** > **Ausführen** > **Alle Tests** aus. Das Fenster **Test-Explorer** wird geöffnet und zeigt, dass der Test erfolgreich ausgeführt wurde. Die drei Tests sind im Abschnitt **Bestandene Tests** aufgelistet, und im Abschnitt **Zusammenfassung** wird das Ergebnis des Testlaufs berichtet.
+1. Wählen Sie auf der Menüleiste **Testen** > **Alle Tests ausführen** aus. Wenn das Fenster **Test-Explorer** nicht geöffnet ist, öffnen Sie es, indem Sie **Testen** > **Test-Explorer** auswählen. Die drei Tests sind im Abschnitt **Bestandene Tests** aufgelistet, und im Abschnitt **Zusammenfassung** wird das Ergebnis des Testlaufs berichtet.
 
    > [!div class="mx-imgBorder"]
    > ![Test Explorer-Fenster mit erfolgreichen Tests](./media/testing-library-with-visual-studio/test-explorer-window.png)
@@ -149,21 +150,21 @@ In Ihrem Testlauf sind keine Fehler aufgetreten, darum verändern Sie ihn leicht
 
    ```
 
-1. Führen Sie den Test aus, indem Sie **Test** > **Ausführen** > **Alle Tests** aus der Menüleiste auswählen. Das Fenster **Test-Explorer** zeigt, dass zwei Tests erfolgreich ausgeführt wurden und einer nicht erfolgreich war.
+1. Führen Sie den Test aus, indem Sie auf der Menüleiste **Testen** > **Alle Tests ausführen** auswählen. Das Fenster **Test-Explorer** zeigt, dass zwei Tests erfolgreich ausgeführt wurden und einer nicht erfolgreich war.
 
    > [!div class="mx-imgBorder"]
    > ![Test Explorer-Fenster mit fehlschlagenden Tests](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. Wählen Sie den fehlgeschlagenen Test (`TestDoesNotStartWith`) aus. Im Fenster **Test-Explorer** wird die Assert-Meldung angezeigt: „Fehler bei Assert.IsFalse. Für 'Error' erwartet False; tatsächlich: True“. Wegen des Fehlers wurden alle auf „Error“ folgenden Zeichenfolgen im Array nicht getestet.
+1. Wählen Sie den fehlgeschlagenen Test (`TestDoesNotStartWith`) aus. Im Fenster **Test-Explorer** wird die Assert-Meldung angezeigt: „Fehler bei Assert.IsFalse. Für 'Error' erwartet: False; tatsächlich: True“. Wegen des Fehlers wurden alle auf „Error“ folgenden Zeichenfolgen im Array nicht getestet.
 
    > [!div class="mx-imgBorder"]
    > ![Fenster „Test-Explorer“, das den Assertionsfehler isFalse zeigt](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. Machen Sie die Änderung rückgängig, die Sie in Schritt 1 vorgenommen haben, und entfernen Sie die Zeichenfolge „Error“ (Fehler). Führen Sie die Tests erneut aus, und sie werden erfolgreich ausgeführt.
+1. Machen Sie die Änderung rückgängig, die Sie in Schritt 1 vorgenommen haben, und entfernen Sie die Zeichenfolge „Error“ (Fehler). Führen Sie den Test erneut aus. Nun ist er erfolgreich.
 
 ## <a name="test-the-release-version-of-the-library"></a>Testen der Releaseversion der Bibliothek
 
-Sie haben Ihre Tests für die Debugversion der Bibliothek ausgeführt. Da nun alle Ihre Tests erfolgreich waren, und Sie Ihre Bibliothek ausreichend getestet haben, sollten Sie die Tests ein weiteres Mal für die endgültige Produktversion der Bibliothek ausführen. Eine Reihe von Faktoren einschließlich der Compileroptimierungen kann manchmal zu einem unterschiedlichen Verhalten von Debug- und endgültiger Produktversion führen.
+Nachdem die Tests beim Ausführen der Debugversion der Bibliothek nun alle erfolgreich waren, führen Sie die Tests auch für den Releasebuild der Bibliothek aus. Eine Reihe von Faktoren einschließlich der Compileroptimierungen kann manchmal zu einem unterschiedlichen Verhalten von Debug- und endgültiger Produktversion führen.
 
 So testen Sie die endgültige Produktversion:
 
@@ -177,10 +178,25 @@ So testen Sie die endgültige Produktversion:
    > [!div class="mx-imgBorder"]
    > ![StringLibrary-Kontextmenü mit Befehl „Erstellen“](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
-1. Führen Sie den Komponententest aus, indem Sie **Test** > **Ausführen** > **Alle Tests** aus der Menüleiste auswählen. Die Tests sind erfolgreich.
+1. Führen Sie den Komponententest aus, indem Sie auf der Menüleiste **Testen** > **Alle Tests** auswählen. Die Tests sind erfolgreich.
 
-Das Testen Ihrer Bibliothek ist jetzt abgeschlossen, und im nächsten Schritt machen Sie sie für die Aufrufer verfügbar. Sie können sie mit einer oder mehreren Anwendungen bündeln oder sie als NuGet-Paket verteilen. Informationen hierzu finden Sie unter [Consuming a .NET Standard Class Library (Nutzen einer .NET-Standardklassenbibliothek)](consuming-library-with-visual-studio.md).
-
-## <a name="see-also"></a>Weitere Informationen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - [Grundlagen zu Komponententests: Visual Studio](/visualstudio/test/unit-test-basics)
+
+## <a name="next-steps"></a>Nächste Schritte
+
+In diesem Tutorial haben Sie Komponententests für eine Klassenbibliothek ausgeführt. Sie können die Bibliothek anderen Benutzern zur Verfügung stellen, indem Sie sie als Paket auf [NuGet](https://nuget.org) veröffentlichen. Weitere Informationen dazu finden Sie in einem NuGet-Tutorial:
+
+> [!div class="nextstepaction"]
+> [Erstellen und Veröffentlichen eines NuGet-Pakets mithilfe von Visual Studio](/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli)
+
+Wenn Sie eine Bibliothek als NuGet-Paket veröffentlichen, können andere Benutzer diese installieren und verwenden. Weitere Informationen dazu finden Sie in einem NuGet-Tutorial:
+
+> [!div class="nextstepaction"]
+> [Installieren und Verwenden eines Pakets in Visual Studio](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+
+Eine Bibliothek muss nicht als Paket verteilt werden. Sie kann mit einer Konsolen-App gebündelt werden, die sie verwendet. Informationen zum Veröffentlichen einer Konsolen-App finden Sie in einem früheren Tutorial dieser Reihe:
+
+> [!div class="nextstepaction"]
+> [Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio](publishing-with-visual-studio.md)

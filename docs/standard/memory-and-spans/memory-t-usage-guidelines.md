@@ -5,12 +5,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: b9405d746c141308c7d984dac9da0d65d1048d1e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380012"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201945"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Leitfaden zur Verwendung von Memory\<T> und Span\<T>
 
@@ -65,7 +65,7 @@ Der Puffer hat zwei Consumer: `WriteInt32ToBuffer` und `DisplayBufferToConsole`.
 
 Die `WriteInt32ToBuffer`-Methode verfügt über eine Leasedauer (kann den Puffer zwischen dem Start des Methodenaufrufs und der Zeit, die die Methode zurückgibt, verbrauchen). Ebenso hat `DisplayBufferToConsole` eine Leasingdauer für den Puffer, während er ausgeführt wird, und die Leasedauer wird freigegeben, wenn die Methode entladen wird. (Es gibt keine API für die Leaseverwaltung; eine „Leasedauer“ ist nur ein Konzept.)
 
-## <a name="memoryt-and-the-ownerconsumer-model"></a>Memory\<T > und das Besitzer/Consumer-Modell
+## <a name="memoryt-and-the-ownerconsumer-model"></a>Memory\<T> und das Besitzer/Consumer-Modell
 
 Wie im Abschnitt [Besitzer, Consumer und Verwaltung der Lebensdauer](#owners-consumers-and-lifetime-management) beschrieben, hat ein Puffer immer einen Besitzer. .NET Core unterstützt zwei Besitzmodelle:
 
@@ -226,7 +226,7 @@ class Person
 }
 ```
 
-**Regel 7: Wenn Sie einen IMemoryOwner\<T> Verweis haben, müssen Sie ihn irgendwann verwerfen oder den Besitz übertragen (aber nicht beides).**
+**Regel 7: Wenn Sie einen IMemoryOwner\<T>-Verweis haben, müssen Sie ihn irgendwann verwerfen oder den Besitz übertragen (aber nicht beides).**
 
 Da eine <xref:System.Memory%601>-Instanz entweder durch verwalteten oder nicht verwalteten Speicher gesichert werden kann, muss der Besitzer <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> aufrufen, wenn die Arbeit an der <xref:System.Memory%601>-Instanz abgeschlossen ist. Alternativ kann der Besitzer die Besitzrechte an der <xref:System.Buffers.IMemoryOwner%601>-Instanz auf eine andere Komponente übertragen, wobei die erwerbende Komponente dann für den Aufruf von <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> zum gegebenen Zeitpunkt (mehr dazu später) verantwortlich ist.
 

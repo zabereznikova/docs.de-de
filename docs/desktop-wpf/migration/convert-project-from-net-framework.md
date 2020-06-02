@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine Windows Presentation Foundation-App (WPF
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: ccd2fc5a49d9c2d31c693e48099732614b568c7b
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: fda4f618ddb4a3edbe6f2dd9fba0b10bc618e88d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507454"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201560"
 ---
 # <a name="migrating-wpf-apps-to-net-core"></a>Migrieren von WPF-Apps zu .NET Core
 
@@ -45,7 +45,7 @@ Zum Migrieren zu .NET Core müssen Sie zuerst Folgendes ausführen:
 
 ## <a name="about-the-sample"></a>Über das Beispiel
 
-In diesem Artikel wird auf die Beispiel-App [Bean Trader](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader) verwiesen, da sie eine Vielzahl von Abhängigkeiten verwendet, die denen von echten WPF-Apps ähneln. Die App ist nicht groß, soll aber in Bezug auf Komplexität einen Schritt weiter gehen als „Hello World“. Die App zeigt einige Probleme, die bei der Portierung von echten Apps auftreten können. Die App kommuniziert mit einem WCF-Dienst. Damit sie ordnungsgemäß ausgeführt werden kann, müssen Sie das BeanTraderServer-Projekt (verfügbar im gleichen GitHub-Repository) ausführen und sicherstellen, dass die BeanTraderClient-Konfiguration auf den richtigen Endpunkt verweist. (Standardmäßig nimmt das Beispiel an, dass der Server auf demselben Computer unter *http://localhost:8090* ausgeführt wird, was zutrifft, wenn Sie BeanTraderServer lokal starten.)
+In diesem Artikel wird auf die Beispiel-App [Bean Trader](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader) verwiesen, da sie eine Vielzahl von Abhängigkeiten verwendet, die denen von echten WPF-Apps ähneln. Die App ist nicht groß, soll aber in Bezug auf Komplexität einen Schritt weiter gehen als „Hello World“. Die App zeigt einige Probleme, die bei der Portierung von echten Apps auftreten können. Die App kommuniziert mit einem WCF-Dienst. Damit sie ordnungsgemäß ausgeführt werden kann, müssen Sie das BeanTraderServer-Projekt (verfügbar im gleichen GitHub-Repository) ausführen und sicherstellen, dass die BeanTraderClient-Konfiguration auf den richtigen Endpunkt verweist. (Standardmäßig nimmt das Beispiel an, dass der Server auf demselben Computer unter `http://localhost:8090` ausgeführt wird, was zutrifft, wenn Sie BeanTraderServer lokal starten.)
 
 Beachten Sie, dass diese Beispiel-App dazu gedacht ist, Herausforderungen bei der .NET Core-Portierung zu zeigen und-Lösungen zu veranschaulichen. Er soll keine bewährten Methoden für WPF zeigen. Tatsächlich enthält es absichtlich einige Antimuster, um sicherzustellen, dass Sie bei der Portierung mit einigen interessanten Herausforderungen konfrontiert werden.
 

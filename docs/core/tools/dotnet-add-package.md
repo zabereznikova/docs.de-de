@@ -2,12 +2,12 @@
 title: Befehl „dotnet add package“
 description: Der Paketbefehl „dotnet add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102852"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840896"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -91,7 +91,7 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
 
 - **`-s|--source <SOURCE>`**
 
-  Die NuGet-Paketquelle, die während des Wiederherstellungsvorgangs zu verwenden ist.
+  Der URI der NuGet-Paketquelle, die während des Wiederherstellungsvorgangs zu verwenden ist.
 
 - **`-v|--version <VERSION>`**
 

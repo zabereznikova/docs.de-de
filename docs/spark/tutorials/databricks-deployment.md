@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Data
 ms.date: 05/12/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 245df14b9174a3b2ff152f90e6c50cc8766a2de9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397047"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202238"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks
 
@@ -87,7 +87,7 @@ Nachdem Sie die Databricks CLI installiert haben, müssen Sie Authentifizierungs
 
 1. Führen Sie den Befehl `databricks configure --token` der Databricks CLI aus.
 
-2. Nachdem Sie den Konfigurstionsbefehl ausgeführt haben, werden Sie zur Eingabe eines Hosts aufgefordert. Die Host-URL verwendet das folgende Format: **https://<\Speicherort >.azuredatabricks.net**. Wenn Sie beispielsweise während der Azure Databricks-Diensterstellung **eastus2** (USA, Osten 2) ausgewählt haben, wäre der Host **https://eastus2.azuredatabricks.net** .
+2. Nachdem Sie den Konfigurstionsbefehl ausgeführt haben, werden Sie zur Eingabe eines Hosts aufgefordert. Die Host-URL verwendet das folgende Format: `https://<Location>.azuredatabricks.net`. Wenn Sie beispielsweise während der Azure Databricks-Diensterstellung **eastus2** (USA, Osten 2) ausgewählt haben, wäre der Host `https://eastus2.azuredatabricks.net`.
 
 3. Nachdem Sie den Host eingegeben haben, werden Sie zur Eingabe eines Tokens aufgefordert. Wählen Sie im Azure-Portal **Arbeitsbereich starten** aus, um den Azure Databricks-Arbeitsbereich zu starten.
 

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie das erworbene Wissen aus einem vorhandenen Te
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607570"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144434"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generieren eines ML.NET-Bildklassifizierungsmodells aus einem vortrainierten TensorFlow-Modell
 
@@ -38,7 +38,7 @@ Für dieses Tutorial verwenden Sie einen Teil eines TensorFlow-Modells – train
 ## <a name="prerequisites"></a>Voraussetzungen
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder höher oder Visual Studio 2017 Version 15.6 oder höher mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
-* [Die ZIP-Datei mit dem Tutorialressourcenverzeichnis ](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
+* [Die ZIP-Datei mit dem Tutorialassetsverzeichnis ](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [Das Machine Learning-Modell von InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-right-machine-learning-task"></a>Auswählen der richtigen Machine Learning-Aufgabe
@@ -66,9 +66,9 @@ Bildklassifizierung ist eine gängige Machine Learning-Aufgabe, mit der automati
 >[!Note]
 > Die vorherigen Abbildungen stammen aus Wikimedia-Commons und unterliegen folgendem Urheberrecht:
 >
-> * „220px-Pepperoni_pizza.jpg“ Public Domain https://commons.wikimedia.org/w/index.php?curid=79505,
-> * „119px-Nalle_-_a_small_brown_teddy_bear.jpg“ von [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) – selbst fotografiert, CC-BY-SA-2.0, https://commons.wikimedia.org/w/index.php?curid=48166.
-> * „193px-Broodrooster.jpg“ von [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) – eigenes Werk, CC-BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27403
+> * „220px-Pepperoni_pizza.jpg“ Public Domain<https://commons.wikimedia.org/w/index.php?curid=79505>,
+> * „119px-Nalle_-_a_small_brown_teddy_bear.jpg“ von [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) – selbst fotografiert, CC-BY-SA-2.0, <https://commons.wikimedia.org/w/index.php?curid=48166>.
+> * „193px-Broodrooster.jpg“ von [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) – eigenes Werk, CC-BY-SA 3.0, <https://commons.wikimedia.org/w/index.php?curid=27403>
 
 Das `Inception model` ist darauf trainiert, Bilder in tausend Kategorien zu klassifizieren, jedoch müssen Sie für dieses Tutorial Bilder in eine kleinere Kategoriegruppe und nur in diese Kategorien klassifizieren. Geben Sie den `transfer`-Teil von `transfer learning` ein. Sie können die Fähigkeit des `Inception model` zum Erkennen und Klassifizieren von Bildern auf die neuen begrenzten Kategorien Ihrer benutzerdefinierten Bildklassifizierung übertragen.
 
@@ -110,7 +110,9 @@ toaster2.png    appliance
 <!-- markdownlint-enable MD010 -->
 
 Die Trainings- und Testbilder befinden sich in dem Assetsordner, den Sie in einer ZIP-Datei herunterladen. Diese Bilder gehören zu Wikimedia Commons.
-> *[Wikimedia-Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), das Repository für kostenlose Medien.* Abgerufen am 17. Oktober 2018 um 10:48 Uhr aus: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
+> *[Wikimedia-Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), das Repository für kostenlose Medien.* Abgerufen am 17. Oktober 2018 um 10:48 Uhr von: <https://commons.wikimedia.org/wiki/Pizza>
+> <https://commons.wikimedia.org/wiki/Toaster>
+> <https://commons.wikimedia.org/wiki/Teddy_bear>
 
 ## <a name="setup"></a>Setup
 

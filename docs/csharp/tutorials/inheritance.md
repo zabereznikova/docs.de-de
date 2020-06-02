@@ -4,12 +4,12 @@ description: Lernen Sie die Verwendung der Vererbung in C#-Bibliotheken und -Anw
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391148"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007727"
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
 
@@ -58,9 +58,9 @@ Während alle anderen Member einer Basisklasse von abgeleiteten Klassen geerbt w
 
 - [Öffentliche](../language-reference/keywords/public.md) Member sind in abgeleiteten Klassen sichtbar und Teil der öffentlichen Schnittstelle der abgeleiteten Klasse. Öffentlich geerbte Member können so aufgerufen werden, als ob sie in der abgeleiteten Klasse definiert sind. Im folgenden Beispiel definiert Klasse `A` eine Methode namens `Method1`, und Klasse `B` erbt von Klasse `A`. Das Beispiel ruft dann `Method1` auf, als wäre sie eine Instanzmethode von `B`.
 
-[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Abgeleitete Klassen können auch geerbte Member *überschreiben*, indem sie eine alternative Implementierung bereitstellen. Um einen Member überschreiben zu können, muss der Member in der Basisklasse mit dem Schlüsselwort [virtual](../language-reference/keywords/virtual.md) markiert sein. Standardmäßig sind Member der Basisklasse nicht als `virtual` markiert und können nicht überschrieben werden. Der Versuch, wie im folgenden Beispiel gezeigt einen nicht virtuellen Member zu überschreiben, verursacht den Compilerfehler CS0506: „\<member>“ : Der geerbte Member „\<member>“ kann nicht überschrieben werden, da er nicht als „virtual“, „abstract“ oder „override“ markiert ist.
+Abgeleitete Klassen können auch geerbte Member *überschreiben*, indem sie eine alternative Implementierung bereitstellen. Um einen Member überschreiben zu können, muss der Member in der Basisklasse mit dem Schlüsselwort [virtual](../language-reference/keywords/virtual.md) markiert sein. Standardmäßig sind Member der Basisklasse nicht als `virtual` markiert und können nicht überschrieben werden. Der Versuch, wie im folgenden Beispiel einen nicht virtuellen Member zu überschreiben, verursacht den Compilerfehler CS0506: „"\<member>" : Der geerbte Member "\<member>" kann nicht überschrieben werden, da er nicht als "virtual", "abstract" oder "override" markiert ist.“
 
 ```csharp
 public class A
@@ -181,7 +181,7 @@ Beim Entwurf Ihrer `Publication`-Klasse müssen Sie einige Entwurfsentscheidunge
 
 - Wie weit sollten Sie Ihre Klassenhierarchie erweitern? Möchten Sie statt einer einzigen Basisklasse und einer oder mehreren abgeleiteten Klassen eine Hierarchie von mindestens drei Klassen entwickeln? Beispielsweise könnte `Publication` eine Basisklasse von `Periodical` sein, was wiederum eine Basisklasse von `Magazine`, `Journal` und `Newspaper` ist.
 
-  Für Ihr Beispiel verwenden Sie die flache Hierarchie einer `Publication`-Klasse und einer einzelnen abgeleiteten Klasse `Book`. Sie könnten das Beispiel mühelos erweitern, um eine Reihe von zusätzlichen Klassen zu erstellen, die von `Publication` abgeleitet sind, z. B. `Magazine` und `Article`.
+  Für Ihr Beispiel verwenden Sie die flache Hierarchie einer `Publication`-Klasse und einer einzelnen abgeleiteten Klasse `Book`. Sie könnten das Beispiel mühelos erweitern, um eine Reihe von zusätzlichen Klassen zu erstellen, die von `Publication` abgeleitet sind, z. B. `Magazine` und `Article`.
 
 - Ist es sinnvoll, die Basisklasse zu instanziieren? Wenn das nicht der Fall ist, wenden Sie das Schlüsselwort [abstract](../language-reference/keywords/abstract.md) auf die Klasse an. Andernfalls kann Ihre `Publication`-Klasse durch Aufruf ihres Klassenkonstruktors instanziiert werden. Wenn versucht wird, eine mit dem `abstract`-Schlüsselwort markierte Klasse durch einen direkten Aufruf ihres Klassenkonstruktors zu instanziieren, generiert der C#-Compiler den Fehler CS0144: „Es konnte keine Instanz der abstrakten Klasse oder Schnittstelle erstellt werden.“ Wenn versucht wird, die Klasse mithilfe der Reflektion zu instanziieren, löst die Reflektionsmethode eine <xref:System.MemberAccessException> aus.
 
@@ -191,7 +191,7 @@ Beim Entwurf Ihrer `Publication`-Klasse müssen Sie einige Entwurfsentscheidunge
 
 - Müssen abgeleitete Klassen die Implementierung der Basisklasse eines bestimmten Members erben, können sie die Implementierung der Basisklasse optional überschreiben, oder müssen sie eine Implementierung bereitstellen? Mit dem Schlüsselwort [abstract](../language-reference/keywords/abstract.md) können Sie abgeleitete Klassen dazu zwingen, eine Implementierung bereitzustellen. Mit dem Schlüsselwort [virtual](../language-reference/keywords/virtual.md) können Sie abgeleiteten Klassen erlauben, eine Basisklassenmethode zu überschreiben. Standardmäßig können in der Basisklasse definierte Methoden *nicht* überschrieben werden.
 
- Die `Publication`-Klasse hat keine `abstract`-Methoden, ist allerdings selbst `abstract`.
+  Die `Publication`-Klasse hat keine `abstract`-Methoden, ist allerdings selbst `abstract`.
 
 - Stellt eine abgeleitete Klasse die endgültige Klasse in der Vererbungshierarchie dar und kann nicht selbst als Basisklasse für weitere abgeleitete Klassen verwendet werden? Standardmäßig kann jede Klasse als Basisklasse dienen. Sie können das [sealed](../language-reference/keywords/sealed.md)-Schlüsselwort anwenden, um anzugeben, dass eine Klasse nicht als Basisklasse für zusätzliche Klassen dienen kann. Beim Versuch der Ableitung von einer versiegelten Klasse wird der Compilerfehler CS0509 generiert: „Vom versiegelten Typ \<typeName> kann nicht abgeleitet werden“.
 

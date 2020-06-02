@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: d598d8d3203e804e5e935c3564b0053f9fc2e9a6
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79549594"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144994"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Freigegebenes Framework: Assemblys aus Microsoft.AspNetCore.App entfernt
 
@@ -54,7 +54,7 @@ Projekte müssen Assemblys in `Microsoft.AspNetCore.App` nicht als NuGet-Pakete 
 
 Diese Änderung gilt nicht für alle Binärdateien, auf die über `Microsoft.AspNetCore.App` in ASP.NET Core 2.x verwiesen wird. Wichtige Ausnahmen sind:
 
-- `Microsoft.Extensions`-Bibliotheken, die weiterhin auf .NET Standard abzielen, werden als NuGet-Pakete verfügbar gemacht (siehe https://github.com/dotnet/extensions).
+- `Microsoft.Extensions`-Bibliotheken, die weiterhin auf .NET Standard abzielen, werden als NuGet-Pakete zur Verfügung gestellt (siehe <https://github.com/dotnet/extensions>).
 - APIs, die vom ASP.NET Core-Team erstellt werden und die nicht Teil `Microsoft.AspNetCore.App` sind. Die folgenden Komponenten sind beispielsweise als NuGet-Pakete verfügbar:
   - Entity Framework Core
   - APIs, die eine Integration von Drittanbietern bereitstellen

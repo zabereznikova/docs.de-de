@@ -2,12 +2,12 @@
 title: Machine Learning-Aufgaben
 description: Untersuchen Sie die anderen in ML.NET unterstützten Machine Learning-Aufgaben und zugehörigen Aufgaben.
 ms.date: 12/23/2019
-ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e36bd65dbadb8cb7b8edbf9e2e82071c208378
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397788"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144447"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Machine Learning-Aufgaben in ML.NET
 
@@ -72,7 +72,7 @@ Eine [überwachte Machine Learning](glossary.md#supervised-machine-learning)-Auf
 Weitere Informationen finden Sie auf Wikipedia im Artikel zur [Multiklassenklassifizierung](https://en.wikipedia.org/wiki/Multiclass_classification).
 
 >[!NOTE]
->One-vs-All (OvA) aktualisiert alle [Binärklassifizierungs-Lernmodule](#binary-classification), sodass sie Multiklassendatasets bearbeiten. Weitere Informationen finden Sie in [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
+>One-vs-All (OvA) aktualisiert alle [Binärklassifizierungs-Lernmodule](#binary-classification), sodass sie Multiklassendatasets bearbeiten. Weitere Informationen finden Sie auf [Wikipedia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
 ### <a name="multiclass-classification-trainers"></a>Trainer für die Multiklassenklassifizierung
 
@@ -94,7 +94,7 @@ Die Featurespalte muss ein Vektor fester Größe von <xref:System.Single> sein.
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Geben Sie Folgendes ein: | Beschreibung|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | Vektor von <xref:System.Single> | Die Bewertungen aller Klassen. Ein höherer Wert bedeutet eine höhere Wahrscheinlichkeit, in die zugehörige Klasse zu fallen. Wenn das i-te Element den größten Wert hat, wäre der vorhergesagte Bezeichnungsindex i. Beachten Sie, dass „i“ ein nullbasierter Index ist. |
 | `PredictedLabel` | Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) | Der Index der vorhergesagten Bezeichnung. Wenn sein Wert i ist, wäre die eigentliche Bezeichnung die i-te Kategorie des Typs der Schlüssel-Wert-Eingabebezeichnung. |
@@ -127,7 +127,7 @@ Die Daten in der Spalte für die Eingabezeichnung müssen <xref:System.Single> s
 
 Die Trainer für diese Ausgabe geben folgende Daten aus:
 
-| Ausgabename | Geben Sie Folgendes ein: | Beschreibung|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die vom Modell vorhergesagte unformatierte Bewertung |
 
@@ -151,7 +151,7 @@ Die Daten der Eingabefeatures müssen <xref:System.Single> sein. Es sind keine B
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Geben Sie Folgendes ein: | Beschreibung|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | Vektor von <xref:System.Single> | Die Abstände der angegebenen Daten weisen auf die Schwerpunkte aller Cluster hin. |
 | `PredictedLabel` | Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) | Der Index des nächsten Clusters, der durch das Modell vorhergesagt wird. |
@@ -183,7 +183,7 @@ Die Eingabefeatures müssen ein Vektor fester Größe von <xref:System.Single> s
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Geben Sie Folgendes ein: | Beschreibung|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die nicht-negative, unbegrenzte Bewertung, die durch das Anomalieerkennungsmodell berechnet wurde. |
 | `PredictedLabel` | <xref:System.Boolean> | Ein TRUE/FALSE-Wert, der angibt, ob es sich bei der Eingabe um eine Anomalie (PredictedLabel=true) oder um keine Anomalie (PredictedLabel=false) handelt. |
@@ -207,7 +207,7 @@ Die Featuredaten müssen ein Vektor mit fester Größe von <xref:System.Single> 
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Geben Sie Folgendes ein: | Beschreibung|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die unbegrenzte Bewertung, die vom Modell berechnet wurde, um die Vorhersage zu bestimmen. |
 

@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxtransformation (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5879dfd6ed0a5f6465829eec496d10cfcfd07362
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794792"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202124"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Erste Schritte mit der Syntaxtransformation
 
@@ -34,7 +34,7 @@ Starten Sie Visual Studio, und erstellen Sie ein neues C#-Projekt namens **Stand
 
 Dieses Projekt verwendet die Methoden der Klasse <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>, um ein <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>-Element zu erstellen, das den `System.Collections.Generic`-Namespace repräsentiert.
 
-Fügen Sie die folgende using-Anweisung am Anfang der Datei `Program.cs` hinzu, um die Factorymethoden der <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory>-Klasse und die Methoden von <xref:System.Console> zu importieren, sodass Sie sie später ohne Qualifizierung verwenden können:
+Fügen Sie am Anfang der Datei `Program.cs` die folgende using-Direktive hinzu.
 
 [!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 
