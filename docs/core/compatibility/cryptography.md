@@ -9,20 +9,20 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/24/2020
 ms.locfileid: "82135599"
 ---
-# <a name="cryptography-breaking-changes"></a><span data-ttu-id="f4df3-103">Breaking Changes bei der Kryptografie</span><span class="sxs-lookup"><span data-stu-id="f4df3-103">Cryptography breaking changes</span></span>
+# <a name="cryptography-breaking-changes"></a><span data-ttu-id="bc463-103">Breaking Changes bei der Kryptografie</span><span class="sxs-lookup"><span data-stu-id="bc463-103">Cryptography breaking changes</span></span>
 
-<span data-ttu-id="f4df3-104">Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:</span><span class="sxs-lookup"><span data-stu-id="f4df3-104">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="bc463-104">Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:</span><span class="sxs-lookup"><span data-stu-id="bc463-104">The following breaking changes are documented on this page:</span></span>
 
-| <span data-ttu-id="f4df3-105">Unterbrechende Änderung</span><span class="sxs-lookup"><span data-stu-id="f4df3-105">Breaking change</span></span> | <span data-ttu-id="f4df3-106">Eingeführt in Version</span><span class="sxs-lookup"><span data-stu-id="f4df3-106">Version introduced</span></span> |
+| <span data-ttu-id="bc463-105">Unterbrechende Änderung</span><span class="sxs-lookup"><span data-stu-id="bc463-105">Breaking change</span></span> | <span data-ttu-id="bc463-106">Eingeführt in Version</span><span class="sxs-lookup"><span data-stu-id="bc463-106">Version introduced</span></span> |
 | - | :-: |
-| [<span data-ttu-id="f4df3-107">BEGIN TRUSTED CERTIFICATE-Syntax nicht mehr für Stammzertifikate unter Linux unterstützt</span><span class="sxs-lookup"><span data-stu-id="f4df3-107">BEGIN TRUSTED CERTIFICATE syntax no longer supported on Linux</span></span>](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | <span data-ttu-id="f4df3-108">3.0</span><span class="sxs-lookup"><span data-stu-id="f4df3-108">3.0</span></span> |
-| [<span data-ttu-id="f4df3-109">EnvelopedCms verwendet standardmäßig AES-256-Verschlüsselung</span><span class="sxs-lookup"><span data-stu-id="f4df3-109">EnvelopedCms defaults to AES-256 encryption</span></span>](#envelopedcms-defaults-to-aes-256-encryption) | <span data-ttu-id="f4df3-110">3.0</span><span class="sxs-lookup"><span data-stu-id="f4df3-110">3.0</span></span> |
-| [<span data-ttu-id="f4df3-111">Die Mindestgröße für die Generierung von RSAOpenSsl-Schlüsseln wurde heraufgesetzt</span><span class="sxs-lookup"><span data-stu-id="f4df3-111">Minimum size for RSAOpenSsl key generation has increased</span></span>](#minimum-size-for-rsaopenssl-key-generation-has-increased) | <span data-ttu-id="f4df3-112">3.0</span><span class="sxs-lookup"><span data-stu-id="f4df3-112">3.0</span></span> |
-| [<span data-ttu-id="f4df3-113">.NET Core 3.0 zieht OpenSSL 1.1.x OpenSSL 1.0.x vor</span><span class="sxs-lookup"><span data-stu-id="f4df3-113">.NET Core 3.0 prefers OpenSSL 1.1.x to OpenSSL 1.0.x</span></span>](#net-core-30-prefers-openssl-11x-to-openssl-10x) | <span data-ttu-id="f4df3-114">3.0</span><span class="sxs-lookup"><span data-stu-id="f4df3-114">3.0</span></span> |
-| [<span data-ttu-id="f4df3-115">Bessere Argumentvalidierung im Pkcs8PrivateKeyInfo-Konstruktor</span><span class="sxs-lookup"><span data-stu-id="f4df3-115">Better argument validation in the Pkcs8PrivateKeyInfo constructor</span></span>](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | <span data-ttu-id="f4df3-116">3.0</span><span class="sxs-lookup"><span data-stu-id="f4df3-116">3.0</span></span> |
-| [<span data-ttu-id="f4df3-117">Der boolesche Parameter von SignedCms.ComputeSignature wird beachtet</span><span class="sxs-lookup"><span data-stu-id="f4df3-117">Boolean parameter of SignedCms.ComputeSignature is respected</span></span>](#boolean-parameter-of-signedcmscomputesignature-is-respected) | <span data-ttu-id="f4df3-118">2.1</span><span class="sxs-lookup"><span data-stu-id="f4df3-118">2.1</span></span> |
+| [<span data-ttu-id="bc463-107">BEGIN TRUSTED CERTIFICATE-Syntax nicht mehr für Stammzertifikate unter Linux unterstützt</span><span class="sxs-lookup"><span data-stu-id="bc463-107">BEGIN TRUSTED CERTIFICATE syntax no longer supported on Linux</span></span>](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | <span data-ttu-id="bc463-108">3.0</span><span class="sxs-lookup"><span data-stu-id="bc463-108">3.0</span></span> |
+| [<span data-ttu-id="bc463-109">EnvelopedCms verwendet standardmäßig AES-256-Verschlüsselung</span><span class="sxs-lookup"><span data-stu-id="bc463-109">EnvelopedCms defaults to AES-256 encryption</span></span>](#envelopedcms-defaults-to-aes-256-encryption) | <span data-ttu-id="bc463-110">3.0</span><span class="sxs-lookup"><span data-stu-id="bc463-110">3.0</span></span> |
+| [<span data-ttu-id="bc463-111">Die Mindestgröße für die Generierung von RSAOpenSsl-Schlüsseln wurde heraufgesetzt</span><span class="sxs-lookup"><span data-stu-id="bc463-111">Minimum size for RSAOpenSsl key generation has increased</span></span>](#minimum-size-for-rsaopenssl-key-generation-has-increased) | <span data-ttu-id="bc463-112">3.0</span><span class="sxs-lookup"><span data-stu-id="bc463-112">3.0</span></span> |
+| [<span data-ttu-id="bc463-113">.NET Core 3.0 zieht OpenSSL 1.1.x OpenSSL 1.0.x vor</span><span class="sxs-lookup"><span data-stu-id="bc463-113">.NET Core 3.0 prefers OpenSSL 1.1.x to OpenSSL 1.0.x</span></span>](#net-core-30-prefers-openssl-11x-to-openssl-10x) | <span data-ttu-id="bc463-114">3.0</span><span class="sxs-lookup"><span data-stu-id="bc463-114">3.0</span></span> |
+| [<span data-ttu-id="bc463-115">Bessere Argumentvalidierung im Pkcs8PrivateKeyInfo-Konstruktor</span><span class="sxs-lookup"><span data-stu-id="bc463-115">Better argument validation in the Pkcs8PrivateKeyInfo constructor</span></span>](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | <span data-ttu-id="bc463-116">3.0</span><span class="sxs-lookup"><span data-stu-id="bc463-116">3.0</span></span> |
+| [<span data-ttu-id="bc463-117">Der boolesche Parameter von SignedCms.ComputeSignature wird beachtet</span><span class="sxs-lookup"><span data-stu-id="bc463-117">Boolean parameter of SignedCms.ComputeSignature is respected</span></span>](#boolean-parameter-of-signedcmscomputesignature-is-respected) | <span data-ttu-id="bc463-118">2.1</span><span class="sxs-lookup"><span data-stu-id="bc463-118">2.1</span></span> |
 
-## <a name="net-core-30"></a><span data-ttu-id="f4df3-119">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="f4df3-119">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="bc463-119">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="bc463-119">.NET Core 3.0</span></span>
 
 [!INCLUDE [begin-trusted-cert-linux](~/includes/core-changes/cryptography/3.0/begin-trusted-cert-linux.md)]
 
@@ -44,7 +44,7 @@ ms.locfileid: "82135599"
 
 ***
 
-## <a name="net-core-21"></a><span data-ttu-id="f4df3-120">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="f4df3-120">.NET Core 2.1</span></span>
+## <a name="net-core-21"></a><span data-ttu-id="bc463-120">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="bc463-120">.NET Core 2.1</span></span>
 
 [!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
 
