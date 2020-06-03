@@ -18,12 +18,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: c087deb033a373dd8b3980feb7ec6901c7909569
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: ef7e078c6ef2f0b4081c49aa0db09316e79f0702
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102241"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286053"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 
@@ -33,17 +33,17 @@ Der Garbage Collector von .NET verwaltet die Belegung und Freigabe von Arbeitssp
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Grundlagen der Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md)|Beschreibt, wie die Garbage Collection funktioniert, wie Objekte auf dem verwalteten Heap zugeordnet werden und erläutert andere Kernkonzepte.|  
+|[Grundlagen der Garbage Collection](fundamentals.md)|Beschreibt, wie die Garbage Collection funktioniert, wie Objekte auf dem verwalteten Heap zugeordnet werden und erläutert andere Kernkonzepte.|  
 |[Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](workstation-server-gc.md)|Beschreibt die Unterschiede zwischen der Garbage Collection auf der Arbeitsstation für Client-Apps und der Garbage Collection auf dem Server für Server-Apps|
 |[Garbage Collection im Hintergrund](background-gc.md)|Beschreibt die Garbage Collection im Hintergrund, bei der es sich um die Bereinigung von Objekten der Generationen 0 und 1 handelt, während die Bereinigung für Generation 2 ausgeführt wird|
 |[Der Large-Object-Heap](large-object-heap.md)|Beschreibt den Large-Object-Heap (Large Object Heap, LOH) und die Garbage Collection für Large Objects|
-|[Garbage Collection und Leistung](../../../docs/standard/garbage-collection/performance.md)|Beschreibt die Leistungsprüfungen, die Sie verwenden können, um Probleme mit der Garbage Collection oder der Leistung zu analysieren.|  
-|[Indizierte Auflistungen](../../../docs/standard/garbage-collection/induced.md)|Beschreibt, wie eine Garbage Collection initiiert wird.|  
-|[Latenzmodi](../../../docs/standard/garbage-collection/latency.md)|Beschreibt die Modi, die das Ausmaß der Garbage Collection bestimmen.|  
-|[Optimierung für freigegebenes Webhosting](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Beschreibt, wie die Garbage Collection auf Servern, die von mehreren kleinen Websites gemeinsam verwendet werden, optimiert werden kann.|  
-|[Garbage-Collection-Benachrichtigungen](../../../docs/standard/garbage-collection/notifications.md)|Beschreibt, wie festgestellt werden kann, wann eine vollständige Garbage Collection ansteht und wann sie abgeschlossen ist.|  
-|[Überwachung von Anwendungsdomänenressourcen](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Beschreibt, wie die durch eine Anwendungsdomäne verursachte CPU- und Speicherauslastung überwacht wird.|  
-|[Schwache Verweise](../../../docs/standard/garbage-collection/weak-references.md)|Beschreibt Funktionen, die dem Garbage Collector ermöglichen, ein Objekt zu sammeln, während die Anwendung nach wie vor auf das Objekt zugreifen kann.|  
+|[Garbage Collection und Leistung](performance.md)|Beschreibt die Leistungsprüfungen, die Sie verwenden können, um Probleme mit der Garbage Collection oder der Leistung zu analysieren.|  
+|[Indizierte Auflistungen](induced.md)|Beschreibt, wie eine Garbage Collection initiiert wird.|  
+|[Latenzmodi](latency.md)|Beschreibt die Modi, die das Ausmaß der Garbage Collection bestimmen.|  
+|[Optimierung für freigegebenes Webhosting](optimization-for-shared-web-hosting.md)|Beschreibt, wie die Garbage Collection auf Servern, die von mehreren kleinen Websites gemeinsam verwendet werden, optimiert werden kann.|  
+|[Garbage-Collection-Benachrichtigungen](notifications.md)|Beschreibt, wie festgestellt werden kann, wann eine vollständige Garbage Collection ansteht und wann sie abgeschlossen ist.|  
+|[Überwachung von Anwendungsdomänenressourcen](app-domain-resource-monitoring.md)|Beschreibt, wie die durch eine Anwendungsdomäne verursachte CPU- und Speicherauslastung überwacht wird.|  
+|[Schwache Verweise](weak-references.md)|Beschreibt Funktionen, die dem Garbage Collector ermöglichen, ein Objekt zu sammeln, während die Anwendung nach wie vor auf das Objekt zugreifen kann.|  
   
 ## <a name="reference"></a>Referenz
 
@@ -58,4 +58,4 @@ Der Garbage Collector von .NET verwaltet die Belegung und Freigabe von Arbeitssp
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Bereinigen von nicht verwalteten Ressourcen](../../../docs/standard/garbage-collection/unmanaged.md)
+- [Bereinigen von nicht verwalteten Ressourcen](unmanaged.md)
