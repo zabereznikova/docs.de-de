@@ -3,12 +3,12 @@ title: XML-Dokumente und XML-Daten
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75710790"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287687"
 ---
 # <a name="xml-documents-and-data"></a>XML-Dokumente und XML-Daten
 
@@ -54,33 +54,33 @@ Die XML-Klassen in .NET Framework bieten folgende Vorteile:
 
   Falls XSLT-Verarbeitung erforderlich ist, können Sie die Leistung mithilfe der <xref:System.Xml.XPath.XPathDocument>-Klasse verbessern. Sie stellt einen optimierten, schreibgeschützten Speicher für XPath-Abfragen dar, der für die effiziente Zusammenarbeit mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ausgelegt ist.
 
-- **Integration in ADO.NET** Die XML-Klassen und [ADO.NET](../../../../docs/framework/data/adonet/index.md) sind nahtlos integriert und schaffen die Verbindung zwischen relationalen Daten und XML. Die <xref:System.Data.DataSet>-Klasse ist ein speicherinterner Cache für Daten, die aus einer Datenbank abgerufen wurden. Die <xref:System.Data.DataSet>-Klasse ist in der Lage, mithilfe der <xref:System.Xml.XmlReader>-Klasse und der <xref:System.Xml.XmlWriter>-Klasse XML zu lesen und zu schreiben, die zugehörige interne relationale Schemastruktur als XML-Schemas (XSD) beizubehalten und die Schemastruktur eines XML-Dokuments abzuleiten.
+- **Integration in ADO.NET** Die XML-Klassen und [ADO.NET](../../../framework/data/adonet/index.md) sind nahtlos integriert und schaffen die Verbindung zwischen relationalen Daten und XML. Die <xref:System.Data.DataSet>-Klasse ist ein speicherinterner Cache für Daten, die aus einer Datenbank abgerufen wurden. Die <xref:System.Data.DataSet>-Klasse ist in der Lage, mithilfe der <xref:System.Xml.XmlReader>-Klasse und der <xref:System.Xml.XmlWriter>-Klasse XML zu lesen und zu schreiben, die zugehörige interne relationale Schemastruktur als XML-Schemas (XSD) beizubehalten und die Schemastruktur eines XML-Dokuments abzuleiten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[XML-Verarbeitungsoptionen](../../../../docs/standard/data/xml/xml-processing-options.md) Erläutert die Optionen zum Verarbeiten von XML-Daten
+[XML-Verarbeitungsoptionen](xml-processing-options.md) Erläutert die Optionen zum Verarbeiten von XML-Daten
 
-[Verarbeiten von XML-Daten im Arbeitsspeicher](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) Erläutert die drei Modelle für die Verarbeitung von XML-Daten im Arbeitsspeicher: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) und [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), die (auf dem W3C-Dokumentobjektmodell basierende) <xref:System.Xml.XmlDocument>-Klasse und die (auf dem XPath-Datenmodell) basierende <xref:System.Xml.XPath.XPathDocument>-Klasse.
+[Verarbeiten von XML-Daten im Arbeitsspeicher](processing-xml-data-in-memory.md) Erläutert die drei Modelle für die Verarbeitung von XML-Daten im Arbeitsspeicher: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) und [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), die (auf dem W3C-Dokumentobjektmodell basierende) <xref:System.Xml.XmlDocument>-Klasse und die (auf dem XPath-Datenmodell) basierende <xref:System.Xml.XPath.XPathDocument>-Klasse.
 
-[XSLT-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)\
+[XSLT-Transformationen](xslt-transformations.md)\
 In diesem Abschnitt wird die Verwendung des XSLT-Prozessors beschrieben.
 
-[XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)\
+[XML-Schemaobjektmodell (SOM)](xml-schema-object-model-som.md)\
 In diesem Abschnitt werden die Klassen beschrieben, mit denen XML-Schemas (XSD) erstellt und bearbeitet werden, indem eine <xref:System.Xml.Schema.XmlSchema>-Klasse zum Laden und Bearbeiten eines Schemas bereitgestellt wird.
 
-[XML-Integration mit relationalen Daten und ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)\
+[XML-Integration mit relationalen Daten und ADO.NET](xml-integration-with-relational-data-and-adonet.md)\
 In diesem Abschnitt wird beschrieben, wie .NET Framework einen synchronen Echtzeitzugriff auf die relationale und die hierarchische Darstellung von Daten über das <xref:System.Data.DataSet>-Objekt und das <xref:System.Xml.XmlDataDocument>-Objekt ermöglicht.
 
-[Verwalten von Namespaces in einem XML-Dokument](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)\
+[Verwalten von Namespaces in einem XML-Dokument](managing-namespaces-in-an-xml-document.md)\
 Beschreibt, wie die <xref:System.Xml.XmlNamespaceManager>-Klasse zum Speichern und Verwalten von Namespaceinformationen verwendet wird.
 
-[Typenunterstützung in den System.Xml-Klassen](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)\
+[Typenunterstützung in den System.Xml-Klassen](type-support-in-the-system-xml-classes.md)\
 Beschreibt die Zuordnung von XML-Datentypen zu CLR-Typen, die Konvertierung von XML-Datentypen und andere in den <xref:System.Xml>-Klassen enthaltene Funktionen zur Unterstützung von Typen.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[ADO.NET](../../../../docs/framework/data/adonet/index.md)\
+[ADO.NET](../../../framework/data/adonet/index.md)\
 Hier erhalten Sie Informationen über den Zugriff auf Daten mit ADO.NET.
 
-[Sicherheit](../../../../docs/standard/security/index.md)\
+[Sicherheit](../../security/index.md)\
 Dieser Abschnitt stellt eine Übersicht über das Sicherheitssystem von .NET Framework bereit.

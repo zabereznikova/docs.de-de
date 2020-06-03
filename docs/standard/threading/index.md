@@ -6,30 +6,30 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: c5ca102dc98e50067d39d2f0c51a6ff75e342e9f
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: e4c19b664e8fc040fdc4a284b30f6104d676088d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588658"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279153"
 ---
 # <a name="managed-threading"></a>Verwaltetes Threading
 Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren Prozessoren entwickelt wurde, sollte sie optimal auf die Interaktion mit einem Benutzer reagieren, auch wenn sie gerade mit anderen Aufgaben befasst ist. Die Verwendung verschiedener Ausführungsthreads stellt eine der effektivsten Möglichkeiten dar, eine Anwendung entsprechend reaktionsschnell zu gestalten und gleichzeitig den Prozessor zwischen Benutzerereignissen oder sogar währenddessen zu nutzen. In diesem Abschnitt werden die grundlegenden Threadingkonzepte eingeführt und insbesondere verwaltete Threadingkonzepte und die Verwendung von verwaltetem Threading ausführlich behandelt.  
   
 > [!NOTE]
-> Ab .NET Framework 4 wird die Multithreadprogrammierung durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), neue parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Tasks anstatt von Threads basiert, erheblich vereinfacht. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../../../docs/standard/parallel-programming/index.md).  
+> Ab .NET Framework 4 wird die Multithreadprogrammierung durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), neue parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Tasks anstatt von Threads basiert, erheblich vereinfacht. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)  
+ [Grundlagen des verwalteten Threadings](managed-threading-basics.md)  
  Enthält eine Übersicht über das verwaltete Threading und erläutert, in welchen Fällen mehrere Threads verwendet werden.  
   
- [Verwenden von Threads und Threading](../../../docs/standard/threading/using-threads-and-threading.md)  
+ [Verwenden von Threads und Threading](using-threads-and-threading.md)  
  Erklärt das Erstellen, Starten, Anhalten, Fortsetzen und Abbrechen von Threads.  
   
- [Empfohlene Vorgehensweise für das verwaltete Threading](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [Empfohlene Vorgehensweise für das verwaltete Threading](managed-threading-best-practices.md)  
  Behandelt Synchronisierungsstufen, die Vermeidung von Deadlock- und Racebedingungen und weitere Threadingprobleme.  
   
- [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [Threading Objects and Features (Threadingobjekte und -funktionen)](threading-objects-and-features.md)  
  Beschreibt die verwalteten Klassen, mit denen Sie Threadingaktivitäten sowie die Daten von Objekten, auf die in verschiedenen Threads zugegriffen wird, synchronisieren können, und bietet eine Übersicht über Threadpoolthreads.  
   
 ## <a name="reference"></a>Referenz  
@@ -43,20 +43,20 @@ Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren
  Enthält Klassen zum Erstellen und Planen von parallelen Verarbeitungsaufgaben.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md)  
+ [Anwendungsdomänen](../../framework/app-domains/application-domains.md)  
  Übersicht über Anwendungsdomänen und deren Verwendung durch die Common Language-Infrastruktur.  
   
- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [Asynchrone Datei-E/A](../io/asynchronous-file-i-o.md)  
  Beschreibt die Leistungsvorteile und den grundlegenden Ablauf der asynchronen E/A.  
   
- [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](../asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
  Bietet eine Übersicht über das empfohlene Muster für asynchrone Programmierung in .NET.  
   
- [Asynchrones Aufrufen von synchronen Methoden](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+ [Asynchrones Aufrufen von synchronen Methoden](../asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
  Erläutert das Aufrufen von Methoden für Threadpoolthreads mithilfe der integrierten Features von Delegaten.  
   
- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
+ [Parallele Programmierung](../parallel-programming/index.md)  
  Beschreibt die parallelen Programmierbibliotheken, die die Verwendung mehrerer Threads in Anwendungen vereinfachen.  
   
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
+ [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../parallel-programming/introduction-to-plinq.md)  
  Beschreibt ein System zum parallelen Ausführen von Abfragen, um die Vorteile mehrerer Prozessoren zu nutzen.

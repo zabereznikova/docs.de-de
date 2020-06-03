@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7f606126237d4d045f55dde03c125455c8a8634
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156308"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275957"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -63,7 +63,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
   
 - Der allgemeine Begriff *generischer Typ* schließt sowohl konstruierte Typen als auch generische Typdefinitionen ein.  
   
-- *Kovarianz* und *Kontravarianz* der generischen Typparameter ermöglichen es Ihnen, konstruierte generische Typen zu verwenden, deren Typargumente stärker abgeleitet (Kovarianz) oder weniger stark abgeleitet (Kontravarianz) sind als ein konstruierter Zieltyp. Kovarianz und Kontravarianz werden zusammen als *Varianz* bezeichnet. Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md).  
+- *Kovarianz* und *Kontravarianz* der generischen Typparameter ermöglichen es Ihnen, konstruierte generische Typen zu verwenden, deren Typargumente stärker abgeleitet (Kovarianz) oder weniger stark abgeleitet (Kontravarianz) sind als ein konstruierter Zieltyp. Kovarianz und Kontravarianz werden zusammen als *Varianz*bezeichnet. Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](covariance-and-contravariance.md).  
   
 - *Einschränkungen* sind Begrenzungen für generische Typparameter. Sie können beispielsweise einen Typparameter auf Typen beschränken, die die generische Schnittstelle <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementieren, um sicherzustellen, dass Instanzen des Typs sortiert werden können. Sie können Typparameter auch auf Typen mit einer bestimmten Basisklasse beschränken, die über einen parameterlosen Konstruktor verfügen oder die Verweis- oder Werttypen sind. Benutzer des generischen Typs können keine Typargumente ersetzen, die die Einschränkungen nicht erfüllen.  
   
@@ -94,20 +94,20 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
   
 - Generische Delegaten ermöglichen typsichere Rückrufe, ohne mehrere Delegatklassen erstellen zu müssen. Der generische Delegat <xref:System.Predicate%601> ermöglicht es Ihnen beispielsweise, Ihre eigenen Suchkriterien für einen bestimmten Typ zu implementieren und Ihre Methode für Methoden vom Typ <xref:System.Array> zu verwenden, z. B. <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>und <xref:System.Array.FindAll%2A>.  
   
-- Generics optimieren dynamisch generierten Code. Wenn Sie Generics mit dynamisch generiertem Code verwenden, müssen Sie nicht den Typ generieren. Dies erhöht die Anzahl der Szenarios, in denen Sie einfache dynamische Methoden verwenden können, anstatt ganze Assemblys zu generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren und Ausführen von dynamischen Methoden](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) und <xref:System.Reflection.Emit.DynamicMethod>.  
+- Generics optimieren dynamisch generierten Code. Wenn Sie Generics mit dynamisch generiertem Code verwenden, müssen Sie nicht den Typ generieren. Dies erhöht die Anzahl der Szenarios, in denen Sie einfache dynamische Methoden verwenden können, anstatt ganze Assemblys zu generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren und Ausführen von dynamischen Methoden](../../framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) und <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Es folgen einige Einschränkungen von Generics:  
   
 - Generische Typen können von den meisten Basisklassen abgeleitet werden, z. B. <xref:System.MarshalByRefObject> (und Einschränkungen können verwendet werden, um festzulegen, dass generische Typparameter von Basisklassen wie <xref:System.MarshalByRefObject>abgeleitet werden). .NET Framework unterstützt allerdings keine kontextgebundenen generischen Typen. Ein generischer Typ kann von <xref:System.ContextBoundObject>abgeleitet werden, aber wenn Sie versuchen, eine Instanz dieses Typs zu erstellen, wird eine <xref:System.TypeLoadException>ausgelöst.  
   
-- Enumerationen können keine generischen Typparameter haben. Eine Enumeration kann nur durch Zufall generisch sein (z. B. weil sie in einem generischen Typ verschachtelt ist, der mit Visual Basic, C# oder C++ definiert wurde). Weitere Informationen finden Sie im Abschnitt "Enumerationen" unter [Allgemeines Typsystem](../../../docs/standard/base-types/common-type-system.md).  
+- Enumerationen können keine generischen Typparameter haben. Eine Enumeration kann nur durch Zufall generisch sein (z. B. weil sie in einem generischen Typ verschachtelt ist, der mit Visual Basic, C# oder C++ definiert wurde). Weitere Informationen finden Sie im Abschnitt "Enumerationen" unter [Allgemeines Typsystem](../base-types/common-type-system.md).  
   
 - Einfache dynamische Methoden können nicht generisch sein.  
   
 - In Visual Basic, C# und C++ kann ein geschachtelter Typ, der in einem generischen Typ eingeschlossen ist, nicht instanziiert werden, es sei denn, die Typen wurden den Typparametern aller einschließenden Typen zugewiesen. Anders ausgedrückt: Ein geschachtelter Typ, der mit diesen Sprachen definiert wurde, enthält bei näherer Betrachtung die Typparameter aller einschließenden Typen. Dadurch können die Typparameter von einschließenden Typen in den Memberdefinitionen eines geschachtelten Typs verwendet werden. Weitere Informationen finden Sie unter "Geschachtelte Typen" in <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
-    > Ein geschachtelter Typ, der durch Ausgabe von Code in einer dynamischen Assembly oder durch Verwendung von [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) definiert wird, ist nicht erforderlich, um die Typparameter seiner einschließenden Typen zu beinhalten; wenn sie jedoch nicht enthalten sind, befinden sich die Typparameter nicht im Gültigkeitsbereich der geschachtelten Klasse.  
+    > Ein geschachtelter Typ, der durch Ausgabe von Code in einer dynamischen Assembly oder durch Verwendung von [Ilasm.exe (IL -Assembler)](../../framework/tools/ilasm-exe-il-assembler.md) definiert wird, ist nicht erforderlich, um die Typparameter seiner einschließenden Typen zu beinhalten; wenn sie jedoch nicht enthalten sind, befinden sich die Typparameter nicht im Gültigkeitsbereich der geschachtelten Klasse.  
   
      Weitere Informationen finden Sie unter "Geschachtelte Typen" in <xref:System.Type.MakeGenericType%2A>.  
 
@@ -133,18 +133,18 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Generische Sammlungen in .NET](../../../docs/standard/generics/collections.md)|Beschreibt generische Auflistungsklassen und andere generische Auflistungstypen in .NET.|  
-|[Generische Delegaten zum Bearbeiten von Arrays und Listen](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Beschreibt generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.|  
-|[Generische Schnittstellen](../../../docs/standard/generics/interfaces.md)|Beschreibt generische Schnittstellen, die allgemeine Funktionalität für Familien generischer Typen bereitstellen.|  
-|[Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)|Beschreibt Kovarianz und Kontravarianz in generischen Typparametern.|  
-|[Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)|Enthält zusammenfassende Informationen über die Merkmale und Verwendungsszenarios der Auflistungstypen in .NET, einschließlich generischer Typen.|  
-|[Verwenden von generischen Auflistungen](../../../docs/standard/collections/when-to-use-generic-collections.md)|Beschreibt die allgemeinen Regeln, um festzulegen, wann generische Auflistungstypen verwendet werden können.|  
-|[Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Erläutert das Generieren dynamischer Assemblys, die generische Typen und Methoden enthalten.|  
+|[Generische Sammlungen in .NET](collections.md)|Beschreibt generische Auflistungsklassen und andere generische Auflistungstypen in .NET.|  
+|[Generische Delegaten zum Bearbeiten von Arrays und Listen](delegates-for-manipulating-arrays-and-lists.md)|Beschreibt generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.|  
+|[Generische Schnittstellen](interfaces.md)|Beschreibt generische Schnittstellen, die allgemeine Funktionalität für Familien generischer Typen bereitstellen.|  
+|[Kovarianz und Kontravarianz](covariance-and-contravariance.md)|Beschreibt Kovarianz und Kontravarianz in generischen Typparametern.|  
+|[Häufig verwendete Auflistungstypen](../collections/commonly-used-collection-types.md)|Enthält zusammenfassende Informationen über die Merkmale und Verwendungsszenarios der Auflistungstypen in .NET, einschließlich generischer Typen.|  
+|[Verwenden von generischen Auflistungen](../collections/when-to-use-generic-collections.md)|Beschreibt die allgemeinen Regeln, um festzulegen, wann generische Auflistungstypen verwendet werden können.|  
+|[How to: Definieren eines generischen Typs mit Reflektionsausgabe](../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Erläutert das Generieren dynamischer Assemblys, die generische Typen und Methoden enthalten.|  
 |[Generische Typen in Visual Basic (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Beschreibt das Genericsfeature für Visual Basic-Benutzer, darunter Gewusst-wie-Themen zum Verwenden und Definieren generischer Typen.|  
 |[Einführung in Generics](../../csharp/programming-guide/generics/index.md)|Bietet eine Übersicht über das Definieren und Verwenden generischer Typen für C#-Benutzer.|  
 |[Übersicht über Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Beschreibt das Genericsfeature für C++-Benutzer, darunter die Unterschiede zwischen Generics und Vorlagen.|  
 
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  
