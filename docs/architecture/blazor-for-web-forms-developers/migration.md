@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine vorhandene ASP.net-Web Forms-APP zu blaz
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b614572bd04d9ec694b0feb95173373591d5e117
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c70e4a4f57ddac97db4d58d9f876f7edc6aa6ce9
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144408"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306980"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrieren von ASP.net Web Forms zu blazor
 
@@ -285,7 +285,7 @@ Weitere Informationen zur Bündelung und Minimierung finden Sie unter [Bundle an
 
 Eine Seite in einer Web Forms-APP ist eine Datei mit der Erweiterung " *. aspx* ". Eine Web Forms Seite kann häufig einer Komponente in blazor zugeordnet werden. Eine blazor-Komponente wird in einer Datei mit der *Razor* -Erweiterung erstellt. Für das Projekt "eShop" werden fünf Seiten in eine Razor Page konvertiert.
 
-Die Detailansicht besteht z. b. aus drei Dateien im Web Forms Projekt: *Details. aspx*, *Details.aspx.cs*und *Details.aspx.Designer.cs*. Beim wandeln in blazor werden das Code-Behind-und das Markup in " *Details. Razor*" kombiniert. Die Razor-Kompilierung (entspricht der *Designer.cs* -Dateien) wird im *obj* -Verzeichnis gespeichert und ist nicht standardmäßig in **Projektmappen-Explorer**sichtbar. Die Web Forms Seite besteht aus folgendem Markup:
+Die Detailansicht umfasst z. b. drei Dateien im Web Forms Projekt: *Details. aspx*, *Details.aspx.cs*und *Details.aspx.Designer.cs*. Beim wandeln in blazor werden das Code-Behind-und das Markup in " *Details. Razor*" kombiniert. Die Razor-Kompilierung (entspricht der *Designer.cs* -Dateien) wird im *obj* -Verzeichnis gespeichert und ist nicht standardmäßig in **Projektmappen-Explorer**sichtbar. Die Web Forms Seite besteht aus folgendem Markup:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
