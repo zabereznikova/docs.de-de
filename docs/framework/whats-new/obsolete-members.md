@@ -23,7 +23,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="mscorlibdll"></a>mscorlib.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>|<xref:Microsoft.Win32.Registry.DynData>|Der Registrierungsschlüssel <xref:Microsoft.Win32.Registry.DynData> funktioniert nur unter Win9x, was von der CLR nicht mehr unterstützt wird. Verwenden Sie in NT-basierten Betriebssystemen stattdessen den Registrierungsschlüssel <xref:Microsoft.Win32.Registry.PerformanceData?displayProperty=nameWithType> oder den Registrierungsproxy <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.PerformanceData%2A?displayProperty=nameWithType>.|
 > |<xref:System.Activator?displayProperty=nameWithType>|<xref:System.Activator.CreateInstance%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|Methoden, die Beweise für das Sandboxing verwenden, wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von                                          <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=nameWithType>-Parameter annimmt.|
@@ -108,12 +108,12 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 > |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.UInt32%29>|Dieser Konstruktor ist veraltet. Verwenden Sie stattdessen <xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.Reflection.AssemblyNameFlags%29>.|
 > |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.Flags%2A>|Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A?displayProperty=nameWithType>.|
 > |<xref:System.Reflection.Emit.ConstructorBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ConstructorBuilder.ReturnType%2A>|Diese Eigenschaft ist veraltet.|
-> |<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Es steht eine alternative API zur Verfügung: Geben Sie stattdessen das benutzerdefinierte <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>-Attribut aus.|
+> |<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Eine alternative API ist verfügbar: Geben Sie stattdessen das benutzerdefinierte Attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> aus.|
 > |<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|Diese API ist veraltet.|
-> |<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Es steht eine alternative API zur Verfügung: Geben Sie stattdessen das benutzerdefinierte <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>-Attribut aus.|
+> |<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Eine alternative API ist verfügbar: Geben Sie stattdessen das benutzerdefinierte Attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> aus.|
 > |<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|Diese API ist veraltet.|
 > |<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|Diese API ist veraltet.|
-> |<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Es steht eine alternative API zur Verfügung: Geben Sie stattdessen das benutzerdefinierte <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>-Attribut aus.|
+> |<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Eine alternative API ist verfügbar: Geben Sie stattdessen das benutzerdefinierte Attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> aus.|
 > |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|Rufen Sie stattdessen <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> auf.|
 > |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|Die <xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>-Methode ist veraltet und wird in einem der nächsten Releases entfernt.|
 > |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|Die <xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>-Methode ist veraltet. Führen Sie diesen Vorgang mithilfe der Hosting-API aus.|
@@ -189,7 +189,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="presentationcoredll"></a>PresentationCore.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffect%2A>|Bitmapeffekte sind veraltet und funktionieren nicht mehr. Verwenden Sie bei Bedarf stattdessen <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>.|
 > |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffectInput%2A>|Bitmapeffekte sind veraltet und funktionieren nicht mehr. Verwenden Sie bei Bedarf stattdessen <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>.|
@@ -229,7 +229,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="presentationframeworkdll"></a>PresentationFramework.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Windows.Data.BindingListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.OnBeginChangeLogging%2A>|Ersetzt durch <xref:System.Windows.Data.CollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType>.|
 > |<xref:System.Windows.Data.CollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.ClearChangeLog%2A>|Ersetzt durch <xref:System.Windows.Data.CollectionView.ClearPendingChanges%2A?displayProperty=nameWithType>.|
@@ -239,7 +239,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemactivitiesdll"></a>System.Activities.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.Xaml.IXamlLineInfo%2CSystem.IO.TextReader%29>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diesen Konstruktor nicht verwenden. Verwenden Sie stattdessen <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29> oder <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29>.|
 > |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diesen Konstruktor nicht verwenden. Verwenden Sie stattdessen <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29> oder <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29>.|
@@ -247,7 +247,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemactivitiespresentationdll"></a>System.Activities.Presentation.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|Diese Methode unterstützt nicht das Ziehen von mehreren Elementen.|
 > |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Methode unterstützt nicht das Ziehen von mehreren Elementen. Verwenden Sie stattdessen <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29>.|
@@ -262,7 +262,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemcoredll"></a>System.Core.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords?displayProperty=nameWithType>|<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Falscher Wert; verwenden Sie stattdessen <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint2>.|
 > |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Concat%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Die zweite Datenquelle eines binären Operators muss den Typ <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> anstelle von <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> haben. Um dieses Problem zu beheben, verwenden Sie die <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>-Erweiterungsmethode und konvertieren die rechte Datenquelle in <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>.|
@@ -305,7 +305,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemdatadll"></a>System.Data.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute.%23ctor%2A>|<xref:System.Data.DataSysDescriptionAttribute> ist veraltet.|
 > |<xref:System.Data.Common.DataAdapter?displayProperty=nameWithType>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A> ist veraltet. Verwenden Sie den <xref:System.Data.Common.DataAdapter.%23ctor%28System.Data.Common.DataAdapter%29>-Konstruktor.|
@@ -327,7 +327,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemdataentitydll"></a>System.Data.Entity.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Data.Metadata.Edm.AssociationSetEnd?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.AssociationSetEnd.Role%2A>|Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die <xref:System.Data.Metadata.Edm.AssociationSetEnd.Name%2A?displayProperty=nameWithType>-Eigenschaft.|
 > |<xref:System.Data.Metadata.Edm.MetadataWorkspace?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Verwenden Sie stattdessen <xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate%2A?displayProperty=nameWithType>.|
@@ -337,7 +337,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemdataoracleclientdll"></a>System.Data.OracleClient.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A> ist veraltet. Verwenden Sie die <xref:System.Math?displayProperty=nameWithType>-Klassen, um die Genauigkeit einer Dezimalzahl explizit festzulegen.|
 > |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A> ist veraltet. Verwenden Sie die <xref:System.Math?displayProperty=nameWithType>-Klassen, um die Stellen einer Dezimalzahl explizit festzulegen.|
@@ -346,13 +346,13 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemdesigndll"></a>System.Design.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.InitializeNonDefault%2A>|Diese Methode ist veraltet. Verwenden Sie stattdessen <xref:System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent%2A?displayProperty=nameWithType>.|
 > |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|Diese Methode ist veraltet. Verwenden Sie stattdessen <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType>.|
 > |<xref:System.ComponentModel.Design.DesignSurface?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>|Die <xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>-Methode wurde ersetzt durch <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%28System.Type%29>.|
 > |<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer.SerializeToReferenceExpression%2A>|Diese Methode ist veraltet. Verwenden Sie stattdessen <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> oder <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A>.|
-> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|Die Verwendung dieser Eigenschaft generiert einen Compilerfehler.<br /><br /> Fehler: Auf diese Eigenschaft kann nicht mehr verwiesen werden. Sie ist enthalten, um vorhandene kompilierte Anwendungen zu unterstützen. Die Entwurfszeitelement-Ansichtsarchitektur wird nicht mehr verwendet.|
+> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|Die Verwendung dieser Eigenschaft generiert einen Compilerfehler.<br /><br /> Fehler: This property can no longer be referenced, and is included to support existing compiled applications. (Fehler: Auf diese Eigenschaft kann nicht mehr verwiesen werden. Sie ist enthalten, um vorhandene kompilierte Anwendungen zu unterstützen.) Die Entwurfszeitelement-Ansichtsarchitektur wird nicht mehr verwendet.|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|Die empfohlene Alternative ist die Verwendung von [`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A).|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A>|Die empfohlene Alternative ist <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|Die empfohlene Alternative ist die Verwendung von [`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A) und [`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A).|
@@ -362,7 +362,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A>|Die Verwendung dieser Methode wird nicht empfohlen, da die Größenanpassung von der <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A?displayProperty=nameWithType>-Methode durchgeführt wird.|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A>|Die empfohlene Alternative ist das Erben von <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=nameWithType> und die Verwendung eines <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>-Objekts. Bereiche ermöglichen eine bessere Steuerung des Inhalts im Designer.|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.Behavior%2A>|Die empfohlene Alternative ist <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|
-> |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|Die Verwendung dieser Eigenschaft generiert einen Compilerfehler.<br /><br /> Fehler: Auf diese Eigenschaft kann nicht mehr verwiesen werden. Sie ist enthalten, um vorhandene kompilierte Anwendungen zu unterstützen. Das Entwurfszeitelement bietet möglicherweise nicht immer Zugriff auf das Element im Markup. Clientskripts und Steuerelemente können Sie mithilfe alternativer Methoden im <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> behandeln.|
+> |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|Die Verwendung dieser Eigenschaft generiert einen Compilerfehler.<br /><br /> Fehler: This property can no longer be referenced, and is included to support existing compiled applications. (Fehler: Auf diese Eigenschaft kann nicht mehr verwiesen werden. Sie ist enthalten, um vorhandene kompilierte Anwendungen zu unterstützen.) Das Entwurfszeitelement bietet möglicherweise nicht immer Zugriff auf das Element im Markup. Clientskripts und Steuerelemente können Sie mithilfe alternativer Methoden im <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> behandeln.|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached%2A>|Die empfohlene Alternative ist <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching%2A>|Die empfohlene Alternative ist <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A>|Die Verarbeitung des [HtmlControlDesigner.DataBindings.Changed](xref:System.Web.UI.DataBindingCollection.Changed)-Ereignisses stellt die empfohlene Alternative dar. Die <xref:System.Web.UI.DataBindingCollection>-Auflistung, die von der <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird, ermöglicht eine bessere Steuerung der Datenbindungen, die dem Steuerelement zugeordnet sind.|
@@ -399,7 +399,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemdll"></a>System.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateCompiler%2A>|Aufrufer dürfen die <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>-Schnittstelle nicht verwenden. Sie sollten stattdessen direkt die Methoden der <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>-Klasse verwenden.|
 > |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateGenerator%2A>|Aufrufer dürfen die <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType>-Schnittstelle nicht verwenden. Sie sollten stattdessen direkt die Methoden der <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>-Klasse verwenden.|
@@ -511,7 +511,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemdrawingdll"></a>System.Drawing.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Drawing.FontFamily?displayProperty=nameWithType>|<xref:System.Drawing.FontFamily.GetFamilies%2A>|Verwenden Sie die <xref:System.Drawing.FontFamily.GetFamilies%2A>-Methode nicht. Verwenden Sie stattdessen die <xref:System.Drawing.FontFamily.Families%2A?displayProperty=nameWithType>-Eigenschaft.|
 > |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Dieser Konstruktor ist veraltet. Verwenden Sie <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>.|
@@ -519,7 +519,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemmessagingdll"></a>System.Messaging.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetEnumerator%2A>|Diese Methode gibt ein <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType>-Objekt zurück, das die <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType>-Methodenfamilie falsch implementiert. Verwenden Sie stattdessen <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType>.|
 > |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|Diese Methode gibt ein <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType>-Objekt zurück, das die <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType>-Methodenfamilie falsch implementiert. Verwenden Sie stattdessen <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType>.|
@@ -527,7 +527,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemservicemodeldll"></a>System.ServiceModel.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Eigenschaft ist veraltet. Verwenden Sie zum Aktivieren von dem HTTP <xref:System.Net.CookieContainer> stattdessen die <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType>-Eigenschaft.|
 > |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Peerchannelfunktion ist veraltet und wird demnächst entfernt.|
@@ -539,7 +539,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemservicemodeldiscoverydll"></a>System.ServiceModel.Discovery.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>-Eigenschaft ist veraltet. Verwenden Sie <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> zum Festlegen der Transporteigenschaften.|
 > |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>-Eigenschaft ist veraltet. Verwenden Sie <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> zum Festlegen der Transporteigenschaften.|
@@ -547,14 +547,14 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemwebdatavisualizationdll"></a>System.Web.DataVisualization.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> ist veraltet. Verwenden Sie stattdessen <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType>.|
 
 ## <a name="systemwebdll"></a>System.Web.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetAppConfig%2A>|Die empfohlene Alternative ist <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A?displayProperty=nameWithType> in "System.Web.dll".|
 > |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|Die empfohlene Alternative ist <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> in "System.Web.dll".|
@@ -589,18 +589,18 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemwebdynamicdatadll"></a>System.Web.DynamicData.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=nameWithType>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|Verwenden Sie die `EnablePersistedSelection`-Eigenschaft auf einem datengebundenen Steuerelement, z. B. <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> oder <xref:System.Web.UI.WebControls.ListView?displayProperty=nameWithType>.|
 
 ## <a name="systemwebextensionsdll"></a>System.Web.Extensions.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Web.UI.CompositeScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|Verwenden Sie <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.ScriptManager?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|Diese Eigenschaft ist veraltet. Legen Sie die [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A)-Eigenschaft stattdessen für jedes einzelne <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>-Objekt fest.|
-> |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|Diese Eigenschaft ist veraltet. Legen Sie die <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=nameWithType>[`System.Web.UI.ScriptReference.Path`-Eigenschaft für jedes einzelne ](xref:System.Web.UI.ScriptReferenceBase.Path%2A)-Objekt fest, anstatt <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType> zu verwenden.|
+> |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|Diese Eigenschaft ist veraltet. Legen Sie die [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A)-Eigenschaft für jedes einzelne <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>-Objekt fest, anstatt <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=nameWithType> zu verwenden.|
 > |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IsFromSystemWebExtensions%2A>|Verwenden Sie <xref:System.Web.UI.ScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|Verwenden Sie <xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>.|
 > |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A> ist in Skriptverweisen nicht mehr erforderlich.|
@@ -610,7 +610,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemwebservicesdll"></a>System.Web.Services.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Web.Services.Discovery.DiscoveryClientProtocol?displayProperty=nameWithType>|<xref:System.Web.Services.Discovery.DiscoveryClientProtocol.LoadExternals%2A>|Diese Methode wird in einer der nächsten Versionen entfernt. Der Methodenaufruf ist für die Ressourcensuche nicht mehr erforderlich.|
 > |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=nameWithType>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|Diese Eigenschaft wird in einer der nächsten Versionen entfernt. Das Vorhandensein eines bestimmten Headers in einer SOAP-Meldung wird nicht mehr erzwungen.|
@@ -618,10 +618,10 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemwindowsformsdll"></a>System.Windows.Forms.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
-> |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Dieser Enumerationswert ist veraltet. Es gibt keinen Ersatz.|
-> |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Diese Methode ist veraltet. Es gibt keinen Ersatz.|
+> |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Dieser Enumerationswert ist veraltet. Es ist kein Ersatz vorhanden.|
+> |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Diese Methode ist veraltet. Es ist kein Ersatz vorhanden.|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.RenderRightToLeft%2A>|Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>.|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%29>|Diese Methode ist veraltet. Verwenden Sie stattdessen die <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType>-Methode.|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%2CSystem.Single%29>|Diese Methode ist veraltet. Verwenden Sie stattdessen die <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType>-Methode.|
@@ -629,13 +629,13 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 > |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScale%2A>|Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=nameWithType>-Eigenschaft.|
 > |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.GetAutoScaleSize%2A>|Diese Methode ist veraltet. Verwenden Sie stattdessen die <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType>-Eigenschaft.|
 > |<xref:System.Windows.Forms.Label?displayProperty=nameWithType>|<xref:System.Windows.Forms.Label.RenderTransparent%2A>|Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen <xref:System.Windows.Forms.Control.BackColor%2A>.|
-> |<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Diese Methode ist veraltet. Es gibt keinen Ersatz.|
+> |<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Diese Methode ist veraltet. Es ist kein Ersatz vorhanden.|
 > |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType>-Eigenschaft.|
 
 ## <a name="systemxamldll"></a>System.Xaml.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|Wird vom XAML-Parser nicht verwendet. Siehe <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 > |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|Das `expressionType`-Argument wird vom XAML-Parser nicht verwendet. Verwenden Sie <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29>, um den erwarteten Rückgabetyp anzugeben. Verwenden Sie <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>, um die benutzerdefinierte Behandlung für Ausdruckstypen anzugeben.|
@@ -643,7 +643,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 ## <a name="systemxmldll"></a>System.Xml.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.Auto>|Der Validierungstyp sollte als <xref:System.Xml.ValidationType.DTD?displayProperty=nameWithType> oder <xref:System.Xml.ValidationType.Schema?displayProperty=nameWithType> angegeben werden.|
 > |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.XDR>|Die XDR-Validierung per <xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType> ist veraltet.|
@@ -669,14 +669,14 @@ Die Assemblys „IEHost.dll“ und „IEExec.exe“ wurden aus .NET Framework en
 ## <a name="isymwrapperdll"></a>ISymWrapper.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|Die empfohlene Alternative ist <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>. <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> verwendet anstelle von <xref:System.IntPtr?displayProperty=nameWithType> den Importerschnittstellenzeiger als <xref:System.Int32?displayProperty=nameWithType> und funktioniert daher für 32-Bit- und 64-Bit-Architekturen.|
 
 ## <a name="microsoftbuildconversionv40dll"></a>Microsoft.Build.Conversion.v4.0.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28Microsoft.Build.BuildEngine.ProjectLoadSettings%29>|Verwenden Sie stattdessen die parameterlose <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert>-Überladung.|
 > |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28System.String%29>|Verwenden Sie stattdessen die parameterlose <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert>-Überladung.|
@@ -686,7 +686,7 @@ Die Assemblys „IEHost.dll“ und „IEExec.exe“ wurden aus .NET Framework en
 ## <a name="microsoftbuildenginedll"></a>Microsoft.Build.Engine.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|Vermeiden Sie das Festlegen von <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>. Wenn Sie den .NET Framework-Speicherort als <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> übergeben haben, ist keine weitere Aktion notwendig. Definieren Sie Toolsets andernfalls stattdessen in der Registrierung oder der Konfigurationsdatei, oder fügen Sie dem <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>-Objekt der Engine Elemente hinzu, um eine benutzerdefinierte <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>-Eigenschaft zu verwenden.|
 > |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Wenn Sie den .NET Framework-Speicherort als <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> übergeben haben, können Sie einfach zum parameterlosen <xref:Microsoft.Build.BuildEngine.Engine.%23ctor>-Konstruktor wechseln. Andernfalls können Sie benutzerdefinierte Toolsets in der Registrierung oder der Konfigurationsdatei definieren, oder Sie können dem <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>-Objekt der Engine Elemente hinzufügen. Verwenden Sie dann stattdessen entweder den <xref:Microsoft.Build.BuildEngine.Engine.%23ctor>-Konstruktor oder den <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29>-Konstruktor.|
@@ -694,28 +694,28 @@ Die Assemblys „IEHost.dll“ und „IEExec.exe“ wurden aus .NET Framework en
 ## <a name="microsoftbuildframeworkdll"></a>Microsoft.Build.Framework.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=nameWithType>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Members generiert einen Compilerfehler.<br /><br /> Verwenden Sie stattdessen die <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=nameWithType>-Eigenschaft.|
 
 ## <a name="microsoftbuildutilitiesv40dll"></a>Microsoft.Build.Utilities.v4.0.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=nameWithType>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|Verwenden Sie die <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=nameWithType>-Eigenschaft.|
 
 ## <a name="microsoftdataentitybuildtasksdll"></a>Microsoft.Data.Entity.Build.Tasks.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Wird nur für die Abwärtskompatibilität der Version 3.5 verwendet.|
 
 ## <a name="microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll
 
 > [!div class="mx-tdBreakAll"]
-> |Geben Sie Folgendes ein:|Member|Nachricht|
+> |Typ|Member|Meldung|
 > |----------|------------|-------------|
 > |<xref:Microsoft.VisualBasic.FileSystem?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.FileSystem.FilePut%28System.Object%2CSystem.Object%2CSystem.Object%29>|Dieser Member ist veraltet. Verwenden Sie <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A?displayProperty=nameWithType>, um <xref:System.Object>-Typen zu schreiben, oder konvertieren Sie `FileNumber` und `RecordNumber` in <xref:System.Int32>, um andere Typen als Objekttypen zu schreiben.|
 > |<xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Conversions.FallbackUserDefinedConversion%2A>|Die Verwendung dieses Members generiert einen Compilerfehler.<br /><br /> Verwenden Sie diese Methode nicht.|
@@ -730,7 +730,7 @@ Die Assemblys „IEHost.dll“ und „IEExec.exe“ wurden aus .NET Framework en
 > |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|Die Verwendung dieses Members generiert einen Compilerfehler.<br /><br /> Verwenden Sie diese Methode nicht.|
 > |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|Der Registrierungsschlüssel `DynData` funktioniert nur unter Win9x, was von dieser .NET Framework-Version nicht unterstützt wird. Verwenden Sie stattdessen den Registrierungsschlüssel `PerformanceData`. Diese Eigenschaft wird in einer der nächsten Framework-Versionen entfernt.|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Veraltete Elemente in .NET Framework](whats-obsolete.md)
 - [Veraltete Typen](obsolete-types.md)

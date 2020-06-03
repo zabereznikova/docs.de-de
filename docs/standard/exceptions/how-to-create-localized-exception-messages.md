@@ -165,7 +165,7 @@ So erstellen Sie lokalisierte Ausnahmemeldungen:
     > [!NOTE]
     > Wenn der Projektname `TestProject` lautet und die Ressourcendatei *ExceptionMessages.resx* im Ordner *Resources* des Projekts gespeichert ist, lautet der vollqualifizierte Name der Ressourcendatei `TestProject.Resources.ExceptionMessages`.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md)
 - [Erstellen von Satellitenassemblys für Desktop-Apps](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

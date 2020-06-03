@@ -17,7 +17,7 @@ Wenn das Schlüsselwort `new` als Deklarationsmodifizierer verwendet wird, blend
 
 Sie können das Schlüsselwort `new` auch verwenden, um [eine Instanz eines Typs](../operators/new-operator.md) zu erstellen oder als [Einschränkung eines generischen Typs](./new-constraint.md).
 
-Um einen geerbten Member auszublenden, deklarieren Sie ihn mit demselben Membernamen in der abgeleiteten Klasse und ändern ihn mit dem `new`-Schlüsselwort. Beispiel:
+Um einen geerbten Member auszublenden, deklarieren Sie ihn mit demselben Membernamen in der abgeleiteten Klasse und ändern ihn mit dem `new`-Schlüsselwort. Zum Beispiel:
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 
@@ -57,7 +57,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 Weitere Informationen finden Sie im Abschnitt [Der new-Modifizierer](~/_csharplang/spec/classes.md#the-new-modifier) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

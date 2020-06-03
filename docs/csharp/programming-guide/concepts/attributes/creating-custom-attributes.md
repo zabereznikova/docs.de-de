@@ -63,12 +63,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Reflection>
 - [C#-Programmierhandbuch](../../index.md)
 - [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)
 - [Reflektion (C#)](../reflection.md)
 - [Attribute (C#)](./index.md)
-- [Zugriff auf Attribute mit Reflektion (C#)](./accessing-attributes-by-using-reflection.md)
+- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](./accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (C#)](../../../language-reference/attributes/general.md)

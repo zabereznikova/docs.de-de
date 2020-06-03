@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 3f020db49bcdcbf6ce3d573348a93b06e87db199
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242724"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291174"
 ---
 # <a name="mutexes"></a>Mutexe
-Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zugriff auf eine Ressource bereitzustellen. Die <xref:System.Threading.Mutex>-Klasse verwendet mehr Systemressourcen als die <xref:System.Threading.Monitor>-Klasse, sie kann jedoch über Anwendungsdomänengrenzen hinweg gemarshallt, mit mehreren Wartevorgängen verwendet sowie zur Synchronisierung von Threads in verschiedenen Prozessen verwendet werden. Ein Vergleich der verwalteten Synchronisierungsmechanismen finden Sie unter [Overview of Synchronization Primitives (Überblick über Synchronisierungsprimitiven)](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zugriff auf eine Ressource bereitzustellen. Die <xref:System.Threading.Mutex>-Klasse verwendet mehr Systemressourcen als die <xref:System.Threading.Monitor>-Klasse, sie kann jedoch über Anwendungsdomänengrenzen hinweg gemarshallt, mit mehreren Wartevorgängen verwendet sowie zur Synchronisierung von Threads in verschiedenen Prozessen verwendet werden. Ein Vergleich der verwalteten Synchronisierungsmechanismen finden Sie unter [Overview of Synchronization Primitives (Überblick über Synchronisierungsprimitiven)](overview-of-synchronization-primitives.md).  
   
  Codebeispiele finden Sie in der Referenzdokumentation für die <xref:System.Threading.Mutex.%23ctor%2A>-Konstruktoren.  
   
@@ -47,7 +47,7 @@ Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zu
   
  Informationen zur sicheren Zugriffssteuerung für Mutexe finden Sie in den Artikeln zu <xref:System.Security.AccessControl.MutexSecurity>- und <xref:System.Security.AccessControl.MutexAccessRule>-Klasse, der <xref:System.Security.AccessControl.MutexRights>-Enumeration, der <xref:System.Threading.Mutex.GetAccessControl%2A>-, <xref:System.Threading.Mutex.SetAccessControl%2A>- und <xref:System.Threading.Mutex.OpenExisting%2A>-Methode der <xref:System.Threading.Mutex>-Klasse und dem <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>-Konstruktor.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Mutex?displayProperty=nameWithType>
 - <xref:System.Threading.Mutex.%23ctor%2A>

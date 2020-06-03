@@ -13,7 +13,7 @@ ms.locfileid: "81463662"
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.2 SDK und neuere Versionen
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet list package`: Hiermit listen Sie die Paketverweise für ein Projekt oder eine Projektmappe auf.
 

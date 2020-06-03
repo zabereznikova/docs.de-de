@@ -99,7 +99,7 @@ Als nächstes müssen Sie Code hinzufügen, um die Klasse in eine Datei zu seria
 
 Nun können Sie die Anwendung erneut erstellen und ausführen. Beachten Sie, dass die Zinssätze bei der ersten Ausführung bei 7,5 beginnen und dann in 7,1 umgewandelt werden. Schließen Sie die Anwendung, und führen Sie sie dann erneut aus. Die Anwendung druckt dann die Meldung aus, die sie aus der gespeicherten Datei gelesen hat. Der Zinssatz liegt dann sogar vor dem Code, der diese ändert, bei 7,1.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Serialisierung (C#)](index.md)
 - [C#-Programmierhandbuch](../../index.md)

@@ -74,7 +74,7 @@ Dieses einzelne Suchmuster findet alle gültigen Zeichenfolgen. Reguläre Ausdr�
 
 Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](../../../samples/snippets/csharp/how-to/strings.zip) herunterladen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../programming-guide/index.md)
 - [Zeichenfolgen](../programming-guide/strings/index.md)

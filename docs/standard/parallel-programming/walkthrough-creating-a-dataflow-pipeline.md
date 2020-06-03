@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 339365381b1fa2c777cead3c75bfe783f7af800e
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: cfe3296815dc344b0d9d1f7bad1ab4a130380e2b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588286"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284610"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Exemplarische Vorgehensweise: Erstellen einer Datenflusspipeline
 Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> verwenden können, um Nachrichten von Quellblöcken zu empfangen, können Sie auch Nachrichtenblöcke verbinden, um eine *Datenflusspipeline* zu bilden. Eine Datenpipeline besteht aus einer Reihe von Komponenten, oder *Datenflussblöcken*, von denen jede eine bestimmte Aufgabe ausführt, die zu einem größeren Ziel beiträgt. Jeder Datenflussblock in einer Datenflusspipeline erledigt eine Aufgabe, wenn er eine Meldung von einem anderen Datenflussblock empfangen hat. Eine Analogie hierzu ist eine Fertigungsstraße eines Fahrzeugherstellers. Jedes Fahrzeug durchläuft die Fertigungsstraße: In einer Station wird das Fahrgestell montiert, in der nächsten wird der Motor eingebaut usw. Da eine Fertigungsstraße ermöglicht, dass mehrere Fahrzeuge gleichzeitig montiert werden, bietet sie einen besseren Durchsatz als eine Einzelmontage eines vollständigen Fahrzeugs.
@@ -35,7 +35,7 @@ Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rece
 6. Warten Sie, bis die Pipeline alle Aufgaben ausgeführt hat.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Lesen Sie das Thema [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.  
+ Lesen Sie das Thema [Datenfluss](dataflow-task-parallel-library.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.  
   
 ## <a name="creating-a-console-application"></a>Erstellen einer Konsolenanwendung  
  Erstellen Sie in Visual Studio ein Visual C#- oder Visual Basic-Projekt des Typs „Konsolenanwendung“. Installieren Sie das NuGet-Paket „System.Threading.Tasks.Dataflow“.
@@ -53,7 +53,7 @@ Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rece
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Member|Geben Sie Folgendes ein:|Beschreibung|  
+|Member|Typ|Beschreibung|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Lädt den Text des Buchs aus dem Internet herunter.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Trennt den Text des Buchs in ein Array aus einzelnen Wörtern.|  
@@ -106,8 +106,8 @@ Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rece
   
  Die Parallelität, die durch ein Verwenden von Datenflusspipelines erreicht wird, wird als *grobmaschige Parallelität* bezeichnet, weil sie in der Regel aus weniger, dafür aber größeren Aufgaben besteht. Sie können auch eine *feinmaschigere Parallelität* von kleineren Aufgaben mit kurzer Ausführungszeit in einer Datenflusspipeline verwenden. In diesem Beispiel wird für das `findReversedWords`-Element der Pipeline [PLINQ](introduction-to-plinq.md) verwendet, um mehrere Elemente in der Arbeitsliste parallel zu verarbeiten. Die Verwendung von feinmaschiger Parallelität in einer grobmaschigen Pipeline kann den Gesamtdurchsatz verbessern.  
   
- Sie können auch einen Quelldatenflussblock mit mehreren Zielblöcken verbinden, um ein *Datenflussnetzwerk* zu erstellen. Die überladene Version der <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A>-Methode übernimmt ein <xref:System.Predicate%601>-Objekt, das definiert, ob der Zielblock jede Nachricht anhand dessen Wert akzeptiert. Die meisten Datenflussblocktypen, die als Quellen fungieren, senden Nachrichten an alle verbundenen Zielblöcke in der Reihenfolge, in der sie verbunden wurden, bis einer der Blöcke die jeweilige Nachricht akzeptiert hat. Durch Verwenden dieser Filtermechanismus können Sie Systeme von verbundenen Datenflussblöcken erstellen, mit denen bestimmte Daten durch einen Pfad und andere Daten durch einen anderen Pfad geleitet werden. Ein Beispiel, in dem Filterung zum Erstellen eines Datenflussnetzwerks verwendet wird, finden Sie unter [Exemplarische Vorgehensweise: Datenfluss in einer Windows Forms-Anwendung verwenden](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Sie können auch einen Quelldatenflussblock mit mehreren Zielblöcken verbinden, um ein *Datenflussnetzwerk* zu erstellen. Die überladene Version der <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A>-Methode übernimmt ein <xref:System.Predicate%601>-Objekt, das definiert, ob der Zielblock jede Nachricht anhand dessen Wert akzeptiert. Die meisten Datenflussblocktypen, die als Quellen fungieren, senden Nachrichten an alle verbundenen Zielblöcke in der Reihenfolge, in der sie verbunden wurden, bis einer der Blöcke die jeweilige Nachricht akzeptiert hat. Durch Verwenden dieser Filtermechanismus können Sie Systeme von verbundenen Datenflussblöcken erstellen, mit denen bestimmte Daten durch einen Pfad und andere Daten durch einen anderen Pfad geleitet werden. Ein Beispiel, in dem Filterung zum Erstellen eines Datenflussnetzwerks verwendet wird, finden Sie unter [Exemplarische Vorgehensweise: Using Dataflow in a Windows Forms Application (Exemplarische Vorgehensweise: Verwenden von Datenflüssen in einer Windows Forms-Anwendung)](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

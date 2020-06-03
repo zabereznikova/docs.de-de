@@ -29,7 +29,7 @@ Im folgenden Beispiel wird `let` auf zweierlei Weise verwendet:
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [Abfrageschlüsselwörter (LINQ)](query-keywords.md)

@@ -13,7 +13,7 @@ ms.locfileid: "82794662"
 ---
 # <a name="console-app"></a>Konsolen-App
 
-In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Sie lernen Folgendes:
+In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 
 - Die Grundlagen zur .NET Core-CLI
 - Die Struktur einer C#-Konsolenanwendung
@@ -303,13 +303,13 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-Diese neue Version von `ShowTeleprompter` ruft eine neue Methode in der `TeleprompterConfig`-Klasse auf. Jetzt müssen Sie `Main` aktualisieren, um anstelle von `RunTeleprompter``ShowTeleprompter` aufzurufen:
+Diese neue Version von `ShowTeleprompter` ruft eine neue Methode in der `TeleprompterConfig`-Klasse auf. Jetzt müssen Sie `Main` aktualisieren, um anstelle von `ShowTeleprompter``RunTeleprompter` aufzurufen:
 
 ```csharp
 RunTeleprompter().Wait();
 ```
 
-## <a name="conclusion"></a>Zusammenfassung
+## <a name="conclusion"></a>Schlussbemerkung
 
 In diesem Tutorial wurden verschiedene Features von C# und den .NET Core-Bibliotheken vorgestellt, die bei der Arbeit in Konsolenanwendungen benötigt werden. Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung der taskbasierten asynchronen Programmierung vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-CLI kennengelernt.
 

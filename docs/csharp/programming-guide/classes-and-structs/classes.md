@@ -44,21 +44,21 @@ Beim Erstellen des Objekts wird im verwalteten Heap für dieses bestimmte Objekt
   
 ## <a name="creating-objects"></a>Erstellen von Objekten
 
-Obwohl sie manchmal synonym werden, sind eine Klasse und ein Objekt unterschiedliche Dinge. Eine Klasse definiert einen Objekttyp, ist aber selbst kein Objekt. Ein Objekt ist eine konkrete Entität, basierend auf einer Klasse, und wird manchmal als Instanz einer Klasse bezeichnet.  
+Obwohl sie manchmal synonym werden, sind eine Klasse und ein Objekt unterschiedliche Dinge. Eine Klasse definiert einen Typ eines Objekts, aber es ist kein Objekt selbst. Ein Objekt ist eine konkrete Entität, basierend auf einer Klasse, und wird manchmal als Instanz einer Klasse bezeichnet.  
   
- Objekte können mithilfe des Schlüsselworts [new](../../language-reference/operators/new-operator.md) erstellt werden, gefolgt vom Namen der Klasse, auf der das Objekt basiert, z.B.:  
+ Objekte können mithilfe des Schlüsselworts [new](../../language-reference/operators/new-operator.md) erstellt werden, gefolgt vom Namen der Klasse, auf die das Objekt basiert, z.B.:  
 
  ```csharp
  Customer object1 = new Customer();
  ```
 
- Wenn eine Instanz einer Klasse erstellt wird, wird ein Verweis auf das Objekt zurück an den Programmierer übergeben. Im vorherigen Beispiel ist `object1` ein Verweis auf ein Objekt, das auf `Customer` basiert. Dieser Verweis bezieht sich auf das neue Objekt, enthält jedoch nicht die Objektdaten selbst. In der Tat können Sie einen Objektverweis erstellen, ohne ein Objekt zu erstellen:  
+ Wenn eine Instanz einer Klasse erstellt wird, wird ein Verweis auf das Objekt an den Programmierer übergeben. Im vorherigen Beispiel ist `object1` ein Verweis auf ein Objekt, das auf `Customer` basiert. Dieser Verweis bezieht sich auf das neue Objekt, enthält jedoch nicht die Objektdaten selbst. In der Tat können Sie einen Objektverweis erstellen, ohne ein Objekt zu erstellen:  
 
 ```csharp
  Customer object2;
 ```
 
- Es wird nicht empfohlen, einen Objektverweis wie diesen zu erstellen, der auf kein Objekt verweist. Der Versuch, auf ein Objekt über solch einen Verweis zuzugreifen, schlägt während der Laufzeit fehl. Allerdings kann ein solcher Verweis zum Verweisen auf ein Objekt entweder durch Erstellen eines neues Objekts gemacht werden oder indem Sie ihn einem vorhandenen Objekt zuweisen, z.B.:  
+ Es wird nicht empfohlen, einen Objektverweis wie diesen zu erstellen, der auf kein Objekt verweist. Der Versuch, auf ein Objekt über solch einen Verweis zuzugreifen, schlägt während der Laufzeit fehl. Allerdings kann ein solcher Verweis dazu veranlasst werden, auf ein Objekt zu verweisen, indem entweder ein neues Objekt erstellt wird oder indem es einem vorhandenen Objekt zugewiesen wird, z.B.:  
 
  ```csharp
  Customer object3 = new Customer();
@@ -71,7 +71,7 @@ Obwohl sie manchmal synonym werden, sind eine Klasse und ein Objekt unterschiedl
 
 Klassen unterstützen die *Vererbung* vollständig. Dies ist ein wesentliches Merkmal der objektorientierten Programmierung. Wenn Sie eine Klasse erstellen, können Sie von einer anderen Schnittstelle oder Klasse erben, die nicht als [versiegelt](../../language-reference/keywords/sealed.md) definiert ist. Andere Klassen können von Ihrer Klasse erben und die virtuellen Methoden überschreiben.
 
-Die Vererbung erfolgt durch Verwendung einer *Ableitung*, d.h., dass eine Klasse mithilfe einer *Basisklasse* deklariert wird, von der Sie Daten und Verhalten erbt. Eine Basisklasse wird durch Anhängen eines Doppelpunkts sowie des Namens der Basisklasse angegeben, die dem abgeleiteten Klassennamen folgt, z.B.:  
+Die Vererbung erfolgt durch Verwendung einer *Ableitung*, d.h., dass eine Klasse mithilfe einer *Basisklasse* deklariert wird, aus der Sie Daten und das Verhalten erbt. Eine Basisklasse wird durch Anhängen eines Doppelpunkts sowie den Namen der Basisklasse angegeben, die dem abgeleiteten Klassennamen folgt, z.B.:  
 
  ```csharp
  public class Manager : Employee
@@ -81,7 +81,7 @@ Die Vererbung erfolgt durch Verwendung einer *Ableitung*, d.h., dass eine Klasse
  }
  ```
 
-Wenn eine Klasse eine Basisklasse deklariert, erbt sie alle Member der Basisklasse mit Ausnahme der Konstruktoren. Weitere Informationen finden Sie unter [Inheritance (Vererbung)](inheritance.md).
+Wenn eine Klasse eine Basisklasse deklariert, erbt sie alle Member der Basisklasse mit Ausnahme der Konstruktoren. Weitere Informationen finden Sie unter [Vererbung](inheritance.md).
   
 Anders als in C++ kann eine Klasse in C# nur direkt von einer Basisklasse erben. Da jedoch eine Basisklasse von einer anderen Klasse erben kann, kann eine Klasse indirekt von mehreren Basisklassen erben. Darüber hinaus kann eine Klasse mehr als eine Schnittstelle direkt implementieren. Weitere Informationen finden Sie unter [Schnittstellen](../interfaces/index.md).  
   
@@ -99,7 +99,7 @@ Im folgenden Beispiel wird eine öffentliche Klasse definiert, die [eine automat
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Objektorientierte Programmierung](../concepts/object-oriented-programming.md)

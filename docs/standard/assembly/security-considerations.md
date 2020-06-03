@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378657"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290018"
 ---
 # <a name="assembly-security-considerations"></a>Überlegungen zur Assemblysicherheit
 Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben, die erforderlich sind, um die Assembly auszuführen. Das Erteilen bestimmter Berechtigungen für eine Assembly beruht auf Beweisen.  
@@ -39,7 +39,7 @@ Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben,
 - Sie fordern die vom Code eventuell benötigten Berechtigungen nicht mit Berechtigungsanforderungen an, bereiten jedoch die Behandlung von Sicherheitsausnahmen für den Fall vor, dass keine Berechtigungen erteilt werden.  
   
   > [!NOTE]
-  > Sicherheit ist ein komplexer Themenbereich, und Sie können aus einer Vielzahl von Optionen auswählen. Weitere Informationen finden Sie unter [Schlüsselbegriffe der Sicherheit](../../standard/security/key-security-concepts.md).  
+  > Sicherheit ist ein komplexer Themenbereich, und Sie können aus einer Vielzahl von Optionen auswählen. Weitere Informationen finden Sie unter [Schlüsselbegriffe der Sicherheit](../security/key-security-concepts.md).  
   
  Zur Ladezeit wird der Beweis der Assembly als Eingabe für die Sicherheitsrichtlinie verwendet. Die Sicherheitsrichtlinie wird durch den Administrator der Organisation und des Computers sowie durch die Benutzerrichtlinieneinstellungen eingerichtet und bestimmt den Satz von Berechtigungen, der sämtlichem verwalteten Code beim Ausführen erteilt wird. Die Sicherheitsrichtlinie kann für den Herausgeber der Assembly eingerichtet werden (dazu ist eine mit dem Signaturtool generierte Signatur erforderlich). Sie kann außerdem für die Website und die Zone (als solche in Internet Explorer bezeichnet), von der die Assembly heruntergeladen wurde, oder für den starken Namen der Assembly eingerichtet werden. Der für einen Computer zuständige Administrator kann z. B. eine Sicherheitsrichtlinie einrichten, über die Code, der von einer Website heruntergeladen und von einer bestimmten Softwarefirma signiert ist, auf die Datenbank auf einem Computer zugreifen kann. Die Sicherheitsrichtlinie lässt es aber nicht zu, dass auf die Festplatte dieses Computers geschrieben wird.  
   

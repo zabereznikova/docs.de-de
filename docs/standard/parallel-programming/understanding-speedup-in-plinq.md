@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 60df814e18f473d84c260511292666c524fda7b7
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 627f1327a9fe87fc226dfbb40df50ec4855edfb9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588080"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284896"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Grundlagen zur Beschleunigung in PLINQ
 Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to Objects-Abfragen durch paralleles Ausführen der Abfragedelegaten auf Computern mit mehreren Kernen. PLINQ zeigt die beste Leistung, wenn die Verarbeitung der einzelnen Elemente in einer Quellsammlung unabhängig erfolgt, ohne gemeinsamen Zustand der einzelnen Delegaten. Solche Vorgänge sind häufig in LINQ to Objects und PLINQ und werden oft als „*optimal parallel*“ bezeichnet, da sie gut auf mehrere Threads verteilt werden können. Nicht alle Abfragen bestehen jedoch vollständig aus optimal parallel verarbeitbaren Vorgängen; in den meisten Fällen umfasst eine Abfrage einige Operatoren, die entweder nicht parallelisiert werden können oder die parallele Ausführung verlangsamen. Und auch bei optimal parallel verarbeitbaren Abfragen muss PLINQ noch die Datenquelle partitionieren, die Arbeit auf die Threads aufteilen und in der Regel die Ergebnisse zusammenführen, wenn die Abfrage abgeschlossen ist. Alle diese Vorgänge tragen zum Rechenaufwand für die Parallelisierung bei; dieser Aufwand zum Hinzufügen der Parallelisierung wird als *Mehraufwand* bezeichnet. Um optimale Leistung in einer PLINQ-Abfrage zu erzielen, besteht das Ziel darin, optimal parallel verarbeitbare Teile zu maximieren und Teile, die Mehraufwand erfordern, zu minimieren. Dieser Artikel enthält Informationen, mit deren Hilfe Sie PLINQ-Abfragen schreiben können, die so effizient wie möglich sind und nichtsdestoweniger richtige Ergebnisse liefern.  
@@ -51,7 +51,7 @@ Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to 
   
 3. Anzahl und Art der Vorgänge.  
   
-     PLINQ stellt den AsOrdered-Operator für Situationen bereit, in denen die Reihenfolge der Elemente in der Quellsequenz beibehalten werden muss. Mit der Sortierung ist ein gewisser Aufwand verbunden, aber dieser Nachteil ist in der Regel sehr gering. GroupBy- und Join-Vorgänge verursachen ebenso einen Mehraufwand. PLINQ bringt die beste Leistung, wenn Elemente in der Quellsammlung in beliebiger Reihenfolge verarbeitet und – sobald sie dazu bereit sind – an den nächsten Operator übergeben werden können. Weitere Informationen finden Sie unter [Order Preservation in PLINQ (Beibehaltung der Reihenfolge in PLINQ)](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
+     PLINQ stellt den AsOrdered-Operator für Situationen bereit, in denen die Reihenfolge der Elemente in der Quellsequenz beibehalten werden muss. Mit der Sortierung ist ein gewisser Aufwand verbunden, aber dieser Nachteil ist in der Regel sehr gering. GroupBy- und Join-Vorgänge verursachen ebenso einen Mehraufwand. PLINQ bringt die beste Leistung, wenn Elemente in der Quellsammlung in beliebiger Reihenfolge verarbeitet und – sobald sie dazu bereit sind – an den nächsten Operator übergeben werden können. Weitere Informationen finden Sie unter [Order Preservation in PLINQ (Beibehaltung der Reihenfolge in PLINQ)](order-preservation-in-plinq.md).  
   
 4. Die Form der Abfrageausführung.  
   
@@ -59,16 +59,16 @@ Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to 
   
 5. Der Typ der Mergeoptionen.  
   
-     PLINQ kann entweder so konfiguriert werden, dass die Ausgabe gepuffert und nach dem Erzeugen des gesamten Resultsets in Blöcken oder im Ganzen bereitgestellt wird, oder dass einzelne Ergebnisse nach dem Erzeugen im Datenstrom bereitgestellt werden. Im ersten Fall wird die Gesamtausführungszeit verkürzt und im zweiten Fall die Latenzzeit zwischen den bereitgestellten Elementen.  Mergeoptionen haben zwar nicht immer erhebliche Auswirkungen auf die gesamte Abfrageleistung, können sich jedoch auf die wahrgenommene Leistung auswirken, da sie steuern, wie lange ein Benutzer warten muss, um Ergebnisse zu sehen. Weitere Informationen finden Sie unter [Merge Options in PLINQ (Zusammenführungsoptionen in PLINQ)](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+     PLINQ kann entweder so konfiguriert werden, dass die Ausgabe gepuffert und nach dem Erzeugen des gesamten Resultsets in Blöcken oder im Ganzen bereitgestellt wird, oder dass einzelne Ergebnisse nach dem Erzeugen im Datenstrom bereitgestellt werden. Im ersten Fall wird die Gesamtausführungszeit verkürzt und im zweiten Fall die Latenzzeit zwischen den bereitgestellten Elementen.  Mergeoptionen haben zwar nicht immer erhebliche Auswirkungen auf die gesamte Abfrageleistung, können sich jedoch auf die wahrgenommene Leistung auswirken, da sie steuern, wie lange ein Benutzer warten muss, um Ergebnisse zu sehen. Weitere Informationen finden Sie unter [Merge Options in PLINQ (Zusammenführungsoptionen in PLINQ)](merge-options-in-plinq.md).  
   
 6. Die Art der Partitionierung.  
   
-     In einigen Fällen kann eine PLINQ-Abfrage einer indizierbaren Quellsammlung zu einer unausgeglichenen Arbeitslast führen. In diesem Fall können Sie die Abfrageleistung vielleicht erhöhen, indem Sie einen benutzerdefinierten Partitionierer erstellen. Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+     In einigen Fällen kann eine PLINQ-Abfrage einer indizierbaren Quellsammlung zu einer unausgeglichenen Arbeitslast führen. In diesem Fall können Sie die Abfrageleistung vielleicht erhöhen, indem Sie einen benutzerdefinierten Partitionierer erstellen. Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="when-plinq-chooses-sequential-mode"></a>Wenn PLINQ den sequenziellen Modus auswählt  
  PLINQ versucht immer, eine Abfrage mindestens so schnell auszuführen, als würde die Abfrage sequenziell ausgeführt. PLINQ beachtet zwar weder den Rechenaufwand der Benutzerdelegaten noch die Größe der Eingabequelle, sucht jedoch nach bestimmten „Abfrageformen“. Insbesondere wird nach Abfrageoperatoren oder Kombinationen aus Operatoren gesucht, die in der Regel die Ausführung einer Abfrage im parallelen Modus verlangsamen. Wenn solche Formen gefunden werden, fällt PLINQ standardmäßig auf den sequenziellen Modus zurück.  
   
- Vielleicht stellen Sie jedoch nach dem Messen der Leistung für eine bestimmte Abfrage fest, dass sie im parallelen Modus tatsächlich schneller ausgeführt wird. In solchen Fällen können Sie das <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>-Flag mithilfe der <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>-Methode verwenden, um PLINQ anzuweisen, die Abfrage zu parallelisieren. Weitere Informationen finden Sie unter [How to: Specify the Execution Mode in PLINQ (Vorgehensweise: Angeben des Ausführungsmodus in PLINQ)](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ Vielleicht stellen Sie jedoch nach dem Messen der Leistung für eine bestimmte Abfrage fest, dass sie im parallelen Modus tatsächlich schneller ausgeführt wird. In solchen Fällen können Sie das <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>-Flag mithilfe der <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>-Methode verwenden, um PLINQ anzuweisen, die Abfrage zu parallelisieren. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Ausführungsmodus in PLINQ](how-to-specify-the-execution-mode-in-plinq.md).  
   
  Die folgende Liste beschreibt die Abfrageformen, die PLINQ standardmäßig im sequenziellen Modus ausführt:  
   
@@ -82,6 +82,6 @@ Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to 
   
 - Abfragen, die Reverse enthalten, sofern nicht auf eine indizierbare Datenquelle angewendet.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](introduction-to-plinq.md)

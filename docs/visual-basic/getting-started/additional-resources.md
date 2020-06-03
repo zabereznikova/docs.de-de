@@ -46,7 +46,7 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|Bietet eine dauerhafte Community anhand von Videos, Wikis und Foren.|
 
-### <a name="support"></a>Unterstützung
+### <a name="support"></a>Support
 
 |URL|Beschreibung|
 |----------|----------------|
@@ -61,7 +61,7 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
 |[vbCity](http://vbcity.com/)|Eine Communitywebsite, auf der Benutzer Visual Basic und .NET kennenlernen und Fragen dazu stellen können.|
 |[Stapelüberlauf](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow ist eine Website, auf der Entwickler Fragen stellen und Antworten erhalten können.|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte mit Visual Basic](../../visual-basic/getting-started/index.md)
 - [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)

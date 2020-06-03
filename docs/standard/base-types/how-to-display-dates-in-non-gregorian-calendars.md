@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern'
+title: 'Vorgehensweise: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,7 +18,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/01/2020
 ms.locfileid: "80523925"
 ---
-# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Gewusst wie: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Vorgehensweise: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern
 Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den gregorianischen Kalender als Standardkalender. Das bedeutet, dass ein Aufruf der `ToString`-Methode eines Datums- und Uhrzeitwerts die Zeichenfolgendarstellung dieses Datums und dieser Uhrzeit im gregorianischen Kalender anzeigt, selbst wenn dieses Datum und diese Uhrzeit in einem anderen Kalender erstellt wurden. Dies wird im folgenden Beispiel veranschaulicht. Hierbei werden zwei verschiedene Möglichkeiten verwendet, um einen Datums- und Uhrzeitwert mit dem persischen Kalender zu erstellen. Beim Aufruf der <xref:System.DateTime.ToString%2A>-Methode werden diese Datums- und Uhrzeitwerte aber weiterhin im gregorianischen Kalender angezeigt. Dieses Beispiel zeigt zwei häufig verwendete, aber falsche Verfahren zum Anzeigen des Datums in einem bestimmten Kalender.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -34,7 +34,7 @@ Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den 
   
 3. Rufen Sie die <xref:System.Array.Exists%2A?displayProperty=nameWithType>-Methode auf, um zu ermitteln, ob das Kalenderobjekt ein Member des von der <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebenen Arrays ist. Wenn dies der Fall ist, kann der Kalender als Standardkalender für das <xref:System.Globalization.CultureInfo>-Objekt dienen. Wenn das Objekt kein Member des Arrays ist, befolgen Sie die Anweisungen im Abschnitt „Anzeigen des Datums in einem beliebigen Kalender“.  
   
-4. Weisen Sie das Kalenderobjekt zu, um die von der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo>-Eigenschaft des <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Objekts festzulegen.  
+4. Weisen Sie das Kalenderobjekt zu, um die von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A>-Eigenschaft des <xref:System.Globalization.DateTimeFormatInfo>-Objekts festzulegen.  
   
     > [!NOTE]
     > Die <xref:System.Globalization.CultureInfo>-Klasse verfügt auch über eine <xref:System.Globalization.CultureInfo.Calendar%2A>-Eigenschaft. Diese ist jedoch schreibgeschützt und konstant. Sie ändert sich nicht, um den neuen, der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>-Eigenschaft zugewiesenen Standardkalender widerzuspiegeln.  
@@ -69,7 +69,7 @@ Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den 
  [!code-csharp[Formatting.HowTo.Calendar#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#2)]
  [!code-vb[Formatting.HowTo.Calendar#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Calendar/vb/Calendar1.vb#2)]  
   
- Jedes <xref:System.Globalization.CultureInfo>-Objekt kann mindestens einen Kalender unterstützen, der von der <xref:System.Globalization.CultureInfo.OptionalCalendars%2A>-Eigenschaft angegeben wird. Einer dieser Kalender ist als Standardkalender der Kultur festgelegt und wird von der schreibgeschützten <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben. Ein anderer der optionalen Kalender kann als Standard festgelegt werden, indem ein <xref:System.Globalization.Calendar>-Objekt, das diesen Kalender darstellt, der von der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebenen <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Eigenschaft zugewiesen wird. Einige Kalender jedoch, wie der von der <xref:System.Globalization.PersianCalendar>-Klasse dargestellte persische Kalender, dienen nicht als optionale Kalender für irgendeine Kultur.  
+ Jedes <xref:System.Globalization.CultureInfo>-Objekt kann mindestens einen Kalender unterstützen, der von der <xref:System.Globalization.CultureInfo.OptionalCalendars%2A>-Eigenschaft angegeben wird. Einer dieser Kalender ist als Standardkalender der Kultur festgelegt und wird von der schreibgeschützten <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben. Ein anderer der optionalen Kalender kann als Standard festgelegt werden, indem ein <xref:System.Globalization.Calendar>-Objekt, das diesen Kalender darstellt, der von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebenen <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>-Eigenschaft zugewiesen wird. Einige Kalender jedoch, wie der von der <xref:System.Globalization.PersianCalendar>-Klasse dargestellte persische Kalender, dienen nicht als optionale Kalender für irgendeine Kultur.  
   
  Das Beispiel definiert eine wiederverwendbare Kalenderhilfsprogrammklasse, `CalendarUtility`, um viele der Details beim Generieren der Zeichenfolgendarstellung eines Datums mithilfe eines bestimmten Kalenders zu verarbeiten. Die `CalendarUtility`-Klasse verfügt über die folgenden Member:  
   
