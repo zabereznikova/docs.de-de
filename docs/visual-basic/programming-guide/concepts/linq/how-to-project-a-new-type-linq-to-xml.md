@@ -1,13 +1,13 @@
 ---
-title: 'Gewusst wie: Projektieren eines neuen Typs (LINQ to XML)'
+title: 'Vorgehensweise: Projektieren eines neuen Typs (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-ms.openlocfilehash: a2486d88af537fb4aa8f34243a5a739d25ee5be1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 48fb82e870a4fc4fa16cfb48a127f364e6d81f13
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353336"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396505"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Vorgehensweise: Projizieren eines neuen Typs (LINQ to XML) (Visual Basic)
 In anderen Beispielen dieses Abschnitts wurden Abfragen gezeigt, die Ergebnisse als eine <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement>, eine <xref:System.Collections.Generic.IEnumerable%601> von `string` und eine <xref:System.Collections.Generic.IEnumerable%601> von `int` zurückgeben. Dabei handelt es sich zwar um gängige Ergebnistypen, die sich aber nicht für jedes Szenario eignen. In vielen Fällen besteht Ihr Ziel darin, dass Ihre Abfragen als eine <xref:System.Collections.Generic.IEnumerable%601> eines anderen Typs zurückgegeben werden.  
@@ -15,7 +15,7 @@ In anderen Beispielen dieses Abschnitts wurden Abfragen gezeigt, die Ergebnisse 
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird gezeigt, wie Sie Objekte in der `Select`-Klausel instanziieren können. Der Code definiert zuerst mit einem Konstruktor eine neue Klasse und ändert anschließend die `Select`-Anweisung so, dass der Ausdruck zu einer neuen Instanz der neuen Klasse wird.  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Public Class NameQty  
@@ -43,7 +43,7 @@ Public Class Program
 End Class  
 ```  
   
- In diesem Beispiel wird die `M:System.Xml.Linq.XElement.Element`-Methode verwendet, die im Thema Gewusst [wie: Abrufen eines einzelnen untergeordneten Elements (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)vorgestellt wurde. Außerdem verwendet das Beispiel Umwandlungen, um die Werte der Elemente abzurufen, die von der `M:System.Xml.Linq.XElement.Element`-Methode zurückgegeben werden.  
+ In diesem Beispiel wird die- `M:System.Xml.Linq.XElement.Element` Methode verwendet, die im Thema Gewusst [wie: Abrufen eines einzelnen untergeordneten Elements (LINQ to XML) (Visual Basic)](how-to-retrieve-a-single-child-element-linq-to-xml.md)vorgestellt wurde. Außerdem verwendet das Beispiel Umwandlungen, um die Werte der Elemente abzurufen, die von der `M:System.Xml.Linq.XElement.Element`-Methode zurückgegeben werden.  
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
@@ -54,4 +54,4 @@ Baby Monitor:2
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

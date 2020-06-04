@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 52107589c6bbebbd34ecbb090845f4031612c276
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 07ace3f1b9c5e512227dc1f718ef768b631c8303
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578933"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397375"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Der Lambdaausdruck wird nicht aus diesem Ereignishandler entfernt
 
 Der Lambda-Ausdruck wird nicht aus diesem Ereignishandler entfernt. Weisen Sie den Lambda-Ausdruck einer Variablen zu, und verwenden Sie die Variable, um das Ereignis hinzuzufügen und zu entfernen.
 
-Wenn Lambda-Ausdrücke mit Ereignis Handlern verwendet werden, wird das erwartete Verhalten möglicherweise nicht angezeigt. Der Compiler generiert eine neue Methode für jede Lambda-Ausdrucks Definition, auch wenn diese identisch sind. Der folgende Code zeigt daher `False` an.
+Wenn Lambda-Ausdrücke mit Ereignis Handlern verwendet werden, wird das erwartete Verhalten möglicherweise nicht angezeigt. Der Compiler generiert eine neue Methode für jede Lambda-Ausdrucks Definition, auch wenn diese identisch sind. Der folgende Code zeigt daher an `False` .
 
 ```vb
 Module Module1
@@ -34,7 +34,7 @@ Module Module1
 End Module
 ```
 
-Wenn Lambda-Ausdrücke mit Ereignis Handlern verwendet werden, kann dies zu unerwarteten Ergebnissen führen. Im folgenden Beispiel wird der von `AddHandler` hinzugefügte Lambda-Ausdruck nicht durch die `RemoveHandler`-Anweisung entfernt.
+Wenn Lambda-Ausdrücke mit Ereignis Handlern verwendet werden, kann dies zu unerwarteten Ergebnissen führen. Im folgenden Beispiel wird der von hinzugefügte Lambda-Ausdruck `AddHandler` nicht durch die- `RemoveHandler` Anweisung entfernt.
 
 ```vb
 Module Module1
@@ -61,7 +61,7 @@ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausble
 
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-Um die Warnung zu vermeiden und den Lambda-Ausdruck zu entfernen, weisen Sie den Lambda-Ausdruck einer Variablen zu, und verwenden Sie die-Variable in den `AddHandler`-und `RemoveHandler`-Anweisungen, wie im folgenden Beispiel gezeigt.
+Um die Warnung zu vermeiden und den Lambda-Ausdruck zu entfernen, weisen Sie den Lambda-Ausdruck einer Variablen zu, und verwenden Sie die-Variable in der `AddHandler` -und der- `RemoveHandler` Anweisung, wie im folgenden Beispiel gezeigt.
 
 ```vb
 Module Module1
@@ -85,8 +85,8 @@ Module Module1
 End Module
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Lambda-Ausdrücke](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [Gelockerte Delegatenkonvertierung](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Ereignisse](../../programming-guide/language-features/events/index.md)

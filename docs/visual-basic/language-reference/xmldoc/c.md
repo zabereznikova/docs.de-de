@@ -5,14 +5,14 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 857ea1ccca4d74daf65bba03845004561afefd55
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c8ba03d9cc01c4751d15c01530c6cbf7d499dc3b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348512"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400162"
 ---
-# <a name="c-visual-basic"></a>\<c-> (Visual Basic)
+# <a name="c-visual-basic"></a>\<c> (Visual Basic)
 Gibt an, dass Text in einer Beschreibung Code ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -23,20 +23,20 @@ Gibt an, dass Text in einer Beschreibung Code ist.
   
 ## <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---|---|  
 |`text`|Der Text, der als Code angegeben werden soll.|  
   
-## <a name="remarks"></a>Hinweise  
- Das `<c>`-Tag bietet Ihnen die Möglichkeit, anzugeben, dass Text in einer Beschreibung als Code gekennzeichnet werden soll. Zum Angeben mehrerer Zeilen als Code wird [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ Das- `<c>` Tag bietet Ihnen die Möglichkeit, anzugeben, dass Text in einer Beschreibung als Code gekennzeichnet werden soll. Verwenden [\<code>](code.md) Sie, um mehrere Zeilen als Code anzugeben.  
   
- Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
+ Kompilieren Sie mit [-doc](../../reference/command-line-compiler/doc.md) , um Dokumentations Kommentare in einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird das `<c>`-Tag im Zusammenfassungs Abschnitt verwendet, um anzugeben, dass `Counter` Code ist.  
+ In diesem Beispiel wird das- `<c>` Tag im Zusammenfassungs Abschnitt verwendet, um anzugeben, dass der `Counter` Code ist.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML-Kommentartags](index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrLateboundCallToInheritedComClass
 ms.assetid: 7bc16e84-8d29-4f8e-bc4f-002c65c71099
-ms.openlocfilehash: c18f2b6e1751d39ceb81c190f70ee161ca716bc8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 401cb5d7194cbef616c87d59e5b1ed7f923fe6f9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054183"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402121"
 ---
 # <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a>Verwaltete Klassen, die von einer COM-Klasse abgeleitet werden, können nicht als spät gebunden aufgerufen werden.
 
@@ -19,6 +19,6 @@ Sie haben versucht, eine verwaltete Klasse, die von einer COM-Klasse abgeleitet 
 
 Ändern Sie den Aufruf in früh gebunden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fehlertypen](../programming-guide/language-features/error-types.md)

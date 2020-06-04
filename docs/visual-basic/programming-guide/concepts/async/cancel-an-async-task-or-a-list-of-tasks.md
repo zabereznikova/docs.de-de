@@ -2,23 +2,23 @@
 title: Eine asynchrone Aufgabe oder Aufgabenliste abbrechen
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 932bf46f1e3aee220d0412f1688e961faaef3459
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347968"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396700"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Abbrechen einer Async-Aufgabe oder einer Aufgabenliste (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (Visual Basic)
 
 Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendung abbrechen können, wenn Sie nicht darauf warten möchten, bis diese beendet wird. Anhand der Beispiele in diesem Thema können Sie einer Anwendung, über die der Inhalt einer Website oder einer Liste von Websites heruntergeladen wird, eine Schaltfläche zum Abbrechen hinzufügen.
 
-In den Beispielen wird die Benutzeroberfläche verwendet, die die [Feinabstimmung der Async-Anwendung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) beschreibt.
+In den Beispielen wird die Benutzeroberfläche verwendet, die die [Feinabstimmung der Async-Anwendung (Visual Basic)](fine-tuning-your-async-application.md) beschreibt.
 
 > [!NOTE]
 > Zum Ausführen der Beispiele müssen Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf dem Computer installiert sein.
 
-## <a name="BKMK_CancelaTask"></a> Eine Aufgabe abbrechen
+## <a name="cancel-a-task"></a><a name="BKMK_CancelaTask"></a>Abbrechen einer Aufgabe
 
 Im ersten Beispiel wird die Schaltfläche **Abbrechen** einer Aufgabe mit einem einzigen Download zugeordnet. Wenn Sie die Schaltfläche auswählen, während die Anwendung Inhalt herunterlädt, wird der Download abgebrochen.
 
@@ -69,7 +69,7 @@ Fügen Sie dann die folgenden Änderungen der Datei "MainWindow. XAML. vb" des P
     End Sub
     ```
 
-3. Nehmen Sie die folgenden Änderungen in **vor, dem Ereignishandler für die Schaltfläche**Start`startButton_Click`.
+3. Nehmen Sie die folgenden Änderungen in `startButton_Click` vor, dem Ereignishandler für die Schaltfläche **Start**.
 
     - Instanziieren Sie die `CancellationTokenSource`, `cts`.
 
@@ -138,7 +138,7 @@ Fügen Sie dann die folgenden Änderungen der Datei "MainWindow. XAML. vb" des P
     Download canceled.
     ```
 
-## <a name="BKMK_CancelaListofTasks"></a> Eine Aufgabenliste abbrechen
+## <a name="cancel-a-list-of-tasks"></a><a name="BKMK_CancelaListofTasks"></a>Abbrechen einer Aufgabenliste
 
 Sie können das vorherige Beispiel so erweitern, dass viele Aufgaben abgebrochen werden, indem Sie jeder Aufgabe die gleiche `CancellationTokenSource`-Instanz zuordnen. Wenn Sie die Schaltfläche **Abbrechen** auswählen, brechen Sie alle Aufgaben ab, die noch nicht abgeschlossen sind.
 
@@ -253,7 +253,7 @@ Um das Beispiel selbst zu erweitern, befolgen Sie Schritt für Schritt die Anwei
     Downloads canceled.
     ```
 
-## <a name="BKMK_CompleteExamples"></a> Vollständige Beispiele
+## <a name="complete-examples"></a><a name="BKMK_CompleteExamples"></a>Vervollständigen von Beispielen
 
 Die folgenden Abschnitte enthalten den Code für jedes der vorherigen Beispiele. Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.
 
@@ -463,10 +463,10 @@ End Class
 ' Downloads canceled.
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ((Async-Beispiel: Feinabstimmung der Anwendung))
+- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](index.md)
+- [Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung der Anwendung)
