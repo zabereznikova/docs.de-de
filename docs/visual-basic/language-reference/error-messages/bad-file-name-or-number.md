@@ -4,31 +4,31 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: 7a16e951030731bdcbb48b5fbb1a0d1881d5e1ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11e866d9a8da7ad1ecc5f788fc31f6ac96d32f2c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619393"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409828"
 ---
 # <a name="bad-file-name-or-number"></a>Der Dateiname oder die Zahl ist ungültig.
-Fehler beim Versuch, die die angegebene Datei zuzugreifen. Zu den möglichen Ursachen für diesen Fehler sind:  
+Fehler beim Zugriff auf die angegebene Datei. Zu den möglichen Ursachen für diesen Fehler gehören:  
   
-- Eine Anweisung verweist auf eine Datei mit einem Dateinamen oder einer Zahl, die nicht in angegeben wurde der `FileOpen` -Anweisung oder die wurde angegeben, eine `FileOpen` -Anweisung war jedoch anschließend geschlossen.  
+- Eine-Anweisung verweist auf eine Datei mit einem Dateinamen oder einer Zahl, der nicht in der-Anweisung angegeben wurde `FileOpen` oder der in einer-Anweisung angegeben wurde, `FileOpen` aber anschließend geschlossen wurde.  
   
-- Eine Anweisung verweist auf eine Datei mit der eine Zahl, die außerhalb des Bereichs der Datei Zahlen.  
+- Eine-Anweisung verweist auf eine Datei mit einer Zahl außerhalb des Bereichs von Datei Nummern.  
   
-- Eine Anweisung verweist auf einen Dateinamen oder eine Zahl, die nicht gültig ist.  
+- Eine-Anweisung verweist auf einen ungültigen Dateinamen oder eine ungültige Nummer.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie sicher, dass der Dateiname ist angegeben, einem `FileOpen` Anweisung. Beachten Sie, dass Sie aufgerufen haben die `FileClose` Anweisung ohne Argumente, Sie möglicherweise versehentlich geschlossen haben alle geöffneten Dateien.  
+1. Stellen Sie sicher, dass der Dateiname in einer-Anweisung angegeben ist `FileOpen` . Beachten Sie, dass Sie, wenn Sie die `FileClose` Anweisung ohne Argumente aufgerufen haben, möglicherweise versehentlich alle geöffneten Dateien geschlossen haben.  
   
-2. Wenn Ihr Code Dateinummern algorithmisch generiert, stellen Sie sicher, dass die Zahlen sind gültig.  
+2. Wenn Ihr Code Datei Nummern algorithmisch erzeugt, stellen Sie sicher, dass die Zahlen gültig sind.  
   
-3. Überprüfen Sie die Dateinamen, um sicherzustellen, dass sie den Betriebssystem-Konventionen entsprechen.  
+3. Überprüfen Sie die Dateinamen, um sicherzustellen, dass Sie den Betriebssystem Konventionen entsprechen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
-- [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Benennungskonventionen in Visual Basic](../../programming-guide/program-structure/naming-conventions.md)

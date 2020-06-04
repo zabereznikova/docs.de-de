@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698570"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409529"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Der Ausdruck ruft rekursiv die enthaltende Eigenschaft ' \<propertyname > ' auf.
-Eine-Anweisung in der `Set`-Prozedur einer Eigenschafts Definition speichert einen Wert in den Namen der Eigenschaft.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Der Ausdruck ruft rekursiv die enthaltende \<propertyname>-Eigenschaft auf.
+Eine-Anweisung in der `Set` Prozedur einer Eigenschafts Definition speichert einen Wert in den Namen der Eigenschaft.  
   
- Die empfohlene Vorgehensweise, um den Wert einer Eigenschaft zu speichern, besteht darin, eine `Private`-Variable im Container der Eigenschaft zu definieren und Sie in den Prozeduren `Get` und `Set` zu verwenden. In der `Set`-Prozedur sollte der eingehende Wert in dieser `Private`-Variablen gespeichert werden.  
+ Die empfohlene Vorgehensweise, um den Wert einer Eigenschaft zu speichern, besteht darin, eine `Private` Variable im Container der Eigenschaft zu definieren und Sie in den `Get` `Set` Prozeduren und zu verwenden. `Set`In der Prozedur sollte dann der eingehende Wert in dieser Variablen gespeichert werden `Private` .  
   
- Die Prozedur `Get` verhält sich wie eine `Function`-Prozedur, sodass Sie dem Eigenschaftsnamen einen Wert zuweisen und die Steuerung zurückgeben kann, indem Sie die `End Get`-Anweisung trifft. Die empfohlene Vorgehensweise besteht jedoch darin, die `Private`-Variable als Wert in eine [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md)einzuschließen.  
+ Die `Get` Prozedur verhält sich wie eine `Function` Prozedur, sodass Sie dem Eigenschaftsnamen einen Wert zuweisen und die Steuerung zurückgeben kann, indem Sie die- `End Get` Anweisung trifft. Die empfohlene Vorgehensweise besteht jedoch darin, die `Private` Variable als Wert in eine Return- [Anweisung](../statements/return-statement.md)aufzunehmen.  
   
- Die Prozedur `Set` verhält sich wie eine `Sub`-Prozedur, die keinen Wert zurückgibt. Daher hat der Name der Prozedur oder Eigenschaft in einer `Set`-Prozedur keine besondere Bedeutung, und Sie können keinen Wert in der Prozedur speichern.  
+ Die `Set` Prozedur verhält sich wie eine `Sub` Prozedur, die keinen Wert zurückgibt. Daher hat der Name der Prozedur oder Eigenschaft in einer Prozedur keine besondere Bedeutung `Set` , und Sie können keinen Wert in der Prozedur speichern.  
   
  Im folgenden Beispiel wird die Vorgehensweise veranschaulicht, die diesen Fehler verursachen kann, gefolgt von der empfohlenen Vorgehensweise.  
   
@@ -55,7 +55,7 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Fehler-ID:** BC42026  
   
@@ -63,8 +63,8 @@ End Class
   
 - Schreiben Sie die Eigenschafts Definition so um, dass die empfohlene Vorgehensweise verwendet wird, wie im vorherigen Beispiel veranschaulicht.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Eigenschaftenprozeduren](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Set-Anweisung](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Eigenschaftenprozeduren](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Property Statement](../statements/property-statement.md)
+- [Set-Anweisung](../statements/set-statement.md)

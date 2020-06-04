@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: 030c9c2ffa97572298b23f05c23e3af0df7387b0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c59212a28ba27123a7db9163ff7437c159a3d310
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913162"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409698"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>Abgeleitete Klassen können keine Basisklassenereignisse auslösen.
-Ein Ereignis kann nur aus der Deklaration ausgelöst werden, in dem sie deklariert ist. Eine Klasse kann nicht aus diesem Grund Ereignisse aus einer beliebigen anderen Klasse, selbst eine auslösen, von dem er abgeleitet ist.  
+Ein Ereignis kann nur aus dem Deklarations Bereich ausgelöst werden, in dem es deklariert ist. Daher kann eine Klasse keine Ereignisse von einer anderen Klasse, auch von einer Klasse, von der Sie abgeleitet ist, ableiten.  
   
  **Fehler-ID:** BC30029  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Verschieben der `Event` Anweisung oder der `RaiseEvent` Anweisung, sodass sie sich in derselben Klasse befinden.  
+- Verschieben Sie die- `Event` Anweisung oder die- `RaiseEvent` Anweisung so, dass Sie sich in derselben Klasse befinden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)
-- [RaiseEvent-Anweisung](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Event-Anweisung](../statements/event-statement.md)
+- [RaiseEvent-Anweisung](../statements/raiseevent-statement.md)

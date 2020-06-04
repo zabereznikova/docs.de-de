@@ -2,12 +2,12 @@
 title: Beispiel für eine verzögerte Ausführung
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 863b018b6047d61f6fb4a5c1ac68151ed69d24a1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354228"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410798"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>Beispiel für eine verzögerte Ausführung (Visual Basic)
 
@@ -61,6 +61,6 @@ Beachten Sie, dass beim Durchlaufen der von `ConvertCollectionToUpperCase` zurü
 
 Wie Sie sehen, wird das gesamte Array von Zeichenfolgen erst dann in Großbuchstaben umgewandelt, wenn jedes Element in der zurückgegebenen Auflistung in der `foreach`-Schleife in `Main` verarbeitet wurde.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial: verzögerte Ausführung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Tutorial: verzögerte Ausführung (Visual Basic)](tutorial-deferred-execution.md)

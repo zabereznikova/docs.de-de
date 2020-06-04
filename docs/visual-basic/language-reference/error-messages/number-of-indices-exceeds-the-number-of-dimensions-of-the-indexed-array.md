@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: 76cf0a997e9ad36ab4b5dfdc7c4bc29c57d309eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d8ffd2c4ad0a386053ced0f98503969723c7168
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665692"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409373"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Die Indexanzahl ist größer als die Anzahl der Dimensionen des indizierten Arrays.
 Die Indexanzahl, die für den Zugriff auf ein Arrayelement verwendet wird, muss mit dem Rang des Arrays identisch sein, d. h. die Anzahl der für das Array deklarierten Dimensionen.  
@@ -21,7 +21,7 @@ Die Indexanzahl, die für den Zugriff auf ein Arrayelement verwendet wird, muss 
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Entfernen Sie Indizes aus der Arrayverweis als, bis die gesamte Anzahl an Indizes den Rang des Arrays entspricht. Zum Beispiel:  
+- Entfernen Sie die Indizes aus dem Array Verweis, bis die Gesamtzahl der abonniert dem Rang des Arrays gleicht. Beispiel:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -35,6 +35,6 @@ Die Indexanzahl, die für den Zugriff auf ein Arrayelement verwendet wird, muss 
     gameBoard(1, 0) = "O"  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Arrays](../../programming-guide/language-features/arrays/index.md)

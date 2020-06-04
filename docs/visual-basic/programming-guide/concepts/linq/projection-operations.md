@@ -2,12 +2,12 @@
 title: Projektionsvorgänge
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: d7efb46ccfe3208ae6c58043a64c236171d0c147
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4795bdaba53949b34fe380ea9c51025ce43c40db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346630"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396336"
 ---
 # <a name="projection-operations-visual-basic"></a>Projektions Vorgänge (Visual Basic)
 
@@ -19,12 +19,12 @@ Die Methoden des Standardabfrageoperators, die Projektion ausführen, sind im fo
 
 |Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|Auswahl|Projektwerte, die auf einer Transform-Funktion basieren.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
+|Auswählen|Projektwerte, die auf einer Transform-Funktion basieren.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
 |SelectMany|Projiziert Sequenzen von Werten, die auf einer Transform-Funktion basieren, und fasst diese dann in eine Sequenz zusammen.|Mehrere `From`-Klauseln verwenden|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax
 
-### <a name="select"></a>Auswahl
+### <a name="select"></a>Auswählen
 
 Im folgenden Beispiel wird die `Select`-Klausel verwendet, um den ersten Buchstaben jeder Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.
 
@@ -52,7 +52,7 @@ MsgBox(sb.ToString())
 
 ### <a name="selectmany"></a>SelectMany
 
-Im folgenden Beispiel werden mehrere `From`-Klauseln verwendet, um jedes Wort aus jeder Zeichenfolge in einer Liste von Zeichen folgen zu projizieren.
+Im folgenden Beispiel werden mehrere- `From` Klauseln verwendet, um jedes Wort aus jeder Zeichenfolge in einer Liste von Zeichen folgen zu projizieren.
 
 ```vb
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}
@@ -175,12 +175,12 @@ Sub SelectVsSelectMany()
 End Sub
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md)
-- [Kombinieren von Daten mithilfe von Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
-- [Gewusst wie: Auffüllen von Objekt Auflistungen aus mehreren Quellen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [Gewusst wie: Zurückgeben eines LINQ-Abfrageergebnisses als bestimmter Typ](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
-- [Vorgehensweise: Aufteilen einer Datei in viele Dateien mithilfe von Gruppen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)
+- [SELECT-Klausel](../../../language-reference/queries/select-clause.md)
+- [Kombinieren von Daten mithilfe von Joins](../../language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [Gewusst wie: Auffüllen von Objekt Auflistungen aus mehreren Quellen (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Vorgehensweise: Zurückgeben eines LINQ-Abfrageergebnisses als bestimmter Typ](../../language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
+- [Vorgehensweise: Aufteilen einer Datei in viele Dateien mithilfe von Gruppen (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

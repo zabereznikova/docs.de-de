@@ -2,12 +2,12 @@
 title: 'Beispiel-XML-Datei: Typische Bestellung in einem Namespace3'
 ms.date: 07/20/2015
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
-ms.openlocfilehash: de0ac574b0f7b086592bc2d6afa3db3fdcebda78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e753d0a4d6bea3e4a01221258e1f5de3862c4ecb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786918"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360838"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Beispiel-XML-Datei: Typische Bestellung in einem Namespace
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dabei handelt es sich um einen typischen Auftrag. Der XML-Code befindet sich in einem Namespace.  
@@ -54,6 +54,6 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Beispiel-XML-Dokumente (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

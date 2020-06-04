@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC36563
 ms.assetid: 3ca8b873-e98d-419b-95f2-d75bd2a9eb6c
-ms.openlocfilehash: 925a17bef5147a5679a076af1801bdd305dd5bad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e5e94bbde016ec7342a9933905977dac85fb035
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921029"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397245"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>Die Signatur der Methode ist nicht mit dem Delegaten kompatibel
-Es ist eine Inkompatibilität zwischen den Signaturen der Methode und der Delegat, die Sie verwenden möchten. Die `Delegate` -Anweisung definiert die Parameter- und Rückgabetypen einer Delegatklasse. Jede Prozedur, die übereinstimmende Parameter kompatible Typen aufweist und die Rückgabewerte Typen verwendet werden können, um eine Instanz dieses Delegattyps zu erstellen.  
+Zwischen den Signaturen der-Methode und dem Delegaten, den Sie verwenden möchten, ist eine Inkompatibilität aufgetreten. Die `Delegate` -Anweisung definiert die Parameter- und Rückgabetypen einer Delegatklasse. Eine beliebige Prozedur mit übereinstimmenden Parametern kompatibler Typen und Rückgabe Typen kann verwendet werden, um eine Instanz dieses Delegattyps zu erstellen.  
   
  **Fehler-ID**: BC36563  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Überladungsauflösung](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [AddressOf-Operator](../operators/addressof-operator.md)
+- [Delegate-Anweisung](../statements/delegate-statement.md)
+- [Überladungs Auflösung](../../programming-guide/language-features/procedures/overload-resolution.md)
+- [Generische Typen in Visual Basic (Visual Basic)](../../programming-guide/language-features/data-types/generic-types.md)

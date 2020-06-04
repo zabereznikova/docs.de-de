@@ -1,5 +1,5 @@
 ---
-title: "Operatordeklaration muss eine der: +,-, *, /, ^, &amp;, Like, Mod, und, Or, Xor, nicht der Fall, <<>> ',', =, <>, <, < =, >, > =, CType, IsTrue, IsFalse"
+title: 'Die Operator Deklaration muss einer der folgenden sein: +,-, *,-,-, ^, &amp; , like, mod, and, or, Xor, not,  <<,  >>, =,  <>, <, <=, >, >=, CType, IsTrue, IsFalse'
 ms.date: 07/20/2015
 f1_keywords:
 - bc33000
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fb2cf392611e5ca83818e3bf173513be031085d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946600"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409333"
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>Operatordeklaration muss eine der: +,-, *,\,/, ^, &amp;, Like, Mod, und, Or, Xor, nicht der Fall, \< \<, >>...
-Sie können nur einen Operator deklarieren, der für überladen geeignet ist. Die folgende Tabelle enthält die Operatoren, die Sie deklarieren können.  
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>Die Operator Deklaration muss eine der folgenden sein: +,-, *, \, /, ^, &amp; , like, mod, and, or, Xor, not, \<\<, >>...
+Sie können nur einen Operator deklarieren, der für das überladen geeignet ist. In der folgenden Tabelle sind die zu deklarierenden Operatoren aufgelistet.  
   
-|Typ|Operatoren|  
+|type|Operatoren|  
 |----------|---------------|  
-|Unär|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
-|Binär|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
+|Unäroperatoren|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
+|Binary|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
 |Konvertierung (unär)|`CType`|  
   
- Beachten Sie, dass die `=` Operator in der binären Liste wird der Vergleichsoperator, der nicht der Zuweisungsoperator.  
+ Beachten Sie, dass der- `=` Operator in der binären Liste der Vergleichs Operator und nicht der Zuweisungs Operator ist.  
   
  **Fehler-ID:** BC33000  
   
@@ -33,10 +33,10 @@ Sie können nur einen Operator deklarieren, der für überladen geeignet ist. Di
   
 2. Wenn Sie die Funktionalität des Überladens eines Operators benötigen, der nicht direkt überladen werden kann, erstellen Sie eine `Function` -Prozedur, die die entsprechenden Parameter übernimmt und den entsprechenden Wert zurückgibt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Vorgehensweise: Definieren eines Operators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Vorgehensweise: Definieren eines Konvertierungsoperators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Operator Statement](../statements/operator-statement.md)
+- [Operatorprozeduren](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [Vorgehensweise: Definieren eines Operators](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Vorgehensweise: Definieren eines Konvertierungsoperators](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Function-Anweisung](../statements/function-statement.md)

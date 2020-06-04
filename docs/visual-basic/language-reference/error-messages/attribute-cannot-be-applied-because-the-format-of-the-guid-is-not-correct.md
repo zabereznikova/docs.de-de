@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: f7b6e42480075666ce9f7e8fc6966bd4bb6b888a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 554c38c8f44999feba4cfa04d58ce2f07e955eb1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977317"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409919"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<Attribute > ' kann nicht angewendet werden, da das Format der GUID '\<Number > ' nicht korrekt ist.
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>\<attribute> kann nicht angewendet werden, da das Format von GUID "\<number>" falsch ist.
 
-Ein `COMClassAttribute`-Attribut Block gibt eine Globally Unique Identifier (GUID) an, die nicht dem richtigen Format für eine GUID entspricht. `COMClassAttribute` verwendet GUIDs, um die Klasse, die Schnittstelle und das Erstellungs Ereignis eindeutig zu identifizieren.  
+Ein- `COMClassAttribute` Attribut Block gibt eine Globally Unique Identifier (GUID) an, die nicht dem richtigen Format für eine GUID entspricht. `COMClassAttribute`verwendet GUIDs, um die-Klasse, die-Schnittstelle und das Erstellungs Ereignis eindeutig zu identifizieren.  
   
  Eine GUID besteht aus 16 Bytes, von denen die ersten acht numerisch und die letzten acht binär sind. Sie wird von Microsoft-Hilfsprogrammen wie "uuidgen. exe" generiert und ist im Raum und in der Zeit garantiert eindeutig.  
   
@@ -28,7 +28,7 @@ Ein `COMClassAttribute`-Attribut Block gibt eine Globally Unique Identifier (GUI
   
 2. Stellen Sie sicher, dass die GUID-Zeichenfolgen, die dem `COMClassAttribute` -Attributblock angezeigt werden, ordnungsgemäß kopiert werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Guid>
-- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Übersicht über Attribute](../../programming-guide/concepts/attributes/index.md)

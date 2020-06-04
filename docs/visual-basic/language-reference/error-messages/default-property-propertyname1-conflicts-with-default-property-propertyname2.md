@@ -1,5 +1,5 @@
 ---
-title: Die '<propertyname1>'-Standardeigenschaft verursacht einen Konflikt mit der '<propertyname2>'-Standardeigenschaft in '<classname>' und sollte daher als 'Shadows' deklariert werden.
+title: Die "<propertyname1>"-Standardeigenschaft verursacht einen Konflikt mit der "<propertyname2>"-Standardeigenschaft in "<classname>" und sollte daher als "Shadows" deklariert werden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40007
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: c964003217e7b96cf25288e2ae6ae6a2fb07a6c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 37f98ce8120d5861552819690f9d5f22c9959a0e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651380"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409724"
 ---
-# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Default-Eigenschaft '\<eigenschaftsname1 >' verursacht einen Konflikt mit Default-Eigenschaft '\<propertyname2 >' in '\<Klassenname >' und daher als'Shadows'deklariert werden soll
-Eine Eigenschaft wird mit dem gleichen Namen wie eine Eigenschaft in der Basisklasse deklariert. In diesem Fall muss die Eigenschaft in dieser Klasse als Eigenschaft der Basisklasse überschatten.  
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Die "\<propertyname1>"-Standardeigenschaft verursacht einen Konflikt mit der "\<propertyname2>"-Standardeigenschaft in "\<classname>" und sollte daher als "Shadows" deklariert werden.
+Eine Eigenschaft wird mit dem gleichen Namen wie eine Eigenschaft deklariert, die in der Basisklasse definiert ist. In dieser Situation sollte die-Eigenschaft in dieser Klasse den Schatten der Basisklassen Eigenschaft überschatten.  
   
  Diese Meldung ist eine Warnung. `Shadows` wird standardmäßig angenommen. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -23,9 +23,9 @@ Eine Eigenschaft wird mit dem gleichen Namen wie eine Eigenschaft in der Basiskl
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Hinzufügen der `Shadows` Schlüsselwort, um die Deklaration, oder ändern, die der Namen der Eigenschaft deklariert wird.  
+- Fügen Sie das- `Shadows` Schlüsselwort zur Deklaration hinzu, oder ändern Sie den Namen der Eigenschaft, die deklariert wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadows](../modifiers/shadows.md)
+- [Shadowing in Visual Basic](../../programming-guide/language-features/declared-elements/shadowing.md)

@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: bf900566bdb4ecf8d8961a12b5dd67ba426caf27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 510fff5370e63a31ee271421c0ab6f154518899f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803311"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409594"
 ---
-# <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>"\<Ereignisname >' ist ein Ereignis aus, und nicht direkt aufgerufen werden
-' <`eventname`>' ist ein Ereignis und kann daher nicht direkt aufgerufen werden. Verwenden einer `RaiseEvent` Anweisung, um ein Ereignis auszulösen.  
+# <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>\<eventname> ist ein Ereignis und kann nicht direkt aufgerufen werden.
+"<`eventname`>" ist ein Ereignis und kann daher nicht direkt aufgerufen werden. Verwenden Sie eine- `RaiseEvent` Anweisung, um ein Ereignis zu erhöhen.  
   
- Ein Prozeduraufruf gibt ein Ereignis für den Namen der Prozedur an. Ein Ereignishandler ist eine Prozedur, aber das Ereignis selbst ist ein Signalisierung Gerät ausgelöst und verarbeitet werden muss.  
+ Ein Prozedur aufruame gibt ein Ereignis für den Prozedur Namen an. Ein Ereignishandler ist eine Prozedur, aber das Ereignis selbst ist ein Signalisierungs Gerät, das ausgelöst und behandelt werden muss.  
   
  **Fehler-ID:** BC32022  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Verwenden einer `RaiseEvent` Anweisung, um ein Ereignis zu signalisieren und Aufrufen der Prozedur oder die Prozeduren, die sie verarbeiten.  
+1. Verwenden `RaiseEvent` Sie eine-Anweisung, um ein Ereignis zu signalisieren und die Prozeduren und Prozeduren aufzurufen, die  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [RaiseEvent-Anweisung](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [RaiseEvent-Anweisung](../statements/raiseevent-statement.md)

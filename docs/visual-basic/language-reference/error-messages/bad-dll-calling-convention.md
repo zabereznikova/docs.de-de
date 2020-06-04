@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
-ms.openlocfilehash: f7b0c3a6edbe0b950195306fa66287ff9b209bfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a60e44ce92b1805b0a5a6f1d4ce397c295eef202
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935277"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409880"
 ---
 # <a name="bad-dll-calling-convention"></a>Fehlerhafte DLL-Aufrufkonvention
-Argumente, die an eine Dynamic Link Library (DLL) müssen genau mit den erwarteten, von der Routine übereinstimmen. Aufrufkonventionen befassen sich mit Anzahl, Typ und Reihenfolge der Argumente. Das Programm kann eine Routine in einer DLL aufrufen, der den falschen Typ oder die Anzahl von Argumenten übergeben wird.  
+Argumente, die an eine Dynamic Link Library (dll) übergeben werden, müssen exakt mit den von der Routine erwarteten übereinstimmen. Aufruf Konventionen behandeln die Anzahl, den Typ und die Reihenfolge der Argumente. Das Programm ruft möglicherweise eine Routine in einer DLL auf, der der falsche Typ oder die falsche Anzahl von Argumenten übergeben wird.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie sicher, dass alle Argumenttypen akzeptieren, mit denen angegeben wird, in der Deklaration der Routine, die Sie aufrufen.  
+1. Stellen Sie sicher, dass alle Argument Typen mit denen übereinstimmen, die in der Deklaration der Routine, die Sie aufrufen, angegeben sind.  
   
-2. Stellen Sie sicher, dass Sie die gleiche Anzahl von Argumenten angegeben werden, in der Deklaration der Routine, die Sie aufrufen übergeben.  
+2. Stellen Sie sicher, dass Sie die gleiche Anzahl von Argumenten übergeben, die in der Deklaration der Routine angegeben sind, die Sie aufrufen.  
   
-3. Wenn die DLL-Routine Argumente als Wert erwartet, stellen Sie sicher, dass `ByVal` für diese Argumente in der Deklaration für die Routine angegeben wird.  
+3. Wenn die DLL-Routine Argumente als Wert erwartet, stellen Sie sicher, `ByVal` dass für diese Argumente in der Deklaration der Routine angegeben wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [Call-Anweisung](../../../visual-basic/language-reference/statements/call-statement.md)
-- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Fehlertypen](../../programming-guide/language-features/error-types.md)
+- [Call-Anweisung](../statements/call-statement.md)
+- [Declare Statement](../statements/declare-statement.md)

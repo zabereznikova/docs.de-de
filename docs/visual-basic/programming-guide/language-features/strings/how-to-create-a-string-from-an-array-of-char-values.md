@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Erstellen einer Zeichenfolge aus einem Array mit Char-Werten'
+title: 'Vorgehensweise: Erstellen einer Zeichenfolge aus einem Array mit Char-Werten'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: bf37ceba901e712df10ad4b39f9ad74194843136
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d9ec897467f0caac0afc089a028516c0316a2bda
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346773"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410592"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Gewusst wie: Erstellen einer Zeichenfolge aus einem Array mit Char-Werten (Visual Basic)
 In diesem Beispiel wird die Zeichenfolge "abcd" aus einzelnen Zeichen erstellt.  
@@ -21,13 +21,13 @@ In diesem Beispiel wird die Zeichenfolge "abcd" aus einzelnen Zeichen erstellt.
 ## <a name="compile-the-code"></a>Kompilieren des Codes  
  Diese Methode hat keine besonderen Anforderungen.  
   
- Die Syntax `"a"c`, bei der ein einzelner `c` einem einzelnen Zeichen in Anführungszeichen folgt, wird zum Erstellen eines Zeichenliterals verwendet.  
+ Die Syntax `"a"c` , bei der ein einzelnes `c` einem einzelnen Zeichen in Anführungszeichen folgt, wird zum Erstellen eines Zeichenliterals verwendet.  
   
-## <a name="robust-programming"></a>Robuste Programmierung  
- NULL-Zeichen (äquivalent zu `Chr(0)`) in der Zeichenfolge führen zu unerwarteten Ergebnissen, wenn die Zeichenfolge verwendet wird. Das NULL-Zeichen wird in die Zeichenfolge eingeschlossen, jedoch werden Zeichen, die auf das NULL-Zeichen folgen, in einigen Situationen nicht angezeigt.  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ NULL-Zeichen (äquivalent zu `Chr(0)` ) in der Zeichenfolge führen zu unerwarteten Ergebnissen, wenn die Zeichenfolge verwendet wird. Das NULL-Zeichen wird in die Zeichenfolge eingeschlossen, jedoch werden Zeichen, die auf das NULL-Zeichen folgen, in einigen Situationen nicht angezeigt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.String>
-- [Char-Datentyp](../../../../visual-basic/language-reference/data-types/char-data-type.md)
-- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Char-Datentyp](../../../language-reference/data-types/char-data-type.md)
+- [Datentypen](../data-types/index.md)

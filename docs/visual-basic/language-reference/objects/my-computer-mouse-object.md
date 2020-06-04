@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 98b87777cfc64807b6cf5b7aa6f0fdd5c7d42caa
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f320d095c547ffdb1b28f27f64c180c340dada17
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347182"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415270"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse-Objekt
-Stellt Eigenschaften bereit, mit denen Informationen über das Format und die Konfiguration der auf dem lokalen Computer installierten Maus angezeigt werden.  
+Stellt Eigenschaften zum Abrufen von Informationen über das Format und die Konfiguration der auf dem lokalen Computer installierten Maus bereit.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Informationen zu den Methoden und Eigenschaften des `My.Computer.Mouse` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Mouse>.  
   
- Weitere Informationen finden Sie unter [zugreifen auf die Maus](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
+ Weitere Informationen finden Sie unter [zugreifen auf die Maus](../../developing-apps/programming/computer-resources/accessing-the-mouse.md).  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Klasse:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
+ **Klasse:**<xref:Microsoft.VisualBasic.Devices.Mouse>  
   
  **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [My.Computer-Objekt](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [My.Computer-Objekt](my-computer-object.md)

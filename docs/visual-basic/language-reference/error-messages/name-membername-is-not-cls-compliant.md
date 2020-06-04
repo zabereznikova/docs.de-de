@@ -1,5 +1,5 @@
 ---
-title: Name '<membername>' ist nicht CLS-kompatibel.
+title: Name "<membername>" ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - bc40031
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 2d89d3588b854c9e77445a9980530d8dd53c33c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45c9332237dffc7311daeedaf36035d9e9958415
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592017"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397180"
 ---
-# <a name="name-membername-is-not-cls-compliant"></a>Namen \<Membername > ist nicht CLS-kompatibel.
-Eine Assembly ist als markiert `<CLSCompliant(True)>` aber zur Verfügung stellt ein Element mit einem Namen, die mit einem Unterstrich beginnt (`_`).  
+# <a name="name-membername-is-not-cls-compliant"></a>Name "\<membername>" ist nicht CLS-kompatibel.
+Eine Assembly ist als gekennzeichnet `<CLSCompliant(True)>` , macht jedoch einen Member mit einem Namen verfügbar, der mit einem Unterstrich beginnt ( `_` ).  
   
- Ein Programmierelement kann ein oder mehrere Unterstriche enthalten, jedoch werden zur Einhaltung der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS), es muss nicht mit einem Unterstrich beginnen. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Ein Programmier Element kann ein oder mehrere Unterstriche enthalten, aber damit es mit der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS) kompatibel ist, darf es nicht mit einem Unterstrich beginnen. Siehe [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  Wenn Sie das <xref:System.CLSCompliantAttribute> auf ein Programmierelement anwenden, legen Sie den `isCompliant` -Parameter des Attributs auf `True` oder `False` fest, um die Kompatibilität bzw. Nichtkompatibilität anzugeben. Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
   
@@ -29,11 +29,11 @@ Eine Assembly ist als markiert `<CLSCompliant(True)>` aber zur Verfügung stellt
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Wenn Sie die Kontrolle über den Quellcode haben, ändern Sie den Namen des Members, damit er nicht mit einem Unterstrich beginnt.  
+- Wenn Sie die Kontrolle über den Quellcode haben, ändern Sie den Elementnamen so, dass er nicht mit einem Unterstrich beginnt.  
   
-- Wenn Sie der Namen des Members unveränderte verbleiben müssen, entfernen Sie die <xref:System.CLSCompliantAttribute> aus seiner Definition oder kennzeichnen Sie ihn als `<CLSCompliant(False)>`. Sie können weiterhin markieren Sie die Assembly als `<CLSCompliant(True)>`.  
+- Wenn der Elementname unverändert bleiben muss, entfernen Sie den <xref:System.CLSCompliantAttribute> aus seiner Definition, oder markieren Sie ihn als `<CLSCompliant(False)>` . Sie können die Assembly weiterhin als markieren `<CLSCompliant(True)>` .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Benennungskonventionen in Visual Basic](../../programming-guide/program-structure/naming-conventions.md)
