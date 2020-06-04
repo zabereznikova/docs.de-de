@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 778e57eadd75baf1aabd100f9d8d41a490f79a04
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349981"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406287"
 ---
 # <a name="string-functions-visual-basic"></a>String-Funktionen (Visual Basic)
 
-In der folgenden Tabelle sind die Funktionen aufgelistet, die Visual Basic in der <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>-Klasse zum Durchsuchen und Bearbeiten von Zeichen folgen bereitstellt. Sie können als Visual Basic intrinsische Funktionen angesehen werden. Das heißt, Sie müssen Sie nicht als explizite Member einer Klasse aufzurufen, wie in den Beispielen gezeigt. Zusätzliche Methoden und in einigen Fällen auch ergänzende Methoden sind in der <xref:System.String?displayProperty=nameWithType>-Klasse verfügbar.
+In der folgenden Tabelle sind die Funktionen aufgelistet, die Visual Basic in der <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> -Klasse zur Suche und Bearbeitung von Zeichen folgen bereitstellt. Sie können als Visual Basic intrinsische Funktionen angesehen werden. Das heißt, Sie müssen Sie nicht als explizite Member einer Klasse aufzurufen, wie in den Beispielen gezeigt. Zusätzliche Methoden und in einigen Fällen auch ergänzende Methoden sind in der- <xref:System.String?displayProperty=nameWithType> Klasse verfügbar.
 
-|.NET Framework-Methode|Beschreibung|
+|.NET Framework-Methode|BESCHREIBUNG|
 |---------------------------|-----------------|
 |<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Gibt einen `Integer`-Wert zurück, der den Zeichencode darstellt, der einem Zeichen entspricht.|
 |<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Gibt das dem angegebenen Zeichencode zugeordnete Zeichen zurück.|
@@ -47,7 +47,7 @@ In der folgenden Tabelle sind die Funktionen aufgelistet, die Visual Basic in de
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne führende oder nachgestellte Leerzeichen enthält.|
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Gibt eine Zeichenfolge oder ein Zeichen zurück, die bzw. das die angegebene Zeichenfolge in Großbuchstaben enthält.|
 
-Mithilfe der [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) -Anweisung können Sie festlegen, ob Zeichen folgen mithilfe einer Text Sortierreihenfolge ohne Beachtung der Groß-/Kleinschreibung verglichen werden, die durch das Gebiets Schema des Systems (`Text`) oder durch die internen binären Darstellungen der Zeichen (`Binary`) bestimmt wird. Die Standardmethode zum Textvergleich ist `Binary`.
+Mithilfe der [Option Compare](../statements/option-compare-statement.md) -Anweisung können Sie festlegen, ob Zeichen folgen mithilfe einer Text Sortierreihenfolge ohne Beachtung der Groß-/Kleinschreibung verglichen werden, die durch das Gebiets Schema des Systems ( `Text` ) oder durch die internen binären Darstellungen der Zeichen () bestimmt wird `Binary` . Die Standardmethode zum Textvergleich ist `Binary`.
 
 ## <a name="example-ucase"></a>Beispiel: UCase
 
@@ -87,9 +87,9 @@ Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`-Funkti
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
-- [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
-- [Zeichenfolgenbearbeitung: Zusammenfassung](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [Schlüsselwörter](../keywords/index.md)
+- [Member der Visual Basic-Laufzeitbibliothek](../runtime-library-members.md)
+- [Zeichenfolgenbearbeitung: Zusammenfassung](../keywords/string-manipulation-summary.md)
 - [System. String-Klassen Methoden](xref:System.String#methods)

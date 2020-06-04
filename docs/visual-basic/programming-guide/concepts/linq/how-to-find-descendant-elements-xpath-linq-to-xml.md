@@ -1,13 +1,13 @@
 ---
-title: 'Gewusst wie: Suchen von Descendant-Elementen (XPath-LINQ to XML)'
+title: 'Vorgehensweise: Suchen von Nachfolgerelementen (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: 080afdb782bd6f1acaf2819814bb97a6e5ad0c77
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ee67a54116a7d91f6cf6af179d6398a4dcece9c4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346813"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405234"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Gewusst wie: Suchen nach Nachfolger Elementen (XPath-LINQ to XML) (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie die Nachfolgerelemente mit einem bestimmten Namen ermitteln können.  
@@ -17,7 +17,7 @@ In diesem Thema wird gezeigt, wie Sie die Nachfolgerelemente mit einem bestimmte
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel sucht nach allen Nachfolgern mit dem Namen `Name`.  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: mehrfache Bestellung (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -53,4 +53,4 @@ Results are identical
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML für XPath-Benutzer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML für XPath-Benutzer (Visual Basic)](linq-to-xml-for-xpath-users.md)

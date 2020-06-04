@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: d5cdcd214c9679e245645505fe11cb5d521ce085
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: eb6f48d04b7d14591003e340464451da7df45cd6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351087"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404614"
 ---
 # <a name="goto-statement"></a>GoTo-Anweisung
 Verzweigt bedingungslos in eine angegebene Zeile in einer Prozedur.  
@@ -29,45 +29,45 @@ Verzweigt bedingungslos in eine angegebene Zeile in einer Prozedur.
 GoTo line  
 ```  
   
-## <a name="part"></a>-Komponente  
+## <a name="part"></a>Teil  
  `line`  
- Erforderlich Eine beliebige Zeilen Bezeichnung.  
+ Erforderlich. Eine beliebige Zeilen Bezeichnung.  
   
-## <a name="remarks"></a>Hinweise  
- Die `GoTo`-Anweisung kann nur bis Zeilen in der Prozedur verzweigt werden, in der Sie angezeigt wird. Die Linie muss über eine Zeilen Bezeichnung verfügen, auf die `GoTo` verweisen kann. Weitere Informationen finden Sie unter Gewusst [wie: bezeichnen von Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Die- `GoTo` Anweisung kann nur an Zeilen in der Prozedur verzweigt werden, in der Sie angezeigt wird. Die Linie muss über eine Zeilen Bezeichnung verfügen, `GoTo` auf die verwiesen werden kann. Weitere Informationen finden Sie unter Gewusst [wie: bezeichnen von Anweisungen](../../programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
-> mit `GoTo`-Anweisungen kann der Code schwierig zu lesen und zu warten. Verwenden Sie, wenn möglich, stattdessen eine Steuerelement Struktur. Weitere Informationen finden Sie unter [Ablauf Steuerung](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> `GoTo`-Anweisungen können das Lesen und Verwalten des Codes erschweren. Verwenden Sie, wenn möglich, stattdessen eine Steuerelement Struktur. Weitere Informationen finden Sie unter [Control Flow](../../programming-guide/language-features/control-flow/index.md).  
   
- Eine `GoTo`-Anweisung kann nicht verwendet werden, um von außerhalb eines `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`oder `Using`...`End Using` Erstellung zu einer Bezeichnung in zu verzweigen.  
+ Sie können keine- `GoTo` Anweisung verwenden, um eine Verzweigung außerhalb eines...,. `For` `Next` `For Each` .. `Next` , `SyncLock` `End SyncLock` `Try` `Catch` ...,... ... `Finally` , `With` ... `End With` oder `Using` ... `End Using` in eine Bezeichnung in.  
   
 ## <a name="branching-and-try-constructions"></a>Verzweigungen und Versuchs Konstruktionen  
- Innerhalb einer `Try`...`Catch`...`Finally` Konstruktion werden die folgenden Regeln für die Verzweigung mit der `GoTo`-Anweisung angewendet.  
+ In einer `Try` ... `Catch` ...`Finally` die folgenden Regeln gelten für die Verzweigung mit der- `GoTo` Anweisung.  
   
 |Block oder Region|Verzweigungen von außerhalb|Verzweigungen aus innerhalb|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`-Block|Nur aus einem `Catch` Block desselben Baus <sup>1</sup>|Nur für die gesamte Konstruktion|  
-|`Catch`-Block|Nie zulässig|Nur für die gesamte Konstruktion oder den `Try` Block desselben Aufbaus <sup>1</sup>|  
-|`Finally`-Block|Nie zulässig|Nie zulässig|  
+|`Try`Baustein|Nur aus einem `Catch` Block desselben Baus <sup>1</sup>|Nur für die gesamte Konstruktion|  
+|`Catch`Baustein|Nie zulässig|Nur für die gesamte Konstruktion oder den `Try` Block der gleichen Konstruktion <sup>1</sup>|  
+|`Finally`Baustein|Nie zulässig|Nie zulässig|  
   
- <sup>1</sup> wenn eine `Try`...`Catch`...`Finally` Konstruktion in einer anderen geschachtelt ist, kann ein `Catch` Block in den `Try` Block auf der eigenen Schachtelungs Ebene verzweigt werden, aber nicht in einen anderen `Try` Block. Eine geschachtelte `Try`...`Catch`...`Finally` Konstruktion muss vollständig in einem `Try` oder `Catch` Block der Konstruktion enthalten sein, in der Sie geschachtelt ist.  
+ <sup>1</sup> `Try` .. `Catch` . ...`Finally` die Konstruktion ist in einer anderen geschachtelt, ein `Catch` Block kann in den `Try` Block auf der eigenen Schachtelungs Ebene, aber nicht in einen anderen Block verzweigen `Try` . Ein `Try` ... `Catch` ...`Finally` die Konstruktion muss vollständig in einem- `Try` oder- `Catch` Block der Konstruktion enthalten sein, in der Sie geschachtelt ist.  
   
  Die folgende Abbildung zeigt eine `Try` in einer anderen geschachtelte Konstruktion. Verschiedene Verzweigungen zwischen den Blöcken der beiden Konstruktionen werden als gültig oder ungültig angegeben.  
   
- ![Grafisches Diagramm der Verzweigung in Try-Konstrukten](./media/goto-statement/try-construction-branching.gif)  
+ ![Grafisches Diagramm zum Branchen in Try-Konstrukten](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `GoTo`-Anweisung verwendet, um Zeilen Bezeichnungen in einer-Prozedur zu verzweigen.  
+ Im folgenden Beispiel wird die- `GoTo` Anweisung verwendet, um Zeilen Bezeichnungen in einer-Prozedur zu verzweigen.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Do...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Select...Case-Anweisung](../../../visual-basic/language-reference/statements/select-case-statement.md)
-- [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [While...End While-Anweisung](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
-- [With...End With-Anweisung](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [Do...Loop-Anweisung](do-loop-statement.md)
+- [For...Next-Anweisung](for-next-statement.md)
+- [For Each...Next-Anweisung](for-each-next-statement.md)
+- [If...Then...Else-Anweisung](if-then-else-statement.md)
+- [Select...Case-Anweisung](select-case-statement.md)
+- [Try...Catch...Finally-Anweisung](try-catch-finally-statement.md)
+- [While...End While-Anweisung](while-end-while-statement.md)
+- [With...End With-Anweisung](with-end-with-statement.md)

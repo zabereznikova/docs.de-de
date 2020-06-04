@@ -1,17 +1,17 @@
 ---
-title: Methode '<methodname>' kann nicht aufgerufen werden, mit <number> Argumente
+title: Die Methode <methodname> kann nicht mit <number> Argumenten aufgerufen werden
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: e168d59da6c0c293d2429f90b858baf3547c22b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f8dedf6797f16e61eb44875f28f4ed9ea787540
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922316"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402108"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Methode '\<Methodenname >' kann nicht aufgerufen werden, mit \<Anzahl > Argumenten
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Die Methode \<methodname> kann nicht mit \<number> Argumenten aufgerufen werden
 Ein Methodenaufruf enthält die falsche Anzahl von Argumenten.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
@@ -22,6 +22,6 @@ Ein Methodenaufruf enthält die falsche Anzahl von Argumenten.
   
 3. Passen Sie die Anzahl der Argumente an, wenn die beiden Zahlen nicht übereinstimmen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übergeben von Argumenten als Wert und als Verweis](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Übergeben von Argumenten als Wert und als Verweis](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

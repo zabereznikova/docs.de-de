@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: bf7a21e694b245ea72916e0930f11c332a3c9726
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ad3a1281cfaf366f1f28a847d3c3831ad11b0a20
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353579"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404523"
 ---
 # <a name="in-clause-visual-basic"></a>In-Klausel (Visual Basic)
-Gibt die Gruppe an, die die Schleifenvariable in einer `For Each` Schleife durchlaufen soll, oder gibt die Auflistung an, die in einer `From`-, `Join`-oder `Group Join`-Klausel abgefragt werden soll.  
+Gibt die Gruppe an, die die Schleifenvariable in einer Schleife durchlaufen soll `For Each` , oder gibt die Auflistung an, die in einer-,-oder-Klausel abgefragt werden soll `From` `Join` `Group Join` .  
   
-## <a name="remarks"></a>Hinweise  
- Das `In`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
+## <a name="remarks"></a>Bemerkungen  
+ Das- `In` Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next-Anweisung](for-each-next-statement.md)  
   
- [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [From-Klausel](../queries/from-clause.md)  
   
- [Join-Klausel](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Join-Klausel](../queries/join-clause.md)  
   
- [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join-Klausel](../queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../keywords/index.md)

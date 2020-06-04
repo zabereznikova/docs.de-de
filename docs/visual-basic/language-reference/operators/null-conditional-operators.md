@@ -6,16 +6,16 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 003f579a7128bbe2462b7fbe7057de03e61bfbe6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bffbba859968e0a050397cd9e685c142f801798a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348284"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401471"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. immer? () NULL-bedingte Operatoren (Visual Basic)
 
-Testet den Wert des linken Operanden für NULL (`Nothing`) vor dem Ausführen eines Element Zugriffs (`?.`) oder eines Index Vorgangs (`?()`). gibt `Nothing` zurück, wenn der linke Operand als `Nothing`ausgewertet wird. Beachten Sie, dass der NULL bedingte Operator in Ausdrücken, die normalerweise Werttypen zurückgeben, eine <xref:System.Nullable%601>zurückgibt.
+Testet den Wert des linken Operanden für NULL ( `Nothing` ), bevor ein Element Zugriffs `?.` Vorgang () oder Index ()- `?()` Vorgang durchgeführt wird. gibt zurück, `Nothing` Wenn der linke Operand als ausgewertet wird `Nothing` . Beachten Sie, dass der NULL bedingte Operator in Ausdrücken, die normalerweise Werttypen zurückgeben, eine zurückgibt <xref:System.Nullable%601> .
 
 Diese Operatoren helfen Ihnen, weniger Code zum Behandeln von Null-Überprüfungen zu schreiben, insbesondere beim absteigend in Datenstrukturen. Beispiel:
 
@@ -39,7 +39,7 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Manchmal müssen Sie eine Aktion für ein Objekt durchführen, das möglicherweise NULL ist. Dies basiert auf dem Wert eines booleschen Elements auf diesem Objekt (wie z. b. die boolesche Eigenschaft `IsAllowedFreeShipping` im folgenden Beispiel):
+Manchmal müssen Sie eine Aktion für ein Objekt durchführen, das möglicherweise NULL ist, basierend auf dem Wert eines booleschen Elements auf diesem Objekt (wie die boolesche Eigenschaft `IsAllowedFreeShipping` im folgenden Beispiel):
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Die NULL-bedingten Operatoren sind Kurzschlussoperatoren.  Wenn ein Vorgang in einer Kette von bedingtem Element Zugriff und Index Vorgängen `Nothing`zurückgibt, wird der Rest der Ausführung der Kette angehalten.  Im folgenden Beispiel wird `C(E)` nicht ausgewertet, wenn `A`, `B`oder `C` als `Nothing`ausgewertet wird.
+Die NULL-bedingten Operatoren sind Kurzschlussoperatoren.  Wenn ein Vorgang in einer Kette von bedingtem Element Zugriff und Index Vorgängen zurückgibt `Nothing` , wird der Rest der Ausführung der Kette angehalten.  Im folgenden Beispiel wird `C(E)` nicht ausgewertet, wenn `A` , `B` oder als ausgewertet wird `C` `Nothing` .
 
 ```vb
 A?.B?.C?(E)
 ```
 
-Eine andere Verwendung für den Zugriff auf NULL bedingte Member besteht darin, Delegaten auf Thread sichere Weise mit wesentlich geringerem Code aufzurufen.  Im folgenden Beispiel werden zwei Typen definiert: eine `NewsBroadcaster` und eine `NewsReceiver`. News Items werden vom `NewsBroadcaster.SendNews` Delegaten an den Empfänger gesendet.
+Eine andere Verwendung für den Zugriff auf NULL bedingte Member besteht darin, Delegaten auf Thread sichere Weise mit wesentlich geringerem Code aufzurufen.  Im folgenden Beispiel werden zwei Typen definiert: a `NewsBroadcaster` und `NewsReceiver` . News Items werden vom Delegaten an den Empfänger gesendet `NewsBroadcaster.SendNews` .
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-Wenn die `SendNews` Aufruf Liste keine Elemente enthält, löst der `SendNews` Delegat eine <xref:System.NullReferenceException>aus. Vor bedingten NULL-Operatoren hat Code wie der folgende sichergestellt, dass die Aufruf Liste des Delegaten nicht `Nothing`wurde:
+Wenn in der Aufruf Liste keine Elemente vorhanden sind, löst der Delegat `SendNews` `SendNews` einen aus <xref:System.NullReferenceException> . Vor bedingten NULL-Operatoren hat Code wie der folgende sichergestellt, dass die Aufruf Liste des Delegaten nicht war `Nothing` :
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -109,8 +109,8 @@ SendNews?.Invoke("Just in...")
 
 Die neue Methode ist threadsicher, da der Compiler Code zum Auswerten von `SendNews` nur einmal generiert und das Ergebnis in einer temporären Variablen behält. Sie müssen die `Invoke`-Methode explizit aufrufen, da es keine Aufrufsyntax für Null-Bedingungsdelegate gibt `SendNews?(String)`.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Operatoren (Visual Basic)](index.md)
-- [Visual Basic-Programmierhandbuch](../../../visual-basic/programming-guide/index.md)
-- [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Operatoren (Visual Basic)](index.md)
+- [Visual Basic-Programmierhandbuch](../../programming-guide/index.md)
+- [Sprachreferenz zu Visual Basic](../index.md)
