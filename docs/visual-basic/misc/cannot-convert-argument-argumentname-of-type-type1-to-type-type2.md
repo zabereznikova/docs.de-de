@@ -1,23 +1,23 @@
 ---
-title: Argument kann nicht konvertiert werden kann '<argumentname>'vom Typ'<type1>' in Typ'<type2>'
+title: Das Argument " <argumentname> " vom Typ "" kann nicht <type1> in den Typ " <type2> " konvertiert werden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-ms.openlocfilehash: 33e732f529be2f4d200355e352bb8b7bc7e629f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8881919c6c0e632dec511066eefbd9800a3000b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008123"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400860"
 ---
-# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a><span data-ttu-id="c7969-102">Argument kann nicht konvertiert werden kann '\<Argumentname >' vom Typ '\<Typ1 >' in den Typ '\<Typ2 >'</span><span class="sxs-lookup"><span data-stu-id="c7969-102">Cannot convert argument '\<argumentname>' of type '\<type1>' to type '\<type2>'</span></span>
-<span data-ttu-id="c7969-103">Eine Konvertierungsoperation versucht, ein Argument in einen inkompatiblen Typ zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="c7969-103">A conversion operation attempts to convert an argument to an incompatible type.</span></span>  
+# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a><span data-ttu-id="dcd02-102">Das Argument " \<argumentname> " vom Typ "" kann nicht \<type1> in den Typ " \<type2> " konvertiert werden.</span><span class="sxs-lookup"><span data-stu-id="dcd02-102">Cannot convert argument '\<argumentname>' of type '\<type1>' to type '\<type2>'</span></span>
+<span data-ttu-id="dcd02-103">Eine Konvertierungsoperation versucht, ein Argument in einen inkompatiblen Typ zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="dcd02-103">A conversion operation attempts to convert an argument to an incompatible type.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c7969-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="c7969-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="dcd02-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="dcd02-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="c7969-105">Stellen Sie sicher, dass der Typ, in den Sie das Argument konvertieren möchten, gültig ist.</span><span class="sxs-lookup"><span data-stu-id="c7969-105">Ensure that the type to which you are trying to convert the argument is valid.</span></span>  
+1. <span data-ttu-id="dcd02-105">Stellen Sie sicher, dass der Typ, in den Sie das Argument konvertieren möchten, gültig ist.</span><span class="sxs-lookup"><span data-stu-id="dcd02-105">Ensure that the type to which you are trying to convert the argument is valid.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7969-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c7969-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dcd02-106">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="dcd02-106">See also</span></span>
 
-- [<span data-ttu-id="c7969-107">Typkonvertierung in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c7969-107">Type Conversions in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [<span data-ttu-id="dcd02-107">Typkonvertierung in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dcd02-107">Type Conversions in Visual Basic</span></span>](../programming-guide/language-features/data-types/type-conversions.md)
