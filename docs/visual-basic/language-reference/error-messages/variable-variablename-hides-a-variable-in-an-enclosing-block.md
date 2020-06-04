@@ -1,5 +1,5 @@
 ---
-title: Die Variable '<variablename>' verbirgt eine Variable in einem einschließenden Block.
+title: Die Variable "<variablename>" verbirgt eine Variable in einem einschließenden Block.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30616
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 4312abef83728f432e2f6a492e5acad3450719b1
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 474a920c9cfdfba7a8157320d9c88b8677958425
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592063"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406520"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Variable '\<Variablenname >' verbirgt eine Variable in einem einschließenden Block
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Die Variable "\<variablename>" verbirgt eine Variable in einem einschließenden Block.
 Eine in einen-Block eingeschlossene Variable hat denselben Namen wie eine andere lokale Variable.  
   
  **Fehler-ID:** BC30616  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Benennen Sie die Variable im eingeschlossenen Block so um, dass Sie nicht mit allen anderen lokalen Variablen identisch ist. Zum Beispiel:  
+- Benennen Sie die Variable im eingeschlossenen Block so um, dass Sie nicht mit allen anderen lokalen Variablen identisch ist. Beispiel:  
   
     ```vb  
     Dim a, b, x As Integer  
@@ -30,11 +30,11 @@ Eine in einen-Block eingeschlossene Variable hat denselben Namen wie eine andere
     End If  
     ```  
   
-- Eine häufige Ursache für diesen Fehler ist die Verwendung von `Catch e As Exception` innerhalb eines Ereignis Handlers. Wenn dies der Fall ist, benennen Sie die `Catch`-Block Variable `ex` anstelle von `e`.  
+- Eine häufige Ursache für diesen Fehler ist die Verwendung von `Catch e As Exception` innerhalb eines Ereignis Handlers. Wenn dies der Fall ist, benennen Sie die `Catch` Block Variable `ex` anstelle von `e` .  
   
-- Eine weitere häufige Ursache für diesen Fehler ist der Versuch, auf eine lokale Variable zuzugreifen, die in einem `Try`-Block in einem separaten `Catch`-Block deklariert ist. Um dies zu korrigieren, deklarieren Sie die Variable außerhalb der `Try...Catch...Finally`-Struktur.  
+- Eine weitere häufige Ursache für diesen Fehler ist der Versuch, auf eine lokale Variable zuzugreifen, die `Try` in einem Block in einem separaten Block deklariert ist `Catch` . Um dies zu korrigieren, deklarieren Sie die Variable außerhalb der- `Try...Catch...Finally` Struktur.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Variablendeklaration](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Try...Catch...Finally-Anweisung](../statements/try-catch-finally-statement.md)
+- [Variablen Deklaration](../../programming-guide/language-features/variables/variable-declaration.md)

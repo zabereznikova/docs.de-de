@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 6ac0116b56fac7a5bfdc6545c8570317376791a1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f843955cc637ccdae091e207ed5d0aad24867e61
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353773"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404329"
 ---
-# <a name="option-keyword-statement"></a>Option \<-Schlüsselwort > Anweisung
+# <a name="option-keyword-statement"></a>Option \<keyword>-Anweisung
 Führt eine-Anweisung ein, die eine Compileroption angibt, die für die gesamte Quelldatei gilt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Compileroptionen können steuern, ob alle Variablen explizit deklariert werden müssen, ob einschränkende Typkonvertierungen explizit sein müssen oder ob Zeichen folgen als Text oder als binäre Mengen verglichen werden sollen.  
   
  Das `Option`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
- [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Option Compare-Anweisung](option-compare-statement.md)  
   
- [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Explicit-Anweisung](option-explicit-statement.md)  
   
- [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Option Infer-Anweisung](option-infer-statement.md)  
   
- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Strict-Anweisung](option-strict-statement.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../keywords/index.md)

@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 1385919a1205a60104125fff1bdd24f409a091df
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7d313dee1015362bd0215ed98ab7e898312cfbcd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351649"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373159"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 Gibt an, dass ein Attribut am Anfang einer Quelldatei für die gesamte Assembly gilt.  
   
-## <a name="remarks"></a>Hinweise  
- Viele Attribute beziehen sich auf ein einzelnes Programmier Element, z. b. eine Klasse oder Eigenschaft. Sie wenden ein derartiges Attribut an, indem Sie den Attribut Block in spitzen Klammern (`< >`) direkt an die Deklarations Anweisung anfügen.  
+## <a name="remarks"></a>Bemerkungen  
+ Viele Attribute beziehen sich auf ein einzelnes Programmier Element, z. b. eine Klasse oder Eigenschaft. Sie wenden ein derartiges Attribut an, indem Sie den Attribut Block in spitzen Klammern ( `< >` ) direkt an die Deklarations Anweisung anfügen.  
   
- Wenn sich ein Attribut nicht nur auf das folgende Element bezieht, sondern auf die gesamte Assembly, platzieren Sie den-Attribut Block am Anfang der Quelldatei und identifizieren das-Attribut mit dem `Assembly`-Schlüsselwort. Wenn dies für das aktuelle Assemblymodul gilt, verwenden Sie das [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) -Schlüsselwort.  
+ Wenn sich ein Attribut nicht nur auf das folgende Element bezieht, sondern auf die gesamte Assembly, platzieren Sie den-Attribut Block am Anfang der Quelldatei und identifizieren das-Attribut mit dem- `Assembly` Schlüsselwort. Wenn dies für das aktuelle Assemblymodul gilt, verwenden Sie das [Module](module-keyword.md) -Schlüsselwort.  
   
  Sie können auch ein Attribut auf eine Assembly in der Datei AssemblyInfo. vb anwenden. in diesem Fall müssen Sie keinen Attribut Block in der Haupt Quell Code Datei verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Module \<<schlüsselwort>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
-- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Mond\<keyword>](module-keyword.md)
+- [Übersicht über Attribute](../../programming-guide/concepts/attributes/index.md)

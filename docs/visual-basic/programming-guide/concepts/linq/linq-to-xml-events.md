@@ -2,12 +2,12 @@
 title: LINQ to XML-Ereignisse
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d00f6f1b2a14ac73c1bcd4a1f74b9714ca304da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351928"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368815"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>Ereignisse LINQ to XML (Visual Basic)
 Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Ereignissen können Sie sich benachrichtigen lassen, wenn eine XML-Struktur geändert wird.  
@@ -19,14 +19,14 @@ Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Ereignissen können Si
 ## <a name="types-and-events"></a>Typen und Ereignisse  
  Beim Arbeiten mit Ereignissen stehen Ihnen die folgenden Typen zur Verfügung:  
   
-|Typ|Beschreibung|  
+|Geben Sie Folgendes ein:|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Gibt den Ereignistyp an, wenn ein Ereignis für ein <xref:System.Xml.Linq.XObject> ausgelöst wird.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Stellt Daten für das <xref:System.Xml.Linq.XObject.Changing>-Ereignis und das <xref:System.Xml.Linq.XObject.Changed>-Ereignis bereit.|  
   
  Die folgenden Ereignisse werden ausgelöst, wenn Sie eine XML-Struktur ändern:  
   
-|Ereignis|Beschreibung|  
+|event|Beschreibung|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Tritt ein, unmittelbar bevor sich dieses <xref:System.Xml.Linq.XObject> oder eines seiner Nachfolger ändert.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Tritt ein, wenn sich ein <xref:System.Xml.Linq.XObject> oder eines seiner Nachfolger geändert hat.|  
@@ -92,7 +92,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Comments  
+### <a name="comments"></a>Kommentare  
  Dieser Code erzeugt die folgende Ausgabe:  
   
 ```console  
@@ -114,6 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Erweiterte LINQ to XML Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Erweiterte LINQ to XML Programmierung (Visual Basic)](advanced-linq-to-xml-programming.md)

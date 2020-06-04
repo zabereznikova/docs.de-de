@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9eb13d943f9f1cffc984847f7339111e06f5aa6b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349578"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373926"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub oder Funktion ist nicht definiert (Visual Basic)
-Es muss ein `Sub` oder `Function` definiert werden, um aufgerufen werden zu können. Dieser Fehler kann folgende Ursachen haben:  
+Ein `Sub` oder `Function` muss definiert werden, um aufgerufen werden zu können. Dieser Fehler kann folgende Ursachen haben:  
   
 - Falsche Rechtschreibprüfung für den Namen der Prozedur.  
   
@@ -30,9 +30,9 @@ Es muss ein `Sub` oder `Function` definiert werden, um aufgerufen werden zu kön
   
 3. Überprüfen Sie den Namen der Routine.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fehlertypen](../../programming-guide/language-features/error-types.md)
 - [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project)
-- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub-Anweisung](../statements/sub-statement.md)
+- [Function-Anweisung](../statements/function-statement.md)
