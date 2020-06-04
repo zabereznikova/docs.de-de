@@ -2,17 +2,17 @@
 title: 'Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
-ms.openlocfilehash: ef0df3ba2aa6d7628902cf59ff5fad4d29b017f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b971044ad28763858f40d36e454c08762598a435
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786931"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360851"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="8a3a1-102">Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8a3a1-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="8a3a1-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="8a3a1-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8a3a1-104">Dies ist eine Testkonfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8a3a1-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="80089-102">Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="80089-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="80089-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="80089-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="80089-104">Dies ist eine Testkonfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="80089-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="8a3a1-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="8a3a1-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="80089-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="80089-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "61786931"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8a3a1-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8a3a1-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80089-106">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="80089-106">See also</span></span>
 
-- [<span data-ttu-id="8a3a1-107">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8a3a1-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="80089-107">Beispiel-XML-Dokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="80089-107">Sample XML Documents (LINQ to XML)</span></span>](sample-xml-documents-linq-to-xml.md)
