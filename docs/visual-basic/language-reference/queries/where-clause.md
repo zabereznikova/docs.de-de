@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: 60b7ebe96ce0c4580c36675b2e4aa5f9888732c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b80bb047551dee8ab23cfac06b961996992d69b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349631"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359540"
 ---
 # <a name="where-clause-visual-basic"></a>Where-Klausel (Visual Basic)
 Gibt die Filterbedingung für eine Abfrage an.  
@@ -24,31 +24,31 @@ Gibt die Filterbedingung für eine Abfrage an.
 Where condition  
 ```  
   
-## <a name="parts"></a>-Komponenten  
+## <a name="parts"></a>Bestandteile  
  `condition`  
- Erforderlich Ein Ausdruck, der bestimmt, ob die Werte für das aktuelle Element in der Auflistung in der Ausgabe Auflistung enthalten sind. Der Ausdruck muss zu einem `Boolean` Wert oder der Entsprechung eines `Boolean` Werts ausgewertet werden. Wenn die Bedingung als `True`ausgewertet wird, wird das Element in das Abfrageergebnis eingeschlossen. Andernfalls wird das-Element aus dem Abfrageergebnis ausgeschlossen.  
+ Erforderlich. Ein Ausdruck, der bestimmt, ob die Werte für das aktuelle Element in der Auflistung in der Ausgabe Auflistung enthalten sind. Der Ausdruck muss zu einem- `Boolean` Wert oder dem-Äquivalent eines-Werts ausgewertet werden `Boolean` . Wenn die Bedingung ergibt `True` , wird das-Element in das Abfrageergebnis eingeschlossen. andernfalls wird das-Element aus dem Abfrageergebnis ausgeschlossen.  
   
-## <a name="remarks"></a>Hinweise  
- Mit der `Where`-Klausel können Sie Abfrage Daten filtern, indem Sie nur Elemente auswählen, die bestimmte Kriterien erfüllen. Elemente, deren Werte bewirken, dass die `Where`-Klausel zu `True` ausgewertet wird, sind im Abfrageergebnis enthalten. andere Elemente werden ausgeschlossen. Der Ausdruck, der in einer `Where`-Klausel verwendet wird, muss zu einem `Boolean` oder dem Äquivalent eines `Boolean`ausgewertet werden, z. b. eine ganze Zahl, die `False` ergibt, wenn der Wert 0 (null) ist. Sie können mehrere Ausdrücke in einer `Where`-Klausel kombinieren, indem Sie logische Operatoren wie z. b. `And`, `Or`, `AndAlso`, `OrElse`, `Is`und `IsNot`verwenden.  
+## <a name="remarks"></a>Bemerkungen  
+ Mit der- `Where` Klausel können Sie Abfrage Daten filtern, indem Sie nur Elemente auswählen, die bestimmte Kriterien erfüllen. Elemente, deren Werte bewirken, dass die- `Where` Klausel ausgewertet `True` wird, werden in das Abfrageergebnis eingeschlossen. andere Elemente werden ausgeschlossen. Der Ausdruck, der in einer-Klausel verwendet wird, `Where` muss zu einer `Boolean` oder der-Entsprechung von ausgewertet `Boolean` werden, z. b. eine ganze Zahl, die ergibt, `False` Wenn der Wert NULL ist. Sie können mehrere Ausdrücke in einer- `Where` Klausel kombinieren, indem Sie logische Operatoren wie `And` , `Or` , `AndAlso` , `OrElse` , `Is` und verwenden `IsNot` .  
   
- Standardmäßig werden Abfrage Ausdrücke erst ausgewertet, wenn auf Sie zugegriffen wird – z. b. Wenn Sie in einer `For` Schleife Daten gebunden oder durchlaufen haben. Folglich wird die `Where`-Klausel erst ausgewertet, wenn auf die Abfrage zugegriffen wird. Wenn Sie Werte außerhalb der Abfrage haben, die in der `Where`-Klausel verwendet werden, stellen Sie sicher, dass der entsprechende Wert in der `Where`-Klausel zum Zeitpunkt der Abfrage Ausführung verwendet wird. Weitere Informationen zur Abfrage Ausführung finden Sie unter [Schreiben Ihrer ersten LINQ-Abfrage](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ Standardmäßig werden Abfrage Ausdrücke erst ausgewertet, wenn auf Sie zugegriffen wird – z. b. Wenn Sie in einer-Schleife Daten gebunden oder durchlaufen haben `For` . Folglich wird die- `Where` Klausel erst ausgewertet, wenn auf die Abfrage zugegriffen wird. Wenn Sie Werte außerhalb der Abfrage haben, die in der-Klausel verwendet werden `Where` , stellen Sie sicher, dass der entsprechende Wert in der- `Where` Klausel zum Zeitpunkt der Abfrage Ausführung verwendet wird. Weitere Informationen zur Abfrage Ausführung finden Sie unter [Schreiben Ihrer ersten LINQ-Abfrage](../../programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
- Sie können Funktionen innerhalb einer `Where`-Klausel aufzurufen, um eine Berechnung oder einen Vorgang für einen Wert aus dem aktuellen Element in der Auflistung auszuführen. Wenn Sie eine Funktion in einer `Where`-Klausel aufrufen, kann dies dazu führen, dass die Abfrage sofort ausgeführt wird, wenn Sie definiert wird, anstatt dass Sie aufgerufen wird. Weitere Informationen zur Abfrage Ausführung finden Sie unter [Schreiben Ihrer ersten LINQ-Abfrage](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ Sie können Funktionen innerhalb einer- `Where` Klausel aufzurufen, um eine Berechnung oder einen Vorgang für einen Wert aus dem aktuellen Element in der Auflistung auszuführen. Das Aufrufen einer Funktion in einer- `Where` Klausel kann bewirken, dass die Abfrage sofort ausgeführt wird, wenn Sie definiert wird, und nicht, wenn darauf zugegriffen wird. Weitere Informationen zur Abfrage Ausführung finden Sie unter [Schreiben Ihrer ersten LINQ-Abfrage](../../programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Abfrage Ausdruck verwendet eine `From`-Klausel, um für jedes `Customer`-Objekt in der `customers` Auflistung eine Bereichs Variable `cust` zu deklarieren. Die `Where`-Klausel verwendet die Range-Variable, um die Ausgabe auf Kunden aus dem angegebenen Bereich zu beschränken. Die `For Each`-Schleife zeigt den Firmennamen für jeden Kunden im Abfrageergebnis an.  
+ Der folgende Abfrage Ausdruck verwendet eine- `From` Klausel, um eine Bereichs Variable `cust` für jedes `Customer` Objekt in der Auflistung zu deklarieren `customers` . Die- `Where` Klausel verwendet die Range-Variable, um die Ausgabe auf Kunden aus dem angegebenen Bereich zu beschränken. In der- `For Each` Schleife wird der Firmenname für jeden Kunden im Abfrageergebnis angezeigt.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden die logischen Operatoren `And` und `Or` in der `Where`-Klausel verwendet.  
+ Im folgenden Beispiel werden `And` die `Or` logischen Operatoren und in der- `Where` Klausel verwendet.  
   
  [!code-vb[VbSimpleQuerySamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#31)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Abfragen](../../../visual-basic/language-reference/queries/index.md)
-- [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)
-- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [Einführung in LINQ in Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Abfragen](index.md)
+- [From-Klausel](from-clause.md)
+- [SELECT-Klausel](select-clause.md)
+- [For Each...Next-Anweisung](../statements/for-each-next-statement.md)

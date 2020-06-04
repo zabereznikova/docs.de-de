@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eb30488312cc7519f39a6b819aea15489f2f70a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803167"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409519"
 ---
-# <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>Ausdruck weist den Typ "\<Typname >', einen eingeschränkten Typ, kann nicht verwendet werden, um von 'Object' oder 'ValueType' geerbte Member zuzugreifen
-Ein Ausdruck ergibt einen Typ, der von der common Language Runtime (CLR) geschachtelt werden kann, aber greift auf ein Element, das Boxing erforderlich.  
+# <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>Der Ausdruck weist den Typ '\<typename>' auf, einen eingeschränkten Typ, der nicht verwendet werden kann, um auf von 'Object' oder 'ValueType' geerbte Member zuzugreifen
+Ein Ausdruck wird zu einem Typ ausgewertet, der nicht vom Common Language Runtime (CLR) gekapselt werden kann, aber auf einen Member zugreift, der Boxing erfordert.  
   
- *Boxing* bezieht sich auf die Verarbeitung, die zum Konvertieren eines Typs in `Object` oder gelegentlich in <xref:System.ValueType>erforderlich ist. Die common Language Runtime kann nicht bestimmte Typen, z. B. Feld <xref:System.ArgIterator>, <xref:System.RuntimeArgumentHandle>, und <xref:System.TypedReference>.  
+ *Boxing* bezieht sich auf die Verarbeitung, die zum Konvertieren eines Typs in `Object` oder gelegentlich in <xref:System.ValueType>erforderlich ist. Der Common Language Runtime kann bestimmte Strukturtypen nicht einfeldern, <xref:System.ArgIterator> z <xref:System.RuntimeArgumentHandle> . b <xref:System.TypedReference> ., und.  
   
- Dieser Ausdruck versucht, mithilfe der eingeschränkten Typs zum Aufrufen einer Methode geerbt von <xref:System.Object> oder <xref:System.ValueType>, z. B. <xref:System.Object.GetHashCode%2A> oder <xref:System.Object.ToString%2A>. Um diese Methode zugreifen zu können, hat Visual Basic eine implizites Boxing-Konvertierung versucht, die diesen Fehler verursacht.  
+ Dieser Ausdruck versucht, den eingeschränkten Typ zu verwenden, um eine Methode aufzurufen, die von <xref:System.Object> oder geerbt <xref:System.ValueType> wird, z <xref:System.Object.GetHashCode%2A> . b <xref:System.Object.ToString%2A> . oder. Für den Zugriff auf diese Methode hat Visual Basic versucht, eine implizite Boxing-Konvertierung auszuführen, die diesen Fehler verursacht.  
   
  **Fehler-ID:** BC31393  
   
@@ -27,10 +27,10 @@ Ein Ausdruck ergibt einen Typ, der von der common Language Runtime (CLR) geschac
   
 1. Suchen Sie den Ausdruck, der den angegebenen Typ ergibt.  
   
-2. Suchen Sie den Teil der Anweisung, die versucht, die zum Aufrufen der Methode geerbt von <xref:System.Object> oder <xref:System.ValueType>.  
+2. Suchen Sie den Teil der Anweisung, der versucht, die Methode aufzurufen, die von oder geerbt wurde <xref:System.Object> <xref:System.ValueType> .  
   
-3. Schreiben Sie Anweisung um den Methodenaufruf zu vermeiden.  
+3. Schreiben Sie die Anweisung neu, um den Methodenaufrufe zu vermeiden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Implizite und explizite Konvertierungen](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 12e983ae62fa9f9ea762d434ffe5b73873a4a2e8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351905"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413103"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Arraydimensionen in Visual Basic
 
 Eine *Dimension* ist eine Richtung, in der Sie die Spezifikation der Elemente eines Arrays variieren können. Ein Array, das die Gesamtumsätze für jeden Tag des Monats enthält, verfügt über eine Dimension (den Tag des Monats). Ein Array, das die Gesamtumsätze pro Abteilung für jeden Tag des Monats enthält, hat zwei Dimensionen (die Abteilungs Nummer und den Tag des Monats). Die Anzahl der Dimensionen, die ein Array hat, wird als *Rang*bezeichnet.
 
 > [!NOTE]
-> Sie können die <xref:System.Array.Rank%2A>-Eigenschaft verwenden, um die Anzahl der Dimensionen eines Arrays zu bestimmen.
+> Sie können die- <xref:System.Array.Rank%2A> Eigenschaft verwenden, um die Anzahl der Dimensionen eines Arrays zu bestimmen.
 
 ## <a name="working-with-dimensions"></a>Arbeiten mit Dimensionen
 
 Sie geben ein Element eines Arrays an, indem Sie einen Index bereit *stellen oder für* jede seiner Dimensionen einen *Index* festlegen. Die Elemente sind zusammenhängend entlang jeder Dimension von Index 0 bis zum höchsten Index für diese Dimension.
 
-Die folgenden Abbildungen zeigen die konzeptionelle Struktur von Arrays mit unterschiedlichen Rang folgen. Jedes Element in den Abbildungen zeigt die Indexwerte, die darauf zugreifen. Sie können z. b. auf das erste Element der zweiten Zeile des zweidimensionalen Arrays zugreifen, indem Sie die Indizes `(1, 0)`angeben.
+Die folgenden Abbildungen zeigen die konzeptionelle Struktur von Arrays mit unterschiedlichen Rang folgen. Jedes Element in den Abbildungen zeigt die Indexwerte, die darauf zugreifen. Beispielsweise können Sie durch Angabe von Indizes auf das erste Element der zweiten Zeile des zweidimensionalen Arrays zugreifen `(1, 0)` .
 
 ![Diagramm, das ein eindimensionales Array anzeigt.](./media/array-dimensions/one-dimensional-array.gif)
 
@@ -88,12 +88,12 @@ Angenommen, Sie entscheiden sich dafür, dass Ihr Array Informationen für mehr 
 Dim salesAmounts(4, 11, 30) As Double
 ```
 
-Beachten Sie, dass jede Dimension von `salesAmounts` als die für diese Dimension erforderliche Länge deklariert wird, da jeder Index von 0 bis zum Maximum abweicht. Beachten Sie auch, dass sich die Größe des Arrays mit jeder neuen Dimension vergrößert. Die drei Größen in den vorangehenden Beispielen sind die Elemente 31, 372 und 1.860.
+Beachten Sie, dass jede Dimension von `salesAmounts` als eine kleiner als die für diese Dimension erforderliche Länge deklariert wird, da jeder Index von 0 bis zum Maximum abweicht. Beachten Sie auch, dass sich die Größe des Arrays mit jeder neuen Dimension vergrößert. Die drei Größen in den vorangehenden Beispielen sind die Elemente 31, 372 und 1.860.
 
 > [!NOTE]
-> Sie können ein Array erstellen, ohne die `Dim`-Anweisung oder die `New`-Klausel zu verwenden. Beispielsweise können Sie die <xref:System.Array.CreateInstance%2A>-Methode oder eine andere Komponente den Code an ein auf diese Weise erstelltes Array übergeben. Ein solches Array kann eine untere Grenze aufweisen, die nicht 0 (null) ist. Mit der <xref:System.Array.GetLowerBound%2A>-Methode oder der `LBound`-Funktion können Sie immer die untere Grenze einer Dimension testen.
+> Sie können ein Array erstellen, ohne die- `Dim` Anweisung oder die-Klausel zu verwenden `New` . Sie können z. b. die- <xref:System.Array.CreateInstance%2A> Methode oder eine andere Komponente den Code an ein auf diese Weise erstelltes Array übergeben. Ein solches Array kann eine untere Grenze aufweisen, die nicht 0 (null) ist. Mithilfe der-Methode oder der-Funktion können Sie immer die untere Grenze einer Dimension testen <xref:System.Array.GetLowerBound%2A> `LBound` .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Problembehandlung bei Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Arrays](index.md)
+- [Problembehandlung bei Arrays](troubleshooting-arrays.md)

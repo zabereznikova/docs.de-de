@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 1873c0af7a251afd7754557f5dcb6aed13eb9f11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8675d9c3b202200c89e12e7a5f51a19d9e3e0e64
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918319"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409464"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben werden, in Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder wurde nicht gefunden
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Der in Imports '\<qualifiedelementname>' angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden
 
-Namespace oder Typ angegeben werden, in Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder wurde nicht gefunden. Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentliches Member enthält. Stellen Sie sicher, dass der Aliasname keine andere Aliase enthält.
+Der in den Importen ' ' angegebene Namespace oder Typ \<qualifiedelementname> enthält keinen öffentlichen Member oder kann nicht gefunden werden. Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentlichen Member enthält. Stellen Sie sicher, dass der Alias Name keine anderen Aliase enthält.
 
-Ein `Imports` Anweisung gibt ein enthaltendes Element, das entweder nicht gefunden werden kann, oder keine definiert `Public` Member.
+Eine- `Imports` Anweisung gibt ein enthaltende Element an, das entweder nicht gefunden werden kann oder keine Member definiert `Public` .
 
-Ein *, das Element enthält* -Namespace, Klasse, Struktur, Modul, Schnittstelle oder Enumeration sein kann. Das enthaltende Element enthält Member, z. B. Variablen, Prozeduren oder andere Elemente enthält.
+Ein *enthaltende Element* kann ein Namespace, eine Klasse, eine Struktur, ein Modul, eine Schnittstelle oder eine Enumeration sein. Das enthaltende Element enthält Member, z. b. Variablen, Prozeduren oder andere enthaltende Elemente.
 
-Importieren von dient zu Ihrem Code, um Namespaces oder Typs auf Member zuzugreifen, ohne sie zu qualifizieren. Ihr Projekt müssen möglicherweise auch einen Verweis auf den Namespace oder Typ hinzufügen. Weitere Informationen finden Sie unter "Importieren von enthaltenen Elementen" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Der Zweck des Importierens besteht darin, dass Ihr Code auf Namespaces oder Typmember zugreifen kann, ohne Sie qualifizieren zu müssen. Das Projekt muss möglicherweise auch einen Verweis auf den Namespace oder den Typ hinzufügen. Weitere Informationen finden Sie unter "Importieren enthaltender Elemente" in [Verweise auf deklarierte Elemente](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-Wenn der Compiler das angegebene Element enthält, nicht finden kann, und klicken Sie dann nicht Verweise aufgelöst werden kann, die sie verwenden. Wenn das Element gefunden wird, das Element macht aber keine `Public` Elemente, und klicken Sie dann auf keinen Verweis kann erfolgreich sein. In beiden Fällen ist es ohne Bedeutung für das Element zu importieren.
+Wenn der Compiler das angegebene enthaltende Element nicht finden kann, kann er keine Verweise auflösen, die ihn verwenden. Wenn das-Element gefunden wird, aber das-Element keine Member verfügbar macht `Public` , kann kein Verweis erfolgreich sein. In beiden Fällen ist es bedeutungslos, das-Element zu importieren.
 
-Sollten Sie bedenken, wenn Sie ein enthaltenden Element importieren und weisen Sie einen Importalias zu, klicken Sie dann Sie diesen Importalias nicht verwenden, um ein anderes Element zu importieren. Der folgende Code generiert einen Compilerfehler.
+Beachten Sie, dass Sie, wenn Sie ein enthaltenes Element importieren und ihm einen importieralias zuweisen, diesen Importalias nicht verwenden können, um ein anderes Element zu importieren. Der folgende Code generiert einen Compilerfehler.
 
 ```vb
 Imports winfrm = System.Windows.Forms
@@ -40,16 +40,16 @@ Imports behave = winfrm.Design.Behavior`
 
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-1. Stellen Sie sicher, dass das enthaltende Element aus Ihrem Projekt möglich ist.
+1. Stellen Sie sicher, dass das enthaltende Element über Ihr Projekt zugänglich ist.
 
-2. Stellen Sie sicher, dass die Spezifikation des enthaltenden Elements Importalias einen weiteren Importvorgang nicht enthalten ist.
+2. Vergewissern Sie sich, dass die Spezifikation des enthaltenden Elements keinen importtalias aus einem anderen Import enthält.
 
-3. Stellen Sie sicher, dass das enthaltende Element verfügbar, mindestens eine macht `Public` Member.
+3. Vergewissern Sie sich, dass das enthaltende Element mindestens einen Member verfügbar macht `Public` .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Namespace-Anweisung](../../../visual-basic/language-reference/statements/namespace-statement.md)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Verweise auf deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Imports-Anweisung (.NET-Namespace und Typ)](../statements/imports-statement-net-namespace-and-type.md)
+- [Namespace-Anweisung](../statements/namespace-statement.md)
+- [Öffentlich](../modifiers/public.md)
+- [Namespaces in Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

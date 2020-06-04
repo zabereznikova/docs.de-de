@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30491
 ms.assetid: 8399d7ae-bc0a-49e6-81dc-2e7229708bc9
-ms.openlocfilehash: cd4c684e5d846aa3361145dfcc82cf6050e3786e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97cf3208e47eb0514296927e86eefc768280f61f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646833"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409542"
 ---
 # <a name="expression-does-not-produce-a-value"></a>Der Ausdruck ergibt keinen Wert
-Sie haben versucht, einen Ausdruck verwenden, die einen Wert in einem Kontext Wert erzeugt, wie ein Aufruf nicht generiert eine `Sub` in einem Kontext, in denen eine `Function` wird erwartet.  
+Sie haben versucht, einen Ausdruck zu verwenden, der keinen Wert in einem Wert produzierenden Kontext erzeugt, wie z. b. das Aufrufen einer `Sub` in einem Kontext, in dem `Function` erwartet wird.  
   
  **Fehler-ID:** BC30491  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Ändern Sie den Ausdruck so, dass er einen Wert ein.  
+- Ändern Sie den Ausdruck in einen Wert, der einen Wert erzeugt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fehlertypen](../../programming-guide/language-features/error-types.md)

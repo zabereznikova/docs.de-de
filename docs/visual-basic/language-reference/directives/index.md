@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, directives
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
-ms.openlocfilehash: b5e857198351b30c0d7a38dce1a9e6d1209b5258
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b5fcf3cb8801bc99dd2096c28cc41ebefeb34592
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838142"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409997"
 ---
 # <a name="directives-visual-basic"></a>Anweisungen (Visual Basic)
 
@@ -19,13 +19,13 @@ In den Themen in diesem Abschnitt werden die Visual Basic-Quellcode-Compilerdire
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
- [#Const Direktive](../../../visual-basic/language-reference/directives/const-directive.md) : Definieren einer Compilerkonstante  
+ [#Const Direktive](const-directive.md) : Definieren einer Compilerkonstante  
   
- [#ExternalSource-Direktive](../../../visual-basic/language-reference/directives/externalsource-directive.md) : gibt eine Zuordnung zwischen Quellzeilen und Text außerhalb der Quelle an.  
+ [#ExternalSource-Direktive](externalsource-directive.md) : gibt eine Zuordnung zwischen Quellzeilen und Text außerhalb der Quelle an.  
   
- [#If... Then... #else Direktiven](../../../visual-basic/language-reference/directives/if-then-else-directives.md) : Kompilieren Sie ausgewählte Code Blöcke.  
+ [#If... Then... #else Direktiven](if-then-else-directives.md) : Kompilieren Sie ausgewählte Code Blöcke.  
   
- [#Region Direktive](../../../visual-basic/language-reference/directives/region-directive.md) : reduzieren und Ausblenden von Code Abschnitten im Visual Studio-Editor  
+ [#Region Direktive](region-directive.md) : reduzieren und Ausblenden von Code Abschnitten im Visual Studio-Editor  
   
  **#Disable #enable** -deaktivieren und aktivieren Sie bestimmte Warnungen für Code Bereiche.  
   
@@ -41,5 +41,5 @@ In den Themen in diesem Abschnitt werden die Visual Basic-Quellcode-Compilerdire
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
- [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  
+ [Sprachreferenz zu Visual Basic](../index.md)  
   

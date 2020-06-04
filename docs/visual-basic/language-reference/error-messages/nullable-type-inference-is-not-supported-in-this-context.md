@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 42bde0b1843e52bbc16118bb056ade791591904e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 52e5391fbcf30a4dada4d64a0e810c900ea85806
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249499"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409386"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Der Rückschluss von Typen, die NULL-Werte zulassen, wird in diesem Kontext nicht unterstützt
-Werttypen und -strukturen können als null deklariert werden.  
+Werttypen und Strukturen können als Nullable deklariert werden.  
   
 ```vb  
 Dim a? As Integer  
 Dim b As Integer?  
 ```  
   
- Sie können die nullfähige Deklaration jedoch nicht in Kombination mit dem Typrückschluss verwenden. Die folgenden Beispiele verursachen diesen Fehler.  
+ Es ist jedoch nicht möglich, die Deklaration, die NULL zulässt, in Kombination mit dem Typrückschluss In den folgenden Beispielen wird dieser Fehler verursacht.  
   
 ```vb  
 ' Not valid.  
@@ -34,9 +34,9 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Verwenden `As` Sie eine Klausel, um die Variable als NULL-Werttyp zu deklarieren.  
+- Verwenden Sie eine- `As` Klausel, um die Variable als Werte zulässt-Werttyp zu deklarieren.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Auf NULL festlegbare Werttypen](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Nullable-Werttypen](../../programming-guide/language-features/data-types/nullable-value-types.md)
+- [Lokaler Typrückschluss](../../programming-guide/language-features/variables/local-type-inference.md)

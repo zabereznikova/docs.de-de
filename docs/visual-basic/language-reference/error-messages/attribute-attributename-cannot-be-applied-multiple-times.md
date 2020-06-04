@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: f2f4dc428a247275f9919c4a8b6e6944a558eef0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 14145f165adf5ccd20298a70ca5596488b488b0c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968225"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409958"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Das Attribut '\<AttributeName > ' kann nicht mehrmals angewendet werden.
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Das Attribut "\<attributename>" kann nicht mehrmals angewendet werden.
 
-Das-Attribut kann nur einmal angewendet werden. Das `AttributeUsage`-Attribut bestimmt, ob ein Attribut mehrmals angewendet werden kann.  
+Das-Attribut kann nur einmal angewendet werden. Das- `AttributeUsage` Attribut bestimmt, ob ein Attribut mehrmals angewendet werden kann.  
   
  **Fehler-ID:** BC30663  
   
@@ -24,14 +24,14 @@ Das-Attribut kann nur einmal angewendet werden. Das `AttributeUsage`-Attribut be
   
 1. Stellen Sie sicher, dass das-Attribut nur einmal angewendet wird.  
   
-2. Wenn Sie benutzerdefinierte Attribute verwenden, die Sie entwickelt haben, sollten Sie das `AttributeUsage` Attribut ändern, um die Verwendung mehrerer Attribute zuzulassen, wie im folgenden Beispiel gezeigt.  
+2. Wenn Sie von Ihnen entwickelte benutzerdefinierte Attribute verwenden, sollten Sie `AttributeUsage` das-Attribut ändern, um die Verwendung mehrerer Attribute zuzulassen, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.AttributeUsageAttribute>
-- [Erstellen benutzerdefinierter Attribute](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [Erstellen benutzerdefinierter Attribute](../../programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [AttributeUsage](../../programming-guide/concepts/attributes/attributeusage.md)

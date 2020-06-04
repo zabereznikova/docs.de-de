@@ -1,5 +1,5 @@
 ---
-title: Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in '<name>' gefunden.
+title: Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in "<name>" gefunden.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30737
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
-ms.openlocfilehash: 559c905d1e2e2de4500771a93d6116f9630011ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6760b931ceb2ad5c2c04169d664da8629badc487
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591976"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409412"
 ---
-# <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in gefunden '\<Name >'
-Befehlszeile-Anwendungen benötigen eine `Sub Main` definiert. `Main` muss deklariert werden, als `Public Shared` ggf. in einer Klasse oder als definierten `Public` Wenn in einem Modul definiert.  
+# <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in "\<name>" gefunden.
+Für Befehlszeilen Anwendungen muss definiert sein `Sub Main` . `Main`muss als deklariert werden `Public Shared` , als ob Sie in einer Klasse definiert ist, oder wie, `Public` Wenn Sie in einem Modul definiert ist.  
   
  **Fehler-ID:** BC30737  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Definieren einer `Public Sub Main` Verfahren für Ihr Projekt. Deklarieren Sie sie als `Shared` nur, wenn Sie sie innerhalb einer Klasse definieren.  
+- Definieren `Public Sub Main` Sie eine Prozedur für das Projekt. Deklarieren Sie Sie nur dann als `Shared` if und only, wenn Sie Sie in einer Klasse definieren.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Struktur der Visual Basic-Programmen](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
-- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Struktur von Visual Basic-Programmen](../../programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Vorgehensweisen](../../programming-guide/language-features/procedures/index.md)

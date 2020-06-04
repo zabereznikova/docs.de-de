@@ -1,5 +1,5 @@
 ---
-title: Teilweise
+title: Partial
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Partial
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: df85571b757fd54496677bad1195fab9690b79cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 650ead2f0deb9813b26241a6a4676907de3f263d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351356"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362241"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Gibt an, dass eine Typdeklaration eine partielle Definition des Typs ist.  
@@ -27,7 +27,7 @@ Gibt an, dass eine Typdeklaration eine partielle Definition des Typs ist.
  Mit dem `Partial`-Schlüsselwort können Sie die Typdefinition auf mehrere Deklarationen aufteilen. Sie können beliebig viele partielle Deklarationen in beliebig vielen verschiedenen Quelldateien verwenden. Alle Deklarationen müssen jedoch in der gleichen Assembly und dem gleichen Namespace enthalten sein.  
   
 > [!NOTE]
-> Visual Basic unterstützt *partielle Methoden*, die in der Regel in partiellen Klassen implementiert werden. Weitere Informationen finden Sie unter [partielle Methoden](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) und [unter Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md).  
+> Visual Basic unterstützt *partielle Methoden*, die in der Regel in partiellen Klassen implementiert werden. Weitere Informationen finden Sie unter [partielle Methoden](../../programming-guide/language-features/procedures/partial-methods.md) und [unter Anweisung](../statements/sub-statement.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,27 +41,27 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 { End Class | End Structure }  
 ```  
   
-## <a name="parts"></a>-Komponenten  
+## <a name="parts"></a>Bestandteile  
   
 |Begriff|Definition|  
 |---|---|  
-|`attrlist`|Optional. Liste der Attribute, die für diesen Typ gelten. Sie müssen die [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern (`< >`) einschließen.|  
-|`accessmodifier`|Optional. Gibt an, welcher Code auf diesen Typ zugreifen kann. Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Optional. Siehe [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Optional. Siehe [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Optional. Siehe [notvererbt able](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`name`|Erforderlich Der Name dieses Typs. Muss mit dem Namen übereinstimmen, der in allen anderen partiellen Deklarationen desselben Typs definiert ist.|  
-|`Of`|Optional. Gibt an, dass dies ein generischer Typ ist. Weitere Informationen finden Sie [unter generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|Erforderlich, wenn Sie [verwenden.](../../../visual-basic/language-reference/statements/of-clause.md) Siehe [Typliste](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Optional. Siehe [erbt-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`attrlist`|Dies ist optional. Liste der Attribute, die für diesen Typ gelten. Sie müssen die [Attribut Liste](../statements/attribute-list.md) in Spitze Klammern () einschließen `< >` .|  
+|`accessmodifier`|Optional. Gibt an, welcher Code auf diesen Typ zugreifen kann. Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Optional. Siehe [Shadows](shadows.md).|  
+|`MustInherit`|Optional. Siehe [MustInherit](mustinherit.md).|  
+|`NotInheritable`|Optional. Siehe [notvererbt able](notinheritable.md).|  
+|`name`|Erforderlich. Der Name dieses Typs. Muss mit dem Namen übereinstimmen, der in allen anderen partiellen Deklarationen desselben Typs definiert ist.|  
+|`Of`|Optional. Gibt an, dass dies ein generischer Typ ist. Weitere Informationen finden Sie [unter generische Typen in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md).|  
+|`typelist`|Erforderlich, wenn Sie [verwenden.](../statements/of-clause.md) Siehe [Typliste](../statements/type-list.md).|  
+|`Inherits`|Optional. Siehe [erbt-Anweisung](../statements/inherits-statement.md).|  
 |`classname`|Erforderlich, wenn Sie `Inherits` verwenden. Der Name der Klasse oder Schnittstelle, von der diese Klasse abgeleitet wird.|  
-|`Implements`|Optional. Siehe [implementierende Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Optional. Siehe [implementierende Anweisung](../statements/implements-statement.md).|  
 |`interfacenames`|Erforderlich, wenn Sie `Implements` verwenden. Die Namen der von diesem Typ implementierten Schnittstellen.|  
 |`variabledeclarations`|Optional. Anweisungen, die zusätzliche Variablen und Ereignisse für den Typ definieren.|  
 |`proceduredeclarations`|Optional. Anweisungen, die zusätzliche Prozeduren für den Typ deklarieren und definieren.|  
 |`End Class` oder `End Structure`|Beendet diese partielle `Class`- oder `Structure`-Definition.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Visual Basic verwendet partielle Klassendefinitionen, um in jeweils eigenen Quelldateien generierten Code von Code zu trennen, der vom Benutzer erstellt wurde. Zum Beispiel definiert der **Windows Form-Designer** partielle Klassen für Steuerelemente, z.B. <xref:System.Windows.Forms.Form>. Sie sollten den generierten Code in diesen Steuerelementen nicht ändern.  
   
  Beim Erstellen eines partiellen Typs gelten alle Regeln für die Erstellung von Klassen, Strukturen, Schnittstellen und Modulen, beispielsweise diejenigen für die Verwendung und Vererbung von Modifizierern.  
@@ -74,17 +74,17 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Union von Deklarationen.** Der Compiler behandelt den Typ als die Union all seiner partiellen Deklarationen. Jeder Modifizierer aus jeder partiellen Definition wird auf den gesamten Typ angewendet, und jeder Member aus jeder partiellen Definition steht dem gesamten Typ zur Verfügung.  
+- **Union von Deklarationen** Der Compiler behandelt den Typ als die Union all seiner partiellen Deklarationen. Jeder Modifizierer aus jeder partiellen Definition wird auf den gesamten Typ angewendet, und jeder Member aus jeder partiellen Definition steht dem gesamten Typ zur Verfügung.  
   
-- **Die Typerweiterung ist für partielle Typen in Modulen nicht zulässig.** Wenn eine partielle Definition in einem Modul enthalten ist, ist automatisch keine Typerweiterung für diesen Typ möglich. In einem solchen Fall kann eine Reihe partieller Definitionen zu unerwarteten Ergebnissen und sogar zu Compilerfehlern führen. Weitere Informationen finden Sie unter [Typerweiterung](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+- **Typerweiterung nicht zulässig für partielle Typen in Modulen.** Wenn eine partielle Definition in einem Modul enthalten ist, ist automatisch keine Typerweiterung für diesen Typ möglich. In einem solchen Fall kann eine Reihe partieller Definitionen zu unerwarteten Ergebnissen und sogar zu Compilerfehlern führen. Weitere Informationen finden Sie unter [Typerweiterung](../../programming-guide/language-features/declared-elements/type-promotion.md).  
   
      Der Compiler führt partielle Definitionen nur zusammen, wenn ihre voll qualifizierten Pfade identisch sind.  
   
  Das `Partial`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class-Anweisung](../statements/class-statement.md)  
   
- [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure Statement](../statements/structure-statement.md)  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Definition der `sampleClass`-Klasse auf zwei Deklarationen aufgeteilt, die jeweils eine andere `Sub`-Prozedur definieren.  
@@ -93,11 +93,11 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  Die beiden partiellen Definitionen aus dem vorhergehenden Beispiel können in derselben Quelldatei oder in zwei unterschiedlichen Quelldateien enthalten sein.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Typerweiterung](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
-- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Partielle Methoden](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Class-Anweisung](../statements/class-statement.md)
+- [Structure Statement](../statements/structure-statement.md)
+- [Typerweiterung](../../programming-guide/language-features/declared-elements/type-promotion.md)
+- [Shadows](shadows.md)
+- [Generische Typen in Visual Basic (Visual Basic)](../../programming-guide/language-features/data-types/generic-types.md)
+- [Partielle Methoden](../../programming-guide/language-features/procedures/partial-methods.md)
