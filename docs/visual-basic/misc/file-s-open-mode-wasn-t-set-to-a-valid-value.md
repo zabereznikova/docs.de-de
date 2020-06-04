@@ -2,17 +2,17 @@
 title: Der Öffnungsmodus der Datei wurde nicht auf einen gültigen Wert festgelegt.
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: e6dfae9b9bbe374b6779ea32a4653b6fbb81d89d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3eb41670ef5a45959588f5b22cae4bfc1a0a4b6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624904"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358424"
 ---
 # <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>Der Öffnungsmodus der Datei wurde nicht auf einen gültigen Wert festgelegt.
 Der für den Öffnungsmodus der Datei angegebene Wert war ungültig. In der folgenden Tabelle sind gültige Werte für die <xref:Microsoft.VisualBasic.OpenMode> -Enumeration aufgeführt:  
   
-|Wert|Modus|  
+|Wert|Mode|  
 |-----------|----------|  
 |1|`OpenMode.Input`|  
 |2|`OpenMode.Output`|  
@@ -24,8 +24,8 @@ Der für den Öffnungsmodus der Datei angegebene Wert war ungültig. In der folg
   
 - Überprüfen Sie den für den Öffnungsmodus der Datei angegebenen Wert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [Lesen aus Dateien](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Schreiben in Dateien](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [My. Computer. File System](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [Lesen aus Dateien](../developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Schreiben in Dateien](../developing-apps/programming/drives-directories-files/writing-to-files.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 318fcc3f35276ba0b2061ba9677c5fde29429f6f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: eef6314f5fc1f5a7fffa7997559f697130f6f755
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348279"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401445"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Operatorrangfolge in Visual Basic
 Wenn mehrere Vorgänge in einem Ausdruck auftreten, wird jeder Teil in einer vordefinierten Reihenfolge ausgewertet und aufgelöst, die als *Operator Rangfolge*bezeichnet wird.
@@ -42,43 +42,43 @@ Wenn mehrere Vorgänge in einem Ausdruck auftreten, wird jeder Teil in einer vor
  Await-
 
 ### <a name="arithmetic-and-concatenation-operators"></a>Arithmetische Operatoren und Verkettungs Operatoren
- Exponentiierung (`^`)
+ Exponentiierung ( `^` )
 
- Unäre Identität und Negation (`+``–`)
+ Unäre Identität und Negation ( `+` , `–` )
 
- Multiplikation und Gleit Komma Division (`*``/`)
+ Multiplikation und Gleit Komma Division ( `*` , `/` )
 
- Ganzzahlige Division (`\`)
+ Ganzzahlige Division ( `\` )
 
- Modulare Arithmetik (`Mod`)
+ Modulare Arithmetik ( `Mod` )
 
- Addition und Subtraktion (`+``–`)
+ Addition und Subtraktion ( `+` , `–` )
 
- Verkettung von Zeichen folgen (`&`)
+ Zeichen folgen Verkettung ( `&` )
 
- Arithmetische Bitverschiebung (`<<``>>`)
+ Arithmetische Bitverschiebung ( `<<` , `>>` )
 
 ### <a name="comparison-operators"></a>Vergleichsoperatoren
- Alle Vergleichs Operatoren (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
+ Alle Vergleichs Operatoren ( `=` , `<>` , `<` , `<=` , `>` , `>=` , `Is` , `IsNot` , `Like` , `TypeOf` ... `Is` )
 
 ### <a name="logical-and-bitwise-operators"></a>Logische und bitweise Operatoren
- Negation (`Not`)
+ Negation ( `Not` )
 
- Verbindung (`And``AndAlso`)
+ Verbindung ( `And` , `AndAlso` )
 
- Inklusive Disjunktion (`Or``OrElse`)
+ Inklusive Disjunktion ( `Or` , `OrElse` )
 
- Exklusive Disjunktion (`Xor`)
+ Exklusive Disjunktion ( `Xor` )
 
-### <a name="comments"></a>Comments
- Der `=`-Operator ist nur der Gleichheits Vergleichs Operator, nicht der Zuweisungs Operator.
+### <a name="comments"></a>Kommentare
+ Der `=` Operator ist nur der Gleichheits Vergleichs Operator, nicht der Zuweisungs Operator.
 
- Der Operator für die Zeichen folgen Verkettung (`&`) ist kein arithmetischer Operator, aber in der Rangfolge ist er mit den arithmetischen Operatoren gruppiert.
+ Der Operator für die Zeichen folgen Verkettung ( `&` ) ist kein arithmetischer Operator, aber in der Rangfolge ist er mit den arithmetischen Operatoren gruppiert.
 
- Die `Is`-und `IsNot` Operatoren sind Objekt Verweis-Vergleichs Operatoren. Die Werte von zwei Objekten werden nicht verglichen. Sie überprüfen lediglich, ob zwei Objektvariablen auf dieselbe Objektinstanz verweisen.
+ Die `Is` `IsNot` Operatoren und sind objektverweisvergleichs-Operatoren. Die Werte von zwei Objekten werden nicht verglichen. Sie überprüfen lediglich, ob zwei Objektvariablen auf dieselbe Objektinstanz verweisen.
 
 ## <a name="associativity"></a>Assoziativität
- Wenn Operatoren mit gleicher Rangfolge in einem Ausdruck angezeigt werden, z. b. Multiplikation und Division, wertet der Compiler jeden Vorgang aus, der von links nach rechts erkannt wird. Das folgende Beispiel veranschaulicht dies.
+ Wenn Operatoren mit gleicher Rangfolge in einem Ausdruck angezeigt werden, z. b. Multiplikation und Division, wertet der Compiler jeden Vorgang aus, der von links nach rechts erkannt wird. Dies wird anhand des folgenden Beispiels veranschaulicht.
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- Der erste Ausdruck wertet die Division 96/8 aus (die sich in 12 ergibt) und dann die Division 12/4, die drei ergibt. Da der Compiler die Vorgänge für die `n1` von links nach rechts auswertet, ist die Auswertung identisch, wenn diese Reihenfolge explizit für `n2`angegeben wird. Sowohl `n1` als auch `n2` haben das Ergebnis drei. Im Gegensatz dazu hat `n3` das Ergebnis 48, da die Klammern den Compiler zwingen, zuerst 8/4 auszuwerten.
+ Der erste Ausdruck wertet die Division 96/8 aus (die sich in 12 ergibt) und dann die Division 12/4, die drei ergibt. Da der Compiler die Vorgänge für `n1` von links nach rechts auswertet, ist die Auswertung identisch, wenn diese Reihenfolge explizit für angegeben wird `n2` . Sowohl `n1` als auch `n2` haben drei Ergebnisse. Im Gegensatz dazu `n3` hat das Ergebnis 48, da die Klammern den Compiler zwingen, zuerst 8/4 auszuwerten.
 
  Aufgrund dieses Verhaltens werden Operatoren als *links assoziativ* in Visual Basic bezeichnet.
 
 ## <a name="overriding-precedence-and-associativity"></a>Überschreiben von Rangfolge und Assoziativität
- Sie können Klammern verwenden, um zu erzwingen, dass einige Teile eines Ausdrucks vor anderen ausgewertet werden. Dies kann die Reihenfolge der Rangfolge und die linke Assoziativität überschreiben. Visual Basic führt immer Vorgänge aus, die in Klammern eingeschlossen werden, bevor Sie außerhalb von stehen. Innerhalb von Klammern behält sie jedoch die normale Rangfolge und Assoziativität bei, es sei denn, Sie verwenden Klammern innerhalb der Klammern. Das folgende Beispiel veranschaulicht dies.
+ Sie können Klammern verwenden, um zu erzwingen, dass einige Teile eines Ausdrucks vor anderen ausgewertet werden. Dies kann die Reihenfolge der Rangfolge und die linke Assoziativität überschreiben. Visual Basic führt immer Vorgänge aus, die in Klammern eingeschlossen werden, bevor Sie außerhalb von stehen. Innerhalb von Klammern behält sie jedoch die normale Rangfolge und Assoziativität bei, es sei denn, Sie verwenden Klammern innerhalb der Klammern. Dies wird anhand des folgenden Beispiels veranschaulicht.
 
 ```vb
 Dim a, b, c, d, e, f, g As Double
@@ -111,13 +111,13 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [=-Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)
-- [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Like-Operator](../../../visual-basic/language-reference/operators/like-operator.md)
-- [TypeOf-Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [Await-Operator](../../../visual-basic/language-reference/operators/await-operator.md)
-- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [=-Operator](assignment-operator.md)
+- [Is-Operator](is-operator.md)
+- [IsNot-Operator](isnot-operator.md)
+- [Like-Operator](like-operator.md)
+- [Typeof-Operator](typeof-operator.md)
+- [Erwartungs Operator](await-operator.md)
+- [Nach Funktionalität sortierte Operatoren](operators-listed-by-functionality.md)
+- [Operatoren und Ausdrücke](../../programming-guide/language-features/operators-and-expressions/index.md)

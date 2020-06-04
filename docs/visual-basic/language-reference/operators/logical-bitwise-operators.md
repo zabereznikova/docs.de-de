@@ -5,33 +5,33 @@ helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 7f957a6e4f2dfea3f744365d2d065442d3b85183
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 281004809c7f5000f1c68ecb0db759aa30c78e39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350931"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401555"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>Logische/bitweise Operatoren (Visual Basic)
 Im folgenden finden Sie die logischen/bitweisen Operatoren, die in Visual Basic definiert sind.  
   
- [And-Operator](../../../visual-basic/language-reference/operators/and-operator.md)  
+ [And-Operator](and-operator.md)  
   
- [Not-Operator](../../../visual-basic/language-reference/operators/not-operator.md)  
+ [Not-Operator](not-operator.md)  
   
- [Or-Operator](../../../visual-basic/language-reference/operators/or-operator.md)  
+ [Or-Operator](or-operator.md)  
   
- [Xor-Operator](../../../visual-basic/language-reference/operators/xor-operator.md)  
+ [Xor-Operator](xor-operator.md)  
   
- [AndAlso-Operator](../../../visual-basic/language-reference/operators/andalso-operator.md)  
+ [AndAlso-Operator](andalso-operator.md)  
   
- [OrElse-Operator](../../../visual-basic/language-reference/operators/orelse-operator.md)  
+ [OrElse-Operator](orelse-operator.md)  
   
- [IsFalse-Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [IsFalse-Operator](isfalse-operator.md)  
   
- [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [IsTrue-Operator](istrue-operator.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Logische und bitweise Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Operatorrangfolge in Visual Basic](operator-precedence.md)
+- [Logische und bitweise Operatoren in Visual Basic](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: eb8790d0d8f82232a4b10e4e0e30165745c065c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50f3bd0c6e96254274b429794901e2e4ac719ad0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352736"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401380"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With-Anweisung (Visual Basic)
 
@@ -34,15 +34,15 @@ With objectExpression
 End With
 ```
 
-## <a name="parts"></a>-Komponenten
+## <a name="parts"></a>Bestandteile
 
 |Begriff|Definition|
 |---|---|
-|`objectExpression`|Erforderlich Ein Ausdruck, der zu einem Objekt ausgewertet wird. Der Ausdruck kann von beliebiger Komplexität sein und wird nur einmal ausgewertet. Der Ausdruck kann einen beliebigen Datentyp ergeben, u. a. auch einen elementaren Datentyp.|
+|`objectExpression`|Erforderlich. Ein Ausdruck, der zu einem Objekt ausgewertet wird. Der Ausdruck kann von beliebiger Komplexität sein und wird nur einmal ausgewertet. Der Ausdruck kann einen beliebigen Datentyp ergeben, u. a. auch einen elementaren Datentyp.|
 |`statements`|Optional. Eine oder mehrere Anweisungen zwischen `With` und `End With`, die auf Member eines Objekts verweisen können, das durch die Auswertung von `objectExpression` erstellt wird.|
-|`End With`|Erforderlich Beendet die Definition des `With`-Blocks.|
+|`End With`|Erforderlich. Beendet die Definition des `With`-Blocks.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Bei Verwendung von `With...End With` können Sie eine Reihe von Anweisungen für ein angegebenes Objekt ausführen, ohne den Namen des Objekts mehrmals angeben zu müssen. Innerhalb eines `With`-Anweisungsblocks können Sie bei der Angabe eines Member des Objekts mit einem Punkt beginnen, als ob das `With`-Anweisungsobjekt dem Member vorausgehen würde.
 
@@ -64,10 +64,10 @@ Sie können eine `With...End With`-Anweisung in eine andere einfügen. Geschacht
 
 Sie können von außerhalb eines Blocks keine Verzweigung in einen `With`-Anweisungsblock vornehmen.
 
-Sofern der Block keine Schleife enthält, werden die Anweisungen nur einmal ausgeführt. Sie können verschiedene Arten von Steuerungsstrukturen schachteln. Weitere Informationen finden Sie unter [Struktur von Struktur Steuer](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)Elementen.
+Sofern der Block keine Schleife enthält, werden die Anweisungen nur einmal ausgeführt. Sie können verschiedene Arten von Steuerungsstrukturen schachteln. Weitere Informationen finden Sie unter [Struktur von Struktur Steuer](../../programming-guide/language-features/control-flow/nested-control-structures.md)Elementen.
 
 > [!NOTE]
-> Das `With`-Schlüsselwort kann auch in Objektinitialisierern verwendet werden. Weitere Informationen und Beispiele finden Sie unter [Objektinitialisierer: benannte und anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) und [Anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> Das `With`-Schlüsselwort kann auch in Objektinitialisierern verwendet werden. Weitere Informationen und Beispiele finden Sie unter [Objektinitialisierer: benannte und anonyme Typen](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) und [Anonyme Typen](../../programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > Wenn Sie einen `With`-Block nur zum Initialisieren der Eigenschaften oder Felder eines soeben instanziierten Objekts verwenden, sollten Sie stattdessen einen Objektinitialisierer verwenden.
 
@@ -83,9 +83,9 @@ Im folgenden Beispiel werden `With…End With`-Anweisungen geschachtelt. In der 
 
 [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Generic.List%601>
-- [Geschachtelte Steuerungsstrukturen](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Objektinitialisierer: Benannte und anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Geschachtelte Steuerungsstrukturen](../../programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Objektinitialisierer: benannte und anonyme Typen](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Anonyme Typen](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

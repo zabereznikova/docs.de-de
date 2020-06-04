@@ -2,14 +2,14 @@
 title: Erstellen benutzerdefinierter Attribute
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 84b400c2fa1b2d4019eec32092f954d680e64978
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350144"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400693"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>Erstellen von benutzerdefinierten Attributen (Visual Basic)
+# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic) (Erstellen benutzerdefinierter Attribute (Visual Basic))
 
 Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren. Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat. Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:
 
@@ -63,12 +63,12 @@ End Class
 > [!NOTE]
 > Wenn die Attributklasse eine Eigenschaft enthält, muss die Eigenschaft Lese- und Schreibberechtigung aufweisen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Reflection>
-- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic-Programmierhandbuch](../../index.md)
 - [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)
-- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Attribute (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))
-- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [Reflektion (Visual Basic)](../reflection.md)
+- [Attribute (Visual Basic)](../../../language-reference/attributes.md)
+- [Accessing Attributes by Using Reflection (Visual Basic)](accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))
+- [AttributeUsage (Visual Basic)](attributeusage.md)

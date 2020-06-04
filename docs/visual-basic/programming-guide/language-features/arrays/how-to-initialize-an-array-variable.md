@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Initialisieren einer Array Variablen'
+title: 'Vorgehensweise: Initialisieren einer Arrayvariablen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 509859cbec41ca31b3abaa1c739e2975ec93bc0e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7feaf71fa1c59c24aa751f2b9e28328d47ba357c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351883"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413065"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Gewusst wie: Initialisieren einer Arrayvariablen in Visual Basic
-Sie initialisieren eine Arrayvariable, in dem Sie ein Arrayliteral in einer `New`-Klausel einfügen und die Anfangswerte des Arrays angeben. Sie können den Typ angeben oder ihn von den Werten im Arrayliteral ableiten lassen. Weitere Informationen dazu, wie der Typ abgeleitet wird, finden Sie unter "Auffüllen eines Arrays mit Anfangswerten" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+Sie initialisieren eine Arrayvariable, in dem Sie ein Arrayliteral in einer `New`-Klausel einfügen und die Anfangswerte des Arrays angeben. Sie können den Typ angeben oder ihn von den Werten im Arrayliteral ableiten lassen. Weitere Informationen dazu, wie der Typ abgeleitet wird, finden Sie unter "Auffüllen eines Arrays mit Anfangswerten" in [Arrays](index.md).  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>So initialisieren Sie eine Arrayvariable mit einem Arrayliteral  
   
@@ -45,7 +45,7 @@ Sie initialisieren eine Arrayvariable, in dem Sie ein Arrayliteral in einer `New
   
 ### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>So initialisieren Sie eine verzweigte Arrayvariable mit Arrayliteralen  
   
-- Schachteln Sie Objektwerte in geschweiften Klammern (`{}`). Obwohl Sie Array Literale schachteln können, die Arrays mit unterschiedlicher Länge angeben, stellen Sie im Fall eines Jagged Array sicher, dass die geschachtelten Array Literale in Klammern (`()`) eingeschlossen werden. Durch die Klammern wird die Auswertung der geschachtelten Arrayliterale erzwungen, und die erhaltenen Arrays werden als Anfangswerte des verzweigten Arrays verwendet. Im folgenden Codebeispiel werden zwei Beispiele für die Initialisierung verzweigter Arrays veranschaulicht.  
+- Schachteln Sie Objektwerte in geschweiften Klammern (`{}`). Obwohl Sie Array Literale schachteln können, die Arrays mit unterschiedlicher Länge angeben, stellen Sie im Fall eines Jagged Array sicher, dass die geschachtelten Array Literale in Klammern () eingeschlossen werden `()` . Durch die Klammern wird die Auswertung der geschachtelten Arrayliterale erzwungen, und die erhaltenen Arrays werden als Anfangswerte des verzweigten Arrays verwendet. Im folgenden Codebeispiel werden zwei Beispiele für die Initialisierung verzweigter Arrays veranschaulicht.  
   
      [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   
@@ -53,7 +53,7 @@ Sie initialisieren eine Arrayvariable, in dem Sie ein Arrayliteral in einer `New
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Problembehandlung bei Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Arrays](index.md)
+- [Problembehandlung bei Arrays](troubleshooting-arrays.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Zuweisen eines Arrays zu einem anderen Array'
+title: 'Vorgehensweise: Zuweisen eines Arrays zu einem anderen Array'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c38def1ba9f3720bc760d6f6e4264510c884c930
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351892"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413078"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Gewusst wie: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)
 
@@ -35,17 +35,17 @@ Wenn Sie ein Array einem anderen zuweisen, gelten die folgenden Regeln:
 
   Wenn die Ränge der beiden Arrays gleich sind, müssen die Dimensionen nicht gleich sein. Die Anzahl von Elementen in einer bestimmten Dimension kann sich während der Zuweisung ändern.
 
-- **Element Typen.** Beide Arrays müssen über *Verweistyp* Elemente verfügen, oder beide Arrays müssen *Werttyp* Elemente aufweisen. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Element Typen.** Beide Arrays müssen über *Verweistyp* Elemente verfügen, oder beide Arrays müssen *Werttyp* Elemente aufweisen. Weitere Informationen finden Sie unter [Werttypen und Verweis Typen](../data-types/value-types-and-reference-types.md).
 
-  - Wenn beide Arrays Werttyp Elemente aufweisen, müssen die Element Datentypen exakt identisch sein. Die einzige Ausnahme besteht darin, dass Sie ein Array von `Enum` Elementen einem Array des Basistyps dieses `Enum`zuweisen können.
+  - Wenn beide Arrays Werttyp Elemente aufweisen, müssen die Element Datentypen exakt identisch sein. Die einzige Ausnahme besteht darin, dass Sie ein Array von- `Enum` Elementen einem Array des Basistyps dieses zuweisen können `Enum` .
 
   - Wenn beide Arrays Verweistyp Elemente aufweisen, muss der Quell Elementtyp vom Ziel Elementtyp abgeleitet werden. Wenn dies der Fall ist, haben die beiden Arrays dieselbe Vererbungs Beziehung wie ihre Elemente. Dies wird als *Array Kovarianz*bezeichnet.
 
-Der Compiler meldet einen Fehler, wenn die oben genannten Regeln verletzt werden, z. b. wenn die Datentypen nicht kompatibel sind oder die Ränge ungleich sind. Sie können dem Code Fehlerbehandlung hinzufügen, um sicherzustellen, dass die Arrays kompatibel sind, bevor Sie eine Zuweisung versuchen. Sie können auch das [TryCast-Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) Schlüsselwort verwenden, wenn Sie keine Ausnahme auslösen möchten.
+Der Compiler meldet einen Fehler, wenn die oben genannten Regeln verletzt werden, z. b. wenn die Datentypen nicht kompatibel sind oder die Ränge ungleich sind. Sie können dem Code Fehlerbehandlung hinzufügen, um sicherzustellen, dass die Arrays kompatibel sind, bevor Sie eine Zuweisung versuchen. Sie können auch das [TryCast-Operator](../../../language-reference/operators/trycast-operator.md) Schlüsselwort verwenden, wenn Sie keine Ausnahme auslösen möchten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Problembehandlung bei Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
-- [Enum-Anweisung](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Arrays](index.md)
+- [Problembehandlung bei Arrays](troubleshooting-arrays.md)
+- [Enum-Anweisung](../../../language-reference/statements/enum-statement.md)
+- [Arraykonvertierungen](../data-types/array-conversions.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 497c5f207b2228412411cc3eb01976564f82bd6c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ef1e2f9045e5509e11557c9fdaf3edd2786b72c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346464"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404225"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop-Anweisung (Visual Basic)
 Hält die Ausführung an.  
@@ -28,19 +28,19 @@ Hält die Ausführung an.
 Stop  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Sie können `Stop`-Anweisungen überall in Prozeduren platzieren, um die Ausführung anzuhalten. Die Verwendung der `Stop`-Anweisung ähnelt dem Festlegen eines Breakpoints im Code.  
+## <a name="remarks"></a>Bemerkungen  
+ Sie können- `Stop` Anweisungen überall in Prozeduren platzieren, um die Ausführung anzuhalten. Die Verwendung der- `Stop` Anweisung ähnelt dem Festlegen eines Breakpoints im Code.  
   
- Die `Stop`-Anweisung hält die Ausführung an, aber im Gegensatz zu `End`schließt Sie keine Dateien oder löscht Variablen, sofern Sie nicht in einer kompilierten ausführbaren Datei (. exe) gefunden wird.  
+ Die- `Stop` Anweisung hält die Ausführung an, aber im Gegensatz dazu `End` schließt Sie keine Dateien oder löscht Variablen, es sei denn, Sie findet in einer kompilierten ausführbaren Datei (. exe).  
   
 > [!NOTE]
-> Wenn die `Stop`-Anweisung im Code auftritt, der außerhalb der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) ausgeführt wird, wird der Debugger aufgerufen. Dies gilt unabhängig davon, ob der Code im Debug-oder Einzelhandels Modus kompiliert wurde.  
+> Wenn die- `Stop` Anweisung im Code gefunden wird, der außerhalb der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) ausgeführt wird, wird der Debugger aufgerufen. Dies gilt unabhängig davon, ob der Code im Debug-oder Einzelhandels Modus kompiliert wurde.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird die `Stop`-Anweisung verwendet, um die Ausführung für jede Iterations Schleife durch die `For...Next`-Schleife anzuhalten.  
+ In diesem Beispiel wird die- `Stop` Anweisung verwendet, um die Ausführung für jede Iterations Schleife durch die- `For...Next` Schleife anzuhalten.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [End-Anweisung](../../../visual-basic/language-reference/statements/end-statement.md)
+- [End-Anweisung](end-statement.md)

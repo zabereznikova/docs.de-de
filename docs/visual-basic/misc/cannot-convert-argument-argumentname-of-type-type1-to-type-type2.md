@@ -1,23 +1,23 @@
 ---
-title: Argument kann nicht konvertiert werden kann '<argumentname>'vom Typ'<type1>' in Typ'<type2>'
+title: Das Argument " <argumentname> " vom Typ "" kann nicht <type1> in den Typ " <type2> " konvertiert werden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-ms.openlocfilehash: 33e732f529be2f4d200355e352bb8b7bc7e629f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8881919c6c0e632dec511066eefbd9800a3000b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008123"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400860"
 ---
-# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Argument kann nicht konvertiert werden kann '\<Argumentname >' vom Typ '\<Typ1 >' in den Typ '\<Typ2 >'
+# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Das Argument " \<argumentname> " vom Typ "" kann nicht \<type1> in den Typ " \<type2> " konvertiert werden.
 Eine Konvertierungsoperation versucht, ein Argument in einen inkompatiblen Typ zu konvertieren.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 1. Stellen Sie sicher, dass der Typ, in den Sie das Argument konvertieren möchten, gültig ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Typkonvertierung in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Typkonvertierung in Visual Basic](../programming-guide/language-features/data-types/type-conversions.md)
