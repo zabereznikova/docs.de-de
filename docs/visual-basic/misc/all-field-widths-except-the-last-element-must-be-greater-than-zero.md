@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: c1537133300ac4de33d0d7ebc3ea0ad6768e8ec9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0e81652a0f9e97ce40851170ed050bd1f047ba5f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609148"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412935"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Alle Feldbreiten (außer beim letzten Element) müssen größer als 0 (null) sein.
 Alle Feldbreiten (außer beim letzten Element) müssen größer als 0 (null) sein. Ein Feld mit einer Breite unter oder gleich 0 (null) im letzten Element bedeutet, dass die Länge des letzten Felds variabel ist.  
@@ -20,9 +20,9 @@ Alle Feldbreiten (außer beim letzten Element) müssen größer als 0 (null) sei
   
 - Legen Sie die Feldbreite auf die richtige Länge fest.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths>
-- [Vorgehensweise: Lesen aus einer Textdatei mit fester Breite](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [TextFieldParser-Objekt](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+- [Vorgehensweise: Lesen aus Textdateien mit fester Breite](../developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [TextFieldParser Object](../language-reference/objects/textfieldparser-object.md)

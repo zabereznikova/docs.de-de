@@ -1,17 +1,17 @@
 ---
-title: Argument '<argumentname>' muss größer als oder gleich 1 sein
+title: Das Argument "<argumentname>" muss größer als oder gleich 1 sein
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GEOne1
 ms.assetid: e7769937-5227-4530-89ca-3d6ffc505005
-ms.openlocfilehash: da5042efc692e2d3501d59c18df266d68aa46451
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26328a6454ec6741244615a0c45c20bc0a834629
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025144"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412831"
 ---
-# <a name="argument-argumentname-must-be-greater-than-or-equal-to-1"></a>Argument '\<Argumentname >' muss größer als oder gleich 1 sein
+# <a name="argument-argumentname-must-be-greater-than-or-equal-to-1"></a>Das Argument "\<argumentname>" muss größer als oder gleich 1 sein
 Der Wert eines Arguments ist kleiner als 1.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
@@ -20,6 +20,6 @@ Der Wert eines Arguments ist kleiner als 1.
   
 2. Wenn das Argument durch eine Berechnung bereitgestellt wird, überprüfen Sie die bei der Berechnung verarbeiteten Werte.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übergeben von Argumenten als Wert und als Verweis](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Übergeben von Argumenten als Wert und als Verweis](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

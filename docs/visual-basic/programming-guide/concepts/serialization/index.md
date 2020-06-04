@@ -2,12 +2,12 @@
 title: Serialisierung
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-ms.openlocfilehash: 9ce97e541cb204b92663464e36d9e8f221ccc3f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: db14147a23940fa2403613036750be1bca566e8e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351921"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413141"
 ---
 # <a name="serialization-visual-basic"></a>Serialisierung (Visual Basic)
 Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Bytestream, um das Objekt zu speichern oder in den Arbeitsspeicher, eine Datenbank oder eine Datei zu übertragen. Hauptzweck ist es, den Zustand eines Objekts zu speichern, um es bei Bedarf neu erstellen zu können. Der umgekehrte Vorgang wird als Deserialisierung bezeichnet.  
@@ -58,12 +58,12 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Bytestre
 ## <a name="designer-serialization"></a>Designerserialisierung  
  Die Designerserialisierung ist eine besondere Form der Serialisierung, die auch die Art der Objektpersistenz einbezieht, die in der Regel mit Entwicklungstools verknüpft ist. Bei der Designerserialisierung handelt es sich um den Prozess der Konvertierung eines Objektdiagramms in eine Quelldatei, die später zum Wiederherstellen des Objektdiagramms verwendet werden kann. Eine Quelldatei kann Code-, Markup- oder sogar SQL-Tabelleninformationen enthalten.  
   
-## <a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele  
- [Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele  
+ [Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (Visual Basic)](walkthrough-persisting-an-object-in-visual-studio.md)  
  Veranschaulicht, wie die Serialisierung verwendet werden kann, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.  
   
- [Gewusst wie: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ [Gewusst wie: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)](how-to-read-object-data-from-an-xml-file.md)  
  Zeigt, wie Objektdaten gelesen werden, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
   
- [Gewusst wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [Gewusst wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](how-to-write-object-data-to-an-xml-file.md)  
  Zeigt, wie ein Objekt aus einer Klasse mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wird.

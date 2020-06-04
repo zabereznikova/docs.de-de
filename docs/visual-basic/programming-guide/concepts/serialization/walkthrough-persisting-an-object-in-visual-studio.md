@@ -2,18 +2,18 @@
 title: Beibehalten eines Objekts in Visual Studio
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350398"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413128"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (Visual Basic)
 Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standardwerte festlegen können, gehen während der Laufzeit eingegebene Werte verloren, wenn das Objekt zerstört wird. Sie können die Serialisierung verwenden, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.  
   
 > [!NOTE]
-> Um einfache Daten wie einen Namen oder eine Zahl zu speichern, können Sie in Visual Basic das `My.Settings`-Objekt verwenden. Weitere Informationen finden Sie unter [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+> Um einfache Daten wie einen Namen oder eine Zahl zu speichern, können Sie in Visual Basic das `My.Settings`-Objekt verwenden. Weitere Informationen finden Sie unter [My.Settings-Objekt](../../../language-reference/objects/my-settings-object.md).  
   
  In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches `Loan`-Objekt und behalten dessen Daten in einer Datei bei. Anschließend rufen Sie die Daten aus der Datei ab, wenn Sie das Objekt neu erstellen.  
   
@@ -79,17 +79,17 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 1. Wählen Sie im Menü **Datei** die Optionen **Hinzufügen** und **Neues Projekt** aus, um Ihrer Projektmappe ein Windows Forms-Anwendungsprojekt hinzuzufügen.  
   
-2. Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** **Windows Forms-Anwendung** aus, und geben Sie als Namen für das Projekt `LoanApp` ein. Klicken Sie anschließend auf **OK**, um das Dialogfeld zu schließen.  
+2. Wählen Sie im Dialogfeld **Neues Projekt hinzufügen****Windows Forms-Anwendung** aus, und geben Sie als Namen für das Projekt `LoanApp` ein. Klicken Sie anschließend auf **OK**, um das Dialogfeld zu schließen.  
   
 3. Wählen Sie im **Projektmappen-Explorer** das LoanApp-Projekt aus.  
   
 4. Klicken Sie im Menü **Projekt** auf **Als Startprojekt festlegen**.  
   
-5. Wählen Sie im Menü **Projekt** den Eintrag **Verweis hinzufügen**aus.  
+5. Wählen Sie im Menü **Projekt** den Befehl **Verweis hinzufügen**aus.  
   
 6. Wählen Sie im Dialogfeld **Verweis hinzufügen** die Registerkarte **Projekte** und anschließend das LoanClass-Projekt aus.  
   
-7. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+7. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
 8. Fügen Sie dem Formular im Designer vier <xref:System.Windows.Forms.TextBox>-Steuerelemente hinzu.  
   
@@ -215,7 +215,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
  Nun können Sie die Anwendung erneut erstellen und ausführen. Zuerst werden die Standardwerte in den Textfeldern angezeigt. Versuchen Sie, die Werte zu ändern, und geben Sie einen Namen in das vierte Textfeld ein. Schließen Sie die Anwendung, und führen Sie sie dann erneut aus. Beachten Sie, dass die neuen Werte jetzt in den Textfeldern erscheinen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Serialisierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
+- [Serialisierung (Visual Basic)](index.md)
+- [Visual Basic-Programmierhandbuch](../../index.md)

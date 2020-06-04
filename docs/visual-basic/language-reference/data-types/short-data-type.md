@@ -16,39 +16,39 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: 8dfdfb56de32e4b3a96729b09ccf46a6fee9a424
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 176d27c86127dac1d9c9c0231790f7a5c2a2fefc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401340"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415556"
 ---
-# <a name="short-data-type-visual-basic"></a>Kurzer Datentyp (Visual Basic)
+# <a name="short-data-type-visual-basic"></a>Short-Datentyp (Visual Basic)
 
-Enthält signierte 16-Bit-Ganzzahlen (2 Byte), die im Wert von -32.768 bis 32.767 liegen.  
+Enthält ganze 16-Bit-Zahlen (2 Bytes) mit Vorzeichen, die den Wert von-32.768 bis 32.767 über liegen.  
   
 ## <a name="remarks"></a>Bemerkungen  
 
- Verwenden `Short` Sie den Datentyp, um ganzzahlige Werte zu `Integer`enthalten, die nicht die volle Datenbreite von erfordern. In einigen Fällen kann die Common `Short` Language Runtime Ihre Variablen eng zusammenpacken und den Speicherverbrauch sparen.  
+ Verwenden Sie den- `Short` Datentyp, um ganzzahlige Werte zu enthalten, die nicht die vollständige Daten Breite von erfordern `Integer` . In einigen Fällen können die Common Language Runtime die `Short` Variablen eng zusammenpacken und den Speicherverbrauch verbrauchen.  
   
  Der Standardwert von `Short` lautet 0.  
   
-## <a name="literal-assignments"></a>Literale Zuweisungen
+## <a name="literal-assignments"></a>Literalzuweisungen
 
-Sie können eine `Short` Variable deklarieren und initialisieren, indem Sie ihr ein Dezimalliteral, ein hexadezimales Literal, ein Oktalliteral oder (beginnend mit Visual Basic 2017) ein binäres Literal zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `Short` befindet – sprich, wenn es kleiner als <xref:System.Int16.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Int16.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+Sie können eine Variable deklarieren und initialisieren, `Short` indem Sie Ihr ein Dezimaltrennzeichen, ein hexadezimales Literalzeichen, ein Oktalliterale oder (beginnend mit Visual Basic 2017) ein binäres Literalzeichen zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `Short` befindet – sprich, wenn es kleiner als <xref:System.Int16.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Int16.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
 
-Im folgenden Beispiel werden ganze Zahlen gleich 1.034, die als Dezimal-, Hexadezimal- und Binärliterale dargestellt werden, implizit von [Ganzzahl](integer-data-type.md) in `Short` Werte konvertiert.
+Im folgenden Beispiel werden ganze Zahlen gleich 1.034, die als Dezimale, hexadezimale und binäre Literale dargestellt werden, implizit von [ganzzahligen](integer-data-type.md) Werten in- `Short` Werte konvertiert.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
 
 > [!NOTE]
-> Sie verwenden das `&h` `&H` Präfix oder bezeichnen ein hexadezimales Literal, `&b` das Präfix oder `&B` `&o` um `&O` ein binäres Literal und das Präfix zu bezeichnen oder ein oktales Literal zu bezeichnen. Dezimale Literale haben kein Präfix.
+> Sie verwenden das Präfix `&h` oder `&H` , um ein hexadezimales Literalzeichen, das Präfix `&b` oder `&B` ein binäres Literalformat anzugeben, oder das Präfix `&o` oder `&O` , um ein Oktalliteral anzugeben. Dezimale Literale haben kein Präfix.
 
-Ab Visual Basic 2017 können Sie auch das `_`Unterstrichzeichen , als Zifferntrennzeichen verwenden, um die Lesbarkeit zu verbessern, wie das folgende Beispiel zeigt.
+Ab Visual Basic 2017 können Sie auch den Unterstrich () `_` als Ziffern Trennzeichen verwenden, um die Lesbarkeit zu verbessern, wie im folgenden Beispiel gezeigt.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-Ab Visual Basic 15.5 können Sie auch das`_`Unterstrichzeichen ( ) als führendes Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
+Beginnend mit Visual Basic 15,5 können Sie auch den Unterstrich ( `_` ) als vorangeführtem Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
 
 ```vb
 Dim number As Short = &H_3264
@@ -56,7 +56,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numerische Literale können `S` auch das [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) enthalten, um den `Short` Datentyp zu bezeichnen, wie das folgende Beispiel zeigt.
+Numerische Literale können auch das `S` [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) enthalten, um den `Short` Datentyp anzugeben, wie im folgenden Beispiel gezeigt.
 
 ```vb
 Dim number = &H_3264S
@@ -64,18 +64,18 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>Programmiertipps
 
-- **Erweiterung.** Der `Short` Datentyp wird `Integer` `Long`auf `Decimal` `Single`, `Double`, , oder erweitert. Dies bedeutet, dass Sie `Short` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
+- **Tet.** Der- `Short` Datentyp wird zu `Integer` , `Long` , `Decimal` , `Single` oder erweitert `Double` . Dies bedeutet, dass Sie `Short` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
   
-- **Typ Zeichen.** Durch Anhängen des Literaltypzeichens `S` an ein Literal wird der `Short`-Datentyp erzwungen. `Short`hat kein Bezeichnertypzeichen.  
+- **Geben Sie Zeichen ein.** Durch Anhängen des Literaltypzeichens `S` an ein Literal wird der `Short`-Datentyp erzwungen. `Short`hat kein Bezeichnertyp Zeichen.  
   
 - **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int16?displayProperty=nameWithType>-Struktur.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Int16?displayProperty=nameWithType>
-- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
-- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Ganzzahl-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [Long-Datentyp](../../../visual-basic/language-reference/data-types/long-data-type.md)
-- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Datentypen](index.md)
+- [Type Conversion Functions](../functions/type-conversion-functions.md)
+- [Konvertierung: Zusammenfassung](../keywords/conversion-summary.md)
+- [Integer-Datentyp](integer-data-type.md)
+- [Long-Datentyp](long-data-type.md)
+- [Effiziente Verwendung von Datentypen](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

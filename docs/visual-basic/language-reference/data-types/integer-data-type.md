@@ -21,14 +21,14 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: c5b1041b8ef0ca9898a846fea03888537bb4abbf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa7b64162308d6af2763b29034c5a7276c973876
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401346"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415608"
 ---
-# <a name="integer-data-type-visual-basic"></a>Ganzzahl-Datentyp (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>Integer-Datentyp (Visual Basic)
 
 Speichert 32-Bit-(4-Byte-)Ganzzahlen mit Vorzeichen, deren Werte sich im Bereich von -2.147.483.648 bis einschließlich 2.147.483.647 bewegen.  
   
@@ -38,22 +38,22 @@ Speichert 32-Bit-(4-Byte-)Ganzzahlen mit Vorzeichen, deren Werte sich im Bereich
   
  Der Standardwert von `Integer` lautet 0.  
 
-## <a name="literal-assignments"></a>Literale Zuweisungen
+## <a name="literal-assignments"></a>Literalzuweisungen
 
-Sie können eine `Integer` Variable deklarieren und initialisieren, indem Sie ihr ein Dezimalliteral, ein hexadezimales Literal, ein Oktalliteral oder (beginnend mit Visual Basic 2017) ein binäres Literal zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `Integer` befindet – sprich, wenn es kleiner als <xref:System.Int32.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Int32.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+Sie können eine-Variable deklarieren und initialisieren, `Integer` indem Sie Ihr ein Dezimaltrennzeichen, ein hexadezimales Literalzeichen, ein oktalliteralformat oder (beginnend mit Visual Basic 2017) ein binäres Literalformat zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `Integer` befindet – sprich, wenn es kleiner als <xref:System.Int32.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Int32.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
 
 Im folgenden Beispiel werden Ganzzahlen wie 90.946, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `Integer`-Werten zugewiesen.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> Sie verwenden das `&h` `&H` Präfix oder bezeichnen ein hexadezimales Literal, `&b` das Präfix oder `&B` `&o` um `&O` ein binäres Literal und das Präfix zu bezeichnen oder ein oktales Literal zu bezeichnen. Dezimale Literale haben kein Präfix.
+> Sie verwenden das Präfix `&h` oder `&H` , um ein hexadezimales Literalzeichen, das Präfix `&b` oder `&B` ein binäres Literalformat anzugeben, oder das Präfix `&o` oder `&O` , um ein Oktalliteral anzugeben. Dezimale Literale haben kein Präfix.
 
-Ab Visual Basic 2017 können Sie auch das `_`Unterstrichzeichen , als Zifferntrennzeichen verwenden, um die Lesbarkeit zu verbessern, wie das folgende Beispiel zeigt.
+Ab Visual Basic 2017 können Sie auch den Unterstrich () `_` als Ziffern Trennzeichen verwenden, um die Lesbarkeit zu verbessern, wie im folgenden Beispiel gezeigt.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Ab Visual Basic 15.5 können Sie auch das`_`Unterstrichzeichen ( ) als führendes Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
+Beginnend mit Visual Basic 15,5 können Sie auch den Unterstrich ( `_` ) als vorangeführtem Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -61,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numerische Literale können `I` auch das [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) enthalten, um den `Integer` Datentyp zu bezeichnen, wie das folgende Beispiel zeigt.
+Numerische Literale können auch das `I` [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) enthalten, um den `Integer` Datentyp anzugeben, wie im folgenden Beispiel gezeigt.
 
 ```vb
 Dim number = &H_035826I
@@ -69,11 +69,11 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Programmiertipps
 
-- **Interop-Überlegungen.** Wenn Sie mit Komponenten verbunden sind, die nicht für .NET Framework `Integer` geschrieben wurden, z. B. Automatisierungs- oder COM-Objekte, denken Sie daran, dass diese in anderen Umgebungen eine andere Datenbreite (16 Bit) aufweisen. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic-Code als `Short` und nicht als `Integer`.  
+- **Interop-Überlegungen.** Wenn Sie mit Komponenten verbunden sind, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), denken Sie daran, dass `Integer` in anderen Umgebungen eine andere Daten Breite (16 Bits) aufweist. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic-Code als `Short` und nicht als `Integer`.  
   
-- **Erweiterung.** Der `Integer`-Datentyp wird zu `Long`, `Decimal`, `Single` oder `Double` erweitert. Dies bedeutet, dass Sie `Integer` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
+- **Tet.** Der `Integer`-Datentyp wird zu `Long`, `Decimal`, `Single` oder `Double` erweitert. Dies bedeutet, dass Sie `Integer` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
   
-- **Typ Zeichen.** Durch Anhängen des Literaltypzeichens `I` an ein Literal wird der `Integer`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `%` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Integer`-Datentyp erzwungen.  
+- **Geben Sie Zeichen ein.** Durch Anhängen des Literaltypzeichens `I` an ein Literal wird der `Integer`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `%` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Integer`-Datentyp erzwungen.  
   
 - **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int32?displayProperty=nameWithType>-Struktur.  
   
@@ -98,9 +98,9 @@ k = 5.5
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Int32?displayProperty=nameWithType>
-- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
-- [Long-Datentyp](../../../visual-basic/language-reference/data-types/long-data-type.md)
-- [Short-Datentyp](../../../visual-basic/language-reference/data-types/short-data-type.md)
-- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Datentypen](index.md)
+- [Long-Datentyp](long-data-type.md)
+- [Short-Datentyp](short-data-type.md)
+- [Type Conversion Functions](../functions/type-conversion-functions.md)
+- [Konvertierung: Zusammenfassung](../keywords/conversion-summary.md)
+- [Effiziente Verwendung von Datentypen](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

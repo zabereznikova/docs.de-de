@@ -4,30 +4,30 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 740243c744a7ba5391659894812a00d80555fd80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b9bd8435b56dd5e33d14eb35d76aacc7d60c8b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665666"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413052"
 ---
 # <a name="ordinal-is-not-valid"></a>Ungültiger Ordinalwert.
-Beim Aufruf einer Dynamic Link Library (DLL) wurde angegeben, eine Anzahl anstelle einer Prozedur verwendet mit dem `#num` Syntax. Dieser Fehler hat die folgenden möglichen Ursachen:  
+Durch den Aufrufe einer Dynamic Link Library (dll) wird angegeben, dass eine Zahl anstelle eines Prozedur namens verwendet werden soll. verwenden Sie dazu die `#num` Syntax. Dieser Fehler kann folgende Ursachen haben:  
   
-- Ein Versuch, konvertieren die `#num` Ausdruck, der eine Ordnungszahl ist fehlgeschlagen.  
+- Fehler beim Konvertieren des `#num` Ausdrucks in eine Ordinalzahl.  
   
-- Die `#num` angegebenen gibt keine Funktion in der DLL.  
+- Der `#num` angegebene gibt keine Funktion in der dll an.  
   
-- Eine Typbibliothek weist eine ungültige Deklaration, die interne Verwendung des eine ungültige Ordinalzahl zu.  
+- Eine Typbibliothek hat eine ungültige Deklaration, die zur internen Verwendung einer ungültigen Ordinalzahl führt.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie sicher, dass der Ausdruck eine gültige Zahl darstellt, oder rufen Sie die Prozedur nach Namen.  
+1. Stellen Sie sicher, dass der Ausdruck eine gültige Zahl darstellt, oder nennen Sie die Prozedur mit dem Namen.  
   
-2. Stellen Sie sicher, dass `#num` identifiziert eine gültige Funktion in der DLL.  
+2. Stellen Sie sicher, dass `#num` eine gültige Funktion in der DLL identifiziert.  
   
-3. Isolieren Sie den Aufruf der Prozedur das Problem verursachen, durch den Code auskommentieren. Schreiben einer `Declare` -Anweisung für die Prozedur, und klicken Sie auf Bericht des Problems an den Hersteller der Bibliothek weiter.  
+3. Isolieren Sie den Prozedur Aufrufe, der das Problem verursacht, indem Sie den Code auskommentieren. Schreiben `Declare` Sie eine-Anweisung für die Prozedur, und melden Sie das Problem dem Hersteller der Typbibliothek.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../statements/declare-statement.md)

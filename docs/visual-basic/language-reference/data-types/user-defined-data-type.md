@@ -23,20 +23,20 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 99eeb4b619f6bb23d00f8e449de953d41843f714
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fbd9536a54d7fb471d6cb2e130b14a84e40a4940
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343867"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415491"
 ---
 # <a name="user-defined-data-type"></a>Benutzerdefinierter Datentyp
 
-Enthält Daten in einem Format, das Sie definieren. Die `Structure`-Anweisung definiert das Format.
+Enthält Daten in einem Format, das Sie definieren. Die- `Structure` Anweisung definiert das Format.
 
 In früheren Versionen von Visual Basic wird der benutzerdefinierte Typ (User-Defined Type, UDT) unterstützt. Die aktuelle Version erweitert den UDT in eine- *Struktur*. Eine Struktur ist eine Verkettung von einem *oder mehreren Membern verschiedener Daten* Typen. Visual Basic behandelt eine Struktur als eine Einheit, obwohl Sie auch einzeln auf die Member zugreifen können.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Definieren und verwenden Sie einen Structure-Datentyp, wenn Sie verschiedene Datentypen in einer einzelnen Einheit kombinieren müssen, oder wenn keiner der elementaren Datentypen Ihren Anforderungen entspricht.
 
@@ -44,13 +44,13 @@ Der Standardwert eines Structure-Datentyps besteht aus der Kombination der Stand
 
 ## <a name="declaration-format"></a>Deklarations Format
 
-Eine Struktur Deklaration beginnt mit der [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md) und endet mit der `End Structure`-Anweisung. Die `Structure`-Anweisung gibt den Namen der Struktur an, die auch der Bezeichner des Datentyps ist, den die Struktur definiert. Andere Teile des Codes können diesen Bezeichner verwenden, um Variablen, Parameter und Funktions Rückgabewerte für den Datentyp dieser Struktur zu deklarieren.
+Eine Struktur Deklaration beginnt mit der [Structure-Anweisung](../statements/structure-statement.md) und endet mit der- `End Structure` Anweisung. Die- `Structure` Anweisung gibt den Namen der Struktur an, die auch der Bezeichner des Datentyps ist, den die Struktur definiert. Andere Teile des Codes können diesen Bezeichner verwenden, um Variablen, Parameter und Funktions Rückgabewerte für den Datentyp dieser Struktur zu deklarieren.
 
-Die Deklarationen zwischen den Anweisungen `Structure` und `End Structure` definieren die Member der Struktur.
+Die Deklarationen zwischen der `Structure` -Anweisung und der- `End Structure` Anweisung definieren die Member der-Struktur.
 
 ## <a name="member-access-levels"></a>Mitglieds Zugriffsebenen
 
-Sie müssen jeden Member mithilfe einer [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md) oder einer-Anweisung, die die Zugriffsebene angibt, wie z. b. [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)oder [private](../../../visual-basic/language-reference/modifiers/private.md), deklarieren. Wenn Sie eine `Dim`-Anweisung verwenden, ist die Zugriffsebene standardmäßig auf Public eingestellt.
+Sie müssen jeden Member mithilfe einer [Dim-Anweisung](../statements/dim-statement.md) oder einer-Anweisung, die die Zugriffsebene angibt, wie z. b. [Public](../modifiers/public.md), [Friend](../modifiers/friend.md)oder [private](../modifiers/private.md), deklarieren. Wenn Sie eine- `Dim` Anweisung verwenden, ist die Zugriffsebene standardmäßig auf Public eingestellt.
 
 ## <a name="programming-tips"></a>Programmiertipps
 
@@ -58,11 +58,11 @@ Sie müssen jeden Member mithilfe einer [Dim-Anweisung](../../../visual-basic/la
 
 - **Interop-Überlegungen.** Wenn Sie mit Komponenten verbunden sind, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), beachten Sie, dass benutzerdefinierte Typen in anderen Umgebungen nicht mit Visual Basic Strukturtypen kompatibel sind.
 
-- **Tet.** Es gibt keine automatische Konvertierung in oder aus einem Struktur Datentyp. Mithilfe der [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)können Sie Konvertierungs Operatoren für die Struktur definieren, und Sie können jeden Konvertierungs Operator als `Widening` oder `Narrowing`deklarieren.
+- **Tet.** Es gibt keine automatische Konvertierung in oder aus einem Struktur Datentyp. Mithilfe der [Operator-Anweisung](../statements/operator-statement.md)können Sie Konvertierungs Operatoren für die Struktur definieren, und Sie können jeden Konvertierungs Operator als oder deklarieren `Widening` `Narrowing` .
 
 - **Geben Sie Zeichen ein.** Struktur Datentypen haben kein Literaltyp Zeichen oder Bezeichnertyp Zeichen.
 
-- **Frameworktyp.** In der .NET Framework ist kein entsprechender Typ vorhanden. Alle Strukturen erben von der .NET Framework Klasse <xref:System.ValueType?displayProperty=nameWithType>, aber keine einzelne Struktur entspricht <xref:System.ValueType?displayProperty=nameWithType>.
+- **Framework-Typ.** In der .NET Framework ist kein entsprechender Typ vorhanden. Alle-Strukturen erben von der .NET Framework-Klasse <xref:System.ValueType?displayProperty=nameWithType> , aber keine einzelne Struktur entspricht <xref:System.ValueType?displayProperty=nameWithType> .
 
 ## <a name="example"></a>Beispiel
 
@@ -76,15 +76,15 @@ Das folgende Paradigma zeigt den Umriss der Deklaration einer-Struktur.
 End Structure
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
-- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
-- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
-- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Datentypen](index.md)
+- [Type Conversion Functions](../functions/type-conversion-functions.md)
+- [Konvertierung: Zusammenfassung](../keywords/conversion-summary.md)
+- [Structure Statement](../statements/structure-statement.md)
+- [Widening](../modifiers/widening.md)
+- [Narrowing](../modifiers/narrowing.md)
+- [Strukturen](../../programming-guide/language-features/data-types/structures.md)
+- [Effiziente Verwendung von Datentypen](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
