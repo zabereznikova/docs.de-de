@@ -1,15 +1,15 @@
 ---
-title: -Objekte
+title: Objekte
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 2108e36956ada98e48e6ab05cec56dbf2a12b3dd
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e927f69b7606866a0a9e8eadd59270f51ffc5e2b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838259"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414219"
 ---
 # <a name="objects-visual-basic"></a>Objekte (Visual Basic)
 Dieses Thema stellt Links zu anderen Themen bereit, die die Visual Basic-Laufzeitobjekte dokumentieren und Tabellen der Member und Prozeduren sowie der Eigenschaften und Ereignisse enthalten.  
@@ -35,16 +35,16 @@ Dieses Thema stellt Links zu anderen Themen bereit, die die Visual Basic-Laufzei
 |`My.Computer.Network` (<xref:Microsoft.VisualBasic.Devices.Network>)|Stellt eine Eigenschaft, ein Ereignis und Methoden zur Interaktion mit dem Netzwerk bereit, mit dem der Computer verbunden ist.|  
 |`My.Computer.Ports` (<xref:Microsoft.VisualBasic.Devices.Ports>)|Stellt eine Eigenschaft und eine Methode bereit, mit deren Hilfe Sie auf die seriellen Anschlüsse eines Computer zugreifen können.|  
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Stellt Eigenschaften und Methoden zur Bearbeitung der Registrierung bereit.|  
-|[My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|Stellt Eigenschaften für den Zugriff auf eine Instanz jedes Windows Form im aktuellen Projekt bereit.|  
+|[My.Forms-Objekt](my-forms-object.md)|Stellt Eigenschaften für den Zugriff auf eine Instanz jedes Windows Form im aktuellen Projekt bereit.|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis- und Ausnahmeinformationen in die Protokolllistener der Anwendung für Webanwendungen bereit.|  
-|[My.Request-Objekt](../../../visual-basic/language-reference/objects/my-request-object.md)|Ruft das <xref:System.Web.HttpRequest>-Objekt für die angefragte Seite ab. Das `My.Request`-Objekt enthält Informationen zur aktuellen HTTP-Anforderung.<br /><br /> Das `My.Request`-Objekt ist nur für ASP.NET-Anwendungen verfügbar.|  
-|[My.Resources-Objekt](../../../visual-basic/language-reference/objects/my-resources-object.md)|Stellt Eigenschaften und Klassen für den Zugriff auf Anwendungsressourcen bereit.|  
-|[My.Response-Objekt](../../../visual-basic/language-reference/objects/my-response-object.md)|Ruft das <xref:System.Web.HttpResponse> zugeordnete <xref:System.Web.UI.Page>-Objekt ab. Mit diesem Objekt können Sie HTTP-Antwortdaten an einen Client senden. Es enthält außerdem Informationen über diese Antwort.<br /><br /> Das `My.Response`-Objekt ist nur für ASP.NET-Anwendungen verfügbar.|  
-|[My.Settings-Objekt](../../../visual-basic/language-reference/objects/my-settings-object.md)|Stellt Eigenschaften und Methoden für den Zugriff auf Anwendungseinstellungen bereit.|  
+|[My.Request-Objekt](my-request-object.md)|Ruft das <xref:System.Web.HttpRequest>-Objekt für die angefragte Seite ab. Das `My.Request`-Objekt enthält Informationen zur aktuellen HTTP-Anforderung.<br /><br /> Das `My.Request`-Objekt ist nur für ASP.NET-Anwendungen verfügbar.|  
+|[My.Resources-Objekt](my-resources-object.md)|Stellt Eigenschaften und Klassen für den Zugriff auf Anwendungsressourcen bereit.|  
+|[My.Response-Objekt](my-response-object.md)|Ruft das <xref:System.Web.HttpResponse> zugeordnete <xref:System.Web.UI.Page>-Objekt ab. Mit diesem Objekt können Sie HTTP-Antwortdaten an einen Client senden. Es enthält außerdem Informationen über diese Antwort.<br /><br /> Das `My.Response`-Objekt ist nur für ASP.NET-Anwendungen verfügbar.|  
+|[My.Settings-Objekt](my-settings-object.md)|Stellt Eigenschaften und Methoden für den Zugriff auf Anwendungseinstellungen bereit.|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Stellt den Zugriff auf Informationen über den aktuellen Benutzer bereit.|  
-|[My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Stellt Eigenschaften zum Erstellen einer einzelnen Instanz sowie für den Zugriff auf diese bereit, die für jeden Webdienst gilt, auf die vom aktuellen Projekt verwiesen wird.|  
+|[My.WebServices-Objekt](my-webservices-object.md)|Stellt Eigenschaften zum Erstellen einer einzelnen Instanz sowie für den Zugriff auf diese bereit, die für jeden Webdienst gilt, auf die vom aktuellen Projekt verwiesen wird.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Stellt Methoden und Eigenschaften zur Analyse strukturierter Textdateien bereit.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Sprachreferenz zu Visual Basic](../index.md)

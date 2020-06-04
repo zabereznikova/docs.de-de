@@ -2,16 +2,16 @@
 title: Objektorientierte Programmierung
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7e222cde8ce80d4c52cc8b4b111c576eb4041b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401304"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413192"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Objektorientierte Programmierung (Visual Basic)
 
-Visual Basic bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Kapselung, Vererbung und Polymorphismus.
+Visual Basic bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Kapselung, Vererbung und Polymorphie.
 
  *Kapselung* bedeutet, dass eine Gruppe verwandter Eigenschaften, Methoden sowie anderer Member als eine Einheit bzw. ein Objekt behandelt wird.
 
@@ -28,15 +28,15 @@ Visual Basic bietet vollständige Unterstützung für objektorientierte Programm
     - [Konstruktoren](#constructors)
     - [Destruktoren](#destructors)
     - [Ereignisse](#events)
-    - [Verschachtelte Klassen](#nested-classes)
-  - [Zugriffsmodifikatoren und Zugriffsebenen](#access-modifiers-and-access-levels)
+    - [Geschachtelte Klassen](#nested-classes)
+  - [Zugriffsmodifizierer und Zugriffsebenen](#access-modifiers-and-access-levels)
     - [Instanziieren von Klassen](#instantiating-classes)
-    - [Gemeinsame Klassen und Mitglieder](#shared-classes-and-members)
+    - [Freigegebene Klassen und Member](#shared-classes-and-members)
     - [Anonyme Typen](#anonymous-types)
 - [Vererbung](#inheritance)
-  - [Übergeordnete Mitglieder](#overriding-members)
+  - [Überschreiben von Mitgliedern](#overriding-members)
 - [Schnittstellen](#interfaces)
-- [Generika](#generics)
+- [Generics](#generics)
 - [Delegaten](#delegates)
 
 ## <a name="classes-and-objects"></a>Klassen und Objekte
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic stellt auch eine Light-Version von Klassen bereit, die *als Strukturen* bezeichnet werden, die nützlich sind, wenn Sie große Arrays von Objekten erstellen müssen und dafür nicht zu viel Arbeitsspeicher verbrauchen möchten.
+Visual Basic bietet auch eine einfache Version von Klassen, die als *Strukturen* bezeichnet werden, die nützlich sind, wenn Sie ein großes Array von Objekten erstellen müssen und nicht zu viel Arbeitsspeicher für diese verwenden möchten.
 
 So definieren Sie eine Struktur
 
@@ -61,8 +61,8 @@ End Structure
 
 Weitere Informationen finden Sie unter
 
-- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Class-Anweisung](../../language-reference/statements/class-statement.md)
+- [Structure Statement](../../language-reference/statements/structure-statement.md)
 
 ### <a name="class-members"></a>Klassenmember
 
@@ -82,7 +82,7 @@ End Class
 
 Eigenschaften verfügen über Get- und Set-Prozeduren, die eine bessere Kontrolle über das Festlegen oder Abrufen von Werten ermöglichen.
 
-Mit Visual Basic können Sie entweder ein privates Feld zum Speichern des Eigenschaftswerts erstellen oder so genannte automatisch implementierte Eigenschaften verwenden, die dieses Feld automatisch hinter den Kulissen erstellen und die grundlegende Logik für die Eigenschaftenprozeduren bereitstellen.
+Mit Visual Basic können Sie ein privates Feld zum Speichern des Eigenschafts Werts erstellen oder so genannte automatisch implementierte Eigenschaften verwenden, die dieses Feld automatisch im Hintergrund erstellen und die grundlegende Logik für die Eigenschaften Prozeduren bereitstellen.
 
 So definieren Sie eine automatisch implementierte Eigenschaft
 
@@ -114,11 +114,11 @@ Die meisten Eigenschaften verfügen über Methoden oder Prozeduren zum Festlegen
 
 Weitere Informationen finden Sie unter
 
-- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Get-Anweisung](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set-Anweisung](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Readonly](../../../visual-basic/language-reference/modifiers/readonly.md)
-- [Writeonly](../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [Property Statement](../../language-reference/statements/property-statement.md)
+- [Get-Anweisung](../../language-reference/statements/get-statement.md)
+- [Set-Anweisung](../../language-reference/statements/set-statement.md)
+- [ReadOnly](../../language-reference/modifiers/readonly.md)
+- [WriteOnly](../../language-reference/modifiers/writeonly.md)
 
 #### <a name="methods"></a>Methoden
 
@@ -150,14 +150,14 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-In den meisten Fällen deklarieren Sie eine Methode innerhalb einer Klassendefinition. Visual Basic unterstützt jedoch auch *Erweiterungsmethoden,* mit denen Sie Methoden zu einer vorhandenen Klasse außerhalb der eigentlichen Definition der Klasse hinzufügen können.
+In den meisten Fällen deklarieren Sie eine Methode innerhalb einer Klassendefinition. Visual Basic unterstützt jedoch auch *Erweiterungs Methoden* , mit denen Sie einer vorhandenen Klasse außerhalb der eigentlichen Definition der Klasse Methoden hinzufügen können.
 
 Weitere Informationen finden Sie unter
 
-- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Erweiterungsmethoden](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Function-Anweisung](../../language-reference/statements/function-statement.md)
+- [Sub-Anweisung](../../language-reference/statements/sub-statement.md)
+- [Overloads](../../language-reference/modifiers/overloads.md)
+- [Erweiterungsmethoden](../language-features/procedures/extension-methods.md)
 
 #### <a name="constructors"></a>Konstruktoren
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-Weitere Informationen finden Sie unter: [Objektlebensdauer: Wie Objekte erstellt und zerstört werden.](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+Weitere Informationen finden Sie unter: [Objekt Lebensdauer: Erstellen und zerstören von Objekten](../language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Destruktoren
 
@@ -181,19 +181,19 @@ Destruktoren werden zur Zerstörung von Klasseninstanzen verwendet. In .NET Fram
 
 Weitere Informationen zu Destruktoren und der Garbage Collection in .NET Framework finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).
 
-#### <a name="events"></a>Events
+#### <a name="events"></a>Ereignisse
 
-Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder erhöht), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder behandeln), werden *Abonnenten*genannt. Weitere Informationen zu Ereignissen sowie zu ihrer Auslösung und Behandlung finden Sie unter [Ereignisse](../../../standard/events/index.md).
+Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder auslöst), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder verarbeiten), werden als *Abonnenten* bezeichnet. Weitere Informationen zu Ereignissen sowie zu ihrer Auslösung und Behandlung finden Sie unter [Ereignisse](../../../standard/events/index.md).
 
-- Um Ereignisse zu deklarieren, verwenden Sie die [Ereignisanweisung](../../../visual-basic/language-reference/statements/event-statement.md).
+- Um Ereignisse zu deklarieren, verwenden Sie die- [Ereignis Anweisung](../../language-reference/statements/event-statement.md).
 
-- Um Ereignisse anzusprechen, verwenden Sie die [RaiseEvent-Anweisung](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
+- Um Ereignisse aufzurichten, verwenden Sie die [raigevent-Anweisung](../../language-reference/statements/raiseevent-statement.md).
 
-- Um Ereignishandler auf deklarativer Weise anzugeben, verwenden Sie die [WithEvents-Anweisung](../../../visual-basic/language-reference/modifiers/withevents.md) und die [Handles-Klausel.](../../../visual-basic/language-reference/statements/handles-clause.md)
+- Um Ereignishandler mithilfe einer deklarativen Methode anzugeben, verwenden Sie die [widervents](../../language-reference/modifiers/withevents.md) -Anweisung und die [Handles](../../language-reference/statements/handles-clause.md) -Klausel.
 
-- Um den einem Ereignis zugeordneten Ereignishandler dynamisch hinzufügen, entfernen und ändern zu können, verwenden Sie die [AddHandler-Anweisung](../../../visual-basic/language-reference/statements/addhandler-statement.md) und die [RemoveHandler-Anweisung](../../../visual-basic/language-reference/statements/removehandler-statement.md) zusammen mit dem [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- Um den einem Ereignis zugeordneten Ereignishandler dynamisch hinzufügen, entfernen und ändern zu können, verwenden Sie die [AddHandler-Anweisung](../../language-reference/statements/addhandler-statement.md) und die [RemoveHandler-Anweisung](../../language-reference/statements/removehandler-statement.md) zusammen mit dem [AddressOf-Operator](../../language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>Verschachtelte Klassen
+#### <a name="nested-classes"></a>Geschachtelte Klassen
 
 Eine Klasse, die in einer anderen Klasse definiert wird, wird als *geschachtelt* bezeichnet. Standardmäßig ist die geschachtelte Klasse privat.
 
@@ -211,7 +211,7 @@ Um eine Instanz der geschachtelten Klasse zu erstellen, verwenden Sie den Namen 
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Zugriffsmodifikatoren und Zugriffsebenen
+### <a name="access-modifiers-and-access-levels"></a>Zugriffsmodifizierer und Zugriffsebenen
 
 Alle Klassen und Klassenmember können mit *Zugriffsmodifizierern* angeben, welche Zugriffsebene sie für andere Klassen bereitstellen.
 
@@ -219,13 +219,13 @@ Die folgenden Zugriffsmodifizierer sind verfügbar:
 
 |Visual Basic-Modifizierer|Definition|
 |---------------------------|----------------|
-|[Öffentlich](../../../visual-basic/language-reference/modifiers/public.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder einer anderen Assembly, die darauf verweist, zugegriffen werden.|
-|[Privat](../../../visual-basic/language-reference/modifiers/private.md)|Auf den Typ oder Member kann nur von Code in der gleichen Klasse zugegriffen werden.|
-|[Geschützt](../../../visual-basic/language-reference/modifiers/protected.md)|Auf den Typ oder Member kann nur von Code in der gleichen Klasse oder in einer abgeleiteten Klasse zugegriffen werden.|
-|[Freund](../../../visual-basic/language-reference/modifiers/friend.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly.|
+|[Öffentlich](../../language-reference/modifiers/public.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder einer anderen Assembly, die darauf verweist, zugegriffen werden.|
+|[Privat](../../language-reference/modifiers/private.md)|Auf den Typ oder Member kann nur von Code in der gleichen Klasse zugegriffen werden.|
+|[Gebieten](../../language-reference/modifiers/protected.md)|Auf den Typ oder Member kann nur von Code in der gleichen Klasse oder in einer abgeleiteten Klasse zugegriffen werden.|
+|[Kollegen](../../language-reference/modifiers/friend.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly.|
 |`Protected Friend`|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder von jeder abgeleiteten Klasse in einer anderen Assembly zugegriffen werden.|
 
-Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../language-features/declared-elements/access-levels.md).
 
 ### <a name="instantiating-classes"></a>Instanziieren von Klassen
 
@@ -253,14 +253,14 @@ Dim sampleObject = New SampleClass With
 
 Weitere Informationen finden Sie unter
 
-- [Neuer Benutzer](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Objektinitialisierer: Benannte und anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [New-Operator](../../language-reference/operators/new-operator.md)
+- [Objektinitialisierer: benannte und anonyme Typen](../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>Gemeinsame Klassen und Mitglieder
+### <a name="shared-classes-and-members"></a>Freigegebene Klassen und Member
 
- Ein freigegebener Member der Klasse ist eine Eigenschaft, Prozedur oder ein Feld, die von allen Instanzen einer Klasse gemeinsam genutzt wird.
+ Ein gemeinsam genutzter Member der-Klasse ist eine Eigenschaft, Prozedur oder ein Feld, die von allen Instanzen einer Klasse gemeinsam verwendet wird.
 
- So definieren Sie ein freigegebenes Element:
+ So definieren Sie einen freigegebenen Member:
 
 ```vb
 Class SampleClass
@@ -268,18 +268,18 @@ Class SampleClass
 End Class
 ```
 
- Um auf den freigegebenen Member zuzugreifen, verwenden Sie den Namen der Klasse, ohne ein Objekt dieser Klasse zu erstellen:
+ Wenn Sie auf den freigegebenen Member zugreifen möchten, verwenden Sie den Namen der Klasse, ohne ein Objekt dieser Klasse zu erstellen:
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- Freigegebene Module in Visual Basic haben nur freigegebene Member und können nicht instanziiert werden. Freigegebene Mitglieder können auch nicht freigegebene Eigenschaften, Felder oder Methoden nicht zugreifen.
+ Freigegebene Module in Visual Basic nur gemeinsame Member aufweisen und können nicht instanziiert werden. Freigegebene Member können auch nicht auf nicht freigegebene Eigenschaften, Felder oder Methoden zugreifen.
 
  Weitere Informationen finden Sie unter
 
-- [Freigegeben](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Freigegeben](../../language-reference/modifiers/shared.md)
+- [Module-Anweisung](../../language-reference/statements/module-statement.md)
 
 ### <a name="anonymous-types"></a>Anonyme Typen
 
@@ -293,11 +293,11 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Weitere Informationen finden Sie unter: [Anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Weitere Informationen finden Sie unter: [Anonyme Typen](../language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Vererbung
 
-Vererbung ermöglicht die Erstellung neuer Klassen, die in anderen Klassen definiertes Verhalten wieder verwenden, erweitern und ändern. Die Klasse, deren Member vererbt werden, wird *Basisklasse* genannt, und die Klasse, die diese Member erbt, wird *abgeleitete Klasse* genannt. Alle Klassen in Visual Basic erben jedoch <xref:System.Object> implizit von der Klasse, die die .NET-Klassenhierarchie unterstützt und Dienste auf niedriger Ebene für alle Klassen bereitstellt.
+Vererbung ermöglicht die Erstellung neuer Klassen, die in anderen Klassen definiertes Verhalten wieder verwenden, erweitern und ändern. Die Klasse, deren Member vererbt werden, wird *Basisklasse* genannt, und die Klasse, die diese Member erbt, wird *abgeleitete Klasse* genannt. Allerdings erben alle Klassen in Visual Basic implizit von der <xref:System.Object> -Klasse, die die .NET-Klassenhierarchie unterstützt und Dienste auf niedriger Ebene für alle Klassen bereitstellt.
 
 > [!NOTE]
 > Visual Basic unterstützt keine mehrfache Vererbung. Sie können also nur eine Basisklasse für eine abgeleitete Klasse angeben.
@@ -328,11 +328,11 @@ End Class
 
 Weitere Informationen finden Sie unter
 
-- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [Inherits Statement](../../language-reference/statements/inherits-statement.md)
+- [NotInheritable](../../language-reference/modifiers/notinheritable.md)
+- [MustInherit](../../language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>Übergeordnete Mitglieder
+### <a name="overriding-members"></a>Überschreiben von Mitgliedern
 
 Standardmäßig erbt eine abgeleitete Klasse alle Member von ihrer Basisklasse. Wenn Sie das Verhalten des geerbten Members ändern möchten, müssen Sie diesen überschreiben. Das heißt, Sie können eine neue Implementierung der Methode, der Eigenschaft oder des Ereignisses in der abgeleiteten Klasse definieren.
 
@@ -340,11 +340,11 @@ Mit folgenden Modifizierern steuern Sie das Überschreiben von Eigenschaften und
 
 |Visual Basic-Modifizierer|Definition|
 |---------------------------|----------------|
-|[Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)|Ermöglicht das Überschreiben eines Klassenmembers in einer abgeleiteten Klasse.|
-|[Außerkraftsetzungen](../../../visual-basic/language-reference/modifiers/overrides.md)|Überschreibt einen virtuellen (überschreibbaren) Member, der in der Basisklasse definiert wurde.|
-|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Verhindert das Überschreiben eines Members in einer erbenden Klasse.|
-|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Erfordert das Überschreiben eines Klassenmembers in der abgeleiteten Klasse.|
-|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Blendet einen von einer Basisklasse geerbten Member aus.|
+|[Overrides](../../language-reference/modifiers/overridable.md)|Ermöglicht das Überschreiben eines Klassenmembers in einer abgeleiteten Klasse.|
+|[Überschreibt](../../language-reference/modifiers/overrides.md)|Überschreibt einen virtuellen (überschreibbaren) Member, der in der Basisklasse definiert wurde.|
+|[NotOverridable](../../language-reference/modifiers/notoverridable.md)|Verhindert das Überschreiben eines Members in einer erbenden Klasse.|
+|[MustOverride](../../language-reference/modifiers/mustoverride.md)|Erfordert das Überschreiben eines Klassenmembers in der abgeleiteten Klasse.|
+|[Shadows](../../language-reference/modifiers/shadows.md)|Blendet einen von einer Basisklasse geerbten Member aus.|
 
 ## <a name="interfaces"></a>Schnittstellen
 
@@ -371,13 +371,13 @@ End Class
 
 Weitere Informationen finden Sie unter
 
-- [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
-- [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [Schnittstellen](../language-features/interfaces/index.md)
+- [Interface-Anweisung](../../language-reference/statements/interface-statement.md)
+- [Implements-Anweisung](../../language-reference/statements/implements-statement.md)
 
 ## <a name="generics"></a>Generics
 
-Klassen, Strukturen, Schnittstellen und Methoden in .NET können *Typparameter* enthalten, die Objekttypen definieren, die sie speichern oder verwenden können. Das einfachste Beispiel für Generics ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
+Klassen, Strukturen, Schnittstellen und Methoden in .net können *Typparameter* enthalten, die Typen von Objekten definieren, die Sie speichern oder verwenden können. Das einfachste Beispiel für Generics ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
 
 So definieren Sie eine generische Klasse
 
@@ -394,10 +394,10 @@ Dim sampleObject As New SampleGeneric(Of String)
 sampleObject.Field = "Sample string"
 ```
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
-- [Generika](../../../standard/generics/index.md)
-- [Generische Typen in Visual Basic (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generics](../../../standard/generics/index.md)
+- [Generische Typen in Visual Basic (Visual Basic)](../language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>Delegaten
 
@@ -430,10 +430,10 @@ End Class
 
 Weitere Informationen finden Sie unter
 
-- [Delegaten](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Delegaten](../language-features/delegates/index.md)
+- [Delegate-Anweisung](../../language-reference/statements/delegate-statement.md)
+- [AddressOf-Operator](../../language-reference/operators/addressof-operator.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md) (Visual Basic-Programmierhandbuch)
+- [Visual Basic-Programmierhandbuch](../index.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 28ae7d6fd51170aa822072fc2f5357443f51a353
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351426"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392092"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (generischer Modifizierer) (Visual Basic)
 
-Bei generischen Typparametern gibt das `Out`-Schlüsselwort an, dass der Typ kovariant ist.
+Bei generischen Typparametern `Out` gibt das Schlüsselwort an, dass der Typ kovariant ist.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Kovarianz ermöglicht Ihnen die Verwendung eines stärker abgeleiteten Typs als durch den generischen Parameter angegeben. Dadurch wird eine implizite Konvertierung von Klassen berücksichtigt, die variante Schnittstellen und Konvertierung von Delegattypen implementiert.
 
@@ -26,7 +26,7 @@ Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../progr
 
 ## <a name="rules"></a>Regeln
 
-Sie können das Schlüsselwort `Out` in generischen Schnittstellen und Delegaten verwenden.
+Sie können das `Out`-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.
 
 In einer generischen Schnittstelle kann ein Typparameter als kovariant deklariert werden, wenn er die folgenden Bedingungen erfüllt:
 
@@ -61,7 +61,7 @@ Das folgende Beispiel zeigt, wie Sie einen kovarianten generischen Delegaten dek
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Varianz in generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Abweichungen bei generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Geben Sie in](in-generic-modifier.md)

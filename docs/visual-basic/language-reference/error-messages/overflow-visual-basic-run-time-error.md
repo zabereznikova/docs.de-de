@@ -4,27 +4,27 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5606ae8188c12142800adef46819791b732ff73c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946548"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387269"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Überlauf (Visual Basic-Laufzeitfehler)
-Ein Überlauf tritt beim Versuch, einer Zuordnung, die die Grenzen des Ziels für die Zuweisung des überschreitet.  
+Ein Überlauf Ergebnis, wenn Sie versuchen, eine Zuweisung durchführen, die die Grenzwerte für das Ziel der Zuweisung überschreitet.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie sicher, dass die Ergebnisse von Zuweisungen, Berechnungen und den Datentyp Konvertierungen sind nicht zu groß, um innerhalb des Bereichs von Variablen, die für diese Art von Wert zulässigen dargestellt werden, und weisen Sie den Wert einer Variablen eines Typs, die eine größere Anzahl von Werten enthalten kann , falls erforderlich.  
+1. Stellen Sie sicher, dass die Ergebnisse von Zuweisungen, Berechnungen und Datentyp Konvertierungen nicht zu groß sind, um innerhalb des Bereichs von Variablen, die für diesen Werttyp zulässig sind, dargestellt zu werden, und weisen Sie den Wert einer Variablen eines Typs zu, die ggf. einen größeren Wertebereich enthalten kann.  
   
-2. Stellen Sie sicher, dass Zuweisungen zu Eigenschaften des Bereichs von der Eigenschaft entsprechen, die sie vorgenommen werden.  
+2. Stellen Sie sicher, dass die Zuweisungen von Eigenschaften dem Bereich der Eigenschaft entsprechen, an der Sie vorgenommen werden.  
   
-3. Stellen Sie sicher, dass Zahlen, die in Berechnungen, die in Zahlen umgewandelt werden, verwendet keine Ergebnisse, die größer als ganze Zahlen.  
+3. Stellen Sie sicher, dass die Zahlen, die in Berechnungen verwendet werden, die in ganze Zahlen umgewandelt werden, keine Ergebnisse aufweisen, die größer als ganze Zahlen sind.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
-- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
-- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Datentypen](../data-types/index.md)
+- [Fehlertypen](../../programming-guide/language-features/error-types.md)

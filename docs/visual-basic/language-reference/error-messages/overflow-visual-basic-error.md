@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: f2d7a025fd18c5655caea4ae45477798425d9ece
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c11c78292301cf837ec8d4003b6434cd968abe16
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661787"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387347"
 ---
 # <a name="overflow-visual-basic-error"></a>Überlauf (Visual Basic-Fehler)
-Ein Literal stellt einen Wert außerhalb der Grenzen des Datentyps, denen sie zugewiesen werden.  
+Ein Literalwert stellt einen Wert dar, der außerhalb der Grenzen des Datentyps liegt, dem er zugewiesen wird.  
   
  **Fehler-ID:** BC30036  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Wenden Sie sich an den Wertebereich für das Ziel aus, und Schreiben Sie das Literal aus, um diesen Bereich zu entsprechen.  
+- Überprüfen Sie den Wertebereich für den Ziel Datentyp, und schreiben Sie das Literale neu, sodass es diesem Bereich entspricht.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
+- [Datentypen](../data-types/index.md)
