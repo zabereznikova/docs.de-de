@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 3bc4393d2fa14f804c6383780e238b1ac2610a94
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 893ed299b46bd6255ca0e87d008ac53265698614
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352200"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411498"
 ---
-# <a name="summary-visual-basic"></a>\<Zusammenfassungs > (Visual Basic)
+# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
 Gibt die Zusammenfassung des Members an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,18 +25,18 @@ Gibt die Zusammenfassung des Members an.
  `description`  
  Eine Übersicht des Objekts.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie das `<summary>`-Tag, um einen Typ oder einen Typmember zu beschreiben. Verwenden Sie [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie das- `<summary>` Tag, um einen Typ oder einen Typmember zu beschreiben. Verwenden Sie [\<remarks>](remarks.md) , um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.  
   
- Der Text für das `<summary>`-Tag ist die einzige Quelle für Informationen über den Typ in IntelliSense und wird auch in der Objektkatalog angezeigt. Weitere Informationen zum Objektkatalog finden Sie unter [Anzeigen der Code Struktur](/visualstudio/ide/viewing-the-structure-of-code).  
+ Der Text für das- `<summary>` Tag ist die einzige Quelle von Informationen über den Typ in IntelliSense und wird auch in der Objektkatalog angezeigt. Weitere Informationen zum Objektkatalog finden Sie unter [Anzeigen der Code Struktur](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
+ Kompilieren Sie mit [-doc](../../reference/command-line-compiler/doc.md) , um Dokumentations Kommentare in einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet das `<summary>`-Tag, um die `ResetCounter`-Methode und die `Counter`-Eigenschaft zu beschreiben.  
+ In diesem Beispiel werden die-Methode und die-Eigenschaft mithilfe des- `<summary>` Tags beschrieben `ResetCounter` `Counter` .  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML-Kommentartags](index.md)

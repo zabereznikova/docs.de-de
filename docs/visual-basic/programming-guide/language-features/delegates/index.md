@@ -5,20 +5,20 @@ helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 15b4cb0a038429c5fe67d3e013818a7a2170abcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1f161248fa04f8fab0e5335413e69ca565732f71
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345238"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410682"
 ---
 # <a name="delegates-visual-basic"></a>Delegaten (Visual Basic)
 
-Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln. Im Gegensatz zu Funktions Zeigern sind Visual Basic Delegaten jedoch ein Verweistyp, der auf der Klasse <xref:System.Delegate?displayProperty=nameWithType>basiert. Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.
+Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln. Im Gegensatz zu Funktions Zeigern sind Visual Basic Delegaten jedoch ein Verweistyp, der auf der-Klasse basiert <xref:System.Delegate?displayProperty=nameWithType> . Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.
 
 ## <a name="delegates-and-events"></a>Delegaten und Ereignisse
 
-Delegaten sind in Situationen hilfreich, in denen Sie einen Mittler zwischen einer aufrufenden Prozedur und der aufgerufenen Prozedur benötigen. Ein Beispiel: Sie möchten, dass ein Objekt, das Ereignisse auslöst, unter verschiedenen Bedingungen verschiedene Ereignishandler aufrufen kann. Leider ist dem Objekt, das die Ereignisse auslöst, nicht im Voraus bekannt, welcher Ereignishandler ein bestimmtes Ereignis verarbeitet. Visual Basic ermöglicht das dynamische Zuordnen von Ereignis Handlern zu Ereignissen, indem ein Delegat erstellt wird, wenn Sie die `AddHandler`-Anweisung verwenden. Zur Laufzeit leitet der Delegat dann Aufrufe an den entsprechenden Ereignishandler weiter.
+Delegaten sind in Situationen hilfreich, in denen Sie einen Mittler zwischen einer aufrufenden Prozedur und der aufgerufenen Prozedur benötigen. Ein Beispiel: Sie möchten, dass ein Objekt, das Ereignisse auslöst, unter verschiedenen Bedingungen verschiedene Ereignishandler aufrufen kann. Leider ist dem Objekt, das die Ereignisse auslöst, nicht im Voraus bekannt, welcher Ereignishandler ein bestimmtes Ereignis verarbeitet. Visual Basic ermöglicht das dynamische Zuordnen von Ereignis Handlern zu Ereignissen durch Erstellen eines Delegaten für Sie, wenn Sie die- `AddHandler` Anweisung verwenden. Zur Laufzeit leitet der Delegat dann Aufrufe an den entsprechenden Ereignishandler weiter.
 
 Obwohl Sie eigene Delegaten erstellen können, erstellt Visual Basic in den meisten Fällen den Delegaten und kümmert sich um die Details. Eine `Event`-Anweisung definiert z.B. implizit eine Delegatklasse mit dem Namen `<EventName>EventHandler` als geschachtelte Klasse der Klasse, die die `Event`-Anweisung enthält, und mit der gleichen Signatur wie das Ereignis. Die `AddressOf`-Anweisung erstellt implizit eine Instanz eines Delegaten, die auf eine bestimmte Prozedur verweist. Die folgenden beiden Codezeilen sind gleichwertig. In der ersten Zeile sehen Sie die explizite Erstellung einer Instanz von `EventHandler` mit einem Verweis auf die `Button1_Click`-Methode, die als Argument gesendet wird. Die zweite Zeile ist eine praktischere Möglichkeit, das Gleiche auszuführen.
 
@@ -60,13 +60,13 @@ Das folgende Beispiel zeigt sowohl `AddressOf`- als auch Lambda-Ausdrücke, mit 
 
 [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]
 
-Die Signatur der Funktion muss mit der des Delegattyps übereinstimmen. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Beispiele für Lambda-Ausdrücke und `AddressOf`-Zuweisungen zu Delegaten finden Sie unter [Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+Die Signatur der Funktion muss mit der des Delegattyps übereinstimmen. Weitere Informationen zu Lambda-Ausdrücken finden Sie unter [Lambda-Ausdrücke](../procedures/lambda-expressions.md). Beispiele für Lambda-Ausdrücke und `AddressOf`-Zuweisungen zu Delegaten finden Sie unter [Gelockerte Delegatenkonvertierung](relaxed-delegate-conversion.md).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
-|[Gewusst wie: Aufrufen einer Delegatenmethode](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Zeigt anhand eines Beispiels, wie Sie eine Methode einem Delegaten zuweisen und diese Methode anschließend über den Delegaten aufrufen.|
-|[Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Veranschaulicht, wie Delegaten verwendet werden, um eine Prozedur an eine andere Prozedur zu übergeben.|
-|[Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Beschreibt, wie Subs und Funktionen Delegaten oder Handlern zugewiesen werden können, auch wenn deren Signaturen nicht identisch sind.|
-|[Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)|Stellt eine Übersicht über Ereignisse in Visual Basic bereit.|
+|[Vorgehensweise: Aufrufen einer Delegatenmethode](how-to-invoke-a-delegate-method.md)|Zeigt anhand eines Beispiels, wie Sie eine Methode einem Delegaten zuweisen und diese Methode anschließend über den Delegaten aufrufen.|
+|[Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic](how-to-pass-procedures-to-another-procedure.md)|Veranschaulicht, wie Delegaten verwendet werden, um eine Prozedur an eine andere Prozedur zu übergeben.|
+|[Gelockerte Delegatenkonvertierung](relaxed-delegate-conversion.md)|Beschreibt, wie Subs und Funktionen Delegaten oder Handlern zugewiesen werden können, auch wenn deren Signaturen nicht identisch sind.|
+|[Ereignisse](../events/index.md)|Stellt eine Übersicht über Ereignisse in Visual Basic bereit.|

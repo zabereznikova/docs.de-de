@@ -7,78 +7,78 @@ helpviewer_keywords:
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 ms.openlocfilehash: d5af9f3299b48d431b43566c11610d745167b60b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 0a798a7e9680e2d0a5a81a3eaa203870ea782883
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/03/2020
 ms.locfileid: "74431057"
 ---
 # <a name="run-time-settings-schema"></a>Schema für Laufzeiteinstellungen
 
 Lauf Zeit Einstellungen werden vom Common Language Runtime verwendet, um Anwendungen zu konfigurieren, die auf die .NET Framework abzielen.
 
-## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>Der \<Runtime-> Abschnitt und seine übergeordneten und untergeordneten Elemente
+## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>Der \<runtime> Abschnitt und seine übergeordneten und untergeordneten Elemente
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<Lauf Zeit >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<alwaysFlowImpersonationPolicy >](alwaysflowimpersonationpolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<appcontex\witchoverrides](appcontextswitchoverrides-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<AppDomainManagerAssembly >](appdomainmanagerassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<AppDomainManagerType >](appdomainmanagertype-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<appdomainresourcemonitoring](appdomainresourcemonitoring-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyBinding](assemblybinding-element-for-runtime.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<dependentAssembly >](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyIdentity >](assemblyidentity-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<bindingRedirect >](bindingredirect-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<CodeBase](codebase-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<publisherPolicy >](publisherpolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<>](probing-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<qualifyAssembly >](qualifyassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[supportportabilitäts >](supportportability-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<bypasstrustedappstrongnames >](bypasstrustedappstrongnames-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<compatsortnlsversion >](compatsortnlsversion-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<DevelopmentMode >](developmentmode-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<disablecachingbindingfailure >](disablecachingbindingfailures-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<disablecommitthreadstack >](disablecommitthreadstack-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<disablefusionupdatesfromadmanager >](disablefusionupdatesfromadmanager-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<enableampmparameseanpassungs->](enableampmparseadjustment-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<enforcefpspolicy >](enforcefipspolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<EtwEnable >](etwenable-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<forceperformancecounteruniquesharedmemoryreads >](forceperformancecounteruniquesharedmemoryreads-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcallowverylargeobjects >](gcconcurrent-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcConcurrent >](gcconcurrent-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gccpugroup >](gccpugroup-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcheapaffinitizemask >](gcheapaffinitizemask-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcheapcount >](gcheapcount-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gclohthreshold >](gclohthreshold-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcnoaffinitize >](gcnoaffinitize-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcserver >](gcserver-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<generatePublisherEvidence >](generatepublisherevidence-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<legacybeschädigte tedstateexceptionspolicy >](legacycorruptedstateexceptionspolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<legacyidentität](legacyimpersonationpolicy-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<loadFromRemoteSources >](loadfromremotesources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_LegacySecurityPolicy](netfx40-legacysecuritypolicy-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_PInvokeStackResilience](netfx40-pinvokestackresilience-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings](netfx45-cultureawarecomparergethashcode-longstrings-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<prefercominsteadof managedremoting >](prefercominsteadofmanagedremoting-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<relativebindforresources >](relativebindforresources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<shadowcopyverifybytimestamp >](shadowcopyverifybytimestamp-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Thread_UseAllCpuGroups](thread-useallcpugroups-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<throwunobservedtaskexceptions](throwunobservedtaskexceptions-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<TimeSpan_LegacyFormatMode](runtime-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<uselegacyjit >](uselegacyjit-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<userandomizedstringhashalgorithm >](userandomizedstringhashalgorithm-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<](usesmallinternalthreadstacks-element.md) "".\
-&nbsp;&nbsp;[\<System. Runtime. Caching >](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<MemoryCache >](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[NamedCaches >](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> hinzufügen](add-element-for-namedcaches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> Löschen](clear-element-for-namedcaches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<entfernen >](remove-element-for-namedcaches.md)
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<alwaysFlowImpersonationPolicy>](alwaysflowimpersonationpolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<AppContextSwitchOverrides>](appcontextswitchoverrides-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainManagerAssembly>](appdomainmanagerassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainManagerType>](appdomainmanagertype-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<appDomainResourceMonitoring>](appdomainresourcemonitoring-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyBinding>](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<dependentAssembly>](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyIdentity>](assemblyidentity-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<bindingRedirect>](bindingredirect-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<codeBase>](codebase-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<publisherPolicy>](publisherpolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<probing>](probing-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<qualifyAssembly>](qualifyassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<supportPortability>](supportportability-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<bypassTrustedAppStrongNames>](bypasstrustedappstrongnames-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<CompatSortNLSVersion>](compatsortnlsversion-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<developmentMode>](developmentmode-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<disableCachingBindingFailures>](disablecachingbindingfailures-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<disableCommitThreadStack>](disablecommitthreadstack-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<disableFusionUpdatesFromADManager>](disablefusionupdatesfromadmanager-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<EnableAmPmParseAdjustment>](enableampmparseadjustment-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<enforceFIPSPolicy>](enforcefipspolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<etwEnable>](etwenable-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<forcePerformanceCounterUniqueSharedMemoryReads>](forceperformancecounteruniquesharedmemoryreads-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<gcAllowVeryLargeObjects>](gcconcurrent-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<gcConcurrent>](gcconcurrent-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCCpuGroup>](gccpugroup-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCHeapCount>](gcheapcount-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCLOHThreshold>](gclohthreshold-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<GCNoAffinitize>](gcnoaffinitize-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<gcServer>](gcserver-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<generatePublisherEvidence>](generatepublisherevidence-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<legacyImpersonationPolicy>](legacyimpersonationpolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<loadfromRemoteSources>](loadfromremotesources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_LegacySecurityPolicy>](netfx40-legacysecuritypolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_PInvokeStackResilience>](netfx40-pinvokestackresilience-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<PreferComInsteadOfManagedRemoting>](prefercominsteadofmanagedremoting-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<relativeBindForResources>](relativebindforresources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<ThrowUnobservedTaskExceptions>](throwunobservedtaskexceptions-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<TimeSpan_LegacyFormatMode>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<useLegacyJit>](uselegacyjit-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)\
+&nbsp;&nbsp;[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<memoryCache>](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<namedCaches>](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<add>](add-element-for-namedcaches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clear>](clear-element-for-namedcaches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<remove>](remove-element-for-namedcaches.md)
 
-## <a name="alphabetical-list-of-runtime-elements"></a>Alphabetische Liste der \<Runtime > Elemente
+## <a name="alphabetical-list-of-runtime-elements"></a>Alphabetische Liste von \<runtime> Elementen
 
-|Element|Beschreibung|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |[\<add>](add-element-for-namedcaches.md)|Fügt der `namedCaches`-Sammlung für einen Speichercache einen benannten Cache hinzu.|
 |[\<alwaysFlowImpersonationPolicy>](alwaysflowimpersonationpolicy-element.md)|Gibt an, dass die Windows-Identität immer über asynchrone Punkte verläuft, unabhängig davon, wie der Identitätswechsel durchgeführt wurde.|
@@ -105,20 +105,20 @@ Lauf Zeit Einstellungen werden vom Common Language Runtime verwendet, um Anwendu
 |[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)|Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2 Gigabyte (GB).|
 |[\<gcConcurrent>](gcconcurrent-element.md)|Gibt an, ob die Runtime die Garbage Collection gleichzeitig ausführt.|
 |[\<GCCpuGroup>](gccpugroup-element.md)|Gibt an, ob von der Garbage Collection mehrere CPU-Gruppen unterstützt werden.|
-|[\<gcheapaffinitizemask >](gcheapaffinitizemask-element.md)|Definiert die Affinität zwischen GC-Heaps und einzelnen Prozessoren.|
-|[\<gcheapcount >](gcheapcount-element.md)|Gibt die Anzahl von Heaps/Threads an, die für Server Garbage Collection verwendet werden sollen.  |
-|[\<gclohthreshold >](gclohthreshold-element.md)|Gibt die Schwellenwert Größe an, die bewirkt, dass Objekte auf dem großen Objekt Heap (Loh) laufen.|
-|[\<gcnoaffininitize >](gcnoaffinitize-element.md)|Gibt an, ob Server-GC-Threads mit CPUs verknüpft werden oder nicht.|
+|[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)|Definiert die Affinität zwischen GC-Heaps und einzelnen Prozessoren.|
+|[\<GCHeapCount>](gcheapcount-element.md)|Gibt die Anzahl von Heaps/Threads an, die für Server Garbage Collection verwendet werden sollen.  |
+|[\<GCLOHThreshold>](gclohthreshold-element.md)|Gibt die Schwellenwert Größe an, die bewirkt, dass Objekte auf dem großen Objekt Heap (Loh) laufen.|
+|[\<GCNoAffinitize>](gcnoaffinitize-element.md)|Gibt an, ob Server-GC-Threads mit CPUs verknüpft werden oder nicht.|
 |[\<gcServer>](gcserver-element.md)|Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server ausführt.|
 |[\<generatePublisherEvidence>](generatepublisherevidence-element.md)|Gibt an, ob die Runtime die Herausgeberrichtlinie für Code Access Security (CAS) verwendet.|
 |[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|Gibt an, ob die Runtime verwaltetem Code das Abfangen von Zugriffsverletzungen und anderen durch Beschädigungen hervorgerufenen Ausnahmen gestattet.|
 |[\<legacyImpersonationPolicy>](legacyimpersonationpolicy-element.md)|Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, unabhängig von den Floweinstellungen für den Ausführungskontext im aktuellen Thread.|
 |[\<loadfromRemoteSources>](loadfromremotesources-element.md)|Gibt an, ob Assemblys aus Remotequellen als vollständig vertrauenswürdig geladen werden.|
-|[\<memoryCache>](memorycache-element-cache-settings.md)|Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der auf der <xref:System.Runtime.Caching.MemoryCache>-Klasse basiert.|
+|[\<memoryCache>](memorycache-element-cache-settings.md)|Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert.|
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|Enthält eine Sammlung von Konfigurationseigenschaften für die `namedCache` -Instanz.|
-|[\<NetFx40_LegacySecurityPolicy >](netfx40-legacysecuritypolicy-element.md)|Gibt an, ob die Runtime die Legacyrichtlinie für Code Access Security (CAS) verwendet.|
-|[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)|Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automatisch korrigiert. Dies führt zu langsameren Übergängen zwischen verwaltetem und nicht verwaltetem Code.|
-|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Gibt an, ob die Laufzeit eine feste Menge an Arbeitsspeicher zum Berechnen von Hashcodes für die <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>-Methode verwendet.|
+|[\<NetFx40_LegacySecurityPolicy>](netfx40-legacysecuritypolicy-element.md)|Gibt an, ob die Runtime die Legacyrichtlinie für Code Access Security (CAS) verwendet.|
+|[\<NetFx40_PInvokeStackResilience>](netfx40-pinvokestackresilience-element.md)|Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automatisch korrigiert. Dies führt zu langsameren Übergängen zwischen verwaltetem und nicht verwaltetem Code.|
+|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Gibt an, ob die Laufzeit eine feste Menge an Arbeitsspeicher zum Berechnen von Hashcodes für die <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> -Methode verwendet.|
 |[\<PreferComInsteadOfManagedRemoting>](prefercominsteadofmanagedremoting-element.md)|Gibt an, dass die Runtime COM-Interop anstelle von anwendungsdomänenübergreifendem Remoting verwendet.|
 |[\<probing>](probing-element.md)|Gibt Unterverzeichnisse an, die von der Runtime beim Laden von Assemblys durchsucht werden.|
 |[\<publisherPolicy>](publisherpolicy-element.md)|Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.|
@@ -129,9 +129,9 @@ Lauf Zeit Einstellungen werden vom Common Language Runtime verwendet, um Anwendu
 |[\<shadowCopyTimeStampVerification>](shadowcopyverifybytimestamp-element.md)|Gibt an, ob beim Schatten kopieren das standardmäßige Startverhalten verwendet wird, das in der .NET Framework 4 eingeführt wurde, oder ob das Startverhalten früherer Versionen der .NET Framework wieder hergestellt wird.|
 |[\<supportPortability>](supportportability-element.md)|Gibt an, dass eine Anwendung in zwei verschiedenen Implementierungen von .NET Framework durch das Deaktivieren des Standardverhaltens, das die Assemblys zu Anwendungsportabilitätszwecken als gleich behandelt, auf die gleiche Assembly verweisen kann.|
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Enthält Konfigurationsinformationen für den im Arbeitsspeicher befindlichen Standardobjektcache.|
-|[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)|Gibt an, ob verwaltete Threads von der Laufzeit auf alle CPU-Gruppen verteilt werden.|
+|[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)|Gibt an, ob verwaltete Threads von der Laufzeit auf alle CPU-Gruppen verteilt werden.|
 |[\<ThrowUnobservedTaskExceptions>](throwunobservedtaskexceptions-element.md)|Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden soll.|
-|[\<TimeSpan_LegacyFormatMode >](runtime-element.md)|Gibt an, ob die Runtime Legacyformatierung für <xref:System.TimeSpan>-Werte verwendet.|
+|[\<TimeSpan_LegacyFormatMode>](runtime-element.md)|Gibt an, ob die Runtime Legacyformatierung für <xref:System.TimeSpan>-Werte verwendet.|
 |[\<useLegacyJit>](uselegacyjit-element.md)|Legt fest, ob die Runtime den 64-Bit-JIT-Legacycompiler für die Just-in-Time-Kompilierung verwendet.|
 |[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|Legt fest, ob die Runtime Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet.|
 |[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|Fordert an, dass die Runtime beim Erstellen bestimmter intern verwendeter Threads explizite Stapelgrößen anstelle der Standardstapelgröße verwendet.|

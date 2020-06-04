@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: d6067c75835ecd14f1dd796c20ae3f29f456e541
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc163c1069aa6f41766664e0fa5f5a9c34a1f73d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642929"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409568"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Ereignisse freigegebener WithEvents-Variablen können nicht von freigegebenen Methoden behandelt werden.
-Eine Variable mit dem `Shared` Modifizierer ist eine freigegebene Variable. Eine freigegebene Variable gibt genau einen Speicherort an. Eine Variable mit dem `WithEvents` Modifizierer bestätigt, dass der Typ, der die Variable angehört, den Satz von Ereignissen verarbeitet der Variablen ausgelöst. Ein Wert der Variablen zugewiesen ist, die Eigenschaft erstellt, wenn die `WithEvents` Deklaration hebt alle vorhandenen Ereignishandler und verknüpft den neuen Ereignishandler über die `Add` Methode.  
+Eine mit dem- `Shared` Modifizierer deklarierte Variable ist eine freigegebene Variable. Eine freigegebene Variable identifiziert genau einen Speicherort. Eine mit dem-Modifizierer deklarierte Variable bestätigt `WithEvents` , dass der Typ, zu dem die Variable gehört, den Satz von Ereignissen behandelt, den die Variable auslöst. Wenn der Variablen ein Wert zugewiesen wird, entbindet die von der `WithEvents` Deklaration erstellte Eigenschaft jeden vorhandenen Ereignishandler und verknüpft den neuen Ereignishandler über die- `Add` Methode.  
   
  **Fehler-ID:** BC30594  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Deklarieren Sie Ihre Ereignishandler `Shared`.  
+- Deklarieren Sie den Ereignishandler `Shared` .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [Freigegeben](../modifiers/shared.md)
+- [WithEvents](../modifiers/withevents.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 189810393db42c54cb8a0f97b22b3d1514d9a7c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346176"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403316"
 ---
 # <a name="comments-in-code-visual-basic"></a>Kommentare in Code (Visual Basic)
 Wenn Sie die Codebeispiele lesen, werden Sie oft auf das Kommentarsymbol (`'`) stoßen. Dieses Symbol weist den Visual Basic Compiler an, den folgenden Text oder den *Kommentar*zu ignorieren. Kommentare sind kurze, erläuternde Hinweise, die dem Code zum Zwecke der besseren Verständlichkeit hinzugefügt werden.  
@@ -54,15 +54,15 @@ Wenn Sie die Codebeispiele lesen, werden Sie oft auf das Kommentarsymbol (`'`) s
   
 - Auf eine Zeilenfortsetzungszeichenfolge darf nicht in der gleichen Zeile ein Kommentar folgen.  
   
- Sie können Kommentar Symbole für einen Codeblock hinzufügen oder entfernen, indem Sie eine oder mehrere Codezeilen auswählen und den **Kommentar** (![die Schaltfläche Visual Basic Kommentar in Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) auswählen und die **Auskommentierung** (![der Schaltfläche Visual Basic uncomment in den Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif))-Schaltflächen auf der Symbolleiste **Bearbeiten** aufheben.  
+ Sie können Kommentar Symbole für einen Codeblock hinzufügen oder entfernen, indem Sie eine oder mehrere Codezeilen auswählen und den **Kommentar** ( ![ die Schaltfläche "Visual Basic Kommentar" in Visual Studio ](./media/comments-in-code/visual-basic-comment-button.gif) ) auswählen und die **Auskommentierung** ( ![ die Schaltfläche "Visual Basic uncomment" in Visual Studio. ](./media/comments-in-code/visual-basic-uncomment-button.gif) ) auf der Symbolleiste " **Bearbeiten** " aufheben.  
   
 > [!NOTE]
-> Sie können Code auch Kommentare hinzufügen, indem Sie vor dem betreffenden Text das `REM`-Schlüsselwort einfügen. Das `'` Symbol und der **Kommentar**/Schaltflächen zum **Entfernen von Kommentaren** sind jedoch einfacher zu verwenden und erfordern weniger Speicherplatz und Arbeitsspeicher.  
+> Sie können Code auch Kommentare hinzufügen, indem Sie vor dem betreffenden Text das `REM`-Schlüsselwort einfügen. Das `'` Symbol und die **Comment** / Schaltflächen zum**Entfernen** von Kommentaren sind jedoch einfacher zu verwenden und erfordern weniger Speicherplatz und Arbeitsspeicher.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Grundlegender Instinkt: Dokumentieren von Code mit XML-Kommentaren](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
-- [Gewusst wie: Erstellen einer XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)
-- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [REM-Anweisung](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [Vorgehensweise: Erstellen einer XML-Dokumentation](how-to-create-xml-documentation.md)
+- [XML-Kommentartags](../../language-reference/xmldoc/index.md)
+- [Programmstruktur und Codekonventionen](program-structure-and-code-conventions.md)
+- [REM-Anweisung](../../language-reference/statements/rem-statement.md)

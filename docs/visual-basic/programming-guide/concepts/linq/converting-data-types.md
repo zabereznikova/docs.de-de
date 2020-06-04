@@ -2,18 +2,18 @@
 title: Konvertieren von Datentypen
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 25d21954f0bb7555f1f5666f83fb37f4f73e2a60
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1394f53923ba850ae11fbc326a25c279589c3be1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354255"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410850"
 ---
 # <a name="converting-data-types-visual-basic"></a>Datentypen werden umgerechnet (Visual Basic)
 
 Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
 
- Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. Es folgen einige Beispiele:
+ Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. Hier einige Beispiele:
 
 - Die <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>-Methode kann zum Ausblenden einer benutzerdefinierten Implementierung eines Standardabfrageoperators eines Typs verwendet werden.
 
@@ -27,7 +27,7 @@ Die folgende Tabelle enthält die Standardabfrageoperator-Methoden, die Datentyp
 
 Die Konvertierungsmethoden in dieser Tabelle, deren Namen mit „As“ beginnen, ändern den statischen Typ der Quellauflistung, listen ihn jedoch nicht auf. Die Methoden, deren Namen mit „To“ anfangen, listen die Quellauflistung auf und verschieben die Elemente in den entsprechenden Auflistungstyp.
 
-|Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|
+|Methodenname|BESCHREIBUNG|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |AsEnumerable|Gibt die Eingabe als <xref:System.Collections.Generic.IEnumerable%601> typisiert zurück|Nicht zutreffend.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|Konvertiert ein (generisches) <xref:System.Collections.IEnumerable>-Element in ein (generisches) <xref:System.Linq.IQueryable>-Element|Nicht zutreffend.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -38,9 +38,9 @@ Die Konvertierungsmethoden in dieser Tabelle, deren Namen mit „As“ beginnen,
 |ToList|Konvertiert eine Auflistung in eine <xref:System.Collections.Generic.List%601>. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
 |ToLookup|Platziert Elemente, basierend auf einer Schlüsselauswahlfunktion, in ein <xref:System.Linq.Lookup%602> (one-to-many-Wörterbuch) ein. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
 
-## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax
+## <a name="query-expression-syntax-example"></a>Beispiele für die Abfrageausdruckssyntax
 
-Im folgenden Codebeispiel wird die `From As`-Klausel verwendet, um einen Typ in einen Untertyp umzuwandeln, bevor auf einen Member zugegriffen wird, der nur für den Untertyp verfügbar ist.
+Im folgenden Codebeispiel wird die- `From As` Klausel verwendet, um einen Typ in einen Untertyp umzuwandeln, bevor auf einen Member zugegriffen wird, der nur für den Untertyp verfügbar ist.
 
 ```vb
 Class Plant
@@ -80,9 +80,9 @@ Sub Cast()
 End Sub
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [From-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Gewusst wie: Abfragen von ArrayList mit LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)
+- [From-Klausel](../../../language-reference/queries/from-clause.md)
+- [Gewusst wie: Abfragen von ArrayList mit LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md)

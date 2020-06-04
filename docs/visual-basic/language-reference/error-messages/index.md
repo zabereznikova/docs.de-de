@@ -7,12 +7,12 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: 15d12802c92e7b9ed99c83885bd38e381c8b687d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c2d9974f41efdd321af800e6270586d9b18ba6f7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353716"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402849"
 ---
 # <a name="error-messages-visual-basic"></a>Fehlermeldungen (Visual Basic)
 Wenn Sie eine Visual Basic-Anwendung schreiben, kompilieren oder ausführen, können die folgenden Arten von Fehlern auftreten:  
@@ -23,12 +23,12 @@ Wenn Sie eine Visual Basic-Anwendung schreiben, kompilieren oder ausführen, kö
   
 3. Laufzeitfehler, die auftreten, wenn Sie eine Anwendung in Visual Studio oder als eigenständige ausführbare Daten ausführen.  
   
- Informationen zur Behebung bestimmter Fehler finden Sie unter [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../../visual-basic/getting-started/additional-resources.md).  
+ Informationen zur Behebung bestimmter Fehler finden Sie unter [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Laufzeitfehler  
- Wenn eine Visual Basic Anwendung versucht, eine Aktion auszuführen, die vom System nicht ausgeführt werden kann, tritt ein Laufzeitfehler auf, und Visual Basic löst ein `Exception`-Objekt aus. Visual Basic können benutzerdefinierte Fehler eines beliebigen Datentyps, einschließlich `Exception` Objekten, mithilfe der `Throw`-Anweisung generieren. Eine Anwendung kann den Fehler durch Anzeige der Fehlernummer und -meldung einer abgefangenen Ausnahme identifizieren. Wenn ein Fehler nicht abgefangen wird, wird die Anwendung beendet.  
+ Wenn eine Visual Basic Anwendung versucht, eine Aktion auszuführen, die vom System nicht ausgeführt werden kann, tritt ein Laufzeitfehler auf, und Visual Basic löst ein- `Exception` Objekt aus. Visual Basic können benutzerdefinierte Fehler eines beliebigen Datentyps, einschließlich- `Exception` Objekten, mithilfe der- `Throw` Anweisung generieren. Eine Anwendung kann den Fehler durch Anzeige der Fehlernummer und -meldung einer abgefangenen Ausnahme identifizieren. Wenn ein Fehler nicht abgefangen wird, wird die Anwendung beendet.  
   
- Der Code kann Laufzeitfehler auffangen und untersuchen. Wenn Sie den Code, der den Fehler erzeugt, in einem `Try`-Block einschließen, können Sie jeden ausgelösten Fehler in einem entsprechenden `Catch`-Block abfangen. Informationen zum Abfangen von Fehlern zur Laufzeit und zum Reagieren auf Fehler im Code finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Der Code kann Laufzeitfehler auffangen und untersuchen. Wenn Sie den Code, der den Fehler erzeugt, in einem `Try`-Block einschließen, können Sie jeden ausgelösten Fehler in einem entsprechenden `Catch`-Block abfangen. Informationen zum Abfangen von Fehlern zur Laufzeit und zum Reagieren auf Fehler im Code finden Sie unter [Try...Catch...Finally-Anweisung](../statements/try-catch-finally-statement.md).  
   
 ## <a name="compile-time-errors"></a>Kompilierzeitfehler  
  Wenn der Visual Basic-Compiler ein Problem im Code feststellt, tritt ein Kompilierzeitfehler auf. Im Code-Editor können Sie problemlos ermitteln, welche Codezeile den Fehler verursacht hat, da unter dieser Codezeile eine Wellenlinie angezeigt wird. Die Fehlermeldung wird angezeigt, wenn Sie auf die Wellenlinie zeigen oder die **Fehlerliste** öffnen, die auch weitere Meldungen anzeigt.  

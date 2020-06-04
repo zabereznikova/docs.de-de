@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: d5aae4d30abbf9ed2af260412352a5e0452e0dcc
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 9e4dbaf2f2800454c673cd58ddec4cf0f6e5c6b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513034"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409506"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Der Ausdruck ist ein Wert und kann nicht als Ziel einer Zuweisung verwendet werden
 
@@ -29,7 +29,7 @@ maximum = 50
 
 Ähnliche Beispiele können auf Eigenschaften und Array Elemente angewendet werden.
 
-**Indirekter Zugriff.** Dieser Fehler kann auch durch indirekten Zugriff durch einen Werttyp generiert werden. Sehen Sie sich das folgende Codebeispiel an, das versucht, den <xref:System.Drawing.Point> Wert von festzulegen, <xref:System.Windows.Forms.Control.Location%2A>indem Sie indirekt über darauf zugreifen.
+**Indirekter Zugriff.** Dieser Fehler kann auch durch indirekten Zugriff durch einen Werttyp generiert werden. Sehen Sie sich das folgende Codebeispiel an, das versucht, den Wert von festzulegen, <xref:System.Drawing.Point> indem Sie indirekt über darauf zugreifen <xref:System.Windows.Forms.Control.Location%2A> .
 
 ```vb
 ' Assume this code runs inside Form1.
@@ -39,7 +39,7 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.
 ```
 
-Die letzte Anweisung des vorangehenden Beispiels schlägt fehl, da Sie nur eine temporäre Zuordnung für <xref:System.Drawing.Point> die-Struktur erstellt <xref:System.Windows.Forms.Control.Location%2A> , die von der-Eigenschaft zurückgegeben wird. Eine Struktur ist ein Werttyp, und die temporäre Struktur wird nicht beibehalten, nachdem die Anweisung ausgeführt wurde. Das Problem wird durch Deklarieren und Verwenden einer Variablen für <xref:System.Windows.Forms.Control.Location%2A>gelöst, wodurch eine permanente Zuordnung für die <xref:System.Drawing.Point> Struktur erstellt wird. Das folgende Beispiel zeigt Code, der die letzte-Anweisung des vorangehenden Beispiels ersetzen kann.
+Die letzte Anweisung des vorangehenden Beispiels schlägt fehl, da Sie nur eine temporäre Zuordnung für die-Struktur erstellt, die <xref:System.Drawing.Point> von der-Eigenschaft zurückgegeben wird <xref:System.Windows.Forms.Control.Location%2A> . Eine Struktur ist ein Werttyp, und die temporäre Struktur wird nicht beibehalten, nachdem die Anweisung ausgeführt wurde. Das Problem wird durch Deklarieren und Verwenden einer Variablen für gelöst <xref:System.Windows.Forms.Control.Location%2A> , wodurch eine permanente Zuordnung für die Struktur erstellt wird <xref:System.Drawing.Point> . Das folgende Beispiel zeigt Code, der die letzte-Anweisung des vorangehenden Beispiels ersetzen kann.
 
 ```vb
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)
@@ -58,8 +58,8 @@ exitButton.Location = exitLocation
 
 - Verwenden Sie die-Variable, um auf die-Eigenschaft zuzugreifen, um ihr einen Wert zuzuweisen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)
-- [Problembehandlung bei Prozeduren](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Operatoren und Ausdrücke](../../programming-guide/language-features/operators-and-expressions/index.md)
+- [Anweisungen](../../programming-guide/language-features/statements.md)
+- [Problembehandlung bei Prozeduren](../../programming-guide/language-features/procedures/troubleshooting-procedures.md)

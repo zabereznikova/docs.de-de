@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
-ms.openlocfilehash: 658c2ab1dc210bf472646bce529ae5ffd7f67bc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a1464e0ac0d87bf9763efe63f2e09927a157a24
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649984"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415426"
 ---
 # <a name="cant-create-necessary-temporary-file"></a>Die erforderliche temporäre Datei kann nicht erstellt werden
-Entweder ist das Laufwerk ist voll, die von der TEMP-Umgebungsvariablen angegebene Verzeichnis enthält, oder die TEMP-Umgebungsvariable gibt an, eine ungültige oder nur-Lese Laufwerk oder ein Verzeichnis.  
+Entweder ist das Laufwerk voll, das das von der Temp-Umgebungsvariable angegebene Verzeichnis enthält, oder die Umgebungsvariable TEMP gibt ein ungültiges oder Schreib geschütztes Laufwerk oder Verzeichnis an.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Löschen Sie Dateien aus dem Laufwerk, ist voll.  
+1. Löschen Sie Dateien vom Laufwerk, wenn Sie voll sind.  
   
-2. Geben Sie ein anderes Laufwerk, in die Umgebungsvariable TEMP angegeben.  
+2. Geben Sie ein anderes Laufwerk in der TEMP-Umgebungsvariablen an.  
   
-3. Geben Sie ein gültiges Laufwerk für die TEMP-Umgebungsvariable.  
+3. Geben Sie ein gültiges Laufwerk für die Temp-Umgebungsvariable an.  
   
-4. Entfernen Sie die Einschränkung nur-Lese aus die aktuell angegebenen Laufwerk oder das Verzeichnis an.  
+4. Entfernen Sie die schreibgeschützte Einschränkung aus dem derzeit angegebenen Laufwerk oder Verzeichnis.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fehlertypen](../../programming-guide/language-features/error-types.md)

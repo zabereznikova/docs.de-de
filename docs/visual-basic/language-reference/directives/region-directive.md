@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: 4cf9b103486378d001b588aa285f590980b51bb8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cd53a6079c1564a8c73a0a1a6273fc166d18d3e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343794"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409937"
 ---
 # <a name="region-directive"></a>#Region-Anweisung
 
@@ -28,14 +28,14 @@ Reduziert Codeabschnitte in Visual Basic-Dateien und blendet sie aus.
 #End Region  
 ```  
   
-## <a name="parts"></a>-Komponenten  
+## <a name="parts"></a>Bestandteile  
   
 |Begriff|Definition|  
 |---|---|  
-|`identifier_string`|Erforderlich Eine Zeichenfolge, die als Bereichtitel fungiert, wenn sie reduziert ist. Bereiche werden standardmäßig reduziert.|  
+|`identifier_string`|Erforderlich. Eine Zeichenfolge, die als Bereichtitel fungiert, wenn sie reduziert ist. Bereiche werden standardmäßig reduziert.|  
 |`#End Region`|Beendet den `#Region`-Block.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
  Mit der `#Region`-Anweisung können Sie einen Codeblock festlegen, der bei Verwendung der Gliederungsfunktion des Code-Editors von Visual Studio erweitert oder reduziert werden soll. Sie können Bereiche in anderen Regionen platzieren oder *verschachteln*, um ähnliche Bereiche zu gruppieren.  
   
@@ -45,8 +45,8 @@ Reduziert Codeabschnitte in Visual Basic-Dateien und blendet sie aus.
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [#If...Then...#Else-Anweisungen](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [#If...Then...#Else-Anweisungen](if-then-else-directives.md)
 - [Gliedern](/visualstudio/ide/outlining)
-- [Gewusst wie: Reduzieren und Ausblenden von Codeabschnitten](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+- [Vorgehensweise: Reduzieren und Ausblenden von Codeabschnitten](../../programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)

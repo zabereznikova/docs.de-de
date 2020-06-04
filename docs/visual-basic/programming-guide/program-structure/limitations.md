@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: f7e19977a011565bb4b1536af5cab195f8a01017
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 46294b68bda8a5d2d21c0e4efea6a78e6a265ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347370"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403186"
 ---
 # <a name="visual-basic-limitations"></a>Beschränkungen in Visual Basic
 Frühere Versionen von Visual Basic erzwungene Grenzen im Code, wie z. b. die Länge der Variablennamen, die Anzahl der zulässigen Variablen in Modulen und die Modulgröße. In Visual Basic .net wurden diese Einschränkungen gelockert, sodass Sie mehr Freiheit beim Schreiben und anordnen Ihres Codes haben.  
@@ -22,17 +22,17 @@ Frühere Versionen von Visual Basic erzwungene Grenzen im Code, wie z. b. die L�
   
  Im folgenden finden Sie einige Einschränkungen, die in Extremfällen auftreten können:  
   
-- **Länge des Namens.** Es gibt eine maximale Anzahl von Zeichen für den Namen aller deklarierten Programmier Elemente. Dieser Höchstwert gilt für eine gesamte Qualifikations Zeichenfolge, wenn der Elementname qualifiziert ist. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Länge des Namens.** Es gibt eine maximale Anzahl von Zeichen für den Namen aller deklarierten Programmier Elemente. Dieser Höchstwert gilt für eine gesamte Qualifikations Zeichenfolge, wenn der Elementname qualifiziert ist. Siehe [Declared Element Names](../language-features/declared-elements/declared-element-names.md).  
   
-- **Zeilenlänge.** In einer physischen Zeile des Quellcodes sind maximal 65535 Zeichen enthalten. Die logische Quell Code Zeile kann länger sein, wenn Sie Zeilen Fortsetzungs Zeichen verwenden. Siehe Gewusst [wie: unterbrechen und Kombinieren von Anweisungen im Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
+- **Zeilenlänge.** In einer physischen Zeile des Quellcodes sind maximal 65535 Zeichen enthalten. Die logische Quell Code Zeile kann länger sein, wenn Sie Zeilen Fortsetzungs Zeichen verwenden. Siehe Gewusst [wie: unterbrechen und Kombinieren von Anweisungen im Code](how-to-break-and-combine-statements-in-code.md)  
   
-- **Array Dimensionen.** Es gibt eine maximale Anzahl von Dimensionen, die Sie für ein Array deklarieren können. Dies schränkt die Anzahl der Indizes ein, die Sie verwenden können, um ein Array Element anzugeben. Weitere Informationen finden Sie [unter Array Dimensionen in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **Array Dimensionen.** Es gibt eine maximale Anzahl von Dimensionen, die Sie für ein Array deklarieren können. Dies schränkt die Anzahl der Indizes ein, die Sie verwenden können, um ein Array Element anzugeben. Weitere Informationen finden Sie [unter Array Dimensionen in Visual Basic](../language-features/arrays/array-dimensions.md).  
   
-- **Zeichen folgen Länge.** Es gibt eine maximale Anzahl von Unicode-Zeichen, die Sie in einer einzelnen Zeichenfolge speichern können. Siehe [String-Datentyp](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **Zeichen folgen Länge.** Es gibt eine maximale Anzahl von Unicode-Zeichen, die Sie in einer einzelnen Zeichenfolge speichern können. Siehe [String-Datentyp](../../language-reference/data-types/string-data-type.md).  
   
 - **Länge der Umgebungs Zeichenfolge.** Für jede Umgebungs Zeichenfolge, die als Befehlszeilenargument verwendet wird, sind maximal 32768 Zeichen zulässig. Dies ist eine Einschränkung auf allen Plattformen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Benennungs Konventionen für Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Programmstruktur und Codekonventionen](program-structure-and-code-conventions.md)
+- [Benennungskonventionen in Visual Basic](naming-conventions.md)

@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: 619b1c55ef035530c6854fa15763fb9c187565a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e33450e921f1859c97edf1fbf123a0a95267767f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662030"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402887"
 ---
 # <a name="identifier-expected"></a>Bezeichner erwartet.
-Ein Programmierelement, das nicht auf einem erkennbaren deklarierte Elementnamen ist auftritt, in dem der Kontext ein Elementname erfordert. Eine mögliche Ursache ist, dass ein Attribut nur an einer beliebigen Stelle angegeben wurde zu Beginn der Anweisung.  
+Ein Programmier Element, das kein erkennbarer deklarierter Elementname ist, tritt auf, wenn für den Kontext ein Elementname erforderlich ist. Eine mögliche Ursache ist, dass ein Attribut an einer anderen Stelle als am Anfang der Anweisung angegeben wurde.  
   
  **Fehler-ID:** BC30203  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Stellen Sie sicher, dass alle Attribute in der Anweisung am Anfang platziert werden.  
+- Vergewissern Sie sich, dass alle Attribute in der-Anweisung am Anfang platziert werden.  
   
-- Stellen Sie sicher, dass alle Elementnamen in der Anweisung richtig geschrieben sind.  
+- Vergewissern Sie sich, dass alle Elementnamen in der-Anweisung richtig geschrieben sind.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Übersicht über Attribute](../../programming-guide/concepts/attributes/index.md)

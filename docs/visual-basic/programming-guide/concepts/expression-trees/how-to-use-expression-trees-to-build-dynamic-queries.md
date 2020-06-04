@@ -1,13 +1,13 @@
 ---
-title: 'Gewusst wie: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen'
+title: 'Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1f686c37b5d04263ac5ae0dd6883aa8a519ed19e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346053"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410978"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Gewusst wie: Verwenden von Ausdrucks Baumstrukturen zum Erstellen dynamischer Abfragen (Visual Basic)
 
@@ -103,13 +103,13 @@ In diesem Code wird in dem an die `Queryable.Where`-Methode übergebenen Prädik
 
 ## <a name="compile-the-code"></a>Kompilieren des Codes
 
-- Erstellen Sie ein neues **Konsolenanwendungsprojekt**.
+- Erstellen Sie ein neues **Konsolen Anwendungs** Projekt.
 
 - Binden Sie den System.Linq.Expressions-Namespace ein.
 
-- Kopieren Sie den Code aus dem Beispiel, und fügen Sie ihn in das `Main` `Sub` Prozedur ein.
+- Kopieren Sie den Code aus dem Beispiel, und fügen Sie ihn in die `Main` `Sub` Prozedur ein.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Vorgehensweise: Ausführen von Ausdrucks Baumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Ausdrucksbaumstrukturen (Visual Basic)](index.md)
+- [How to: Execute Expression Trees (Visual Basic) (Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic))](how-to-execute-expression-trees.md)

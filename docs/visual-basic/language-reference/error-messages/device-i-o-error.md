@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID57
 ms.assetid: 17d22252-f374-400b-9ddb-be5367dd7278
-ms.openlocfilehash: 782f03c65873a065567e80f039bc0fd974962743
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 203f905ff4b726dcc6e5c6b543734d5b1d468c64
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651411"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409685"
 ---
 # <a name="device-io-error"></a>Geräte-E/A-Fehler
-Das Programm auf einem Gerät wie z. B. einen Drucker oder das Laufwerk verwendet wurde, ist ein Eingabe- oder Fehler aufgetreten.  
+Ein Eingabe-oder Ausgabefehler ist aufgetreten, während das Programm ein Gerät wie z. b. einen Drucker oder ein Laufwerk verwendet hat.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Stellen Sie sicher, dass das Gerät ordnungsgemäß ausgeführt wird, und wiederholen Sie dann den Vorgang.  
+- Stellen Sie sicher, dass das Gerät ordnungsgemäß funktioniert, und wiederholen Sie dann den Vorgang.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fehlertypen](../../programming-guide/language-features/error-types.md)

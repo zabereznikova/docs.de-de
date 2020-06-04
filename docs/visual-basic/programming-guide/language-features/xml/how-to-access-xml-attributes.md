@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Zugreifen auf XML-Attribute'
+title: 'Vorgehensweise: Zugreifen auf XML-Attribute'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attribute axis property [Visual Basic]
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: 905d6c4bb63323bad790bc833647a5c602d02ada
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ab6ed27e403273c1b3b2b28593825c0cc6b6db7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332332"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410269"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Gewusst wie: Zugreifen auf XML-Attribute (Visual Basic)
-In diesem Beispiel wird gezeigt, wie eine Attribut Achsen Eigenschaft für den Zugriff auf XML-Attribute in einem XML-Element nach Namen verwendet wird. Insbesondere wird die `type` Attribut Achsen Eigenschaft verwendet, um auf das Attribut mit dem Namen `type` im `phone` Objekt zuzugreifen.  
+In diesem Beispiel wird gezeigt, wie eine Attribut Achsen Eigenschaft für den Zugriff auf XML-Attribute in einem XML-Element nach Namen verwendet wird. Insbesondere wird die `type` Eigenschaft Attribut Achse verwendet, um auf das Attribut im- `type` Objekt zuzugreifen `phone` .  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
-- [XML-Attributachseneigenschaft](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Zugreifen auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML Attribute Axis Property](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Zugreifen auf XML in Visual Basic](accessing-xml.md)
+- [XML](index.md)

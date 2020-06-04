@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: 68e1fb4f55d9f9b140f1b54cfde2bc5f60952dd2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e572189b958612bf9527c82ce702df3ab929a23f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592138"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409399"
 ---
-# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Nicht-CLS-kompatible \<Membername > ist in einer CLS-kompatiblen Schnittstelle nicht zulässig
-Eine Eigenschaft, Prozedur oder das Ereignis in einer Schnittstelle als RuntimeCompatibility `<CLSCompliant(True)>` bei die Schnittstelle selbst als RuntimeCompatibility `<CLSCompliant(False)>` oder überhaupt nicht gekennzeichnet.  
+# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>\<membername> ist nicht CLS-kompatibel und darf in einer CLS-kompatiblen Schnittstelle nicht verwendet werden.
+Eine Eigenschaft, Prozedur oder ein Ereignis in einer Schnittstelle wird als gekennzeichnet, `<CLSCompliant(True)>` Wenn die Schnittstelle selbst als gekennzeichnet ist `<CLSCompliant(False)>` oder nicht markiert ist.  
   
- Für eine Schnittstelle zum Einhalten der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS), alle seine Member müssen kompatibel sein.  
+ Damit eine Schnittstelle mit der [Sprachunabhängigkeit und den sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS) kompatibel ist, müssen alle Mitglieder kompatibel sein.  
   
  Wenn Sie das <xref:System.CLSCompliantAttribute> auf ein Programmierelement anwenden, legen Sie den `isCompliant` -Parameter des Attributs auf `True` oder `False` fest, um die Kompatibilität bzw. Nichtkompatibilität anzugeben. Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
   
@@ -29,12 +29,12 @@ Eine Eigenschaft, Prozedur oder das Ereignis in einer Schnittstelle als RuntimeC
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Wenn Sie CLS-Kompatibilität benötigen und Kontrolle über den Quellcode für die Schnittstelle, markieren Sie die Schnittstelle als `<CLSCompliant(True)>` Wenn allen zugehörigen Membern kompatibel sind.  
+- Wenn Sie CLS-Kompatibilität benötigen und die Kontrolle über den Quellcode der Schnittstelle haben, markieren Sie die Schnittstelle so, als `<CLSCompliant(True)>` ob alle zugehörigen Member kompatibel sind.  
   
-- Definieren Sie Wenn Sie CLS-Kompatibilität benötigen und haben keine Kontrolle über den Quellcode für die Schnittstelle, oder wenn dies nicht zutrifft, kompatibel sein müssen, dieses Elements in eine andere Schnittstelle aus.  
+- Wenn Sie CLS-Kompatibilität benötigen und keine Kontrolle über den Quellcode der Schnittstelle haben, oder wenn er nicht als kompatibel eingestuft wird, definieren Sie diesen Member in einer anderen Schnittstelle.  
   
-- Wenn Sie dieses Element in der aktuellen Schnittstelle verbleiben müssen, entfernen Sie die <xref:System.CLSCompliantAttribute> aus seiner Definition oder kennzeichnen Sie ihn als `<CLSCompliant(False)>`.  
+- Wenn Sie möchten, dass dieser Member in der aktuellen Schnittstelle verbleibt, entfernen Sie <xref:System.CLSCompliantAttribute> aus seiner Definition, oder markieren Sie Sie als `<CLSCompliant(False)>` .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interface-Anweisung](../statements/interface-statement.md)

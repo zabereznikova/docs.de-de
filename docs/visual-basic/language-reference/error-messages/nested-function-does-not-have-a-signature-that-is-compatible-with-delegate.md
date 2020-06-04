@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: d65c8eab661675c955ff6562098248c04036d6e7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 28d07f01c0fd467cb68d73749988273eee95edf4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580648"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409425"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>Die in der Funktion für die Funktion mit dem Delegaten "\<delegatename >" kompatible Signatur ist nicht vorhanden.
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>Die geschachtelte Funktion verfügt über keine Signatur, die mit dem Delegaten '\<delegatename>' kompatibel ist
 
-Ein Lambda-Ausdruck wurde einem Delegaten zugewiesen, der über eine inkompatible Signatur verfügt. Im folgenden Code verfügt der Delegat `Del` z. b. über zwei ganzzahlige Parameter.
+Ein Lambda-Ausdruck wurde einem Delegaten zugewiesen, der über eine inkompatible Signatur verfügt. Im folgenden Code verfügt der Delegat beispielsweise `Del` über zwei ganzzahlige Parameter.
 
 ```vb
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 ```
 
-Der Fehler wird ausgelöst, wenn ein Lambda-Ausdruck mit einem Argument als Typ `Del` deklariert ist:
+Der Fehler wird ausgelöst, wenn ein Lambda-Ausdruck mit einem Argument als Typ deklariert wird `Del` :
 
 ```vb
 ' Neither of these is valid.
@@ -36,7 +36,7 @@ Der Fehler wird ausgelöst, wenn ein Lambda-Ausdruck mit einem Argument als Typ 
 
 Passen Sie entweder die Delegatdefinition oder den zugewiesenen Lambda-Ausdruck so an, dass die Signaturen kompatibel sind.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Gelockerte Delegatenkonvertierung](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Lambda-Ausdrücke](../../programming-guide/language-features/procedures/lambda-expressions.md)

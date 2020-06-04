@@ -1,5 +1,5 @@
 ---
-title: Die Delegatklasse '<classname>' hat keine Invoke-Methode. Ein Ausdruck dieses Typs kann daher nicht das Ziel eines Methodenaufrufs sein.
+title: Die Delegatklasse "<classname>" hat keine Invoke-Methode. Ein Ausdruck dieses Typs kann daher nicht das Ziel eines Methodenaufrufs sein.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30220
@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 3fe164d868ee7bde0e687e1d592f4d5a17565aea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27be97ba2930791bcb9012c824bc418a0089b037
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803635"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409711"
 ---
-# <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Delegatklasse\<Klassenname >' hat keine Invoke-Methode, sodass ein Ausdruck dieses Typs kann nicht das Ziel eines Methodenaufrufs
-Ein Aufruf von `Invoke` über einen Delegaten ist fehlgeschlagen, da `Invoke` ist nicht auf die Delegate-Klasse implementiert.  
+# <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Die Delegatklasse "\<classname>" hat keine Invoke-Methode. Ein Ausdruck dieses Typs kann daher nicht das Ziel eines Methodenaufrufs sein.
+Ein Aufruf von `Invoke` über einen Delegaten ist fehlgeschlagen, da `Invoke` nicht in der Delegatklasse implementiert ist.  
   
  **Fehler-ID:** BC30220  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie sicher, dass mit eine Instanz von der 'Delegate'-Klasse erstellt wurde eine `Dim` -Anweisung und die Delegatinstanz mit eine Prozedur zugewiesen wurde die `AddressOf` Operator.  
+1. Stellen Sie sicher, dass eine Instanz der Delegatklasse mit einer `Dim` -Anweisung erstellt wurde und dass der Delegatinstanz mit dem-Operator eine Prozedur zugewiesen wurde `AddressOf` .  
   
-2. Suchen Sie den Code, der die Delegate-Klasse implementiert, und stellen Sie sicher, dass es implementiert die `Invoke` Verfahren.  
+2. Suchen Sie den Code, der die Delegatklasse implementiert, und stellen Sie sicher, dass Sie die `Invoke` Prozedur implementiert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Delegaten](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Delegaten](../../programming-guide/language-features/delegates/index.md)
+- [Delegate-Anweisung](../statements/delegate-statement.md)
+- [AddressOf-Operator](../operators/addressof-operator.md)
+- [Dim-Anweisung](../statements/dim-statement.md)
