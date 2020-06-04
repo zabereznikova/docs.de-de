@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: c3567464616d3b0b3f91ff57e8a169aca046c866
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452291"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396868"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>COM-Interoperabilität in .NET Framework-Anwendungen (Visual Basic)
 
@@ -25,7 +25,7 @@ Die Links auf dieser Seite bieten Details zu Interaktionen zwischen com-und .NET
 
 | | |
 |---------|---------|
-| [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md) | Enthält Links zu Themen, die die COM-Interoperabilität in Visual Basic abdecken, einschließlich COM-Objekte, ActiveX-Steuerelementen, Win32-DLLs, verwalteten Objekten und Vererbung von COM-Objekten. |
+| [COM-Interop](index.md) | Enthält Links zu Themen, die die COM-Interoperabilität in Visual Basic abdecken, einschließlich COM-Objekte, ActiveX-Steuerelementen, Win32-DLLs, verwalteten Objekten und Vererbung von COM-Objekten. |
 | [Interoperabilität mit nicht verwaltetem Code](../../../framework/interop/index.md) | Beschreibt kurz einige Interaktions Probleme zwischen verwaltetem und nicht verwaltetem Code und stellt Links zur weiteren Untersuchung bereit. |
 | [COM-Wrapper](../../../standard/native-interop/com-wrappers.md) | Erläutert Runtime Callable Wrapper, die es verwaltetem Code ermöglichen, com-Methoden und COM Callable Wrapper aufzurufen, die com-Clients das Aufrufen von .net-Objektmethoden ermöglichen. |
 | [Erweiterte COM-Interoperabilität](../../../framework/interop/index.md) | Enthält Links zu Themen, in denen die COM-Interoperabilität in Bezug auf Wrapper, Ausnahmen, Vererbung, Threading, Ereignisse, Konvertierungen und Marshalling behandelt wird. |

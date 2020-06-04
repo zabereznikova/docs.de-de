@@ -2,32 +2,32 @@
 title: Übersicht über Attribute
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a0a080d44796289cc3562803c84ec915dcedd314
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349479"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400706"
 ---
 # <a name="attributes-overview-visual-basic"></a>Übersicht über Attribute (Visual Basic)
 
-Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Informationen Code (Assemblys, Typen, Methoden, Eigenschaften usw.) zuzuordnen. Nach dem Zuordnen eines Attributs zu einer Programmentität kann das Attribut zur Laufzeit mit einer Technik namens *Reflektion* abgefragt werden. Weitere Informationen finden Sie unter [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).
+Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Informationen Code (Assemblys, Typen, Methoden, Eigenschaften usw.) zuzuordnen. Nach dem Zuordnen eines Attributs zu einer Programmentität kann das Attribut zur Laufzeit mit einer Technik namens *Reflektion* abgefragt werden. Weitere Informationen finden Sie unter [Reflektion (Visual Basic)](../reflection.md).
 
 Attribute verfügen über die folgenden Eigenschaften:
 
-- Attribute fügen Metadaten zu Ihrem Programm hinzu. *Metadaten* sind Informationen zu den Typen, die in einem Programm definiert sind. Alle .NET-Assemblys enthalten einen festgelegten Satz von Metadaten, der die Typen und Typmember beschreibt, die in der Assembly definiert sind. Sie können benutzerdefinierte Attribute hinzufügen, um zusätzliche erforderliche Informationen anzugeben. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Attribute (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).
+- Attribute fügen Metadaten zu Ihrem Programm hinzu. *Metadaten* sind Informationen zu den Typen, die in einem Programm definiert sind. Alle .NET-Assemblys enthalten einen festgelegten Satz von Metadaten, der die Typen und Typmember beschreibt, die in der Assembly definiert sind. Sie können benutzerdefinierte Attribute hinzufügen, um zusätzliche erforderliche Informationen anzugeben. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Attribute (Visual Basic)](creating-custom-attributes.md).
 
 - Sie können eines oder mehrere Attribute auf ganze Assemblys, Module oder kleinere Programmelemente wie Klassen und Eigenschaften anwenden.
 
 - Attribute können Argumente auf die gleiche Art wie Methoden und Eigenschaften akzeptieren.
 
-- Das Programm kann seine eigenen Metadaten oder die Metadaten in anderen Programmen mithilfe der Reflektion untersuchen. Weitere Informationen finden Sie unter [Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).
+- Das Programm kann seine eigenen Metadaten oder die Metadaten in anderen Programmen mithilfe der Reflektion untersuchen. Weitere Informationen finden Sie unter [Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic)](accessing-attributes-by-using-reflection.md).
 
 ## <a name="using-attributes"></a>Verwenden von Attributen
 
-Attribute können in nahezu jeder Deklaration platziert werden, auch wenn ein bestimmtes Attribut die Typen der Deklarationen einschränkt, für die es gültig ist. In Visual Basic ist ein Attribut in spitzen Klammern eingeschlossen (\< >). Es muss in derselben Zeile direkt vor dem Element angezeigt werden, auf das es angewendet wird.
+Attribute können in nahezu jeder Deklaration platziert werden, auch wenn ein bestimmtes Attribut die Typen der Deklarationen einschränkt, für die es gültig ist. In Visual Basic wird ein Attribut in eckige Klammern () eingeschlossen \< > . Es muss in derselben Zeile direkt vor dem Element angezeigt werden, auf das es angewendet wird.
 
-In diesem Beispiel wird das <xref:System.SerializableAttribute>-Attribut benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:
+In diesem Beispiel wird das Attribut <xref:System.SerializableAttribute> benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:
 
 ```vb
 <System.Serializable()> Public Class SampleClass
@@ -100,7 +100,7 @@ Die Liste der möglichen `target`-Werte wird in der folgenden Tabelle gezeigt:
 |`assembly`|Gesamte Assembly|
 |`module`|Aktuelles Assemblymodul (unterscheidet sich von einem Visual Basic-Modul)|
 
- Im folgenden Beispiel wird veranschaulicht, wie Attribute auf Assemblys und Module angewendet werden. Weitere Informationen finden Sie unter [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Gemeinsame Attribute (Visual Basic)).
+ Im folgenden Beispiel wird veranschaulicht, wie Attribute auf Assemblys und Module angewendet werden. Weitere Informationen finden Sie unter [Common Attributes (Visual Basic)](common-attributes.md) (Gemeinsame Attribute (Visual Basic)).
 
 ```vb
 Imports System.Reflection
@@ -138,18 +138,18 @@ Die folgende Liste enthält einige häufige Verwendungsmöglichkeiten von Attrib
 
 Weitere Informationen finden Sie unter:
 
-- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Erstellen benutzerdefinierter Attribute (Visual Basic))
+- [Creating Custom Attributes (Visual Basic)](creating-custom-attributes.md) (Erstellen benutzerdefinierter Attribute (Visual Basic))
 
-- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))
+- [Accessing Attributes by Using Reflection (Visual Basic)](accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))
 
-- [How to: Create a C/C++ Union by Using Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md) (Gewusst wie: Erstellen einer Union in C/C++ mit Attributen (Visual Basic))
+- [How to: Create a C/C++ Union by Using Attributes (Visual Basic)](how-to-create-a-c-cpp-union-by-using-attributes.md) (Gewusst wie: Erstellen einer Union in C/C++ mit Attributen (Visual Basic))
 
-- [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Gemeinsame Attribute (Visual Basic))
+- [Common Attributes (Visual Basic)](common-attributes.md) (Gemeinsame Attribute (Visual Basic))
 
-- [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md) (Aufruferinformationen (Visual Basic))
+- [Caller Information (Visual Basic)](../caller-information.md) (Aufruferinformationen (Visual Basic))
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
-- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Visual Basic-Programmierhandbuch](../../index.md)
+- [Reflektion (Visual Basic)](../reflection.md)
 - [Attribute](../../../../standard/attributes/index.md)

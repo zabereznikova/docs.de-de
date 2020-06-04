@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen'
+title: 'Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 89a39e8e9cd66b1d774da70be47c7c6824cccef2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9ebbbe9d2e6d36f5ab2bc7f7c916d18c9240a06d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350037"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404887"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)
 
@@ -126,9 +126,9 @@ Anonyme Typen können Eigenschaftennamen und -typen auch aus anderen Quellen abl
 
   [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+- [Objektinitialisierer: benannte und anonyme Typen](object-initializers-named-and-anonymous-types.md)
+- [Lokaler Typrückschluss](../variables/local-type-inference.md)
+- [Anonyme Typen](anonymous-types.md)
+- [Schlüssel](../../../language-reference/modifiers/key.md)

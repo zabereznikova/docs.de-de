@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 1660971e2a1a11d7a2d14f222cd149edf4aa4c7b
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: fb61b04021bd844fade94413b4f3b28b82f6411b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249512"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402797"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>Ein IsNot-Operand vom Typ „Typname“ kann nur mit „Nothing“ verglichen werden, da „Typname“ ein Typ ist, der NULL-Werte zulässt
 
-Eine Variable, die als NULL-Werttyp deklariert wurde, wurde mit einem anderen Ausdruck als `Nothing` der Verwendung des `IsNot` Operators verglichen.
+Eine Variable, die als Werte zulässt-Werttyp deklariert wurde, wurde mit einem anderen Ausdruck als `Nothing` mit dem- `IsNot` Operator verglichen.
 
 **Fehler-ID:** BC32128
 
@@ -34,7 +34,7 @@ If number IsNot Nothing Then
 End If
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Auf NULL festlegbare Werttypen](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Nullable-Werttypen](../../programming-guide/language-features/data-types/nullable-value-types.md)
+- [IsNot-Operator](../operators/isnot-operator.md)

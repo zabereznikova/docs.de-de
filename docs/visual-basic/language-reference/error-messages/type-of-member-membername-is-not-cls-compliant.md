@@ -1,5 +1,5 @@
 ---
-title: Der Typ des Members '<membername>' ist nicht CLS-kompatibel.
+title: Der Typ des Members "<membername>" ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: f6f66617774dccff4450cce42904126acf5c3769
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 030cb31b8f1ba0e8eaa82eeb8e37153411a53404
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590686"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400304"
 ---
-# <a name="type-of-member-membername-is-not-cls-compliant"></a>Typ des Members '\<Membername >' ist nicht CLS-kompatibel.
-Der Datentyp angegeben werden, für die dieses Element ist nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS). Dies ist ein Fehler in der Komponente, nicht auf, weil die .NET Framework und Visual Basic diesen Datentyp unterstützt. Allerdings kann in eine andere Komponente, die in streng CLS-kompatiblem Code geschrieben diesen Datentyp nicht unterstützt. Eine solche Komponente möglicherweise nicht erfolgreich mit der Komponente interagieren können.  
+# <a name="type-of-member-membername-is-not-cls-compliant"></a>Der Typ des Members "\<membername>" ist nicht CLS-kompatibel.
+Der für diesen Member angegebene Datentyp ist nicht Teil der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS). Dies ist kein Fehler in der Komponente, da der .NET Framework und Visual Basic diesen Datentyp unterstützen. Eine andere Komponente, die in streng CLS-kompatibler Code geschrieben wird, unterstützt diesen Datentyp jedoch möglicherweise nicht. Eine solche Komponente ist möglicherweise nicht in der Lage, mit Ihrer Komponente erfolgreich zu interagieren.  
   
  Die folgenden Visual Basic-Datentypen sind nicht CLS-kompatibel:  
   
-- [SByte-Datentyp](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte-Datentyp](../data-types/sbyte-data-type.md)  
   
-- [UInteger-Datentyp](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger-Datentyp](../data-types/uinteger-data-type.md)  
   
-- [ULong-Datentyp](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong-Datentyp](../data-types/ulong-data-type.md)  
   
-- [UShort-Datentyp](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort-Datentyp](../data-types/ushort-data-type.md)  
   
  Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -33,13 +33,13 @@ Der Datentyp angegeben werden, für die dieses Element ist nicht Teil der [Sprac
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Wenn die Komponente nur mit anderen Komponenten von .NET Framework-Schnittstellen oder nicht mit anderen Komponenten verbunden ist, müssen Sie keine Änderungen vornehmen.  
+- Wenn sich die Komponente nur mit anderen .NET Framework Komponenten oder nicht mit anderen Komponenten verbinden lässt, müssen Sie nichts ändern.  
   
-- Wenn mit einer Komponente, die nicht für .NET Framework geschrieben wurden verbunden sind, können Sie über Reflektion oder in der Dokumentation, um zu bestimmen können, ob dieser Datentyp unterstützt. Wenn dies der Fall ist, müssen Sie keine Änderungen vornehmen.  
+- Wenn Sie mit einer Komponente verbunden sind, die nicht für die .NET Framework geschrieben wurde, können Sie möglicherweise entweder durch Reflektion oder aus der Dokumentation ermitteln, ob dieser Datentyp unterstützt wird. Wenn dies der Fall ist, müssen Sie nichts ändern.  
   
-- Wenn Sie mit einer Komponente verbunden sind, die diesen Datentyp nicht unterstützt, müssen Sie es mit den ähnlichsten CLS-kompatiblen Typ ersetzen. Anstelle von `UInteger` könnten Sie beispielsweise `Integer` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen. Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long`ersetzen.  
+- Wenn Sie mit einer Komponente interagieren, die diesen Datentyp nicht unterstützt, müssen Sie Sie durch den nächstgelegenen CLS-kompatiblen Typ ersetzen. Anstelle von `UInteger` könnten Sie beispielsweise `Integer` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen. Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long`ersetzen.  
   
-- Wenn Sie mit Automatisierungs- oder COM-Objekten verbunden ist, Bedenken Sie, dass einige Typen in .NET Framework über andere Datenbreiten als verfügen. Zum Beispiel umfasst `uint` in anderen Umgebungen oft 16 Bits. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `UShort` anstelle von `UInteger` in verwaltetem Visual Basic-Code.  
+- Wenn Sie mit Automation-oder COM-Objekten interagieren, beachten Sie, dass einige Typen unterschiedliche Daten breiten aufweisen als in der .NET Framework. Zum Beispiel umfasst `uint` in anderen Umgebungen oft 16 Bits. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `UShort` anstelle von `UInteger` in Ihrem verwalteten Visual Basic-Code.  
   
 ## <a name="see-also"></a>Siehe auch
 

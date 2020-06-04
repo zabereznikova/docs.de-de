@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: b576062ccbb751a23ecb68e4ae070103078b0c6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9a4dc9904f7875f0405227014e2238fe91f4c69
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664241"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402784"
 ---
-# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>"\<Typname >' ist ein Typ und kann nicht als Ausdruck verwendet werden
-Ein Typname tritt auf, wo ein Ausdruck erforderlich ist. Ein Ausdruck muss aus einer Kombination von Variablen, Konstanten, Literalen, Eigenschaften und `Function` -Prozeduraufrufen bestehen.  
+# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>\<typename> ist ein Typ und kann nicht als Ausdruck verwendet werden.
+Ein Typname tritt auf, wenn ein Ausdruck erforderlich ist. Ein Ausdruck muss aus einer Kombination von Variablen, Konstanten, Literalen, Eigenschaften und `Function` -Prozeduraufrufen bestehen.  
   
  **Fehler-ID:** BC30108  
   
@@ -23,6 +23,6 @@ Ein Typname tritt auf, wo ein Ausdruck erforderlich ist. Ein Ausdruck muss aus e
   
 - Entfernen Sie den Typnamen, und erstellen Sie den Ausdruck mit gültigen Elementen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operatoren und Ausdrücke](../../programming-guide/language-features/operators-and-expressions/index.md)
