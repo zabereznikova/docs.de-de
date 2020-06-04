@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Generieren von XML aus CSV-Dateien'
+title: 'Vorgehensweise: Generieren von XML aus CSV-Dateien'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 647cab02c730f18629c669c3526520b2a98a86d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636821"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396609"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Gewusst wie: Generieren von XML aus CSV-Dateien (Visual Basic)
-In diesem Beispiel wird gezeigt, wie Language-Integrated Query (LINQ) und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] verwendet werden, um eine XML-Datei aus einer Datei mit Komma getrennten Werten (CSV) zu generieren.  
+In diesem Beispiel wird gezeigt, wie Sie mit LINQ (Language Integrated Query) und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code führt eine LINQ-Abfrage für ein Array von Zeichen folgen aus.  
+ Der folgende Code führt eine LINQ-Abfrage für ein Zeichenfolgenarray aus.  
   
 ```vb  
       ' Create the text file.  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

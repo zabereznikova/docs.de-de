@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
-ms.openlocfilehash: dfc43748d0754f0a6a29763c42ab82d9937f89f8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 392de45b0ee1688224f3e8170b0144f1acdb0912
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344292"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360565"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Nothing und Zeichenfolgen in Visual Basic
-Die Visual Basic-Laufzeit und die .NET Framework werden `Nothing` anders ausgewertet, wenn Sie Zeichen folgen sind.  
+Die Visual Basic Runtime und die .NET Framework werden unter `Nothing` schiedlich ausgewertet, wenn Sie Zeichen folgen sind.  
   
 ## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime und die .NET Framework  
  Betrachten Sie das folgende Beispiel:  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- Die Visual Basic Runtime wertet `Nothing` in der Regel als leere Zeichenfolge ("") aus. Der .NET Framework jedoch nicht, und löst eine Ausnahme aus, wenn versucht wird, einen Zeichen folgen Vorgang auf `Nothing`auszuführen.  
+ Die Visual Basic-Laufzeit wird in der Regel `Nothing` als leere Zeichenfolge ("") ausgewertet. Der .NET Framework jedoch nicht, und löst eine Ausnahme aus, wenn versucht wird, einen Zeichen folgen Vorgang für auszuführen `Nothing` .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Einführung in Zeichenfolgen in Visual Basic](introduction-to-strings.md)

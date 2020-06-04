@@ -1,13 +1,13 @@
 ---
-title: 'Gewusst wie: Füllen von Objektauflistungen aus mehreren Quellen (LINQ)'
+title: 'Vorgehensweise: Auffüllen von Objektauflistungen aus mehreren Quellen (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346975"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396518"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Gewusst wie: Auffüllen von Objekt Auflistungen aus mehreren Quellen (LINQ) (Visual Basic)
 
@@ -18,7 +18,7 @@ In diesem Beispiel erfahren Sie, wie Sie Daten aus unterschiedlichen Quellen in 
 
 ## <a name="to-create-the-data-file"></a>So erstellen Sie die Datendatei
 
-- Kopieren Sie die Dateien "Names. csv" und "Scores. csv" in Ihren Projektordner, wie unter Gewusst [wie: Verknüpfen von Inhalten aus unterschiedlichen Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)beschrieben.
+- Kopieren Sie die Dateien "Names. csv" und "Scores. csv" in Ihren Projektordner, wie unter Gewusst [wie: Verknüpfen von Inhalten aus unterschiedlichen Dateien (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)beschrieben.
 
 ## <a name="example"></a>Beispiel
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-In der Klausel der [SELECT-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md) wird ein Objektinitialisierer verwendet, um jedes neue `Student` Objekt mithilfe der Daten aus den beiden Quellen zu instanziieren.
+In der Klausel [SELECT-Klausel](../../../language-reference/queries/select-clause.md) wird ein Objektinitialisierer verwendet, um jedes neue `Student` Objekt mithilfe der Daten aus den beiden Quellen zu instanziieren.
 
 Wenn Sie die Ergebnisse einer Abfrage nicht speichern müssen, können anonyme Typen praktischer als benannte Typen sein. Benannte Typen sind für die Übergabe von Abfrageergebnissen außerhalb der Methode, in der die Abfrage ausgeführt wird, erforderlich. In folgendem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgeführt; allerdings werden statt benannter anonyme Typen verwendet:
 
@@ -128,6 +128,6 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [LINQ und Zeichen folgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ und Zeichenfolgen (Visual Basic)](linq-and-strings.md)

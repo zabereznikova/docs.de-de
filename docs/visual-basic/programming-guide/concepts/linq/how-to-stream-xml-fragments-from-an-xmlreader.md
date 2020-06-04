@@ -1,13 +1,13 @@
 ---
-title: 'Gewusst wie: Streamen von XML-Fragmenten aus einem XmlReader'
+title: 'Vorgehensweise: Streamen von XML-Fragmenten aus einem XmlReader'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: ff22625767c4e0752ca19d5a315395934b566230
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636795"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397699"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Gewusst wie: Streamen von XML-Fragmenten aus einem XmlReader-Objekt (Visual Basic)
 Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte XML-Struktur in den Arbeitsspeicher geladen werden. In diesem Thema wird gezeigt, wie mit einem <xref:System.Xml.XmlReader> Fragmente gestreamt werden können.  
@@ -18,12 +18,12 @@ Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte X
   
  Wenn Sie eine Teilstruktur erstellen möchten, können Sie einen <xref:System.Xml.XmlReader> instanziieren, den Reader auf dem Knoten positionieren, der in eine <xref:System.Xml.Linq.XElement>-Struktur umgewandelt werden soll, und dann das <xref:System.Xml.Linq.XElement>-Objekt erstellen.  
   
- Das Thema Gewusst [wie: Streamen von XML-Fragmenten mit Zugriff auf Header Informationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) enthält Informationen und ein Beispiel für das Streamen eines komplexeren Dokuments.  
+ Das Thema Gewusst [wie: Streamen von XML-Fragmenten mit Zugriff auf Header Informationen (Visual Basic)](how-to-stream-xml-fragments-with-access-to-header-information.md) enthält Informationen und ein Beispiel für das Streamen eines komplexeren Dokuments.  
   
- Das Thema Gewusst [wie: Durchführen einer streamingtransformation großer XML-Dokumente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) enthält ein Beispiel für die Verwendung von LINQ to XML, um extrem große XML-Dokumente zu transformieren und gleichzeitig einen geringen Speicherbedarf zu erhalten.  
+ Das Thema Gewusst [wie: Durchführen einer streamingtransformation großer XML-Dokumente (Visual Basic)](how-to-perform-streaming-transform-of-large-xml-documents.md) enthält ein Beispiel für die Verwendung von LINQ to XML, um extrem große XML-Dokumente zu transformieren und gleichzeitig einen geringen Speicherbedarf zu erhalten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel erstellt eine benutzerdefinierte Achsenmethode. Sie können Sie mithilfe einer LINQ-Abfrage Abfragen. Die benutzerdefinierte Achsenmethode `StreamRootChildDoc` eignet sich vor allem zum Lesen eines Dokuments, das ein sich wiederholendes `Child`-Element enthält.  
+ Dieses Beispiel erstellt eine benutzerdefinierte Achsenmethode. Zum Abfragen kann eine LINQ-Abfrage verwendet werden. Die benutzerdefinierte Achsenmethode `StreamRootChildDoc` eignet sich vor allem zum Lesen eines Dokuments, das ein sich wiederholendes `Child`-Element enthält.  
   
 ```vb  
 Module Module1  
@@ -145,7 +145,7 @@ ccc
   
  In diesem Beispiel ist das Quelldokument sehr klein. Dieses Beispiel würde aber auch dann wenig Speicher beanspruchen, wenn das Quelldokument Millionen `Child`-Elemente enthielte.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Exemplarische Vorgehensweise: Implementieren von IEnumerable (of T) in Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
-- [XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Exemplarische Vorgehensweise: Implementieren von IEnumerable(Of T) in Visual Basic](../../language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
+- [XML-Datei (Visual Basic)](parsing-xml.md)

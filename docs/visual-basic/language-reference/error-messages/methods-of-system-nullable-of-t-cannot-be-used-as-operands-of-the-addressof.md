@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: e55e561fa20a3740d352537958681b0a66fc381e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61c6fe7c33b3292066e653304ded43a863413723
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592043"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397219"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>Methoden von „System.Nullable(Of T)“ können nicht als Operanden des Operators „AddressOf“ verwendet werden
-Eine Anweisung verwendet die `AddressOf` -Operator mit einem Operanden, eine Prozedur darstellt. die <xref:System.Nullable%601> Struktur.  
+Eine-Anweisung verwendet den- `AddressOf` Operator mit einem Operanden, der eine Prozedur der- <xref:System.Nullable%601> Struktur darstellt.  
   
  **Fehler-ID:** BC32126  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Ersetzen Sie den Namen der Prozedur in der `AddressOf` -Klausel mit einem Operanden, die nicht Mitglied ist <xref:System.Nullable%601>.  
+- Ersetzen Sie den Prozedur Namen in der- `AddressOf` Klausel durch einen Operanden, der kein Member von ist <xref:System.Nullable%601> .  
   
-- Schreiben Sie eine Klasse, die die Methode umschließt <xref:System.Nullable%601> , die Sie verwenden möchten. Im folgenden Beispiel die `NullableWrapper` -Klasse definiert eine neue Methode namens `GetValueOrDefault`. Da diese neue Methode kein Mitglied ist <xref:System.Nullable%601>, dieses angewendet werden kann, um `nullInstance`, eine Instanz der einen nullable-Typ, um ein Argument für bilden `AddressOf`.  
+- Schreiben Sie eine Klasse, die die Methode von umschließt <xref:System.Nullable%601> , die Sie verwenden möchten. Im folgenden Beispiel definiert die- `NullableWrapper` Klasse eine neue Methode mit dem Namen `GetValueOrDefault` . Da diese neue Methode kein Member von ist <xref:System.Nullable%601> , kann Sie auf `nullInstance` eine Instanz eines Typs, der NULL-Werte zulässt, angewendet werden, um ein Argument für zu bilden `AddressOf` .  
   
 ```vb  
 Module Module1  
@@ -61,9 +61,9 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Nullable%601>
-- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Auf NULL festlegbare Werttypen](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [AddressOf-Operator](../operators/addressof-operator.md)
+- [Nullable-Werttypen](../../programming-guide/language-features/data-types/nullable-value-types.md)
+- [Generische Typen in Visual Basic (Visual Basic)](../../programming-guide/language-features/data-types/generic-types.md)
