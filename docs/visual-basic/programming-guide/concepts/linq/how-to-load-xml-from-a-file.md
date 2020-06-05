@@ -1,13 +1,13 @@
 ---
-title: 'Gewusst wie: Laden von XML aus einer Datei'
+title: 'Vorgehensweise: Laden von XML aus einer Datei'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: 72a5adb8c7165f8113584f27bea64efde4ec58fb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: faea93b8eea2b713a8beb7fe199be7d644a07706
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336109"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397998"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>Gewusst wie: Laden von XML aus einer Datei (Visual Basic)
 
@@ -17,7 +17,7 @@ In diesem Thema wird gezeigt, wie mit der <xref:System.Xml.Linq.XElement.Load%2A
 
 Im folgenden Beispiel wird gezeigt, wie ein XML-Dokument aus einer Datei geladen werden kann. Dabei wird <legacyBold>books.xml</legacyBold> geladen und die XML-Struktur auf der Konsole ausgegeben.
 
-In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim booksFromFile As XElement = XElement.Load("books.xml")
@@ -50,6 +50,6 @@ Dieser Code erzeugt die folgende Ausgabe:
 </Catalog>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML-Datei (Visual Basic)](parsing-xml.md)

@@ -2,12 +2,12 @@
 title: Partitionieren von Daten
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 2ab4e27ef6d825b9100fc3c15b7a9554ae49e516
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 34749f9d7b137bade66b6103650871246c3cc532
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353155"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406845"
 ---
 # <a name="partitioning-data-visual-basic"></a>Partitionierung von Daten (Visual Basic)
 Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz in zwei Abschnitte unterteilt wird, ohne die Elemente dabei neu anzuordnen, und bei dem anschließend einer der Abschnitte zurückzugeben wird.  
@@ -29,31 +29,31 @@ Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz
   
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
   
-### <a name="skip"></a>Skip  
- Im folgenden Codebeispiel wird die `Skip`-Klausel in Visual Basic verwendet, um die ersten vier Zeichen folgen in einem Array von Zeichen folgen zu überspringen, bevor die restlichen Zeichen folgen im Array zurückgegeben werden.  
+### <a name="skip"></a>Überspringen  
+ Im folgenden Codebeispiel wird die- `Skip` Klausel in Visual Basic verwendet, um die ersten vier Zeichen folgen in einem Array von Zeichen folgen zu überspringen, bevor die restlichen Zeichen folgen im Array zurückgegeben werden.  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- Im folgenden Codebeispiel wird die `Skip While`-Klausel in Visual Basic verwendet, um die Zeichen folgen in einem Array zu überspringen, während der erste Buchstabe der Zeichenfolge "a" ist. Die verbleibenden Zeichen folgen im Array werden zurückgegeben.  
+ Im folgenden Codebeispiel wird die- `Skip While` Klausel in Visual Basic verwendet, um die Zeichen folgen in einem Array zu überspringen, während der erste Buchstabe der Zeichenfolge "a" ist. Die verbleibenden Zeichen folgen im Array werden zurückgegeben.  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- Im folgenden Codebeispiel wird die `Take`-Klausel in Visual Basic verwendet, um die ersten beiden Zeichen folgen in einem Array von Zeichen folgen zurückzugeben.  
+ Im folgenden Codebeispiel wird die- `Take` Klausel in Visual Basic verwendet, um die ersten beiden Zeichen folgen in einem Array von Zeichen folgen zurückzugeben.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- Im folgenden Codebeispiel wird die `Take While`-Klausel in Visual Basic verwendet, um Zeichen folgen aus einem Array zurückzugeben, während die Länge der Zeichenfolge fünf oder kleiner ist.  
+ Im folgenden Codebeispiel wird die- `Take While` Klausel in Visual Basic verwendet, um Zeichen folgen aus einem Array zurückzugeben, während die Länge der Zeichenfolge fünf oder kleiner ist.  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Skip-Klausel](../../../../visual-basic/language-reference/queries/skip-clause.md)
-- [Skip While-Klausel](../../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [Take-Klausel](../../../../visual-basic/language-reference/queries/take-clause.md)
-- [Take While-Klausel](../../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)
+- [Skip-Klausel](../../../language-reference/queries/skip-clause.md)
+- [SkipWhile-Klausel](../../../language-reference/queries/skip-while-clause.md)
+- [Take-Klausel](../../../language-reference/queries/take-clause.md)
+- [TakeWhile-Klausel](../../../language-reference/queries/take-while-clause.md)

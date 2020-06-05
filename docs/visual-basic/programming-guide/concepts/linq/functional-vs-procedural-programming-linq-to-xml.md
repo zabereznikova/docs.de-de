@@ -1,13 +1,13 @@
 ---
-title: Funktionale kontra prozeduraler Programmierung (LINQ to XML)
+title: Vergleich von funktionaler und prozeduraler Programmierung (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: 3d1e3cf01b30454d29836f176afcd39cb2b55b73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0b525f13298e7402369b890516434cec47e01542
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353416"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398434"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Funktionale und prozedurale Programmierung (LINQ to XML) (Visual Basic)
 Es gibt viele verschiedene Arten von XML-Anwendungen:  
@@ -36,10 +36,10 @@ Es gibt viele verschiedene Arten von XML-Anwendungen:
   
  Sie können LINQ to XML für beide Ansätze verwenden. Bei beiden Ansätzen werden die gleichen Klassen und mitunter auch die gleichen Methoden verwendet. Der Aufbau und die Ziele der beiden Ansätze unterscheiden sich jedoch deutlich. Welcher Ansatz im konkreten Fall leistungsfähiger und weniger speicherintensiv ist, hängt von der jeweiligen Situation ab. Außerdem ist es auch von Fall zu Fall unterschiedlich, ob der Code gerade einfacher zu schreiben und besser zu unterhalten ist.  
   
- Weitere Informationen zu den beiden Ansätzen finden Sie unter [in-Memory-XML-Strukturänderung im Vergleich zur funktionalen Konstruktion (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
+ Weitere Informationen zu den beiden Ansätzen finden Sie unter [in-Memory-XML-Strukturänderung im Vergleich zur funktionalen Konstruktion (LINQ to XML) (Visual Basic)](in-memory-xml-tree-modification-vs-functional-construction.md).  
   
- Ein Tutorial zum Schreiben funktionaler Transformationen finden Sie unter [reine funktionale XML-Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Ein Tutorial zum Schreiben funktionaler Transformationen finden Sie unter [reine funktionale XML-Transformationen (Visual Basic)](pure-functional-transformations-of-xml.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die LINQ to XML Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [Übersicht über die LINQ to XML Programmierung (Visual Basic)](linq-to-xml-programming-overview.md)

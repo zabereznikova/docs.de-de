@@ -1,13 +1,13 @@
 ---
-title: Serialisieren in Dateien, TextWriters und XmlWriters3
+title: Serialisieren in Dateien, Textwriters und XmlWriters3
 ms.date: 07/20/2015
 ms.assetid: 7a0c24df-79ef-41a0-87f5-e6cf79382da9
-ms.openlocfilehash: 63577d955da89fde0a2320b4cf84414ccbb69c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8b929ef02b8fd9c6a9f29ea997a754699a6e1c4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786788"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403562"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serialisieren in Dateien, TextWriters und XmlWriters
 
@@ -31,6 +31,6 @@ Wenn Sie möchten, dass keine Einzüge vorgenommen werden und der nicht signifik
 
 Beispiele finden Sie im entsprechenden Referenzthema.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Serialisieren von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serialisieren von XML-Strukturen (Visual Basic)](serializing-xml-trees.md)

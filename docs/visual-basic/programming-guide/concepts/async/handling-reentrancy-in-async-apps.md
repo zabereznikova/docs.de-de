@@ -2,12 +2,12 @@
 title: Ablauf des erneuten Eintretens in asynchronen Anwendungen
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 110298a2ca937dbf39c94cfe9df29afb2e76a91c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 2d1af14016f82b5de875d3638b132e14c7d2280d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021495"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396635"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Ablauf des erneuten Eintretens in asynchronen Anwendungen (Visual Basic)
 
@@ -17,9 +17,9 @@ Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintret
 > Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.
 
 > [!NOTE]
-> Für die App-Entwicklung ist ab sofort mindestens Transport Layer Security (TLS) Version 1.2 erforderlich. Wenn Ihre App auf eine .NET Framework-Version vor 4.7 abzielt, lesen Sie den folgenden Artikel für [TLS (Transport Layer Security) mit .NET Framework](../../../../framework/network-programming/tls.md).
+> Für die App-Entwicklung ist ab sofort mindestens Transport Layer Security (TLS) Version 1.2 erforderlich. Wenn Ihre App für eine .NET Framework-Version vor 4.7 vorgesehen ist, lesen Sie den Artikel [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../../framework/network-programming/tls.md).
 
-## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a>Reentrancy erkennen
+## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a> Erkennen von Ablaufinvarianz
 
 Im Beispiel in diesem Thema entscheiden sich Benutzer für eine Schaltfläche **Start**, um eine asynchrone App zu initiieren, mit der eine Reihe von Websites heruntergeladen und die Gesamtanzahl der heruntergeladenen Bytes berechnet werden. Eine synchrone Version des Beispiels würde auf die gleiche Weise reagieren, unabhängig davon, wie oft ein Benutzer die Schaltfläche auswählt, da diese Ereignisse nach dem ersten Mal vom UI-Thread ignoriert werden, bis die Anwendung ausgeführt wurde. In einer asynchronen App reagiert der UI-Thread weiterhin, und Sie können möglicherweise erneut in den asynchronen Vorgang eintreten, bevor er abgeschlossen ist.
 
@@ -77,23 +77,23 @@ TOTAL bytes returned:  890591
 
 Sie können den Code, der diese Ausgabe erzeugt, überprüfen, indem Sie einen Bildlauf zum Ende dieses Themas durchführen. Sie können mit dem Code experimentieren, indem Sie die Projektmappe auf den lokalen Computer herunterladen und das WebsiteDownload-Projekt ausführen, oder, indem Sie den Code am Ende dieses Themas zum Erstellen Ihres eigenen Projekts verwenden. Weitere Informationen und Anweisungen finden Sie unter [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample).
 
-## <a name="handling-reentrancy"></a><a name="BKMK_HandlingReentrancy"></a>Umgang mit Reentrancy
+## <a name="handling-reentrancy"></a><a name="BKMK_HandlingReentrancy"></a> Umgang mit Ablaufinvarianz
 
 Sie können das erneute Eintreten auf verschiedene Weise behandeln, je nachdem, was von der App ausgeführt werden soll. In diesem Thema werden die folgenden Beispiele zur Veranschaulichung verwendet:
 
-- [Deaktivieren der Schaltfläche „Start“](#BKMK_DisableTheStartButton)
+- [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)
 
   Deaktivieren der Schaltfläche **Start**, während der Vorgang ausgeführt wird, sodass der Benutzer ihn nicht unterbrechen kann
 
-- [Abbrechen und Neustarten des Vorgangs](#BKMK_CancelAndRestart)
+- [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart)
 
   Abbrechen aller Vorgänge, die noch ausgeführt werden, wenn der Benutzer die Schaltfläche **Start** erneut anklickt, sodass nur der zuletzt angeforderte Vorgang fortgesetzt wird
 
-- [Ausführen mehrerer Vorgänge und Einreihen der Ausgabe in die Warteschlange](#BKMK_RunMultipleOperations)
+- [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations)
 
   Alle angeforderten Vorgänge asynchron ausführen lassen, die Anzeige der Ausgabe allerdings koordinieren, damit die Ergebnisse der einzelnen Vorgänge zusammen und in Reihenfolge angezeigt werden.
 
-### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a>Deaktivieren der Start-Taste
+### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a> Die Schaltfläche „Start“ deaktivieren
 
 Sie können die Schaltfläche **Start** während eines ausführenden Vorgangs blockieren, indem Sie die Schaltfläche oben im `StartButton_Click`-Ereignishandler deaktivieren. Sie können die Schaltfläche aus einem `Finally`-Block erneut aktivieren, sobald der Vorgang beendet ist, damit Benutzer die App erneut ausführen können.
 
@@ -122,13 +122,13 @@ End Sub
 
 Aufgrund der Änderungen reagiert die Schaltfläche nicht, während die Websites von `AccessTheWebAsync` heruntergeladen werden, sodass ein erneutes Eintreten in den Prozess nicht möglich ist.
 
-### <a name="cancel-and-restart-the-operation"></a><a name="BKMK_CancelAndRestart"></a>Abbrechen und Neustarten des Vorgangs
+### <a name="cancel-and-restart-the-operation"></a><a name="BKMK_CancelAndRestart"></a> Den Vorgang abbrechen und neu starten
 
 Anstatt die Schaltfläche **Start** zu deaktivieren, kann die Schaltfläche aktiv bleiben. Wenn der Benutzer die Schaltfläche dann erneut anklickt, brechen Sie den bereits ausgeführten Vorgang ab und lassen den zuletzt begonnenen Vorgang fortsetzen.
 
-Weitere Informationen zum Abbrechen finden Sie unter [Feinabstimmung Ihrer Async-Anwendung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Weitere Informationen zum Abbruch finden Sie unter [Feinabstimmung der Async-Anwendung (Visual Basic)](fine-tuning-your-async-application.md).
 
-Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch aus [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".
+Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".
 
 1. Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.
 
@@ -139,7 +139,7 @@ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüf
         Dim cts As CancellationTokenSource
     ```
 
-2. Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der `cts` Wert `Nothing`von ist , ist noch kein Vorgang aktiv. Wenn der Wert nicht `Nothing`ist, wird der bereits ausgeführte Vorgang abgebrochen.
+2. Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der Wert von `cts` ist `Nothing` , ist noch kein Vorgang aktiv. Wenn der Wert nicht ist `Nothing` , wird der Vorgang, der bereits ausgeführt wird, abgebrochen.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüf
     cts = newCTS
     ```
 
-4. Am Ende `StartButton_Click`von ist der aktuelle Prozess abgeschlossen, `cts` legen `Nothing`Sie daher den Wert zurück auf .
+4. Am Ende von `StartButton_Click` ist der aktuelle Prozess abgeschlossen. Legen Sie daher den Wert von `cts` auf zurück `Nothing` .
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-Wenn Sie die **Schaltfläche Start** mehrmals auswählen, während diese App ausgeführt wird, sollte sie Ergebnisse liefern, die der folgenden Ausgabe ähneln:
+Wenn Sie die Schaltfläche " **Start** " mehrmals auswählen, während diese APP ausgeführt wird, sollte Sie Ergebnisse wie die folgende Ausgabe ergeben:
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -278,13 +278,13 @@ TOTAL bytes returned:  890591
 
 Zum Ausschließen der Teillisten entfernen Sie die Kommentarmarkierungen der ersten Codezeile in `StartButton_Click`, um das Textfeld bei jedem erneuten Start des Vorgangs zu löschen.
 
-### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a>Ausführen mehrerer Vorgänge und Warteschlange der Ausgabe
+### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a> Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen
 
 Das dritte Beispiel ist das schwierigste, da von der App jedes Mal, wenn der Benutzer die Schaltfläche **Start** anklickt, ein anderer asynchroner Vorgang gestartet wird und alle Vorgänge vollständig ausgeführt werden. Alle angeforderten Vorgänge laden Websites asynchron aus der Liste herunter, doch die Ausgabe der Vorgänge wird sequenziell dargestellt. Das bedeutet, die tatsächliche Downloadaktivität überlappt, wie es die Ausgabe in [Erkennen von Ablaufinvarianz](#BKMK_RecognizingReentrancy) zeigt, die Ergebnislisten für jede Gruppe aber getrennt angezeigt werden.
 
 Die Vorgänge geben global <xref:System.Threading.Tasks.Task>, `pendingWork` frei, der als Gatekeeper für den Anzeigenprozess dient.
 
-Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code unter [Erstellen der App](#BKMK_BuildingTheApp)einfügen, oder Sie können den Anweisungen unter Herunterladen der [App](#BKMK_DownloadingTheApp) folgen, um das Beispiel herunterzuladen und dann das QueueResults-Projekt auszuführen.
+Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code zum entwickeln [der APP](#BKMK_BuildingTheApp)einfügen, oder Sie können die Anweisungen unter [herunterladen der APP](#BKMK_DownloadingTheApp) befolgen, um das Beispiel herunterzuladen und dann das queueresults-Projekt auszuführen.
 
 Die folgende Ausgabe zeigt das Ergebnis bei einmaliger Betätigung der Schaltfläche **Start**. Die Buchstabenbezeichnung „A“ gibt an, dass das Ergebnis vom ersten Klick auf die Schaltfläche **Start** stammt. Die Zahlen geben die Reihenfolge der URL in der Liste der Downloadziele wieder.
 
@@ -516,7 +516,7 @@ Die Ausgabe zeigt die folgenden Muster an.
   TOTAL bytes returned:  915908
   ```
 
-- Die `pendingWork` Aufgabe `Nothing` steht `FinishOneGroupAsync` nur für Gruppe A am Anfang, die zuerst gestartet wurde. Gruppe A hat bei Erreichen von `FinishOneGroupAsync` einen Erwartungsausdruck noch nicht abgeschlossen. Daher wurde die Steuerung nicht an `AccessTheWebAsync` zurückgegeben, und die erste Zuweisung zu `pendingWork` ist nicht aufgetreten.
+- Der `pendingWork` Task befindet sich `Nothing` `FinishOneGroupAsync` nur für die Gruppe A, die zuerst gestartet wurde. Gruppe A hat bei Erreichen von `FinishOneGroupAsync` einen Erwartungsausdruck noch nicht abgeschlossen. Daher wurde die Steuerung nicht an `AccessTheWebAsync` zurückgegeben, und die erste Zuweisung zu `pendingWork` ist nicht aufgetreten.
 
 - Die folgenden zwei Zeilen werden immer zusammen in der Ausgabe angezeigt. Der Code wird zwischen dem Starten des Vorgangs einer Gruppe in `StartButton_Click` und dem Zuweisen eines Tasks für die Gruppe zu `pendingWork` nie unterbrochen.
 
@@ -527,7 +527,7 @@ Die Ausgabe zeigt die folgenden Muster an.
 
   Nachdem eine Gruppe in `StartButton_Click` eintritt, schließt der Vorgang einen Erwartungsausdruck erst ab, wenn der Vorgang in `FinishOneGroupAsync` eintritt. Daher kann kein weiterer Vorgang während dieses Codeabschnitts die Steuerung übernehmen.
 
-## <a name="reviewing-and-running-the-example-app"></a><a name="BKMD_SettingUpTheExample"></a>Überprüfen und Ausführen der Beispiel-App
+## <a name="reviewing-and-running-the-example-app"></a><a name="BKMD_SettingUpTheExample"></a> Die Beispiel-App überprüfen und ausführen
 
 Zum besseren Verständnis der Beispiel-App können Sie sie herunterladen, sie selbst erstellen oder den Code am Ende dieses Themas überprüfen, ohne die App zu implementieren.
 
@@ -536,7 +536,7 @@ Zum besseren Verständnis der Beispiel-App können Sie sie herunterladen, sie se
 
 ### <a name="downloading-the-app"></a><a name="BKMK_DownloadingTheApp"></a> Herunterladen der App
 
-1. Sie können die komprimierte Datei unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen.
+1. Sie können die komprimierte Datei unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen.
 
 2. Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.
 
@@ -554,13 +554,13 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 ##### <a name="to-build-a-wpf-app"></a>So erstellen Sie eine WPF-App
 
-1. Starten Sie Visual Studio.
+1. Starten Sie Visual Studio.
 
-2. Wählen Sie auf der Menüleiste **Datei**, **Neu**, **Projekt** aus.
+2. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.
 
-     Das Dialogfeld **Neues Projekt** wird geöffnet.
+     Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-3. Erweitern Sie im Bereich **Installierte Vorlagen** **Visual Basic**, und erweitern Sie dann **Windows**.
+3. Erweitern Sie im Bereich **installierte Vorlagen** den Bereich **Visual Basic**, und erweitern Sie dann **Windows**.
 
 4. Wählen Sie in der Liste der Projekttypen **WPF-Anwendung** aus.
 
@@ -570,7 +570,7 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 6. Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.
 
-     Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für MainWindow.xaml im **Projektmappen-Explorer**, und wählen Sie dann **Code anzeigen**aus.
+     Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen-Explorer**, und wählen Sie dann **Code anzeigen**aus.
 
 7. Ersetzen Sie den automatisch generierten Code in der **XAML**-Ansicht der Datei „MainWindow.xaml“ durch den folgenden Code.
 
@@ -592,13 +592,13 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
      Ein einfaches Fenster, das ein Textfeld und eine Schaltfläche enthält, wird in der **Entwurfsansicht** der Datei „MainWindow.xaml“ angezeigt.
 
-8. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Referenzen,** und wählen Sie **Referenz hinzufügen**aus.
+8. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und klicken Sie anschließend auf **Verweis hinzufügen**.
 
      Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu, sofern dieser nicht bereits ausgewählt ist.
 
-9. Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für MainWindow.xaml.vb, und wählen Sie dann **Code anzeigen**aus.
+9. Öffnen Sie in **Projektmappen-Explorer**das Kontextmenü für "MainWindow. XAML. vb", und wählen Sie dann **Code anzeigen**aus.
 
-10. Ersetzen Sie in MainWindow.xaml.vb den Code durch den folgenden Code.
+10. Ersetzen Sie den Code in "MainWindow. XAML. vb" durch den folgenden Code.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -682,7 +682,7 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 12. Nehmen Sie die Änderungen aus [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton), [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart) oder [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations) vor, um mit Ablaufinvarianz umzugehen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await ( Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await ( Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](index.md)

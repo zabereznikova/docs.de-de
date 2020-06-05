@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Streamen von XML-Fragmenten in Headerinformationen'
+title: 'Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 325609b9f8cf1feebcb4be1fcfd0122e12100156
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8d0543ff5a772768292c0e3117f41bea9367d23a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636691"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397686"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Gewusst wie: Streamen von XML-Fragmenten mit Zugriff auf Header Informationen (Visual Basic)
 Es kann vorkommen, dass Sie willkürlich große XML-Dateien lesen und Ihre Anwendung so schreiben müssen, dass der Arbeitsspeicherbedarf der Anwendung vorhersehbar ist. Wenn Sie versuchen, eine XML-Struktur mit einer großen XML-Datei zu füllen, ändert sich Ihre Speicherbeanspruchung proportional zur Größe der Datei, also exzessiv. Deshalb sollten Sie stattdessen ein Streamingverfahren verwenden.  
   
- Zu diesem Zweck können Sie die Anwendung mit <xref:System.Xml.XmlReader> schreiben. Möglicherweise möchten Sie jedoch LINQ verwenden, um die XML-Struktur abzufragen. Bei Verwendung von  können Sie eine eigene benutzerdefinierte Achsenmethode schreiben. Weitere Informationen finden Sie unter Gewusst [wie: Schreiben einer LINQ to XML Achsen Methode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Zu diesem Zweck können Sie die Anwendung mit <xref:System.Xml.XmlReader> schreiben. Es empfiehlt sich aber häufig, zum Abfragen der XML-Struktur LINQ zu verwenden. Bei Verwendung von {1} können Sie eine eigene benutzerdefinierte Achsenmethode schreiben. Weitere Informationen finden Sie unter Gewusst [wie: Schreiben einer LINQ to XML Achsen Methode (Visual Basic)](how-to-write-a-linq-to-xml-axis-method.md).  
   
  Zum Schreiben einer eigenen Achsenmethode müssen Sie zunächst eine kleine Methode schreiben, die mit dem <xref:System.Xml.XmlReader> Knoten so lange liest, bis sie zu einem der Knoten gelangt, die Sie interessieren. Die Methode ruft dann die <xref:System.Xml.Linq.XNode.ReadFrom%2A>-Methode auf, die aus dem <xref:System.Xml.XmlReader> liest und ein XML-Fragment instanziiert. Sie können dann LINQ-Abfragen für die benutzerdefinierte Achsenmethode schreiben.  
   
@@ -230,6 +230,6 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Erweiterte LINQ to XML Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Erweiterte LINQ to XML Programmierung (Visual Basic)](advanced-linq-to-xml-programming.md)

@@ -2,19 +2,19 @@
 title: Aufruferinformationen
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7c87b540a68f4d0219918fed66de6c1b635104a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349476"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400667"
 ---
-# <a name="caller-information-visual-basic"></a>Aufruferinformationen (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Caller Information (Visual Basic) (Aufruferinformationen (Visual Basic))
 Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen. Diese Informationen sind zum Verfolgen, Debuggen und Erstellen von Diagnosetools sehr nützlich.  
   
  Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
   
-|Attribut|Beschreibung|Typ|  
+|Attribut|BESCHREIBUNG|Typ|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Dateipfad zum Zeitpunkt der Kompilierung.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird.|`Integer`|  
@@ -46,7 +46,7 @@ End Sub
 '   source line number: 15  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen einen expliziten Standardwert für jeden optionalen Parameter angeben. Sie können Aufrufer-Informationsattribute nicht auf Parameter anwenden, die nicht als optional festgelegt wurden.  
   
  Durch die Aufrufer-Informationsattribute wird ein Parameter nicht optional. Stattdessen beeinflussen sie den Standardwert, der beim Auslassen des Arguments übergeben wird.  
@@ -55,7 +55,7 @@ End Sub
   
  Sie können die optionalen Argumente explizit angeben, um die Aufruferinformationen zu steuern oder auszublenden.  
   
-### <a name="MEMBERNAMES"></a> Membernamen  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a>Elementnamen  
  Sie können das `CallerMemberName`-Attribut verwenden, um den Membernamen nicht als `String`-Argument für die aufgerufene Methode angeben zu müssen. Auf diese Weise umgehen Sie das Problem, dass durch die **Umgestaltung mit Umbenennung** die `String`-Werte nicht geändert werden. Dieser Vorteil ist für die folgenden Aufgaben besonders hilfreich:  
   
 - Verwenden der Ablaufverfolgung und der Diagnoseprogramme  
@@ -64,19 +64,19 @@ End Sub
   
  Im folgenden Diagramm sind die Membernamen aufgeführt, die beim Verwenden des `CallerMemberName`-Attributs zurückgegeben werden.  
   
-|Aufrufe erfolgen in|Ergebnis des Membernamens|  
+|Aufrufe erfolgen in|Membernamenergebnis|  
 |-------------------------|------------------------|  
 |Methode, Eigenschaft oder Ereignis|Der Name der Methode, der Eigenschaft oder des Ereignisses, aus dem bzw. aus der der Aufruf stammt.|  
-|Konstruktor|Die Zeichenfolge ".ctor"|  
-|Statischer Konstruktor|Die Zeichenfolge ".cctor"|  
-|Destructor|Die Zeichenfolge "Finalize"|  
-|Benutzerdefinierte Operatoren oder Konvertierungen|Der generierte Name für den Member, beispielsweise "op_Addition".|  
+|Konstruktor|Die Zeichenfolge „.ctor“|  
+|Statischer Konstruktor|Die Zeichenfolge „.cctor“|  
+|Destruktor|Die Zeichenfolge „Finalize“|  
+|Benutzerdefinierte Operatoren oder Konvertierungen|Der generierte Name für den Member, beispielsweise „op_Addition“.|  
 |Attributkonstruktor|Der Name des Members, auf den das Attribut angewendet wird. Wenn das Attribut ein beliebiges Element in einem Member ist (z. B. ein Parameter, ein Rückgabewert oder ein generischer Typparameter), wird als Ergebnis der Name des Members ausgegeben, der diesem Element zugeordnet ist.|  
 |Kein enthaltender Member (z. B. auf Assemblyebene oder Attribute, die auf Typen angewendet werden)|Der Standardwert des optionalen Parameters.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Attribute (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Gemeinsame Attribute (Visual Basic))
-- [Optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Programming Concepts (Visual Basic) (Programmierkonzepte (Visual Basic))](../../../visual-basic/programming-guide/concepts/index.md)
+- [Attribute (Visual Basic)](../../language-reference/attributes.md)
+- [Common Attributes (Visual Basic)](attributes/common-attributes.md) (Gemeinsame Attribute (Visual Basic))
+- [Optionale Parameter](../language-features/procedures/optional-parameters.md)
+- [Programmier Konzepte (Visual Basic)](index.md)

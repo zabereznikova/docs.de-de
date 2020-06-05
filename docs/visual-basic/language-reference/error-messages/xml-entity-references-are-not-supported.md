@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC31180
 ms.assetid: 2a393327-d8e2-4187-85b1-642b4f53b4ae
-ms.openlocfilehash: 02620b5b4a33fcfcdecd8c9152106262df252c85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ae997d853a93999a3b29215ea1257da7a1d48c84
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662565"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406455"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>XML-Entitätsverweise werden nicht unterstützt
-Verweis auf eine Entität (z. B. `©`), ist nicht definiert. in dem XML 1.0-Spezifikation enthalten als Wert für ein XML-Literal ist. Nur `&`, `"`, `<`, `>`, und `'` XML-Entitätsverweise in XML-Literalen unterstützt werden.  
+Ein Entitäts Verweis (z. b. `©` ), der nicht in der XML 1,0-Spezifikation definiert ist, ist als Wert für ein XML-Literalzeichen enthalten. Nur `&` `"` -, `<` -, `>` -,-und `'` XML-Entitäts Verweise werden in XML-Literalen unterstützt.  
   
  **Fehler-ID:** BC31180  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Entfernen Sie den nicht unterstützten Entitätsverweis.  
+- Entfernen Sie den nicht unterstützten Entitäts Verweis.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Literale und die XML 1.0-Spezifikation](../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)
-- [XML-Literale](../../../visual-basic/language-reference/xml-literals/index.md)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML-Literale und die XML 1.0-Spezifikation](../../programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)
+- [XML-Literale](../xml-literals/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

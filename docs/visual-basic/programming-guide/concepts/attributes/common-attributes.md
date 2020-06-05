@@ -2,14 +2,14 @@
 title: Allgemeine Attribute
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353530"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400718"
 ---
-# <a name="common-attributes-visual-basic"></a>Allgemeine Attribute (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic) (Gemeinsame Attribute (Visual Basic))
 
 In diesem Thema werden die Attribute beschrieben, die in Visual Basic Programmen am häufigsten verwendet werden.
 
@@ -23,7 +23,7 @@ In diesem Thema werden die Attribute beschrieben, die in Visual Basic Programmen
 
 - [Visual Basic Attribute](#VB)
 
-## <a name="Global"></a> Globale Attribute
+## <a name="global-attributes"></a><a name="Global"></a>Globale Attribute
 
 Die meisten Attribute werden auf spezifische Sprachelemente wie Klassen oder Methoden angewendet. Einige Attribute sind jedoch global – sie gelten für eine gesamte Assembly oder ein Modul. Zum Beispiel kann das <xref:System.Reflection.AssemblyVersionAttribute>-Attribut zum Einbetten von Versionsinformationen in eine Assembly verwendet werden. Diese sieht wie folgt aus:
 
@@ -31,9 +31,9 @@ Die meisten Attribute werden auf spezifische Sprachelemente wie Klassen oder Met
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-Globale Attribute werden im Quellcode nach allen `Imports`-Anweisungen der obersten Ebene und vor allen Typen-, Modul-oder Namespace Deklarationen angezeigt. Globale Attribute können in mehreren Quelldateien auftreten, jedoch müssen die Dateien in einem einzigen Kompilierungsdurchlauf kompiliert werden. Für Visual Basic Projekte werden globale Attribute in der Regel in die Datei AssemblyInfo. vb eingefügt (die Datei wird automatisch erstellt, wenn Sie ein Projekt in Visual Studio erstellen).
+Globale Attribute werden im Quellcode nach allen Anweisungen der obersten Ebene `Imports` und vor allen Typen-, Modul-oder Namespace Deklarationen angezeigt. Globale Attribute können in mehreren Quelldateien auftreten, jedoch müssen die Dateien in einem einzigen Kompilierungsdurchlauf kompiliert werden. Für Visual Basic Projekte werden globale Attribute in der Regel in die Datei AssemblyInfo. vb eingefügt (die Datei wird automatisch erstellt, wenn Sie ein Projekt in Visual Studio erstellen).
 
-Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Sie lassen sich den folgenden Kategorien zuordnen:
+Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Sie werden in die folgenden Kategorien eingeteilt:
 
 - Attribute für Assemblyidentitäten
 
@@ -47,7 +47,7 @@ Drei Attribute bestimmen mit einem starken Namen (falls zutreffend) die Identit�
 
 In der folgenden Tabelle werden die Identitätsattribute aufgeführt.
 
-|Attribut|Zweck|
+|attribute|Zweck|
 |---------------|-------------|
 |<xref:System.Reflection.AssemblyName>|Beschreibt vollständig die Identität einer Assembly|
 |<xref:System.Reflection.AssemblyVersionAttribute>|Gibt die Version einer Assembly an|
@@ -58,7 +58,7 @@ In der folgenden Tabelle werden die Identitätsattribute aufgeführt.
 
 Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. Die folgende Tabelle zeigt die Informationsattribute, die im Namespace <xref:System.Reflection?displayProperty=nameWithType> definiert werden.
 
-|Attribut|Zweck|
+|attribute|Zweck|
 |---------------|-------------|
 |<xref:System.Reflection.AssemblyProductAttribute>|Definiert ein benutzerdefiniertes Attribut, das den Produktnamen für ein Assemblymanifest angibt|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Marke für ein Assemblymanifest angibt|
@@ -79,7 +79,7 @@ Sie können Attribute für Assemblymanifeste verwenden, um Informationen im Asse
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Assemblykonfiguration (z.B. Retail oder Debug) für ein Assemblymanifest angibt|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definiert einen benutzerfreundlichen Standardalias für ein Assemblymanifest|
 
-## <a name="Obsolete"></a> Obsolete-Attribut
+## <a name="obsolete-attribute"></a><a name="Obsolete"></a>Veraltetes Attribut
 
 Das `Obsolete`-Attribut markiert eine Programmentität als eine, die nicht mehr zur Verwendung empfohlen wird. Jede Verwendung einer Entität, die als veraltet markiert ist, generiert anschließend eine Warnung oder einen Fehler, je nachdem, wie das Attribut konfiguriert ist. Beispiel:
 
@@ -122,7 +122,7 @@ Das `Obsolete`-Attribut kann ohne Argumente verwendet werden, jedoch ist das Ein
 
 Das `Obsolete`-Attribut ist ein Attribut zur einmaligen Nutzung und kann auf jede Entität angewendet werden, die Attribute zulässt. `Obsolete` ist ein Alias für <xref:System.ObsoleteAttribute>.
 
-## <a name="Conditional"></a> Conditional-Attribut
+## <a name="conditional-attribute"></a><a name="Conditional"></a>Conditional-Attribut
 
 Das `Conditional`-Attribut macht die Ausführung einer Methode abhängig von einem Vorverarbeitungsbezeichner. Das `Conditional`-Attribut ist ein Alias für <xref:System.Diagnostics.ConditionalAttribute> und kann auf eine Methode oder Attributklasse angewendet werden.
 
@@ -218,25 +218,25 @@ Class SampleClass
 End Class
 ```
 
-## <a name="CallerInfo"></a> Aufufrerinfoattribute
+## <a name="caller-info-attributes"></a><a name="CallerInfo"></a>Aufruferinfoattribute
 
 Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen.
 
 Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:
 
-|Attribut|Beschreibung|Typ|
+|attribute|BESCHREIBUNG|Typ|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Pfad zum Zeitpunkt der Kompilierung.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Der Methoden- oder Eigenschaftenname des Aufrufers Weitere Informationen finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Der Methoden- oder Eigenschaftenname des Aufrufers Weitere Informationen finden Sie unter [Aufruferinformationen (Visual Basic)](../caller-information.md).|`String`|
 
-Weitere Informationen zu den aufruferinfoattributen finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
+Weitere Informationen zu den aufruferinfoattributen finden Sie unter [Aufruferinformationen (Visual Basic)](../caller-information.md).
 
-## <a name="VB"></a>Visual Basic Attribute
+## <a name="visual-basic-attributes"></a><a name="VB"></a>Visual Basic Attribute
 
 In der folgenden Tabelle sind die Attribute aufgeführt, die für Visual Basic spezifisch sind.
 
-|Attribut|Zweck|
+|attribute|Zweck|
 |---------------|-------------|
 |<xref:Microsoft.VisualBasic.ComClassAttribute>|Gibt dem Compiler an, dass die Klasse als COM-Objekt verfügbar gemacht werden soll.|
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Ermöglicht den Zugriff auf Modul Elemente mithilfe der Qualifikation, die für das Modul benötigt wird.|
@@ -245,15 +245,15 @@ In der folgenden Tabelle sind die Attribute aufgeführt, die für Visual Basic s
 
 ### <a name="comclassattribute"></a>ComClassAttribute
 
-Verwenden Sie `COMClassAttribute`, um den Prozess der Erstellung von COM-Komponenten aus Visual Basic zu vereinfachen. COM-Objekte unterscheiden sich erheblich von .NET Framework Assemblys, und ohne `COMClassAttribute`müssen Sie eine Reihe von Schritten ausführen, um ein COM-Objekt aus Visual Basic zu generieren. Bei Klassen, die mit `COMClassAttribute`gekennzeichnet sind, führt der Compiler viele dieser Schritte automatisch aus.
+Verwenden `COMClassAttribute` Sie, um den Prozess der Erstellung von COM-Komponenten aus Visual Basic zu vereinfachen. COM-Objekte unterscheiden sich erheblich von .NET Framework Assemblys, und ohne `COMClassAttribute` müssen Sie eine Reihe von Schritten ausführen, um ein COM-Objekt aus Visual Basic zu generieren. Bei Klassen `COMClassAttribute` , die mit markiert sind, führt der Compiler viele dieser Schritte automatisch aus.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-Verwenden Sie `HideModuleNameAttribute`, um den Zugriff auf Modul Elemente zuzulassen, indem Sie nur die für das Modul erforderliche Qualifikation verwenden.
+Verwenden `HideModuleNameAttribute` Sie, um den Zugriff auf Modul Elemente nur über die für das Modul erforderliche Qualifikation zuzulassen.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-Verwenden Sie `VBFixedStringAttribute`, um Visual Basic zu erzwingen, dass eine Zeichenfolge mit fester Länge erstellt wird. Zeichen folgen weisen standardmäßig eine Variable Länge auf, und dieses Attribut ist nützlich, wenn Zeichen folgen in Dateien gespeichert werden. Dies veranschaulicht der folgende Code:
+Verwenden `VBFixedStringAttribute` Sie, um Visual Basic zu erzwingen, dass eine Zeichenfolge mit fester Länge erstellt wird. Zeichen folgen weisen standardmäßig eine Variable Länge auf, und dieses Attribut ist nützlich, wenn Zeichen folgen in Dateien gespeichert werden. Dies veranschaulicht der folgende Code:
 
 ```vb
 Structure Worker
@@ -267,13 +267,13 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-Verwenden Sie `VBFixedArrayAttribute`, um Arrays mit fester Größe zu deklarieren. Wie Visual Basic Zeichen folgen haben Arrays standardmäßig eine Variable Länge. Dieses Attribut ist nützlich, wenn Daten in Dateien serialisiert oder geschrieben werden.
+Verwenden `VBFixedArrayAttribute` Sie, um Arrays mit fester Größe zu deklarieren. Wie Visual Basic Zeichen folgen haben Arrays standardmäßig eine Variable Länge. Dieses Attribut ist nützlich, wenn Daten in Dateien serialisiert oder geschrieben werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic-Programmierhandbuch](../../index.md)
 - [Attribute](../../../../standard/attributes/index.md)
-- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))
+- [Reflektion (Visual Basic)](../reflection.md)
+- [Accessing Attributes by Using Reflection (Visual Basic)](accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))
