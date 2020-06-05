@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: f86245c649647be4e040a61083d8b93eee4d7422
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c123438a86a2c3293a99770107d970535fcdbdf8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353690"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388789"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Verkettungsoperatoren in Visual Basic
 
@@ -32,18 +32,18 @@ Diese Operatoren können auch `String`-Variablen verketten, wie das folgende Bei
 
 ## <a name="differences-between-the-two-concatenation-operators"></a>Unterschiede zwischen den beiden Verkettungsoperatoren
 
-Der [+-Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) hat den Hauptzweck, zwei Zahlen hinzuzufügen. Damit können jedoch auch numerische Operanden mit Zeichenfolgenoperanden verkettet werden. Der `+`-Operator verfügt über einen komplexen Satz an Regeln, die bestimmen, ob eine Addition oder Verkettung stattfindet, ob ein Compilerfehler signalisiert wird oder ob eine <xref:System.InvalidCastException>-Ausnahme bei Laufzeit ausgelöst wird.
+Der [+-Operator](../../../language-reference/operators/addition-operator.md) hat den Hauptzweck, zwei Zahlen hinzuzufügen. Damit können jedoch auch numerische Operanden mit Zeichenfolgenoperanden verkettet werden. Der `+`-Operator verfügt über einen komplexen Satz an Regeln, die bestimmen, ob eine Addition oder Verkettung stattfindet, ob ein Compilerfehler signalisiert wird oder ob eine <xref:System.InvalidCastException>-Ausnahme bei Laufzeit ausgelöst wird.
 
-Der [&-Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) ist nur für `String` Operanden definiert und erweitert seine Operanden unabhängig von der Einstellung `Option Strict`immer zu `String`. Der `&`-Operator wird für die Zeichenfolgenverkettung empfohlen, da er ausschließlich für Zeichenfolgen definiert wurde und da er die Gefahr einer unbeabsichtigten Konvertierung reduziert.
+Der [&-Operator](../../../language-reference/operators/concatenation-operator.md) ist nur für `String` Operanden definiert und erweitert seine Operanden immer auf `String` , unabhängig von der Einstellung von `Option Strict` . Der `&`-Operator wird für die Zeichenfolgenverkettung empfohlen, da er ausschließlich für Zeichenfolgen definiert wurde und da er die Gefahr einer unbeabsichtigten Konvertierung reduziert.
 
 ## <a name="performance-string-and-stringbuilder"></a>Leistung: String und StringBuilder
 
 Wenn Sie zahlreiche Manipulationen an einer Zeichenfolge durchführen, z. B. Verkettungen, Löschungen und Ersetzungen, kann Ihre Leistung von der <xref:System.Text.StringBuilder>-Klasse im <xref:System.Text>-Namespace profitieren. Sie benötigen eine zusätzliche Anweisung, um ein <xref:System.Text.StringBuilder>-Objekt zu erstellen und zu initialisieren, sowie eine weitere Anweisung, um den endgültigen Wert in einen `String` zu konvertieren. Diese Zeit können Sie jedoch wieder einholen, da <xref:System.Text.StringBuilder> eine schnellere Leistung bietet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Typen von Zeichen folgen Bearbeitungsmethoden in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
-- [Arithmetische Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Vergleichs Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Logische und bitweise Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Option Strict-Anweisung](../../../language-reference/statements/option-strict-statement.md)
+- [Verschiedene Typen von Zeichenfolgenbearbeitungsmethoden in Visual Basic](../strings/types-of-string-manipulation-methods.md)
+- [Arithmetische Operatoren in Visual Basic](arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](comparison-operators.md)
+- [Logische und bitweise Operatoren in Visual Basic](logical-and-bitwise-operators.md)

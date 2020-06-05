@@ -15,25 +15,25 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: c7e820fe4c6de78171be0510608d7b9da1f97f2f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a5b571591a2ec62915c2a112f9a088a12837c9cf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351461"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362345"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable (Visual Basic)
 Gibt an, dass eine Klasse nicht als Basisklasse verwendet werden kann.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **Alternative Begriffe**. Eine Klasse, die nicht vererbt werden kann, wird manchmal als *versiegelte* Klasse bezeichnet.  
   
- Der `NotInheritable` Modifizierer kann in diesem Kontext verwendet werden:  
+ Der- `NotInheritable` Modifizierer kann in diesem Kontext verwendet werden:  
   
- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class-Anweisung](../statements/class-statement.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Inherits-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Inherits Statement](../statements/inherits-statement.md)
+- [MustInherit](mustinherit.md)
+- [Schlüsselwörter](../keywords/index.md)

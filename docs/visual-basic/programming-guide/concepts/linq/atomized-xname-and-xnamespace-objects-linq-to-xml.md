@@ -2,12 +2,12 @@
 title: Atomisierte XName- und XNamespace-Objekte (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: 0ffed5d00364f6614b439480607ed521f52754ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6a94bc0f2fd8013997e233b300fa19c12671bf29
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345734"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383688"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomisierte XName-und XNamespace-Objekte (LINQ to XML) (Visual Basic)
 
@@ -19,7 +19,7 @@ Atomisierung bedeutet, dass zwei <xref:System.Xml.Linq.XName>-Objekte dieselbe I
 
 Damit eine Klasse atomisierte Objekte unterstützt, muss der Konstruktor für die Klasse privat sein, nicht öffentlich. Bei einem öffentlichen Konstruktor könnten Sie ein nicht atomisiertes Objekt erstellen. Die <xref:System.Xml.Linq.XName>-Klasse und die <xref:System.Xml.Linq.XNamespace>-Klasse implementieren einen impliziten Konvertierungsoperator, um eine Zeichenfolge in einen <xref:System.Xml.Linq.XName> oder einen <xref:System.Xml.Linq.XNamespace> zu konvertieren. Auf diese Weise können Sie eine Instanz dieser Objekte abrufen. Sie können keine Instanz über einen Konstruktor abrufen, da Sie auf den Konstruktor nicht zugreifen können.
 
-<xref:System.Xml.Linq.XName> und <xref:System.Xml.Linq.XNamespace> implementieren auch die Gleichheits-und Ungleichheits Operatoren, um zu bestimmen, ob die beiden verglichenen Objekte Verweise auf dieselbe Instanz sind.
+Außerdem werden von <xref:System.Xml.Linq.XName> und <xref:System.Xml.Linq.XNamespace> Gleichheits- und Ungleichheitsoperatoren implementiert, mit denen Sie ermitteln können, ob die beiden verglichenen Objekte Verweise auf dieselbe Instanz darstellen.
 
 ## <a name="example"></a>Beispiel
 
@@ -74,4 +74,4 @@ Dieses Beispiel erzeugt die folgende Ausgabe:
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Leistung (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Leistung (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)

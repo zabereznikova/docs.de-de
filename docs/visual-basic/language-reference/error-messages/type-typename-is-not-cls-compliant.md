@@ -1,5 +1,5 @@
 ---
-title: Typ '<typename>' ist nicht CLS-kompatibel.
+title: Typ "<typename>" ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - bc40041
@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: 2805cac71cb36d21f5ab21a5875183803d07a4b4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eacf5036ebc6fc31dfa0e8de39c4fb574c9072b3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642364"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386957"
 ---
-# <a name="type-typename-is-not-cls-compliant"></a>Typ \<Typname > ist nicht CLS-kompatibel.
-Eine Variable, Eigenschaft oder Funktionsrückgabe wird mit einem Datentyp deklariert, die nicht CLS-kompatibel ist.  
+# <a name="type-typename-is-not-cls-compliant"></a>Typ "\<typename>" ist nicht CLS-kompatibel.
+Eine Variable, eine Eigenschaft oder eine Funktions Rückgabe wird mit einem Datentyp deklariert, der nicht CLS-kompatibel ist.  
   
- Für eine Anwendung einhalten der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS), müssen sie nur CLS-kompatible Typen verwenden.  
+ Damit eine Anwendung mit der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS) kompatibel ist, darf Sie nur CLS-kompatible Typen verwenden.  
   
  Die folgenden Visual Basic-Datentypen sind nicht CLS-kompatibel:  
   
-- [SByte-Datentyp](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte-Datentyp](../data-types/sbyte-data-type.md)  
   
-- [UInteger-Datentyp](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger-Datentyp](../data-types/uinteger-data-type.md)  
   
-- [ULong-Datentyp](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong-Datentyp](../data-types/ulong-data-type.md)  
   
-- [UShort-Datentyp](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort-Datentyp](../data-types/ushort-data-type.md)  
   
  **Fehler-ID:** BC40041  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Wenn Ihre Anwendung CLS-kompatibel sein muss, ändern Sie den Datentyp der dieses Element in den ähnlichsten CLS-kompatiblen Typ. Anstelle von `UInteger` könnten Sie beispielsweise `Integer` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen. Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long`ersetzen.  
+- Wenn die Anwendung CLS-kompatibel sein muss, ändern Sie den Datentyp dieses Elements in den nächstgelegenen CLS-kompatiblen Typ. Anstelle von `UInteger` könnten Sie beispielsweise `Integer` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen. Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long`ersetzen.  
   
-- Wenn Ihre Anwendung nicht CLS-kompatibel sein muss, müssen Sie keine Änderungen vornehmen. Sie sollten jedoch beachten die Nichtkompatibilität, sein.
+- Wenn Ihre Anwendung nicht CLS-kompatibel sein muss, müssen Sie nichts ändern. Beachten Sie jedoch die Nichtkonformität.

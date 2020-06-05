@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 6869d981cdca20b915a588969134fc50e8d1ff47
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: df7e32a81746a97a78a4a2a28e57032affa73cc0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838246"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386594"
 ---
 # <a name="modules-visual-basic"></a>Module (Visual Basic)
 
@@ -17,7 +17,7 @@ Visual Basic stellt mehrere Module bereit, mit denen Sie häufige Aufgaben in Ih
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Enthält verschiedene Konstanten. Diese Konstanten können an beliebiger Stelle im Code verwendet werden.|  
+|<xref:Microsoft.VisualBasic.Constants>|Enthält verschiedene Konstanten. Diese Konstanten können an einer beliebigen Stelle im Code verwendet werden.|  
 |<xref:Microsoft.VisualBasic.ControlChars>|Enthält Konstante Steuerzeichen zum Drucken und Anzeigen von Text.|  
 |<xref:Microsoft.VisualBasic.Conversion>|Enthält Member, die Dezimalzahlen in andere Basen, Zahlen in Zeichen folgen, Zeichen folgen in Zahlen und einen Datentyp in einen anderen konvertieren.|  
 |<xref:Microsoft.VisualBasic.DateAndTime>|Enthält Elemente, die das aktuelle Datum oder die aktuelle Uhrzeit erhalten, Datumsberechnungen durchführen, ein Datum oder eine Uhrzeit zurückgeben, das Datum oder die Uhrzeit oder die Dauer eines Prozesses festlegen.|  
@@ -30,6 +30,6 @@ Visual Basic stellt mehrere Module bereit, mit denen Sie häufige Aufgaben in Ih
 |<xref:Microsoft.VisualBasic.Strings>|Enthält Member, die Zeichen folgen Operationen wie das Neuformatieren von Zeichen folgen, das Durchsuchen einer Zeichenfolge, das erhalten der Länge einer Zeichenfolge usw. ausführen.|  
 |<xref:Microsoft.VisualBasic.VBMath>|Enthält Elemente, die mathematische Operationen ausführen.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)
+- [Sprachreferenz zu Visual Basic](index.md)

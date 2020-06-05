@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Aufrufen einer überladenen Prozedur'
+title: 'Vorgehensweise: Aufrufen einer überladenen Prozedur'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: d983f5f6183c33141079ed35171f7a73f254450f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de101309fa1edaaddc3defc5759d9293fbef684c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340205"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388542"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer überladenen Prozedur (Visual Basic)
 Der Vorteil beim Überladen einer Prozedur ist die Flexibilität des Aufrufes. Der aufrufende Code kann die Informationen abrufen, die er an die Prozedur übergeben muss, und dann einen einzelnen Prozedur Namen aufrufen, unabhängig davon, welche Argumente er übergibt.  
@@ -26,21 +26,21 @@ Der Vorteil beim Überladen einer Prozedur ist die Flexibilität des Aufrufes. D
   
 3. Sie müssen nicht ermitteln, welche Version der Prozedur aufgerufen werden soll. Visual Basic übergibt die Steuerung an die Version, die mit der Argumentliste übereinstimmt.  
   
-     Im folgenden Beispiel wird die in Gewusst [wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)deklarierte `post` Prozedur aufgerufen. Er ruft die Kundenidentifikation ab, bestimmt, ob es sich um eine `String` oder eine `Integer`handelt, und ruft dann in beiden Fällen dieselbe Prozedur auf.  
+     Im folgenden Beispiel wird die `post` in Gewusst [wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)deklarierte Prozedur aufgerufen. Er ruft die Kundenidentifikation ab, bestimmt, ob es sich um ein `String` oder handelt `Integer` , und ruft dann in beiden Fällen dieselbe Prozedur auf.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
      [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Verfahren](./index.md)
+- [Vorgehensweisen](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Prozedurüberladung](./procedure-overloading.md)
 - [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)
-- [Gewusst wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Gewusst wie: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Vorgehensweise: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Vorgehensweise: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Überlegungen zur Prozedurüberladung](./considerations-in-overloading-procedures.md)
-- [Überladungsauflösung](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Überladungs Auflösung](./overload-resolution.md)
+- [Overloads](../../../language-reference/modifiers/overloads.md)
