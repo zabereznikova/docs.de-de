@@ -10,32 +10,32 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: b252f7939e812f31103d4bd98ffd50953679f042
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7724053e3732c909523e4e2d3b65bb1918c29d3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351475"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362358"
 ---
-# <a name="narrowing-visual-basic"></a><span data-ttu-id="1f4c0-102">Narrowing (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f4c0-102">Narrowing (Visual Basic)</span></span>
-<span data-ttu-id="1f4c0-103">Gibt an, dass ein Konvertierungs Operator (`CType`) eine Klasse oder Struktur in einen Typ konvertiert, der möglicherweise nicht in der Lage ist, einige der möglichen Werte der ursprünglichen Klasse oder Struktur zu speichern.</span><span class="sxs-lookup"><span data-stu-id="1f4c0-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.</span></span>  
+# <a name="narrowing-visual-basic"></a><span data-ttu-id="884c3-102">Narrowing (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="884c3-102">Narrowing (Visual Basic)</span></span>
+<span data-ttu-id="884c3-103">Gibt an, dass ein Konvertierungs Operator ( `CType` ) eine Klasse oder Struktur in einen Typ konvertiert, der möglicherweise nicht in der Lage ist, einige der möglichen Werte der ursprünglichen Klasse oder Struktur zu speichern.</span><span class="sxs-lookup"><span data-stu-id="884c3-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.</span></span>  
   
-## <a name="converting-with-the-narrowing-keyword"></a><span data-ttu-id="1f4c0-104">Umrechnen mit dem einschränkenden Schlüsselwort</span><span class="sxs-lookup"><span data-stu-id="1f4c0-104">Converting with the Narrowing Keyword</span></span>  
- <span data-ttu-id="1f4c0-105">In der Konvertierungs Prozedur muss zusätzlich zu `Narrowing``Public Shared` angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="1f4c0-105">The conversion procedure must specify `Public Shared` in addition to `Narrowing`.</span></span>  
+## <a name="converting-with-the-narrowing-keyword"></a><span data-ttu-id="884c3-104">Umrechnen mit dem einschränkenden Schlüsselwort</span><span class="sxs-lookup"><span data-stu-id="884c3-104">Converting with the Narrowing Keyword</span></span>  
+ <span data-ttu-id="884c3-105">Die Konvertierungs Prozedur muss `Public Shared` zusätzlich zu angeben `Narrowing` .</span><span class="sxs-lookup"><span data-stu-id="884c3-105">The conversion procedure must specify `Public Shared` in addition to `Narrowing`.</span></span>  
   
- <span data-ttu-id="1f4c0-106">Einschränkende Konvertierungen sind zur Laufzeit nicht immer erfolgreich und können fehlschlagen oder Datenverluste verursachen.</span><span class="sxs-lookup"><span data-stu-id="1f4c0-106">Narrowing conversions do not always succeed at run time, and can fail or incur data loss.</span></span> <span data-ttu-id="1f4c0-107">Beispiele sind `Long`, `Integer`, `String` `Date`und einen Basistyp auf einen abgeleiteten Typ zu.</span><span class="sxs-lookup"><span data-stu-id="1f4c0-107">Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type.</span></span> <span data-ttu-id="1f4c0-108">Diese letzte Konvertierung ist einschränkend, weil der Basistyp möglicherweise nicht alle Member des abgeleiteten Typs enthält und somit keine Instanz des abgeleiteten Typs ist.</span><span class="sxs-lookup"><span data-stu-id="1f4c0-108">This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.</span></span>  
+ <span data-ttu-id="884c3-106">Einschränkende Konvertierungen sind zur Laufzeit nicht immer erfolgreich und können fehlschlagen oder Datenverluste verursachen.</span><span class="sxs-lookup"><span data-stu-id="884c3-106">Narrowing conversions do not always succeed at run time, and can fail or incur data loss.</span></span> <span data-ttu-id="884c3-107">Beispiele hierfür `Long` sind `Integer` , `String` `Date` und ein Basistyp für einen abgeleiteten Typ.</span><span class="sxs-lookup"><span data-stu-id="884c3-107">Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type.</span></span> <span data-ttu-id="884c3-108">Diese letzte Konvertierung ist einschränkend, weil der Basistyp möglicherweise nicht alle Member des abgeleiteten Typs enthält und somit keine Instanz des abgeleiteten Typs ist.</span><span class="sxs-lookup"><span data-stu-id="884c3-108">This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.</span></span>  
   
- <span data-ttu-id="1f4c0-109">Wenn `Option Strict` `On`ist, muss der verarbeitende Code `CType` für alle einschränkenden Konvertierungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="1f4c0-109">If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.</span></span>  
+ <span data-ttu-id="884c3-109">Wenn `Option Strict` ist `On` , muss der Konsumierende Code `CType` für alle einschränkenden Konvertierungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="884c3-109">If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.</span></span>  
   
- <span data-ttu-id="1f4c0-110">Das `Narrowing`-Schlüsselwort kann in diesem Kontext verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="1f4c0-110">The `Narrowing` keyword can be used in this context:</span></span>  
+ <span data-ttu-id="884c3-110">Das `Narrowing` Schlüsselwort kann in diesem Kontext verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="884c3-110">The `Narrowing` keyword can be used in this context:</span></span>  
   
- [<span data-ttu-id="1f4c0-111">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="1f4c0-111">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="884c3-111">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="884c3-111">Operator Statement</span></span>](../statements/operator-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1f4c0-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1f4c0-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="884c3-112">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="884c3-112">See also</span></span>
 
-- [<span data-ttu-id="1f4c0-113">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="1f4c0-113">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [<span data-ttu-id="1f4c0-114">Widening</span><span class="sxs-lookup"><span data-stu-id="1f4c0-114">Widening</span></span>](../../../visual-basic/language-reference/modifiers/widening.md)
-- [<span data-ttu-id="1f4c0-115">Erweiternde und eingrenzende Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="1f4c0-115">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [<span data-ttu-id="1f4c0-116">Gewusst wie: Definieren eines Operators</span><span class="sxs-lookup"><span data-stu-id="1f4c0-116">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [<span data-ttu-id="1f4c0-117">CType-Funktion</span><span class="sxs-lookup"><span data-stu-id="1f4c0-117">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)
-- [<span data-ttu-id="1f4c0-118">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="1f4c0-118">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="884c3-113">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="884c3-113">Operator Statement</span></span>](../statements/operator-statement.md)
+- [<span data-ttu-id="884c3-114">Widening</span><span class="sxs-lookup"><span data-stu-id="884c3-114">Widening</span></span>](widening.md)
+- [<span data-ttu-id="884c3-115">Widening and Narrowing Conversions</span><span class="sxs-lookup"><span data-stu-id="884c3-115">Widening and Narrowing Conversions</span></span>](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="884c3-116">Vorgehensweise: Definieren eines Operators</span><span class="sxs-lookup"><span data-stu-id="884c3-116">How to: Define an Operator</span></span>](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [<span data-ttu-id="884c3-117">CType Function</span><span class="sxs-lookup"><span data-stu-id="884c3-117">CType Function</span></span>](../functions/ctype-function.md)
+- [<span data-ttu-id="884c3-118">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="884c3-118">Option Strict Statement</span></span>](../statements/option-strict-statement.md)
