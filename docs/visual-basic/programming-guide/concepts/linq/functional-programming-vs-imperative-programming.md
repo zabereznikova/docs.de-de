@@ -1,18 +1,18 @@
 ---
-title: Funktionale Programmierung kontra imperativer Programmierung
+title: Funktionale Programmierung und Imperative Programmierung
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0090761dc07218673e1e0299951530d5a4763ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353442"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364798"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Funktionale Programmierung im Vergleich zu imperativer Programmierung (Visual Basic)
 In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung erläutert.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Funktionale Programmierung kontra imperativer Programmierung  
+## <a name="functional-programming-vs-imperative-programming"></a>Funktionale Programmierung und Imperative Programmierung  
  Explizite Aufgabe der *funktionalen Programmierung* ist die Unterstützung eines reinen funktionalen Ansatzes bei der Problemlösung. Die funktionale Programmierung ist eine Form der *deklarativen Programmierung*. Im Unterschied dazu unterstützen die meisten normalen Programmiersprachen, darunter auch OOP-Sprachen wie C#, Visual Basic, C++ und Java, in erster Linie die *imperative* (prozedurale) Programmierung.  
   
  Beim imperativen Ansatz schreibt ein Entwickler Code, der detailliert die Schritte beschreibt, die der Computer zur Erfüllung der Aufgabe ausführen muss. Diese Form der Programmierung wird mitunter auch als *algorithmische* Programmierung bezeichnet. Beim funktionalen Ansatz hingegen wird das Problem als Satz von auszuführenden Funktionen formuliert. Sie definieren sorgfältig, was für jede Funktion eingegeben wird und was die jeweilige Funktion zurückgibt. In der folgenden Tabelle werden einige der allgemeinen Unterschiede zwischen diesen beiden Ansätzen beschrieben:  
@@ -20,8 +20,8 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
 |Merkmal|Imperativer Ansatz|Funktionaler Ansatz|  
 |--------------------|-------------------------|-------------------------|  
 |Schwerpunkt bei der Programmierung|Art und Weise der Ausführung von Aufgaben (Algorithmen) und der Überwachung von Statusänderungen|Art der gewünschten Informationen und der erforderlichen Transformationen|  
-|Zustandsänderungen|Wichtig.|nicht existent|  
-|Reihenfolge der Ausführung|Wichtig.|weniger wichtig|  
+|Statusänderungen|wichtig|nicht existent|  
+|Reihenfolge der Ausführung|wichtig|weniger wichtig|  
 |Primäre Datenflusskontrolle|Schleifen, Bedingungen und Funktions- (Methoden-)Aufrufe|Funktionsaufrufe, einschließlich Rekursion|  
 |Primäre Manipulationseinheit|Instanzen von Strukturen oder Klassen|Funktionen als erstklassige Objekte und Datensammlungen|  
   
@@ -52,6 +52,6 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Einführung in reine funktionale Transformationen (Visual Basic)](introduction-to-pure-functional-transformations.md)
 - [XSLT Transformations (XSLT-Transformationen)](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactoring in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refactoring in reine Funktionen (Visual Basic)](refactoring-into-pure-functions.md)

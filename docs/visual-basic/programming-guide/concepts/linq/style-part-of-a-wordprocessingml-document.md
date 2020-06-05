@@ -2,12 +2,12 @@
 title: Formatvorlagen Teil eines WordprocessingML-document2
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 06800a138d33d8116ebdece8160e2705d294161c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0692a9cc3a2ce51851d1b551d49f112fc5e4e41a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582886"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406754"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Absatzformatteil eines WordprocessingML-Dokuments
 In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XML-WordprocessingML-Dokuments gezeigt.  
@@ -140,6 +140,6 @@ In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XM
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Details zu Office Open XML-WordprocessingML-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Details zu Office Open XML-WordprocessingML-Dokumenten (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)

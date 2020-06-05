@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344283"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363695"
 ---
 # <a name="string-basics-in-visual-basic"></a>Grundlagen zu Zeichenfolgen in Visual Basic
 Der `String`-Datentyp stellt eine Reihe von Zeichen dar (wobei jedes Zeichen wiederum eine Instanz des `Char`-Datentyps darstellt). In diesem Thema werden die grundlegenden Konzepte von Zeichen folgen in Visual Basic vorgestellt.  
@@ -71,9 +71,9 @@ World]]></xml>.Value
   
  Im Gegensatz zu anderen systeminternen Datentypen ist `String` ein Verweistyp. Wenn eine Variable des Verweistyps als Argument an eine Funktion oder Unterroutine übergeben wird, wird ein Verweis auf die Speicheradresse, wo die Daten gespeichert werden, anstelle des tatsächlichen Werts der Zeichenfolge übergeben. Damit bleibt der Name der Variable im vorherigen Beispiel gleich, aber es wird auf eine neue und andere Instanz der `String`-Klasse verwiesen, die den neuen Wert enthält.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Char-Datentyp](../../../../visual-basic/language-reference/data-types/char-data-type.md)
-- [Grundlegende Zeichenfolgenoperationen](../../../../standard/base-types/basic-string-operations.md)
+- [Einführung in Zeichenfolgen in Visual Basic](introduction-to-strings.md)
+- [String-Datentyp](../../../language-reference/data-types/string-data-type.md)
+- [Char-Datentyp](../../../language-reference/data-types/char-data-type.md)
+- [Grundlegende Zeichen folgen Vorgänge](../../../../standard/base-types/basic-string-operations.md)
