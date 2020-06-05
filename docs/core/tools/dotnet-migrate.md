@@ -2,22 +2,22 @@
 title: Befehl „dotnet migrate“
 description: Der dotnet migrate-Befehl migriert ein Projekt und alle seine Abhängigkeiten.
 ms.date: 02/14/2020
-ms.openlocfilehash: 71f587c1bfadd445aca818448bdd5f136f009fe0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2e7f9ae5a1d11c54280d914b04df761f0d5aff99
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463633"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284091"
 ---
-# <a name="dotnet-migrate"></a><span data-ttu-id="33db0-103">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="33db0-103">dotnet migrate</span></span>
+# <a name="dotnet-migrate"></a><span data-ttu-id="2ccf5-103">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="2ccf5-103">dotnet migrate</span></span>
 
-<span data-ttu-id="33db0-104">**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK</span><span class="sxs-lookup"><span data-stu-id="33db0-104">**This article applies to:** ✔️ .NET Core 2.x SDK</span></span>
+<span data-ttu-id="2ccf5-104">**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK</span><span class="sxs-lookup"><span data-stu-id="2ccf5-104">**This article applies to:** ✔️ .NET Core 2.x SDK</span></span>
 
-## <a name="name"></a><span data-ttu-id="33db0-105">Name</span><span class="sxs-lookup"><span data-stu-id="33db0-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="2ccf5-105">name</span><span class="sxs-lookup"><span data-stu-id="2ccf5-105">Name</span></span>
 
-<span data-ttu-id="33db0-106">`dotnet migrate`: migriert ein .NET Core-Projekt der Vorschauversion 2 in ein SDK-Projekt für .NET Core.</span><span class="sxs-lookup"><span data-stu-id="33db0-106">`dotnet migrate` - Migrates a Preview 2 .NET Core project to a .NET Core SDK-style project.</span></span>
+<span data-ttu-id="2ccf5-106">`dotnet migrate`: migriert ein .NET Core-Projekt der Vorschauversion 2 in ein SDK-Projekt für .NET Core.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-106">`dotnet migrate` - Migrates a Preview 2 .NET Core project to a .NET Core SDK-style project.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="33db0-107">Übersicht</span><span class="sxs-lookup"><span data-stu-id="33db0-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="2ccf5-107">Übersicht</span><span class="sxs-lookup"><span data-stu-id="2ccf5-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json <REPORT_FILE>]
@@ -28,82 +28,82 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json <REPORT_
 dotnet migrate -h|--help
 ```
 
-## <a name="description"></a><span data-ttu-id="33db0-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="33db0-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="2ccf5-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2ccf5-108">Description</span></span>
 
-<span data-ttu-id="33db0-109">Dieser Befehl ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="33db0-109">This command is deprecated.</span></span> <span data-ttu-id="33db0-110">Der `dotnet migrate`-Befehl ist im .NET Core 3.0 SDK und in neueren Versionen nicht mehr verfügbar.</span><span class="sxs-lookup"><span data-stu-id="33db0-110">The `dotnet migrate` command is no longer available starting with .NET Core 3.0 SDK.</span></span> <span data-ttu-id="33db0-111">Er kann nur ein .NET Core-Projekt von Vorschau 2 zu einem .NET Core-Projekt der Version 1. x migrieren, was nicht mehr unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="33db0-111">It can only migrate a Preview 2 .NET Core project to a 1.x .NET Core project, which is out of support.</span></span>
+<span data-ttu-id="2ccf5-109">Dieser Befehl ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-109">This command is deprecated.</span></span> <span data-ttu-id="2ccf5-110">Der `dotnet migrate`-Befehl ist im .NET Core 3.0 SDK und in neueren Versionen nicht mehr verfügbar.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-110">The `dotnet migrate` command is no longer available starting with .NET Core 3.0 SDK.</span></span> <span data-ttu-id="2ccf5-111">Er kann nur ein .NET Core-Projekt von Vorschau 2 zu einem .NET Core-Projekt der Version 1. x migrieren, was nicht mehr unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-111">It can only migrate a Preview 2 .NET Core project to a 1.x .NET Core project, which is out of support.</span></span>
 
-<span data-ttu-id="33db0-112">Standardmäßig migriert der Befehl das Stammprojekt und alle Projektverweise, die das Stammprojekt enthält.</span><span class="sxs-lookup"><span data-stu-id="33db0-112">By default, the command migrates the root project and any project references that the root project contains.</span></span> <span data-ttu-id="33db0-113">Dieses Verhalten ist mithilfe der `--skip-project-references`-Option zur Laufzeit deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="33db0-113">This behavior is disabled using the `--skip-project-references` option at runtime.</span></span>
+<span data-ttu-id="2ccf5-112">Standardmäßig migriert der Befehl das Stammprojekt und alle Projektverweise, die das Stammprojekt enthält.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-112">By default, the command migrates the root project and any project references that the root project contains.</span></span> <span data-ttu-id="2ccf5-113">Dieses Verhalten ist mithilfe der `--skip-project-references`-Option zur Laufzeit deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-113">This behavior is disabled using the `--skip-project-references` option at run time.</span></span>
 
-<span data-ttu-id="33db0-114">Die Migration kann auf den folgenden Objekten ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="33db0-114">Migration can be performed on the following assets:</span></span>
+<span data-ttu-id="2ccf5-114">Die Migration kann auf den folgenden Objekten ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="2ccf5-114">Migration can be performed on the following assets:</span></span>
 
-* <span data-ttu-id="33db0-115">Ein einzelnes Projekt durch Angabe der zu migrierenden *project.json*-Datei.</span><span class="sxs-lookup"><span data-stu-id="33db0-115">A single project by specifying the *project.json* file to migrate.</span></span>
-* <span data-ttu-id="33db0-116">Alle Verzeichnisse, die in der *global.json*-Datei angegeben sind, indem ein Pfad zur *global.json*-Datei übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="33db0-116">All of the directories specified in the *global.json* file by passing in a path to the *global.json* file.</span></span>
-* <span data-ttu-id="33db0-117">Ein *solution.sln*-Datei, in dem die Projekte, auf die in der Projektmappe verwiesen wird, migriert werden.</span><span class="sxs-lookup"><span data-stu-id="33db0-117">A *solution.sln* file, where it migrates the projects referenced in the solution.</span></span>
-* <span data-ttu-id="33db0-118">Rekursiv für alle Unterverzeichnisse im angegebenen Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="33db0-118">On all subdirectories of the given directory recursively.</span></span>
+* <span data-ttu-id="2ccf5-115">Ein einzelnes Projekt durch Angabe der zu migrierenden *project.json*-Datei.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-115">A single project by specifying the *project.json* file to migrate.</span></span>
+* <span data-ttu-id="2ccf5-116">Alle Verzeichnisse, die in der *global.json*-Datei angegeben sind, indem ein Pfad zur *global.json*-Datei übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-116">All of the directories specified in the *global.json* file by passing in a path to the *global.json* file.</span></span>
+* <span data-ttu-id="2ccf5-117">Ein *solution.sln*-Datei, in dem die Projekte, auf die in der Projektmappe verwiesen wird, migriert werden.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-117">A *solution.sln* file, where it migrates the projects referenced in the solution.</span></span>
+* <span data-ttu-id="2ccf5-118">Rekursiv für alle Unterverzeichnisse im angegebenen Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-118">On all subdirectories of the given directory recursively.</span></span>
 
-<span data-ttu-id="33db0-119">Der `dotnet migrate`-Befehl speichert die migrierte *project.json*-Datei in einem `backup`-Verzeichnis, das erstellt wird, falls das Verzeichnis noch nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="33db0-119">The `dotnet migrate` command keeps the migrated *project.json* file inside a `backup` directory, which it creates if the directory doesn't exist.</span></span> <span data-ttu-id="33db0-120">Das Verhalten wird mithilfe der `--skip-backup`-Option überschrieben.</span><span class="sxs-lookup"><span data-stu-id="33db0-120">This behavior is overridden using the `--skip-backup` option.</span></span>
+<span data-ttu-id="2ccf5-119">Der `dotnet migrate`-Befehl speichert die migrierte *project.json*-Datei in einem `backup`-Verzeichnis, das erstellt wird, falls das Verzeichnis noch nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-119">The `dotnet migrate` command keeps the migrated *project.json* file inside a `backup` directory, which it creates if the directory doesn't exist.</span></span> <span data-ttu-id="2ccf5-120">Das Verhalten wird mithilfe der `--skip-backup`-Option überschrieben.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-120">This behavior is overridden using the `--skip-backup` option.</span></span>
 
-<span data-ttu-id="33db0-121">Standardmäßig gibt der Migrationsvorgang den Status der Migration in die Standardausgabe (STDOUT) aus.</span><span class="sxs-lookup"><span data-stu-id="33db0-121">By default, the migration operation outputs the state of the migration process to standard output (STDOUT).</span></span> <span data-ttu-id="33db0-122">Bei Verwendung der `--report-file <REPORT_FILE>`-Option wird die Ausgabe in die angegebene Datei gespeichert.</span><span class="sxs-lookup"><span data-stu-id="33db0-122">If you use the `--report-file <REPORT_FILE>` option, the output is saved to the file specify.</span></span>
+<span data-ttu-id="2ccf5-121">Standardmäßig gibt der Migrationsvorgang den Status der Migration in die Standardausgabe (STDOUT) aus.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-121">By default, the migration operation outputs the state of the migration process to standard output (STDOUT).</span></span> <span data-ttu-id="2ccf5-122">Bei Verwendung der `--report-file <REPORT_FILE>`-Option wird die Ausgabe in die angegebene Datei gespeichert.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-122">If you use the `--report-file <REPORT_FILE>` option, the output is saved to the file specify.</span></span>
 
-<span data-ttu-id="33db0-123">Der `dotnet migrate`-Befehl unterstützt nur gültige *project.json*-basiere Projekte von Preview 2.</span><span class="sxs-lookup"><span data-stu-id="33db0-123">The `dotnet migrate` command only supports valid Preview 2 *project.json*-based projects.</span></span> <span data-ttu-id="33db0-124">Dies bedeutet, dass Sie ihn nicht zum Migrieren von *project.json*-basierten Projekte von DNX oder Preview 1 direkt an MSBuild/csproj-Projekte verwenden können.</span><span class="sxs-lookup"><span data-stu-id="33db0-124">This means that you cannot use it to migrate DNX or Preview 1 *project.json*-based projects directly to MSBuild/csproj projects.</span></span> <span data-ttu-id="33db0-125">Sie müssen zuerst das Projekt manuell auf ein *project.json*-basiertes Projekt von Preview 2 migrieren und anschließend den `dotnet migrate`-Befehl verwenden, um das Projekt zu migrieren.</span><span class="sxs-lookup"><span data-stu-id="33db0-125">You first need to manually migrate the project to a Preview 2 *project.json*-based project and then use the `dotnet migrate` command to migrate the project.</span></span>
+<span data-ttu-id="2ccf5-123">Der `dotnet migrate`-Befehl unterstützt nur gültige *project.json*-basiere Projekte von Preview 2.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-123">The `dotnet migrate` command only supports valid Preview 2 *project.json*-based projects.</span></span> <span data-ttu-id="2ccf5-124">Dies bedeutet, dass Sie ihn nicht zum Migrieren von *project.json*-basierten Projekte von DNX oder Preview 1 direkt an MSBuild/csproj-Projekte verwenden können.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-124">This means that you cannot use it to migrate DNX or Preview 1 *project.json*-based projects directly to MSBuild/csproj projects.</span></span> <span data-ttu-id="2ccf5-125">Sie müssen zuerst das Projekt manuell auf ein *project.json*-basiertes Projekt von Preview 2 migrieren und anschließend den `dotnet migrate`-Befehl verwenden, um das Projekt zu migrieren.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-125">You first need to manually migrate the project to a Preview 2 *project.json*-based project and then use the `dotnet migrate` command to migrate the project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="33db0-126">Argumente</span><span class="sxs-lookup"><span data-stu-id="33db0-126">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="2ccf5-126">Argumente</span><span class="sxs-lookup"><span data-stu-id="2ccf5-126">Arguments</span></span>
 
 `PROJECT_JSON/GLOBAL_JSON/SOLUTION_FILE/PROJECT_DIR`
 
-<span data-ttu-id="33db0-127">Der Pfad zu einem der Folgenden:</span><span class="sxs-lookup"><span data-stu-id="33db0-127">The path to one of the following:</span></span>
+<span data-ttu-id="2ccf5-127">Der Pfad zu einem der Folgenden:</span><span class="sxs-lookup"><span data-stu-id="2ccf5-127">The path to one of the following:</span></span>
 
-* <span data-ttu-id="33db0-128">eine *project.json*-Datei zum Migrieren.</span><span class="sxs-lookup"><span data-stu-id="33db0-128">a *project.json* file to migrate.</span></span>
-* <span data-ttu-id="33db0-129">eine *global.json*-Datei. Die in *global.json* angegebenen Ordner werden migriert.</span><span class="sxs-lookup"><span data-stu-id="33db0-129">a *global.json* file: the folders specified in *global.json* are migrated.</span></span>
-* <span data-ttu-id="33db0-130">eine *solution.sln*-Datei. Die in der Projektmappe referenzierten Projekte werden migriert.</span><span class="sxs-lookup"><span data-stu-id="33db0-130">a *solution.sln* file: the projects referenced in the solution are migrated.</span></span>
-* <span data-ttu-id="33db0-131">ein zu migrierendes Verzeichnis. Sucht rekursiv nach *project.json*-Dateien, um diese im angegebenen Verzeichnis zu migrieren.</span><span class="sxs-lookup"><span data-stu-id="33db0-131">a directory to migrate: recursively searches for *project.json* files to migrate inside the specified directory.</span></span>
+* <span data-ttu-id="2ccf5-128">eine *project.json*-Datei zum Migrieren.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-128">a *project.json* file to migrate.</span></span>
+* <span data-ttu-id="2ccf5-129">eine *global.json*-Datei. Die in *global.json* angegebenen Ordner werden migriert.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-129">a *global.json* file: the folders specified in *global.json* are migrated.</span></span>
+* <span data-ttu-id="2ccf5-130">eine *solution.sln*-Datei. Die in der Projektmappe referenzierten Projekte werden migriert.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-130">a *solution.sln* file: the projects referenced in the solution are migrated.</span></span>
+* <span data-ttu-id="2ccf5-131">ein zu migrierendes Verzeichnis. Sucht rekursiv nach *project.json*-Dateien, um diese im angegebenen Verzeichnis zu migrieren.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-131">a directory to migrate: recursively searches for *project.json* files to migrate inside the specified directory.</span></span>
 
-<span data-ttu-id="33db0-132">Wenn nichts angegeben ist, wird standardmäßig das aktuelle Verzeichnis gewählt.</span><span class="sxs-lookup"><span data-stu-id="33db0-132">Defaults to current directory if nothing is specified.</span></span>
+<span data-ttu-id="2ccf5-132">Wenn nichts angegeben ist, wird standardmäßig das aktuelle Verzeichnis gewählt.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-132">Defaults to current directory if nothing is specified.</span></span>
 
-## <a name="options"></a><span data-ttu-id="33db0-133">Optionen</span><span class="sxs-lookup"><span data-stu-id="33db0-133">Options</span></span>
+## <a name="options"></a><span data-ttu-id="2ccf5-133">Optionen</span><span class="sxs-lookup"><span data-stu-id="2ccf5-133">Options</span></span>
 
 `--format-report-file-json <REPORT_FILE>`
 
-<span data-ttu-id="33db0-134">Die Migrationsberichtsdatei wird als JSON statt als Benutzermeldungen ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="33db0-134">Output migration report file as JSON rather than user messages.</span></span>
+<span data-ttu-id="2ccf5-134">Die Migrationsberichtsdatei wird als JSON statt als Benutzermeldungen ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-134">Output migration report file as JSON rather than user messages.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="33db0-135">Druckt eine kurze Hilfe für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="33db0-135">Prints out a short help for the command.</span></span>
+<span data-ttu-id="2ccf5-135">Druckt eine kurze Hilfe für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-135">Prints out a short help for the command.</span></span>
 
 `-r|--report-file <REPORT_FILE>`
 
-<span data-ttu-id="33db0-136">Der Migrationsbericht wird in eine Datei und in der Konsole ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="33db0-136">Output migration report to a file in addition to the console.</span></span>
+<span data-ttu-id="2ccf5-136">Der Migrationsbericht wird in eine Datei und in der Konsole ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-136">Output migration report to a file in addition to the console.</span></span>
 
 `-s|--skip-project-references [Debug|Release]`
 
-<span data-ttu-id="33db0-137">Die Migration von Projektverweisen wird übersprungen.</span><span class="sxs-lookup"><span data-stu-id="33db0-137">Skip migrating project references.</span></span> <span data-ttu-id="33db0-138">Standardmäßig werden Projektverweise rekursiv migriert.</span><span class="sxs-lookup"><span data-stu-id="33db0-138">By default, project references are migrated recursively.</span></span>
+<span data-ttu-id="2ccf5-137">Die Migration von Projektverweisen wird übersprungen.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-137">Skip migrating project references.</span></span> <span data-ttu-id="2ccf5-138">Standardmäßig werden Projektverweise rekursiv migriert.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-138">By default, project references are migrated recursively.</span></span>
 
 `--skip-backup`
 
-<span data-ttu-id="33db0-139">Das Verschieben der Dateien *project.json*, *global.json* und *\*.xproj* in ein `backup`-Verzeichnis nach der erfolgreichen Migration wird übersprungen.</span><span class="sxs-lookup"><span data-stu-id="33db0-139">Skip moving *project.json*, *global.json*, and *\*.xproj* to a `backup` directory after successful migration.</span></span>
+<span data-ttu-id="2ccf5-139">Das Verschieben der Dateien *project.json*, *global.json* und *\*.xproj* in ein `backup`-Verzeichnis nach der erfolgreichen Migration wird übersprungen.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-139">Skip moving *project.json*, *global.json*, and *\*.xproj* to a `backup` directory after successful migration.</span></span>
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-<span data-ttu-id="33db0-140">Für die Migration zu verwendende CSPROJ-Vorlagendatei.</span><span class="sxs-lookup"><span data-stu-id="33db0-140">Template csproj file to use for migration.</span></span> <span data-ttu-id="33db0-141">Standardmäßig wird die gleiche Vorlage verwendet, die von `dotnet new console` abgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="33db0-141">By default, the same template as the one dropped by `dotnet new console` is used.</span></span>
+<span data-ttu-id="2ccf5-140">Für die Migration zu verwendende CSPROJ-Vorlagendatei.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-140">Template csproj file to use for migration.</span></span> <span data-ttu-id="2ccf5-141">Standardmäßig wird die gleiche Vorlage verwendet, die von `dotnet new console` abgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-141">By default, the same template as the one dropped by `dotnet new console` is used.</span></span>
 
 `-v|--sdk-package-version <VERSION>`
 
-<span data-ttu-id="33db0-142">Die Version des SDK-Pakets, auf das in der migrierten App verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="33db0-142">The version of the sdk package that's referenced in the migrated app.</span></span> <span data-ttu-id="33db0-143">Der Standardwert ist die Version des SDK in `dotnet new`.</span><span class="sxs-lookup"><span data-stu-id="33db0-143">The default is the version of the SDK in `dotnet new`.</span></span>
+<span data-ttu-id="2ccf5-142">Die Version des SDK-Pakets, auf das in der migrierten App verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-142">The version of the sdk package that's referenced in the migrated app.</span></span> <span data-ttu-id="2ccf5-143">Der Standardwert ist die Version des SDK in `dotnet new`.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-143">The default is the version of the SDK in `dotnet new`.</span></span>
 
 `-x|--xproj-file <FILE>`
 
-<span data-ttu-id="33db0-144">Der Pfad zur XPROJ-Datei, die verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="33db0-144">The path to the xproj file to use.</span></span> <span data-ttu-id="33db0-145">Erforderlich, wenn mehrere XPROJ-Dateien in einem Projektverzeichnis vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="33db0-145">Required when there is more than one xproj in a project directory.</span></span>
+<span data-ttu-id="2ccf5-144">Der Pfad zur XPROJ-Datei, die verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-144">The path to the xproj file to use.</span></span> <span data-ttu-id="2ccf5-145">Erforderlich, wenn mehrere XPROJ-Dateien in einem Projektverzeichnis vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="2ccf5-145">Required when there is more than one xproj in a project directory.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="33db0-146">Beispiele</span><span class="sxs-lookup"><span data-stu-id="33db0-146">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="2ccf5-146">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2ccf5-146">Examples</span></span>
 
-<span data-ttu-id="33db0-147">Migrieren Sie ein Projekt und alle Abhängigkeiten des Projekts mit anderen Projekten in das aktuelle Verzeichnis:</span><span class="sxs-lookup"><span data-stu-id="33db0-147">Migrate a project in the current directory and all of its project-to-project dependencies:</span></span>
+<span data-ttu-id="2ccf5-147">Migrieren Sie ein Projekt und alle Abhängigkeiten des Projekts mit anderen Projekten in das aktuelle Verzeichnis:</span><span class="sxs-lookup"><span data-stu-id="2ccf5-147">Migrate a project in the current directory and all of its project-to-project dependencies:</span></span>
 
 `dotnet migrate`
 
-<span data-ttu-id="33db0-148">Migrieren Sie alle Projekte, die die *global.json*-Datei umfasst:</span><span class="sxs-lookup"><span data-stu-id="33db0-148">Migrate all projects that *global.json* file includes:</span></span>
+<span data-ttu-id="2ccf5-148">Migrieren Sie alle Projekte, die die *global.json*-Datei umfasst:</span><span class="sxs-lookup"><span data-stu-id="2ccf5-148">Migrate all projects that *global.json* file includes:</span></span>
 
 `dotnet migrate path/to/global.json`
 
-<span data-ttu-id="33db0-149">Migrieren Sie nur das aktuelle Projekt und keine Abhängigkeiten des Projekts mit anderen Projekten (P2P).</span><span class="sxs-lookup"><span data-stu-id="33db0-149">Migrate only the current project and no project-to-project (P2P) dependencies.</span></span> <span data-ttu-id="33db0-150">Verwenden Sie außerdem eine bestimmte SDK-Version:</span><span class="sxs-lookup"><span data-stu-id="33db0-150">Also, use a specific SDK version:</span></span>
+<span data-ttu-id="2ccf5-149">Migrieren Sie nur das aktuelle Projekt und keine Abhängigkeiten des Projekts mit anderen Projekten (P2P).</span><span class="sxs-lookup"><span data-stu-id="2ccf5-149">Migrate only the current project and no project-to-project (P2P) dependencies.</span></span> <span data-ttu-id="2ccf5-150">Verwenden Sie außerdem eine bestimmte SDK-Version:</span><span class="sxs-lookup"><span data-stu-id="2ccf5-150">Also, use a specific SDK version:</span></span>
 
 `dotnet migrate -s -v 1.0.0-preview4`
