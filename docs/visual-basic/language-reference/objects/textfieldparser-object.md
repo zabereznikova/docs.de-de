@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextFieldParser class, aboutTextFieldParser class
 - TextFieldParser class
 ms.assetid: d44bd2b0-7dfc-410b-a48b-534c1e97460b
-ms.openlocfilehash: b00a6acac6b48e7851f78c38712695ae192b26b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 81216631fde3e22351643e73e1ae9a3d4615e914
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350318"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372219"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser Object
 Stellt Methoden und Eigenschaften zur Analyse strukturierter Textdateien bereit.  
@@ -22,14 +22,14 @@ Stellt Methoden und Eigenschaften zur Analyse strukturierter Textdateien bereit.
 Public Class TextFieldParser  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Informationen zu den Methoden und Eigenschaften des `TextFieldParser` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.  
   
- Weitere Informationen finden Sie unter [Lesen aus Dateien](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ Weitere Informationen finden Sie unter [Lesen aus Dateien](../../developing-apps/programming/drives-directories-files/reading-from-files.md).  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Namespace:** <xref:Microsoft.VisualBasic.FileIO>  
   
- **Klasse:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
+ **Klasse:**<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
  **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: c3086f79fb71693810bc8f14e8c0f493aa1e6515
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 74b690ce3dee87e481c629a254e629be4b40f8cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512705"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387009"
 ---
-# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Der Typ von\<"VariableName >" kann nicht abgeleitet werden, weil die Schleifen Begrenzungen und die Step-Variable nicht auf denselben Typ ausgedehnt werden.
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Der Typ von '\<variablename>' kann nicht abgeleitet werden, weil die Schleifenbegrenzungen und die step-Klausel nicht in denselben Typ konvertiert werden
 
 Sie haben eine `For...Next` Schleife geschrieben, in der der Compiler einen Datentyp für die Schleifen Steuerungs Variable nicht ableiten kann, da die folgenden Bedingungen zutreffen:
 
@@ -43,19 +43,19 @@ Dim n = 20
 
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-- Ändern Sie die Typen der Schleifen Begrenzungen und die Step-Variable nach Bedarf, damit mindestens einer der Typen ein Typ ist, zu dem die anderen erweitert werden. Ändern Sie im vorherigen Beispiel den Typ von `stepVar` in. `Integer`
+- Ändern Sie die Typen der Schleifen Begrenzungen und die Step-Variable nach Bedarf, damit mindestens einer der Typen ein Typ ist, zu dem die anderen erweitert werden. Ändern Sie im vorherigen Beispiel den Typ von `stepVar` in `Integer` .
 
   ```vb
   Dim stepVar = 1
   ```
 
-  -oder-
+  Oder
 
   ```vb
   Dim stepVar As Integer = 1
   ```
 
-- Verwenden Sie explizite Konvertierungs Funktionen, um die Schleifen Begrenzungen und die Step-Variable in die entsprechenden Typen zu konvertieren. Wenden Sie im vorherigen Beispiel die `Val` -Funktion auf an. `stepVar`
+- Verwenden Sie explizite Konvertierungs Funktionen, um die Schleifen Begrenzungen und die Step-Variable in die entsprechenden Typen zu konvertieren. Wenden Sie im vorherigen Beispiel die- `Val` Funktion auf an `stepVar` .
 
   ```vb
   For i = 1 To 10 Step Val(stepVar)
@@ -63,12 +63,12 @@ Dim n = 20
   Next
   ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
-- [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Erweiternde und eingrenzende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [For...Next-Anweisung](../statements/for-next-statement.md)
+- [Implizite und explizite Konvertierungen](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Lokaler Typrückschluss](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer-Anweisung](../statements/option-infer-statement.md)
+- [Type Conversion Functions](../functions/type-conversion-functions.md)
+- [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
