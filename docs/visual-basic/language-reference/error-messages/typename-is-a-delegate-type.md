@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: 45dc0403468fa40888a6c5e6bdfe6ca782e98325
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7056bbf2b4de26feba3bfbe0e02b3239311271c9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664189"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84382171"
 ---
-# <a name="typename-is-a-delegate-type"></a>"\<Typname >' ist ein Delegattyp
-"\<Typname >' ist ein Delegattyp. Erstellen eines Delegaten kann nur einen einzelnen AddressOf-Ausdruck als Argument übergeben. Häufig kann ein AddressOf-Ausdruck anstelle einer Delegatkonstruktion verwendet werden.  
+# <a name="typename-is-a-delegate-type"></a>\<typename> ist ein Delegattyp
+" \<typename> " ist ein Delegattyp. Bei der Delegatkonstruktion ist nur ein einzelner AddressOf-Ausdruck als Argumentliste zulässig. Häufig kann ein AddressOf-Ausdruck anstelle einer Delegaterstellung verwendet werden.  
   
- Ein `New` -Klausel erstellt eine Instanz einer Delegatklasse gibt eine ungültige Argumentliste für den Delegatkonstruktor.  
+ Eine- `New` Klausel, die eine Instanz einer Delegatklasse erstellt, stellt eine ungültige Argumentliste für den Delegatkonstruktor bereit.  
   
- Sie können angeben, dass nur eine einzige `AddressOf` Ausdruck verwenden, wenn eine neue Delegatinstanz zu erstellen.  
+ Sie können nur einen einzelnen Ausdruck angeben, `AddressOf` Wenn Sie eine neue Delegatinstanz erstellen.  
   
- Dieser Fehler kann auftreten, wenn Sie keine Argumente an den Delegatkonstruktor übergeben, wenn Sie mehr als ein Argument übergeben, oder wenn Sie ein einzelnes Argument übergeben, keinen gültigen `AddressOf` Ausdruck.  
+ Dieser Fehler kann auftreten, wenn Sie keine Argumente an den Delegatkonstruktor übergeben, wenn Sie mehr als ein Argument übergeben oder wenn Sie ein einzelnes Argument übergeben, das kein gültiger Ausdruck ist `AddressOf` .  
   
  **Fehler-ID:** BC32008  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Verwenden Sie einen einzelnen `AddressOf` Ausdruck in der Argumentliste für die Delegate-Klasse in der `New` Klausel.  
+- Verwenden Sie einen einzelnen `AddressOf` Ausdruck in der Argumentliste für die Delegatklasse in der- `New` Klausel.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [New-Operator](../../../visual-basic/language-reference/operators/new-operator.md)
-- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Delegaten](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Vorgehensweise: Aufrufen einer Delegatenmethode](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [New-Operator](../operators/new-operator.md)
+- [AddressOf-Operator](../operators/addressof-operator.md)
+- [Delegaten](../../programming-guide/language-features/delegates/index.md)
+- [Vorgehensweise: Aufrufen einer Delegatenmethode](../../programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
