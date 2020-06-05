@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 3e2902da7fe9d8fa2194db681df098f0148cbbaf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f29e92c8245e33c0418d9a387070b03f645c331e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584251"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362747"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Die Typargumente konnten nicht vom Delegaten abgeleitet werden
 Eine Zuweisungsanweisung verwendet `AddressOf` , um die Adresse einer generischen Prozedur zu einem Delegaten zuzuweisen, aber sie stellt keine Typargumente für die generische Prozedur bereit.  
@@ -25,10 +25,10 @@ Eine Zuweisungsanweisung verwendet `AddressOf` , um die Adresse einer generische
   
 - Geben Sie im `AddressOf` -Ausdruck die Typargumente für die generische Prozedur an.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [Typliste](../../../visual-basic/language-reference/statements/type-list.md)
-- [Erweiterungsmethoden](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Generische Typen in Visual Basic (Visual Basic)](../../programming-guide/language-features/data-types/generic-types.md)
+- [AddressOf-Operator](../operators/addressof-operator.md)
+- [Generic Procedures in Visual Basic](../../programming-guide/language-features/data-types/generic-procedures.md)
+- [Type List](../statements/type-list.md)
+- [Erweiterungsmethoden](../../programming-guide/language-features/procedures/extension-methods.md)

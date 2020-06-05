@@ -1,17 +1,17 @@
 ---
-title: Laufwerk '<drivename>' wurde nicht gefunden.
+title: Laufwerk "<drivename>" nicht gefunden
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 9084e885ba98211623781b036e9f7407a44368ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a426130b284a7c09004933bca264e4d52be1df3c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970143"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394595"
 ---
-# <a name="drive-drivename-not-found"></a>Laufwerk '\<Drivename >' wurde nicht gefunden.
+# <a name="drive-drivename-not-found"></a>Laufwerk "\<drivename>" nicht gefunden
 Das Laufwerk kann nicht gefunden werden. Entweder wurde die Netzwerkverbindung getrennt, oder das Laufwerk, auf das Sie zugreifen möchten, ist offline oder nicht vorhanden.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
@@ -24,6 +24,6 @@ Das Laufwerk kann nicht gefunden werden. Entweder wurde die Netzwerkverbindung g
   
 4. Stellen Sie erneut eine Verbindung mit dem Netzwerk her, und versuchen Sie es erneut.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fehlertypen](../programming-guide/language-features/error-types.md)

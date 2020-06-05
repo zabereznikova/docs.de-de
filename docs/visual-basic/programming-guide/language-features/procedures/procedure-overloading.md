@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f8accc74fbdd9b1d8cf9bc3d8f6ddd26f73452b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352586"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363875"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Prozedurüberladung (Visual Basic)
 
@@ -50,13 +50,13 @@ Wenn Sie eine Prozedur überladen, gelten die folgenden Regeln:
 
 - **Elemente sind nicht Teil der Signatur**. Eine Prozedur kann nicht überladen werden, ohne die Signatur zu verändern. Insbesondere ist es nicht möglich, eine Prozedur zu überladen, indem Sie nur ein oder mehrere der folgenden Elemente unterscheiden:
 
-  - Modifiziererschlüsselwörter für Prozeduren, z. b. `Public``Shared`und `Static`
+  - Modifiziererschlüsselwörter für Prozeduren, wie `Public` , `Shared` und`Static`
 
   - Parameternamen oder Typparameter Namen
 
   - Typparameter Einschränkungen (für eine generische Prozedur)
 
-  - Parametermodifiziererschlüsselwörter wie `ByRef` und `Optional`
+  - Parametermodifiziererschlüsselwörter wie `ByRef` und`Optional`
 
   - Ob ein Wert zurückgegeben wird
 
@@ -64,7 +64,7 @@ Wenn Sie eine Prozedur überladen, gelten die folgenden Regeln:
 
   Die Elemente in der vorangehenden Liste sind nicht Teil der Signatur. Obwohl Sie Sie nicht verwenden können, um zwischen überladenen Versionen zu unterscheiden, können Sie Sie von überladenen Versionen unterscheiden, die sich durch ihre Signaturen ordnungsgemäß
 
-- **Spät gebundene Argumente**. Wenn Sie beabsichtigen, eine spät gebundene Objekt Variable an eine überladene Version zu übergeben, müssen Sie den entsprechenden Parameter als <xref:System.Object>deklarieren.
+- **Spät gebundene Argumente**. Wenn Sie beabsichtigen, eine spät gebundene Objekt Variable an eine überladene Version zu übergeben, müssen Sie den entsprechenden Parameter als deklarieren <xref:System.Object> .
 
 ## <a name="multiple-versions-of-a-procedure"></a>Mehrere Versionen einer Prozedur
 
@@ -74,30 +74,30 @@ Angenommen, Sie schreiben eine `Sub` Prozedur, um eine Transaktion für den Sald
 
 ### <a name="overloaded-versions"></a>Überladene Versionen
 
-Eine Alternative besteht darin, einen einzelnen Prozedur Namen zu überladen. Sie können das [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) -Schlüsselwort verwenden, um eine Version der Prozedur für jede Parameterliste wie folgt zu definieren:
+Eine Alternative besteht darin, einen einzelnen Prozedur Namen zu überladen. Sie können das [Overloads](../../../language-reference/modifiers/overloads.md) -Schlüsselwort verwenden, um eine Version der Prozedur für jede Parameterliste wie folgt zu definieren:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
 #### <a name="additional-overloads"></a>Zusätzliche über Ladungen
 
-Wenn Sie auch einen Transaktionsbetrag entweder in `Decimal` oder `Single`akzeptieren möchten, können Sie die `post` überladen, um diese Abweichung zuzulassen. Wenn Sie dies für jede der über Ladungen im vorherigen Beispiel getan haben, verfügen Sie über vier `Sub` Prozeduren, die denselben Namen haben, jedoch mit vier unterschiedlichen Signaturen.
+Wenn Sie auch einen Transaktionsbetrag in oder akzeptieren möchten `Decimal` `Single` , können Sie eine weitere Überlastung durchlaufen, `post` um diese Abweichung zuzulassen. Wenn Sie dies für jede der über Ladungen im vorherigen Beispiel durchgeführt haben, verfügen Sie über vier `Sub` Prozeduren mit demselben Namen, aber mit vier unterschiedlichen Signaturen.
 
 ## <a name="advantages-of-overloading"></a>Vorteile von überladen
 
-Der Vorteil beim Überladen einer Prozedur ist die Flexibilität des Aufrufes. Um die im vorherigen Beispiel deklarierte `post` Prozedur zu verwenden, kann der aufrufende Code die Kunden Identifizierung entweder als `String` oder als `Integer`abrufen und dann die gleiche Prozedur in beiden Fällen aufrufen. Dies wird anhand des folgenden Beispiels veranschaulicht:
+Der Vorteil beim Überladen einer Prozedur ist die Flexibilität des Aufrufes. Um die `post` im vorherigen Beispiel deklarierte Prozedur zu verwenden, kann der aufrufende Code die Kunden Identifizierung entweder als `String` oder als `Integer` Abrufen und dann die gleiche Prozedur in beiden Fällen aufrufen. Das folgende Beispiel veranschaulicht dies:
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
 [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Verfahren](./index.md)
-- [Gewusst wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Gewusst wie: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md)
-- [Gewusst wie: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Vorgehensweisen](./index.md)
+- [Vorgehensweise: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Vorgehensweise: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md)
+- [Vorgehensweise: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Überlegungen zur Prozedurüberladung](./considerations-in-overloading-procedures.md)
-- [Überladungsauflösung](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Überladungs Auflösung](./overload-resolution.md)
+- [Overloads](../../../language-reference/modifiers/overloads.md)
+- [Generische Typen in Visual Basic (Visual Basic)](../data-types/generic-types.md)
