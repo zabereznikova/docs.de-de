@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: aa569c0da5b963243596ef440ef37c08b4fae37f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243062"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288237"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 
@@ -71,17 +71,17 @@ In diesem Artikel:
 
 <a name="Rules"></a>
 
-## <a name="cls-compliance-rules"></a>CLS-Konformitätsregeln
+## <a name="cls-compliance-rules"></a>CLS-Kompatibilitätsregeln
 
 In diesem Abschnitt werden die Regeln zum Erstellen einer CLS-kompatiblen Komponente beschrieben. Eine vollständige Liste der Regeln finden Sie unter Partition I, Klausel 11 im [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
-> In der Common Language Specification wird für jede Regel der CLS-Konformität erläutert, wie sie auf Consumer (Entwickler, die programmgesteuert auf eine CLS-konforme Komponente zugreifen), Frameworks (Entwickler, die einen Sprachcompiler zum Erstellen von CLS-konformen Bibliotheken verwenden) und Extender (Entwickler, die zum Erstellen CLS-konformer Komponenten ein Tool, wie einen Sprachcompiler oder einen Codeparser, erstellen) anzuwenden ist. In diesem Artikel wird auf die Anwendbarkeit der Regeln für Frameworks eingegangen. Beachten Sie allerdings, dass möglicherweise einige der Regeln für Extender auch auf Assemblys anwendbar sind, die mithilfe von "Reflection.Emit" erstellt werden.
+> In der Common Language Specification wird für jede Regel der CLS-Kompatibilität erläutert, wie sie auf Consumer (Entwickler, die programmgesteuert auf eine CLS-kompatible Komponente zugreifen), Frameworks (Entwickler, die einen Sprachcompiler zum Erstellen von CLS-kompatiblen Bibliotheken verwenden) und Extender (Entwickler, die zum Erstellen CLS-kompatibler Komponenten ein Tool, wie einen Sprachcompiler oder einen Codeparser, erstellen) anzuwenden ist. In diesem Artikel wird auf die Anwendbarkeit der Regeln für Frameworks eingegangen. Beachten Sie allerdings, dass möglicherweise einige der Regeln für Extender auch auf Assemblys anwendbar sind, die mithilfe von "Reflection.Emit" erstellt werden.
 
-Um eine sprachenneutrale Komponente zu entwerfen, müssen Sie nur die CLS-Konformitätregeln auf die öffentliche Schnittstelle der Komponente anwenden. Die private Implementierung muss nicht mit der Spezifikation konform sein.
+Um eine sprachenneutrale Komponente zu entwerfen, müssen Sie nur die CLS-Kompatibilitätregeln auf die öffentliche Schnittstelle der Komponente anwenden. Die private Implementierung muss nicht mit der Spezifikation konform sein.
 
 > [!IMPORTANT]
-> Die Regeln für CLS-Konformität gelten nur für die öffentlichen Schnittstelle einer Komponente, nicht für die private Implementierung.
+> Die Regeln für CLS-Kompatibilität gelten nur für die öffentlichen Schnittstelle einer Komponente, nicht für die private Implementierung.
 
 Zum Beispiel sind ganze Zahlen ohne Vorzeichen, außer <xref:System.Byte>, nicht CLS-kompatibel. Da die `Person`-Klasse im folgenden Beispiel eine `Age`-Eigenschaft des Typs <xref:System.UInt16> verfügbar macht, zeigt der folgende Code eine Compilerwarnung an.
 
@@ -101,13 +101,13 @@ Die öffentliche Schnittstelle einer Bibliothek besteht aus folgenden Elementen:
 
 - Parameter und Rückgabetypen öffentlicher Methoden von öffentlichen Klassen sowie Parameter und Rückgabetypen von Methoden, auf die abgeleitete Klassen zugreifen können.
 
-Die Regeln für CLS-Konformität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA-335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten.
+Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten.
 
-|Kategorie|Weitere Informationen finden Sie unter|Regel|Regelzahl|
+|Kategorie|Siehe|Regel|Regelzahl|
 |--------------|---------|----------|-----------------|
 |Zugriff|[Memberzugriff](#MemberAccess)|Beim Überschreiben von geerbten Methoden darf der Zugriff nicht geändert werden, außer wenn eine Methode überschrieben wird, die von einer anderen Assembly mit `family-or-assembly`-Zugriff vererbt wurde. In diesem Fall muss für die Überschreibung `family`-Zugriff festgelegt werden.|10|
 |Zugriff|[Memberzugriff](#MemberAccess)|Die Sichtbarkeit und der Zugriff von Typen und Membern soll so beschaffen sein, dass Typen in der Signatur eines Members sichtbar und zugreifbar sind, wann immer der Member selbst sichtbar und zugreifbar ist. Zum Beispiel soll eine öffentliche Methode, die außerhalb der Assembly sichtbar ist, über kein Argument verfügen, dessen Typ nur innerhalb der Assembly sichtbar ist. Die Sichtbarkeit und der Zugriff von Typen, die einen instanziierten generischen Typ zusammensetzen, der in der Signatur eines beliebigen Members verwendet wird, soll sichtbar und zugreifbar sein, wenn der Member selbst sichtbar und zugreifbar ist. Zum Beispiel soll ein instanziierter generischer Typ, der in der Signatur eines außerhalb der Assembly sichtbaren Members vorhanden ist, über kein generisches Argument verfügen, dessen Typ nur innerhalb der Assembly sichtbar ist.|12|
-|Arrays|[Arrays](#arrays)|Arrays müssen über Elemente mit einem CLS-konformen Typ verfügen, und die Untergrenze aller Dimensionen des Arrays muss Null sein. Nur der Tatsache, dass es sich bei einem Element um ein Array handelt sowie der Elementtyp des Arrays muss zur Unterscheidung zwischen Überladungen ausreichen. Wenn das Überladen auf Grundlage mindestens zweier Arraytypen erfolgt, muss es sich bei den Elementtypen um benannte Typen handeln.|16|
+|Arrays|[Arrays](#arrays)|Arrays müssen über Elemente mit einem CLS-kompatiblen Typ verfügen, und die Untergrenze aller Dimensionen des Arrays muss Null sein. Nur der Tatsache, dass es sich bei einem Element um ein Array handelt sowie der Elementtyp des Arrays muss zur Unterscheidung zwischen Überladungen ausreichen. Wenn das Überladen auf Grundlage mindestens zweier Arraytypen erfolgt, muss es sich bei den Elementtypen um benannte Typen handeln.|16|
 |Attribute|[Attribute](#attributes)|Attribute müssen vom Typ <xref:System.Attribute?displayProperty=nameWithType> oder eines davon geerbten Typs sein.|41|
 |Attribute|[Attribute](#attributes)|CLS gestattet nur eine Teilmenge der Codierungen benutzerdefinierter Attribute. Die einzigen in diesen Codierungen zulässigen Typen sind (siehe Partition IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> sowie alle Enumerationstypen, die auf einem CLS-kompatiblen ganzzahligen Basistyp beruhen.|34|
 |Attribute|[Attribute](#attributes)|Nach der CLS sind nicht öffentlich sichtbare erforderliche Modifizierer (`modreq`, siehe Partition II) zulässig, allerdings sind optionale Modifizierer (`modopt`, siehe Partition II), die sie nicht versteht, zulässig.|35|
@@ -131,17 +131,17 @@ Die Regeln für CLS-Konformität werden in der folgenden Tabelle aufgeführt. De
 |Generics|[Generische Typen und Member](#Generics)|Es muss davon ausgegangen werden, dass die Sichtbarkeit und der Zugriff auf Member (einschließlich geschachtelter Typen) in einem instanziierten generischen Typ sich nicht auf die gesamte Deklaration des generischen Typs bezieht, sondern auf die spezifische Instanziierung. Davon ausgehend gelten die Sichtbarkeits- und Zugriffsregeln der CLS-Regel 12 weiterhin.|46|
 |Generics|[Generische Typen und Member](#Generics)|Für jede abstrakte oder virtuelle generische Methode muss es eine konkrete (nicht abstrakte) Standardimplementierung geben.|47|
 |Schnittstellen|[Schnittstellen](#Interfaces)|Zum Implementieren von CLS-kompatiblen Schnittstellen darf keine Definition von nicht CLS-kompatiblen Methoden erforderlich sein.|18|
-|Schnittstellen|[Schnittstellen](#Interfaces)|CLS-konforme Schnittstellen dürfen weder statische Methoden noch Felder definieren.|19|
-|Mitglieder|[Typmember im Allgemeinen](#members)|Globale static-Felder und Methoden sind nicht CLS-kompatibel.|36|
-|Mitglieder|--|Der Wert eines literalen statischen Elements wird von der Verwendung von Feldinitialisierungsmetadaten angegeben. Ein CLS-konformes Literal muss über einen Wert verfügen, der in den Feldinitialisierungsmetadaten angegeben wird, der genau vom gleichen Typ wie das Literal ist (oder des zugrunde liegenden Typs, wenn dieses Literal `enum` ist).|13|
-|Mitglieder|[Typmember im Allgemeinen](#members)|Die vararg-Einschränkung ist nicht Teil der CLS, und die einzige Aufrufkonvention, die von der CLS unterstützt wird, ist die verwaltete Standardaufrufkonvention.|15|
+|Schnittstellen|[Schnittstellen](#Interfaces)|CLS-kompatible Schnittstellen dürfen weder statische Methoden noch Felder definieren.|19|
+|Member|[Typmember im Allgemeinen](#members)|Globale static-Felder und Methoden sind nicht CLS-kompatibel.|36|
+|Member|--|Der Wert eines literalen statischen Elements wird von der Verwendung von Feldinitialisierungsmetadaten angegeben. Ein CLS-kompatibles Literal muss über einen Wert verfügen, der in den Feldinitialisierungsmetadaten angegeben wird, der genau vom gleichen Typ wie das Literal ist (oder des zugrunde liegenden Typs, wenn dieses Literal `enum` ist).|13|
+|Member|[Typmember im Allgemeinen](#members)|Die vararg-Einschränkung ist nicht Teil der CLS, und die einzige Aufrufkonvention, die von der CLS unterstützt wird, ist die verwaltete Standardaufrufkonvention.|15|
 |Namenskonventionen|[Namenskonventionen](#naming)|Assemblys müssen Anhang 7 des technischen Berichts 15 von Unicode Standard 3.0 befolgen, in dem Zeichen geregelt werden, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter <https://www.unicode.org/unicode/reports/tr15/tr15-18.html> verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration.|4|
-|Überladen|[Namenskonventionen](#naming)|Alle Namen, die in einem CLS-konformen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich.|5|
+|Überladen|[Namenskonventionen](#naming)|Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich.|5|
 |Überladen|[Namenskonventionen](#naming)|Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (gemäß Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben).|6|
-|Überladen|[Überladungen](#overloads)|Nur Eigenschaften und Methoden können überladen werden.|37|
-|Überladen|[Überladungen](#overloads)|Eigenschaften und Methoden können allein basierend auf der Anzahl und den Typen ihrer Parameter überladen werden, außer den Konvertierungsoperatoren `op_Implicit` und `op_Explicit`, die auch auf Grundlage des Rückgabetyps überladen werden können.|38|
+|Überladen|[Overloads](#overloads)|Nur Eigenschaften und Methoden können überladen werden.|37|
+|Überladen|[Overloads](#overloads)|Eigenschaften und Methoden können allein basierend auf der Anzahl und den Typen ihrer Parameter überladen werden, außer den Konvertierungsoperatoren `op_Implicit` und `op_Explicit`, die auch auf Grundlage des Rückgabetyps überladen werden können.|38|
 |Überladen|--|Wenn mindestens zwei CLS-kompatible Methoden, die in einem Typ deklariert werden, den gleichen Namen und für einen bestimmten Satz von Typinstanziierungen die gleichen Parameter und Rückgabetypen nutzen, dann müssen alle diese Methoden bei diesen Typinstanziierungen semantisch gleichwertig sein.|48|
-|Typen|[Typ und Typmembersignaturen](#Types)|<xref:System.Object?displayProperty=nameWithType> ist CLS-kompatibel. Jede andere CLS-konforme Klasse muss von einer CLS-konformen Klasse erben.|23|
+|Typen|[Typ und Typmembersignaturen](#Types)|<xref:System.Object?displayProperty=nameWithType> ist CLS-kompatibel. Jede andere CLS-kompatible Klasse muss von einer CLS-kompatiblen Klasse erben.|23|
 |Eigenschaften|[Eigenschaften](#properties)|Die Methoden, mit denen die Getter- und die Setter-Methode einer Eigenschaft implementiert werden, müssen in den Metadaten mit `SpecialName` markiert werden.|24|
 |Eigenschaften|[Eigenschaften](#properties)|Die Zugriffsmethoden einer Eigenschaft müssen alle „static“, alle „virtual“ oder alle „instance“ sein.|26|
 |Eigenschaften|[Eigenschaften](#properties)|Der Typ einer Eigenschaft muss dem Rückgabetyp der Getter-Methode und dem Typ des letzten Arguments der Setter-Methode entsprechen. Die Parametertypen der Eigenschaft müssen den Parametertypen der Getter-Methode und, ausgenommen dem Letzten, allen Parametertypen der Setter-Methode entsprechen. Diese Typen müssen CLS-kompatibel sein und dürfen keine verwalteten Zeiger sein (d. h., sie dürfen nicht als Verweise übergeben werden).|27|
@@ -170,7 +170,7 @@ Alle in den Membersignaturen angezeigten Typen, einschließlich des Rückgabetyp
 
 - Alle als Einschränkungen für generische Parameter verwendeten Typen müssen CLS-kompatibel sein.
 
-Das [allgemeine Typsystem](../../docs/standard/base-types/common-type-system.md) von .NET Framework enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.
+Das [allgemeine Typsystem](base-types/common-type-system.md) von .NET Framework enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.
 
 |CLS-kompatibler Typ|Beschreibung|
 |-------------------------|-----------------|
@@ -188,16 +188,16 @@ Das [allgemeine Typsystem](../../docs/standard/base-types/common-type-system.md)
 
 Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-kompatibel.
 
-|Nicht konformer Typ|Beschreibung|CLS-konforme Alternative|
+|Nicht kompatibler Typ|Beschreibung|CLS-kompatible Alternative|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|Ganzzahliger 8-Bit-Datentyp mit Vorzeichen|<xref:System.Int16>|
-|<xref:System.TypedReference>|Zeiger auf ein Objekt und den Laufzeittyp|Keiner|
+|<xref:System.TypedReference>|Zeiger auf ein Objekt und den Laufzeittyp|Keine|
 |<xref:System.UInt16>|16-Bit-Ganzzahl ohne Vorzeichen|<xref:System.Int32>|
 |<xref:System.UInt32>|32-Bit-Ganzzahl ohne Vorzeichen|<xref:System.Int64>|
 |<xref:System.UInt64>|64-Bit-Ganzzahl ohne Vorzeichen|<xref:System.Int64> (kann überlaufen), <xref:System.Numerics.BigInteger> oder <xref:System.Double>|
 |<xref:System.UIntPtr>|Zeiger ohne Vorzeichen oder Handle|<xref:System.IntPtr>|
 
-Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-konforme Typen ein, zum Beispiel:
+Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-kompatible Typen ein, zum Beispiel:
 
 - Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int*` namens `Value` verfügt. Da `int*` ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.
 
@@ -207,12 +207,12 @@ Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließ
 
 Wenn ein Typ nicht CLS-kompatibel ist, sollten Sie das <xref:System.CLSCompliantAttribute>-Attribut mit einem Wert von `isCompliant``false` darauf anwenden. Weitere Informationen finden Sie im Abschnitt zum [CLSCompliantAttribute-Attribut](#CLSAttribute).
 
-Im folgenden Beispiel wird das Problem der CLS-Konformität in einer Methodensignatur und in der Instanziierung des generischen Typs veranschaulicht. Dabei wird eine `InvoiceItem`-Klasse mit einer Eigenschaft vom Typ <xref:System.UInt32>, einer Eigenschaft vom Typ `Nullable(Of UInt32)` und einem Konstruktor mit Parametern vom Typ <xref:System.UInt32> sowie `Nullable(Of UInt32)` definiert. Sie erhalten vier Compilerwarnungen, wenn Sie versuchen, das Beispiel zu kompilieren.
+Im folgenden Beispiel wird das Problem der CLS-Kompatibilität in einer Methodensignatur und in der Instanziierung des generischen Typs veranschaulicht. Dabei wird eine `InvoiceItem`-Klasse mit einer Eigenschaft vom Typ <xref:System.UInt32>, einer Eigenschaft vom Typ `Nullable(Of UInt32)` und einem Konstruktor mit Parametern vom Typ <xref:System.UInt32> sowie `Nullable(Of UInt32)` definiert. Sie erhalten vier Compilerwarnungen, wenn Sie versuchen, das Beispiel zu kompilieren.
 
 [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
 [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]
 
-Um die Compilerwarnungen auszuschließen, ersetzen Sie die nicht CLS-konformen Typen in der öffentlichen `InvoiceItem`-Schnittstelle durch konforme Typen:
+Um die Compilerwarnungen auszuschließen, ersetzen Sie die nicht CLS-kompatiblen Typen in der öffentlichen `InvoiceItem`-Schnittstelle durch kompatible Typen:
 
 [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)]
 [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]
@@ -273,7 +273,7 @@ In der Common Language Specification werden zwei Konvertierungsoperatoren defini
 
 Allerdings wird Operatorüberladung oder die Definition benutzerdefinierter Operatoren nicht von allen Sprachen unterstützt. Wenn Sie diese Konvertierungsoperatoren implementieren, sollten Sie eine alternative Methode zum Ausführen der Konvertierung bereitstellen. Es wird empfohlen, `From`*Xxx*- und `To`*Xxx*-Methoden bereitzustellen.
 
-Im folgenden Beispiel werden CLS-konforme implizite und explizite Konvertierungen definiert. Es wird eine `UDouble`-Klasse erstellt, die eine Gleitkommazahl mit doppelter Genauigkeit und Vorzeichen darstellt. Implizite Konvertierungen aus `UDouble` in <xref:System.Double> und explizite Konvertierungen aus `UDouble` in <xref:System.Single>, aus <xref:System.Double> in `UDouble` und aus <xref:System.Single> in `UDouble` werden bereitgestellt. Es wird auch eine `ToDouble`-Methode als Alternative zum Operator für implizite Konvertierung definiert, und die `ToSingle`, `FromDouble`-Methode sowie die `FromSingle`-Methode werden als Alternativen zu den Operatoren der expliziten Konvertierung definiert.
+Im folgenden Beispiel werden CLS-kompatible implizite und explizite Konvertierungen definiert. Es wird eine `UDouble`-Klasse erstellt, die eine Gleitkommazahl mit doppelter Genauigkeit und Vorzeichen darstellt. Implizite Konvertierungen aus `UDouble` in <xref:System.Double> und explizite Konvertierungen aus `UDouble` in <xref:System.Single>, aus <xref:System.Double> in `UDouble` und aus <xref:System.Single> in `UDouble` werden bereitgestellt. Es wird auch eine `ToDouble`-Methode als Alternative zum Operator für implizite Konvertierung definiert, und die `ToSingle`, `FromDouble`-Methode sowie die `FromSingle`-Methode werden als Alternativen zu den Operatoren der expliziten Konvertierung definiert.
 
 [!code-csharp[Conceptual.CLSCompliant#15](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/convert1.cs#15)]
 [!code-vb[Conceptual.CLSCompliant#15](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/convert1.vb#15)]
@@ -284,12 +284,12 @@ Im folgenden Beispiel werden CLS-konforme implizite und explizite Konvertierunge
 
 CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
 
-- Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-konformen Untergrenze von eins erstellt. Beachten Sie, dass vom Compiler ungeachtet des Vorhandenseins des <xref:System.CLSCompliantAttribute>-Attributs nicht erkannt wird, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist.
+- Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass vom Compiler ungeachtet des Vorhandenseins des <xref:System.CLSCompliantAttribute>-Attributs nicht erkannt wird, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist.
 
   [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
   [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]
 
-- Alle Arrayelemente müssen aus CLS-konformen Typen bestehen. Im folgenden Beispiel werden zwei Methoden, die nicht CLS-kompatible Arrays zurückgeben, definiert. Die erste Methode gibt ein Array von <xref:System.UInt32>-Werten zurück. Die zweite Methode gibt ein <xref:System.Object>-Array zurück, das den <xref:System.Int32>-Wert und den <xref:System.UInt32>-Wert umfasst. Obwohl der Compiler das erste Array aufgrund des <xref:System.UInt32>-Typs als nicht kompatibel identifiziert, wird nicht erkannt, dass das zweite Array nicht CLS-kompatible Elemente umfasst.
+- Alle Arrayelemente müssen aus CLS-kompatiblen Typen bestehen. Im folgenden Beispiel werden zwei Methoden, die nicht CLS-kompatible Arrays zurückgeben, definiert. Die erste Methode gibt ein Array von <xref:System.UInt32>-Werten zurück. Die zweite Methode gibt ein <xref:System.Object>-Array zurück, das den <xref:System.Int32>-Wert und den <xref:System.UInt32>-Wert umfasst. Obwohl der Compiler das erste Array aufgrund des <xref:System.UInt32>-Typs als nicht kompatibel identifiziert, wird nicht erkannt, dass das zweite Array nicht CLS-kompatible Elemente umfasst.
 
   [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
   [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]
@@ -303,7 +303,7 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
 
 ### <a name="interfaces"></a>Schnittstellen
 
-CLS-konforme Schnittstellen können Eigenschaften, Ereignisse und virtuelle Methoden (Methoden ohne Implementierung) definieren. Eine CLS-konforme Schnittstelle kann keine der folgenden Aspekte aufweisen:
+CLS-kompatible Schnittstellen können Eigenschaften, Ereignisse und virtuelle Methoden (Methoden ohne Implementierung) definieren. Eine CLS-kompatible Schnittstelle kann keine der folgenden Aspekte aufweisen:
 
 - Statische Methoden oder statische Felder Der C#- und der Visual Basic-Compiler erstellen Compilerfehler, wenn Sie einen statischen Member in einer Schnittstelle definieren.
 
@@ -314,9 +314,9 @@ CLS-konforme Schnittstellen können Eigenschaften, Ereignisse und virtuelle Meth
   [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
   [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]
 
-  Aufgrund dieser Regel, ist es nicht erforderlich, dass CLS-kompatible Typen nicht CLS-kompatible Member implementieren. Wenn ein CLS-konformes Framework eine Klasse verfügbar macht, die eine nicht CLS-konforme Schnittstelle implementiert, sollte sie konkrete Implementierungen aller nicht-CLS-konformen Member angeben.
+  Aufgrund dieser Regel, ist es nicht erforderlich, dass CLS-kompatible Typen nicht CLS-kompatible Member implementieren. Wenn ein CLS-kompatibles Framework eine Klasse verfügbar macht, die eine nicht CLS- kompatible Schnittstelle implementiert, sollte sie konkrete Implementierungen aller nicht-CLS-kompatiblen Member angeben.
 
-CLS-konforme Sprachcompiler müssen einer Klasse auch ermöglichen, separate Implementierungen von Membern bereitzustellen, die in mehreren Schnittstellen über den gleichen Namen und dieselbe Signatur verfügen.  C# und Visual Basic unterstützen [explizite Schnittstellenimplementierungen](../csharp/programming-guide/interfaces/explicit-interface-implementation.md), um unterschiedliche Implementierungen identisch benannter Methoden bereitzustellen. Visual Basic unterstützt darüber hinaus das `Implements`-Schlüsselwort, mit dem Sie explizit festlegen können, welche Schnittstelle und welcher Member von einem bestimmten Member implementiert werden. Im folgenden Beispiel wird dieses Szenario veranschaulicht, indem eine `Temperature`-Klasse definiert wird, die die `ICelsius`-Schnittstelle und die `IFahrenheit`-Schnittstelle als explizite Schnittstellenimplementierungen implementiert.
+CLS-kompatible Sprachcompiler müssen einer Klasse auch ermöglichen, separate Implementierungen von Membern bereitzustellen, die in mehreren Schnittstellen über den gleichen Namen und dieselbe Signatur verfügen.  C# und Visual Basic unterstützen [explizite Schnittstellenimplementierungen](../csharp/programming-guide/interfaces/explicit-interface-implementation.md), um unterschiedliche Implementierungen identisch benannter Methoden bereitzustellen. Visual Basic unterstützt darüber hinaus das `Implements`-Schlüsselwort, mit dem Sie explizit festlegen können, welche Schnittstelle und welcher Member von einem bestimmten Member implementiert werden. Im folgenden Beispiel wird dieses Szenario veranschaulicht, indem eine `Temperature`-Klasse definiert wird, die die `ICelsius`-Schnittstelle und die `IFahrenheit`-Schnittstelle als explizite Schnittstellenimplementierungen implementiert.
 
 [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
 [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]
@@ -325,7 +325,7 @@ CLS-konforme Sprachcompiler müssen einer Klasse auch ermöglichen, separate Imp
 
 ### <a name="enumerations"></a>Enumerationen
 
-Bei CLS-konforme Enumerationen müssen die folgenden Regeln beachtet werden:
+Bei CLS-kompatiblen Enumerationen müssen die folgenden Regeln beachtet werden:
 
 - Der zugrunde liegende Typ der Enumeration muss ein systeminterner CLS-kompatibler Ganzzahltyp sein (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> oder <xref:System.Int64>). Im folgenden Code wird beispielsweise versucht, eine Enumeration zu definieren, deren zugrunde liegender Typ <xref:System.UInt32> ist. Es wird eine Compilerwarnung generiert.
 
@@ -409,11 +409,11 @@ Im folgenden Beispiel wird ein generischer Typ, `C1<T>` (oder `C1(Of T)` in Visu
 
 ### <a name="constructors"></a>Konstruktoren
 
-Bei Konstruktoren in den CLS-konformen Klassen und Strukturen müssen die folgenden Regeln beachtet werden:
+Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folgenden Regeln beachtet werden:
 
 - Der Konstruktor einer abgeleiteten Klasse muss den Instanzkonstruktor der Basisklasse aufrufen, bevor er auf geerbte Instanzdaten zugreift. Diese Anforderung basiert auf der Tatsache, dass Konstruktoren nicht nach ihren abgeleiteten Klassen geerbt werden. Diese Regel gilt nicht für Strukturen, die keine direkte Vererbung unterstützen.
 
-  In der Regel erzwingen Compiler diese Regel unabhängig von der CLS-Konformität, wie im folgenden Beispiel gezeigt. Es wird eine `Doctor`-Klasse erstellt, die von einer `Person`-Klasse abgeleitet ist. Doch die `Doctor`-Klasse kann den `Person`-Klassenkonstruktor nicht zum Initialisieren geerbter Instanzfelder aufrufen.
+  In der Regel erzwingen Compiler diese Regel unabhängig von der CLS-Kompatibilität, wie im folgenden Beispiel gezeigt. Es wird eine `Doctor`-Klasse erstellt, die von einer `Person`-Klasse abgeleitet ist. Doch die `Doctor`-Klasse kann den `Person`-Klassenkonstruktor nicht zum Initialisieren geerbter Instanzfelder aufrufen.
 
   [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
   [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]
@@ -424,7 +424,7 @@ Bei Konstruktoren in den CLS-konformen Klassen und Strukturen müssen die folgen
 
 ### <a name="properties"></a>Eigenschaften
 
-Eigenschaften in den CLS-konformen Typen müssen die folgenden Regeln beachten:
+Eigenschaften in den CLS-kompatiblen Typen müssen die folgenden Regeln beachten:
 
 - Eine Eigenschaft muss über einen Setter, einen Getter oder beides verfügen. In einer Assembly werden diese als spezielle Methoden implementiert, das bedeutet, dass sie als separate Methoden (der Getter hat den Namen `get_`*Eigenschaftsname* und der Setter den Namen `set_`*Eigenschaftsname*) erscheinen, die als `SpecialName` gekennzeichnet in den Metadaten der Assembly angezeigt werden. Die Compiler von C# und Visual Basic erzwingen diese Regel automatisch, ohne das <xref:System.CLSCompliantAttribute>-Attribut anzuwenden.
 
@@ -449,7 +449,7 @@ Ein Ereignis wird vom Namen und dem Typ definiert. Der Ereignistyp ist ein Deleg
 
 Die Methoden für das Hinzufügen, Entfernen und Auslösen des Ereignisses verfügen über den gleichen Zugriff. Sie müssen zudem "static", "instance" oder "virtual" sein. Die Methoden zum Hinzufügen und Entfernen eines Ereignisses verfügen über einen Parameter, dessen Typ der Ereignisdelegattyp ist. Die Methoden zum Hinzufügen und Entfernen müssen beide vorhanden sein oder beide fehlen.
 
-Im folgenden Beispiel wird eine CLS-konforme Klasse namens `Temperature` definiert, die ein `TemperatureChanged`-Ereignis auslöst, wenn die Temperaturänderung zwischen zwei Messungen einem Schwellenwert entspricht oder diesen überschreitet. Die `Temperature`-Klasse definiert eine `raise_TemperatureChanged`-Methode explizit, sodass sie selektiv Ereignishandler ausführen kann.
+Im folgenden Beispiel wird eine CLS-kompatible Klasse namens `Temperature` definiert, die ein `TemperatureChanged`-Ereignis auslöst, wenn die Temperaturänderung zwischen zwei Messungen einem Schwellenwert entspricht oder diesen überschreitet. Die `Temperature`-Klasse definiert eine `raise_TemperatureChanged`-Methode explizit, sodass sie selektiv Ereignishandler ausführen kann.
 
 [!code-csharp[Conceptual.CLSCompliant#20](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/event1.cs#20)]
 [!code-vb[Conceptual.CLSCompliant#20](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/event1.vb#20)]
@@ -478,7 +478,7 @@ Ausnahmeobjekte müssen von <xref:System.Exception?displayProperty=nameWithType>
 [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)]
 [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]
 
-Um diesen Fehler zu beheben, muss die `ErrorClass`-Klasse von <xref:System.Exception?displayProperty=nameWithType> erben. Außerdem muss die `Message`- Eigenschaft überschrieben werden. Im folgenden Beispiel werden diese Fehler korrigiert, um eine CLS-konforme `ErrorClass`-Klasse zu definieren.
+Um diesen Fehler zu beheben, muss die `ErrorClass`-Klasse von <xref:System.Exception?displayProperty=nameWithType> erben. Außerdem muss die `Message`- Eigenschaft überschrieben werden. Im folgenden Beispiel werden diese Fehler korrigiert, um eine CLS-kompatible `ErrorClass`-Klasse zu definieren.
 
 [!code-csharp[Conceptual.CLSCompliant#14](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions2.cs#14)]
 [!code-vb[Conceptual.CLSCompliant#14](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions2.vb#14)]
@@ -489,12 +489,12 @@ Um diesen Fehler zu beheben, muss die `ErrorClass`-Klasse von <xref:System.Excep
 
 In .NET-Frameworkassemblys stellen benutzerdefinierte Attribute einen erweiterbaren Mechanismus zum Speichern benutzerdefinierter Attribute und das Abrufen von Metadaten über Programmierobjekte, wie Assemblys, Typen, Member und Methodenparameter, bereit. Benutzerdefinierte Attribute müssen von <xref:System.Attribute?displayProperty=nameWithType> oder einem Typ abgeleitet werden, der von <xref:System.Attribute?displayProperty=nameWithType> abgeleitet wird.
 
-Das folgende Beispiel verstößt gegen diese Regel. Es wird eine `NumericAttribute`-Klasse definiert, die nicht von <xref:System.Attribute?displayProperty=nameWithType> abgeleitet ist. Beachten Sie, dass der Compilerfehler nur entsteht, wenn das nicht CLS-konforme Attribut angewendet wird, nicht aber, wenn die Klasse definiert ist.
+Das folgende Beispiel verstößt gegen diese Regel. Es wird eine `NumericAttribute`-Klasse definiert, die nicht von <xref:System.Attribute?displayProperty=nameWithType> abgeleitet ist. Beachten Sie, dass der Compilerfehler nur entsteht, wenn das nicht CLS-kompatible Attribut angewendet wird, nicht aber, wenn die Klasse definiert ist.
 
 [!code-csharp[Conceptual.CLSCompliant#18](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute1.cs#18)]
 [!code-vb[Conceptual.CLSCompliant#18](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute1.vb#18)]
 
-Der Konstruktor oder die Eigenschaften eines CLS-konformen Attributs können nur die folgenden Typen verfügbar machen:
+Der Konstruktor oder die Eigenschaften eines CLS-kompatiblen Attributs können nur die folgenden Typen verfügbar machen:
 
 - <xref:System.Boolean>
 
@@ -533,22 +533,22 @@ Zur Kompilierzeit erkennt der Compiler nicht kompatible Elemente, von denen ange
 
 Komponentenentwickler können das <xref:System.CLSCompliantAttribute>-Attribut auf zwei Arten verwenden:
 
-- Um die Teile der öffentlichen Schnittstelle zu definieren, die von einer CLS-konformen Komponente und den nicht CLS-konformen Teilen verfügbar gemacht werden. Wenn das Attribut verwendet wird, um bestimmte Programmelemente als CLS-kompatibel zu markieren, stellt seine Verwendung sicher, dass auf diese Elemente aus allen Sprachen und Tools für das .NET Framework zugegriffen werden kann.
+- Um die Teile der öffentlichen Schnittstelle zu definieren, die von einer CLS-kompatiblen Komponente und den nicht CLS-kompatiblen Teilen verfügbar gemacht werden. Wenn das Attribut verwendet wird, um bestimmte Programmelemente als CLS-kompatibel zu markieren, stellt seine Verwendung sicher, dass auf diese Elemente aus allen Sprachen und Tools für das .NET Framework zugegriffen werden kann.
 
 - Um sicherzustellen, dass die öffentliche Schnittstelle der Komponentenbibliothek nur Programmelemente verfügbar macht, die CLS-kompatibel sind. Wenn Elemente nicht CLS-kompatibel sind, geben Compiler im Allgemeinen eine Warnung aus.
 
 > [!WARNING]
-> In einigen Fällen erzwingen CLS-konforme Sprachcompiler Regeln unabhängig davon, ob das <xref:System.CLSCompliantAttribute>-Attribut verwendet wird. Das Definieren eines statischen Members in einer Schnittstelle verstößt zum Beispiel gegen eine CLS-Regel. In dieser Hinsicht zeigen die Compiler von C# und Visual Basic eine Fehlermeldung an und können die App nicht kompilieren, wenn Sie einen `static`-Member (in C#) oder einen `Shared`-Member (in Visual Basic) in einer Schnittstelle definieren.
+> In einigen Fällen erzwingen CLS-kompatible Sprachcompiler Regeln unabhängig davon, ob das <xref:System.CLSCompliantAttribute>-Attribut verwendet wird. Das Definieren eines statischen Members in einer Schnittstelle verstößt zum Beispiel gegen eine CLS-Regel. In dieser Hinsicht zeigen die Compiler von C# und Visual Basic eine Fehlermeldung an und können die App nicht kompilieren, wenn Sie einen `static`-Member (in C#) oder einen `Shared`-Member (in Visual Basic) in einer Schnittstelle definieren.
 
-Das <xref:System.CLSCompliantAttribute>-Attribut wird mit einem <xref:System.AttributeUsageAttribute>-Attribut markiert, das über einen Wert von <xref:System.AttributeTargets.All?displayProperty=nameWithType> verfügt. Dieser Wert ermöglicht das Anwenden des <xref:System.CLSCompliantAttribute>-Attributs auf jedem Programmelement, einschließlich Assemblys, Modulen, Typen (Klassen, Strukturen, Enumerationen, Schnittstellen und Delegaten), Typmembern (Konstruktoren, Methoden, Eigenschaften, Feldern und Ereignissen), Parametern, generischen Parametern und Rückgabewerten. In der Praxis sollten Sie das Attribut allerdings nur auf Assemblys, Typen und Typmember anwenden. Andernfalls ignorieren Compiler das Attribut und generieren weiterhin Compilerwarnungen, wenn sie einen nicht konformen Parameter, einen generischen Parameter oder einen Rückgabewert in der öffentlichen Schnittstelle der Bibliothek vorfinden.
+Das <xref:System.CLSCompliantAttribute>-Attribut wird mit einem <xref:System.AttributeUsageAttribute>-Attribut markiert, das über einen Wert von <xref:System.AttributeTargets.All?displayProperty=nameWithType> verfügt. Dieser Wert ermöglicht das Anwenden des <xref:System.CLSCompliantAttribute>-Attributs auf jedem Programmelement, einschließlich Assemblys, Modulen, Typen (Klassen, Strukturen, Enumerationen, Schnittstellen und Delegaten), Typmembern (Konstruktoren, Methoden, Eigenschaften, Feldern und Ereignissen), Parametern, generischen Parametern und Rückgabewerten. In der Praxis sollten Sie das Attribut allerdings nur auf Assemblys, Typen und Typmember anwenden. Andernfalls ignorieren Compiler das Attribut und generieren weiterhin Compilerwarnungen, wenn sie einen nicht kompatiblen Parameter, einen generischen Parameter oder einen Rückgabewert in der öffentlichen Schnittstelle der Bibliothek vorfinden.
 
 Der Wert des <xref:System.CLSCompliantAttribute>-Attributs wird von enthaltenen Programmelementen geerbt. Wenn beispielsweise eine Assembly als CLS-kompatibel markiert ist, sind die Typen auch CLS-kompatibel. Wenn ein Typ als CLS-kompatibel gekennzeichnet ist, sind seine geschachtelten Typen und Member auch CLS-kompatibel.
 
-Sie können die geerbte Konformität explizit überschreiben, indem Sie das <xref:System.CLSCompliantAttribute>- Attribut auf ein enthaltenes Programmelement anwenden. Beispielsweise können Sie das <xref:System.CLSCompliantAttribute>-Attribut mit einem Wert von `isCompliant``false` verwenden, um einen inkompatiblen Typ in einer kompatiblen Assembly zu definieren, und Sie können das Attribut mit einem Wert von `isCompliant``true` verwenden, um einen kompatiblen Typ in einer inkompatiblen Assembly zu definieren. Sie können auch nicht konforme Member in einem konformen Typ definieren. Allerdings kann ein nicht kompatibler Typ keine kompatiblen Member aufweisen, sodass Sie das Attribut nicht mit einem Wert von `isCompliant``true` verwenden können, um die Vererbung eines nicht kompatiblen Typs zu überschreiben.
+Sie können die geerbte Kompatibilität explizit überschreiben, indem Sie das <xref:System.CLSCompliantAttribute>- Attribut auf ein enthaltenes Programmelement anwenden. Beispielsweise können Sie das <xref:System.CLSCompliantAttribute>-Attribut mit einem Wert von `isCompliant``false` verwenden, um einen inkompatiblen Typ in einer kompatiblen Assembly zu definieren, und Sie können das Attribut mit einem Wert von `isCompliant``true` verwenden, um einen kompatiblen Typ in einer inkompatiblen Assembly zu definieren. Sie können auch nicht kompatible Member in einem kompatiblen Typ definieren. Allerdings kann ein nicht kompatibler Typ keine kompatiblen Member aufweisen, sodass Sie das Attribut nicht mit einem Wert von `isCompliant``true` verwenden können, um die Vererbung eines nicht kompatiblen Typs zu überschreiben.
 
 Wenn Sie Komponenten entwickeln, sollten Sie stets das <xref:System.CLSCompliantAttribute>- Attribut verwenden, um anzugeben, ob die Assembly, die Typen und die Member CLS-kompatibel sind.
 
-So erstellen Sie CLS-konforme Komponenten:
+So erstellen Sie CLS-kompatible Komponenten:
 
 1. Verwenden Sie <xref:System.CLSCompliantAttribute>, um die Assembly als CLS-kompatibel zu markieren.
 
@@ -556,22 +556,22 @@ So erstellen Sie CLS-konforme Komponenten:
 
 3. Markieren Sie alle öffentlich verfügbar gemachten Member in CLS-kompatiblen Typen als nicht kompatibel.
 
-4. Stellen Sie eine CLS-konforme Alternative für nicht CLS-konforme Member bereit.
+4. Stellen Sie eine CLS-kompatible Alternative für nicht CLS-kompatible Member bereit.
 
-Wenn alle inkonformen Typen und Member erfolgreich markiert wurden, sollte der Compiler keine Konformitätswarnungen ausgeben. Allerdings sollten Sie angeben, welche Member nicht CLS-kompatibel sind und ihre CLS-kompatiblen Alternativen in der Produktdokumentation aufführen.
+Wenn alle inkompatiblen Typen und Member erfolgreich markiert wurden, sollte der Compiler keine Kompatibilitätswarnungen ausgeben. Allerdings sollten Sie angeben, welche Member nicht CLS-kompatibel sind und ihre CLS-kompatiblen Alternativen in der Produktdokumentation aufführen.
 
-Im folgenden Beispiel wird das <xref:System.CLSCompliantAttribute>-Attribut verwendet, um eine CLS-konforme Assembly und einen Typ, `CharacterUtilities`, zu definieren, der über zwei nicht CLS-konforme Member verfügt. Da beide Member mit dem `CLSCompliant(false)`-Attribut markiert sind, generiert der Compiler keine Warnungen. Die Klasse stellt auch eine CLS-konforme Alternative für beide Methoden bereit. Normalerweise würden der `ToUTF16`- Methode lediglich zwei Überladungen hinzugefügt werden, um CLS-konforme Alternativen bereitzustellen. Da Methoden aber nicht aufgrund des Rückgabewerts überladen werden können, sind die Namen der CLS-konformen Methoden von den Namen der nicht konformen Methoden unterschiedlich.
+Im folgenden Beispiel wird das <xref:System.CLSCompliantAttribute>-Attribut verwendet, um eine CLS-kompatible Assembly und einen Typ, `CharacterUtilities`, zu definieren, der über zwei nicht CLS-kompatible Member verfügt. Da beide Member mit dem `CLSCompliant(false)`-Attribut markiert sind, generiert der Compiler keine Warnungen. Die Klasse stellt auch eine CLS-kompatible Alternative für beide Methoden bereit. Normalerweise würden der `ToUTF16`- Methode lediglich zwei Überladungen hinzugefügt werden, um CLS-kompatible Alternativen bereitzustellen. Da Methoden aber nicht aufgrund des Rückgabewerts überladen werden können, sind die Namen der CLS-kompatiblen Methoden von den Namen der nicht kompatiblen Methoden unterschiedlich.
 
 [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)]
 [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]
 
-Wenn Sie eine App anstelle einer Bibliothek entwickeln, (das heißt, wenn Sie keine Typen oder Member verfügbar machen, die von anderen App-Entwicklern genutzt werden können), ist die CLS-Konformität der Programmelemente, die von der App genutzt werden, nur relevant, wenn sie von Ihrer Sprache nicht unterstützt werden. In diesem Fall generiert der Sprachcompiler einen Fehler, wenn Sie versuchen, ein nicht CLS-konformes Element zu verwenden.
+Wenn Sie eine App anstelle einer Bibliothek entwickeln, (das heißt, wenn Sie keine Typen oder Member verfügbar machen, die von anderen App-Entwicklern genutzt werden können), ist die CLS-Kompatibilität der Programmelemente, die von der App genutzt werden, nur relevant, wenn sie von Ihrer Sprache nicht unterstützt werden. In diesem Fall generiert der Sprachcompiler einen Fehler, wenn Sie versuchen, ein nicht CLS-kompatibles Element zu verwenden.
 
 <a name="CrossLang"></a>
 
 ## <a name="cross-language-interoperability"></a>Sprachübergreifende Interoperabilität
 
-Der Begriff „Sprachunabhängigkeit“ kann mehrere Bedeutungen haben. Eine Bedeutung, die im Artikel [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md) erläutert wird, bezeichnet die nahtlose Nutzung von Typen, die in einer Sprache geschrieben wurden, durch eine App, die in einer anderen Sprache geschrieben wurde. Eine zweite Bedeutung, die in diesem Artikels hervorgehoben wird, umfasst die Kombination von Code aus mehreren Sprachen in einer einzelnen .NET Framework-Assembly.
+Der Begriff „Sprachunabhängigkeit“ kann mehrere Bedeutungen haben. Eine Bedeutung, die im Artikel [Sprachenunabhängigkeit und sprachunabhängige Komponenten](language-independence-and-language-independent-components.md) erläutert wird, bezeichnet die nahtlose Nutzung von Typen, die in einer Sprache geschrieben wurden, durch eine App, die in einer anderen Sprache geschrieben wurde. Eine zweite Bedeutung, die in diesem Artikels hervorgehoben wird, umfasst die Kombination von Code aus mehreren Sprachen in einer einzelnen .NET Framework-Assembly.
 
 Das folgende Beispiel veranschaulicht die sprachübergreifende Interoperabilität. Es wird die Klassenbibliothek Utilities.dll erstellt, die zwei Klassen einschließt: `NumericLib` und `StringLib`. Die `NumericLib`-Klasse wurde in C# und die `StringLib`-Klasse in Visual Basic geschrieben. Im Folgenden sehen Sie den Quellcode für "StringUtil.vb", der in der `ToTitleCase`-Klasse einen einzelnen Member enthält, `StringLib`.
 
@@ -620,6 +620,6 @@ Zum Kompilieren mit C# ändern Sie den Namen des Compilers von **vbc** in **csc*
 csc example.cs /r:UtilityLib.dll
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.CLSCompliantAttribute>

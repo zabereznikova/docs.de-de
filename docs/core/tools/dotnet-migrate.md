@@ -2,18 +2,18 @@
 title: Befehl „dotnet migrate“
 description: Der dotnet migrate-Befehl migriert ein Projekt und alle seine Abhängigkeiten.
 ms.date: 02/14/2020
-ms.openlocfilehash: 71f587c1bfadd445aca818448bdd5f136f009fe0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2e7f9ae5a1d11c54280d914b04df761f0d5aff99
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463633"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284091"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet migrate`: migriert ein .NET Core-Projekt der Vorschauversion 2 in ein SDK-Projekt für .NET Core.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379913"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290940"
 ---
 # <a name="assemblies-in-net"></a>Assemblys in .NET
 
@@ -102,8 +102,8 @@ In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung 
 |[Assemblyversionsverwaltung](versioning.md)|Übersicht über die Versionsverwaltungsrichtlinie von .NET Framework|
 |[Assemblypositionierung](../../framework/app-domains/assembly-placement.md)|Die Positionierung von Assemblys|
 |[Assemblys und parallele Ausführung](side-by-side-execution.md)|Das gleichzeitige Verwenden mehrerer Versionen der Runtime oder einer Assembly|
-|[Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Erstellen von dynamischen Assemblys|
-|[So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|So löst .NET Framework zur Laufzeit Assemblyverweise auf|
+|[Ausgeben von dynamischen Methoden und Assemblys](../../framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Erstellen von dynamischen Assemblys|
+|[So sucht Common Language Runtime nach Assemblys](../../framework/deployment/how-the-runtime-locates-assemblies.md)|So löst .NET Framework zur Laufzeit Assemblyverweise auf|
 
 ## <a name="reference"></a>Referenz
 
