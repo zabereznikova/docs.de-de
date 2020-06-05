@@ -1,13 +1,13 @@
 ---
-title: 'Gewusst wie: Ändern des Namespaces für eine gesamte XML-Struktur'
+title: 'Vorgehensweise: Ändern des Namespaces für eine vollständige XML-Struktur'
 ms.date: 07/20/2015
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-ms.openlocfilehash: 37edb426b106d3fbf90ea06118526abab0a78bf8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11938b575ed5133d930e585dbe4d744e3168cced
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346926"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374978"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Vorgehensweise: Ändern des Namespaces für eine gesamte XML-Struktur (Visual Basic)
 Es kann passieren, dass Sie den Namespace für ein Element oder Attribut programmgesteuert ändern müssen. Mit LINQ to XML ist dies ganz einfach. Sie können die <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>-Eigenschaft festlegen. Die <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>-Eigenschaft kann nicht festgelegt werden, Sie können aber problemlos die Attribute in eine <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> kopieren, die vorhandenen Attribute entfernen und dann neue Attribute hinzufügen, die sich im neuen gewünschten Namespace befinden.  
@@ -78,4 +78,4 @@ Console.WriteLine(root)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

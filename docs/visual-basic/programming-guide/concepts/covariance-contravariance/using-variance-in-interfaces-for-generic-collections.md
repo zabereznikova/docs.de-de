@@ -1,25 +1,25 @@
 ---
-title: Verwenden von Varianz in Schnittstellen für generische Auflistungen
+title: Verwenden von Varianz in Schnittstellen für generische Sammlungen
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 6ee133dfd61d7d7a88243ca592642ff21e0c2223
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b762ce42215f9b24371313446637e95962677bfb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349023"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375640"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Using Variance in Interfaces for Generic Collections (Visual Basic) (Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic))
 
 Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgeleitete Typen zurückzugeben, als in der Schnittstelle angegeben sind. Eine kontravariante Schnittstelle ermöglicht den zugehörigen Methoden, Parameter von weniger abgeleiteten Typen anzunehmen, als in der Schnittstelle angegeben sind.
 
 In .NET Framework 4 wurden mehrere vorhandene Schnittstellen kovariant und kontravariant. Dazu gehören <xref:System.Collections.Generic.IEnumerable%601> und <xref:System.IComparable%601>. Dadurch können Sie Methoden wiederverwenden, die mit generischen Auflistungen von Basistypen für Sammlungen von abgeleiteten Typen verwendet werden.
 
-Eine Liste der variant-Schnittstellen im .NET Framework finden Sie unter [Varianz in generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+Eine Liste der variant-Schnittstellen im .NET Framework finden Sie unter [Varianz in generischen Schnittstellen (Visual Basic)](variance-in-generic-interfaces.md).
 
 ## <a name="converting-generic-collections"></a>Konvertieren von generischen Auflistungen
 
-Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle. Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable(Of Person)` als Parameter. Sie können dies jedoch für eine Auflistung des Typs `IEnumerable(Of Person)` wiederverwenden, da `Employee` `Person` erbt.
+Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle. Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable(Of Person)` als Parameter. Sie können dies jedoch für eine Auflistung des Typs `IEnumerable(Of Person)` wiederverwenden, da `Employee``Person` erbt.
 
 ```vb
 ' Simple hierarchy of classes.
@@ -53,7 +53,7 @@ End Sub
 
 ## <a name="comparing-generic-collections"></a>Vergleichen von generischen Auflistungen
 
-Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle. Die `PersonComparer`-Klasse implementiert die `IComparer(Of Person)`-Schnittstelle. Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee` `Person` erbt.
+Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle. Die `PersonComparer`-Klasse implementiert die `IComparer(Of Person)`-Schnittstelle. Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee``Person` erbt.
 
 ```vb
 ' Simple hierarchy of classes.
@@ -112,6 +112,6 @@ Sub Main()
 End Sub
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Variance in Generic Interfaces (Visual Basic) (Varianz in generischen Schnittstellen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Variance in Generic Interfaces (Visual Basic) (Varianz in generischen Schnittstellen (Visual Basic))](variance-in-generic-interfaces.md)

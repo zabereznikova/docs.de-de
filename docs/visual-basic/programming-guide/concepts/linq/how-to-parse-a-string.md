@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Parsen einer Zeichenfolge'
+title: 'Vorgehensweise: Analysieren einer Zeichenfolge'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0a9076fc516bb8e6bc74732ca252fabfeda43d53
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344499"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398011"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Analysieren einer Zeichenfolge (Visual Basic)
-In diesem Thema wird gezeigt, wie eine XML- C#Struktur in erstellt wird.  
+In diesem Thema wird gezeigt, wie eine XML-Struktur in c# erstellt wird.  
   
 ## <a name="example"></a>Beispiel  
- Sie können eine Zeichenfolge in Visual Basic analysieren, indem Sie die `XElement.Parse`-Methode verwenden. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
+ Sie können eine Zeichenfolge in Visual Basic analysieren, indem Sie die- `XElement.Parse` Methode verwenden. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
   
  Mithilfe von XML-Literalen können Sie den XML-Code einfach kopieren und in das Visual Basic Programm einfügen.  
   
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML-Datei (Visual Basic)](parsing-xml.md)
