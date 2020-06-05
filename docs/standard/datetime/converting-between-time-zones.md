@@ -1,5 +1,6 @@
 ---
 title: Konvertieren von Uhrzeiten zwischen Zeitzonen
+description: Erfahren Sie, wie Sie in .net Zeiten zwischen einer Zeitzone in eine andere konvertieren. Außerdem wird beschrieben, wie Sie DateTimeOffset-Werte konvertieren, die nur begrenzte Zeitzoneninformationen aufweisen.
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: e17b32131e6abc1dba8126799281206f02d46d35
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7d1984866c5eacdfe21834389b8f0be4caf78fb7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278180"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446840"
 ---
 # <a name="converting-times-between-time-zones"></a>Konvertieren von Uhrzeiten zwischen Zeitzonen
 
@@ -118,7 +119,7 @@ Die- <xref:System.TimeZoneInfo> Klasse enthält auch eine Überladung der- <xref
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.TimeZoneInfo>
 - [Datumsangaben, Uhrzeiten und Zeitzonen](index.md)
