@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 668ffbc7b8db73a706c5771bb0734a77f8fc0206
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35ba1f19654d1d23ac1ec73564bc36b0af4f6777
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351236"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404744"
 ---
 # <a name="error-statement"></a>Error-Anweisung
 Simuliert das Auftreten eines Fehlers.  
@@ -26,47 +26,47 @@ Simuliert das Auftreten eines Fehlers.
 Error errornumber  
 ```  
   
-## <a name="parts"></a>-Komponenten  
+## <a name="parts"></a>Bestandteile  
  `errornumber`  
- Erforderlich Kann eine beliebige gültige Fehlernummer sein.  
+ Erforderlich. Kann eine beliebige gültige Fehlernummer sein.  
   
-## <a name="remarks"></a>Hinweise  
- Die `Error`-Anweisung wird aus Gründen der Abwärtskompatibilität unterstützt. Verwenden Sie in neuem Code, insbesondere beim Erstellen von-Objekten, die `Raise`-Methode des `Err` Objekts, um Laufzeitfehler zu generieren.  
+## <a name="remarks"></a>Bemerkungen  
+ Die- `Error` Anweisung wird aus Gründen der Abwärtskompatibilität unterstützt. Verwenden Sie in neuem Code, insbesondere beim Erstellen von-Objekten, die- `Err` Methode des-Objekts, `Raise` um Laufzeitfehler zu generieren.  
   
- Wenn `errornumber` definiert ist, ruft die `Error` Anweisung den Fehlerhandler auf, nachdem den Eigenschaften des `Err`-Objekts die folgenden Standardwerte zugewiesen wurden:  
+ Wenn `errornumber` definiert ist, ruft die- `Error` Anweisung den Fehlerhandler auf, nachdem den Eigenschaften des- `Err` Objekts die folgenden Standardwerte zugewiesen wurden:  
   
 |Eigenschaft|Wert|  
 |--------------|-----------|  
-|`Number`|Der als Argument für `Error` Anweisung angegebene Wert. Kann eine beliebige gültige Fehlernummer sein.|  
+|`Number`|Der als Argument für die `Error` Anweisung angegebene Wert. Kann eine beliebige gültige Fehlernummer sein.|  
 |`Source`|Der Name des aktuellen Visual Basic Projekts.|  
-|`Description`|Zeichen folgen Ausdruck, der dem Rückgabewert der `Error`-Funktion für die angegebene `Number`entspricht, wenn diese Zeichenfolge vorhanden ist. Wenn die Zeichenfolge nicht vorhanden ist, enthält `Description` eine Zeichenfolge der Länge 0 ("").|  
+|`Description`|Zeichen folgen Ausdruck, der dem Rückgabewert der `Error` Funktion für das angegebene entspricht `Number` , wenn diese Zeichenfolge vorhanden ist. Wenn die Zeichenfolge nicht vorhanden ist, `Description` enthält eine Zeichenfolge der Länge 0 (null) ("").|  
 |`HelpFile`|Das voll qualifizierte Laufwerk, der Pfad und der Dateiname der entsprechenden Visual Basic Hilfedatei.|  
-|`HelpContext`|Die entsprechende Visual Basic Hilfedatei-Kontext-ID für den Fehler, der der `Number`-Eigenschaft entspricht.|  
-|`LastDLLError`|Zins.|  
+|`HelpContext`|Die entsprechende Visual Basic Hilfedatei-Kontext-ID für den Fehler, der der- `Number` Eigenschaft entspricht.|  
+|`LastDLLError`|Keinen.|  
   
- Wenn kein Fehlerhandler vorhanden ist oder keine aktiviert ist, wird eine Fehlermeldung erstellt und in den Eigenschaften des `Err` Objekts angezeigt.  
+ Wenn kein Fehlerhandler vorhanden ist oder keine aktiviert ist, wird eine Fehlermeldung erstellt und in den `Err` Objekteigenschaften angezeigt.  
   
 > [!NOTE]
 > Einige Visual Basic Host Anwendungen können keine Objekte erstellen. Informationen zum Erstellen von Klassen und Objekten finden Sie in der Dokumentation der Host Anwendung.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird die `Error`-Anweisung verwendet, um die Fehlernummer 11 zu generieren.  
+ In diesem Beispiel wird die- `Error` Anweisung verwendet, um Fehlernummer 11 zu generieren.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>Anforderungen  
+ **Namespace:** [Microsoft. VisualBasic](../runtime-library-members.md)  
   
  **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
-- [On Error-Anweisung](../../../visual-basic/language-reference/statements/on-error-statement.md)
-- [Resume-Anweisung](../../../visual-basic/language-reference/statements/resume-statement.md)
-- [Fehlermeldungen](../../../visual-basic/language-reference/error-messages/index.md)
+- [On Error-Anweisung](on-error-statement.md)
+- [Resume-Anweisung](resume-statement.md)
+- [Fehlermeldungen](../error-messages/index.md)

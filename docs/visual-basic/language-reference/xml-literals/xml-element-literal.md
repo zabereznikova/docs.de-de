@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: d6d900ca6868cfffe6b0e5b349321a79c5716c46
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d6a91de4e279816bafd29f46bb4f5422cbd934ff
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347029"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400188"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML-Elementliteral (Visual Basic)
 
@@ -27,24 +27,24 @@ Ein Literalwert, der ein <xref:System.Xml.Linq.XElement> Objekt darstellt.
 <name [ attributeList ] > [ elementContents ] </[ name ]>
 ```
 
-## <a name="parts"></a>-Komponenten
+## <a name="parts"></a>Bestandteile
 
 - `<`
 
-  Erforderlich Öffnet das Startelementtag.
+  Erforderlich. Öffnet das Startelementtag.
 
 - `name`
 
-  Erforderlich Name des Elements. Das Format ist einer der folgenden:
+  Erforderlich. Name des Elements. Das Format ist einer der folgenden:
 
-  - Literaltext für den Elementnamen der Form `[ePrefix:]eName`, wobei Folgendes gilt:
+  - Literaltext für den Elementnamen der Form `[ePrefix:]eName` , wobei Folgendes gilt:
 
-    |-Komponente|Beschreibung|
+    |Teil|BESCHREIBUNG|
     |---|---|
-    |`ePrefix`|Optional. Das XML-Namespace Präfix für das Element. Muss ein globaler XML-Namespace sein, der mit einer `Imports`-Anweisung in der Datei oder auf Projektebene definiert ist, oder ein lokaler XML-Namespace, der in diesem Element oder einem übergeordneten Element definiert ist.|
-    |`eName`|Erforderlich Name des Elements. Das Format ist einer der folgenden:<br /><br /> -LiteralText. Siehe [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Eingebetteter Ausdruck der Form `<%= eNameExp %>`. Der Typ `eNameExp` muss `String` oder ein Typ sein, der implizit in <xref:System.Xml.Linq.XName>konvertiert werden kann.|
+    |`ePrefix`|Optional. Das XML-Namespace Präfix für das Element. Muss ein globaler XML-Namespace sein, der mit einer- `Imports` Anweisung in der Datei oder auf Projektebene definiert ist, oder ein lokaler XML-Namespace, der in diesem Element oder einem übergeordneten Element definiert ist.|
+    |`eName`|Erforderlich. Name des Elements. Das Format ist einer der folgenden:<br /><br /> -LiteralText. Siehe [Namen von deklarierten XML-Elementen und Attributen](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Eingebetteter Ausdruck des Formulars `<%= eNameExp %>` . Der Typ von `eNameExp` muss `String` oder ein Typ sein, der implizit in konvertierbar ist <xref:System.Xml.Linq.XName> .|
 
-  - Eingebetteter Ausdruck der Form `<%= nameExp %>`. Der Typ `nameExp` muss `String` oder ein Typ implizit in <xref:System.Xml.Linq.XName>konvertiert werden. Ein eingebetteter Ausdruck ist in einem schließenden Tag eines Elements nicht zulässig.
+  - Eingebetteter Ausdruck des Formulars `<%= nameExp %>` . Der Typ von `nameExp` muss `String` oder ein Typ sein, der implizit in konvertierbar ist <xref:System.Xml.Linq.XName> . Ein eingebetteter Ausdruck ist in einem schließenden Tag eines Elements nicht zulässig.
 
 - `attributeList`
 
@@ -54,15 +54,15 @@ Ein Literalwert, der ein <xref:System.Xml.Linq.XElement> Objekt darstellt.
 
   Jede `attribute` verfügt über eine der folgenden Syntaxen:
 
-  - Attribut Zuweisung der Form `[aPrefix:]aName=aValue`, wobei Folgendes gilt:
+  - Attribut Zuweisung im Format `[aPrefix:]aName=aValue` , wobei:
 
-    |-Komponente|Beschreibung|
+    |Teil|BESCHREIBUNG|
     |---|---|
-    |`aPrefix`|Optional. Das XML-Namespace Präfix für das Attribut. Muss ein globaler XML-Namespace sein, der mit einer `Imports`-Anweisung definiert ist, oder ein lokaler XML-Namespace, der in diesem Element oder einem übergeordneten Element definiert ist.|
-    |`aName`|Erforderlich Der Name des Attributs. Das Format ist einer der folgenden:<br /><br /> -LiteralText. Siehe [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Eingebetteter Ausdruck der Form `<%= aNameExp %>`. Der Typ `aNameExp` muss `String` oder ein Typ sein, der implizit in <xref:System.Xml.Linq.XName>konvertiert werden kann.|
-    |`aValue`|Optional. Der Wert des Attributs. Das Format ist einer der folgenden:<br /><br /> -Literaler Text, der in Anführungszeichen eingeschlossen ist.<br />-Eingebetteter Ausdruck der Form `<%= aValueExp %>`. Jeder Typ ist zulässig.|
+    |`aPrefix`|Optional. Das XML-Namespace Präfix für das Attribut. Muss ein globaler XML-Namespace sein, der mit einer-Anweisung definiert ist `Imports` , oder ein lokaler XML-Namespace, der in diesem Element oder einem übergeordneten Element definiert ist.|
+    |`aName`|Erforderlich. Der Name des Attributs. Das Format ist einer der folgenden:<br /><br /> -LiteralText. Siehe [Namen von deklarierten XML-Elementen und Attributen](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Eingebetteter Ausdruck des Formulars `<%= aNameExp %>` . Der Typ von `aNameExp` muss `String` oder ein Typ sein, der implizit in konvertierbar ist <xref:System.Xml.Linq.XName> .|
+    |`aValue`|Optional. Der Wert des Attributs. Das Format ist einer der folgenden:<br /><br /> -Literaler Text, der in Anführungszeichen eingeschlossen ist.<br />-Eingebetteter Ausdruck des Formulars `<%= aValueExp %>` . Jeder Typ ist zulässig.|
 
-  - Eingebetteter Ausdruck der Form `<%= aExp %>`.
+  - Eingebetteter Ausdruck des Formulars `<%= aExp %>` .
 
 - `/>`
 
@@ -70,7 +70,7 @@ Ein Literalwert, der ein <xref:System.Xml.Linq.XElement> Objekt darstellt.
 
 - `>`
 
-  Erforderlich Beendet den Anfang oder das leere Elementtag.
+  Erforderlich. Beendet den Anfang oder das leere Elementtag.
 
 - `elementContents`
 
@@ -78,42 +78,42 @@ Ein Literalwert, der ein <xref:System.Xml.Linq.XElement> Objekt darstellt.
 
   `content [ content ... ]`
 
-  Jede `content` kann eine der folgenden sein:
+  Dabei kann es sich um `content` einen der folgenden handeln:
 
   - LiteralText. Alle Leerzeichen in `elementContents` werden signifikant, wenn Literaltext vorhanden ist.
 
-  - Eingebetteter Ausdruck der Form `<%= contentExp %>`.
+  - Eingebetteter Ausdruck des Formulars `<%= contentExp %>` .
 
   - XML-Elementliterale.
 
-  - XML-Kommentarliteral. Siehe [XML comment Literal.](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
+  - XML-Kommentarliteral. Siehe [XML comment Literal.](xml-comment-literal.md)
 
-  - XML-Verarbeitungs Anweisungs Literale. Siehe [XML Processing Instruction Literale](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).
+  - XML-Verarbeitungs Anweisungs Literale. Siehe [XML Processing Instruction Literale](xml-processing-instruction-literal.md).
 
-  - XML-CDATA-Literale. Siehe [XML-CDATA-Literale](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md).
+  - XML-CDATA-Literale. Siehe [XML-CDATA-Literale](xml-cdata-literal.md).
 
 - `</[name]>`
 
-  Optional. Stellt das Endtag für das Element dar. Der optionale `name`-Parameter ist nicht zulässig, wenn es sich um das Ergebnis eines eingebetteten Ausdrucks handelt.
+  Optional. Stellt das Endtag für das Element dar. Der optionale- `name` Parameter ist nicht zulässig, wenn es sich um das Ergebnis eines eingebetteten Ausdrucks handelt.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Ein <xref:System.Xml.Linq.XElement>-Objekt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Sie können die Literalsyntax des XML-Elements verwenden, um <xref:System.Xml.Linq.XElement> Objekte im Code zu erstellen.
+Sie können die Literalsyntax des XML-Elements verwenden, um- <xref:System.Xml.Linq.XElement> Objekte in Ihrem Code zu erstellen.
 
 > [!NOTE]
 > Ein XML-Literale kann mehrere Zeilen umfassen, ohne Zeilen Fortsetzungs Zeichen zu verwenden. Mit dieser Funktion können Sie Inhalte aus einem XML-Dokument kopieren und direkt in ein Visual Basic Programm einfügen.
 
-Eingebettete Ausdrücke der Formular `<%= exp %>` ermöglichen das Hinzufügen dynamischer Informationen zu einem XML-Elementliterals. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).
+Mit eingebetteten Ausdrücken des Formulars `<%= exp %>` können Sie einem XML-Elementliteral dynamische Informationen hinzufügen. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md).
 
-Der Visual Basic Compiler konvertiert das XML-Elementliteral in Aufrufe des <xref:System.Xml.Linq.XElement.%23ctor%2A>-Konstruktors und, falls erforderlich, den <xref:System.Xml.Linq.XAttribute.%23ctor%2A>-Konstruktor.
+Der Visual Basic Compiler konvertiert das XML-Elementliteral in Aufrufe des <xref:System.Xml.Linq.XElement.%23ctor%2A> Konstruktors und, falls erforderlich, den <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Konstruktor.
 
 ## <a name="xml-namespaces"></a>XML-Namespaces
 
-XML-Namespace Präfixe sind nützlich, wenn Sie XML-Literale mit Elementen aus dem gleichen Namespace mehrmals im Code erstellen müssen. Sie können globale XML-Namespace Präfixe verwenden, die Sie mit der `Imports`-Anweisung definieren, oder lokale Präfixe, die Sie mit der `xmlns:xmlPrefix="xmlNamespace"` Attribut Syntax definieren. Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+XML-Namespace Präfixe sind nützlich, wenn Sie XML-Literale mit Elementen aus dem gleichen Namespace mehrmals im Code erstellen müssen. Sie können globale XML-Namespace Präfixe verwenden, die Sie mithilfe der- `Imports` Anweisung definieren, oder lokale Präfixe, die Sie mithilfe der- `xmlns:xmlPrefix="xmlNamespace"` Attribut Syntax definieren. Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../statements/imports-statement-xml-namespace.md).
 
 In Übereinstimmung mit den Bereichs Regeln für XML-Namespaces haben lokale Präfixe Vorrang vor globalen Präfixen. Wenn ein XML-Literale jedoch einen XML-Namespace definiert, ist dieser Namespace für Ausdrücke, die in einem eingebetteten Ausdruck vorkommen, nicht verfügbar. Der eingebettete Ausdruck kann nur auf den globalen XML-Namespace zugreifen.
 
@@ -163,15 +163,15 @@ Durch diesen Code wird folgender Text angezeigt:
 </ns:outer>
 ```
 
-Beachten Sie, dass der Compiler das Präfix des globalen XML-Namespace in eine Präfix Definition für den XML-Namespace konvertiert hat. Das \<NS: Middle >-Element definiert das XML-Namespace Präfix für das \<NS: Inner1-> Element neu. Das \<NS: Inner2 >-Element verwendet jedoch den Namespace, der von der `Imports`-Anweisung definiert wird.
+Beachten Sie, dass der Compiler das Präfix des globalen XML-Namespace in eine Präfix Definition für den XML-Namespace konvertiert hat. Das- \<ns:middle> Element definiert das XML-Namespace Präfix für das \<ns:inner1> Element neu. Das- \<ns:inner2> Element verwendet jedoch den Namespace, der durch die-Anweisung definiert wird `Imports` .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Xml.Linq.XElement>
-- [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
-- [XML-Kommentarliteral](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
-- [XML-CDATA-Literal](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)
-- [XML-Literale](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Erstellen von XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [Eingebettete Ausdrücke in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Namen von deklarierten XML-Elementen und Attributen](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [XML-Kommentarliteral](xml-comment-literal.md)
+- [XML-CDATA-Literal](xml-cdata-literal.md)
+- [XML-Literale](index.md)
+- [Erstellen von XML in Visual Basic](../../programming-guide/language-features/xml/creating-xml.md)
+- [Eingebettete Ausdrücke in XML](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Imports-Anweisung (XML-Namespace)](../statements/imports-statement-xml-namespace.md)

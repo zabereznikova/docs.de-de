@@ -5,14 +5,14 @@ helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 78227a17584271f91283198e95f5aa389b3ef14b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3ca08016d3cef0c44e4f3c0bd0d017628eda606d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352281"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400046"
 ---
-# <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
+# <a name="paramref-visual-basic"></a>\<paramref> (Visual Basic)
 Formatiert ein Wort als Parameter.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,15 +26,15 @@ Formatiert ein Wort als Parameter.
  Der Name des Parameters, auf den verwiesen wird. Setzen Sie den Namen in doppelte Anführungszeichen (" ").  
   
 ## <a name="remarks"></a>Hinweise  
- Das `<paramref>`-Tag bietet Ihnen die Möglichkeit, anzugeben, dass ein Wort ein Parameter ist. Die XML-Datei kann verarbeitet werden, um diesen Parameter auf unterschiedliche Weise zu formatieren.  
+ Das- `<paramref>` Tag bietet Ihnen die Möglichkeit, anzugeben, dass ein Wort ein Parameter ist. Die XML-Datei kann verarbeitet werden, um diesen Parameter auf unterschiedliche Weise zu formatieren.  
   
- Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
+ Kompilieren Sie mit [-doc](../../reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird das `<paramref>`-Tag verwendet, um auf den `id`-Parameter zu verweisen.  
+ In diesem Beispiel wird das- `<paramref>` Tag zum Verweisen auf den- `id` Parameter verwendet.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML-Kommentartags](index.md)

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: ca16c6604ee071668a5c65d7e9052b233e2313c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249525"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403017"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Der erste Operand in einem binären If-Ausdruck muss ein Typ, der NULL-Werte zulässt, oder ein Referenztyp sein
-Ein `If` Ausdruck kann entweder zwei oder drei Argumente annehmen. Wenn Sie nur zwei Argumente senden, muss das erste Argument ein Verweistyp oder ein NULL-Werttyp sein. Wenn das erste Argument zu `Nothing`etwas anderem als ausgewertet wird, wird sein Wert zurückgegeben. Wenn das erste Argument `Nothing`zu ausgewertet wird, wird das zweite Argument ausgewertet und zurückgegeben.  
+Ein `If` Ausdruck kann entweder zwei oder drei Argumente annehmen. Wenn Sie nur zwei Argumente senden, muss das erste Argument ein Referenztyp oder ein Werte zulässt-Werttyp sein. Wenn das erste Argument etwas anderes als ausgewertet wird `Nothing` , wird der Wert zurückgegeben. Wenn das erste Argument ergibt `Nothing` , wird das zweite Argument ausgewertet und zurückgegeben.  
   
- Der folgende Code enthält `If` z. B. zwei Ausdrücke, einen mit drei Argumenten und einen mit zwei Argumenten. Die Ausdrücke berechnen und geben denselben Wert zurück.  
+ Der folgende Code enthält z. b `If` . zwei Ausdrücke, eine mit drei Argumenten und eine mit zwei Argumenten. Die Ausdrücke berechnen und geben denselben Wert zurück.  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- Die folgenden Ausdrücke verursachen diesen Fehler:  
+ Dieser Fehler wird durch die folgenden Ausdrücke verursacht:  
   
 ```vb  
 Dim choice1 = 4  
@@ -42,19 +42,19 @@ Dim booleanVar = True
 'Console.WriteLine(If(booleanVar, "Test returns True."))  
 ```  
   
- **Fehler-ID:** 33107  
+ **Fehler-ID:** BC33107  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Wenn Sie den Code nicht so ändern können, dass das erste Argument ein NULL-Werttyp oder Verweistyp ist, sollten Sie in einen Ausdruck mit drei Argumenten `If` oder in eine `If...Then...Else` Anweisung konvertieren.  
+- Wenn Sie den Code nicht ändern können, sodass das erste Argument ein Werte zulässt-Werttyp oder Verweistyp ist, sollten Sie in Erwägung gezogen werden, einen Ausdruck mit drei Argumenten oder eine- `If` Anweisung zu ändern `If...Then...Else` .  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
 Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [If-Operator](../../../visual-basic/language-reference/operators/if-operator.md)
-- [If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Auf NULL festlegbare Werttypen](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [If-Operator](../operators/if-operator.md)
+- [If...Then...Else-Anweisung](../statements/if-then-else-statement.md)
+- [Nullable-Werttypen](../../programming-guide/language-features/data-types/nullable-value-types.md)

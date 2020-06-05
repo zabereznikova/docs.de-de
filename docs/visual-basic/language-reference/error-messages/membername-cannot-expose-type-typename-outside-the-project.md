@@ -1,5 +1,5 @@
 ---
-title: <membername> kann den <typename>-Typ nicht außerhalb des Projekts über <containertype> '<containertypename>' verfügbar machen.
+title: <membername> kann den <typename>-Typ nicht außerhalb des Projekts über <containertype> "<containertypename>" verfügbar machen.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30909
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: ca67e74d7790352bd1842cb8a59fe1525af6e18c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 729a9f385d94412469d318cb804d216827eeb0fd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700900"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397284"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<Membername >' kann nicht verfügbar machen '\<Typname >' außerhalb des Projekts durch \<Hiermit > '\<Containertypename >'
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>\<membername> kann den \<typename>-Typ nicht außerhalb des Projekts über \<containertype> "\<containertypename>" verfügbar machen.
 Eine Variable, ein Prozedur Parameter oder eine Funktions Rückgabe wird außerhalb ihres Containers verfügbar gemacht, Sie wird jedoch als Typ deklariert, der nicht außerhalb des Containers verfügbar gemacht werden darf.  
   
  Der folgende Skelett Code zeigt eine Situation, die diesen Fehler generiert.  
@@ -27,7 +27,7 @@ Public Class mainClass
 End Class  
 ```  
   
- Ein Typ, der `Protected`, `Friend`, `Protected Friend` oder `Private` deklariert ist, soll nur begrenzten Zugriff außerhalb des Deklarations Kontexts haben. Die Verwendung als Datentyp einer Variablen mit weniger eingeschränktem Zugriff würde diesen Zweck zunichte machen. Im vorangehenden Skelett Code ist `exposedVar` `Public` und macht `privateClass` für Code verfügbar, der keinen Zugriff auf die Datei haben sollte.  
+ Ein Typ, der als `Protected` ,, oder deklariert ist, soll `Friend` `Protected Friend` `Private` eingeschränkten Zugriff außerhalb des Deklarations Kontexts haben. Die Verwendung als Datentyp einer Variablen mit weniger eingeschränktem Zugriff würde diesen Zweck zunichte machen. Im obigen Skelett Code ist, `exposedVar` `Public` und würde für Code verfügbar machen, `privateClass` der keinen Zugriff darauf haben sollte.  
   
  **Fehler-ID:** BC30909  
   
@@ -35,6 +35,6 @@ End Class
   
 - Ändern Sie die Zugriffsebene der Variablen, des Prozedur Parameters oder der Funktions Rückgabe so, dass Sie mindestens so restriktiv ist wie die Zugriffsebene des Datentyps.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Zugriffsebenen in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)

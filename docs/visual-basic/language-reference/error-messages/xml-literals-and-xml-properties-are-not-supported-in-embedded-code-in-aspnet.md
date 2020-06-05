@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: edd8032e693c233a51248daa6ffdfc830b0648a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bda92b4244631f66142499a94be562854b35437e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662602"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406468"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.NET nicht unterstützt
-XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.NET nicht unterstützt. Verschieben Sie den Code auf Code-Behind, zur Verwendung von XML-Funktionen.  
+XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.net nicht unterstützt. Wenn Sie XML-Funktionen verwenden möchten, verschieben Sie den Code in Code Behind.  
   
- Ein XML-Literal oder eine XML-Achseneigenschaft wird innerhalb des eingebetteten Codes definiert (`<%= =>`) in einer ASP.NET-Datei.  
+ XML-Literale oder XML-Achsen Eigenschaften werden in eingebettetem Code ( `<%= =>` ) in einer ASP.NET-Datei definiert.  
   
  **Fehler-ID:** BC31200  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Verschieben Sie den Code, der das XML-literal enthält oder die XML-Achseneigenschaft in eine ASP.NET Code-Behind-Datei an.  
+- Verschieben Sie den Code, der die XML-Literale oder XML-Achsen Eigenschaft enthält, in eine ASP.NET-Code Behind-Datei.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Literale](../../../visual-basic/language-reference/xml-literals/index.md)
-- [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML-Literale](../xml-literals/index.md)
+- [XML-Achseneigenschaften](../xml-axis/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)
