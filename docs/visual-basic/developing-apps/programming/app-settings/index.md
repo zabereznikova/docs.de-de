@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 49f65e9c39a29056cb1c552f0d577fcf0d75d658
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c564694c7ca047378c66fd2b7f3f3ecd5ce687b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353245"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410126"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Zugreifen auf Anwendungseinstellungen (Visual Basic)
 
@@ -28,12 +28,12 @@ Dieser Abschnitt enthält Themen, in denen das `My.Settings`-Objekt und die Aufg
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Aktualisieren des Werts einer Benutzereinstellung|[How to: Ändern von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Anzeigen der Anwendung und der Benutzereinstellungen in einem Eigenschaftenraster|[How to: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|Speichern von aktualisierten Benutzereinstellungswerten|[How to: Beibehalten von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Bestimmen der Werte von Benutzereinstellungen|[How to: Lesen von Anwendungseinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Aktualisieren des Werts einer Benutzereinstellung|[How to: Ändern von Benutzereinstellungen in Visual Basic](how-to-change-user-settings.md)|  
+|Anzeigen der Anwendung und der Benutzereinstellungen in einem Eigenschaftenraster|[How to: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic](how-to-create-property-grids-for-user-settings.md)|  
+|Speichern von aktualisierten Benutzereinstellungswerten|[How to: Beibehalten von Benutzereinstellungen in Visual Basic](how-to-persist-user-settings.md)|  
+|Bestimmen der Werte von Benutzereinstellungen|[How to: Lesen von Anwendungseinstellungen in Visual Basic](how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Verwalten von Anwendungseinstellungen (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [My.Settings-Objekt](../../../language-reference/objects/my-settings-object.md)
