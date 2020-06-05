@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ee235252d69e6f77ce53b048f45e73d0969e864
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918306"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409451"
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben werden, in das Projekt auf Dokumentebene Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder wurde nicht gefunden
-Namespace oder Typ angegeben werden, in das Projekt auf Dokumentebene Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder wurde nicht gefunden. Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentliches Member enthält. Stellen Sie sicher, dass der Aliasname keine andere Aliase enthält.  
+# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Der in Imports '\<qualifiedelementname>' auf Projektebene angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden
+Der in den Importen auf Projektebene angegebene Namespace oder Typ \<qualifiedelementname> enthält keinen öffentlichen Member oder kann nicht gefunden werden. Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentlichen Member enthält. Stellen Sie sicher, dass der Alias Name keine anderen Aliase enthält.  
   
- Eine Import-Eigenschaft eines Projekts gibt ein enthaltendes Element, das entweder nicht gefunden werden kann, oder keine definiert `Public` Member.  
+ Eine Import-Eigenschaft eines Projekts gibt ein enthaltende Element an, das entweder nicht gefunden werden kann oder keine Member definiert `Public` .  
   
- Ein *, das Element enthält* -Namespace, Klasse, Struktur, Modul, Schnittstelle oder Enumeration sein kann. Das enthaltende Element enthält Member, z. B. Variablen, Prozeduren oder andere Elemente enthält.  
+ Ein *enthaltende Element* kann ein Namespace, eine Klasse, eine Struktur, ein Modul, eine Schnittstelle oder eine Enumeration sein. Das enthaltende Element enthält Member, z. b. Variablen, Prozeduren oder andere enthaltende Elemente.  
   
- Importieren von dient zu Ihrem Code, um Namespaces oder Typs auf Member zuzugreifen, ohne sie zu qualifizieren. Ihr Projekt müssen möglicherweise auch einen Verweis auf den Namespace oder Typ hinzufügen. Weitere Informationen finden Sie unter "Importieren von enthaltenen Elementen" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Der Zweck des Importierens besteht darin, dass Ihr Code auf Namespaces oder Typmember zugreifen kann, ohne Sie qualifizieren zu müssen. Das Projekt muss möglicherweise auch einen Verweis auf den Namespace oder den Typ hinzufügen. Weitere Informationen finden Sie unter "Importieren enthaltender Elemente" in [Verweise auf deklarierte Elemente](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
- Wenn der Compiler das angegebene Element enthält, nicht finden kann, und klicken Sie dann nicht Verweise aufgelöst werden kann, die sie verwenden. Wenn das Element gefunden wird, das Element macht aber keine `Public` Elemente, und klicken Sie dann auf keinen Verweis kann erfolgreich sein. In beiden Fällen ist es ohne Bedeutung für das Element zu importieren.  
+ Wenn der Compiler das angegebene enthaltende Element nicht finden kann, kann er keine Verweise auflösen, die ihn verwenden. Wenn das-Element gefunden wird, aber das-Element keine Member verfügbar macht `Public` , kann kein Verweis erfolgreich sein. In beiden Fällen ist es bedeutungslos, das-Element zu importieren.  
   
- Sie verwenden die **Projekt-Designer** zu importierenden Elemente angeben. Verwenden der **importierte Namespaces** Teil der **Verweise** Seite. Erhalten Sie auf die **Projekt-Designer** durch Doppelklicken auf die **Mein Projekt** Symbol **Projektmappen-Explorer**.  
+ Verwenden Sie den **Projekt-Designer** , um die zu importierenden Elemente anzugeben. Verwenden Sie den Abschnitt **importierte Namespaces** der Seite **Verweise** . Sie können zum Projekt- **Designer** gelangen, indem Sie in **Projektmappen-Explorer**auf das Symbol " **mein Projekt** " doppelklicken.  
   
  **Fehler-ID:** BC40057  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Öffnen der **Projekt-Designer** und wechseln Sie zu der **Verweis** Seite.  
+1. Öffnen Sie den **Projekt-Designer** , und wechseln Sie zur Seite **Verweis** .  
   
-2. In der **importierte Namespaces** Abschnitt, stellen Sie sicher, dass das enthaltende Element aus Ihrem Projekt möglich ist.  
+2. Überprüfen Sie im Abschnitt **importierte Namespaces** , ob auf das enthaltende Element von Ihrem Projekt aus zugegriffen werden kann.  
   
-3. Stellen Sie sicher, dass das enthaltende Element verfügbar, mindestens eine macht `Public` Member.  
+3. Vergewissern Sie sich, dass das enthaltende Element mindestens einen Member verfügbar macht `Public` .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Seite „Verweise“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
+- [Seite "Verweise", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Verweise auf deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Öffentlich](../modifiers/public.md)
+- [Namespaces in Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

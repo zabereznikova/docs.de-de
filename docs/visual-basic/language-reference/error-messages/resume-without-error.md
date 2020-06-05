@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID20
 ms.assetid: f9631804-fd36-4443-b36c-30db827e6176
-ms.openlocfilehash: 61332486b20af66af24eac06b222a38353578c16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6b565c88acadca048ade22ab00ac68539725f78
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055159"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400369"
 ---
 # <a name="resume-without-error"></a>Ohne Fehler fortsetzen.
-Ein `Resume` Anweisung außerhalb der Fehlerbehandlungscode aufgetreten oder der Code erfolgte ein Sprung in einen Fehlerhandler, obwohl kein Fehler vorliegt.  
+Eine- `Resume` Anweisung wurde außerhalb von Fehler Behandlungs Code angezeigt, oder der Code wurde in einen Fehlerhandler gesprungen, obwohl kein Fehler aufgetreten ist.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Verschieben der `Resume` -Anweisung in einen Fehlerhandler für, oder löschen.  
+1. Verschieben `Resume` Sie die Anweisung in einen Fehlerhandler, oder löschen Sie Sie.  
   
-2. Suchen Sie springen zu Bezeichnungen können nicht über Prozeduren auftreten, also das Verfahren für die Bezeichnung, die den Fehlerhandler identifiziert. Wenn Sie feststellen, dass eine doppelte Bezeichnung, die als Ziel angegebene eine `GoTo` Anweisung, die kein `On Error GoTo` -Anweisung, die zeilenbezeichnung mit ihr vorgesehenes Ziel ich stimme zu ändern.  
+2. Sprünge zu Bezeichnungen können nicht über Prozeduren hinweg erfolgen. Durchsuchen Sie daher die Prozedur nach der Bezeichnung, die den Fehlerhandler identifiziert. Wenn Sie feststellen, dass eine doppelte Bezeichnung als Ziel einer Anweisung angegeben ist, die keine- `GoTo` `On Error GoTo` Anweisung ist, ändern Sie die Zeilen Bezeichnung so, dass Sie mit dem vorgesehenen Ziel übereinstimmt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Resume-Anweisung](../../../visual-basic/language-reference/statements/resume-statement.md)
-- [On Error-Anweisung](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Resume-Anweisung](../statements/resume-statement.md)
+- [On Error-Anweisung](../statements/on-error-statement.md)

@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 237622d0dc6c57f66d402f491a6191a5911574e2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619529"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409737"
 ---
 # <a name="declaration-expected"></a>Deklaration erwartet.
-Eine nicht deklarierte-Anweisung, wie z. B. eine Zuweisung oder Schleifenanweisung, findet jede Prozedur ab. Nur Deklarationen sind externe Prozeduren zulässig.  
+Eine nicht deklarative Anweisung, z. b. eine Zuweisungs-oder Schleifen Anweisung, findet außerhalb der Prozeduren statt. Nur Deklarationen sind außerhalb der Prozeduren zulässig.  
   
- Sie können auch ein Programmierelement wird deklariert ohne Deklarationsschlüsselwort wie z. B. `Dim` oder `Const`.  
+ Alternativ wird ein Programmier Element ohne Deklarations Schlüsselwort, wie z `Dim` . b. oder, deklariert `Const` .  
   
  **Fehler-ID:** BC30188  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Verschieben Sie die nicht deklarierte Anweisung in den Text einer Prozedur an.  
+- Verschieben Sie die nicht deklarative Anweisung in den Text einer Prozedur.  
   
-- Beginnen Sie mit der Deklaration mit einer entsprechenden Deklarationsschlüsselwort.  
+- Beginnen Sie die Deklaration mit einem entsprechenden Deklarations Schlüsselwort.  
   
-- Stellen Sie sicher, dass ein Deklarationsschlüsselwort nicht falsch geschrieben ist.  
+- Stellen Sie sicher, dass ein Deklarations Schlüsselwort falsch geschrieben ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Vorgehensweisen](../../programming-guide/language-features/procedures/index.md)
+- [Dim-Anweisung](../statements/dim-statement.md)

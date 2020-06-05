@@ -2,12 +2,12 @@
 title: 'Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
-ms.openlocfilehash: 0a3edba9d071b04e67d5350c9833fc515a08f218
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1e7fc5efa6246a4706ca475db4330e12ad090ac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786983"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413296"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält mehrere Aufträge.  
@@ -109,6 +109,6 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Beispiel-XML-Dokumente (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-ms.openlocfilehash: b5f1f8d6d783c6612fdb2bd2058b61a5a46024cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a08a5da33fd9507494cac84fd0429b0ff9d9c88e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350776"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393428"
 ---
 # <a name="structures-visual-basic"></a>Strukturen (Visual Basic)
 Eine *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (User-Defined Type, UDT), der von früheren Versionen von Visual Basic unterstützt wird. Zusätzlich zu den Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können individuelle Zugriffsebenen für jedes Feld deklarieren.  
@@ -24,21 +24,21 @@ Eine *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (User-Defi
  Strukturen sind nützlich, wenn eine einzelne Variable mehrere verwandte Informationen enthalten soll. Beispielsweise können Sie den Namen, die telefonerweiterung und das Gehalt eines Mitarbeiters gleichzeitig aufbewahren. Sie können für diese Informationen mehrere Variablen verwenden, oder Sie können eine Struktur definieren und für eine einzelne Mitarbeiter Variable verwenden. Der Vorteil der-Struktur wird offensichtlich, wenn Sie über viele Mitarbeiter und somit viele Instanzen der Variablen verfügen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Vorgehensweise: Deklarieren einer Struktur](how-to-declare-a-structure.md)  
  Zeigt, wie Sie eine Struktur und deren Elemente deklarieren.  
   
- [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [Strukturvariablen](structure-variables.md)  
  Umfasst das Zuweisen einer Struktur zu einer Variablen und das Zugreifen auf ihre Elemente.  
   
- [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [Strukturen und andere Programmierelemente](structures-and-other-programming-elements.md)  
  Fasst zusammen, wie Strukturen mit Arrays, Objekten, Prozeduren und einander interagieren.  
   
- [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [Strukturen und Klassen](structures-and-classes.md)  
  Beschreibt die Ähnlichkeiten und Unterschiede zwischen Strukturen und Klassen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Datentypen](index.md)  
  Führt die Visual Basic Datentypen ein und beschreibt, wie diese verwendet werden.  
   
- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
+ [Datentypen](../../../language-reference/data-types/index.md)  
  Listet die von Visual Basic bereitgestellten elementaren Datentypen auf.

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 621dec7537e9c993024e271b96ab8706baf89885
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0de02840cb18fde16134ef43df9d63abb503c979
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350108"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394170"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Effiziente Verwendung von Datentypen (Visual Basic)
-Nicht deklarierte Variablen und Variablen, die ohne Datentyp deklariert werden, wird der `Object`-Datentyp zugewiesen. Dies vereinfacht das schnelle Schreiben von Programmen, kann jedoch dazu führen, dass Sie langsamer ausgeführt werden.
+Nicht deklarierte Variablen und Variablen, die ohne Datentyp deklariert werden, wird der- `Object` Datentyp zugewiesen. Dies vereinfacht das schnelle Schreiben von Programmen, kann jedoch dazu führen, dass Sie langsamer ausgeführt werden.
 
 ## <a name="strong-typing"></a>Starke Typisierung
  Das Angeben von Datentypen für alle Variablen wird als *starke Typisierung*bezeichnet. Die Verwendung der starken Typisierung bietet mehrere Vorteile:
@@ -33,12 +33,12 @@ Nicht deklarierte Variablen und Variablen, die ohne Datentyp deklariert werden, 
 - Dies führt zu einer schnelleren Ausführung des Codes.
 
 ## <a name="most-efficient-data-types"></a>Effizienteste Datentypen
- Für Variablen, die niemals Bruchteile enthalten, sind die ganzzahligen Datentypen effizienter als die nicht ganzzahligen Typen. In Visual Basic sind `Integer` und `UInteger` die effizientesten numerischen Typen.
+ Für Variablen, die niemals Bruchteile enthalten, sind die ganzzahligen Datentypen effizienter als die nicht ganzzahligen Typen. In Visual Basic `Integer` sind und `UInteger` die effizientesten numerischen Typen.
 
- Bei Bruchzahlen ist `Double` der effizienteste Datentyp, da die Prozessoren auf aktuellen Plattformen Gleit Komma Vorgänge mit doppelter Genauigkeit ausführen. Vorgänge mit `Double` sind jedoch nicht so schnell wie bei den ganzzahligen Typen wie `Integer`.
+ Bei Bruchzahlen `Double` ist der effizienteste Datentyp, da die Prozessoren auf aktuellen Plattformen Gleit Komma Vorgänge mit doppelter Genauigkeit ausführen. Vorgänge mit sind jedoch `Double` nicht so schnell wie bei den ganzzahligen Typen wie `Integer` .
 
 ## <a name="specifying-data-type"></a>Angeben von Datentyp
- Verwenden Sie die [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) , um eine Variable eines bestimmten Typs zu deklarieren. Sie können die Zugriffsebene gleichzeitig mithilfe des Schlüssel Worts [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)oder [private](../../../../visual-basic/language-reference/modifiers/private.md) angeben, wie im folgenden Beispiel gezeigt.
+ Verwenden Sie die [Dim-Anweisung](../../../language-reference/statements/dim-statement.md) , um eine Variable eines bestimmten Typs zu deklarieren. Sie können die Zugriffsebene gleichzeitig mithilfe des Schlüssel Worts [Public](../../../language-reference/modifiers/public.md), [Protected](../../../language-reference/modifiers/protected.md), [Friend](../../../language-reference/modifiers/friend.md)oder [private](../../../language-reference/modifiers/private.md) angeben, wie im folgenden Beispiel gezeigt.
 
 ```vb
 Private x As Double
@@ -46,15 +46,15 @@ Protected s As String
 ```
 
 ## <a name="character-conversion"></a>Zeichen Konvertierung
- Die Funktionen `AscW` und `ChrW` funktionieren in Unicode. Sie sollten diese bevorzugt für `Asc` und `Chr`verwenden, die in und aus Unicode übersetzt werden müssen.
+ Die `AscW` `ChrW` Funktionen und funktionieren in Unicode. Sie sollten diese bevorzugt für und verwenden `Asc` `Chr` , die in und aus Unicode übersetzt werden müssen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
-- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Numerische Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
-- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Datentypen](index.md)
+- [Numerische Datentypen](numeric-data-types.md)
+- [Variablen Deklaration](../variables/variable-declaration.md)
 - [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense)
