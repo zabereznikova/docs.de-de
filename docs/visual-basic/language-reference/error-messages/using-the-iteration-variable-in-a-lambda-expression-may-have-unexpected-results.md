@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 3335da503b6fb9c33e44266997cc945214a3a365
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913072"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373913"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>Die Verwendung der Iterationsvariablen in einem Lambda-Ausdruck kann zu unerwarteten Ergebnissen führen
-Verwendung der Iterationsvariablen in einem Lambda-Ausdruck möglicherweise unerwartete Ergebnisse. Stattdessen erstellen Sie eine lokale Variable innerhalb der Schleife aus, und weisen Sie diesem den Wert der Iterationsvariablen.  
+Die Verwendung der Iterations Variablen in einem Lambda-Ausdruck kann zu unerwarteten Ergebnissen führen. Erstellen Sie stattdessen eine lokale Variable innerhalb der Schleife, und weisen Sie Ihr den Wert der Iterations Variablen zu.  
   
- Diese Warnung wird angezeigt, wenn Sie eine Schleifeniterationsvariablen in einem Lambda-Ausdruck verwenden, die innerhalb der Schleife deklariert ist. Im folgende Beispiel wird z. B. die Warnung angezeigt.  
+ Diese Warnung wird angezeigt, wenn Sie eine Schleifen Iterations Variable in einem Lambda Ausdruck verwenden, der innerhalb der-Schleife deklariert ist. Beispielsweise bewirkt das folgende Beispiel, dass die Warnung angezeigt wird.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- Die `For` Schleife erstellt ein Array von Lambda-Ausdrücken, von denen jeder den Wert der Schleifenvariablen Iteration gibt `i`. Bei der Auswertung die Lambda-Ausdrücke in der `For Each` Schleife möglicherweise erwarten, 0, 1, 2, 3 und 4 angezeigt, die nachfolgenden Werte `i` in die `For` Schleife. Stattdessen sehen Sie den endgültigen Wert der `i` fünfmal angezeigt:  
+ Die- `For` Schleife erstellt ein Array von Lambda-Ausdrücken, von denen jede den Wert der Schleifen Iterations Variablen zurückgibt `i` . Wenn die Lambda-Ausdrücke in der- `For Each` Schleife ausgewertet werden, erwarten Sie möglicherweise, dass 0, 1, 2, 3 und 4 angezeigt werden, die aufeinander folgenden Werte von `i` in der- `For` Schleife. Stattdessen wird der endgültige Wert von `i` fünfmal angezeigt:  
   
  `5`  
   
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Weisen Sie den Wert für die Iterationsvariable zu einer lokalen Variablen, und verwenden Sie die lokale Variable im Lambda-Ausdruck.  
+- Weisen Sie den Wert der Iterations Variablen einer lokalen Variablen zu, und verwenden Sie die lokale Variable im Lambda-Ausdruck.  
   
 ```vb  
 Module Module1  
@@ -83,6 +83,6 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Lambda-Ausdrücke](../../programming-guide/language-features/procedures/lambda-expressions.md)

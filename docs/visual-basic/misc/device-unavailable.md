@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-ms.openlocfilehash: 2738ce692f5eb2df433cd5cb1a5e1ae4a5968cab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1c31af1df65855d3632e64983314767f76c9375
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970078"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394790"
 ---
 # <a name="device-unavailable"></a>Das Gerät ist nicht verfügbar
 Entweder wurde die Netzwerkverbindung getrennt, oder das Gerät, auf das Sie zugreifen möchten, ist offline oder nicht vorhanden.  
@@ -20,6 +20,6 @@ Entweder wurde die Netzwerkverbindung getrennt, oder das Gerät, auf das Sie zug
   
 2. Stellen Sie erneut eine Verbindung mit dem Netzwerk her, und versuchen Sie es erneut.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fehlertypen](../programming-guide/language-features/error-types.md)

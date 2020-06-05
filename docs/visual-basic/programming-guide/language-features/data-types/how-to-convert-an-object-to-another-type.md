@@ -1,21 +1,21 @@
 ---
-title: 'Gewusst wie: Konvertieren eines Objekts in einen anderen Typ'
+title: 'Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 6d16e0eafc3fa9233037abe0c92dcb1945ca8da9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cdb78bc66867ce27076d7b7e42de6a2880cb3a8c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341586"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393960"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic
-Sie konvertieren eine `Object` Variable in einen anderen Datentyp, indem Sie ein Konvertierungs Schlüsselwort wie die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)verwenden.  
+Sie konvertieren eine `Object` Variable in einen anderen Datentyp, indem Sie ein Konvertierungs Schlüsselwort wie die [CType-Funktion](../../../language-reference/functions/ctype-function.md)verwenden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine `Object` Variable in eine `Integer` und eine `String`konvertiert.  
+ Im folgenden Beispiel wird eine `Object` -Variable in eine `Integer` und eine konvertiert `String` .  
   
 ```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,21 +26,21 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Wenn Sie wissen, dass der Inhalt einer `Object` Variablen einen bestimmten Datentyp hat, ist es besser, die Variable in diesen Datentyp zu konvertieren. Wenn Sie die `Object` Variable weiterhin verwenden, werden entweder *Boxing* und *Unboxing* (bei einem Werttyp) oder eine *späte Bindung* (für einen Verweistyp) verursacht. Diese Vorgänge erfordern eine zusätzliche Ausführungszeit und machen die Leistung langsamer.  
+ Wenn Sie wissen, dass der Inhalt einer `Object` Variablen einen bestimmten Datentyp hat, ist es besser, die Variable in diesen Datentyp zu konvertieren. Wenn Sie die Variable weiterhin verwenden `Object` , werden entweder *Boxing* und *Unboxing* (bei einem Werttyp) oder eine *späte Bindung* (für einen Verweistyp) verursacht. Diese Vorgänge erfordern eine zusätzliche Ausführungszeit und machen die Leistung langsamer.  
   
 ## <a name="compile-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Einen Verweis auf den <xref:System?displayProperty=nameWithType>-Namespace  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Object>
-- [Typkonvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
-- [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
-- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Typkonvertierung in Visual Basic](type-conversions.md)
+- [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md)
+- [Implizite und explizite Konvertierungen](implicit-and-explicit-conversions.md)
+- [Konvertierungen zwischen Zeichenfolgen und anderen Typen](conversions-between-strings-and-other-types.md)
+- [Arraykonvertierungen](array-conversions.md)
+- [Strukturen](structures.md)
+- [Datentypen](../../../language-reference/data-types/index.md)
+- [Type Conversion Functions](../../../language-reference/functions/type-conversion-functions.md)
