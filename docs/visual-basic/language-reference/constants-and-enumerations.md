@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60cd1ddac9bca685ddc5778e7d289710245a183e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705755"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374485"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Konstanten und Enumerationen (Visual Basic)
 
@@ -26,9 +26,9 @@ Visual Basic stellt eine Reihe von vordefinierten Konstanten und Enumerationen f
 |**Konstante**|**Beschreibung**|  
 |---|---|  
 |`CONFIG`|Eine Zeichenfolge, die der aktuellen Einstellung des Felds für die **aktive Projektmappenkonfiguration** im **Configuration Manager**entspricht.|  
-|`DEBUG`|Ein `Boolean` Wert, der im Dialogfeld **Projekteigenschaften** festgelegt werden kann. Standardmäßig definiert die Debugkonfiguration für ein Projekt `DEBUG`. Wenn `DEBUG` definiert ist, generieren <xref:System.Diagnostics.Debug> Klassen Methoden eine Ausgabe im **Ausgabe** Fenster. Wenn Sie nicht definiert ist, werden <xref:System.Diagnostics.Debug> Klassen Methoden nicht kompiliert, und es wird keine Debugausgabe generiert.|  
-|`TARGET`|Eine Zeichenfolge, die den Ausgabetyp für das Projekt oder die Einstellung der Befehlszeilen **Ziel-** Option darstellt. Die folgenden Werte sind möglich `TARGET`:<br /><br /> -"winexe" für eine Windows-Anwendung.<br />-"exe" für eine Konsolenanwendung.<br />-"Library" für eine Klassenbibliothek.<br />-"Module" für ein Modul.<br />-Die Option **-target** kann in der integrierten Entwicklungsumgebung von Visual Studio festgelegt werden. Weitere Informationen finden Sie unter [-Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
-|`TRACE`|Ein `Boolean` Wert, der im Dialogfeld **Projekteigenschaften** festgelegt werden kann. Standardmäßig definieren alle Konfigurationen für ein Projekt `TRACE`. Wenn `TRACE` definiert ist, generieren <xref:System.Diagnostics.Trace> Klassen Methoden eine Ausgabe im **Ausgabe** Fenster. Wenn Sie nicht definiert ist, werden <xref:System.Diagnostics.Trace> Klassen Methoden nicht kompiliert, und es wird keine `Trace` Ausgabe generiert.|  
+|`DEBUG`|Ein `Boolean` Wert, der im Dialogfeld **Projekteigenschaften** festgelegt werden kann. Standardmäßig definiert die Debugkonfiguration für ein Projekt `DEBUG` . Wenn `DEBUG` definiert ist, <xref:System.Diagnostics.Debug> generieren Klassen Methoden eine Ausgabe im **Ausgabe** Fenster. Wenn Sie nicht definiert ist, <xref:System.Diagnostics.Debug> werden Klassen Methoden nicht kompiliert, und es wird keine Debugausgabe generiert.|  
+|`TARGET`|Eine Zeichenfolge, die den Ausgabetyp für das Projekt oder die Einstellung der Befehlszeilen **Ziel-** Option darstellt. Folgende Werte sind möglich `TARGET` :<br /><br /> -"winexe" für eine Windows-Anwendung.<br />-"exe" für eine Konsolenanwendung.<br />-"Library" für eine Klassenbibliothek.<br />-"Module" für ein Modul.<br />-Die Option **-target** kann in der integrierten Entwicklungsumgebung von Visual Studio festgelegt werden. Weitere Informationen finden Sie unter [-target (Visual Basic)](../reference/command-line-compiler/target.md).|  
+|`TRACE`|Ein `Boolean` Wert, der im Dialogfeld **Projekteigenschaften** festgelegt werden kann. Standardmäßig definieren alle Konfigurationen für ein Projekt `TRACE` . Wenn `TRACE` definiert ist, <xref:System.Diagnostics.Trace> generieren Klassen Methoden eine Ausgabe im **Ausgabe** Fenster. Wenn Sie nicht definiert ist, <xref:System.Diagnostics.Trace> werden Klassen Methoden nicht kompiliert, und es `Trace` wird keine Ausgabe generiert.|  
 |`VBC_VER`|Eine Zahl, die die Visual Basic Version in *Major*darstellt. *neben* Format.|  
   
 ### <a name="print-and-display-constants"></a>Print-und Display Konstanten  
@@ -53,7 +53,7 @@ Visual Basic stellt eine Reihe von vordefinierten Konstanten und Enumerationen f
 
  In der folgenden Tabelle sind die von Visual Basic bereitgestellten Enumerationen aufgeführt und beschrieben.  
   
-|-Enumeration|Beschreibung|  
+|Enumeration|BESCHREIBUNG|  
 |---|---|  
 |<xref:Microsoft.VisualBasic.AppWinStyle>|Gibt in Aufrufen der <xref:Microsoft.VisualBasic.Interaction.Shell%2A>-Funktion den Fensterstil an, der für das aufgerufene Programm verwendet werden soll.|  
 |<xref:Microsoft.VisualBasic.AudioPlayMode>|Gibt an, wie beim Aufruf von Audiomethoden Sounds wiedergegeben werden.|  
@@ -73,16 +73,16 @@ Visual Basic stellt eine Reihe von vordefinierten Konstanten und Enumerationen f
 |<xref:Microsoft.VisualBasic.OpenAccess>|Gibt an, wie eine Datei beim Aufruf von Dateizugriffsfunktionen geöffnet werden kann.|  
 |<xref:Microsoft.VisualBasic.OpenMode>|Gibt an, wie eine Datei beim Aufruf von Dateizugriffsfunktionen geöffnet werden kann.|  
 |<xref:Microsoft.VisualBasic.OpenShare>|Gibt an, wie eine Datei beim Aufruf von Dateizugriffsfunktionen geöffnet werden kann.|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Gibt an, ob eine Datei dauerhaft gelöscht oder in den Papierkorb eingefügt werden soll.|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Gibt an, ob eine Datei endgültig gelöscht oder in den Papierkorb verschoben werden soll.|  
 |<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Gibt an, ob alle Verzeichnisse oder nur die Verzeichnisse der obersten Ebene durchsucht werden sollen.|  
-|<xref:Microsoft.VisualBasic.TriState>|Gibt einen `Boolean` Wert an oder gibt an, ob beim Aufrufen von Zahlen Formatierungsfunktionen der Standardwert verwendet werden soll.|  
+|<xref:Microsoft.VisualBasic.TriState>|Gibt einen Wert an oder gibt an, `Boolean` ob beim Aufrufen von Zahlen Formatierungsfunktionen der Standardwert verwendet werden soll.|  
 |<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Gibt an, was geschehen soll, wenn der Benutzer während eines Vorgangs auf **Abbrechen** klickt.|  
 |<xref:Microsoft.VisualBasic.FileIO.UIOption>|Gibt an, ob beim Kopieren, löschen oder Verschieben von Dateien oder Verzeichnissen ein Status Dialogfeld angezeigt werden soll.|  
 |<xref:Microsoft.VisualBasic.VariantType>|Gibt den Typ eines Variant-Objekts an und wird von der <xref:Microsoft.VisualBasic.Information.VarType%2A>-Funktion zurückgegeben.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Gibt an, welche Art der Konvertierung beim Aufruf der <xref:Microsoft.VisualBasic.Strings.StrConv%2A>-Funktion ausgeführt werden soll.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)
-- [Übersicht über Konstanten](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [Übersicht über Enumerationen](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Sprachreferenz zu Visual Basic](index.md)
+- [Übersicht über Konstanten](../programming-guide/language-features/constants-enums/constants-overview.md)
+- [Übersicht über Enumerationen](../programming-guide/language-features/constants-enums/enumerations-overview.md)

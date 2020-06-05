@@ -2,12 +2,12 @@
 title: Verzögerte Ausführung und Auswertung in LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: 8e94b9133a2d2dd287fba91600c94460a5204b2c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 98a5010de6ea7ef46d845c6a921c54d4e7692370
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346406"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410811"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Verzögerte Ausführung und verzögerte Auswertung in LINQ to XML (Visual Basic)
 Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzögerte Ausführung (Deferred Execution) verwenden. In diesem Thema werden die Voraussetzungen und die Vorteile der verzögerten Ausführung erläutert und einige Überlegungen zur Implementierung angestellt.  
@@ -29,10 +29,10 @@ Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzög
 ## <a name="next-steps"></a>Nächste Schritte  
  Die verzögerte Ausführung ist Gegenstand des nächsten Themas dieses Lernprogramms:  
   
-- [Beispiel für eine verzögerte Ausführung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Beispiel für eine verzögerte Ausführung (Visual Basic)](deferred-execution-example.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial: verzögerte Ausführung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
-- [Konzepte und Terminologie (funktionale Transformation) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Aggregations Vorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Tutorial: verzögerte Ausführung (Visual Basic)](tutorial-deferred-execution.md)
+- [Konzepte und Terminologie (funktionale Transformation) (Visual Basic)](concepts-and-terminology-functional-transformation.md)
+- [Aggregations Vorgänge (Visual Basic)](aggregation-operations.md)

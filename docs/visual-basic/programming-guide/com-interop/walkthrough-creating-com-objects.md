@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 5d00aff07358a0c40159fde9c12c70e0842d848b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338619"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396739"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic
 Beim Erstellen neuer Anwendungen oder Komponenten empfiehlt es sich, .NET Framework Assemblys zu erstellen. Visual Basic ist es jedoch auch einfach, eine .NET Framework Komponente für com verfügbar zu machen. Dies ermöglicht es Ihnen, neue Komponenten für frühere Anwendungs Suites bereitzustellen, die COM-Komponenten erfordern. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie mit Visual Basic .NET Framework-Objekte als COM-Objekte verfügbar machen, sowohl mit als auch ohne die com-Klassen Vorlage.  
@@ -21,7 +21,7 @@ Beim Erstellen neuer Anwendungen oder Komponenten empfiehlt es sich, .NET Framew
  Die einfachste Möglichkeit, com-Objekte verfügbar zu machen, ist die Verwendung der com-Klassen Vorlage. Die com-Klassen Vorlage erstellt eine neue Klasse und konfiguriert dann das Projekt, um die Klasse und die Interoperabilitäts Schicht als COM-Objekt zu generieren und Sie beim Betriebssystem zu registrieren.  
   
 > [!NOTE]
-> Obwohl Sie eine Klasse, die in Visual Basic erstellt wurde, auch als COM-Objekt für nicht verwalteten Code verfügbar machen können, handelt es sich nicht um ein echtes com-Objekt, das nicht von Visual Basic verwendet werden kann. Weitere Informationen finden Sie unter [com-Interoperabilität in .NET Framework Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+> Obwohl Sie eine Klasse, die in Visual Basic erstellt wurde, auch als COM-Objekt für nicht verwalteten Code verfügbar machen können, handelt es sich nicht um ein echtes com-Objekt, das nicht von Visual Basic verwendet werden kann. Weitere Informationen finden Sie unter [com-Interoperabilität in .NET Framework Anwendungen](com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -58,26 +58,26 @@ Beim Erstellen neuer Anwendungen oder Komponenten empfiehlt es sich, .NET Framew
   
 1. Doppelklicken Sie in **Projektmappen-Explorer**auf **Class1. vb** , um den Code anzuzeigen.  
   
-2. Benennen Sie die Klasse in `ComClass1` um.  
+2. Ändern Sie den Namen der Klasse in `ComClass1`.  
   
-3. Fügen Sie `ComClass1`die folgenden Konstanten hinzu. Sie speichern die GUID-Konstanten (Global Unique Identifier), die für die COM-Objekte erforderlich sind.  
+3. Fügen Sie die folgenden Konstanten hinzu `ComClass1` . Sie speichern die GUID-Konstanten (Global Unique Identifier), die für die COM-Objekte erforderlich sind.  
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
 4. Klicken Sie im Menü **Extras** auf den Befehl **GUID erstellen**. Klicken Sie im Dialogfeld **GUID erstellen** auf **Registrierungsformat** und anschließend auf **Kopieren**. Klicken Sie auf **Beenden**.  
   
-5. Ersetzen Sie die leere Zeichenfolge für die `ClassId` durch die GUID, und entfernen Sie die führenden und nachfolgenden geschweiften Klammern. Wenn beispielsweise die von Guidgen bereitgestellte GUID `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` ist, sollte der Code wie folgt aussehen.  
+5. Ersetzen Sie die leere Zeichenfolge `ClassId` durch die GUID, und entfernen Sie die führenden und nachfolgenden geschweiften Klammern. Wenn die von Guidgen bereitgestellte GUID z. b `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` . lautet, sollte der Code wie folgt aussehen.  
   
      [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
-6. Wiederholen Sie die vorherigen Schritte für die `InterfaceId`-und `EventsId` Konstanten, wie im folgenden Beispiel gezeigt.  
+6. Wiederholen Sie die vorherigen Schritte für die `InterfaceId` `EventsId` Konstanten und, wie im folgenden Beispiel gezeigt.  
   
      [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
     > Stellen Sie sicher, dass die GUIDs neu und eindeutig sind. Andernfalls könnte die COM-Komponente mit anderen COM-Komponenten in Konflikt stehen.  
   
-7. Fügen Sie das `ComClass`-Attribut `ComClass1`hinzu, und geben Sie die GUIDs für die Klassen-ID, die Schnittstellen-ID und die Ereignis-ID an, wie im folgenden Beispiel gezeigt  
+7. Fügen Sie das- `ComClass` Attribut hinzu `ComClass1` , und geben Sie die GUIDs für die Klassen-ID, die Schnittstellen-ID und die Ereignis-ID an, wie im folgenden Beispiel gezeigt  
   
      [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
@@ -85,16 +85,16 @@ Beim Erstellen neuer Anwendungen oder Komponenten empfiehlt es sich, .NET Framew
   
      [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
-9. Fügen Sie der-Klasse Eigenschaften, Methoden und Ereignisse hinzu, und beenden Sie Sie mit einer `End Class`-Anweisung. Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus. Visual Basic erstellt die Assembly und registriert das COM-Objekt beim Betriebssystem.  
+9. Fügen Sie der-Klasse Eigenschaften, Methoden und Ereignisse hinzu, und beenden Sie Sie mit einer- `End Class` Anweisung. Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus. Visual Basic erstellt die Assembly und registriert das COM-Objekt beim Betriebssystem.  
   
     > [!NOTE]
-    > Die mit Visual Basic generierten COM-Objekte können von anderen Visual Basic Anwendungen nicht verwendet werden, da es sich nicht um echte COM-Objekte handelt. Versuche, Verweise auf solche COM-Objekte hinzuzufügen, geben einen Fehler aus. Weitere Informationen finden Sie unter [com-Interoperabilität in .NET Framework Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    > Die mit Visual Basic generierten COM-Objekte können von anderen Visual Basic Anwendungen nicht verwendet werden, da es sich nicht um echte COM-Objekte handelt. Versuche, Verweise auf solche COM-Objekte hinzuzufügen, geben einen Fehler aus. Weitere Informationen finden Sie unter [com-Interoperabilität in .NET Framework Anwendungen](com-interoperability-in-net-framework-applications.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
-- [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [#Region-Anweisung](../../../visual-basic/language-reference/directives/region-directive.md)
-- [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Problembehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [COM-Interop](index.md)
+- [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](walkthrough-implementing-inheritance-with-com-objects.md)
+- [#Region-Direktive](../../language-reference/directives/region-directive.md)
+- [COM-Interoperabilität in .NET Framework-Anwendungen](com-interoperability-in-net-framework-applications.md)
+- [Problembehandlung bei der Interoperabilität](troubleshooting-interoperability.md)

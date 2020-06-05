@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID457
 ms.assetid: 52e15795-907e-4b10-acb7-5c37a76ce594
-ms.openlocfilehash: 1d374304e19d94ed33dc8d44caf4d6601c8e7ae2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b798b099d648617733c4aec07f0892024f505d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649112"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362942"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>Dieser Schlüssel ist bereits einem Element dieser Auflistung zugeordnet
-Der angegebene Schlüssel für ein Element der Auflistung bereits einem anderen Member der Auflistung angibt. Ein Schlüssel ist eine Zeichenfolge, die im angegebenen die `Add` -Methode, die einen bestimmten Member einer Auflistung eindeutig identifiziert.  
+Der angegebene Schlüssel für einen Auflistungs Member identifiziert bereits einen anderen Member der Auflistung. Ein Schlüssel ist eine Zeichenfolge, die in der-Methode angegeben ist `Add` , die einen bestimmten Member einer Auflistung eindeutig identifiziert.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Verwenden Sie einen anderen Product Key für diesen Member.  
+- Verwenden Sie einen anderen Schlüssel für diesen Member.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Fehlertypen](../../programming-guide/language-features/error-types.md)

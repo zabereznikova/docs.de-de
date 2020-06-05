@@ -7,19 +7,19 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 4cdcda7c5c78481af1633bf29d75070c521ab393
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347390"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403225"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Schlüsselwörter als Elementnamen in Code (Visual Basic)
-Jedes Programmelement – z. b. eine Variable, eine Klasse oder ein Member – kann denselben Namen wie ein eingeschränktes Schlüsselwort haben. Beispielsweise können Sie eine Variable mit dem Namen `Loop`erstellen. Wenn Sie jedoch auf Ihre Version des IT-– verweisen, das den gleichen Namen hat wie das Schlüsselwort restricted `Loop` – müssen Sie entweder eine vollständige Qualifikations Zeichenfolge voranstellen oder Sie in eckige Klammern (`[ ]`) einschließen, wie im folgenden Beispiel gezeigt.  
+Jedes Programmelement – z. b. eine Variable, eine Klasse oder ein Member – kann denselben Namen wie ein eingeschränktes Schlüsselwort haben. Beispielsweise können Sie eine Variable mit dem Namen erstellen `Loop` . Um jedoch auf Ihre Version des IT-– mit dem gleichen Namen wie das Schlüsselwort "Restricted" zu verweisen `Loop` – müssen Sie entweder eine vollständige Qualifikations Zeichenfolge voranstellen oder Sie in eckige Klammern ( `[ ]` ) einschließen, wie im folgenden Beispiel gezeigt.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- Wenn Sie keine dieser Aktionen ausführen, wird Visual Basic die Verwendung des intrinsischen `Loop` Schlüsselworts annimmt und einen Fehler erzeugt, wie im folgenden Beispiel gezeigt:  
+ Wenn Sie keine dieser Aktionen ausführen, wird Visual Basic die Verwendung des systeminternen `Loop` Schlüssel Worts annimmt und einen Fehler erzeugt, wie im folgenden Beispiel gezeigt:  
   
  `' The following statement causes a compiler error.`  
   
@@ -30,8 +30,8 @@ Jedes Programmelement – z. b. eine Variable, eine Klasse oder ein Member – k
 > [!NOTE]
 > Ihr Programm kann auch Elementnamen enthalten, die von anderen referenzierten Assemblys bereitgestellt werden Wenn diese Namen mit eingeschränkten Schlüsselwörtern in Konflikt stehen, bewirkt das Platzieren von eckigen Klammern, Visual Basic Sie als die definierten Elemente interpretiert werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Benennungs Konventionen für Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Benennungskonventionen in Visual Basic](naming-conventions.md)
+- [Programmstruktur und Codekonventionen](program-structure-and-code-conventions.md)
+- [Schlüsselwörter](../../language-reference/keywords/index.md)
