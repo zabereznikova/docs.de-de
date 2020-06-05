@@ -4,25 +4,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-ms.openlocfilehash: 038cf9b812d3fbdb54afaca072694bbde4bfb600
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e3648ee9893ca0f4045e28e68b659c01035dee0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348042"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404472"
 ---
-# <a name="into-clause-visual-basic"></a><span data-ttu-id="71a8c-102">Into-Klausel (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="71a8c-102">Into Clause (Visual Basic)</span></span>
-<span data-ttu-id="71a8c-103">Identifiziert Aggregatfunktionen oder Gruppierungen, die auf eine Auflistung angewendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="71a8c-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
+# <a name="into-clause-visual-basic"></a><span data-ttu-id="1cf75-102">Into-Klausel (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1cf75-102">Into Clause (Visual Basic)</span></span>
+<span data-ttu-id="1cf75-103">Identifiziert Aggregatfunktionen oder Gruppierungen, die auf eine Auflistung angewendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="1cf75-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="71a8c-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="71a8c-104">Remarks</span></span>  
- <span data-ttu-id="71a8c-105">Das `Each`-Schlüsselwort wird in den folgenden Kontexten verwendet:</span><span class="sxs-lookup"><span data-stu-id="71a8c-105">The `Each` keyword is used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1cf75-104">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="1cf75-104">Remarks</span></span>  
+ <span data-ttu-id="1cf75-105">Das- `Each` Schlüsselwort wird in den folgenden Kontexten verwendet:</span><span class="sxs-lookup"><span data-stu-id="1cf75-105">The `Each` keyword is used in the following contexts:</span></span>  
   
- [<span data-ttu-id="71a8c-106">Aggregate-Klausel</span><span class="sxs-lookup"><span data-stu-id="71a8c-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="1cf75-106">Aggregate Clause</span><span class="sxs-lookup"><span data-stu-id="1cf75-106">Aggregate Clause</span></span>](../queries/aggregate-clause.md)  
   
- [<span data-ttu-id="71a8c-107">Group By-Klausel</span><span class="sxs-lookup"><span data-stu-id="71a8c-107">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [<span data-ttu-id="1cf75-107">Group By-Klausel</span><span class="sxs-lookup"><span data-stu-id="1cf75-107">Group By Clause</span></span>](../queries/group-by-clause.md)  
   
- [<span data-ttu-id="71a8c-108">Group Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="71a8c-108">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="1cf75-108">Group Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="1cf75-108">Group Join Clause</span></span>](../queries/group-join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="71a8c-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="71a8c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cf75-109">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="1cf75-109">See also</span></span>
 
-- [<span data-ttu-id="71a8c-110">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="71a8c-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="1cf75-110">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="1cf75-110">Keywords</span></span>](../keywords/index.md)

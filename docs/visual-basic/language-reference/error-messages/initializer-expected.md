@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13fa8917f228661fc44f5e0920d91c596e250c38
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013802"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402836"
 ---
-# <a name="initializer-expected"></a><span data-ttu-id="b9f1f-102">Initialisierer erwartet</span><span class="sxs-lookup"><span data-stu-id="b9f1f-102">Initializer expected</span></span>
-<span data-ttu-id="b9f1f-103">Sie haben versucht, eine Instanz einer Klasse deklarieren, indem Sie mit einem Objektinitialisierer, in dem eine die Initialisierungsliste leer ist, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="b9f1f-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  
+# <a name="initializer-expected"></a><span data-ttu-id="bdb6d-102">Initialisierer erwartet</span><span class="sxs-lookup"><span data-stu-id="bdb6d-102">Initializer expected</span></span>
+<span data-ttu-id="bdb6d-103">Sie haben versucht, eine Instanz einer Klasse zu deklarieren, indem Sie einen Objektinitialisierer verwenden, in dem die Initialisierungs Liste leer ist, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="bdb6d-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- <span data-ttu-id="b9f1f-104">Mindestens ein Feld oder eine Eigenschaft muss in der Initialisiererliste initialisiert werden, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="b9f1f-104">At least one field or property must be initialized in the initializer list, as shown in the following example.</span></span>  
+ <span data-ttu-id="bdb6d-104">Mindestens ein Feld oder eine Eigenschaft muss in der Initialisiererliste initialisiert werden, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="bdb6d-104">At least one field or property must be initialized in the initializer list, as shown in the following example.</span></span>  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   
- <span data-ttu-id="b9f1f-105">**Fehler-ID:** BC30996</span><span class="sxs-lookup"><span data-stu-id="b9f1f-105">**Error ID:** BC30996</span></span>  
+ <span data-ttu-id="bdb6d-105">**Fehler-ID:** BC30996</span><span class="sxs-lookup"><span data-stu-id="bdb6d-105">**Error ID:** BC30996</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b9f1f-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="b9f1f-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="bdb6d-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="bdb6d-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="b9f1f-107">Initialisieren Sie mindestens ein Feld oder eine Eigenschaft im Initialisierer zu, oder verwenden Sie einen Objektinitialisierer nicht.</span><span class="sxs-lookup"><span data-stu-id="b9f1f-107">Initialize at least one field or property in the initializer, or do not use an object initializer.</span></span>  
+1. <span data-ttu-id="bdb6d-107">Initialisieren Sie mindestens ein Feld oder eine Eigenschaft im Initialisierer, oder verwenden Sie keinen Objektinitialisierer.</span><span class="sxs-lookup"><span data-stu-id="bdb6d-107">Initialize at least one field or property in the initializer, or do not use an object initializer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9f1f-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b9f1f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bdb6d-108">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="bdb6d-108">See also</span></span>
 
-- [<span data-ttu-id="b9f1f-109">Objektinitialisierer: Benannte und anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="b9f1f-109">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [<span data-ttu-id="b9f1f-110">Vorgehensweise: Deklarieren eines Objekts mithilfe eines Objektinitialisierers</span><span class="sxs-lookup"><span data-stu-id="b9f1f-110">How to: Declare an Object by Using an Object Initializer</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [<span data-ttu-id="bdb6d-109">Objektinitialisierer: benannte und anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="bdb6d-109">Object Initializers: Named and Anonymous Types</span></span>](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [<span data-ttu-id="bdb6d-110">Vorgehensweise: Deklarieren eines Objekts mithilfe eines Objektinitialisierers</span><span class="sxs-lookup"><span data-stu-id="bdb6d-110">How to: Declare an Object by Using an Object Initializer</span></span>](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
