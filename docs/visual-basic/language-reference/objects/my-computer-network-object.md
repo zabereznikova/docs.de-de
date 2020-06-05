@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Network object
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
-ms.openlocfilehash: 11a4c531c1b771a59ae56efc04807b1c51476896
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c4b57352c46bce22fd3647444e0258359ecea960
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332287"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372777"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network-Objekt
-Stellt eine Eigenschaft, ein Ereignis und Methoden für die Interaktion mit dem Netzwerk bereit, mit dem der Computer verbunden ist.  
+Stellt eine Eigenschaft, ein Ereignis und Methoden für die Interaktion mit dem Netzwerk bereit, an das der Computer angeschlossen ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Informationen zu den Methoden und Eigenschaften des `My.Computer.Network` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Network>.  
   
- Weitere Informationen finden Sie unter [Durchführen von Netzwerk Vorgängen](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ Weitere Informationen finden Sie unter [Durchführen von Netzwerk Vorgängen](../../developing-apps/programming/computer-resources/performing-network-operations.md).  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
- **Klasse:** <xref:Microsoft.VisualBasic.Devices.Network>  
+ **Klasse:**<xref:Microsoft.VisualBasic.Devices.Network>  
   
  **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [My.Computer-Objekt](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [My.Computer-Objekt](my-computer-object.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: 21c6d35b4e6aa17bb29be1c1e4b5e88a5fb389d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ef0e014745ec99afbce16824e65587276bc145e4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348492"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373446"
 ---
 # <a name="math-summary-visual-basic"></a>Mathematische Operationen: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -26,8 +26,8 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Abrufen des Vorzeichens eines Ausdrucks|<xref:System.Math.Sign%2A>|  
 |Durchführen numerischer Konvertierungen|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Abgeleitete mathematische Funktionen](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
-- [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Abgeleitete mathematische Funktionen](derived-math-functions.md)
+- [Schlüsselwörter](index.md)
+- [Member der Visual Basic-Laufzeitbibliothek](../runtime-library-members.md)

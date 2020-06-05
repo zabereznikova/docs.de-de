@@ -22,66 +22,66 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: b6588335f7634cc87a9fc14cbfc4ba80baad1abb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 686b64977f086c8128e56298a0ed8c5aa0c51efa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401436"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364031"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Übergeben von Argumenten nach Position und Name (Visual Basic)
 
-Wenn Sie `Sub` eine `Function` oder eine Prozedur aufrufen, können Sie Argumente nach *Position* übergeben – in der Reihenfolge, in der sie in der Definition der Prozedur angezeigt werden – oder Sie können sie mit *Namen*übergeben, ohne Rücksicht auf die Position.
+Wenn Sie eine- `Sub` oder `Function` -Prozedur aufzurufen, können Sie Argumente *nach Position* – in der Reihenfolge übergeben, in der Sie in der Definition der Prozedur angezeigt werden – oder Sie können Sie ohne Berücksichtigung der Position *nach Namen*übergeben.
 
-Wenn Sie ein Argument nach Namen übergeben, geben Sie den deklarierten Namen`:=`des Arguments an, gefolgt von einem Doppelpunkt und einem Gleichheitszeichen ( ), gefolgt vom Argumentwert. Sie können benannte Argumente in beliebiger Reihenfolge angeben.
+Wenn Sie ein Argument anhand des Namens übergeben, geben Sie den deklarierten Namen des Arguments an, gefolgt von einem Doppelpunkt und einem Gleichheitszeichen ( `:=` ), gefolgt vom Argument Wert. Sie können benannte Argumente in beliebiger Reihenfolge angeben.
 
-Die folgende `Sub` Prozedur führt z. B. drei Argumente an:
+Beispielsweise werden im folgenden `Sub` Verfahren drei Argumente benötigt:
 
 [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-Wenn Sie diese Prozedur aufrufen, können Sie die Argumente nach Position, Name oder mit einer Mischung aus beidem angeben.
+Wenn Sie diese Prozedur aufzurufen, können Sie die Argumente nach Position, Name oder mithilfe einer Kombination aus beidem bereitstellen.
 
 ## <a name="passing-arguments-by-position"></a>Übergeben von Argumenten nach Position
 
-Sie können `Display` die Methode aufrufen, deren Argumente von position übergeben und durch Kommas getrennt werden, wie im folgenden Beispiel gezeigt:
+Sie können die `Display` -Methode mit den als Position weiter gegebenen Argumenten und durch Kommas getrennt, wie im folgenden Beispiel gezeigt:
 
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-Wenn Sie ein optionales Argument in einer Positionsargumentliste weglassen, müssen Sie seinen Platz mit einem Komma halten. Im folgenden Beispiel `Display` wird `age` die Methode ohne das Argument auf:
+Wenn Sie ein optionales Argument in einer Liste von Positions Argumenten weglassen, müssen Sie den Platz mit einem Komma ablegen. Im folgenden Beispiel wird die- `Display` Methode ohne das- `age` Argument aufgerufen:
 
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
 
 ## <a name="passing-arguments-by-name"></a>Übergeben von Argumenten nach Name
 
-Alternativ können Sie `Display` mit den Argumenten aufrufen, die mit namenweise übergeben werden, auch durch Kommas getrennt, wie im folgenden Beispiel gezeigt:
+Alternativ können Sie `Display` mit den über den Namen weiter gegebenen Argumenten auch durch Kommas getrennt werden, wie im folgenden Beispiel gezeigt:
 
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
 
-Das Übergeben von Argumenten nach Namen auf diese Weise ist besonders nützlich, wenn Sie eine Prozedur aufrufen, die mehr als ein optionales Argument enthält. Wenn Sie Argumente nach Namen angeben, müssen Sie keine aufeinander folgenden Kommas verwenden, um fehlende Positionsargumente zu bezeichnen. Das Übergeben von Argumenten nach Namen erleichtert es auch, nachzuverfolgen, welche Argumente Sie übergeben und welche Sie auslassen.
+Das übergeben von Argumenten nach Namen auf diese Weise ist besonders nützlich, wenn Sie eine Prozedur mit mehr als einem optionalen Argument aufgerufen haben. Wenn Sie Argumente nach Namen angeben, müssen Sie keine aufeinander folgenden Kommas verwenden, um fehlende Positions Argumente anzugeben. Durch die Übergabe von Argumenten nach Name können Sie auch leichter nachverfolgen, welche Argumente Sie übergeben und welche nicht.
 
 ## <a name="mixing-arguments-by-position-and-by-name"></a>Mischen von Argumenten nach Position und Name
 
-Sie können Argumente sowohl nach Position als auch nach Namen in einem einzelnen Prozeduraufruf angeben, wie im folgenden Beispiel gezeigt:
+Sie können Argumente sowohl nach Position als auch nach Name in einem einzelnen Prozedur Befehl angeben, wie im folgenden Beispiel gezeigt:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
 
-Im vorherigen Beispiel ist kein zusätzliches Komma erforderlich, `age` um `birth` die Stelle des ausgelassenen Arguments zu halten, da es mit dem Namen übergeben wird.
+Im vorherigen Beispiel ist kein zusätzliches Komma erforderlich, um die Position des ausgelassenen Arguments aufzunehmen `age` , da `birth` nach Name übermittelt wird.
 
-Wenn Sie in Versionen von Visual Basic vor 15.5 Argumente durch eine Mischung aus Position und Name angeben, müssen alle Positionsargumente an erster Stelle stehen. Nachdem Sie ein Argument mit Namen geliefert haben, müssen alle verbleibenden Argumente mit namenweise übergeben werden.  Der folgende Aufruf der `Display` Methode zeigt beispielsweise den Compilerfehler [BC30241: Named argument expected](../../../misc/bc30241.md)an.
+Wenn Sie in Versionen von Visual Basic vor 15,5, wenn Sie Argumente durch eine Mischung aus Position und Name angeben, müssen die Positions Argumente zuerst alle auftreten. Nachdem Sie ein Argument nach Namen angegeben haben, müssen alle verbleibenden Argumente als Name übergeben werden.  Der folgende Aufrufe der- `Display` Methode zeigt z. b. Compilerfehler [BC30241: das benannte Argument wurde erwartet](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
 
-Ab Visual Basic 15.5 können Positionsargumente benannten Argumenten folgen, wenn sich die Endpositionsargumente an der richtigen Position befinden. Wenn unter Visual Basic 15.5 kompiliert, wird der vorherige Aufruf der `Display` Methode erfolgreich kompiliert und generiert nicht mehr den Compilerfehler [BC30241](../../../misc/bc30241.md).
+Ab Visual Basic 15,5 können Positions Argumente benannte Argumente folgen, wenn sich die abschließenden Positions Argumente an der richtigen Position befinden. Bei der Kompilierung unter Visual Basic 15,5 wird der vorherige-Befehl der `Display` -Methode erfolgreich kompiliert und generiert den Compilerfehler [BC30241](../../../misc/bc30241.md)nicht mehr.
 
-Diese Möglichkeit, benannte und positionsgesteuerte Argumente in beliebiger Reihenfolge zu mischen und abzugleichen, ist besonders nützlich, wenn Sie ein benanntes Argument verwenden möchten, um den Code lesbarer zu machen. Der folgende `Person` Klassenkonstruktor erfordert z. `Person`B. zwei Argumente `Nothing`vom Typ , die beide sein können.
+Diese Möglichkeit, benannte und Positions Argumente in beliebiger Reihenfolge zu mischen und abzugleichen, ist besonders nützlich, wenn Sie ein benanntes Argument verwenden möchten, um den Code lesbarer zu machen. Der folgende `Person` Klassenkonstruktor benötigt z. b. zwei Argumente des-Typs `Person` , die beide sein können `Nothing` .
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
 
-Die Verwendung gemischter Named- und Positionsargumente hilft, die Absicht `father` `mother` des `Nothing`Codes klar zu machen, wenn der Wert der und-Argumente:
+Wenn Sie gemischte benannte und Positions Argumente verwenden, ist es hilfreich, den Zweck des Codes klar zu machen, wenn der Wert des `father` -Arguments und des- `mother` Arguments lautet `Nothing` :
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
 
-Um Positionsargumenten mit benannten Argumenten zu folgen, müssen\*Sie das folgende Element zu Ihrer Visual Basic-Projektdatei (.vbproj) hinzufügen:
+Wenn Sie Positions Argumenten mit benannten Argumenten folgen möchten, müssen Sie das folgende-Element der Visual Basic Project- \* Datei (. vbproj) hinzufügen:
 
 ```xml
 <PropertyGroup>
@@ -89,21 +89,21 @@ Um Positionsargumenten mit benannten Argumenten zu folgen, müssen\*Sie das folg
 </PropertyGroup>
 ```
 
-Weitere Informationen finden Sie [unter Festlegen der Visual Basic-Sprachversion](../../../language-reference/configure-language-version.md).
+Weitere Informationen finden Sie [unter Festlegen der Visual Basic Sprachversion](../../../language-reference/configure-language-version.md).
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>Einschränkungen bei der Bereitstellung von Argumenten nach Name
+## <a name="restrictions-on-supplying-arguments-by-name"></a>Einschränkungen beim Bereitstellen von Argumenten nach Namen
 
-Sie können Argumente nicht nach Namen übergeben, um die Eingabe erforderlicher Argumente zu vermeiden. Sie können nur die optionalen Argumente weglassen.
+Sie können keine Argumente nach Namen übergeben, um zu vermeiden, dass erforderliche Argumente eingegeben werden. Sie können nur die optionalen Argumente weglassen.
 
-Sie können ein Parameterarray nicht nach Namen übergeben. Dies liegt daran, dass Sie beim Aufrufen der Prozedur eine unbestimmte Anzahl von durch Kommas getrennten Argumenten für das Parameterarray bereitstellen und der Compiler nicht mehr als ein Argument einem einzelnen Namen zuordnen kann.
+Ein Parameter Array kann nicht anhand des Namens übergeben werden. Dies liegt daran, dass beim Aufrufen der Prozedur eine unbegrenzte Anzahl von Komma getrennten Argumenten für das Parameter Array bereitgestellt wird, und der Compiler kann nicht mehr als ein Argument mit einem einzelnen Namen zuordnen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Vorgehensweisen](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
-- [Gewusst wie: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
+- [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
 - [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)
 - [Optionale Parameter](./optional-parameters.md)
-- [Parameter-Arrays](./parameter-arrays.md)
-- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
-- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+- [Parameter Arrays](./parameter-arrays.md)
+- [Optional](../../../language-reference/modifiers/optional.md)
+- [ParamArray](../../../language-reference/modifiers/paramarray.md)
