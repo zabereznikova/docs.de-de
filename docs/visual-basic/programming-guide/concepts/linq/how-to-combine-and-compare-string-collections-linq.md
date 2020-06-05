@@ -1,21 +1,21 @@
 ---
-title: 'Gewusst wie: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ)'
+title: 'Vorgehensweise: Vereinen und Vergleichen von Zeichenfolgenauflistungen (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337568"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374861"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="d7648-102">Vorgehensweise: kombinieren und Vergleichen von Zeichen folgen Auflistungen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d7648-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="281e7-102">Vorgehensweise: kombinieren und Vergleichen von Zeichen folgen Auflistungen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="281e7-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="d7648-103">In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren.</span><span class="sxs-lookup"><span data-stu-id="d7648-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="d7648-104">Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d7648-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
+<span data-ttu-id="281e7-103">In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren.</span><span class="sxs-lookup"><span data-stu-id="281e7-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="281e7-104">Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="281e7-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
 
-## <a name="set-up-the-project-and-the-text-files"></a><span data-ttu-id="d7648-105">Einrichten des Projekts und der Textdateien</span><span class="sxs-lookup"><span data-stu-id="d7648-105">Set up the project and the text files</span></span>
+## <a name="set-up-the-project-and-the-text-files"></a><span data-ttu-id="281e7-105">Einrichten des Projekts und der Textdateien</span><span class="sxs-lookup"><span data-stu-id="281e7-105">Set up the project and the text files</span></span>
 
-1. <span data-ttu-id="d7648-106">Kopieren Sie diese Namen in eine Textdatei namens „names1.txt“, und speichern Sie sie in Ihrem Projektordner:</span><span class="sxs-lookup"><span data-stu-id="d7648-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="281e7-106">Kopieren Sie diese Namen in eine Textdatei namens „names1.txt“, und speichern Sie sie in Ihrem Projektordner:</span><span class="sxs-lookup"><span data-stu-id="281e7-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "75337568"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="d7648-107">Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="d7648-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="d7648-108">Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.</span><span class="sxs-lookup"><span data-stu-id="d7648-108">Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="281e7-107">Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="281e7-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="281e7-108">Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.</span><span class="sxs-lookup"><span data-stu-id="281e7-108">Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "75337568"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="d7648-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d7648-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="281e7-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="281e7-109">Example</span></span>
 
 ```vb
 Class ConcatenateStrings
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="d7648-110">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="d7648-110">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="281e7-110">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="281e7-110">Compile the code</span></span>
 
-<span data-ttu-id="d7648-111">Erstellen Sie ein Visual Basic Konsolen Anwendungsprojekt.</span><span class="sxs-lookup"><span data-stu-id="d7648-111">Create a Visual Basic console application project.</span></span> <span data-ttu-id="d7648-112">Fügen Sie eine `Imports`-Anweisung für den System. Linq-Namespace hinzu.</span><span class="sxs-lookup"><span data-stu-id="d7648-112">Add an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="281e7-111">Erstellen Sie ein Visual Basic Konsolen Anwendungsprojekt.</span><span class="sxs-lookup"><span data-stu-id="281e7-111">Create a Visual Basic console application project.</span></span> <span data-ttu-id="281e7-112">Fügen Sie eine- `Imports` Anweisung für den System. Linq-Namespace hinzu.</span><span class="sxs-lookup"><span data-stu-id="281e7-112">Add an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d7648-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d7648-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="281e7-113">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="281e7-113">See also</span></span>
 
-- [<span data-ttu-id="d7648-114">LINQ und Zeichen folgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d7648-114">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="d7648-115">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="d7648-115">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="281e7-114">LINQ und Zeichenfolgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="281e7-114">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="281e7-115">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="281e7-115">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
