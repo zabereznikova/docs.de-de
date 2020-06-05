@@ -2,12 +2,12 @@
 title: Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: b14171196a95e9a6a12f6b13f6f17d3cfe352bce
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: e227029928676e21d3ed14450140e92b386bf216
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266845"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400796"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Start Multiple Async Tasks and Process Them As They Complete (Visual Basic) (Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (Visual Basic))
 Mit <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> können Sie mehrere Aufgaben gleichzeitig starten und diese nicht in der Reihenfolge, in der sie gestartet wurden, sondern zu dem Zeitpunkt, zu dem sie abgeschlossen werden, verarbeiten.  
@@ -37,7 +37,7 @@ Mit <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> k
  Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich die Datei „MainWindow.xaml.vb“ am Ende dieses Themas anschauen.  
   
 ## <a name="building-the-example"></a>Erstellen des Beispiels  
- In diesem Beispiel wird der Code hinzugefügt, der in ["Verbleibende Async-Aufgaben abbrechen" nach Abschluss (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) entwickelt wurde, und verwendet dieselbe Benutzeroberfläche.  
+ In diesem Beispiel wird der Code hinzugefügt, der in verbleibende asynchrone [Aufgaben abbrechen, nachdem ein Vorgang abgeschlossen wurde (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) und die gleiche Benutzeroberfläche verwendet wird.  
   
  Um das Beispiel selbst schrittweise zu erstellen, befolgen Sie die Anweisungen im Abschnitt „Herunterladen des Beispiels“. Wählen Sie als **Startprojekt** aber **CancelAfterOneTask** aus. Fügen Sie die Änderungen in diesem Thema zur `AccessTheWebAsync`-Methode in diesem Projekt hinzu. Die Änderungen sind mit Sternchen gekennzeichnet.  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- Nehmen Sie in der Datei MainWindow.xaml.vb des `AccessTheWebAsync` Projekts die folgenden Änderungen an der Methode vor.  
+ Nehmen Sie in der Datei "MainWindow. XAML. vb" des Projekts die folgenden Änderungen an der- `AccessTheWebAsync` Methode vor.  
   
 - Führen Sie die Abfrage aus, indem Sie <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> anstelle von <xref:System.Linq.Enumerable.ToArray%2A> anwenden.  
   
@@ -80,7 +80,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
  Sie sollten das Projekt mehrmals ausführen, um zu überprüfen, dass die heruntergeladenen Längen nicht immer in der gleichen Reihenfolge angezeigt werden.  
   
 > [!CAUTION]
-> Sie können `WhenAny` in einer Schleife gemäß der Beschreibung im Beispiel verwenden, um Problemlösungen zu entwickeln, die nur wenige Aufgaben umfassen. Andere Ansätze sind jedoch effizienter, wenn viele Aufgaben verarbeitet werden müssen. Weitere Informationen und Beispiele finden Sie unter [Verarbeiten von Aufgaben, wenn sie abgeschlossen sind.](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)  
+> Sie können `WhenAny` in einer Schleife gemäß der Beschreibung im Beispiel verwenden, um Problemlösungen zu entwickeln, die nur wenige Aufgaben umfassen. Andere Ansätze sind jedoch effizienter, wenn viele Aufgaben verarbeitet werden müssen. Weitere Informationen und Beispiele finden Sie unter [Verarbeiten von Aufgaben](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)nach deren Abschluss.  
   
 ## <a name="complete-example"></a>Vollständiges Beispiel  
  Der folgende Code besteht aus dem vollständigen Text der Datei „MainWindow.xaml.vb“ für das Beispiel. Sternchen markieren die Elemente, die für dieses Beispiel hinzugefügt wurden.  
@@ -208,6 +208,6 @@ End Class
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))
-- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))
+- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](index.md)
 - [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

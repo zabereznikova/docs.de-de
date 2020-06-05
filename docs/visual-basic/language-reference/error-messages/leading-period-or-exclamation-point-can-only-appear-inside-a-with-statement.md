@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-ms.openlocfilehash: 15390fb506fe9bca10f6917f5b26451a5569bece
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 149acc2baac0f45fa971a11f254d694526d140d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921120"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397323"
 ---
 # <a name="leading--or--can-only-appear-inside-a-with-statement"></a>Vorangestellte "." oder "!" können nur in einer With-Anweisung verwendet werden.
-Ein Punkt (.) oder ein Ausrufezeichen (!) ist, die nicht innerhalb einer `With` Blockierung tritt auf, ohne einen Ausdruck auf der linken Seite. Memberzugriff (`.`) und wörterbuchmemberzugriff (`!`) erfordern einen Ausdruck, der das Element, das den Member enthält. Dadurch muss sofort angezeigt, auf der linken Seite des Accessors oder als Ziel einer `With` -Block mit den Memberzugriff.  
+Ein Punkt (.) oder ein Ausrufezeichen (!), das sich nicht in einem-Block befindet, `With` tritt ohne einen Ausdruck auf der linken Seite auf. Member Access ( `.` ) und Dictionary Member Access ( `!` ) erfordern einen Ausdruck, der das Element angibt, das den Member enthält. Dieser muss direkt links neben dem-Accessor oder als Ziel eines Blocks angezeigt werden, der `With` den Member-Zugriff enthält.  
   
  **Fehler-ID:** BC30157  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Sicherstellen, dass die `With` -Block korrekt formatiert.  
+1. Stellen Sie sicher, dass der `With` Block korrekt formatiert ist.  
   
-2. Es ist keine `With` blockieren, Hinzufügen eines Ausdrucks auf der linken Seite des Accessors, der ausgewertet wird, um ein definiertes Element, das den Member enthält.  
+2. Wenn kein-Block vorhanden ist `With` , fügen Sie links neben dem Accessor einen Ausdruck hinzu, der zu einem definierten Element ausgewertet wird, das den Member enthält.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sonderzeichen in Code](../../../visual-basic/programming-guide/program-structure/special-characters-in-code.md)
-- [With...End With-Anweisung](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [Sonderzeichen in Code](../../programming-guide/program-structure/special-characters-in-code.md)
+- [With...End With-Anweisung](../statements/with-end-with-statement.md)

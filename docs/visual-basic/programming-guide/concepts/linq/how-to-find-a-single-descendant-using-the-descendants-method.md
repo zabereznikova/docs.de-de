@@ -1,13 +1,13 @@
 ---
-title: 'Gewusst wie: Suchen eines einzelnen Nachfolgers mit der Descendants-Methode'
+title: 'Vorgehensweise: Suchen eines einzelnen Nachfolgers mit der Descendants-Methode'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 1c1192c85a7244a9a03a2cd55144abcfb02dcbf1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d3e193efb7cc050acc0e8113a892d24ad7262b16
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353000"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406897"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Gewusst wie: Suchen eines einzelnen Nachfolgers mit der Descendants-Methode (Visual Basic)
 Mit der <xref:System.Xml.Linq.XContainer.Descendants%2A>-Achsenmethode können Sie schnell Code zum Suchen nach einem einzelnen eindeutig benannten Element schreiben. Diese Technik ist besonders nützlich, wenn Sie einen bestimmten Nachfolger mit einem bestimmten Namen ermitteln möchten. Sie könnten den Code zwar so schreiben, dass eine Navigation zum gewünschten Element erfolgt, es ist aber häufig schneller und einfacher, den Code mit der <xref:System.Xml.Linq.XContainer.Descendants%2A>-Achse zu schreiben.  
@@ -80,6 +80,6 @@ End Module
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Grundlegende Abfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Grundlegende Abfragen (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

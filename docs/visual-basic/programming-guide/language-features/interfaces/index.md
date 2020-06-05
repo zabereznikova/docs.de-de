@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 619aa6695db756e56a836fd76693cc8a3976f8e2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 90f8e5d4eb7bb6b367ee5ffd4a4323097c6bde9c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345054"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405042"
 ---
 # <a name="interfaces-visual-basic"></a>Schnittstellen (Visual Basic)
 *Schnittstellen* definieren die Eigenschaften, Methoden und Ereignisse, die von Klassen implementiert werden können. Schnittstellen erlauben es Ihnen, Funktionen als kleine Gruppen mit verwandten Eigenschaften, Methoden und Ereignisse zu definieren. Dadurch werden Kompatibilitätsprobleme reduziert, da Sie für die Schnittstellen erweiterte Implementierungen entwickeln können, ohne vorhandenen Code zu gefährden. Sie können neue Funktionen zu einem beliebigen Zeitpunkt hinzufügen, indem Sie weitere Schnittstellen und Implementierungen entwickeln.  
@@ -33,20 +33,20 @@ ms.locfileid: "74345054"
  In einem Namespace sind Schnittstellenanweisungen standardmäßig `Friend`, aber sie können auch explizit als `Public` oder `Friend` deklariert sein. Schnittstellen, die innerhalb von Klassen, Modulen, Schnittstellen und Strukturen definiert sind, sind standardmäßig `Public`, können aber auch explizit als `Public`, `Friend`, `Protected`, oder `Private` deklariert sein.  
   
 > [!NOTE]
-> Das `Shadows` Schlüsselwort kann auf alle Schnittstellenmember angewendet werden. Das `Overloads` Schlüsselwort kann bei `Sub`, `Function`, und `Property` Anweisungen angewendet werden und wird in der Schnittstellendefinition deklariert. Darüber hinaus können `Property` Anweisungen die `Default`, `ReadOnly`, oder `WriteOnly` Modifizierer haben. Alle anderen Modifizierer –`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`, oder `Overridable`– sind zulässig. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+> Das `Shadows` Schlüsselwort kann auf alle Schnittstellenmember angewendet werden. Das `Overloads` Schlüsselwort kann bei `Sub`, `Function`, und `Property` Anweisungen angewendet werden und wird in der Schnittstellendefinition deklariert. Darüber hinaus können `Property` Anweisungen die `Default`, `ReadOnly`, oder `WriteOnly` Modifizierer haben. Alle anderen Modifizierer –`Public`, `Private`, `Friend`, `Protected`, `Shared`, `Overrides`, `MustOverride`, oder `Overridable`– sind zulässig. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Im folgende Code wird beispielsweise eine Schnittstelle mit einer Funktion, eine Eigenschaft und ein Ereignis definiert.  
   
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
-## <a name="implementing-interfaces"></a>Implementieren von Schnittsellen  
+## <a name="implementing-interfaces"></a>Implementieren von Schnittstellen  
  Das Visual Basic reservierte Wort `Implements` wird auf zweierlei Weise verwendet. Die `Implements` Anweisung gibt an, dass eine Klasse oder Struktur eine Schnittstelle implementiert. Das `Implements` Schlüsselwort gibt an, dass ein Klassenmember oder ein Strukturmember ein bestimmtes Schnittstellenmember implementiert.  
   
 ### <a name="implements-statement"></a>Implements-Anweisung  
  Wenn eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert, muss die `Implements` Anweisung unmittelbar nach der `Class` oder `Structure` Anweisung erfolgen. Die `Implements` Anweisung erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellen, die von einer Klasse implementiert werden. Die Klasse oder Struktur muss alle Schnittstellenmember mit dem `Implements` Schlüsselwort implementieren.  
   
 ### <a name="implements-keyword"></a>Implements-Schlüsselwort  
- Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden. In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben. Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll. Der Name eines Members, der einen Schnittstellenmember implementiert, kann jeden beliebigen zulässigen Bezeichner verwenden, und er ist nicht auf die `InterfaceName_MethodName` Konvention beschränkt, die in früheren Versionen von Visual Basic verwendet wurde.  
+ Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden. In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben. Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll. Der Name eines Members, der einen Schnittstellenmember implementiert, kann jeden beliebigen zulässigen Bezeichner verwenden, und er ist nicht auf die Konvention beschränkt, die `InterfaceName_MethodName` in früheren Versionen von Visual Basic verwendet wurde.  
   
  Der folgende Code zeigt z. B. das Deklarieren einer Unterroutine namens `Sub1`, die eine Methode einer Schnittstelle implementiert:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74345054"
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Exemplarische Vorgehensweise: Erstellen und Implementieren von Schnittstellen](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Bietet eine ausführliche Anleitung, die Sie durch den Prozess des Definierens und Implementierens Ihrer eigenen Schnittstellen führt.|  
-|[Varianz in generischen Schnittstellen](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Erläutert Ko- und Kontravarianz in generischen Schnittstellen und enthält eine Liste der Varianten generischen Schnittstellen in .NET Framework.|
+|[Exemplarische Vorgehensweise: Erstellen und Implementieren von Schnittstellen](walkthrough-creating-and-implementing-interfaces.md)|Bietet eine ausführliche Anleitung, die Sie durch den Prozess des Definierens und Implementierens Ihrer eigenen Schnittstellen führt.|  
+|[Abweichungen bei generischen Schnittstellen](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Erläutert Ko- und Kontravarianz in generischen Schnittstellen und enthält eine Liste der Varianten generischen Schnittstellen in .NET Framework.|

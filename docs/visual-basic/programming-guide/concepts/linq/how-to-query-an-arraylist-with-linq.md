@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Abfragen von ArrayList mit LINQ'
+title: 'Vorgehensweise: Abfragen einer ArrayList mit LINQ'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 94a3c6d4c381f41f9ba87bf3af93261712ad1136
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347759"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396466"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Gewusst wie: Abfragen von ArrayList mit LINQ (Visual Basic)
 
-Bei Verwendung von LINQ zum Abfragen nicht generischer <xref:System.Collections.IEnumerable>-Auflistungen wie z.B. <xref:System.Collections.ArrayList> müssen Sie den Typ der Bereichsvariablen entsprechend dem spezifischen Typ der Objekte in der Auflistung explizit deklarieren. Wenn Sie z. b. eine <xref:System.Collections.ArrayList> `Student` Objekten haben, sollte die [from-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md) wie folgt aussehen:
+Bei Verwendung von LINQ zum Abfragen nicht generischer <xref:System.Collections.IEnumerable>-Auflistungen wie z.B. <xref:System.Collections.ArrayList> müssen Sie den Typ der Bereichsvariablen entsprechend dem spezifischen Typ der Objekte in der Auflistung explizit deklarieren. Wenn Sie z. b. eine <xref:System.Collections.ArrayList> von- `Student` Objekten haben, sollte die [from-Klausel](../../../language-reference/queries/from-clause.md) wie folgt aussehen:
 
 ```vb
 Dim query = From student As Student In arrList
@@ -20,7 +20,7 @@ Dim query = From student As Student In arrList
 
 Indem Sie den Typ der Bereichsvariablen angeben, wandeln Sie jedes Element in der <xref:System.Collections.ArrayList> in ein `Student` um.
 
-Die Verwendung einer explizit typisierten Bereichsvariablen in einem Abfrageausdruck entspricht dem Aufrufen der <xref:System.Linq.Enumerable.Cast%2A>-Methode. <xref:System.Linq.Enumerable.Cast%2A> löst eine Ausnahme aus, wenn bei der Umwandlung ein Fehler auftritt. <xref:System.Linq.Enumerable.Cast%2A> und <xref:System.Linq.Enumerable.OfType%2A> sind zwei Standardabfrageoperator-Methoden, die mit nicht generischen <xref:System.Collections.IEnumerable>-Typen arbeiten. In Visual Basic müssen Sie explizit die <xref:System.Linq.Enumerable.Cast%2A>-Methode für die Datenquelle aufzurufen, um einen bestimmten Bereichs Variablentyp sicherzustellen. Weitere Informationen finden Sie unter [Typbeziehungen in Abfrage Vorgängen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).
+Die Verwendung einer explizit typisierten Bereichsvariablen in einem Abfrageausdruck entspricht dem Aufrufen der <xref:System.Linq.Enumerable.Cast%2A>-Methode. <xref:System.Linq.Enumerable.Cast%2A> löst eine Ausnahme aus, wenn bei der Umwandlung ein Fehler auftritt. <xref:System.Linq.Enumerable.Cast%2A> und <xref:System.Linq.Enumerable.OfType%2A> sind zwei Standardabfrageoperator-Methoden, die mit nicht generischen <xref:System.Collections.IEnumerable>-Typen arbeiten. In Visual Basic müssen Sie explizit die- <xref:System.Linq.Enumerable.Cast%2A> Methode für die Datenquelle aufzurufen, um einen bestimmten Bereichs Variablentyp sicherzustellen. Weitere Informationen finden Sie unter [Typbeziehungen in Abfrage Vorgängen (Visual Basic)](type-relationships-in-query-operations.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -78,6 +78,6 @@ End Module
 '   Garcia: 97
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

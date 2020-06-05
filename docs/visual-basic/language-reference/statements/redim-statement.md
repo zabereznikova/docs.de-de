@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 82f19762865fdf3c3f32a0349e21e3b97bebd567
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346739"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404277"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim-Anweisung (Visual Basic)
 Reserviert Speicherplatz für eine Arrayvariable neu.  
@@ -42,48 +42,48 @@ Reserviert Speicherplatz für eine Arrayvariable neu.
 ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
 ```  
   
-## <a name="parts"></a>-Komponenten  
+## <a name="parts"></a>Bestandteile  
   
 |Begriff|Definition|  
 |----------|----------------|  
-|`Preserve`|Optional. Modifizierer zum Beibehalten der Daten im vorhandenen Array, wenn lediglich die Größe der letzten Dimension geändert wird.|  
-|`name`|Erforderlich Name der Arrayvariablen. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Erforderlich Liste der Grenzen jeder Dimension des neu definierten Arrays.|  
+|`Preserve`|Dies ist optional. Modifizierer zum Beibehalten der Daten im vorhandenen Array, wenn lediglich die Größe der letzten Dimension geändert wird.|  
+|`name`|Erforderlich. Name der Arrayvariablen. Siehe [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Erforderlich. Liste der Grenzen jeder Dimension des neu definierten Arrays.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie können die `ReDim`-Anweisung verwenden, um die Größe einer oder mehrerer Dimensionen eines Arrays zu ändern, das bereits deklariert wurde. Wenn Sie ein großes Array verwenden und einige Elemente nicht mehr benötigen, kann `ReDim` durch das Reduzieren der Arraygröße Arbeitsspeicher freigeben. Falls Ihr Array mehr Elemente benötigt, kann `ReDim` diese auch hinzufügen.  
   
  Die `ReDim`-Anweisung ist nur für Arrays bestimmt. Sie gilt nicht für Skalare (Variablen, die nur einen einzelnen Wert enthalten), Auflistungen oder Strukturen. Beachten Sie Folgendes: Wenn Sie für eine Variable den Typ `Array` deklarieren, verfügt die `ReDim`-Anweisung nicht über genügend Typinformationen zum Erstellen des neuen Arrays.  
   
- Sie können `ReDim` nur auf Prozedurebene verwenden. Aus diesem Grund muss der Deklarationskontext für die Variable eine Prozedur sein. Folgende Kontexte sind nicht möglich: Quelldatei, Namespace, Schnittstelle, Klasse, Struktur, Modul oder Block. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Sie können `ReDim` nur auf Prozedurebene verwenden. Aus diesem Grund muss der Deklarationskontext für die Variable eine Prozedur sein. Folgende Kontexte sind nicht möglich: Quelldatei, Namespace, Schnittstelle, Klasse, Struktur, Modul oder Block. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](declaration-contexts-and-default-access-levels.md).  
   
 ## <a name="rules"></a>Regeln  
   
-- **Mehrere Variablen.** Sie können die Größe mehrerer Array Variablen in der gleichen Deklarations Anweisung ändern und die `name` und `boundlist` Teile für jede Variable angeben. Mehrere Variablen werden durch Kommas voneinander getrennt.  
+- **Mehrere Variablen:** Sie können die Größe mehrerer Array Variablen in der gleichen Deklarations Anweisung ändern und `name` die `boundlist` Teile und für jede Variable angeben. Mehrere Variablen werden durch Kommas voneinander getrennt.  
   
 - **Array Begrenzungen.** Jeder Eintrag in `boundlist` kann die unteren und oberen Begrenzungen dieser Dimension angeben. Die untere Grenze ist immer 0 (null). Die Obergrenze ist der größtmögliche Indexwert für diese Dimension, nicht die Länge der Dimension (dies ist die obere Grenze plus 1). Der Index für jede Dimension kann zwischen 0 und dem Wert der oberen Grenze variieren.  
   
      Die Anzahl der Dimensionen in `boundlist` muss mit der ursprünglichen Anzahl von Dimensionen (Rang) des Arrays übereinstimmen.  
   
-- **Datentypen.** Mit der `ReDim`-Anweisung kann der Datentyp einer Array Variablen oder ihrer Elemente nicht geändert werden.  
+- **Datentypen.** Mit der- `ReDim` Anweisung kann der Datentyp einer Array Variablen oder ihrer Elemente nicht geändert werden.  
   
-- **Initialisierung.** Die `ReDim`-Anweisung kann keine neuen Initialisierungs Werte für die Array Elemente bereitstellen.  
+- **Initialisierung.** Die- `ReDim` Anweisung kann keine neuen Initialisierungs Werte für die Array Elemente bereitstellen.  
   
-- **Gehören.** Die `ReDim`-Anweisung kann den Rang (die Anzahl der Dimensionen) des Arrays nicht ändern.  
+- **Gehören.** Die `ReDim` Anweisung kann nicht den Rang (die Anzahl der Dimensionen) des Arrays ändern.  
   
-- **Ändern der Größe mit "preserve".** Wenn Sie `Preserve`verwenden, können Sie nur die Größe der letzten Dimension des Arrays ändern. Für alle anderen Dimensionen müssen Sie die Grenze des vorhandenen Arrays angeben.  
+- **Ändern der Größe mit Beibehaltung (Preserve):** Wenn Sie verwenden `Preserve` , können Sie nur die Größe der letzten Dimension des Arrays ändern. Für alle anderen Dimensionen müssen Sie die Grenze des vorhandenen Arrays angeben.  
   
      Wenn das Array nur eine Dimension hat, können Sie beispielsweise die Größe dieser Dimension ändern und trotzdem den gesamten Inhalt des Arrays beibehalten. Dies liegt daran, dass Sie die letzte und einzige Dimension ändern. Wenn das Array aber über zwei oder mehr Dimensionen verfügt, können Sie bei Verwendung von `Preserve` nur die Größe der letzten Dimension ändern.  
   
-- **Eigenschaften.** Sie können `ReDim` für eine Eigenschaft verwenden, die ein Array von Werten enthält.  
+- **Eigenschaften.** Sie können `ReDim` für eine Eigenschaft verwenden, die ein Array von-Werten enthält.  
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Array Ersetzung.** `ReDim` gibt das vorhandene Array frei und erstellt ein neues Array mit demselben Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
+- **Array Ersetzung.** `ReDim`Gibt das vorhandene Array frei und erstellt ein neues Array mit demselben Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
   
-- **Initialisierung ohne Beibehaltung.** Wenn Sie `Preserve`nicht angeben, werden die Elemente des neuen Arrays von `ReDim` initialisiert, indem der Standardwert für ihren Datentyp verwendet wird.  
+- **Initialisierung ohne Beibehaltung (Preserve):** Wenn Sie nicht angeben `Preserve` , werden `ReDim` die Elemente des neuen Arrays initialisiert, wobei der Standardwert für ihren Datentyp verwendet wird.  
   
-- **Initialisierung mit Preserve.** Wenn Sie `Preserve`angeben, kopiert Visual Basic die Elemente aus dem vorhandenen Array in das neue Array.  
+- **Initialisierung mit Beibehaltung (Preserve):** Wenn Sie angeben `Preserve` , kopiert Visual Basic die Elemente aus dem vorhandenen Array in das neue Array.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Größe der letzten Dimension eines dynamischen Arrays erhöht, ohne dass vorhandene Daten im Array verloren gehen. Anschließend wird die Größe mit einem Teilverlust der Daten reduziert. Zuletzt wird die Größe zurück auf den Originalwert reduziert, und alle Arrayelemente werden neu initialisiert.  
@@ -98,13 +98,13 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  Das dritte `ReDim`-Element erstellt ein weiteres neues Array und entfernt auf jeder Ebene weitere fünf Spalten vom Ende jeder Zeile. Dieses Mal werden keine vorhandenen Elemente kopiert. Mit dieser Anweisung wird das Array auf seine ursprüngliche Größe zurückgesetzt. Da die Anweisung den `Preserve`-Modifizierer nicht enthält, werden alle Arrayelemente auf ihre ursprünglichen Standardwerte festgelegt.  
   
- Weitere Beispiele finden Sie unter [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Weitere Beispiele finden Sie unter [Arrays](../../programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IndexOutOfRangeException>
-- [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)
-- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Erase-Anweisung](../../../visual-basic/language-reference/statements/erase-statement.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
-- [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Const-Anweisung](const-statement.md)
+- [Dim-Anweisung](dim-statement.md)
+- [Erase-Anweisung](erase-statement.md)
+- [Schweigen](../nothing.md)
+- [Arrays](../../programming-guide/language-features/arrays/index.md)
