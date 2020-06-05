@@ -5,23 +5,23 @@ helpviewer_keywords:
 - operators [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-ms.openlocfilehash: 797b9bc03ef07e8c0810a1c53e855f39faf782c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cd288450b0e23bf49c4db2c04008431fd1b8f1be
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331499"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371543"
 ---
 # <a name="concatenation-operators-visual-basic"></a>Verkettungsoperatoren (Visual Basic)
 Die folgenden Verkettungs Operatoren sind in Visual Basic definiert.  
   
- [&-Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [&-Operator](concatenation-operator.md)  
   
- [+-Operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [+-Operator](addition-operator.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Verkettungs Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Operatorrangfolge in Visual Basic](operator-precedence.md)
+- [Verkettungsoperatoren in Visual Basic](../../programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

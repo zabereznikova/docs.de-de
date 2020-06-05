@@ -36,12 +36,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: 628461c8136946dd902c0a52048eee7c516c52cd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a48260694c1dfcbbb8f804f220fe89b1663c7319
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352926"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393077"
 ---
 # <a name="type-characters-visual-basic"></a>Typzeichen (Visual Basic)
 
@@ -62,9 +62,9 @@ Visual Basic stellt einen Satz von *Bezeichnertyp Zeichen* bereit, die Sie in ei
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- Es sind keine Bezeichnertyp Zeichen für die Datentypen "`Boolean`", "`Byte`", "`Char`", "`Date`", "`Object`", "`SByte`", "`Short`", "`UInteger`", "`ULong`" oder "`UShort`" vorhanden.
+ Für die-,-,-,-,-,-,-,- `Boolean` `Byte` oder- `Char` `Date` `Object` `SByte` `Short` `UInteger` `ULong` `UShort` Datentypen oder für zusammengesetzte Datentypen wie Arrays oder Strukturen sind keine Bezeichnertyp Zeichen vorhanden.
 
-In einigen Fällen können Sie das `$` Zeichen an eine Visual Basic Funktion anfügen, z. b. `Left$` anstelle `Left`, um einen Rückgabewert vom Typ `String`zu erhalten.
+In einigen Fällen können Sie das `$` Zeichen an eine Visual Basic Funktion anfügen, z. b. `Left$` anstelle von `Left` , um einen Rückgabewert vom Typ zu erhalten `String` .
 
 In allen Fällen muss das Bezeichnertyp Zeichen direkt auf den Bezeichnernamen folgen.
 
@@ -79,7 +79,7 @@ Die Form eines Literals, wie er im Code angezeigt wird, bestimmt normalerweise s
 |Textform des Literals|Standard Datentyp|Beispiel|  
 |-----------------------------|-----------------------|-------------|  
 |Numerisch, kein Bruchteil|`Integer`|`2147483647`|  
-|Numerisch, kein Bruchteile, zu groß für `Integer`|`Long`|`2147483648`|  
+|Numeric, keine Bruchteile, zu groß für`Integer`|`Long`|`2147483648`|  
 |Numerisch, Bruchteile|`Double`|`1.2`|  
 |Eingeschlossen in doppelte Anführungszeichen.|`String`|`"A"`|  
 |Eingeschlossen in Nummern Zeichen|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -101,15 +101,15 @@ Visual Basic stellt einen Satz von *Literaltypzeichen*bereit, die Sie verwenden 
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-Für die Datentypen "`Boolean`", "`Byte`", "`Date`", "`Object`", "`SByte`" oder "`String`" oder für zusammengesetzte Datentypen wie Arrays oder Strukturen sind keine Literaltypzeichen vorhanden.
+Für die-,-,-,-,- `Boolean` `Byte` oder- `Date` `Object` `SByte` `String` Datentypen oder für zusammengesetzte Datentypen wie Arrays oder Strukturen sind keine Literaltypzeichen vorhanden.
 
-Literale können auch die Bezeichnertyp Zeichen (`%`, `&`, `@`, `!`, `#`, `$`) verwenden, ebenso wie Variablen, Konstanten und Ausdrücke. Die Literaltypzeichen (`S`, `I`, `L`, `D`, `F`, `R`, `C`) können jedoch nur mit Literalen verwendet werden.
+Literale können auch die Bezeichnertyp Zeichen ( `%` , `&` , `@` , `!` , `#` , `$` ) verwenden, ebenso wie Variablen, Konstanten und Ausdrücke. Die Literaltypzeichen ( `S` , `I` , `L` , `D` , `F` , `R` , `C` ) können jedoch nur mit Literalen verwendet werden.
 
 In allen Fällen muss das Literaltypzeichen unmittelbar auf den Literalwert folgen.
 
 ## <a name="hexadecimal-binary-and-octal-literals"></a>Hexadezimale, binäre und oktale Literale
 
-Der Compiler interpretiert normalerweise ein Ganzzahlliteral, das im Dezimalzahlen System (Base 10) liegt. Sie können ein Ganzzahlliteral auch als hexadezimale Zahl (Basis 16) mit dem `&H`-Präfix definieren, als binäre (Basis 2) Zahl mit dem `&B` Präfix und als oktale (Basis 8)-Nummer mit dem `&O` Präfix. Die Ziffern, die dem Präfix folgen, müssen für das Zahlensystem geeignet sein. Dies wird in der folgenden Tabelle veranschaulicht.  
+Der Compiler interpretiert normalerweise ein Ganzzahlliteral, das im Dezimalzahlen System (Base 10) liegt. Sie können ein Ganzzahlliteral auch als hexadezimale Zahl (Basis 16) mit dem `&H` Präfix definieren, als binäre (Basis 2) Zahl mit dem `&B` Präfix und als oktale (Basis 8) Zahl mit dem `&O` Präfix. Die Ziffern, die dem Präfix folgen, müssen für das Zahlensystem geeignet sein. Dies wird in der folgenden Tabelle veranschaulicht.  
   
 |Zahlenbasis|Präfix|Gültige Ziffern Werte|Beispiel|
 |-----------------|------------|------------------------|-------------|
@@ -117,22 +117,22 @@ Der Compiler interpretiert normalerweise ein Ganzzahlliteral, das im Dezimalzahl
 |Binary (Basis 2)|`&B`|0-1|`&B01111100`|
 |Oktalformat (Basis 8)|`&O`|0-7|`&O77`|
 
-Ab Visual Basic 2017 können Sie den Unterstrich (`_`) als Gruppen Trennzeichen verwenden, um die Lesbarkeit eines ganzzahligen Literals zu verbessern. Im folgenden Beispiel wird das `_` Zeichen verwendet, um ein binäres wahrsten in 8-Bit-Gruppen zu gruppieren:
+Ab Visual Basic 2017 können Sie den Unterstrich ( `_` ) als Gruppen Trennzeichen verwenden, um die Lesbarkeit eines ganzzahligen Literals zu verbessern. Im folgenden Beispiel wird das- `_` Zeichen verwendet, um ein binäres wahrsten in 8-Bit-Gruppen zu gruppieren:
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
 ```
 
-Sie können einem Literalzeichen ein Literalzeichen folgen. Dies wird im folgenden Beispiel veranschaulicht.
+Sie können einem Literalzeichen ein Literalzeichen folgen. Im folgenden Beispiel wird dies veranschaulicht.
 
 ```vb
 Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-Im vorherigen Beispiel hat `counter` den Dezimalwert-32768 und `flags` den Dezimalwert + 32768.
+Im vorherigen Beispiel `counter` hat den Dezimalwert-32768 und `flags` den Dezimalwert + 32768.
 
-Beginnend mit Visual Basic 15,5 können Sie auch den Unterstrich (`_`) als führendes Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
+Beginnend mit Visual Basic 15,5 können Sie auch den Unterstrich ( `_` ) als vorangeführtem Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -140,12 +140,12 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../../includes/vb-separator-langversion.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Typkonvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
+- [Datentypen](index.md)
+- [Elementare Datentypen](elementary-data-types.md)
+- [Wert- und Verweistypen](value-types-and-reference-types.md)
+- [Typkonvertierung in Visual Basic](type-conversions.md)
+- [Problembehandlung bei Datentypen](troubleshooting-data-types.md)
+- [Variablen Deklaration](../variables/variable-declaration.md)
+- [Datentypen](../../../language-reference/data-types/index.md)

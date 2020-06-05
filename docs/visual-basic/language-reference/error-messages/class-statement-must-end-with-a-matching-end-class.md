@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 559595e9902ec2f0a19fd6b13e2c89fa1c2b52d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c231f577d21028e9ef92f37c7ac5f7f1fe2aa3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602418"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415387"
 ---
 # <a name="class-statement-must-end-with-a-matching-end-class"></a>"Class" muss mit einem entsprechenden "End Class" abgeschlossen werden.
-`Class` Dient zum Initiieren einer `Class` blockieren; kann daher nur am Anfang des Blocks mit einer passenden auftreten `End Class` -Anweisung beendet. Entweder ist eine redundante `Class` -Anweisung, oder Sie wurde nicht beendet. Ihre `Class` -block mit `End Class`.  
+`Class`wird zum Initiieren eines- `Class` Blocks verwendet und kann daher nur am Anfang des Blocks angezeigt werden, wobei eine entsprechende- `End Class` Anweisung den Block beendet. Sie haben entweder eine redundante- `Class` Anweisung, oder Sie haben den- `Class` Block nicht mit beendet `End Class` .  
   
  **Fehler-ID:** BC30481  
   
@@ -23,9 +23,9 @@ ms.locfileid: "64602418"
   
 - Suchen und entfernen Sie die unnötige `Class` -Anweisung.  
   
-- Beenden der `Class` Block mit einer passenden `End Class`.  
+- Schließen Sie den `Class` Block mit einem übereinstimmenden ab `End Class` .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [End \<Schlüsselwort >-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
-- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)
+- [End- \<keyword> Anweisung](../statements/end-keyword-statement.md)
+- [Class-Anweisung](../statements/class-statement.md)

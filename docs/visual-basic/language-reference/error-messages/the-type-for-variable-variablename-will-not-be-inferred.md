@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: e56529919945558df178e18a83a895a79bfe4919
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 98aeb5699fdd5e5e538a205acd37436019c3fc03
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512728"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363045"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Der Typ für die Variable\<"VariableName >" wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist.
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Der Typ für die Variable '\<variablename>' wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist
 
-Der Typ für die Variable\<"VariableName >" wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist. Ändern Sie den Namen von "\<VariableName >", oder verwenden Sie den voll qualifizierten Namen (z. b. "Me. VariableName" oder "MyBase. VariableName").
+Der Typ für die Variable ' \<variablename> ' wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist. Ändern Sie den Namen von ' \<variablename> ', oder verwenden Sie den voll qualifizierten Namen (z. b. ' me. variablename ' oder ' MyBase. variablename ').
 
 Eine Schleifensteuerungsvariable im Code hat den gleichen Namen wie ein Feld der Klasse oder andere einschließende Bereiche. Da die Steuerelementvariable ohne eine `As`-Klausel verwendet wird, ist sie an das Feld im einschließenden Bereich gebunden, und der Compiler erstellt weder eine neue Variable für sie noch leitet er ihren Typ ab.
 
@@ -82,11 +82,11 @@ Class Customer
 End Class
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Vorgehensweise: Verweisen auf die aktuelle Instanz eines Objekts](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Me, My, MyBase und MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Option Infer-Anweisung](../statements/option-infer-statement.md)
+- [For Each...Next-Anweisung](../statements/for-each-next-statement.md)
+- [For...Next-Anweisung](../statements/for-next-statement.md)
+- [Vorgehensweise: Verweisen auf die aktuelle Instanz eines Objekts](../../programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Lokaler Typrückschluss](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Me, My, MyBase und MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)

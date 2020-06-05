@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann'
+title: 'Vorgehensweise: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: d80623d9e55358d37aa45f11f1525c80a09b91a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3b1f47250453c32735d633b98da0bd0ddb1ed5b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350038"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393856"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann (Visual Basic)
 Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen. Hierzu geben Sie in der Definition mindestens einen *Typparameter* an. Die Klasse kann dann als Vorlage für Objekte fungieren, für die verschiedene Datentypen verwendet werden. Eine in dieser Weise definierte Klasse wird als *generische Klasse*bezeichnet.  
@@ -44,7 +44,7 @@ Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die
   
 1. Definieren Sie die Klasse auf die übliche Weise.  
   
-2. Fügen Sie `(Of` *Typparameter*`)` unmittelbar nach dem Klassennamen hinzu, um einen Typparameter anzugeben.  
+2. Fügen Sie `(Of` *typeparameter* `)` unmittelbar nach dem Klassennamen hinzu, um einen Typparameter anzugeben.  
   
 3. Sind mehrere Typparameter vorhanden, erstellen Sie innerhalb der Klammern eine Liste mit Kommas als Trennzeichen. Geben Sie das `Of` -Schlüsselwort nur einmal an.  
   
@@ -56,13 +56,13 @@ Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die
   
     - Macht einen parameterlosen Konstruktor verfügbar  
   
-     Wenn Sie keine Einschränkungen angeben, können im Code nur Operationen und Member verwendet werden, die vom [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)unterstützt werden. Weitere Informationen finden Sie unter [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
+     Wenn Sie keine Einschränkungen angeben, können im Code nur Operationen und Member verwendet werden, die vom [Object Data Type](../../../language-reference/data-types/object-data-type.md)unterstützt werden. Weitere Informationen finden Sie unter [Type List](../../../language-reference/statements/type-list.md).  
   
-5. Ermitteln Sie jeden Klassenmember, der mit einem bereitgestellten Typ deklariert werden muss, und deklarieren Sie ihn mit `As` `typeparameter`. Dies gilt für die interne Speicherung, für Prozedurparameter und für Rückgabewerte.  
+5. Identifizieren Sie jeden Klassenmember, der mit einem bereitgestellten Typ deklariert werden soll, und deklarieren Sie ihn `As` `typeparameter` . Dies gilt für die interne Speicherung, für Prozedurparameter und für Rückgabewerte.  
   
 6. Im Code dürfen nur Operationen und Methoden verwenden, die von jedem Datentyp unterstützt werden, der im Code für `itemType`angegeben werden kann.  
   
-     Im folgenden Beispiel wird eine Klasse definiert, in der eine sehr einfache Liste verwaltet wird. Die Klasse speichert die Liste im internen Array `items`, und der verwendende Code kann den Datentyp der Listenelemente deklarieren. Mit einem parametrisierten Konstruktor kann der Using-Code die obere Grenze von `items`festlegen, und der Parameter lose Konstruktor legt diese auf 9 (für insgesamt 10 Elemente) fest.  
+     Im folgenden Beispiel wird eine Klasse definiert, in der eine sehr einfache Liste verwaltet wird. Die Klasse speichert die Liste im internen Array `items`, und der verwendende Code kann den Datentyp der Listenelemente deklarieren. Mit einem parametrisierten Konstruktor kann der Using-Code die obere Grenze von festlegen `items` , und der Parameter lose Konstruktor legt diese auf 9 (für insgesamt 10 Elemente) fest.  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -74,12 +74,12 @@ Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Datentypen](index.md)
+- [Generische Typen in Visual Basic (Visual Basic)](generic-types.md)
 - [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Typliste](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Gewusst wie: Verwenden einer generischen Klasse](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Natürlich](../../../language-reference/statements/of-clause.md)
+- [Type List](../../../language-reference/statements/type-list.md)
+- [Vorgehensweise: Verwenden einer generischen Klasse](how-to-use-a-generic-class.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)

@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: 90dbac88854e1fb156b387eaa6df564269d84d29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0583fc465e81a7076624f4f90297ab3e002c6611
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629050"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363073"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>Die Datei wurde nicht gefunden (Visual Basic-Laufzeitfehler)
-Die Datei wurde nicht gefunden werden, angegeben. Der Fehler hat die folgenden möglichen Ursachen:  
+Die Datei wurde nicht gefunden, wenn Sie angegeben wurde. Der Fehler kann folgende Ursachen haben:  
   
-- Eine Anweisung verweist auf eine Datei, die nicht vorhanden ist.  
+- Eine-Anweisung verweist auf eine Datei, die nicht vorhanden ist.  
   
-- Es wurde versucht, eine Prozedur in einer Dynamic Link Library (DLL) aufgerufen, aber die Bibliothek angegeben wird, der `Lib` -Klausel der `Declare` Anweisung kann nicht gefunden werden.  
+- Es wurde versucht, eine Prozedur in einer Dynamic Link Library (dll) aufzurufen, aber die in der- `Lib` Klausel der-Anweisung angegebene Bibliothek `Declare` kann nicht gefunden werden.  
   
-- Sie haben versucht, ein Projekt öffnen, oder laden eine Textdatei, die nicht vorhanden ist.  
+- Sie haben versucht, ein Projekt zu öffnen oder eine Textdatei zu laden, die nicht vorhanden ist.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Überprüfen Sie die Schreibweise der Dateiname und der Pfadangabe.  
+1. Überprüfen Sie die Schreibweise des Datei namens und der Pfadspezifikation.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../statements/declare-statement.md)
