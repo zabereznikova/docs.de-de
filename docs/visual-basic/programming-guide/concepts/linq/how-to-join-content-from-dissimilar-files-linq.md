@@ -1,21 +1,21 @@
 ---
-title: 'Gewusst wie: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ)'
+title: 'Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: a6528f623d084003bb85dc5bae784b8d96c84d02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7dac73a16d0d3fbf409f58628bc5c69716dcee14
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344554"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398369"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="1e949-102">Vorgehensweise: Verknüpfen von Inhalten aus unterschiedlichen Dateien (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e949-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="5663d-102">Vorgehensweise: Verknüpfen von Inhalten aus unterschiedlichen Dateien (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5663d-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="1e949-103">In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen getrennten Dateien mit gemeinsamem Wert, der als übereinstimmender Schlüssel verwendet wird, verknüpft werden.</span><span class="sxs-lookup"><span data-stu-id="1e949-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="1e949-104">Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern oder aus einem Arbeitsblatt und einer Datei, die ein anderes Format aufweist, in einer neuen Datei kombinieren möchten.</span><span class="sxs-lookup"><span data-stu-id="1e949-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="1e949-105">Sie können das Beispiel auch abändern, damit es mit jeder Art von strukturiertem Text funktioniert.</span><span class="sxs-lookup"><span data-stu-id="1e949-105">You can modify the example to work with any kind of structured text.</span></span>
+<span data-ttu-id="5663d-103">In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen getrennten Dateien mit gemeinsamem Wert, der als übereinstimmender Schlüssel verwendet wird, verknüpft werden.</span><span class="sxs-lookup"><span data-stu-id="5663d-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="5663d-104">Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern oder aus einem Arbeitsblatt und einer Datei, die ein anderes Format aufweist, in einer neuen Datei kombinieren möchten.</span><span class="sxs-lookup"><span data-stu-id="5663d-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="5663d-105">Sie können das Beispiel auch abändern, damit es mit jeder Art von strukturiertem Text funktioniert.</span><span class="sxs-lookup"><span data-stu-id="5663d-105">You can modify the example to work with any kind of structured text.</span></span>
 
-## <a name="to-create-the-data-files"></a><span data-ttu-id="1e949-106">So erstellen Sie die Datendateien</span><span class="sxs-lookup"><span data-stu-id="1e949-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="5663d-106">So erstellen Sie die Datendateien</span><span class="sxs-lookup"><span data-stu-id="5663d-106">To create the data files</span></span>
 
-1. <span data-ttu-id="1e949-107">Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="1e949-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="1e949-108">Diese Datei stellt das Arbeitsblatt dar.</span><span class="sxs-lookup"><span data-stu-id="1e949-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="1e949-109">Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.</span><span class="sxs-lookup"><span data-stu-id="1e949-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>
+1. <span data-ttu-id="5663d-107">Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="5663d-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="5663d-108">Diese Datei stellt das Arbeitsblatt dar.</span><span class="sxs-lookup"><span data-stu-id="5663d-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="5663d-109">Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.</span><span class="sxs-lookup"><span data-stu-id="5663d-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>
 
     ```csv
     111, 97, 92, 81, 60
@@ -32,7 +32,7 @@ ms.locfileid: "74344554"
     122, 94, 92, 91, 91
     ```
 
-2. <span data-ttu-id="1e949-110">Kopieren Sie die folgenden Zeilen in eine Datei namens „names.csv“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="1e949-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="1e949-111">Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.</span><span class="sxs-lookup"><span data-stu-id="1e949-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>
+2. <span data-ttu-id="5663d-110">Kopieren Sie die folgenden Zeilen in eine Datei namens „names.csv“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="5663d-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="5663d-111">Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.</span><span class="sxs-lookup"><span data-stu-id="5663d-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>
 
     ```csv
     Omelchenko,Svetlana,111
@@ -49,7 +49,7 @@ ms.locfileid: "74344554"
     Tucker,Michael,122
     ```
 
-## <a name="example"></a><span data-ttu-id="1e949-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1e949-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5663d-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5663d-112">Example</span></span>
 
 ```vb
 Imports System.Collections.Generic
@@ -120,7 +120,7 @@ End Class
 ' 12 total names in list
 ```
 
-## <a name="see-also"></a><span data-ttu-id="1e949-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1e949-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5663d-113">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="5663d-113">See also</span></span>
 
-- [<span data-ttu-id="1e949-114">LINQ und Zeichen folgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e949-114">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="1e949-115">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="1e949-115">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="5663d-114">LINQ und Zeichenfolgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5663d-114">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="5663d-115">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="5663d-115">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
