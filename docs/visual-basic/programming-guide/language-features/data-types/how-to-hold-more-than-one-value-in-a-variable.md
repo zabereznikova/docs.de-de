@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ablegen mehrerer Werte in einer Variablen'
+title: 'Vorgehensweise: Ablegen mehrerer Werte in einer Variablen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: d452fbf35f9d200348234b38c40f8636f0ec4b4e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 399c5909ee6988f96bcc85260b0401f3bd18a0f2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350024"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393895"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Gewusst wie: Ablegen mehrerer Werte in einer Variablen (Visual Basic)
 
 Eine Variable enthält mehr als einen Wert, wenn Sie Sie als einen zusammen *gesetzten Datentyp*deklarieren.
 
-Zusammen [gesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) umfassen Strukturen, Arrays und Klassen. Eine Variable eines zusammengesetzten Datentyps kann eine Kombination aus elementaren Datentypen und anderen zusammengesetzten Typen enthalten. Strukturen und Klassen können sowohl Code als auch Daten enthalten.
+Zusammen [gesetzte Datentypen](composite-data-types.md) umfassen Strukturen, Arrays und Klassen. Eine Variable eines zusammengesetzten Datentyps kann eine Kombination aus elementaren Datentypen und anderen zusammengesetzten Typen enthalten. Strukturen und Klassen können sowohl Code als auch Daten enthalten.
 
 ## <a name="to-hold-more-than-one-value-in-a-variable"></a>So speichern Sie mehr als einen Wert in einer Variablen
 
@@ -30,24 +30,24 @@ Zusammen [gesetzte Datentypen](../../../../visual-basic/programming-guide/langua
 
 2. Wenn der zusammengesetzte Datentyp nicht bereits definiert ist, definieren Sie ihn so, dass er von der Variablen verwendet werden kann.
 
-    - Definieren Sie eine Struktur mit einer [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - Definieren Sie eine Struktur mit einer [Structure-Anweisung](../../../language-reference/statements/structure-statement.md).
 
-    - Definieren Sie ein Array mit einer [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - Definieren Sie ein Array mit einer [Dim-Anweisung](../../../language-reference/statements/dim-statement.md).
 
-    - Definieren Sie eine Klasse mit einer [Class-Anweisung](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - Definieren Sie eine Klasse mit einer [Class-Anweisung](../../../language-reference/statements/class-statement.md).
 
-3. Deklarieren Sie die Variable mit einer `Dim`-Anweisung.
+3. Deklarieren Sie die Variable mit einer- `Dim` Anweisung.
 
-4. Befolgen Sie den Variablennamen mit einer `As`-Klausel.
+4. Befolgen Sie den Variablennamen mit einer- `As` Klausel.
 
-5. Befolgen Sie das `As`-Schlüsselwort mit dem Namen des entsprechenden zusammengesetzten Datentyps.
+5. Befolgen Sie das- `As` Schlüsselwort mit dem Namen des entsprechenden zusammengesetzten Datentyps.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
-- [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Datentypen](../../../language-reference/data-types/index.md)
+- [Typzeichen](type-characters.md)
+- [Zusammengesetzte Datentypen](composite-data-types.md)
+- [Strukturen](structures.md)
+- [Arrays](../arrays/index.md)
+- [Objekte und Klassen](../objects-and-classes/index.md)
+- [Wert- und Verweistypen](value-types-and-reference-types.md)

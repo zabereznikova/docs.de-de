@@ -21,15 +21,15 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 73cf56dd72f2baac0474d6f5c4e88228a1fe38cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349855"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373884"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Abgeleitete mathematische Funktionen (Visual Basic)
-In der folgenden Tabelle werden nicht systeminterne mathematische Funktionen gezeigt, die von den intrinsischen mathematischen Funktionen des <xref:System.Math?displayProperty=nameWithType> Objekts abgeleitet werden können. Sie können auf die intrinsischen mathematischen Funktionen zugreifen, indem Sie Ihrer Datei oder Ihrem Projekt `Imports System.Math` hinzufügen.  
+In der folgenden Tabelle werden nicht systeminterne mathematische Funktionen gezeigt, die von den intrinsischen mathematischen Funktionen des-Objekts abgeleitet werden können <xref:System.Math?displayProperty=nameWithType> . Sie können auf die intrinsischen mathematischen Funktionen zugreifen `Imports System.Math` , indem Sie Ihrer Datei oder Ihrem Projekt hinzufügen.  
   
 |Funktion|Abgeleitete Entsprechungen|  
 |--------------|-------------------------|  
@@ -54,6 +54,6 @@ In der folgenden Tabelle werden nicht systeminterne mathematische Funktionen gez
 |Umgekehrter hyperbolischer kosecant (acsch (x))|Log ((Vorzeichen (x) * sqrt (x \* x + 1) + 1)/x)|  
 |Umgekehrter hyperbolischer Kotangens (acoth (x))|Log ((x + 1)/(x – 1))/2|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Mathematische Funktionen](../../../visual-basic/language-reference/functions/math-functions.md)
+- [Mathematische Funktionen](../functions/math-functions.md)

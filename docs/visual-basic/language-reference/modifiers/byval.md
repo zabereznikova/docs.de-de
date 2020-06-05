@@ -8,38 +8,38 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], contexts
 - ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
-ms.openlocfilehash: a96f871c6ce119f65ebbec54fdb1471ae105d504
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c4cdafafa6bae3246c0512e28f94fde7e88d230b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351588"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373023"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
 Gibt an, dass ein Argument als [Wert](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)übermittelt wird, sodass die aufgerufene Prozedur oder Eigenschaft den Wert einer Variablen, die dem Argument im aufrufenden Code zugrunde liegt, nicht ändern kann. Wenn kein Modifizierer angegeben wird, ist ByVal der Standardwert.
 
 > [!NOTE]
-> Da es sich hierbei um den Standardwert handelt, müssen Sie das `ByVal`-Schlüsselwort nicht explizit in den Methoden Signaturen angeben. Sie erzeugt in der Regel einen lärmenden Code und führt häufig dazu, dass das nicht standardmäßige `ByRef`-Schlüsselwort übersehen wird.
+> Da es sich hierbei um den Standardwert handelt, müssen Sie das- `ByVal` Schlüsselwort nicht explizit in den Methoden Signaturen angeben. Sie erzeugt in der Regel einen lärmenden Code und führt häufig dazu, dass das nicht Standard `ByRef` Schlüsselwort übersehen wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
  Der `ByVal`-Modifizierer kann in folgenden Kontexten verwendet werden:
 
- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
+ [Declare Statement](../statements/declare-statement.md)
 
- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
+ [Function-Anweisung](../statements/function-statement.md)
   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+ [Operator Statement](../statements/operator-statement.md)
   
- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)
+ [Property Statement](../statements/property-statement.md)
   
- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
+ [Sub-Anweisung](../statements/sub-statement.md)
 
 ## <a name="example"></a>Beispiel
- Im folgenden Beispiel wird die Verwendung des `ByVal` Parameter Übergabe Mechanismus mit einem Verweistyp Argument veranschaulicht. Im Beispiel ist das-Argument `c1`, eine Instanz der-Klasse `Class1`. `ByVal` hindert den Code in den Prozeduren daran, den zugrunde liegenden Wert des Verweis Arguments `c1`zu ändern, aber nicht die zugänglichen Felder und Eigenschaften von `c1`zu schützen.
+ Im folgenden Beispiel wird die Verwendung des `ByVal` Parameters Übergabe Mechanismus mit einem Verweistyp Argument veranschaulicht. Im Beispiel ist das-Argument `c1` , eine Instanz der-Klasse `Class1` . `ByVal`verhindert, dass der Code in den Prozeduren den zugrunde liegenden Wert des Verweis Arguments () ändert, `c1` nicht jedoch die zugänglichen Felder und Eigenschaften von `c1` .
 
  [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
-- [Übergeben von Argumenten als Wert und als Verweis](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Schlüsselwörter](../keywords/index.md)
+- [Übergeben von Argumenten als Wert und als Verweis](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

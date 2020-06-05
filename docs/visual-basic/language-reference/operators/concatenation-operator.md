@@ -10,14 +10,14 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: 4cae7e59083890e82d754bdaa58942c2224357b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d778c0c99d6d074fe8b73aaf3660074643e7e136
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336055"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371608"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;-Operator (Visual Basic)
+# <a name="amp-operator-visual-basic"></a>&amp;Operator (Visual Basic)
 Generiert eine Zeichen folgen Verkettung von zwei Ausdrücken.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,36 +26,36 @@ Generiert eine Zeichen folgen Verkettung von zwei Ausdrücken.
 result = expression1 & expression2  
 ```  
   
-## <a name="parts"></a>-Komponenten  
+## <a name="parts"></a>Bestandteile  
  `result`  
- Erforderlich Beliebige `String` oder `Object` Variable.  
+ Erforderlich. Beliebige- `String` oder- `Object` Variable.  
   
  `expression1`  
- Erforderlich Jeder Ausdruck mit einem Datentyp, der zu `String`erweitert wird.  
+ Erforderlich. Jeder Ausdruck mit einem Datentyp, der zu erweitert wird `String` .  
   
  `expression2`  
- Erforderlich Jeder Ausdruck mit einem Datentyp, der zu `String`erweitert wird.  
+ Erforderlich. Jeder Ausdruck mit einem Datentyp, der zu erweitert wird `String` .  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Datentyp von `expression1` oder `expression2` nicht `String`, aber auf `String`erweitert ist, wird er in `String`konvertiert. Wenn einer der Datentypen nicht zu `String`erweitert wird, generiert der Compiler einen Fehler.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn der Datentyp von `expression1` oder `expression2` nicht ist `String` `String` , wird er in konvertiert `String` . Wenn einer der Datentypen nicht in erweitert `String` wird, generiert der Compiler einen Fehler.  
   
- Der Datentyp von `result` ist `String`. Wenn ein oder beide Ausdrücke als " [Nothing](../../../visual-basic/language-reference/nothing.md) " ausgewertet werden oder den Wert <xref:System.DBNull.Value?displayProperty=nameWithType>haben, werden Sie als Zeichenfolge mit dem Wert "" behandelt.  
-  
-> [!NOTE]
-> Der `&`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der Datentyp von `result` ist `String` . Wenn ein oder beide Ausdrücke als " [Nothing](../nothing.md) " ausgewertet werden oder den Wert aufweisen <xref:System.DBNull.Value?displayProperty=nameWithType> , werden Sie als Zeichenfolge mit dem Wert "" behandelt.  
   
 > [!NOTE]
-> Das kaufmännische und-Zeichen (&) kann auch verwendet werden, um Variablen als Typ `Long`zu identifizieren. Weitere Informationen finden Sie unter [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+> Der `&` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).  
+  
+> [!NOTE]
+> Das kaufmännische und-Zeichen (&) kann auch verwendet werden, um Variablen als Typ zu identifizieren `Long` . Weitere Informationen finden Sie unter [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird der `&` Operator verwendet, um die Verkettung von Zeichen folgen zu erzwingen. Das Ergebnis ist ein Zeichen folgen Wert, der die Verkettung der beiden Zeichen folgen Operanden darstellt.  
+ In diesem Beispiel wird der- `&` Operator verwendet, um die Zeichen folgen Verkettung zu erzwingen. Das Ergebnis ist ein Zeichen folgen Wert, der die Verkettung der beiden Zeichen folgen Operanden darstellt.  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [&=-Operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
-- [Verkettungsoperatoren](../../../visual-basic/language-reference/operators/concatenation-operators.md)
-- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Verkettungs Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [&=-Operator](and-assignment-operator.md)
+- [Verkettungs Operatoren](concatenation-operators.md)
+- [Operatorrangfolge in Visual Basic](operator-precedence.md)
+- [Nach Funktionalität sortierte Operatoren](operators-listed-by-functionality.md)
+- [Verkettungsoperatoren in Visual Basic](../../programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

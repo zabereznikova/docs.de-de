@@ -8,12 +8,12 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: 75f303219b9bf32613989f65f90a9096ef70e02e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 516cb21e02d9fb2cd4b8d72282bb74163e1fb14b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350206"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371764"
 ---
 # <a name="-operator-visual-basic"></a>=-Operator (Visual Basic)
 Weist einer Variablen oder Eigenschaft einen Wert zu.  
@@ -24,37 +24,37 @@ Weist einer Variablen oder Eigenschaft einen Wert zu.
 variableorproperty = value  
 ```  
   
-## <a name="parts"></a>-Komponenten  
+## <a name="parts"></a>Bestandteile  
  `variableorproperty`  
  Eine beliebige beschreibbare Variable oder eine beliebige Eigenschaft.  
   
  `value`  
  Beliebiges Literalzeichen, Konstante oder Ausdruck.  
   
-## <a name="remarks"></a>Hinweise  
- Das Element auf der linken Seite des Gleichheitszeichens (`=`) kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md) Der `=`-Operator weist der Variablen oder der Eigenschaft auf der linken Seite den Wert auf der rechten Seite zu.  
+## <a name="remarks"></a>Bemerkungen  
+ Das Element auf der linken Seite des Gleichheitszeichens ( `=` ) kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../modifiers/readonly.md) Der `=` Operator weist der Variablen oder der Eigenschaft auf der linken Seite den Wert auf der rechten Seite zu.  
   
 > [!NOTE]
-> Der `=`-Operator wird auch als Vergleichs Operator verwendet. Weitere Informationen finden Sie unter [Vergleichs Operatoren](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> Der- `=` Operator wird auch als Vergleichs Operator verwendet. Weitere Informationen finden Sie unter [Vergleichs Operatoren](comparison-operators.md).  
   
 ## <a name="overloading"></a>Überladen  
- Der `=`-Operator kann nur als relationaler Vergleichs Operator, nicht als Zuweisungs Operator, überladen werden. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der `=` Operator kann nur als relationaler Vergleichs Operator, nicht als Zuweisungs Operator, überladen werden. Weitere Informationen finden Sie unter [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Zuweisungs Operator veranschaulicht. Der Wert auf der rechten Seite wird der Variablen auf der linken Seite zugewiesen.  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [&=-Operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
-- [* =-Operator](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
-- [+=-Operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [Operator-= (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [Operator/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\=-Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
-- [^=-Operator](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
-- [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)
-- [Vergleichsoperatoren](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
-- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [&=-Operator](and-assignment-operator.md)
+- [Operator * =](multiplication-assignment-operator.md)
+- [Operator + =](addition-assignment-operator.md)
+- [Operator-= (Visual Basic)](subtraction-assignment-operator.md)
+- [Operator/= (Visual Basic)](floating-point-division-assignment-operator.md)
+- [\\=-Operator](integer-division-assignment-operator.md)
+- [^ =-Operator](exponentiation-assignment-operator.md)
+- [Anweisungen](../../programming-guide/language-features/statements.md)
+- [Vergleichs Operatoren](comparison-operators.md)
+- [ReadOnly](../modifiers/readonly.md)
+- [Lokaler Typrückschluss](../../programming-guide/language-features/variables/local-type-inference.md)
