@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 94c4229d4036382e344cffb09295e218642c55d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582830"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402900"
 ---
-# <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a><span data-ttu-id="0772e-102">Die Handles-Klausel erfordert eine WithEvents-Variable, die im enthaltenden Typ oder einem seiner Basistypen definiert wird.</span><span class="sxs-lookup"><span data-stu-id="0772e-102">Handles clause requires a WithEvents variable defined in the containing type or one of its base types</span></span>
+# <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a><span data-ttu-id="316b3-102">Die Handles-Klausel erfordert eine WithEvents-Variable, die im enthaltenden Typ oder einem seiner Basistypen definiert wird.</span><span class="sxs-lookup"><span data-stu-id="316b3-102">Handles clause requires a WithEvents variable defined in the containing type or one of its base types</span></span>
 
-<span data-ttu-id="0772e-103">In ihrer `Handles`-Klausel haben Sie keine `WithEvents` Variable angegeben.</span><span class="sxs-lookup"><span data-stu-id="0772e-103">You did not supply a `WithEvents` variable in your `Handles` clause.</span></span> <span data-ttu-id="0772e-104">Das `Handles`-Schlüsselwort am Ende einer Prozedur Deklaration bewirkt, dass es Ereignisse behandelt, die von einer Objektvariablen ausgelöst werden, die mit dem Schlüsselwort `WithEvents` deklariert wurde.</span><span class="sxs-lookup"><span data-stu-id="0772e-104">The `Handles` keyword at the end of a procedure declaration causes it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span>
+<span data-ttu-id="316b3-103">`WithEvents`In ihrer Klausel haben Sie keine Variable angegeben `Handles` .</span><span class="sxs-lookup"><span data-stu-id="316b3-103">You did not supply a `WithEvents` variable in your `Handles` clause.</span></span> <span data-ttu-id="316b3-104">Das `Handles` Schlüsselwort am Ende einer Prozedur Deklaration bewirkt, dass es Ereignisse behandelt, die von einer Objektvariablen ausgelöst werden, die mit dem- `WithEvents` Schlüsselwort deklariert wurde.</span><span class="sxs-lookup"><span data-stu-id="316b3-104">The `Handles` keyword at the end of a procedure declaration causes it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span>
 
-<span data-ttu-id="0772e-105">**Fehler-ID:** BC30506</span><span class="sxs-lookup"><span data-stu-id="0772e-105">**Error ID:** BC30506</span></span>
+<span data-ttu-id="316b3-105">**Fehler-ID:** BC30506</span><span class="sxs-lookup"><span data-stu-id="316b3-105">**Error ID:** BC30506</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="0772e-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="0772e-106">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="316b3-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="316b3-106">To correct this error</span></span>
 
-<span data-ttu-id="0772e-107">Geben Sie die erforderliche `WithEvents` Variable an.</span><span class="sxs-lookup"><span data-stu-id="0772e-107">Supply the necessary `WithEvents` variable.</span></span>
+<span data-ttu-id="316b3-107">Geben Sie die erforderliche `WithEvents` Variable an.</span><span class="sxs-lookup"><span data-stu-id="316b3-107">Supply the necessary `WithEvents` variable.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0772e-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0772e-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="316b3-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="316b3-108">Example</span></span>
 
-<span data-ttu-id="0772e-109">Im folgenden Beispiel generiert Visual Basic Compilerfehler `BC30506`, da das [widervents](../modifiers/withevents.md) -Schlüsselwort nicht in der Definition der <xref:System.Timers.Timer?displayProperty=nameWithType> Instanz verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0772e-109">In the following example, Visual Basic generates compiler error `BC30506` because the [WithEvents](../modifiers/withevents.md) keyword is not used in the definition of the <xref:System.Timers.Timer?displayProperty=nameWithType> instance.</span></span>
+<span data-ttu-id="316b3-109">Im folgenden Beispiel generiert Visual Basic Compilerfehler, `BC30506` da das [widervents](../modifiers/withevents.md) -Schlüsselwort nicht in der Definition der- <xref:System.Timers.Timer?displayProperty=nameWithType> Instanz verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="316b3-109">In the following example, Visual Basic generates compiler error `BC30506` because the [WithEvents](../modifiers/withevents.md) keyword is not used in the definition of the <xref:System.Timers.Timer?displayProperty=nameWithType> instance.</span></span>
 
 ```vb
 Imports System.Timers
@@ -47,7 +47,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="0772e-110">Im folgenden Beispiel wird erfolgreich kompiliert, da die `_timer1` Variable mit dem Schlüsselwort `WithEvents` definiert wird:</span><span class="sxs-lookup"><span data-stu-id="0772e-110">The following example compiles successfully because the `_timer1` variable is defined with the `WithEvents` keyword:</span></span>
+<span data-ttu-id="316b3-110">Im folgenden Beispiel wird erfolgreich kompiliert, da die- `_timer1` Variable mit dem- `WithEvents` Schlüsselwort definiert wird:</span><span class="sxs-lookup"><span data-stu-id="316b3-110">The following example compiles successfully because the `_timer1` variable is defined with the `WithEvents` keyword:</span></span>
 
 ```vb
 Imports System.Timers
@@ -69,6 +69,6 @@ Module Module1
 End Module
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0772e-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0772e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="316b3-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="316b3-111">See also</span></span>
 
-- [<span data-ttu-id="0772e-112">Handles</span><span class="sxs-lookup"><span data-stu-id="0772e-112">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [<span data-ttu-id="316b3-112">Ziehpunkte</span><span class="sxs-lookup"><span data-stu-id="316b3-112">Handles</span></span>](../statements/handles-clause.md)
