@@ -1,5 +1,5 @@
 ---
-title: "Der Konstruktor '<name>' kann sich nicht selbst aufrufen:"
+title: 'Der Konstruktor "<name>" kann sich nicht selbst aufrufen:'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6abb6dde624e129b52fefecf8c51e6cde2567ae1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936694"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409802"
 ---
-# <a name="constructor-name-cannot-call-itself"></a>Konstruktor '\<Name >' kann nicht selbst aufrufen
-Ein `Sub New` Prozedur in einer Klasse oder Struktur ruft sich selbst.  
+# <a name="constructor-name-cannot-call-itself"></a>Der Konstruktor "\<name>" kann sich nicht selbst aufrufen:
+Eine `Sub New` Prozedur in einer Klasse oder Struktur ruft sich selbst auf.  
   
- Gibt einen Überblick einen Konstruktor zum Initialisieren einer Instanz einer Klasse oder Struktur bei erstellt. Eine Klasse oder Struktur haben mehrere Konstruktoren, sofern diese unterschiedlichen Parameterlisten aufweisen. Ein Konstruktor ist zulässig, einen anderen Konstruktor, um ihre Funktionalität zusätzlich zu seiner eigenen auszuführen aufrufen. Aber es ist ohne Bedeutung für einen Konstruktor selbst aufrufen, und in der Tat hätte dies Endlosschleife, wenn zulässig.  
+ Der Zweck eines Konstruktors besteht darin, eine Instanz einer Klasse oder Struktur zu initialisieren, wenn Sie erstmalig erstellt wird. Eine Klasse oder Struktur kann mehrere Konstruktoren aufweisen, vorausgesetzt, Sie verfügen über unterschiedliche Parameterlisten. Ein Konstruktor ist berechtigt, einen anderen Konstruktor aufzurufen, um seine Funktionalität zusätzlich zu seiner eigenen Funktionalität auszuführen. Es ist jedoch nicht bedeutungslos, dass sich ein Konstruktor selbst aufruft, und es würde tatsächlich zu einer unendlichen Rekursion kommen, wenn dies zulässig ist.  
   
  **Fehler-ID:** BC30298  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Überprüfen Sie die Parameterliste des Konstruktors aufgerufen wird. Es sollte sich von der Konstruktor den Aufruf sein.  
+1. Überprüfen Sie die Parameterliste des aufgerufenen Konstruktors. Er sollte sich von dem des aufzurufenden Konstruktors unterscheiden.  
   
-2. Wenn Sie nicht beabsichtigen, einen anderen Konstruktor aufrufen, entfernen Sie die `Sub New` ganz aufgerufen.  
+2. Wenn Sie nicht beabsichtigen, einen anderen Konstruktor aufzurufen, entfernen Sie den-Befehl `Sub New` vollständig.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Objektlebensdauer: Wie die Objekte erstellt und zerstört werden](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Objektlebensdauer: Erstellen und Zerstören von Objekten](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
