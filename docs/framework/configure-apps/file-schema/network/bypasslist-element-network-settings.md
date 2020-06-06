@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
 ms.openlocfilehash: 97e69a4978aa4700d13a994619a65312cf70aeaa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154945"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<Bypasslist> Element (Netzwerkeinstellungen)
-Stellt eine Reihe regulärer Ausdrücke bereit, die Adressen beschreiben, die keinen Proxy verwenden.  
+# <a name="bypasslist-element-network-settings"></a>\<bypasslist>-Element (Netzwerkeinstellungen)
+Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<Bypasslist>**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bypasslist>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -33,16 +33,16 @@ Stellt eine Reihe regulärer Ausdrücke bereit, die Adressen beschreiben, die ke
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
- Keine.  
+### <a name="attributes"></a>Attribute  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Hinzufügen](add-element-for-bypasslist-network-settings.md)|Fügt der Proxyumgehungsliste eine IP-Adresse oder einen DNS-Namen hinzu.|  
-|[Klar](clear-element-for-bypasslist-network-settings.md)|Löscht die Umgehungsliste.|  
-|[Entfernen](remove-element-for-bypasslist-network-settings.md)|Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxyumgehungsliste.|  
+|[add](add-element-for-bypasslist-network-settings.md)|Fügt der Proxy Umgehungs Liste eine IP-Adresse oder einen DNS-Namen hinzu.|  
+|[Löschen](clear-element-for-bypasslist-network-settings.md)|Löscht die Umgehungs Liste.|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxy Umgehungs Liste.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -51,17 +51,17 @@ Stellt eine Reihe regulärer Ausdrücke bereit, die Adressen beschreiben, die ke
 |[defaultProxy](defaultproxy-element-network-settings.md)|Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Umgehungsliste enthält reguläre Ausdrücke, die URIs beschreiben, auf die <xref:System.Net.WebRequest> Instanzen direkt statt über den Proxyserver zugreifen.  
+ Die Umgehungs Liste enthält reguläre Ausdrücke, die URIs beschreiben, <xref:System.Net.WebRequest> auf die Instanzen direkt anstatt über den Proxy Server zugreifen.  
   
- Sie sollten vorsichtshalber sein, wenn Sie einen regulären Ausdruck für dieses Element angeben. Der reguläre Ausdruck "[a-z]+\\\\.contoso .com" entspricht jedem Host in der contoso.com Domäne, aber auch jedem Host in der contoso.com.cpandl.com Domäne. Um nur einen Host in der domäne contoso.com abzugleichen, verwenden Sie einen\\Anker ("-"): "[a-z]+ .contoso\\.com".  
+ Sie sollten Vorsicht walten lassen, wenn Sie einen regulären Ausdruck für dieses Element angeben. Der reguläre Ausdruck "[a-z] + \\ ..................................... \\ Um nur einen Host in der contoso.com-Domäne zu finden, verwenden Sie einen Anker ("$"): "[a-z] + \\ .. \\ .  
   
- Weitere Informationen zu regulären Ausdrücken finden Sie unter . [.NET Framework Reguläre Ausdrücke](../../../../standard/base-types/regular-expressions.md).  
+ Weitere Informationen zu regulären Ausdrücken finden Sie unter. [.NET Framework reguläre Ausdrücke](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden der Umgehungsliste zwei Adressen hinzugefügt. Die erste umgeht den Proxy für alle Server in der contoso.com Domäne. Der zweite umgeht den Proxy für alle Server, deren IP-Adressen mit 192.168 beginnen.  
+ Im folgenden Beispiel werden der Umgehungs Liste zwei Adressen hinzugefügt. Der erste umgeht den Proxy für alle Server in der contoso.com-Domäne. mit dem zweiten wird der Proxy für alle Server umgangen, deren IP-Adressen mit 192,168 beginnen.  
   
 ```xml  
 <configuration>  

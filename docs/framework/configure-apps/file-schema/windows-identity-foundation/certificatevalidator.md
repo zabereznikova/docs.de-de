@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
 ms.openlocfilehash: 3f3d79d3567c1714a79423b7767ce3f454b9d52d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152787"
 ---
-# <a name="certificatevalidator"></a>\<CertificateValidator>
-Gibt einen benutzerdefinierten Typ für die Zertifikatvalidierung an. Dieser Typ wird nur `certificateValidationMode` verwendet, wenn das Attribut des [ \<certificateValidation>-Elements](certificatevalidation.md) auf "Custom" festgelegt ist.  
+# \<certificateValidator>
+Gibt einen benutzerdefinierten Typ für die Zertifikats Überprüfung an. Dieser Typ wird nur verwendet, wenn das- `certificateValidationMode` Attribut des- [\<certificateValidation>](certificatevalidation.md) Elements auf "Custom" festgelegt ist.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<certificateValidation>**](certificatevalidation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<CertificateValidator>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateValidator>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,11 +35,11 @@ Gibt einen benutzerdefinierten Typ für die Zertifikatvalidierung an. Dieser Typ
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|type|Gibt einen benutzerdefinierten Typ an, <xref:System.IdentityModel.Selectors.X509CertificateValidator> der von der Klasse abstammt. Legen `certificateValidationMode` Sie das Attribut des [ \<certificateValidation>-Elements](certificatevalidation.md) auf "Custom" fest, um diesen Typ zu verwenden. Weitere Informationen zum Angeben `type` des Attributs finden Sie unter [Benutzerdefinierte Typreferenzen](../windows-workflow-foundation/index.md). Optional.|  
+|type|Gibt einen benutzerdefinierten Typ an, der von der-Klasse abgeleitet wird <xref:System.IdentityModel.Selectors.X509CertificateValidator> . Legen Sie das- `certificateValidationMode` Attribut des- [\<certificateValidation>](certificatevalidation.md) Elements auf "Custom" fest, um diesen Typ zu verwenden. Weitere Informationen zum Angeben des- `type` Attributs finden Sie unter [benutzerdefinierte Typverweise](../windows-workflow-foundation/index.md). (Optional)|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -48,7 +48,7 @@ Gibt einen benutzerdefinierten Typ für die Zertifikatvalidierung an. Dieser Typ
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<certificateValidation>](certificatevalidation.md)|Steuert die Einstellungen, die Tokenhandler zum Überprüfen von Zertifikaten verwenden.|  
+|[\<certificateValidation>](certificatevalidation.md)|Steuert die Einstellungen, die von tokenhandlern zum Überprüfen von Zertifikaten verwendet werden.|  
   
 ## <a name="example"></a>Beispiel  
   

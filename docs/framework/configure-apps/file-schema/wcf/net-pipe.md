@@ -3,18 +3,18 @@ title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
 ms.openlocfilehash: dd984b2ab89060451b1b2d02c324e803766908ce
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397715"
 ---
-# <a name="netpipe"></a>\<net.pipe>
+# \<net.pipe>
 Gibt Konfigurationseinstellungen für den Aktivierungsdienst der benannten Pipes an, der die Lebensdauer der Verbindung der benannten Pipes verwaltet und Aktivierungsanforderungen verarbeitet, die über benannte Pipes eintreffen.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model. Activation->** ](system-servicemodel-activation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<NET. Pipe->**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<net.pipe>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ Gibt Konfigurationseinstellungen für den Aktivierungsdienst der benannten Pipes
 </configuration>
 ```  
   
-## <a name="type"></a>Typ  
+## <a name="type"></a>type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -49,10 +49,10 @@ Gibt Konfigurationseinstellungen für den Aktivierungsdienst der benannten Pipes
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|`maxPendingAccepts`|Eine ganze Zahl, die den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst festlegt. Der Standardwert ist&#160;2.|  
-|`maxPendingConnections`|Eine ganze Zahl, die die maximale Anzahl von Verbindungen angibt, die auf eine Verteilung warten können. Der Standard ist 100.|  
+|`maxPendingAccepts`|Eine ganze Zahl, die den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst festlegt. Der Standardwert ist 2.|  
+|`maxPendingConnections`|Eine ganze Zahl, die die maximale Anzahl von Verbindungen angibt, die auf eine Verteilung warten können. Der Standardwert ist 100.|  
 |`receiveTimeout`|Eine <xref:System.TimeSpan>, die das Timeout für das Lesen der Rahmendaten und das Ausführen der Verbindungsverteilung der zugrunde liegenden Verbindungen angibt. Der Standardwert ist "00:00:10".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -67,6 +67,6 @@ Gibt Konfigurationseinstellungen für den Aktivierungsdienst der benannten Pipes
 |-------------|-----------------|  
 |[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Enthält Konfigurationseinstellungen für den Listenerprozess SMSvcHost.exe.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>

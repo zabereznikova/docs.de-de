@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214813"
 ---
-# <a name="add-element-for-appsettings"></a>\<> Element für \<appSettings hinzufügen >
+# <a name="add-element-for-appsettings"></a>\<add>-Element für \<appSettings>
 
 Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<hinzufügen >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,7 +30,7 @@ Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu.
 </appSettings>
 ```
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attribute
 
 |           | BESCHREIBUNG |
 | --------- | ----------- |
@@ -41,7 +41,7 @@ Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu.
 
 |     | BESCHREIBUNG |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -57,7 +57,7 @@ Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Konfigurationsei
 </appSettings>
 ```
 
-Im folgenden Beispiel wird das `<add>`-Element verwendet, um zwei Kompatibilitäts Einstellungen in einer ASP.NET-Anwendung zu definieren:
+Im folgenden Beispiel wird das- `<add>` Element verwendet, um zwei Kompatibilitäts Einstellungen in einer ASP.NET-Anwendung zu definieren:
 
 ```xml
 <appSettings>

@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
 ms.openlocfilehash: 57757aaec39bc5c552e7ba12c9779cb3a92a9025
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152503"
 ---
-# <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
-Konfigurationsabschnitt für die Authentifizierung mit dem WS-Federation-Protokoll.  
+# \<system.identityModel.services>
+Konfigurations Abschnitt für die Authentifizierung mit dem WS-Federation-Protokoll.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.identityModel.services>**  
   
 ## <a name="syntax"></a>Syntax  
@@ -28,28 +28,28 @@ Konfigurationsabschnitt für die Authentifizierung mit dem WS-Federation-Protoko
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|[\<FederationConfiguration>](federationconfiguration.md)|Enthält die Einstellungen, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> mit denen die <xref:System.IdentityModel.Services.SessionAuthenticationModule> HTTP-Module (WSFAM) und (SAM) konfiguriert werden.|  
+|[\<federationConfiguration>](federationconfiguration.md)|Enthält die Einstellungen, die die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> HTTP-Module (wsfam) und <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) konfigurieren.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Fügen `<system.identityModel.services>` Sie der Konfigurationsdatei Ihrer Anwendung einen Abschnitt hinzu, um Einstellungen für SAM und WSFAM bereitzustellen.  
+ Fügen Sie der `<system.identityModel.services>` Konfigurationsdatei Ihrer Anwendung einen Abschnitt hinzu, um die Einstellungen für Sam und wsfam bereitzustellen.  
   
 > [!IMPORTANT]
-> Wenn Sie <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> die <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> oder die Klasse verwenden, um anspruchsbasierte Zugriffssteuerung in Ihrem Code bereitzustellen, werden der Anspruchsautorisierungs-Manager (<xref:System.Security.Claims.ClaimsAuthorizationManager>) und die Richtlinie, die zum Vornehmen von Autorisierungsentscheidungen verwendet wird, über ein `<identityConfiguration>` Element konfiguriert, das implizit oder explizit aus einem `<federationConfiguration>` Element in diesem Abschnitt referenziert wird. Weitere Informationen finden Sie unter **Die Anmerkungen** unter dem [ \<federationConfiguration>-Element.](federationconfiguration.md)  
+> Wenn Sie die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> -Klasse oder die-Klasse verwenden, <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> um eine Anspruchs basierte Zugriffs Steuerung in Ihrem Code bereitzustellen, werden der anspruchsautorisierungs-Manager ( <xref:System.Security.Claims.ClaimsAuthorizationManager> ) und die Richtlinie, die zum Treffen von Autorisierungs Entscheidungen verwendet werden, über ein Element konfiguriert, `<identityConfiguration>` das implizit oder explizit von einem- `<federationConfiguration>` Element in diesem Abschnitt Weitere Informationen finden **Sie in den Hinweisen unter dem-** [\<federationConfiguration>](federationconfiguration.md) Element.  
   
- Der `<system.identityModel.services>` Abschnitt wird <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> durch die Klasse dargestellt. Die Auflistung `<federationConfiguration>` der im Abschnitt konfigurierten untergeordneten Elemente wird durch die <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> Klasse dargestellt.  
+ Der- `<system.identityModel.services>` Abschnitt wird durch die- <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> Klasse dargestellt. Die Auflistung der untergeordneten Elemente, die `<federationConfiguration>` im-Abschnitt konfiguriert wurden, wird durch die- <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> Klasse dargestellt.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende XML-Code `<system.identityModel.services>` zeigt, wie Sie einer Konfigurationsdatei einen Abschnitt hinzufügen. Sie müssen zunächst Abschnittsdeklarationen sowohl für den `<system.identityModel.services>` Abschnitt als auch für die `<system.identityModel>` Abschnitte hinzufügen. (Wenn Sie `<system.identityModel.services>` einen Abschnitt hinzufügen, sollten Sie `<system.identityModel>` auch eine Deklaration für den Abschnitt hinzufügen, um sicherzustellen, dass ein Standardabschnitt `<identityConfiguration>` bei Bedarf von der Laufzeit erstellt werden kann.) Nachdem die Abschnittsdeklarationen hinzugefügt wurden, können Sie `<system.identityModel.services>` die Verbundauthentifizierungseinstellungen unter dem Element konfigurieren.  
+ Der folgende XML-Code zeigt, wie Sie einer Konfigurationsdatei einen-Abschnitt hinzufügen `<system.identityModel.services>` . Sie müssen zunächst Abschnitts Deklarationen für den `<system.identityModel.services>` Abschnitt und die Abschnitte hinzufügen `<system.identityModel>` . (Wenn Sie einen Abschnitt hinzufügen `<system.identityModel.services>` , sollten Sie auch eine Deklaration für den Abschnitt hinzufügen, `<system.identityModel>` um sicherzustellen, dass `<identityConfiguration>` ggf. ein Standardabschnitt von der Laufzeit erstellt werden kann.) Nachdem die Abschnitts Deklarationen hinzugefügt wurden, können Sie die Einstellungen für die Verbund Authentifizierung unter dem- `<system.identityModel.services>` Element konfigurieren.  
   
 ```xml  
 <configuration>  

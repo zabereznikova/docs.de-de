@@ -10,10 +10,10 @@ helpviewer_keywords:
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 ms.openlocfilehash: e53f4c5c9e24fb25b43b7f27b80ab984214eeac2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69927775"
 ---
 # <a name="configuring-cryptography-classes"></a>Konfigurieren kryptografischer Klassen
@@ -27,8 +27,8 @@ Der Windows SDK ermöglicht es Computer Administratoren, die standardmäßigen K
  Beschreibt, wie ein Objekt Bezeichner einem Kryptografiealgorithmus zugeordnet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Cryptographic Services](../../standard/security/cryptographic-services.md)  
+ [Kryptografiedienste](../../standard/security/cryptographic-services.md)  
  Bietet eine Übersicht über die Kryptografiedienste, die von der Windows SDK bereitgestellt werden.  
   
- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](./file-schema/cryptography/index.md)  
+ [Schema für Kryptografieeinstellungen](./file-schema/cryptography/index.md)  
  Beschreibt die Elemente, mit denen angezeigte Algorithmusnamen Klassen zugeordnet werden, die Kryptografiealgorithmen implementieren.

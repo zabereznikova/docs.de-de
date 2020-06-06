@@ -1,15 +1,15 @@
 ---
-title: <ImpliesType>Element (.NET Native)
+title: <ImpliesType>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181016"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType> Element (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType>-Element (.net Native)
 Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthaltenden Typ oder die enthaltende Methode angewendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -31,9 +31,9 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Namen des Typs an|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
@@ -49,26 +49,26 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
   
 ## <a name="name-attribute"></a>Namensattribut  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|*Type_name*|Der Typname. Wenn sich der von diesem `<ImpliesType>`-Element dargestellte Typ im selben Namespace wie das enthaltende `<Type>`-Element befindet, kann *type_name* den Namen des Typs ohne den Namespace umfassen. Andernfalls muss *type_name* den vollqualifizierten Typnamen enthalten.|  
+|*type_name*|Der Typname. Wenn sich der von diesem `<ImpliesType>`-Element dargestellte Typ im selben Namespace wie das enthaltende `<Type>`-Element befindet, kann *type_name* den Namen des Typs ohne den Namespace umfassen. Andernfalls muss *type_name* den vollqualifizierten Typnamen enthalten.|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|[\<Typ>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
-|[\<TypInstanziierung>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
-|[\<Methode>](method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode an.|  
+|[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
+|[\<Method>](method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Das `<ImpliesType>`-Element dient in erster Linie der Verwendung durch Bibliotheken. Es wird in folgendem Szenario eingesetzt:  
@@ -89,7 +89,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
   
  Diese Anweisung hat nur dann Auswirkungen, wenn eine Instanziierung von `Explicit` über eine definierte `Dynamic`-Richtlinieneinstellung verfügt. Wenn das z. B. für `Explicit<Int32>` der Fall ist, wird `Implicit<Int32>` mit den öffentlichen Membern instanziiert, und ihre Metadaten werden für die dynamische Programmierung verfügbar gemacht.  
   
- Folgendes ist ein praktisches Beispiel, das für mindestens ein Serialisierungsprogramm gilt. Die Direktiven erfassen die Anforderung, `IList<`dass das Nachdenken über `List<`etwas, das als *etwas* `>` eingegeben wird, auch beinhaltet, über den entsprechenden Typ *etwas* `>` nachzudenken, ohne dass eine Anwendungsanmerkung erforderlich ist.  
+ Folgendes ist ein praktisches Beispiel, das für mindestens ein Serialisierungsprogramm gilt. Die-Direktiven erfassen die Anforderung, dass die Reflektion von etwas, das als etwas typisiert ist, auch die Reflektion `IList<` *something* `>` des entsprechenden `List<` *Something* `>` -Typs erfordert, ohne dass eine anwendungsspezifische Anmerkung  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  

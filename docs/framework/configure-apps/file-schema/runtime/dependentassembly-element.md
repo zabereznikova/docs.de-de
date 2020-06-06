@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154204"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly> Element
-Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden `dependentAssembly` Sie für jede Baugruppe ein Element.  
+# <a name="dependentassembly-element"></a>\<dependentAssembly>-Element
+Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden Sie ein- `dependentAssembly` Element für jede Assembly.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<AssemblyBinding>**](assemblybinding-element-for-runtime.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dependentAssembly>**  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,28 +34,28 @@ Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. V
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
- Keine.  
+### <a name="attributes"></a>Attribute  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Enthält identifizierende Informationen zur Assembly. Dieses Element muss in `dependentAssembly` jedem Element enthalten sein.|  
-|`codeBase`|Gibt an, wo die Laufzeit eine freigegebene Assembly finden kann, wenn sie nicht auf dem Computer installiert ist.|  
+|`assemblyIdentity`|Enthält identifizierende Informationen über die Assembly. Dieses Element muss in jedem Element enthalten sein `dependentAssembly` .|  
+|`codeBase`|Gibt an, wo die Runtime eine freigegebene Assembly finden kann, wenn Sie nicht auf dem Computer installiert ist.|  
 |`bindingRedirect`|Leitet eine Assemblyversion in eine andere um.|  
-|`publisherPolicy`|Gibt an, ob die Laufzeit Die Herausgeberrichtlinie für diese Assembly anwendet.|  
+|`publisherPolicy`|Gibt an, ob die Laufzeit die Herausgeber Richtlinie für diese Assembly anwendet.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`assemblyBinding`|Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Baugruppeninformationen für zwei Baugruppen gekapselt werden.  
+ Im folgenden Beispiel wird gezeigt, wie Sie Assemblyinformationen für zwei Assemblys Kapseln.  
   
 ```xml  
 <configuration>  
@@ -81,5 +81,5 @@ Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. V
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
-- [Schema der Konfigurationsdatei](../index.md)
+- [Konfigurationsdateischema](../index.md)
 - [Umleiten von Assemblyversionen](../../redirect-assembly-versions.md)

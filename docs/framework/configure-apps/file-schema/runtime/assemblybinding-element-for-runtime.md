@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154321"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding> \<Element für Laufzeit>
+# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding>-Element für \<runtime>
 Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<AssemblyBinding>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyBinding>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,19 +33,19 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**xmlns**|Erforderliches Attribut.<br /><br /> Gibt den XML-Namespace an, der für die Assemblybindung erforderlich ist. Verwenden Sie die Zeichenfolge "urn:schemas-microsoft-com:asm.v1" als Wert.|  
-|**Appliesto**|Gibt die Laufzeitversion an, die für die .NET Framework-Assemblyumleitungen gilt. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Ohne Angabe eines **appliesTo**-Attributs gilt das **\<assemblyBinding>**-Element für alle Versionen von .NET Framework. Das **attribut appliesTo** wurde in .NET Framework Version 1.1 eingeführt. es wird von der .NET Framework Version 1.0 ignoriert. Dies bedeutet, dass alle ** \<AssemblyBinding->-Elemente** angewendet werden, wenn .NET Framework Version 1.0 verwendet wird, auch wenn ein **appliesTo-Attribut** angegeben ist.|  
+|**AppliesTo**|Gibt die Laufzeitversion an, die für die .NET Framework-Assemblyumleitungen gilt. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Wenn kein **appliesTo** -Attribut angegeben ist, **\<assemblyBinding>** gilt das-Element für alle Versionen der .NET Framework. Das **appliesTo** -Attribut wurde in .NET Framework Version 1,1; eingeführt. Sie wird von der .NET Framework Version 1,0 ignoriert. Dies bedeutet, dass alle **\<assemblyBinding>** Elemente bei Verwendung der .NET Framework Version 1,0 angewendet werden, auch wenn ein **appliesTo** -Attribut angegeben wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](dependentassembly-element.md)|Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für eine Assembly. Verwenden Sie für jede Assembly ein ** \<abhängiges Assembly->-Tag.**|  
-|[\<Prüfen>](probing-element.md)|Gibt Unterverzeichnisse an, die die Common Language Runtime beim Laden von Assemblys durchsucht.|  
+|[\<dependentAssembly>](dependentassembly-element.md)|Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für eine Assembly. Verwenden Sie **\<dependentAssembly>** für jede Assembly ein Tag.|  
+|[\<probing>](probing-element.md)|Gibt Unterverzeichnisse an, die die Common Language Runtime beim Laden von Assemblys durchsucht.|  
 |[\<publisherPolicy>](publisherpolicy-element.md)|Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.|  
 |[\<qualifyAssembly>](qualifyassembly-element.md)|Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll, wenn Sie ein Teilname verwendet wird.|  
   
@@ -77,7 +77,7 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 </configuration>  
 ```  
   
- Das folgende Beispiel zeigt, wie das **attribute appliesTo** verwendet wird, um die Bindung einer .NET Framework-Assembly umzuleiten.  
+ Im folgenden Beispiel wird gezeigt, wie das **appliesTo** -Attribut verwendet wird, um die Bindung einer .NET Framework Assembly umzuleiten.  
   
 ```xml  
 <runtime>  
@@ -93,5 +93,5 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
-- [Schema der Konfigurationsdatei](../index.md)
+- [Konfigurationsdateischema](../index.md)
 - [Umleiten von Assemblyversionen](../../redirect-assembly-versions.md)

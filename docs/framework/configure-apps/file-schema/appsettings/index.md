@@ -8,32 +8,32 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215427"
 ---
 # <a name="app-settings-schema"></a>Schema für App-Einstellungen
 
 Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-appsettings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](clear-element-for-appsettings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](remove-element-for-appsettings.md)
 
 | Element | BESCHREIBUNG |
 | ------- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Enthält die Tags **\<add>** , **\<clear>** und **\<remove>** zur Steuerung von App-Einstellungen. Verfügt über ein optionales **file**-Attribut. |
-| [ **\<add>** ](add-element-for-appsettings.md) | Definiert eine Einstellung. Untergeordnetes Element von **\<appSettings>** . Erfordert **key**- und **value**-Attribute. |
-| [ **\<clear>** ](clear-element-for-appsettings.md) | Löscht alle Einstellungen. Untergeordnetes Element von **\<appSettings>** . Besitzt keine Attribute. |
-| [ **\<remove>** ](remove-element-for-appsettings.md) | Entfernt eine Einstellung. Untergeordnetes Element von **\<appSettings>** . Erfordert ein **key**-Attribut. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Enthält **\<add>** **\<clear>** -,-und- **\<remove>** Tags zum Steuern von Anwendungseinstellungen. Verfügt über ein optionales **file**-Attribut. |
+| [**\<add>**](add-element-for-appsettings.md) | Definiert eine Einstellung. Untergeordnetes Element von **\<appSettings>** . Erfordert **key**- und **value**-Attribute. |
+| [**\<clear>**](clear-element-for-appsettings.md) | Löscht alle Einstellungen. Untergeordnetes Element von **\<appSettings>** . Besitzt keine Attribute. |
+| [**\<remove>**](remove-element-for-appsettings.md) | Entfernt eine Einstellung. Untergeordnetes Element von **\<appSettings>** . Erfordert ein **key**-Attribut. |
 
 ## <a name="appsettings-element"></a>\<appSettings>-Element
 
-Dieses Element enthält die Tags **\<add>** , **\<clear>** und **\<remove>** zur Steuerung von Anwendungseinstellungen. Es definiert ein optionales Attribut für **file**.
+Dieses Element enthält **\<add>** **\<clear>** -,-und- **\<remove>** Tags zum Steuern von Anwendungseinstellungen. Es definiert ein optionales Attribut für **file**.
 
 ## <a name="add-element"></a>\<add>-Element
 
@@ -41,7 +41,7 @@ Fügt der Auflistung der Anwendungseinstellungen eine benutzerdefinierte Anwendu
 
 ## <a name="clear-element"></a>\<clear>-Element
 
-Entfernt alle Verweise auf geerbte benutzerdefinierte Anwendungseinstellung und lässt nur die Verweise zu, die durch **\<add>** -Elemente hinzugefügt werden, die dem **\<clear>** -Element folgen. Es definiert keine Attribute.
+Entfernt alle Verweise auf geerbte benutzerdefinierte Anwendungseinstellungen und erlaubt nur die Verweise, die durch **\<add>** Elemente nach dem-Element hinzugefügt werden **\<clear>** . Es definiert keine Attribute.
 
 ## <a name="remove-element"></a>\<remove>-Element
 

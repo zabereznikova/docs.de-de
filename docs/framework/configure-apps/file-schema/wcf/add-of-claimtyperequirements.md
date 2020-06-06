@@ -3,24 +3,24 @@ title: <add> von <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
 ms.openlocfilehash: 6ba935f7f6dae0e4d9e6581f53a50c684efcbed3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153086"
 ---
-# <a name="add-of-claimtyperequirements"></a>\<Hinzufügen> \<von claimTypeRequirements>
+# <a name="add-of-claimtyperequirements"></a>\<add> von \<claimTypeRequirements>
 Gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbundenen Anmeldeinformationen vorhanden sein sollen. Zum Beispiel geben die Dienste die Anforderungen für eingehende Anmeldeinformationen an, die einen bestimmten Satz von Anspruchstypen verarbeiten müssen.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.serviceModell>**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<Bindungen>**](bindings.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<verbindliche>**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<Sicherheits->**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuedTokenParameters>**](issuedtokenparameters.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequirements>**](claimtyperequirements-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<hinzufügen>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,15 +34,15 @@ Gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbunden
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |claimType|Ein URI, der den Typ eines Anspruchs definiert. Wenn ein Benutzer zum Beispiel ein Produkt auf einer Website erwerben möchte, muss er eine gültige Kreditkarte mit einem ausreichend hohen Kreditrahmen vorlegen. Der Anspruchstyp wäre der Kreditkarten-URI.|  
-|isOptional|Ein boolescher Wert, der angibt, ob der Anspruch optional ist. Legen Sie dieses Attribut auf `false` fest, wenn dies ein erforderlicher Anspruch ist.<br /><br /> Sie können dieses Attribut verwenden, wenn der Dienst um Informationen bittet, aber es nicht erfordert. Wenn Sie z. B. verlangen, dass der Benutzer seinen Vornamen, Nachnamen und seine Adresse eingibt, diese Telefonnummer jedoch optional ist.|  
+|isOptional|Ein boolescher Wert, der angibt, ob der Anspruch optional ist. Legen Sie dieses Attribut auf `false` fest, wenn dies ein erforderlicher Anspruch ist.<br /><br /> Sie können dieses Attribut verwenden, wenn der Dienst um Informationen bittet, aber es nicht erfordert. Wenn Sie z. b. den Vornamen, den Nachnamen und die Adresse des Benutzers eingeben müssen, aber entscheiden, dass die Telefonnummer optional ist.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

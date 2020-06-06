@@ -11,19 +11,19 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155010"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Hinzufügen> Elements für connectionManagement (Netzwerkeinstellungen)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<add>-Element für connectionManagement (Netzwerkeinstellungen)
 Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<hinzufügen>**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +37,7 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
@@ -45,7 +45,7 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
 |`maxconnection`|Die maximale Anzahl von Verbindungen, die für einen Server zulässig sind. Wenn keine Angabe erfolgt, wird der Standardwert "2" verwendet.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -62,7 +62,7 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Anwendung so `www.contoso.com` konfiguriert, dass sie vier Verbindungen zum Server und zwei Verbindungen zu allen anderen Servern verwendet.  
+ Im folgenden Beispiel wird eine Anwendung so konfiguriert, dass vier Verbindungen mit dem Server `www.contoso.com` und zwei Verbindungen mit allen anderen Servern verwendet werden.  
   
 ```xml  
 <configuration>  

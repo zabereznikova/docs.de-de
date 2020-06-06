@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214808"
 ---
-# <a name="clear-element-for-appsettings"></a>\<> Element für \<appSettings löschen >
+# <a name="clear-element-for-appsettings"></a>\<clear>-Element für \<appSettings>
 
 Löscht benutzerdefinierte Anwendungseinstellungen.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<löschen >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,15 +30,15 @@ Löscht benutzerdefinierte Anwendungseinstellungen.
 </appSettings>
 ```
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attribute
 
 Keine
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | BESCHREIBUNG |
+|     | Beschreibung |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Enthält benutzerdefinierte Anwendungseinstellungen, z. b. Dateipfade, XML-Webdienst-URLs oder andere benutzerdefinierte Konfigurationsinformationen für die Anwendung. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Enthält benutzerdefinierte Anwendungseinstellungen, z. b. Dateipfade, XML-Webdienst-URLs oder andere benutzerdefinierte Konfigurationsinformationen für die Anwendung. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
