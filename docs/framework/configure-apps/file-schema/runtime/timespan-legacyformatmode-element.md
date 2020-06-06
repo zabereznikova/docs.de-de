@@ -9,19 +9,19 @@ helpviewer_keywords:
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968907"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode >-Element
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode>-Element
 
-Bestimmt, ob die Laufzeit Legacy Verhalten bei Formatierungs Vorgängen mit <xref:System.TimeSpan?displayProperty=nameWithType> Werten beibehält.
+Bestimmt, ob die Laufzeit Legacy Verhalten bei Formatierungs Vorgängen mit Werten beibehält <xref:System.TimeSpan?displayProperty=nameWithType> .
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<** TimeSpan_LegacyFormatMode >  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<TimeSpan_LegacyFormatMode>**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,13 +36,13 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="attributes"></a>Attribute
 
-|Attribut|Beschreibung|
+|attribute|BESCHREIBUNG|
 |---------------|-----------------|
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit Legacy Formatierungs Verhalten mit <xref:System.TimeSpan?displayProperty=nameWithType> Werten verwendet.|
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit Legacy Formatierungs Verhalten mit- <xref:System.TimeSpan?displayProperty=nameWithType> Werten verwendet.|
 
 ## <a name="enabled-attribute"></a>Enabled-Attribut
 
-|Wert|Beschreibung|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|
 |`false`|Die Laufzeit stellt das Legacy Formatierungs Verhalten nicht wieder her.|
 |`true`|Die Laufzeit stellt das Legacy Formatierungs Verhalten wieder her.|
@@ -58,17 +58,17 @@ Keine
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Beginnend mit dem .NET Framework 4 implementiert die <xref:System.TimeSpan?displayProperty=nameWithType>-Struktur die <xref:System.IFormattable>-Schnittstelle und unterstützt Formatierungs Vorgänge mit standardmäßigen und benutzerdefinierten Format Zeichenfolgen. Wenn eine Methode für die Methode einen nicht unterstützten Format Bezeichner oder eine Format Zeichenfolge erkennt, wird eine <xref:System.FormatException>ausgelöst.
+Beginnend mit dem .NET Framework 4 implementiert die <xref:System.TimeSpan?displayProperty=nameWithType> -Struktur die <xref:System.IFormattable> -Schnittstelle und unterstützt Formatierungs Vorgänge mit standardmäßigen und benutzerdefinierten Format Zeichenfolgen. Wenn eine Methode für die Methode einen nicht unterstützten Format Bezeichner oder eine Format Zeichenfolge erkennt, wird eine ausgelöst <xref:System.FormatException> .
 
-In früheren Versionen der .NET Framework wurde von der <xref:System.TimeSpan> Struktur nicht <xref:System.IFormattable> implementiert, und es wurden keine Format Zeichenfolgen unterstützt. Viele Entwickler haben jedoch fälschlicherweise angenommen, dass <xref:System.TimeSpan> einen Satz von Format Zeichenfolgen unterstützen und Sie in zusammen [gesetzten Formatierungs Vorgängen](../../../../standard/base-types/composite-formatting.md) mit Methoden wie <xref:System.String.Format%2A?displayProperty=nameWithType>verwendet haben. Wenn ein Typ <xref:System.IFormattable> implementiert und Format Zeichenfolgen unterstützt, lösen Aufrufe von Formatierungs Methoden mit nicht unterstützten Format Zeichenfolgen normalerweise eine <xref:System.FormatException>aus. Da <xref:System.TimeSpan> jedoch <xref:System.IFormattable>nicht implementiert hat, hat die Laufzeit die Format Zeichenfolge ignoriert und stattdessen die <xref:System.TimeSpan.ToString?displayProperty=nameWithType>-Methode aufgerufen. Dies bedeutet, dass die-Format Zeichenfolgen nicht zu einer <xref:System.FormatException>geführt haben, obwohl die Format Zeichenfolgen keine Auswirkung auf den Formatierungs Vorgang haben.
+In früheren Versionen der .NET Framework wurde die <xref:System.TimeSpan> -Struktur nicht implementiert, <xref:System.IFormattable> und es wurden keine Format Zeichenfolgen unterstützt. Viele Entwickler haben jedoch fälschlicherweise angenommen, dass <xref:System.TimeSpan> eine Reihe von Format Zeichenfolgen unterstützt und Sie in zusammen [gesetzten Formatierungs Vorgängen](../../../../standard/base-types/composite-formatting.md) mit Methoden wie verwendet <xref:System.String.Format%2A?displayProperty=nameWithType> . Wenn ein Typ eine Format Zeichenfolge implementiert <xref:System.IFormattable> und unterstützt, lösen Aufrufe von Formatierungs Methoden mit nicht unterstützten Format Zeichenfolgen normalerweise einen aus <xref:System.FormatException> . Da jedoch <xref:System.TimeSpan> nicht implementiert hat <xref:System.IFormattable> , hat die Laufzeit die Format Zeichenfolge ignoriert und stattdessen die- <xref:System.TimeSpan.ToString?displayProperty=nameWithType> Methode aufgerufen. Dies bedeutet, dass die Format Zeichenfolgen zwar keine Auswirkung auf den Formatierungs Vorgang haben, das vorhanden sein allerdings nicht zu einer führte <xref:System.FormatException> .
 
-In Fällen, in denen der Legacy Code eine kombinierte Formatierungs Methode und eine ungültige Format Zeichenfolge übergibt und dieser Code nicht erneut kompiliert werden kann, können Sie das `<TimeSpan_LegacyFormatMode>`-Element verwenden, um das Legacy-<xref:System.TimeSpan> Verhalten wiederherzustellen. Wenn Sie das `enabled`-Attribut dieses Elements auf `true`festlegen, führt die kombinierte Formatierungs Methode zu einem-<xref:System.TimeSpan.ToString?displayProperty=nameWithType> anstelle von <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, und es wird keine <xref:System.FormatException> ausgelöst.
+In Fällen, in denen Legacy Code eine kombinierte Formatierungs Methode und eine ungültige Format Zeichenfolge übergibt und dieser Code nicht erneut kompiliert werden kann, können Sie das Legacy Verhalten mit dem- `<TimeSpan_LegacyFormatMode>` Element wiederherstellen <xref:System.TimeSpan> . Wenn Sie das- `enabled` Attribut dieses Elements auf festlegen `true` , führt die kombinierte Formatierungs Methode dazu, dass anstelle von aufgerufen wird <xref:System.TimeSpan.ToString?displayProperty=nameWithType> <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> , und <xref:System.FormatException> wird nicht ausgelöst.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird ein <xref:System.TimeSpan> Objekt instanziiert und versucht, es mit der <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType>-Methode zu formatieren, indem eine nicht unterstützte Standardformat Zeichenfolge verwendet wird.
+Im folgenden Beispiel wird ein-Objekt instanziiert <xref:System.TimeSpan> und versucht, es mit der-Methode zu formatieren, <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> indem eine nicht unterstützte Standardformat Zeichenfolge verwendet wird
 
 [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
 [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]
@@ -96,7 +96,7 @@ Wenn Sie jedoch die folgende Konfigurationsdatei zum Verzeichnis des Beispiels h
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)

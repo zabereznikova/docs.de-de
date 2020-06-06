@@ -5,10 +5,10 @@ helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
 ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84004737"
 ---
 # <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize>-Element
@@ -40,7 +40,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Wert|BESCHREIBUNG|
 |-----------|-----------------|
-|`false`|Affininitialisiert Server-GC-Threads mit CPUs. Dies ist der Standardwert.|
+|`false`|Affininitialisiert Server-GC-Threads mit CPUs. Dies ist die Standardeinstellung.|
 |`true`|Fügt Server-GC-Threads nicht mit CPUs zu.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
@@ -54,7 +54,7 @@ Keine
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Standardmäßig sind Server-GC-Threads mit ihren jeweiligen CPUs hart miteinander initialisiert. Jeder verfügbare Prozessor des Systems verfügt über einen eigenen GC-Heap und-Thread. Dies ist in der Regel die bevorzugte Einstellung, da Sie die Cache Verwendung optimiert. Beginnend mit .NET Framework 4.6.2, indem das-Attribut des **gcnoaffinitize** -Elements auf festgelegt wird `enabled` `true` , können Sie angeben, dass Server-GC-Threads und-CPUs nicht eng gekoppelt werden sollen.
 
@@ -87,11 +87,11 @@ Im folgenden Beispiel werden Server-GC-Threads nicht zugeordnet und die Anzahl d
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Gcheapaffinitizemask-Element](gcheapaffinitizemask-element.md)
 - [Gcheapcount-Element](gcheapcount-element.md)
 - [Grundlagen der Garbage Collection](../../../../standard/garbage-collection/fundamentals.md)
-- [Lauf Zeit Einstellungs Schema](index.md)
+- [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)

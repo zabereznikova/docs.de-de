@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70972203"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
@@ -40,7 +40,7 @@ ms.locfileid: "70972203"
  Dieses Thema beschreibt die Syntax von Konfigurationsdateien und enthält Informationen zu den drei Arten von Konfigurationsdateien: Computer, Anwendung und Sicherheit.  
   
 ## <a name="configuration-file-format"></a>Format von Konfigurationsdateien  
- Konfigurationsdateien enthalten Elemente, so genannte logische Datenstrukturen zur Einstellung von Konfigurationsinformationen. Innerhalb der Konfigurationsdatei können Sie Anfang und Ende eines Elements durch Tags markieren. Zum Beispiel besteht das Element `<runtime>` aus `<runtime>`*untergeordneten*`</runtime>`-Elementen. Ein leeres Element würde in Form von `<runtime/>` oder `<runtime></runtime>` geschrieben.  
+ Konfigurationsdateien enthalten Elemente, so genannte logische Datenstrukturen zur Einstellung von Konfigurationsinformationen. Innerhalb der Konfigurationsdatei können Sie Anfang und Ende eines Elements durch Tags markieren. Beispielsweise besteht das-Element aus untergeordneten- `<runtime>` `<runtime>` *Elementen* `</runtime>` . Ein leeres Element würde in Form von `<runtime/>` oder `<runtime></runtime>` geschrieben.  
   
  Wie bei allen XML-Dateien wird bei der Syntax von Konfigurationsdateien die Groß-/Kleinschreibung berücksichtigt.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "70972203"
 ## <a name="machine-configuration-files"></a>Computerkonfigurationsdateien  
  Die Computerkonfigurationsdatei Machine.config enthält Einstellungen, die für den gesamten Computer gelten. Diese Datei befindet sich im Verzeichnis "%*runtime install path*%\Config". Machine.config enthält Konfigurationseinstellungen für die computerweite Assemblybindung, für integrierte [Remotingkanäle](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) und für ASP.NET.  
   
- Das Konfigurationssystem durchsucht zuerst die Computerkonfigurationsdatei nach dem [ **\<appSettings>** -Element](./file-schema/appsettings/index.md) und anderen Konfigurationsabschnitten, die von einem Entwickler möglicherweise definiert wurden. Anschließend wird die Anwendungskonfigurationsdatei durchsucht. Aus Gründen der Übersichtlichkeit der Computerkonfigurationsdatei empfiehlt es sich, diese Einstellungen in der Anwendungskonfigurationsdatei zu speichern. Wenn sich diese Einstellungen in der Computerkonfigurationsdatei befinden, ist das System jedoch u. U. einfacher zu warten. Wird z. B. die Komponente eines Drittanbieters sowohl von der Client- als auch von der Serveranwendung verwendet, ist es einfacher, die Einstellungen für diese Komponente in der gleichen Datei zu speichern. In diesem Fall ist die Computerkonfigurationsdatei dafür am besten geeignet, und Sie vermeiden redundante Informationen in zwei verschiedenen Dateien.  
+ Das Konfigurationssystem sucht zunächst in der Computer Konfigurationsdatei nach dem [ **\<appSettings>** Element](./file-schema/appsettings/index.md) und anderen Konfigurations Abschnitten, die ein Entwickler definieren kann. Anschließend wird die Anwendungskonfigurationsdatei durchsucht. Aus Gründen der Übersichtlichkeit der Computerkonfigurationsdatei empfiehlt es sich, diese Einstellungen in der Anwendungskonfigurationsdatei zu speichern. Wenn sich diese Einstellungen in der Computerkonfigurationsdatei befinden, ist das System jedoch u. U. einfacher zu warten. Wird z. B. die Komponente eines Drittanbieters sowohl von der Client- als auch von der Serveranwendung verwendet, ist es einfacher, die Einstellungen für diese Komponente in der gleichen Datei zu speichern. In diesem Fall ist die Computerkonfigurationsdatei dafür am besten geeignet, und Sie vermeiden redundante Informationen in zwei verschiedenen Dateien.  
   
 > [!NOTE]
 > Wenn Sie eine Anwendung mithilfe von XCOPY bereitstellen, werden die Einstellungen nicht in die Computerkonfigurationsdatei kopiert.  
@@ -82,7 +82,7 @@ ms.locfileid: "70972203"
   
      Verfügt eine von Internet Explorer gehostete App über eine Konfigurationsdatei, wird der Speicherort dieser Datei in einem `<link>`-Tag mit folgender Syntax angegeben:  
   
-     \<link rel="*Konfigurationsdateiname*" href="*Speicherort*">  
+     \<link rel="*ConfigurationFileName*" href="*location*">  
   
      In diesem Tag bezeichnet `location` die URL, an der sich die Konfigurationsdatei befindet. Dadurch wird die App-Basis festgelegt. Die Konfigurationsdatei und die App müssen sich in derselben Website befinden.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "70972203"
  [Konfigurieren kryptografischer Klassen](configure-cryptography-classes.md)  
  Beschreibt die Zuordnung eines Algorithmusnamens zu einer kryptografischen Klasse und eines Objektbezeichners zu einem kryptografischen Algorithmus.  
   
- [Vorgehensweise: Erstellen einer Herausgeber Richtlinie](how-to-create-a-publisher-policy.md)  
+ [Vorgehensweise: Erstellen einer Herausgeberrichtlinie](how-to-create-a-publisher-policy.md)  
  Beschreibt die Situationen, in denen Sie eine Herausgeberrichtliniendatei hinzufügen sollten, um Assemblyumleitung und CodeBase-Einstellungen anzugeben, sowie die entsprechende Vorgehensweise.  
   
  [Konfigurationsdateischema](./file-schema/index.md)  

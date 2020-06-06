@@ -8,25 +8,25 @@ helpviewer_keywords:
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 ms.openlocfilehash: 7c36f6126f0d779a43a22fc11e647ba2d3b03a30
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81646061"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Vorgehensweise: Erstellen einer Herausgeberrichtlinie
 
-Anbieter von Assemblys können angeben, dass Anwendungen eine neuere Version einer Assembly verwenden sollten, indem sie eine Herausgeberrichtliniendatei in die aktualisierte Assembly einschließen. Die Herausgeberrichtliniendatei gibt Assemblyumleitungs- und Codebasiseinstellungen an und verwendet das gleiche Format wie eine Anwendungskonfigurationsdatei. Die Herausgeberrichtliniendatei wird in eine Assembly kompiliert und im globalen Assemblycache abgelegt.
+Anbieter von Assemblys können angeben, dass Anwendungen eine neuere Version einer Assembly verwenden sollen, indem Sie eine Herausgeber Richtlinien Datei mit der aktualisierten Assembly einschließen. Die Herausgeber Richtlinien Datei gibt die Assemblyumleitung und die Code Basis Einstellungen an und verwendet das gleiche Format wie eine Anwendungs Konfigurationsdatei. Die Herausgeber Richtlinien Datei wird in eine Assembly kompiliert und in den globalen Assemblycache eingefügt.
 
-Beim Erstellen einer Herausgeberrichtlinie sind drei Schritte erforderlich:
+Zum Erstellen einer Herausgeber Richtlinie sind drei Schritte erforderlich:
 
-1. Erstellen Sie eine Publisher-Richtliniendatei.
+1. Erstellen Sie eine Herausgeber Richtlinien Datei.
 
-2. Erstellen Sie eine Herausgeberrichtlinienassembly.
+2. Erstellen Sie eine Herausgeber Richtlinien-Assembly.
 
-3. Fügen Sie die Herausgeberrichtlinienassembly dem globalen Assemblycache hinzu.
+3. Fügen Sie die Herausgeber Richtlinien-Assembly dem globalen Assemblycache hinzu
 
-Das Schema für die Herausgeberrichtlinie wird unter [Umleiten von Assemblyversionen](redirect-assembly-versions.md)beschrieben. Das folgende Beispiel zeigt eine Herausgeberrichtliniendatei, `myAssembly` die eine Version von einer anderen umleitet.
+Das Schema für die Herausgeber Richtlinie wird unter [umleiten](redirect-assembly-versions.md)von Assemblyversionen beschrieben. Das folgende Beispiel zeigt eine Herausgeber Richtlinien Datei, die eine Version von `myAssembly` zu einer anderen umleitet.
 
 ```xml
 <configuration>
@@ -45,13 +45,13 @@ Das Schema für die Herausgeberrichtlinie wird unter [Umleiten von Assemblyversi
 </configuration>
 ```
 
-Informationen zum Angeben einer Codebasis finden Sie unter [Angeben des Speicherorts einer Assembly](specify-assembly-location.md).
+Informationen zum Angeben einer Codebasis finden Sie unter [angeben des Speicher Orts einer Assembly](specify-assembly-location.md).
 
-## <a name="creating-the-publisher-policy-assembly"></a>Erstellen der Publisher-Richtlinienassembly
+## <a name="creating-the-publisher-policy-assembly"></a>Erstellen der Herausgeber Richtlinien-Assembly
 
-Verwenden Sie den [Assemblylinker (Al.exe),](../tools/al-exe-assembly-linker.md) um die Herausgeberrichtlinienassembly zu erstellen.
+Verwenden Sie den [Assembly Linker (Al. exe)](../tools/al-exe-assembly-linker.md) , um die Herausgeber Richtlinien-Assembly zu erstellen.
 
-#### <a name="to-create-a-publisher-policy-assembly"></a>So erstellen Sie eine Herausgeberrichtlinienassembly
+#### <a name="to-create-a-publisher-policy-assembly"></a>So erstellen Sie eine Herausgeber Richtlinien-Assembly
 
 Geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
 
@@ -61,36 +61,36 @@ al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFi
 
 In diesem Befehl:
 
-- Das `publisherPolicyFile` Argument ist der Name der Herausgeberrichtliniendatei.
+- Das- `publisherPolicyFile` Argument ist der Name der Herausgeber Richtlinien Datei.
 
-- Das `publisherPolicyAssemblyFile` Argument ist der Name der Herausgeberrichtlinienassembly, die sich aus diesem Befehl ergibt. Der Assemblydateiname muss dem Folgenden folgen:
+- Das- `publisherPolicyAssemblyFile` Argument ist der Name der Herausgeber Richtlinienassembly, die sich aus diesem Befehl ergibt. Der Assemblydateiname muss das folgende Format aufweisen:
 
-  'policy.majorNumber.minorNumber.mainAssemblyName.dll'
+  "Policy. majornumber. minornumber. MainAssemblyName. dll"
 
-- Das `keyPairFile` Argument ist der Name der Datei, die das Schlüsselpaar enthält. Sie müssen die Assembly- und Herausgeberrichtlinienassembly mit demselben Schlüsselpaar signieren.
+- Das- `keyPairFile` Argument ist der Name der Datei, die das Schlüsselpaar enthält. Sie müssen die Assembly-und Herausgeber richtlinienassembly mit demselben Schlüsselpaar signieren.
 
-- Das `processorArchitecture` Argument identifiziert die Plattform, auf die eine prozessorspezifische Assembly abzielt.
+- Das- `processorArchitecture` Argument identifiziert die Plattform, auf die eine prozessorspezifische Assembly abzielt.
 
   > [!NOTE]
-  > Die Möglichkeit, auf eine bestimmte Prozessorarchitektur zu zielen, ist ab .NET Framework 2.0 verfügbar.
+  > Die Möglichkeit, eine bestimmte Prozessorarchitektur als Ziel zu erreichen, ist ab .NET Framework 2,0 verfügbar.
 
-Die Möglichkeit, auf eine bestimmte Prozessorarchitektur zu zielen, ist ab .NET Framework 2.0 verfügbar. Mit dem folgenden Befehl wird `policy.1.0.myAssembly` eine Herausgeberrichtlinienassembly `pub.config`erstellt, die aus einer Herausgeberrichtliniendatei namens `sgKey.snk` aufgerufen wird, der Assembly mithilfe des Schlüsselpaars in der Datei einen starken Namen zuweist und angibt, dass die Assembly auf die x86-Prozessorarchitektur abzielt.
+Die Möglichkeit, eine bestimmte Prozessorarchitektur als Ziel zu erreichen, ist ab .NET Framework 2,0 verfügbar. Der folgende Befehl erstellt eine Herausgeber richtlinienassembly `policy.1.0.myAssembly` , die mit einer Herausgeber Richtlinien Datei namens erstellt `pub.config` wird, weist der Assembly einen starken Namen zu, indem das Schlüsselpaar in der `sgKey.snk` Datei verwendet wird, und gibt an, dass die Assembly die x86-Prozessor
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-Die Herausgeberrichtlinienassembly muss mit der Prozessorarchitektur der Assembly übereinstimmen, auf die sie angewendet wird. Wenn Ihre Assembly den <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> Wert <xref:System.Reflection.ProcessorArchitecture.MSIL>von hat, muss daher die `/platform:anycpu`Herausgeberrichtlinienassembly für diese Assembly mit erstellt werden. Sie müssen für jede prozessorspezifische Assembly eine separate Herausgeberrichtlinienassembly bereitstellen.
+Die Herausgeber richtlinienassembly muss der Prozessorarchitektur der Assembly entsprechen, auf die Sie angewendet wird. Wenn die Assembly also <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> den Wert hat <xref:System.Reflection.ProcessorArchitecture.MSIL> , muss die Herausgeber richtlinienassembly für diese Assembly mit erstellt werden `/platform:anycpu` . Sie müssen für jede prozessorspezifische Assembly eine separate Herausgeber richtlinienassembly bereitstellen.
 
-Diese Regel hat zur Folge, dass Sie zum Ändern der Prozessorarchitektur für eine Assembly die Haupt- oder Nebenkomponente der Versionsnummer ändern müssen, damit Sie eine neue Herausgeberrichtlinienassembly mit der richtigen Prozessorarchitektur bereitstellen können. Die alte Herausgeberrichtlinienassembly kann Ihre Assembly nicht mehr bedienen, wenn die Assembly über eine andere Prozessorarchitektur verfügt.
+Eine Folge dieser Regel besteht darin, dass Sie die Haupt-oder neben Komponente der Versionsnummer ändern müssen, damit Sie eine neue Herausgeber richtlinienassembly mit der richtigen Prozessorarchitektur bereitstellen können, um die Prozessorarchitektur für eine Assembly zu ändern. Die alte Herausgeber richtlinienassembly kann die Assembly nicht bedienen, wenn die Assembly über eine andere Prozessorarchitektur verfügt.
 
-Eine weitere Folge ist, dass der Linker version 2.0 nicht zum Erstellen einer Herausgeberrichtlinienassembly für eine Assembly verwendet werden kann, die mit früheren Versionen von .NET Framework kompiliert wurde, da er immer die Prozessorarchitektur angibt.
+Eine weitere Konsequenz besteht darin, dass der Linker der Version 2,0 nicht verwendet werden kann, um eine Herausgeber richtlinienassembly für eine Assembly zu erstellen, die mit früheren Versionen der .NET Framework kompiliert wurde
 
-## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Hinzufügen der Publisher-Richtlinienassembly zum globalen Assemblycache
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Hinzufügen der Herausgeber Richtlinien-Assembly zum globalen Assemblycache
 
-Verwenden Sie das [Werkzeug Globaler Assemblycache (Gacutil.exe),](../tools/gacutil-exe-gac-tool.md) um die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzuzufügen.
+Verwenden Sie das [Global Assembly Cache-Tool (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) , um die Herausgeber richtlinienassembly dem globalen Assemblycache hinzuzufügen.
 
-### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>So fügen Sie die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzu
+### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>So fügen Sie die Herausgeber Richtlinien-Assembly dem globalen Assemblycache
 
 Geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
 
@@ -98,20 +98,20 @@ Geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
 gacutil /i publisherPolicyAssemblyFile
 ```
 
-Der folgende `policy.1.0.myAssembly.dll` Befehl wird dem globalen Assemblycache hinzugefügt.
+Der folgende Befehl fügt dem `policy.1.0.myAssembly.dll` globalen Assemblycache hinzu.
 
 ```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> Die Herausgeberrichtlinienassembly kann dem globalen Assemblycache nur hinzugefügt werden, `/link` wenn sich die im Argument angegebene ursprüngliche Herausgeberrichtliniendatei im selben Verzeichnis wie die Assembly befindet.
+> Die Herausgeber richtlinienassembly kann nicht zum globalen Assemblycache hinzugefügt werden, es sei denn, die ursprüngliche Herausgeber Richtlinien Datei `/link` befindet sich im selben Verzeichnis wie die Assembly.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Programmieren mit Assemblys](../../standard/assembly/index.md)
-- [So sucht die Laufzeit Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
+- [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurieren von Apps mithilfe von Konfigurationsdateien](index.md)
-- [Laufzeiteinstellungsschema](./file-schema/runtime/index.md)
+- [Schema für Laufzeiteinstellungen](./file-schema/runtime/index.md)
 - [Konfigurationsdateischema](./file-schema/index.md)
 - [Umleiten von Assemblyversionen](redirect-assembly-versions.md)

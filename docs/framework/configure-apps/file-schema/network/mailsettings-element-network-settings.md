@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 ms.openlocfilehash: 4e8bf23ce39edadf80f019315c690b597b3d7361
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089234"
 ---
-# <a name="mailsettings-element-network-settings"></a>\<mailSettings >-Element (Netzwerkeinstellungen)
+# <a name="mailsettings-element-network-settings"></a>\<mailSettings>-Element (Netzwerkeinstellungen)
 Konfiguriert E-Mail-Sendeoptionen.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<mailSettings >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<mailSettings>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -38,9 +38,9 @@ Konfiguriert E-Mail-Sendeoptionen.
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|[\<SMTP->-Element (Netzwerkeinstellungen)](smtp-element-network-settings.md)|Konfiguriert die Optionen des Simple Mail-Transport Protokolls.|  
+|[\<smtp>-Element (Netzwerkeinstellungen)](smtp-element-network-settings.md)|Konfiguriert die Optionen des Simple Mail-Transport Protokolls.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -67,7 +67,7 @@ Konfiguriert E-Mail-Sendeoptionen.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.Mail.SmtpClient>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

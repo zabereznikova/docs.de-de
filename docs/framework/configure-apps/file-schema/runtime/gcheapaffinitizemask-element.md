@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73978420"
 ---
-# <a name="gcheapaffinitizemask-element"></a>\<gcheapaffinitizemask > Element
+# <a name="gcheapaffinitizemask-element"></a>\<GCHeapAffinitizeMask>-Element
 
 Definiert die Affinität zwischen GC-Heaps und einzelnen Prozessoren.
 
-\<Konfigurations > \
-&nbsp;&nbsp;\<Lauf Zeit > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<gcheapaffinitizemask >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask>
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,13 +32,13 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="attributes"></a>Attribute
 
-|Attribut|Beschreibung|
+|attribute|BESCHREIBUNG|
 |---------------|-----------------|
 |`enabled`|Erforderliches Attribut.<br /><br />Gibt die Affinität zwischen GC-Heaps und einzelnen Prozessoren an. |
 
 #### <a name="enabled-attribute"></a>aktiviertes Attribut
 
-|Wert|Beschreibung|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|
 |`nnnn`|Ein Dezimalwert, der eine Bitmaske bildet, die die Affinität zwischen Server-GC-Heaps und einzelnen Prozessoren definiert. |
 
@@ -53,13 +53,13 @@ Keine
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Standardmäßig werden Server-GC-Threads mit ihrer jeweiligen CPU hart verknüpft, sodass ein GC-Heap, ein Server-GC-Thread und ein Thread Server-GC-Thread für jeden Prozessor vorhanden ist. Beginnend mit .NET Framework 4.6.2 können Sie das **gcheapaffinitizemask** -Element verwenden, um die Affinität zwischen Server-GC-Heaps und-Prozessoren zu steuern, wenn die Anzahl der Heaps durch das **gcheapcount** -Element begrenzt ist.
 
 **Gcheapaffinitizemask** wird in der Regel zusammen mit zwei anderen Flags verwendet:
 
-- [Gcnoaffinitize](gcnoaffinitize-element.md): steuert, ob Server-GC-Threads/Heaps mit CPUs verknüpft sind. Das `enabled`-Attribut des [gcnoaffinitize](gcnoaffinitize-element.md) -Elements muss `false` (sein Standardwert) für die zu verwendende **gcheapaffinitizemask** -Einstellung sein.
+- [Gcnoaffinitize](gcnoaffinitize-element.md): steuert, ob Server-GC-Threads/Heaps mit CPUs verknüpft sind. Das- `enabled` Attribut des [gcnoaffinitize](gcnoaffinitize-element.md) -Elements muss `false` (sein Standardwert) für die zu verwendende **gcheapaffinitizemask** -Einstellung sein.
 
 - [Gcheapcount](gcheapcount-element.md): schränkt die Anzahl von Heaps ein, die vom Prozess für Server-GC verwendet werden. Standardmäßig gibt es für jeden Prozessor einen Heap.
 
@@ -85,7 +85,7 @@ Das folgende Beispiel gibt an, dass eine Anwendung Server-GC mit 10 Heaps/Thread
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Gcnoaffinitize-Element](gcnoaffinitize-element.md)

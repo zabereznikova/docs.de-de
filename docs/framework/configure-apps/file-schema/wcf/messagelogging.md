@@ -3,19 +3,19 @@ title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
 ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855122"
 ---
-# <a name="messagelogging"></a>\<messageLogging>
+# \<messageLogging>
 Dieses Element definiert die Einstellungen für die Nachrichtenprotokollierungsfunktionen von Windows Communication Foundation (WCF).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Diagnose >** ](diagnostics.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<MessageLogging->**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageLogging>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ Dieses Element definiert die Einstellungen für die Nachrichtenprotokollierungsf
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`logEntireMessage`|Ein boolescher Wert, der angibt, ob die ganze Nachricht (Nachrichtenheader und Text) protokolliert wird. Der Standard ist `false`, wobei nur der Nachrichtenheader protokolliert wird. Diese Einstellung beeinflusst alle Meldungsprotokollebenen (Dienst, Transport und fehlerhaft).|  
-|`logMalformedMessages`|Ein boolescher Wert, der angibt, ob fehlerhafte Nachrichten protokolliert werden. Fehlerhafte Nachrichten werden bei `maxMessagesToLog` nicht berücksichtigt. Die Standardeinstellung ist `false`.|  
-|`logMessagesAtServiceLevel`|Ein boolescher Wert, der angibt, ob Nachrichten auf Dienstebene (vor Verschlüsselung und transportbezogenen Transformationen) verfolgt werden. Die Standardeinstellung ist `false`.|  
-|`logMessagesAtTransportLevel`|Ein boolescher Wert, der angibt, ob Nachrichten auf der Transportebene verfolgt werden. Alle in der Konfigurationsdatei angegebenen Filter werden angewendet, und nur Nachrichten, die den Filtern entsprechen, werden verfolgt. Die Standardeinstellung ist `false`.|  
-|`maxMessagesToLog`|Eine positive ganze Zahl, die die maximale Anzahl an zu protokollierenden Nachrichten angibt. Der Standard ist 1000.|  
+|`logMalformedMessages`|Ein boolescher Wert, der angibt, ob fehlerhafte Nachrichten protokolliert werden. Fehlerhafte Nachrichten werden bei `maxMessagesToLog` nicht berücksichtigt. Der Standardwert lautet `false`.|  
+|`logMessagesAtServiceLevel`|Ein boolescher Wert, der angibt, ob Nachrichten auf Dienstebene (vor Verschlüsselung und transportbezogenen Transformationen) verfolgt werden. Der Standardwert lautet `false`.|  
+|`logMessagesAtTransportLevel`|Ein boolescher Wert, der angibt, ob Nachrichten auf der Transportebene verfolgt werden. Alle in der Konfigurationsdatei angegebenen Filter werden angewendet, und nur Nachrichten, die den Filtern entsprechen, werden verfolgt. Der Standardwert lautet `false`.|  
+|`maxMessagesToLog`|Eine positive ganze Zahl, die die maximale Anzahl an zu protokollierenden Nachrichten angibt. Der Standardwert lautet 1000.|  
 |`maxSizeOfMessageToLog`|Eine positive ganze Zahl, die die maximale Größe einer zu protokollierenden Nachrichten in Bytes angibt. Nachrichten oberhalb dieses Grenzwerts werden nicht protokolliert. Diese Einstellung wirkt sich auf alle Nachverfolgungsebenen aus. Die Standardeinstellung ist 262144(0x4000).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -62,7 +62,7 @@ Dieses Element definiert die Einstellungen für die Nachrichtenprotokollierungsf
 |-------------|-----------------|  
 |Diagnose|Definiert WCF-Einstellungen für die Laufzeitüberprüfung und Steuerungen für den Administrator.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Nachrichten werden auf drei verschiedenen Ebenen im Stapel protokolliert: Dienst, Transport und fehlerhaft. Jede Ebene kann separat aktiviert werden.  
   
  XPath-Filter können hinzugefügt werden, um bestimmte Nachrichten auf Transport- und Dienstebene zu protokollieren. Wenn keine Filter definiert werden, werden alle Meldungen protokolliert. Filter werden nur auf die Header der Nachricht angewendet. Der Nachrichtentext wird ignoriert. WCF ignoriert den Nachrichtentext, um die Leistung zu verbessern. Wenn Sie basierend auf dem Textinhalt filtern möchten, können Sie zu diesem Zweck einen benutzerdefinierten Listener mit einem Filter erstellen.  
@@ -122,7 +122,7 @@ Dieses Element definiert die Einstellungen für die Nachrichtenprotokollierungsf
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

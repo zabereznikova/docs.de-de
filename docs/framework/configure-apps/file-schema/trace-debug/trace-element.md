@@ -11,18 +11,18 @@ helpviewer_keywords:
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 ms.openlocfilehash: 7d8a989219d84e8604e767456c84c0092bc73b22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153165"
 ---
-# <a name="trace-element"></a>\<Ablaufverfolgung> Element
+# <a name="trace-element"></a>\<trace>-Element
 Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.  
   
-[**\<Konfiguration>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Spur>**  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<trace>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,33 +35,33 @@ Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterl
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`autoflush`|Optionales Attribut.<br /><br /> Gibt an, ob die Ablaufverfolgungslistener den Ausgabepuffer nach jedem Schreibvorgang automatisch leeren.|  
-|`indentsize`|Optionales Attribut.<br /><br /> Gibt die Anzahl der einrückenden Leerzeichen an.|  
+|`indentsize`|Optionales Attribut.<br /><br /> Gibt die Anzahl der Leerzeichen für den Einzug an.|  
 |`useGlobalLock`|Optionales Attribut.<br /><br /> Gibt an, ob die globale Sperre verwendet werden soll.|  
   
-## <a name="autoflush-attribute"></a>autoflush-Attribut  
+## <a name="autoflush-attribute"></a>AutoFlush-Attribut  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|`false`|Spült den Ausgabepuffer nicht automatisch. Dies ist die Standardoption.|  
-|`true`|Spült den Ausgabepuffer automatisch.|  
+|`false`|Der Ausgabepuffer wird nicht automatisch geleert. Dies ist die Standardeinstellung.|  
+|`true`|Leert den Ausgabepuffer automatisch.|  
   
-## <a name="usegloballock-attribute"></a>VerwendenDesGlobalLock-Attribut  
+## <a name="usegloballock-attribute"></a>UseGlobalLock-Attribut  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|`false`|Verwendet die globale Sperre nicht, wenn der Listener threadsicher ist. Andernfalls wird die globale Sperre verwendet.|  
-|`true`|Verwendet die globale Sperre unabhängig davon, ob der Listener threadsicher ist. Dies ist die Standardoption.|  
+|`false`|Verwendet nicht die globale Sperre, wenn der Listener Thread sicher ist. Andernfalls verwendet die globale Sperre.|  
+|`true`|Verwendet die globale Sperre, unabhängig davon, ob der Listener Thread sicher ist. Dies ist die Standardeinstellung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Hörer>](listeners-element-for-trace.md)|Gibt einen Listener an, der Nachrichten sammelt, speichert und leitet.|  
+|[\<listeners>](listeners-element-for-trace.md)|Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -71,7 +71,7 @@ Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterl
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, `<trace>` wie sie das `MyListener` Element `Listeners` zum Hinzufügen des Listeners zur Auflistung verwenden. `MyListener`erstellt eine Datei `MyListener.log` mit dem Namen und schreibt die Ausgabe in die Datei. Das `useGlobalLock` Attribut ist `false`auf festgelegt, wodurch die globale Sperre nicht verwendet wird, wenn der Ablaufverfolgungslistener threadsicher ist. Das `autoflush` Attribut ist `true`auf festgelegt, wodurch der Ablaufverfolgungslistener <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> unabhängig davon, ob die Methode aufgerufen wird, in die Datei geschrieben wird. Das `indentsize` Attribut wird auf 0 (Null) gesetzt, wodurch der <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> Listener beim Aufruf der Methode Leerzeichen einrücken lässt.  
+ Im folgenden Beispiel wird gezeigt, wie das-Element verwendet wird, `<trace>` um den Listener der Auflistung hinzuzufügen `MyListener` `Listeners` . `MyListener`erstellt eine Datei `MyListener.log` mit dem Namen und schreibt die Ausgabe in die Datei. Das- `useGlobalLock` Attribut ist auf festgelegt `false` . Dies bewirkt, dass die globale Sperre nicht verwendet wird, wenn der Ablaufverfolgungslistener Thread sicher ist. Das- `autoflush` Attribut ist auf festgelegt `true` , wodurch der Ablaufverfolgungslistener in die Datei schreibt, unabhängig davon, ob die- <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> Methode aufgerufen wird. Das- `indentsize` Attribut wird auf 0 (null) festgelegt, was bewirkt, dass der Listener beim Aufrufen der-Methode NULL-Leerzeichen <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> eingibt.  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,4 @@ Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterl
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Ablaufverfolgungs- und Debugeinstellungsschema](index.md)
+- [Schema für Ablaufverfolgungs- und Debugeinstellungen](index.md)

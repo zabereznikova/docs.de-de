@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698206"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy >-Element (Netzwerkeinstellungen)
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy>-Element (Netzwerkeinstellungen)
 Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultProxy>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +35,7 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
+ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
@@ -49,8 +49,8 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|Gibt einen Satz von regulären Ausdrücken zur Beschreibung der Adressen an, die keinen Proxy verwenden.|  
-|[module](module-element-network-settings.md)|Fügt der Anwendung ein neues Proxymodul hinzu.|  
-|[proxy](proxy-element-network-settings.md)|Definiert einen Proxyserver.|  
+|[Mond](module-element-network-settings.md)|Fügt der Anwendung ein neues Proxymodul hinzu.|  
+|[Proxy](proxy-element-network-settings.md)|Definiert einen Proxyserver.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -58,10 +58,10 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn das defaultProxy-Element leer ist, werden die Proxyeinstellungen von Internet Explorer verwendet. Dieses Verhalten unterscheidet sich von .NET Framework 1.1.  
   
- Eine Ausnahme wird ausgelöst, wenn das [Modul](module-element-network-settings.md) Element einen nicht öffentlichen Typ angibt, der Typ nicht von der <xref:System.Net.IWebProxy> Klasse abgeleitet wird, eine Ausnahme vom Parameter losen Konstruktor dieses Objekts aufgetreten ist oder beim Abrufen des vom System angegebenen Standard Proxys eine Ausnahme aufgetreten ist. Die <xref:System.Exception.InnerException%2A>-Eigenschaft für die Ausnahme muss zusätzliche Informationen zur Fehlerursache enthalten.  
+ Eine-Ausnahme wird ausgelöst, wenn das [Module](module-element-network-settings.md) -Element einen nicht öffentlichen Typ angibt, der Typ nicht von der-Klasse abgeleitet wird <xref:System.Net.IWebProxy> , eine Ausnahme vom Parameter losen Konstruktor dieses Objekts aufgetreten ist oder beim Abrufen des vom System angegebenen Standard Proxys eine Ausnahme aufgetreten ist. Die <xref:System.Exception.InnerException%2A>-Eigenschaft für die Ausnahme muss zusätzliche Informationen zur Fehlerursache enthalten.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
@@ -86,7 +86,7 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

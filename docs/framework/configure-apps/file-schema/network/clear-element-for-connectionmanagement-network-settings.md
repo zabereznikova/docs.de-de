@@ -11,19 +11,19 @@ helpviewer_keywords:
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 ms.openlocfilehash: a76df48a9de084e1121a5e96b22edf7aa3acba23
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088485"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<> Element für connectionManagement löschen (Netzwerkeinstellungen)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<clear>-Element für connectionManagement (Netzwerkeinstellungen)
 Löscht die Verbindungs Verwaltungsliste.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Löschen** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ Löscht die Verbindungs Verwaltungsliste.
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -46,14 +46,14 @@ Löscht die Verbindungs Verwaltungsliste.
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
   
-## <a name="remarks"></a>Hinweise  
- Das `clear`-Element löscht alle Einträge aus der Verbindungs Verwaltungsliste.  
+## <a name="remarks"></a>Bemerkungen  
+ Das- `clear` Element löscht alle Einträge aus der Verbindungs Verwaltungsliste.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Liste mit den Verbindungs Verwaltung gelöscht, und es werden neue Verbindungs Verwaltungs Einträge für den Server `www.contoso.com` und alle anderen Netzwerk Hosts hinzugefügt.  
+ Im folgenden Beispiel wird die Liste mit den Verbindungs Verwaltung gelöscht, und es werden neue Verbindungs Verwaltungs Einträge für den `www.contoso.com` -Server und alle anderen Netzwerk Hosts hinzugefügt.  
   
 ```xml  
 <configuration>  
@@ -67,8 +67,8 @@ Löscht die Verbindungs Verwaltungsliste.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

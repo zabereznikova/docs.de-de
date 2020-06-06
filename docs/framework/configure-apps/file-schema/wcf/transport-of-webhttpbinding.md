@@ -3,22 +3,22 @@ title: <transport> von <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
 ms.openlocfilehash: e8016eb9058f132722587368f1f8c7c03220af4a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732785"
 ---
-# <a name="transport-of-webhttpbinding"></a>\<Transport > von \<WebHttpBinding >
+# <a name="transport-of-webhttpbinding"></a>\<transport> von \<webHttpBinding>
 Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpunkt, der zum Empfangen von HTTP-Anforderungen konfiguriert wird.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WebHttpBinding >** ](webhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheit >** ](security-of-webhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Transport >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<webHttpBinding>**](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
 </webHttpBinding>
 ```  
   
-## <a name="type"></a>Geben Sie Folgendes ein:  
+## <a name="type"></a>type  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -48,7 +48,7 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`clientCredentialType`|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |`proxyCredentialType`|Gibt die Anmeldeinformationen an, die verwendet werden, um den Client bei einem Domänenproxy zu authentifizieren. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpProxyCredentialType>.|  
@@ -57,7 +57,7 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |`None`|Die Sicherheitsfunktionen sind deaktiviert.|  
 |`Basic`|Verwendet die Standardauthentifizierung.|  
@@ -68,7 +68,7 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType-Attribut  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |`None`|Die Sicherheitsfunktionen sind deaktiviert.|  
 |`Basic`|Verwendet die Standardauthentifizierung.|  
@@ -83,9 +83,9 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Security >](security-of-webhttpbinding.md)|Stellt die Sicherheitsfunktionen des [\<WSHttpBinding->](wshttpbinding.md) Elements dar.|  
+|[\<security>](security-of-webhttpbinding.md)|Stellt die Sicherheitsfunktionen des- [\<wsHttpBinding>](wshttpbinding.md) Elements dar.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
@@ -95,5 +95,5 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)
 - [WCF-Web-HTTP-Programmiermodell](../../../wcf/feature-details/wcf-web-http-programming-model.md)

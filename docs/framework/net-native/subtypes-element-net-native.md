@@ -1,15 +1,15 @@
 ---
-title: <Subtypes>Element (.NET Native)
+title: <Subtypes>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180936"
 ---
-# <a name="subtypes-element-net-native"></a>\<Untertypen> Element (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<Subtypes>-Element (.net Native)
 Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -30,9 +30,9 @@ Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.|  
@@ -47,18 +47,18 @@ Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an
   
 ## <a name="all-attributes"></a>Alle Attribute  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|[\<Typ>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
+|[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Das `<Subtypes>`-Element wendet die Richtlinie auf alle Untertypen des enthaltenden Typs an. Sie verwenden es, wenn Sie verschiedene Richtlinien auf abgeleitete Typen und deren Basisklassen anwenden möchten.  
@@ -89,7 +89,7 @@ Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [\<Typ> Element](type-element-net-native.md)
+- [\<Type>Gewisses](type-element-net-native.md)
 - [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)

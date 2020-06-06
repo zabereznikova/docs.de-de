@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 ms.openlocfilehash: b502cc4a0958f074018d4b0ce6b3fb118b811c2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154971"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules>-Element (Netzwerkeinstellungen)
-Gibt Module an, die zum Authentifizieren von Netzwerkanforderungen verwendet werden.  
+Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<authentifizierungModule>**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<authenticationModules>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -32,16 +32,16 @@ Gibt Module an, die zum Authentifizieren von Netzwerkanforderungen verwendet wer
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
- Keine.  
+### <a name="attributes"></a>Attribute  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Hinzufügen](add-element-for-authenticationmodules-network-settings.md)|Fügt der Anwendung ein Authentifizierungsmodul hinzu.|  
-|[Klar](clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungsmodule aus der Anwendung.|  
-|[Entfernen](remove-element-for-authenticationmodules-network-settings.md)|Entfernt ein Authentifizierungsmodul aus der Anwendung.|  
+|[add](add-element-for-authenticationmodules-network-settings.md)|Fügt der Anwendung ein Authentifizierungs Modul hinzu.|  
+|[Löschen](clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungs Module aus der Anwendung.|  
+|[remove](remove-element-for-authenticationmodules-network-settings.md)|Entfernt ein Authentifizierungs Modul aus der Anwendung.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -50,13 +50,13 @@ Gibt Module an, die zum Authentifizieren von Netzwerkanforderungen verwendet wer
 |[system.net](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das `authenticationModule` Element gibt die Authentifizierungsmodule an, die den Authentifizierungsprozess mit einem Server durchführen. Ein Authentifizierungsmodul <xref:System.Net.IAuthenticationModule> muss die Schnittstelle implementieren.  
+ Das- `authenticationModule` Element gibt die Authentifizierungs Module an, die den Authentifizierungsprozess mit einem-Server durchführen. Ein Authentifizierungs Modul muss die- <xref:System.Net.IAuthenticationModule> Schnittstelle implementieren.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Authentifizierungsmodul aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die richtigen Werte für das angegebene Modul ersetzen.  
+ Im folgenden Beispiel wird ein Authentifizierungs Modul aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.  
   
 ```xml  
 <configuration>  

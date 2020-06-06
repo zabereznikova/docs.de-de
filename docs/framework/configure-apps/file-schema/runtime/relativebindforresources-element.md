@@ -6,17 +6,17 @@ helpviewer_keywords:
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 ms.openlocfilehash: cd49d424019a4e8422fee0ae16217d49cfc456b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153905"
 ---
-# <a name="relativebindforresources-element"></a>\<relativeBindForResources> Element
+# <a name="relativebindforresources-element"></a>\<relativeBindForResources>-Element
 Optimiert den Test für Satellitenassemblys.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<relativeBindForResources>**  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,21 +29,21 @@ Optimiert den Test für Satellitenassemblys.
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime den Prüfpunkt für Satellitenassemblys optimiert.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob der Common Language Runtime den Test für Satellitenassemblys optimiert.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|`false`|Die Laufzeit optimiert den Prüfpunkt für Satellitenassemblys nicht. Dies ist der Standardwert.|  
-|`true`|Die Laufzeit optimiert die Sonde für Satellitenassemblys.|  
+|`false`|Der Test für Satellitenassemblys wird von der Laufzeit nicht optimiert. Dies ist der Standardwert.|  
+|`true`|Die Laufzeit optimiert den Test für Satellitenassemblys.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -53,24 +53,24 @@ Optimiert den Test für Satellitenassemblys.
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Im Allgemeinen untersucht Resource Manager Ressourcen, wie im Thema [Verpackung und Bereitstellung von Ressourcen](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) dokumentiert. Dies bedeutet, dass Resource Manager, wenn er nach einer bestimmten lokalisierten Version einer Ressource sucht, im globalen Assemblycache suchen, in einem kulturspezifischen <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ordner in der Codebasis der Anwendung suchen, Windows Installer nach Satellitenassemblys abfragen und das Ereignis aushebe. Das `<relativeBindForResources>` Element optimiert die Art und Weise, in der Resource Manager für Satellitenassemblys untersucht wird. Es kann die Leistung verbessern, wenn Ressourcen unter den folgenden Bedingungen gesucht werden:  
+ Im allgemeinen Ressourcen-Manager Tests für Ressourcen durch, wie im Thema [Verpacken und](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) Bereitstellen von Ressourcen dokumentiert. Dies bedeutet Folgendes: Wenn Ressourcen-Manager eine bestimmte lokalisierte Version einer Ressource testet, kann Sie im globalen Assemblycache suchen, in einem kulturspezifischen Ordner in der Codebasis der Anwendung suchen, Windows Installer nach Satellitenassemblys Abfragen und das-Ereignis Auswerfen <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> . Das- `<relativeBindForResources>` Element optimiert die Art und Weise, in der Ressourcen-Manager auf Satellitenassemblys prüft Die Leistung kann bei der Überprüfung von Ressourcen unter den folgenden Bedingungen verbessert werden:  
   
-- Wenn die Satellitenassembly am gleichen Speicherort wie die Codeassembly bereitgestellt wird. Mit anderen Worten, wenn die Codeassembly im globalen Assemblycache installiert ist, müssen die Satellitenassemblys auch dort installiert werden. Wenn die Codeassembly in der Codebasis der Anwendung installiert ist, müssen die Satellitenassemblys auch in einem kulturspezifischen Ordner in der Codebasis installiert werden.  
+- Wenn die Satellitenassembly am gleichen Speicherort wie die Codeassembly bereitgestellt wird. Anders ausgedrückt: Wenn die Codeassembly im globalen Assemblycache installiert ist, müssen auch die Satellitenassemblys dort installiert werden. Wenn die Codeassembly in der Codebasis der Anwendung installiert ist, müssen die Satellitenassemblys auch in einem kulturspezifischen Ordner in der Codebasis installiert werden.  
   
-- Wenn Windows Installer nicht oder nur selten für die Bedarfsinstallation von Satellitenassemblys verwendet wird.  
+- Wenn Windows Installer nicht verwendet wird oder nur selten für die Bedarfs gesteuerte Installation von Satellitenassemblys verwendet wird.  
   
-- Wenn Anwendungscode das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis nicht behandelt.  
+- Wenn der Anwendungscode das Ereignis nicht behandelt <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> .  
   
- Wenn `enabled` Sie das `<relativeBindForResources>` Attribut `true` des Elements so festlegen, dass der Resource Manager-Test für Satellitenassemblys wie folgt optimiert wird:  
+ `enabled`Wenn Sie das-Attribut des-Elements festlegen, wird der `<relativeBindForResources>` Ressourcen-Manager Test `true` für Satellitenassemblys wie folgt optimiert:  
   
-- Es verwendet die Position der übergeordneten Codeassembly, um für die Satellitenassembly zu suchen.  
+- Der Speicherort der übergeordneten Codeassembly wird verwendet, um nach der Satellitenassembly zu suchen.  
   
-- Windows Installer wird nicht nach Satellitenassemblys abgefragt.  
+- Windows Installer für Satellitenassemblys werden nicht abgefragt.  
   
-- Es löst nicht <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> das Ereignis aus.  
+- Das-Ereignis wird nicht erhoben <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> .  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Packaging and Deploying Resources](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Verpacken und Bereitstellen von Ressourcen](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Schema für Laufzeiteinstellungen](index.md)
-- [Schema der Konfigurationsdatei](../index.md)
+- [Konfigurationsdateischema](../index.md)

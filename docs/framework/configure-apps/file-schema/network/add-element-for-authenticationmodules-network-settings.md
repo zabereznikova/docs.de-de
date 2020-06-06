@@ -11,19 +11,19 @@ helpviewer_keywords:
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155114"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Hinzufügen> Elements für authentifizierungModule (Netzwerkeinstellungen)
-Fügt der Anwendung ein Authentifizierungsmodul hinzu.  
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<add>-Element für authenticationModules (Netzwerkeinstellungen)
+Fügt der Anwendung ein Authentifizierungs Modul hinzu.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<authentifizierungModule>**](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<hinzufügen>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -36,31 +36,31 @@ Fügt der Anwendung ein Authentifizierungsmodul hinzu.
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`type`|Der vollqualifizierte Typname (durch die <xref:System.Type.FullName%2A> Eigenschaft angegeben) und <xref:System.Reflection.Assembly.FullName%2A> der Assemblyname (durch die Eigenschaft angegeben), getrennt durch ein Komma.|  
+|`type`|Der voll qualifizierte Typname (angegeben durch die <xref:System.Type.FullName%2A> -Eigenschaft) und der AssemblyName (angegeben durch die- <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft), getrennt durch ein Komma.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Netzwerkanforderungen verwendet werden.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das `add` Element fügt am Ende der Liste der registrierten Authentifizierungsmodule ein Authentifizierungsmodul hinzu. Authentifizierungsmodule werden in der Reihenfolge aufgerufen, in der sie der Liste hinzugefügt wurden.  
+ Das- `add` Element fügt ein Authentifizierungs Modul am Ende der Liste registrierter Authentifizierungs Module hinzu. Authentifizierungs Module werden in der Reihenfolge aufgerufen, in der Sie der Liste hinzugefügt wurden.  
   
- Der Wert `type` für das Attribut sollte ein gültiger Typname und ein entsprechender Assemblyname sein, der durch ein Komma getrennt ist.  
+ Der Wert für das `type` -Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden die Standardauthentifizierungsmodule aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die richtigen Werte für das angegebene Modul ersetzen.  
+ Im folgenden Beispiel werden die Standard Authentifizierungs Module aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.  
   
 ```xml  
 <configuration>  

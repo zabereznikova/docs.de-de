@@ -3,18 +3,18 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 165dbed1b78d00f8d4dd3e482b9fee8a23db60da
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399615"
 ---
-# <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
+# \<serviceHostingEnvironment>
 Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen bestimmten Transport instanziiert wird. Falls dieses Element leer ist, wird der Standardtyp verwendet. Dieses Element kann nur über die Anwendungskonfigurationsdatei bzw. die Computerkonfigurationsdatei verwendet werden.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<servicehoststingenvironment->**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceHostingEnvironment>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,11 +41,11 @@ Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen b
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Ein boolescher Wert, der angibt, ob der ASP.NET-Kompatibilitätsmodus für die aktuelle Anwendung aktiviert wurde. Die Standardeinstellung ist `false`.<br /><br /> Wenn dieses Attribut auf `true`festgelegt ist, werden Anforderungen an Windows Communication Foundation (WCF)-Dienste über die ASP.NET-HTTP-Pipeline geleitet, und die Kommunikation über nicht-HTTP-Protokolle ist unzulässig. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](../../../wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Eine ganze Zahl, die den minimalen freien Speicherplatz angibt, der für das System verfügbar sein sollte, bevor ein WCF-Dienst aktiviert werden kann. **Vorsicht**:  Wenn Sie dieses Attribut zusammen mit teilweiser Vertrauenswürdigkeit in der Datei "Web. config" eines WCF- <xref:System.Security.SecurityException> Diensts angeben, führt dies zu einer, wenn der Dienst ausgeführt wird.|  
-|multipleSiteBindingsEnabled|Ein boolescher Wert, der angibt, ob mehrere IIS-Bindungen pro Website aktiviert sind.<br /><br /> IIS besteht aus Websites, die als Container für virtuelle Anwendungen fungieren, die virtuelle Verzeichnisse enthalten. Auf die Anwendung auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden. IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen. Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website. Ein Beispiel für ein Bindungsprotokoll kann HTTP sein, wohingegen Bindungsinformationen eine IP-Adresse, einen Port, einen Hostheader usw. enthalten können.<br /><br /> IIS unterstützt die Angabe mehrerer IIS-Bindungen pro Website, was zu mehreren Basisadressen pro Schema führt. Ein Windows Communication Foundation (WCF)-Dienst, der unter einer Site gehostet wird, ermöglicht jedoch nur das Binden an eine BaseAddress pro Schema.<br /><br /> Um mehrere IIS-Bindungen pro Website für einen Windows Communication Foundation (WCF)-Dienst zu aktivieren, legen `true`Sie dieses Attribut auf fest. Beachten Sie, dass mehrere Bindungen pro Website nur für das HTTP-Protokoll unterstützt werden. Die Adresse der Endpunkte in der Konfigurationsdatei muss ein vollständiger URI sein.|  
+|aspNetCompatibilityEnabled|Ein boolescher Wert, der angibt, ob der ASP.NET-Kompatibilitätsmodus für die aktuelle Anwendung aktiviert wurde. Der Standardwert lautet `false`.<br /><br /> Wenn dieses Attribut auf festgelegt ist `true` , werden Anforderungen an Windows Communication Foundation (WCF)-Dienste über die ASP.NET-HTTP-Pipeline geleitet, und die Kommunikation über nicht-HTTP-Protokolle ist unzulässig. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](../../../wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Eine ganze Zahl, die den minimalen freien Speicherplatz angibt, der für das System verfügbar sein sollte, bevor ein WCF-Dienst aktiviert werden kann. **Vorsicht:**  Wenn Sie dieses Attribut zusammen mit teilweiser Vertrauenswürdigkeit in der Datei "Web. config" eines WCF-Diensts angeben, führt dies zu einer, <xref:System.Security.SecurityException> Wenn der Dienst ausgeführt wird.|  
+|multipleSiteBindingsEnabled|Ein boolescher Wert, der angibt, ob mehrere IIS-Bindungen pro Website aktiviert sind.<br /><br /> IIS besteht aus Websites, die als Container für virtuelle Anwendungen fungieren, die virtuelle Verzeichnisse enthalten. Auf die Anwendung auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden. IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen. Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website. Ein Beispiel für ein Bindungsprotokoll kann HTTP sein, wohingegen Bindungsinformationen eine IP-Adresse, einen Port, einen Hostheader usw. enthalten können.<br /><br /> IIS unterstützt die Angabe mehrerer IIS-Bindungen pro Website, was zu mehreren Basisadressen pro Schema führt. Ein Windows Communication Foundation (WCF)-Dienst, der unter einer Site gehostet wird, ermöglicht jedoch nur das Binden an eine BaseAddress pro Schema.<br /><br /> Um mehrere IIS-Bindungen pro Website für einen Windows Communication Foundation (WCF)-Dienst zu aktivieren, legen Sie dieses Attribut auf fest `true` . Beachten Sie, dass mehrere Bindungen pro Website nur für das HTTP-Protokoll unterstützt werden. Die Adresse der Endpunkte in der Konfigurationsdatei muss ein vollständiger URI sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -61,8 +61,8 @@ Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen b
 |-------------|-----------------|  
 |serviceModel|Das Stammelement aller Windows Communication Foundation (WCF)-Konfigurationselemente.|  
   
-## <a name="remarks"></a>Hinweise  
- WCF-Dienste werden in gehosteten Anwendungsdomänen (AppDomain) standardmäßig zusammen mit ASP.NET ausgeführt. Selbst wenn WCF und ASP.NET in derselben AppDomain gleichzeitig ausgeführt werden können, werden die WCF-Anforderungen nicht standardmäßig von der ASP.NET-HTTP-Pipeline verarbeitet. Folglich stehen einige Elemente der ASP.NET-Anwendungsplattform nicht für WCF-Dienste zur Verfügung. Dazu gehören  
+## <a name="remarks"></a>Bemerkungen  
+ WCF-Dienste werden in gehosteten Anwendungsdomänen (AppDomain) standardmäßig zusammen mit ASP.NET ausgeführt. Selbst wenn WCF und ASP.NET in derselben AppDomain gleichzeitig ausgeführt werden können, werden die WCF-Anforderungen nicht standardmäßig von der ASP.NET-HTTP-Pipeline verarbeitet. Folglich stehen einige Elemente der ASP.NET-Anwendungsplattform nicht für WCF-Dienste zur Verfügung. Dies sind:  
   
 - ASP.NET-Datei-/URL-Autorisierung  
   
@@ -93,7 +93,7 @@ Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen b
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

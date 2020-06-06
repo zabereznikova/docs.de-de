@@ -9,20 +9,20 @@ helpviewer_keywords:
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 ms.openlocfilehash: a339638587f8b544bbc1b0073553f6232ce09694
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71699778"
 ---
-# <a name="nameentry-element"></a>\<nameEntry > Element
+# <a name="nameentry-element"></a>\<nameEntry>-Element
 Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann eine Klasse über viele Anzeigenamen verfügen.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<mscorlib->** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<nameEntry >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<nameEntry>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,17 +31,17 @@ Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann ei
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
+ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**name**|Erforderliches Attribut.<br /><br /> Gibt den anzeigen amen des von der Kryptografieklasse implementierten Algorithmus an.|  
-|**Klasse**|Erforderliches Attribut.<br /><br /> Gibt den Wert für das **Name** -Attribut im [\<cryptoClass >](cryptoclass-element.md) -Element an.|  
+|**class**|Erforderliches Attribut.<br /><br /> Gibt den Wert für das **Name** -Attribut im- [\<cryptoClass>](cryptoclass-element.md) Element an.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -50,11 +50,11 @@ Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann ei
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.web`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|  
   
-## <a name="remarks"></a>Hinweise  
- Das **Name** -Attribut kann der Name einer der abstrakten Klassen sein, die im <xref:System.Security.Cryptography>-Namespace gefunden werden. Wenn Sie die **Create** -Methode für eine abstrakte Kryptografieklasse aufzurufen, wird der abstrakte Klassenname an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>-Methode weitergegeben. " **Kreatefromname** " gibt eine Instanz des Typs zurück, der durch das **Class** -Attribut angegeben wird. Wenn das **Name** -Attribut ein Kurzname ist (z. b. RSA), können Sie diesen Namen verwenden, wenn Sie die **CreateFromName** -Methode aufrufen.  
+## <a name="remarks"></a>Bemerkungen  
+ Das **Name** -Attribut kann der Name einer der abstrakten Klassen sein, die im- <xref:System.Security.Cryptography> Namespace gefunden werden. Wenn Sie die **Create** -Methode für eine abstrakte Kryptografieklasse aufzurufen, wird der abstrakte Klassenname an die-Methode weitergegeben <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> . " **Kreatefromname** " gibt eine Instanz des Typs zurück, der durch das **Class** -Attribut angegeben wird. Wenn das **Name** -Attribut ein Kurzname ist (z. b. RSA), können Sie diesen Namen verwenden, wenn Sie die **CreateFromName** -Methode aufrufen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<nameEntry >** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<nameEntry>** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode übergeben und die- <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> Methode verwenden, um ein-Objekt zurückzugeben `MyCryptoRSAClass` .  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann ei
 ## <a name="see-also"></a>Siehe auch
 
 - [Konfigurationsdateischema](../index.md)
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
-- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
+- [Schema für Kryptografieeinstellungen](index.md)
+- [Kryptografiedienste](../../../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

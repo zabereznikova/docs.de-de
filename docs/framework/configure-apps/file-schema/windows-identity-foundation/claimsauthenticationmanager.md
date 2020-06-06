@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
 ms.openlocfilehash: a54fc2cea84bb9d08a9725d846fe38efd7b5475a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152748"
 ---
-# <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
-Registriert einen Anspruchsauthentifizierungs-Manager für die eingehenden Ansprüche.  
+# \<claimsAuthenticationManager>
+Registriert einen anspruchsauthentifizierungs-Manager für die eingehenden Ansprüche.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimsAuthenticationManager>**  
@@ -33,25 +33,25 @@ Registriert einen Anspruchsauthentifizierungs-Manager für die eingehenden Anspr
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|type|Gibt einen benutzerdefinierten Typ an, <xref:System.Security.Claims.ClaimsAuthenticationManager> der von der Klasse abstammt. Weitere Informationen zum Angeben `type` des Attributs finden Sie unter [Benutzerdefinierte Typreferenzen].|  
+|type|Gibt einen benutzerdefinierten Typ an, der von der-Klasse abgeleitet wird <xref:System.Security.Claims.ClaimsAuthenticationManager> . Weitere Informationen zum Angeben des- `type` Attributs finden Sie unter [Custom Type References].|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Wenn `type` kein Attribut vorhanden ist `type` oder <xref:System.Security.Claims.ClaimsAuthenticationManager> das Attribut `<claimsAuthenticationManager>` auf die Klasse verweist, nimmt das Element keine untergeordneten Elemente an. Von Klassen abgeleitete Klassen <xref:System.Security.Claims.ClaimsAuthenticationManager> können jedoch untergeordnete Konfigurationselemente definieren.  
+ Wenn kein-Attribut vorhanden ist `type` , oder wenn das- `type` Attribut auf die- <xref:System.Security.Claims.ClaimsAuthenticationManager> Klasse verweist, nimmt das- `<claimsAuthenticationManager>` Element keine untergeordneten Elemente an. von abgeleitete Klassen können jedoch untergeordnete <xref:System.Security.Claims.ClaimsAuthenticationManager> Konfigurationselemente definieren.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](identityconfiguration.md)|Gibt Identitätseinstellungen auf Dienstebene an.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Gibt Identitäts Einstellungen auf Dienst Ebene an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das Standardverhalten, <xref:System.Security.Claims.ClaimsAuthenticationManager> das über die Klasse bereitgestellt wird, spiegelt die eingehenden Ansprüche wider. Wenn `type` kein Attribut angegeben `type` ist oder <xref:System.Security.Claims.ClaimsAuthenticationManager> wenn das `<claimsAuthenticationManager>` Attribut die Klasse angibt, nimmt das Element keine untergeordneten Elemente an. Sie können `type` das Attribut angeben, um <xref:System.Security.Claims.ClaimsAuthenticationManager> einen von der Klasse abgeleiteten Typ zu registrieren, um benutzerdefiniertes Verhalten zu implementieren. Abgeleitete Klassen können die Konfiguration `<claimsAuthenticationManager>` über untergeordnete <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> Elemente des Elements unterstützen, indem die Methode zum Behandeln dieser Elemente überschreibt wird. Das für die untergeordneten Elemente definierte Schema hängt vom Designer der Klasse ab.  
+ Das von der-Klasse bereitgestellte Standardverhalten gibt <xref:System.Security.Claims.ClaimsAuthenticationManager> die eingehenden Ansprüche wieder. Wenn kein- `type` Attribut angegeben wird oder wenn das- `type` Attribut die- <xref:System.Security.Claims.ClaimsAuthenticationManager> Klasse angibt, nimmt das- `<claimsAuthenticationManager>` Element keine untergeordneten Elemente an. Sie können das `type` Attribut angeben, um einen von der-Klasse abgeleiteten Typ <xref:System.Security.Claims.ClaimsAuthenticationManager> zu registrieren, um benutzerdefiniertes Verhalten zu implementieren Abgeleitete Klassen können die Konfiguration durch untergeordnete Elemente des-Elements unterstützen `<claimsAuthenticationManager>` , indem Sie die- <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> Methode zum Verarbeiten dieser Elemente überschreiben. Das Schema, das für die untergeordneten Elemente definiert ist, ist der Designer der-Klasse.  
   
- Das `<claimsAuthenticationManager>` Element <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> legt die Eigenschaft fest.  
+ Das- `<claimsAuthenticationManager>` Element legt die- <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> Eigenschaft fest.  
   
 ## <a name="example"></a>Beispiel  
   

@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
 ms.openlocfilehash: 47d432a84d070476ddffd9b98a4ba46d8163bdc3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152813"
 ---
-# <a name="certificatereference"></a>\<certificateReferenz>
-Gibt Einstellungen an, die zum Suchen und Überprüfen eines X.509-Zertifikats in einem Zertifikatspeicher verwendet werden.  
+# \<certificateReference>
+Gibt Einstellungen an, die verwendet werden, um ein X. 509-Zertifikat in einem Zertifikat Speicher zu suchen und zu überprüfen.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<FederationConfiguration>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<federationConfiguration>**](federationconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateReferenz>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateReference>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,15 +40,15 @@ Gibt Einstellungen an, die zum Suchen und Überprüfen eines X.509-Zertifikats i
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|storeName|Der Namen des X.509-Zertifikatsspeichers. Der Standardwert ist "Mein". Optional.|  
-|storeLocation|Ein <xref:System.Security.Cryptography.X509Certificates.StoreLocation> Wert, der den Speicherort des X.509-Zertifikatspeichers angibt. Der Standardwert ist "LocalMachine". Optional.|  
-|x509FindType|Ein <xref:System.Security.Cryptography.X509Certificates.X509FindType> Wert, der den Suchtyp angibt, der ausgeführt werden soll. Der Standardwert ist "FindBySubjectDistinguishedName". Optional.|  
-|findValue|Der Wert, nach dem im X.509-Zertifikatspeicher gesucht werden soll. Optional.|  
-|isChainIncluded|Gibt an, ob die Validierung mithilfe der Zertifikatkette durchgeführt werden soll. Der Standardwert ist "true"; Die Validierung wird mithilfe der Zertifikatkette durchgeführt. Optional.|  
+|storeName|Der Namen des X.509-Zertifikatsspeichers. Der Standardwert ist "My". (Optional)|  
+|storeLocation|Ein- <xref:System.Security.Cryptography.X509Certificates.StoreLocation> Wert, der den Speicherort des X. 509-Zertifikat Speicher angibt. Der Standardwert ist "LocalMachine". (Optional)|  
+|x509FindType|Ein- <xref:System.Security.Cryptography.X509Certificates.X509FindType> Wert, der den Typ der auszuführenden Suche angibt. Der Standardwert ist "findbysubjeterkennbare shedname". (Optional)|  
+|findValue|Der Wert, nach dem im X.509-Zertifikatspeicher gesucht werden soll. (Optional)|  
+|isChainIncluded|Gibt an, ob die Überprüfung mithilfe der Zertifikat Kette durchgeführt werden soll. Der Standardwert ist "true". die Überprüfung erfolgt mithilfe der Zertifikat Kette. (Optional)|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -57,7 +57,7 @@ Gibt Einstellungen an, die zum Suchen und Überprüfen eines X.509-Zertifikats i
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](servicecertificate.md)|Konfiguriert das Zertifikat, das zum Ver- und Entschlüsseln von Token verwendet wird.|  
+|[\<serviceCertificate>](servicecertificate.md)|Konfiguriert das Zertifikat, das zum Verschlüsseln und Entschlüsseln von Token verwendet wird.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das `<certificateReference>` Element gibt Einstellungen an, die zum Suchen und Überprüfen eines X.509-Zertifikats in einem Zertifikatspeicher verwendet werden. Wenn es als untergeordnetes Element `<serviceCertificate>` des Elements angegeben wird, gibt es den Speicherort und die Überprüfungseinstellungen des X.509-Zertifikats an, das zum Ver- und Entschlüsseln von Token verwendet wird. Das `<certificateReference>` Element wird <xref:System.ServiceModel.Configuration.CertificateReferenceElement> durch die Klasse dargestellt.
+ Das- `<certificateReference>` Element gibt Einstellungen an, die verwendet werden, um ein X. 509-Zertifikat in einem Zertifikat Speicher zu suchen und zu überprüfen. Wenn es als untergeordnetes Element des-Elements angegeben ist `<serviceCertificate>` , gibt es den Speicherort und die Überprüfungs Einstellungen des X. 509-Zertifikats an, das zum Verschlüsseln und Entschlüsseln von Token verwendet wird. Das- `<certificateReference>` Element wird durch die- <xref:System.ServiceModel.Configuration.CertificateReferenceElement> Klasse dargestellt.

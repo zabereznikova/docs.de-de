@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283072"
 ---
-# <a name="gcheapcount-element"></a>\<gcheapcount > Element
+# <a name="gcheapcount-element"></a>\<GCHeapCount>-Element
 
 Gibt die Anzahl von Heaps/Threads an, die für Server Garbage Collection verwendet werden sollen.
 
-\<Konfigurations > \
-&nbsp;&nbsp;\<Lauf Zeit > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<gcheapcount >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,23 +28,23 @@ Gibt die Anzahl von Heaps/Threads an, die für Server Garbage Collection verwend
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.
+In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
 
 ### <a name="attributes"></a>Attribute
 
-|Attribut|Beschreibung|
+|attribute|BESCHREIBUNG|
 |---------------|-----------------|
 |`enabled`|Erforderliches Attribut.<br /><br />Gibt die Anzahl von Heaps an, die für Server Garbage Collection verwendet werden sollen. Die tatsächliche Anzahl von Heaps ist die Mindestanzahl der von Ihnen angegebenen Heaps und der Anzahl der Prozessoren, die Ihr Prozess verwenden darf. |
 
 #### <a name="enabled-attribute"></a>aktiviertes Attribut
 
-|Wert|Beschreibung|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|
 |`nn`|Die Anzahl von Heaps, die für Server-GC verwendet werden sollen.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
@@ -53,7 +53,7 @@ Keine.
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Standardmäßig werden Server-GC-Threads mit ihrer jeweiligen CPU hart verknüpft, sodass ein GC-Heap, ein Server-GC-Thread und ein Thread Server-GC-Thread für jeden Prozessor vorhanden ist. Ab .NET Framework 4.6.2 können Sie das **gcheapcount** -Element verwenden, um die Anzahl von Heaps einzuschränken, die von der Anwendung für die Server-GC verwendet werden. Das Einschränken der Anzahl von Heaps, die für Server GC verwendet werden, ist besonders nützlich für Systeme, die mehrere Instanzen einer Serveranwendung ausführen.
 
@@ -93,7 +93,7 @@ Im folgenden Beispiel werden Server-GC-Threads nicht zugeordnet und die Anzahl d
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Gcnoaffinitize-Element](gcnoaffinitize-element.md)
