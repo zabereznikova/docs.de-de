@@ -3,18 +3,18 @@ title: <schemeSettings>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: c745c90bb61b9ee393687d7f6db4fd11565c7dc7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154646"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings>-Element (URI-Einstellungen)
 Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.  
   
-[**\<Konfiguration>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<schemeEinstellungen>**  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<schemeSettings>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,43 +26,43 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Hinzufügen](add-element-for-schemesettings-uri-settings.md)|Fügt eine Schemaeinstellung für einen Schemanamen hinzu.|  
-|[Klar](clear-element-for-schemesettings-uri-settings.md)|Löscht alle vorhandenen Schemaeinstellungen.|  
-|[Entfernen](remove-element-for-schemesettings-uri-settings.md)|Entfernt eine Schemaeinstellung für einen Schemanamen.|  
+|[add](add-element-for-schemesettings-uri-settings.md)|Fügt eine Schema Einstellung für einen Schema Namen hinzu.|  
+|[Löschen](clear-element-for-schemesettings-uri-settings.md)|Löscht alle vorhandenen Schema Einstellungen.|  
+|[remove](remove-element-for-schemesettings-uri-settings.md)|Entfernt eine Schema Einstellung für einen Schema Namen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Uri](uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie .NET Framework Webadressen verarbeitet, die mithilfe einheitlicher Ressourcenbezeichner (URIs) ausgedrückt werden.|  
+|[uri](uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbeitet, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Standardmäßig entweicht <xref:System.Uri?displayProperty=nameWithType> die Klasse prozentweise codierte Pfadtrennzeichen, bevor die Pfadkomprimierung ausgeführt wird. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgenden implementiert:  
+ Standardmäßig werden von der- <xref:System.Uri?displayProperty=nameWithType> Klasse in Prozent codierte Pfad Trennzeichen vor dem Ausführen der Pfad Komprimierung aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Wenn dieser URI an Module weitergegeben wird, die prozentisch codierte Zeichen nicht korrekt verarbeiten, kann dies dazu führen, dass der folgende Befehl vom Server ausgeführt wird:  
+ Wenn dieser URI an Module übermittelt wird, die Prozent codierte Zeichen nicht ordnungsgemäß verarbeiten, kann dies dazu führen, dass der folgende Befehl vom Server ausgeführt wird:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Aus diesem <xref:System.Uri?displayProperty=nameWithType> Grund werden Pfadtrennzeichen der Klasse zuerst nicht entweichen und dann die Pfadkomprimierung angewendet. Das Ergebnis der Übergabe der <xref:System.Uri?displayProperty=nameWithType> schädlichen URL oben an den Klassenkonstruktor führt zu folgendem URI:  
+ Aus diesem Grund werden von der-Klasse zuerst Pfad Trennzeichen aufgehoben, <xref:System.Uri?displayProperty=nameWithType> und anschließend wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an den <xref:System.Uri?displayProperty=nameWithType> Klassenkonstruktor führt zum folgenden URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Dieses Standardverhalten kann mithilfe der Konfigurationsoption schemeSettings für ein bestimmtes Schema geändert werden, um nicht das Escape-Prozent-codierte Pfadtrennzeichen zu entführen.  
+ Dieses Standardverhalten kann so geändert werden, dass keine Escapezeichen für Prozent codierte Pfad Trennzeichen verwendet werden, indem die SchemeSettings-Konfigurationsoption für ein bestimmtes Schema verwendet wird.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine <xref:System.Uri> Konfiguration, die von der Klasse verwendet wird, um nicht aus percentcodierte Pfadtrennzeichen für das http-Schema zu entkommen.  
+ Das folgende Beispiel zeigt eine Konfiguration, die von der-Klasse verwendet wird <xref:System.Uri> , um das Escapezeichen für Prozent codierte Pfade für das http-Schema zu unterstützen.  
   
 ```xml  
 <configuration>  

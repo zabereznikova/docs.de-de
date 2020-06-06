@@ -3,20 +3,20 @@ title: <workflow>von WCF
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
 ms.openlocfilehash: c6c9e14a4ad3d9713ae2d35d6ade20690e0c3575
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69932793"
 ---
-# <a name="workflow-of-wcf"></a>\<Workflow > von WCF
+# <a name="workflow-of-wcf"></a>\<workflow>von WCF
 Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit ausgegebenen Nachverfolgungsdatensätzen lauscht und sie entsprechend der Weise verarbeitet, wie er konfiguriert wurde. Dies umfasst das Schreiben in ein bestimmtes Ausgabemedium (z. B. Datei, Konsole, ETW), das Verarbeiten/Aggregieren der Datensätze oder eine beliebige andere Kombination, die erforderlich sein könnte.  
   
  Weitere Informationen zur Workflow Nachverfolgung und Nachverfolgung von Teilnehmern finden Sie unter [Workflow Verfolgung und Ablauf](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) Verfolgung und nach [Verfolgung von Teilnehmern](../../../windows-workflow-foundation/tracking-participants.md).  
   
  \<system.serviceModel>  
-\<Überwachungs >  
-\<Teilnehmer >  
+\<tracking>  
+\<participants>  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,22 +36,22 @@ Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit au
   
 ### <a name="attributes"></a>Attribute  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|Name|Eine Zeichenfolge, die den Namen eines Nachverfolgungsteilnehmers angibt.|  
+|name|Eine Zeichenfolge, die den Namen eines Nachverfolgungsteilnehmers angibt.|  
 |profileName|Eine Zeichenfolge, die den Namen des Nachverfolgungsprofils angibt. Dieses Profil definiert die Nachverfolgungsdatensätze, die der Nachverfolgungsteilnehmer abonniert hat.|  
-|Typ|Eine Zeichenfolge, die den Typ eines Nachverfolgungsteilnehmers angibt.|  
+|type|Eine Zeichenfolge, die den Typ eines Nachverfolgungsteilnehmers angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<participants>](../windows-workflow-foundation/participants.md)|Eine Liste von Nachverfolgungsteilnehmern|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Nachverfolgungsteilnehmer werden verwendet, um die vom Workflow ausgegebenen Nachverfolgungsdaten zu erfassen und in verschiedenen Medien zu speichern. Außerdem kann jede Nachverarbeitung der Nachverfolgungsdatensätze auch innerhalb des Nachverfolgungsteilnehmers erfolgen.  
   
  Die Nachverfolgungsereignisse können von mehreren Nachverfolgungsteilnehmern gleichzeitig verarbeitet werden. Jedem Nachverfolgungsteilnehmer kann ein anderes Nachverfolgungsprofil zugeordnet sein.  
@@ -88,7 +88,7 @@ Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit au
 </configuration>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>

@@ -3,10 +3,10 @@ title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
 ms.openlocfilehash: c421273d1d08db047a51f1f1e4f9d6c908f12986
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84201785"
 ---
 # \<serviceMetadata>
@@ -39,7 +39,7 @@ Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informatione
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|BESCHREIBUNG|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |externalMetadataLocation|Ein URI, der den Speicherort einer WSDL-Datei enthält, die dem Benutzer als Antwort auf WSDL- und MEX-Anforderungen statt der automatisch generierten WSDL-Datei zurückgegeben wird. Wenn dieses Attribut nicht festgelegt wird, wird die WSDL-Standarddatei zurückgegeben. Der Standardwert ist eine leere Zeichenfolge.|  
 |httpGetBinding|Eine Zeichenfolge, die den Typ der Bindung angibt, die für den Abruf von Metadaten mit HTTP GET verwendet wird. Diese Einstellung ist optional. Wenn nicht angegeben, werden die Standardbindungen verwendet.<br /><br /> Nur Bindungen mit inneren Bindungselementen, die <xref:System.ServiceModel.Channels.IReplyChannel> unterstützen, werden unterstützt. Darüber hinaus muss die <xref:System.ServiceModel.Channels.MessageVersion>-Eigenschaft der Bindung <xref:System.ServiceModel.Channels.MessageVersion.None%2A> lauten.|  
@@ -61,7 +61,7 @@ Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informatione
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mit diesem Konfigurationselement können Sie die Metadatenveröffentlichungs-Funktionen eines Diensts steuern. Um eine unbeabsichtigte Offenlegung von potenziell sensiblen Dienst Metadaten zu verhindern, wird die Metadatenveröffentlichung durch die Standardkonfiguration für Windows Communication Foundation (WCF)-Dienste deaktiviert. Dieses Verhalten ist in der Standardeinstellung sicher, bedeutet aber auch, dass man den zum Aufrufen des Diensts erforderlichen Clientcode nicht mithilfe eines Tools zum Importieren von Metadaten (wie Svcutil.exe) generieren kann. Dies ist nur dann möglich, wenn das Verhalten des Diensts zum Veröffentlichen von Metadaten in der Konfiguration explizit aktiviert ist. Wenn Sie dieses Konfigurationselement verwenden, können Sie dieses Veröffentlichungsverhalten für Ihren Dienst aktivieren.  
   
  Ein ausführliches Beispiel für die Konfiguration dieses Verhaltens finden Sie unter [Verhalten beim Veröffentlichen von Metadaten](../../../wcf/samples/metadata-publishing-behavior.md).  
@@ -117,7 +117,7 @@ Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informatione
 </configuration>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>

@@ -3,19 +3,19 @@ title: <filters> von <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
 ms.openlocfilehash: c9bc3a2c379e14d8cf687676a3ec40702d150e1e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855240"
 ---
-# <a name="filters-of-routing"></a>\<filtert > \<der Routing >
+# <a name="filters-of-routing"></a>\<filters> von \<routing>
 
-Stellt einen Konfigurations Abschnitt zum Definieren eines Satzes von Routing Filtern dar, die den Typ des Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der bei der Auswertung eingehender Nachrichten verwendet werden soll.
+Stellt einen Konfigurations Abschnitt zum Definieren eines Satzes von Routing Filtern dar, die den Typ des Windows Communication Foundation (WCF) bestimmen, der <xref:System.ServiceModel.Dispatcher.MessageFilter> bei der Auswertung eingehender Nachrichten verwendet werden soll.
 
-[ **\<system.serviceModel>** ](system-servicemodel.md)\
-&nbsp;&nbsp;[ **\<Routing >** ](routing.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Filter >**  
+[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;[**\<routing>**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +38,20 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="attributes"></a>Attribute
 
-None
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
-| [ **\<filter>** ](filter.md) | Enthält einen Routing Filter, der den Typ des Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmt, der beim Auswerten eingehender Nachrichten verwendet wird. |
+| [**\<filter>**](filter.md) | Enthält einen Routing Filter, der den Typ des Windows Communication Foundation (WCF) bestimmt, der <xref:System.ServiceModel.Dispatcher.MessageFilter> beim Auswerten eingehender Nachrichten verwendet wird. |
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
-| [ **\<Routing >** ](routing.md) | Stellt einen Konfigurations Abschnitt zum Definieren eines Satzes von Routing Filtern dar, die den Typ des Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der bei der Auswertung eingehender Nachrichten verwendet werden soll, sowie Routing Tabellen, die die Ziel Endpunkte definieren. Senden von Nachrichten an, wenn ein Filter übereinstimmt. |
+| [**\<routing>**](routing.md) | Stellt einen Konfigurations Abschnitt zum Definieren eines Satzes von Routing Filtern dar, die den Typ des Windows Communication Foundation (WCF) bestimmen, der <xref:System.ServiceModel.Dispatcher.MessageFilter> bei der Auswertung eingehender Nachrichten verwendet werden soll, sowie Routing Tabellen, die die Ziel Endpunkte definieren, an die Nachrichten gesendet werden sollen, wenn ein Filter übereinstimmt. |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

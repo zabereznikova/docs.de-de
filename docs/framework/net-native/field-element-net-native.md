@@ -3,13 +3,13 @@ title: <Field>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128418"
 ---
-# <a name="field-element-net-native"></a>\<Feld > Element (.net Native)
+# <a name="field-element-net-native"></a>\<Field>-Element (.net Native)
 Wendet eine Laufzeitreflektionrichtlinie auf ein Feld an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,7 +26,7 @@ Wendet eine Laufzeitreflektionrichtlinie auf ein Feld an.
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Feldnamen an.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen nach Informationen über das Feld oder das Auflisten des Felds, aber ermöglicht keinen dynamischen Zugriff zur Laufzeit.|  
@@ -35,13 +35,13 @@ Wendet eine Laufzeitreflektionrichtlinie auf ein Feld an.
   
 ## <a name="name-attribute"></a>Namensattribut  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|*method_name*|Der Feldname. Der Typ des Felds wird durch das übergeordnete [\<Type>](type-element-net-native.md)- oder [\<TypeInstantiation>](typeinstantiation-element-net-native.md)-Element definiert.|  
+|*method_name*|Der Name des Felds. Der Typ des Felds wird durch das übergeordnete- [\<Type>](type-element-net-native.md) oder- [\<TypeInstantiation>](typeinstantiation-element-net-native.md) Element definiert.|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für das Feld angewendet werden soll. Mögliche Werte sind `Auto`, `Excluded`, `Included` und `Required`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
@@ -50,16 +50,16 @@ Wendet eine Laufzeitreflektionrichtlinie auf ein Feld an.
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Richtlinie eines Felds nicht explizit definiert ist, erbt es die Laufzeitrichtlinie des übergeordneten Elements.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)

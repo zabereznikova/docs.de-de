@@ -3,18 +3,18 @@ title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
 ms.openlocfilehash: 4a3a17655f5469fe84c0b684ebdac9848bbfba84
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397695"
 ---
-# <a name="nettcp"></a>\<net.tcp>
+# \<net.tcp>
 Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, der ermöglicht, dass mehrere Prozesse den gleichen TCP-Anschluss nutzen.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model. Activation->** ](system-servicemodel-activation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<NET. TCP->**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<net.tcp>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, de
 </configuration>
 ```  
   
-## <a name="type"></a>Typ  
+## <a name="type"></a>type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -51,13 +51,13 @@ Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, de
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|`listenBacklog`|Eine ganze Zahl, die die maximale Anzahl ausstehender Verbindungen angibt, die von der freigegebenen Verbindung angenommen werden, aber noch nicht an Windows Communication Foundation (WCF)-Dienste weitergeleitet werden. Der Standard ist 10.|  
-|`maxPendingAccepts`|Eine ganze Zahl, die den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst festlegt. Der Standardwert ist&#160;2.|  
-|`MaxPendingConnections`|Die maximale Anzahl von Verbindungen, die für einen Listener darauf warten können, von der Anwendung angenommen zu werden. Wenn dieser Kontingentwert überstiegen wird, werden neue eingehende Verbindungen gelöscht, statt weiter auf die Annahme zu warten. Verbindungsfunktionen, wie Nachrichtensicherheit, können dazu führen, dass ein Client mehr als eine Verbindung öffnet. Dienstadministratoren sollten diese zusätzlichen Verbindungen bei der Einrichtung des Kontingentwerts berücksichtigen. Der Standard ist 10.|  
+|`listenBacklog`|Eine ganze Zahl, die die maximale Anzahl ausstehender Verbindungen angibt, die von der freigegebenen Verbindung angenommen werden, aber noch nicht an Windows Communication Foundation (WCF)-Dienste weitergeleitet werden. Der Standardwert ist 10.|  
+|`maxPendingAccepts`|Eine ganze Zahl, die den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst festlegt. Der Standardwert ist 2.|  
+|`MaxPendingConnections`|Die maximale Anzahl von Verbindungen, die für einen Listener darauf warten können, von der Anwendung angenommen zu werden. Wenn dieser Kontingentwert überstiegen wird, werden neue eingehende Verbindungen gelöscht, statt weiter auf die Annahme zu warten. Verbindungsfunktionen, wie Nachrichtensicherheit, können dazu führen, dass ein Client mehr als eine Verbindung öffnet. Dienstadministratoren sollten diese zusätzlichen Verbindungen bei der Einrichtung des Kontingentwerts berücksichtigen. Der Standardwert ist 10.|  
 |`receiveTimeout`|Eine <xref:System.TimeSpan>, die das Timeout für das Lesen der Rahmendaten und das Ausführen der Verbindungsverteilung der zugrunde liegenden Verbindungen angibt. Der Standardwert ist "00:00:10".|  
-|`teredoEnabled`|Ein boolescher Wert, der angibt, ob der Port Freigabe Dienst den Microsoft Teredo-Dienst verwendet, um im Auftrag von WCF-Diensten TCP-Ports zu lauschen. Die Standardeinstellung ist `false`.|  
+|`teredoEnabled`|Ein boolescher Wert, der angibt, ob der Port Freigabe Dienst den Microsoft Teredo-Dienst verwendet, um im Auftrag von WCF-Diensten TCP-Ports zu lauschen. Der Standardwert lautet `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -71,11 +71,11 @@ Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, de
 |-------------|-----------------|  
 |[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Enthält Konfigurationseinstellungen für den Listenerprozess SMSvcHost.exe.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zur Port Freigabe finden Sie unter [net. TCP-Port Freigabe](../../../wcf/feature-details/net-tcp-port-sharing.md). Informationen zum Konfigurieren des Port Freigabe diensdienstanbieter finden Sie unter [Konfigurieren des net. TCP-Port Freigabe Dienstanbieter](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
-- [Net.TCP-Portfreigabe](../../../wcf/feature-details/net-tcp-port-sharing.md)
+- [Net.TCP-Anschlussfreigabe](../../../wcf/feature-details/net-tcp-port-sharing.md)
 - [Konfigurieren des Net.TCP-Portfreigabediensts](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

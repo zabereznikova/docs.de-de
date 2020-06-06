@@ -11,19 +11,19 @@ helpviewer_keywords:
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 ms.openlocfilehash: 39ce85c3c15a2d4bdfce801a35e9ca088bd5091b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154737"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<Entfernen> Element für ConnectionManagement (Netzwerkeinstellungen)
-Entfernt eine IP-Adresse oder einen DNS-Namen aus der Verbindungsverwaltungsliste.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<remove>-Element für connectionManagement (Netzwerkeinstellungen)
+Entfernt eine IP-Adresse oder einen DNS-Namen aus der Verbindungs Verwaltungsliste.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<entfernen sie>**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -36,14 +36,14 @@ Entfernt eine IP-Adresse oder einen DNS-Namen aus der Verbindungsverwaltungslist
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
 |`address`|Eine IP-Adresse oder ein DNS-Name.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -52,15 +52,15 @@ Entfernt eine IP-Adresse oder einen DNS-Namen aus der Verbindungsverwaltungslist
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das `remove` Element entfernt den Verbindungsverwaltungslisteneintrag für den angegebenen Server.  
+ Das- `remove` Element entfernt den Verbindungs Verwaltungs Listeneintrag für den angegebenen Server.  
   
- Der Wert `address` des Attributs sollte eine gültige IP-Adresse oder ein gültiger Hostname sein.  
+ Der Wert des `address` -Attributs muss eine gültige IP-Adresse oder ein gültiger Hostname sein.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden alle Verbindungsverwaltungslisteneinträge für den Server `www.adventure-works.com` entfernt und dann `www.contoso.com` eine Anwendung so konfiguriert, dass vier Verbindungen zum Server und zwei Verbindungen zu allen anderen Servern verwendet werden.  
+ Im folgenden Beispiel werden alle Verbindungs Verwaltungs Listeneinträge für den-Server entfernt `www.adventure-works.com` . Anschließend wird eine Anwendung so konfiguriert, dass vier Verbindungen mit dem Server `www.contoso.com` und zwei Verbindungen mit allen anderen Servern verwendet werden.  
   
 ```xml  
 <configuration>  

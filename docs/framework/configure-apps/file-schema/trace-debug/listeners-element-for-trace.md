@@ -8,19 +8,19 @@ helpviewer_keywords:
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 ms.openlocfilehash: fd12be1b775d7611ef3f16d23147470313bf9866
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153372"
 ---
-# <a name="listeners-element-for-trace"></a>\<Listener> \<Element für>
-Gibt einen Listener an, der Nachrichten sammelt, speichert und leitet. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel weiter.  
+# <a name="listeners-element-for-trace"></a>\<listeners>-Element für \<trace>
+Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet. Listener leiten die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel weiter.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<Spur>**](trace-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<Hörer>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<listeners>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -35,33 +35,33 @@ Gibt einen Listener an, der Nachrichten sammelt, speichert und leitet. Listener 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
- Keine.  
+### <a name="attributes"></a>Attribute  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|[\<hinzufügen>](add-element-for-listeners-for-trace.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
-|[\<klare>](clear-element-for-listeners-for-trace.md)|Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.|  
-|[\<entfernen sie>](remove-element-for-listeners-for-trace.md)|Entfernt einen Listener `Listeners` aus der Auflistung.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Entfernt einen Listener aus der Auflistung `Listeners` .|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.diagnostics`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|  
 |`trace`|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> und die Klassen verwenden dieselbe **Listeners-Auflistung.** Wenn Sie der Auflistung in einer dieser Klassen ein Listenerobjekt hinzufügen, verwendet die andere Klasse denselben Listener. Die Listenerklassen, die mit .NET Framework <xref:System.Diagnostics.TraceListener> ausgeliefert wurden, leiten sich von der Klasse ab.  
+ Die <xref:System.Diagnostics.Debug> - <xref:System.Diagnostics.Trace> Klasse und die- **Listeners** Klasse verwenden dieselbe Listener-Auflistung. Wenn Sie der Auflistung in einer dieser Klassen ein Listenerobjekt hinzufügen, verwendet die andere Klasse denselben Listener. Die Listenerklassen, die mit dem .NET Framework ausgeliefert werden, werden von der- <xref:System.Diagnostics.TraceListener> Klasse abgeleitet  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Maschinenkonfigurationsdatei (Machine.config) und in der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie die `MyListener` `MyEventListener` ** \<Listener>** Element verwendet werden, um die Listener und die **Listener-Auflistung** hinzuzufügen. `MyListener`erstellt eine `MyListener.log` aufgerufene Datei und schreibt die Ausgabe in die Datei. `MyEventListener`erstellt einen Eintrag im Ereignisprotokoll.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<listeners>** -Element verwendet wird, um die Listener und der Listener-Auflistung hinzuzufügen `MyListener` `MyEventListener` . **Listeners** `MyListener`erstellt eine Datei `MyListener.log` mit dem Namen und schreibt die Ausgabe in die Datei. `MyEventListener`erstellt einen Eintrag im Ereignisprotokoll.  
   
 ```xml  
 <configuration>  
@@ -87,4 +87,4 @@ Gibt einen Listener an, der Nachrichten sammelt, speichert und leitet. Listener 
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Diagnostics.TraceListener>
-- [Ablaufverfolgungs- und Debugeinstellungsschema](index.md)
+- [Schema für Ablaufverfolgungs- und Debugeinstellungen](index.md)

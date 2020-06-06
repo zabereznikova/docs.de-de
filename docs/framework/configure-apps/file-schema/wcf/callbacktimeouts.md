@@ -3,21 +3,21 @@ title: <callbackTimeouts>
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
 ms.openlocfilehash: e1b40718638ded54e59743730159ea6e65a51a57
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398182"
 ---
-# <a name="callbacktimeouts"></a>\<callbackTimeouts>
+# \<callbackTimeouts>
 Gibt den Timeoutwert bei der Weitergabe von Transaktionen vom Server zum Client in einem Duplexrückrufvertragsszenario an.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointverhaltens->** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<callbacktimeouts >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<callbackTimeOuts>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -25,7 +25,7 @@ Gibt den Timeoutwert bei der Weitergabe von Transaktionen vom Server zum Client 
 <callbackTimeOuts transactionTimeout="TimeSpan" />
 ```  
   
-## <a name="type"></a>Typ  
+## <a name="type"></a>type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -33,7 +33,7 @@ Gibt den Timeoutwert bei der Weitergabe von Transaktionen vom Server zum Client 
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`transactionTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall angibt, in dem Transaktionen abgeschlossen oder automatisch beendet werden müssen. Der Standardwert ist "00:00:00".|  
   
@@ -46,6 +46,6 @@ Gibt den Timeoutwert bei der Weitergabe von Transaktionen vom Server zum Client 
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.CallbackTimeoutsElement>

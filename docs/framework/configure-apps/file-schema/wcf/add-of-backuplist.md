@@ -3,21 +3,21 @@ title: <add> von <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
 ms.openlocfilehash: 80726cc22cb56013c85c7704c28579b1337666c9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850552"
 ---
-# <a name="add-of-backuplist"></a>\<> von \<backuplist hinzufügen >
+# <a name="add-of-backuplist"></a>\<add> von \<backupList>
 Stellt ein Konfigurationselement dar, das ein Sicherungsendpunktelement definiert.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Routing >** ](routing.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backuplists->** ](backuplists.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backuplist->** ](backuplist.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<routing>**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<backupLists>**](backuplists.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<backupList>**](backuplist.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,9 +36,9 @@ Stellt ein Konfigurationselement dar, das ein Sicherungsendpunktelement definier
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|NAME|Eine Zeichenfolge, die den Namen des Sicherungsendpunkts angibt.|  
+|name|Eine Zeichenfolge, die den Namen des Sicherungsendpunkts angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -47,8 +47,8 @@ Stellt ein Konfigurationselement dar, das ein Sicherungsendpunktelement definier
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<routing>](routing.md)|Enthält eine Liste von Endpunkten, die der Routing Dienst verwenden soll, falls der primäre Endpunkt nicht erreicht werden kann.|  
+|[\<routing>](routing.md)|Enthält eine Reihe von Endpunkten, die der Routingdienst verwenden soll, falls der primäre Endpunkt nicht erreicht werden kann. |  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType>

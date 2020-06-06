@@ -3,20 +3,20 @@ title: <add> von <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
 ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850319"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<Fügen Sie > \<von transportconfigurationtype hinzu >
+# <a name="add-of-transportconfigurationtype"></a>\<add> von \<transportConfigurationType>
 Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transports identifiziert.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<servicehoststingenvironment->** ](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<transportconfigurationtypes->** ](transportconfigurationtypes.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceHostingEnvironment>**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<transportConfigurationTypes>**](transportconfigurationtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,13 +34,13 @@ Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transp
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|NAME|Erforderliches Zeichenfolgeattribut.<br /><br /> Enthält einen benutzerdefinierten Schlüssel, mit dem der Transporttyp eindeutig identifiziert wird.|  
+|name|Erforderliches Zeichenfolgeattribut.<br /><br /> Enthält einen benutzerdefinierten Schlüssel, mit dem der Transporttyp eindeutig identifiziert wird.|  
 |transportConfigurationType|Eine Zeichenfolge, die den Typ enthält, mit dem der Transport implementiert wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -59,7 +59,7 @@ Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transp
 </serviceHostingEnvironment>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>

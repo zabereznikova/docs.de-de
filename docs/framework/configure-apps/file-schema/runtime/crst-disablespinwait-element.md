@@ -1,24 +1,24 @@
 ---
-title: < Crst_DisableSpinWait >-Element
+title: <Crst_DisableSpinWait>-Element
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
 ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117639"
 ---
-# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait >-Element
+# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait>-Element
 
 Gibt an, ob das warten auf einen kritischen Abschnitt beim Konflikten deaktiviert werden soll.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Crst_DisableSpinWait>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,13 +32,13 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**wodurch**|Gibt an, ob das Drehfeld für kritische Abschnitte, bei denen ein Konflikt besteht, deaktiviert ist.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |1|Die Drehung wird deaktiviert, wenn ein kritischer Abschnitt nicht abgerufen werden kann.|  
 |0|"Spin-warten" nicht deaktivieren, wenn ein kritischer Abschnitt nicht abgerufen werden kann. Dies ist der Standardwert.|  
@@ -65,7 +65,7 @@ Im folgenden Beispiel wird die Drehung beim Konflikt in kritischen Abschnitten d
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)

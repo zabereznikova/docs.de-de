@@ -7,25 +7,25 @@ helpviewer_keywords:
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 ms.openlocfilehash: ead69d1e850050214c15295134c06ff6f66e9760
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81646034"
 ---
 # <a name="specifying-an-assemblys-location"></a>Festlegen des Speicherortes einer Assembly
 Es gibt zwei Möglichkeiten, den Speicherort einer Assembly anzugeben:  
   
-- Verwenden des [ \<codeBase>-Elements.](./file-schema/runtime/codebase-element.md)  
+- Verwenden des- [\<codeBase>](./file-schema/runtime/codebase-element.md) Elements.  
   
-- Verwenden [ \<](./file-schema/runtime/probing-element.md) des>Elements.  
+- Verwenden des- [\<probing>](./file-schema/runtime/probing-element.md) Elements.  
   
- Sie können auch das [.NET Framework Configuration Tool (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) verwenden, um Assemblyspeicherorte anzugeben oder Speicherorte für die Common Language Runtime anzugeben, die für Assemblys untersucht werden soll.  
+ Sie können auch das [.NET Framework-Konfigurations Tool (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) verwenden, um Assemblyspeicher Orte anzugeben oder Speicherorte anzugeben, an denen die Common Language Runtime nach Assemblys suchen soll.  
   
-## <a name="using-the-codebase-element"></a>Verwenden \<des codeBase>-Elements  
- Sie können das ** \<codeBase>-Element** nur in Computerkonfigurations- oder Herausgeberrichtliniendateien verwenden, die auch die Assemblyversion umleiten. Wenn die Laufzeit bestimmt, welche Assemblyversion verwendet werden soll, wendet sie die Codebasiseinstellung aus der Datei an, die die Version bestimmt. Wenn keine Codebasis angegeben ist, werden die Laufzeittests für die Assembly auf die normale Weise angezeigt. Weitere Informationen finden Sie unter [So findet die Laufzeit Assemblys](../deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-codebase-element"></a>Verwenden des- \<codeBase> Elements  
+ Sie können das- **\<codeBase>** Element nur in der Computerkonfiguration oder in Herausgeber Richtlinien Dateien verwenden, die auch die Assemblyversion umleiten Wenn die Laufzeit bestimmt, welche Assemblyversion verwendet werden soll, wendet Sie die Codebasis Einstellung aus der Datei an, die die Version bestimmt. Wenn keine Codebasis angegeben wird, testet die Runtime die Assembly auf die normale Weise. Weitere Informationen finden Sie unter so sucht Common Language [Runtime](../deployment/how-the-runtime-locates-assemblies.md)nach Assemblys.  
   
- Das folgende Beispiel zeigt, wie der Speicherort einer Assembly angegeben wird.  
+ Im folgenden Beispiel wird gezeigt, wie der Speicherort einer Assembly angegeben wird.  
   
 ```xml  
 <configuration>  
@@ -43,15 +43,15 @@ Es gibt zwei Möglichkeiten, den Speicherort einer Assembly anzugeben:
 </configuration>  
 ```  
   
- Das **Versionsattribut** ist für alle Assemblys mit starkem Namen erforderlich, sollte jedoch für Assemblys weggelassen werden, die keinen starken Namen haben. Das ** \<codeBase>-Element** erfordert das **href-Attribut.** Sie können keine Versionsbereiche im ** \<codeBase>-Element** angeben.  
+ Das **Versions** Attribut ist für alle Assemblys mit starkem Namen erforderlich, sollte jedoch nicht für Assemblys mit starkem Namen ausgelassen werden. Das- **\<codeBase>** Element benötigt das **href** -Attribut. Sie können keine Versions Bereiche im- **\<codeBase>** Element angeben.  
   
 > [!NOTE]
-> Wenn Sie einen Codebasishinweis für eine Assembly angeben, die keinen starken Namen hat, muss der Hinweis auf die Anwendungsbasis oder ein Unterverzeichnis des Anwendungsbasisverzeichnisses verweisen.  
+> Wenn Sie einen Code Basis Hinweis für eine Assembly bereitstellen, die nicht mit starkem Namen benannt ist, muss der Hinweis auf die Anwendungs Basis oder auf ein Unterverzeichnis des Anwendungs Basisverzeichnisses zeigen.  
   
-## <a name="using-the-probing-element"></a>Verwenden \<des> Elements  
- Die Laufzeit sucht Assemblys, die keine Codebasis haben, indem sie untersucht wird. Weitere Informationen zum Thema Sondierung finden Sie unter [So findet die Laufzeit Assemblys](../deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-probing-element"></a>Verwenden des- \<probing> Elements  
+ Die Common Language Runtime sucht Assemblys, für die keine Codebasis vorhanden ist. Weitere Informationen zur Überprüfung finden Sie unter [so](../deployment/how-the-runtime-locates-assemblies.md)sucht Common Language Runtime nach Assemblys.  
   
- Sie können [ \<](./file-schema/runtime/probing-element.md) das>-Element in der Anwendungskonfigurationsdatei verwenden, um Unterverzeichnisse anzugeben, die die Laufzeit beim Suchen einer Assembly suchen soll. Das folgende Beispiel zeigt, wie Verzeichnisse angegeben werden, die die Laufzeit durchsuchen soll.  
+ Sie können das- [\<probing>](./file-schema/runtime/probing-element.md) Element in der Anwendungs Konfigurationsdatei verwenden, um Unterverzeichnisse anzugeben, die die Common Language Runtime beim Suchen einer Assembly durchsuchen soll. Im folgenden Beispiel wird gezeigt, wie Sie die Verzeichnisse angeben, die die Laufzeit durchsuchen soll.  
   
 ```xml  
 <configuration>  
@@ -63,11 +63,11 @@ Es gibt zwei Möglichkeiten, den Speicherort einer Assembly anzugeben:
 </configuration>  
 ```  
   
- Das **privatePath-Attribut** enthält die Verzeichnisse, die die Laufzeit nach Assemblys durchsuchen soll. Wenn sich die Anwendung unter C:-Programmdateien und MyApp befindet, sucht die Laufzeit nach Assemblys, die keine Codebasis in C:-Programmdateien, "MyApp"-Bin, "C:-Programmdateien" und """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" Bei den in **privatePath** angegebenen Verzeichnissen müssen es sich um Unterverzeichnisse des Anwendungsbasisverzeichnisses befinden.  
+ Das **privatePath** -Attribut enthält die Verzeichnisse, die von der Laufzeit nach Assemblys durchsucht werden sollen. Wenn sich die Anwendung unter c:\Programme\MyApp befindet, sucht die Runtime nach Assemblys, die keine Codebasis in c:\Programme\MyApp\Bin, c:\Programme\MyApp\Bin2\Subbin und c:\Programme\MyApp\Bin3. angeben. Die in **privatePath** angegebenen Verzeichnisse müssen Unterverzeichnisse des Basisverzeichnisses der Anwendung sein.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Assemblys in .NET](../../standard/assembly/index.md)
 - [Programmieren mit Assemblys](../../standard/assembly/index.md)
-- [So sucht die Laufzeit Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
+- [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurieren von Apps mithilfe von Konfigurationsdateien](index.md)

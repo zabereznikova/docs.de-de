@@ -3,20 +3,20 @@ title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
 ms.openlocfilehash: 15c9e38a141fc294c47863b1a932711444ac079a
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855153"
 ---
-# <a name="identity"></a>\<identity>
+# \<identity>
 Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwartete Identität des Diensts angeben. Beim Hand Shake Prozess zwischen Client und Dienst stellt die Windows Communication Foundation (WCF)-Infrastruktur sicher, dass die Identität des erwarteten Dienstanbieter mit den Werten dieses Elements übereinstimmt und somit authentifiziert werden kann. Weitere Informationen finden Sie unter [Dienst Identität und-Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Client >** ](client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Endpunkt >** ](endpoint-of-client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Identitäts >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpoint>**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<identity>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,31 +43,31 @@ Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwart
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|certificate|Gibt die Einstellungen eines X.509-Zertifikats an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CertificateElement>. Es enthält ein `encodedValue`-Attribut, das eine Zeichenfolge ist, die den von diesem Zertifikat codierten Wert angibt.|  
+|Zertifikat|Gibt die Einstellungen eines X.509-Zertifikats an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CertificateElement>. Es enthält ein `encodedValue`-Attribut, das eine Zeichenfolge ist, die den von diesem Zertifikat codierten Wert angibt.|  
 |certificateReference|Legt die Einstellungen für die X.509-Zertifikatüberprüfung fest. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CertificateReferenceElement>.|  
 |dns|Gibt den DNS eines X.509-Zertifikats an, das zum Authentifizieren eines Diensts verwendet wird. Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und die tatsächliche Identität enthält.|  
 |rsa|Gibt den Wert des RSA-Felds eines für die Authentifizierung eines Diensts am Client verwendeten X.509-Zertifikats an. Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und die tatsächliche Identität enthält.|  
 |servicePrincipalName|Gibt eine SPN-Identität an, die dem Prinzipalnamen entspricht, der vom Client zum eindeutigen Identifizieren einer Dienstinstanz verwendet wird. Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und den tatsächlichen Prinzipalnamen enthält. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
-|userPrincipalName|Gibt eine UPN-Identität an, die dem Anmeldenamenstyp eines Benutzers in einem Netzwerk entspricht. Der Benutzer Prinzipal Name besteht aus dem in Active Directory verwendeten Benutzerobjekt Namen, gefolgt vom at-Symbol\@() und dann in der Regel der Domain Name System übergeordneten Domäne. Beispielsweise könnte Jeff in der Fabrikam.com-Domänen Struktur über den Benutzer Prinzipal Namen [jeff@fabrikam.com](mailto:jeffsmith@fabrikam.com)verfügen.  Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und den tatsächlichen Prinzipalnamen enthält. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
+|userPrincipalName|Gibt eine UPN-Identität an, die dem Anmeldenamenstyp eines Benutzers in einem Netzwerk entspricht. Der Benutzer Prinzipal Name besteht aus dem in Active Directory verwendeten Benutzerobjekt Namen, gefolgt vom at-Symbol ( \@ ) und dann in der Regel der Domain Name System übergeordneten Domäne. Beispielsweise könnte Jeff in der Fabrikam.com-Domänen Struktur über den Benutzer Prinzipal Namen verfügen [jeff@fabrikam.com](mailto:jeffsmith@fabrikam.com) .  Dieses Element enthält ein `value`-Attribut, das eine Zeichenfolge ist und den tatsächlichen Prinzipalnamen enthält. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<custom>](custom.md)|Gibt einen benutzerdefinierten Peerresolver für eine netPeerTcpBinding an.|  
-|[\<Endpunkt >](endpoint-element.md)|Konfiguriert Dienst Endpunkte.|  
-|[\<Endpunkt > des \<Client >](endpoint-of-client.md)|Konfiguriert Kanal Endpunkte.|  
+|[\<endpoint>](endpoint-element.md)|Konfiguriert Dienst Endpunkte.|  
+|[\<endpoint>Natürlich\<client>](endpoint-of-client.md)|Konfiguriert Kanal Endpunkte.|  
 |[\<issuer>](issuer.md)|Gibt den Sicherheitstokendienst (STS) für den Verbunddienst an.|  
 |[\<issuerMetadata>](issuermetadata.md)|Gibt den Metadatenendpunkt für den Sicherheitstokendienst (STS) eines Verbunddiensts an.|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|Definiert Parameter für ein ausgestelltes Token in einer benutzerdefinierten Bindung.|  
 |[\<localIssuer>](localissuer.md)|Gibt einen lokalen Sicherheitstokendienst (STS) an.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - [Dienstidentität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md)
-- [Endpunkte Adressen, Bindungen und Verträge](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Endpunkte: Adressen, Bindungen und Verträge](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

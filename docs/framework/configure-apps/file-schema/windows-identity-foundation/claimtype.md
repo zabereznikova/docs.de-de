@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
 ms.openlocfilehash: a46e9129bd27319abb4d7519444568af622170fc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252072"
 ---
-# <a name="claimtype"></a>\<claimType>
+# \<claimType>
 Gibt einen einzelnen optionalen oder erforderlichen Anspruch für eingehende Sicherheits Token an.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel->** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityconfiguration->** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<claimtyperequired->** ](claimtyperequired.md)\  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ClaimType->**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequired>**](claimtyperequired.md)\  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimType>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +37,13 @@ Gibt einen einzelnen optionalen oder erforderlichen Anspruch für eingehende Sic
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Typ|Der Anspruchstyp. In der Regel ein URI. Erforderlich.|  
-|Optional|Ein boolescher Wert, der angibt, ob der Anspruchstyp optional ist. Optional.|  
+|type|Der Anspruchstyp. In der Regel ein URI. Erforderlich.|  
+|optional|Ein boolescher Wert, der angibt, ob der Anspruchstyp optional ist. (Optional)|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

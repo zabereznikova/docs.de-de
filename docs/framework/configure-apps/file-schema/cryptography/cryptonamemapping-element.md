@@ -9,16 +9,16 @@ helpviewer_keywords:
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 ms.openlocfilehash: d31c5cd52ffe0e2a6eb5784735e76436d216444b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155218"
 ---
-# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> Element
+# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping>-Element
 Enthält die Zuordnung von Klassen zu den Anzeigenamen.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptoNameMapping>**
@@ -33,27 +33,27 @@ Enthält die Zuordnung von Klassen zu den Anzeigenamen.
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
- Keine.  
+### <a name="attributes"></a>Attribute  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`cryptoClasses`|Enthält eine Liste von Kryptografieklassen, die ** \<** eine Zuordnung zu einem Anzeigenamen im nameEntry>-Element haben.|  
+|`cryptoClasses`|Enthält eine Liste von Kryptografieklassen, die eine Zuordnung zu einem anzeigen Amen im- **\<nameEntry>** Element aufweisen.|  
 |`nameEntry`|Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann eine Klasse über viele Anzeigenamen verfügen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
 |`cryptoNameMapping`|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
-|`mscorlib`|Enthält das Element \<cryptographySettings>.|  
+|`mscorlib`|Enthält das- \<cryptographySettings> Element.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie das ** \<cryptoNameMapping>-Element** verwenden, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Sie können dann die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> Methode verwenden, um ein `MyCryptoRSAClass` Objekt zurückzugeben.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<cryptoNameMapping>** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode übergeben und die- <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> Methode verwenden, um ein-Objekt zurückzugeben `MyCryptoRSAClass` .  
   
 ```xml  
 <configuration>  
@@ -74,9 +74,9 @@ Enthält die Zuordnung von Klassen zu den Anzeigenamen.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Schema der Konfigurationsdatei](../index.md)
-- [Kryptografie-Einstellungen Schema](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Konfigurationsdateischema](../index.md)
+- [Schema für Kryptografieeinstellungen](index.md)
+- [Kryptografiedienste](../../../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 ms.openlocfilehash: a9afa0db516a542b74d08a4c3754a3244abbbea7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153776"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> Element
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm>-Element
 Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<UseRandomizedStringHashAlgorithm>**  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,21 +32,21 @@ Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwend
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet werden.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|`0`|Die Common Language Runtime berechnet Hashcodes für Zeichenfolgen nicht pro Anwendungsdomäne; es wird ein einzelner Algorithmus verwendet, um Hashcodes für Zeichenfolgen zu berechnen. Dies ist die Standardoption.|  
+|`0`|Die Common Language Runtime berechnet Hashcodes für Zeichenfolgen nicht pro Anwendungsdomäne; es wird ein einzelner Algorithmus verwendet, um Hashcodes für Zeichenfolgen zu berechnen. Dies ist die Standardeinstellung.|  
 |`1`|Die Common Language Runtime berechnet Hashcodes für Zeichenfolgen pro Anwendungsdomäne. Identische Zeichenfolgen in unterschiedlichen Anwendungsdomänen und in verschiedenen Prozessen weisen unterschiedliche Hashcodes auf.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -56,11 +56,11 @@ Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwend
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Standardmäßig verwenden die <xref:System.StringComparer>-Klasse und die <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>-Methode einen einzelnen Hashalgorithmus, der einen über verschiedene Anwendungsdomänen hinweg konsistenten Hashcode erzeugt. Dies entspricht dem Festlegen des `enabled`-Attributs des `<UseRandomizedStringHashAlgorithm>`-Elements auf `0`. Dies ist der Hashalgorithmus, der in .NET Framework 4 verwendet wird.  
+ Standardmäßig verwenden die <xref:System.StringComparer>-Klasse und die <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>-Methode einen einzelnen Hashalgorithmus, der einen über verschiedene Anwendungsdomänen hinweg konsistenten Hashcode erzeugt. Dies entspricht dem Festlegen des `enabled`-Attributs des `<UseRandomizedStringHashAlgorithm>`-Elements auf `0`. Dies ist der Hash Algorithmus, der in der .NET Framework 4 verwendet wird.  
   
  Die <xref:System.StringComparer>-Klasse und die <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>-Methode können auch einen anderen Hashalgorithmus verwenden, der Hashcodes pro Anwendungsdomäne berechnet. Dadurch variieren Hashcodes für identische Zeichenfolgen von Anwendungsdomäne zu Anwendungsdomäne. Dies ist eine Opt-In-Funktion; um sie zu nutzen, müssen Sie das `enabled`-Attribut des `<UseRandomizedStringHashAlgorithm>`-Elements auf `1` festlegen.  
   
- Die Zeichenfolgensuche in einer Hashtabelle ist in der Regel eine O(1)-Operation. Wenn jedoch eine große Anzahl von Kollisionen auftritt, kann die Suche zu einem O(n<sup>2</sup>) -Vorgang werden. Sie können das `<UseRandomizedStringHashAlgorithm>`-Konfigurationselement verwenden, um einen zufälligen Hashalgorithmus pro Anwendungsdomäne zu generieren. Dadurch wird die Anzahl der potenziellen Konflikte beschränkt, insbesondere wenn die Schlüssel, aus denen die Hashcodes berechnet werden, auf Dateneingaben durch Benutzer basieren.  
+ Die Zeichenfolgensuche in einer Hashtabelle ist in der Regel eine O(1)-Operation. Wenn jedoch eine große Anzahl von Kollisionen auftritt, kann die Suche ein O (n<sup>2</sup>)-Vorgang werden. Sie können das `<UseRandomizedStringHashAlgorithm>`-Konfigurationselement verwenden, um einen zufälligen Hashalgorithmus pro Anwendungsdomäne zu generieren. Dadurch wird die Anzahl der potenziellen Konflikte beschränkt, insbesondere wenn die Schlüssel, aus denen die Hashcodes berechnet werden, auf Dateneingaben durch Benutzer basieren.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine `DisplayString`-Klasse definiert, die die private Zeichenfolgenkonstante `s` enthält, deren Wert "Dies ist eine Zeichenfolge" lautet. Außerdem enthält sie eine `ShowStringHashCode`-Methode, die den Zeichenfolgenwert und dessen Hashcode zusammen mit dem Namen der Anwendungsdomäne anzeigt, in der die Methode ausgeführt wird.  

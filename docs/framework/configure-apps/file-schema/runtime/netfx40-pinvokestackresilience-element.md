@@ -6,19 +6,19 @@ helpviewer_keywords:
 - NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 ms.openlocfilehash: 86f50aafe0b21d5080288e09ac7118ca1e4c939a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73116161"
 ---
-# <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience >-Element
+# <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience>-Element
 
 Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automatisch korrigiert. Dies führt zu langsameren Übergängen zwischen verwaltetem und nicht verwaltetem Code.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_PInvokeStackResilience >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<NetFx40_PInvokeStackResilience>**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,13 +32,13 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="attributes"></a>Attribute
 
-|Attribut|Beschreibung|
+|attribute|BESCHREIBUNG|
 |---------------|-----------------|
 |`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit falsche Platt Form Aufruf Deklarationen erkennt und den Stapel zur Laufzeit auf 32-Bit-Plattformen automatisch korrigiert.|
 
 ## <a name="enabled-attribute"></a>Enabled-Attribut
 
-|Wert|Beschreibung|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|
 |`0`|Die Laufzeit verwendet die schnellere Interop-marshallingarchitektur, die in der .NET Framework 4 eingeführt wurde, die falsche Platt Form Aufruf Deklarationen nicht erkennt und repariert. Dies ist die Standardeinstellung.|
 |`1`|Die Laufzeit verwendet langsamere Übergänge, die falsche Platt Form Aufruf Deklarationen erkennen und beheben.|
@@ -54,7 +54,7 @@ Keine
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Mit diesem Element können Sie ein schnelleres Interop-Marshalling für die Lauf Zeit Resilienz gegen falsche Platt Form Aufruf Deklarationen durchführen.
 
@@ -62,7 +62,7 @@ Ab .NET Framework 4 bietet eine optimierte Interop-marshallingarchitektur eine b
 
 Um das erkennen falscher Deklarationen während der Entwicklung zu vereinfachen, wurde die Visual Studio-debuggingdarstellung verbessert. Der [pinvokestackungleichsverwaltungs](../../../debug-trace-profile/pinvokestackimbalance-mda.md) -Assistent für verwaltetes Debuggen (MDA) benachrichtigt Sie über falsche Platt Form Aufruf Deklarationen, wenn die Anwendung mit dem angefügten Debugger ausgeführt wird.
 
-Zum Behandeln von Szenarien, in denen Ihre Anwendung Komponenten verwendet, die Sie nicht neu kompilieren können und falsche Platt Form Aufruf Deklarationen aufweisen, können Sie das `NetFx40_PInvokeStackResilience`-Element verwenden. Wenn Sie dieses Element der Anwendungs Konfigurationsdatei hinzufügen und `enabled="1"` opts in einen Kompatibilitätsmodus mit dem Verhalten früherer Versionen des .NET Framework mit den Kosten langsamer Übergänge. Assemblys, die mit früheren Versionen der .NET Framework kompiliert wurden, werden automatisch in diesen Kompatibilitätsmodus gewählt und benötigen dieses Element nicht.
+Sie können das-Element verwenden, um Szenarios zu behandeln, in denen Ihre Anwendung Komponenten verwendet, die Sie nicht neu kompilieren können und falsche Platt Form Aufruf Deklarationen aufweisen `NetFx40_PInvokeStackResilience` . Wenn Sie dieses Element der Anwendungs Konfigurationsdatei mit `enabled="1"` opts in einen Kompatibilitätsmodus mit dem Verhalten früherer Versionen der .NET Framework hinzufügen, wird dies zu langsameren Übergängen. Assemblys, die mit früheren Versionen der .NET Framework kompiliert wurden, werden automatisch in diesen Kompatibilitätsmodus gewählt und benötigen dieses Element nicht.
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
@@ -80,7 +80,7 @@ Im folgenden Beispiel wird gezeigt, wie die Resilienz gegenüber falschen Platt 
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)

@@ -7,40 +7,40 @@ helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215472"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Benutzerdefiniertes Element für NameValueSectionHandler und diktarysectionhandler
 
-Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, in denen die Klassen <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> verwendet werden.
+Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, die die <xref:System.Configuration.NameValueSectionHandler> -Klasse und die- <xref:System.Configuration.DictionarySectionHandler> Klasse verwenden.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp; **\<sectionName >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;**\<sectionName>**
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attribute
 
 Keine
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | BESCHREIBUNG |
+|     | Beschreibung |
 | --- | ----------- |
-| [ **\<configuration>** ](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [**\<configuration>**](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 |     | BESCHREIBUNG |
 | --- | ----------- |
-| [ **\<>** ](add-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> hinzufügen  | Fügt benutzerdefinierte Anwendungseinstellungen hinzu. |
-| [ **\<>** ](remove-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> entfernen. | Entfernt eine zuvor definierte Einstellung. |
-| [ **\<>** ](clear-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> löschen. | Löscht alle zuvor definierten Einstellungen in einem Abschnitt. |
+| [**\<add>**](add-element-for-custom-2.md)für <xref:System.Configuration.NameValueSectionHandler> und<xref:System.Configuration.DictionarySectionHandler>  | Fügt benutzerdefinierte Anwendungseinstellungen hinzu. |
+| [**\<remove>**](remove-element-for-custom-2.md)für <xref:System.Configuration.NameValueSectionHandler> und<xref:System.Configuration.DictionarySectionHandler> | Entfernt eine zuvor definierte Einstellung. |
+| [**\<clear>**](clear-element-for-custom-2.md)für <xref:System.Configuration.NameValueSectionHandler> und<xref:System.Configuration.DictionarySectionHandler> | Löscht alle zuvor definierten Einstellungen in einem Abschnitt. |
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das **\<sectionName >** -Element ist ein benutzerdefiniertes Element, das durch einen **\<Abschnitt >** -Tag im\<Element > **configabschnitts** definiert wird.
+Das- **\<sectionName>** Element ist ein benutzerdefiniertes Element, das durch ein- **\<section>** Tag im-Element definiert wird **\<configSections>**
 
 In der folgenden Tabelle wird der Objekttyp angezeigt, der von der ConfigurationSettings. GetConfig-Methode für jeden Konfigurations Abschnitts Handler zurückgegeben wird:
 
@@ -51,9 +51,9 @@ In der folgenden Tabelle wird der Objekttyp angezeigt, der von der Configuration
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie Sie Abschnitte deklarieren, in denen die Klassen <xref:System.Configuration.DictionarySectionHandler> und <xref:System.Configuration.NameValueSectionHandler> verwendet werden.
+Im folgenden Beispiel wird gezeigt, wie Sie Abschnitte deklarieren, die die <xref:System.Configuration.DictionarySectionHandler> Klassen und verwenden <xref:System.Configuration.NameValueSectionHandler> .
 
-Das erste benutzerdefinierte Element ist **\<"ditaarysample" >** , das die von der <xref:System.Configuration.DictionarySectionHandler>-Klasse in der `System.dll` Assembly gelesenen Einstellungen enthält. Das zweite benutzerdefinierte Element ist **\<mySection >** , das die von der <xref:System.Configuration.NameValueSectionHandler>-Klasse in der `System.dll` Assembly gelesenen Einstellungen enthält.
+Das erste benutzerdefinierte Element ist **\<dictionarySample>** , das die von der- <xref:System.Configuration.DictionarySectionHandler> Klasse in der Assembly gelesenen Einstellungen enthält `System.dll` . Das zweite benutzerdefinierte Element ist **\<mySection>** , das die von der- <xref:System.Configuration.NameValueSectionHandler> Klasse in der Assembly gelesenen Einstellungen enthält `System.dll` .
 
 ```xml
 <configuration>

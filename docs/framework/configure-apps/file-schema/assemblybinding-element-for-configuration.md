@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 ms.openlocfilehash: 21cf5e749b0dae310c3326f8abf82c6678fc97e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155478"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding>-Element für \<Konfiguration>
+# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding>-Element für \<configuration>
 
 Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an.
 
-Konfiguration &nbsp; &nbsp;>[** \<**](configuration-element.md) ** \<AssemblyBinding>**
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;**\<assemblyBinding>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,15 +30,15 @@ Konfiguration &nbsp; &nbsp;>[** \<**](configuration-element.md) ** \<AssemblyBin
 
 ## <a name="attribute"></a>attribute
 
-|           | Beschreibung |
+|           | BESCHREIBUNG |
 | --------- | ----------- |
 | **xmlns** | Erforderliches Attribut.<br><br>Gibt den XML-Namespace an, der für die Assemblybindung erforderlich ist. Verwenden Sie die Zeichenfolge "urn:schemas-microsoft-com:asm.v1" als Wert. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
-| [**\<Konfiguration>**](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [**\<configuration>**](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-element"></a>Untergeordnetes Element
 
@@ -48,14 +48,14 @@ Konfiguration &nbsp; &nbsp;>[** \<**](configuration-element.md) ** \<AssemblyBin
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das [** \<linkedConfiguration>-Element**](linkedconfiguration-element.md) vereinfacht die Verwaltung von Komponentenassemblys, indem Anwendungskonfigurationsdateien Assemblykonfigurationsdateien an bekannten Speicherorten einschließen können, anstatt die Konfigurationseinstellungen der Assembly zu duplizieren.
+Das- [**\<linkedConfiguration>**](linkedconfiguration-element.md) Element vereinfacht die Verwaltung von Komponentenassemblys, indem es Anwendungs Konfigurationsdateien ermöglicht, Assemblykonfigurationsdateien an bekannten Speicherorten einzufügen, anstatt Assemblykonfigurationseinstellungen zu duplizieren
 
 > [!NOTE]
-> Das ** \<linkedConfiguration>-Element** wird für Anwendungen mit Windows-Manifesten nicht unterstützt.
+> Das- **\<linkedConfiguration>** Element wird nicht für Anwendungen mit parallelen Windows-Manifesten unterstützt.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie eine Konfigurationsdatei auf der lokalen Festplatte eingeschlossen wird:
+Das folgende Beispiel zeigt, wie Sie eine Konfigurationsdatei auf der lokalen Festplatte einschließen:
 
 ```xml
 <configuration>
@@ -67,4 +67,4 @@ Das folgende Beispiel zeigt, wie eine Konfigurationsdatei auf der lokalen Festpl
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurationsdateischema für .NET Framework](index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

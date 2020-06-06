@@ -6,20 +6,20 @@ helpviewer_keywords:
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 ms.openlocfilehash: bcc0e23f0c47ad3a98430e36da31d39612caa3c9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252760"
 ---
-# <a name="clear-element-for-namedcaches"></a>\<Löschen Sie > Element \<für NamedCaches >
-Löscht alle `namedCache` Einträge in der `namedCaches` -Auflistung für einen Speicher Cache.  
+# <a name="clear-element-for-namedcaches"></a>\<clear>-Element für \<namedCaches>
+Löscht alle `namedCache` Einträge in der-Auflistung `namedCaches` für einen Speicher Cache.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Runtime. Caching->** ](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<MemoryCache->** ](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NamedCaches >** ](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Löschen >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,7 +30,7 @@ Löscht alle `namedCache` Einträge in der `namedCaches` -Auflistung für einen 
  </namedCaches>  
 ```  
   
-## <a name="type"></a>Typ  
+## <a name="type"></a>type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -44,13 +44,13 @@ Löscht alle `namedCache` Einträge in der `namedCaches` -Auflistung für einen 
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|Enthält eine Sammlung von Konfigurationseinstellungen für die benannten <xref:System.Runtime.Caching.MemoryCache> Instanzen.|  
   
-## <a name="remarks"></a>Hinweise  
- Das `clear` -Element löscht `namedCache` alle Einträge in der benannten Cache Auflistung für einen Speicher Cache. Sie können das `clear` -Element verwenden, bevor Sie `add` das-Element verwenden, um einen neuen benannten Cache Eintrag hinzuzufügen, um sicherzustellen, dass keine anderen benannten Caches in der Auflistung vorhanden sind.  
+## <a name="remarks"></a>Bemerkungen  
+ Das- `clear` Element löscht alle `namedCache` Einträge in der benannten Cache Auflistung für einen Speicher Cache. Sie können das- `clear` Element verwenden, bevor Sie das- `add` Element verwenden, um einen neuen benannten Cache Eintrag hinzuzufügen, um sicherzustellen, dass keine anderen benannten Caches in der Auflistung vorhanden sind.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [\<NamedCaches > Element (Cache Einstellungen)](namedcaches-element-cache-settings.md)
+- [\<namedCaches>-Element (Cache Einstellungen)](namedcaches-element-cache-settings.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <source> element
 - source element
 ms.openlocfilehash: 417722ce2f3865350158413307495e3ab435d386
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153294"
 ---
-# <a name="source-element"></a>\<Quelle> Element
+# <a name="source-element"></a>\<source>-Element
 Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<Quellen>**](sources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<Quelle>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<source>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -33,20 +33,20 @@ Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiie
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|`name`|Optionales Attribut.<br /><br /> Gibt den Namen der Ablaufverfolgungsquelle an.|  
-|`switchName`|Optionales Attribut.<br /><br /> Gibt den Namen einer Ablaufverfolgungsschalterinstanz in der Anwendung an. Wenn der Schalter nicht `<switches>` in einem Element identifiziert wird, gibt der Wert die Ebene für den Switch an.|  
-|`switchType`|Optionales Attribut.<br /><br /> Gibt den Typ des Ablaufverfolgungsschalters an. Wenn vorhanden, muss der Typ ein gültiger Klassenname sein und darf keine leere Zeichenfolge sein.|  
-|`extraAttribute`|Optionales Attribut.<br /><br /> Gibt den Wert für ein Trace-Source-spezifisches Attribut an, das von der <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> Methode für diese Ablaufverfolgungsquelle identifiziert wird.|  
+|`name`|Optionales Attribut.<br /><br /> Gibt den Namen der Ablauf Verfolgungs Quelle an.|  
+|`switchName`|Optionales Attribut.<br /><br /> Gibt den Namen einer Instanz eines Ablauf Verfolgungs Switchs in der Anwendung an. Wenn der Schalter nicht in einem-Element identifiziert wird `<switches>` , gibt der Wert die Ebene für den Schalter an.|  
+|`switchType`|Optionales Attribut.<br /><br /> Gibt den Typ des Ablauf Verfolgungs Schalters an. Wenn der Typ vorhanden ist, muss er ein gültiger Klassenname sein und darf keine leere Zeichenfolge sein.|  
+|`extraAttribute`|Optionales Attribut.<br /><br /> Gibt den Wert für ein Attribut für eine Ablauf Verfolgungs Quelle an, das durch die- <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> Methode für diese Ablauf Verfolgungs Quelle identifiziert wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Hörer>](listeners-element-for-source.md)|Enthält Listener, die Nachrichten sammeln, speichern und weiterleiten.|  
+|[\<listeners>](listeners-element-for-source.md)|Enthält Listener, die Nachrichten erfassen, speichern und weiterleiten.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -57,10 +57,10 @@ Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiie
 |`sources`|Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Dieses Element kann in der Maschinenkonfigurationsdatei (Machine.config) und in der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, `<source>` wie sie das `mySource` Element verwenden, um die `sourceSwitch`Ablaufverfolgungsquelle hinzuzufügen und die Ebene für den Quellschalter mit dem Namen festzulegen. Ein Konsolenablaufverfolgungslistener wird hinzugefügt, der Ablaufverfolgungsinformationen in die Konsole schreibt.  
+ Im folgenden Beispiel wird gezeigt, wie das `<source>` -Element verwendet wird, um die Ablauf Verfolgungs Quelle hinzuzufügen `mySource` und die Ebene für den Quell Switch mit dem Namen festzulegen `sourceSwitch` . Ein Konsolen Ablaufverfolgungslistener wird hinzugefügt, der Ablauf Verfolgungs Informationen in die Konsole  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiie
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgungs- und Debugeinstellungsschema](index.md)
+- [Schema für Ablaufverfolgungs- und Debugeinstellungen](index.md)
 - [Ablaufverfolgungsschalter](../../../debug-trace-profile/trace-switches.md)

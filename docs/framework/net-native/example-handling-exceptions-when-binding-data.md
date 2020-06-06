@@ -3,17 +3,17 @@ title: 'Beispiel: Behandeln von Ausnahmen beim Binden von Daten'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 ms.openlocfilehash: b774d1bce4f4d1c03258ed44b27d3871e7c5275f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181018"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Beispiel: Behandeln von Ausnahmen beim Binden von Daten
 > [!NOTE]
 > Dieses Thema bezieht sich auf die .NET Native Developer Preview, ein Vorabrelease der Software. Sie können die Vorschau von der [Microsoft Connect-Website](https://go.microsoft.com/fwlink/?LinkId=394611) herunterladen (Registrierung erforderlich).  
   
- Das folgende Beispiel zeigt, wie eine [MissingMetadataException-Ausnahme](missingmetadataexception-class-net-native.md) aufgelöst wird, die ausgelöst wird, wenn eine mit der .NET Native-Toolkette kompilierte App versucht, Daten zu binden. Hier sind die Ausnahmeinformationen:  
+ Das folgende Beispiel zeigt, wie eine [MissingMetadataException](missingmetadataexception-class-net-native.md) -Ausnahme aufgelöst wird, die ausgelöst wird, wenn eine mit der .net Native-Toolkette kompilierte app versucht, Daten zu binden. Hier sind die Ausnahmeinformationen:  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:
@@ -37,7 +37,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Was hat die App gerade getan?  
- Auf der Basis des Stapels <xref:Windows.UI.Xaml?displayProperty=nameWithType> zeigen Frames aus dem Namespace an, dass die XAML-Rendering-Engine ausgeführt wurde.   Die Verwendung der <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType>-Methode weist auf einen reflektionsbasierten Abruf des Werts einer Eigenschaft für den Typ hin, dessen Metadaten entfernt wurden.  
+ An der Basis des Stapels geben Frames aus dem- <xref:Windows.UI.Xaml?displayProperty=nameWithType> Namespace an, dass die XAML-Rendering-Engine ausgeführt wurde.   Die Verwendung der <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType>-Methode weist auf einen reflektionsbasierten Abruf des Werts einer Eigenschaft für den Typ hin, dessen Metadaten entfernt wurden.  
   
  Der erste Schritt beim Bereitstellen einer Metadatendirektive wäre, `serialize`-Metadaten für den Typ hinzuzufügen, damit auf alle seine Eigenschaften zugegriffen werden kann:  
   
@@ -55,7 +55,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Könnte der Code so umgeschrieben werden, dass keine Reflektion verwendet wird?  
  Da bei der Datenbindung Reflektion in starkem Maße benötigt wird, ist das Ändern des Codes zur Vermeidung von Reflektion nicht möglich.  
   
- Es gibt jedoch Möglichkeiten zum Angeben des `ViewModel` auf der XAML-Seite, damit die Toolkette Eigenschaftenbindungen zur Kompilierungszeit den korrekten Typ zuordnen und die Metadaten ohne Verwendung einer Laufzeitanweisung beibehalten kann.  Sie können das <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> Attribut z. B. auf Eigenschaften anwenden. Dies bewirkt, dass der XAML-Compiler die erforderlichen Nachschlageinformationen generiert, und vermeidet die Erfordernis einer Laufzeitanweisung in der Datei Default.rd.xml.  
+ Es gibt jedoch Möglichkeiten zum Angeben des `ViewModel` auf der XAML-Seite, damit die Toolkette Eigenschaftenbindungen zur Kompilierungszeit den korrekten Typ zuordnen und die Metadaten ohne Verwendung einer Laufzeitanweisung beibehalten kann.  Beispielsweise können Sie das- <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> Attribut auf Eigenschaften anwenden. Dies bewirkt, dass der XAML-Compiler die erforderlichen Nachschlageinformationen generiert, und vermeidet die Erfordernis einer Laufzeitanweisung in der Datei Default.rd.xml.  
   
 ## <a name="see-also"></a>Weitere Informationen
 

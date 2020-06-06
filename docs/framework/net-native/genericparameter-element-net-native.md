@@ -3,13 +3,13 @@ title: <GenericParameter>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 ms.openlocfilehash: d0b18211206a8f9d4365ab3affe6d1c376003348
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128433"
 ---
-# <a name="genericparameter-element-net-native"></a>\<genericparameter >-Element (.net Native)
+# <a name="genericparameter-element-net-native"></a>\<GenericParameter>-Element (.net Native)
 Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer generischen Methode an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,7 +33,7 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Der Name des generischen Parameters. Z. B. muss für den generischen Delegaten <xref:System.Func%603> der Wert des `Name`-Attributs "TResult" lauten, um die Laufzeitrichtlinie auf den Rückgabewert des Delegaten anzuwenden.|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
@@ -49,13 +49,13 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
   
 ## <a name="name-attribute"></a>Namensattribut  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*generic_parameter_name*|Erforderliches Attribut. Der Name des generischen Typparameters. Wendet z.B. für den generischen Delegaten <xref:System.Func%603> der *generic_parameter_name*-Wert „TResult“ die Laufzeitrichtlinie auf den Rückgabewert des Delegaten an.|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
@@ -64,15 +64,15 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.|  
 |[\<Type>](type-element-net-native.md)|Wendet eine Laufzeitreflektionsrichtlinie auf einen bestimmten Typ, z. B. eine Klasse oder Struktur, an.|  
   
-## <a name="remarks"></a>Hinweise  
- Das `<GenericParameter>`-Element ist ein untergeordnetes Element des [\<Method>](method-element-net-native.md)- oder [\<Type>](type-element-net-native.md)-Elements und dient zur Anwendung der Richtlinie auf einen bestimmten generischen Typparameter, der durch seinen Namen im generischen Typ oder der Methodensignatur angegeben ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Das `<GenericParameter>` -Element ist ein untergeordnetes Element [\<Method>](method-element-net-native.md) des [\<Type>](type-element-net-native.md) -Elements oder des-Elements und wird verwendet, um die Richtlinie auf einen bestimmten generischen Typparameter anzuwenden, der durch seinen Namen in der generischen Typ-oder Methoden Signatur angegeben wird.  
   
- Das `<GenericParameter>`-Element ist am nützlichsten, wenn es mit Serialisierungsprogrammen verwendet wird. Im folgenden Beispiel wird das Element `<GenericParameter>` verwendet, um die Richtlinie auf den Typ `T` in Aufrufen von Überladungen der Methode [JsonConvert.DeserializeObject\<T>(String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) des NewtonSoft JSON-Serialisierungsprogramms anzuwenden.  
+ Das `<GenericParameter>`-Element ist am nützlichsten, wenn es mit Serialisierungsprogrammen verwendet wird. Im folgenden Beispiel wird das `<GenericParameter>` -Element verwendet, um eine Richtlinie auf den Typ `T` in Aufrufen der Methoden Überladungen " [JsonConvert. DeserializeObject" \<T> (String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) des Newton Soft JSON-Serialisierungsprogramms anzuwenden.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -84,10 +84,10 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [\<Method> Element (Element <Method>)](method-element-net-native.md)
-- [\<Typ > Element](type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Method>Gewisses](method-element-net-native.md)
+- [\<Type>Gewisses](type-element-net-native.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
 ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399442"
 ---
-# <a name="systemservicemodel"></a>\<system.serviceModel>
+# \<system.serviceModel>
 Dieser Konfigurations Abschnitt enthält alle Service Model-Konfigurationselemente Windows Communication Foundation (WCF).  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. Service Model->**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.serviceModel>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,21 +58,21 @@ Dieser Konfigurations Abschnitt enthält alle Service Model-Konfigurationselemen
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- None  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<behaviors>](behaviors.md)|In diesem Abschnitt werden zwei untergeordnete Auflistungen mit den Namen `endpointBehaviors` und `serviceBehaviors` definiert.  Jede Auflistung definiert von Endpunkten und Diensten verwendete Verhaltenselemente. Jedes Verhaltenselement wird durch seinen eindeutigen `name` identifiziert.|  
 |[\<bindings>](bindings.md)|Dieser Abschnitt enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen. Jeder Eintrag wird durch seinen eindeutigen `name` identifiziert. Dienste verwenden Bindungen, indem sie sie mithilfe des `name` verknüpfen.|  
 |[\<client>](client.md)|Dieser Abschnitt enthält eine Liste mit Endpunkten, die ein Client für die Verbindungsherstellung mit einem Dienst verwendet.|  
 |[\<comContracts>](comcontracts.md)|Dieser Abschnitt definiert für WCF und COM-Interop aktivierte COM-Verträge.|  
-|[\<commonverhaltensweisen >](commonbehaviors.md)|Dieser Abschnitt kann nur in der Datei machine.config definiert werden. Er definiert zwei untergeordnete Auflistungen mit den Namen `endpointBehaviors` und `serviceBehaviors`.  Jede Auflistung definiert Verhaltenselemente, die von allen WCF-Endpunkten und-Diensten auf dem Computer verwendet werden.  Wenn ein Verhalten sowohl `<commonBehaviors>` in-als auch in- `<behaviors>` Abschnitten definiert ist \<, wird das Verhalten im > Abschnitt Verhalten bevorzugt.|  
-|[\<Diagnose >](diagnostics.md)|Dieser Abschnitt enthält Einstellungen für die Diagnosefunktionen von WCF. Der Benutzer kann Ablaufverfolgung, Leistungsindikatoren und den WMI-Anbieter aktivieren/deaktivieren und benutzerdefinierte Meldungsfilter hinzufügen.|  
-|[\<Erweiterungen >](extensions-section.md)|Dieser Abschnitt enthält eine Auflistung von Erweiterungen, mit deren Hilfe der Benutzer benutzerdefinierte Bindungen, Verhalten und andere Aspekte von Erweiterungen erstellen kann.|  
-|[\<protocolMapping>](protocolmapping.md)|In diesem Abschnitt wird ein Satz von Standardprotokoll Zuordnungen zwischen Transportprotokoll Schemas (z. b. http, net. TCP, net. Pipe usw.) und WCF-Bindungen definiert.|  
-|[\<routing>](routing.md)|Dieser Abschnitt definiert einen Satz von Routing filtern, die den Typ des Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der bei der Auswertung eingehender Nachrichten verwendet werden soll, sowie Routing Tabellen, die die Ziel Endpunkte definieren, an die Nachrichten gesendet werden sollen, wenn ein Filter Übereinstimmungen.|  
+|[\<commonBehaviors>](commonbehaviors.md)|Dieser Abschnitt kann nur in der Datei machine.config definiert werden. Er definiert zwei untergeordnete Auflistungen mit den Namen `endpointBehaviors` und `serviceBehaviors`.  Jede Auflistung definiert Verhaltenselemente, die von allen WCF-Endpunkten und-Diensten auf dem Computer verwendet werden.  Wenn ein Verhalten im `<commonBehaviors>`-Abschnitt und im `<behaviors>`-Abschnitt definiert ist, wird dem Verhalten im \<behaviors>-Abschnitt Priorität eingeräumt.|  
+|[\<diagnostics>](diagnostics.md)|Dieser Abschnitt enthält Einstellungen für die Diagnosefunktionen von WCF. Der Benutzer kann Ablaufverfolgung, Leistungsindikatoren und den WMI-Anbieter aktivieren/deaktivieren und benutzerdefinierte Meldungsfilter hinzufügen.|  
+|[\<extensions>](extensions-section.md)|Dieser Abschnitt enthält eine Auflistung von Erweiterungen, mit deren Hilfe der Benutzer benutzerdefinierte Bindungen, Verhalten und andere Aspekte von Erweiterungen erstellen kann.|  
+|[\<protocolMapping>](protocolmapping.md)|Dieser Abschnitt definiert einen Satz von Standardprotokollzuordnungen zwischen Transportprotokollschemas (z. B. http, net.tcp, net.pipe usw.) und WCF-Bindungen.|  
+|[\<routing>](routing.md)|Dieser Abschnitt definiert einen Satz von Routing filtern, die den Typ des Windows Communication Foundation (WCF) bestimmen, der <xref:System.ServiceModel.Dispatcher.MessageFilter> bei der Auswertung eingehender Nachrichten verwendet werden soll, sowie Routing Tabellen, die die Ziel Endpunkte definieren, an die Nachrichten gesendet werden sollen, wenn ein Filter übereinstimmt.|  
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Dieser Abschnitt definiert den Typ, der von der Diensthostumgebung für einen besonderen Transport instanziiert wird. Wenn dieser Abschnitt leer ist, wird der Standardtyp verwendet.|  
 |[\<services>](services.md)|Der Abschnitt enthält eine Auflistung von Diensten. Für jeden in der Assembly definierten Dienst enthält dieses Element ein `service`-Element mit den Einstellungen für den Dienst.|  
 |[\<standardEndpoints>](standardendpoints.md)|Dieser Abschnitt definiert eine Auflistung von Standardendpunkten, bei denen es sich um wiederverwendbare vorkonfigurierte Endpunkte handelt. Bei einem Standardendpunkt werden eines oder mehrere der Attribute für Adresse, Bindung und Vertrag vorab festgelegt. Zum Beispiel ist der Vertrag im Ermittlungsendpunkt ein fester Wert. Sie können Standardendpunkte auch verwenden, um Dienstendpunkte mit neuen Eigenschaften zu erweitern, ähnlich wie bei der Definition benutzerdefinierter Bindungen.|
@@ -80,14 +80,14 @@ Dieser Konfigurations Abschnitt enthält alle Service Model-Konfigurationselemen
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |\<configuration>|Das Stammelement für alle Konfigurationselemente in einer Konfigurationsdatei.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  WCF fügt den Konfigurations Abschnitten anderer Produkte keine Elemente hinzu.  
   
- WCF-Dienste werden im `services` -Abschnitt der Konfigurationsdatei definiert. Eine Assembly kann eine beliebige Anzahl von Diensten enthalten. Jeder Dienst hat seinen eigenen `service`-Konfigurationsabschnitt. Dieser Abschnitt und sein Inhalt definieren den Dienstvertrag, das Verhalten und die Endpunkte des Diensts.  
+ WCF-Dienste werden im- `services` Abschnitt der Konfigurationsdatei definiert. Eine Assembly kann eine beliebige Anzahl von Diensten enthalten. Jeder Dienst hat seinen eigenen `service`-Konfigurationsabschnitt. Dieser Abschnitt und sein Inhalt definieren den Dienstvertrag, das Verhalten und die Endpunkte des Diensts.  
   
  Es wird lediglich das `name`-Attribut eines Diensts benötigt.  Standardmäßig beschreibt ein Dienstname den zugrunde liegenden CLR-Typ, der für die Implementierung eines Diensts verwendet wird. Sie können jedoch die ConfigurationName-Eigenschaft eines <xref:System.ServiceModel.ServiceContractAttribute> ändern, um die CLR-Typanforderung zu überschreiben.  
   
@@ -130,6 +130,6 @@ Dieser Konfigurations Abschnitt enthält alle Service Model-Konfigurationselemen
 </configuration>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.ServiceModelSectionGroup>

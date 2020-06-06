@@ -3,10 +3,10 @@ title: Konfigurationsabschnitt für Windows Forms
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151831"
 ---
 # <a name="windows-forms-configuration-section"></a>Konfigurationsabschnitt für Windows Forms
@@ -28,29 +28,29 @@ Windows Forms-Anwendungskonfigurationseinstellungen werden im `System.Windows.Fo
 
 In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Element  |Beschreibung |
+Element  |BESCHREIBUNG |
 ---------|---------|
 [`<add>`](windows-forms-add-configuration-element.md) | Fügt einen Konfigurationseinstellungsschlüssel mit einem angegebenen Wert hinzu. |
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-Element  |Beschreibung |
+Element  |BESCHREIBUNG |
 ---------|---------|
-[\<Konfiguration>](../configuration-element.md) | Das Stammelement in jeder von der Common Language Runtime und Windows Forms-Anwendungen verwendeten Konfigurationsdatei. |
+[\<configuration>](../configuration-element.md) | Das Stammelement in jeder von der Common Language Runtime und Windows Forms-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="remarks"></a>Bemerkungen
 
 Ab .NET Framework 4.7 ermöglicht das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element die Konfiguration von Windows Forms-Anwendungen für die Nutzung von Funktionen, die in neueren Versionen von .NET Framework hinzugefügt werden.
 
-Das `<System.Windows.Forms.ApplicationConfigurationSection>` Element kann ein [`<add>`](windows-forms-add-configuration-element.md) oder mehrere untergeordnete Elemente enthalten, von denen jedes eine bestimmte Konfigurationseinstellung definiert.
+Das- `<System.Windows.Forms.ApplicationConfigurationSection>` Element kann ein oder mehrere untergeordnete- [`<add>`](windows-forms-add-configuration-element.md) Elemente enthalten, von denen jedes eine bestimmte Konfigurationseinstellung definiert.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Schema der Konfigurationsdatei](../index.md)
-- [High DPI Support in Windows Forms (Unterstützung für hohe DPI-Werte in Windows Forms)](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Konfigurationsdateischema](../index.md)
+- [Hohe dpi-Unterstützung in Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "80635401"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Benutzerdefiniertes Element für SingleTagSectionHandler
 
-Definiert Einstellungen in einem benutzerdefinierten Konfigurationsabschnitt, der durch \< <xref:System.Configuration.SingleTagSectionHandler> einen Abschnitt>-Elements definiert wird und die Klasse verwendet.
+Definiert die Einstellungen in einem benutzerdefinierten Konfigurations Abschnitt, der von einem-Element definiert wird, \<section> und verwendet die- <xref:System.Configuration.SingleTagSectionHandler> Klasse.
 
-Konfiguration &nbsp; &nbsp;>[** \<**](configuration-element.md) * \<AbschnittName>*
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;*\<sectionName>*
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,25 +27,25 @@ Konfiguration &nbsp; &nbsp;>[** \<**](configuration-element.md) * \<AbschnittNam
 
 ## <a name="attributes"></a>Attribute
 
-Attribute und Attributwerte sind benutzerdefinierte.
+Attribute und Attributwerte sind Benutzer definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<Konfiguration>**](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [**\<configuration>**](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 Keine
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Das ** \<sectionName>-Element** ist ein benutzerdefiniertes Element, das [** \<**](section-element.md) [** \<**](configsections-element-for-configuration.md) durch ein>-Tag im configSections->-Element definiert wird. Das Konfigurationssystem <xref:System.Collections.IDictionary> gibt ein <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>Objekt zurück, wenn Sie aufrufen.
+Das- **\<sectionName>** Element ist ein benutzerdefiniertes Element, das durch ein- [**\<section>**](section-element.md) Tag im-Element definiert wird [**\<configSections>**](configsections-element-for-configuration.md) Das Konfigurationssystem gibt ein-Objekt zurück, <xref:System.Collections.IDictionary> Wenn aufgerufen wird <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType> .
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird ein benutzerdefiniertes Element namens <xref:System.Configuration.SingleTagSectionHandler> ** \<sampleSection>** deklariert, das Einstellungen enthält, die von der Klasse gelesen werden:
+Im folgenden Beispiel wird ein benutzerdefiniertes Element namens deklariert **\<sampleSection>** , das von der-Klasse gelesene Einstellungen enthält <xref:System.Configuration.SingleTagSectionHandler> :
 
 ```xml
 <configuration>
@@ -61,8 +61,8 @@ Im folgenden Beispiel wird ein benutzerdefiniertes Element namens <xref:System.C
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, der Computerkonfigurationsdatei (*Machine.config*) und *Web.config-Dateien* verwendet werden, die sich nicht auf Anwendungsverzeichnisebene befinden.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurationsdateischema für .NET Framework](index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 ms.openlocfilehash: dbad888cd0537f63c09840ac1053f924db9ea9bc
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089062"
 ---
-# <a name="webproxyscript-element-network-settings"></a>\<WebProxyScript >-Element (Netzwerkeinstellungen)
+# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript>-Element (Netzwerkeinstellungen)
 Konfiguriert die Merkmale des Skripts, das zum Ermitteln von Webproxys verwendet wird.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Einstellungen**](settings-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<WebProxyScript >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webProxyScript>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ Konfiguriert die Merkmale des Skripts, das zum Ermitteln von Webproxys verwendet
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`downloadTimeout`|Gibt die maximale Zeit für das Herunterladen des Skripts in Stunden, Minuten und Sekunden an. Der Standardwert ist eine Minute.|  
   
@@ -47,13 +47,13 @@ Konfiguriert die Merkmale des Skripts, das zum Ermitteln von Webproxys verwendet
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[Einstellungen](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

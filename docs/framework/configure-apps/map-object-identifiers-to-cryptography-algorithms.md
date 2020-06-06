@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69912540"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen
@@ -38,9 +38,9 @@ Digitale Signaturen stellen sicher, dass die Daten nicht manipuliert werden, wen
 </configuration>  
 ```  
   
- [ Das\<Element "oidEntry >](./file-schema/cryptography/oidentry-element.md) " enthält zwei Attribute. Das **OID** -Attribut ist die Nummer des Objekt Bezeichners. Das **Name** -Attribut ist der Wert des **Name** -Attributs aus dem [ \<nameEntry-> Element](./file-schema/cryptography/nameentry-element.md). Es muss eine Zuordnung von einem Algorithmusnamen zu einer Klasse vorhanden sein, bevor ein Objekt Bezeichner einem einfachen Namen zugeordnet werden kann.  
+ Das- [ \<oidEntry> Element](./file-schema/cryptography/oidentry-element.md) enthält zwei Attribute. Das **OID** -Attribut ist die Nummer des Objekt Bezeichners. Das **Name** -Attribut ist der Wert des **Name** -Attributs aus dem- [ \<nameEntry> Element](./file-schema/cryptography/nameentry-element.md). Es muss eine Zuordnung von einem Algorithmusnamen zu einer Klasse vorhanden sein, bevor ein Objekt Bezeichner einem einfachen Namen zugeordnet werden kann.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren kryptografischer Klassen](configure-cryptography-classes.md)
-- [Cryptographic Services](../../standard/security/cryptographic-services.md)
+- [Kryptografiedienste](../../standard/security/cryptographic-services.md)

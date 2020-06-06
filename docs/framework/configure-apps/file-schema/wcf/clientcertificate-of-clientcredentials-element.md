@@ -1,24 +1,24 @@
 ---
-title: <clientCertificate>of <clientCredentials> -Element
+title: <clientCertificate>of- <clientCredentials> Element
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
 ms.openlocfilehash: fb95ef3168378227e41e55c6fd5e5b772cb7ad0f
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400518"
 ---
-# <a name="clientcertificate-of-clientcredentials-element"></a>\<ClientCertificate-> \<von Clientanmelde Informationen > Element
+# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate>of- \<clientCredentials> Element
 Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointverhaltens->** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Client Anmelde Informationen >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ClientCertificate->**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clientCertificate>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,12 +34,12 @@ Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`findValue`|Eine Zeichenfolge, die den Wert angibt, nach dem im X.509-Zertifikatspeicher gesucht werden soll. Der im Attribut enthaltene Typ muss den Anforderungen des `X509FindType`-Attributwerts entsprechen. Der Standardwert ist eine leere Zeichenfolge.|  
-|`storeLocation`|Gibt den Speicherort des zum Authentifizieren des Clients am Dienst verwendeten X.509-Zertifikats an. Folgende Werte sind gültig:<br /><br /> -LocalMachine: der dem lokalen Computer zugewiesene Zertifikat Speicher.<br />-CurrentUser: der dem aktuellen Benutzer zugewiesene Zertifikat Speicher.<br /><br /> Die Standardeinstellung ist LocalMachine. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|`storeName`|Gibt den Namen des X.509-Zertifikatspeichers an, der durchsucht werden soll. Folgende Werte sind gültig:<br /><br /> AddressBook Der Zertifikat Speicher für andere Benutzer.<br />AuthRoot Der Zertifikat Speicher für Zertifizierungsstellen von Drittanbietern.<br />CertificateAuthority Der Zertifikat Speicher für zwischen Zertifizierungsstellen.<br />Nicht zulässig Der Zertifikat Speicher für widerrufene Zertifikate.<br />Danken Zertifikat Speicher für persönliche Zertifikate.<br />Fasst Zertifikat Speicher für vertrauenswürdige Stamm Zertifizierungsstellen (CAS).<br />TrustedPeople Zertifikat Speicher für direkt vertrauenswürdige Personen und Ressourcen.<br />TrustedPublisher Der Zertifikat Speicher für direkt vertrauenswürdige Herausgeber.<br /><br /> Der Standardwert ist My. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Definiert den Typ der X.509-Suche, die ausgeführt werden soll. Der im `findValue`-Attribut enthaltene Typ muss den Anforderungen dieses Attributs entsprechen. Folgende Werte sind gültig:<br /><br /> -FindByThumbprint<br />-Findbysubjetname<br />-Findbysubjeterkennbare shedname<br />-FindByIssuerName<br />-Findbyissuerissushedname<br />-Findbyserialnumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-Findbytemplatename<br />-Findbyapplicationpolicy<br />-Findbycertificatepolicy<br />-Findbyextension<br />-Findbykeyusage<br />-Findbysubjetkeyidentifier<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|`storeLocation`|Gibt den Speicherort des zum Authentifizieren des Clients am Dienst verwendeten X.509-Zertifikats an. Gültige Werte sind:<br /><br /> -LocalMachine: der dem lokalen Computer zugewiesene Zertifikat Speicher.<br />-CurrentUser: der dem aktuellen Benutzer zugewiesene Zertifikat Speicher.<br /><br /> Der Standardwert ist LocalMachine. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|`storeName`|Gibt den Namen des X.509-Zertifikatspeichers an, der durchsucht werden soll. Gültige Werte sind:<br /><br /> -Addressbook: der Zertifikat Speicher für andere Benutzer.<br />-AuthRoot: der Zertifikat Speicher für Zertifizierungsstellen von Drittanbietern.<br />-CertificateAuthority: der Zertifikat Speicher für zwischen Zertifizierungsstellen.<br />-Nicht zulässig: Zertifikat Speicher für widerrufene Zertifikate.<br />-My: Zertifikat Speicher für persönliche Zertifikate.<br />-Root: der Zertifikat Speicher für vertrauenswürdige Stamm Zertifizierungsstellen (CAS).<br />-Treudpeople: der Zertifikat Speicher für direkt vertrauenswürdige Personen und Ressourcen.<br />-Treudpublisher: der Zertifikat Speicher für direkt vertrauenswürdige Herausgeber.<br /><br /> Der Standardwert ist My. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
+|X509FindType|Definiert den Typ der X.509-Suche, die ausgeführt werden soll. Der im `findValue`-Attribut enthaltene Typ muss den Anforderungen dieses Attributs entsprechen. Gültige Werte sind:<br /><br /> -FindByThumbprint<br />-Findbysubjetname<br />-Findbysubjeterkennbare shedname<br />-FindByIssuerName<br />-Findbyissuerissushedname<br />-Findbyserialnumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-Findbytemplatename<br />-Findbyapplicationpolicy<br />-Findbycertificatepolicy<br />-Findbyextension<br />-Findbykeyusage<br />-Findbysubjetkeyidentifier<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName. Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -50,10 +50,10 @@ Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinformationen an.|  
   
-## <a name="remarks"></a>Hinweise  
- Dieses Konfigurationselement gibt das Zertifikat an, das verwendet wird, um den Client mit diesem Element zu authentifizieren. Weitere Informationen finden Sie unter [Vorgehensweise: Geben Sie die Werte](../../../wcf/how-to-specify-client-credential-values.md)der Client Anmelde Informationen an.  
+## <a name="remarks"></a>Bemerkungen  
+ Dieses Konfigurationselement gibt das Zertifikat an, das verwendet wird, um den Client mit diesem Element zu authentifizieren. Weitere Informationen finden Sie unter Gewusst [wie: Angeben von Client](../../../wcf/how-to-specify-client-credential-values.md)Anmelde Informations Werten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
@@ -62,7 +62,7 @@ Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Sicherheitsverhalten](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [Vorgehensweise: Angeben von Client Anmelde Informations Werten](../../../wcf/how-to-specify-client-credential-values.md)
+- [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../wcf/how-to-specify-client-credential-values.md)
 - [Sichern von Clients](../../../wcf/securing-clients.md)
-- [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
+- [Verwenden von Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
 - [Sichern von Diensten und Clients](../../../wcf/feature-details/securing-services-and-clients.md)

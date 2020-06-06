@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
 ms.openlocfilehash: a0db10ceb75a470dbf799d717b2059355dd104bb
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81646066"
 ---
-# <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
-Registriert einen Cache für Sitzungstoken mit einem Dienst oder einer Sicherheitstokenhandlerauflistung.  
+# \<sessionSecurityTokenCache>
+Registriert einen Cache für Sitzungs Token mit einem Dienst oder einer Sammlung von Sicherheitstokenhandlern.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<Caches>**](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<caches>**](caches.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionSecurityTokenCache>**  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,7 +39,7 @@ Registriert einen Cache für Sitzungstoken mit einem Dienst oder einer Sicherhei
   
 |attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|type|Ein Typ, der von <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> der Klasse ableitet.|  
+|type|Ein Typ, der von der-Klasse abgeleitet wird <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> .|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -48,10 +48,10 @@ Registriert einen Cache für Sitzungstoken mit einem Dienst oder einer Sicherhei
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Caches>](caches.md)|Registriert die Caches, die von einem Dienst oder einer Sicherheitstokenhandlersammlung verwendet werden.|  
+|[\<caches>](caches.md)|Registriert die von einem Dienst oder einer sicherheitstokenhandlerauflistung verwendeten Caches.|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende XML-Code zeigt die Konfiguration eines benutzerdefinierten Caches zum Speichern von Sitzungssicherheitstoken (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). Die Konfiguration wird `ClaimsAwareWebFarm` aus dem Beispiel entnommen. Weitere Informationen zu diesem Beispiel finden Sie unter [WIF Code Sample Index](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index).  
+ Der folgende XML-Code zeigt die Konfiguration eines benutzerdefinierten Caches zum Speichern von Sitzungs Sicherheits Token ( <xref:System.IdentityModel.Tokens.SessionSecurityToken> ). Die Konfiguration wird aus dem `ClaimsAwareWebFarm` Beispiel entnommen. Weitere Informationen zu diesem Beispiel finden Sie unter [Beispiel Index für WIF-Code](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index).  
   
 ```xml  
 <caches>  
@@ -62,6 +62,6 @@ Registriert einen Cache für Sitzungstoken mit einem Dienst oder einer Sicherhei
 </caches>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
 ms.openlocfilehash: 88098f2afaad9728e38c4f9935b45f45826a0ca9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154555"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net>-Element (Netzwerkeinstellungen)
 Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.  
   
-[**\<Konfiguration>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.net>**  
   
 ## <a name="syntax"></a>Syntax  
@@ -31,32 +31,32 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
- Keine.  
+### <a name="attributes"></a>Attribute  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Internetanforderungen verwendet werden.|  
-|[connectionManagement](connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen zu einem Internethost an.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Internet Anforderungen verwendet werden.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Internet Host an.|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).|  
-|[Mailsettings](mailsettings-element-network-settings.md)|Konfiguriert SMTP-E-Mail-Versandoptionen (Simple Mail Transport Protocol).|  
-|[Requestcaching](requestcaching-element-network-settings.md)|Steuert den Zwischenspeicherungsmechanismus für Netzwerkanforderungen.|  
-|[einstellungen](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für <xref:System.Net> Klassen in den und verwandten untergeordneten Namespaces.|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|Gibt Module an, die zum Anfordern von Informationen von Internethosts verwendet werden sollen.|  
+|[mailSettings](mailsettings-element-network-settings.md)|Konfiguriert SMTP (Simple Mail Transport Protocol)-e-Mail-Sende Optionen.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.|  
+|[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für Klassen in den <xref:System.Net> zugehörigen untergeordneten Namespaces.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Gibt Module an, die zum Anfordern von Informationen von Internet Hosts verwendet werden sollen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Konfiguration](../configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
+|[configuration](../configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das [ \<system.net>-Element](system-net-element-network-settings.md) enthält <xref:System.Net> Einstellungen für Klassen in den und verwandten untergeordneten Namespaces. Die Einstellungen konfigurieren Authentifizierungsmodule, Verbindungsverwaltung, E-Mail-Einstellungen, den Proxyserver und Internetanforderungsmodule für den Empfang von Informationen von Internethosts.  
+ Das [\<system.net>](system-net-element-network-settings.md) -Element enthält Einstellungen für Klassen in den zugehörigen untergeordneten <xref:System.Net> Namespaces. Die Einstellungen konfigurieren Authentifizierungs Module, Verbindungs Verwaltung, e-Mail-Einstellungen, den Proxy Server und Internet Anforderungs Module zum Empfangen von Informationen von Internet Hosts.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine <xref:System.Net> typische Konfiguration, die von Klassen verwendet wird.  
+ Das folgende Beispiel zeigt eine typische Konfiguration, die von-Klassen verwendet wird <xref:System.Net> .  
   
 ```xml  
 <configuration>  

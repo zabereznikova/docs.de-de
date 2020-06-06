@@ -6,20 +6,20 @@ helpviewer_keywords:
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 ms.openlocfilehash: a0dcffe378cdd09de0fbd8f0a6ef0635c033fd9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154061"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources>-Element
-Gibt an, ob Assemblys, die aus Remotequellen geladen werden, in .NET Framework 4 und höher volle Vertrauenswürdigkeit gewährt werden soll.
+Gibt an, ob aus Remote Quellen geladene Assemblys in .NET Framework 4 und höher volle Vertrauenswürdigkeit gewährt werden sollen.
   
 > [!NOTE]
-> Wenn Sie aufgrund einer Fehlermeldung in der Visual Studio-Projektfehlerliste oder eines Buildfehlers zu diesem Artikel weitergeleitet wurden, finden Sie weitere Informationen unter [Gewusst wie: Verwenden einer Assembly aus dem Web in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
+> Wenn Sie aufgrund einer Fehlermeldung in der Visual Studio-Projekt Fehlerliste oder einem Buildfehler zu diesem Artikel weitergeleitet wurden, finden Sie weitere Informationen unter Gewusst [wie: Verwenden einer Assembly aus dem Web in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
-[**\<Konfiguration>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<loadFromRemoteSources>**  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,21 +32,21 @@ Gibt an, ob Assemblys, die aus Remotequellen geladen werden, in .NET Framework 4
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob einer Assembly, die von einer Remotequelle geladen wird, volle Vertrauenswürdigkeit gewährt werden soll.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob einer Assembly, die aus einer Remote Quelle geladen wird, volle Vertrauenswürdigkeit gewährt werden soll.|  
   
 ## <a name="enabled-attribute"></a>aktiviertes Attribut  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|`false`|Gewähren Sie Anwendungen aus Remotequellen keine volle Vertrauenswürdigkeit. Dies ist die Standardoption.|  
-|`true`|Gewähren Sie Anwendungen aus Remotequellen volle Vertrauenswürdigkeit.|  
+|`false`|Gewähren Sie Anwendungen aus Remote Quellen keine volle Vertrauenswürdigkeit. Dies ist die Standardeinstellung.|  
+|`true`|Gewähren Sie Anwendungen aus Remote Quellen volle Vertrauenswürdigkeit.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -57,9 +57,9 @@ Gibt an, ob Assemblys, die aus Remotequellen geladen werden, in .NET Framework 4
   
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie in der .NET Framework 3.5- und früheren Version eine Assembly von einem Remotespeicherort laden, wird Code in der Assembly in teilweiser Vertrauenswürdigkeit mit einem Grantsatz ausgeführt, der von der Zone abhängt, aus der sie geladen wird. Wenn Sie beispielsweise eine Assembly von einer Website laden, wird sie in die Internetzone geladen und dem Internetberechtigungssatz erteilt. Mit anderen Worten, es wird in einer Internet-Sandbox ausgeführt.
+Wenn Sie in der .NET Framework 3,5 und früheren Versionen eine Assembly von einem Remote Speicherort laden, wird der Code in der Assembly mit teilweiser Vertrauenswürdigkeit mit einem Berechtigungs Satz ausgeführt, der von der Zone abhängig ist, aus der er geladen wurde. Wenn Sie z. b. eine Assembly von einer Website laden, wird Sie in die Internet Zone geladen und erhält den Internet Berechtigungs Satz. Das heißt, Sie wird in einer Internet Sandbox ausgeführt.
 
-Ab der .NET Framework 4-Richtlinie wird die Cas-Richtlinie (Code Access Security) deaktiviert, und Assemblys werden in voller Vertrauenswürdigkeit geladen. Normalerweise würde dies Assemblys, die mit der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> zuvor sandkastenten Methode geladen wurden, volle Vertrauenswürdigkeit gewähren. Um dies zu verhindern, ist die Möglichkeit, Code in Assemblys auszuführen, die von einer Remotequelle geladen werden, standardmäßig deaktiviert. Wenn Sie versuchen, eine Remoteassembly zu <xref:System.IO.FileLoadException> laden, wird standardmäßig eine Ausnahmemeldung wie die folgende ausgelöst:
+Ab .NET Framework 4 ist die Richtlinie für die Code Zugriffssicherheit (Code Access Security, CAS) deaktiviert, und Assemblys werden mit voller Vertrauenswürdigkeit geladen. Normalerweise würde dies Assemblys, die mit der Methode geladen werden <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> , die zuvor Sandkasten waren, vollständig Vertrauen gewähren. Um dies zu verhindern, ist die Möglichkeit, Code in aus einer Remote Quelle geladenen Assemblys auszuführen, standardmäßig deaktiviert. Wenn Sie versuchen, eine Remoteassembly zu laden, wird standardmäßig eine <xref:System.IO.FileLoadException> mit einer Ausnahme Meldung wie die folgende ausgelöst:
 
 ```text
 System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported.
@@ -70,40 +70,40 @@ to be sandboxed in previous versions of the .NET Framework. This release of the 
 so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch.
 ```
 
-Um die Assembly zu laden und ihren Code auszuführen, müssen Sie entweder Folgendes tun:
+Um die Assembly zu laden und Ihren Code auszuführen, müssen Sie eine der folgenden Aktionen ausführen:
 
-- Explizit ecreate eine Sandbox für die Assembly (siehe [Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Erstellen Sie explizit eine Sandbox für die Assembly (Weitere Informationen finden [Sie unter Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
-- Führen Sie den Code der Assembly in voller Vertrauenswürdigkeit aus. Dazu konfigurieren Sie `<loadFromRemoteSources>` das Element. Sie können angeben, dass die Assemblys, die in früheren Versionen von .NET Framework teilweise vertrauenswürdig ausgeführt werden, jetzt in der .NET Framework 4- und höher-Version als voll vertrauenswürdig ausgeführt werden.
+- Führen Sie den Assemblycode in voller Vertrauenswürdigkeit aus. Dazu konfigurieren Sie das- `<loadFromRemoteSources>` Element. Mit dieser Einstellung können Sie angeben, dass die Assemblys, die in früheren Versionen des .NET Framework in teilweiser Vertrauenswürdigkeit ausgeführt werden, nun in der .NET Framework 4 und höheren Versionen mit voller Vertrauenswürdigkeit ausgeführt werden
 
 > [!IMPORTANT]
-> Wenn die Assembly nicht in voller Vertrauenswürdigkeit ausgeführt werden soll, legen Sie dieses Konfigurationselement nicht fest. Erstellen Sie stattdessen eine <xref:System.AppDomain> Sandbox, in die die Baugruppe geladen werden soll.
+> Wenn die Assembly nicht mit voller Vertrauenswürdigkeit ausgeführt werden soll, legen Sie dieses Konfigurationselement nicht fest. Erstellen Sie stattdessen einen Sandkasten, <xref:System.AppDomain> in dem die Assembly geladen werden soll.
 
-Das `enabled` Attribut `<loadFromRemoteSources>` für das Element ist nur wirksam, wenn die Codezugriffssicherheit (Code Access Security, CAS) deaktiviert ist. Standardmäßig ist die CAS-Richtlinie in der .NET Framework 4- und höher-Version deaktiviert. Wenn Sie `enabled` `true`auf festlegen, wird Remoteassemblys volle Vertrauenswürdigkeit gewährt.
+Das- `enabled` Attribut für das- `<loadFromRemoteSources>` Element ist nur wirksam, wenn Code Zugriffssicherheit (Code Access Security, CAS) deaktiviert ist. Standardmäßig ist die CAS-Richtlinie in den .NET Framework 4 und höheren Versionen deaktiviert. Wenn Sie auf festlegen, wird für Remoteassemblys `enabled` `true` volle Vertrauenswürdigkeit gewährt.
 
-Wenn `enabled` nicht auf `true`gesetzt <xref:System.IO.FileLoadException> ist, wird a unter einer der folgenden Bedingungen ausgelöst:
+Wenn `enabled` nicht auf festgelegt ist `true` , <xref:System.IO.FileLoadException> wird eine unter den folgenden Bedingungen ausgelöst:
 
-- Das Sandboxing-Verhalten der aktuellen Domäne unterscheidet sich von ihrem Verhalten in .NET Framework 3.5. Dazu muss die CAS-Richtlinie deaktiviert und die aktuelle Domäne nicht sandkastenweise.
+- Das Sandkasten Verhalten der aktuellen Domäne unterscheidet sich vom Verhalten in der .NET Framework 3,5. Hierfür muss die CAS-Richtlinie deaktiviert werden, und die aktuelle Domäne darf nicht als Sandkasten angezeigt werden.
 
-- Die geladene Assembly stammt `MyComputer` nicht aus der Zone.
+- Die Assembly, die geladen wird, befindet sich nicht in der `MyComputer` Zone.
 
-Festlegen `<loadFromRemoteSources>` des `true` Elements, dass diese Ausnahme nicht ausgelöst wird. Sie können angeben, dass Sie sich nicht auf die Common Language-Laufzeit verlassen, um die geladenen Assemblys zur Sicherheit zu sandboxen, und dass sie in voller Vertrauenswürdigkeit ausgeführt werden können.
+Durch Festlegen des- `<loadFromRemoteSources>` Elements auf `true` wird verhindert, dass diese Ausnahme ausgelöst wird. Sie können angeben, dass Sie sich nicht auf den Common Language Runtime verlassen, um die geladenen Assemblys auf die Sicherheit zu überführen, und dass Sie in voller Vertrauenswürdigkeit ausgeführt werden können.
 
 ## <a name="notes"></a>Notizen
 
-- In der Version .NET Framework 4.5 und höher werden Assemblys auf lokalen Netzwerkfreigaben standardmäßig als voll vertrauenswürdig ausgeführt. Sie müssen das `<loadFromRemoteSources>` Element nicht aktivieren.
+- In den .NET Framework 4,5 und höheren Versionen werden Assemblys auf lokalen Netzwerkfreigaben standardmäßig mit vollständiger Vertrauenswürdigkeit ausgeführt. Sie müssen das-Element nicht aktivieren `<loadFromRemoteSources>` .
 
-- Wenn eine Anwendung aus dem Web kopiert wurde, wird sie von Windows als Webanwendung gekennzeichnet, auch wenn sie sich auf dem lokalen Computer befindet. Sie können diese Bezeichnung ändern, indem Sie ihre `<loadFromRemoteSources>` Dateieigenschaften ändern, oder Sie können das Element verwenden, um der Assembly volle Vertrauenswürdigkeit zu gewähren. Alternativ können Sie die <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> Methode verwenden, um eine lokale Assembly zu laden, die vom Betriebssystem als aus dem Web geladen gekennzeichnet wurde.
+- Wenn eine Anwendung aus dem Web kopiert wurde, wird Sie von Windows als Webanwendung gekennzeichnet, auch wenn Sie sich auf dem lokalen Computer befindet. Sie können diese Bezeichnung ändern, indem Sie Ihre Dateieigenschaften ändern, oder Sie können das-Element verwenden, `<loadFromRemoteSources>` um der Assembly volle Vertrauenswürdigkeit zu gewähren. Als Alternative können Sie die-Methode verwenden, <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> um eine lokale Assembly zu laden, die vom Betriebssystem als aus dem Web geladen wurde.
 
-- Möglicherweise erhalten <xref:System.IO.FileLoadException> Sie eine in einer Anwendung, die in einer Windows Virtual PC-Anwendung ausgeführt wird. Dies kann passieren, wenn Sie versuchen, eine Datei aus verknüpften Ordnern auf dem Hostingcomputer zu laden. Sie kann auch auftreten, wenn Sie versuchen, eine Datei aus einem Ordner zu laden, der über [Remotedesktopdienste](/windows/win32/termserv/terminal-services-portal) (Terminaldienste) verknüpft ist. Um die Ausnahme `enabled` zu `true`vermeiden, legen Sie auf fest.
+- Sie erhalten möglicherweise eine <xref:System.IO.FileLoadException> in einer Anwendung, die in einer Windows Virtual PC-Anwendung ausgeführt wird. Dies kann vorkommen, wenn Sie versuchen, eine Datei aus verknüpften Ordnern auf dem hostingcomputer zu laden. Dies kann auch auftreten, wenn Sie versuchen, eine Datei aus einem Ordner zu laden, der über [Remotedesktopdienste](/windows/win32/termserv/terminal-services-portal) (Terminal Dienste) verknüpft ist. Um die Ausnahme zu vermeiden, legen `enabled` Sie auf fest `true` .
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element wird in der Regel in der Anwendungskonfigurationsdatei verwendet, kann jedoch je nach Kontext in anderen Konfigurationsdateien verwendet werden. Weitere Informationen finden Sie im Artikel [Weitere implizite Verwendungen von CAS-Richtlinien: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) im .NET Security-Blog.  
+Dieses Element wird in der Regel in der Anwendungs Konfigurationsdatei verwendet, kann aber in anderen Konfigurationsdateien verwendet werden, je nach Kontext. Weitere Informationen finden Sie im Artikel zur [impliziten Verwendung der CAS-Richtlinie: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) im .net Security-Blog.  
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Assemblys, die aus Remotequellen geladen werden, volle Vertrauenswürdigkeit gewähren.
+Im folgenden Beispiel wird gezeigt, wie Sie Assemblys, die aus Remote Quellen geladen werden, volle Vertrauenswürdigkeit gewähren
 
 ```xml
 <configuration>  
@@ -115,8 +115,8 @@ Das folgende Beispiel zeigt, wie Assemblys, die aus Remotequellen geladen werden
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Implizitere Verwendungen der CAS-Richtlinie: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
-- [Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Implizitere Verwendung der CAS-Richtlinie: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
+- [How to: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Schema für Laufzeiteinstellungen](index.md)
-- [Schema der Konfigurationsdatei](../index.md)
+- [Konfigurationsdateischema](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

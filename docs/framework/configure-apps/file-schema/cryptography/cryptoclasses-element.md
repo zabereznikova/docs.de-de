@@ -9,16 +9,16 @@ helpviewer_keywords:
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155245"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses> Element
-Enthält eine Liste von Kryptografieklassen, die [ \<](nameentry-element.md) eine Zuordnung zu einem Anzeigenamen im nameEntry>-Element haben.  
+# <a name="cryptoclasses-element"></a>\<cryptoClasses>-Element
+Enthält eine Liste von Kryptografieklassen, die eine Zuordnung zu einem anzeigen Amen im- [\<nameEntry>](nameentry-element.md) Element aufweisen.  
   
-[**\<Konfiguration>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
@@ -34,26 +34,26 @@ Enthält eine Liste von Kryptografieklassen, die [ \<](nameentry-element.md) ein
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
- Keine.  
+### <a name="attributes"></a>Attribute  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|[\<cryptoClass>](cryptoclass-element.md)|Enthält eine Kryptografieklasse, die eine Zuordnung zu einem Anzeigenamen im ** \<nameEntry>-Element** enthält.|  
+|[\<cryptoClass>](cryptoclass-element.md)|Enthält eine Kryptografieklasse, die eine Zuordnung zu einem anzeigen Amen im- **\<nameEntry>** Element aufweist.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
 |`cryptoNameMapping`|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
-|`mscorlib`|Enthält `cryptographySettings` das Element.|  
+|`mscorlib`|Enthält das- `cryptographySettings` Element.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie sie das ** \<cryptoClass>-Element** verwenden, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Sie können dann die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> Methode verwenden, um ein `MyCryptoRSAClass` Objekt zurückzugeben.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<cryptoClass>** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode übergeben und die- <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> Methode verwenden, um ein-Objekt zurückzugeben `MyCryptoRSAClass` .  
   
 ```xml  
 <configuration>  
@@ -76,11 +76,11 @@ Enthält eine Liste von Kryptografieklassen, die [ \<](nameentry-element.md) ein
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.Cryptography>
-- [Schema der Konfigurationsdatei](../index.md)
-- [Kryptografie-Einstellungen Schema](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [Konfigurationsdateischema](../index.md)
+- [Schema für Kryptografieeinstellungen](index.md)
+- [Kryptografiedienste](../../../../standard/security/cryptographic-services.md)
+- [System. Security. Cryptography. CryptoConfig. kreatefromname](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

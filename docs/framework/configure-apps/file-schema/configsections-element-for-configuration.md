@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155348"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections>-Element für \<die Konfiguration>
+# <a name="configsections-element-for-configuration"></a>\<configSections>-Element für \<configuration>
 
-Enthält Konfigurationsabschnittund- und Namespacedeklarationen.
+Enthält Konfigurations Abschnitts-und Namespace Deklarationen.
 
-Konfiguration &nbsp; &nbsp;>[** \<**](configuration-element.md) **configSections \<>**
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;**\<configSections>**
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attribute
 
 Keine
 
@@ -28,24 +28,24 @@ Keine
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<Konfiguration>**](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [**\<configuration>**](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
-| [**\<Abschnitt>**](section-element.md) | Enthält eine Konfigurationsabschnittsdeklaration. |
-| [**\<sectionGruppe>**](sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurationsabschnitte. |
-| [**\<entfernen sie>**](remove-element-for-configsections.md) | Entfernt einen vordefinierten Abschnitt oder eine Vorschnittgruppe. |
-| [**\<klare>**](clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnittsgruppen. |
+| [**\<section>**](section-element.md) | Enthält eine Konfigurations Abschnitts Deklaration. |
+| [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurations Abschnitte. |
+| [**\<remove>**](remove-element-for-configsections.md) | Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe. |
+| [**\<clear>**](clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen. |
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn sich dieses Element in einer Konfigurationsdatei befindet, ** \<** muss es das erste untergeordnete Element der Konfiguration>-Elements sein.
+Wenn dieses Element in einer Konfigurationsdatei gespeichert ist, muss es das erste untergeordnete Element des- **\<configuration>** Elements sein.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie einen Konfigurationsabschnitt definieren und Einstellungen für diesen Abschnitt definieren:
+Im folgenden Beispiel wird gezeigt, wie ein Konfigurations Abschnitt definiert und Einstellungen für diesen Abschnitt definiert werden:
 
 ```xml
 <configuration>
@@ -61,8 +61,8 @@ Das folgende Beispiel zeigt, wie Sie einen Konfigurationsabschnitt definieren un
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, der Computerkonfigurationsdatei (*Machine.config*) und *web.config-Dateien* verwendet werden, die sich nicht auf Anwendungsverzeichnisebene befinden.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurationsdateischema für .NET Framework](index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

@@ -3,19 +3,19 @@ title: <idn>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698162"
 ---
-# <a name="idn-element-uri-settings"></a>\<IDN-> Element (URI-Einstellungen)
+# <a name="idn-element-uri-settings"></a>\<idn>-Element (URI-Einstellungen)
 
 Gibt an, ob die IDN (Internationalized Domain Name)-Verarbeitung auf einen Domänen Namen angewendet wird.
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<-URI >** ](uri-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<IDN >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<idn>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,7 +26,7 @@ Gibt an, ob die IDN (Internationalized Domain Name)-Verarbeitung auf einen Domä
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
+ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
 
@@ -44,7 +44,7 @@ Keine
 |-----------------|---------------------|  
 |[uri](uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbeitet, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden.|  
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die vorhandene <xref:System.Uri> Klasse wurde in .NET Framework 3,5 erweitert. 3,0 SP1 und 2,0 SP1 mit Unterstützung für International Resource Identifier (IRI) und Internationalized Domain Names (IDN). Aktuelle Benutzer sehen keine Änderung des Verhaltens von .NET Framework 2,0, es sei denn, Sie aktivieren speziell IRI-und IDN-Unterstützung. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.
 
@@ -62,7 +62,7 @@ Die folgenden beiden Änderungen sind erforderlich, um die Unterstützung für I
 
 - IDN aktiviert = alle  
 
-     Mit diesem Wert werden alle Unicode-Domänen Namen in Ihre Punycode-Entsprechungen (IDN-Namen) konvertiert.
+     Durch diesen Wert werden alle Unicode-Domänennamen in ihre Punycode-Entsprechungen (IDN-Namen) konvertiert.
 
 - IDN aktiviert = AllExceptIntranet
 
@@ -70,7 +70,7 @@ Die folgenden beiden Änderungen sind erforderlich, um die Unterstützung für I
 
 - IDN aktiviert = None
 
-     Mit diesem Wert werden keine Unicode-Domänen Namen in Punycode konvertiert. Dies ist der Standardwert, der mit dem .NET Framework 2,0-Verhalten konsistent ist.
+     Durch diesen Wert werden keine Unicode-Domänennamen in ihre Punycode-Entsprechungen konvertiert. Dies ist der Standardwert, der dem .NET Framework 2.0-Verhalten entspricht.
 
  Beim Aktivieren von IDN werden alle Unicode-Bezeichnungen in einem Domänennamen in ihre Punycode-Entsprechungen konvertiert. Punycode-Namen enthalten nur ASCII-Zeichen und beginnen immer mit dem Präfix „xn--“. So werden vorhandene DNS-Server im Internet unterstützt, da die meisten DNS-Server nur ASCII-Zeichen unterstützen (siehe RFC 3940).
 
@@ -80,7 +80,7 @@ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkon
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse zur Unterstützung der IRI-Verarbeitung und IDN-Namen verwendet wird:
+Das folgende Beispiel zeigt eine Konfiguration, die von der- <xref:System.Uri> Klasse zur Unterstützung der IRI-Verarbeitung und IDN-Namen verwendet wird:
 
 ```xml
 <configuration>
@@ -91,8 +91,8 @@ Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Kl
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

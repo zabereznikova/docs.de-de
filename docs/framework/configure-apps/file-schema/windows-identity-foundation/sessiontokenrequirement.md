@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
 ms.openlocfilehash: ade55a5b26826633faf2e7ef7598a4071d613bbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152540"
 ---
-# <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
-Stellt die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Konfiguration für die Klasse oder abgeleitete Klassen bereit.  
+# \<sessionTokenRequirement>
+Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Klasse oder abgeleitete Klassen bereit.  
   
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<hinzufügen>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionTokenRequirement>**  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,11 +38,11 @@ Stellt die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Konfig
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|lifetime|Gibt die Lebensdauer von Sitzungstoken an.|  
+|lifetime|Gibt die Lebensdauer von Sitzungs Token an.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -51,7 +51,7 @@ Stellt die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Konfig
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<hinzufügen>](add.md)|Fügt der Tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.|  
+|[\<add>](add.md)|Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.|  
   
 ## <a name="example"></a>Beispiel  
   
