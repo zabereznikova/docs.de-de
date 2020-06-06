@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 ms.openlocfilehash: 66abd7f057bc6d060e50a889a945281d07c97592
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155426"
 ---
 # <a name="clear-element-for-configsections"></a>\<clear>-Element für \<configSections>
 
-Löscht alle zuvor definierten Abschnitte und Abschnittsgruppen.
+Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen.
 
-&nbsp; &nbsp; &nbsp; &nbsp; [** \<Konfiguration>**](configuration-element.md) &nbsp; &nbsp; [** \<configSections**](configsections-element-for-configuration.md) **>\<klare>**
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md) &nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,15 +28,15 @@ Löscht alle zuvor definierten Abschnitte und Abschnittsgruppen.
 
 ## <a name="attribute"></a>attribute
 
-|           | Beschreibung |
+|           | BESCHREIBUNG |
 | --------- | ----------- |
-| **Name**  | Erforderliches Attribut.<br><br>Gibt den Namen des zu entfernenden Abschnitts oder der Zu entfernenden Abschnittsgruppe an. |
+| **name**  | Erforderliches Attribut.<br><br>Gibt den Namen des Abschnitts oder der Abschnitts Gruppe an, der entfernt werden soll. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
-| [** \<configSections>** Element](configsections-element-for-configuration.md) | Enthält Konfigurationsabschnittund- und Namespacedeklarationen. |
+| [**\<configSections>** Gewisses](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -44,13 +44,13 @@ Keine
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das ** \<clear>-Element** entfernt alle Abschnitte und Abschnittsgruppen aus der Anwendung, die zuvor in der aktuellen Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationsdateihierarchie definiert wurden.
+Das **\<clear>** -Element entfernt alle Abschnitte und Abschnitts Gruppen aus der Anwendung, die zuvor in der aktuellen Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationsdatei Hierarchie definiert wurden.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel werden eine Maschinenkonfigurationsdatei und eine Anwendungskonfigurationsdatei definiert und gezeigt, wie das ** \<>-Element** in einer Anwendungskonfigurationsdatei zum Löschen von Abschnitten verwendet wird, die zuvor in der Maschinenkonfigurationsdatei definiert wurden.
+In diesem Beispiel werden eine Computer Konfigurationsdatei und eine Anwendungs Konfigurationsdatei definiert. Außerdem wird gezeigt, wie Sie mit dem- **\<clear>** Element in einer Anwendungs Konfigurationsdatei Abschnitte löschen, die zuvor in der Computer Konfigurationsdatei definiert wurden
 
-Der folgende Computerkonfigurationsdateicode deklariert zwei Abschnitte, ** \<sampleSection>** und ** \<anotherSampleSection>**, die vor der Anwendungskonfigurationsdatei gelesen werden:
+Der folgende Computer Konfigurationsdatei-Code deklariert zwei **\<sampleSection>** Abschnitte **\<anotherSampleSection>** : und, die vor der Anwendungs Konfigurationsdatei gelesen werden:
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Der folgende Computerkonfigurationsdateicode deklariert zwei Abschnitte, ** \<sa
 </configuration>
 ```
 
-Der folgende Anwendungskonfigurationsdateicode löscht alle zuvor deklarierten Abschnitte. Die Anwendung kann keine Einstellungen in einem der Abschnitte verwenden oder abrufen, die in der Computerkonfigurationsdatei deklariert wurden. Es können jedoch Einstellungen von ** \<einem anderenAbschnitt**>verwendet werden, da es nach dem ** \<klaren>-Element** kommt.
+Der folgende Anwendungs Konfigurationsdatei-Code löscht alle zuvor deklarierten Abschnitte. Die Anwendung kann in keinem der Abschnitte, die in der Computer Konfigurationsdatei deklariert wurden, Einstellungen verwenden oder abrufen. Es können jedoch Einstellungen von verwendet werden, **\<anotherSection>** da es hinter dem- **\<clear>** Element liegt.
 
 ```xml
 <!-- Application configuration file -->
@@ -85,8 +85,8 @@ Der folgende Anwendungskonfigurationsdateicode löscht alle zuvor deklarierten A
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, der Computerkonfigurationsdatei (*Machine.config*) und *web.config-Dateien* verwendet werden, die sich nicht auf Anwendungsverzeichnisebene befinden.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurationsdateischema für .NET Framework](index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

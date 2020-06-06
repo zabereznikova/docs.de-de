@@ -3,10 +3,10 @@ title: .NET Native-Reflektions-API-Referenz
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128220"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native-Reflektions-API-Referenz
@@ -23,12 +23,12 @@ ms.locfileid: "73128220"
 - Die [MissingMetadataException-Problembehandlung](https://dotnet.github.io/native/troubleshooter/method.html) für Methoden.  
   
 > [!NOTE]
-> In diesem Verweis werden drei Ausnahme Typen dokumentiert, die für .net Native eindeutig sind. Eine Referenz Dokumentation für die .NET Framework-kernreflektionsapi finden Sie in den Namespaces <xref:System.Reflection>, <xref:System.Reflection.Context> und <xref:System.Reflection.Emit>. Eine Referenzdokumentation für die zentrale .NET Framework-Interop-API finden Sie unter <xref:System.Runtime.InteropServices>.  
+> In diesem Verweis werden drei Ausnahme Typen dokumentiert, die für .net Native eindeutig sind. Eine Referenz Dokumentation für die .NET Framework-kernreflektionsapi finden Sie unter den <xref:System.Reflection> <xref:System.Reflection.Context> <xref:System.Reflection.Emit> Namespaces, und. Eine Referenzdokumentation für die zentrale .NET Framework-Interop-API finden Sie unter <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection-Namespace  
  Der <xref:System.Reflection> -Namespace enthält die grundlegenden Typen, die für die Reflektion im .NET Framework verwendet werden. Für .net Native enthält es auch zwei neue Ausnahme Typen:  
   
-|Klasse|Beschreibung|  
+|Klasse|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[MissingMetadataException](missingmetadataexception-class-net-native.md)|Die Ausnahme, die ausgelöst wird, wenn Reflektion verwendet wird, um Metadaten abzurufen, die nicht vorhanden sind.|  
 |[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|Die Ausnahme, die ausgelöst wird, wenn Metadaten für einen Typ oder Typmember verfügbar sind, aber dessen Implementierung entfernt wurde.|  
@@ -38,13 +38,13 @@ ms.locfileid: "73128220"
 ## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices-Namespace  
  Der <xref:System.Runtime.CompilerServices> -Namespace enthält für Benutzer entworfene Typen nach Sprachcompilern. Für .net Native enthält Sie auch einen neuen Ausnahmetyp:  
   
-|Klasse|Beschreibung|  
+|Klasse|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|Die Ausnahme, die ausgelöst wird, wenn eine manuelle Marshallingmethode aufgerufen wird, aber keine Metadaten für einen Typ durch statische Analyse oder in einer Laufzeitrichtliniendatei gefunden werden.|  
   
  Eine Dokumentation zu den anderen Typen in diesem Namespace finden Sie auf der <xref:System.Runtime.CompilerServices> -Referenzseiten in der .NET Framework-Dokumentationsgruppe.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [MissingInteropDataException-Klasse](missinginteropdataexception-class-net-native.md)
 - [MissingMetadataException-Klasse](missingmetadataexception-class-net-native.md)

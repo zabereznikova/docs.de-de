@@ -3,13 +3,13 @@ title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 ms.openlocfilehash: 39dc92d65a41d223ebd39aec3dc59871ad1fd101
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77448684"
 ---
-# <a name="behaviorextensions"></a>\<Verhaltungen >
+# \<behaviorExtensions>
 Verhaltenserweiterungen ermöglichen es dem Benutzer, benutzerdefinierte Verhaltenselemente zu erstellen. Diese Elemente können neben den standardmäßigen Windows Communication Foundation (WCF)-Verhaltenselementen verwendet werden. Im `behaviorExtensions`-Abschnitt wird das Element so definiert, dass es in der Konfiguration verwendet werden kann. Im Folgenden finden Sie ein Beispiel für eine typische Verhaltenserweiterung.  
   
 ```xml  
@@ -49,9 +49,9 @@ Verhaltenserweiterungen ermöglichen es dem Benutzer, benutzerdefinierte Verhalt
   
  Ein Angreifer kann die CLR-Suchreihenfolge ausnutzen und nicht autorisierten Code ausführen. Die Verwendung vollqualifizierter (sicherer) Namen ermöglicht die eindeutige Identifizierung eines Typs und trägt zur Verbesserung der Systemsicherheit bei.  
   
- Weitere Informationen finden Sie unter [so](../../../deployment/how-the-runtime-locates-assemblies.md) sucht Common Language Runtime nach Assemblys und <xref:System.AppDomain.TypeResolve>.  
+ Weitere Informationen finden Sie unter [so](../../../deployment/how-the-runtime-locates-assemblies.md) sucht Common Language Runtime nach Assemblys und <xref:System.AppDomain.TypeResolve> .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
 - [Konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

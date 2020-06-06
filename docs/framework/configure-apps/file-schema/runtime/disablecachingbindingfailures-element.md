@@ -11,18 +11,18 @@ helpviewer_keywords:
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117497"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disablecachingbindingfailure >-Element
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures>-Element
 Gibt an, ob das Zwischenspeichern von Bindungs Fehlern deaktiviert werden soll, die auftreten, da die Assembly nicht durchsuchen gefunden wurde.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disablecachingbindingfailure >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<disableCachingBindingFailures>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,13 +35,13 @@ Gibt an, ob das Zwischenspeichern von Bindungs Fehlern deaktiviert werden soll, 
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob das Zwischenspeichern von Bindungs Fehlern deaktiviert werden soll, die auftreten, da die Assembly nicht durchsuchen gefunden wurde.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Deaktivieren Sie nicht das Zwischenspeichern von Bindungs Fehlern, die auftreten, da die Assembly nicht durchsuchen gefunden wurde. Dies ist das Standard Bindungsverhalten, beginnend mit dem .NET Framework-Version 2,0.|  
 |1|Hiermit deaktivieren Sie das Zwischenspeichern von Bindungs Fehlern, die auftreten, da die Assembly nicht durch Tests gefunden wurde. Diese Einstellung kehrt zum Bindungsverhalten der .NET Framework Version 1,1 zurück.|  
@@ -56,10 +56,10 @@ Gibt an, ob das Zwischenspeichern von Bindungs Fehlern deaktiviert werden soll, 
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## <a name="remarks"></a>Hinweise  
- Beginnend mit der .NET Framework Version 2,0 besteht das Standardverhalten beim Laden von Assemblys darin, alle Bindungs-und Ladefehler zwischenzuspeichern. Das heißt, wenn ein Versuch, eine Assembly zu laden, fehlschlägt, schlagen nachfolgende Anforderungen zum Laden derselben Assembly sofort fehl, ohne dass versucht wird, die Assembly zu finden. Dieses Element deaktiviert dieses Standardverhalten bei Bindungs Fehlern, die auftreten, da die Assembly nicht im Überprüfungs Pfad gefunden werden konnte. Diese Fehler lösen <xref:System.IO.FileNotFoundException>aus.  
+## <a name="remarks"></a>Bemerkungen  
+ Beginnend mit der .NET Framework Version 2,0 besteht das Standardverhalten beim Laden von Assemblys darin, alle Bindungs-und Ladefehler zwischenzuspeichern. Das heißt, wenn ein Versuch, eine Assembly zu laden, fehlschlägt, schlagen nachfolgende Anforderungen zum Laden derselben Assembly sofort fehl, ohne dass versucht wird, die Assembly zu finden. Dieses Element deaktiviert dieses Standardverhalten bei Bindungs Fehlern, die auftreten, da die Assembly nicht im Überprüfungs Pfad gefunden werden konnte. Diese Fehler lösen aus <xref:System.IO.FileNotFoundException> .  
   
- Einige Bindungs-und Ladefehler sind von diesem Element nicht betroffen und werden immer zwischengespeichert. Diese Fehler treten auf, weil die Assembly gefunden wurde, aber nicht geladen werden konnte. Sie lösen <xref:System.BadImageFormatException> oder <xref:System.IO.FileLoadException>aus. In der folgenden Liste sind einige Beispiele für derartige Fehler enthalten.  
+ Einige Bindungs-und Ladefehler sind von diesem Element nicht betroffen und werden immer zwischengespeichert. Diese Fehler treten auf, weil die Assembly gefunden wurde, aber nicht geladen werden konnte. Sie lösen <xref:System.BadImageFormatException> oder aus <xref:System.IO.FileLoadException> . In der folgenden Liste sind einige Beispiele für derartige Fehler enthalten.  
   
 - Wenn Sie versuchen, eine Datei zu laden, ist keine gültige Assembly. nachfolgende Versuche, die Assembly zu laden, schlagen auch dann fehl, wenn die ungültige Datei durch die richtige Assembly ersetzt wird.  
   
@@ -78,7 +78,7 @@ Gibt an, ob das Zwischenspeichern von Bindungs Fehlern deaktiviert werden soll, 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)

@@ -12,19 +12,19 @@ helpviewer_keywords:
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 ms.openlocfilehash: 14ee2275ecf690ab16ffaabd71fbbe7e1a4897bc
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087967"
 ---
-# <a name="linkedconfiguration-element"></a>\<linkedconfiguration >-Element
+# <a name="linkedconfiguration-element"></a>\<linkedConfiguration>-Element
 
 Gibt eine einzuschließende Konfigurationsdatei an.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<assemblyBinding->** ](assemblybinding-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedconfiguration >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,42 +32,42 @@ Gibt eine einzuschließende Konfigurationsdatei an.
 <linkedConfiguration href="URL of linked configuration file" />
 ```
 
-## <a name="attribute"></a>Attribut
+## <a name="attribute"></a>attribute
 
-|           | Beschreibung |
+|           | BESCHREIBUNG |
 | --------- | ----------- |
-| **href**  | Erforderliches Attribut.<br><br>Die URL der einzuschließenden Konfigurationsdatei. Das einzige unterstützte Format für das **href** -Attribut ist `file://`. Lokale Dateien und UNC-Dateien werden unterstützt. |
+| **href**  | Erforderliches Attribut.<br><br>Die URL der einzuschließenden Konfigurationsdatei. Das einzige unterstützte Format für das **href** -Attribut ist `file://` . Lokale Dateien und UNC-Dateien werden unterstützt. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
-| [ **\<assemblyBinding >** Gewisses](assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an. |
+| [**\<assemblyBinding>** Gewisses](assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Das **\<linkedconfiguration >** -Element vereinfacht die Wartung für Komponentenassemblys. Wenn eine oder mehrere Anwendungen eine Assembly verwenden, die über eine Konfigurationsdatei an einem bekannten Speicherort verfügt, können die Konfigurationsdateien der Anwendungen, die die Assembly verwenden, das **\<linkedconfiguration >** -Element verwenden, um die Assemblykonfigurationsdatei einzuschließen, anstatt Konfigurationsinformationen direkt einzuschließen. Wenn die Komponentenassembly gewartet wird, werden bei der Aktualisierung der allgemeinen Konfigurationsdatei für alle Anwendungen, die die Assembly verwenden, aktualisierte Konfigurationsinformationen bereitgestellt.
+Das- **\<linkedConfiguration>** Element vereinfacht die Wartung von Komponentenassemblys Wenn eine oder mehrere Anwendungen eine Assembly verwenden, die über eine Konfigurationsdatei an einem bekannten Speicherort verfügt, können die Konfigurationsdateien der Anwendungen, die die Assembly verwenden, das- **\<linkedConfiguration>** Element verwenden, um die Assemblykonfigurationsdatei einzuschließen, anstatt Konfigurationsinformationen direkt einzuschließen. Wenn die Komponentenassembly gewartet wird, werden bei der Aktualisierung der allgemeinen Konfigurationsdatei für alle Anwendungen, die die Assembly verwenden, aktualisierte Konfigurationsinformationen bereitgestellt.
 
 > [!NOTE]
-> Das **\<linkedconfiguration >** -Element wird für Anwendungen mit parallelen Windows-Manifesten nicht unterstützt.
+> Das- **\<linkedConfiguration>** Element wird nicht für Anwendungen mit parallelen Windows-Manifesten unterstützt.
 
 Die folgenden Regeln bestimmen die Verwendung von verknüpften Konfigurationsdateien:
 
 - Die Einstellungen in den enthaltenen Konfigurationsdateien wirken sich nur auf die Richtlinie für die Lade Programme aus und werden nur vom Lade Modul verwendet. Die enthaltenen Konfigurationsdateien können andere Einstellungen als Bindungs Richtlinien aufweisen. diese Einstellungen haben jedoch keine Auswirkungen.
 
-- Das einzige unterstützte Format für das `href`-Attribut ist `file://`. Lokale Dateien und UNC-Dateien werden unterstützt.
+- Das einzige unterstützte Format für das- `href` Attribut ist `file://` . Lokale Dateien und UNC-Dateien werden unterstützt.
 
 - Es gibt keine Einschränkung für die Anzahl der verknüpften Konfigurationen pro Konfigurationsdatei.
 
-- Alle verknüpften Konfigurationsdateien werden zusammengeführt, um eine Datei zu bilden, ähnlich wie das Verhalten der `#include`-C++Direktive in C/.
+- Alle verknüpften Konfigurationsdateien werden zusammengeführt, um eine Datei zu bilden, ähnlich wie das Verhalten der `#include` Direktive in C/C++.
 
-- Das **\<linkedconfiguration >** -Element ist nur in Anwendungs Konfigurationsdateien zulässig. Sie wird in " *Machine. config*" ignoriert.
+- Das **\<linkedConfiguration>** -Element ist nur in Anwendungs Konfigurationsdateien zulässig. es wird in *Machine. config*ignoriert.
 
-- Zirkuläre Verweise werden erkannt und beendet. Das heißt, wenn die **\<linkedconfiguration >** Elemente einer Reihe von Konfigurationsdateien eine Schleife bilden, wird die Schleife erkannt und beendet.
+- Zirkuläre Verweise werden erkannt und beendet. Das heißt, wenn die **\<linkedConfiguration>** Elemente einer Reihe von Konfigurationsdateien eine Schleife bilden, wird die Schleife erkannt und beendet.
 
 ## <a name="example"></a>Beispiel
 
@@ -81,7 +81,7 @@ Das folgende Beispiel zeigt, wie Sie die Konfigurationsdatei von der lokalen Fes
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [ **\<assemblyBinding >** Gewisses](assemblybinding-element-for-configuration.md)
+- [**\<assemblyBinding>** Gewisses](assemblybinding-element-for-configuration.md)
 - [Konfigurationsdatei Schema für die .NET Framework](index.md)

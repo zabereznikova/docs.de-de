@@ -9,20 +9,20 @@ helpviewer_keywords:
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088553"
 ---
-# <a name="oidentry-element"></a>\<oidEntry >-Element
+# <a name="oidentry-element"></a>\<oidEntry>-Element
 Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<mscorlib->** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oidmap**](oidmap-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<oidEntry >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oidMap>**](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidEntry>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -35,10 +35,10 @@ Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**OID**|Erforderliches Attribut.<br /><br /> Gibt die ASN. 1-OID an, die dem von der Klasse implementierten Algorithmus entspricht.|  
-|**name**|Erforderliches Attribut.<br /><br /> Gibt den Wert für das **Name** -Attribut im [\<nameEntry >](nameentry-element.md) -Tags an.|  
+|**name**|Erforderliches Attribut.<br /><br /> Gibt den Wert für das **Name** -Attribut im- [\<nameEntry>](nameentry-element.md) Tag an.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -49,14 +49,14 @@ Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
-|`mscorlib`|Enthält das `cryptographySettings` Element.|  
+|`mscorlib`|Enthält das- `cryptographySettings` Element.|  
 |`oidMap`|Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  ASN. 1-Objekt Bezeichner erkennen Algorithmen in einigen kryptografieformaten. Ordnen Sie den anzeigen Amen für die Algorithmen, die Sie identifizieren möchten, Objekt Bezeichner zu.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<oidEntry >** -Element verwendet wird, um einer Implementierung dieses Hash Algorithmus einen Objekt Bezeichner für den RIPEMD-160-Hash Algorithmus zuzuordnen.  
+ Im folgenden Beispiel wird gezeigt, wie mit dem **\<oidEntry>** -Element ein Objekt Bezeichner für den RIPEMD-160-Hash Algorithmus einer Implementierung dieses Hash Algorithmus zugeordnet wird.  
   
 ```xml  
 <configuration>  
@@ -81,7 +81,7 @@ Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.
 ## <a name="see-also"></a>Siehe auch
 
 - [Konfigurationsdateischema](../index.md)
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
-- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
+- [Schema für Kryptografieeinstellungen](index.md)
+- [Kryptografiedienste](../../../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)
 - [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../map-object-identifiers-to-cryptography-algorithms.md)

@@ -3,10 +3,10 @@ title: .NET Native und Kompilierung
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128244"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native und Kompilierung
@@ -58,9 +58,9 @@ Beim Konvertieren einer App aus der Zwischensprache in nativen Code führt die .
 
 Die von der .NET Native-Toolkette erzeugte resultierende App wird im Debug- oder Releaseverzeichnis Ihres Projektverzeichnisses in ein Verzeichnis namens „ilc.out“ geschrieben. Die App besteht aus den folgenden Dateien:
 
-- *\<Anwendungsname>* .exe: Eine ausführbare Stubdatei, die die Kontrolle an einen speziellen `Main`-Export in der Datei *\<Anwendungsname>* .dll übergibt.
+- *\<appName>*. exe, eine ausführbare Stubdatei, die die Steuerung einfach an einen speziellen `Main` Export in *\<appName>* . dll überträgt.
 
-- *\<Anwendungsname>* .dll: Eine Windows-DLL (Dynamic Link Library), die sämtlichen Anwendungscode sowie den Code aus der .NET Framework-Klassenbibliothek und allen Bibliotheken von Drittanbietern enthält, zu denen Abhängigkeiten bestehen.  Sie enthält auch Unterstützungscode, z. B. den für die Zusammenarbeit mit Windows und zum Serialisieren von Objekten in der App erforderlichen Code.
+- *\<appName>*. dll, eine Windows Dynamic Link Library, die den gesamten Anwendungscode enthält, sowie Code aus der .NET Framework-Klassenbibliothek und allen Bibliotheken von Drittanbietern, von denen Sie abhängig sind.  Sie enthält auch Unterstützungscode, z. B. den für die Zusammenarbeit mit Windows und zum Serialisieren von Objekten in der App erforderlichen Code.
 
 - "mrt100_app.dll": Eine umgestaltete Common Language Runtime, die Laufzeitdienste wie die Garbage Collection bereitstellt.
 
@@ -102,9 +102,9 @@ Der [Native Image Generator](../tools/ngen-exe-native-image-generator.md) (NGEN)
 
 - NGEN-Images sind eher anfällig. Ein Patch oder eine Änderung für eine Abhängigkeit erfordert z. B. in der Regel, dass NGEN für die Assemblys, die diese verwenden, ebenfalls erneut durchgeführt wird. Dies gilt insbesondere für Systemassemblys in der .NET Framework-Klassenbibliothek. Im Gegensatz dazu gestattet .NET Native, dass Anwendungen unabhängig voneinander bereitgestellt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadaten und selbstbeschreibende Komponenten](../../standard/metadata-and-self-describing-components.md)
-- [In .net Native (Channel 9-Video)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Reflection and .NET Native (Reflektion und .NET Native)](reflection-and-net-native.md)
-- [.NET Native General Troubleshooting (Allgemeine Problembehandlung für .NET Native)](net-native-general-troubleshooting.md)
+- [Inside .NET Native (Channel 9-Video)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Reflektion und .NET Native](reflection-and-net-native.md)
+- [.NET Native Allgemeine Problembehandlung](net-native-general-troubleshooting.md)

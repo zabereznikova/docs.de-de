@@ -9,19 +9,19 @@ helpviewer_keywords:
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
 ms.openlocfilehash: c8ba5b9a0680f5e5102c13eb5bb0c1904a168c07
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155400"
 ---
-# <a name="provideroption-element"></a>\<ProviderOption> Element
-Gibt die Compilerversionsattribute für einen Sprachanbieter an.  
+# <a name="provideroption-element"></a>\<providerOption>-Element
+Gibt die compilerversions-Attribute für einen Sprachanbieter an.  
 
-[**\<Konfiguration>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.codedom>**](system-codedom-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<Compiler>**](compilers-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<Compiler->**](compiler-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<compilers>**](compilers-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<compiler>**](compiler-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<providerOption>**
 
 ## <a name="syntax"></a>Syntax  
@@ -36,36 +36,36 @@ Gibt die Compilerversionsattribute für einen Sprachanbieter an.
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Attribute  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|`name`|Erforderliches Attribut.<br /><br /> Gibt den Namen der Option an. z. B. "CompilerVersion".|  
-|`value`|Erforderliches Attribut.<br /><br /> Gibt den Wert für die Option an. z. B. "v3.5".|  
+|`name`|Erforderliches Attribut.<br /><br /> Gibt den Namen der Option an. Beispiel: "Compilerversion".|  
+|`value`|Erforderliches Attribut.<br /><br /> Gibt den Wert für die Option an. Beispiel: "v 3.5".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Konfiguration> Element](../configuration-element.md)|Das Stammelement in jeder Konfigurationsdatei, die von der Common Language Runtime und den .NET Framework-Anwendungen verwendet wird.|  
-|[\<system.codedom> Element](system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
-|[\<Compiler> Element](compilers-element.md)|Container für Compilerkonfigurationselemente; enthält null `<compiler>` oder mehr Elemente.|  
-|[\<Compiler> Element](compiler-element.md)|Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.|  
+|[\<configuration>Gewisses](../configuration-element.md)|Das Stammelement in jeder Konfigurationsdatei, die von der Common Language Runtime und den .NET Framework-Anwendungen verwendet wird.|  
+|[\<system.codedom>Gewisses](system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
+|[\<compilers>Gewisses](compilers-element.md)|Container für Compilerkonfigurationselemente; enthält 0 (null) oder mehr- `<compiler>` Elemente.|  
+|[\<compiler>Gewisses](compiler-element.md)|Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- In .NET Framework Version 3.5 können CodeDOM-Codeanbieter (Code Document Object Model) `<providerOption>` anbieterspezifische Optionen mithilfe des Elements unterstützen.  
+ In der .NET Framework Version 3,5 können Code Document Object Model (CodeDom)-Code Anbieter anbieterspezifische Optionen mithilfe des-Elements unterstützen `<providerOption>` .  
   
- .NET Framework 3.5 enthält aktualisierte .NET Framework 2.0-Assemblys und stellt neue Assemblys der Version 3.5 bereit, die neue Typen enthalten. Die Microsoft-Codeanbieter für C- und Visual Basic sind in .NET Framework 2.0-Assemblys enthalten, wurden jedoch aktualisiert, um Compiler der Version 3.5 zu unterstützen. Standardmäßig generieren die aktualisierten Codeanbieter Code für Compiler der Version 2.0. Sie können `<providerOption>` das Element verwenden, um die Zielcompilerversion in 3.5 zu ändern. Geben Sie dazu "CompilerVersion" `name` für das Attribut und "v3.5" für das `value` Attribut an. Sie müssen der Versionsnummer mit einem "v" in Kleinbuchstaben vorangehen.  
+ Der .NET Framework 3,5 umfasst aktualisierte .NET Framework 2,0-Assemblys und stellt neue Version 3,5-Assemblys bereit, die neue Typen enthalten. Die Microsoft c#-und Visual Basic-Code Anbieter sind in .NET Framework 2,0-Assemblys enthalten, wurden jedoch aktualisiert, um Compiler der Version 3,5 zu unterstützen. Standardmäßig generieren die aktualisierten Code Anbieter Code für Compiler der Version 2,0. Sie können das- `<providerOption>` Element verwenden, um die Ziel-Compilerversion in 3,5 zu ändern. Geben Sie hierzu "Compilerversion" für das `name` -Attribut und "v 3.5" für das- `value` Attribut an. Sie müssen der Versionsnummer einen Kleinbuchstaben "v" voranstellen.  
   
- Sie können die Versionsspezifikation global `<providerOption>` machen, indem Sie das Element zur Datei .NET Framework 2.0 Machine.config oder root Web.config hinzufügen. Wenn Sie die Standardcompilerversion in der Datei Machine.config auf 3.5 aktualisieren, können Sie sie pro `<providerOption>` Anwendung auf 2.0 zurücksetzen, indem Sie das Element in der Anwendungskonfigurationsdatei verwenden.  
+ Sie können die Versions Spezifikation Global machen, indem Sie das- `<providerOption>` Element der Datei .NET Framework 2,0 Machine. config oder der Web. config-Stammdatei hinzufügen. Wenn Sie die Standard-Compilerversion in der Datei Machine. config auf 3,5 aktualisieren, können Sie Sie auf Anwendungs Basis auf 2,0 zurücksetzen, indem Sie das- `<providerOption>` Element in der Anwendungs Konfigurationsdatei verwenden.  
   
- CodeDOM-Codeanbieterimplementierer können benutzerdefinierte Optionen verarbeiten, indem `providerOptions` sie <xref:System.Collections.Generic.IDictionary%602>einen Konstruktor bereitstellen, der einen Parameter vom Typ annimmt.  
+ CodeDOM-Code Anbieter Implementierer können benutzerdefinierte Optionen verarbeiten, indem Sie einen Konstruktor bereitstellen, `providerOptions` der einen Parameter vom Typ annimmt <xref:System.Collections.Generic.IDictionary%602> .  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie Sie angeben, dass Version 3.5 des Codeanbieters verwendet werden soll.  
+ Im folgenden Beispiel wird veranschaulicht, wie angegeben wird, dass Version 3,5 des c#-Code Anbieters verwendet werden soll.  
   
 ```xml  
 <configuration>  
@@ -89,11 +89,11 @@ Gibt die Compilerversionsattribute für einen Sprachanbieter an.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [Schema der Konfigurationsdatei](../index.md)
-- [\<Compiler> Element](compilers-element.md)
-- [Angeben vollständig gekennzeichneter Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [Konfigurationsdateischema](../index.md)
+- [\<compilers>Gewisses](compilers-element.md)
+- [Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
 - [compiler-Element für compilers für compilation (ASP.NET-Einstellungsschema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

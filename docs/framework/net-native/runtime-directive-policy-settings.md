@@ -3,10 +3,10 @@ title: Richtlinieneinstellungen für die Laufzeitanweisung
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738505"
 ---
 # <a name="runtime-directive-policy-settings"></a>Richtlinieneinstellungen für die Laufzeitanweisung
@@ -16,7 +16,7 @@ ms.locfileid: "76738505"
 
 Laufzeitanweisungs-Richtlinieneinstellungen für .NET Native bestimmen die Verfügbarkeit von Metadaten für Typen und Typmember zur Laufzeit. Ohne die erforderlichen Metadaten können Vorgänge, die auf Reflektion, Serialisierung und Deserialisierung oder Marshalling von .NET Framework-Typen zu COM oder Windows-Runtime beruhen, fehlschlagen und eine Ausnahme auslösen. Die häufigsten Ausnahmen sind [MissingMetadataException](missingmetadataexception-class-net-native.md) und (im Fall von Interop) [MissingInteropDataException](missinginteropdataexception-class-net-native.md).
 
-Laufzeitrichtlinieneinstellungen werden über eine Laufzeitanweisungsdatei (.rd.xml) gesteuert. Jede Laufzeitanweisung definiert Richtlinien für ein bestimmtes Programmelement, z.B. eine Assembly (das [\<Assembly>](assembly-element-net-native.md)-Element), einen Typ (das [\<Type>](type-element-net-native.md)-Element) oder eine Methode (das [\<Method>](method-element-net-native.md)-Element). Die Anweisung enthält ein oder mehrere Attribute, die die Reflektionsrichtlinientypen, die Serialisierungsrichtlinientypen und die Interop-Richtlinientypen definieren, die im nächsten Abschnitt erläutert werden. Der Wert des Attributs definiert die Richtlinieneinstellung.
+Laufzeitrichtlinieneinstellungen werden über eine Laufzeitdirektivendatei (*.rd.xml) gesteuert. Jede Lauf Zeit Direktive definiert Richtlinien für ein bestimmtes Programmelement, z. b. eine Assembly (das- [\<Assembly>](assembly-element-net-native.md) Element), einen Typ (das- [\<Type>](type-element-net-native.md) Element) oder eine Methode (das- [\<Method>](method-element-net-native.md) Element). Die Anweisung enthält ein oder mehrere Attribute, die die Reflektionsrichtlinientypen, die Serialisierungsrichtlinientypen und die Interop-Richtlinientypen definieren, die im nächsten Abschnitt erläutert werden. Der Wert des Attributs definiert die Richtlinieneinstellung.
 
 ## <a name="policy-types"></a>Richtlinientypen
 
@@ -34,7 +34,7 @@ In Laufzeitdirektivendateien werden drei Kategorien von Richtlinientypen erkannt
 
   |Element|Aktivieren|Durchsuchen|Dynamisch|
   |-------------|--------------|------------|-------------|
-  |[\<Anwendung>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||✔️|✔️|
@@ -65,7 +65,7 @@ In Laufzeitdirektivendateien werden drei Kategorien von Richtlinientypen erkannt
 
   |Element|Serialisieren|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<Anwendung>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)|||||
@@ -94,7 +94,7 @@ In Laufzeitdirektivendateien werden drei Kategorien von Richtlinientypen erkannt
 
   |Element|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<Anwendung>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||||
@@ -130,5 +130,5 @@ Jeder Richtlinientyp kann auf einen der in der folgenden Tabelle aufgeführten W
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Elements (Elemente der Laufzeitanweisung)](runtime-directive-elements.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

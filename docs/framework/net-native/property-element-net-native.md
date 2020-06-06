@@ -3,13 +3,13 @@ title: <Property>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128213"
 ---
-# <a name="property-element-net-native"></a>\<Eigenschaft > Element (.net Native)
+# <a name="property-element-net-native"></a>\<Property>-Element (.net Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,7 +26,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
 ### <a name="attributes"></a>Attribute  
   
-|Attribut|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Eigenschaftennamen an.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen nach Informationen über die Eigenschaft oder das Auflisten der Eigenschaft, aber ermöglicht keinen dynamischen Zugriff zur Laufzeit.|  
@@ -35,13 +35,13 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
 ## <a name="name-attribute"></a>Namensattribut  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|*method_name*|Der Eigenschaftenname. Der Typ der Eigenschaft wird durch das übergeordnete [\<Type>](type-element-net-native.md)- oder [\<TypeInstantiation>](typeinstantiation-element-net-native.md)-Element definiert.|  
+|*method_name*|Der Eigenschaftenname. Der Typ der Eigenschaft wird durch das übergeordnete- [\<Type>](type-element-net-native.md) oder- [\<TypeInstantiation>](typeinstantiation-element-net-native.md) Element definiert.|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für die Eigenschaft angewendet werden soll. Mögliche Werte sind `Auto`, `Excluded`, `Included` und `Required`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
@@ -50,12 +50,12 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Richtlinie einer Eigenschaft nicht explizit definiert ist, erbt sie die Laufzeitrichtlinie des übergeordneten Elements.  
   
 ## <a name="example"></a>Beispiel  
@@ -73,15 +73,15 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
  Die Datei wendet den Wert `All` auf die `Activate`-Richtlinie für die `Book`-Klasse an, die den Zugriff auf Klassenkonstruktoren über Reflektion ermöglicht. Die `Browse`-Richtlinie für die `Book`-Klasse wird vom übergeordneten Namespace geerbt. Diese wird auf `Required Public` festgelegt, wodurch Metadaten zur Laufzeit verfügbar werden.  
   
- Der Quellcode für das Beispiel lautet wie folgt. Die `outputBlock` Variable stellt ein <xref:Windows.UI.Xaml.Controls.TextBlock> Steuerelement dar.  
+ Der Quellcode für das Beispiel lautet wie folgt. Die- `outputBlock` Variable stellt ein-Steuerelement dar <xref:Windows.UI.Xaml.Controls.TextBlock> .  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
  Das Kompilieren und Ausführen dieses Beispiels löst jedoch eine [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)-Ausnahme aus. Obwohl wir Metadaten für den `Book`-Typ verfügbar gemacht haben, haben wir keine Implementierungen der Eigenschaftengetter dynamisch zur Verfügung gestellt. Wir können diesen Fehler auf eine von zwei Arten beheben:  
   
-- Durch Definieren der `Dynamic`-Richtlinie für den `Book`-Typ in dessen [\<Type>](type-element-net-native.md)-Element.  
+- durch Definieren der `Dynamic` Richtlinie für den- `Book` Typ im- [\<Type>](type-element-net-native.md) Element.  
   
-- Durch Hinzufügen eines verschachtelten [\<Property>](property-element-net-native.md)-Elements für jede Eigenschaft, deren Getter wir wie in der folgenden Datei „default.rd.xml“ aufrufen möchten.  
+- Durch Hinzufügen eines [\<Property>](property-element-net-native.md) für jede Eigenschaft, deren Getter wir aufrufen möchten, wie in der folgenden default. rd. XML-Datei.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -97,8 +97,8 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
     </Directives>  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)
