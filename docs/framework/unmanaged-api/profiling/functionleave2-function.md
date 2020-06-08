@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866930"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500662"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2-Funktion
 Benachrichtigt den Profiler, dass eine Funktion im Begriff ist, zum Aufrufer zurückzukehren, und stellt Informationen zum Stapel Rahmen und Funktionsrückgabewert bereit.  
@@ -35,7 +35,7 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 - `funcId`
 
@@ -47,7 +47,7 @@ void __stdcall FunctionLeave2 (
 
 - `func`
 
-  \[in] ein `COR_PRF_FRAME_INFO` Wert, der auf Informationen über den Stapel Rahmen zeigt.
+  \[in] ein- `COR_PRF_FRAME_INFO` Wert, der auf Informationen über den Stapel Rahmen zeigt.
 
   Der Profiler sollte dies als ein undurchsichtiges Handle behandeln, das an die Ausführungs-Engine in der [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) -Methode zurückgegeben werden kann.  
   
@@ -55,12 +55,12 @@ void __stdcall FunctionLeave2 (
 
   \[in] ein Zeiger auf eine [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) -Struktur, die die Speicherposition des Rückgabewerts der Funktion angibt.
 
-  Um auf Rückgabewert Informationen zugreifen zu können, muss das `COR_PRF_ENABLE_FUNCTION_RETVAL`-Flag festgelegt werden. Der Profiler kann die [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) -Methode verwenden, um die Ereignisflags festzulegen.
+  Um auf Rückgabewert Informationen zugreifen zu können, `COR_PRF_ENABLE_FUNCTION_RETVAL` muss das-Flag festgelegt werden. Der Profiler kann die [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) -Methode verwenden, um die Ereignisflags festzulegen.
 
-## <a name="remarks"></a>Hinweise  
- Die Werte der Parameter "`func`" und "`retvalRange`" sind nicht gültig, nachdem die `FunctionLeave2` Funktion zurückgegeben wurde, da sich die Werte ändern oder gelöscht werden können.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Werte des `func` -Parameters und des- `retvalRange` Parameters sind nach der Rückgabe der Funktion ungültig, `FunctionLeave2` da sich die Werte möglicherweise ändern oder zerstört werden.  
   
- Die `FunctionLeave2` Funktion ist ein Rückruf. Sie müssen ihn implementieren. Die-Implementierung muss das `__declspec`(`naked`)-Speicher Klassen Attribut verwenden.  
+ Die `FunctionLeave2` Funktion ist ein Rückruf. Sie müssen Sie implementieren. Die-Implementierung muss das `__declspec` `naked` Speicher Klassen Attribut () verwenden.  
   
  Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.  
   
@@ -68,20 +68,20 @@ void __stdcall FunctionLeave2 (
   
 - Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.  
   
- Die Implementierung von `FunctionLeave2` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis `FunctionLeave2` zurückgibt.  
+ Die Implementierung von `FunctionLeave2` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis von zurückgegeben wird `FunctionLeave2` .  
   
  Außerdem darf die `FunctionLeave2` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corprof. idl  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [FunctionEnter2-Funktion](functionenter2-function.md)
 - [FunctionTailcall2-Funktion](functiontailcall2-function.md)

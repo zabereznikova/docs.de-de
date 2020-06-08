@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: efd30ef04c148d5e098110efcb37e50f143884e4
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703428"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504094"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction-Methode
 Legt einen Timeout Wert für den angegebenen Vorgang fest und gibt die Richtlinien Aktion an, die der Common Language Runtime (CLR) ausführen soll, wenn der Vorgang ausgeführt wird.  
@@ -65,13 +65,13 @@ HRESULT SetTimeoutAndAction (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |E_INVALIDARG|Für den angegebenen kann kein Timeout festgelegt werden `operation` , oder für wurde ein ungültiger Wert angegeben `action` .|  
   
-## <a name="remarks"></a>Hinweise  
- `SetTimeoutAndAction`kapselt die Funktionen der [ICLRPolicyManager:: setTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) -Methode und der [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) -Methode und kann anstelle von sequenziellen Aufrufen dieser beiden Methoden aufgerufen werden.  
+## <a name="remarks"></a>Bemerkungen  
+ `SetTimeoutAndAction`kapselt die Funktionen der [ICLRPolicyManager:: setTimeout](iclrpolicymanager-settimeout-method.md) -Methode und der [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) -Methode und kann anstelle von sequenziellen Aufrufen dieser beiden Methoden aufgerufen werden.  
   
 > [!IMPORTANT]
 > Nicht alle Richtlinien Aktionswerte können als Timeout Verhalten für CLR-Vorgänge angegeben werden. Gültige Werte finden Sie in den Abschnitten zu den Themen zu diesen beiden Methoden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -80,7 +80,7 @@ HRESULT SetTimeoutAndAction (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [EClrOperation-Enumeration](eclroperation-enumeration.md)
 - [EPolicyAction-Enumeration](epolicyaction-enumeration.md)

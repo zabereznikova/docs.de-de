@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491055"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps-Methode
 Ruft Metadatenwerte für den Parameter ab, auf den durch das angegebene ParamDef-Token verwiesen wird.  
@@ -56,37 +56,37 @@ HRESULT GetParamProps (
  vorgenommen Ein Puffer, der den Namen des Parameters enthalten soll.  
   
  `cchName`  
- in Die angeforderte Größe in breit Zeichen `szName`.  
+ in Die angeforderte Größe in breit Zeichen von `szName` .  
   
  `pchName`  
- vorgenommen Die zurückgegebene Größe in breit Zeichen `szName`.  
+ vorgenommen Die zurückgegebene Größe in breit Zeichen von `szName` .  
   
  `pdwAttr`  
  vorgenommen Ein Zeiger auf alle Attributflags, die dem-Parameter zugeordnet sind. Dies ist eine Bitmaske von `CorParamAttr` Werten.  
   
  `pdwCPlusTypeFlag`  
- vorgenommen Ein Zeiger auf ein Flag, das angibt, dass der Parameter eine <xref:System.ValueType>ist.  
+ vorgenommen Ein Zeiger auf ein Flag, das angibt, dass der-Parameter ein ist <xref:System.ValueType> .  
   
  `ppValue`  
  vorgenommen Ein Zeiger auf eine Konstante Zeichenfolge, die vom-Parameter zurückgegeben wird.  
   
  `pcchValue`  
- vorgenommen Die Größe der `ppValue` in breit Zeichen oder 0 (null), wenn `ppValue` keine Zeichenfolge enthält.  
+ vorgenommen Die Größe von `ppValue` in breit Zeichen oder 0 (null), wenn `ppValue` keine Zeichenfolge enthält.  
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die Sequenzwerte in `pulSequence` mit 1 für Parameter beginnen. Ein Rückgabewert hat eine Sequenznummer von 0.
+Die Sequenzwerte in `pulSequence` beginnen mit 1 für Parameter. Ein Rückgabewert hat eine Sequenznummer von 0.
 
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

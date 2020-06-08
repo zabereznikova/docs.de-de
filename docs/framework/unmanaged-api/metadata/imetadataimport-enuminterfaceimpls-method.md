@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: b535fdd5027a26cc4dd0eafec9883f0186773dd1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c40413075131765a37e00703ac892e3f39641
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175498"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492186"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls-Methode
-Zählt alle Schnittstellen auf, die `TypeDef`von der angegebenen implementiert sind.
+Listet alle Schnittstellen auf, die vom angegebenen implementiert werden `TypeDef` .
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,38 +42,38 @@ HRESULT EnumInterfaceImpls (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `td`  
- [in] Das Token der TypeDef, deren MethodDef-Token, die Schnittstellenimplementierungen darstellen, aufgezählt werden sollen.  
+ in Das Token der typedef, dessen MethodDef-Token, die Schnittstellen Implementierungen darstellen, aufgelistet werden sollen.  
   
  `rImpls`  
- [out] Das Array, das zum Speichern der MethodDef-Token verwendet wird.  
+ vorgenommen Das Array, das zum Speichern der MethodDef-Token verwendet wird.  
   
  `cMax`  
- [in] Die maximale Länge `rImpls` des Arrays.  
+ in Die maximale Länge des `rImpls` Arrays.  
   
  `pcImpls`  
- [out] Die tatsächliche Anzahl der `rImpls`Token, die in zurückgegeben werden.  
+ vorgenommen Die tatsächliche Anzahl von Token, die in zurückgegeben werden `rImpls` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|Es sind keine MethodDef-Token zum Aufzählen vorhanden. In diesem `pcImpls` Fall ist auf Null gesetzt.|  
+|`S_OK`|`EnumInterfaceImpls`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine MethodDef-Token zum Auflisten vorhanden. In diesem Fall `pcImpls` wird auf 0 (null) festgelegt.|  
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die Enumeration gibt `mdInterfaceImpl` eine Auflistung von Token für `TypeDef`jede Schnittstelle zurück, die von der angegebenen implementiert ist. Schnittstellentoken werden in der Reihenfolge zurückgegeben, in `DefineTypeDef` `SetTypeDefProps`der die Schnittstellen angegeben wurden (durch oder ). Eigenschaften der `mdInterfaceImpl` zurückgegebenen Token können mit [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)abgefragt werden.
+Die-Enumeration gibt eine Auflistung von `mdInterfaceImpl` Token für jede Schnittstelle zurück, die vom angegebenen implementiert wird `TypeDef` . Schnittstellen Token werden in der Reihenfolge zurückgegeben, in der die Schnittstellen angegeben wurden (über `DefineTypeDef` oder `SetTypeDefProps` ). Die Eigenschaften der zurückgegebenen `mdInterfaceImpl` Token können mithilfe von " [getinterfakeimplproperties](imetadataimport-getinterfaceimplprops-method.md)" abgefragt werden.
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

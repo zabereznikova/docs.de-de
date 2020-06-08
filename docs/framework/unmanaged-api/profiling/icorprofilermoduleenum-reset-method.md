@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9110b49-823c-4ba9-9a4c-198afeb7780e
 topic_type:
 - apiref
-ms.openlocfilehash: dc8f4dd657420f29c298822fbec5514c41d90967
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a2d4a2d7bf1db987c7d52bc12e2b71e7df4c5230
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868238"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494799"
 ---
 # <a name="icorprofilermoduleenumreset-method"></a>ICorProfilerModuleEnum::Reset-Methode
 Verschiebt den Cursor des Enumerators an die Anfangsposition der Sequenz.  
@@ -31,18 +31,18 @@ Verschiebt den Cursor des Enumerators an die Anfangsposition der Sequenz.
 HRESULT Reset();  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerModuleEnum-Schnittstelle](icorprofilermoduleenum-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

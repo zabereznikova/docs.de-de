@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-ms.openlocfilehash: 87fe0b10f0a1eefa8154c40d39b54285990c410c
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: cca73eec663b9afd12ecea5ab9d7073ea0168d33
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805032"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501556"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore-Schnittstelle
 Stellt Methoden bereit, die einem Host das Laden von Assemblys und Modulen unabhängig von der Common Language Runtime (CLR) ermöglichen.  
@@ -28,10 +28,10 @@ Stellt Methoden bereit, die einem Host das Laden von Assemblys und Modulen unabh
   
 |Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[ProvideAssembly-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)|Ruft einen Verweis auf eine Assembly ab, auf die von der [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , die von einem [IHostAssemblyManager:: getnonhoststoreassemblys](ihostassemblymanager-getnonhoststoreassemblies-method.md)zurückgegeben wurde, nicht verwiesen wird.|  
+|[ProvideAssembly-Methode](ihostassemblystore-provideassembly-method.md)|Ruft einen Verweis auf eine Assembly ab, auf die von der [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) , die von einem [IHostAssemblyManager:: getnonhoststoreassemblys](ihostassemblymanager-getnonhoststoreassemblies-method.md)zurückgegeben wurde, nicht verwiesen wird.|  
 |[ProvideModule-Methode](ihostassemblystore-providemodule-method.md)|Löst ein Modul in einer Assembly oder einer verknüpften (nicht eingebetteten) Ressourcen Datei auf.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  `IHostAssemblyStore`ermöglicht einem Host das effiziente Laden von Assemblys basierend auf der Assemblyidentität. Der Host lädt Assemblys, indem er Instanzen zurückgibt `IStream` , die direkt auf die Bytes zeigen.  
   
  Die CLR bestimmt, ob ein Host `IHostAssemblyStore` durch Aufrufen von `IHostAssemblyManager::GetNonHostAssemblyStores` bei der Initialisierung implementiert wurde. Dadurch kann der Host z. b. die Bindung an Benutzerassemblys steuern, sich jedoch auf die Laufzeit zum Binden an .NET Framework Assemblys verlassen.  
@@ -42,7 +42,7 @@ Stellt Methoden bereit, die einem Host das Laden von Assemblys und Modulen unabh
 > [!NOTE]
 > Der .NET Framework Version 2,0 bietet dem Host keine Möglichkeit, das systemeigene Image einer Assembly zu laden, wie vom systemeigenen [Image Generator (Ngen. exe)](../../tools/ngen-exe-native-image-generator.md) bereitgestellt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -51,8 +51,8 @@ Stellt Methoden bereit, die einem Host das Laden von Assemblys und Modulen unabh
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRAssemblyReferenceList-Schnittstelle](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager-Schnittstelle](ihostassemblymanager-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

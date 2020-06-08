@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bf00b42-69da-4019-91b3-bf88026e83fb
 topic_type:
 - apiref
-ms.openlocfilehash: 626ecddae8ba91d1830d98210208f9fbee36f073
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 85adf2dbdbb8c02192a9017bc4f664274a08ee24
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868585"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496580"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>ICorProfilerInfo3::EnumModules-Methode
 Gibt einen Enumerator zurück, der Methoden zum sequenziellen Iterieren durch eine Auflistung von verwalteten Modulen bereitstellt, die in die Anwendung geladen werden.  
@@ -31,22 +31,22 @@ Gibt einen Enumerator zurück, der Methoden zum sequenziellen Iterieren durch ei
 HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `ppEnum`  
  vorgenommen Ein Zeiger auf eine [icorprofilermoduleferum](icorprofilermoduleenum-interface.md) -Schnittstelle.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerFunctionEnum-Schnittstelle](icorprofilerfunctionenum-interface.md)
 - [ICorProfilerInfo3-Schnittstelle](icorprofilerinfo3-interface.md)

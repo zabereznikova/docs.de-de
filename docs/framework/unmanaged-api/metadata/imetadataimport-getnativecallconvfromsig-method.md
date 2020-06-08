@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-ms.openlocfilehash: 06ff6a1885a5e9bb819c2897aaf85e5c2b9b1147
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 44439eda62f85c32893b73f17bd057195cf6b2e1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437242"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503548"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig-Methode
 Ruft die systemeigene Aufrufkonvention für die Methode ab, die durch den angegebenen Signaturzeiger dargestellt wird.  
@@ -40,22 +40,22 @@ HRESULT GetNativeCallConvFromSig (
  in Ein Zeiger auf die Metadatensignatur der Methode, für die die Aufruf Konvention zurückgegeben werden soll.  
   
  `cbSig`  
- in Die Größe `pvSig`in Byte.  
+ in Die Größe von in Bytes `pvSig` .  
   
  `pCallConv`  
  vorgenommen Ein Zeiger auf die systemeigene Aufruf Konvention.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - <xref:System.Runtime.InteropServices.CallingConvention>
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

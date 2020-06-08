@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6f1e389f-ed99-4d6a-a0ba-72d7d869a01d
 topic_type:
 - apiref
-ms.openlocfilehash: a15c912cdf0eef1b8f131e8425ad9b5b01289982
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6b37fcfc04e3ec880c67f102ec12d7f3e4b06a43
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006726"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493161"
 ---
 # <a name="metahost_config_flags-enumeration"></a>METAHOST_CONFIG_FLAGS-Enumeration
-Beschreibt die möglichen Flags, die im- `pdwConfigFlags` Parameter der [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) -Methode zurückgegeben werden, und gibt das vorhanden sein und das Festlegen des- `useLegacyV2RuntimeActivationPolicy` Attributs im- [ \<startup> Element](../../configure-apps/file-schema/startup/startup-element.md) der Konfigurationsdatei an.  
+Beschreibt die möglichen Flags, die im- `pdwConfigFlags` Parameter der [ICLRMetaHostPolicy:: GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md) -Methode zurückgegeben werden, und gibt das vorhanden sein und das Festlegen des- `useLegacyV2RuntimeActivationPolicy` Attributs im- [ \<startup> Element](../../configure-apps/file-schema/startup/startup-element.md) der Konfigurationsdatei an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,8 +55,8 @@ typedef enum {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Hosten von Enumerationen](hosting-enumerations.md)
 - [GetRequestedRuntime-Methode](iclrmetahostpolicy-getrequestedruntime-method.md)
-- [\<startup>Gewisses](../../configure-apps/file-schema/startup/startup-element.md)
+- [\<startup>-Element](../../configure-apps/file-schema/startup/startup-element.md)

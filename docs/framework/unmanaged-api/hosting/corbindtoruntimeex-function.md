@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: dcf2ce8bdb7cec1f567e548ff3314e160fffe9fd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616631"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493499"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx-Funktion
 Ermöglicht es nicht verwalteten Hosts, die Common Language Runtime (CLR) in einen Prozess zu laden. Die [CorBindToRuntime](corbindtoruntime-function.md) -Funktion und die- `CorBindToRuntimeEx` Funktion führen denselben Vorgang aus, aber mit der- `CorBindToRuntimeEx` Funktion können Sie Flags festlegen, um das Verhalten der CLR anzugeben.  
@@ -71,7 +71,7 @@ HRESULT CorBindToRuntimeEx (
  Wenn `pwszBuildFlavor` auf NULL festgelegt ist, wird der Arbeitsstations Build geladen. Bei der Ausführung auf einem Computer mit einem einzelnen Prozessor wird der Arbeitsstations Build immer geladen, auch wenn `pwszBuildFlavor` auf festgelegt ist `svr` . Wenn jedoch `pwszBuildFlavor` auf festgelegt ist `svr` und gleichzeitige Garbage Collection angegeben ist (siehe Beschreibung des `startupFlags` Parameters), wird der Serverbuild geladen.  
   
  `startupFlags`  
- in Eine Kombination von Werten der [STARTUP_FLAGS](startup-flags-enumeration.md) Enumeration. Diese Flags steuern die gleichzeitige Garbage Collection, domänenneutralen Code und das Verhalten des `pwszVersion`-Parameters. Wenn kein Flag festgelegt ist, gilt als Standardwert die Einzeldomäne. Die folgenden Werte sind gültig:  
+ in Eine Kombination von Werten der [STARTUP_FLAGS](startup-flags-enumeration.md) Enumeration. Diese Flags steuern die gleichzeitige Garbage Collection, domänenneutralen Code und das Verhalten des `pwszVersion`-Parameters. Wenn kein Flag festgelegt ist, gilt als Standardwert die Einzeldomäne. Folgende Werte sind gültig:  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -102,7 +102,7 @@ HRESULT CorBindToRuntimeEx (
  Beschreibungen dieser Flags finden Sie in der [STARTUP_FLAGS](startup-flags-enumeration.md) -Enumeration.  
   
  `rclsid`  
- in Der `CLSID` der Co-Klasse, die entweder die [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) -oder die [ICLRRuntimeHost](iclrruntimehost-interface.md) -Schnittstelle implementiert. Unterstützte Werte sind "CLSID_CorRuntimeHost" oder "CLSID_CLRRuntimeHost".  
+ in Der `CLSID` der Co-Klasse, die entweder die [ICorRuntimeHost](icorruntimehost-interface.md) -oder die [ICLRRuntimeHost](iclrruntimehost-interface.md) -Schnittstelle implementiert. Unterstützte Werte sind "CLSID_CorRuntimeHost" oder "CLSID_CLRRuntimeHost".  
   
  `riid`  
  [in] Die `IID` der angeforderten Schnittstelle aus `rclsid`. Unterstützte Werte sind "IID_ICorRuntimeHost" oder "IID_ICLRRuntimeHost".  
@@ -110,7 +110,7 @@ HRESULT CorBindToRuntimeEx (
  `ppv`  
  [out] Der zurückgegebene Schnittstellenzeiger auf `riid`.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn `pwszVersion` eine Laufzeitversion angibt, die nicht vorhanden ist, gibt `CorBindToRuntimeEx` den HRESULT-Wert CLR_E_SHIM_RUNTIMELOAD zurück.  
   
 ## <a name="execution-context-and-flow-of-windows-identity"></a>Ausführungskontext und Übergabe der Windows-Identität  
@@ -122,13 +122,13 @@ HRESULT CorBindToRuntimeEx (
   
 2. Durch Ändern des Prozessstandardmodus in den Kompatibilitätsmodus für Version 1; hier wird das <xref:System.Security.Principal.WindowsIdentity>-Objekt nicht über asynchrone Punkte übergeben, unabhängig von den <xref:System.Threading.ExecutionContext>-Einstellungen des aktuellen Threads. Wie der Standardmodus geändert wird, hängt davon ab, ob Sie zum Laden der CLR eine verwaltete ausführbare Datei oder eine nicht verwaltete Hostschnittstelle verwenden:  
   
-    1. Bei verwalteten ausführbaren Dateien müssen Sie das- `enabled` Attribut des [ \< legacyidentitäts->](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) Elements auf festlegen `true` .  
+    1. Bei verwalteten ausführbaren Dateien müssen Sie das- `enabled` Attribut des- [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) Elements auf festlegen `true` .  
   
     2. Legen Sie bei nicht verwalteten Hostschnittstellen das `STARTUP_LEGACY_IMPERSONATION`-Flag im `startupFlags`-Parameter fest, wenn Sie die `CorBindToRuntimeEx`-Funktion aufrufen.  
   
      Der Kompatibilitätsmodus für Version 1 gilt für den gesamten Prozess und alle Anwendungsdomänen im Prozess.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -137,7 +137,7 @@ HRESULT CorBindToRuntimeEx (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [CorBindToCurrentRuntime-Funktion](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime-Funktion](corbindtoruntime-function.md)
