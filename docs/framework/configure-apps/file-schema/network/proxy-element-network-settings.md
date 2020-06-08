@@ -1,5 +1,6 @@
 ---
 title: <proxy>-Element (Netzwerkeinstellungen)
+description: Das <proxy> Netzwerk Einstellungs Element definiert die Proxy Serveroptionen in der .NET Framework. Dieser Artikel enthält ein Beispiel.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 590ea747c2fa9e5e85e5e9d05f6fb80fe60251d3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0d462fcc92fc1be5ddbc2e76237d8436219c7295
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154789"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504536"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy>-Element (Netzwerkeinstellungen)
 Definiert einen Proxyserver.  
@@ -42,11 +43,11 @@ Definiert einen Proxyserver.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`autoDetect`|Gibt an, ob der Proxy automatisch erkannt wird. Der Standardwert ist `unspecified`.|  
-|`bypassonlocal`|Gibt an, ob der Proxy für lokale Ressourcen umgangen wird. Lokale Ressourcen umfassen den lokalen Server ( `http://localhost` , `http://loopback` oder `http://127.0.0.1` ) und einen URI ohne einen Punkt ( `http://webserver` ). Der Standardwert ist `unspecified`.|  
+|`autoDetect`|Gibt an, ob der Proxy automatisch erkannt wird. Der Standardwert lautet `unspecified`.|  
+|`bypassonlocal`|Gibt an, ob der Proxy für lokale Ressourcen umgangen wird. Lokale Ressourcen umfassen den lokalen Server ( `http://localhost` , `http://loopback` oder `http://127.0.0.1` ) und einen URI ohne einen Punkt ( `http://webserver` ). Der Standardwert lautet `unspecified`.|  
 |`proxyaddress`|Gibt den zu verwendenden Proxy-URI an.|  
 |`scriptLocation`|Gibt den Speicherort des Konfigurations Skripts an. Verwenden Sie das- `bypassonlocal` Attribut nicht mit diesem Attribut. |  
-|`usesystemdefault`|Gibt an, ob Internet Explorer-Proxy Einstellungen verwendet werden sollen. Wenn diese Einstellung auf festgelegt `true` ist, überschreiben nachfolgende Attribute Internet Explorer-Proxy Einstellungen. Der Standardwert ist `unspecified`.|  
+|`usesystemdefault`|Gibt an, ob Internet Explorer-Proxy Einstellungen verwendet werden sollen. Wenn diese Einstellung auf festgelegt `true` ist, überschreiben nachfolgende Attribute Internet Explorer-Proxy Einstellungen. Der Standardwert lautet `unspecified`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -90,7 +91,7 @@ Definiert einen Proxyserver.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Netzwerkeinstellungsschema](index.md)

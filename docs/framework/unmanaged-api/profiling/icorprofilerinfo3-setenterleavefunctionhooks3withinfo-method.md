@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca8ea534-e441-47b8-be85-466410988c0a
 topic_type:
 - apiref
-ms.openlocfilehash: 4fe18b4f07e6f282571b13faff5ce51b66ce416b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d40cb424306535cc502d930dd61e6a1e254667da
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496177"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a>ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo-Methode
 Gibt die vom Profiler implementierten Funktionen an, die für die [FunctionEnter3WithInfo](functionenter3withinfo-function.md)-, [FunctionLeave3WithInfo](functionleave3withinfo-function.md)-und [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) -Hooks von verwalteten Funktionen aufgerufen werden.  
@@ -34,33 +34,33 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
             [in] FunctionTailcall3WithInfo *pFuncTailcall3);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `pFuncEnter3`  
- in Ein Zeiger auf die-Implementierung, die als `FunctionEnter3WithInfo` Rückruf verwendet werden soll.  
+ in Ein Zeiger auf die-Implementierung, die als Rückruf verwendet werden soll `FunctionEnter3WithInfo` .  
   
  `pFuncLeave3`  
- in Ein Zeiger auf die-Implementierung, die als `FunctionLeave3WithInfo` Rückruf verwendet werden soll.  
+ in Ein Zeiger auf die-Implementierung, die als Rückruf verwendet werden soll `FunctionLeave3WithInfo` .  
   
  `pFuncTailcall3`  
- in Ein Zeiger auf die-Implementierung, die als `FunctionTailcall3WithInfo` Rückruf verwendet werden soll.  
+ in Ein Zeiger auf die-Implementierung, die als Rückruf verwendet werden soll `FunctionTailcall3WithInfo` .  
   
-## <a name="remarks"></a>Hinweise  
- Die Hooks [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)und [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) stellen Stapel Rahmen und Argument Untersuchung bereit. Um auf diese Informationen zuzugreifen, müssen die `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`und/oder `COR_PRF_ENABLE_FRAME_INFO` Flags festgelegt werden. Der Profiler kann die [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) -Methode verwenden, um die Ereignisflags festzulegen, und dann die `SetEnterLeaveFunctionHooks3WithInfo`-Methode verwenden, um die Implementierung dieser Funktion zu registrieren.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Hooks [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)und [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) stellen Stapel Rahmen und Argument Untersuchung bereit. Um auf diese Informationen zuzugreifen, `COR_PRF_ENABLE_FUNCTION_ARGS` `COR_PRF_ENABLE_FUNCTION_RETVAL` müssen die-,-und/oder- `COR_PRF_ENABLE_FRAME_INFO` Flags festgelegt werden. Der Profiler kann die [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) -Methode verwenden, um die Ereignisflags festzulegen, und dann die-Methode verwenden, `SetEnterLeaveFunctionHooks3WithInfo` um die Implementierung dieser Funktion zu registrieren.  
   
- Es kann jeweils nur ein Satz von Rückrufen aktiv sein, und die neueste Version hat Vorrang. Wenn ein Profiler sowohl [SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md) als auch `SetEnterLeaveFunctionHooks3WithInfo`aufruft, wird daher `SetEnterLeaveFunctionHooks3WithInfo` verwendet.  
+ Es kann jeweils nur ein Satz von Rückrufen aktiv sein, und die neueste Version hat Vorrang. Wenn ein Profiler sowohl [SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md) als auch aufruft `SetEnterLeaveFunctionHooks3WithInfo` , wird daher `SetEnterLeaveFunctionHooks3WithInfo` verwendet.  
   
- Die `SetEnterLeaveFunctionHooks3WithInfo`-Methode kann nur aus dem [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) -Rückruf des Profilers aufgerufen werden.  
+ Die `SetEnterLeaveFunctionHooks3WithInfo` -Methode kann nur vom [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) -Rückruf des Profilers aufgerufen werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
 - [FunctionEnter3](functionenter3-function.md)

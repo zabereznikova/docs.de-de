@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-ms.openlocfilehash: 188f98504fa73c4a85615a4e688bae02d966b9b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 1263467fc5db92d4dd21c4f09a98af309e2c4d55
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616748"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504419"
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor-Funktion
 `CoInitializeCor` ist veraltet.  
@@ -33,12 +33,12 @@ STDAPI CoInitializeCor (
 );  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Um die Common Language Runtime zu initialisieren, verwenden Sie entweder [corbindtoriuntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder [corbindtoken currentruntime](corbindtocurrentruntime-function.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Um die Common Language Runtime zu initialisieren, verwenden Sie entweder [corbindtoriuntimeex](corbindtoruntimeex-function.md) oder [corbindtoken currentruntime](corbindtocurrentruntime-function.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Header:** Cor. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Globale statische Metadatenfunktionen](../metadata/metadata-global-static-functions.md)

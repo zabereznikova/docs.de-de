@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb0c5f65-3791-47bc-b833-2f84f4101ba5
 topic_type:
 - apiref
-ms.openlocfilehash: dd1aa4089a981d82ae1403189343694a065a701d
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 72caac0aafe7f9c5919057a6ad2565258aec6a50
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703663"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504075"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost-Schnittstelle
 Bietet ähnliche Funktionen wie die [ICorRuntimeHost](icorruntimehost-interface.md) -Schnittstelle, die in der .NET Framework Version 1 bereitgestellt wurde, mit den folgenden Änderungen:  
@@ -35,20 +35,20 @@ Bietet ähnliche Funktionen wie die [ICorRuntimeHost](icorruntimehost-interface.
 |[ExecuteApplication-Methode](iclrruntimehost-executeapplication-method.md)|Wird in Manifest-basierten ClickOnce-Bereitstellungs Szenarien verwendet, um die Anwendung anzugeben, die in einer neuen Domäne aktiviert werden soll.|  
 |[ExecuteInAppDomain-Methode](iclrruntimehost-executeinappdomain-method.md)|Gibt den an, <xref:System.AppDomain> in dem der angegebene verwaltete Code ausgeführt werden soll.|  
 |[ExecuteInDefaultAppDomain-Methode](iclrruntimehost-executeindefaultappdomain-method.md)|Ruft die angegebene Methode des angegebenen Typs in der angegebenen Assembly auf.|  
-|[GetCLRControl-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getclrcontrol-method.md)|Ruft einen Schnittstellen Zeiger vom Typ [ICLRControl](iclrcontrol-interface.md) ab, den Hosts zum Anpassen der Aspekte des Common Language Runtime (CLR) verwenden können.|  
+|[GetCLRControl-Methode](iclrruntimehost-getclrcontrol-method.md)|Ruft einen Schnittstellen Zeiger vom Typ [ICLRControl](iclrcontrol-interface.md) ab, den Hosts zum Anpassen der Aspekte des Common Language Runtime (CLR) verwenden können.|  
 |[GetCurrentAppDomainId-Methode](iclrruntimehost-getcurrentappdomainid-method.md)|Ruft den numerischen Bezeichner der ab <xref:System.AppDomain> , die gerade ausgeführt wird.|  
 |[SetHostControl-Methode](iclrruntimehost-sethostcontrol-method.md)|Legt die Schnittstelle des Host Steuer Elements fest. Sie müssen aufrufen, `SetHostControl` bevor Sie aufrufen `Start` .|  
 |[Start-Methode](iclrruntimehost-start-method.md)|Initialisiert die CLR in einen Prozess.|  
 |[Stop-Methode](iclrruntimehost-stop-method.md)|Beendet die Ausführung des Codes durch die Laufzeit.|  
 |[UnloadAppDomain-Methode](iclrruntimehost-unloadappdomain-method.md)|Entlädt das <xref:System.AppDomain> , das dem angegebenen numerischen Bezeichner entspricht.|  
   
-## <a name="remarks"></a>Hinweise  
- Beginnen Sie mit der .NET Framework 4, indem Sie die [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md) -Schnittstelle verwenden, um einen Zeiger auf die [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle zu erhalten, und dann die [ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) -Methode aufrufen, um einen Zeiger auf zu erhalten `ICLRRuntimeHost` . In früheren Versionen der .NET Framework erhält der Host einen Zeiger auf eine `ICLRRuntimeHost` Instanz durch Aufrufen von [corbindtor untimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md). Zum Bereitstellen von Implementierungen der Technologien, die in der .NET Framework Version 2,0 bereitgestellt werden, müssen Sie `ICLRRuntimeHost` anstelle von verwenden `ICorRuntimeHost` .  
+## <a name="remarks"></a>Bemerkungen  
+ Beginnen Sie mit der .NET Framework 4, indem Sie die [ICLRMetaHost](iclrmetahost-interface.md) -Schnittstelle verwenden, um einen Zeiger auf die [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) -Schnittstelle zu erhalten, und dann die [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) -Methode aufrufen, um einen Zeiger auf zu erhalten `ICLRRuntimeHost` . In früheren Versionen der .NET Framework erhält der Host einen Zeiger auf eine `ICLRRuntimeHost` Instanz durch Aufrufen von [corbindtor untimeex](corbindtoruntimeex-function.md) oder [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md). Zum Bereitstellen von Implementierungen der Technologien, die in der .NET Framework Version 2,0 bereitgestellt werden, müssen Sie `ICLRRuntimeHost` anstelle von verwenden `ICorRuntimeHost` .  
   
 > [!IMPORTANT]
-> Rufen Sie die [Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) -Methode nicht auf, bevor Sie die [ExecuteApplication](iclrruntimehost-executeapplication-method.md) -Methode aufrufen, um eine Manifest-basierte Anwendung zu aktivieren. Wenn die- `Start` Methode zuerst aufgerufen wird, kann der `ExecuteApplication` Methodenaufruf nicht ausgeführt werden.  
+> Rufen Sie die [Start](iclrruntimehost-start-method.md) -Methode nicht auf, bevor Sie die [ExecuteApplication](iclrruntimehost-executeapplication-method.md) -Methode aufrufen, um eine Manifest-basierte Anwendung zu aktivieren. Wenn die- `Start` Methode zuerst aufgerufen wird, kann der `ExecuteApplication` Methodenaufruf nicht ausgeführt werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -57,11 +57,11 @@ Bietet ähnliche Funktionen wie die [ICorRuntimeHost](icorruntimehost-interface.
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [CorBindToCurrentRuntime-Funktion](corbindtocurrentruntime-function.md)
 - [CorBindToRuntimeEx-Funktion](corbindtoruntimeex-function.md)
 - [ICLRControl-Schnittstelle](iclrcontrol-interface.md)
 - [ICorRuntimeHost-Schnittstelle](icorruntimehost-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [CLRRuntimeHost-Co-Klasse](clrruntimehost-coclass.md)

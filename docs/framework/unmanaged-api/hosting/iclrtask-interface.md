@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 419baaf64397830ef86cfd9e5c3437e3f5b57795
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b1327e13006ca4b3f9074c1348b1817c9a1b3728
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763006"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503951"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask-Schnittstelle
 Stellt Methoden bereit, die es dem Host ermöglichen, Anforderungen an die Common Language Runtime (CLR) zu senden oder der CLR eine Benachrichtigung über die zugeordnete Aufgabe bereitzustellen.  
@@ -40,8 +40,8 @@ Stellt Methoden bereit, die es dem Host ermöglichen, Anforderungen an die Commo
 |[SwitchOut-Methode](iclrtask-switchout-method.md)|Benachrichtigt die CLR, dass die von der aktuellen Instanz dargestellte Aufgabe `ICLRTask` nicht mehr in einem eines ausführbaren-Zustand ist.|  
 |[YieldTask-Methode](iclrtask-yieldtask-method.md)|Fordert an, dass die CLR für andere Tasks Prozessorzeit zur Verfügung stellt. Die CLR garantiert nicht, dass die Aufgabe in einen Zustand versetzt wird, in dem Sie Verarbeitungszeit in sich bringen kann.|  
   
-## <a name="remarks"></a>Hinweise  
- Eine `ICLRTask` ist die Darstellung einer Aufgabe für die CLR. Zu jedem Zeitpunkt während der Codeausführung kann eine Aufgabe entweder als ausgeführt oder wartet auf die Ausführung beschrieben werden. Der Host ruft die- `ICLRTask::SwitchIn` Methode auf, um die CLR zu benachrichtigen, dass die von der aktuellen Instanz dargestellte Aufgabe `ICLRTask` nun in einem ausführbaren Zustand ist. Nach einem Aufruf `ICLRTask::SwitchIn` von kann der Host die Aufgabe für jeden Betriebssystem Thread planen, außer in Fällen, in denen die Laufzeit Thread Affinität erfordert, wie durch Aufrufe der [IHostTaskManager:: beginthreadaffinität](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) -Methode und der [IHostTaskManager:: endthreadaffinitäts](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) Methode angegeben. Später kann das Betriebssystem die Aufgabe aus dem Thread entfernen und in einen Zustand versetzen, der nicht ausgeführt wird. Dies kann beispielsweise der Fall sein, wenn der Task bei Synchronisierungs primitiven blockiert oder auf den Abschluss der e/a-Vorgänge wartet. Der Host ruft die [SwitchOut](iclrtask-switchout-method.md) -Methode auf, um die CLR zu benachrichtigen, dass der von der aktuellen Instanz dargestellte Task `ICLRTask` nicht mehr in einem eines ausführbaren-Zustand ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Eine `ICLRTask` ist die Darstellung einer Aufgabe für die CLR. Zu jedem Zeitpunkt während der Codeausführung kann eine Aufgabe entweder als ausgeführt oder wartet auf die Ausführung beschrieben werden. Der Host ruft die- `ICLRTask::SwitchIn` Methode auf, um die CLR zu benachrichtigen, dass die von der aktuellen Instanz dargestellte Aufgabe `ICLRTask` nun in einem ausführbaren Zustand ist. Nach einem Aufruf `ICLRTask::SwitchIn` von kann der Host die Aufgabe für jeden Betriebssystem Thread planen, außer in Fällen, in denen die Laufzeit Thread Affinität erfordert, wie durch Aufrufe der [IHostTaskManager:: beginthreadaffinität](ihosttaskmanager-beginthreadaffinity-method.md) -Methode und der [IHostTaskManager:: endthreadaffinitäts](ihosttaskmanager-endthreadaffinity-method.md) Methode angegeben. Später kann das Betriebssystem die Aufgabe aus dem Thread entfernen und in einen Zustand versetzen, der nicht ausgeführt wird. Dies kann beispielsweise der Fall sein, wenn der Task bei Synchronisierungs primitiven blockiert oder auf den Abschluss der e/a-Vorgänge wartet. Der Host ruft die [SwitchOut](iclrtask-switchout-method.md) -Methode auf, um die CLR zu benachrichtigen, dass der von der aktuellen Instanz dargestellte Task `ICLRTask` nicht mehr in einem eines ausführbaren-Zustand ist.  
   
  Eine Aufgabe wird in der Regel am Ende der Codeausführung beendet. Zu diesem Zeitpunkt ruft der Host `ICLRTask::ExitTask` auf, um den zugeordneten zu zerstören `ICLRTask` . Tasks können jedoch auch mithilfe eines `ICLRTask::Reset` Aufrufes wieder verwendet werden, wodurch die- `ICLRTask` Instanz wieder verwendet werden kann. Diese Vorgehensweise verhindert den mehr Aufwand für das wiederholte erstellen und zerstören von Instanzen.  
   
@@ -54,10 +54,10 @@ Stellt Methoden bereit, die es dem Host ermöglichen, Anforderungen an die Commo
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)
 - [IHostTask-Schnittstelle](ihosttask-interface.md)
 - [IHostTaskManager-Schnittstelle](ihosttaskmanager-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [ICLRTask2-Schnittstelle](iclrtask2-interface.md)

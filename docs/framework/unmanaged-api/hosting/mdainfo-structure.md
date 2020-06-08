@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 33b3044c7b5237e586fdb993a16b6144c271782c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007714"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503860"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo-Struktur
 Stellt Details zum- `Event_MDAFired` Ereignis bereit, das die Erstellung eines Assistenten für verwaltetes Debuggen (MDA) auslöst.  
@@ -40,12 +40,12 @@ typedef struct _MDAInfo {
 |`lpMDACaption`|Der Titel des aktuellen MDA. Der Titel beschreibt die Art des Fehlers, der das `Event_MDAFired` Ereignis ausgelöst hat.|  
 |`lpMDAMessage`|Die vom aktuellen MDA bereitgestellte Ausgabe Meldung.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Assistenten für verwaltetes Debuggen (MDAs) sind Debugginghilfen, die zusammen mit dem Common Language Runtime (CLR) ausgeführt werden, um Aufgaben wie das Identifizieren von ungültigen Bedingungen in der Lauf Zeit Ausführungs-Engine oder das Sichern zusätzlicher Informationen über den Zustand der Engine auszuführen. MDAs generiert XML-Meldungen über Ereignisse, die andernfalls schwierig zu erfassen sind. Sie sind besonders nützlich zum Debuggen von Übergängen zwischen verwaltetem und nicht verwaltetem Code.  
   
  Die Laufzeit führt die folgenden Schritte aus, wenn ein Ereignis ausgelöst wird, das die Erstellung eines MDA auslöst:  
   
-- Wenn der Host keine [iaktiononclrevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) -Instanz durch Aufrufen von [ICLROnEventManager:: registeraktiononevent](iclroneventmanager-registeractiononevent-method.md) registriert hat, um über ein Ereignis benachrichtigt zu werden `Event_MDAFired` , wird die Laufzeit mit dem standardmäßigen nicht gehosteten Verhalten fortgesetzt.  
+- Wenn der Host keine [iaktiononclrevent](iactiononclrevent-interface.md) -Instanz durch Aufrufen von [ICLROnEventManager:: registeraktiononevent](iclroneventmanager-registeractiononevent-method.md) registriert hat, um über ein Ereignis benachrichtigt zu werden `Event_MDAFired` , wird die Laufzeit mit dem standardmäßigen nicht gehosteten Verhalten fortgesetzt.  
   
 - Wenn der Host einen Handler für dieses Ereignis registriert hat, prüft die Laufzeit, ob ein Debugger an den Prozess angefügt ist. Wenn dies der Fall ist, unterbricht die Laufzeit den Debugger. Wenn der Debugger fortgesetzt wird, ruft er den Host auf. Wenn kein Debugger angefügt ist, ruft die Laufzeit `IActionOnCLREvent::OnEvent` auf und übergibt einen Zeiger auf eine- `MDAInfo` Instanz als- `data` Parameter.  
   
@@ -60,7 +60,7 @@ typedef struct _MDAInfo {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Hosten von Strukturen](hosting-structures.md)
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

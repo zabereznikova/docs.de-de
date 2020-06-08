@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: b8cba2b1a1f206392a59f8bc9b968e725e0ce6ee
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: cc8ab6f0c8115da4d74280023dc692b66846ed94
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869290"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497750"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo-Schnittstelle
 Stellt Methoden bereit, mit denen Codeprofiler mit der Common Language Runtime (CLR) kommunizieren können, um die Ereignisüberwachung und Anforderungs Informationen zu steuern.  
   
 > [!NOTE]
-> Jede Methode in der `ICorProfilerInfo`-Schnittstelle gibt ein HRESULT zurück, um einen Erfolg oder einen Fehler anzugeben. Eine Liste möglicher Rückgabecodes finden Sie unter CorError. h.  
+> Jede Methode in der `ICorProfilerInfo` Schnittstelle gibt ein HRESULT zurück, um einen Erfolg oder Fehler anzugeben. Eine Liste möglicher Rückgabecodes finden Sie unter CorError. h.  
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[BeginInprocDebugging-Methode](icorprofilerinfo-begininprocdebugging-method.md)|Initialisiert die Prozess interne Debugunterstützung. Diese Methode ist in der .NET Framework Version 2,0 veraltet.|  
 |[EndInprocDebugging-Methode](icorprofilerinfo-endinprocdebugging-method.md)|Beendet eine in-Process-Debuggingsitzung. Diese Methode ist in der .NET Framework Version 2,0 veraltet.|  
 |[ForceGC-Methode](icorprofilerinfo-forcegc-method.md)|Erzwingt, dass Garbage Collection innerhalb der Laufzeit auftritt.|  
 |[GetAppDomainInfo-Methode](icorprofilerinfo-getappdomaininfo-method.md)|Ruft Informationen über die angegebene Anwendungsdomäne ab.|  
 |[GetAssemblyInfo-Methode](icorprofilerinfo-getassemblyinfo-method.md)|Ruft Informationen über die angegebene Assembly ab.|  
-|[GetClassFromObject-Methode](icorprofilerinfo-getclassfromobject-method.md)|Ruft den `ClassID` einer ab.<br /><br /> Objekt, bei Angabe seines `ObjectID`.|  
+|[GetClassFromObject-Methode](icorprofilerinfo-getclassfromobject-method.md)|Ruft den `ClassID` eines ab.<br /><br /> Objekt, bei dem angegeben ist `ObjectID` .|  
 |[GetClassFromToken-Methode](icorprofilerinfo-getclassfromtoken-method.md)|Ruft die ID der Klasse ab, wenn das Metadatentoken angegeben wird. Diese Methode ist in der .NET Framework Version 2,0 veraltet. Verwenden Sie stattdessen die [ICorProfilerInfo2:: getclassfromdekenandtypeargs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) -Methode.|  
 |[GetClassIDInfo-Methode](icorprofilerinfo-getclassidinfo-method.md)|Ruft das übergeordnete Modul und das Metadatentoken für die angegebene Klasse ab.|  
 |[GetCodeInfo-Methode](icorprofilerinfo-getcodeinfo-method.md)|Ruft den Wertebereich des nativen Codes ab, der der angegebenen Funktions-ID zugeordnet ist. Diese Methode ist veraltet. Verwenden Sie stattdessen die [ICorProfilerInfo2:: GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) -Methode.|  
 |[GetCurrentThreadID-Methode](icorprofilerinfo-getcurrentthreadid-method.md)|Ruft die ID des aktuellen Threads ab, wenn es sich um einen verwalteten Thread handelt.|  
 |[GetEventMask-Methode](icorprofilerinfo-geteventmask-method.md)|Ruft die aktuellen Ereignis Kategorien ab, für die der Profiler Ereignis Benachrichtigungen von der CLR empfangen möchte.|  
-|[GetFunctionFromIP-Methode](icorprofilerinfo-getfunctionfromip-method.md)|Ordnet einen Anweisungs Zeiger für verwalteten Code einem `FunctionID`zu.|  
+|[GetFunctionFromIP-Methode](icorprofilerinfo-getfunctionfromip-method.md)|Ordnet einen Anweisungs Zeiger für verwalteten Code einem zu `FunctionID` .|  
 |[GetFunctionFromToken-Methode](icorprofilerinfo-getfunctionfromtoken-method.md)|Ruft die ID einer Funktion ab. Diese Methode ist in der .NET Framework Version 2,0 veraltet. Verwenden Sie stattdessen die [ICorProfilerInfo2:: getfunctionfromdekenandtypeargs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) -Methode.|  
 |[GetFunctionInfo-Methode](icorprofilerinfo-getfunctioninfo-method.md)|Ruft die übergeordnete Klasse und das Metadatentoken für die angegebene Funktion ab.|  
 |[GetHandleFromThread-Methode](icorprofilerinfo-gethandlefromthread-method.md)|Ordnet die ID eines Threads einem Win32-Thread Handle zu.|  
@@ -61,27 +61,27 @@ Stellt Methoden bereit, mit denen Codeprofiler mit der Common Language Runtime (
 |[SetEnterLeaveFunctionHooks-Methode](icorprofilerinfo-setenterleavefunctionhooks-method.md)|Gibt vom Profiler implementierte Funktionen an, die für die "Enter"-, "Leave"-und "Tailcall"-Hooks von verwalteten Funktionen aufgerufen werden.|  
 |[SetEventMask-Methode](icorprofilerinfo-seteventmask-method.md)|Legt einen Wert fest, der die Ereignis Typen angibt, für die der Profiler Benachrichtigungen von der CLR empfangen möchte.|  
 |[SetFunctionIDMapper-Methode](icorprofilerinfo-setfunctionidmapper-method.md)|Gibt die vom Profiler implementierte Funktion an, die aufgerufen wird, um die `FunctionID`-Werte alternativen Werten zuzuordnen, die an die Funktionseinstiegs-/-exithooks des Profilers übergeben werden.|  
-|[SetFunctionReJIT-Methode](icorprofilerinfo-setfunctionrejit-method.md)|Nicht implementiert. Nicht verwenden.|  
+|[SetFunctionReJIT-Methode](icorprofilerinfo-setfunctionrejit-method.md)|Nicht implementiert. Darf nicht verwendet werden.|  
 |[SetILFunctionBody-Methode](icorprofilerinfo-setilfunctionbody-method.md)|Ersetzt den Text der angegebenen Funktion im angegebenen Modul.|  
 |[SetILInstrumentedCodeMap-Methode](icorprofilerinfo-setilinstrumentedcodemap-method.md)|Gibt an, wie die Offsets der ursprünglichen MSIL einer angegebenen Funktion den neuen Offsets der vom Profiler geänderten MSIL der Funktion zugeordnet werden.|  
   
-## <a name="remarks"></a>Hinweise  
- Ein Profiler Ruft eine Methode in der `ICorProfilerInfo`-Schnittstelle auf, um mit der CLR zu kommunizieren, um die Ereignisüberwachung und Anforderungs Informationen zu steuern.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Profiler Ruft eine Methode in der- `ICorProfilerInfo` Schnittstelle auf, um mit der CLR zu kommunizieren, um die Ereignisüberwachung und Anforderungs Informationen zu steuern.  
   
- Die Methoden der `ICorProfilerInfo`-Schnittstelle werden von der CLR mithilfe des frei Hand Thread Modells implementiert. Jede Methode gibt ein HRESULT zurück, um einen Erfolg oder einen Fehler anzugeben. Eine Liste möglicher Rückgabecodes finden Sie unter CorError. h.  
+ Die Methoden der- `ICorProfilerInfo` Schnittstelle werden von der CLR mithilfe des frei Hand Thread Modells implementiert. Jede Methode gibt ein HRESULT zurück, um einen Erfolg oder einen Fehler anzugeben. Eine Liste möglicher Rückgabecodes finden Sie unter CorError. h.  
   
- Die CLR übergibt mithilfe der Profiler-Implementierung von [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md), eine `ICorProfilerInfo`-Schnittstelle für jeden Codeprofiler während der Initialisierung. Ein Codeprofiler kann dann Methoden der `ICorProfilerInfo`-Schnittstelle aufgerufen werden, um Informationen zu verwaltetem Code abzurufen, der unter der Steuerung der CLR ausgeführt wird.  
+ Die CLR übergibt über die Implementierung von [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)des Profilers eine `ICorProfilerInfo` Schnittstelle für jeden Codeprofiler während der Initialisierung. Ein Codeprofiler kann dann Methoden der- `ICorProfilerInfo` Schnittstelle aufzurufen, um Informationen zu verwaltetem Code abzurufen, der unter der Kontrolle der CLR ausgeführt wird.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

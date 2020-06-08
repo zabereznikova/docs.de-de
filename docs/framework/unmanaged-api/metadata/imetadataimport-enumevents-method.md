@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53b1234a176cade5876d70da0cb4eadc18802c69
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177370"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492303"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents-Methode
 Zählt Ereignisdefinitionstoken für das angegebene TypeDef-Token auf.  
@@ -42,34 +42,34 @@ HRESULT EnumEvents (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `td`  
- [in] Das TypeDef-Token, dessen Ereignisdefinitionen aufgezählt werden sollen.  
+ in Das TypeDef-Token, dessen Ereignis Definitionen aufgelistet werden sollen.  
   
  `rEvents`  
- [out] Das Array der zurückgegebenen Ereignisse.  
+ vorgenommen Das Array von zurückgegebenen Ereignissen.  
   
  `cMax`  
  [in] Die maximale Größe des `rEvents`-Arrays.  
   
  `pcEvents`  
- [out] Die tatsächliche Anzahl der `rEvents`in zurückgegebenen Ereignisse.  
+ vorgenommen Die tatsächliche Anzahl der in zurückgegebenen Ereignisse `rEvents` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|Es sind keine Ereignisse zum Aufzählen vorhanden. In diesem `pcEvents` Fall ist Null.|  
+|`S_OK`|`EnumEvents`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine aufzuzählenden Ereignisse vorhanden. In diesem Fall `pcEvents` ist 0 (null).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
