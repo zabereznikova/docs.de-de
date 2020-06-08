@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 727819d5-1dab-4ebb-ac25-950b4111dc72
 topic_type:
 - apiref
-ms.openlocfilehash: 4347a4da3e58a20c98e217de3a71c448e244eb29
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5de62db4180a6a9160193053fe42e39cebc34d0e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440117"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492476"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum-Methode
 Schließt den Enumerator, der durch das angegebene Handle identifiziert wird.  
@@ -37,19 +37,19 @@ void CloseEnum (
  `hEnum`  
  in Das Handle für den Enumerator, der geschlossen werden soll.  
   
-## <a name="remarks"></a>Hinweise  
- Das durch `hEnum` angegebene Handle wird von einem vorherigen `Enum`*namens* aufrufruf abgerufen (z. b. [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+## <a name="remarks"></a>Bemerkungen  
+ Das Handle, das von angegeben `hEnum` wird, wird von einem vorherigen `Enum` *namens* -Ruf abgerufen (z. b. [IMetaDataImport:: EnumTypeDefs](imetadataimport-enumtypedefs-method.md)).  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

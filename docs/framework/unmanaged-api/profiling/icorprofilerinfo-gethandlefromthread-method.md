@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-ms.openlocfilehash: 038f922eaaeb7d660cfbdcc0facb89677bdd154e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 419195d9450bf07e5ad8c7cedcac76e175137c96
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863542"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498218"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread-Methode
 Ordnet die ID eines Threads einem Win32-Thread Handle zu.  
@@ -33,25 +33,25 @@ HRESULT GetHandleFromThread(
     [out] HANDLE  *phThread);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `threadId`  
  in Die zuzuordnende Thread-ID.  
   
  `phThread`  
  vorgenommen Ein Zeiger auf ein Win32-Thread handle.  
   
-## <a name="remarks"></a>Hinweise  
- Der Profiler muss die Win32-`DuplicateHandle`-Funktion für das Handle vor der Verwendung aufruft.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Profiler muss die Win32- `DuplicateHandle` Funktion für das Handle vor der Verwendung aufruft.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

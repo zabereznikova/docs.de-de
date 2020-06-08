@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616501"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493434"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage-Funktion
 Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.  
@@ -48,7 +48,7 @@ STDAPI _CorValidateImage (
 |`STATUS_INVALID_IMAGE_FORMAT`|Das Bild ist ungültig. Dieser Wert weist das HRESULT 0xC000007BL auf.|  
 |`STATUS_SUCCESS`|Das Bild ist gültig. Dieser Wert hat das HRESULT 0x00000000L.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In Windows XP und höheren Versionen überprüft das Betriebssystem-Lade Modul die verwalteten Module, indem er das com-deskriptorverzeichnisbit im COFF-Header (Common Object File Format) untersucht. Ein festgelegtes Bit gibt ein verwaltetes Modul an. Wenn das Lade Modul ein verwaltetes Modul erkennt, lädt es Mscoree. dll und ruft auf `_CorValidateImage` , was die folgenden Aktionen ausführt:  
   
 - Bestätigt, dass das Image ein gültiges verwaltetes Modul ist.  
@@ -59,7 +59,7 @@ STDAPI _CorValidateImage (
   
 - Kehrt zum Lade Modul zurück, wenn die Images des verwalteten Moduls geladen werden.  
   
- Bei ausführbaren Images Ruft das Betriebssystem-Lade Programm dann die [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion auf, unabhängig vom Einstiegspunkt, der in der ausführbaren Datei angegeben ist. Bei dll-assemblyimages Ruft das Lade Modul die [_CorDllMain](cordllmain-function.md) -Funktion auf.  
+ Bei ausführbaren Images Ruft das Betriebssystem-Lade Programm dann die [_CorExeMain](corexemain-function.md) -Funktion auf, unabhängig vom Einstiegspunkt, der in der ausführbaren Datei angegeben ist. Bei dll-assemblyimages Ruft das Lade Modul die [_CorDllMain](cordllmain-function.md) -Funktion auf.  
   
  `_CorExeMain`oder `_CorDllMain` führt die folgenden Aktionen aus:  
   
@@ -71,7 +71,7 @@ STDAPI _CorValidateImage (
   
  Das Lade Modul ruft die [_CorImageUnloading](corimageunloading-function.md) -Funktion auf, wenn verwaltete Modul Images entladen werden. Diese Funktion führt jedoch keine Aktion aus. Er gibt nur zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
@@ -80,6 +80,6 @@ STDAPI _CorValidateImage (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Globale statische Metadatenfunktionen](../metadata/metadata-global-static-functions.md)

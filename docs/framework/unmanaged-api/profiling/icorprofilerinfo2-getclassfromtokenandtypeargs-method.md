@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-ms.openlocfilehash: e0663ff122397ba639a0a219e513be2f3f0cbbef
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 702c5f9f2bc08c824bdc0607741a6afd65a3e89b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862762"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497256"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs-Methode
-Ruft den `ClassID` eines Typs unter Verwendung des angegebenen Metadatentokens und der `ClassID` Werte beliebiger Typargumente ab.  
+Ruft die `ClassID` eines Typs unter Verwendung des angegebenen Metadatentokens und der `ClassID` Werte von Typargumenten ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
     [out] ClassID* pClassID);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `moduleID`  
  in Die ID des Moduls, in dem sich der Typ befindet.  
   
@@ -47,28 +47,28 @@ HRESULT GetClassFromTokenAndTypeArgs(
  in Die Anzahl der Typparameter für den angegebenen Typ. Dieser Wert muss für nicht generische Typen NULL sein.  
   
  `typeArgs`  
- in Ein Array von `ClassID` Werten, von denen jeder ein Argument vom Typ ist. Der Wert `typeArgs` kann NULL sein, wenn `cTypeArgs` auf NULL festgelegt ist.  
+ in Ein Array von- `ClassID` Werten, von denen jeder ein Argument vom Typ ist. Der Wert von `typeArgs` kann NULL sein `cTypeArgs` , wenn auf 0 (null) festgelegt ist.  
   
  `pClassID`  
  vorgenommen Ein Zeiger auf den `ClassID` des angegebenen Typs.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Sie die `GetClassFromTokenAndTypeArgs`-Methode mit einem `mdTypeRef` anstelle eines `mdTypeDef` Metadatentokens aufrufen, kann dies zu unvorhersehbaren Ergebnissen führen. Aufrufer sollten die `mdTypeRef` bei der Übergabe in eine `mdTypeDef` auflösen.  
+## <a name="remarks"></a>Bemerkungen  
+ Das Aufrufen der- `GetClassFromTokenAndTypeArgs` Methode mit einem anstelle eines metadatentyps `mdTypeRef` `mdTypeDef` kann zu unvorhersehbaren Ergebnissen führen. Aufrufer sollten `mdTypeRef` bei der Übergabe in eine auflösen `mdTypeDef` .  
   
- Wenn der Typ nicht bereits geladen ist, wird beim Aufrufen von `GetClassFromTokenAndTypeArgs` das Laden auslöst, was in vielen Kontexten eine gefährliche Operation ist. Wenn Sie diese Methode z. b. beim Laden von Modulen oder anderen Typen aufrufen, kann dies zu einer Endlosschleife führen, da die Laufzeit versucht, Vorgänge zirkulär zu laden.  
+ Wenn der Typ nicht bereits geladen ist, wird beim Aufrufen von das `GetClassFromTokenAndTypeArgs` Laden von auslöst, was in vielen Kontexten eine gefährliche Operation ist. Wenn Sie diese Methode z. b. beim Laden von Modulen oder anderen Typen aufrufen, kann dies zu einer Endlosschleife führen, da die Laufzeit versucht, Vorgänge zirkulär zu laden.  
   
- Im Allgemeinen wird die Verwendung von `GetClassFromTokenAndTypeArgs` davon abgeraten. Wenn Profiler an Ereignissen für einen bestimmten Typ interessiert sind, sollten Sie die `ModuleID` und `mdTypeDef` dieses Typs speichern und [ICorProfilerInfo2:: GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md) verwenden, um zu überprüfen, ob ein bestimmtes `ClassID` der gewünschte Typ ist.  
+ Im Allgemeinen wird von der Verwendung von abgeraten `GetClassFromTokenAndTypeArgs` . Wenn Profiler an Ereignissen für einen bestimmten Typ interessiert sind, sollten Sie das `ModuleID` und `mdTypeDef` dieses Typs speichern und [ICorProfilerInfo2:: GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md) verwenden, um zu überprüfen, ob ein angegebenes der `ClassID` gewünschten Art ist.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

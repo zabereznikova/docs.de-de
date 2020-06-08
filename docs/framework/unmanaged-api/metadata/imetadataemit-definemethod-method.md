@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: 514f227e3c0c385f61090079d2f5214dac9b3924
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbf6ce8c8c9628b08872058a794fb0e005764ab1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004529"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501299"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod-Methode
 Erstellt eine Definition für eine Methode oder eine globale Funktion mit der angegebenen Signatur und gibt ein Token an diese Methoden Definition zurück.  
@@ -65,7 +65,7 @@ HRESULT DefineMethod (
  `pmd`  
  vorgenommen Das Member-Token.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die metadatenapi garantiert, dass Methoden in derselben Reihenfolge wie der Aufrufer für eine bestimmte einschließende Klasse oder Schnittstelle, die im-Parameter angegeben ist, beibehalten wird `td` .  
   
  Weitere Informationen zur Verwendung von `DefineMethod` und bestimmten Parametereinstellungen finden Sie unten.  
@@ -81,7 +81,7 @@ HRESULT DefineMethod (
  Sie sollten keine doppelten Methoden definieren. Das heißt, Sie sollten nicht `DefineMethod` mit einem doppelten Satz von Werten in den `td` `wzName` Parametern, und Abrufen `pvSig` . (Mit diesen drei Parametern wird die Methode eindeutig definiert.) Sie können jedoch ein doppeltes Triple verwenden, vorausgesetzt, dass Sie für eine der Methoden Definitionen das `mdPrivateScope` Bit im-Parameter festlegen `dwMethodFlags` . (Das `mdPrivateScope` Bit bedeutet, dass der Compiler keinen Verweis auf diese Methoden Definition ausgibt.)  
   
 ## <a name="method-implementation-information"></a>Methoden Implementierungs Informationen  
- Informationen zur Methoden Implementierung sind häufig nicht bekannt, wenn die-Methode deklariert wird. Daher müssen Sie beim Aufrufen von keine Werte im `ulCodeRVA` -Parameter und im- `dwImplFlags` Parameter übergeben `DefineMethod` . Die Werte können später über [IMetaDataEmit:: SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) oder [IMetaDataEmit:: SetRVA](imetadataemit-setrva-method.md)bereitgestellt werden.  
+ Informationen zur Methoden Implementierung sind häufig nicht bekannt, wenn die-Methode deklariert wird. Daher müssen Sie beim Aufrufen von keine Werte im `ulCodeRVA` -Parameter und im- `dwImplFlags` Parameter übergeben `DefineMethod` . Die Werte können später über [IMetaDataEmit:: SetMethodImplFlags](imetadataemit-setmethodimplflags-method.md) oder [IMetaDataEmit:: SetRVA](imetadataemit-setrva-method.md)bereitgestellt werden.  
   
  In einigen Situationen, z. b. PInvoke-oder COM-Interop-Szenarien, wird der Methoden Text nicht bereitgestellt und `ulCodeRVA` sollte auf 0 (null) festgelegt werden. In diesen Fällen sollte die-Methode nicht als abstrakt gekennzeichnet werden, da die-Laufzeit die-Implementierung findet.  
   
@@ -110,7 +110,7 @@ HRESULT DefineMethod (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

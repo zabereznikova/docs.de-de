@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-ms.openlocfilehash: 388f0de26983f8bb876f40a527f60d8bc59191a3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3ecaebb9d943a3cdbb231307012b5dc3aaf000f7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616346"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493400"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent-Enumeration
 Beschreibt die Common Language Runtime (CLR)-Ereignisse, für die der Host Rückrufe registrieren kann.  
@@ -44,14 +44,14 @@ typedef enum {
 |`Event_MDAFired`|Gibt an, dass eine MDA-Nachricht (Managed Debug Assistant) generiert wurde.|  
 |`Event_StackOverflow`|Gibt an, dass ein Stapelüberlauf Fehler aufgetreten ist.|  
   
-## <a name="remarks"></a>Hinweise  
- Der Host kann Rückrufe für jeden der Ereignis Typen registrieren, die durch den `EClrEvent` Aufruf der Methoden der [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) -Schnittstelle beschrieben werden. Der Host erhält einen Zeiger auf diese Schnittstelle, indem er die [ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md) -Methode aufruft.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Host kann Rückrufe für jeden der Ereignis Typen registrieren, die durch den `EClrEvent` Aufruf der Methoden der [ICLROnEventManager](iclroneventmanager-interface.md) -Schnittstelle beschrieben werden. Der Host erhält einen Zeiger auf diese Schnittstelle, indem er die [ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md) -Methode aufruft.  
   
  Das `Event_CLRDisabled` -Ereignis und das- `Event_DomainUnload` Ereignis können mehrmals und aus unterschiedlichen Threads ausgelöst werden, um eine Entladung oder die Deaktivierung der CLR zu signalisieren.  
   
- Das- `Event_MDAFired` Ereignis löst die Erstellung einer [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) -Instanz aus, die die Details der MDA-Nachricht enthält. Weitere Informationen zu MDAs finden Sie unter [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Das- `Event_MDAFired` Ereignis löst die Erstellung einer [MDAInfo](mdainfo-structure.md) -Instanz aus, die die Details der MDA-Nachricht enthält. Weitere Informationen zu MDAs finden Sie unter [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -60,7 +60,7 @@ typedef enum {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [IActionOnCLREvent-Schnittstelle](iactiononclrevent-interface.md)
 - [ICLRControl-Schnittstelle](iclrcontrol-interface.md)

@@ -1,5 +1,6 @@
 ---
 title: <defaultProxy>-Element (Netzwerkeinstellungen)
+description: <defaultProxy>Mit dem Netzwerk Einstellungs Element wird der HTTP-Proxy Server (Hypertext Transfer Protocol) im .NET Framework konfiguriert.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 915fdc96dbd4d417f9c9e6aa3ff96de3026491ef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698206"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504601"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy>-Element (Netzwerkeinstellungen)
 Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).  
@@ -41,8 +42,8 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|`enabled`|Gibt an, ob ein Webproxy verwendet wird. Der Standardwert ist `true`.|  
-|`useDefaultCredentials`|Gibt an, ob die Standardanmeldeinformationen für diesen Host für den Zugriff auf den Webproxy verwendet werden. Der Standardwert ist `false`.|  
+|`enabled`|Gibt an, ob ein Webproxy verwendet wird. Der Standardwert lautet `true`.|  
+|`useDefaultCredentials`|Gibt an, ob die Standardanmeldeinformationen für diesen Host für den Zugriff auf den Webproxy verwendet werden. Der Standardwert lautet `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -86,7 +87,7 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Netzwerkeinstellungsschema](index.md)

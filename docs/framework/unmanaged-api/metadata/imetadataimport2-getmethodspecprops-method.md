@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 0bfbfec930c193ea05a01bd5bd9f46d2ec6714b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 079d9245526ff7914d1cbd6a91f0f2d96a690af5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175290"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490444"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps-Methode
 Ruft die Metadatensignatur der Methode ab, auf die durch das angegebene MethodSpec-Token verwiesen wird.  
@@ -38,27 +38,27 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>Parameter  
  `mi`  
- [in] Ein MethodSpec-Token, das die Instanziierung der Methode darstellt.  
+ in Ein MethodSpec-Token, das die Instanziierung der Methode darstellt.  
   
  `tkParent`  
- [out] Ein Zeiger auf das MethodDef- oder MethodRef-Token, das die Methodendefinition darstellt.  
+ vorgenommen Ein Zeiger auf das MethodDef-oder MethodRef-Token, das die Methoden Definition darstellt.  
   
  `ppvSigBlob`  
- [out] Ein Zeiger auf die binäre Metadatensignatur der Methode.  
+ vorgenommen Ein Zeiger auf die binäre Metadatensignatur der Methode.  
   
  `pcbSigBlob`  
- [out] Die Größe von in `ppvSigBlob`Bytes von .  
+ vorgenommen Die Größe von in Bytes `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

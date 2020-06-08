@@ -6,12 +6,12 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: 8b6b9acff2945e2d8fd684bfa31e4af086ea5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868147"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494032"
 ---
 # <a name="profiling-interfaces"></a>Profilerstellungsschnittstellen
 In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die die Profilerstellung eines Programms ermöglichen, das von der Common Language Runtime (CLR) ausgeführt wird.  
@@ -41,7 +41,7 @@ In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die
  [ICorProfilerCallback6-Schnittstelle](icorprofilercallback6-interface.md)  
  Stellt eine Rückrufmethode bereit, die von der CLR genutzt wird, um einen Profiler zu benachrichtigen, dass eine Assembly geladen wird.  
   
- [CorProfilerCallback7-Schnittstelle](icorprofilercallback7-interface.md)  
+ [ICorProfilerCallback7-Schnittstelle](icorprofilercallback7-interface.md)  
  Stellt eine Rückruf Methode bereit, die der-Common Language Runtime verwendet, um den Profiler zu benachrichtigen, dass der mit einem in-Memory-Modul verknüpfte Symbol Datenstrom aktualisiert wird.  
 
 [ICorProfilerCallback8-Schnittstelle](icorprofilercallback8-interface.md)  
@@ -63,7 +63,7 @@ Stellt eine Rückruf Methode bereit, die der Common Language Runtime verwendet, 
  Erweitert die `ICorProfilerInfo`-Schnittstelle um Methoden, die in .NET Framework 2.0 und höheren Versionen unterstützt werden.  
   
  [ICorProfilerInfo3-Schnittstelle](icorprofilerinfo3-interface.md)  
- Erweitert die `ICorProfilerInfo2`-Schnittstelle um Methoden, die in der .NET Framework 4 und höheren Versionen unterstützt werden.  
+ Erweitert die `ICorProfilerInfo2` -Schnittstelle um Methoden, die in den .NET Framework 4 und höheren Versionen unterstützt werden.  
   
  [ICorProfilerInfo4-Schnittstelle](icorprofilerinfo4-interface.md)  
  Stellt Methoden bereit, mit denen Codeprofiler mit der CLR kommunizieren können, um die Ereignisüberwachung zu steuern und Informationen anzufordern.  
@@ -81,7 +81,7 @@ Stellt eine Rückruf Methode bereit, die der Common Language Runtime verwendet, 
  Stellt Methoden bereit, um eine Auflistung von Modulen, die von der Anwendung oder dem Profiler geladen wurden, sequenziell zu durchlaufen.  
   
  [ICorProfilerObjectEnum-Schnittstelle](icorprofilerobjectenum-interface.md)  
- Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu durchlaufen, die von [Ngen. exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)generiert werden.  
+ Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu durchlaufen, die von [Ngen. exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md)generiert werden.  
   
  [ICorProfilerThreadEnum-Schnittstelle](icorprofilerthreadenum-interface.md)  
  Stellt Methoden bereit, um eine Auflistung von Threads in der CLR sequenziell zu durchlaufen.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-ms.openlocfilehash: e628cf5dab8006b0df0ab6c60dc995cd0c6bb29d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79b1493d262288c1d85a56538810e35a73441595
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175446"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491758"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets-Methode
 Zählt Berechtigungen für die Objekte in einem angegebenen Metadatenbereich auf.  
@@ -40,40 +40,40 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL für den ersten Aufruf dieser Methode sein.  
+ [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
  `tk`  
- [in] Ein Metadatentoken, das den Suchbereich einschränkt, oder NULL, um den größtmöglichen Bereich zu durchsuchen.  
+ in Ein Metadatentoken, das den Suchbereich einschränkt, oder NULL, um den größtmöglichen Bereich zu durchsuchen.  
   
  `dwActions`  
- [in] Flags, <xref:System.Security.Permissions.SecurityAction> die die `rPermission`Werte darstellen, die in enthalten werden sollen, oder Null, um alle Aktionen zurückzugeben.  
+ in Flags, die die <xref:System.Security.Permissions.SecurityAction> Werte darstellen, die in eingeschlossen werden sollen `rPermission` , oder NULL, um alle Aktionen zurückzugeben.  
   
  `rPermission`  
- [out] Das Array, das zum Speichern der Berechtigungstoken verwendet wird.  
+ vorgenommen Das Array, das zum Speichern der Berechtigungs Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rPermission`-Arrays.  
   
  `pcTokens`  
- [out] Die Anzahl der in `rPermission`zurückgegebenen Berechtigungstoken.  
+ vorgenommen Die Anzahl der in zurückgegebenen Berechtigungs Token `rPermission` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|Es sind keine Token zum Aufzählen vorhanden. In diesem `pcTokens` Fall ist Null.|  
+|`S_OK`|`EnumPermissionSets`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
