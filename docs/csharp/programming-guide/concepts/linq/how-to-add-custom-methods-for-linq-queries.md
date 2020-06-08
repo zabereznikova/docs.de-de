@@ -2,58 +2,60 @@
 title: 'Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3f8ba8810d06a2e79093e6022ad6e79f3599468
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141473"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447029"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a><span data-ttu-id="7dc84-102">Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (C#)</span><span class="sxs-lookup"><span data-stu-id="7dc84-102">How to add custom methods for LINQ queries (C#)</span></span>
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a><span data-ttu-id="5eb79-102">Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (C#)</span><span class="sxs-lookup"><span data-stu-id="5eb79-102">How to add custom methods for LINQ queries (C#)</span></span>
 
-<span data-ttu-id="7dc84-103">Sie können die Methoden erweitern, die Sie für LINQ-Abfragen durch Hinzufügen von Erweiterungsmethoden zur <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle verwenden können.</span><span class="sxs-lookup"><span data-stu-id="7dc84-103">You can extend the set of methods that you can use for LINQ queries by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="7dc84-104">Zusätzlich zu den durchschnittlichen oder maximalen Standardvorgängen, können Sie eine benutzerdefinierte Aggregatmethode erstellen, um einen einzelnen Wert aus einer Sequenz von Werten zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="7dc84-104">For example, in addition to the standard average or maximum operations, you can create a custom aggregate method to compute a single value from a sequence of values.</span></span> <span data-ttu-id="7dc84-105">Sie können auch eine Methode erstellen, die als benutzerdefinierter Filter oder spezifische Datentransformation für eine Sequenz von Werten agiert und eine neue Sequenz zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="7dc84-105">You can also create a method that works as a custom filter or a specific data transform for a sequence of values and returns a new sequence.</span></span> <span data-ttu-id="7dc84-106">Beispiele für solche Methoden sind <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Reverse%2A>.</span><span class="sxs-lookup"><span data-stu-id="7dc84-106">Examples of such methods are <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, and <xref:System.Linq.Enumerable.Reverse%2A>.</span></span>
+<span data-ttu-id="5eb79-103">Sie können die Methoden erweitern, die Sie für LINQ-Abfragen durch Hinzufügen von Erweiterungsmethoden zur <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle verwenden können.</span><span class="sxs-lookup"><span data-stu-id="5eb79-103">You can extend the set of methods that you can use for LINQ queries by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="5eb79-104">Zusätzlich zu den durchschnittlichen oder maximalen Standardvorgängen, können Sie eine benutzerdefinierte Aggregatmethode erstellen, um einen einzelnen Wert aus einer Sequenz von Werten zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="5eb79-104">For example, in addition to the standard average or maximum operations, you can create a custom aggregate method to compute a single value from a sequence of values.</span></span> <span data-ttu-id="5eb79-105">Sie können auch eine Methode erstellen, die als benutzerdefinierter Filter oder spezifische Datentransformation für eine Sequenz von Werten agiert und eine neue Sequenz zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="5eb79-105">You can also create a method that works as a custom filter or a specific data transform for a sequence of values and returns a new sequence.</span></span> <span data-ttu-id="5eb79-106">Beispiele für solche Methoden sind <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Reverse%2A>.</span><span class="sxs-lookup"><span data-stu-id="5eb79-106">Examples of such methods are <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, and <xref:System.Linq.Enumerable.Reverse%2A>.</span></span>
 
-<span data-ttu-id="7dc84-107">Beim Erweitern der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle können Sie die benutzerdefinierten Methoden auf jede aufzählbare Auflistung anwenden.</span><span class="sxs-lookup"><span data-stu-id="7dc84-107">When you extend the <xref:System.Collections.Generic.IEnumerable%601> interface, you can apply your custom methods to any enumerable collection.</span></span> <span data-ttu-id="7dc84-108">Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="7dc84-108">For more information, see [Extension Methods](../../classes-and-structs/extension-methods.md).</span></span>
+<span data-ttu-id="5eb79-107">Beim Erweitern der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle können Sie die benutzerdefinierten Methoden auf jede aufzählbare Auflistung anwenden.</span><span class="sxs-lookup"><span data-stu-id="5eb79-107">When you extend the <xref:System.Collections.Generic.IEnumerable%601> interface, you can apply your custom methods to any enumerable collection.</span></span> <span data-ttu-id="5eb79-108">Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="5eb79-108">For more information, see [Extension Methods](../../classes-and-structs/extension-methods.md).</span></span>
 
-## <a name="adding-an-aggregate-method"></a><span data-ttu-id="7dc84-109">Hinzufügen einer Aggregatmethode</span><span class="sxs-lookup"><span data-stu-id="7dc84-109">Adding an Aggregate Method</span></span>
+## <a name="adding-an-aggregate-method"></a><span data-ttu-id="5eb79-109">Hinzufügen einer Aggregatmethode</span><span class="sxs-lookup"><span data-stu-id="5eb79-109">Adding an Aggregate Method</span></span>
 
-<span data-ttu-id="7dc84-110">Eine aggregierte Methode berechnet einen einzelnen Wert aus einer Gruppe von Werten.</span><span class="sxs-lookup"><span data-stu-id="7dc84-110">An aggregate method computes a single value from a set of values.</span></span> <span data-ttu-id="7dc84-111">LINQ stellt mehrere Aggregatmethoden bereit, einschließlich <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> und <xref:System.Linq.Enumerable.Max%2A>.</span><span class="sxs-lookup"><span data-stu-id="7dc84-111">LINQ provides several aggregate methods, including <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Max%2A>.</span></span> <span data-ttu-id="7dc84-112">Sie können Ihre eigene Aggregatmethode erstellen, indem Sie der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle eine Erweiterungsmethode hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="7dc84-112">You can create your own aggregate method by adding an extension method to the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span>
+<span data-ttu-id="5eb79-110">Eine aggregierte Methode berechnet einen einzelnen Wert aus einer Gruppe von Werten.</span><span class="sxs-lookup"><span data-stu-id="5eb79-110">An aggregate method computes a single value from a set of values.</span></span> <span data-ttu-id="5eb79-111">LINQ stellt mehrere Aggregatmethoden bereit, einschließlich <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> und <xref:System.Linq.Enumerable.Max%2A>.</span><span class="sxs-lookup"><span data-stu-id="5eb79-111">LINQ provides several aggregate methods, including <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Max%2A>.</span></span> <span data-ttu-id="5eb79-112">Sie können Ihre eigene Aggregatmethode erstellen, indem Sie der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle eine Erweiterungsmethode hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="5eb79-112">You can create your own aggregate method by adding an extension method to the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span>
 
-<span data-ttu-id="7dc84-113">Im folgenden Codebeispiel wird veranschaulicht, wie eine Erweiterungsmethode namens `Median` erstellt wird, um einen Median für eine Zahlensequenz des Typs `double` zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="7dc84-113">The following code example shows how to create an extension method called `Median` to compute a median for a sequence of numbers of type `double`.</span></span>
+<span data-ttu-id="5eb79-113">Im folgenden Codebeispiel wird veranschaulicht, wie eine Erweiterungsmethode namens `Median` erstellt wird, um einen Median für eine Zahlensequenz des Typs `double` zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="5eb79-113">The following code example shows how to create an extension method called `Median` to compute a median for a sequence of numbers of type `double`.</span></span>
 
 ```csharp
 public static class LINQExtension
 {
     public static double Median(this IEnumerable<double> source)
     {
-        if (source.Count() == 0)
+        var countOfElementsInTheSet = source?.Count() ?? 0;
+
+        if (countOfElementsInTheSet == 0)
         {
-            throw new InvalidOperationException("Cannot compute median for an empty set.");
+            throw new InvalidOperationException("Cannot compute median for a null or empty set.");
         }
 
-        var sortedList = from number in source
+        var sortedList = (from number in source
                          orderby number
-                         select number;
+                         select number).ToList();
 
-        int itemIndex = (int)sortedList.Count() / 2;
+        int itemIndex = countOfElementsInTheSet / 2;
 
-        if (sortedList.Count() % 2 == 0)
+        if (countOfElementsInTheSet % 2 == 0)
         {
             // Even number of items.
-            return (sortedList.ElementAt(itemIndex) + sortedList.ElementAt(itemIndex - 1)) / 2;
+            return (sortedList[itemIndex] + sortedList[itemIndex - 1]) / 2;
         }
         else
         {
             // Odd number of items.
-            return sortedList.ElementAt(itemIndex);
+            return sortedList[itemIndex];
         }
     }
 }
 ```
 
-<span data-ttu-id="7dc84-114">Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung genau so aufrufen, wie Sie andere Aggregatmethoden aus der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle aufrufen.</span><span class="sxs-lookup"><span data-stu-id="7dc84-114">You call this extension method for any enumerable collection in the same way you call other aggregate methods from the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span>
+<span data-ttu-id="5eb79-114">Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung genau so aufrufen, wie Sie andere Aggregatmethoden aus der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle aufrufen.</span><span class="sxs-lookup"><span data-stu-id="5eb79-114">You call this extension method for any enumerable collection in the same way you call other aggregate methods from the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span>
 
-<span data-ttu-id="7dc84-115">Im folgenden Codebeispiel wird die Verwendung der `Median`-Methode für ein Array des Typs `double` veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="7dc84-115">The following code example shows how to use the `Median` method for an array of type `double`.</span></span>
+<span data-ttu-id="5eb79-115">Im folgenden Codebeispiel wird die Verwendung der `Median`-Methode für ein Array des Typs `double` veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="5eb79-115">The following code example shows how to use the `Median` method for an array of type `double`.</span></span>
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -71,13 +73,13 @@ Console.WriteLine("double: Median = " + query1);
 */
 ```
 
-### <a name="overloading-an-aggregate-method-to-accept-various-types"></a><span data-ttu-id="7dc84-116">Überladen einer Aggregatmethode zum Akzeptieren verschiedener Typen</span><span class="sxs-lookup"><span data-stu-id="7dc84-116">Overloading an Aggregate Method to Accept Various Types</span></span>
+### <a name="overloading-an-aggregate-method-to-accept-various-types"></a><span data-ttu-id="5eb79-116">Überladen einer Aggregatmethode zum Akzeptieren verschiedener Typen</span><span class="sxs-lookup"><span data-stu-id="5eb79-116">Overloading an Aggregate Method to Accept Various Types</span></span>
 
-<span data-ttu-id="7dc84-117">Sie können die Aggregatmethode überladen, sodass diese Sequenzen verschiedener Typen akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="7dc84-117">You can overload your aggregate method so that it accepts sequences of various types.</span></span> <span data-ttu-id="7dc84-118">Die Standardmethode ist die Erstellung einer Überladung für jeden Typ.</span><span class="sxs-lookup"><span data-stu-id="7dc84-118">The standard approach is to create an overload for each type.</span></span> <span data-ttu-id="7dc84-119">Ein anderer Ansatz ist das Erstellen einer Überladung, die einen generischen Typ annimmt und diesen mit einem Delegaten in einen bestimmten Typ konvertiert.</span><span class="sxs-lookup"><span data-stu-id="7dc84-119">Another approach is to create an overload that will take a generic type and convert it to a specific type by using a delegate.</span></span> <span data-ttu-id="7dc84-120">Sie können auch beide Methoden kombinieren.</span><span class="sxs-lookup"><span data-stu-id="7dc84-120">You can also combine both approaches.</span></span>
+<span data-ttu-id="5eb79-117">Sie können die Aggregatmethode überladen, sodass diese Sequenzen verschiedener Typen akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="5eb79-117">You can overload your aggregate method so that it accepts sequences of various types.</span></span> <span data-ttu-id="5eb79-118">Die Standardmethode ist die Erstellung einer Überladung für jeden Typ.</span><span class="sxs-lookup"><span data-stu-id="5eb79-118">The standard approach is to create an overload for each type.</span></span> <span data-ttu-id="5eb79-119">Ein anderer Ansatz ist das Erstellen einer Überladung, die einen generischen Typ annimmt und diesen mit einem Delegaten in einen bestimmten Typ konvertiert.</span><span class="sxs-lookup"><span data-stu-id="5eb79-119">Another approach is to create an overload that will take a generic type and convert it to a specific type by using a delegate.</span></span> <span data-ttu-id="5eb79-120">Sie können auch beide Methoden kombinieren.</span><span class="sxs-lookup"><span data-stu-id="5eb79-120">You can also combine both approaches.</span></span>
 
-#### <a name="to-create-an-overload-for-each-type"></a><span data-ttu-id="7dc84-121">So erstellen Sie eine Überladung für jeden Typ</span><span class="sxs-lookup"><span data-stu-id="7dc84-121">To create an overload for each type</span></span>
+#### <a name="to-create-an-overload-for-each-type"></a><span data-ttu-id="5eb79-121">So erstellen Sie eine Überladung für jeden Typ</span><span class="sxs-lookup"><span data-stu-id="5eb79-121">To create an overload for each type</span></span>
 
-<span data-ttu-id="7dc84-122">Sie können eine bestimmte Überladung für jeden Typ erstellen, den Sie unterstützen möchten.</span><span class="sxs-lookup"><span data-stu-id="7dc84-122">You can create a specific overload for each type that you want to support.</span></span> <span data-ttu-id="7dc84-123">Im folgenden Codebeispiel wird eine Überladung der `Median`-Methode für den `integer`-Typ veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="7dc84-123">The following code example shows an overload of the `Median` method for the `integer` type.</span></span>
+<span data-ttu-id="5eb79-122">Sie können eine bestimmte Überladung für jeden Typ erstellen, den Sie unterstützen möchten.</span><span class="sxs-lookup"><span data-stu-id="5eb79-122">You can create a specific overload for each type that you want to support.</span></span> <span data-ttu-id="5eb79-123">Im folgenden Codebeispiel wird eine Überladung der `Median`-Methode für den `integer`-Typ veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="5eb79-123">The following code example shows an overload of the `Median` method for the `integer` type.</span></span>
 
 ```csharp
 //int overload
@@ -88,7 +90,7 @@ public static double Median(this IEnumerable<int> source)
 }
 ```
 
-<span data-ttu-id="7dc84-124">Sie können nun die `Median`-Überladungen für die `integer`- und `double`-Typen aufrufen, so wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="7dc84-124">You can now call the `Median` overloads for both `integer` and `double` types, as shown in the following code:</span></span>
+<span data-ttu-id="5eb79-124">Sie können nun die `Median`-Überladungen für die `integer`- und `double`-Typen aufrufen, so wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="5eb79-124">You can now call the `Median` overloads for both `integer` and `double` types, as shown in the following code:</span></span>
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -115,11 +117,11 @@ Console.WriteLine("int: Median = " + query2);
 */
 ```
 
-#### <a name="to-create-a-generic-overload"></a><span data-ttu-id="7dc84-125">So erstellen Sie eine generische Überladung</span><span class="sxs-lookup"><span data-stu-id="7dc84-125">To create a generic overload</span></span>
+#### <a name="to-create-a-generic-overload"></a><span data-ttu-id="5eb79-125">So erstellen Sie eine generische Überladung</span><span class="sxs-lookup"><span data-stu-id="5eb79-125">To create a generic overload</span></span>
 
-<span data-ttu-id="7dc84-126">Sie können auch eine Überladung erstellen, die eine Sequenz generischer Objekte akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="7dc84-126">You can also create an overload that accepts a sequence of generic objects.</span></span> <span data-ttu-id="7dc84-127">Diese Überladung nimmt einen Delegaten als Parameter und verwendet ihn, um eine Sequenz von Objekten eines generischen Typs in einen bestimmten Typ zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="7dc84-127">This overload takes a delegate as a parameter and uses it to convert a sequence of objects of a generic type to a specific type.</span></span>
+<span data-ttu-id="5eb79-126">Sie können auch eine Überladung erstellen, die eine Sequenz generischer Objekte akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="5eb79-126">You can also create an overload that accepts a sequence of generic objects.</span></span> <span data-ttu-id="5eb79-127">Diese Überladung nimmt einen Delegaten als Parameter und verwendet ihn, um eine Sequenz von Objekten eines generischen Typs in einen bestimmten Typ zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="5eb79-127">This overload takes a delegate as a parameter and uses it to convert a sequence of objects of a generic type to a specific type.</span></span>
 
-<span data-ttu-id="7dc84-128">Der folgende Code zeigt eine Überladung der `Median`-Methode, die den <xref:System.Func%602>-Delegaten als Parameter akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="7dc84-128">The following code shows an overload of the `Median` method that takes the <xref:System.Func%602> delegate as a parameter.</span></span> <span data-ttu-id="7dc84-129">Dieser Delegat übernimmt ein Objekt des generischen Typs „T“ und gibt ein Objekt vom Typ `double` zurück.</span><span class="sxs-lookup"><span data-stu-id="7dc84-129">This delegate takes an object of generic type T and returns an object of type `double`.</span></span>
+<span data-ttu-id="5eb79-128">Der folgende Code zeigt eine Überladung der `Median`-Methode, die den <xref:System.Func%602>-Delegaten als Parameter akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="5eb79-128">The following code shows an overload of the `Median` method that takes the <xref:System.Func%602> delegate as a parameter.</span></span> <span data-ttu-id="5eb79-129">Dieser Delegat übernimmt ein Objekt des generischen Typs „T“ und gibt ein Objekt vom Typ `double` zurück.</span><span class="sxs-lookup"><span data-stu-id="5eb79-129">This delegate takes an object of generic type T and returns an object of type `double`.</span></span>
 
 ```csharp
 // Generic overload.
@@ -131,9 +133,9 @@ public static double Median<T>(this IEnumerable<T> numbers,
 }
 ```
 
-<span data-ttu-id="7dc84-130">Sie können nun die `Median`-Methode für eine Sequenz von Objekten beliebigen Typs aufrufen.</span><span class="sxs-lookup"><span data-stu-id="7dc84-130">You can now call the `Median` method for a sequence of objects of any type.</span></span> <span data-ttu-id="7dc84-131">Wenn der Typ nicht über eine eigene Methodenüberladung verfügt, müssen sie einen Delegatenparameter übergeben.</span><span class="sxs-lookup"><span data-stu-id="7dc84-131">If the type does not have its own method overload, you have to pass a delegate parameter.</span></span> <span data-ttu-id="7dc84-132">In C# können Sie zu diesem Zweck einen Lambdaausdruck verwenden.</span><span class="sxs-lookup"><span data-stu-id="7dc84-132">In C#, you can use a lambda expression for this purpose.</span></span> <span data-ttu-id="7dc84-133">Wenn Sie die `Aggregate`- oder `Group By`-Klausel anstatt des Methodenaufrufs verwenden, können Sie auch einen beliebigen Wert oder Ausdruck übergeben, der im Bereich dieser Klausel vorhanden ist. Diese Methode ist nur in Visual Basic verfügbar.</span><span class="sxs-lookup"><span data-stu-id="7dc84-133">Also, in Visual Basic only, if you use the `Aggregate` or `Group By` clause instead of the method call, you can pass any value or expression that is in the scope this clause.</span></span>
+<span data-ttu-id="5eb79-130">Sie können nun die `Median`-Methode für eine Sequenz von Objekten beliebigen Typs aufrufen.</span><span class="sxs-lookup"><span data-stu-id="5eb79-130">You can now call the `Median` method for a sequence of objects of any type.</span></span> <span data-ttu-id="5eb79-131">Wenn der Typ nicht über eine eigene Methodenüberladung verfügt, müssen sie einen Delegatenparameter übergeben.</span><span class="sxs-lookup"><span data-stu-id="5eb79-131">If the type does not have its own method overload, you have to pass a delegate parameter.</span></span> <span data-ttu-id="5eb79-132">In C# können Sie zu diesem Zweck einen Lambdaausdruck verwenden.</span><span class="sxs-lookup"><span data-stu-id="5eb79-132">In C#, you can use a lambda expression for this purpose.</span></span> <span data-ttu-id="5eb79-133">Wenn Sie die `Aggregate`- oder `Group By`-Klausel anstatt des Methodenaufrufs verwenden, können Sie auch einen beliebigen Wert oder Ausdruck übergeben, der im Bereich dieser Klausel vorhanden ist. Diese Methode ist nur in Visual Basic verfügbar.</span><span class="sxs-lookup"><span data-stu-id="5eb79-133">Also, in Visual Basic only, if you use the `Aggregate` or `Group By` clause instead of the method call, you can pass any value or expression that is in the scope this clause.</span></span>
 
-<span data-ttu-id="7dc84-134">Der folgende Beispielcode veranschaulicht, wie eine `Median`-Methode für ein Array aus ganzen Zahlen und ein Array aus Zeichenfolgen aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="7dc84-134">The following example code shows how to call the `Median` method for an array of integers and an array of strings.</span></span> <span data-ttu-id="7dc84-135">Für Zeichenfolgen wird der Median für die Längen der Zeichenfolgen im Array berechnet.</span><span class="sxs-lookup"><span data-stu-id="7dc84-135">For strings, the median for the lengths of strings in the array is calculated.</span></span> <span data-ttu-id="7dc84-136">Das Beispiel zeigt, wie der Delegatparameter `Median` an die <xref:System.Func%602>-Methode für jeden Fall übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="7dc84-136">The example shows how to pass the <xref:System.Func%602> delegate parameter to the `Median` method for each case.</span></span>
+<span data-ttu-id="5eb79-134">Der folgende Beispielcode veranschaulicht, wie eine `Median`-Methode für ein Array aus ganzen Zahlen und ein Array aus Zeichenfolgen aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="5eb79-134">The following example code shows how to call the `Median` method for an array of integers and an array of strings.</span></span> <span data-ttu-id="5eb79-135">Für Zeichenfolgen wird der Median für die Längen der Zeichenfolgen im Array berechnet.</span><span class="sxs-lookup"><span data-stu-id="5eb79-135">For strings, the median for the lengths of strings in the array is calculated.</span></span> <span data-ttu-id="5eb79-136">Das Beispiel zeigt, wie der Delegatparameter `Median` an die <xref:System.Func%602>-Methode für jeden Fall übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="5eb79-136">The example shows how to pass the <xref:System.Func%602> delegate parameter to the `Median` method for each case.</span></span>
 
 ```csharp
 int[] numbers3 = { 1, 2, 3, 4, 5 };
@@ -164,11 +166,11 @@ Console.WriteLine("String: Median = " + query4);
 */
 ```
 
-## <a name="adding-a-method-that-returns-a-collection"></a><span data-ttu-id="7dc84-137">Hinzufügen einer Methode, die eine Auflistung zurückgibt</span><span class="sxs-lookup"><span data-stu-id="7dc84-137">Adding a Method That Returns a Collection</span></span>
+## <a name="adding-a-method-that-returns-a-collection"></a><span data-ttu-id="5eb79-137">Hinzufügen einer Methode, die eine Auflistung zurückgibt</span><span class="sxs-lookup"><span data-stu-id="5eb79-137">Adding a Method That Returns a Collection</span></span>
 
-<span data-ttu-id="7dc84-138">Sie können die Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> mit einer benutzerdefinierten Abfragemethode erweitern, die eine Sequenz von Werten zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="7dc84-138">You can extend the <xref:System.Collections.Generic.IEnumerable%601> interface with a custom query method that returns a sequence of values.</span></span> <span data-ttu-id="7dc84-139">In diesem Fall muss die Methode eine Auflistung des Typs <xref:System.Collections.Generic.IEnumerable%601> zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="7dc84-139">In this case, the method must return a collection of type <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="7dc84-140">Solche Methoden können verwendet werden, um Filter oder Datentransformationen auf eine Sequenz von Werten anzuwenden.</span><span class="sxs-lookup"><span data-stu-id="7dc84-140">Such methods can be used to apply filters or data transforms to a sequence of values.</span></span>
+<span data-ttu-id="5eb79-138">Sie können die Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> mit einer benutzerdefinierten Abfragemethode erweitern, die eine Sequenz von Werten zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="5eb79-138">You can extend the <xref:System.Collections.Generic.IEnumerable%601> interface with a custom query method that returns a sequence of values.</span></span> <span data-ttu-id="5eb79-139">In diesem Fall muss die Methode eine Auflistung des Typs <xref:System.Collections.Generic.IEnumerable%601> zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="5eb79-139">In this case, the method must return a collection of type <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="5eb79-140">Solche Methoden können verwendet werden, um Filter oder Datentransformationen auf eine Sequenz von Werten anzuwenden.</span><span class="sxs-lookup"><span data-stu-id="5eb79-140">Such methods can be used to apply filters or data transforms to a sequence of values.</span></span>
 
-<span data-ttu-id="7dc84-141">Das folgende Beispiel zeigt, wie eine Erweiterungsmethode mit dem Namen `AlternateElements` erstellt wird, die jedes andere Element in einer Auflistung zurückgibt, beginnend mit dem ersten Element.</span><span class="sxs-lookup"><span data-stu-id="7dc84-141">The following example shows how to create an extension method named `AlternateElements` that returns every other element in a collection, starting from the first element.</span></span>
+<span data-ttu-id="5eb79-141">Das folgende Beispiel zeigt, wie eine Erweiterungsmethode mit dem Namen `AlternateElements` erstellt wird, die jedes andere Element in einer Auflistung zurückgibt, beginnend mit dem ersten Element.</span><span class="sxs-lookup"><span data-stu-id="5eb79-141">The following example shows how to create an extension method named `AlternateElements` that returns every other element in a collection, starting from the first element.</span></span>
 
 ```csharp
 // Extension method for the IEnumerable<T> interface.
@@ -194,7 +196,7 @@ public static IEnumerable<T> AlternateElements<T>(this IEnumerable<T> source)
 }
 ```
 
-<span data-ttu-id="7dc84-142">Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung genau so aufrufen, wie Sie andere Methoden aus der Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> aufrufen, so wie im folgenden Code dargestellt:</span><span class="sxs-lookup"><span data-stu-id="7dc84-142">You can call this extension method for any enumerable collection just as you would call other methods from the <xref:System.Collections.Generic.IEnumerable%601> interface, as shown in the following code:</span></span>
+<span data-ttu-id="5eb79-142">Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung genau so aufrufen, wie Sie andere Methoden aus der Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> aufrufen, so wie im folgenden Code dargestellt:</span><span class="sxs-lookup"><span data-stu-id="5eb79-142">You can call this extension method for any enumerable collection just as you would call other methods from the <xref:System.Collections.Generic.IEnumerable%601> interface, as shown in the following code:</span></span>
 
 ```csharp
 string[] strings = { "a", "b", "c", "d", "e" };
@@ -214,7 +216,7 @@ foreach (var element in query)
 */
 ```
 
-## <a name="see-also"></a><span data-ttu-id="7dc84-143">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="7dc84-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5eb79-143">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="5eb79-143">See also</span></span>
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [<span data-ttu-id="7dc84-144">Erweiterungsmethoden</span><span class="sxs-lookup"><span data-stu-id="7dc84-144">Extension Methods</span></span>](../../classes-and-structs/extension-methods.md)
+- [<span data-ttu-id="5eb79-144">Erweiterungsmethoden</span><span class="sxs-lookup"><span data-stu-id="5eb79-144">Extension Methods</span></span>](../../classes-and-structs/extension-methods.md)
