@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: c9110b49-823c-4ba9-9a4c-198afeb7780e
 topic_type:
 - apiref
-ms.openlocfilehash: dc8f4dd657420f29c298822fbec5514c41d90967
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a2d4a2d7bf1db987c7d52bc12e2b71e7df4c5230
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868238"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494799"
 ---
-# <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="d2c50-102">ICorProfilerModuleEnum::Reset-Methode</span><span class="sxs-lookup"><span data-stu-id="d2c50-102">ICorProfilerModuleEnum::Reset Method</span></span>
-<span data-ttu-id="d2c50-103">Verschiebt den Cursor des Enumerators an die Anfangsposition der Sequenz.</span><span class="sxs-lookup"><span data-stu-id="d2c50-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="370a1-102">ICorProfilerModuleEnum::Reset-Methode</span><span class="sxs-lookup"><span data-stu-id="370a1-102">ICorProfilerModuleEnum::Reset Method</span></span>
+<span data-ttu-id="370a1-103">Verschiebt den Cursor des Enumerators an die Anfangsposition der Sequenz.</span><span class="sxs-lookup"><span data-stu-id="370a1-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2c50-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d2c50-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="370a1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="370a1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="d2c50-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d2c50-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="370a1-105">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="370a1-105">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2c50-106">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d2c50-106">Requirements</span></span>  
- <span data-ttu-id="d2c50-107">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2c50-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="370a1-106">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="370a1-106">Requirements</span></span>  
+ <span data-ttu-id="370a1-107">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="370a1-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2c50-108">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d2c50-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="370a1-108">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="370a1-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d2c50-109">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d2c50-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="370a1-109">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="370a1-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d2c50-110">**.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2c50-110">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="370a1-110">**.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="370a1-110">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2c50-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d2c50-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="370a1-111">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="370a1-111">See also</span></span>
 
-- [<span data-ttu-id="d2c50-112">ICorProfilerModuleEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d2c50-112">ICorProfilerModuleEnum Interface</span></span>](icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="d2c50-113">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="d2c50-113">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="370a1-112">ICorProfilerModuleEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="370a1-112">ICorProfilerModuleEnum Interface</span></span>](icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="370a1-113">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="370a1-113">Profiling Interfaces</span></span>](profiling-interfaces.md)
