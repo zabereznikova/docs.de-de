@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: 8c5bc1d2ce331b8fe9461f91d64fbeab5a070b59
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 405b557568a736de3ddc3b51e265261222613131
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004974"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403030"
 ---
 # <a name="-verbose"></a>-verbose
 Bewirkt, dass der Compiler ausführliche Status- und Fehlermeldungen erzeugt  
@@ -41,5 +41,5 @@ vbc -verbose in.vb
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57a81983278c26090c62995f4da55c5cbfd66047
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716741"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408672"
 ---
 # <a name="-doc"></a>-doc
 Verarbeitet Dokumentationskommentare zu einer XML-Datei.  
@@ -40,24 +40,24 @@ oder
   
  In Quellcodedateien können Dokumentationskommentare den folgenden Definitionen vorangestellt sein:  
   
-- Benutzerdefinierte Typen wie [Class](../../../visual-basic/language-reference/statements/class-statement.md) und [Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- Benutzerdefinierte Typen wie [Class](../../language-reference/statements/class-statement.md) und [Interface](../../language-reference/statements/interface-statement.md)  
   
-- Member, z. B. ein Feld, ein Ereignis ([Event](../../../visual-basic/language-reference/statements/event-statement.md)), eine Eigenschaft ([Property](../../../visual-basic/language-reference/statements/property-statement.md)), eine Funktion ([Function](../../../visual-basic/language-reference/statements/function-statement.md)) oder eine Unterroutine ([Sub](../../../visual-basic/language-reference/statements/sub-statement.md)).  
+- Member, z. B. ein Feld, ein Ereignis ([Event](../../language-reference/statements/event-statement.md)), eine Eigenschaft ([Property](../../language-reference/statements/property-statement.md)), eine Funktion ([Function](../../language-reference/statements/function-statement.md)) oder eine Unterroutine ([Sub](../../language-reference/statements/sub-statement.md)).  
   
  Wenn Sie die generierte XML-Datei mit der [IntelliSense](/visualstudio/ide/using-intellisense)-Funktionalität von Visual Studio verwenden möchten, geben Sie für die XML-Datei genau den Dateinamen an, den die Assembly hat, die Sie unterstützen möchten. Stellen Sie sicher, dass sich die XML-Datei im selben Verzeichnis wie die Assembly befindet, sodass auch die XML-Datei gefunden wird, wenn im Visual Studio-Projekt auf die Assembly verwiesen wird. XML-Dokumentationsdateien sind nicht erforderlich, damit IntelliSense für Code in einem Projekt oder in Projekten funktioniert, auf die in einem Projekt verwiesen wird.  
   
  Sofern Sie nicht mit `-target:module` kompilieren, enthält die XML-Datei die Tags `<assembly></assembly>`. Diese Tags geben den Namen der Datei an, die das Assemblymanifest für die Ausgabedatei der Kompilierung enthält.  
   
- Informationen zu den Möglichkeiten, wie Dokumentation aus Kommentaren in Ihrem Code generiert werden kann, finden Sie unter [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md).  
+ Informationen zu den Möglichkeiten, wie Dokumentation aus Kommentaren in Ihrem Code generiert werden kann, finden Sie unter [XML-Kommentartags](../../language-reference/xmldoc/index.md).  
   
 |So legen Sie „-doc“ in der integrierten Visual Studio-Entwicklungsumgebung fest|  
 |---|  
 |1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Legen Sie den Wert im Feld **XML-Dokumentationsdatei generieren** fest.|  
   
 ## <a name="example"></a>Beispiel  
- Ein Beispiel finden Sie unter [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md).  
+ Ein Beispiel finden Sie unter [Dokumentieren von Code mit XML](../../programming-guide/program-structure/documenting-your-code-with-xml.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Dokumentieren von Code mit XML](../../programming-guide/program-structure/documenting-your-code-with-xml.md)

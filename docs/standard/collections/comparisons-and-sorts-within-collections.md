@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 8e4530063f14211688e5ef2d2ec4ed7e4834cdf1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cb9dd3e8af570251b8bcd2e450e686ad69ab78c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212966"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287977"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Auflistungen
 
@@ -51,7 +51,7 @@ Der Standardvergleich beruht auf dem Vergleich von mindestens einem Objekt, um d
 
 Um explizite Vergleiche zu ermöglichen, akzeptieren einige Methoden eine **IComparer** -Implementierung als Parameter. Beispiel: Die <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> -Methode akzeptiert eine <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> -Implementierung.
 
-Die aktuelle Kultureinstellung des Systems kann sich auf die Vergleichs- und Sortiervorgänge innerhalb einer Auflistung auswirken. Standardmäßig sind die Vergleichs- und Sortiervorgänge in den **Auflistungen** -Klassen kulturabhängig. Um die Kultureinstellung zu ignorieren und daher konsistente Vergleichs- und Sortierergebnisse zu erhalten, verwenden Sie <xref:System.Globalization.CultureInfo.InvariantCulture%2A> mit Memberüberladungen, die <xref:System.Globalization.CultureInfo>akzeptieren. Weitere Informationen finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) und [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).
+Die aktuelle Kultureinstellung des Systems kann sich auf die Vergleichs- und Sortiervorgänge innerhalb einer Auflistung auswirken. Standardmäßig sind die Vergleichs- und Sortiervorgänge in den **Auflistungen** -Klassen kulturabhängig. Um die Kultureinstellung zu ignorieren und daher konsistente Vergleichs- und Sortierergebnisse zu erhalten, verwenden Sie <xref:System.Globalization.CultureInfo.InvariantCulture%2A> mit Memberüberladungen, die <xref:System.Globalization.CultureInfo>akzeptieren. Weitere Informationen finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) und [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Arrays](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).
 
 <a name="BKMK_Equalityandsortexample"></a>
 ## <a name="equality-and-sort-example"></a>Beispiel für Gleichheit und Sortierung

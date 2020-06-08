@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 8af088ad269cc77bc5c83aedb86bde9af2e37a15
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334591"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411615"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Vorgehensweise: Lesen von Textdateien in Visual Basic
 
@@ -64,10 +64,10 @@ Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei 
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
-- [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [How to: Lesen aus durch Trennzeichen getrennten Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [How to: Lesen aus einer Textdatei mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [How to: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [Problembehandlung: Lesen aus und Schreiben in Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Dateicodierungen](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
+- [Lesen aus Dateien](reading-from-files.md)
+- [How to: Lesen aus durch Trennzeichen getrennten Textdateien](how-to-read-from-comma-delimited-text-files.md)
+- [How to: Lesen aus einer Textdatei mit fester Breite](how-to-read-from-fixed-width-text-files.md)
+- [How to: Lesen aus Textdateien mit mehreren Formaten](how-to-read-from-text-files-with-multiple-formats.md)
+- [Problembehandlung: Lesen aus und Schreiben in Textdateien](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic](walkthrough-manipulating-files-and-directories.md)
+- [Dateicodierungen](file-encodings.md)

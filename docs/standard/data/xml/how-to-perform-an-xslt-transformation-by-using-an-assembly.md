@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 623f997d1c11bc643ea4605614cac147b6069be5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155974"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287726"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Die Assembly kann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden.  
@@ -182,6 +182,6 @@ im oben aufgeführten Beispiel. Weitere Informationen zur Assembly.Load-Methode 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [XSLT-Compiler („xsltc.exe“)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT-Compiler („xsltc.exe“)](xslt-compiler-xsltc-exe.md)
+- [XSLT Transformations (XSLT-Transformationen)](xslt-transformations.md)
 - [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

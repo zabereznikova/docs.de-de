@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c696d5b8c83ae55caf61e4710630ad1e34c088d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348929"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401770"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)
 
@@ -65,4 +65,4 @@ Eine umfassendere Auflistung finden Sie unter [Übersicht über die Klassenbibli
 - [Erstellen von Streams](../../../../standard/io/composing-streams.md)
 - [Datei- und Stream-E/A](../../../../standard/io/index.md)
 - [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
-- [Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+- [Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)](basics-of-net-framework-file-io-and-the-file-system.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 0387aca08e3a31b0a2045369919894d88caf5b76
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5245c129281bc8c7c1c6fe9215a221889380a901
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330328"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410217"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Anpassen der verfügbaren Objekte in "My" (Visual Basic)
 
@@ -78,10 +78,10 @@ Die Konstante für bedingte Kompilierung `_MYTYPE` steuert wiederum die Werte me
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
-- [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
-- [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
-- [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.Request-Objekt](../../../visual-basic/language-reference/objects/my-request-object.md)
-- [My.Response-Objekt](../../../visual-basic/language-reference/objects/my-response-object.md)
-- [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [Merkmale von "My" auf Grundlage des Projekttyps](../development-with-my/how-my-depends-on-project-type.md)
+- [Bedingte Kompilierung](../../programming-guide/program-structure/conditional-compilation.md)
+- [-define (Visual Basic)](../../reference/command-line-compiler/define.md)
+- [My.Forms-Objekt](../../language-reference/objects/my-forms-object.md)
+- [My.Request-Objekt](../../language-reference/objects/my-request-object.md)
+- [My.Response-Objekt](../../language-reference/objects/my-response-object.md)
+- [My.WebServices-Objekt](../../language-reference/objects/my-webservices-object.md)

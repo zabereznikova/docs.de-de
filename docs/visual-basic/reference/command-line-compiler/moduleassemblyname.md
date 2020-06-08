@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: a612a68cffd927f3e360406cca6d9daae4f66c86
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 99f2b9d65f3c2a128e026666c5efb384e22643f9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775624"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403147"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Gibt den Namen der Assembly an, zu der dieses Modul gehört.  
@@ -37,7 +37,7 @@ Gibt den Namen der Assembly an, zu der dieses Modul gehört.
   
 - Die Referenzassembly hat der Assembly, in die das Modul integriert wird, Friend-Assembly-Zugriff erteilt.  
   
- Weitere Informationen zur Erstellung eines Moduls finden Sie unter [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Weitere Informationen zu Friend-Assemblys finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend.md).  
+ Weitere Informationen zur Erstellung eines Moduls finden Sie unter [-target (Visual Basic)](target.md). Weitere Informationen zu Friend-Assemblys finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
 > Die Option `-moduleassemblyname` steht nicht in der Visual Studio-Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über eine Eingabeaufforderung kompilieren.  
@@ -45,11 +45,11 @@ Gibt den Namen der Assembly an, zu der dieses Modul gehört.
 ## <a name="see-also"></a>Siehe auch
 
 - [How to: Erstellen einer Mehrfachdateiassembly](../../../framework/app-domains/build-multifile-assembly.md)
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [-target (Visual Basic)](target.md)
+- [-main](main.md)
+- [-reference (Visual Basic)](reference.md)
+- [-addmodule](addmodule.md)
 - [Assemblys in .NET](../../../standard/assembly/index.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
 - [Friend-Assemblys](../../../standard/assembly/friend.md)

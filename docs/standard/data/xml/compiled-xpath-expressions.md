@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e74b52e471699fc663504fa42d6c7e502859adda
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711102"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291525"
 ---
 # <a name="compiled-xpath-expressions"></a>Kompilierte XPath-Ausdrücke
 Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath-Abfrage dar, die entweder von der statischen <xref:System.Xml.XPath.XPathExpression.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathExpression>-Klasse oder der <xref:System.Xml.XPath.XPathNavigator.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegeben wurde.  
@@ -115,16 +115,16 @@ Console.WriteLine(nodes.Current.Value);
   
  Darüber hinaus kann die Verwendung der von der <xref:System.Xml.XPath.XPathNavigator>-Klasse bereitgestellten Methoden zur Knotensatznavigation zur Leistungssteigerung der Auswahlmethoden führen, die von der <xref:System.Xml.XPath.XPathNavigator>-Klasse für Fälle mit einfachen Auswahlkriterien bereitgestellt werden. Wenn Sie z. B. den ersten untergeordneten Knoten des aktuellen Knotens auswählen müssen, ist es schneller, die <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>-Methode zu verwenden, als den XPath-Ausdruck `child::*[1]` und die <xref:System.Xml.XPath.XPathNavigator.Select%2A>-Methode zu verwenden.  
   
- Weitere Informationen zu den Methoden der Knotensatznavigation der <xref:System.Xml.XPath.XPathNavigator>-Klasse finden Sie unter [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Weitere Informationen zu den Methoden der Knotensatznavigation der <xref:System.Xml.XPath.XPathNavigator>-Klasse finden Sie unter [Navigieren in Knotengruppen mit XPathNavigator](node-set-navigation-using-xpathnavigator.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Auswählen von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [Auswerten von XPath-Ausdrücken mit XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [Vergleich von Knoten mit XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [In XPath-Abfragen erkannte Knotentypen](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [XPath-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](process-xml-data-using-the-xpath-data-model.md)
+- [Auswählen von XML-Daten mit XPathNavigator](select-xml-data-using-xpathnavigator.md)
+- [Auswerten von XPath-Ausdrücken mit XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [Vergleich von Knoten mit XPathNavigator](matching-nodes-using-xpathnavigator.md)
+- [In XPath-Abfragen erkannte Knotentypen](node-types-recognized-with-xpath-queries.md)
+- [XPath-Abfragen und Namespaces](xpath-queries-and-namespaces.md)

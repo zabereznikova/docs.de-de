@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a18a6517548bb402e1e3b9ac02e95aae32a8f4a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127587"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291135"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
 Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt ein benanntes (systemweites) oder lokales Semaphor dar. Dabei handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt. Win32-Semaphoren sind zählende Semaphoren, die zum Steuern des Zugriffs auf einen Ressourcenpool verwendet werden können.  
@@ -48,4 +48,4 @@ Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>
-- [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)
+- [Threading Objects and Features (Threadingobjekte und -funktionen)](threading-objects-and-features.md)

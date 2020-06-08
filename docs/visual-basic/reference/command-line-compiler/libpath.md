@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff7e0c3eb696b9b18f4c4e59240a26c1cb9782c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716635"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408548"
 ---
 # <a name="-libpath"></a>-libpath
 Gibt den Speicherort der Verweisassemblys an.  
@@ -29,7 +29,7 @@ Gibt den Speicherort der Verweisassemblys an.
 |`dirList`|Erforderlich. Eine durch Semikolons getrennte Liste von Verzeichnissen, in denen der Compiler suchen kann, wenn die Assembly, auf die verwiesen wird, im aktuellen Arbeitsverzeichnis (das Verzeichnis, in dem Sie den Compiler aufrufen) oder im CLR-Systemverzeichnis (Common Language Runtime) nicht gefunden werden kann. Wenn der Verzeichnisname ein Leerzeichen enthält, müssen Sie den Name in Anführungszeichen (" ") einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-libpath`-Option gibt den Speicherort der Assemblys an, auf die durch die [-reference](../../../visual-basic/reference/command-line-compiler/reference.md)-Option verwiesen wird.  
+ Die `-libpath`-Option gibt den Speicherort der Assemblys an, auf die durch die [-reference](reference.md)-Option verwiesen wird.  
   
  Der Compiler sucht in folgender Reihenfolge nach Assemblyverweisen, die nicht voll qualifiziert sind:  
   
@@ -59,5 +59,5 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ## <a name="see-also"></a>Siehe auch
 
 - [Assemblys in .NET](../../../standard/assembly/index.md)
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

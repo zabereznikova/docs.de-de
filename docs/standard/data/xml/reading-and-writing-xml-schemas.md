@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: 889c5f85a2ea3fc08dadefda5509de0fcfab76ec
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bf1078d52f5e9056da6b28acc8dd2fc257eb3636
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710413"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291252"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lesen und Schreiben von XML-Schemata
 Mit der SOM-API (Schema Object Model) können XSD-Schemata (XML Schema Definition Language) aus Dateien und anderen Quellen gelesen und geschrieben werden. Außerdem können mithilfe der Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace speicherintern XML-Schemata erstellt werden, die den Strukturen entsprechen, die in der XML-Schemaempfehlung des W3C (World Wide Web Consortium) festgelegt sind.  
@@ -20,7 +20,7 @@ Mit der SOM-API (Schema Object Model) können XSD-Schemata (XML Schema Definitio
 ## <a name="reading-and-writing-xml-schemas"></a>Lesen und Schreiben von XML-Schemata  
  Die <xref:System.Xml.Schema.XmlSchema>-Klasse stellt die <xref:System.Xml.Schema.XmlSchema.Read%2A>-Methode und die <xref:System.Xml.Schema.XmlSchema.Write%2A>-Methode bereit, mit denen XML-Schemata gelesen bzw. geschrieben werden. Mit der <xref:System.Xml.Schema.XmlSchema.Read%2A>-Methode wird ein <xref:System.Xml.Schema.XmlSchema>-Objekt zurückgegeben, das das XML-Schema darstellt, und einen optionalen <xref:System.Xml.Schema.ValidationEventHandler> als Parameter annimmt, um Schemavalidierungswarnungen und Fehler zu behandeln, die beim Lesen eines XML-Schemas auftreten.  
   
- Mit der <xref:System.Xml.Schema.XmlSchema.Write%2A>-Methode werden XML-Schemata in die Objekte <xref:System.IO.Stream>, <xref:System.IO.TextWriter> und <xref:System.Xml.XmlWriter> geschrieben, und ein optionales <xref:System.Xml.XmlNamespaceManager>-Objekt kann als Parameter angenommen werden. Mit einem <xref:System.Xml.XmlNamespaceManager> werden in einem XML-Schema gefundene Namespaces behandelt. Weitere Informationen zur <xref:System.Xml.XmlNamespaceManager>-Klasse finden Sie unter [Verwalten von Namespaces in einem XML-Dokument](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
+ Mit der <xref:System.Xml.Schema.XmlSchema.Write%2A>-Methode werden XML-Schemata in die Objekte <xref:System.IO.Stream>, <xref:System.IO.TextWriter> und <xref:System.Xml.XmlWriter> geschrieben, und ein optionales <xref:System.Xml.XmlNamespaceManager>-Objekt kann als Parameter angenommen werden. Mit einem <xref:System.Xml.XmlNamespaceManager> werden in einem XML-Schema gefundene Namespaces behandelt. Weitere Informationen zur <xref:System.Xml.XmlNamespaceManager>-Klasse finden Sie unter [Verwalten von Namespaces in einem XML-Dokument](managing-namespaces-in-an-xml-document.md).  
   
  Im folgenden Codebeispiel werden das Lesen und Schreiben von XML-Schemata in eine bzw. aus einer Datei veranschaulicht. Im Codebeispiel wird die Datei `example.xsd` verwendet und mithilfe der <xref:System.Xml.Schema.XmlSchema>`static`-Methode in ein <xref:System.Xml.Schema.XmlSchema.Read%2A>-Objekt eingelesen. Anschließend wird die Datei in die Konsole und eine neue Datei `new.xsd` geschrieben. Im Codebeispiel wird außerdem ein <xref:System.Xml.Schema.ValidationEventHandler> als Parameter für die `static`<xref:System.Xml.Schema.XmlSchema.Read%2A>-Methode bereitgestellt, mit dem alle Schemavalidierungswarnungen und Fehler behandelt werden, die beim Lesen des XML-Schemas auftreten. Wenn der <xref:System.Xml.Schema.ValidationEventHandler> nicht angegeben ist (bzw. `null` ist), werden keine Warnungen oder Fehler ausgegeben.  
   
@@ -47,11 +47,11 @@ Mit der SOM-API (Schema Object Model) können XSD-Schemata (XML Schema Definitio
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Einfügen oder Importieren von XML-Schemas](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema-Compilation-Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
-- [Managing Namespaces in an XML Document (Verwalten von Namespaces in einem XML-Dokument)](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)
+- [Übersicht über das XML-Schemaobjektmodell (SOM)](xml-schema-object-model-overview.md)
+- [Erstellen von XML-Schemas](building-xml-schemas.md)
+- [Durchlaufen von XML-Schemas](traversing-xml-schemas.md)
+- [Bearbeiten von XML-Schemas](editing-xml-schemas.md)
+- [Einfügen oder Importieren von XML-Schemas](including-or-importing-xml-schemas.md)
+- [„XmlSchemaSet“ zur Kompilierung von Schemas](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema-Compilation-Infoset](post-schema-compilation-infoset.md)
+- [Managing Namespaces in an XML Document (Verwalten von Namespaces in einem XML-Dokument)](managing-namespaces-in-an-xml-document.md)

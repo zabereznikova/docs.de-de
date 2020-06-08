@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: 617b940d2cf15779ae3c10e4663b63c9771d44b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e33efac8f65832c87d5c9271eba25c2ca1d1803b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345901"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387594"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Arbeiten mit Anwendungsprotokollen in Visual Basic
 
@@ -45,11 +45,11 @@ C:\Dokumente und Einstellungen\\`username`\Anwendungsdaten
 
 Die Werte von `CompanyName`, `ProductName`und `ProductVersion` stammen aus den Assemblyinformationen der Anwendung. Der Name der Protokolldatei hat die Form " *AssemblyName*.log", wobei *AssemblyName* der Dateiname der Assembly ohne Erweiterung ist. Wenn mehr als eine Protokolldatei erforderlich ist, etwa wenn die ursprüngliche Protokolldatei zu dem Zeitpunkt, da die Anwendung versucht, in es zu schreiben, nicht verfügbar ist, hat der Name der Protokolldatei die Form " *AssemblyName*-*iteration*.log", wobei `iteration` ein positiver `Integer`.
 
-Sie können das Standardverhalten außer Kraft setzen, indem Sie die Konfigurationsdateien des Computers und der Anwendung hinzufügen oder ändern. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
+Sie können das Standardverhalten außer Kraft setzen, indem Sie die Konfigurationsdateien des Computers und der Anwendung hinzufügen oder ändern. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](walkthrough-changing-where-my-application-log-writes-information.md).
 
 ## <a name="configuring-log-settings"></a>Konfigurieren von Protokolleinstellungen
 
-Die Standardimplementierung des `Log` -Objekts funktioniert ohne Anwendungskonfigurationsdatei, "app.config". Um die Standardwerte zu ändern, müssen Sie eine Konfigurationsdatei mit den neuen Einstellungen hinzufügen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Filterung der Ausgabe von „My.Application.Log“](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+Die Standardimplementierung des `Log` -Objekts funktioniert ohne Anwendungskonfigurationsdatei, "app.config". Um die Standardwerte zu ändern, müssen Sie eine Konfigurationsdatei mit den neuen Einstellungen hinzufügen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Filterung der Ausgabe von „My.Application.Log“](walkthrough-filtering-my-application-log-output.md).
 
 Die Protokollkonfigurationsabschnitte befinden sich im `<system.diagnostics>` -Knoten im `<configuration>` -Hauptknoten der app.config-Datei. Die Protokollinformationen sind in mehreren Knoten definiert:
 
@@ -109,4 +109,4 @@ Berücksichtigen Sie beim Schreiben von Daten in das Protokoll folgende Punkte:
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Protokollieren von Informationen aus der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [Protokollieren von Informationen aus der Anwendung](index.md)

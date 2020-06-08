@@ -3,12 +3,12 @@ title: Wiederherstellbare XSLT-Fehler
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ada0b352cd867417ed3ecf86291df023ca7c579e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710374"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289095"
 ---
 # <a name="recoverable-xslt-errors"></a>Wiederherstellbare XSLT-Fehler
 Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte Bereiche, bei denen es dem Anbieter der Implementierung freigestellt ist, wie er mit der jeweiligen Situation umgeht. Diese Bereiche werden als "freigegebene Verhaltensweisen" bezeichnet. Laut XSLT 1.0-Empfehlung, Abschnitt 7.3, "Creating Processing Instructions", liegt z. B. ein Fehler vor, wenn durch Instanziierung des Inhalts von `xsl:processing-instruction` außer Textknoten auch andere Knoten erstellt werden. Bei bestimmten Problemen gibt die Empfehlung zu XSLT 1.0 auch Maßnahmen für den Fall an, dass der Prozessor eine Wiederherstellung vom Fehler durchführt. Für das in Abschnitt 7.3 angeführte Problem empfiehlt das W3C, die Knoten einschließlich des Inhalts zu ignorieren, damit die Implementierung von diesem Fehler wiederherstellen kann.  
@@ -50,8 +50,8 @@ Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte 
 |Das `value`-Attribut einer `xsl:number` ist NAN (Not a Number), unendlich oder kleiner als 0,5.|errata 24|Wiederherstellen|  
 |Das zweite node-set-Argument der Dokumentfunktion ist leer, und der URI-Verweis ist relativ.|errata 14|Wiederherstellen|  
   
- <sup>*</sup> Diese Verhaltensweise unterscheidet sich von der der <xref:System.Xml.Xsl.XslTransform>-Klasse. Weitere Informationen finden Sie unter [Implementierung von freigegebenen Verhaltensweisen in der XslTransform-Klasse](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup> Diese Verhaltensweise unterscheidet sich von der der <xref:System.Xml.Xsl.XslTransform>-Klasse. Weitere Informationen finden Sie unter [Implementierung von freigegebenen Verhaltensweisen in der XslTransform-Klasse](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT Transformations (XSLT-Transformationen)](xslt-transformations.md)

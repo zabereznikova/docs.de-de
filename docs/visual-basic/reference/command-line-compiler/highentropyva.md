@@ -5,15 +5,15 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 7934dcaada4675bf687624bef5ed1ea25e842832
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9501ea46eb13baa171208e20d0c9645d118c4301
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344240"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408620"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-Gibt an, ob eine ausführbare 64-Bit-Datei oder eine ausführbare Datei, die durch die Compileroption [-platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) gekennzeichnet ist, die zufällige Anordnung des Adressraumlayouts (Address Space Layout Randomization, ASLR) mit hoher Entropie unterstützt.  
+Gibt an, ob eine ausführbare 64-Bit-Datei oder eine ausführbare Datei, die durch die Compileroption [-platform:anycpu](platform.md) gekennzeichnet ist, die zufällige Anordnung des Adressraumlayouts (Address Space Layout Randomization, ASLR) mit hoher Entropie unterstützt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,5 +32,5 @@ Gibt an, ob eine ausführbare 64-Bit-Datei oder eine ausführbare Datei, die dur
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

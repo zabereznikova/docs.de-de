@@ -3,12 +3,12 @@ title: Entfernen von Attributen aus einem Elementknoten im DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-ms.openlocfilehash: bb18e712d5ed2cd06c7ae0e867b19ca8a9ad2513
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0ac8528d52ef09aab99c76aea9378c0188fa66d4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710348"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292019"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Entfernen von Attributen aus einem Elementknoten im DOM
 Es gibt viele Möglichkeiten, Attribute zu entfernen. Eine Möglichkeit besteht darin, Attribute aus der Attributauflistung zu entfernen. Dabei werden die folgenden Schritte ausgeführt:  
@@ -39,4 +39,4 @@ Es gibt viele Möglichkeiten, Attribute zu entfernen. Eine Möglichkeit besteht 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

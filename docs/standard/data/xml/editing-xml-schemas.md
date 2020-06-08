@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-ms.openlocfilehash: a295fee225d7eb5793b725db93e47fc73addf4ef
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b309c390ede3afc38122188337fa0dc3336e3ad5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794584"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292058"
 ---
 # <a name="editing-xml-schemas"></a>Bearbeiten von XML-Schemata
 
@@ -22,7 +22,7 @@ Der erste Bearbeitungsschritt eines in das DOM geladenen Schemas ist das Durchla
 
 ## <a name="editing-an-xml-schema"></a>Bearbeiten eines XML-Schemas
 
-In diesem Abschnitt finden Sie zwei Codebeispiele, in denen das im Thema [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md) erstellte Kundenschema bearbeitet wird. Im ersten Codebeispiel wird dem `PhoneNumber`-Element ein neues `Customer`-Element hinzugefügt, und im zweiten Codebeispiel wird dem `Title`-Element ein neues `FirstName`-Attribut hinzugefügt. Im ersten Beispiel wird die <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nach der Kompilierung des Schemas zum Durchlaufen des Kundenschemas verwendet, während im zweiten Codebeispiel die <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung vor der Kompilierung des Schemas verwendet wird.
+In diesem Abschnitt finden Sie zwei Codebeispiele, in denen das im Thema [Erstellen von XML-Schemata](building-xml-schemas.md) erstellte Kundenschema bearbeitet wird. Im ersten Codebeispiel wird dem `PhoneNumber`-Element ein neues `Customer`-Element hinzugefügt, und im zweiten Codebeispiel wird dem `Title`-Element ein neues `FirstName`-Attribut hinzugefügt. Im ersten Beispiel wird die <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nach der Kompilierung des Schemas zum Durchlaufen des Kundenschemas verwendet, während im zweiten Codebeispiel die <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung vor der Kompilierung des Schemas verwendet wird.
 
 ### <a name="phonenumber-element-example"></a>Beispiel: "PhoneNumber"-Element
 
@@ -48,7 +48,7 @@ Nachfolgend ist das vollständige Codebeispiel angegeben.
 [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
 [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]
 
-Im Folgenden finden Sie das geänderte Kundenschema, das im Thema [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md) erstellt wurde.
+Im Folgenden finden Sie das geänderte Kundenschema, das im Thema [Erstellen von XML-Schemata](building-xml-schemas.md) erstellt wurde.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -112,7 +112,7 @@ Nachfolgend ist das vollständige Codebeispiel angegeben.
 [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
 [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]
 
-Im Folgenden finden Sie das geänderte Kundenschema, das im Thema [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md) erstellt wurde.
+Im Folgenden finden Sie das geänderte Kundenschema, das im Thema [Erstellen von XML-Schemata](building-xml-schemas.md) erstellt wurde.
 
 ```xml
 <?xml version="1.0" encoding=" utf-8"?>
@@ -137,10 +137,10 @@ Im Folgenden finden Sie das geänderte Kundenschema, das im Thema [Erstellen von
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Einfügen oder Importieren von XML-Schemas](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema-Compilation-Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Übersicht über das XML-Schemaobjektmodell (SOM)](xml-schema-object-model-overview.md)
+- [Lesen und Schreiben von XML-Schemas](reading-and-writing-xml-schemas.md)
+- [Erstellen von XML-Schemas](building-xml-schemas.md)
+- [Durchlaufen von XML-Schemas](traversing-xml-schemas.md)
+- [Einfügen oder Importieren von XML-Schemas](including-or-importing-xml-schemas.md)
+- [„XmlSchemaSet“ zur Kompilierung von Schemas](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema-Compilation-Infoset](post-schema-compilation-infoset.md)

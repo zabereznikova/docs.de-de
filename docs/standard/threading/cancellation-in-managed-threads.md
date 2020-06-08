@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e56d0f71afdc9281271b7d15316a133e7c720bd0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138142"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277881"
 ---
 # <a name="cancellation-in-managed-threads"></a>Abbruch in verwalteten Threads
 Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für den kooperativen Abbruch von asynchronen oder lang andauernden synchronen Vorgängen. Dieses Modell basiert auf einem einfachen Objekt, dem sogenannten "Abbruchtoken". Das Objekt, das einen oder mehrere abbrechbare Vorgänge aufruft, z. B. durch Erstellen neuer Threads oder Aufgaben, übergibt das Token an jeden Vorgang. Einzelne Vorgänge können wiederum Kopien des Tokens an andere Vorgänge übergeben. Zu einem späteren Zeitpunkt kann das Objekt, das das Token erstellt hat, damit anfordern, dass die Vorgänge ihre aktuelle Aktivität einstellen. Nur das anfordernde Objekt kann die Abbruchanforderung ausgeben, und jeder Listener ist dafür verantwortlich, die Anforderung zu bemerken und angemessen und rechtzeitig darauf zu reagieren.  
@@ -33,7 +33,7 @@ Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für d
   
  Die folgende Abbildung zeigt die Beziehung zwischen einer Tokenquelle und allen Kopien des Tokens.  
   
- ![CancellationTokenSource und Abbruchtokens](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
+ ![CancellationTokenSource und Abbruchtokens](media/vs-cancellationtoken.png "VS_CancellationToken")  
   
  Das neue Abbruchmodell vereinfacht die Erstellung von abbruchfähigen Anwendungen und Bibliotheken, und es unterstützt die folgenden Funktionen:  
   
@@ -64,7 +64,7 @@ Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für d
  Im folgenden Beispiel erstellt das anfordernde Objekt ein <xref:System.Threading.CancellationTokenSource>-Objekt und übergibt dann seine <xref:System.Threading.CancellationTokenSource.Token%2A>-Eigenschaft an den abbrechbaren Vorgang. Der Vorgang, der die Anforderung empfängt, überwacht den Wert von der <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft des Token durch Abruf. Wenn der Wert zu `true` wechselt, kann der Listener auf geeignete Weise beendet werden. In diesem Beispiel wird die Methode einfach beendet und das ist auch häufig alles, was erforderlich ist.  
   
 > [!NOTE]
-> Im Beispiel wird die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode verwendet, um zu veranschaulichen, dass das neue Abbruchframework mit Legacy-APIs kompatibel ist. Ein Beispiel, das den neuen bevorzugten <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Typ verwendet, finden Sie unter [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+> Im Beispiel wird die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode verwendet, um zu veranschaulichen, dass das neue Abbruchframework mit Legacy-APIs kompatibel ist. Ein Beispiel, das den neuen bevorzugten <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Typ verwendet, finden Sie unter [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
@@ -84,7 +84,7 @@ Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für d
   
  In komplexeren Fällen ist es für den Benutzerdelegaten möglicherweise erforderlich, den Bibliothekscode darüber zu benachrichtigen, dass der Abbruch aufgetreten ist. In solchen Fällen besteht für den Delegaten die richtige Methode zum Beenden des Vorgangs darin, die <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>-Methode aufzurufen, die zum Auslösen einer <xref:System.OperationCanceledException> führt. Bibliothekscode kann diese Ausnahme im Benutzerdelegatthread abfangen und das Token der Ausnahme untersuchen, um zu ermitteln, ob die Ausnahme auf einen kooperativen Abbruch oder eine andere Ausnahmesituation hinweist.  
   
- Die <xref:System.Threading.Tasks.Task>-Klasse behandelt <xref:System.OperationCanceledException> auf diese Weise. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ Die <xref:System.Threading.Tasks.Task>-Klasse behandelt <xref:System.OperationCanceledException> auf diese Weise. Weitere Informationen finden Sie unter [Aufgabenabbruch](../parallel-programming/task-cancellation.md).  
   
 ### <a name="listening-by-polling"></a>Lauschen durch Abruf  
  Bei langandauernden Berechnungen mit Schleifen oder Rekursionen können Sie auf eine Abbruchanforderung lauschen, indem Sie den Wert der <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType>-Eigenschaft in regelmäßigen Abständen abfragen. Wenn der Wert `true` lautet, sollte die Methode die Bereinigung vornehmen und so schnell wie möglich beendet werden. Die optimale Häufigkeit für das Abrufen hängt vom Typ der Anwendung ab. Es ist Aufgabe des Entwicklers, die beste Abrufhäufigkeit für ein Programm zu ermitteln. Der Abruf selbst hat keinen signifikanten Einfluss auf die Leistung. Im folgenden Beispiel wird eine Möglichkeit für den Abruf veranschaulicht.  
@@ -92,7 +92,7 @@ Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für d
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
  [!code-vb[Cancellation#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex11.vb#3)]  
   
- Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf Abbruchanforderungen durch Abruf](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-by-polling.md).  
+ Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf Abbruchanforderungen durch Abruf](how-to-listen-for-cancellation-requests-by-polling.md).  
   
 ### <a name="listening-by-registering-a-callback"></a>Lauschen durch Registrieren eines Rückrufs  
  Einige Vorgänge können so blockiert werden, dass sie den Wert des Abbruchtokens nicht rechtzeitig überprüfen können. In diesen Fällen können Sie eine Rückrufmethode registrieren, die die Blockierung der Methode aufhebt, wenn eine Abbruchanforderung empfangen wird.  
@@ -112,7 +112,7 @@ Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für d
   
 - Rückrufe sollten keine manuellen Threads durchführen oder <xref:System.Threading.SynchronizationContext> in einem Rückruf verwenden. Wenn ein Rückruf für einen bestimmten Thread ausgeführt werden muss, verwenden Sie den <xref:System.Threading.CancellationTokenRegistration?displayProperty=nameWithType>-Konstruktor, mit dem Sie angeben können, dass der Zielsynchronisierungskontext das aktive <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> ist. Manuelles Threading in einem Rückruf kann zu einem Deadlock führen.  
   
- Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Registrieren von Rückrufen für Abbruchanforderungen](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md).  
+ Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Registrieren von Rückrufen für Abbruchanforderungen](how-to-register-callbacks-for-cancellation-requests.md).  
   
 ### <a name="listening-by-using-a-wait-handle"></a>Lauschen mithilfe eines Wait-Handles  
  Wenn ein abbrechbarer Vorgang blockiert werden kann, während er auf einen primitiven Synchronisierungstyp wie <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> oder <xref:System.Threading.Semaphore?displayProperty=nameWithType> wartet, können Sie die <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType>-Eigenschaft verwenden, um es dem Vorgang zu ermöglichen, auf das Ereignis und die Abbruchanforderung zu warten. Das Wait-Handle des Abbruchtokens wird als Reaktion auf eine Abbruchanforderung signalisiert, und die Methode kann anhand des Rückgabewerts der <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode bestimmen, ob das Abbruchtoken signalisiert hat. Der Vorgang kann dann einfach beenden oder ggf. eine <xref:System.OperationCanceledException> auslösen.  
@@ -125,7 +125,7 @@ Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für d
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
   
- Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf Abbruchanforderungen mit Wait-Handles](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
+ Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf Abbruchanforderungen mit Wait-Handles](how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>Gleichzeitiges Lauschen auf mehrere Token  
  In einigen Fällen muss ein Listener möglicherweise auf mehrere Abbruchtoken gleichzeitig lauschen. Ein abbrechbarer Vorgang muss z. B. möglicherweise zusätzlich zu einem extern als Argument an einen Methodenparameter übergebenen Token ein internes Abbruchtoken überwachen. Zu diesem Zweck erstellen Sie eine verknüpfte Tokenquelle, die zwei oder mehr Token zu einem Token verbinden kann, wie im folgenden Beispiel gezeigt.  
@@ -133,7 +133,7 @@ Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für d
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
  [!code-vb[Cancellation#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex13.vb#7)]  
   
- Beachten Sie, dass Sie `Dispose` für die verknüpfte Tokenquelle aufrufen müssen, wenn Sie damit fertig sind. Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf mehrere Abbruchanforderungen](../../../docs/standard/threading/how-to-listen-for-multiple-cancellation-requests.md).  
+ Beachten Sie, dass Sie `Dispose` für die verknüpfte Tokenquelle aufrufen müssen, wenn Sie damit fertig sind. Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf mehrere Abbruchanforderungen](how-to-listen-for-multiple-cancellation-requests.md).  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>Kooperation zwischen Bibliothekscode und Benutzercode  
  Das einheitliche Abbruchframework ermöglicht es dem Bibliothekscode, den Benutzercode abzubrechen. Ebenso ermöglicht es dem Benutzercode, den Bibliothekscode auf kooperative Weise abzubrechen. Die problemlose Zusammenarbeit hängt davon ab, ob die beiden Seiten die folgenden Richtlinien beachten:  
@@ -144,8 +144,8 @@ Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für d
   
 - Benutzerdelegaten sollten versuchen, zeitnah auf Abbruchanforderungen aus Bibliothekscode zu reagieren.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> sind Beispiele für Klassen, die diese Richtlinien einhalten. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md) und [Vorgehensweise: Abbrechen einer PLINQ-Abfrage](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> sind Beispiele für Klassen, die diese Richtlinien einhalten. Weitere Informationen finden Sie unter [Aufgabenabbruch](../parallel-programming/task-cancellation.md) und [Vorgehensweise: Abbrechen einer PLINQ-Abfrage](../parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)
+- [Grundlagen des verwalteten Threadings](managed-threading-basics.md)

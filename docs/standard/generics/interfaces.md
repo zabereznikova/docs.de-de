@@ -8,12 +8,12 @@ helpviewer_keywords:
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21a244a5d44b036a987d8eb8a79aef2c4b8e9a76
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708323"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287518"
 ---
 # <a name="generic-interfaces"></a>Generische Schnittstellen
 Dieses Thema bietet einen Überblick über generische Schnittstellen, die allgemeine Funktionen für Familien generischer Typen bereitstellen.  
@@ -22,7 +22,7 @@ Dieses Thema bietet einen Überblick über generische Schnittstellen, die allgem
  Generische Schnittstellen bieten typsichere Entsprechungen zu nicht generischen Schnittstellen für Reihenfolgen- und Übereinstimmungsvergleiche sowie für Funktionen, die von generischen Auflistungstypen gemeinsam verwendet werden.  
   
 > [!NOTE]
-> Ab .NET Framework 4 sind die Typparameter mehrerer generischer Schnittstellen als kovariant oder kontravariant gekennzeichnet. Dies bietet mehr Flexibilität beim Zuweisen und Verwenden von Typen, die diese Schnittstellen implementieren. Siehe [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md).  
+> Ab .NET Framework 4 sind die Typparameter mehrerer generischer Schnittstellen als kovariant oder kontravariant gekennzeichnet. Dies bietet mehr Flexibilität beim Zuweisen und Verwenden von Typen, die diese Schnittstellen implementieren. Siehe [Kovarianz und Kontravarianz](covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Übereinstimmungs- und Reihenfolgenvergleiche  
  Im <xref:System>-Namespace definieren die generische <xref:System.IComparable%601?displayProperty=nameWithType>-Schnittstelle und die generische <xref:System.IEquatable%601?displayProperty=nameWithType>-Schnittstelle (wie ihre nicht generischen Entsprechungen) Methoden für Reihenfolgen- bzw. Übereinstimmungsvergleiche. Typen implementieren diese Schnittstellen, um die Durchführungsfähigkeit für solche Vergleiche zu bieten.  
@@ -40,11 +40,11 @@ Dieses Thema bietet einen Überblick über generische Schnittstellen, die allgem
   
  Die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle stellt eine generische Enumeratorstruktur bereit. Die generische <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle, die von generischen Enumeratoren implementiert wird, erbt die nicht generische <xref:System.Collections.IEnumerator>-Schnittstelle. Die Member <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Reset%2A>, die nicht vom `T`-Typparameter abhängig sind, sind nur für die nicht generische Schnittstelle vorhanden. Dies bedeutet, dass jeder Consumer der nicht generischen Schnittstelle auch die generische Schnittstelle verwenden kann.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [Generics](../../../docs/standard/generics/index.md)
-- [Generische Auflistungen in .NET Framework](../../../docs/standard/generics/collections.md)
-- [Generische Delegaten zum Bearbeiten von Arrays und Listen](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)
+- [Generics](index.md)
+- [Generische Auflistungen in .NET Framework](collections.md)
+- [Generische Delegaten zum Bearbeiten von Arrays und Listen](delegates-for-manipulating-arrays-and-lists.md)
+- [Kovarianz und Kontravarianz](covariance-and-contravariance.md)

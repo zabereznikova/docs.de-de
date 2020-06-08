@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 9e99856c3ac70b122c0def23e36bbc3059c5891c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9a4631189d348c02ab36054257a54c9c4673018
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378462"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289667"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Attribute zur Steuerung der Serialisierung von codiertem SOAP
 
@@ -22,7 +22,7 @@ Das vom World Wide Web Consortium (W3C) herausgegebene Dokument mit dem Titel [S
 
 In der folgenden Tabelle sind die Attribute, ihr Anwendungsbereich und ihre Funktion aufgeführt. Weitere Informationen zum Steuern der XML-Serialisierung mithilfe dieser Attribute finden Sie unter [Gewusst wie: Serialisieren eines Objekts als SOAP-codierter XML-Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) und [Gewusst wie: Überschreiben von codierter SOAP-XML-Serialisierung](how-to-override-encoded-soap-xml-serialization.md).
 
-Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/standard/attributes/index.md).
+Weitere Informationen zu Attributen finden Sie unter [Attribute](../attributes/index.md).
 
 |Attribut|Betrifft|Bedeutung|
 |---------------|----------------|---------------|
@@ -38,7 +38,7 @@ Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/s
 - [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)
 - [How to: Serialisieren eines Objekts als einen durch SOAP codierten XML-Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md).
 - [How to: Überschreiben von codierter SOAP-XML-Serialisierung](how-to-override-encoded-soap-xml-serialization.md).
-- [Attribute](../../../docs/standard/attributes/index.md)
+- [Attribute](../attributes/index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [How to: Serialisieren eines Objekts](how-to-serialize-an-object.md).
 - [How to: Deserialisieren eines Objekts](how-to-deserialize-an-object.md).

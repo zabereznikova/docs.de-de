@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: c15f55f3a3c2b4e404767ddf96e258bc1e9771d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6082806591d398aa8b16b44e769a3f8078ce62d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716754"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387737"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.  
@@ -97,4 +97,4 @@ vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
-- [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [Einführung in COM-Interop](../../programming-guide/com-interop/introduction-to-com-interop.md)

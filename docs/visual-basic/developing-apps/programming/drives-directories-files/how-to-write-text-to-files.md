@@ -7,12 +7,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: ce1ee59ba71af6bb13e05a5bce37a2f7eee37712
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f95a0c4df4a2eab0069a6dab0d4c3fa338d1d8ef
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334476"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411537"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Gewusst wie: Schreiben von Text in Dateien in Visual Basic
 
@@ -60,4 +60,4 @@ Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode kann 
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
-- [Vorgehensweise: Lesen aus Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Vorgehensweise: Lesen aus Textdateien](how-to-read-from-text-files.md)

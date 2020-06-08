@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353594"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398252"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Exemplarische Vorgehensweise: Filterung der Ausgaben von "My.Application.Log" (Visual Basic)
 
@@ -43,7 +43,7 @@ Alle Nachrichten, die von `My.Application.Log` geschrieben werden, haben einen z
 
 6. Schließen Sie die Anwendung.
 
-     Informationen zum Anzeigen des Ausgabefensters der Anwendung finden Sie unter [Ausgabefenster](/visualstudio/ide/reference/output-window). Informationen zum Speicherort der Protokolldatei der Anwendung finden Sie unter [Walkthrough: Determining Where My.Application.Log Writes Information (Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+     Informationen zum Anzeigen des Ausgabefensters der Anwendung finden Sie unter [Ausgabefenster](/visualstudio/ide/reference/output-window). Informationen zum Speicherort der Protokolldatei der Anwendung finden Sie unter [Walkthrough: Determining Where My.Application.Log Writes Information (Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt)](walkthrough-determining-where-my-application-log-writes-information.md).
 
     > [!NOTE]
     > Standardmäßig leert die Anwendung die Ausgabe der Protokolldatei, wenn die Anwendung geschlossen wird.
@@ -249,13 +249,13 @@ In diesem Beispiel wird veranschaulicht, wie Sie eine Filterung für einen neuen
 
 10. Schließen Sie die Anwendung.
 
-Weitere Informationen zum Ändern der Protokolleinstellungen nach der Bereitstellung finden Sie unter [Working with Application Logs (Arbeiten mit Anwendungsprotokollen)](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Weitere Informationen zum Ändern der Protokolleinstellungen nach der Bereitstellung finden Sie unter [Working with Application Logs (Arbeiten mit Anwendungsprotokollen)](working-with-application-logs.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [Gewusst wie: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](walkthrough-determining-where-my-application-log-writes-information.md)
+- [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](walkthrough-changing-where-my-application-log-writes-information.md)
+- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern](walkthrough-creating-custom-log-listeners.md)
+- [Gewusst wie: Schreiben von Protokollmeldungen](how-to-write-log-messages.md)
 - [Ablaufverfolgungsschalter](../../../../framework/debug-trace-profile/trace-switches.md)
-- [Protokollieren von Informationen aus der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [Protokollieren von Informationen aus der Anwendung](index.md)

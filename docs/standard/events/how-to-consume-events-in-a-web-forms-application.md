@@ -12,12 +12,12 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-ms.openlocfilehash: 1f95fd0dcc12f2d4e47ee07e1e6bb15d91000f0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3490b6fb89bfe6d7ac778078f58381bb5172e2fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124788"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288484"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Gewusst wie: Verarbeiten von Ereignissen in einer Web Forms-Anwendung
 Ein häufiges Szenario in ASP.NET Web Forms-Anwendungen ist das Auffüllen einer Webseite mit Steuerelementen und das anschließende Durchführen einer bestimmten Aktion, auf deren Steuerelement der Benutzer klickt. Beispielsweise löst ein <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType>-Steuerelement ein Ereignis aus, wenn der Benutzer auf der Webseite darauf klickt. Durch die Verarbeitung des Ereignisses kann Ihre Anwendung die zugehörige Anwendungslogik für diesen Schaltflächenklick ausführen.  
@@ -51,4 +51,4 @@ Ein häufiges Szenario in ASP.NET Web Forms-Anwendungen ist das Auffüllen einer
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Ereignisse](../../../docs/standard/events/index.md)
+- [Ereignisse](index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-ms.openlocfilehash: abcdf56b90513b937adefc38583e0312fec69785
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fea809168bf2f4f888466f87259497660afd13be
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106227"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291148"
 ---
 # <a name="scheduling-threads"></a>Scheduling von Threads
 
@@ -21,5 +21,5 @@ Jedem Thread ist eine Threadpriorität zugewiesen. Threads, die innerhalb der Co
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Verwenden von Threads und Threading](../../../docs/standard/threading/using-threads-and-threading.md)
-- [Verwaltetes und nicht verwaltetes Threading in Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+- [Verwenden von Threads und Threading](using-threads-and-threading.md)
+- [Verwaltetes und nicht verwaltetes Threading in Windows](managed-and-unmanaged-threading-in-windows.md)

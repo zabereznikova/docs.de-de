@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 674abcfe4477e14295f131e766a48422779391de
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021514"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290044"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Ausnahmebehandlung (Task Parallel Library)
 
@@ -63,7 +63,7 @@ Selbst wenn Sie mithilfe einer Fortsetzung eine Ausnahme in einer untergeordnete
 
 ## <a name="exceptions-that-indicate-cooperative-cancellation"></a>Ausnahmen mit kooperativem Abbruch
 
-Wenn Benutzercode in einer Aufgabe auf eine Abbruchanforderung reagiert, besteht das korrekte Verfahren darin, dass eine <xref:System.OperationCanceledException> ausgelöst wird, die in dem Abbruchtoken, in dem die Anforderung übermittelt wurde, übergeben wird. Bevor die Ausnahme weitergeleitet wird, vergleicht die Aufgabeninstanz das Token in der Ausnahme mit dem Token, das beim Erstellen an sie übergeben wurde. Stimmen beide Token überein, gibt die Aufgabe eine <xref:System.Threading.Tasks.TaskCanceledException> weiter, die in die <xref:System.AggregateException>eingeschlossen ist. Diese ist zu sehen, wenn die inneren Ausnahmen analysiert werden. Wenn der aufrufende Thread jedoch nicht auf die Aufgabe wartet, wird diese Ausnahme nicht weitergegeben. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md).
+Wenn Benutzercode in einer Aufgabe auf eine Abbruchanforderung reagiert, besteht das korrekte Verfahren darin, dass eine <xref:System.OperationCanceledException> ausgelöst wird, die in dem Abbruchtoken, in dem die Anforderung übermittelt wurde, übergeben wird. Bevor die Ausnahme weitergeleitet wird, vergleicht die Aufgabeninstanz das Token in der Ausnahme mit dem Token, das beim Erstellen an sie übergeben wurde. Stimmen beide Token überein, gibt die Aufgabe eine <xref:System.Threading.Tasks.TaskCanceledException> weiter, die in die <xref:System.AggregateException>eingeschlossen ist. Diese ist zu sehen, wenn die inneren Ausnahmen analysiert werden. Wenn der aufrufende Thread jedoch nicht auf die Aufgabe wartet, wird diese Ausnahme nicht weitergegeben. Weitere Informationen finden Sie unter [Aufgabenabbruch](task-cancellation.md).
 
 [!code-csharp[TPL_Exceptions#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#4)]
 [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]
@@ -104,4 +104,4 @@ In einigen Szenarien können häufig Ausnahmen ohne Auswirkungen auftreten (z. B
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Task Parallel Library (TPL)](task-parallel-library-tpl.md)

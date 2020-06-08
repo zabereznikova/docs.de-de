@@ -17,12 +17,12 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-ms.openlocfilehash: dfebcc9acf0b699f898c106921d15ce0294bc5d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec1d1fbdefdad3ec0dd2c07fbc1278e4d1d217c6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75707132"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291850"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher
 
@@ -42,4 +42,4 @@ Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden Sie die <xref:Sys
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
+- [Isolierter Speicher](isolated-storage.md)

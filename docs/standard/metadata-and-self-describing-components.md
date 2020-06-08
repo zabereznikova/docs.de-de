@@ -15,12 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121931"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290057"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadaten und selbstbeschreibende Komponenten
 
@@ -64,11 +64,11 @@ Metadaten ermöglichen ein einfacheres Programmierungsmodell und machen IDL (Int
 
 - Attribute
 
-  Mit .NET Framework können Sie bestimmte Arten von Metadaten, so genannte Attribute, in der kompilierten Datei deklarieren. Attribute befinden sich überall in .NET Framework und dienen zur detaillierteren Steuerung des Programms zur Laufzeit. Außerdem können Sie mithilfe von benutzerdefinierten Attributen Ihre eigenen benutzerdefinierten Metadaten in .NET Framework-Dateien ausgeben. Weitere Informationen finden Sie unter [Attribute](../../docs/standard/attributes/index.md).
+  Mit .NET Framework können Sie bestimmte Arten von Metadaten, so genannte Attribute, in der kompilierten Datei deklarieren. Attribute befinden sich überall in .NET Framework und dienen zur detaillierteren Steuerung des Programms zur Laufzeit. Außerdem können Sie mithilfe von benutzerdefinierten Attributen Ihre eigenen benutzerdefinierten Metadaten in .NET Framework-Dateien ausgeben. Weitere Informationen finden Sie unter [Attribute](attributes/index.md).
 
 ## <a name="metadata-and-the-pe-file-structure"></a>Metadaten und die PE-Dateistruktur
 
-Metadaten werden in einem Bereich einer .NET Framework-PE (Portable Executable)-Datei gespeichert, während MSIL (Microsoft Intermediate Language) in einem anderen Bereich der PE-Datei gespeichert wird. Der Metadatenbereich der Datei enthält eine Reihe von Tabellen und Heapdatenstrukturen. Der MSIL-Bereich enthält MSIL und Metadatentokens, die auf den Metadatenbereich der PE-Datei verweisen. Möglicherweise werden Metadatentoken verwendet, wenn Sie Tools wie [MSIL Disassembler-Tool (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um z.B. die MSIL des Codes anzuzeigen.
+Metadaten werden in einem Bereich einer .NET Framework-PE (Portable Executable)-Datei gespeichert, während MSIL (Microsoft Intermediate Language) in einem anderen Bereich der PE-Datei gespeichert wird. Der Metadatenbereich der Datei enthält eine Reihe von Tabellen und Heapdatenstrukturen. Der MSIL-Bereich enthält MSIL und Metadatentokens, die auf den Metadatenbereich der PE-Datei verweisen. Möglicherweise werden Metadatentoken verwendet, wenn Sie Tools wie [MSIL Disassembler-Tool (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) verwenden, um z.B. die MSIL des Codes anzuzeigen.
 
 ### <a name="metadata-tables-and-heaps"></a>Metadatentabellen und -heaps
 
@@ -134,7 +134,7 @@ public class MyApp
 
 Beim Ausführen des Codes lädt Common Language Runtime das Modul in den Speicher und fragt die Metadaten für diese Klasse ab. Nach dem Laden analysiert Common Language Runtime ausführlich den MSIL (Microsoft Intermediate Language)-Stream der Methode, um ihn in schnelle systemeigene Anweisungen zu konvertieren. Common Language Runtime verwendet einen JIT (Just-In-Time)-Compiler, um bei Bedarf jeweils für eine Methode die MSIL-Anweisungen in systemeigenen Maschinencode zu konvertieren.
 
-Das folgende Beispiel zeigt einen Teil der MSIL, die aus der `Main`-Funktion des vorherigen Codes erstellt wurde. Sie können die MSIL und die Metadaten aus jeder .NET-Anwendung mithilfe des [MSIL Disassembler-Tools (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md) anzeigen.
+Das folgende Beispiel zeigt einen Teil der MSIL, die aus der `Main`-Funktion des vorherigen Codes erstellt wurde. Sie können die MSIL und die Metadaten aus jeder .NET-Anwendung mithilfe des [MSIL Disassembler-Tools (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) anzeigen.
 
 ```console
 .entrypoint
@@ -173,4 +173,4 @@ Mithilfe von Metadaten stehen Common Language Runtime alle Informationen zur V
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Attribute](../../docs/standard/attributes/index.md)|Beschreibt, wie Attribute angewendet, benutzerdefinierte Attribute geschrieben und in Attributen gespeicherte Informationen abgerufen werden.|
+|[Attribute](attributes/index.md)|Beschreibt, wie Attribute angewendet, benutzerdefinierte Attribute geschrieben und in Attributen gespeicherte Informationen abgerufen werden.|

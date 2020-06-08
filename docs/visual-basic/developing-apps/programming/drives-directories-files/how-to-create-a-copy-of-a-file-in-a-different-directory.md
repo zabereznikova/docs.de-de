@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-ms.openlocfilehash: e9a14e1f3743979548b92a3db653d09a470a1875
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4b41e105d6bb6a17fbb688aa4718b33c23b9d6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348829"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401692"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Gewusst wie: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis in Visual Basic
 
@@ -61,7 +61,7 @@ Mit der `My.Computer.FileSystem.CopyFile`-Methode können Sie Dateien kopieren. 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
-- [Gewusst wie: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
-- [Gewusst wie: Erstellen einer Kopie einer Datei im gleichen Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)
-- [Gewusst wie: Kopieren eines Verzeichnisses in ein anderes Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
-- [Gewusst wie: Umbenennen einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Gewusst wie: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [Gewusst wie: Erstellen einer Kopie einer Datei im gleichen Verzeichnis](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [Gewusst wie: Kopieren eines Verzeichnisses in ein anderes Verzeichnis](how-to-copy-a-directory-to-another-directory.md)
+- [Gewusst wie: Umbenennen einer Datei](how-to-rename-a-file.md)

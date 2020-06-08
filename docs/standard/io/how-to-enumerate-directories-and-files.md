@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: 6a26d0ef529b81976c4d2caafed34bb5f08d8d46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bcb10426175c1f2cabeec6d8d4f8d2ed74e5e3b4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75707744"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291876"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Vorgehensweise: Auflisten von Verzeichnissen und Dateien
 Aufzählbare Sammlungen bieten bei der Arbeit mit großen Sammlungen von Verzeichnissen und Dateien eine bessere Leistung als Arrays. Verwenden Sie zum Auflisten von Verzeichnissen und Dateien Methoden, die eine aufzählbare Collection von Verzeichnis- oder Dateinamen zurückgeben, oder ihre <xref:System.IO.DirectoryInfo>-, <xref:System.IO.FileInfo>- oder <xref:System.IO.FileSystemInfo>-Objekte.  
@@ -63,4 +63,4 @@ Im folgenden Beispiel wird die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?d
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
+- [Datei- und Stream-E/A](index.md)

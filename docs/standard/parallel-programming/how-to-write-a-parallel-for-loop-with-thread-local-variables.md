@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139709"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290758"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Gewusst wie: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen
 Dieses Beispiel zeigt, wie Sie threadlokale Variablen verwenden, um den Status in jeder separaten Aufgabe zu speichern und abzurufen, die von einer <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife erstellt wird. Durch die Verwendung von threadlokalen Daten können Sie den mit der Synchronisierung einer großen Anzahl von Zugriffen auf einen Freigabezustand verbundenen Mehraufwand vermeiden. Statt an eine freigegebene Ressourcen in jeder Iteration zu schreiben, berechnen und speichern Sie den Wert, bis alle Iterationen für die Aufgabe abgeschlossen sind. Sie können dann das endgültige Ergebnis einmal an die freigegebene Ressource schreiben oder sie an eine andere Methoden übergeben.  
@@ -40,11 +40,11 @@ Function() new MyClass()
   
  Der fünfte Parameter definiert die Methode, die einmal aufgerufen wird, nachdem alle Iterationen in einem bestimmten Thread abgeschlossen wurden. Der Typ des Eingabearguments entspricht erneut dem Typargument der <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29>-Methode und dem vom Text-Lambda-Ausdruck zurückgegebenen Typ. In diesem Beispiel wird der Wert zu einer Variable im Gültigkeitsbereich einer Klasse auf eine threadsichere Weise hinzugefügt, indem die <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Durch die Verwendung einer lokalen Threadvariable haben wir das Schreiben an diese Klassenvariable in jeder Iteration der Schleife vermieden.  
   
- Weitere Informationen zur Verwendung von Lambdaausdrücken finden Sie unter [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Weitere Informationen zur Verwendung von Lambdaausdrücken finden Sie unter [Lambdaausdrücke in PLINQ und TPL](lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
-- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Datenparallelität](data-parallelism-task-parallel-library.md)
+- [Parallele Programmierung](index.md)
+- [Task Parallel Library (TPL)](task-parallel-library-tpl.md)
+- [Lambdaausdrücke in PLINQ und TPL](lambda-expressions-in-plinq-and-tpl.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711531"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290603"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 
@@ -26,7 +26,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
 > [!NOTE]
 > Eine separate Syntax wird verwendet, um auf benannte und nummerierte Erfassungsgruppen in Ersetzungszeichenfolgen zu verweisen. Weitere Informationen finden Sie unter [Ersetzungen in regulären Ausdrücken](substitutions-in-regular-expressions.md).
 
-.NET definiert separate Sprachelemente, um auf nummerierte und benannte Erfassungsgruppen zu verweisen. Weitere Informationen zu Erfassungsgruppen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+.NET definiert separate Sprachelemente, um auf nummerierte und benannte Erfassungsgruppen zu verweisen. Weitere Informationen zu Erfassungsgruppen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](grouping-constructs-in-regular-expressions.md).
 
 ## <a name="numbered-backreferences"></a>Nummerierte Rückverweise
 
@@ -138,4 +138,4 @@ Eine Eingabezeichenfolge kann auch dann mit diesem regulären Ausdruck übereins
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)

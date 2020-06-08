@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-ms.openlocfilehash: 66fd7ed7a98b8be8f88f65ecb52710a1e40af778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd2f5c65f45d83ef23643dcc747a748bb8ba89d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139737"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290823"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Gewusst wie: JoinBlock zum Lesen aus mehreren Quellen verwenden
 In diesem Dokument erfahren Sie, wie Sie mithilfe der <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>-Klasse einen Vorgang ausführen, wenn Daten aus mehreren Quellen verfügbar sind. Zudem wird der nicht gierige Modus veranschaulicht, durch den mehrere Gruppierungsblöcke eine Datenquelle effizienter gemeinsam verwenden können.
@@ -35,4 +35,4 @@ In diesem Dokument erfahren Sie, wie Sie mithilfe der <xref:System.Threading.Tas
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

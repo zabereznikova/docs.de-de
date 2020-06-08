@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3d517652665d6d0693e141d623483ff8946bbbf4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159285"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290239"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Schemakompilierung mit "XmlSchemaCollection"
 Bei **XmlSchemaCollection** handelt es sich um einen Cache oder eine Bibliothek, worin XDR-Schemata (XML-Data Reduced) und XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können. **XmlSchemaCollection** erhöht die Leistungsfähigkeit, indem Schemata im Arbeitsspeicher zwischengespeichert werden, anstatt über eine Datei oder eine URL auf sie zuzugreifen.  
@@ -20,7 +20,7 @@ Bei **XmlSchemaCollection** handelt es sich um einen Cache oder eine Bibliothek,
 > Obwohl in der **XmlSchemaCollection** sowohl XML-Schemata als auch XDR-Schemata gespeichert werden, unterstützt jede Methode oder Eigenschaft, die ein **XmlSchema**-Objekt akzeptiert bzw. zurückgibt, nur XML-Schemata.  
   
 > [!IMPORTANT]
-> Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [„XmlSchemaSet“ zur Kompilierung von Schemata](xmlschemaset-for-schema-compilation.md).  
   
 ## <a name="add-schemas-to-the-collection"></a>Hinzufügen von Schemata zur Auflistung  
  Durch die **Add**-Methode von **XmlSchemaCollection** werden Schemata in die Auflistung geladen, sobald das Schema einem Namespace-URI zugeordnet wird. Bei XML-Schemata ist der Namespace-URI normalerweise der Zielnamespace des Schemas. Bei XDR-Schemata ist der Namespace-URI der Namespace, der angegeben wird, wenn ein Schema der Auflistung hinzugefügt wird.  
@@ -57,5 +57,5 @@ vr.Schemas.Add(xsc);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XDR-Validierung mit „XmlSchemaCollection“](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
-- [XSD-Validierung (XML Schema) mit „XmlSchemaCollection“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+- [XDR-Validierung mit „XmlSchemaCollection“](xdr-validation-with-xmlschemacollection.md)
+- [XSD-Validierung (XML Schema) mit „XmlSchemaCollection“](xml-schema-xsd-validation-with-xmlschemacollection.md)

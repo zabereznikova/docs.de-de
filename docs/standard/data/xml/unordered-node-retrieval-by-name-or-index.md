@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: 55ea0e31bb8a2863dc0e0eb30f6ca5700c3110b8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6847f3c5d233b720f8f4c41cfc52ac663e5e810f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155736"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288627"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Abrufen von ungeordneten Knoten anhand des Namens oder Indexes
 **XmlNamedNodeMap** wird in der W3C-Spezifikation (World Wide Web Consortium) als „NamedNodeMap“ beschrieben und muss eine ungeordnete Gruppe von Knoten behandeln können und auf Knoten nach Name oder Index verweisen können. Zugriff auf eine **XmlNamedNodeMap** ist nur dann möglich, wenn eine **XmlNamedNodeMap** von einer Methode oder einer Eigenschaft zurückgegeben wurde. Es gibt drei Methoden bzw. Eigenschaften, die eine **XmlNamedNodeMap** zurückgeben:  
@@ -119,4 +119,4 @@ class test {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

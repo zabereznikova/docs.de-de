@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eff176f7c3ae5cae4c450047214d8e9e20a6e66d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139681"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290745"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit partitionslokalen Variablen
 
 Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Methode geschrieben wird, für die partitionslokale Variablen verwendet werden. Wenn eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife ausgeführt wird, wird die Quellauflistung in mehrere Partitionen unterteilt. Jede Partition besitzt eine eigene Kopie der partitionslokalen Variable. Eine partitionslokale Variable ähnelt einer [threadlokalen Variable](xref:System.Threading.ThreadLocal%601). Der Unterschied besteht darin, dass mehrere Partitionen in einem einzelnen Thread ausgeführt werden können.
 
-Der Code und die Parameter in diesem Beispiel ähneln stark der entsprechenden <xref:System.Threading.Tasks.Parallel.For%2A>-Methode. Weitere Informationen finden Sie unter [Gewusst wie: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
+Der Code und die Parameter in diesem Beispiel ähneln stark der entsprechenden <xref:System.Threading.Tasks.Parallel.For%2A>-Methode. Weitere Informationen finden Sie unter [Gewusst wie: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen](how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
 
 Um eine partitionslokale Variable in einer <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife verwenden zu können, müssen Sie eine der Methodenüberladungen aufrufen, die zwei Typparameter erhält. Der erste Typparameter, `TSource`, gibt den Typ des Quellelements, der zweite Typparameter, `TLocal`, den Typ der partitionslokalen Variable an.
 
@@ -50,6 +50,6 @@ Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Parallel.ForEach%60%
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [How to: Write a Parallel.For Loop with Thread-Local Variables (Vorgehensweise: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen)](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-- [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Datenparallelität](data-parallelism-task-parallel-library.md)
+- [How to: Write a Parallel.For Loop with Thread-Local Variables (Vorgehensweise: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen)](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
+- [Lambdaausdrücke in PLINQ und TPL](lambda-expressions-in-plinq-and-tpl.md)

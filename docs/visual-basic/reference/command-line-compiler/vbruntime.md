@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 31b719fb7e43cdd6ac44424b359999410dd608a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005054"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403043"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Library oder mit einem Verweis auf eine bestimmte Laufzeitbibliothek kompilieren soll.  
@@ -85,7 +85,7 @@ Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Libra
 ## <a name="referencing-a-specified-library"></a>Verweisen auf eine angegebene Bibliothek  
  Sie können das `path`-Argument verwenden, um anstelle der Visual Basic-Standardruntimebibliothek mit einem Verweis auf eine benutzerdefinierte Runtimebibliothek zu kompilieren.  
   
- Wenn der Wert für das `path`-Argument ein vollqualifizierter Pfad zu einer DLL ist, verwendet der Compiler diese Datei als Runtimebibliothek. Wenn der Wert für das `path`-Argument kein vollqualifizierter Pfad zu einer DLL ist, sucht der Visual Basic-Compiler zuerst nach der identifizierten DLL im aktuellen Ordner. Anschließend wird der Pfad, den Sie angegeben haben, mithilfe der Compileroption [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) gesucht. Wenn die `-sdkpath`-Compileroption nicht verwendet wird, sucht der Compiler nach der identifizierten DLL im .NET Framework-Ordner (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
+ Wenn der Wert für das `path`-Argument ein vollqualifizierter Pfad zu einer DLL ist, verwendet der Compiler diese Datei als Runtimebibliothek. Wenn der Wert für das `path`-Argument kein vollqualifizierter Pfad zu einer DLL ist, sucht der Visual Basic-Compiler zuerst nach der identifizierten DLL im aktuellen Ordner. Anschließend wird der Pfad, den Sie angegeben haben, mithilfe der Compileroption [-sdkpath](sdkpath.md) gesucht. Wenn die `-sdkpath`-Compileroption nicht verwendet wird, sucht der Compiler nach der identifizierten DLL im .NET Framework-Ordner (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie die `-vbruntime`-Option verwendet wird, um mit einem Verweis auf eine benutzerdefinierte Bibliothek zu kompilieren.  
@@ -97,6 +97,6 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic Core: Neuer Kompilierungsmodus in Visual Studio 2010 SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
+- [-sdkpath](sdkpath.md)

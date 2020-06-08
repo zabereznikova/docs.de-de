@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3bd0c6063fee1fa1a9f046a8be2ebfde07aea9ee
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710478"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291512"
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema-Compilation-Infoset
 In der [W3C-Empfehlung (World Wide Web Consortium) zum XML Schema](https://www.w3.org/XML/Schema) wird der Informationssatz (Infoset) erörtert, der für die Pre-Schema-Validierung und die Post-Schema-Kompilierung verfügbar gemacht werden muss. Das XML-SOM (Schema Object Model) zeigt dieses Offenlegen vor und nachdem die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode vom <xref:System.Xml.Schema.XmlSchemaSet> aufgerufen wird an.  
@@ -40,4 +40,4 @@ In der [W3C-Empfehlung (World Wide Web Consortium) zum XML Schema](https://www.w
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](xml-schema-object-model-som.md)

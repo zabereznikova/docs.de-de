@@ -10,12 +10,12 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b228f5db16ba01969b77d601becfb94ac0506d1e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711375"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287964"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable-Sammlungstyp und Dictionary-Sammlungstyp
 Die Klasse <xref:System.Collections.Hashtable?displayProperty=nameWithType> und die generischen Klassen <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementieren die <xref:System.Collections.IDictionary?displayProperty=nameWithType>-Schnittstelle. Die generische Klasse <xref:System.Collections.Generic.Dictionary%602> implementiert außerdem die generische <xref:System.Collections.Generic.IDictionary%602>-Schnittstelle. Daher ist jedes Element in diesen Auflistungen ein Schlüssel-Wert-Paar.  
@@ -42,4 +42,4 @@ Die Klasse <xref:System.Collections.Hashtable?displayProperty=nameWithType> und 
 - <xref:System.Collections.Generic.Dictionary%602>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>
-- [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Häufig verwendete Auflistungstypen](commonly-used-collection-types.md)

@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-ms.openlocfilehash: 8168c89a6edecd5f7e33a710c9a89c92a6f82005
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 644d6b6f929e040a0fe688c18c774de6f434c4b3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588228"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290771"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Gewusst wie: Schreiben einer benutzerdefinierten PLINQ-Aggregatfunktion
 Dieses Beispiel zeigt, wie mit der <xref:System.Linq.ParallelEnumerable.Aggregate%2A>-Methode eine benutzerdefinierte Aggregatfunktion auf eine Quellsequenz angewendet wird.  
   
 > [!WARNING]
-> Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Standardabweichung einer Sequenz von ganzen Zahlen berechnet.  
@@ -34,4 +34,4 @@ Dieses Beispiel zeigt, wie mit der <xref:System.Linq.ParallelEnumerable.Aggregat
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](introduction-to-plinq.md)

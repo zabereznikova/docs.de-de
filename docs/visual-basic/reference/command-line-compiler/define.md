@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: 5035466de4aa17c374824e1b0f02ed594731a9d3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d0d1b03d9ab98f28a0112198f1ecc1e928d6d4a7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716800"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408711"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 Definiert Konstanten für die bedingte Kompilierung.  
@@ -58,7 +58,7 @@ oder
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [#If...Then...#Else-Anweisungen](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [#Const-Anweisung](../../../visual-basic/language-reference/directives/const-directive.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [#If...Then...#Else-Anweisungen](../../language-reference/directives/if-then-else-directives.md)
+- [#Const-Anweisung](../../language-reference/directives/const-directive.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

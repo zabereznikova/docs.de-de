@@ -4,12 +4,12 @@ description: Bei verwaltetem Code handelt es sich um Code, dessen Ausführung vo
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 9133859bd9c999e076effcf0d4d631c59db02f33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d89fd48e4c05dc7ec7c27846a3580ee36b1886f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61910116"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290083"
 ---
 # <a name="what-is-managed-code"></a>Was ist „verwalteter Code“?
 
@@ -38,5 +38,5 @@ In ähnlicher Weise ist C# eine Sprache, die Ihnen die Verwendung nicht verwalte
 ## <a name="more-resources"></a>Weitere Ressourcen
 
 * [Übersicht über .NET Framework](../framework/get-started/overview.md)
-* [Unsicherer Code und Zeiger](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [Unsicherer Code und Zeiger](../csharp/programming-guide/unsafe-code-pointers/index.md)
 * [Native Interoperabilität](./native-interop/index.md)

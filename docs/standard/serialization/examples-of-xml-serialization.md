@@ -14,16 +14,16 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 73f21c7f7d0670022d757e6c4c00280bb79709b8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 98cc4a983c9703e6c5ab132f6110a327c6081b6c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379175"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289628"
 ---
 # <a name="examples-of-xml-serialization"></a>Beispiele für die XML-Serialisierung
 
-Die XML-Serialisierung kann verschiedenste Formen nehmen, von einfach bis zu komplex. Sie können beispielsweise, wie unter [Introducing XML Serialization (Einführung in die XML-Serialisierung)](../../../docs/standard/serialization/introducing-xml-serialization.md) beschrieben, eine Klasse serialisieren, die nur aus öffentlichen Feldern und Eigenschaften besteht. Die folgenden Codebeispiele beziehen sich auf verschiedene komplexe Szenarios, einschließlich der Verwendung der XML-Serialisierung zur Generierung eines XML-Streams, der einem bestimmten XSD-Dokument (XML Schema) entspricht.
+Die XML-Serialisierung kann verschiedenste Formen nehmen, von einfach bis zu komplex. Sie können beispielsweise, wie unter [Introducing XML Serialization (Einführung in die XML-Serialisierung)](introducing-xml-serialization.md) beschrieben, eine Klasse serialisieren, die nur aus öffentlichen Feldern und Eigenschaften besteht. Die folgenden Codebeispiele beziehen sich auf verschiedene komplexe Szenarios, einschließlich der Verwendung der XML-Serialisierung zur Generierung eines XML-Streams, der einem bestimmten XSD-Dokument (XML Schema) entspricht.
 
 ## <a name="serializing-a-dataset"></a>Serialisieren eines DataSets
 

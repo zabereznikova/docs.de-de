@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 715ce65bd932a45cc22d00a2346d18f3c5526229
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 8ff02a81ab579cc0041074990a76166fcafe6eb5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156386"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288718"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Abrufen von geordneten Knoten anhand des Indexes
 Das W3C-XML-Dokumentobjektmodell (Document Object Model – DOM) beschreibt auch eine NodeList. Diese kann eine geordnete Liste von Knoten behandeln, anders als die **XmlNamedNodeMap**, die einen ungeordneten Knotensatz behandelt. Die NodeList in Microsoft .NET Framework wird als **XmlNodeList** bezeichnet. Folgende Methoden und Eigenschaften geben eine **XmlNodeList** zurück:  
@@ -94,4 +94,4 @@ End While
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

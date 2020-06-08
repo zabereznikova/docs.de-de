@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73101673"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289329"
 ---
 # <a name="comparing-strings-in-net"></a>Vergleichen von Zeichenfolgen in .NET
 .NET stellt mehrere Methoden bereit, um Werte von Zeichenfolgen zu vergleichen. In der folgenden Tabelle werden die Methoden zum Vergleichen von Werten aufgeführt und beschrieben.  
@@ -59,7 +59,7 @@ ms.locfileid: "73101673"
   
  In diesem Beispiel wird `-1` auf der Konsole angezeigt.  
   
- Das vorhergehende Beispiel ist in der Standardeinstellung kulturabhängig. Zum Durchführen eines kulturunabhängigen Zeichenfolgenvergleichs verwenden Sie eine Überladung der <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode, bei der Sie die zu verwendende Kultur festlegen können, indem Sie einen *culture*-Parameter angeben. Ein Beispiel für die Verwendung der <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode zur Durchführung eines kulturunabhängigen Vergleichs finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Das vorhergehende Beispiel ist in der Standardeinstellung kulturabhängig. Zum Durchführen eines kulturunabhängigen Zeichenfolgenvergleichs verwenden Sie eine Überladung der <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode, bei der Sie die zu verwendende Kultur festlegen können, indem Sie einen *culture*-Parameter angeben. Ein Beispiel für die Verwendung der <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode zur Durchführung eines kulturunabhängigen Vergleichs finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  Mit der <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> -Methode werden zwei Zeichenfolgenobjekte ohne Berücksichtigung der lokalen Kultur verglichen. Die Rückgabewerte dieser Methode stimmen mit den Werten überein, die von der in der vorherigen Tabelle beschriebenen **Compare** -Methode zurückgegeben werden.  
@@ -89,7 +89,7 @@ ms.locfileid: "73101673"
   
  In diesem Beispiel wird `-1` auf der Konsole angezeigt.  
   
- Alle Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType> -Methode führen in der Standardeinstellung kulturabhängige Vergleiche durch, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Es werden keine Überladungen dieser Methode bereitgestellt, mit denen Sie einen kulturunabhängigen Vergleich durchführen können. Aus Gründen der Übersichtlichkeit des Codes wird empfohlen, stattdessen die **String.Compare** -Methode zu verwenden und für kulturabhängige Operationen <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> sowie für kulturunabhängige Operationen <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> festzulegen. Beispiele für die Verwendung der **String.Compare** -Methode zur Durchführung von kulturabhängigen und kulturunabhängigen Vergleichen finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Alle Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType> -Methode führen in der Standardeinstellung kulturabhängige Vergleiche durch, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Es werden keine Überladungen dieser Methode bereitgestellt, mit denen Sie einen kulturunabhängigen Vergleich durchführen können. Aus Gründen der Übersichtlichkeit des Codes wird empfohlen, stattdessen die **String.Compare** -Methode zu verwenden und für kulturabhängige Operationen <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> sowie für kulturunabhängige Operationen <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> festzulegen. Beispiele für die Verwendung der **String.Compare** -Methode zur Durchführung von kulturabhängigen und kulturunabhängigen Vergleichen finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>gleich  
  Mit der **String.Equals**-Methode lässt sich auf einfache Weise feststellen, ob zwei Zeichenfolgen identisch sind. Diese Methode, bei der die Groß-/Kleinschreibung beachtet wird, gibt den booleschen Wert **true** oder **false** zurück. Wie das nächste Beispiel zeigt, kann die Methode einer bestehenden Klasse verwendet werden. Im folgenden Beispiel wird mithilfe der **Equals** -Methode festgestellt, ob ein Zeichenfolgenobjekt den Ausdruck "Hello World" enthält.  
@@ -150,7 +150,7 @@ ms.locfileid: "73101673"
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)
-- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Grundlegende Zeichenfolgenoperationen](basic-string-operations.md)
+- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Sortiergewichtungstabellen (für .NET unter Windows)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [Default Unicode Collation Element Table (für .NET Core unter Linux und macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160077"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288003"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
 Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
@@ -42,10 +42,10 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
  Das einzige Zeichen, das entweder in einem Muster eines regulären Ausdrucks oder in einer Ersetzung vorkommen kann, ist das `$` -Zeichen, obwohl es in jedem Kontext eine andere Bedeutung hat. In einem Muster eines regulären Ausdrucks ist `$` ein Anker, der dem Ende der Zeichenfolge entspricht. In einem Ersetzungsmuster gibt `$` den Anfang einer Ersetzung an.  
   
 > [!NOTE]
-> Für die Funktionalität, die mit einem Ersetzungsmuster innerhalb eines regulären Ausdrucks vergleichbar ist, verwenden Sie einen Rückverweis. Weitere Informationen zu Rückverweisen finden Sie unter [Rückverweiskonstrukte](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Für die Funktionalität, die mit einem Ersetzungsmuster innerhalb eines regulären Ausdrucks vergleichbar ist, verwenden Sie einen Rückverweis. Weitere Informationen zu Rückverweisen finden Sie unter [Rückverweiskonstrukte](backreference-constructs-in-regular-expressions.md).  
 
 ## <a name="substituting-a-numbered-group"></a>Ersetzen einer nummerierten Gruppe  
- Das `$`*Zahl* -Sprachelement schließt die letzte Teilzeichenfolge ein, die mit der *Zahl* -Erfassungsgruppe in der Ersetzungszeichenfolge übereinstimmt, wobei *Zahl* der Index der Erfassungsgruppe ist. Beispielsweise gibt das Ersetzungsmuster `$1` an, dass die übereinstimmende Teilzeichenfolge durch die erste erfasste Gruppe ersetzt werden soll. Weitere Informationen zu nummerierten Erfassungsgruppen finden Sie unter [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Das `$`*Zahl* -Sprachelement schließt die letzte Teilzeichenfolge ein, die mit der *Zahl* -Erfassungsgruppe in der Ersetzungszeichenfolge übereinstimmt, wobei *Zahl* der Index der Erfassungsgruppe ist. Beispielsweise gibt das Ersetzungsmuster `$1` an, dass die übereinstimmende Teilzeichenfolge durch die erste erfasste Gruppe ersetzt werden soll. Weitere Informationen zu nummerierten Erfassungsgruppen finden Sie unter [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
  Alle Ziffern, die auf `$` folgen, werden als zur Gruppe *Zahl* gehörend interpretiert. Wenn dies nicht Ihre Absicht ist, können Sie stattdessen eine benannte Gruppe ersetzen. Sie können z. B. die Ersetzungszeichenfolge `${1}1` anstelle von `$11` verwenden, um die Ersetzungszeichenfolge als Wert der ersten erfassten Gruppe zusammen mit der Nummer "1" zu definieren. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#substituting-a-named-group).  
   
@@ -70,7 +70,7 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
 |`(\s?\d+[.,]?\d*)`|Übereinstimmung mit einem Leerzeichen, gefolgt von mindestens einer Dezimalstelle, gefolgt von keinem oder einem Punkt oder Komma, gefolgt von keiner oder mehreren Dezimalstellen. Dies ist die erste Erfassungsgruppe. Da das Ersetzungsmuster `$1`ist, ersetzt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode die gesamte übereinstimmende Teilzeichenfolge durch diese erfasste Gruppe.|  
 
 ## <a name="substituting-a-named-group"></a>Ersetzen einer benannten Gruppe  
- Das `${`*Name*`}` -Sprachelement ersetzt die letzte mit der Erfassungsgruppe *Name* übereinstimmende Teilzeichenfolge, wobei *Name* der Name einer Erfassungsgruppe ist, die durch das Sprachelement `(?<`*Name*`>)` definiert wird. Weitere Informationen zu benannten Erfassungsgruppen finden Sie unter [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Das `${`*Name*`}` -Sprachelement ersetzt die letzte mit der Erfassungsgruppe *Name* übereinstimmende Teilzeichenfolge, wobei *Name* der Name einer Erfassungsgruppe ist, die durch das Sprachelement `(?<`*Name*`>)` definiert wird. Weitere Informationen zu benannten Erfassungsgruppen finden Sie unter [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
  Wenn *Name* keine im Muster eines regulären Ausdrucks definierte gültige benannte Erfassungsgruppe angibt, aber aus Ziffern besteht, wird `${`*Name*`}` als eine nummerierte Gruppe interpretiert.  
   
@@ -199,4 +199,4 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)

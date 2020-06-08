@@ -5,12 +5,12 @@ helpviewer_keywords:
 - folders, working with
 - files [Visual Basic], accessing
 ms.assetid: 6c8ba7e8-dd37-4853-92bf-762b67c98160
-ms.openlocfilehash: bb07ae25b413334f94456b378f0a2339402ac668
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 055151d4b3e3aba6be9b9b03ac9abffc6eb7b734
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335338"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401614"
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Gewusst wie: Abrufen einer Auflistung der Dateien in einem Verzeichnis in Visual Basic
 
@@ -51,5 +51,5 @@ Die Überladungen der <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A>
-- [Gewusst wie: Suchen nach Dateien mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
-- [Gewusst wie: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Gewusst wie: Suchen nach Dateien mit einem bestimmten Muster](how-to-find-files-with-a-specific-pattern.md)
+- [Gewusst wie: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](how-to-find-subdirectories-with-a-specific-pattern.md)

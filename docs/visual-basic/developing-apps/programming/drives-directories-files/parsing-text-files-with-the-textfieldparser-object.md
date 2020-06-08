@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: f3239184beb58312a8e3598545fc37423ff85287
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b2cb0dd39d14dd94db661cc9cbacf99edf0e778
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333847"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406676"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analysieren von Textdateien mit dem TextFieldParser-Objekt (Visual Basic)
 
@@ -33,7 +33,7 @@ Das `TextFieldParser`-Objekt erlaubt Ihnen, sehr große Dateien zu analysieren u
   
 ## <a name="parsing-files-with-multiple-formats"></a>Analysieren von Dateien mit mehreren Formaten  
 
- Die `PeekChars`-Methode des `TextFieldParser`-Objekts kann verwendet werden, um jede Datei vor dem Lesen zu überprüfen, was Ihnen erlaubt, mehrere Formate für die Felder zu definieren und entsprechend darauf zu reagieren. Weitere Informationen finden Sie unter [Gewusst wie: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
+ Die `PeekChars`-Methode des `TextFieldParser`-Objekts kann verwendet werden, um jede Datei vor dem Lesen zu überprüfen, was Ihnen erlaubt, mehrere Formate für die Felder zu definieren und entsprechend darauf zu reagieren. Weitere Informationen finden Sie unter [Gewusst wie: Lesen aus Textdateien mit mehreren Formaten](how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
