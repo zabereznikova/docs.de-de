@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1c69a6e78207e146c8dbd6cdc252f27f36ab37a2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160195"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281699"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>"XsltArgumentList" für Stylesheetparameter und Erweiterungsobjekte
 Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible Stylesheet Transformation) und XSLT-Erweiterungsobjekte. Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.  
   
 > [!NOTE]
-> Die Klassen <xref:System.Xml.Xsl.XslTransform> und <xref:System.Xml.Xsl.XsltArgumentList> sind in .NET Framework 2.0 veraltet. Sie können XSLT-Transformationen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse durchführen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+> Die Klassen <xref:System.Xml.Xsl.XslTransform> und <xref:System.Xml.Xsl.XsltArgumentList> sind in .NET Framework 2.0 veraltet. Sie können XSLT-Transformationen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse durchführen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](migrating-from-the-xsltransform-class.md).  
   
  Die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse enthält XSLT-Parameter und XSLT-Erweiterungsobjekte. Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.  
   
@@ -364,4 +364,4 @@ public class Sample
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](xsltransform-class-implements-the-xslt-processor.md)

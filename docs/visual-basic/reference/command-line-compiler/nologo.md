@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: 03dc98c45a894304a67765c3e49cd19bbb089c8c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d1307603ebc06b4eb4c3786f1cd2fb432c0cf636
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335431"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360461"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 Unterdrückt die Anzeige von Copyrightbannern und Informationsmeldungen während der Kompilierung  
@@ -38,5 +38,5 @@ vbc -nologo t2.vb
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

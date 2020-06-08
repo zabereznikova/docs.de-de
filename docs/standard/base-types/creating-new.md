@@ -13,12 +13,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73103820"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279011"
 ---
 # <a name="creating-new-strings-in-net"></a>Erstellen neuer Zeichenfolgen in .NET
 .NET Framework ermöglicht das Erstellen von Zeichenfolgen mithilfe einer einfachen Zuweisung und überlädt auch einen Klassenkonstruktor, um die Zeichenfolgenerstellung mithilfe einer Reihe verschiedener Parameter zu unterstützen. .NET Framework stellt auch verschiedene Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse bereit, die durch das Kombinieren verschiedener Zeichenfolgen, Zeichenfolgenarrays oder Objekte neue Zeichenfolgenobjekte erstellen.  
@@ -41,7 +41,7 @@ ms.locfileid: "73103820"
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Kopiert angegebene Zeichen in einer Zeichenfolge in eine bestimmte Position in einem Array aus Zeichen.|  
   
 ### <a name="format"></a>Format  
- Sie können die **String.Format**-Methode verwenden, um formatierte Zeichenfolgen zu erstellen und Zeichenfolgen zu verketten, die mehrere Objekte darstellen. Diese Methode konvertiert automatisch alle übergebenen Objekte in eine Zeichenfolge. Wenn Ihre Anwendung z.B. dem Benutzer einen **Int32**-Wert und einen **DateTime**-Wert anzeigen soll, können Sie ganz einfach mithilfe der **Format**-Methode eine Zeichenfolge erstellen, um diese Werte darzustellen. Informationen zu den mit dieser Methode verwendeten Formatierungskonventionen finden Sie im Abschnitt [Zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md).  
+ Sie können die **String.Format**-Methode verwenden, um formatierte Zeichenfolgen zu erstellen und Zeichenfolgen zu verketten, die mehrere Objekte darstellen. Diese Methode konvertiert automatisch alle übergebenen Objekte in eine Zeichenfolge. Wenn Ihre Anwendung z.B. dem Benutzer einen **Int32**-Wert und einen **DateTime**-Wert anzeigen soll, können Sie ganz einfach mithilfe der **Format**-Methode eine Zeichenfolge erstellen, um diese Werte darzustellen. Informationen zu den mit dieser Methode verwendeten Formatierungskonventionen finden Sie im Abschnitt [Zusammengesetzte Formatierung](composite-formatting.md).  
   
  Das folgende Beispiel verwendet die **Format**-Methode, um eine Zeichenfolge zu erstellen, die eine ganzzahlige Variable verwendet.  
   
@@ -80,5 +80,5 @@ ms.locfileid: "73103820"
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)
-- [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)
+- [Grundlegende Zeichenfolgenoperationen](basic-string-operations.md)
+- [Kombinierte Formatierung](composite-formatting.md)

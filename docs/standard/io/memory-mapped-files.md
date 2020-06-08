@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 004da94bc7345bdc294562f0e1bedf6f1735adec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a8c087449ed623e93f8c8ea467200f5e3e7e70f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159714"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278791"
 ---
 # <a name="memory-mapped-files"></a>Speicherabbilddateien
 Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher. Diese Zuordnung zwischen einer Datei und Speicherplatz ermöglicht es einer Anwendung mit mehreren Prozessen, die Datei durch direktes Lesen und Schreiben im Arbeitsspeicher zu ändern. Ab .NET Framework 4 können Sie verwalteten Code verwenden, um auf die gleiche Weise auf Speicherabbilddateien zuzugreifen wie native Windows-Funktionen. Dies wird unter [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Verwalten von im Speicher abgebildeten Dateien) beschrieben.  
@@ -147,4 +147,4 @@ Process C says: True
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
+- [Datei- und Stream-E/A](index.md)

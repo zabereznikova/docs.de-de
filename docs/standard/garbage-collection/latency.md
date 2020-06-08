@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: a8eaf0c80aa32978eead80c51a905cbcd66a537b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee45fe5e8016c7507bc3a873e615fd8379810a8e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74283596"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286014"
 ---
 # <a name="latency-modes"></a>Latenzmodi
 
@@ -58,12 +58,12 @@ Beachten Sie beim Verwenden des [GCLatencyMode.LowLatency](xref:System.Runtime.G
 
 - Achten Sie auf potenziell zuordnende Threads. Weil die Einstellung der <xref:System.Runtime.GCSettings.LatencyMode%2A>-Eigenschaft prozessweit gültig ist, können in jedem zuordnenden Thread <xref:System.OutOfMemoryException>-Ausnahmen generiert werden.
 
-- Umschließen (wrappen) Sie den Code für geringe Latenz in eingeschränkten Ausführungsbereichen. Weitere Informationen finden Sie unter [Eingeschränkte Ausführungsbereiche](../../../docs/framework/performance/constrained-execution-regions.md).
+- Umschließen (wrappen) Sie den Code für geringe Latenz in eingeschränkten Ausführungsbereichen. Weitere Informationen finden Sie unter [Eingeschränkte Ausführungsbereiche](../../framework/performance/constrained-execution-regions.md).
 
 - Sie können Garbage Collections der Generation 2 in Zeiten mit geringer Latenz erzwingen, indem Sie die <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>-Methode aufrufen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.GC?displayProperty=nameWithType>
-- [Induzierte Sammlungen](../../../docs/standard/garbage-collection/induced.md)
-- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+- [Induzierte Sammlungen](induced.md)
+- [Garbage Collection](index.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158076"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276134"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Abrufen von Informationen aus Attributen
 Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuerst deklarieren Sie eine Instanz des Attributs, das Sie abrufen möchten. Dann verwenden Sie die <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>-Methode, um das neue Attribut auf den Wert des abzurufenden Attributs zu initialisieren. Sobald das neue Attribut initialisiert wurde, verwenden Sie einfach dessen Eigenschaften, um die Werte abzurufen.  
   
 > [!IMPORTANT]
-> In diesem Thema wird beschrieben, wie Attribute für Code abgerufen werden, der in den Ausführungskontext geladen wird. Zum Abrufen von Attributen für Code, der in den reflektionsbezogenen Kontext geladen wurde, müssen Sie die <xref:System.Reflection.CustomAttributeData>-Klasse verwenden, wie in [Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) beschrieben.  
+> In diesem Thema wird beschrieben, wie Attribute für Code abgerufen werden, der in den Ausführungskontext geladen wird. Zum Abrufen von Attributen für Code, der in den reflektionsbezogenen Kontext geladen wurde, müssen Sie die <xref:System.Reflection.CustomAttributeData>-Klasse verwenden, wie in [Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) beschrieben.  
   
  Dieser Abschnitt erläutert die folgenden Möglichkeiten zum Abrufen von Attributen:  
   
@@ -87,4 +87,4 @@ The attribute was not found.
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [Attribute](../../../docs/standard/attributes/index.md)
+- [Attribute](index.md)

@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: dcb1d348e679e07646273b8fbc4ea29b44ee4974
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103496"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307071"
 ---
 # <a name="background-garbage-collection"></a>Garbage Collection im Hintergrund
 
 Bei der Garbage Collection (GC) im Hintergrund werden kurzlebige Generationen (0 und 1) bei Bedarf bereinigt, während die Garbage Collection von Generation 2 ausgeführt wird. Die Garbage Collection wird für einen oder mehrere dedizierte Threads ausgeführt – je nachdem ob sie im Hintergrund oder für Server ausgeführt wird – und gilt nur für Generation 2.
 
-Die Garbage Collection im Hintergrund ist standardmäßig aktiviert. Sie kann mit der Konfigurationseinstellung [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) in .NET Framework-Apps oder der Einstellung [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) in .NET Core-Apps aktiviert oder deaktiviert werden.
+Die Garbage Collection im Hintergrund ist standardmäßig aktiviert. Sie kann mit der Konfigurationseinstellung [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) in .NET Framework-Apps oder der Einstellung [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) in .NET Core-Apps aktiviert oder deaktiviert werden.
 
 > [!NOTE]
 > Ab .NET Framework 4 ersetzt die Garbage Collection im Hintergrund die [gleichzeitige Garbage Collection](#concurrent-garbage-collection). In .NET Framework 4 wird sie nur für die Garbage Collection für *Arbeitsstationen* unterstützt. Ab .NET Framework 4.5 ist die Garbage Collection im Hintergrund für *Arbeitsstationen* und *Server* verfügbar.
@@ -39,11 +39,11 @@ Die Garbage Collection im Hintergrund auf dem Server ähnelt der Garbage Collect
 
 Die folgende Abbildung veranschaulicht eine Garbage Collection im Hintergrund für einen separaten dedizierten Thread auf einer *Arbeitsstation*:
 
-![Garbage Collection auf Arbeitsstationen im Hintergrund](./media/fundamentals/background-workstation-garbage-collection.png)
+![Garbage Collection auf Arbeitsstationen im Hintergrund](media/fundamentals/background-workstation-garbage-collection.png)
 
 Die folgende Abbildung veranschaulicht eine Garbage Collection im Hintergrund für einen separaten dedizierten Thread auf einem *Server*:
 
-![Garbage Collection auf dem Server im Hintergrund](./media/fundamentals/background-server-garbage-collection.png)
+![Garbage Collection auf dem Server im Hintergrund](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>Concurrent garbage collection
 
@@ -55,7 +55,7 @@ Die folgende Abbildung veranschaulicht eine Garbage Collection im Hintergrund f�
 >
 > Die gleichzeitige Garbage Collection wird in späteren Versionen durch die Garbage Collection im Hintergrund ersetzt.
 
-Bei der Garbage Collection für Arbeitsstationen oder Server können Sie die [gleichzeitige Garbage Collection aktivieren](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md). Diese ermöglicht die gleichzeitige Ausführung von Threads mit einem dedizierten Thread, der die Garbage Collection nahezu die ganze Zeit ausführt. Diese Option wirkt sich nur auf die Garbage Collection in Generation 2 aus. In Generation 0 und 1 findet keine gleichzeitigen Garbage Collection statt, da diese schnell beendet wird.
+Bei der Garbage Collection für Arbeitsstationen oder Server können Sie die [gleichzeitige Garbage Collection aktivieren](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md). Diese ermöglicht die gleichzeitige Ausführung von Threads mit einem dedizierten Thread, der die Garbage Collection nahezu die ganze Zeit ausführt. Diese Option wirkt sich nur auf die Garbage Collection in Generation 2 aus. In Generation 0 und 1 findet keine gleichzeitigen Garbage Collection statt, da diese schnell beendet wird.
 
 Dank der gleichzeitigen Garbage Collection ist die Reaktionsfähigkeit interaktiver Anwendungen besser, da die für die Garbage Collection notwendigen Pausen minimiert werden. Verwaltete Threads können weiterhin die meiste Zeit ausgeführt werden, während der Thread der gleichzeitigen Garbage Collection ausgeführt wird. Dies verkürzt die Pausen während einer Garbage Collection.
 
@@ -63,7 +63,7 @@ Die gleichzeitige Garbage Collection wird auf einem dedizierten Thread ausgefüh
 
 Die folgende Abbildung zeigt eine parallele Garbage Collection für einen separaten dedizierten Thread.
 
-![Threads für parallele Garbage Collection](./media/gc-concurrent.png)
+![Threads für parallele Garbage Collection](media/gc-concurrent.png)
 
 ## <a name="see-also"></a>Siehe auch
 

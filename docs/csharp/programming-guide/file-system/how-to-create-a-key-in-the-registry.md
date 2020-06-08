@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e340083ffca118337dc9a53bdf20808cd1b15cb
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635443"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241629"
 ---
 # <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Vorgehensweise: Erstellen eines Schlüssels in der Registrierung (C#- Programmierleitfaden)
 Dieses Beispiel fügt der Registrierung des aktuellen Benutzers unter dem Schlüssel "Names" das Wertepaar "Name" und "Isabella" hinzu.  
@@ -48,14 +48,14 @@ key.Close();
   
 - Der Registrierungsschlüssel ist schreibgeschützt.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-security"></a>.NET-Sicherheit  
  Es ist sicherer, die Daten in den Benutzerordner (`Microsoft.Win32.Registry.CurrentUser`) anstatt auf den lokalen Computer (`Microsoft.Win32.Registry.LocalMachine`) zu schreiben.  
   
  Wenn Sie einen Registrierungswert erstellen, müssen Sie festlegen, was geschehen soll, wenn der Wert bereits vorhanden ist. Möglicherweise wurde der Wert bereits von einem bösartigen Prozess erstellt, der nun darauf zugreifen kann. Wenn Sie dem Registrierungswert Daten hinzufügen, kann der andere Prozess darauf zugreifen. Um dies zu verhindern, verwenden Sie die `Overload:Microsoft.Win32.RegistryKey.GetValue`- -Methode. Die Methode gibt NULL zurück, wenn der Schlüssel noch nicht vorhanden ist.  
   
  Es ist nicht sicher, geheime Daten wie Kennwörter in der Registrierung als Klartext zu speichern. Dies gilt auch, wenn der Registrierungsschlüssel durch Zugriffssteuerungslisten (ACLs) geschützt ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C#-Programmierhandbuch](../index.md)

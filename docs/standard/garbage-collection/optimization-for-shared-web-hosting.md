@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-ms.openlocfilehash: 07a100e2cd6aaff2b54b99144c9d762c8979fb47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccaacd44f8aaed9c3178cb94f98b0f58d4d3c7d4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140269"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285988"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Optimierung für freigegebenes Webhosting
 Wenn Sie Administrator eines Servers sind, der zum Hosten von mehreren kleinen Websites freigegeben ist, können Sie die Leistung optimieren und die Websitekapazität erhöhen, indem Sie die folgende `gcTrimCommitOnLowMemory`-Einstellung für den `runtime`-Knoten in der Datei „aspnet.config“ im .NET-Verzeichnis festlegen:  
@@ -44,4 +44,4 @@ Wenn Sie Administrator eines Servers sind, der zum Hosten von mehreren kleinen W
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+- [Garbage Collection](index.md)

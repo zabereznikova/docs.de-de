@@ -14,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160013"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276147"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  
@@ -36,13 +36,13 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
  Die Mengen `n` und `m` sind ganzzahlige Konstanten. Gewöhnlich sind Quantifizierer gierig; durch sie gleicht die Engine für reguläre Ausdrücke so viele Vorkommen bestimmter Muster wie möglich ab. Das Anhängen des `?`-Zeichens an einen Quantifizierer macht es träge; es bewirkt, dass die Engine für reguläre Ausdrücke so wenige Vorkommen wie möglich abgleicht. Eine vollständige Beschreibung des Unterschieds zwischen „gierigen“ und „trägen“ Quantifizierern finden Sie weiter unten in diesem Thema im Abschnitt [Gierige und träge Quantifizierer](#Greedy).  
   
 > [!IMPORTANT]
-> Das Schachteln von Quantifizierern (z.B. wie durch das Muster für reguläre Ausdrücke `(a*)*`) kann die Anzahl von Vergleichen, die die Engine für reguläre Ausdrücke ausführen muss, als Exponentialfunktion der Anzahl von Zeichen in der Eingabezeichenfolge erhöhen. Weitere Informationen zu diesem Verhalten und zu Problemumgehungen finden Sie unter [Rückverfolgung](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> Das Schachteln von Quantifizierern (z.B. wie durch das Muster für reguläre Ausdrücke `(a*)*`) kann die Anzahl von Vergleichen, die die Engine für reguläre Ausdrücke ausführen muss, als Exponentialfunktion der Anzahl von Zeichen in der Eingabezeichenfolge erhöhen. Weitere Informationen zu diesem Verhalten und zu Problemumgehungen finden Sie unter [Rückverfolgung](backtracking-in-regular-expressions.md).  
   
 ## <a name="regular-expression-quantifiers"></a>Quantifizierer in regulären Ausdrücken  
  In den folgenden Abschnitten werden die Quantifizierer aufgeführt, die in regulären .NET-Ausdrücken unterstützt werden.  
   
 > [!NOTE]
-> Wenn die Zeichen *, +, ?, { und } im Muster für reguläre Ausdrücke enthalten sind, interpretiert die Engine für reguläre Ausdrücke sie als Quantifizierer oder als Teil von Quantifiziererkonstrukten, sofern sie nicht in einer [Zeichenklasse](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) enthalten sind. Um sie als Literalzeichen außerhalb einer Zeichenklasse zu interpretieren, müssen Sie sie mit Escapezeichen versehen, indem Sie ihnen einen umgekehrten Schrägstrich voranstellen. Die Zeichenfolge `\*` in einem Muster für reguläre Ausdrücke wird z.B. als literales Sternchen („\*“) interpretiert.  
+> Wenn die Zeichen *, +, ?, { und } im Muster für reguläre Ausdrücke enthalten sind, interpretiert die Engine für reguläre Ausdrücke sie als Quantifizierer oder als Teil von Quantifiziererkonstrukten, sofern sie nicht in einer [Zeichenklasse](character-classes-in-regular-expressions.md) enthalten sind. Um sie als Literalzeichen außerhalb einer Zeichenklasse zu interpretieren, müssen Sie sie mit Escapezeichen versehen, indem Sie ihnen einen umgekehrten Schrägstrich voranstellen. Die Zeichenfolge `\*` in einem Muster für reguläre Ausdrücke wird z.B. als literales Sternchen („\*“) interpretiert.  
   
 ### <a name="match-zero-or-more-times-"></a>Übereinstimmung mit null oder mehr Vorkommen: *  
  Der `*`-Quantifizierer gleicht das vorangehende Element nullmal oder häufiger ab. Dies entspricht dem `{0,}`-Quantifizierer. `*` ist ein gieriger Quantifizierer, dessen träges Äquivalent `*?` lautet.  
@@ -271,5 +271,5 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)
+- [Backtracking](backtracking-in-regular-expressions.md)

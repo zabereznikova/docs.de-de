@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f79d22a86390ca931b05262e50865d852c154c7
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705014"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241746"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Vorgehensweise: Lesen aus einer Textdatei (C#-Programmierleitfaden)
 In diesem Beispiel wird der Inhalt von Textdateien gelesen, indem die statische Methoden <xref:System.IO.File.ReadAllText%2A> und <xref:System.IO.File.ReadAllLines%2A> aus der <xref:System.IO.File?displayProperty=nameWithType>-Klasse verwendet werden.  
@@ -37,10 +37,10 @@ Wenn Sie nicht die Textdateien aus [Vorgehensweise: Schreiben in eine Textdatei]
   
 - Die Datei ist nicht oder nicht am angegebenen Speicherort vorhanden. Überprüfen Sie die Schreibweise des Dateinamens und -pfads.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-security"></a>.NET-Sicherheit  
  Schließen Sie nicht vom Namen einer Datei auf deren Inhalt. Bei der Datei `myFile.cs` handelt es sich zum Beispiel nicht unbedingt um eine C#-Quelldatei.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C#-Programmierhandbuch](../index.md)

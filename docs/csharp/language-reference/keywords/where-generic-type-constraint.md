@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 5a56b8058735d3ca786520a82424c79d1975bfc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 406c710cd884363c32b98336717732a09b3d1fc1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463013"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401874"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (generischer Typconstraint) (C#-Referenz)
 
@@ -19,20 +19,20 @@ In einer generischen Typdefinition wird die `where`-Klausel verwendet, um Constr
 
 So können Sie beispielsweise eine generische Klasse erstellen, `MyGenericClass`, deren Typparameter `T` die Schnittstelle <xref:System.IComparable%601> implementiert:
 
-[!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#1)]
+[!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#1)]
 
 > [!NOTE]
 > Weitere Informationen über die where-Klausel in einem Abfrageausdruck finden Sie unter [where-Klausel](where-clause.md).
 
 Die `where`-Klausel kann auch einen Basisklassenconstraint enthalten. Der Basisklassenconstraint gibt an, dass ein Typ, der als Typargument für den generischen Typ verwendet wird, über die angegebene Klasse als Basisklasse verfügen oder diese Basisklasse sein muss. Wenn ein Basisklassenconstraint verwendet wird, muss er vor jedem anderen Constraint für den Typparameter angezeigt werden. Einige Typen sind nicht als Basisklassenconstraints zulässig: <xref:System.Object>, <xref:System.Array> und <xref:System.ValueType>. Vor C# 7.3 waren <xref:System.Enum>, <xref:System.Delegate> und <xref:System.MulticastDelegate> ebenfalls nicht als Basisklassenconstraints zulässig. Das folgende Beispiel zeigt die Typen, die jetzt als Basisklasse angegeben werden können:
 
-[!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+[!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#2)]
 
 In einem Nullable-Kontext in C# 8.0 und höher wird die NULL-Zulässigkeit des Basisklassentyps erzwungen. Wenn die Basisklasse ein Non-Nullable-Typ ist (z. B. `Base`), muss das Typargument ein Non-Nullable-Typ sein. Ist die Basisklasse ein Nullable-Typ (z. B. `Base?`), muss das Typargument ein Nullable- oder Non-Nullable-Verweistyp sein. Der Compiler gibt eine Warnung aus, wenn das Typargument ein Nullable-Verweistyp ist und die Basisklasse ein Non-Nullable-Typ.
 
 Die `where`-Klausel kann angeben, ob der Typ `class` oder `struct` ist. Aufgrund des `struct`-Constraints ist die Angabe eines Basisklassenconstraints von `System.ValueType` nicht notwendig. Der `System.ValueType`-Typ darf nicht als Basisklassenconstraint verwendet werden. Im folgenden Beispiel werden die `class`- und `struct`-Constraints dargestellt:
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#3)]
 
 In einem Nullable-Kontext in C# 8.0 und höher erfordert der `class`-Constraint einen Non-Nullable-Verweistyp. Um Nullable-Verweistypen zuzulassen, verwenden Sie den `class?`-Constraint, der sowohl Nullable- als auch Non-Nullable-Verweistypen zulässt.
 
@@ -41,29 +41,29 @@ Die `where`-Klausel kann den `notnull`-Constraint enthalten. Der `notnull`-Const
 > [!IMPORTANT]
 > Generische Deklarationen, die den `notnull`-Constraint enthalten, können in einem Kontext verwendet werden, in dem nicht bekannt ist, ob NULL-Werte zugelassen sind, aber der Compiler erzwingt den Constraint nicht.
 
-[!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
+[!code-csharp[using the nonnull constraint](snippets/GenericWhereConstraints.cs#NotNull)]
 
 Die `where`-Klausel kann auch einen `unmanaged`-Constraint einschließen. Der `unmanaged`-Constraint schränkt den Typparameter auf Typen ein, die als [nicht verwaltete Typen](../builtin-types/unmanaged-types.md) bekannt sind. Der `unmanaged`-Constraint erleichtert das Schreiben von Interop-Code in C# auf niedriger Ebene. Dieser Constraint ermöglicht wiederverwendbare Routinen für alle nicht verwalteten Typen. Der `unmanaged`-Constraint kann nicht mit dem `class`- oder `struct`-Constraint kombiniert werden. Der `unmanaged`-Constraint erzwingt, dass der Typ `struct` sein muss:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
+[!code-csharp[using the unmanaged constraint](snippets/GenericWhereConstraints.cs#4)]
 
 Die `where`-Klausel kann auch einen `new()`-Konstruktorconstraint einschließen. Dieser Constraint ermöglicht das Erstellen einer Instanz eines Typparameters unter Verwendung des `new`-Operators. Der [new()-Constraint](new-constraint.md) informiert den Compiler, dass jedes angegebene Typargument über einen zugänglichen parameterlosen Konstruktor verfügen muss. Zum Beispiel:
 
-[!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
+[!code-csharp[using the new constraint](snippets/GenericWhereConstraints.cs#5)]
 
 Der `new()`-Constraint wird in der `where`-Klausel als Letztes angezeigt. Der `new()`-Constraint kann nicht mit dem `struct`- oder `unmanaged`-Constraint kombiniert werden. Alle Typen, die diese Constraints erfüllen, müssen einen zugänglichen parameterlosen Konstruktor aufweisen, wodurch der `new()`-Constraint redundant wird.
 
 Bei mehreren Typparametern müssen Sie für jeden davon eine eigene `where`-Klausel verwenden, z.B.:
 
-[!code-csharp[using multiple where constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#6)]
+[!code-csharp[using multiple where constraints](snippets/GenericWhereConstraints.cs#6)]
 
 Sie können auch Constraints wie folgt an Typparameter generischer Methoden anfügen:
 
-[!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#7)]
+[!code-csharp[where constraints with generic methods](snippets/GenericWhereConstraints.cs#7)]
 
 Beachten Sie, dass die Syntax zum Beschreiben der Parameterconstraints für Delegaten mit der Syntax von Methoden identisch ist:
 
-[!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
+[!code-csharp[where constraints with generic methods](snippets/GenericWhereConstraints.cs#8)]
 
 Informationen zu generischen Delegaten finden Sie unter [Generic Delegates (Generische Delegaten)](../../programming-guide/generics/generic-delegates.md).
 

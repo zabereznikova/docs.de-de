@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421266"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84277959"
 ---
 # <a name="xml-serialization"></a>XML-Serialisierung
 
@@ -33,7 +33,7 @@ Unter Serialisierung wird das Konvertieren des Zustands eines Objekts in eine Fo
 
  Die Daten des Objekts werden durch Konstrukte der Programmiersprache beschrieben, z.B. Klassen, Felder, Eigenschaften, primitive Typen, Arrays oder auch eingebettetes XML in Form von **XmlElement**- oder **XmlAttribute**-Objekten. Sie können eigene, mit Attributen versehene Klassen erstellen oder Klassen mit dem XML Schema Definition-Tool auf der Grundlage eines vorhandenen XML-Schemas generieren.
 
- Wenn ein XML-Schema gegeben ist, können Sie das XML Schema Definition-Tool ausführen und so eine Reihe von Klassen erstellen, die für dieses Schema streng typisiert und mit Attributen versehen sind. Wenn eine Instanz einer solchen Klasse serialisiert wird, entspricht der generierte XML-Code dem XML-Schema. Wenn eine solche Klasse gegeben ist, können Sie mit einem einfach bearbeitbaren Objektmodell programmieren und gleichzeitig sicher sein, dass der erzeugte XML-Code dem XML-Schema entspricht. Dies ist eine Alternative dazu, andere Klassen von .NET Framework, wie die **XmlReader**-Klasse und die **XmlWriter**-Klasse, zum Analysieren und Schreiben von XML-Streams zu verwenden. Weitere Informationen hierzu finden Sie unter [XML Documents and Data (XML-Dokumente und -Daten)](../../../docs/standard/data/xml/index.md). Diese Klassen ermöglichen es Ihnen, jeden XML-Stream zu analysieren. Verwenden Sie dagegen **XmlSerializer**, wenn der XML-Stream einem bekannten XML-Schema entsprechen soll.
+ Wenn ein XML-Schema gegeben ist, können Sie das XML Schema Definition-Tool ausführen und so eine Reihe von Klassen erstellen, die für dieses Schema streng typisiert und mit Attributen versehen sind. Wenn eine Instanz einer solchen Klasse serialisiert wird, entspricht der generierte XML-Code dem XML-Schema. Wenn eine solche Klasse gegeben ist, können Sie mit einem einfach bearbeitbaren Objektmodell programmieren und gleichzeitig sicher sein, dass der erzeugte XML-Code dem XML-Schema entspricht. Dies ist eine Alternative dazu, andere Klassen von .NET Framework, wie die **XmlReader**-Klasse und die **XmlWriter**-Klasse, zum Analysieren und Schreiben von XML-Streams zu verwenden. Weitere Informationen hierzu finden Sie unter [XML Documents and Data (XML-Dokumente und -Daten)](../data/xml/index.md). Diese Klassen ermöglichen es Ihnen, jeden XML-Stream zu analysieren. Verwenden Sie dagegen **XmlSerializer**, wenn der XML-Stream einem bekannten XML-Schema entsprechen soll.
 
  Attribute steuern den von der **XmlSerializer**-Klasse generierten XML-Stream und ermöglichen es Ihnen, den XML-Namespace, den Elementnamen, den Attributnamen usw. des XML-Streams festzulegen. Weitere Informationen zu diesen Attributen und ihrer Funktion in Bezug auf die XML-Serialisierung finden Sie unter [Controlling XML Serialization Using Attributes (Steuern der XML-Serialisierung mithilfe von Attributen)](controlling-xml-serialization-using-attributes.md). Eine Tabelle der Attribute, die sich auf den generierten XML-Code auswirken, finden Sie unter [Attributes That Control XML Serialization (Attribute zum Steuern der XML-Serialisierung)](attributes-that-control-xml-serialization.md).
 

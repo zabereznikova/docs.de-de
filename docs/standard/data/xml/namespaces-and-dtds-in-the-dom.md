@@ -3,12 +3,12 @@ title: Namespaces und DTDs im DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-ms.openlocfilehash: 22762e3a7003d9b28a53c7b500829aaa41924c6d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 748be66c255aa018fb3e1ed541c6e5a92775408c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710595"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288783"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Namespaces und DTDs im DOM
 DTDs (Document Type Definition) erschweren die Namespace-Unterstützung. Das folgende XML-Beispiel enthält Standardattribute, deren Namen Doppelpunkte enthalten.  
@@ -33,4 +33,4 @@ DTDs (Document Type Definition) erschweren die Namespace-Unterstützung. Das fol
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

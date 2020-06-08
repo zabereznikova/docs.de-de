@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 376befe4c969ac653e234479c8946d7fd4242999
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4c4554c808ab15776f3217c257e0a60119ea2338
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442214"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368360"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
@@ -25,27 +25,27 @@ Einschränkungen informieren den Compiler über die Funktionen, über die ein Ty
 |`where T : notnull`|Das Typargument muss ein Nicht-Nullable-Typ sein. Das Argument kann ein Non-Nullable-Verweistyp in C# 8.0 oder höher oder ein Non-Nullable-Werttyp sein. |
 |`where T : unmanaged`|Das Typargument muss ein [nicht verwalteter Non-Nullable-Typ](../../language-reference/builtin-types/unmanaged-types.md) sein. Die `unmanaged`-Einschränkung impliziert die `struct`-Einschränkung und kann weder mit der `struct`- noch mit der `new()`-Einschränkung kombiniert werden.|
 |`where T : new()`|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden. Die `new()`-Einschränkung kann nicht mit der `struct`- oder `unmanaged`-Einschränkung kombiniert werden.|
-|`where T :` *\<Basisklassenname>*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden. In einem Nullable-Kontext in C# 8.0 und höher muss `T` ein Non-Nullable-Verweistyp sein, der von der angegebenen Basisklasse abgeleitet ist. |
-|`where T :` *\<Basisklassenname>?*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden. In einem Nullable-Kontext in C# 8.0 und höher kann `T` entweder ein Nullable- oder ein Non-Nullable-Typ sein, der von der angegebenen Basisklasse abgeleitet ist. |
-|`where T :` *\<Schnittstellenname>*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein. In einem Nullable-Kontext in C# 8.0 und höher muss `T` ein Non-Nullable-Typ sein, der die angegebenen Schnittstelle implementiert.|
-|`where T :` *\<Schnittstellenname>?*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein. In einem Nullable-Kontext in C# 8.0 kann `T` ein Nullable-Verweistyp, ein Non-Nullable-Verweistyp oder ein Werttyp sein. `T` darf kein Nullable-Werttyp sein.|
+|`where T :` *\<base class name>*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden. In einem Nullable-Kontext in C# 8.0 und höher muss `T` ein Non-Nullable-Verweistyp sein, der von der angegebenen Basisklasse abgeleitet ist. |
+|`where T :` *\<base class name>?*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden. In einem Nullable-Kontext in C# 8.0 und höher kann `T` entweder ein Nullable- oder ein Non-Nullable-Typ sein, der von der angegebenen Basisklasse abgeleitet ist. |
+|`where T :` *\<interface name>*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein. In einem Nullable-Kontext in C# 8.0 und höher muss `T` ein Non-Nullable-Typ sein, der die angegebenen Schnittstelle implementiert.|
+|`where T :` *\<interface name>?*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein. In einem Nullable-Kontext in C# 8.0 kann `T` ein Nullable-Verweistyp, ein Non-Nullable-Verweistyp oder ein Werttyp sein. `T` darf kein Nullable-Werttyp sein.|
 |`where T : U`|Das Typargument, das für `T` angegeben wird, muss das für `U` angegebene Argument sein oder von diesem abgeleitet werden. Wenn in einem Nullable-Kontext `U` ein Non-Nullable-Verweistyp ist, muss `T` ein Non-Nullable-Verweistyp sein. Wenn `U` ein Nullable-Verweistyp ist, kann `T` entweder ein Nullable- oder ein Non-Nullable-Typ sein. |
 
 ## <a name="why-use-constraints"></a>Weshalb Einschränkungen?
 
 Constraints geben die Funktionen und Erwartungen eines Typparameters an. Das Deklarieren von Constraints bedeutet, dass Sie die Vorgänge und Methodenaufrufe des einschränkenden Typs verwenden können. Wenn Ihre generischen Klassen oder Methoden Vorgänge für generische Member durchführen sollen, die über das einfache Zuweisen und Aufrufen von Methoden hinausgehen, die nicht von <xref:System.Object?displayProperty=nameWithType> unterstützt werden, müssen Sie Constraints auf den Typparameter anwenden. Der Basisklassenconstraint sagt dem Compiler z.B., dass nur Objekte dieses Typs oder Objekte, die von diesem Typ abgeleitet werden, als Typargumente verwendet werden. Sobald der Compiler diese Garantie hat, kann er erlauben, dass Methoden dieses Typs in der generischen Klasse aufgerufen werden können. Im folgenden Codebeispiel wird die Funktionalität veranschaulicht, die der `GenericList<T>`-Klasse durch das Anwenden einer Basisklasseneinschränkung hinzugefügt werden kann (in [Einführung in Generics](../../../standard/generics/index.md)).
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#9)]
 
 Die Einschränkung ermöglicht der generischen Klasse, die `Employee.Name`-Eigenschaft zu verwenden. Die Einschränkung gibt an, dass alle Elemente des Typs `T` entweder ein `Employee`-Objekt oder ein Objekt sind, das von `Employee` erbt.
 
 Mehrere Constraints können wie folgt auf den gleichen Typenparameter angewendet werden, und die Contraints können selbst generische Typen sein:
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#10)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#10)]
 
 Wenn Sie den Constraint `where T : class` anwenden, vermeiden Sie das Verwenden der Operatoren `==` und `!=` mit dem Typparameter, da diese nur auf Verweisidentität und nicht auf Wertgleichheit prüfen. Dieses Verhalten tritt auch auf, wenn diese Operatoren in einem Typ überladen werden, der als Argument verwendet wird. Der folgende Code veranschaulicht diesen Aspekt. Die Ausgabe ist FALSE, obwohl die <xref:System.String>-Klasse den `==`-Operator überlädt.
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#11)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#11)]
 
 Der Compiler weiß erst zur Kompilierzeit, dass `T` ein Verweistyp ist und die für alle Verweistypen zulässigen Standardoperatoren verwendet werden müssen. Wenn Sie auf Wertgleichheit prüfen müssen, wird empfohlen, dass Sie die `where T : IEquatable<T>`- oder `where T : IComparable<T>`-Einschränkung anwenden und die Schnittstelle in jeder Klasse implementieren, die verwendet wird, um die generische Klasse zu erstellen.
 
@@ -53,7 +53,7 @@ Der Compiler weiß erst zur Kompilierzeit, dass `T` ein Verweistyp ist und die f
 
 Sie können wie im folgenden Beispiel gezeigt Constraints auf mehrere Parameter und mehrere Constraints auf einen einzelnen Parameter anwenden:
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#12)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#12)]
 
 ## <a name="unbounded-type-parameters"></a>Ungebundene Typparameter
 
@@ -67,13 +67,13 @@ Sie können wie im folgenden Beispiel gezeigt Constraints auf mehrere Parameter 
 
 Es ist nützlich, einen Typparameter wie in folgendem Beispiel gezeigt als Constraint zu verwenden, wenn eine Memberfunktion mit ihren eigenen Typparametern diesen Parameter auf den Typparameter des enthaltenden Typs einschränken muss:
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#13)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#13)]
 
 Im vorherigen Beispiel ist `T` ein Typconstraint im Kontext der `Add`-Methode und ein ungebundener Typparameter im Kontext der `List`-Klasse.
 
 Typparameter können auch in generischen Klassendefinitionen als Constraints verwendet werden. Der Typparameter in spitzen Klammern muss zusammen mit allen anderen Typparametern deklariert werden:
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#14)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#14)]
 
 Das Verwenden von Typparametern als Einschränkungen für generische Klassen ist nur bis zu einem gewissen Punkt nützlich, da der Compiler keine Informationen über den Typparameter annehmen kann, nur dass er von `System.Object` abgeleitet ist. Sie sollten Typparameter als Constraints dann verwenden, wenn Sie eine Vererbungsbeziehung zwischen zwei Typparametern erzwingen möchten.
 
@@ -89,7 +89,7 @@ Ab C# 8.0 können Sie den `class`-Constraint verwenden, um anzugeben, dass das 
 
 Ab C# 7.3 können Sie die `unmanaged`-Einschränkung nutzen, um anzugeben, dass der Typparameter ein [nicht verwalteter Non-Nullable-Typ](../../language-reference/builtin-types/unmanaged-types.md) sein muss. Die `unmanaged`-Einschränkung ermöglicht Ihnen das Schreiben von wiederverwendbarer Routinen zum Arbeiten mit Typen, die als Speicherblöcke bearbeitet werden können, wie im folgenden Beispiel gezeigt:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
+[!code-csharp[using the unmanaged constraint](snippets/GenericWhereConstraints.cs#15)]
 
 Die vorherige Methode muss in einen `unsafe`-Kontext kompiliert werden, da sie den `sizeof`-Operator für einen nicht bekannten Typ verwendet, der ein integrierter Typ ist. Ohne die `unmanaged`-Einschränkung ist der `sizeof`-Operator nicht verfügbar.
 
@@ -99,11 +99,11 @@ Die `unmanaged`-Einschränkung impliziert die `struct`-Einschränkung und kann n
 
 Ab C# 7.3 können Sie auch <xref:System.Delegate?displayProperty=nameWithType> oder <xref:System.MulticastDelegate?displayProperty=nameWithType> als Basisklasseneinschränkung verwenden. Die CLR lässt diese Einschränkung immer zu, aber die C#-Sprache lässt sie nicht zu. Die `System.Delegate`-Einschränkung ermöglicht es Ihnen, Code zu schreiben, der mit Delegaten in einer typsicheren Weise funktioniert. Der folgende Code definiert eine Erweiterungsmethode, die zwei Delegaten kombiniert, sofern diese vom gleichen Typ sind:
 
-[!code-csharp[using the delegate constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#16)]
+[!code-csharp[using the delegate constraint](snippets/GenericWhereConstraints.cs#16)]
 
 Sie können die oben dargestellte Methode verwenden, um Delegaten vom selben Typ zu kombinieren:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#17)]
+[!code-csharp[using the unmanaged constraint](snippets/GenericWhereConstraints.cs#17)]
 
 Wenn Sie den Kommentar der letzten Zeile entfernen, findet die Kompilation nicht statt. Sowohl `first` als auch `test` sind Delegattypen, aber sie sind unterschiedlich.
 
@@ -111,15 +111,15 @@ Wenn Sie den Kommentar der letzten Zeile entfernen, findet die Kompilation nicht
 
 Ab C# 7.3 können Sie auch den <xref:System.Enum?displayProperty=nameWithType>-Typ als Basisklasseneinschränkung angeben. Die CLR lässt diese Einschränkung immer zu, aber die C#-Sprache lässt sie nicht zu. Generics, die `System.Enum` verwenden, bieten typsichere Programmierung zum Zwischenspeichern von Ergebnissen aus der Verwendung der statischen Methoden in `System.Enum`. Im folgenden Beispiel werden alle gültigen Werte für einen Enumerationstyp gefunden, und dann ein Wörterbuch erstellt, das diese Werte ihrer Zeichenfolgendarstellung zuordnet.
 
-[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](snippets/GenericWhereConstraints.cs#18)]
 
 `Enum.GetValues` und `Enum.GetName` nutzen Reflektion, die Auswirkungen auf die Leistung hat. Sie können `EnumNamedValues` aufrufen, um eine Sammlung zu erstellen, die zwischengespeichert und wiederverwendet wird, anstatt die Aufrufe zu wiederholen, die eine Reflektion erfordern.
 
 Sie könnten dies wie im folgenden Beispiel gezeigt verwenden, um eine Enumeration und ein Wörterbuch der Werte und Namen zu erstellen:
 
-[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](snippets/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](snippets/GenericWhereConstraints.cs#20)]
 
 ## <a name="see-also"></a>Siehe auch
 

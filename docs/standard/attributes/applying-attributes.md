@@ -10,12 +10,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5557da1531eb55c13d1c7540a50b044d1a7b8a1d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130916"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276334"
 ---
 # <a name="applying-attributes"></a>Anwenden von Attributen
 Mit dem folgenden Verfahren wenden Sie ein Attribut auf ein Codeelement an.  
@@ -48,12 +48,12 @@ Mit dem folgenden Verfahren wenden Sie ein Attribut auf ein Codeelement an.
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
  [!code-vb[Conceptual.Attributes.Usage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#2)]  
   
- Beim Anwenden dieses Attributs wird die Zeichenfolge `"My Assembly"` im Metadatenteil der Datei im Assemblymanifest platziert. Sie können das Attribut entweder mithilfe des [MSIL-Disassemblers (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) anzeigen lassen oder ein benutzerdefiniertes Programm erstellen, um das Attribut abzurufen.  
+ Beim Anwenden dieses Attributs wird die Zeichenfolge `"My Assembly"` im Metadatenteil der Datei im Assemblymanifest platziert. Sie können das Attribut entweder mithilfe des [MSIL-Disassemblers (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md) anzeigen lassen oder ein benutzerdefiniertes Programm erstellen, um das Attribut abzurufen.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Attribute](../../../docs/standard/attributes/index.md)
-- [Abrufen von Informationen aus Attributen](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [Attribute](index.md)
+- [Abrufen von Informationen aus Attributen](retrieving-information-stored-in-attributes.md)
 - [Konzepte](/cpp/windows/attributed-programming-concepts)
 - [Attribute (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Übersicht über Attribute (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

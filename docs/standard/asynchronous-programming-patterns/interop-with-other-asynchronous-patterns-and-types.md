@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: 981c13c68eaf1eb0c19f95eb1b097935ea02a16d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe5d8321a62b67a54dc09507e8fd86ee8d5cf74d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159753"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276555"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilität mit anderen asynchronen Mustern und Typen
-Mit .NET Framework 1.0 wurde das <xref:System.IAsyncResult> -Muster vorgestellt, das auch als [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)- oder `Begin/End` -Muster bekannt ist.  Mit .NET Framework 2.0 wurde das [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)hinzugefügt.  Ab .NET Framework 4 löst das [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) APM und EAP ab. Es bietet aber die Möglichkeit, leicht Migrationsroutinen aus früheren Mustern zu erstellen.  
+Mit .NET Framework 1.0 wurde das <xref:System.IAsyncResult> -Muster vorgestellt, das auch als [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md)- oder `Begin/End` -Muster bekannt ist.  Mit .NET Framework 2.0 wurde das [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md)hinzugefügt.  Ab .NET Framework 4 löst das [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) APM und EAP ab. Es bietet aber die Möglichkeit, leicht Migrationsroutinen aus früheren Mustern zu erstellen.  
   
  In diesem Thema:  
   
@@ -35,7 +35,7 @@ Mit .NET Framework 1.0 wurde das <xref:System.IAsyncResult> -Muster vorgestellt,
   
 <a name="ApmToTap"></a>
 ### <a name="from-apm-to-tap"></a>von APM zu TAP  
- Da das [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) -Muster stark strukturiert ist, lässt sich ganz einfach ein Wrapper für eine APM-Implementierung erstellen, um sie als TAP-Implementierung verfügbar zu machen. .NET Framework enthält für diese Umwandlung seit .NET Framework 4 Hilfsroutinen in Form von <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>-Methodenüberladungen.  
+ Da das [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md) -Muster stark strukturiert ist, lässt sich ganz einfach ein Wrapper für eine APM-Implementierung erstellen, um sie als TAP-Implementierung verfügbar zu machen. .NET Framework enthält für diese Umwandlung seit .NET Framework 4 Hilfsroutinen in Form von <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>-Methodenüberladungen.  
   
  Betrachten Sie die <xref:System.IO.Stream> -Klasse und ihre Methoden <xref:System.IO.Stream.BeginRead%2A> / <xref:System.IO.Stream.EndRead%2A> , die die APM-Entsprechung zur synchronen <xref:System.IO.Stream.Read%2A> -Methode darstellen:  
   
@@ -82,7 +82,7 @@ Mit .NET Framework 1.0 wurde das <xref:System.IAsyncResult> -Muster vorgestellt,
   
 <a name="EAP"></a>
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>Aufgaben und das ereignisbasierte asynchrone Muster (Event-based Asynchronous Pattern, EAP)  
- Das Umschließen einer [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) -Implementierung ist komplizierter als das Umschließen eines APM-Musters, da das EAP-Muster selbst mehr Varianten als das APM-Muster aufweist und geringer strukturiert ist.  Zur Veranschaulichung umschließt der folgende Code die `DownloadStringAsync` -Methode.  `DownloadStringAsync` akzeptiert einen URI, löst während des Herunterladens das `DownloadProgressChanged` -Ereignis aus, um mehrere Fortschrittswerte zu berichten, und löst zum Abschluss das `DownloadStringCompleted` -Ereignis aus.  Das Endergebnis ist eine Zeichenfolge, die den Inhalt der Seite am angegebenen URI enthält.  
+ Das Umschließen einer [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) -Implementierung ist komplizierter als das Umschließen eines APM-Musters, da das EAP-Muster selbst mehr Varianten als das APM-Muster aufweist und geringer strukturiert ist.  Zur Veranschaulichung umschließt der folgende Code die `DownloadStringAsync` -Methode.  `DownloadStringAsync` akzeptiert einen URI, löst während des Herunterladens das `DownloadProgressChanged` -Ereignis aus, um mehrere Fortschrittswerte zu berichten, und löst zum Abschluss das `DownloadStringCompleted` -Ereignis aus.  Das Endergebnis ist eine Zeichenfolge, die den Inhalt der Seite am angegebenen URI enthält.  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  
@@ -102,7 +102,7 @@ Mit .NET Framework 1.0 wurde das <xref:System.IAsyncResult> -Muster vorgestellt,
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
   
- Sie können auch ein asynchrones Semaphor erstellen, das nicht auf Wait-Handles beruht und stattdessen vollständig mit Aufgaben funktioniert. Um dies zu erreichen, können Sie Techniken wie die diejenige verwenden, die unter [Verwenden des aufgabenbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) zum Erstellen von Datenstrukturen auf <xref:System.Threading.Tasks.Task>hinzugefügt wurde.  
+ Sie können auch ein asynchrones Semaphor erstellen, das nicht auf Wait-Handles beruht und stattdessen vollständig mit Aufgaben funktioniert. Um dies zu erreichen, können Sie Techniken wie die diejenige verwenden, die unter [Verwenden des aufgabenbasierten asynchronen Musters](consuming-the-task-based-asynchronous-pattern.md) zum Erstellen von Datenstrukturen auf <xref:System.Threading.Tasks.Task>hinzugefügt wurde.  
   
 <a name="TapToWH"></a>
 ### <a name="from-tap-to-wait-handles"></a>von TAP zu Wait-Handles  
@@ -113,6 +113,6 @@ Mit .NET Framework 1.0 wurde das <xref:System.IAsyncResult> -Muster vorgestellt,
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [Implementieren des aufgabenbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [Nutzen des aufgabenbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](task-based-asynchronous-pattern-tap.md)
+- [Implementieren des aufgabenbasierten asynchronen Entwurfsmusters](implementing-the-task-based-asynchronous-pattern.md)
+- [Nutzen des aufgabenbasierten asynchronen Musters](consuming-the-task-based-asynchronous-pattern.md)

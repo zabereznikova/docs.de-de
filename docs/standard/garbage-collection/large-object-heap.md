@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420577"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286027"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
@@ -203,7 +203,7 @@ Wie Sie sehen können, handelt es sich hierbei um einen einfachen Test, der nur 
 
 ### <a name="a-debugger"></a>Debugger
 
-Wenn Sie nur ein Speicherabbild besitzen und untersuchen müssen, welche Objekte sich im großen Objektheap befinden, können Sie die von .NET bereitgestellte [SOS-Debugerweiterung](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) verwenden.
+Wenn Sie nur ein Speicherabbild besitzen und untersuchen müssen, welche Objekte sich im großen Objektheap befinden, können Sie die von .NET bereitgestellte [SOS-Debugerweiterung](../../framework/tools/sos-dll-sos-debugging-extension.md) verwenden.
 
 > [!NOTE]
 > Die in diesem Abschnitt erwähnten Debuggingbefehle gelten für die [Windows-Debugger](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

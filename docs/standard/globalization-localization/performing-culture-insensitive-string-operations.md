@@ -11,12 +11,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 183078b1f7a3eb3530fea8af06dbb59055d7d25d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79ff899e2964ae2c1e90b7178616c612dddf6d86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120799"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287505"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen
 Die meisten .NET Framework-Methoden, die standardmäßig kulturabhängige Zeichenfolgenoperationen durchführen, stellen Methodenüberladungen bereit, für die Sie die zu verwendende Kultur explizit angeben können, indem Sie einen <xref:System.Globalization.CultureInfo>-Parameter übergeben. Diese Überladungen ermöglichen es Ihnen, kulturelle Variationen in Groß-/Kleinschreibungszuordnungen und Sortierregeln zu eliminieren und kulturunabhängige Ergebnisse zu gewährleisten.  
@@ -24,20 +24,20 @@ Die meisten .NET Framework-Methoden, die standardmäßig kulturabhängige Zeiche
  Dieser Abschnitt enthält die folgenden Themen, in denen erläutert wird, wie kulturunabhängige Zeichenfolgenoperationen mit .NET Framework-Methoden durchgeführt werden, die standardmäßig kulturabhängig sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)  
+ [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](performing-culture-insensitive-string-comparisons.md)  
  Beschreibt die Verwendung der <xref:System.String.Compare%2A?displayProperty=nameWithType>- und <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode für kulturunabhängige Zeichenfolgenvergleiche.  
   
- [Durchführen kulturunabhängiger Schreibungsänderungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)  
+ [Durchführen kulturunabhängiger Schreibungsänderungen](performing-culture-insensitive-case-changes.md)  
  Beschreibt die Verwendung der <xref:System.String.ToUpper%2A?displayProperty=nameWithType>-, <xref:System.String.ToLower%2A?displayProperty=nameWithType>-, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>- und <xref:System.Char.ToLower%2A?displayProperty=nameWithType>-Methode für kulturunabhängige Schreibungsänderungen.  
   
- [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)  
+ [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen](performing-culture-insensitive-string-operations-in-collections.md)  
  Beschreibt die Verwendung von <xref:System.Collections.CaseInsensitiveComparer>- und <xref:System.Collections.CaseInsensitiveHashCodeProvider>-Klasse, <xref:System.Collections.SortedList>, <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> und <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> für kulturunabhängige Operationen in Sammlungen.  
   
- [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)  
+ [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Arrays](performing-culture-insensitive-string-operations-in-arrays.md)  
  Beschreibt die Verwendung von <xref:System.Array.Sort%2A?displayProperty=nameWithType>- und <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>-Methode für kulturunabhängige Operationen in Arrays.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Kulturunabhängige Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ [Kulturunabhängige Zeichenfolgenoperationen](culture-insensitive-string-operations.md)  
  Beschreibt, warum Sie die Kultur berücksichtigen sollten, wenn Sie Operationen mit Zeichenfolgen ausführen, und enthält Richtlinien dazu, wann kulturabhängige Operationen und wann kulturunabhängige Operationen ausgeführt werden sollten.
 
 ## <a name="see-also"></a>Weitere Informationen

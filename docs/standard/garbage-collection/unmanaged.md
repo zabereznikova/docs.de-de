@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 2d8b22063a184773928e5bc072f51a9f7d5d45ba
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396989"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287609"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Bereinigen von nicht verwalteten Ressourcen
 
@@ -44,7 +44,7 @@ Consumer Ihres Typs können dann die <xref:System.IDisposable.Dispose%2A?display
 
 [Implementieren einer Dispose-Methode](implementing-dispose.md) beschreibt, wie das Dispose-Muster für die Freigabe nicht verwalteter Ressourcen implementiert wird.
 
-[Verwenden von Objekten, die IDisposable implementieren`IDisposable`](../../../docs/standard/garbage-collection/using-objects.md) beschreibt, wie Consumer eines Typs sicherstellen, dass dessen <xref:System.IDisposable.Dispose%2A>-Implementierung aufgerufen wird. Sie sollten die `using`-Anweisung in C# (oder die `Using`-Anweisung in Visual Basic) verwenden, um dies durchzuführen.
+[Verwenden von Objekten, die IDisposable implementieren`IDisposable`](using-objects.md) beschreibt, wie Consumer eines Typs sicherstellen, dass dessen <xref:System.IDisposable.Dispose%2A>-Implementierung aufgerufen wird. Sie sollten die `using`-Anweisung in C# (oder die `Using`-Anweisung in Visual Basic) verwenden, um dies durchzuführen.
 
 ## <a name="reference"></a>Referenz
 

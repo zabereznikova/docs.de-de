@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 932ff3d57995ce47c4b74e8e888a479f0d09d0ed
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140543"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397427"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Puffer fester Größe (C#-Programmierhandbuch)
 
@@ -26,11 +26,11 @@ Eine C#-Struktur in sicherem Code, die ein Array enthält, enthält nicht die El
 
 Die Größe der folgenden `struct` hängt nicht von der Anzahl der Elemente im Array ab, da `pathName` ein Verweis ist:
 
-[!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
+[!code-csharp[Struct with embedded array](snippets/FixedKeywordExamples.cs#6)]
 
 Ein `struct` kann ein eingebettetes Array in unsicheren Code enthalten. Im folgenden Beispiel verfügt das `fixedBuffer`-Array über eine feste Größe. Sie können eine `fixed`-Anweisung verwenden, um einen Zeiger auf das erste Element festzulegen. Über diesen Zeiger können Sie auf die Elemente des Arrays zugreifen. Die `fixed`-Anweisung fixiert das Instanzenfeld `fixedBuffer` an einem bestimmten Speicherort im Arbeitsspeicher.
 
-[!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
+[!code-csharp[Struct with embedded inline array](snippets/FixedKeywordExamples.cs#7)]
 
 Die Größe des 128-Element-`char`-Arrays beträgt 256 Bytes. [Char](../../language-reference/builtin-types/char.md)-Puffer mit fester Größe verwenden immer zwei Bytes pro Zeichen, unabhängig von der Codierung. Dies gilt auch, wenn Char-Puffer zu API-Methoden oder Strukturen mit `CharSet = CharSet.Auto` oder `CharSet = CharSet.Ansi` gemarshallt werden. Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.CharSet>.
 

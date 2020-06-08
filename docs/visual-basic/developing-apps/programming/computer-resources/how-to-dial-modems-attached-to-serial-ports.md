@@ -6,12 +6,12 @@ helpviewer_keywords:
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: febec0a8579d34f8ff59066da5b5aa59c1cce6b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e55ce6399dae435fbd5b2f730d4d0848c98d8955
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345639"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363266"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Gewusst wie: Wählen mit Modems an seriellen Anschlüssen in Visual Basic
 
@@ -49,16 +49,16 @@ In diesem Thema wird beschrieben, wie Sie `My.Computer.Ports` nutzen, um ein Mod
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
 
- In diesem Beispiel wird davon ausgegangen, dass das Modem mit COM1 verbunden ist. Der Code sollte dem Benutzer erlauben, den gewünschten seriellen Anschluss aus einer Liste der verfügbaren Anschlüsse auszuwählen. Weitere Informationen finden Sie unter [Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+ In diesem Beispiel wird davon ausgegangen, dass das Modem mit COM1 verbunden ist. Der Code sollte dem Benutzer erlauben, den gewünschten seriellen Anschluss aus einer Liste der verfügbaren Anschlüsse auszuwählen. Weitere Informationen finden Sie unter [Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](how-to-show-available-serial-ports.md).  
   
- Dieses Beispiel verwendet einen `Using`-Block, um sicherzustellen, dass die Anwendung den Anschluss auch dann schließt, wenn eine Ausnahme ausgelöst wird. Weitere Informationen finden Sie unter [using-Anweisung](../../../../visual-basic/language-reference/statements/using-statement.md).  
+ Dieses Beispiel verwendet einen `Using`-Block, um sicherzustellen, dass die Anwendung den Anschluss auch dann schließt, wenn eine Ausnahme ausgelöst wird. Weitere Informationen finden Sie unter [using-Anweisung](../../../language-reference/statements/using-statement.md).  
   
- In diesem Beispiel trennt die Anwendung den seriellen Anschluss, nachdem sie das Modem anwählt. In der Praxis ist es erwünscht, dass Daten von und an das Modem übertragen werden. Weitere Informationen finden Sie unter [Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
+ In diesem Beispiel trennt die Anwendung den seriellen Anschluss, nachdem sie das Modem anwählt. In der Praxis ist es erwünscht, dass Daten von und an das Modem übertragen werden. Weitere Informationen finden Sie unter [Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen](how-to-receive-strings-from-serial-ports.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
-- [Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](how-to-send-strings-to-serial-ports.md)
+- [Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](how-to-receive-strings-from-serial-ports.md)
+- [Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](how-to-show-available-serial-ports.md)

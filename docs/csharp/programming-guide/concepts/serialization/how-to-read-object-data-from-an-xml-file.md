@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167817"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241876"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)
 In diesem Beispiel werden Objektdaten gelesen, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
@@ -58,10 +58,10 @@ Ersetzen Sie den Dateinamen „c:\temp\SerializationOverview.xml“ durch den Na
   
 - Die Datei ist nicht vorhanden (<xref:System.IO.IOException>).  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-security"></a>.NET-Sicherheit  
  Überprüfen Sie immer die Eingaben, und deserialisieren Sie keine Daten aus einer nicht vertrauenswürdigen Quelle. Das neu erstellte Objekt wird auf einem lokalen Computer mit den Berechtigungen des Codes ausgeführt, der es deserialisiert hat. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO.StreamWriter>
 - [Schreiben von Objektdaten in eine XML-Datei (C#)](./how-to-write-object-data-to-an-xml-file.md)

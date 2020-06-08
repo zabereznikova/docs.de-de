@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708396"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287557"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kovarianz und Kontravarianz in Generics
 Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, einen stärker abgeleiteten (spezifischeren) oder einen weniger abgeleiteten (allgemeineren) Typ zu verwenden als ursprünglich angegeben. Generische Typparameter unterstützen Kovarianz und Kontravarianz und bieten somit mehr Flexibilität beim Zuweisen und Verwenden von generischen Typen. Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invarianz die folgenden Definitionen. In den Beispielen wird von der Basisklasse `Base` und der abgeleiteten Klasse `Derived`ausgegangen.  
@@ -126,18 +126,18 @@ Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, 
  Ab .NET Framework 4 verfügen Visual Basic und C# über Schlüsselwörter, mit denen die generischen Typparameter von Schnittstellen und Delegaten als kovariant oder kontravariant gekennzeichnet werden können.  
   
 > [!NOTE]
-> Beginnen mit .NET Framework, Version 2.0, unterstützt die Common Language Runtime Varianzkennzeichnungen für generische Typparameter. Vor .NET Framework 4 war Microsoft Intermediate Language (MSIL) die einzige Möglichkeit, eine generische Klasse zu definieren, die über diese Kennzeichnungen verfügt – entweder durch Kompilieren der Klasse mit [Ilasm.exe (IL-Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) oder durch Ausgeben in einer dynamischen Assembly.  
+> Beginnen mit .NET Framework, Version 2.0, unterstützt die Common Language Runtime Varianzkennzeichnungen für generische Typparameter. Vor .NET Framework 4 war Microsoft Intermediate Language (MSIL) die einzige Möglichkeit, eine generische Klasse zu definieren, die über diese Kennzeichnungen verfügt – entweder durch Kompilieren der Klasse mit [Ilasm.exe (IL-Assembler)](../../framework/tools/ilasm-exe-il-assembler.md) oder durch Ausgeben in einer dynamischen Assembly.  
   
- Ein kovarianter Typparameter wird mit dem `out` -Schlüsselwort (`Out` -Schlüsselwort in Visual Basic, `+` für den [MSIL-Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) gekennzeichnet. Sie können einen kovarianten Typparameter als Rückgabewert einer Methode verwenden, die zu einer Schnittstelle gehört, oder als Rückgabetyp eines Delegaten. Sie können einen kovarianten Typparameter nicht als generische Typeinschränkung für Schnittstellenmethoden verwenden.  
+ Ein kovarianter Typparameter wird mit dem `out` -Schlüsselwort (`Out` -Schlüsselwort in Visual Basic, `+` für den [MSIL-Assembler](../../framework/tools/ilasm-exe-il-assembler.md)) gekennzeichnet. Sie können einen kovarianten Typparameter als Rückgabewert einer Methode verwenden, die zu einer Schnittstelle gehört, oder als Rückgabetyp eines Delegaten. Sie können einen kovarianten Typparameter nicht als generische Typeinschränkung für Schnittstellenmethoden verwenden.  
   
 > [!NOTE]
 > Wenn eine Methode einer Schnittstelle über einen Parameter verfügt, der ein generischer Delegattyp ist, kann ein kovarianter Typparameter des Schnittstellentyps verwendet werden, um einen kontravarianten Typparameter des Delegattyps anzugeben.  
   
- Ein kontravarianter Typparameter wird mit dem `in` -Schlüsselwort (`In` -Schlüsselwort in Visual Basic, `-` für den [MSIL-Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) gekennzeichnet. Sie können einen kontravarianten Typparameter als Typ eines Parameters einer Methode verwenden, die zu einer Schnittstelle gehört, oder als Typ eines Parameters eines Delegaten. Sie können einen kontravarianten Typparameter als generische Typeinschränkung für Schnittstellenmethoden verwenden.  
+ Ein kontravarianter Typparameter wird mit dem `in` -Schlüsselwort (`In` -Schlüsselwort in Visual Basic, `-` für den [MSIL-Assembler](../../framework/tools/ilasm-exe-il-assembler.md)) gekennzeichnet. Sie können einen kontravarianten Typparameter als Typ eines Parameters einer Methode verwenden, die zu einer Schnittstelle gehört, oder als Typ eines Parameters eines Delegaten. Sie können einen kontravarianten Typparameter als generische Typeinschränkung für Schnittstellenmethoden verwenden.  
   
  Nur Schnittstellentypen und Delegattypen können über variante Typparameter verfügen. Eine Schnittstelle oder ein Delegattyp kann sowohl kovariante, als auch kontravariante Typparameter haben.  
   
- In Visual Basic und C# müssen die Regeln zum Verwenden von kovarianten und kontravarianten Typparametern eingehalten werden, und es ist nicht möglich, Kovarianz- und Kontravarianzkennzeichnungen zu den Typparametern anderer Typen als Schnittstellen- und Delegattypen hinzuzufügen. Der [MSIL-Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md) führt keine solchen Überprüfungen aus, es wird aber eine <xref:System.TypeLoadException> ausgelöst, wenn Sie versuchen, einen Typ zu laden, der gegen die Regeln verstößt.  
+ In Visual Basic und C# müssen die Regeln zum Verwenden von kovarianten und kontravarianten Typparametern eingehalten werden, und es ist nicht möglich, Kovarianz- und Kontravarianzkennzeichnungen zu den Typparametern anderer Typen als Schnittstellen- und Delegattypen hinzuzufügen. Der [MSIL-Assembler](../../framework/tools/ilasm-exe-il-assembler.md) führt keine solchen Überprüfungen aus, es wird aber eine <xref:System.TypeLoadException> ausgelöst, wenn Sie versuchen, einen Typ zu laden, der gegen die Regeln verstößt.  
   
  Weitere Informationen und einen Beispielcode finden Sie unter [Varianz in generischen Schnittstellen (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) und [Varianz in generischen Schnittstellen (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
 

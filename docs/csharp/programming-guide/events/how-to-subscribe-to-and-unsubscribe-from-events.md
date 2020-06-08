@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 0a9e2cc64da56c376445efce32e8da36ba9b6cdc
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738235"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240667"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements (C#-Programmierleitfaden)
 Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn dieses Ereignis ausgelöst wird, können Sie ein Ereignis abonnieren, das von einer anderen Klasse veröffentlicht wurde. Sie können z.B. das `click`-Ereignis einer Schaltfläche abonnieren, damit Ihre Anwendung etwas nützliches macht, wenn ein Benutzer auf die Schaltfläche klickt.  
@@ -101,6 +101,6 @@ Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn 
 
 - [Ereignisse](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Veröffentlichen von Ereignissen, die den .NET-Richtlinien entsprechen](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Operatoren „-“ und „-=“ (C#-Referenz)](../../language-reference/operators/subtraction-operator.md)
 - [Operatoren „+“ und „+=“ (C#-Referenz)](../../language-reference/operators/addition-operator.md)

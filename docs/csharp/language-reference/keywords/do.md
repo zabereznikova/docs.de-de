@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 1d4323366e567dab4b27b07803d0c06e731611ce
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d75dd816278a876fa05d133e5eb189d606300a5c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738909"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401926"
 ---
 # <a name="do-c-reference"></a>do (C#-Referenz)
 
@@ -28,7 +28,7 @@ Sie können eine `do-while`-Schleife auch mit den Anweisungen [goto](goto.md), [
 
 Im folgenden Beispiel wird die Verwendung der `do`-Anweisung veranschaulicht. Klicken Sie auf **Run** (Ausführen), um den Beispielcode auszuführen. Danach können Sie Änderungen am Code vornehmen und ihn erneut ausführen.
 
-[!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
+[!code-csharp-interactive[do loop example](snippets/IterationKeywordsExamples.cs#4)]
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

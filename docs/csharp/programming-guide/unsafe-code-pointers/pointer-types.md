@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7bbfa6b2238458d3248da830cf9d6ac36551b431
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 492b37460c05ffbc82e020facb354be22706f8d3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507034"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396258"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 
@@ -53,7 +53,7 @@ Der Ausdruck `*myVariable` kennzeichnet die `int`-Variable, die sich an der in `
 
 Es gibt mehrere Beispiele von Zeigern in den Themen [fixed-Anweisung](../../language-reference/keywords/fixed-statement.md) und [Zeigerkonvertierungen](./pointer-conversions.md). Im folgenden Beispiel wird die Verwendung des `unsafe`-Schlüsselworts und der `fixed`-Anweisung sowie die Vorgehensweise zum Erhöhen eines inneren Zeigers veranschaulicht.  Sie können diesen Code in die Hauptmethode einer Konsolenanwendung einfügen, um ihn auszuführen. Diese Beispiele müssen mithilfe der Compileroption [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) kompiliert werden.
 
-[!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
+[!code-csharp[Using pointer types](snippets/FixedKeywordExamples.cs#5)]
 
 Der Dereferenzierungsoperator kann nicht auf Zeiger vom Typ `void*` angewendet werden. Sie können jedoch eine Umwandlung verwenden, um einen void-Zeiger in einen anderen Zeigertyp und umgekehrt zu konvertieren.
 

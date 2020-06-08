@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-ms.openlocfilehash: 87ae96944f9a9f2bbcefb54c343f429c75c3022d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: da1cb81c819e55f572e9faaabef4dd49ee7397de
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710387"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288679"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lesen von XML-Daten mithilfe von XPathDocument und XmlDocument
 Es gibt zwei Möglichkeiten, wie ein XML-Dokument in einem <xref:System.Xml.XPath?displayProperty=nameWithType>-Namespace gelesen werden kann. Zum einem kann ein XML-Dokument mithilfe der schreibgeschützten <xref:System.Xml.XPath.XPathDocument>-Klasse und zum anderen mithilfe der editierbaren <xref:System.Xml.XmlDocument>-Klasse im <xref:System.Xml?displayProperty=nameWithType>-Namespace gelesen werden.  
@@ -75,7 +75,7 @@ document.Load("books.xml");
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Zugreifen auf XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
-- [Bearbeiten von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
-- [Schemavalidierung mithilfe von „XPathNavigator“](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](process-xml-data-using-the-xpath-data-model.md)
+- [Zugreifen auf XML-Daten mit XPathNavigator](accessing-xml-data-using-xpathnavigator.md)
+- [Bearbeiten von XML-Daten mit XPathNavigator](editing-xml-data-using-xpathnavigator.md)
+- [Schemavalidierung mithilfe von „XPathNavigator“](schema-validation-using-xpathnavigator.md)
