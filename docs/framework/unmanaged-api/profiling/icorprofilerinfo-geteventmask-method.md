@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: ec34cc13-45a3-4695-abc3-b3347d4e6fc2
 topic_type:
 - apiref
-ms.openlocfilehash: 63f19fe899abd75380249e171f248480949bc471
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7faa4a5f7b1ca1fbf165c40eb3a3cb32a42a21a4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863906"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498335"
 ---
-# <a name="icorprofilerinfogeteventmask-method"></a><span data-ttu-id="18526-102">ICorProfilerInfo::GetEventMask-Methode</span><span class="sxs-lookup"><span data-stu-id="18526-102">ICorProfilerInfo::GetEventMask Method</span></span>
-<span data-ttu-id="18526-103">Ruft die aktuellen Ereigniskategorien ab, für die der Profiler Ereignisbenachrichtigungen von der Common Language Runtime (CLR) erhalten soll.</span><span class="sxs-lookup"><span data-stu-id="18526-103">Gets the current event categories for which the profiler wants to receive event notifications from the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfogeteventmask-method"></a><span data-ttu-id="bad8d-102">ICorProfilerInfo::GetEventMask-Methode</span><span class="sxs-lookup"><span data-stu-id="bad8d-102">ICorProfilerInfo::GetEventMask Method</span></span>
+<span data-ttu-id="bad8d-103">Ruft die aktuellen Ereigniskategorien ab, für die der Profiler Ereignisbenachrichtigungen von der Common Language Runtime (CLR) erhalten soll.</span><span class="sxs-lookup"><span data-stu-id="bad8d-103">Gets the current event categories for which the profiler wants to receive event notifications from the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18526-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="18526-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bad8d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bad8d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetEventMask(  
     [out] DWORD *pdwEvents);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="18526-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="18526-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bad8d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="bad8d-105">Parameters</span></span>  
  `pdwEvents`  
- <span data-ttu-id="18526-106">[out] Ein Zeiger auf einen 4-Byte-Wert, der die Ereigniskategorien angibt.</span><span class="sxs-lookup"><span data-stu-id="18526-106">[out] A pointer to a 4-byte value that specifies the categories of events.</span></span> <span data-ttu-id="18526-107">Jedes Bit steuert eine andere Funktion, ein Verhalten oder den Ereignistyp.</span><span class="sxs-lookup"><span data-stu-id="18526-107">Each bit controls a different capability, behavior, or type of event.</span></span> <span data-ttu-id="18526-108">Die Bits werden in der [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) -Enumeration beschrieben.</span><span class="sxs-lookup"><span data-stu-id="18526-108">The bits are described in the [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="bad8d-106">[out] Ein Zeiger auf einen 4-Byte-Wert, der die Ereigniskategorien angibt.</span><span class="sxs-lookup"><span data-stu-id="bad8d-106">[out] A pointer to a 4-byte value that specifies the categories of events.</span></span> <span data-ttu-id="bad8d-107">Jedes Bit steuert eine andere Funktion, ein Verhalten oder den Ereignistyp.</span><span class="sxs-lookup"><span data-stu-id="bad8d-107">Each bit controls a different capability, behavior, or type of event.</span></span> <span data-ttu-id="bad8d-108">Die Bits werden in der [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) -Enumeration beschrieben.</span><span class="sxs-lookup"><span data-stu-id="bad8d-108">The bits are described in the [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) enumeration.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="18526-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="18526-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bad8d-109">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="bad8d-109">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="18526-110">Anstelle dieser Methode sollte die [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) -Methode aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="18526-110">You should call the [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) method instead of this method.</span></span> <span data-ttu-id="18526-111">Obwohl die `SetEventMask`-Methode weiterhin unterstützt wird, bietet [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) zusätzliche Funktionen.</span><span class="sxs-lookup"><span data-stu-id="18526-111">Although the `SetEventMask` method continues to be supported, [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) provides additional functionality.</span></span>  
+> <span data-ttu-id="bad8d-110">Anstelle dieser Methode sollte die [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) -Methode aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="bad8d-110">You should call the [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) method instead of this method.</span></span> <span data-ttu-id="bad8d-111">Obwohl die- `SetEventMask` Methode weiterhin unterstützt wird, bietet [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) zusätzliche Funktionen.</span><span class="sxs-lookup"><span data-stu-id="bad8d-111">Although the `SetEventMask` method continues to be supported, [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) provides additional functionality.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="18526-112">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="18526-112">Requirements</span></span>  
- <span data-ttu-id="18526-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="18526-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bad8d-112">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="bad8d-112">Requirements</span></span>  
+ <span data-ttu-id="bad8d-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bad8d-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="18526-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="18526-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="bad8d-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bad8d-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="18526-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18526-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bad8d-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bad8d-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="18526-116">**.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18526-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bad8d-116">**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bad8d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18526-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="18526-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bad8d-117">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="bad8d-117">See also</span></span>
 
-- [<span data-ttu-id="18526-118">GetEventMask2-Methode</span><span class="sxs-lookup"><span data-stu-id="18526-118">GetEventMask2 Method</span></span>](icorprofilerinfo5-geteventmask2-method.md)
-- [<span data-ttu-id="18526-119">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="18526-119">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="bad8d-118">GetEventMask2-Methode</span><span class="sxs-lookup"><span data-stu-id="bad8d-118">GetEventMask2 Method</span></span>](icorprofilerinfo5-geteventmask2-method.md)
+- [<span data-ttu-id="bad8d-119">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="bad8d-119">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
