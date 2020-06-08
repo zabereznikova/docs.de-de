@@ -16,12 +16,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120863"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288276"
 ---
 # <a name="localizability-review"></a>Überprüfung der Lokalisierbarkeit
 
@@ -38,7 +38,7 @@ Die Überprüfung der Lokalisierbarkeit umfasst die folgenden drei Prüfungen:
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>Implementieren von Globalisierungsempfehlungen
 
-Wenn Sie Ihre Anwendung unter Berücksichtigung einer späteren Lokalisierung entworfen und entwickelt und dabei die im Artikel [Globalisierung](../../../docs/standard/globalization-localization/globalization.md) erläuterten Empfehlungen befolgt haben, sollte Ihre Anwendung der Überprüfung der Lokalisierbarkeit hinsichtlich der Qualitätssicherung größtenteils standhalten. Andernfalls sollten Sie an dieser Stelle die Empfehlungen hinsichtlich einer [Globalisierung](../../../docs/standard/globalization-localization/globalization.md) lesen und implementieren und die Fehler im Quellcode, die eine Lokalisierung unmöglich machen, beheben.
+Wenn Sie Ihre Anwendung unter Berücksichtigung einer späteren Lokalisierung entworfen und entwickelt und dabei die im Artikel [Globalisierung](globalization.md) erläuterten Empfehlungen befolgt haben, sollte Ihre Anwendung der Überprüfung der Lokalisierbarkeit hinsichtlich der Qualitätssicherung größtenteils standhalten. Andernfalls sollten Sie an dieser Stelle die Empfehlungen hinsichtlich einer [Globalisierung](globalization.md) lesen und implementieren und die Fehler im Quellcode, die eine Lokalisierung unmöglich machen, beheben.
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>Arbeiten mit kulturabhängigen Funktionen
@@ -75,11 +75,11 @@ Vor der Lokalisierung Ihrer Anwendung sollten Sie sie mit internationalen Daten 
 
 - Zeichenfolgenvergleiche oder Vergleiche im Hinblick auf Gleichheit, die unerwartete Ergebnisse zurückgeben
 
-Wenn Sie bei der Anwendungsentwicklung die Globalisierungsempfehlungen befolgt, kulturabhängige Features ordnungsgemäß behandelt und im Zuge von Tests Lokalisierungsprobleme ermittelt und behoben haben, können Sie mit dem nächsten Schritt der [Lokalisierung](../../../docs/standard/globalization-localization/localization.md) fortfahren.
+Wenn Sie bei der Anwendungsentwicklung die Globalisierungsempfehlungen befolgt, kulturabhängige Features ordnungsgemäß behandelt und im Zuge von Tests Lokalisierungsprobleme ermittelt und behoben haben, können Sie mit dem nächsten Schritt der [Lokalisierung](localization.md) fortfahren.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
-- [Lokalisierung](../../../docs/standard/globalization-localization/localization.md)
-- [Globalisierung](../../../docs/standard/globalization-localization/globalization.md)
-- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
+- [Globalisierung und Lokalisierung](index.md)
+- [Lokalisierung](localization.md)
+- [Globalisierung](globalization.md)
+- [Ressourcen in Desktop-Apps](../../framework/resources/index.md)

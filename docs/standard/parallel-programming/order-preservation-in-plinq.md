@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588632"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290654"
 ---
 # <a name="order-preservation-in-plinq"></a>Beibehaltung der Reihenfolge in PLINQ
 Das Ziel in PLINQ ist, die Leistung zu maximieren und gleichzeitig die korrekte Ausführung sicherzustellen. Eine Abfrage sollte so schnell wie möglich ausgeführt werden, dabei jedoch stets die korrekten Ergebnissen erzeugen. In einigen Fällen muss für eine korrekte Ausführung die Reihenfolge der Quellsequenz beibehalten werden, eine Sortierung kann jedoch sehr rechenintensiv sein. PLINQ behält die Reihenfolge der Quellsequenz daher standardmäßig nicht bei. In dieser Hinsicht ähnelt PLINQ [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], unterscheidet sich jedoch von LINQ to Objects, wo die Reihenfolge beibehalten wird.  
   
- Um das Standardverhalten zu überschreiben, können Sie mithilfe des <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>-Operators in der Quellsequenz die Beibehaltung der Reihenfolge aktivieren. Sie können die Beibehaltung der Reihenfolge später in der Abfrage mit der <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>-Methode deaktivieren. Bei beiden Methoden wird die Abfrage auf Grundlage der Heuristik verarbeitet, die bestimmt, ob die Abfrage parallel oder sequenziell ausgeführt wird. Weitere Informationen finden Sie unter [Understanding Speedup in PLINQ (Grundlagen zur Beschleunigung in PLINQ)](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+ Um das Standardverhalten zu überschreiben, können Sie mithilfe des <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>-Operators in der Quellsequenz die Beibehaltung der Reihenfolge aktivieren. Sie können die Beibehaltung der Reihenfolge später in der Abfrage mit der <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>-Methode deaktivieren. Bei beiden Methoden wird die Abfrage auf Grundlage der Heuristik verarbeitet, die bestimmt, ob die Abfrage parallel oder sequenziell ausgeführt wird. Weitere Informationen finden Sie unter [Understanding Speedup in PLINQ (Grundlagen zur Beschleunigung in PLINQ)](understanding-speedup-in-plinq.md).  
   
  Im folgenden Beispiel wird eine ungeordnete parallele Abfrage gezeigt, die alle mit einer Bedingung übereinstimmenden Elemente heraus filtert, ohne die Ergebnisse auf irgendeine Weise zu sortieren.  
   
@@ -122,5 +122,5 @@ Das Ziel in PLINQ ist, die Leistung zu maximieren und gleichzeitig die korrekte 
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](introduction-to-plinq.md)
+- [Parallele Programmierung](index.md)

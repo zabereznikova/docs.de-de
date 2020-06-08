@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635908"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289342"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 
@@ -267,7 +267,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 
 ### <a name="events"></a>Ereignisse
 
- Ein Ereignis definiert ein Ereignis, auf das reagiert werden kann, und definiert Methoden, mit denen das Ereignis ausgelöst und abonniert bzw. sein Abonnement aufgehoben werden kann. Häufig werden mithilfe von Ereignissen andere Typen über Zustandsänderungen informiert. Weitere Informationen finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
+ Ein Ereignis definiert ein Ereignis, auf das reagiert werden kann, und definiert Methoden, mit denen das Ereignis ausgelöst und abonniert bzw. sein Abonnement aufgehoben werden kann. Häufig werden mithilfe von Ereignissen andere Typen über Zustandsänderungen informiert. Weitere Informationen finden Sie unter [Ereignisse](../events/index.md).  
 
 ### <a name="nested-types"></a>Geschachtelte Typen
 
@@ -307,5 +307,5 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET API-Browser](/dotnet/api)
-- [Übersicht: Common Language Runtime (CLR)](../../../docs/standard/clr.md)
-- [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)
+- [Übersicht: Common Language Runtime (CLR)](../clr.md)
+- [Typkonvertierung in .NET](type-conversion.md)

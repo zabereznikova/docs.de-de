@@ -10,16 +10,16 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129004"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291161"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Anhalten und Unterbrechen von Threads
 
-Die gängigsten Verfahren zum Synchronisieren der Aktivitäten von Threads bestehen darin, Threads zu blockieren und freizugeben bzw. Objekte oder Codebereiche zu sperren. Weitere Informationen zu diesen Sperr- und Blockierungsmechanismen finden Sie unter [Übersicht über Synchronisierungsprimitiven](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+Die gängigsten Verfahren zum Synchronisieren der Aktivitäten von Threads bestehen darin, Threads zu blockieren und freizugeben bzw. Objekte oder Codebereiche zu sperren. Weitere Informationen zu diesen Sperr- und Blockierungsmechanismen finden Sie unter [Übersicht über Synchronisierungsprimitiven](overview-of-synchronization-primitives.md).  
   
  Sie können auch vorsehen, dass Threads sich selbst deaktivieren (in den Standbymodus versetzen). Wenn Threads blockiert oder deaktiviert sind, können Sie sie mit einer <xref:System.Threading.ThreadInterruptedException> wieder aus ihrem Wartezustand holen.  
   
@@ -45,13 +45,13 @@ Die gängigsten Verfahren zum Synchronisieren der Aktivitäten von Threads beste
   
 - <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> aktiviert einen Thread aus jedem Wartezustand heraus und veranlasst, dass eine <xref:System.Threading.ThreadInterruptedException> im Zielthread ausgelöst wird.  
   
-- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> aktiviert einen Thread aus jedem Wartezustand heraus und veranlasst, dass eine <xref:System.Threading.ThreadAbortException> im Thread ausgelöst wird. Ausführliche Informationen finden Sie unter [Zerstören von Threads](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> aktiviert einen Thread aus jedem Wartezustand heraus und veranlasst, dass eine <xref:System.Threading.ThreadAbortException> im Thread ausgelöst wird. Ausführliche Informationen finden Sie unter [Zerstören von Threads](destroying-threads.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>
 - <xref:System.Threading.ThreadAbortException>
-- [Threading](../../../docs/standard/threading/index.md)
-- [Verwenden von Threads und Threading](../../../docs/standard/threading/using-threads-and-threading.md)
-- [Übersicht über Synchronisierungsprimitiven](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Threading](index.md)
+- [Verwenden von Threads und Threading](using-threads-and-threading.md)
+- [Übersicht über Synchronisierungsprimitiven](overview-of-synchronization-primitives.md)

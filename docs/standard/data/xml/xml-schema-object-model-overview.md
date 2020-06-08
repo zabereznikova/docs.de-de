@@ -3,12 +3,12 @@ title: Übersicht über das XML-Schemaobjektmodell (SOM)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-ms.openlocfilehash: 3ebf0cd06ebea3092ef8aa42debe0afeac9be4f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0358efdcc2e8b86f589eea312d791610da5238db
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129148"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290330"
 ---
 # <a name="xml-schema-object-model-overview"></a>Übersicht über das XML-Schemaobjektmodell (SOM)
 Das SOM (Schemaobjektmodell) in Microsoft .NET Framework ist eine umfangreiche API, mit der Sie Schemata programmgesteuert erstellen, bearbeiten und validieren können. Das SOM arbeitet mit XML-Schemadokumenten auf ähnliche Weise, wie das DOM (Document Object Model) mit XML-Dokumenten arbeitet. XML-Schemadokumente sind gültige XML-Dateien, die sobald sie in das SOM geladen werden, eine Bedeutung zur Struktur und Gültigkeit von anderen XML-Dokumenten tragen, die dem Schema entsprechen.  
@@ -38,10 +38,10 @@ Das SOM (Schemaobjektmodell) in Microsoft .NET Framework ist eine umfangreiche A
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Einfügen oder Importieren von XML-Schemas](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema-Compilation-Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Lesen und Schreiben von XML-Schemas](reading-and-writing-xml-schemas.md)
+- [Erstellen von XML-Schemas](building-xml-schemas.md)
+- [Durchlaufen von XML-Schemas](traversing-xml-schemas.md)
+- [Bearbeiten von XML-Schemas](editing-xml-schemas.md)
+- [Einfügen oder Importieren von XML-Schemas](including-or-importing-xml-schemas.md)
+- [„XmlSchemaSet“ zur Kompilierung von Schemas](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema-Compilation-Infoset](post-schema-compilation-infoset.md)

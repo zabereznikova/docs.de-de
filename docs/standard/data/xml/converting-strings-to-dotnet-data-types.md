@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fda5441c58d14b91a9eca16fff9149c8795f95b9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160351"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289225"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Konvertieren von Zeichenfolgen in .NET Framework-Datentypen
 Wenn Sie eine Zeichenfolge in einen .NET Framework-Datentyp konvertieren möchten, verwenden Sie die **XmlConvert**-Methode, die den Anwendungsanforderungen entspricht. Eine Liste sämtlicher in der **XmlConvert**-Klasse verfügbarer Konvertierungsmethoden finden Sie unter <xref:System.Xml.XmlConvert>.  
@@ -133,5 +133,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konvertierung von XML-Datentypen](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [Konvertieren von .NET Framework-Typen in Zeichenfolgen](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [Konvertierung von XML-Datentypen](conversion-of-xml-data-types.md)
+- [Konvertieren von .NET Framework-Typen in Zeichenfolgen](converting-dotnet-types-to-strings.md)

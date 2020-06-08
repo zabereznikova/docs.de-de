@@ -10,19 +10,19 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 3a269e1f3e8fd6e982db3c241c113f471134f9d3
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fbc42ff696107f4a1b06d3611fc97a09cc4a3542
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378450"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84276698"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Attribute zur Steuerung der XML-Serialisierung
-Sie können die in der folgenden Tabelle aufgeführten Attribute auf Klassen und Klassenmember anwenden, um zu steuern, wie Instanzen der Klasse durch die <xref:System.Xml.Serialization.XmlSerializer>-Klasse serialisiert bzw. deserialisiert werden. Wie die XML-Serialisierung mithilfe dieser Attribute gesteuert wird, wird unter [Steuern der XML-Serialisierung mit Attributen](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) beschrieben.  
+Sie können die in der folgenden Tabelle aufgeführten Attribute auf Klassen und Klassenmember anwenden, um zu steuern, wie Instanzen der Klasse durch die <xref:System.Xml.Serialization.XmlSerializer>-Klasse serialisiert bzw. deserialisiert werden. Wie die XML-Serialisierung mithilfe dieser Attribute gesteuert wird, wird unter [Steuern der XML-Serialisierung mit Attributen](controlling-xml-serialization-using-attributes.md) beschrieben.  
   
- Diese Attribute können auch verwendet werden, um die durch einen XML-Webdienst generierten literalen SOAP-Nachrichten zu steuern. Weitere Informationen zur Anwendung dieser Attribute auf eine XML-Webdienstmethode finden Sie unter [XML-Serialisierung mit XML-Webdiensten](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md).  
+ Diese Attribute können auch verwendet werden, um die durch einen XML-Webdienst generierten literalen SOAP-Nachrichten zu steuern. Weitere Informationen zur Anwendung dieser Attribute auf eine XML-Webdienstmethode finden Sie unter [XML-Serialisierung mit XML-Webdiensten](xml-serialization-with-xml-web-services.md).  
   
- Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/standard/attributes/index.md).  
+ Weitere Informationen zu Attributen finden Sie unter [Attribute](../attributes/index.md).  
   
 |Attribut|Betrifft|Bedeutung|  
 |---------------|----------------|---------------|  
@@ -42,13 +42,13 @@ Sie können die in der folgenden Tabelle aufgeführten Attribute auf Klassen und
   
  Zusätzlich zu diesen Attributen, die sich alle im <xref:System.Xml.Serialization>-Namespace befinden, können Sie auch das <xref:System.ComponentModel.DefaultValueAttribute>-Attribut auf ein Feld anwenden. Durch **DefaultValueAttribute** wird der Wert festgelegt, der dem Member automatisch zugewiesen wird, falls kein Wert angegeben wurde.  
   
- Informationen zur Steuerung der XML-Serialisierung von codiertem SOAP finden Sie unter [Attribute zur Steuerung der Serialisierung von codiertem SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+ Informationen zur Steuerung der XML-Serialisierung von codiertem SOAP finden Sie unter [Attribute zur Steuerung der Serialisierung von codiertem SOAP](attributes-that-control-encoded-soap-serialization.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Steuern der XML-Serialisierung mit Attributen](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [How to: Angeben eines alternativen Elementnamens für einen XML-Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
-- [How to: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md).
-- [How to: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md).
+- [Steuern der XML-Serialisierung mit Attributen](controlling-xml-serialization-using-attributes.md)
+- [How to: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+- [How to: Serialisieren eines Objekts](how-to-serialize-an-object.md).
+- [How to: Deserialisieren eines Objekts](how-to-deserialize-an-object.md).

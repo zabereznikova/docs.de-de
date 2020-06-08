@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 33b8c49033c901917e674879048558799f484194
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976493"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291655"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Typkonvertierung in .NET Framework
 Jeder Wert verfügt über einen zugeordneten Typ, durch den Attribute, z. B. der dem Wert zugewiesene Speicherplatz, der zulässige Wertebereich und die verfügbar gemachten Member, festgelegt werden. Viele Werte können durch mehrere Typen ausgedrückt werden. Beispielsweise kann der Wert 4 als ganze Zahl oder als Gleitkommawert dargestellt werden. Durch Typkonvertierung wird ein Wert neuen Typs erstellt, der mit dem Wert des alten Typs äquivalent ist. Die Identität (oder der exakte Wert) des ursprünglichen Objekts bleibt dabei nicht immer erhalten.  
@@ -157,7 +157,7 @@ Jeder Wert verfügt über einen zugeordneten Typ, durch den Attribute, z. B. de
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- Eine Tabelle, in der die von der <xref:System.Convert>-Klasse unterstützten Erweiterungskonvertierungen und einschränkenden Konvertierungen aufgeführt sind, finden Sie unter [Typkonvertierungstabellen](../../../docs/standard/base-types/conversion-tables.md).  
+ Eine Tabelle, in der die von der <xref:System.Convert>-Klasse unterstützten Erweiterungskonvertierungen und einschränkenden Konvertierungen aufgeführt sind, finden Sie unter [Typkonvertierungstabellen](conversion-tables.md).  
 
 ### <a name="custom-conversions-with-the-changetype-method"></a>Benutzerdefinierte Konvertierungen mit der ChangeType-Methode  
  Zusätzlich zur Unterstützung von Konvertierungen in die einzelnen Basistypen kann die <xref:System.Convert>-Klasse zum Konvertieren eines benutzerdefinierten Typs in einen oder mehrere vordefinierte Typen verwendet werden. Diese Konvertierung wird von der <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType>-Methode ausgeführt, die wiederum einen Aufruf der <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType>-Methode des `value`-Parameters umschließt. Dies bedeutet, dass das vom `value`-Parameter dargestellte Objekt eine Implementierung der <xref:System.IConvertible>-Schnittstelle bereitstellen muss.  
@@ -194,4 +194,4 @@ Jeder Wert verfügt über einen zugeordneten Typ, durch den Attribute, z. B. de
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>
-- [Typkonvertierungstabellen](../../../docs/standard/base-types/conversion-tables.md)
+- [Typkonvertierungstabellen](conversion-tables.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 000419e63e86607cd76728ae6e15ac6cd67b87f4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127601"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277647"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analysieren numerischer Zeichenfolgen in .NET
-Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `TryParse`, mit denen Sie die Zeichenfolgendarstellung einer Zahl in einen numerischen Typ konvertieren können. Mit diesen Methoden können Sie Zeichenfolgen analysieren, die mithilfe der Formatzeichenfolgen erstellt wurden, die unter [Standardformatzeichenfolgen für Zahlen](../../../docs/standard/base-types/standard-numeric-format-strings.md) und [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md) dokumentiert sind. In der Standardeinstellung können die Methoden `Parse` und `TryParse` Zeichenfolgen, die nur Vorkommastellen enthalten, erfolgreich in ganzzahlige Werte konvertieren. Sie können Zeichenfolgen, die Vor- und Nachkommastellen, Gruppentrennzeichen und ein Dezimaltrennzeichen enthalten, erfolgreich in Gleitkommawerte konvertieren. Die `Parse`-Methode löst eine Ausnahme aus, wenn der Vorgang einen Fehler verursacht, wohingegen die `TryParse`-Methode `false` zurückgibt.  
+Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `TryParse`, mit denen Sie die Zeichenfolgendarstellung einer Zahl in einen numerischen Typ konvertieren können. Mit diesen Methoden können Sie Zeichenfolgen analysieren, die mithilfe der Formatzeichenfolgen erstellt wurden, die unter [Standardformatzeichenfolgen für Zahlen](standard-numeric-format-strings.md) und [Benutzerdefinierte Zahlenformatzeichenfolgen](custom-numeric-format-strings.md) dokumentiert sind. In der Standardeinstellung können die Methoden `Parse` und `TryParse` Zeichenfolgen, die nur Vorkommastellen enthalten, erfolgreich in ganzzahlige Werte konvertieren. Sie können Zeichenfolgen, die Vor- und Nachkommastellen, Gruppentrennzeichen und ein Dezimaltrennzeichen enthalten, erfolgreich in Gleitkommawerte konvertieren. Die `Parse`-Methode löst eine Ausnahme aus, wenn der Vorgang einen Fehler verursacht, wohingegen die `TryParse`-Methode `false` zurückgibt.  
   
 ## <a name="parsing-and-format-providers"></a>Analyse und Formatanbieter  
  In der Regel unterscheiden sich die Zeichenfolgendarstellungen numerischer Werte je nach Kultur. Elemente numerischer Zeichenfolgen wie Währungssymbole, Gruppentrennzeichen (oder Tausendertrennzeichen) und Dezimaltrennzeichen variieren alle je nach Kultur. Analysemethoden verwenden entweder implizit oder explizit einen Formatanbieter, der diese kulturspezifischen Variationen erkennt. Wird in einem Aufruf der `Parse`- oder der `TryParse`-Methode kein Formatanbieter angegeben, so wird der der aktuellen Threadkultur zugeordnete Formatanbieter verwendet (das von der <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene <xref:System.Globalization.NumberFormatInfo>-Objekt).  
@@ -84,5 +84,5 @@ Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `T
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Globalization.NumberStyles>
-- [Analysieren von Zeichenfolgen](../../../docs/standard/base-types/parsing-strings.md)
-- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
+- [Analysieren von Zeichenfolgen](parsing-strings.md)
+- [Formatierung von Typen](formatting-types.md)

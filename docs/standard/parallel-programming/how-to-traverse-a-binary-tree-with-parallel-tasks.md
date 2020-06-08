@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
-ms.openlocfilehash: b79337e6ee8057506ff87c696cecd6b038eeebfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ac81a61691ec20daafc9e18978ba5814a150383
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141640"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288068"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Gewusst wie: Durchlaufen einer Binärstruktur mit parallelen Aufgaben
 Das folgende Beispiel zeigt zwei Möglichkeiten, wie parallele Aufgaben verwendet werden können, um eine Datenstruktur zu durchlaufen. Die Erstellung der Struktur selbst dient als Übung.  
@@ -26,4 +26,4 @@ Das folgende Beispiel zeigt zwei Möglichkeiten, wie parallele Aufgaben verwende
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Task Parallel Library (TPL)](task-parallel-library-tpl.md)

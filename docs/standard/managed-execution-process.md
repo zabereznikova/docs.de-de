@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cfe66f188c5abf245370f841d4b4d31e7b6db8b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160221"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290070"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
 <a name="introduction"></a> Der verwaltete Ausführungsprozess schließt die folgenden Schritte ein, die weiter unten in diesem Thema ausführlich erläutert werden:  
@@ -40,7 +40,7 @@ ms.locfileid: "78160221"
 ## <a name="choosing-a-compiler"></a>Auswählen eines Compilers  
  Um die Vorteile der Common Language Runtime (CLR) nutzen zu können, müssen Sie mindestens einen Sprachcompiler für die Laufzeit verwenden, z. B. Compiler für Visual Basic, C#, Visual C++, F# oder einen der vielen Compiler von Drittanbietern, wie etwa einen Eiffel-, Perl- oder COBOL-Compiler.  
   
- Da es sich um eine mehrsprachige Ausführungsumgebung handelt, unterstützt die Laufzeit eine große Zahl von Datentypen und Sprachfeatures. Die verfügbaren Laufzeitfunktionen hängen vom verwendeten Sprachcompiler ab. Mithilfe dieser Funktionen entwerfen Sie den Code. Die vom Code zu verwendende Syntax wird durch den Compiler, nicht durch die Laufzeit festgelegt. Wenn eine Komponente für in anderen Sprachen geschriebene Komponenten vollständig verwendbar sein soll, dürfen die exportierten Typen der Komponente ausschließlich Sprachfunktionen verfügbar machen, die unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) enthalten sind. Sie können das <xref:System.CLSCompliantAttribute> -Attribut verwenden, um sicherzustellen, dass der Code CLS-kompatibel ist. Weitere Informationen finden Sie unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md).  
+ Da es sich um eine mehrsprachige Ausführungsumgebung handelt, unterstützt die Laufzeit eine große Zahl von Datentypen und Sprachfeatures. Die verfügbaren Laufzeitfunktionen hängen vom verwendeten Sprachcompiler ab. Mithilfe dieser Funktionen entwerfen Sie den Code. Die vom Code zu verwendende Syntax wird durch den Compiler, nicht durch die Laufzeit festgelegt. Wenn eine Komponente für in anderen Sprachen geschriebene Komponenten vollständig verwendbar sein soll, dürfen die exportierten Typen der Komponente ausschließlich Sprachfunktionen verfügbar machen, die unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](language-independence-and-language-independent-components.md) (CLS) enthalten sind. Sie können das <xref:System.CLSCompliantAttribute> -Attribut verwenden, um sicherzustellen, dass der Code CLS-kompatibel ist. Weitere Informationen finden Sie unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](language-independence-and-language-independent-components.md).  
   
  [Zurück zum Anfang](#introduction)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "78160221"
   
 - Einen .NET Framework-Just-In-Time (JIT)-Compiler.  
   
-- Den [Native Image Generator (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) von .NET Framework  
+- Den [Native Image Generator (Ngen.exe)](../framework/tools/ngen-exe-native-image-generator.md) von .NET Framework  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Kompilierung durch den JIT-Compiler  
  Bei der JIT-Kompilierung wird MSIL zur Anwendungslaufzeit auf Abruf in systemeigenen Code konvertiert, sobald der Inhalt einer Assembly geladen und ausgeführt wird. Da die Common Language Runtime für jede unterstützte CPU-Architektur einen JIT-Compiler bereitstellt, können Entwickler eine Reihe von MSIL-Assemblys erstellen, die JIT-kompiliert und auf unterschiedlichen Computern mit abweichender Architektur ausgeführt werden können. Wenn der verwaltete Code jedoch plattformspezifische systemeigene APIs oder eine plattformspezifische Klassenbibliothek aufruft, kann er nur unter diesem Betriebssystem ausgeführt werden.  
@@ -66,7 +66,7 @@ ms.locfileid: "78160221"
  Bei der JIT-Kompilierung wird berücksichtigt, dass ein Teil des Codes bei der Ausführung möglicherweise nicht aufgerufen wird. Statt für das Konvertieren der gesamten MSIL einer PE-Datei in systemeigenen Code Zeit und Speicherplatz zu beanspruchen, wird die MSIL während der Ausführung nach Bedarf konvertiert. Der resultierende systemeigene Code wird im Arbeitsspeicher gespeichert, sodass bei nachfolgenden Aufrufen im Kontext dieses Prozesses darauf zugegriffen werden kann. Das Ladeprogramm erstellt einen Stub und fügt diesen an jede Methode des Typs an, wenn dieser Typ geladen und initialisiert wird. Beim ersten Aufruf der Methode übergibt der Stub die Steuerung an den JIT-Compiler, der die MSIL für diese Methode in systemeigenen Code konvertiert und den Stub so ändert, dass er direkt auf den generierten systemeigenen Code verweist. Nachfolgende Aufrufe der JIT-kompilierten Methode setzen deshalb direkt beim systemeigenen Code an.  
   
 ### <a name="install-time-code-generation-using-ngenexe"></a>Codegenerierung bei der Installation mithilfe von NGen.exe  
- Da der JIT-Compiler die MSIL einer Assembly in systemeigenen Code konvertiert, wenn einzelne in dieser Assembly definierte Methoden aufgerufen werden, treten zur Laufzeit unweigerlich Leistungseinbußen auf. In den meisten Fällen sind diese Leistungseinbußen hinnehmbar. Eine größere Rolle spielt jedoch, dass der vom JIT-Compiler generierte Code an den Prozess gebunden ist, durch den die Kompilierung ausgelöst wurde. Er kann also nicht für mehrere Prozesse verwendet werden. Damit der generierte Code für mehrere Aufrufe einer Anwendung oder mehrere Prozesse verwendet werden kann, die eine Gruppe von Assemblys gemeinsam nutzen, unterstützt die Common Language Runtime einen vorzeitigen Kompilierungsmodus. Dieser vorzeitige Kompilierungsmodus verwendet den [Native Image Generator (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md), um MSIL-Assemblys ähnlich wie der JIT-Compiler in nativen Code zu konvertieren. Die Ausführung von Ngen.exe unterscheidet sich jedoch auf drei Weisen von der Ausführung des JIT-Compilers:  
+ Da der JIT-Compiler die MSIL einer Assembly in systemeigenen Code konvertiert, wenn einzelne in dieser Assembly definierte Methoden aufgerufen werden, treten zur Laufzeit unweigerlich Leistungseinbußen auf. In den meisten Fällen sind diese Leistungseinbußen hinnehmbar. Eine größere Rolle spielt jedoch, dass der vom JIT-Compiler generierte Code an den Prozess gebunden ist, durch den die Kompilierung ausgelöst wurde. Er kann also nicht für mehrere Prozesse verwendet werden. Damit der generierte Code für mehrere Aufrufe einer Anwendung oder mehrere Prozesse verwendet werden kann, die eine Gruppe von Assemblys gemeinsam nutzen, unterstützt die Common Language Runtime einen vorzeitigen Kompilierungsmodus. Dieser vorzeitige Kompilierungsmodus verwendet den [Native Image Generator (Ngen.exe)](../framework/tools/ngen-exe-native-image-generator.md), um MSIL-Assemblys ähnlich wie der JIT-Compiler in nativen Code zu konvertieren. Die Ausführung von Ngen.exe unterscheidet sich jedoch auf drei Weisen von der Ausführung des JIT-Compilers:  
   
 - Die Konvertierung von MSIL in systemeigenen Code wird vor und nicht während der Ausführung der Anwendung durchgeführt.  
   
@@ -107,12 +107,12 @@ ms.locfileid: "78160221"
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht](../../docs/framework/get-started/overview.md)
-- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md)
-- [Metadaten und selbstbeschreibende Komponenten](../../docs/standard/metadata-and-self-describing-components.md)
-- [Ilasm.exe (IL-Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Sicherheit](../../docs/standard/security/index.md)
-- [Interoperabilität mit nicht verwaltetem Code](../../docs/framework/interop/index.md)
-- [Bereitstellung](../../docs/framework/deployment/net-framework-applications.md)
+- [Übersicht](../framework/get-started/overview.md)
+- [Sprachunabhängigkeit und sprachunabhängige Komponenten](language-independence-and-language-independent-components.md)
+- [Metadaten und selbstbeschreibende Komponenten](metadata-and-self-describing-components.md)
+- [Ilasm.exe (IL-Assembler)](../framework/tools/ilasm-exe-il-assembler.md)
+- [Sicherheit](security/index.md)
+- [Interoperabilität mit nicht verwaltetem Code](../framework/interop/index.md)
+- [Bereitstellung](../framework/deployment/net-framework-applications.md)
 - [Assemblys in .NET](assembly/index.md)
-- [Anwendungsdomänen](../../docs/framework/app-domains/application-domains.md)
+- [Anwendungsdomänen](../framework/app-domains/application-domains.md)

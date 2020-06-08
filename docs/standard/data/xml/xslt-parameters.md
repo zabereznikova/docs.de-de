@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7651360b375071c48ba0d23b64881ac794e51e86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709698"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282531"
 ---
 # <a name="xslt-parameters"></a>XSLT-Parameter
 XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzugefügt. Dabei werden ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.  
@@ -68,4 +68,4 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT Transformations (XSLT-Transformationen)](xslt-transformations.md)

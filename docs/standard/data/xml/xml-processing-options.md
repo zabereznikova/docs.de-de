@@ -3,12 +3,12 @@ title: XML-Verarbeitungsoptionen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-ms.openlocfilehash: 1707ed10d944a518872132dded40751026a4c8e7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 544c3467f46f5bebf79cb95906faeca7926c3824
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709919"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291421"
 ---
 # <a name="xml-processing-options"></a>XML-Verarbeitungsoptionen
 Eine Liste der Microsoft-Technologien zur Verarbeitung von XML-Daten finden Sie in den folgenden Tabellen.  
@@ -22,7 +22,7 @@ Eine Liste der Microsoft-Technologien zur Verarbeitung von XML-Daten finden Sie 
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Streambasiert|-   Stellt eine schnelle, vorwärts gerichtete Methode zum Generieren von XML-Daten ohne Zwischenspeicherung bereit.<br />-   Sie können Objekte mithilfe der <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType>-Methode erstellen und die für das Objekt zu aktivierenden Funktionen mithilfe der <xref:System.Xml.XmlWriterSettings>-Klasse angeben.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Im Arbeitsspeicher|-   Implementiert die W3C-Empfehlungen [Document Object Model (DOM) Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) und [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/).<br />-   Zum Erstellen, Einfügen, Entfernen und Ändern von Knoten können Sie die Methoden und Eigenschaften verwenden, die auf dem vertrauten DOM-Modell basieren.<br />-   Verwenden Sie diese Option zum Ändern vorhandenen Codes, der W3C DOM verwendet.|  
 |<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|Im Arbeitsspeicher|-   Bietet über ein Cursormodell verschiedene Bearbeitungsoptionen und Navigationsfunktionen.<br />-   Die XML-Dokumente können in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder in einem <xref:System.Xml.XmlDocument>-Objekt enthalten sein.<br />-   Gewährleistet exzellente Leistung für die schreibgeschützte XML-Verarbeitung.<br />-   Verwenden Sie diese Option, wenn Sie vorhandenen Code mit XPath-Abfragen oder XSLT-Transformationen ändern.|  
-|<xref:System.Xml.Xsl.XslCompiledTransform>|Im Arbeitsspeicher|-   Stellt Optionen zum Transformieren von XML-Daten mithilfe von XSL-Transformationen bereit.<br />-   Über [XSLT Compiler (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) können Sie auf vorkompilierte Transformationen in Ihrer App verweisen.|  
+|<xref:System.Xml.Xsl.XslCompiledTransform>|Im Arbeitsspeicher|-   Stellt Optionen zum Transformieren von XML-Daten mithilfe von XSL-Transformationen bereit.<br />-   Über [XSLT Compiler (xsltc.exe)](xslt-compiler-xsltc-exe.md) können Sie auf vorkompilierte Transformationen in Ihrer App verweisen.|  
   
 ## <a name="win32-and-com-based-options"></a>Win32- und COM-basierte Optionen  
   
@@ -33,6 +33,6 @@ Eine Liste der Microsoft-Technologien zur Verarbeitung von XML-Daten finden Sie 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verarbeiten von XML-Daten mithilfe des DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
-- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [XSLT-Compiler („xsltc.exe“)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [Verarbeiten von XML-Daten mithilfe des DOM](process-xml-data-using-the-dom-model.md)
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](process-xml-data-using-the-xpath-data-model.md)
+- [XSLT-Compiler („xsltc.exe“)](xslt-compiler-xsltc-exe.md)

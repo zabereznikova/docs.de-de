@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
-ms.openlocfilehash: 1255fcda89396ea8ff9abf6cf111e6dd9ea5a87d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 46638d2cd8078fefebc0eacc4b8f7798ffe178ff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861016"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288900"
 ---
 # <a name="use-foreach-to-remove-items-in-a-blockingcollection"></a>Verwenden von foreach zum Entfernen von Elementen aus einer BlockingCollection-Klasse
 
@@ -35,4 +35,4 @@ Um die Auflistung aufzuzählen, ohne sie zu verändern, verwenden Sie einfach `f
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Parallele Programmierung](../../../../docs/standard/parallel-programming/index.md)
+- [Parallele Programmierung](../../parallel-programming/index.md)

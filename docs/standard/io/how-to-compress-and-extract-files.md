@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 10f990401830bc5f77176f4e586f15f7dd75ff14
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 28f9a0baa73f58b0a5c7f93a4b0b3ece3b87c3a5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248016"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288562"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Vorgehensweise: Komprimieren und Extrahieren von Dateien
 
@@ -79,4 +79,4 @@ Sie können auch die Klassen <xref:System.IO.Compression.GZipStream> und <xref:S
 - <xref:System.IO.Compression.ZipArchiveEntry>  
 - <xref:System.IO.Compression.DeflateStream>  
 - <xref:System.IO.Compression.GZipStream>  
-- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
+- [Datei- und Stream-E/A](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c260c349f035de67257adbca06fb447ff993329
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711427"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277673"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapezeichen in regulären Ausdrücken
 Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
@@ -37,16 +37,16 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
   
 |Zeichen oder Sequenz|Beschreibung|  
 |---------------------------|-----------------|  
-|Alle Zeichen außer Folgenden:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Andere als die in der Spalte **Zeichen oder Sequenz** aufgelistete Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken, sie stehen für sich selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke. Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden. Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
+|Alle Zeichen außer Folgenden:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Andere als die in der Spalte **Zeichen oder Sequenz** aufgelistete Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken, sie stehen für sich selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke. Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](character-classes-in-regular-expressions.md) einbezogen werden. Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
 |`\a`|Entspricht dem Klingelzeichen (Warnsignal) `\u0007`.|  
-|`\b`|Entspricht in einer `[`*Zeichengruppe*`]`-Zeichenklasse einem Rücktastenzeichen `\u0008`.  (Siehe [Zeichenklassen](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Außerhalb einer Zeichenklasse ist `\b` ein Anker, der einer Wortgrenze entspricht. (Siehe [Anker](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
+|`\b`|Entspricht in einer `[`*Zeichengruppe*`]`-Zeichenklasse einem Rücktastenzeichen `\u0008`.  (Siehe [Zeichenklassen](character-classes-in-regular-expressions.md).) Außerhalb einer Zeichenklasse ist `\b` ein Anker, der einer Wortgrenze entspricht. (Siehe [Anker](anchors-in-regular-expressions.md).)|  
 |`\t`|Entspricht dem Tabstoppzeichen `\u0009`.|  
 |`\r`|Entspricht dem Wagenrücklaufzeichen `\u000D`. `\r` ist nicht mit dem Zeilenumbruchzeichen (`\n`) identisch.|  
 |`\v`|Entspricht dem vertikalen Tabstoppzeichen `\u000B`.|  
 |`\f`|Entspricht dem Seitenvorschubzeichen `\u000C`.|  
 |`\n`|Entspricht einer neuen Zeile `\u000A`.|  
 |`\e`|Entspricht dem Escapezeichen `\u001B`.|  
-|`\` *nnn*|Entspricht einem ASCII-Zeichen, wobei *nnn* aus zwei oder drei Ziffern besteht, die den oktalen Zeichencode darstellen. Beispielsweise stellt `\040` ein Leerzeichen dar. Dieses Konstrukt wird als Rückverweis interpretiert, wenn es nur eine Ziffer (z. B. `\2`) hat oder wenn es der Nummer einer Erfassungsgruppe entspricht. (Siehe [Rückverweiskonstrukte](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
+|`\` *nnn*|Entspricht einem ASCII-Zeichen, wobei *nnn* aus zwei oder drei Ziffern besteht, die den oktalen Zeichencode darstellen. Beispielsweise stellt `\040` ein Leerzeichen dar. Dieses Konstrukt wird als Rückverweis interpretiert, wenn es nur eine Ziffer (z. B. `\2`) hat oder wenn es der Nummer einer Erfassungsgruppe entspricht. (Siehe [Rückverweiskonstrukte](backreference-constructs-in-regular-expressions.md).)|  
 |`\x` *nn*|Entspricht einem ASCII-Zeichen, wobei *nn* ein zweistelliger Hexadezimalzeichencode ist.|  
 |`\c` *X*|Entspricht einem ASCII-Steuerzeichen, wobei X der Buchstabe des Steuerzeichens ist. Beispielsweise ist `\cC` STRG+C.|  
 |`\u` *nnnn*|Entspricht einer UTF-16-Codeeinheit, deren Wert *nnnn* hexadezimal ist. **Hinweis**:  Das Perl 5-Escapezeichen, das zum Festlegen von Unicode verwendet wird, wird nicht von .NET unterstützt. Das Perl 5-Escape-Zeichen hat das Format `\x{` *####* `…}`, wobei *####* `…` einer Reihe von Hexadezimalziffern entspricht. Verwenden Sie stattdessen `\u`*nnnn*.|  
@@ -70,4 +70,4 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)

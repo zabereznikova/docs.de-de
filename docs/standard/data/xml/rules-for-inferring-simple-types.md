@@ -3,12 +3,12 @@ title: Regeln zum Herleiten einfacher Typen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710231"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289069"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regeln zum Herleiten einfacher Typen
 Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse.  
@@ -76,6 +76,6 @@ Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Herleiten von Schemas aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Regeln für Rückschlussschemaknotentypen und Struktur](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](xml-schema-object-model-som.md)
+- [Herleiten von Schemas aus XML-Dokumenten](inferring-schemas-from-xml-documents.md)
+- [Regeln für Rückschlussschemaknotentypen und Struktur](rules-for-inferring-schema-node-types-and-structure.md)

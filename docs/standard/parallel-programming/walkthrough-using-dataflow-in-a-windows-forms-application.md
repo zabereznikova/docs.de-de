@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7cd82ffde5fccf938027a6ab6ea15fef226fef6f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159766"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288432"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Exemplarische Vorgehensweise: Datenfluss in einer Windows Forms-Anwendung verwenden
 Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstellt wird, die eine Bildverarbeitung in einer Windows Forms-Anwendung durchführen.  
@@ -20,7 +20,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
  In diesem Beispiel werden Bilddateien aus dem angegebenen Ordner geladen, es wird ein zusammengesetztes Bild erstellt und das Ergebnis wird angezeigt. Im Beispiel wird das Datenflussmodell verwendet, um Bilder durch das Netzwerk zu leiten. Im Datenflussmodell kommunizieren unabhängige Komponenten eines Programms durch Senden von Nachrichten miteinander. Wenn eine Komponente eine Nachricht empfängt, führt sie eine Aktion aus und übergibt dann das Ergebnis an eine andere Komponente. Dies ist vergleichbar mit dem Ablaufsteuerungsmodell, in dem eine Anwendung Steuerungsstrukturen wie bedingte Anweisungen, Schleifen usw.verwendet, um die Reihenfolge der Vorgänge in einem Programm zu steuern.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Lesen Sie das Thema [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.  
+ Lesen Sie das Thema [Datenfluss](dataflow-task-parallel-library.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -99,7 +99,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
  Da die `displayCompositeBitmap`- und `operationCancelled`-Datenflussblöcke als Benutzeroberfläche agiert, ist es wichtig, dass diese Aktionen im Benutzeroberflächenthread erfolgen. Um dies zu erreichen, stellen diese Objekte während der Erstellung ein <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>-Objekt bereit, für das die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A>-Eigenschaft auf <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> festgelegt ist. Die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode erstellt ein <xref:System.Threading.Tasks.TaskScheduler>-Objekt, das Arbeiten im aktuellen Synchronisierungskontext durchführt. Da die `CreateImageProcessingNetwork`-Methode vom Handler der Schaltfläche **Ordner auswählen** aufgerufen wird, die im Benutzeroberflächenthread ausgeführt wird, werden die Aktionen für den `displayCompositeBitmap`- und den `operationCancelled`-Datenflussblock ebenfalls im Benutzeroberflächenthread ausgeführt.  
   
- In diesem Beispiel wird ein gemeinsames Abbruchtoken verwendet, anstatt die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft festzulegen, da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft die Ausführung des Datenflussblocks endgültig abbricht. Dank eines Abbruchtokens kann dieses Beispiel das gleiche Datenflussnetzwerk mehrmals wiederverwenden, und zwar selbst dann, wenn der Benutzer einen oder mehrere Vorgänge abbricht. Ein Beispiel für die Verwendung von <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> für den endgültigen Abbruch der Ausführung des Datenflussblocks finden Sie unter [Gewusst wie: Abbrechen eines Datenflussblocks](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ In diesem Beispiel wird ein gemeinsames Abbruchtoken verwendet, anstatt die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft festzulegen, da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft die Ausführung des Datenflussblocks endgültig abbricht. Dank eines Abbruchtokens kann dieses Beispiel das gleiche Datenflussnetzwerk mehrmals wiederverwenden, und zwar selbst dann, wenn der Benutzer einen oder mehrere Vorgänge abbricht. Ein Beispiel für die Verwendung von <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> für den endgültigen Abbruch der Ausführung des Datenflussblocks finden Sie unter [Gewusst wie: Abbrechen eines Datenflussblocks](how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche  
@@ -127,8 +127,8 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
  Die folgende Abbildung zeigt die normale Ausgabe für den gemeinsamen Ordner „\Sample Pictures\“.  
   
- ![Die Windows Forms-Anwendung](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
+ ![Die Windows Forms-Anwendung](media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

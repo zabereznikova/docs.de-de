@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - object pool, in .NET Framework
 ms.assetid: 0480e7ff-b6f9-480e-a889-2ed4264d8372
-ms.openlocfilehash: 2c060dc901f8d06a5f9c51db1cd563cb28e4fda3
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 64d91162b27eba80fba63761d0a926e441b63440
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728473"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287860"
 ---
 # <a name="create-an-object-pool-by-using-a-concurrentbag"></a>Erstellen eines Objektpools mittels ConcurrentBag
 
@@ -31,4 +31,4 @@ Zum Speichern der Objekte wird ein <xref:System.Collections.Concurrent.Concurren
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Threadsichere Sammlungen](../../../../docs/standard/collections/thread-safe/index.md)
+- [Threadsichere Sammlungen](index.md)

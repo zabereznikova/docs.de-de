@@ -17,18 +17,18 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ed9ca7337e40b5520ddbfc92925c5bedb45f701
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346630"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289277"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardmäßige TimeSpan-Formatzeichenfolgen
 
-Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](custom-timespan-format-strings.md).  
   
- Die Zeichenfolgendarstellungen von <xref:System.TimeSpan>-Werten werden durch Aufrufe der Überladungen der <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>-Methode und durch Methoden, die die kombinierte Formatierung unterstützen (z. B. <xref:System.String.Format%2A?displayProperty=nameWithType>), erzeugt. Weitere Informationen finden Sie unter [Formatieren von Typen](../../../docs/standard/base-types/formatting-types.md) und [Zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md). Das folgende Beispiel veranschaulicht die Verwendung von Standardformatzeichenfolgen bei Formatierungsvorgängen.  
+ Die Zeichenfolgendarstellungen von <xref:System.TimeSpan>-Werten werden durch Aufrufe der Überladungen der <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>-Methode und durch Methoden, die die kombinierte Formatierung unterstützen (z. B. <xref:System.String.Format%2A?displayProperty=nameWithType>), erzeugt. Weitere Informationen finden Sie unter [Formatieren von Typen](formatting-types.md) und [Zusammengesetzte Formatierung](composite-formatting.md). Das folgende Beispiel veranschaulicht die Verwendung von Standardformatzeichenfolgen bei Formatierungsvorgängen.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
@@ -122,6 +122,6 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
-- [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Analysieren von Zeichenfolgen in .NET](../../../docs/standard/base-types/parsing-strings.md)
+- [Formatierung von Typen](formatting-types.md)
+- [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](custom-timespan-format-strings.md)
+- [Analysieren von Zeichenfolgen in .NET](parsing-strings.md)

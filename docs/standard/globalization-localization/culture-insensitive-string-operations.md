@@ -12,18 +12,18 @@ helpviewer_keywords:
 - culture-sensitive string operations
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-ms.openlocfilehash: 06c46033936e16355b8d2eb6650e8731a04af6e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0db77f3e11542bb920df1e45312a72decc2a34fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141276"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279788"
 ---
 # <a name="culture-insensitive-string-operations"></a>Kulturunabhängige Zeichenfolgenoperationen
 
 Kulturabhängige Zeichenfolgenoperationen können von Vorteil sein, wenn Sie Anwendungen erstellen, mit denen Benutzern Ergebnisse auf Kulturbasis angezeigt werden. In der Standardeinstellung rufen kulturabhängige Methoden die zu verwendende Kultur aus der <xref:System.Globalization.CultureInfo.CurrentCulture%2A>-Eigenschaft für den aktuellen Thread ab.
 
-Kulturabhängige Zeichenfolgenoperationen stellen jedoch nicht immer das gewünschte Verhalten dar. Die Verwendung von kulturabhängigen Operationen in Szenarien, in denen die Ergebnisse unabhängig von der Kultur sein sollen, kann bei Kulturen mit speziellen Groß- und Kleinschreibungs- und Sortierungsregeln zum Fehlschlagen des Anwendungscodes führen. Ein Beispiel finden Sie im Artikel [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../../../docs/standard/base-types/best-practices-strings.md) im Abschnitt [Zeichenfolgenvergleiche mit der aktuellen Kultur](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture).
+Kulturabhängige Zeichenfolgenoperationen stellen jedoch nicht immer das gewünschte Verhalten dar. Die Verwendung von kulturabhängigen Operationen in Szenarien, in denen die Ergebnisse unabhängig von der Kultur sein sollen, kann bei Kulturen mit speziellen Groß- und Kleinschreibungs- und Sortierungsregeln zum Fehlschlagen des Anwendungscodes führen. Ein Beispiel finden Sie im Artikel [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../base-types/best-practices-strings.md) im Abschnitt [Zeichenfolgenvergleiche mit der aktuellen Kultur](../base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture).
 
 Die zu verwendenden Zeichenfolgenoperationen (kulturabhängig oder -unabhängig) richten sich danach, wie die Ergebnisse von der Anwendung verwendet werden. Zeichenfolgenoperationen, die dem Benutzer Ergebnisse anzeigen, sollten i. d. R. kulturabhängig sein. Wenn eine Anwendung in einem Listenfeld z. B. eine sortierte Liste lokalisierter Zeichenfolgen anzeigt, sollte die Anwendung eine kulturabhängige Sortierung durchführen.
 
@@ -33,4 +33,4 @@ Unabhängig davon, ob die von Ihnen entwickelte Anwendung Code zur Behandlung vo
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
+- [Globalisierung und Lokalisierung](index.md)

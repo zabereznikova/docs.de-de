@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-ms.openlocfilehash: 2e61a9ed1a1ccaa2f9f1543efa1d33c3fcf00061
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02338d72f51d3a7507c0dfa030383399b9e213f6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130833"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282401"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Einlesen eines XML-Dokuments in das DOM
 XML-Daten werden aus verschiedenen Formaten in den Speicher eingelesen. Dies kann z. B. aus einer Zeichenfolge, einem Datenstream, einer URL, einem Textreader oder einer von <xref:System.Xml.XmlReader> abgeleiteten Klasse erfolgen.  
@@ -22,9 +22,9 @@ XML-Daten werden aus verschiedenen Formaten in den Speicher eingelesen. Dies kan
   
 |Betreff|Thema|  
 |-------------|-----------|  
-|Erstellen von Leerraumknoten|Das zum Laden des DOM verwendete Objekt beeinflusst die Leerraum- und die signifikanten Leerraumknoten, die im DOM erzeugt werden. Weitere Informationen finden Sie unter [Behandlung von Leerräumen und signifikanten Leerräumen beim Laden des DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
-|Laden von XML, beginnend an einem bestimmten Knoten, oder Laden des gesamten XML-Dokuments|Mithilfe der <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType>-Methode können Daten aus einem bestimmten Knoten in das DOM geladen werden. Weitere Informationen finden Sie unter [Laden von Daten aus einem Reader](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
-|Validieren des geladenen XML|Die XML-Daten, die in das DOM geladen werden, können beim Laden validiert werden. Dies erfolgt mit dem Validierungs-<xref:System.Xml.XmlReader>. Weitere Informationen zum Validieren von XML beim Ladevorgang finden Sie unter [Validieren eines XML-Dokuments im DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
+|Erstellen von Leerraumknoten|Das zum Laden des DOM verwendete Objekt beeinflusst die Leerraum- und die signifikanten Leerraumknoten, die im DOM erzeugt werden. Weitere Informationen finden Sie unter [Behandlung von Leerräumen und signifikanten Leerräumen beim Laden des DOM](white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
+|Laden von XML, beginnend an einem bestimmten Knoten, oder Laden des gesamten XML-Dokuments|Mithilfe der <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType>-Methode können Daten aus einem bestimmten Knoten in das DOM geladen werden. Weitere Informationen finden Sie unter [Laden von Daten aus einem Reader](load-data-from-a-reader.md).|  
+|Validieren des geladenen XML|Die XML-Daten, die in das DOM geladen werden, können beim Laden validiert werden. Dies erfolgt mit dem Validierungs-<xref:System.Xml.XmlReader>. Weitere Informationen zum Validieren von XML beim Ladevorgang finden Sie unter [Validieren eines XML-Dokuments im DOM](validating-an-xml-document-in-the-dom.md).|  
   
  Im folgenden Beispiel wird veranschaulicht, wie XML mithilfe der <xref:System.Xml.XmlDocument.LoadXml%2A>-Methode geladen wird, und wie die Daten anschließend in der Textdatei `data.xml` gespeichert werden.  
   
@@ -70,4 +70,4 @@ public class Sample
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

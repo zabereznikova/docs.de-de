@@ -10,15 +10,15 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: f5bb3cda0caa39ba3fd094b80e0b769a4bfc1f85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f8a213c0df3ef3c633106b7249a4947fe77c0d2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141552"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280022"
 ---
 # <a name="how-to-implement-a-provider"></a>Gewusst wie: Implementieren eines Anbieters
-Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Anbieter, der Daten überwacht und Benachrichtigungen sendet, und mindestens einem Beobachter, der Benachrichtigungen (Rückrufe) vom Anbieter empfängt. In diesem Thema wird das Erstellen eines Anbieters behandelt. In dem verwandten Thema [Gewusst wie: Implementieren eines Observers](../../../docs/standard/events/how-to-implement-an-observer.md) wird erläutert, wie ein Observer erstellt wird.  
+Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Anbieter, der Daten überwacht und Benachrichtigungen sendet, und mindestens einem Beobachter, der Benachrichtigungen (Rückrufe) vom Anbieter empfängt. In diesem Thema wird das Erstellen eines Anbieters behandelt. In dem verwandten Thema [Gewusst wie: Implementieren eines Observers](how-to-implement-an-observer.md) wird erläutert, wie ein Observer erstellt wird.  
   
 ### <a name="to-create-a-provider"></a>So erstellen Sie einen Anbieter  
   
@@ -61,6 +61,6 @@ Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Anbiete
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IObservable%601>
-- [Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern.md)
-- [Gewusst wie: Implementieren eines Observers](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [Beobachterentwurfsmuster](observer-design-pattern.md)
+- [Gewusst wie: Implementieren eines Observers](how-to-implement-an-observer.md)
+- [Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](observer-design-pattern-best-practices.md)

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 44a1019ac8169138aa95b03e2027d9539cbf8391
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83a60e0e793f33b8b0a1cec8342942fd05c82f55
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71957368"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289888"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt
-Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen verursachen können, sollten Sie die Klasse mit einer asynchronen Funktionalität ausstatten, indem Sie das ereignisbasierte asynchrone Muster implementieren. Informationen zu diesem Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen verursachen können, sollten Sie die Klasse mit einer asynchronen Funktionalität ausstatten, indem Sie das ereignisbasierte asynchrone Muster implementieren. Informationen zu diesem Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](event-based-asynchronous-pattern-overview.md).  
   
  Diese exemplarische Vorgehensweise veranschaulicht das Erstellen einer Komponente, die das ereignisbasierte asynchrone Muster implementiert. Dieses Muster wird mithilfe von Hilfsklassen aus dem <xref:System.ComponentModel?displayProperty=nameWithType>-Namespace implementiert, wodurch eine einwandfreie Funktionsweise der Komponente unter jedem beliebigen Anwendungsmodell gewährleistet wird, z. B. ASP.NET, Konsolenanwendungen und Windows Forms-Anwendungen. Diese Komponente kann auch mit einem <xref:System.Windows.Forms.PropertyGrid>-Steuerelement und Ihren eigenen Designern gestaltet werden.  
   
@@ -48,7 +48,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
   
 - Implementieren von Methoden zum Starten und Abbrechen  
   
- Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>Erstellen der Komponente  
  Der erste Schritt besteht darin, die Komponente zu erstellen, die das ereignisbasierte asynchrone Muster implementiert.  
@@ -176,7 +176,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
  Die `CalculateWorker`-Methode wird von einem Delegaten umschlossen und mit einem Aufruf von `BeginInvoke` asynchron aufgerufen.  
   
 > [!NOTE]
-> Die Fortschrittsmeldung wird in der `BuildPrimeNumberList`-Methode implementiert. Auf schnellen Computern können `ProgressChanged`-Ereignisse in rascher Folge ausgelöst werden. Der Clientthread, für den diese Ereignisse ausgelöst werden, muss diese Situation verarbeiten können. Der Code der Benutzeroberfläche erhält möglicherweise eine Flut von Meldungen, die er nicht bewältigen kann, sodass keine Reaktion mehr erfolgt. Ein Beispiel für eine Benutzeroberfläche in einer solchen Situation finden Sie unter [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+> Die Fortschrittsmeldung wird in der `BuildPrimeNumberList`-Methode implementiert. Auf schnellen Computern können `ProgressChanged`-Ereignisse in rascher Folge ausgelöst werden. Der Clientthread, für den diese Ereignisse ausgelöst werden, muss diese Situation verarbeiten können. Der Code der Benutzeroberfläche erhält möglicherweise eine Flut von Meldungen, die er nicht bewältigen kann, sodass keine Reaktion mehr erfolgt. Ein Beispiel für eine Benutzeroberfläche in einer solchen Situation finden Sie unter [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>So führen Sie die asynchrone Berechnung der Primzahl aus  
   
@@ -242,7 +242,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
   
  Die `PrimeNumberCalculator`-Komponente ist jetzt vollständig und einsatzbereit.  
   
- Ein Beispiel für einen Client, der die `PrimeNumberCalculator`-Komponente verwendet, finden Sie unter [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Ein Beispiel für einen Client, der die `PrimeNumberCalculator`-Komponente verwendet, finden Sie unter [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie können dieses Beispiel ausfüllen, indem Sie `CalculatePrime` schreiben. Dies ist das synchrone Äquivalent der `CalculatePrimeAsync`-Methode. So wird die `PrimeNumberCalculator`-Komponente vollständig kompatibel mit dem ereignisbasierten asynchronen Muster.  
@@ -253,6 +253,6 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)](event-based-asynchronous-pattern-overview.md)
+- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](event-based-asynchronous-pattern-eap.md)

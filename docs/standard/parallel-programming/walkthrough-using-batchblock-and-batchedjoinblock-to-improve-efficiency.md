@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e572c5a14958ccc069ae7649af8c8ed4eb967dc1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091357"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284584"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Exemplarische Vorgehensweise: Effizienzverbesserung durch Verwendung von BatchBlock und BatchedJoinBlock
 
@@ -24,7 +24,7 @@ Die TPL-Datenflussbibliothek stellt die <xref:System.Threading.Tasks.Dataflow.Ba
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-1. Lesen Sie den Abschnitt „Gruppierungsblöcke“ im Dokument [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.
+1. Lesen Sie den Abschnitt „Gruppierungsblöcke“ im Dokument [Datenfluss](dataflow-task-parallel-library.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.
 
 2. Stellen Sie sicher, dass Sie über eine Kopie der Northwind-Datenbank (Northwind.sdf) auf Ihrem Computer verfügen. Diese Datei befindet sich normalerweise im Ordner %Programme%\Microsoft SQL Server Compact Edition\v3.5\Samples\\\.
 
@@ -131,4 +131,4 @@ Das folgende Beispiel enthält den vollständigen Code. Die `Main`-Methode vergl
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

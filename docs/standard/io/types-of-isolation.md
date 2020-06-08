@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 0e8be9b1d12d40f8135d21abe9dd6cb0b63bb2d8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 7802e4bc27195d1c8ecaccbd64121fb24328a4d8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646395"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288536"
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
 Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  
@@ -106,4 +106,4 @@ Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, d
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
+- [Isolierter Speicher](isolated-storage.md)

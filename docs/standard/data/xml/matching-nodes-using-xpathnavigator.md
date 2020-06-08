@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
-ms.openlocfilehash: f0988c3a112fefc351175de02c790dc25fe6e94a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 47b0ba7e705ad602825dcca3f24c207362174a4c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710686"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289121"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>Vergleich von Knoten mit XPathNavigator
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt die <xref:System.Xml.XPath.XPathNavigator.Matches%2A>-Methode bereit, um zu bestimmen, ob ein Knoten einem XPath-Ausdruck entspricht. Die <xref:System.Xml.XPath.XPathNavigator.Matches%2A>-Methode verwendet einen XPath-Ausdruck als Eingabe und gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob der aktuelle Knoten dem angegebenen XPath-Ausdruck oder dem angegebenen kompilierten <xref:System.Xml.XPath.XPathExpression>-Objekt entspricht.  
@@ -41,9 +41,9 @@ navigator.Matches("b[@c]");
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Auswählen von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [Auswerten von XPath-Ausdrücken mit XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [In XPath-Abfragen erkannte Knotentypen](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [XPath-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [Kompilierte XPath-Ausdrücke](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](process-xml-data-using-the-xpath-data-model.md)
+- [Auswählen von XML-Daten mit XPathNavigator](select-xml-data-using-xpathnavigator.md)
+- [Auswerten von XPath-Ausdrücken mit XPathNavigator](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [In XPath-Abfragen erkannte Knotentypen](node-types-recognized-with-xpath-queries.md)
+- [XPath-Abfragen und Namespaces](xpath-queries-and-namespaces.md)
+- [Kompilierte XPath-Ausdrücke](compiled-xpath-expressions.md)

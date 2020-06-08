@@ -3,12 +3,12 @@ title: Laden von Daten aus einem Reader
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: 90a66e04bda4fb2ee4216e8aabd631afb2f28dd0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1c048b08380bebce3a627670d88ff6ae48084535
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710712"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289160"
 ---
 # <a name="load-data-from-a-reader"></a>Laden von Daten aus einem Reader
 Wenn ein XML-Dokument mithilfe der <xref:System.Xml.XmlDocument.Load%2A>-Methode und einem Parameter eines <xref:System.Xml.XmlReader> geladen wird, weist das Verhalten Unterschiede zu dem Verhalten auf, das beim Laden von Daten aus anderen Formaten eintritt. Wenn sich der Reader in seinem Ausgangszustand befindet, verarbeitet <xref:System.Xml.XmlDocument.Load%2A> den gesamten Inhalt des Readers und erstellt das XML-DOM (Dokumentobjektmodell) aus allen Daten im Reader.  
@@ -29,4 +29,4 @@ Wenn ein XML-Dokument mithilfe der <xref:System.Xml.XmlDocument.Load%2A>-Methode
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

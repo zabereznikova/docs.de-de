@@ -10,18 +10,18 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-ms.openlocfilehash: cb953952bbed90edd2db799e92d44ec9f062babf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37857e465bf4089dbeecc4cfd532d0702f795495
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139879"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284701"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Exemplarische Vorgehensweise: Erstellen eines Datenflussblock-Typs
 Obwohl die TPL Dataflow Library mehrere Datenflussblocktypen zur Verfügung stellt, die eine Vielzahl von Funktionen ermöglichen, können Sie auch benutzerdefinierte Blocktypen erstellen. Dieses Dokument beschreibt, wie Sie einen Datenflussblocktyp erstellen, der benutzerdefiniertes Verhalten implementiert.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Lesen Sie zunächst [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md), bevor Sie dieses Dokument lesen.  
+ Lesen Sie zunächst [Datenfluss](dataflow-task-parallel-library.md), bevor Sie dieses Dokument lesen.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
@@ -52,4 +52,4 @@ Obwohl die TPL Dataflow Library mehrere Datenflussblocktypen zur Verfügung stel
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

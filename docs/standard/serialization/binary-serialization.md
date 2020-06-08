@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 4ed76437b743da842d6ba07d29fe7985f824abf0
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421279"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289693"
 ---
 # <a name="binary-serialization"></a>Binäre Serialisierung
 
@@ -344,10 +344,10 @@ Die binäre Serialisierung ermöglicht das Ändern privater Member innerhalb ein
 - <xref:System.Runtime.Serialization>\
 Enthält Klassen, mit denen Objekte serialisiert und deserialisiert werden können.
 
-- [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)\
 Beschreibt den XML-Serialisierungsmechanismus, der in der Common Language Runtime enthalten ist.
 
-- [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)\
+- [Sicherheit und Serialisierung](../../framework/misc/security-and-serialization.md)\
 Beschreibt Richtlinien für das Schreiben sicheren Codes, die beim Schreiben von befolgt werden sollten, der Serialisierungen durchführt.
 
 - [.NET-Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: b6e6f2c4b28e9220727bf0fe1a958a7b69111571
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: d8b60428bc129958355ce5b285662847e9e712c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202160"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282414"
 ---
 # <a name="conversion-of-xml-data-types"></a>Konvertierung von XML-Datentypen
 Mit den meisten Methoden in einer **XmlConvert**-Klasse werden Daten zwischen Zeichenfolgen und stark typisierten Formaten konvertiert. Die Methoden sind unabhängig vom Gebietsschema. Dies bedeutet, dass im Rahmen von Konvertierungen keine Gebietsschemaeinstellungen berücksichtigt werden.  
@@ -66,5 +66,5 @@ writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konvertieren von Zeichenfolgen in .NET Framework-Datentypen](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
-- [Konvertieren von .NET Framework-Typen in Zeichenfolgen](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [Konvertieren von Zeichenfolgen in .NET Framework-Datentypen](converting-strings-to-dotnet-data-types.md)
+- [Konvertieren von .NET Framework-Typen in Zeichenfolgen](converting-dotnet-types-to-strings.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-ms.openlocfilehash: 2db8cfcfc26b001703e08a501c430be4313aca03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 491f3912998e56fe768d21da82ff68cb64f6d6c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091485"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289524"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Gewusst wie: Implementieren eines Producer-Consumer-Musters
 Dieses Dokument beschreibt, wie die TPL-Datenflussbibliothek verwendet wird, um ein Producer-Consumer-Muster zu implementieren. Bei diesem Muster sendet der *Producer* Nachrichten an einen Nachrichtenblock, während der *Consumer* Nachrichten aus diesem Block ausliest.  
@@ -40,4 +40,4 @@ Dieses Dokument beschreibt, wie die TPL-Datenflussbibliothek verwendet wird, um 
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0951e83c3035de751801d194696eb64993260ef8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710114"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289836"
 ---
 # <a name="traversing-xml-schemas"></a>Durchlaufen von XML-Schemata
 
@@ -39,7 +39,7 @@ Die folgenden Eigenschaften der <xref:System.Xml.Schema.XmlSchema>-Klasse ermög
 >
 > Die <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>-Eigenschaft ermöglicht den Zugriff auf alle Attribute, die nicht zum Schemanamespace gehören. Diese Attribute werden bei der Schemaverarbeitung nicht verarbeitet.
 
-Im folgenden Codebeispiel wird das Durchlaufen des Kundenschemas veranschaulicht, das im Thema [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md) erstellt wurde. Im Codebeispiel werden das Durchlaufen des Schemas mithilfe der oben beschriebenen Auflistungen und das Schreiben aller Elemente und Attribute im Schema in die Konsole veranschaulicht.
+Im folgenden Codebeispiel wird das Durchlaufen des Kundenschemas veranschaulicht, das im Thema [Erstellen von XML-Schemata](building-xml-schemas.md) erstellt wurde. Im Codebeispiel werden das Durchlaufen des Schemas mithilfe der oben beschriebenen Auflistungen und das Schreiben aller Elemente und Attribute im Schema in die Konsole veranschaulicht.
 
 Im Codebeispiel wird das Kundenschema in den folgenden Schritten durchlaufen.
 
@@ -65,14 +65,14 @@ Nachfolgend ist das vollständige Codebeispiel angegeben.
 
 Die <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType>-Eigenschaft kann <xref:System.Xml.Schema.XmlSchemaSimpleType> oder <xref:System.Xml.Schema.XmlSchemaComplexType> sein, wenn es sich um einen benutzerdefinierten einfachen oder komplexen Typ handelt. Sie kann auch <xref:System.Xml.Schema.XmlSchemaDatatype> sein, wenn es sich um einen der integrierten Datentypen handelt, die in der XML-Schemaempfehlung des W3C definiert sind. Im Kundenschema ist der <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> des `Customer`-Elements <xref:System.Xml.Schema.XmlSchemaComplexType>, und das `FirstName`-Element und das `LastName`-Element sind <xref:System.Xml.Schema.XmlSchemaSimpleType>.
 
-Im Codebeispiel im Thema [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md) wurde mithilfe der <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType>-Auflistung dem `Customer`-Element das `CustomerId`-Attribut hinzugefügt. Es handelt sich dabei um eine Eigenschaft vor der Kompilierung des Schemas. Die zugehörige PSCI-Eigenschaft (Post-Schema-Validation Infoset) ist die <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>-Auflistung, in der alle Attribute der komplexen Typen enthalten sind, einschließlich der durch Ableitung geerbten Attribute.
+Im Codebeispiel im Thema [Erstellen von XML-Schemata](building-xml-schemas.md) wurde mithilfe der <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType>-Auflistung dem `Customer`-Element das `CustomerId`-Attribut hinzugefügt. Es handelt sich dabei um eine Eigenschaft vor der Kompilierung des Schemas. Die zugehörige PSCI-Eigenschaft (Post-Schema-Validation Infoset) ist die <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>-Auflistung, in der alle Attribute der komplexen Typen enthalten sind, einschließlich der durch Ableitung geerbten Attribute.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Einfügen oder Importieren von XML-Schemas](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema-Compilation-Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Übersicht über das XML-Schemaobjektmodell (SOM)](xml-schema-object-model-overview.md)
+- [Lesen und Schreiben von XML-Schemas](reading-and-writing-xml-schemas.md)
+- [Erstellen von XML-Schemas](building-xml-schemas.md)
+- [Bearbeiten von XML-Schemas](editing-xml-schemas.md)
+- [Einfügen oder Importieren von XML-Schemas](including-or-importing-xml-schemas.md)
+- [„XmlSchemaSet“ zur Kompilierung von Schemas](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema-Compilation-Infoset](post-schema-compilation-infoset.md)

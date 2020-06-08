@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: afbfd516ef25eff94a9eed841f313892007c58a1
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 61957ff88ef57703aff1861238ee10b23c2f16ff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202339"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291603"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Zugreifen auf streng typisierte XML-Daten mit 'XPathNavigator'
 Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavigator>-Klasse stark typisierte Daten enthalten, die den CLR-Typen (Common Language Runtime) zugeordnet werden. Gemäß des XPath 2.0-Datenmodells können nur Elemente und Attribute stark typisierte Daten enthalten. Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Mechanismen zum Zugreifen auf Daten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt als stark typisierte Daten sowie Mechanismen zum Konvertieren von einem Datentyp in einen anderen bereit.  
@@ -19,11 +19,11 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
 ## <a name="type-information-exposed-by-xpathnavigator"></a>Von XPathNavigator verfügbar gemachte Typinformationen  
  XML 1.0-Daten weisen im Allgemeinen keinen Typ auf, es sei denn, sie wurden mit einer DTD, einem XSD-Schema (XML Schema Definition Language) oder anderen Mechanismen verarbeitet. Es gibt verschiedene Kategorien von Typinformationen, die einem XML-Element oder XML-Attribut zugeordnet werden können.  
   
-- Einfache CLR-Typen: Keine der XML-Schemasprachen unterstützt CLR-Typen (Common Language Runtime) direkt. Da das Anzeigen des Inhalts von einfachen Elementen und Attributen im am besten geeigneten CLR-Typ hilfreich ist, können alle einfachen Inhalte als <xref:System.String> mit allen hinzugefügten Schemainformationen typisiert werden, die den Inhalt möglicherweise einem besser geeigneten Typ anpassen, ohne dass Schemainformationen vorhanden sind. Mithilfe der <xref:System.Xml.XPath.XPathNavigator.ValueType%2A>-Eigenschaft können Sie den am besten geeigneten CLR-Typ des Inhalts von einfachen Elementen und Attributen ermitteln. Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Einfache CLR-Typen: Keine der XML-Schemasprachen unterstützt CLR-Typen (Common Language Runtime) direkt. Da das Anzeigen des Inhalts von einfachen Elementen und Attributen im am besten geeigneten CLR-Typ hilfreich ist, können alle einfachen Inhalte als <xref:System.String> mit allen hinzugefügten Schemainformationen typisiert werden, die den Inhalt möglicherweise einem besser geeigneten Typ anpassen, ohne dass Schemainformationen vorhanden sind. Mithilfe der <xref:System.Xml.XPath.XPathNavigator.ValueType%2A>-Eigenschaft können Sie den am besten geeigneten CLR-Typ des Inhalts von einfachen Elementen und Attributen ermitteln. Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](type-support-in-the-system-xml-classes.md).  
   
-- Liste der einfachen (CLR-)Typen: Ein Element oder Attribut mit einfachem Inhalt kann eine Liste mit Werten enthalten, die durch ein Leerzeichen voneinander getrennt sind. Die Werte werden von einem XML-Schema als ein "list type" angegeben. Wenn kein XML-Schema vorhanden ist, wird einfacher Inhalt als ein einzelner Textknoten behandelt. Wenn ein XML-Schema verfügbar ist, kann dieser einfache Inhalt als eine Serie von atomaren Werten verfügbar gemacht werden, die alle einen einfachen Typ aufweisen, der einer Auflistung von CLR-Objekten zugeordnet ist. Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Liste der einfachen (CLR-)Typen: Ein Element oder Attribut mit einfachem Inhalt kann eine Liste mit Werten enthalten, die durch ein Leerzeichen voneinander getrennt sind. Die Werte werden von einem XML-Schema als ein "list type" angegeben. Wenn kein XML-Schema vorhanden ist, wird einfacher Inhalt als ein einzelner Textknoten behandelt. Wenn ein XML-Schema verfügbar ist, kann dieser einfache Inhalt als eine Serie von atomaren Werten verfügbar gemacht werden, die alle einen einfachen Typ aufweisen, der einer Auflistung von CLR-Objekten zugeordnet ist. Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](type-support-in-the-system-xml-classes.md).  
   
-- Typisierter Wert: Ein für ein Schema validiertes Attribut oder Element mit einem einfachen Typ weist einen typisierten Wert auf. Dieser Wert ist ein primitiver Typ, z. B. ein numerischer Typ, ein Zeichenfolgentyp oder ein Datentyp. Alle integrierten einfachen Typen in XSD können CLR-Typen zugeordnet werden, die Zugriff auf den Wert eines Knotens als einen besser geeigneten Typ anstatt nur als einen <xref:System.String> bereitstellen. Ein Element mit Attributen oder untergeordneten Elementen wird als komplexer Typ betrachtet. Der typisierte Wert eines komplexen Typs mit einfachem Inhalt (nur Textknoten als untergeordnete Elemente) ist der gleiche wie der Wert des einfachen Typs dieses Inhalts. Der typisierte Wert eines komplexen Typs mit komplexem Inhalt (ein oder mehr untergeordnete Elemente) ist der Zeichenfolgenwert der Verkettung aller untergeordneten Textknoten, die als ein <xref:System.String> zurückgegeben werden. Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Typisierter Wert: Ein für ein Schema validiertes Attribut oder Element mit einem einfachen Typ weist einen typisierten Wert auf. Dieser Wert ist ein primitiver Typ, z. B. ein numerischer Typ, ein Zeichenfolgentyp oder ein Datentyp. Alle integrierten einfachen Typen in XSD können CLR-Typen zugeordnet werden, die Zugriff auf den Wert eines Knotens als einen besser geeigneten Typ anstatt nur als einen <xref:System.String> bereitstellen. Ein Element mit Attributen oder untergeordneten Elementen wird als komplexer Typ betrachtet. Der typisierte Wert eines komplexen Typs mit einfachem Inhalt (nur Textknoten als untergeordnete Elemente) ist der gleiche wie der Wert des einfachen Typs dieses Inhalts. Der typisierte Wert eines komplexen Typs mit komplexem Inhalt (ein oder mehr untergeordnete Elemente) ist der Zeichenfolgenwert der Verkettung aller untergeordneten Textknoten, die als ein <xref:System.String> zurückgegeben werden. Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](type-support-in-the-system-xml-classes.md).  
   
 - Schemasprachenspezifischer Typname: In den meisten Fällen werden die CLR-Typen, die als Nebeneffekt beim Übernehmen eines externen Schemas festgelegt werden, zum Bereitstellen des Zugriffs auf den Wert eines Knotens verwendet. In manchen Situationen ist es jedoch empfehlenswert, den Typ zu überprüfen, der einem bestimmten auf ein XML-Dokument angewendeten Schema zugeordnet ist. Zum Beispiel möchten Sie möglicherweise ein XML-Dokument durchsuchen und dabei alle Elemente extrahieren, die Inhalt vom Typ "PurchaseOrder" gemäß eines zugewiesenen Schemas aufweisen. Diese Typinformationen können nur durch Schemavalidierung festgelegt werden. Auf diese Informationen wird über die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft und die <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse zugegriffen. Weitere Informationen finden Sie im Abschnitt „Das Post-Schema-Validation-Infoset (PSVI)“ weiter unten.  
   
@@ -45,7 +45,7 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
 |<xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A>|Der <xref:System.String>-Wert des aktuellen Knotens, gemäß der Umwandlungsregeln für XPath 2.0 für <xref:System.Int64> in einen `xs:integer`-Wert umgewandelt.|  
 |<xref:System.Xml.XPath.XPathNavigator.ValueAs%2A>|Der Inhalt des Knotens, gemäß der Umwandlungsregeln für XPath 2.0 in den Zieltyp umgewandelt.|  
   
- Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+ Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](type-support-in-the-system-xml-classes.md).  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>Das Post-Schema-Validation-Infoset (PSVI)  
  Ein XML-Schemaprozessor akzeptiert ein XML-Infoset als Eingabe und konvertiert es in ein Post-Schema-Validation-Infoset (PSVI). Ein PSVI stellt das ursprüngliche Eingabe-XML-Infoset dar, dem neue Informationselemente hinzugefügt wurden. Vorhandenen Informationselementen wurden neue Eigenschaften hinzugefügt. Es gibt drei komplexe Klassen von Informationen, die dem XML-Infoset im PSVI hinzugefügt wurden und vom <xref:System.Xml.XPath.XPathNavigator> verfügbar gemacht werden.  
@@ -181,15 +181,15 @@ Decimal price = (decimal)navigator.ValueAs(typeof(decimal));
 Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C}", navigator.Value, (price - price * (decimal)0.20));  
 ```  
   
- Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+ Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](type-support-in-the-system-xml-classes.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
-- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
-- [Das Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
-- [Extrahieren von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
+- [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](type-support-in-the-system-xml-classes.md)
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](process-xml-data-using-the-xpath-data-model.md)
+- [Navigieren in Knotengruppen mit XPathNavigator](node-set-navigation-using-xpathnavigator.md)
+- [Das Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator](attribute-and-namespace-node-navigation-using-xpathnavigator.md)
+- [Extrahieren von XML-Daten mit XPathNavigator](extract-xml-data-using-xpathnavigator.md)

@@ -7,18 +7,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f6c2829d45db147c81592c00710f04168b40679e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710777"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287700"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Einfügen oder Importieren von XML-Schemata
 Ein XML-Schema kann die Elemente `<xs:import />`, `<xs:include />` und `<xs:redefine />` enthalten. Diese Schemaelemente verweisen auf andere XML-Schemata, mit denen die Struktur des Schemas ergänzt werden kann, in das Sie eingefügt bzw. importiert werden. Im SOM-API (Schemaobjektmodell) werden die Klassen <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> und <xref:System.Xml.Schema.XmlSchemaRedefine> diesen Elementen zugeordnet.  
   
 ## <a name="including-or-importing-an-xml-schema"></a>Einfügen oder Importieren eines XML-Schemas  
- Das folgende Codebeispiel ergänzt das im Thema [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) erstellte Kundenschema mit dem Adressschema. Wenn das Kundenschema mit dem Adressschema ergänzt wird, werden Adresstypen im Kundenschema verfügbar.  
+ Das folgende Codebeispiel ergänzt das im Thema [Erstellen von XML-Schemas](building-xml-schemas.md) erstellte Kundenschema mit dem Adressschema. Wenn das Kundenschema mit dem Adressschema ergänzt wird, werden Adresstypen im Kundenschema verfügbar.  
   
  Das Adressschema kann mithilfe des `<xs:include />`-Elements oder des `<xs:import />`-Elements eingebunden werden, um Komponenten des Adressschemas im vorliegenden Zustand zu verwenden. Es kann auch mithilfe eines `<xs:redefine />`-Elements zum Ändern der Komponenten verwendet werden, um die Anforderungen des Kundenschemas zu erfüllen. Da das Adressschema einen `targetNamespace` aufweist, der sich von dem des Kundenschemas unterscheidet, wird Importsemantik in Form des `<xs:import />`-Elements verwendet.  
   
@@ -99,9 +99,9 @@ Ein XML-Schema kann die Elemente `<xs:import />`, `<xs:include />` und `<xs:rede
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+- [Übersicht über das XML-Schemaobjektmodell (SOM)](xml-schema-object-model-overview.md)
+- [Lesen und Schreiben von XML-Schemas](reading-and-writing-xml-schemas.md)
+- [Erstellen von XML-Schemas](building-xml-schemas.md)
+- [Durchlaufen von XML-Schemas](traversing-xml-schemas.md)
+- [Bearbeiten von XML-Schemas](editing-xml-schemas.md)
+- [„XmlSchemaSet“ zur Kompilierung von Schemas](xmlschemaset-for-schema-compilation.md)

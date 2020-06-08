@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-ms.openlocfilehash: 87ba1ab9ac095c733a53f766d00ebb7530a8d9c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0482d43925f4f547114119a95909501cbf09eedb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137998"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279361"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>Gewusst wie: Registrieren von Rückrufen für Abbruchanforderungen
 Im folgenden Beispiel wird gezeigt, wie Sie einen Delegaten registrieren, der aufgerufen wird, wenn eine <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft aufgrund eines Aufrufs von <xref:System.Threading.CancellationTokenSource.Cancel%2A> für das Objekt, das das Token erstellt hat, den Wert „true“ aufweist. Verwenden Sie dieses Verfahren zum Abbrechen asynchroner Vorgänge, die das einheitliche Abbruchframework nicht systemeigen unterstützen, und für das Aufheben der Sperre von Methoden, die möglicherweise auf den Abschluss eines asynchronen Vorgangs warten.  
@@ -31,4 +31,4 @@ Im folgenden Beispiel wird gezeigt, wie Sie einen Delegaten registrieren, der au
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Abbruch in verwalteten Threads](cancellation-in-managed-threads.md)

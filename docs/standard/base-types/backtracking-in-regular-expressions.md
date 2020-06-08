@@ -17,15 +17,15 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: d9fb976c73891646df60b5329beb09493acbae8a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243231"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277803"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
-Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) enthält und die Engine für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
+Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](alternation-constructs-in-regular-expressions.md) enthält und die Engine für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
   
 > [!NOTE]
 > Bei einer NFA-Engine (Nondeterministic Finite Automaton) wie der .NET-Engine für reguläre Ausdrücke liegt die Verantwortung für die Erstellung effizienter und schneller regulärer Ausdrücke im Allgemeinen beim Entwickler.  
@@ -103,7 +103,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
  Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis die Engine für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt es sich bei diesem Vergleich um O(2<sup>n</sup>) oder einen exponentiellen Vorgang, wobei *n* für die Anzahl von Zeichen in der Eingabezeichenfolge steht. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.
 
 ## <a name="controlling-backtracking"></a>Steuern der Rückverfolgung  
- Mithilfe der Rückverfolgung können Sie leistungsstarke, flexible reguläre Ausdrücke erstellen. Wie allerdings im vorangegangenen Abschnitt erläutert, sind diese Vorteile u. U. mit einer inakzeptabel schlechten Leistung verknüpft. Um eine übermäßige Rückverfolgung zu verhindern, sollten Sie ein Timeoutintervall definieren, wenn Sie ein <xref:System.Text.RegularExpressions.Regex> -Objekt instanziieren oder eine statische Methode für Übereinstimmungen mit regulären Ausdrücken aufrufen. Dies wird im nächsten Abschnitt erläutert. Darüber hinaus unterstützt .NET drei Sprachelemente für reguläre Ausdrücke, die das Zurückverfolgen einschränken oder unterdrücken und komplexe reguläre Ausdrücke bei nur wenigen oder gar keinen Leistungseinbußen unterstützen: [atomische Gruppen](#atomic-groups), [Lookbehindassertionen](#lookbehind-assertions) und [Lookaheadassertionen](#lookahead-assertions). Weitere Informationen zu den einzelnen Sprachelementen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Mithilfe der Rückverfolgung können Sie leistungsstarke, flexible reguläre Ausdrücke erstellen. Wie allerdings im vorangegangenen Abschnitt erläutert, sind diese Vorteile u. U. mit einer inakzeptabel schlechten Leistung verknüpft. Um eine übermäßige Rückverfolgung zu verhindern, sollten Sie ein Timeoutintervall definieren, wenn Sie ein <xref:System.Text.RegularExpressions.Regex> -Objekt instanziieren oder eine statische Methode für Übereinstimmungen mit regulären Ausdrücken aufrufen. Dies wird im nächsten Abschnitt erläutert. Darüber hinaus unterstützt .NET drei Sprachelemente für reguläre Ausdrücke, die das Zurückverfolgen einschränken oder unterdrücken und komplexe reguläre Ausdrücke bei nur wenigen oder gar keinen Leistungseinbußen unterstützen: [atomische Gruppen](#atomic-groups), [Lookbehindassertionen](#lookbehind-assertions) und [Lookaheadassertionen](#lookahead-assertions). Weitere Informationen zu den einzelnen Sprachelementen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definieren eines Timeoutintervalls  
  Ab .NET Framework 4.5 können Sie einen Timeoutwert für das längste Intervall festlegen, innerhalb dessen die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht, bevor der Versuch abgebrochen und eine Ausnahme vom Typ <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ausgelöst wird. Sie geben das Timeoutintervall an, indem Sie einen <xref:System.TimeSpan> -Wert für den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> -Konstruktor für reguläre Ausdrucksinstanzen bereitstellen. Außerdem weist jede statische Methode für Musterübereinstimmungen eine Überladung mit einem <xref:System.TimeSpan> -Parameter auf, der es Ihnen ermöglicht, einen Timeoutwert anzugeben. Standardmäßig wird das Timeoutintervall auf <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> festgelegt, und die Engine für reguläre Ausdrücke gibt kein Timeout zurück.  
@@ -190,8 +190,8 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
-- [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Reguläre Ausdrücke von .NET](regular-expressions.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)
+- [Quantifizierer](quantifiers-in-regular-expressions.md)
+- [Alternierungskonstrukte](alternation-constructs-in-regular-expressions.md)
+- [Grouping Constructs](grouping-constructs-in-regular-expressions.md)

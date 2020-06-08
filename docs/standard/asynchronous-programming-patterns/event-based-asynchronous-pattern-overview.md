@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f4aac5afbb13cafa7bb0e9c1eb6bbd92ac41bf8c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160066"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289420"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Übersicht über ereignisbasierte asynchrone Muster
 Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin auf Benutzerinteraktionen reagieren, ist oft ein Entwurf erforderlich, der mehrere Threads verwendet. Der <xref:System.Threading>-Namespace bietet alle erforderlichen Tools für die Erstellung von leistungsstarken Multithreadanwendungen, aber für eine effektive Verwendung dieser Tools ist eine umfassende Erfahrung mit der Multithread-Softwareentwicklung erforderlich. Für relativ einfache Multithreadanwendungen bietet die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine unkomplizierte Lösung. Für komplexere asynchrone Anwendungen sollten Sie die Implementierung einer Klasse in Betracht ziehen, die den ereignisbasierten asynchronen Muster entspricht.  
@@ -34,7 +34,7 @@ Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin a
   
 - Warten Sie, bis Ressourcen verfügbar werden, ohne Ihre Anwendung anzuhalten („blockieren“).  
   
-- Kommunizieren Sie mit ausstehenden asynchronen Vorgängen über das vertraute Modell mit Ereignissen und Delegaten. Weitere Informationen zum Verwenden von Ereignishandlern und Delegaten finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
+- Kommunizieren Sie mit ausstehenden asynchronen Vorgängen über das vertraute Modell mit Ereignissen und Delegaten. Weitere Informationen zum Verwenden von Ereignishandlern und Delegaten finden Sie unter [Ereignisse](../events/index.md).  
   
  Eine Klasse, die das ereignisbasierte asynchrone Muster unterstützt, verfügt über mindesten eine Methode namens _MethodName_**Async**. Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein _MethodName_**Completed**-Ereignis und eine _MethodName_**AsyncCancel**-Methode (kurz **CancelAsync**) verfügen.  
   
@@ -45,7 +45,7 @@ Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin a
  Das ereignisbasierte asynchrone Muster erfordert, dass ein asynchroner Vorgang abgebrochen werden kann, und das <xref:System.Windows.Forms.PictureBox>-Steuerelement unterstützt diese Anforderung mit der <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>-Methode. Bei Aufrufen von <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> wird eine Anforderung übermittelt, um den ausstehenden Download zu beenden. Wenn die Aufgabe abgebrochen wird, wird das <xref:System.Windows.Forms.PictureBox.LoadCompleted>-Ereignis ausgelöst.  
   
 > [!CAUTION]
-> Es ist möglich, dass der Download gerade in dem Moment abgeschlossen wird, in dem die <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>-Anforderung erfolgt, sodass <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> die Anforderung zum Abbrechen möglicherweise nicht widerspiegelt. Dies wird als *Racebedingung* bezeichnet und ist ein typisches Problem bei der Multithreadprogrammierung. Weitere Informationen zu Problemen bei der Multithreadprogrammierung finden Sie unter [Empfohlene Vorgehensweise für das verwaltete Threading](../../../docs/standard/threading/managed-threading-best-practices.md).  
+> Es ist möglich, dass der Download gerade in dem Moment abgeschlossen wird, in dem die <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>-Anforderung erfolgt, sodass <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> die Anforderung zum Abbrechen möglicherweise nicht widerspiegelt. Dies wird als *Racebedingung* bezeichnet und ist ein typisches Problem bei der Multithreadprogrammierung. Weitere Informationen zu Problemen bei der Multithreadprogrammierung finden Sie unter [Empfohlene Vorgehensweise für das verwaltete Threading](../threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Eigenschaften des ereignisbasierten asynchronen Musters  
  Das ereignisbasierte asynchrone Muster kann je nach Komplexität der von einer bestimmten Klasse unterstützten Vorgänge mehrere Formen annehmen. Die einfachsten Klassen verfügen möglicherweise über eine einzige _MethodName_**Async**-Methode und ein entsprechendes _MethodName_**Completed**-Ereignis. Komplexere Klassen verfügen möglicherweise über mehrere _MethodName_**Async**-Methoden mit jeweils einem entsprechenden _MethodName_**Completed**-Ereignis sowie synchronen Versionen dieser Methoden. Klassen können optional das Abbrechen, die Statusberichterstellung und inkrementelle Ergebnisse für jede asynchrone Methode unterstützen.  
@@ -136,9 +136,9 @@ public class AsyncExample
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](event-based-asynchronous-pattern-eap.md)
+- [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

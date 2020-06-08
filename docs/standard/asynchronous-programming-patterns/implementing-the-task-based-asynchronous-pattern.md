@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 7d031bab6ba0a4420062eff107aeb1262d9b3b40
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421227"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289355"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementieren des aufgabenbasierten asynchronen Entwurfsmusters
 Sie können das aufgabenbasierte asynchrone Muster (Task-based Asynchronous Pattern, TAP) auf drei Arten implementieren: mit C# und den Visual Basic-Compilern in Visual Studio, manuell oder mit einer Kombination von Compilermethoden und manuellen Methoden. In den folgenden Abschnitten wird jede dieser Methoden ausführlich erörtert. Mit dem TAP-Muster können sowohl rechnergebundene als auch E/A-gebundene asynchrone Vorgänge implementiert werden. Im Abschnitt [Workloads](#workloads) werden die einzelnen Vorgangstypen erläutert.
@@ -98,10 +98,10 @@ Asynchrone Methoden sind nicht auf ausschließlich rechnergebundene oder ausschl
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
 [!code-vb[Conceptual.TAP_Patterns#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#7)]
 
-Dieses Beispiel zeigt auch, wie ein einzelnes Abbruchstoken nacheinander in mehreren asynchronen Vorgängen verwendet werden kann. Weitere Informationen finden Sie im Abschnitt zur Verwendung von Abbruchtokens unter [Verwenden des aufgabenbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+Dieses Beispiel zeigt auch, wie ein einzelnes Abbruchstoken nacheinander in mehreren asynchronen Vorgängen verwendet werden kann. Weitere Informationen finden Sie im Abschnitt zur Verwendung von Abbruchtokens unter [Verwenden des aufgabenbasierten asynchronen Musters](consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [Nutzen des aufgabenbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
-- [Interoperabilität mit anderen asynchronen Mustern und Typen](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+- [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](task-based-asynchronous-pattern-tap.md)
+- [Nutzen des aufgabenbasierten asynchronen Musters](consuming-the-task-based-asynchronous-pattern.md)
+- [Interoperabilität mit anderen asynchronen Mustern und Typen](interop-with-other-asynchronous-patterns-and-types.md)

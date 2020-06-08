@@ -3,12 +3,12 @@ title: Verwalten von Namespaces in einem XML-Dokument
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b60e773183bd008c99022946a2ec53932234fe23
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796151"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289147"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Verwalten von Namespaces in einem XML-Dokument
 XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-Dokument Element- und Attributnamen zu. Um diese Zuordnungen zu erstellen, definieren Sie Präfixe für Namespace-URIs und verwenden diese zur Kennzeichnung von Element- und Attributnamen in XML-Daten. Namespaces verhindern Konflikte zwischen Element- und Attributnamen. Sie ermöglichen eine unterschiedliche Verarbeitung und Validierung von gleichnamigen Elementen und Attributen.  
@@ -83,4 +83,4 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.XmlNamespaceManager>
-- [XML-Dokumente und -Daten](../../../../docs/standard/data/xml/index.md)
+- [XML-Dokumente und -Daten](index.md)

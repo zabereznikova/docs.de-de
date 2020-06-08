@@ -13,12 +13,12 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-ms.openlocfilehash: 85ba91b63ab0edbccc768e2d1ad4aaef31fd2f21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91996bc721db55b24521be97e4d9accd53ef7924
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120834"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288614"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Durchführen kulturunabhängiger Zeichenfolgenvergleiche
 In der Standardeinstellung führt die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode kulturabhängige Vergleiche sowie Vergleiche unter Berücksichtigung der Groß-/Kleinschreibung aus. Diese Methode schließt auch mehrere Überladungen ein, die einen `culture`-Parameter zur Angabe der zu verwendenden Kultur und einen `comparisonType`-Parameter zur Angabe der zu verwendenden Vergleichsregeln bereitstellen. Durch den Aufruf dieser Methoden statt der Standardüberladung wird jede Mehrdeutigkeit hinsichtlich der in einem bestimmten Methodenaufruf verwendeten Regeln vermieden. Es wird verdeutlicht, ob ein bestimmter Vergleich kulturabhängig oder kulturunabhängig ist.  
@@ -43,5 +43,5 @@ Sie können die aus mehreren Textdateien bestehenden [Sorting Weight Tables](htt
 
 - <xref:System.String.Compare%2A?displayProperty=nameWithType>
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
-- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md)
+- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](performing-culture-insensitive-string-operations.md)
+- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../base-types/best-practices-strings.md)

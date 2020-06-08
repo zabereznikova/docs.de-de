@@ -12,17 +12,17 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f71f428037f33fdbc692ca2f02a4c767998d684e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159454"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288575"
 ---
 # <a name="how-to-copy-directories"></a>Vorgehensweise: Kopieren von Verzeichnissen
 In diesem Thema wird gezeigt, wie E/A-Klassen zum synchronen Kopieren der Inhalte eines Verzeichnisses an einen anderen Speicherort verwendet werden.
 
-Ein Beispiel für das asynchrone Kopieren von Dateien finden Sie unter [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md).
+Ein Beispiel für das asynchrone Kopieren von Dateien finden Sie unter [Asynchrone Datei-E/A](asynchronous-file-i-o.md).
 
 In diesem Beispiel werden Unterverzeichnisse kopiert, indem `copySubDirs` der `DirectoryCopy`-Methode auf `true` festgelegt wird. Die `DirectoryCopy`-Methode kopiert Unterverzeichnisse rekursiv, indem sie sich selbst so lange für jedes weitere Unterverzeichnis aufruft, bis alle kopiert wurden.  
   
@@ -37,6 +37,6 @@ In diesem Beispiel werden Unterverzeichnisse kopiert, indem `copySubDirs` der `D
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
-- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
-- [Allgemeine E/A-Aufgaben](../../../docs/standard/io/common-i-o-tasks.md)
-- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Datei- und Stream-E/A](index.md)
+- [Allgemeine E/A-Aufgaben](common-i-o-tasks.md)
+- [Asynchrone Datei-E/A](asynchronous-file-i-o.md)

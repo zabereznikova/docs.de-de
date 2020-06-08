@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-ms.openlocfilehash: 43ca52359a48d3ac5a27933fcc8ce56c07159cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e44b10b88bef61edcf3f547f56b4020740530e26
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137981"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279542"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Gewusst wie: Lauschen auf Abbruchanforderungen mit Wait-Handles
 Wenn eine Methode blockiert wird, während sie auf die Signalisierung eines Ereignisses wartet, kann sie nicht den Wert des Abbruchtokens überprüfen und rechtzeitig reagieren. Im ersten Beispiel wird gezeigt, wie Sie dieses Problem beheben, wenn Sie mit Ereignissen wie z. B. <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> arbeiten, die das einheitliche Abbruchframework nicht nativ unterstützen. Das zweite Beispiel zeigt einen einfacheren Ansatz, der <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> verwendet, was den Abbruch unterstützt.  
@@ -35,4 +35,4 @@ Wenn eine Methode blockiert wird, während sie auf die Signalisierung eines Erei
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Abbruch in verwalteten Threads](cancellation-in-managed-threads.md)

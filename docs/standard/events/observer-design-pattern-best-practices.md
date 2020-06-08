@@ -6,18 +6,18 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141538"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288458"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Empfohlene Vorgehensweisen für Beobachterentwurfsmuster
 Im .NET Framework wird das Beobachterentwurfsmuster als Satz von Schnittstellen implementiert. Die <xref:System.IObservable%601?displayProperty=nameWithType>-Schnittstelle stellt den Datenanbieter dar, der auch für die Bereitstellung einer <xref:System.IDisposable>-Implementierung verantwortlich ist, mit der Beobachter Benachrichtigungsabonnements kündigen können. Die <xref:System.IObserver%601?displayProperty=nameWithType>-Schnittstelle stellt den Beobachter dar. Dieses Thema beschreibt die empfohlenen Vorgehensweisen, die Entwickler befolgen sollten, wenn sie das Beobachterentwurfsmuster unter Verwendung dieser Schnittstellen implementieren.  
   
 ## <a name="threading"></a>Threading  
- In der Regel implementiert ein Anbieter die <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode, indem er einen bestimmten Beobachter einer Abonnentenliste hinzufügt, die durch ein Auflistungsobjekt dargestellt wird, und implementiert die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Methode, indem ein bestimmten Beobachter aus der Abonnentenliste entfernt wird. Ein Beobachter kann diese Methoden jederzeit aufrufen. Da der Anbieter/Beobachter-Vertrag außerdem nicht angibt, wer für das Kündigen nach der <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>-Callbackmethode verantwortlich ist, können der Anbieter und der Beobachter beide versuchen, denselben Member aus der Liste zu entfernen. Aufgrund dieser Möglichkeit sollten die <xref:System.IObservable%601.Subscribe%2A>- und die <xref:System.IDisposable.Dispose%2A>-Methode threadsicher sein. In der Regel umfasst dies die Verwendung einer [gleichzeitigen Auflistung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) oder eine Sperre. Für Implementierungen, die nicht threadsicher sind, sollte dies explizit dokumentiert werden.  
+ In der Regel implementiert ein Anbieter die <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode, indem er einen bestimmten Beobachter einer Abonnentenliste hinzufügt, die durch ein Auflistungsobjekt dargestellt wird, und implementiert die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Methode, indem ein bestimmten Beobachter aus der Abonnentenliste entfernt wird. Ein Beobachter kann diese Methoden jederzeit aufrufen. Da der Anbieter/Beobachter-Vertrag außerdem nicht angibt, wer für das Kündigen nach der <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>-Callbackmethode verantwortlich ist, können der Anbieter und der Beobachter beide versuchen, denselben Member aus der Liste zu entfernen. Aufgrund dieser Möglichkeit sollten die <xref:System.IObservable%601.Subscribe%2A>- und die <xref:System.IDisposable.Dispose%2A>-Methode threadsicher sein. In der Regel umfasst dies die Verwendung einer [gleichzeitigen Auflistung](../parallel-programming/data-structures-for-parallel-programming.md) oder eine Sperre. Für Implementierungen, die nicht threadsicher sind, sollte dies explizit dokumentiert werden.  
   
  Alle weiteren Garantien müssen in einer Ebene über dem Anbieter/Beobachter-Vertrag angegeben werden. Implementierer sollten klar kommunizieren, wenn sie zusätzliche Anforderungen auferlegen, um Verwirrungen der Benutzer zum Beobachtervertrag zu vermeiden.  
   
@@ -53,6 +53,6 @@ Im .NET Framework wird das Beobachterentwurfsmuster als Satz von Schnittstellen 
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern.md)
-- [Gewusst wie: Implementieren eines Observers](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [Gewusst wie: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [Beobachterentwurfsmuster](observer-design-pattern.md)
+- [Gewusst wie: Implementieren eines Observers](how-to-implement-an-observer.md)
+- [Gewusst wie: Implementieren eines Anbieters](how-to-implement-a-provider.md)

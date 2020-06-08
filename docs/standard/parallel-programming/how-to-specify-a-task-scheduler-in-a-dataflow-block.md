@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 2abac1ccf45fc9c9c28e27c132e72fe483a24d75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76c9e75f787c28657af143b46bb22d08039e2dc4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73122224"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288133"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Gewusst wie: Einen Taskplaner in einem Datenflussblock angeben
 Dieses Dokument veranschaulicht, wie Sie einen bestimmten Taskplaner zuweisen, wenn Sie Datenfluss in Ihrer Anwendung verwenden. Das Beispiel verwendet die <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType>-Klasse in einer Windows Forms-Anwendung, um anzuzeigen, wann die Readeraufgaben aktiv sind und wann eine Writeraufgabe aktiv ist. Darüber hinaus verwendet das Beispiel die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode, um zu ermögliche, dass ein Datenflussblock im Benutzeroberflächenthread ausgeführt wird.
@@ -81,4 +81,4 @@ Dieses Dokument veranschaulicht, wie Sie einen bestimmten Taskplaner zuweisen, w
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141598"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290408"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Verschiedene Konstrukte in regulären Ausdrücken
 Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer ermöglicht Ihnen das Aktivieren oder Deaktivieren bestimmter Vergleichsoptionen mitten in einem Muster für reguläre Ausdrücke. Mithilfe der beiden anderen können Sie Kommentare in einen regulären Ausdruck aufnehmen.  
@@ -25,7 +25,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
   
 `(?imnsx-imnsx)`  
   
- Die Optionen, die Sie aktivieren möchten, werden nach dem Fragezeichen aufgeführt, und die Optionen, die Sie deaktivieren möchten, werden nach dem Minuszeichen eingefügt. In der folgenden Tabelle sind die einzelnen Optionen beschrieben. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+ Die Optionen, die Sie aktivieren möchten, werden nach dem Fragezeichen aufgeführt, und die Optionen, die Sie deaktivieren möchten, werden nach dem Minuszeichen eingefügt. In der folgenden Tabelle sind die einzelnen Optionen beschrieben. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
@@ -38,7 +38,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
  Alle Änderungen in Optionen für reguläre Ausdrücke, die über das Konstrukt `(?imnsx-imnsx)` definiert werden, bleiben bis zum Ende der einschließenden Gruppe gültig.  
   
 > [!NOTE]
-> Das Gruppierungskonstrukt `(?imnsx-imnsx:`*subexpression*`)` bietet identische Funktionen für einen Teilausdruck. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+> Das Gruppierungskonstrukt `(?imnsx-imnsx:`*subexpression*`)` bietet identische Funktionen für einen Teilausdruck. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).  
   
  Im folgenden Beispiel werden die Optionen `i`, `n` und `x` verwendet, um die Groß-/Kleinschreibung zu ignorieren, explizite Erfassungen zu ermöglichen und Leerzeichen im Muster für reguläre Ausdrücke in der Mitte eines regulären Ausdrucks zu ignorieren.  
   
@@ -99,4 +99,4 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)

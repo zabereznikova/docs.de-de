@@ -35,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad7957fd555c1de8fe47c092d3eb399a803fb1fb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160000"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290901"
 ---
 # <a name="the-regular-expression-object-model"></a>Das Objektmodell für reguläre Ausdrücke
 <a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Sie enthält die folgenden Abschnitte:  
@@ -284,7 +284,7 @@ ms.locfileid: "78160000"
   
  Die Eigenschaften der <xref:System.Text.RegularExpressions.Group>-Klasse enthalten Informationen zur erfassten Gruppe: Die `Group.Value`-Eigenschaft enthält die erfasste Teilzeichenfolge, die `Group.Index`-Eigenschaft gibt die Anfangsposition der erfassten Gruppe im Eingabetext an, die `Group.Length`-Eigenschaft enthält die Länge des erfassten Texts, und die `Group.Success`-Eigenschaft gibt an, ob eine Teilzeichenfolge dem Muster entsprach, das durch die Erfassungsgruppe definiert wurde.  
   
- Durch Anwenden von Quantifizierern auf eine Gruppe (weitere Informationen finden Sie unter [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) wird die Beziehung einer Erfassung pro Erfassungsgruppe in zweierlei Hinsicht geändert:  
+ Durch Anwenden von Quantifizierern auf eine Gruppe (weitere Informationen finden Sie unter [Quantifizierer](quantifiers-in-regular-expressions.md)) wird die Beziehung einer Erfassung pro Erfassungsgruppe in zweierlei Hinsicht geändert:  
   
 - Wenn der `*`-Quantifizierer oder der `*?`-Quantifizierer (der null oder mehr Übereinstimmungen angibt) für eine Gruppe übernommen wird, verfügt eine Erfassungsgruppe möglicherweise über keine Übereinstimmung in der Eingabezeichenfolge. Wenn kein erfasster Text vorhanden ist, werden die Eigenschaften des <xref:System.Text.RegularExpressions.Group>-Objekts entsprechend der Darstellung in der folgenden Tabelle festgelegt.  
   
@@ -352,5 +352,5 @@ ms.locfileid: "78160000"
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Text.RegularExpressions>
-- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Reguläre Ausdrücke von .NET](regular-expressions.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)

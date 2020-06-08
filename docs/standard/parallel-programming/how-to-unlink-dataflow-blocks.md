@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: b49cfc9730ba154202baf15093a54ba3ce0e2a8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af978ca2ca237988dae8328656d70574dbc1f14
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139296"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288055"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Gewusst wie: Verknüpfungen für Datenflussblöcke aufheben
 In diesem Dokument erfahren Sie, wie Sie eine Verknüpfung zwischen einen Zieldatenflussblock und der zugehörigen Quelle auflösen.
@@ -34,4 +34,4 @@ In diesem Dokument erfahren Sie, wie Sie eine Verknüpfung zwischen einen Zielda
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

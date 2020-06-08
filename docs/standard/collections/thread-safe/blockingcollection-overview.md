@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-ms.openlocfilehash: fb01d29c723962e28d8ec4afc984cb4d6c48f9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 708ab9dc8df2ee3128036ffc71e9abc51a56e33b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711323"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287912"
 ---
 # <a name="blockingcollection-overview"></a>Übersicht über BlockingCollections
 <xref:System.Collections.Concurrent.BlockingCollection%601> ist eine threadsichere Sammlungsklasse, die die folgenden Features bietet:  
@@ -46,10 +46,10 @@ ms.locfileid: "75711323"
  [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)]
  [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
   
- Ein vollständiges Beispiel finden Sie unter [Gewusst wie: Hinzufügen und Entfernen von einzelnen Elementen zu bzw. aus einer BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
+ Ein vollständiges Beispiel finden Sie unter [Gewusst wie: Hinzufügen und Entfernen von einzelnen Elementen zu bzw. aus einer BlockingCollection](how-to-add-and-take-items.md).  
   
 ## <a name="timed-blocking-operations"></a>Zeitgesteuerte Blockierungsvorgänge  
- In zeitgesteuerten <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A>- und <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>-Blockierungsvorgängen, die für begrenzte Sammlungen durchgeführt werden, versucht die Methode, ein Element hinzuzufügen oder zu entnehmen. Wenn ein Element verfügbar ist, wird es in die Variable eingesetzt, die durch Verweis übergeben wurde, und die Methode gibt WAHR zurück. Wenn nach einer angegebenen Timeoutfrist kein Element abgerufen wird, gibt die Methode FALSCH zurück. Der Thread ist dann vor dem erneuten Versuch, auf die Sammlung zuzugreifen, frei für andere nützliche Aufgaben. Ein Beispiel für das zeitgesteuerte Blockieren des Zugriffs ist das zweite Beispiel unter [Gewusst wie: Hinzufügen und Entfernen von einzelnen Elementen zu bzw. aus einer BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
+ In zeitgesteuerten <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A>- und <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>-Blockierungsvorgängen, die für begrenzte Sammlungen durchgeführt werden, versucht die Methode, ein Element hinzuzufügen oder zu entnehmen. Wenn ein Element verfügbar ist, wird es in die Variable eingesetzt, die durch Verweis übergeben wurde, und die Methode gibt WAHR zurück. Wenn nach einer angegebenen Timeoutfrist kein Element abgerufen wird, gibt die Methode FALSCH zurück. Der Thread ist dann vor dem erneuten Versuch, auf die Sammlung zuzugreifen, frei für andere nützliche Aufgaben. Ein Beispiel für das zeitgesteuerte Blockieren des Zugriffs ist das zweite Beispiel unter [Gewusst wie: Hinzufügen und Entfernen von einzelnen Elementen zu bzw. aus einer BlockingCollection](how-to-add-and-take-items.md).  
   
 ## <a name="cancelling-add-and-take-operations"></a>Abbrechen von Hinzufüge- und Entnahmevorgängen  
  Hinzufüge- und Entnahmevorgänge werden in der Regel in einer Schleife ausgeführt. Sie können eine Schleife durch die Übergabe eines <xref:System.Threading.CancellationToken> an die <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A>- oder <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>-Methode abbrechen und dann den Wert der <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft des Tokens in jeder Iteration überprüfen. Wenn der Wert WAHR ist, liegt es an Ihnen, auf die Abbruchanforderung durch Bereinigen aller Ressourcen und Beenden der Schleife zu reagieren. Das folgende Beispiel zeigt eine Überladung von <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A>, die ein Abbruchtoken entgegennimmt, und den Code, der es verwendet:  
@@ -57,7 +57,7 @@ ms.locfileid: "75711323"
  [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
  [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
   
- Ein Beispiel für das Hinzufügen von Abbruchunterstützung ist das zweite Beispiel unter [Gewusst wie: Hinzufügen und Entfernen von einzelnen Elementen zu bzw. aus einer BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
+ Ein Beispiel für das Hinzufügen von Abbruchunterstützung ist das zweite Beispiel unter [Gewusst wie: Hinzufügen und Entfernen von einzelnen Elementen zu bzw. aus einer BlockingCollection](how-to-add-and-take-items.md).  
   
 ## <a name="specifying-the-collection-type"></a>Angeben des Sammlungstyps  
  Beim Erstellen von <xref:System.Collections.Concurrent.BlockingCollection%601> können Sie nicht nur die begrenzte Kapazität angeben, sondern auch den Typ der zu verwendenden Sammlung. Sie könnten z.B. <xref:System.Collections.Concurrent.ConcurrentQueue%601> für das First-in-First-out-Verhalten (FIFO) oder <xref:System.Collections.Concurrent.ConcurrentStack%601> für das Last-in-First-out-Verhalten (LIFO) angeben. Sie können jede Sammlungsklasse verwenden, die die <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>-Schnittstelle implementiert. Der standardmäßige Sammlungstyp für <xref:System.Collections.Concurrent.BlockingCollection%601> ist <xref:System.Collections.Concurrent.ConcurrentQueue%601>. Das folgende Codebeispiel veranschaulicht das Erstellen einer <xref:System.Collections.Concurrent.BlockingCollection%601> von Zeichenfolgen, die eine Kapazität von 1000 hat und <xref:System.Collections.Concurrent.ConcurrentBag%601> verwendet:  
@@ -70,16 +70,16 @@ Dim bc = New BlockingCollection(Of String)(New ConcurrentBag(Of String()), 1000)
 BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag<string>(), 1000 );  
 ```  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Begrenzungs- und Blockadefunktionen zu einer Sammlung](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md).  
+ Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Begrenzungs- und Blockadefunktionen zu einer Sammlung](how-to-add-bounding-and-blocking.md).  
   
 ## <a name="ienumerable-support"></a>IEnumerable-Unterstützung  
- <xref:System.Collections.Concurrent.BlockingCollection%601> bietet eine <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>-Methode, mit der Consumer `foreach` (`For Each` in Visual Basic) verwenden können, um Elemente zu entfernen, bis die Sammlung abgeschlossen ist, d.h. bis sie leer ist und keine Elemente mehr hinzugefügt werden. Weitere Informationen finden Sie unter [Gewusst wie: Entfernen von Elementen in einer BlockingCollection mit ForEach](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> bietet eine <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>-Methode, mit der Consumer `foreach` (`For Each` in Visual Basic) verwenden können, um Elemente zu entfernen, bis die Sammlung abgeschlossen ist, d.h. bis sie leer ist und keine Elemente mehr hinzugefügt werden. Weitere Informationen finden Sie unter [Gewusst wie: Entfernen von Elementen in einer BlockingCollection mit ForEach](how-to-use-foreach-to-remove.md).  
   
 ## <a name="using-many-blockingcollections-as-one"></a>Verwenden vieler BlockingCollections als eine einzige  
- Für Szenarien, in denen ein Consumer mehreren Sammlungen gleichzeitig Elemente entnehmen muss, können Sie Arrays mit <xref:System.Collections.Concurrent.BlockingCollection%601> erstellen und statische Methoden wie <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> und <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> verwenden, die Elemente beliebigen Sammlungen im Array hinzufügen bzw. ihnen entnehmen. Wenn eine Sammlung blockiert wird, versucht die Methode sofort, eine andere zu verwenden, bis sie eine Sammlung findet, die den Vorgang ausführen kann. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von Arrays mit blockierenden Sammlungen in einer Pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
+ Für Szenarien, in denen ein Consumer mehreren Sammlungen gleichzeitig Elemente entnehmen muss, können Sie Arrays mit <xref:System.Collections.Concurrent.BlockingCollection%601> erstellen und statische Methoden wie <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> und <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> verwenden, die Elemente beliebigen Sammlungen im Array hinzufügen bzw. ihnen entnehmen. Wenn eine Sammlung blockiert wird, versucht die Methode sofort, eine andere zu verwenden, bis sie eine Sammlung findet, die den Vorgang ausführen kann. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von Arrays mit blockierenden Sammlungen in einer Pipeline](how-to-use-arrays-of-blockingcollections.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Sammlungen und Datenstrukturen](../../../../docs/standard/collections/index.md)
-- [Threadsichere Sammlungen](../../../../docs/standard/collections/thread-safe/index.md)
+- [Sammlungen und Datenstrukturen](../index.md)
+- [Threadsichere Sammlungen](index.md)

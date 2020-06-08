@@ -10,19 +10,19 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139659"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290732"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Gewusst wie: Schreiben einer einfachen Parallel.For-Schleife
 
 Dieses Thema enthält zwei Beispiele, die die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode veranschaulichen. Im ersten Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>-Methodenüberladung und im zweiten Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>-Überladung verwendet. Dies beiden Überladungen sind die einfachsten Überladungen der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode. Sie können diese beiden Überladungen der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode verwenden, wenn keiner der folgenden Vorgänge erforderlich ist: Abbrechen der Schleife, vorzeitiges Beenden der Schleifeniterationen oder Beibehalten eines threadlokalen Zustands.
 
 > [!NOTE]
-> Diese Dokumentation definiert Delegaten in TPL mithilfe von Lambdaausdrücken. Falls Sie mit der Verwendung von Lambda-Ausdrücken in C# oder Visual Basic nicht vertraut sind, finden Sie entsprechende Informationen unter [Lambda Expressions in PLINQ and TPL (Lambda-Ausdrücke in PLINQ und TPL)](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> Diese Dokumentation definiert Delegaten in TPL mithilfe von Lambdaausdrücken. Falls Sie mit der Verwendung von Lambda-Ausdrücken in C# oder Visual Basic nicht vertraut sind, finden Sie entsprechende Informationen unter [Lambda Expressions in PLINQ and TPL (Lambda-Ausdrücke in PLINQ und TPL)](lambda-expressions-in-plinq-and-tpl.md).
 
 Im ersten Beispiel wird die Größe der Dateien in einem einzelnen Verzeichnis berechnet. Im zweiten Beispiel wird das Produkt von zwei Matrizen berechnet.
 
@@ -44,7 +44,7 @@ Wenn Code, einschließlich Schleifen, parallelisiert wird, besteht ein wichtiges
 
 ## <a name="the-delegate"></a>Der Delegat
 
-Der dritte Parameter dieser Überladung von <xref:System.Threading.Tasks.Parallel.For%2A> ist ein Delegat des Typs `Action<int>` in C# oder `Action(Of Integer)` in Visual Basic. Ein `Action`-Delegat gibt unabhängig davon, ob er keinen, einen oder sechzehn Typparameter hat, immer „void“ zurück. In Visual Basic wird das Verhalten eines `Action`-Delegaten mit einer `Sub`-Prozedur definiert. Im Beispiel wird ein Lambdaausdruck verwendet, um den Delegaten zu erstellen. Sie können den Delegaten jedoch auch auf andere Art und Weise erstellen. Weitere Informationen finden Sie unter [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+Der dritte Parameter dieser Überladung von <xref:System.Threading.Tasks.Parallel.For%2A> ist ein Delegat des Typs `Action<int>` in C# oder `Action(Of Integer)` in Visual Basic. Ein `Action`-Delegat gibt unabhängig davon, ob er keinen, einen oder sechzehn Typparameter hat, immer „void“ zurück. In Visual Basic wird das Verhalten eines `Action`-Delegaten mit einer `Sub`-Prozedur definiert. Im Beispiel wird ein Lambdaausdruck verwendet, um den Delegaten zu erstellen. Sie können den Delegaten jedoch auch auf andere Art und Weise erstellen. Weitere Informationen finden Sie unter [Lambdaausdrücke in PLINQ und TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="the-iteration-value"></a>Der Iterationswert
 
@@ -72,5 +72,5 @@ Kopieren Sie diesen Code, und fügen Sie ihn in ein Visual Studio-Projekt ein.
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
-- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
+- [Datenparallelität](data-parallelism-task-parallel-library.md)
+- [Parallele Programmierung](index.md)

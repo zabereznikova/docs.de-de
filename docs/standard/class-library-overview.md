@@ -37,12 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398766"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289238"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -76,7 +76,7 @@ ms.locfileid: "79398766"
   
  Insbesondere für das Erstellen und Dokumentieren von Klassenbibliotheken empfiehlt sich ein Benennungsschema, bei dem verwandte Typen in Namespaces zusammengefasst werden. Dieses wirkt sich jedoch nicht auf Sichtbarkeit, Memberzugriff, Vererbung, Sicherheit oder Bindung aus. Ein Namespace kann von mehreren Assemblys verwendet werden, und eine einzelne Assembly kann Typen aus mehreren Namespaces enthalten. Die Assembly stellt die formale Struktur für Versionsinformationen, Bereitstellung, Sicherheit, Ladevorgänge und Sichtbarkeit in der Common Language Runtime bereit.  
   
- Weitere Informationen über Namespaces und Typennamen finden Sie unter [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md).  
+ Weitere Informationen über Namespaces und Typennamen finden Sie unter [Allgemeines Typsystem](base-types/common-type-system.md).  
   
 ## <a name="system-namespace"></a>System-Namespace
 
@@ -110,6 +110,6 @@ ms.locfileid: "79398766"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)
+- [Allgemeines Typsystem](base-types/common-type-system.md)
 - [.NET API-Browser](../../api/index.md)
-- [Übersicht](../../docs/framework/get-started/overview.md)
+- [Übersicht](../framework/get-started/overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d9c72a64d172dcadf1bff1b1edf3050ca5f7d05
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75900584"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287622"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 
@@ -23,7 +23,7 @@ In den folgenden Abschnitten werden Tools beschrieben, die zum Untersuchen von P
 
 ### <a name="memory-performance-counters"></a>Speicherleistungsindikatoren
 
-Sie können Leistungsindikatoren verwenden, um Leistungsdaten zu erfassen. Anweisungen hierzu finden Sie unter [Laufzeit-Profilerstellung](../../../docs/framework/debug-trace-profile/runtime-profiling.md). Die Leistungsindikatorkategorie .NET CLR-Speicher, die in [Leistungsindikatoren in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) beschrieben wird, stellt Informationen über den Garbage Collector bereit.
+Sie können Leistungsindikatoren verwenden, um Leistungsdaten zu erfassen. Anweisungen hierzu finden Sie unter [Laufzeit-Profilerstellung](../../framework/debug-trace-profile/runtime-profiling.md). Die Leistungsindikatorkategorie .NET CLR-Speicher, die in [Leistungsindikatoren in .NET Framework](../../framework/debug-trace-profile/performance-counters.md) beschrieben wird, stellt Informationen über den Garbage Collector bereit.
 
 ### <a name="debugging-with-sos"></a>Debuggen mit SOS
 
@@ -33,7 +33,7 @@ Wenn Sie WinDbg installieren möchten, installieren Sie die Debugtools für Wind
 
 ### <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse
 
-Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden. Ab .NET Framework 4 erfassen [ETW-Ereignisse der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) nützliche Informationen für eine statistische Analyse des verwalteten Heaps. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:
+Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden. Ab .NET Framework 4 erfassen [ETW-Ereignisse der Garbage Collection](../../framework/performance/garbage-collection-etw-events.md) nützliche Informationen für eine statistische Analyse des verwalteten Heaps. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:
 
 - Welche Generation von Objekten wird erfasst.
 
@@ -45,13 +45,13 @@ Die ETW-Ereignisprotokollierung ist effizient und wird keine Leistungsprobleme b
 
 ### <a name="the-profiling-api"></a>Die Profilerstellungs-API
 
-Die Profilerstellungsschnittstellen der Common Language Runtime (CLR) enthalten ausführliche Informationen zu den Objekten, die von einer Garbage Collection betroffen sind. Ein Profiler kann benachrichtigt werden, wenn eine Garbage Collection beginnt oder endet. Es kann Berichte über die Objekte im verwalteten Heap bereitstellen, einschließlich einer Identifikation von Objekten in jeder Generation. Weitere Informationen finden Sie unter [Übersicht über die Profilerstellung](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).
+Die Profilerstellungsschnittstellen der Common Language Runtime (CLR) enthalten ausführliche Informationen zu den Objekten, die von einer Garbage Collection betroffen sind. Ein Profiler kann benachrichtigt werden, wenn eine Garbage Collection beginnt oder endet. Es kann Berichte über die Objekte im verwalteten Heap bereitstellen, einschließlich einer Identifikation von Objekten in jeder Generation. Weitere Informationen finden Sie unter [Übersicht über die Profilerstellung](../../framework/unmanaged-api/profiling/profiling-overview.md).
 
 Profiler können umfassende Informationen bereitstellen. Allerdings können komplexe Profiler das Verhalten der Anwendung beeinflussen.
 
 ### <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen
 
-Ab .NET Framework 4 können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (Application domain Resource Monitoring, ARM) die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Weitere Informationen finden Sie unter [Überwachung von Anwendungsdomänenressourcen](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).
+Ab .NET Framework 4 können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (Application domain Resource Monitoring, ARM) die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Weitere Informationen finden Sie unter [Überwachung von Anwendungsdomänenressourcen](app-domain-resource-monitoring.md).
 
 ## <a name="troubleshooting-performance-issues"></a>Problembehandlung bei Performanceproblemen
 
@@ -143,7 +143,7 @@ Wenn die Fragmentierung des virtuellen Arbeitsspeichers verhindert, dass der Gar
 
 - Erstellung von großen flüchtigen Objekten. Dies zwingt den großen Objektheap, häufig Heapsgmente zu reservieren und wieder freizugeben.
 
-  Wenn die CLR gehostet wird, kann eine Anwendung anfordern, dass der Garbage Collector seine Segmente beibehält. Dadurch wird die Häufigkeit von Segmentbelegungen reduziert. Dies wird mit dem Flag STARTUP_HOARD_GC_VM in der [STARTUP_FLAGS-Enumeration](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) erreicht.
+  Wenn die CLR gehostet wird, kann eine Anwendung anfordern, dass der Garbage Collector seine Segmente beibehält. Dadurch wird die Häufigkeit von Segmentbelegungen reduziert. Dies wird mit dem Flag STARTUP_HOARD_GC_VM in der [STARTUP_FLAGS-Enumeration](../../framework/unmanaged-api/hosting/startup-flags-enumeration.md) erreicht.
 
 |Überprüfen der Leistung|
 |------------------------|
@@ -161,9 +161,9 @@ Bei der gleichzeitigen Garbage Collection dürfen während einer Garbage Collect
 
 Kurzlebige Garbage Collections (Generationen 0 und 1) dauern nur einige Millisekunden, sodass das Verringern der Pausen normalerweise nicht sinnvoll ist. Sie können jedoch die Pausen in Garbage Collections der Generation 2 verringern, indem Sie das Muster der Belegungsanforderungen in einer Anwendung anpassen.
 
-Eine andere und genauere Methode ist die Verwendung von [ETW-Ereignissen der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md). Sie können die Intervalle der Collections ermitteln, indem Sie die Zeitstempeldifferenzen einer bestimmten Ereignissequenz addieren. Die gesamte Collection-Sequenz beinhaltet die Unterbrechung der Ausführungs-Engine, die Garbage Collection selbst und die Wiederaufnahme der Ausführungs-Engine.
+Eine andere und genauere Methode ist die Verwendung von [ETW-Ereignissen der Garbage Collection](../../framework/performance/garbage-collection-etw-events.md). Sie können die Intervalle der Collections ermitteln, indem Sie die Zeitstempeldifferenzen einer bestimmten Ereignissequenz addieren. Die gesamte Collection-Sequenz beinhaltet die Unterbrechung der Ausführungs-Engine, die Garbage Collection selbst und die Wiederaufnahme der Ausführungs-Engine.
 
-Verwenden Sie [Garbage Collection-Benachrichtigungen](../../../docs/standard/garbage-collection/notifications.md), um zu ermitteln, ob ein Server im Begriff ist, eine Collection der Generation 2 durchzuführen, und ob Umleitungsanforderungen an einen anderen Server die Probleme mit Pausen verringern könnten.
+Verwenden Sie [Garbage Collection-Benachrichtigungen](notifications.md), um zu ermitteln, ob ein Server im Begriff ist, eine Collection der Generation 2 durchzuführen, und ob Umleitungsanforderungen an einen anderen Server die Probleme mit Pausen verringern könnten.
 
 |Überprüfen der Leistung|
 |------------------------|
@@ -181,7 +181,7 @@ Generation 0 enthält auf einem 64-Bit-System häufig eine größere Anzahl von 
 
 Die CPU-Auslastung ist während einer Garbage Collection hoch. Wenn sehr viel Prozessorzeit für eine Garbage Collection aufgewendet wird, erfolgen die Collections zu häufig, oder die Collection dauert zu lang. Eine zu hohe Belegungsrate für Objekte auf dem verwalteten Heap führt zu häufigeren Garbage Collections. Das Verringern der Belegungsrate verringert die Häufigkeit der Garbage Collections.
 
-Sie können die Belegungsrate mit dem Leistungsindikator `Allocated Bytes/second` überwachen. Weitere Informationen finden Sie unter [Leistungsindikatoren in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).
+Sie können die Belegungsrate mit dem Leistungsindikator `Allocated Bytes/second` überwachen. Weitere Informationen finden Sie unter [Leistungsindikatoren in .NET Framework](../../framework/debug-trace-profile/performance-counters.md).
 
 Die Dauer einer Collection wird wesentlich durch die Anzahl der Objekte bestimmt, die nach der Belegung noch vorhanden sind. Der Garbage Collector muss einen sehr großen Speicherbereich durchlaufen, wenn viele freizugebende Objekte verblieben sind. Der Aufwand für die Komprimierung der Überlebenden ist sehr zeitintensiv. Um zu bestimmen, wie viele Objekte während einer Collection verarbeitet wurden, legen Sie einen Haltepunkt im Debugger am Ende einer Garbage Collection für eine bestimmte Generation fest.
 
@@ -654,7 +654,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
   Die zweite Garbage Collection der Generation 2 wurde während des dritten Intervalls gestartet und im fünften Intervall abgeschlossen. Im schlimmsten Fall erfolgte die letzte Garbage Collection für eine Collection der Generation 0, die zu Beginn des zweiten Intervalls abgeschlossen wurde, und die Garbage Collection der Generation 2 wurde zum Ende des fünften Intervalls abgeschlossen. Daher ist die Zeit zwischen dem Ende der Garbage Collection der Generation 0 und dem Ende der Garbage Collection der Generation 2 4 Sekunden. Da der `% Time in GC`-Indikator 20% angibt, beträgt die maximale Zeitdauer, die die Garbage Collection der Generation 2 benötigt haben kann: (4 Sekunden * 20% = 800ms).
 
-- Alternativ können Sie die Länge einer Garbage Collection mithilfe der [ETW-Ereignisse der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) bestimmen und die Informationen analysieren, um so die Dauer der Garbage Collection zu ermitteln.
+- Alternativ können Sie die Länge einer Garbage Collection mithilfe der [ETW-Ereignisse der Garbage Collection](../../framework/performance/garbage-collection-etw-events.md) bestimmen und die Informationen analysieren, um so die Dauer der Garbage Collection zu ermitteln.
 
   Beispielsweise enthalten die folgenden Daten eine Ereignissequenz, die während einer nicht gleichzeitigen Garbage Collection aufgetreten ist.
 
@@ -796,4 +796,4 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+- [Garbage Collection](index.md)

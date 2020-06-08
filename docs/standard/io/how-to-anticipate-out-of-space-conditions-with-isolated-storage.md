@@ -22,16 +22,16 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-ms.openlocfilehash: 5666019e1a65880221261ef5ad704f82c37263b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdc2cee343e9d9be44230e84ff45d6fa54901f48
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708114"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288588"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Gewusst wie: Vorhersehen von Speicherengpässen bei isoliertem Speicher
 
-Code, der isolierten Speicher verwendet, ist durch ein [Kontingent](../../../docs/standard/io/isolated-storage.md#quotas) eingeschränkt, das die maximale Größe für das Datendepot festlegt, in dem isolierte Speicherdateien und Verzeichnisse vorhanden sind. Das Kontingent wird durch die Sicherheitsrichtlinie definiert und kann von Administratoren konfiguriert werden. Falls die maximal zulässige Größe überschritten wird, wenn Sie versuchen, Daten zu schreiben, wird eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme ausgelöst, und bei dem Vorgang tritt ein Fehler auf. Dies hilft, bösartige Denial-of-Service-Angriffe zu vermeiden, die dazu führen könnten, dass die Anwendung Anforderungen verweigert, da der Datenspeicher gefüllt ist.
+Code, der isolierten Speicher verwendet, ist durch ein [Kontingent](isolated-storage.md#quotas) eingeschränkt, das die maximale Größe für das Datendepot festlegt, in dem isolierte Speicherdateien und Verzeichnisse vorhanden sind. Das Kontingent wird durch die Sicherheitsrichtlinie definiert und kann von Administratoren konfiguriert werden. Falls die maximal zulässige Größe überschritten wird, wenn Sie versuchen, Daten zu schreiben, wird eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme ausgelöst, und bei dem Vorgang tritt ein Fehler auf. Dies hilft, bösartige Denial-of-Service-Angriffe zu vermeiden, die dazu führen könnten, dass die Anwendung Anforderungen verweigert, da der Datenspeicher gefüllt ist.
 
 Um Ihnen bei der Bestimmung zu helfen, ob bei einem bestimmten Schreibversuch wahrscheinlich aus diesem Grund ein Fehler auftritt, bietet die <xref:System.IO.IsolatedStorage.IsolatedStorage>-Klasse drei schreibgeschützte Eigenschaften: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> und <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Sie können diese Eigenschaften verwenden, um zu bestimmen, ob beim Schreiben in den Speicher die maximal zulässige Größe des Speichers überschritten wird. Berücksichtigen Sie, dass paralleler Zugriff auf isolierten Speicher möglich ist. Darum denken Sie beim Berechnen der verbleibenden Speichermenge daran, dass der Speicherplatz verbraucht sein könnte, wenn Sie versuchen, in den Speicher zu schreiben. Allerdings können Sie mithilfe der maximalen Größe des Speichers ermitteln, ob der obere Grenzwert verfügbaren Speichers bald erreicht ist.
 
@@ -48,5 +48,5 @@ Im folgenden Codebeispiel werden ein isolierter Speicher abgerufen, einige Datei
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
-- [Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- [Isolierter Speicher](isolated-storage.md)
+- [Gewusst wie: Erhalten von Speichern für isolierten Speicher](how-to-obtain-stores-for-isolated-storage.md)

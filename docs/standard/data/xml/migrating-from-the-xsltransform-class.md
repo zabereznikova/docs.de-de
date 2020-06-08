@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937991"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282388"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrieren von der XslTransform-Klasse
 
@@ -35,7 +35,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse deaktiviert standardmäßi
 [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
 [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]
 
-Weitere Informationen finden Sie unter [XSLT-Sicherheitsaspekte](../../../../docs/standard/data/xml/xslt-security-considerations.md).
+Weitere Informationen finden Sie unter [XSLT-Sicherheitsaspekte](xslt-security-considerations.md).
 
 ## <a name="new-features"></a>Neue Funktionen
 
@@ -97,7 +97,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 ### <a name="discretionary-behavior"></a>Freigegebene Verhaltensweisen
 
-Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte Bereiche, bei denen es dem Anbieter der Implementierung freigestellt ist, wie er mit der jeweiligen Situation umgeht. Diese Bereiche werden als "freigegebene Verhaltensweisen" bezeichnet. Es gibt mehrere Bereiche, in denen sich die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse anders verhält als die <xref:System.Xml.Xsl.XslTransform>-Klasse. Weitere Informationen finden Sie unter [Behebbare XSLT-Fehler](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).
+Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte Bereiche, bei denen es dem Anbieter der Implementierung freigestellt ist, wie er mit der jeweiligen Situation umgeht. Diese Bereiche werden als "freigegebene Verhaltensweisen" bezeichnet. Es gibt mehrere Bereiche, in denen sich die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse anders verhält als die <xref:System.Xml.Xsl.XslTransform>-Klasse. Weitere Informationen finden Sie unter [Behebbare XSLT-Fehler](recoverable-xslt-errors.md).
 
 ### <a name="extension-objects-and-script-functions"></a>Erweiterungsobjekte und Skriptfunktionen
 
@@ -109,7 +109,7 @@ Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte 
 
 In <xref:System.Xml.Xsl.XslCompiledTransform> erfolgt beim Kompilieren eine Bindung (Methodennamensuche) an Skriptfunktionen, und Stylesheets, die zusammen mit &lt;legacyBold&gt;XslTranform&lt;/legacyBold&gt; funktioniert haben, können eine Ausnahme auslösen, wenn sie zusammen mit <xref:System.Xml.Xsl.XslCompiledTransform> geladen werden.
 
-<xref:System.Xml.Xsl.XslCompiledTransform> unterstützt die Verwendung von untergeordneten `msxsl:using`- und `msxsl:assembly`-Elementen innerhalb des `msxsl:script`-Elements. Die Elemente `msxsl:using` und `msxsl:assembly` werden verwendet, um zusätzliche Namespaces und Assemblys für die Verwendung im Skriptblock zu deklarieren. Weitere Informationen finden Sie unter [Skriptblöcke, die „msxsl:script“ verwenden](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md).
+<xref:System.Xml.Xsl.XslCompiledTransform> unterstützt die Verwendung von untergeordneten `msxsl:using`- und `msxsl:assembly`-Elementen innerhalb des `msxsl:script`-Elements. Die Elemente `msxsl:using` und `msxsl:assembly` werden verwendet, um zusätzliche Namespaces und Assemblys für die Verwendung im Skriptblock zu deklarieren. Weitere Informationen finden Sie unter [Skriptblöcke, die „msxsl:script“ verwenden](script-blocks-using-msxsl-script.md).
 
 <xref:System.Xml.Xsl.XslCompiledTransform> verhindert Erweiterungsobjekte, die über mehrere Überladungen mit derselben Anzahl von Argumenten verfügen.
 
@@ -127,5 +127,5 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wurde um die Unterstützun
 
 ## <a name="see-also"></a>Siehe auch
 
-- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [XSLT Transformations (XSLT-Transformationen)](xslt-transformations.md)
+- [Verwenden der XslCompiledTransform-Klasse](using-the-xslcompiledtransform-class.md)

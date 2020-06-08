@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 11c7e8c8d2ea3b49fe73ab4dde4e2ccc8bc917ff
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 4a1a7af0e841601542a30c7bd3f71395faa6cb57
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159675"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287791"
 ---
 # <a name="extending-the-dom"></a>Erweitern des DOM
 
@@ -244,7 +244,7 @@ Die .NET Framework-Implementierung des DOM enthält auch ein Ereignissystem, mi
 
 Der Prozess der Ereignisbehandlung läuft in den abgeleiteten Klassen genauso ab wie in den urspünglichen DOM-Klassen.
 
-Weitere Informationen zur Ereignisbehandlung bei Knoten finden Sie unter [Ereignisse](../../../../docs/standard/events/index.md) und <xref:System.Xml.XmlNodeChangedEventHandler>.
+Weitere Informationen zur Ereignisbehandlung bei Knoten finden Sie unter [Ereignisse](../../events/index.md) und <xref:System.Xml.XmlNodeChangedEventHandler>.
 
 ## <a name="default-attributes-and-the-createelement-method"></a>Standardattribute und die CreateElement-Methode
 
