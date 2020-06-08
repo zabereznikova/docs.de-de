@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 04ad3c8d8ea076e881e27e295d87572a51cbc128
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 47e54bb76c65dd5acc8ce1921ee385a5cb55cf95
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635968"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287990"
 ---
 # <a name="commonly-used-collection-types"></a>Häufig verwendete Auflistungstypen
 Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. Hashtabellen, Warteschlangen, Stapel, Sammlungen, Wörterbücher und Listen.  
@@ -28,16 +28,16 @@ Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. H
   
  Auflistungen können variieren, je nachdem, wie die Elemente gespeichert werden, wie sie sortiert werden, wie Suchvorgänge ausgeführt werden und wie Vergleiche vorgenommen werden. Die <xref:System.Collections.Queue>-Klasse und die generische <xref:System.Collections.Generic.Queue%601>-Klasse stellen First-in-First-Out-Listen bereit, während die <xref:System.Collections.Stack>-Klasse und die generische <xref:System.Collections.Generic.Stack%601>-Klasse Last-in-First-Out-Listen bereitstellen. Die <xref:System.Collections.SortedList>-Klasse und die generische <xref:System.Collections.Generic.SortedList%602>-Klasse stellen sortierte Versionen der <xref:System.Collections.Hashtable>-Klasse und der generischen <xref:System.Collections.Generic.Dictionary%602>-Klasse bereit. Der Zugriff auf die Elemente einer <xref:System.Collections.Hashtable> oder <xref:System.Collections.Generic.Dictionary%602> ist nur über den Schlüssel des Elements möglich, aber der Zugriff auf Elemente einer <xref:System.Collections.SortedList> oder <xref:System.Collections.ObjectModel.KeyedCollection%602> ist über den Schlüssel oder den Index des Elements möglich. Die Indizes in allen Auflistungen sind nullbasiert, mit Ausnahme von <xref:System.Array>, wodurch auch Arrays, die nicht nullbasiert sind, zulässig sind.  
   
- Mit der LINQ to Objects-Funktion können Sie LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, solange der Objekttyp <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) und [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
+ Mit der LINQ to Objects-Funktion können Sie LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, solange der Objekttyp <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) und [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md).  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Sammlungen und Datenstrukturen](../../../docs/standard/collections/index.md)|Erläutert die unterschiedlichen Auflistungstypen, die in .NET Framework verfügbar sind, z.B. Stapel, Warteschlangen, Listen, Arrays und Wörterbücher.|  
-|[Hashtable-Auflistungstyp und Dictionary-Auflistungstyp](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Beschreibt die Funktionen von generischen und nicht generischen hashbasierten Wörterbuchtypen.|  
-|[Sortierte Auflistungstypen](../../../docs/standard/collections/sorted-collection-types.md)|Beschreibt Klassen, die Sortierfunktionen für Listen und Sätze bereitstellen.|  
-|[Generics](../../../docs/standard/generics/index.md)|Beschreibt das Generics-Feature, einschließlich der generischen Auflistungen, Delegaten und Schnittstellen, die von .NET Framework bereitgestellt werden. Enthält Links zur Featuredokumentation für C#, Visual Basic und Visual C++ sowie zu unterstützenden Technologien wie der Reflektion.|  
+|[Sammlungen und Datenstrukturen](index.md)|Erläutert die unterschiedlichen Auflistungstypen, die in .NET Framework verfügbar sind, z.B. Stapel, Warteschlangen, Listen, Arrays und Wörterbücher.|  
+|[Hashtable-Auflistungstyp und Dictionary-Auflistungstyp](hashtable-and-dictionary-collection-types.md)|Beschreibt die Funktionen von generischen und nicht generischen hashbasierten Wörterbuchtypen.|  
+|[Sortierte Auflistungstypen](sorted-collection-types.md)|Beschreibt Klassen, die Sortierfunktionen für Listen und Sätze bereitstellen.|  
+|[Generics](../generics/index.md)|Beschreibt das Generics-Feature, einschließlich der generischen Auflistungen, Delegaten und Schnittstellen, die von .NET Framework bereitgestellt werden. Enthält Links zur Featuredokumentation für C#, Visual Basic und Visual C++ sowie zu unterstützenden Technologien wie der Reflektion.|  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Collections?displayProperty=nameWithType>  

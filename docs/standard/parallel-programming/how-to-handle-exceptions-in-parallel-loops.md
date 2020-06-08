@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 5d108937e6ab2483cd1633d4b398c1e250f5c098
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77453012"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278531"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Gewusst wie: Behandeln von Ausnahmen in parallelen Schleifen
 Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>- und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Überladungen verfügen über keinen speziellen Mechanismus zur Behandlung von Ausnahmen, die möglicherweise ausgelöst werden. In dieser Hinsicht ähneln sie herkömmlichen `for`- und `foreach`-Schleifen (`For` und `For Each` in Visual Basic). Eine nicht behandelte Ausnahme bewirkt, dass die Schleife sofort beendet wird, sobald alle momentan laufenden Iterationen abgeschlossen sind.
@@ -31,5 +31,5 @@ Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>- 
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Datenparallelität](data-parallelism-task-parallel-library.md)
+- [Lambdaausdrücke in PLINQ und TPL](lambda-expressions-in-plinq-and-tpl.md)

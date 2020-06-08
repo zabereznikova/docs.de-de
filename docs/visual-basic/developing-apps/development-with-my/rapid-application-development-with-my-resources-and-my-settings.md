@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: ce9a5bf76ba3132f58aa40227a145d8b5bf1591d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6c53d11a3830a5a8a2cb898728bed8694a226686
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349265"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411667"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Schnelle Anwendungsentwicklung mit My.Resources und My.Settings (Visual Basic)
 
@@ -26,10 +26,10 @@ Mit dem Objekt `My.Resources` erhalten Sie Zugriff auf die Anwendungsressourcen 
   
  Das `My.Resources`-Objekt macht nur globale Ressourcen verfügbar. Es bietet keinen Zugriff auf Ressourcendateien, die Formularen zugeordnet sind. Zugriff auf die Formularressourcen erhalten Sie über das Formular.  
   
- Ebenso bietet das `My.Settings`-Objekt Zugriff auf die Einstellungen der Anwendung und ermöglicht das dynamische Speichern und Abrufen von Eigenschafteneinstellungen und anderen Informationen für Ihre Anwendung. Weitere Informationen finden Sie unter [My.Resources-Objekt](../../../visual-basic/language-reference/objects/my-resources-object.md) und [My.Settings-Objekt](../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ Ebenso bietet das `My.Settings`-Objekt Zugriff auf die Einstellungen der Anwendung und ermöglicht das dynamische Speichern und Abrufen von Eigenschafteneinstellungen und anderen Informationen für Ihre Anwendung. Weitere Informationen finden Sie unter [My.Resources-Objekt](../../language-reference/objects/my-resources-object.md) und [My.Settings-Objekt](../../language-reference/objects/my-settings-object.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [My.Resources-Objekt](../../../visual-basic/language-reference/objects/my-resources-object.md)
-- [My.Settings-Objekt](../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [Zugreifen auf Anwendungseinstellungen](../../../visual-basic/developing-apps/programming/app-settings/index.md)
+- [My.Resources-Objekt](../../language-reference/objects/my-resources-object.md)
+- [My.Settings-Objekt](../../language-reference/objects/my-settings-object.md)
+- [Zugreifen auf Anwendungseinstellungen](../programming/app-settings/index.md)

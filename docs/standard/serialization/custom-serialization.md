@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: dcd5fa2777d2f1e351179570806a95eb835ad843
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375993"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289654"
 ---
 # <a name="custom-serialization"></a>Benutzerdefinierte Serialisierung
 Unter benutzerdefinierter Serialisierung wird die Steuerung der Serialisierung und Deserialisierung eines Typs verstanden. Durch die Steuerung der Serialisierung lässt sich die Serialisierungskompatibilität sicherstellen. Damit ist die Fähigkeit gemeint, Objekte unterschiedlicher Versionen eines Typs serialisieren und deserialisieren zu können, ohne die Kernfunktionalität des Typs zu beeinträchtigen. Zum Beispiel kann die erste Version eines Typs nur zwei Felder umfassen. In der nächsten Version des Typs werden mehrere weitere Felder hinzugefügt. Die zweite Version einer Anwendung muss jedoch fähig sein, beide Typen zu serialisieren und zu deserialisieren. In den folgenden Abschnitten wird beschrieben, wie Serialisierung gesteuert wird.
@@ -184,4 +184,4 @@ End Class
 
 - [Binäre Serialisierung](binary-serialization.md)
 - [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)
-- [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)
+- [Sicherheit und Serialisierung](../../framework/misc/security-and-serialization.md)

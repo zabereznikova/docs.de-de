@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: ff6ac9e8c41ee203ae72e1b28c088f462ddf6a54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00b4c89440223d229a06b0192032c9abcf931d58
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140021"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291694"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potenzielle Fehler bei Daten- und Aufgabenparallelität
 In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> erhebliche Leistungssteigerungen gegenüber gewöhnlichen sequenziellen Schleifen bieten. Die Parallelisierung der Schleife erhöht jedoch die Komplexität des Vorgangs, was Probleme nach sich ziehen kann, die in sequenziellem Code weniger häufig oder gar nicht vorkommen. In diesem Thema sind bestimmte Fehlerquellen aufgeführt, die beim Schreiben von parallelen Schleifen vermieden werden sollten.  
@@ -22,7 +22,7 @@ In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayPr
  In bestimmten Fällen kann eine parallele Schleife langsamer als deren sequenzielle Entsprechung ausgeführt werden. Eine Faustregel besagt, dass die Geschwindigkeit von parallelen Schleifen mit wenigen Iterationen und schnellen Benutzerdelegaten wahrscheinlich kaum zunimmt. Da jedoch viele Faktoren Einfluss auf die Leistung haben, wird empfohlen, immer die tatsächlichen Ergebnisse zu messen.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Vermeiden Sie es, in gemeinsam genutzte Speicherpositionen zu schreiben.  
- Bei sequenziellem Code wird regelmäßig aus statischen Variablen oder Klassenfeldern gelesen bzw. in diese geschrieben. Wenn jedoch mehrere Threads gleichzeitig auf diese Variablen zugreifen, besteht eine hohe Wahrscheinlichkeit für Racebedingungen. Sie können den Zugriff auf die Variable mithilfe von Sperren zwar synchronisieren, die Synchronisierung geht jedoch zu Lasten der Leistung. Es empfiehlt sich daher, den Zugriff auf den Freigabezustand in einer parallelen Schleife zu vermeiden oder so weit wie möglich einzuschränken. Dies geschieht am besten durch Verwendung der Überladungen von <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, die eine <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Variable zum Speichern des threadlokalen Zustands während der Schleifenausführung verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) und [Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit partitionslokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Bei sequenziellem Code wird regelmäßig aus statischen Variablen oder Klassenfeldern gelesen bzw. in diese geschrieben. Wenn jedoch mehrere Threads gleichzeitig auf diese Variablen zugreifen, besteht eine hohe Wahrscheinlichkeit für Racebedingungen. Sie können den Zugriff auf die Variable mithilfe von Sperren zwar synchronisieren, die Synchronisierung geht jedoch zu Lasten der Leistung. Es empfiehlt sich daher, den Zugriff auf den Freigabezustand in einer parallelen Schleife zu vermeiden oder so weit wie möglich einzuschränken. Dies geschieht am besten durch Verwendung der Überladungen von <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, die eine <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Variable zum Speichern des threadlokalen Zustands während der Schleifenausführung verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen](how-to-write-a-parallel-for-loop-with-thread-local-variables.md) und [Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit partitionslokalen Variablen](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Vermeiden Sie eine zu starke Parallelisierung.  
  Mithilfe von parallelen Schleifen übernehmen Sie die Mehrkosten für das Partitionieren der Quellauflistung und das Synchronisieren der Arbeitsthreads. Die Vorteile der Parallelisierung werden zudem durch die Anzahl der Prozessoren auf dem Computer beschränkt. Die Ausführung von mehreren rechnergebundenen Threads auf nur einem Prozessor ermöglicht keine Geschwindigkeitssteigerung. Achten Sie daher darauf, dass Sie eine Schleife nicht zu stark parallelisieren.  
@@ -80,6 +80,6 @@ In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayPr
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
-- [Potential Pitfalls with PLINQ (Potenzielle Fehler bei PLINQ)](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
+- [Parallele Programmierung](index.md)
+- [Potential Pitfalls with PLINQ (Potenzielle Fehler bei PLINQ)](potential-pitfalls-with-plinq.md)
 - [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Verstehen und Anwenden von parallelen Mustern mit .NET Framework 4)](https://www.microsoft.com/download/details.aspx?id=19222)

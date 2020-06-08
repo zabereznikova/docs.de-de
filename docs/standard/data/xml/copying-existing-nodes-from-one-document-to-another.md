@@ -3,12 +3,12 @@ title: Kopieren bestehender Knoten aus einem Dokument in ein anderes
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8ae7fd04e5c85e59ca9bd629c6957ad470d36b48
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711024"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289199"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopieren bestehender Knoten aus einem Dokument in ein anderes
 Die **ImportNode**-Methode ist das Verfahren, mit dem Sie einen Knoten oder eine ganze Knotenunterstruktur von einem **XmlDocument** in ein anderes kopieren können. Der Knoten, der von dem Aufruf zurückgegeben wird, ist eine Kopie des Knotens aus dem Quelldokument, einschließlich Attributwerten, Knotennamen, Knotentyp und allen namespacebezogenen Attributen wie Präfix, lokaler Name und Namespace-URI (Uniform Resource Identifier). Das Quelldokument bleibt dabei unverändert. Nachdem Sie den Knoten importiert haben, müssen Sie ihn noch der Struktur hinzufügen, indem Sie eine der Methoden zum Einfügen von Knoten verwenden.  
@@ -36,8 +36,8 @@ Die **ImportNode**-Methode ist das Verfahren, mit dem Sie einen Knoten oder eine
 |Alle anderen Knotentypen.|Diese Knotentypen können nicht importiert werden.|Diese Knotentypen können nicht importiert werden.|  
   
 > [!NOTE]
-> Obwohl DocumentType-Knoten importiert werden können, kann ein Dokument nur einen DocumentType aufweisen. Sobald Sie also den Dokumenttyp importiert haben, müssen Sie vor dem Einsetzen in die Struktur sicherstellen, dass sich in dem Dokument kein anderer Dokumenttyp befindet. Informationen zum Entfernen von Knoten finden Sie unter [Entfernen von Knoten, Inhalten und Werten aus einem XML-Dokument](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
+> Obwohl DocumentType-Knoten importiert werden können, kann ein Dokument nur einen DocumentType aufweisen. Sobald Sie also den Dokumenttyp importiert haben, müssen Sie vor dem Einsetzen in die Struktur sicherstellen, dass sich in dem Dokument kein anderer Dokumenttyp befindet. Informationen zum Entfernen von Knoten finden Sie unter [Entfernen von Knoten, Inhalten und Werten aus einem XML-Dokument](removing-nodes-content-and-values-from-an-xml-document.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

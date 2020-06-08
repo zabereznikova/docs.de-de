@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711219"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288874"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Verwendung einer threadsicheren Auflistung
 Mit .NET Framework 4 werden fünf neue Auflistungstypen eingeführt, die speziell für die Unterstützung von Hinzufügungs- und Entfernungsvorgängen in mehreren Threads konzipiert sind. Zur Gewährleistung von Threadsicherheit verwenden diese neuen Typen unterschiedliche Arten effizienter sperrender und sperrfreier Synchronisierungsmechanismen. Ein Vorgang wird durch Synchronisierung aufwändiger. Das Ausmaß des Aufwands hängt von der Art der verwendeten Synchronisierung, der Art der ausgeführten Vorgänge und von anderen Faktoren ab, z.B. der Anzahl der Threads, die versuchen, gleichzeitig auf die Sammlung zuzugreifen.  
@@ -63,5 +63,5 @@ Mit .NET Framework 4 werden fünf neue Auflistungstypen eingeführt, die speziel
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Threadsichere Sammlungen](../../../../docs/standard/collections/thread-safe/index.md)
-- [Parallele Programmierung](../../../../docs/standard/parallel-programming/index.md)
+- [Threadsichere Sammlungen](index.md)
+- [Parallele Programmierung](../../parallel-programming/index.md)

@@ -15,19 +15,19 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523938"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290512"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Vorgehensweise: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern
 .NET Framework ermöglicht eine umfangreiche Steuerung der Zeichenfolgendarstellung numerischer Werte. Die folgenden Funktionen für die Anpassung des Formats numerischer Werte werden unterstützt:  
   
-- Standardmäßige Zahlenformatzeichenfolgen, die einen vordefinierten Satz an Formaten für die Konvertierung von Zahlen in ihre Zeichenfolgendarstellung bereitstellen. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Standardmäßige Zahlenformatzeichenfolgen, die einen vordefinierten Satz an Formaten für die Konvertierung von Zahlen in ihre Zeichenfolgendarstellung bereitstellen. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Standardmäßige Zahlenformatzeichenfolgen](standard-numeric-format-strings.md).  
   
-- Benutzerdefinierte Zahlenformatzeichenfolgen, die einen Satz von Symbolen bereitstellen, die kombiniert werden können, um benutzerdefinierte Zahlenformatbezeichner zu definieren. Sie können auch mit jeder Zahlenformatierungsmethode verwendet werden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Benutzerdefinierte Zahlenformatzeichenfolgen, die einen Satz von Symbolen bereitstellen, die kombiniert werden können, um benutzerdefinierte Zahlenformatbezeichner zu definieren. Sie können auch mit jeder Zahlenformatierungsmethode verwendet werden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](custom-numeric-format-strings.md).  
   
 - Benutzerdefinierte <xref:System.Globalization.CultureInfo>- oder <xref:System.Globalization.NumberFormatInfo>-Objekte, die die beim Anzeigen der Zeichenfolgendarstellungen numerischer Werte verwendeten Symbole und Formatmuster definieren. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `provider`-Parameter verfügt, z.B. <xref:System.Int32.ToString%2A>. Üblicherweise wird der `provider`-Parameter verwendet, um eine kulturspezifische Formatierung anzugeben.  
   

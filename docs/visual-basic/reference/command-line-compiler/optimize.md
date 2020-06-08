@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: e8daf4a49123623b6470bc3c6281869f1b9b3d0f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 337cb794ef9a405a178f1998cbe27b5da7709382
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005371"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397440"
 ---
 # <a name="-optimize"></a>-optimize
 Aktiviert oder deaktiviert Compileroptimierungen.  
@@ -32,7 +32,7 @@ Aktiviert oder deaktiviert Compileroptimierungen.
 ## <a name="remarks"></a>Hinweise  
  Durch Compileroptimierungen wird Ihre Ausgabedatei kleiner, schneller und effizienter. Da Optimierungen jedoch zu Neuanordnungen von Code in der Ausgabedatei führen, kann `-optimize+` das Debuggen erschweren.  
   
- Alle mit `-target:module` generierten Module für eine Assembly müssen dieselben `-optimize`-Einstellungen wie die Assembly verwenden. Weitere Informationen finden Sie unter [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Alle mit `-target:module` generierten Module für eine Assembly müssen dieselben `-optimize`-Einstellungen wie die Assembly verwenden. Weitere Informationen finden Sie unter [-target (Visual Basic)](target.md).  
   
  Sie können die Optionen `-optimize` und `-debug` kombinieren.  
   
@@ -49,7 +49,7 @@ vbc t2.vb -optimize
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [-debug (Visual Basic)](debug.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
+- [-target (Visual Basic)](target.md)

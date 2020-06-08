@@ -4,12 +4,12 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: c578495bbba0efee79f02da284c7feffb8c12fab
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 91cf1b5a55d16ab47a83fbd259dd1d83d8e9c31a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348550"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403095"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (Antwortdatei festlegen) (Visual Basic)
 
@@ -40,7 +40,7 @@ In einer Antwortdatei können mehrere Compileroptionen und Quellcodedateien in e
 
 Sie können in der Befehlszeile angegebene Optionen mit Optionen kombinieren, die in einer oder mehreren Antwortdateien angegeben sind. Der Compiler verarbeitet die Befehlsoptionen in der Reihenfolge, in der sie auftreten. Daher können Befehlszeilenargumente zuvor aufgeführte Optionen in Antwortdateien außer Kraft setzen. Umgekehrt setzen Optionen in einer Antwortdatei zuvor in der Befehlszeile oder in anderen Antwortdateien aufgeführte Optionen außer Kraft.
 
-Visual Basic stellt die Datei „Vbc.rsp“ bereit, die sich im selben Verzeichnis wie die Datei „Vbc.exe“ befindet. Die Datei „Vbc.rsp“ ist standardmäßig enthalten, es sei denn, die Option `-noconfig` wird verwendet. Weitere Informationen finden Sie unter [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic stellt die Datei „Vbc.rsp“ bereit, die sich im selben Verzeichnis wie die Datei „Vbc.exe“ befindet. Die Datei „Vbc.rsp“ ist standardmäßig enthalten, es sei denn, die Option `-noconfig` wird verwendet. Weitere Informationen finden Sie unter [-noconfig](noconfig.md).
 
 > [!NOTE]
 > Die Option `@` steht nicht in der Visual Studio-Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.
@@ -67,6 +67,6 @@ vbc @file1.rsp
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [-noconfig](noconfig.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

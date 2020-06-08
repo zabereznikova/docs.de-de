@@ -3,17 +3,17 @@ title: Entitätsverweise werden erweitert und nicht beibehalten
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-ms.openlocfilehash: ae3db77d7659b7e1d36a9bccf7143f52c536dbbf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1d26e9a35497bb0d5293e8a5b630bf4356325401
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710933"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292045"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Entitätsverweise werden erweitert und nicht beibehalten
 Wenn der Entitätsverweis erweitert und durch den Text ersetzt wird, für den er steht, wird der **XmlEntityReference**-Knoten nicht erstellt. Stattdessen wird die Entitätsdeklaration analysiert, und die Knoten, die aus dem Inhalt der Deklaration erstellt werden, werden an die Stelle von **XmlEntityReference** kopiert. Daher wird im `&publisher;`-Beispiel `&publisher;` nicht gespeichert. Stattdessen wird ein **XmlText**-Knoten erstellt.  
   
- ![Erweiterte Struktur](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
+ ![Erweiterte Struktur](media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
 Struktur für Entitätsverweise, die erweitert werden  
   
  Zeichenentitäten, z. B. `B` oder `<`, werden nicht beibehalten. Stattdessen werden sie stets erweitert und als Textknoten dargestellt.  
@@ -40,4 +40,4 @@ Struktur für Entitätsverweise, die erweitert werden
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

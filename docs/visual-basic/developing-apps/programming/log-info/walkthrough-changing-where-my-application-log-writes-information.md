@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74336736"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398291"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Exemplarische Vorgehensweise: Ändern des Orts, in den "My.Application.Log" Informationen schreibt (Visual Basic)
 
@@ -18,9 +18,9 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Das `Log` -Objekt kann Informationen in mehrere Protokolllistener schreiben. Sie müssen die aktuelle Konfiguration der Protokolllistener bestimmen, bevor Sie die Konfigurationen ändern können. Weitere Informationen finden Sie unter [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+Das `Log` -Objekt kann Informationen in mehrere Protokolllistener schreiben. Sie müssen die aktuelle Konfiguration der Protokolllistener bestimmen, bevor Sie die Konfigurationen ändern können. Weitere Informationen finden Sie unter [Walkthrough: Determining Where My.Application.Log Writes Information](walkthrough-determining-where-my-application-log-writes-information.md).
 
-Es kann nützlich sein, [Vorgehensweise: Schreiben von Ereignisinformationen in eine Textdatei](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) oder [Vorgehensweise: Schreiben in ein Anwendungsereignisprotokoll](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md) durchzuarbeiten.
+Es kann nützlich sein, [Vorgehensweise: Schreiben von Ereignisinformationen in eine Textdatei](how-to-write-event-information-to-a-text-file.md) oder [Vorgehensweise: Schreiben in ein Anwendungsereignisprotokoll](how-to-write-to-an-application-event-log.md) durchzuarbeiten.
 
 ### <a name="to-add-listeners"></a>Hinzufügen von Listenern
 
@@ -173,7 +173,7 @@ Es kann nützlich sein, [Vorgehensweise: Schreiben von Ereignisinformationen in 
 
 1. Um sicherzustellen, dass der richtige Typ für Ihren Protokolllistener verwendet wird, achten Sie darauf, den vollqualifizierten Typnamen und den starken Assemblynamen zu verwenden. Die Syntax für einen Typ mit starkem Namen ist wie folgt:
 
-     \<*Typname*>, \<*Assemblyname*>, \<*Versionsnummer*>, \<*Kultur*>, \<*starker Name*>
+     \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>
 
 2. Dieses Codebeispiel zeigt, wie Sie den starken Typnamen für einen vollqualifizierten Typ bestimmen – in diesem Fall "System.Diagnostics.FileLogTraceListener".
 
@@ -189,5 +189,5 @@ Es kann nützlich sein, [Vorgehensweise: Schreiben von Ereignisinformationen in 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Gewusst wie: Schreiben von Ereignisinformationen in eine Textdatei](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [Gewusst wie: Schreiben in ein Anwendungsereignisprotokoll](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Gewusst wie: Schreiben von Ereignisinformationen in eine Textdatei](how-to-write-event-information-to-a-text-file.md)
+- [Gewusst wie: Schreiben in ein Anwendungsereignisprotokoll](how-to-write-to-an-application-event-log.md)

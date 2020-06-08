@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: c921331b00fe137d4ad52d62951e8c161768dfae
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: adc1a10bb9acb14ee88589c13e28c49773e42100
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711141"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291590"
 ---
 # <a name="building-xml-schemas"></a>Erstellen von XML-Schemata
 Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace werden den Strukturen zugeordnet, die in der XML-Schemaempfehlung des W3C (World Wide Web Consortium) definiert sind, und können zum speicherinternen Erstellen von XML-Schemata verwendet werden.  
@@ -88,10 +88,10 @@ Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace w
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Einfügen oder Importieren von XML-Schemas](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema-Compilation-Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Übersicht über das XML-Schemaobjektmodell (SOM)](xml-schema-object-model-overview.md)
+- [Lesen und Schreiben von XML-Schemas](reading-and-writing-xml-schemas.md)
+- [Durchlaufen von XML-Schemas](traversing-xml-schemas.md)
+- [Bearbeiten von XML-Schemas](editing-xml-schemas.md)
+- [Einfügen oder Importieren von XML-Schemas](including-or-importing-xml-schemas.md)
+- [„XmlSchemaSet“ zur Kompilierung von Schemas](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema-Compilation-Infoset](post-schema-compilation-infoset.md)

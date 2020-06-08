@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: e8607f8254783b5486b02ccc4c7e4081da506fae
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 09ddc4bb735b645e09d34198c66dff78183592bf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802148"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403082"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -54,11 +54,11 @@ Der Standardwert der Compileroption **-subsystemversion** hängt von den Bedingu
 
 - Der Standardwert ist 6,02, wenn jede Compileroption in der folgenden Liste festgelegt ist:
 
-  - [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [/target:appcontainerexe](target.md)
 
-  - [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [/target:winmdobj](target.md)
 
-  - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
+  - [-platform:arm](platform.md)
 
 - Wenn Sie MSBuild verwenden, .NET Framework 4.5 als Ziel festlegen und keine der Compileroptionen verwenden, die weiter oben in der Liste angegeben sind, ist der Standardwert 6.00.
 
@@ -70,6 +70,6 @@ Sie müssen die VBPROJ-Datei öffnen und einen Wert für die Eigenschaft `Subsys
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
 
 - [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties)

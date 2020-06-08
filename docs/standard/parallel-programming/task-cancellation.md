@@ -9,15 +9,15 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: 17cabde95644dbc1584dd85b99e26ff7c5cb686d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f17b11699195e5b2186d008ebefce306834ea8d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139971"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285273"
 ---
 # <a name="task-cancellation"></a>Aufgabenabbruch
-Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> - und <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> -Klasse unterstützen einen Abbruch durch die Verwendung von Abbruchtoken, die in .NET Framework neu sind. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md). In den Task-Klassen erfordert ein Abbruch eine Zusammenarbeit zwischen dem Benutzerdelegaten, der einen abbrechbaren Vorgang darstellt, und dem Code, der den Abbruch angefordert hat.  Für einen erfolgreichen Abbruch muss der anfordernde Code die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>-Methode aufrufen und der Benutzerdelegat den Vorgang rechtzeitig beenden. Sie können den Vorgang mithilfe einer dieser Optionen beenden:  
+Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> - und <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> -Klasse unterstützen einen Abbruch durch die Verwendung von Abbruchtoken, die in .NET Framework neu sind. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](../threading/cancellation-in-managed-threads.md). In den Task-Klassen erfordert ein Abbruch eine Zusammenarbeit zwischen dem Benutzerdelegaten, der einen abbrechbaren Vorgang darstellt, und dem Code, der den Abbruch angefordert hat.  Für einen erfolgreichen Abbruch muss der anfordernde Code die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>-Methode aufrufen und der Benutzerdelegat den Vorgang rechtzeitig beenden. Sie können den Vorgang mithilfe einer dieser Optionen beenden:  
   
 - Durch eine einfache Rückkehr vom Delegaten. In vielen Fällen reicht dies aus. Eine auf diese Weise abgebrochene Aufgabeninstanz geht jedoch in den Zustand <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> und nicht in den Zustand <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> über.  
   
@@ -28,7 +28,7 @@ Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> - und <xref:
  [!code-csharp[TPL_Cancellation#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/snippet02.cs#02)]
  [!code-vb[TPL_Cancellation#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/module1.vb#02)]  
   
- Ein umfangreicheres Beispiel finden Sie unter [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Ein umfangreicheres Beispiel finden Sie unter [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](how-to-cancel-a-task-and-its-children.md).  
   
  Wenn eine Aufgabeninstanz eine <xref:System.OperationCanceledException> beobachtet, die von Benutzercode ausgelöst wurde, vergleicht sie das Token der Ausnahme mit dem zugeordneten Token (das an die API übergeben wurde, die die Aufgabe erstellt hat). Wenn diese identisch sind und die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> -Eigenschaft des Tokens true zurückgibt, interpretiert die Aufgabe dies als Bestätigung des Abbruchs und geht in den Zustand Canceled über. Wenn Sie nicht mithilfe einer <xref:System.Threading.Tasks.Task.Wait%2A> -Methode oder <xref:System.Threading.Tasks.Task.WaitAll%2A> -Methode auf die Aufgabe warten, wird der Status der Aufgabe auf <xref:System.Threading.Tasks.TaskStatus.Canceled>festgelegt.  
   
@@ -40,5 +40,5 @@ Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> - und <xref:
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)
-- [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+- [Abbruch in verwalteten Threads](../threading/cancellation-in-managed-threads.md)
+- [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](how-to-cancel-a-task-and-its-children.md)

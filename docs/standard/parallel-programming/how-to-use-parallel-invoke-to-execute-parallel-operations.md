@@ -9,19 +9,19 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: f61bbf10bbeef736f66710f50e621c3619355a1d
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 2b353fb8cb5e04ee4cab6b49f55539ecb40fab4f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635804"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290797"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „Parallel.Invoke“
 
 In diesem Beispiel wird veranschaulicht, wie Vorgänge parallelisiert werden können, indem <xref:System.Threading.Tasks.Parallel.Invoke%2A> in der Task Parallel Library verwendet wird. Es werden drei Vorgänge für eine freigegebene Datenquelle ausgeführt. Die Vorgänge können auf einfache Weise parallel ausgeführt werden, da die Quelle durch keinen von ihnen geändert wird.
 
 > [!NOTE]
-> Diese Dokumentation definiert Delegaten in TPL mithilfe von Lambdaausdrücken. Falls Sie mit Lambdaausdrücken in C# oder Visual Basic nicht vertraut sind, finden Sie entsprechende Informationen unter [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> Diese Dokumentation definiert Delegaten in TPL mithilfe von Lambdaausdrücken. Falls Sie mit Lambdaausdrücken in C# oder Visual Basic nicht vertraut sind, finden Sie entsprechende Informationen unter [Lambdaausdrücke in PLINQ und TPL](lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -38,6 +38,6 @@ Kopieren Sie das gesamte Beispiel, fügen Sie es in ein Microsoft Visual Studio-
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
-- [How to: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Parallele Programmierung](index.md)
+- [How to: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](how-to-cancel-a-task-and-its-children.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](introduction-to-plinq.md)

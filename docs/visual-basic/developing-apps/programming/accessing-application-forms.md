@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44f98632fd2fd6c4c087a78b805d5b7da750df87
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349241"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410204"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Zugreifen auf Anwendungsformulare (Visual Basic)
 
@@ -25,7 +25,7 @@ Mit dem `My.Forms`-Objekt können Sie ganz einfach auf eine Instanz von jedem Wi
   
 |An|Weitere Informationen finden Sie unter|  
 |---|---|  
-|Zugreifen auf ein Formular von einem anderen Formular in der Anwendung|[My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Zugreifen auf ein Formular von einem anderen Formular in der Anwendung|[My.Forms-Objekt](../../language-reference/objects/my-forms-object.md)|  
 |Zeigen Sie die Titel der offenen Formulare aller Anwendungen an.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |Aktualisieren Sie den Begrüßungsbildschirm mit Statusinformationen, während die Anwendung startet.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
@@ -33,4 +33,4 @@ Mit dem `My.Forms`-Objekt können Sie ganz einfach auf eine Instanz von jedem Wi
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
-- [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Forms-Objekt](../../language-reference/objects/my-forms-object.md)

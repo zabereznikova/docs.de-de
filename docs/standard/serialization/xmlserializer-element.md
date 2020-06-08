@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 68037959893ec307a896ea86d21e40a9d7aa824c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 667d59f7eb0d1c7682afcdda584cc5b0ca2da802
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380024"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288926"
 ---
 # <a name="xmlserializer-element"></a>\<xmlSerializer>-Element
 Gibt an, ob eine zusätzliche Zustandsüberprüfung für <xref:System.Xml.Serialization.XmlSerializer> durchgeführt wird.  
@@ -43,7 +43,7 @@ Gibt an, ob eine zusätzliche Zustandsüberprüfung für <xref:System.Xml.Serial
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<system.xml.serialization>-Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|Enthält Konfigurationseinstellungen für die <xref:System.Xml.Serialization.XmlSerializer>-Klasse und die <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse.|  
+|[\<system.xml.serialization>-Element](system-xml-serialization-element.md)|Enthält Konfigurationseinstellungen für die <xref:System.Xml.Serialization.XmlSerializer>-Klasse und die <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
  Standardmäßig bietet <xref:System.Xml.Serialization.XmlSerializer> eine zusätzliche Sicherheitsebene, um mögliche Denial-of-Service-Angriffe beim Serialisieren nicht vertrauenswürdiger Daten zu verhindern. Hierzu wird während der Deserialisierung versucht, Endlosschleifen zu erkennen. Wenn eine solche Bedingung erkannt wird, wird eine Ausnahme mit der folgenden Meldung ausgelöst: „Interner Fehler: Die Deserialisierung konnte über den zugrunde liegenden Datenstrom hinaus nicht erweitert werden.“  
@@ -64,5 +64,5 @@ Gibt an, ob eine zusätzliche Zustandsüberprüfung für <xref:System.Xml.Serial
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<system.xml.serialization>-Element](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [\<system.xml.serialization>-Element](system-xml-serialization-element.md)
+- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 187a20617ec901e722a30ebfa571e4a55ed0b5c3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348934"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401796"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
 
 Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.
 
-Der <xref:System.IO>-Namespace enthält die Klassen <xref:System.IO.File> und <xref:System.IO.Directory>, mit denen die Funktionalität von .NET Framework zum Ändern von Dateien und Verzeichnissen bereitgestellt wird. Da die Methoden dieser Objekte statische oder freigegebene Member sind, können Sie diese direkt verwenden, ohne zuerst eine Instanz der Klasse erstellen zu müssen. Die Klassen <xref:System.IO.FileInfo> und <xref:System.IO.DirectoryInfo> werden diesen Klassen zugeordnet und sind den Benutzern der `My`-Funktion bekannt. Zum Verwenden dieser Klassen müssen Sie die Namen vollständig qualifizieren oder die entsprechenden Namespaces durch Einschließen des `Imports` -Arguments (bzw. der Argumente) am Anfang des betreffenden Codes importieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
+Der <xref:System.IO>-Namespace enthält die Klassen <xref:System.IO.File> und <xref:System.IO.Directory>, mit denen die Funktionalität von .NET Framework zum Ändern von Dateien und Verzeichnissen bereitgestellt wird. Da die Methoden dieser Objekte statische oder freigegebene Member sind, können Sie diese direkt verwenden, ohne zuerst eine Instanz der Klasse erstellen zu müssen. Die Klassen <xref:System.IO.FileInfo> und <xref:System.IO.DirectoryInfo> werden diesen Klassen zugeordnet und sind den Benutzern der `My`-Funktion bekannt. Zum Verwenden dieser Klassen müssen Sie die Namen vollständig qualifizieren oder die entsprechenden Namespaces durch Einschließen des `Imports` -Arguments (bzw. der Argumente) am Anfang des betreffenden Codes importieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
 > Weitere Themen in diesem Abschnitt verwenden das Objekt `My.Computer.FileSystem` anstelle der `System.IO` -Klassen zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen. Das Objekt `My.Computer.FileSystem` dient in erster Linie zur Verwendung in Visual Basic-Programmen. `System.IO`-Klassen sind für die Verwendung durch eine beliebige Sprache vorgesehen, die .NET Framework, einschließlich Visual Basic, unterstützen.
@@ -111,4 +111,4 @@ Mit der Komponente von <xref:System.IO.FileSystemWatcher> können Sie Änderunge
 - [Erstellen von Streams](../../../../standard/io/composing-streams.md)
 - [Datei- und Stream-E/A](../../../../standard/io/index.md)
 - [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
-- [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+- [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](classes-used-in-net-framework-file-io-and-the-file-system.md)

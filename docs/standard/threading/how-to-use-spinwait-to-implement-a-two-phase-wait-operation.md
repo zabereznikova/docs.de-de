@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-ms.openlocfilehash: 5bac174660177fd47e1f345e64581e35ae4c0ffc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2bc79a7b652c34334d5a78d9c9af328993ff44
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137940"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279205"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Gewusst wie: Implementieren eines Wartevorgangs mit zwei Phasen mit SpinWait
 Das folgende Beispiel zeigt, wie Sie mit einem <xref:System.Threading.SpinWait?displayProperty=nameWithType>-Objekt einen zweiphasigen Wartevorgang implementieren. In der ersten Phase rotiert das Synchronisierungsobjekt, ein `Latch`, für einige Zyklen und überprüft dabei, ob die Sperre verfügbar geworden ist. Wenn in der zweiten Phase die Sperre verfügbar wird, erfolgt die Rückgabe der `Wait`-Methode ohne Verwendung von <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> zur Ausführung des Wartevorgangs; andernfalls führt `Wait` den Wartevorgang aus.  
@@ -30,5 +30,5 @@ Das folgende Beispiel zeigt, wie Sie mit einem <xref:System.Threading.SpinWait?d
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [SpinWait](../../../docs/standard/threading/spinwait.md)
-- [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)
+- [SpinWait](spinwait.md)
+- [Threading Objects and Features (Threadingobjekte und -funktionen)](threading-objects-and-features.md)

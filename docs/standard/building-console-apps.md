@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c2031e2d038f32f6392a2eb734e4f8851d7b936
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132867"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291629"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Erstellen von Konsolenanwendungen in .NET Framework
 Anwendungen in .NET Framework können die <xref:System.Console?displayProperty=nameWithType>-Klasse verwenden, um Zeichen aus der Konsole zu lesen und in ihr zu schreiben. Daten aus der Konsole werden aus dem Standardeingabestream gelesen, in die Konsole eingehende Daten werden in den Standardausgabestream geschrieben. In die Konsole eingehende Fehlerdaten werden in den Standard-Fehlerausgabestream geschrieben. Diese Streams werden automatisch mit der Konsole verknüpft, wenn die Anwendung gestartet wird, und werden entsprechend als Eigenschaften <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> und <xref:System.Console.Error%2A> dargestellt.  
@@ -28,9 +28,9 @@ Anwendungen in .NET Framework können die <xref:System.Console?displayProperty=n
   
  Konsolenanwendungen verfügen nicht über eine Meldungsverteilschleife, die standardmäßig gestartet wird. Daher können Konsolenaufrufe von Microsoft Win32-Timern möglicherweise fehlschlagen.  
   
- Die **System.Console**-Klasse verfügt über Methoden, die individuelle Zeichen oder ganze Zeilen aus der Konsole lesen können. Andere Methoden konvertieren Daten und formatieren Zeichenfolgen. Dann schreiben sie die formatierten Zeichenfolgen in die Konsole. Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatierungstypen](../../docs/standard/base-types/formatting-types.md).  
+ Die **System.Console**-Klasse verfügt über Methoden, die individuelle Zeichen oder ganze Zeilen aus der Konsole lesen können. Andere Methoden konvertieren Daten und formatieren Zeichenfolgen. Dann schreiben sie die formatierten Zeichenfolgen in die Konsole. Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatierungstypen](base-types/formatting-types.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Console?displayProperty=nameWithType>
-- [Formatierung von Typen](../../docs/standard/base-types/formatting-types.md)
+- [Formatierung von Typen](base-types/formatting-types.md)

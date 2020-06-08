@@ -16,12 +16,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: c4853a6854f5da1a3217c976a03ddbde3b528560
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e86bae8a687e89acba9a0b713630b43809f081d1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159662"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290628"
 ---
 # <a name="anchors-in-regular-expressions"></a>Anchor in regulären Ausdrücken
 Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position in der Zeichenfolge an, an der eine Übereinstimmung auftreten muss. Wenn Sie im Suchausdruck einen Anchor verwenden, durchsucht die Engine für reguläre Ausdrücke nicht die Zeichenfolge oder durchläuft Zeichen, sondern sucht nur an der angegebenen Position nach einer Übereinstimmung. Beispielsweise gibt `^` an, dass die Übereinstimmung am Anfang einer Zeile oder Zeichenfolge beginnen muss. Daher stimmt der reguläre Ausdruck `^http:` nur mit "http:" überein, wenn dies am Anfang einer Zeile steht. In der folgenden Tabelle werden die von den regulären .NET-Ausdrücken unterstützten Anchor aufgeführt.  
@@ -38,7 +38,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
 |`\B`|Die Übereinstimmung darf nicht an einer Wortgrenze vorliegen. Weitere Informationen finden Sie unter [Nicht-Wortgrenze](#non-word-boundary-b).|  
 
 ## <a name="start-of-string-or-line-"></a>Anfang der Zeichenfolge oder Zeile: ^  
- Der `^`-Anchor gibt standardmäßig an, dass das folgende Muster an der ersten Zeichenposition der Zeichenfolge beginnen muss. Wenn Sie `^` mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option (siehe [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md)) verwenden, muss die Übereinstimmung am Anfang jeder Zeile vorliegen.  
+ Der `^`-Anchor gibt standardmäßig an, dass das folgende Muster an der ersten Zeichenposition der Zeichenfolge beginnen muss. Wenn Sie `^` mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option (siehe [Optionen für reguläre Ausdrücke](regular-expression-options.md)) verwenden, muss die Übereinstimmung am Anfang jeder Zeile vorliegen.  
   
  Im folgenden Beispiel wird der `^` -Anchor in einem regulären Ausdruck verwendet, der Informationen zu den Jahren extrahiert, in denen es bestimmte professionelle Baseballteams gab. Im Beispiel werden zwei Überladungen der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> -Methode aufgerufen:  
   
@@ -119,7 +119,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
 |`,?`|Übereinstimmung mit 0 (Null) oder einem Literal-Kommazeichen.|
 
 ## <a name="word-boundary-b"></a>Wortgrenze: \b  
- Der `\b` -Anchor gibt an, dass die Übereinstimmung an einer Grenze zwischen einem Wortzeichen (dem `\w` -Sprachelement) und einem Nicht-Wortzeichen (dem `\W` -Sprachelement) vorliegen muss. Wortzeichen bestehen aus alphanumerischen Zeichen und Unterstrichen. Bei Nicht-Wortzeichen handelt es sich um alle Zeichen, die weder alphanumerisch noch Unterstriche sind. (Weitere Informationen finden Sie unter [Zeichenklassen in regulären Ausdrücken](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Die Übereinstimmung kann auch an einer Wortgrenze am Anfang oder Ende der Zeichenfolge vorliegen.  
+ Der `\b` -Anchor gibt an, dass die Übereinstimmung an einer Grenze zwischen einem Wortzeichen (dem `\w` -Sprachelement) und einem Nicht-Wortzeichen (dem `\W` -Sprachelement) vorliegen muss. Wortzeichen bestehen aus alphanumerischen Zeichen und Unterstrichen. Bei Nicht-Wortzeichen handelt es sich um alle Zeichen, die weder alphanumerisch noch Unterstriche sind. (Weitere Informationen finden Sie unter [Zeichenklassen in regulären Ausdrücken](character-classes-in-regular-expressions.md).) Die Übereinstimmung kann auch an einer Wortgrenze am Anfang oder Ende der Zeichenfolge vorliegen.  
   
  Der `\b` -Anchor wird häufig verwendet, um sicherzustellen, dass ein Teilausdruck statt nur mit Anfang oder Ende mit einem ganzen Wort übereinstimmt. Im folgenden Beispiel wird die Verwendung des regulären Ausdrucks `\bare\w*\b` veranschaulicht. Der Ausdruck stimmt mit jedem Wort überein, das mit der Teilzeichenfolge "are" beginnt. Die Ausgabe des Beispiels veranschaulicht auch, dass `\b` sowohl mit dem Anfang als auch dem Ende der Eingabezeichenfolge übereinstimmt.  
   
@@ -153,5 +153,5 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)
+- [Optionen für reguläre Ausdrücke](regular-expression-options.md)

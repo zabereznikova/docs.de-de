@@ -22,12 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 8eed7c0176a2c1f4beb472dff981d52e522c7e36
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 128ff4887601431f75981f13b51a11469e65d65c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523832"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290473"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Vorgehensweise: Extrahieren des Wochentags aus einem bestimmten Datum
 Mit .NET Framework ist es einfach, den Wochentag für ein bestimmtes Datum festzulegen und den lokalisierten Namen eines Wochentags für ein bestimmtes Datum anzuzeigen. Ein Aufzählungswert, der den einem bestimmten Datum entsprechenden Wochentag anzeigt, ist über die <xref:System.DateTime.DayOfWeek%2A>- oder die <xref:System.DateTimeOffset.DayOfWeek%2A>-Eigenschaft verfügbar. Dagegen ist das Abrufen des Namens eines Wochentags ein Formatierungsvorgang, der durch das Aufrufen einer Formatierungsmethode ausgeführt werden kann, wie z. B. der `ToString`-Methode eines Datums- oder Zeitwertes oder der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode. In diesem Thema wird gezeigt, wie diese Formatierungsvorgänge ausgeführt werden.  
@@ -100,5 +100,5 @@ Mit .NET Framework ist es einfach, den Wochentag für ein bestimmtes Datum festz
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)
+- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)

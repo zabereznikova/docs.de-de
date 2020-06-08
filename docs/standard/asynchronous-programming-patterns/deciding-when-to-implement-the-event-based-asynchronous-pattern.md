@@ -12,18 +12,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 5fca32953af91184fe99d8ef6afe5a2374f325d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c235a838504889a105ef98df47f7373a145503da
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67663718"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289446"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Gründe für das Implementieren des ereignisbasierten asynchronen Musters
 
 Mit dem ereignisbasierten asynchronen Muster kann das asynchrone Verhalten einer Klasse verfügbar gemacht werden. Mit der Einführung dieses Musters definiert .NET Framework zwei Muster, um asynchrones Verhalten verfügbar zu machen: das asynchrone Muster basierend auf der <xref:System.IAsyncResult?displayProperty=nameWithType>-Schnittstelle und das ereignisbasierte Muster. In diesem Thema wird beschrieben, in welchen Fällen die Muster implementiert werden sollten.
 
-Weitere Informationen zur asynchronen Programmierung mit der <xref:System.IAsyncResult>-Benutzeroberfläche finden Sie unter [Asynchrones Programmiermodell (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).
+Weitere Informationen zur asynchronen Programmierung mit der <xref:System.IAsyncResult>-Benutzeroberfläche finden Sie unter [Asynchrones Programmiermodell (APM)](asynchronous-programming-model-apm.md).
 
 ## <a name="general-principles"></a>Allgemeine Prinzipien
 
@@ -86,8 +86,8 @@ Die folgende Liste enthält einige Empfehlungen, die Sie bei Verwendung des <xre
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
-- [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](event-based-asynchronous-pattern-eap.md)
+- [Implementieren des ereignisbasierten asynchronen Entwurfsmusters](implementing-the-event-based-asynchronous-pattern.md)
+- [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)](event-based-asynchronous-pattern-overview.md)

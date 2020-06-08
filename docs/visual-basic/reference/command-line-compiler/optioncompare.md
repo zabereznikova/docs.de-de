@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: ac385880f8c13c23dffff67fc2a1ecc5609fd189
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ed9adc7cddd9eb204937b9819e4eeff176821e95
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581420"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400556"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 
@@ -48,7 +48,7 @@ Textbasierte Zeichenfolgenvergleiche basieren auf einer Textsortierreihenfolge, 
 
 ### <a name="to-set--optioncompare-programmatically"></a>So legen Sie -optioncompare programmgesteuert fest
 
-Informationen hierzu finden Sie unter [Anweisung „Option Compare“](../../../visual-basic/language-reference/statements/option-compare-statement.md).
+Informationen hierzu finden Sie unter [Anweisung „Option Compare“](../../language-reference/statements/option-compare-statement.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -60,10 +60,10 @@ vbc -optioncompare:binary projFile.vb
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optionstrict](optionstrict.md)
+- [-optioninfer](optioninfer.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
+- [Option Compare-Anweisung](../../language-reference/statements/option-compare-statement.md)
 - [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

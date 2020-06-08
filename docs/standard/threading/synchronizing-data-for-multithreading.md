@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159389"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291096"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Datensynchronisierung für Multithreading
 
@@ -22,11 +22,11 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
   
 - Synchronisierte Codebereiche. Sie können die <xref:System.Threading.Monitor>-Klasse oder die Compilerunterstützung für diese Klasse zum Synchronisieren von einzig und allein dem Codeblock verwenden, der sie benötigt, wobei die Leistung verbessert wird.  
   
-- Manuelle Synchronisierung Sie können die von der .NET-Klassenbibliothek bereitgestellten Synchronisierungsobjekte verwenden. Unter [Übersicht über Synchronisierungsprimitiven](../../../docs/standard/threading/overview-of-synchronization-primitives.md) finden Sie weitere Informationen, darunter eine Beschreibung der <xref:System.Threading.Monitor>-Klasse.  
+- Manuelle Synchronisierung Sie können die von der .NET-Klassenbibliothek bereitgestellten Synchronisierungsobjekte verwenden. Unter [Übersicht über Synchronisierungsprimitiven](overview-of-synchronization-primitives.md) finden Sie weitere Informationen, darunter eine Beschreibung der <xref:System.Threading.Monitor>-Klasse.  
   
 - Synchronisierte Kontexte. Für .NET Framework- und Xamarin-Anwendungen können Sie <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> verwenden, um eine einfache automatische Synchronisierung für <xref:System.ContextBoundObject>-Objekte zu ermöglichen.  
   
-- Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace. Diese Klassen stellen integrierte synchronisierte Hinzufüge- und Entfernungsvorgänge bereit. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../../../docs/standard/collections/thread-safe/index.md).  
+- Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace. Diese Klassen stellen integrierte synchronisierte Hinzufüge- und Entfernungsvorgänge bereit. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../collections/thread-safe/index.md).  
   
  Die Common Language Runtime stellt ein Threadmodell bereit, bei dem Klassen in verschiedene Kategorien fallen, die je nach den Anforderungen in einer Vielzahl von Möglichkeiten synchronisiert werden können. Die folgende Tabelle zeigt, welche Synchronisierungsunterstützung für Felder und Methoden mit einer angegebenen Synchronisierungskategorie vorhanden sind.  
   
@@ -41,7 +41,7 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
  Dies ist die Standardeinstellung für Objekte. Jeder Thread kann jederzeit auf alle Methoden oder Felder zugreifen. Es sollte jedoch nur ein Thread nach dem anderen auf diese Objekte zugreifen.  
   
 ## <a name="manual-synchronization"></a>Manuelle Synchronisierung  
- Die .NET-Klassenbibliothek stellt eine Reihe von Klassen zum Synchronisieren von Threads bereit. Weitere Informationen finden Sie unter [Übersicht über Synchronisierungsprimitiven](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+ Die .NET-Klassenbibliothek stellt eine Reihe von Klassen zum Synchronisieren von Threads bereit. Weitere Informationen finden Sie unter [Übersicht über Synchronisierungsprimitiven](overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Synchronisierte Codebereiche  
  Sie können die <xref:System.Threading.Monitor>-Klasse oder ein Compilerschlüsselwort zur Synchronisierung von Codeblöcken, Instanzmethoden und statischen Methoden verwenden. Es gibt keine Unterstützung für synchronisierte statische Felder.  
@@ -70,7 +70,7 @@ Ausschließlich in .NET Framework- und Xamarin-Anwendungen können Sie das <xref
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)
-- [Übersicht über Synchronisierungsprimitiven](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Threads and Threading (Threads und Threading)](threads-and-threading.md)
+- [Übersicht über Synchronisierungsprimitiven](overview-of-synchronization-primitives.md)
 - [SyncLock-Anweisung](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [lock-Anweisung](../../csharp/language-reference/keywords/lock-statement.md)

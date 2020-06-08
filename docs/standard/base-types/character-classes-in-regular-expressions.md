@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159337"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292097"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 
@@ -58,7 +58,7 @@ Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Ei
 
 `[*character_group*]`
 
- wobei *Zeichen_Gruppe* eine Liste der einzelnen Zeichen ist, die in der Eingabezeichenfolge vorkommen können, damit eine Übereinstimmung vorliegt. *Zeichen_Gruppe* kann aus einer beliebigen Kombination von mindestens einem Literalzeichen, [Escapezeichen](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) oder Zeichenklassen bestehen.  
+ wobei *Zeichen_Gruppe* eine Liste der einzelnen Zeichen ist, die in der Eingabezeichenfolge vorkommen können, damit eine Übereinstimmung vorliegt. *Zeichen_Gruppe* kann aus einer beliebigen Kombination von mindestens einem Literalzeichen, [Escapezeichen](character-escapes-in-regular-expressions.md) oder Zeichenklassen bestehen.  
   
  Die Syntax zum Angeben eines Zeichenbereichs lautet wie folgt:  
   
@@ -114,7 +114,7 @@ Die Syntax zum Angeben einer Liste einzelner Zeichen lautet wie folgt:
 
 `[*^character_group*]`
 
- wobei *Zeichen_Gruppe* eine Liste der einzelnen Zeichen ist, die in der Eingabezeichenfolge nicht vorkommen können, damit eine Übereinstimmung vorliegt. *Zeichen_Gruppe* kann aus einer beliebigen Kombination von mindestens einem Literalzeichen, [Escapezeichen](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) oder Zeichenklassen bestehen.  
+ wobei *Zeichen_Gruppe* eine Liste der einzelnen Zeichen ist, die in der Eingabezeichenfolge nicht vorkommen können, damit eine Übereinstimmung vorliegt. *Zeichen_Gruppe* kann aus einer beliebigen Kombination von mindestens einem Literalzeichen, [Escapezeichen](character-escapes-in-regular-expressions.md) oder Zeichenklassen bestehen.  
   
  Die Syntax zum Angeben eines Zeichenbereichs lautet wie folgt:  
 
@@ -158,7 +158,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 ## <a name="any-character-"></a>Alle Zeichen: .  
  Das Punktzeichen (.) stimmt mit Ausnahme von `\n` (dem Zeichen für einen Zeilenumbruch, "\u000A") mit allen Zeichen überein. Hierfür gelten die folgenden beiden Qualifikationen:  
   
-- Wenn ein Muster für reguläre Ausdrücke durch die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option oder der Teil des Musters mit der `.`-Zeichenklasse durch die `s`-Option geändert wird, stimmt `.` mit allen Zeichen überein. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+- Wenn ein Muster für reguläre Ausdrücke durch die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option oder der Teil des Musters mit der `.`-Zeichenklasse durch die `s`-Option geändert wird, stimmt `.` mit allen Zeichen überein. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
      Im folgenden Beispiel wird das unterschiedliche Verhalten der `.`-Zeichenklasse in der Standardeinstellung und mit der <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option veranschaulicht. Der reguläre `^.+`-Ausdruck beginnt am Anfang der Zeichenfolge und stimmt mit jedem Zeichen überein. Standardmäßig endet die Übereinstimmung am Ende der ersten Zeile. Das Muster für den regulären Ausdruck stimmt mit dem Wagenrücklaufzeichen (`\r` oder "\u000D"), jedoch nicht mit `\n` überein. Da die gesamte Eingabezeichenfolge von der <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option als einzelne Zeile interpretiert wird, liegt für jedes enthaltene Zeichen eine Übereinstimmung vor, einschließlich `\n`.  
   
@@ -174,7 +174,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
-> Aufgrund der Übereinstimmung des `.`-Sprachelements mit jedem Zeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn von einem Muster für einen regulären Ausdruck mehrere Versuche bezüglich der Übereinstimmung eines bestimmten Zeichens ausgeführt werden. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Aufgrund der Übereinstimmung des `.`-Sprachelements mit jedem Zeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn von einem Muster für einen regulären Ausdruck mehrere Versuche bezüglich der Übereinstimmung eines bestimmten Zeichens ausgeführt werden. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](quantifiers-in-regular-expressions.md).  
   
 <a name="CategoryOrBlock"></a>
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode-Kategorie oder Unicode-Block: \p{}  
@@ -237,10 +237,10 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 |Nd|Number, Decimal Digit (Zahl, Dezimalzahl)|  
 |Pc|Punctuation, Connector (Interpunktion, Konnektor). Zu dieser Kategorie gehören zehn Zeichen, von denen das UNTERSTRICH-Zeichen "u+005F" (_) am häufigsten verwendet wird.|  
   
- Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\w` dem `[a-zA-Z_0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+ Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\w` dem `[a-zA-Z_0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
 > [!NOTE]
-> Aufgrund der Übereinstimmung des `\w`-Sprachelements mit jedem Wortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn ein Muster für einen regulären Ausdruck mehrmals versucht, eine Übereinstimmung mit einem beliebigen Wortzeichen, gefolgt von einem bestimmten Wortzeichen, herzustellen. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Aufgrund der Übereinstimmung des `\w`-Sprachelements mit jedem Wortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn ein Muster für einen regulären Ausdruck mehrmals versucht, eine Übereinstimmung mit einem beliebigen Wortzeichen, gefolgt von einem bestimmten Wortzeichen, herzustellen. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](quantifiers-in-regular-expressions.md).  
   
  Im folgenden Beispiel werden mit dem `\w`-Sprachelement übereinstimmende doppelte Zeichen innerhalb eines Worts ermittelt. Im Beispiel wird ein Muster für reguläre Ausdrücke definiert (`(\w)\1`), das wie folgt interpretiert werden kann.  
   
@@ -271,10 +271,10 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 |Nd|Number, Decimal Digit (Zahl, Dezimalzahl)|  
 |Pc|Punctuation, Connector (Interpunktion, Konnektor). Zu dieser Kategorie gehören zehn Zeichen, von denen das UNTERSTRICH-Zeichen "u+005F" (_) am häufigsten verwendet wird.|  
   
- Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\W` dem `[^a-zA-Z_0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+ Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\W` dem `[^a-zA-Z_0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
 > [!NOTE]
-> Aufgrund der Übereinstimmung des `\W`-Sprachelements mit jedem Nichtwortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn ein Muster für einen regulären Ausdruck mehrmals versucht, eine Übereinstimmung mit einem beliebigen Nichtwortzeichen, gefolgt von einem bestimmten Nichtwortzeichen, herzustellen. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Aufgrund der Übereinstimmung des `\W`-Sprachelements mit jedem Nichtwortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn ein Muster für einen regulären Ausdruck mehrmals versucht, eine Übereinstimmung mit einem beliebigen Nichtwortzeichen, gefolgt von einem bestimmten Nichtwortzeichen, herzustellen. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](quantifiers-in-regular-expressions.md).  
   
  Das folgende Beispiel veranschaulicht die `\W`-Zeichenklasse.  Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b(\w+)(\W){1,2}`), das mit einem von einem oder zwei Nichtwortzeichen (z. B. Leer- oder Interpunktionszeichen) gefolgten Wort übereinstimmt. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
@@ -303,7 +303,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 |`\x85`|Auslassungs- oder NÄCHSTE ZEILE (NEL)-Zeichen (…), "\u0085".|  
 |`\p{Z}`|Übereinstimmung mit jedem Trennzeichen.|  
   
- Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\s` dem `[ \f\n\r\t\v]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+ Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\s` dem `[ \f\n\r\t\v]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
  Das folgende Beispiel veranschaulicht die `\s`-Zeichenklasse. Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b\w+(e)?s(\s|$)`), das mit einem entweder auf "s" oder "es" endenden Wort übereinstimmt. Auf dieses Wort muss ein Leerzeichen oder das Ende der Eingabezeichenfolge folgen. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
@@ -322,7 +322,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 ## <a name="non-whitespace-character-s"></a>Nicht-Leerraumzeichen: \S  
  `\S` entspricht einem beliebigen Nichtleerraumzeichen. Dies ist äquivalent zum Muster für den regulären `[^\f\n\r\t\v\x85\p{Z}]`-Ausdruck bzw. das Gegenteil des Musters für den regulären Ausdruck, der `\s` entspricht und daher mit Leerzeichen übereinstimmt. Weitere Informationen finden Sie unter [Leerzeichen: \s](#WhitespaceCharacter).  
   
- Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\S` dem `[^ \f\n\r\t\v]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+ Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\S` dem `[^ \f\n\r\t\v]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
  Im folgenden Beispiel wird das `\S`-Sprachelement veranschaulicht. Das Muster für den regulären Ausdruck `\b(\S+)\s?` stimmt mit durch Leerzeichen getrennten Zeichenfolgen überein. Das zweite Element im <xref:System.Text.RegularExpressions.GroupCollection>-Objekt der Übereinstimmung enthält die entsprechende Zeichenfolge. Der reguläre Ausdruck kann wie in der folgenden Tabelle dargestellt interpretiert werden.  
   
@@ -339,7 +339,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 ## <a name="decimal-digit-character-d"></a>Dezimalzahl: \d  
  `\d` entspricht einer beliebigen Dezimalziffer. Dies entspricht dem Muster des regulären `\p{Nd}`-Ausdrucks, das neben den Standarddezimalzahlen 0 bis 9 auch die Dezimalzahlen einer Anzahl anderer Zeichensätze einschließt.  
   
- Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\d` dem `[0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+ Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\d` dem `[0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
  Im folgenden Beispiel wird das `\d`-Sprachelement veranschaulicht. Anhand eines Tests soll ermittelt werden, ob eine Eingabezeichenfolge eine gültige Telefonnummer in den USA und Kanada darstellt. Das Muster für reguläre Ausdrücke `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` wird entsprechend der folgenden Tabelle definiert:  
   
@@ -361,7 +361,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 ## <a name="non-digit-character-d"></a>Nicht-Zahlen: \D  
  `\D` stimmt mit jedem Zeichen außer Zahlen überein. Dies entspricht dem Muster des regulären Ausdrucks `\P{Nd}`.  
   
- Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\D` dem `[^0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+ Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\D` dem `[^0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
  Im folgenden Beispiel wird das "\D"-Sprachelement veranschaulicht. Anhand eines Tests wird ermittelt, ob eine Zeichenfolge (z. B. eine Teilenummer) aus der gewünschten Kombination von Dezimalzahlen und Nicht-Dezimalzahlen besteht. Das Muster für reguläre Ausdrücke `^\D\d{1,5}\D*$` wird entsprechend der folgenden Tabelle definiert:  
   
@@ -570,5 +570,5 @@ In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Char.GetUnicodeCategory%2A>
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)
+- [Optionen für reguläre Ausdrücke](regular-expression-options.md)

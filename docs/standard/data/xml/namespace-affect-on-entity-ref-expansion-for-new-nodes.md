@@ -3,12 +3,12 @@ title: Auswirkungen von Namespaces auf die Entitätsverweiserweiterung für neue
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
-ms.openlocfilehash: 4772e3f7365069c537c4ec3bc8571f2f710bc9fc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05ec622f09106978281cd3e6f0a82f13703c2097
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710621"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288809"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Auswirkungen von Namespaces auf die Entitätsverweiserweiterung für neue Knoten mit Elementen und Attributen
 Da in einer Entitätsdeklaration beinahe alles enthalten sein kann, besteht die Möglichkeit, dass ein Element wie `<!ENTITY aname "<elem>test</elem>">` enthalten ist.  
@@ -20,4 +20,4 @@ Da in einer Entitätsdeklaration beinahe alles enthalten sein kann, besteht die 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML-Dokumentobjektmodell (DOM)](xml-document-object-model-dom.md)

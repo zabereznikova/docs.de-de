@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60c6e512a648f093bb9c70b5af86d5719e544adc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716775"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408724"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 
@@ -59,6 +59,6 @@ vbc -debug -out:app.exe test.vb
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [-bugreport](bugreport.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

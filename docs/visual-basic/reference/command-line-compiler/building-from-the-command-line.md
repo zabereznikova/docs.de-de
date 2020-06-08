@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344792"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414297"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Erstellen von der Befehlszeile aus (Visual Basic)
 
@@ -35,18 +35,18 @@ Sie können Projektdateien (.vbproj) mithilfe von MSBuild in einer Eingabeauffor
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[How to: Aufrufen des Befehlszeilencompilers](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+[How to: Aufrufen des Befehlszeilencompilers](how-to-invoke-the-command-line-compiler.md) \
 Beschreibt, wie der Befehlszeilencompiler in der MS-DOS-Eingabeaufforderung oder über ein bestimmtes Unterverzeichnis aufgerufen wird.
 
-[Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+[Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md) \
 Enthält eine Liste mit Beispielbefehlszeilen, die Sie nach Belieben anpassen können.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Visual Basic-Befehlszeilencompiler](index.md) \
 Enthält Listen mit Compileroptionen, die alphabetisch oder nach Zweck angeordnet sind.
 
-[Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[Bedingte Kompilierung](../../programming-guide/program-structure/conditional-compilation.md) \
 Beschreibt, wie bestimmte Codeabschnitte kompiliert werden.
 
 [Erstellen und Bereinigen von Projekten und Projektmappen in Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

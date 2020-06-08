@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 0f17df93fc4ef22ef45f7ceff89bfb5f1ab1c18d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: c9094e1550ad837444b7670cf54226322583be79
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523954"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387607"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Zugreifen auf Daten in Visual Basic-Anwendungen
 
@@ -24,7 +24,7 @@ Stellt Links zu Seiten bereit, in denen das Integrieren von Datenzugriffsfunktio
 [Visual Studio-Datentools für .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
 Enthält Links zu Seiten, in denen erläutert wird, wie Sie mit Visual Studio Anwendungen erstellen können, die Daten verwenden.
 
-[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
+[LINQ](../programming-guide/language-features/linq/index.md)  
 Enthält Links zu Themen, in denen die Verwendung von LINQ mit Visual Basic beschrieben wird.
 
 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  

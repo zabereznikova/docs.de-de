@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121676"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289264"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Verwenden der StringBuilder-Klasse in .NET
 Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine der Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse verwenden, erstellen Sie ein neues Zeichenfolgenobjekt im Speicher, das eine neue Speicherbelegung für dieses neue Objekt erfordert. In Fällen, in denen Sie wiederholte Änderungen an einer Zeichenfolge vornehmen müssen, kann der Mehraufwand, der mit dem Erstellen eines neuen <xref:System.String>-Objekts verbunden ist, erheblich sein. Die <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klasse kann verwendet werden, wenn Sie eine Zeichenfolge ändern möchten, ohne ein neues Objekt zu erstellen. Beispielsweise lässt sich durch Verwenden der <xref:System.Text.StringBuilder>-Klasse die Leistung steigern, wenn zahlreiche Zeichenfolgen in einer Schleife verkettet werden.  
@@ -76,7 +76,7 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
- Die <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>-Methode fügt Text am Ende des <xref:System.Text.StringBuilder>-Objekts hinzu. Die Methode unterstützt das Feature für die kombinierte Formatierung (weitere Informationen finden Sie unter [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)) durch Aufrufen der <xref:System.IFormattable>-Implementierung der Objekte, die formatiert werden sollen. Daher akzeptiert sie die Standardformatzeichenfolgen für numerische Werte, Datums- und Uhrzeitwerte sowie Enumerationswerte, die benutzerdefinierten Formatzeichenfolgen für numerische Werte sowie Datums- und Uhrzeitwerte und die Formatzeichenfolgen, die für benutzerdefinierte Typen definiert sind. (Weitere Informationen zur Formatierung finden Sie unter [Formatieren von Typen](../../../docs/standard/base-types/formatting-types.md).) Sie können diese Methode verwenden, um das Format von Variablen anzupassen und diese Werte an ein <xref:System.Text.StringBuilder>-Objekt anzufügen. Im folgenden Beispiel wird die <xref:System.Text.StringBuilder.AppendFormat%2A>-Methode verwendet, um einen als Währungswert formatierten ganzzahligen Wert am Ende eines <xref:System.Text.StringBuilder>-Objekts einzufügen.  
+ Die <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>-Methode fügt Text am Ende des <xref:System.Text.StringBuilder>-Objekts hinzu. Die Methode unterstützt das Feature für die kombinierte Formatierung (weitere Informationen finden Sie unter [Kombinierte Formatierung](composite-formatting.md)) durch Aufrufen der <xref:System.IFormattable>-Implementierung der Objekte, die formatiert werden sollen. Daher akzeptiert sie die Standardformatzeichenfolgen für numerische Werte, Datums- und Uhrzeitwerte sowie Enumerationswerte, die benutzerdefinierten Formatzeichenfolgen für numerische Werte sowie Datums- und Uhrzeitwerte und die Formatzeichenfolgen, die für benutzerdefinierte Typen definiert sind. (Weitere Informationen zur Formatierung finden Sie unter [Formatieren von Typen](formatting-types.md).) Sie können diese Methode verwenden, um das Format von Variablen anzupassen und diese Werte an ein <xref:System.Text.StringBuilder>-Objekt anzufügen. Im folgenden Beispiel wird die <xref:System.Text.StringBuilder.AppendFormat%2A>-Methode verwendet, um einen als Währungswert formatierten ganzzahligen Wert am Ende eines <xref:System.Text.StringBuilder>-Objekts einzufügen.  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
@@ -112,5 +112,5 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
-- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)
-- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
+- [Grundlegende Zeichenfolgenoperationen](basic-string-operations.md)
+- [Formatierung von Typen](formatting-types.md)

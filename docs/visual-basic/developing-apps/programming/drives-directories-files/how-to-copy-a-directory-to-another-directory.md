@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: a23079f093f53ab8e20eb71c684a594dcf7f894b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e28f50f6a812188ac7af801cea691818488bd6cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348865"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401718"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Gewusst wie: Kopieren eines Verzeichnisses in ein anderes Verzeichnis in Visual Basic
 
@@ -65,5 +65,5 @@ Die folgenden Bedingungen können einen Ausnahmefehler verursachen:
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
-- [Gewusst wie: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Gewusst wie: Abrufen einer Sammlung von Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Gewusst wie: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Gewusst wie: Abrufen einer Sammlung von Dateien in einem Verzeichnis](how-to-get-the-collection-of-files-in-a-directory.md)

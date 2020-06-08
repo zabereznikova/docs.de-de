@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 6b8e5f6802e5d44669b95d43d4e897fa4a418512
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103490"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306694"
 ---
 # <a name="workstation-and-server-garbage-collection"></a>Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server
 
@@ -30,7 +30,7 @@ Der Garbage Collector optimiert sich selbst und kann in einer Vielzahl von Szena
 
 Die folgende Abbildung zeigt die dedizierten Threads, die die Garbage Collection auf einem Server ausführen:
 
-![Threads für Garbage Collection auf dem Server](./media/gc-server.png)
+![Threads für Garbage Collection auf dem Server](media/gc-server.png)
 
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung
 

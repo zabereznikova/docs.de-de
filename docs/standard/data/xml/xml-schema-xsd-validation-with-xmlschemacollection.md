@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 994153ba93848ebb120f23bdf6a979462a65142d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2ff8a8b85c3bfa594bd958a9a3688380885e0426
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159480"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290304"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XSD-Validierung (XML Schema) mit „XmlSchemaCollection“
 Mit der <xref:System.Xml.Schema.XmlSchemaCollection> können XML-Dokumente anhand von XSD-Schemata (XML Schema Definition Language) validiert werden. Die <xref:System.Xml.Schema.XmlSchemaCollection> verbessert die Leistung, indem die Schemata in der Auflistung gespeichert werden, sodass sie nicht bei jeder Validierung erneut in den Speicher geladen werden müssen. Wenn das Schema in der Auflistung der Schemata enthalten ist, wird es mithilfe des `schemaLocation`-Attributs in der Auflistung gesucht.  
   
 > [!IMPORTANT]
-> Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [„XmlSchemaSet“ zur Kompilierung von Schemata](xmlschemaset-for-schema-compilation.md).  
   
  Im folgenden Beispiel wird das Stammelement der Datendatei veranschaulicht.  
   
@@ -211,4 +211,4 @@ while(vr.Read()) {
 - <xref:System.Xml.XmlParserContext>
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>
 - <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>
-- [Schemakompilierung mit „XmlSchemaCollection“](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+- [Schemakompilierung mit „XmlSchemaCollection“](xmlschemacollection-schema-compilation.md)

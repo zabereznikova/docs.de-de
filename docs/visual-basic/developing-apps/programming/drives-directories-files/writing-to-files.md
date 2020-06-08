@@ -8,12 +8,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06809ce8a846ea06ff2decdd87f304d1b26a7750
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352140"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406611"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Schreiben in Dateien in Visual Basic
 
@@ -21,19 +21,19 @@ In diesem Abschnitt wird beschrieben, wie Sie Aufgaben ausführen können, in de
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
- [Gewusst wie: Schreiben von Text in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ [Gewusst wie: Schreiben von Text in Dateien](how-to-write-text-to-files.md)  
  Veranschaulicht, wie Sie in Textdateien schreiben können  
   
- [Gewusst wie: Anfügen an Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ [Gewusst wie: Anfügen an Textdateien](how-to-append-to-text-files.md)  
  Veranschaulicht, wie Sie Text an Textdateien anhängen können  
   
- [Gewusst wie: Schreiben in Binärdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ [Gewusst wie: Schreiben in Binärdateien](how-to-write-to-binary-files.md)  
  Veranschaulicht, wie Sie in eine Binärdatei schreiben können  
   
- [Gewusst wie: Schreiben von Text in Dateien im Verzeichnis „Eigene Dokumente“](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ [Gewusst wie: Schreiben von Text in Dateien im Verzeichnis „Eigene Dokumente“](how-to-write-text-to-files-in-the-my-documents-directory.md)  
  Veranschaulicht, wie Sie eine neue Textdatei im Verzeichnis **Eigene Dateien** erstellen und in diese schreiben können  
   
- [Gewusst wie: Schreiben von Text in Dateien mit einem StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ [Gewusst wie: Schreiben von Text in Dateien mit einem StreamWriter](how-to-write-text-to-files-with-a-streamwriter.md)  
  Veranschaulicht, wie Sie mit einem <xref:System.IO.StreamWriter?displayProperty=nameWithType>-Objekt in eine Datei schreiben können  
   
 ## <a name="reference"></a>Verweis  
@@ -52,14 +52,14 @@ In diesem Abschnitt wird beschrieben, wie Sie Aufgaben ausführen können, in de
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
- [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Lesen aus Dateien](reading-from-files.md)  
  Beschreibt, wie Sie Aufgaben ausführen können, bei denen Sie aus Dateien lesen müssen  
   
- [Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen](creating-deleting-and-moving-files-and-directories.md)  
  Beschreibt, wie Sie Aufgaben ausführen können, bei denen Sie Dateien und Verzeichnisse erstellen, löschen, verschieben oder umbenennen müssen  
   
- [Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ [Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  Erläutert das Ausführen von Ausgaben in Bezug auf `My.Computer.Clipboard`, z.B. das Lesen von Daten aus der oder das Schreiben von Daten in die Zwischenablage  
   
- [Dateicodierungen](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [Dateicodierungen](file-encodings.md)  
  Bietet einen Überblick über Dateicodierungen

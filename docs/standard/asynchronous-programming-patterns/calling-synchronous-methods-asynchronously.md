@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a3dd83fe9d3fc48f66a0bb6bef333e4ff399108
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105131"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289901"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Asynchrones Aufrufen von synchronen Methoden
 
@@ -39,7 +39,7 @@ Die `BeginInvoke` -Methode initiiert den asynchronen Aufruf. Diese Methode hat d
 Die Ergebnisse dieses asynchronen Aufrufs werden dann mithilfe der `EndInvoke` -Methode abgerufen. Diese kann jederzeit nach der `BeginInvoke`-Methode aufgerufen werden. Wenn der asynchrone Aufruf nicht abgeschlossen wurde, blockiert `EndInvoke` den aufrufenden Thread, bis er abgeschlossen ist. Zu den Parametern von `EndInvoke` gehören die Parameter `out` und `ref` (`<Out>`, `ByRef` und `ByRef` in Visual Basic) der Methode, die Sie asynchron ausführen möchten, und die <xref:System.IAsyncResult>-Schnittstelle, die von `BeginInvoke` zurückgegeben wird.
 
 > [!NOTE]
-> Das IntelliSense-Feature in Visual Studio zeigt die Parameter von `BeginInvoke` und `EndInvoke` an. Sofern Sie nicht Visual Studio oder ein vergleichbares Tool verwenden, oder wenn Sie C# zusammen mit Visual Studio nutzen, finden Sie unter [Asynchrones Programmiermodell (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (Asynchrones Programmiermodell (APM)) eine Beschreibung der für diese Methoden festgelegten Parameter.
+> Das IntelliSense-Feature in Visual Studio zeigt die Parameter von `BeginInvoke` und `EndInvoke` an. Sofern Sie nicht Visual Studio oder ein vergleichbares Tool verwenden, oder wenn Sie C# zusammen mit Visual Studio nutzen, finden Sie unter [Asynchrones Programmiermodell (APM)](asynchronous-programming-model-apm.md) (Asynchrones Programmiermodell (APM)) eine Beschreibung der für diese Methoden festgelegten Parameter.
 
 Die in diesem Abschnitt verwendeten Codebeispiele veranschaulichen die vier gebräuchlichen Arten der Verwendung von `BeginInvoke` und `EndInvoke` bei asynchronen Aufrufen. Nach dem Aufrufen von `BeginInvoke` können Sie Folgendes tun:
 
@@ -112,4 +112,4 @@ Die in diesem Abschnitt verwendeten Codebeispiele veranschaulichen die vier gebr
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Delegate>
-- [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [Ereignisbasiertes asynchrones Muster (EAP)](event-based-asynchronous-pattern-eap.md)

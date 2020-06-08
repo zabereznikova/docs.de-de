@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: a9741f7a8283f8603e02dae5abea151c6ee5d75e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b6a1c8fce17e3e5a54366c2ff4dff4e6aa668f56
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775670"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408659"
 ---
 # <a name="-errorreport"></a>-errorreport
 
@@ -38,9 +38,9 @@ In der folgenden Tabelle werden die Auswirkungen der Option `-errorreport` zusam
 |`send`|Bei einem internen Compilerfehler sendet der Compiler die Daten an Microsoft, wenn die Einstellungen des Computers und der Benutzerrichtlinien dies zulassen.<br /><br /> Ist die Berichterstattung in den Systemeinstellungen der [Windows-Fehlerberichterstattung](/windows/desktop/wer/windows-error-reporting) aktiviert, versucht die Option `-errorreport:send`, automatisch Fehlerinformationen an Microsoft zu senden. |
 |`none`|Interne Compilerfehler werden weder gesammelt noch an Microsoft gesendet.|
 
-Der Compiler sendet Daten, die den Stapel zum Zeitpunkt des Fehlers und normalerweise auch Quellcode enthalten. Wenn Sie `-errorreport` zusammen mit der Option [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) verwenden, wird die gesamte Quelldatei gesendet.
+Der Compiler sendet Daten, die den Stapel zum Zeitpunkt des Fehlers und normalerweise auch Quellcode enthalten. Wenn Sie `-errorreport` zusammen mit der Option [-bugreport](bugreport.md) verwenden, wird die gesamte Quelldatei gesendet.
 
-Verwenden Sie die Option am besten zusammen mit der Option [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md), da auf diese Weise Microsoft-Entwickler den Fehler leichter reproduzieren können.
+Verwenden Sie die Option am besten zusammen mit der Option [-bugreport](bugreport.md), da auf diese Weise Microsoft-Entwickler den Fehler leichter reproduzieren können.
 
 > [!NOTE]
 > Die Option `-errorreport` steht nicht in der Visual Studio-Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.
@@ -55,6 +55,6 @@ vbc -errorreport:prompt t2.vb
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
+- [-bugreport](bugreport.md)

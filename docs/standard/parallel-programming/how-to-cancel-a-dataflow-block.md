@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 530c231deeaba007975849ab6dc41f4da6a859ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140093"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285546"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Gewusst wie: Abbrechen eines Datenflussblocks
 Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivieren. In diesem Beispiel wird Windows Forms verwendet, um anzuzeigen, wo in einer Datenflusspipeline Arbeitselemente aktiv sind, und um die Auswirkungen eines Abbruchs zu verdeutlichen.  
@@ -63,7 +63,7 @@ Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivier
   
  Da die `incrementProgress`- und `decrementProgress`-Datenflussblöcke als Benutzeroberfläche agiert, ist es wichtig, dass diese Aktionen im Benutzeroberflächenthread erfolgen. Um dies zu erreichen, stellen diese Objekte während der Erstellung ein <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>-Objekt bereit, für das die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A>-Eigenschaft auf <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> festgelegt ist. Die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode erstellt ein <xref:System.Threading.Tasks.TaskScheduler>-Objekt, das Arbeiten im aktuellen Synchronisierungskontext durchführt. Da der `Form1`-Konstruktor über den Benutzeroberflächenthread aufgerufen wird, werden die Aktionen für den `incrementProgress`- und den `decrementProgress`-Datenflussblock ebenfalls im Benutzeroberflächenthread ausgeführt.  
   
- In diesem Beispiel wird die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft festgelegt, wenn sie die Elemente der Pipeline erstellt. Da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft die Ausführung des Datenflussblocks dauerhaft abbricht, muss die gesamte Pipeline neu erstellt werden, wenn der Benutzer den Vorgang abbricht und anschließend weitere Arbeitselemente zur Pipeline hinzufügen möchte. Ein Beispiel für eine alternative Möglichkeit zum Abbrechen eines Datenflussblocks, die erlaubt, dass nach dem Abbrechen eines Vorgangs andere Arbeit ausgeführt wird, finden Sie unter [Exemplarische Vorgehensweise: Verwenden eines Datenflusses in einer Windows Forms-Anwendung](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ In diesem Beispiel wird die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft festgelegt, wenn sie die Elemente der Pipeline erstellt. Da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft die Ausführung des Datenflussblocks dauerhaft abbricht, muss die gesamte Pipeline neu erstellt werden, wenn der Benutzer den Vorgang abbricht und anschließend weitere Arbeitselemente zur Pipeline hinzufügen möchte. Ein Beispiel für eine alternative Möglichkeit zum Abbrechen eines Datenflussblocks, die erlaubt, dass nach dem Abbrechen eines Vorgangs andere Arbeit ausgeführt wird, finden Sie unter [Exemplarische Vorgehensweise: Verwenden eines Datenflusses in einer Windows Forms-Anwendung](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Verbinden der Datenflusspipeline mit der Benutzeroberfläche  
  In diesem Abschnitt wird beschrieben, wie Sie die Datenflusspipeline mit der Benutzeroberfläche verbinden. Sowohl das Erstellen der Pipeline als auch das Hinzufügen von Arbeitselementen zur Pipeline werden vom Ereignishandler für die Schaltfläche **Arbeitselemente hinzufügen** gesteuert. Der Abbruch wird durch die Schaltfläche **Abbrechen** initiiert. Wenn der Benutzer auf eine dieser Schaltflächen klickt, wird die entsprechende Aktion auf asynchrone Weise initiiert.  
@@ -92,8 +92,8 @@ Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivier
   
  Die folgende Abbildung zeigt die ausgeführte Anwendung.  
   
- ![Die Windows Forms-Anwendung](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![Die Windows Forms-Anwendung](media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow (Datenfluss)](dataflow-task-parallel-library.md)

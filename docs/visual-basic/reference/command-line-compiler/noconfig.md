@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: c57ed1699d110959e9faf3dc3d43bcc200851c1c
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ee7cd1b8039a8d9312a8b058cc85c41ca536ed2b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005433"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401939"
 ---
 # <a name="-noconfig"></a>-noconfig
 Gibt an, dass der Compiler nicht automatisch auf die häufig verwendeten .NET Framework-Assemblys verweisen oder die Namespaces `System` und `Microsoft.VisualBasic` importieren soll.  
@@ -28,7 +28,7 @@ Gibt an, dass der Compiler nicht automatisch auf die häufig verwendeten .NET Fr
 > [!NOTE]
 > Auf die Assemblys „Mscorlib.dll“ und „Microsoft.VisualBasic.dll“ wird immer verwiesen.  
   
- Sie können die Datei „Vbc.rsp“ so ändern, dass zusätzliche Compileroptionen angegeben werden, die in jeder Kompilierung von „Vbc.exe“ enthalten sein sollten (außer wenn die `-noconfig`-Option angeben ist). Weitere Informationen finden Sie unter [@ (C# Compiler Options)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md) (@ [C#-Compileroptionen]).  
+ Sie können die Datei „Vbc.rsp“ so ändern, dass zusätzliche Compileroptionen angegeben werden, die in jeder Kompilierung von „Vbc.exe“ enthalten sein sollten (außer wenn die `-noconfig`-Option angeben ist). Weitere Informationen finden Sie unter [@ (C# Compiler Options)](specify-response-file.md) (@ [C#-Compileroptionen]).  
   
  Der Compiler verarbeitet die an den Befehl `vbc` übergebenen Optionen zuletzt. Aus diesem Grund überschreibt jede Option in der Befehlszeile die Einstellung für die gleiche Option in der Datei „Vbc.rsp“.  
   
@@ -37,7 +37,7 @@ Gibt an, dass der Compiler nicht automatisch auf die häufig verwendeten .NET Fr
   
 ## <a name="see-also"></a>Siehe auch
 
-- [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [@ (Antwortdatei festlegen)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-nostdlib (Visual Basic)](nostdlib.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [@ (Antwortdatei festlegen)](specify-response-file.md)
+- [-reference (Visual Basic)](reference.md)

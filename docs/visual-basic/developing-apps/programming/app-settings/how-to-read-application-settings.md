@@ -6,18 +6,18 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: 04726381f8d285ae61045d1624b3b41b7f47e491
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b326341c54d652479776e3ab93a2b140f4531e0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329568"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410139"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>Vorgehensweise: Lesen von Anwendungseinstellungen in Visual Basic
 
 Sie können eine Benutzereinstellung lesen, indem Sie auf die Einstellung der Eigenschaft im `My.Settings`-Objekt zugreifen.  
   
- Das `My.Settings`-Objekt macht jede Einstellung als Eigenschaft verfügbar. Der Eigenschaftsname ist identisch mit dem Einstellungsnamen, und der Eigenschaftentyp entspricht dem Typ der Einstellung. Der **Bereich** der Einstellung gibt an, ob die Eigenschaft schreibgeschützt ist; die Eigenschaft für den Bereich **Anwendung** ist schreibgeschützt, während die Eigenschaft für die Bereichseinstellung **Benutzer** über einen Lese-/Schreibzugriff verfügt. Weitere Informationen finden Sie unter [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ Das `My.Settings`-Objekt macht jede Einstellung als Eigenschaft verfügbar. Der Eigenschaftsname ist identisch mit dem Einstellungsnamen, und der Eigenschaftentyp entspricht dem Typ der Einstellung. Der **Bereich** der Einstellung gibt an, ob die Eigenschaft schreibgeschützt ist; die Eigenschaft für den Bereich **Anwendung** ist schreibgeschützt, während die Eigenschaft für die Bereichseinstellung **Benutzer** über einen Lese-/Schreibzugriff verfügt. Weitere Informationen finden Sie unter [My.Settings-Objekt](../../../language-reference/objects/my-settings-object.md).  
   
 ## <a name="example"></a>Beispiel  
 
@@ -29,8 +29,8 @@ Sie können eine Benutzereinstellung lesen, indem Sie auf die Einstellung der Ei
   
 ## <a name="see-also"></a>Siehe auch
 
-- [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [How to: Ändern von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [How to: Beibehalten von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [How to: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [My.Settings-Objekt](../../../language-reference/objects/my-settings-object.md)
+- [How to: Ändern von Benutzereinstellungen in Visual Basic](how-to-change-user-settings.md)
+- [How to: Beibehalten von Benutzereinstellungen in Visual Basic](how-to-persist-user-settings.md)
+- [How to: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic](how-to-create-property-grids-for-user-settings.md)
 - [Verwalten von Anwendungseinstellungen (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

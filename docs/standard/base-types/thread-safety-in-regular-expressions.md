@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-ms.openlocfilehash: db25028e10872cfca08d28518c795414d06c5d49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbcaaf4942f8af1d6c1de52ff5bc11317318f319
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124801"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290888"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Threadsicherheit in regulären Ausdrücken
 Die <xref:System.Text.RegularExpressions.Regex>-Klasse selbst ist threadsicher und nicht änderbar (schreibgeschützt). **Regex**-Objekte können also in jedem Thread erzeugt und von mehreren Threads gemeinsam genutzt werden. Übereinstimmende Methoden können von jedem Thread aufgerufen werden und ändern keinen globalen Zustand.  
@@ -27,4 +27,4 @@ Die <xref:System.Text.RegularExpressions.Regex>-Klasse selbst ist threadsicher u
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Reguläre Ausdrücke von .NET](regular-expressions.md)

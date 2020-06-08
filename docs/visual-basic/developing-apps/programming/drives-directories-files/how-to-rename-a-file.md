@@ -5,12 +5,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: e69dad9ad7f59002ad62b7a06299ff012488e534
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de41ee6627315f0e26964b75f564ff98fe472ec
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334554"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411589"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Gewusst wie: Umbenennen einer Datei in Visual Basic
 
@@ -51,7 +51,7 @@ Verwenden Sie die `RenameFile`-Methode des `My.Computer.FileSystem`-Objekts, um 
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
-- [Gewusst wie: Verschieben einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
-- [Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
-- [Gewusst wie: Erstellen einer Kopie einer Datei im gleichen Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)
-- [Gewusst wie: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Gewusst wie: Verschieben einer Datei](how-to-move-a-file.md)
+- [Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen](creating-deleting-and-moving-files-and-directories.md)
+- [Gewusst wie: Erstellen einer Kopie einer Datei im gleichen Verzeichnis](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [Gewusst wie: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis](how-to-create-a-copy-of-a-file-in-a-different-directory.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: c626e79e7bbcd71c90775df8ee8c4d6570c29125
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624942"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290577"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>Verwendung von Zeichencodierungsklassen in .NET
 
@@ -33,11 +33,11 @@ Die Codierung und Decodierung können auch eine Validierung beinhalten. Die <xre
 
 Alle Zeichencodierungsklassen in .NET erben von der abstrakten <xref:System.Text.Encoding?displayProperty=nameWithType>-Klasse, die die Funktionen definiert, die für alle Zeichencodierungen gleich sind. Um auf die einzelnen in .NET implementierten Codierungsobjekte zuzugreifen, gehen Sie wie folgt vor:
 
-- Verwenden Sie die statischen Eigenschaften der <xref:System.Text.Encoding>-Klasse, die Objekte zurückgibt, die die in .NET verfügbaren Standardzeichencodierungen darstellen (ASCII, UTF-7, UTF-8, UTF-16 und UTF-32). Zum Beispiel gibt die <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> -Eigenschaft ein <xref:System.Text.UnicodeEncoding> -Objekt zurück. Jedes Objekt verwendet einen Ersatzfallback für die Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Weitere Informationen finden Sie im Abschnitt [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement).
+- Verwenden Sie die statischen Eigenschaften der <xref:System.Text.Encoding>-Klasse, die Objekte zurückgibt, die die in .NET verfügbaren Standardzeichencodierungen darstellen (ASCII, UTF-7, UTF-8, UTF-16 und UTF-32). Zum Beispiel gibt die <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> -Eigenschaft ein <xref:System.Text.UnicodeEncoding> -Objekt zurück. Jedes Objekt verwendet einen Ersatzfallback für die Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Weitere Informationen finden Sie im Abschnitt [Replacement Fallback](character-encoding.md#Replacement).
 
-- Rufen Sie den Klassenkonstruktor der Codierung auf. Objekte für ASCII-, UTF-7-, UTF-8-, UTF-16- und UTF-32-Codierungen können auf diese Weise instanziiert werden. Standardmäßig verwendet jedes Objekt den Ersatzfallback zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Sie können aber angeben, dass stattdessen eine Ausnahme ausgelöst werden soll. Weitere Informationen finden Sie in [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) und [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception).
+- Rufen Sie den Klassenkonstruktor der Codierung auf. Objekte für ASCII-, UTF-7-, UTF-8-, UTF-16- und UTF-32-Codierungen können auf diese Weise instanziiert werden. Standardmäßig verwendet jedes Objekt den Ersatzfallback zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Sie können aber angeben, dass stattdessen eine Ausnahme ausgelöst werden soll. Weitere Informationen finden Sie in [Replacement Fallback](character-encoding.md#Replacement) und [Exception Fallback](character-encoding.md#Exception).
 
-- Rufen Sie den <xref:System.Text.Encoding.%23ctor%28System.Int32%29> -Konstruktor auf, und übergeben Sie eine ganze Zahl, die die Codierung darstellt. Standardcodierungsobjekte verwenden den Ersatzfallback, und Codepage- und DBCS (Doppelbyte-Zeichensatz)-Codierungsobjekte verwenden den Fallback mit ähnlichen Zeichen zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Weitere Informationen finden Sie in [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit).
+- Rufen Sie den <xref:System.Text.Encoding.%23ctor%28System.Int32%29> -Konstruktor auf, und übergeben Sie eine ganze Zahl, die die Codierung darstellt. Standardcodierungsobjekte verwenden den Ersatzfallback, und Codepage- und DBCS (Doppelbyte-Zeichensatz)-Codierungsobjekte verwenden den Fallback mit ähnlichen Zeichen zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Weitere Informationen finden Sie in [Best-Fit Fallback](character-encoding.md#BestFit).
 
 - Rufen Sie die <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>-Methode auf, die jede in .NET verfügbare Standard-, Codepage- oder DBCS-Codierung zurückgibt. Mithilfe von Überladungen können Sie sowohl für den Encoder als auch den Decoder ein Fallbackobjekt angeben.
 
@@ -145,7 +145,7 @@ Im folgenden Beispiel wird die Codepage 1252 (Windows-Codepage für westeuropäi
 Die Zuordnung mit ähnlichen Zeichen ist das Standardverhalten für ein <xref:System.Text.Encoding> -Objekt, das Unicode-Daten in Codepagedaten codiert. Es gibt ältere Anwendungen, die auf diesem Verhalten basieren. In den meisten neuen Anwendungen sollte dieses Verhalten jedoch aus Sicherheitsgründen vermieden werden. Durch eine Codierung mit ähnlichen Zeichen sollten Anwendungen z. B. keinen Domänennamen ausdrücken.
 
 > [!NOTE]
-> Sie können für eine Codierung auch eine benutzerdefinierte Zuordnung mit einem Fallback mit ähnlichen Zeichen implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .
+> Sie können für eine Codierung auch eine benutzerdefinierte Zuordnung mit einem Fallback mit ähnlichen Zeichen implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) .
 
 Wenn der Fallback mit ähnlichen Zeichen die Standardeinstellung für ein Codierungsobjekt ist, können Sie eine andere Fallbackstrategie auswählen, wenn Sie ein <xref:System.Text.Encoding> -Objekt abrufen, indem Sie die <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> -Überladung aufrufen oder die <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> -Überladung aufrufen. Der folgende Abschnitt enthält ein Beispiel, in dem jedes Zeichen, das Codepage 1252 nicht zugeordnet werden kann, durch ein Sternchen (*) ersetzt wird.
 
@@ -167,7 +167,7 @@ Wenn ein Zeichen nicht über eine genaue Entsprechung im Zielschema verfügt und
 [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]
 
 > [!NOTE]
-> Sie können für eine Codierung auch eine Ersatzklasse implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .
+> Sie können für eine Codierung auch eine Ersatzklasse implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) .
 
 Zusätzlich zu QUESTION MARK (Fragezeichen, U+003F) wird in der Regel REPLACEMENT CHARACTER (Unicode-Ersatzzeichen, U+FFFD) als Ersatzzeichenfolge verwendet, insbesondere bei der Decodierung von Bytesequenzen, die nicht erfolgreich in Unicode-Zeichen übersetzt werden können. Allerdings können Sie eine beliebige Ersatzzeichenfolge auswählen, die mehrere Zeichen enthalten kann.
 
@@ -181,7 +181,7 @@ Anstatt einen Fallback mit ähnlichen Zeichen oder eine Ersatzzeichenfolge berei
 [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]
 
 > [!NOTE]
-> Sie können für einen Codierungsvorgang auch einen benutzerdefinierten Ausnahmehandler implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .
+> Sie können für einen Codierungsvorgang auch einen benutzerdefinierten Ausnahmehandler implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) .
 
 Das <xref:System.Text.EncoderFallbackException> -Objekt und das <xref:System.Text.DecoderFallbackException> -Objekt stellen die folgenden Informationen über die Bedingung bereit, durch die die Ausnahme ausgelöst wurde:
 
@@ -268,4 +268,4 @@ Dann instanziiert der folgende Code das `CustomMapper` -Objekt und übergibt ein
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
+- [Globalisierung und Lokalisierung](../globalization-localization/index.md)

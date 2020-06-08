@@ -13,12 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627993"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291785"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation
 Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Computer bereit. Sie bieten zwar weniger Funktionen als benannte Pipes, erfordern aber auch weniger Mehraufwand. Sie können anonyme Pipes verwenden, um die prozessübergreifende Kommunikation auf einem lokalen Computer zu vereinfachen. Anonyme Pipes können nicht zur Kommunikation über ein Netzwerk verwendet werden.  
@@ -47,5 +47,5 @@ Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Comp
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Pipes](../../../docs/standard/io/pipe-operations.md)
-- [Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Pipes](pipe-operations.md)
+- [Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](how-to-use-named-pipes-for-network-interprocess-communication.md)

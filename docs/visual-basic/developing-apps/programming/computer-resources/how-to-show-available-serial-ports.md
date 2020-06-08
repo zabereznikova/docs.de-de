@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: c7e5f797c1d098a3b2d01745b949ed50375ea7e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7a9166f1879ed0850ca893bed307a0318298bbb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345576"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401822"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen in Visual Basic
 
@@ -36,7 +36,7 @@ In diesem Thema wird beschrieben, wie `My.Computer.Ports` zum Anzeigen der verf�
   
 - Ein Projektverweis auf „System.Windows.Forms.dll“.  
   
-- Zugriff auf die Member des <xref:System.Windows.Forms>-Namespace Fügen Sie eine `Imports`-Anweisung hinzu, wenn Sie Membernamen in Ihrem Code nicht vollqualifizieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Zugriff auf die Member des <xref:System.Windows.Forms>-Namespace Fügen Sie eine `Imports`-Anweisung hinzu, wenn Sie Membernamen in Ihrem Code nicht vollqualifizieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 - Dass Ihr Formular ein <xref:System.Windows.Forms.ListBox>-Steuerelement mit dem Namen `ListBox1` hat.  
   
@@ -50,6 +50,6 @@ In diesem Thema wird beschrieben, wie `My.Computer.Ports` zum Anzeigen der verf�
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
-- [Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](how-to-dial-modems-attached-to-serial-ports.md)
+- [Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](how-to-send-strings-to-serial-ports.md)
+- [Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](how-to-receive-strings-from-serial-ports.md)

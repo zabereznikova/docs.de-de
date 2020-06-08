@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: cef1e6c19e7fdd6fc9f42c8fc36008314ea80a80
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6f77649365f8ca7b163cd55854aa9960d88f2984
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349128"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414258"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei (PE) eines Projekts eingebettet werden soll.  
@@ -32,7 +32,7 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
  Standardmäßig bettet der Visual Basic-Compiler ein Anwendungsmanifest ein, das eine angeforderte Ausführungsebene als „asInvoker“ angibt. Er erstellt das Manifest in demselben Ordner, in dem die ausführbare Datei erstellt wird. Wenn Sie Visual Studio verwenden, ist dies in der Regel der Ordner „bin\Debug“ oder „bin\Release“. Wenn Sie ein benutzerdefiniertes Manifest bereitstellen möchten, z. B. um die angeforderte Ausführungsebene „highestAvailable“ oder „requireAdministrator“ anzugeben, verwenden Sie diese Option zur Angabe des Dateinamens.  
   
 > [!NOTE]
-> Diese Option und die Option [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) schließen sich gegenseitig aus. Wenn Sie versuchen, beide Optionen in derselben Befehlszeile zu verwenden, wird ein Buildfehler angezeigt.  
+> Diese Option und die Option [-win32resource](win32resource.md) schließen sich gegenseitig aus. Wenn Sie versuchen, beide Optionen in derselben Befehlszeile zu verwenden, wird ein Buildfehler angezeigt.  
   
  Eine Anwendung ohne Anwendungsmanifest, das eine angeforderte Anwendungsebene angibt, unterliegt der Datei- und Registrierungsvirtualisierung unter der Benutzerkontensteuerung in Windows Vista. Weitere Informationen über Virtualisierung finden Sie unter [ClickOnce-Bereitstellung unter Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
@@ -68,5 +68,5 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [-nowin32manifest (Visual Basic)](nowin32manifest.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: ecfe0cca59b50da9231709dbd9a2de9b56391d4f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243153"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291057"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 
@@ -37,10 +37,10 @@ Für Übereinstimmungen mit nicht eingeschränkten Eingaben muss ein regulärer 
 
 - Text, der fast mit dem Muster eines regulären Ausdrucks übereinstimmt.
 
-Der letzte Texttyp ist besonders problematisch für reguläre Ausdrücke, die für die Behandlung eingeschränkter Eingaben vorgesehen sind. Wenn ein solcher regulärer Ausdruck zudem auf umfangreicher [Rückverfolgung](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) beruht, kann die Engine für reguläre Ausdrücke für die Verarbeitung von scheinbar harmlosem Text übermäßig lange Zeit brauchen (in manchen Fällen mehrere Stunden oder Tage).
+Der letzte Texttyp ist besonders problematisch für reguläre Ausdrücke, die für die Behandlung eingeschränkter Eingaben vorgesehen sind. Wenn ein solcher regulärer Ausdruck zudem auf umfangreicher [Rückverfolgung](backtracking-in-regular-expressions.md) beruht, kann die Engine für reguläre Ausdrücke für die Verarbeitung von scheinbar harmlosem Text übermäßig lange Zeit brauchen (in manchen Fällen mehrere Stunden oder Tage).
 
 > [!WARNING]
-> Im folgenden Beispiel wird ein regulärer Ausdruck verwendet, der für übermäßige Rückverfolgung anfällig ist und wahrscheinlich gültige E-Mail-Adressen zurückweisen wird. Er sollte nicht in einer E-Mail-Validierungsroutine nicht verwendet werden. Einen regulären Ausdruck, der E-Mail-Adressen überprüft, finden Sie unter [Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
+> Im folgenden Beispiel wird ein regulärer Ausdruck verwendet, der für übermäßige Rückverfolgung anfällig ist und wahrscheinlich gültige E-Mail-Adressen zurückweisen wird. Er sollte nicht in einer E-Mail-Validierungsroutine nicht verwendet werden. Einen regulären Ausdruck, der E-Mail-Adressen überprüft, finden Sie unter [Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](how-to-verify-that-strings-are-in-valid-email-format.md).
 
 Als Beispiel dient hier ein sehr häufig verwendeter, jedoch äußerst problematischer regulärer Ausdruck zum Überprüfen des Alias einer E-Mail-Adresse. Der reguläre Ausdruck `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` wird konzipiert, um eine als gültig angenommene E-Mail-Adresse zu verarbeiten, die aus einem alphanumerischen Zeichen gefolgt von keinem oder weiteren Zeichen besteht, bei denen es sich um alphanumerische Zeichen, Punkte oder Bindestriche handeln kann. Der reguläre Ausdruck muss mit einem alphanumerischen Zeichen enden. Die Verarbeitung von gültigen Eingaben durch diesen regulären Ausdruck erfolgt zwar reibungslos, aber das folgende Beispiel zeigt, dass die Leistung bei der Verarbeitung von fast gültigen Eingaben sehr schlecht ist.
 
@@ -161,7 +161,7 @@ Wenn das Beispiel in eine ausführbare Datei kompiliert und ausgeführt wird, wi
 Normalerweise bewegt sich die Engine für reguläre Ausdrücke für den Vergleich mit einem regulären Ausdrucksmuster linear durch eine Eingabezeichenfolge. Wenn jedoch unbestimmte Quantifizierer, z. B. `*`, `+` oder `?` in einem Muster für reguläre Ausdrücke verwendet werden, gibt die Engine für reguläre Ausdrücke möglicherweise einen Teil der erfolgreichen Teilübereinstimmungen auf und kehrt zu einem zuvor gespeicherten Zustand zurück, um nach einer erfolgreichen Übereinstimmung mit dem gesamten Muster zu suchen. Dieser Prozess wird als Rückverfolgung bezeichnet.
 
 > [!NOTE]
-> Weitere Informationen zur Rückverfolgung finden Sie unter [Einzelheiten zum Verhalten regulärer Ausdrücke](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) und [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Eine ausführliche Erörterung der Rückverfolgung finden Sie in [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) im BCL-Teamblog.
+> Weitere Informationen zur Rückverfolgung finden Sie unter [Einzelheiten zum Verhalten regulärer Ausdrücke](details-of-regular-expression-behavior.md) und [Backtracking](backtracking-in-regular-expressions.md). Eine ausführliche Erörterung der Rückverfolgung finden Sie in [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) im BCL-Teamblog.
 
 Durch die Unterstützung des Zurückverfolgens werden reguläre Ausdrücke leistungsstark und flexibel. Außerdem wird die Steuerung der Ausführung der Engine für reguläre Ausdrücke in die Hände der Entwickler von regulären Ausdrücken gelegt. Entwickler sind sich dieser Verantwortung oft nicht bewusst und verwenden die Rückverfolgung falsch oder übermäßig. Dies ist einer der Hauptfaktoren für die Beeinträchtigung der Leistung von regulären Ausdrücken. Im ungünstigsten Fall kann sich die Ausführungszeit für jedes zusätzliche Zeichen in der Eingabezeichenfolge verdoppeln. Durch Verwendung der Rückverfolgung ist es tatsächlich leicht, eine programmatische Entsprechung einer Endlosschleife zu erstellen, wenn die Eingabe fast mit dem Muster für reguläre Ausdrücke übereinstimmt. Für die Verarbeitung einer relativ kurzen Eingabezeichenfolge kann die Engine mehrere Stunden oder sogar Tage brauchen.
 
@@ -204,7 +204,7 @@ Im folgenden Beispiel wird die Verwendung dieses regulären Ausdrucks veranschau
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]
 
-Die Sprache für reguläre Ausdrücke in .NET beinhaltet die folgenden Sprachelemente, die Sie verwenden können, um geschachtelte Quantifizierer zu vermeiden. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+Die Sprache für reguläre Ausdrücke in .NET beinhaltet die folgenden Sprachelemente, die Sie verwenden können, um geschachtelte Quantifizierer zu vermeiden. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).
 
 |Sprachelement|Beschreibung|
 |----------------------|-----------------|
@@ -265,7 +265,7 @@ Erfassungen können Sie auf eine der folgenden Arten deaktivieren:
 
 - Verwenden Sie die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>-Option. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen im Muster für reguläre Ausdrücke. Wenn Sie diese Option verwenden, können nur Teilzeichenfolgen erfasst werden, die mit benannten Gruppen übereinstimmen, die mit dem Sprachelement `(?<name>subexpression)` definiert wurden. Das <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>-Flag kann an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder an den `options`-Parameter einer statischen <xref:System.Text.RegularExpressions.Regex> Übereinstimmungsmethode übergeben werden.
 
-- Verwenden Sie die `n`-Option im Sprachelement `(?imnsx)`. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen ab dem Punkt im Muster für reguläre Ausdrücke, an dem das Element erscheint. Erfassungen werden entweder bis zum Ende des Musters oder so lange deaktiviert, bis die `(-n)`-Option unbenannte oder implizite Erfassungen aktiviert. Weitere Informationen finden Sie unter [Verschiedene Konstrukte](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
+- Verwenden Sie die `n`-Option im Sprachelement `(?imnsx)`. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen ab dem Punkt im Muster für reguläre Ausdrücke, an dem das Element erscheint. Erfassungen werden entweder bis zum Ende des Musters oder so lange deaktiviert, bis die `(-n)`-Option unbenannte oder implizite Erfassungen aktiviert. Weitere Informationen finden Sie unter [Verschiedene Konstrukte](miscellaneous-constructs-in-regular-expressions.md).
 
 - Verwenden Sie die `n`-Option im Sprachelement `(?imnsx:subexpression)`. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen in `subexpression`. Erfassungen von allen unbenannten oder impliziten geschachtelten Erfassungsgruppen werden ebenfalls deaktiviert.
 
@@ -273,6 +273,6 @@ Erfassungen können Sie auf eine der folgenden Arten deaktivieren:
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Einzelheiten zum Verhalten regulärer Ausdrücke](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Überprüft die Implementierung der Engine für reguläre Ausdrücke in .NET. Schwerpunkt dieses Themas ist die Flexibilität regulärer Ausdrücke. Außerdem wird die Verantwortung des Entwicklers erläutert, das effiziente und stabile Ausführen der Engine für reguläre Ausdrücke sicherzustellen.|
-|[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Erläutert die Rückverfolgung und deren Auswirkungen auf die Leistung von regulären Ausdrücken. Zudem werden Sprachelemente beschrieben, die Alternativen zum Zurückverfolgen bieten.|
-|[Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Beschreibt die Elemente der Sprache für reguläre Ausdrücke in .NET und enthält Links zu ausführlichen Dokumentationen für jedes Sprachelement.|
+|[Einzelheiten zum Verhalten regulärer Ausdrücke](details-of-regular-expression-behavior.md)|Überprüft die Implementierung der Engine für reguläre Ausdrücke in .NET. Schwerpunkt dieses Themas ist die Flexibilität regulärer Ausdrücke. Außerdem wird die Verantwortung des Entwicklers erläutert, das effiziente und stabile Ausführen der Engine für reguläre Ausdrücke sicherzustellen.|
+|[Backtracking](backtracking-in-regular-expressions.md)|Erläutert die Rückverfolgung und deren Auswirkungen auf die Leistung von regulären Ausdrücken. Zudem werden Sprachelemente beschrieben, die Alternativen zum Zurückverfolgen bieten.|
+|[Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)|Beschreibt die Elemente der Sprache für reguläre Ausdrücke in .NET und enthält Links zu ausführlichen Dokumentationen für jedes Sprachelement.|

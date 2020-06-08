@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 09405a8a9f5d96d80454bcc98cbf29db54df6725
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635880"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288211"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Vorgehensweise: Abbrechen einer PLINQ-Abfrage
 In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-Abfrage veranschaulicht. Das erste Beispiel zeigt, wie eine Abfrage abgebrochen wird, die größtenteils aus Datendurchlauf besteht. Im zweiten Beispiel wird gezeigt, wie eine Abfrage abgebrochen wird, die eine rechenintensive Benutzerfunktion enthält.
@@ -22,7 +22,7 @@ In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-A
 > [!NOTE]
 > Wenn „Nur eigenen Code“ aktiviert ist, unterbricht Visual Studio die Ausführung in der Zeile, die die Ausnahme auslöst, und zeigt eine Fehlermeldung zu einer nicht vom Benutzercode behandelten Ausnahme an. Dieser Fehler hat keine Auswirkungen. Sie können F5 drücken, um den Vorgang fortzusetzen. In diesem Fall wird das in den nachstehenden Beispielen veranschaulichte Ausnahmebehandlungsverhalten angewendet. Um zu verhindern, dass Visual Studio beim ersten Fehler abbricht, deaktivieren Sie einfach unter **Extras, Optionen, Debugging, Allgemein** das Kontrollkästchen „Nur eigenen Code“.
 >
-> Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+> Dieses Beispiel soll die Nutzung darstellen und wird möglicherweise nicht schneller ausgeführt als die entsprechende sequenzielle LINQ to Objects-Abfrage. Weitere Informationen finden Sie unter [Grundlagen zur Beschleunigung in PLINQ](understanding-speedup-in-plinq.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -53,5 +53,5 @@ Wenn ein Enumerator verworfen wird, z. B. wenn Code aus einer foreach-Schleife 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](introduction-to-plinq.md)
+- [Abbruch in verwalteten Threads](../threading/cancellation-in-managed-threads.md)

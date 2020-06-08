@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242685"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291915"
 ---
 # <a name="globalization"></a>Globalisierung
 
@@ -57,7 +57,7 @@ Auch wenn Sie eine App entwickeln, die auf eine einzige Kultur oder Region ausge
 
 Die Verwendung von Ressourcendateien hat insbesondere dann Vorteile, wenn Sie eine lokalisierte App erstellen. Wenn Sie Ressourcen in Satellitenassemblys bereitstellen, wählt die Common Language Runtime automatisch eine der Kultur entsprechende Ressource anhand der aktuellen Kultur der Benutzeroberfläche aus, wie von der <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft definiert. Solange Sie eine entsprechende kulturspezifische Ressource bereitstellen und ein <xref:System.Resources.ResourceManager>-Objekt ordnungsgemäß instanziieren oder eine stark typisierte Ressourcenklasse verwenden, werden die Details zum Abrufen der entsprechenden Ressourcen von der Laufzeit behandelt.
 
-Weitere Informationen zum Erstellen von Ressourcendateien finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Informationen zum Erstellen und Bereitstellen von Satellitenassemblys finden Sie unter [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) und [Packen und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
+Weitere Informationen zum Erstellen von Ressourcendateien finden Sie unter [Erstellen von Ressourcendateien](../../framework/resources/creating-resource-files-for-desktop-apps.md). Informationen zum Erstellen und Bereitstellen von Satellitenassemblys finden Sie unter [Erstellen von Satellitenassemblys](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) und [Packen und Bereitstellen von Ressourcen](../../framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
 ### <a name="search-and-compare-strings"></a>Suchen und Vergleichen von Zeichenfolgen
 
@@ -143,7 +143,7 @@ Wenn Datumsangaben und Uhrzeiten auf der Benutzeroberfläche angezeigt werden, s
 
 - Die <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>-Methode, die eine Formatzeichenfolge enthält
 
-- Das Feature der [kombinierten Formatierung](../../../docs/standard/base-types/composite-formatting.md) bei der Verwendung mit Datumsangaben
+- Das Feature der [kombinierten Formatierung](../base-types/composite-formatting.md) bei der Verwendung mit Datumsangaben
 
 Im folgenden Beispiel werden Daten zum Sonnenaufgang und Sonnenuntergang für den 11. Oktober 2012 angezeigt. Die aktuelle Kultur wird zuerst auf Kroatisch (Kroatien) und dann auf Englisch (Großbritannien) festgelegt. In beiden Fällen werden die Datums- und Uhrzeitangaben im entsprechenden Format für die jeweilige Kultur angezeigt.
 
@@ -174,7 +174,7 @@ Der letzte Ansatz wird anhand des folgenden Beispiels veranschaulicht. Dabei wer
 
 Ein Datums- und Uhrzeitwert kann über mehrere Interpretationen verfügen, von der allgemeinen Uhrzeit („Die Läden öffnen am 2. Januar 2013 um 9:00 Uhr“) bis zu einem bestimmten Zeitpunkt („Geburtsdatum: 2. Januar 2013 6:32:00 Uhr“). Wenn ein Zeitwert einen bestimmten Zeitpunkt darstellt und aus einem serialisierten Wert wiederhergestellt wird, sollten Sie sicherstellen, dass er den gleichen Zeitpunkt unabhängig vom geografischen Ort oder der Zeitzone des Benutzers repräsentiert.
 
-Dieses Problem wird anhand des folgenden Beispiels veranschaulicht. Ein einzelner lokaler Datums- und Uhrzeitwert wird als Zeichenfolge in drei [Standardformaten](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) („G“ für generelles Datum, lange Zeit, „s“ für sortierbare(s) Datum/Uhrzeit und „o“ für Roundtrip für Datum/Uhrzeit) sowie im Binärformat gespeichert.
+Dieses Problem wird anhand des folgenden Beispiels veranschaulicht. Ein einzelner lokaler Datums- und Uhrzeitwert wird als Zeichenfolge in drei [Standardformaten](../base-types/standard-date-and-time-format-strings.md) („G“ für generelles Datum, lange Zeit, „s“ für sortierbare(s) Datum/Uhrzeit und „o“ für Roundtrip für Datum/Uhrzeit) sowie im Binärformat gespeichert.
 
 [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
 [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]
@@ -224,7 +224,7 @@ Wenn die Daten auf einem System in der Zeitzone Pazifik Normalzeit serialisiert 
 3/31/2013 3:00:00 AM Local
 ```
 
-Weitere Informationen finden Sie unter [Konvertieren von Uhrzeiten zwischen Zeitzonen](../../../docs/standard/datetime/converting-between-time-zones.md).
+Weitere Informationen finden Sie unter [Konvertieren von Uhrzeiten zwischen Zeitzonen](../datetime/converting-between-time-zones.md).
 
 ### <a name="perform-date-and-time-arithmetic"></a>Ausführen von arithmetischen Datums- und Uhrzeitoperationen
 
@@ -248,7 +248,7 @@ Das folgende Beispiel gleicht dem vorhergehenden bis auf die folgenden drei Schr
 [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
 [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]
 
-Weitere Informationen finden Sie unter [Durchführen arithmetischer Datums- und Uhrzeitoperationen](../../../docs/standard/datetime/performing-arithmetic-operations.md).
+Weitere Informationen finden Sie unter [Durchführen arithmetischer Datums- und Uhrzeitoperationen](../datetime/performing-arithmetic-operations.md).
 
 ### <a name="use-culture-sensitive-names-for-date-elements"></a>Verwenden kulturabhängiger Namen für Datumselemente
 
@@ -259,7 +259,7 @@ Ihre App muss möglicherweise den Namen des Monats oder des Wochentags anzeigen.
 
 Allerdings gibt dieser Code immer die Namen der Wochentage auf Englisch zurück. Code, der den Namen des Monats extrahiert, ist oft noch weniger flexibel. Oft wird von einem Zwölf-Monats-Kalender mit Namen von Monaten in einer bestimmten Sprache ausgegangen.
 
-Durch [benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) oder die Eigenschaften des <xref:System.Globalization.DateTimeFormatInfo>-Objekts können Zeichenfolgen, die die Namen von Wochentagen oder Monaten in der Kultur des Benutzers darstellen, leicht extrahiert werden. Dies wird im folgenden Beispiel veranschaulicht. Die aktuelle Kultur wird in Französisch (Frankreich) geändert, und die Namen des Wochentags und des Monats werden für den 1. Juli 2013 angezeigt.
+Durch [benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../base-types/custom-date-and-time-format-strings.md) oder die Eigenschaften des <xref:System.Globalization.DateTimeFormatInfo>-Objekts können Zeichenfolgen, die die Namen von Wochentagen oder Monaten in der Kultur des Benutzers darstellen, leicht extrahiert werden. Dies wird im folgenden Beispiel veranschaulicht. Die aktuelle Kultur wird in Französisch (Frankreich) geändert, und die Namen des Wochentags und des Monats werden für den 1. Juli 2013 angezeigt.
 
 [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
 [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]
@@ -279,7 +279,7 @@ Wenn Zahlen auf der Benutzeroberfläche angezeigt werden, sollten Sie normalerwe
 
 - Die `ToString(String)`-Methode eines numerischen Typs, der eine Formatzeichenfolge als Argument enthält
 
-- Das Feature der [kombinierten Formatierung](../../../docs/standard/base-types/composite-formatting.md) bei der Verwendung mit numerischen Werten
+- Das Feature der [kombinierten Formatierung](../base-types/composite-formatting.md) bei der Verwendung mit numerischen Werten
 
 Im folgenden Beispiel wird die Durchschnittstemperatur pro Monat in Paris, Frankreich, angezeigt. Zuerst wird die aktuelle Kultur auf Französisch (Frankreich) festgelegt, bevor die Daten anzeigt werden. Anschließend wird die Kultur auf Englisch (USA) festgelegt. In beiden Fällen werden die Monatsnamen und Temperaturen im entsprechenden Format für die jeweilige Kultur angezeigt. Beachten Sie, dass die zwei Kulturen verschiedene Dezimaltrennzeichen beim Temperaturwert verwenden. Beachten Sie außerdem, dass im Beispiel die benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge "MMMM" verwendet wird, um den vollständigen Monatsnamen anzuzeigen, und dass in der Ergebniszeichenfolge ausreichend Platz für den Monatsnamen zugeordnet wird, indem die Länge des längsten Monatsnamens im <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>-Array ermittelt wird.
 
@@ -340,5 +340,5 @@ Treffen Sie generell keine Annahmen über die Werte von bestimmten <xref:System.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
-- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md)
+- [Globalisierung und Lokalisierung](index.md)
+- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../base-types/best-practices-strings.md)

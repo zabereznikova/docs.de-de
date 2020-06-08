@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242776"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289290"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 
@@ -49,14 +49,14 @@ Sie können Optionen für reguläre Ausdrücke mit einer von drei Methoden angeb
   [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
   [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
-- Durch das Übernehmen von Inlineoptionen in einem Muster eines regulären Ausdrucks mit der Syntax `(?imnsx-imnsx)`. Die Option gilt für das Muster ab dem Punkt, an dem die Option definiert wird, bis zum Ende des Musters oder zu dem Punkt, an dem die Definition der Option von einer anderen Inlineoption aufgehoben wird. Beachten Sie, dass die <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft einer <xref:System.Text.RegularExpressions.Regex>-Instanz diese Inlineoptionen nicht wiedergibt. Weitere Informationen finden Sie im Thema [Verschiedene Konstrukte](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
+- Durch das Übernehmen von Inlineoptionen in einem Muster eines regulären Ausdrucks mit der Syntax `(?imnsx-imnsx)`. Die Option gilt für das Muster ab dem Punkt, an dem die Option definiert wird, bis zum Ende des Musters oder zu dem Punkt, an dem die Definition der Option von einer anderen Inlineoption aufgehoben wird. Beachten Sie, dass die <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft einer <xref:System.Text.RegularExpressions.Regex>-Instanz diese Inlineoptionen nicht wiedergibt. Weitere Informationen finden Sie im Thema [Verschiedene Konstrukte](miscellaneous-constructs-in-regular-expressions.md).
 
   Dies wird im folgenden Beispiel veranschaulicht. Dabei werden Inlineoptionen verwendet, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.
 
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- Durch das Übernehmen von Inlineoptionen in einem bestimmten Gruppierungskonstrukt in einem Muster eines regulären Ausdrucks mit der Syntax `(?imnsx-imnsx:`*Teilausdruck*`)`. Kein Vorzeichen vor einer Gruppe von Optionen aktiviert diese Optionen. Ein Minuszeichen deaktiviert sie. (`?` ist ein fester Bestandteil der Syntax des Sprachkonstrukts, der immer erforderlich ist, unabhängig davon, ob Optionen aktiviert oder deaktiviert sind.) Die Option wird nur auf diese Gruppe angewendet. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+- Durch das Übernehmen von Inlineoptionen in einem bestimmten Gruppierungskonstrukt in einem Muster eines regulären Ausdrucks mit der Syntax `(?imnsx-imnsx:`*Teilausdruck*`)`. Kein Vorzeichen vor einer Gruppe von Optionen aktiviert diese Optionen. Ein Minuszeichen deaktiviert sie. (`?` ist ein fester Bestandteil der Syntax des Sprachkonstrukts, der immer erforderlich ist, unabhängig davon, ob Optionen aktiviert oder deaktiviert sind.) Die Option wird nur auf diese Gruppe angewendet. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).
 
   Dies wird im folgenden Beispiel veranschaulicht. Dabei werden Inlineoptionen in einem Gruppierungskonstrukt verwendet, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.
 
@@ -298,7 +298,7 @@ Die <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayPropert
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
 
-Beachten Sie auch, dass die Lookaheadassertion (das `(?=`*Teilausdruck*`)`-Sprachelement) und die Lookbehindassertion (das `(?<=`*Teilausdruck*`)`-Sprachelement) die Richtung nicht ändern. Die Lookaheadassertionen prüfen nach rechts, die Lookbehindassertionen nach links. Der reguläre Ausdruck `(?<=\d{1,2}\s)\w+,?\s\d{4}` testet z. B. mithilfe der Lookbehindassertion auf ein Datum, das einem Monatsnamen vorausgeht. Der reguläre Ausdruck gleicht dann Monat und Jahr ab. Informationen zu Lookahead- und Lookbehindassertionen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+Beachten Sie auch, dass die Lookaheadassertion (das `(?=`*Teilausdruck*`)`-Sprachelement) und die Lookbehindassertion (das `(?<=`*Teilausdruck*`)`-Sprachelement) die Richtung nicht ändern. Die Lookaheadassertionen prüfen nach rechts, die Lookbehindassertionen nach links. Der reguläre Ausdruck `(?<=\d{1,2}\s)\w+,?\s\d{4}` testet z. B. mithilfe der Lookbehindassertion auf ein Datum, das einem Monatsnamen vorausgeht. Der reguläre Ausdruck gleicht dann Monat und Jahr ab. Informationen zu Lookahead- und Lookbehindassertionen finden Sie unter [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).
 
 [!code-csharp[Conceptual.Regex.Language.Options#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft2.cs#18)]
 [!code-vb[Conceptual.Regex.Language.Options#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft2.vb#18)]
@@ -324,7 +324,7 @@ Die <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty
 
 Das Verhalten von ECMAScript und kanonischen regulären Ausdrücke unterscheidet sich in drei Bereichen: Zeichenklassensyntax, bei Selbstverweisen von Erfassungsgruppen sowie bei der Interpretation von Oktalwerten und Rückverweisen.
 
-- Zeichenklassensyntax. Da kanonische reguläre Ausdrücke im Gegensatz zu ECMAScript Unicode unterstützen, weisen Zeichenklassen in ECMAScript eine beschränktere Syntax auf, und einige Zeichenklassensprachelemente haben eine andere Bedeutung. ECMAScript unterstützt z. B. keine Sprachelemente wie die Kategorie- oder Blockelemente `\p` und `\P` von Unicode. Entsprechend ist das `\w`-Element, das einem Wortzeichen entspricht, äquivalent zur `[a-zA-Z_0-9]`-Zeichenklasse beim Verwenden von ECMAScript bzw. äquivalent zu `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` beim Verwenden des kanonischen Verhaltens. Weitere Informationen finden Sie unter [Zeichenklassen in regulären Ausdrücken](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).
+- Zeichenklassensyntax. Da kanonische reguläre Ausdrücke im Gegensatz zu ECMAScript Unicode unterstützen, weisen Zeichenklassen in ECMAScript eine beschränktere Syntax auf, und einige Zeichenklassensprachelemente haben eine andere Bedeutung. ECMAScript unterstützt z. B. keine Sprachelemente wie die Kategorie- oder Blockelemente `\p` und `\P` von Unicode. Entsprechend ist das `\w`-Element, das einem Wortzeichen entspricht, äquivalent zur `[a-zA-Z_0-9]`-Zeichenklasse beim Verwenden von ECMAScript bzw. äquivalent zu `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` beim Verwenden des kanonischen Verhaltens. Weitere Informationen finden Sie unter [Zeichenklassen in regulären Ausdrücken](character-classes-in-regular-expressions.md).
 
   Im folgenden Beispiel wird der Unterschied zwischen kanonischen und ECMAScript-Mustervergleichen veranschaulicht. Dabei wird ein regulärer Ausdruck, `\b(\w+\s*)+`, definiert, der eine Entsprechung für Wörter findet, denen Leerstellenzeichen folgen. Die Eingabe besteht aus zwei Zeichenfolgen, einer mit dem lateinischen Zeichensatz und einer mit dem kyrillischen Zeichensatz. Wie die Ausgabe zeigt, findet der Aufruf der <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode, die ECMAScript verwendet, keine Entsprechung für die kyrillischen Wörter, wohingegen der Methodenaufruf, der einen kanonischen Vergleich verwendet, eine Entsprechung für diese Wörter findet.
 
@@ -363,7 +363,7 @@ Dieses Verhalten ist jedoch für einige Typen von Vergleichen unerwünscht, insb
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]
 
 > [!NOTE]
-> Weitere Informationen zu Zeichenfolgenvergleichen, bei denen die Groß-/Kleinschreibung beachtet wird und die die invariante Kultur verwenden, finden Sie unter [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md).
+> Weitere Informationen zu Zeichenfolgenvergleichen, bei denen die Groß-/Kleinschreibung beachtet wird und die die invariante Kultur verwenden, finden Sie unter [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](best-practices-strings.md).
 
 Statt die Vergleiche von der aktuellen Kultur zu verwenden, bei denen nicht zwischen Groß- und Kleinschreibung unterschieden wird, können Sie die <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType>-Option angeben, um kulturelle Unterschiede in der Sprache zu ignorieren und die Konventionen der invarianten Kultur zu verwenden.
 
@@ -377,4 +377,4 @@ Das folgende Beispiel ist mit dem vorherigen Beispiel identisch, abgesehen davon
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)

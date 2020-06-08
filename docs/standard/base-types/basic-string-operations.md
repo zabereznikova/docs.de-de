@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 2ce1b148a2b1605b5b1283bdc3398409661f3f83
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8c19f6bcbdf5e4829c91aee1e2fd631537ed2e0a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523990"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277751"
 ---
 # <a name="basic-string-operations-in-net"></a>Grundlegende Zeichenfolgenvorgänge in .NET
 
@@ -23,8 +23,8 @@ Mit einigen Methoden in den <xref:System.String?displayProperty=nameWithType>- u
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)\
+[Typkonvertierung in .NET](type-conversion.md)\
 Beschreibt, wie Sie einen Typ in einen anderen Typ konvertieren.  
 
-[Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)\
+[Formatierung von Typen](formatting-types.md)\
 Beschreibt, wie Zeichenfolgen über Formatbezeichner formatiert werden.

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 44850755c41b212e88e0b90dd3b016f96a0af96d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709815"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290226"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
@@ -247,7 +247,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 ## <a name="validating-xml-documents"></a>Validierung von XML-Dokumenten  
  XML-Dokumente können anhand von Schemata in einem <xref:System.Xml.Schema.XmlSchemaSet> validiert werden. Sie validieren ein XML-Dokument, indem Sie der <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft eines <xref:System.Xml.XmlReaderSettings>-Objekts ein Schema hinzufügen oder indem Sie der <xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft eines <xref:System.Xml.XmlReaderSettings>-Objekts eine <xref:System.Xml.Schema.XmlSchemaSet>-Klasse hinzufügen. Das <xref:System.Xml.XmlReaderSettings>-Objekt wird anschließend von der <xref:System.Xml.XmlReader.Create%2A>-Methode der <xref:System.Xml.XmlReader>-Klasse verwendet, um ein <xref:System.Xml.XmlReader>-Objekt zu erstellen und um das XML-Dokument zu validieren.  
   
- Weitere Informationen zum Validieren von XML-Dokumenten mithilfe einer <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
+ Weitere Informationen zum Validieren von XML-Dokumenten mithilfe einer <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](xml-schema-xsd-validation-with-xmlschemaset.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -258,5 +258,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 - <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
-- [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+- [„XmlSchemaSet“ zur Kompilierung von Schemata](xmlschemaset-for-schema-compilation.md)
+- [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](xml-schema-xsd-validation-with-xmlschemaset.md)

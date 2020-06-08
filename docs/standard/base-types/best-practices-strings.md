@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441005"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289364"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
 
@@ -309,7 +309,7 @@ Im folgenden Beispiel wird ein <xref:System.Collections.Hashtable> -Objekt insta
 Wenn Sie Benutzern Daten anzeigen, die keine Zeichenfolge sind, z. B. Zahlen sowie Datumsangaben und Zeitangaben, formatieren Sie diese den Kultureinstellungen des Benutzers entsprechend. In den folgenden Fällen wird bei Formatierungsvorgängen jeweils standardmäßig die aktuelle Threadkultur verwendet:
 
 - Bei interpolierten Zeichenfolgen, die von den [C#](../../csharp/language-reference/tokens/interpolated.md)- und [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)-Compilern unterstützt werden.
-- Bei Zeichenfolgenverkettungen, bei denen [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation)- oder [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md )-Verkettungsoperatoren verwendet werden oder die Methode <xref:System.String.Concat%2A?displayProperty=nameWithType> direkt aufgerufen wird.
+- Bei Zeichenfolgenverkettungen, bei denen [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation)- oder [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)-Verkettungsoperatoren verwendet werden oder die Methode <xref:System.String.Concat%2A?displayProperty=nameWithType> direkt aufgerufen wird.
 - Die <xref:System.String.Format%2A?displayProperty=nameWithType> -Methode.
 - Bei den `ToString`-Methoden der numerischen Typen sowie der Datums- und Uhrzeittypen.
 

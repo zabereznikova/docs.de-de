@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 91f2a27ed9b6fb296dbb9e50fc488fd012311890
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005506"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403160"
 ---
 # <a name="-main"></a>-main
 Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.  
@@ -29,7 +29,7 @@ Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.
 ## <a name="remarks"></a>Hinweise  
  Diese Option ist geeignet, wenn Sie eine ausführbare Datei oder ein ausführbares Windows-Programm erstellen. Wird die Option **-main** nicht angegeben, sucht der Compiler in allen öffentlichen Klassen und Modulen nach einer gültigen freigegebenen `Sub Main`-Prozedur.  
   
- Informationen zu den verschiedenen Formularen der `Main`-Prozedur finden Sie unter [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
+ Informationen zu den verschiedenen Formularen der `Main`-Prozedur finden Sie unter [Main-Prozedur in Visual Basic](../../programming-guide/program-structure/main-procedure.md).  
   
  Ist `location` eine Klasse, die von <xref:System.Windows.Forms.Form> erbt, stellt der Compiler eine `Main`-Standardprozedur bereit, mit der die Anwendung gestartet wird, wenn die Klasse keine `Main`-Prozedur enthält. Auf diese Weise können Sie Code in der Befehlszeile kompilieren, der in der Entwicklungsumgebung erstellt wurde.  
   
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [-target (Visual Basic)](target.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
+- [Main-Prozedur in Visual Basic](../../programming-guide/program-structure/main-procedure.md)

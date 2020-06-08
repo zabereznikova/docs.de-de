@@ -13,12 +13,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 3772aeeb25d1251a13fde2a0e51a913e5e39eabc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18f44af81a38a48da3115d2082ef45af39f06529
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155749"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291811"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei
 Die <xref:System.IO.BinaryWriter?displayProperty=nameWithType>-Klasse und die <xref:System.IO.BinaryReader?displayProperty=nameWithType>-Klasse werden zum Schreiben und Lesen von Daten, jedoch nicht von Zeichenfolgen, verwendet. Im folgenden Beispiel wird gezeigt, wie ein leerer Dateistream erstellt wird und Daten darin geschrieben und daraus gelesen werden.
@@ -39,10 +39,10 @@ In dem Beispiel wird im aktuellen Verzeichnis eine Datendatei mit dem Namen *Tes
 - <xref:System.IO.FileStream>  
 - <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
 - <xref:System.IO.SeekOrigin>  
-- [How to: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [How to: Öffnen und Anfügen an eine Protokolldatei](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [How to: Lesen von Text aus einer Datei](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [How to: Schreiben von Text in eine Datei](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [How to: Lesen von Zeichen aus einer Zeichenfolge](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [How to: Schreiben von Zeichen in eine Zeichenfolge](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
-- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
+- [How to: Auflisten von Verzeichnissen und Dateien](how-to-enumerate-directories-and-files.md)  
+- [How to: Öffnen und Anfügen an eine Protokolldatei](how-to-open-and-append-to-a-log-file.md)  
+- [How to: Lesen von Text aus einer Datei](how-to-read-text-from-a-file.md)  
+- [How to: Schreiben von Text in eine Datei](how-to-write-text-to-a-file.md)  
+- [How to: Lesen von Zeichen aus einer Zeichenfolge](how-to-read-characters-from-a-string.md)  
+- [How to: Schreiben von Zeichen in eine Zeichenfolge](how-to-write-characters-to-a-string.md)  
+- [Datei- und Stream-E/A](index.md)

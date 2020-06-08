@@ -14,17 +14,17 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420538"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291330"
 ---
 # <a name="applying-interop-attributes"></a>Anwenden von Interop-Attributen
 Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von Interop-spezifischen Attributen zur Verfügung: Attribute, die Sie zur Entwurfszeit anwenden, Attribute, die von COM-Interop-Tools und -APIs während des Konvertierungsprozesses angewendet werden und Attribute, die entweder von Ihnen oder von COM-Interop angewendet werden.  
   
- Wenn Sie mit dem Anwenden von Attributen auf verwalteten Code nicht vertraut sind, finden Sie weitere Informationen unter [Erweitern von Metadaten mithilfe von Attributen](../../../docs/standard/attributes/index.md). Wie andere benutzerdefinierte Attribute können Sie die Interop-spezifischen Attribute auf Typen, Methoden, Eigenschaften, Parameter, Felder und andere Elemente anwenden.  
+ Wenn Sie mit dem Anwenden von Attributen auf verwalteten Code nicht vertraut sind, finden Sie weitere Informationen unter [Erweitern von Metadaten mithilfe von Attributen](../attributes/index.md). Wie andere benutzerdefinierte Attribute können Sie die Interop-spezifischen Attribute auf Typen, Methoden, Eigenschaften, Parameter, Felder und andere Elemente anwenden.  
   
 ## <a name="design-time-attributes"></a>Entwurfszeitattribute  
  Sie können das Ergebnis des Konvertierungsvorgangs von COM-Interop-Tools und -APIs mithilfe von Entwurfszeitattributen anpassen. Die folgende Tabelle beschreibt die Attribute, die Sie auf dem verwalteten Quellcode anwenden können. COM-Interop-Tools wenden möglicherweise auch die in dieser Tabelle beschriebenen Attribute an.  
@@ -70,7 +70,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices>
-- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Attribute](../../../docs/standard/attributes/index.md)
-- [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [Verpacken einer .NET Framework-Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../framework/interop/exposing-dotnet-components-to-com.md)
+- [Attribute](../attributes/index.md)
+- [Qualifizieren von .NET-Typen für die Interoperation](qualify-net-types-for-interoperation.md)
+- [Verpacken einer .NET Framework-Assembly für COM](../../framework/interop/packaging-an-assembly-for-com.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344261"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408607"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Vorgehensweise: Aufrufen des Befehlszeilencompilers (Visual Basic)
 
@@ -60,5 +60,5 @@ Sie können den Befehlszeilencompiler aufrufen, indem Sie den Namen der ausführ
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Bedingte Kompilierung](../../programming-guide/program-structure/conditional-compilation.md)

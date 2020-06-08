@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5b0f9bea33346083ce0015fbf3cdfeb0e0ea1181
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796170"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287661"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Herleiten von Schemata aus XML-Dokumenten
 In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse zum Herleiten eines XSD-Schemas (XML Schema Definition Language) aus der Struktur eines XML-Dokuments verwendet wird.  
@@ -83,7 +83,7 @@ In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInfer
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [Herleiten eines XML-Schemas](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [Regeln für Rückschlussschemaknotentypen und Struktur](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
-- [Regeln zum Herleiten einfacher Typen](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](xml-schema-object-model-som.md)
+- [Herleiten eines XML-Schemas](inferring-an-xml-schema.md)
+- [Regeln für Rückschlussschemaknotentypen und Struktur](rules-for-inferring-schema-node-types-and-structure.md)
+- [Regeln zum Herleiten einfacher Typen](rules-for-inferring-simple-types.md)

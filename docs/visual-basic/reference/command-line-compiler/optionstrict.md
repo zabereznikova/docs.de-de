@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 469e22aef9d746fc55e04ba884d17d60d8baa85a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 3dd12971a082869c32b6292ed45e2014b8b0e2c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583077"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400538"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 
@@ -50,7 +50,7 @@ Verwenden Sie `-optionstrict:custom`, um Warnungen für implizite einschränkend
 
 ### <a name="to-set--optionstrict-programmatically"></a>So legen Sie -optionstrict programmgesteuert fest
 
-Informationen hierzu finden Sie unter [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).
+Informationen hierzu finden Sie unter [Option Strict-Anweisung](../../language-reference/statements/option-strict-statement.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -62,12 +62,12 @@ vbc -optionstrict+ test.vb
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
-- [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [-optioncompare](optioncompare.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optioninfer](optioninfer.md)
+- [-nowarn](nowarn.md)
+- [-warnaserror (Visual Basic)](warnaserror.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
+- [Option Strict-Anweisung](../../language-reference/statements/option-strict-statement.md)
 - [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
