@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76f56971223154d3ed966c272081049adf30de54
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177071"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500493"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished-Methode
 Benachrichtigt den Profiler, dass eine Anwendungsdomäne erstellt wurde.  
@@ -37,26 +37,26 @@ HRESULT AppDomainCreationFinished(
 
 - `appDomainId`
 
-  \[in] Identifiziert die erstellte Domäne.
+  \[in] identifiziert die Domäne, die erstellt wurde.
 
 - `hrStatus`
 
-  \[in] Ein HRESULT, das angibt, ob die Erstellung der Anwendungsdomäne erfolgreich abgeschlossen wurde.
+  \[in] ein HRESULT, das angibt, ob die Erstellung der Anwendungsdomäne erfolgreich abgeschlossen wurde.
 
 ## <a name="remarks"></a>Bemerkungen  
- Die Anwendungs-ID ist für Informationsanforderung `AppDomainCreationFinished` nicht gültig, bis die Methode aufgerufen wird.  
+ Die Anwendungs-ID ist für eine beliebige Informationsanforderung erst gültig, wenn die- `AppDomainCreationFinished` Methode aufgerufen wird.  
   
- Einige Teile des Ladens der `AppDomainCreationFinished` Anwendungsdomäne werden möglicherweise nach dem Rückruf fortgesetzt. Ein Fehler HRESULT in `hrStatus` weist auf einen Fehler hin. Ein erfolgreicher HRESULT `hrStatus` in zeigt jedoch nur an, dass der erste Teil des Erstellens der Anwendungsdomäne erfolgreich war.  
+ Einige Teile des Ladens der Anwendungsdomäne können nach dem Rückruf fortgesetzt werden `AppDomainCreationFinished` . Ein Fehler HRESULT in `hrStatus` weist auf einen Fehler hin. Ein HRESULT-Erfolg in `hrStatus` gibt jedoch nur an, dass der erste Teil der Erstellung der Anwendungsdomäne erfolgreich war.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

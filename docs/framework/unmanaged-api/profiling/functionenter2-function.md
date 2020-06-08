@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 9aeb7a294beb10f9c2968e6161c72fdc362c4991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c88e97f8187ac347f4ff39890c8d87ee80c8f9e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177058"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500714"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2-Funktion
-Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übergeben wird, und stellt Informationen über den Stapelrahmen und die Funktionsargumente bereit. Diese Funktion ersetzt die [FunctionEnter-Funktion.](functionenter-function.md)  
+Benachrichtigt den Profiler, dass die Steuerung an eine Funktion übermittelt wird, und stellt Informationen über den Stapel Rahmen und die Funktionsargumente bereit. Diese Funktion löst die [FunctionEnter](functionenter-function.md) -Funktion aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,49 +39,49 @@ void __stdcall FunctionEnter2 (
 
 - `funcId`
 
-  \[in] Der Bezeichner der Funktion, an die das Steuerelement übergeben wird.
+  \[in] der Bezeichner der Funktion, an die das Steuerelement übermittelt wird.
 
 - `clientData`
 
-  \[in] Der neu zugeordnete Funktionsbezeichner, den der Profiler zuvor mithilfe der [Funktion FunctionIDMapper](functionidmapper-function.md) angegeben hat.
+  \[in] der neu zugeordnete Funktions Bezeichner, den der Profiler zuvor mithilfe der [FunctionIDMapper](functionidmapper-function.md) -Funktion angegeben hat.
   
 - `func`
 
-  \[in] `COR_PRF_FRAME_INFO` Ein Wert, der auf Informationen über den Stapelrahmen verweist.
+  \[in] ein- `COR_PRF_FRAME_INFO` Wert, der auf Informationen über den Stapel Rahmen zeigt.
   
-  Der Profiler sollte dies als undurchsichtiges Handle behandeln, das an das Ausführungsmodul in der [ICorProfilerInfo2::GetFunctionInfo2-Methode](icorprofilerinfo2-getfunctioninfo2-method.md) zurückübergeben werden kann.  
+  Der Profiler sollte dies als ein undurchsichtiges Handle behandeln, das an die Ausführungs-Engine in der [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) -Methode zurückgegeben werden kann.  
   
 - `argumentInfo`
 
-  \[in] Ein Zeiger auf eine [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) Struktur, die die Positionen im Speicher der Argumente der Funktion angibt.
+  \[in] ein Zeiger auf eine [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) -Struktur, die die Speicherorte im Speicher der Argumente der Funktion angibt.
 
-  Um auf Argumentinformationen zugreifen `COR_PRF_ENABLE_FUNCTION_ARGS` zu können, muss das Flag gesetzt werden. Der Profiler kann die [ICorProfilerInfo::SetEventMask-Methode](icorprofilerinfo-seteventmask-method.md) verwenden, um die Ereignisflags festzulegen.
+  Um auf Argument Informationen zuzugreifen, muss das- `COR_PRF_ENABLE_FUNCTION_ARGS` Flag festgelegt werden. Der Profiler kann die [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) -Methode verwenden, um die Ereignisflags festzulegen.
 
 ## <a name="remarks"></a>Bemerkungen  
- Die Werte `func` der `argumentInfo` und Parameter sind `FunctionEnter2` ungültig, nachdem die Funktion zurückgegeben wurde, da sich die Werte ändern oder zerstört werden können.  
+ Die Werte des `func` -Parameters und des- `argumentInfo` Parameters sind nach der Rückgabe der Funktion ungültig, `FunctionEnter2` da sich die Werte möglicherweise ändern oder zerstört werden.  
   
- Die `FunctionEnter2` Funktion ist ein Rückruf; Sie müssen es implementieren. Die Implementierung muss `__declspec``naked`das ( ) Storage-Class-Attribut verwenden.  
+ Die `FunctionEnter2` Funktion ist ein Rückruf. Sie müssen Sie implementieren. Die-Implementierung muss das `__declspec` `naked` Speicher Klassen Attribut () verwenden.  
   
- Das Ausführungsmodul speichert keine Register, bevor diese Funktion aufgerufen wird.  
+ Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.  
   
-- Beim Eintrag müssen Sie alle Register speichern, die Sie verwenden, einschließlich der Register in der Gleitkommaeinheit (FPU).  
+- Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).  
   
-- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter deaktivieren, die vom Aufrufer gedrückt wurden.  
+- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.  
   
- Die Implementierung `FunctionEnter2` von sollte nicht blockiert werden, da die Garbage Collection verzögert wird. Die Implementierung sollte keine Garbage Collection versuchen, da sich der Stapel möglicherweise nicht in einem Garbage Collection-freundlichen Zustand befindet. Wenn versucht wird, eine Garbage Collection zu `FunctionEnter2` sammeln, wird die Laufzeit blockiert, bis sie zurückgegeben wird.  
+ Die Implementierung von `FunctionEnter2` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis von zurückgegeben wird `FunctionEnter2` .  
   
- Außerdem darf `FunctionEnter2` die Funktion keinen verwalteten Code aufrufen oder in irgendeiner Weise eine verwaltete Speicherzuweisung verursachen.  
+ Außerdem darf die `FunctionEnter2` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** CorProf.idl  
+ **Header:** Corprof. idl  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [FunctionLeave2-Funktion](functionleave2-function.md)
 - [FunctionTailcall2-Funktion](functiontailcall2-function.md)

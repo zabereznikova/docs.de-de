@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-ms.openlocfilehash: 70fb637cd1edf81be140b0e3306e3b0a483653a6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8cc803e3cf1442d324bf2eed0a37d0d236acd86d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007987"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493057"
 ---
 # <a name="cor_field_offset-structure"></a>COR_FIELD_OFFSET-Struktur
 Speichert den Offset des angegebenen Felds innerhalb einer Klasse.  
@@ -40,8 +40,8 @@ typedef struct COR_FIELD_OFFSET {
 |`ridOfField`|Ein `mdFieldDef` Metadatentoken, das das Feld darstellt.|  
 |`ulOffset`|Der Offset des Felds in der Klasse.|  
   
-## <a name="remarks"></a>Hinweise  
- Die [IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) -Methode und die [IMetaDataEmit:: SetClassLayout](imetadataemit-setclasslayout-method.md) -Methode übernehmen einen Parameter vom Typ `COR_FIELD_OFFSET` .  
+## <a name="remarks"></a>Bemerkungen  
+ Die [IMetaDataImport:: GetClassLayout](imetadataimport-getclasslayout-method.md) -Methode und die [IMetaDataEmit:: SetClassLayout](imetadataemit-setclasslayout-method.md) -Methode übernehmen einen Parameter vom Typ `COR_FIELD_OFFSET` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
@@ -50,7 +50,7 @@ typedef struct COR_FIELD_OFFSET {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Metadatenstrukturen](metadata-structures.md)
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: e3d167be9a4091ae57a3283424186142e90ca7a1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868550"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496398"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation-Methode
 Stellt Versionsinformationen über die Common Language Runtime (CLR) bereit, für die ein Profil erstellt wird.  
@@ -41,9 +41,9 @@ HRESULT GetRuntimeInformation(
                    WCHAR  szVersionString[]);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `pClrInstanceId`  
- vorgenommen Die repräsentative ID einer laufenden CLR-Instanz in einem Prozess. Dies ist das gleiche wie das `ClrInstanceID`, das vom Ereignis Ablauf Verfolgung für Windows (ETW)-Start Ereignis gemeldet wird.  
+ vorgenommen Die repräsentative ID einer laufenden CLR-Instanz in einem Prozess. Dies entspricht dem `ClrInstanceID` , das vom Ereignis Ablauf Verfolgungs für Windows (ETW)-Start Ereignis gemeldet wird.  
   
  `pRuntimeType`  
  vorgenommen Der Lauf Zeittyp. Dieser Parameter gibt `COR_PRF_DESKTOP_CLR` für die Desktop Version der CLR zurück, oder `COR_PRF_CORE_CLR` für die in Silverlight verwendete Core-Version der CLR.  
@@ -61,27 +61,27 @@ HRESULT GetRuntimeInformation(
  vorgenommen Die Versionsnummer der CLR, die einem Software Update zugeordnet ist.  
   
  `cchVersionString`  
- in Die Länge (in Zeichen) des Puffers, auf den `szVersionString` zeigt.  
+ in Die Länge (in Zeichen) des Puffers, `szVersionString` auf den verweist.  
   
  `pcchVersionString`  
- vorgenommen Die Länge `szVersionString`in Zeichen.  
+ vorgenommen Die Länge von in Zeichen `szVersionString` .  
   
  `szVersionString`  
  vorgenommen Die CLR-Versions Zeichenfolge.  
   
-## <a name="remarks"></a>Hinweise  
- Sie können für jeden Parameter NULL übergeben. `pcchVersionString` kann jedoch nur dann NULL sein, wenn `szVersionString` ebenfalls NULL ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Sie können für jeden Parameter NULL übergeben. Kann jedoch `pcchVersionString` nicht NULL sein, es sei denn, `szVersionString` ist ebenfalls NULL.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerInfo3-Schnittstelle](icorprofilerinfo3-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

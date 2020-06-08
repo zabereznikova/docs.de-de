@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-ms.openlocfilehash: fe27c0fca6d38b4cff6cac2b9778cf2be68903a3
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7b8f2845589a8372f62c95ef1a82eae3ed602c1f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500831"
 ---
 # <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC-Enumeration
 Enthält Konstantenwerte, die spezielle Bezeichner angeben.  
@@ -42,15 +42,15 @@ typedef enum {
 |`PROFILER_GLOBAL_CLASS`|Der Standardklassen Bezeichner für globale Konstanten, die keiner Klasse angehören.|  
 |`PROFILER_GLOBAL_MODULE`|Der Standardmodul Bezeichner für globale Objekte, die nicht zu einem Modul gehören.|  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Profilerstellungsenumerationen](profiling-enumerations.md)

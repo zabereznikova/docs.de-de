@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-ms.openlocfilehash: e96492270c403f93687245cee8b680dc16b3c787
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: fd3c941d89fbd93f30fc1af235f6310b23758973
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803126"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501455"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager-Schnittstelle
 Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, Synchronisierungs primitive durch Aufrufen des Hosts zu erstellen, statt die Win32-Synchronisierungs Funktionen zu verwenden.  
@@ -35,13 +35,13 @@ Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, S
 |[CreateMonitorEvent-Methode](ihostsyncmanager-createmonitorevent-method.md)|Erstellt ein überwachtes Ereignis Objekt für automatisches Zurücksetzen.|  
 |[CreateRWLockReaderEvent-Methode](ihostsyncmanager-createrwlockreaderevent-method.md)|Erstellt ein manuelles Zurücksetzungs Ereignis Objekt für die Implementierung einer Lesesperre.|  
 |[CreateRWLockWriterEvent-Methode](ihostsyncmanager-createrwlockwriterevent-method.md)|Erstellt ein Ereignis Objekt für die automatische zurück setzung für die Implementierung einer Writer-Sperre.|  
-|[CreateSemaphore-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createsemaphore-method.md)|Erstellt ein [IHostSemaphore](ihostsemaphore-interface.md) -Objekt für die CLR, das als Semaphor für warte Ereignisse verwendet werden soll.|  
-|[SetCLRSyncManager-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-setclrsyncmanager-method.md)|Legt die [ICLRSyncManager](iclrsyncmanager-interface.md) -Instanz fest, die der aktuellen Instanz zugeordnet werden soll `IHostSyncManager` .|  
+|[CreateSemaphore-Methode](ihostsyncmanager-createsemaphore-method.md)|Erstellt ein [IHostSemaphore](ihostsemaphore-interface.md) -Objekt für die CLR, das als Semaphor für warte Ereignisse verwendet werden soll.|  
+|[SetCLRSyncManager-Methode](ihostsyncmanager-setclrsyncmanager-method.md)|Legt die [ICLRSyncManager](iclrsyncmanager-interface.md) -Instanz fest, die der aktuellen Instanz zugeordnet werden soll `IHostSyncManager` .|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die CLR ermittelt die Host Implementierung von, `IHostSyncManager` indem die [IHostControl:: GetHostManager](ihostcontrol-gethostmanager-method.md) -Methode mit einem `IID` von IID_IHostSyncManager aufgerufen wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -50,7 +50,7 @@ Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, S
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRSyncManager-Schnittstelle](iclrsyncmanager-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

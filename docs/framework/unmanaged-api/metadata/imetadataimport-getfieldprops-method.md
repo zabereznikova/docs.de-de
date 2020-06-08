@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177236"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491243"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps-Methode
 Ruft Metadaten ab, die dem Feld zugeordnet sind, auf das durch das angegebene FieldDef-Token verwiesen wird.  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parameter  
  `mb`  
- [in] Ein FieldDef-Token, das das Feld darstellt, für das zugeordnete Metadaten abgerufen werden sollen.  
+ in Ein FieldDef-Token, das das Feld darstellt, für das zugeordnete Metadaten zu erhalten sind.  
   
  `pClass`  
- [out] Ein Zeiger auf ein TypeDef-Token, das den Typ der Klasse darstellt, zu der das Feld gehört.  
+ vorgenommen Ein Zeiger auf ein TypeDef-Token, das den Typ der Klasse darstellt, zu der das Feld gehört.  
   
  `szField`  
- [out] Der Name des Felds.  
+ vorgenommen Der Name des Felds.  
   
  `cchField`  
- [in] Die Größe des Puffers für *szField*in weiten Zeichen .  
+ in Die Größe des Puffers für *szField*in breit Zeichen.  
   
  `pchField`  
- [out] Die tatsächliche Größe des zurückgegebenen Puffers.  
+ vorgenommen Die tatsächliche Größe des zurückgegebenen Puffers.  
   
  `pdwAttr`  
- [out] Flags, die den Metadaten des Felds zugeordnet sind.  
+ vorgenommen Flags, die den Metadaten des Felds zugeordnet sind.  
   
  `ppvSigBlob`  
- [in] Ein Zeiger auf den binären Metadatenwert, der das Feld beschreibt.  
+ in Ein Zeiger auf den binären Metadatenwert, der das Feld beschreibt.  
   
  `pcbSigBlob`  
- [out] Die Größe in `ppvSigBlob`Bytes von .  
+ vorgenommen Die Größe von in Bytes `ppvSigBlob` .  
   
  `pdwCPlusTypeFlag`  
- [out] Ein Flag, das den Werttyp des Felds angibt.  
+ vorgenommen Ein Flag, das den Werttyp des Felds angibt.  
   
  `ppValue`  
- [out] Ein konstanter Wert für das Feld.  
+ vorgenommen Ein konstanter Wert für das Feld.  
   
  `pcchValue`  
- [out] Die Größe in `ppValue`Zeichen von , oder Null, wenn keine Zeichenfolge vorhanden ist.  
+ vorgenommen Die Größe in Zeichen von `ppValue` , oder 0 (null), wenn keine Zeichenfolge vorhanden ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

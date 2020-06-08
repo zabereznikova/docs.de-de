@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: 96cde35c7151bb7ce58715f2826feaa59b30efab
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d2b7e93866bf0aa79849925234a4d6e4cc9b5b52
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862307"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502820"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2-Methode
 Gibt bei Angabe einer Modul-ID den Dateinamen des Moduls, die ID der übergeordneten Assembly des Moduls und eine Bitmaske zurück, die die Eigenschaften des Moduls beschreibt.  
@@ -39,7 +39,7 @@ HRESULT GetModuleInfo2(
     [out] DWORD                 *pdwModuleFlags);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `moduleId`  
  [in] Die ID des Moduls, für das Informationen abgerufen werden sollen.  
   
@@ -61,25 +61,25 @@ HRESULT GetModuleInfo2(
  `pdwModuleFlags`  
  vorgenommen Eine Bitmaske von Werten aus der [COR_PRF_MODULE_FLAGS](cor-prf-module-flags-enumeration.md) Enumeration, die die Eigenschaften des Moduls angeben.  
   
-## <a name="remarks"></a>Hinweise  
- Bei dynamischen Modulen ist der `szName`-Parameter der Metadatenname des Moduls, und die Basisadresse ist 0 (null). Der Metadatenname ist der Wert in der Spalte "Name" der Modultabelle innerhalb der Metadaten. Dies wird auch als <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType>-Eigenschaft für verwalteten Code und als `szName`-Parameter der [IMetaDataImport:: getscoperequierequic-](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) Methode zu nicht verwaltetem metadatenclientcode verfügbar gemacht.  
+## <a name="remarks"></a>Bemerkungen  
+ Bei dynamischen Modulen ist der `szName`-Parameter der Metadatenname des Moduls, und die Basisadresse ist 0 (null). Der Metadatenname ist der Wert in der Spalte "Name" der Modultabelle innerhalb der Metadaten. Dies wird auch als <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> Eigenschaft für verwalteten Code und als `szName` Parameter der [IMetaDataImport:: getscoperequierequic-](../metadata/imetadataimport-getscopeprops-method.md) Methode zu nicht verwaltetem metadatenclientcode verfügbar gemacht.  
   
- Obwohl die `GetModuleInfo2`-Methode aufgerufen werden kann, sobald die Modul-ID vorhanden ist, ist die ID der übergeordneten Assembly erst verfügbar, wenn der Profiler den [ICorProfilerCallback:: ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md) -Rückruf empfängt.  
+ Obwohl die `GetModuleInfo2` -Methode aufgerufen werden kann, sobald die Modul-ID vorhanden ist, ist die ID der übergeordneten Assembly erst verfügbar, wenn der Profiler den [ICorProfilerCallback:: ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md) -Rückruf empfängt.  
   
  Nachdem `GetModuleInfo2` abgeschlossen ist, müssen Sie überprüfen, ob der `szName`-Puffer groß genug war, um den vollständigen Dateinamen des Moduls aufzunehmen. Vergleichen Sie zu diesem Zweck den Wert, auf den `pcchName` verweist, mit dem Wert des Parameters `cchName`. Wenn `pcchName` auf einen Wert verweist, der größer als `cchName` ist, weisen Sie einen größeren `szName`-Puffer zu, aktualisieren Sie `cchName` mit der neuen Größe, und rufen Sie `GetModuleInfo2` erneut auf.  
   
  Alternativ können Sie zuerst `GetModuleInfo2` mit einem `szName`-Puffer der Länge 0 (NULL) aufrufen, um die richtige Puffergröße zu ermitteln. Sie können die Puffergröße dann auf den Wert festlegen, der von `pcchName` zurückgegeben wurde, und `GetModuleInfo2` erneut aufrufen.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

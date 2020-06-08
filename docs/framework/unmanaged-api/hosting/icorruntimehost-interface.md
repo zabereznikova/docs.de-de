@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: ac4787379436faa568727329e7b012f83d0a53d5
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 4b8018bb84dea08987d91f351b1ab0d9f3b48c56
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760731"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503899"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost-Schnittstelle
 Stellt Methoden bereit, die es dem Host ermöglichen, die Common Language Runtime (CLR) explizit zu starten und zu starten, um Anwendungs Domänen zu erstellen und zu konfigurieren, um auf die Standard Domäne zuzugreifen und um alle Domänen aufzulisten, die im Prozess ausgeführt werden.  
@@ -34,7 +34,7 @@ Stellt Methoden bereit, die es dem Host ermöglichen, die Common Language Runtim
 |[CreateDomain-Methode](icorruntimehost-createdomain-method.md)|Erstellt eine Anwendungsdomäne. Der Aufrufer erhält einen Schnittstellen Zeiger vom Typ <xref:System._AppDomain> auf eine Instanz vom Typ <xref:System.AppDomain?displayProperty=nameWithType> .|  
 |[CreateDomainEx-Methode](icorruntimehost-createdomainex-method.md)|Erstellt eine Anwendungsdomäne. Diese Methode ermöglicht es dem Aufrufer, eine IAppDomainSetup-Instanz zu übergeben, um zusätzliche Funktionen der zurückgegebenen Instanz zu konfigurieren <xref:System._AppDomain> .|  
 |[CreateDomainSetup-Methode](icorruntimehost-createdomainsetup-method.md)|Ruft einen Schnittstellen Zeiger vom Typ `IAppDomainSetup` auf eine- <xref:System.AppDomainSetup> Instanz ab. `IAppDomainSetup`stellt Methoden bereit, um Aspekte einer Anwendungsdomäne vor der Erstellung zu konfigurieren.|  
-|[CreateEvidence-Methode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Ruft einen Schnittstellen Zeiger vom Typ ab <xref:System.Security.Principal.IIdentity> , der dem Host das Erstellen von Sicherheits beweisen ermöglicht, die an " [kreatedomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) " oder " [kreatedomainex](icorruntimehost-createdomainex-method.md)" übergeben werden.|  
+|[CreateEvidence-Methode](icorruntimehost-createevidence-method.md)|Ruft einen Schnittstellen Zeiger vom Typ ab <xref:System.Security.Principal.IIdentity> , der dem Host das Erstellen von Sicherheits beweisen ermöglicht, die an " [kreatedomain](icorruntimehost-createdomain-method.md) " oder " [kreatedomainex](icorruntimehost-createdomainex-method.md)" übergeben werden.|  
 |[CreateLogicalThreadState-Methode](icorruntimehost-createlogicalthreadstate-method.md)|Darf nicht verwendet werden.|  
 |[CurrentDomain-Methode](icorruntimehost-currentdomain-method.md)|Ruft einen Schnittstellen Zeiger vom Typ ab <xref:System._AppDomain> , der die Domäne darstellt, die für den aktuellen Thread geladen wurde.|  
 |[DeleteLogicalThreadState-Methode](icorruntimehost-deletelogicalthreadstate-method.md)|Darf nicht verwendet werden.|  
@@ -59,11 +59,11 @@ Stellt Methoden bereit, die es dem Host ermöglichen, die Common Language Runtim
   
  **.NET Framework Versionen:** 1,0, 1,1  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - <xref:System.AppDomain>
 - [Hosting](index.md)
 - [ICLRRuntimeHost-Schnittstelle](iclrruntimehost-interface.md)
 - [Laufzeithosts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [CorRuntimeHost-Co-Klasse](corruntimehost-coclass.md)

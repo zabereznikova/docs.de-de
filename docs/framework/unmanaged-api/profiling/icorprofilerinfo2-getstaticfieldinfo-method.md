@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-ms.openlocfilehash: d30d0bc262d76cf8980f90d8384173d89baf92d5
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: e1dd6addd9053ffb6cf2ce23408673d8fca17cb5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862684"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496840"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo-Methode
 Ruft einen Wert ab, der die Art der statischen angibt, die für das angegebene Feld gilt.  
@@ -34,7 +34,7 @@ HRESULT GetStaticFieldInfo (
     [out] COR_PRF_STATIC_TYPE  *pFieldInfo);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `classId`  
  in Die ID der Klasse, in der das statische Feld definiert ist.  
   
@@ -44,21 +44,21 @@ HRESULT GetStaticFieldInfo (
  `pFieldInfo`  
  vorgenommen Ein Zeiger auf einen Wert der [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) Enumeration, der angibt, ob das angegebene Feld statisch ist, und wenn dies der Fall ist, die Art der statischen, die für das Feld gilt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Informationen können verwendet werden, um zu bestimmen, welche Funktion aufgerufen werden soll, um die Adresse des statischen Felds abzurufen.  
   
  Der Profiler-Code sollte weiterhin die Metadaten für ein statisches Feld überprüfen, um sicherzustellen, dass es tatsächlich über eine Adresse verfügt. Statische Literale (d. h. Konstanten) sind nur in den Metadaten vorhanden und verfügen nicht über eine Adresse.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

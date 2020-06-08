@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: ca64d4f5932fb4a0c0486fee5ca1017a6d3adaf2
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 525fa2efa39909390d874fb97d9f11e647340ea9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868628"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496944"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress-Methode
 Ruft die Adresse des angegebenen statischen Felds der relativen virtuellen Adresse (RVA) ab.  
@@ -34,7 +34,7 @@ HRESULT GetRVAStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `classId`  
  in Die ID der Klasse, die das angeforderte RVA-statische Feld enthält.  
   
@@ -44,25 +44,25 @@ HRESULT GetRVAStaticAddress(
  `ppAddress`  
  vorgenommen Ein Zeiger auf die Adresse des Felds RVA-static.  
   
-## <a name="remarks"></a>Hinweise  
- Die `GetRVAStaticAddress`-Methode kann eine der folgenden Methoden zurückgeben:  
+## <a name="remarks"></a>Bemerkungen  
+ Die- `GetRVAStaticAddress` Methode kann eine der folgenden Methoden zurückgeben:  
   
 - Ein CORPROF_E_DATAINCOMPLETE HRESULT, wenn dem angegebenen statischen Feld keine Adresse im angegebenen Kontext zugewiesen wurde.  
   
 - Die Adressen von Objekten, die sich möglicherweise im Garbage Collection Heap befinden. Diese Adressen können nach Garbage Collection ungültig werden. Daher sollten Profiler nach Garbage Collection nicht davon ausgehen, dass Sie gültig sind.  
   
- Bevor der Klassenkonstruktor einer Klasse abgeschlossen ist, werden `GetRVAStaticAddress` für alle statischen Felder CORPROF_E_DATAINCOMPLETE zurückgegeben, obwohl einige der statischen Felder möglicherweise bereits initialisiert wurden und Garbage Collection Objekte als rooting verwendet werden.  
+ Bevor der Klassenkonstruktor einer Klasse abgeschlossen ist, `GetRVAStaticAddress` gibt CORPROF_E_DATAINCOMPLETE für alle statischen Felder zurück, obwohl einige der statischen Felder möglicherweise bereits initialisiert sind und Garbage Collection-Objekten als rooting verwendet werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)
