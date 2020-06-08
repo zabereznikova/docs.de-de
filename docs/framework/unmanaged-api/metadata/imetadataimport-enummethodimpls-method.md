@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175472"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492008"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls-Methode
 Zählt MethodBody- und MethodDeclaration-Token auf, die Methoden des angegebenen Typs darstellen.  
@@ -40,40 +40,40 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL für den ersten Aufruf dieser Methode sein.  
+ [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
  `td`  
- [in] Ein TypeDef-Token für den Typ, dessen Methodenimplementierungen aufzuzählen sind.  
+ in Ein TypeDef-Token für den Typ, dessen Methoden Implementierungen aufgelistet werden sollen.  
   
  `rMethodBody`  
- [out] Das Array, das die MethodBody-Token speichert.  
+ vorgenommen Das Array zum Speichern der MethodBody-Token.  
   
  `rMethodDecl`  
- [out] Das Array, das die MethodDeclaration-Token speichert.  
+ vorgenommen Das Array zum Speichern der MethodDeclaration-Token.  
   
  `cMax`  
- [in] Die maximale Größe `rMethodBody` `rMethodDecl` der und der Arrays.  
+ in Die maximale Größe des `rMethodBody` -Arrays und des- `rMethodDecl` Arrays.  
   
  `pcTokens`  
- [in] Die tatsächliche Anzahl der `rMethodBody` `rMethodDecl`in und zurückgegebenen Methoden.  
+ in Die tatsächliche Anzahl von Methoden, die in und zurückgegeben werden `rMethodBody` `rMethodDecl` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|Es sind keine Methodentoken zum Aufzählen vorhanden. In diesem `pcTokens` Fall ist Null.|  
+|`S_OK`|`EnumMethodImpls`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine Methoden Token zum Auflisten vorhanden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

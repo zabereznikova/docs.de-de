@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-ms.openlocfilehash: a6aff37a480460bfed7064d59b4c5276daf3207c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 1cf4d82200709971201da60d06d0cb929641a104
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212502"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501884"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken-Methode
 Ruft das Token für den Tabelleneintrag für dieses Modul ab.  
@@ -37,8 +37,8 @@ HRESULT GetToken(
  `pToken`  
  vorgenommen Ein Zeiger auf das `mdModule` Token, das auf die Metadaten des Moduls verweist.  
   
-## <a name="remarks"></a>Hinweise  
- Das Token kann an die Metadatenimport-Schnittstellen [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)und [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) übermittelt werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Das Token kann an die Metadatenimport-Schnittstellen [IMetaDataImport](../metadata/imetadataimport-interface.md), [IMetaDataImport2](../metadata/imetadataimport2-interface.md)und [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) übermittelt werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
@@ -49,6 +49,6 @@ HRESULT GetToken(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Metadaten](../metadata/index.md)

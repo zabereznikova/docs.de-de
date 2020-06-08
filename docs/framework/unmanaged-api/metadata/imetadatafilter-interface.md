@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: ec0856ef-8c56-40ba-bf60-86e0ce8b337f
 topic_type:
 - apiref
-ms.openlocfilehash: e8b15f478eb3b94b7cdcab3b69d54e7cc99be13b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 821936d20a421739e8eb3d5df228888df7f022e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440169"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503782"
 ---
 # <a name="imetadatafilter-interface"></a>IMetaDataFilter-Schnittstelle
 Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederkehrende Aktionen zu vermeiden, die bereits ausgeführt wurden.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[IsTokenMarked-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Ruft einen Wert ab, der angibt, ob das angegebene Metadatentoken verarbeitet wurde.|  
-|[MarkToken-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Legt einen Wert fest, der angibt, dass das angegebene Metadatentoken verarbeitet wurde.|  
-|[UnmarkAll-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Entfernt die Verarbeitungs Markierungen aus allen Token im aktuellen Metadatenbereich.|  
+|[IsTokenMarked-Methode](imetadatafilter-istokenmarked-method.md)|Ruft einen Wert ab, der angibt, ob das angegebene Metadatentoken verarbeitet wurde.|  
+|[MarkToken-Methode](imetadatafilter-marktoken-method.md)|Legt einen Wert fest, der angibt, dass das angegebene Metadatentoken verarbeitet wurde.|  
+|[UnmarkAll-Methode](imetadatafilter-unmarkall-method.md)|Entfernt die Verarbeitungs Markierungen aus allen Token im aktuellen Metadatenbereich.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Metadatenschnittstellen](metadata-interfaces.md)

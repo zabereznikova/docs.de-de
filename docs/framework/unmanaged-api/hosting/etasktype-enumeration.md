@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 435d23d4a56d6ea98e3d368f0a5aa37c73e31d96
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616163"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493317"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType-Enumeration
-Enthält Werte, die den Typ der Aufgabe angeben, die durch eine [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) -oder [IHostTask](ihosttask-interface.md) -Schnittstelle dargestellt wird.  
+Enthält Werte, die den Typ der Aufgabe angeben, die durch eine [ICLRTask](iclrtask-interface.md) -oder [IHostTask](ihosttask-interface.md) -Schnittstelle dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,7 +58,7 @@ typedef enum ETaskType {
 |`TT_UNKNOWN`|Der Task ist unbekannt.|  
 |`TT_USER`|Die-Schnittstelle stellt eine Benutzer Aufgabe dar.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -67,6 +67,6 @@ typedef enum ETaskType {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Hosten von Enumerationen](hosting-enumerations.md)

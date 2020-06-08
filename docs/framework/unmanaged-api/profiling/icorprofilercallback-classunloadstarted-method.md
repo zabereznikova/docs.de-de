@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-ms.openlocfilehash: 75fb92be078c40f49ddcdc6662535b2a0be7a6ad
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 86402abca5386f34256f1f44f674f1e1898ad5fd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866558"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500350"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted-Methode
 Benachrichtigt den Profiler, dass eine Klasse entladen wird.  
@@ -32,25 +32,25 @@ HRESULT ClassUnloadStarted(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 - `classId`
 
   \[in] identifiziert die Klasse, die entladen wird.
 
-## <a name="remarks"></a>Hinweise  
- Der Wert `classId` ist für eine Informationsanforderung nicht gültig, nachdem die `ClassUnloadStarted`-Methode zurückgegeben wurde – dies ist die letzte Möglichkeit des Profilers, Informationen zu dieser Klasse abzurufen.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Wert von `classId` ist für eine Informationsanforderung nach dem `ClassUnloadStarted` zurückkehren der Methode ungültig – Dies ist die letzte Möglichkeit des Profilers, Informationen zu dieser Klasse abzurufen.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [ClassUnloadFinished-Methode](icorprofilercallback-classunloadfinished-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 21ce66722e069573b651ada950b64ef6d97220fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431438"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501143"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString-Methode
 
@@ -42,22 +42,22 @@ HRESULT GetUserString (
 in Der Indexwert, aus dem die hart codierte Zeichenfolge abgerufen wird.
 
 `pcbData`\
-vorgenommen Ein Zeiger auf die Größe der `ppData`.
+vorgenommen Ein Zeiger auf die Größe von `ppData` .
 
 `ppData`\
 vorgenommen Ein Zeiger auf einen Zeiger auf die zurückgegebene Zeichenfolge.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** Cor. h
 
 **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [IMetaDataTables-Schnittstelle](imetadatatables-interface.md)
 - [IMetaDataTables2-Schnittstelle](imetadatatables2-interface.md)

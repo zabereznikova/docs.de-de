@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-ms.openlocfilehash: 2939f13933c4681e7e2220e5290e019e10c2844e
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: deaebbce3b9b8a26bf9668b826a6818dba94dcc3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841918"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501377"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime-Methode
 Benachrichtigt den Host, dass die derzeit ausgeführte Aufgabe im Begriff ist, die Common Language Runtime (CLR) zu verlassen und nicht verwalteten Code einzugeben.  
@@ -52,8 +52,8 @@ HRESULT LeaveRuntime (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |E_OUTOFMEMORY|Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Zuordnung abzuschließen.|  
   
-## <a name="remarks"></a>Hinweise  
- Die Aufrufe von Sequenzen in und aus nicht verwaltetem Code können eingebettet werden. In der folgenden Liste wird z. b. eine hypothetische Situation beschrieben, in der die Sequenz von Aufrufen von `LeaveRuntime` [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)und `IHostTaskManager::EnterRuntime` der Host das Identifizieren der untergeordneten Ebenen ermöglicht.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Aufrufe von Sequenzen in und aus nicht verwaltetem Code können eingebettet werden. In der folgenden Liste wird z. b. eine hypothetische Situation beschrieben, in der die Sequenz von Aufrufen von `LeaveRuntime` [IHostTaskManager:: ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)und `IHostTaskManager::EnterRuntime` der Host das Identifizieren der untergeordneten Ebenen ermöglicht.  
   
 |Aktion|Entsprechender Methodenaufrufe|  
 |------------|-------------------------------|  
@@ -64,7 +64,7 @@ HRESULT LeaveRuntime (
 |Die c#-Funktion gibt die Ausführung an die erste nicht verwaltete Funktion zurück.|`IHostTaskManager::ReverseLeaveRuntime`|  
 |Die erste nicht verwaltete Funktion gibt die Ausführung an das Visual Basic Programm zurück.|`IHostTaskManager::EnterRuntime`|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -73,7 +73,7 @@ HRESULT LeaveRuntime (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 021ef8de602d6dd928f49e69e36f8d4a61425745
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 12a32b5d2f0647ea2d9b696d08d6644e30be0c65
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008364"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501364"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope-Methode
 Erstellt einen neuen Bereich im Arbeitsspeicher, in dem Sie neue Metadaten erstellen können.  
@@ -51,10 +51,10 @@ HRESULT DefineScope (
  `ppIUnk`  
  vorgenommen Der Zeiger auf die zurückgegebene Schnittstelle.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  `DefineScope`erstellt eine Gruppe von in-Memory-Metadatentabellen, generiert eine eindeutige GUID (Modul Versions Bezeichner oder MVID) für die Metadaten und erstellt einen Eintrag in der Modul Tabelle für die ausgegebene Kompilierungseinheit.  
   
- Sie können Attribute an den Metadatenbereich als Ganzes anfügen, indem Sie je nach Bedarf die [IMetaDataEmit:: setmodulerequior](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) [IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md) -Methode verwenden.  
+ Sie können Attribute an den Metadatenbereich als Ganzes anfügen, indem Sie je nach Bedarf die [IMetaDataEmit:: setmodulerequior](imetadataemit-setmoduleprops-method.md) [IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md) -Methode verwenden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
@@ -65,7 +65,7 @@ HRESULT DefineScope (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [IMetaDataDispenser-Schnittstelle](imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx-Schnittstelle](imetadatadispenserex-interface.md)

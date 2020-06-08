@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: 0020b62c-ea88-40c7-a9ee-16b064f81624
 topic_type:
 - apiref
-ms.openlocfilehash: 44ecb73375f8a408fb0a38c3a2e2913f92ec4ca4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 46370da4e61dc90f2386170745da4f95ac7de63b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441622"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492771"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError-Schnittstelle
 Stellt einen Rückrufmechanismus zum Melden von Fehlern während der Metadatenzusammenführung bereit.  
   
 > [!NOTE]
-> Die `IMetaDataError`-Schnittstelle muss vom Client implementiert werden.  
+> Die `IMetaDataError` Schnittstelle muss vom Client implementiert werden.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[OnError-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Gibt Benachrichtigungen zu Fehlern, die während der Zusammenführung der Metadaten auftreten.|  
+|[OnError-Methode](imetadataerror-onerror-method.md)|Gibt Benachrichtigungen zu Fehlern, die während der Zusammenführung der Metadaten auftreten.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Metadatenschnittstellen](metadata-interfaces.md)

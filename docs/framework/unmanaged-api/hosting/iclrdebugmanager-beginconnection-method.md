@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdd98146-ff4d-4150-a264-a4c1a32d31f3
 topic_type:
 - apiref
-ms.openlocfilehash: fc25e250938d7549c7a9693bee937d4756268b93
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 98e4efe149cab1b822c9993e4df28806f773c61d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615812"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504250"
 ---
 # <a name="iclrdebugmanagerbeginconnection-method"></a>ICLRDebugManager::BeginConnection-Methode
 Stellt eine neue Verbindung zwischen dem Host und dem Debugger her, um eine Liste mit Aufgaben einem Bezeichner und einem anzeigen Amen zuzuordnen.  
@@ -54,13 +54,13 @@ HRESULT BeginConnection (
 |E_INVALIDARG|`dwConnectionId`war NULL, oder `BeginConnection` wurde bereits mit diesem `dwConnectionId` Wert aufgerufen, oder `szConnectionName` war NULL.|  
 |E_OUTOFMEMORY|Es konnte nicht genügend Arbeitsspeicher zugeordnet werden, um die Liste der Aufgaben zu speichern, die dieser Verbindung zugeordnet sind.|  
   
-## <a name="remarks"></a>Hinweise  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) bietet drei Methoden, `BeginConnection` , [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)und [EndConnection](iclrdebugmanager-endconnection-method.md), um Aufgabenlisten mit bezeichnerwerten und anzeigen Amen zu verknüpfen.  
+## <a name="remarks"></a>Bemerkungen  
+ [ICLRDebugManager](iclrdebugmanager-interface.md) bietet drei Methoden, `BeginConnection` , [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)und [EndConnection](iclrdebugmanager-endconnection-method.md), um Aufgabenlisten mit bezeichnerwerten und anzeigen Amen zu verknüpfen.  
   
 > [!IMPORTANT]
 > Diese drei Methoden müssen für jeden Satz von Aufgaben in einer bestimmten Reihenfolge aufgerufen werden. `BeginConnection`wird zuerst aufgerufen, um eine neue Verbindung herzustellen. `SetConnectionTasks`wird als nächstes aufgerufen, um die Gruppe von Aufgaben bereitzustellen, die dieser Verbindung zugeordnet werden sollen. `EndConnection`wird zuletzt aufgerufen, um die Zuordnung zwischen der Aufgabenliste und dem Bezeichner und dem anzeigen Amen zu entfernen. Allerdings können Aufrufe für verschiedene Verbindungen in eine andere Liste eingefügt werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -69,7 +69,7 @@ HRESULT BeginConnection (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRControl-Schnittstelle](iclrcontrol-interface.md)
 - [ICLRDebugManager-Schnittstelle](iclrdebugmanager-interface.md)

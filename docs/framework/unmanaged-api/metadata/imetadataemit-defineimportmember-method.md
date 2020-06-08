@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: ec8a24251ac4f0701b1adab19829078270229ced
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2facc63023a20dd6aaac64d7d036324c31658bc8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004594"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501312"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember-Methode
 Erstellt einen Verweis auf den angegebenen Member eines Typs oder Moduls, der außerhalb des aktuellen Bereichs definiert ist, und definiert ein Token für diesen Verweis.  
@@ -65,12 +65,12 @@ HRESULT DefineImportMember (
  `pmr`  
  vorgenommen Das `mdMemberRef` Token, das im aktuellen Gültigkeitsbereich für den Element Verweis definiert wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die `DefineImportMember` -Methode sucht nach dem durch angegebenen Member, der `mbMember` in einem anderen Bereich definiert ist, der durch angegeben wird, `pImport` und ruft seine Eigenschaften ab. Diese Informationen werden verwendet, um die [IMetaDataEmit::D efinemembership Ref](imetadataemit-definememberref-method.md) -Methode im aktuellen Bereich aufzurufen, um den Element Verweis zu erstellen.  
   
  Im Allgemeinen müssen Sie vor der Verwendung der `DefineImportMember` -Methode im aktuellen Bereich einen Typverweis oder Modul Verweis für die übergeordnete Klasse, Schnittstelle oder das Modul des Zielmembers erstellen. Das Metadatentoken für diesen Verweis wird dann im-Argument weitergegeben `tkParent` . Sie müssen keinen Verweis auf das übergeordnete Element des Zielmembers erstellen, wenn es später durch den Compiler oder den Linker aufgelöst wird. Zusammenfassung:  
   
-- Wenn das Zielmember ein Feld oder eine Methode ist, verwenden Sie entweder die [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) -Methode oder die [IMetaDataEmit::D efineimporttype](imetadataemit-defineimporttype-method.md) -Methode, um im aktuellen Bereich einen Typverweis für die übergeordnete Klasse oder übergeordnete Schnittstelle des Elements zu erstellen.  
+- Wenn das Zielmember ein Feld oder eine Methode ist, verwenden Sie entweder die [IMetaDataEmit::D efinetyperefbyname](imetadataemit-definetyperefbyname-method.md) -Methode oder die [IMetaDataEmit::D efineimporttype](imetadataemit-defineimporttype-method.md) -Methode, um im aktuellen Bereich einen Typverweis für die übergeordnete Klasse oder übergeordnete Schnittstelle des Elements zu erstellen.  
   
 - Wenn das Zielmember eine globale Variable oder globale Funktion (d. h. kein Member einer Klasse oder Schnittstelle) ist, verwenden Sie die [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md) -Methode, um einen Modul Verweis im aktuellen Bereich für das übergeordnete Modul des Elements zu erstellen.  
   
@@ -85,7 +85,7 @@ HRESULT DefineImportMember (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

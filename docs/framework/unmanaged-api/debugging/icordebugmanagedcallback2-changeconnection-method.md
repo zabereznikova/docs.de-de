@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 2c6ed14f9238d653b15d26dec9d954c05238817c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7d209b7c319baff912b3462f8ed5f3f30f127750
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213451"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501910"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection-Methode
 Benachrichtigt den Debugger, dass sich der Satz der Tasks, die der angegebenen Verbindung zugeordnet sind, geändert hat.  
@@ -41,12 +41,12 @@ HRESULT ChangeConnection (
  `dwConnectionId`  
  in Die ID der Verbindung, die geändert wurde.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein `ChangeConnection` Rückruf wird in einem der folgenden Fälle ausgelöst:  
   
 - Wenn ein Debugger an einen Prozess angefügt wird, der Verbindungen enthält. In diesem Fall generiert und versendet die Common Language Runtime ein [ICorDebugManagedCallback2:: forateconnetction](icordebugmanagedcallback2-createconnection-method.md) -Ereignis und ein- `ChangeConnection` Ereignis für jede Verbindung im Prozess. Ein `ChangeConnection` -Ereignis wird für jede vorhandene Verbindung generiert, unabhängig davon, ob der Satz von Tasks der Verbindung seit seiner Erstellung geändert wurde.  
   
-- Wenn ein Host [ICLRDebugManager:: SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in der [Hosting-API](../hosting/index.md)aufruft.  
+- Wenn ein Host [ICLRDebugManager:: SetConnectionTasks](../hosting/iclrdebugmanager-setconnectiontasks-method.md) in der [Hosting-API](../hosting/index.md)aufruft.  
   
  Der Debugger sollte alle Threads im Prozess Scannen, um die neuen Änderungen zu überprüfen.  
   
@@ -59,7 +59,7 @@ HRESULT ChangeConnection (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorDebugManagedCallback2-Schnittstelle](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 2df53ba53c64e042abc54a1d2ac043d301acdde9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f6fbc570e7ea85aca5b365611d58a1700fb27cd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177174"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490717"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs-Methode
-Ruft einen Enumerator für ein Array von MethodSpec-Token ab, die dem angegebenen MethodDef- oder MemberRef-Token zugeordnet sind.  
+Ruft einen Enumerator für ein Array von MethodSpec-Token ab, das mit dem angegebenen MethodDef-oder mitgliedsverweistoken verknüpft ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,37 +39,37 @@ HRESULT EnumMethodSpecs (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator für `rMethodSpecs`.  
+ [in, out] Ein Zeiger auf den Enumerator für `rMethodSpecs` .  
   
  `tk`  
- [in] Das MemberRef- oder MethodDef-Token, das die Methode darstellt, deren MethodSpec-Token aufgezählt werden sollen. Wenn der `tk` Wert von 0 (Null) ist, werden alle MethodSpec-Token im Bereich aufgezählt.  
+ in Das mitgliedsverweis-oder MethodDef-Token, das die Methode darstellt, deren MethodSpec-Token aufgelistet werden sollen. Wenn der Wert von `tk` 0 (null) ist, werden alle MethodSpec-Token im Bereich aufgelistet.  
   
  `rMethodSpecs`  
- [out] Das Array von MethodSpec-Token, die aufgezählt werden sollen.  
+ vorgenommen Das Array von MethodSpec-Token, das aufgelistet werden soll.  
   
  `cMax`  
- [in] Die angeforderte maximale Anzahl von `rMethodSpecs`Token, die in platziert werden sollen.  
+ in Die angeforderte maximale Anzahl von Token, die in platziert werden sollen `rMethodSpecs` .  
   
  `pcMethodSpecs`  
- [out] Die zurückgegebene Anzahl von `rMethodSpecs`Token, die in platziert wurden.  
+ vorgenommen Die zurückgegebene Anzahl von Token, die in platziert werden `rMethodSpecs` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|`phEnum`hat keine Elementelemente. In diesem `pcMethodSpecs` Fall ist auf 0 (Null) gesetzt.|  
+|`S_OK`|`EnumMethodSpecs`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|`phEnum`hat keine Member-Elemente. In diesem Fall `pcMethodSpecs` wird auf 0 (null) festgelegt.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 05902436c09d082f90af01f48c7e918650317ce7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2693a94f02214df6d7265b26e3d70d91adcf8a7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009417"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503834"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName-Methode
 Ruft ein Array von Assemblys mit dem angegebenen `szAssemblyName` Parameter ab und verwendet dabei die Standardregeln, die vom Common Language Runtime (CLR) zum Auflösen von Verweisen verwendet werden.  
@@ -64,10 +64,10 @@ HRESULT FindAssembliesByName (
 |`S_OK`|`FindAssembliesByName`wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Assemblys vorhanden.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Bei Angabe eines Assemblynamens findet die- `FindAssembliesByName` Methode die Assembly, indem Sie den Standardregeln zum Auflösen von Assemblyverweisen folgt. (Weitere Informationen finden Sie unter [so](../../deployment/how-the-runtime-locates-assemblies.md)sucht Common Language Runtime nach Assemblys.) ermöglicht dem Aufrufer, `FindAssembliesByName` verschiedene Aspekte des Assemblyresolverkontexts zu konfigurieren, z. b. Anwendungs Basis und privater Suchpfad.  
   
- Die- `FindAssembliesByName` Methode erfordert, dass die CLR im Prozess initialisiert wird, um die Assemblyauflösungs-Logik aufzurufen. Daher müssen Sie vor dem Aufrufen von [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (Übergabe COINITEE_DEFAULT) aufrufen `FindAssembliesByName` und dann mit einem Aufruf von " [zählinitializecor](../hosting/couninitializecor-function.md)" folgen.  
+ Die- `FindAssembliesByName` Methode erfordert, dass die CLR im Prozess initialisiert wird, um die Assemblyauflösungs-Logik aufzurufen. Daher müssen Sie vor dem Aufrufen von [CoInitializeEE](../hosting/coinitializeee-function.md) (Übergabe COINITEE_DEFAULT) aufrufen `FindAssembliesByName` und dann mit einem Aufruf von " [zählinitializecor](../hosting/couninitializecor-function.md)" folgen.  
   
  `FindAssembliesByName`Gibt einen [IMetaDataImport](imetadataimport-interface.md) -Zeiger auf die Datei zurück, die das Assemblymanifest für den weiter gegebenen Assemblynamen enthält. Wenn der angegebene Assemblyname nicht vollständig angegeben ist (z. b. wenn er keine Version enthält), werden möglicherweise mehrere Assemblys zurückgegeben.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: 20c7a90f27defa18a5ef311d1f3a549b81fc5c40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc3bc5140da0634b5172f6253de3de37bff487f1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492033"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers-Methode
 Zählt MemberDef-Token auf, die Elemente des angegebenen Typs darstellen.  
@@ -42,39 +42,39 @@ HRESULT EnumMembers (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `cl`  
- [in] Ein TypeDef-Token, das den Typ darstellt, dessen Member aufgezählt werden sollen.  
+ in Ein TypeDef-Token, das den Typ darstellt, dessen Member aufgelistet werden sollen.  
   
  `rMembers`  
- [out] Das Array, das zum Besitz der MemberDef-Token verwendet wird.  
+ vorgenommen Das Array, das zum Speichern der mitgliedtendef-Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rMembers`-Arrays.  
   
  `pcTokens`  
- [out] Die tatsächliche Anzahl der MemberDef-Token, die in `rMembers`zurückgegeben wurden.  
+ vorgenommen Die tatsächliche Anzahl der in zurückgegebenen mitgliedsdef-Token `rMembers` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|Es sind keine MemberDef-Token zum Aufzählen vorhanden. In diesem `pcTokens` Fall ist Null.|  
+|`S_OK`|`EnumMembers`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine mitgliedungstokentoken zum Auflisten vorhanden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Beim Aufzählen von Auflistungen von `EnumMembers` Membern für eine Klasse werden nur Member zurückgegeben (Felder und Methoden, jedoch **keine** Eigenschaften oder Ereignisse), die direkt für die Klasse definiert sind. Es werden keine Member zurückgegeben, die von der Klasse geerbt werden, auch wenn die Klasse eine Implementierung für diese geerbten Member bereitstellt. Um geerbte Member aufzuzählen, muss der Aufrufer die Vererbungskette explizit aufrufen. Beachten Sie, dass die Regeln für die Vererbungskette je nach Sprache oder Compiler, der die ursprünglichen Metadaten ausgegeben hat, variieren können.
+ Beim Auflisten von Auflistungen von Membern für eine Klasse `EnumMembers` gibt nur Member (Felder und Methoden, aber **keine** Eigenschaften oder Ereignisse) zurück, die direkt in der Klasse definiert sind. Er gibt keine Member zurück, die die Klasse erbt, selbst wenn die Klasse eine Implementierung für diese geerbten Member bereitstellt. Um geerbte Member aufzuzählen, muss der Aufrufer die Vererbungs Kette explizit durchlaufen. Beachten Sie, dass die Regeln für die Vererbungs Kette abhängig von der Sprache oder dem Compiler variieren können, die die ursprünglichen Metadaten ausgegeben haben.
 
- Eigenschaften und Ereignisse werden nicht `EnumMembers`von aufgezählt. Um diese aufzuzählen, verwenden Sie [EnumProperties](imetadataimport-enumproperties-method.md) oder [EnumEvents](imetadataimport-enumevents-method.md).
+ Eigenschaften und Ereignisse werden nicht durch aufgezählt `EnumMembers` . Um diese aufzulisten, verwenden Sie [EnumProperties](imetadataimport-enumproperties-method.md) oder [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

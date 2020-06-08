@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-ms.openlocfilehash: ff9827174e43fd62f3a995e9f477c6fff66b227a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c991c0af845bc6825db6b3bf258fe0809d5db804
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449956"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503695"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods-Methode
 Zählt MemberDef-Token auf, die die nicht aufgelösten Methoden im aktuellen Metadatenbereich darstellen.  
@@ -47,30 +47,30 @@ HRESULT EnumUnresolvedMethods (
  [in] Die maximale Größe des `rMethods`-Arrays.  
   
  `pcTokens`  
- vorgenommen Die Anzahl der in `rMethods`zurückgegebenen mitgliedungstokentoken.  
+ vorgenommen Die Anzahl der in zurückgegebenen mitgliedungstokentoken `rMethods` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` gleich 0 (null) ist.|  
+|`S_OK`|`EnumUnresolvedMethods`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` ist 0 (null).|  
   
-## <a name="remarks"></a>Hinweise  
- Eine nicht aufgelöste Methode ist eine Methode, die deklariert, aber nicht implementiert wurde. Eine-Methode ist in der-Enumeration enthalten, wenn die-Methode als `miForwardRef` gekennzeichnet ist und entweder `mdPinvokeImpl` oder `miRuntime` auf 0 (null) festgelegt ist. Anders ausgedrückt: eine nicht aufgelöste Methode ist eine Klassenmethode, die als `miForwardRef` gekennzeichnet ist, aber nicht in nicht verwaltetem Code (über PInvoke erreicht) implementiert ist und nicht intern von der Laufzeit selbst implementiert wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Eine nicht aufgelöste Methode ist eine Methode, die deklariert, aber nicht implementiert wurde. Eine-Methode ist in der-Enumeration enthalten, wenn die-Methode gekennzeichnet ist `miForwardRef` und entweder `mdPinvokeImpl` oder `miRuntime` auf 0 (null) festgelegt ist. Anders ausgedrückt: eine nicht aufgelöste Methode ist eine Klassenmethode, die zwar markiert ist, `miForwardRef` aber nicht in nicht verwaltetem Code implementiert ist (über PInvoke erreicht) und intern von der Laufzeit selbst implementiert wird.  
   
  Die-Enumeration schließt alle Methoden aus, die entweder im Modul Bereich (Globals) oder in Schnittstellen oder abstrakten Klassen definiert sind.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

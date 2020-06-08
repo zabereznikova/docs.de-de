@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804487"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501507"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager-Schnittstelle
 Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, virtuelle Speicheranforderungen über den Host zu erstellen, statt die standardmäßigen Win32-Funktionen für den virtuellen Arbeitsspeicher zu verwenden.  
@@ -29,7 +29,7 @@ Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, v
 |Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[AcquiredVirtualAddressSpace-Methode](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Benachrichtigt den Host, dass die Common Language Runtime (CLR) den angegebenen Arbeitsspeicher vom Betriebssystem abgerufen hat.|  
-|[CreateMAlloc-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|Ruft einen Schnittstellen Zeiger auf eine [IHostMAlloc](ihostmalloc-interface.md) -Instanz ab, die verwendet wird, um Speicher Belegungen von einem Heap anzufordern, der vom Host erstellt wurde.|  
+|[CreateMAlloc-Methode](ihostmemorymanager-createmalloc-method.md)|Ruft einen Schnittstellen Zeiger auf eine [IHostMAlloc](ihostmalloc-interface.md) -Instanz ab, die verwendet wird, um Speicher Belegungen von einem Heap anzufordern, der vom Host erstellt wurde.|  
 |[GetMemoryLoad-Methode](ihostmemorymanager-getmemoryload-method.md)|Ruft die Menge an physischem Arbeitsspeicher ab, die derzeit verwendet wird, wie vom Host gemeldet.|  
 |[NeedsVirtualAddressSpace-Methode](ihostmemorymanager-needsvirtualaddressspace-method.md)|Benachrichtigt den Host, dass die CLR versucht, den angegebenen Arbeitsspeicher zu verwenden.|  
 |[RegisterMemoryNotificationCallback-Methode](ihostmemorymanager-registermemorynotificationcallback-method.md)|Registriert einen Zeiger auf eine Rückruffunktion, die der Host aufruft, um die CLR über die aktuelle Arbeitsspeicher Auslastung auf dem Computer zu benachrichtigen.|  
@@ -39,10 +39,10 @@ Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, v
 |[VirtualProtect-Methode](ihostmemorymanager-virtualprotect-method.md)|Dient als logischer Wrapper für die entsprechende Win32-Funktion, mit der der Schutz für einen Bereich von zugegebenen Seiten im virtuellen Adressraum des aufrufenden Prozesses geändert wird.|  
 |[VirtualQuery-Methode](ihostmemorymanager-virtualquery-method.md)|Dient als logischer Wrapper für die entsprechende Win32-Funktion, die Informationen zu einem Bereich von Seiten im virtuellen Adressraum des aufrufenden Prozesses abruft.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  `IHostMemoryManager`stellt außerdem Methoden bereit, mit denen die CLR einen Zeiger abrufen kann, über den Arbeitsspeicher Anforderungen für den Heap und die Arbeitsspeicher Auslastung im Prozess, wie vom Host gemeldet, abgerufen werden können.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -51,7 +51,7 @@ Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, v
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [IHostMalloc-Schnittstelle](ihostmalloc-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

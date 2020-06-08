@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-ms.openlocfilehash: 22c0a317777a12294ba7a90f7af1ceeca3ad0a47
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0a283c837e23ab1aafd3545df1dfe8a267de0557
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009261"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501286"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize-Methode
 Ruft die geschätzte binäre Größe der Assembly und ihrer Metadaten im aktuellen Bereich ab.  
@@ -47,10 +47,10 @@ HRESULT GetSaveSize (
  `pdwSaveSize`  
  vorgenommen Ein Zeiger auf die Größe, die zum Speichern der Datei erforderlich ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  `GetSaveSize`berechnet den erforderlichen Speicherplatz in Bytes, um die Assembly und alle zugehörigen Metadaten im aktuellen Bereich zu speichern. (Ein Aufrufe der [IMetaDataEmit:: savedestream](imetadataemit-savetostream-method.md) -Methode würde diese Anzahl von Bytes ausgeben.)  
   
- Wenn der Aufrufer die [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) -Schnittstelle (über [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) oder [IMetaDataEmit:: Merge](imetadataemit-merge-method.md)) implementiert, führt `GetSaveSize` zwei durch übergebenen Metadaten aus, um die Metadaten zu optimieren und zu komprimieren. Andernfalls werden keine Optimierungen ausgeführt.  
+ Wenn der Aufrufer die [IMapToken](imaptoken-interface.md) -Schnittstelle (über [IMetaDataEmit:: SetHandler](imetadataemit-sethandler-method.md) oder [IMetaDataEmit:: Merge](imetadataemit-merge-method.md)) implementiert, führt `GetSaveSize` zwei durch übergebenen Metadaten aus, um die Metadaten zu optimieren und zu komprimieren. Andernfalls werden keine Optimierungen ausgeführt.  
   
  Wenn die Optimierung durchgeführt wird, sortiert der erste Durchlauf einfach die Metadatenstrukturen, um die Leistung von Import Zeit suchen zu optimieren. Dieser Schritt führt in der Regel dazu, dass Datensätze verschoben werden, mit dem Nebeneffekt, dass Token, die vom Tool für zukünftige Verweise aufbewahrt werden, ungültig werden. Die Metadaten informieren den Aufrufer über diese Tokenänderungen erst nach dem zweiten Durchlauf. Im zweiten Durchlauf werden verschiedene Optimierungen ausgeführt, mit denen die Gesamtgröße der Metadaten reduziert werden soll, z. b. die Optimierung (frühe Bindung) `mdTypeRef` und `mdMemberRef` Token, wenn der Verweis auf einen Typ oder Member fest steht, der im aktuellen Metadatenbereich deklariert ist. In diesem Durchlauf erfolgt eine weitere Runde der Tokenzuordnung. Nach diesem Durchlauf benachrichtigt die metadatenengine den Aufrufer über seine- `IMapToken` Schnittstelle über geänderte Tokenwerte.  
   
@@ -63,7 +63,7 @@ HRESULT GetSaveSize (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

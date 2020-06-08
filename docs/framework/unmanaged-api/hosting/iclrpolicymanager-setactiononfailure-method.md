@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: fb2ecc80f272a3fc9b63b20c5956e7a28f117784
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 727cd82226b9a59c4879ffea5e87f93dd5fe38c9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703460"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504107"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure-Methode
 Gibt die Richtlinien Aktion an, die vom Common Language Runtime (CLR) ausgeführt werden soll, wenn der angegebene Fehler auftritt.  
@@ -53,8 +53,8 @@ HRESULT SetActionOnFailure (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |E_INVALIDARG|Eine Richtlinien Aktion kann für den angegebenen Vorgang nicht festgelegt werden, oder für den Vorgang wurde eine ungültige Richtlinien Aktion angegeben.|  
   
-## <a name="remarks"></a>Hinweise  
- Standardmäßig löst die CLR eine Ausnahme aus, wenn Sie eine Ressource, z. b. Arbeitsspeicher, nicht zuordnen kann. `SetActionOnFailure`ermöglicht dem Host, dieses Verhalten durch Angeben der Richtlinien Aktion, die bei einem Fehler ausgeführt werden soll, zu überschreiben. In der folgenden Tabelle werden die Kombinationen der unterstützten [EClrFailure](eclrfailure-enumeration.md) -und [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) -Werte angezeigt. (Das FAIL_ Präfix wird in [EClrFailure](eclrfailure-enumeration.md) -Werten weggelassen.)  
+## <a name="remarks"></a>Bemerkungen  
+ Standardmäßig löst die CLR eine Ausnahme aus, wenn Sie eine Ressource, z. b. Arbeitsspeicher, nicht zuordnen kann. `SetActionOnFailure`ermöglicht dem Host, dieses Verhalten durch Angeben der Richtlinien Aktion, die bei einem Fehler ausgeführt werden soll, zu überschreiben. In der folgenden Tabelle werden die Kombinationen der unterstützten [EClrFailure](eclrfailure-enumeration.md) -und [EPolicyAction](epolicyaction-enumeration.md) -Werte angezeigt. (Das FAIL_ Präfix wird in [EClrFailure](eclrfailure-enumeration.md) -Werten weggelassen.)  
   
 ||Nicht criticalresource|Criticalresource|Fatalruntime|Waisen-edlock|StackOverflow|Zugriffsverletzung|Code Contract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
@@ -69,7 +69,7 @@ HRESULT SetActionOnFailure (
 |`eRudeExitProcess`|X|X|X|X|X|–||  
 |`eDisableRuntime`|X|X|X|X|X|–||  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -78,7 +78,7 @@ HRESULT SetActionOnFailure (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [EClrFailure-Enumeration](eclrfailure-enumeration.md)
 - [EPolicyAction-Enumeration](epolicyaction-enumeration.md)

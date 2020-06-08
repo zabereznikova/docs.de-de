@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84cf5ac9eab5749d3bdc63670fe5c31bfb62abcd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445223"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490406"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString-Methode
 Ruft die Versionsnummer der Laufzeit ab, die zum Erstellen der Assembly verwendet wurde.  
@@ -40,24 +40,24 @@ HRESULT GetVersionString (
  vorgenommen Ein Array zum Speichern der Zeichenfolge, die die Version angibt.  
   
  `ccBufSize`  
- in Die Größe des `pwzBuf` Arrays in breit Zeichen.  
+ in Die Größe des Arrays (in breit Zeichen) `pwzBuf` .  
   
  `pccBufSize`  
- vorgenommen Die Anzahl der breit Zeichen (einschließlich eines NULL-Terminator), die im `pwzBuf` Array zurückgegeben werden.  
+ vorgenommen Die Anzahl der breit Zeichen (einschließlich eines NULL-Terminator), die im Array zurückgegeben werden `pwzBuf` .  
   
-## <a name="remarks"></a>Hinweise  
- Die `GetVersionString`-Methode ruft die integrierte Version des aktuellen Metadatenbereichs ab. Wenn der Bereich noch nicht gespeichert wurde, verfügt er nicht über eine integrierte Version, und es wird eine leere Zeichenfolge zurückgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Die `GetVersionString` -Methode ruft die integrierte Version des aktuellen Metadatenbereichs ab. Wenn der Bereich noch nicht gespeichert wurde, verfügt er nicht über eine integrierte Version, und es wird eine leere Zeichenfolge zurückgegeben.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

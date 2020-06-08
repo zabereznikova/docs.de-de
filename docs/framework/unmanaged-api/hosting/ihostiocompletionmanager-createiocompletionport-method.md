@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 907a2b43-68db-44a7-acac-89e792e7bb3c
 topic_type:
 - apiref
-ms.openlocfilehash: 2b679a9ea427d53d67474a196b5b3ae2c698ea5e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 240712296254e02f4d268a00e1c15ef34f4519f1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804789"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501544"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort-Methode
 Fordert an, dass der Host einen neuen e/a-Abschlussport erstellt.  
@@ -49,10 +49,10 @@ HRESULT CreateIoCompletionPort (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Ressource zuzuordnen.|  
   
-## <a name="remarks"></a>Hinweise  
- Die CLR ruft die- `CreateIoCompletionPort` Methode auf, um anzufordern, dass der Host einen neuen e/a-Abschlussport erstellt. Er bindet e/a-Vorgänge an diesen Port, indem er die [IHostIoCompletionManager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) -Methode aufruft. Der Host meldet den Status zurück an die CLR, indem er [ICLRIoCompletionManager:: OnComplete](iclriocompletionmanager-oncomplete-method.md)anruft.  
+## <a name="remarks"></a>Bemerkungen  
+ Die CLR ruft die- `CreateIoCompletionPort` Methode auf, um anzufordern, dass der Host einen neuen e/a-Abschlussport erstellt. Er bindet e/a-Vorgänge an diesen Port, indem er die [IHostIoCompletionManager:: Bind](ihostiocompletionmanager-bind-method.md) -Methode aufruft. Der Host meldet den Status zurück an die CLR, indem er [ICLRIoCompletionManager:: OnComplete](iclriocompletionmanager-oncomplete-method.md)anruft.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -61,7 +61,7 @@ HRESULT CreateIoCompletionPort (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRIoCompletionManager-Schnittstelle](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager-Schnittstelle](ihostiocompletionmanager-interface.md)

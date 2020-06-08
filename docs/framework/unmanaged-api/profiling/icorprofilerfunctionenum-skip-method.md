@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 051465b9-e479-494a-804b-c880323b4cbe
 topic_type:
 - apiref
-ms.openlocfilehash: 5f4ef55561c23997fca51dc7d463e2eefdba7d65
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0f096f76ec47cfe3399e9184eb82bf20040efbbb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864309"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503041"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip-Methode
 Verschiebt den Cursor des Enumerators so aus seiner aktuellen Position, dass die angegebene Anzahl von Elementen übersprungen wird.  
@@ -31,31 +31,31 @@ Verschiebt den Cursor des Enumerators so aus seiner aktuellen Position, dass die
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `celt`  
  in Die Anzahl der Elemente, die übersprungen werden sollen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`celt` Elemente wurden übersprungen.|  
-|S_FALSE|Weniger als `celt` Elemente übersprungen wurden, was darauf hinweist, dass keine weiteren Elemente vorhanden sind.|  
+|S_OK|`celt`Elemente wurden übersprungen.|  
+|S_FALSE|Weniger als `celt` Elemente wurden übersprungen, was darauf hinweist, dass keine weiteren Elemente vorhanden sind.|  
   
-## <a name="remarks"></a>Hinweise  
- Die neue Position des Cursors dieses Enumerators ist (aktuelle Position) + `celt`.  
+## <a name="remarks"></a>Bemerkungen  
+ Die neue Position des Cursors dieses Enumerators ist (aktuelle Position) + `celt` .  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerFunctionEnum-Schnittstelle](icorprofilerfunctionenum-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

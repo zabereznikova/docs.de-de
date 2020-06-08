@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177228"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503639"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps-Methode
-Ruft Informationen ab, die in den Metadaten für eine angegebene Elementdefinition gespeichert <xref:System.Type> sind, einschließlich des Namens, der Binärsignatur und der relativen virtuellen Adresse des Elements, auf das durch das angegebene Metadatentoken verwiesen wird. Dies ist eine einfache Hilfsmethode: Wenn *mb* ein MethodDef ist, wird **GetMethodProps** aufgerufen; Wenn *mb* ein FieldDef ist, wird **GetFieldProps** aufgerufen. Weitere Informationen finden Sie unter diesen anderen Methoden.
+Ruft Informationen ab, die in den Metadaten für eine angegebene Element Definition gespeichert sind, einschließlich des Namens, der binären Signatur und der relativen virtuellen Adresse des Members, auf den <xref:System.Type> das angegebene Metadatentoken verweist. Dies ist eine einfache Hilfsmethode: Wenn *MB* ein MethodDef-Wert ist, wird **GetMethod-** Eigenschaften aufgerufen. Wenn *MB* ein FieldDef-Wert ist, wird **GetField-** Eigenschaften aufgerufen. Weitere Informationen finden Sie in diesen anderen Methoden.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parameter  
  `mb`  
- [in] Das Token, das auf das Mitglied verweist, für das die zugehörigen Metadaten abgerufen werden sollen.  
+ in Das Token, das auf den Member verweist, für den die zugeordneten Metadaten zu erhalten sind.  
   
  `pClass`  
- [out] Ein Zeiger auf das Metadatentoken, das die Klasse des Members darstellt.  
+ vorgenommen Ein Zeiger auf das Metadatentoken, das die Klasse des Members darstellt.  
   
  `szMember`  
- [out] Der Name des Mitglieds.  
+ vorgenommen Der Name des Members.  
   
  `cchMember`  
- [in] Die Größe in breiten `szMember` Zeichen des Puffers.  
+ in Die Größe des Puffers in breit Zeichen `szMember` .  
   
  `pchMember`  
- [out] Die Größe des zurückgegebenen Namens in weiten Zeichen.  
+ vorgenommen Die Größe des zurückgegebenen Namens in breit Zeichen.  
   
  `pdwAttr`  
- [out] Alle Flagwerte, die auf das Element angewendet werden.  
+ vorgenommen Alle Flagwerte, die auf den Member angewendet werden.  
   
  `ppvSigBlob`  
- [out] Ein Zeiger auf die binäre Metadatensignatur des Members.  
+ vorgenommen Ein Zeiger auf die binäre Metadatensignatur des Members.  
   
  `pcbSigBlob`  
- [out] Die Größe in `ppvSigBlob`Bytes von .  
+ vorgenommen Die Größe von in Bytes `ppvSigBlob` .  
   
  `pulCodeRVA`  
- [out] Ein Zeiger auf die relative virtuelle Adresse des Elements.  
+ vorgenommen Ein Zeiger auf die relative virtuelle Adresse des Members.  
   
  `pdwImplFlags`  
- [out] Alle Methodenimplementierungsflags, die dem Member zugeordnet sind.  
+ vorgenommen Alle Methodenimplementierungsflags, die dem Element zugeordnet sind.  
   
  `pdwCPlusTypeFlag`  
- [out] Ein Flag, <xref:System.ValueType>das eine markiert. Es ist einer `ELEMENT_TYPE_*` der Werte.
+ vorgenommen Ein Flag, das eine markiert <xref:System.ValueType> . Dabei handelt es sich um einen der- `ELEMENT_TYPE_*` Werte.
   
  `ppValue`  
- [out] Ein konstanter Zeichenfolgenwert, der von diesem Member zurückgegeben wird.  
+ vorgenommen Ein konstanter Zeichen folgen Wert, der von diesem Member zurückgegeben wird.  
   
  `pcchValue`  
- [out] Die Größe in `ppValue`Zeichen von `ppValue` , oder Null, wenn keine Zeichenfolge vorhanden ist.  
+ vorgenommen Die Größe in Zeichen von `ppValue` oder 0 (null), wenn `ppValue` keine Zeichenfolge enthält.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68cdefe7ab362b26bbf060fa46766068eb0d7094
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177336"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503756"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs-Methode
 Zählt MemberRef-Token auf, die Elemente des angegebenen Typs darstellen.  
@@ -42,34 +42,34 @@ HRESULT EnumMemberRefs (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `tkParent`  
- [in] Ein TypeDef-, TypeRef-, MethodDef- oder ModuleRef-Token für den Typ, dessen Member aufgezählt werden sollen.  
+ in Ein TypeDef-, TypeRef-, MethodDef-oder ModuleRef-Token für den Typ, dessen Member aufgelistet werden sollen.  
   
  `rMemberRefs`  
- [out] Das Array, das zum Speichern von MemberRef-Token verwendet wird.  
+ vorgenommen Das Array, das zum Speichern von mitgliedverweis Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rMemberRefs`-Arrays.  
   
  `pcTokens`  
- [out] Die tatsächliche Anzahl der In. `rMemberRefs`MemberRef-Token, die in zurückgegeben werden.  
+ vorgenommen Die tatsächliche Anzahl der in zurückgegebenen mitgliedungstokentoken `rMemberRefs` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|Es sind keine MemberRef-Token zum Aufzählen vorhanden. In diesem `pcTokens` Fall ist zu Null.|  
+|`S_OK`|`EnumMemberRefs`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine mitgliedungstokentoken zum Auflisten vorhanden. In diesem Fall hat `pcTokens` den Wert 0 (null).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

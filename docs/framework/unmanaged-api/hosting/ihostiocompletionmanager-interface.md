@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 90675d9be71342efa903767abbf63102b40a2c35
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804686"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501536"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager-Schnittstelle
 Stellt Methoden bereit, die dem Common Language Runtime (CLR) die Interaktion mit e/a-Abschlussports ermöglichen, die vom Host bereitgestellt werden.  
@@ -36,14 +36,14 @@ Stellt Methoden bereit, die dem Common Language Runtime (CLR) die Interaktion mi
 |[GetMaxThreads-Methode](ihostiocompletionmanager-getmaxthreads-method.md)|Ruft die maximale Anzahl von Threads ab, die der Host für Dienst-e/a-Anforderungen in hohem Maß abrufen kann.|  
 |[GetMinThreads-Methode](ihostiocompletionmanager-getminthreads-method.md)|Ruft die Mindestanzahl von Threads ab, die der Host für Dienst-e/a-Anforderungen bereitstellt.|  
 |[InitializeHostOverlapped-Methode](ihostiocompletionmanager-initializehostoverlapped-method.md)|Bietet dem Host die Möglichkeit, benutzerdefinierte Daten zu einer e/a-Anforderung zu initialisieren.|  
-|[SetCLRIoCompletionManager-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|Stellt dem Host einen Schnittstellen Zeiger auf eine [ICLRIoCompletionManager](iclriocompletionmanager-interface.md) -Instanz bereit, die von der CLR implementiert wird.|  
+|[SetCLRIoCompletionManager-Methode](ihostiocompletionmanager-setclriocompletionmanager-method.md)|Stellt dem Host einen Schnittstellen Zeiger auf eine [ICLRIoCompletionManager](iclriocompletionmanager-interface.md) -Instanz bereit, die von der CLR implementiert wird.|  
 |[SetMaxThreads-Methode](ihostiocompletionmanager-setmaxthreads-method.md)|Legt die maximale Anzahl von Threads fest, die der Host Dienst-e/a-Anforderungen zugeordnet.|  
 |[SetMinThreads-Methode](ihostiocompletionmanager-setminthreads-method.md)|Legt die Mindestanzahl von Threads fest, die der Host für die e/a-Vervollständigung in hohem Maß beachten soll.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  `IHostIoCompletionManager`entspricht der `ICLRIoCompletionManager` von der CLR implementierten Schnittstelle. Die CLR ruft die Methoden von `IHostIoCompletionManager` auf, um Handles an die vom Host bereitgestellten Ports zu binden, und der Host ruft die Methoden von `ICLRIoCompletionManager` auf, um den Abschluss von e/a-Anforderungen zu melden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -52,6 +52,6 @@ Stellt Methoden bereit, die dem Common Language Runtime (CLR) die Interaktion mi
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

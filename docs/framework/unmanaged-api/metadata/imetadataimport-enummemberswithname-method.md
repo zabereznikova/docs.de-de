@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: 7410f91a853f3a677a105dc2e12a86d723c9fad6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea451bdd645d2d4dea4c5dd00408e0bc51804803
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177317"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492069"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName-Methode
 Zählt MemberDef-Token auf, die Elemente des angegebenen Typs mit dem angegebenen Namen darstellen.  
@@ -43,40 +43,40 @@ HRESULT EnumMembersWithName (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `cl`  
- [in] Ein TypeDef-Token, das den Typ mit aufzuzählenden Membern darstellt.  
+ in Ein TypeDef-Token, das den Typ mit aufzuzählenden Membern darstellt.  
   
  `szName`  
- [in] Der Membername, der den Umfang des Enumerators einschränkt.  
+ in Der Elementname, der den Bereich des Enumerators einschränkt.  
   
  `rMembers`  
- [out] Das Array, das zum Speichern der MemberDef-Token verwendet wird.  
+ vorgenommen Das Array, das zum Speichern der mitgliedungstokentoken verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rMembers`-Arrays.  
   
  `pcTokens`  
- [out] Die tatsächliche Anzahl der MemberDef-Token, die in `rMembers`zurückgegeben wurden.  
+ vorgenommen Die tatsächliche Anzahl der in zurückgegebenen mitgliedsdef-Token `rMembers` .  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode zählt Felder und Methoden auf, jedoch keine Eigenschaften oder Ereignisse. Im Gegensatz zu [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md) `EnumMembersWithName` verwirft alle Feld- und Elementtoken, die nicht den angegebenen Namen haben.  
+ Diese Methode listet Felder und Methoden auf, aber keine Eigenschaften oder Ereignisse. Im Gegensatz zu [IMetaDataImport:: EnumMembers](imetadataimport-enummembers-method.md) `EnumMembersWithName` verwirft alle Feld-und Element Token, die nicht über den angegebenen Namen verfügen.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`erfolgreich zurückgegeben werden.|  
-|`S_FALSE`|Es sind keine MemberDef-Token zum Aufzählen vorhanden. In diesem `pcTokens` Fall ist Null.|  
+|`S_OK`|`EnumTypeDefs`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine mitgliedungstokentoken zum Auflisten vorhanden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
