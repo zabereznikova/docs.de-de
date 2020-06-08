@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 8446960d0746a864c44febbbe4a4d0313d6dcd4d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a6553de31d4f9627809af7691218c39dc734c6f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616711"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501663"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS-Struktur
 Stellt Statistiken zum Garbage Collection Mechanismus des Common Language Runtime (CLR) bereit.  
@@ -58,8 +58,8 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen0`|Die Größe der Objekte, die von Generation 0 zu Generation 1 herauf gestuft werden, in Kilobyte.|  
 |`KBytesPromotedFromGen1`|Die Größe der Objekte, die von Generation 1 zu Generation Two herauf gestuft wurden, in Kilobyte.|  
   
-## <a name="remarks"></a>Hinweise  
- Die [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) -Methode erfordert, dass das- `Flags` Feld der- `COR_GC_STATS` Struktur auf einen oder mehrere Werte der [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) -Enumeration festgelegt wird, um anzugeben, welche Statistiken festgelegt werden sollen.  
+## <a name="remarks"></a>Bemerkungen  
+ Die [ICLRGCManager:: GetStats](iclrgcmanager-getstats-method.md) -Methode erfordert, dass das- `Flags` Feld der- `COR_GC_STATS` Struktur auf einen oder mehrere Werte der [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) -Enumeration festgelegt wird, um anzugeben, welche Statistiken festgelegt werden sollen.  
   
  In der folgenden Tabelle sind die Statistiken, die von dieser Struktur bereitgestellt werden, den beiden [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) Enumerationswerten `COR_GC_COUNTS` und zugeordnet `COR_GC_MEMORYUSAGE` .  
   
@@ -75,7 +75,7 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Gchost. idl  
@@ -84,8 +84,8 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Hostingstrukturen](hosting-structures.md)
+- [Hosten von Strukturen](hosting-structures.md)
 - [Automatische Speicherverwaltung](../../../standard/automatic-memory-management.md)
 - [Garbage Collection](../../../standard/garbage-collection/index.md)

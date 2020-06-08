@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-ms.openlocfilehash: 7271fe8e28da0bb5fd878aae5d36ab703e64ebf0
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: c95b787101d4d0302ce4d2a5cd3bdc7e11f9cd63
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803022"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501429"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert-Methode
 Fordert an, dass der Host die Aufgabe aktiviert, die von der aktuellen [IHostTask](ihosttask-interface.md) -Instanz dargestellt wird, sodass der Task abgebrochen werden kann.  
@@ -42,13 +42,13 @@ HRESULT Alert ();
 |HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die CLR ruft die- `Alert` Methode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> auf, wenn von Benutzercode aufgerufen wird, oder wenn der dem aktuellen zugeordnete <xref:System.AppDomain> <xref:System.Threading.Thread> heruntergefahren wird. Der Host muss sofort zurückkehren, da der-Befehl asynchron erfolgt. Wenn der Host die Aufgabe nicht sofort benachrichtigen kann, muss Sie beim nächsten Eintritt in einen Zustand reaktiviert werden, in dem Sie benachrichtigt werden kann.  
   
 > [!NOTE]
-> `Alert`wirkt sich nur auf die Tasks aus, an die die Laufzeit einen [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) Wert WAIT_ALERTABLE an Methoden wie [Join](ihosttask-join-method.md)übermittelt hat.  
+> `Alert`wirkt sich nur auf die Tasks aus, an die die Laufzeit einen [WAIT_OPTION](wait-option-enumeration.md) Wert WAIT_ALERTABLE an Methoden wie [Join](ihosttask-join-method.md)übermittelt hat.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -57,7 +57,7 @@ HRESULT Alert ();
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)

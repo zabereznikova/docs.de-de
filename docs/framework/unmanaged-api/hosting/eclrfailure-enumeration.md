@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: e07210203d8a8010890eeb511ff1c08821bfc4a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fa2b5052a1d569487f0c6c72699ff9ab571beefc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616332"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504393"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure-Enumeration
 Beschreibt den Satz von Fehlern, bei denen ein Host Richtlinien Aktionen festlegen kann.  
@@ -50,10 +50,10 @@ typedef enum {
 |`FAIL_AccessViolation`|Es wurde versucht, geschützten Speicher zu lesen oder zu schreiben. Wird in der .NET Framework 4 nicht unterstützt.|  
 |`FAIL_CodeContract`|Ein Code Vertrags Fehler ist aufgetreten. Siehe [Code Verträge](../../debug-trace-profile/code-contracts.md).|  
   
-## <a name="remarks"></a>Hinweise  
- In der [ICLRPolicyManager:: abtactiononfailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) -Methode finden Sie eine Liste der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) -Werte, mit denen der Host die Richtlinien Aktionen für Fehlerbedingungen angeben kann. Weitere Informationen zu kritischen und nicht kritischen Codebereichen finden Sie unter [eclroperations](eclroperation-enumeration.md).  
+## <a name="remarks"></a>Bemerkungen  
+ In der [ICLRPolicyManager:: abtactiononfailure](iclrpolicymanager-setactiononfailure-method.md) -Methode finden Sie eine Liste der [EPolicyAction](epolicyaction-enumeration.md) -Werte, mit denen der Host die Richtlinien Aktionen für Fehlerbedingungen angeben kann. Weitere Informationen zu kritischen und nicht kritischen Codebereichen finden Sie unter [eclroperations](eclroperation-enumeration.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -62,7 +62,7 @@ typedef enum {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRPolicyManager-Schnittstelle](iclrpolicymanager-interface.md)
 - [SetActionOnFailure-Methode](iclrpolicymanager-setactiononfailure-method.md)

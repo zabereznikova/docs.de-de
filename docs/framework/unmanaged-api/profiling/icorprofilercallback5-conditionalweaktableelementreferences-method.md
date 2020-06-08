@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: ad721d28f6a7dc6ae0370ce10178990cb02fb9f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 17fbc99b30921f795c1f7ff882ec73432aade8c6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430054"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499245"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences-Methode
 
@@ -78,18 +78,18 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 }
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Ein Profiler für die .NET Framework 4,5 oder höhere Versionen implementiert die [ICorProfilerCallback5](icorprofilercallback5-interface.md) -Schnittstelle und zeichnet die von der `ConditionalWeakTableElementReferences`-Methode angegebenen Abhängigkeiten auf. `ICorProfilerCallback5` bietet den gesamten Satz an Abhängigkeiten zwischen Live Objekten, die durch `ConditionalWeakTable` Einträge dargestellt werden. Diese Abhängigkeiten und die Element Feldverweise, die von der [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) -Methode angegeben werden, ermöglichen einem verwalteten Profiler das Generieren des vollständigen Objekt Diagramms von Live-Objekten.
+Ein Profiler für die .NET Framework 4,5 oder höhere Versionen implementiert die [ICorProfilerCallback5](icorprofilercallback5-interface.md) -Schnittstelle und zeichnet die von der-Methode angegebenen Abhängigkeiten auf `ConditionalWeakTableElementReferences` . `ICorProfilerCallback5`stellt den gesamten Satz von Abhängigkeiten zwischen Live Objekten bereit, die durch-Einträge dargestellt werden `ConditionalWeakTable` . Diese Abhängigkeiten und die Element Feldverweise, die von der [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) -Methode angegeben werden, ermöglichen einem verwalteten Profiler das Generieren des vollständigen Objekt Diagramms von Live-Objekten.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** CorProf.idl, CorProf.h
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerCallback5-Schnittstelle](icorprofilercallback5-interface.md)

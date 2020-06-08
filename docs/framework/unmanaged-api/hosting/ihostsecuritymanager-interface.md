@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: b2c334c7a757c2f4044d08787bdae93ffc2804e4
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803896"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501468"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager-Schnittstelle
 Stellt Methoden bereit, mit denen der Zugriff auf den Sicherheitskontext des aktuell ausgeführten Threads ermöglicht und gesteuert werden kann.  
@@ -28,14 +28,14 @@ Stellt Methoden bereit, mit denen der Zugriff auf den Sicherheitskontext des akt
   
 |Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[GetSecurityContext-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|Ruft den angeforderten [IHostSecurityContext](ihostsecuritycontext-interface.md) vom Host ab.|  
+|[GetSecurityContext-Methode](ihostsecuritymanager-getsecuritycontext-method.md)|Ruft den angeforderten [IHostSecurityContext](ihostsecuritycontext-interface.md) vom Host ab.|  
 |[ImpersonateLoggedOnUser-Methode](ihostsecuritymanager-impersonateloggedonuser-method.md)|Fordert die Ausführung von Code mit den Anmelde Informationen der aktuellen Benutzeridentität an.|  
 |[OpenThreadToken-Methode](ihostsecuritymanager-openthreadtoken-method.md)|Öffnet das freigegebene Zugriffs Token, das dem aktuellen Thread zugeordnet ist.|  
 |[RevertToSelf-Methode](ihostsecuritymanager-reverttoself-method.md)|Beendet den Identitätswechsel der aktuellen Benutzeridentität und gibt das ursprüngliche Thread Token zurück.|  
 |[SetSecurityContext-Methode](ihostsecuritymanager-setsecuritycontext-method.md)|Legt den Sicherheitskontext für den aktuell ausgeführten Thread fest.|  
 |[SetThreadToken-Methode](ihostsecuritymanager-setthreadtoken-method.md)|Legt ein Handle für den aktuell ausgeführten Thread fest.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein Host kann den gesamten Code Zugriff auf Thread Token sowohl durch den Common Language Runtime (CLR) als auch durch den Benutzercode steuern. Außerdem kann sichergestellt werden, dass die umfassenden Sicherheitskontext Informationen über asynchrone Vorgänge oder Code Punkte mit eingeschränktem Code Zugriff übermittelt werden. `IHostSecurityContext`kapselt diese Sicherheitskontext Informationen, die für die CLR nicht transparent sind.  
   
  Die CLR verarbeitet den verwalteten Thread Kontext intern. Die prozessspezifische Abfrage wird `IHostSecurityManager` in den folgenden Situationen abgefragt:  
@@ -48,7 +48,7 @@ Stellt Methoden bereit, mit denen der Zugriff auf den Sicherheitskontext des akt
   
 - Bei der Wartung von e/a-Abschlussports.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -57,7 +57,7 @@ Stellt Methoden bereit, mit denen der Zugriff auf den Sicherheitskontext des akt
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [IHostSecurityContext-Schnittstelle](ihostsecuritycontext-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

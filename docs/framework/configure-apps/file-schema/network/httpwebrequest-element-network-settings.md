@@ -1,5 +1,6 @@
 ---
 title: <httpWebRequest>-Element (Netzwerkeinstellungen)
+description: Das <httpWebRequest> Netzwerk Einstellungs Element passt Webanforderungs Parameter in der .NET Framework an.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59ab425dcef8ac5283035910a9d78a89a16be8b1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504588"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest>-Element (Netzwerkeinstellungen)
 Passt Webanforderungs Parameter an.  
@@ -44,7 +45,7 @@ Passt Webanforderungs Parameter an.
 |`maximumResponseHeadersLength`|Gibt die maximale Länge eines Antwort Headers in Kilobyte an. Der Standardwert ist 64. Der Wert-1 gibt an, dass keine Größenbeschränkung für die Antwortheader festgelegt wird.|  
 |`maximumErrorResponseLength`|Gibt die maximale Länge einer Fehler Antwort in Kilobyte an. Der Standardwert ist 64. Der Wert-1 gibt an, dass für die Fehler Antwort keine Größenbeschränkung festgelegt wird.|  
 |`maximumUnauthorizedUploadLength`|Gibt die maximale Länge eines Uploads als Reaktion auf einen nicht autorisierten Fehlercode in Bytes an. Der Standard ist -1. Der Wert -1 gibt an, dass für den Upload keine Größenbeschränkung gilt.|  
-|`useUnsafeHeaderParsing`|Gibt an, ob die unsichere Header-Verarbeitung aktiviert ist. Der Standardwert ist `false`.|  
+|`useUnsafeHeaderParsing`|Gibt an, ob die unsichere Header-Verarbeitung aktiviert ist. Der Standardwert lautet `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -76,7 +77,7 @@ Passt Webanforderungs Parameter an.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [Netzwerkeinstellungsschema](index.md)

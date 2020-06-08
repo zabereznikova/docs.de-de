@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-ms.openlocfilehash: 690abec6104f6eed1ad5a0eae9a6b6bb18d35b0d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 358ca84f32e1b233116605bf5486cc9a01b42e67
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436686"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503502"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString-Methode
 Ruft das Zeichenfolgenliteral ab, das durch das angegebene Metadatentoken dargestellt wird.  
@@ -44,21 +44,21 @@ HRESULT GetUserString (
  vorgenommen Eine Kopie der angeforderten Zeichenfolge.  
   
  `cchString`  
- in Die maximale Größe des angeforderten `szString`in breit Zeichen.  
+ in Die maximale Größe in breit Zeichen der angeforderten `szString` .  
   
  `pchString`  
- vorgenommen Die Größe in breit Zeichen der zurückgegebenen `szString`.  
+ vorgenommen Die Größe der zurückgegebenen breit Zeichen `szString` .  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
