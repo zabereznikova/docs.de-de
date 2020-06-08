@@ -1,5 +1,6 @@
 ---
 title: <system.Net>-Element (Netzwerkeinstellungen)
+description: Das <System.net> Network settings-Element enthält Einstellungen, die angeben, wie die .NET Framework eine Verbindung mit den Netzwerkoptionen in der .NET Framework herstellt.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 88098f2afaad9728e38c4f9935b45f45826a0ca9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154555"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504484"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net>-Element (Netzwerkeinstellungen)
 Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.  
@@ -92,6 +93,6 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Netzwerkeinstellungsschema](index.md)

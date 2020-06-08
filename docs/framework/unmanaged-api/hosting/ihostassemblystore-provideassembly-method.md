@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-ms.openlocfilehash: f97490e89e835716911072dbad5f70d8e55e76e6
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 162def0d703ea81efc3df3ea5ee08b58e34822e6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805016"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501572"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly-Methode
-Ruft einen Verweis auf eine Assembly ab, auf die von [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , die von [IHostAssemblyManager:: getnonhoststoreassemblys](ihostassemblymanager-getnonhoststoreassemblies-method.md)zurückgegeben wird, nicht verwiesen wird. Der Common Language Runtime (CLR) ruft `ProvideAssembly` für jede Assembly auf, die nicht in der Liste angezeigt wird.  
+Ruft einen Verweis auf eine Assembly ab, auf die von [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) , die von [IHostAssemblyManager:: getnonhoststoreassemblys](ihostassemblymanager-getnonhoststoreassemblies-method.md)zurückgegeben wird, nicht verwiesen wird. Der Common Language Runtime (CLR) ruft `ProvideAssembly` für jede Assembly auf, die nicht in der Liste angezeigt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,10 +66,10 @@ HRESULT ProvideAssembly (
 |COR_E_FILENOTFOUND (0x80070002)|Die angeforderte Assembly konnte nicht gefunden werden.|  
 |E_NOT_SUFFICIENT_BUFFER|Die von angegebene Puffergröße `pAssemblyId` ist nicht groß genug zum Speichern des Bezeichners, den der Host zurückgeben möchte.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der für zurückgegebene Identitäts Wert `pAssemblyId` wird vom Host angegeben. Bezeichner müssen innerhalb der Lebensdauer eines Prozesses eindeutig sein. Die CLR verwendet diesen Wert als eindeutigen Bezeichner für den Datenstrom. Jeder Wert wird anhand der Werte für überprüft `pAssemblyId` , die von anderen Aufrufen von zurückgegeben werden `ProvideAssembly` . Wenn der Host denselben `pAssemblyId` Wert für einen anderen zurückgibt `IStream` , überprüft die CLR, ob der Inhalt dieses Streams bereits zugeordnet wurde. Wenn dies der Fall ist, lädt die Laufzeit die vorhandene Kopie des Bilds, anstatt eine neue zu ordnen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -78,7 +78,7 @@ HRESULT ProvideAssembly (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRAssemblyReferenceList-Schnittstelle](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager-Schnittstelle](ihostassemblymanager-interface.md)

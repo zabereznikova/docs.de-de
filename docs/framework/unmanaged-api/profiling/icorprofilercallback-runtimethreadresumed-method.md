@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-ms.openlocfilehash: 5a9ca2f4587c4881820e1aa3d4134f90ce47d557
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d3949189a72583ebb50b67a270694a31f1eb23dc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865895"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503210"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed-Methode
 Benachrichtigt den Profiler, dass der angegebene Thread nach dem aussetzen fortgesetzt wurde.  
@@ -32,20 +32,20 @@ HRESULT RuntimeThreadResumed(
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `threadId`  
  in Die ID des Threads, der fortgesetzt wurde.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [RuntimeThreadSuspended-Methode](icorprofilercallback-runtimethreadsuspended-method.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 8788d6e2220778a3f0926d5ed3dd59142487bcca
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616189"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504344"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction-Enumeration
-Beschreibt die Richtlinien Aktionen, die der Host für Vorgänge festlegen kann, die durch [eclroperations](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) und Fehler beschrieben werden, die von [EClrFailure](eclrfailure-enumeration.md)beschrieben werden.  
+Beschreibt die Richtlinien Aktionen, die der Host für Vorgänge festlegen kann, die durch [eclroperations](eclroperation-enumeration.md) und Fehler beschrieben werden, die von [EClrFailure](eclrfailure-enumeration.md)beschrieben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,10 +56,10 @@ typedef enum {
 |`eThrowException`|Gibt an, dass eine für die Bedingung geeignete Ausnahme, z. b. nicht genügend Arbeitsspeicher, Pufferüberlauf usw., ausgelöst werden soll.|  
 |`eUnloadAppDomain`|Gibt an, dass das <xref:System.AppDomain> entladen werden soll. Die CLR versucht, Finalizer auszuführen.|  
   
-## <a name="remarks"></a>Hinweise  
- Der Host legt Richtlinien Aktionen durch Aufrufen von Methoden der [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) -Schnittstelle fest. Informationen über grobe und ordnungsgemäße Abbrüche finden Sie in der [EClrOperation](eclroperation-enumeration.md) -Enumeration.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Host legt Richtlinien Aktionen durch Aufrufen von Methoden der [ICLRPolicyManager](iclrpolicymanager-interface.md) -Schnittstelle fest. Informationen über grobe und ordnungsgemäße Abbrüche finden Sie in der [EClrOperation](eclroperation-enumeration.md) -Enumeration.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -68,7 +68,7 @@ typedef enum {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [EClrFailure-Enumeration](eclrfailure-enumeration.md)
 - [ICLRPolicyManager-Schnittstelle](iclrpolicymanager-interface.md)

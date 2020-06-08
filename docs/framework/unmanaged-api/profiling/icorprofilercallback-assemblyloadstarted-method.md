@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: b83be5e79c533e7e5a2468a12a0793d300700428
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: df172edb97a82ae3bf2d46c8be6ea05d5445a09a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500428"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted-Methode
 Benachrichtigt den Profiler, dass eine Assembly geladen wird.  
@@ -32,24 +32,24 @@ HRESULT AssemblyLoadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 - `assemblyId`
 
   \[in] identifiziert die Assembly, die geladen wird.
 
-## <a name="remarks"></a>Hinweise  
- Der Wert `assemblyId` ist für eine Informationsanforderung erst gültig, wenn die [ICorProfilerCallback:: assemblyloadabgeschlossene](icorprofilercallback-assemblyloadfinished-method.md) -Methode aufgerufen wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Wert von `assemblyId` ist für eine Informationsanforderung erst gültig, wenn die [ICorProfilerCallback:: assemblyloadfertige](icorprofilercallback-assemblyloadfinished-method.md) -Methode aufgerufen wird.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

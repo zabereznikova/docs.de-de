@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-ms.openlocfilehash: 91a19e5e15dddd446208dfa3b2c32826282067eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a031cdb875b5eb046428d4d235d3093caddb7a6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175394"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491289"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal-Methode
-Ruft einen Zeiger auf den systemeigenen, nicht verwalteten Typ des Felds ab, das durch das angegebene Feldmetadatentoken dargestellt wird.  
+Ruft einen Zeiger auf den systemeigenen, nicht verwalteten Typ des Felds ab, das durch das angegebene Feld Metadaten-Token dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,24 +37,24 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] Das Metadatentoken, das das Feld darstellt, für das Interop-Marshallinginformationen abgerufen werden sollen.  
+ in Das Metadatentoken, das das Feld darstellt, für das Interop-Marshallinginformationen zu erhalten sind.  
   
  `ppvNativeType`  
- [out] Ein Zeiger auf die Metadatensignatur des systemeigenen Typs des Felds.  
+ vorgenommen Ein Zeiger auf die Metadatensignatur des systemeigenen Typs des Felds.  
   
  `pcbNativeType`  
- [out] Die Größe in `ppvNativeType`Bytes von .  
+ vorgenommen Die Größe von in Bytes `ppvNativeType` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

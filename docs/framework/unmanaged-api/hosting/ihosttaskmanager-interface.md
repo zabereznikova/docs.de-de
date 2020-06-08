@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: b742f717f4caa0ba23d5a4c1438ed3ce4dcc60d7
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842256"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501399"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager-Schnittstelle
 Stellt Methoden bereit, mit denen die Common Language Runtime (CLR) mit Aufgaben über den Host arbeiten kann, anstatt die Threading-oder Fiber-Funktionen des Standard Betriebssystems zu verwenden.  
@@ -40,17 +40,17 @@ Stellt Methoden bereit, mit denen die Common Language Runtime (CLR) mit Aufgaben
 |[LeaveRuntime-Methode](ihosttaskmanager-leaveruntime-method.md)|Benachrichtigt den Host, dass verwalteter Code im Begriff ist, eine nicht verwaltete Funktion aufzurufen.|  
 |[ReverseEnterRuntime-Methode](ihosttaskmanager-reverseenterruntime-method.md)|Benachrichtigt den Host, dass ein-Rückruf aus nicht verwaltetem Code in die Common Language Runtime (CLR) erfolgt.|  
 |[ReverseLeaveRuntime-Methode](ihosttaskmanager-reverseleaveruntime-method.md)|Benachrichtigt den Host, dass das Steuerelement die CLR verlässt und eine nicht verwaltete Funktion eingibt, die wiederum von verwaltetem Code aufgerufen wurde.|  
-|[SetCLRTaskManager-Methode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Stellt dem Host einen Schnittstellen Zeiger auf eine [ICLRTaskManager](iclrtaskmanager-interface.md) -Instanz bereit, die von der CLR implementiert wird.|  
+|[SetCLRTaskManager-Methode](ihosttaskmanager-setclrtaskmanager-method.md)|Stellt dem Host einen Schnittstellen Zeiger auf eine [ICLRTaskManager](iclrtaskmanager-interface.md) -Instanz bereit, die von der CLR implementiert wird.|  
 |[SetLocale-Methode](ihosttaskmanager-setlocale-method.md)|Benachrichtigt den Host, dass die CLR das Gebiets Schema für die aktuelle Aufgabe geändert hat.|  
 |[SetStackGuarantee-Methode](ihosttaskmanager-setstackguarantee-method.md)|Nur für die interne Verwendung vorgesehen.|  
 |[SetUILocale-Methode](ihosttaskmanager-setuilocale-method.md)|Benachrichtigt den Host, dass das Gebiets Schema der Benutzeroberfläche für die aktuelle Aufgabe geändert wurde.|  
 |[Sleep-Methode](ihosttaskmanager-sleep-method.md)|Benachrichtigt den Host, dass die aktuelle Aufgabe in den Standbymodus wechselt.|  
 |[SwitchToTask-Methode](ihosttaskmanager-switchtotask-method.md)|Benachrichtigt den Host, dass der aktuelle Task gewechselt werden soll.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  `IHostTaskManager`ermöglicht der CLR das Erstellen und Verwalten von Tasks, um dem Host die Möglichkeit zu geben, Aktionen auszuführen, wenn die Steuerung von verwaltetem zu nicht verwaltetem Code und umgekehrt ist, und bestimmte Aktionen anzugeben, die der Host während der Codeausführung nicht ausführen kann.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -59,9 +59,9 @@ Stellt Methoden bereit, mit denen die Common Language Runtime (CLR) mit Aufgaben
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)
 - [IHostTask-Schnittstelle](ihosttask-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

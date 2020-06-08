@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 1e881b4a55a99bac3f9ca0e8db1556807b888f13
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8622920a81f4b469361ffa879f7a4eeda697cab9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616963"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504224"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats-Methode
 Ruft einen Satz aktueller Statistiken zum Garbage Collection System des Common Language Runtime ab.  
@@ -48,10 +48,10 @@ HRESULT GetStats (
 |HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die CLR berechnet nur die Statistiken, die durch das-Feld von angegeben werden, und gibt diese zurück `Flags` `pStats` .  
   
- Legen Sie das- `Flags` Feld auf einen oder mehrere Werte der [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) -Enumeration fest, um anzugeben, welche Statistiken in der [COR_GC_STATS](cor-gc-stats-structure.md) Struktur festgelegt werden sollen.  
+ Legen Sie das- `Flags` Feld auf einen oder mehrere Werte der [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) -Enumeration fest, um anzugeben, welche Statistiken in der [COR_GC_STATS](cor-gc-stats-structure.md) Struktur festgelegt werden sollen.  
   
  Es folgt ein Beispiel für die Verwendung:  
   
@@ -61,7 +61,7 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -70,7 +70,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Automatische Speicherverwaltung](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS-Struktur](cor-gc-stats-structure.md)
@@ -79,5 +79,5 @@ pCLRGCManager->GetStats(&GCStats);
 - [ICLRControl-Schnittstelle](iclrcontrol-interface.md)
 - [ICLRGCManager-Schnittstelle](iclrgcmanager-interface.md)
 - [CLR-Hostingschnittstellen](clr-hosting-interfaces.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

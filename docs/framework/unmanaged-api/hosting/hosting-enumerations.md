@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: e6fb22f91d57a356a9a7c3749e44a9fb3c36b699
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616111"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504302"
 ---
 # <a name="hosting-enumerations"></a>Hosten von Enumerationen
 In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die von der Hosting-API verwendet werden.  
@@ -72,13 +72,13 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Enthält Werte, die die Auswirkung eines Fehlers angeben, wenn eine bestimmte Speicher Belegung angefordert wurde, jedoch nicht erfüllt werden kann.  
   
  [EPolicyAction-Enumeration](epolicyaction-enumeration.md)  
- Beschreibt die Richtlinien Aktionen, die der Host für durch die [EClrOperation-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) beschriebene Vorgänge und durch die [EClrFailure-Enumeration](eclrfailure-enumeration.md)beschriebene Fehler festlegen kann.  
+ Beschreibt die Richtlinien Aktionen, die der Host für durch die [EClrOperation-Enumeration](eclroperation-enumeration.md) beschriebene Vorgänge und durch die [EClrFailure-Enumeration](eclrfailure-enumeration.md)beschriebene Fehler festlegen kann.  
   
  [ESymbolReadingPolicy-Enumeration](esymbolreadingpolicy-enumeration.md)  
  Enthält Werte, mit denen die Richtlinie zum Lesen von Programm Datenbankdateien (PDB) festgelegt wird.  
   
  [ETaskType-Enumeration](etasktype-enumeration.md)  
- Enthält Werte, die die Art der Aufgabe angeben, die durch eine [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) oder eine [IHostTask-Schnitt](ihosttask-interface.md) Stelle dargestellt wird.  
+ Enthält Werte, die die Art der Aufgabe angeben, die durch eine [ICLRTask-Schnittstelle](iclrtask-interface.md) oder eine [IHostTask-Schnitt](ihosttask-interface.md) Stelle dargestellt wird.  
   
  [HOST_TYPE-Enumeration](host-type-enumeration.md)  
  Enthält Werte, die den Typ des Hosts angeben, von dem eine Anwendung gestartet wird.  
@@ -108,10 +108,10 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Gibt die Aktion an, die ein Host bei einem von den CLR-Blöcken angeforderten Vorgang ausführen soll.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Hosting-Co-Klassen](hosting-coclasses.md)  
+ [Hosten von Co-Klassen](hosting-coclasses.md)  
   
- [Hostingschnittstellen](hosting-interfaces.md)  
+ [Hosten von Schnittstellen](hosting-interfaces.md)  
   
  [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)  
   
- [Hostingstrukturen](hosting-structures.md)
+ [Hosten von Strukturen](hosting-structures.md)

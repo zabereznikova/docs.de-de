@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762075"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501650"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName-Schnittstelle
 Stellt grundlegende globale statische Funktionen zum Signieren von Assemblys mit starken Namen bereit. Alle `ICLRStrongName` Methoden geben Standard-com-HRESULTs zurück.  
@@ -35,7 +35,7 @@ Stellt grundlegende globale statische Funktionen zum Signieren von Assemblys mit
 |[GetHashFromFileW-Methode](iclrstrongname-gethashfromfilew-method.md)|Generiert einen Hashwert für den Inhalt der durch eine Unicode-Zeichenfolge angegebenen Datei.|  
 |[GetHashFromHandle-Methode](iclrstrongname-gethashfromhandle-method.md)|Generiert einen Hashwert für den Inhalt der Datei mit dem angegebenen Dateihandle unter Verwendung des angegebenen Hashalgorithmus.|  
 |[StrongNameCompareAssemblies-Methode](iclrstrongname-strongnamecompareassemblies-method.md)|Bestimmt, ob sich zwei Assemblys nur durch die Signaturen ihrer starken Namen unterscheiden.|  
-|[StrongNameFreeBuffer-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Gibt Arbeitsspeicher frei, der mit einem vorherigen Aufruf einer starken Namens Methode wie [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)oder [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)zugeordnet wurde.|  
+|[StrongNameFreeBuffer-Methode](iclrstrongname-strongnamefreebuffer-method.md)|Gibt Arbeitsspeicher frei, der mit einem vorherigen Aufruf einer starken Namens Methode wie [StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)oder [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)zugeordnet wurde.|  
 |[StrongNameGetBlob-Methode](iclrstrongname-strongnamegetblob-method.md)|Füllt den angegebenen Puffer mit der binären Darstellung der ausführbaren Datei an der angegebenen Adresse auf.|  
 |[StrongNameGetBlobFromImage-Methode](iclrstrongname-strongnamegetblobfromimage-method.md)|Ruft eine binäre Darstellung des Assemblyimages an der angegebenen Speicheradresse ab.|  
 |[StrongNameGetPublicKey-Methode](iclrstrongname-strongnamegetpublickey-method.md)|Ruft den öffentlichen Schlüssel aus einem privaten/öffentlichen Schlüsselpaar ab.|  
@@ -54,7 +54,7 @@ Stellt grundlegende globale statische Funktionen zum Signieren von Assemblys mit
 |[StrongNameTokenFromAssemblyEx-Methode](iclrstrongname-strongnametokenfromassemblyex-method.md)|Erstellt ein Token mit starkem Namen aus der angegebenen Assemblydatei und gibt den öffentlichen Schlüssel zurück.|  
 |[StrongNameTokenFromPublicKey-Methode](iclrstrongname-strongnametokenfrompublickey-method.md)|Ruft ein Token ab, das einen öffentlichen Schlüssel darstellt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie können eine Instanz von abrufen, `ICLRStrongName` indem Sie die [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) -Methode mithilfe von `CLSID_CLRStrongName` und `IID_ICLRStrongName` als Parameter aufrufen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
@@ -66,7 +66,7 @@ Stellt grundlegende globale statische Funktionen zum Signieren von Assemblys mit
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-ms.openlocfilehash: d1683965193801dbdee038ab06366178891fd978
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: af226f9317b67b23e03d06614ed5b9c956939c22
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426724"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503418"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints-Methode
 Ruft einen Enumerator für ein Array von generischen Parameter Einschränkungen ab, die dem generischen Parameter zugeordnet sind, der durch das angegebene Token dargestellt wird.  
@@ -48,28 +48,28 @@ HRESULT EnumGenericParamConstraints (
  vorgenommen Das Array der zu enumerieren generischen Parameter Einschränkungen.  
   
  `cMax`  
- in   Die angeforderte maximale Anzahl von Token, die in `rGenericParamConstraints`platziert werden sollen.  
+ in   Die angeforderte maximale Anzahl von Token, die in platziert werden sollen `rGenericParamConstraints` .  
   
  `pcGenericParamConstraints`  
- vorgenommen Ein Zeiger auf die Anzahl von Token, die in `rGenericParamConstraints`platziert werden.  
+ vorgenommen Ein Zeiger auf die Anzahl von Token, die in platziert werden `rGenericParamConstraints` .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` erfolgreich zurückgegeben.|  
-|`S_FALSE`|`phEnum` hat keine Member-Elemente. In diesem Fall wird `pcGenericParameterConstraints` auf 0 (null) festgelegt.|  
+|`S_OK`|`EnumGenericParameterConstraints`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|`phEnum`hat keine Member-Elemente. In diesem Fall `pcGenericParameterConstraints` wird auf 0 (null) festgelegt.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

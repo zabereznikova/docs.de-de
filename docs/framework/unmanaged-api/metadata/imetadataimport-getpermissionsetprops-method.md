@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: 5faf1a6ae89045b2ef17fab789ee6e5bf23eecf2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54c75156c32e5b40aa933ef6530b2cc33edf7de4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175342"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490990"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps-Methode
-Ruft die Metadaten <xref:System.Security.PermissionSet?displayProperty=nameWithType> ab, die dem dargestellten durch das angegebene Berechtigungstoken zugeordnet sind.  
+Ruft die Metadaten ab, die dem <xref:System.Security.PermissionSet?displayProperty=nameWithType> durch das angegebene Berechtigungs Token dargestellten zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,28 +38,28 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>Parameter  
  `pm`  
- [in] Das Berechtigungsmetadatentoken, das den Berechtigungssatz zum Abrufen der Metadateneigenschaften darstellt.  
+ in Das Berechtigungs Metadatentoken, das den Berechtigungs Satz darstellt, für den die Metadateneigenschaften zu erhalten sind  
   
  `pdwAction`  
- [out] Ein Zeiger auf den Berechtigungssatz.  
+ vorgenommen Ein Zeiger auf den Berechtigungs Satz.  
   
  `ppvPermission`  
- [out] Ein Zeiger auf die binäre Metadatensignatur des Berechtigungssatzes.  
+ vorgenommen Ein Zeiger auf die binäre Metadatensignatur des Berechtigungs Satzes.  
   
  `pcbPermission`  
- [out] Die Größe in `ppvPermission`Bytes von .  
+ vorgenommen Die Größe von in Bytes `ppvPermission` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - <xref:System.Security.PermissionSet>
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

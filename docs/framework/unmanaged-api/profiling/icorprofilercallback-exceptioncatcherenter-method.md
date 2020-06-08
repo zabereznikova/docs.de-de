@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-ms.openlocfilehash: 534e0672820cc2509f32765274ad970fda69ec5d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9d0ef4da4ba6c8db49bcb0b40911756f7d9db66d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866506"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500316"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter-Methode
-Benachrichtigt den Profiler, dass das Steuerelement an den entsprechenden `catch`-Block übermittelt wird.  
+Benachrichtigt den Profiler, dass das Steuerelement an den entsprechenden-Block übermittelt wird `catch` .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,7 +33,7 @@ HRESULT ExceptionCatcherEnter(
     [in] ObjectID   objectId);  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 - `functionId`
 
@@ -43,23 +43,23 @@ HRESULT ExceptionCatcherEnter(
 
   \[in] der Bezeichner der Ausnahme, die behandelt wird.
 
-## <a name="remarks"></a>Hinweise  
- Die `ExceptionCatcherEnter`-Methode wird nur aufgerufen, wenn sich der Catch-Punkt im Code befindet, der mit dem JIT-Compiler (Just-in-Time) kompiliert wurde. Eine Ausnahme, die in nicht verwaltetem Code oder im internen Code der Laufzeit abgefangen wird, ruft diese Benachrichtigung nicht auf. Der `objectId` Wert wird erneut weitergegeben, da ein Garbage Collection das Objekt seit der `ExceptionThrown` Benachrichtigung verschieben könnte.  
+## <a name="remarks"></a>Bemerkungen  
+ Die- `ExceptionCatcherEnter` Methode wird nur aufgerufen, wenn sich der Catch-Punkt im Code befindet, der mit dem JIT-Compiler (Just-in-Time) kompiliert wurde. Eine Ausnahme, die in nicht verwaltetem Code oder im internen Code der Laufzeit abgefangen wird, ruft diese Benachrichtigung nicht auf. Der `objectId` Wert wird erneut weitergegeben, da ein Garbage Collection das Objekt seit der Benachrichtigung verschieben könnte `ExceptionThrown` .  
   
  Der Profiler sollte in seiner Implementierung dieser Methode nicht blockieren, da sich der Stapel möglicherweise nicht in einem Zustand befindet, der Garbage Collection zulässt, und daher können präemptiv Garbage Collection nicht aktiviert werden. Wenn der Profiler hier blockiert wird und Garbage Collection versucht wird, wird die Laufzeit blockiert, bis dieser Rückruf zurückgegeben wird.  
   
  Die Implementierung dieser Methode des Profilers sollte nicht in verwalteten Code oder auf irgendeine Weise eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [ExceptionCatcherLeave-Methode](icorprofilercallback-exceptioncatcherleave-method.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9caea662-0167-4267-b14a-2fa42c3be4ea
 topic_type:
 - apiref
-ms.openlocfilehash: b6ca7c619d32e69ffac20b80561171d0320db2d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7a2a5080872f49a84e36c53ac337d91738c15e45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008377"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501338"
 ---
 # <a name="imetadataconverter-interface"></a>IMetaDataConverter-Schnittstelle
 Stellt Methoden zum Zuordnen von Typbibliotheken zu ihren Metadatensignaturen sowie zum gegenseitigen Konvertieren bereit.  
@@ -28,7 +28,7 @@ Stellt Methoden zum Zuordnen von Typbibliotheken zu ihren Metadatensignaturen so
   
 |Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[GetMetaDataFromTypeInfo-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|Ruft einen Zeiger auf eine [IMetaDataImport](imetadataimport-interface.md) -Instanz ab, die die Metadatensignatur der Typbibliothek darstellt, auf die von der angegebenen-Instanz verwiesen wird `ITypeInfo` .|  
+|[GetMetaDataFromTypeInfo-Methode](imetadataconverter-getmetadatafromtypeinfo-method.md)|Ruft einen Zeiger auf eine [IMetaDataImport](imetadataimport-interface.md) -Instanz ab, die die Metadatensignatur der Typbibliothek darstellt, auf die von der angegebenen-Instanz verwiesen wird `ITypeInfo` .|  
 |[GetMetaDataFromTypeLib-Methode](imetadataconverter-getmetadatafromtypelib-method.md)|Ruft einen Zeiger auf eine- `IMetaDataImport` Instanz ab, die die Metadatensignatur für die Typbibliothek darstellt, die von der angegebenen-Instanz dargestellt wird `ITypeLib` .|  
 |[GetTypeLibFromMetaData-Methode](imetadataconverter-gettypelibfrommetadata-method.md)|Ruft einen Zeiger auf eine- `ITypeLib` Instanz ab, die die Typbibliothek darstellt, die über die angegebenen Module und Bibliotheksnamen verfügt.|  
   
@@ -41,7 +41,7 @@ Stellt Methoden zum Zuordnen von Typbibliotheken zu ihren Metadatensignaturen so
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Metadatenschnittstellen](metadata-interfaces.md)
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

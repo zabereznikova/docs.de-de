@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c42b5891-019d-46b3-b551-4606295b75b8
 topic_type:
 - apiref
-ms.openlocfilehash: 823cc5638ff3e0955aca0bd9ba5795f6b369c6b0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: e7193526bb0da1d28da4bf6bde108fc4d3fba273
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863620"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503015"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo-Methode
 Ruft die übergeordnete Klasse und das Metadatentoken für die angegebene Funktion ab.  
@@ -35,7 +35,7 @@ HRESULT GetFunctionInfo(
     [out] mdToken    *pToken);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `functionId`  
  in Die ID der Funktion, für die die übergeordnete Klasse und das Metadatentoken zu erhalten sind.  
   
@@ -48,20 +48,20 @@ HRESULT GetFunctionInfo(
  `pToken`  
  [out] Ein Zeiger auf das Metadatentoken für die Funktion.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Profiler-Code kann [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) aufrufen, um eine Metadatenschnittstelle für ein bestimmtes Modul zu erhalten. Das Metadatentoken, das an den Speicherort zurückgegeben wird, auf den durch `pToken` verwiesen wird, kann anschließend für den Zugriff auf die Metadaten für die Funktion verwendet werden.  
   
- Die `ClassID` einer Funktion in einer generischen Klasse ist möglicherweise ohne kontextabhängige Informationen zur Verwendung der Funktion nicht zugänglich. In diesem Fall ist `pClassId` 0. Der Profiler-Code sollte [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) mit einem COR_PRF_FRAME_INFO Wert verwenden, um mehr Kontext bereitzustellen.  
+ Die einer `ClassID` Funktion einer generischen Klasse kann nicht ohne kontextabhängige Informationen zur Verwendung der Funktion nicht verwendet werden. In diesem Fall ist 0 (null) `pClassId` . Der Profiler-Code sollte [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) mit einem COR_PRF_FRAME_INFO Wert verwenden, um mehr Kontext bereitzustellen.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 0a677e33950f178b916a5e9e9cbb7bd918c1349b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 80054a8292c69b957664cb3573b0a8694c7f9fd2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866610"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500402"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted-Methode
 Benachrichtigt den Profiler, dass eine Assembly entladen wird.  
@@ -32,25 +32,25 @@ HRESULT AssemblyUnloadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 - `assemblyId`
 
   \[in] identifiziert die Assembly, die entladen wird.
 
-## <a name="remarks"></a>Hinweise  
- Der Wert `assemblyId` ist für eine Informationsanforderung nicht gültig, nachdem die `AssemblyUnloadStarted`-Methode zurückgegeben wurde – dies ist die letzte Möglichkeit des Profilers, Informationen zu dieser Assembly zu erhalten.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Wert von `assemblyId` ist für eine Informationsanforderung nach dem `AssemblyUnloadStarted` zurückkehren der Methode ungültig – Dies ist die letzte Möglichkeit des Profilers, Informationen zu dieser Assembly zu erhalten.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [AssemblyUnloadFinished-Methode](icorprofilercallback-assemblyunloadfinished-method.md)

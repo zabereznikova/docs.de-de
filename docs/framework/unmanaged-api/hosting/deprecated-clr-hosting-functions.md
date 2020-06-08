@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 8925278bdf4d48efc9e589ffc4e181d904444e6b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616423"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504367"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Veraltete CLR-Hostingfunktionen
 In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen beschrieben, die von früheren Versionen der Hosting-API verwendet wurden.  
@@ -24,7 +24,7 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Veraltet. Erstellt eine Instanz des angegebenen verwalteten Typs.  
   
  [CoInitializeCor-Funktion](coinitializecor-function.md)  
- Veraltet. Verwenden Sie zum Initialisieren des Common Language Runtime (CLR) entweder [corbindtoriuntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder [corbindumcurrentruntime](corbindtocurrentruntime-function.md).  
+ Veraltet. Verwenden Sie zum Initialisieren des Common Language Runtime (CLR) entweder [corbindtoriuntimeex](corbindtoruntimeex-function.md) oder [corbindumcurrentruntime](corbindtocurrentruntime-function.md).  
   
  [CoInitializeEE-Funktion](coinitializeee-function.md)  
  Veraltet. Stellt sicher, dass die CLR-Ausführungs-Engine in einen Prozess geladen wird. Verwenden Sie stattdessen die [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md) -Methode.  
@@ -156,6 +156,6 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  [_CorValidateImage-Funktion](corvalidateimage-function.md)  
  Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Hosten globaler statischer .NET Framework 4-Funktionen](net-framework-4-hosting-global-static-functions.md)

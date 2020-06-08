@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175368"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503614"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps-Methode
 Ruft Metadaten ab, die dem Element zugeordnet sind, auf das durch das angegebene Token verwiesen wird.  
@@ -41,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parameter  
  `mr`  
- [in] Das MemberRef-Token, für das zugeordnete Metadaten zurückgegeben werden sollen.  
+ in Das Element, für das die zugeordneten Metadaten zurückgegeben werden sollen.  
   
  `ptk`  
- [out] Ein TypeDef- oder TypeRef- oder TypeSpec-Token, das die Klasse darstellt, die den Member deklariert, oder ein ModuleRef-Token, das die Modulklasse darstellt, die den Member deklariert, oder ein MethodDef, das den Member darstellt.  
+ vorgenommen Ein TypeDef-oder TypeRef-oder TypeSpec-Token, das die Klasse darstellt, die den Member deklariert, oder ein ModuleRef-Token, das die Modul Klasse darstellt, die den Member deklariert, oder ein MethodDef-Token, das den Member darstellt.  
   
  `szMember`  
- [out] Ein Zeichenfolgenpuffer für den Namen des Elements.  
+ vorgenommen Ein Zeichen folgen Puffer für den Namen des Members.  
   
  `cchMember`  
- [in] Die angeforderte Größe `szMember`in breiten Zeichen von .  
+ in Die angeforderte Größe in breit Zeichen von `szMember` .  
   
  `pchMember`  
- [out] Die zurückgegebene Größe `szMember`in breiten Zeichen von .  
+ vorgenommen Die zurückgegebene Größe in breit Zeichen von `szMember` .  
   
  `ppvSibBlob`  
- [out] Ein Zeiger auf die binäre Metadatensignatur für das Element.  
+ vorgenommen Ein Zeiger auf die binäre Metadatensignatur für den Member.  
   
  `pbSig`  
- [out] Die Größe in `ppvSigBlob`Bytes von .  
+ vorgenommen Die Größe von in Bytes `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: c788bb7c-0212-4b6d-b840-22e8c8829028
 topic_type:
 - apiref
-ms.openlocfilehash: ff79f0268226739ec9cf6abeeda791bf45644a40
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e81055163e5cbd64ecfbb412704e43e7663ccd45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432346"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501078"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2-Schnittstelle
-Erweitert [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) , um Methoden zum Arbeiten mit Metadatenstreams einzubeziehen.  
+Erweitert [IMetaDataTables](imetadatatables-interface.md) , um Methoden zum Arbeiten mit Metadatenstreams einzubeziehen.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[GetMetaDataStorage-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Ruft die Größe und den Inhalt der Metadaten ab, die im angegebenen Abschnitt gespeichert werden.|  
-|[GetMetaDataStreamInfo-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Ruft den Namen, die Größe und den Inhalt des Metadatenstreams am angegebenen Index ab.|  
+|[GetMetaDataStorage-Methode](imetadatatables2-getmetadatastorage-method.md)|Ruft die Größe und den Inhalt der Metadaten ab, die im angegebenen Abschnitt gespeichert werden.|  
+|[GetMetaDataStreamInfo-Methode](imetadatatables2-getmetadatastreaminfo-method.md)|Ruft den Namen, die Größe und den Inhalt des Metadatenstreams am angegebenen Index ab.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [IMetaDataTables-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataTables-Schnittstelle](imetadatatables-interface.md)
+- [Metadatenschnittstellen](metadata-interfaces.md)
