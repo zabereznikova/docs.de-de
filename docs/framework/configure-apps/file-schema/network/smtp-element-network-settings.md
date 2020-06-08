@@ -1,5 +1,6 @@
 ---
 title: <smtp>-Element (Netzwerkeinstellungen)
+description: Das <smtp> Netzwerk Einstellungs Element konfiguriert das Übermittlungs Format, die Übermittlungs Methode und die Absenderadresse für das Senden von e-Mail-Optionen in der .NET Framework.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b30b82922a69ea660f4c4abfd808e89fa9945183
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089098"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504510"
 ---
-# <a name="smtp-element-network-settings"></a><span data-ttu-id="734f0-102">\<smtp>-Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="734f0-102">\<smtp> Element (Network Settings)</span></span>
-<span data-ttu-id="734f0-103">Konfiguriert das Übermittlungs Format, die Übermittlungs Methode und die Absenderadresse für das Senden von e-Mails.</span><span class="sxs-lookup"><span data-stu-id="734f0-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  
+# <a name="smtp-element-network-settings"></a><span data-ttu-id="36bff-103">\<smtp>-Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="36bff-103">\<smtp> Element (Network Settings)</span></span>
+<span data-ttu-id="36bff-104">Konfiguriert das Übermittlungs Format, die Übermittlungs Methode und die Absenderadresse für das Senden von e-Mails.</span><span class="sxs-lookup"><span data-stu-id="36bff-104">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<smtp>**
   
-## <a name="syntax"></a><span data-ttu-id="734f0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="734f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36bff-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="36bff-105">Syntax</span></span>  
   
 ```xml  
 <smtp  
@@ -35,32 +36,32 @@ ms.locfileid: "74089098"
 </smtp>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="734f0-105">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="734f0-105">Attributes and Elements</span></span>  
- <span data-ttu-id="734f0-106">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="734f0-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="36bff-106">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="36bff-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="36bff-107">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="36bff-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="734f0-107">Attribute</span><span class="sxs-lookup"><span data-stu-id="734f0-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="36bff-108">Attribute</span><span class="sxs-lookup"><span data-stu-id="36bff-108">Attributes</span></span>  
   
-|<span data-ttu-id="734f0-108">attribute</span><span class="sxs-lookup"><span data-stu-id="734f0-108">Attribute</span></span>|<span data-ttu-id="734f0-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="734f0-109">Description</span></span>|  
+|<span data-ttu-id="36bff-109">attribute</span><span class="sxs-lookup"><span data-stu-id="36bff-109">Attribute</span></span>|<span data-ttu-id="36bff-110">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="36bff-110">Description</span></span>|  
 |---------------|-----------------|  
-|`deliveryFormat`|<span data-ttu-id="734f0-110">Gibt das Übermittlungs Format für ausgehende e-Mails an.</span><span class="sxs-lookup"><span data-stu-id="734f0-110">Specifies the delivery format for outgoing emails.</span></span> <span data-ttu-id="734f0-111">Zulässige Werte sind "SevenBit" und "International".</span><span class="sxs-lookup"><span data-stu-id="734f0-111">Acceptable values are SevenBit and International.</span></span>|  
-|`deliveryMethod`|<span data-ttu-id="734f0-112">Gibt die Übermittlungs Methode für e-Mails an.</span><span class="sxs-lookup"><span data-stu-id="734f0-112">Specifies the delivery method for emails.</span></span> <span data-ttu-id="734f0-113">Zulässige Werte sind Network, pickupdirectoriyfromiis und SpecifiedPickupDirectory.</span><span class="sxs-lookup"><span data-stu-id="734f0-113">Acceptable values are Network, PickupDirectoryFromIis, and SpecifiedPickupDirectory.</span></span>|  
-|`from`|<span data-ttu-id="734f0-114">Gibt die from-Adresse für ausgehende e-Mails an.</span><span class="sxs-lookup"><span data-stu-id="734f0-114">Specifies the from address for outgoing emails.</span></span>|  
+|`deliveryFormat`|<span data-ttu-id="36bff-111">Gibt das Übermittlungs Format für ausgehende e-Mails an.</span><span class="sxs-lookup"><span data-stu-id="36bff-111">Specifies the delivery format for outgoing emails.</span></span> <span data-ttu-id="36bff-112">Zulässige Werte sind "SevenBit" und "International".</span><span class="sxs-lookup"><span data-stu-id="36bff-112">Acceptable values are SevenBit and International.</span></span>|  
+|`deliveryMethod`|<span data-ttu-id="36bff-113">Gibt die Übermittlungs Methode für e-Mails an.</span><span class="sxs-lookup"><span data-stu-id="36bff-113">Specifies the delivery method for emails.</span></span> <span data-ttu-id="36bff-114">Zulässige Werte sind Network, pickupdirectoriyfromiis und SpecifiedPickupDirectory.</span><span class="sxs-lookup"><span data-stu-id="36bff-114">Acceptable values are Network, PickupDirectoryFromIis, and SpecifiedPickupDirectory.</span></span>|  
+|`from`|<span data-ttu-id="36bff-115">Gibt die from-Adresse für ausgehende e-Mails an.</span><span class="sxs-lookup"><span data-stu-id="36bff-115">Specifies the from address for outgoing emails.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="734f0-115">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="734f0-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="36bff-116">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="36bff-116">Child Elements</span></span>  
   
-|<span data-ttu-id="734f0-116">attribute</span><span class="sxs-lookup"><span data-stu-id="734f0-116">Attribute</span></span>|<span data-ttu-id="734f0-117">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="734f0-117">Description</span></span>|  
+|<span data-ttu-id="36bff-117">attribute</span><span class="sxs-lookup"><span data-stu-id="36bff-117">Attribute</span></span>|<span data-ttu-id="36bff-118">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="36bff-118">Description</span></span>|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|<span data-ttu-id="734f0-118">Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Protocol)-Server.</span><span class="sxs-lookup"><span data-stu-id="734f0-118">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
-|`network`|<span data-ttu-id="734f0-119">Konfiguriert die Netzwerkoptionen für einen externen SMTP-Server.</span><span class="sxs-lookup"><span data-stu-id="734f0-119">Configures the network options for an external SMTP server.</span></span>|  
+|`specifiedPickupDirectory`|<span data-ttu-id="36bff-119">Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Protocol)-Server.</span><span class="sxs-lookup"><span data-stu-id="36bff-119">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
+|`network`|<span data-ttu-id="36bff-120">Konfiguriert die Netzwerkoptionen für einen externen SMTP-Server.</span><span class="sxs-lookup"><span data-stu-id="36bff-120">Configures the network options for an external SMTP server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="734f0-120">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="734f0-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="36bff-121">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="36bff-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="734f0-121">**Element**</span><span class="sxs-lookup"><span data-stu-id="734f0-121">**Element**</span></span>|<span data-ttu-id="734f0-122">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="734f0-122">**Description**</span></span>|  
+|<span data-ttu-id="36bff-122">**Element**</span><span class="sxs-lookup"><span data-stu-id="36bff-122">**Element**</span></span>|<span data-ttu-id="36bff-123">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="36bff-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="734f0-123">\<mailSettings>-Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="734f0-123">\<mailSettings> Element (Network Settings)</span></span>](mailsettings-element-network-settings.md)|<span data-ttu-id="734f0-124">Konfiguriert E-Mail-Sendeoptionen.</span><span class="sxs-lookup"><span data-stu-id="734f0-124">Configures mail sending options.</span></span>|  
+|[<span data-ttu-id="36bff-124">\<mailSettings>-Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="36bff-124">\<mailSettings> Element (Network Settings)</span></span>](mailsettings-element-network-settings.md)|<span data-ttu-id="36bff-125">Konfiguriert E-Mail-Sendeoptionen.</span><span class="sxs-lookup"><span data-stu-id="36bff-125">Configures mail sending options.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="734f0-125">Beispiel</span><span class="sxs-lookup"><span data-stu-id="734f0-125">Example</span></span>  
- <span data-ttu-id="734f0-126">Im folgenden Beispiel werden die entsprechenden SMTP-Parameter zum Senden von e-Mails mit den standardmäßigen Netzwerk Anmelde Informationen angegeben.</span><span class="sxs-lookup"><span data-stu-id="734f0-126">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="36bff-126">Beispiel</span><span class="sxs-lookup"><span data-stu-id="36bff-126">Example</span></span>  
+ <span data-ttu-id="36bff-127">Im folgenden Beispiel werden die entsprechenden SMTP-Parameter zum Senden von e-Mails mit den standardmäßigen Netzwerk Anmelde Informationen angegeben.</span><span class="sxs-lookup"><span data-stu-id="36bff-127">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,10 +79,10 @@ ms.locfileid: "74089098"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="734f0-127">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="734f0-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="36bff-128">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="36bff-128">See also</span></span>
 
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [<span data-ttu-id="734f0-128">Netzwerkeinstellungsschema</span><span class="sxs-lookup"><span data-stu-id="734f0-128">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="36bff-129">Netzwerkeinstellungsschema</span><span class="sxs-lookup"><span data-stu-id="36bff-129">Network Settings Schema</span></span>](index.md)
