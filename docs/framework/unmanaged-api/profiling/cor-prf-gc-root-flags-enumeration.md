@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-ms.openlocfilehash: 0210aca5698cd9c86979c13afd1e622b50d194df
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: bbc163c71b47e6fee0db89284d6e3fd27e882768
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867182"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500885"
 ---
-# <a name="cor_prf_gc_root_flags-enumeration"></a><span data-ttu-id="15712-102">COR_PRF_GC_ROOT_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="15712-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
-<span data-ttu-id="15712-103">Gibt eine Eigenschaft eines Garbage Collection Stamms an.</span><span class="sxs-lookup"><span data-stu-id="15712-103">Indicates a property of a garbage collection root.</span></span>  
+# <a name="cor_prf_gc_root_flags-enumeration"></a><span data-ttu-id="0be26-102">COR_PRF_GC_ROOT_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="0be26-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
+<span data-ttu-id="0be26-103">Gibt eine Eigenschaft eines Garbage Collection Stamms an.</span><span class="sxs-lookup"><span data-stu-id="0be26-103">Indicates a property of a garbage collection root.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15712-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="15712-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0be26-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0be26-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,27 +35,27 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="15712-105">Member</span><span class="sxs-lookup"><span data-stu-id="15712-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0be26-105">Member</span><span class="sxs-lookup"><span data-stu-id="0be26-105">Members</span></span>  
   
-|<span data-ttu-id="15712-106">Member</span><span class="sxs-lookup"><span data-stu-id="15712-106">Member</span></span>|<span data-ttu-id="15712-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="15712-107">Description</span></span>|  
+|<span data-ttu-id="0be26-106">Member</span><span class="sxs-lookup"><span data-stu-id="0be26-106">Member</span></span>|<span data-ttu-id="0be26-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0be26-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|<span data-ttu-id="15712-108">Der Stamm verhindert, dass ein Garbage Collection das Objekt verschiebt.</span><span class="sxs-lookup"><span data-stu-id="15712-108">The root prevents a garbage collection from moving the object.</span></span>|  
-|`COR_PRF_GC_ROOT_WEAKREF`|<span data-ttu-id="15712-109">Der Stamm verhindert keine Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="15712-109">The root does not prevent garbage collection.</span></span>|  
-|`COR_PRF_GC_ROOT_INTERIOR`|<span data-ttu-id="15712-110">Der Stamm verweist auf ein Feld des-Objekts und nicht auf das-Objekt selbst.</span><span class="sxs-lookup"><span data-stu-id="15712-110">The root refers to a field of the object rather than the object itself.</span></span>|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|<span data-ttu-id="15712-111">Der Stamm verhindert die Garbage Collection, wenn der Verweis Zähler des Objekts ein bestimmter Wert ist.</span><span class="sxs-lookup"><span data-stu-id="15712-111">The root prevents garbage collection if the reference count of the object is a certain value.</span></span>|  
+|`COR_PRF_GC_ROOT_PINNING`|<span data-ttu-id="0be26-108">Der Stamm verhindert, dass ein Garbage Collection das Objekt verschiebt.</span><span class="sxs-lookup"><span data-stu-id="0be26-108">The root prevents a garbage collection from moving the object.</span></span>|  
+|`COR_PRF_GC_ROOT_WEAKREF`|<span data-ttu-id="0be26-109">Der Stamm verhindert keine Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="0be26-109">The root does not prevent garbage collection.</span></span>|  
+|`COR_PRF_GC_ROOT_INTERIOR`|<span data-ttu-id="0be26-110">Der Stamm verweist auf ein Feld des-Objekts und nicht auf das-Objekt selbst.</span><span class="sxs-lookup"><span data-stu-id="0be26-110">The root refers to a field of the object rather than the object itself.</span></span>|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|<span data-ttu-id="0be26-111">Der Stamm verhindert die Garbage Collection, wenn der Verweis Zähler des Objekts ein bestimmter Wert ist.</span><span class="sxs-lookup"><span data-stu-id="0be26-111">The root prevents garbage collection if the reference count of the object is a certain value.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="15712-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="15712-112">Remarks</span></span>  
- <span data-ttu-id="15712-113">`COR_PRF_GC_ROOT_FLAGS` ist eine Bitmaske, die zusätzliche Informationen zu speziellen Stämmen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="15712-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span></span> <span data-ttu-id="15712-114">Allerdings sind nicht alle Stämme speziell.</span><span class="sxs-lookup"><span data-stu-id="15712-114">However, not all roots are special.</span></span> <span data-ttu-id="15712-115">Einige Stämme sind z. b. keine schwachen Verweise, inneren Zeiger, fixiert oder Verweis Zählung.</span><span class="sxs-lookup"><span data-stu-id="15712-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span></span> <span data-ttu-id="15712-116">Für solche Stämme gibt es keine zu über Mittelung.</span><span class="sxs-lookup"><span data-stu-id="15712-116">For such roots, there are no flags to convey.</span></span> <span data-ttu-id="15712-117">Daher senden Methoden, die diese Enumeration verwenden, wie z. b. die [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) -Methode, 0 für die Flags-Bitmaske, die angibt, dass alle Flags ausgeschaltet sind.</span><span class="sxs-lookup"><span data-stu-id="15712-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0be26-112">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="0be26-112">Remarks</span></span>  
+ <span data-ttu-id="0be26-113">`COR_PRF_GC_ROOT_FLAGS`ist eine Bitmaske, die zusätzliche Informationen über spezielle Stämme bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="0be26-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span></span> <span data-ttu-id="0be26-114">Allerdings sind nicht alle Stämme speziell.</span><span class="sxs-lookup"><span data-stu-id="0be26-114">However, not all roots are special.</span></span> <span data-ttu-id="0be26-115">Einige Stämme sind z. b. keine schwachen Verweise, inneren Zeiger, fixiert oder Verweis Zählung.</span><span class="sxs-lookup"><span data-stu-id="0be26-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span></span> <span data-ttu-id="0be26-116">Für solche Stämme gibt es keine zu über Mittelung.</span><span class="sxs-lookup"><span data-stu-id="0be26-116">For such roots, there are no flags to convey.</span></span> <span data-ttu-id="0be26-117">Daher senden Methoden, die diese Enumeration verwenden, wie z. b. die [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) -Methode, 0 für die Flags-Bitmaske, die angibt, dass alle Flags ausgeschaltet sind.</span><span class="sxs-lookup"><span data-stu-id="0be26-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15712-118">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="15712-118">Requirements</span></span>  
- <span data-ttu-id="15712-119">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15712-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0be26-118">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="0be26-118">Requirements</span></span>  
+ <span data-ttu-id="0be26-119">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0be26-119">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15712-120">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="15712-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0be26-120">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0be26-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="15712-121">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15712-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0be26-121">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0be26-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="15712-122">**.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15712-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0be26-122">**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0be26-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15712-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="15712-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0be26-123">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="0be26-123">See also</span></span>
 
-- [<span data-ttu-id="15712-124">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="15712-124">Profiling Enumerations</span></span>](profiling-enumerations.md)
+- [<span data-ttu-id="0be26-124">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="0be26-124">Profiling Enumerations</span></span>](profiling-enumerations.md)
