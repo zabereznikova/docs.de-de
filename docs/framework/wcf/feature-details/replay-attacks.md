@@ -2,20 +2,20 @@
 title: Wiederholungsangriffe
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: 6874e87ba2a50bb496c5d7bf091fd670510ab840
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47a4726859605415b4e3e1b4d523f2f8059a3989
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626862"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586298"
 ---
 # <a name="replay-attacks"></a>Wiederholungsangriffe
-Ein *Wiederholungsangriff* tritt auf, wenn ein Angreifer einen Nachrichtenstream zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Stream wie zulässige Nachrichten, was eine Reihe negativer Konsequenzen wie redundante Bestellungen eines Artikels zur Folge hat.  
+Ein *Replay-Angriff* tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Datenstrom für eine oder mehrere der Parteien wieder gibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Stream wie zulässige Nachrichten, was eine Reihe negativer Konsequenzen wie redundante Bestellungen eines Artikels zur Folge hat.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Bindungen sind möglicherweise Reflektionsangriffen ausgesetzt  
- *Reflektionsangriffe* Replays von Nachrichten an einen Sender sind, als ob sie vom Empfänger der Antwort stammt. Der Standard *replay-Erkennung* in der Windows Communication Foundation (WCF) Mechanismus wird nicht automatisch behandelt.  
+ *Reflektionsangriffe* werden Nachrichten zurück an einen Absender wiedergeben, als ob Sie vom Empfänger als Antwort empfangen wurden. Die Standard *Wiedergabe Erkennung* im Windows Communication Foundation (WCF)-Mechanismus behandelt dies nicht automatisch.  
   
- Reflektionsangriffe werden standardmäßig abgeschwächt, da die WCF-Dienstmodells eine signierte Nachrichtenkennung, für Anforderungsnachrichten hinzufügt und eine signierte erwartet `relates-to` Header in Antwortnachrichten. Infolgedessen kann die Anforderungsnachricht nicht als Antwort wiederholt werden. In sicheren Szenarien mit zuverlässigem Messaging werden Reflektionsangriffe aus folgenden Gründen abgemildert:  
+ Reflektionsangriffe werden standardmäßig gemindert, da das WCF-Dienstmodell eine signierte Meldungs-ID zum Anfordern von Nachrichten hinzufügt und einen signierten `relates-to` Header für Antwort Nachrichten erwartet. Infolgedessen kann die Anforderungsnachricht nicht als Antwort wiederholt werden. In sicheren Szenarien mit zuverlässigem Messaging werden Reflektionsangriffe aus folgenden Gründen abgemildert:  
   
 - Die Sequenzerstellung und die Sequenzerstellungsantwort verwenden unterschiedliche Nachrichtenschemas.  
   
@@ -27,20 +27,20 @@ Ein *Wiederholungsangriff* tritt auf, wenn ein Angreifer einen Nachrichtenstream
   
  Zur Entschärfung für benutzerdefinierte Bindungen sollte auf einen Sicherheitskontext verzichtet werden, oder es sollten Header für die WS-Adressierung verwendet werden.  
   
-## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Webfarm: Angreifer Wiederholen von Anforderungen an mehreren Knoten  
+## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Webfarm: Angriff durch Wiederholen von Anforderungen an mehrere Knoten  
  Ein Client verwendet einen Dienst, der in einer Webfarm implementiert ist. Ein Angreifer wiederholt eine Anforderung, die an einen Knoten in der Farm gesendet wurde, für einen anderen Knoten in der Farm. Zusätzlich wird beim Neustart eines Diensts der Wiederholungscache geleert, sodass der Angriff wiederholt werden kann. (Der Cache enthält die bereits verwendeten Signaturen von Nachrichten und verhindert so, dass diese mehrfach verwendet werden können. Wiederholungscaches werden nicht von mehreren Anwendungen in einer Webfarm verwendet.)  
   
  Mögliche Entschärfungen:  
   
-- Verwenden Sie die Nachrichtenmodussicherheit mit zustandsbehafteten Token für den Sicherheitskontext (mit oder ohne sichere Konversation). Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Sicherheitskontext für eine sichere Sitzung Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+- Verwenden Sie die Nachrichtenmodussicherheit mit zustandsbehafteten Token für den Sicherheitskontext (mit oder ohne sichere Konversation). Weitere Informationen finden Sie unter Vorgehens [Weise: Erstellen eines Sicherheitskontext Tokens für eine sichere Sitzung](how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 - Konfigurieren Sie den Dienst für die Sicherheit auf Transportebene.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Sicherheitshinweise](security-considerations-in-wcf.md)
+- [Offenlegung von Informationen](information-disclosure.md)
+- [Rechte Erweiterungen](elevation-of-privilege.md)
+- [Denial of Service](denial-of-service.md)
+- [Manipulation](tampering.md)
+- [Nicht unterstützte Szenarien](unsupported-scenarios.md)

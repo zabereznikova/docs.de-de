@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: 7463f9cfc37c2bf4f271f6e59896a7d77f3f65cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0775de90903aed27a8d0006614a4b6f2d857eee3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772943"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597097"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen
-Sie können vorhandene Message Queuing (MSMQ)-Anwendungen mit Windows Communication Foundation (WCF)-Anwendungen integrieren, mithilfe der Bindung der MSMQ-Integration MSMQ-Nachrichten an und von WCF-Nachrichten konvertiert. Dadurch können Sie einen Aufruf an die MSMQ-empfängeranwendungen von WCF-Clients sowie zum Aufrufen von WCF-Dienste aus der Sender MSMQ-Anwendungen.  
+Sie können vorhandene Message Queuing (MSMQ)-Anwendungen mit Windows Communication Foundation (WCF)-Anwendungen integrieren, indem Sie die MSMQ-Integrations Bindung verwenden, um MSMQ-Nachrichten in und aus WCF-Nachrichten zu konvertieren. Dies ermöglicht es Ihnen, MSMQ-Empfänger Anwendungen von WCF-Clients aus aufzurufen und WCF-Dienste von MSMQ-Absender Anwendungen aufzurufen.  
   
- In diesem Abschnitt wird erläutert, wie mit <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> für eine warteschlangenkommunikation zwischen (1) eine WCF-Client und einem MSMQ-Anwendungsdienst mit System.Messaging und (2) eine MSMQ-Anwendungsclient und einem WCF-Dienst geschrieben.  
+ In diesem Abschnitt wird erläutert, wie Sie <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> für die Warteschlangen Kommunikation zwischen (1) einem WCF-Client und einem MSMQ-Anwendungs Dienst, der mithilfe von System. Messaging geschrieben wurde, und (2) einen MSMQ-Anwendungs Client und einen WCF-Dienst verwenden.  
   
- Ein vollständiges Beispiel, das veranschaulicht, wie eine MSMQ-empfängeranwendung von einem WCF-Client aufgerufen wird, finden Sie unter den [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiel.  
+ Ein umfassendes Beispiel, das veranschaulicht, wie eine MSMQ-Empfänger Anwendung von einem WCF-Client aufgerufen wird, finden Sie im Beispiel [Windows Communication Foundation to Message Queuing](../samples/wcf-to-message-queuing.md) .  
   
- Ein vollständiges Beispiel, das veranschaulicht, wie Sie einen WCF-Dienst von einem MSMQ-Client aufrufen, finden Sie unter den [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) Beispiel.  
+ Ein umfassendes Beispiel, das veranschaulicht, wie ein WCF-Dienst von einem MSMQ-Client aufgerufen wird, finden Sie im Beispiel [Message Queuing to Windows Communication Foundation](../samples/message-queuing-to-wcf.md) .  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>So erstellen Sie einen WCF-Dienst, der Nachrichten von einem MSMQ-Client empfängt  
   
-1. Definieren Sie eine Schnittstelle, die den Dienstvertrag für den WCF-Dienst, der in der Warteschlange Nachrichten aus einer MSMQ-sendeanwendung empfängt definiert, wie im folgenden Beispielcode gezeigt.  
+1. Definieren Sie eine Schnittstelle, die den Dienstvertrag für den WCF-Dienst definiert, der in der Warteschlange befindliche Nachrichten von einer MSMQ-Absender Anwendung empfängt, wie im folgenden Beispielcode gezeigt.  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
@@ -39,12 +39,12 @@ Sie können vorhandene Message Queuing (MSMQ)-Anwendungen mit Windows Communicat
 
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>So erstellen Sie einen WCF-Client, der Nachrichten an eine MSMQ-Empfängeranwendung sendet  
   
-1. Definieren Sie eine Schnittstelle, die den Dienstvertrag für den WCF-Client, sendet die Nachrichten an den MSMQ-Empfänger in der Warteschlange definiert, wie im folgenden Beispielcode gezeigt.  
+1. Definieren Sie eine Schnittstelle, die den Dienstvertrag für den WCF-Client definiert, der Nachrichten in der Warteschlange an den MSMQ-Empfänger sendet, wie im folgenden Beispielcode gezeigt.  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2. Definieren Sie eine Clientklasse, die der WCF-Client verwendet wird, um den MSMQ-Empfänger aufzurufen.  
+2. Definieren Sie eine Client Klasse, die der WCF-Client verwendet, um den MSMQ-Empfänger aufzurufen.  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  
@@ -58,11 +58,11 @@ Sie können vorhandene Message Queuing (MSMQ)-Anwendungen mit Windows Communicat
   
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Vorgehensweise: Austauschen von Nachrichten in der Warteschlange mit wcd-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
-- [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [Warteschlangenübersicht](queues-overview.md)
+- [Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten](how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Windows Communication Foundation zu Message Queuing](../samples/wcf-to-message-queuing.md)
+- [Installieren von Message Queuing (MSMQ)](../samples/installing-message-queuing-msmq.md)
+- [Message Queuing zu Windows Communication Foundation](../samples/message-queuing-to-wcf.md)
+- [Nachrichtensicherheit über Message Queuing](../samples/message-security-over-message-queuing.md)

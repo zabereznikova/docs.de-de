@@ -6,36 +6,36 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000765"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601035"
 ---
 # <a name="security-considerations-in-wcf"></a>Überlegungen zur Sicherheit in WCF
-Die Themen in diesem Abschnitt Liste verschiedene sicherheitsrelevante Punkte beim Entwerfen einer Windows Communication Foundation (WCF)-Anwendung zu berücksichtigen.  
+In den Themen in diesem Abschnitt werden verschiedene sicherheitsrelevante Aspekte aufgeführt, die beim Entwerfen einer Windows Communication Foundation (WCF)-Anwendung zu beachten sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Offenlegung von Informationen](information-disclosure.md)  
  Erläutert, wie Informationen offengelegt und attackiert werden können und wie man diesen Gefahren begegnen kann.  
   
- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Rechte Erweiterungen](elevation-of-privilege.md)  
  Erläutert die Konsequenzen, mit denen zu rechnen ist, wenn einem Angreifer Autorisierungsberechtigungen erteilt werden, die über die ursprünglichen Berechtigungen hinausgehen, und stellt mögliche Gegenmaßnahmen vor.  
   
- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Denial of Service](denial-of-service.md)  
  Erläutert, was geschieht, wenn ein System Nachrichten nicht angemessen verarbeiten kann, und stellt mögliche Gegenmaßnahmen vor.  
   
- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Manipulation](tampering.md)  
  Erläutert die Manipulation von Nachrichten bzw. des Sendens von Nachrichten und stellt mögliche Gegenmaßnahmen vor.  
   
- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Wiederholungsangriffe](replay-attacks.md)  
  Erläutert, was geschieht, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt, und stellt mögliche Gegenmaßnahmen vor.  
   
- [Sicherheitsüberlegungen für sichere Sitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
+ [Sicherheitsüberlegungen für Sicherheitssitzungen](security-considerations-for-secure-sessions.md)  
  Erläutert die folgenden Punkte, die sich bei der Implementierung von Sicherheitssitzungen auf die Sicherheit auswirken.  
   
- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
+ [Nicht unterstützte Szenarien](unsupported-scenarios.md)  
  Führt verschiedene Szenarien auf, die einen bestimmten Sicherheitsaspekt nicht unterstützen und vermieden bzw. mit bestimmten Überlegungen angegangen werden sollten.  
   
 ## <a name="reference"></a>Referenz  
@@ -48,8 +48,8 @@ Die Themen in diesem Abschnitt Liste verschiedene sicherheitsrelevante Punkte be
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Sicherheitsleitfaden und empfohlene Vorgehensweisen](security-guidance-and-best-practices.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)
+- [Security](security.md)

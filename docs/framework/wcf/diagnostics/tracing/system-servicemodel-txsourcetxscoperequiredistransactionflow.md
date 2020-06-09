@@ -2,21 +2,21 @@
 title: System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 ms.date: 03/30/2017
 ms.assetid: 41a3a5d7-bb16-4d16-bb51-db7ac0cfb748
-ms.openlocfilehash: 0958744d1d3eb9a122137330da4621158a256d47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e24e0e15b66bcbcb1429efd7455790f28ea7001
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723029"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595621"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactionflow"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 Die angegebene Transaktion ist in den angegebenen Vorgang übergegangen.  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Wird nachverfolgt, wenn die für Benutzercode verfügbar gemachte Transaktion aus einer externen Quelle kam.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Ablaufverfolgung](index.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [Verwaltung und Diagnose](../index.md)

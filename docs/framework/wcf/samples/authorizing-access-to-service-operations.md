@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: c2ad6977674666ef65df1ea4cfe58cfd4bff8b69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3097c86f50a75dec8a649ca4e1edd2511a046ca8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183927"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585531"
 ---
 # <a name="authorizing-access-to-service-operations"></a>Zugriffsautorisierung für Dienstvorgänge
-In diesem Beispiel wird veranschaulicht, wie die <xref:System.Security.Permissions.PrincipalPermissionAttribute> [ \<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) verwendet wird, um die Verwendung des Attributs zum Autorisieren des Zugriffs auf Dienstvorgänge zu aktivieren. Dieses Beispiel basiert auf dem Beispiel [Erste Schritte.](../../../../docs/framework/wcf/samples/getting-started-sample.md) Der Dienst und der Client werden mit dem [ \<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)konfiguriert. Das `mode` Attribut [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) der>wurde `Message` auf `clientCredentialType` festgelegt und `Windows`auf festgelegt. <xref:System.Security.Permissions.PrincipalPermissionAttribute> wird auf jede Dienstmethode angewandt und für die Beschränkung des Zugriffs auf jeden Vorgang verwendet. Der Aufrufer muss Windows-Administrator sein, um auf jeden Vorgang zugreifen zu können.  
+In diesem Beispiel wird veranschaulicht, wie verwendet wird, um [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) die Verwendung des- <xref:System.Security.Permissions.PrincipalPermissionAttribute> Attributs zum Autorisieren des Zugriffs auf Dienst Vorgänge zu aktivieren. Dieses Beispiel basiert auf dem Beispiel " [Getting Started](getting-started-sample.md) ". Der Dienst und der Client werden mithilfe von konfiguriert [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . Das `mode` -Attribut von wurde [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) auf festgelegt, `Message` und wurde `clientCredentialType` auf festgelegt `Windows` . <xref:System.Security.Permissions.PrincipalPermissionAttribute> wird auf jede Dienstmethode angewandt und für die Beschränkung des Zugriffs auf jeden Vorgang verwendet. Der Aufrufer muss Windows-Administrator sein, um auf jeden Vorgang zugreifen zu können.  
   
  In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Die Dienstkonfigurationsdatei verwendet die `principalPermissionMode` [ \<serviceAuthorization>,](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) um das Attribut zu setzen:  
+ Die Dienst Konfigurationsdatei verwendet zum [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) Festlegen des- `principalPermissionMode` Attributs das-Attribut:  
   
 ```xml  
 <behaviors>  
@@ -53,12 +53,12 @@ public double Add(double n1, double n2)
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Der Client kommuniziert erfolgreich mit jedem Vorgang, wenn er unter einem Konto ausgeführt wird, das zur Administratorgruppe gehört. Andernfalls wird der Zugang verweigert. Um einen Autorisierungsfehler zu provozieren, führen Sie den Client unter einem Konto aus, das nicht zur Administratorgruppe gehört. Drücken Sie im Konsolenfenster die EINGABETASTE, um den Client zu schließen.  
   
- Ein Dienst kann über Autorisierungsfehler benachrichtigt werden, indem man einen <xref:System.ServiceModel.Dispatcher.IErrorHandler> implementiert. Weitere Informationen zum Implementieren `IErrorHandler`finden Sie unter Erweitern der Steuerung über [Fehlerbehandlung und -berichterstattung.](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ Ein Dienst kann über Autorisierungsfehler benachrichtigt werden, indem man einen <xref:System.ServiceModel.Dispatcher.IErrorHandler> implementiert. Informationen zum Implementieren von finden Sie unter [Erweitern der Kontrolle über Fehlerbehandlung und Bericht](extending-control-over-error-handling-and-reporting.md) Erstellung `IErrorHandler` .  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.  
   
-3. Um das Beispiel in einer Einzel- oder Computerkonfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).  

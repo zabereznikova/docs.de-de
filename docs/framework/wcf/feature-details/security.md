@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 0f79ac28af45e8c05922373955c5317095d2c682
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 327fb509a5186a0b3f428efc2ddd7f983bcfa978
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744635"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595142"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
 In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-Sicherheitsfeatures und deren Verwendung zum Sichern von Nachrichten beschrieben.  
@@ -19,56 +19,56 @@ In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-
  Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Sicherheitsübersicht](security-overview.md)  
  Beschreibt die Sicherheitsfunktionen in WCF.  
   
- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Sicherheitskonzepte](security-concepts.md)  
  Beschreibt die grundlegende Terminologie und Konzepte der WCF-Sicherheit.  
   
- [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ [Häufige Sicherheitsszenarien](common-security-scenarios.md)  
  Beschreibt Szenarien und Topologien, die Sie mit WCF konfigurieren können.  
   
- [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [Sicherheitsverhalten](security-behaviors-in-wcf.md)  
  Bietet eine Übersicht über WCF-Verhaltensweisen, die sich auf Sicherheit auswirken, z. B. das Festlegen von Anmeldeinformationen.  
   
- [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [Bindungen und Sicherheit](bindings-and-security.md)  
  Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.  
   
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Sichern von Diensten und Clients](securing-services-and-clients.md)  
  Beschreibt, wie Nachrichten mithilfe von WCF-Sicherheitsfunktionen gesichert werden.  
   
- [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Authentifizierung](authentication-in-wcf.md)  
  Veranschaulicht allgemeine Authentifizierungsaufgaben.  
   
- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [Autorisierung](authorization-in-wcf.md)  
  Beschreibt allgemeine Autorisierungsszenarien mit Sicherheitsimplementierungen.  
   
- [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Verbund und ausgestellte Token](federation-and-issued-tokens.md)  
  Beschreibt die Grundlagen des Verbunds und wie Clients, die mit Verbundservern kommunizieren, erstellt werden.  
   
- [Teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
+ [Teilweise Vertrauenswürdigkeit](partial-trust.md)  
  Beschreibt das Ausführen teilweise vertrauenswürdiger Szenarien und WCF-Einschränkungen bei der Ausführung teilweise vertrauenswürdiger Anwendungen.  
   
- [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Auditing](auditing-security-events.md)  
  Beschreibt, wie Sicherheitsereignisse überwacht werden.  
   
- [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Sicherheitsleitfaden und empfohlene Vorgehensweisen](security-guidance-and-best-practices.md)  
  Richtlinien zum Erstellen von sicheren WCF-Anwendungen.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Details zur WCF-Funktion](../../../../docs/framework/wcf/feature-details/index.md)  
+ [Details zur WCF-Funktion](index.md)  
   
- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Einfache WCF-Programmierung](../basic-wcf-programming.md)  
   
- [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Tutorial zu den ersten Schritten](../getting-started-tutorial.md)  
   
- [Konzeptionelle Übersicht](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [Konzeptionelle Übersicht](../conceptual-overview.md)  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurieren der Anwendung](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+- [Konfigurieren der Anwendung](../diagnostics/configuring-your-application.md)

@@ -2,15 +2,15 @@
 title: DataContract-Ersatzzeichen
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 7ef78c4361c055d7be35c03a3c8717e86aceddab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9677e3cf024e6c1e5b2f3360423ab55536748495
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183832"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600035"
 ---
 # <a name="datacontract-surrogate"></a>DataContract-Ersatzzeichen
-In diesem Beispiel wird beschrieben, wie Vorgänge wie Serialisierung, Deserialisierung, Schemaexport und Schemaimport mithilfe einer Datenvertrag-Ersatzzeichenklasse angepasst werden können. Dieses Beispiel zeigt, wie ein Ersatzzeichen in einem Client- und Serverszenario verwendet wird, in dem Daten serialisiert und zwischen einem Windows Communication Foundation (WCF)-Client und -Dienst übertragen werden.  
+In diesem Beispiel wird beschrieben, wie Vorgänge wie Serialisierung, Deserialisierung, Schemaexport und Schemaimport mithilfe einer Datenvertrag-Ersatzzeichenklasse angepasst werden können. In diesem Beispiel wird gezeigt, wie ein Ersatz Zeichen in einem Client-und Server Szenario verwendet wird, in dem Daten zwischen einem Windows Communication Foundation (WCF)-Client und-Dienst serialisiert und übertragen werden.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -220,7 +220,7 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  Damit das Ersatzzeichen für die Verwendung bei der Metadaten-Generierung eingebunden werden kann, sind zusätzliche Schritte erforderlich. Ein Mechanismus hierfür ist das Bereitstellen einer `IWsdlExportExtension`. Dies wird in diesem Beispiel veranschaulicht. Eine andere Möglichkeit ist das direkte Ändern von `WsdlExporter`.  
   
- Das `AllowNonSerializableTypesAttribute` Attribut `IWsdlExportExtension` implementiert `IContractBehavior`und . Die Erweiterung kann `IContractBehavior` entweder `IEndpointBehavior` eine oder in diesem Fall sein. Die Implementierung der `IWsdlExportExtension.ExportContract`-Methode aktiviert das Ersatzzeichen, indem es dem bei der Schemagenerierung für DataContract verwendeten `XsdDataContractExporter` hinzugefügt wird. Der folgende Codeausschnitt veranschaulicht, wie Sie dabei vorgehen müssen:  
+ Das `AllowNonSerializableTypesAttribute` Attribut implementiert `IWsdlExportExtension` und `IContractBehavior` . Die Erweiterung kann `IContractBehavior` `IEndpointBehavior` in diesem Fall entweder oder sein. Die Implementierung der `IWsdlExportExtension.ExportContract`-Methode aktiviert das Ersatzzeichen, indem es dem bei der Schemagenerierung für DataContract verwendeten `XsdDataContractExporter` hinzugefügt wird. Der folgende Codeausschnitt veranschaulicht, wie Sie dabei vorgehen müssen:  
   
 ```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -247,24 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- Wenn Sie das Beispiel ausführen, ruft der Client AddEmployee auf. Danach folgt ein Aufruf von GetEmployee, um zu überprüfen, ob der erste Aufruf erfolgreich war. Das Ergebnis der GetEmployee-Vorgangsanforderung wird im Clientkonsolenfenster angezeigt. Der GetEmployee-Vorgang muss erfolgreich den Mitarbeiter finden und "gefunden" drucken.  
+ Wenn Sie das Beispiel ausführen, ruft der Client AddEmployee auf. Danach folgt ein Aufruf von GetEmployee, um zu überprüfen, ob der erste Aufruf erfolgreich war. Das Ergebnis der GetEmployee-Vorgangsanforderung wird im Clientkonsolenfenster angezeigt. Der GetEmployee-Vorgang muss bei der Suche nach dem Mitarbeiter erfolgreich sein und "found" Drucken.  
   
 > [!NOTE]
-> In diesem Beispiel wird das Einbinden eines Ersatzzeichens zum Serialisieren, Deserialisieren und für die Metadatengenerierung veranschaulicht. Das Einbinden eines Ersatzzeichens für die Codegenerierung aus Metadaten wird nicht dargestellt. Ein Beispiel, wie ein Ersatzzeichen zum Anschließen an die Clientcodegenerierung verwendet werden kann, finden Sie im Beispiel [benutzerdefinierte RWSDL-Publikation.](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+> In diesem Beispiel wird das Einbinden eines Ersatzzeichens zum Serialisieren, Deserialisieren und für die Metadatengenerierung veranschaulicht. Das Einbinden eines Ersatzzeichens für die Codegenerierung aus Metadaten wird nicht dargestellt. Ein Beispiel für die Verwendung eines Ersatz Zeichens zum Einbinden der Client Codegenerierung finden Sie im Beispiel für eine [benutzerdefinierte WSDL-Veröffentlichung](custom-wsdl-publication.md) .  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die C-Edition der Lösung zu erstellen.  
+2. Um die c#-Edition der Projekt Mappe zu erstellen, befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation Beispiele](building-the-samples.md).  
   
-3. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

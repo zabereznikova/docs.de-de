@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: 692382de81459ad52d306ca7fd05546b4e36294d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f07a1a10529aa1615bb00a0f3faeca9cb249aa64
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963665"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595530"
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportieren und Importieren von Metadaten
 In Windows Communication Foundation (WCF) handelt es sich beim Exportieren von Metadaten um das Beschreiben von Dienst Endpunkten und das projizieren in eine parallele, standardisierte Darstellung, die Clients verwenden können, um zu verstehen, wie der Dienst verwendet wird. Beim Import von Dienstmetadaten werden <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanzen oder Teile davon aus Dienstmetadaten generiert.  
   
 ## <a name="exporting-metadata"></a>Exportieren von Metadaten  
- Mit einer Implementierung der abstrakten <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>-Klasse können Sie Metadaten aus <xref:System.ServiceModel.Description.MetadataExporter>-Instanzen exportieren. Der <xref:System.ServiceModel.Description.WsdlExporter> Typ ist die Implementierung <xref:System.ServiceModel.Description.MetadataExporter> der abstrakten Klasse, die in WCF enthalten ist.  
+ Mit einer Implementierung der abstrakten <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>-Klasse können Sie Metadaten aus <xref:System.ServiceModel.Description.MetadataExporter>-Instanzen exportieren. Der <xref:System.ServiceModel.Description.WsdlExporter> Typ ist die Implementierung der <xref:System.ServiceModel.Description.MetadataExporter> abstrakten Klasse, die in WCF enthalten ist.  
   
  Der <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>-Typ generiert WSDL (Web Services Description Language)-Metadaten mit angefügten Richtlinienausdrücken, die in einer <xref:System.ServiceModel.Description.MetadataSet>-Instanz gekapselt sind. Sie können eine <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>-Instanz verwenden, um Metadaten für <xref:System.ServiceModel.Description.ContractDescription>-Objekte und <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte iterativ zu exportieren. Sie können auch eine Auflistung von <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekten exportieren und sie einem bestimmten Dienstnamen zuordnen.  
   
@@ -25,7 +25,7 @@ In Windows Communication Foundation (WCF) handelt es sich beim Exportieren von M
 ## <a name="importing-metadata"></a>Importieren von Metadaten  
   
 ### <a name="importing-wsdl-documents"></a>Importieren von WSDL-Dokumenten  
- Um Dienst Metadaten in WCF zu importieren, verwenden Sie eine Implementierung <xref:System.ServiceModel.Description.MetadataImporter> der abstrakten-Klasse. Der <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Typ ist die Implementierung <xref:System.ServiceModel.Description.MetadataImporter> der abstrakten Klasse, die in WCF enthalten ist. Der <xref:System.ServiceModel.Description.WsdlImporter>-Typ importiert WSDL-Metadaten mit angefügten Richtlinien, die in einem <xref:System.ServiceModel.Description.MetadataSet>-Objekt zusammengefasst sind.  
+ Um Dienst Metadaten in WCF zu importieren, verwenden Sie eine Implementierung der <xref:System.ServiceModel.Description.MetadataImporter> abstrakten-Klasse. Der <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Typ ist die Implementierung der <xref:System.ServiceModel.Description.MetadataImporter> abstrakten Klasse, die in WCF enthalten ist. Der <xref:System.ServiceModel.Description.WsdlImporter>-Typ importiert WSDL-Metadaten mit angefügten Richtlinien, die in einem <xref:System.ServiceModel.Description.MetadataSet>-Objekt zusammengefasst sind.  
   
  Beim <xref:System.ServiceModel.Description.WsdlImporter>-Typ können Sie steuern, wie die Metadaten importiert werden. Sie können alle Endpunkte, alle Bindungen oder alle Verträge importieren. Sie können alle Endpunkte importieren, die einem bestimmten WSDL-Dienst, einer bestimmten Bindung oder einem bestimmten Anschlusstyp zugeordnet sind. Zudem können Sie den Endpunkt für einen bestimmten WSDL-Anschluss, die Bindung für eine bestimmte WSDL-Bindung oder den Vertag für einen bestimmten WSDL-Anschlusstyp importieren.  
   
@@ -48,19 +48,19 @@ In Windows Communication Foundation (WCF) handelt es sich beim Exportieren von M
  Der <xref:System.ServiceModel.Description.WsdlExporter> Typ löst entsprechende Ausnahmen für alle während des Exportprozesses abgefangenen Ausnahmen aus. Diese Ausnahmen werden nicht als Fehler in der `Errors`-Eigenschaft aufgezeichnet. Sobald der <xref:System.ServiceModel.Description.WsdlExporter>-Typ eine Ausnahme auslöst, hat er in einen Fehlerstatus und kann nicht wiederverwendet werden. Der <xref:System.ServiceModel.Description.WsdlExporter>-Typ fügt seiner `Errors`-Eigenschaft Warnungen hinzu, wenn ein Vorgang nicht exportiert werden kann, weil er Platzhalteraktionen verwendet, und wenn doppelte Bindungsnamen auftreten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Importieren von Metadaten in Dienst Endpunkte](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Vorgehensweise: Importieren von Metadaten in Dienstendpunkte](how-to-import-metadata-into-service-endpoints.md)  
  Beschreibt, wie heruntergeladene Metadaten in Beschreibungsobjekte importiert werden.  
   
- [Vorgehensweise: Exportieren von Metadaten aus Dienst Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten](how-to-export-metadata-from-service-endpoints.md)  
  Beschreibt, wie Beschreibungsobjekte in Metadaten importiert werden.  
   
- [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [ServiceDescription und WSDL-Verweis](servicedescription-and-wsdl-reference.md)  
  Beschreibt die Zuordnung zwischen Beschreibungsobjekten und WSDL.  
   
- [Vorgehensweise: Verwenden von "Svcutil. exe" zum Exportieren von Metadaten aus kompiliertem Dienst Code](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode](how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Beschreibt die Verwendung von Svcutil.exe zum Export von Metadaten für Dienste, Verträge und Datentypen in kompilierten Assemblys.  
   
- [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [Datenvertrags-Schemareferenz](data-contract-schema-reference.md)  
  Beschreibt die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD).  
   
 ## <a name="reference"></a>Referenz  
@@ -70,5 +70,5 @@ In Windows Communication Foundation (WCF) handelt es sich beim Exportieren von M
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Exportieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
-- [Importieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+- [Exportieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung](../extending/exporting-custom-metadata-for-a-wcf-extension.md)
+- [Importieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung](../extending/importing-custom-metadata-for-a-wcf-extension.md)

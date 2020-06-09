@@ -2,21 +2,21 @@
 title: WMI-Anbieter
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 04fdbb7efcae6fdbb78f467352e6106ac5218799
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a01b4b70d4c497d1efb93bb53a7339f5f7f29ef9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183191"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591045"
 ---
 # <a name="wmi-provider"></a>WMI-Anbieter
-In diesem Beispiel wird veranschaulicht, wie Daten aus Windows Communication Foundation (WCF)-Diensten zur Laufzeit mithilfe des in WCF integrierten Windows Management Instrumentation (WMI)-Anbieters gesammelt werden. Außerdem wird in diesem Beispiel gezeigt, wie einem Dienst ein benutzerdefiniertes WMI-Objekt hinzugefügt wird. Das Beispiel aktiviert den WMI-Anbieter für die [ersten](../../../../docs/framework/wcf/samples/getting-started-sample.md) Schritte `ICalculator` und veranschaulicht, wie Daten aus dem Dienst zur Laufzeit gesammelt werden.  
+In diesem Beispiel wird veranschaulicht, wie Daten aus Windows Communication Foundation (WCF)-Diensten zur Laufzeit mithilfe des in WCF integrierten Windows-Verwaltungsinstrumentation (WMI)-Anbieters gesammelt werden. Außerdem wird in diesem Beispiel gezeigt, wie einem Dienst ein benutzerdefiniertes WMI-Objekt hinzugefügt wird. Im Beispiel [wird der WMI-Anbieter](getting-started-sample.md) für die ersten Schritte aktiviert, und es wird veranschaulicht, wie Daten aus dem `ICalculator` Dienst zur Laufzeit erfasst werden.  
   
- Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. Weitere Informationen zum WMI SDK finden Sie unter [Windows-Verwaltungsinstrumentation](/windows/desktop/WmiSdk/wmi-start-page). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentation für externe Verwaltungstools.  
+ Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. Weitere Informationen zum WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](/windows/desktop/WmiSdk/wmi-start-page). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentation für externe Verwaltungstools.  
   
- WCF implementiert einen WMI-Anbieter, eine Komponente, die die Instrumentierung zur Laufzeit über eine WBEM-kompatible Schnittstelle verfügbar macht. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. WCF macht Attribute von Diensten wie Adressen, Bindungen, Verhaltensweisen und Listener verfügbar.  
+ WCF implementiert einen WMI-Anbieter, eine Komponente, die die Instrumentation zur Laufzeit über eine WBEM-kompatible Schnittstelle verfügbar macht. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. WCF macht Attribute von Diensten verfügbar, z. b. Adressen, Bindungen, Verhaltensweisen und Listener.  
   
- Der integrierte WMI-Anbieter wird in der Konfigurationsdatei der Anwendung aktiviert. Dies geschieht `wmiProviderEnabled` über das Attribut der [ \<Diagnose>](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) im Abschnitt [ \<system.serviceModel>,](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) wie in der folgenden Beispielkonfiguration gezeigt:  
+ Der integrierte WMI-Anbieter wird in der Konfigurationsdatei der Anwendung aktiviert. Dies erfolgt über das- `wmiProviderEnabled` Attribut des [\<diagnostics>](../../configure-apps/file-schema/wcf/diagnostics.md) im- [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt, wie in der folgenden Beispielkonfiguration gezeigt:  
   
 ```xml  
 <system.serviceModel>  
@@ -33,11 +33,11 @@ In diesem Beispiel wird veranschaulicht, wie Daten aus Windows Communication Fou
   
 ## <a name="accessing-wmi-information"></a>Zugreifen auf WMI-Informationen  
 
-Der Zugriff auf WMI-Daten kann auf mehrere Arten erfolgen. Microsoft stellt WMI-APIs für Skripts, Visual Basic-Anwendungen, C++-Anwendungen und .NET Framework bereit. Weitere Informationen finden Sie unter [Verwenden von WMI](/windows/desktop/wmisdk/using-wmi).
+Der Zugriff auf WMI-Daten kann auf mehrere Arten erfolgen. Microsoft stellt WMI-APIs für Skripts, Visual Basic Anwendungen, C++-Anwendungen und die .NET Framework bereit. Weitere Informationen finden Sie unter [Verwenden von WMI](/windows/desktop/wmisdk/using-wmi).
   
  In diesem Beispiel werden zwei Javaskripts verwendet: das eine zum Auflisten der auf dem Computer ausgeführten Dienste mit einigen ihrer Eigenschaften und das andere zum Anzeigen benutzerdefinierter WMI-Daten. Das Skript öffnet eine Verbindung zum WMI-Anbieter, analysiert Daten und zeigt die erfassten Daten an.  
   
- Starten Sie das Beispiel, um eine ausgeführte Instanz eines WCF-Dienstes zu erstellen. Führen Sie mit dem folgenden Befehl jedes Javaskript in der Eingabeaufforderung aus, während der Dienst ausgeführt wird:  
+ Starten Sie das Beispiel, um eine laufende Instanz eines WCF-Dienstanbieter zu erstellen. Führen Sie mit dem folgenden Befehl jedes Javaskript in der Eingabeaufforderung aus, während der Dienst ausgeführt wird:  
   
 ```console  
 cscript EnumerateServices.js  
@@ -118,20 +118,20 @@ cscript EnumerateCustomObjects.js
   
  Die Ausgabe zeigt an, dass auf dem Computer ein einziger Dienst ausgeführt wird. Der Dienst macht einen Endpunkt verfügbar, der den `ICalculator`-Vertrag implementiert. Die Einstellungen des vom Endpunkt implementierten Verhaltens und der implementierten Bindung werden als Summe einzelner Elemente des Messagingstapels aufgeführt.  
   
- WMI beschränkt sich nicht darauf, die Verwaltungsinstrumente der WCF-Infrastruktur offenzulegen. Die Anwendung kann mithilfe desselben Mechanismus ihre eigenen domänenspezifischen Datenelemente verfügbar machen. WMI ist ein einheitlicher Mechanismus zur Kontrolle und Steuerung eines Webdiensts.  
+ WMI ist nicht darauf beschränkt, die Verwaltungs Instrumentation der WCF-Infrastruktur verfügbar zu machen. Die Anwendung kann mithilfe desselben Mechanismus ihre eigenen domänenspezifischen Datenelemente verfügbar machen. WMI ist ein einheitlicher Mechanismus zur Kontrolle und Steuerung eines Webdiensts.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.  
   
 3. Veröffentlichen Sie das Dienstschema in WMI, indem Sie die Datei InstallUtil.exe (die sich standardmäßig unter "%WINDIR%\Microsoft.NET\Framework\v4.0.30319" befindet) für die Datei service.dll im Hostingverzeichnis ausführen. Dieser Schritt muss nur dann ausgeführt werden, wenn an der Datei service.dll Änderungen vorgenommen wurden.
   
-4. Um das Beispiel in einer Einzel- oder Computerkonfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).  
   
     > [!NOTE]
-    > Wenn Sie WCF nach der Installation ASP.NET installiert haben, müssen Sie möglicherweise "%WINDIR%" ausführen. Microsoft.Net-Framework-V3.0-Windows-Kommunikationsstiftung-Servicemodelreg.exe " -r -x, um dem ASPNET-Konto die Berechtigung zum Veröffentlichen von WMI-Objekten zu erteilen.  
+    > Wenn Sie WCF nach der Installation von ASP.NET installiert haben, müssen Sie möglicherweise "% windir% \" ausführen. Microsoft. NET\Framework\v3.0\Windows Communication foundation\servicemodelreg.exe "-r-x, um dem ASPNET-Konto die Berechtigung zum Veröffentlichen von WMI-Objekten zu erteilen.  
   
 5. Die über WMI verfügbar gemachten Daten aus dem Beispiel zeigen Sie mit den folgenden Befehlen an: `cscript EnumerateServices.js` oder `cscript EnumerateCustomObjects.js`.  
   
@@ -140,7 +140,7 @@ cscript EnumerateCustomObjects.js
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   

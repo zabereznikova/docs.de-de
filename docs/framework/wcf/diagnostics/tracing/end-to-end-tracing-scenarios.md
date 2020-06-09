@@ -2,12 +2,12 @@
 title: End-to-End-Ablaufverfolgungsszenarien
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: 18fbd1e9733d55d60d7aa21f2fe8ac259b3da51b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a8396e21d31b2303d1bb270bed52823c8d49
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650375"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589252"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>End-to-End-Ablaufverfolgungsszenarien
 Dieser Abschnitt enthält Themen, in denen andere Szenarien für die Verwendung der Ablaufverfolgung beschrieben werden.  
@@ -24,21 +24,21 @@ Dieser Abschnitt enthält Themen, in denen andere Szenarien für die Verwendung 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-- [Liste der Aktivitäten](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
+- [Liste der Aktivitäten](activity-list.md)  
   
-- [Weitergabe der Aktivitäts-ID](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
+- [Weitergabe der Aktivitäts-ID](activity-id-propagation.md)  
   
-- [Synchrone Szenarien mit HTTP, TCP oder Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+- [Synchrone Szenarien mit HTTP, TCP oder benannten Pipes](synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
-- [Asynchrone Szenarien mit HTTP, TCP oder Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+- [Asynchrone Szenarien mit HTTP, TCP oder benannten Pipes](asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
-- [Aktivitätsablaufverfolgung in der Nachrichtensicherheit](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
+- [Aktivitätsablaufverfolgung in der Nachrichtensicherheit](activity-tracing-in-message-security.md)  
   
-- [MSMQ](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
+- [MSMQ](msmq.md)  
   
-- [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
+- [COM+](com.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [End-to-End-Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [End-to-End-Ablaufverfolgung](end-to-end-tracing.md)

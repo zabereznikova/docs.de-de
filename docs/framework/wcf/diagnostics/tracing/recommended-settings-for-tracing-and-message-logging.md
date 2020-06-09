@@ -2,18 +2,18 @@
 title: Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 604aae2c0a0c5390428e7f1a2c99e17e90ee76a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578915"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung
 In diesem Thema werden empfohlene Ablaufverfolgungs- und Nachrichtenprotokollierungseinstellungen für andere Arbeitsumfelder beschrieben.  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>Empfohlene Einstellungen für eine Produktionsumgebung  
- Legen Sie in einer Produktionsumgebung, wenn Sie WCF-Ablaufverfolgungsquellen verwenden, `switchValue` auf Warnung fest. Legen Sie, wenn Sie die WCF `System.ServiceModel`-Ablaufverfolgungsquelle verwenden, das `switchValue`-Attribut auf `Warning` und das `propagateActivity`-Attribut auf `true` fest. Legen Sie, wenn Sie eine benutzerdefinierte Ablaufverfolgungsquelle verwenden, das `switchValue`-Attribut auf `Warning, ActivityTracing` fest. Dies kann manuell mit dem [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)erfolgen. Wenn Sie keinen Treffer in der Leistung erwarten, können Sie das `switchValue`-Attribut in allen zuvor erwähnten Fällen auf `Information` festlegen, wodurch relativ viele Ablaufverfolgungsdaten generiert werden. Im folgenden Beispiel werden diese empfohlenen Einstellungen veranschaulicht.  
+ Legen Sie in einer Produktionsumgebung, wenn Sie WCF-Ablaufverfolgungsquellen verwenden, `switchValue` auf Warnung fest. Legen Sie, wenn Sie die WCF `System.ServiceModel`-Ablaufverfolgungsquelle verwenden, das `switchValue`-Attribut auf `Warning` und das `propagateActivity`-Attribut auf `true` fest. Legen Sie, wenn Sie eine benutzerdefinierte Ablaufverfolgungsquelle verwenden, das `switchValue`-Attribut auf `Warning, ActivityTracing` fest. Dies kann manuell mit dem Konfigurations- [Editor-Tool (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)erfolgen. Wenn Sie keinen Treffer in der Leistung erwarten, können Sie das `switchValue`-Attribut in allen zuvor erwähnten Fällen auf `Information` festlegen, wodurch relativ viele Ablaufverfolgungsdaten generiert werden. Im folgenden Beispiel werden diese empfohlenen Einstellungen veranschaulicht.  
   
 ```xml  
 <configuration>  
@@ -97,10 +97,10 @@ In diesem Thema werden empfohlene Ablaufverfolgungs- und Nachrichtenprotokollier
 ```  
   
 ## <a name="using-wmi-to-modify-settings"></a>Verwenden von WMI zum Ändern von Einstellungen  
- Mit WMI können Sie Konfigurationseinstellungen zur Laufzeit ändern (durch Aktivieren des `wmiProviderEnabled`-Attributs in der Konfiguration, wie im vorherigen Konfigurationsbeispiel dargestellt). Sie können beispielsweise mit WMI im CIM-Studio zur Laufzeit die Ablaufverfolgungsquellenebenen von Warnung in Information ändern. Beachten Sie dabei, dass die Leistungseinbußen von Livedebuggen auf diese Weise sehr hoch sein können. Weitere Informationen zur Verwendung von WMI finden Sie im Thema [Verwenden der Windows-Verwaltungsinstrumentation für Diesatos.](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+ Mit WMI können Sie Konfigurationseinstellungen zur Laufzeit ändern (durch Aktivieren des `wmiProviderEnabled`-Attributs in der Konfiguration, wie im vorherigen Konfigurationsbeispiel dargestellt). Sie können beispielsweise mit WMI im CIM-Studio zur Laufzeit die Ablaufverfolgungsquellenebenen von Warnung in Information ändern. Beachten Sie dabei, dass die Leistungseinbußen von Livedebuggen auf diese Weise sehr hoch sein können. Weitere Informationen zur Verwendung von WMI finden Sie im Thema [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](../wmi/index.md) .  
   
 ## <a name="enable-correlated-events-in-aspnet-tracing"></a>Aktivieren von korrelierenden Ereignissen in der ASP.NET-Ablaufverfolgung  
- ASP.NET-Ereignisse legen die Korrelation-ID (ActivityID) nicht fest, außer wenn die Ablaufverfolgung von ASP.NET-Ereignissen aktiviert wird. Um korrelierte Ereignisse richtig anzuzeigen, müssen Sie ASP.NET Ereignisablaufverfolgung mit dem folgenden Befehl in der Befehlskonsole aktivieren, der aufgerufen werden kann, indem Sie zu **Starten**, **Ausführen** und geben Sie **cmd**,  
+ ASP.NET-Ereignisse legen die Korrelation-ID (ActivityID) nicht fest, außer wenn die Ablaufverfolgung von ASP.NET-Ereignissen aktiviert wird. Um Korrelierte Ereignisse ordnungsgemäß anzuzeigen, müssen Sie die ASP.NET-Ereignis Ablauf Verfolgung mit dem folgenden Befehl in der Befehlskonsole aktivieren. dieser Befehl kann aufgerufen werden, indem Sie zu **Start**, **Ausführen** und **cmd**eingeben.  
   
 ```console  
 logman start mytrace -pf logman.providers -o test.etl –ets  
@@ -114,4 +114,4 @@ logman stop mytrace -ets
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Verwenden der Windows-Verwaltungsinstrumentation für die Diagnose](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](../wmi/index.md)

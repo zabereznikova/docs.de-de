@@ -2,24 +2,24 @@
 title: System.ServiceModel.Activation.WebHostServiceCloseFailed
 ms.date: 03/30/2017
 ms.assetid: 3cab9856-a5cf-4f0e-a0cb-89425e368f8e
-ms.openlocfilehash: afe84db3d4df8914ff1ed001b064439d581ead89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af24847d5174475103340725c86ff44024556671
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752762"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84588859"
 ---
 # <a name="systemservicemodelactivationwebhostserviceclosefailed"></a>System.ServiceModel.Activation.WebHostServiceCloseFailed
 Tritt auf, wenn ein Dienst nicht problemlos geschlossen werden kann und abgebrochen wird.  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Dieser Fehlercode wird nur in der Protokolldatei angezeigt. Dies weist üblicherweise auf einen Programmierungsfehler hin, z. B. wenn Sie versuchen, einen Dienst zu schließen, nachdem der Abbruch bereits aufgerufen wurde.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
  Überprüfen Sie den Quellcode der Anwendung.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Ablaufverfolgung](index.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [Verwaltung und Diagnose](../index.md)

@@ -2,24 +2,24 @@
 title: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746449"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589980"
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
-In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von <xref:System.ServiceModel.NetMsmqBinding>erläutert.  
+In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erörtert <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
-> Bevor Sie dieses Thema lesen, empfiehlt es sich, [Sicherheitskonzepte](../../../../docs/framework/wcf/feature-details/security-concepts.md)zu lesen.  
+> Bevor Sie dieses Thema lesen, empfiehlt es sich, [Sicherheitskonzepte](security-concepts.md)zu lesen.  
   
  Die folgende Abbildung stellt ein konzeptionelles Modell der Kommunikation in der Warteschlange mithilfe von WCF bereit. Anhand dieser Abbildung und der Terminologie werden  
   
  die Konzepte der Transportsicherheit erläutert.  
   
- ![Anwendungs Diagramm in der Warteschlange](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Verteilte Warteschlangen (Abbildung)")  
+ ![In die Warteschlange gestelltes Anwendungsdiagramm](media/distributed-queue-figure.jpg "Verteilte Warteschlangen (Abbildung)")  
   
  Beim Senden von Nachrichten in der Warteschlange mithilfe von WCF wird die WCF-Nachricht als Text der MSMQ-Nachricht (Message Queuing) angefügt. Mit der Transportsicherheit wird die gesamte MSMQ-Nachricht gesichert, mit der Nachrichtensicherheit (oder SOAP-Sicherheit) hingegen wird nur der Textkörper der MSMQ-Nachricht gesichert.  
   
@@ -65,7 +65,7 @@ In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von <xref
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sichern von Nachrichten mit Transportsicherheit](securing-messages-using-transport-security.md)
+- [Nachrichtensicherheit über Message Queuing](../samples/message-security-over-message-queuing.md)
+- [Sicherheitskonzepte](security-concepts.md)
+- [Sichern von Diensten und Clients](securing-services-and-clients.md)

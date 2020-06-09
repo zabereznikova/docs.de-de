@@ -2,37 +2,37 @@
 title: Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78280a399c3490afb0dd2293c60b58d9d00fc228
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964471"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587637"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern
 Dieser Abschnitt enthält verschiedene Themen, in denen beschrieben wird, wie Sie Anwendungsfehler mit der Ablaufverfolgung beheben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
+ [Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](recommended-settings-for-tracing-and-message-logging.md)  
  Beschreibt vorgeschlagene Einstellungen für Produktions- und Debugumgebungen.  
   
- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  Beschreibt, wie Sie mit dem Service Trace Viewer-Tool Ablaufverfolgungsdaten anzeigen, korrelieren und analysieren können.  
   
- [Bedeutende Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- Eine Liste der wichtigsten ablaufverfolgungen, die von WCF ausgegeben werden soll.  
+ [Bedeutende Ablaufverfolgungen](significant-traces.md)  
+ Eine Liste der wichtigsten Ablauf Verfolgungen, die von WCF ausgegeben werden.  
   
- [Debuggen auf dem Client](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
+ [Debuggen auf dem Client](debugging-on-the-client.md)  
  Ermöglicht Clients, die Anwendung zu debuggen.  
   
- [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- Beschreibt, ablaufverfolgungen, die für die E2E-WCF-Szenarien verwendet, z. B. synchrone WsHttp-Anforderungsantworten und asynchrone unidirektionale TCP-Anforderungen.  
+ [End-to-End-Ablaufverfolgungsszenarien](end-to-end-tracing-scenarios.md)  
+ Beschreibt Ablauf Verfolgungen, die für E2E WCF-Szenarien verwendet werden, z. b. synchrone wsHttp-Anforderungs Antworten und asynchrone unidirektionale TCP-Anforderungen.  
   
- [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
+ [Ausgeben von Benutzercode-Ablaufverfolgungen](emitting-user-code-traces.md)  
  Beschreibt die programmgesteuerte Ausgabe von Ablaufverfolgungen in Benutzercode, sodass Sie proaktiv Instrumentationsdaten erstellen können, die später zur Diagnose und in Korrelation mit WCF-Ablaufverfolgungen verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [End-to-End-Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+- [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Ablaufverfolgung](index.md)
+- [End-to-End-Ablaufverfolgung](end-to-end-tracing.md)
