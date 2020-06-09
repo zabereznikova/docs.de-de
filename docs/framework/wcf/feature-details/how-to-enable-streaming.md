@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 1d1eaa1ebf41ef86478dda795b3b199239cd37b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2c22ab699a996f4bc40d0b5f620ddd92ffe8059
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184931"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593229"
 ---
 # <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
-Windows Communication Foundation (WCF) kann Nachrichten entweder mit gepufferten oder gestreamten Übertragungen senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
+Windows Communication Foundation (WCF) kann Nachrichten mit gepufferten oder Streamingübertragungen senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
   
  Um den Streamingmodus zu aktivieren, definieren Sie den `OperationContract` angemessen, und aktivieren Sie den Streamingmodus auf Transportebene.  
   
@@ -76,5 +76,5 @@ Windows Communication Foundation (WCF) kann Nachrichten entweder mit gepufferten
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Große Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
-- [STREAM](../../../../docs/framework/wcf/samples/stream.md)
+- [Umfangreiche Daten und Streaming](large-data-and-streaming.md)
+- [STREAM](../samples/stream.md)

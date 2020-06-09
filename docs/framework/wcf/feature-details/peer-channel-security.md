@@ -2,12 +2,12 @@
 title: Peerkanalsicherheit
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8015f41254d17f908f3665db65af3d82eaa2b6a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769394"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576082"
 ---
 # <a name="peer-channel-security"></a>Peerkanalsicherheit
 Der Peerkanal ermöglicht die Verwendung einer Vielzahl von verteilten Anwendungstypen, die von Mehrparteienmessaging abhängen. Beispielsweise gehört hierzu eine Inhaltsverteilung auf Internetebene, wobei eine vertrauenswürdige Quelle Inhalte (wie beispielsweise Medien- oder Softwareupdates) verteilt, eine Gruppe von Freunden Musik oder Fotos austauscht oder ein Team von Kollegen zusammen ein Dokument bearbeitet. Jedes dieser Szenarien erfordert ein individuelles Sicherheitsmodell. Das Peerkanal-Sicherheitsmodell ist auf die Adressierung dieser Szenarien ausgelegt und bietet ein umfangreiches Sicherheitsmodell für die entsprechenden Anforderungen an unterschiedliche Identitäten, Authentifizierung und Autorisierungsmodelle.  
@@ -33,8 +33,8 @@ Der Peerkanal ermöglicht die Verwendung einer Vielzahl von verteilten Anwendung
   
  Der Peerkanal erfordert kein spezifisches Identifikationsmodell, solange die Anwendung einen der unterstützten Tokentypen auswählt. Anwendungen besitzen den Lebenszyklus dieser Identitäten und die Authentifizierungsenscheidungen vollständig.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sichern von Peerkanalanwendungen](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [Peerkanalbegriffe](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
-- [Erstellen einer Peerkanalanwendung](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Sichern von Peerkanalanwendungen](securing-peer-channel-applications.md)
+- [Peerkanalbegriffe](peer-channel-concepts.md)
+- [Erstellen einer Peerkanalanwendung](building-a-peer-channel-application.md)

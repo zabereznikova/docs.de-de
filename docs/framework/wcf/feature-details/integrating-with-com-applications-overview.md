@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 99e3c2f4445673f3b74048a2b466203af7bc2795
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c283e7cbc4cb4b8bc37dd1313480410df93a93bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045885"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596824"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM-Anwendungen
 
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) stellt dem Entwickler von verwaltetem Cod
 > [!NOTE]
 > Der Dienstmoniker verwendet einen WCF-Kommunikationskanal für die gesamte Kommunikation. Die Sicherheits- und Identitätsmechanismen für diesen Channel unterscheiden sich von den Mechanismen in COM- und DCOM-Standardproxys. Da der Dienstmoniker außerdem einen WCF-Kommunikationskanal verwendet, beträgt der Standard Timeout Zeitraum eine Minute für alle Aufrufe.
 
-Der Dienstmoniker wird mit der `GetObject` -Funktion verwendet, um dem nicht verwalteten Entwickler einen stark typisierten, com-spezifischen Ansatz zum Aufrufen von WCF-Webdiensten zur Verfügung zu stellen. Hierfür ist eine lokale, com-sichtbare Definition des WCF-Webdienst Vertrags und die zu verwendende Bindung erforderlich. Wie andere WCF-Clients muss der Dienstmoniker einen typisierten Kanal für den Dienst erstellen, obwohl diese Kanal Erstellung für den com-Programmierer beim ersten Methodenaufruf transparent erfolgt.
+Der Dienstmoniker wird mit der- `GetObject` Funktion verwendet, um dem nicht verwalteten Entwickler einen stark typisierten, com-spezifischen Ansatz zum Aufrufen von WCF-Webdiensten zur Verfügung zu stellen. Hierfür ist eine lokale, com-sichtbare Definition des WCF-Webdienst Vertrags und die zu verwendende Bindung erforderlich. Wie andere WCF-Clients muss der Dienstmoniker einen typisierten Kanal für den Dienst erstellen, obwohl diese Kanal Erstellung für den com-Programmierer beim ersten Methodenaufruf transparent erfolgt.
 
 Gemeinsam mit anderen WCF-Clients geben Anwendungen bei der Verwendung des Monikers die Adresse, die Bindung und den Vertrag für die Kommunikation mit einem Dienst an. Der Vertrag kann mithilfe der folgenden Methoden spezifiziert werden:
 
@@ -32,7 +32,7 @@ Gemeinsam mit anderen WCF-Clients geben Anwendungen bei der Verwendung des Monik
 
 In der folgenden Tabelle werden die Parameter aufgeführt, die vom Dienstmoniker unterstützt werden.
 
-|Parameter|Beschreibung|
+|Parameter|BESCHREIBUNG|
 |---------------|-----------------|
 |`address`|URL-Adresse des Diensts.|
 |`binding`|Bindungsabschnittsname für die Anwendungskonfiguration.|
@@ -67,6 +67,6 @@ In der folgenden Tabelle werden die Parameter aufgeführt, die vom Dienstmoniker
 >
 > `</configuration>`
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers](how-to-register-and-configure-a-service-moniker.md)

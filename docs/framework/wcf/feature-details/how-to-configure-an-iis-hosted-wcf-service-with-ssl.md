@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Konfigurieren eines IIS-gehosteten WCF-Diensts mit SSL'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 8d3bbb1ceab8a3bc7e5e209fda29fd574110b4f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb3e87021c3dce1172250f33fd302916920af74d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699999"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597227"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Vorgehensweise: Konfigurieren eines IIS-gehosteten WCF-Diensts mit SSL
 In diesem Thema wird beschrieben, wie ein von IIS gehosteter WCF-Dienst für die Verwendung der HTTP-Transportsicherheit eingerichtet wird. Die HTTP-Transportsicherheit erfordert für die Registrierung bei IIS ein SSL-Zertifikat. Wenn Sie über kein SSL-Zertifikat verfügen, können Sie mit IIS ein Testzertifikat generieren. Danach müssen Sie der Website eine SSL-Bindung hinzufügen und die Authentifizierungseigenschaften der Website konfigurieren. Abschließend müssen Sie den WCF-Dienst für die Verwendung von HTTPS konfigurieren.  
@@ -16,49 +16,49 @@ In diesem Thema wird beschrieben, wie ein von IIS gehosteter WCF-Dienst für die
   
 1. Öffnen Sie den Internetinformationsdienste-Manager (inetmgr.exe), und wählen Sie in der linken Strukturansicht den Computernamen aus. Wählen Sie auf der rechten Seite des Bildschirms Serverzertifikate aus.  
   
-     ![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
+     ![Hauptbildschirm von IIS-Manager](media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2. Klicken Sie im Fenster Serverzertifikate auf das **selbstsigniertes Zertifikat erstellen...** Link.  
+2. Klicken Sie im Fenster Server Zertifikate auf das Feld **selbst signiertes Zertifikat erstellen....** Verknüpfen.  
   
-     ![Erstellen ein selbstsigniertes&#45;selbstsignierten Zertifikats mit IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "Mg_CreateSelfSignedCert")  
+     ![Erstellen eines selbst&#45;signierten Zertifikats mit IIS](media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
-3. Geben Sie einen Anzeigenamen für das selbstsignierte Zertifikat, und klicken Sie auf **OK**.  
+3. Geben Sie einen anzeigen Amen für das selbst signierte Zertifikat ein, und klicken Sie auf **OK**.  
   
-     ![Erstellen Sie Self-Service&#45;Dialogfeld "Zertifikat" signiert](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "Mg_MyCert")  
+     ![Dialog Feld "selbst&#45;signiertes Zertifikat erstellen"](media/mg-mycert.jpg "mg_MyCert")  
   
-     Die Details des neu erstellten selbstsignierten Zertifikats werden jetzt angezeigt, der **Serverzertifikate** Fenster.  
+     Die neu erstellten selbst signierten Zertifikat Details werden nun im Fenster **Server Zertifikate** angezeigt.  
   
-     ![Server-Fenster "Serverzertifikat"](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "Mg_ServerCertificateWindow")  
+     ![Fenster "Serverzertifikat"](media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
      Das generierte Zertifikat wird im Speicher für vertrauenswürdige Stammzertifizierungsstellen installiert.  
   
 ### <a name="add-ssl-binding"></a>Hinzufügen einer SSL-Bindung  
   
-1. Noch im Internetinformationsdienste-Manager, erweitern Sie die **Websites** Ordner und klicken Sie dann die **Default Web Site** Ordner in der Strukturansicht auf der linken Seite des Bildschirms.  
+1. Erweitern Sie in Internetinformationsdienste-Manager den Ordner **Sites** und dann den **Standardordner Website** in der Strukturansicht auf der linken Seite des Bildschirms.  
   
-2. Klicken Sie auf die **Bindungen...** -Link in der **Aktionen** Abschnitt in der rechten oberen Bereich des Fensters.  
+2. Klicken Sie auf **Bindungen....** Link im Abschnitt " **Aktionen** " im oberen rechten Bereich des Fensters.  
   
-     ![Hinzufügen einer SSL-Bindung](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "Mg_AddSSLBinding")  
+     ![Hinzufügen einer SSL-Bindung](media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
-3. Klicken Sie im Fenster "Websitebindungen" auf die **hinzufügen** Schaltfläche.  
+3. Klicken Sie im Fenster Site Bindungen auf die Schaltfläche **Hinzufügen** .  
   
-     ![Dialogfeld "Sitebindungen" Site](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "Mg_SiteBindingsDialog")  
+     ![Dialogfeld "Sitebindungen"](media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4. In der **Sitebindung hinzufügen** Dialogfeld Option Https für den Typ und den Anzeigenamen des das selbstsignierte Zertifikat, das Sie gerade erstellt haben.  
+4. Wählen Sie im Dialogfeld **Site Bindung hinzufügen** HTTPS für den Typ und den anzeigen amen des selbst signierten Zertifikats aus, das Sie soeben erstellt haben.  
   
-     ![Beispiel für sitebindung](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "Mg_MyCertBinding")  
+     ![Beispiel für Sitebindung](media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
 ### <a name="configure-virtual-directory-for-ssl"></a>Konfigurieren eines virtuellen Verzeichnisses für SSL  
   
 1. Wählen Sie im Internetinformationsdienste-Manager das virtuelle Verzeichnis aus, das den sicheren WCF-Dienst enthält.  
   
-2. Wählen Sie im mittleren Bereich des Fensters **SSL-Einstellungen** im IIS-Abschnitt.  
+2. Wählen Sie im mittleren Fensterbereich im Abschnitt IIS die Option **SSL-Einstellungen** aus.  
   
-     ![SSL-Einstellungen für virtuelles Verzeichnis](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "Mg_SSLSettingsForVDir")  
+     ![SSL-Einstellungen für virtuelles Verzeichnis](media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3. Wählen Sie im Bereich SSL-Einstellungen der **SSL erforderlich** Kontrollkästchen und klicken Sie auf die **übernehmen** -link in der **Aktionen** Abschnitt auf der rechten Seite des Bildschirms.  
+3. Aktivieren Sie im Bereich SSL-Einstellungen das Kontrollkästchen **SSL erforderlich** , und klicken Sie im Abschnitt **Aktionen** auf der rechten Seite des Bildschirms auf den Link **anwenden** .  
   
-     ![SSL-Einstellungen des virtuellen Verzeichnisses](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "Mg_VDirSSLSettings")  
+     ![SSL-Einstellungen für virtuelles Verzeichnis](media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
 ### <a name="configure-wcf-service-for-http-transport-security"></a>Konfigurieren des WCF-Dienstes für HTTP-Transportsicherheit  
   
@@ -144,9 +144,9 @@ In diesem Thema wird beschrieben, wie ein von IIS gehosteter WCF-Dienst für die
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hosten in IIS (Internetinformationsdienste)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Hostinganweisungen des Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
-- [Bewährte Methoden für das Hosten in IIS (Internetinformationsdienste)](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [IIS-Hosting mithilfe von Inlinecode](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+- [Hosten in Internetinformationsdiensten](hosting-in-internet-information-services.md)
+- [Hostinganweisungen des Internetinformationsdiensts](../samples/internet-information-service-hosting-instructions.md)
+- [Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten](internet-information-services-hosting-best-practices.md)
+- [IIS-Hosting mithilfe von Inlinecode](../samples/iis-hosting-using-inline-code.md)

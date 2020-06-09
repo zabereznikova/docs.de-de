@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.InitiatingTcpConnection
 ms.date: 03/30/2017
 ms.assetid: d0a2749d-3f97-41b8-ac08-37b5069fe41e
-ms.openlocfilehash: b9316f677b68ee1e7c8c166a87eb849a1b28e48b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af501e3b8178c61ef18e60a61f497ce1c2b9e835
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792482"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596141"
 ---
 # <a name="systemservicemodelchannelsinitiatingtcpconnection"></a>System.ServiceModel.Channels.InitiatingTcpConnection
 System.ServiceModel.Channels.InitiatingTcpConnection  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Eine TCP-Verbindung wird initiiert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Ablaufverfolgung](index.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [Verwaltung und Diagnose](../index.md)

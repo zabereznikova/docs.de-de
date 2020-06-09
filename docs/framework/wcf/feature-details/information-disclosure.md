@@ -2,12 +2,12 @@
 title: Veröffentlichung von Informationen
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: a58ac4dd3715052031c7fb5c1da480c0d01396ea
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211955"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596863"
 ---
 # <a name="information-disclosure"></a>Veröffentlichung von Informationen
 
@@ -19,7 +19,7 @@ Falls Sie die Sicherheit auf Nachrichtenebene mit einer HTTP-Transportschicht ve
 
 ## <a name="policy-information"></a>Richtlinieninformationen
 
-Der Schutz von Richtlinien ist sehr wichtig, vor allem in Verbundszenarien, bei denen die Richtlinien auch vertrauliche Informationen zu den Anforderungen für ausgegebene Token und zu den Tokenausstellern enthalten. In diesen Fällen sollte möglichst der Richtlinienendpunkt des Verbunddiensts gesichert werden, damit Angreifer keine Informationen zum Dienst, wie zum Beispiel Informationen zur Art der Ansprüche, die in das ausgegebene Token aufgenommen werden müssen, einholen oder keine Clients an bösartige Tokenaussteller umleiten können. So können Angreifer beispielsweise Benutzernamen-/Kennwortkombinationen ermitteln, indem sie die Vertrauenskette des Verbunds so umkonfigurieren, dass sie bei einem Aussteller endet, der einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) durchgeführt hat. Auch sollte von Verbundclients, die ihre Bindungen über den Abruf einer Richtlinie erhalten, überprüft werden, ob die Aussteller in der bezogenen Vertrauenskette des Verbunds tatsächlich vertrauenswürdig sind. Weitere Informationen zu Verbund Szenarien finden Sie unter [Federation](../../../../docs/framework/wcf/feature-details/federation.md).
+Der Schutz von Richtlinien ist sehr wichtig, vor allem in Verbundszenarien, bei denen die Richtlinien auch vertrauliche Informationen zu den Anforderungen für ausgegebene Token und zu den Tokenausstellern enthalten. In diesen Fällen sollte möglichst der Richtlinienendpunkt des Verbunddiensts gesichert werden, damit Angreifer keine Informationen zum Dienst, wie zum Beispiel Informationen zur Art der Ansprüche, die in das ausgegebene Token aufgenommen werden müssen, einholen oder keine Clients an bösartige Tokenaussteller umleiten können. So können Angreifer beispielsweise Benutzernamen-/Kennwortkombinationen ermitteln, indem sie die Vertrauenskette des Verbunds so umkonfigurieren, dass sie bei einem Aussteller endet, der einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) durchgeführt hat. Auch sollte von Verbundclients, die ihre Bindungen über den Abruf einer Richtlinie erhalten, überprüft werden, ob die Aussteller in der bezogenen Vertrauenskette des Verbunds tatsächlich vertrauenswürdig sind. Weitere Informationen zu Verbund Szenarien finden Sie unter [Federation](federation.md).
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Anspruchsinformationen in Speicherabbildern
 
@@ -55,7 +55,7 @@ In der Windows-Domänenumgebung wird zur Authentifizierung und Autorisierung von
 
 Werden beim Erstellen eines Clients Clientanmeldeinformationen ohne Domänennamen oder eine ungültige Serveridentität angegeben, wird NTLM anstelle des Kerberos-Protokolls verwendet (sofern die `AllowNtlm`-Eigenschaft auf `true` festgelegt wurde). Da NTLM keine Serverauthentifizierung durchführt, können Informationen potenziell offengelegt werden.
 
-Beispielsweise ist es möglich, Windows-Client Anmelde Informationen ohne Domänen Namen anzugeben, wie im folgenden visuellen C# Code dargestellt.
+Beispielsweise ist es möglich, Windows-Client Anmelde Informationen ohne Domänen Namen anzugeben, wie im folgenden Visual c#-Code dargestellt.
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,13 +63,13 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 Da im Code kein Domänenname angegeben wird, wird NTLM verwendet.
 
-Falls bei Verwendung der Funktion für die Endpunktidentität zwar eine Domäne, jedoch ein ungültiger Dienstprinzipalname angegeben wird, wird NTLM verwendet. Weitere Informationen zur Angabe der Endpunkt Identität finden Sie unter [Dienst Identität und-Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
+Falls bei Verwendung der Funktion für die Endpunktidentität zwar eine Domäne, jedoch ein ungültiger Dienstprinzipalname angegeben wird, wird NTLM verwendet. Weitere Informationen zur Angabe der Endpunkt Identität finden Sie unter [Dienst Identität und-Authentifizierung](service-identity-and-authentication.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Sicherheitshinweise](security-considerations-in-wcf.md)
+- [Rechte Erweiterungen](elevation-of-privilege.md)
+- [Denial of Service](denial-of-service.md)
+- [Manipulation](tampering.md)
+- [Nicht unterstützte Szenarien](unsupported-scenarios.md)
+- [Wiederholungsangriffe](replay-attacks.md)
