@@ -2,22 +2,22 @@
 title: Sichern von Peerkanalanwendungen
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a77449710e9093bc8ea2d5446e6359c26a3d1c1e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959889"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589876"
 ---
 # <a name="securing-peer-channel-applications"></a>Sichern von Peerkanalanwendungen
-Wie für andere Bindungen unter den WinFX `NetPeerTcpBinding` Sicherheit standardmäßig aktiviert, und bietet sowohl Transport und nachrichtenbasierte Sicherheit (oder beides). In diesem Thema werden diese beiden Typen von Sicherheit erläutert. Der Typ der Sicherheit wird vom Sicherheitsmodus-Tag in der Bindungsspezifikation (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`) angegeben.  
+Wie bei anderen Bindungen unter WinFX `NetPeerTcpBinding` ist Sicherheit standardmäßig aktiviert und bietet sowohl Transport-als auch Nachrichten basierte Sicherheit (oder beides). In diesem Thema werden diese beiden Typen von Sicherheit erläutert. Der Typ der Sicherheit wird vom Sicherheitsmodus-Tag in der Bindungsspezifikation (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`) angegeben.  
   
 ## <a name="transport-based-security"></a>Transportbasierte Sicherheit  
  Peerkanal unterstützt zwei Arten von Authentifizierungs-Anmeldeinformationen für die Transportsicherung, die beide das Festlegen der `ClientCredentialSettings.Peer`-Eigenschaft auf die zugeordnete `ChannelFactory` erfordern:  
   
-- Kennwort. Clients verwenden das Wissen eines geheimen Kennworts, um Verbindungen zu authentifizieren. Wenn dieser Anmeldeinformationstyp verwendet wird, muss `ClientCredentialSettings.Peer.MeshPassword` ein gültiges Kennwort enthalten und optional eine `X509Certificate2`-Instanz.  
+- Password: Clients verwenden das Wissen eines geheimen Kennworts, um Verbindungen zu authentifizieren. Wenn dieser Anmeldeinformationstyp verwendet wird, muss `ClientCredentialSettings.Peer.MeshPassword` ein gültiges Kennwort enthalten und optional eine `X509Certificate2`-Instanz.  
   
-- Zertifikat. Eine bestimmte Anwendungsauthentifizierung wird verwendet. Wenn dieser Anmeldeinformationstyp verwendet wird, müssen Sie eine konkrete Implementierung von <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication` verwenden.  
+- Zertifikat Eine bestimmte Anwendungsauthentifizierung wird verwendet. Wenn dieser Anmeldeinformationstyp verwendet wird, müssen Sie eine konkrete Implementierung von <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication` verwenden.  
   
 ## <a name="message-based-security"></a>Nachrichtenbasierte Sicherheit  
  Mit der Nachrichtensicherheit kann eine Anwendung ausgehende Nachrichten signieren, sodass alle Empfänger überprüfen können, dass die Nachricht von einer vertrauenswürdigen Partei gesendet und nicht manipuliert wurde. Derzeit unterstützt Peerkanal nur X.509-Anmeldeinformations-Nachrichtensignierung.  
@@ -39,9 +39,9 @@ Wie für andere Bindungen unter den WinFX `NetPeerTcpBinding` Sicherheit standar
  Verwenden Sie die Nachrichtenauthentifizierung, um zu überprüfen, ob eine Nachricht von einer vertrauenswürdigen Quelle stammt und bei der Übertragung nicht manipuliert wurde. Ohne Nachrichtenauthentifizierung ist es für einen böswilligen Client einfach, Nachrichten im Mesh zu spoofen oder zu manipulieren.  
   
 ## <a name="peer-channel-code-examples"></a>Peerkanal-Codebeispiele  
- [Peerkanalszenarien](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
+ [Peerkanalszenarien](peer-channel-scenarios.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Peerkanalsicherheit](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
-- [Erstellen einer Peerkanalanwendung](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [Peerkanalsicherheit](peer-channel-security.md)
+- [Erstellen einer Peerkanalanwendung](building-a-peer-channel-application.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eb3274b98234324bd47aa456feb4845da5a7f3a9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599281"
 ---
 # <a name="debug-windows-authentication-errors"></a>Windows-Authentifizierungsfehler Debuggen
 
@@ -63,7 +63,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
 ### <a name="kerberos-protocol"></a>Kerberos-Protokoll  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>SPN-/UPN-Probleme mit dem Kerberos-Protokoll  
- Bei Verwendung der Windows-Authentifizierung und des Kerberos-Protokolls oder der Aushandlung durch SSPI muss die vom Clientendpunkt verwendete URL den vollqualifizierten Domänennamen des Diensthosts in der Dienst-URL enthalten. Dabei wird davon ausgegangen, dass das Konto, unter dem der Dienst ausgeführt wird, Zugriff auf den Dienst Prinzipal Namen (Service Principal Name, SPN) des Computers hat, der erstellt wird, wenn der Computer der Active Directory Domäne hinzugefügt wird. Dies wird am häufigsten durch Ausführen des Dienstanbieter unter der Netzwerkdienst Konto. Wenn der Dienst keinen Zugriff auf den SPN-Schlüssel des Computers hat, müssen Sie den korrekten SPN oder Benutzerprinzipalnamen (UPN) des Kontos, unter dem der Dienst ausgeführt wird, in der Endpunktidentität des Clients angeben. Weitere Informationen zur Funktionsweise von WCF mit SPN und UPN finden Sie unter [Dienst Identität und-Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Bei Verwendung der Windows-Authentifizierung und des Kerberos-Protokolls oder der Aushandlung durch SSPI muss die vom Clientendpunkt verwendete URL den vollqualifizierten Domänennamen des Diensthosts in der Dienst-URL enthalten. Dies setzt voraus, dass das Konto, unter dem der Dienst ausgeführt wird, Zugriff auf den (Standard-) Dienstprinzipalnamen-Schlüssel (SPN) hat, der beim Hinzufügen des Computers zur Active Directory-Domäne erstellt wird. Dieser Vorgang wird im Allgemeinen durchgeführt, indem der Dienst unter dem Netzwerkdienstkonto ausgeführt wird. Wenn der Dienst keinen Zugriff auf den SPN-Schlüssel des Computers hat, müssen Sie den korrekten SPN oder Benutzerprinzipalnamen (UPN) des Kontos, unter dem der Dienst ausgeführt wird, in der Endpunktidentität des Clients angeben. Weitere Informationen zur Funktionsweise von WCF mit SPN und UPN finden Sie unter [Dienst Identität und-Authentifizierung](service-identity-and-authentication.md).  
   
  Eine gängige Praxis für Lastenausgleichszenarien (beispielsweise bei Webfarmen und Webgärten) ist das Definieren eines eindeutigen Kontos für die einzelnen Anwendungen. Anschließend wird dem Konto ein SPN zugewiesen und sichergestellt, dass alle Dienste der Anwendung in diesem Konto ausgeführt werden.  
   
@@ -94,12 +94,12 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
   
     1. Führen Sie dies mit der folgenden Anweisung in Code aus: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2. Sie können diese Einstellung auch in der Konfigurationsdatei vornehmen, indem Sie das `allowNtlm`-Attribut auf `false` festlegen. Dieses Attribut ist in der [\<Windows->](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)enthalten.  
+    2. Sie können diese Einstellung auch in der Konfigurationsdatei vornehmen, indem Sie das `allowNtlm`-Attribut auf `false` festlegen. Dieses Attribut ist in enthalten [\<windows>](../../configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md) .  
   
 ### <a name="ntlm-protocol"></a>NTLM-Protokoll  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>SSP-Aushandlung greift auf NTLM zurück, NTLM ist jedoch deaktiviert  
- Die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft ist auf `false`festgelegt, was bewirkt, dass Windows Communication Foundation (WCF) einen Best-Effort-Wert auslöst, wenn NTLM verwendet wird. Das Festlegen dieser Eigenschaft auf `false` verhindert möglicherweise nicht, dass NTLM-Anmelde Informationen über das Netzwerk gesendet werden.  
+ Die- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Eigenschaft ist auf festgelegt `false` , was bewirkt, dass Windows Communication Foundation (WCF) einen Best-Effort-Wert auslöst, wenn NTLM verwendet wird. Wenn Sie diese Eigenschaft auf festlegen, `false` wird möglicherweise nicht verhindert, dass NTLM-Anmelde Informationen über das Netzwerk gesendet werden  
   
  Die folgenden Schritte zeigen, wie ein Zurückgreifen auf NTLM deaktiviert wird.  
   
@@ -122,7 +122,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- Weitere Informationen zum Identitätswechsel finden Sie unter [Delegierung und](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)Identitätswechsel.  
+ Weitere Informationen zum Identitätswechsel finden Sie unter [Delegierung und](delegation-and-impersonation-with-wcf.md)Identitätswechsel.  
   
  Alternativ wird der Client als Windows-Dienst ausgeführt und verwendet das integrierte Konto-SYSTEM.  
   
@@ -151,5 +151,5 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ClientBase%601>
-- [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Delegierung und Identitätswechsel](delegation-and-impersonation-with-wcf.md)
+- [Nicht unterstützte Szenarien](unsupported-scenarios.md)

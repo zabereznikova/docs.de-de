@@ -4,34 +4,34 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
-ms.openlocfilehash: bb415d88c2bae75cb16aa137bdf867eb463afa63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5488e2b0778738927922edab0f948645b816a1f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748303"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586220"
 ---
 # <a name="retrieving-metadata"></a>Abrufen von Metadaten
 Das Abrufen von Metadaten ist der Prozess, Metadaten von einem Metadatenendpunkt, wie einem MEX-Medadatenendpunkt (WS-MetadataExchange) oder einem HTTP/GET-Metadatenendpunkt, anzufordern und abzurufen.  
   
 ## <a name="retrieving-metadata-from-the-command-line-using-svcutilexe"></a>Abrufen von Metadaten mit Svcutil.exe in der Befehlszeile  
- Sie können Dienstmetadaten mit WS-MetadataExchange- oder HTTP/GET-Anforderungen mithilfe von Abrufen der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool und das Übergeben der `/target:metadata` Switches und einer Adresse. Svcutil.exe lädt die Metadaten bei der angegebenen Adresse herunter und speichert die Datei auf Datenträger. Svcutil.exe verwendet intern eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz und lädt die <xref:System.ServiceModel.Description.IMetadataExchange>-Endpunktkonfiguration, deren Name mit dem Schema der an Svcutil.exe als Eingabe weitergegebenen Adresse übereinstimmt, aus der Konfiguration.  
+ Sie können Dienst Metadaten mithilfe von WS-MetadataExchange-oder HTTP/GET-Anforderungen abrufen, indem Sie das [Service Model Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool verwenden und den `/target:metadata` Switch und eine Adresse übergeben. Svcutil.exe lädt die Metadaten bei der angegebenen Adresse herunter und speichert die Datei auf Datenträger. Svcutil.exe verwendet intern eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz und lädt die <xref:System.ServiceModel.Description.IMetadataExchange>-Endpunktkonfiguration, deren Name mit dem Schema der an Svcutil.exe als Eingabe weitergegebenen Adresse übereinstimmt, aus der Konfiguration.  
   
 ## <a name="retrieving-metadata-programmatically-using-the-metadataexchangeclient"></a>Programmgesteuertes Abrufen von Metadaten mit dem MetadataExchangeClient  
- Windows Communication Foundation (WCF) kann Dienstmetadaten mithilfe standardisierter Protokolle, z. B. WS-MetadataExchange- und HTTP/GET-Anforderungen abgerufen werden. Beide Protokolle werden vom <xref:System.ServiceModel.Description.MetadataExchangeClient>-Typ unterstützt. Dienstmetadaten werden mit dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Typ abgerufen, indem eine Adresse für den Metadatenendpunkt und eine optionale Bindung angegeben werden. Bei der von einer <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz verwendeten Bindung kann es sich um eine der Standardbindungen aus der statischen <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse, eine vom Benutzer angegebene Bindung oder eine aus einer Endpunktkonfiguration für den `IMetadataExchange`-Vertrag geladene Bindung handeln. Der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> kann auch HTTP-URL-Verweise auf Metadaten mit dem <xref:System.Net.HttpWebRequest>-Typ auflösen.  
+ Windows Communication Foundation (WCF) kann Dienst Metadaten mithilfe standardisierter Protokolle, wie z. b. WS-MetadataExchange und HTTP/GET-Anforderungen, abrufen. Beide Protokolle werden vom <xref:System.ServiceModel.Description.MetadataExchangeClient>-Typ unterstützt. Dienstmetadaten werden mit dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Typ abgerufen, indem eine Adresse für den Metadatenendpunkt und eine optionale Bindung angegeben werden. Bei der von einer <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz verwendeten Bindung kann es sich um eine der Standardbindungen aus der statischen <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse, eine vom Benutzer angegebene Bindung oder eine aus einer Endpunktkonfiguration für den `IMetadataExchange`-Vertrag geladene Bindung handeln. Der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> kann auch HTTP-URL-Verweise auf Metadaten mit dem <xref:System.Net.HttpWebRequest>-Typ auflösen.  
   
  Standardmäßig wird eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz an eine einzelne <xref:System.ServiceModel.ChannelFactory>-Instanz gebunden. Sie können die <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>-Instanz, die von einem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> verwendet wird, durch Überschreiben der virtuellen <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A>-Methode ändern oder ersetzen. Ebenso können Sie die <xref:System.Net.HttpWebRequest>-Instanz, die von einem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zur Erstellung von HTTP/GET-Anforderungen verwendet wird, durch Überschreiben der virtuellen <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType>-Methode ändern oder ersetzen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Verwenden von Svcutil.exe zum Herunterladen von Metadatendokumenten](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+ [Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten](how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  Veranschaulicht, wie Svcutil.exe zum Herunterladen von Metadatendokumenten verwendet wird.  
   
- [Vorgehensweise: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [Vorgehensweise: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten](how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  Veranschaulicht, wie der <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> verwendet wird, um Bindungsmetadaten zur Laufzeit dynamisch zu erhalten.  
   
- [Vorgehensweise: Verwenden von MetadataExchangeClient zum Abrufen von Metadaten](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ [Vorgehensweise: Die Verwendung von MetadataExchangeClient zum Abrufen von Metadaten](how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
  Veranschaulicht, wie eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Klasse zum Herunterladen von Metadatendateien in ein <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>-Objekt verwendet wird, das <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType>-Objekte zum Schreiben in Dateien oder für andere Zwecke enthält.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>

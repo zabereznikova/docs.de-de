@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen unterstützender Anmeldeinformationen'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3f33bf5a78c575237ee4bc609a482a81fd30fc53
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964548"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597149"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Vorgehensweise: Erstellen unterstützender Anmeldeinformationen
 Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind. Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist. Die zweiten Anmelde Informationen sind *unterstützende*Anmelde Informationen. In diesem Thema wird erläutert, wie solche Anmelde Informationen in einem Windows Communication Foundation (WCF)-Client implementiert werden.  
@@ -27,7 +27,7 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
 ## <a name="endorsing-signing-and-encrypting"></a>Unterzeichnen, Signieren und Verschlüsseln  
  Eine unterstützende Anmelde Informationen führt dazu, dass ein *unterstützendes Token* innerhalb der Nachricht übertragen wird Die WS-SecurityPolicy-Spezifikation definiert vier Methoden zum Anhängen eines unterstützenden Tokens an die Nachricht, wie in der folgenden Tabelle beschrieben.  
   
-|Zweck|Beschreibung|  
+|Zweck|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Signiert|Das unterstützende Token ist im Sicherheitsheader enthalten und wird durch die Nachrichtensignatur signiert.|  
 |Unterzeichnend|Ein unter zeichnendes *Token* signiert die Nachrichten Signatur.|  
@@ -35,7 +35,7 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
 |Signiert und verschlüsselnd|Signierte, verschlüsselte unterstützende Token sind signierte unterstützende Token, die beim Anzeigen im `wsse:SecurityHeader` auch verschlüsselt werden.|  
   
 ## <a name="programming-supporting-credentials"></a>Programmieren von unterstützenden Anmeldeinformationen  
- Um einen Dienst zu erstellen, der unterstützende Token verwendet, müssen Sie eine [\<CustomBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)erstellen. (Weitere Informationen finden Sie unter Gewusst [wie: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Um einen Dienst zu erstellen, der unterstützende Token verwendet, müssen Sie einen erstellen [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) . (Weitere Informationen finden Sie unter Gewusst [wie: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Der erste Schritt beim Erstellen einer benutzerdefinierten Bindung ist das Erstellen eines Sicherheitsbindungselements, das einer der folgenden drei Typen sein kann:  
   
@@ -64,7 +64,7 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
   
  Wie durch die Eigenschaftennamen angegeben, können unterstützende Anmeldeinformationen erforderlich oder optional sein. Die unterstützenden Anmeldeinformationen werden verwendet, wenn sie vorhanden, aber nicht erforderlich sind; die Authentifizierung schlägt jedoch nicht fehl, wenn sie nicht vorhanden sind.  
   
-## <a name="procedures"></a>Verfahren  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>So erstellen Sie eine benutzerdefinierte Bindung, die unterstützende Anmeldeinformationen enthält  
   
@@ -74,12 +74,12 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
  Im folgenden Beispiel wird eine Instanz des <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> erstellt und eine Instanz der <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters>-Klasse der von der unterzeichenden Eigenschaft zurückgegebenen Auflistung hinzugefügt.  
   
 ### <a name="code"></a>Code  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

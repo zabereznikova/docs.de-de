@@ -2,12 +2,12 @@
 title: Verwenden des WCF-Monikers mit COM-Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: c1d5e0c7d7460e207fedba601e991f25281ddb6e
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 76b7697f431575e7bde83204739cb23f96d27064
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202087"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596486"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Verwenden des WCF-Monikers mit COM-Clients
 In diesem Beispiel wird veranschaulicht, wie der Windows Communication Foundation (WCF)-Dienstmoniker verwendet wird, um Webdienste in COM-basierte Entwicklungsumgebungen zu integrieren, z. b. Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6,0. Das Beispiel umfasst einen Windows Script Host-Client (.vbs), eine unterstützende Clientbibliothek (.dll) und eine Dienstbibliothek (.dll), die von Internetinformationsdienste (IIS) gehostet werden. Der Dienst ist ein Rechnerdienst und der COM-Client ruft mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) auf dem Dienst auf. Die Clientaktivität ist in den Meldungsfeldfenstern sichtbar.  
@@ -50,7 +50,7 @@ public interface ICalculator
 - Metadatenaustausch-Vertrag: Der Vertrag wird zur Laufzeit von einem MEX-Endpunkt (Metadata Exchange) abgerufen.  
   
 ## <a name="typed-contract"></a>Typisierter Vertrag  
- Um den Moniker mit einem typisierten Vertrag zu verwenden, müssen auf geeignete Weise attributierte Typen für den Dienstvertrag mit COM registriert werden. Zuerst muss ein Client mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)generiert werden. Führen Sie den folgenden Befehl an einer Eingabeaufforderung im Clientverzeichnis aus, um den typisierten Proxy zu generieren.  
+ Um den Moniker mit einem typisierten Vertrag zu verwenden, müssen auf geeignete Weise attributierte Typen für den Dienstvertrag mit COM registriert werden. Zuerst muss ein Client mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)generiert werden. Führen Sie den folgenden Befehl an einer Eingabeaufforderung im Clientverzeichnis aus, um den typisierten Proxy zu generieren.  
   
 ```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
@@ -184,9 +184,9 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.  
   
 3. Öffnen Sie in einer Developer-Eingabeaufforderung für Visual Studio den Ordner "\client\bin" unter dem sprachspezifischen Ordner.  
   

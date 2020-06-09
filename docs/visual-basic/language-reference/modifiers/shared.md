@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307084"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579111"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -26,13 +26,13 @@ Gibt an, dass mindestens ein deklariertes Programmier Element einer Klasse oder 
 
 Wenn Sie ein Member einer Klasse oder Struktur freigeben, ist es für jede Instanz verfügbar und nicht für *nicht freigegebene*, wobei jede Instanz eine eigene Kopie beibehält. Dies ist beispielsweise hilfreich, wenn der Wert einer Variablen für die gesamte Anwendung gilt. Wenn Sie diese Variable als deklarieren `Shared` , greifen alle Instanzen auf denselben Speicherort zu, und wenn eine Instanz den Wert der Variablen ändert, greifen alle Instanzen auf den aktualisierten Wert zu.
 
-Durch die Freigabe wird die Zugriffsebene eines Members nicht geändert. Beispielsweise kann ein Klassenmember freigegeben und privat (nur innerhalb der Klasse zugänglich) oder nicht freigegeben und öffentlich sein. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Durch die Freigabe wird die Zugriffsebene eines Members nicht geändert. Beispielsweise kann ein Klassenmember freigegeben und privat (nur innerhalb der Klasse zugänglich) oder nicht freigegeben und öffentlich sein. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 ## <a name="rules"></a>Regeln
 
 - **Deklarationskontext.** Sie können `Shared` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarations Kontext für ein- `Shared` Element eine Klasse oder Struktur sein muss und weder eine Quelldatei, ein Namespace noch eine Prozedur sein darf.
 
-- **Kombinierte Modifizierer.** Sie können nicht `Shared` zusammen mit [über](../../../visual-basic/language-reference/modifiers/overrides.md)schreibungen, [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)oder [static](../../../visual-basic/language-reference/modifiers/static.md) in derselben Deklaration angeben.
+- **Kombinierte Modifizierer.** Sie können nicht `Shared` zusammen mit [über](overrides.md)schreibungen, [Overridable](overridable.md), [NotOverridable](notoverridable.md), [MustOverride](mustoverride.md)oder [static](static.md) in derselben Deklaration angeben.
 
 - **Den.** Sie greifen auf ein frei gegebenes Element zu, indem Sie es mit seinem Klassen-oder Struktur Namen qualifizieren, nicht mit dem Variablennamen einer bestimmten Instanz der Klasse oder Struktur. Sie müssen nicht einmal eine Instanz einer Klasse oder Struktur erstellen, um auf die freigegebenen Member zuzugreifen.
 
@@ -42,7 +42,7 @@ Durch die Freigabe wird die Zugriffsebene eines Members nicht geändert. Beispie
      If Double.IsNaN(result) Then Console.WriteLine("Result is mathematically undefined.")
      ```
 
-- **Implizite Freigabe.** Sie können den- `Shared` Modifizierer nicht in einer Konstanten [Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)verwenden, aber Konstanten werden implizit freigegeben. Ebenso ist es nicht möglich, einen Member eines Moduls oder einer Schnittstelle so zu deklarieren `Shared` , dass Sie implizit freigegeben werden.
+- **Implizite Freigabe.** Sie können den- `Shared` Modifizierer nicht in einer Konstanten [Anweisung](../statements/const-statement.md)verwenden, aber Konstanten werden implizit freigegeben. Ebenso ist es nicht möglich, einen Member eines Moduls oder einer Schnittstelle so zu deklarieren `Shared` , dass Sie implizit freigegeben werden.
 
 ## <a name="behavior"></a>Verhalten
 
@@ -96,7 +96,7 @@ Der `Shared`-Modifizierer kann in folgenden Kontexten verwendet werden:
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Shadows](shadows.md)
-- [statischen](static.md)
+- [Statisch](static.md)
 - [Lebensdauer in Visual Basic](../../programming-guide/language-features/declared-elements/lifetime.md)
 - [Vorgehensweisen](../../programming-guide/language-features/procedures/index.md)
 - [Strukturen](../../programming-guide/language-features/data-types/structures.md)
