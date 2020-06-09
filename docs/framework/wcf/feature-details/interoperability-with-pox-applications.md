@@ -2,23 +2,23 @@
 title: Interoperabilität mit POX-Anwendungen
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 64a6d850a32b14bc60cd43466e04b53a7a39be81
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591052"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579266"
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilität mit POX-Anwendungen
 
-"Plain Old XML" (POX)-Anwendungen kommunizieren, indem Sie den Austausch von unformatierte HTTP-Nachrichten, die nur XML-Anwendungsdaten enthalten, die nicht in einem SOAP-Umschlag eingeschlossen ist. Windows Communication Foundation (WCF) bieten, die Dienste und Clients, die POX-Nachrichten verwenden. Für den Dienst kann WCF verwendet werden, Implementieren von Diensten, die Endpunkte für Clients, z. B. Webbrowser verfügbar zu machen und Skriptsprachen, mit die POX-Nachrichten senden und empfangen. Auf dem Client kann die WCF-Programmiermodell verwendet werden, zur Implementierung von Clients, die mit POX-basierten Diensten kommunizieren.  
+"Plain Old XML" (POX)-Anwendungen kommunizieren durch Austauschen von unformatierten HTTP-Nachrichten, die nur XML-Anwendungsdaten enthalten, die nicht in einem SOAP-Umschlag eingeschlossen sind. Windows Communication Foundation (WCF) kann sowohl Dienste als auch Clients bereitstellen, die POX-Nachrichten verwenden. Auf dem-Dienst kann WCF verwendet werden, um Dienste zu implementieren, die Endpunkte für Clients verfügbar machen, z. b. Webbrowser und Skriptsprachen, die POX-Nachrichten senden und empfangen. Auf dem Client kann das WCF-Programmiermodell verwendet werden, um Clients zu implementieren, die mit POX-basierten Diensten kommunizieren.  
   
 > [!NOTE]
-> In diesem Dokument wurde ursprünglich für .NET Framework 3.0 geschrieben.  .NET Framework 3.5 verfügt über integrierte Unterstützung für die Arbeit mit POX-Anwendungen. Weitere Informationen finden Sie unter [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+> Dieses Dokument wurde ursprünglich für das .NET Framework 3,0 geschrieben.  .NET Framework 3,5 verfügt über eine integrierte Unterstützung für die Arbeit mit POX-Anwendungen. Weitere Informationen finden Sie unter [WCF-Web-HTTP-Programmiermodell](wcf-web-http-programming-model.md).
   
 ## <a name="pox-programming-with-wcf"></a>POX-Programmierung mit WCF
 
-WCF-Dienste, die Kommunikation über HTTP unter Verwendung von POX-Nachrichten verwenden eine [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).
+WCF-Dienste, die mithilfe von POX-Nachrichten über HTTP kommunizieren, verwenden [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) .
 
 ```xml
 <customBinding>
@@ -31,13 +31,13 @@ WCF-Dienste, die Kommunikation über HTTP unter Verwendung von POX-Nachrichten v
 
 Diese benutzerspezifische Bindung enthält zwei Elemente:
 
-- [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
+- [\<httpTransport>](../../configure-apps/file-schema/wcf/httptransport.md)
 
-- [\<textMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
+- [\<textMessageEncoding>](../../configure-apps/file-schema/wcf/textmessageencoding.md)
 
-Der Standard, speziell für die Verwendung konfiguriert Textnachrichtenencoder WCF, die <xref:System.ServiceModel.Channels.MessageVersion.None%2A> -Wert, der kann zum Verarbeiten von XML-Nutzlasten für Nachrichten, die nicht eingetroffen in einen SOAP-Umschlag eingeschlossen.
+Der standardmäßige WCF-Text Nachrichten Encoder ist speziell für die Verwendung des- <xref:System.ServiceModel.Channels.MessageVersion.None%2A> Werts konfiguriert, mit dem XML-Nachrichten Nutzlasten verarbeitet werden können, die nicht in einem SOAP-Umschlag umschließt werden.
 
-WCF-Clients, die über HTTP unter Verwendung von POX-Nachrichten kommunizieren, verwenden eine ähnliche Bindung (siehe folgenden imperativen Code).
+WCF-Clients, die mithilfe von POX-Nachrichten über HTTP kommunizieren, verwenden eine ähnliche Bindung (in folgendem imperativen Code gezeigt).
 
 ```csharp
 private static Binding CreatePoxBinding()
@@ -52,13 +52,13 @@ private static Binding CreatePoxBinding()
 
 Da POX-Clients die URIs, an die Nachrichten gesendet werden, explizit angeben müssen, muss das <xref:System.ServiceModel.Channels.HttpTransportBindingElement> in der Regel so konfiguriert werden, dass eine manuelle Adressierung möglich ist. Hierfür wird im Element die <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A>-Eigenschaft auf `true` festgelegt. Auf diese Weise kann die Adresse für die Nachricht explizit über Anwendungscode angegeben werden, und es muss nicht jedes Mal, wenn eine Anwendung eine Nachricht an einen anderen HTTP-URI sendet, eine neue <xref:System.ServiceModel.ChannelFactory> erstellt werden.
 
-Da bei POX-Nachrichten keine SOAP-Header für die Übermittlung wichtiger Protokollinformationen verwendet werden, müssen POX-Clients und -Dienste häufig Teile der zugrunde liegenden HTTP-Anforderung, die zum Senden und Empfangen einer Nachricht verwendet wird, manipulieren. HTTP-spezifische Protokollinformationen wie HTTP-Header und Statuscodes werden in der WCF-Programmiermodell über zwei Klassen aufgeführt:
+Da bei POX-Nachrichten keine SOAP-Header für die Übermittlung wichtiger Protokollinformationen verwendet werden, müssen POX-Clients und -Dienste häufig Teile der zugrunde liegenden HTTP-Anforderung, die zum Senden und Empfangen einer Nachricht verwendet wird, manipulieren. HTTP-spezifische Protokollinformationen, wie z. b. HTTP-Header und Statuscodes, werden im WCF-Programmiermodell über zwei Klassen angezeigt:
 
 - <xref:System.ServiceModel.Channels.HttpRequestMessageProperty>, die Informationen zur HTTP-Anforderung wie die HTTP-Methode und Anforderungsheader enthält.
 
 - <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>, die Informationen zur HTTP-Antwort enthält wie den HTTP-Statuscode und die Statusbeschreibung sowie alle HTTP-Antwortheader.
   
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine HTTP GET-Request-Nachricht zu erstellen, die an adressiert wird `http://localhost:8100/customers`.
+Im folgenden Codebeispiel wird gezeigt, wie eine HTTP GET-Anforderungs Nachricht erstellt wird, die an adressiert wird `http://localhost:8100/customers` .
 
 ```csharp
 Message request = Message.CreateMessage( MessageVersion.None, String.Empty );

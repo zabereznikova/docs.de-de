@@ -9,16 +9,16 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: 810238ee631808dac472456f910eb52f8bbf550c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a10b7c5295407cfbb36446581a4b75670e37bc6a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363810"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579748"
 ---
 # <a name="collection-types-in-data-contracts"></a>Sammlungstypen in Datenverträgen
 
-Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In der .NET Framework können solche Listen mithilfe von Arrays oder einer Vielzahl anderer Typen (generische Liste, generisch <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>oder <xref:System.Collections.ArrayList>) dargestellt werden. Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.
+Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In der .NET Framework können solche Listen mithilfe von Arrays oder einer Vielzahl anderer Typen (generische Liste, generisch <xref:System.ComponentModel.BindingList%601> , <xref:System.Collections.Specialized.StringCollection> oder) dargestellt werden <xref:System.Collections.ArrayList> . Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.
 
 Es gibt eine spezielle Sammlungsform, die eine Zuordnung zwischen einem Element (dem "Schlüssel") und einem anderen Element (dem "Wert") darstellt. In der .NET Framework werden diese durch Typen wie <xref:System.Collections.Hashtable> und das generische Wörterbuch dargestellt. Eine Zuordnungssammlung kann z. B. eine Stadt ("Schlüssel") der zugehörigen Bevölkerung ("Wert") zuordnen. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Wörterbuchsammlungen*bezeichnet.
 
@@ -26,9 +26,9 @@ Sammlungen werden im Datenvertragsmodell besonders behandelt.
 
 Typen, die die <xref:System.Collections.IEnumerable> -Schnittstelle einschließlich Arrays und generischen Sammlungen implementieren, werden als Sammlungen erkannt. Davon sind die Typen, die die Schnittstellen für das <xref:System.Collections.IDictionary> oder das generische <xref:System.Collections.Generic.IDictionary%602> implementieren, Wörterbuchsammlungen. Alle anderen sind Listensammlungen.
 
-Weitere Anforderungen an Auflistungs Typen, z. b. `Add` die Verwendung einer Methode mit dem Namen und eines Parameter losen Konstruktors, werden in den folgenden Abschnitten ausführlich erläutert. Dies stellt sicher, dass Sammlungstypen sowohl serialisiert als auch deserialisiert sein können. Dies bedeutet, dass einige Sammlungen nicht direkt unterstützt werden, z. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> b. die generische (da Sie keinen Parameter losen Konstruktor aufweist). Informationen zum Umgehen dieser Einschränkungen finden Sie im Abschnitt "Verwenden von Sammlungsschnittstellentypen und schreibgeschützten Sammlungen" weiter unten in diesem Thema.
+Weitere Anforderungen an Auflistungs Typen, z. b. die Verwendung einer Methode mit dem Namen `Add` und eines Parameter losen Konstruktors, werden in den folgenden Abschnitten ausführlich erläutert. Dies stellt sicher, dass Sammlungstypen sowohl serialisiert als auch deserialisiert sein können. Dies bedeutet, dass einige Sammlungen nicht direkt unterstützt werden, z. b. die generische <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (da Sie keinen Parameter losen Konstruktor aufweist). Informationen zum Umgehen dieser Einschränkungen finden Sie im Abschnitt "Verwenden von Sammlungsschnittstellentypen und schreibgeschützten Sammlungen" weiter unten in diesem Thema.
 
-Die in Sammlungen enthaltenen Typen müssen Datenvertragstypen oder anderweitig serialisierbar sein. Weitere Informationen finden Sie [unter vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).
+Die in Sammlungen enthaltenen Typen müssen Datenvertragstypen oder anderweitig serialisierbar sein. Weitere Informationen finden Sie [unter vom Datenvertragsserialisierer unterstützte Typen](types-supported-by-the-data-contract-serializer.md).
 
 Weitere Informationen dazu, was und was nicht als gültige Sammlung betrachtet wird, sowie darüber, wie Sammlungen serialisiert werden, finden Sie im Abschnitt Informationen zum Serialisieren von Sammlungen im Abschnitt "Erweiterte Sammlungs Regeln" dieses Themas.
 
@@ -74,9 +74,9 @@ Bei Sammlungsschnittstellentypen (<xref:System.Collections.IEnumerable>, <xref:S
 [!code-csharp[c_collection_types_in_data_contracts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#1)]
 [!code-vb[c_collection_types_in_data_contracts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#1)]
 
-Wenn der deklarierte Typ eine Schnittstelle ist, kann der derzeit verwendete Instanzentyp während der Serialisierung ein beliebiger Typ sein, der diese Schnittstelle implementiert. Die zuvor beschriebenen Einschränkungen (mit einem Parameter losen Konstruktor und einer `Add` -Methode) gelten nicht. Beispielsweise können Sie Adressen in Customer2 auf eine Instanz einer generischen <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von "Adress" einstellen, auch wenn es Ihnen nicht möglich ist, einen Datenmember des Typs "Generische <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>" direkt zu deklarieren.
+Wenn der deklarierte Typ eine Schnittstelle ist, kann der derzeit verwendete Instanzentyp während der Serialisierung ein beliebiger Typ sein, der diese Schnittstelle implementiert. Die zuvor beschriebenen Einschränkungen (mit einem Parameter losen Konstruktor und einer- `Add` Methode) gelten nicht. Beispielsweise können Sie Adressen in Customer2 auf eine Instanz einer generischen <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von "Adress" einstellen, auch wenn es Ihnen nicht möglich ist, einen Datenmember des Typs "Generische <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>" direkt zu deklarieren.
 
-Wenn der deklarierte Typ eine Schnittstelle ist, wählt die Serialisierungs-Engine während der Deserialisierung einen Typ, der die deklarierte Schnittstelle implementiert, und der Typ wird instanziiert. Der Mechanismus der bekannten Typen (beschrieben in " [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)") hat hier keine Auswirkung. die Auswahl des Typs ist in WCF integriert.
+Wenn der deklarierte Typ eine Schnittstelle ist, wählt die Serialisierungs-Engine während der Deserialisierung einen Typ, der die deklarierte Schnittstelle implementiert, und der Typ wird instanziiert. Der Mechanismus der bekannten Typen (beschrieben in " [Data Contract Known Types](data-contract-known-types.md)") hat hier keine Auswirkung. die Auswahl des Typs ist in WCF integriert.
 
 ## <a name="customizing-collection-types"></a>Anpassen von Sammlungstypen
 
@@ -86,7 +86,7 @@ Beachten Sie, dass das Anpassen von Sammlungstypen die Austauschbarkeit von Samm
 
 ### <a name="collection-data-contract-naming"></a>Benennen von Sammlungsdatenverträgen
 
-Die Regeln für das Benennen von Sammlungstypen ähneln den Regeln für das Benennen von Datenvertragstypen, wie unter [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)beschrieben. Es bestehen jedoch einige wichtige Unterschiede:
+Die Regeln für das Benennen von Sammlungstypen ähneln den Regeln für das Benennen von Datenvertragstypen, wie unter [Data Contract Names](data-contract-names.md)beschrieben. Es bestehen jedoch einige wichtige Unterschiede:
 
 - Zum Anpassen des Namens wird das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut verwendet und nicht das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut. Das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut weist außerdem `Name` - und `Namespace` -Eigenschaften auf.
 
@@ -150,7 +150,7 @@ Weitere Informationen finden Sie im Abschnitt "Erweiterte Sammlungs Regeln" weit
 
 Listensammlungen enthalten sich wiederholende Einträge. In der Regel wird jeder sich wiederholende Eintrag als Element dargestellt, das gemäß dem Datenvertragsnamen des in der Sammlung enthaltenen Typs benannt ist.
 
-In den `CustomerList` -Beispielen enthielten die Sammlungen Zeichenfolgen. Der Daten Vertrags Name für den primitiven Typ der Zeichenfolge ist "String", daher war das sich\<wiederholende Element "String >".
+In den `CustomerList` -Beispielen enthielten die Sammlungen Zeichenfolgen. Der Daten Vertrags Name für den primitiven Typ der Zeichenfolge ist "String", sodass das sich wiederholende Element " \<string> " lautet.
 
 Wenn jedoch die <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> -Eigenschaft auf dem <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut verwendet wird, kann dieser sich wiederholende Elementname angepasst werden. Ein Beispiel finden Sie im folgenden Typ:
 
@@ -232,11 +232,11 @@ Benutzerdefinierte Sammlungstypen, Sammlungsschnittstellen und Arrays werden wei
 
 Alle äquivalenten Sammlungen verfügen über die gleiche Darstellung im XSD-Schema (XML Schema Definition Language). Daher erhalten Sie im generierten Clientcode normalerweise nicht den gleichen Sammlungstyp wie auf dem Server. Beispielsweise kann der Server einen Datenvertrag mit einer generischen <xref:System.Collections.Generic.List%601> für den Datenmember "Integer" verwenden, im generierten Clientcode kann der gleiche Datenmember jedoch ein Array von ganzen Zahlen werden.
 
-Wörterbuch Sammlungen sind mit einer WCF-spezifischen Schema Anmerkung gekennzeichnet, die darauf hinweist, dass es sich um Wörterbücher handelt. Andernfalls können Sie nicht von einfachen Listen unterschieden werden, die Einträge mit einem Schlüssel und einem Wert enthalten. Eine genaue Beschreibung, wie Sammlungen in einem Datenvertragsschema dargestellt werden, finden Sie unter [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+Wörterbuch Sammlungen sind mit einer WCF-spezifischen Schema Anmerkung gekennzeichnet, die darauf hinweist, dass es sich um Wörterbücher handelt. Andernfalls können Sie nicht von einfachen Listen unterschieden werden, die Einträge mit einem Schlüssel und einem Wert enthalten. Eine genaue Beschreibung, wie Sammlungen in einem Datenvertragsschema dargestellt werden, finden Sie unter [Data Contract Schema Reference](data-contract-schema-reference.md).
 
 Standardmäßig werden Typen nicht für nicht benutzerdefinierte Sammlungen in importiertem Code generiert. Datenmember von Listensammlungstypen werden als Arrays importiert, und Datenmember von Wörterbuchsammlungstypen werden als generisches Wörterbuch importiert.
 
-Für benutzerdefinierte Sammlungen werden jedoch separate Typen generiert, die mit dem <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut gekennzeichnet sind. (Ein benutzerdefinierter Sammlungstyp im Schema ist ein Typ, der keinen standardmäßigen Namespace und keine standardmäßigen Namen, sich wiederholende Elementnamen oder Namen für Schlüssel-/Wertelemente verwendet.) Bei diesen Typen handelt es sich um leere Typen, die von der generischen <xref:System.Collections.Generic.List%601> für Listentypen und vom generischen Wörterbuch für Wörterbuchtypen abgeleitet werden.
+Für benutzerdefinierte Sammlungen werden jedoch separate Typen generiert, die mit dem <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut gekennzeichnet sind. (Ein benutzerdefinierter Sammlungstyp im Schema ist eine, die nicht den Standard Namespace, den Namen, den Namen des wiederholten Elements oder die Schlüssel-Wert-Elementnamen verwendet.) Bei diesen Typen handelt es sich um leere Typen, die von generisch <xref:System.Collections.Generic.List%601> für Listen Typen und generisches Wörterbuch für Wörterbuchtypen abgeleitet
 
 Es können z. B. folgende Typen auf dem Server vorliegen:
 
@@ -255,7 +255,7 @@ Möglicherweise möchten Sie andere Typen als die Standardtypen in generiertem C
 Wenn auf generische Typen verwiesen wird, müssen sie entweder vollständig offene oder vollständig geschlossene Generics sein.
 
 > [!NOTE]
-> Wenn Sie das Tool „Svcutil.exe“ verwenden, kann dieser Verweis über den **/collectionType** -Befehlszeilenschalter (Kurzform: **/ct**) erreicht werden. Denken Sie daran, dass Sie auch die Assembly für die referenzierten Sammlungstypen über den **/reference** -Schalter (Kurzform: **/r**) angeben müssen. Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und die Anzahl der generischen Parameter. Das backanführungs Zeichen\`() muss nicht mit dem einfachen Anführungszeichen (') verwechselt werden. Sie können mehrere referenzierte Sammlungstypen angeben, indem Sie den **/collectionType** -Schalter mehrmals verwenden.
+> Wenn Sie das Tool „Svcutil.exe“ verwenden, kann dieser Verweis über den **/collectionType** -Befehlszeilenschalter (Kurzform: **/ct**) erreicht werden. Denken Sie daran, dass Sie auch die Assembly für die referenzierten Sammlungstypen über den **/reference** -Schalter (Kurzform: **/r**) angeben müssen. Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und die Anzahl der generischen Parameter. Das backanführungs \` Zeichen () muss nicht mit dem einfachen Anführungszeichen (') verwechselt werden. Sie können mehrere referenzierte Sammlungstypen angeben, indem Sie den **/collectionType** -Schalter mehrmals verwenden.
 
 Beispielsweise, um zu bewirken, dass alle Listen als generische <xref:System.Collections.Generic.List%601>importiert werden.
 
@@ -306,7 +306,7 @@ Wenn der Typ sowohl das <xref:System.Collections.IDictionary> als auch das gener
 
 Das Verweisen auf teilweise generische Typen wird nicht unterstützt.
 
-Duplikate sind nicht zulässig. Beispielsweise können Sie nicht sowohl die generische <xref:System.Collections.Generic.List%601> von `Integer` als auch die generische Sammlung von `Integer` <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A>hinzufügen, da anschließend nicht mehr festgestellt werden kann, was verwendet werden soll, wenn eine Liste mit ganzen Zahlen im Schema auftritt. Duplikate werden nur erkannt, wenn es einen Typ im Schema gibt, der das Duplikatproblem offenlegt. Wenn z. B. das importierte Schema keine Liste mit ganzen Zahlen enthält, kann es sowohl über die generische <xref:System.Collections.Generic.List%601> von `Integer` als auch über die generische Sammlung von `Integer` in den <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A>verfügen, doch nichts davon zeigt eine Wirkung.
+Duplikate sind nicht zulässig. Beispielsweise können Sie nicht sowohl die generische <xref:System.Collections.Generic.List%601> von `Integer` als auch die generische Sammlung von `Integer`<xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A>hinzufügen, da anschließend nicht mehr festgestellt werden kann, was verwendet werden soll, wenn eine Liste mit ganzen Zahlen im Schema auftritt. Duplikate werden nur erkannt, wenn es einen Typ im Schema gibt, der das Duplikatproblem offenlegt. Wenn z. B. das importierte Schema keine Liste mit ganzen Zahlen enthält, kann es sowohl über die generische <xref:System.Collections.Generic.List%601> von `Integer` als auch über die generische Sammlung von `Integer` in den <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A>verfügen, doch nichts davon zeigt eine Wirkung.
 
 ## <a name="advanced-collection-rules"></a>Erweiterte Sammlungsregeln
 
@@ -316,7 +316,7 @@ Im Folgenden finden Sie eine Liste mit Sammlungsregeln für die Serialisierung:
 
 - Das Kombinieren von Sammlungstypen (das Erstellen von Sammlungen von Sammlungen) ist zulässig. Verzweigte Arrays werden als Sammlungen von Sammlungen behandelt. Arrays mit mehreren Dimensionen werden nicht unterstützt.
 
-- Byte- und <xref:System.Xml.XmlNode> -Arrays sind besondere Arraytypen, die als Primitive und nicht als Sammlungen behandelt werden. Die Serialisierung eines Bytearrays führt zu einem einzelnen XML-Element, das statt eines separaten Elements für jedes Byte einen Abschnitt aus Base64-codierten Daten enthält. Weitere Informationen zur Behandlung eines Arrays von <xref:System.Xml.XmlNode> finden Sie unter [XML-und ADO.NET-Typen in Daten Verträgen](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Natürlich können diese besonderen Typen selbst Teil von Sammlungen sein: Ein Bytearray führt zu mehreren XML-Elementen, die jeweils einen Abschnitt aus Base64-codierten Daten enthalten.
+- Byte- und <xref:System.Xml.XmlNode> -Arrays sind besondere Arraytypen, die als Primitive und nicht als Sammlungen behandelt werden. Die Serialisierung eines Bytearrays führt zu einem einzelnen XML-Element, das statt eines separaten Elements für jedes Byte einen Abschnitt aus Base64-codierten Daten enthält. Weitere Informationen zur Behandlung eines Arrays von finden Sie unter <xref:System.Xml.XmlNode> [XML-und ADO.NET-Typen in Daten Verträgen](xml-and-ado-net-types-in-data-contracts.md). Natürlich können diese besonderen Typen selbst Teil von Sammlungen sein: Ein Bytearray führt zu mehreren XML-Elementen, die jeweils einen Abschnitt aus Base64-codierten Daten enthalten.
 
 - Wenn das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf einen Sammlungstyp angewendet wird, wird der Typ als regulärer Datenvertragstyp und nicht als Sammlung behandelt.
 
@@ -342,29 +342,29 @@ Im Folgenden finden Sie eine Liste mit Sammlungsregeln für die Serialisierung:
 
 In der vorangehenden Tabelle werden in absteigender Reihenfolge Sammlungsschnittstellen aufgelistet. Das bedeutet beispielsweise, dass die Sammlung gemäß den <xref:System.Collections.IList> -Regeln serialisiert und deserialisiert wird, wenn ein Typ sowohl die <xref:System.Collections.Generic.IEnumerable%601>als auch das generische <xref:System.Collections.IList> implementiert:
 
-- Bei der Deserialisierung werden alle Sammlungen deserialisiert, indem zuerst eine Instanz des Typs erstellt wird, indem der Parameter lose Konstruktor aufgerufen wird, der vorhanden sein muss, damit das Serialisierungsprogramm einen Sammlungstyp während der Serialisierung als Sammlung behandelt. Deserialisierung.
+- Bei der Deserialisierung werden alle Sammlungen deserialisiert, indem zuerst eine Instanz des Typs erstellt wird, indem der Parameter lose Konstruktor aufgerufen wird, der vorhanden sein muss, damit das Serialisierungsprogramm einen Sammlungstyp während der Serialisierung und Deserialisierung als Auflistung behandelt.
 
 - Wenn die gleiche generische Sammlungsschnittstelle mehrmals implementiert wird (z. B. wenn ein Typ sowohl die generische <xref:System.Collections.Generic.ICollection%601> von `Integer` als auch die generische <xref:System.Collections.Generic.ICollection%601> von <xref:System.String>implementiert) und keine Schnittstelle mit höherer Rangfolge gefunden wird, wird die Sammlung nicht als gültige Sammlung behandelt.
 
 - Auf Sammlungstypen kann das <xref:System.SerializableAttribute> -Attribut angewendet sein, und sie können die <xref:System.Runtime.Serialization.ISerializable> -Schnittstelle implementieren. Beide werden ignoriert. Wenn jedoch der Typ die Sammlungstypanforderungen nicht vollständig erfüllt (z. B. wenn der Sammlungstyp und die `Add` -Methode fehlen), wird der Typ nicht als Sammlungstyp betrachtet. Daher werden das <xref:System.SerializableAttribute> -Attribut und die <xref:System.Runtime.Serialization.ISerializable> -Schnittstelle verwendet, um die Serialisierbarkeit des Typs zu bestimmen.
 
-- Durch Anwenden des <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attributs auf eine Sammlung, um diese anzupassen, wird der oben genannte <xref:System.SerializableAttribute> -Fallback-Mechanismus entfernt. Stattdessen wird eine <xref:System.Runtime.Serialization.InvalidDataContractException> -Ausnahme ausgelöst, wenn eine benutzerdefinierte Sammlung keine Sammlungstypanforderungen erfüllt,. Die Ausnahme Zeichenfolge enthält häufig Informationen, die erläutern, warum ein angegebener Typ nicht als `Add` gültige Auflistung angesehen wird (keine Methode, kein Parameter loser Konstruktor usw.). Daher ist es häufig hilfreich <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , das Attribut für das Debuggen anzuwenden. verwendet.
+- Durch Anwenden des <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attributs auf eine Sammlung, um diese anzupassen, wird der oben genannte <xref:System.SerializableAttribute> -Fallback-Mechanismus entfernt. Stattdessen wird eine <xref:System.Runtime.Serialization.InvalidDataContractException> -Ausnahme ausgelöst, wenn eine benutzerdefinierte Sammlung keine Sammlungstypanforderungen erfüllt,. Die Ausnahme Zeichenfolge enthält häufig Informationen, die erläutern, warum ein bestimmter Typ nicht als gültige Auflistung angesehen wird (keine `Add` Methode, kein Parameter loser Konstruktor usw.). Daher ist es häufig hilfreich, das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> Attribut zu Debuggingzwecken anzuwenden.
 
 ### <a name="collection-naming"></a>Sammlungsbenennung
 
 Im Folgenden finden Sie eine Liste von Regeln für die Sammlungsbenennung:
 
-- Der Standard Namespace für alle Datenverträge für Wörterbuch Sammlungen sowie für Datenverträge für Listen Sammlungen, die primitive Typen enthalten, `http://schemas.microsoft.com/2003/10/Serialization/Arrays` ist, wenn nicht mithilfe von Namespace überschrieben. Typen, die integrierten XSD-Typen zugeordnet werden, sowie `char`-, `Timespan`- und `Guid` -Typen, gelten zu diesem Zweck als primitive Typen.
+- Der Standard Namespace für alle Datenverträge für Wörterbuch Sammlungen sowie für Datenverträge für Listen Sammlungen, die primitive Typen enthalten, ist, `http://schemas.microsoft.com/2003/10/Serialization/Arrays` Wenn nicht mithilfe von Namespace überschrieben. Typen, die integrierten XSD-Typen zugeordnet werden, sowie `char`-, `Timespan`- und `Guid` -Typen, gelten zu diesem Zweck als primitive Typen.
 
 - Der Standardnamespace für Sammlungstypen, die nicht primitive Typen enthalten, ist der gleiche wie der Namespace für die Datenverträge des in der Sammlung enthaltenen Typs, sofern er nicht von "Namespace" überschrieben wurde.
 
 - Der Standardname für Datenverträge für Sammlungstypen ist die Zeichenfolge "ArrayOf" in Kombination mit dem Datenvertragsnamen des in der Sammlung enthaltenen Typs, sofern er nicht von "Name" überschrieben wurde. Der Datenvertragsname einer generischen Liste von ganzen Zahlen lautet z. B. "ArrayOfint". Beachten Sie, dass der Datenvertragsname von `Object` "anyType" lautet, sodass der Datenvertragsname für nicht generische Listen wie <xref:System.Collections.ArrayList> "ArrayOfanyType" lautet.
 
-Der Standardname für Datenverträge für Wörterbuchsammlungen ist die Zeichenfolge "ArrayOfKeyValueOf" in Kombination mit dem Datenvertragsnamen für den Schlüsseltyp, gefolgt vom Datenvertragsnamen des Werttyps, sofern er nicht von `Name`überschrieben wurde. Der Datenvertragsname für ein generisches Wörterbuch für Zeichenfolge und ganze Zahl lautet z. B. "ArrayOfKeyValueOfstringint". Wenn darüber hinaus der Schlüssel- oder der Werttyp kein primitiver Typ ist, wird an den Namen ein Namespacehash der Datenvertragsnamespaces für den Schlüssel- und Werttyp angefügt. Weitere Informationen zu Namespace-Hashes finden Sie unter [Daten Vertrags Namen](../../../../docs/framework/wcf/feature-details/data-contract-names.md).
+Der Standardname für Datenverträge für Wörterbuchsammlungen ist die Zeichenfolge "ArrayOfKeyValueOf" in Kombination mit dem Datenvertragsnamen für den Schlüsseltyp, gefolgt vom Datenvertragsnamen des Werttyps, sofern er nicht von `Name`überschrieben wurde. Der Datenvertragsname für ein generisches Wörterbuch für Zeichenfolge und ganze Zahl lautet z. B. "ArrayOfKeyValueOfstringint". Wenn darüber hinaus der Schlüssel- oder der Werttyp kein primitiver Typ ist, wird an den Namen ein Namespacehash der Datenvertragsnamespaces für den Schlüssel- und Werttyp angefügt. Weitere Informationen zu Namespace-Hashes finden Sie unter [Daten Vertrags Namen](data-contract-names.md).
 
 Jeder Wörterbuchsammlungsdatenvertrag weist einen Begleitdatenvertrag auf, der einen Eintrag im Wörterbuch darstellt. Der Name ist der gleiche wie der des Wörterbuchdatenvertrags, bis auf das Präfix "ArrayOf", und der Namespace ist ebenfalls der gleiche wie für den Wörterbuchdatenvertrag. Beispielsweise kann für den "ArrayOfKeyValueOfstringint"-Wörterbuchdatenvertrag der "KeyValueofstringint"-Datenvertrag einen Eintrag im Wörterbuch darstellen. Sie können den Namen dieses Datenvertrags individuell anpassen, indem Sie die `ItemName` -Eigenschaft verwenden, wie im nächsten Abschnitt beschrieben.
 
-Benennungsregeln für generische Typen, wie unter [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)beschrieben, gelten vollständig für Sammlungstypen, d. h. Sie können geschweifte Klammern innerhalb von "Name" verwenden, um generische Parametertypen anzuzeigen. Die Zahlen innerhalb der Klammern verweisen jedoch auf generische Parameter und nicht auf Typen, die in der Sammlung enthalten sind.
+Benennungsregeln für generische Typen, wie unter [Data Contract Names](data-contract-names.md)beschrieben, gelten vollständig für Sammlungstypen, d. h. Sie können geschweifte Klammern innerhalb von "Name" verwenden, um generische Parametertypen anzuzeigen. Die Zahlen innerhalb der Klammern verweisen jedoch auf generische Parameter und nicht auf Typen, die in der Sammlung enthalten sind.
 
 ## <a name="collection-customization"></a>Sammlungsanpassung
 
@@ -387,7 +387,7 @@ Aufgrund der Anpassungen ist es möglich, einen Sammlungsdatenvertrag, wo noch e
 [!code-csharp[c_collection_types_in_data_contracts#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#11)]
 [!code-vb[c_collection_types_in_data_contracts#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#11)]
 
-In diesem Fall kann eine Instanz von `Marks1` `testMarks`zugewiesen werden. `Marks2` sollte jedoch nicht verwendet werden: Der zugehörige Datenvertrag stimmt nicht mit dem `IList<int>` -Datenvertrag überein. Der Name des Daten Vertrags lautet "Marks2" und nicht "ArrayOfint", und der sich wiederholende Element\<Name ist "Mark >"\<und nicht "int >".
+In diesem Fall kann eine Instanz von `Marks1``testMarks`zugewiesen werden. `Marks2` sollte jedoch nicht verwendet werden: Der zugehörige Datenvertrag stimmt nicht mit dem `IList<int>` -Datenvertrag überein. Der Name des Daten Vertrags lautet "Marks2" und nicht "ArrayOfint", und der Name des wiederholten Elements lautet " \<mark> " und nicht " \<int> ".
 
 Die Regeln in der folgenden Tabelle gelten für die polymorphe Zuweisung von Sammlungen:
 
@@ -398,7 +398,7 @@ Die Regeln in der folgenden Tabelle gelten für die polymorphe Zuweisung von Sam
 |Nicht benutzerdefinierte Sammlung|Vertragsname wird nicht serialisiert.|Vertragsname wird serialisiert.<br /><br /> Anpassung wird verwendet.**|
 |Benutzerdefinierte Sammlung|Vertragsname wird serialisiert. Anpassung wird nicht verwendet.\*\*|Vertragsname wird serialisiert.<br /><br /> Die Anpassung des zugewiesenen Typs wird verwendet.\*\*|
 
-\*Mit der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Klasse wird die Anpassung in diesem Fall verwendet. Die <xref:System.Runtime.Serialization.NetDataContractSerializer> -Klasse serialisiert auch den tatsächlichen Typnamen in diesem Fall, sodass die Deserialisierung wie erwartet funktioniert.
+\*Mit der- <xref:System.Runtime.Serialization.NetDataContractSerializer> Klasse wird die Anpassung in diesem Fall verwendet. Die <xref:System.Runtime.Serialization.NetDataContractSerializer> -Klasse serialisiert auch den tatsächlichen Typnamen in diesem Fall, sodass die Deserialisierung wie erwartet funktioniert.
 
 \*\*Diese Fälle führen zu Schema ungültigen Instanzen und sollten daher vermieden werden.
 
@@ -410,6 +410,6 @@ Einem Array eines Basistyps kann ein Array eines abgeleiteten Typs zugewiesen we
 
 Wenn ein Serialisierungsprogramm in einem Modus ausgeführt wird, in dem es Objektverweise beibehält, gilt die Beibehaltung der Objektverweise auch für Sammlungen. Insbesondere wird Objektidentität sowohl für ganze Sammlungen als auch für einzelne Elemente beibehalten, die in Sammlungen enthalten sind. Für Wörterbücher wird Objektidentität sowohl für Schlüssel- und Wertepaarobjekte als auch für die einzelnen Schlüssel- und Werteobjekte beibehalten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

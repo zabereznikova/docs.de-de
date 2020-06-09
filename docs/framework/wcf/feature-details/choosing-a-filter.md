@@ -2,12 +2,12 @@
 title: Auswählen eines Filters
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 282f6e9e2bc986feee0d1825ee9d87217d453e50
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e951c472543239df0c01dcba3e46f120ced9e192
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964819"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587494"
 ---
 # <a name="choosing-a-filter"></a>Auswählen eines Filters
 Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter auszuwählen und so zu konfigurieren, dass Sie genaue Übereinstimmungen mit den Nachrichten erzielen können, die Sie empfangen. Falls die ausgewählten Filter in Bezug auf die Übereinstimmungen zu ungenau oder falsch konfiguriert sind, werden die Nachrichten nicht korrekt weitergeleitet. Wenn die Filter zu restriktiv sind, kann es sein, dass für einige Nachrichten keine gültigen Weiterleitungsrouten verfügbar sind.
@@ -16,9 +16,9 @@ Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter
 
 Beim Auswählen der vom Routingdienst verwendeten Filter ist es wichtig, dass Sie verstehen, wie die einzelnen Filter funktionieren. Außerdem sollten Sie wissen, welche Informationen in Verbindung mit den eingehenden Nachrichten verfügbar sind. Falls beispielsweise alle Nachrichten über den gleichen Endpunkt empfangen werden, sind die Adress- und EndpointName-Filter nicht hilfreich, weil alle Nachrichten Übereinstimmungen mit diesen Filtern aufweisen.
 
-### <a name="action"></a>-Aktion
+### <a name="action"></a>Aktion
 
-Der Action-Filter überprüft die <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>-Eigenschaft. Falls der Inhalt des Action-Headers in der Nachricht mit dem Filterdatenwert übereinstimmt, der in der Filterkonfiguration angegeben ist, gibt dieser Filter `true` zurück. Im folgenden Beispiel wird eine `FilterElement` definiert, die den Aktionsfilter verwendet, um Nachrichten mit einem Aktions Header abzugleichen, der den Wert `http://namespace/contract/operation/`enthält.
+Der Action-Filter überprüft die <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>-Eigenschaft. Falls der Inhalt des Action-Headers in der Nachricht mit dem Filterdatenwert übereinstimmt, der in der Filterkonfiguration angegeben ist, gibt dieser Filter `true` zurück. Im folgenden Beispiel wird ein definiert `FilterElement` , das den Aktionsfilter verwendet, um Nachrichten mit einem Aktions Header abzugleichen, der den Wert enthält `http://namespace/contract/operation/` .
 
 ```xml
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />
@@ -32,7 +32,7 @@ Dieser Filter sollte beim Weiterleiten von Nachrichten verwendet werden, die ein
 
 ### <a name="endpointaddress"></a>EndpointAddress
 
-Der EndpointAddress-Filter überprüft die EndpointAddress, über die die Nachricht empfangen wurde. Wenn die Adresse, über die die Nachricht eingeht, genau mit der in der Filterkonfiguration angegebenen Filteradresse übereinstimmt, gibt dieser Filter `true` zurück. Im folgenden Beispiel wird eine `FilterElement` definiert, die den Adress Filter verwendet, um Nachrichten abzugleichen, die mit "http://\<Hostname >/vdir/s.svc/b" adressiert sind.
+Der EndpointAddress-Filter überprüft die EndpointAddress, über die die Nachricht empfangen wurde. Wenn die Adresse, über die die Nachricht eingeht, genau mit der in der Filterkonfiguration angegebenen Filteradresse übereinstimmt, gibt dieser Filter `true` zurück. Im folgenden Beispiel wird ein definiert `FilterElement` , das den Adress Filter verwendet, um Nachrichten abzugleichen, die an "http:///vdir/s.svc/b" adressiert sind \<hostname> .
 
 ```xml
 <filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b" />
@@ -51,7 +51,7 @@ Dieser Filter sollte verwendet werden, wenn die eingehenden Nachrichten an eine 
 
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix
 
-Der EndpointAddressPrefix-Filter ähnelt dem EndpointAddress-Filter. Der EndpointAddressPrefix-Filter überprüft die EndpointAddress, über die die Nachricht empfangen wurde. Der EndpointAddressPrefix-Filter fungiert jedoch als Platzhalter, indem er Übereinstimmungen für Adressen ermittelt, die mit dem in der Filterkonfiguration angegebenen Wert beginnen. Im folgenden Beispiel wird eine `FilterElement` definiert, die den endpointadresspfixfilter verwendet, um Nachrichten abzugleichen, die an `http://<hostname>/vdir*`adressiert sind.
+Der EndpointAddressPrefix-Filter ähnelt dem EndpointAddress-Filter. Der EndpointAddressPrefix-Filter überprüft die EndpointAddress, über die die Nachricht empfangen wurde. Der EndpointAddressPrefix-Filter fungiert jedoch als Platzhalter, indem er Übereinstimmungen für Adressen ermittelt, die mit dem in der Filterkonfiguration angegebenen Wert beginnen. Im folgenden Beispiel wird ein definiert `FilterElement` , das den endpointadresssspree Fix-Filter verwendet, um Nachrichten abzugleichen, die an adressiert sind `http://<hostname>/vdir*` .
 
 ```xml
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />
@@ -96,11 +96,11 @@ Wenn Sie den benutzerdefinierten Filtertyp auswählen, müssen Sie einen CustomT
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
 ```
 
-Wenn Sie eine benutzerdefinierte abgleichslogik für eine Nachricht ausführen müssen, die nicht von den mit [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]bereitgestellten Filtern abgedeckt ist, müssen Sie einen benutzerdefinierten Filter erstellen, bei dem es sich um eine Implementierung der **MessageFilter** -Klasse handelt. Sie können z. B. einen benutzerdefinierten Filter erstellen, der ein Feld in der eingehenden Nachricht mit einer Liste bekannter Werte vergleicht, die dem Filter als Konfiguration vorliegen. Oder Sie können einen Filter erstellen, der den Hashwert für ein bestimmtes Nachrichtenelement generiert und diesen Wert dann untersucht und angibt, ob der Filter `true` oder `false` zurückgeben soll.
+Wenn Sie eine benutzerdefinierte abgleichslogik für eine Nachricht ausführen müssen, die nicht von den in bereitgestellten Filtern abgedeckt ist [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] , müssen Sie einen benutzerdefinierten Filter erstellen, bei dem es sich um eine Implementierung der **MessageFilter** -Klasse handelt. Sie können z. B. einen benutzerdefinierten Filter erstellen, der ein Feld in der eingehenden Nachricht mit einer Liste bekannter Werte vergleicht, die dem Filter als Konfiguration vorliegen. Oder Sie können einen Filter erstellen, der den Hashwert für ein bestimmtes Nachrichtenelement generiert und diesen Wert dann untersucht und angibt, ob der Filter `true` oder `false` zurückgeben soll.
 
 ### <a name="endpointname"></a>EndpointName
 
-Der EndpointName-Filter überprüft den Namen des Endpunkts, der die Nachricht empfangen hat. Im folgenden Beispiel wird eine `FilterElement` definiert, die den EndpointName-Filter verwendet, um Nachrichten weiterzuleiten, die auf "SvcEndpoint" empfangen werden.
+Der EndpointName-Filter überprüft den Namen des Endpunkts, der die Nachricht empfangen hat. Im folgenden Beispiel wird ein definiert `FilterElement` , das den EndpointName-Filter verwendet, um Nachrichten weiterzuleiten, die auf "SvcEndpoint" empfangen wurden.
 
 ```xml
 <filter name="name1" filterType="Endpoint" filterData="SvcEndpoint" />
@@ -128,7 +128,7 @@ MatchAllMessageFilter matchAll1 = new MatchAllMessageFilter();
 
 ### <a name="xpath"></a>XPath
 
-Mit dem XPath-Filter können Sie eine XPath-Abfrage angeben, die verwendet wird, um ein bestimmtes Element innerhalb der Nachricht zu überprüfen. Die XPath-Filterung ist eine leistungsstarke Filteroption, mit der Sie jeden per XML-Adressierung erreichbaren Eintrag in der Nachricht direkt untersuchen können. Dafür ist es jedoch erforderlich, dass Sie über genaue Kenntnisse der Struktur der Nachrichten verfügen, die Sie empfangen. Im folgenden Beispiel wird ein `FilterElement` definiert, das den XPath-Filter verwendet, um die Nachricht für ein Element mit dem Namen "Element" innerhalb des Namespace zu überprüfen, auf den das Namespace Präfix "NS" verweist.
+Mit dem XPath-Filter können Sie eine XPath-Abfrage angeben, die verwendet wird, um ein bestimmtes Element innerhalb der Nachricht zu überprüfen. Die XPath-Filterung ist eine leistungsstarke Filteroption, mit der Sie jeden per XML-Adressierung erreichbaren Eintrag in der Nachricht direkt untersuchen können. Dafür ist es jedoch erforderlich, dass Sie über genaue Kenntnisse der Struktur der Nachrichten verfügen, die Sie empfangen. Im folgenden Beispiel wird ein definiert `FilterElement` , das den XPath-Filter verwendet, um die Nachricht für ein Element mit dem Namen "Element" innerhalb des Namespace zu überprüfen, auf den das Namespace Präfix "NS" verweist.
 
 ```xml
 <filter name="xpath1" filterType="XPath" filterData="//ns:element" />
@@ -140,11 +140,11 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
 
 Dieser Filter ist nützlich, wenn Sie wissen, dass die empfangenen Nachrichten einen bestimmten Wert enthalten. Wenn Sie beispielsweise zwei Versionen des gleichen Diensts hosten und wissen, dass an die neuere Version des Diensts adressierte Nachrichten in einem benutzerdefinierten Header einen eindeutigen Wert enthalten, können Sie einen speziellen Filter erstellen. Der Filter verwendet XPath zum Navigieren zu diesem Header und vergleicht den im Header enthaltenen Wert mit einem anderen Wert in der Filterkonfiguration, um zu bestimmen, ob der Filter eine Übereinstimmung ergibt.
 
-Da XPath-Abfragen häufig eindeutige Namespaces enthalten, bei denen es sich oft um lange oder komplexe Zeichenfolgenwerte handelt, können Sie mit dem XPath-Filter die Namespacetabelle zum Definieren eindeutiger Präfixe für die Namespaces verwenden. Weitere Informationen zur Namespace Tabelle finden Sie unter [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md).
+Da XPath-Abfragen häufig eindeutige Namespaces enthalten, bei denen es sich oft um lange oder komplexe Zeichenfolgenwerte handelt, können Sie mit dem XPath-Filter die Namespacetabelle zum Definieren eindeutiger Präfixe für die Namespaces verwenden. Weitere Informationen zur Namespace Tabelle finden Sie unter [Nachrichtenfilter](message-filters.md).
 
 Weitere Informationen zum Entwerfen von XPath-Abfragen finden Sie unter [XPath-Syntax](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Vorgehensweise: Verwenden von Filtern](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Nachrichtenfilter](message-filters.md)
+- [Vorgehensweise: Verwenden von Filtern](how-to-use-filters.md)

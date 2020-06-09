@@ -1,15 +1,15 @@
 ---
-title: WCF-Web-HTTP-Formatierung
+title: WCF-Web-http-Formatierung
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: b6c9728fe40e26977366b73337e72b1514a12a19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184196"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585557"
 ---
-# <a name="wcf-web-http-formatting"></a>WCF-Web-HTTP-Formatierung
+# <a name="wcf-web-http-formatting"></a>WCF-Web-http-Formatierung
 Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format für einen Dienstvorgang bestimmen, in dem dieser seine Antwort zurückgibt. Es werden zwei Methoden zum Bestimmen eines entsprechenden Formats unterstützt: automatisch und explizit.  
   
 ## <a name="automatic-formatting"></a>Automatische Formatierung  
@@ -23,7 +23,7 @@ Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format f�
   
 4. Standardformateinstellung unter WebHttpBehavior  
   
- Wenn die Anforderungsnachricht einen Accept-Header enthält, sucht die Windows Communication Foundation (WCF)-Infrastruktur nach einem typ, den sie unterstützt. Wenn der `Accept`-Header Prioritäten für seine Medientypen angibt, werden diese beachtet. Wird im `Accept`-Header kein geeignetes Format gefunden, wird der Inhaltstyp der Anforderungsnachricht verwendet. Wird kein geeigneter Inhaltstyp angegeben, wird die Standardformateinstellung für den Vorgang verwendet. Das Standardformat wird mit dem `ResponseFormat`-Parameter der Attribute <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> festgelegt. Falls für den Vorgang kein Standardformat angegeben ist, wird der Wert der <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>-Eigenschaft verwendet. Die automatische Formatierung verwendet die <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>-Eigenschaft. Wenn diese Eigenschaft auf `true` festgelegt wird, bestimmte die WCF-Infrastruktur das beste Format. Die automatische Formatauswahl ist standardmäßig deaktiviert, um die Abwärtskompatibilität sicherzustellen. Sie können die automatische Formatauswahl programmgesteuert oder per Konfiguration aktivieren. Im folgenden Beispiel wird gezeigt, wie Sie die automatische Formatauswahl im Code aktivieren.  
+ Wenn die Anforderungs Nachricht einen Accept-Header enthält, sucht die Windows Communication Foundation (WCF)-Infrastruktur nach einem Typ, der von ihr unterstützt wird. Wenn der `Accept`-Header Prioritäten für seine Medientypen angibt, werden diese beachtet. Wird im `Accept`-Header kein geeignetes Format gefunden, wird der Inhaltstyp der Anforderungsnachricht verwendet. Wird kein geeigneter Inhaltstyp angegeben, wird die Standardformateinstellung für den Vorgang verwendet. Das Standardformat wird mit dem `ResponseFormat`-Parameter der Attribute <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> festgelegt. Falls für den Vorgang kein Standardformat angegeben ist, wird der Wert der <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>-Eigenschaft verwendet. Die automatische Formatierung verwendet die <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>-Eigenschaft. Wenn diese Eigenschaft auf `true` festgelegt wird, bestimmte die WCF-Infrastruktur das beste Format. Die automatische Formatauswahl ist standardmäßig deaktiviert, um die Abwärtskompatibilität sicherzustellen. Sie können die automatische Formatauswahl programmgesteuert oder per Konfiguration aktivieren. Im folgenden Beispiel wird gezeigt, wie Sie die automatische Formatauswahl im Code aktivieren.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract
@@ -167,7 +167,7 @@ public class Service : IService
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
-- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Überblick über WCF-Web-HTTP-Programmiermodelle](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [WCF-Web-HTTP-Programmiermodell](wcf-web-http-programming-model.md)
+- [UriTemplate und UriTemplateTable](uritemplate-and-uritemplatetable.md)
+- [Überblick über WCF-Web-HTTP-Programmiermodelle](wcf-web-http-programming-model-overview.md)
+- [Objektmodell für WCF-Web-HTTP-Programmierung](wcf-web-http-programming-object-model.md)

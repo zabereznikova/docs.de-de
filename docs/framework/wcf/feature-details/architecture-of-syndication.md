@@ -2,12 +2,12 @@
 title: Architektur von Syndication
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 5f93c7a11ed37e411fc584c8de16f141336c7f43
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 718778993a953ae819a2bee5a4a050a81d3a4b84
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952644"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587520"
 ---
 # <a name="architecture-of-syndication"></a>Architektur von Syndication
 Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell zu bieten, mit dem es möglich ist, Schlagzeilen in verschiedenen Formaten zu schreiben und direkt zu übertragen. Das abstrakte Datenmodell besteht aus den folgenden Klassen:  
@@ -24,13 +24,13 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
  Diese Klassen sind nahezu deckungsgleich mit den in der Atom&#160;1.0-Spezifikation definierten Konstrukten, obwohl manche der Namen anders lauten.  
   
- In Windows Communication Foundation (WCF) werden Syndizierungs Feeds als ein anderer Typ von Dienst Vorgang modelliert, wobei der Rückgabetyp eine der abgeleiteten Klassen von <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>ist. Der Abruf eines Feeds wird als Anforderung-Antwort-Nachrichtenaustausch erstellt. Ein Client sendet eine Anforderung an den Dienst, und der Dienst antwortet. Die Anforderungsnachricht wird über ein Infrastrukturprotokoll festgelegt (z.&#160;B. unformatiertes HTTP), und die Antwortnachricht enthält eine Nutzlast in Form eines üblichen Syndication-Formats (RSS&#160;2.0 oder Atom&#160;1.0). Dienste, die diesen Nachrichtenaustausch implementieren, werden als Syndication-Dienste bezeichnet.  
+ In Windows Communication Foundation (WCF) werden Syndizierungs Feeds als ein anderer Typ von Dienst Vorgang modelliert, wobei der Rückgabetyp eine der abgeleiteten Klassen von ist <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> . Der Abruf eines Feeds wird als Anforderung-Antwort-Nachrichtenaustausch erstellt. Ein Client sendet eine Anforderung an den Dienst, und der Dienst antwortet. Die Anforderungsnachricht wird über ein Infrastrukturprotokoll festgelegt (z.&#160;B. unformatiertes HTTP), und die Antwortnachricht enthält eine Nutzlast in Form eines üblichen Syndication-Formats (RSS&#160;2.0 oder Atom&#160;1.0). Dienste, die diesen Nachrichtenaustausch implementieren, werden als Syndication-Dienste bezeichnet.  
   
  Der Vertrag für einen Syndication-Dienst besteht aus einer Gruppe von Vorgängen, die eine Instanz der <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Klasse zurückgibt. Im folgenden Beispiel wird eine Schnittstellendeklaration für einen Syndication-Dienst veranschaulicht.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Die Syndizierungs Unterstützung baut auf dem WCF REST-Programmiermodell auf, das die <xref:System.ServiceModel.WebHttpBinding> Bindung definiert, die in Verbindung mit <xref:System.ServiceModel.Description.WebHttpBehavior> verwendet wird, um Feeds als Dienste verfügbar zu machen. Weitere Informationen zum WCF-REST-Programmiermodell finden Sie unter Übersicht über das [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Die Syndizierungs Unterstützung baut auf dem WCF REST-Programmiermodell auf, das die <xref:System.ServiceModel.WebHttpBinding> Bindung definiert, die in Verbindung mit verwendet wird, <xref:System.ServiceModel.Description.WebHttpBehavior> um Feeds als Dienste verfügbar zu machen. Weitere Informationen zum WCF-REST-Programmiermodell finden Sie unter Übersicht über das [WCF-Web-HTTP-Programmiermodell](wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 > Die Atom&#160;1.0-Spezifikation lässt zu, dass Sekundenbruchteile in beliebigen Datenkonstrukten angegeben werden. Beim Serialisieren und Deserialisieren ignoriert die WCF-Implementierung die Sekundenbruchteile.  
@@ -40,7 +40,7 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
  Formatierungsklassen:  
   
-|Klasse|Beschreibung|  
+|Klasse|BESCHREIBUNG|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|Eine Klasse, die eine <xref:System.ServiceModel.Syndication.SyndicationFeed>-Instanz ins Atom&#160;1.0-Format serialisiert.|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|Eine Klasse, die abgeleitete Klassen von <xref:System.ServiceModel.Syndication.SyndicationFeed> ins Atom&#160;1.0-Format serialisiert.|  
@@ -53,12 +53,12 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
  Objektmodellklassen:  
   
-|Klasse|Beschreibung|  
+|Klasse|BESCHREIBUNG|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.SyndicationCategory>|Eine Klasse, die die Kategorie eines Syndication-Feeds darstellt.|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|Eine Basisklasse, die Syndication-Inhalte darstellt.|  
 |<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Eine Klasse, die eine Syndication-Elementerweiterung darstellt.|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Eine Auflistung von <xref:System.ServiceModel.Syndication.SyndicationElementExtension>-Objekten.|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Eine Collection der <xref:System.ServiceModel.Syndication.SyndicationElementExtension>-Objekte.|  
 |<xref:System.ServiceModel.Syndication.SyndicationFeed>|Eine Klasse, die ein Feedobjekt der obersten Ebene darstellt.|  
 |<xref:System.ServiceModel.Syndication.SyndicationItem>|Eine Klasse, die ein Feedelement darstellt.|  
 |<xref:System.ServiceModel.Syndication.SyndicationLink>|Eine Klasse, die eine Verknüpfung innerhalb eines Syndication-Feeds oder -Elements darstellt.|  
@@ -75,10 +75,10 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
 ## <a name="extensibility"></a>Erweiterungen  
   
-- Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&#160;1.0 als auch RSS&#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Das WCF-Syndizierungs-Programmiermodell bietet zwei Möglichkeiten, mit benutzerdefinierten Attributen und Erweiterungen zu arbeiten: das Ableiten einer neuen Klasse und lose typisierte Zugriffe. Weitere Informationen finden Sie unter [Syndikation Extensibility](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+- Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&#160;1.0 als auch RSS&#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Das WCF-Syndizierungs-Programmiermodell bietet zwei Möglichkeiten, mit benutzerdefinierten Attributen und Erweiterungen zu arbeiten: das Ableiten einer neuen Klasse und lose typisierte Zugriffe. Weitere Informationen finden Sie unter [Syndikation Extensibility](syndication-extensibility.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Zuordnung des WCF-Syndication-Objektmodells zu Atom und RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
-- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Übersicht über WCF Syndication](wcf-syndication-overview.md)
+- [Wie das WCF-Syndication-Objektmodell Atom und RSS zugeordnet wird](how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
+- [WCF-Web-HTTP-Programmiermodell](wcf-web-http-programming-model.md)
