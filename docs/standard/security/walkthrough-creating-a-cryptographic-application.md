@@ -1,5 +1,6 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung'
+description: 'Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung Erfahren Sie, wie Sie Inhalte in einer Windows Forms Anwendung verschlüsseln und entschlüsseln.'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72116227fbec2435d428ad2bbdb4cc74e5c3663f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289706"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602179"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung
 Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt und entschlüsselt wird. Die Codebeispiele sind für eine Windows Forms-Anwendung vorgesehen. Diese Anwendung zeigt keine realen Szenarien wie die Verwendung von Smartcards. Stattdessen veranschaulicht sie die Grundlagen der Ver- und Entschlüsselung.  
@@ -208,6 +209,6 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
 2. Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus. Dies ist erfolgreich, weil Sie das vollständige Schlüsselpaar zum Entschlüsseln haben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Kryptografiedienste](cryptographic-services.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f9e761bafd84726b51a2010a932c68c67c37f899
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991587"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595283"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Vorgehensweise: Verwenden des COM+-Dienstmodell-Konfigurationstools
 Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das COM+-Dienstmodell-Konfigurations-Befehlszeilentool (ComSvcConfig.exe) zur Konfigurierung der Anwendungsschnittstellen, die als Webdienste verfügbar gemacht werden.  
@@ -19,7 +19,7 @@ Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das 
   
  Wenn Sie ComSvcConfig.exe auf einem Windows 7-Computer verwenden, um einen Webdienst für die Verwendung der neuesten Dienstmodellversion (derzeit 4.5) zu konfigurieren, führen Sie folgende Schritte aus:  
   
-1. Legen Sie den Registrierungs `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` Schlüssel auf den DWORD-Wert 0x00000001 fest.  
+1. Legen Sie den Registrierungsschlüssel `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` auf den DWORD-Wert 0x00000001 fest.  
   
 2. Führen Sie comsvcconfig.exe aus.  
   
@@ -41,7 +41,7 @@ Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das 
   
      Der Befehl fügt die `IFinances`-Schnittstelle der `ItemOrders.IFinancial`-Komponente (aus der OnlineStore-COM+-Anwendung) zu der Gruppe von Schnittstellen hinzu, die als Webdienste verfügbar gemacht werden. Der Dienst verwendet den COM+-Hostingmodus und erfordert deshalb eine explizite Anwendungsaktivierung.  
   
-     Das Platzhalter Sternchen (\*) kann für die-Komponente und die-Schnittstelle verwendet werden, sollten Sie jedoch nicht verwenden, da Sie möglicherweise nur ausgewählte Funktionen als Webdienst verfügbar machen möchten. Bei der Ausführung mit einer künftigen Version dieser Komponente kann die Verwendung des Platzhalters unbeabsichtigt Schnittstellen verfügbar machen, die noch nicht vorhanden waren, als die Konfigurationssyntax festgelegt wurde.  
+     Das Platzhalter Sternchen ( \* ) kann für die-Komponente und die-Schnittstelle verwendet werden, sollten Sie jedoch nicht verwenden, da Sie möglicherweise nur ausgewählte Funktionen als Webdienst verfügbar machen möchten. Bei der Ausführung mit einer künftigen Version dieser Komponente kann die Verwendung des Platzhalters unbeabsichtigt Schnittstellen verfügbar machen, die noch nicht vorhanden waren, als die Konfigurationssyntax festgelegt wurde.  
   
      Die Option für die ausführliche Ausgabe weist das Tool an, zusätzlich zu Fehlern Warnungen anzuzeigen.  
   
@@ -109,6 +109,6 @@ Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das 
     ComSvcConfig.exe /?  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über die Integration von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [Übersicht über die Integration von com+-Anwendungen](integrating-with-com-plus-applications-overview.md)
