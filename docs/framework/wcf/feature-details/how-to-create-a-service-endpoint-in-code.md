@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 9b7b983122b9e30fd7c6b0d0c517a9483b8881c5
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 25ea843df7871d730926fe7b9aac9f21d58e263e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301468"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598930"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>Vorgehensweise: Erstellen eines Dienstendpunkts im Code
 In diesem Beispiel wird ein `ICalculator`-Vertrag für einen Rechnerdienst definiert, der Dienst wird in der `CalculatorService`-Klasse implementiert, und der Endpunkt wird im Code definiert. Dort ist angegeben, dass die <xref:System.ServiceModel.BasicHttpBinding>-Klasse vom Dienst verwendet werden muss.  
@@ -24,7 +24,7 @@ In diesem Beispiel wird ein `ICalculator`-Vertrag für einen Rechnerdienst defin
      [!code-csharp[c_HowTo_CodeServiceBinding#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[c_HowTo_CodeServiceBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2. Implementieren Sie den in Schritt&amp;#160;1 definierten Dienstvertrag.  
+2. Implementieren Sie den in Schritt&#160;1 definierten Dienstvertrag.  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[c_HowTo_CodeServiceBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
@@ -39,13 +39,13 @@ In diesem Beispiel wird ein `ICalculator`-Vertrag für einen Rechnerdienst defin
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  
   
-     Die Bindung im Code angegeben, aber die von der Runtime bereitgestellten Standardendpunkte zu verwenden, übergeben Sie die Basisadresse an den Konstruktor beim Erstellen der <xref:System.ServiceModel.ServiceHost>, und rufen Sie nicht <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType>.  
+     Wenn Sie die Bindung im Code angeben, aber die von der Runtime bereitgestellten Standard Endpunkte verwenden möchten, übergeben Sie beim Erstellen von die Basisadresse in den Konstruktor, <xref:System.ServiceModel.ServiceHost> und geben Sie nicht an <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType> .  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     Weitere Informationen zu Standardendpunkten, finden Sie unter [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Weitere Informationen zu Standard Endpunkten finden Sie unter [vereinfachte Konfiguration](../simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Vorgehensweise: Angeben einer Dienstbindung im Code](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [Vorgehensweise: Angeben einer Dienstbindung im Code](../how-to-specify-a-service-binding-in-code.md)

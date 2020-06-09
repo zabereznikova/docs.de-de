@@ -2,12 +2,12 @@
 title: Aufrufen eines REST-Diensts aus einem WCF-Dienst
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: c2a3467fb5fe28194dcb8ee7715353f4cb6a1bff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaa5d08faa335740124fcf698b22d2d324cd2c54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048217"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576485"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Aufrufen eines REST-Diensts aus einem WCF-Dienst
 
@@ -86,7 +86,7 @@ public class NormalService : INormalInterface
 
 ## <a name="create-the-client-proxy-for-the-rest-style-service"></a>Erstellen des Clientproxys für den REST-Vertrag
 
-Mithilfe von <xref:System.ServiceModel.ClientBase%601> den Clientproxy zu implementieren. Für jede aufgerufene Methode wird ein neuer <xref:System.ServiceModel.OperationContextScope> erstellt und zum Aufrufen des Vorgangs verwendet.
+<xref:System.ServiceModel.ClientBase%601>Die Verwendung von zum Implementieren des Client Proxys. Für jede aufgerufene Methode wird ein neuer <xref:System.ServiceModel.OperationContextScope> erstellt und zum Aufrufen des Vorgangs verwendet.
 
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -241,7 +241,7 @@ public class CallingRESTSample
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
-- [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts](how-to-create-a-basic-wcf-web-http-service.md)
+- [Objektmodell für WCF-Web-HTTP-Programmierung](wcf-web-http-programming-object-model.md)

@@ -1,21 +1,21 @@
 ---
-title: Sicherheit der verteilten Anwendung
+title: Sicherheit bei verteilten Anwendungen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: cb271bcf8fb27bae4c8ef6b60df0f8d2940ecb9a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964827"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599145"
 ---
-# <a name="distributed-application-security"></a>Sicherheit der verteilten Anwendung
+# <a name="distributed-application-security"></a>Sicherheit bei verteilten Anwendungen
 Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktionale Bereiche unterteilt: Übertragungssicherheit, Zugriffs Steuerung und Überwachung. Durch die Übertragungssicherheit werden Integrität, Vertraulichkeit und Authentifizierung bereitgestellt. Die Übertragungssicherheit wird durch eine der folgenden Funktionen bereitgestellt: Transportsicherheit, Nachrichtensicherheit oder `TransportWithMessageCredential`.  
   
- Eine Übersicht über die WCF-Nachrichten Sicherheit finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zu den anderen beiden Komponenten der [WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) und Überwachung.  
+ Eine Übersicht über die WCF-Nachrichten Sicherheit finden Sie unter [Sicherheitsübersicht](security-overview.md). Weitere Informationen zu den anderen beiden Komponenten der [WCF-Sicherheit](auditing-security-events.md)finden Sie unter [Autorisierung](authorization-in-wcf.md) und Überwachung.  
   
 ## <a name="transfer-security-scenarios"></a>Szenarien für die Übertragungssicherheit  
  Häufige Szenarien, in denen WCF-Übertragungssicherheit eingesetzt wird, sind folgende:  
@@ -29,7 +29,7 @@ Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktion
 ## <a name="integrity-confidentiality-and-authentication"></a>Integrität, Vertraulichkeit und Authentifizierung  
  Die drei Funktionen Integrität, Vertraulichkeit und Authentifizierung ergeben zusammen die Übertragungssicherheit. Durch die Übertragungssicherheit werden die Funktionen bereitgestellt, die Ihnen dabei helfen, die Bedrohungen für eine verteilte Anwendung zu mindern. In der folgenden Tabelle werden kurz die drei Funktionen beschrieben, aus denen sich die Übertragungssicherheit zusammensetzt.  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Integrität|*Integrität* ist die Gewissheit, dass die Daten abgeschlossen und korrekt sind, insbesondere, wenn Sie von einem Punkt zu einem anderen durchlaufen und möglicherweise von vielen Akteuren gelesen wurden. Die Integrität muss gewahrt werden, um eine Manipulation der Daten zu vermeiden. Dieses Ziel wird in der Regel durch das digitale Signieren von Nachrichten erreicht.|  
 |Vertraulichkeit|*Vertraulichkeit* ist die Zusicherung, dass eine Nachricht von anderen Personen als dem beabsichtigten Reader nicht gelesen wurde. So müssen zum Beispiel Kreditkartennummern, die über das Internet gesendet werden, vertraulich behandelt werden. Vertraulichkeit wird häufig durch Verschlüsselung der Daten mit einem Schema aus öffentlichem und privatem Schlüssel bereitgestellt.|  
@@ -38,13 +38,13 @@ Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktion
 ## <a name="security-modes"></a>Sicherheitsmodi  
  WCF verfügt über mehrere Modi der Übertragungssicherheit, die in der folgenden Tabelle beschrieben werden.  
   
-|Modus|Beschreibung|  
+|Mode|BESCHREIBUNG|  
 |----------|-----------------|  
-|Keine|Auf Transport- bzw. Nachrichtenebene wird keine Sicherheit bereitgestellt. Keine der vordefinierten Bindungen verwendet diesen Modus standardmäßig mit Ausnahme des [\<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) -Elements oder, bei Verwendung von Code, die <xref:System.ServiceModel.BasicHttpBinding>-Klasse.|  
+|Keine|Auf Transport- bzw. Nachrichtenebene wird keine Sicherheit bereitgestellt. Keine der vordefinierten Bindungen verwendet diesen Modus standardmäßig mit Ausnahme des- [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) Elements oder bei Verwendung von Code die- <xref:System.ServiceModel.BasicHttpBinding> Klasse.|  
 |Transport|Es wird ein sicherer Transport wie HTTPS zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet.|  
-|Meldung|Es wird die SOAP-Nachrichtensicherheit zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet. SOAP-Nachrichten werden gemäß den Standards für die WS-Sicherheit geschützt.|  
-|Gemischt|Es wird die Transportsicherheit zur Gewährleistung von Integrität und Vertraulichkeit sowie für die Serverauthentifizierung verwendet. Für die Clientauthentifizierung wird die Nachrichtensicherheit (WS-Sicherheit und andere Standards) eingesetzt.<br /><br /> (Der Enumerationswert für diesen Modus ist `TransportWithMessageCredential`.)|  
-|Beides|Schutz und Authentifizierung finden auf beiden Ebenen statt. Dieser Modus ist nur in der [\<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) -Element verfügbar.|  
+|`Message`|Es wird die SOAP-Nachrichtensicherheit zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet. SOAP-Nachrichten werden gemäß den Standards für die WS-Sicherheit geschützt.|  
+|Gemischter Modus|Es wird die Transportsicherheit zur Gewährleistung von Integrität und Vertraulichkeit sowie für die Serverauthentifizierung verwendet. Für die Clientauthentifizierung wird die Nachrichtensicherheit (WS-Sicherheit und andere Standards) eingesetzt.<br /><br /> (Der Enumerationswert für diesen Modus ist `TransportWithMessageCredential`.)|  
+|Beide|Schutz und Authentifizierung finden auf beiden Ebenen statt. Dieser Modus ist nur im- [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) Element verfügbar.|  
   
 ## <a name="credentials-and-transfer-security"></a>Identitätsnachweis (Anmeldeinformationen) und Übertragungssicherheit  
  Anmelde *Informationen sind Daten* , die angezeigt werden, um entweder eine beanspruchte Identität oder Funktionen einzurichten. Das Vorlegen eines Identitätsnachweises umfasst das Angeben der Daten und den Nachweis, dass sich die Daten rechtmäßig im Besitz des Inhabers befinden. WCF unterstützt eine Vielzahl von Anmelde Informationstypen auf Transport-und Nachrichten Sicherheitsebene. Sie können einen Typ von Anmelde Informationen für eine WCF-Bindung angeben.  
@@ -57,29 +57,29 @@ Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktion
   
  Beim Identitätsnachweis mittels Zertifikat können die beanspruchte Identität bzw. die beanspruchten Befähigungen durch den Antragstellernamen, den alternativen Antragstellernamen oder spezielle Felder im Zertifikat belegt werden. Der Nachweis des rechtmäßigen Besitzes der Daten erfolgt durch eine Signatur, die mit dem zugehörigen privaten Schlüssel erzeugt wird.  
   
- Weitere Informationen zum Programmieren der Sicherheit und zum Angeben von Anmelde Informationen finden Sie unter [Bindungen und Sicherheits](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) -und [Sicherheits Verhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Weitere Informationen zum Programmieren der Sicherheit und zum Angeben von Anmelde Informationen finden Sie unter [Bindungen und Sicherheits](bindings-and-security.md) -und [Sicherheits Verhalten](security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Arten von Clientanmeldeinformationen bei der Transportsicherheit  
  In der folgenden Tabelle finden Sie die möglichen Werte, die Sie beim Erstellen einer Anwendung verwenden können, die die Übertragungssicherheit nutzt. Sie können diese Werte entweder im Code oder in Bindungseinstellungen festlegen.  
   
-|-Einstellung|Beschreibung|  
+|Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
-|Standard|Gibt die Standardauthentifizierung an. Weitere Informationen finden Sie unter RFC2617, "[http Authentication: Basic and Digest Authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).|  
+|Basic|Gibt die Standardauthentifizierung an. Weitere Informationen finden Sie unter RFC2617, "[http Authentication: Basic and Digest Authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).|  
 |Digest|Gibt die Digestauthentifizierung an. Weitere Informationen finden Sie unter RFC2617, "[http Authentication: Basic and Digest Authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).|  
 |Ntlm|Gibt die Windows-Authentifizierung mit SSPI-Aushandlung auf einer Windows-Domäne an.<br /><br /> Die SSPI-Aushandlung führt dazu, dass entweder das Kerberos-Protokoll oder NT LanMan (NTLM) verwendet wird.|  
 |Windows|Gibt die Windows-Authentifizierung mit SSPI auf einer Windows-Domäne an. SSPI wählt entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst aus.<br /><br /> Zuerst wird das Kerberos-Protokoll angewendet, wenn dies scheitert, wird NTLM verwendet.|  
-|Certificate|Führt die Clientauthentifizierung mit einem Zertifikat (in der Regel X.509) durch.|  
+|Zertifikat|Führt die Clientauthentifizierung mit einem Zertifikat (in der Regel X.509) durch.|  
   
 ### <a name="message-client-credential-types"></a>Typen von Nachrichtenclient-Anmeldeinformationen  
  In der folgenden Tabelle finden Sie die möglichen Werte, die Sie beim Erstellen einer Anwendung verwenden können, die die Nachrichtensicherheit nutzt. Sie können diese Werte entweder im Code oder in Bindungseinstellungen festlegen.  
   
-|-Einstellung|Beschreibung|  
+|Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Keine|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
 |Windows|Ermöglicht den SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen. Es wird mittels SSPI-Aushandlung entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst ausgewählt.|  
-|Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass WCF Kryptografievorgänge mit dem Benutzernamen nicht zulässt, wie z. b. das Erzeugen einer Signatur oder das Verschlüsseln von Daten. Daher erzwingt WCF, dass der Transport geschützt wird, wenn Benutzernamen-Anmelde Informationen verwendet werden.|  
-|Certificate|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
+|Username|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass WCF Kryptografievorgänge mit dem Benutzernamen nicht zulässt, wie z. b. das Erzeugen einer Signatur oder das Verschlüsseln von Daten. Daher erzwingt WCF, dass der Transport geschützt wird, wenn Benutzernamen-Anmelde Informationen verwendet werden.|  
+|Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
 |CardSpace|Ermöglicht es dem Dienst zu verlangen, dass der Client mithilfe eines CardSpace authentifiziert werden muss.|  
   
 ### <a name="programming-credentials"></a>Programmieren von Anmeldeinformationen  
@@ -94,9 +94,9 @@ Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktion
   
  Im Modus für die Nachrichtensicherheit können Sie die Übertragungssicherheit auch so ausüben, dass im Zuge einer anfänglichen Aushandlung ein Austausch der Dienstanmeldeinformationen mit dem Client erfolgt. Legen Sie die <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A>-Eigenschaft auf `true` fest, um die Aushandlung zu aktivieren.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Übersicht über die Endpunkterstellung](../endpoint-creation-overview.md)
+- [Vom System bereitgestellte Bindungen](../system-provided-bindings.md)
+- [Sicherheitsübersicht](security-overview.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

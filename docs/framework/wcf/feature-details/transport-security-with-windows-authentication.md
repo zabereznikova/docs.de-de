@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184315"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598696"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Transportsicherheit mit Windows-Authentifizierung
-Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und -Dienst, der durch die Windows-Sicherheit gesichert ist. Weitere Informationen zum Programmieren finden Sie unter [Gewusst wie: Sichern eines Dienstes mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows Communication Foundation (WCF)-Client und-Dienst. Weitere Informationen zum Programmieren finden Sie unter Vorgehens [Weise: Sichern eines Dienstanbieter mit Windows-Anmelde](../how-to-secure-a-service-with-windows-credentials.md)Informationen.  
   
  Ein Intranetwebdienst zeigt Personalinformationen an. Der Client ist eine Windows Forms-Anwendung. Die Anwendung wird in einer Domäne mit einem Kerberos-Controller bereitgestellt, der die Domäne sichert.  
   
  ![Transportsicherheit mit Windows-Authentifizierung](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|Transport|  
 |Interoperabilität|Nur WCF|  
@@ -30,7 +30,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 |Bindung|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
@@ -74,7 +74,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
@@ -119,6 +119,6 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Sicherheitsübersicht](security-overview.md)
+- [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../how-to-secure-a-service-with-windows-credentials.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

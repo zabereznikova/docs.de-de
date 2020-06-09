@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 0665ce331492a5322fdfde9e91fc1dae5b8e7ea8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 95101b8ec4f5a7fc60d0233ab6685b5c6851b44e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584979"
 ---
 # <a name="message-security-anonymous"></a>Nachrichtensicherheit – anonym
-Das Beispiel für die anonyme Nachrichten Sicherheit veranschaulicht, wie eine Windows Communication Foundation (WCF)-Anwendung implementiert wird, die Sicherheit auf Nachrichten Ebene ohne Client Authentifizierung verwendet, aber eine Server Authentifizierung mit dem X. 509-Server des Servers erfordert. stellt. Alle Anwendungsnachrichten zwischen dem Client und dem Server werden signiert und verschlüsselt. Dieses Beispiel basiert auf dem Beispiel [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) . Dieses Beispiel besteht aus einem Clientkonsolenprogramm (.exe) und einer von IIS (Internet Information Services, Internetinformationsdienste) gehosteten Dienstbibliothek (.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.
+Das Beispiel für die anonyme Nachrichten Sicherheit veranschaulicht, wie eine Windows Communication Foundation (WCF)-Anwendung implementiert wird, die Sicherheit auf Nachrichten Ebene ohne Client Authentifizierung verwendet, aber eine Server Authentifizierung mit dem X. 509-Zertifikat des Servers erfordert. Alle Anwendungsnachrichten zwischen dem Client und dem Server werden signiert und verschlüsselt. Dieses Beispiel basiert auf dem Beispiel [WSHttpBinding](wshttpbinding.md) . Dieses Beispiel besteht aus einem Clientkonsolenprogramm (.exe) und einer von IIS (Internet Information Services, Internetinformationsdienste) gehosteten Dienstbibliothek (.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.
 
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
@@ -57,7 +57,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- Die Anmelde Informationen, die für die Dienst Authentifizierung verwendet werden sollen, werden im [\<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)angegeben. Der Wert für `SubjectName` des Serverzertifikats muss dem Wert des `findValue`-Attributs entsprechen (wie in folgendem Beispielcode gezeigt).
+ Die Anmelde Informationen, die für die Dienst Authentifizierung verwendet werden sollen, werden in der angegeben [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) . Der Wert für `SubjectName` des Serverzertifikats muss dem Wert des `findValue`-Attributs entsprechen (wie in folgendem Beispielcode gezeigt).
 
 ```xml
 <behaviors>
@@ -108,7 +108,7 @@ public class CalculatorService : ICalculator
 
  Das Beispiel setzt den <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> für die Authentifizierung des Dienstzertifikats auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust>. Dies erfolgt in der Datei "App.config" des Clients im Abschnitt `behaviors`. Wenn sich das Zertifikat also im Speicher für vertrauenswürdige Personen des Benutzers befindet, wird es als vertrauenswürdig eingestuft wird, ohne dass eine Validierung der Ausstellerkette des Zertifikats erfolgt. Diese Einstellung wird hier der Einfachheit halber verwendet. So kann das Beispiel ausgeführt werden, ohne dass Zertifikate erforderlich sind, die von einer Zertifizierungsstelle ausgestellt wurden. Diese Einstellung ist weniger sicher als die Standardeinstellung ChainTrust. Die aus dieser Einstellung resultierenden Sicherheitsauswirkungen sollten sorgfältig bedacht werden, bevor `PeerOrChainTrust` im Produktionscode verwendet wird.
 
- Die Client Implementierung fügt einen aufzurufenden `IsCallerAnonymous`-Methode hinzu und unterscheidet sich andernfalls nicht vom [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) -Beispiel.
+ Die Client Implementierung fügt einen Aufrufen der `IsCallerAnonymous` -Methode hinzu und unterscheidet sich andernfalls nicht vom [WSHttpBinding](wshttpbinding.md) -Beispiel.
 
 ```csharp
 // Create a client with a client endpoint configuration.
@@ -187,13 +187,13 @@ Press <ENTER> to terminate client.
     ```
 
 > [!NOTE]
-> Wenn Sie eine nicht-U. S. English-Edition von Windows verwenden, müssen Sie die Datei "Setup. bat" Bearbeiten und den Namen des `NT AUTHORITY\NETWORK SERVICE` Kontos durch Ihr regionales Äquivalent ersetzen.
+> Wenn Sie eine nicht-U. S. English-Edition von Windows verwenden, müssen Sie die Datei "Setup. bat" Bearbeiten und den `NT AUTHORITY\NETWORK SERVICE` Kontonamen durch Ihr regionales Äquivalent ersetzen.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus
 
@@ -204,7 +204,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     > Die Setup Batchdatei ist so konzipiert, dass Sie von einem Developer-Eingabeaufforderung für Visual Studio ausgeführt wird. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Developer-Eingabeaufforderung für Visual Studio festgelegt.  
   
-3. Überprüfen Sie den Zugriff auf den Dienst mithilfe eines Browsers, indem Sie die Adresse `http://localhost/servicemodelsamples/service.svc`eingeben.  
+3. Überprüfen Sie den Zugriff auf den Dienst mithilfe eines Browsers, indem Sie die Adresse eingeben `http://localhost/servicemodelsamples/service.svc` .  
   
 4. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
@@ -220,9 +220,9 @@ Press <ENTER> to terminate client.
   
 4. Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
   
-5. Führen Sie auf dem-Server `setup.bat service` in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Beim Ausführen von `setup.bat` mit dem `service`-Argument wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
+5. Führen Sie auf dem-Server `setup.bat service` in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Wenn `setup.bat` Sie mit dem- `service` Argument ausführen, wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
   
-6. Bearbeiten Sie die Datei Web. config so, dass Sie den neuen Zertifikat Namen (im `findValue`-Attribut im [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) anzeigt, der mit dem voll qualifizierten Domänen Namen des Computers identisch ist.  
+6. Bearbeiten Sie die Datei Web. config so, dass Sie den neuen Zertifikat Namen (im- `findValue` Attribut im) widerspiegelt, der mit [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dem voll qualifizierten Domänen Namen des Computers identisch ist.  
   
 7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   

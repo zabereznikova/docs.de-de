@@ -2,15 +2,15 @@
 title: Hilfeseite zum WCF-Web-HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600165"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Hilfeseite zum WCF-Web-HTTP-Dienst
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Wenn ein Benutzer einen WCF-Web-HTTP-Dienst durchsucht und "/Help" an das Ende der URL anfügt (z. b. `http://localhost:8000/Customers/Help`), wird eine Hilfeseite wie die folgende angezeigt.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Wenn ein Benutzer einen WCF-Web-HTTP-Dienst durchsucht und "/Help" an das Ende der URL anfügt, wird beispielsweise `http://localhost:8000/Customers/Help` eine Hilfeseite wie die folgende angezeigt.  
   
  ![Ein Browser mit der WCF-Rest-Hilfeseite geöffnet.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Weitere Informationen zum Serialisierungsschema des Daten Vertrags finden Sie unter [Daten Vertrags Schema-Referenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Weitere Informationen zum Serialisierungsschema des Daten Vertrags finden Sie unter [Daten Vertrags Schema-Referenz](data-contract-schema-reference.md).

@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 716bcb2bb43656051beffb15da9c7a988942ecd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2a2afaa450e9abe17b62f6be07a2dc41459ca20
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183794"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600022"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 In diesem Beispiel wird veranschaulicht, wie die Serialisierungs- und Deserialisierungsprozesse mit der <xref:System.Runtime.Serialization.DataContractResolver>-Klasse angepasst werden können. In diesem Beispiel wird veranschaulicht, wie DataContractResolver verwendet wird, um bei der Serialisierung und der Deserialisierung CLR-Typen einer xsi:type-Darstellung zuzuordnen bzw. diese Zuordnung wieder aufzuheben.
@@ -152,7 +152,7 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1. Öffnen Sie mit Visual Studio 2012 die DCRSample.sln-Projektmappendatei.
+1. Öffnen Sie mit Visual Studio 2012 die Projektmappendatei "DCRSample. sln".
 
 2. Drücken Sie F5, um die Projektmappe auszuführen.
 
@@ -161,10 +161,10 @@ class MyDataContractResolver : DataContractResolver
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Verwenden eines Datenvertragsresolvers](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)
+- [Verwenden eines Datenvertragsresolvers](../feature-details/using-a-data-contract-resolver.md)

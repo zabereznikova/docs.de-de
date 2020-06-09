@@ -2,18 +2,18 @@
 title: Verwenden von mehreren Authentifizierungsschemen mit WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1874963573a6ec12939bd12b79574f1e2c889bfd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600217"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Verwenden von mehreren Authentifizierungsschemen mit WCF
-Mit WCF können Sie nun mehrere Authentifizierungsschemas für einen einzelnen Endpunkt angeben. Darüber hinaus können webgehostete Dienste ihre Authentifizierungseinstellungen direkt von IIS erben. Selbst gehostete Dienste können angeben, welche Authentifizierungsschemas verwendet werden können. Weitere Informationen zum Festlegen von Authentifizierungseinstellungen in IIS finden Sie unter [IIS-Authentifizierung](https://go.microsoft.com/fwlink/?LinkId=232458)  
+Mit WCF können Sie nun mehrere Authentifizierungsschemas für einen einzelnen Endpunkt angeben. Darüber hinaus können webgehostete Dienste ihre Authentifizierungseinstellungen direkt von IIS erben. Selbst gehostete Dienste können angeben, welche Authentifizierungsschemas verwendet werden können. Weitere Informationen zum Festlegen von Authentifizierungs Einstellungen in IIS finden Sie unter [IIS-Authentifizierung](https://go.microsoft.com/fwlink/?LinkId=232458) .  
   
 ## <a name="iis-hosted-services"></a>IIS-gehostete Dienste  
- Legen Sie für IIS-gehostete Dienste die Authentifizierungsschemas fest, die Sie in IIS verwenden möchten. Geben Sie dann in der Datei web.config des Diensts in der Bindungskonfiguration ClientCredential-Typ als "InheritedFromHost" wie im folgenden XML-Ausschnitt gezeigt:  
+ Legen Sie für IIS-gehostete Dienste die Authentifizierungsschemas fest, die Sie in IIS verwenden möchten. Geben Sie dann in der Datei "Web. config" Ihres Diensts in der Bindungs Konfiguration den clientCredential-Typ als "erertierungsfromhost" an, wie im folgenden XML-Code Ausschnitt gezeigt:  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ Mit WCF können Sie nun mehrere Authentifizierungsschemas für einen einzelnen E
     </bindings>  
 ```  
   
- Sie können angeben, dass nur eine Teilmenge der Authentifizierungsschemas mit Ihrem Dienst mithilfe von "serviceauthenticationbehavior" oder die \<ServiceAuthenticationManager >-Element. Beim Konfigurieren im Code verwenden Sie ServiceAuthenticationBehavior wie im folgenden Codeausschnitt dargestellt.  
+ Sie können angeben, dass nur eine Teilmenge der Authentifizierungs Schemas mit dem Dienst mithilfe von ServiceAuthenticationBehavior oder dem-Element verwendet werden soll \<serviceAuthenticationManager> . Beim Konfigurieren im Code verwenden Sie ServiceAuthenticationBehavior wie im folgenden Codeausschnitt dargestellt.  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- Verwenden Sie bei der Konfiguration in eine Config-Datei, die \<ServiceAuthenticationManager >-Element wie im folgenden XML-Codeausschnitt gezeigt.  
+ Wenn Sie dies in einer Konfigurationsdatei konfigurieren, verwenden Sie das- \<serviceAuthenticationManager> Element, wie im folgenden XML-Ausschnitt gezeigt.  
   
 ```xml  
 <behaviors>  
@@ -63,7 +63,7 @@ else
  Dadurch wird sichergestellt, dass nur eine Teilmenge der hier aufgeführten Authentifizierungsschemas für den Dienstendpunkt infrage kommt, je nachdem, was in IIS ausgewählt wurde. Dies bedeutet, dass ein Entwickler z. B. die Standardauthentifizierung aus der Liste ausschließen kann, indem er sie in der serviceAuthenticationManager-Liste auslässt. Sie wird auch nicht auf den Dienstendpunkt angewendet, wenn sie in IIS aktiviert ist.  
   
 ## <a name="self-hosted-services"></a>Selbst gehostete Dienste  
- Selbst gehostete Dienste werden geringfügig anders konfiguriert, da keine Einstellungen von IIS geerbt werden können. Hier verwenden Sie die \<ServiceAuthenticationManager >-Element oder "serviceauthenticationbehavior", um die Authentifizierungseinstellungen anzugeben, die vererbt werden. Der Code sieht folgendermaßen aus:  
+ Selbst gehostete Dienste werden geringfügig anders konfiguriert, da keine Einstellungen von IIS geerbt werden können. Hier verwenden Sie das- \<serviceAuthenticationManager> Element oder ServiceAuthenticationBehavior, um die Authentifizierungs Einstellungen anzugeben, die vererbt werden. Der Code sieht folgendermaßen aus:  
   
 ```csharp  
 // ...  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Endpunkte: Adressen, Bindungen und Verträge](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Bindungen und Sicherheit](bindings-and-security.md)
+- [Endpunkte: Adressen, Bindungen und Verträge](endpoints-addresses-bindings-and-contracts.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](configuring-system-provided-bindings.md)
+- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](security-capabilities-with-custom-bindings.md)
+- [Bindungen](bindings.md)
+- [Benutzerdefinierte Bindungen](../extending/custom-bindings.md)

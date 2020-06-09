@@ -2,21 +2,21 @@
 title: System.Runtime.Serialization.XsdExportAnnotationFailed
 ms.date: 03/30/2017
 ms.assetid: 93407f44-8c09-4c23-97a4-b3e5f409d3d5
-ms.openlocfilehash: 5bda312d3e92e39fea6063fe7bb4775930a71d46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3df2d9d60da27a9c625d847aecc5790aadf01a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784578"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598488"
 ---
 # <a name="systemruntimeserializationxsdexportannotationfailed"></a>System.Runtime.Serialization.XsdExportAnnotationFailed
 System.Runtime.Serialization.XsdExportAnnotationFailed  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Export einer Anmerkung während des XSD-Exports ist fehlgeschlagen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Ablaufverfolgung](index.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [Verwaltung und Diagnose](../index.md)

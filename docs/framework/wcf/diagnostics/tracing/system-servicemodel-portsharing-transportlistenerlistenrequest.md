@@ -2,21 +2,21 @@
 title: System.ServiceModel.PortSharing.TransportListenerListenRequest
 ms.date: 03/30/2017
 ms.assetid: 6b72086d-a047-4316-854e-2c210d3d52fe
-ms.openlocfilehash: ad1d0f13857bb9fe8ea15294ff10d8a47531cc79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9b5225ca2eb6ba0840241ca46bc27f3ae370141
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933964"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597981"
 ---
 # <a name="systemservicemodelportsharingtransportlistenerlistenrequest"></a>System.ServiceModel.PortSharing.TransportListenerListenRequest
 System.ServiceModel.PortSharing.TransportListenerListenRequest  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Der TransportListener versucht, eine Abhörung durchzuführen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Ablaufverfolgung](index.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [Verwaltung und Diagnose](../index.md)

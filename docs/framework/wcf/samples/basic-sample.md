@@ -2,19 +2,19 @@
 title: Einfaches Beispiel
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 2ea5af0a1c05b5632632b2619c0ee4813696d2fc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: db560ec7dea3912ecec8d84943cc9a01512d1f33
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738172"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575770"
 ---
 # <a name="basic-sample"></a>Einfaches Beispiel
 
 In diesem Beispiel wird erläutert, wie ein Dienst sichtbar gemacht wird und wie nach einem sichtbaren Dienst gesucht und dieser aufgerufen wird. Dieses Beispiel besteht aus zwei Projekten: Dienst und Client.
 
 > [!NOTE]
-> In diesem Beispiel wird die Suche in Code implementiert.  Ein Beispiel, das die Ermittlung in der Konfiguration implementiert, finden Sie unter [Konfiguration](../../../../docs/framework/wcf/samples/configuration-sample.md).
+> In diesem Beispiel wird die Suche in Code implementiert.  Ein Beispiel, das die Ermittlung in der Konfiguration implementiert, finden Sie unter [Konfiguration](configuration-sample.md).
 
 ## <a name="service"></a>Dienst
 
@@ -100,6 +100,6 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`

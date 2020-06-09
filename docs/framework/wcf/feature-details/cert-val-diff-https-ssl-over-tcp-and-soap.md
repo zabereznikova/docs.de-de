@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 0e82d1898bec7cda474a5a92958b5af1b30c9de7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185405"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599333"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Unterschiede bei der Zertifikatsvalidierung zwischen HTTPS, SSL über TCP und SOAP-Sicherheit
-Sie können Zertifikate in Windows Communication Foundation (WCF) mit Message-Layer(SOAP)-Sicherheit zusätzlich zur Transport-Layer-Sicherheit (TLS) über HTTP (HTTPS) oder TCP verwenden. In diesem Thema werden die Unterschiede bei der Überprüfung solcher Zertifikate beschrieben.  
+Sie können Zertifikate in Windows Communication Foundation (WCF) mit der Sicherheit der Nachrichten Schicht (SOAP) zusätzlich zu TLS (Transport Layer Security) über HTTP (HTTPS) oder TCP verwenden. In diesem Thema werden die Unterschiede bei der Überprüfung solcher Zertifikate beschrieben.  
   
 ## <a name="validation-of-https-client-certificates"></a>Validierung der HTTPS-Clientzertifikate  
- Wenn Sie HTTPS zur Kommunikation zwischen einem Client und einem Dienst verwenden, muss das Zertifikat, das der Client zur Authentifizierung für den Dienst verwendet, Vertrauensketten unterstützen. Es muss eine Verkettung zu einer vertrauenswerten Stammzertifizierungsstelle herstellen, anderenfalls gibt die HTTP-Ebene eine <xref:System.Net.WebException> mit der Meldung "Der Remoteserver hat einen Fehler zurückgegeben: (403) Unzulässig" aus. WCF stellt diese <xref:System.ServiceModel.Security.MessageSecurityException>Ausnahme als an.  
+ Wenn Sie HTTPS zur Kommunikation zwischen einem Client und einem Dienst verwenden, muss das Zertifikat, das der Client zur Authentifizierung für den Dienst verwendet, Vertrauensketten unterstützen. Es muss eine Verkettung zu einer vertrauenswerten Stammzertifizierungsstelle herstellen, anderenfalls gibt die HTTP-Ebene eine <xref:System.Net.WebException> mit der Meldung "Der Remoteserver hat einen Fehler zurückgegeben: (403) Unzulässig" aus. Diese Ausnahme wird von WCF als angezeigt <xref:System.ServiceModel.Security.MessageSecurityException> .  
   
 ## <a name="validation-of-https-service-certificates"></a>Validierung der HTTPS-Dienstzertifikate  
  Wenn Sie HTTPS zur Kommunikation zwischen einem Client und einem Dienst verwenden, muss das Zertifikat, mit dem der Server die Authentifizierung durchführt, standardmäßig Vertrauensketten unterstützen. Es muss eine Verkettung zu einer vertrauenswerten Stammzertifizierungsstelle herstellen, Es wird keine Online-Überprüfung durchgeführt, um herauszufinden, ob das Zertifikat widerrufen wurde. Sie können dieses Verhalten auch überschreiben, indem Sie einen <xref:System.Net.Security.RemoteCertificateValidationCallback>-Rückruf registrieren, wie mit dem nachfolgenden Code dargestellt.  
@@ -50,4 +50,4 @@ Sie können Zertifikate in Windows Communication Foundation (WCF) mit Message-La
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
-- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Verwenden von Zertifikaten](working-with-certificates.md)

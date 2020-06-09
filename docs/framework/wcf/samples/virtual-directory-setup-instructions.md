@@ -2,12 +2,12 @@
 title: Anleitung zum Einrichten eines virtuellen Verzeichnisses
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2d9443431601ffc712da40bd1c085f595471336b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038644"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602361"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Anleitung zum Einrichten eines virtuellen Verzeichnisses
 Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein gemeinsames virtuelles Verzeichnis namens "Service Model Samples" freizugeben, das dem Ordner "%SystemDrive%\inetpub\wwwroot\servicemodelsamples" zugeordnet ist.  
@@ -15,19 +15,19 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
 > [!NOTE]
 > % SystemDrive% ist normalerweise C: oder D:, abhängig von dem Laufwerk, auf dem Internetinformationsdienste (IIS) installiert ist.  
   
- Sie können die Dateien Setupvroot. bat und Cleanupvroot. bat aus dem [einmaligen Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausführen, um das virtuelle Verzeichnis zu erstellen. Wenn Sie es vorziehen, das virtuelle Verzeichnis manuell zu erstellen, gehen Sie wie folgt vor.  
+ Sie können die Dateien Setupvroot. bat und Cleanupvroot. bat aus dem [einmaligen Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md) ausführen, um das virtuelle Verzeichnis zu erstellen. Wenn Sie es vorziehen, das virtuelle Verzeichnis manuell zu erstellen, gehen Sie wie folgt vor.  
   
-## <a name="procedures"></a>Verfahren  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>So erstellen Sie ein virtuelles Verzeichnis in IIS 7,0 oder 7,5  
   
-1. Klicken Sie im Startmenü auf **Ausführen**, und geben Sie **inetmgr** ein, um das MMC-Snap-in Internetinformationsdienste (IIS) zu öffnen.  
+1. Klicken Sie im **Startmenü** auf **Ausführen**, und geben Sie **inetmgr** ein, um das MMC-Snap-in Internetinformationsdienste (IIS) zu öffnen.  
   
 2. Erweitern Sie im linken Bereich den Knoten mit dem Namen des Computers, und erweitern Sie dann den Knoten **Standorte** .  
   
 3. Klicken Sie mit der rechten Maustaste auf **Standard Website**, und wählen Sie **Anwendung hinzufügen** aus, um das **Fenster Anwendung hinzufügen**zu öffnen.  
   
-4. Geben `servicemodelsamples` Sie im Fenster als Alias für das virtuelle Verzeichnis ein, das Sie erstellen.  
+4. Geben Sie im Fenster `servicemodelsamples` als Alias für das virtuelle Verzeichnis ein, das Sie erstellen.  
   
 5. Erstellen Sie das folgende Verzeichnis: %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
@@ -41,7 +41,7 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
     > [!NOTE]
     > In dieser Dokumentation werden die Begriffe `virtual directory` und `Web application` als Synonyme behandelt.  
   
-     Zusätzlich zum Erstellen des virtuellen Verzeichnisses müssen Sie auch seine Eigenschaften festlegen, um das Ausführen von WCF-Diensten zu ermöglichen. Details finden Sie weiter unten.  
+     Zusätzlich zum Erstellen des virtuellen Verzeichnisses müssen Sie auch seine Eigenschaften festlegen, um das Ausführen von WCF-Diensten zu ermöglichen. Einzelheiten finden Sie unten.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>So erstellen Sie ein virtuelles Verzeichnis in IIS 5.1 oder 6.0  
   
@@ -51,7 +51,7 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
   
 3. Klicken Sie mit der rechten Maustaste auf **Standard Website** , und wählen Sie **neu, virtuelles Verzeichnis** , um den Assistenten zum Erstellen virtueller Verzeichnisse zu öffnen.  
   
-4. Geben `servicemodelsamples` Sie im Assistenten als Alias für das virtuelle Verzeichnis ein, das Sie erstellen.  
+4. Geben Sie im Assistenten `servicemodelsamples` als Alias für das virtuelle Verzeichnis ein, das Sie erstellen.  
   
 5. Legen Sie den Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest. Die meisten der WCF-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
   
@@ -61,7 +61,7 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
   
     - **Lesen**  
   
-    - **Skripts ausführen (z. b. ASP)**  
+    - **Skripts ausführen (z. B. ASP)**  
   
 8. Klicken Sie auf **weiter**, und klicken Sie dann auf **Fertig** stellen, um den Assistenten abzuschließen.  
   
@@ -70,13 +70,13 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>So legen Sie zusätzliche Eigenschaften für virtuelle Verzeichnisse in IIS 7,0 oder 7,5 fest  
   
-1. Klicken Sie auf den Knoten servicemodelsamples. Unten im Fenster sind zwei Ansichten aufgelistet. Wählen Sie Featureansicht aus, wenn Sie nicht bereits ausgewählt ist.  
+1. Klicken Sie auf den Knoten servicemodelsamples. Unten im Fenster sind zwei Ansichten aufgelistet. Wählen Sie **Featureansicht** aus, wenn Sie nicht bereits ausgewählt ist.  
   
 2. Doppelklicken Sie auf den Eintrag für **Verzeichnis durchsuchen**.  
   
 3. Wählen Sie im Bereich Aktionen die Option **aktivieren** aus. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
   
- Zum Schluss müssen Sie die Sicherheitseigenschaften des Ordners servicemodelsamples so einstellen, dass andere darauf zugreifen können. Details finden Sie weiter unten.  
+ Zum Schluss müssen Sie die Sicherheitseigenschaften des Ordners servicemodelsamples so einstellen, dass andere darauf zugreifen können. Einzelheiten finden Sie unten.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>So legen Sie zusätzliche Eigenschaften für das virtuelle Verzeichnis in IIS 5.1 oder 6.0 fest  
   
@@ -110,7 +110,7 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
   
 8. Klicken Sie auf **Jetzt suchen**. Als Suchergebnisse werden Objekte angezeigt, die mit dem lokalen Computer verknüpft sind.  
   
-9. Suchen Sie den Eintrag **IIS_IUSRS** in der Spalte **Name (Relative Distinguished Name)** . Wählen Sie diesen Eintrag aus, und klicken Sie auf **OK** , um das Fenster Suchergebnisse zu schließen  
+9. Suchen Sie den **IIS_IUSRS** Eintrag in der Spalte **Name (Relative Distinguished Name)** . Wählen Sie diesen Eintrag aus, und klicken Sie auf **OK** , um das Fenster Suchergebnisse zu schließen  
   
 10. Klicken Sie auf **OK** , um das Fenster **Benutzer oder Gruppen auswählen** zu schließen.  
   
@@ -124,11 +124,11 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
   
 2. Klicken Sie mit der rechten Maustaste auf den Ordner **Service Model Samples** , und klicken Sie dann auf **Freigabe und Sicherheit.**  
   
-3. Klicken Sie auf die Registerkarte **Sicherheit** .  
+3. Klicken Sie auf die Registerkarte **Sicherheit**.  
   
 4. Wenn Sie IIS 6,0 verwenden, überprüfen Sie im Feld **Gruppen-oder Benutzernamen** , ob das **Internet Gastkonto** aufgeführt ist.  
   
-     Falls der Eintrag nicht vorhanden ist:  
+     Falls nicht, gehen Sie wie folgt vor:  
   
     1. Klicken Sie auf **Start** und anschließend auf **Systemsteuerung**.  
   
@@ -158,7 +158,7 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
   
     14. Klicken Sie im Dialogfeld **Eigenschaften von Service Model Samples** auf der Registerkarte **Sicherheit** auf **Hinzufügen**.  
   
-    15. Geben Sie den Namen des Computers gefolgt von einem umgekehrten Schrägstrich ein, und fügen Sie dann den Namen des Internet Benutzerkontos ein, z. b\\. myMachineName% InternetGuestAccountName%.  
+    15. Geben Sie den Namen des Computers gefolgt von einem umgekehrten Schrägstrich ein, und fügen Sie dann den Namen des Internet Benutzerkontos ein, z. b. myMachineName \\ % InternetGuestAccountName%.  
   
     16. Klicken Sie auf " **Namen überprüfen** ", um die Addition Gültige Namen werden in Großbuchstaben und unterstrichen angezeigt.  
   
@@ -184,12 +184,12 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
   
      So überprüfen Sie, ob ASPNET Teil der Sicherheitsgruppe " **Benutzer** " ist:  
   
-    1. Klicken Sie im Startmenü auf **Systemsteuerung**.  
+    1. Klicken Sie im Menü **Start** auf **Systemsteuerung**.  
   
     2. Klicken Sie auf das Symbol **Benutzerkonten** .  
   
     3. Überprüfen Sie in der Spalte **Gruppe** , ob der Wert für **ASPNET** "Users" lautet.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hostinganweisungen des Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Hostinganweisungen des Internetinformationsdiensts](internet-information-service-hosting-instructions.md)

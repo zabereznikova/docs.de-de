@@ -2,29 +2,29 @@
 title: Clients
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
-ms.openlocfilehash: aa6d415c0908845bedf7c95ed66281bc0f17eb2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5c44016a0367ea80485f220418e5bd8365b9694
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781458"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599320"
 ---
 # <a name="clients"></a>Clients
-Die Themen in diesem Abschnitt behandeln die Clientarchitektur, wie den Zugriff auf einen Windows Communication Foundation (WCF) Dienst, das zum Konfigurieren eines WCF-Clients und einige sicherheitsüberlegungen für WCF-Clients.  
+Die Themen in diesem Abschnitt behandeln die Client Architektur, den Zugriff auf einen Windows Communication Foundation (WCF)-Dienst, die Konfiguration eines WCF-Clients und einige Sicherheitsaspekte für WCF-Clients.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [WCF-Clientarchitektur](../../../../docs/framework/wcf/feature-details/client-architecture.md)  
- Beschreibt die WCF-Clientarchitektur.  
+ [WCF-Clientarchitektur](client-architecture.md)  
+ Beschreibt die WCF-Client Architektur.  
   
- [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)  
- Beschreibt, wie auf einen WCF-Dienst zuzugreifen.  
+ [Zugreifen auf Dienste mithilfe eines WCF-Clients](accessing-services-using-a-client.md)  
+ Beschreibt, wie auf einen WCF-Dienst zugegriffen wird.  
   
- [WCF-Clientkonfiguration](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- Beschreibt, wie einen WCF-Client zu konfigurieren.  
+ [WCF-Clientkonfiguration](client-configuration.md)  
+ Beschreibt, wie ein WCF-Client konfiguriert wird.  
   
- [Sichern von Clients](../../../../docs/framework/wcf/securing-clients.md)  
- Beschreibt einige Überlegungen zur Sicherheit für WCF-Clients.  
+ [Sichern von Clients](../securing-clients.md)  
+ Beschreibt einige Sicherheitsüberlegungen für WCF-Clients.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Clientbeispiele](../samples/client.md)

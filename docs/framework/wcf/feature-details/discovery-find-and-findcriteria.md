@@ -2,12 +2,12 @@
 title: Suche und FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1d6a0e3fcca45c3fe57aab84b0f2b6b86fabb404
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964836"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599177"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Suche und FindCriteria
 
@@ -31,7 +31,7 @@ Zu den Suchkriterien gehört Folgendes:
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> führt einen grundlegenden Zeichenfolgenvergleich aus, bei dem die Groß-/Kleinschreibung beachtet wird.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> Übereinstimmungen nach Segmenten, die durch "/" getrennt sind. Eine Suche nach `http://contoso/building1` entspricht einem Dienst mit Bereichs `http://contoso/building/floor1`. Beachten Sie, dass Sie nicht `http://contoso/building100` entspricht, da die beiden letzten Segmente nicht mit identisch sind.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>Übereinstimmungen nach Segmenten, getrennt durch "/". Eine Suche nach `http://contoso/building1` entspricht einem Dienst mit dem Bereich `http://contoso/building/floor1` . Beachten Sie, dass dies nicht der Fall ist, `http://contoso/building100` da die beiden letzten Segmente nicht mit Stimmen.
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> ermittelt für Bereiche Übereinstimmungen nach Segmenten unter Verwendung einer LDAP-URL.
 
@@ -68,9 +68,9 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Verwenden des Ermittlungsclientkanals](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
-- [Suche mit Bereichen](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
-- [Standard](../../../../docs/framework/wcf/samples/basic-sample.md)
+- [Übersicht über die WCF-Suche](wcf-discovery-overview.md)
+- [Verwenden des Suchclientchannels](using-the-discovery-client-channel.md)
+- [Suche mit Bereichen](../samples/discovery-with-scopes-sample.md)
+- [Grundlegend](../samples/basic-sample.md)
