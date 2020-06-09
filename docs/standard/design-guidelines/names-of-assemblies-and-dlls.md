@@ -1,5 +1,6 @@
 ---
 title: Namen von Assemblys und DLLs
+description: Erfahren Sie mehr über Richtlinien für das Benennen von Assemblys und Dynamic Link Libraries (DLLs). Eine Assembly kann eine oder mehrere Dateien umfassen, Sie ordnet jedoch in der Regel eins-zu-eins einer DLL zu.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,33 +9,33 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: 138ae8154b0d10fb813f0c98ceb7c58a2471b780
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de7ce3ee774d4598521d7156d0d660c3fe30154c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594477"
 ---
-# <a name="names-of-assemblies-and-dlls"></a><span data-ttu-id="d770c-102">Namen von Assemblys und DLLs</span><span class="sxs-lookup"><span data-stu-id="d770c-102">Names of Assemblies and DLLs</span></span>
-<span data-ttu-id="d770c-103">Eine Assembly ist die Bereitstellungs Einheit und Identität für verwaltete Code Programme.</span><span class="sxs-lookup"><span data-stu-id="d770c-103">An assembly is the unit of deployment and identity for managed code programs.</span></span> <span data-ttu-id="d770c-104">Assemblys können sich über eine oder mehrere Dateien erstrecken. in der Regel ordnet eine Assembly eins-zu-eins einer DLL zu.</span><span class="sxs-lookup"><span data-stu-id="d770c-104">Although assemblies can span one or more files, typically an assembly maps one-to-one with a DLL.</span></span> <span data-ttu-id="d770c-105">In diesem Abschnitt werden daher nur dll-Benennungs Konventionen beschrieben, die dann assemblybenennungs Konventionen zugeordnet werden können.</span><span class="sxs-lookup"><span data-stu-id="d770c-105">Therefore, this section describes only DLL naming conventions, which then can be mapped to assembly naming conventions.</span></span>
+# <a name="names-of-assemblies-and-dlls"></a><span data-ttu-id="627b7-104">Namen von Assemblys und DLLs</span><span class="sxs-lookup"><span data-stu-id="627b7-104">Names of Assemblies and DLLs</span></span>
+<span data-ttu-id="627b7-105">Eine Assembly ist die Bereitstellungs Einheit und Identität für verwaltete Code Programme.</span><span class="sxs-lookup"><span data-stu-id="627b7-105">An assembly is the unit of deployment and identity for managed code programs.</span></span> <span data-ttu-id="627b7-106">Assemblys können sich über eine oder mehrere Dateien erstrecken. in der Regel ordnet eine Assembly eins-zu-eins einer DLL zu.</span><span class="sxs-lookup"><span data-stu-id="627b7-106">Although assemblies can span one or more files, typically an assembly maps one-to-one with a DLL.</span></span> <span data-ttu-id="627b7-107">In diesem Abschnitt werden daher nur dll-Benennungs Konventionen beschrieben, die dann assemblybenennungs Konventionen zugeordnet werden können.</span><span class="sxs-lookup"><span data-stu-id="627b7-107">Therefore, this section describes only DLL naming conventions, which then can be mapped to assembly naming conventions.</span></span>
 
- <span data-ttu-id="d770c-106">✔️ Wählen Sie Namen für die assemblydlls aus, die große Funktionsblöcke vorschlagen, wie z. b. System. Data.</span><span class="sxs-lookup"><span data-stu-id="d770c-106">✔️ DO choose names for your assembly DLLs that suggest large chunks of functionality, such as System.Data.</span></span>
+ <span data-ttu-id="627b7-108">✔️ Wählen Sie Namen für die assemblydlls aus, die große Funktionsblöcke vorschlagen, wie z. b. System. Data.</span><span class="sxs-lookup"><span data-stu-id="627b7-108">✔️ DO choose names for your assembly DLLs that suggest large chunks of functionality, such as System.Data.</span></span>
 
- <span data-ttu-id="d770c-107">Assemblynamen und DLL-Namen müssen nicht den Namespace Namen entsprechen, aber es ist sinnvoll, beim Benennen von Assemblys den Namespace Namen zu befolgen.</span><span class="sxs-lookup"><span data-stu-id="d770c-107">Assembly and DLL names don’t have to correspond to namespace names, but it is reasonable to follow the namespace name when naming assemblies.</span></span> <span data-ttu-id="d770c-108">Eine gute Faustregel besteht darin, die dll basierend auf dem gemeinsamen Präfix der in der Assembly enthaltenen Namespaces zu benennen.</span><span class="sxs-lookup"><span data-stu-id="d770c-108">A good rule of thumb is to name the DLL based on the common prefix of the namespaces contained in the assembly.</span></span> <span data-ttu-id="d770c-109">Beispielsweise kann eine Assembly mit zwei Namespaces ( `MyCompany.MyTechnology.FirstFeature` und) `MyCompany.MyTechnology.SecondFeature` aufgerufen werden `MyCompany.MyTechnology.dll` .</span><span class="sxs-lookup"><span data-stu-id="d770c-109">For example, an assembly with two namespaces, `MyCompany.MyTechnology.FirstFeature` and `MyCompany.MyTechnology.SecondFeature`, could be called `MyCompany.MyTechnology.dll`.</span></span>
+ <span data-ttu-id="627b7-109">Assemblynamen und DLL-Namen müssen nicht den Namespace Namen entsprechen, aber es ist sinnvoll, beim Benennen von Assemblys den Namespace Namen zu befolgen.</span><span class="sxs-lookup"><span data-stu-id="627b7-109">Assembly and DLL names don’t have to correspond to namespace names, but it is reasonable to follow the namespace name when naming assemblies.</span></span> <span data-ttu-id="627b7-110">Eine gute Faustregel besteht darin, die dll basierend auf dem gemeinsamen Präfix der in der Assembly enthaltenen Namespaces zu benennen.</span><span class="sxs-lookup"><span data-stu-id="627b7-110">A good rule of thumb is to name the DLL based on the common prefix of the namespaces contained in the assembly.</span></span> <span data-ttu-id="627b7-111">Beispielsweise kann eine Assembly mit zwei Namespaces ( `MyCompany.MyTechnology.FirstFeature` und) `MyCompany.MyTechnology.SecondFeature` aufgerufen werden `MyCompany.MyTechnology.dll` .</span><span class="sxs-lookup"><span data-stu-id="627b7-111">For example, an assembly with two namespaces, `MyCompany.MyTechnology.FirstFeature` and `MyCompany.MyTechnology.SecondFeature`, could be called `MyCompany.MyTechnology.dll`.</span></span>
 
- <span data-ttu-id="d770c-110">✔️ in Erwägung gezogen, DLLs gemäß folgendem Muster zu benennen:</span><span class="sxs-lookup"><span data-stu-id="d770c-110">✔️ CONSIDER naming DLLs according to the following pattern:</span></span>
+ <span data-ttu-id="627b7-112">✔️ in Erwägung gezogen, DLLs gemäß folgendem Muster zu benennen:</span><span class="sxs-lookup"><span data-stu-id="627b7-112">✔️ CONSIDER naming DLLs according to the following pattern:</span></span>
 
  `<Company>.<Component>.dll`
 
- <span data-ttu-id="d770c-111">, wobei `<Component>` eine oder mehrere durch Punkte getrennte Klauseln enthält.</span><span class="sxs-lookup"><span data-stu-id="d770c-111">where `<Component>` contains one or more dot-separated clauses.</span></span> <span data-ttu-id="d770c-112">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="d770c-112">For example:</span></span>
+ <span data-ttu-id="627b7-113">, wobei `<Component>` eine oder mehrere durch Punkte getrennte Klauseln enthält.</span><span class="sxs-lookup"><span data-stu-id="627b7-113">where `<Component>` contains one or more dot-separated clauses.</span></span> <span data-ttu-id="627b7-114">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="627b7-114">For example:</span></span>
 
- <span data-ttu-id="d770c-113">`Litware.Controls.dll`.</span><span class="sxs-lookup"><span data-stu-id="d770c-113">`Litware.Controls.dll`.</span></span>
+ <span data-ttu-id="627b7-115">`Litware.Controls.dll`.</span><span class="sxs-lookup"><span data-stu-id="627b7-115">`Litware.Controls.dll`.</span></span>
 
- <span data-ttu-id="d770c-114">*Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*</span><span class="sxs-lookup"><span data-stu-id="d770c-114">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>
+ <span data-ttu-id="627b7-116">*Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*</span><span class="sxs-lookup"><span data-stu-id="627b7-116">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>
 
- <span data-ttu-id="d770c-115">*Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*</span><span class="sxs-lookup"><span data-stu-id="d770c-115">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>
+ <span data-ttu-id="627b7-117">*Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*</span><span class="sxs-lookup"><span data-stu-id="627b7-117">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d770c-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d770c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="627b7-118">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="627b7-118">See also</span></span>
 
-- [<span data-ttu-id="d770c-117">Framework-Entwurfs Richtlinien</span><span class="sxs-lookup"><span data-stu-id="d770c-117">Framework Design Guidelines</span></span>](index.md)
-- [<span data-ttu-id="d770c-118">Benennungs Richtlinien</span><span class="sxs-lookup"><span data-stu-id="d770c-118">Naming Guidelines</span></span>](naming-guidelines.md)
+- [<span data-ttu-id="627b7-119">Framework-Entwurfs Richtlinien</span><span class="sxs-lookup"><span data-stu-id="627b7-119">Framework Design Guidelines</span></span>](index.md)
+- [<span data-ttu-id="627b7-120">Benennungs Richtlinien</span><span class="sxs-lookup"><span data-stu-id="627b7-120">Naming Guidelines</span></span>](naming-guidelines.md)
