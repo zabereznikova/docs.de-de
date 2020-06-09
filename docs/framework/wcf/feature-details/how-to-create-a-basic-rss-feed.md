@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 9a07754e8fdad700bd5488f392f80b5c5f907f6e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 872fe325a6705e79d026cd7f6e1f7cfef5145307
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968445"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599021"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Vorgehensweise: Erstellen eines grundlegenden RSS-Feeds
 Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu erstellen, der einen Syndizierungs Feed verfügbar macht. In diesem Thema wird erläutert, wie ein Syndication-Dienst, der einen RSS Syndication-Feed verfügbar macht, erstellt wird.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu ers
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > Alle Dienstvorgänge, die das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut übernehmen, werden HTTP GET-Anforderungen zugeordnet. Wenn Sie den Vorgang einer anderen HTTP-Methode zuordnen möchten, verwenden Sie stattdessen <xref:System.ServiceModel.Web.WebInvokeAttribute>. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen einfachen WCF-Web](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)-HTTP-Dienst.  
+    > Alle Dienstvorgänge, die das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut übernehmen, werden HTTP GET-Anforderungen zugeordnet. Wenn Sie den Vorgang einer anderen HTTP-Methode zuordnen möchten, verwenden Sie stattdessen <xref:System.ServiceModel.Web.WebInvokeAttribute>. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts](how-to-create-a-basic-wcf-web-http-service.md).  
   
 2. Implementieren Sie den Dienstvertrag.  
   
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu ers
   
 ### <a name="to-call-getblog-with-an-http-get"></a>So rufen Sie GetBlog() mit HTTP GET auf  
   
-1. Öffnen Sie Internet Explorer, geben Sie die folgende URL ein, und `http://localhost:8000/BlogService/GetBlog`drücken Sie die EINGABETASTE:. Die URL enthält die Basisadresse des Dienstanbieter`http://localhost:8000/BlogService`(), die relative Adresse des Endpunkts und den aufzurufenden Dienst Vorgang.  
+1. Öffnen Sie Internet Explorer, geben Sie die folgende URL ein, und drücken Sie die EINGABETASTE: `http://localhost:8000/BlogService/GetBlog` . Die URL enthält die Basisadresse des Dienstanbieter ( `http://localhost:8000/BlogService` ), die relative Adresse des Endpunkts und den aufzurufenden Dienst Vorgang.  
   
 ### <a name="to-call-getblog-from-code"></a>So rufen Sie GetBlog() aus dem Code auf  
   
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu ers
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Verweisen Sie beim Kompilieren des obigen Codes auf System.ServiceModel.dll und System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

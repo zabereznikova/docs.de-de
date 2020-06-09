@@ -6,22 +6,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a07d7c6da71f4195cb1641ae8ac7585b4158ed63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743344"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600970"
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
   
- Weitere Informationen zu den in der Windows Communication Foundation (WCF)-Dokumentation verwendeten Begriffen finden Sie unter [grundlegende Windows Communication Foundation Konzepte](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Weitere Informationen zu den in der Windows Communication Foundation (WCF)-Dokumentation verwendeten Begriffen finden Sie unter [grundlegende Windows Communication Foundation Konzepte](../fundamental-concepts.md).  
   
  Zugriffssteuerungsliste  
  Eine Liste mit den Arten von Sicherheitsschutz, der auf ein Objekt angewendet wird. (Bei einem Objekt kann es sich um eine Datei, einen Prozess, ein Ereignis oder eine beliebige andere Sicherheits Beschreibung handeln.) Ein Eintrag in einer ACL ist ein Zugriffs Steuerungs Eintrag (ACE). Es gibt zwei Typen von Zugriffssteuerungslisten: freigegebene Zugriffssteuerungslisten und Systemzugriffssteuerungslisten.  
   
- Authentifizierung  
+ authentication  
  Der Prozess, in dem ein Benutzer, ein Computer, ein Dienst oder ein Prozess auf Übereinstimmung mit der vorgegebenen Identität überprüft werden.  
   
  authorization  
@@ -33,7 +33,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Zertifizierungsstellenhierarchie  
  Eine Zertifizierungsstellenhierarchie enthält mehrere Zertifizierungsstellen. Es ist so organisiert, dass jede Zertifizierungsstelle von einer anderen Zertifizierungsstelle auf einer höheren Ebene der Hierarchie zertifiziert wird, bis der obere Teil der Hierarchie, auch bekannt als Stamm Zertifizierungs *Stelle, erreicht*wird.  
   
- certificate  
+ Zertifikat  
  Eine digital signierte Anweisung mit Informationen über eine Entität und ihren öffentlichen Schlüssel, die zwei Informationen verbindet. Zertifikate werden von vertrauenswürdigen Organisationen (oder Entitäten) ausgestellt, die auch als Zertifizierungsstellen bezeichnet werden, nachdem die Zertifizierungsstelle die vorgegebene Identität überprüft hat.  
   
  Zertifikate können verschiedene Datentypen enthalten. Beispielsweise enthält ein X.509-Zertifikat folgende Zertifikatdaten: Format, Seriennummer, Algorithmus der Signatur, Name der ausstellenden Zertifizierungsstelle, Name und öffentlicher Schlüssel der Entität, die das Zertifikat anfordert, sowie Signatur der Zertifizierungsstelle.  
@@ -47,7 +47,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Clientzertifikat  
  Ein Zertifikat, das zur Clientauthentifizierung verwendet wird, beispielsweise zur Authentifizierung eines Webbrowsers auf einem Webserver. Beim Versuch eines Webbrowserclients, auf einen sicheren Webserver zuzugreifen, sendet der Client sein Zertifikat an den Server, um seine Identität prüfen zu lassen.  
   
- credentials  
+ Anmeldeinformationen  
  Authentifizierte Anmeldedaten, die von einem Sicherheitsprinzipal verwendet werden, um die eigene Identität festzustellen, beispielsweise ein Kennwort oder ein Kerberos-Protokollticket. Mit den Anmeldeinformationen wird der Zugriff auf Ressourcen gesteuert.  
   
  digestedData  
@@ -126,7 +126,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Ein Protokoll für die sichere Netzwerkkommunikationen mit einer Kombination aus öffentlicher und privater Schlüsseltechnologie.  
   
  Sicherheitskontext  
- Die aktuell geltenden Sicherheitsattribute oder -regeln. z. B. der Benutzer, der derzeit am Computer angemeldet ist, oder die PIN, die vom Smartcard-Benutzer eingegeben wurde. Im Hinblick auf die SSPI stellt ein Sicherheitskontext eine nicht transparente Datenstruktur mit Sicherheitsdaten für eine Verbindung dar, beispielsweise einen Sitzungsschlüssel oder eine Angabe der Sitzungsdauer.  
+ Die Sicherheitsattribute oder Regeln, die gerade gültig sind, z. B. der Benutzer, der derzeit am Computer angemeldet ist, oder die PIN, die vom Smartcard-Benutzer eingegeben wurde. Im Hinblick auf die SSPI stellt ein Sicherheitskontext eine nicht transparente Datenstruktur mit Sicherheitsdaten für eine Verbindung dar, beispielsweise einen Sitzungsschlüssel oder eine Angabe der Sitzungsdauer.  
   
  Sicherheitsprinzipal (security principal)  
  Eine Entität, die vom Sicherheitssystem erkannt wird. Prinzipale können menschliche Benutzer sowie autonome Prozesse einschließen.  
@@ -183,6 +183,6 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Wesentliche Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md)
-- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Wesentliche Windows Communication Foundation-Begriffe](../fundamental-concepts.md)
+- [Sicherheitskonzepte](security-concepts.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

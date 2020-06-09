@@ -2,27 +2,27 @@
 title: Liste der Aktivitäten
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: d048dc9851a3b07b6c7457de95f2c752b0ffa964
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d43cc878d54efbd4908f92c3405bef2c7956f94
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602166"
 ---
 # <a name="activity-list"></a>Liste der Aktivitäten
 In diesem Thema werden alle durch Windows Communication Foundation (WCF) definierten Aktivitäten aufgelistet.  
   
 > [!NOTE]
-> Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter ausgeben von [Benutzer Code-](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)Ablauf Verfolgungen.  
+> Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter ausgeben von [Benutzer Code-](emitting-user-code-traces.md)Ablauf Verfolgungen.  
   
 ## <a name="servicemodel-activities"></a>ServiceModel-Aktivitäten  
  In der folgenden Tabelle werden alle Aktivitäten für die wichtigsten Verwendungsszenarien aufgeführt.  
   
-|Bezeichnung|Name der Aktivität|Aktivitätstyp|Beschreibung|  
+|Bezeichnung|Activity Name|Activity Type|BESCHREIBUNG|  
 |-----------|-------------------|-------------------|-----------------|  
-|A, M|Ambient-Aktivität|-/- (wird nicht über ServiceModel gesteuert)|Die Aktivität, deren ID in TLS festgelegt wird, bevor Aufrufe an ServiceModel-Code (client- oder serverseitig) stattfinden.<br /><br /> Beispiel: Eine Aktivität, bei der Open auf dem WCF-Client oder Service Host. Open aufgerufen wird, wird aufgerufen.|  
+|A, M|Ambient-Aktivität|-/- (wird nicht über ServiceModel gesteuert)|Die Aktivität, deren ID in TLS festgelegt wird, bevor Aufrufe an ServiceModel-Code (client- oder serverseitig) stattfinden.<br /><br /> Beispiel: eine Aktivität, bei der Open auf dem WCF-Client oder Service Host. Open aufgerufen wird, wird aufgerufen.|  
 |B|Konstrukt<br /><br /> erstellen. Vertragstyp: "[Typ]".|Konstrukt||  
-|c|Öffnen<br /><br /> [ClientBase&#124;ChannelFactory]. Vertragstyp: "[Typ]".|Öffnen||  
+|C|Öffnen<br /><br /> [ClientBase&#124;ChannelFactory]. Vertragstyp: "[Typ]".|Öffnen||  
 |I|Schließen Sie [ClientBase&#124;ChannelFactory]. Vertragstyp: "[Typ]".|Schließen||  
 |M|ServiceHost erstellen. ServiceType: "[Typ]".|Konstrukt||  
 |N|ServiceHost öffnen. ServiceType: "[Typ]".|Öffnen||  
@@ -36,22 +36,22 @@ In diesem Thema werden alle durch Windows Communication Foundation (WCF) definie
 ## <a name="security-activities"></a>Sicherheitsaktivitäten  
  In der folgenden Tabelle werden alle sicherheitsbezogenen Aktivitäten aufgeführt.  
   
-|Name der Aktivität|Aktivitätstyp|Beschreibung|  
+|Activity Name|Activity Type|BESCHREIBUNG|  
 |-------------------|-------------------|-----------------|  
-|Sichere Sitzung einrichten|SetupSecurity|Nur clientseitig vorhanden. Enthält alle RST*-/SCT-Austauschvorgänge für die Authentifizierung und Einrichtung des Sicherheitskontexts. Wenn `propagateActivity` =\*der Wert ist, wird diese Aktivität mit den entsprechenden Process Action RST/SCT-Aktivitäten des dienstangs zusammengeführt. `true`|  
-|Sichere Sitzung schließen|SetupSecurity|Clientseitig vorhanden. Enthält den "Cancel"-Nachrichtenaustausch zum Schließen der sicheren Sitzung. Wenn `propagateActivity` derWertist`true`, wird diese Aktivität mit der Verarbeitungs Aktion "Cancel" aus dem Dienst zusammengeführt. =|  
+|Sichere Sitzung einrichten|SetupSecurity|Nur clientseitig vorhanden. Enthält alle RST*-/SCT-Austauschvorgänge für die Authentifizierung und Einrichtung des Sicherheitskontexts. Wenn der Wert ist `propagateActivity` = `true` , wird diese Aktivität mit den entsprechenden Process Action RST/SCT-Aktivitäten des dienstangs zusammengeführt \* .|  
+|Sichere Sitzung schließen|SetupSecurity|Clientseitig vorhanden. Enthält den "Cancel"-Nachrichtenaustausch zum Schließen der sicheren Sitzung. Wenn der Wert ist `propagateActivity` = `true` , wird diese Aktivität mit der Verarbeitungs Aktion "Cancel" aus dem Dienst zusammengeführt.|  
   
  In der folgenden Tabelle werden alle COM+-bezogenen Aktivitäten aufgeführt.  
   
-|Name der Aktivität|Aktivitätstyp|Beschreibung|  
+|Activity Name|Activity Type|BESCHREIBUNG|  
 |-------------------|-------------------|-----------------|  
 |COM+-Instanz erstellen|TransferToCOMPlus|1 Aktivitäts Instanz für jeden com+-Befehl von WCF-Code|  
-|Ausführen des com+ \<-Vorgangs >|TransferToCOMPlus|1 Aktivitäts Instanz für jeden com+-Befehl von WCF-Code|  
+|Com+ ausführen\<operation>|TransferToCOMPlus|1 Aktivitäts Instanz für jeden com+-Befehl von WCF-Code|  
   
 ## <a name="wmi-activities"></a>WMI-Aktivitäten  
  In der folgenden Tabelle werden alle WMI-bezogenen Aktivitäten aufgeführt.  
   
-|Name der Aktivität|Aktivitätstyp|Beschreibung|  
+|Activity Name|Activity Type|BESCHREIBUNG|  
 |-------------------|-------------------|-----------------|  
 |WMI-GET-Anforderung|WMIGetObject|Benutzer ruft Daten von WMI ab.|  
 |WMI-PUT-Anforderung|WmiPutInstance|Benutzer aktualisiert Daten mit WMI.|

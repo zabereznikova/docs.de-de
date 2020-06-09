@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: c8c0c084ac3b1cf06fc5f2b3df85fa979744e17b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99ab5e1e72aefc688df1692091e60caf930d5e4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185419"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597617"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Best Practices für Sicherheit in WCF
-In den folgenden Abschnitten werden bewährte Methoden aufgeführt, die Sie beim Erstellen sicherer Anwendungen mit WCF (Windows Communication Foundation) berücksichtigen sollten. Weitere Informationen über Sicherheit finden Sie unter [Security Considerations (Sicherheitsüberlegungen)](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Security Considerations for Data (Sicherheitsüberlegungen zu Daten)](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) und [Security Considerations with Metadata (Sicherheitsüberlegungen zu Metadaten)](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+In den folgenden Abschnitten werden bewährte Methoden aufgeführt, die Sie beim Erstellen sicherer Anwendungen mit WCF (Windows Communication Foundation) berücksichtigen sollten. Weitere Informationen über Sicherheit finden Sie unter [Security Considerations (Sicherheitsüberlegungen)](security-considerations-in-wcf.md), [Security Considerations for Data (Sicherheitsüberlegungen zu Daten)](security-considerations-for-data.md) und [Security Considerations with Metadata (Sicherheitsüberlegungen zu Metadaten)](security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Identifizieren von Diensten mit Windows-Authentifizierung mithilfe von SPNs  
  Dienste können entweder mit Benutzerprinzipalnamen (User Principal Names, UPNs) oder mit Dienstprinzipalnamen (Service Principal Names, SPNs) identifiziert werden. Dienste, die im Rahmen eines Computerkontos ausgeführt werden (beispielsweise der Netzwerkdienst), besitzen eine SPN-Identität, die dem Computer entspricht, auf dem sie ausgeführt werden. Dienste, die im Rahmen eines Benutzerkontos ausgeführt werden, besitzen eine UPN-Identität, die dem Benutzer entspricht, als der sie ausgeführt werden. Mithilfe des `setspn`-Tool kann dem Benutzerkonto jedoch auch ein SPN zugewiesen werden. Wird ein Dienst so konfiguriert, dass er mittels SPN identifiziert werden kann, und werden die Clients, von denen eine Verbindung mit dem Dienst herstellt wird, für die Verwendung dieses SPN konfiguriert, lassen sich bestimmte Angriffe erschweren. Diese Anleitung gilt für Bindungen mit Kerberos- oder SSPI-Aushandlung.  Für den Fall, dass von SSPI auf NTLM zurückgegriffen wird, sollte von den Clients auch weiterhin ein SPN angegeben werden.  
@@ -45,19 +45,19 @@ In den folgenden Abschnitten werden bewährte Methoden aufgeführt, die Sie beim
  Stellen Sie sicher, dass die Metadatenquelle vertrauenswürdig ist und dass die Metadaten nicht manipuliert wurden. Über das HTTP-Protokoll abgerufene Metadaten werden im Klartext gesendet und können manipuliert werden. Wenn der Dienst die Eigenschaften <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> und <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> nutzt, verwenden Sie die URL, die der Dienstersteller zum Herunterladen der Daten über das HTTPS-Protokoll angegeben hat.  
   
 ## <a name="publish-metadata-using-security"></a>Veröffentlichen von Metadaten unter Verwendung von Sicherheitsfeatures  
- Damit die veröffentlichten Metadaten eines Diensts nicht manipuliert werden können, schützen Sie den Endpunkt für den Metadatenaustausch mit Sicherheitsfeatures auf Transport- oder Nachrichtenebene. Weitere Informationen finden Sie unter [Publishing Metadata Endpoints (Veröffentlichen von Metadatenendpunkten)](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) und [How to: Publish Metadata for a Service Using Code (Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code)](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Damit die veröffentlichten Metadaten eines Diensts nicht manipuliert werden können, schützen Sie den Endpunkt für den Metadatenaustausch mit Sicherheitsfeatures auf Transport- oder Nachrichtenebene. Weitere Informationen finden Sie unter [Publishing Metadata Endpoints (Veröffentlichen von Metadatenendpunkten)](../publishing-metadata-endpoints.md) und [How to: Publish Metadata for a Service Using Code (Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code)](how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Sicherstellen der Verwendung eines lokalen Ausstellers  
  Wenn für eine bestimmte Bindung eine Ausstelleradresse und eine Bindung angegeben werden, wird der lokale Aussteller nicht für Endpunkte genutzt, die diese Bindung verwenden. Clients, die immer den lokalen Aussteller verwenden möchten, sollten sicherstellen, dass keine solche Bindung verwendet wird oder dass die Bindung so geändert wird, dass die Ausstelleradresse NULL lautet.  
   
 ## <a name="saml-token-size-quotas"></a>Größenkontingente für SAML-Token  
- Wenn SAML (Security Assertions Markup Language)-Token in Nachrichten serialisiert werden, z.&#160;B. wenn sie von einem Sicherheitstokendienst (Security Token Service, STS) ausgestellt werden oder von Clients im Rahmen der Authentifizierung an Dienste übergegeben werden, muss das Kontingent für die maximale Nachrichtengröße groß genug sein, um das SAML-Token und die anderen Teile der Nachricht aufnehmen zu können. Normalerweise ist das Kontingent für Nachrichten in Standardgröße ausreichend. Wenn ein SAML-Token allerdings sehr groß ist, weil es mehrere Hundert Ansprüche enthält, sollten Sie das Kontingent erhöhen, damit das serialisierte Token darin Platz findet. Weitere Informationen über Kontingenten finden Sie unter [Security Considerations for Data (Sicherheitsüberlegungen zu Daten)](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Wenn SAML (Security Assertions Markup Language)-Token in Nachrichten serialisiert werden, z.&#160;B. wenn sie von einem Sicherheitstokendienst (Security Token Service, STS) ausgestellt werden oder von Clients im Rahmen der Authentifizierung an Dienste übergegeben werden, muss das Kontingent für die maximale Nachrichtengröße groß genug sein, um das SAML-Token und die anderen Teile der Nachricht aufnehmen zu können. Normalerweise ist das Kontingent für Nachrichten in Standardgröße ausreichend. Wenn ein SAML-Token allerdings sehr groß ist, weil es mehrere Hundert Ansprüche enthält, sollten Sie das Kontingent erhöhen, damit das serialisierte Token darin Platz findet. Weitere Informationen über Kontingenten finden Sie unter [Security Considerations for Data (Sicherheitsüberlegungen zu Daten)](security-considerations-for-data.md).  
   
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Festlegen von SecurityBindingElement.IncludeTimestamp für benutzerdefinierte Bindungen auf "True"  
  Wenn Sie eine benutzerdefinierte Bindung erstellen, müssen Sie <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> auf `true` festlegen. Wenn <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> auf `false` festgelegt ist und der Client ein auf einem asymmetrischen Schlüssel basierendes Token verwendet, z. B. ein X.509-Zertifikat, wird die Nachricht nicht signiert.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Sicherheitsüberlegungen für Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
-- [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Sicherheitshinweise](security-considerations-in-wcf.md)
+- [Sicherheitsüberlegungen zu Daten](security-considerations-for-data.md)
+- [Sicherheitsüberlegungen für Metadaten](security-considerations-with-metadata.md)

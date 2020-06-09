@@ -2,15 +2,15 @@
 title: Transaktionsprotokolle, Version 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 6063c643be4c60e9830a020d10ac9fbcd236dac2
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: f725361b9a90c9336b763cc7f292ae043e445966
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144772"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598709"
 ---
 # <a name="transaction-protocols-version-10"></a>Transaktionsprotokolle, Version 1.0
-Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der WS-Atomic Transaction-und WS-Coordination-Protokolle. Weitere Informationen zu Version 1,1 finden Sie unter [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der WS-Atomic Transaction-und WS-Coordination-Protokolle. Weitere Informationen zu Version 1,1 finden Sie unter [Transaktionsprotokolle](transaction-protocols.md).  
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
 #### <a name="activation-message-binding-configuration"></a>Bindungskonfiguration von Aktivierungsnachrichten  
  Aktivierungsnachrichten nehmen in der Regel nicht an der Interoperabilität teil, da sie normalerweise zwischen einer Anwendung und dem lokalen Transaktions-Manager auftreten.  
   
- B1221: WCF verwendet die Duplex-HTTPS-Bindung (beschrieben in [Messaging Protokollen](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) für Aktivierungs Nachrichten. Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
+ B1221: WCF verwendet die Duplex-HTTPS-Bindung (beschrieben in [Messaging Protokollen](messaging-protocols.md)) für Aktivierungs Nachrichten. Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
   
  In der WS-Atomic Transaktion-Spezifikation, Abschnitt 8, werden die Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
   
@@ -110,11 +110,11 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
  Ein neuer `t:IssuedTokens` Header sollte zum Anfügen an die ausgehende `wscoor:CreateCoordinationContextResponse` Nachricht generiert werden.  
   
 #### <a name="registration-message-binding-configuration"></a>Bindungskonfiguration von Registrierungsnachrichten  
- B1231: WCF verwendet Duplex-HTTPS-Bindung (beschrieben in [Messaging Protokollen](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
+ B1231: WCF verwendet Duplex-HTTPS-Bindung (beschrieben in [Messaging Protokollen](messaging-protocols.md)). Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
   
  In der WS-AtomicTransaction-Spezifikation, Abschnitt 8, werden weitere Details zur Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
   
- R1232: für ausgehende `wscoor:Register` Nachrichten muss der `IssuedTokenOverTransport` in [Sicherheitsprotokollen](../../../../docs/framework/wcf/feature-details/security-protocols.md)beschriebene Authentifizierungsmodus verwendet werden.  
+ R1232: für ausgehende `wscoor:Register` Nachrichten muss der `IssuedTokenOverTransport` in [Sicherheitsprotokollen](security-protocols.md)beschriebene Authentifizierungsmodus verwendet werden.  
   
  Das- `wsse:Timestamp` Element muss mithilfe der ausgestellten signiert werden `SecurityContextToken STx` . Diese Signatur ist Beweis für den Besitz des einer bestimmten Transaktion zugewiesenen Tokens und wird für die Authentifizierung einer Teilnehmerliste während der Transaktion verwendet. Die RegistrationResponse-Nachricht wird über HTTPS zurückgesendet.  
   

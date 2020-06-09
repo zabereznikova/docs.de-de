@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 10e257a1cbc8778565a9838aeef423522f9d2970
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600412"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objekte und Klassen in Visual Basic
 
@@ -59,7 +59,7 @@ Sie müssen ein-Objekt erstellen, bevor Sie auf seine Member zugreifen können, 
 > [!NOTE]
 > Sie sollten die Variable möglichst so deklarieren, dass sie den Klassentyp aufweist, den Sie ihr zuweisen möchten. Dies wird als *frühe Bindung* bezeichnet. Wenn Sie den Klassentyp zur Kompilierungszeit nicht kennen, können Sie *Späte Bindung* aufrufen, indem Sie für die Variable den [Objekt-Datentyp](../../../language-reference/data-types/object-data-type.md) deklarieren. Allerdings kann die späte Bindung zu Leistungseinbußen und Einschränkungen des Zugriffs auf die Member des Laufzeitobjekts führen. Weitere Informationen finden Sie unter [Object Variable Declaration](../variables/object-variable-declaration.md).
 
-### <a name="multiple-instances"></a>Mehrere Instanzen
+### <a name="multiple-instances"></a>Mehrfache Instanzen
 
 Neu erstellte Objekte aus einer Klasse sind häufig identisch. Sobald sie als einzelne Objekte vorhanden sind, können jedoch ihre Variablen und Eigenschaften unabhängig von den anderen Instanzen geändert werden. Beispiel: Wenn Sie drei Kontrollkästchen zu einem Formular hinzufügen, ist jedes Kontrollkästchenobjekt eine Instanz der Klasse <xref:System.Windows.Forms.CheckBox>. Die einzelnen <xref:System.Windows.Forms.CheckBox>-Objekte verfügen über einen gemeinsamen Satz von Merkmalen und Funktionen (Eigenschaften, Variablen, Prozeduren und Ereignisse), die anhand der Klasse definiert sind. Alle verfügen jedoch über einen eigenen Namen, können separat aktiviert und deaktiviert sowie an einer anderen Stelle im Formular platziert werden.
 
@@ -110,7 +110,7 @@ Verwenden Sie Felder in folgenden Fällen:
 
 - Die Eigenschaft ist ein `String`-Datentyp, und es gibt keine Einschränkung für die Größe oder den Wert der Zeichenfolge.
 
-- Weitere Informationen finden Sie unter [Property Procedures](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md) (Eigenschaftenprozeduren).
+- Weitere Informationen finden Sie unter [Property Procedures](../procedures/property-procedures.md) (Eigenschaftenprozeduren).
 
 > [!TIP]
 > Behalten Sie immer die nicht konstanten Felder privat. Wenn Sie es als öffentlich festlegen möchten, verwenden Sie stattdessen eine Eigenschaft.
@@ -130,7 +130,7 @@ Beachten Sie, dass eine Methode einfach eine *Prozedur* ist, die von einem Objek
 
 Weitere Informationen finden Sie unter [Prozeduren](../procedures/index.md).
 
-### <a name="events"></a>Events
+### <a name="events"></a>Ereignisse
 
 Ein Ereignis ist eine Aktion, die von einem Objekt erkannt wird, etwa durch Klicken mit der Maus oder Drücken einer Taste, und für die Sie Code als Reaktion verfassen können. Ereignisse können als Ergebnis einer Benutzeraktion oder von Programmcode auftreten bzw. vom System verursacht werden. Code, der ein Ereignis signalisiert, soll das Ereignis *auslösen*, und Code, der darauf antwortet, soll es *abwickeln*.
 
@@ -256,7 +256,7 @@ Eine andere Möglichkeit zur Verknüpfung von Objekten ist eine *Einschlussbezie
 
 Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*. Auflistungen sind Gruppen ähnlicher Objekte, die aufgelistet werden können. Visual Basic unterstützt eine bestimmte Syntax in der [for each... Die nächste Anweisung](../../../language-reference/statements/for-each-next-statement.md) , die das Durchlaufen der Elemente einer Auflistung ermöglicht. Zudem ermöglichen Auflistungen die Verwendung eines <xref:Microsoft.VisualBasic.Collection.Item%2A>-Elements zum Abrufen von Elementen anhand ihres Indexes oder anhand der Zuordnung zu einer eindeutigen Zeichenfolge. Auflistungen können einfacher verwendet werden als Arrays, denn Sie können sie zum Hinzufügen oder Entfernen von Elementen ohne Indizes verwenden. Aufgrund ihrer Benutzerfreundlichkeit werden Auflistungen häufig zum Speichern von Formularen und Steuerelementen verwendet.
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 [Exemplarische Vorgehensweise: Definieren von Klassen](walkthrough-defining-classes.md)\
 Stellt eine schrittweise Beschreibung des Erstellens einer Klasse bereit.

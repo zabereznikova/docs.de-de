@@ -1,16 +1,16 @@
 ---
-title: Verfälschungen
+title: Manipulation
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e618ab369a46d403aa8db26c4b472e2be3634785
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703386"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600710"
 ---
-# <a name="tampering"></a>Verfälschungen
-*Manipulationen* umfasst das Ändern einer Nachricht oder die Übermittlung einer Nachricht und Nutzung der geänderten Nachrichten für andere Zwecke als Ihren Zweck wurde.  
+# <a name="tampering"></a>Manipulation
+*Manipulationen* sind das Ändern einer Nachricht oder die Übermittlung einer Nachricht und die Verwendung der geänderten Nachricht für einen anderen Zweck als die für Sie vorgesehene Aufgabe.  
   
 ## <a name="do-not-disable-ws-addressing"></a>Deaktivieren Sie die WS-Adressierung nicht  
  Die WS-Adressierungsspezifikation bietet Adressheader für jede Nachricht, wodurch ein Nachrichtempfänger den Absender einer Nachricht bestätigen kann. Sie können diese Funktion deaktivieren, indem Sie die <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>-Eigenschaft auf <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> festlegen.  
@@ -19,11 +19,11 @@ ms.locfileid: "61703386"
   
  Um dieses Problem zu lösen, sollten Sie nie die <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>-Eigenschaft auf <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> festlegen und die Nutzung von <xref:System.ServiceModel.Channels.MessageVersion> vermeiden, z. B. die statistische <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A>-Eigenschaft, die die <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>-Eigenschaft auf <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> setzt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Sicherheitshinweise](security-considerations-in-wcf.md)
+- [Offenlegung von Informationen](information-disclosure.md)
+- [Rechte Erweiterungen](elevation-of-privilege.md)
+- [Denial of Service](denial-of-service.md)
+- [Nicht unterstützte Szenarien](unsupported-scenarios.md)
+- [Wiederholungsangriffe](replay-attacks.md)

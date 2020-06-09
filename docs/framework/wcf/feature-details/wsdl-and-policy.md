@@ -2,12 +2,12 @@
 title: WSDL und Richtlinie
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144681"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600100"
 ---
 # <a name="wsdl-and-policy"></a>WSDL und Richtlinie
 Dieses Thema behandelt Windows Communication Foundation (WCF) WSDL 1,1-, WS-Policy-und WS-PolicyAttachment-Implementierungsdetails sowie weitere WS-Policy-Assertionen und WSDL 1,1-Erweiterungen, die von WCF eingeführt wurden.  
@@ -72,8 +72,8 @@ Dieses Thema behandelt Windows Communication Foundation (WCF) WSDL 1,1-, WS-Poli
 |mssp:MustNotSendCancel|geschachtelt|Gibt eine Anforderung an, dass Anforderungssicherheitstoken (Request Security Token, RST)-Anforderungsnachrichten [WS-Trust], die die Cancel-Bindung [WS-Trust, WS-SC] verwenden, nicht an den Aussteller eines bestimmten SecurityContextToken gesendet werden. Wenn diese Assertion vorhanden ist, dürfen solche Anforderungsnachrichten nicht an den Aussteller gesendet werden. Wenn diese Assertion nicht vorhanden ist, können solche Anforderungsnachrichten an den Aussteller gesendet werden.|  
 |mssp:RequireClientCertificate|geschachtelt|Dieses optionale Element gibt die Anforderung an, dass ein Clientzertifikat als Teil des TLSNEGO-Protokolls bereitgestellt wird. Wenn diese Assertion vorhanden ist, muss ein Clientzertifikat bereitgestellt werden. Wenn diese Assertion nicht vorhanden ist, darf kein Clientzertifikat bereitgestellt werden. Diese Assertion darf nicht außerhalb von mssp:SslContextToken verwendet werden.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Benutzerdefinierte WSDL-Veröffentlichung](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Vorgehensweise: Exportieren von benutzerdefinierten WSDL-Informationen](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Benutzerdefinierte WSDL-Veröffentlichung](../samples/custom-wsdl-publication.md)
+- [Vorgehensweise: Exportieren von benutzerdefinierten WSDL-Informationen](../extending/how-to-export-custom-wsdl.md)
+- [Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen](../extending/how-to-import-custom-wsdl.md)

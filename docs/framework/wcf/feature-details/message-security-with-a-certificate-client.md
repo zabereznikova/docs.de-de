@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 3660877194931c2be5b9b1c9aa54e2595701697f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184645"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602634"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Nachrichtensicherheit durch einem Zertifikatclient
-Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und -Dienst, der im Nachrichtensicherheitsmodus gesichert ist. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert. Weitere Informationen finden Sie unter [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und-Dienst, der mit dem Nachrichten Sicherheitsmodus gesichert wurde. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert. Weitere Informationen finden Sie unter [Sicherheit für verteilte Anwendungen](distributed-application-security.md).
 
- ![Screenshot, der einen Client mit Zertifikat zeigt.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
+ ![Screenshot, der einen Client mit Zertifikat anzeigt](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- Eine Beispielanwendung finden Sie unter [Message Security Certificate](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
+ Eine Beispielanwendung finden Sie unter [Message Security Certificate](../samples/message-security-certificate.md).  
 
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|`Message`|  
 |Interoperabilität|Nur WCF|  
@@ -31,7 +31,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 |Bindung|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
@@ -85,7 +85,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
@@ -101,7 +101,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Konfiguration  
- Die folgende Konfiguration gibt das Clientzertifikat mit einem Endpunktverhalten an. Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Der Code verwendet `identity` auch eine <>-Element, um ein Domänennamensystem (DNS) der erwarteten Serveridentität anzugeben. Weitere Informationen zur Identität finden Sie unter [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Die folgende Konfiguration gibt das Clientzertifikat mit einem Endpunktverhalten an. Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](working-with-certificates.md). Der Code verwendet auch ein <`identity`>-Element, um ein Domain Name System (DNS) der erwarteten Server Identität anzugeben. Weitere Informationen zur Identität finden Sie unter [Dienst Identität und-Authentifizierung](service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -145,7 +145,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Sicherheitsübersicht](security-overview.md)
+- [Dienstidentität und Authentifizierung](service-identity-and-authentication.md)
+- [Verwenden von Zertifikaten](working-with-certificates.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

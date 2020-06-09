@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 053ace300610cd4129c4541f4e2658ac8d09da85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626985"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599229"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist
-Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Sie einen suchproxy implementiert. In diesem Thema erstellen Sie einen WCF-Dienst, der ankündigungsnachrichten sendet (`Hello` und `Bye`) an den suchproxy, aufgrund dessen an-und Abmelden selbst mit den suchproxy.
+Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema Gewusst [wie: Implementieren eines Ermittlungs Proxys](how-to-implement-a-discovery-proxy.md)haben Sie einen suchproxy implementiert. In diesem Thema erstellen Sie einen WCF-Dienst, der Ankündigungs Nachrichten ( `Hello` und `Bye` ) an den suchproxy sendet, sodass er sich bei dem suchproxy registriert und seine Registrierung abmeldet.
 
 ### <a name="to-define-the-service-contract"></a>So definieren Sie den Dienstvertrag
 
@@ -156,7 +156,7 @@ Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie e
     }
     ```
 
-Sie haben die Implementierung eines erkennbaren Diensts abgeschlossen. Fortfahren mit [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).
+Sie haben die Implementierung eines erkennbaren Diensts abgeschlossen. Weitere Informationen finden Sie unter Gewusst [wie: Implementieren einer Client Anwendung, die den suchproxy zum Suchen nach einem Dienst verwendet](client-app-discovery-proxy-to-find-a-service.md).
 
 ## <a name="example"></a>Beispiel
  Dies ist die vollständige Codeauflistung für dieses Thema.
@@ -289,8 +289,8 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [WCF-Suche](wcf-discovery.md)
+- [Vorgehensweise: Implementieren eines Suchproxys](how-to-implement-a-discovery-proxy.md)
+- [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](client-app-discovery-proxy-to-find-a-service.md)

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: da67d923b36d673c87c90ba79b72ad4e1fc64a0c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 15fdd50b05bd2217cb9819373cd1c015da52b15b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988757"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599008"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
-Windows Communication Foundation (WCF) umfasst mehrere vom System bereitgestellte Bindungen, die konfiguriert werden können, aber nicht vollständig flexibel sind, wenn alle Sicherheitsoptionen konfiguriert werden, die von WCF unterstützt werden. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. Weitere Informationen zum Erstellen von benutzerdefinierten Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) umfasst mehrere vom System bereitgestellte Bindungen, die konfiguriert werden können, aber nicht vollständig flexibel sind, wenn alle Sicherheitsoptionen konfiguriert werden, die von WCF unterstützt werden. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. Weitere Informationen zum Erstellen von benutzerdefinierten Bindungen finden Sie unter [Erweitern von Bindungen](../extending/extending-bindings.md).  
   
 > [!WARNING]
 > <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt die <xref:System.ServiceModel.Channels.IDuplexSessionChannel>-Kanalform nicht, die der standardmäßig vom TCP-Transport verwendeten Kanalform entspricht, wenn <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Buffered> festgelegt ist. Sie müssen <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Streamed> festlegen, um <xref:System.ServiceModel.Channels.SecurityBindingElement> in diesem Szenario verwenden.  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) umfasst mehrere vom System bereitgestellt
   
  Im Gegensatz dazu werden zum Erstellen einer benutzerdefinierten Bindung Bindungselemente erstellt und konfiguriert, und aus den Bindungselementen wird eine <xref:System.ServiceModel.Channels.CustomBinding> erstellt.  
   
- Fügen Sie hierzu die einzelnen Bindungselemente einer Auflistung hinzu, die durch eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse repräsentiert wird, und legen Sie anschließend die `Elements`-Eigenschaft der `CustomBinding` auf dieses Objekt fest. Sie müssen die Bindungs Elemente in der folgenden Reihenfolge hinzufügen: Transaktions Fluss, zuverlässige Sitzung, Sicherheit, zusammengesetzter Duplex, unidirektional, Streamsicherheit, Nachrichten Codierung und Transport. Beachten Sie, dass nicht alle aufgelisteten Bindungselemente in jeder Bindung erforderlich sind.  
+ Fügen Sie hierzu die einzelnen Bindungselemente einer Auflistung hinzu, die durch eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse repräsentiert wird, und legen Sie anschließend die `Elements`-Eigenschaft der `CustomBinding` auf dieses Objekt fest. Die Bindungselemente müssen in der folgenden Reihenfolge hinzugefügt werden: Transaktionsfluss, zuverlässige Sitzung, Sicherheit, Composite Duplex, Unidirektional, Streamsicherheit, Nachrichtencodierung und Transport. Beachten Sie, dass nicht alle aufgelisteten Bindungselemente in jeder Bindung erforderlich sind.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  Drei Bindungselemente beziehen sich auf die Sicherheit auf Nachrichtenebene, wobei alle von der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse abgeleitet werden. Die drei sind <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> und <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Das <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> wird für Sicherheit im gemischten Modus verwendet. Die anderen beiden Elemente werden verwendet, wenn die Nachrichtenebene Sicherheit bereitstellt.  
@@ -54,20 +54,20 @@ Windows Communication Foundation (WCF) umfasst mehrere vom System bereitgestellt
 |Sicherheitsmodus|Transport|Nachrichtenaustauschmuster des Vertrags|Nachrichtenaustauschmuster des Vertrags|Nachrichtenaustauschmuster des Vertrags|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
 |||`Datagram`|`Request Reply`|`Duplex`|  
-|Transport|Https||||  
+|Transport|HTTPS||||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP||||  
 |||OneWayBindingElement|||  
 |||SSL oder Windows-StreamSecurityBindingElement|SSL oder Windows-StreamSecurityBindingElement|SSL oder Windows-StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Meldung|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (Authentifizierungsmodus = SecureConversation)|  
+|`Message`|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (Authentifizierungsmodus = SecureConversation)|  
 |||||CompositeDuplexBindingElement|  
 |||OneWayBindingElement||OneWayBindingElement|  
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
-||TCP|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (Authentifizierungsmodus = SecureConversation)|  
+||Tcp|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (Authentifizierungsmodus = SecureConversation)|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Gemischt (Transport mit Nachrichtenanmeldeinformationen)|Https|TransportSecurityBindingElement|TransportSecurityBindingElement||  
+|Gemischt (Transport mit Nachrichtenanmeldeinformationen)|HTTPS|TransportSecurityBindingElement|TransportSecurityBindingElement||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (Authentifizierungsmodus = SecureConversation)|SymmetricSecurityBindingElement (Authentifizierungsmodus = SecureConversation)|  
@@ -75,11 +75,11 @@ Windows Communication Foundation (WCF) umfasst mehrere vom System bereitgestellt
 |||SSL oder Windows-StreamSecurityBindingElement|SSL oder Windows-StreamSecurityBindingElement|SSL oder Windows-StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Beachten Sie, dass für SecurityBindingElements eine Vielzahl konfigurierbarer Einstellungen zur Verfügung stehen. Weitere Informationen finden Sie unter [SecurityBindingElement-Authentifizierungs Modi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Beachten Sie, dass für SecurityBindingElements eine Vielzahl konfigurierbarer Einstellungen zur Verfügung stehen. Weitere Informationen finden Sie unter [SecurityBindingElement-Authentifizierungs Modi](securitybindingelement-authentication-modes.md).  
   
- Weitere Informationen finden Sie unter [Sichere Konversationen und sichere Sitzungen](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Weitere Informationen finden Sie unter [Sichere Konversationen und sichere Sitzungen](secure-conversations-and-secure-sessions.md).  
   
-## <a name="procedures"></a>Verfahren  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>So erstellen Sie eine benutzerdefinierte Bindung mit dem SymmetricSecurityBindingElement  
   
@@ -99,18 +99,18 @@ Windows Communication Foundation (WCF) umfasst mehrere vom System bereitgestellt
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
  Das folgende Beispiel veranschaulicht eine vollständige Funktion zur Erstellung einer benutzerdefinierten Bindung, die ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> nutzt.  
   
 ### <a name="code"></a>Code  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Erweitern von Bindungen](../extending/extending-bindings.md)
+- [Vom System bereitgestellte Bindungen](../system-provided-bindings.md)

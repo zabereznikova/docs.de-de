@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 3d01a29671f42e80fdb7ca45223007aa60273ba9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5ada34ca2d0d757ea333fed60aef179d6578356c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283262"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601178"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Vorgehensweise: Verwenden eines benutzerdefinierten Benutzernamens und eines Kennwort-Validierungssteuerelements
 
@@ -40,30 +40,30 @@ Eine Beispielanwendung finden Sie unter [Benutzer Name Kennwort-Validierungs](..
 
 1. Konfigurieren Sie eine Bindung, die Nachrichtensicherheit über jedes beliebige Transportprotokoll oder Sicherheit auf Transportebene über HTTP(S) verwendet.
 
-    Wenn Sie die Nachrichten Sicherheit verwenden, fügen Sie eine der vom System bereitgestellten Bindungen hinzu, z. b. einen [\<WSHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)oder einen [\<CustomBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) , der die Nachrichten Sicherheit und den `UserName` Anmelde Informationstyp unterstützt.
+    Wenn Sie die Nachrichten Sicherheit verwenden, fügen Sie eine der vom System bereitgestellten Bindungen hinzu, z. b. ein [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) oder ein, [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) das Nachrichten Sicherheit und den Anmelde `UserName` Informationstyp unterstützt.
 
-    Wenn Sie Sicherheit auf Transport Ebene über HTTP (s) verwenden, fügen Sie entweder die [\<WSHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md) oder [\<BasicHttpBinding->](../../configure-apps/file-schema/wcf/basichttpbinding.md), eine [\<NetTcpBinding >](../../configure-apps/file-schema/wcf/nettcpbinding.md) oder eine [\<CustomBinding->](../../configure-apps/file-schema/wcf/custombinding.md) , die HTTP (S) und das `Basic` Authentifizierungsschema verwendet.
+    Wenn Sie Sicherheit auf Transport Ebene über HTTP (s) verwenden, fügen Sie entweder das [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) oder [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) , ein [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) oder ein hinzu, [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) das HTTP (s) und das `Basic` Authentifizierungsschema verwendet.
 
     > [!NOTE]
     > Wenn Sie .NET Framework 3,5 oder höhere Versionen verwenden, können Sie ein benutzerdefiniertes Benutzernamen-und Kennwort-Validierungs Steuerelement mit Nachrichten-und Transportsicherheit verwenden. Mit WinFX kann ein benutzerdefinierter Benutzername und ein Kennwort-Validierungs Steuerelement nur mit Nachrichten Sicherheit verwendet werden.
 
     > [!TIP]
-    > Weitere Informationen zur Verwendung von \<NetTcpBinding > in diesem Kontext finden Sie unter [\<Security >](../../configure-apps/file-schema/wcf/security-of-nettcpbinding.md).
+    > Weitere Informationen zur Verwendung von \<netTcpBinding> in diesem Kontext finden Sie unter [\<security>](../../configure-apps/file-schema/wcf/security-of-nettcpbinding.md) .
 
-    1. Fügen Sie in der Konfigurationsdatei unter dem [\<System. Service Model >](../../configure-apps/file-schema/wcf/system-servicemodel.md) -Element ein [\<-Bindungen >](../../configure-apps/file-schema/wcf/bindings.md) -Element hinzu.
+    1. Fügen Sie in der Konfigurationsdatei unter dem- [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) Element ein- [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) Element hinzu.
 
-    2. Fügen Sie dem Bindungs Abschnitt eine [\<WSHttpBinding->](../../configure-apps/file-schema/wcf/wshttpbinding.md) oder [\<BasicHttpBinding->](../../configure-apps/file-schema/wcf/basichttpbinding.md) Element hinzu. Weitere Informationen zum Erstellen eines WCF-Bindungs Elements finden Sie unter Gewusst [wie: Angeben einer Dienst Bindung in der Konfiguration](../how-to-specify-a-service-binding-in-configuration.md).
+    2. Fügen Sie [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) dem Bindungs Abschnitt ein-Element oder ein- [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) Element hinzu. Weitere Informationen zum Erstellen eines WCF-Bindungs Elements finden Sie unter Gewusst [wie: Angeben einer Dienst Bindung in der Konfiguration](../how-to-specify-a-service-binding-in-configuration.md).
 
-    3. Legen Sie das `mode`-Attribut des [\<Security >](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md) oder [\<Security >](../../configure-apps/file-schema/wcf/security-of-basichttpbinding.md) auf `Message`, `Transport`oder `TransportWithMessageCredential`fest.
+    3. Legen Sie das- `mode` Attribut von [\<security>](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md) oder [\<security>](../../configure-apps/file-schema/wcf/security-of-basichttpbinding.md) auf `Message` , oder fest `Transport` `TransportWithMessageCredential` .
 
-    4. Legen Sie das `clientCredentialType`-Attribut der [\<Meldung >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) oder [\<Transport >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)fest.
+    4. Legen Sie das- `clientCredentialType` Attribut von [\<message>](../../configure-apps/file-schema/wcf/message-of-wshttpbinding.md) oder fest [\<transport>](../../configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) .
 
-        Wenn Sie die Nachrichten Sicherheit verwenden, legen Sie das `clientCredentialType`-Attribut der [\<Meldung >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) auf `UserName`fest.
+        Wenn Sie die Nachrichten Sicherheit verwenden, legen Sie das- `clientCredentialType` Attribut von [\<message>](../../configure-apps/file-schema/wcf/message-of-wshttpbinding.md) auf fest `UserName` .
 
-        Wenn Sie Sicherheit auf Transport Ebene über HTTP (S) verwenden, legen Sie das `clientCredentialType`-Attribut der [\<Transport >](../../configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) oder [\<Transport >](../../configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) auf `Basic`fest.
+        Wenn Sie Sicherheit auf Transport Ebene über HTTP (S) verwenden, legen `clientCredentialType` Sie das-Attribut von [\<transport>](../../configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) oder [\<transport>](../../configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) auf fest `Basic` .
 
         > [!NOTE]
-        > Wenn ein WCF-Dienst mit Sicherheit auf Transport Ebene in Internetinformationsdienste (IIS) gehostet wird und die Eigenschaft <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> auf <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>festgelegt ist, wird für das benutzerdefinierte Authentifizierungsschema eine Teilmenge der Windows-Authentifizierung verwendet. Der Grund hierfür ist, dass IIS in diesem Szenario die Windows-Authentifizierung ausführt, bevor WCF den benutzerdefinierten Authentifikator aufruft.
+        > Wenn ein WCF-Dienst mit Sicherheit auf Transport Ebene in Internetinformationsdienste (IIS) gehostet wird und die- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> Eigenschaft auf festgelegt ist, wird für <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom> das benutzerdefinierte Authentifizierungsschema eine Teilmenge der Windows-Authentifizierung verwendet. Der Grund hierfür ist, dass IIS in diesem Szenario die Windows-Authentifizierung ausführt, bevor WCF den benutzerdefinierten Authentifikator aufruft.
 
     Weitere Informationen zum Erstellen eines WCF-Bindungs Elements finden Sie unter Gewusst [wie: Angeben einer Dienst Bindung in der Konfiguration](../how-to-specify-a-service-binding-in-configuration.md).
 
@@ -85,20 +85,20 @@ Eine Beispielanwendung finden Sie unter [Benutzer Name Kennwort-Validierungs](..
 
 2. Konfigurieren Sie ein Verhalten, das angibt, dass ein benutzerdefiniertes Benutzername- und Kennwort-Validierungssteuerelement verwendet wird, um Benutzernamen/Kennwort-Paare für eingehende <xref:System.IdentityModel.Tokens.UserNameSecurityToken>-Sicherheitstoken zu überprüfen.
 
-    1. Fügen Sie als untergeordnetes Element des [\<System. Service Model >](../../configure-apps/file-schema/wcf/system-servicemodel.md) -Elements ein [\<Verhalten >](../../configure-apps/file-schema/wcf/behaviors.md) -Element hinzu.
+    1. Fügen Sie ein-Element als untergeordnetes Element des- [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) Elements hinzu [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) .
 
-    2. Fügen Sie dem [\<Verhaltensweisen >](../../configure-apps/file-schema/wcf/behaviors.md) Element [> ein\<Service Verhaltensweisen](../../configure-apps/file-schema/wcf/servicebehaviors.md) hinzu.
+    2. Fügen Sie [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) dem- [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Element einen hinzu.
 
-    3. Fügen Sie ein [\<Verhalten >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) -Element hinzu, und legen Sie das `name`-Attribut auf einen geeigneten Wert fest.
+    3. Fügen Sie ein [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) -Element hinzu, und legen Sie das- `name` Attribut auf einen geeigneten Wert fest
 
-    4. Fügen Sie dem [\<Behavior-Verhalten >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element [> ein\<servicecreden-](../../configure-apps/file-schema/wcf/servicecredentials.md) und-Element hinzu.
+    4. Fügen Sie [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) dem- [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element einen hinzu.
 
-    5. Fügen Sie dem [\<servicecreden->](../../configure-apps/file-schema/wcf/servicecredentials.md)eine [\<userNameAuthentication->](../../configure-apps/file-schema/wcf/usernameauthentication.md) hinzu.
+    5. Fügen Sie ein hinzu [\<userNameAuthentication>](../../configure-apps/file-schema/wcf/usernameauthentication.md) [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) .
 
-    6. Legen Sie `userNamePasswordValidationMode` auf `Custom` fest
+    6. Legen Sie `userNamePasswordValidationMode` auf `Custom` fest.
 
         > [!IMPORTANT]
-        > Wenn der `userNamePasswordValidationMode`-Wert nicht festgelegt ist, verwendet WCF anstelle des benutzerdefinierten Benutzernamens und des Kennwort-Validierungs Steuer Elements die Windows-Authentifizierung.
+        > Wenn der `userNamePasswordValidationMode` Wert nicht festgelegt ist, verwendet WCF anstelle des benutzerdefinierten Benutzernamens und des Kennwort-Validierungs Steuer Elements die Windows-Authentifizierung.
 
     7. Legen Sie den `customUserNamePasswordValidatorType` auf den Typ fest, der das benutzerdefinierte Benutzernamen- und Kennwort-Validierungssteuerelement darstellt.
 
@@ -119,7 +119,7 @@ Im folgenden Codebeispiel wird veranschaulicht, wie ein benutzerdefiniertes Benu
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
 - [Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters](how-to-use-the-aspnet-membership-provider.md)

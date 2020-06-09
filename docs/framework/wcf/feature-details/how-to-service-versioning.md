@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dienstversionsverwaltung'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464113"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586935"
 ---
 # <a name="how-to-service-versioning"></a>Vorgehensweise: Dienstversionsverwaltung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration zu erstellen, die Nachrichten an verschiedene Versionen des gleichen Diensts weiterleitet. In diesem Beispiel werden Nachrichten an zwei verschiedene Versionen eines Rechnerdiensts weitergeleitet: `roundingCalc` (v1) und `regularCalc` (v2). Beide Implementierungen unterstützen die gleichen Vorgänge. Der ältere Dienst, `roundingCalc`, rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob der neuere `regularCalc`-Dienst verwendet werden soll.  
@@ -17,7 +17,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
  Beide Dienste machen die folgenden Vorgänge verfügbar:  
   
-- Hinzufügen  
+- Add  
   
 - Subtrahieren  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, um den Wert des benutzerdefinierten Headers "CalcVer" zu ermitteln, um zu bestimmen, an welche Version die Nachricht weitergeleitet werden soll. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die nicht den "CalcVer"-Header enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
+2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, um den Wert des benutzerdefinierten Headers "calcver" zu erkennen, um zu bestimmen, an welche Version die Nachricht weitergeleitet werden soll. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die den Header "calcver" nicht enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > Das Namespacepräfix s12 ist standardmäßig in der Namespacetabelle `http://www.w3.org/2003/05/soap-envelope`definiert und stellt den Namespace dar.
+    > Das Namespace Präfix "S12" ist standardmäßig in der Namespace Tabelle definiert und stellt den Namespace dar `http://www.w3.org/2003/05/soap-envelope` .
   
-3. Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den "CalcVer"-Header mit dem Wert 1 enthält, wird sie an den regularCalc-Dienst gesendet. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
+3. Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den Header "calcver" mit dem Wert "1" enthält, wird Sie an den RegularCalc-Dienst gesendet. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
   
      Der folgende Code definiert die Filtertabelle und fügt die zuvor definierten Filter hinzu.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht `filterTable1` die Zuordnung zu den Dienstendpunkten:  
+4. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht die Zuordnung `filterTable1` zu den Dienst Endpunkten:  
   
     ```xml  
     <behaviors>  
@@ -326,4 +326,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Routingdienste](../samples/routing-services.md)

@@ -5,34 +5,34 @@ helpviewer_keywords:
 - WCF, using transactions
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
-ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e743cd14d2a601f52baaf6769e96503dcd3701d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933132"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600697"
 ---
 # <a name="transactions-in-wcf"></a>Transaktionen in WCF
-Die Windows Communication Foundation (WCF)--Transaktionsfunktion ermöglicht es, mehrere Komponenten, gleichzeitig in einem Datenvorgang teilzunehmen. In den Themen in diesem Abschnitt wird diese Funktion ausführlich behandelt.  
+Mit dem Windows Communication Foundation (WCF)-Transaktions Feature können mehrere Komponenten gleichzeitig an einem Daten Vorgang teilnehmen. In den Themen in diesem Abschnitt wird diese Funktion ausführlich behandelt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über Windows Communication Foundation-Transaktionen](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
- Eine Übersicht über die Transaktionsfunktion, die von WCF bereitgestellt werden soll.  
+ [Übersicht über Windows-Kommunikationfoundation-Transaktionen](transactions-overview.md)  
+ Eine Übersicht über die von WCF bereitgestellte Transaktions Funktion.  
   
- [Transaktionsmodelle](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
+ [Transaktionsmodelle](transaction-models.md)  
  Vergleicht verschiedene von Microsoft bereitgestellte Transaktionsprogrammiermodelle.  
   
- [Verwenden von WS-AtomicTransaction](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
- Beschreibt die WS-AtomicTransaction (WS-AT), ein interoperables Weitergabe Transaktionsprotokoll, die in WCF implementiert wird.  
+ [Verwenden von WS-AtomicTransaction](using-ws-atomictransaction.md)  
+ Beschreibt WS-AtomicTransaction (WS-AT), ein interoperable Transaktions propagierungs Protokoll, das in WCF implementiert ist.  
   
- [Transaktionsunterstützung in System.ServiceModel](../../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- Beschreibt die Transaktionsfunktionen von WCF bereitgestellt.  
+ [Transaktionsunterstützung in System.ServiceModel](transactional-support-in-system-servicemodel.md)  
+ Beschreibt die von WCF bereitgestellten Transaktionsfunktionen.  
   
 ## <a name="reference"></a>Referenz  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Einfache WCF-Programmierung](../basic-wcf-programming.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Übersicht über zuverlässige Sitzungen](reliable-sessions-overview.md)

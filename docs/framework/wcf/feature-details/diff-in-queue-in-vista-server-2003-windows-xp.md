@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 0d7b952382b50daae0291ed6afb22bb612447670
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: abd81b5e7bf611fc6b4f446a82628b83130f2d54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920144"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599203"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP
 In diesem Thema werden die Unterschiede in der Windows Communication Foundation (WCF)-Warteschlangen Funktion zwischen Windows Vista, Windows Server 2003 und Windows XP zusammengefasst.  
@@ -26,16 +26,16 @@ In diesem Thema werden die Unterschiede in der Windows Communication Foundation 
   
  Die wichtigsten Unterschiede zwischen Message Queuing (MSMQ) unter Windows Vista, Windows Server 2003 und Windows XP, die für die Behandlung von nicht verarbeitbaren Informationen relevant sind, sind folgende:  
   
-- MSMQ in Windows Vista unterstützt untergeordnete Warteschlangen, während Windows Server 2003 und Windows XP keine untergeordneten Warteschlangen unterstützen. Untergeordnete Warteschlangen werden zur Behandlung nicht verarbeitbarer Nachrichten verwendet. Die Wiederholungswarteschlangen und die Warteschlange für potenziell schädliche Nachrichten sind untergeordnete Warteschlangen der Anwendungswarteschlange, die basierend auf den Einstellungen für die Behandlung nicht verarbeitbarer Nachrichten erstellt wird. Die Eigenschaft `MaxRetryCycles` bestimmt, wie viele untergeordnete Wiederholungwarteschlangen erstellt werden sollen. Daher werden `MaxRetryCycles` bei Ausführung unter Windows Server 2003 oder Windows XP ignoriert, und `ReceiveErrorHandling.Move` ist nicht zulässig.  
+- MSMQ in Windows Vista unterstützt untergeordnete Warteschlangen, während Windows Server 2003 und Windows XP keine untergeordneten Warteschlangen unterstützen. Untergeordnete Warteschlangen werden zur Behandlung nicht verarbeitbarer Nachrichten verwendet. Die Wiederholungswarteschlangen und die Warteschlange für potenziell schädliche Nachrichten sind untergeordnete Warteschlangen der Anwendungswarteschlange, die basierend auf den Einstellungen für die Behandlung nicht verarbeitbarer Nachrichten erstellt wird. Die Eigenschaft `MaxRetryCycles` bestimmt, wie viele untergeordnete Wiederholungwarteschlangen erstellt werden sollen. Daher werden bei Ausführung unter Windows Server 2003 oder Windows XP `MaxRetryCycles` ignoriert und `ReceiveErrorHandling.Move` ist nicht zulässig.  
   
-- MSMQ in Windows Vista unterstützt negative Bestätigungen, während Windows Server 2003 und Windows XP dies nicht tun. Eine negative Bestätigung vom empfangenden Warteschlangen-Manager bewirkt, dass der sendende Warteschlangen-Manager die abgelehnte Nachricht in die Warteschlange für unzustellbare Nachrichten einstellt. Daher ist `ReceiveErrorHandling.Reject` in Windows Server 2003 und Windows XP nicht zulässig.  
+- MSMQ in Windows Vista unterstützt negative Bestätigungen, während Windows Server 2003 und Windows XP dies nicht tun. Eine negative Bestätigung vom empfangenden Warteschlangen-Manager bewirkt, dass der sendende Warteschlangen-Manager die abgelehnte Nachricht in die Warteschlange für unzustellbare Nachrichten einstellt. Daher `ReceiveErrorHandling.Reject` ist in Windows Server 2003 und Windows XP nicht zulässig.  
   
 - MSMQ in Windows Vista unterstützt eine Nachrichten Eigenschaft, die die Anzahl der Versuche der Nachrichtenübermittlung beibehält. Diese Abbruch Anzahl Eigenschaft ist unter Windows Server 2003 und Windows XP nicht verfügbar. WCF behält die Abbruch Anzahl im Arbeitsspeicher bei, sodass diese Eigenschaft möglicherweise keinen exakten Wert enthält, wenn dieselbe Nachricht von mehr als einem WCF-Dienst in einer Webfarm gelesen wird.  
   
 ## <a name="remote-transactional-read"></a>Remote durchgeführte Lesevorgänge  
  MSMQ unter Windows Vista unterstützt transaktionale Remote Lesevorgänge. Dabei kann eine Anwendung, die aus einer Warteschlange liest, auf einem anderen Computer ausgeführt werden als dem Computer, auf dem die Warteschlange gehostet wird. Dies ermöglicht, dass eine Dienstefarm aus einer zentralen Warteschlange lesen kann, was den Gesamtdurchsatz im System erhöht. Darüber hinaus wird sichergestellt, dass im Fall eines Fehlers während des Lesens oder Verarbeitens einer Nachricht ein Rollback der Transaktion erfolgt und die Nachricht zur späteren Verarbeitung in der Warteschlange verbleibt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern](using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Behandlung nicht verarbeitbarer Nachrichten](poison-message-handling.md)

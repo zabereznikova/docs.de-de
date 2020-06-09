@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 18d0ea97f1de40044d40fa85c9792c809fb73346
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959881"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600269"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
-Beim Entwickeln von Windows Communication Foundation (WCF)-Anwendungen achten Entwickler in der Regel auf die Datenstrukturen und Serialisierungsprobleme und müssen sich nicht mit der Struktur der Nachrichten befassen, in denen die Daten übertragen werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Beim Entwickeln von Windows Communication Foundation (WCF)-Anwendungen achten Entwickler in der Regel auf die Datenstrukturen und Serialisierungsprobleme und müssen sich nicht mit der Struktur der Nachrichten befassen, in denen die Daten übertragen werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Angeben von Datenübertragung in Dienstverträgen](specifying-data-transfer-in-service-contracts.md).)  
   
  Allerdings ist zuweilen die vollständige Kontrolle über die Struktur einer SOAP-Nachricht wichtiger als die Kontrolle über dessen Inhalte. Dies gilt insbesondere, wenn Interoperabilität wichtig ist oder um Sicherheitsprobleme speziell auf der Ebene der Nachricht oder des Nachrichtenteils zu kontrollieren. In diesen Fällen können Sie einen *Nachrichten Vertrag* erstellen, der es Ihnen ermöglicht, die Struktur der exakten SOAP-Nachricht anzugeben.  
   
@@ -31,7 +31,7 @@ Beim Entwickeln von Windows Communication Foundation (WCF)-Anwendungen achten En
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalerweise ist ein Datenvertrag ausreichend, um das Schema für die Nachrichten zu definieren. Beispielsweise reicht es im vorherigen Beispiel für die meisten Anwendungen aus, wenn `BankingTransaction` und `BankingTransactionResponse` über Datenverträge für die Inhaltsdefinition der zugrunde liegenden SOAP-Nachrichten verfügen. Weitere Informationen zu Daten Verträgen finden Sie unter [Verwenden von Daten Verträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalerweise ist ein Datenvertrag ausreichend, um das Schema für die Nachrichten zu definieren. Beispielsweise reicht es im vorherigen Beispiel für die meisten Anwendungen aus, wenn `BankingTransaction` und `BankingTransactionResponse` über Datenverträge für die Inhaltsdefinition der zugrunde liegenden SOAP-Nachrichten verfügen. Weitere Informationen zu Daten Verträgen finden Sie unter [Verwenden von Daten Verträgen](using-data-contracts.md).  
   
  Zuweilen ist es allerdings notwendig, die Struktur der übertragenen SOAP-Nachricht genau zu steuern. Das gängigste Szenario hierfür besteht aus dem Einfügen von benutzerdefinierten SOAP-Headern. Ein weiteres übliches Szenario ist die Definition von Sicherheitseigenschaften für Nachrichtenheader und -text, das heißt, die Entscheidung, ob diese Elemente digital signiert und verschlüsselt werden. Schließlich erfordern eine Reihe von Drittanbieter-SOAP-Stapeln Nachrichten in einem bestimmten Format. Vorgänge im Messagingstil bieten diese Kontrolle.  
   
@@ -154,7 +154,7 @@ public class BankingTransaction
 > Das Vorhandensein von mehr als einem Nachrichtentextteil in nicht umbrochenen Nachrichten ist nicht mit dem WS-I Basic Profile 1.1 kompatibel und wird bei der Gestaltung neuer Nachrichtenverträge nicht empfohlen. Allerdings kann es bei spezifischen Interoperabilitätsszenarien notwendig sein, mehr als einen nicht umbrochenen Nachrichtentextteil zu haben. Wenn Sie mehrere Daten in einem Nachrichtentext übertragen möchten, wird die Verwendung des Standardumbruchmodus empfohlen. Mehr als einen Nachrichtenheader in nicht umbrochenen Nachrichten zu haben, ist vollkommen akzeptabel.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Verwendung von benutzerdefinierten Typen innerhalb von Nachrichtenverträgen  
- Jeder einzelne Nachrichtenheader und Nachrichtentextteil wird mithilfe der ausgewählten Serialisierungs-Engine für den Dienstvertrag, bei dem die Nachricht verwendet wird, serialisiert (in XML konvertiert). Die Standardserialisierungs-Engine, `XmlFormatter`, kann jeden Typ verarbeiten, der über einen Datenvertrag verfügt; entweder explizit (durch <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) oder implizit (bei einem primitiven Typ mit <xref:System.SerializableAttribute?displayProperty=nameWithType> usw.). Weitere Informationen finden Sie unter [Verwenden von Daten Verträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Jeder einzelne Nachrichtenheader und Nachrichtentextteil wird mithilfe der ausgewählten Serialisierungs-Engine für den Dienstvertrag, bei dem die Nachricht verwendet wird, serialisiert (in XML konvertiert). Die Standardserialisierungs-Engine, `XmlFormatter`, kann jeden Typ verarbeiten, der über einen Datenvertrag verfügt; entweder explizit (durch <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) oder implizit (bei einem primitiven Typ mit <xref:System.SerializableAttribute?displayProperty=nameWithType> usw.). Weitere Informationen finden Sie unter [Verwenden von Daten Verträgen](using-data-contracts.md).  
   
  Im vorangehenden Beispiel müssen die Typen `Operation` und `BankingTransactionData` über einen Datenvertrag verfügen, und `transactionDate` ist serialisierbar, da <xref:System.DateTime> primitiv ist (und über einen impliziten Datenvertrag verfügt).  
   
@@ -213,7 +213,7 @@ public class BankingDepositLog
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>Signieren und Verschlüsseln von Teilen der Nachricht  
  Ein Nachrichtenvertrag kann angeben, ob die Header und/oder der Text der Nachricht digital signiert und verschlüsselt werden soll.  
   
- Dies wird erreicht, indem die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaften in den Attributen <xref:System.ServiceModel.MessageHeaderAttribute> und <xref:System.ServiceModel.MessageBodyMemberAttribute> festgelegt wird. Die Eigenschaft ist eine Enumeration des <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>-Typs und kann auf <xref:System.Net.Security.ProtectionLevel.None> (keine Verschlüsselung oder Signatur), <xref:System.Net.Security.ProtectionLevel.Sign> (nur digitale Signatur) oder <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (sowohl Verschlüsselung als auch digitale Signatur) festgelegt werden. Die Standardeinstellung ist <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+ Dies wird erreicht, indem die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaften in den Attributen <xref:System.ServiceModel.MessageHeaderAttribute> und <xref:System.ServiceModel.MessageBodyMemberAttribute> festgelegt wird. Die Eigenschaft ist eine Enumeration des <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>-Typs und kann auf <xref:System.Net.Security.ProtectionLevel.None> (keine Verschlüsselung oder Signatur), <xref:System.Net.Security.ProtectionLevel.Sign> (nur digitale Signatur) oder <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (sowohl Verschlüsselung als auch digitale Signatur) festgelegt werden. Der Standardwert lautet <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
  Damit diese Sicherheitsfunktionen arbeiten, müssen Sie die Bindung und das Verhalten ordnungsgemäß konfigurieren. Wenn Sie diese Sicherheitsfunktionen ohne angemessene Konfiguration verwenden (beispielsweise der Versuch der Signierung einer Nachricht ohne Bereitstellung Ihrer Anmeldeinformationen), wird zum Validierungszeitpunkt eine Ausnahme ausgelöst.  
   
@@ -250,7 +250,7 @@ public class PatientRecord
   
 - `Relay`  
   
- Das `Actor`-Attribut oder das `Role`-Attribut legt den URI (Uniform Resource Identifier) des Knotens fest, für den ein bestimmter Header angegeben wurde. Das `MustUnderstand`-Attribut gibt an, ob der Header die Knotenverarbeitung versteht. Das `Relay`-Attribut gibt an, ob der Header an Downstreamknoten weitergeleitet werden soll. WCF führt keine Verarbeitung dieser Attribute für eingehende Nachrichten aus, mit Ausnahme des `MustUnderstand` -Attributs, wie im Abschnitt "Versionsverwaltung von Nachrichten Verträgen" weiter unten in diesem Thema angegeben. Allerdings wird es Ihnen ermöglicht, diese Attribute wie erforderlich zu lesen und zu schreiben (wie in der folgenden Beschreibung).  
+ Das `Actor`-Attribut oder das `Role`-Attribut legt den URI (Uniform Resource Identifier) des Knotens fest, für den ein bestimmter Header angegeben wurde. Das `MustUnderstand`-Attribut gibt an, ob der Header die Knotenverarbeitung versteht. Das `Relay`-Attribut gibt an, ob der Header an Downstreamknoten weitergeleitet werden soll. WCF führt keine Verarbeitung dieser Attribute für eingehende Nachrichten aus, mit Ausnahme des- `MustUnderstand` Attributs, wie im Abschnitt "Versionsverwaltung von Nachrichten Verträgen" weiter unten in diesem Thema angegeben. Allerdings wird es Ihnen ermöglicht, diese Attribute wie erforderlich zu lesen und zu schreiben (wie in der folgenden Beschreibung).  
   
  Beim Versand einer Nachricht werden diese Attribute nicht standardmäßig ausgegeben. Sie können diese auf zwei Arten ändern: Sie können die Attribute statisch auf einen gewünschten Wert festlegen, indem Sie die Eigenschaften <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType> und <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> ändern (siehe folgendes Codebeispiel). (Beachten Sie, dass es keine `Role`-Eigenschaft gibt; die Einrichtung der <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A>-Eigenschaft gibt das `Role`-Attribut aus, wenn Sie SOAP 1.2 verwenden).  
   
@@ -303,7 +303,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Wenn eine Nachricht empfangen und dann zurückgesendet wird, werden die SOAP-Attributeinstellungen nur für Header des <xref:System.ServiceModel.MessageHeader%601>-Typs wiederhergestellt.  
   
 ## <a name="order-of-soap-body-parts"></a>Reihenfolge von SOAP-Textteilen  
- In einigen Fällen müssen Sie die Reihenfolge der Textteile kontrollieren. Die Reihenfolge der Textelemente ist standardmäßig alphabetisch, kann aber über die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft gesteuert werden. Diese Eigenschaft verfügt über dieselbe Semantik wie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, abgesehen vom Verhalten im Vererbungsszenario (in Nachrichtenverträgen werden Textmember vom Basistyp nicht vor den Textmembern des abgeleiteten Typs sortiert). Weitere Informationen finden Sie unter [Datenmember-Reihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ In einigen Fällen müssen Sie die Reihenfolge der Textteile kontrollieren. Die Reihenfolge der Textelemente ist standardmäßig alphabetisch, kann aber über die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft gesteuert werden. Diese Eigenschaft verfügt über dieselbe Semantik wie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, abgesehen vom Verhalten im Vererbungsszenario (in Nachrichtenverträgen werden Textmember vom Basistyp nicht vor den Textmembern des abgeleiteten Typs sortiert). Weitere Informationen finden Sie unter [Datenmember-Reihenfolge](data-member-order.md).  
   
  Im folgenden Beispiel käme `amount` normalerweise zuerst, da es alphabetisch an erster Stelle steht. Die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A>-Eigenschaft setzt es jedoch an die dritte Position.  
   
@@ -359,7 +359,7 @@ public class PatientRecord : PersonRecord
  Die `PatientRecord`-Klasse beschreibt eine Nachricht mit einem Header mit dem Namen `ID`. Der Header entspricht der `personID` und nicht dem `patientID`-Member, da der Basismember ausgewählt wird. Somit ist das `patientID`-Feld in diesem Fall unbrauchbar. Der Text der Nachricht enthält das `diagnosis`-Element, gefolgt vom `patientName`-Element, da dies die alphabetische Reihenfolge ist. Beachten Sie, dass das Beispiel ein Muster zeigt, von dem strengstens abgeraten wird: sowohl der Basisklassenvertrag als auch der abgeleitete Klassenvertrag verfügen über Nachrichtentextteile.  
   
 ## <a name="wsdl-considerations"></a>Überlegungen zu WSDL  
- Bei der Erstellung eines WSDL (Web Services Description Language)-Vertrags aus einem Dienst, der Nachrichtenverträge nutzt, ist es wichtig, daran zu denken, dass nicht alle Nachrichtenvertragsfunktionen in der resultierenden WSDL widergespiegelt werden. Berücksichtigen Sie die folgenden Punkte:  
+ Bei der Erstellung eines WSDL (Web Services Description Language)-Vertrags aus einem Dienst, der Nachrichtenverträge nutzt, ist es wichtig, daran zu denken, dass nicht alle Nachrichtenvertragsfunktionen in der resultierenden WSDL widergespiegelt werden. Beachten Sie die folgenden Punkte:  
   
 - WSDL kann den Begriff eines Arrays aus Headern nicht ausdrücken. Bei der Erstellung von Nachrichten mit einem Array aus Headern mithilfe des <xref:System.ServiceModel.MessageHeaderArrayAttribute> spiegelt die resultierende WSDL nur einen Header wider anstelle eines Array.  
   
@@ -449,5 +449,5 @@ public class OperationDetails
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Verwenden von Datenverträgen](using-data-contracts.md)
+- [Entwerfen und Implementieren von Diensten](../designing-and-implementing-services.md)

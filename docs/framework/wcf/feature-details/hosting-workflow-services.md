@@ -2,16 +2,16 @@
 title: Hosten von Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 21e24853229d09e3f1af719573f47bb12c8fddb6
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 908ef7ebb9bfb1e2c49d96e41c0df1d843c0454d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963730"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597279"
 ---
 # <a name="hosting-workflow-services"></a>Hosten von Workflowdiensten
 
-Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagieren kann. Workflowdienste verwenden die WCF-Messaginginfrastruktur und werden daher auf ähnliche Weise gehostet. Wie bei WCF-Diensten können Workflow Dienste in einer beliebigen verwalteten Anwendung, unter Internetinformationsdienste (IIS) oder unter Windows Process Activation Services (was) gehostet werden. Außerdem können Workflow Dienste unter Windows Server App Fabric gehostet werden. Weitere Informationen zu Windows Server AppFabric finden Sie unter [Windows Server App Fabric-Dokumentation](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)), [AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))und [AppFabric-hostingkonzepte](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)). Weitere Informationen zu den verschiedenen Möglichkeiten zum Hosten von WCF-Diensten finden Sie unter [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md).
+Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagieren kann. Workflowdienste verwenden die WCF-Messaginginfrastruktur und werden daher auf ähnliche Weise gehostet. Wie bei WCF-Diensten können Workflow Dienste in einer beliebigen verwalteten Anwendung, unter Internetinformationsdienste (IIS) oder unter Windows Process Activation Services (was) gehostet werden. Außerdem können Workflow Dienste unter Windows Server App Fabric gehostet werden. Weitere Informationen zu Windows Server AppFabric finden Sie unter [Windows Server App Fabric-Dokumentation](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)), [AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))und [AppFabric-hostingkonzepte](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)). Weitere Informationen zu den verschiedenen Möglichkeiten zum Hosten von WCF-Diensten finden Sie unter [Hosting-Dienste](../hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hosten in einer verwalteten Anwendung
  Verwenden Sie die <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse, um einen Workflowdienst in einer verwalteten Anwendung zu hosten. Mit dem <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Konstruktor können Sie eine Singleton-Workflowdienstinstanz, eine Workflowdienstdefinition oder eine Aktivität angeben, die die Workflowmessagingaktivitäten verwendet. Das Aufrufen von <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> bewirkt, dass der Dienst mit dem Überwachen von eingehenden Nachrichten beginnt.
@@ -43,18 +43,18 @@ Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagi
 
 - Fügen Sie eine Assembly in das virtuelle IIS/WAS-Verzeichnis ein, in dem eine Aktivität enthalten ist, die die WCF-Messagingaktivitäten verwendet.
 
- Eine xamlx-Datei, die einen Workflow Dienst definiert, muss ein <`Service`> root-Element oder ein root-Element enthalten, das jeden von <xref:System.Workflow.ComponentModel.Activity>abgeleiteten Typ enthält. Wenn Sie die Visual Studio-Aktivitäts Vorlage verwenden, wird eine xamlx-Datei erstellt. Wenn Sie die WCF-Workflow Dienst Vorlage verwenden, wird eine xamlx-Datei erstellt.
+ Eine xamlx-Datei, die einen Workflow Dienst definiert, muss ein <`Service`> root-Element oder ein root-Element enthalten, das alle von abgeleiteten Typen enthält <xref:System.Workflow.ComponentModel.Activity> . Wenn Sie die Visual Studio-Aktivitäts Vorlage verwenden, wird eine xamlx-Datei erstellt. Wenn Sie die WCF-Workflow Dienst Vorlage verwenden, wird eine xamlx-Datei erstellt.
 
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Hosten eines Workflowdiensts unter Windows Server AppFabric
  Das Hosten eines Workflowdiensts unter Windows Server App Fabric erfolgt auf dieselbe Weise wie das Hosten unter IIS/WAS. Der einzige Unterschied besteht darin, dass Windows Server App Fabric installiert wird. Windows Server App Fabric stellt Tools bereit, die dem Internetinformationsdienste-Manager sowie PowerShell-Commandlets hinzugefügt werden. Diese Tools vereinfachen das Bereitstellen, Verwalten und Nachverfolgen von Workflowdiensten und WCF-Diensten.
 
 ## <a name="referencing-custom-activities"></a>Verweisen auf benutzerdefinierte Aktivitäten
- Verweise auf benutzerdefinierte Aktivitäten müssen dem <`Assemblies`> Abschnitt unter <`System.Web.Compilation`> hinzugefügt werden, damit Sie in die Anwendungsdomäne geladen werden und der XAML-Deserialisierer die Typen finden kann. Diese Einstellungen können auf Anwendungsebene oder in der Web.config-Stammdatei vorgenommen werden, falls die Einstellungen für alle Anwendungen auf dem Computer übernommen werden sollen.
+ Verweise auf benutzerdefinierte Aktivitäten müssen dem `Assemblies` Abschnitt <> unter <> hinzugefügt werden `System.Web.Compilation` , damit Sie in die Anwendungsdomäne geladen werden und der XAML-Deserialisierer die Typen finden kann. Diese Einstellungen können auf Anwendungsebene oder in der Web.config-Stammdatei vorgenommen werden, falls die Einstellungen für alle Anwendungen auf dem Computer übernommen werden sollen.
 
 ## <a name="deployment"></a>Bereitstellung
  Das Webbereitstellungstool wurde erstellt, um die Bereitstellung zu vereinfachen. Mit dem Tool können Sie Anwendungen zwischen IIS 6.0 und IIS 7.0 migrieren, Serverfarmen synchronisieren und Webanwendungen verpacken, archivieren und bereitstellen. Weitere Informationen finden Sie unter [MS Deployment Tool](https://go.microsoft.com/fwlink/?LinkId=178690).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Interne Funktionsweise des Workflowdiensthosts](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)
-- [Konfigurieren von WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)
+- [Interne Funktionsweise des Workflowdiensthosts](workflow-service-host-internals.md)
+- [Konfigurieren von WorkflowServiceHost](configuring-workflowservicehost.md)
