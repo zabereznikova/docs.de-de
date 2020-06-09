@@ -2,23 +2,23 @@
 title: Clientvalidierung
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 641d5e84c09575574ff6b06888d156c4b4aa0a38
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dce11ec2e3ef552c0c53e1faf89a12bc13b66ae0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040112"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585323"
 ---
 # <a name="client-validation"></a>Clientvalidierung
 Dienste veröffentlichen häufig Metadaten, um die automatische Generierung und Konfiguration von Clientproxytypen zu aktivieren. Wenn der Dienst nicht vertrauenswürdig ist, sollten Clientanwendungen überprüfen, dass die Metadaten den Richtlinien der Clientanwendung in Bezug auf Sicherheit, Transaktionen, Typ des Servicevertrags usw. entsprechen. Das folgende Beispiel veranschaulicht das Schreiben eines Clientendpunktverhaltens, das den Dienstendpunkt überprüft, um zu gewährleisten, dass der Dienstendpunkt sicher verwendet werden kann.  
   
  Der Dienst macht vier Dienstendpunkte verfügbar. Der erste Endpunkt verwendet die WSDualHttpBinding, der zweite Endpunkt verwendet die NTLM-Authentifizierung, der dritte Endpunkt aktiviert den Transaktionsfluss, und der vierte Endpunkt verwendet die zertifikatbasierte Authentifizierung.  
   
- Der Client verwendet die <xref:System.ServiceModel.Description.MetadataResolver>-Klasse, um die Metadaten für den Dienst abzurufen. Der Client erzwingt eine Richtlinie zur Verhinderung von Duplexbindungen, NTLM-Authentifizierungen und des Transaktionsflusses unter Verwendung von Validierungsverhalten. Für jede <xref:System.ServiceModel.Description.ServiceEndpoint> Instanz, die aus den Metadaten des dienstanders importiert wurde, fügt die Client `InternetClientValidatorBehavior` Anwendung der <xref:System.ServiceModel.Description.ServiceEndpoint> eine Instanz des Endpunkt Verhaltens hinzu, bevor versucht wird, einen Windows Communication Foundation (WCF)-Client zum Herstellen einer Verbindung mit zu verwenden. der Endpunkt. Die `Validate`-Methode des Verhaltens wird ausgeführt, bevor andere Operationen für den Dienst aufgerufen werden, und sie erzwingt die Clientrichtlinie durch Auslösen der `InvalidOperationExceptions`.  
+ Der Client verwendet die <xref:System.ServiceModel.Description.MetadataResolver>-Klasse, um die Metadaten für den Dienst abzurufen. Der Client erzwingt eine Richtlinie zur Verhinderung von Duplexbindungen, NTLM-Authentifizierungen und des Transaktionsflusses unter Verwendung von Validierungsverhalten. Für jede <xref:System.ServiceModel.Description.ServiceEndpoint> Instanz, die aus den Metadaten des dienstanders importiert wurde, fügt die Client Anwendung der eine Instanz des `InternetClientValidatorBehavior` Endpunkt Verhaltens hinzu, <xref:System.ServiceModel.Description.ServiceEndpoint> bevor versucht wird, einen Windows Communication Foundation (WCF)-Client zum Herstellen einer Verbindung mit dem Endpunkt zu verwenden. Die `Validate`-Methode des Verhaltens wird ausgeführt, bevor andere Operationen für den Dienst aufgerufen werden, und sie erzwingt die Clientrichtlinie durch Auslösen der `InvalidOperationExceptions`.  
   
 ### <a name="to-build-the-sample"></a>So erstellen Sie das Beispiel  
   
-1. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
+1. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](building-the-samples.md), um die Lösung zu erstellen.  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
@@ -34,15 +34,15 @@ Dienste veröffentlichen häufig Metadaten, um die automatische Generierung und 
   
 ### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
-1. Geben `setup.bat service`Sie auf dem-Server in einem Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten ausführen ein. Wenn `setup.bat` Sie mit `service` dem-Argument ausführen, wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
+1. Geben Sie auf dem-Server in einem Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten ausführen ein `setup.bat service` . Wenn `setup.bat` Sie mit dem- `service` Argument ausführen, wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
   
-2. Bearbeiten Sie auf dem Server "App.config", damit es dem neuen Zertifikatsnamen entspricht, Das heißt, ändern Sie `findValue` das-Attribut [ \<im serviceCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) -Element in den voll qualifizierten Domänen Namen des Computers.  
+2. Bearbeiten Sie auf dem Server "App.config", damit es dem neuen Zertifikatsnamen entspricht, Das heißt, ändern Sie das- `findValue` Attribut im- [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) Element in den voll qualifizierten Domänen Namen des Computers.  
   
 3. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   
-4. Öffnen Sie auf dem Client eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und geben `setup.bat client`Sie ein. Wenn `setup.bat` Sie mit `client` dem-Argument ausführen, wird ein Client Zertifikat mit dem Namen Client.com erstellt und das Client Zertifikat in eine Datei mit dem Namen Client. CER exportiert.  
+4. Öffnen Sie auf dem Client eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und geben Sie ein `setup.bat client` . Wenn `setup.bat` Sie mit dem- `client` Argument ausführen, wird ein Client Zertifikat mit dem Namen Client.com erstellt und das Client Zertifikat in eine Datei mit dem Namen Client. CER exportiert.  
   
-5. Ändern Sie in der Datei "client.cs" den Adresswert des MEX-Endpunkts und den `findValue`, um das Standardserverzertifikat so festzulegen, das es der neuen Adresse des Diensts entspricht. Ersetzen Sie dazu localhost durch den vollqualifizierten Domänennamen des Servers. Erstellen Sie sie neu.  
+5. Ändern Sie in der Datei "client.cs" den Adresswert des MEX-Endpunkts und den `findValue`, um das Standardserverzertifikat so festzulegen, das es der neuen Adresse des Diensts entspricht. Ersetzen Sie dazu localhost durch den vollqualifizierten Domänennamen des Servers. Neuerstellung.  
   
 6. Kopieren Sie die Datei Client.cer aus dem Clientverzeichnis in das Dienstverzeichnis auf dem Server.  
   
@@ -63,6 +63,6 @@ Dienste veröffentlichen häufig Metadaten, um die automatische Generierung und 
     > [!NOTE]
     > Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie WCF-Beispiele ausgeführt haben, die Zertifikate Computer übergreifend verwenden, stellen Sie sicher, dass Sie die Dienst Zertifikate löschen, die im Speicher CurrentUser-treudpeople installiert wurden. Führen Sie dazu folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Verwenden von Metadaten](../feature-details/using-metadata.md)

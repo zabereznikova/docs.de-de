@@ -1,23 +1,23 @@
 ---
-title: 'Gewusst wie: Hosten eines WCF-Diensts in WAS'
+title: 'Vorgehensweise: Hosten eines WCF-Diensts in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 823c3b8452a3fd1c95758d2d09a9effdf02075c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e338440b3a630840230df838e46579e3725bb60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184913"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593112"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Gewusst wie: Hosten eines WCF-Diensts in WAS
-In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen eines Windows-Prozessaktivierungsdienstes (auch als WAS bezeichnet) gehosteter Windows Communication Foundation (WCF)-Dienst erforderlich sind. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. WCF verwendet die Listeneradapterschnittstelle, um Aktivierungsanforderungen zu kommunizieren, die über die von WCF unterstützten Nicht-HTTP-Protokolle empfangen werden, z. B. TCP, Named Pipes und Message Queuing.  
+# <a name="how-to-host-a-wcf-service-in-was"></a>Vorgehensweise: Hosten eines WCF-Diensts in WAS
+In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen eines Windows-Prozess Aktivierungs Diensts (auch bekannt als was) Windows Communication Foundation gehostet werden müssen. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. WCF kommuniziert mithilfe der Listeneradapter-Schnittstelle Aktivierungs Anforderungen, die über die von WCF unterstützten nicht-HTTP-Protokolle empfangen werden, wie z. b. TCP, Named Pipes und Message Queuing.  
   
- Diese Hostingoption erfordert, dass die WAS-Aktivierungskomponenten korrekt installiert und konfiguriert wurden. Es muss jedoch keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Installieren und Konfigurieren von WAS finden Sie unter [Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Diese Hostingoption erfordert, dass die WAS-Aktivierungskomponenten korrekt installiert und konfiguriert wurden. Es muss jedoch keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Installieren und Konfigurieren von was finden Sie unter Gewusst [wie: Installieren und Konfigurieren von WCF-Aktivierungs Komponenten](how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 > Die WAS-Aktivierung wird nicht unterstützt, wenn die Anforderungsverarbeitungspipeline des Webservers auf den klassischen Modus festgelegt ist. Die Anforderungsverarbeitungspipeline des Webservers muss auf den integrierten Modus festgelegt sein, wenn die WAS-Aktivierung verwendet werden soll.  
   
- Wenn ein WCF-Dienst in WAS gehostet wird, werden die Standardbindungen auf die übliche Weise verwendet. Werden jedoch <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding> verwendet, um einen WAS-gehosteten Dienst zu konfigurieren, muss eine Bedingung erfüllt sein. Wenn verschiedene Endpunkte denselben Transport verwenden, müssen die Bindungseinstellungen für die folgenden sieben Eigenschaften übereinstimmen:  
+ Wenn ein WCF-Dienst in was gehostet wird, werden die Standard Bindungen auf die übliche Weise verwendet. Werden jedoch <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding> verwendet, um einen WAS-gehosteten Dienst zu konfigurieren, muss eine Bedingung erfüllt sein. Wenn verschiedene Endpunkte denselben Transport verwenden, müssen die Bindungseinstellungen für die folgenden sieben Eigenschaften übereinstimmen:  
   
 - ConnectionBufferSize  
   
@@ -35,7 +35,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen
   
  Andernfalls bestimmt der zuerst initialisierte Endpunkt die Werte dieser Eigenschaften, und später hinzugefügte Endpunkte lösen eine <xref:System.ServiceModel.ServiceActivationException> aus, wenn ihre Einstellungen diesen Einstellungen nicht entsprechen.  
   
- Die Quellkopie dieses Beispiels finden Sie unter [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md).  
+ Die Quell Kopie dieses Beispiels finden Sie unter [TCP-Aktivierung](../samples/tcp-activation.md).  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>So erstellen Sie einen grundlegenden durch WAS gehosteten Dienst  
   
@@ -74,7 +74,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen
   
 ### <a name="to-create-a-client-to-use-the-service"></a>So erstellen Sie einen Client, der den Dienst verwendet  
   
-1. Verwenden Sie [das ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aus der Befehlszeile, um Code aus Dienstmetadaten zu generieren.  
+1. Verwenden Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) in der Befehlszeile, um Code aus Dienst Metadaten zu generieren.  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -100,5 +100,5 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [TCP-Aktivierung](../samples/tcp-activation.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
