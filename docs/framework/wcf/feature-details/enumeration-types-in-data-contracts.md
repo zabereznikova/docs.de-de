@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 86fa38b281d8944797fa858f8c67f0b60c733be8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586675"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595543"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Enumerationstypen in Datenverträgen
 Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Thema werden mehrere Beispiele behandelt, in denen das Programmiermodell erklärt wird.  
@@ -30,7 +30,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
  Sie können die <xref:System.Runtime.Serialization.DataContractAttribute>-Eigenschaften (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> und <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) wie gewohnt für Enumerationsdatenverträge verwenden.  
   
 ### <a name="enumeration-member-values"></a>Enumerationsmemberwerte  
- Im Allgemeinen enthält der Datenvertrag Enumerationsmembernamen, keine numerischen Werte. Bleiben jedoch erhalten, wenn das datenvertragsmodell verwenden die Empfängerseite einen WCF-Client das exportierte Schema die numerischen Werte. Beachten Sie, dass dies nicht der Fall ist, bei Verwendung der [mithilfe der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ Im Allgemeinen enthält der Datenvertrag Enumerationsmembernamen, keine numerischen Werte. Wenn jedoch das Daten Vertragsmodell verwendet wird, wenn es sich bei der Empfangsseite um einen WCF-Client handelt, werden die numerischen Werte vom exportierten Schema beibehalten. Beachten Sie, dass dies nicht der Fall ist, wenn mit der [XmlSerializer-Klasse](using-the-xmlserializer-class.md)verwendet wird.  
   
  Wenn im obigen Beispiel `condition` auf `Used` festgelegt ist und die Daten in XML serialisiert werden, lautet das XML-Ergebnis `<condition>Used</condition>``<condition>1</condition>`, und nicht . Deshalb entspricht der folgende Datenvertrag dem Datenvertrag von `CarConditionEnum`.  
   
@@ -39,7 +39,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
   
  Sie können beispielsweise `CarConditionEnum` auf der Absenderseite und `CarConditionWithNumbers` auf der Empfängerseite verwenden. Obwohl die Absenderseite den Wert 1 und die Empfängerseite den Wert 20 für `Used` verwendet, lautet die XML-Darstellung für beide Seiten `<condition>Used</condition>`.  
   
- Um das Einbinden in den Datenvertrag zu erreichen, müssen Sie das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut anwenden. In .NET Framework können Sie immer den Sonderwert 0 (null) auf eine Enumeration anwenden handelt es sich auch der Standardwert für Enumerationen. Auch dieser Sonderwert 0 kann jedoch nur serialisiert werden, wenn er mithilfe des <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attributs gekennzeichnet ist.  
+ Um das Einbinden in den Datenvertrag zu erreichen, müssen Sie das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut anwenden. In der .NET Framework können Sie immer den besonderen Wert 0 (null) auf eine Enumeration anwenden, bei der es sich auch um den Standardwert für eine beliebige Enumeration handelt. Auch dieser Sonderwert 0 kann jedoch nur serialisiert werden, wenn er mithilfe des <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attributs gekennzeichnet ist.  
   
  Dabei gelten zwei Ausnahmen:  
   
@@ -81,7 +81,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
   
 1. Versuchen Sie, einen Enumerationsmember zu finden (mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), der dem numerischen Wert zugeordnet ist. Wenn Sie einen Member finden, senden Sie eine Liste, die nur diesen Member enthält.  
   
-2. Versuchen Sie, den numerischen Wert so zu einer Summe aufzulösen, dass Enumerationsmember vorhanden sind (jeweils mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), die den einzelnen Teilen der Summe zugeordnet sind. Senden Sie die Liste mit allen Membern dieser Art. Beachten Sie, dass die *greedy-Algorithmus* verwendet, um eine Summe, suchen und es gibt also keine Garantie dafür, die eine Summe gefunden wird, auch wenn es vorhanden ist. Um dieses Problem zu verhindern, sollten Sie sicherstellen, dass es sich bei den numerischen Werten der Enumerationsmember um Potenzen von 2 handelt.  
+2. Versuchen Sie, den numerischen Wert so zu einer Summe aufzulösen, dass Enumerationsmember vorhanden sind (jeweils mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), die den einzelnen Teilen der Summe zugeordnet sind. Senden Sie die Liste mit allen Membern dieser Art. Beachten Sie, dass der *gierige Algorithmus* verwendet wird, um eine solche Summe zu finden. Daher besteht keine Garantie dafür, dass eine solche Summe gefunden wird, auch wenn Sie vorhanden ist. Um dieses Problem zu verhindern, sollten Sie sicherstellen, dass es sich bei den numerischen Werten der Enumerationsmember um Potenzen von 2 handelt.  
   
 3. Lösen Sie eine <xref:System.Runtime.Serialization.SerializationException> aus, wenn die vorausgehenden zwei Schritte fehlschlagen und der numerische Wert ungleich 0 ist. Senden Sie die leere Liste, wenn der numerische Wert 0 ist.  
   
@@ -99,5 +99,5 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Verwenden von Datenverträgen](using-data-contracts.md)
+- [Angeben von Datenübertragung in Dienstverträgen](specifying-data-transfer-in-service-contracts.md)

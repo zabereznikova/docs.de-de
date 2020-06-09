@@ -2,12 +2,12 @@
 title: In WCF verwendete Sicherheitsbegriffe
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: faf7b44c0ff1b207a7b017163ad2b032f26199b8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f852ba4e1100103289bc5fd879b19ebd40443b8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743881"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595179"
 ---
 # <a name="security-concepts-used-in-wcf"></a>In WCF verwendete Sicherheitsbegriffe
 Windows Communication Foundation (WCF)-Sicherheit basiert auf bereits verwendeten Konzepten und Bereitstellung in verschiedenen Sicherheitsinfrastrukturen.  
@@ -31,7 +31,7 @@ Die Public Key-Infrastruktur (PKI) ist ein System von digitalen Zertifikaten, Ze
  Bei X.509-Zertifikaten handelt es sich um ein primäres Anmeldeinformationsformular, das in Sicherheitsanwendungen verwendetet wird. Weitere Informationen zu x. 509-Zertifikaten finden Sie unter [Zertifikate für öffentliche x. 509-Schlüssel](/windows/win32/seccertenroll/about-x-509-public-key-certificates). X.509-Zertifikate werden in einem Zertifikatspeicher gespeichert. Ein Computer mit Windows-Betriebssystem verfügt über diverse Zertifikatspeicher, die unterschiedliche Zwecke erfüllen. Weitere Informationen zu den unterschiedlichen speichern finden Sie unter [Zertifikat Speicher](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ## <a name="web-services-security-specifications"></a>Sicherheitsspezifikationen für Webdienste  
- Die vom System definierten Bindungen unterstützen viele allgemein übliche Sicherheitsspezifikationen für Webdienste. Eine umfassende Liste der vom System bereitgestellten Bindungen und der von Ihnen unterstützten Webdienst Spezifikationen finden Sie unter: [Webdienst Protokolle, die von vom System bereitgestellten Interoperabilitäts Bindungen unterstützt](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ Die vom System definierten Bindungen unterstützen viele allgemein übliche Sicherheitsspezifikationen für Webdienste. Eine umfassende Liste der vom System bereitgestellten Bindungen und der von Ihnen unterstützten Webdienst Spezifikationen finden Sie unter: [Webdienst Protokolle, die von vom System bereitgestellten Interoperabilitäts Bindungen unterstützt](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Zugriffssteuerungsmechanismen  
  WCF bietet mehrere Möglichkeiten zum Steuern des Zugriffs auf einen Dienst oder Vorgang. Dazu zählen:  
@@ -46,9 +46,9 @@ Die Public Key-Infrastruktur (PKI) ist ein System von digitalen Zertifikaten, Ze
   
 5. Identitätsmodell  
   
- Weitere Informationen zu diesen Themen finden Sie unter [Access Control Mechanismen](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
+ Weitere Informationen zu diesen Themen finden Sie unter [Access Control Mechanismen](access-control-mechanisms.md)  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsübersicht](security-overview.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

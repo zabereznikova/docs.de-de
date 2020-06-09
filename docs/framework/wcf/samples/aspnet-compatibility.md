@@ -2,16 +2,16 @@
 title: ASP.NET-Kompatibilität
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 1f1690cdd1a880c852abc04ea8e4958bae2c5432
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 23930e0756d3fbefc28a8f650b5a056106145a50
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728024"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594711"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET-Kompatibilität
 
-In diesem Beispiel wird veranschaulicht, wie der ASP.NET-Kompatibilitätsmodus in Windows Communication Foundation (WCF) aktiviert wird. Dienste, die im ASP.NET-Kompatibilitätsmodus ausgeführt werden, sind vollständig in der ASP.NET-Anwendungs Pipeline und können ASP.NET-Funktionen wie die Datei-/URL-Autorisierung, den Sitzungs Status und die <xref:System.Web.HttpContext>-Klasse nutzen. Die <xref:System.Web.HttpContext>-Klasse ermöglicht den Zugriff auf Cookies, Sitzungen und andere ASP.NET-Funktionen. Dieser Modus erfordert, dass die Bindungen den HTTP-Transport verwenden und der Dienst selbst in IIS gehostet ist.
+In diesem Beispiel wird veranschaulicht, wie der ASP.NET-Kompatibilitätsmodus in Windows Communication Foundation (WCF) aktiviert wird. Dienste, die im ASP.NET-Kompatibilitätsmodus ausgeführt werden, sind vollständig in der ASP.NET-Anwendungs Pipeline und können ASP.NET-Funktionen wie die Datei-/URL-Autorisierung, den Sitzungszustand und die- <xref:System.Web.HttpContext> Klasse verwenden. Die <xref:System.Web.HttpContext> -Klasse ermöglicht den Zugriff auf Cookies, Sitzungen und andere ASP.NET-Funktionen. Dieser Modus erfordert, dass die Bindungen den HTTP-Transport verwenden und der Dienst selbst in IIS gehostet ist.
 
 In diesem Beispiel ist der Client eine Konsolenanwendung (eine ausführbare Datei), und der Dienst wird in Internetinformationsdiensten (IIS) gehostet.
 
@@ -33,11 +33,11 @@ Für dieses Beispiel ist ein .NET Framework 4-Anwendungs Pool erforderlich, um a
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`
 
-Dieses Beispiel basiert auf den ersten Schritten, durch die ein Rechner Dienst [implementiert wird.](../../../../docs/framework/wcf/samples/getting-started-sample.md) Der `ICalculator`-Vertrag wurde als `ICalculatorSession`-Vertrag geändert, damit eine Reihe von Vorgängen ausgeführt werden kann, während ein Zwischenergebnis aufbewahrt wird.
+Dieses Beispiel basiert auf den ersten Schritten, durch die ein Rechner Dienst [implementiert wird.](getting-started-sample.md) Der `ICalculator`-Vertrag wurde als `ICalculatorSession`-Vertrag geändert, damit eine Reihe von Vorgängen ausgeführt werden kann, während ein Zwischenergebnis aufbewahrt wird.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -63,7 +63,7 @@ Während mehrere Dienstvorgänge zum Ausführen einer Berechnung aufgerufen werd
 Der Dienst verwendet die ASP.NET-Sitzung, um das Ergebnis für jede Client Sitzung zu speichern. Dadurch wird dem Dienst ermöglicht, das aktuelle Ergebnis für jeden Client über mehrere Aufrufe des Diensts hinweg beizubehalten.
 
 > [!NOTE]
-> ASP.NET-Sitzungs Status und WCF-Sitzungen sind sehr unterschiedliche Dinge. Weitere Informationen zu WCF-Sitzungen finden Sie in der [Sitzung](../../../../docs/framework/wcf/samples/session.md) .
+> ASP.NET-Sitzungs Status und WCF-Sitzungen sind sehr unterschiedliche Dinge. Weitere Informationen zu WCF-Sitzungen finden Sie in der [Sitzung](session.md) .
 
 Der Dienst hat eine intime Abhängigkeit vom ASP.NET-Sitzungszustand und erfordert den ASP.NET-Kompatibilitätsmodus, um ordnungsgemäß zu funktionieren. Diese Anforderungen werden deklarativ durch die Übernahme des `AspNetCompatibilityRequirements`-Attributs ausgedrückt.
 
@@ -120,14 +120,14 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.
 
 3. Nachdem die Projekt Mappe erstellt wurde, führen Sie Setup. bat aus, um die Service Model Samples-Anwendung in IIS 7,0 einzurichten. Das Verzeichnis Service Model Samples sollte jetzt als IIS 7,0-Anwendung angezeigt werden.
 
-4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [AppFabric-Hosting-und persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric-Hosting- und -Persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

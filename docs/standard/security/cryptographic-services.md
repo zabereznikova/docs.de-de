@@ -1,5 +1,6 @@
 ---
 title: Kryptografiedienste
+description: Lesen Sie eine Übersicht über die von .NET unterstützten Verschlüsselungsmethoden und-Verfahren wie ClickOnce-Manifeste, Suite B & Cryptography Next Generation (CNG)-Unterstützung.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: e67b1feb27b6eae7062e7b3e02ac79c8929f1df1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 701dce82669395743c884a613512bfadc06c91b3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288406"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596331"
 ---
 # <a name="cryptographic-services"></a>Kryptografiedienste
 
@@ -57,7 +58,7 @@ Die Kryptografie wird für folgende Zielsetzungen verwendet:
 
 Um diese Ziele zu erreichen, können Sie aus einer Kombination von Algorithmen und Vorgehensweisen, die als kryptografische Grundelemente bezeichnet werden, ein kryptografisches Schema erstellen. In der nachstehenden Tabelle sind die kryptografischen Grundelemente und deren Verwendungszweck aufgeführt.
 
-|Kryptografisches Grundelement|Zweck|
+|Kryptografisches Grundelement|Verwendung|
 |-----------------------------|---------|
 |Verschlüsselung mit geheimem Schlüssel (symmetrische Kryptografie)|Transformiert die Daten und verhindert, dass sie von Dritten gelesen werden. Bei diesem Verschlüsselungstyp werden die Daten mit einem einzigen, gemeinsam genutzten, geheimen Schlüssel ver- und entschlüsselt.|
 |Verschlüsselung mit öffentlichem Schlüssel (asymmetrische Kryptografie)|Transformiert die Daten und verhindert, dass sie von Dritten gelesen werden. Bei diesem Verschlüsselungstyp werden die Daten mit einem Paar aus öffentlichem und privatem Schlüssel ver- und entschlüsselt.|

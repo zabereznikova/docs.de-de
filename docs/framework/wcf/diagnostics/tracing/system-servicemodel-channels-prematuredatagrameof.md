@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.PrematureDatagramEof
 ms.date: 03/30/2017
 ms.assetid: ec07be8b-b537-4090-be7e-086679dba78d
-ms.openlocfilehash: be7c9917f5c7f6dd8e271a1fd8b2d88d4e302481
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6281189530706ca43cc09b0c1d8d6b99e8fe6074
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936850"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593970"
 ---
 # <a name="systemservicemodelchannelsprematuredatagrameof"></a>System.ServiceModel.Channels.PrematureDatagramEof
 System.ServiceModel.Channels.PrematureDatagramEof  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Eine leere Nachricht (die das Ende des Kanals darstellt) wurde von einem Datagrammkanal empfangen, doch der Kanal befindet sich nach wie vor im Zustand Geöffnet. Dies zeigt einen Fehler im Datagrammkanal an, und die de-Multiplexer-Empfangsschleife wurde vorzeitig beendet.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Ablaufverfolgung](index.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [Verwaltung und Diagnose](../index.md)

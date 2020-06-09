@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 90d9409d7e41ddda99caf24ebe0e249ee04723d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34bde56b78ec0148cf6b924f8edd29343b97faa4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855906"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597383"
 ---
 # <a name="forward-compatible-data-contracts"></a>Aufwärtskompatible Datenverträge
-Eine Funktion von der Windows Communication Foundation (WCF) ist, die Verträge kann im Laufe der Zeit auf geschützte Weise entwickelt werden. Dies bedeutet, dass ein Client mit einer älteren Version eines Datenvertrags mit einem Dienst, der eine neuere Version dieses Datenvertrags aufweist, kommunizieren kann bzw. dass ein Client mit einer neueren Version eines Datenvertrags mit einer älteren Version dieses Datenvertrags kommunizieren kann. Weitere Informationen finden Sie unter [Best Practices: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Eine Funktion des Windows Communication Foundation (WCF)-Daten Vertragssystems ist, dass sich Verträge im Laufe der Zeit auf nicht unterbrechende Weise weiterentwickeln können. Dies bedeutet, dass ein Client mit einer älteren Version eines Datenvertrags mit einem Dienst, der eine neuere Version dieses Datenvertrags aufweist, kommunizieren kann bzw. dass ein Client mit einer neueren Version eines Datenvertrags mit einer älteren Version dieses Datenvertrags kommunizieren kann. Weitere Informationen finden Sie unter [bewährte Methoden: Versionsverwaltung von Daten Verträgen](../best-practices-data-contract-versioning.md).  
   
- Sie können beim Erstellen neuer Versionen eines bestehenden Datenvertrags die meisten Versionsverwaltungsfunktionen nach Bedarf verwenden. Allerdings eine Versionsverwaltungsfunktion, *Round-Tripping*, muss in den Typ der ersten Version erstellt werden, damit Sie einwandfrei funktionieren.  
+ Sie können beim Erstellen neuer Versionen eines bestehenden Datenvertrags die meisten Versionsverwaltungsfunktionen nach Bedarf verwenden. Allerdings muss eine Versionsverwaltung, *Roundtripping*, in den Typ der ersten Version integriert werden, damit Sie ordnungsgemäß funktioniert.  
   
 ## <a name="round-tripping"></a>Roundtrip-Funktion  
  Ein Roundtrip findet statt, wenn Daten von einer neuen Version an eine alte Version und wieder zurück an die neue Version eines Datenvertrags übergeben werden. Durch den Roundtrip wird sichergestellt, dass keine Daten verloren gehen. Durch die aktivierte Roundtrip-Funktion wird der Typ aufwärtskompatibel, das heißt, dass alle zukünftigen Änderungen vom Versionsverwaltungsmodell des Datenvertrags unterstützt werden.  
@@ -35,15 +35,15 @@ Eine Funktion von der Windows Communication Foundation (WCF) ist, die Verträge 
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- Wenn die WCF-Infrastruktur Daten, die nicht Teil des ursprünglichen Datenvertrag ist trifft, die Daten in der Eigenschaft gespeichert und beibehalten. Eine Verarbeitung erfolgt nur für die vorübergehende Speicherung. Wird das Objekt an seinen Ursprungsort zurückgegeben, werden die ursprünglichen (unbekannten) Daten ebenfalls zurückgegeben. Auf diese Weise durchlaufen die Daten ohne Verlust einen Roundtrip zum und vom ursprünglichen Endpunkt. Beachten Sie jedoch, dass der Endpunkt die Änderungen selbst erkennen und umsetzen muss, falls der ursprüngliche Endpunkt eine Verarbeitung der Daten erfordert und diese Voraussetzung nicht erfüllt werden kann.  
+ Wenn in der WCF-Infrastrukturdaten gefunden werden, die nicht Teil des ursprünglichen Daten Vertrags sind, werden die Daten in der-Eigenschaft gespeichert und beibehalten. Eine Verarbeitung erfolgt nur für die vorübergehende Speicherung. Wird das Objekt an seinen Ursprungsort zurückgegeben, werden die ursprünglichen (unbekannten) Daten ebenfalls zurückgegeben. Auf diese Weise durchlaufen die Daten ohne Verlust einen Roundtrip zum und vom ursprünglichen Endpunkt. Beachten Sie jedoch, dass der Endpunkt die Änderungen selbst erkennen und umsetzen muss, falls der ursprüngliche Endpunkt eine Verarbeitung der Daten erfordert und diese Voraussetzung nicht erfüllt werden kann.  
   
  Der <xref:System.Runtime.Serialization.ExtensionDataObject>-Typ enthält keine öffentlichen Methoden oder Eigenschaften. Daher kann nicht direkt auf die in der <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft gespeicherten Daten zugegriffen werden.  
   
  Sie können die Roundtrip-Funktion deaktivieren. Legen Sie hierfür entweder `ignoreExtensionDataObject` im `true`-Konstruktor auf <xref:System.Runtime.Serialization.DataContractSerializer> fest, oder legen Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>-Eigenschaft im `true` auf <xref:System.ServiceModel.ServiceBehaviorAttribute> fest. Wenn diese Funktion deaktiviert ist, wird die <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft nicht vom Deserialisierungsprogramm gefüllt, und der Inhalt der Eigenschaft wird nicht vom Serialisierungsprogramm ausgegeben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
-- [Datenvertrags-Versionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Datenvertragsversionsverwaltung](data-contract-versioning.md)
+- [Bewährte Methoden: Datenvertragsversionsverwaltung](../best-practices-data-contract-versioning.md)

@@ -2,30 +2,30 @@
 title: 'Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: ddfedeb2491998f64ab241ceba303d50d0714351
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45eeda046e877b4379d7d0e5edd90fac305f5e44
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184767"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595296"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst
 
-Der ASP.NET Rollenanbieter (in Verbindung mit dem ASP.NET Mitgliedschaftsanbieter) ist eine Funktion, die es ASP.NET Entwicklern ermöglicht, Websites zu erstellen, die es Benutzern ermöglichen, ein Konto mit einer Website zu erstellen und Rollen für Autorisierungszwecke zugewiesen zu werden. Jeder Benutzer kann mit dieser Funktion ein Konto auf dieser Site erstellen und sich für den exklusiven Zugriff auf diese Site und ihre Dienste anmelden. Dies steht im Gegensatz zur Windows-Sicherheit, bei der die Benutzer über Konten in einer Windows-Domäne verfügen müssen. Stattdessen kann jeder Benutzer, der seine Anmeldeinformationen (die Kombination benutzername/password) bereitstellt, die Website und ihre Dienste verwenden.  
+Der ASP.NET-Rollen Anbieter (in Verbindung mit dem ASP.net-Mitgliedschafts Anbieter) ist ein Feature, mit dem ASP.NET-Entwickler Websites erstellen können, die Benutzern das Erstellen eines Kontos mit einer Website und das Zuweisen von Rollen zu Autorisierungs Zwecken ermöglichen. Jeder Benutzer kann mit dieser Funktion ein Konto auf dieser Site erstellen und sich für den exklusiven Zugriff auf diese Site und ihre Dienste anmelden. Dies steht im Gegensatz zur Windows-Sicherheit, bei der die Benutzer über Konten in einer Windows-Domäne verfügen müssen. Stattdessen kann jeder Benutzer, der seine Anmelde Informationen (die Kombination aus Benutzername und Kennwort) bereitstellt, die Website und seine Dienste verwenden.  
   
-Eine Beispielanwendung finden Sie unter [Mitgliedschaft und Rollenanbieter](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Weitere Informationen zur Funktion des ASP.NET Mitgliedschaftsanbieters finden Sie unter [Gewusst wie: Verwenden des ASP.NET Mitgliedschaftsanbieters](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+Eine Beispielanwendung finden Sie unter [Mitgliedschaft und Rollen Anbieter](../samples/membership-and-role-provider.md). Weitere Informationen zur ASP.net-Mitgliedschafts Anbieter Funktion finden Sie unter Gewusst [wie: Verwenden des ASP.net-Mitgliedschafts Anbieters](how-to-use-the-aspnet-membership-provider.md).  
   
-Die Rollenanbieterfunktion verwendet eine SQL Server-Datenbank zum Speichern von Benutzerinformationen. Windows Communication Foundation (WCF)-Entwickler können diese Funktionen aus Sicherheitsgründen nutzen. Wenn benutzerin eine WCF-Anwendung integriert ist, müssen sie der WCF-Clientanwendung eine Kombination aus Benutzername und Kennwort bereitstellen. Damit WCF die Datenbank verwenden kann, müssen <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Sie eine <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> Instanz <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>der Klasse erstellen, ihre Eigenschaft auf <xref:System.ServiceModel.ServiceHost> festlegen und die Instanz der Auflistung von Verhaltensweisen hinzufügen, die den Dienst hostet.  
+Die Rollenanbieterfunktion verwendet eine SQL Server-Datenbank zum Speichern von Benutzerinformationen. Windows Communication Foundation (WCF)-Entwickler können diese Features aus Sicherheitsgründen nutzen. Wenn Benutzer in eine WCF-Anwendung integriert sind, müssen Sie der WCF-Client Anwendung eine Kombination aus Benutzername und Kennwort bereitstellen. Um WCF die Verwendung der Datenbank zu ermöglichen, müssen Sie eine Instanz der- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Klasse erstellen, deren- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> Eigenschaft auf festlegen <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> und die-Instanz der Auflistung von Verhalten hinzufügen, die <xref:System.ServiceModel.ServiceHost> den-Dienst gehostet.  
   
-## <a name="configure-the-role-provider"></a>Konfigurieren des Rollenanbieters  
+## <a name="configure-the-role-provider"></a>Konfigurieren des Rollen Anbieters  
   
-1. Fügen Sie in der Datei Web.config unter `system.web` `roleManager` dem <>-Element ein <>-Element hinzu, und legen Sie dessen `enabled` Attribut auf fest. `true`  
+1. Fügen Sie in der Datei Web. config unter dem < `system.web` >-Element ein < `roleManager` >-Element hinzu, und legen Sie dessen- `enabled` Attribut auf fest `true` .  
   
 2. Legen Sie das `defaultProvider`-Attribut auf `SqlRoleProvider` fest.  
   
-3. Fügen Sie als `roleManager` untergeordnetes Element zum `providers` <>-Element ein <>-Element hinzu.  
+3. Fügen Sie als untergeordnetes Element des <`roleManager`>-Elements ein <`providers`>-Element hinzu.  
   
-4. Fügen Sie als `providers` untergeordnetes Element zum `add` <>-Element ein <>-Element hinzu, wobei die folgenden Attribute auf die entsprechenden Werte `name`festgelegt sind: , `type`, `connectionStringName`und `applicationName`, wie im folgenden Beispiel gezeigt.  
+4. Fügen Sie als untergeordnetes Element des <`providers`>-Elements ein <`add`> Element mit den folgenden Attributen hinzu, die auf die entsprechenden Werte festgelegt sind: `name` , `type` , `connectionStringName` und `applicationName` , wie im folgenden Beispiel gezeigt.  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -40,17 +40,17 @@ Die Rollenanbieterfunktion verwendet eine SQL Server-Datenbank zum Speichern von
     </roleManager>  
     ```  
   
-## <a name="configure-the-service-to-use-the-role-provider"></a>Konfigurieren des Dienstes für die Verwendung des Rollenanbieters  
+## <a name="configure-the-service-to-use-the-role-provider"></a>Konfigurieren Sie den Dienst für die Verwendung des Rollen Anbieters.  
   
-1. Fügen Sie in der Datei Web.config ein [ \<system.serviceModel->-Element](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) hinzu.  
+1. Fügen Sie in der Datei Web. config ein- [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) Element hinzu.  
   
-2. Fügen [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Sie dem <`system.ServiceModel`>-Element ein Verhalten>Element hinzu.  
+2. Fügen Sie [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) dem <>-Element ein-Element hinzu `system.ServiceModel` .  
   
-3. Fügen Sie dem <`behaviors`>-Element einen [ \<serviceBehaviors->](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) hinzu.  
+3. Fügen Sie ein- [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) Element zum <`behaviors`>-Element hinzu.  
   
-4. Fügen [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) Sie ein Verhalten `name`>Element hinzu, und legen Sie das Attribut auf einen geeigneten Wert fest.  
+4. Fügen Sie ein [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) -Element hinzu, und legen Sie das- `name` Attribut auf einen geeigneten Wert fest  
   
-5. Fügen Sie dem <`behavior`>-Element einen [ \<serviceAuthorization->](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) hinzu.  
+5. Fügen Sie ein- [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) Element zum <`behavior`>-Element hinzu.  
   
 6. Legen Sie das `principalPermissionMode`-Attribut auf `UseAspNetRoles` fest.  
   
@@ -69,5 +69,5 @@ Die Rollenanbieterfunktion verwendet eine SQL Server-Datenbank zum Speichern von
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Mitgliedschafts- und Rollenanbieter](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
-- [Gewusst wie: Verwenden des ASP.NET-Mitgliedschaftsanbieters](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Mitgliedschafts- und Rollenanbieter](../samples/membership-and-role-provider.md)
+- [Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters](how-to-use-the-aspnet-membership-provider.md)

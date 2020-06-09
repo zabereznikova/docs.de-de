@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-ms.openlocfilehash: 303367c85e311ac5c07c11b849b5586354980a3c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fa02260976c710401a05cce3d723cc0f66804c6e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636156"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593130"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Vorgehensweise: Verfügbarmachen eines Vertrags für SOAP- und Webclients
 
-Standardmäßig stellt Windows Communication Foundation (WCF) Endpunkte nur für SOAP-Clients zur Verfügung. In [Vorgehensweise: Erstellen eines grundlegenden WCF-HTTP-Webdiensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), ein Endpunkt für nicht-SOAP-Clients verfügbar gemacht wird. Manchmal möchten Sie jedoch einen Vertrag für beide Wege verfügbar machen, als Webendpunkt und als SOAP-Endpunkt. In diesem Thema wird ein Beispiel für diesen Vorgang gezeigt.
+Standardmäßig stellt Windows Communication Foundation (WCF) Endpunkte nur für SOAP-Clients zur Verfügung. In Gewusst [wie: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts](how-to-create-a-basic-wcf-web-http-service.md)wird ein Endpunkt für nicht-SOAP-Clients zur Verfügung gestellt. Manchmal möchten Sie jedoch einen Vertrag für beide Wege verfügbar machen, als Webendpunkt und als SOAP-Endpunkt. In diesem Thema wird ein Beispiel für diesen Vorgang gezeigt.
 
 ## <a name="to-define-the-service-contract"></a>So definieren Sie den Dienstvertrag
 
-1. Definieren eines Dienstvertrags mithilfe einer Schnittstelle markiert mit dem <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> und <xref:System.ServiceModel.Web.WebGetAttribute> Attribute fest, wie im folgenden Code gezeigt:
+1. Definieren Sie einen Dienstvertrag mit einer Schnittstelle, <xref:System.ServiceModel.ServiceContractAttribute> die mit den <xref:System.ServiceModel.Web.WebInvokeAttribute> Attributen, und gekennzeichnet <xref:System.ServiceModel.Web.WebGetAttribute> ist, wie im folgenden Code gezeigt:
 
     [!code-csharp[htSoapWeb#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#0)]
     [!code-vb[htSoapWeb#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#0)]
@@ -33,29 +33,29 @@ Standardmäßig stellt Windows Communication Foundation (WCF) Endpunkte nur für
 
 ## <a name="to-host-the-service"></a>So hosten Sie den Dienst
 
-1. Erstellen Sie eine <xref:System.ServiceModel.ServiceHost> Objekt, wie im folgenden Code gezeigt:
+1. Erstellen Sie ein- <xref:System.ServiceModel.ServiceHost> Objekt, wie im folgenden Code gezeigt:
 
      [!code-csharp[htSoapWeb#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#2)]
      [!code-vb[htSoapWeb#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#2)]
 
-2. Hinzufügen einer <xref:System.ServiceModel.Description.ServiceEndpoint> mit <xref:System.ServiceModel.BasicHttpBinding> für den SOAP-Endpunkt, wie im folgenden Code gezeigt:
+2. Fügen Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> mit <xref:System.ServiceModel.BasicHttpBinding> für den SOAP-Endpunkt hinzu, wie im folgenden Code gezeigt:
 
      [!code-csharp[htSoapWeb#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#3)]
      [!code-vb[htSoapWeb#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#3)]
 
-3. Hinzufügen einer <xref:System.ServiceModel.Description.ServiceEndpoint> mit <xref:System.ServiceModel.WebHttpBinding> für den nicht-SOAP-Endpunkt und Hinzufügen der <xref:System.ServiceModel.Description.WebHttpBehavior> an den Endpunkt, wie im folgenden Code gezeigt:
+3. Fügen Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> mit <xref:System.ServiceModel.WebHttpBinding> für den nicht-SOAP-Endpunkt hinzu, und fügen Sie den dem <xref:System.ServiceModel.Description.WebHttpBehavior> Endpunkt hinzu, wie im folgenden Code gezeigt:
 
      [!code-csharp[htSoapWeb#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#4)]
      [!code-vb[htSoapWeb#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#4)]
 
-4. Rufen Sie `Open()` auf eine <xref:System.ServiceModel.ServiceHost> Instanz, um den Diensthost zu öffnen, wie im folgenden Code gezeigt:
+4. Greifen `Open()` Sie auf eine- <xref:System.ServiceModel.ServiceHost> Instanz zu, um den Dienst Host zu öffnen, wie im folgenden Code gezeigt:
 
      [!code-csharp[htSoapWeb#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#5)]
      [!code-vb[htSoapWeb#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#5)]
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>So rufen Sie Dienstvorgänge auf, die GET in Internet Explorer zugeordnet werden
 
-1. Öffnen Sie Internet Explorer, und geben "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`", und drücken Sie die EINGABETASTE. Die URL enthält die Basisadresse des Diensts (`http://localhost:8000/`), die relative Adresse des Endpunkts (""), der Dienstvorgang aufrufen ("EchoWithGet"), und ein Fragezeichen gefolgt von einer Liste benannter Parameter, getrennt durch ein kaufmännisches und-Zeichen (&).
+1. Öffnen Sie Internet Explorer, geben `http://localhost:8000/Web/EchoWithGet?s=Hello, world!` Sie "" ein, und drücken Sie EINGABETASTE Die URL enthält die Basisadresse des Dienstanbieter ( `http://localhost:8000/` ), die relative Adresse des Endpunkts (""), den aufzurufenden Dienst Vorgang ("EchoWithGet") und ein Fragezeichen, gefolgt von einer Liste benannter Parameter, getrennt durch ein kaufmännisches und-Zeichen (&).
 
 ## <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>So rufen Sie Dienstvorgänge auf dem Webendpunkt im Code auf
 
@@ -93,7 +93,7 @@ Standardmäßig stellt Windows Communication Foundation (WCF) Endpunkte nur für
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden finden die vollständige codeauflistung für dieses Thema:
+Im folgenden finden Sie die vollständige Code Auflistung für dieses Thema:
 
 [!code-csharp[htSoapWeb#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#13)]
 [!code-vb[htSoapWeb#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#13)]
@@ -102,7 +102,7 @@ Im folgenden finden die vollständige codeauflistung für dieses Thema:
 
  Verweisen Sie beim Kompilieren der Datei Service.cs auf System.ServiceModel.dll und System.ServiceModel.Web.dll.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>
@@ -110,4 +110,4 @@ Im folgenden finden die vollständige codeauflistung für dieses Thema:
 - <xref:System.ServiceModel.Web.WebServiceHost>
 - <xref:System.ServiceModel.ChannelFactory>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
-- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [WCF-Web-HTTP-Programmiermodell](wcf-web-http-programming-model.md)

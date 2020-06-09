@@ -2,12 +2,12 @@
 title: Durchführen der Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 04bac7bad1a6ccfa23d37c391047cb8d58ee4f4d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f4c7a7fa759d7339dee3d189540fb85f3883f828
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837804"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594568"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Durchführen der Windows Communication Foundation-Beispiele
 Die Windows Communication Foundation (WCF)-Beispiele können in einer Konfiguration mit einem einzelnen Computer oder Computer übergreifend ausgeführt werden. Wie angegeben, können die Beispiele auf einem einzelnen Computer ausgeführt werden. In einer computerübergreifenden Konfiguration ist es notwendig, die Konfigurationsdateieinstellungen des Beispiels zu ändern. Die folgenden Prozeduren erklären, wie ein Beispiel in einer Konfiguration mit einem einzelnen Computer und computerübergreifend ausgeführt wird. Beachten Sie, dass es Abweichungen in den Schritten für Dienste, die in Internetinformationsdiensten (IIS) gehostet werden, und den selbst gehosteten Diensten gibt. Die meisten Beispiele werden in IIS gehostet. Der Infodatei eines Beispiels können Sie entnehmen, wie das Beispiel gehostet wird.  
@@ -15,15 +15,15 @@ Die Windows Communication Foundation (WCF)-Beispiele können in einer Konfigurat
  In Windows Vista erfordern Beispiele, die nicht in IIS gehostet werden, erweiterte Berechtigungen, um einen Listener mit http. sys zu registrieren. Verwenden Sie Httpcfg.exe, um die Überwachungsadressen des Diensts mit dem Konto, unter dem der Dienst ausgeführt wird, zu registrieren, oder starten Sie den Dienst an einer Eingabeaufforderung, die mit Administratorrechten ausgeführt wird.  
   
 > [!NOTE]
-> Stellen Sie vor dem Erstellen oder Ausführen eines der WCF-Beispiele sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
+> Stellen Sie vor dem Erstellen oder Ausführen eines der WCF-Beispiele sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
-1. Wenn der Dienst von IIS gehostet wird, stellen Sie sicher, dass Sie über einen Browser auf den Dienst zugreifen können, indem Sie die folgende Adresse eingeben: `http://localhost/servicemodelsamples/service.svc`. Als Antwort sollte eine Bestätigungsseite angezeigt werden. Wenn die Bestätigungsseite nicht angezeigt wird, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
+1. Wenn der Dienst von IIS gehostet wird, stellen Sie sicher, dass Sie über einen Browser auf den Dienst zugreifen können, indem Sie die folgende Adresse eingeben: `http://localhost/servicemodelsamples/service.svc` . Als Antwort sollte eine Bestätigungsseite angezeigt werden. Wenn die Bestätigungsseite nicht angezeigt wird, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
 2. Wenn der Dienst selbst gehostet ist, führen Sie "Service.exe" aus "\service\bin" im sprachspezifischen Ordner aus. Im Dienstkonsolenfenster wird die Dienstaktivität angezeigt.  
   
-3. Führen Sie "Client. exe" aus dem Ordner "\client\bin\\" unter dem sprachspezifischen Ordner aus. Im Clientkonsolenfenster wird die Clientaktivität angezeigt.  
+3. Führen Sie "Client. exe" aus dem Ordner "\client\bin" \\ unter dem sprachspezifischen Ordner aus. Im Clientkonsolenfenster wird die Clientaktivität angezeigt.  
   
 4. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
@@ -31,7 +31,7 @@ Die Windows Communication Foundation (WCF)-Beispiele können in einer Konfigurat
   
 1. Wenn der Dienst in IIS gehostet wird:  
   
-    1. Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis namens "ServiceModelSamples". Die Batchdatei "Setupvroot. bat", die mit [einem einmaligen Setup Verfahren für die Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) enthalten ist, kann zum Erstellen des Datenträger Verzeichnisses und des virtuellen Verzeichnisses verwendet werden.  
+    1. Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis namens "ServiceModelSamples". Die Batchdatei "Setupvroot. bat", die mit [einem einmaligen Setup Verfahren für die Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md) enthalten ist, kann zum Erstellen des Datenträger Verzeichnisses und des virtuellen Verzeichnisses verwendet werden.  
   
     2. Kopieren Sie die Dienstprogrammdateien aus %SystemDrive%\Inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis "ServiceModelSamples" auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Verzeichnis \bin einfügen können.  
   
@@ -53,7 +53,7 @@ Die Windows Communication Foundation (WCF)-Beispiele können in einer Konfigurat
   
     1. Wenn der Dienst nicht unter einem Domänenkonto ausgeführt wird, öffnen Sie die Konfigurationsdatei, und ändern Sie den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
   
-    2. Wenn der Dienst unter einem Domänenkonto ausgeführt wird, generieren Sie die Clientkonfiguration neu, indem Sie "Svcutil.exe" für den Dienst ausführen. Weitere Informationen zum Ausführen von "Svcutil. exe" finden Sie unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md). Verwenden Sie die generierte Datei statt der Konfigurationsdatei im Beispiel. Die generierte Konfigurationsdatei verfügt über zusätzliche Identitätsinformationen und enthält alle Einstellungen, die notwendig sind, um eine Verbindung zum Dienstendpunkt aufzubauen, auch wenn diese die Standardeinstellungen sind. Weitere Informationen zu Identitätsinformationen finden Sie unter [Dienst Identität und-Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)und [\<Identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2. Wenn der Dienst unter einem Domänenkonto ausgeführt wird, generieren Sie die Clientkonfiguration neu, indem Sie "Svcutil.exe" für den Dienst ausführen. Weitere Informationen zum Ausführen von "Svcutil. exe" finden Sie unter [Building the Windows Communication Foundation Samples](building-the-samples.md). Verwenden Sie die generierte Datei statt der Konfigurationsdatei im Beispiel. Die generierte Konfigurationsdatei verfügt über zusätzliche Identitätsinformationen und enthält alle Einstellungen, die notwendig sind, um eine Verbindung zum Dienstendpunkt aufzubauen, auch wenn diese die Standardeinstellungen sind. Weitere Informationen zu Identitätsinformationen finden Sie unter [Dienst Identität und-Authentifizierung](../feature-details/service-identity-and-authentication.md)und [\<identity>](../../configure-apps/file-schema/wcf/identity.md) .  
   
 4. Starten Sie auf dem Clientcomputer in einer Eingabeaufforderung die Datei "Client.exe".  
   
@@ -63,7 +63,7 @@ Die Windows Communication Foundation (WCF)-Beispiele können in einer Konfigurat
   
 2. Wenn der Dienst in IIS gehostet wird:  
   
-    1. Aktivieren Sie den Dienst mithilfe eines Browsers, indem Sie die Adresse `http://localhost/servicemodelsamples/service.svc`eingeben.  
+    1. Aktivieren Sie den Dienst mithilfe eines Browsers, indem Sie die Adresse eingeben `http://localhost/servicemodelsamples/service.svc` .  
   
     2. Wählen Sie in der Projekt Mappe das Menü **Debuggen** und das Menü Element **an den Prozess anhängen** aus.  
   
@@ -79,7 +79,7 @@ Die Windows Communication Foundation (WCF)-Beispiele können in einer Konfigurat
   
 - Wenn der Dienst in IIS gehostet wird, entfernen Sie aus Sicherheitsgründen die Definition des virtuellen Verzeichnisses und die in den Setupschritten gewährten Berechtigungen, wenn Sie die Beispiele abgeschlossen haben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md)
+- [Erstellen der Windows Communication Foundation-Beispiele](building-the-samples.md)
 - [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -2,25 +2,25 @@
 title: Konfigurationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52747e6d964022d5028b0edb91dc8bc0ac0e82bc
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6d84085d06da117ebf13fa4bb714513aacc3abd6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463956"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594724"
 ---
 # <a name="configuration-sample"></a>Konfigurationsbeispiel
 In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigurationsdatei erkennbar gemacht wird.  
   
 > [!NOTE]
-> In diesem Beispiel wird die Suche in die Konfiguration implementiert. Ein Beispiel, das die Ermittlung im Code implementiert, finden Sie unter [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).  
+> In diesem Beispiel wird die Suche in die Konfiguration implementiert. Ein Beispiel, bei dem die Ermittlung im Code implementiert wird, finden Sie unter [Basic](basic-sample.md).  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
@@ -85,7 +85,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigura
         </endpointBehaviors>  
 ```  
   
- Weitere Informationen zu Bereichen finden Sie unter [Ermittlungssuche und FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
+ Weitere Informationen zu Bereichen finden Sie unter Ermittlung [und FindCriteria](../feature-details/discovery-find-and-findcriteria.md).  
   
  Sie können auch bestimmte Details des Suchendpunkts steuern. Dies erfolgt mithilfe von <xref:System.ServiceModel.Configuration.StandardEndpointsSection>. In diesem Beispiel wird die Version des verwendeten Protokolls geändert und ein `maxResponseDelay`-Attribut wie im folgenden Codebeispiel hinzugefügt.  
   
@@ -260,7 +260,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigura
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1. In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Konfigurieren von HTTP und HTTPS](../feature-details/configuring-http-and-https.md). Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Konfigurieren von http und HTTPS](../feature-details/configuring-http-and-https.md). Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. Erstellen Sie die Projektmappe.  
   

@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten'
+title: 'Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: e71664b4361ba28a50b29499585b20a8adbaefd2
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: f7a846b076691394cb855e4978e890cdcac76eb2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597032"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
 
 In diesem Thema werden die Schritte beschrieben, die zum Einrichten von Windows Process Activation Service (auch bekannt als was) unter Windows Vista erforderlich sind, um Windows Communication Foundation (WCF)-Dienste zu hosten, die nicht über HTTP-Netzwerkprotokolle kommunizieren. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:
 
@@ -19,7 +19,7 @@ In diesem Thema werden die Schritte beschrieben, die zum Einrichten von Windows 
 
 - Konfigurieren Sie WAS, sodass Nicht-HTTP-Protokolle unterstützt werden. Mit dem folgenden Verfahren wird Windows Vista für die TCP-Aktivierung konfiguriert.
 
-Nach der Installation und Konfiguration von was finden Sie unter Gewusst [wie: Hosten eines WCF-Diensts in was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) die Verfahren zum Erstellen eines WCF-Diensts, der einen nicht-HTTP-Endpunkt bereitstellt, der was verwendet.
+Nach der Installation und Konfiguration von was finden Sie unter Gewusst [wie: Hosten eines WCF-Diensts in was](how-to-host-a-wcf-service-in-was.md) die Verfahren zum Erstellen eines WCF-Diensts, der einen nicht-HTTP-Endpunkt bereitstellt, der was verwendet.
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>So installieren Sie die WCF-Aktivierungskomponenten für andere Protokolle als HTTP
 
@@ -52,7 +52,7 @@ Nach der Installation und Konfiguration von was finden Sie unter Gewusst [wie: H
     ```
 
     > [!NOTE]
-    > Dieser Befehl ist eine einzelne Textzeile. Mit diesem Befehl wird der Zugriff auf die Anwendung "/\<*WCF-Anwendung*> mithilfe von `http://localhost/<WCF Application>` und `net.tcp://localhost/<WCF Application>`ermöglicht.
+    > Dieser Befehl ist eine einzelne Textzeile. Dieser Befehl ermöglicht den Zugriff auf die/- \<*WCF Application*> Anwendung mithilfe von `http://localhost/<WCF Application>` und `net.tcp://localhost/<WCF Application>` .
 
      Entfernen Sie die net.tcp-Sitebindung, die für dieses Beispiel hinzugefügt wurde.
 
@@ -101,9 +101,9 @@ Nach der Installation und Konfiguration von was finden Sie unter Gewusst [wie: H
     > [!NOTE]
     > Dieser Befehl ist eine einzelne Textzeile.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md)
-- [NamedPipe-Aktivierung](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [TCP-Aktivierung](../samples/tcp-activation.md)
+- [MSMQ-Aktivierung](../samples/msmq-activation.md)
+- [NamedPipe-Aktivierung](../samples/namedpipe-activation.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

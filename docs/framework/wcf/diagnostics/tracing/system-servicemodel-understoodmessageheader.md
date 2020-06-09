@@ -2,21 +2,21 @@
 title: System.ServiceModel.UnderstoodMessageHeader
 ms.date: 03/30/2017
 ms.assetid: 8a8560bf-d13b-452d-bfb5-a5221cb191bd
-ms.openlocfilehash: 68e9769d17e0eeca3063555bf2d7e856a74ec8ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a88677b1a511c824b78e2d82daf097e15baafa1f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914263"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595608"
 ---
 # <a name="systemservicemodelunderstoodmessageheader"></a>System.ServiceModel.UnderstoodMessageHeader
 System.ServiceModel.UnderstoodMessageHeader  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Verstandener Nachrichtenheader.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Ablaufverfolgung](index.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [Verwaltung und Diagnose](../index.md)

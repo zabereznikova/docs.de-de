@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Von Access Services mit einem Duplexvertrag'
+title: 'Vorgehensweise: Zugreifen auf Dienste mit einem Duplex Vertrag'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,28 +7,28 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc42792b827b49265a0b1addf959de2fa1a041e3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855139"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597214"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a>Vorgehensweise: Von Access Services mit einem Duplexvertrag
+# <a name="how-to-access-services-with-a-duplex-contract"></a>Vorgehensweise: Zugreifen auf Dienste mit einem Duplex Vertrag
 
-Ein Feature von Windows Communication Foundation (WCF) ist die Möglichkeit zum Erstellen eines Diensts, das ein duplexnachrichtenmuster verwendet. Anhand dieses Musters kann ein Dienst mit dem Client über einen Rückruf kommunizieren In diesem Thema zeigt die Erstellung ein WCF-Clients in einer Clientklasse, die die Rückrufschnittstelle implementiert.
+Eine Funktion von Windows Communication Foundation (WCF) ist die Möglichkeit, einen Dienst zu erstellen, der ein Duplex Nachrichten Muster verwendet. Anhand dieses Musters kann ein Dienst mit dem Client über einen Rückruf kommunizieren In diesem Thema werden die Schritte zum Erstellen eines WCF-Clients in einer Client Klasse gezeigt, die die Rückruf Schnittstelle implementiert.
 
 Eine Dualbindung macht die IP-Adresse des Clients für den Dienst verfügbar. Der Client sollte Sicherheit eingestellt haben, um sicherzustellen, dass nur Verbindungen zu vertrauensvollen Diensten hergestellt werden.
 
-Ein Tutorial zum Erstellen einer grundlegenden WCF-Dienst und Client finden Sie unter [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).
+Ein Tutorial zum Erstellen eines einfachen WCF-Dienstanbieter und-Clients finden Sie im [Tutorial zu](../getting-started-tutorial.md)den ersten Schritten.
 
 ## <a name="to-access-a-duplex-service"></a>So greifen Sie auf einen Duplexdienst zu
 
-1. Erstellen Sie einen Dienst, der zwei Schnittstellen enthält. Die erste Schnittstelle ist dem Dienst vorbehalten, die zweite Schnittstelle wird für den Rückruf verwendet. Weitere Informationen zum Erstellen eines duplexdiensts finden Sie unter [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).
+1. Erstellen Sie einen Dienst, der zwei Schnittstellen enthält. Die erste Schnittstelle ist dem Dienst vorbehalten, die zweite Schnittstelle wird für den Rückruf verwendet. Weitere Informationen zum Erstellen eines Duplex Dienstanbieter finden [Sie unter Gewusst wie: Erstellen eines Duplex Vertrags](how-to-create-a-duplex-contract.md).
 
 2. Führen Sie den Dienst aus.
 
-3. Verwenden der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Verträge (Schnittstellen) für den Client zu generieren. Informationen hierzu finden Sie unter [Vorgehensweise: Erstellen Sie einen Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
+3. Verwenden Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , um Verträge (Schnittstellen) für den Client zu generieren. Weitere Informationen hierzu finden Sie unter Gewusst [wie: Erstellen eines Clients](../how-to-create-a-wcf-client.md).
 
 4. Implementieren Sie die Rückrufschnittstelle in der Client-Klasse, wie im nachfolgenden Beispiel dargestellt.
 
@@ -68,7 +68,7 @@ Ein Tutorial zum Erstellen einer grundlegenden WCF-Dienst und Client finden Sie 
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())
     ```
 
-6. Erstellen Sie eine Instanz der WCF-Client mithilfe des Konstruktors, der erfordert eine <xref:System.ServiceModel.InstanceContext> Objekt. Der zweite Parameter des Konstruktors ist der Name eines Endpunkts in der Konfigurationsdatei.
+6. Erstellen Sie eine Instanz des WCF-Clients mithilfe des Konstruktors, für den ein-Objekt erforderlich ist <xref:System.ServiceModel.InstanceContext> . Der zweite Parameter des Konstruktors ist der Name eines Endpunkts in der Konfigurationsdatei.
 
     ```csharp
     CalculatorDuplexClient wcfClient = new CalculatorDuplexClient(site, "default");
@@ -78,7 +78,7 @@ Ein Tutorial zum Erstellen einer grundlegenden WCF-Dienst und Client finden Sie 
     Dim wcfClient As New CalculatorDuplexClient(site, "default")
     ```
 
-7. Rufen Sie die Methoden des WCF-Clients als erforderlich.
+7. Nennen Sie die Methoden des WCF-Clients nach Bedarf.
 
 ## <a name="example"></a>Beispiel
 
@@ -87,10 +87,10 @@ Im folgenden Codebeispiel wird das Erstellen einer Client-Klasse veranschaulicht
 [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
 [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial mit ersten Schritten](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Vorgehensweise: Erstellen Sie einen Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Vorgehensweise: Verwenden von ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Tutorial zu den ersten Schritten](../getting-started-tutorial.md)
+- [Vorgehensweise: Erstellen eines Duplexvertrags](how-to-create-a-duplex-contract.md)
+- [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Vorgehensweise: Erstellen eines Clients](../how-to-create-a-wcf-client.md)
+- [Vorgehensweise: Verwenden der ChannelFactory](how-to-use-the-channelfactory.md)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 69db887bf8e7b51c4450c04bd1a08d3d952e84f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643573"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596967"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat
-Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Technik, die meisten Bindungen in der Windows Communication Foundation (WCF) verwenden. Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.  
+Das Sichern eines Dienstanbieter mit einem X. 509-Zertifikat ist eine grundlegende Technik, die von den meisten Bindungen in Windows Communication Foundation (WCF) verwendet wird. Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.  
   
- Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann. Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden. Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut. Weitere Informationen zur Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann. Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden. Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut. Weitere Informationen zur Verwendung von Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>So konfigurieren Sie einen Dienst mit einem Zertifikat mithilfe von Code  
   
-1. Erstellen Sie den Dienstvertrag und den implementierten Dienst. Weitere Informationen finden Sie unter [entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1. Erstellen Sie den Dienstvertrag und den implementierten Dienst. Weitere Informationen finden Sie unter [Entwerfen und Implementieren von Diensten](../designing-and-implementing-services.md).  
   
 2. Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse, und legen Sie deren Sicherheitsmodus auf <xref:System.ServiceModel.SecurityMode.Message> fest. Dies wird im folgenden Code veranschaulicht.  
   
@@ -31,7 +31,7 @@ Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Techni
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4. Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse für die Basisadresse des Diensts. Da die `WSHttpBinding` verwendet der HTTP-Transport, der Uniform Resource Identifier (URI) muss mit einem Schema beginnen oder Windows Communication Foundation (WCF) wird eine Ausnahme ausgelöst, wenn der Dienst geöffnet wird.  
+4. Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse für die Basisadresse des Diensts. Da den `WSHttpBinding` http-Transport verwendet, muss der Uniform Resource Identifier (URI) mit diesem Schema beginnen, oder Windows Communication Foundation (WCF) löst eine Ausnahme aus, wenn der Dienst geöffnet wird.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
@@ -46,7 +46,7 @@ Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Techni
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7. Dies ist optional. Um Metadaten vom Dienst abzufragen, erstellen Sie ein neues <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Objekt und legen Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>-Eigenschaft auf `true` fest.  
+7. Optional. Um Metadaten vom Dienst abzufragen, erstellen Sie ein neues <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Objekt und legen Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>-Eigenschaft auf `true` fest.  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
@@ -82,6 +82,6 @@ Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Techni
   
 - <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Verwenden von Zertifikaten](working-with-certificates.md)
