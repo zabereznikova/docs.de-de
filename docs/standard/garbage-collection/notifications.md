@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 389e851782edb82578c216951be440070b92723c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131533"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286001"
 ---
 # <a name="garbage-collection-notifications"></a>Garbage Collection-Benachrichtigungen
 Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine Garbage Collection der Generation 2) der Common Language Runtime die Leistung beeinträchtigen kann. Dies kann vor allem bei Servern, die eine hohe Zahl an Anforderungen verarbeiten, ein Problem sein; in diesem Fall kann eine lange Garbage Collection einen Anforderungstimeout verursachen. Um eine vollständige Garbage Collection im Rahmen eines kritischen Zeitraums zu verhindern, können Sie benachrichtigt werden, wenn eine vollständige Garbage Collection bevorsteht, und Maßnahmen ergreifen, um die Workload auf eine andere Serverinstanz umzuleiten. Sie können auch selbst eine Garbage Collection auslösen, vorausgesetzt, dass die aktuelle Serverinstanz keine Anforderungen verarbeiten muss.  
@@ -22,7 +22,7 @@ Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine G
  Die <xref:System.GC.RegisterForFullGCNotification%2A>-Methode registriert, dass eine Benachrichtigung ausgelöst werden soll, wenn die Runtime erkennt, dass eine vollständige Garbage Collection ansteht. Diese Benachrichtigung besteht aus zwei Teilen: Der eine Teil wird gesendet, wenn die vollständige Garbage Collection ansteht, und der andere Teil, wenn die vollständige Garbage Collection abgeschlossen wurde.  
   
 > [!WARNING]
-> Nur blockierende Garbage Collections lösen Benachrichtigungen aus. Wenn das [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)-Konfigurationselement aktiviert ist, lösen Garbage Collections im Hintergrund keine Benachrichtigungen aus.  
+> Nur blockierende Garbage Collections lösen Benachrichtigungen aus. Wenn das [\<gcConcurrent>](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)-Konfigurationselement aktiviert ist, lösen Garbage Collections im Hintergrund keine Benachrichtigungen aus.  
   
  Um zu bestimmen, wann eine Benachrichtigung ausgelöst wurde, verwenden Sie die <xref:System.GC.WaitForFullGCApproach%2A>- und <xref:System.GC.WaitForFullGCComplete%2A>-Methode. In der Regel verwenden Sie diese Methoden in einer `while`-Schleife, um fortlaufend eine <xref:System.GCNotificationStatus>-Enumeration abzurufen, die den Status der Benachrichtigung anzeigt. Wenn dieser Wert <xref:System.GCNotificationStatus.Succeeded> ist, können Sie Folgendes tun:  
   
@@ -122,4 +122,4 @@ Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine G
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+- [Garbage Collection](index.md)

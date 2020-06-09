@@ -59,7 +59,7 @@ HRESULT GetPEKind (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

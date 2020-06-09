@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: a2e2a6705fb3d8d4424d46d96bbf49b41e1414af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2cc2b01b04b30bd3b1a4371352ded20ea8664b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330261"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411752"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Packen und Bereitstellen von benutzerdefinierten My-Erweiterungen (Visual Basic)
 
@@ -29,7 +29,7 @@ In diesem Thema wird erläutert, wie eine benutzerdefinierte `My`-Erweiterung al
 
 ## <a name="create-a-my-namespace-extension"></a>Erstellen einer My-Namespaceerweiterung
 
-Der erste Schritt für die Erstellung eines Bereitstellungspakets für eine benutzerdefinierte `My`-Erweiterung ist das Erstellen der Erweiterung als einzelne Codedatei. Details und eine Anleitung, wie Sie eine benutzerdefinierte `My`-Erweiterung erstellen, finden Sie unter [Erweitern des My-Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).
+Der erste Schritt für die Erstellung eines Bereitstellungspakets für eine benutzerdefinierte `My`-Erweiterung ist das Erstellen der Erweiterung als einzelne Codedatei. Details und eine Anleitung, wie Sie eine benutzerdefinierte `My`-Erweiterung erstellen, finden Sie unter [Erweitern des My-Namespace in Visual Basic](extending-the-my-namespace.md).
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Exportieren einer My-Namespaceerweiterung als Elementvorlage
 
@@ -64,7 +64,7 @@ Die CustomData-Datei enthält ein <`VBMyExtensionTemplate>`-Element, das Attribu
 |`Version`|Erforderlich. Eine Versionsnummer für die Elementvorlage.|
 |`AssemblyFullName`|Dies ist optional. Ein Assemblyname. Wenn ein Verweis auf diese Assembly dem Projekt hinzugefügt wird, wird der Benutzer aufgefordert, die `My`-Erweiterung aus dieser Elementvorlage hinzuzufügen.|
 
-### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Hinzufügen des \<CustomDataSignature>-Elements zur VSTEMPLATE-Datei
+### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Fügen Sie das \<CustomDataSignature>-Element zur .vstemplate-Datei hinzu.
 
 Sie müssen auch die VSTEMPLATE-Datei für Ihre Elementvorlage anpassen, um Ihre Visual Studio-Elementvorlage als `My`-Namespaceerweiterung zu identifizieren. Sie müssen dem `<TemplateData>`-Element ein `<CustomDataSignature>`-Element hinzufügen. Das `<CustomDataSignature>`-Element muss wie im folgenden Beispiel gezeigt den Text `Microsoft.VisualBasic.MyExtension` enthalten.
 
@@ -103,7 +103,7 @@ Zur Installation der Vorlage können Sie den komprimierten Ordner (die *ZIP*-Dat
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Extending the My Namespace in Visual Basic (Erweitern des Namespaces „My“ in Visual Basic)](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
-- [Erweitern des Visual Basic-Anwendungsmodells](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
-- [Anpassen der verfügbaren Objekte in „My“](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [Extending the My Namespace in Visual Basic (Erweitern des Namespaces „My“ in Visual Basic)](extending-the-my-namespace.md)
+- [Erweitern des Visual Basic-Anwendungsmodells](extending-the-visual-basic-application-model.md)
+- [Anpassen der verfügbaren Objekte in „My“](customizing-which-objects-are-available-in-my.md)
 - [My-Erweiterungen-Seite im Projekt-Designer](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

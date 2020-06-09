@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706581"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278881"
 ---
 # <a name="isolated-storage"></a>Isolierte Speicherung
 <a name="top"></a> Die isolierte Speicherung ist ein Mechanismus zur Datenspeicherung von Desktop-Apps, der Isolation und Sicherheit gewährleistet, indem er standardisierte Möglichkeiten zur Verknüpfung von Code mit gespeicherten Daten definiert. Die Standardisierung hat weitere Vorteile. Administratoren können spezielle Tools zum Ändern isolierter Speichervorgänge verwenden, um Speicherplätze für Dateien zu konfigurieren, Sicherheitsrichtlinien festzulegen und nicht verwendete Daten zu löschen. Dank isolierter Speicherung benötigt der Code keine eindeutigen Pfade zur Festlegung sicherer Speicherplätze im Dateisystem. Außerdem werden die Daten vor anderen Anwendungen geschützt, die nur über Zugriff auf isolierte Speicherplätze verfügen. Fest codierte Daten, die den Speicherbereich einer Anwendung angeben, sind nicht erforderlich.
@@ -85,7 +85,7 @@ Zur Steuerung des Zugriffs auf isolierte Speicherplätze verwendet Common Langua
 
 - Speicherkontingent, wie im vorherigen Abschnitt erläutert.
 
-Beim ersten Versuch des Codes, einen Speicher zu öffnen, fordert die Runtime eine <xref:System.Security.Permissions.IsolatedStorageFilePermission> -Berechtigung an. Sie entscheidet basierend auf der Vertrauenswürdigkeit des Codes, ob diese Berechtigung erteilt wird. Falls die Berechtigung erteilt wird, werden die Werte für die zulässige Verwendung und für das Speicherkontingent durch die Sicherheitsrichtlinien und durch die Anforderung von <xref:System.Security.Permissions.IsolatedStorageFilePermission>durch den Code festgelegt. Die Sicherheitsrichtlinien werden mit dem .NET Framework-Konfigurationstool (Mscorcfg.msc) festgelegt. Alle Aufrufer in der Aufrufliste werden überprüft, um sicherzustellen, dass jeder mindestens über die entsprechende zulässige Verwendung verfügt. Durch die Laufzeit werden auch die Kontingente überprüft, die dem Code auferlegt wurden, durch welchen der Speicher für die zu speichernde Datei geöffnet oder erstellt wurde. Falls diese Bedingungen erfüllt sind, wird die Berechtigung erteilt. Die Überprüfung des Kontingents erfolgt jedes Mal erneut, wenn eine Datei in den Speicher geschrieben wird.
+Beim ersten Versuch des Codes, einen Speicher zu öffnen, fordert die Runtime eine <xref:System.Security.Permissions.IsolatedStorageFilePermission> -Berechtigung an. Sie entscheidet basierend auf der Vertrauenswürdigkeit des Codes, ob diese Berechtigung erteilt wird. Falls die Berechtigung erteilt wird, werden die Werte für die zulässige Verwendung und für das Speicherkontingent durch die Sicherheitsrichtlinien und durch die Anforderung von <xref:System.Security.Permissions.IsolatedStorageFilePermission>durch den Code festgelegt. Die Sicherheitsrichtlinien werden mit dem .NET Framework-Konfigurationstool (Mscorcfg.msc) festgelegt. Alle Aufrufer in der Aufrufliste werden überprüft, um sicherzustellen, dass jeder mindestens über die entsprechende zulässige Verwendung verfügt. Durch die Laufzeit werden auch die Kontingente überprüft, die dem Code auferlegt wurden, durch welchen der Speicher für die zu speichernde Datei geöffnet oder erstellt wurde. Falls diese Bedingungen erfüllt sind, wird die Berechtigung erteilt. Die Überprüfung des Kontingents erfolgt jedes Mal erneut, wenn eine Datei in den Speicher geschrieben wird.
 
 Für Anwendungscode muss keine Berechtigung angefordert werden, da Common Language Runtime jede gemäß den Sicherheitsrichtlinien angemessene <xref:System.Security.Permissions.IsolatedStorageFilePermission> erteilt. Allerdings gibt es gute Gründe, bestimmte Berechtigungen, die für Ihre Anwendung erforderlich sind, einschließlich von <xref:System.Security.Permissions.IsolatedStorageFilePermission>, anzufordern.
 
@@ -113,10 +113,10 @@ Gelegentlich sollten Änderungen an isolierten Speicherplätzen mit dem Dateisys
 
 |Betriebssystem|Speicherplatz im Dateisystem|
 |----------------------|-----------------------------|
-|Windows 2000, Windows XP, Windows Server 2003 (Upgrade von Windows NT 4.0)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMSTAMM>\Profile\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMSTAMM>\Profile\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
-|Windows 2000 – Neuinstallation (und Upgrades von Windows 98 und Windows NT 3.51)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Dokumente und Einstellungen\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Dokumente und Einstellungen\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
-|Windows XP, Windows Server 2003 – Neuinstallation (und Upgrades von Windows 2000 und Windows 98)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Dokumente und Einstellungen\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Dokumente und Einstellungen\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
-|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Benutzer\\<Benutzer\>\AppData\Roaming<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Benutzer\\<Benutzer\>\AppData\Local|
+|Windows 2000, Windows XP, Windows Server 2003 (Upgrade von Windows NT 4.0)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMROOT>\Profile\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMROOT>\Profile\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
+|Windows 2000 – Neuinstallation (und Upgrades von Windows 98 und Windows NT 3.51)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMDRIVE>\Dokumente und Einstellungen\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMDRIVE>\Dokumente und Einstellungen\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
+|Windows XP, Windows Server 2003 – Neuinstallation (und Upgrades von Windows 2000 und Windows 98)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMDRIVE>\Dokumente und Einstellungen\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMDRIVE>\Dokumente und Einstellungen\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMDRIVE>\Benutzer\\<Benutzer\>\AppData\Roaming<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMDRIVE>\Benutzer\\<Benutzer\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -164,20 +164,20 @@ Viele Anwendungen verwenden Datenbanken zur Speicherung und Isolation von Daten,
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Isolationstypen](../../../docs/standard/io/types-of-isolation.md)|Beschreibt verschiedene Isolationstypen.|
-|[Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Stellt ein Beispiel für die Verwendung der <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Klasse bereit, um einen nach Benutzer und Assembly isolierten Speicher abzurufen.|
-|[Gewusst wie: Auflisten von Speichern für isolierten Speicher](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Zeigt, wie mithilfe der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> -Methode die Größe des gesamten isolierten Speichers für den Benutzer berechnet wird.|
-|[Gewusst wie: Löschen von Speichern im isolierten Speicher](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Zeigt, wie mit der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> -Methode isolierte Speicher auf zwei unterschiedliche Arten gelöscht werden.|
-|[Gewusst wie: Vorhersehen von Speicherengpässen bei isoliertem Speicher](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Zeigt, wie der restliche Speicherplatz in einem isolierten Speicher ermittelt wird.|
-|[Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Einige Beispiele für das Erstellen von Dateien und Verzeichnissen in einem isolierten Speicher.|
-|[Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Zeigt, wie die Verzeichnisstruktur und die Dateien bei isolierter Speicherung gelesen werden.|
-|[Gewusst wie: Lesen bzw. Schreiben von Dateien im isolierten Speicher](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Beispiel dafür, wie eine Zeichenfolge in eine isolierte Speicherdatei geschrieben und von dort gelesen wird.|
-|[Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Beschreibt das Löschen von Dateien und Verzeichnissen der isolierten Speicherung.|
-|[Datei- und Stream-E/A](../../../docs/standard/io/index.md)|Erläutert, wie Sie einen synchronen und asynchronen Datei- und Datenstreamzugriff ausführen können.|
+|[Isolationstypen](types-of-isolation.md)|Beschreibt verschiedene Isolationstypen.|
+|[How to: Erhalten von Speichern für isolierten Speicher](how-to-obtain-stores-for-isolated-storage.md)|Stellt ein Beispiel für die Verwendung der <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Klasse bereit, um einen nach Benutzer und Assembly isolierten Speicher abzurufen.|
+|[How to: Auflisten von Speichern für isolierten Speicher](how-to-enumerate-stores-for-isolated-storage.md)|Zeigt, wie mithilfe der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> -Methode die Größe des gesamten isolierten Speichers für den Benutzer berechnet wird.|
+|[How to: Löschen von Speichern im isolierten Speicher](how-to-delete-stores-in-isolated-storage.md)|Zeigt, wie mit der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> -Methode isolierte Speicher auf zwei unterschiedliche Arten gelöscht werden.|
+|[How to: Vorhersehen von Speicherengpässen bei isoliertem Speicher](how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Zeigt, wie der restliche Speicherplatz in einem isolierten Speicher ermittelt wird.|
+|[How to: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](how-to-create-files-and-directories-in-isolated-storage.md)|Einige Beispiele für das Erstellen von Dateien und Verzeichnissen in einem isolierten Speicher.|
+|[How to: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](how-to-find-existing-files-and-directories-in-isolated-storage.md)|Zeigt, wie die Verzeichnisstruktur und die Dateien bei isolierter Speicherung gelesen werden.|
+|[How to: Lesen von bzw. Schreiben in Dateien im isolierten Speicher](how-to-read-and-write-to-files-in-isolated-storage.md)|Beispiel dafür, wie eine Zeichenfolge in eine isolierte Speicherdatei geschrieben und von dort gelesen wird.|
+|[How to: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](how-to-delete-files-and-directories-in-isolated-storage.md)|Beschreibt das Löschen von Dateien und Verzeichnissen der isolierten Speicherung.|
+|[Datei- und Stream-E/A](index.md)|Erläutert, wie Sie einen synchronen und asynchronen Datei- und Datenstreamzugriff ausführen können.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Referenz
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

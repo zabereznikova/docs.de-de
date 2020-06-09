@@ -2,12 +2,12 @@
 title: Asynchrone nachrichtenbasierte Kommunikation
 description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
 ms.date: 09/20/2018
-ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144343"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306967"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -35,7 +35,7 @@ Nachdem Sie die nachrichtenbasierte Kommunikation mithilfe von Befehlen oder Ere
 
 **Abbildung 4-18.** Ein einzelner Microservice empfängt eine asynchrone Nachricht
 
-Beachten Sie, dass Befehle, die von Clientanwendungen ausgehen, als synchrone HTTP-Befehle implementiert werden können. Nachrichtenbasierte Befehle empfehlen sich, wenn Sie auf höhere Skalierbarkeit angewiesen sind oder bereits über einen nachrichtenbasierten Geschäftsprozess verfügen.
+Wenn die Befehle von Clientanwendungen stammen, können sie als synchrone HTTP-Befehle implementiert werden. Verwenden Sie nachrichtenbasierte Befehle, wenn Sie auf höhere Skalierbarkeit angewiesen sind oder bereits über einen nachrichtenbasierten Geschäftsprozess verfügen.
 
 ## <a name="multiple-receivers-message-based-communication"></a>Nachrichtenbasierte Kommunikation mit mehreren Empfängern
 

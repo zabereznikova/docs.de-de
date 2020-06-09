@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141299"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279879"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Empfehlungen für die Entwicklung weltweit einsatzfähiger Anwendungen
 
@@ -49,7 +49,7 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
 
 9. Testen Sie die Funktionsfähigkeit der Anwendung in internationalen Betriebssystemen und mit internationalen Daten.
 
-10. Wenn eine Sicherheitsentscheidung auf dem Ergebnis eines Zeichenfolgenvergleichs oder der Änderung der Groß-/Kleinschreibung beruht, sollten Sie eine kulturunabhängige Zeichenfolgenoperation verwenden. Auf diese Weise stellen Sie sicher, dass das Ergebnis nicht vom Wert von `CultureInfo.CurrentCulture` beeinflusst wird. Im Abschnitt [Zeichenfolgenvergleiche mit der aktuellen Kultur](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) im Artikel [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../../../docs/standard/base-types/best-practices-strings.md) finden Sie ein Beispiel, das veranschaulicht, wie kulturabhängige Zeichenfolgenvergleiche zu inkonsistenten Ergebnissen führen können.
+10. Wenn eine Sicherheitsentscheidung auf dem Ergebnis eines Zeichenfolgenvergleichs oder der Änderung der Groß-/Kleinschreibung beruht, sollten Sie eine kulturunabhängige Zeichenfolgenoperation verwenden. Auf diese Weise stellen Sie sicher, dass das Ergebnis nicht vom Wert von `CultureInfo.CurrentCulture` beeinflusst wird. Im Abschnitt [Zeichenfolgenvergleiche mit der aktuellen Kultur](../base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) im Artikel [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../base-types/best-practices-strings.md) finden Sie ein Beispiel, das veranschaulicht, wie kulturabhängige Zeichenfolgenvergleiche zu inkonsistenten Ergebnissen führen können.
 
 ## <a name="localization-best-practices"></a>Bewährte Methoden für die Lokalisierung
 
@@ -69,11 +69,11 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
 
 8. Verwenden Sie die <xref:System.Resources.ResourceManager?displayProperty=nameWithType>-Klasse, um Ressourcen basierend auf der Kultur abzurufen.
 
-9. Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) zum Erstellen von Windows Forms-Dialogfeldern, sodass diese mit dem [Windows Forms Resource Editor (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) lokalisiert werden können. Windows Forms-Dialogfelder dürfen nicht manuell codiert werden.
+9. Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) zum Erstellen von Windows Forms-Dialogfeldern, sodass diese mit dem [Windows Forms Resource Editor (Winres.exe)](../../framework/tools/winres-exe-windows-forms-resource-editor.md) lokalisiert werden können. Windows Forms-Dialogfelder dürfen nicht manuell codiert werden.
 
 10. Es empfiehlt sich, eine professionelle Lokalisierung (Übersetzung) anfertigen zu lassen.
 
-11. Eine vollständige Beschreibung des Erstellens und Lokalisierens von Ressourcen finden Sie unter [Ressourcen in Anwendungen](../../../docs/framework/resources/index.md).
+11. Eine vollständige Beschreibung des Erstellens und Lokalisierens von Ressourcen finden Sie unter [Ressourcen in Anwendungen](../../framework/resources/index.md).
 
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>Bewährte Methoden für die Globalisierung von ASP.NET-Anwendungen
 
@@ -91,7 +91,7 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
 
 4. Geben Sie die Werte für das requestEncoding-Attribut, das responseEncoding-Attribut, das fileEncoding-Attribut, das culture-Attribut und das uiCulture-Attribut an den folgenden drei Stellen in der ASP.NET-Anwendung an:
 
-    - Im Globalisierungsabschnitt einer Web.config-Datei. Diese Datei befindet sich außerhalb der ASP.NET-Anwendung. Weitere Informationen finden Sie unter [\<globalization>-Element](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
+    - Im Globalisierungsabschnitt einer Web.config-Datei. Diese Datei befindet sich außerhalb der ASP.NET-Anwendung. Weitere Informationen finden Sie unter [\<globalization>Element](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
 
     - In einer Seitendirektive. Wenn sich eine Anwendung auf einer Seite befindet, wurde die Datei bereits gelesen. Daher können für fileEncoding und requestEncoding keine Werte mehr festgesetzt werden. Nur für uiCulture, Culture und responseEncoding können in einer Seitendirektive Werte angegeben werden.
 
@@ -99,7 +99,7 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
 
 5. Der uiCulture-Wert kann auf die vom Browser akzeptierte Sprache festgelegt werden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
-- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
+- [Globalisierung und Lokalisierung](index.md)
+- [Ressourcen in Desktop-Apps](../../framework/resources/index.md)

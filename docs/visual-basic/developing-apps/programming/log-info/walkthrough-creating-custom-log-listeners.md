@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a140607a4fe7e1e13de54e8d56cab53e52aaa2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353616"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398265"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern (Visual Basic)
 
@@ -43,9 +43,9 @@ Im nächste Verfahren finden Sie einige einfache Schritte zum Erstellen einer As
 
 2. Klicken Sie auf die Registerkarte **Signierung**.
 
-3. Wählen Sie das Feld **Sign the assembly** (Assembly signieren) aus.
+3. Wählen Sie das Feld **Assembly signieren** aus.
 
-4. Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen****\<Neu>** aus.
+4. Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen** **\<New>** aus.
 
      Das Dialogfeld **Schlüssel für einen starken Namen erstellen** wird geöffnet.
 
@@ -63,7 +63,7 @@ Da die Assembly jetzt über einen starken Namen verfügt, müssen Sie den starke
 
 Das Format für einen Typ mit starkem Namen ist wie folgt.
 
-\<Typname>, \<Assemblyname>, \<Versionsnummer>, \<Kultur>, \<starker Name>
+\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name>
 
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>So bestimmen Sie den starken Namen des Listeners
 
@@ -79,7 +79,7 @@ Sie können mit dem starken Namen den Listener zur `My.Application.Log`-Auflistu
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.
 
-     \- oder -
+     - oder -
 
      Wenn eine app.config-Datei vorhanden ist:
 
@@ -107,10 +107,10 @@ Sie können mit dem starken Namen den Listener zur `My.Application.Log`-Auflistu
 
      Ändern Sie den Wert von `SimpleLogStrongName` in den starken Namen des Listeners.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Gewusst wie: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Gewusst wie: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Arbeiten mit Anwendungsprotokollen](working-with-application-logs.md)
+- [How to: Protokollieren von Ausnahmen](how-to-log-exceptions.md)
+- [How to: Schreiben von Protokollmeldungen](how-to-write-log-messages.md)
+- [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](walkthrough-changing-where-my-application-log-writes-information.md)

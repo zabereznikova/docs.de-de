@@ -2,12 +2,12 @@
 title: Entwerfen eines Domänenmodells für Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Grundkonzepte beim Entwerfen eines DDD-orientierten Domänenmodells
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144590"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306908"
 ---
 # <a name="design-a-microservice-domain-model"></a>Entwerfen eines Microservicedomänenmodells
 
@@ -35,7 +35,7 @@ In Abbildung 7-8 wird eine Domänenentität dargestellt, die nicht nur Datenattr
 
 **Abbildung 7-8**. Beispiel für den Entwurf einer Domänenentität, die Daten und Verhalten implementiert
 
-Eine Domänenmodellentität implementiert Verhalten durch Methoden, d.h. es handelt sich um kein „anämisches“ Modell. Manchmal kann es natürlich auch Entitäten geben, die keine Logik als Teil der Entitätsklasse implementieren. Dies kann in untergeordneten Entitäten innerhalb eines Aggregats der Fall sein, wenn die untergeordnete Entität über keine spezielle Logik verfügt, da der Großteil der Logik im Aggregatstamm definiert ist. Wenn Sie über einen komplexen Microservice verfügen, bei dem ein Großteil der Logik in den Dienstklassen und nicht in den Domänenentitäten implementiert ist, könnten Sie in den Bereich des anämischen Domänenmodells fallen, das im folgenden Abschnitt erläutert wird.
+Eine Domänenmodellentität implementiert Verhalten durch Methoden, d.h. es handelt sich um kein „anämisches“ Modell. Manchmal kann es natürlich auch Entitäten geben, die keine Logik als Teil der Entitätsklasse implementieren. Dies kann in untergeordneten Entitäten innerhalb eines Aggregats der Fall sein, wenn die untergeordnete Entität über keine spezielle Logik verfügt, da der Großteil der Logik im Aggregatstamm definiert ist. Wenn Sie über einen komplexen Microservice verfügen, bei dem die Logik in den Dienstklassen und nicht in den Domänenentitäten implementiert ist, könnten Sie in den Bereich des anämischen Domänenmodells fallen, das im folgenden Abschnitt erläutert wird.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Umfassendes Domänenmodell im Vergleich zum anämischen Domänenmodell
 
@@ -76,7 +76,7 @@ Eine Person mit Namen und Nachnamen ist in der Regel eine Entität, da eine Pers
 
 Die Verwaltung von Wertobjekten in relationalen Datenbanken und ORMs wie Entity Framework (EF) ist schwierig. In dokumentorientierten Datenbanken können diese einfacher implementiert und verwendet werden.
 
-EF Core 2.0 und neuere Versionen bieten das Feature [Nicht eigenständige Entitäten](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), das die Verarbeitung von Wertobjekten vereinfacht, wie wir später im Detail sehen werden.
+EF Core 2.0 und neuere Versionen bieten das Feature [Nicht eigenständige Entitäten](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), das die Verarbeitung von Wertobjekten vereinfacht, wie wir später im Detail sehen werden.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -114,14 +114,14 @@ In Abbildung 7-9 sehen Sie Beispielaggregate wie das Aggregat „Buyer“, das e
 
 Ein DDD-Domänenmodell besteht aus Aggregaten. Ein Aggregat kann eine einzige Entität oder mehrere Entitäten sowie auch Wertobjekte beinhalten. Beachten Sie, dass das Aggregat „Buyer“ (Käufer) über zusätzliche untergeordnete Entitäten verfügen könnte. Dies hängt von Ihrer Domäne ab, wie auch beim Microservice „Ordering“ (Bestellung) in der eShopOnContainers-Referenzanwendung. In Abbildung 7-9 wird ein Fall veranschaulicht, in dem der Käufer über eine einzelne Entität verfügt. Dies ist ein Beispiel für ein Aggregat, das nur einen Aggregatstamm enthält.
 
-Es hat sich bewährt, zur Einhaltung der Trennung der Aggregate und für eindeutige Grenzen zwischen den Aggregaten die direkte Navigation zwischen Aggregaten in einem DDD-Domänenmodell nicht zuzulassen und nur über das Feld für den Fremdschlüssel zu verfügen, das im [Domänenmodell des Microservices „Ordering“ (Bestellung)](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers implementiert ist. Die Bestellentität verfügt wie im folgenden Code dargestellt nur über ein Fremdschlüsselfeld für den Käufer, jedoch über keine EF Core-Navigationseigenschaft:
+Es hat sich bewährt, zur Einhaltung der Trennung der Aggregate und für eindeutige Grenzen zwischen den Aggregaten die direkte Navigation zwischen Aggregaten in einem DDD-Domänenmodell nicht zuzulassen und nur über das Feld für den Fremdschlüssel zu verfügen, das im [Domänenmodell des Microservices „Ordering“ (Bestellung)](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers implementiert ist. Die Bestellentität verfügt wie im folgenden Code dargestellt nur über ein Fremdschlüsselfeld für den Käufer, jedoch über keine EF Core-Navigationseigenschaft:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

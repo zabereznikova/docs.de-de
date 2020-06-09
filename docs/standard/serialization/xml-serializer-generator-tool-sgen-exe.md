@@ -3,12 +3,12 @@ title: XML Serializer Generator-Tool (Sgen.exe)
 description: Das XML Serializer Generator-Tool erstellt eine XML-Serialisierungsassembly zur Verbesserung der Startleistung von XmlSerializer für Typen in einer Assembly.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380042"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288939"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer Generator-Tool (Sgen.exe)
 
@@ -64,5 +64,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](../../framework/tools/index.md)
+- [Eingabeaufforderungen](../../framework/tools/developer-command-prompt-for-vs.md)

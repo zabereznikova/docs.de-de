@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160208"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291967"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Skripterstellung für ein XSLT-Stylesheet mit \<msxsl:script>
 Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element.  
   
 > [!NOTE]
-> Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+> Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](migrating-from-the-xsltransform-class.md).  
   
  Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element. Wenn das Stylesheet geladen wird, werden alle definierten Funktionen durch Wrapping in eine Klassendefinition in die Microsoft Intermediate Language (MSIL) kompiliert, sodass kein Leistungsverlust auftritt.  
   
@@ -58,7 +58,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
 |System.Xml.XPath|XPath-Klassen (XML Path Language).|  
 |Microsoft.VisualBasic|Klassen für Microsoft Visual Basic-Skripts|  
   
- Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. 	Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, müssen Sie die korrekte Syntax für die verwendete Sprache einhalten. Beispiel: Wenn Sie in einem C#-Skriptblock arbeiten, darf in dem Block kein XML-Kommentarknoten `<!-- an XML comment -->` verwendet werden.  
+ Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, müssen Sie die korrekte Syntax für die verwendete Sprache einhalten. Beispiel: Wenn Sie in einem C#-Skriptblock arbeiten, darf in dem Block kein XML-Kommentarknoten `<!-- an XML comment -->` verwendet werden.  
   
  Die bereitgestellten, durch die Skriptfunktionen definierten Argumente und Rückgabewerte müssen zu einem der XPath- oder XSLT-Typen des W3C (World Wide Web Consortium) gehören. In der folgenden Tabelle werden die jeweiligen W3C-Typen mit den entsprechenden .NET Framework-Klassen (Typen) samt der Informationen aufgeführt, ob es sich bei einem W3C-Typ um einen XPath-Typ oder einen XSLT-Typ handelt.  
   
@@ -231,4 +231,4 @@ public class Sample
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](xsltransform-class-implements-the-xslt-processor.md)

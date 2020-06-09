@@ -1,16 +1,21 @@
 ---
-title: ''
-ms.date: ''
+title: Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung – .NET
+ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+- converters
+ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703608"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84279762"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung (Marshallen) in .NET
 
@@ -77,7 +82,7 @@ Die folgenden Schritte erläutern, wie Sie einen Konverter erstellen, indem Sie 
 
 * Erstellen Sie eine von der <xref:System.Text.Json.Serialization.JsonConverterFactory>-Klasse abgeleitete Klasse.
 * Überschreiben Sie die `CanConvert`-Methode, um „true“ zurückzugeben, wenn der zu konvertierende Typ einer ist, den der Konverter verarbeiten kann. Wenn der Konverter z. B. für `List<T>` ist, kann er eventuell nur `List<int>`, `List<string>` und `List<DateTime>` verarbeiten.
-* Stezen Sie die `CreateConverter`-Methode außer Kraft, um eine Instanz einer Konverterklasse zurückzugeben, die den zur Laufzeit bereitgestellten zu konvertierenden Typ verarbeitet.
+* Setzen Sie die `CreateConverter`-Methode außer Kraft, um eine Instanz einer Konverterklasse zurückzugeben, die den zur Laufzeit bereitgestellten zu konvertierenden Typ verarbeitet.
 * Erstellen Sie die Konverterklasse, die von der `CreateConverter`-Methode instanziiert wird.
 
 Das Factorymuster ist für offene generische Typen erforderlich, da der Code, mit dem ein Objekt in eine und aus einer Zeichenfolge konvertiert werden soll, nicht für alle Typen identisch ist. Ein Konverter für einen offenen generischen Typ (z. B. `List<T>`) muss verdeckt einen Konverter für einen geschlossenen generischen Typ erstellen (z. B. `List<DateTime>`). Es muss Code geschrieben werden, um jeden geschlossenen generischen Typ zu verarbeiten, den der Konverter verarbeiten kann.
@@ -283,7 +288,7 @@ Das JSON kann mit demselben Konverter deserialisiert werde, mit dem es auch seri
 
 Mit dem Konvertercode im vorherigen Beispiel wird jede Eigenschaft manuell gelesen und geschrieben. Eine Alternative besteht darin, `Deserialize` oder `Serialize` aufzurufen, um einen Teil der Arbeit zu erledigen. Ein Beispiel hierzu finden Sie in [diesem StackOverflow-Beitrag](https://stackoverflow.com/a/59744873/12509023).
 
-### <a name="support-round-trip-for-stackt"></a>Unterstützung von Roundtrips für Stack\<t >
+### <a name="support-round-trip-for-stackt"></a>Unterstützung von Roundtrips für Stack\<T>.
 
 Wenn Sie eine JSON-Zeichenfolge in ein <xref:System.Collections.Generic.Stack%601>-Objekt deserialisieren und dieses Objekt anschließend serialisieren, ist die Reihenfolge des Stapelinhalts umgekehrt. Dieses Verhalten gilt für die folgenden Typen und Schnittstellen sowie für benutzerdefinierte Typen, die von ihnen abgeleitet werden:
 

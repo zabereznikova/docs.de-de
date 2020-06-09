@@ -1,5 +1,6 @@
 ---
 title: Standardformatzeichenfolgen für Datum und Uhrzeit
+description: In diesem Artikel erfahren Sie, wie Sie eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet, um die Textdarstellung eines Datums- und Uhrzeitwerts in .NET zu definieren.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: d6bde74441334a4454865c1fdb890a4e859bc072
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5db9088a6b0d75ae5293b9be35346c4c2ddf81c6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440901"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447224"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardformatzeichenfolgen für Datum und Uhrzeit
 
-Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines Datums- und Uhrzeitwerts zu definieren. Jede Formatzeichenfolge für Datum und Uhrzeit, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Eine standardmäßige oder benutzerdefinierte Formatzeichenfolge kann auf zwei Arten verwendet werden:
+Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines Datums- und Uhrzeitwerts zu definieren. Jede Formatzeichenfolge für Datum und Uhrzeit, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md). Eine standardmäßige oder benutzerdefinierte Formatzeichenfolge kann auf zwei Arten verwendet werden:
 
 - Zum Definieren der Zeichenfolge, die das Ergebnis eines Formatierungsvorgangs ist.
 
@@ -54,7 +55,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
 |"T"|Langes Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „T“ für lange Zeit](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
 |"u"|Universelles, sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der universelle sortierbare Formatspezifizierer „u“](#UniversalSortable).|Mit einem <xref:System.DateTime>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Mit einem <xref:System.DateTimeOffset>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
 |"U"|Universelles Datums-/Zeitmuster (Koordinierte Weltzeit).<br /><br /> Weitere Informationen finden Sie unter: [Der universelle vollständige Formatspezifizierer „U“](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
-|"Y", "y"|Jahr-Monat-Muster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „Y“, „y“ für Jahr-Monat](#YearMonth).|2009-06-15T13:45:30 -> Juni 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
+|"Y", "y"|Jahr-Monat-Muster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „Y“, „y“ für Jahr-Monat](#YearMonth).|2009-06-15T13:45:30 -> Juni 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |Jedes andere einzelne Zeichen|Unbekannter Bezeichner.|Löst eine <xref:System.FormatException> zur Laufzeit aus.|
 
 ## <a name="how-standard-format-strings-work"></a>Funktionsweise der Standardformatzeichenfolgen
@@ -450,7 +451,7 @@ Die Formatierung wird durch die Eigenschaften des aktuellen <xref:System.Globali
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
-- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
-- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Formatierung von Typen](formatting-types.md)
+- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)
 - [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

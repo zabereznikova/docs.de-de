@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12dfdd3ac6d75a3e2a33f93d8847c963ded912e8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141384"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286092"
 ---
 # <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen
 
@@ -29,9 +29,9 @@ Die ARM kann auf vier Arten aktiviert werden: Durch Bereitstellen einer Konfigur
 
 Sobald die ARM aktiviert ist, beginnt diese mit der Sammlung von Daten für alle Anwendungsdomänen im Prozess. Wenn vor der Aktivierung der ARM eine Anwendungsdomäne erstellt wurde, wird bei der Aktivierung der ARM (nicht bei der Erstellung der Anwendungsdomäne) die Sammlung kumulativer Daten gestartet. Sobald diese aktiviert ist, kann die ARM nicht deaktiviert werden.
 
-- Sie können die ARM beim Start der CLR aktivieren, indem Sie das [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)-Element zur Konfigurationsdatei hinzufügen und das `enabled`-Attribut auf `true` festlegen. Der Wert `false` (Standardeinstellung) gibt lediglich an, dass die ARM beim Start nicht aktiviert wurde. Sie können sie später durch eine der anderen Aktivierungsmethoden aktivieren.
+- Sie können die ARM beim Start der CLR aktivieren, indem Sie das [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)-Element zur Konfigurationsdatei hinzufügen und das `enabled`-Attribut auf `true` festlegen. Der Wert `false` (Standardeinstellung) gibt lediglich an, dass die ARM beim Start nicht aktiviert wurde. Sie können sie später durch eine der anderen Aktivierungsmethoden aktivieren.
 
-- Der Host kann die ARM durch Anfordern der Hostingschnittstelle [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) aktivieren. Sobald diese Schnittstelle erfolgreich abgerufen wurde, wird die ARM aktiviert.
+- Der Host kann die ARM durch Anfordern der Hostingschnittstelle [ICLRAppDomainResourceMonitor](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) aktivieren. Sobald diese Schnittstelle erfolgreich abgerufen wurde, wird die ARM aktiviert.
 
 - Verwalteter Code kann die ARM aktivieren, indem die statische (`Shared` in Visual Basic) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>-Eigenschaft auf `true` festgelegt wird. Sobald die Eigenschaft festgelegt ist, wird die ARM aktiviert.
 
@@ -45,15 +45,15 @@ Die ARM stellt die gesamte von einer Anwendungsdomäne in Anspruch genommene Pro
 
   - Verwaltete API: Eigenschaft <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>
 
-  - Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)-Methode
+  - Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)-Methode
 
-  - ETW-Ereignisse: Ereignisse `ThreadCreated`, `ThreadAppDomainEnter` und `ThreadTerminated`. Informationen zu Anbietern und Schlüsselwörtern finden Sie im Artikel [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md) unter „ETW-Ereignisse der Anwendungsdomänen-Ressourcenüberwachung“.
+  - ETW-Ereignisse: Ereignisse `ThreadCreated`, `ThreadAppDomainEnter` und `ThreadTerminated`. Informationen zu Anbietern und Schlüsselwörtern finden Sie im Artikel [CLR-ETW-Ereignisse](../../framework/performance/clr-etw-events.md) unter „ETW-Ereignisse der Anwendungsdomänen-Ressourcenüberwachung“.
 
 - **Gesamtanzahl der durch eine Anwendungsdomäne während ihrer Lebensdauer vorgenommenen verwalteten Zuordnungen in Byte:** Die Gesamtanzahl der Zuordnungen spiegelt nicht immer die Speicherauslastung einer Anwendungsdomäne wider, da die zugeordneten Objekte kurzlebig sein können. Wenn eine Anwendung eine große Anzahl von Objekten zuordnet und freigibt, können die Kosten für die Zuordnungen beträchtlich sein.
 
   - Verwaltete API: Eigenschaft <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>
 
-  - Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)-Methode
+  - Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)-Methode
 
   - ETW-Ereignisse: Ereignis `AppDomainMemAllocated`, Feld `Allocated`
 
@@ -61,7 +61,7 @@ Die ARM stellt die gesamte von einer Anwendungsdomäne in Anspruch genommene Pro
 
   - Verwaltete API: Eigenschaft <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>
 
-  - Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)-Methode mit dem Parameter `pAppDomainBytesSurvived`
+  - Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)-Methode mit dem Parameter `pAppDomainBytesSurvived`
 
   - ETW-Ereignisse: Ereignis `AppDomainMemSurvived`, Feld `Survived`
 
@@ -69,7 +69,7 @@ Die ARM stellt die gesamte von einer Anwendungsdomäne in Anspruch genommene Pro
 
   - Verwaltete API: Eigenschaft <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>
 
-  - Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)-Methode mit dem Parameter `pTotalBytesSurvived`
+  - Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)-Methode mit dem Parameter `pTotalBytesSurvived`
 
   - ETW-Ereignisse: Ereignis `AppDomainMemSurvived`, Feld `ProcessSurvived`
 
@@ -85,11 +85,11 @@ Alternativ können Sie in regelmäßigen Abständen die <xref:System.GC.Collecti
 
 #### <a name="hosting-api"></a>Hosting-API
 
-Wenn Sie die nicht verwaltete Hosting-API verwenden, muss Ihr Host der CLR eine Implementierung der [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)-Schnittstelle übergeben. Die CLR ruft die Methode [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) auf, wenn bei der Ausführung einer Auflistung die Ausführung der angehaltenen Threads fortgesetzt wird. Die CLR übergibt die Erzeugung der abgeschlossenen Auflistung als Parameter der Methode, damit der Host ermitteln kann, ob die Auflistung vollständig oder teilweise ausgeführt wurde. Ihre Implementierung der [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)-Methode kann den beibehaltenen Speicher abfragen, um sicherzustellen, dass die Werte direkt nach ihrer Aktualisierung abgerufen werden.
+Wenn Sie die nicht verwaltete Hosting-API verwenden, muss Ihr Host der CLR eine Implementierung der [IHostGCManager](../../framework/unmanaged-api/hosting/ihostgcmanager-interface.md)-Schnittstelle übergeben. Die CLR ruft die Methode [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) auf, wenn bei der Ausführung einer Auflistung die Ausführung der angehaltenen Threads fortgesetzt wird. Die CLR übergibt die Erzeugung der abgeschlossenen Auflistung als Parameter der Methode, damit der Host ermitteln kann, ob die Auflistung vollständig oder teilweise ausgeführt wurde. Ihre Implementierung der [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)-Methode kann den beibehaltenen Speicher abfragen, um sicherzustellen, dass die Werte direkt nach ihrer Aktualisierung abgerufen werden.
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [ICLRAppDomainResourceMonitor-Schnittstelle](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+- [ICLRAppDomainResourceMonitor-Schnittstelle](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [CLR-ETW-Ereignisse](../../framework/performance/clr-etw-events.md)

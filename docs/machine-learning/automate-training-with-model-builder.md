@@ -1,14 +1,14 @@
 ---
 title: Was ist der Modell-Generator und wie funktioniert er?
 description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators zum automatischen Trainieren eines Machine Learning-Modells.
-ms.date: 03/25/2020
+ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616928"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289498"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -119,7 +119,7 @@ Wenn Sie noch keine eigenen Daten haben, probieren Sie eines dieser Datasets aus
 
 ## <a name="train"></a>Training
 
-Sobald Sie Ihr Szenario, Ihre Daten und Ihre Bezeichnung ausgewählt haben, trainiert der Modell-Generator das Modell.
+Sobald Sie Ihr Szenario, Ihre Umgebung, Ihre Daten und Ihre Bezeichnung ausgewählt haben, trainiert der Modell-Generator das Modell.
 
 ### <a name="what-is-training"></a>Was bedeutet Training?
 
@@ -149,6 +149,8 @@ Diese Zahlen sind nur eine Richtlinie. Die genaue Trainingsdauer ist abhängig v
 - Typ der Spalten
 - ML-Aufgabe
 - CPU-, Datenträger- und Arbeitsspeicherleistung des zum Training verwendeten Computers
+
+Im Allgemeinen wird empfohlen, mehr als 100 Zeilen als Datasets verwenden, da weniger als diese Anzahl möglicherweise keine Ergebnisse liefert und das Training deutlich länger dauern kann.
 
 ## <a name="evaluate"></a>Auswerten
 
@@ -193,7 +195,7 @@ Wenn Ihr Modellleistungswert nicht so gut ist, wie Sie es sich wünschen, haben 
 
 - Längeres Trainieren. Je mehr Zeit einer automatisierten Machine Learning-Engine zum Trainieren zur Verfügung steht, desto mehr Algorithmen und Einstellungen kann sie ausprobieren.
 
-- Weitere Daten hinzufügen. Manchmal reicht die Datenmenge nicht aus, um ein hochwertiges Machine Learning-Modell zu trainieren.
+- Weitere Daten hinzufügen. Manchmal reicht die Datenmenge nicht aus, um ein hochwertiges Machine Learning-Modell zu trainieren. Dies gilt besonders für Datasets mit einer kleinen Anzahl von Beispielen.
 
 - Ihre Daten ausgleichen. Achten Sie bei Klassifizierungsaufgaben darauf, dass der Trainingssatz über die Kategorien hinweg gleichmäßig verteilt ist. Wenn Sie beispielsweise vier Klassen für 100 Trainingsbeispiele haben und die beiden ersten Klassen (tag1 und tag2) für 90 Datensätze verwendet werden, die anderen beiden (tag3 und tag4) aber nur für die restlichen 10 Datensätze, kann das dazu führen, dass Ihr Modell Schwierigkeiten hat, tag3 oder tag4 korrekt vorherzusagen, da die Daten nicht gleichmäßig verteilt sind.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 1fdf7fcd61fb4bf9e8e0cbfe28842208f6eadd00
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d59f368f21964c07d371df604f0728fa6ca8ac00
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102436"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307032"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 
@@ -122,7 +122,7 @@ Die Garbage Collection wird hauptsächlich in Verbindung mit der Freigabe kurzle
 
 - **Generation 0**. Dies ist die jüngste Generation, die kurzlebige Objekte enthält. Ein Beispiel für ein kurzlebiges Objekt ist eine temporäre Variable. Die Garbage Collection tritt am häufigsten in dieser Generation auf.
 
-  Neu zugeordnete Objekte bilden eine neue Generation von Objekten und sind implizit Sammlungen der Generation 0. Wenn es sich jedoch um große Objekte handelt, werden sie im großen Objektheap in einer Sammlung der Generation 2 verwaltet.
+  Neu zugeordnete Objekte bilden eine neue Generation von Objekten und sind implizit Sammlungen der Generation 0. Wenn es sich jedoch um große Objekte handelt, werden sie im großen Objektheap verwaltet, der manchmal auch als *Generation 3* bezeichnet wird. Generation 3 ist eine physische Generation, die logisch als Teil der Generation 2 erfasst wird.
 
   Die meisten Objekte werden bei einer Garbage Collection für Generation 0 freigegeben und bleiben nicht bis zur nächsten Generation aktiv.
   
@@ -137,6 +137,8 @@ Die Garbage Collection wird hauptsächlich in Verbindung mit der Freigabe kurzle
 - **Generation 2**. Diese Generation enthält langlebige Objekte. Ein Beispiel für ein langlebiges Objekt ist ein Objekt in einer Serveranwendung, das statische Daten enthält, die für die Dauer des Prozesses aktiv sind.
 
   Objekte in Generation 2, die nach einer Collection noch vorhanden sind, bleiben in Generation 2, bis sie in einer künftigen Collection als nicht erreichbar erkannt werden.
+  
+  Objekte im großen Objektheap (manchmal auch als *Generation 3*bezeichnet) werden auch in Generation 2 gesammelt.
 
 Garbage Collections finden für bestimmte Generationen statt, wenn die Bedingungen dies erfordern. Das Durchführen einer Sammlung für eine Generation bedeutet, dass Objekte in dieser Generation und in allen jüngeren Generationen gesammelt werden. Eine Garbage Collection für Generation 2 wird auch als vollständige Garbage Collection bezeichnet, da hierbei alle Objekte in allen Generationen (d. h. alle Objekte im verwalteten Heap) freigegeben werden.
 
@@ -198,7 +200,7 @@ Vor dem Start einer Garbage Collection werden alle verwalteten Threads bis auf d
 
 Die folgende Abbildung zeigt einen Thread, der eine Garbage Collection auslöst und eine Unterbrechung der Ausführung anderer Threads verursacht.
 
-![Garbage Collection, die durch einen Thread ausgelöst wird](./media/gc-triggered.png)
+![Garbage Collection, die durch einen Thread ausgelöst wird](media/gc-triggered.png)
 
 ## <a name="unmanaged-resources"></a>Nicht verwaltete Ressourcen
 

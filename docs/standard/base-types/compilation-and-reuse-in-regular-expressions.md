@@ -12,12 +12,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: b89f7f88233ecdab25ba2a74647aafeb4d8b74af
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 54f14a4f31bef00dd222686cc523935b2d9dd5fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344192"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279037"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Kompilierung und Wiederverwendung in regulären Ausdrücken
 Sie können die Leistung von Anwendungen optimieren, die umfangreichen Gebrauch von regulären Ausdrücken machen, wenn Sie verstehen, wie die Engine für reguläre Ausdrücke kompiliert, und wie reguläre Ausdrücke zwischengespeichert werden. Dieses Thema behandelt das Kompilieren und das Zwischenspeichern.  
@@ -44,4 +44,4 @@ Sie können die Leistung von Anwendungen optimieren, die umfangreichen Gebrauch 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Reguläre Ausdrücke von .NET](regular-expressions.md)

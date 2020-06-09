@@ -16,12 +16,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 4fc7667a2123a106b995a1ea3a31da4551ca650e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 79c5541b4c384e91fbec8c8f1b2130887e79a252
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375963"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289680"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Steuern der XML-Serialisierung mit Attributen
 
@@ -67,7 +67,7 @@ public class TaxRates {
 }
 ```
 
-Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/standard/attributes/index.md). Eine Liste mit Attributen zur Steuerung der XML-Serialisierung finden Sie unter [Attribute zur Steuerung der XML-Serialisierung](attributes-that-control-xml-serialization.md).
+Weitere Informationen zu Attributen finden Sie unter [Attribute](../attributes/index.md). Eine Liste mit Attributen zur Steuerung der XML-Serialisierung finden Sie unter [Attribute zur Steuerung der XML-Serialisierung](attributes-that-control-xml-serialization.md).
 
 ## <a name="controlling-array-serialization"></a>Steuern der Serialisierung von Arrays
 

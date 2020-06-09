@@ -2,12 +2,12 @@
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 description: Übersicht über die Abhängigkeitsinjektion und Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144603"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306928"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -25,7 +25,7 @@ Der Projektmappen-Explorer des Microservice „Ordering.API“, der die Unterord
 
 ASP.NET Core enthält einen einfachen [integrierten Container](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (dargestellt durch die IServiceProvider-Schnittstelle), der die Constructor Injection standardmäßig unterstützt. Zudem stellt ASP.NET bestimmte Dienste über Dependency Injection zur Verfügung. ASP.NET Core verwendet den Begriff *Dienst* für alle Typen, die Sie registrieren und die über DI eingefügt werden. Sie konfigurieren die integrierten Containerdienste in der ConfigureServices-Methode in der Startup-Klasse Ihrer Anwendung. Ihre Abhängigkeiten werden in den Diensten implementiert, die ein Typ benötigt und die Sie im IoC-Container registrieren.
 
-In der Regel fügen Sie Abhängigkeiten ein, die Infrastrukturobjekte implementieren. Eine sehr typische einzufügende Abhängigkeit ist ein Repository. Sie können jedoch auch jede andere Infrastrukturabhängigkeit einfügen, die verfügbar ist. Für einfachere Implementierungen können Sie Ihr Arbeitseinheitsmuster-Objekt (EF DbContext-Objekt) direkt einfügen, da der DBContext auch die Implementierung Ihrer Infrastrukturpersistenzobjekte ist.
+In der Regel fügen Sie Abhängigkeiten ein, die Infrastrukturobjekte implementieren. Eine typische einzufügende Abhängigkeit ist ein Repository. Sie können jedoch auch jede andere Infrastrukturabhängigkeit einfügen, die verfügbar ist. Für einfachere Implementierungen können Sie Ihr Arbeitseinheitsmuster-Objekt (EF DbContext-Objekt) direkt einfügen, da der DBContext auch die Implementierung Ihrer Infrastrukturpersistenzobjekte ist.
 
 Im folgenden Beispiel sehen Sie, wie .NET Core die erforderlichen Repositoryobjekte über den Konstruktor einfügt. Die Klasse ist ein Befehlshandler, der im nächsten Abschnitt beschrieben wird.
 
@@ -477,7 +477,7 @@ Ein weiterer guter Grund für die Verwendung des Musters wurde von Jimmy Bogard 
 
 > An dieser Stelle sollten auch Tests erwähnt werden. Sie bieten einen interessanten und konsistenten Einblick in das Verhalten des Systems. Eingabe der Anforderung , Ausgabe der Antwort. Dieser Aspekt war eine wichtige Voraussetzung für die Entwicklung von Tests mit durchgängigem Verhalten.
 
-Zunächst wird ein WebAPI-Beispielcontroller behandelt, auf dem Sie normalerweise das Vermittlerobjekt verwenden. Wenn Sie das Vermittlerobjekt nicht verwenden würden, müssten Sie alle Abhängigkeiten für diesen Controller einfügen, etwa ein Protokollierungsobjekt usw. Das Ergebnis ist ein ziemlich komplizierter Konstruktor. Wenn Sie jedoch das Vermittlerobjekt verwenden, kann der Konstruktor des Controllers wesentlich einfacher sein, mit einigen wenigen Abhängigkeiten anstelle von vielen Abhängigkeiten, z.B. eine pro querschnittlichen Vorgang, was im folgenden Beispiel veranschaulicht wird:
+Zunächst wird ein WebAPI-Beispielcontroller behandelt, auf dem Sie normalerweise das Vermittlerobjekt verwenden. Wenn Sie das Vermittlerobjekt nicht verwenden würden, müssten Sie alle Abhängigkeiten für diesen Controller einfügen, etwa ein Protokollierungsobjekt usw. Das Ergebnis wäre ein komplizierter Konstruktor. Wenn Sie jedoch das Vermittlerobjekt verwenden, kann der Konstruktor des Controllers wesentlich einfacher sein, mit einigen wenigen Abhängigkeiten anstelle von vielen Abhängigkeiten, z.B. eine pro querschnittlichen Vorgang, was im folgenden Beispiel veranschaulicht wird:
 
 ```csharp
 public class MyMicroserviceController : Controller

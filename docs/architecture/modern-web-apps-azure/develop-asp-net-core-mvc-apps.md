@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 955d4ec4a0bd0ddf2d022d4154fc6528b2abf3d0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: be674f3292238b1983064408184777d379cf52a7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144551"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307006"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -88,7 +88,7 @@ Im vorherigen Beispiel hat die Seite Routen mit einem ganzzahligen `id`-Paramete
 "/Products/123"
 ```
 
-Nachdem eine bestimmte Anforderung einer Route zugeordnet wurde, aber noch bevor die Aktionsmethode aufgerufen wird, führt ASP.NET Core MVC Vorgänge zur [Modellbindung](/aspnet/core/mvc/models/model-binding) und [Modellvalidierung](/aspnet/core/mvc/models/validation) für die Anforderung aus. Die Modellbindung ist notwendig, um eingehende HTTP-Daten in .NET-Typen zu konvertieren, die als Parameter der aufzurufenden Aktionsmethode angegeben wurden. Wenn z.B. die Aktionsmethode einen int-ID-Parameter erwartet, versucht die Modellbindung, diesen Parameter über einen Wert bereitzustellen, der Teil der Anforderung ist. Dafür sucht die Modellbindung nach bereitgestellten Formularwerten, Werten in der Route selbst und Werten von Abfragezeichenfolgen. Wenn ein ID-Wert gefunden wird, wird dieser in eine ganze Zahl konvertiert, bevor dieser an die Aktionsmethode übergeben wird.
+Nachdem eine bestimmte Anforderung einer Route zugeordnet wurde, aber noch bevor die Aktionsmethode aufgerufen wird, führt ASP.NET Core MVC Vorgänge zur [Modellbindung](/aspnet/core/mvc/models/model-binding) und [Modellvalidierung](/aspnet/core/mvc/models/validation) für die Anforderung aus. Die Modellbindung ist notwendig, um eingehende HTTP-Daten in .NET-Typen zu konvertieren, die als Parameter der aufzurufenden Aktionsmethode angegeben wurden. Wenn z. B. die Aktionsmethode einen `int id`-Parameter erwartet, versucht die Modellbindung, diesen Parameter über einen Wert bereitzustellen, der Teil der Anforderung ist. Dafür sucht die Modellbindung nach bereitgestellten Formularwerten, Werten in der Route selbst und Werten von Abfragezeichenfolgen. Wenn ein ID-Wert gefunden wird, wird dieser in eine ganze Zahl konvertiert, bevor dieser an die Aktionsmethode übergeben wird.
 
 Nach der Modellbindung, aber noch vor dem Aufruf der Aktionsmethode, wird eine Modellvalidierung vorgenommen. Die Modellvalidierung verwendet optionale Attribute für den Modelltyp. In diesem Zusammenhang kann ggf. sichergestellt werden, dass das bereitgestellte Modellobjekt mit bestimmten Anforderungen an Daten konform ist. Bestimmte Werte sind möglicherweise entsprechend den Anforderungen angegeben oder auf eine bestimmte Länge bzw. einen bestimmten numerischen Bereich beschränkt. Wenn Validierungsattribute angegeben sind, das Modell aber nicht deren Anforderungen entspricht, wird für die Eigenschaft „ModelState.IsValid“ FALSE zurückgegeben. Dann können die fehlerhaften Validierungsregeln an den Client gesendet werden, von dem die Anforderung ausgeht.
 

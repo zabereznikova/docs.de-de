@@ -2,15 +2,15 @@
 title: Azure-Trainingsressourcen für den Modellgenerator
 description: Ein Leitfaden zu Ressourcen für Azure Machine Learning
 ms.topic: reference
-ms.date: 02/27/2020
+ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a19e13955d0eaea344109eb817f3a3959c3dd883
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185825"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289472"
 ---
 # <a name="model-builder-azure-training-resources"></a>Azure-Trainingsressourcen für den Modellgenerator
 
@@ -49,6 +49,10 @@ Folgendes ist erforderlich, um einen Azure Machine Learning-Arbeitsbereich zu er
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
     Weitere Details zu GPU-optimierten Computetypen finden Sie in der [Linux-VM-Dokumentation zur NC-Serie](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json).
+- Computepriorität
+
+  - Niedrige Priorität: Geeignet für Aufgaben mit kürzerer Ausführungszeit. Kann durch Unterbrechungen und fehlende Verfügbarkeit beeinträchtigt werden. Kostet in der Regel weniger, weil überschüssige Kapazitäten in Azure genutzt werden.
+  - Dediziert: Geeignet für Aufgaben beliebiger Dauer, aber besonders für Aufträge mit langer Ausführungszeit. Nicht beeinträchtigt durch Unterbrechungen oder fehlende Verfügbarkeit. Kostet in der Regel mehr, weil eine dedizierte Gruppe von Computeressourcen in Azure für Ihre Aufgaben reserviert wird.
 
 ## <a name="training"></a>Aus- und Weiterbildung
 

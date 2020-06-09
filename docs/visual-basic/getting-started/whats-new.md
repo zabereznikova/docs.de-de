@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a9bac04a7839796229a2e1c61771ca32573f8fcd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187140"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374511"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -210,7 +210,7 @@ Weitere Informationen finden Sie unter [Verweisrückgabewerte](../programming-gu
 
 Sie können den nicht qualifizierten Zeichenfolgennamen eines Typs oder Members zur Verwendung in einer Fehlermeldung ohne Hartcodierung einer Zeichenfolge abrufen.  Dadurch bleibt der Code bei der Umgestaltung korrekt.  Diese Funktion eignet sich auch zum Einbinden von MVC-Links (Model-View-Controller) und das Auslösen von Ereignissen durch geänderte Eigenschaften.
 
-[Zeichenfolgeninterpolation](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+[Zeichenfolgeninterpolation](../programming-guide/language-features/strings/interpolated-strings.md)
 
 Sie können Ausdrücke für die Zeichenfolgeninterpolierung zum Erstellen von Zeichenfolgen verwenden.  Ein Ausdruck für eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die Ausdrücke enthält.  Eine interpolierte Zeichenfolge ist in Bezug auf die Argumente leichter zu verstehen als eine [Zusammengesetzte Formatierung](../../standard/base-types/composite-formatting.md).
 
@@ -218,7 +218,7 @@ Sie können Ausdrücke für die Zeichenfolgeninterpolierung zum Erstellen von Ze
 
 Sie können eine Prüfung auf null auf sehr einfache syntaktische Weise vornehmen, bevor Sie eine Operation für den Memberzugriff (`?.`) oder die Indizierung (`?[]`) ausführen.  Mithilfe dieser Operatoren müssen Sie für die Prüfung auf null weniger Code schreiben, insbesondere beim tieferen Eindringen in Datenstrukturen.  Wenn der linke Operand oder Objektverweis NULL ist, geben die Operationen NULL zurück.
 
-[Multi-line string literals (Mehrzeilige Zeichenfolgenliterale)](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
+[Multi-line string literals (Mehrzeilige Zeichenfolgenliterale)](../programming-guide/language-features/strings/string-basics.md)
 
 Zeichenfolgenliterale können Zeilenumbruchsequenzen enthalten.  Sie müssen nicht mehr die alte Problemumgehung mit `<xml><![CDATA[...text with newlines...]]></xml>.Value` verwenden.
 
@@ -238,11 +238,11 @@ Datumsliterale im Format jjjj-mm-tt sind möglich, z. B. `#2015-03-17 16:10 PM#`
 
 Sie können mithilfe einer Readwrite-Eigenschaft schreibgeschützte Schnittstelleneigenschaften implementieren. Die Schnittstelle garantiert Mindestfunktionalität und hindert eine Implementierungsklasse nicht daran, die Festlegung der Eigenschaft zuzulassen.
 
-[TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
+[TypeOf \<expr> IsNot \<type>](../language-reference/operators/typeof-operator.md)
 
 Zur besseren Lesbarkeit des Codes können Sie nun `TypeOf` mit `IsNot` verwenden.
 
-[#Disable Warning\<<ID> und #Enable Warning \<<ID>](../../visual-basic/language-reference/directives/index.md)
+[#Disable Warning\<ID> und #Enable Warning \<ID>](../language-reference/directives/index.md)
 
 Sie können bestimmte Warnungen für Bereiche innerhalb einer Quelldatei deaktivieren und aktivieren.
 
@@ -250,15 +250,15 @@ Sie können bestimmte Warnungen für Bereiche innerhalb einer Quelldatei deaktiv
 
 Beim Schreiben von Dokumentationskommentaren steht intelligente Editor- und Buildunterstützung zum Überprüfen von Parameternamen, ordnungsgemäßer Handhabung von `crefs` (Generics, Operatoren usw.), Farben und Umgestaltung bereit.
 
-[Partial Module and Interface Definitions (Partielle Modul- und Schnittstellendefinitionen)](../../visual-basic/language-reference/modifiers/partial.md)
+[Partial Module and Interface Definitions (Partielle Modul- und Schnittstellendefinitionen)](../language-reference/modifiers/partial.md)
 
 Zusätzlich zu Klassen und Strukturen können Sie partielle Module und Schnittstellen deklarieren.
 
-[#Region directives inside method bodies (#Region-Anweisungen in Methodentexten)](../../visual-basic/language-reference/directives/region-directive.md)
+[#Region directives inside method bodies (#Region-Anweisungen in Methodentexten)](../language-reference/directives/region-directive.md)
 
 Sie können die Begrenzer #Region...#End Region an einer beliebigen Stelle in einer Datei, innerhalb von Funktionen und sogar Funktionsrümpfe übergreifend einfügen.
 
-[Overrides definitions are implicitly overloads (Überschreibungsdefinitionen sind implizite Überladungen)](../../visual-basic/language-reference/modifiers/overrides.md)
+[Overrides definitions are implicitly overloads (Überschreibungsdefinitionen sind implizite Überladungen)](../language-reference/modifiers/overrides.md)
 
 Wenn Sie den `Overrides`-Modifizierer zu einer Definition hinzufügen, fügt der Compiler implizit `Overloads` hinzu, sodass Sie in allgemeinen Fällen weniger Code eingeben können.
 

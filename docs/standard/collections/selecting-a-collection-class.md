@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: d79f1ca0d264a5a17306bb66f285b6fbe6b4e7ca
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 62f4f768753637043ab91219cfb63c741a194b96
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728486"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287925"
 ---
 # <a name="selecting-a-collection-class"></a>Auswählen einer Auflistungsklasse
 
@@ -34,9 +34,9 @@ Stellen Sie sich die folgenden Fragen:
 
 - Benötigen Sie Zugriff auf die Elemente in einer bestimmten Reihenfolge, z. B. FIFO, LIFO oder zufällig?
 
-  - Die Klasse <xref:System.Collections.Queue> sowie die generischen Klassen <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> und <xref:System.Collections.Immutable.ImmutableQueue%601> bieten alle einen FIFO-Zugriff. Weitere Informationen finden Sie unter [Verwendung einer threadsicheren Sammlung](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).
+  - Die Klasse <xref:System.Collections.Queue> sowie die generischen Klassen <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> und <xref:System.Collections.Immutable.ImmutableQueue%601> bieten alle einen FIFO-Zugriff. Weitere Informationen finden Sie unter [Verwendung einer threadsicheren Sammlung](thread-safe/when-to-use-a-thread-safe-collection.md).
 
-  - Die Klasse <xref:System.Collections.Stack> sowie die generischen Klassen <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601> und <xref:System.Collections.Immutable.ImmutableStack%601> bieten alle einen LIFO-Zugriff. Weitere Informationen finden Sie unter [Verwendung einer threadsicheren Sammlung](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).
+  - Die Klasse <xref:System.Collections.Stack> sowie die generischen Klassen <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601> und <xref:System.Collections.Immutable.ImmutableStack%601> bieten alle einen LIFO-Zugriff. Weitere Informationen finden Sie unter [Verwendung einer threadsicheren Sammlung](thread-safe/when-to-use-a-thread-safe-collection.md).
 
   - Die generische Klasse <xref:System.Collections.Generic.LinkedList%601> ermöglicht sequenziellen Zugriff von oben nach unten oder von unten nach oben.
 
@@ -68,7 +68,7 @@ Stellen Sie sich die folgenden Fragen:
 
 - Benötigen Sie schnelle Suchvorgänge und schnellen Abruf von Informationen?
 
-  - <xref:System.Collections.Specialized.ListDictionary> ist schneller als <xref:System.Collections.Hashtable> bei kleinen Auflistungen (mit höchstens 10 Elementen). Die generische Klasse <xref:System.Collections.Generic.Dictionary%602> stellt schnellere Suchvorgänge als die generische Klasse <xref:System.Collections.Generic.SortedDictionary%602> bereit. Die Multithreadimplementierung ist <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> stellt schnelle Multithreadeinfügung für unsortierte Daten bereit. Weitere Informationen zu beiden Multithreadtypen finden Sie unter [Verwendung einer threadsicheren Auflistung](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).
+  - <xref:System.Collections.Specialized.ListDictionary> ist schneller als <xref:System.Collections.Hashtable> bei kleinen Auflistungen (mit höchstens 10 Elementen). Die generische Klasse <xref:System.Collections.Generic.Dictionary%602> stellt schnellere Suchvorgänge als die generische Klasse <xref:System.Collections.Generic.SortedDictionary%602> bereit. Die Multithreadimplementierung ist <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> stellt schnelle Multithreadeinfügung für unsortierte Daten bereit. Weitere Informationen zu beiden Multithreadtypen finden Sie unter [Verwendung einer threadsicheren Auflistung](thread-safe/when-to-use-a-thread-safe-collection.md).
 
 - Benötigen Sie Auflistungen, die nur Zeichenfolgen annehmen?
 
@@ -80,11 +80,11 @@ Stellen Sie sich die folgenden Fragen:
 
 Mit der LINQ to Objects-Funktion können Entwickler LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, wenn der Objekttyp <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) und [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).
 
-PLINQ stellt eine parallele Implementierung von LINQ to Objects bereit, die in vielen Szenarien eine schnellere Abfrageausführung durch eine effizientere Verwendung von Computern mit mehreren Kernen bietet. Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md).
+PLINQ stellt eine parallele Implementierung von LINQ to Objects bereit, die in vielen Szenarien eine schnellere Abfrageausführung durch eine effizientere Verwendung von Computern mit mehreren Kernen bietet. Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../parallel-programming/introduction-to-plinq.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>
 - <xref:System.Collections.Generic>
-- [Threadsichere Sammlungen](../../../docs/standard/collections/thread-safe/index.md)
+- [Threadsichere Sammlungen](thread-safe/index.md)

@@ -2,12 +2,12 @@
 title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5c2f3bd32396b45a6209550f5b7a07c88795ccc0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144330"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306954"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -53,13 +53,13 @@ In einer Microservicesarchitektur müssen die Client-Apps in der Regel die Funkt
 
 Daher kann es sehr praktisch sein, für microservicebasierte Anwendungen eine Zwischenebene der Dereferenzierung (Gateway) einzurichten. Wenn Sie keine API-Gateways verwenden, muss die Client-App Anforderungen direkt an die Microservices senden. Das kann u.a. zu folgenden Problemen führen:
 
-- **Kopplung**: Ohne das API-Gatewaymuster werden die Client-Apps an die internen Microservices gekoppelt. Die Client-Apps müssen wissen, wie die vielen verschiedenen Bereiche der Anwendung in Microservices zerlegt sind. Wenn die internen Microservices weiterentwickelt und umgestaltet werden, kann dies aufgrund der direkten Verweise auf diese Microservices zu Breaking Changes bei den Client-Apps führen. Dies kann sich massiv auf die Wartung auswirken. Client-Apps müssen häufig aktualisiert, wodurch die Entwicklung der Lösung noch schwieriger wird.
+- **Kopplung**: Ohne das API-Gatewaymuster werden die Client-Apps an die internen Microservices gekoppelt. Die Client-Apps müssen wissen, wie die vielen verschiedenen Bereiche der Anwendung in Microservices zerlegt sind. Wenn die internen Microservices weiterentwickelt und umgestaltet werden, kann dies aufgrund der direkten Verweise auf diese Microservices zu Breaking Changes bei den Client-Apps führen, was sich auf die Wartung auswirken kann. Client-Apps müssen häufig aktualisiert, wodurch die Entwicklung der Lösung noch schwieriger wird.
 
 - **Zu viele Roundtrips**: Eine einzige Seite in der Client-App erfordert möglicherweise mehrere Aufrufe für mehrere Diensten. Dies kann zu mehreren Netzwerkroundtrips zwischen dem Client und dem Server führen, was eine erheblich höhere Latenz nach sich zieht. Eine Aggregierung auf einer Zwischenebene kann die Leistung und Benutzerfreundlichkeit für die Client-App verbessern.
 
 - **Sicherheitsprobleme**: Ohne ein Gateway müssen alle Microservices für die „Außenwelt“ verfügbar gemacht werden. Dadurch bieten sie eine größere Angriffsfläche als verborgene interne Microservices, die nicht direkt von den Client-Apps verwendet werden. Je kleiner die Angriffsfläche ist, desto sicherer kann Ihre Anwendung sein.
 
-- **Übergreifende Aspekte**: Für jeden öffentlich verfügbaren Microservice müssen Aspekte wie Autorisierung, SSL usw. berücksichtigt werden. In vielen Situationen können diese Aspekte auf einer einzigen Ebene verarbeitet werden, sodass die internen Microservices vereinfacht werden.
+- **Übergreifende Aspekte**: Für jeden öffentlich verfügbaren Microservice müssen Aspekte wie Autorisierung und SSL berücksichtigt werden. In vielen Situationen können diese Aspekte auf einer einzigen Ebene verarbeitet werden, sodass die internen Microservices vereinfacht werden.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Was ist das API-Gatewaymuster?
 
@@ -93,7 +93,7 @@ Abbildung 4-13.1 zeigt API-Gateways, die nach Clienttyp getrennt sind: eines f�
 
 Ein API-Gateway kann mehrere Funktionen bieten. Je nach Produkt stehen umfangreichere oder einfachere Funktionen zur Verfügung. Die wichtigsten und grundlegendsten Funktionen für jedes API-Gateway sind jedoch die folgenden Entwurfsmuster:
 
-**Reverseproxy- oder Gatewayrouting.** Das API-Gateway bietet einen Reverseproxy, um Anforderungen an die Endpunkte der internen Microservices umzuleiten (Layer-7-Routing, in der Regel HTTP-Anforderungen). Das Gateway stellt einen einzigen Endpunkt bzw. eine einzige URL für die Client-Apps bereit und ordnet die Anforderungen intern einer Gruppe von internen Microservices zu. Dieses Routingfeature hilft dabei, die Client-Apps von den Microservices zu entkoppeln, ist aber auch dann sehr praktisch, wenn eine monolithische API modernisiert werden soll: Indem Sie das API-Gateway zwischen die monolithische API und die Client-Apps platzieren, können Sie neue APIs als neue Microservices hinzufügen und dennoch weiterhin die ältere monolithische API verwenden, bis diese zu einem späteren Zeitpunkt in mehrere Microservices aufgeteilt wird. Durch das API-Gateway wissen die Client-Apps nicht, ob die verwendeten APIs als interne Microservices oder monolithische API implementiert sind. Viel wichtiger noch: Wenn eine monolithische API weiterentwickelt und in Microservices umgestaltet wird, wirken sich URI-Änderungen dank des API-Gatewayroutings nicht auf Client-Apps aus.
+**Reverseproxy- oder Gatewayrouting.** Das API-Gateway bietet einen Reverseproxy, um Anforderungen an die Endpunkte der internen Microservices umzuleiten (Layer-7-Routing, in der Regel HTTP-Anforderungen). Das Gateway stellt einen einzigen Endpunkt bzw. eine einzige URL für die Client-Apps bereit und ordnet die Anforderungen intern einer Gruppe von internen Microservices zu. Dieses Routingfeature hilft dabei, die Client-Apps von den Microservices zu entkoppeln, ist aber auch dann praktisch, wenn eine monolithische API modernisiert werden soll: Indem Sie das API-Gateway zwischen die monolithische API und die Client-Apps platzieren, können Sie neue APIs als neue Microservices hinzufügen und dennoch weiterhin die ältere monolithische API verwenden, bis diese zu einem späteren Zeitpunkt in mehrere Microservices aufgeteilt wird. Durch das API-Gateway wissen die Client-Apps nicht, ob die verwendeten APIs als interne Microservices oder monolithische API implementiert sind. Viel wichtiger noch: Wenn eine monolithische API weiterentwickelt und in Microservices umgestaltet wird, wirken sich URI-Änderungen dank des API-Gatewayroutings nicht auf Client-Apps aus.
 
 Weitere Informationen finden Sie unter [Muster „Gatewayrouting“](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
 
@@ -144,7 +144,7 @@ In diesem Leitfaden und in der Referenzbeispielanwendung (eShopOnContainers) ist
 
 ### <a name="ocelot"></a>Ocelot
 
-[Ocelot](https://github.com/ThreeMammals/Ocelot) ist ein einfaches API-Gateway, das sich für weniger komplexe Anforderungen empfiehlt. Ocelot ist ein .NET Core-basiertes Open Source-API-Gateway, das speziell für Microservicearchitekturen entwickelt wurde, für die einheitliche Eintrittspunkte in das System benötigt werden. Das Gateway ist schlank, schnell und skalierbar und bietet Routing und Authentifizierung sowie viele weitere Funktionen.
+[Ocelot](https://github.com/ThreeMammals/Ocelot) ist ein einfaches API-Gateway, das sich für weniger komplexe Anforderungen empfiehlt. Ocelot ist ein .NET Core-basiertes Open Source-API-Gateway, das speziell für Microservicearchitekturen entwickelt wurde, für die einheitliche Eintrittspunkte in deren Systeme benötigt werden. Das Gateway ist schlank, schnell und skalierbar und bietet Routing und Authentifizierung sowie viele weitere Funktionen.
 
 Der Hauptgrund Ocelot für Auswählen der [referenzanwendung eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) ist, da Ocelot eine einfache API-Gateway von .NET Core, die Sie in der gleichen Anwendung bereitstellungsumgebung bereitstellen können ist, in denen Sie bereitstellen, Ihre Microservices /-Container, z. B. ein Docker-Host, Kubernetes usw. Und da es auf .NET Core basiert, funktioniert es plattformübergreifend, sodass Sie Ihre Anwendung sowohl unter Linux als auch unter Windows bereitstellen können.
 
@@ -188,7 +188,7 @@ Nachdem wir Architektur und Muster beschrieben haben, wird in den nächsten Absc
 - **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Video) (Messaging und Microservices auf der GOTO 2016)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **API Gateway in a Nutshell (API-Gateway in aller Kürze)** (ASP.net Core API Gateway Tutorial Series (ASP.net Core API-Gateway-Tutorial-Reihe)) \
+- **API Gateway in a Nutshell (API-Gateway in aller Kürze)** (ASP.NET Core API Gateway Tutorial Series (ASP.NET Core API-Gateway-Tutorial-Reihe)) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]

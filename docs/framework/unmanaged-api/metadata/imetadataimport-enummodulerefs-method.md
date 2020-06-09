@@ -51,7 +51,7 @@ HRESULT EnumModuleRefs (
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|BESCHREIBUNG|  
+|HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumModuleRefs`wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcModuleRefs` ist 0 (null).|  
@@ -65,7 +65,7 @@ HRESULT EnumModuleRefs (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

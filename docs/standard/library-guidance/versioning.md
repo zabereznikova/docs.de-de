@@ -2,12 +2,12 @@
 title: Versionsverwaltung und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden für die Versionsverwaltung für .NET-Bibliotheken.
 ms.date: 12/10/2018
-ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab15d56e40abedd842b681496b9e5ee737c8b1cd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398496"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290122"
 ---
 # <a name="versioning"></a>Versionskontrolle
 
@@ -33,7 +33,7 @@ Der NuGet-Paketbezeichner wird in Kombination mit der NuGet-Paket-Version verwen
 
 Da die NuGet-Paketversion für Entwickler die sichtbarste Version ist, ist es eine gute Idee, sie mit der [semantischen Versionierung (SemVer)](https://semver.org/) zu aktualisieren. SemVer zeigt die Bedeutung von Änderungen zwischen den Versionen an und hilft Entwicklern, eine fundierte Entscheidung bei der Auswahl der zu verwendenden Version zu treffen. Wenn Sie beispielsweise von `1.0` auf `2.0` wechseln, zeigt dies an, dass es möglicherweise Änderungen gibt, die den Prozess unterbrechen.
 
-✔️ ERWÄGEN Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
+✔️ Erwägen Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
 
 ✔️ Verwenden Sie die NuGet-Paketversion in der öffentlichen Dokumentation, da den Benutzern häufig die Versionsnummer angezeigt wird.
 
@@ -49,9 +49,9 @@ Die Assemblyversion wird von CLR zur Runtime verwendet, um die zu ladende Versio
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-Die Windows .NET Framework-CLR verlangt eine genaue Übereinstimmung, um eine Assembly mit einem starken Namen zu laden. Beispielsweise wurde `Libary1, Version=1.0.0.0` mit einer Referenz auf `Newtonsoft.Json, Version=11.0.0.0` kompiliert. Das .NET Framework lädt nur die genaue Version `11.0.0.0`. Um zur Runtime eine andere Version zu laden, muss der Konfigurationsdatei der .NET-Anwendung eine Bindungsumleitung hinzugefügt werden.
+Die .NET Framework-CLR verlangt eine genaue Übereinstimmung, um eine Assembly mit einem starken Namen zu laden. Beispielsweise wurde `Libary1, Version=1.0.0.0` mit einer Referenz auf `Newtonsoft.Json, Version=11.0.0.0` kompiliert. .NET Framework lädt nur die genaue Version `11.0.0.0`. Um zur Runtime eine andere Version zu laden, muss der Konfigurationsdatei der .NET-Anwendung eine Bindungsumleitung hinzugefügt werden.
 
-Ein starker Name in Kombination mit der Assemblyversion ermöglicht das [strikte Laden der Assemblyversion](../assembly/versioning.md). Obwohl ein starker Name einer Bibliothek eine Reihe von Vorteilen hat, führt sie oft zu Runtimeausnahmen, dass eine Assembly nicht gefunden werden kann und [Bindungsumleitungen](../../framework/configure-apps/redirect-assembly-versions.md) in `app.config`/`web.config` erforderlich sind, um das Problem zu beheben. Das Laden von .NET Core-Assemblys wurde vereinfacht, und die .NET Core-CLR lädt Assemblys zur Runtime automatisch mit einer höheren Version.
+Ein starker Name in Kombination mit der Assemblyversion ermöglicht das [strikte Laden der Assemblyversion](../assembly/versioning.md). Obwohl ein starker Name einer Bibliothek eine Reihe von Vorteilen hat, führt dies oft zu Laufzeit-ausnahmen, dass eine Assembly nicht gefunden werden kann und dass [Bindungsumleitungen](../../framework/configure-apps/redirect-assembly-versions.md) in `app.config` oder `web.config` korrigiert werden müssen. In .NET Core gestaltet sich das Laden von Assemblys etwas weniger schwierig. Die .NET Core Runtime lädt Assemblys mit einer höheren Version zur Laufzeit automatisch.
 
 ✔️ Erwägen Sie, nur eine Hauptversion in die AssemblyVersion zu integrieren.
 

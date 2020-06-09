@@ -1,17 +1,21 @@
 ---
-title: ''
+title: Serialisieren und Deserialisieren von JSON mit C# – .NET
 description: Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.
-ms.date: ''
+ms.date: 05/13/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702267"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289511"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Marshallen und Marshallen rückgängig machen) von JSON-Daten in .NET
 
@@ -380,46 +384,10 @@ Um alle Nullwert-Eigenschaften auszuschließen, legen Sie die <xref:System.Text.
 Hier finden Sie ein zu serialisierendes Beispielobjekt und die JSON-Ausgabe:
 
 |Eigenschaft |Wert  |
-|---
-title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Date    | 8/1/2019 12:00:00 AM -07:00| | TemperatureCelsius| 25 | | Summary| null|
+|---------|---------|
+| Datum    | 8/1/2019 12:00:00 AM -07:00|
+| TemperatureCelsius| 25 |
+| Zusammenfassung| NULL|
 
 ```json
 {
@@ -672,65 +640,13 @@ Wenn Sie den angezeigten JSON-Code in den gezeigten Typ deserialisieren, gibt es
 Wenn Sie den zuvor gezeigten JSON-Code in diesen Beispieltyp deserialisieren, werden die zusätzlichen Daten zu Schlüssel-Wert-Paaren der `ExtensionData`-Eigenschaft:
 
 |Eigenschaft |Wert  |Hinweise  |
-|---
-title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: „Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.“
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Date    | 8/1/2019 12:00:00 AM -07:00|| | TemperatureCelsius| 0 | Keine Übereinstimmung unter Berücksichtigung von Groß-/Kleinschreibung (`temperatureCelsius` im JSON-Code), sodass die Eigenschaft nicht festgelegt wird. | | Summary | Hot || | ExtensionData | temperatureCelsius: 25 |Da die Groß-/Kleinschreibung nicht übereinstimmte, ist diese JSON-Eigenschaft ein zusätzliches Element und wird zu einem Schlüssel-Wert-Paar im Wörterbuch.| || DatesAvailable:<br>  8/1/2019 12:00:00 AM -07:00<br>8/2/2019 12:00:00 AM -07:00 |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.| | |SummaryWords:<br>Toll<br>Windig<br>Humid |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
+|---------|---------|---------|
+| Datum    | 8/1/2019 12:00:00 AM -07:00||
+| TemperatureCelsius| 0 | Keine Übereinstimmung unter Berücksichtigung von Groß-/Kleinschreibung (`temperatureCelsius` im JSON-Code), sodass die Eigenschaft nicht festgelegt wird. |
+| Zusammenfassung | Heiß ||
+| ExtensionData | temperatureCelsius: 25 |Da die Groß-/Kleinschreibung nicht übereinstimmte, ist diese JSON-Eigenschaft ein zusätzliches Element und wird zu einem Schlüssel-Wert-Paar im Wörterbuch.|
+|| DatesAvailable:<br>  8/1/2019 12:00:00 AM -07:00<br>8/2/2019 12:00:00 AM -07:00 |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
+| |SummaryWords:<br>Toll<br>Windig<br>Feucht |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
 
 Wenn das Zielobjekt serialisiert wird, werden die Schlüssel-Wert-Paare der Erweiterungsdaten zu genau solchen JSON-Eigenschaften, wie sie im eingehenden JSON-Code waren:
 

@@ -2,12 +2,12 @@
 title: Abhängigkeiten und .NET-Bibliotheken
 description: Hier finden Sie Empfehlungen zu Best Practices für die Verwaltung von NuGet-Abhängigkeiten in .NET-Bibliotheken.
 ms.date: 10/02/2018
-ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895706"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291369"
 ---
 # <a name="dependencies"></a>Abhängigkeiten
 

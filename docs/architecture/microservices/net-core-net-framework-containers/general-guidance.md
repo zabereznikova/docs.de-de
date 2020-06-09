@@ -2,18 +2,18 @@
 title: Allgemeine Anleitung
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Allgemeine Anleitung
 ms.date: 09/11/2018
-ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6e63d7804abc1703f17378584d58d66a933022c7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144564"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306876"
 ---
 # <a name="general-guidance"></a>Allgemeine Anleitung
 
 Dieser Abschnitt enthält eine Zusammenfassung darüber, wann .NET Core bzw. .NET Framework verwendet werden sollte. In den folgenden Abschnitten werden weitere Informationen dazu bereitgestellt.
 
-Sie sollten .NET Core mit Linux- oder Windows-Containern für Ihre containerisierte Docker-Serveranwendung verwenden, wenn:
+Verwenden Sie .NET Core mit Linux- oder Windows-Containern für Ihre containerisierte Docker-Serveranwendung, wenn:
 
 - Es bestehen plattformübergreifende Anforderungen. Sie beispielsweise Linux- und Windows-Container verwenden möchten
 
@@ -25,7 +25,7 @@ Kurz gesagt sollte Ihre Wahl standardmäßig auf .NET Core fallen, wenn Sie neue
 
 Ein zusätzlicher Vorteil bei der Verwendung von .NET Core besteht darin, dass Sie verschiedene Versionen von .NET für Anwendungen auf dem gleichen Computer parallel ausführen können. Dieser Vorteil ist wichtiger für Server oder virtuelle Computer, die keine Container verwenden, da durch Container die Versionen von .NET isoliert werden, die für die App erforderlich sind. (Solange diese mit dem zugrunde liegenden Betriebssystem kompatibel sind)
 
-Sie sollten .NET Framework für Ihre containerisierte Docker-Serveranwendung verwenden, wenn:
+Verwenden Sie .NET Framework für Ihre containerisierte Docker-Serveranwendung, wenn:
 
 - Ihre Anwendung derzeit .NET Framework verwendet und starke Abhängigkeiten von Windows aufweist
 

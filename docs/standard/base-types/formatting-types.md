@@ -1,5 +1,6 @@
 ---
 title: Formatieren von Typen in .NET
+description: Erfahren Sie, wie Sie Typen in .NET formatieren. Grundlegendes, wie Sie die ToString-Methode verwenden oder außer Kraft setzen. Erfahren Sie mehr über kulturabhängige, zusammengesetzte und benutzerdefinierte Formatierung.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 5d280b53d15bc674f325a726d69915d763aec34f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523949"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447081"
 ---
 # <a name="format-types-in-net"></a>Formatieren von Typen in .NET
 
@@ -45,7 +46,7 @@ Bei der Formatierung wird eine Instanz einer Klasse, Struktur oder eines Enumera
 - Unter Umständen muss ein Wert in einer Anwendung auf unterschiedliche Arten angezeigt werden. Beispielsweise stellt eine Anwendung einen Enumerationsmember möglicherweise dar, indem eine Zeichenfolgendarstellung des Namens oder des zugrunde liegende Werts angezeigt wird. Ein Beispiel für die Formatierung eines Members der <xref:System.DayOfWeek> -Enumeration auf unterschiedliche Weise finden Sie im Abschnitt [Standardformatzeichenfolgen](#standard-format-strings) .
 
 > [!NOTE]
-> Durch das Formatieren wird der Wert eines Typs in eine Zeichenfolgendarstellung konvertiert. Die Analyse ist die Umkehroperation zum Formatieren. In einem Analysevorgang wird eine Instanz eines Datentyps aus seiner Zeichenfolgendarstellung erstellt. Informationen zum Konvertieren von Zeichenfolgen in andere Datentypen finden Sie unter [Analysieren von Zeichenfolgen in .NET](../../../docs/standard/base-types/parsing-strings.md).
+> Durch das Formatieren wird der Wert eines Typs in eine Zeichenfolgendarstellung konvertiert. Die Analyse ist die Umkehroperation zum Formatieren. In einem Analysevorgang wird eine Instanz eines Datentyps aus seiner Zeichenfolgendarstellung erstellt. Informationen zum Konvertieren von Zeichenfolgen in andere Datentypen finden Sie unter [Analysieren von Zeichenfolgen in .NET](parsing-strings.md).
 
 .NET bietet eine umfangreiche Formatierungsunterstützung, die es Entwicklern ermöglicht, diese Anforderungen zu erfüllen.
 
@@ -137,7 +138,7 @@ Standardformatzeichenfolgen für Enumerationstypen steuern die Zeichenfolgendars
 [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
 [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]
 
-Weitere Informationen über Enumerationsformatzeichenfolgen finden Sie unter [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md).
+Weitere Informationen über Enumerationsformatzeichenfolgen finden Sie unter [Enumeration Format Strings](enumeration-format-strings.md).
 
 Standardformatzeichenfolgen für numerische Typen definieren normalerweise eine Ergebniszeichenfolge, deren genaue Darstellung von einem oder mehreren Eigenschaftswerten gesteuert wird. Beispielsweise formatiert der Formatbezeichner "C" eine Zahl als Währungswert. Wenn Sie die `ToString`-Methode mit dem Formatbezeichner „C“ als einzigem Parameter aufrufen, werden die folgenden Eigenschaftswerte des <xref:System.Globalization.NumberFormatInfo>-Objekts der aktuellen Kultur verwendet, um die Zeichenfolgendarstellung des numerischen Werts zu definieren:
 
@@ -166,14 +167,14 @@ Darüber hinaus enthalten numerische Formatzeichenfolgen möglicherweise einen G
 [!code-csharp[Conceptual.Formatting.Overview#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/precisionspecifier1.cs#6)]
 [!code-vb[Conceptual.Formatting.Overview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/precisionspecifier1.vb#6)]
 
-Weitere Informationen zu standardmäßigen numerischen Formatierungszeichenfolgen finden Sie unter [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).
+Weitere Informationen zu standardmäßigen numerischen Formatierungszeichenfolgen finden Sie unter [Standard Numeric Format Strings](standard-numeric-format-strings.md).
 
 Standardformatzeichenfolgen für Datums- und Uhrzeitwerte sind Aliase für benutzerdefinierte Formatzeichenfolgen, die von einer bestimmten <xref:System.Globalization.DateTimeFormatInfo> -Eigenschaft gespeichert werden. Beispielsweise werden durch Aufrufen der `ToString`-Methode eines Datums- und Uhrzeitwerts mit dem Formatbezeichner „D“ das Datum und die Uhrzeit mit der benutzerdefinierten Formatzeichenfolge angezeigt, die in der <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen Kultur gespeichert sind. (Weitere Informationen zu benutzerdefinierten Formatzeichenfolgen finden Sie im [nächsten Abschnitt](#custom-format-strings).) Diese Beziehung wird anhand des folgenden Beispiels veranschaulicht.
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
 
-Weitere Informationen über Standardformatzeichenfolgen für Datum und Uhrzeit finden Sie unter [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md).
+Weitere Informationen über Standardformatzeichenfolgen für Datum und Uhrzeit finden Sie unter [Standard Date and Time Format Strings](standard-date-and-time-format-strings.md).
 
 Sie können Standardformatzeichenfolgen auch verwenden, um die Zeichenfolgendarstellung eines anwendungsdefinierten Objekts anzugeben, die von der `ToString(String)`-Methode des Objekts erstellt wird. Sie können die spezifischen Standardformatbezeichner definieren, die von dem Objekt unterstützt werden, und Sie können angeben, ob die Groß- und Kleinschreibung beachtet werden soll. Ihre Implementierung der `ToString(String)`-Methode sollte Folgendes unterstützen:
 
@@ -188,7 +189,7 @@ Beispielsweise kann eine `Temperature`-Klasse die Temperatur in Grad Celsius int
 
 ### <a name="custom-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen
 
-Zusätzlich zu den Standardformatzeichenfolgen definiert .NET benutzerdefinierte Formatzeichenfolgen für numerische Werte und Datums- und Uhrzeitwerte. Eine benutzerdefinierte Formatzeichenfolge besteht aus einem oder mehreren benutzerdefinierten Formatbezeichnern, die die Zeichenfolgendarstellung eines Werts definieren. Beispielsweise konvertiert die benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge "yyyy/mm/dd hh:mm:ss.ffff t zzz" ein Datum für die Kultur en-US wie folgt in die entsprechende Zeichenfolgendarstellung: "2008/11/15 07:45:00.0000 P -08:00". Analog konvertiert die benutzerdefinierte Formatzeichenfolge "0000" den ganzzahligen Wert 12 in "0012". Eine vollständige Liste von benutzerdefinierten Formatzeichenfolgen finden Sie unter [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) und [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).
+Zusätzlich zu den Standardformatzeichenfolgen definiert .NET benutzerdefinierte Formatzeichenfolgen für numerische Werte und Datums- und Uhrzeitwerte. Eine benutzerdefinierte Formatzeichenfolge besteht aus einem oder mehreren benutzerdefinierten Formatbezeichnern, die die Zeichenfolgendarstellung eines Werts definieren. Beispielsweise konvertiert die benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge "yyyy/mm/dd hh:mm:ss.ffff t zzz" ein Datum für die Kultur en-US wie folgt in die entsprechende Zeichenfolgendarstellung: "2008/11/15 07:45:00.0000 P -08:00". Analog konvertiert die benutzerdefinierte Formatzeichenfolge "0000" den ganzzahligen Wert 12 in "0012". Eine vollständige Liste von benutzerdefinierten Formatzeichenfolgen finden Sie unter [Custom Date and Time Format Strings](custom-date-and-time-format-strings.md) und [Custom Numeric Format Strings](custom-numeric-format-strings.md).
 
 Wenn eine Formatzeichenfolge aus einem einzelnen benutzerdefinierten Formatbezeichner besteht, sollte dem Formatbezeichner das Prozentsymbol (%) vorangestellt werden, um Verwechslungen mit einem Standardformatbezeichner zu vermeiden. Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "M" verwendet, um eine einstellige oder zweistellige Ziffer für einen bestimmten Tag des Monats anzuzeigen.
 
@@ -213,13 +214,13 @@ Alle numerischen Typen (d.h. <xref:System.Byte>, <xref:System.Decimal>, <xref:Sy
 
 |Titel|Definition|
 |-----------|----------------|
-|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von numerischen Werten erstellt werden.|
-|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für numerische Werte erstellen.|
-|[Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von <xref:System.DateTime>- und<xref:System.DateTimeOffset>-Werten erstellt werden.|
-|[Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für <xref:System.DateTime>- und <xref:System.DateTimeOffset>-Werte erstellen.|
-|[TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von Zeitintervallen erstellt werden.|
-|[Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für Zeitintervalle erstellen.|
-|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen Zeichenfolgenentsprechungen von Enumerationswerten erstellt werden.|
+|[Standard Numeric Format Strings](standard-numeric-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von numerischen Werten erstellt werden.|
+|[Custom Numeric Format Strings](custom-numeric-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für numerische Werte erstellen.|
+|[Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von <xref:System.DateTime>- und<xref:System.DateTimeOffset>-Werten erstellt werden.|
+|[Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für <xref:System.DateTime>- und <xref:System.DateTimeOffset>-Werte erstellen.|
+|[TimeSpan-Standardformatzeichenfolgen](standard-timespan-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von Zeitintervallen erstellt werden.|
+|[Benutzerdefinierte TimeSpan-Formatzeichenfolgen](custom-timespan-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für Zeitintervalle erstellen.|
+|[Enumeration Format Strings](enumeration-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen Zeichenfolgenentsprechungen von Enumerationswerten erstellt werden.|
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Beschreibt die Standard-Formatzeichenfolgen für <xref:System.Guid> -Werte.|
 
 ## <a name="culture-sensitive-formatting-with-format-providers"></a>Kulturabhängige Formatierung mit Formatanbietern
@@ -329,7 +330,7 @@ Zusätzlich zum Ersetzen eines Formatelements durch die Zeichenfolgendarstellung
 
      Beachten Sie, dass, wenn sowohl die Ausrichtungszeichenfolge-Komponente als auch die Formatzeichenfolgen-Komponente vorhanden ist, die erste der letzteren vorausgeht (z. B. `{0,-20:g}`).
 
-Weitere Informationen zur zusammengesetzten Formatierung finden Sie unter [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md).
+Weitere Informationen zur zusammengesetzten Formatierung finden Sie unter [Kombinierte Formatierung](composite-formatting.md).
 
 ## <a name="custom-formatting-with-icustomformatter"></a>Benutzerdefinierte Formatierung mit ICustomFormatter
 
@@ -351,15 +352,15 @@ Im folgenden Beispiel werden mit der `ByteByByteFormatter` -Klasse Ganzzahlwerte
 
 |Titel|Definition|
 |-----------|----------------|
-|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von numerischen Werten erstellt werden.|
-|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für numerische Werte erstellen.|
-|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von <xref:System.DateTime> -Werten erstellt werden.|
-|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für <xref:System.DateTime> -Werte erstellen.|
-|[TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von Zeitintervallen erstellt werden.|
-|[Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für Zeitintervalle erstellen.|
-|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen Zeichenfolgenentsprechungen von Enumerationswerten erstellt werden.|
-|[Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)|Beschreibt die Einbettung eines oder mehrerer formatierter Werte in eine Zeichenfolge. Die Zeichenfolge kann anschließend in der Konsole angezeigt oder in einen Stream geschrieben werden.|
-|[Analysieren von Zeichenfolgen in .NET](../../../docs/standard/base-types/parsing-strings.md)|Beschreibt, wie Objekte mit den Werten initialisiert werden, die durch Zeichenfolgenentsprechungen dieser Objekte beschrieben werden. Das Verarbeiten ist die Umkehroperation zum Formatieren.|
+|[Standard Numeric Format Strings](standard-numeric-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von numerischen Werten erstellt werden.|
+|[Custom Numeric Format Strings](custom-numeric-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für numerische Werte erstellen.|
+|[Standard Date and Time Format Strings](standard-date-and-time-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von <xref:System.DateTime> -Werten erstellt werden.|
+|[Custom Date and Time Format Strings](custom-date-and-time-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für <xref:System.DateTime> -Werte erstellen.|
+|[TimeSpan-Standardformatzeichenfolgen](standard-timespan-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen häufig verwendete Zeichenfolgenentsprechungen von Zeitintervallen erstellt werden.|
+|[Benutzerdefinierte TimeSpan-Formatzeichenfolgen](custom-timespan-format-strings.md)|Beschreibt benutzerdefinierte Formatzeichenfolgen, die anwendungsspezifische Formate für Zeitintervalle erstellen.|
+|[Enumeration Format Strings](enumeration-format-strings.md)|Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen Zeichenfolgenentsprechungen von Enumerationswerten erstellt werden.|
+|[Kombinierte Formatierung](composite-formatting.md)|Beschreibt die Einbettung eines oder mehrerer formatierter Werte in eine Zeichenfolge. Die Zeichenfolge kann anschließend in der Konsole angezeigt oder in einen Stream geschrieben werden.|
+|[Analysieren von Zeichenfolgen in .NET](parsing-strings.md)|Beschreibt, wie Objekte mit den Werten initialisiert werden, die durch Zeichenfolgenentsprechungen dieser Objekte beschrieben werden. Das Verarbeiten ist die Umkehroperation zum Formatieren.|
 
 ## <a name="reference"></a>Referenz
 

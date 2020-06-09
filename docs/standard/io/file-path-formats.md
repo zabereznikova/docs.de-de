@@ -1,5 +1,6 @@
 ---
 title: Formate von Dateipfaden unter Windows-Systemen
+description: In diesem Artikel erfahren Sie mehr über Dateipfadformate auf Windows-Systemen, z. B. herkömmliche DOS-Pfade, DOS-Gerätepfade und UNC-Pfade (Universal Naming Convention).
 ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628045"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447133"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -30,7 +31,7 @@ Ein standardmäßiger DOS-Pfad kann aus drei Komponenten bestehen:
 
 Wenn alle drei Komponenten vorhanden sind, ist der Pfad absolut. Wenn kein Volume oder Laufwerkbuchstabe angegeben ist und der Name des Verzeichnisses mit dem [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) beginnt, ist der Pfad relativ zum Stamm des aktuellen Laufwerks. Andernfalls ist der Pfad relativ zum aktuellen Verzeichnis. In der folgenden Tabelle werden mögliche Verzeichnis- und Dateipfade veranschaulicht.
 
-|`Path`  |Beschreibung  |
+|Pfad  |Beschreibung  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Ein absoluter Dateipfad aus dem Stamm vom Laufwerk „C:“ |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ein absoluter Pfad aus dem Stamm des aktuellen Laufwerks |
@@ -62,7 +63,7 @@ UNC-Pfade (Universal Naming Convention), die für den Zugriff auf Netzwerkressou
 
 Im Folgenden werden einige Beispiele für UNC-Pfade aufgeführt:
 
-|`Path`  |Beschreibung  |
+|Pfad  |Beschreibung  |
 | -- | -- |
 | `\\system07\C$\` | Das Stammverzeichnis des Laufwerks „C:“ auf `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | Die Datei „Foo.txt“ im Testverzeichnis des Volume „\\\\Server2\\Share“.|
@@ -95,7 +96,7 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
 
    Das erste Segment des DOS-Gerätepfads, nachdem der Gerätepfadbezeichner das Volume oder Laufwerk identifiziert. (Zum Beispiel `\\?\C:\` und `\\.\BootPartition\`.)
 
-   Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Beispiel:
+   Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Zum Beispiel:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`

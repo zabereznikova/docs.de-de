@@ -1,5 +1,6 @@
 ---
 title: Kombinierte Formatierung
+description: Lernen Sie die kombinierte Formatierung in .NET kennen, die als Eingabe eine Liste von Objekten und eine kombinierte Formatzeichenfolge akzeptiert, die festgelegten Text mit indizierten Platzhaltern enthält.
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398478"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447263"
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 
@@ -81,17 +82,17 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Formatzeichenfolgen-Komponente  
- Die optionale Komponente *Formatzeichenfolge* ist eine Formatzeichenfolge, die für den formatierten Objekttyp geeignet ist. Geben Sie eine standardmäßige oder eine benutzerdefinierte numerische Formatzeichenfolge an, wenn das entsprechende Objekt ein numerischer Wert ist. Geben Sie eine standardmäßige oder eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit an, wenn das entsprechende Objekt ein <xref:System.DateTime>-Objekt ist. Geben Sie eine [Enumerationsformatzeichenfolge](../../../docs/standard/base-types/enumeration-format-strings.md) an, wenn das entsprechende Objekt ein Enumerationswert ist. Wenn *Formatzeichenfolge* nicht festgelegt ist, wird der allgemeine Formatbezeichner („G“) für einen numerischen, Datums- und Uhrzeit- oder Enumerationstyp verwendet. Der Doppelpunkt ist erforderlich, wenn *Formatzeichenfolge* angegeben wird.  
+ Die optionale Komponente *Formatzeichenfolge* ist eine Formatzeichenfolge, die für den formatierten Objekttyp geeignet ist. Geben Sie eine standardmäßige oder eine benutzerdefinierte numerische Formatzeichenfolge an, wenn das entsprechende Objekt ein numerischer Wert ist. Geben Sie eine standardmäßige oder eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit an, wenn das entsprechende Objekt ein <xref:System.DateTime>-Objekt ist. Geben Sie eine [Enumerationsformatzeichenfolge](enumeration-format-strings.md) an, wenn das entsprechende Objekt ein Enumerationswert ist. Wenn *Formatzeichenfolge* nicht festgelegt ist, wird der allgemeine Formatbezeichner („G“) für einen numerischen, Datums- und Uhrzeit- oder Enumerationstyp verwendet. Der Doppelpunkt ist erforderlich, wenn *Formatzeichenfolge* angegeben wird.  
   
  Die folgende Tabelle listet Typen oder Kategorien von Typen in der .NET Framework-Klassenbibliothek auf, die einen vordefinierten Satz von Formatzeichenfolgen unterstützen, und stellt Links zu Themen bereit, die die unterstützten Formatzeichenfolgen auflisten. Beachten Sie, dass die Zeichenfolgenformatierung ein erweiterbarer Mechanismus ist, der es ermöglicht, neue Formatzeichenfolgen für alle vorhandenen Typen zu definieren und einen Satz von Formatzeichenfolgen zu definieren, der von einem anwendungsdefinierten Typ unterstützt wird. Weitere Informationen finden Sie unter den Themen zur <xref:System.IFormattable>-Schnittstelle und <xref:System.ICustomFormatter>-Schnittstelle.  
   
 |Typ oder Typkategorie|Siehe|  
 |---------------------------|---------|  
-|Datums-/Zeittypen (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Enumerationstypen (alle Typen abgeleitet von <xref:System.Enum?displayProperty=nameWithType>)|[Enumerationsformatzeichenfolgen](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Numerische Typen (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Datums-/Zeittypen (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)<br /><br /> [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)|  
+|Enumerationstypen (alle Typen abgeleitet von <xref:System.Enum?displayProperty=nameWithType>)|[Enumerationsformatzeichenfolgen](enumeration-format-strings.md)|  
+|Numerische Typen (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standardmäßige Zahlenformatzeichenfolgen](standard-numeric-format-strings.md)<br /><br /> [Benutzerdefinierte Zahlenformatzeichenfolgen](custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
-|<xref:System.TimeSpan>|[TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
+|<xref:System.TimeSpan>|[TimeSpan-Standardformatzeichenfolgen](standard-timespan-format-strings.md)<br /><br /> [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Versehen von geschweiften Klammern mit Escapezeichen  
  Öffnende und schließende geschweifte Klammern werden als Beginn und Ende eines Formatelements interpretiert. Deshalb müssen Sie eine Escapesequenz verwenden, um eine literale öffnende bzw. schließende geschweifte Klammer anzuzeigen. Geben Sie zwei öffnende geschweifte Klammern ("{{") im festgelegten Text an, um eine öffnende geschweifte Klammer ("{") anzuzeigen, und geben Sie entsprechend zwei schließende geschweifte Klammern ("}}") an, um eine schließende geschweifte Klammer ("}") anzuzeigen. Geschweifte Klammern in einem Formatelement werden sequenziell in der Reihenfolge interpretiert, in der sie angetroffen werden. Die Interpretation geschachtelter geschweifter Klammern wird nicht unterstützt.  
@@ -163,11 +164,11 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [Zeichenfolgeninterpolation (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [Zeichenfolgeninterpolation (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
-- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
-- [Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)
-- [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumerationsformatzeichenfolgen](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Formatierung von Typen](formatting-types.md)
+- [Standardmäßige Zahlenformatzeichenfolgen](standard-numeric-format-strings.md)
+- [Benutzerdefinierte Zahlenformatzeichenfolgen](custom-numeric-format-strings.md)
+- [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)
+- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)
+- [TimeSpan-Standardformatzeichenfolgen](standard-timespan-format-strings.md)
+- [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](custom-timespan-format-strings.md)
+- [Enumerationsformatzeichenfolgen](enumeration-format-strings.md)

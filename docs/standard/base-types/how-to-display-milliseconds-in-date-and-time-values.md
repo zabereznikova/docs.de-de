@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten'
+title: 'Vorgehensweise: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten'
+description: In diesem Artikel wird erläutert, wie die Millisekundenkomponente für Datum und Uhrzeit in eine formatierte Datums- und Uhrzeitzeichenfolge in .NET eingefügt wird.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6dbe6a3bf4f8c08493ec925bea4316d071f4182
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74960397"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447068"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Vorgehensweise: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten
 Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.DateTime.ToString?displayProperty=nameWithType>, werden die Stunden, Minuten und Sekunden eines Uhrzeitwerts berücksichtigt, deren Millisekundenkomponente jedoch nicht. In diesem Thema wird erläutert, wie die Millisekundenkomponente für Datum und Uhrzeit in eine formatierte Datums- und Uhrzeitzeichenfolge eingefügt wird.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>So zeigen Sie die Millisekundenkomponente eines DateTime-Werts an  
@@ -49,7 +50,7 @@ Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.D
 > [!NOTE]
 > Es besteht die Möglichkeit, sehr kleine Sekundenbruchteile wie Zehntausendstelsekunden oder Hunderttausendstelsekunden anzuzeigen. Diese Werte sind jedoch möglicherweise nicht sinnvoll. Die Genauigkeit der Datums- und Uhrzeitwerte hängt von der Auflösung der Systemuhr ab. Unter Windows NT 3.5 und höher sowie unter Windows Vista-Betriebssystemen beträgt die Auflösung der Uhr etwa 10 – 15 Millisekunden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)

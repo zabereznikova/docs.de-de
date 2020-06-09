@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 7f14ce07a2928f4dbffd3aa57f8cdd514b75694c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 16fb6b3b63c848ea6c09cc18b0fcc488670f0926
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716713"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397474"
 ---
 # <a name="-netcf"></a>-netcf
 
@@ -30,14 +30,14 @@ Legt den Compiler als Ziel für .NET Compact Framework fest.
 
 Die Option `-netcf` bewirkt, dass der Visual Basic-Compiler .NET Compact Framework anstelle des vollständigen .NET Framework anzielt. Sprachfeatures, die nur im vollständigen .NET Framework vorhanden sind, sind deaktiviert.
 
-Die `-netcf`-Option ist für die Verwendung mit [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) konzipiert. Bei den Sprachfeatures, die von `-netcf` deaktiviert werden, handelt es sich um die gleichen Sprachfeatures, die auch in Dateien nicht vorhanden sind, die mit `-sdkpath` angezielt werden.
+Die `-netcf`-Option ist für die Verwendung mit [-sdkpath](sdkpath.md) konzipiert. Bei den Sprachfeatures, die von `-netcf` deaktiviert werden, handelt es sich um die gleichen Sprachfeatures, die auch in Dateien nicht vorhanden sind, die mit `-sdkpath` angezielt werden.
 
 > [!NOTE]
 > Die Option `-netcf` steht nicht in der Visual Studio-Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren. Die Option `-netcf` wird festgelegt, wenn ein Visual Basic-Geräteprojekt geladen wird.
 
 Mit der Option `-netcf` werden die folgenden Sprachfeatures geändert:
 
-- Die [End \<Schlüsselwort>-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md), die die Ausführung eines Programms beendet, ist deaktiviert. Das folgende Programm kann ohne `-netcf` kompiliert und ausgeführt werden, schlägt aber fehl, wenn `-netcf` zur Kompilierzeit enthalten ist.
+- Die [End \<keyword>-Anweisung](../../language-reference/statements/end-keyword-statement.md), die die Ausführung eines Programms beendet, ist deaktiviert. Das folgende Programm kann ohne `-netcf` kompiliert und ausgeführt werden, schlägt aber fehl, wenn `-netcf` zur Kompilierzeit enthalten ist.
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 
@@ -45,7 +45,7 @@ Mit der Option `-netcf` werden die folgenden Sprachfeatures geändert:
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- Die Modifizierer [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) und [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) werden deaktiviert. Die Syntax der [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) wird zudem in `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]` geändert. Der folgende Code zeigt die Auswirkungen von `-netcf` auf eine Kompilierung.
+- Die Modifizierer [Auto](../../language-reference/modifiers/auto.md), [ANSI](../../language-reference/modifiers/ansi.md) und [Unicode](../../language-reference/modifiers/unicode.md) werden deaktiviert. Die Syntax der [Declare-Anweisung](../../language-reference/statements/declare-statement.md) wird zudem in `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]` geändert. Der folgende Code zeigt die Auswirkungen von `-netcf` auf eine Kompilierung.
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
@@ -93,6 +93,6 @@ vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactF
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
+- [-sdkpath](sdkpath.md)

@@ -2,12 +2,12 @@
 title: Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung von CQRS im Microservice für Bestellungen in eShopOnContainers
 ms.date: 03/03/2020
-ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144278"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306941"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
@@ -27,9 +27,9 @@ Wie in Abbildung 7-2 im vorherigen Abschnitt dargestellt, empfiehlt dieser Leitf
 
 Bei der Implementierung der Abfrageseite können Sie zwischen vielen verschiedenen Ansätzen auswählen, z. B. eine vollständige ORM wie EF Core, AutoMapper-Projektionen, gespeicherte Prozeduren, Ansichten, materialisierte Sichten oder eine Mikro-ORM.
 
-In diesem Leitfaden und in eShopOnContainers (insbesondere beim Microservice für Bestellungen) implementieren wir direkte Abfragen mit dem Mikro-ORM [Dapper](https://github.com/StackExchange/dapper-dot-net). So können Sie jede Abfrage auf SQL-Anweisungen basierend implementieren, um aufgrund des schlanken Frameworks mit äußerst wenig Mehraufwand eine optimale Leistung zu erzielen.
+In diesem Leitfaden und in eShopOnContainers (insbesondere beim Microservice für Bestellungen) implementieren wir direkte Abfragen mit dem Mikro-ORM [Dapper](https://github.com/StackExchange/dapper-dot-net). So können Sie jede Abfrage auf SQL-Anweisungen basierend implementieren, um aufgrund des schlanken Frameworks mit wenig Mehraufwand eine optimale Leistung zu erzielen.
 
-Hinweis: Wenn Sie so vorgehen, erfordern alle Updates für das Modell, die in einer SQL-Datenbank aufbewahrt werden, auch separate Updates für SQL-Abfragen, die von Dapper oder anderen Abfrageansätzen (nicht EF) verwendet werden.
+Wenn Sie so vorgehen, erfordern alle Updates für das Modell, die in einer SQL-Datenbank aufbewahrt werden, auch separate Updates für SQL-Abfragen, die von Dapper oder anderen Abfrageansätzen (nicht EF) verwendet werden.
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS und DDD-Muster sind keine Architekturen oberster Ebene
 

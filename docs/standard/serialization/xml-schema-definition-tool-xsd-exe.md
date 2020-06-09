@@ -3,12 +3,12 @@ title: XML Schema Definition-Tool (Xsd.exe)
 description: Das XML Serializer Generator-Tool erstellt eine XML-Serialisierungsassembly zur Verbesserung der Startleistung von XmlSerializer für Typen in einer angegebenen Assembly.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 9b2be0b0b267973bd25ffd021dec18a7b9bcadec
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380053"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288978"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition-Tool (Xsd.exe)
 
@@ -63,7 +63,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/e\[lement\]:** _Element_|Gibt das Element im Schema an, für das Code generiert werden soll. In der Standardeinstellung werden für alle Elemente Typen erstellt. Sie können dieses Argument mehrmals angeben.|
 |**/enableDataBinding**|Implementiert die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle für alle generierten Typen, um die Datenbindung zu ermöglichen. Die Kurzform ist `/edb`.|
-|**/enableLinqDataSet**|(Kurzform: `/eld`) Gibt an, dass das generierte DataSet mit LINQ to DataSet abgefragt werden kann. Diese Option wird verwendet, wenn auch die /dataset-Option angegeben wird. Weitere Informationen finden Sie unter [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) und [Abfragen typisierter DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md). Allgemeine Informationen zur Verwendung von LINQ finden Sie unter [Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) oder [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/enableLinqDataSet**|(Kurzform: `/eld`) Gibt an, dass das generierte DataSet mit LINQ to DataSet abgefragt werden kann. Diese Option wird verwendet, wenn auch die /dataset-Option angegeben wird. Weitere Informationen finden Sie unter [Übersicht über LINQ to DataSet](../../framework/data/adonet/linq-to-dataset-overview.md) und [Abfragen typisierter DataSets](../../framework/data/adonet/querying-typed-datasets.md). Allgemeine Informationen zur Verwendung von LINQ finden Sie unter [Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) oder [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).|
 |**/f\[ields\]**|Generiert Felder anstelle von Eigenschaften. Standardmäßig werden Eigenschaften generiert.|
 |**/l\[anguage\]:** _Sprache_|Gibt die zu verwendende Programmiersprache an. Wählen Sie `CS` (C#, der Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen voll qualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementiert.|
 |**/n\[amespace\]:** _Namespace_|Gibt den Laufzeitnamespace für die generierten Typen an. Der Standardnamespace ist `Schemas`.|
@@ -132,7 +132,7 @@ Die folgenden Optionen für das `<generateSchemas>`-Element schließen sich gege
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|\<Assembly>|Gibt eine Assembly an, auf deren Grundlage das Schema generiert werden soll.|
+|\<assembly>|Gibt eine Assembly an, auf deren Grundlage das Schema generiert werden soll.|
 |\<type>|Gibt einen in einer Assembly enthaltenen Typ an, für den ein Schema generiert werden soll.|
 |\<xml>|Gibt eine XML-Datei an, für die ein Schema generiert werden soll.|
 |\<xdr>|Gibt eine XDR-Datei an, für die ein Schema generiert werden soll.|
@@ -151,9 +151,9 @@ Um eine Codedatei zu generieren, verwenden Sie das `<generateClasses>`-Element. 
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|\<Element>|Gibt ein Element in der XSD-Datei an, für das Code generiert werden soll.|
+|\<element>|Gibt ein Element in der XSD-Datei an, für das Code generiert werden soll.|
 |\<schemaImporterExtensions>|Gibt einen von der <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>-Klasse abgeleiteten Typ an.|
-|\<Schema>|Gibt eine XML-Schemadatei an, für die Code generiert werden soll. Mehrere XML-Schemadateien können mit mehreren \<schema>-Elementen angegeben werden.|
+|\<schema>|Gibt eine XML-Schemadatei an, für die Code generiert werden soll. Mehrere XML-Schemadateien können mit mehreren \<schema>-Elementen angegeben werden.|
 
 In der folgenden Tabelle sind die Attribute aufgeführt, die zusätzlich mit dem `<generateClasses>`-Element verwendet werden können.
 
@@ -176,7 +176,7 @@ Sie können u.&#160;a. folgende Optionen für das `<generateDataSet>`-Element fe
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|\<Schema>|Gibt eine XML-Schemadatei an, für die Code generiert werden soll. Mehrere XML-Schemadateien können mit mehreren \<schema>-Elementen angegeben werden.|
+|\<schema>|Gibt eine XML-Schemadatei an, für die Code generiert werden soll. Mehrere XML-Schemadateien können mit mehreren \<schema>-Elementen angegeben werden.|
 
  In der folgenden Tabelle sind die Attribute aufgeführt, die mit dem `<generateDataSet>`-Element verwendet werden können.
 
@@ -233,9 +233,9 @@ xsd myAssembly.dll
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-- [Extras](../../../docs/framework/tools/index.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-- [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
-- [Abfragen von typisierten DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [Extras](../../framework/tools/index.md)
+- [Eingabeaufforderungen](../../framework/tools/developer-command-prompt-for-vs.md)
+- [Übersicht über LINQ to DataSet](../../framework/data/adonet/linq-to-dataset-overview.md)
+- [Abfragen von typisierten DataSets](../../framework/data/adonet/querying-typed-datasets.md)
 - [Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
 - [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

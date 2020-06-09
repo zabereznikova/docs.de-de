@@ -5,12 +5,12 @@ author: richlander
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4aa961c3a6f2d4fa1580ff608aaf2a40d462fa0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711583"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288510"
 ---
 # <a name="net-assembly-file-format"></a>.NET-Assemblydateiformat
 

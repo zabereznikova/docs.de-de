@@ -2,23 +2,23 @@
 title: Implementieren eines Microservicedomänenmodells mit .NET Core
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierungsdetails eines DDD-orientierten Domänenmodells
 ms.date: 10/08/2018
-ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144577"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306907"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core
 
-Im letzten Abschnitt wurden die Prinzipen und Muster zum Design erläutert, die grundlegend für das Erstellen eines Domänenmodells sind. Jetzt soll dargestellt werden, wie Sie das Domänenmodell mithilfe von .NET Core (einfacher C\#-Code) und EF Core implementieren. Beachten Sie dass das Domänenmodell in diesem Beispiel nur aus Ihrem Code besteht. Es enthält nur die EF Core-Modellanforderungen, aber keine echten Abhängigkeiten von EF. Es sollten keine festen Abhängigkeiten oder Verweise auf EF Core auf eine objektrelationale Abbildung (Object-relational Mapping, ORM) in Ihrem Domänenmodell enthalten sein.
+Im letzten Abschnitt wurden die Prinzipen und Muster zum Design erläutert, die grundlegend für das Erstellen eines Domänenmodells sind. Jetzt soll dargestellt werden, wie Sie das Domänenmodell mithilfe von .NET Core (einfacher C\#-Code) und EF Core implementieren. Ihr Domänenmodell in diesem Beispiel besteht nur aus Ihrem Code. Es enthält nur die EF Core-Modellanforderungen, aber keine echten Abhängigkeiten von EF. Es sollten keine festen Abhängigkeiten oder Verweise auf EF Core auf eine objektrelationale Abbildung (Object-relational Mapping, ORM) in Ihrem Domänenmodell enthalten sein.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Domänenmodellstruktur in einer benutzerdefinierten .NET Standard-Bibliothek
 
 Die Ordnerorganisation, die für die Referenzanwendung „eShopOnContainers“ verwendet wird, stellt das Modell für das domänengesteuerte Design für die Anwendung dar. Möglicherweise stellen Sie fest, dass die Ordnerorganisation Ihren Überlegungen zum Anwendungsentwurf angepasst werden muss. Wie in Abbildung 7-10 dargestellt, gibt es im Domänenmodell für Bestellungen zwei Aggregate: das Aggregat „Order“ und das Aggregat „Buyer“. Jedes Aggregat besteht aus einer Gruppe von Domänenentitäten und Wertobjekten. Sie können aber auch über ein Aggregat verfügen, das aus genau einer Domänenentität besteht (dem Aggregatstamm oder der Stammentität).
 
 :::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Screenshot des Projekts „Ordering.Domain“ im Projektmappen-Explorer.":::
-Ansicht im Projektmappen-Explorer: Projekt Ordering.Domain mit dem Ordner „AggregatesModel“, der die Ordner „BuyerAggregate“ und „OrderAggregate“ enthält, die jeweils ihre Entitätsklassen, Wertobjektdateien und so weiter enthalten
+Ansicht im Projektmappen-Explorer: Projekt Ordering.Domain mit dem Ordner „AggregatesModel“, der die Ordner „BuyerAggregate“ und „OrderAggregate“ enthält, die jeweils ihre Entitätsklassen, Wertobjektdateien und so weiter enthalten.
 :::image-end:::
 
 **Abbildung 7-10**. Domänenmodellstruktur für den Microservice für Bestellungen in eShopOnContainers
@@ -95,7 +95,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Beachten Sie, dass es sich dabei um eine Domänenentität handelt, die als POCO-Klasse implementiert ist. Diese Entität hat keine direkten Abhängigkeiten von EF Core oder anderen Infrastrukturframeworks. Diese Implementierung eignet sich hervorragend für domänengesteuertes Design, da es sich nur um C\#-Code handelt, der ein Domänenmodell implementiert.
+Beachten Sie, dass es sich dabei um eine Domänenentität handelt, die als POCO-Klasse implementiert ist. Diese Entität hat keine direkten Abhängigkeiten von EF Core oder anderen Infrastrukturframeworks. Diese Implementierung eignet sich hervorragend für domänengesteuertes Design, da es sich nur um C#-Code handelt, der ein Domänenmodell implementiert.
 
 Außerdem wird die Klasse durch eine Schnittstelle namens „IAggregateRoot“ ergänzt. Diese Schnittstelle ist leer und wird gelegentlich als *marker interface* (Markierungsschnittstelle) bezeichnet, die verwendet wird, um anzudeuten, dass es sich bei dieser Entitätsklasse ebenfalls um einen Aggregatstamm handelt.
 

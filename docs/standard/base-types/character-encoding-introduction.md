@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 086430a720e6dc7f39d459a4b99d5bbdb1cfcac3
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141303"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288042"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 
@@ -23,15 +23,15 @@ Dieser Artikel bietet eine Einführung in die von .NET verwendeten Zeichencodier
 
 Der Begriff *Zeichen* wird hier im allgemeinen Sinn für ein Zeichen verwendet, das *vom Leser als einzelnes Anzeigeelement wahrgenommen wird*. Gängige Beispiele sind der Buchstabe „a“, das Symbol „@“ und das Emoji 🐂. Mitunter setzt sich ein als ein Zeichen wahrgenommenes Zeichen tatsächlich aus mehreren unabhängigen Anzeigeelementen zusammen, dies wird im Abschnitt zu [Graphemhaufen](#grapheme-clusters) erläutert.
 
-## <a name="the-string-and-char-types"></a>Die Typen „string“ und „char“
+## <a name="the-string-and-char-types"></a>Die string- und char-Typen.
 
-Eine Instanz der [string](xref:System.String)-Klasse stellt Text dar. Ein `string` ist eine logische Sequenz aus 16-Bit-Werten, von denen jeder eine Instanz der [char](xref:System.Char)-Struktur ist. Die [string.Length](xref:System.String.Length)-Eigenschaft gibt die Anzahl von `char`-Instanzen in der `string`-Instanz zurück.
+Eine Instanz der [string](xref:System.String)-Klasse stellt Text dar. Ein `string` ist logisch gesehen eine Abfolge von 16-Bit-Werten, von denen jeder eine Instanz der [char](xref:System.Char)-Struktur ist. Die [string.Length](xref:System.String.Length)-Eigenschaft gibt die Anzahl von `char`-Instanzen in der `string`-Instanz zurück.
 
 Die folgende Beispielfunktion gibt die Werte aller `char`-Instanzen in einem `string` in Hexadezimalnotation zurück:
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/PrintStringChars.cs" id="SnippetPrintChars":::
 
-Wenn Sie an diese Funktion die Zeichenfolge „Hello“ übergeben, erhalten Sie die folgende Ausgabe:
+Wenn Sie an diese Funktion die string „Hello“ übergeben, erhalten Sie die folgende Ausgabe:
 
 ```csharp
 PrintChars("Hello");
@@ -107,10 +107,10 @@ Der Unicode-Standard definiert über 1,1 Millionen [Codepunkte](https://www.uni
 
 Nachfolgend werden einige Beispiele für Codepunktzuweisungen aufgelistet, mit Links zu Unicode-Diagrammen, in denen sie angezeigt werden:
 
-|Dezimal|Hexadezimal       |Beispiel|Beschreibung|
+|Decimal|Hex       |Beispiel|Beschreibung|
 |------:|----------|-------|-----------|
 |10     | `U+000A` |Nicht zutreffend| [ZEILENVORSCHUB](https://www.unicode.org/charts/PDF/U0000.pdf) |
-|65     | `U+0061` | a | [LATEINISCHER KLEINBUCHSTABE A](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|65     | `U+0061` | eine | [LATEINISCHER KLEINBUCHSTABE A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [LATEINISCHER GROSSBUCHSTABE MIT MAKRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68.675 | `U+10C43`| 𐱃 | [ALTTÜRKISCHES ORCHON-SCHRIFTZEICHEN AT](https://www.unicode.org/charts/PDF/U10C00.pdf) |
 |127.801| `U+1F339`| 🌹 | [Rosen-Emoji](https://www.unicode.org/charts/PDF/U1F300.pdf) |
@@ -186,7 +186,7 @@ Das nachstehende Diagramm veranschaulicht die Skalarwert-Codepunkte.
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="Skalarwerte":::
 
-### <a name="the-opno-locrune-type-as-a-scalar-value"></a>Der Rune-Typ als Skalarwert
+### <a name="the-rune-type-as-a-scalar-value"></a>Der Rune-Typ als Skalarwert
 
 Ab .NET Core 3.0 repräsentiert der <xref:System.Text.Rune?displayProperty=fullName>-Typ einen Unicode-Skalarwert. **`Rune` ist in .NET Core 2. oder .NET Framework 4.x nicht verfügbar.**
 
@@ -202,7 +202,7 @@ Das nachstehende Beispiel führt zu einer Ausnahme, weil der Codepunkt nicht im 
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="opno-locrune-usage-example-changing-letter-case"></a>Beispiel für die Verwendung von Rune: Änderung der Groß-/Kleinschreibung
+### <a name="rune-usage-example-changing-letter-case"></a>Beispiel für die Verwendung von Rune: Änderung der Groß-/Kleinschreibung
 
 Eine API, die einen `char`-Wert verwendet und annimmt, dass sie mit einem Codepunkt arbeitet, bei dem es sich um einen Skalarwert handelt, funktioniert nicht ordnungsgemäß, wenn der `char`-Wert aus einem Ersatzzeichenpaar stammt. Betrachten Sie beispielsweise die folgende Methode, die <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> für jeden char in einem string aufruft:
 
@@ -217,7 +217,7 @@ Hier sind zwei Optionen für die korrekte Konvertierung von string in Großbuchs
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-opno-locrune-apis"></a>Andere Rune-APIs
+### <a name="other-rune-apis"></a>Andere Rune-APIs
 
 Der `Rune`-Typ macht Entsprechungen vieler der `char`-APIs verfügbar. Beispielsweise spiegeln die folgenden Methoden statische APIs für den `char`-Typ:
 
@@ -264,7 +264,7 @@ In einigen der vorhergehenden Beispiele – beispielsweise dem kombinierten Akze
 
 Um die Graphemhaufen für einen `string` aufzulisten, verwenden Sie die <xref:System.Globalization.StringInfo>-Klasse wie im folgenden Beispiel gezeigt. Wenn Sie mit Swift vertraut sind: Der .NET-Typ `StringInfo` ähnelt vom Konzept her dem [`character`-Typ in Swift](https://developer.apple.com/documentation/swift/character).
 
-### <a name="example-count-opno-locchar-opno-locrune-and-text-element-instances"></a>Beispiel: Zählen von char-, Rune- und Textelementinstanzen
+### <a name="example-count-char-rune-and-text-element-instances"></a>Beispiel: Zählen von char-, Rune- und Textelementinstanzen
 
 In den .NET-APIs wird ein Graphemhaufen als *Textelement* bezeichnet. Die folgenden Methoden veranschaulichen die Unterschiede zwischen `char`-, `Rune`- und Textelementinstanzen in einem `string`:
 
@@ -274,7 +274,7 @@ In den .NET-APIs wird ein Graphemhaufen als *Textelement* bezeichnet. Die folgen
 
 Wenn Sie diesen Code in .NET Framework oder .NET Code 3.1 oder früher ausführen, wird die Textelementanzahl für das Emoji als `4` angezeigt. Dies liegt an einem Fehler in der `StringInfo`-Klasse, der in .NET 5 behoben wurde.
 
-### <a name="example-splitting-opno-locstring-instances"></a>Beispiel: Aufteilen von string-Instanzen
+### <a name="example-splitting-string-instances"></a>Beispiel: Aufteilen von string-Instanzen
 
 Vermeiden Sie beim Aufteilen von `string`-Instanzen das Teilen von Ersatzzeichenpaaren und Graphemhaufen. Sehen Sie sich das folgende fehlerhafte Codebeispiel an, bei dem nach jeweils 10 Zeichen in einem string ein Zeilenumbruch eingefügt werden soll:
 
@@ -322,7 +322,7 @@ UTF-32: [ 000104CC ]     (1x 32-bit code unit  = 32 bits total)
 
 Wie bereits erwähnt, ist eine einzelne UTF-16-Codeeinheit aus einem [Einzelzeichenpaar](#surrogate-pairs) für sich genommen bedeutungslos. Ebenso ist eine einzelne UTF-8-Codeeinheit für sich genommen bedeutungslos, wenn sie in einer Sequenz von zwei, drei oder vier Einheiten zur Berechnung eines Skalarwerts verwendet wird.
 
-### <a name="endianness"></a>Endianwert
+### <a name="endianness"></a>Endianness
 
 In .NET werden die UTF-16-Codeeinheiten für einen string in zusammenhängenden Speicherbereichen als Sequenz aus 16-Bit-Ganzzahlen (`char`-Instanzen) gespeichert. Die Bits der einzelnen Codeeinheiten werden gemäß [Endianwert](https://en.wikipedia.org/wiki/Endianness) der aktuellen Architektur angeordnet.
 
@@ -389,4 +389,4 @@ Informationen zur Verwendung der integrierten `Encoding`-Klassen finden Sie unte
 - <xref:System.String>
 - <xref:System.Char>
 - <xref:System.Text.Rune>
-- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
+- [Globalisierung und Lokalisierung](../globalization-localization/index.md)

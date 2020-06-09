@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378386"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84287492"
 ---
 # <a name="serialization-guidelines"></a>Serialisierungsrichtlinien
 In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer API zu berücksichtigen sind, welche für die Serialisierung vorgesehen ist.  
@@ -92,7 +92,7 @@ In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer AP
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+     Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 #### <a name="supporting-xml-serialization"></a>Unterstützen der XML-Serialisierung  
  Die Datenvertragsserialisierung ist die primäre Serialisierungstechnologie (Standardserialisierung) in .NET Framework. Es gibt jedoch einige Serialisierungsszenarien, die von der Datenvertragsserialisierung nicht unterstützt werden. Beispielsweise kann die Form des vom Serialisierungsprogramm erzeugten bzw. verarbeiteten XML nicht vollständig kontrolliert werden. Wenn eine präzise Kontrolle erforderlich ist, muss die *XML-Serialisierung* verwendet werden, und der Entwurf der Typen muss eine Unterstützung dieser Serialisierungstechnologie enthalten.  
@@ -140,10 +140,10 @@ In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer AP
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Datenvertragsserialisierer](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Vom Datenvertragsserialisierer unterstützte Typen](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Verwenden von Datenverträgen](../../framework/wcf/feature-details/using-data-contracts.md)
+- [Datenvertragsserialisierer](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [Vom Datenvertragsserialisierer unterstützte Typen](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Binäre Serialisierung](binary-serialization.md)
 - [.NET-Remotezugriff](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)
-- [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)
+- [Sicherheit und Serialisierung](../../framework/misc/security-and-serialization.md)

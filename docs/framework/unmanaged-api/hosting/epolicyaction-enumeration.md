@@ -68,7 +68,7 @@ typedef enum {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [EClrFailure-Enumeration](eclrfailure-enumeration.md)
 - [ICLRPolicyManager-Schnittstelle](iclrpolicymanager-interface.md)
