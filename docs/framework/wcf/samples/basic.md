@@ -2,49 +2,49 @@
 title: Basic2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6c1dcfaebd74e7cc401b555e834bca2ac8da856
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944117"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575679"
 ---
-# <a name="basic"></a>Standard
-Dieser Abschnitt enthält Teile von Beispielen, die die grundlegenden Windows Communication Foundation (WCF)-Funktionen zu veranschaulichen.  
+# <a name="basic"></a>Basic
+Dieser Abschnitt enthält Abschnitte von Beispielen, die grundlegende Windows Communication Foundation (WCF) veranschaulichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- Veranschaulicht, wie ein typischer Dienst und ein typischer Client mithilfe von WCF implementiert.  
+ [Erste Schritte](getting-started-sample.md)  
+ Veranschaulicht, wie ein typischer Dienst und ein typischer Client mithilfe von WCF implementiert werden.  
   
- [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
+ [AJAX](ajax.md)  
  Veranschaulicht Asynchronous JavaScript And XML (AJAX).  
   
- [Bindung](../../../../docs/framework/wcf/samples/binding.md)  
+ [Bindung](binding.md)  
  Veranschaulicht die Verwendung des Bindungsattributs eines Endpunktelements.  
   
- [Client](../../../../docs/framework/wcf/samples/client.md)  
- Zeigt die WCF-Clientanwendungen.  
+ [Client](client.md)  
+ Veranschaulicht WCF-Client Anwendungen.  
   
- [Vertrag](../../../../docs/framework/wcf/samples/contract.md)  
+ [Vertrag](contract.md)  
  Veranschaulicht Datenverträge.  
   
- [Ermittlung](../../../../docs/framework/wcf/samples/discovery-samples.md)  
- Zeigt die WCF-Suche an.  
+ [Ermittlung](discovery-samples.md)  
+ Veranschaulicht die WCF-Ermittlung.  
   
- [Verwaltung](../../../../docs/framework/wcf/samples/management.md)  
- Zeigt die WCF-Management.  
+ [Verwaltung](management.md)  
+ Veranschaulicht die WCF-Verwaltung.  
   
- [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)  
- Zeigt die WCF-Routingdienste.  
+ [Routingdienste](routing-services.md)  
+ Veranschaulicht WCF-Routing Dienste.  
   
- [Sicherheit](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
- Zeigt die WCF-Sicherheit.  
+ [Security](security-in-wcf.md)  
+ Veranschaulicht die WCF-Sicherheit.  
   
- [Dienste](../../../../docs/framework/wcf/samples/services.md)  
- Zeigt die WCF-Dienste.  
+ [Dienste](services.md)  
+ Veranschaulicht WCF-Dienste.  
   
- [Syndication](../../../../docs/framework/wcf/samples/syndication.md)  
- DemonstratesWCF Syndication.  
+ [Syndication](syndication.md)  
+ DemonstratesWCF-Syndizierung.  
   
- [Web](../../../../docs/framework/wcf/samples/web.md)  
- Veranschaulicht Webhosting in WCF.
+ [Web](web.md)  
+ Veranschaulicht das Webhosting in WCF.

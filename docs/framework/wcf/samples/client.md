@@ -2,34 +2,34 @@
 title: Client
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: e3a4852ba467f9c334157555ed9c2ffc2ff33f0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f2d93458c2bec16b737d8bfcbd423494941dc3e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943961"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585284"
 ---
 # <a name="client"></a>Client
-Dieser Abschnitt enthält Beispiele, die Windows Communication Foundation (WCF)-Client-Anwendungen veranschaulichen.  
+Dieser Abschnitt enthält Beispiele, die Windows Communication Foundation (WCF)-Client Anwendungen veranschaulichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Client-Interoperabilität](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- Demonstriert die Interoperabilität zwischen WCF und anderen Technologien.  
+ [Client-Interoperabilität](client-interoperability.md)  
+ Veranschaulicht die Interoperabilität zwischen WCF und anderen Technologien.  
   
- [Adressheader](../../../../docs/framework/wcf/samples/address-headers.md)  
- Veranschaulicht, wie Clients Verweisparameter mit einem Dienst mithilfe von WCF übergeben können.  
+ [Adressheader](address-headers.md)  
+ Veranschaulicht, wie Clients mithilfe von WCF Verweis Parameter an einen Dienst übergeben können.  
   
- [Kanalfactory](../../../../docs/framework/wcf/samples/channel-factory.md)  
+ [Kanalfactory](channel-factory.md)  
  Veranschaulicht, wie eine Clientanwendung einen Kanal mit der <xref:System.ServiceModel.ChannelFactory>-Klasse und nicht mit einem generierten Client erstellen kann.  
   
- [Erwartete Ausnahmen](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ [Erwartete Ausnahmen](expected-exceptions.md)  
  Veranschaulicht, wie erwartete Ausnahmen mit einem typisierten Client abgefangen werden können.  
   
- [Metadaten abrufen](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [Metadaten abrufen](retrieve-metadata.md)  
  Veranschaulicht, wie ein Client implementiert werden kann, der Metadaten dynamisch von einem Dienst abruft, um einen Endpunkt für die Kommunikation auszuwählen.  
   
- [Verwenden Sie schließen "und" Abort um WCF-Client-Ressourcen freizugeben.](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)  
+ [Freigeben von WCF-Clientressourcen mit „Close“ und „Abort“](use-close-abort-release-wcf-client-resources.md)  
  Veranschaulicht, wie die "using"-Anweisung in C# beim Verwenden eines typisierten Clients nicht zum automatischen Bereinigen von Ressourcen verwendet werden sollte.  
   
- [Typisierter Client](../../../../docs/framework/wcf/samples/typed-client.md)  
- Veranschaulicht, wie zum Abrufen von Informationen von einem typisierten Client, der von generiert die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
+ [Typisierter Client](typed-client.md)  
+ Veranschaulicht, wie Informationen von einem typisierten Client abgerufen werden, der mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)generiert wurde.

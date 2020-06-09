@@ -2,12 +2,12 @@
 title: Wählen eines Typs von Anmeldeinformationen
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 6737f7daeb37e2e296ca0429d73b963743c409a2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7bcc5f407077b32d85b7f1e5f7ddbc5aba4b80c1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586194"
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmelde* Informationen sind die Daten Windows Communication Foundation (WCF) verwendet, um entweder eine beanspruchte Identität oder Funktionen einzurichten. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In WCF können Anmelde Informationen viele Formulare annehmen, z. b. Benutzernamen Token und X. 509-Zertifikate. In diesem Thema werden Anmelde Informationen, ihre Verwendung in WCF und die Auswahl der richtigen Anmelde Informationen für Ihre Anwendung erläutert.  
@@ -18,17 +18,17 @@ ms.locfileid: "76746142"
   
  Beim Benutzernamenteil der Anmeldeinformationen stellt der Benutzername die beanspruchte Identität und das Kennwort den Nachweis des rechtmäßigen Besitzes dar. Die vertrauenswürdige Stelle ist in diesem Fall das System, das den Benutzernamen und das Kennwort überprüft.  
   
- Mit einem X. 509-Zertifikat Anmelde Informationen können der Antragsteller Name, der alternative Antragsteller Name oder bestimmte Felder innerhalb des Zertifikats als Identitäts Ansprüche verwendet werden, während andere Felder, wie z. b. die Felder `Valid From` und `Valid To`, die Gültigkeit des Zertifikats angeben.  
+ Mit einem X. 509-Zertifikat Anmelde Informationen können der Antragsteller Name, der alternative Antragsteller Name oder bestimmte Felder innerhalb des Zertifikats als Identitäts Ansprüche verwendet werden, während andere Felder, wie z. b. das `Valid From` -Feld und das-Feld `Valid To` , die Gültigkeit des Zertifikats angeben.  
   
 ## <a name="transport-credential-types"></a>Transportieren von Anmeldeinformationen-Typen  
  Die folgende Tabelle zeigt die möglichen Typen von Clientanmeldeinformationen, die von einer Bindung im Transportsicherheitsmodus verwendet werden können. Legen Sie die `ClientCredentialType`-Eigenschaft beim Erstellen eines Dienstes auf einen dieser Werte fest, um den Typ der Anmeldeinformationen anzugeben, den der Client zum Kommunizieren mit Ihrem Dienst bereitstellen muss. Sie können die Typen entweder im Code oder in Konfigurationsdateien festlegen.  
   
 |Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
-|Keiner|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
+|Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Basic|Gibt die Standardauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC2617 –[http Authentication: Basic and Digest Authentication](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
 |Digest|Gibt die Hashwertauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC2617 –[http Authentication: Basic and Digest Authentication](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
-|Ntlm|Gibt die NT-LAN-Managerauthentifizierung (NTLM) an. Wird verwendet, wenn Sie aus bestimmten Gründen keine Kerberos-Authentifizierung verwenden können. Sie können die Verwendung auch als Fall Back deaktivieren, indem Sie die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft auf `false`festlegen. Dies bewirkt, dass WCF bei Verwendung von NTLM einen Best-Effort-Vorgang auslöst, um eine Ausnahme auszulösen. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.|  
+|Ntlm|Gibt die NT-LAN-Managerauthentifizierung (NTLM) an. Wird verwendet, wenn Sie aus bestimmten Gründen keine Kerberos-Authentifizierung verwenden können. Sie können die Verwendung auch als Fall Back deaktivieren, indem Sie die- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Eigenschaft auf festlegen `false` . Dies bewirkt, dass WCF bei Verwendung von NTLM einen Best-Effort-Vorgang auslöst, um eine Ausnahme auszulösen. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.|  
 |Windows|Gibt die Windows-Authentifizierung an. Um für eine Windows-Domäne nur das Kerberos-Protokoll anzugeben, legen Sie die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft auf `false` fest (die Standardeinstellung ist `true`).|  
 |Zertifikat|Führt die Clientauthentifizierung mit einem X.509-Zertifikat aus.|  
 |Kennwort|Benutzer müssen einen Benutzernamen und ein Kennwort angeben. Überprüfen Sie das Benutzername/Kennwort-Paar mithilfe der Windows-Authentifizierung oder einer anderen benutzerdefinierten Lösung.|  
@@ -38,19 +38,19 @@ ms.locfileid: "76746142"
   
 |Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
-|Keiner|Gibt an, dass der Client keine Anmeldeinformationen bereitstellen muss. Dies führt zur Verwendung eines anonymen Clients.|  
+|Keine|Gibt an, dass der Client keine Anmeldeinformationen bereitstellen muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Windows|Ermöglicht unter dem mit Windows-Anmeldeinformationen eingerichteten Sicherheitskontext den Austausch von SOAP-Nachrichten.|  
 |Username|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass WCF Kryptografievorgänge mit Benutzernamen nicht zulässt, wie z. b. das Erzeugen einer Signatur oder das Verschlüsseln von Daten. WCF stellt sicher, dass der Transport geschützt ist, wenn Benutzernamen-Anmelde Informationen verwendet werden.|  
 |Zertifikat|Ermöglicht es dem Dienst zu fordern, dass der Client mithilfe eines X.509-Zertifikats authentifiziert wird.|  
-|Ausgestelltes Token (Issued Token)|Ein benutzerdefinierter nach einer Sicherheitsrichtlinie konfigurierter Tokentyp. Der Standardtokentyp ist SAML (Security Assertions Markup Language). Das Token wird von einem sicheren Tokendienst ausgegeben. Weitere Informationen finden Sie unter Verbund [-und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Ausgestelltes Token (Issued Token)|Ein benutzerdefinierter nach einer Sicherheitsrichtlinie konfigurierter Tokentyp. Der Standardtokentyp ist SAML (Security Assertions Markup Language). Das Token wird von einem sicheren Tokendienst ausgegeben. Weitere Informationen finden Sie unter Verbund [-und ausgestellte Token](federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Aushandlungsmodell von Dienstanmeldeinformationen  
  *Aushandlung* ist das Einrichten der Vertrauensstellung zwischen einem Client und einem Dienst durch Austauschen von Anmelde Informationen. Der Prozess wird iterativ zwischen dem Client und dem Dienst durchgeführt, damit jeweils nur die Informationen offengelegt werden, die für den nächsten Schritt des Aushandlungsprozesses erforderlich sind. In der Praxis ist das Endergebnis die Zustellung der Anmeldeinformationen eines Dienstes an den Client, damit diese bei nachfolgenden Vorgängen verwendet werden können.  
   
- Mit einer Ausnahme werden standardmäßig die vom System bereitgestellten Bindungen in WCF die Dienst Anmelde Informationen automatisch aushandeln, wenn die Sicherheit auf Nachrichten Ebene verwendet wird. (Die Ausnahme ist die <xref:System.ServiceModel.BasicHttpBinding>, die die Sicherheit nicht standardmäßig aktiviert.) Um dieses Verhalten zu deaktivieren, sehen Sie sich die Eigenschaften <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> und <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> an.  
+ Mit einer Ausnahme werden standardmäßig die vom System bereitgestellten Bindungen in WCF die Dienst Anmelde Informationen automatisch aushandeln, wenn die Sicherheit auf Nachrichten Ebene verwendet wird. (Die Ausnahme ist die <xref:System.ServiceModel.BasicHttpBinding> , die die Sicherheit nicht standardmäßig aktiviert.) Um dieses Verhalten zu deaktivieren, finden Sie weitere Informationen unter den <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> Eigenschaften und.  
   
 > [!NOTE]
-> Wenn SSL-Sicherheit mit .NET Framework 3,5 und höher verwendet wird, verwendet ein WCF-Client sowohl die zwischen Zertifikate im Zertifikat Speicher als auch die zwischen Zertifikate, die während der SSL-Aushandlung empfangen werden, um die Überprüfung der Zertifikat Kette für den Dienst durchzuführen. stellt. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
+> Wenn SSL-Sicherheit mit .NET Framework 3,5 und höher verwendet wird, verwendet ein WCF-Client sowohl die zwischen Zertifikate im Zertifikat Speicher als auch die zwischen Zertifikate, die während der SSL-Aushandlung empfangen werden, um die Überprüfung der Zertifikat Kette für das Dienst Zertifikat durchzuführen. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
   
 #### <a name="out-of-band-negotiation"></a>Out-of-Band-Aushandlung  
  Wenn die automatische Aushandlung deaktiviert ist, müssen die Dienstanmeldeinformationen auf dem Client bereitgestellt werden, bevor Nachrichten an den Dienst gesendet werden. Dies wird auch als out- *of-Band-* Bereitstellung bezeichnet. Wenn es sich beim angegebenen Typ der Anmeldeinformationen um ein Zertifikat handelt und die automatische Aushandlung deaktiviert ist, muss sich der Client an den Besitzer des Dienstes wenden, um das Zertifikat zu erhalten und auf dem Computer zu installieren, auf dem die Clientanwendung ausgeführt wird. Sie können dies zum Beispiel nutzen, wenn Sie genau steuern möchten, welche Clients in einem Business-to-Business-Szenario auf einen Dienst zugreifen können. Diese Out-of-Band-Aushandlung kann per e-Mail erfolgen, und das X. 509-Zertifikat wird im Windows-Zertifikat Speicher mithilfe eines Tools wie dem MMC-Zertifikat-Snap-in (Microsoft Management Console) gespeichert.  
@@ -64,7 +64,7 @@ ms.locfileid: "76746142"
  Die Methode zum Festlegen des Werts der Anmeldeinformationen unterscheidet sich in Abhängigkeit davon leicht, ob Sie einen Dienst oder einen Client programmieren.  
   
 ### <a name="setting-service-credentials"></a>Festlegen von Dienstanmeldeinformationen  
- Wenn Sie den Transportmodus verwenden und HTTP als Transportart nutzen, müssen Sie entweder Internetinformationsdienste (IIS) verwenden oder den Anschluss mit einem Zertifikat konfigurieren. Weitere Informationen finden Sie unter [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) und [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Wenn Sie den Transportmodus verwenden und HTTP als Transportart nutzen, müssen Sie entweder Internetinformationsdienste (IIS) verwenden oder den Anschluss mit einem Zertifikat konfigurieren. Weitere Informationen finden Sie unter [Übersicht über die Transportsicherheit](transport-security-overview.md) und [HTTP-Transportsicherheit](http-transport-security.md).  
   
  Um einen Dienst im Code mit Anmeldeinformationen auszustatten, erstellen Sie eine Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse und geben die geeigneten Anmeldeinformationen an, indem Sie die <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse verwenden, auf die mithilfe der <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>-Eigenschaft zugegriffen wird.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "76746142"
 > [!IMPORTANT]
 > Wenn die Identität nicht gewechselt werden kann (also wenn das Einrichten eines Sicherheitskontexts aktiviert ist (Standardeinstellung)), kann ein bestimmtes Verhalten auftreten. Wenn Sie einen Dienst erstellen, der mit einem zweiten Dienst kommuniziert, kann die Identität, die zum Öffnen des WCF-Clients für den zweiten Dienst verwendet wird, nicht geändert werden. Dies wird zu einem Problem, wenn mehrere Clients den ersten Dienst verwenden dürfen und der Dienst die Identität der Clients annimmt, wenn er auf den anderen Dienst zugreift. Wenn der Dienst denselben Client für alle Aufrufer wiederverwendet, erfolgen alle Aufrufe des anderen Dienstes unter der Identität des ersten Aufrufers, der zum Öffnen des Clients für den anderen Dienst verwendet wurde. Anders ausgedrückt: Der Dienst verwendet die Identität des ersten Clients für alle Clients, um mit dem anderen Dienst zu kommunizieren. Dies kann zur Erweiterung von Berechtigungen führen. Wenn dies nicht das für den Dienst erwünschte Verhalten darstellt, müssen Sie jeden Aufrufer verfolgen und für jeden Aufrufer einen neuen Client für den anderen Dienst erstellen. Außerdem müssen Sie sicherstellen, dass der Dienst nur den richtigen Client für den jeweiligen Aufrufer verwendet, um mit dem zweiten Dienst zu kommunizieren.  
   
- Weitere Informationen zu Anmelde Informationen und sicheren Sitzungen finden Sie unter [Sicherheitsüberlegungen für sichere Sitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ Weitere Informationen zu Anmelde Informationen und sicheren Sitzungen finden Sie unter [Sicherheitsüberlegungen für sichere Sitzungen](security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -110,7 +110,7 @@ ms.locfileid: "76746142"
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
-- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+- [Sicherheitskonzepte](security-concepts.md)
+- [Sichern von Diensten und Clients](securing-services-and-clients.md)
+- [Programmieren der WCF-Sicherheit](programming-wcf-security.md)
+- [HTTP-Transportsicherheit](http-transport-security.md)

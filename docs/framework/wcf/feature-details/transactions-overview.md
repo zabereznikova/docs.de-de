@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 1c3589b336ee8982cd6d694112e4c1f784f59ad2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8e3306612e016568ad7cfd5138ab538af771a17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585785"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585830"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Übersicht über Windows-Kommunikationfoundation-Transaktionen
 Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in eine einzelne unteilbare Ausführungseinheit zu gruppieren. Eine Transaktion ist eine Auflistung von Vorgängen mit den folgenden Eigenschaften:  
@@ -20,15 +20,15 @@ Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in 
   
 - Konsistenz. Dadurch wird sichergestellt, dass die unter einer bestimmten Transaktion vorgenommenen Änderungen eine Transformation von einem konsistenten Zustand zu einem anderen darstellen. Beispielsweise ändert eine Transaktion, bei der Geld von einem Girokonto auf ein Sparkonto überwiesen wird, die Geldmenge auf dem Bankkonto insgesamt nicht.  
   
-- Isolation. Dadurch wird verhindert, dass eine Transaktion ausgecheckte Änderungen beobachtet, die zu anderen gleichzeitigen Transaktionen gehören. Isolation bietet eine Abstraktion von Parallelität und stellt gleichzeitig sicher, dass eine Transaktion keine unerwarteten Auswirkungen auf die Ausführung einer anderen Transaktion haben kann.  
+- Isolation: Dadurch wird verhindert, dass eine Transaktion ausgecheckte Änderungen beobachtet, die zu anderen gleichzeitigen Transaktionen gehören. Isolation bietet eine Abstraktion von Parallelität und stellt gleichzeitig sicher, dass eine Transaktion keine unerwarteten Auswirkungen auf die Ausführung einer anderen Transaktion haben kann.  
   
 - Dauerhaftigkeit. Dies bedeutet, dass Updates verwalteter Ressourcen (z. B. eines Datensatzes in einer Datenbank) nach der Ausführung bei Fehlern dauerhaft sind.  
   
- Windows Communication Foundation (WCF) bietet einen umfangreichen Satz von Funktionen, mit die Sie verteilte Transaktionen in Ihrer Webdienstanwendung erstellen können.  
+ Windows Communication Foundation (WCF) stellt einen umfangreichen Satz von Funktionen bereit, mit denen Sie verteilte Transaktionen in der Webdienst Anwendung erstellen können.  
   
- WCF implementiert die Unterstützung für das WS-AtomicTransaction (WS-AT)-Protokoll, das WCF-Anwendungen, Transaktionen zu interoperablen Anwendungen ausführen können, z. B. interoperabler Webdienste, die mithilfe von drittanbietertechnologie erstellt werden können. WCF implementiert auch Unterstützung für das OLE Transactions-Protokoll, die in Szenarien, in denen keine interop-Funktionalität zum Aktivieren des Transaktionsflusses benötigen Sie verwendet werden können.  
+ WCF implementiert die Unterstützung für das WS-AtomicTransaction (WS-AT)-Protokoll, das es WCF-Anwendungen ermöglicht, Transaktionen zu interoperablen Anwendungen zu übertragen, z. b. mit einer Technologie von Drittanbietern erstellten interoperablen Webdiensten. WCF implementiert außerdem die Unterstützung für das OLE Transactions-Protokoll, das in Szenarien verwendet werden kann, in denen keine Interop-Funktionalität zum Aktivieren des Transaktions Flusses erforderlich ist.  
   
- Sie können eine Anwendungskonfigurationsdatei verwenden, um Bindungen für das Aktivieren bzw. Deaktivieren des Transaktionsflusses zu konfigurieren sowie das gewünschte Transaktionsprotokoll auf einer Bindung festzulegen. Außerdem können Sie mit der Konfigurationsdatei Transaktionstimeouts auf Dienstebene festlegen. Weitere Informationen finden Sie unter [Transaktionsfluss aktivieren](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Sie können eine Anwendungskonfigurationsdatei verwenden, um Bindungen für das Aktivieren bzw. Deaktivieren des Transaktionsflusses zu konfigurieren sowie das gewünschte Transaktionsprotokoll auf einer Bindung festzulegen. Außerdem können Sie mit der Konfigurationsdatei Transaktionstimeouts auf Dienstebene festlegen. Weitere Informationen finden Sie unter [Aktivieren des Transaktions Flusses](enabling-transaction-flow.md).  
   
  Mithilfe von Transaktionsattributen im <xref:System.ServiceModel>-Namespace können Sie die folgenden Aktionen ausführen:  
   
@@ -38,9 +38,9 @@ Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in 
   
 - Verwenden des <xref:System.ServiceModel.ServiceContractAttribute>-Attributs und <xref:System.ServiceModel.OperationContractAttribute>-Attributs für eine Vertragsmethode, um den Transaktionsfluss zu erfordern, zuzulassen oder zu verweigern.  
   
- Weitere Informationen finden Sie unter [ServiceModel-Transaktionsattribute](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Weitere Informationen finden Sie unter [Service Model Transaction-Attribute](servicemodel-transaction-attributes.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [ServiceModel-Transaktionsattribute](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
-- [Aktivieren des Transaktionsdatenflusses](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [ServiceModel-Transaktionsattribute](servicemodel-transaction-attributes.md)
+- [Aktivieren des Transaktionsflusses](enabling-transaction-flow.md)
