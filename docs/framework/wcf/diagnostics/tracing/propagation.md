@@ -2,15 +2,15 @@
 title: Weitergabe
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: ab8b6c003f9e483dccd7b9c7b2687a409f27fdc3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 732ae5cb1ce311b78728f8d5de0fd9102bf32499
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600029"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578954"
 ---
 # <a name="propagation"></a>Weitergabe
-Dieses Thema beschreibt die Aktivitätsweitergabe im ablaufverfolgungsmodell Windows Communication Foundation (WCF).  
+In diesem Thema wird die Aktivitäts Propagierung im Windows Communication Foundation (WCF)-Ablauf Verfolgungs Modell beschrieben.  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Verwenden der Weitergabe zur Korrelation von Aktivitäten über Endpunkte hinaus  
  Die Weitergabe stellt dem Benutzer die direkte und anwendungsendpunktübergreifende Korrelation von Fehlerablaufverfolgungen für die gleiche Verarbeitungseinheit bereit. Ein Beispiel für einen solchen Anwendungsendpunkt wäre eine Anforderung. Fehler, die an unterschiedlichen Endpunkten für die gleiche Verarbeitungseinheit (beispielsweise eine Anforderung) ausgegeben werden, werden in der gleichen Aktivität gruppiert (gilt auch über Anwendungsdomänen hinaus). Dies wird durch Weitergabe der Aktivitäts-ID in den Nachrichtenheadern bewerkstelligt. Tritt also aufgrund eines internen Serverfehlers ein Timeout für einen Client auf, erscheinen beide Fehler bei der direkten Korrelation in der gleichen Aktivität.  
@@ -21,7 +21,7 @@ Dieses Thema beschreibt die Aktivitätsweitergabe im ablaufverfolgungsmodell Win
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Aktivitätsweitergabe handelt es sich um eine konfigurierbare Funktion, die WCF zum Hinzufügen eines Headers zu ausgehenden Nachrichten wird die Aktivitäts-ID auf dem TLS enthält. Client- und Dienstaktivitäten können korreliert werden, indem dies bei nachfolgenden Ablaufverfolgungen auf der Serverseite eingeschlossen wird.  
+ Die Aktivitäts Weitergabe ist eine konfigurierbare Funktion, die bewirkt, dass WCF einen Header zu ausgehenden Nachrichten hinzufügt, einschließlich der Aktivitäts-ID auf dem TLS. Client- und Dienstaktivitäten können korreliert werden, indem dies bei nachfolgenden Ablaufverfolgungen auf der Serverseite eingeschlossen wird.  
   
 ## <a name="propagation-definition"></a>Weitergabedefinition  
  Die gAId von Aktivität M wird an Aktivität N weitergegeben, wenn alle der folgenden Bedingungen erfüllt sind:  
@@ -76,9 +76,9 @@ Dieses Thema beschreibt die Aktivitätsweitergabe im ablaufverfolgungsmodell Win
 ## <a name="synchronization"></a>Synchronisierung  
  Um Ereignisse über Endpunkte hinaus zu synchronisieren, die auf unterschiedlichen Computern laufen, wird eine CorrelationID zum Header der AcitivityId hinzugefügt, der in Nachrichten weitergegeben wird. Tools können diese ID verwenden, um Ereignisse über Computer mit Uhrabweichungen hinaus zu synchronisieren. Insbesondere das Tool Service Trace Viewer nutzt diese ID, um Nachrichtenflüsse zwischen Endpunkten anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Konfigurieren der Ablaufverfolgung](configuring-tracing.md)
+- [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [End-to-End-Ablaufverfolgungsszenarien](end-to-end-tracing-scenarios.md)
+- [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

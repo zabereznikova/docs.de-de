@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 62b6f24bab1c655038ad3295f5af3dee0fa198fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 783969342f007895016ed4183257d6b24188d76c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183509"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584726"
 ---
 # <a name="message-security-user-name"></a>Nachrichtensicherheit – Benutzername
-Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, die WS-Sicherheit mit Benutzernamenauthentifizierung für den Client verwendet und eine Serverauthentifizierung über das X.509v3-Zertifikat des Servers erfordert. Alle Anwendungsnachrichten zwischen dem Client und dem Server werden signiert und verschlüsselt. Standardmäßig werden ein vom Client angegebener Benutzername und ein Kennwort zum Anmelden bei einem gültigen Windows-Konto verwendet. Dieses Beispiel basiert auf der [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Das Beispiel besteht aus einem Clientkonsolenprogramm (Client.exe) und einer von IIS (Internet Information Services, Internetinformationsdienste) gehosteten Dienstbibliothek (Service.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
+Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, die WS-Sicherheit mit Benutzernamenauthentifizierung für den Client verwendet und eine Serverauthentifizierung über das X.509v3-Zertifikat des Servers erfordert. Alle Anwendungsnachrichten zwischen dem Client und dem Server werden signiert und verschlüsselt. Standardmäßig werden ein vom Client angegebener Benutzername und ein Kennwort zum Anmelden bei einem gültigen Windows-Konto verwendet. Dieses Beispiel basiert auf [WSHttpBinding](wshttpbinding.md). Das Beispiel besteht aus einem Clientkonsolenprogramm (Client.exe) und einer von IIS (Internet Information Services, Internetinformationsdienste) gehosteten Dienstbibliothek (Service.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -23,7 +23,7 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, die WS-Sicherheit 
   
 - Wie auf die Identitätsinformationen der Aufrufer vom Dienstcode aus zugegriffen wird.  
   
- Der Dienst macht einen einzelnen Endpunkt für die Kommunikation mit dem Dienst verfügbar, der mit der Konfigurationsdatei Web.config definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem standardmäßigen [ \<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)konfiguriert, der standardmäßig die Nachrichtensicherheit verwendet. In diesem Beispiel wird die standardmäßige [ \<wsHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) für die Clientbenutzernamenauthentifizierung festgelegt. Das Verhalten gibt an, dass zur Dienstauthentifizierung die Benutzeranmeldeinformationen verwendet werden sollen. Das Serverzertifikat muss denselben Wert für den `findValue` Antragstellernamen enthalten wie das Attribut im [ \<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+ Der Dienst macht einen einzelnen Endpunkt für die Kommunikation mit dem Dienst verfügbar, der mithilfe der Konfigurationsdatei "Web. config" definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard konfiguriert [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) , der standardmäßig die Nachrichten Sicherheit verwendet. In diesem Beispiel wird der Standard für die Verwendung der Authentifizierung mit dem [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) Client Benutzernamen Das Verhalten gibt an, dass zur Dienstauthentifizierung die Benutzeranmeldeinformationen verwendet werden sollen. Das Serverzertifikat muss den gleichen Wert für den Antragsteller Namen wie das- `findValue` Attribut im enthalten [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) .  
   
 ```xml  
 <system.serviceModel>  
@@ -173,7 +173,7 @@ Press <ENTER> to terminate client.
   
 - Gewähren von Berechtigungen auf dem privaten Schlüssel des Zertifikats  
   
-     Mit den folgenden Zeilen in der Batchdatei Setup.bat kann das im LocalMachine-Speicher gespeicherte Serverzertifikat für das ASP.NET Workerprozesskonto zugänglich gemacht werden.  
+     In den folgenden Zeilen in der Batchdatei "Setup. bat" wird das Serverzertifikat, das im LocalMachine-Speicher gespeichert ist, für das ASP.NET-Worker-Prozess Konto zugänglich.  
   
     ```bat
     echo ************  
@@ -187,28 +187,28 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    > Wenn Sie eine nicht us-englische Version von Windows verwenden, müssen Sie die `NT AUTHORITY\NETWORK SERVICE` Datei Setup.bat bearbeiten und den Kontonamen durch Ihr regionales Äquivalent ersetzen.  
+    > Wenn Sie eine nicht-U. S. English-Edition von Windows verwenden, müssen Sie die Datei "Setup. bat" Bearbeiten und den `NT AUTHORITY\NETWORK SERVICE` Kontonamen durch Ihr regionales Äquivalent ersetzen.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
 1. Vergewissern Sie sich, dass der Pfad den Ordner enthält, in dem sich die Dateien Makecert.exe und FindPrivateKey.exe befinden.  
   
-2. Führen Sie Setup.bat aus dem Beispielinstallationsordner in einer Entwicklereingabeaufforderung für Visual Studio aus, die mit Administratorrechten geöffnet ist. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
+2. Führen Sie Setup. bat aus dem Beispiel Installationsordner in einer Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
   
     > [!NOTE]
-    > Die Setup.bat-Batchdatei wurde für die Ausführung über eine Entwicklereingabeaufforderung für Visual Studio entwickelt. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch in einer Entwicklereingabeaufforderung für Visual Studio festgelegt.  
+    > Die Batchdatei "Setup. bat" ist so konzipiert, dass Sie von einem Developer-Eingabeaufforderung für Visual Studio ausgeführt wird. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Developer-Eingabeaufforderung für Visual Studio festgelegt.  
   
-3. Überprüfen Sie den Zugriff auf den `http://localhost/servicemodelsamples/service.svc`Dienst mithilfe eines Browsers, indem Sie die Adresse eingeben.
+3. Überprüfen Sie den Zugriff auf den Dienst mithilfe eines Browsers, indem Sie die Adresse eingeben `http://localhost/servicemodelsamples/service.svc` .
   
 4. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-5. Wenn Client und Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Tipps zur Fehlerbehebung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+5. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
 ### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -220,7 +220,7 @@ Press <ENTER> to terminate client.
   
 4. Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
   
-5. Führen Sie `setup.bat service` auf dem Server in einer Entwicklereingabeaufforderung für Visual Studio aus, die mit Administratorrechten geöffnet ist. Wenn `setup.bat` Sie `service` mit dem Argument ausführen, wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in eine Datei mit dem Namen Service.cer exportiert.  
+5. Führen Sie auf dem-Server `setup.bat service` in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Wenn `setup.bat` Sie mit dem- `service` Argument ausführen, wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
   
 6. Bearbeiten Sie die Datei Web.config so, dass sie den neuen Zertifikatnamen (im findValue-Attribut im serviceCertificate-Element) enthält, der dem vollqualifizierten Domänennamen des Computers entspricht`.`  
   
@@ -228,13 +228,13 @@ Press <ENTER> to terminate client.
   
 8. Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
   
-9. Führen Sie auf dem Client ImportServiceCert.bat in einer Entwicklereingabeaufforderung für Visual Studio aus, die mit Administratorrechten geöffnet ist. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
+9. Führen Sie auf dem Client ImportServiceCert. bat in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
   
-10. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung. Wenn Client und Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Tipps zur Fehlerbehebung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
 ### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 - Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.  
   
     > [!NOTE]
-    > Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate auf computernder Basis verwenden, müssen Sie die Dienstzertifikate löschen, die im CurrentUser - TrustedPeople-Speicher installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    > Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate Computer übergreifend verwenden, müssen Sie sicherstellen, dass Sie die Dienst Zertifikate löschen, die im Speicher CurrentUser-treudpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
