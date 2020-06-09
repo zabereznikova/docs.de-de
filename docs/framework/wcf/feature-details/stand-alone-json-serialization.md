@@ -2,12 +2,12 @@
 title: Eigenständige JSON-Serialisierung mit DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 5561cddb22a02fdae9f792b1d1ec71d01c4fc916
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202391"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600905"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Eigenständige JSON-Serialisierung mit DataContractJsonSerializer
 
@@ -18,9 +18,9 @@ JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendu
 
 Dieses Format kann auch für AJAX-Dienste verwendet werden, die nicht in ASP.NET integriert sind. In diesem Fall ist zwar XML der Standard, jedoch kann JSON gewählt werden.
 
-Und wenn Sie schließlich JSON-Unterstützung benötigen, aber keinen AJAX-Dienst erstellen, ermöglicht Ihnen der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, .NET-Objekte direkt in JSON-Daten zu serialisieren und diese Daten wieder in Instanzen von .NET-Typen zu deserialisieren. Eine Beschreibung der Vorgehensweise finden Sie unter Gewusst [wie: Serialisieren und Deserialisieren von JSON-Daten](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).
+Und wenn Sie schließlich JSON-Unterstützung benötigen, aber keinen AJAX-Dienst erstellen, ermöglicht Ihnen der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, .NET-Objekte direkt in JSON-Daten zu serialisieren und diese Daten wieder in Instanzen von .NET-Typen zu deserialisieren. Eine Beschreibung der Vorgehensweise finden Sie unter Gewusst [wie: Serialisieren und Deserialisieren von JSON-Daten](how-to-serialize-and-deserialize-json-data.md).
 
-Bei der Arbeit mit JSON werden mit wenigen Ausnahmen dieselben .NET-Typen unterstützt, die auch vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt werden. Eine Liste der unterstützten Typen finden Sie unter [vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Dazu gehören die meisten primitiven Typen, die meisten Array- und Auflistungstypen sowie die komplexen Typen, die das <xref:System.Runtime.Serialization.DataContractAttribute> und das <xref:System.Runtime.Serialization.DataMemberAttribute> verwenden.
+Bei der Arbeit mit JSON werden mit wenigen Ausnahmen dieselben .NET-Typen unterstützt, die auch vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt werden. Eine Liste der unterstützten Typen finden Sie unter [vom Datenvertragsserialisierer unterstützte Typen](types-supported-by-the-data-contract-serializer.md). Dazu gehören die meisten primitiven Typen, die meisten Array- und Auflistungstypen sowie die komplexen Typen, die das <xref:System.Runtime.Serialization.DataContractAttribute> und das <xref:System.Runtime.Serialization.DataMemberAttribute> verwenden.
 
 ## <a name="mapping-net-types-to-json-types"></a>Zuordnung von .NET-Typen zu JSON-Typen
 
@@ -30,11 +30,11 @@ Die folgende Tabelle zeigt die Entsprechungen zwischen .NET-Typen und JSON/JavaS
 |----------------|----------------------|-----------|
 |Alle numerischen Typen, z.&#160;B. <xref:System.Int32>, <xref:System.Decimal> oder <xref:System.Double>|Number|Spezielle Werte, z.&#160;B. `Double.NaN`, `Double.PositiveInfinity` und `Double.NegativeInfinity` werden nicht unterstützt und führen zu ungültigen JSON-Daten.|
 |<xref:System.Enum>|Number|Siehe "Enumerationen und JSON" weiter unten in diesem Thema.|
-|<xref:System.Boolean>|Boolean|--|
+|<xref:System.Boolean>|Boolesch|--|
 |<xref:System.String>, <xref:System.Char>|String|--|
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Das Format dieser Typen in JSON entspricht dem Format in XML (im wesentlichen TimeSpan im Format der ISO 8601-Dauer, GUID im Format "12345678-ABCD-ABCD-ABCD-1234567890AB" und URI in der natürlichen Zeichen folgen Form wie " http://www.example.com "). Genaue Informationen finden Sie unter [Daten Vertrags Schema-Referenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Das Format dieser Typen in JSON entspricht dem Format in XML (im wesentlichen TimeSpan im Format der ISO 8601-Dauer, GUID im Format "12345678-ABCD-ABCD-ABCD-1234567890AB" und URI in der natürlichen Zeichen folgen Form wie " http://www.example.com "). Genaue Informationen finden Sie unter [Daten Vertrags Schema-Referenz](data-contract-schema-reference.md).|
 |<xref:System.Xml.XmlQualifiedName>|String|Das Format ist "name:namespace" (sämtliche Zeichen vor dem ersten Doppelpunkt bilden den Namen). Der Name oder der Namespace kann fehlen. Wenn kein Namespace angegeben wird, kann auch der Doppelpunkt weggelassen werden.|
-|<xref:System.Array> vom Typ <xref:System.Byte>|Array von Zahlen|Jede Zahl stellt den Wert eines Bytes dar.|
+|<xref:System.Array>vom Typ<xref:System.Byte>|Array von Zahlen|Jede Zahl stellt den Wert eines Bytes dar.|
 |<xref:System.DateTime>|DateTime oder Zeichenfolge|Siehe "Datums-/Uhrzeitangaben und JSON" weiter unten in diesem Thema.|
 |<xref:System.DateTimeOffset>|Komplexer Typ|Siehe "Datums-/Uhrzeitangaben und JSON" weiter unten in diesem Thema.|
 |XML- und ADO.NET-Typen (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Arrays von <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Siehe den Abschnitt "XML-Typen und JSON" in diesem Thema.|
@@ -42,11 +42,11 @@ Die folgende Tabelle zeigt die Entsprechungen zwischen .NET-Typen und JSON/JavaS
 |Auflistungen, Wörterbücher und Arrays|Array|Siehe den Abschnitt "Auflistungen, Wörterbücher und Arrays" in diesem Thema.|
 |Komplexe Typen (mit angewendetem <xref:System.Runtime.Serialization.DataContractAttribute> oder <xref:System.SerializableAttribute>)|Komplexer Typ|Datenmember werden Member des komplexen JavaScript-Typs.|
 |Komplexe Typen (die die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementieren)|Komplexer Typ|Entspricht anderen komplexen Typen, jedoch werden einige <xref:System.Runtime.Serialization.ISerializable>-Typen nicht unterstützt. Weitere Informationen finden Sie in den Hinweisen zur ISerializable-Unterstützung im Abschnitt "Weitere Informationen" in diesem Thema.|
-|`Null`-Wert für jeden Typ|NULL|Werttypen, die NULL-Werte zulassen, werden ebenfalls unterstützt und JSON-Code auf die gleiche Weise wie nicht auf NULL festleg Bare Werttypen|
+|`Null`-Wert für jeden Typ|Null|Werttypen, die NULL-Werte zulassen, werden ebenfalls unterstützt und JSON-Code auf die gleiche Weise wie nicht auf NULL festleg Bare Werttypen|
 
 ### <a name="enumerations-and-json"></a>Enumerationen und JSON
 
-Enumerationsmemberwerte werden in JSON als Zahlen behandelt. Dies unterscheidet sich von ihrer Behandlung in Datenverträgen, in die sie als Membernamen eingefügt werden. Weitere Informationen zur Daten Vertrags Behandlung finden Sie unter [Enumerationstypen in Daten Verträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).
+Enumerationsmemberwerte werden in JSON als Zahlen behandelt. Dies unterscheidet sich von ihrer Behandlung in Datenverträgen, in die sie als Membernamen eingefügt werden. Weitere Informationen zur Daten Vertrags Behandlung finden Sie unter [Enumerationstypen in Daten Verträgen](enumeration-types-in-data-contracts.md).
 
 - Wenn beispielsweise `public enum Color {red, green, blue, yellow, pink}` gegeben ist, ergibt die Serialisierung von `yellow` die Zahl&#160;3 und nicht die Zeichenfolge "yellow".
 
@@ -87,11 +87,11 @@ Alle Auflistungen, Wörterbücher und Arrays werden in JSON als Arrays dargestel
 
 - Wenn Sie direkt mit JSON arbeiten möchten (also ohne vorher definierten strengen Vertrag auf Schlüssel und Werte dynamisch zugreifen möchten), stehen Ihnen mehrere Optionen zur Verfügung:
 
-  - Verwenden Sie das Beispiel für eine [schwach typisierte JSON-Serialisierung (Ajax)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) .
+  - Verwenden Sie das Beispiel für eine [schwach typisierte JSON-Serialisierung (Ajax)](../samples/weakly-typed-json-serialization-sample.md) .
 
   - Verwenden Sie die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle und Deserialisierungskonstruktoren. Diese beiden Mechanismen ermöglichen es Ihnen, bei der Serialisierung und der Deserialisierung auf JSON-Schlüssel/Wert-Paare zuzugreifen, was jedoch in teilweise vertrauenswürdigen Szenarien nicht möglich ist.
 
-  - Verwenden Sie [ggf. die Zuordnung zwischen JSON und XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) , anstatt einen Serialisierer zu verwenden.
+  - Verwenden Sie [ggf. die Zuordnung zwischen JSON und XML](mapping-between-json-and-xml.md) , anstatt einen Serialisierer zu verwenden.
 
   - *Polymorphismus* im Kontext der Serialisierung bezieht sich auf die Fähigkeit, einen abgeleiteten Typ zu serialisieren, bei dem sein Basistyp erwartet wird. Es gelten spezielle JSON-spezifische Regeln für die polymorphe Verwendung von Auflistungen (beispielsweise die Zuweisung einer Auflistung zu einem <xref:System.Object>. Dieser Punkt wird ausführlicher im Abschnitt "Weitere Informationen" weiter unten in diesem Thema erläutert.
 
@@ -105,7 +105,7 @@ Die Reihenfolge der Datenmember ist bei Verwendung von JSON nicht von Bedeutung.
 
 Der JSON-Typ muss bei der Deserialisierung nicht mit der vorangehenden Tabelle übereinstimmen. Beispielsweise wird ein Wert vom Typ `Int` normalerweise einer JSON-Zahl zugeordnet, aber er kann auch aus einer JSON-Zeichenfolge deserialisiert werden, sofern diese Zeichenfolge eine gültige Zahl enthält. Daher ist sowohl {"q":42} als auch {"q":"42"} zulässig, wenn ein `Int`-Datenmember namens "q" vorhanden ist.
 
-### <a name="polymorphism"></a>Polymorphie
+### <a name="polymorphism"></a>Polymorphismus
 
 Polymorphe Serialisierung besteht aus der Fähigkeit, einen abgeleiteten Typ zu serialisieren, wo sein Basistyp erwartet wird. Dies wird für die JSON-Serialisierung von WCF unterstützt, vergleichbar mit der Unterstützung der XML-Serialisierung. Beispielsweise können Sie serialisieren `MyDerivedType` , wo `MyBaseType` erwartet wird, oder serialisieren, `Int` wo `Object` erwartet wird.
 
@@ -113,13 +113,13 @@ Typinformationen gehen möglicherweise verloren, wenn ein abgeleiteter Typ deser
 
 Beim Deserialisieren in einen Schnittstellentyp, deserialisiert der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> die Daten so, als wäre ein Objekt als Typ deklariert.
 
-Wenn Sie mit Ihren eigenen Basistyp und abgeleiteten Typen arbeiten, ist normalerweise die Verwendung von <xref:System.Runtime.Serialization.KnownTypeAttribute>, <xref:System.ServiceModel.ServiceKnownTypeAttribute> oder eines äquivalenten Mechanismus erforderlich. Wenn Sie z. b. einen-Vorgang haben, der über einen `Animal` Rückgabewert verfügt und tatsächlich eine Instanz von zurückgibt `Cat` (abgeleitet von `Animal` ), sollten Sie entweder den <xref:System.Runtime.Serialization.KnownTypeAttribute> auf den- `Animal` Typ oder den <xref:System.ServiceModel.ServiceKnownTypeAttribute> auf den-Vorgang anwenden und den `Cat` Typ in diesen Attributen angeben. Weitere Informationen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).
+Wenn Sie mit Ihren eigenen Basistyp und abgeleiteten Typen arbeiten, ist normalerweise die Verwendung von <xref:System.Runtime.Serialization.KnownTypeAttribute>, <xref:System.ServiceModel.ServiceKnownTypeAttribute> oder eines äquivalenten Mechanismus erforderlich. Wenn Sie z. b. einen-Vorgang haben, der über einen `Animal` Rückgabewert verfügt und tatsächlich eine Instanz von zurückgibt `Cat` (abgeleitet von `Animal` ), sollten Sie entweder den <xref:System.Runtime.Serialization.KnownTypeAttribute> auf den- `Animal` Typ oder den <xref:System.ServiceModel.ServiceKnownTypeAttribute> auf den-Vorgang anwenden und den `Cat` Typ in diesen Attributen angeben. Weitere Informationen finden Sie unter [Data Contract Known Types](data-contract-known-types.md).
 
 Weitere Informationen zur polymorphen Serialisierung und der Einschränkungen, die Sie bei der Verwendung beachten müssen, finden Sie im Abschnitt "Weitere Informationen" weiter unten in diesem Thema.
 
-### <a name="versioning"></a>Versionskontrolle
+### <a name="versioning"></a>Versionsverwaltung
 
-Die Datenvertragsversionsfunktionen werden einschließlich der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle in JSON vollständig unterstützt. Darüber hinaus ist es in den meisten Fällen möglich, einen Typ in ein Format (beispielsweise XML) zu deserialisieren, es dann in ein anderes Format (beispielsweise JSON) zu serialisieren und die Daten in <xref:System.Runtime.Serialization.IExtensibleDataObject> beizubehalten. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Denken Sie daran, dass JSON ungeordnet ist und daher alle Reihenfolgeninformationen verloren gehen. .JSON unterstützt auch keine mehrfachen Schlüssel/Wert-Paare mit dem gleichen Schlüsselnamen. Und schließlich sind alle Vorgänge mit <xref:System.Runtime.Serialization.IExtensibleDataObject> grundsätzlich polymorph. Das bedeutet, dass ihr abgeleiteter Typ <xref:System.Object> zugewiesen ist, dem Basistyp aller Typen.
+Die Datenvertragsversionsfunktionen werden einschließlich der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle in JSON vollständig unterstützt. Darüber hinaus ist es in den meisten Fällen möglich, einen Typ in ein Format (beispielsweise XML) zu deserialisieren, es dann in ein anderes Format (beispielsweise JSON) zu serialisieren und die Daten in <xref:System.Runtime.Serialization.IExtensibleDataObject> beizubehalten. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](forward-compatible-data-contracts.md). Denken Sie daran, dass JSON ungeordnet ist und daher alle Reihenfolgeninformationen verloren gehen. .JSON unterstützt auch keine mehrfachen Schlüssel/Wert-Paare mit dem gleichen Schlüsselnamen. Und schließlich sind alle Vorgänge mit <xref:System.Runtime.Serialization.IExtensibleDataObject> grundsätzlich polymorph. Das bedeutet, dass ihr abgeleiteter Typ <xref:System.Object> zugewiesen ist, dem Basistyp aller Typen.
 
 ## <a name="json-in-urls"></a>JSON in URLs
 
@@ -179,13 +179,13 @@ Der Typ <xref:System.Xml.XmlElement> wird ohne Einbindung serialisiert wie er is
 
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>IXmlSerializable-Typen, einschließlich XElement- und DataSet-Typen
 
-<xref:System.Runtime.Serialization.ISerializable>-Typen teilen sich in "Inhaltstypen", "DataSet-Typen" und "Elementtypen". Definitionen dieser Typen finden Sie unter [XML-und ADO.NET-Typen in Daten Verträgen](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).
+<xref:System.Runtime.Serialization.ISerializable>-Typen teilen sich in "Inhaltstypen", "DataSet-Typen" und "Elementtypen". Definitionen dieser Typen finden Sie unter [XML-und ADO.NET-Typen in Daten Verträgen](xml-and-ado-net-types-in-data-contracts.md).
 
 "Inhalts-" und "DataSet-Typen" werden ähnlich den <xref:System.Array>-Objekten von <xref:System.Xml.XmlNode>serialisiert, die im vorherigen Abschnitt erläutert wurden. Sie werden in ein Element eingebunden, dessen Name und Namespace dem Datenvertragsnamen und dem Namespace des jeweiligen Typs entsprechen.
 
 "Elementtypen", wie das <xref:System.Xml.Linq.XElement>, werden serialisiert wie sie sind, ähnlich wie das bereits in diesem Thema erläuterte <xref:System.Xml.XmlElement>.
 
-### <a name="polymorphism"></a>Polymorphie
+### <a name="polymorphism"></a>Polymorphismus
 
 #### <a name="preserving-type-information"></a>Bewahren von Typinformationen
 
@@ -261,7 +261,7 @@ Es ist nicht zulässig, einen Auflistungstyp oder einen Typ, der <xref:System.Xm
 
 #### <a name="known-types-and-configuration"></a>Bekannte Typen und Konfiguration
 
-Der gesamte vom <xref:System.Runtime.Serialization.DataContractSerializer> verwendete Mechanismus bekannter Typen wird auf gleiche Weise auch vom <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> unterstützt. Beide serialisierungssoren haben das gleiche Konfigurationselement in gelesen, [\<dataContractSerializer>](../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) [\<system.runtime.serialization>](../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md) um bekannte Typen zu ermitteln, die über eine Konfigurationsdatei hinzugefügt wurden.
+Der gesamte vom <xref:System.Runtime.Serialization.DataContractSerializer> verwendete Mechanismus bekannter Typen wird auf gleiche Weise auch vom <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> unterstützt. Beide serialisierungssoren haben das gleiche Konfigurationselement in gelesen, [\<dataContractSerializer>](../../configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) [\<system.runtime.serialization>](../../configure-apps/file-schema/wcf/system-runtime-serialization.md) um bekannte Typen zu ermitteln, die über eine Konfigurationsdatei hinzugefügt wurden.
 
 #### <a name="collections-assigned-to-object"></a>Objekten zugewiesene Auflistungen
 
@@ -291,8 +291,8 @@ Bei der Serialisierung von Wörterbuchtypen, wird das JSON-Objekt, das die Membe
 
 ### <a name="valid-json-key-names"></a>Gültige JSON-Schlüsselnamen
 
-Das Serialisierungsprogramm codiert Schlüsselnamen in XML, die keine gültigen XML-Namen sind. Ein Datenmember mit dem Namen "123" hätte z. b. einen codierten Namen wie z. b. " \_ x0031 \_ \_ x0032 \_ \_ x0033 \_ ", da "123" ein ungültiger XML-Elementname ist (beginnt mit einer Ziffer). Eine ähnliche Situation tritt möglicherweise bei einigen internationalen Zeichensätzen auf, deren Verwendung ungültige XML-Namen ergibt. Eine Erläuterung dieser Auswirkungen von XML auf die JSON-Verarbeitung finden Sie unter [Mapping zwischen JSON und XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).
+Das Serialisierungsprogramm codiert Schlüsselnamen in XML, die keine gültigen XML-Namen sind. Ein Datenmember mit dem Namen "123" hätte z. b. einen codierten Namen wie z. b. " \_ x0031 \_ \_ x0032 \_ \_ x0033 \_ ", da "123" ein ungültiger XML-Elementname ist (beginnt mit einer Ziffer). Eine ähnliche Situation tritt möglicherweise bei einigen internationalen Zeichensätzen auf, deren Verwendung ungültige XML-Namen ergibt. Eine Erläuterung dieser Auswirkungen von XML auf die JSON-Verarbeitung finden Sie unter [Mapping zwischen JSON und XML](mapping-between-json-and-xml.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Unterstützung für JSON und andere Datenübertragungsformate](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+- [Unterstützung für JSON und andere Datenübertragungsformate](support-for-json-and-other-data-transfer-formats.md)

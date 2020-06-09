@@ -2,12 +2,12 @@
 title: Syndication-Erweiterbarkeit
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: 688b31f3c87b7c9ad4842cfe6834b0dbc9e5b85b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e8f47b45897f46e15847c793c986e953523e66b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600723"
 ---
 # <a name="syndication-extensibility"></a>Syndication-Erweiterbarkeit
 Die Syndication-API ist darauf ausgelegt, ein formatunabhängiges Programmiermodell bereitzustellen, mit dem Fremdinhalte in verschiedenen Formaten ausgegeben und direkt übertragen werden können. Das abstrakte Datenmodell besteht aus den folgenden Klassen:  
@@ -22,9 +22,9 @@ Die Syndication-API ist darauf ausgelegt, ein formatunabhängiges Programmiermod
   
 - <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
- Diese Klassen sind nahezu deckungsgleich mit den in der Atom&amp;#160;1.0-Spezifikation definierten Konstrukten, obwohl manche der Namen anders lauten.  
+ Diese Klassen sind nahezu deckungsgleich mit den in der Atom&#160;1.0-Spezifikation definierten Konstrukten, obwohl manche der Namen anders lauten.  
   
- Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&amp;#160;1.0 als auch RSS&amp;#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Die Windows Communication Foundation (WCF)-Programmiermodell für Syndication bietet die folgenden Möglichkeiten zum Arbeiten mit benutzerdefinierten Attributen und Erweiterungen, lose typisierten Zugriff und eine neue Klasse ableiten.  
+ Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&#160;1.0 als auch RSS&#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Das Programmiermodell für die Windows Communication Foundation (WCF)-Syndizierung bietet die folgenden Möglichkeiten, mit benutzerdefinierten Attributen und Erweiterungen zu arbeiten: lose typisierte Zugriffe und Ableiten einer neuen Klasse.  
   
 ## <a name="loosely-typed-access"></a>Zugriff mit flexibler Typbindung  
  Wenn Erweiterungen durch das Ableiten einer neuen Klasse hinzugefügt werden sollen, muss zusätzlicher Code geschrieben werden. Eine andere Möglichkeit besteht darin, mit flexibler Typbindung auf Erweiterungen zuzugreifen. Alle im abstrakten Datenmodell für Syndication definierten Typen enthalten Eigenschaften namens `AttributeExtensions` und `ElementExtensions` (mit einer Ausnahme, <xref:System.ServiceModel.Syndication.SyndicationContent> verfügt über die `AttributeExtensions`-Eigenschaft, nicht aber über die `ElementExtensions`-Eigenschaft). Diese Eigenschaften sind Auflistungen von Erweiterungen, die nicht von der `TryParseAttribute`-Methode bzw. der `TryParseElement`-Methode verarbeitet werden. Sie können auf diese unverarbeiteten Erweiterungen zugreifen, indem Sie <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> für die `ElementExtensions`-Eigenschaft von <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson> und <xref:System.ServiceModel.Syndication.SyndicationCategory> aufrufen. Dieser Satz von Methoden findet alle Erweiterungen mit dem angegebenen Namen und Namespace, deserialisiert sie einzeln in Instanzen von `TExtension` und gibt sie als Auflistung von `TExtension`-Objekten zurück.  
@@ -44,7 +44,7 @@ Die Syndication-API ist darauf ausgelegt, ein formatunabhängiges Programmiermod
   
 - Überschreiben Sie <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> in der MyExtensionFeed-Klasse, um ein MyExtensionItem-Objekt statt des Standardobjekts vom Typ <xref:System.ServiceModel.Syndication.SyndicationItem> zu instanziieren. In <xref:System.ServiceModel.Syndication.SyndicationFeed> und <xref:System.ServiceModel.Syndication.SyndicationItem> sind einige Methoden definiert, mit denen sich Objekte des Typs <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory> und <xref:System.ServiceModel.Syndication.SyndicationPerson> erstellen lassen (beispielsweise <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> und <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Alle diese Methoden können zur Erstellung einer benutzerdefinierten abgeleiteten Klasse überschrieben werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Architektur von Syndication](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [Übersicht über WCF Syndication](wcf-syndication-overview.md)
+- [Architektur von Syndication](architecture-of-syndication.md)

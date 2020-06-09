@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 7eb640576bc00bc767ba16f8dc4a5d5952a479c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184724"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598878"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Internet: Ungesicherter Client und Dienst
-Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherten Windows Communication Foundation (WCF)-Client und -Dienst:  
+Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherten Windows Communication Foundation (WCF)-Client und-Dienst:  
   
- ![Screenshot, der ein ungesichertes Internetszenario zeigt](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
+ ![Screenshot, der ein ungesichertes Internet Szenario anzeigt](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|Keine|  
 |Transport|HTTP|  
-|Bindung|<xref:System.ServiceModel.BasicHttpBinding>im Code oder das [ \<grundlegendehttpBinding>-Element](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) in der Konfiguration.|  
+|Bindung|<xref:System.ServiceModel.BasicHttpBinding>im Code oder im- [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) Element in der Konfiguration.|  
 |Interoperabilität|Mit vorhandenen Webdienstclients und Diensten|  
 |Authentifizierung|Keine|  
 |Integrität|Keine|  
 |Vertraulichkeit|Keine|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
@@ -68,7 +68,7 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
@@ -78,7 +78,7 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Code  
- Der folgende Code zeigt einen grundlegenden WCF-Client, der auf einen ungesicherten Endpunkt zugreift.  
+ Der folgende Code zeigt einen einfachen WCF-Client, der auf einen ungesicherten Endpunkt zugreift.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
@@ -111,6 +111,6 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Häufige Sicherheitsszenarien](common-security-scenarios.md)
+- [Sicherheitsübersicht](security-overview.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
