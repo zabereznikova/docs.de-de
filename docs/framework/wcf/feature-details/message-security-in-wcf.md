@@ -2,16 +2,16 @@
 title: Nachrichtensicherheit in WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 32f6659f6ac744ab7af07c23e7e26ea1124d020c
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 6875339df327371a79bc9b9072aca2df0bc7d3f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212068"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602660"
 ---
 # <a name="message-security-in-wcf"></a>Nachrichtensicherheit in WCF
 
-Windows Communication Foundation (WCF) verfügt über zwei Haupt Modi für die Bereitstellung von Sicherheit (`Transport` und `Message`) und einen dritten Modus (`TransportWithMessageCredential`), der beide kombiniert. In diesem Thema werden die Nachrichtensicherheit und die Gründe für deren Verwendung erläutert.
+Windows Communication Foundation (WCF) verfügt über zwei Haupt Modi für die Bereitstellung von Sicherheit ( `Transport` und `Message` ) sowie einen dritten Modus ( `TransportWithMessageCredential` ), der die beiden kombiniert. In diesem Thema werden die Nachrichtensicherheit und die Gründe für deren Verwendung erläutert.
 
 ## <a name="what-is-message-security"></a>Was ist Nachrichtensicherheit?
 
@@ -29,7 +29,7 @@ Bei Verwendung von Sicherheit auf Nachrichtenebene sind alle Sicherheitsinformat
 
 - Unterstützung mehrerer Transporte. Sie können gesicherte Nachrichten über viele verschiedene Transporte senden, z. B. benannte Pipes und TCP, ohne sich hinsichtlich Sicherheit auf das Protokoll verlassen zu müssen. Bei Sicherheit auf Transportebene sind alle Sicherheitsinformationen auf eine einzelne Transportverbindung beschränkt und nicht im Nachrichteninhalt selbst verfügbar. Bei Nachrichtensicherheit wird die Nachricht unabhängig von dem für die Übertragung der Nachricht verwendeten Transport gesichert, und der Sicherheitskontext ist direkt in die Nachricht eingebettet.
 
-- Unterstützung eines umfangreichen Satzes von Anmeldeinformationen und Ansprüchen. Die Nachrichtensicherheit basiert auf der WS-Sicherheitsspezifikation. Diese bietet ein erweiterungsfähiges Framework, mit dem jegliche Art von Anspruch innerhalb der SOAP-Nachricht übertragen werden kann. Im Gegensatz zur Transportsicherheit ist der Satz von Authentifizierungsmechanismen oder Ansprüchen, die Sie verwenden können, nicht durch die Transportfunktionen beschränkt. WCF-Nachrichten Sicherheit beinhaltet mehrere Authentifizierungs-und Anspruchs Übertragungsarten und kann so erweitert werden, dass bei Bedarf zusätzliche Typen unterstützt werden. Aus diesen Gründen ist beispielsweise ein Szenario mit verbundenen Anmeldeinformationen ohne Nachrichtensicherheit nicht möglich. Weitere Informationen zu Verbund Szenarien, die von WCF unterstützt werden, finden Sie unter Verbund [und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).
+- Unterstützung eines umfangreichen Satzes von Anmeldeinformationen und Ansprüchen. Die Nachrichtensicherheit basiert auf der WS-Sicherheitsspezifikation. Diese bietet ein erweiterungsfähiges Framework, mit dem jegliche Art von Anspruch innerhalb der SOAP-Nachricht übertragen werden kann. Im Gegensatz zur Transportsicherheit ist der Satz von Authentifizierungsmechanismen oder Ansprüchen, die Sie verwenden können, nicht durch die Transportfunktionen beschränkt. WCF-Nachrichten Sicherheit beinhaltet mehrere Authentifizierungs-und Anspruchs Übertragungsarten und kann so erweitert werden, dass bei Bedarf zusätzliche Typen unterstützt werden. Aus diesen Gründen ist beispielsweise ein Szenario mit verbundenen Anmeldeinformationen ohne Nachrichtensicherheit nicht möglich. Weitere Informationen zu Verbund Szenarien, die von WCF unterstützt werden, finden Sie unter Verbund [und ausgestellte Token](federation-and-issued-tokens.md).
 
 ## <a name="how-message-and-transport-security-compare"></a>Vergleich von Nachrichten- und Transportsicherheit
 
@@ -63,9 +63,9 @@ Die Nachrichtensicherheit hat folgende Nachteile:
 
 - Erfordert die Implementierung von Sicherheitsmechanismen auf XML-Ebene und Unterstützung der WS-Sicherheitsspezifikation. Dies kann sich auf die Interoperabilität auswirken.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
-- [Microsoft Patterns and Practices, Kapitel 3: Implementieren der Transport-und Nachrichten Schicht Sicherheit](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
+- [Sichern von Diensten und Clients](securing-services-and-clients.md)
+- [Transport Sicherheit](transport-security.md)
+- [Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen](how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security (in englischer Sprache)](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))

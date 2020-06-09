@@ -2,19 +2,19 @@
 title: Webhosting einer Anwendung mit Queuing
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 17c3d2167d3f98017c5f366ab0d700d9fb889f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951574"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600139"
 ---
 # <a name="web-hosting-a-queued-application"></a>Webhosting einer Anwendung mit Queuing
-Der Windows-Prozess Aktivierungs Dienst (Windows Process Activation Service, was) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die Anwendungen enthalten, die Windows Communication Foundation (WCF)-Dienste hosten. Das was-Prozessmodell generalisiert das IIS 6,0-Prozessmodell für den HTTP-Server, indem die Abhängigkeit von http entfernt wird. Dadurch können WCF-Dienste sowohl HTTP-als auch nicht-HTTP-Protokolle, wie z. b. net. MSMQ und MSMQ. FormatName, in einer Host Umgebung verwenden, die Nachrichten basierte Aktivierung unterstützt und die Möglichkeit bietet, eine große Anzahl von Anwendungen auf einem bestimmten Computer zu hosten.  
+Der Windows-Prozessaktivierungsdienst (Windows Process Activation Service, WAS) verwaltet die Aktivierung und Lebensdauer der Workerprozesse, die Anwendungen enthalten, die WCF-Dienste (Windows Communication Foundation) hosten. Das WAS-Prozessmodell generalisiert das IIS 6.0-Prozessmodell für den HTTP-Server, indem die Abhängigkeit von HTTP entfernt wird. Dadurch können WCF-Dienste sowohl HTTP-als auch nicht-HTTP-Protokolle, wie z. b. net. MSMQ und MSMQ. FormatName, in einer Host Umgebung verwenden, die Nachrichten basierte Aktivierung unterstützt und die Möglichkeit bietet, eine große Anzahl von Anwendungen auf einem bestimmten Computer zu hosten.  
   
  WAS enthält einen Message Queuing (MSMQ)-Aktivierungsdienst, der eine Anwendung mit Queuing aktiviert, wenn mindestens eine Nachricht in einer der von der Anwendung verwendeten Warteschlangen platziert wird. Der MSMQ-Aktivierungsdienst ist ein NT-Dienst, der standardmäßig automatisch gestartet wird.  
   
- Weitere Informationen zu was und den dazugehörigen Vorteilen finden Sie unter [Hosting in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Weitere Informationen zu MSMQ finden Sie unter [Übersicht über Warteschlangen](../../../../docs/framework/wcf/feature-details/queues-overview.md).
+ Weitere Informationen zu was und den dazugehörigen Vorteilen finden Sie unter [Hosting in Windows Process Activation Service](hosting-in-windows-process-activation-service.md). Weitere Informationen zu MSMQ finden Sie unter [Übersicht über Warteschlangen](queues-overview.md).
   
 ## <a name="queue-addressing-in-was"></a>Adressieren von Warteschlangen in WAS  
  WAS-Anwendungen weisen Uniform Resource Identifier (URI)-Adressen auf. Anwendungsadressen haben zwei Teile: einen Basis-URI-Präfix und eine anwendungsspezifische, relative Adresse (Pfad). Diese beiden Teile stellen beim Zusammenfügen die externe Adresse für eine Anwendung bereit. Das Basis-URI-Präfix wird aus der Site Bindung erstellt und für alle Anwendungen unter der Site verwendet, z. b. "net. MSMQ://localhost", "MSMQ. FormatName://localhost" oder "net. TCP://localhost". Anwendungs Adressen werden dann durch die Verwendung von anwendungsspezifischen Pfad Fragmenten (z. b. "/applicationOne") erstellt und an das Basis-URI-Präfix angehängt, um den vollständigen Anwendungs-URI zu erhalten, z. b. "net. MSMQ://localhost/applicationOne".  
@@ -41,7 +41,7 @@ Der Windows-Prozess Aktivierungs Dienst (Windows Process Activation Service, was
 ### <a name="subqueue-and-system-queue-caveat"></a>Einschränkung für Unterwarteschlangen und Systemwarteschlangen  
  Eine in WAS gehostete Anwendungen kann in einer Systemwarteschlange wie der systemweiten Warteschlange für unzustellbare Nachrichten oder in Unterwarteschlangen wie der Unterwarteschlange für potenziell schädliche Nachrichten nicht basierend auf Nachrichten aktiviert werden. Dies ist eine Einschränkung für diese Produktversion.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Behandlung nicht verarbeitbarer Nachrichten](poison-message-handling.md)
+- [Dienstendpunkte und Adressieren von Warteschlangen](service-endpoints-and-queue-addressing.md)

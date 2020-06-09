@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 46b69697616ad7983daed16f8a180a4da7f61a16
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 404fd9ddc911327bbc09c65d74da22bd88d08e2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183768"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602569"
 ---
 # <a name="default-message-contract"></a>Standardnachrichtenvertrag
-Das Beispiel zum Standardnachrichtenvertrag zeigt einen Dienst, bei dem eine benutzerdefinierte Nachricht an und aus Dienstvorgängen übergeben wird. Dieses Beispiel basiert auf dem [Ersten Schritte,](../../../../docs/framework/wcf/samples/getting-started-sample.md) das eine Rechnerschnittstelle als typisierten Dienst implementiert. Anstelle der einzelnen Dienstvorgänge für Addition, Subtraktion, Multiplikation und Division, [die](../../../../docs/framework/wcf/samples/getting-started-sample.md)in den Vorgängen verwendet werden, übergibt dieses Beispiel eine benutzerdefinierte Nachricht, die sowohl die Operanden als auch den Operator enthält, und gibt das Ergebnis der arithmetischen Berechnung zurück.  
+Das Beispiel zum Standardnachrichtenvertrag zeigt einen Dienst, bei dem eine benutzerdefinierte Nachricht an und aus Dienstvorgängen übergeben wird. Dieses Beispiel basiert [auf den ersten](getting-started-sample.md) Schritten, mit denen eine Rechner Schnittstelle als typisierter Dienst implementiert wird. Anstelle der einzelnen Dienst Vorgänge für Addition, Subtraktion, Multiplikation und Division, die [in den ersten Schritten verwendet werden,](getting-started-sample.md)übergibt dieses Beispiel eine benutzerdefinierte Nachricht, die die Operanden und den Operator enthält, und gibt das Ergebnis der arithmetischen Berechnung zurück.  
   
  Der Client ist ein Konsolenprogramm (.exe), und die Dienstbibliothek (.dll) wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet. Die Clientaktivität ist im Konsolenfenster sichtbar.  
   
@@ -131,7 +131,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Der generierte Clientcode für den Client wurde mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) erstellt. Wenn erforderlich, erstellt das Tool automatisch Nachrichtenvertragstypen im generierten Clientcode. Die `/messageContract`-Befehlsoption kann angegeben werden, um die Generierung von Nachrichtenverträgen zu erzwingen.  
+ Der generierte Client Code für den Client wurde mit dem [Service Model Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool erstellt. Wenn erforderlich, erstellt das Tool automatisch Nachrichtenvertragstypen im generierten Clientcode. Die `/messageContract`-Befehlsoption kann angegeben werden, um die Generierung von Nachrichtenverträgen zu erzwingen.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
@@ -170,17 +170,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.  
   
-3. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

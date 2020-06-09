@@ -2,12 +2,12 @@
 title: Sicherheit mit benutzerdefinierten Bindungen
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: eb575594cec9ea714578bc104344acc14b00e9df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990015"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592462"
 ---
 # <a name="custom-binding-security"></a>Sicherheit mit benutzerdefinierten Bindungen
 
@@ -24,7 +24,7 @@ Die Dienstkonfiguration definiert eine benutzerdefinierte Bindung, die Folgendes
 
 - Windows-Nachrichtensicherheit.
 
-Durch die benutzerdefinierte Bindungskonfiguration wird der sichere Transport ermöglicht, da gleichzeitig die Sicherheit auf Nachrichtenebene aktiviert wird. Die Reihenfolge der Bindungs Elemente ist beim Definieren einer benutzerdefinierten Bindung wichtig, da jede eine Ebene im Kanal Stapel darstellt (siehe [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)). Die benutzerdefinierte Bindung wird in den Dienst- und Clientkonfigurationsdateien definiert, wie in der folgenden Beispielkonfiguration dargestellt.
+Durch die benutzerdefinierte Bindungskonfiguration wird der sichere Transport ermöglicht, da gleichzeitig die Sicherheit auf Nachrichtenebene aktiviert wird. Die Reihenfolge der Bindungs Elemente ist beim Definieren einer benutzerdefinierten Bindung wichtig, da jede eine Ebene im Kanal Stapel darstellt (siehe [benutzerdefinierte Bindungen](../extending/custom-bindings.md)). Die benutzerdefinierte Bindung wird in den Dienst- und Clientkonfigurationsdateien definiert, wie in der folgenden Beispielkonfiguration dargestellt.
 
 ```xml
 <bindings>
@@ -58,7 +58,7 @@ Die benutzerdefinierte Bindung verwendet ein Dienstzertifikat zum Authentifizier
 </behaviors>
 ```
 
-Außerdem verwendet die benutzerdefinierte Bindung Nachrichtensicherheit mit dem Windows-Anmeldeinformationstyp. Dies ist der Standard-Anmeldeinformationstyp. Dies wird durch das `security`-Bindungselement umgesetzt. Sowohl der Client als auch der Dienst werden mithilfe von Sicherheitsfunktionen auf Nachrichtenebene authentifiziert, wenn der Kerberos-Authentifizierungsmechanismus verfügbar ist. Dies geschieht, wenn das Beispiel in der Active Directory-Umgebung ausgeführt wird. Ist der Kerberos-Authentifizierungsmechanismus nicht verfügbar, wird die NTLM-Authentifizierung verwendet. NTLM authentifiziert den Client für den Dienst, authentifiziert aber nicht den Dienst für den Client. Das `security`-Bindungselement ist für die Verwendung von `SecureConversation` `authenticationType` konfiguriert. Daher wird eine Sicherheitssitzung auf dem Client und für den Dienst erstellt. Dies ist erforderlich, damit der Duplexvertrag des Diensts funktioniert.
+Außerdem verwendet die benutzerdefinierte Bindung Nachrichtensicherheit mit dem Windows-Anmeldeinformationstyp. Dies ist der Standard-Anmeldeinformationstyp. Dies wird durch das `security`-Bindungselement umgesetzt. Sowohl der Client als auch der Dienst werden mithilfe von Sicherheitsfunktionen auf Nachrichtenebene authentifiziert, wenn der Kerberos-Authentifizierungsmechanismus verfügbar ist. Dies geschieht, wenn das Beispiel in der Active Directory-Umgebung ausgeführt wird. Ist der Kerberos-Authentifizierungsmechanismus nicht verfügbar, wird die NTLM-Authentifizierung verwendet. NTLM authentifiziert den Client für den Dienst, authentifiziert aber nicht den Dienst für den Client. Das `security` Bindungs Element ist für die Verwendung `SecureConversation` `authenticationType` von konfiguriert, was zur Erstellung einer Sicherheits Sitzung auf dem Client und dem Dienst führt. Dies ist erforderlich, damit der Duplexvertrag des Diensts funktioniert.
 
 Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Konsolenfenster des Clients angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
 
@@ -106,11 +106,11 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.
 
-3. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus
 
@@ -135,12 +135,12 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
     3. Kopieren Sie die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.
 
-    4. Führen Sie den folgenden Befehl in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit `Setup.bat service`Administratorrechten geöffnet wurde:. Hiermit wird das Dienstzertifikat erstellt, dessen Antragstellername mit dem Namen des Computers übereinstimmt, auf dem die Batchdatei ausgeführt wurde.
+    4. Führen Sie den folgenden Befehl in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde: `Setup.bat service` . Hiermit wird das Dienstzertifikat erstellt, dessen Antragstellername mit dem Namen des Computers übereinstimmt, auf dem die Batchdatei ausgeführt wurde.
 
         > [!NOTE]
         > Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio-Eingabeaufforderung (2010) ausgeführt zu werden. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable ist innerhalb einer Visual Studio-Eingabeaufforderung (2010) automatisch festgelegt.
 
-    5. Ändern Sie den [ \<serviceCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) in der Datei "Service. exe. config", um den Antragsteller Namen des im vorherigen Schritt generierten Zertifikats widerzuspiegeln.
+    5. Ändern [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Sie in der Datei Service. exe. config den Antragsteller Namen des Zertifikats, das Sie im vorherigen Schritt generiert haben.
 
     6. Führen Sie Service.exe an einer Eingabeaufforderung aus.
 
@@ -150,7 +150,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
     2. Führen Sie Cleanup.bat aus, um alte Zertifikate aus vorherigen Beispielen zu entfernen.
 
-    3. Exportieren Sie das Zertifikat des Diensts, indem Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Dienstcomputer `%SERVER_NAME%` ausführen (ersetzen Sie durch den voll qualifizierten Namen des Computers, auf dem der Dienst wird ausgeführt.):
+    3. Exportieren Sie das Zertifikat des Diensts, indem Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Dienstcomputer ausführen (ersetzen Sie durch `%SERVER_NAME%` den voll qualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird):
 
         ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -158,7 +158,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
     4. Kopieren Sie %SERVER_NAME%.cer auf den Clientcomputer (ersetzen Sie %SERVER_NAME% durch den vollqualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird).
 
-    5. Importieren Sie das Dienst Zertifikat, indem Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Client Computer ausführen (ersetzen Sie% Servername% durch den voll qualifizierten Namen des Computers, auf dem die der Dienst wird ausgeführt.):
+    5. Importieren Sie das Dienst Zertifikat, indem Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Client Computer ausführen (ersetzen Sie% server_name% durch den voll qualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird):
 
         ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -179,7 +179,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
         </client>
         ```
 
-    7. Wenn der Dienst unter einem anderen Konto als NetworkService oder LocalSystem in einer Domänenumgebung ausgeführt wird, müssen Sie möglicherweise die Endpunktidentität für den Dienstendpunkt in der Datei App.config des Clients ändern und den entsprechenden UPN oder SPN für das Konto angeben, unter dem der Dienst ausgeführt wird. Weitere Informationen zur Endpunkt Identität finden Sie im Thema [Dienst Identität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) .
+    7. Wenn der Dienst unter einem anderen Konto als NetworkService oder LocalSystem in einer Domänenumgebung ausgeführt wird, müssen Sie möglicherweise die Endpunktidentität für den Dienstendpunkt in der Datei App.config des Clients ändern und den entsprechenden UPN oder SPN für das Konto angeben, unter dem der Dienst ausgeführt wird. Weitere Informationen zur Endpunkt Identität finden Sie im Thema [Dienst Identität und Authentifizierung](../feature-details/service-identity-and-authentication.md) .
 
     8. Führen Sie an einer Eingabeaufforderung Client.exe aus.
 

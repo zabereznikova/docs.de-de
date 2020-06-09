@@ -7,27 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d172f9b659804179d23fb382376f83f4898edc5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047801"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601308"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Vorgehensweise: Zulassen von Metadatenanforderungen während der Autorisierung
 Während der benutzerdefinierten Autorisierung ist es möglicherweise notwendig, eine Anforderung für Metadaten zuzulassen, die verarbeitet werden sollten. Das folgende Thema durchläuft die Schritte, um so eine Anforderung zu überprüfen.  
   
- Weitere Informationen zu Windows Communication Foundation (WCF)-Autorisierung, finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+ Weitere Informationen zur Windows Communication Foundation (WCF)-Autorisierung finden Sie unter [Autorisierung](authorization-in-wcf.md).  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>So lassen Sie Metadatenanforderungen während der Autorisierung zu  
   
 1. Erstellen Sie eine Erweiterung der <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse.  
   
-2. Überschreiben Sie die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>-Methode. Die Methode gibt `true` oder `false` abhängig davon zurück, ob Autorisierung zugelassen wird. Informationen zur aktuellen Prozedur finden Sie im <xref:System.ServiceModel.OperationContext>, der zur Methode als Parameter übergeben wird.  
+2. Überschreiben Sie die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> -Methode. Die Methode gibt `true` oder `false` abhängig davon zurück, ob Autorisierung zugelassen wird. Informationen zur aktuellen Prozedur finden Sie im <xref:System.ServiceModel.OperationContext>, der zur Methode als Parameter übergeben wird.  
   
 3. Überprüfen Sie in der Außerkraftsetzung den Vertragsnamen, Namespace und die Aktion, wie im folgenden Beispiel gezeigt. Wenn die Bedingungen gültig sind, geben Sie `true.` zurück  
   
-4. Verwenden Sie den Erweiterbarkeitspunkt, um die Klasse bereitzustellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4. Verwenden Sie den Erweiterbarkeitspunkt, um die Klasse bereitzustellen. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt das Außerkraftsetzen der <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>-Methode.  
@@ -35,8 +35,8 @@ Während der benutzerdefinierten Autorisierung ist es möglicherweise notwendig,
  [!code-csharp[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/cs/source.cs#1)]
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Autorisierung](authorization-in-wcf.md)
+- [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](managing-claims-and-authorization-with-the-identity-model.md)

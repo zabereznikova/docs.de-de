@@ -5,35 +5,35 @@ helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 20db0ef427a5e791bd6b8dcef90bf7911ae0d4a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b305b98d620636328866bce848411f395053485
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772956"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593131"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts
-Windows Communication Foundation (WCF) verwendet einen Windows-Dienst, der den Net.TCP-Portfreigabedienst aufgerufen, um die gemeinsame Nutzung von TCP-Ports für mehrere Prozesse. Dieser Dienst wird als Teil von WCF installiert, aber der Dienst nicht als Sicherheitsmaßnahme standardmäßig aktiviert ist und daher muss manuell aktiviert werden vor der ersten Verwendung. In diesem Thema wird beschrieben, wie Sie den NET.TCP-Portfreigabedienst mit dem Microsoft Management Console (MMC)-Snap-In konfigurieren können.  
+Windows Communication Foundation (WCF) verwendet einen Windows-Dienst, der als net. TCP-Port Freigabe Dienst bezeichnet wird, um die Freigabe von TCP-Ports über mehrere Prozesse hinweg zu vereinfachen. Dieser Dienst wird als Teil von WCF installiert, aber der Dienst ist nicht standardmäßig als Sicherheitsmaßnahme aktiviert und muss vor der ersten Verwendung manuell aktiviert werden. In diesem Thema wird beschrieben, wie Sie den NET.TCP-Portfreigabedienst mit dem Microsoft Management Console (MMC)-Snap-In konfigurieren können.  
   
- Nachdem Sie den Net.TCP-Portfreigabedienst aktivieren und starten Sie ihn manuell, finden Sie unter [Vorgehensweise: Konfigurieren eines WCF-Diensts, um die Portfreigabe verwenden](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) Informationen dazu, wie Sie den Dienst zum Verwenden dieses Diensts zu konfigurieren.  
+ Nachdem Sie den Net. TCP-Port Freigabe Dienst aktiviert und manuell gestartet haben, finden Sie unter Gewusst [wie: Konfigurieren eines WCF-Dienstanbieter](how-to-configure-a-wcf-service-to-use-port-sharing.md) für die Verwendung von Port Freigabe Informationen zum Konfigurieren des Dienstanbieter für die Verwendung dieses Dienstanbieter.  
   
- Ein Beispiel mit net.tcp:// Anschlussfreigabe finden Sie unter den [Beispiel Net.TCP-Portfreigabe](../../../../docs/framework/wcf/samples/net-tcp-port-sharing-sample.md).  
+ Ein Beispiel für die Verwendung von net. TCP://der Port Freigabe finden Sie unter [net. TCP-Port Freigabe Beispiel](../samples/net-tcp-port-sharing-sample.md).  
   
 ### <a name="to-enable-the-nettcp-port-sharing-service-using-mmc"></a>So aktivieren Sie den Net.TCP-Portfreigabedienst mit MMC  
   
-1. Öffnen Sie im Startmenü der Diensteverwaltungskonsole, entweder indem Sie ein Eingabeaufforderungsfenster öffnen und Folgendes eingeben `services.msc` oder indem Sie auf Ausführen klicken und eingeben `services.msc` in das Feld Öffnen.  
+1. Öffnen Sie über das Startmenü die Dienste-Verwaltungskonsole, indem Sie ein Eingabe Aufforderungs Fenster öffnen und eingeben, `services.msc` oder indem Sie ausführen und `services.msc` in das Feld Öffnen eingeben.  
   
-2. In der **Namen** mit der rechten Maustaste der Spalte mit der Liste der Dienste, die **Net.Tcp-Portfreigabedienst**, und wählen Sie **Eigenschaften** aus dem Menü.  
+2. Klicken Sie in der Spalte **Name** der Liste der Dienste mit der rechten Maustaste auf den **net. TCP-Port Freigabe Dienst**, und wählen Sie im Menü **Eigenschaften** aus.  
   
-3. So aktivieren Sie den manuellen Start des Diensts in der **Eigenschaften** wählen Sie im Fenster der **allgemeine** Registerkarte und klicken Sie in der **Starttyp** Option manuell, und klicken Sie dann auf **Anwenden**.  
+3. Um das manuelle Starten des Dienstanbieter zu aktivieren, wählen Sie im **Eigenschaften** Fenster die Registerkarte **Allgemein** aus, und wählen Sie im Feld **Starttyp** die Option manuell aus, **und klicken Sie dann auf über**nehmen.  
   
-4. Um den Dienst im Statusbereich Dienst zu starten, klicken Sie auf die **starten** Schaltfläche. Der Dienststatus sollte jetzt "Gestartet" anzeigen.  
+4. Um den Dienst zu starten, klicken Sie im Bereich Dienststatus auf die Schaltfläche **Start** . Der Dienststatus sollte jetzt "Gestartet" anzeigen.  
   
-5. Um die Liste der Dienste zurückzukehren, klicken Sie auf die **OK**, und beenden Sie die MMC-Konsole.  
+5. Um zur Liste der Dienste zurückzukehren, klicken Sie auf **OK**, und beenden Sie die MMC-Konsole.  
   
 ## <a name="example"></a>Beispiel  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Net.TCP-Portfreigabe](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Konfigurieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [Net.TCP-Anschlussfreigabe](net-tcp-port-sharing.md)
+- [Konfigurieren des Net.TCP-Portfreigabediensts](configuring-the-net-tcp-port-sharing-service.md)

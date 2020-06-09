@@ -2,12 +2,12 @@
 title: Verwenden von JSONP
 ms.date: 03/30/2017
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
-ms.openlocfilehash: 622fbdbf2674aea552cfd57f528d7cc5168cfda8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82290319b5d8b58708f0b2ebf40522ee76127b84
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932833"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594958"
 ---
 # <a name="using-jsonp"></a>Verwenden von JSONP
 
@@ -17,7 +17,7 @@ JSON Padding (JSONP) ist ein Mechanismus, der in Webbrowsern die siteübergreife
 callback({"a" = \\"b\\"});
 ```
 
-Im obigen Beispiel wird die JSON-Nutzlast, `{"a" = \\"b\\"}`, mit einem Funktionsaufruf, `callback`, als Wrapper versehen. Die Rückruffunktion muss auf der aktuellen Webseite bereits definiert sein. Der Inhaltstyp einer JSONP-Antwort ist `application/javascript`.
+Im obigen Beispiel wird die JSON-Nutzlast, `{"a" = \\"b\\"}`, mit einem Funktionsaufruf, `callback`, als Wrapper versehen. Die Rückruffunktion muss auf der aktuellen Webseite bereits definiert sein. Der Inhaltstyp einer JSONP-Antwort ist `application/javascript` .
 
 JSONP ist nicht automatisch aktiviert. Legen Sie zum Aktivieren auf einem der HTTP Standardendpunkte (`javascriptCallbackEnabled` oder `true`) das <xref:System.ServiceModel.Description.WebHttpEndpoint>-Attribut auf <xref:System.ServiceModel.Description.WebScriptEndpoint> fest. Dies wird im folgenden Beispiel veranschaulicht.
 
@@ -74,7 +74,7 @@ JSONP-Antworten mit anderen HTTP-Statuscodes als 200 enthalten einen zweiten Par
 anotherFunction ({"root":"Something"}, 201);
 ```
 
-## <a name="validations"></a>Validierungen
+## <a name="validations"></a>Überprüfungen
 
 Wenn JSONP aktiviert ist, werden die folgenden Validierungen ausgeführt:
 
@@ -84,6 +84,6 @@ Wenn JSONP aktiviert ist, werden die folgenden Validierungen ausgeführt:
 
 - Falls der Rückrufname `null` lautet oder eine leere Zeichenfolge ist, wird die Antwort nicht als JSONP formatiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Überblick über WCF-Web-HTTP-Programmiermodelle](wcf-web-http-programming-model-overview.md)

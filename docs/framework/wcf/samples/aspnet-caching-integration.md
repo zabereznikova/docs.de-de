@@ -2,18 +2,18 @@
 title: ASP.NET-Zwischenspeicherungsintegration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 23c10e56dba7daec2d1027de92e8252c8fe69055
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c541f3caad8a500b9fdb33d00b58706bac876e37
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716175"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594750"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET-Zwischenspeicherungsintegration
 
 In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird. Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.
 
-## <a name="demonstrates"></a>Veranschaulicht
+## <a name="demonstrates"></a>Zeigt
 
 Integration in den ASP.NET-Ausgabecache
 
@@ -22,17 +22,17 @@ Integration in den ASP.NET-Ausgabecache
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
 ## <a name="discussion"></a>Diskussion
 
-Das Beispiel verwendet die <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, um das ASP.net-Ausgabe Caching mit dem Windows Communication Foundation (WCF)-Dienst zu nutzen. Das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> wird auf Dienstvorgänge angewendet und gibt den Namen eines Cacheprofils in einer Konfigurationsdatei an, die auf Antworten vom angegebenen Vorgang angewendet werden soll.
+Im Beispiel wird der verwendet <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> , um das ASP.net-Ausgabe Caching mit dem Windows Communication Foundation (WCF)-Dienst zu nutzen. Das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> wird auf Dienstvorgänge angewendet und gibt den Namen eines Cacheprofils in einer Konfigurationsdatei an, die auf Antworten vom angegebenen Vorgang angewendet werden soll.
 
-In der Service.cs-Datei des Beispiel Dienst Projekts werden die `GetCustomer`-und `GetCustomers` Vorgänge mit dem <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>gekennzeichnet, das den Cache Profilnamen "CacheFor60Seconds" bereitstellt. In der Datei "Web. config" des Dienst Projekts wird das Cache Profil "CacheFor60Seconds" unter dem <`caching`>-Element <`system.web`> bereitgestellt. Für dieses Cache Profil lautet der Wert des `duration`-Attributs "60", sodass die diesem Profil zugeordneten Antworten für 60 Sekunden im ASP.net-Ausgabe Cache zwischengespeichert werden. Außerdem wird für dieses Cache Profil das `varmByParam`-Attribut auf "Format" festgelegt, sodass Anforderungen mit unterschiedlichen Werten für den `format` Abfrage Zeichenfolgen-Parameter separat zwischengespeichert werden. Schließlich wird das `varyByHeader`-Attribut des Cache Profils auf "Accept" festgelegt, sodass Anforderungen mit unterschiedlichen Accept-Header Werten separat zwischengespeichert werden.
+In der Service.cs-Datei des Beispiel Dienst Projekts `GetCustomer` sind der-Vorgang und der- `GetCustomers` Vorgang mit dem gekennzeichnet <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> , der den Cache Profilnamen "CacheFor60Seconds" bereitstellt. In der Datei "Web. config" des Dienst Projekts wird das Cache Profil "CacheFor60Seconds" unter dem < `caching` >-Element von < `system.web` > bereitgestellt. Für dieses Cache Profil lautet der Wert des `duration` Attributs "60", sodass die diesem Profil zugeordneten Antworten für 60 Sekunden im ASP.net-Ausgabe Cache zwischengespeichert werden. Außerdem wird für dieses Cache Profil das- `varmByParam` Attribut auf "Format" festgelegt, sodass Anforderungen mit unterschiedlichen Werten für den `format` Abfrage Zeichen folgen Parameter separat zwischengespeichert werden. Schließlich wird das-Attribut des Cache Profils `varyByHeader` auf "Accept" festgelegt, sodass Anforderungen mit unterschiedlichen Accept-Header Werten separat zwischengespeichert werden.
 
-Program.cs im Clientprojekt zeigt, wie ein Client dieser Art mit <xref:System.Net.HttpWebRequest> erstellt werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, mit anderen .NET Framework Klassen wie der WCF-Kanalfactory und <xref:System.Net.WebClient>auf den Dienst zuzugreifen. Andere Beispiele im SDK (z. b. das Beispiel für den [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) ) veranschaulichen, wie diese Klassen verwendet werden, um mit einem WCF-Dienst zu kommunizieren.
+Program.cs im Clientprojekt zeigt, wie ein Client dieser Art mit <xref:System.Net.HttpWebRequest> erstellt werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, über andere .NET Framework Klassen wie die WCF-Kanalfactory und auf den Dienst zuzugreifen <xref:System.Net.WebClient> . Andere Beispiele im SDK (z. b. das Beispiel für den [grundlegenden HTTP-Dienst](basic-http-service.md) ) veranschaulichen, wie diese Klassen verwendet werden, um mit einem WCF-Dienst zu kommunizieren.
 
 ## <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus
 
@@ -50,7 +50,7 @@ Während die Clientkonsolenanwendung ausgeführt wird, sendet der Client Anforde
 
 1. Öffnen Sie die Projektmappe für das Beispiel der Integration von ASP.NET-Zwischenspeicherung.
 
-2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
+2. Drücken Sie STRG+UMSCH+B, um die Lösung zu erstellen.
 
 3. Wenn das **Projektmappen-Explorer** Fenster nicht bereits geöffnet ist, drücken Sie STRG + W + S.
 

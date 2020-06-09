@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 3dd21268d4ea7dc59c74889ac94dc86678e91865
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9447487012cae370d35880e5b780465f9434051b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184636"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602621"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Nachrichtensicherheit über einen Benutzernamenclient
-Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst und einen Client, der mithilfe der Sicherheit auf Nachrichtenebene gesichert ist. Der Dienst wird über ein X.509-Zertifikat authentifiziert. Der Client wird über den Benutzernamen und das Kennwort authentifiziert.  
+Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst und einen Client, der mithilfe der Sicherheit auf Nachrichten Ebene gesichert wird. Der Dienst wird über ein X.509-Zertifikat authentifiziert. Der Client wird über den Benutzernamen und das Kennwort authentifiziert.  
   
- Eine Beispielanwendung finden Sie unter [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ Eine Beispielanwendung finden Sie unter [Message Security User Name](../samples/message-security-user-name.md).  
   
- ![Nachrichtensicherheit durch Benutzernamenauthentifizierung](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![Nachrichtensicherheit durch Benutzernamenauthentifizierung](media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1b10a61-7e1d-42b5-B1AF-195bfee5b3c6")  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|`Message`|  
 |Interoperabilität|Nur Windows Communication Foundation (WCF)|  
@@ -31,7 +31,7 @@ Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst
 |Bindung|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
@@ -127,8 +127,8 @@ Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Nachrichtensicherheit – Benutzername](../../../../docs/framework/wcf/samples/message-security-user-name.md)
-- [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<Identität>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Sicherheitsübersicht](security-overview.md)
+- [Nachrichtensicherheit – Benutzername](../samples/message-security-user-name.md)
+- [Dienstidentität und Authentifizierung](service-identity-and-authentication.md)
+- [\<identity>](../../configure-apps/file-schema/wcf/identity.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

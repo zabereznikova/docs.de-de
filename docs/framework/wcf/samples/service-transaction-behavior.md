@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 38ad03d64d95e0653fba8018c59c62db9a698096
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 0be5bf0dbe6416febb898fb5150c5a516c8b0969
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715110"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591526"
 ---
 # <a name="service-transaction-behavior"></a>Diensttransaktionsverhalten
 
-In diesem Beispiel werden die Verwendung einer clientkoordinierten Transaktion und die Einstellungen von ServiceBehaviorAttribute und OperationBehaviorAttribute zum Steuern des Diensttransaktionsverhaltens veranschaulicht. Dieses Beispiel basiert auf den ersten [Schritten, mit denen ein](../../../../docs/framework/wcf/samples/getting-started-sample.md) Rechner Dienst implementiert wird. er wird jedoch erweitert, um ein Server Protokoll der durchgeführten Vorgänge in einer Datenbanktabelle und eine Zustands behaftete laufende Summe für die Rechner Vorgänge beizubehalten. Beibehaltene Schreibvorgänge in der Serverprotokolltabelle sind abhängig vom Ergebnis einer clientkoordinierten Transaktion. Wenn die Clienttransaktion nicht abgeschlossen wird, stellt die Webdiensttransaktion sicher, dass die Aktualisierungen der Datenbank nicht ausgeführt werden.
+In diesem Beispiel werden die Verwendung einer clientkoordinierten Transaktion und die Einstellungen von ServiceBehaviorAttribute und OperationBehaviorAttribute zum Steuern des Diensttransaktionsverhaltens veranschaulicht. Dieses Beispiel basiert auf den ersten [Schritten, mit denen ein](getting-started-sample.md) Rechner Dienst implementiert wird. er wird jedoch erweitert, um ein Server Protokoll der durchgeführten Vorgänge in einer Datenbanktabelle und eine Zustands behaftete laufende Summe für die Rechner Vorgänge beizubehalten. Beibehaltene Schreibvorgänge in der Serverprotokolltabelle sind abhängig vom Ergebnis einer clientkoordinierten Transaktion. Wenn die Clienttransaktion nicht abgeschlossen wird, stellt die Webdiensttransaktion sicher, dass die Aktualisierungen der Datenbank nicht ausgeführt werden.
 
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
@@ -101,7 +101,7 @@ Bei dem Dienst gibt es drei Attribute, die Auswirkungen auf das Diensttransaktio
 
   - Die `ReleaseServiceInstanceOnTransactionComplete`-Eigenschaft legt fest, ob die Dienstinstanz beim Abschluss einer Transaktion wiederverwendet wird. Durch das Festlegen auf `false` behält der Dienst die gleiche Dienstinstanz über die Vorgangsanforderungen hinweg bei. Dies ist für das Beibehalten der laufenden Gesamtsumme erforderlich. Beim Festlegen auf `true` wird nach jeder abgeschlossenen Aktion eine neue Instanz generiert.
 
-  - Die `TransactionAutoCompleteOnSessionClose`-Eigenschaft gibt an, ob ausstehende Transaktionen abgeschlossen werden, wenn die Sitzung geschlossen wird. Wenn Sie Sie auf `false`festlegen, müssen die einzelnen Vorgänge entweder die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType>-Eigenschaft auf `true` festlegen oder explizit einen aufzurufenden <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType>-Methode zum Ausführen von Transaktionen erfordern. In diesem Beispiel werden beide Ansätze veranschaulicht.
+  - Die `TransactionAutoCompleteOnSessionClose`-Eigenschaft gibt an, ob ausstehende Transaktionen abgeschlossen werden, wenn die Sitzung geschlossen wird. Durch die Festlegung auf `false` sind die einzelnen Vorgänge erforderlich, um entweder die- <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> Eigenschaft auf oder festzulegen, `true` um explizit einen aufzurufenden Vorgang <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> für Transaktionen anzufordern. In diesem Beispiel werden beide Ansätze veranschaulicht.
 
 - Für `ServiceContractAttribute`:
 
@@ -209,11 +209,11 @@ Alle diese Aktionen führen dazu, dass die in diesem Bereich ausgeführten Vorg�
 
 1. Stellen Sie sicher, dass SQL Server 2005 Express Edition oder SQL Server 2005 installiert ist. In der Datei App.config des Diensts ist `connectionString` für die Datenbank möglicherweise festgelegt oder die Datenbankinteraktionen sind deaktiviert, indem der `usingSql`-Wert für appSettings auf `false` festgelegt ist.
 
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.
 
-3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).
 
-Wenn Sie das Beispiel Computer übergreifend ausführen, müssen Sie das Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren, um den Netzwerk Transaktions Fluss zu aktivieren, und das Tool "WsatConfig. exe" verwenden, um das Netzwerk für Windows Communication Foundation (WCF)-Transaktionen zu aktivieren. Förder.
+Wenn Sie das Beispiel Computer übergreifend ausführen, müssen Sie das Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren, um den Netzwerk Transaktions Fluss zu aktivieren, und das Tool wsatConfig. exe verwenden, um die Netzwerkunterstützung für Windows Communication Foundation (WCF)-Transaktionen zu aktivieren.
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>So konfigurieren Sie Microsoft Distributed Transaction Coordinator (MSDTC) zum Ausführen des Beispiels computerübergreifend
 
@@ -229,7 +229,7 @@ Wenn Sie das Beispiel Computer übergreifend ausführen, müssen Sie das Microso
 
     5. Klicken Sie auf **Ja** , um den MS DTC-Dienst neu zu starten und dann auf **OK**.
 
-    6. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.
+    6. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.
 
 2. Konfigurieren Sie auf dem Dienstcomputer und auf dem Clientcomputer die Windows-Firewall so, dass Microsoft Distributed Transaction Coordinator (MSDTC) in der Liste der ausgeschlossenen Anwendungen angezeigt wird:
 
@@ -255,13 +255,13 @@ Wenn Sie das Beispiel Computer übergreifend ausführen, müssen Sie das Microso
 
     5. Klicken Sie auf **Ja** , um den MS DTC-Dienst neu zu starten und dann auf **OK**.
 
-    6. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.
+    6. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.
 
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`
