@@ -2,21 +2,21 @@
 title: System.ServiceModel.Diagnostics.UnhandledException
 ms.date: 03/30/2017
 ms.assetid: 6807fdfc-1e7e-42ca-8efe-a05b51de2f8f
-ms.openlocfilehash: aa51d442071f37061f3698f5c1078bf0d2220cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29929540ad8449d9aa52b680641833c94cd3bdc6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934029"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598189"
 ---
-# <a name="systemservicemodeldiagnosticsunhandledexception"></a><span data-ttu-id="7d8f7-102">System.ServiceModel.Diagnostics.UnhandledException</span><span class="sxs-lookup"><span data-stu-id="7d8f7-102">System.ServiceModel.Diagnostics.UnhandledException</span></span>
-<span data-ttu-id="7d8f7-103">System.ServiceModel.Diagnostics.UnhandledException</span><span class="sxs-lookup"><span data-stu-id="7d8f7-103">System.ServiceModel.Diagnostics.UnhandledException</span></span>  
+# <a name="systemservicemodeldiagnosticsunhandledexception"></a><span data-ttu-id="4c65a-102">System.ServiceModel.Diagnostics.UnhandledException</span><span class="sxs-lookup"><span data-stu-id="4c65a-102">System.ServiceModel.Diagnostics.UnhandledException</span></span>
+<span data-ttu-id="4c65a-103">System.ServiceModel.Diagnostics.UnhandledException</span><span class="sxs-lookup"><span data-stu-id="4c65a-103">System.ServiceModel.Diagnostics.UnhandledException</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7d8f7-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7d8f7-104">Description</span></span>  
- <span data-ttu-id="7d8f7-105">Ausnahmefehler.</span><span class="sxs-lookup"><span data-stu-id="7d8f7-105">Unhandled exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="4c65a-104">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="4c65a-104">Description</span></span>  
+ <span data-ttu-id="4c65a-105">Ausnahmefehler.</span><span class="sxs-lookup"><span data-stu-id="4c65a-105">Unhandled exception.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d8f7-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7d8f7-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c65a-106">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="4c65a-106">See also</span></span>
 
-- [<span data-ttu-id="7d8f7-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="7d8f7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="7d8f7-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="7d8f7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="7d8f7-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="7d8f7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="4c65a-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="4c65a-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="4c65a-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="4c65a-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="4c65a-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="4c65a-109">Administration and Diagnostics</span></span>](../index.md)
