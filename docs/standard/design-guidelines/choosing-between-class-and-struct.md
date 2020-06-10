@@ -1,5 +1,6 @@
 ---
 title: Auswählen zwischen Klasse und Struktur
+description: Erfahren Sie, wie Sie entscheiden, ob Sie einen Typ als Klasse entwerfen oder einen Typ als Struktur entwerfen möchten. Erfahren Sie, wie Verweis Typen und Werttypen in .net unterschiedlich sind.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280360"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662601"
 ---
 # <a name="choosing-between-class-and-struct"></a>Auswählen zwischen Klasse und Struktur
 Eine der grundlegenden Entwurfsentscheidungen jedes Framework-Designers besteht darin, einen Typ als Klasse (einen Verweistyp) oder als Struktur (Werttyp) zu entwerfen. Ein gutes Verständnis der Unterschiede im Verhalten von Verweis Typen und Werttypen ist wichtig für diese Auswahl.
@@ -52,7 +53,7 @@ Eine der grundlegenden Entwurfsentscheidungen jedes Framework-Designers besteht 
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Typentwurfs Richtlinien](type.md)
 - [Framework-Entwurfs Richtlinien](index.md)

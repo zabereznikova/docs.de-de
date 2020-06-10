@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Standardausnahmetypen
+description: Informieren Sie sich über Standard Ausnahme Typen in .net. Erfahren Sie mehr über "SystemException", "ApplicationException", "argumumtexception", "COMException" und mehr.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: b8e05f22a66fabeab28cc83a074471df29aae218
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f95529eabd87d9ec7c379b9f790e039e1192ac53
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291356"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663056"
 ---
 # <a name="using-standard-exception-types"></a>Verwenden von Standardausnahmetypen
 In diesem Abschnitt werden die Standard Ausnahmen, die vom Framework bereitgestellt werden, und die Details ihrer Verwendung beschrieben. Die Liste ist keineswegs vollständig. Weitere Informationen zur Verwendung von frameworkausnahmetypen finden Sie in der .NET Framework Referenz Dokumentation.
@@ -62,7 +63,7 @@ In diesem Abschnitt werden die Standard Ausnahmen, die vom Framework bereitgeste
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Entwurfsrichtlinien für Ausnahmen](exceptions.md)

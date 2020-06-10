@@ -1,5 +1,6 @@
 ---
 title: Namen von Typmembern
+description: Erfahren Sie mehr über die Richtlinien für die Benennung von Typmembern in .net, z. b. Methoden, Eigenschaften, Ereignisse und Felder.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290187"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662497"
 ---
 # <a name="names-of-type-members"></a>Namen von Typmembern
 Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien zum Benennen von Typmembern beschrieben.
@@ -99,7 +100,7 @@ public class Control {
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Benennungs Richtlinien](naming-guidelines.md)

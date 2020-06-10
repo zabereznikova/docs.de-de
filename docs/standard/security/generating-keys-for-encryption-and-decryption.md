@@ -1,5 +1,6 @@
 ---
 title: Erzeugen von Schlüsseln für die Ver- und Entschlüsselung
+description: Erfahren Sie, wie symmetrische und asymmetrische Schlüssel für die Verschlüsselung und Entschlüsselung in .NET erstellt und verwaltet werden.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - asymmetric keys [.NET Framework]
 - cryptography [.NET Framework], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: 992ac30310d138e04b8408497c5e49166a356ab4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f8c3633d18e200037235502487d0d91d42083241
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291538"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661808"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Erzeugen von Schlüsseln für die Ver- und Entschlüsselung
 Das Erstellen und Verwalten von Schlüsseln ist ein wichtiger Bestandteil des kryptografischen Prozesses. Bei symmetrischen Algorithmen müssen ein Schlüssel und ein Initialisierungsvektor (IV) erstellt werden. Der Schlüssel muss vor Unbefugten, die Ihre Daten nicht entschlüsseln können sollen, geheim gehalten werden. Der IV muss nicht geheim sein, sollte aber für jede Sitzung geändert werden. Bei asymmetrischen Algorithmen müssen ein öffentlicher und ein privater Schlüssel erstellt werden. Der öffentliche Schlüssel kann allgemein zugänglich sein, während der private Schlüssel nur dem Teilnehmer bekannt sein darf, der die mit dem öffentlichen Schlüssel verschlüsselten Daten entschlüsselt. In diesem Abschnitt wird beschrieben, wie Schlüssel für symmetrische und asymmetrische Algorithmen erzeugt und verwaltet werden.  
@@ -86,7 +87,7 @@ RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
 RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verschlüsseln von Daten](encrypting-data.md)
 - [Entschlüsseln von Daten](decrypting-data.md)

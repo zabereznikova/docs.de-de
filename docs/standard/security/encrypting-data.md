@@ -1,5 +1,6 @@
 ---
 title: Verschlüsseln von Daten
+description: Erfahren Sie, wie Sie Daten in .net verschlüsseln. Sie können die symmetrische Verschlüsselung für Datenströme verwenden, oder Sie können die asymmetrische Verschlüsselung für eine kleine Anzahl von Bytes verwenden.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6cebdecd461f28f8228ebb8440dbff218dc211db
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288354"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662523"
 ---
 # <a name="encrypting-data"></a>Verschlüsseln von Daten
 Symmetrische Verschlüsselung und asymmetrische Verschlüsselung werden mit unterschiedlichen Prozesse ausgeführt. Die symmetrische Verschlüsselung wird für Streams ausgeführt und ist daher für die Verschlüsselung großer Datenmengen geeignet. Die asymmetrische Verschlüsselung wird für eine kleine Anzahl von Bytes ausgeführt und ist daher nur für kleine Datenmengen geeignet.  
@@ -260,7 +261,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](generating-keys-for-encryption-and-decryption.md)
 - [Entschlüsseln von Daten](decrypting-data.md)
