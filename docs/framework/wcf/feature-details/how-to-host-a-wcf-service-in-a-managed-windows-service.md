@@ -1,24 +1,24 @@
 ---
-title: 'Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
+title: 'Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: 698a5134683341fedf2a37f7d6383770e14c232c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964804"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593177"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
 
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um einen von einem Windows-Dienst gehosteten Windows Communication Foundation (WCF)-Dienst zu erstellen. Das Szenario wird durch die Hostingoption des verwalteten Windows-Diensts aktiviert, bei der es sich um einen WCF-Dienst mit langer Ausführungszeit handelt, der außerhalb von Internetinformationsdienste (IIS) in einer sicheren Umgebung gehostet wird, die nicht Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert. Diese Hostingoption ist in allen Windows-Versionen verfügbar.
 
 Windows-Dienste können mit Microsoft.ManagementConsole.SnapIn in Microsoft Management Console (MMC) verwaltet und so konfiguriert werden, dass sie beim Systemstart automatisch gestartet werden. Diese Hostingoption besteht darin, die Anwendungsdomäne (AppDomain), die einen WCF-Dienst hostet, als verwalteten Windows-Dienst zu registrieren, sodass die Prozess Lebensdauer des Diensts vom Dienststeuerungs-Manager (SCM) für Windows-Dienste gesteuert wird.
 
-Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Windows-Dienstklasse und eine Installerklasse. Die Dienst Implementierungs Klasse, `CalculatorService`, ist ein WCF-Dienst. `CalculatorWindowsService` ist ein Windows-Dienst. Damit sich die Klasse als Windows-Dienst eignet, erbt sie von `ServiceBase` und implementiert die `OnStart`-Methode und die `OnStop`-Methode. In `OnStart` wird <xref:System.ServiceModel.ServiceHost> für den `CalculatorService`-Typ erstellt und geöffnet. In `OnStop` wird der Dienst beendet und verworfen. Der Host ist außerdem für die Bereitstellung einer Basisadresse für den Diensthost verantwortlich, die in den Anwendungseinstellungen konfiguriert wurde. Durch die Installerklasse, die von <xref:System.Configuration.Install.Installer> erbt, kann das Programm mit dem Tool "Installutil.exe" als Windows-Dienst installiert werden.
+Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Windows-Dienstklasse und eine Installerklasse. Die Dienst Implementierungs Klasse, `CalculatorService` , ist ein WCF-Dienst. `CalculatorWindowsService` ist ein Windows-Dienst. Damit sich die Klasse als Windows-Dienst eignet, erbt sie von `ServiceBase` und implementiert die `OnStart`-Methode und die `OnStop`-Methode. In `OnStart` wird <xref:System.ServiceModel.ServiceHost> für den `CalculatorService`-Typ erstellt und geöffnet. In `OnStop` wird der Dienst beendet und verworfen. Der Host ist außerdem für die Bereitstellung einer Basisadresse für den Diensthost verantwortlich, die in den Anwendungseinstellungen konfiguriert wurde. Durch die Installerklasse, die von <xref:System.Configuration.Install.Installer> erbt, kann das Programm mit dem Tool "Installutil.exe" als Windows-Dienst installiert werden.
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Erstellen des Diensts und Bereitstellen des Hostcodes
 
@@ -26,7 +26,7 @@ Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Wind
 
 2. Benennen Sie "Program.cs" in "Service.cs" um.
 
-3. Ändern Sie den Namespace in `Microsoft.ServiceModel.Samples`.
+3. Ändern Sie den-Namespace in `Microsoft.ServiceModel.Samples` .
 
 4. Fügen Sie Verweise auf die folgenden Assemblys hinzu:
 
@@ -112,7 +112,7 @@ Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Wind
 
      Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei app. config, und wählen Sie **Eigenschaften**. Wählen Sie unter **in Ausgabeverzeichnis kopieren die** Option **kopieren, wenn neuer**aus.
 
-     In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben. Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Da in diesem Beispiel das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> des Diensts auf `true` festgelegt ist, ist für den Dienst auch die Veröffentlichung von Metadaten aktiviert. Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+     In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben. Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Da in diesem Beispiel das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> des Diensts auf `true` festgelegt ist, ist für den Dienst auch die Veröffentlichung von Metadaten aktiviert. Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="install-and-run-the-service"></a>Installieren Sie den Dienst, und führen Sie ihn aus.
 
@@ -133,9 +133,9 @@ Im folgenden finden Sie eine komplette Liste des in diesem Thema verwendeten Cod
 
 Wie bei der Option für das "Selbsthosting" muss auch bei der Hostumgebung des Windows-Diensts ein Teil des Hostcodes eine Komponente der Anwendung sein. Der Dienst wird als eine Konsolenanwendung implementiert und enthält seinen eigenen Hostingcode. In anderen Hostumgebungen, z. B. WAS (Windows Process Activation Service, Windows-Prozessaktivierungsdienst) in IIS (Internet Information Services, Internetinformationsdienste), müssen Entwickler keinen Hostcode schreiben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md)
-- [Hosten in einer verwalteten Anwendung](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
-- [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md)
+- [Vereinfachte Konfiguration](../simplified-configuration.md)
+- [Hosten in einer verwalteten Anwendung](hosting-in-a-managed-application.md)
+- [Hosting-Dienste](../hosting-services.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
