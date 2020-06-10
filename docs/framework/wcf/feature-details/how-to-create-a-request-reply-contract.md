@@ -1,15 +1,15 @@
 ---
-title: 'Gewusst wie: Erstellen eines Anforderung-Antwort-Vertrags'
+title: 'Vorgehensweise: Erstellen eines Anforderung-Antwort-Vertrags'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 793f7214f8319e87c3e344990577841fc029bc55
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a09c265c77edc584b591477e64314f1e76e332b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185030"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593437"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a>Gewusst wie: Erstellen eines Anforderung-Antwort-Vertrags
+# <a name="how-to-create-a-request-reply-contract"></a>Vorgehensweise: Erstellen eines Anforderung-Antwort-Vertrags
 Ein Anforderung-Antwort-Vertrag gibt eine Methode an, die eine Antwort zurückgibt. Die Antwort muss gesendet und unter den Bedingungen dieses Vertrags mit der Anforderung in Beziehung gesetzt werden. Selbst wenn die Methode keine Antwort (`void` in C# oder `Sub` in Visual Basic) zurückgibt, wird von der Infrastruktur eine leere Nachricht erstellt und gesendet, um dem Aufrufer mitzuteilen, dass die Methode einen Wert zurückgegeben hat. Verwenden Sie einen unidirektionalen Vertrag für die Operation, um das Senden einer leeren Mitteilung zu unterbinden.  
   
 ### <a name="to-create-a-request-reply-contract"></a>So erstellen Sie einen Anforderung-Antwort-Vertrag  
@@ -43,12 +43,12 @@ public interface ICalculator
 }
 ```
   
-- Weitere Informationen zum Angeben von Betriebsverträgen <xref:System.ServiceModel.OperationContractAttribute> finden <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Sie in der Klasse und der Eigenschaft.  
+- Weitere Informationen zum Angeben von Vorgangs Verträgen finden Sie unter der <xref:System.ServiceModel.OperationContractAttribute> -Klasse und der- <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Eigenschaft.  
   
 - Durch Anwenden des <xref:System.ServiceModel.ServiceContractAttribute>-Attributs und des <xref:System.ServiceModel.OperationContractAttribute>-Attributs wird die automatische Generierung von Dienstvertragsdefinitionen in einem WSDL (Web Services Description Language)-Dokument ermöglicht, sobald der Dienst bereitgestellt wird. Das Dokument wird durch Anfügen von `?wsdl` an die HTTP-Basisadresse des Diensts heruntergeladen. Zum Beispiel, `http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Entwerfen von Dienstverträgen](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Entwerfen von Dienstverträgen](../designing-service-contracts.md)
+- [Vorgehensweise: Erstellen eines Duplexvertrags](how-to-create-a-duplex-contract.md)

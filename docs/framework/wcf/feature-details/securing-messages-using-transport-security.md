@@ -2,24 +2,24 @@
 title: Sichern von Nachrichten mit Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7d160f6f0d1d29e34ca3365501b86d1a736de67b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911709"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589941"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sichern von Nachrichten mit Transportsicherheit
 In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher erläutert, mit der Sie an eine Warteschlange gesendete Nachrichten sichern können.  
   
 > [!NOTE]
-> Bevor Sie dieses Thema lesen, empfiehlt es sich, [Sicherheitskonzepte](../../../../docs/framework/wcf/feature-details/security-concepts.md)zu lesen.  
+> Bevor Sie dieses Thema lesen, empfiehlt es sich, [Sicherheitskonzepte](security-concepts.md)zu lesen.  
   
  Die folgende Abbildung stellt ein konzeptionelles Modell der in der Warteschlange befindlichen Kommunikation mithilfe von Windows Communication Foundation (WCF) bereit. Diese Abbildung und die Terminologie dienen zum Beschreiben von Transportsicherheitskonzepten:  
   
- ![Anwendungs Diagramm in der Warteschlange](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Verteilte Warteschlange: Abbildung")  
+ ![In die Warteschlange gestelltes Anwendungsdiagramm](media/distributed-queue-figure.jpg "Verteilte Warteschlangen (Abbildung)")  
   
- Beim Senden von Nachrichten in der Warte <xref:System.ServiceModel.NetMsmqBinding>Schlange mithilfe von WCF mit wird die WCF-Nachricht als Text der MSMQ-Nachricht angefügt. Mit der Transportsicherheit wird die gesamte MSMQ-Nachricht (MSMQ-Nachrichtenheader oder Nachrichteneigenschaften und der Textkörper) gesichert. Da es sich um den Text der MSMQ-Nachricht handelt, wird durch die Verwendung der Transportsicherheit auch die WCF-Nachricht gesichert.  
+ Beim Senden von Nachrichten in der Warteschlange mithilfe von WCF mit <xref:System.ServiceModel.NetMsmqBinding> wird die WCF-Nachricht als Text der MSMQ-Nachricht angefügt. Mit der Transportsicherheit wird die gesamte MSMQ-Nachricht (MSMQ-Nachrichtenheader oder Nachrichteneigenschaften und der Textkörper) gesichert. Da es sich um den Text der MSMQ-Nachricht handelt, wird durch die Verwendung der Transportsicherheit auch die WCF-Nachricht gesichert.  
   
  Das Kernkonzept hinter der Transportsicherheit besteht darin, dass der Client die Sicherheitsanforderungen erfüllen muss, um die Nachricht in die Zielwarteschlange zu stellen. Bei der Nachrichtensicherheit hingegen wird die Nachricht für die Anwendung gesichert, die die Nachricht empfängt.  
   
@@ -45,7 +45,7 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
  Auf diesen Grundlagen basierend werden in den folgenden Abschnitten die Transportsicherheitseigenschaften gebündelt mit <xref:System.ServiceModel.NetMsmqBinding> und <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> näher vorgestellt.  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ-Authentifizierungsmodus  
- Der <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> bestimmt, ob die Windows-Domänensicherheit oder eine externe Zertifikats-basierte Sicherheit zum Sichern der Nachricht verwendet werden soll. In beiden Authentifizierungs Modi verwendet der WCF-Transport in der Warteschlange `CertificateValidationMode` den in der Dienst Konfiguration angegebenen. Der Zertifikatsvalidierungsmodus legt den zu verwendenden Mechanismus fest, um die Gültigkeit des Zertifikats zu überprüfen.  
+ Der <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> bestimmt, ob die Windows-Domänensicherheit oder eine externe Zertifikats-basierte Sicherheit zum Sichern der Nachricht verwendet werden soll. In beiden Authentifizierungs Modi verwendet der WCF-Transport in der Warteschlange den `CertificateValidationMode` in der Dienst Konfiguration angegebenen. Der Zertifikatsvalidierungsmodus legt den zu verwendenden Mechanismus fest, um die Gültigkeit des Zertifikats zu überprüfen.  
   
  Wenn die Transportsicherheit aktiviert ist, ist die Standardeinstellung <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
@@ -60,12 +60,12 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
 #### <a name="certificate-authentication-mode"></a>Zertifikatsauthentifizierungsmodus  
  Für den Zertifikatsauthentifizierungsmodus ist keine Active Directory-Integration erforderlich. In einigen Fällen, z. B. wenn MSMQ im Arbeitsgruppenmodus installiert ist (ohne Active Directory-Integration) oder wenn zum Senden von Nachrichten an die Warteschlange das SOAP Reliable Messaging Protocol (SRMP)-Übertragungsprotokoll verwendet wird, kann nur der <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> eingesetzt werden.  
   
- Beim Senden einer WCF-Nachricht <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>mit fügt der WCF-Kanal keine Windows-SID an die MSMQ-Nachricht an. Daher muss die Zielwarteschlangen-ACL den `Anonymous` Benutzerzugriff zum Senden an die Warteschlange zulassen. Der empfangende Warteschlangenmanager überprüft, ob die MSMQ-Nachricht mit dem Zertifikat signiert wurde, führt jedoch keine Authentifizierung durch.  
+ Beim Senden einer WCF-Nachricht mit <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> Fügt der WCF-Kanal keine Windows-SID an die MSMQ-Nachricht an. Daher muss die Zielwarteschlangen-ACL den `Anonymous` Benutzerzugriff zum Senden an die Warteschlange zulassen. Der empfangende Warteschlangenmanager überprüft, ob die MSMQ-Nachricht mit dem Zertifikat signiert wurde, führt jedoch keine Authentifizierung durch.  
   
- Das Zertifikat mit seinen Ansprüchen und Identitätsinformationen wird vom WCF- <xref:System.ServiceModel.ServiceSecurityContext> Transport Kanal in der Warteschlange aufgefüllt. Der Dienst kann diese Informationen zum Durchführen der eigenen Authentifizierung des Absenders verwenden.  
+ Das Zertifikat mit seinen Ansprüchen und Identitätsinformationen wird <xref:System.ServiceModel.ServiceSecurityContext> vom WCF-Transport Kanal in der Warteschlange aufgefüllt. Der Dienst kann diese Informationen zum Durchführen der eigenen Authentifizierung des Absenders verwenden.  
   
 ### <a name="msmq-protection-level"></a>MSMQ-Schutzebene  
- Die Schutzebene bestimmt, wie die MSMQ-Nachricht geschützt werden soll, um sicherzustellen, dass sie nicht manipuliert wird. Sie wird in der <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>-Eigenschaft angegeben. Der Standardwert ist <xref:System.Net.Security.ProtectionLevel.Sign>.  
+ Die Schutzebene bestimmt, wie die MSMQ-Nachricht geschützt werden soll, um sicherzustellen, dass sie nicht manipuliert wird. Sie wird in der <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>-Eigenschaft angegeben. Standardwert: <xref:System.Net.Security.ProtectionLevel.Sign>.  
   
 #### <a name="sign-protection-level"></a>Signatur-Schutzebene  
  Die MSMQ-Nachricht wird mit dem intern generierten Zertifikat im `WindowsDomain`-Authentifizierungsmodus bzw. mit einem extern generierten Zertifikat im `Certificate`-Authentifizierungsmodus signiert.  
@@ -94,12 +94,12 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
 ### <a name="msmq-hash-algorithm"></a>MSMQ-Hashalgorithmus  
  Der Hashalgorithmus bestimmt den Algorithmus, mit dem eine digitale Signatur der MSMQ-Nachricht erstellt wird. Der empfangende Warteschlangenmanager verwendet den gleichen Algorithmus zum Authentifizieren der MSMQ-Nachricht. Diese Eigenschaft wird nur verwendet, wenn <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> auf <xref:System.Net.Security.ProtectionLevel.Sign> oder <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> festgelegt wurde.  
   
- Es werden die folgenden Algorithmen unterstützt: `MD5`, `SHA1`, `SHA256` und `SHA512`. Die Standardeinstellung ist `SHA1`.
+ Es werden die folgenden Algorithmen unterstützt: `MD5`, `SHA1`, `SHA256` und `SHA512`. Der Standardwert lautet `SHA1`.
 
  Aufgrund von Konnektivitätsproblemen mit MD5/SHA1 empfiehlt Microsoft SHA256 oder eine bessere.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Warteschlangenübersicht](queues-overview.md)
-- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sicherheitskonzepte](security-concepts.md)
+- [Sichern von Diensten und Clients](securing-services-and-clients.md)

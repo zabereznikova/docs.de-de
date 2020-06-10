@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: a9213d8cbbafaaa1fffa3a1db0d6936c2fc6544f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47e59452edfff74daf17d94a058ce8b12af7867c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185044"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593541"
 ---
 # <a name="how-to-create-a-federated-client"></a>Vorgehensweise: Erstellen eines Verbundclients
-In Windows Communication Foundation (WCF) besteht das Erstellen eines Clients für einen *Verbunddienst* aus drei Hauptschritten:  
+In Windows Communication Foundation (WCF) besteht das Erstellen eines Clients für einen *Verbund Dienst* aus drei Hauptschritten:  
   
-1. Konfigurieren Sie eine [ \<wsFederationHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder eine ähnliche benutzerdefinierte Bindung. Weitere Informationen zum Erstellen einer entsprechenden Bindung finden Sie unter [Gewusst wie: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Alternativ können Sie das [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) für den Metadatenendpunkt des Verbunddienstes ausführen, um eine Konfigurationsdatei für die Kommunikation mit dem Verbunddienst und einem oder mehreren Sicherheitstokendiensten zu generieren.  
+1. Konfigurieren Sie eine [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder eine ähnliche benutzerdefinierte Bindung. Weitere Informationen zum Erstellen einer entsprechenden Bindung finden Sie unter Gewusst [wie: Erstellen einer WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Alternativ können Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) für den Metadatenendpunkt des Verbund Diensts ausführen, um eine Konfigurationsdatei für die Kommunikation mit dem Verbund Dienst und einem oder mehreren Sicherheitstokendiensten zu generieren.  
   
 2. Legen Sie die Eigenschaften der <xref:System.ServiceModel.Security.IssuedTokenClientCredential>-Instanz fest, die verschiedene Aspekte der Interaktion des Clients mit einem Sicherheitstokendienst steuert.  
   
@@ -27,22 +27,22 @@ In Windows Communication Foundation (WCF) besteht das Erstellen eines Clients f�
 > [!NOTE]
 > Es kann eine <xref:System.Security.Cryptography.CryptographicException> ausgelöst werden, wenn ein Client die Anmeldeinformationen eines anderen Benutzers, dessen Identität er angenommen hat, die <xref:System.ServiceModel.WSFederationHttpBinding>-Bindung oder ein benutzerdefiniert ausgestelltes Token und asymmetrische Schlüssel verwendet. Asymmetrische Schlüssel werden in Verbindung mit der <xref:System.ServiceModel.WSFederationHttpBinding>-Bindung und benutzerdefiniert ausgestellten Token verwendet, wenn die <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A>-Eigenschaft bzw. die <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A>-Eigenschaft auf <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> festgelegt ist. Die <xref:System.Security.Cryptography.CryptographicException>-Ausnahme wird ausgelöst, wenn der Client versucht, eine Nachricht zu senden, und kein Benutzerprofil für die Identität vorhanden ist, die der Client angenommen hat. Um dieses Problem zu minimieren, melden Sie sich am Clientcomputer an, oder rufen Sie `LoadUserProfile` vor dem Senden der Nachricht auf.  
   
- Dieses Thema enthält detaillierte Informationen zu diesen Verfahren. Weitere Informationen zum Erstellen einer entsprechenden Bindung finden Sie unter [Gewusst wie: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Weitere Informationen zur Funktionsweise eines Verbunddienstes finden Sie unter [Föderation](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Dieses Thema enthält detaillierte Informationen zu diesen Verfahren. Weitere Informationen zum Erstellen einer entsprechenden Bindung finden Sie unter Gewusst [wie: Erstellen einer WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Weitere Informationen über die Funktionsweise eines Verbund Dienstanbieter finden Sie unter [Federation](federation.md).  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>So generieren und untersuchen Sie die Konfiguration für einen Verbunddienst  
   
-1. Führen Sie das [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) mit der Adresse der Metadaten-URL des Dienstes als Befehlszeilenparameter aus.  
+1. Führen Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) mit der Adresse der Metadaten-URL des Dienstanbieter als Befehlszeilenparameter aus.  
   
 2. Öffnen Sie die generierte Konfigurationsdatei in einem geeigneten Editor.  
   
-3. Untersuchen Sie die Attribute und [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md) den Inhalt aller generierten>und [ \<IssuerMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md) Elemente. Diese befinden sich innerhalb der [ \<Sicherheitselemente>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) Elemente für die [ \<>wsFederationHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder benutzerdefinierte Bindungen. Stellen Sie sicher, dass die Adressen die erwarteten Domänenamen oder andere Adressinformationen enthalten. Sie müssen diese Informationen unbedingt überprüfen, weil sich der Client gegenüber diesen Adressen authentifiziert und Informationen wie Benutzername-/Kennwort-Paare offen legt. Wenn es sich bei der Adresse nicht um die erwartete Adresse handelt, könnten Informationen für einen anderen als den vorgesehenen Empfänger zugänglich werden.  
+3. Überprüfen Sie die Attribute und den Inhalt aller generierten [\<issuer>](../../configure-apps/file-schema/wcf/issuer.md) [\<issuerMetadata>](../../configure-apps/file-schema/wcf/issuermetadata.md) Elemente und. Diese befinden sich innerhalb der- [\<security>](../../configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) Elemente für das-Element [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder das benutzerdefinierte Bindungs Element. Stellen Sie sicher, dass die Adressen die erwarteten Domänenamen oder andere Adressinformationen enthalten. Sie müssen diese Informationen unbedingt überprüfen, weil sich der Client gegenüber diesen Adressen authentifiziert und Informationen wie Benutzername-/Kennwort-Paare offen legt. Wenn es sich bei der Adresse nicht um die erwartete Adresse handelt, könnten Informationen für einen anderen als den vorgesehenen Empfänger zugänglich werden.  
   
-4. Untersuchen Sie alle zusätzlichen `alternativeIssuedTokenParameters` [ \<ausgestelltenTokenParameters-elemente>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) Elemente innerhalb des auskommentierten <>-Elements. Wenn mit dem Tool Svcutil.exe eine Konfiguration für einen Verbunddienst generiert wird und der Verbunddienst oder einer der zwischengeschalteten Sicherheitstokendienste keine Ausstelleradresse, sondern eine Metadatenadresse für einen Sicherheitstokendienst angeben, der mehrere Endpunkte verfügbar macht, dann verweist die resultierende Konfigurationsdatei auf den ersten Endpunkt. Zusätzliche Endpunkte befinden sich in der `alternativeIssuedTokenParameters` Konfigurationsdatei als auskommentierte <> Elemente.  
+4. Überprüfen Sie alle zusätzlichen [\<issuedTokenParameters>](../../configure-apps/file-schema/wcf/issuedtokenparameters.md) Elemente innerhalb des auskommentierten <`alternativeIssuedTokenParameters`> Elements. Wenn mit dem Tool Svcutil.exe eine Konfiguration für einen Verbunddienst generiert wird und der Verbunddienst oder einer der zwischengeschalteten Sicherheitstokendienste keine Ausstelleradresse, sondern eine Metadatenadresse für einen Sicherheitstokendienst angeben, der mehrere Endpunkte verfügbar macht, dann verweist die resultierende Konfigurationsdatei auf den ersten Endpunkt. Weitere Endpunkte sind in der Konfigurationsdatei als auskommentiertes <> Elemente in der Konfigurationsdatei `alternativeIssuedTokenParameters` .  
   
-     Stellen Sie fest, `issuedTokenParameters` ob einer dieser <> dem bereits in der Konfiguration vorhandenen vorzuziehen ist. Beispielsweise kann der Client es vorziehen, sich mit einem Windows CardSpace-Token anstelle eines Benutzernamen-/Kennwortpaars bei einem Sicherheitstokendienst zu authentifizieren.  
+     Bestimmen Sie, ob einer dieser <`issuedTokenParameters`> dem bereits in der Konfiguration vorhandenen Wert vorzuziehen ist. Beispielsweise kann es sein, dass der Client die Authentifizierung bei einem Sicherheitstokendienst mithilfe eines Windows CardSpace-Tokens anstelle eines Benutzernamen-/Kennwort-Paars bevorzugt.  
   
     > [!NOTE]
-    > Wenn mehrere Sicherheitstokendienste durchlaufen werden müssen, bevor mit dem Dienst kommuniziert wird, ist es möglich, dass ein zwischengelagerter Sicherheitstokendienst den Client an einen falschen Sicherheitstokendienst weiterleitet. Stellen Sie daher sicher, dass der Endpunkt für den Sicherheitstokendienst im [ \<>ausgestellttokenParameters](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) der erwartete Sicherheitstokendienst und kein unbekannter Sicherheitstokendienst ist.  
+    > Wenn mehrere Sicherheitstokendienste durchlaufen werden müssen, bevor mit dem Dienst kommuniziert wird, ist es möglich, dass ein zwischengelagerter Sicherheitstokendienst den Client an einen falschen Sicherheitstokendienst weiterleitet. Stellen Sie daher sicher, dass der Endpunkt für den Sicherheitstokendienst im [\<issuedTokenParameters>](../../configure-apps/file-schema/wcf/issuedtokenparameters.md) der erwartete Sicherheitstokendienst und kein Unbekannter Sicherheitstokendienst ist.  
   
 ### <a name="to-configure-an-issuedtokenclientcredential-in-code"></a>So konfigurieren Sie IssuedTokenClientCredential im Code  
   
@@ -65,7 +65,7 @@ In Windows Communication Foundation (WCF) besteht das Erstellen eines Clients f�
   
      Das Erneuerungsintervall, das durch die Gültigkeitsdauer des Tokens und den `IssuedTokenRenewalThresholdPercentage`-Wert bestimmt wird, wird durch den `MaxIssuedTokenCachingTime`-Wert außer Kraft gesetzt, wenn die Zwischenspeicherungsdauer kürzer als die durch den Erneuerungsschwellenwert festgelegte Zeitspanne ist. Wenn beispielsweise das Produkt aus `IssuedTokenRenewalThresholdPercentage` und der Gültigkeitsdauer des Tokens acht Stunden beträgt und der `MaxIssuedTokenCachingTime`-Wert gleich 10 Minuten ist, dann fordert der Client alle 10 Minuten vom Sicherheitstokendienst ein aktualisiertes Token an.  
   
-5. Wenn ein anderer Schlüsselentropiemodus als <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> für eine Bindung erforderlich ist, bei der nicht Nachrichtensicherheit oder Transportsicherheit mit Nachrichtenanmeldeinformationen verwendet wird (beispielsweise eine Bindung, die über kein <xref:System.ServiceModel.Channels.SecurityBindingElement> verfügt), legen Sie die <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A>-Eigenschaft auf einen geeigneten Wert fest. Der *Entropiemodus* bestimmt, ob symmetrische <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> Schlüssel über die Eigenschaft gesteuert werden können. Diese Standardeinstellung lautet <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>, wobei sowohl der Client als auch der Tokenaussteller Daten bereitstellen, durch deren Kombination der tatsächliche Schlüssel erzeugt wird. Andere Werte lauten <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> und <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy>, womit festgelegt wird, dass der gesamte Schlüssel vom Client bzw. vom Server angegeben wird. Im folgenden Beispiel wird die Eigenschaft so festgelegt, dass nur die Serverdaten für den Schlüssel verwendet werden.  
+5. Wenn ein anderer Schlüsselentropiemodus als <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> für eine Bindung erforderlich ist, bei der nicht Nachrichtensicherheit oder Transportsicherheit mit Nachrichtenanmeldeinformationen verwendet wird (beispielsweise eine Bindung, die über kein <xref:System.ServiceModel.Channels.SecurityBindingElement> verfügt), legen Sie die <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A>-Eigenschaft auf einen geeigneten Wert fest. Der *Entropie* Modus bestimmt, ob symmetrische Schlüssel mithilfe der-Eigenschaft gesteuert werden können <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> . Diese Standardeinstellung lautet <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>, wobei sowohl der Client als auch der Tokenaussteller Daten bereitstellen, durch deren Kombination der tatsächliche Schlüssel erzeugt wird. Andere Werte lauten <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> und <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy>, womit festgelegt wird, dass der gesamte Schlüssel vom Client bzw. vom Server angegeben wird. Im folgenden Beispiel wird die Eigenschaft so festgelegt, dass nur die Serverdaten für den Schlüssel verwendet werden.  
   
      [!code-csharp[c_CreateSTS#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#17)]
      [!code-vb[c_CreateSTS#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#17)]  
@@ -80,14 +80,14 @@ In Windows Communication Foundation (WCF) besteht das Erstellen eines Clients f�
   
 ### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>So konfigurieren Sie IssuedTokenClientCredential in der Konfiguration  
   
-1. Erstellen Sie ein [ \<issuedToken>-Element](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) als untergeordnetes Element des [ \<issuedToken>-Elements](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) in einem Endpunktverhalten.  
+1. Erstellen Sie ein- [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) Element als untergeordnetes [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) Element des-Elements in einem Endpunkt Verhalten.  
   
-2. Wenn keine Tokenzwischenspeicherung erforderlich `cacheIssuedTokens` ist, legen `issuedToken` Sie das `false`Attribut (des <>-Elements) auf .  
+2. Wenn das Zwischenspeichern von Token nicht erforderlich ist, legen Sie das- `cacheIssuedTokens` Attribut (des <`issuedToken`>-Element) auf fest `false` .  
   
-3. Wenn für zwischengespeicherte Token ein Zeitlimit `maxIssuedTokenCachingTime` erforderlich ist, legen Sie das Attribut für die <`issuedToken`>-Element auf einen geeigneten Wert fest. Beispiel:  
+3. Wenn ein Zeitlimit für zwischengespeicherte Token erforderlich ist, legen `maxIssuedTokenCachingTime` Sie das-Attribut für das <`issuedToken`>-Element auf einen geeigneten Wert fest. Beispiel:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
-4. Wenn ein anderer Wert als der `issuedTokenRenewalThresholdPercentage` Standardwert bevorzugt `issuedToken` wird, legen Sie das Attribut auf dem <>-Element auf einen geeigneten Wert fest, z. B.:  
+4. Wenn ein anderer Wert als der Standardwert bevorzugt wird, legen `issuedTokenRenewalThresholdPercentage` Sie das-Attribut für das <`issuedToken`>-Element auf einen geeigneten Wert fest, z. b.:  
   
     ```xml  
     <issuedToken issuedTokenRenewalThresholdPercentage = "80" />  
@@ -99,7 +99,7 @@ In Windows Communication Foundation (WCF) besteht das Erstellen eines Clients f�
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6. Optional. Konfigurieren Sie jedes ausstellerspezifische benutzerdefinierte Endpunktverhalten, indem Sie ein <`issuerChannelBehaviors`> Element als untergeordnetes Element des <`issuedToken`>-Elements erstellen. Erstellen Sie für jedes `add` Verhalten ein <> `issuerChannelBehaviors` Element als untergeordnetes Element des <>-Elements. Geben Sie die Ausstelleradresse des `issuerAddress` Verhaltens an, `add` indem Sie das Attribut für das <>-Element festlegen. Geben Sie das Verhalten `behaviorConfiguration` selbst an, indem Sie das Attribut für das <`add`>-Element festlegen.  
+6. Optional. Konfigurieren Sie jedes Aussteller spezifische benutzerdefinierte Endpunkt Verhalten, indem Sie ein <`issuerChannelBehaviors`>-Element als untergeordnetes Element des <`issuedToken`> Elements erstellen. Erstellen Sie für jedes Verhalten ein <`add`>-Element als untergeordnetes Element des <`issuerChannelBehaviors`> Elements. Geben Sie die Aussteller Adresse des Verhaltens an, indem Sie das- `issuerAddress` Attribut für das <`add`>-Element festlegen. Geben Sie das Verhalten selbst an, indem Sie das- `behaviorConfiguration` Attribut für das <`add`>-Element festlegen.  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -126,7 +126,7 @@ In Windows Communication Foundation (WCF) besteht das Erstellen eines Clients f�
   
 ### <a name="to-configure-an-x509certificaterecipientclientcredential-in-configuration"></a>So konfigurieren Sie X509CertificateRecipientClientCredential in der Konfiguration  
   
-1. Erstellen Sie ein [ \<scopedCertificates>-Element](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) als untergeordnetes Element des [ \<dienstprogrammsZertifikat>-Element,](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) das selbst ein untergeordnetes Element des [ \<clientCredentials-elements>-Elements](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) in einem Endpunktverhalten ist.  
+1. Erstellen Sie ein- [\<scopedCertificates>](../../configure-apps/file-schema/wcf/scopedcertificates-element.md) Element als untergeordnetes [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) Element des-Elements, das selbst ein untergeordnetes Element des- [\<clientCredentials>](../../configure-apps/file-schema/wcf/clientcredentials.md) Elements in einem Endpunkt Verhalten ist.  
   
 2. Erstellen Sie ein `<add>`-Element als untergeordnetes Element des `<scopedCertificates>`-Elements. Geben Sie Werte für die Attribute `storeLocation`, `storeName`, `x509FindType` und `findValue` an, um auf das geeignete Zertifikat zu verweisen. Legen Sie das `targetUri`-Attribut auf einen Wert fest, der die Adresse des Endpunkts angibt, für den das Zertifikat verwendet werden soll. Dies wird im folgenden Beispiel gezeigt.  
   
@@ -152,20 +152,20 @@ In Windows Communication Foundation (WCF) besteht das Erstellen eines Clients f�
 ## <a name="localissuer-required"></a>LocalIssuer erforderlich  
  Wenn erwartet wird, dass Clients immer einen lokalen Aussteller verwenden, ist Folgendes zu beachten: Die Standardausgabe von Svcutil.exe resultiert darin, dass der lokale Aussteller nicht verwendet wird, wenn der vorletzte Sicherheitstokendienst in der Kette eine Ausstelleradresse oder eine Ausstellermetaadresse angibt.  
   
- Weitere Informationen zum <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>Festlegen <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>von <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> , <xref:System.ServiceModel.Security.IssuedTokenClientCredential> und eigenschaften der Klasse finden Sie unter [Gewusst wie: Konfigurieren eines lokalen Ausstellers](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Weitere Informationen zum Festlegen der <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> Eigenschaften, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> und <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> der- <xref:System.ServiceModel.Security.IssuedTokenClientCredential> Klasse finden Sie unter Vorgehens [Weise: Konfigurieren eines lokalen Ausstellers](how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Zertifikate mit Gültigkeitsbereich  
  Wenn zur Kommunikation mit einem Sicherheitstokendienst Dienstzertifikate angegeben werden müssen, weil keine Zertifikatsaushandlung verwendet wird, können diese mit der <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>-Eigenschaft der <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>-Klasse angegeben werden. Die <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A>-Methode akzeptiert die beiden Parameter <xref:System.Uri> und <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Das angegebene Zertifikat wird zur Kommunikation mit Endpunkten beim angegebenen URI verwendet. Stattdessen können Sie auch mit der <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A>-Methode ein Zertifikat der Auflistung hinzufügen, die von der <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>-Eigenschaft zurückgegeben wird.  
   
 > [!NOTE]
-> Das Clientkonzept von Zertifikaten, deren Bereich durch einen gegebenen URI festgelegt wird, gilt nur für Anwendungen, die ausgehende Aufrufe an Dienste durchführen, die bei diesen URIs Endpunkte verfügbar machen. Sie gilt nicht für Zertifikate, die zum Signieren ausgestellter Token verwendet werden, z. B. für Zertifikate, die auf dem Server in der Auflistung konfiguriert sind, die von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> Klasse zurückgegeben wird. Weitere Informationen finden Sie unter [Gewusst wie: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+> Das Clientkonzept von Zertifikaten, deren Bereich durch einen gegebenen URI festgelegt wird, gilt nur für Anwendungen, die ausgehende Aufrufe an Dienste durchführen, die bei diesen URIs Endpunkte verfügbar machen. Es gilt nicht für Zertifikate, die zum Signieren von ausgestellten Token verwendet werden, wie z. b. die auf dem Server in der vom-Klasse zurückgegebenen Auflistung konfigurierten <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> . Weitere Informationen finden Sie unter Vorgehens [Weise: Konfigurieren von Anmelde Informationen auf einem Verbunddienst](how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Vorgehensweise: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Gewusst wie: Sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Verbundbeispiel](../samples/federation-sample.md)
+- [Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Vorgehensweise: Erstellen einer WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md)
+- [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](how-to-configure-credentials-on-a-federation-service.md)
+- [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](how-to-configure-a-local-issuer.md)
+- [Sicherheitsüberlegungen für Metadaten](security-considerations-with-metadata.md)
+- [Vorgehensweise: Sichern von Metadatenendpunkten](how-to-secure-metadata-endpoints.md)

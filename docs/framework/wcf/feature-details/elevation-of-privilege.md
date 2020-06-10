@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 8838b139efa20bc796fc21567cc6fc9ee8691eee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 823b41f86080d4802f76fe69865279a7c3506238
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283249"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597409"
 ---
 # <a name="elevation-of-privilege"></a>Angriffe durch Rechteerweiterung
 Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die ursprünglich gewährten Autorisierungs Berechtigungen hinausgehen. Dies ist zum Beispiel der Fall, wenn einem Angreifer mit einem Berechtigungssatz von "Nur-Lesen"-Berechtigungen es irgendwie gelingt, "Lesen-und-Schreiben"-Berechtigungen in seinen Berechtigungssatz aufzunehmen.  
@@ -18,14 +18,14 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Vertrauenswürdige STS sollten SAML-Tokenansprüche signieren  
  Ein SAML (Security Assertions Markup Language)-Token ist ein generisches XML-Token, das den Standardtyp für ausgestellte Token darstellt. SAML-Token können von einem Sicherheitstokendienst (Security Token Service, STS) erstellt werden, der für den empfangenden Webdienst in einem typischen Datenaustausch als vertrauenswürdig gilt. SAML-Token enthalten Ansprüche in Form von Anweisungen. Ein Angreifer kann die Ansprüche aus einem gültigen Token kopieren, ein neues SAML-Token erstellen und mit einem anderen Aussteller signieren. Das Ziel ist hierbei, festzustellen, ob der Server Aussteller validiert, und wenn nicht, diese Schwäche zum Erstellen von SAML-Token auszunutzen, die Berechtigungen über die von einem vertrauenswürdigen STS beabsichtigten hinaus gewähren.  
   
- Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. der `ChainTrust` Modus allein genügt nicht, um zu bestimmen, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. Weitere Informationen finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitäts Modell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) und Verbund [Token und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. Mithilfe des `ChainTrust`-Modus allein kann nicht bestimmt werden, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. Weitere Informationen finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitäts Modell](managing-claims-and-authorization-with-the-identity-model.md) und Verbund [Token und ausgestellte Token](federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Wechseln der Identität ohne Sicherheitskontext  
  Folgendes gilt nur für WinFX.  
   
  Wenn eine Verbindung zwischen einem Client und einem Server hergestellt wird, ändert sich die Identität des Clients nicht, es sei denn, es besteht eine Situation: Nachdem der WCF-Client geöffnet wurde, sind alle folgenden Bedingungen erfüllt:  
   
-- Die Verfahren zum Einrichten eines Sicherheits Kontexts (über eine Transport Sicherheits Sitzung oder eine Nachrichten Sicherheits Sitzung) werden deaktiviert (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>-Eigenschaft ist auf `false` festgelegt, wenn die Nachrichten Sicherheit oder der Transport, der keine Sicherheits Sitzungen einrichten kann, in der Transportsicherheit verwendet wird. HTTPS ist ein Beispiel für ein solches Transportprotokoll).  
+- Die Verfahren zum Einrichten eines Sicherheits Kontexts (über eine Transport Sicherheits Sitzung oder eine Nachrichten Sicherheits Sitzung) werden deaktiviert (die- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> Eigenschaft ist auf festgelegt, `false` Wenn die Nachrichten Sicherheit oder der Transport, der keine Sicherheits Sitzungen einrichten kann, bei der Transportsicherheit verwendet wird. HTTPS ist ein Beispiel für ein solches Transportprotokoll).  
   
 - Sie verwenden die Windows-Authentifizierung.  
   
@@ -46,7 +46,7 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
 > Bei Verwendung der `BeginOpen`-Methode kann nicht garantiert werden, dass es sich bei den aufgezeichneten Anmeldeinformationen um die Anmeldeinformationen des Prozesses handelt, von dem die Methode aufgerufen wird.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Tokenzwischenspeicher ermöglichen Wiederholungen mit veralteten Daten  
- WCF verwendet die `LogonUser` Funktion der lokalen Sicherheits Autorität (Local Security Authority, LSA) zum Authentifizieren von Benutzern anhand von Benutzername und Kennwort. Da die LOGON-Funktion ein kostspieliger Vorgang ist, ermöglicht Ihnen WCF das Zwischenspeichern von Token, die authentifizierte Benutzer darstellen, um die Leistung zu verbessern. Mit dem Zwischenspeichermechanismus werden die Ergebnisse von `LogonUser` für die spätere Verwendung gespeichert. Dieser Mechanismus ist standardmäßig deaktiviert. Legen Sie die <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A>-Eigenschaft auf `true`fest, oder verwenden Sie das `cacheLogonTokens`-Attribut der [\<userNameAuthentication->](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md), um dies zu aktivieren.  
+ WCF verwendet die Funktion der lokalen Sicherheits Autorität (Local Security Authority, LSA) `LogonUser` zum Authentifizieren von Benutzern anhand von Benutzername und Kennwort. Da die LOGON-Funktion ein kostspieliger Vorgang ist, ermöglicht Ihnen WCF das Zwischenspeichern von Token, die authentifizierte Benutzer darstellen, um die Leistung zu verbessern. Mit dem Zwischenspeichermechanismus werden die Ergebnisse von `LogonUser` für die spätere Verwendung gespeichert. Dieser Mechanismus ist standardmäßig deaktiviert. um es zu aktivieren, legen Sie die- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> Eigenschaft auf fest `true` , oder verwenden Sie das- `cacheLogonTokens` Attribut von [\<userNameAuthentication>](../../configure-apps/file-schema/wcf/usernameauthentication.md) .  
   
  Sie können eine Gültigkeitsdauer (Time to Live, TTL) für die zwischengespeicherten Token festlegen, indem Sie <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A>-Eigenschaft auf eine <xref:System.TimeSpan>-Zeitspanne festlegen oder das `cachedLogonTokenLifetime`-Attribut des `userNameAuthentication`-Elements verwenden. Der Standardwert beträgt 15 Minuten. Beachten Sie Folgendes: Solange ein Token zwischengespeichert ist, kann jeder Client, der den gleichen Benutzernamen und das gleiche Kennwort angibt, das Token nutzen, auch wenn das betreffende Benutzerkonto in Windows gelöscht oder dessen Kennwort geändert wurde. Bis die Gültigkeitsdauer abläuft und das Token aus dem Cache entfernt wird, ermöglicht WCF dem (möglicherweise böswilligen) Benutzer, sich zu authentifizieren.  
   
@@ -82,11 +82,11 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
   
  Um dieses Problem zu entschärfen, verweisen Sie auf eine andere Art auf das X.509-Zertifikat, z.&#160;B. mithilfe von <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Sicherheitshinweise](security-considerations-in-wcf.md)
+- [Offenlegung von Informationen](information-disclosure.md)
+- [Denial of Service](denial-of-service.md)
+- [Wiederholungsangriffe](replay-attacks.md)
+- [Manipulation](tampering.md)
+- [Nicht unterstützte Szenarien](unsupported-scenarios.md)

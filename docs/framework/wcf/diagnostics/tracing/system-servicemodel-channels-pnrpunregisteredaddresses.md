@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.PnrpUnregisteredAddresses
 ms.date: 03/30/2017
 ms.assetid: e726ab32-6923-4fdb-b0ce-bdf2a299ed6a
-ms.openlocfilehash: 2e705605ebf78ea3179f38ee87d3477ee414cc7c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: c6cd6f79ec1ee3a54f6a674b2d91adec8025b91b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424842"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598345"
 ---
 # <a name="systemservicemodelchannelspnrpunregisteredaddresses"></a>System.ServiceModel.Channels.PnrpUnregisteredAddresses
 Die Registrierung der Adressen des lokalen Knotens wurde vom Pnrp-Resolver aufgehoben.  
   
-## <a name="description"></a>Beschreibung  
- Diese Ablaufverfolgung tritt auf, nachdem der PNRP-Dienst erfolgreich Adressen des lokalen Knotens hebt die Registrierung.  
+## <a name="description"></a>BESCHREIBUNG  
+ Diese Ablauf Verfolgung tritt auf, nachdem der PNRP-Dienst die Registrierung der lokalen Knoten Adressen erfolgreich aufgehoben hat.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Ablaufverfolgung](index.md)
+- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](using-tracing-to-troubleshoot-your-application.md)
+- [Verwaltung und Diagnose](../index.md)

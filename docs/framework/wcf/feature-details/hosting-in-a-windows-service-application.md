@@ -2,12 +2,12 @@
 title: Hosten in einer Windows-Dienstanwendung
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: a07aade4619b644dadd1d5acdcb5252b305b94d0
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: ba49d123508ceb8da677d1e9c67721e4f86aa7c3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964490"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597331"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hosten in einer Windows-Dienstanwendung
 Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das besonders für Anwendungen geeignet ist, die sich in ausführbaren Dateien mit langer Laufzeit befinden müssen und keinerlei Benutzeroberfläche anzeigen. Die Prozesslebensdauer einer Windows-Dienstanwendung wird vom Dienststeuerungs-Manager (Service Control Manager, SCM) verwaltet, mit dem Sie Windows-Dienstanwendungen starten, beenden und anhalten können. Sie können einen Windows-Dienst Prozess so konfigurieren, dass er beim Starten des Computers automatisch gestartet wird. Dadurch wird er zu einer geeigneten Hostingumgebung für "Always on"-Anwendungen. Weitere Informationen zu Windows-Dienst Anwendungen finden Sie unter [Windows-Dienst Anwendungen](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -30,17 +30,17 @@ Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das beson
   
     - Überschreiben Sie <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>, um eine oder mehrere Instanzen von <xref:System.ServiceModel.ServiceHost> zu öffnen. Eine einzelne Windows-Dienst Anwendung kann mehrere WCF-Dienste hosten, die als Gruppe gestartet und beendet werden.  
   
-    - Überschreiben Sie <xref:System.ServiceProcess.ServiceBase.OnStop%2A>, um <xref:System.ServiceModel.Channels.CommunicationObject.Closed> auf dem <xref:System.ServiceModel.ServiceHost> alle laufenden WCF-Dienste aufzurufen, die während der <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>gestartet wurden.  
+    - <xref:System.ServiceProcess.ServiceBase.OnStop%2A>Überschreiben Sie, um <xref:System.ServiceModel.Channels.CommunicationObject.Closed> für <xref:System.ServiceModel.ServiceHost> alle laufenden WCF-Dienste aufzurufen, die während gestartet wurden <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> .  
   
     - Abonnieren Sie das <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>-Ereignis von <xref:System.ServiceModel.ServiceHost>, und verwenden Sie die <xref:System.ServiceProcess.ServiceController>-Klasse, um die Windows-Dienstanwendung im Fehlerfall zu beenden.  
   
      Windows-Dienst Anwendungen, die WCF-Dienste hosten, werden auf die gleiche Weise wie Windows-Dienst Anwendungen bereitgestellt und verwaltet, die WCF nicht verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceProcess>
-- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [Windows-Diensthost](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst](how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Windows-Diensthost](../samples/windows-service-host.md)
 - [Programmierarchitektur für Dienstanwendungen](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895116"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597175"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen
-Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationstools hinzugefügt oder entfernt, wird die Webdienstkonfiguration innerhalb der Konfigurationsdatei der Anwendung aktualisiert. Im gehosteten com+-Modus wird die Datei "Application. config" im Stammverzeichnis der Anwendung abgelegt (%ProgramFiles%\ComPlus Applications\\{AppID} ist die Standardeinstellung). In beiden im Internet gehosteten Modi wird die Datei Web.config im angegebenen vroot-Verzeichnis abgelegt.  
+Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationstools hinzugefügt oder entfernt, wird die Webdienstkonfiguration innerhalb der Konfigurationsdatei der Anwendung aktualisiert. Im gehosteten com+-Modus wird die Datei "Application. config" im Stammverzeichnis der Anwendung abgelegt (%ProgramFiles%\ComPlus Applications \\ {AppID} ist die Standardeinstellung). In beiden im Internet gehosteten Modi wird die Datei Web.config im angegebenen vroot-Verzeichnis abgelegt.  
   
 > [!NOTE]
 > Nachrichtensignaturen sollten zum Schutz vor Manipulation von Nachrichten zwischen einem Client und einem Server verwendet werden. Außerdem sollte Verschlüsselung auf Nachrichten- oder Transportebene verwendet werden, um Schutz vor der Offenlegung von Informationen in Nachrichten zu bieten, die zwischen einem Client und einem Server übertragen werden. Wie bei den Windows Communication Foundation (WCF)-Diensten sollten Sie die Drosselung verwenden, um die Anzahl gleichzeitiger Aufrufe, Verbindungen, Instanzen und ausstehende Vorgänge einzuschränken. Dies trägt zur Vermeidung einer übermäßigen Ressourcenbeanspruchung bei. Das Drosselungsverhalten wird durch Dienstkonfigurations-Dateieinstellungen angegeben.  
@@ -55,7 +55,7 @@ public interface IFinancesContract : IDisposable
   
 - Das Ändern der Endpunktadresse vom standardmäßigen Format Anwendungsname/Komponentenname/Schnittstellenname in eine benutzerfreundlichere Form.  
   
-- Ändern des Namespaces des Dienstanbieter von `http://tempuri.org/InterfaceID` der Standardform in eine relevantere Form.  
+- Ändern des Namespaces des Dienstanbieter von der Standard `http://tempuri.org/InterfaceID` Form in eine relevantere Form.  
   
 - Das Ändern des Endpunkts, um eine andere Transportbindung zu verwenden.  
   
@@ -96,6 +96,6 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Integration in com+-Anwendungen](integrating-with-com-plus-applications.md)

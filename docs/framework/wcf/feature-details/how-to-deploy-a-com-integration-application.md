@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Bereitstellung einer COM+-Integrationsanwendung'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: fcf525943e6e453253c6f4d3bcfa8a1a08df6909
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4ae7f730296d54debc1cf2971b61e5700503430
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778325"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595426"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Vorgehensweise: Bereitstellung einer COM+-Integrationsanwendung
 Sobald Sie eine COM+-Integrationsanwendung geschrieben haben, möchten Sie diese auf einem anderen Computer bereitstellen. In diesem Thema wird beschrieben, wie eine COM+-Integrationsanwendung von einem Computer auf einen anderen verschoben wird.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Verschieben einer COM+-gehosteten Integrationsanwendung  
   
-1. Stellen Sie sicher, dass WCF auf beiden Computern installiert ist.  
+1. Stellen Sie sicher, dass auf beiden Computern WCF installiert ist.  
   
 2. Exportieren Sie die Anwendung von Computer A.  
   
@@ -24,11 +24,11 @@ Sobald Sie eine COM+-Integrationsanwendung geschrieben haben, möchten Sie diese
   
 5. Kopieren Sie die Dateien Application.config und Application.manifest aus dem Stammverzeichnis der Anwendung auf dem Computer A in das Stammverzeichnis der Anwendung auf dem Computer B.  
   
-6. Bearbeiten Sie die Adressen der Dienstendpunkte in der Datei Application.config auf Computer B, um den entsprechenden Computer zu identifizieren. Ändern Sie beispielsweise `http://machineA/MyService` zu `http://machineB/MyService`.  
+6. Bearbeiten Sie die Adressen der Dienstendpunkte in der Datei Application.config auf Computer B, um den entsprechenden Computer zu identifizieren. Ändern Sie beispielsweise `http://machineA/MyService` in `http://machineB/MyService`.  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Verschieben einer im Internet gehosteten Integrationsanwendung  
   
-1. Stellen Sie sicher, dass WCF auf beiden Computern installiert ist.  
+1. Stellen Sie sicher, dass auf beiden Computern WCF installiert ist.  
   
 2. Exportieren Sie die Anwendung von Computer A.  
   
@@ -38,8 +38,8 @@ Sobald Sie eine COM+-Integrationsanwendung geschrieben haben, möchten Sie diese
   
 5. Kopieren Sie die .svc-Datei (Komponentenname.svc) und die Datei Web.config vom vroot auf dem Computer A in das neu erstellte vroot auf Computer B.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über die Integration von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
-- [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
-- [Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Übersicht über die Integration von com+-Anwendungen](integrating-with-com-plus-applications-overview.md)
+- [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](how-to-configure-com-service-settings.md)
+- [Vorgehensweise: Verwenden des COM+-Dienstmodell-Konfigurationstools](how-to-use-the-com-service-model-configuration-tool.md)

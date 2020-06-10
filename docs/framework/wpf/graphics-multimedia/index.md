@@ -12,17 +12,17 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 8636afcc5b63b71dc729812a7f3eb4945ba49494
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: ecc54ad9453343f6306b0133fa180abd0db46f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596422"
 ---
 # <a name="graphics-and-multimedia"></a>Grafiken und Multimedia
 
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Unterstützung für Multimedia, Vektorgrafiken, Animation und Inhaltskomposition und erleichtert Entwicklern das Erstellen interessanter Benutzeroberflächen und Inhalte. Mit Visual Studio können Sie Vektorgrafiken oder komplexe Animationen erstellen und Medien in Ihre Anwendungen integrieren.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Unterstützung für Multimedia, Vektorgrafiken, Animation und Inhaltskomposition und erleichtert Entwicklern das Erstellen interessanter Benutzeroberflächen und Inhalte. Mithilfe von Visual Studio können Sie Vektorgrafiken oder komplexe Animationen erstellen und Medien in Ihre Anwendungen integrieren.
 
 In diesem Thema werden die Grafik-, Animations- und Medienfeatures von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt, mit denen Sie den Anwendungen Grafiken, Übergangseffekte, Ton und Videos hinzufügen können.
 
@@ -37,33 +37,33 @@ Im Zusammenhang mit Grafiken und Animationen wurden mehrere Änderungen vorgenom
 
 - Layoutglättung
 
-  Wenn ein Objektrand in die Mitte eines Pixelgeräts fällt, kann das DPI-unabhängige Grafiksystem Renderingartefakte erstellen, z.B. verschwommene oder semitransparente Ränder. Frühere Versionen der WPF haben die Pixelausrichtung für diese Fälle verwendet. Silverlight 2 hat die Layoutglättung eingeführt, die eine andere Möglichkeit bietet, um Elemente so zu verschieben, dass Ränder auf ganzen Pixelgrenzen liegen. WPF unterstützt jetzt die <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> Layoutrundung <xref:System.Windows.FrameworkElement>mit der angefügten Eigenschaft auf .
+  Wenn ein Objektrand in die Mitte eines Pixelgeräts fällt, kann das DPI-unabhängige Grafiksystem Renderingartefakte erstellen, z.B. verschwommene oder semitransparente Ränder. Frühere Versionen der WPF haben die Pixelausrichtung für diese Fälle verwendet. Silverlight 2 hat die Layoutglättung eingeführt, die eine andere Möglichkeit bietet, um Elemente so zu verschieben, dass Ränder auf ganzen Pixelgrenzen liegen. WPF unterstützt jetzt die Layoutrundung mit der <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> angefügten-Eigenschaft für <xref:System.Windows.FrameworkElement> .
 
 - Zwischengespeicherte Komposition
 
-  Mithilfe der <xref:System.Windows.Media.BitmapCache> neuen <xref:System.Windows.Media.BitmapCacheBrush> Undklassen können Sie einen komplexen Teil der visuellen Struktur als Bitmap zwischenspeichern und die Renderzeit erheblich verbessern. Die Bitmap reagiert weiterhin auf Benutzereingaben wie Mausklicks, und Sie können sie wie jeden Pinsel auf anderen Elementen zeichnen.
+  Mithilfe der neuen <xref:System.Windows.Media.BitmapCache> -Klasse und der- <xref:System.Windows.Media.BitmapCacheBrush> Klasse können Sie einen komplexen Teil der visuellen Struktur als Bitmap Zwischenspeichern und die Renderingzeit erheblich verbessern. Die Bitmap reagiert weiterhin auf Benutzereingaben wie Mausklicks, und Sie können sie wie jeden Pinsel auf anderen Elementen zeichnen.
 
 - Unterstützung von Pixel Shader 3
 
-  WPF 4 baut auf <xref:System.Windows.Media.Effects.ShaderEffect> der in WPF 3.5 SP1 eingeführten Unterstützung auf, indem Anwendungen effekte mithilfe von Pixel Shader (PS) Version 3.0 schreiben können. Das PS 3.0-Shadermodell ist ausgereifter als PS 2.0 und ermöglicht noch mehr Effekte auf unterstützter Hardware.
+  WPF 4 basiert auf der <xref:System.Windows.Media.Effects.ShaderEffect> Unterstützung, die in WPF 3,5 SP1 eingeführt wurde, indem Anwendungen das Schreiben von Effekten mithilfe von Pixel-Shader (PS) Version 3,0 ermöglichen. Das PS 3.0-Shadermodell ist ausgereifter als PS 2.0 und ermöglicht noch mehr Effekte auf unterstützter Hardware.
 
 - Beschleunigungsfunktionen
 
-  Sie können Animationen mit Beschleunigungsfunktionen verbessern, die Ihnen zusätzliche Kontrolle über das Verhalten von Animationen geben. Sie können z. <xref:System.Windows.Media.Animation.ElasticEase> B. eine auf eine Animation anwenden, um der Animation ein frühlingshaftes Verhalten zu verleihen. Weitere Informationen finden Sie unter <xref:System.Windows.Media.Animation> die Beschleunigungstypen im Namespace.
+  Sie können Animationen mit Beschleunigungsfunktionen verbessern, die Ihnen zusätzliche Kontrolle über das Verhalten von Animationen geben. Beispielsweise können Sie eine <xref:System.Windows.Media.Animation.ElasticEase> auf eine Animation anwenden, um der Animation ein springisierungsverhalten zu geben. Weitere Informationen finden Sie unter Beschleunigungs Typen im- <xref:System.Windows.Media.Animation> Namespace.
 
 <a name="graphics_and_rendering"></a>
 
 ## <a name="graphics-and-rendering"></a>Grafiken und Rendering
 
-WPF unterstützt hochwertige 2D-Grafiken. Die Funktionalität umfasst die Pinsel, Geometrien, Bilder, Formen und Transformationen. Weitere Informationen finden Sie unter [Grafik](graphics.md). Das Rendern von grafischen <xref:System.Windows.Media.Visual> Elementen basiert auf der Klasse. Die Struktur von visuellen Objekten auf dem Bildschirm wird durch die visuelle Struktur beschrieben. Weitere Informationen finden Sie unter [Übersicht über das WPF-Grafikenrendering](wpf-graphics-rendering-overview.md).
+WPF bietet Unterstützung für qualitativ hochwertige 2D-Grafiken. Die Funktionalität umfasst die Pinsel, Geometrien, Bilder, Formen und Transformationen. Weitere Informationen finden Sie unter [Grafik](graphics.md). Das Rendering grafischer Elemente basiert auf der- <xref:System.Windows.Media.Visual> Klasse. Die Struktur von visuellen Objekten auf dem Bildschirm wird durch die visuelle Struktur beschrieben. Weitere Informationen finden Sie unter [Übersicht über das WPF-Grafikenrendering](wpf-graphics-rendering-overview.md).
 
-### <a name="2d-shapes"></a>2D-Shapes
+### <a name="2d-shapes"></a>2D-Formen
 
-WPF bietet eine Bibliothek mit häufig verwendeten, vektorgezeichneten 2D-Shapes, z. B. Rechtecken und Ellipsen, die in der folgenden Abbildung gezeigt werden.
+WPF stellt eine Bibliothek häufig verwendeter vektorbasierter 2D-Formen dar, wie z. b. Rechtecke und Ellipsen, die in der folgenden Abbildung gezeigt werden.
 
-![Diagramm mit Ellipsen und Rechtecken.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
+![Das Diagramm zeigt Ellipsen und Rechtecke an.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-Diese intrinsischen WPF-Shapes sind nicht nur Shapes: Sie sind programmierbare Elemente, die viele der Features implementieren, die Sie von den gängigsten Steuerelementen erwarten, einschließlich Tastatur- und Mauseingabe. Das folgende Beispiel zeigt, <xref:System.Windows.UIElement.MouseUp> wie das ausgelöste Ereignis behandelt wird, indem Sie auf ein <xref:System.Windows.Shapes.Ellipse> Element klicken.
+Diese systeminternen WPF-Formen sind nicht nur Formen: Sie sind programmierbare Elemente, die viele der Features implementieren, die Sie von den gängigsten Steuerelementen erwarten, einschließlich Tastatur-und Maus Eingaben. Das folgende Beispiel zeigt, wie das- <xref:System.Windows.UIElement.MouseUp> Ereignis behandelt wird, das durch Klicken auf ein-Element ausgelöst wird <xref:System.Windows.Shapes.Ellipse> .
 
 ```xaml
 <Window
@@ -95,23 +95,23 @@ End Class
 
 Die folgende Abbildung zeigt die Ausgabe für das vorangehende [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Markup und CodeBehind.
 
-![Ein Meldungsfeld mit der Aufschrift "Du hast auf die Ellipse geklickt!"](./media/index/messagebox-text-output.png)
+![Ein Meldungs Feld, das besagt, dass Sie auf die Ellipse geklickt haben! "](./media/index/messagebox-text-output.png)
 
 Weitere Informationen finden Sie unter [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md). Ein einführendes Beispiel finden Sie unter [Beispiel für Formelemente](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).
 
 ### <a name="2d-geometries"></a>2D-Geometrien
 
-Wenn die von WPF zur Verfügung gestellten 2D-Shapes nicht ausreichen, können Sie die WPF-Unterstützung für Geometrien und Pfade verwenden, um eigene zu erstellen. Die folgende Abbildung zeigt, wie Sie Geometrien verwenden können, um Formen als Zeichnungspinsel zu erstellen und andere WPF-Elemente zu beschneiden.
+Wenn die von WPF bereitgestellten 2D-Formen nicht ausreichen, können Sie die WPF-Unterstützung für Geometrien und Pfade verwenden, um Ihre eigenen zu erstellen. In der folgenden Abbildung wird veranschaulicht, wie Geometrien verwendet werden können, um Formen, als Zeichnungs Pinsel und andere WPF-Elemente zu erstellen.
 
-![Screenshot, der zeigt, wie Sie Geometrien zum Erstellen von Shapes verwenden können.](./media/index/use-geometries-create-shapes.png)
+![Screenshot, der zeigt, wie Geometrien verwendet werden können, um Formen zu erstellen.](./media/index/use-geometries-create-shapes.png)
 
 Weitere Informationen finden Sie unter [Übersicht über die Geometrie](geometry-overview.md). Ein einführendes Beispiel finden Sie unter [Beispiele zu Geometrie](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).
 
 ### <a name="2d-effects"></a>2D-Effekte
 
-WPF stellt eine Bibliothek mit 2D-Klassen bereit, mit der Sie eine Vielzahl von Effekten erstellen können. Die 2D-Renderingfunktion von WPF [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bietet die Möglichkeit, Elemente mit Farbverläufen, Bitmaps, Zeichnungen und Videos zu zeichnen. und sie mithilfe von Rotation, Skalierung und Schiefe zu manipulieren. Die folgende Abbildung zeigt ein Beispiel für die vielen Effekte, die Sie mit WPF-Pinsel erzielen können.
+WPF stellt eine Bibliothek von 2D-Klassen bereit, die Sie verwenden können, um eine Vielzahl von Effekten zu erstellen. Die 2D-Renderingfunktion von WPF bietet die Möglichkeit, Elemente mit Farb [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Verläufen, Bitmaps, Zeichnungen und Videos zu zeichnen und diese mithilfe von Drehung, Skalierung und Neigung zu manipulieren. Die folgende Abbildung zeigt ein Beispiel für die zahlreichen Effekte, die Sie durch die Verwendung von WPF-Pinseln erreichen können.
 
-![Abbildung mit den verschiedenen WPF-Pinseln und Farbelementen.](./media/index/brushes-paint-elements.png)
+![Die Abbildung zeigt die verschiedenen WPF-Pinsel und-Elemente.](./media/index/brushes-paint-elements.png)
 
 Weitere Informationen finden Sie unter [Übersicht über WPF-Pinsel](wpf-brushes-overview.md). Ein einführendes Beispiel finden Sie unter [Pinselbeispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes).
 
@@ -119,17 +119,17 @@ Weitere Informationen finden Sie unter [Übersicht über WPF-Pinsel](wpf-brushes
 
 ## <a name="3d-rendering"></a>3D-Rendering
 
-WPF bietet eine Reihe von 3D-Rendering-Funktionen, die in die 2D-Grafikunterstützung [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]in WPF integriert werden, damit Sie spannendere Layout-, - und Datenvisualisierung erstellen können. An einem Ende des Spektrums können Sie mit WPF 2D-Bilder auf den Oberflächen von 3D-Shapes rendern, was in der folgenden Abbildung veranschaulicht wird.
+WPF bietet eine Reihe von 3D-Renderingfunktionen, die mit der Unterstützung von 2D-Grafiken in WPF integriert werden, damit Sie eine genauere Darstellung von Layout, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Daten und Datenvisualisierung erstellen können. An einem Ende des Spektrums können Sie mithilfe von WPF 2D-Bilder auf den Oberflächen von 3D-Formen darstellen, die in der folgenden Abbildung veranschaulicht werden.
 
-![Screenshot eines Beispiels mit 3D-Shapes mit unterschiedlichen Texturen.](./media/index/visual-three-dimensional-shape.png)
+![Screenshot eines Beispiels, das 3D-Formen mit unterschiedlichen Texturen anzeigt.](./media/index/visual-three-dimensional-shape.png)
 
-Weitere Informationen finden Sie unter [Übersicht über 3D-Grafiken](3-d-graphics-overview.md). Ein Einführungsbeispiel finden Sie unter [3D-Volumenkörperbeispiel](https://go.microsoft.com/fwlink/?LinkID=159964).
+Weitere Informationen finden Sie unter [Übersicht über 3D-Grafiken](3-d-graphics-overview.md). Ein Einführ Endes Beispiel finden Sie unter [Beispiel für 3D-](https://go.microsoft.com/fwlink/?LinkID=159964)Daten.
 
 <a name="animation"></a>
 
 ## <a name="animation"></a>Animation
 
-Mit Animation können Sie Steuerelemente und Elemente wachsen, bewegen, drehen sowie ein- und ausblenden lassen und z.B. interessante Seitenübergänge erzeugen. Da WPF es Ihnen ermöglicht, die meisten Eigenschaften zu animieren, können Sie nicht nur die meisten WPF-Objekte animieren, sondern auch WPF verwenden, um benutzerdefinierte Objekte zu animieren, die Sie erstellen.
+Mit Animation können Sie Steuerelemente und Elemente wachsen, bewegen, drehen sowie ein- und ausblenden lassen und z.B. interessante Seitenübergänge erzeugen. Da WPF Ihnen ermöglicht, die meisten Eigenschaften zu animieren, können Sie nicht nur die meisten WPF-Objekte animieren, sondern auch WPF verwenden, um von Ihnen erstellte benutzerdefinierte Objekte zu animieren.
 
 ![Screenshot eines animierten Cubes.](./media/index/animate-custom-objects.png)
 
@@ -143,21 +143,21 @@ Bilder, Videos und Audiodateien bieten eine umfangreiche Medienunterstützung, u
 
 ### <a name="images"></a>Bilder
 
-Bilder, z.B. Symbole, Hintergründe und sogar Teile von Animationen, sind ein wesentlicher Bestandteil der meisten Anwendungen. Da Sie häufig Bilder verwenden müssen, stellt WPF die Möglichkeit zur Verfügung, auf verschiedene Weise mit ihnen zu arbeiten. In der folgenden Abbildung wird lediglich eine der Möglichkeiten dargestellt.
+Bilder, z.B. Symbole, Hintergründe und sogar Teile von Animationen, sind ein wesentlicher Bestandteil der meisten Anwendungen. Da Sie häufig Images verwenden müssen, bietet WPF eine Vielzahl von Möglichkeiten, um mit Ihnen zu arbeiten. In der folgenden Abbildung wird lediglich eine der Möglichkeiten dargestellt.
 
-![Styling-Beispiel-Screenshot](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
+![Screenshot: Stilbeispiel](../controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
 Weitere Informationen finden Sie unter [Übersicht über die Bildverarbeitung](imaging-overview.md).
 
 ### <a name="video-and-audio"></a>Video und Audio
 
-Ein Kernmerkmal der Grafikfunktionen von WPF ist die native Unterstützung für die Arbeit mit Multimedia, einschließlich Video und Audio. Im folgenden Beispiel wird veranschaulicht, wie einen MediaPlayer in eine Anwendung eingefügt wird.
+Ein zentrales Feature der Grafikfunktionen von WPF besteht darin, systemeigene Unterstützung für die Arbeit mit Multimedia zu bieten, die Video-und Audiodaten umfasst. Im folgenden Beispiel wird veranschaulicht, wie einen MediaPlayer in eine Anwendung eingefügt wird.
 
 ```xaml
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />
 ```
 
-<xref:System.Windows.Controls.MediaElement>ist in der Lage, sowohl Video als auch Audio abzuspielen, und ist erweiterbar genug, um die einfache Erstellung von benutzerdefinierten Benutzerandis zu ermöglichen.
+<xref:System.Windows.Controls.MediaElement>kann sowohl Video als auch Audiodaten abspielen und ist erweiterbar, um die einfache Erstellung benutzerdefinierter Benutzeroberflächen zu ermöglichen.
 
 Weitere Informationen finden Sie unter [Übersicht über Multimedia](multimedia-overview.md).
 
@@ -171,5 +171,5 @@ Weitere Informationen finden Sie unter [Übersicht über Multimedia](multimedia-
 - [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)
 - [Gewusst-wie-Themen zu Animation und Zeitsteuerung](animation-and-timing-how-to-topics.md)
-- [3D-Grafikübersicht](3-d-graphics-overview.md)
+- [Übersicht über 3D-Grafiken](3-d-graphics-overview.md)
 - [Übersicht über Multimedia](multimedia-overview.md)

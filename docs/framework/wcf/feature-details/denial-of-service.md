@@ -1,23 +1,23 @@
 ---
-title: Dienstverweigerung (Denial of Service)
+title: Denial of Service
 ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964421"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599268"
 ---
-# <a name="denial-of-service"></a>Dienstverweigerung (Denial of Service)
+# <a name="denial-of-service"></a>Denial of Service
 Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass Nachrichten nicht verarbeitet werden können oder extrem langsam verarbeitet werden.  
   
 ## <a name="excess-memory-consumption"></a>Übermäßiger Speicherverbrauch  
  Beim Lesen eines XML-Dokuments mit einer großen Anzahl von eindeutigen lokalen Namen, Namespaces oder Präfixen kann ein Problem auftreten. Wenn Sie eine von <xref:System.Xml.XmlReader> abgeleitete Klasse verwenden und für jedes Element die Eigenschaft <xref:System.Xml.XmlReader.LocalName%2A>, <xref:System.Xml.XmlReader.Prefix%2A> oder <xref:System.Xml.XmlReader.NamespaceURI%2A> aufrufen, wird die zurückgegebene Zeichenfolge einer <xref:System.Xml.NameTable> hinzugefügt. Die Größe der in der <xref:System.Xml.NameTable> gespeicherten Auflistung nimmt nie ab, sodass ein virtueller Speicherverlust an Zeichenfolgenhandles eintritt.  
   
- Empfohlene Maßnahmen sind u. a.:  
+ Mögliche Entschärfungen:  
   
 - Leiten Sie von der <xref:System.Xml.NameTable>-Klasse ab, und erzwingen Sie ein maximales Größenkontingent. (Die Verwendung einer <xref:System.Xml.NameTable> lässt sich nicht umgehen, und der Austausch einer vollen <xref:System.Xml.NameTable> ist nicht möglich.)  
   
@@ -44,10 +44,10 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="auditing-event-log-can-be-filled"></a>Überwachungsereignisprotokoll kann ausgefüllt werden  
  Wenn ein böswilliger Benutzer erkennt, dass die Überwachung aktiviert ist, kann dieser Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl.  
   
- Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige finden Sie unter [Ereignisanzeige](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Weitere Informationen finden Sie unter [Auditing](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige finden Sie unter [Ereignisanzeige](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Weitere Informationen finden Sie unter [Auditing](auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Ungültige Implementierungen von IAuthorizationPolicy können bewirken, dass der Dienst nicht mehr reagiert.  
- Wenn Sie die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für eine fehlerhafte Implementierung der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> Schnittstelle aufrufen, kann dies dazu führen, dass der Dienst nicht mehr reagiert.  
+ Das Aufrufen der- <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> Methode für eine fehlerhafte Implementierung der- <xref:System.IdentityModel.Policy.IAuthorizationPolicy> Schnittstelle kann bewirken, dass der Dienst nicht mehr reagiert.  
   
  Entschärfung: Verwenden Sie ausschließlich vertrauenswürdigen Code. Verwenden Sie also nur selbst geschriebenen und getesteten Code oder Code von einem vertrauenswürdigen Anbieter. Lassen Sie nicht ohne gründliche Prüfung zu, dass nicht vertrauenswürdige Erweiterungen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> in Ihren Code geladen werden. Dies gilt für alle in einer Dienstimplementierung verwendeten Erweiterungen. WCF unterscheidet nicht zwischen Anwendungscode und fremd Code, der mithilfe von Erweiterungs Punkten eingebunden wird.  
   
@@ -59,7 +59,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
   
  Die Auswirkung ist, dass WCF-Dienste auf Domänen mit automatischer Registrierung möglicherweise nicht geöffnet werden. Die Ursache ist, dass die standardmäßigen Suchkriterien des Dienstes für X.509-Anmeldeinformationen mehrdeutig sein können, da mehrere Zertifikate mit dem vollqualifizierten DNS (Domain Name System) des Computers vorhanden sind. Ein Zertifikat stammt aus der automatischen Registrierung, das andere kann ein selbst ausgestelltes Zertifikat sein.  
   
- Um dies zu vermeiden, verweisen Sie auf das exakte zu verwendende Zertifikat, indem Sie ein genaueres Suchkriterium für den [\<servicecreden->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)verwenden. Verwenden Sie z. B. die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>-Option, und geben Sie das Zertifikat anhand seines eindeutigen Fingerabdrucks an (Hash).  
+ Um dies zu vermeiden, verweisen Sie auf das exakte zu verwendende Zertifikat, indem Sie ein präzisere Suchkriterium für den verwenden [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) . Verwenden Sie z. B. die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>-Option, und geben Sie das Zertifikat anhand seines eindeutigen Fingerabdrucks an (Hash).  
   
  Weitere Informationen zur automatischen anmeldungsfunktion finden Sie unter [automatische Registrierung von Zertifikaten in Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
   
@@ -75,16 +75,16 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
  Wenn ein Client erfolgreich durch einen Dienst authentifiziert wird und eine sichere Verbindung mit dem Dienst eingerichtet wird, verfolgt der Dienst die Sitzung, bis sie vom Client abgebrochen wird oder abläuft. Jede eingerichtete Sitzung wird auf den Grenzwert für die maximale Anzahl gleichzeitiger aktiver Sitzungen mit dem Dienst angerechnet. Wenn dieser Grenzwert erreicht wird, werden Clients abgelehnt, die versuchen, eine neue Sitzung mit diesem Dienst zu erstellen, bis eine oder mehrere aktive Sitzungen ablaufen oder vom Client abgebrochen werden. Ein Client kann über mehrere Sitzungen mit einem Dienst verfügen, und jede dieser Sitzungen wird auf den Grenzwert angerechnet.  
   
 > [!NOTE]
-> Wenn Sie zustandsbehaftete Sitzungen verwenden, trifft der vorhergehende Absatz nicht zu. Weitere Informationen zu Zustands behafteten Sitzungen finden [Sie unter Gewusst wie: Erstellen eines Sicherheitskontext Tokens für eine sichere Sitzung](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+> Wenn Sie zustandsbehaftete Sitzungen verwenden, trifft der vorhergehende Absatz nicht zu. Weitere Informationen zu Zustands behafteten Sitzungen finden [Sie unter Gewusst wie: Erstellen eines Sicherheitskontext Tokens für eine sichere Sitzung](how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Legen Sie den Grenzwert für die maximale Anzahl aktiver Sitzungen und die maximale Lebensdauer für eine Sitzung über die <xref:System.ServiceModel.Channels.SecurityBindingElement>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse fest, wenn Sie dieses Sicherheitsproblem vermeiden möchten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Sicherheitshinweise](security-considerations-in-wcf.md)
+- [Offenlegung von Informationen](information-disclosure.md)
+- [Rechte Erweiterungen](elevation-of-privilege.md)
+- [Denial of Service](denial-of-service.md)
+- [Wiederholungsangriffe](replay-attacks.md)
+- [Manipulation](tampering.md)
+- [Nicht unterstützte Szenarien](unsupported-scenarios.md)

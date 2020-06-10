@@ -4,43 +4,43 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677e8a4b00b36c2f11b27eb65d57be8abf75d6d2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600645"
 ---
 # <a name="wcf-syndication"></a>WCF Syndication
-Windows Communication Foundation (WCF) unterstützt das problemlose arbeiten mit Syndication-Feeds in Atom, RSS oder anderen benutzerdefinierten Formaten, dies ermöglicht es Ihnen, zu lesen und erstellen sowie das Verfügbarmachen für einen Dienstendpunkt. In den Themen dieses Abschnitts wird dieses Programmiermodell für Syndication genau beschrieben.  
+Windows Communication Foundation (WCF) bietet Unterstützung für das einfache arbeiten mit Syndizierungs Feeds in Atom, RSS oder anderen benutzerdefinierten Formaten, sodass Sie Sie lesen und erstellen und auf einem Dienst Endpunkt verfügbar machen können. In den Themen dieses Abschnitts wird dieses Programmiermodell für Syndication genau beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- Bietet eine Übersicht über Syndication-Unterstützung von WCF.  
+ [Übersicht über WCF Syndication](wcf-syndication-overview.md)  
+ Bietet einen Überblick über die von WCF bereitgestellte Syndizierungs Unterstützung.  
   
- [Architektur von Syndication](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [Architektur von Syndication](architecture-of-syndication.md)  
  Beschreibt die Klassen im Objektmodell und die Erweiterbarkeit von Syndication.  
   
- [Zuordnung des WCF-Syndication-Objektmodells zu Atom und RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
+ [Wie das WCF-Syndication-Objektmodell Atom und RSS zugeordnet wird](how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
  Beschreibt die Darstellung von Feeds im WCF Syndication-Objektmodell und deren Konvertierung zu RSS- und Atom-Feeds.  
   
- [Vorgehensweise: Erstellen eines einfachen RSS-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Vorgehensweise: Erstellen eines grundlegenden RSS-Feeds](how-to-create-a-basic-rss-feed.md)  
  Erläutert die Erstellung eines Diensts, der einen grundlegenden RSS-Feed verfügbar macht.  
   
- [Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds](how-to-create-a-basic-atom-feed.md)  
  Erläutert die Erstellung eines Diensts, der einen grundlegenden ATOM-Feed verfügbar macht.  
   
- [Vorgehensweise: Bereitstellen eines Feeds als Atom und RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ [Vorgehensweise: Verfügbarmachen eines Feeds als Atom und RSS](how-to-expose-a-feed-as-both-atom-and-rss.md)  
  Erläutert die Erstellung eines Diensts, der denselben Feed mit ATOM und RSS verfügbar macht.  
   
- [Syndication-Erweiterbarkeit](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  
+ [Syndication-Erweiterbarkeit](syndication-extensibility.md)  
  Beschreibt die Methoden zum Hinzufügen benutzerdefinierter Elemente und Attribute zu einem Syndication-Feed.  
   
 ## <a name="reference"></a>Referenz  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [WCF-Web-HTTP-Programmiermodell](wcf-web-http-programming-model.md)
+- [Teilweise Vertrauenswürdigkeit](partial-trust.md)
