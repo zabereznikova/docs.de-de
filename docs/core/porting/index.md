@@ -3,12 +3,12 @@ title: Portieren von .NET Framework zu .NET Core
 description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen beim Portieren eines .NET Framework-Projekts zu .NET Core behilflich sein können.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158283"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502768"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Übersicht über das Portieren von .NET Framework zu .NET Core
 
@@ -39,6 +39,9 @@ Um die Reihenfolge festzustellen, in der Projekte migriert werden sollten, könn
 
 - [Abhängigkeitsdiagramme in Visual Studio](/visualstudio/modeling/create-layer-diagrams-from-your-code) können ein gerichtetes Diagramm des Codes in einer Projektmappe erstellen.
 - Führen Sie `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` aus, um ein JSON-Dokument zu generieren, das eine Liste der Projektverweise enthält.
+- Führen Sie den [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) mit der Option `-r DGML` aus, um ein Abhängigkeitsdiagramm der Assemblys abzurufen. Weitere Informationen finden Sie [hier](../../standard/analyzers/portability-analyzer.md#solution-wide-view).
+
+Sobald Sie über die Abhängigkeitsinformationen verfügen, können Sie diese Informationen zum Starten bei den Blattknoten verwenden und sich die Abhängigkeitsstruktur heraufarbeiten, indem Sie die Schritte des nächsten Abschnitts ausführen.
 
 ## <a name="per-project-steps"></a>Schritt pro Projekt
 

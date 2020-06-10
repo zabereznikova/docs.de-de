@@ -1,5 +1,6 @@
 ---
 title: Netzwerkprogrammierung in .NET Framework
+description: Verwenden Sie diese Ressourcen zum Integrieren der geschichteten, erweiterbaren und verwalteten Implementierung der Internetdienste, die vom .NET Framework bereitgestellt werden, in Ihre Anwendungen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74204693"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502404"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Netzwerkprogrammierung in .NET Framework
 Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Anwendungen integriert werden. Ihre Netzwerkanwendungen können austauschbare Protokolle einsetzten, um neue Internetprotokolle automatisch zu verwenden, oder eine verwaltete Implementierung der Windows Socket-Schnittstelle benutzen, um auf Socketebene mit dem Netzwerk zu arbeiten.  
@@ -22,13 +23,13 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  [Einführung in austauschbare Protokolle](introducing-pluggable-protocols.md)  
  Beschreibt, wie auf eine Internetressource ohne Berücksichtigung des benötigten Zugriffsprotokolls zugegriffen werden kann.  
   
- [Anfordern von Daten](requesting-data.md)  
+ [Requesting Data (Anfordern von Daten)](requesting-data.md)  
  Erläutert, wie austauschbare Protokolle verwendet werden, um Daten von Internetressourcen herunterzuladen oder um Daten hochzuladen.  
   
- [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](programming-pluggable-protocols.md)  
+ [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md)  
  Erklärt, wie protokollspezifische Klassen verwendet werden, um austauschbare Protokolle zu implementieren.  
   
- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](using-application-protocols.md)  
+ [Verwenden von Anwendungsprotokollen](using-application-protocols.md)  
  Beschreibt Programmierungsanwendungen, die Netzwerkprotokolle wie TCP, UDP und HTTP nutzen.  
   
  [Internetprotokoll Version 6](internet-protocol-version-6.md)  
@@ -37,7 +38,7 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  [Konfigurieren von Internetanwendungen](configuring-internet-applications.md)  
  Erläutert, wie die .NET Framework-Konfigurationsdateien verwendet werden, um Internetanwendungen zu konfigurieren.  
   
- [Network Tracing in the .NET Framework (Netzwerkablaufverfolgung in .NET Framework)](network-tracing.md)  
+ [Netzwerkablaufverfolgung in .NET Framework](network-tracing.md)  
  Erklärt, wie die Netzwerkablaufverfolgung verwendet wird, um Informationen über Methodenaufrufe und den Netzwerkdatenverkehr abzurufen, der von einer Anwendung generiert wird.  
   
  [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)  
@@ -49,7 +50,7 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  [Bewährte Methoden für System.Net-Klassen](best-practices-for-system-net-classes.md)  
  Stellt Tipps und Tricks bereit, mit denen Sie Ihre Internetanwendungen optimal ausnutzen.  
   
- [Accessing the Internet Through a Proxy (Zugreifen auf das Internet über einen Proxy)](accessing-the-internet-through-a-proxy.md)  
+ [Zugreifen auf das Internet über einen Proxy](accessing-the-internet-through-a-proxy.md)  
  Beschreibt, wie Proxys konfiguriert werden.  
   
  [NetworkInformation](networkinformation.md)  
@@ -82,10 +83,10 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  [Netzwerkisolation für Windows Store-Apps](network-isolation-for-windows-store-apps.md)  
  Beschreibt die Auswirkungen der Netzwerkisolation, wenn Klassen aus den Namespaces <xref:System.Net>, <xref:System.Net.Http>und <xref:System.Net.Http.Headers> in Windows Store-Apps Version 8.x verwendet werden.  
   
- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](network-programming-samples.md)  
+ [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)  
  Links zu herunterladbaren Beispielen für Netzwerkprogrammierung, in denen Klassen aus den Namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> verwendet werden.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Net?displayProperty=nameWithType>  
  Stellt für viele der Protokolle, die gegenwärtig in Netzwerken verwendet werden, eine einfache Programmierschnittstelle bereit. Die Klassen <xref:System.Net.WebRequest?displayProperty=nameWithType> und <xref:System.Net.WebResponse?displayProperty=nameWithType> in diesem Namespace sind die Grundlage für austauschbare Protokolle.  
   
@@ -134,9 +135,9 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Stellt Unterstützung für die Konfiguration der Authentifizierung mit erweitertem Schutz für Anwendungen zur Verfügung.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](tls.md)
 - [Themen zur Vorgehensweise bei der Netzwerkprogrammierung](network-programming-how-to-topics.md)
-- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](network-programming-samples.md)
+- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)
 - [HttpClient Sample (HttpClient-Beispiel)](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
