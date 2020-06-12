@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 04/29/2020
-ms.openlocfilehash: b427954fe0026e6ac96d3bbce2b70b5c44e884e0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1190ecb75e83c9930c60726e7cd83203b11928cb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005374"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283935"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -70,7 +70,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`--blame`**
 
-  Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren von fehlerhaften Tests, die den Absturz des Testhosts verursachen. Wenn ei Absturz erkannt wird, wird in `TestResults/<Guid>/<Guid>_Sequence.xml` eine Sequenzdatei erstellt, die die Reihenfolge der Tests erfasst, die vor dem Absturz ausgeführt wurden.
+  Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren von fehlerhaften Tests, die den Absturz des Testhosts verursachen. Wenn ein Absturz erkannt wird, wird in `TestResults/<Guid>/<Guid>_Sequence.xml` eine Sequenzdatei erstellt, die die Reihenfolge der Tests erfasst, die vor dem Absturz ausgeführt wurden.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -134,7 +134,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. Beachten Sie, dass das `TargetPlatform`-Element (x86|x64) keine Auswirkung auf `dotnet test` hat. Installieren Sie die x86-Version von .NET Core, um x86-Tests auszuführen. Die Bitanzahl der Datei *dotnet.exe*, die sich in diesem Pfad befindet, wird zum Ausführen von Tests verwendet. Weitere Informationen finden Sie in den folgenden Ressourcen:
+  Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. Das `TargetPlatform`-Element (x86|x64) hat keine Auswirkung auf `dotnet test`. Installieren Sie die x86-Version von .NET Core, um x86-Tests auszuführen. Die Bitanzahl der Datei *dotnet.exe*, die sich in diesem Pfad befindet, wird zum Ausführen von Tests verwendet. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
   - [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Konfigurieren eines Testlaufs](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)

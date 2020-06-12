@@ -2,12 +2,12 @@
 title: Auflistungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201137"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241395"
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
 
@@ -182,7 +182,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>Arten von Auflistungen
 
-Viele allgemeine Auflistungen werden von .NET Framework bereitgestellt. Jeder Auflistungstyp ist für einen speziellen Zweck ausgelegt.
+Viele häufig verwendete Sammlungen werden von .NET bereitgestellt. Jeder Auflistungstyp ist für einen speziellen Zweck ausgelegt.
 
 Einige der häufig verwendeten Auflistungsklassen werden in diesem Abschnitt beschrieben:
 
@@ -214,7 +214,7 @@ Weitere Informationen finden Sie unter [Häufig verwendete Auflistungstypen](../
 
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent-Klassen
 
-In .NET Framework 4 oder höher stellen die Auflistungen im Namespace <xref:System.Collections.Concurrent> effiziente threadsichere Vorgänge für den Zugriff auf Auflistungselemente aus mehreren Threads bereit.
+In .NET Framework 4 oder höher stellen die Sammlungen im Namespace <xref:System.Collections.Concurrent> effiziente, threadsichere Vorgänge für den Zugriff auf Sammlungselemente über mehrere Threads bereit.
 
 Die Klassen im <xref:System.Collections.Concurrent>-Namespace sollten anstelle von entsprechenden Typen in <xref:System.Collections.Generic?displayProperty=nameWithType>- und <xref:System.Collections?displayProperty=nameWithType>-Namespaces verwendet werden, wenn mehrere Threads gleichzeitig auf die Auflistung zugreifen. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../../../standard/collections/thread-safe/index.md) und <xref:System.Collections.Concurrent>.
 
@@ -482,7 +482,7 @@ public class Car : IComparable<Car>
 
 Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren.
 
-Sie können zwar eine benutzerdefinierte Auflistung definieren, in der Regel ist es aber besser, die in .NET Framework enthaltenen Auflistungen zu verwenden. Diese werden unter [Arten von Auflistungen](#BKMK_KindsOfCollections) weiter oben in diesem Thema beschrieben.
+Sie können zwar eine benutzerdefinierte Sammlung definieren, in der Regel ist es aber besser, die in .NET enthaltenen Sammlungen zu verwenden. Diese werden weiter oben unter [Arten von Sammlungen](#BKMK_KindsOfCollections) beschrieben.
 
 Im folgenden Beispiel wird die benutzerdefinierte Auflistungsklasse `AllColors` definiert. Diese Klasse implementiert die <xref:System.Collections.IEnumerable>-Schnittstelle, die die Implementierung der <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode erfordert.
 

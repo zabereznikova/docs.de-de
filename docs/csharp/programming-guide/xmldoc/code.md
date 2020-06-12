@@ -8,14 +8,14 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52d4b6caa0ea9e1a2d0212398f86374bc8af0402
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789840"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287440"
 ---
-# <a name="code-c-programming-guide"></a>\<code> (C#-Programmierleitfaden)
+# <a name="code-c-programming-guide"></a>\<code> (C#-Programmierhandbuch)
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,15 +31,15 @@ ms.locfileid: "76789840"
 
 ## <a name="remarks"></a>Hinweise
 
-Die \<code>-Tag ermöglicht es, mehrere Zeilen als Code anzugeben. Mit [\<c>](./code-inline.md) wird angegeben, dass Text in einer Beschreibung als Code gekennzeichnet werden soll.
+Mit dem `<code>`-Tag werden mehrere Codezeilen angegeben. Verwenden Sie [\<c>](./code-inline.md), um anzugeben, dass einzeiliger Text in einer Beschreibung als Code gekennzeichnet werden soll.
 
 Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung des \<code>-Tags finden Sie unter dem Thema [\<example>](./example.md).
+Ein Beispiel für die Verwendung des `<code>`-Tags finden Sie im Artikel über [\<example>](./example.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

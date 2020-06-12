@@ -1,15 +1,15 @@
 ---
 title: using-Anweisung – C#-Referenz
-ms.date: 04/07/2020
+ms.date: 05/29/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 3c479faeeb66865b8c368edba881429a7cb956ec
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: b889d2fcbdf854dbe8948744810f9b74e9f0dac2
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199676"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307045"
 ---
 # <a name="using-statement-c-reference"></a>using-Anweisung (C#-Referenz)
 
@@ -29,7 +29,7 @@ Ab C# 8,0 können Sie die folgende alternative Syntax für die `using`-Anweisung
 
 <xref:System.IO.File> und <xref:System.Drawing.Font> sind Beispiele für verwaltete Typen, die auf nicht verwaltete Ressourcen zugreifen (in diesem Fall Dateihandles und Gerätekontexte). Es gibt viele andere Arten von nicht verwalteten Ressourcen und Klassenbibliothekstypen, die sie einschließen. Alle Typen dieser Art müssen die <xref:System.IDisposable>-Schnittstelle oder die <xref:System.IAsyncDisposable>-Schnittstelle implementieren.
 
-Wenn die Lebensdauer eines `IDisposable`-Objekts auf eine einzige Methode beschränkt ist, sollten Sie es in der `using`-Anweisung deklarieren und instanziieren. Die `using`-Anweisung ruft die Methode <xref:System.IDisposable.Dispose%2A> ordnungsgemäß für das Objekt auf. Wenn Sie sie, wie vorher gezeigt, verwenden, führt dies auch dazu, dass das Objekt den gültigen Bereich verlässt, sobald <xref:System.IDisposable.Dispose%2A> aufgerufen wird. Innerhalb des `using`-Blocks ist das Objekt schreibgeschützt und kann nicht geändert oder neu zugewiesen werden. Wenn das Objekt `IAsyncDisposable` anstelle von `IDisposable` implementiert, ruft die `using`-Anweisung die <xref:System.IAsyncDisposable.DisposeAsync%2A>-Methode und den `awaits`-Operator für die zurückgegebene <xref:System.Threading.Tasks.Task>-Klasse auf.
+Wenn die Lebensdauer eines `IDisposable`-Objekts auf eine einzige Methode beschränkt ist, sollten Sie es in der `using`-Anweisung deklarieren und instanziieren. Die `using`-Anweisung ruft die Methode <xref:System.IDisposable.Dispose%2A> ordnungsgemäß für das Objekt auf. Wenn Sie sie, wie vorher gezeigt, verwenden, führt dies auch dazu, dass das Objekt den gültigen Bereich verlässt, sobald <xref:System.IDisposable.Dispose%2A> aufgerufen wird. Innerhalb des `using`-Blocks ist das Objekt schreibgeschützt und kann nicht geändert oder neu zugewiesen werden. Wenn das Objekt `IAsyncDisposable` anstelle von `IDisposable` implementiert, ruft die `using`-Anweisung die <xref:System.IAsyncDisposable.DisposeAsync%2A>-Methode und den `awaits`-Operator für die zurückgegebene <xref:System.Threading.Tasks.ValueTask>-Klasse auf. Weitere Informationen zu <xref:System.IAsyncDisposable> finden Sie unter [Implementieren einer DisposeAsync-Methode](../../../standard/garbage-collection/implementing-disposeasync.md).
 
 Mit der Anweisung `using` wird sichergestellt, dass <xref:System.IDisposable.Dispose%2A> (oder <xref:System.IAsyncDisposable.DisposeAsync%2A>) aufgerufen wird, selbst wenn eine Ausnahme im `using`-Block auftritt. Sie können das gleiche Ergebnis erzielen, indem Sie das Objekt in einen `try`-Block einfügen und dann <xref:System.IDisposable.Dispose%2A> (oder <xref:System.IAsyncDisposable.DisposeAsync%2A>) in einem `finally`-Block aufrufen. So übersetzt der Compiler die Anweisung `using`. Das vorherige Codebeispiel wird zur Kompilierzeit auf den folgenden Code erweitert (beachten Sie die zusätzlichen geschweiften Klammern zum Erstellen des eingeschränkten Gültigkeitsbereichs für das Objekt):
 

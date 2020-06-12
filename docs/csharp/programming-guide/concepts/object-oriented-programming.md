@@ -2,12 +2,12 @@
 title: Objektorientiertes Programmieren (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396689"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241889"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
@@ -146,9 +146,9 @@ Weitere Informationen finden Sie unter [Konstruktoren](../classes-and-structs/co
 
 #### <a name="finalizers"></a>Finalizer
 
-Ein Finalizer wird zur Zerstörung von Klasseninstanzen verwendet. In .NET Framework verwaltet die Garbage Collection die Speicherbelegung automatisch und gibt Arbeitsspeicher für die verwalteten Objekte in der Anwendung frei. Möglicherweise sind jedoch noch Finalizer erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Finalizer pro Klasse geben.
+Ein Finalizer wird zur Zerstörung von Klasseninstanzen verwendet. In .NET verwaltet der Garbage Collector automatisch die Belegung und Freigabe von Arbeitsspeicher für die verwalteten Objekte in Ihrer Anwendung. Möglicherweise sind jedoch noch Finalizer erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Finalizer pro Klasse geben.
 
-Weitere Informationen zu Finalizern und der Garbage Collection in .NET Framework finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).
+Weitere Informationen zu Finalizern und der Garbage Collection in .NET finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Ereignisse
 
@@ -342,7 +342,7 @@ Weitere Informationen finden Sie im Programmierleitfaden zu [Schnittstellen](../
 
 ## <a name="generics"></a>Generics
 
-Klassen, Strukturen, Schnittstellen und Methoden in .NET Framework können *Typparameter* enthalten, die Objekttypen definieren, die sie speichern oder verwenden können. Das einfachste Beispiel für Generics ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
+Klassen, Strukturen, Schnittstellen und Methoden in .NET können *Typparameter* enthalten, die Objekttypen definieren, die sie speichern oder verwenden können. Das einfachste Beispiel für Generics ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
 
 So definieren Sie eine generische Klasse
 

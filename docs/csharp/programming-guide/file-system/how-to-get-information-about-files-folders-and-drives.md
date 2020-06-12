@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 6024b1be4ce826900c6f9b367323fb19ac55d2c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32aced17634a1406e2fce0af9c2a92f7a5eb9b40
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705209"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241616"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Vorgehensweise: Abrufen von Informationen zu Dateien, Ordnern und Laufwerken (C#-Programmierleitfaden)
-Sie können im .NET Framework auf die Dateisysteminformationen mithilfe folgender Klassen zugreifen:  
+Sie können in .NET auf die Dateisysteminformationen mithilfe folgender Klassen zugreifen:  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
@@ -52,7 +52,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  Wenn die Anwendung nicht die notwendigen Leseberechtigungen für die angegebene Datei hat, gibt die `Exists`-Methode `false` zurück, unabhängig davon, ob ein Pfad vorhanden ist; die Methode löst keine Ausnahme aus.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C#-Programmierhandbuch](../index.md)

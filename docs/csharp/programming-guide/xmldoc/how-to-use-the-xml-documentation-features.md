@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7c5a8a895271f067505496c0d13f98b66a393d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156999"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287362"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Verwenden der XML-Dokumentationsfeatures
 
@@ -108,30 +108,30 @@ Im Beispiel wird eine *XML*-Datei mit dem folgenden Inhalt generiert.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Geben Sie die folgende Befehlszeile ein, um das Beispiel zu kompilieren:
+Geben Sie den folgenden Befehl ein, um das Beispiel zu kompilieren:
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-Mit diesem Befehl wird die XML-Datei *XMLsample.xml* erstellt, die Sie in Ihrem Browser oder mithilfe des TYPE-Befehls anzeigen können.
+Mit diesem Befehl wird die XML-Datei *XMLsample.xml* erstellt, die Sie in Ihrem Browser oder mithilfe des `TYPE`-Befehls anzeigen können.
 
 ## <a name="robust-programming"></a>Stabile Programmierung
 
-XML-Dokumentation beginnt mit ///. Wenn Sie ein neues Projekt erstellen, fügt der Assistent einige ///-Startzeilen für Sie ein. Die Verarbeitung dieser Kommentare weist einige Einschränkungen auf:
+Die XML-Dokumentation beginnt mit `///`. Wenn Sie ein neues Projekt erstellen, fügt der Assistent einige `///`-Startzeilen für Sie ein. Die Verarbeitung dieser Kommentare weist einige Einschränkungen auf:
 
 - Die Dokumentation muss wohlgeformtes XML sein. Wenn das XML nicht wohlgeformt ist, wird eine Warnung generiert, und die Dokumentationsdatei enthält einen Kommentar, der besagt, dass ein Fehler aufgetreten ist.
 
 - Entwickler können ihren eigenen Satz von Tags erstellen. Es gibt einen [empfohlenen Satz von Tags](recommended-tags-for-documentation-comments.md). Einige der empfohlenen Tags haben eine besondere Bedeutung:
 
-  - Das \<param>-Tag wird verwendet, um Parameter zu beschreiben. Wenn es verwendet wird, überprüft der Compiler, ob der Parameter vorhanden ist, und ob alle Parameter in der Dokumentation beschrieben werden. Wenn die Überprüfung fehlschlägt, gibt der Compiler eine Warnung aus.
+  - Das `<param>`-Tag wird verwendet, um Parameter zu beschreiben. Wenn es verwendet wird, überprüft der Compiler, ob der Parameter vorhanden ist, und ob alle Parameter in der Dokumentation beschrieben werden. Wenn die Überprüfung fehlschlägt, gibt der Compiler eine Warnung aus.
 
-  - Das `cref`-Attribut kann an jedes Tag angefügt werden, um einen Verweis auf ein Codeelement bereitzustellen. Der Compiler überprüft, ob dieses Codeelement vorhanden ist. Wenn die Überprüfung fehlschlägt, gibt der Compiler eine Warnung aus. Der Compiler berücksichtigt alle `using`-Anweisungen, wenn er nach einem Typ sucht, der im `cref`-Attribut beschrieben wird.
+  - Das `cref`-Attribut kann an jedes Tag angefügt werden, um auf ein Codeelement zu verweisen. Der Compiler überprüft, ob dieses Codeelement vorhanden ist. Wenn die Überprüfung fehlschlägt, gibt der Compiler eine Warnung aus. Der Compiler berücksichtigt alle `using`-Anweisungen, wenn er nach einem Typ sucht, der im `cref`-Attribut beschrieben wird.
 
-  - Das \<summary>-Tag wird von IntelliSense in Visual Studio verwendet, um zusätzliche Informationen über einen Typ oder Member anzuzeigen.
+  - Das `<summary>`-Tag wird von IntelliSense in Visual Studio verwendet, um zusätzliche Informationen über einen Typ oder Member anzuzeigen.
 
     > [!NOTE]
-    > Die XML-Datei enthält keine vollständigen Informationen über den Typ und die Member (z. B. fehlen Typinformationen). Um vollständige Informationen zu einem Typ oder Member zu erhalten, muss die Dokumentationsdatei zusammen mit Reflektion über den tatsächlichen Typ oder Member verwendet werden.
+    > Die XML-Datei enthält keine vollständigen Informationen über den Typ und die Member (z. B. fehlen Typinformationen). Verwenden Sie die Dokumentationsdatei zusammen mit Reflektion über den tatsächlichen Typ oder Member, um vollständige Informationen zu einem Typ oder Member zu erhalten.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [-doc (C#-Compileroptionen)](../../language-reference/compiler-options/doc-compiler-option.md)

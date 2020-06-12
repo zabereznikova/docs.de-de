@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b801ac1b5a0a59d97ccc35ec78930d99223e846
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093460"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287219"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (C#-Programmierhandbuch)
 
@@ -37,15 +37,15 @@ ms.locfileid: "77093460"
 
 ## <a name="remarks"></a>Hinweise
 
-Mit dem \<seealso>-Tag kann der Text angegeben werden, der im Abschnitt „Siehe auch“ angezeigt werden sollen. Mit [\<see>](./see.md) kann ein Link im Text angegeben werden.
+Mit dem `<seealso>`-Tag kann der Text angegeben werden, der im Abschnitt „Siehe auch“ angezeigt werden sollen. Mit [\<see>](./see.md) kann ein Link im Text angegeben werden.
 
 Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung von \<seealso> finden Sie unter [\<summary>](./summary.md).
+Unter [\<summary>](./summary.md) finden Sie ein Beispiel für die Verwendung von \<seealso>.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

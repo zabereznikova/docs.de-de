@@ -2,12 +2,12 @@
 title: Ablaufinvarianz in asynchronen Anwendungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: d46a87ed2200dc92b8e3d23be80306a31a01e501
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738303"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241811"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Ablaufinvarianz in asynchronen Anwendungen (C#)
 
@@ -138,7 +138,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Aufgrund der Änderungen reagiert die Schaltfläche nicht, während die Websites von `AccessTheWebAsync` heruntergeladen werden, sodass ein erneutes Eintreten in den Prozess nicht möglich ist.
+Aufgrund der Änderungen reagiert die Schaltfläche nicht, während `AccessTheWebAsync` die Websites herunterlädt, sodass ein erneutes Eintreten in den Prozess nicht möglich ist.
 
 ### <a name="cancel-and-restart-the-operation"></a><a name="BKMK_CancelAndRestart"></a> Den Vorgang abbrechen und neu starten
 
@@ -148,7 +148,7 @@ Weitere Informationen zum Abbrechen finden Sie unter [Fine-Tuning Your Async App
 
 Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name des Projekts lautet „CancelAndRestart“.
 
-1. Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.
+1. Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable (`cts`), die von allen Methoden umfasst ist.
 
     ```csharp
     public partial class MainWindow : Window   // Or class MainPage
@@ -229,7 +229,7 @@ Nehmen Sie dazu in `AccessTheWebAsync`die folgenden Änderungen vor.
 
 - Verwenden Sie die <xref:System.Net.Http.HttpClient.GetAsync%2A>-Methode zum Herunterladen der Websites, da `GetAsync` ein <xref:System.Threading.CancellationToken> Argument akzeptiert.
 
-- Bevor Sie `DisplayResults` aufrufen, um die Ergebnisse für jede heruntergeladene Website anzuzeigen, aktivieren Sie `ct`, um sicherzustellen, dass der aktuelle Vorgang nicht abgebrochen wurde.
+- Bevor Sie `DisplayResults` aufrufen, um die Ergebnisse für jede heruntergeladene Website anzuzeigen, überprüfen Sie `ct`, um sicherzustellen, dass der aktuelle Vorgang nicht abgebrochen wurde.
 
 Im folgenden Code werden diese Änderungen mit Sternchen gekennzeichnet dargestellt.
 
@@ -536,7 +536,7 @@ Die Ausgabe zeigt die folgenden Muster an.
     TOTAL bytes returned:  915908
     ```
 
-- Die `pendingWork`-Aufgabe ist zu Beginn von `FinishOneGroupAsync` nur für Gruppe A, die zuerst gestartet wurde, 0 (null). Gruppe A hat bei Erreichen von `FinishOneGroupAsync` einen Erwartungsausdruck noch nicht abgeschlossen. Daher wurde die Steuerung nicht an `AccessTheWebAsync` zurückgegeben, und die erste Zuweisung zu `pendingWork` ist nicht aufgetreten.
+- Die `pendingWork`-Aufgabe ist zu Beginn von `FinishOneGroupAsync` nur für Gruppe A, die zuerst gestartet wurde, 0 (null). Gruppe A hat bei Erreichen von `FinishOneGroupAsync` einen await-Ausdruck noch nicht abgeschlossen. Daher wurde die Steuerung nicht an `AccessTheWebAsync` zurückgegeben, und die erste Zuweisung zu `pendingWork` ist nicht aufgetreten.
 
 - Die folgenden zwei Zeilen werden immer zusammen in der Ausgabe angezeigt. Der Code wird zwischen dem Starten des Vorgangs einer Gruppe in `StartButton_Click` und dem Zuweisen eines Tasks für die Gruppe zu `pendingWork` nie unterbrochen.
 
@@ -584,7 +584,7 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 4. Wählen Sie in der Liste der Projekttypen **WPF-Anwendung** aus.
 
-5. Benennen Sie das Projekt `WebsiteDownloadWPF`, wählen Sie die .NET Framework-Version 4.6 oder höher aus, und klicken Sie dann auf die Schaltfläche **OK**.
+5. Nennen Sie das Projekt `WebsiteDownloadWPF`, wählen Sie .NET Framework 4.6 oder höher aus, und klicken Sie dann auf die Schaltfläche **OK**.
 
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.
 

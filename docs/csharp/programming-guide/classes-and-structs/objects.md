@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a9411557e9177c8dbed45ec25984d574479da0de
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673380"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241785"
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
 Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, der angibt, was der Typ machen kann. Ein Objekt ist im Grunde ein Speicherblock, der nach Plan zugewiesen und konfiguriert wurde. Ein Programm kann viele Objekte der selben Klasse erstellen. Objekte werden auch Instanzen genannt, und sie können entweder in einer benannten Variable, einem Array oder in einer Auflistung gespeichert werden. Der Client-Code ist der Code, der diese Variablen verwendet, um die Methoden aufzurufen und um auf die öffentlichen Eigenschaften des Objekts zuzugreifen. In einer objektorientierten Programmiersprache wie C# besteht ein typisches Programm aus mehreren Objekten, die dynamisch interagieren.  
@@ -29,7 +29,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
  [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
- Der Speicher für `p1` und `p2` ist dem Stapel des Threads zugeordnet. Der Speicher wird zusammen mit dem Typ oder der Methode freigegeben, in dem bzw. in der er deklariert wird. Dies ist ein Grund, weshalb Strukturen bei Zuweisung kopiert werden. Im Gegensatz dazu wird der Speicher, der für eine Klasseninstanz zugeordnet ist, automatisch von der Common Language Runtime freigegeben (von Garbage Collection bereinigt), wenn alle Verweise auf das Objekt außerhalb des Gültigkeitsbereichs liegen. Es ist nicht möglich, ein Klassenobjekt deterministisch wie in C++ zu zerstören. Weitere Informationen zur Garbage Collection in .NET Framework finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
+ Der Speicher für `p1` und `p2` ist dem Stapel des Threads zugeordnet. Der Speicher wird zusammen mit dem Typ oder der Methode freigegeben, in dem bzw. in der er deklariert wird. Dies ist ein Grund, weshalb Strukturen bei Zuweisung kopiert werden. Im Gegensatz dazu wird der Speicher, der für eine Klasseninstanz zugeordnet ist, automatisch von der Common Language Runtime freigegeben (von Garbage Collection bereinigt), wenn alle Verweise auf das Objekt außerhalb des Gültigkeitsbereichs liegen. Es ist nicht möglich, ein Klassenobjekt deterministisch wie in C++ zu zerstören. Weitere Informationen zur Garbage Collection in .NET finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 > Die Belegung und Freigabe von Arbeitsspeicher auf dem verwalteten Heap ist in der Common Language Runtime stark optimiert. In den meisten Fällen besteht kein wesentlicher Unterschied zwischen den Leistungskosten beim Zuweisen einer Klasseninstanz auf dem Heap im Vergleich zum Zuweisen einer Strukturinstanz im Stapel.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506817"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241408"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 
@@ -97,7 +97,7 @@ static class DomainEntityExtensions
 
 ### <a name="extending-predefined-types"></a>Erweiterung von vordefinierten Typen
 
-Anstatt neue Objekte zu erstellen, wenn wiederverwendbare Funktionalität erstellt werden muss, kann häufig ein vorhandener Typ erweitert werden – z. B. ein .NET Framework- oder CLR-Typ. Wenn beispielsweise keine Erweiterungsmethoden verwendet werden, könnten wir eine `Engine`- oder `Query`-Klasse zum Ausführen einer Abfrage auf einer SQL Server-Instanz erstellen, die über mehrere Stellen in unserem Code aufgerufen werden kann. Stattdessen können wir jedoch die Klasse <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> mithilfe von Erweiterungsmethoden erweitern, damit diese Abfrage von jedem beliebigen Ort ausgeführt werden kann, an dem eine Verbindung mit einer SQL Server-Instanz vorhanden ist. Weitere Beispiele wären das Hinzufügen gemeinsamer Funktionalität zur Klasse <xref:System.String?displayProperty=nameWithType>, eine Erweiterung der Datenverarbeitungsfunktionalität der Objekte <xref:System.IO.File?displayProperty=nameWithType> und <xref:System.IO.Stream?displayProperty=nameWithType> sowie <xref:System.Exception?displayProperty=nameWithType>-Objekte für eine spezifische Fehlerbehandlungsfunktionalität. Der Verwendung dieser Anwendungsfälle sind praktisch keine Grenzen gesetzt.
+Wenn wiederverwendbare Funktionalität erstellt werden muss, kann statt der Erstellung neuer Objekte häufig ein bereits vorhandener Typ erweitert werden, z. B. ein .NET- oder CLR-Typ. Wenn beispielsweise keine Erweiterungsmethoden verwendet werden, könnten wir eine `Engine`- oder `Query`-Klasse zum Ausführen einer Abfrage auf einer SQL Server-Instanz erstellen, die über mehrere Stellen in unserem Code aufgerufen werden kann. Stattdessen können wir jedoch die Klasse <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> mithilfe von Erweiterungsmethoden erweitern, damit diese Abfrage von jedem beliebigen Ort ausgeführt werden kann, an dem eine Verbindung mit einer SQL Server-Instanz vorhanden ist. Weitere Beispiele wären das Hinzufügen gemeinsamer Funktionalität zur Klasse <xref:System.String?displayProperty=nameWithType>, eine Erweiterung der Datenverarbeitungsfunktionalität der Objekte <xref:System.IO.File?displayProperty=nameWithType> und <xref:System.IO.Stream?displayProperty=nameWithType> sowie <xref:System.Exception?displayProperty=nameWithType>-Objekte für eine spezifische Fehlerbehandlungsfunktionalität. Der Verwendung dieser Anwendungsfälle sind praktisch keine Grenzen gesetzt.
 
 Das Erweitern vordefinierter Typen kann bei `struct`-Typen schwierig sein, da sie als Wert an Methoden übergeben werden. Dies bedeutet, dass alle Änderungen an der Struktur an einer Kopie der Struktur vorgenommen werden. Diese Änderungen sind nicht sichtbar, nachdem die Erweiterungsmethode beendet wurde. Ab C# 7.2 können Sie dem ersten Argument einer Erweiterungsmethode den `ref`-Modifizierer hinzufügen. Durch das Hinzufügen des `ref`-Modifizierers wird das erste Argument als Verweis übergeben. Auf diese Weise können Sie Erweiterungsmethoden schreiben, die den Status der erweiterten Struktur ändern.
 
@@ -114,7 +114,7 @@ Wenn Sie Erweiterungsmethoden für einen gegebenen Typ implementieren, beachten 
 - Eine Erweiterungsmethode wird nie aufgerufen, wenn sie die gleiche Signatur wie eine im Typ definierte Methode hat.
 - Erweiterungsmethoden werden auf Namespace-Ebene eingebunden. Wenn Sie z. B. über mehrere statische Klassen verfügen, die Erweiterungsmethoden in einem einzelnen Namespace mit dem Namen `Extensions` enthalten, werden sie alle mit der `using Extensions;`-Direktive eingebunden.
 
-Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie einer Bibliothek, von deren Quellcode Sie der Besitzer oder die Besitzerin sind, wichtige Funktionen hinzufügen möchten, sollten Sie die standardmäßigen .NET Framework-Richtlinien für die Assemblyversionsverwaltung befolgen. Weitere Informationen dazu finden Sie unter [Assemblyversionen](../../../standard/assembly/versioning.md).
+Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie zu einer Bibliothek, deren Quellcode Sie besitzen, wichtige Funktionalität hinzufügen möchten, befolgen Sie die .NET-Richtlinien für Assemblyversionierung. Weitere Informationen dazu finden Sie unter [Assemblyversionen](../../../standard/assembly/versioning.md).
 
 ## <a name="see-also"></a>Siehe auch
 

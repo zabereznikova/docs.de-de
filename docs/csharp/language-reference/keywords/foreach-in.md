@@ -1,6 +1,6 @@
 ---
 title: foreach-Anweisung in C#
-ms.date: 05/17/2019
+ms.date: 06/03/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 188d909fd33b14755d9b121953b1fa434ecf536d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 1645a246c9feee2a92c0d4e4bbeda47f0afde7d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738815"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401887"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C#-Referenz)
 
@@ -22,6 +22,18 @@ Die Anweisung `foreach` führt eine Anweisung oder einen Block von Anweisungen f
 
 - Er weist die öffentliche parameterlose Methode `GetEnumerator` auf, deren Rückgabetyp entweder Klasse, Struktur oder Schnittstellentyp ist.
 - Der Rückgabetyp der Methode `GetEnumerator` weist die öffentliche Eigenschaft `Current` und die öffentliche parameterlose Methode `MoveNext` auf, deren Rückgabetyp <xref:System.Boolean> ist.
+
+In den meisten Fällen iteriert `foreach` einen `IEnumerable<T>`-Ausdruck, bei dem jedes Element vom Typ `T` ist. Allerdings können die Elemente einen beliebigen Typ aufweisen, der eine implizite oder explizite Konvertierung vom Typ der `Current`-Eigenschaft aufweist. Wenn die `Current`-Eigenschaft `SomeType` zurückgibt, kann der Typ der Elemente wie folgt lauten:
+
+- beliebige Basisklasse von `SomeType`
+- beliebige von `SomeType` implementierte Schnittstelle
+
+Wenn `SomeType` eine `class` oder `interface` und nicht `sealed` ist, kann der Typ der Elemente außerdem Folgendes enthalten:
+
+- einen beliebigen von `SomeType` abgeleiteten Typ
+- eine beliebige Schnittstelle Hier ist jede beliebige Schnittstelle zulässig, da jede Schnittstelle von einer Klasse implementiert werden kann, die von `SomeType` abgeleitet oder implementiert wurde.
+
+Sie können die Iterationsvariable mit einem beliebigen Typ deklarieren, der mit den vorangehenden Regeln übereinstimmt. Wenn für die Konvertierung von `SomeType` in den Typ der Iterationsvariablen eine explizite Umwandlung erforderlich ist, kann dieser Vorgang eine <xref:System.InvalidCastException>-Klasse auslösen, wenn die Konvertierung fehlschlägt.
 
 Ab C# 7.3 können Sie die Iterationsvariable mit den Modifizierern `ref` oder `ref readonly` deklarieren, wenn die `Current`-Eigenschaft des Enumerators einen [Verweisrückgabewert](ref.md#reference-return-values) (`ref T`, wobei `T` dem Typ des Auflistungselements entspricht) zurückgibt.
 
@@ -37,19 +49,19 @@ Wenn die `foreach`-Anweisung auf `null` angewendet wird, wird <xref:System.NullR
 
 Das folgende Beispiel zeigt die Syntax der Anweisung `foreach` mit einer Instanz des Typs <xref:System.Collections.Generic.List%601>, der die Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> implementiert:
 
-[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="1" interactive="try-dotnet-method" :::
 
 Im nächste Beispiel wird die Anweisung `foreach` mit einer Instanz des Typs <xref:System.Span%601?displayProperty=nameWithType> verwendet, der keine Schnittstellen implementiert:
 
-[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="2" :::
 
 Im folgenden Beispiel wird eine `ref`-Iterationsvariable verwendet, um die Werte der Elemente in einem stackalloc-Array festzulegen. Die Version `ref readonly` durchläuft die Auflistung, um alle Werte auszugeben. Die `readonly`-Deklaration verwendet eine implizite lokale Variablendeklaration. Implizite Variablendeklarationen können wie explizit typisierte Variablendeklarationen mit `ref`- oder `ref readonly`-Deklarationen verwendet werden.
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="RefSpan" :::
 
 Das folgende Beispiel verwendet `await foreach`, um eine Auflistung zu durchlaufen, die jedes Element asynchron generiert:
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#AwaitForeach)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="AwaitForeach"  :::
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

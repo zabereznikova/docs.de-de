@@ -1,13 +1,13 @@
 ---
 title: Funktionen
-description: Erfahren Sie mehr über F# Funktionen in F# und wie allgemeine funktionale Programmierungskonstrukte unterstützt.
+description: Erfahren Sie mehr über Funktionen in F# und darüber, wie F# gängige Konstrukte für die funktionale Programmierung unterstützt.
 ms.date: 05/16/2016
-ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: e49183e0634dee1750757abadbfe9e9c824f51a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423955"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596473"
 ---
 # <a name="functions"></a>Funktionen
 
@@ -36,9 +36,9 @@ let f x = x + 1
 
 Im vorherigen Beispiel ist der Funktionsname ist `f`, das Argument `x`, das den Typ `int` verweist, der Funktionsrumpf ist `x + 1`, und der Rückgabewert ist vom Typ `int`.
 
-Funktionen können als `inline` markiert werden. Informationen zu `inline` finden Sie unter [Inlinefunktionen](../functions/inline-functions.md).
+Funktionen können als `inline` markiert werden. Informationen zu `inline` finden Sie unter [Inlinefunktionen](inline-functions.md).
 
-## <a name="scope"></a>Umfang
+## <a name="scope"></a>Bereich
 
 Auf jeder Ebene des Bereichs, der nicht der Modulbereich ist, ist es kein Fehler, einen Wert oder einen Namen einer Funktion Namen erneut zu verwenden. Wenn Sie einen Namen wiederverwenden, führt der später deklarierte Name zum Shadowing des früher deklarierten Namens. Im Bereich der obersten Ebene in einem Modul, müssen Namen jedoch eindeutig sein. Der folgende Code generiert z.B. einen Fehler, wenn er im Modulbereich erscheint, jedoch nicht, wenn er innerhalb einer Funktion angezeigt wird:
 
@@ -80,7 +80,7 @@ Weitere Informationen finden Sie unter [Richtlinien für das Formatieren von Cod
 
 ## <a name="return-values"></a>Rückgabewerte
 
-Der Compiler verwendet den letzten Ausdruck in einem Funktionsrumpf, um den Rückgabewert und den Typ zu bestimmen. Der Compiler kann den Typ des abschließenden Ausdrucks möglicherweise von vorherigen Ausdrücken ableiten. In der Funktion `cylinderVolume`, die im vorherigen Abschnitt gezeigt wird, wird bestimmt, dass der Typ `pi` vom Typ des Literals `3.14159` `float` ist. Der Compiler verwendet den Typ `pi`, um zu bestimmen, dass der Typ des Ausdrucks `h * pi * r * r` `float` ist. Daher ist der allgemeine Rückgabetyp der Funktion `float`.
+Der Compiler verwendet den letzten Ausdruck in einem Funktionsrumpf, um den Rückgabewert und den Typ zu bestimmen. Der Compiler kann den Typ des abschließenden Ausdrucks möglicherweise von vorherigen Ausdrücken ableiten. In der Funktion `cylinderVolume`, die im vorherigen Abschnitt gezeigt wird, wird bestimmt, dass der Typ `pi` vom Typ des Literals `3.14159``float` ist. Der Compiler verwendet den Typ `pi`, um zu bestimmen, dass der Typ des Ausdrucks `h * pi * r * r``float` ist. Daher ist der allgemeine Rückgabetyp der Funktion `float`.
 
 Um den Rückgabewert explizit anzugeben, schreiben Sie den Code wie folgt:
 
@@ -112,7 +112,7 @@ Sie geben dann das zusätzliche Argument an, das für unterschiedliche Längen d
 
 ## <a name="recursive-functions"></a>Rekursive Funktionen
 
-*Rekursive Funktionen* sind Funktionen, die sich selbst aufrufen. Sie erfordern die Angabe des Schlüsselworts **rec**, das dem Schlüsselwort **let** folgt. Rufen Sie die rekursive Funktion im Rumpf der Funktion so auf, wie Sie auch jede andere Funktion aufrufen würden. Die folgende rekursive Funktion berechnet die *n*<sup></sup> -te-fbonacci-Zahl. Die die Fibonacci-Zahlenfolge ist seit dem Altertum bekannt und ist eine Sequenz, in der die einzelnen aufeinander folgenden Zahlen die Summe der vorherigen zwei Zahlen in der Sequenz sind.
+*Rekursive Funktionen* sind Funktionen, die sich selbst aufrufen. Sie erfordern die Angabe des Schlüsselworts **rec**, das dem Schlüsselwort **let** folgt. Rufen Sie die rekursive Funktion im Rumpf der Funktion so auf, wie Sie auch jede andere Funktion aufrufen würden. Die folgende rekursive Funktion berechnet die *n.* Fibonacci-Zahl. Die die Fibonacci-Zahlenfolge ist seit dem Altertum bekannt und ist eine Sequenz, in der die einzelnen aufeinander folgenden Zahlen die Summe der vorherigen zwei Zahlen in der Sequenz sind.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -142,7 +142,7 @@ Ein *Lambdaausdruck* ist eine unbenannte Funktion. Im vorherigen Beispiel könnt
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Sie definieren Lambdaausdrücke mithilfe des `fun`-Schlüsselworts. Ein Lambdaausdruck ähnelt einer Funktionsdefinition, außer dass statt eines `=`-Tokens das `->`-Token zum Trennen der Argumentliste vom Funktionsrumpf verwendet wird. So wie in einer regulären Funktionsdefinition, können Argumenttypen explizit abgeleitet oder angegeben werden. Der Rückgabetyp des Lambdaausdrucks wird vom Typ des letzten Ausdrucks im Text abgeleitet. Weitere Informationen finden Sie unter [Lambda-Ausdrücke: Das `fun`-Schlüsselwort (F#)](../functions/lambda-expressions-the-fun-keyword.md).
+Sie definieren Lambdaausdrücke mithilfe des `fun`-Schlüsselworts. Ein Lambdaausdruck ähnelt einer Funktionsdefinition, außer dass statt eines `=`-Tokens das `->`-Token zum Trennen der Argumentliste vom Funktionsrumpf verwendet wird. So wie in einer regulären Funktionsdefinition, können Argumenttypen explizit abgeleitet oder angegeben werden. Der Rückgabetyp des Lambdaausdrucks wird vom Typ des letzten Ausdrucks im Text abgeleitet. Weitere Informationen finden Sie unter [Lambdaausdrücke: Das Schlüsselwort `fun`](lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Funktionskomposition und Pipelining
 

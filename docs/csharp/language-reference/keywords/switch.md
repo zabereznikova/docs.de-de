@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249317"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446762"
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
 
@@ -108,7 +108,7 @@ Der `default`-Case gibt den auszuführenden switch-Abschnitt an, wenn der Vergle
 
 Der `default`-Case kann in beliebiger Reihenfolge in der `switch`-Anweisung auftauchen. Unabhängig von der Reihenfolge im Quellcode wird er immer zuletzt ausgewertet, nachdem alle `case`-Bezeichnungen ausgewertet wurden.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Musterabgleich mit der `switch`-Anweisung
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> Musterabgleich mit der `switch`-Anweisung
 
 Jede `case`-Anweisung definiert ein Muster, das, wenn es mit dem Vergleichsausdruck übereinstimmt, dafür sorgt, dass seine enthaltenden switch-Abschnitte ausgeführt werden. Alle Versionen von C# unterstützen Konstantenmuster. Die übrigen Muster werden ab C# 7.0 unterstützt.
 

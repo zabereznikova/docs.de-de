@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 22d87559766c04e53141e843ee8768c8aab89a85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf41019c775fed25afe4bdb9453a8e52f44856b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156973"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287349"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C#-Programmierhandbuch)
 
@@ -43,13 +43,13 @@ Die ID für das Tag, das sich vor den Kommentaren befindet. Die ID muss in doppe
 
 ## <a name="remarks"></a>Hinweise
 
-Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweisen, die die Typen und Member in Ihrem Quellcode beschreiben. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei. Durch das Ablegen der Dokumentation in einer separaten Datei können Sie die Quellcodeverwaltung unabhängig vom Quellcode auf die Dokumentation anwenden. Eine Person kann die Quellcodedatei auschecken, eine andere die Dokumentationsdatei.
+Mit dem `<include>`-Tag können Sie auf Kommentare in einer anderen Datei verweisen, in denen die Typen und Member in Ihrem Quellcode beschrieben werden. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei. Durch das Ablegen der Dokumentation in einer separaten Datei können Sie die Quellcodeverwaltung unabhängig vom Quellcode auf die Dokumentation anwenden. Eine Person kann die Quellcodedatei auschecken, eine andere die Dokumentationsdatei.
 
-Das \<include>-Tag verwendet die XPath-Syntax von XML. Weitere Anpassungsmöglichkeiten der Verwendung von \<include> finden Sie in der XPath-Dokumentation.
+Das `<include>`-Tag verwendet die XPath-Syntax. Weitere Anpassungsmöglichkeiten bei der Verwendung von `<include>` finden Sie in der XPath-Dokumentation.
 
 ## <a name="example"></a>Beispiel
 
-Dies ist ein Beispiel einer Mehrfachdatei. Die folgende Datei ist die erste, die \<include> verwendet.
+Dies ist ein Beispiel einer Mehrfachdatei. Die folgende Datei ist die erste, die `<include>` verwendet.
 
 [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
 
@@ -75,7 +75,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>Programmausgabe
 
-Die folgende Ausgabe wird generiert, wenn Sie die Klassen „Test“ und „Test2“ mit der folgenden Befehlszeile kompilieren: `-doc:DocFileName.xml.`. Geben Sie in Visual Studio im Bereich „Build“ des Projekt-Designers die Option XML-Dokumentkommentare an. Erkennt der C#-Compiler das \<include>-Tag, sucht er statt in der aktuellen Quelldatei in „xml_include_tag.doc“ nach Dokumentationskommentaren. Der Compiler generiert dann DocFileName.xml. Dies ist die Datei, die von Dokumentationstools wie z. B. [DocFX](https://dotnet.github.io/docfx/) oder [Sandcastle](https://github.com/EWSoftware/SHFB) genutzt wird, um die endgültige Dokumentation zu erzeugen.  
+Die folgende Ausgabe wird generiert, wenn Sie die Klassen „Test“ und „Test2“ mit der folgenden Befehlszeile kompilieren: `-doc:DocFileName.xml.` In Visual Studio geben Sie die Option für XML-Dokumentkommentare im Buildbereich des Projekt-Designers an. Erkennt der C#-Compiler das `<include>`-Tag, so sucht er statt in der aktuellen Quelldatei in *xml_include_tag.doc* nach Dokumentationskommentaren. Der Compiler generiert dann *DocFileName.xml*. Dies ist die Datei, die von Dokumentationstools wie [DocFX](https://dotnet.github.io/docfx/) oder [Sandcastle](https://github.com/EWSoftware/SHFB) für das Erstellen der endgültigen Dokumentation verwendet wird.  
   
 ```xml
 <?xml version="1.0"?>
@@ -98,7 +98,7 @@ The summary for this other type.
 </doc>
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

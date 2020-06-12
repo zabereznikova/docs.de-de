@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156908"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374615"
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen
 
@@ -149,7 +149,7 @@ Einer der häufigsten Verwendungszwecke für Tupel ist als Methodenrückgabewert
 > In diesem Beispiel wird die unkorrigierte Beispielstandardabweichung berechnet.
 > Die korrigierte Formel der Beispielstandardabweichung würde die Summe der Differenzen im Quadrat vom Mittelwert mithilfe von (N-1) anstatt N teilen, wie es die Erweiterungsmethode `Average` macht. Weitere Informationen zu den Unterschieden zwischen diesen Formeln für die Standardabweichung finden Sie in einem Statistiktext.
 
-Der vorangehende Code entspricht der idealen Formel für die Standardabweichung. Die richtige Antwort wird generiert, aber es ist eine ineffiziente Implementierung. Diese Methode listet die Sequenz zweimal auf: Einmal, um den Mittelwert zu erzeugen und einmal, um den Durchschnitt des Quadrats vom Unterschied des Durchschnitts zu erzeugen.
+Der vorangehende Code entspricht der idealen Formel für die Standardabweichung. Die richtige Antwort wird generiert, aber es ist eine ineffiziente Implementierung. Diese Methode listet die Sequenz zweimal auf: Einmal, um den Durchschnitt zu erzeugen, und einmal, um den Durchschnitt des Quadrats der Differenz des Durchschnitts zu erzeugen.
 (Beachten Sie, dass LINQ-Abfragen verzögert ausgewertet werden. Daher kann die Berechnung der Unterschiede vom Mittelwert und des Durchschnitts dieser Unterschiede nur eine Enumeration erzeugen.)
 
 Es gibt eine alternative Formel, die eine Standardabweichung anhand einer Enumeration der Sequenz berechnet.  Diese Berechnung erzeugt zwei Werte, da sie die Sequenz auflistet: Die Summe aller Elemente in der Sequenz und die Summe jedes Werts im Quadrat:
@@ -252,7 +252,7 @@ public class Point
 
 Jeder Tupeltyp kann dekonstruiert werden, wie oben gezeigt wurde. Es ist genau so einfach, die Dekonstruktion in beliebigen benutzerdefinierten Typen (Klassen, Strukturen oder sogar Oberflächen) zu aktivieren.
 
-Der Autor des Typs kann eine oder mehrere `Deconstruct`-Methoden definieren, die einer beliebigen Anzahl von `out`-Variablen Werte zuweisen, die die Datenelemente darstellen, die den Typ ausmachen. Der folgende `Person`-Typ definiert z.B. eine `Deconstruct`-Methode, die ein Personenobjekt in die Elemente dekonstruiert, die dem Vor- und Nachnamen entsprechen:
+Der Autor des Typs kann eine oder mehrere `Deconstruct`-Methoden definieren, die einer beliebigen Anzahl von [`out`-Variablen](language-reference/keywords/out-parameter-modifier.md) Werte zuweisen, die die Datenelemente darstellen, die den Typ ausmachen. Der folgende `Person`-Typ definiert z.B. eine `Deconstruct`-Methode, die ein Personenobjekt in die Elemente dekonstruiert, die dem Vor- und Nachnamen entsprechen:
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
@@ -286,7 +286,7 @@ Die Methode `Deconstruct` kann das `Person`-Objekt `p` in ein Tupel konvertieren
 
 ## <a name="tuples-as-out-parameters"></a>Tupel als out-Parameter
 
-Tupel können *selbst* als out-Parameter verwendet werden. Dies sollte nicht mit einer Mehrdeutigkeit verwechselt werden, die zuvor im Abschnitt [Dekonstruktion ](#deconstruction) erwähnt wurde. In einem Methodenaufruf müssen Sie nur die Form des Tupels beschreiben:
+Tupel können *selbst* als [`out`-Parameter](language-reference/keywords/out-parameter-modifier.md) verwendet werden. Dies sollte nicht mit einer Mehrdeutigkeit verwechselt werden, die zuvor im Abschnitt [Dekonstruktion ](#deconstruction) erwähnt wurde. In einem Methodenaufruf müssen Sie nur die Form des Tupels beschreiben:
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 
@@ -298,6 +298,6 @@ dict.TryGetValue(2, out (int, string) pair);
 Console.WriteLine($"{pair.Item1}: {pair.Item2}");
 ```
 
-## <a name="conclusion"></a>Zusammenfassung
+## <a name="conclusion"></a>Schlussbemerkung
 
 Die neue Sprach- und Bibliotheksunterstützung für benannte Tupel vereinfacht es, mit Entwürfen zu arbeiten, die Datenstrukturen verwenden, die mehrere Elemente definieren, aber keine Verhalten definieren, wie es Klassen und Strukturen tun. Die Verwendung von Tupeln ist für diese Typen einfach und präzise. Sie erhalten alle Vorteile der Überprüfung von statischen Typen, ohne Typen mithilfe der ausführlicheren `class`- oder `struct`-Syntax schreiben zu müssen. Dennoch sind sie für Hilfsmethoden, die `private` oder `internal` sind, am nützlichsten. Erstellen Sie benutzerdefinierte Typen, entweder `class` oder `struct`, wenn Ihre öffentlichen Methoden einen Wert mit mehreren Elementen zurückgeben.

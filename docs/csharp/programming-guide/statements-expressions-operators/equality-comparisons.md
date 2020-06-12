@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: f09d9891f79eda44c428d5509e341a54ad3a3eee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46d6881955252b21de6a92e25d65d1f76c8ec06c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157103"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241915"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Übereinstimmungsvergleiche (C#-Programmierhandbuch)
 
@@ -54,9 +54,9 @@ Die Äquivalenz muss jedoch nicht unbedingt auf allen Feldern in einem Typ basie
 |-----------|-----------------|  
 |[Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)](./how-to-test-for-reference-equality-identity.md)|Beschreibt, wie zwei Variablen auf Verweisgleichheit geprüft werden.|  
 |[Vorgehensweise: Definieren von Wertgleichheit für einen Typ](./how-to-define-value-equality-for-a-type.md)|Beschreibt, wie eine benutzerdefinierte Definition der Wertgleichheit für einen Typ erstellt wird.|  
-|[C#-Programmierhandbuch](../index.md)|Links zu ausführlichen Informationen zu wichtigen Funktionen der C#-Sprache sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.|  
+|[C#-Programmierhandbuch](../index.md)|Links zu ausführlichen Informationen zu wichtigen Features der C#-Sprache sowie zu Features, die über .NET für C# verfügbar sind.|  
 |[Typen](../types/index.md)|Informationen zum C#-Typsystem und Links zu weiteren Informationen.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)

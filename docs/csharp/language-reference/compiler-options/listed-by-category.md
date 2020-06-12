@@ -1,17 +1,17 @@
 ---
 title: C#-Compileroptionen nach Kategorien sortiert
-ms.date: 05/15/2018
+ms.date: 06/04/2020
 helpviewer_keywords:
 - Visual C# compiler, options listed by category
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972707"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447042"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C#-Compileroptionen nach Kategorien sortiert
 
@@ -55,7 +55,8 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |-analyzer|Führt die Analyzer aus dieser Assembly aus (Kurzform: /a).|
 |-additionalfile|Benennt zusätzliche Dateien, die möglicherweise vom Analyzer verwendet werden, um Fehler oder Warnungen zu erzeugen, sich aber nicht direkt auf die Codegenerierung auswirken.|
 |-embed|Einbetten aller Quelldateien in die PDB-Datei.|
-|-embed:\<Dateiliste>|Einbetten bestimmter Dateien in die PDB-Datei.|
+|-embed:\<file list>|Einbetten bestimmter Dateien in die PDB-Datei.|
+
 ## <a name="debuggingerror-checking"></a>Debuggen/Fehlerüberprüfung
 
 |Option|Zweck|
@@ -66,6 +67,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[-errorreport](errorreport-compiler-option.md)|Legt das Verhalten der Fehlerberichterstattung fest.|
 |[/fullpaths](fullpaths-compiler-option.md)|Gibt den absoluten Pfad zur Datei in der Compilerausgabe an.|
 |[-nowarn](nowarn-compiler-option.md)|Unterdrückt die Generierung von bestimmten Warnungen durch den Compiler.|
+|[-nullable](nullable-compiler-option.md)|Mit diesen Argumenten wird die Option für den Nullable-Kontext angegeben.|
 |[/warn](warn-compiler-option.md)|Legt die Warnstufe fest.|
 |[-warnaserror](warnaserror-compiler-option.md)|Stuft Warnungen zu Fehlern hoch.|
 |-ruleset:\<file>|Geben Sie eine Regelsatzdatei an, die bestimmte Diagnosefunktionen deaktiviert.|
@@ -96,7 +98,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[-codepage](codepage-compiler-option.md)|Gibt die für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.|
 |[-help](help-compiler-option.md)|Listet Compileroptionen in „stdout“ auf.|
 |[-highentropyva](highentropyva-compiler-option.md)|Gibt an, dass die ausführbare Datei Address Space Layout Randomization (ASLR) unterstützt.|
-|[-langversion](langversion-compiler-option.md)|Gibt die Sprachversion an: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder die aktuelle. |
+|[-langversion](langversion-compiler-option.md)|Sprachversion angeben: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder Latest |
 |[-main](main-compiler-option.md)|Gibt den Speicherort der **Main**-Methode an.|
 |[-noconfig](noconfig-compiler-option.md)|Weist den Compiler an, nicht mit „csc.rsp“ zu kompilieren.|
 |[-nologo](nologo-compiler-option.md)|Unterdrückt Compilerbannerinformationen.|
@@ -105,7 +107,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[/unsafe](unsafe-compiler-option.md)|Aktiviert die Kompilierung von Code, der das Schlüsselwort [unsafe](../keywords/unsafe.md) verwendet.|
 |[-utf8output](utf8output-compiler-option.md)|Zeigt die Compilerausgabe mit UTF-8-Codierung an.|
 |-parallel[+&#124;-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
-|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte sind: SHA1 (Standard) oder SHA256.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|
+|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|
 
 ## <a name="obsolete-options"></a>Veraltete Optionen
 
@@ -113,7 +115,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |---|---|
 |-incremental|Aktiviert die inkrementelle Kompilierung.|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Compileroptionen](index.md)
 - [C#-Compileroptionen alphabetisch sortiert](listed-alphabetically.md)

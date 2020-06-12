@@ -2,12 +2,12 @@
 title: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 description: Erfahren Sie, wie Sie eine .NET Core-Konsolen-App mit Visual Studio Code debuggen.
 ms.date: 05/26/2020
-ms.openlocfilehash: eaeb97f54442006d2f0e29483a68dc3de89b5778
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202490"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241512"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 
@@ -29,7 +29,13 @@ In der Debugkonfiguration wird ein Programm mit vollständigen symbolischen Debu
 
 Ein Breakpoint unterbricht vorübergehend die Ausführung der Anwendung, *bevor* die Zeile mit dem Breakpoint ausgeführt wird.
 
-1. Legen Sie in *Program.cs* einen *Breakpoint* in der Zeile fest, in der der Name, das Datum und die Uhrzeit angezeigt werden, indem Sie auf den linken Rand des Codefensters klicken. Der linke Rand befindet sich links von den Zeilennummern. Eine weitere Möglichkeit zum Festlegen eines Breakpoints besteht darin, den Cursor in der Codezeile zu platzieren und dann <kbd>F9</kbd> zu drücken.
+1. Öffnen Sie Visual Studio Code.
+
+1. Öffnen Sie den *HelloWorld*-Projektordner, den Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio Code](with-visual-studio-code.md) erstellt haben.
+
+1. Öffnen Sie die Datei *Program.cs*.
+
+1. Legen Sie einen *Breakpoint* in der Zeile fest, in der der Name, das Datum und die Uhrzeit angezeigt werden, indem Sie auf den linken Rand des Codefensters klicken. Der linke Rand befindet sich links von den Zeilennummern. Eine weitere Möglichkeit zum Festlegen eines Breakpoints besteht darin, den Cursor in der Codezeile zu platzieren und dann <kbd>F9</kbd> zu drücken.
 
    Wie in der folgenden Abbildung gezeigt, gibt Visual Studio Code die Zeile an, in der der Breakpoint festgelegt ist, indem ein roter Punkt am linken Rand angezeigt wird.
 
@@ -215,10 +221,7 @@ dotnet run --configuration Release
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie Debugtools von Visual Studio Code verwendet. Informationen zum Veröffentlichen einer bereitstellbaren Version der App finden Sie unter [Veröffentlichen Ihrer App](cli-create-console-app.md#publish-your-app).
-
-<!--In the next tutorial, you publish a deployable version of the app.
+In diesem Tutorial haben Sie Debugtools von Visual Studio Code verwendet. Im nächsten Tutorial veröffentlichen Sie eine bereitstellbare Version der App.
 
 > [!div class="nextstepaction"]
-> [Publish a .NET Core console application with Visual Studio Code](publishing-with-visual-studio-code.md)
--->
+> [Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code](publishing-with-visual-studio-code.md)

@@ -1,18 +1,18 @@
 ---
 title: C#-Compileroptionen alphabetisch sortiert
-ms.date: 05/15/2018
+ms.date: 06/04/2020
 helpviewer_keywords:
 - compiler options [C#], listed alphabetically
 - C# language, compiler options listed alphabetically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972738"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446938"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C#-Compileroptionen alphabetisch sortiert
 
@@ -37,9 +37,9 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[-deterministic](deterministic-compiler-option.md)|Bewirkt, dass der Compiler eine Assembly ausgibt, deren Inhalt im Binärformat über Kompilierungen identisch ist, wenn die Eingaben identisch sind.|
 |[-doc](doc-compiler-option.md)|Gibt eine zu generierende XML-Dokumentationsdatei an.|
 |-embed|Einbetten aller Quelldateien in die PDB-Datei.|
-|-embed:\<Dateiliste>|Einbetten bestimmter Dateien in die PDB-Datei.|
+|-embed:\<file list>|Einbetten bestimmter Dateien in die PDB-Datei.|
 |-errorendlocation|Ausgabezeile und -spalte des Zielstandorts jedes Fehlers.|
-|-errorlog:\<Datei>|Angeben einer Datei für das Protokollieren der gesamten Compiler- und Analysetooldiagnose.|
+|-errorlog:\<file>|Angeben einer Datei für das Protokollieren der gesamten Compiler- und Analysetooldiagnose.|
 |[-errorreport](errorreport-compiler-option.md)|Gibt an, wie interne Compilerfehler verarbeitet werden sollen: „prompt“, „send“ oder „none“. Der Standardwert ist „none“.|
 |[-filealign](filealign-compiler-option.md)|Gibt die für die Ausgabedateiabschnitte verwendete Ausrichtung an.|
 |[/fullpaths](fullpaths-compiler-option.md)|Weist den Compiler an, vollqualifizierte Pfade zu generieren.|
@@ -60,6 +60,7 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[-nostdlib](nostdlib-compiler-option.md)|Weist den Compiler an, die Standardbibliothek (mscorlib.dll) nicht zu referenzieren.|
 |[-nowarn](nowarn-compiler-option.md)|Deaktiviert bestimmte Warnmeldungen.|
 |[-nowin32manifest](nowin32manifest-compiler-option.md)|Weist den Compiler an, kein Anwendungsmanifest in die ausführbare Datei einzubetten.|
+|[-nullable](nullable-compiler-option.md)|Mit diesen Argumenten wird die Option für den Nullable-Kontext angegeben.|
 |[-optimize](optimize-compiler-option.md)|Aktiviert/deaktiviert Optimierungen.|
 |[-out](out-compiler-option.md)|Gibt den Ausgabedateinamen an (Standard: Basisname der Datei mit der Hauptklasse oder erste Datei).|
 |-parallel[+&#124;-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
@@ -91,4 +92,4 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 - [C#-Compileroptionen](index.md)
 - [C#-Compileroptionen nach Kategorien sortiert](listed-by-category.md)
 - [Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<compiler>-Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

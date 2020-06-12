@@ -3,12 +3,12 @@ title: Verwenden von dotnet-svcutil.xmlserializer
 description: Erfahren Sie, wie Sie das NuGet-Paket `dotnet-svcutil.xmlserializer` zum Vorabgenerieren einer Serialisierungsassembly für .NET Core-Projekte verwenden können.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14bb2e8a85ec35f08b0a83b9734a64d751074f1b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344898"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284324"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Verwendung von „dotnet-svcutil.xmlserializer“ in .NET Core
 
@@ -98,4 +98,4 @@ So verwenden Sie `dotnet-svcutil.xmlserializer` in einer .NET Core-Konsolenanwen
 
 6. Erstellen Sie die Anwendung durch Ausführen von `dotnet build`. Wenn alle Vorgänge erfolgreich ausgeführt werden, wird eine Assembly mit dem Namen *MyWCFClient.XmlSerializers.dll* im Ausgabeordner generiert. Wenn das Tool die Assembly nicht generieren kann, werden Warnungen in der Buildausgabe angezeigt.
 
-7. Starten Sie den WCF-Dienst, indem Sie z.B. `http://localhost:2561/Service1.svc` im Browser ausführen. Starten Sie dann die Client-Anwendung; sie wird automatisch geladen und verwendet die zuvor generierten Serialisierungsmodule zur Runtime.
+7. Starten Sie den WCF-Dienst, indem Sie z.B. `http://localhost:2561/Service1.svc` im Browser ausführen. Starten Sie dann die Client-Anwendung; sie wird automatisch geladen und verwendet die zuvor generierten Serialisierungsmodule zur Laufzeit.

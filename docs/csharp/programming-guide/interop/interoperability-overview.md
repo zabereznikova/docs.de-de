@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700730"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241733"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
 Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.  
@@ -27,7 +27,7 @@ Weitere Informationen finden Sie unter [Nutzen nicht verwalteter DLL-Funktionen]
 > Die [Common Language Runtime](../../../standard/clr.md) (CLR) verwaltet den Zugriff auf Systemressourcen. Das Aufrufen von nicht verwaltetem Code, der sich außerhalb der CLR befindet, umgeht diesen Sicherheitsmechanismus; deshalb stellt er ein Sicherheitsrisiko dar. Nicht verwalteter Code kann z.B. Ressourcen in nicht verwaltetem Code direkt aufrufen und umgeht damit die Sicherheitsmechanismen der CLR. Weitere Informationen finden Sie unter [Sicherheit in .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>C++ Interop  
- Sie können C++ Interop – auch als It Just Works (IJW) bezeichnet – verwenden, um ein native C++-Klasse zu umschließen, sodass diese von in C# oder in einer anderen .NET Framework-Programmiersprache geschriebenem Code genutzt werden kann. Dafür schreiben Sie C++-Code, der eine native DLL- oder COM-Komponente umschließen kann. Im Gegensatz zu anderen .NET Framework-Sprachen bietet Visual C++ eine Interoperabilitätsunterstützung, dank der verwalteter und nicht verwalteter Code in derselben Anwendung und sogar in derselben Datei verwendet werden kann. Anschließend erstellen Sie den C++-Code mithilfe des **/clr**-Compilerschalters, um eine verwaltete Assembly zu erzeugen. Zuletzt fügen Sie der Assembly in Ihrem C#-Projekt einen Verweis hinzu und verwenden das umschlossene Objekt genauso wie eine andere verwaltete Klasse.  
+ Mit C++-Interop – auch als It Just Works (IJW) bezeichnet – können Sie eine native C++-Klasse umschließen, sodass diese von in C# oder einer anderen .NET-Programmiersprache geschriebenem Code genutzt werden kann. Dafür schreiben Sie C++-Code, der eine native DLL- oder COM-Komponente umschließen kann. Im Gegensatz zu anderen .NET-Programmiersprachen bietet Visual C++ eine Interoperabilitätsunterstützung, dank der verwalteter und nicht verwalteter Code in derselben Anwendung und sogar in derselben Datei verwendet werden kann. Anschließend erstellen Sie den C++-Code mithilfe des **/clr**-Compilerschalters, um eine verwaltete Assembly zu erzeugen. Zuletzt fügen Sie der Assembly in Ihrem C#-Projekt einen Verweis hinzu und verwenden das umschlossene Objekt genauso wie eine andere verwaltete Klasse.  
   
 ## <a name="exposing-com-components-to-c"></a>Verfügbarmachen von COM-Komponenten in C\#
  Sie können eine COM-Komponente aus einem C#-Projekt nutzen. Dies sind die Hauptschritte:  
@@ -36,7 +36,7 @@ Weitere Informationen finden Sie unter [Nutzen nicht verwalteter DLL-Funktionen]
   
 2. Fügen Sie dem Projekt einen Verweis auf eine COM-Komponente oder eine Typbibliothek hinzu.  
   
-     Beim Hinzufügen des Verweises verwendet Visual Studio [Tlbimp.exe (das Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md), das eine Typbibliothek als Eingabe akzeptiert, um eine .NET Framework-Interopassembly auszugeben. Die Assembly – auch als Runtime Callable Wrapper (RCW) bezeichnet – enthält verwaltete Klassen und Schnittstellen, die die COM-Klassen und -Schnittstellen umschließen, die sich in der Typbibliothek befinden. Visual Studio fügt dem Projekt einen Verweis auf die generierte Assembly hinzu.  
+     Visual Studio verwendet beim Hinzufügen des Verweises den [Typbibliothekimporter (Tlbimp.exe)](../../../framework/tools/tlbimp-exe-type-library-importer.md). Dieser akzeptiert eine Typbibliothek als Eingabe und gibt eine .NET-Interopassembly aus. Die Assembly – auch als Runtime Callable Wrapper (RCW) bezeichnet – enthält verwaltete Klassen und Schnittstellen, die die COM-Klassen und -Schnittstellen umschließen, die sich in der Typbibliothek befinden. Visual Studio fügt dem Projekt einen Verweis auf die generierte Assembly hinzu.  
   
 3. Erstellen Sie eine Instanz einer im RCW definierten Klasse. Dadurch wird wiederum eine Instanz des COM-Objekts erstellt.  
   
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie unter [Nutzen nicht verwalteter DLL-Funktionen]
   
  Weitere Informationen finden Sie unter [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../framework/interop/exposing-dotnet-components-to-com.md) und [COM-Beispielklasse](./example-com-class.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Improving Interop Performance (Optimieren der Interopleistung)](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [Einführung in die Interoperabilität zwischen COM und .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)

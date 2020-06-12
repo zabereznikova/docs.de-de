@@ -1,65 +1,58 @@
 ---
 title: Eindimensionale Arrays – C#-Programmierhandbuch
-ms.date: 07/20/2015
+ms.date: 06/03/2020
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: bd4ab53a9cb53e5cf636601bff5ac64a10a310a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e189253eedc21fa2d51e16407f04b034610bb57b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170350"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410243"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Eindimensionale Arrays (C#-Programmierhandbuch)
 
-Sie können ein eindimensionales Array aus fünf ganzen Zahlen deklarieren, wie im folgenden Beispiel gezeigt:  
-  
- [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
-  
- Dieses Array enthält die Elemente `array[0]` bis `array[4]`. Der [neue](../../language-reference/operators/new-operator.md) Operator wird verwendet, um das Array zu erstellen und die Arrayelemente mit ihren Standardwerten zu initialisieren. In diesem Beispiel werden alle Arrayelemente mit null initialisiert.  
-  
- Ein Array, das Zeichenfolgenelemente speichert, kann auf die gleiche Weise deklariert werden. Beispiel:  
-  
- [!code-csharp[csProgGuideArrays#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#5)]  
-  
+Sie erstellen ein eindimensionales Array mit dem Operator [new](../../language-reference/operators/new-operator.md), indem Sie den Arrayelementtyp und die Anzahl der Elemente angeben. Im folgenden Beispiel wird ein Array aus fünf Integern deklariert:
+
+:::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="IntDeclaration":::
+
+Dieses Array enthält die Elemente `array[0]` bis `array[4]`. Die Elemente des Arrays werden mit dem Standardwert des Elementtyps initialisiert (`0` für Integer).
+
+Arrays können jeden beliebigen Elementtyp speichern, den Sie angeben. Dies wird im folgenden Beispiel veranschaulicht, in dem ein Array aus Zeichenfolgen deklariert wird:
+
+:::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="StringDeclaration":::
+
 ## <a name="array-initialization"></a>Arrayinitialisierung
 
- Arrays können nach der Deklaration initialisiert werden. In diesem Fall ist kein Längenspezifizierer erforderlich, da er bereits durch die Anzahl der Elemente in der Initialisierungsliste bereitgestellt wird. Beispiel:  
-  
- [!code-csharp[csProgGuideArrays#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#6)]  
-  
- Ein Zeichenfolgenarray kann auf die gleiche Weise initialisiert werden. Die nachfolgende Deklaration zeigt ein Zeichenfolgenarray, in dem jedes Arrayelement durch den Namen eines Wochentags initialisiert wird:  
+Sie können die Elemente eines Arrays initialisieren, wenn Sie das Array deklarieren. Der Spezifizierer für die Länge ist nicht erforderlich, weil dieser von der Anzahl der Elemente in der Initialisierungsliste abgeleitet wird. Zum Beispiel:
 
- ```csharp
- string[] weekDays = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
- ```
+:::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="IntInitialization":::
+
+Im folgenden Code wird eine Deklaration eines Zeichenfolgenarrays veranschaulicht, in dem jedes Arrayelement durch den Namen eines Wochentags initialisiert wird:
+
+:::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="StringInitialization":::
   
- Beim Initialisieren eines Arrays nach der Deklaration können Sie die folgenden Kurzbefehle verwenden:  
-  
- [!code-csharp[csProgGuideArrays#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#8)]  
-  
- Eine Arrayvariable kann auch ohne Initialisierung deklariert werden. Verwenden Sie hierzu jedoch den Operator `new`, um dieser Variable ein Array zuzuweisen. Beispiel:  
-  
- [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
-  
- In C# 3.0 werden implizit typisierte Arrays eingeführt. Weitere Informationen finden Sie unter [Implizit typisierte Arrays](./implicitly-typed-arrays.md).  
-  
+Wie im folgenden Code gezeigt, können Sie den `new`-Ausdruck und den Arraytyp bei der Deklaration vermeiden, wenn Sie ein Array initialisieren. Diese Art von Array wird als [implizit typisiertes Array](implicitly-typed-arrays.md) bezeichnet:
+
+:::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="ShorthandInitialization":::
+
+Sie können eine Arrayvariable deklarieren, ohne sie zu erstellen. Sie müssen jedoch den Operator `new` verwenden, wenn Sie dieser Variable ein neues Array zuweisen. Zum Beispiel:
+
+:::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="DeclareAllocate":::
+
 ## <a name="value-type-and-reference-type-arrays"></a>Werttyp- und Verweistyparrays
 
- Betrachten Sie die folgende Arraydeklaration:  
+Betrachten Sie die folgende Arraydeklaration:  
+
+:::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="FinalInstantiation":::
+
+Das Ergebnis dieser Anweisung hängt davon ab, ob `SomeType` ein Werttyp oder ein Verweistyp ist. Wenn es sich um einen Werttyp handelt, erstellt die Anweisung ein Array aus 10 Elementen, die alle den Typ `SomeType` aufweisen. Stellt `SomeType` einen Verweistyp dar, wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes mit einem NULL-Verweis initialisiert wird. In beiden Instanzen werden die Elemente mit dem Standardwert für den Elementtyp initialisiert. Weitere Informationen zu Werttypen und Verweistypen finden Sie unter [Werttypen](../../language-reference/builtin-types/value-types.md) und [Verweistypen](../../language-reference/keywords/reference-types.md).
   
- [!code-csharp[csProgGuideArrays#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#10)]  
-  
- Das Ergebnis dieser Anweisung hängt davon ab, ob `SomeType` ein Werttyp oder ein Verweistyp ist. Bei einem Werttyp wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes den Typ `SomeType` besitzt. Stellt `SomeType` einen Verweistyp dar, wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes mit einem NULL-Verweis initialisiert wird.  
-  
-Weitere Informationen zu Werttypen und Verweistypen finden Sie unter [Werttypen](../../language-reference/builtin-types/value-types.md) und [Verweistypen](../../language-reference/keywords/reference-types.md).
-  
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Array>
-- [C#-Programmierhandbuch](../index.md)
 - [Arrays](./index.md)
 - [Mehrdimensionale Arrays](./multidimensional-arrays.md)
 - [Verzweigte Arrays](./jagged-arrays.md)
