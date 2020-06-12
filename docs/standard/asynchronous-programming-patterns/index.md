@@ -1,17 +1,18 @@
 ---
 title: Muster für die asynchrone Programmierung
+description: Erfahren Sie mehr über das aufgabenbasierte asynchrone Muster (TAP, Task-based Asynchronous Pattern), das ereignisbasierte asynchrone Muster (EAP, Event-based Asynchronous Pattern) und das asynchrone Programmiermodell (APM, Asynchronous Programming Model) in .NET.
 ms.date: 10/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd4d44d8de8a64be82e9ce6af593a86719b59fcf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160052"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583504"
 ---
 # <a name="asynchronous-programming-patterns"></a>Muster für die asynchrone Programmierung
 
@@ -65,7 +66,7 @@ public class MyClass
 }  
 ```  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Async ausführlich](../async-in-depth.md)
 - [Asynchrone Programmierung in C#](../../csharp/async.md)
