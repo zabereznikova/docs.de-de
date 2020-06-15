@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121484"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662666"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Numerische Gleitkommatypen (C#-Referenz)
 
@@ -92,11 +92,11 @@ myMoney = 400.75M;
 
 Das vorherige Beispiel zeigt auch die Verwendung von `_` als *Zifferntrennzeichen*, das ab C# 7.0 unterstützt wird. Sie können das Zifferntrennzeichen mit allen Arten numerischer Literale verwenden.
 
-Sie können auch die wissenschaftliche Notation verwenden, d.h. einen exponentiellen Teil eines Real-Literals angeben, wie das folgende Beispiel zeigt:
+Sie können auch die wissenschaftliche Notation verwenden, d. h. einen exponentiellen Teil eines Real-Literals angeben, wie das folgende Beispiel zeigt:
 
 ```csharp-interactive
 double d = 0.42e2;
-Console.WriteLine(d);  // output 42;
+Console.WriteLine(d);  // output 42
 
 float f = 134.45E-2f;
 Console.WriteLine(f);  // output: 1.3445
@@ -107,7 +107,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Konvertierungen
 
-Es gibt nur eine implizite Konvertierung zwischen numerischen Gleitkommatypen: von `float` zu `double`. Allerdings können Sie einen Gleitkommatyp mit der [expliziten Umwandlung](../operators/type-testing-and-cast.md#cast-expression)in beliebige andere Gleitkommatypen konvertieren. Weitere Informationen finden Sie unter [Built-in numeric conversions](numeric-conversions.md) (Integrierte numerische Konvertierungen).
+Es gibt nur eine implizite Konvertierung zwischen numerischen Gleitkommatypen: von `float` zu `double`. Allerdings können Sie einen Gleitkommatyp mit der [expliziten Umwandlung](../operators/type-testing-and-cast.md#cast-expression)in beliebige andere Gleitkommatypen konvertieren. Weitere Informationen finden Sie unter [Integrierte numerische Konvertierungen (C#-Referenz)](numeric-conversions.md) (Integrierte numerische Konvertierungen).
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -117,11 +117,11 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Der Dezimaltyp](~/_csharplang/spec/types.md#the-decimal-type)
 - [Real-Literale](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [Value types (Werttypen)](value-types.md)
+- [Werttypen](value-types.md)
 - [Integrale Typen](integral-numeric-types.md)
-- [Standard-Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Numerische Ausdrücke in .NET](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
