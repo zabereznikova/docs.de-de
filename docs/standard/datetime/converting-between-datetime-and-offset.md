@@ -1,5 +1,6 @@
 ---
 title: Konvertieren zwischen DateTime und DateTimeOffset
+description: Konvertieren zwischen DateTimeOffset-Werten und DateTime-Werten in .net. Die DateTimeOffset-Struktur bietet mehr Zeit Zonen Bewusstsein als die DateTime-Struktur.
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: 7607d1d9dfc4f8f286262952599f96e4872db9c9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf55db7c22ad2495bdbeb3202fcefb89bae42d69
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278219"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768676"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Konvertieren zwischen DateTime und DateTimeOffset
 
@@ -127,6 +128,6 @@ Beachten Sie, dass bei diesem Code von zwei Annahmen ausgegangen wird, die je na
 
 - Es wird angenommen, dass ein Datums- und Uhrzeitwert, dessen Abweichung der Abweichung der lokalen Zeitzone entspricht, die lokale Zeitzone darstellt. Dies ist möglicherweise nicht der Fall, weil Datums- und Uhrzeitwerte nicht mehr ihrer ursprünglichen Zeitzone verknüpft sind. Datum und Uhrzeit können aus einer anderen Zeitzone mit der gleichen Abweichung stammen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Datumsangaben, Uhrzeiten und Zeitzonen](index.md)

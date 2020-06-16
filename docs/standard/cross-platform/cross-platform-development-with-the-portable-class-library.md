@@ -1,5 +1,6 @@
 ---
 title: Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
+description: Erstellen Sie plattformübergreifende apps und Bibliotheken für Microsoft-Plattformen schnell und einfach mit dem Projekttyp der portablen Klassenbibliothek in .net.
 ms.date: 09/17/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-ms.openlocfilehash: 033c9bc6e506d0ae2b9f20fedb72d1b7f29e434b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: be1a49f7da7ce98f9e5e3ff8d927ce5230bfa8d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288913"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769144"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
 
@@ -82,7 +83,7 @@ Wenn Sie eine .NET Framework-App bereitstellen, die auf eine Assembly einer port
 
 Weitere Informationen zum Bereitstellen von .NET Framework-apps finden Sie im [Bereitstellungs Handbuch für Entwickler](../../framework/deployment/deployment-guide-for-developers.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden der portablen Klassenbibliothek mit MVVM](using-portable-class-library-with-model-view-view-model.md)
 - [App-Ressourcen für Bibliotheken, die auf mehrere Plattformen abzielen](app-resources-for-libraries-that-target-multiple-platforms.md)

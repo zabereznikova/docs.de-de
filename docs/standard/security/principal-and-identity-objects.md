@@ -1,5 +1,6 @@
 ---
 title: Principal- und Identitätsobjekte
+description: Erfahren Sie mehr über Identitäts Objekte, die Benutzer in .net darstellen. Lesen Sie auch Informationen zu Prinzipal Objekten, die sowohl ein Identitäts Objekt & eine Rolle Kapseln.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: cece51370fb269121e776e865275cd464c1af095
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5fd3f1c80f22c1ebe7b2c10653ee137f00321de8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291226"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768845"
 ---
 # <a name="principal-and-identity-objects"></a>Principal- und Identitätsobjekte
 Verwalteter Code kann die Identität oder die Rolle eines Prinzipals durch ein- <xref:System.Security.Principal.IPrincipal> Objekt ermitteln, das einen Verweis auf ein <xref:System.Security.Principal.IIdentity> Objekt enthält. Es kann hilfreich sein, Identity- und Principal-Objekte (Identitäts- und Prinzipalobjekte) mit vertrauten Konzepten wie Benutzer- und Gruppenkonten zu vergleichen. In den meisten Netzwerkumgebungen entsprechen Benutzerkonten Personen oder Programmen und Gruppenkonten bestimmten Kategorien von Benutzern sowie den Rechten, die diese haben. Ähnlich entsprechen Identitätsobjekte in .NET Framework Benutzern, während Rollen Mitgliedschaften und Sicherheitskontexten entsprechen. In .NET Framework kapselt das Prinzipalobjekt sowohl ein Identitätsobjekt als auch eine Rolle. .NET Framework-Anwendungen gewähren dem Prinzipal gemäß seiner Identität oder, dies ist häufiger der Fall, gemäß seiner Rolle bestimmte Rechte.  
@@ -40,7 +41,7 @@ Verwalteter Code kann die Identität oder die Rolle eines Prinzipals durch ein- 
   
  Wird ein **Principal**-Objekt zwischen Anwendungsdomänen, aber im selben Prozesses (und daher auf demselben Computer) übertragen, kopiert die Remoteinfrastruktur einen Verweis auf das **Principal**-Objekt, das dem Kontext des Aufrufers zugeordnet ist, in den Kontext des Aufgerufenen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Vorgehensweise: Erstellen eines WindowsPrincipal-Objekts](how-to-create-a-windowsprincipal-object.md)
 - [Vorgehensweise: Erstellen von GenericPrincipal-Objekten und GenericIdentity-Objekten](how-to-create-genericprincipal-and-genericidentity-objects.md)

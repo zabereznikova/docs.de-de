@@ -1,5 +1,6 @@
 ---
 title: Enum-Entwurf
+description: Entwurf für Enumerationswerte, die eine besondere Art von Werttyp sind. Einfache Enumerationen enthalten kleine, geschlossene Sätze von Optionen. Flag-Enumerationen unterstützen bitweise Vorgänge für Enumerationswerte.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: efdfcda95a67941f0fde5f7a96467af7dd374396
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40a9faf53dc8a03674cd59074244c15cd304bdd2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280139"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768536"
 ---
 # <a name="enum-design"></a>Enum-Entwurf
 
@@ -100,7 +101,7 @@ Wenn Sie über echte Daten über Anwendungs Inkompatibilitäten verfügen, die d
 
 *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Typentwurfs Richtlinien](type.md)
 - [Framework-Entwurfs Richtlinien](index.md)

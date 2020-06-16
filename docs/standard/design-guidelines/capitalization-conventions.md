@@ -1,5 +1,6 @@
 ---
 title: Konventionen für die Groß-/Kleinschreibung
+description: Wenden Sie die Groß-/Kleinschreibung für Bezeichner, zusammengesetzte Wörter und gängige Begriffe an. Informationen zur Funktionsweise der Groß-/Kleinschreibung in .net
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4903dc587d84ef36bfaa641cfbda59484266c23c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280399"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767792"
 ---
 # <a name="capitalization-conventions"></a>Konventionen für die Groß-/Kleinschreibung
 Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall dar, dass, wenn Sie konsistent angewendet wird, Bezeichner für Typen, Member und Parameter leicht lesbar werden.
@@ -54,7 +55,7 @@ Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall da
 |Schnittstelle|Pas|`public interface IEnumerable { ... }`|
 |Methode|Pas|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |Eigenschaft|Pas|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|event|Pas|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Ereignis|Pas|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Feld|Pas|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Enumerationswert|Pas|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
 |Parameter|Groß-/Kleinschreibung gemischt|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
@@ -103,7 +104,7 @@ Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall da
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Benennungs Richtlinien](naming-guidelines.md)

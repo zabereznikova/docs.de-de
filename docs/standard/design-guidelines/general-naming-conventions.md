@@ -1,5 +1,6 @@
 ---
 title: Allgemeine Benennungskonventionen
+description: Verwenden Sie allgemeine Benennungs Konventionen im Zusammenhang mit der Wort Auswahl, Richtlinien zur Verwendung von Abkürzungen und Akronymen sowie Anleitungen zum Vermeiden von sprachspezifischen Namen.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: c90987fd28d5157cfb7f7eea4680b5ab4be1a200
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290953"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769079"
 ---
 # <a name="general-naming-conventions"></a>Allgemeine Benennungskonventionen
 
@@ -62,7 +63,7 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
 |**Byte**|**Byte**|**unsigned char**|**Byte**|
-|**short**|**Kurzem**|**short**|**Int16**|
+|**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
 |**int**|**Integer**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
@@ -72,7 +73,7 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 |**double**|**Double**|**double**|**Double**|
 |**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
-|**string**|**Zeichenfolge**|**Zeichenfolge**|**Zeichenfolge**|
+|**string**|**String**|**String**|**String**|
 |**object**|**Object**|**Object**|**Object**|
 
  ✔️ einen allgemeinen Namen verwenden, z. b. `value` oder `item` , anstatt den Typnamen zu wiederholen, in den seltenen Fällen, in denen ein Bezeichner keine Semantik Bedeutung hat und der Typ des Parameters nicht wichtig ist.
@@ -98,7 +99,7 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfsrichtlinien](index.md)
 - [Richtlinien für die Benennung](naming-guidelines.md)
