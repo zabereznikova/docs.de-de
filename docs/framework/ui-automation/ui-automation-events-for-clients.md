@@ -1,16 +1,17 @@
 ---
 title: Benutzeroberflächenautomatisierungs-Ereignisse für Clients
+description: Erfahren Sie, wie Microsoft UI Automation-Ereignisse von Benutzeroberflächenautomatisierungs-Clients in .NET verwendet werden. Mithilfe der Benutzeroberflächen Automatisierung können Clients relevante Ereignisse abonnieren.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903739"
 ---
 # <a name="ui-automation-events-for-clients"></a>Benutzeroberflächenautomatisierungs-Ereignisse für Clients
 > [!NOTE]
@@ -23,9 +24,9 @@ ms.locfileid: "79179905"
  Die Effizienz wird auch durch die Möglichkeit verbessert, Ereignissen nur innerhalb eines definierten Umfangs zu lauschen. Beispielsweise kann ein Client den Fokusänderungsereignisse aller [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Elemente in der Struktur oder nur einem Element und dessen Nachfolgerelementen lauschen.  
   
 > [!NOTE]
-> Gehen Sie nicht davon aus, dass alle möglichen Ereignisse von einem [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]-Anbieter ausgelöst werden. Beispielsweise führen nicht alle Eigenschaftenänderungen dazu, dass Ereignisse von den Standardproxyanbietern für Windows Forms und Win32-Steuerelemente ausgelöst werden.  
+> Gehen Sie nicht davon aus, dass alle möglichen Ereignisse von einem [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]-Anbieter ausgelöst werden. Beispielsweise bewirken nicht alle Eigenschafts Änderungen, dass Ereignisse von den Standard Proxy Anbietern für Windows Forms-und Win32-Steuerelemente ausgelöst werden.  
   
- Eine breitere Ansicht [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] von Ereignissen finden Sie unter [Ui Automation Events Overview](ui-automation-events-overview.md).  
+ Eine umfassendere Ansicht von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ereignissen finden Sie unter [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>Abonnieren von Ereignissen  
@@ -48,14 +49,14 @@ ms.locfileid: "79179905"
   
  Beim Herunterfahren, oder wenn [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Ereignisse nicht mehr für die Anwendung benötigt werden, sollten ein Benutzeroberflächenautomatisierungs-Client eine der folgenden Methoden aufrufen.  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|Hebt die Registrierung eines Ereignishandlers auf, der mit <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A> registriert wurde.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|Hebt die Registrierung eines Ereignishandlers auf, der mit <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A> registriert wurde.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Hebt die Registrierung eines Ereignishandlers auf, der mit <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> registriert wurde.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Hebt die Registrierung aller registrierten Ereignishandler auf.|  
   
- Beispielcode finden Sie unter Abonnieren von [BENUTZERoberflächenautomatisierungsereignissen](subscribe-to-ui-automation-events.md).  
+ Beispielcode finden Sie unter [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 

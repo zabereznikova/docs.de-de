@@ -1,16 +1,17 @@
 ---
 title: Automatische Skalierung
+description: Erfahren Sie, wie die automatische Skalierung ermöglicht, dass ein Formular und seine Steuerelemente, die auf einem Computer entworfen wurden, auf einem anderen Computer ordnungsgemäß angezeigt werden.
 ms.date: 06/15/2017
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: 96dbbb5ed20027e25f1bde89748710766ec06506
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 93d6b9097c85d7fa7ca88b405ee3d3654e51304b
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903687"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatische Skalierung in Windows Forms
 
@@ -40,13 +41,13 @@ In den Versionen 1,0 und 1,1 des .NET Framework wird die automatische Skalierung
 
 Während dieser Mechanismus für die meisten Zwecke ausreichend war, brachte er folgenden Einschränkungen mit sich:
 
-- Da die <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>-Eigenschaft den Baseline-Schrift Grad als ganzzahlige Werte darstellt, treten Rundungsfehler auf, die deutlich werden, wenn ein Formular durch mehrere Auflösungen durchlaufen wird.
+- Da die- <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> Eigenschaft den Baseline-Schrift Grad als ganzzahlige Werte darstellt, treten Rundungsfehler auf, die offensichtlich werden, wenn ein Formular durch mehrere Auflösungen durchlaufen wird.
 
 - Automatische Skalierung war nur in der <xref:System.Windows.Forms.Form>-Klasse, nicht in der <xref:System.Windows.Forms.ContainerControl>-Klasse implementiert. Daher wurden Benutzersteuerelemente nur ordnungsgemäß skaliert, wenn das Benutzersteuerelement mit derselben Auflösung wie das Formular entworfen und zur Entwurfszeit im Formular positioniert wurde.
 
 - Formulare und deren untergeordneten Steuerelemente konnten nur dann gleichzeitig von mehreren Entwicklern gestaltet werden, wenn die Bildschirmauflösungen ihrer Computer identisch waren. Dies bedingte außerdem, dass das Erben durch ein Formular von der Auflösung abhängig war, die dem übergeordneten Formular zugeordnet war.
 
-- Sie ist nicht mit den neueren Layout-Managern kompatibel, die mit der .NET Framework Version 2,0 eingeführt wurden, z. b. <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>.
+- Sie ist nicht mit den neueren Layout-Managern kompatibel, die mit der .NET Framework Version 2,0 eingeführt wurden, z <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel> . b. und.
 
 - Die Skalierung auf Basis der Bildschirmauflösung, die für die Kompatibilität mit dem .NET Compact Framework erforderlich ist, wurde nicht unterstützt.
 
@@ -105,4 +106,4 @@ Windows Forms verwendet jetzt die folgende Logik, um Formulare und deren Inhalte
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Rendering von Steuerelementen mit visuellen Stilen](./controls/rendering-controls-with-visual-styles.md)
-- [Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Vorgehensweise: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

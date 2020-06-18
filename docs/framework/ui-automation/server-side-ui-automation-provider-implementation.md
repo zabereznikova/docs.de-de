@@ -1,17 +1,18 @@
 ---
 title: Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
+description: Erfahren Sie, wie Sie einen serverseitigen Benutzeroberflächenautomatisierungs-Anbieter für ein benutzerdefiniertes Steuerelement in .NET implementieren. Die Implementierung für WPF-und nicht-WPF-Elemente ist unterschiedlich.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - server-side UI Automation provider implementation
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ea1b5e668e29d854233d4dde4c0e6152d591da97
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903895"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 
@@ -20,11 +21,11 @@ ms.locfileid: "76789624"
 
 In diesem Abschnitt wird beschrieben, wie ein serverseitiger Benutzeroberflächenautomatisierungs-Anbieter für ein benutzerdefiniertes Steuerelement implementiert wird.
 
-Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-WPF-Elemente (z. b. die für Windows Forms vorgesehenen) unterscheiden sich grundlegend. WPF-Elemente bieten Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine Klasse, die von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitet ist. Nicht-WPF-Elemente bieten Unterstützung durch Implementierungen von Anbieter Schnittstellen.
+Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-WPF-Elemente (z. b. die für Windows Forms vorgesehenen) unterscheiden sich grundlegend. WPF-Elemente unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine von abgeleitete Klasse <xref:System.Windows.Automation.Peers.AutomationPeer> . Nicht-WPF-Elemente bieten Unterstützung durch Implementierungen von Anbieter Schnittstellen.
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>Sicherheitsüberlegungen
+## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
 Anbieter sollten so erstellt werden, dass sie in einer teilweise vertrauenswürdigen Umgebung funktionieren können. Da UIAutomationClient.dll nicht für die Ausführung mit teilweiser Vertrauenswürdigkeit konfiguriert ist, sollte der Anbietercode nicht auf diese Assembly verweisen. Wenn dies der Fall ist, kann der Code in einer voll vertrauenswürdigen Umgebung ausgeführt werden, während in einer teilweise vertrauenswürdigen Umgebung Fehler auftreten.
 
@@ -40,7 +41,7 @@ Weitere Informationen zu diesem Thema finden Sie unter [Benutzeroberflächenauto
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Anbieterimplementierung durch Nicht-WPF-Elemente
 
-Benutzerdefinierte Steuerelemente, die nicht Teil des WPF-Frameworks, jedoch in verwaltetem Code geschrieben sind (meistens handelt es sich hierbei um Windows Forms-Steuerelemente), bieten Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durch Implementieren von Schnittstellen. Jedes Element muss mindestens eine der in der ersten Tabelle des nächsten Abschnitts aufgeführten Schnittstellen implementieren. Außerdem muss ein Element, das ein oder mehrere Steuerelementmuster unterstützt, für jedes Steuerelementmuster die entsprechende Schnittstelle implementieren.
+Benutzerdefinierte Steuerelemente, die nicht Teil des WPF-Frameworks, jedoch in verwaltetem Code geschrieben sind (meistens handelt es sich hierbei um Windows Forms-Steuerelemente), unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durch das Implementieren von Schnittstellen. Jedes Element muss mindestens eine der in der ersten Tabelle des nächsten Abschnitts aufgeführten Schnittstellen implementieren. Außerdem muss ein Element, das ein oder mehrere Steuerelementmuster unterstützt, für jedes Steuerelementmuster die entsprechende Schnittstelle implementieren.
 
 Das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] --Anbieterprojekt muss auf die folgenden Assemblys verweisen:
 
@@ -56,7 +57,7 @@ Das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation
 
 Jeder [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter muss eine der folgenden Schnittstellen implementieren.
 
-|Benutzeroberfläche|Beschreibung|
+|Schnittstelle|BESCHREIBUNG|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Stellt Funktionen für ein einfaches in einem Fenster gehostetes Steuerelement bereit, einschließlich der Unterstützung für Steuerelementmuster und Eigenschaften.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Erbt von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Fügt Funktionen für ein Element in einem komplexen Steuerelement hinzu, einschließlich Navigation im Fragment, Festlegen des Fokus und Zurückgeben des umschließenden Rechtecks des Elements.|
@@ -64,7 +65,7 @@ Jeder [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomati
 
 Die folgenden Schnittstellen stellen weitere Funktionen bereit, müssen jedoch nicht implementiert werden.
 
-|Benutzeroberfläche|Beschreibung|
+|Schnittstelle|BESCHREIBUNG|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Ermöglicht dem Anbieter, Anforderungen für Ereignisse zu verfolgen.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Ermöglicht das Neupositionieren von fensterbasierten Elementen innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur eines Fragments.|
@@ -117,7 +118,7 @@ Anbieter für HWND-basierte Steuerelemente müssen die folgenden Eigenschaften (
 > [!NOTE]
 > Die <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> eines in einem Fenster gehosteten einfachen Elements oder Fragmentstamms wird vom Fenster bezogen. Fragmentelemente unterhalb des Stamms (wie Listeneinträge in einem Listenfeld) müssen jedoch eigene Bezeichner bereitstellen. Weitere Informationen finden Sie unter <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
-> Der <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> sollte für Anbieter zurückgegeben werden, die in einem Windows Forms-Steuerelement gehostet werden. In diesem Fall ist der Standardfensteranbieter möglicherweise nicht in der Lage, den richtigen Wert abzurufen.
+> Die <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> sollte für Anbieter zurückgegeben werden, die in einem Windows Forms-Steuerelement gehostet werden. In diesem Fall ist der Standardfensteranbieter möglicherweise nicht in der Lage, den richtigen Wert abzurufen.
 >
 > Die <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> wird in der Regel vom Hostanbieter bereitgestellt. Wenn ein benutzerdefiniertes Steuerelement beispielsweise von <xref:System.Windows.Forms.Control>abgeleitet ist, wird der Name von der `Text` -Eigenschaft des Steuerelements abgeleitet
 
@@ -129,17 +130,17 @@ Beispielcode finden Sie unter [Return Properties from a UI Automation Provider](
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter sollten Ereignisse auslösen, um Clientanwendungen über Zustandsänderungen der Benutzeroberfläche zu benachrichtigen. Ereignisse werden mit den folgenden Methoden ausgelöst.
 
-|-Methode|Beschreibung|
+|Methode|BESCHREIBUNG|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Löst verschiedene Ereignisse aus, einschließlich Ereignissen, die von Steuerelementmustern ausgelöst werden.|
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Löst ein Ereignis aus, wenn sich eine [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Eigenschaft geändert hat.|
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Löst ein Ereignis aus, wenn sich eine [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft geändert hat.|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>|Löst ein Ereignis aus, wenn sich der Aufbau der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur geändert hat, z. B. durch Entfernen oder Hinzufügen eines Elements.|
 
 Der Zweck eines Ereignisses liegt im Benachrichtigen des Clients über Vorgänge in der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], unabhängig davon, ob eine Aktion vom [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -System selbst ausgelöst wird. Beispielsweise sollte das von <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> identifizierte Ereignis immer ausgelöst werden, wenn das Steuerelement aufgerufen wird, unabhängig davon, ob durch eine direkte Benutzereingabe oder durch die <xref:System.Windows.Automation.InvokePattern.Invoke%2A>aufrufende Clientanwendung.
 
 Zum Optimieren der Leistung kann ein Anbieter Ereignisse selektiv auslösen oder keine Ereignisse auslösen, wenn für deren Empfang keine Clientanwendung registriert ist. Die folgenden Methoden werden zur Optimierung verwendet.
 
-|-Methode|Beschreibung|
+|Methode|BESCHREIBUNG|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Diese statische Eigenschaft gibt an, ob es Clientanwendungen gibt, die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse abonniert haben.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Durch die Implementierung dieser Schnittstelle durch den Anbieter auf einem Fragmentstamm kann kommuniziert werden, wenn Clients Registrierungen von Ereignishandlern für Ereignisse im Fragment vornehmen bzw. aufheben.|
@@ -189,7 +190,7 @@ Ein gutes Beispiel hierfür ist ein Grundleistensteuerelement. Eine Grundleiste 
 
 Hierfür stellt der Fragmentstammanbieter für die Grundleiste einen Satz an untergeordneten Elementen zur Verfügung, die die Bänder repräsentieren. Jedes Band verfügt über einen einzelnen Anbieter, der Eigenschaften und Muster zur Verfügung stellen kann. In dessen Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>gibt der Bandanbieter den Standardfensteranbieter für das Steuerelement-HWND zurück, den er unter Übergabe des Fensterhandles des Steuerelements mithilfe von <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>abruft. Abschließend implementiert der Fragmentstammanbieter für die Infoleiste die <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> -Schnittstelle, und gibt in seiner Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> den geeigneten Bandanbieter für das im angegebenen HWND enthaltene Steuerelement zurück.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter](ui-automation-providers-overview.md)
 - [Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](expose-a-server-side-ui-automation-provider.md)
