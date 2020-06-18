@@ -1,16 +1,17 @@
 ---
 title: Interop-ETW-Ereignisse
+description: Überprüfen Sie die Ereignisse der Interop-etw (Ereignis Ablauf Verfolgung für Windows), die Informationen über die MSIL (Microsoft Intermediate Language)-Stub-Generierung & Caching in .net erfassen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9dac9bc70cd070eb3e94969ce47ce24325a6f89d
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904246"
 ---
 # <a name="interop-etw-events"></a>Interop-ETW-Ereignisse
 Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).  
@@ -19,19 +20,19 @@ Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischen
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|Der MSIL-Stub wurde generiert.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Der Modulbezeichner.|  
 |StubMethodID|win:UInt64|Der Bezeichner für die Stubmethode.|  
@@ -49,19 +50,19 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informa
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|Es wurde auf den MSIL-Cache zugegriffen.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Der Modulbezeichner.|  
 |StubMethodID|win:UInt64|Der Bezeichner für die Stubmethode.|  
@@ -71,6 +72,6 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
 |ManagedInteropMethodSignature|win:UnicodeString|Die Signatur der verwalteten Interop-Methode.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [CLR-ETW-Ereignisse](clr-etw-events.md)

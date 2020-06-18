@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Behandeln von Tastatureingaben auf Formularebene'
+description: Erfahren Sie, wie Tastatureingaben für Ihre Windows Forms auf Formular Ebene behandelt werden, bevor Nachrichten ein Steuerelement erreichen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: c10852273eeb3caea01f448e4cbef571f20769bd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6f0695b6f665a613e0e4e001a4f9bbfc09dd45ed
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904155"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Vorgehensweise: Behandeln von Tastatureingaben auf Formularebene
 Windows Forms bieten die Möglichkeit, Tastatureingaben auf Formularebene zu behandeln, bevor die Eingaben an ein Steuerelement weitergegeben werden. In diesem Thema wird gezeigt, wie Sie diese Aufgabe ausführen.  
@@ -40,6 +41,6 @@ Windows Forms bieten die Möglichkeit, Tastatureingaben auf Formularebene zu beh
   
 - Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Tastatureingaben in einer Windows Forms-Anwendung](keyboard-input-in-a-windows-forms-application.md)

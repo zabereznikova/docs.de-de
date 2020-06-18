@@ -1,5 +1,6 @@
 ---
 title: Formular Größe ändern
+description: Erfahren Sie, wie Sie die Größe und die Breite des Formulars ändern, indem Sie einen neuen Wert für die Size-Eigenschaft festlegen, oder passen Sie die Height-oder Width-Eigenschaften einzeln an.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d6383e4d29d9407d3da97bf8b94761f06d99748
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903271"
 ---
-# <a name="how-to-resize-windows-forms"></a>Gewusst wie: Ändern der Größe von Windows Forms
+# <a name="how-to-resize-windows-forms"></a>Vorgehensweise: Ändern der Größe von Windows Forms
 
 Sie können die Größe eines Windows Forms auf verschiedene Weise angeben. Sie können die Höhe und Breite des Formulars programmgesteuert ändern, indem Sie einen neuen Wert für die <xref:System.Windows.Forms.Form.Size%2A>-Eigenschaft festlegen oder die <xref:System.Windows.Forms.Control.Height%2A>- oder die <xref:System.Windows.Forms.Control.Width%2A>-Eigenschaft einzeln anpassen. Wenn Sie Visual Studio verwenden, können Sie die Größe mithilfe der Windows Forms-Designer ändern. Siehe auch Gewusst [wie: Ändern der Größe Windows Forms mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).
 
@@ -115,5 +116,5 @@ f->Size->X += 100;
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Erste Schritte mit Windows Forms](getting-started-with-windows-forms.md)
+- [Ersten Schritte mit Windows Forms](getting-started-with-windows-forms.md)
 - [Erweitern von Windows Forms-Anwendungen](./advanced/index.md)

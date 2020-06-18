@@ -1,5 +1,6 @@
 ---
 title: Codeverträge
+description: Untersuchen Sie Code Verträge, die eine Möglichkeit zum Angeben von Vorbedingungen, nach Bedingungen und Objekt invarianten in Ihrem .NET-Code bieten.
 ms.date: 09/05/2018
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 60f794373af75bd3f745c224e0a8c7a84192e4c4
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904142"
 ---
 # <a name="code-contracts"></a>Codeverträge
 
@@ -67,7 +68,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-Beachten Sie, dass die Bedingung im vorangehenden Test eine negierte Vorbedingung ist. (Die tatsächliche Vorbedingung wäre `x != null`.) Eine negatierte Vorbedingung ist hochgradig eingeschränkt: Sie muss wie im vorherigen Beispiel geschrieben werden. Das heißt, Sie sollte keine `else` Klauseln enthalten, und der Text der `then`-Klausel muss eine einzelne `throw`-Anweisung sein. Der `if`-Test unterliegt Reinheits- und Sichtbarkeitsregeln (siehe [Verwendungsrichtlinien](#usage_guidelines)), aber der `throw`-Ausdruck unterliegt nur Reinheitsregeln. Der Typ der ausgelösten Ausnahme muss jedoch genauso sichtbar sein wie die Methode, in der der Vertrag vorkommt.
+Beachten Sie, dass die Bedingung im vorangehenden Test eine negierte Vorbedingung ist. (Die tatsächliche Vorbedingung wäre `x != null` .) Eine negatierte Vorbedingung ist hochgradig eingeschränkt: Sie muss wie im vorherigen Beispiel geschrieben werden. Das heißt, Sie sollte keine `else` Klauseln enthalten, und der Text der- `then` Klausel muss eine einzelne- `throw` Anweisung sein. Der `if`-Test unterliegt Reinheits- und Sichtbarkeitsregeln (siehe [Verwendungsrichtlinien](#usage_guidelines)), aber der `throw`-Ausdruck unterliegt nur Reinheitsregeln. Der Typ der ausgelösten Ausnahme muss jedoch genauso sichtbar sein wie die Methode, in der der Vertrag vorkommt.
 
 ## <a name="postconditions"></a>Nachbedingungen
 
@@ -101,7 +102,7 @@ Die folgenden Methoden können nur innerhalb von Nachbedingungen verwendet werde
 
 - Mit dem Ausdruck `Contract.Result<T>()`, in dem `T` durch den Rückgabetyp der Methode ersetzt wird, können Sie auf Methodenrückgabewerte in Nachbedingungen verweisen. Wenn der Compiler den Typ nicht ableiten kann, müssen Sie ihn explizit angeben. Der C#-Compiler kann beispielsweise keine Typen für Methoden ableiten, die keine Argumente akzeptieren. Daher ist die folgende Nachbedingung erforderlich: `Contract.Ensures(0 <Contract.Result<int>())`-Methoden mit dem Rückgabetyp `void` können in ihren Nachbedingungen nicht auf `Contract.Result<T>()` verweisen.
 
-- Ein prestate-Wert in einer Nachbedingung verweist auf den Wert eines Ausdrucks am Anfang einer Methode oder Eigenschaft. Er verwendet den Ausdruck `Contract.OldValue<T>(e)`, wobei `T` der Typ von `e` ist. Sie können das generische Typargument weglassen, wenn der Compiler den Typ ableiten kann. (Beispielsweise leitet der C# Compiler den Typ immer ab, da er ein Argument annimmt.) Es gibt mehrere Einschränkungen hinsichtlich der möglichen `e` und der Kontexte, in denen ein Alter Ausdruck auftreten kann. Ein alter Ausdruck darf keinen anderen alten Ausdruck enthalten. Vor allem muss ein alter Ausdruck auf einen Wert verweisen, der im Vorbedingungszustand der Methode vorhanden war. Es muss sich also um einen Ausdruck handeln, der ausgewertet werden kann, solange die Vorbedingung der Methode `true` ist. Nachfolgend finden Sie mehrere Instanzen dieser Regel.
+- Ein prestate-Wert in einer Nachbedingung verweist auf den Wert eines Ausdrucks am Anfang einer Methode oder Eigenschaft. Er verwendet den Ausdruck `Contract.OldValue<T>(e)`, wobei `T` der Typ von `e` ist. Sie können das generische Typargument weglassen, wenn der Compiler den Typ ableiten kann. (Beispielsweise leitet der c#-Compiler immer den-Typ ein, da er ein Argument annimmt.) Es gibt mehrere Einschränkungen hinsichtlich der möglichen Bedingungen in `e` und den Kontexten, in denen ein Alter Ausdruck auftreten kann. Ein alter Ausdruck darf keinen anderen alten Ausdruck enthalten. Vor allem muss ein alter Ausdruck auf einen Wert verweisen, der im Vorbedingungszustand der Methode vorhanden war. Es muss sich also um einen Ausdruck handeln, der ausgewertet werden kann, solange die Vorbedingung der Methode `true` ist. Nachfolgend finden Sie mehrere Instanzen dieser Regel.
 
   - Der Wert muss im Vorbedingungszustand der Methode vorhanden sein. Um auf ein Feld für ein Objekt zu verweisen, müssen die Vorbedingungen sicherstellen, dass das Objekt immer ungleich NULL ist.
 
@@ -145,7 +146,7 @@ Die folgenden Methoden können nur innerhalb von Nachbedingungen verwendet werde
       Wie bei der <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>-Methode können Sie den generischen Typparameter weglassen, wenn der Compiler den Typ ableiten kann. Der Vertrags-Rewriter ersetzt den Methodenaufruf durch den Wert des `out`-Parameters. Die <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A>-Methode kann nur in Nachbedingungen angezeigt werden. Das Argument für die Methode muss ein `out`-Parameter oder ein Feld eines strukturbezogenen `out`-Parameters sein. Letzteres ist auch hilfreich, wenn auf Felder in der Nachbedingung eines Strukturkonstruktors verwiesen wird.
 
       > [!NOTE]
-      > Derzeit kann von den Tools für die Codevertragsanalyse nicht überprüft werden, ob `out`-Parameter ordnungsgemäß initialisiert werden, und deren Nennung in der Nachbedingung wird ignoriert. Wenn also im vorherigen Beispiel in der Zeile nach dem Vertrag der Wert von `x` verwendet worden wäre, statt der Zeile eine ganze Zahl zuzuweisen, würde ein Compiler nicht den entsprechenden Fehler ausgeben. In einem Build, in dem das CONTRACTS_FULL-Präprozessorsymbol nicht definiert ist (z. B. in einemReleasebuild), gibt der Compiler jedoch einen Fehler aus.
+      > Derzeit kann von den Tools für die Codevertragsanalyse nicht überprüft werden, ob `out`-Parameter ordnungsgemäß initialisiert werden, und deren Nennung in der Nachbedingung wird ignoriert. Wenn also im vorherigen Beispiel in der Zeile nach dem Vertrag der Wert von `x` verwendet worden wäre, statt der Zeile eine ganze Zahl zuzuweisen, würde ein Compiler nicht den entsprechenden Fehler ausgeben. In einem Build, in dem das CONTRACTS_FULL-Präprozessorsymbol nicht definiert ist (z.B. in einem Releasebuild), gibt der Compiler jedoch einen Fehler aus.
 
 ## <a name="invariants"></a>Invarianten
 
@@ -163,7 +164,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-Invarianten werden durch das CONTRACTS_FULL-Präprozessorsymbol bedingt definiert. Bei der Laufzeitüberprüfung werden die Invarianten am Ende jeder öffentlichen Methode überprüft. Wenn eine Invariante eine öffentliche Methode in der gleichen Klasse erwähnt, wird die Invariantenüberprüfung, die normalerweise am Ende dieser öffentlichen Methode erfolgt, deaktiviert. Stattdessen wird die Überprüfung nur am Ende des äußersten Methodenaufrufs dieser Klasse ausgeführt. Dies geschieht auch, wenn die Klasse wegen eines Aufrufs einer Methode in einer anderen Klasse erneut eingegeben wird. Invarianten werden nicht für einen objektfinalizer und eine <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> Implementierung geprüft.
+Invarianten werden durch das CONTRACTS_FULL-Präprozessorsymbol bedingt definiert. Bei der Laufzeitüberprüfung werden die Invarianten am Ende jeder öffentlichen Methode überprüft. Wenn eine Invariante eine öffentliche Methode in der gleichen Klasse erwähnt, wird die Invariantenüberprüfung, die normalerweise am Ende dieser öffentlichen Methode erfolgt, deaktiviert. Stattdessen wird die Überprüfung nur am Ende des äußersten Methodenaufrufs dieser Klasse ausgeführt. Dies geschieht auch, wenn die Klasse wegen eines Aufrufs einer Methode in einer anderen Klasse erneut eingegeben wird. Invarianten werden nicht für einen objektfinalizer und eine- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> Implementierung geprüft.
 
 <a name="usage_guidelines"></a>
 

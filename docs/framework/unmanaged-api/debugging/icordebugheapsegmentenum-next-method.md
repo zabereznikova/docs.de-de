@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210175"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904272"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next-Methode
-Ruft die angegebene Anzahl von [COR_HEAPOBJECT](cor-heapobject-structure.md) Instanzen ab, die Informationen über die Speicherbereiche des verwalteten Heaps enthalten.  
+Ruft die angegebene Anzahl von [COR_SEGMENT](cor-segment-structure.md) Instanzen ab, die Informationen über die Speicherbereiche des verwalteten Heaps enthalten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  in Die Anzahl der abzurufenden Segmente.  
   
  Segmente  
- vorgenommen Ein Array von Zeigern, von denen jedes auf ein [COR_HEAPOBJECT](cor-heapobject-structure.md) Objekt verweist, das Informationen zu einem Speicherbereich im verwalteten Heap bereitstellt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein [COR_SEGMENT](cor-segment-structure.md) Objekt verweist, das Informationen zu einem Speicherbereich im verwalteten Heap bereitstellt.  
   
  pceltFetched  
- vorgenommen Ein Zeiger auf die Anzahl der [COR_HEAPOBJECT](cor-heapobject-structure.md) -Objekte, die tatsächlich in zurückgegeben werden `segments` . Dieser Wert kann `null` sein, wenn `celt` 1 ist.  
+ vorgenommen Ein Zeiger auf die Anzahl der [COR_SEGMENT](cor-segment-structure.md) -Objekte, die tatsächlich in zurückgegeben werden `segments` . Dieser Wert kann `null` sein, wenn `celt` 1 ist.  
   
 ## <a name="remarks"></a>Bemerkungen  
   
@@ -55,7 +55,7 @@ HRESULT Next(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugHeapSegmentEnum-Schnittstelle](icordebugheapsegmentenum-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)

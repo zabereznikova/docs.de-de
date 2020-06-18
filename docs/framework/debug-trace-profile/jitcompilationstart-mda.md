@@ -1,5 +1,6 @@
 ---
 title: jitCompilationStart-MDA
+description: Verwenden Sie den JitCompilationStart-MDA (Managed Debug Assistant), der für die Berichterstellung gestartet wird, wenn der JIT-Compiler (Just-in-Time) mit dem Kompilieren einer .net-Funktion beginnt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216259"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904129"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart-MDA
 Der Assistent für verwaltetes Debuggen (MDA) `jitCompilationStart` berichtet, wann der JIT-Compiler mit der Kompilierung einer Funktion beginnt.  
@@ -37,7 +38,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Konfiguration  
- Die folgende Konfigurationsdatei zeigt eine Reihe von Filtern, die filtern können, welche Methoden gemeldet werden, wenn sie zuerst JIT-kompiliert werden. Sie können angeben, dass alle Methoden gemeldet werden, indem Sie den Wert des Name-Attributs auf \*festlegen.  
+ Die folgende Konfigurationsdatei zeigt eine Reihe von Filtern, die filtern können, welche Methoden gemeldet werden, wenn sie zuerst JIT-kompiliert werden. Sie können angeben, dass alle Methoden gemeldet werden, indem Sie den Wert des Name-Attributs auf festlegen \* .  
   
 ```xml  
 <mdaConfig>  
@@ -158,5 +159,5 @@ namespace ns2
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Simulieren von Maus- und Tastaturereignissen in Code'
+title: 'Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code'
+description: Erfahren Sie, wie Sie die Windows Forms bereitgestellten Optionen zum programmgesteuerten simulieren von Maus-und Tastatureingaben verwenden.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 52f89df8d7f28f0e00c3becd9005b46e52b5532c
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 9b453787f7fa7f5041f75e04d65557a0a3838bee
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904363"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Gewusst wie: Simulieren von Maus- und Tastaturereignissen in Code
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code
 
 Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Maus- und Tastatureingaben bereit. Dieses Thema enthält eine Übersicht über diese Optionen.
 
@@ -92,6 +93,6 @@ Für dieses Beispiel benötigen Sie Folgendes:
 
 - Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Benutzereingaben in Windows Forms](user-input-in-windows-forms.md)
