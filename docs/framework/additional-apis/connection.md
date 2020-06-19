@@ -1,5 +1,6 @@
 ---
-title: Verbindungsklasse (System.Net)
+title: Verbindungs Klasse (System.net)
+description: Erfahren Sie mehr über die Connection-Klasse in .net. Diese Klasse analysiert Server Antworten, Warteschlangen Anforderungen und Pipeline Anforderungen. Sie befindet sich im System.NET-Namespace.
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -11,32 +12,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: dc0a594f7ae2bb9fc1883ec7ef672805bbc08778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb28724ed782fc5395dc74e9c59249ebdea44ddf
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989826"
 ---
-# <a name="connection-class"></a><span data-ttu-id="a5013-102">Verbindungsklasse</span><span class="sxs-lookup"><span data-stu-id="a5013-102">Connection Class</span></span>
+# <a name="connection-class"></a><span data-ttu-id="b6f1a-105">Verbindungsklasse</span><span class="sxs-lookup"><span data-stu-id="b6f1a-105">Connection Class</span></span>
 
-<span data-ttu-id="a5013-103">Die `Connection` Klasse analysiert Serverantworten, Warteschlangenanforderungen und Pipelineanforderungen.</span><span class="sxs-lookup"><span data-stu-id="a5013-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
+<span data-ttu-id="b6f1a-106">Die `Connection` -Klasse analysiert Server Antworten, Warteschlangen Anforderungen und Pipeline Anforderungen.</span><span class="sxs-lookup"><span data-stu-id="b6f1a-106">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a5013-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a5013-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b6f1a-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="b6f1a-107">Syntax</span></span>
   
 ```csharp  
 internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> <span data-ttu-id="a5013-105">Die `Connection` Klasse ist intern und soll nicht direkt in Ihrem Code verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a5013-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="b6f1a-108">Die `Connection` -Klasse ist intern und sollte nicht direkt im Code verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b6f1a-108">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="a5013-106">Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.</span><span class="sxs-lookup"><span data-stu-id="a5013-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="b6f1a-109">Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.</span><span class="sxs-lookup"><span data-stu-id="b6f1a-109">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a5013-107">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="a5013-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b6f1a-110">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="b6f1a-110">Requirements</span></span>
 
-<span data-ttu-id="a5013-108">**Namespace:**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="a5013-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="b6f1a-111">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="b6f1a-111">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="a5013-109">**Montage:** System (in System.dll)</span><span class="sxs-lookup"><span data-stu-id="a5013-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="b6f1a-112">**Assembly:** System (in System.dll)</span><span class="sxs-lookup"><span data-stu-id="b6f1a-112">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="a5013-110">**.NET Framework-Versionen:** Verfügbar seit 2.0.</span><span class="sxs-lookup"><span data-stu-id="a5013-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="b6f1a-113">**.NET Framework Versionen:** Verfügbar seit 2,0.</span><span class="sxs-lookup"><span data-stu-id="b6f1a-113">**.NET Framework versions:** Available since 2.0.</span></span>
