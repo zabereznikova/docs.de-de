@@ -1,5 +1,6 @@
 ---
-title: ServicePoint.m_ConnectionGroupList-Feld
+title: Service Point. m_ConnectionGroupList-Feld
+description: Verstehen Sie das Feld "Service Point. m_ConnectionGroupList", eine Hash Tabelle mit Verbindungs Gruppen, die jeweils eine Verbindung für den Service Point-URI in .NET enthalten.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ebfeb782147f21abfde536b8053fa15b1e1a602
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989713"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList-Feld
+# <a name="servicepointm_connectiongrouplist-field"></a>Service Point. m \_ connectiongrouplist-Feld
 
-`ServicePoint.m_ConnectionGroupList`ist <xref:System.Collections.Hashtable> eine von Verbindungsgruppen, die <xref:System.Net.ServicePoint>jeweils eine Verbindung für den URI von halten.
+`ServicePoint.m_ConnectionGroupList`ist eine <xref:System.Collections.Hashtable> von Verbindungs Gruppen, die jeweils eine Verbindung für den <xref:System.Net.ServicePoint> URI des s enthält.
 
 ## <a name="syntax"></a>Syntax
   
@@ -28,14 +29,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> Das `ServicePoint.m_ConnectionGroupList` Feld ist privat und soll nicht direkt in Ihrem Code verwendet werden.
+> Das `ServicePoint.m_ConnectionGroupList` Feld ist privat und sollte nicht direkt im Code verwendet werden.
 >
 > Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montage:** System (in System.dll)
+**Assembly:** System (in System.dll)
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

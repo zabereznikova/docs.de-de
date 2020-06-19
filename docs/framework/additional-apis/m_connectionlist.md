@@ -1,5 +1,6 @@
 ---
-title: ConnectionGroup.m_ConnectionList Feld
+title: Connectiongroup. m_ConnectionList-Feld
+description: Erfahren Sie mehr über das connectiongroup. m_ConnectionList-Feld in .net, das Verbindungs Objekte enthält, die denselben URI und dieselben Freigabe Werte für andere Eigenschaften bereitstellen.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-ms.openlocfilehash: 8eb6f215c36e214f7095eeba90bf0aed66dfcea0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 478b2441c062e8df6f4e718bd66d7af329f20f12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989722"
 ---
-# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup.m\_ConnectionList-Feld
+# <a name="connectiongroupm_connectionlist-field"></a>Connectiongroup. m \_ connectionlist-Feld
 
-`ConnectionGroup.m_ConnectionList`ist <xref:System.Collections.ArrayList> ein Verbindungsobjekt, das denselben URI bedient und für einige andere Eigenschaften wie Ablauf und Authentifizierung dieselben Werte verwendet.
+`ConnectionGroup.m_ConnectionList`ist ein <xref:System.Collections.ArrayList> von Verbindungs Objekten, das denselben URI verarbeitet und die gleichen Werte für einige andere Eigenschaften wie Ablauf und Authentifizierung gemeinsam verwenden.
 
 ## <a name="syntax"></a>Syntax
   
@@ -28,14 +29,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> Das `ConnectionGroup.m_ConnectionList` Feld ist privat und soll nicht direkt in Ihrem Code verwendet werden.
+> Das `ConnectionGroup.m_ConnectionList` Feld ist privat und sollte nicht direkt im Code verwendet werden.
 >
 > Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montage:** System (in System.dll)
+**Assembly:** System (in System.dll)
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

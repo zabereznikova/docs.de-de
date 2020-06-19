@@ -1,5 +1,6 @@
 ---
 title: CoreResponseData-Klasse
+description: Verstehen Sie die coreresponabdata-Klasse, die die Analyse der HTTP-Header und den Antworttext darstellt. Sie befindet sich im System.NET-Namespace in .net.
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 39a14a3df5059cc47cd4879e4d4ba351cc7b655b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8248cc20f6528a1c3bc64c9b9339a3a3000d03a0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156115"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989799"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData-Klasse
 
-Die `CoreResponseData` Klasse stellt die Analyse der HTTP-Header und des Antworttexts dar.
+Die `CoreResponseData` -Klasse stellt die Verarbeitung von HTTP-Headern und den Antworttext dar.
 
 ## <a name="syntax"></a>Syntax
   
@@ -28,14 +29,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Diese API ist intern und soll nicht direkt in Ihrem Code verwendet werden. Stattdessen sollten Sie <xref:System.Diagnostics.DiagnosticSource> einen zum Hook-Netzwerkcode verwenden. Siehe [DiagnosticSource-Benutzerhandbuch](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Diese API ist intern und sollte nicht direkt im Code verwendet werden. Stattdessen sollten Sie einen <xref:System.Diagnostics.DiagnosticSource> zum Anschließen von Netzwerkcode verwenden. Weitere Informationen finden Sie [im Benutzerhandbuch für diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 >
 > Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montage:** System (in System.dll)
+**Assembly:** System (in System.dll)
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

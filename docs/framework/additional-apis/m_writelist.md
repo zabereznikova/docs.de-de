@@ -1,5 +1,6 @@
 ---
-title: Connection.m_WriteList-Feld
+title: "\"Connection. m_WriteList\"-Feld"
+description: Hier finden Sie Informationen zum Connection. m_WriteList-Feld in .net. In diesem ArrayList-Feld sind HttpWebRequest-Objekte, die über HTTP gesendet werden, in die Warteschlange eingereiht.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-ms.openlocfilehash: 6c60831ddf23ce8ac9afcf244383d24732c3ef8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a627cb062036e3ab098c2d6e97f9a77ebfa75a33
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989598"
 ---
-# <a name="connectionm_writelist-field"></a>Connection.m\_WriteList-Feld
+# <a name="connectionm_writelist-field"></a>Connection. m- \_ beschreitelist-Feld
 
-`Connection.m_WriteList`ist <xref:System.Collections.ArrayList> ein <xref:System.Net.HttpWebRequest> Objekt, das in die Warteschlange eingereiht wird, um über HTTP gesendet zu werden.
+`Connection.m_WriteList`ist eine <xref:System.Collections.ArrayList> von <xref:System.Net.HttpWebRequest> Objekten, die in der Warteschlange eingereiht werden, um über HTTP gesendet zu werden.
 
 ## <a name="syntax"></a>Syntax
   
@@ -28,14 +29,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> Das `Connection.m_WriteList` Feld ist privat und soll nicht direkt in Ihrem Code verwendet werden.
+> Das `Connection.m_WriteList` Feld ist privat und sollte nicht direkt im Code verwendet werden.
 >
 > Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montage:** System (in System.dll)
+**Assembly:** System (in System.dll)
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

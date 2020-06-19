@@ -1,5 +1,6 @@
 ---
-title: Der EventStatus-Enumeration (Adodb)
+title: EventStatus-Enumeration (ADODB)
+description: Hier erhalten Sie Informationen zur EventStatus-Enumeration in .net. Diese Enumeration befindet sich im ADODB-Namespace und in der ADODB-Assembly (in der adodb.dll-Bibliothek).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,33 +10,33 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 1eddac7f9b813ea76e8347deb6f4bd7548abe504
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7effa55efb104c9203e7051ef998b03ff3315e93
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989844"
 ---
-# <a name="eventstatus-enumeration"></a>Der EventStatus-Enumeration
+# <a name="eventstatus-enumeration"></a>EventStatus-Enumeration
 
 ```csharp
 [GuidAttribute("00000530-0000-0010-8000-00AA006D2EA4")]
 public enum EventStatusEnum
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-| Membername  | Beschreibung  |
+| Membername  | BESCHREIBUNG  |
 |---|---|
-|adStatusOK  |   |
-|adStatusErrorsOccurred  |   |
-|adStatusCantDeny  |   |
-|adRsnUndoUpdate  |   |
-|adStatusCancel  |   |
-|adStatusUnwantedEvent  |   |
+|adStatus  |   |
+|adstatuuserrorsoccurrred  |   |
+|adStatus-kandeny  |   |
+|adrsnundoupdate  |   |
+|adStatus Cancel  |   |
+|adStatus-unwantedebug  |   |
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** `adodb`
 
-**Assembly:** Adodb (in "ADODB.dll")
+**Assembly:** adodb (in adodb.dll)

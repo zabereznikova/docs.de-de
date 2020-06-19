@@ -1,5 +1,6 @@
 ---
-title: EventReason-Enumeration (Adodb)
+title: Eventreason-Enumeration (ADODB)
+description: Hier erhalten Sie Informationen zur eventreason-Enumeration in .net. Diese Enumeration befindet sich im ADODB-Namespace und in der ADODB-Assembly (in der adodb.dll-Bibliothek).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,41 +10,41 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 0d02fb683335cf0db7d73d9d3ea545e65ca384a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbb616625777e0193af4da10770502da904f401a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675467"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989898"
 ---
-# <a name="eventreason-enumeration"></a>EventReason-Enumeration
+# <a name="eventreason-enumeration"></a>Eventreason-Enumeration
 
 ```csharp
 [GuidAttribute("00000531-0000-0010-8000-00AA006D2EA4")]
 public enum EventReasonEnum
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-| Membername  | Beschreibung  |
+| Membername  | BESCHREIBUNG  |
 |---|---|
-|adRsnAddNew  |   |
-|adRsnDelete  |   |
-|adRsnUpdate  |   |
-|adRsnUndoUpdate  |   |
-|adRsnUndoAddNew  |   |
-|adRsnUndoDelete  |   |
-|adRsnRequery  |   |
-|adRsnResynch  |   |
-| adRsnClose  |   |
-| adRsnMove  |   |
-| adRsnFirstChange  |   |
-| adRsnMoveFirst  |   |
-| adRsnMovePrevious  |   |
-| adRsnMoveLast  |   |
+|adrsnaddnew  |   |
+|adrsndelete  |   |
+|adrsnupdate  |   |
+|adrsnundoupdate  |   |
+|adrsnundoaddnew  |   |
+|adrsnundodelete  |   |
+|adrsnrequery  |   |
+|adrsnresynch  |   |
+| adrsnclose  |   |
+| adrsnmove  |   |
+| adrsnfirstchange  |   |
+| adrsnmuvefirst  |   |
+| adrsnmuveprevious  |   |
+| adrsnmuvelast  |   |
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** `adodb`
 
-**Assembly:** Adodb (in "ADODB.dll")
+**Assembly:** adodb (in adodb.dll)

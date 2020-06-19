@@ -1,5 +1,6 @@
 ---
-title: HttpWebRequest._HttpResponse Feld
+title: Feld "HttpWebRequest. _HttpResponse"
+description: Verstehen Sie das Feld "HttpWebRequest. _HttpResponse" in .net. Dieses Feld ist ein HttpWebResponse-Typ, der HTTP-Antwort Details aus einer HTTP-Anforderung enthält.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-ms.openlocfilehash: 0c5bfc56299aa06dd59c2598588044e81a69933a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70058e1183abf5b6bfd172497f65a3ceb2344060
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989957"
 ---
-# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest. \_HttpResponse-Feld
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest. \_ Feld "HttpResponse"
 
-`HttpWebRequest._HttpResponse`ist <xref:System.Net.HttpWebResponse> ein enthältes HTTP-Antwortdetails aus einer HTTP-Anforderung. Es kann `null` sein, bis eine HTTP-Antwort empfangen wird.
+`HttpWebRequest._HttpResponse`ist eine, die <xref:System.Net.HttpWebResponse> HTTP-Antwort Details aus einer HTTP-Anforderung enthält. Sie kann sein, `null` bis eine HTTP-Antwort empfangen wird.
 
 ## <a name="syntax"></a>Syntax
   
@@ -28,14 +29,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> Das `HttpWebRequest._HttpResponse` Feld ist intern und nicht für die direkte Verwendung im Code vorgesehen.
+> Das `HttpWebRequest._HttpResponse` Feld ist intern und sollte nicht direkt im Code verwendet werden.
 >
 > Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
-**Montage:** System (in System.dll)
+**Assembly:** System (in System.dll)
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

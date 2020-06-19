@@ -11,12 +11,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6200530ec9761438c8932803bf12c63c1445a37e
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 374d53346c964c5f8135c7e121bd3a2db8a8fd7b
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989516"
 ---
 # <a name="connectstreamconnection-property"></a>Connectstream. Connection (Eigenschaft)
 
@@ -28,22 +28,23 @@ Ruft die Verbindung ab.
 internal Connection Connection { get; }
 ```
 
-## <a name="property-value"></a>Eigenschafts Wert
+## <a name="property-value"></a>Eigenschaftswert
 
-`System.Net.Connection`  
-Das Verbindungs Objekt.
+`System.Net.Connection`
 
-## <a name="remarks"></a>Hinweise
+Das Verbindungsobjekt.
+
+## <a name="remarks"></a>Bemerkungen
 
 > [!WARNING]
-> Die `ConnectStream.Connection`-Eigenschaft ist intern und sollte nicht direkt im Code verwendet werden.
+> Die `ConnectStream.Connection` -Eigenschaft ist intern und sollte nicht direkt im Code verwendet werden.
 >
 > Microsoft unterstützt die Verwendung dieser Eigenschaft in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** System (in "System. dll")
+**Assembly:** System (in System.dll)
 
 **.NET Framework Versionen:** Verfügbar seit 1,0.

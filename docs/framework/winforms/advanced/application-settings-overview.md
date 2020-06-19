@@ -8,22 +8,23 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 369495322328350bc06827b87598160469d864bb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990185"
 ---
 # <a name="application-settings-overview"></a>Übersicht über Anwendungseinstellungen
-In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und deren Benutzer erstellt und gespeichert werden.
+
+In diesem Artikel wird erläutert, wie Einstellungsdaten im Namen Ihrer Anwendung und ihrer Benutzer erstellt und gespeichert werden.
 
  Die Funktion „Anwendungseinstellungen“ von Windows Forms erleichtert das Erstellen, Speichern und Verwalten von benutzerdefinierten Einstellungen für Anwendungen und Benutzer auf dem Clientcomputer. Mit Windows Forms-Anwendungseinstellungen können Sie nicht nur Anwendungsdaten wie Datenbankverbindungszeichenfolgen, sondern auch benutzerspezifische Daten, etwa Anwendungseinstellungen, speichern. Mithilfe von Visual Studio oder benutzerdefiniertem verwaltetem Code können Sie neue Einstellungen erstellen, diese vom Datenträger lesen bzw. sie darauf schreiben, sie an Eigenschaften in Ihren Formularen binden und Einstellungsdaten vor dem Laden und Speichern überprüfen.
 
  Anwendungseinstellungen ermöglichen Entwicklern das Speichern des Zustands in Ihrer Anwendung mithilfe von sehr geringem benutzerdefiniertem Code und sind ein Ersatz für dynamische Eigenschaften in früheren Versionen der .NET Framework. Anwendungseinstellungen enthalten zahlreiche Verbesserungen gegenüber dynamischen Eigenschaften, die schreibgeschützt und spät gebunden sind sowie mehr benutzerdefinierte Programmierung erfordern. Die dynamischen Eigenschaften Klassen wurden in .NET Framework 2,0 aufbewahrt, aber Sie sind lediglich shellklassen, die die Klassen für Anwendungseinstellungen schlank verpacken.
 
 ## <a name="what-are-application-settings"></a>Was sind Anwendungseinstellungen?
- Ihr Windows Forms-Anwendungen benötigen häufig Daten, die für die Ausführung der Anwendung von entscheidender Bedeutung sind, die Sie aber nicht direkt in den Anwendungscode einschließen möchten. Wenn Ihre Anwendung einen Webdienst oder einen Datenbankserver verwendet, sollten Sie diese Informationen in einer separaten Datei speichern, damit Sie sie später ändern können, ohne sie neu kompilieren zu müssen. Auf ähnliche Weise können Ihre Anwendungen die Speicherung von Daten erfordern, die für den aktuellen Benutzer spezifisch sind. Die meisten Anwendungen verfügen beispielsweise über Benutzereinstellungen, die das Aussehen und Verhalten der Anwendung anpassen.
+ Ihre Windows Forms Anwendungen benötigen häufig Daten, die für die Ausführung der Anwendung von entscheidender Bedeutung sind, die Sie jedoch nicht direkt in den Anwendungscode einschließen möchten. Wenn Ihre Anwendung einen Webdienst oder einen Datenbankserver verwendet, können Sie diese Informationen in einer separaten Datei speichern, damit Sie Sie in Zukunft ändern können, ohne Sie neu kompilieren zu müssen. Auf ähnliche Weise können Ihre Anwendungen die Speicherung von Daten erfordern, die für den aktuellen Benutzer spezifisch sind. Die meisten Anwendungen verfügen beispielsweise über Benutzereinstellungen, die das Aussehen und Verhalten der Anwendung anpassen.
 
  Anwendungseinstellungen tragen beiden dieser Anforderungen Rechnung, indem sie eine einfache Möglichkeit bereitstellen, um sowohl anwendungsspezifische als auch benutzerspezifische Einstellungen auf dem Clientcomputer zu speichern. Mithilfe von Visual Studio oder einem Code-Editor definieren Sie eine Einstellung für eine bestimmte Eigenschaft durch Angabe ihres Namens, Datentyps und Gültigkeitsbereichs (Anwendung oder Benutzer). Sie können sogar verwandte Einstellungen in benannten Gruppen ablegen, um ihre Verwendbarkeit und Lesbarkeit zu vereinfachen. Nachdem diese Einstellungen definiert wurden, werden sie dauerhaft gespeichert und zur Laufzeit automatisch zurück in den Speicher gelesen. Eine Architektur mit austauschbaren Komponenten ermöglicht die Änderung des Mechanismus für die dauerhafte Speicherung, doch standardmäßig wird das lokale Dateisystem verwendet.
 
@@ -41,13 +42,13 @@ In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und d
  Anwendungseinstellungen besitzen keine integrierte Funktion zum automatischen Verschlüsseln von Informationen. Sie sollten nie sicherheitsrelevante Informationen wie Datenbankkennwörter in Klartext speichern. Wenn Sie solche vertraulichen Informationen speichern möchten, sind Sie als Entwickler dafür verantwortlich, dass sie geschützt werden. Wenn Sie Verbindungszeichenfolgen speichern möchten, empfehlen wir Ihnen, die integrierte Sicherheit von Windows zu verwenden und nicht zur Hartcodierung von Kennwörtern in der URL zu greifen. Weitere Informationen finden Sie unter [Code Access Security and ADO.NET](../../data/adonet/code-access-security.md).
 
 ## <a name="getting-started-with-application-settings"></a>Erste Schritte mit Anwendungseinstellungen
- Wenn Sie Visual Studio verwenden, können Sie im Windows Forms-Designer mithilfe der **(ApplicationSettings)** -Eigenschaft im Fenster **Eigenschaften** Einstellungen definieren. Wenn Sie Einstellungen auf diese Weise definieren, erstellt Visual Studio automatisch eine benutzerdefinierte, verwaltete Wrapperklasse, die jede Einstellung einer Klasseneigenschaft zuordnet. Visual Studio übernimmt außerdem das Binden der Einstellung an eine Eigenschaft in einem Formular oder Steuerelement, damit die Einstellungen des Steuerelements automatisch wiederhergestellt werden, wenn sein Formular angezeigt wird, und automatisch gespeichert werden, wenn das Formular geschlossen wird.
+ Wenn Sie Visual Studio verwenden, können Sie im Windows Forms-Designer mithilfe der **(ApplicationSettings)** -Eigenschaft im Fenster **Eigenschaften** Einstellungen definieren. Wenn Sie Einstellungen auf diese Weise definieren, erstellt Visual Studio automatisch eine benutzerdefinierte verwaltete Wrapper Klasse, die jede Einstellung einer Klassen Eigenschaft zuordnet. Visual Studio übernimmt außerdem das Binden der Einstellung an eine Eigenschaft in einem Formular oder Steuerelement, damit die Einstellungen des Steuerelements automatisch wiederhergestellt werden, wenn sein Formular angezeigt wird, und automatisch gespeichert werden, wenn das Formular geschlossen wird.
 
  Wenn Sie eine detailliertere Kontrolle über Ihre Einstellungen benötigen, können Sie Ihre eigene benutzerdefinierte Wrapperklasse für Anwendungseinstellungen definieren. Dies geschieht durch Ableiten einer Klasse von <xref:System.Configuration.ApplicationSettingsBase>, Hinzufügen einer Eigenschaft, die jeder Einstellung entspricht, und Anwenden bestimmter Attribute auf diese Eigenschaften. Detaillierte Informationen zum Erstellen von Wrapperklassen finden Sie unter [Architektur der Anwendungseinstellungen](application-settings-architecture.md).
 
  Sie können auch die <xref:System.Windows.Forms.Binding> -Klasse verwenden, um Einstellungen programmgesteuert an Eigenschaften in Formularen und Steuerelementen zu binden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>

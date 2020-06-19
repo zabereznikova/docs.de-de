@@ -1,5 +1,6 @@
 ---
-title: IFont.Name-Eigenschaft (gespeichert)
+title: IFont.Name-Eigenschaft (stdole)
+description: Hier finden Sie Referenzinformationen zur IFont.Name-Eigenschaft in .net. Diese Lese-/Schreibeigenschaft befindet sich im stdole-Namespace und in der stdole-Assembly.
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -11,12 +12,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: b74992174d244845e1db2b283d962f2b87071c91
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bdc773956c15554b0700d78dcdc833d8111da896
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989500"
 ---
 # <a name="ifontname-property"></a>IFont.Name-Eigenschaft
 
@@ -28,8 +29,8 @@ string Name { get; set; }
 
 <xref:System.String>\
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** `stdole`
 
-**Assembly:** gespeichert (in stdole.dll)
+**Assembly:** stdole (in stdole.dll)
