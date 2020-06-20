@@ -1,5 +1,6 @@
 ---
-title: StdPicture-Schnittstelle (gespeichert)
+title: StdPicture-Schnittstelle (stdole)
+description: Weitere Informationen finden Sie in den Referenzinformationen zur StdPicture-Schnittstelle in .net. Diese Schnittstelle befindet sich im stdole-Namespace und in der stdole-Assembly (in der stdole.dll-Bibliothek).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c3b1fa2274c58061c446e42b3331e69fdf991b42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86aeaeddd1e4e68030089acbd485cc535dfd891b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705960"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105289"
 ---
 # <a name="stdpicture-interface"></a>StdPicture-Schnittstelle
 
@@ -23,8 +24,8 @@ ms.locfileid: "61705960"
 public interface StdPicture : Picture
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** `stdole`
 
-**Assembly:** gespeichert (in stdole.dll)
+**Assembly:** stdole (in stdole.dll)

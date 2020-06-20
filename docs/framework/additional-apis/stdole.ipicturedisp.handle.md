@@ -1,5 +1,6 @@
 ---
-title: IPictureDisp.Handle-Eigenschaft (gespeichert)
+title: IPictureDisp. Handle-Eigenschaft (stdole)
+description: Informieren Sie sich über die IPictureDisp. Handle-Eigenschaft in .net. Diese Eigenschaft befindet sich im stdole-Namespace und in der stdole-Assembly (in der stdole.dll-Bibliothek).
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,12 +11,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 27a081b0faee348d8ff2064aa473fef315ee5d1c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c75cb2b28801924987d42fe442fee492245fe809
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634413"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105314"
 ---
 # <a name="ipicturedisphandle-property"></a>IPictureDisp.Handle-Eigenschaft
 
@@ -27,8 +28,8 @@ int Handle { get; }
 
 <xref:System.Int32>\
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** `stdole`
 
-**Assembly:** gespeichert (in stdole.dll)
+**Assembly:** stdole (in stdole.dll)

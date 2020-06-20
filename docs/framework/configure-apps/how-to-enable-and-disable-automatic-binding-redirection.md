@@ -1,16 +1,17 @@
 ---
 title: Aktivieren oder Deaktivieren von automatisch generierten Bindungs Umleitungen
+description: Weitere Informationen finden Sie unter Aktivieren oder Deaktivieren der automatischen Bindungs Umleitung. Diese Funktion wirkt sich auf Desktop-Apps und Web-Apps aus, die auf .NET 4.5.1
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69913030"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105387"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung
 
@@ -18,7 +19,7 @@ Wenn Sie apps in Visual Studio kompilieren, die auf .NET Framework 4.5.1 und hö
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Deaktivieren von automatischen Bindungs Umleitungen in Desktop-Apps
 
-Automatische Bindungs Umleitungen sind standardmäßig für Windows-Desktop-Apps aktiviert, die auf .NET Framework 4.5.1 und höhere Versionen abzielen. Die Bindungs Umleitungen werden der Ausgabe Konfigurationsdatei (**app. config**) hinzugefügt, wenn die APP kompiliert wird, und überschreiben die Assemblyvereinheitlichung, die andernfalls möglicherweise stattfindet. Die Datei " **app. config** " der Quelldatei wird nicht geändert. Sie können diese Funktion deaktivieren, indem Sie die Projektdatei für die APP ändern oder ein Kontrollkästchen in den Eigenschaften des Projekts in Visual Studio deaktivieren.
+Automatische Bindungs Umleitungen sind standardmäßig für Windows-Desktop-Apps aktiviert, die auf .NET Framework 4.5.1 und höhere Versionen abzielen. Die Bindungs Umleitungen werden der Ausgabe Konfigurationsdatei (**app.config**) bei der Kompilierung der app hinzugefügt, und die Assemblyvereinheitlichung wird überschrieben. Die Quell **app.config** Datei wird nicht geändert. Sie können diese Funktion deaktivieren, indem Sie die Projektdatei für die APP ändern oder ein Kontrollkästchen in den Eigenschaften des Projekts in Visual Studio deaktivieren.
 
 ### <a name="disable-through-project-properties"></a>Durch Projekteigenschaften deaktivieren
 
@@ -85,9 +86,9 @@ Sie können automatische Bindungs Umleitungen in vorhandenen apps aktivieren, di
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Aktivieren von automatischen Bindungs Umleitungen in Web-Apps
 
-Bei Web-Apps werden automatische Bindungsumleitungen auf andere Weise implementiert. Da die Quell Konfigurationsdatei (**Web. config**) für Web-Apps geändert werden muss, werden die Bindungs Umleitungen nicht automatisch zur Konfigurationsdatei hinzugefügt. Allerdings benachrichtigt Visual Studio Sie bei Bindungskonflikten, und Sie können Bindungsumleitungen hinzufügen, um die Konflikte zu lösen. Da Sie immer aufgefordert werden, Bindungs Umleitungen hinzuzufügen, müssen Sie diese Funktion für eine Web-App nicht explizit deaktivieren.
+Bei Web-Apps werden automatische Bindungsumleitungen auf andere Weise implementiert. Da die Quell Konfigurationsdatei (**web.config**) für Web-Apps geändert werden muss, werden die Bindungs Umleitungen nicht automatisch zur Konfigurationsdatei hinzugefügt. Allerdings benachrichtigt Visual Studio Sie bei Bindungskonflikten, und Sie können Bindungsumleitungen hinzufügen, um die Konflikte zu lösen. Da Sie immer aufgefordert werden, Bindungs Umleitungen hinzuzufügen, müssen Sie diese Funktion für eine Web-App nicht explizit deaktivieren.
 
-So fügen Sie einer **Web. config** -Datei Bindungs Umleitungen hinzu:
+So fügen Sie einer **web.config** Datei Bindungs Umleitungen hinzu:
 
 1. Kompilieren Sie die Anwendung in Visual Studio, und prüfen Sie, ob Buildwarnungen vorliegen.
 
@@ -95,11 +96,11 @@ So fügen Sie einer **Web. config** -Datei Bindungs Umleitungen hinzu:
 
 2. Wenn Konflikte für eine Assemblybindung bestehen, wird eine Warnung angezeigt. Doppelklicken Sie auf die Warnung, oder wählen Sie die Warnung, und drücken **Sie die Eingabe**Taste.
 
-   Ein Dialogfeld, in dem Sie die erforderlichen Bindungs Umleitungen automatisch zur **Web. config** -Quelldatei hinzufügen können.
+   Ein Dialogfeld, in dem Sie die erforderlichen Bindungs Umleitungen automatisch zur Quell **web.config** Datei hinzufügen können.
 
    ![Dialogfeld der Berechtigung für die Bindungsumleitung](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [\<bindingRedirect>Gewisses](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect>-Element](./file-schema/runtime/bindingredirect-element.md)
 - [Umleiten von Assemblyversionen](redirect-assembly-versions.md)

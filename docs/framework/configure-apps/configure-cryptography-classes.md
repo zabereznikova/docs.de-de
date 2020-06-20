@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren kryptografischer Klassen
+description: Erfahren Sie, wie Computer Administratoren die standardmäßigen Kryptografiealgorithmen und Algorithmusimplementierungen konfigurieren können, die von .net und Anwendungen verwendet werden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration files [.NET Framework], cryptography
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: e53f4c5c9e24fb25b43b7f27b80ab984214eeac2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d12aae31ec78f80bea7df1bb0f37ac78dc37de2
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69927775"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105069"
 ---
 # <a name="configuring-cryptography-classes"></a>Konfigurieren kryptografischer Klassen
 Der Windows SDK ermöglicht es Computer Administratoren, die standardmäßigen Kryptografiealgorithmen und Algorithmusimplementierungen zu konfigurieren, die von den .NET Framework und entsprechend geschriebenen Anwendungen verwendet werden.  Beispielsweise kann ein Unternehmen, das über eine eigene Implementierung eines kryptografischen Algorithmus verfügt, diese Implementierung als Standardwert anstelle der in der Windows SDK gelieferten Implementierung festlegen. Obwohl verwaltete Anwendungen, die Kryptografie verwenden, immer eine explizite Bindung an eine bestimmte Implementierung treffen können, empfiehlt es sich, kryptografieobjekte mithilfe des kryptografiekonfigurationssystems zu erstellen.  

@@ -1,5 +1,6 @@
 ---
-title: IPicture.Handle-Eigenschaft (gespeichert)
+title: IPicture. Handle-Eigenschaft (stdole)
+description: Hier finden Sie Referenzinformationen zur IPicture. Handle-Eigenschaft in .net. Diese Eigenschaft ruft das Handle für das Bild ab, das in diesem Bild Objekt verwaltet wird.
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: e65be9cbccbe4e52b81b2eba7a473720eb966e83
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 85c8f2c3fcdbecd69bc9b3dc9c13f4ccea41038b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634437"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105336"
 ---
 # <a name="ipicturehandle-property"></a>IPicture.Handle-Eigenschaft
 
-Ruft das Handle für das Bild, das in diesem Bildobjekt zu einem bestimmten Ort verwaltet.
+Ruft das Handle für das Bild ab, das in diesem Bild Objekt an eine angegebene Position verwaltet wird.
 
 ```csharp
 int Handle { get; }
@@ -29,8 +30,8 @@ int Handle { get; }
 
 <xref:System.Int32>\
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** `stdole`
 
-**Assembly:** gespeichert (in stdole.dll)
+**Assembly:** stdole (in stdole.dll)
