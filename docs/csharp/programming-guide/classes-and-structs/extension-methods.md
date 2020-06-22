@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241408"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803187"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 
@@ -80,7 +80,7 @@ In der Vergangenheit war es üblich, „Sammlungsklassen“ zu erstellen, mit de
 
 Bei Verwendung einer Zwiebelarchitektur oder eines anderen geschichteten Anwendungsdesigns ist es üblich, einen Satz mit Domänenentitäten oder Datenübertragungsobjekten für die Kommunikation über Anwendungsgrenzen hinweg zu verwenden. Diese Objekte umfassen in der Regel keine oder nur minimale Funktionalität, die für alle Ebenen der Anwendung gilt. Erweiterungsmethoden können verwendet werden, um Funktionalität hinzuzufügen, die für jede Anwendungsschicht spezifisch ist, ohne das Objekt mit Methoden zu überladen, die in anderen Ebenen nicht benötigt werden oder unerwünscht sind.
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }

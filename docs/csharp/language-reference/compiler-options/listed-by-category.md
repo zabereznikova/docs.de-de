@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447042"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811684"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C#-Compileroptionen nach Kategorien sortiert
 
@@ -107,7 +107,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[/unsafe](unsafe-compiler-option.md)|Aktiviert die Kompilierung von Code, der das Schlüsselwort [unsafe](../keywords/unsafe.md) verwendet.|
 |[-utf8output](utf8output-compiler-option.md)|Zeigt die Compilerausgabe mit UTF-8-Codierung an.|
 |-parallel[+&#124;-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
-|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|
+|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA256 (Standard) oder SHA1.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|
 
 ## <a name="obsolete-options"></a>Veraltete Optionen
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 3366f718cd83a28f475fae9b4e65ce37fe7d8c7b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389494"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803201"
 ---
 # <a name="built-in-types-c-reference"></a>Integrierte Typen (C#-Referenz)
 
@@ -39,6 +39,7 @@ In der folgenden Tabelle werden die in C# integrierten [Verweistypen](../keyword
 |--------------|-------------------------|
 |[`object`](reference-types.md#the-object-type)|<xref:System.Object?displayProperty=nameWithType>|
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
+|[`dynamic`](reference-types.md#the-dynamic-type)|<xref:System.Object?displayProperty=nameWithType>|
 
 In den obigen Tabellen ist jedes C#-Typschlüsselwort aus der linken Spalte ein Alias für den entsprechenden .NET-Typ. Sie können synonym verwendet werden. In den folgenden Deklarationen werden beispielsweise Variablen des gleichen Typs deklariert:
 
@@ -53,4 +54,3 @@ Das Schlüsselwort [`void`](void.md) markiert das Fehlen eines Typs. Sie können
 
 - [C#-Referenz](../index.md)
 - [Standardwerte der C#-Typen](default-values.md)
-- [`dynamic`Schlüsselwort](reference-types.md#the-dynamic-type)
