@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Zertifikaten
+description: Erfahren Sie mehr über die Features digitaler X. 509-Zertifikate und deren Verwendung in WCF. In den Ressourcen in diesem Artikel werden diese Konzepte ausführlicher erläutert.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: e61437efd87c30758c36d642bb9269ad2966c951
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600113"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246401"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 

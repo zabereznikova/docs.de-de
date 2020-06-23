@@ -1,13 +1,14 @@
 ---
 title: Clientkonfiguration
+description: Erfahren Sie, wie Sie die WCF-Client Konfiguration verwenden, um die Adresse, die Bindung, das Verhalten und den Vertrag für einen Endpunkt anzugeben, der zum Herstellen einer Verbindung mit einem Dienst verwendet wird.
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 2d17438095e65ccf922061c03e406bab35b07c5d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c3e3d4904bad39e951e8ba69013ac95894130489
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593658"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245374"
 ---
 # <a name="client-configuration"></a>Clientkonfiguration
 Sie können die Windows Communication Foundation (WCF)-Client Konfiguration verwenden, um die Adresse, die Bindung, das Verhalten und den Vertrag, die "ABC"-Eigenschaften des Client Endpunkts anzugeben, die von Clients zum Herstellen einer Verbindung mit Dienst Endpunkten verwendet werden. Das- [\<client>](../../configure-apps/file-schema/wcf/client.md) Element verfügt über ein- [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) Element, dessen Attribute zum Konfigurieren der Endpunkt ABCs verwendet werden. Diese Attribute werden im Abschnitt [Konfigurieren von Endpunkten](#configuring-endpoints) erläutert.  
@@ -15,7 +16,7 @@ Sie können die Windows Communication Foundation (WCF)-Client Konfiguration verw
  Das [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) -Element enthält außerdem ein [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) -Element, das verwendet wird, um Einstellungen für das Importieren und Exportieren von Metadaten anzugeben, ein [\<headers>](../../configure-apps/file-schema/wcf/headers.md) -Element, das eine Auflistung von benutzerdefinierten Adress Headern enthält, und ein-Element, [\<identity>](../../configure-apps/file-schema/wcf/identity.md) das die Authentifizierung eines Endpunkts durch andere Endpunkte ermöglicht, die Nachrichten austauschen. Das [\<headers>](../../configure-apps/file-schema/wcf/headers.md) -Element und das- [\<identity>](../../configure-apps/file-schema/wcf/identity.md) Element sind Teil der <xref:System.ServiceModel.EndpointAddress> und werden im [Adress](endpoint-addresses.md) Artikel erläutert. Links zu Themen, in denen die Verwendung von Metadatenerweiterungen erläutert wird, finden Sie im Abschnitt [Konfigurieren von Metadaten](#configuring-metadata) .  
   
 ## <a name="configuring-endpoints"></a>Konfigurieren von Endpunkten  
- Die Client Konfiguration ermöglicht es dem Client, einen oder mehrere Endpunkte anzugeben, die jeweils über einen eigenen Namen, eine eigene Adresse und einen eigenen Vertrag verfügen, wobei jeweils auf das [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) -Element und das- [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Element in der Client Konfiguration verweisen, um diesen Endpunkt zu konfigurieren. Die Client Konfigurationsdatei sollte "App. config" heißen, da dies der Name ist, den die WCF-Laufzeit erwartet. Das folgende Beispiel zeigt eine Clientkonfigurationsdatei.  
+ Die Client Konfiguration ermöglicht es dem Client, einen oder mehrere Endpunkte anzugeben, die jeweils über einen eigenen Namen, eine eigene Adresse und einen eigenen Vertrag verfügen, wobei jeweils auf das [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) -Element und das- [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Element in der Client Konfiguration verweisen, um diesen Endpunkt zu konfigurieren. Die Client Konfigurationsdatei sollte mit dem Namen "App.config" benannt werden, da dies der Name ist, den die WCF-Laufzeit erwartet. Das folgende Beispiel zeigt eine Clientkonfigurationsdatei.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

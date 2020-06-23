@@ -1,5 +1,6 @@
 ---
 title: Verwenden der XmlSerializer-Klasse
+description: Erfahren Sie mehr über das XmlSerializer-Element, das WCF verwendet, um die Daten in Ihrer Anwendung in XML zu serialisieren, das zwischen Clients und Diensten übertragen wird.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7473de3f34ba543b4fabfe93167ea267f16dda5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600204"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246380"
 ---
 # <a name="using-the-xmlserializer-class"></a>Verwenden der XmlSerializer-Klasse
 
@@ -40,7 +41,7 @@ Der <xref:System.Runtime.Serialization.DataContractSerializer> , der in Verbindu
 
 WCF unterstützt auch die- <xref:System.Xml.Serialization.XmlSerializer> Klasse. Die- <xref:System.Xml.Serialization.XmlSerializer> Klasse ist nicht für WCF eindeutig. Es handelt sich um das gleiche Serialisierungsmodul, das ASP.NET-Webdienste verwenden. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse unterstützt deutlich weniger Typen als die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse, ermöglicht jedoch eine größere Kontrolle über das resultierende XML und unterstützt den XSD-Schemastandard (XML Schema definition language) stärker. Sie erfordert außerdem keine deklarativen Attribute für die serialisierbaren Typen. Weitere Informationen finden Sie im Thema zur XML-Serialisierung in der .NET Framework-Dokumentation. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse unterstützt keine Datenvertragstypen.
 
-Wenn Sie "Svcutil. exe" oder das **Dienstverweis hinzufügen** Feature in Visual Studio verwenden, um Client Code für einen Drittanbieter Dienst zu generieren, oder um auf ein Drittanbieter Schema zuzugreifen, wird automatisch ein geeignetes Serialisierungsprogramm für Sie ausgewählt. Wenn das Schema nicht mit <xref:System.Runtime.Serialization.DataContractSerializer> kompatibel ist, wird <xref:System.Xml.Serialization.XmlSerializer> ausgewählt.
+Wenn Sie Svcutil.exe oder das **Dienstverweis hinzufügen** Feature in Visual Studio zum Generieren von Client Code für einen Drittanbieter Dienst oder zum Zugreifen auf ein Drittanbieter Schema verwenden, wird automatisch ein geeignetes Serialisierungsprogramm für Sie ausgewählt. Wenn das Schema nicht mit <xref:System.Runtime.Serialization.DataContractSerializer> kompatibel ist, wird <xref:System.Xml.Serialization.XmlSerializer> ausgewählt.
 
 ## <a name="manually-switching-to-the-xmlserializer"></a>Manuelles Wechseln zu XmlSerializer
 
@@ -173,7 +174,7 @@ Beim Importieren eines Schemas, das aus `IXmlSerializable`-Typen generiert wurde
 
 - Das generierte Schema kann ein gültiges Daten Vertrags Schema sein, wie unter [Daten Vertrags Schema-Referenz](data-contract-schema-reference.md)beschrieben. In diesem Fall kann das Schema auf die übliche Weise importiert werden, und es werden normale Datenvertragstypen generiert.
 
-- Bei dem generierten Schema kann es sich auch um ein nicht gültiges Datenvertragsschema handeln. Ihre Schemaanbietermethode kann zum Beispiel Schemas mit XML-Attributen generieren, die im Datenvertragsmodell nicht unterstützt werden. In diesem Fall können Sie das Schema als `IXmlSerializable`-Typen importieren. Dieser Import Modus ist standardmäßig nicht aktiviert, kann jedoch problemlos aktiviert werden – z. b. mit dem `/importXmlTypes` Befehls Zeilenschalter zum [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Dies wird im Abschnitt [Importieren von Schemas zum Generieren von Klassen](importing-schema-to-generate-classes.md)ausführlich beschrieben. Beachten Sie, dass Sie für die Typinstanzen direkt mit den XML-Daten arbeiten müssen. Sie können auch erwägen, eine andere Serialisierungstechnologie zu verwenden, die einen größeren Schemabereich unterstützt. Weitere Informationen finden Sie im Thema zur Verwendung von `XmlSerializer`.
+- Bei dem generierten Schema kann es sich auch um ein nicht gültiges Datenvertragsschema handeln. Ihre Schemaanbietermethode kann zum Beispiel Schemas mit XML-Attributen generieren, die im Datenvertragsmodell nicht unterstützt werden. In diesem Fall können Sie das Schema als `IXmlSerializable`-Typen importieren. Dieser Import Modus ist standardmäßig nicht aktiviert, kann jedoch problemlos aktiviert werden – z. b. mit dem `/importXmlTypes` Befehls Zeilenschalter zum [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Dies wird im Abschnitt [Importieren von Schemas zum Generieren von Klassen](importing-schema-to-generate-classes.md)ausführlich beschrieben. Beachten Sie, dass Sie für die Typinstanzen direkt mit den XML-Daten arbeiten müssen. Sie können auch erwägen, eine andere Serialisierungstechnologie zu verwenden, die einen größeren Schemabereich unterstützt. Weitere Informationen finden Sie im Thema zur Verwendung von `XmlSerializer`.
 
 - Es ist ratsam, Ihre vorhandenen `IXmlSerializable`-Typen im Proxy wiederzuverwenden, anstatt neue zu generieren. In diesem Fall können Sie die Funktion mit den referenzierten Typen verwenden, die im Thema zum Importieren von Schemas zum Generieren von Typen beschrieben ist, um den wiederzuverwendenden Typ anzugeben. Dies entspricht dem Verwenden des Schalters `/reference` für „svcutil.exe“. Damit wird die Assembly angegeben, die die wiederzuverwendenden Typen enthält.
 

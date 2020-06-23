@@ -1,16 +1,17 @@
 ---
 title: Transport Sicherheit mit einem anonymen Client
+description: Lesen Sie dieses WCF-Szenario, in dem Transportsicherheit zum Authentifizieren eines Servers mithilfe eines Zertifikats verwendet wird, dem der Client vertraut. Der Client ist nicht authentifiziert.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08cfb8c1a5581f17a251224430018764bed80b0f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344759"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245010"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Transport Sicherheit mit einem anonymen Client
 
@@ -22,7 +23,7 @@ Weitere Informationen zum Verwenden eines Zertifikats mit einem Dienst finden Si
 
 ![Verwenden von Transportsicherheit mit einem anonymen Client](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
-|Merkmal|Beschreibung|
+|Merkmal|BESCHREIBUNG|
 |--------------------|-----------------|
 |Sicherheitsmodus|Transport|
 |Interoperabilität|Mit vorhandenen Webdiensten und Webclients|
@@ -34,7 +35,7 @@ Weitere Informationen zum Verwenden eines Zertifikats mit einem Dienst finden Si
 
 ## <a name="service"></a>Dienst
 
-Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eine der folgenden Aktionen aus:
+Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:
 
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.
 
@@ -47,7 +48,7 @@ Im folgenden Code wird gezeigt, wie ein Endpunkt mit Transportsicherheit erstell
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a>-Konfiguration
+### <a name="configuration"></a>Konfiguration
 
 Mit dem folgenden Code wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet. Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.
 
@@ -80,7 +81,7 @@ Mit dem folgenden Code wird derselbe Endpunkt mithilfe von Konfiguration eingeri
 
 ## <a name="client"></a>Client
 
-Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eine der folgenden Aktionen aus:
+Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:
 
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.
 
@@ -94,7 +95,7 @@ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander 
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a>-Konfiguration
+### <a name="configuration"></a>Konfiguration
 
 Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienst einzurichten.
 
@@ -121,9 +122,9 @@ Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienst 
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über die Sicherheit](security-overview.md)
+- [Sicherheitsübersicht](security-overview.md)
 - [WS-Transportsicherheit](../samples/ws-transport-security.md)
 - [Übersicht über die Transportsicherheit](transport-security-overview.md)
-- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

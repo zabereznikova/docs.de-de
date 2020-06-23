@@ -1,5 +1,6 @@
 ---
 title: Verwendung von Nachrichtenverträgen
+description: Erfahren Sie, wie Sie mit den Nachrichten Vertrags Attributen einen Nachrichten Vertrag erstellen, der die Struktur einer SOAP-Nachricht in WFC angibt.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600269"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244711"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
 Beim Entwickeln von Windows Communication Foundation (WCF)-Anwendungen achten Entwickler in der Regel auf die Datenstrukturen und Serialisierungsprobleme und müssen sich nicht mit der Struktur der Nachrichten befassen, in denen die Daten übertragen werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Angeben von Datenübertragung in Dienstverträgen](specifying-data-transfer-in-service-contracts.md).)  
@@ -213,7 +214,7 @@ public class BankingDepositLog
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>Signieren und Verschlüsseln von Teilen der Nachricht  
  Ein Nachrichtenvertrag kann angeben, ob die Header und/oder der Text der Nachricht digital signiert und verschlüsselt werden soll.  
   
- Dies wird erreicht, indem die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaften in den Attributen <xref:System.ServiceModel.MessageHeaderAttribute> und <xref:System.ServiceModel.MessageBodyMemberAttribute> festgelegt wird. Die Eigenschaft ist eine Enumeration des <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>-Typs und kann auf <xref:System.Net.Security.ProtectionLevel.None> (keine Verschlüsselung oder Signatur), <xref:System.Net.Security.ProtectionLevel.Sign> (nur digitale Signatur) oder <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (sowohl Verschlüsselung als auch digitale Signatur) festgelegt werden. Der Standardwert lautet <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+ Dies wird erreicht, indem die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaften in den Attributen <xref:System.ServiceModel.MessageHeaderAttribute> und <xref:System.ServiceModel.MessageBodyMemberAttribute> festgelegt wird. Die Eigenschaft ist eine Enumeration des <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>-Typs und kann auf <xref:System.Net.Security.ProtectionLevel.None> (keine Verschlüsselung oder Signatur), <xref:System.Net.Security.ProtectionLevel.Sign> (nur digitale Signatur) oder <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (sowohl Verschlüsselung als auch digitale Signatur) festgelegt werden. Der Standardwert ist <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
  Damit diese Sicherheitsfunktionen arbeiten, müssen Sie die Bindung und das Verhalten ordnungsgemäß konfigurieren. Wenn Sie diese Sicherheitsfunktionen ohne angemessene Konfiguration verwenden (beispielsweise der Versuch der Signierung einer Nachricht ohne Bereitstellung Ihrer Anmeldeinformationen), wird zum Validierungszeitpunkt eine Ausnahme ausgelöst.  
   

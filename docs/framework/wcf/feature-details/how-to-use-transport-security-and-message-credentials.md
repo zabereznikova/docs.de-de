@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen'
+description: Erfahren Sie, wie Sie Transportsicherheit mit Nachrichten Anmelde Informationen implementieren, die das Beste aus Transport-und Nachrichten Sicherheitsmodi in WCF bieten.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f632a4389eafc155cedcae94707c9418b6696f2c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579383"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246648"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen
 Das Sichern eines Diensts mit Transport-und Nachrichten Anmelde Informationen verwendet das beste Transport-und Nachrichten Sicherheitsmodi in Windows Communication Foundation (WCF). Während die Transport Layer Security (TLS) Integrität und Vertraulichkeit bietet, stellt die Message Layer Security (MLS) verschiedene Anmeldeinformationen bereit, die bei reinen Transportsicherheitsmechanismen nicht verfügbar sind. In diesem Thema werden die grundlegenden Schritte zur Implementierung des Transports mit Nachrichtenanmeldeinformationen mithilfe der Bindungen <xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.NetTcpBinding> veranschaulicht. Weitere Informationen zum Festlegen des Sicherheitsmodus finden Sie unter Gewusst [wie: Festlegen des Sicherheitsmodus](../how-to-set-the-security-mode.md).  

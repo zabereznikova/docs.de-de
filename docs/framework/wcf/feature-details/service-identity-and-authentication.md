@@ -1,5 +1,6 @@
 ---
 title: Dienstidentität und Authentifizierung
+description: Erfahren Sie mehr über die Endpunkt Identität eines Dienstanbieter, einen Wert, der von der Dienst-WSDL generiert wurde, die WCF zum Authentifizieren des Dienstanbieter verwendet.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 6c12c3aadf53f9fddef2f0b0124994db15565cb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600373"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246570"
 ---
 # <a name="service-identity-and-authentication"></a>Dienstidentität und Authentifizierung
 Die *Endpunkt Identität* eines dienstangs ist ein Wert, der vom Service Web Services Description Language (WSDL) generiert wird. Dieser an jeden Client weitergegebene Wert wird zum Authentifizieren des Diensts verwendet. Nachdem der Client eine Kommunikation mit einem Endpunkt initiiert und der Dienst sich gegenüber dem Client authentifiziert hat, vergleicht der Client den Wert der Endpunktidentität mit dem tatsächlichen Wert, den der Vorgang der Authentifizierung des Endpunkts zurückgegeben hat. Stimmen sie überein, kann der Client sicher sein, dass er Kontakt zu dem erwarteten Dienstendpunkt hergestellt hat. Dies dient als Schutz vor *Phishing* , indem verhindert wird, dass ein Client an einen von einem böswilligen Dienst gehosteten Endpunkt umgeleitet wird.  
@@ -32,7 +33,7 @@ Die *Endpunkt Identität* eines dienstangs ist ein Wert, der vom Service Web Ser
   
  Die Identitätsverarbeitung auf dem Client entspricht der Clientauthentifizierung des Diensts. Ein sicherer Dienst führt so lange keinen Code aus, bis die Anmeldeinformationen des Clients authentifiziert wurden. Entsprechend sendet der Client so lange keine Nachrichten an den Dienst, bis die Anmeldeinformationen des Diensts auf der Grundlage dessen, was aus den Metadaten des Diensts im Voraus bekannt ist, authentifiziert wurden.  
   
- Die <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft der <xref:System.ServiceModel.EndpointAddress>-Klasse stellt die Identität des Diensts dar, der vom Client aufgerufen wird. Der Dienst veröffentlicht die <xref:System.ServiceModel.EndpointAddress.Identity%2A> in seinen Metadaten. Wenn der Client Entwickler das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) für den Dienst Endpunkt ausführt, enthält die generierte Konfiguration den Wert der-Eigenschaft des dienstanders <xref:System.ServiceModel.EndpointAddress.Identity%2A> . Die WCF-Infrastruktur (bei Konfiguration mit Sicherheit) überprüft, ob der Dienst die angegebene Identität besitzt.  
+ Die <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft der <xref:System.ServiceModel.EndpointAddress>-Klasse stellt die Identität des Diensts dar, der vom Client aufgerufen wird. Der Dienst veröffentlicht die <xref:System.ServiceModel.EndpointAddress.Identity%2A> in seinen Metadaten. Wenn der Client Entwickler das [Service Model Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) für den Dienst Endpunkt ausführt, enthält die generierte Konfiguration den Wert der-Eigenschaft des dienstanders <xref:System.ServiceModel.EndpointAddress.Identity%2A> . Die WCF-Infrastruktur (bei Konfiguration mit Sicherheit) überprüft, ob der Dienst die angegebene Identität besitzt.  
   
 > [!IMPORTANT]
 > Die Metadaten enthalten die erwartete Identität des Diensts. Daher wird empfohlen, die Metadaten des Diensts auf sichere Weise verfügbar zu machen, indem Sie beispielsweise einen HTTPS-Endpunkt für den Dienst erstellen. Weitere Informationen finden Sie unter Gewusst [wie: Sichern von Metadatenendpunkten](how-to-secure-metadata-endpoints.md).  
@@ -42,7 +43,7 @@ Die *Endpunkt Identität* eines dienstangs ist ein Wert, der vom Service Web Ser
   
 |Identitätstyp|BESCHREIBUNG|Typisches Szenario|  
 |-------------------|-----------------|----------------------|  
-|DNS (Domain Name System)|Verwenden Sie dieses Element mit X.509-Zertifikaten oder Windows-Konten. Es vergleicht den in den Anmeldeinformationen angegebenen DNS-Namen mit dem in diesem Element angegebenen Wert.|Eine DNS-Prüfung ermöglicht Ihnen, Zertifikate mit DNS- oder Antragstellernamen zu verwenden. Wird ein Zertifikat erneut mit demselben DNS- oder Antragstellernamen ausgestellt, ist die Identitätsprüfung immer noch gültig. Bei der erneuten Ausstellung eines Zertifikats erhält es einen neuen RSA-Schlüssel, behält jedoch denselben DNS- oder Antragstellernamen. Dies bedeutet, dass Clients ihre Identitätsinformationen für den Dienst nicht aktualisieren müssen.|  
+|Domänennamenserver (DNS)|Verwenden Sie dieses Element mit X.509-Zertifikaten oder Windows-Konten. Es vergleicht den in den Anmeldeinformationen angegebenen DNS-Namen mit dem in diesem Element angegebenen Wert.|Eine DNS-Prüfung ermöglicht Ihnen, Zertifikate mit DNS- oder Antragstellernamen zu verwenden. Wird ein Zertifikat erneut mit demselben DNS- oder Antragstellernamen ausgestellt, ist die Identitätsprüfung immer noch gültig. Bei der erneuten Ausstellung eines Zertifikats erhält es einen neuen RSA-Schlüssel, behält jedoch denselben DNS- oder Antragstellernamen. Dies bedeutet, dass Clients ihre Identitätsinformationen für den Dienst nicht aktualisieren müssen.|  
 |Zertifikat Der Standardwert, wenn `ClientCredentialType` auf Certificate festgelegt ist.|Dieses Element gibt einen Base64-codierten X.509-Zertifikatswert für den Vergleich mit dem Client an.<br /><br /> Verwenden Sie dieses Element auch, wenn Sie einen CardSpace als Anmelde Informationen verwenden, um den Dienst zu authentifizieren.|Dieses Element schränkt die Authentifizierung auf ein einziges Zertifikat ein, dessen Fingerabdruckwert für die Authentifizierung verwendet wird. Dies ermöglicht eine strengere Authentifizierung, da Fingerabdruckwerte eindeutig sind. Damit ist eine Einschränkung verbunden: Wird das Zertifikat mit dem gleichen Antragstellernamen erneut ausgestellt, hat es auch einen neuen Fingerabdruck. Daher können Clients den Dienst so lange nicht prüfen, bis der neue Fingerabdruck bekannt ist. Weitere Informationen zum Ermitteln des Fingerabdrucks eines Zertifikats finden Sie unter Gewusst [wie: Abrufen des](how-to-retrieve-the-thumbprint-of-a-certificate.md)Fingerabdrucks eines Zertifikats.|  
 |Zertifikatsverweis|Identisch mit der vorher beschriebenen Zertifikatsoption. Jedoch erlaubt Ihnen dieses Element, einen Zertifikatsnamen und den Speicherort anzugeben, von dem das Zertifikat abgerufen werden kann.|Entspricht dem vorher beschriebenen Zertifikatsszenario.<br /><br /> Der Vorteil besteht darin, dass sich der Speicherort des Zertifikats ändern kann.|  
 |RSA|Dieses Element gibt einen RSA-Schlüsselwert für den Vergleich mit dem Client an. Dies ist der Zertifikatsoption ähnlich, statt des Fingerabdrucks des Zertifikats wird jedoch dessen RSA-Schlüssel verwendet.|Eine RSA-Prüfung erlaubt Ihnen, die Authentifizierung speziell auf den RSA-Schlüssel eines einzigen Zertifikats zu beschränken. Dies ermöglicht eine strengere Authentifizierung eines bestimmten RSA-Schlüssels auf Kosten des Diensts, der nicht mehr mit vorhandenen Clients zusammenarbeitet, wenn sich der RSA-Schlüsselwert ändert.|  
@@ -64,7 +65,7 @@ Die *Endpunkt Identität* eines dienstangs ist ein Wert, der vom Service Web Ser
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>Angeben der Identität für einen Client  
- Zur Entwurfszeit verwendet ein Client Entwickler in der Regel das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , um die Client Konfiguration zu generieren. Die generierte Konfigurationsdatei (vorgesehen für die Verwendung durch den Client) enthält die Identität des Servers. Der folgende Code wurde z.&#160;B. von einem Dienst generiert, der eine DNS-Identität angibt, wie im vorangehenden Beispiel gezeigt. Beachten Sie, dass der Endpunktidentitätswert des Clients dem des Diensts entspricht. Wenn in diesem Fall der Client die Windows (Kerberos)-Anmeldeinformationen für den Dienst erhält, erwartet er den Wert `contoso.com`.  
+ Zur Entwurfszeit verwendet ein Client Entwickler in der Regel das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , um die Client Konfiguration zu generieren. Die generierte Konfigurationsdatei (vorgesehen für die Verwendung durch den Client) enthält die Identität des Servers. Der folgende Code wurde z.&#160;B. von einem Dienst generiert, der eine DNS-Identität angibt, wie im vorangehenden Beispiel gezeigt. Beachten Sie, dass der Endpunktidentitätswert des Clients dem des Diensts entspricht. Wenn in diesem Fall der Client die Windows (Kerberos)-Anmeldeinformationen für den Dienst erhält, erwartet er den Wert `contoso.com`.  
 
  Wenn der Dienst statt Windows ein Zertifikat als Clientanmeldeinformationstyp angibt, wird erwartet, dass die DNS-Eigenschaft des Zertifikats den Wert `contoso.com` hat. (Wenn aber die DNS-Eigenschaft den Wert `null` hat, muss der Antragstellername des Zertifikats `contoso.com` lauten.)  
   

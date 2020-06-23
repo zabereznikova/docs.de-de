@@ -1,13 +1,14 @@
 ---
 title: Sitzungen, Instanziierung und Parallelität
+description: Erfahren Sie mehr über Sitzungen, Instanziierung und Parallelität, ihre Verwendung und die Interaktionen zwischen Ihnen im wfc.
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 070e9ed25e2c0cce1309fb27e3f6a02bb01f3d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600321"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246544"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sitzungen, Instanziierung und Parallelität
 Eine *Sitzung* ist die Korrelation (d. h. die Beziehung) aller zwischen zwei Endpunkten gesendeter Nachrichten. *Instanziierung* bezieht sich auf die Steuerung der Lebensdauer von benutzerdefinierten Dienstobjekten und den zugehörigen <xref:System.ServiceModel.InstanceContext> -Objekten. *Parallelität* bezeichnet die Kontrolle der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> ausgeführt werden.  
@@ -37,7 +38,7 @@ Eine *Sitzung* ist die Korrelation (d. h. die Beziehung) aller zwischen zwei En
   
  Client- und Dienstanwendungen interagieren auf unterschiedliche Weise mit Sitzungen. Clientanwendungen initiieren Sitzungen und empfangen und verarbeiten dann die innerhalb der Sitzung gesendeten Nachrichten. Dienstanwendungen können Sitzungen als Erweiterungspunkt verwenden, um zusätzliches Verhalten hinzuzufügen. Dies geschieht durch direkte Nutzung von <xref:System.ServiceModel.InstanceContext> oder durch Implementierung eines benutzerspezifischen Instanzenkontextanbieters.  
   
-## <a name="instancing"></a>Instanziierung  
+## <a name="instancing"></a>Instancing  
  Durch das Instanziierungsverhalten (das über die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft festgelegt wird) lässt sich steuern, wie der <xref:System.ServiceModel.InstanceContext> als Antwort auf eingehende Nachrichten erstellt wird. Standardmäßig ist jeder <xref:System.ServiceModel.InstanceContext> einem benutzerdefinierten Dienstobjekt zugeordnet. Dies bedeutet, dass (im Normalfall) auch die Instanziierung benutzerdefinierter Dienstobjekte über die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> -Eigenschaft gesteuert wird. Die <xref:System.ServiceModel.InstanceContextMode> -Enumeration definiert die Instanziierungsmodi.  
   
  Es stehen die folgenden Instanziierungsmodi zur Verfügung:  
@@ -113,5 +114,5 @@ public class CalculatorService : ICalculatorConcurrency
 - [Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert](how-to-create-a-service-that-requires-sessions.md)
 - [Vorgehensweise: Steuern der Dienstinstanzierung](how-to-control-service-instancing.md)
 - [Concurrency](../samples/concurrency.md)
-- [Instanziierung](../samples/instancing.md)
+- [Instancing](../samples/instancing.md)
 - [Sitzung](../samples/session.md)

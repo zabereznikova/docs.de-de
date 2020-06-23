@@ -1,18 +1,19 @@
 ---
 title: Vereinfachte Konfiguration für WCF-Dienste
+description: Erfahren Sie, wie Sie einen typischen Dienst und Client mithilfe von WCF implementieren und konfigurieren. Der-Dienst kommuniziert über einen Endpunkt, der in einer Konfigurationsdatei angegeben ist.
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 61720fff957bfe7a13da1d7498487342b2ee234c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 46a0c878b29de34219413a508799ddaddf507dd8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584102"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246219"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Vereinfachte Konfiguration für WCF-Dienste
 In diesem Beispiel wird veranschaulicht, wie ein typischer Dienst und Client mit Windows Communication Foundation (WCF) implementiert und konfiguriert wird. Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.  
   
- Dieser Dienst, der einen Endpunkt für die Kommunikation mit dem Dienst verfügbar macht, verwendet die vereinfachte Konfiguration in .NET Framework 4. Vor .NET Framework 4 wird der Endpunkt in der Regel in einer Konfigurationsdatei (Web. config) definiert, wie im folgenden Beispiel Konfigurations Code gezeigt.  
+ Dieser Dienst, der einen Endpunkt für die Kommunikation mit dem Dienst verfügbar macht, verwendet die vereinfachte Konfiguration in .NET Framework 4. Vor .NET Framework 4 wird der Endpunkt in der Regel in einer Konfigurationsdatei (Web.config) definiert, wie im folgenden Beispiel Konfigurations Code gezeigt.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

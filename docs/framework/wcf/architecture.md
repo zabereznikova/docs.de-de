@@ -1,17 +1,18 @@
 ---
 title: Windows Communication Foundation-Architektur
+description: Erfahren Sie mehr über die wichtigsten Ebenen der Windows Communication Foundation-Architektur, einschließlich Verträgen, Dienst Laufzeit, Messaging und Aktivierung & Hosting.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a07d5c4be2e36b8123e39a0a04d841797e34212b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320836"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245569"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation-Architektur
 In der folgenden Abbildung werden die Hauptebenen der Windows Communication Foundation (WCF)-Architektur veranschaulicht.  
@@ -29,7 +30,7 @@ In der folgenden Abbildung werden die Hauptebenen der Windows Communication Foun
   
  Die Erweiterbarkeit ermöglicht eine Anpassung der Laufzeitprozesse. Beispielsweise werden mit der Nachrichteninspektion Teile einer Nachricht überprüft, und mit der Parameterfilterung finden anhand von Filtern, die auf Nachrichtenheader angewendet werden, voreingestellte Aktionen statt.  
   
-### <a name="messaging"></a>Messaging  
+### <a name="messaging"></a>Nachrichten  
  Die Messaging Schicht besteht aus *Kanälen*. Ein Kanal ist eine Komponete, die eine Nachricht in bestimmter Weise verarbeitet, z.&#160;B. durch Authentifizierung. Ein Satz von Kanälen wird auch als *Kanal Stapel*bezeichnet. Kanäle arbeiten mit Nachrichten und Nachrichtenheadern. Die Dienstlaufzeitebene hingegen verarbeitet hauptsächlich den Inhalt des Nachrichtentexts.  
   
  Es gibt zwei Arten von Kanälen: Transportkanäle und Protokollkanäle.  
@@ -45,7 +46,7 @@ In der folgenden Abbildung werden die Hauptebenen der Windows Communication Foun
   
  Dienste können auch *gehostet*werden oder in einer ausführbaren Datei ausgeführt werden, die von einem externen Agent verwaltet wird, z. b. IIS oder Windows Activation Service (was). Was ermöglicht die automatische Aktivierung von WCF-Anwendungen bei der Bereitstellung auf einem Computer mit was. Sie können Dienste gegebenenfalls manuell als ausführbare Dateien (EXE-Dateien) ausführen. Ein Dienst kann auch automatisch als Windows-Dienst ausgeführt werden. Com+-Komponenten können auch als WCF-Dienste gehostet werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Was ist die Windows Communication Foundation?](whats-wcf.md)
 - [Wesentliche Windows Communication Foundation-Begriffe](fundamental-concepts.md)

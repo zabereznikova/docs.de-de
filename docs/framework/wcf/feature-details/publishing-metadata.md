@@ -1,15 +1,16 @@
 ---
 title: Veröffentlichen von Metadaten
+description: Erfahren Sie, wie WCF-Dienste Metadaten veröffentlichen, indem Sie einen oder mehrere Metadatenendpunkte veröffentlichen und die Metadaten mithilfe von Standardprotokollen verfügbar machen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-ms.openlocfilehash: 456eecde88fec182d3234c20a4f01971fd045bb8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2aa6d877db4e5b09b4c594e6e87b63fb6c04703b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596759"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244958"
 ---
 # <a name="publishing-metadata"></a>Veröffentlichen von Metadaten
 Windows Communication Foundation (WCF)-Dienste veröffentlichen Metadaten, indem Sie einen oder mehrere Metadatenendpunkte veröffentlichen. Die Veröffentlichung von Dienstmetadaten macht die Metadaten über die Nutzung standardisierter Protokolle verfügbar, z. B. WS-MetadataExchange (MEX) und HTTP/GET-Anforderungen. Metadatenendpunkte sind anderen Dienstendpunkten dahingehend ähnlich, dass sie über eine Adresse, eine Bindung und einen Vertrag verfügen und sie per Konfiguration oder in einem imperativen Code zu einem Diensthost hinzugefügt werden können.  
@@ -22,7 +23,7 @@ Windows Communication Foundation (WCF)-Dienste veröffentlichen Metadaten, indem
  Das <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> fügt dem Diensthost eine <xref:System.ServiceModel.Description.ServiceMetadataExtension>-Instanz als Erweiterung hinzu. Die <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> stellt die Implementierung für die Metadaten bereit, die Protokolle veröffentlichen. Sie können darüber hinaus <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> verwenden, um die Metadaten des Diensts bei Laufzeit abzurufen, indem Sie auf die <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType>-Eigenschaft zugreifen.  
   
 ### <a name="mex-metadata-endpoints"></a>MEX-Metadatenendpunkte  
- Fügen Sie Dienstendpunkte zum Diensthost hinzu, die den Dienstvertrag `IMetadataExchange` verwenden, um Metadatenendpunkte hinzuzufügen, die das MEX-Protokoll verwenden. WCF enthält eine <xref:System.ServiceModel.Description.IMetadataExchange> Schnittstelle mit diesem Dienstvertrags Namen, die Sie als Teil des WCF-Programmiermodells verwenden können. WS-MetadataExchange-Endpunkte oder MEX-Endpunkte können eine der vier Standard Bindungen verwenden, die von den statischen Factorymethoden für die-Klasse verfügbar gemacht werden, <xref:System.ServiceModel.Description.MetadataExchangeBindings> um die von WCF-Tools, wie Svcutil. exe, verwendeten Standard Bindungen abzugleichen. Sie können auch MEX-Metadatenendpunkte mithilfe einer eigenen benutzerdefinierten Bindung konfigurieren.  
+ Fügen Sie Dienstendpunkte zum Diensthost hinzu, die den Dienstvertrag `IMetadataExchange` verwenden, um Metadatenendpunkte hinzuzufügen, die das MEX-Protokoll verwenden. WCF enthält eine <xref:System.ServiceModel.Description.IMetadataExchange> Schnittstelle mit diesem Dienstvertrags Namen, die Sie als Teil des WCF-Programmiermodells verwenden können. WS-MetadataExchange-Endpunkte oder MEX-Endpunkte können eine der vier Standard Bindungen verwenden, die von den statischen Factorymethoden für die-Klasse verfügbar gemacht werden, <xref:System.ServiceModel.Description.MetadataExchangeBindings> um den Standard Bindungen zu entsprechen, die von WCF-Tools wie Svcutil.exe verwendet werden. Sie können auch MEX-Metadatenendpunkte mithilfe einer eigenen benutzerdefinierten Bindung konfigurieren.  
   
 ### <a name="http-get-metadata-endpoints"></a>HTTP-GET-Metadatenendpunkte  
  Zum Hinzufügen eines Metadatenendpunkts zu Ihrem Dienst, der auf HTTP/GET-Anforderungen antwortet, legen Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>-Eigenschaft auf dem <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> auf `true` fest. Darüber hinaus können Sie einen Metadatenendpunkt konfigurieren, der HTTPS verwendet, indem Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>-Eigenschaft auf dem <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> auf `true` festlegen.  

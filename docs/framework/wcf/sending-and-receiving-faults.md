@@ -1,5 +1,6 @@
 ---
 title: Senden und Empfangen von Fehlern
+description: Erfahren Sie, wie ein Dienst-oder Duplex Client SOAP-Fehler senden kann, wenn ein Fehlerzustand auftritt und wie eine Client-oder Dienst Anwendung diese Fehler verarbeitet.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: dc9dcb5d8e36984d1e5a2e5c5124e74509de7f3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 23f63fde2755a29cd545d3aefe699cad8dbecb3b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320225"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244321"
 ---
 # <a name="sending-and-receiving-faults"></a>Senden und Empfangen von Fehlern
 
@@ -29,7 +30,7 @@ Um einen deklarierten SOAP-Fehler zu senden, erkennen Sie die Fehlerbedingung, z
 [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
 [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]
 
-Um die `GreetingFault`-Fehlerinformation an den Client zu übermitteln, fangen Sie die entsprechende Fehlerbedingung ab, und lösen Sie eine <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> vom Typ `GreetingFault` mit einem neuen `GreetingFault`-Objekt als Argument aus, wie im folgenden Codebeispiel dargestellt. Wenn es sich bei dem Client um eine WCF-Client Anwendung handelt, wird dies als verwaltete Ausnahme angezeigt, bei der der Typ <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> vom Typ "`GreetingFault`" ist.
+Um die `GreetingFault`-Fehlerinformation an den Client zu übermitteln, fangen Sie die entsprechende Fehlerbedingung ab, und lösen Sie eine <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> vom Typ `GreetingFault` mit einem neuen `GreetingFault`-Objekt als Argument aus, wie im folgenden Codebeispiel dargestellt. Wenn es sich bei dem Client um eine WCF-Client Anwendung handelt, wird dies als verwaltete Ausnahme angezeigt, bei der der Typ <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> vom Typ ist `GreetingFault` .
 
 [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
 [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]
@@ -39,11 +40,11 @@ Um die `GreetingFault`-Fehlerinformation an den Client zu übermitteln, fangen S
 Das Senden von nicht deklarierten Fehlern kann sehr nützlich sein, um Probleme in WCF-Anwendungen schnell zu diagnostizieren und zu debuggen, aber seine Nützlichkeit als Debugtool ist eingeschränkt Allgemeiner gesagt, ist es empfehlenswert, beim Debuggen die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaft zu verwenden. Wenn Sie diesen Wert auf true festlegen, erfahren Clients solche Fehler als <xref:System.ServiceModel.FaultException%601>-Ausnahmen des Typs <xref:System.ServiceModel.ExceptionDetail>.
 
 > [!IMPORTANT]
-> Da von verwalteten Ausnahmen interne Anwendungsinformationen verfügbar gemacht werden können, kann das Festlegen von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` ermöglichen, dass WCF-Clients Informationen zu internen Dienst Vorgangs Ausnahmen, einschließlich persönlich identifizierbarer oder anderer sensibler, abrufen können. Informationen.
+> Da verwaltete Ausnahmen interne Anwendungsinformationen verfügbar machen können, <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> kann das Festlegen <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> von oder auf das `true` Abrufen von Informationen über interne Dienst Vorgangs Ausnahmen, einschließlich personenbezogener oder anderer sensibler Informationen, ermöglichen.
 >
-> Daher wird die Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> für <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder `true` nur für das vorübergehende Debuggen einer Dienstanwendung empfohlen. Außerdem beinhaltet die WSDL für eine Methode, die nicht behandelte verwaltete Ausnahmen auf diese Weise zurückgibt, keinen Vertrag für die <xref:System.ServiceModel.FaultException%601> vom Typ <xref:System.ServiceModel.ExceptionDetail>. Clients müssen die Möglichkeit eines unbekannten SOAP-Fehlers erwarten (zurückgegeben an WCF-Clients als <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Objekte), um die Debuginformationen ordnungsgemäß abzurufen.
+> Daher wird die Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> für <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder `true` nur für das vorübergehende Debuggen einer Dienstanwendung empfohlen. Außerdem beinhaltet die WSDL für eine Methode, die nicht behandelte verwaltete Ausnahmen auf diese Weise zurückgibt, keinen Vertrag für die <xref:System.ServiceModel.FaultException%601> vom Typ <xref:System.ServiceModel.ExceptionDetail>. Clients müssen die Möglichkeit eines unbekannten SOAP-Fehlers erwarten (zurückgegeben an WCF-Clients als <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> Objekte), um die Debuginformationen ordnungsgemäß abzurufen.
 
-Um einen undeklarierten SOAP-Fehler zu senden, lösen Sie ein <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Objekt aus (d. h. nicht den generischen Typ <xref:System.ServiceModel.FaultException%601>), und übergeben Sie die Zeichenfolge dem Konstruktor. Diese wird für die WCF-Client Anwendungen als ausgelöst, <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Ausnahme ausgelöst wird, wenn die Zeichenfolge durch Aufrufen der <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>-Methode verfügbar ist.
+Um einen undeklarierten SOAP-Fehler zu senden, lösen Sie ein <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Objekt aus (d. h. nicht den generischen Typ <xref:System.ServiceModel.FaultException%601>), und übergeben Sie die Zeichenfolge dem Konstruktor. Diese wird für die WCF-Client Anwendungen als Ausnahme ausgelöst, <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> Wenn die Zeichenfolge durch Aufrufen der- <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> Methode verfügbar ist.
 
 > [!NOTE]
 > Wenn Sie einen SOAP-Fehler vom Typ Zeichenfolge deklarieren und dies dann in Ihrem Service als <xref:System.ServiceModel.FaultException%601> auslösen, wobei der Typparameter eine <xref:System.String?displayProperty=nameWithType> ist, wird der Zeichenfolgenwert der <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType>-Eigenschaft zugewiesen und ist nicht über <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> verfügbar.
@@ -67,7 +68,7 @@ Die <xref:System.ServiceModel.CommunicationException>-Klasse verfügt über zwei
 Am Client werden <xref:System.ServiceModel.FaultException%601>-Ausnahmen ausgelöst, wenn ein im Vorgangsvertrag angegebener Fehler als Antwort auf einen bidirektionalen Vorgang empfangen wird (d. h. eine Methode mit einem <xref:System.ServiceModel.OperationContractAttribute>-Attribut, bei dem <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> auf `false` festgelegt ist).
 
 > [!NOTE]
-> Wenn für einen WCF-Dienst die <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaft auf `true` festgelegt ist, wird dies vom Client als nicht deklarierte <xref:System.ServiceModel.FaultException%601> des Typs <xref:System.ServiceModel.ExceptionDetail> festgelegt. Clients können diesen bestimmten Fehler entweder abfangen oder den Fehler in einem Catch-Block für <xref:System.ServiceModel.FaultException> behandeln.
+> Wenn für einen WCF-Dienst die- <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> Eigenschaft oder die- <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> Eigenschaft auf festgelegt ist, hat `true` der Client diese als nicht deklarierten <xref:System.ServiceModel.FaultException%601> Typ <xref:System.ServiceModel.ExceptionDetail> . Clients können diesen bestimmten Fehler entweder abfangen oder den Fehler in einem Catch-Block für <xref:System.ServiceModel.FaultException> behandeln.
 
 In der Regel sind nur <xref:System.ServiceModel.FaultException%601>-, <xref:System.TimeoutException>- und <xref:System.ServiceModel.CommunicationException>-Ausnahmen für Clients und Dienste relevant.
 
@@ -112,10 +113,10 @@ Das folgende Codebeispiel veranschaulicht die Behandlung von SOAP-Fehlerausnahme
 [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
 [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Erwartete Ausnahmen](./samples/expected-exceptions.md)
-- [Verwenden von schließen und Abbrechen zum Freigeben von WCF-Client Ressourcen](./samples/use-close-abort-release-wcf-client-resources.md)
+- [Freigeben von WCF-Clientressourcen mit „Close“ und „Abort“](./samples/use-close-abort-release-wcf-client-resources.md)

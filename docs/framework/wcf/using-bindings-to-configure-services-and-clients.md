@@ -1,15 +1,16 @@
 ---
 title: Verwenden von Bindungen, um Dienste und Clients zu konfigurieren
+description: Bindungen enthalten Konfigurationsinformationen, die von WFC-Clients oder-Diensten verwendet werden. Erfahren Sie, wie Sie Bindungen definieren und eine Bindung für einen Dienst Endpunkt angeben.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: dd83072d3a1c76279fcc00ea5b0a4a41e278e10a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 60db37d4381191314e9d5588dd61015a7078e84d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321513"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245933"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Verwenden von Bindungen, um Dienste und Clients zu konfigurieren
 Bindungen sind Objekte, die die zum Herstellen einer Verbindung zu einem Endpunkt erforderlichen Kommunikationsdetails angeben. Genauer gesagt enthalten Bindungen Konfigurationsinformationen, die zum Erstellen der Client- oder Dienstlaufzeit durch Festlegen der Merkmale von Transporten, Übertragungsformaten (Nachrichtencodierung) und Protokollen für den entsprechenden Endpunkt oder Clientkanal verwendet werden. Um einen funktionierenden Windows Communication Foundation (WCF)-Dienst zu erstellen, ist für jeden Endpunkt im Dienst eine Bindung erforderlich. In diesem Thema wird erläutert, was Bindungen sind, wie sie definiert werden und wie eine bestimmte Bindung für einen Endpunkt angegeben wird.  
@@ -33,14 +34,14 @@ Bindungen sind Objekte, die die zum Herstellen einer Verbindung zu einem Endpunk
   
 - <xref:System.ServiceModel.WSHttpBinding>: Eine für Verbindungen zu Endpunkten geeignete HTTP-Protokollbindung, die den Webdienstespezifikations-Protokollen entspricht.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: verwendet die binäre .net-Codierungs-und-Rahmen Technologien zusammen mit dem Windows Named Pipe-Transport, um eine Verbindung mit anderen WCF-Endpunkten auf dem gleichen Computer herzustellen.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet die binäre .NET-Codierung und Rahmen Technologien zusammen mit dem Windows Named Pipe-Transport, um eine Verbindung mit anderen WCF-Endpunkten auf dem gleichen Computer herzustellen.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: verwendet die binäre .net-Codierungs-und-Rahmen Technologien in Verbindung mit dem Message Queuing (auch bekannt als MSMQ), um Nachrichten Verbindungen in der Warteschlange mit anderen WCF-Endpunkten zu erstellen.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Verwendet die binäre .net-Codierungs-und-Rahmen Technologien zusammen mit dem Message Queuing (auch als MSMQ bezeichnet), um Nachrichten Verbindungen in der Warteschlange mit anderen WCF-Endpunkten zu erstellen.  
   
  Eine umfassende Liste der vom System bereitgestellten Bindungen mit Beschreibungen finden Sie unter vom [System bereitgestellte Bindungen](system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Benutzerdefinierte Bindungen  
- Wenn die Auflistung vom System bereitgestellter Bindungen nicht die richtige Kombination von Funktionen aufweist, die für eine Dienstanwendung erforderlich ist, können Sie eine <xref:System.ServiceModel.Channels.CustomBinding>-Bindung erstellen. Weitere Informationen zu den Elementen einer <xref:System.ServiceModel.Channels.CustomBinding>-Bindung finden Sie unter [\<custombinding >](../configure-apps/file-schema/wcf/custombinding.md) und [benutzerdefinierte Bindungen](./extending/custom-bindings.md).  
+ Wenn die Auflistung vom System bereitgestellter Bindungen nicht die richtige Kombination von Funktionen aufweist, die für eine Dienstanwendung erforderlich ist, können Sie eine <xref:System.ServiceModel.Channels.CustomBinding>-Bindung erstellen. Weitere Informationen zu den Elementen einer <xref:System.ServiceModel.Channels.CustomBinding> Bindung finden Sie unter [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) und [benutzerdefinierte Bindungen](./extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Verwenden von Bindungen  
  Das Verwenden von Bindungen umfasst zwei grundlegende Schritte:  
@@ -56,7 +57,7 @@ Bindungen sind Objekte, die die zum Herstellen einer Verbindung zu einem Endpunk
   
 - [Tutorial: Erstellen eines Windows Communication Foundation Clients](how-to-create-a-wcf-client.md) bietet ein Beispiel für das Erstellen eines Clients mithilfe der-Konfiguration.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über die Endpunkterstellung](endpoint-creation-overview.md)
 - [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](how-to-specify-a-service-binding-in-configuration.md)

@@ -1,5 +1,6 @@
 ---
 title: Delegierung und Identitätswechsel mit WCF
+description: Erfahren Sie mehr über die Methoden des Identitäts Wechsels und der Delegierung, die WCF verwendet, um den Client Zugriff auf die Ressourcen einer Dienst Domäne zu beschränken.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599255"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245075"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegierung und Identitätswechsel mit WCF
 Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um den Clientzugriff auf die Ressourcen einer Dienstdomäne zu beschränken. Dienstdomänenressourcen können entweder Computerressourcen, wie lokale Dateien (Identitätswechsel), oder eine Ressource auf einem anderen Computer, z. B. eine Dateifreigabe (Delegierung), sein. Eine Beispielanwendung finden Sie unter [Impersonating the Client](../samples/impersonating-the-client.md). Ein Beispiel zur Verwendung von Identitätswechsel finden Sie unter [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md).  

@@ -1,13 +1,14 @@
 ---
 title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
+description: Verwenden Sie Service Trace Viewer, um Ablauf Verfolgungs Meldungen im Protokoll zusammenzuführen, anzuzeigen und zu filtern, sodass Sie Probleme bei WCF-Diensten diagnostizieren, reparieren und überprüfen können.
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 543b0e714343cdb8078861ceb31e4f8035e20afd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0ad6094965291a965346522688a8334abbd4e6b3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321216"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244568"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
 
@@ -17,7 +18,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool unterstützt Si
 
 Diagnoseablaufverfolgungen stellen Informationen bereit, die Aufschluss darüber geben, was beim Ausführen der Vorgänge in der Anwendung geschieht. Wie der Name bereits andeutet, können Sie Vorgänge von der Quelle zum Ziel und durch Zwischenpunkte hindurch verfolgen.
 
-Sie können die Ablauf Verfolgung mithilfe der Konfigurationsdatei der Anwendung konfigurieren – entweder Web. config für im Web gehostete Anwendungen oder *appname*. config für selbst gehostete Anwendungen. Im Folgenden finden Sie ein Beispiel dazu:
+Sie können die Ablauf Verfolgung mithilfe der Konfigurationsdatei der Anwendung konfigurieren – Web.config entweder für im Internet gehostete Anwendungen oder *appname*. config für selbst gehostete Anwendungen. Hier ein Beispiel:
 
 ```xml
 <system.diagnostics>
@@ -36,15 +37,15 @@ Sie können die Ablauf Verfolgung mithilfe der Konfigurationsdatei der Anwendung
 </system.diagnostics>
 ```
 
-In diesem Beispiel werden Name und Typ des Ablaufverfolgungslisteners angegeben. Der Name des Listeners ist `sdt`, und der standardmäßige .NET Framework-Ablaufverfolgungslistener (System.Diagnostics.XmlWriterTraceListener) wird als Typ hinzugefügt. Das `initializeData`-Attribut wird verwendet, um den Namen der Protokolldatei für diesen Listener auf `SdrConfigExample.e2e` festzulegen. Für die Protokolldatei können Sie einen einfachen Dateinamen durch einen vollqualifizierten Pfad ersetzen.
+In diesem Beispiel werden Name und Typ des Ablaufverfolgungslisteners angegeben. Der Name des Listeners ist `sdt`, und der standardmäßige .NET Framework-Ablaufverfolgungslistener (System.Diagnostics.XmlWriterTraceListener) wird als Typ hinzugefügt. Das- `initializeData` Attribut wird verwendet, um den Namen der Protokolldatei für diesen Listener festzulegen `SdrConfigExample.e2e` . Für die Protokolldatei können Sie einen einfachen Dateinamen durch einen vollqualifizierten Pfad ersetzen.
 
 Mit dem Beispiel wird eine Datei namens "SdrConfigExample.e2e" im Stammverzeichnis erstellt. Wenn Sie die Datei mit dem Trace Viewer öffnen, wie im Abschnitt "öffnen und Anzeigen von WCF-Ablauf Verfolgungs Dateien" beschrieben, können Sie alle gesendeten Nachrichten sehen.
 
 Die Ablaufverfolgungsebene wird von der `switchValue`-Einstellung gesteuert. Die verfügbaren Ablaufverfolgungsebenen werden in der folgenden Tabelle beschrieben.
 
-|Ablaufverfolgungsebene|Beschreibung|
+|Ablaufverfolgungsebene|BESCHREIBUNG|
 |-----------------|-----------------|
-|Kritisch|-Protokolliert Fehler-und Ereignisprotokoll Einträge sowie Korrelations Informationen für die Ablauf Verfolgung. Im Folgenden finden Sie einige Beispiele für die Verwendung der Critical-Ebene:<br />-Ihre AppDomain ist aufgrund einer nicht behandelten Ausnahme ausgefallen.<br />-Die Anwendung kann nicht gestartet werden.<br />-Die Meldung, die den Fehler verursacht hat, stammt aus dem Prozess MyApp. exe.|
+|Kritisch|-Protokolliert Fehler-und Ereignisprotokoll Einträge sowie Korrelations Informationen für die Ablauf Verfolgung. Im Folgenden finden Sie einige Beispiele für die Verwendung der Critical-Ebene:<br />-Ihre AppDomain ist aufgrund einer nicht behandelten Ausnahme ausgefallen.<br />-Die Anwendung kann nicht gestartet werden.<br />-Die Meldung, die den Fehler verursacht hat, stammt aus dem Prozess MyApp.exe.|
 |Fehler|-Protokolliert alle Ausnahmen. Sie können die Error-Ebene in den folgenden Situationen verwenden:<br />-Der Code ist aufgrund einer ungültigen Umwandlungs Ausnahme abgestürzt.<br />-Die Ausnahme "Fehler beim Erstellen eines Endpunkts" bewirkt, dass Ihre Anwendung beim Start fehlschlägt.|
 |Warnung|-Es ist eine Bedingung vorhanden, die möglicherweise zu einem Fehler oder einem kritischen Fehler führt. Sie können diese Ebene in folgenden Situationen verwenden:<br />-Die Anwendung empfängt mehr Anforderungen, als die einschränkeneinstellungen zulassen.<br />-Die empfangende Warteschlange ist 98 Prozent der konfigurierten Kapazität.|
 |Information|-Nachrichten, die für die Überwachung und Diagnose des Systemstatus, der Leistungsmessung oder der Profilerstellung hilfreich sind. Sie können solche Informationen zur Kapazitätsplanung und Leistungsverwaltung nutzen. Sie können diese Ebene in folgenden Situationen verwenden:<br />-Ein Fehler ist aufgetreten, nachdem die Nachricht die AppDomain erreicht und deserialisiert wurde.<br />-Fehler beim Erstellen der HTTP-Bindung.|
@@ -53,7 +54,7 @@ Die Ablaufverfolgungsebene wird von der `switchValue`-Einstellung gesteuert. Die
 
  Mit `add` können Sie den Namen und den Typ des Ablaufverfolgungslisteners angeben, den Sie verwenden möchten. In der Beispielkonfiguration wird der Listener `sdt` genannt und der standardmäßige .NET Framework-Ablaufverfolgungslistener (`System.Diagnostics.XmlWriterTraceListener`) wird als Typ hinzugefügt. Verwenden Sie `initializeData`, um den Namen der Protokolldatei für diesen Listener festzulegen. Außerdem können Sie einen einfachen Dateinamen durch einen vollqualifizierten Pfad ersetzen.
 
-Beginnend mit .NET Framework 4,8 werden ComboBox-Steuerelemente in einigen Designs mit hohem Kontrast in der richtigen Farbe angezeigt. Sie können diese Änderung deaktivieren, indem Sie die folgende Einstellung aus der Datei *SvcTraceViewer. exe. config* entfernen:
+Beginnend mit .NET Framework 4,8 werden ComboBox-Steuerelemente in einigen Designs mit hohem Kontrast in der richtigen Farbe angezeigt. Sie können diese Änderung deaktivieren, indem Sie die folgende Einstellung aus der *svcTraceViewer.exe.config* Datei entfernen:
 
 ```xml
 <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
@@ -75,7 +76,7 @@ Service Trace Viewer unterstützt drei Dateitypen:
 
 ##### <a name="to-open-a-trace-file"></a>So öffnen Sie eine Ablaufverfolgungsdatei
 
-1. Starten Sie Service Trace Viewer, indem Sie ein Befehlsfenster verwenden, um zu Ihrem WCF-Installationsverzeichnis (c:\Programme\Microsoft SDKs\Windows\v6.0\Bin) zu navigieren, und geben Sie dann `SvcTraceViewer.exe` ein.
+1. Starten Sie Service Trace Viewer, indem Sie ein Befehlsfenster verwenden, um zu Ihrem WCF-Installationsverzeichnis (c:\Programme\Microsoft SDKs\Windows\v6.0\Bin) zu navigieren, und geben Sie dann ein `SvcTraceViewer.exe` .
 
 > [!NOTE]
 > Das Service Trace Viewer-Tool kann zwei Dateitypen zuweisen: .svclog und .stvproj. Sie können zwei Parameter in der Befehlszeile verwenden, um die Dateierweiterungen zu registrieren und deren Registrierung aufzuheben.
@@ -291,11 +292,11 @@ Sie können auf eine vorhandene Ablaufverfolgung klicken und auf Grundlage der S
 
 2. Klicken Sie oben im Ablauf verfolgungsbereich auf die Schaltfläche **benutzerdefinierten Filter erstellen** .
 
-3. Geben Sie im angezeigten Dialogfeld einen Namen für den Filter ein. Geben Sie in diesem Beispiel `Thread ID` ein. Sie können auch eine Beschreibung des Filters eingeben.
+3. Geben Sie im angezeigten Dialogfeld einen Namen für den Filter ein. Geben Sie in diesem Beispiel ein `Thread ID` . Sie können auch eine Beschreibung des Filters eingeben.
 
-4. In der Strukturansicht links wird die Struktur des Ablaufverfolgungsdatensatzes angezeigt, den Sie in Schritt 1 ausgewählt haben. Wechseln Sie zu dem Element, für das Sie eine Bedingung erstellen möchten. Navigieren Sie in diesem Beispiel zu der ThreadID, die sich im Knoten "XPath: /E2ETraceEvent/System/Execution/@ThreadID" befindet. Doppelklicken Sie auf das ThreadID-Attribut in der Strukturansicht. Hierdurch wird rechts im Dialogfeld ein Ausdruck für das Attribut erstellt.
+4. In der Strukturansicht links wird die Struktur des Ablaufverfolgungsdatensatzes angezeigt, den Sie in Schritt 1 ausgewählt haben. Wechseln Sie zu dem Element, für das Sie eine Bedingung erstellen möchten. Navigieren Sie in diesem Beispiel zu der ThreadID, die sich im XPath:- /E2ETraceEvent/System/Execution/@ThreadID Knoten befindet. Doppelklicken Sie auf das ThreadID-Attribut in der Strukturansicht. Hierdurch wird rechts im Dialogfeld ein Ausdruck für das Attribut erstellt.
 
-5. Ändern Sie das Feld "Parameter" für die ThreadID-Bedingung von "None" in "{0}". Dieser Schritt aktiviert den ThreadID-Wert, der beim Anwenden des Filters konfiguriert werden soll. (Siehe den Abschnitt zum Anwenden eines Filters.) Sie können bis zu vier Parameter definieren. Bedingungen werden mit dem OR-Operator kombiniert.
+5. Ändern Sie das Feld Parameter für die ThreadID-Bedingung von None in " {0} ". Dieser Schritt aktiviert den ThreadID-Wert, der beim Anwenden des Filters konfiguriert werden soll. (Siehe den Abschnitt zum Anwenden eines Filters.) Sie können bis zu vier Parameter definieren. Bedingungen werden mit dem OR-Operator kombiniert.
 
 6. Klicken Sie auf **OK** , um den Filter zu erstellen.
 
@@ -322,7 +323,7 @@ Sobald ein benutzerdefinierter Filter erstellt wurde, kann er über die Filtersy
 
 2. Klicken Sie auf **jetzt filtern**, und beobachten Sie das Ergebnis des Vorgangs.
 
-Wenn der Filter mehrere Parameter verwendet, geben Sie diese mithilfe von ";" als Trennzeichen in das Feld **Suchen** nach ein. Die folgende Zeichenfolge gibt zum Beispiel drei Parameter an: '1;findValue;text'. Der Viewer wendet ' 1 ' auf den Parameter {0} des Filters an. "findValue" und "Text" werden auf {1} bzw. {2} angewendet.
+Wenn der Filter mehrere Parameter verwendet, geben Sie diese mithilfe von ";" als Trennzeichen in das Feld **Suchen** nach ein. Die folgende Zeichenfolge gibt zum Beispiel drei Parameter an: '1;findValue;text'. Der Viewer wendet ' 1 ' auf den {0} Parameter des Filters an. "findValue" und "Text" werden auf {1} {2} bzw. angewendet.
 
 ###### <a name="sharing-custom-filters"></a>Freigeben von benutzerdefinierten Filtern
 
@@ -342,7 +343,7 @@ So exportieren Sie einen benutzerdefinierten Filter
 
 2. Wählen Sie im aufgerufenen Dialogfeld den Filter, den Sie exportieren möchten.
 
-3. Klicken Sie auf die Schaltfläche **exportieren** .
+3. Klicken Sie auf die Schaltfläche **Exportieren**.
 
 4. Geben Sie den Namen und den Speicherort der benutzerdefinierten Filter Definitionsdatei (. stvcf) an, und klicken Sie auf die Schaltfläche **Speichern** .
 
@@ -451,45 +452,45 @@ Im folgenden finden Sie eine Liste von Symbolen, die das Service Trace Viewer-To
 
 |Symbol|Beschreibung|
 |----------|-----------------|
-|![Warnungs Ablauf Verfolgung](./media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-Bada-bcb27409da58")|Warnungsablaufverfolgung: Eine Ablaufverfolgung, die auf der Warnebene ausgegeben wird.|
-|![Fehler Ablauf Verfolgung](./media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f 6D-9226-d52125db69ca")|Fehlerablaufverfolgung: Eine Ablaufverfolgung, die auf der Fehlerebene ausgegeben wird.|
-|![Aktivitäts Start-Ablauf Verfolgung:](./media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f 91-5s80-4a95-afe8-0b6acd6e0317")|Aktivitätsstart-Ablaufverfolgung: Eine Ablaufverfolgung, die den Beginn einer Aktivität markiert. Enthält den Namen der Aktivität. Als Anwendungsentwickler sollten Sie eine Aktivitätsstart-Ablaufverfolgung pro Aktivitäts-ID und Prozess oder Thread definieren.<br /><br /> Wenn die Aktivitäts-ID über die Ablaufverfolgungsquellen der Ablaufverfolgungskorrelation hinweg propagiert wird, können Sie mehrere Starts für dieselbe Aktivitäts-ID sehen (einen pro Ablaufverfolgungsquelle). Die Start-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
-|Ablauf ![Verfolgung für Aktivitäts Beendigung](./media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Aktivitätsstopp-Ablaufverfolgung: Eine Ablaufverfolgung, die das Ende einer Aktivität markiert. sein. Enthält den Namen der Aktivität. Als Anwendungsentwickler sollten Sie eine Aktivitätsstopp-Ablaufverfolgung pro Aktivitäts-ID und Ablaufverfolgungsquelle definieren. Es werden keine Ablaufverfolgungen von einer bestimmten Ablaufverfolgungsquelle angezeigt, nachdem die Ablaufverfolgungsquelle einen Aktivitätsstopp ausgegeben hat, es sei denn, die Ablaufverfolgungszeit weist eine grobe Granularität auf. Ist das der Fall, überlappen sich zwei Ablaufverfolgungen mit der gleichen Zeit, einschließlich eines Stopps, möglicherweise bei der Anzeige. Wenn die Aktivitäts-ID über die Ablaufverfolgungsquellen der Ablaufverfolgungskorrelation hinweg propagiert wird, können Sie mehrere Stopps für dieselbe Aktivitäts-ID sehen (einen pro Ablaufverfolgungsquelle). Die Stoppablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
-|![Aktivität Suspend Trace](./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6b7f 4191-DF2B-4592-8998-8379769e2d32")|Aktivität anhalten-Ablaufverfolgung: Eine Ablaufverfolgung, die markiert, wann eine Aktivität angehalten wurde. Es werden erst Ablaufverfolgungen in einer angehaltenen Aktivität ausgegeben, wenn die Aktivität fortgesetzt wird. Eine angehaltene Aktivität gibt an, dass keine Verarbeitungen in dieser Aktivität im Bereich der Ablaufverfolgungsquelle stattfinden. Anhalten/Fortsetzen-Ablaufverfolgungen sind hilfreich für die Profilerstellung. Die Anhalten-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
-|![Aktivitäts]fortsetzen-Ablauf Verfolgung(./media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4E0A-9988-cdc2f7030f17")|Aktivität fortsetzen-Ablaufverfolgung: Eine Ablaufverfolgung, die die Zeit markiert, zu der eine Aktivität nach dem Anhalten wieder fortgesetzt wird. Ablaufverfolgungen können in dieser Aktivität möglicherweise erneut ausgegeben werden. Anhalten/Fortsetzen-Ablaufverfolgungen sind hilfreich für die Profilerstellung. Die Fortsetzen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
-|(./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "B2d9850e-F362-4ae5-bb8d-9f6f3ca036a5") ![übertragen]|Übertragung: Eine Ablaufverfolgung, die ausgegeben wird, wenn eine logische Ablaufsteuerung von einer Aktivität auf eine andere übertragen wird. Die Aktivität, aus der die Übertragung stammt, kann unter Umständen parallel zur der Aktivität ausgeführt werden, an die die Übertragung stattfindet. Die Übertragen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
-|![Übertragung von](./media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215 CB-B344-4s36-a20d-195999bda741")|Übertragung von: Eine Ablaufverfolgung, die eine Übertragung von einer anderen Aktivität zur aktuellen Aktivität definiert.|
-|![Transfer to](./media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Übertragung an: Eine Ablaufverfolgung, die eine Übertragung der logischen Ablaufsteuerung von der aktuellen Aktivität auf eine andere definiert.|
+|![Warnungsablaufverfolgung](./media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-Bada-bcb27409da58")|Warnungsablaufverfolgung: Eine Ablaufverfolgung, die auf der Warnebene ausgegeben wird.|
+|![Fehlerablaufverfolgung](./media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f 6D-9226-d52125db69ca")|Fehlerablaufverfolgung: Eine Ablaufverfolgung, die auf der Fehlerebene ausgegeben wird.|
+|![Ablaufverfolgung "Aktivitätsstart":](./media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728b91-5 A95-afe8-0b6acd6e0317")|Aktivitätsstart-Ablaufverfolgung: Eine Ablaufverfolgung, die den Beginn einer Aktivität markiert. Enthält den Namen der Aktivität. Als Anwendungsentwickler sollten Sie eine Aktivitätsstart-Ablaufverfolgung pro Aktivitäts-ID und Prozess oder Thread definieren.<br /><br /> Wenn die Aktivitäts-ID über die Ablaufverfolgungsquellen der Ablaufverfolgungskorrelation hinweg propagiert wird, können Sie mehrere Starts für dieselbe Aktivitäts-ID sehen (einen pro Ablaufverfolgungsquelle). Die Start-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
+|![Ablaufverfolgung "Aktivitätsstopp"](./media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Aktivitätsstopp-Ablaufverfolgung: Eine Ablaufverfolgung, die das Ende einer Aktivität markiert. . Enthält den Namen der Aktivität. Als Anwendungsentwickler sollten Sie eine Aktivitätsstopp-Ablaufverfolgung pro Aktivitäts-ID und Ablaufverfolgungsquelle definieren. Es werden keine Ablaufverfolgungen von einer bestimmten Ablaufverfolgungsquelle angezeigt, nachdem die Ablaufverfolgungsquelle einen Aktivitätsstopp ausgegeben hat, es sei denn, die Ablaufverfolgungszeit weist eine grobe Granularität auf. Ist das der Fall, überlappen sich zwei Ablaufverfolgungen mit der gleichen Zeit, einschließlich eines Stopps, möglicherweise bei der Anzeige. Wenn die Aktivitäts-ID über die Ablaufverfolgungsquellen der Ablaufverfolgungskorrelation hinweg propagiert wird, können Sie mehrere Stopps für dieselbe Aktivitäts-ID sehen (einen pro Ablaufverfolgungsquelle). Die Stoppablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
+|![Ablaufverfolgung "Aktivität anhalten"](./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f 7F 4191-DF2B-4592-8998-8379769e2d32")|Aktivität anhalten-Ablaufverfolgung: Eine Ablaufverfolgung, die markiert, wann eine Aktivität angehalten wurde. Es werden erst Ablaufverfolgungen in einer angehaltenen Aktivität ausgegeben, wenn die Aktivität fortgesetzt wird. Eine angehaltene Aktivität gibt an, dass keine Verarbeitungen in dieser Aktivität im Bereich der Ablaufverfolgungsquelle stattfinden. Anhalten/Fortsetzen-Ablaufverfolgungen sind hilfreich für die Profilerstellung. Die Anhalten-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
+|![Ablaufverfolgung "Aktivität fortsetzen"](./media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4E0A-9988-cdc2f7030f17")|Aktivität fortsetzen-Ablaufverfolgung: Eine Ablaufverfolgung, die die Zeit markiert, zu der eine Aktivität nach dem Anhalten wieder fortgesetzt wird. Ablaufverfolgungen können in dieser Aktivität möglicherweise erneut ausgegeben werden. Anhalten/Fortsetzen-Ablaufverfolgungen sind hilfreich für die Profilerstellung. Die Fortsetzen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
+|![Übertragen](./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Übertragung: Eine Ablaufverfolgung, die ausgegeben wird, wenn eine logische Ablaufsteuerung von einer Aktivität auf eine andere übertragen wird. Die Aktivität, aus der die Übertragung stammt, kann unter Umständen parallel zur der Aktivität ausgeführt werden, an die die Übertragung stattfindet. Die Übertragen-Ablaufverfolgung wird ausgegeben, wenn die Aktivitätsablaufverfolgung für die Ablaufverfolgungsquelle aktiviert ist.|
+|![Übertragung von](./media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215 CB-B344-4t36-a20d-195999bda741")|Übertragung von: Eine Ablaufverfolgung, die eine Übertragung von einer anderen Aktivität zur aktuellen Aktivität definiert.|
+|![Übertragung an](./media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Übertragung an: Eine Ablaufverfolgung, die eine Übertragung der logischen Ablaufsteuerung von der aktuellen Aktivität auf eine andere definiert.|
 
 ### <a name="wcf-traces"></a>WCF-Ablaufverfolgungen
 
 |Symbol|Beschreibung|
 |----------|-----------------|
-|![Nachrichtenprotokoll-Ablauf Verfolgung](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Nachrichtenprotokoll-Ablauf Verfolgung: eine Ablauf Verfolgung, die ausgegeben wird, wenn eine WCF-Nachricht vom Nachrichten Protokollierungs Feature protokolliert wird, wenn die `System.ServiceModel.MessageLogging`-Ablauf Verfolgungs Quelle aktiviert ist. Durch Klicken auf diese Ablaufverfolgung wird die Nachricht angezeigt. Es gibt vier konfigurierbare Protokollierungspunkte für eine Nachricht: ServiceLevelSendRequest, TransportSend, TransportReceive und ServiceLevelReceiveRequest, die auch durch das `messageSource`-Attribut in der Nachrichtenablaufverfolgung angegeben werden können.|
-|![Nachricht empfangen](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-C5DD-41ec-b1c3-ac56b4dfa35c") Ablauf Verfolgung|Nachricht empfangene Ablauf Verfolgung: eine Ablauf Verfolgung, die ausgegeben wird, wenn eine WCF-Nachricht empfangen wird, wenn die `System.ServiceModel`-Ablauf Verfolgungs Quelle auf Informations-oder Verbose-Ebene aktiviert ist. Diese Ablauf Verfolgung ist für die Anzeige des Nachrichten Korrelations Pfeils in der Aktivitäts **Diagramm** Ansicht von entscheidender Bedeutung.|
-|![Message Sent Trace](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Message Sent Trace: eine Ablauf Verfolgung, die ausgegeben wird, wenn eine WCF-Nachricht gesendet wird, wenn die `System.ServiceModel`-Ablauf Verfolgungs Quelle auf der Ebene "Information" oder "ausführlich" aktiviert ist. Diese Ablauf Verfolgung ist für die Anzeige des Nachrichten Korrelations Pfeils in der Aktivitäts **Diagramm** Ansicht von entscheidender Bedeutung.|
+|![Nachrichtenprotokoll-Ablauf Verfolgung](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Nachrichtenprotokoll-Ablauf Verfolgung: eine Ablauf Verfolgung, die ausgegeben wird, wenn eine WCF-Nachricht von der Nachrichten Protokollierungsfunktion protokolliert wird, wenn die Ablauf `System.ServiceModel.MessageLogging` Verfolgungs Quelle aktiviert ist. Durch Klicken auf diese Ablaufverfolgung wird die Nachricht angezeigt. Es gibt vier konfigurierbare Protokollierungspunkte für eine Nachricht: ServiceLevelSendRequest, TransportSend, TransportReceive und ServiceLevelReceiveRequest, die auch durch das `messageSource`-Attribut in der Nachrichtenablaufverfolgung angegeben werden können.|
+|![Nachricht empfangene Ablauf Verfolgung](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Nachricht empfangene Ablauf Verfolgung: eine Ablauf Verfolgung, die ausgegeben wird, wenn eine WCF-Nachricht empfangen wird, wenn die Ablauf `System.ServiceModel` Verfolgungs Quelle auf der Ebene "Information" oder "ausführlich" aktiviert ist. Diese Ablauf Verfolgung ist für die Anzeige des Nachrichten Korrelations Pfeils in der Aktivitäts **Diagramm** Ansicht von entscheidender Bedeutung.|
+|![Ablauf Verfolgung für Nachricht gesendet](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Nachricht gesendet: Ablauf Verfolgung: eine Ablauf Verfolgung, die ausgegeben wird, wenn eine WCF-Nachricht gesendet wird, wenn die Ablauf `System.ServiceModel` Verfolgungs Quelle auf der Ebene "Information" oder "ausführlich" aktiviert ist Diese Ablauf Verfolgung ist für die Anzeige des Nachrichten Korrelations Pfeils in der Aktivitäts **Diagramm** Ansicht von entscheidender Bedeutung.|
 
-### <a name="activities"></a>Aktivitäten
+### <a name="activities"></a>activities
 
 |Symbol|Beschreibung|
 |----------|-----------------|
 |![Aktivität](./media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Aktivität: Gibt an, dass die aktuelle Aktivität eine generische Aktivität ist.|
-|Stamm ![Aktivität](./media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Stammaktivität: Gibt die Stammaktivität eines Prozesses an.|
+|![Stammaktivität](./media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Stammaktivität: Gibt die Stammaktivität eines Prozesses an.|
 
 ### <a name="wcf-activities"></a>WCF-Aktivitäten
 
 |Symbol|Beschreibung|
 |----------|-----------------|
-|![Umgebungs Aktivität](./media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Umgebungs Aktivität: eine Aktivität, mit der ein WCF-Host oder-Client erstellt, geöffnet oder geschlossen wird. Fehler, die während dieser Phasen aufgetreten sind, werden in dieser Aktivität angezeigt.|
-|![Lauschen-Aktivität](./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Abhöraktivität: Eine Aktivität, die mit einem Listener zusammenhängende Ablaufverfolgungen protokolliert. In dieser Aktivität werden Listenerinformationen und Verbindungsanforderungen angezeigt.|
-|![Receive Bytes-Aktivität](./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2F 628580-b80sp-45a7-925b-616c96426c0e")|Bytes empfangen-Aktivität: Eine Aktivität, die alle Ablaufverfolgungen gruppiert, die sich auf empfangene Bytes in einer Verbindung zwischen zwei Endpunkten beziehen. Diese Aktivität ist wesentlich beim Korrelieren von Transportaktivitäten, die ihre Aktivitäts-ID propagieren, wie z.&#160;B. http.sys. Verbindungsfehler, wie z.&#160;B. Abbrüche, treten in dieser Aktivität auf.|
-|![Process Message-Aktivität](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Process Message-Aktivität: eine Aktivität, die Ablauf Verfolgungen für das Erstellen einer WCF-Nachricht gruppiert. Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht werden in dieser Aktivität angezeigt. In dieser Aktivität können Nachrichtenheader geprüft werden, um zu ermitteln, ob eine Aktivitäts-ID vom Aufrufer propagiert wurde. Wenn dies zutrifft, kann beim Übertragen an die Aktion verarbeiten-Aktivität (das nächste Symbol) dieser Aktivität auch die propagierte Aktivitäts-ID für die Korrelation zwischen dem Aufrufer und den Ablaufverfolgungen des Aufrufenden zugewiesen werden.|
+|![Umgebungsaktivität](./media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Umgebungs Aktivität: eine Aktivität, mit der ein WCF-Host oder-Client erstellt, geöffnet oder geschlossen wird. Fehler, die während dieser Phasen aufgetreten sind, werden in dieser Aktivität angezeigt.|
+|![Lauschaktivität](./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Abhöraktivität: Eine Aktivität, die mit einem Listener zusammenhängende Ablaufverfolgungen protokolliert. In dieser Aktivität werden Listenerinformationen und Verbindungsanforderungen angezeigt.|
+|![Aktivität "Bytes empfangen"](./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2F 628580-b80o-45a7-925b-616c96426c0e")|Bytes empfangen-Aktivität: Eine Aktivität, die alle Ablaufverfolgungen gruppiert, die sich auf empfangene Bytes in einer Verbindung zwischen zwei Endpunkten beziehen. Diese Aktivität ist wesentlich beim Korrelieren von Transportaktivitäten, die ihre Aktivitäts-ID propagieren, wie z.&#160;B. http.sys. Verbindungsfehler, wie z.&#160;B. Abbrüche, treten in dieser Aktivität auf.|
+|![Aktivität "Nachricht verarbeiten"](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Process Message-Aktivität: eine Aktivität, die Ablauf Verfolgungen für das Erstellen einer WCF-Nachricht gruppiert. Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht werden in dieser Aktivität angezeigt. In dieser Aktivität können Nachrichtenheader geprüft werden, um zu ermitteln, ob eine Aktivitäts-ID vom Aufrufer propagiert wurde. Wenn dies zutrifft, kann beim Übertragen an die Aktion verarbeiten-Aktivität (das nächste Symbol) dieser Aktivität auch die propagierte Aktivitäts-ID für die Korrelation zwischen dem Aufrufer und den Ablaufverfolgungen des Aufrufenden zugewiesen werden.|
 |![Nachrichtenprotokoll-Ablauf Verfolgung](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Process Action-Aktivität: eine Aktivität, die alle Ablauf Verfolgungen gruppiert, die sich auf eine WCF-Anforderung über zwei Endpunkte beziehen. Wenn `propagateActivity` auf beiden Endpunkten in der Konfiguration auf `true` festgelegt ist, werden alle Ablaufverfolgungen für die direkte Korrelation in eine Aktivität zusammengeführt. Einige Aktivitäten enthalten Fehler, die bei der Transport- oder Sicherheitsverarbeitung auftreten und sich bis hin zu Benutzercodegrenzen und zurück erstrecken (sofern eine Antwort vorhanden ist).|
-|![Process Message-Aktivität](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Benutzercodeaktivität ausführen-Aktivität: Eine Aktivität, die Benutzercode-Ablaufverfolgungen zur Verarbeitung einer Anforderung gruppiert.|
+|![Aktivität "Nachricht verarbeiten"](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Benutzercodeaktivität ausführen-Aktivität: Eine Aktivität, die Benutzercode-Ablaufverfolgungen zur Verarbeitung einer Anforderung gruppiert.|
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Wenn Sie nicht über die Berechtigung zum Schreiben in die Registrierung verfügen, erhalten Sie die folgende Fehlermeldung: "der Microsoft Service Trace Viewer wurde nicht beim System registriert", wenn Sie das Tool mit dem Befehl "`svctraceviewer /register`" registrieren. Ist dies der Fall, sollten Sie sich über ein Konto anmelden, das Schreibzugriff auf die Registrierung bietet.
+Wenn Sie nicht über die Berechtigung zum Schreiben in die Registrierung verfügen, erhalten Sie die folgende Fehlermeldung: "der Microsoft Service Trace Viewer wurde nicht beim System registriert", wenn Sie das `svctraceviewer /register` Tool mit dem Befehl "" registrieren. Ist dies der Fall, sollten Sie sich über ein Konto anmelden, das Schreibzugriff auf die Registrierung bietet.
 
 Außerdem schreibt das Service Trace Viewer-Tool einige Einstellungen (z.&#160;B. benutzerdefinierte Filter und Filteroptionen) in die SvcTraceViewer.exe.settings-Datei im Assemblyordner. Wenn Sie keine Leseberechtigungen für die Datei haben, können Sie das Tool starten, aber die Einstellungen nicht laden.
 
@@ -497,8 +498,8 @@ Wenn Sie die Fehlermeldung "Unbekannter Fehler bei der Verarbeitung von mindeste
 
 Wenn Sie ein in einem arabischen Betriebssystem erstelltes Ablaufverfolgungsprotokoll öffnen, stellen Sie unter Umständen fest, dass der Zeitfilter nicht funktioniert. Zum Beispiel entspricht das Jahr 2005 dem Jahr 1427 im arabischen Kalender. Der Filter des Service Trace Viewer-Tools unterstützt jedoch keine Jahresangabe vor 1752. Dies kann dazu führen, dass Sie kein korrektes Datum im Filter auswählen können. Um dieses Problem zu beheben, können Sie einen benutzerdefinierten Filter (**Ansicht/benutzerdefinierte Filter**) erstellen, indem Sie einen XPath-Ausdruck verwenden, um einen bestimmten Zeitbereich einzubeziehen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](./diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](./diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Konfigurieren der Ablaufverfolgung](./diagnostics/tracing/configuring-tracing.md)
 - [End-to-End-Ablaufverfolgung](./diagnostics/tracing/end-to-end-tracing.md)

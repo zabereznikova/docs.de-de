@@ -1,5 +1,6 @@
 ---
 title: Beispiel 'Erste Schritte'
+description: Erfahren Sie, wie Sie einen typischen Dienst und einen typischen Client mithilfe von WCF implementieren. Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b23be1b33f227154b916429c063ec4106229bb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575185"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246232"
 ---
 # <a name="getting-started-sample"></a>Beispiel 'Erste Schritte'
 
@@ -32,7 +33,7 @@ Das Beispiel "Getting Started" veranschaulicht, wie ein typischer Dienst und ein
 
 Der Dienst beschreibt die Vorgänge, die er in einem Dienstvertrag ausführt, den er öffentlich als Metadaten verfügbar macht. Der Dienst enthält auch den Code, um die Vorgänge zu implementieren.
 
-Der Client enthält eine Definition des Dienstvertrags und eine Proxyklasse zum Zugreifen auf den Dienst. Der Proxy Code wird aus den Dienst Metadaten mit dem Service [Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)generiert.
+Der Client enthält eine Definition des Dienstvertrags und eine Proxyklasse zum Zugreifen auf den Dienst. Der Proxy Code wird aus den Dienst Metadaten mit dem Service [Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)generiert.
 
 Unter Windows Vista wird der-Dienst im Windows-Aktivierungs Dienst (was) gehostet. Unter Windows XP und Windows Server 2003 wird Sie von Internetinformationsdienste (IIS) und ASP.net gehostet. Durch das Hosten eines Diensts in IIS oder WAS kann der Dienst beim ersten Zugriff automatisch aktiviert werden.
 
@@ -174,7 +175,7 @@ Standardmäßig macht das Framework keine Metadaten verfügbar. Daher wird der-D
 </system.serviceModel>
 ```
 
-Der Client kommuniziert mithilfe eines angegebenen Vertrags Typs mithilfe einer Client Klasse, die vom [Service Model Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)generiert wird. Dieser generierte Client ist in der Datei "generatedClient.cs" oder der Datei "generatedClient.vb" enthalten. Dieses Hilfsprogramm ruft Metadaten für einen angegebenen Dienst ab und generiert einen Client, den die Clientanwendung zur Kommunikation mithilfe eines angegebenen Vertragstyps verwenden kann. Der gehostete Dienst muss zur Generierung des Clientcodes verfügbar sein, da der Dienst zum Abrufen der aktualisierten Metadaten verwendet wird.
+Der Client kommuniziert mithilfe eines angegebenen Vertrags Typs mithilfe einer Client Klasse, die vom [Service Model Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)generiert wird. Dieser generierte Client ist in der Datei "generatedClient.cs" oder der Datei "generatedClient.vb" enthalten. Dieses Hilfsprogramm ruft Metadaten für einen angegebenen Dienst ab und generiert einen Client, den die Clientanwendung zur Kommunikation mithilfe eines angegebenen Vertragstyps verwenden kann. Der gehostete Dienst muss zur Generierung des Clientcodes verfügbar sein, da der Dienst zum Abrufen der aktualisierten Metadaten verwendet wird.
 
  Führen Sie den folgenden Befehl an der SDK-Eingabeaufforderung im Clientverzeichnis aus, um den typisierten Proxy zu generieren:
 

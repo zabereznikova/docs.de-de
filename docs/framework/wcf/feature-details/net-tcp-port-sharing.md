@@ -1,16 +1,17 @@
 ---
 title: Net.TCP-Anschlussfreigabe
+description: Erfahren Sie mehr über ein TCP-basiertes Protokoll für die Hochleistungs Kommunikation und den Dienst, der die gemeinsame Nutzung von Ports über mehrere Benutzer Prozesse in WCF hinweg ermöglicht.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a9579c588906f509dd835d3c9b25571495d147e0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598761"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245244"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
 Windows Communication Foundation (WCF) stellt ein neues TCP-basiertes Netzwerkprotokoll (net. TCP://) für die leistungsstarke Kommunikation bereit. WCF führt außerdem eine neue Systemkomponente ein, den Net. TCP-Port Freigabe Dienst, mit dem net. TCP-Ports für mehrere Benutzer Prozesse freigegeben werden können.  
@@ -22,7 +23,7 @@ Windows Communication Foundation (WCF) stellt ein neues TCP-basiertes Netzwerkpr
   
  Das HTTP.SYS-Modell, in dem der Verkehr für viele verschiedene HTTP-Anwendungen als Multiplex über einen einzelnen TCP-Anschluss geleitet wird, ist heute Standard auf der Windows-Plattform. Dies bietet Firewalladministratoren einen gemeinsamen Steuerungspunkt, und bietet zugleich Anwendungsentwicklern die Möglichkeit, die Bereitstellungskosten beim Erstellen neuer Anwendungen, die das Netzwerk verwenden können, zu minimieren.  
   
- Die Möglichkeit, Anschlüsse für mehrere HTTP-Anwendungen freizugeben ist schon lange eine Funktion von Internetinformationsdiensten (Internet Information Services, IIS). Allerdings war es nur mit der Einführung von http. SYS (der Kernel Modus-HTTP-Protokolllistener) mit IIS 6,0, dass diese Infrastruktur vollständig generalisiert wurde. Tatsächlich ermöglicht HTTP.SYS es beliebigen Benutzerprozessen, die für HTTP-Verkehr vorgesehen TCP-Anschlüsse gemeinsam zu verwenden. Durch diese Fähigkeit können zahlreiche HTTP-Anwendungen auf dem selben physischen Gerät in getrennten, isolierten Prozessen koexistieren und dabei die zum Senden und Empfangen von Verkehr über den TCP-Anschluss 80 erforderliche Netzwerkinfrastruktur gemeinsam verwenden. Der Net.TCP-Portfreigabedienst ermöglicht die gleiche Art der Anschlussfreigabe für net.tcp-Anwendungen.  
+ Die Möglichkeit, Anschlüsse für mehrere HTTP-Anwendungen freizugeben ist schon lange eine Funktion von Internetinformationsdiensten (Internet Information Services, IIS). Dies war jedoch nur mit der Einführung von HTTP.SYS (dem Kernel Modus-HTTP-Protokolllistener) mit IIS 6,0, dass diese Infrastruktur vollständig generalisiert wurde. Tatsächlich ermöglicht HTTP.SYS es beliebigen Benutzerprozessen, die für HTTP-Verkehr vorgesehen TCP-Anschlüsse gemeinsam zu verwenden. Durch diese Fähigkeit können zahlreiche HTTP-Anwendungen auf dem selben physischen Gerät in getrennten, isolierten Prozessen koexistieren und dabei die zum Senden und Empfangen von Verkehr über den TCP-Anschluss 80 erforderliche Netzwerkinfrastruktur gemeinsam verwenden. Der Net.TCP-Portfreigabedienst ermöglicht die gleiche Art der Anschlussfreigabe für net.tcp-Anwendungen.  
   
 ## <a name="port-sharing-architecture"></a>Architektur der Anschlussfreigabe  
  Die Architektur der Port Freigabe in WCF besteht aus drei Hauptkomponenten:  

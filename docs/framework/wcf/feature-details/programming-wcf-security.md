@@ -1,5 +1,6 @@
 ---
 title: Programmieren der WCF-Sicherheit
+description: Erfahren Sie, wie Sie eine sichere WCF-Anwendung erstellen, einschließlich Authentifizierung, Vertraulichkeit und Integrität.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b3c96e91c0d6f01fa30b3b617449e7d4a148933
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596772"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244984"
 ---
 # <a name="programming-wcf-security"></a>Programmieren der WCF-Sicherheit
 In diesem Thema werden die grundlegenden Programmieraufgaben beschrieben, die zum Erstellen einer Secure Windows Communication Foundation (WCF)-Anwendung verwendet werden. In diesem Thema werden nur Authentifizierung, Vertraulichkeit und Integrität behandelt, die zusammen als *Übertragungssicherheit*bezeichnet werden. In diesem Thema wird die Autorisierung (Kontrolle des Zugriffs auf Ressourcen oder Dienste) nicht behandelt. Informationen zur Autorisierung finden Sie unter [Autorisierung](authorization-in-wcf.md).  
