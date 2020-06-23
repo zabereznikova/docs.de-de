@@ -1,16 +1,17 @@
 ---
 title: Neues in Windows Communication Foundation 4.5
+description: In diesem Artikel werden die neuen Features von Windows Communication Foundation (WCF) Version 4,5 und Links zu weiteren Ressourcen beschrieben.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449503"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245621"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Neues in Windows Communication Foundation 4.5
 
@@ -22,7 +23,7 @@ Es wurde viel unternommen, um die Entwicklung und Verwaltung von WCF 4.5-Anwendu
 
 ### <a name="task-based-async-support"></a>Aufgabenbasierte asynchrone Unterstützung
 
-Durch {1}Dienstverweis hinzufügen{2} werden standardmäßig asynchrone Methoden für Dienstvorgänge generiert, die Tasks zurückgeben. Dies erfolgt sowohl für synchrone als auch für asynchrone Methoden. Auf diese Weise können die Dienstvorgänge mithilfe des neuen aufgabenbasierten asynchronen Programmiermodells asynchron aufgerufen werden. Wenn Sie die generierte Proxymethode aufrufen, erstellt WCF ein Taskobjekt, das den asynchronen Vorgang darstellt, und gibt diesen Task an Sie zurück. Die Aufgabe wird abgeschlossen, wenn der Vorgang abgeschlossen ist. Beim Implementieren eines asynchronen Vorgangs können Sie ihn als aufgabenbasierten asynchronen Vorgang implementieren. Weitere Informationen finden Sie unter [synchrone und asynchrone Vorgänge](synchronous-and-asynchronous-operations.md).
+Durch Dienstverweis hinzufügen werden standardmäßig asynchrone Methoden für Dienstvorgänge generiert, die Tasks zurückgeben. Dies erfolgt sowohl für synchrone als auch für asynchrone Methoden. Auf diese Weise können die Dienstvorgänge mithilfe des neuen aufgabenbasierten asynchronen Programmiermodells asynchron aufgerufen werden. Wenn Sie die generierte Proxymethode aufrufen, erstellt WCF ein Taskobjekt, das den asynchronen Vorgang darstellt, und gibt diesen Task an Sie zurück. Die Aufgabe wird abgeschlossen, wenn der Vorgang abgeschlossen ist. Beim Implementieren eines asynchronen Vorgangs können Sie ihn als aufgabenbasierten asynchronen Vorgang implementieren. Weitere Informationen finden Sie unter [synchrone und asynchrone Vorgänge](synchronous-and-asynchronous-operations.md).
 
 ### <a name="simplified-generated-configuration-files"></a>Vereinfachte generierte Konfigurationsdateien
 
@@ -32,7 +33,7 @@ Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](wcf-simpl
 
 ### <a name="contract-first-development"></a>Vertrag zuerst-Entwicklung
 
-WCF unterstützt jetzt die Vertrag zuerst-Entwicklung. Die Datei "Svcutil. exe" verfügt über einen/ServiceContract-Schalter-Switch, mit dem Sie Dienst-und Datenverträge aus einem WSDL-Dokument generieren können.
+WCF unterstützt jetzt die Vertrag zuerst-Entwicklung. Der svcutil.exe verfügt über einen/ServiceContract-Schalter-Schalter, der es Ihnen ermöglicht, Dienst-und Datenverträge aus einem WSDL-Dokument zu generieren.
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises aus einem Projekt für die portable Teilmenge
 
@@ -40,7 +41,7 @@ Portable Teilmengen Projekte ermöglichen es .net-assemblyprogrammierern, eine e
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Geänderter Standard für den ASP.NET-Kompatibilitätsmodus
 
-WCF bietet einen ASP.NET-Kompatibilitätsmodus, der Entwicklern beim Schreiben von WCF-Diensten vollständigen Zugriff auf die Funktionen in der ASP.NET-HTTP-Pipeline gewährt. Um diesen Modus zu verwenden, müssen Sie das `aspNetCompatibilityEnabled`-Attribut im [\<ServiceHost->](../configure-apps/file-schema/wcf/servicehostingenvironment.md) Abschnitt der Datei "Web. config" auf "true" festlegen. Außerdem muss für jeden Dienst in dieser AppDomain die `RequirementsMode`-Eigenschaft in der <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> oder <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>festgelegt sein. Standardmäßig ist <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> jetzt auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>festgelegt. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](./feature-details/wcf-services-and-aspnet.md).
+WCF bietet einen ASP.NET-Kompatibilitätsmodus, der Entwicklern beim Schreiben von WCF-Diensten vollständigen Zugriff auf die Funktionen in der ASP.NET-HTTP-Pipeline gewährt. Wenn Sie diesen Modus verwenden möchten, müssen Sie das- `aspNetCompatibilityEnabled` Attribut im- [\<serviceHostingEnvironment>](../configure-apps/file-schema/wcf/servicehostingenvironment.md) Abschnitt web.config auf true festlegen. Außerdem muss für jeden Dienst in dieser AppDomain die- `RequirementsMode` Eigenschaft auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> oder festgelegt sein <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> . <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>Ist jetzt standardmäßig auf fest <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> gelegt. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](./feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Neue Standardwerte für Transporte
 
@@ -72,17 +73,17 @@ WSDL-Verarbeitungsstapel einiger Drittanbieter sind nicht in der Lage, WSDL-Doku
 
 ## <a name="websocket-support"></a>WebSocket-Unterstützung
 
-WebSockets ist eine Technologie, die die echte bidirektionale Kommunikation über die Ports 80 und 443 ermöglicht, wobei die Leistungsmerkmale denen von TCP ähneln. Um die Kommunikation über einen WebSocket-Transport zu unterstützen, wurden zwei neue Bindungen hinzugefügt. <xref:System.ServiceModel.NetHttpBinding> und <xref:System.ServiceModel.NetHttpsBinding>: Weitere Informationen finden Sie unter: vom [System bereitgestellte Bindungen](system-provided-bindings.md).
+WebSockets ist eine Technologie, die die echte bidirektionale Kommunikation über die Ports 80 und 443 ermöglicht, wobei die Leistungsmerkmale denen von TCP ähneln. Um die Kommunikation über einen WebSocket-Transport zu unterstützen, wurden zwei neue Bindungen hinzugefügt. <xref:System.ServiceModel.NetHttpBinding> und <xref:System.ServiceModel.NetHttpsBinding>. Weitere Informationen finden Sie unter: vom [System bereitgestellte Bindungen](system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Neue Standardwerte für Transporte
 
 Anhand der folgenden Tabelle erfahren Sie, welche Einstellungen geändert wurden und wo Sie zusätzliche Informationen finden.
 
-|Eigenschaft|Ein|Neuer Standard|Weitere Informationen finden Sie unter .|
+|Eigenschaft|Ein|Neuer Standard|Weitere Informationen finden Sie unter|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 Sekunden|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * Anzahl der Prozessoren|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * Anzahl der Prozessoren für den Transport<br /><br /> 4 \* Anzahl der Prozessoren für "SMSvcHost. exe"|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Konfigurieren des net. TCP-Port Freigabe diensdienstanbieter](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * Anzahl der Prozessoren für den Transport<br /><br /> 4 \* Prozessoren für SMSvcHost.exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Konfigurieren des Net.TCP-Portfreigabediensts](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * Anzahl der Prozessoren|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
 |receiveTimeout|SMSvcHost.exe|30 Sekunden|[Konfigurieren des Net.TCP-Portfreigabediensts](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
@@ -92,7 +93,7 @@ Um neuen und bereits erfahrenen Entwicklern von WCF-Diensten die Konfiguration z
 
 ## <a name="configuring-wcf-services-in-code"></a>Konfigurieren von WCF-Diensten in Code
 
-Windows Communication Foundation (WCF) ermöglicht es Entwicklern, Dienste mithilfe von Konfigurationsdateien oder Code zu konfigurieren. Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht Ihnen außerdem das Konfigurieren von Diensten im Code. In früheren Versionen von WCF (4,0 und früher) war das Konfigurieren von Diensten im Code in selbstgeh osteten Szenarien ganz einfach. mit der <xref:System.ServiceModel.ServiceHost>-Klasse haben Sie die Möglichkeit, Endpunkte und Verhaltensweisen vor dem Aufrufen von Service Host. Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4,5 bietet WCF eine einfachere Möglichkeit, selbstgeh ostete und im Internet gehostete Dienste im Code zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von WCF-Diensten im Code](configuring-wcf-services-in-code.md).
+Windows Communication Foundation (WCF) ermöglicht es Entwicklern, Dienste mithilfe von Konfigurationsdateien oder Code zu konfigurieren. Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht Ihnen außerdem das Konfigurieren von Diensten im Code. In früheren Versionen von WCF (4,0 und früher) war das Konfigurieren von Diensten im Code in selbstgeh osteten Szenarien ganz einfach <xref:System.ServiceModel.ServiceHost> . mit der-Klasse haben Sie die Möglichkeit, Endpunkte und Verhaltensweisen vor dem Aufrufen von Service Host. Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4,5 bietet WCF eine einfachere Möglichkeit, selbstgeh ostete und im Internet gehostete Dienste im Code zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von WCF-Diensten im Code](configuring-wcf-services-in-code.md).
 
 ## <a name="channelfactory-caching"></a>ChannelFactory-Caching
 
@@ -152,11 +153,11 @@ In Visual Studio 2010 wurde von WebServiceHost automatisch ein Standardendpunkt 
 
 ## <a name="ihttpcookiecontainermanager"></a>IHttpCookieContainerManager
 
-Diese von <xref:System.ServiceModel.Channels.IChannelFactory%601> verfügbar gemachte Schnittstelle vereinfacht die Verwendung von Cookies auf der Clientseite. Wenn {1}AllowCookies{2} für die Bindung auf {3}True{4} festgelegt ist, können Sie mit folgendem Code auf Cookies zugreifen:
+Diese von <xref:System.ServiceModel.Channels.IChannelFactory%601> verfügbar gemachte Schnittstelle vereinfacht die Verwendung von Cookies auf der Clientseite. Wenn AllowCookies für die Bindung auf True festgelegt ist, können Sie mit folgendem Code auf Cookies zugreifen:
 
 ```csharp
 IHttpCookieContainerManager cookieManager = factory.GetProperty<IHttpCookieContainerManager>();
 System.Net.CookieContainer container = cookieManager.CookieContainer;
 ```
 
-Anschließend können die Cookies unter Verwendung von <xref:System.Net.CookieContainer> abgerufen oder festgelegt werden. Wenn <xref:System.ServiceModel.OperationContext>AllowCookies<xref:System.ServiceModel.OperationContext> auf {3}False{4} festgelegt ist, können Sie die Cookies mit {5} manuell abrufen und in anderen Anforderungen unter Verwendung eines anderen {6} oder Meldungsinspektors senden. Die IHttpCookieContainerManager-Schnittstelle ermöglicht es Ihnen, einen Benutzer bei einem Dienst zu authentifizieren und das vom Dienst zurückgegebene Authentifizierungscookie zum Authentifizieren bei anderen Diensten zu verwenden.
+Anschließend können die Cookies unter Verwendung von <xref:System.Net.CookieContainer> abgerufen oder festgelegt werden. Wenn AllowCookies auf False festgelegt ist, können Sie die Cookies mit  manuell abrufen und in anderen Anforderungen unter Verwendung eines anderen  oder Meldungsinspektors senden. Die IHttpCookieContainerManager-Schnittstelle ermöglicht es Ihnen, einen Benutzer bei einem Dienst zu authentifizieren und das vom Dienst zurückgegebene Authentifizierungscookie zum Authentifizieren bei anderen Diensten zu verwenden.

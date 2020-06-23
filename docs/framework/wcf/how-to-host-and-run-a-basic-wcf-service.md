@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Hosten und Ausführen eines grundlegenden Windows Communication Foundation Diensts'
+description: Erfahren Sie, wie Sie einen WCF-Dienst in einer Konsolenanwendung als Teil einer Reihe von Artikeln hosten können, die Ihnen beim Einstieg in die Erstellung einer WCF-Anwendung helfen.
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 872844487578843492e05dd2abb87b50e0bec91c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5318991087e71430523681d601d3b38c4513027b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291395"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246128"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Tutorial: Hosten und Ausführen eines grundlegenden Windows Communication Foundation Diensts
 
@@ -37,7 +38,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 1. Erstellen eines Konsolen-App-Projekts in Visual Studio:
 
-    1. Wählen Sie im Menü **Datei** die **Open**Option  >  **Projekt/Projekt** Mappe öffnen aus, und navigieren Sie zur zuvor erstellten Lösung **GettingStarted** (*GettingStarted. sln*). Wähle **Öffnen** aus.
+    1. Wählen Sie im Menü **Datei** die **Open**Option  >  **Projekt/Projekt** Mappe öffnen aus, und navigieren Sie zur zuvor erstellten Lösung **GettingStarted** (*GettingStarted. sln*). Wählen Sie **Open**(Öffnen).
 
     2. Wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer**aus.
 
@@ -194,7 +195,7 @@ Nehmen Sie die folgenden Änderungen am Code vor:
 
 1. Erstellen Sie die Projekt Mappe, und führen Sie dann die **gettingstartedhost** -Konsolenanwendung in Visual Studio aus.
 
-    Der Dienst muss mit Administratorrechten ausgeführt werden. Da Sie Visual Studio mit Administratorrechten geöffnet haben, wird die Anwendung beim Ausführen von **gettingstartedhost** in Visual Studio ebenfalls mit Administratorrechten ausgeführt. Als Alternative können Sie eine neue Eingabeaufforderung als Administrator öffnen (Klicken Sie im Kontextmenü auf " **mehr**  >  **als Administrator ausführen** ") und " **gettingstartedhost. exe** " ausführen.
+    Der Dienst muss mit Administratorrechten ausgeführt werden. Da Sie Visual Studio mit Administratorrechten geöffnet haben, wird die Anwendung beim Ausführen von **gettingstartedhost** in Visual Studio ebenfalls mit Administratorrechten ausgeführt. Als Alternative können Sie eine neue Eingabeaufforderung als Administrator öffnen (Wählen Sie im Kontextmenü **mehr**  >  **als Administrator ausführen** aus), und führen Sie **GettingStartedHost.exe** darin aus.
 
 2. Öffnen Sie einen Webbrowser, und navigieren Sie zur Seite des Diensts unter `http://localhost:8000/GettingStarted/CalculatorService` .
 
@@ -226,7 +227,7 @@ Die Schritte im Code, den Sie zum Hosten des Diensts hinzugefügt haben, werden 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
 >
 > - Erstellen und konfigurieren Sie ein Konsolen-App-Projekt zum Hosting eines WCF-Diensts.

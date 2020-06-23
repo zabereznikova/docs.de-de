@@ -1,13 +1,14 @@
 ---
 title: Wählen eines Typs von Anmeldeinformationen
+description: Erfahren Sie mehr über Anmelde Informationen, wie Sie in WCF verwendet werden, und wie Sie die richtigen Anmelde Informationen für Ihre Anwendung auswählen, um eine beanspruchte Identität oder Funktionen einzurichten.
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 7bcc5f407077b32d85b7f1e5f7ddbc5aba4b80c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a8a6880e5fc3982bb7f470c34a77c771c26effd
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586194"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244919"
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmelde* Informationen sind die Daten Windows Communication Foundation (WCF) verwendet, um entweder eine beanspruchte Identität oder Funktionen einzurichten. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In WCF können Anmelde Informationen viele Formulare annehmen, z. b. Benutzernamen Token und X. 509-Zertifikate. In diesem Thema werden Anmelde Informationen, ihre Verwendung in WCF und die Auswahl der richtigen Anmelde Informationen für Ihre Anwendung erläutert.  

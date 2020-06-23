@@ -1,15 +1,16 @@
 ---
 title: Konfigurieren der Ablaufverfolgung
+description: Erfahren Sie, wie Sie die Ablauf Verfolgung aktivieren, Ablauf Verfolgungs Quellen konfigurieren, Aktivitäts Ablauf Verfolgung und-Weitergabe festlegen und Ablaufverfolgungslistener für den Zugriff auf
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2fbe5b48a9405c9236923ffec268683bdf570831
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579006"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245348"
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -32,7 +33,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Wenn Sie WCF-Erweiterbarkeits Punkte (z. b. benutzerdefinierte Vorgangs Aufrufe) verwenden, sollten Sie Ihre eigenen Ablauf Verfolgungen ausgeben. Dies liegt daran, dass WCF bei der Implementierung eines Erweiterungs Punkts die Standard Ablauf Verfolgungen nicht mehr im Standardpfad ausgeben kann. Wenn Sie keine Unterstützung für eine manuelle Ablaufverfolgung durch Ausgabe von Ablaufverfolgungen implementieren, werden die erwarteten Ablaufverfolgungen möglicherweise nicht angezeigt.  
   
- Sie können die Ablauf Verfolgung konfigurieren, indem Sie die Konfigurationsdatei der Anwendung bearbeiten – entweder Web. config für im Web gehostete Anwendungen oder appname. exe. config für selbst gehostete Anwendungen. Das folgende Beispiel zeigt eine solche Bearbeitung. Weitere Informationen zu diesen Einstellungen finden Sie im Abschnitt "Konfigurieren von Ablaufverfolgungslistenern zur Nutzung von Ablauf Verfolgungen".  
+ Sie können die Ablauf Verfolgung konfigurieren, indem Sie die Konfigurationsdatei der Anwendung bearbeiten – Web.config entweder für im Internet gehostete Anwendungen oder für selbst gehostete Anwendungen Appname.exe.config. Das folgende Beispiel zeigt eine solche Bearbeitung. Weitere Informationen zu diesen Einstellungen finden Sie im Abschnitt "Konfigurieren von Ablaufverfolgungslistenern zur Nutzung von Ablauf Verfolgungen".  
   
 ```xml  
 <configuration>  
@@ -53,7 +54,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 ```  
   
 > [!NOTE]
-> Klicken Sie zum Bearbeiten der Konfigurationsdatei eines WCF-Dienst Projekts in Visual Studio mit der rechten Maustaste auf die Konfigurationsdatei der Anwendung – entweder Web. config für im Web gehostete Anwendungen oder appname. exe. config für eine selbstgeh ostete Anwendung in **Projektmappen-Explorer**. Wählen Sie dann das Kontextmenü Element **WCF-Konfiguration bearbeiten** aus. Dadurch wird das [Configuration Editor-Tool (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)gestartet, das es Ihnen ermöglicht, Konfigurationseinstellungen für WCF-Dienste mithilfe einer grafischen Benutzeroberfläche zu ändern.  
+> Um die Konfigurationsdatei eines WCF-Dienst Projekts in Visual Studio zu bearbeiten, klicken Sie mit der rechten Maustaste auf die Konfigurationsdatei der Anwendung – Web.config entweder für im Internet gehostete Anwendungen oder Appname.exe.config für eine selbstgeh ostete Anwendung in **Projektmappen-Explorer**. Wählen Sie dann das Kontextmenü Element **WCF-Konfiguration bearbeiten** aus. Dadurch wird das [Configuration Editor-Tool (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)gestartet, mit dem Sie Konfigurationseinstellungen für WCF-Dienste mithilfe einer grafischen Benutzeroberfläche ändern können.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen  
  WCF definiert eine Ablauf Verfolgungs Quelle für jede Assembly. Innerhalb einer Assembly generierte Ablaufverfolgungen werden von den Listenern verwendet, die für diese Quelle definiert sind. Folgende Ablaufverfolgungsquellen sind definiert:  

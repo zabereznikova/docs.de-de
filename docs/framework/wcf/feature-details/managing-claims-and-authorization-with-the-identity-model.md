@@ -1,5 +1,6 @@
 ---
 title: Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
+description: Erfahren Sie mehr über die wichtigsten Programmier Konzepte für das WCF-Identitäts Modell, ein Anspruchs basiertes Modell zum Durchführen der Autorisierung.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d5687f8ac5021c008254f0f5cc453eda5e538c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586350"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245127"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
 Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. Windows Communication Foundation (WCF) unterstützt zwei Mechanismen zum Durchführen der Autorisierungs Verarbeitung. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Die zweite ist ein Anspruchs basiertes Modell, das als *Identitäts Modell*bezeichnet wird. WCF verwendet das Identitäts Modell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Identitäts Modellklassen können erweitert werden, um neue Anspruchs Typen für benutzerdefinierte Autorisierungs Schemas zu unterstützen. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
@@ -57,7 +58,7 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
  Identitätsanspruch  
  Ein Anspruch, dessen Berechtigung die Identität ist.  
   
- Issuer (Aussteller)  
+ Aussteller  
  Ein Anspruchssatz, der mindestens einen Identitätsanspruch enthält und von dem angenommen wird, dass er einen anderen Anspruchssatz ausgestellt hat.  
   
  Eigenschaften  
@@ -75,7 +76,7 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
 ## <a name="claims"></a>Ansprüche  
  Das Identitätsmodell ist ein anspruchsbasiertes System. Ansprüche beschreiben die Funktionen, die mit einer Entität im System, häufig einem Benutzer des entsprechenden Systems, verbunden sind. Den mit einer bestimmten Entität verbundenen Satz von Ansprüchen kann man sich als Schlüssel vorstellen. Die jeweiligen Ansprüche definieren die Form des Schlüssels, ähnlich wie bei einem richtigen Schlüssel, der zum Öffnen einer Tür verwendet wird. Ansprüche dienen dazu, Zugriff auf Ressourcen zu erhalten. Der Zugriff auf eine bestimmte geschützte Ressource wird bestimmt, indem die für den Zugriff auf diese Ressource erforderlichen Ansprüche mit den Ansprüchen verglichen werden, die mit der Entität verbunden sind, die zuzugreifen versucht.  
   
- Ein Anspruch ist der Ausdruck eines Rechts in Bezug auf einen bestimmten Wert. Ein Recht kann beispielsweise "Lesen", "Schreiben" oder "Ausführen" sein. Ein Wert kann eine Datenbank, eine Datei, ein Postfach oder eine Eigenschaft sein. Ansprüche besitzen außerdem einen Anspruchtyp. Die Kombination aus Anspruchstyp und Recht stellt den Mechanismus zur Angabe der Funktionen in Bezug auf den Wert dar. Ein Anspruch des Typs "file" mit der rechten Leseberechtigung für den Wert "Biographie. doc" gibt beispielsweise an, dass die Entität, mit der ein solcher Anspruch verknüpft ist, über Lesezugriff auf die Datei "Biografie. doc" verfügt. Ein Anspruch des Typs "Name" mit der rechten "PossessProperty" für den Wert "Martin" gibt an, dass die Entität, mit der ein solcher Anspruch verknüpft ist, eine Namenseigenschaft mit dem Wert "Martin" besitzt.  
+ Ein Anspruch ist der Ausdruck eines Rechts in Bezug auf einen bestimmten Wert. Ein Recht kann beispielsweise "Lesen", "Schreiben" oder "Ausführen" sein. Ein Wert kann eine Datenbank, eine Datei, ein Postfach oder eine Eigenschaft sein. Ansprüche besitzen außerdem einen Anspruchtyp. Die Kombination aus Anspruchstyp und Recht stellt den Mechanismus zur Angabe der Funktionen in Bezug auf den Wert dar. Ein Anspruch des Typs "file" mit der rechten "Read"-Berechtigung über den Wert "Biography.doc" gibt beispielsweise an, dass die Entität, mit der ein solcher Anspruch verknüpft ist, über Lesezugriff auf die Datei Biography.doc verfügt. Ein Anspruch des Typs "Name" mit der rechten "PossessProperty" für den Wert "Martin" gibt an, dass die Entität, mit der ein solcher Anspruch verknüpft ist, eine Namenseigenschaft mit dem Wert "Martin" besitzt.  
   
  Obwohl verschiedene Anspruchstypen und Rechte im Rahmen des Identitätsmodells definiert werden, ist das System erweiterbar und ermöglicht verschiedenen Systemen, die auf die Identitätsmodellinfrastruktur aufsetzen, bei Bedarf zusätzliche Anspruchstypen und Rechte zu definieren.  
   

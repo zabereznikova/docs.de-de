@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs'
+description: Erfahren Sie mehr über die Struktur eines asynchronen Dienst Vorgangs in wfc. Ein Dienst Vorgang kann asynchron oder synchron implementiert werden.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: fd7a1399dd575ad1a4b6c95e0e0510670eb13b51
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5f890bd5124e2353cecee37d163b7f2c65b87fde
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802295"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244620"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs
 In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienst Vorgang asynchron oder synchron implementiert werden, ohne dem Client zu diktieren, wie er aufgerufen werden soll. Asynchrone Dienst Vorgänge können z. b. synchron aufgerufen werden, und synchrone Dienst Vorgänge können asynchron aufgerufen werden. Ein Beispiel, das zeigt, wie ein Vorgang asynchron in einer Client Anwendung aufgerufen wird, finden Sie unter Gewusst [wie: Asynchrones Abrufen von Dienst Vorgängen](./feature-details/how-to-call-wcf-service-operations-asynchronously.md). Weitere Informationen zu synchronen und asynchronen Vorgängen finden Sie unter [Entwerfen von Dienstverträgen](designing-service-contracts.md) und [synchronen und asynchronen Vorgängen](synchronous-and-asynchronous-operations.md). In diesem Thema wird die grundlegende Struktur eines asynchronen Dienstvorgangs beschrieben (der Code ist nicht vollständig). Ein umfassendes Beispiel sowohl der Dienst-als auch der Clientseite finden Sie unter [Asynchronous](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -38,14 +39,14 @@ In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienst Vorgang as
   
     2. Einem asynchronen `BeginSampleMethod`-Vorgang.  
   
-    3. Ein asynchrones `BeginServiceAsyncMethod`/`EndServiceAsyncMethod` Vorgangs Paar.  
+    3. Ein asynchrones `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` Vorgangs Paar.  
   
 2. Einer Dienstimplementierung mit einem <xref:System.IAsyncResult?displayProperty=nameWithType>-Objekt.  
   
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwerfen von Dienstverträgen](designing-service-contracts.md)
 - [Synchrone und asynchrone Vorgänge](synchronous-and-asynchronous-operations.md)

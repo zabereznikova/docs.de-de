@@ -1,13 +1,14 @@
 ---
 title: Firewall-Anweisungen
+description: Erfahren Sie, wie Sie Ports oder Programme in der Firewall für WCF-Beispiele aktivieren. Verwenden Sie je nach Ihren Anforderungen und der Sicherheitsumgebung eines dieser Prozeduren.
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 343fa695039f6767f6ab33daa4e3cc51e8db5e47
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: de55d067960b8f2096c129f6feaf037219e06a96
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899639"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246140"
 ---
 # <a name="firewall-instructions"></a>Firewallanweisungen
 
@@ -28,14 +29,14 @@ Wenn Sie nicht sicher sind, verwenden Sie die erste Option. Wenn Sie eine Firewa
 
 1. Erstellen Sie das Beispiel.
 
-2. Wählen Sie **Start** > **Ausführen**aus, und geben Sie `firewall.cpl`ein. Dadurch wird das Applet **Windows-Firewall-Systemsteuerung** geöffnet.
+2. Wählen Sie **Start**  >  **Run**aus, und geben Sie ein `firewall.cpl` . Dadurch wird das Applet **Windows-Firewall-Systemsteuerung** geöffnet.
 
     > [!NOTE]
     > Sie müssen über die Berechtigung zum Ändern der Firewalleinstellungen verfügen, um Beispiele auszuführen, für die eine Kommunikation durch die Windows-Firewall erforderlich ist. Wenn einige Firewalleinstellungen nicht verfügbar sind und der Computer eine Verbindung mit einer Domäne hergestellt hat, kann der Systemadministrator diese Einstellungen über Gruppenrichtlinien steuern.
 
 3. Führen Sie einen der folgenden betriebsspezifischen Schritte aus, um ein Programm durch die Windows-Firewall zuzulassen:
 
-    - Klicken Sie unter Windows 7 oder Windows Server 2008 R2 auf **Programm oder Feature durch Windows-Firewall zulassen**. Klicken Sie auf **Einstellungen ändern** , > **ein anderes Programm zuzulassen**.
+    - Klicken Sie unter Windows 7 oder Windows Server 2008 R2 auf **Programm oder Feature durch Windows-Firewall zulassen**. Klicken Sie auf **Einstellungen ändern**, um  >  **ein anderes Programm zuzulassen**.
 
     - Klicken Sie unter Windows Vista oder Windows Server 2008 auf **Programm durch die Windows-Firewall zulassen**.
 
@@ -49,7 +50,7 @@ Wenn Sie nicht sicher sind, verwenden Sie die erste Option. Wenn Sie eine Firewa
 
 ## <a name="enable-a-port-range-in-advance"></a>Aktivieren Sie einen Port Bereich im voraus.
 
-1. Wählen Sie **Start** > **Ausführen**aus, und geben Sie `firewall.cpl`ein. Dadurch wird das Applet **Windows-Firewall-Systemsteuerung** geöffnet.
+1. Wählen Sie **Start**  >  **Run**aus, und geben Sie ein `firewall.cpl` . Dadurch wird das Applet **Windows-Firewall-Systemsteuerung** geöffnet.
 
 2. Führen Sie unter Windows 7 oder bei Windows Server 2008 R2 folgende Schritte aus.
 
@@ -61,7 +62,7 @@ Wenn Sie nicht sicher sind, verwenden Sie die erste Option. Wenn Sie eine Firewa
 
     4. Wählen Sie **Port** , und klicken Sie auf **weiter**.
 
-    5. Wählen Sie **TCP** aus, und geben Sie `8000, 8001, 8002, 8003, 9000, 80, 443` in das Feld **bestimmte lokale Ports** ein.
+    5. Wählen Sie **TCP** aus, und geben Sie `8000, 8001, 8002, 8003, 9000, 80, 443` im Feld **bestimmte lokale Ports** ein.
 
     6. Klicken Sie auf **Weiter**.
 
@@ -69,7 +70,7 @@ Wenn Sie nicht sicher sind, verwenden Sie die erste Option. Wenn Sie eine Firewa
 
     8. Wählen Sie **Domäne** und **Privat**aus, und klicken Sie auf **weiter**.
 
-    9. Benennen Sie diese Regel `WCF-WF 4.0 Samples`, und klicken Sie auf **Fertig**stellen.
+    9. Benennen Sie diese Regel `WCF-WF 4.0 Samples` , und klicken Sie auf **Fertig**stellen.
 
     10. Klicken Sie auf **ausgehende Regeln** und wiederholen Sie die Schritte c bis h.
 

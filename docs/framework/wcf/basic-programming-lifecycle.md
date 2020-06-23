@@ -1,15 +1,16 @@
 ---
 title: Grundlegender Programmierlebenszyklus
+description: Erfahren Sie mehr über die Aufgaben zum Erstellen einer WCF-Anwendung. WCF ermöglicht Apps die Kommunikation auf demselben Computer, über Netzwerke oder auf verschiedenen Anwendungsplattformen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320816"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245530"
 ---
 # <a name="basic-programming-lifecycle"></a>Grundlegender Programmierlebenszyklus
 Mit Windows Communication Foundation (WCF) können Anwendungen kommunizieren, ob Sie sich auf demselben Computer, über das Internet oder auf verschiedenen Anwendungsplattformen befinden. In diesem Thema werden die Aufgaben erläutert, die zum Erstellen einer WCF-Anwendung erforderlich sind. Eine funktionierende Beispielanwendung finden Sie unter [Getting Started Tutorial](getting-started-tutorial.md).  
@@ -31,6 +32,6 @@ Mit Windows Communication Foundation (WCF) können Anwendungen kommunizieren, ob
   
  Wenn Sie mit der Entwicklung von Dienstverträgen vertraut sind, können Sie auch [die Einführung in die Erweiterbarkeit](introduction-to-extensibility.md)lesen. Wenn Sie Probleme mit Ihrem Dienst haben, überprüfen Sie den [Schnellstart zur Problem](wcf-troubleshooting-quickstart.md) Behandlung von WCF, um festzustellen, ob andere Probleme dieselben oder ähnliche Probleme haben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Implementieren von Dienstverträgen](implementing-service-contracts.md)

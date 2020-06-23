@@ -1,15 +1,16 @@
 ---
 title: DataContractSerializer-Beispiel
+description: Dieses Beispiel veranschaulicht DataContractSerializer in WCF, das allgemeine Serialisierungs-und Deserialisierungsdienste für die Daten Vertrags Klassen ausführt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 07c6d3b10f2a0478f8fb3835f0b040668c5013ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c2f62c8926f09e2d4cdea1941909e7d8f59c43a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600009"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244399"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer-Beispiel
 Das DataContractSerializer-Beispiel veranschaulicht den <xref:System.Runtime.Serialization.DataContractSerializer>, der allgemeine Serialisierungs- und Deserialisierungsdienste für die Datenvertragsklassen ausführt. Im Beispiel wird ein- `Record` Objekt erstellt, in einen Speicherstream serialisiert und der Speicherstream in ein anderes Objekt deserialisiert, `Record` um die Verwendung von zu veranschaulichen <xref:System.Runtime.Serialization.DataContractSerializer> . Das Beispiel serialisiert dann das `Record`-Objekt mithilfe eines Binärwriters, um zu veranschaulichen, wie der Writer die Serialisierung beeinflusst.  

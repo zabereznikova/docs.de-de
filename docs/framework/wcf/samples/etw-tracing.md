@@ -1,13 +1,14 @@
 ---
 title: ETW-Ablaufverfolgung
+description: In diesem Beispiel wird veranschaulicht, wie End-to-End (E2E)-Ablauf Verfolgung mithilfe der Ereignis Ablauf Verfolgung für Windows (ETW) und ETWTraceListener implementiert wird.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 0bdbf6699a0cfa3dce58abda4c989fb25d764459
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600557"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244425"
 ---
 # <a name="etw-tracing"></a>ETW-Ablaufverfolgung
 In diesem Beispiel wird das Implementieren der End-to-End (E2E)-Ablaufverfolgung mit Event Tracing for Windows (ETW) und dem in diesem Beispiel bereitgestellten `ETWTraceListener` veranschaulicht. Das Beispiel basiert auf den ersten [Schritten und umfasst](getting-started-sample.md) die ETW-Ablauf Verfolgung.  
@@ -52,7 +53,7 @@ In diesem Beispiel wird das Implementieren der End-to-End (E2E)-Ablaufverfolgung
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas. Weitere Informationen zu diesen Tools finden Sie unter.<https://go.microsoft.com/fwlink/?LinkId=56580>  
   
- Bei der Verwendung von ETWTraceListener werden Ablaufverfolgungen in binären ETL-Dateien protokolliert. Wenn die ServiceModel-Ablaufverfolgung aktiviert ist, werden alle generierten Ablaufverfolgungen in der gleichen Datei angezeigt. Verwenden Sie das [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) zum Anzeigen von ETL-und SVCLOG-Protokolldateien. Der Viewer erstellt eine End-to-End-Ansicht des Systems, mit der eine Nachricht von der Quelle zum Ziel und zur Verwendung verfolgt werden kann.  
+ Bei der Verwendung von ETWTraceListener werden Ablaufverfolgungen in binären ETL-Dateien protokolliert. Wenn die ServiceModel-Ablaufverfolgung aktiviert ist, werden alle generierten Ablaufverfolgungen in der gleichen Datei angezeigt. Verwenden Sie das [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) zum Anzeigen von ETL-und SVCLOG-Protokolldateien. Der Viewer erstellt eine End-to-End-Ansicht des Systems, mit der eine Nachricht von der Quelle zum Ziel und zur Verwendung verfolgt werden kann.  
   
  Der ETW-Ablaufverfolgungslistener unterstützt zirkuläre Protokollierung. Um dieses Feature zu aktivieren, wechseln Sie zu **Start**, **Ausführen** , und geben `cmd` Sie ein, um eine Befehlskonsole zu starten. Ersetzen Sie im folgenden Befehl den `<logfilename>`-Parameter durch den Namen der Protokolldatei.  
   
@@ -74,7 +75,7 @@ logman start Wcf
 logman stop Wcf  
 ```  
   
- Bei diesem Prozess werden binäre zirkuläre Protokolle generiert, die Sie mit dem Tool Ihrer Wahl verarbeiten können, z. b. [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) oder tracerpt.  
+ Bei diesem Prozess werden binäre zirkuläre Protokolle generiert, die Sie mit dem Tool Ihrer Wahl verarbeiten können, einschließlich des [Service Trace Viewer-Tools (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) oder der tracerpt.  
   
  Weitere Informationen zu einem alternativen Listener zum Durchführen der zirkulären Protokollierung finden Sie auch im Beispiel für eine [zirkuläre Ablauf Verfolgung](circular-tracing.md) .  
   

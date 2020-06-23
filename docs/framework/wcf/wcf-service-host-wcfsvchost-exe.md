@@ -1,17 +1,18 @@
 ---
 title: WCF-Diensthost (WcfSvcHost.exe)
+description: Verwenden Sie den WCF-Dienst Host zum Hosten und Testen eines implementierten Diensts. Sie können den Dienst mit dem WCF-Test Client oder Ihrem eigenen Client testen.
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: efc9512766d2a9cc814083ab632226d98917bf4e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837739"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245725"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF-Diensthost (WcfSvcHost.exe)
 
-Mit Windows Communication Foundation (WCF)-Dienst Host (WcfSvcHost. exe) können Sie den Visual Studio-Debugger (F5) starten, um automatisch einen von Ihnen implementierten Dienst zu hosten und zu testen. Anschließend können Sie den Dienst mit dem WCF-Test Client (WcfTestClient. exe) oder Ihrem eigenen Client testen, um potenzielle Fehler zu finden und zu beheben.
+Mit Windows Communication Foundation (WCF)-Dienst Host (WcfSvcHost.exe) können Sie den Visual Studio-Debugger (F5) starten, um automatisch einen von Ihnen implementierten Dienst zu hosten und zu testen. Anschließend können Sie den Dienst mit dem WCF-Test Client (WcfTestClient.exe) oder Ihrem eigenen Client testen, um potenzielle Fehler zu finden und zu beheben.
 
 ## <a name="wcf-service-host"></a>WCF-Diensthost
 
@@ -45,13 +46,13 @@ In der folgenden Tabelle sind alle Parameter im Dialogfeld **Befehlszeilenargume
 
 Nachdem Sie ein neues WCF-Dienstprojekt erstellt und F5 drücken, um den Debugger zu starten, beginnt der WCF-Dienst Host mit dem Hosten aller Dienste, die im Projekt gefunden werden. Der WCF-Test Client wird automatisch geöffnet, und es wird eine Liste der in der Konfigurationsdatei definierten Dienst Endpunkte angezeigt. Vom Hauptfenster aus können Sie die Parameter testen und den Dienst aufrufen.
 
-Um sicherzustellen, dass der WCF-Test Client verwendet wird, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus **, und wählen Sie dann** die Registerkarte **Debuggen** aus.
+Um sicherzustellen, dass der WCF-Test Client verwendet wird, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus **, und wählen Sie dann** die **Command line arguments** Registerkarte **Debuggen** aus.
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>Verwenden eines benutzerdefinierten Clients
 
-Um einen benutzerdefinierten Client zu verwenden, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus, und wählen Sie dann die Registerkarte **Debuggen** aus. Klicken Sie auf **Projekt starten** , und bearbeiten Sie den `/client`-Parameter im Dialogfeld **Befehlszeilenargumente** , um auf den benutzerdefinierten Client
+Wenn Sie einen benutzerdefinierten Client verwenden möchten, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus, und wählen Sie dann die Registerkarte **Debuggen** aus. Klicken Sie auf **Projekt starten** , und bearbeiten Sie den `/client` Parameter im Dialogfeld **Befehlszeilenargumente** , um auf den benutzerdefinierten Client
 
 `/client:"path/CustomClient.exe"`
 
@@ -111,16 +112,16 @@ Der WCF-Dienst Host kann auf vier Arten heruntergefahren werden:
 
 ## <a name="using-service-host-without-administrator-privilege"></a>Verwenden des Diensthosts ohne Administratorberechtigung
 
-Um Benutzern ohne Administratorrechte die Entwicklung von WCF-Diensten zu ermöglichen, wird während der Installation von Visual Studio eine ACL (Access Control Liste) für den Namespace "http://+:8731/Design_Time_Addresses" erstellt. Die ACL wird auf (UI) festgelegt, wodurch alle interaktiven, am Computer angemeldeten Benutzer eingeschlossen werden. Administratoren können dieser ACL Benutzer hinzufügen oder aus dieser ACL entfernen oder zusätzliche Ports öffnen. Diese ACL ermöglicht es Benutzern, den automatischen WCF-Dienst Host (WcfSvcHost. exe) zu verwenden, ohne Ihnen Administratorrechte zu erteilen.
+Um Benutzern ohne Administratorrechte die Entwicklung von WCF-Diensten zu ermöglichen, wird http://+:8731/Design_Time_Addresses während der Installation von Visual Studio eine ACL (Access Control Liste) für den Namespace "" erstellt. Die ACL wird auf (UI) festgelegt, wodurch alle interaktiven, am Computer angemeldeten Benutzer eingeschlossen werden. Administratoren können dieser ACL Benutzer hinzufügen oder aus dieser ACL entfernen oder zusätzliche Ports öffnen. Diese ACL ermöglicht es Benutzern, den automatischen WCF-Dienst Host (wcfSvcHost.exe) zu verwenden, ohne Ihnen Administratorrechte zu erteilen.
 
-Sie können den Zugriff mithilfe des Tools "Netsh. exe" in Windows Vista unter dem Konto mit erhöhten Rechten ändern. Das folgende Beispiel veranschaulicht die Verwendung des Tools netsh.exe.
+Sie können den Zugriff mithilfe des netsh.exe Tools in Windows Vista unter dem Konto mit erhöhten Rechten ändern. Das folgende Beispiel veranschaulicht die Verwendung des Tools netsh.exe.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Weitere Informationen zu "Netsh. exe" finden Sie unter "Gewusst[wie: Verwenden des Tools" Netsh. exe "und Befehls Zeilenschalter](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10)).
+Weitere Informationen zu netsh.exe finden Sie unter "[Verwenden des Netsh.exe Tools und der Befehls Zeilenschalter](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))".
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WCF-Testclient (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

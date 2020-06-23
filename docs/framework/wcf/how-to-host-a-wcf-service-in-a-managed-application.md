@@ -1,16 +1,17 @@
 ---
-title: 'Gewusst wie: Hosten eines WCF-Diensts in einer verwalteten Anwendung'
+title: 'Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten Anwendung'
+description: Erfahren Sie, wie Sie einen WCF-Dienst in einer verwalteten Anwendung hosten, indem Sie einen selbst gehosteten Dienst erstellen und testen.
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7d1d61b683f60a6c643d2a2f03d367a6ae6c6c15
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320975"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246167"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten App
 
@@ -28,11 +29,11 @@ Im folgenden Verfahren wird das Implementieren eines selbst gehosteten Diensts i
 
 1. Erstellen Sie eine neue Konsolenanwendung:
 
-   1. Öffnen Sie Visual Studio, und wählen Sie im Menü **Datei** die Option **New** > **Project** aus.
+   1. Öffnen Sie Visual Studio, **New**und wählen Sie  >  im Menü **Datei** die Option neues**Projekt** aus.
 
-   2. Wählen Sie in der Liste **installierte Vorlagen** die Option **Visual C#**  oder **Visual Basic**aus, und wählen Sie dann **Windows-Desktop**aus.
+   2. Wählen Sie in der Liste **installierte Vorlagen** die Option **Visual c#** oder **Visual Basic**aus, und wählen Sie dann **Windows-Desktop**aus.
 
-   3. Wählen Sie die **Konsolen-App** -Vorlage aus. Geben Sie `SelfHost` in das Feld **Name** ein, und klicken Sie dann auf **OK**.
+   3. Wählen Sie die **Konsolen-App** -Vorlage aus. Geben `SelfHost` Sie in das Feld **Name** ein, und **Klicken**Sie dann auf OK.
 
 2. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf **SelfHost** , und wählen Sie **Verweis hinzufügen** Wählen Sie **System. Service Model** auf der Registerkarte **.net** aus, und klicken Sie dann auf **OK**.
 
@@ -65,20 +66,20 @@ Im folgenden Verfahren wird das Implementieren eines selbst gehosteten Diensts i
     > [!NOTE]
     > In diesem Beispiel werden Standardendpunkte verwendet. Für diesen Dienst ist keine Konfigurationsdatei erforderlich. Wenn keine Endpunkte konfiguriert sind, wird von der Laufzeit ein Standardendpunkt für alle Basisadressen in jedem Dienstvertrag hinzugefügt, der vom Dienst implementiert wird. Weitere Informationen zu Standard Endpunkten finden Sie unter [vereinfachte Konfiguration](simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](./samples/simplified-configuration-for-wcf-services.md).
 
-7. Drücken Sie **STRG**+**UMSCHALT**+**B** , um die Projekt Mappe zu erstellen.
+7. Drücken Sie **STRG** + **UMSCHALT** + **B** , um die Projekt Mappe zu erstellen.
 
 ## <a name="test-the-service"></a>Testen des Diensts
 
-1. Drücken Sie **STRG**+**F5** , um den Dienst auszuführen.
+1. Drücken Sie **STRG** + **F5** , um den Dienst auszuführen.
 
 2. Öffnen Sie den **WCF-Test Client**.
 
     > [!TIP]
-    > Öffnen Sie zum Öffnen des **WCF-Test Clients**Developer-Eingabeaufforderung für Visual Studio, und führen Sie **WcfTestClient. exe**aus.
+    > Öffnen Sie zum Öffnen des **WCF-Test Clients**Developer-Eingabeaufforderung für Visual Studio, und führen Sie **WcfTestClient.exe**aus.
 
 3. Wählen Sie im Menü **Datei** die Option **Dienst hinzufügen** aus.
 
-4. Geben Sie `http://localhost:8080/hello` in das Adressfeld ein, und klicken Sie auf **OK**.
+4. Geben `http://localhost:8080/hello` Sie in das Feld Adresse ein, und klicken Sie auf **OK**.
 
     > [!TIP]
     > Stellen Sie sicher, dass der Dienst ausgeführt wird, oder ein Fehler tritt bei diesem Schritt auf. Haben Sie die Basisadresse im Code geändert, verwenden Sie in diesem Schritt die geänderte Basisadresse.
@@ -94,12 +95,12 @@ Im folgenden Beispiel wird ein <xref:System.ServiceModel.ServiceHost>-Objekt als
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [How to: Host a WCF Service in IIS (Vorgehensweise: Hosten eines WCF-Diensts in IIS)](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Vorgehensweise: Hosten eines WCF-Diensts in IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Selbst gehostete Dienste](./samples/self-host.md)
 - [Hosting-Dienste](hosting-services.md)
 - [Vorgehensweise: Definieren eines Dienstvertrags](how-to-define-a-wcf-service-contract.md)
