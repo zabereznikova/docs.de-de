@@ -1,17 +1,18 @@
 ---
 title: 'Daten und Modellierung: .net'
+description: Anzeigen von Links zu Artikeln, in denen die Modellierung und der Zugriff auf Daten in .net beschrieben werden. In den Artikeln werden WCF Data Services, ADO.net und Transaktionsverarbeitung behandelt.
 ms.date: 09/09/2019
 helpviewer_keywords:
 - .NET Framework, data access
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: ad9e63f74f5a79eba937ef16310926ae9b9f287d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 654f6f37e40d5df76910a7de7c5de4ffa2787b58
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894364"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141836"
 ---
 # <a name="data-and-modeling-in-net"></a>Daten und Modellierung in .net
 
@@ -25,19 +26,19 @@ Dieser Abschnitt enthält Informationen zum Zugreifen auf Daten in der .NET Fram
  [ADO.NET](./adonet/index.md)  
  Beschreibt die ADO.NET-Architektur und die Verwendung der ADO.NET-Klassen zum Verwalten von Anwendungsdaten und Interagieren mit Datenquellen, einschließlich Microsoft SQL Server, OLE DB-Datenquellen und XML.  
   
- [Transaction Processing (Verarbeiten von Transaktionen)](./transactions/index.md)  
+ [Transaktionsverarbeitung](./transactions/index.md)  
  Erläutert die .NET-Unterstützung für Transaktionen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
  [Language-Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
- Stellt Links zur relevanten Dokumentation für Language Integrated Query (LINQ) mithilfe C#von bereit.  
+ Enthält Links zu relevanter Dokumentation für Language Integrated Query (LINQ) mit c#.  
   
- [Language-Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
  Stellt Links zur relevanten Dokumentation für Language Integrated Query (LINQ) mit Visual Basic bereit.  
   
  [XML-Dokumente und -Daten](../../standard/data/xml/index.md)  
  Bietet eine Übersicht über eine umfassende und integrierte Gruppe von Klassen, die mit XML-Dokumenten und -Daten in .NET Framework eingesetzt werden können.  
   
- [Verweise zu XML-Standards](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  
+ [XML-Standard Referenz](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  
  Enthält Referenzinformationen zu XML-Standards, die von Microsoft unterstützt werden.  

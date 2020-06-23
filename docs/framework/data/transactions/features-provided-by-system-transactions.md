@@ -1,13 +1,14 @@
 ---
 title: Von System.Transactions bereitgestellte Funktionen
+description: Überprüfen Sie die Funktionen, die vom System. Transactions-Namespace in .NET bereitgestellt werden, um Ihre eigene Transaktions Anwendung und den Ressourcen-Manager zu schreiben.
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: c3ef924edf34ae19be9eace85aaee5340025de7d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0278e9248305572c6156c6500f1fe51a8b3f3338
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205961"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141861"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Von System.Transactions bereitgestellte Funktionen
 In diesem Abschnitt wird beschrieben, wie Sie anhand der Funktionen, die der <xref:System.Transactions>-Namespace bereitstellt, Ihre eigene Transaktionsanwendung und Ihren eigenen Ressourcen-Manager schreiben können. In diesem Abschnitt wird insbesondere darauf eingegangen, wie eine (lokale oder verteilte) Transaktion erstellt wird und ein oder mehrere Teilnehmer daran teilnehmen können.  
@@ -28,9 +29,9 @@ In diesem Abschnitt wird beschrieben, wie Sie anhand der Funktionen, die der <xr
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 ### <a name="writing-a-transactional-application"></a>Erstellen einer Transaktionsanwendung  
- Der <xref:System.Transactions>-Namespace stellt zwei Modelle zum Erstellen von Transaktionsanwendungen bereit. [Durch das Implementieren einer impliziten Transaktion mit Transaktions Bereich](implementing-an-implicit-transaction-using-transaction-scope.md) wird <xref:System.Transactions> beschrieben, wie der Namespace das Erstellen <xref:System.Transactions.TransactionScope> impliziter Transaktionen mithilfe der-Klasse unterstützt  
+ Der <xref:System.Transactions>-Namespace stellt zwei Modelle zum Erstellen von Transaktionsanwendungen bereit. [Durch das Implementieren einer impliziten Transaktion mit Transaktions Bereich](implementing-an-implicit-transaction-using-transaction-scope.md) wird beschrieben, wie der <xref:System.Transactions> Namespace das Erstellen impliziter Transaktionen mithilfe der-Klasse unterstützt <xref:System.Transactions.TransactionScope>  
   
- [Durch das Implementieren einer expliziten Transaktion mit CommittableTransaction](implementing-an-explicit-transaction-using-committabletransaction.md) wird beschrieben, wie das Erstellen expliziter Transaktionen mithilfe der <xref:System.Transactions> <xref:System.Transactions.CommittableTransaction> -Klasse vom-Namespace  
+ [Durch das Implementieren einer expliziten Transaktion mit CommittableTransaction](implementing-an-explicit-transaction-using-committabletransaction.md) wird beschrieben, wie das <xref:System.Transactions> Erstellen expliziter Transaktionen mithilfe der-Klasse vom-Namespace <xref:System.Transactions.CommittableTransaction>  
   
  Weitere Themen zum Schreiben einer Transaktions Anwendung finden Sie unter [Schreiben einer transaktionalen](writing-a-transactional-application.md)Anwendung.  
   

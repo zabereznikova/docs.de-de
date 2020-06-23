@@ -1,13 +1,14 @@
 ---
 title: Ablaufverfolgungen zur Diagnose
+description: Erfahren Sie mehr Überdiagnose Ablauf Verfolgungen in .net. Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die während der Anwendungsausführung generiert werden.
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-ms.openlocfilehash: 76712710bf42f498ba859c7b1cd18a261387078c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5de8fdf7b95cf01b119118dac75d373c32949dcd
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174419"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141810"
 ---
 # <a name="diagnostic-traces"></a>Ablaufverfolgungen zur Diagnose
 Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die während der Anwendungsausführung generiert werden. Wenn Sie mit der Ablaufverfolgung arbeiten, müssen Sie einen Mechanismus zum Sammeln und Aufzeichnen der gesendeten Meldungen einrichten. Ablaufverfolgungsmeldungen werden von Listenern empfangen. Der Zweck eines Listeners ist das Sammeln, Speichern und Weiterleiten von Ablaufverfolgungsmeldungen. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, beispielsweise ein Protokoll, ein Fenster oder eine Textdatei.  
@@ -39,13 +40,13 @@ Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die währ
   
 |Ablaufverfolgungsebene|Beschreibung|  
 |-----------------|-----------------|  
-|Kritisch|Schwerwiegende Fehler wie die nachfolgend aufgeführten sind aufgetreten:<br /><br /> - Ein Fehler, der zu einem sofortigen Verlust der Benutzerfunktionalität führen kann.<br />- Ein Ereignis, bei dem ein Administrator Maßnahmen ergreifen muss, um Funktionsverlust zu vermeiden.<br />- Code hängt.<br />- Diese Ablaufverfolgungsebene kann auch ausreichendkontextigen Kontext für die Interpretation anderer kritischer Spuren bieten. Dies kann helfen, die Sequenz von Vorgängen zu identifizieren, die zu einem schwerwiegenden Fehler führt.|  
+|Kritisch|Schwerwiegende Fehler wie die nachfolgend aufgeführten sind aufgetreten:<br /><br /> : Ein Fehler, der einen unmittelbaren Verlust der Benutzer Funktionalität verursachen kann.<br />: Ein Ereignis, das einen Administrator erfordert, Maßnahmen zu ergreifen, um den Funktionsverlust zu vermeiden.<br />-Code wird nicht mehr angezeigt.<br />-Diese Ablauf Verfolgungs Ebene kann auch ausreichenden Kontext zum Interpretieren anderer kritischer Ablauf Verfolgungen bereitstellen. Dies kann helfen, die Sequenz von Vorgängen zu identifizieren, die zu einem schwerwiegenden Fehler führt.|  
 |Fehler|Ein Fehler (beispielsweise ungültiges Konfigurations- oder Netzwerkverhalten) ist aufgetreten, der zu einer Beeinträchtigung der Benutzerfunktionalität führen kann.|  
 |Warnung|Es besteht eine Bedingung, die zu einem Fehler oder einem schwerwiegenden Ausfall führen kann (z. B. Speicherbelegung oder Annäherung an einen Grenzwert). Die normale Verarbeitung von Benutzercodefehlern (z. B. Transaktionsabbruch, Timeouts oder Authentifizierungsfehler) kann ebenfalls eine Warnung auslösen.|  
 |Information|Meldungen, die bei der Überwachung und Diagnose des Systemstatus, der Leistungsmessung oder Profilerstellung nützlich sind. Dazu gehören Transaktions- und Eintragungslebensdauer-Ereignisse wie beispielsweise eine Transaktion, die erstellt oder für die ein Commit ausgeführt wird, das Überschreiten einer wichtigen Begrenzung oder die Speicherbelegung bedeutender Ressourcen. Ein Entwickler kann dann solche Informationen zur Kapazitätsplanung und Leistungsverwaltung nutzen.|  
   
 ## <a name="trace-codes"></a>Ablaufverfolgungscodes  
- In der folgenden Tabelle sind die Ablaufverfolgungscodes aufgeführt, die von der <xref:System.Transactions>-Infrastruktur generiert werden. In der Tabelle sind der Ablaufverfolgungscodebezeichner, die <xref:System.Diagnostics.EventTypeFilter.EventType%2A> Enumerationsebene für die Ablaufverfolgung und die zusätzlichen Daten enthalten, die im **TraceRecord** für die Ablaufverfolgung enthalten sind. Darüber hinaus wird die entsprechende Ablaufverfolgungsebene der Ablaufverfolgung auch im **TraceRecord**gespeichert.  
+ In der folgenden Tabelle sind die Ablaufverfolgungscodes aufgeführt, die von der <xref:System.Transactions>-Infrastruktur generiert werden. In der Tabelle sind der Bezeichner für den Ablauf Verfolgungs Code, die <xref:System.Diagnostics.EventTypeFilter.EventType%2A> enumerationsstufe für die Ablauf Verfolgung und die zusätzlichen Daten, die im **TraceRecord** für die Ablauf Verfolgung enthalten sind. Darüber hinaus wird auch die entsprechende Ablauf Verfolgungs Ebene der Ablauf Verfolgung im **TraceRecord**gespeichert.  
   
 |TraceCode|EventType|Zusätzliche Daten in TraceRecord|  
 |---------------|---------------|-------------------------------|  
@@ -56,12 +57,12 @@ Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die währ
 |TransactionRollbackCalled|Warnung|TransactionTraceId|  
 |TransactionAborted|Warnung|TransactionTraceId|  
 |TransactionInDoubt|Warnung|TransactionTraceId|  
-|TransactionScopeCreated|Info|TransactionScopeResult, das folgendes sein kann:<br /><br /> - Neue Transaktion.<br />- Transaktion bestanden.<br />- Abhängige Transaktion übergeben.<br />- Verwenden der aktuellen Transaktion.<br />- Keine Transaktion.<br /><br /> Neue aktuelle TransactionTraceId|  
-|TransactionScopeDisposed|Info|TransactionTraceId der "erwarteten" aktuellen Transaktion des Bereichs.|  
-|TransactionScopeIncomplete|Warnung|TransactionTraceId der "erwarteten" aktuellen Transaktion des Bereichs.|  
-|TransactionScopeNestedIncorrectly|Warnung|TransactionTraceId der "erwarteten" aktuellen Transaktion des Bereichs.|  
+|TransactionScopeCreated|Info|TransactionScopeResult, das folgendes sein kann:<br /><br /> -Neue Transaktion.<br />-Transaktion wurde erfolgreich durchgeführt.<br />-Abhängige Transaktion wurde erfolgreich durchgeführt.<br />-Verwenden der aktuellen Transaktion.<br />-Keine Transaktion.<br /><br /> Neue aktuelle TransactionTraceId|  
+|TransactionScopeDisposed|Info|Transaktiontraceid der "erwarteten" aktuellen Transaktion des Bereichs.|  
+|TransactionScopeIncomplete|Warnung|Transaktiontraceid der "erwarteten" aktuellen Transaktion des Bereichs.|  
+|TransactionScopeNestedIncorrectly|Warnung|Transaktiontraceid der "erwarteten" aktuellen Transaktion des Bereichs.|  
 |TransactionScopeCurrentTransactionChanged|Warnung|Alte aktuelle TransactionTraceId, sonstige TransactionTraceId|  
-|TransactionScopeTimeout|Warnung|TransactionTraceId der "erwarteten" aktuellen Transaktion des Bereichs.|  
+|TransactionScopeTimeout|Warnung|Transaktiontraceid der "erwarteten" aktuellen Transaktion des Bereichs.|  
 |DependentCloneCreated|Info|TransactionTraceId, Typ der erzeugten abhängigen Transaktion (RollbackIfNotComplete/BlockCommitUntilComplete)|  
 |DependentCloneComplete|Info|TransactionTraceId|  
 |RecoveryComplete|Info|Ressourcen-Manager-GUID (von Basis)|  

@@ -1,13 +1,14 @@
 ---
 title: Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung
+description: Optimieren Sie die Leistung mithilfe eines einphasigen Commit und einer erweiterbaren Einphasenbenachrichtigung. Erfahren Sie mehr über die System. Transactions-Infrastruktur in .net.
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: f486315b8a8c90e6616ca95fb6be4b2ae3719b7e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 89ce82e673340c93254983c078f78a2501129383
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205900"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141977"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung
 
@@ -32,7 +33,7 @@ Wenn die <xref:System.Transactions>-Transaktion zu keinem Zeitpunkt eine Eskalat
 Wenn die <xref:System.Transactions>-Transaktion eskaliert werden muss (beispielsweise, um mehrere RMs zu unterstützen), informiert <xref:System.Transactions> den Ressourcen-Manager durch Aufrufen der <xref:System.Transactions.ITransactionPromoter.Promote%2A>-Methode für die <xref:System.Transactions.ITransactionPromoter>-Schnittstelle, von der die <xref:System.Transactions.IPromotableSinglePhaseNotification>-Schnittstelle abgeleitet wurde. Der Ressourcen-Manager konvertiert die Transaktion dann intern von einer lokalen Transaktion (die keine Protokollierung erfordert) in ein Transaktionsobjekt, das an einer DTC-Transaktion teilnehmen kann, und ordnet es den bereits erledigten Aufgaben zu. Wenn der Commit der Transaktion angefordert wird, sendet der Transaktions-Manager auch in diesem Fall die <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A>-Benachrichtigung an den Ressourcen-Manager, der einen Commit für die verteilte Transaktion ausführt, die er während der Eskalation erstellt hat.
 
 > [!NOTE]
-> Die Transaktions-Ablauf Verfolgungen (die generiert werden, wenn ein Commit für die eskalierte Transaktion aufgerufen wird) enthalten die Aktivitäts-ID der DTC-Transaktion.
+> Die **Transaktions-Ablauf** Verfolgungen (die generiert werden, wenn ein Commit für die eskalierte Transaktion aufgerufen wird) enthalten die Aktivitäts-ID der DTC-Transaktion.
 
 Weitere Informationen zur Ausweitung der Verwaltung finden Sie unter [Ausweitung der Transaktions Verwaltung](transaction-management-escalation.md).
 
@@ -40,7 +41,7 @@ Weitere Informationen zur Ausweitung der Verwaltung finden Sie unter [Ausweitung
 
 Das folgende Szenario veranschaulicht die Eskalation zu einer verteilten Transaktion unter Verwendung des <xref:System.Data>-Namespace als 'Proxy' für den Ressourcen-Manager. Bei diesem Szenario wird vorausgesetzt, dass bereits eine <xref:System.Data>-Verbindung (CN1) zur Datenbank besteht, die von der Transaktion betroffen ist, und dass die Anwendung eine weitere <xref:System.Data>-Verbindung (CN2) einbeziehen will. Die Transaktion muss als vollständig verteilte Zweiphasencommit-Transaktion zum DTC eskaliert werden.
 
-In diesem Szenario
+In diesem Szenario:
 
 1. ruft CN1 die <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>-Methode auf, um sich in die Transaktion einzutragen. Dann ist die Transaktion weiterhin lokal, und es gibt keine anderen heraufstufbaren Eintragungen für die Transaktion, weshalb der <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>-Aufruf erfolgreich ist.
 

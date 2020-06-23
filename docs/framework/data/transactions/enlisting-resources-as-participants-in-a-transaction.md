@@ -1,16 +1,17 @@
 ---
 title: Eintragen von Ressourcen als Teilnehmer an einer Transaktion
+description: Eintragen von Ressourcen als Teilnehmer in einer .NET-Transaktion. Jede Ressource in einer Transaktion wird von einem Ressourcen-Manager verwaltet, der von einem Transaktions-Manager koordiniert wird.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 786a12c2-d530-49f4-9c59-5c973e15a11d
-ms.openlocfilehash: 83d83df0f747198e93dd64308b904cad5c7439ec
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c3c777593750b3a4f05ae97ed6e26e19f58e4d72
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205977"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141874"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Eintragen von Ressourcen als Teilnehmer an einer Transaktion
 
@@ -20,7 +21,7 @@ In diesem Thema wird beschrieben, wie eine oder mehrere Ressourcen in eine Trans
 
 ## <a name="enlisting-resources-in-a-transaction"></a>Eintragen von Ressourcen in eine Transaktion
 
-Damit eine Ressource an einer Transaktion teilnehmen kann, muss sie sich in die Transaktion eintragen. Die <xref:System.Transactions.Transaction> -Klasse definiert einen Satz von Methoden, deren Namen mit **Enlist** beginnen, die diese Funktion bereitstellen. Die unterschiedlichen **Enlist** -Methoden entsprechen den unterschiedlichen Arten der Eintragung, die ein Ressourcen-Manager aufweisen kann. Die <xref:System.Transactions.Transaction.EnlistVolatile%2A>-Methoden werden für flüchtige Ressourcen und die <xref:System.Transactions.Transaction.EnlistDurable%2A>-Methode wird für dauerhafte Ressourcen verwendet. Die Dauerhaftigkeit (oder im Gegensatz dazu die Flüchtigkeit) eines Ressourcen-Managers leitet sich davon ab, ob der Ressourcen-Manager die Wiederherstellung nach einem Fehler unterstützt. Wenn ein RM die Wiederherstellung nach einem Fehler unterstützt, legt er Daten während Phase 1 (Vorbereitung) in einem permanenten Speicher ab, damit er sich im Falle eines Ausfalls nach der Wiederherstellung erneut in die Transaktion eintragen und entsprechend den Benachrichtigungen des TM geeignete Aktionen ausführen kann. Im Allgemeinen verwalten flüchtige RMs flüchtige Ressourcen wie beispielsweise eine speicherinterne Datenstruktur (z. B. eine speicherinterne Transaktions-Hashtabelle), und dauerhafte RMs verwalten Ressourcen, die über einen beständigeren Sicherungsspeicher verfügen (z. B. eine Datenbank, deren Sicherungsspeicher ein Datenträger ist).
+Damit eine Ressource an einer Transaktion teilnehmen kann, muss sie sich in die Transaktion eintragen. Die- <xref:System.Transactions.Transaction> Klasse definiert einen Satz von Methoden, deren Namen mit **Enlist** beginnen, die diese Funktion bereitstellen. Die unterschiedlichen **Enlist** -Methoden entsprechen den unterschiedlichen Arten der Eintragung, die ein Ressourcen-Manager aufweisen kann. Die <xref:System.Transactions.Transaction.EnlistVolatile%2A>-Methoden werden für flüchtige Ressourcen und die <xref:System.Transactions.Transaction.EnlistDurable%2A>-Methode wird für dauerhafte Ressourcen verwendet. Die Dauerhaftigkeit (oder im Gegensatz dazu die Flüchtigkeit) eines Ressourcen-Managers leitet sich davon ab, ob der Ressourcen-Manager die Wiederherstellung nach einem Fehler unterstützt. Wenn ein RM die Wiederherstellung nach einem Fehler unterstützt, legt er Daten während Phase 1 (Vorbereitung) in einem permanenten Speicher ab, damit er sich im Falle eines Ausfalls nach der Wiederherstellung erneut in die Transaktion eintragen und entsprechend den Benachrichtigungen des TM geeignete Aktionen ausführen kann. Im Allgemeinen verwalten flüchtige RMs flüchtige Ressourcen wie beispielsweise eine speicherinterne Datenstruktur (z. B. eine speicherinterne Transaktions-Hashtabelle), und dauerhafte RMs verwalten Ressourcen, die über einen beständigeren Sicherungsspeicher verfügen (z. B. eine Datenbank, deren Sicherungsspeicher ein Datenträger ist).
 
 Nachdem auf der Grundlage der Dauerhaftigkeit Ihrer Ressource entschieden wurde, ob die <xref:System.Transactions.Transaction.EnlistDurable%2A>-Methode oder die <xref:System.Transactions.Transaction.EnlistVolatile%2A>-Methode verwendet wird, sollten Sie Ihre Ressource für die Teilnahme an einem Zweiphasencommit (2PC) eintragen, indem Sie die <xref:System.Transactions.IEnlistmentNotification>-Schnittstelle für Ihren RM implementieren. Weitere Informationen zu 2PC finden Sie unter [Commit a Transaction in Single-Phase and Multi-Phase](committing-a-transaction-in-single-phase-and-multi-phase.md).
 
@@ -55,5 +56,5 @@ Die <xref:System.Transactions.Transaction>-Klasse stellt die <xref:System.Transa
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Optimierung mit Einphasencommit und heraufstufbarer Einphasenbenachrichtigung](optimization-spc-and-promotable-spn.md)
+- [Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung](optimization-spc-and-promotable-spn.md)
 - [Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion](committing-a-transaction-in-single-phase-and-multi-phase.md)
