@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF'
+description: Erfahren Sie, wie Sie ein X. 509-Zertifikat für WCF zugänglich machen. Der Anwendungscode muss den Namen und Speicherort des Zertifikat Speicher angeben. Möglicherweise gibt es weitere Anforderungen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: e4f1aae021c4be49847b3b6dcd14b5a0a237c899
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597045"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246869"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF
 Um ein X. 509-Zertifikat für Windows Communication Foundation (WCF) zugänglich zu machen, muss der Anwendungscode den Namen und Speicherort des Zertifikat Speicher angeben. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Zum Abrufen des privaten Schlüssels, der einem X. 509-Zertifikat in einem Zertifikat Speicher zugeordnet ist, muss WCF über die entsprechende Berechtigung verfügen. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
@@ -62,7 +63,7 @@ Um ein X. 509-Zertifikat für Windows Communication Foundation (WCF) zugänglich
         |Dienst, der in IIS 6,0 (Windows Server 2003) oder IIS 7,0 (Windows Vista) gehostet wird.|NETZWERKDIENST|  
         |Dienst, der in IIS 5. X (Windows XP) gehostet wird.|Wird durch das `<processModel>`-Element in der Datei Machine.config gesteuert. ASPNET ist das Standardkonto.|  
   
-    5. Erteilen Sie mithilfe eines Tools wie "icacls. exe" Lesezugriff auf die Datei, die den privaten Schlüssel für das Konto enthält, unter dem WCF ausgeführt wird.  
+    5. Erteilen Sie mithilfe eines Tools wie icacls.exe Lesezugriff auf die Datei, die den privaten Schlüssel für das Konto enthält, unter dem WCF ausgeführt wird.  
   
          Im folgenden Codebeispiel wird die freigegebene Zugriffs Steuerungs Liste (DACL) für die angegebene Datei bearbeitet, um dem Netzwerkdienst Konto Lesezugriff (: R) auf die Datei zu gewähren.  
   

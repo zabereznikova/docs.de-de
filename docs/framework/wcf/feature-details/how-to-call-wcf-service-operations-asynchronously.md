@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Asynchrones Aufrufen von WCF-Dienstvorgängen'
+description: Erfahren Sie, wie Sie einen WCF-Client erstellen, der asynchron auf einen Dienst Vorgang zugreifen kann, indem Sie das ereignisgesteuerte asynchrone Aufruf Modell verwenden.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 400ed8e5ee8b236e9d0f843f27b7c2112ec28861
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aa31f64473111800f4cd01907a0446c94f368456
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601256"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247233"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Vorgehensweise: Asynchrones Aufrufen von WCF-Dienstvorgängen
 
@@ -19,11 +20,11 @@ In diesem Artikel wird beschrieben, wie ein Client auf einen Dienst Vorgang asyn
 > [!NOTE]
 > Bei Verwendung einer <xref:System.ServiceModel.ChannelFactory%601> wird das ereignisgesteuerte asynchrone Aufrufmodell nicht unterstützt. Weitere Informationen zum Ausführen von asynchronen Aufrufen mithilfe von finden Sie unter Gewusst <xref:System.ServiceModel.ChannelFactory%601> [wie: Asynchrones Aufrufen von Vorgängen mithilfe einer Kanalfactory](how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
-## <a name="procedure"></a>Verfahren  
+## <a name="procedure"></a>Vorgehensweise  
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>So rufen Sie WCF-Dienstvorgänge asynchron auf  
   
-1. Führen Sie das [Service Model Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool mit den `/async` `/tcv:Version35` Befehlsoptionen und aus, wie im folgenden Befehl gezeigt.  
+1. Führen Sie das [Service Model Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool mit den `/async` `/tcv:Version35` Befehlsoptionen und aus, wie im folgenden Befehl gezeigt.  
   
     ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  

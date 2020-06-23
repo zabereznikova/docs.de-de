@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts'
+description: Erfahren Sie, wie Sie einen Dienst erstellen, der einen Webendpunkt in WCF verfügbar macht. Webendpunkte senden Daten mithilfe von XML oder JSON. Es ist kein SOAP-Umschlag vorhanden.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 7481367f27d973ba809dff5ca1c4a4f168fbbb98
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895179"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247103"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts
 
@@ -77,7 +78,7 @@ Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu ers
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>So rufen Sie Dienstvorgänge auf, die GET in Internet Explorer zugeordnet werden
 
-1. Öffnen Sie Internet Explorer, geben`http://localhost:8000/EchoWithGet?s=Hello, world!`Sie "" ein, und drücken Sie EINGABETASTE Die URL enthält die Basisadresse des Dienstanbieter`http://localhost:8000/`(), die relative Adresse des Endpunkts (""), den aufzurufenden Dienst Vorgang ("EchoWithGet") und ein Fragezeichen, gefolgt von einer Liste benannter Parameter, getrennt durch ein kaufmännisches und-Zeichen (&).
+1. Öffnen Sie Internet Explorer, geben `http://localhost:8000/EchoWithGet?s=Hello, world!` Sie "" ein, und drücken Sie EINGABETASTE Die URL enthält die Basisadresse des Dienstanbieter ( `http://localhost:8000/` ), die relative Adresse des Endpunkts (""), den aufzurufenden Dienst Vorgang ("EchoWithGet") und ein Fragezeichen, gefolgt von einer Liste benannter Parameter, getrennt durch ein kaufmännisches und-Zeichen (&).
 
 ## <a name="to-call-service-operations-in-code"></a>So rufen Sie Dienstvorgänge in Code auf
 
@@ -112,7 +113,7 @@ Unten ist die vollständige Codeauflistung für dieses Beispiel angegeben.
 
 Verweisen Sie beim Kompilieren der Datei Service.cs auf System.ServiceModel.dll und System.ServiceModel.Web.dll.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

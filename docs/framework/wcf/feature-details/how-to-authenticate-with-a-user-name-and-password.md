@@ -1,15 +1,16 @@
 ---
 title: 'Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort'
+description: Erfahren Sie, wie Sie einen WCF-Dienst zum Authentifizieren eines Clients mithilfe eines Windows-Domänen Benutzernamens und-Kennworts mit Beispielcode aktivieren.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601282"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247246"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort
 
@@ -32,7 +33,7 @@ Auf dem Client muss der Benutzer zur Eingabe des Benutzernamens und Kennworts un
     // ...
     ```
 
-2. Geben Sie das Serverzertifikat an, das zum Verschlüsseln des über die Verbindung gesendeten Benutzernamens und Kennworts verwendet wird. Dieser Code sollte direkt auf den vorangehenden Code folgen. Im folgenden Beispiel wird das Zertifikat verwendet, das von der Datei "Setup. bat" aus dem Beispiel für den [Nachrichten Sicherheits Benutzernamen](../samples/message-security-user-name.md) erstellt wurde:
+2. Geben Sie das Serverzertifikat an, das zum Verschlüsseln des über die Verbindung gesendeten Benutzernamens und Kennworts verwendet wird. Dieser Code sollte direkt auf den vorangehenden Code folgen. Im folgenden Beispiel wird das Zertifikat verwendet, das von der setup.bat-Datei aus dem Beispiel für den [Nachrichten Sicherheits Benutzernamen](../samples/message-security-user-name.md) erstellt wurde:
 
     ```csharp
     // ...
@@ -40,7 +41,7 @@ Auf dem Client muss der Benutzer zur Eingabe des Benutzernamens und Kennworts un
     // ...
     ```
 
-    Sie können ein eigenes Zertifikat verwenden, indem Sie im Code auf das eigene Zertifikat verweisen. Weitere Informationen zum Erstellen und Verwenden von Zertifikaten finden Sie [unter Arbeiten mit Zertifikaten](working-with-certificates.md). Stellen Sie sicher, dass sich das Zertifikat im Speicher für vertrauenswürdige Personen für den lokalen Computer befindet. Hierzu können Sie MMC. exe ausführen und das Menü Element **Datei**, **Snap-in hinzufügen/entfernen** auswählen. Wählen Sie im Dialogfeld **Snap-Ins hinzufügen bzw. entfernen** das **Zertifikat-Snap-in** aus, und klicken Sie auf **Hinzufügen**. Wählen Sie im Dialogfeld Zertifikate-Snap-in die Option **Computer Konto**aus. Standardmäßig befindet sich das Zertifikat, das im Beispiel für Nachrichtensicherheit – Benutzername generiert wurde, im Ordner Persönlich – Zertifikate.  Sie wird in der Spalte ausgestellt für im MMC-Fenster als "localhost" aufgeführt. Ziehen Sie das Zertifikat per Drag & Drop in den Ordner **Vertrauenswürdige Personen** . Dadurch kann WCF das Zertifikat beim Ausführen einer Authentifizierung als vertrauenswürdiges Zertifikat behandeln.
+    Sie können ein eigenes Zertifikat verwenden, indem Sie im Code auf das eigene Zertifikat verweisen. Weitere Informationen zum Erstellen und Verwenden von Zertifikaten finden Sie [unter Arbeiten mit Zertifikaten](working-with-certificates.md). Stellen Sie sicher, dass sich das Zertifikat im Speicher für vertrauenswürdige Personen für den lokalen Computer befindet. Führen Sie hierzu mmc.exe **aus, und**wählen Sie das Menü Element " **Snap-in hinzufügen/entfernen** " aus. Wählen Sie im Dialogfeld **Snap-Ins hinzufügen bzw. entfernen** das **Zertifikat-Snap-in** aus, und klicken Sie auf **Hinzufügen**. Wählen Sie im Dialogfeld Zertifikate-Snap-in die Option **Computer Konto**aus. Standardmäßig befindet sich das Zertifikat, das im Beispiel für Nachrichtensicherheit – Benutzername generiert wurde, im Ordner Persönlich – Zertifikate.  Sie wird in der Spalte ausgestellt für im MMC-Fenster als "localhost" aufgeführt. Ziehen Sie das Zertifikat per Drag & Drop in den Ordner **Vertrauenswürdige Personen** . Dadurch kann WCF das Zertifikat beim Ausführen einer Authentifizierung als vertrauenswürdiges Zertifikat behandeln.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>So rufen Sie den Dienst auf, der den Benutzernamen und das Kennwort übergibt
 

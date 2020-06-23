@@ -1,15 +1,16 @@
 ---
 title: 'Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten'
+description: Erfahren Sie, wie Sie den Windows-Prozess Aktivierungs Dienst (was) unter Windows Vista einrichten, um WCF-Dienste zu hosten, die nicht über HTTP kommunizieren.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: f7a846b076691394cb855e4978e890cdcac76eb2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 84a0dcc4fed28ebd7a536bdabfcdc389be6072d8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597032"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246882"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
 
@@ -35,7 +36,7 @@ Nach der Installation und Konfiguration von was finden Sie unter Gewusst [wie: H
 
 ## <a name="to-configure-the-was-to-support-tcp-activation"></a>So konfigurieren Sie den WAS, sodass die TCP-Aktivierung unterstützt wird
 
-1. Zur Unterstützung der net.tcp-Aktivierung muss die Standardwebsite zuerst an einen net.tcp-Port gebunden werden. Hierfür können Sie Appcmd. exe verwenden, das mit dem IIS 7,0-Verwaltungs Toolset installiert wird. Führen Sie in einem Eingabeaufforderungsfenster auf Administratorebene den folgenden Befehl aus.
+1. Zur Unterstützung der net.tcp-Aktivierung muss die Standardwebsite zuerst an einen net.tcp-Port gebunden werden. Hierfür können Sie Appcmd.exe verwenden, die mit dem IIS 7,0-Verwaltungs Toolset installiert wird. Führen Sie in einem Eingabeaufforderungsfenster auf Administratorebene den folgenden Befehl aus.
 
     ```console
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']

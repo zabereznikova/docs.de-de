@@ -1,22 +1,23 @@
 ---
 title: Unterstützen mehrerer IIS-Sitebindungen
+description: Erfahren Sie, wie Sie mehrere Basisadressen bereitstellen, die das gleiche Protokoll auf derselben Website verwenden, wenn Sie einen WCF-Dienst in IIS gehostet haben.
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: e364be55687323d3059c4a7e084818e3f7d54d5f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 290dca03dbed7d0a7442a3903b735eb189929ed1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743444"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244867"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Unterstützen mehrerer IIS-Sitebindungen
-Wenn Sie einen Windows Communication Foundation (WCF)-Dienst unter Internetinformationsdienste (IIS) 7,0 verwenden, möchten Sie möglicherweise mehrere Basisadressen bereitstellen, die das gleiche Protokoll auf derselben Website verwenden. Auf diese Weise kann ein Dienst auf unterschiedliche URIs reagieren. Dies ist hilfreich, wenn Sie einen Dienst hosten möchten, der auf `http://www.contoso.com` und `http://contoso.com`lauscht. Es ist auch hilfreich, einen Dienst zu erstellen, der über eine Basisadresse für interne Benutzer und eine separate Basisadresse für externe Benutzer verfügt. Beispiel: `http://internal.contoso.com` und `http://www.contoso.com`.  
+Wenn Sie einen Windows Communication Foundation (WCF)-Dienst unter Internetinformationsdienste (IIS) 7,0 verwenden, möchten Sie möglicherweise mehrere Basisadressen bereitstellen, die das gleiche Protokoll auf derselben Website verwenden. Auf diese Weise kann ein Dienst auf unterschiedliche URIs reagieren. Dies ist hilfreich, wenn Sie einen Dienst hosten möchten, der auf und lauscht `http://www.contoso.com` `http://contoso.com` . Es ist auch hilfreich, einen Dienst zu erstellen, der über eine Basisadresse für interne Benutzer und eine separate Basisadresse für externe Benutzer verfügt. Beispiel: `http://internal.contoso.com` und `http://www.contoso.com`.  
   
 > [!NOTE]
 > Diese Funktionalität ist nur bei Verwendung des HTTP-Protokolls verfügbar.  
   
 ## <a name="multiple-base-addresses"></a>Mehrere Basisadressen  
- Diese Funktion ist nur für WCF-Dienste verfügbar, die unter IIS gehostet werden. Diese Funktion ist standardmäßig nicht aktiviert. Um es zu aktivieren, müssen Sie das `multipleSiteBindingsEnabled`-Attribut der <`serviceHostingEnvironment`> Element in der Datei "Web. config" hinzufügen und es auf `true`festlegen, wie im folgenden Beispiel gezeigt.  
+ Diese Funktion ist nur für WCF-Dienste verfügbar, die unter IIS gehostet werden. Diese Funktion ist standardmäßig nicht aktiviert. Um es zu aktivieren, müssen Sie das `multipleSiteBindingsEnabled` -Attribut dem <`serviceHostingEnvironment`>-Element in der Web.config Datei hinzufügen und es auf festlegen `true` , wie im folgenden Beispiel gezeigt.  
   
 ```xml  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  
