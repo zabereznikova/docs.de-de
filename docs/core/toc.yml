@@ -29,6 +29,8 @@ items:
             href: install/linux.md
           - name: Ubuntu
             href: install/linux-ubuntu.md
+          - name: Alpine
+            href: install/linux-alpine.md
           - name: CentOS
             href: install/linux-centos.md
           - name: Debian
@@ -403,32 +405,34 @@ items:
         href: testing/unit-testing-best-practices.md
       - name: xUnit
         items:
-          - name: 'C#-Komponententest'
+          - name: C#-Komponententest
             href: testing/unit-testing-with-dotnet-test.md
-          - name: 'F#-Komponententest'
+          - name: F#-Komponententest
             href: testing/unit-testing-fsharp-with-dotnet-test.md
           - name: VB-Komponententest
             href: testing/unit-testing-visual-basic-with-dotnet-test.md
       - name: NUnit
         items:
-          - name: 'C#-Komponententest'
+          - name: C#-Komponententest
             href: testing/unit-testing-with-nunit.md
-          - name: 'F#-Komponententest'
+          - name: F#-Komponententest
             href: testing/unit-testing-fsharp-with-nunit.md
           - name: VB-Komponententest
             href: testing/unit-testing-visual-basic-with-nunit.md
       - name: MSTest
         items:
-          - name: 'C#-Komponententest'
+          - name: C#-Komponententest
             href: testing/unit-testing-with-mstest.md
-          - name: 'F#-Komponententest'
+          - name: F#-Komponententest
             href: testing/unit-testing-fsharp-with-mstest.md
           - name: VB-Komponententest
             href: testing/unit-testing-visual-basic-with-mstest.md
       - name: Ausführen selektiver Komponententests
         href: testing/selective-unit-tests.md
-      - name: Beauftragen von Komponententests
+      - name: Festlegen einer Reihenfolge von Komponententests
         href: testing/order-unit-tests.md
+      - name: Codeabdeckung für Komponententests
+        href: testing/unit-testing-code-coverage.md
       - name: Veröffentlichte Ausgabe von Komponententests
         href: testing/unit-testing-published-output.md
       - name: Live-Komponententests von .NET Core-Projekten mit Visual Studio
