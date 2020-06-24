@@ -1,22 +1,19 @@
 ---
 title: Erstellen einer .NET Standard-Klassenbibliothek in Visual Studio Code
 description: Hier erfahren Sie, wie Sie eine .NET Standard-Klassenbibliothek mit Visual Studio Code erstellen.
-ms.date: 05/29/2020
-ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 06/08/2020
+ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446951"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701798"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>Tutorial: Erstellen einer .NET Standard-Bibliothek in Visual Studio Code
-
-Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Eine Klassenbibliothek, die sich auf .NET Standard 2.0 bezieht, ermöglicht das Aufrufen der Bibliothek aus jeder .NET-Implementierung, die diese Version von .NET Standard unterstützt. Wenn Sie Ihre Klassenbibliothek fertigstellen, können Sie entscheiden, ob Sie diese als NuGet-Paket verteilen oder als Komponente in ein Paket mit mehreren Anwendungen einfügen möchten.
-
-> [!NOTE]
-> Eine Liste der .NET Standard-Versionen und der Plattformen, die sie unterstützen, finden Sie unter [.NET Standard](../../standard/net-standard.md).
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio Code
 
 In diesem Tutorial erstellen Sie eine einfache Hilfsprogrammbibliothek, die eine einzelne Methode zur Behandlung von Zeichenfolgen enthält. Sie implementieren sie als [Erweiterungsmethode](../../csharp/programming-guide/classes-and-structs/extension-methods.md), damit sie aufgerufen werden kann, als wäre sie ein Mitglied der <xref:System.String>-Klasse.
+
+Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Eine Klassenbibliothek, die sich auf .NET Standard 2.0 bezieht, ermöglicht das Aufrufen der Bibliothek aus jeder .NET-Implementierung, die diese Version von .NET Standard unterstützt. Wenn Sie Ihre Klassenbibliothek fertig gestellt haben, können Sie sie als Komponente eines Drittanbieters oder als gebündelte Komponente mit einer oder mehreren Anwendungen verteilen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -27,9 +24,11 @@ In diesem Tutorial erstellen Sie eine einfache Hilfsprogrammbibliothek, die eine
 
 Beginnen Sie, indem Sie eine leere Projektmappe erstellen, um das Klassenbibliotheksprojekt darin zu speichern. Eine Projektmappe dient als ein Container für mindestens ein Projekt. Sie fügen der gleichen Projektmappe weitere verwandte Projekte hinzu.
 
-1. Öffnen Sie Visual Studio Code.
+1. Starten Sie Visual Studio Code.
 
-1. Klicken Sie im Hauptmenü auf **Datei** > **Ordner öffnen**/**Öffnen...** , erstellen Sie einen Ordner namens *ClassLibraryProjects*, und klicken Sie dann auf **Ordner auswählen**/**Öffnen**.
+1. Wählen Sie im Hauptmenü **Datei** > **Ordner öffnen** (**Öffnen...** unter macOS) aus.
+
+1. Erstellen Sie im Dialogfeld **Ordner öffnen** den Ordner *ClassLibraryProjects*, und klicken Sie auf **Ordner auswählen** (**Öffnen** unter macOS).
 
 1. Öffnen Sie das **Terminal** in Visual Studio Code, indem Sie im Hauptmenü **Ansicht** > **Terminal** auswählen.
 
@@ -156,7 +155,21 @@ Im Folgenden fügen Sie eine Konsolenanwendung hinzu, die die Klassenbibliothek 
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. Anfänglich besitzt das neue Konsolen-App-Projekt keinen Zugriff auf die Klassenbibliothek. Erstellen Sie mit dem folgenden Befehl einen Projektverweis auf das Klassenbibliothek, um der App das Aufrufen von Methoden in der Klassenbibliothek zu erlauben:
+1. Öffnen Sie die Datei *ShowCase/Program.cs*, und ersetzen Sie den gesamten Code durch den folgenden:
+
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
+
+   Der Code verwendet die `row`-Variable, um die Anzahl der in das Konsolenfenster geschriebenen Datenzeilen festzuhalten. Wenn sie mindestens 25 beträgt, löscht der Code das Konsolenfenster und zeigt eine Meldung für den Benutzer an.
+
+   Das Programm selbst fordert den Benutzer zur Eingabe einer Zeichenfolge auf. Es zeigt an, ob die Zeichenfolge mit einem Großbuchstaben beginnt. Wenn der Benutzer die <kbd>EINGABETASTE</kbd> drückt, ohne eine Zeichenfolge einzugeben, wird die Anwendung beendet und das Konsolenfenster geschlossen.
+
+1. Speichern Sie die Änderungen.
+
+## <a name="add-a-project-reference"></a>Hinzufügen eines Projektverweises
+
+Anfänglich besitzt das neue Konsolen-App-Projekt keinen Zugriff auf die Klassenbibliothek. Damit es Methoden in der Klassenbibliothek aufrufen kann, erstellen Sie einen Projektverweis auf das Klassenbibliotheksprojekt.
+
+1. Führen Sie den folgenden Befehl aus:
 
    ```dotnetcli
    dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
@@ -168,17 +181,9 @@ Im Folgenden fügen Sie eine Konsolenanwendung hinzu, die die Klassenbibliothek 
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-1. Öffnen Sie die Datei *ShowCase/Program.cs*, und ersetzen Sie den gesamten Code durch den folgenden:
+## <a name="run-the-app"></a>Ausführen der App
 
-   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
-
-   Der Code verwendet die `row`-Variable, um die Anzahl der in das Konsolenfenster geschriebenen Datenzeilen festzuhalten. Wenn sie mindestens 25 beträgt, löscht der Code das Konsolenfenster und zeigt eine Meldung für den Benutzer an.
-
-   Das Programm selbst fordert den Benutzer zur Eingabe einer Zeichenfolge auf. Es zeigt an, ob die Zeichenfolge mit einem Großbuchstaben beginnt. Wenn der Benutzer die EINGABETASTE drückt, ohne eine Zeichenfolge einzugeben, wird die Anwendung beendet und das Konsolenfenster geschlossen.
-
-1. Speichern Sie die Änderungen.
-
-1. Führen Sie das Programm aus.
+1. Führen Sie die folgenden Befehle im Terminal aus:
 
    ```dotnetcli
    dotnet run --project ShowCase/ShowCase.csproj
@@ -203,6 +208,7 @@ Im Folgenden fügen Sie eine Konsolenanwendung hinzu, die die Klassenbibliothek 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [Entwickeln von Bibliotheken mit der .NET Core-CLI](libraries.md)
+* [.NET Standard-Versionen und die von ihnen unterstützten Plattformen](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

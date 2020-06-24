@@ -3,12 +3,12 @@ title: Deinstallationstool
 description: Eine Übersicht über das .NET Core-Deinstallationstool, ein Tool mit Anleitungen, das die kontrollierte Bereinigung von .NET Core SDKs und -Runtimes ermöglicht.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446905"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590798"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core-Deinstallationstool
 
@@ -27,7 +27,7 @@ Aufgrund dieser Einschränkungen ist das Tool möglicherweise nicht in der Lage,
 
 ## <a name="install-the-tool"></a>Installieren des Tools
 
-Sie können das .NET Core-Tool für die Deinstallation [hier](https://aka.ms/dotnet-core-uninstall-tool) herunterladen und den Quellcode im GitHub-Repository [dotnet/cli-lab](https://github.com/dotnet/cli-lab) finden.
+Sie können das .NET Core-Tool für die Deinstallation auf der [Seite mit den Versionen des Tools](https://aka.ms/dotnet-core-uninstall-tool) herunterladen und den Quellcode im GitHub-Repository [dotnet/cli-lab](https://github.com/dotnet/cli-lab) finden.
 
 > [!NOTE]
 > Für das Tool ist eine Erhöhung der Rechte erforderlich, um .NET Core SDKs und -Runtimes zu deinstallieren. Daher sollte es in einem Verzeichnis mit schreibgeschütztem Zugriff installiert werden, z. B. in *C:\Programme* unter Windows oder in */usr/local/bin* unter macOS. Weitere Informationen finden Sie unter [Erhöhte Zugriffsrechte für dotnet-Befehle](../tools/elevated-access.md). Weitere Informationen finden Sie unter [Ausführliche Installationsanweisungen](https://aka.ms/dotnet-core-uninstall-tool).

@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie beim Erstellen von Webanwen
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450107"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662705"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
 
@@ -40,7 +40,9 @@ Die durch den SPA-Ansatz ermöglichte Verbesserung der Benutzererfahrung muss mi
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 führt mit Blazor ein neues Modell zur Erstellung umfassender interaktiver und zusammensetzbarer Benutzeroberflächen ein. Blazor ermöglicht Entwicklern das Erstellen von Benutzeroberflächen mit Razor auf dem Server sowie das Senden des Codes an den Browser und seine clientseitige Ausführung mithilfe der [WebAssembly](https://webassembly.org/). Serverseitiges Blazor ist nun ab ASP.NET Core 3.0 verfügbar. Clientseitiges Blazor soll 2020 zur Verfügung stehen.
+ASP.NET Core 3.0 führt mit Blazor ein neues Modell zur Erstellung umfassender interaktiver und zusammensetzbarer Benutzeroberflächen ein. Blazor auf Serverseite ermöglicht Entwicklern, eine Benutzeroberfläche mit C# und Razor auf dem Server zu erstellen. Die Benutzeroberfläche kann über eine ständige SignalR-Verbindung in Echtzeit interaktiv mit dem Browser verbunden werden.
+
+Blazor WebAssembly führt eine weitere Option für Blazor-Apps ein, die es ermöglicht, sie mit WebAssembly im Browser auszuführen. Da es sich um echten .NET-Code handelt, der in WebAssembly ausgeführt wird, können Sie Code und Bibliotheken aus serverseitigen Teilen Ihrer Anwendung nutzen.
 
 Blazor bietet eine neue, dritte Option, die bei der Beurteilung der Frage, ob eine rein auf dem Server gerenderte Webanwendung oder eine SPA entwickelt werden soll, zu berücksichtigen ist. Mit Blazor können Sie komplexe, SPA-ähnliche Verhaltensweisen auf Clientseite entwickeln, ohne dass eine nennenswerte JavaScript-Entwicklung erforderlich ist. Blazor-Anwendungen können APIs aufrufen, um Daten anzufordern oder serverseitige Vorgänge auszuführen.
 

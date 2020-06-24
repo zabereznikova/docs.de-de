@@ -7,16 +7,16 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: f04ff902743c91147a6f056bca3292ee47952bbd
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 813558299b40e0b90e8047f22b788c8f1419eb5e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420551"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504653"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
 
-.NET ist sprachunabhängig. Dies bedeutet, dass Sie als Entwickler in einer von vielen Sprachen für die .NET-Implementierung entwickeln können, beispielsweise C#, F# und Visual Basic. Sie können auf die Typen und Member von Klassenbibliotheken zugreifen, die für die .NET-Implementierung entwickelt wurden, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET-Apps sprachunabhängig auf die Komponente zugegriffen werden.
+.NET ist sprachunabhängig. Dies bedeutet, dass Sie als Entwickler in einer von vielen Sprachen für die .NET-Implementierung entwickeln können, beispielsweise C#, F# und Visual Basic. Sie können auf die Typen und Member von Klassenbibliotheken zugreifen, die für die .NET-Implementierung entwickelt wurden, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie Komponentenentwickler sind, kann von allen .NET-Apps sprachunabhängig auf die Komponente zugegriffen werden.
 
 > [!NOTE]
 > In diesem Artikel wird das Erstellen sprachunabhängiger Komponenten erläutert. Diese Komponenten können von Apps verwendet werden, die in einer beliebigen Sprache geschrieben wurden. Sie können auch eine einzelne Komponente oder App aus Quellcode erstellen, der in mehreren Sprachen geschrieben wurde. Weitere Informationen finden Sie im zweiten Teil dieses Artikels unter [Sprachübergreifende Interoperabilität](#cross-language-interoperability).
@@ -24,44 +24,6 @@ ms.locfileid: "83420551"
 Um vollständig mit anderen Objekten zu interagieren, die in irgendeiner Programmiersprache geschrieben wurden, müssen die Objekte den Aufrufern nur die Funktionen verfügbar machen, die allen Sprachen gemeinsam sind. Dieser gemeinsame Satz von Funktionen wird von der CLS (Common Language Specification) definiert. Das ist ein Satz von Regeln, die für generierte Assemblys gelten. Die Common Language Specification wird in der Partition I, in den Klauseln 7 bis 11 im [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) definiert.
 
 Wenn die Komponente der Common Language Specification entspricht, ist sichergestellt, dass sie CLS-kompatibel ist, und dass vom Code in Assemblys, die in irgendeiner CLS unterstützenden Programmiersprache geschrieben wurden, aus auf sie zugegriffen werden kann. Sie können bestimmen, ob die Komponente zur Kompilierzeit der Common Language Specification entspricht, indem Sie das [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attribut auf den Quellcode anwenden. Weitere Informationen finden Sie im Abschnitt zum [CLSCompliantAttribute-Attribut](#the-clscompliantattribute-attribute).
-
-In diesem Artikel:
-
-* [CLS-Kompatibilitätsregeln](#cls-compliance-rules)
-
-  * [Typen und Typmembersignaturen](#types-and-type-member-signatures)
-
-  * [Namenskonventionen](#naming-conventions)
-
-  * [Typkonvertierung](#type-conversion)
-
-  * [Arrays](#arrays)
-
-  * [Schnittstellen](#interfaces)
-
-  * [Enumerationen](#enumerations)
-
-  * [Typmember im Allgemeinen](#type-members-in-general)
-
-  * [Memberzugriff](#member-accessibility)
-
-  * [Generische Typen und Member](#generic-types-and-members)
-
-  * [Konstruktoren](#constructors)
-
-  * [Eigenschaften](#properties)
-
-  * [Ereignisse](#events)
-
-  * [Überladungen](#overloads)
-
-  * [Ausnahmen](#exceptions)
-
-  * [Attribute](#attributes)
-
-* [CLSCompliantAttribute-Attribut](#the-clscompliantattribute-attribute)
-
-* [Sprachübergreifende Interoperabilität](#cross-language-interoperability)
 
 ## <a name="cls-compliance-rules"></a>CLS-Kompatibilitätsregeln
 
@@ -184,9 +146,9 @@ Schnittstellen | [Schnittstellen](#interfaces) | CLS-kompatible Schnittstellen d
 Member | [Typmember im Allgemeinen](#type-members-in-general) | Globale static-Felder und Methoden sind nicht CLS-kompatibel. | 36
 Member | -- | Der Wert eines literalen statischen Elements wird von der Verwendung von Feldinitialisierungsmetadaten angegeben. Ein CLS-kompatibles Literal muss über einen Wert verfügen, der in den Feldinitialisierungsmetadaten angegeben wird, der genau vom gleichen Typ wie das Literal ist (oder des zugrunde liegenden Typs, wenn dieses Literal `enum` ist). | 13
 Member | [Typmember im Allgemeinen](#type-members-in-general) | Die vararg-Einschränkung ist nicht Teil der CLS, und die einzige Aufrufkonvention, die von der CLS unterstützt wird, ist die verwaltete Standardaufrufkonvention. | 15
-Namenskonventionen | [Namenskonventionen](#naming-conventions) | Assemblys müssen Anhang 7 von Fachbericht 15 des Unicode Standard3.0 folgen, in dem der Satz von Zeichen geregelt wird, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Unicode-Normalisierungsformen) verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration. | 4
+Namenskonventionen | [Namenskonventionen](#naming-conventions) | Assemblys müssen Anhang 7 von Fachbericht 15 des Unicode Standard3.0 folgen, in dem der Satz von Zeichen geregelt wird, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter [Unicode Normalization Forms](https://unicode.org/reports/tr15/) (Unicode-Normalisierungsformen) verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration. | 4
 Überladen | [Namenskonventionen](#naming-conventions) | Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich. | 5
-Überladen | [Namenskonventionen](#naming-conventions) | Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (nach Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben). | 6
+Überladen | [Namenskonventionen](#naming-conventions) | Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (gemäß Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben). | 6
 Überladen | [Overloads](#overloads) | Nur Eigenschaften und Methoden können überladen werden. | 37
 Überladen | [Overloads](#overloads) |Eigenschaften und Methoden können allein basierend auf der Anzahl und den Typen ihrer Parameter überladen werden, außer den Konvertierungsoperatoren `op_Implicit` und `op_Explicit`, die auch auf Grundlage des Rückgabetyps überladen werden können. | 38
 Überladen | -- | Wenn mindestens zwei CLS-kompatible Methoden, die in einem Typ deklariert werden, den gleichen Namen und für einen bestimmten Satz von Typinstanziierungen die gleichen Parameter und Rückgabetypen nutzen, dann müssen alle diese Methoden bei diesen Typinstanziierungen semantisch gleichwertig sein. | 48
@@ -201,6 +163,24 @@ Typen | [Typen und Typmembersignaturen](#types-and-type-member-signatures) | Typ
 Typen | [Typen und Typmembersignaturen](#types-and-type-member-signatures) | Nicht verwaltete Zeigertypen sind nicht CLS-kompatibel. | 17
 Typen | [Typen und Typmembersignaturen](#types-and-type-member-signatures) | CLS-kompatible Klassen, Werttypen und Schnittstellen dürfen nicht die Implementierung nicht CLS-kompatibler Member erfordern. | 20
 Typen | [Typen und Typmembersignaturen](#types-and-type-member-signatures) | [System.Object](xref:System.Object) ist CLS-kompatibel. Jede andere CLS-kompatible Klasse muss von einer CLS-kompatiblen Klasse erben. | 23
+
+Index für Unterabschnitte:
+
+* [Typen und Typmembersignaturen](#types-and-type-member-signatures)
+* [Namenskonventionen](#naming-conventions)
+* [Typkonvertierung](#type-conversion)
+* [Arrays](#arrays)
+* [Schnittstellen](#interfaces)
+* [Enumerationen](#enumerations)
+* [Typmember im Allgemeinen](#type-members-in-general)
+* [Memberzugriff](#member-accessibility)
+* [Generische Typen und Member](#generic-types-and-members)
+* [Konstruktoren](#constructors)
+* [Eigenschaften](#properties)
+* [Ereignisse](#events)
+* [Überladungen](#overloads)
+* [Ausnahmen](#exceptions)
+* [Attribute](#attributes)
 
 ### <a name="types-and-type-member-signatures"></a>Typen und Typmembersignaturen
 
@@ -607,13 +587,13 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Programmiersprachenbezeichner, wie die Namen von Namespaces, Typen und Membern, müssen dem [Unicode-Standard 3.0, Fachbericht 15, Anhang 7](https://www.unicode.org/reports/tr15/tr15-18.html) entsprechen. Dies bedeutet Folgendes:
+Programmiersprachenbezeichner wie die Namen von Namespaces, Typen und Membern müssen dem [Unicode-Standard](https://unicode.org/reports/tr15/) entsprechen. Dies bedeutet Folgendes:
 
 * Das erste Zeichen eines Bezeichners kann jeder Unicode-Großbuchstabe, Kleinbuchstabe, großer Anfangsbuchstabe, Modifiziererbuchstabe, anderer Buchstabe oder jede Buchstabenzahl sein. Informationen zu Unicode-Zeichenkategorien finden Sie unter der [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory)-Enumeration.
 
 * Nachfolgende Zeichen können aus einer der Kategorien wie das erste Zeichen stammen, und sie können auch Markierungen ohne Zwischenraum, Sperrmarkierungen, Dezimalwerte, Connectorinterpunktionen und Formatierungscodes umfassen.
 
-Bevor Sie Bezeichner vergleichen, sollten Sie Formatierungscodes herausfiltern und die Bezeichner in die Unicode-Normalisierungsform C konvertieren, da ein einzelnes Zeichen durch mehrere UTF-16-codierte Codeeinheiten dargestellt werden kann. Zeichensequenzen, die die gleichen Codeeinheiten in der Unicode-Normalisierungsform C erzeugen, sind nicht CLS-kompatibel. Im folgenden Beispiel werden zwei Eigenschaften definiert: eine namens `Å`, die aus dem ÅNGSTRÖM-ZEICHEN (U+212B) besteht, und eine zweite namens `Å`, die aus dem Zeichen LATEINISCHER GROSSBUCHSTABE A MIT RING OBEN (U+00C5) besteht. Der C#-Compiler kennzeichnet den Quellcode als nicht CLS-kompatibel.
+Bevor Sie Bezeichner vergleichen, sollten Sie Formatierungscodes herausfiltern und die Bezeichner in die Unicode-Normalisierungsform C konvertieren, da ein einzelnes Zeichen durch mehrere UTF-16-codierte Codeeinheiten dargestellt werden kann. Zeichensequenzen, die die gleichen Codeeinheiten in der Unicode-Normalisierungsform C erzeugen, sind nicht CLS-kompatibel. Im folgenden Beispiel werden zwei Eigenschaften definiert: eine namens `Å`, die aus dem Zeichen ÅNGSTRÖM-ZEICHEN (U+212B) besteht, und eine zweite namens `Å`, die aus dem Zeichen LATEINISCHER GROSSBUCHSTABE A MIT RING OBEN (U+00C5) besteht. Der C#-Compiler kennzeichnet den Quellcode als nicht CLS-kompatibel.
 
 ```csharp
 public class Size
@@ -949,7 +929,7 @@ End Structure
 
 CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
 
-* Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass der Compiler ungeachtet des Vorhandenseins des [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attributs nicht erkennt, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist.
+* Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass der Compiler ungeachtet des Vorhandenseins des Attributs [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) nicht erkennt, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist.
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -1849,7 +1829,7 @@ End Class
 
 Die Common Language Specification erzwingt ein konservatives Pro-Instanziierungsmodell für geschachtelte Typen und geschützte Member. Offene generische Typen können Felder oder Member mit Signaturen nicht verfügbar machen, die eine bestimmte Instanziierung eines geschachtelten, geschützten generischen Typs enthalten. Nicht generische Typen, die eine bestimmte Instanziierung einer generischen Basisklasse oder Schnittstelle erweitern, können Felder oder Member mit Signaturen nicht verfügbar machen, die eine andere Instanziierung eines geschachtelten, geschützten generischen Typs enthalten.
 
-Das folgende Beispiel definiert einen generischen Typ „`C1<T>`“ und eine geschützte Klasse „`C1<T>.N`“. `C1<T>` verfügt über zwei Methoden, `M1` und `M2`. Allerdings ist `M1` nicht CLS-kompatibel, da versucht wird, ein `C1<int>.N`-Objekt von `C1<T>` zurückzugeben. Eine zweite Klasse, `C2`, wird von `C1<long>` abgeleitet. Sie verfügt über zwei Methoden, `M3` und `M4`. `M3` ist nicht CLS-kompatibel, da versucht wird, ein `C1<int>.N`-Objekt von einer Unterklasse von `C1<long>` zurückzugeben. Beachten Sie, dass Sprachcompiler sogar noch restriktiver sein können. In diesem Beispiel zeigt Visual Basic einen Fehler an, wenn versucht wird, `M4` zu kompilieren.
+Das folgende Beispiel definiert einen generischen Typ „`C1<T>`“ und eine geschützte Klasse „`C1<T>.N`“. `C1<T>` verfügt über zwei Methoden, `M1` und `M2`. Allerdings ist `M1` nicht CLS-kompatibel, da versucht wird, ein `C1<int>.N`-Objekt von `C1<T>` zurückzugeben. Eine zweite Klasse, `C2`, wird von `C1<long>` abgeleitet. Sie verfügt über zwei Methoden, `M3` und `M4`. `M3` ist nicht CLS-kompatibel, da versucht wird, ein `C1<int>.N`-Objekt von einer Unterklasse von `C1<long>` zurückzugeben. Sprachcompiler können sogar noch restriktiver sein. In diesem Beispiel zeigt Visual Basic einen Fehler an, wenn versucht wird, `M4` zu kompilieren.
 
 ```csharp
 using System;
@@ -2501,7 +2481,7 @@ End Module
 
 In .NET-Frameworkassemblys stellen benutzerdefinierte Attribute einen erweiterbaren Mechanismus zum Speichern benutzerdefinierter Attribute und das Abrufen von Metadaten über Programmierobjekte, wie Assemblys, Typen, Member und Methodenparameter, bereit. Benutzerdefinierte Attribute müssen von [System.Attribute](xref:System.Attribute) oder einem Typ abgeleitet werden, der von `System.Attribute` abgeleitet wird.
 
-Das folgende Beispiel verstößt gegen diese Regel. Es wird eine `NumericAttribute`-Klasse definiert, die nicht von `System.Attribute` abgeleitet ist. Beachten Sie, dass der Compilerfehler nur entsteht, wenn das nicht CLS-kompatible Attribut angewendet wird, nicht aber, wenn die Klasse definiert ist.
+Das folgende Beispiel verstößt gegen diese Regel. Es wird eine `NumericAttribute`-Klasse definiert, die nicht von `System.Attribute` abgeleitet ist. Ein Compilerfehler entsteht nur, wenn das nicht CLS-kompatible Attribut angewendet wird, nicht aber, wenn die Klasse definiert ist.
 
 ```csharp
 using System;
@@ -2895,7 +2875,7 @@ Verwenden Sie dann das Linktool (Link.exe), um die beiden Module in eine Assembl
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
 ```
 
-Das folgende Beispiel ruft dann die `NumericLib.NearZero`-Methode und die `StringLib.ToTitleCase`-Methode auf. Beachten Sie, dass sowohl der Visual Basic-Code als auch der C#-Code auf die Methoden in beiden Klassen zugreifen können.
+Das folgende Beispiel ruft dann die `NumericLib.NearZero`-Methode und die `StringLib.ToTitleCase`-Methode auf. Beachten Sie, dass sowohl der Visual Basic- als auch C#-Code auf die Methoden in beiden Klassen zugreifen können.
 
 ```csharp
 using System;

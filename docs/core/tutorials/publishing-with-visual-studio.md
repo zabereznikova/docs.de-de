@@ -1,21 +1,19 @@
 ---
-title: Veröffentlichen Ihrer .NET Core-Anwendung „Hello World“ mit Visual Studio
-description: Die Veröffentlichung erstellt eine Reihe von Dateien, die zum Ausführen Ihrer .NET Core-Anwendung benötigt werden.
-author: BillWagner
-ms.author: wiwagn
-ms.date: 05/20/2020
+title: Veröffentlichen einer .NET Core-Konsolenanwendung in Visual Studio
+description: Bei der Veröffentlichung werden die Dateien erstellt, die zum Ausführen Ihrer .NET Core-Anwendung benötigt werden.
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241492"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701283"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung in Visual Studio
 
 In diesem Tutorial wird gezeigt, wie eine Konsolen-App veröffentlicht wird, damit sie von anderen Benutzern ausgeführt werden kann. Die Veröffentlichung erstellt eine Reihe von Dateien, die zum Ausführen Ihrer Anwendung benötigt werden. Zum Bereitstellen der Dateien kopieren Sie diese auf den Zielcomputer.
 
@@ -25,7 +23,11 @@ In diesem Tutorial wird gezeigt, wie eine Konsolen-App veröffentlicht wird, dam
 
 ## <a name="publish-the-app"></a>Veröffentlichen der App
 
-1. Stellen Sie sicher, dass Visual Studio die endgültige Produktversion der Anwendung erstellt. Ändern Sie ggf. die Einstellung der Buildkonfiguration auf der Symbolleiste von **Debuggen** in **Freigabe**.
+1. Starten Sie Visual Studio.
+
+1. Öffnen Sie das Projekt *HelloWorld*, das Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio](with-visual-studio.md) erstellt haben.
+
+1. Stellen Sie sicher, dass Visual Studio die Releasebuildkonfiguration verwendet. Ändern Sie ggf. die Einstellung der Buildkonfiguration auf der Symbolleiste von **Debuggen** in **Release**.
 
    ![Visual Studio-Symbolleiste mit ausgewähltem Releasebuild](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
@@ -47,7 +49,7 @@ In diesem Tutorial wird gezeigt, wie eine Konsolen-App veröffentlicht wird, dam
 
 ## <a name="inspect-the-files"></a>Untersuchen der Dateien
 
-Der Veröffentlichungsprozess erstellt eine frameworkabhängige Bereitstellung. Dies ist ein Bereitstellungstyp, bei dem die veröffentlichte Anwendung auf Computern ausgeführt werden kann, auf denen die .NET Core Runtime installiert ist. Benutzer können die veröffentlichte App ausführen, indem Sie auf die ausführbare Datei doppelklicken oder den Befehl `dotnet HelloWorld.dll` an einer Eingabeaufforderung ausgeben.
+Der Veröffentlichungsprozess erstellt standardmäßig eine frameworkabhängige Bereitstellung. Das ist ein Bereitstellungstyp, bei dem die veröffentlichte Anwendung auf einem Computer ausgeführt werden kann, auf dem die .NET Core-Runtime installiert ist. Benutzer können die veröffentlichte App ausführen, indem Sie auf die ausführbare Datei doppelklicken oder den Befehl `dotnet HelloWorld.dll` an einer Eingabeaufforderung ausgeben.
 
 In den folgenden Schritten sehen Sie sich die durch den Veröffentlichungsvorgang erstellten Dateien an.
 
@@ -83,7 +85,7 @@ In den folgenden Schritten sehen Sie sich die durch den Veröffentlichungsvorgan
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Ordner *publish*, und wählen Sie anschließend **Vollständigen Pfad kopieren** aus.
 
-1. Öffnen Sie eine Eingabeaufforderung, und navigieren Sie zum Ordner *publish*. Geben Sie `cd` ein, und fügen Sie dann den vollständigen Pfad ein. Zum Beispiel:
+1. Öffnen Sie eine Eingabeaufforderung, und navigieren Sie zum Ordner *publish*. Geben Sie dazu `cd` ein, und fügen Sie dann den vollständigen Pfad ein. Zum Beispiel:
 
    ```
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\

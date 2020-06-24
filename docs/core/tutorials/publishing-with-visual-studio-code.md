@@ -1,15 +1,15 @@
 ---
-title: Veröffentlichen einer Hallo-Welt-.NET Core-Anwendung mit Visual Studio Code
+title: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 description: Bei der Veröffentlichung werden die Dateien erstellt, die zum Ausführen Ihrer .NET Core-Anwendung benötigt werden.
-ms.date: 05/28/2020
-ms.openlocfilehash: b49b12bf41e3ea7be8dbc459eb7d9b1fbef25790
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.date: 06/08/2020
+ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84246655"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701449"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio-code"></a>Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 
 In diesem Tutorial wird gezeigt, wie eine Konsolen-App veröffentlicht wird, damit sie von anderen Benutzern ausgeführt werden kann. Bei der Veröffentlichung werden die Dateien erstellt, die zum Ausführen Ihrer Anwendung benötigt werden. Zum Bereitstellen der Dateien kopieren Sie diese auf den Zielcomputer.
 
@@ -21,7 +21,7 @@ Die .NET Core-CLI wird zum Veröffentlichen der App verwendet. Sie können diese
 
 ## <a name="publish-the-app"></a>Veröffentlichen der App
 
-1. Öffnen Sie Visual Studio Code.
+1. Starten Sie Visual Studio Code.
 
 1. Öffnen Sie den *HelloWorld*-Projektordner, den Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio Code](with-visual-studio-code.md) erstellt haben.
 
@@ -51,7 +51,7 @@ Die .NET Core-CLI wird zum Veröffentlichen der App verwendet. Sie können diese
 
 ## <a name="inspect-the-files"></a>Untersuchen der Dateien
 
-Der Veröffentlichungsprozess erstellt standardmäßig eine frameworkabhängige Bereitstellung. Das ist ein Bereitstellungstyp, bei dem die veröffentlichte Anwendung auf Computern ausgeführt werden kann, auf denen die .NET Core-Runtime installiert ist. Sie können die veröffentlichte App über die ausführbare Datei starten oder indem Sie den Befehl `dotnet HelloWorld.dll` über die Eingabeaufforderung ausführen.
+Der Veröffentlichungsprozess erstellt standardmäßig eine frameworkabhängige Bereitstellung. Das ist ein Bereitstellungstyp, bei dem die veröffentlichte Anwendung auf einem Computer ausgeführt werden kann, auf dem die .NET Core-Runtime installiert ist. Sie können die veröffentlichte App über die ausführbare Datei starten oder indem Sie den Befehl `dotnet HelloWorld.dll` über die Eingabeaufforderung ausführen.
 
 In den folgenden Schritten sehen Sie sich die durch den Veröffentlichungsvorgang erstellten Dateien an.
 
@@ -85,7 +85,7 @@ In den folgenden Schritten sehen Sie sich die durch den Veröffentlichungsvorgan
 
 ## <a name="run-the-published-app"></a>Ausführen der veröffentlichten App
 
-1. Klicken Sie im **Explorer** mit der rechten Maustaste auf den Ordner *publish* (oder <kbd>Ctrl</kbd>+Klick unter macOS), und wählen Sie **In Terminal öffnen** aus.
+1. Klicken Sie im **Explorer** mit der rechten Maustaste auf den Ordner *publish* (oder klicken Sie unter macOS bei gedrückter <kbd>CTRL-TASTE</kbd> darauf), und wählen Sie **In Terminal öffnen** aus.
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="Kontextmenü mit „In Terminal öffnen“":::
 
@@ -109,10 +109,7 @@ In den folgenden Schritten sehen Sie sich die durch den Veröffentlichungsvorgan
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie eine Konsolen-App veröffentlicht. Weitere Informationen zum Erstellen von Bibliotheken finden Sie unter [Entwickeln von Bibliotheken mit der .NET Core-CLI](libraries.md).
-
-<!--In the next tutorial, you create a class library.
+In diesem Tutorial haben Sie eine Konsolen-App veröffentlicht. Im nächsten Tutorial erstellen Sie eine Klassenbibliothek.
 
 > [!div class="nextstepaction"]
-> [Create a .NET Standard library in Visual Studio](library-with-visual-studio.md)
--->
+> [Erstellen einer .NET Standard-Bibliothek in Visual Studio für Mac](library-with-visual-studio-mac.md)

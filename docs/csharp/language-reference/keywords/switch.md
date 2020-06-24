@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446762"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493668"
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
 
@@ -86,7 +86,7 @@ Die Ausführung der Anweisungsliste im switch-Abschnitt mit einer case-Bezeichnu
 
 Jede case-Bezeichnung gibt ein Muster an, mit dem der Vergleichsausdruck verglichen werden soll (die Variable `caseSwitch` in den vorherigen Beispielen). Wenn sie übereinstimmen, wird das Steuerelement an den switch-Abschnitt übertragen, der die **erste** übereinstimmende case-Bezeichnung enthält. Wenn keine case-Bezeichnung mit dem Vergleichsausdruck übereinstimmt, wird das Steuerelement an den Abschnitt mit der `default`-case-Bezeichnung übertragen, sofern vorhanden. Wenn kein `default`-case vorhanden ist, werden keine Anweisungen in jeglichen switch-Abschnitten ausgeführt, und ein Steuerelement wird außerhalb der `switch`-Anweisung übertragen.
 
-Informationen zur `switch`-Anweisung und zum Musterabgleich finden Sie im Abschnitt [Musterabgleich mit der `switch`-Anweisung](#pattern).
+Informationen zur `switch`-Anweisung und zum Musterabgleich finden Sie im Abschnitt [Musterabgleich mit der `switch`-Anweisung](#pattern-matching with-the-switch-statement).
 
 Da C# 6 nur das Konstantenmuster unterstützt und die Wiederholung von Konstantenwerten nicht erlaubt, definieren case-Bezeichnungen exklusive Werte, und nur ein Muster kann mit dem Vergleichsausdruck übereinstimmen. Daher ist die Reihenfolge, in der die `case`-Anweisungen auftauchen, unwichtig.
 
@@ -100,7 +100,7 @@ Sie können dieses Problem beheben und die Compilerwarnung auf eine von zwei Art
 
 - Durch das Ändern der Reihenfolge der switch-Abschnitte
 
-- Durch Verwenden einer [when-Klausel](#when) in der `case`-Bezeichnung
+- Durch Verwenden einer [when-Klausel](#the-case-statement-and-the-when-clause) in der `case`-Bezeichnung
 
 ## <a name="the-default-case"></a>Der `default`-Case
 
@@ -108,7 +108,7 @@ Der `default`-Case gibt den auszuführenden switch-Abschnitt an, wenn der Vergle
 
 Der `default`-Case kann in beliebiger Reihenfolge in der `switch`-Anweisung auftauchen. Unabhängig von der Reihenfolge im Quellcode wird er immer zuletzt ausgewertet, nachdem alle `case`-Bezeichnungen ausgewertet wurden.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> Musterabgleich mit der `switch`-Anweisung
+## <a name="pattern-matching-with-the-switch-statement"></a>Musterabgleich mit der `switch`-Anweisung
 
 Jede `case`-Anweisung definiert ein Muster, das, wenn es mit dem Vergleichsausdruck übereinstimmt, dafür sorgt, dass seine enthaltenden switch-Abschnitte ausgeführt werden. Alle Versionen von C# unterstützen Konstantenmuster. Die übrigen Muster werden ab C# 7.0 unterstützt.
 
@@ -185,7 +185,7 @@ Ohne Musterabgleich könnte dieser Code wie folgt geschrieben werden. Die Verwen
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" /> Die `case`-Anweisung und die `when`-Klausel
+## <a name="the-case-statement-and-the-when-clause"></a>Die `case`-Anweisung und die `when`-Klausel
 
 Da sich case-Anweisungen ab C# 7.0 nicht gegenseitig ausschließen müssen, können Sie eine `when`-Klausel hinzufügen, um eine zusätzliche Bedingung anzugeben, die erfüllt werden muss, damit die case-Anweisung als TRUE ausgewertet wird. Die `when`-Klausel kann ein beliebiger Ausdruck sein, der einen booleschen Wert zurückgibt.
 

@@ -2,12 +2,12 @@
 title: Breaking Changes bei Windows Forms
 description: Listet die Breaking Changes bei Windows Forms für .NET Core auf.
 ms.date: 01/08/2020
-ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: bd87e438ecf9930bfcd5377f9a3799d5f3693f49
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158436"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702467"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Breaking Changes bei Windows Forms
 
@@ -20,6 +20,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Statusleisten-Steuerelement wurde entfernt](#removed-status-bar-controls) | 5.0 |
 | [WinForms-Methoden lösen jetzt ArgumentException aus](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [WinForms-Methoden lösen jetzt ArgumentNullException aus](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
+| [WinForms-Eigenschaften lösen nun ArgumentOutOfRangeException aus](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
 | [Entfernte Steuerelemente](#removed-controls) | 3.1 |
 | [CellFormatting-Ereignis wird nicht ausgelöst, wenn QuickInfo angezeigt wird](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
 | [Control.DefaultFont wurde in Segoe UI 9 pt geändert](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
@@ -47,6 +48,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 ***
 
 [!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
+
+***
+
+[!INCLUDE [invalid-args-cause-argumentoutofrangeexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentoutofrangeexception.md)]
 
 ***
 

@@ -1,15 +1,15 @@
 ---
-title: Testen einer .NET Standard-Klassenbibliothek mit .NET Core in Visual Studio Code
+title: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
 description: Erstellen Sie ein Komponententestprojekt für eine .NET Core-Klassenbibliothek. Sie überprüfen mithilfe von Komponententests, ob die .NET Core-Klassenbibliothek ordnungsgemäß funktioniert.
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292162"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701032"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
 
 In diesem Tutorial wird gezeigt, wie Sie Komponententests automatisieren, indem Sie einer Projektmappe ein Testprojekt hinzufügen.
 
@@ -19,7 +19,9 @@ In diesem Tutorial wird gezeigt, wie Sie Komponententests automatisieren, indem 
 
 ## <a name="create-a-unit-test-project"></a>Ein Komponententestprojekt erstellen
 
-1. Öffnen Sie Visual Studio Code.
+Komponententests bieten automatisierte Softwaretests während der Entwicklung und Veröffentlichung. Das in diesem Tutorial verwendete Testframework ist MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) ist eines von drei Testframeworks, aus denen Sie wählen können. Die beiden anderen sind [xUnit](https://xunit.net/) und [nUnit](https://nunit.org/).
+
+1. Starten Sie Visual Studio Code.
 
 1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Erstellen einer .NET Standard-Bibliothek in Visual Studio](library-with-visual-studio.md) erstellt haben.
 
@@ -55,16 +57,17 @@ In diesem Tutorial wird gezeigt, wie Sie Komponententests automatisieren, indem 
 
    Jede mit [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) gekennzeichnete Methode in einer mit [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) gekennzeichneten Testklasse wird automatisch ausgeführt, wenn der Komponententest ausgeführt wird.
 
-   > [!NOTE]
-   > MSTest ist eines von drei Testframeworks, unter denen Sie wählen können. Die beiden anderen sind xUnit und nUnit.
-
 1. Fügen Sie das Testprojekt zur Projektmappe hinzu.
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. Führen Sie den folgenden Befehl aus, um einen Projektverweis auf das Klassenbibliotheksprojekt zu erstellen:
+## <a name="add-a-project-reference"></a>Hinzufügen eines Projektverweises
+
+Damit das Testprojekt mit der `StringLibrary`-Klasse funktioniert, fügen Sie im Projekt `StringLibraryTest` einen Verweis auf das Projekt `StringLibrary` hinzu.
+
+1. Führen Sie den folgenden Befehl aus:
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ Beim Testen der `StringLibrary.StartsWithUpper`-Methode möchten Sie eine Reihe 
 
 Da Ihre Bibliotheksmethode Zeichenfolgen verarbeitet, sollten Sie sicherstellen, dass sie eine [leere Zeichenfolge (`String.Empty`)](xref:System.String.Empty) und eine `null`-Zeichenfolge erfolgreich verarbeiten kann. Eine leere Zeichenfolge enthält keine Zeichen, und ihre <xref:System.String.Length>-Eigenschaft weist den Wert „0“ auf. Eine `null`-Zeichenfolge ist eine Zeichenfolge, die nicht initialisiert wurde. Sie können `StartsWithUpper` als statische Methode direkt aufrufen und ein einzelnes <xref:System.String>-Argument übergeben. Alternativ können Sie `StartsWithUpper` als Erweiterungsmethode für eine `string`-Variable aufrufen, die `null` zugewiesen ist.
 
-Sie definieren drei Methoden, von denen jede eine zugehörige Methode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> wiederholt für jedes Element in einem Zeichenfolgenarray aufruft. Da die Testmethode nicht fortgesetzt wird, sobald sie den ersten Fehler findet, rufen Sie eine Methodenüberladung auf, mit der Sie eine Zeichenfolge übergeben können, die den Zeichenfolgenwert angibt, der im Methodenaufruf verwendet wird.
+Sie definieren drei Methoden, von denen jede eine zugehörige <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>-Methode für jedes Element in einem Zeichenfolgenarray aufruft. Sie rufen eine Methodenüberladung auf, mit der Sie eine Fehlermeldung angeben können, die bei einem Testfehler angezeigt werden soll. Die Meldung enthält die Zeichenfolge, die den Fehler verursacht hat.
 
 So erstellen Sie die Testmethoden:
 
@@ -122,7 +125,7 @@ So erstellen Sie die Testmethoden:
 
 ## <a name="handle-test-failures"></a>Behandeln von Testfehlern
 
-Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie zunächst Tests, bei deren ersten Ausführung Fehler auftreten. Anschließend fügen Sie der App Code hinzu, mit dem der Test erfolgreich ausgeführt wird. In diesem Fall haben Sie den Test, der den Code überprüft, nach Schreiben des App-Codes erstellt, sodass beim Test kein Fehler aufgetreten ist. Fügen Sie einen ungültigen Wert zur Testeingabe hinzu, um zu überprüfen, ob beim Test auch wirklich erwartungsgemäß ein Fehler auftritt.
+Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie zunächst Tests, bei deren ersten Ausführung Fehler auftreten. Anschließend fügen Sie der App Code hinzu, mit dem der Test erfolgreich ausgeführt wird. Für dieses Tutorial haben Sie den Test, der den Code überprüft, nach Schreiben des App-Codes erstellt, sodass beim Test kein Fehler aufgetreten ist. Fügen Sie einen ungültigen Wert zur Testeingabe hinzu, um zu überprüfen, ob beim Test auch wirklich erwartungsgemäß ein Fehler auftritt.
 
 1. Verändern Sie das `words`-Array in der `TestDoesNotStartWithUpper`-Methode, um die Zeichenfolge "Error" einzufügen.
 
@@ -137,7 +140,7 @@ Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   Die Terminalausgabe zeigt, dass bei einem Test ein Fehler auftritt, und gibt eine Fehlermeldung für diesen Test an.
+   Die Terminalausgabe zeigt, dass bei einem Test ein Fehler auftritt, und gibt eine Fehlermeldung für diesen Test an: „Fehler bei Assert.IsFalse. Für 'Error' erwartet: False; tatsächlich: True“. Wegen des Fehlers wurden keine auf „Error“ folgenden Zeichenfolgen im Array getestet.
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie
    Total time: 1.7825 Seconds
    ```
 
-1. Machen Sie die Änderung rückgängig, die Sie in Schritt 1 vorgenommen haben, und entfernen Sie die Zeichenfolge „Error“ (Fehler). Führen Sie den Test erneut aus. Nun ist er erfolgreich.
+1. Entfernen Sie die Zeichenfolge „Error“, die Sie in Schritt 1 hinzugefügt haben. Führen Sie den Test erneut aus. Nun ist er erfolgreich.
 
 ## <a name="test-the-release-version-of-the-library"></a>Testen der Releaseversion der Bibliothek
 
-Nachdem die Tests beim Ausführen der Debugversion der Bibliothek nun alle erfolgreich waren, führen Sie die Tests auch für den Releasebuild der Bibliothek aus. Eine Reihe von Faktoren einschließlich der Compileroptimierungen kann manchmal zu einem unterschiedlichen Verhalten von Debug- und endgültiger Produktversion führen.
+Nachdem die Tests beim Ausführen des Debugbuilds der Bibliothek nun alle erfolgreich waren, führen Sie die Tests auch für den Releasebuild der Bibliothek aus. Eine Reihe von Faktoren einschließlich der Compileroptimierungen kann manchmal zu einem unterschiedlichen Verhalten von Debug- und endgültiger Produktversion führen.
 
 1. Führen Sie die Tests mit der Releasebuildkonfiguration aus:
 
@@ -173,7 +176,7 @@ Nachdem die Tests beim Ausführen der Debugversion der Bibliothek nun alle erfol
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- [Komponententests in .NET Core und .NET Standard](../testing/index.md)
+* [Komponententests in .NET Core und .NET Standard](../testing/index.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Ändern von Zeichenfolgeninhalten – C#-Leitfaden'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389514"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663004"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C\#
 
@@ -22,13 +22,13 @@ In diesem Artikel werden mehrere Methoden aufgezeigt. Sie können vorhandenen Te
 
 Der folgende Code erstellt eine neue Zeichenfolge, indem er vorhandenen Text ersetzt.
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet1":::
 
 Der vorherige Code veranschaulicht diese *unveränderliche* Eigenschaft von Zeichenfolgen. Im vorherigen Beispiel können Sie sehen, dass die ursprüngliche Zeichenfolge `source` nicht modifiziert wird. Die Methode <xref:System.String.Replace%2A?displayProperty=nameWithType> erstellt eine neue `string`, die die Modifizierungen enthält.
 
 Die Methode <xref:System.String.Replace%2A> kann entweder Zeichenfolgen oder einzelne Zeichen ersetzen. In beiden Fällen wird jedes Vorkommen des gesuchten Texts ersetzt.  In folgendem Beispiel werden alle „ “-Zeichen durch \_ ersetzt:
 
-[!code-csharp-interactive[replace characters](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#2)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet2":::
 
 Die Quellzeichenfolge bleibt unverändert, und es wird eine neue Zeichenfolge mit der Ersetzung zurückgegeben.
 
@@ -36,13 +36,13 @@ Die Quellzeichenfolge bleibt unverändert, und es wird eine neue Zeichenfolge mi
 
 Sie können die Methoden <xref:System.String.Trim%2A?displayProperty=nameWithType>, <xref:System.String.TrimStart%2A?displayProperty=nameWithType> und <xref:System.String.TrimEnd%2A?displayProperty=nameWithType> verwenden, um führende oder nachfolgende Leerräume zu entfernen.  Im folgenden Code ist ein Beispiel für jede Methode dargestellt. Die Quellzeichenfolge bleibt unverändert. Diese Methoden geben eine neue Zeichenfolge mit modifiziertem Inhalt zurück.
 
-[!code-csharp-interactive[trim white space](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#3)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet3":::
 
 ## <a name="remove-text"></a>Entfernen von Text
 
 Mit der Methode <xref:System.String.Remove%2A?displayProperty=nameWithType> können Sie Text aus einer Zeichenfolge entfernen. Diese Methode entfernt mehrere Zeichen ab einem spezifischen Index. In folgendem Beispiel wird gezeigt, wie Sie <xref:System.String.IndexOf%2A?displayProperty=nameWithType> gefolgt von <xref:System.String.Remove%2A> verwenden können, um Text aus einer Zeichenfolge zu entfernen:
 
-[!code-csharp-interactive[remove text](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#4)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet4":::
 
 ## <a name="replace-matching-patterns"></a>Ersetzen von übereinstimmenden Mustern
 
@@ -50,7 +50,7 @@ Sie können [reguläre Ausdrücke](../../standard/base-types/regular-expressions
 
 Reguläre Ausdrücke sind besonders beim Suchen und Ersetzen von Text nützlich, der einem bestimmten Muster folgt, und nicht so sehr bei bekanntem Text. Weitere Informationen finden Sie unter [Vorgehensweise: Durchsuchen von Zeichenfolgen](search-strings.md). Das Suchmuster „the\s“ sucht nach dem Wort „the“ gefolgt von einem Leerzeichen. Der Teil des Musters stellt sicher, das es nicht „there“ als Übereinstimmung in der Quellzeichenfolge ansieht. Weitere Informationen zur Sprache für reguläre Ausdrücke finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet5":::
 
 Die Methode <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> gibt eine unveränderliche Zeichenfolge zurück, die den Inhalt im <xref:System.Text.StringBuilder>-Objekt enthält.
 
@@ -60,19 +60,17 @@ Sie können ein Zeichenarray aus einer Zeichenfolge erzeugen, den Inhalt des Arr
 
 In folgendem Beispiel wird gezeigt, wie Sie mehrere Zeichen in einer Zeichenfolge ersetzen. Zunächst wird die Methode <xref:System.String.ToCharArray?displayProperty=nameWithType> verwendet, um ein Zeichenarray zu erstellen. Die Methode <xref:System.String.IndexOf%2A> wird verwendet, um den Startindex des Worts „fox“ zu finden. Die folgenden drei Zeichen werden durch ein anderes Wort ersetzt. Zum Schluss wird eine neue Zeichenfolge aus dem aktualisierten Zeichenarray erstellt.
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet6":::
 
 ## <a name="programmatically-build-up-string-content"></a>Programmgesteuertes Erstellen von Zeichenfolgeninhalten
 
 Da Zeichenfolgen unveränderlich sind, erzeugen die vorherigen Beispiele alle temporäre Zeichenfolgen oder -arrays. In Hochleistungsszenarien ist es möglicherweise wünschenswert, diese Heapzuordnungen zu vermeiden. .NET Core bietet die Methode <xref:System.String.Create%2A?displayProperty=nameWithType>, mit der Sie den Zeicheninhalt einer Zeichenfolge über einen Rückruf programmgesteuert füllen können, wobei die zwischengeschalteten temporären Zeichenfolgenzuordnungen vermieden werden.
 
-[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
 Sie können eine Zeichenfolge in einem festen Block mit unsicherem Code ändern. Es wird jedoch **unbedingt** davon abgeraten, den Inhalt der Zeichenfolge nach deren Erstellung zu ändern. Dadurch können Abläufe auf unvorhersehbare Weise beeinträchtigt werden. Wenn jemand beispielsweise eine Zeichenfolge internalisiert, die den gleichen Inhalt wie Ihre hat, erhält er Ihre Kopie und erwartet nicht, dass Sie seine Zeichenfolge überhaupt ändern.
 
-Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](../../../samples/snippets/csharp/how-to/strings.zip) herunterladen.
-
 ## <a name="see-also"></a>Siehe auch
 
-- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)
 - [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)
