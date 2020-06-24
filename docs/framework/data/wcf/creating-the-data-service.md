@@ -1,16 +1,17 @@
 ---
 title: Erstellen eines WCF Data Service in Visual Studio
+description: Erfahren Sie, wie Sie einen Beispiel Datendienst erstellen, der WCF Data Services verwendet, um einen odata-Feed auf der Grundlage einer Beispieldatenbank verfügbar zu machen.
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802267"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247790"
 ---
 # <a name="create-the-data-service"></a>Erstellen des Datendiensts
 
@@ -28,25 +29,25 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
 
 1. Wählen Sie in Visual Studio im Menü **Datei** die Optionen **Neu** > **Projekt** aus.
 
-1. Wählen Sie im Dialogfeld **Neues Projekt** unter entweder Visual Basic oder Visual C# die Kategorie **Web** aus, und wählen Sie dann **ASP.NET Webanwendung**aus.
+1. Wählen Sie im Dialogfeld **Neues Projekt** unter entweder Visual Basic oder Visual c# die Kategorie **Web** aus, und wählen Sie dann **ASP.NET Webanwendung**aus.
 
 1. Geben Sie `NorthwindService` als Namen für das Projekt ein, und klicken Sie dann auf **OK**.
 
 1. Wählen Sie im Dialogfeld **neue ASP.NET Webanwendung** die Option **leer** aus, und klicken Sie dann auf **OK**.
 
-1. (Optional) Geben Sie eine bestimmte Portnummer für die Webanwendung an. Hinweis: in dieser Reihe von Schnellstart Themen wird die Portnummer `12345` verwendet.
+1. (Optional) Geben Sie eine bestimmte Portnummer für die Webanwendung an. Hinweis: die Portnummer `12345` wird in dieser Reihe von Schnellstart Themen verwendet.
 
     1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das ASP.net-Projekt, das Sie gerade erstellt haben, und wählen Sie dann **Eigenschaften**aus.
 
-    2. Wählen Sie die Registerkarte **Web** aus, und legen Sie den Wert des Textfelds **spezieller Port** auf `12345`fest.
+    2. Wählen Sie die Registerkarte **Web** aus, und legen Sie den Wert für das Textfeld **bestimmter Port** auf fest `12345` .
 
 ## <a name="define-the-data-model"></a>Definieren des Datenmodells
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des ASP.NET-Projekts, und klicken Sie dann auf > **Neues Element** **Hinzufügen** .
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des ASP.NET-Projekts, und klicken Sie dann auf **Add**  >  **Neues Element**hinzufügen.
 
 2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Kategorie **Daten** aus, und wählen Sie dann **ADO.NET Entity Data Model**aus.
 
-3. Geben Sie `Northwind.edmx`für den Namen des Datenmodells ein.
+3. Geben Sie als Name des Datenmodells ein `Northwind.edmx` .
 
 4. Wählen Sie im **Entity Data Model-Assistenten**die Option EF- **Designer aus Datenbank aus**, und klicken Sie dann auf **weiter**.
 
@@ -60,11 +61,11 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
 
 6. Aktivieren Sie auf der letzten Seite des Assistenten die Kontrollkästchen für alle Tabellen in der Datenbank, und deaktivieren Sie die Kontrollkästchen für Sichten und gespeicherte Prozeduren.
 
-7. Klicken Sie auf **Fertig stellen**, um den Assistenten zu schließen.
+7. Klicken Sie auf **Fertig stellen**, und beenden Sie den Assistenten.
 
 ## <a name="create-the-wcf-data-service"></a>Erstellen des WCF-Daten Dienstanbieter
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt ASP.net, und wählen Sie dann > **Neues Element** **Hinzufügen** aus.
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt ASP.net, und wählen Sie dann **Add**  >  **Neues Element**hinzufügen aus.
 
 2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Element Vorlage **WCF-Datendienst** aus der Kategorie **Web** aus.
 
@@ -73,7 +74,7 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
    > [!NOTE]
    > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017 oder höher.
 
-3. Geben Sie `Northwind`als Namen für den Dienst ein.
+3. Geben Sie als Namen für den Dienst ein `Northwind` .
 
      Visual Studio erstellt das XML-Markup und die Codedateien für den neuen Dienst. In der Standardeinstellung wird das Fenster des Code-Editors geöffnet. In **Projektmappen-Explorer**hat der Dienst den Namen "Northwind" mit der Erweiterung " *. svc.cs* " oder " *. svc. vb*".
 
@@ -101,6 +102,6 @@ Sie haben erfolgreich einen neuen Datendienst erstellt, der einen auf der Northw
 > [!div class="nextstepaction"]
 > [Zugreifen auf den Dienst über einen Webbrowser](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ADO.NET-Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

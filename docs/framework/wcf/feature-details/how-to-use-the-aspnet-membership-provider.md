@@ -1,17 +1,18 @@
 ---
 title: 'Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters'
+description: Erfahren Sie, wie der ASP.net-Mitgliedschafts Anbieter Websites unterstützt, mit denen Benutzer einen Benutzernamen und ein Kennwort für den Zugriff ohne Windows-Domänen Konto erstellen können
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 840e4a5d365f2adbaf335c1061a580665a39824d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d527993dcf1fc5d5cd39bf22c3e772baf60e62f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595322"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246726"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters
 
@@ -28,7 +29,7 @@ Windows Communication Foundation (WCF)-Entwickler können diese Features aus Sic
 
 ### <a name="to-configure-the-membership-provider"></a>So konfigurieren Sie den Mitgliedschaftsanbieter
 
-1. Erstellen Sie in der Datei Web. config unter dem `system.web` Element < > ein < `membership` > Element.
+1. Erstellen Sie in der Web.config-Datei unter dem <`system.web`>-Element ein <`membership`> Element.
 
 2. Erstellen Sie unter dem `<membership>`-Element ein `<providers>`-Element.
 

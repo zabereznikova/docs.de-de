@@ -1,27 +1,28 @@
 ---
 title: WCF Data Services-Clientbibliothek
+description: Erfahren Sie, wie Sie WCF Data Services-Client Bibliotheken verwenden, um auf Daten aus einer .NET Framework Client Anwendung zuzugreifen und diese zu ändern.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 556482e3e43460016162dfbdd9b31f9a68c0af46
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 58d038d5c2ac4973c2b41f4d49c1746f48f2a2fb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900878"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247739"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services-Clientbibliothek
 Jede Anwendung kann mit einem Open Data Protocol (odata)-basierten Datendienst interagieren, wenn eine HTTP-Anforderung gesendet und der von einem Datendienst zurückgegebene odata-Feed verarbeitet werden kann. Diese Interoperabilität ermöglicht Ihnen den Zugriff auf odata-basierte Dienste aus einer breiten Palette von webfähigen Anwendungen. WCF Data Services umfasst Client Bibliotheken, die umfangreichere Programmierfunktionen bieten, wenn Sie odata-Feeds aus .NET Framework-oder Silverlight-basierten Anwendungen nutzen.  
   
- Die beiden Hauptklassen der Clientbibliothek sind die <xref:System.Data.Services.Client.DataServiceContext>-Klasse und die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse. Die <xref:System.Data.Services.Client.DataServiceContext>-Klasse kapselt Vorgänge, die für einen angegebenen Datendienst unterstützt werden. Obwohl odata-Dienste zustandslos sind, ist der Kontext nicht. Daher können Sie die <xref:System.Data.Services.Client.DataServiceContext>-Klasse verwenden, um den Zustand auf dem Client zwischen Interaktionen mit dem Datendienst aufrechtzuerhalten, um Funktionen wie Change Management zu unterstützen. Von dieser Klasse werden auch Identitäten verwaltet und Änderungen nachverfolgt. Die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse stellt eine Abfrage für eine bestimmte Entitätenmenge dar.  
+ Die beiden Hauptklassen der Clientbibliothek sind die <xref:System.Data.Services.Client.DataServiceContext>-Klasse und die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse. Die <xref:System.Data.Services.Client.DataServiceContext>-Klasse kapselt Vorgänge, die für einen angegebenen Datendienst unterstützt werden. Obwohl odata-Dienste zustandslos sind, ist der Kontext nicht. Daher können Sie die- <xref:System.Data.Services.Client.DataServiceContext> Klasse verwenden, um den Zustand auf dem Client zwischen Interaktionen mit dem Datendienst aufrechtzuerhalten, um Funktionen wie z. b. Change Management zu unterstützen. Von dieser Klasse werden auch Identitäten verwaltet und Änderungen nachverfolgt. Die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse stellt eine Abfrage für eine bestimmte Entitätenmenge dar.  
   
  In diesem Abschnitt wird beschrieben, wie Sie mit Clientbibliotheken von einer .NET Framework-Clientanwendung auf Daten zugreifen und diese ändern. Weitere Informationen zur Verwendung der WCF Data Services-Client Bibliothek mit einer Silverlight-basierten Anwendung finden Sie unter [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v%3dvs.95)). Es stehen weitere Client Bibliotheken zur Verfügung, mit denen Sie einen odata-Feed in anderen Arten von Anwendungen nutzen können. Weitere Informationen zum odata SDK finden Sie unter [odata SDK-Sample Code](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Generieren der Datendienst-Clientbibliothek](generating-the-data-service-client-library-wcf-data-services.md)  
+ [Generieren der Datendienstclientbibliothek](generating-the-data-service-client-library-wcf-data-services.md)  
  Beschreibt, wie eine Client Bibliothek und Client Datendienst Klassen generiert werden, die auf odata-Feeds basieren.  
   
  [Abfragen des Datendiensts](querying-the-data-service-wcf-data-services.md)  
@@ -51,7 +52,7 @@ Jede Anwendung kann mit einem Open Data Protocol (odata)-basierten Datendienst i
  [Arbeiten mit Binärdaten](working-with-binary-data-wcf-data-services.md)  
  Beschreibt, wie auf vom Datendienst zurückgegebene Binärdaten als Datenstrom zugegriffen wird und wie diese geändert werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Defining WCF Data Services](defining-wcf-data-services.md)
+- [Definieren von WCF Data Services](defining-wcf-data-services.md)
 - [Erste Schritte](getting-started-with-wcf-data-services.md)

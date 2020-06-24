@@ -1,5 +1,6 @@
 ---
 title: Datenvertragsnamen
+description: Entdecken Sie die Benennungs Regeln für Datenverträge und-Member und das Standardverhalten der WCF-Infrastruktur, die die Kommunikation mithilfe gleichwertiger Datenverträge unterstützen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85c533d683558520d46f259db0bdb34dcb1214c9
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857277"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247402"
 ---
 # <a name="data-contract-names"></a>Datenvertragsnamen
 
-Zuweilen verfügen Client und Dienst nicht über dieselben Typen. Sie können jedoch Daten austauschen, wenn die Datenverträge auf beiden Seiten gleich sind. [Datenvertragsäquivalenz](data-contract-equivalence.md) basiert auf Datenvertrags- und Datenmembernamen, und daher ein Mechanismus bereitgestellt, der diesen Namen Typen und Member zuordnet. In diesem Thema wird die Regeln für die Benennung von Datenverträgen sowie das Standardverhalten der Windows Communication Foundation (WCF)-Infrastruktur, bei der namenserstellung erläutert.
+Zuweilen verfügen Client und Dienst nicht über dieselben Typen. Sie können jedoch Daten austauschen, wenn die Datenverträge auf beiden Seiten gleich sind. Die [Daten Vertrags Äquivalenz](data-contract-equivalence.md) basiert auf Daten Vertrags-und Datenmember-Namen, und aus diesem Grund wird ein Mechanismus bereitgestellt, um Typen und Member diesen Namen zuzuordnen. In diesem Thema werden die Regeln für das Benennen von Daten Verträgen sowie das Standardverhalten der Windows Communication Foundation (WCF)-Infrastruktur beim Erstellen von Namen erläutert.
 
 ## <a name="basic-rules"></a>Grundregeln
 Zu den Grundregeln bei der Namensvergabe von Datenverträgen gehören:
@@ -25,15 +26,15 @@ Zu den Grundregeln bei der Namensvergabe von Datenverträgen gehören:
 
 - Datenelemente verfügen nur über Namen, aber nicht über Namespaces.
 
-- Bei der Verarbeitung von Datenverträgen ist die WCF-Infrastruktur zwischen Groß-und Kleinschreibung den Namespaces, die Namen der Datenverträge und Datenmember.
+- Bei der Verarbeitung von Daten Verträgen wird die Groß-/Kleinschreibung von der WCF-Infrastruktur für die Namespaces und die Namen von Daten Verträgen und Datenmembern beachtet.
 
 ## <a name="data-contract-namespaces"></a>Datenvertragsnamespaces
 Ein Datenvertragsnamespace nimmt die Form eines URI (Uniform Resource Identifiers) an. Der URI kann entweder absolut oder relativ sein. Standardmäßig wird Datenverträgen eines bestimmten Typs ein Namespace zugeordnet, der aus dem Namespace der CLR (Common Language Runtime) desselben Typs resultiert.
 
-Standardmäßig wird jeder beliebige CLR-Namespace (im Format *Clr.Namespace*) zugeordnet ist, auf den Namespace `http://schemas.datacontract.org/2004/07/Clr.Namespace`. Um diesen Standard zu überschreiben, übernehmen Sie das <xref:System.Runtime.Serialization.ContractNamespaceAttribute>-Attribut für das ganze Modul oder die Assembly. Alternativ können Sie den Datenvertragsnamespace für jeden Typ kontrollieren, indem Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute> festlegen.
+Standardmäßig wird ein beliebiger CLR-Namespace (im Format *CLR. Namespace*) dem-Namespace zugeordnet `http://schemas.datacontract.org/2004/07/Clr.Namespace` . Um diesen Standard zu überschreiben, übernehmen Sie das <xref:System.Runtime.Serialization.ContractNamespaceAttribute>-Attribut für das ganze Modul oder die Assembly. Alternativ können Sie den Datenvertragsnamespace für jeden Typ kontrollieren, indem Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute> festlegen.
 
 > [!NOTE]
-> Die `http://schemas.microsoft.com/2003/10/Serialization` Namespace ist reserviert und kann nicht als datenvertragsnamespace verwendet werden.
+> Der `http://schemas.microsoft.com/2003/10/Serialization` Namespace ist reserviert und kann nicht als Daten Vertrags Namespace verwendet werden.
 
 > [!NOTE]
 > Sie können den Standardnamespace nicht in Datenvertragstypen überschreiben, die `delegate`-Deklarationen enthalten.
@@ -53,7 +54,7 @@ Das folgende Beispiel zeigt, wie Sie das Standardbenennungsverhalten für Datenv
 ## <a name="data-contract-names-for-generic-types"></a>Datenvertragsnamen für generische Typen
 Für die Bestimmung von Datenvertragsnamen für generische Typen existieren besondere Regeln. Diese Regeln helfen, Übereinstimmungen von Datenvertragsnamen zwischen zwei geschlossenen Generics des gleichen generischen Typs zu vermeiden.
 
-Wird standardmäßig der Name des Datenvertrags für ein generischer Typ den Namen des Typs, gefolgt von der Zeichenfolge "Of", wird gefolgt von den Datenvertragsnamen der generischen Parameter, gefolgt von einem *Hash* mithilfe der datenvertragsnamespaces der berechnet die generischen Parameter. Ein Hash ist das Ergebnis einer mathematischen Funktion, die als "Fingerabdruck" fungiert, der Daten eindeutig identifiziert. Wenn es sich bei allen generischen Parametern um primitive Typen handelt, wird der Hash weggelassen.
+Standardmäßig ist der Name des Daten Vertrags für einen generischen Typ der Name des Typs, gefolgt von der Zeichenfolge "of", gefolgt von den Daten Vertrags Namen der generischen Parameter, gefolgt von einem *Hash* , der mit den Datenvertragsnamespaces der generischen Parameter berechnet wird. Ein Hash ist das Ergebnis einer mathematischen Funktion, die als "Fingerabdruck" fungiert, der Daten eindeutig identifiziert. Wenn es sich bei allen generischen Parametern um primitive Typen handelt, wird der Hash weggelassen.
 
 Betrachten Sie beispielsweise die Typen im folgenden Beispiel:
 
@@ -62,9 +63,9 @@ Betrachten Sie beispielsweise die Typen im folgenden Beispiel:
 
 In diesem Beispiel hat der Typ `Drawing<Square,RegularRedBrush>` den Datenvertragsnamen "DrawingOfSquareRedBrush5HWGAU6h", wobei "5HWGAU6h" ein Hash der Namespaces "urn:shapes" und "urn:default" ist. Der Typ `Drawing<Square,SpecialRedBrush>` hat den Datenvertragsnamen "DrawingOfSquareRedBrushjpB5LgQ_S", wobei "jpB5LgQ_S" ein Hash der Namespaces "urn:shapes" und "urn:special" ist. Beachten Sie, dass die beiden Namen bei Nichtverwendung des Hashes identisch sind und daher ein Namenskonflikt auftritt.
 
-## <a name="customizing-data-contract-names-for-generic-types"></a>Anpassen von Datenvertragsnamen für generische Typen
+## <a name="customizing-data-contract-names-for-generic-types"></a>Anpassen von Daten Vertrags Namen für generische Typen
 
-Zuweilen sind die für generische Typen erstellten Datenvertragsnamen, wie zuvor beschrieben, nicht akzeptabel. Beispielsweise können Sie von vornherein wissen, dass eine Übereinstimmung der Namen ausgeschlossen ist, und möchten daher den Hash entfernen. In diesem Fall können Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> Eigenschaft, um eine andere Möglichkeit zum Generieren von Namen anzugeben. Sie können Zahlen in geschweiften Klammern innerhalb der `Name`-Eigenschaft nutzen, um auf Datenvertragsnamen von generischen Parametern zu verweisen. (0 (null) verweist auf den ersten Parameter, 1 verweist auf den zweiten usw.) Um auf den Hash zu verweisen, können Sie ein Rautezeichen (#) in geschweiften Klammern verwenden. Sie können jeden dieser Verweise mehrmals oder gar nicht verwenden.
+Zuweilen sind die für generische Typen erstellten Datenvertragsnamen, wie zuvor beschrieben, nicht akzeptabel. Beispielsweise können Sie von vornherein wissen, dass eine Übereinstimmung der Namen ausgeschlossen ist, und möchten daher den Hash entfernen. In diesem Fall können Sie die- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> Eigenschaft verwenden, um eine andere Methode zum Generieren von Namen anzugeben. Sie können Zahlen in geschweiften Klammern innerhalb der `Name`-Eigenschaft nutzen, um auf Datenvertragsnamen von generischen Parametern zu verweisen. (0 bezieht sich auf den ersten Parameter, 1 bezieht sich auf das zweite, usw.) Sie können ein Nummern Zeichen (#) in geschweiften Klammern verwenden, um auf den Hash zu verweisen. Sie können jeden dieser Verweise mehrmals oder gar nicht verwenden.
 
 Beispielsweise könnte der vorangehende allgemeine `Drawing`-Typ deklariert worden sein, wie im folgenden Beispiel gezeigt:
 
@@ -81,4 +82,4 @@ In diesem Fall hat der Typ `Drawing<Square,RegularRedBrush>` den Datenvertragsna
 - [Verwenden von Datenverträgen](using-data-contracts.md)
 - [Datenvertragsäquivalenz](data-contract-equivalence.md)
 - [Datenvertragsnamen](data-contract-names.md)
-- [Datenvertrags-Versionsverwaltung](data-contract-versioning.md)
+- [Datenvertragsversionsverwaltung](data-contract-versioning.md)

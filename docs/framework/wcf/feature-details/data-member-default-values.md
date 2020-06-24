@@ -1,5 +1,6 @@
 ---
 title: Standardwerte der Datenelemente
+description: Erfahren Sie, wie Sie einen Datenmember aus serialisierten Daten weglassen, wenn dieser über einen .NET Framework Standardwert verfügt. WCF kann die Leistung verbessern, indem ein Standardwert nicht serialisiert wird.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97946a6b7da14efdcb5229b4cc5d0799eb8d7723
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593477"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247376"
 ---
 # <a name="data-member-default-values"></a>Standardwerte der Datenelemente
 In der .NET Framework verfügen Typen über ein Konzept von *Standardwerten*. Für jeden Referenztyp ist der Standardwert beispielsweise  `null`, und für einen Integertyp ist er 0 (null). Von Zeit zu Zeit ist es empfehlenswert, ein Datenelement aus serialisierten Daten zu entfernen, wenn es auf seinen Standardwert festgelegt ist. Da das Element seinen Standardwert besitzt, braucht kein tatsächlicher Wert serialisiert werden; dies führt zu einem Leistungsvorteil.  

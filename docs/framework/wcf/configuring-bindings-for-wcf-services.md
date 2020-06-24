@@ -1,24 +1,25 @@
 ---
 title: Konfigurieren von Bindungen für Windows Communication Foundation-Dienste
+description: Erfahren Sie, wie Sie Bindungen zum Zeitpunkt der Bereitstellung für eine WCF-Anwendung konfigurieren, indem Sie Elemente im System bearbeiten. Service Model-Element.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: e7ee1a8ce358c77e46db39af67bd9dc20114fb3b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2bb396e65722726e54cd315e931eea933386659
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174822"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247627"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurieren von Bindungen für Windows Communication Foundation-Dienste
 Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellung der Anwendung möglicherweise Entscheidungen mitteilen. Beispielsweise wissen Sie häufig nicht im Voraus, welche Dienstadresse oder welcher URI (Uniform Resource Identifier) verwendet wird. Anstatt eine Adresse fest zu programmieren, sollte diese Aufgabe einem Administrator nach dem Erstellen eines Diensts übergeben werden. Diese Flexibilität wird durch Konfiguration ermöglicht.  
   
 > [!NOTE]
-> Verwenden Sie das [ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) mit dem `/config` Switch, um Schnell Konfigurationsdateien zu erstellen.  
+> Verwenden Sie das [Service Model Metadata Utility-Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) mit dem- `/config` Schalter, um schnell Konfigurationsdateien zu erstellen.  
   
 ## <a name="major-sections"></a>Hauptabschnitte  
- Das Windows Communication Foundation (WCF)-Konfigurationsschema umfasst`serviceModel`die `bindings`folgenden `services`drei Hauptabschnitte ( , und ):  
+ Das Konfigurations Schema Windows Communication Foundation (WCF) umfasst die folgenden drei Hauptabschnitte ( `serviceModel` , `bindings` und `services` ):  
   
 ```xml  
 <configuration>  
@@ -34,15 +35,15 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel-Elemente  
- Sie können den durch das `system.ServiceModel` Element begrenzten Abschnitt verwenden, um einen Diensttyp mit einem oder mehreren Endpunkten sowie Einstellungen für einen Dienst zu konfigurieren. Jeder Endpunkt kann dann mit einer Adresse, einem Vertrag und einer Bindung konfiguriert werden. Weitere Informationen zu Endpunkten finden Sie unter [Endpunkterstellungsübersicht](endpoint-creation-overview.md). Wenn Sie keine Endpunkte angeben, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](./samples/simplified-configuration-for-wcf-services.md).  
+ Sie können den Abschnitt, der durch das-Element begrenzt ist, verwenden, `system.ServiceModel` um einen Diensttyp mit einem oder mehreren Endpunkten und Einstellungen für einen Dienst zu konfigurieren. Jeder Endpunkt kann dann mit einer Adresse, einem Vertrag und einer Bindung konfiguriert werden. Weitere Informationen zu Endpunkten finden Sie unter [Übersicht über die Endpunkt Erstellung](endpoint-creation-overview.md). Wenn Sie keine Endpunkte angeben, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](./samples/simplified-configuration-for-wcf-services.md).  
   
  Eine Bindung gibt Transporte (HTTP, TCP, Pipes und Message Queuing) sowie Protokolle (Sicherheit, Verlässlichkeit, Transaktionsflüsse) an und besteht aus Bindungselementen, von denen jedes einen Aspekt der Kommunikation eines Endpunkts mit der Welt angibt.  
   
- Wenn Sie z. B. das [ \<grundlegendehttpBinding->-Element](../configure-apps/file-schema/wcf/basichttpbinding.md) angeben, wird angegeben, HTTP als Transport für einen Endpunkt zu verwenden. Auf diese Weise wird der Endpunkt zur Laufzeit aktiviert, wenn der Dienst, der diesen Endpunkt verwendet, geöffnet wird.  
+ Wenn Sie das-Element angeben, wird beispielsweise angegeben, dass [\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md) http als Transport für einen Endpunkt verwendet werden soll. Auf diese Weise wird der Endpunkt zur Laufzeit aktiviert, wenn der Dienst, der diesen Endpunkt verwendet, geöffnet wird.  
   
- Es gibt zwei Arten von Bindungen: vordefinierte und benutzerdefinierte. Vordefinierte Bindungen enthalten nützliche Kombinationen von Elementen, die in allgemeinen Szenarien verwendet werden. Eine Liste vordefinierter Bindungstypen, die WCF bereitstellt, finden Sie unter [System-Provided Bindings](system-provided-bindings.md). Wenn keine vordefinierte Bindungsauflistung über die korrekte Kombination von Funktionen verfügt, die eine Dienstanwendung benötigt, können Sie benutzerdefinierte Bindungen erstellen, um den Anforderungen der Anwendung zu entsprechen. Weitere Informationen zu benutzerdefinierten Bindungen finden Sie unter [ \<customBinding>](../configure-apps/file-schema/wcf/custombinding.md).  
+ Es gibt zwei Arten von Bindungen: vordefinierte und benutzerdefinierte. Vordefinierte Bindungen enthalten nützliche Kombinationen von Elementen, die in allgemeinen Szenarien verwendet werden. Eine Liste der vordefinierten Bindungs Typen, die von WCF bereitgestellt werden, finden Sie unter vom [System bereitgestellte Bindungen](system-provided-bindings.md). Wenn keine vordefinierte Bindungsauflistung über die korrekte Kombination von Funktionen verfügt, die eine Dienstanwendung benötigt, können Sie benutzerdefinierte Bindungen erstellen, um den Anforderungen der Anwendung zu entsprechen. Weitere Informationen zu benutzerdefinierten Bindungen finden Sie unter [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) .  
   
- Die folgenden vier Beispiele veranschaulichen die häufigsten Bindungskonfigurationen, die zum Einrichten eines WCF-Dienstes verwendet werden.  
+ Die folgenden vier Beispiele veranschaulichen die gängigsten Bindungs Konfigurationen, die zum Einrichten eines WCF-Dienstanbieter verwendet werden.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Angeben eines Endpunkts, um einen Bindungstyp zu verwenden  
  Das erste Beispiel zeigt, wie ein Endpunkt angegeben wird, der mit einer Adresse, einem Vertrag oder einer Bindung konfiguriert wurde.  
@@ -58,7 +59,7 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
 </service>  
 ```  
   
- In diesem Beispiel gibt das `name`-Attribut an, für welchen Diensttyp die Konfiguration verwendet wird. Wenn Sie in Ihrem Code einen Dienst mit dem `HelloWorld`-Vertrag erstellen, wird er mit allen in der Beispielkonfiguration definierten Endpunkten initialisiert. Wenn die Assembly nur einen Servicevertrag implementiert, kann das `name` Attribut weggelassen werden, da der Dienst den einzigen verfügbaren Typ verwendet. Das Attribut nimmt eine Zeichenfolge, die im Format `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null` vorliegen muss  
+ In diesem Beispiel gibt das `name`-Attribut an, für welchen Diensttyp die Konfiguration verwendet wird. Wenn Sie in Ihrem Code einen Dienst mit dem `HelloWorld`-Vertrag erstellen, wird er mit allen in der Beispielkonfiguration definierten Endpunkten initialisiert. Wenn die Assembly nur einen Dienstvertrag implementiert, `name` kann das Attribut weggelassen werden, da der Dienst den einzigen verfügbaren Typ verwendet. Das Attribut nimmt eine Zeichenfolge, die im Format `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null` vorliegen muss  
   
  Das `address`-Attribut gibt den URI an, den andere Endpunkte für die Kommunikation mit dem Dienst verwenden. Der URI kann entweder ein absoluter oder relativer Pfad sein. Bei Bereitstellung einer relativen Adresse wird vom Host erwartet, dass er eine Basisadresse bereitstellt, die für das in der Bindung verwendete Transportschema geeignet ist. Wenn keine Adresse konfiguriert wird, wird angenommen, dass die Basisadresse der Adresse für diesen Endpunkt entspricht.  
   
@@ -89,7 +90,7 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
 ```  
   
 ## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Konfigurieren eines Verhaltens für einen Dienst  
- Im folgenden Beispiel wird ein bestimmtes Verhalten für den Diensttyp konfiguriert. Das `ServiceMetadataBehavior` Element wird verwendet, um das [ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) zu aktivieren, um den Dienst abzufragen und WSDL-Dokumente (Web Services Description Language) aus den Metadaten zu generieren.  
+ Im folgenden Beispiel wird ein bestimmtes Verhalten für den Diensttyp konfiguriert. Das- `ServiceMetadataBehavior` Element wird verwendet, um das Service [Model Metadata Utility-Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) zu aktivieren, um den Dienst abzufragen und Web Services Description Language (WSDL)-Dokumente aus den Metadaten zu generieren.  
   
 > [!NOTE]
 > Wenn Sie dem Verhalten einen besonderen Namen geben, muss die im Dienst- oder Endpunktabschnitt angegebene `behaviorConfiguration` diesem Namen entsprechen.  
@@ -116,7 +117,7 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
 ## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Angeben eines Diensts mit zwei Endpunkten mithilfe unterschiedlicher Bindungswerte  
- In diesem letzten Beispiel werden zwei Endpunkte für den `HelloWorld`-Diensttyp konfiguriert. Jeder Endpunkt verwendet `bindingConfiguration` ein anderes benutzerdefiniertes Attribut desselben `basicHttpBinding`Bindungstyps (jeder ändert die ).  
+ In diesem letzten Beispiel werden zwei Endpunkte für den `HelloWorld`-Diensttyp konfiguriert. Jeder Endpunkt verwendet ein anderes angepasstes `bindingConfiguration` Attribut desselben Bindungs Typs (jedes ändert die `basicHttpBinding` ).  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  

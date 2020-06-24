@@ -5,16 +5,19 @@ helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3161f77399030c287649ee5757814963b6afb7cf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716170"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247726"
 ---
 # <a name="constrained-execution-regions"></a>Eingeschränkte Ausführungsbereiche (CERs)
 Ein eingeschränkter Ausführungsbereich (Constrained Execution Region, CER) ist Bestandteil eines Mechanismus zum Erstellen von zuverlässigem verwaltetem Code. Mit einem CER wird ein Bereich definiert, in dem die Common Language Runtime (CLR) keine Out-of-Band-Ausnahmen auslösen kann, die verhindern würden, dass der Code in dem Bereich vollständig ausgeführt werden würde. Benutzercode kann innerhalb dieses Bereichs keinen Code ausführen, der zum Auslösen von Out-of-Band-Ausnahmen führen könnte. Die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>-Methode muss einem `try`-Block unmittelbar vorangestellt sein. Sie markiert die Blöcke `catch`, `finally` und `fault` als eingeschränkte Anwendungsbereiche. Wenn Code als eingeschränkter Bereich markiert ist, muss er nur anderen Code mit starken Zuverlässigkeitsvereinbarungen aufrufen. Code sollte keine unvorbereiteten oder nicht zuverlässigen Methoden zuordnen oder virtuelle Aufrufe für diese vornehmen, es sei denn, der Code ist für die Behandlung von Fehlern ausgelegt. Die CLR verzögert Threadabbrüche für Code, der in einem eingeschränkten Ausführungsbereich ausgeführt wird.  
-  
+
+> [!IMPORTANT]
+> CER wird nur in .NET Framework unterstützt. Dieser Artikel gilt nicht für .net Core oder .net 5 und höher.
+
  Eingeschränkte Ausführungsbereiche werden in der CLR auf unterschiedliche Weise als Ergänzung zu einem `try`-Block mit Anmerkungen verwendet, insbesondere von entscheidenden Finalizern, die in Klassen ausgeführt werden, die von der <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>-Klasse abgeleitet sind, und von Code, der über die <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>-Methode ausgeführt wird.  
   
 ## <a name="cer-advance-preparation"></a>CER-Vorbereitung  
@@ -102,7 +105,7 @@ Ein eingeschränkter Ausführungsbereich (Constrained Execution Region, CER) ist
   
 - <xref:System.Threading.Monitor.Enter%2A> oder <xref:System.IO.FileStream.Lock%2A>.  
   
-- Sicherheitsüberprüfungen. Führen Sie keine Anforderungen, sondern nur Linkaufrufe aus.  
+- Sicherheitsüberprüfungen Führen Sie keine Anforderungen, sondern nur Linkaufrufe aus.  
   
 - <xref:System.Reflection.Emit.OpCodes.Isinst> und <xref:System.Reflection.Emit.OpCodes.Castclass> für COM-Objekte und -Proxys  
   
@@ -112,6 +115,6 @@ Ein eingeschränkter Ausführungsbereich (Constrained Execution Region, CER) ist
   
 - Funktionszeiger und Delegaten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Empfohlene Vorgehensweisen für die Zuverlässigkeit](reliability-best-practices.md)

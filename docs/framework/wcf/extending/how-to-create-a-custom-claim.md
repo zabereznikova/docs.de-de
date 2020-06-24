@@ -1,19 +1,20 @@
 ---
 title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs'
+description: Erfahren Sie, wie Sie einen benutzerdefinierten Anspruch in WCF erstellen. WCF unterstützt eine Vielzahl integrierter Ansprüche, und einige Anwendungen erfordern möglicherweise benutzerdefinierte Ansprüche.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: e78f577e0fd3473575fab998e55616936212ebb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89f2b1359b48b71720db6ff38f27883745cfe612
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185616"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247545"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs
-Die Identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) stellt eine Reihe integrierter Anspruchstypen und -rechte mit den Hilfsfunktionen zum Erstellen <xref:System.IdentityModel.Claims.Claim> von Instanzen mit diesen Typen und Rechten bereit. Diese integrierten Ansprüche wurden entwickelt, um Informationen in Clientanmeldeinformationstypen zu modellieren, die WCF standardmäßig unterstützt. In vielen Fällen sind die integrierten Ansprüche ausreichend; für einige Anwendungen sind jedoch unter Umständen benutzerdefinierte Ansprüche erforderlich. Ein Anspruch besteht aus dem Anspruchstyp, der Ressource, für die der Anspruch gilt, und dem Recht, das über diese Ressource gewährt wird. In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Anspruch erstellen.  
+Die Identitäts Modell Infrastruktur in Windows Communication Foundation (WCF) bietet eine Reihe integrierter Anspruchs Typen und Rechte mit den Hilfsfunktionen zum Erstellen von <xref:System.IdentityModel.Claims.Claim> Instanzen mit diesen Typen und rechten. Diese integrierten Ansprüche dienen zum Modellieren von Informationen, die in Client Anmelde Informationstypen gefunden werden, die von WCF standardmäßig unterstützt werden. In vielen Fällen sind die integrierten Ansprüche ausreichend; für einige Anwendungen sind jedoch unter Umständen benutzerdefinierte Ansprüche erforderlich. Ein Anspruch besteht aus dem Anspruchstyp, der Ressource, für die der Anspruch gilt, und dem Recht, das über diese Ressource gewährt wird. In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Anspruch erstellen.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>So erstellen Sie einen benutzerdefinierten Anspruch, der auf einem primitiven Datentyp basiert  
   
@@ -21,15 +22,15 @@ Die Identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) ste
   
     1. Legen Sie einen eindeutigen Wert für den Anspruchstyp fest.  
   
-         Der Anspruchstyp ist ein eindeutiger Zeichenfolgenbezeichner. Der Ersteller des benutzerdefinierten Anspruchs ist dafür verantwortlich, dass der für den Anspruchstyp verwendete Zeichenfolgenbezeichner eindeutig ist. Eine Liste der Anspruchstypen, die von <xref:System.IdentityModel.Claims.ClaimTypes> WCF definiert sind, finden Sie in der Klasse.  
+         Der Anspruchstyp ist ein eindeutiger Zeichenfolgenbezeichner. Der Ersteller des benutzerdefinierten Anspruchs ist dafür verantwortlich, dass der für den Anspruchstyp verwendete Zeichenfolgenbezeichner eindeutig ist. Eine Liste der Anspruchs Typen, die von WCF definiert werden, finden Sie in der- <xref:System.IdentityModel.Claims.ClaimTypes> Klasse.  
   
     2. Wählen Sie den primitiven Datentyp und den Wert für die Ressource aus.  
   
-         Eine Ressource ist ein Objekt. Der CLR-Typ der Ressource kann primitiv sein, z. B. <xref:System.String> oder <xref:System.Int32>, oder ein beliebiger serialisierbarer Typ. Der CLR-Typ der Ressource muss serialisierbar sein, da Ansprüche an verschiedenen Stellen von WCF serialisiert werden. Primitive Typen sind serialisierbar.  
+         Eine Ressource ist ein Objekt. Der CLR-Typ der Ressource kann primitiv sein, z. B. <xref:System.String> oder <xref:System.Int32>, oder ein beliebiger serialisierbarer Typ. Der CLR-Typ der Ressource muss serialisierbar sein, da Ansprüche an verschiedenen Punkten von WCF serialisiert werden. Primitive Typen sind serialisierbar.  
   
-    3. Wählen Sie ein Recht, das durch WCF definiert ist, oder einen eindeutigen Wert für ein benutzerdefiniertes Recht.  
+    3. Wählen Sie ein von WCF definiertes Recht oder einen eindeutigen Wert für ein benutzerdefiniertes Recht aus.  
   
-         Ein Recht ist ein eindeutiger Zeichenfolgenbezeichner. Die von WCF definierten Rechte werden <xref:System.IdentityModel.Claims.Rights> in der Klasse definiert.  
+         Ein Recht ist ein eindeutiger Zeichenfolgenbezeichner. Die von WCF definierten Rechte werden in der-Klasse definiert <xref:System.IdentityModel.Claims.Rights> .  
   
          Der Ersteller des benutzerdefinierten Anspruchs ist dafür verantwortlich, dass der für das Recht verwendete Zeichenfolgenbezeichner eindeutig ist.  
   
@@ -44,11 +45,11 @@ Die Identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) ste
   
     1. Legen Sie einen eindeutigen Wert für den Anspruchstyp fest.  
   
-         Der Anspruchstyp ist ein eindeutiger Zeichenfolgenbezeichner. Der Ersteller des benutzerdefinierten Anspruchs ist dafür verantwortlich, dass der für den Anspruchstyp verwendete Zeichenfolgenbezeichner eindeutig ist. Eine Liste der Anspruchstypen, die von <xref:System.IdentityModel.Claims.ClaimTypes> WCF definiert sind, finden Sie in der Klasse.  
+         Der Anspruchstyp ist ein eindeutiger Zeichenfolgenbezeichner. Der Ersteller des benutzerdefinierten Anspruchs ist dafür verantwortlich, dass der für den Anspruchstyp verwendete Zeichenfolgenbezeichner eindeutig ist. Eine Liste der Anspruchs Typen, die von WCF definiert werden, finden Sie in der- <xref:System.IdentityModel.Claims.ClaimTypes> Klasse.  
   
     2. Wählen oder definieren Sie einen serialisierbaren nicht primitiven Typ für die Ressource.  
   
-         Eine Ressource ist ein Objekt. Der CLR-Typ der Ressource muss serialisierbar sein, da Ansprüche an verschiedenen Stellen von WCF serialisiert werden. Primitive Typen sind bereits serialisierbar.  
+         Eine Ressource ist ein Objekt. Der CLR-Typ der Ressource muss serialisierbar sein, da Ansprüche an verschiedenen Punkten von WCF serialisiert werden. Primitive Typen sind bereits serialisierbar.  
   
          Wenden Sie das <xref:System.Runtime.Serialization.DataContractAttribute> auf die Klasse an, wenn ein neuer Typ definiert wird. Wenden Sie auch das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut auf alle Member des neuen Typs an, die als Teil des Anspruchs serialisiert werden müssen.  
   
@@ -57,9 +58,9 @@ Die Identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) ste
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]
   
-    3. Wählen Sie ein Recht, das durch WCF definiert ist, oder einen eindeutigen Wert für ein benutzerdefiniertes Recht.  
+    3. Wählen Sie ein von WCF definiertes Recht oder einen eindeutigen Wert für ein benutzerdefiniertes Recht aus.  
   
-         Ein Recht ist ein eindeutiger Zeichenfolgenbezeichner. Die von WCF definierten Rechte werden <xref:System.IdentityModel.Claims.Rights> in der Klasse definiert.  
+         Ein Recht ist ein eindeutiger Zeichenfolgenbezeichner. Die von WCF definierten Rechte werden in der-Klasse definiert <xref:System.IdentityModel.Claims.Rights> .  
   
          Der Ersteller des benutzerdefinierten Anspruchs ist dafür verantwortlich, dass der für das Recht verwendete Zeichenfolgenbezeichner eindeutig ist.  
   

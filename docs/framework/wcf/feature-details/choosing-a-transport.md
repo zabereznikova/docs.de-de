@@ -1,15 +1,16 @@
 ---
 title: Wählen eines Transports
+description: 'Erfahren Sie mehr über die Kriterien für die Auswahl der Haupt Transporte, die WCF bietet: http, TCP und Named Pipes.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 7e1f6b2e1905fb92ebfe78be351feeaebb374c11
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e1a92203de25aa399316eea91a758802768442a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587065"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247493"
 ---
 # <a name="choosing-a-transport"></a>Wählen eines Transports
 In diesem Thema werden die Kriterien für die Auswahl der drei Haupt Transporte erläutert, die in Windows Communication Foundation (WCF) enthalten sind: http, TCP und Named Pipes. WCF enthält auch einen Message Queueing-Transport (auch als MSMQ bezeichnet), aber in diesem Dokument werden Message Queueing nicht behandelt.  

@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
+description: Erfahren Sie, wie Sie einen WCF-Dienst erstellen, der von einem Windows-Dienst gehostet wird. Diese Hostingoption ist in allen Windows-Versionen verfügbar.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e07aa7aac82fae5cfd1bfc759ef724cf87a873a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593177"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246935"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
 
@@ -110,7 +111,7 @@ Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Wind
     </configuration>
     ```
 
-     Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei app. config, und wählen Sie **Eigenschaften**. Wählen Sie unter **in Ausgabeverzeichnis kopieren die** Option **kopieren, wenn neuer**aus.
+     Klicken Sie mit der rechten Maustaste auf die Datei App.config im **Projektmappen-Explorer** und wählen Sie **Eigenschaften**aus. Wählen Sie unter **in Ausgabeverzeichnis kopieren die** Option **kopieren, wenn neuer**aus.
 
      In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben. Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt. Da in diesem Beispiel das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> des Diensts auf `true` festgelegt ist, ist für den Dienst auch die Veröffentlichung von Metadaten aktiviert. Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../samples/simplified-configuration-for-wcf-services.md).
 
@@ -122,7 +123,7 @@ Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Wind
 
      Geben Sie an der Eingabeaufforderung `services.msc` ein, um auf den Dienststeuerungs-Manager (SCM) zuzugreifen. Der Windows-Dienst müsste unter "Dienste" als "WCFWindowsServiceSample" angezeigt werden. Der WCF-Dienst kann nur auf Clients antworten, wenn der Windows-Dienst ausgeführt wird. Um den Dienst zu starten, klicken Sie im SCM mit der rechten Maustaste darauf, und wählen Sie "Start", oder geben Sie an der Eingabeaufforderung **net Start wcfwindowsservicesample** ein.
 
-3. Wenn Sie Änderungen am Dienst vornehmen, müssen Sie ihn zuerst stoppen und dann deinstallieren. Um den Dienst zu unterbinden, klicken Sie im SCM mit der rechten Maustaste auf den Dienst, und wählen Sie "Abbrechen" aus, oder geben Sie an der Eingabeaufforderung **net stoppwcfwindowsservicesample** ein. Wenn Sie den Windows-Dienst beenden und anschließend einen Client ausführen, tritt eine Ausnahme vom Typ <xref:System.ServiceModel.EndpointNotFoundException> auf, wenn ein Client versucht, auf den Dienst zuzugreifen. So deinstallieren Sie den Windows-Diensttyp " **installutil/u bin\service.exe** " an der Eingabeaufforderung.
+3. Wenn Sie Änderungen am Dienst vornehmen, müssen Sie ihn zuerst stoppen und dann deinstallieren. Um den Dienst zu unterbinden, klicken Sie im SCM mit der rechten Maustaste auf den Dienst, und wählen Sie "Abbrechen" aus, oder geben Sie an der Eingabeaufforderung **net stoppwcfwindowsservicesample** ein. Wenn Sie den Windows-Dienst beenden und anschließend einen Client ausführen, tritt eine Ausnahme vom Typ <xref:System.ServiceModel.EndpointNotFoundException> auf, wenn ein Client versucht, auf den Dienst zuzugreifen. Um den Windows-Diensttyp " **installutil/u bin\service.exe** an der Eingabeaufforderung zu deinstallieren.
 
 ## <a name="example"></a>Beispiel
 

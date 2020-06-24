@@ -1,13 +1,14 @@
 ---
 title: Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
+description: Erfahren Sie, wie Sie WCF Data Services in Visual Studio starten und das Lesen von Feeds in einem Browser deaktivieren. Abrufen des Dienst Definitions Dokuments und Zugreifen auf Datendienst Ressourcen.
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: d89f84cd3ea4f56bbae34cbefe0c3891df96fa8b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 713436c31bc3f622c4f44a83e33fff3fcbba1c1c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894337"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247777"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
 
@@ -76,6 +77,6 @@ Sie haben erfolgreich auf die WCF Data Services über einen Webbrowser zugegriff
 > [!div class="nextstepaction"]
 > [Erstellen der .NET Framework-Clientanwendung](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zugreifen auf Datendienstressourcen](accessing-data-service-resources-wcf-data-services.md)

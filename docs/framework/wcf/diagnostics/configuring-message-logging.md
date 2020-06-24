@@ -1,15 +1,16 @@
 ---
 title: Konfigurieren der Nachrichtenprotokollierung
+description: Erfahren Sie, wie Sie die Nachrichten Protokollierung konfigurieren, einschließlich der Vorgehensweise zum Aktivieren der Protokollierung, Protokollierungs Ebenen, Nachrichtenfilter und zum Konfigurieren eines benutzerdefinierten Listener in WCF.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 283f43239d6cf5aea5ea668397a52313ff526e2a
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 5203f19a18e5fa6b0ed7f68e1d1de0447da41abd
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345183"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247661"
 ---
 # <a name="configuring-message-logging"></a>Konfigurieren der Nachrichtenprotokollierung
 
@@ -17,7 +18,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
 
 ## <a name="enabling-message-logging"></a>Aktivieren der Nachrichtenprotokollierung
 
-Windows Communication Foundation (WCF) protokolliert Nachrichten standardmäßig nicht. Zum Aktivieren der Nachrichtenprotokollierung müssen Sie einen Ablaufverfolgungslistener zur `System.ServiceModel.MessageLogging`-Ablaufverfolgungsquelle hinzufügen und in der Konfigurationsdatei Attribute für das `<messagelogging>`-Element festlegen.
+Windows Communication Foundation (WCF) protokolliert standardmäßig keine Nachrichten. Zum Aktivieren der Nachrichtenprotokollierung müssen Sie einen Ablaufverfolgungslistener zur `System.ServiceModel.MessageLogging`-Ablaufverfolgungsquelle hinzufügen und in der Konfigurationsdatei Attribute für das `<messagelogging>`-Element festlegen.
 
 Das folgende Beispiel zeigt, wie die Protokollierung aktiviert und zusätzliche Optionen angegeben werden.
 
@@ -47,7 +48,7 @@ Das folgende Beispiel zeigt, wie die Protokollierung aktiviert und zusätzliche 
 </system.serviceModel>
 ```
 
-Weitere Informationen zu den Einstellungen für die Nachrichtenprotokollierung finden Sie unter [Empfohlene Einstellungen für die Ablaufverfolgung und Nachrichtenprotokollierung](./tracing/recommended-settings-for-tracing-and-message-logging.md).
+Weitere Informationen zu den Einstellungen für die Nachrichten Protokollierung finden Sie unter [Empfohlene Einstellungen für Ablauf Verfolgung und Nachrichten Protokollierung](./tracing/recommended-settings-for-tracing-and-message-logging.md).
 
 Mit `add` können Sie den Namen und den Typ des Listeners angeben, den Sie verwenden möchten. In der Beispielkonfiguration wird der Listener "messages" genannt, und der standardmäßige .NET Framework-Ablaufverfolgungslistener (`System.Diagnostics.XmlWriterTraceListener`) wird als zu verwendender Typ hinzugefügt. Wenn Sie `System.Diagnostics.XmlWriterTraceListener` verwenden, müssen Sie den Speicherort und den Namen der Ausgabedatei in der Konfigurationsdatei angeben. Legen Sie dafür `initializeData` auf den Namen der Protokolldatei fest. Andernfalls löst das System eine Ausnahme aus. Sie können auch einen benutzerdefinierten Listener implementieren, der Protokolle in einer Standarddatei ausgibt.
 
@@ -63,7 +64,7 @@ Das `switchValue`-Attribut von `source` ist nur für die Ablaufverfolgung gülti
 </source>
 ```
 
-Wenn Sie die Ablaufverfolgungsquelle deaktivieren möchten, verwenden Sie stattdessen das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements. Sie sollten all diese Attribute auf `false` festlegen. Dieser Schritt kann anhand der Konfigurationsdatei im vorigen Beispielcode über die Benutzeroberfläche des Configuration Editor oder über WMI durchgeführt werden. Weitere Informationen zum Configuration Editor-Tool finden Sie unter [Configuration Editor Tool (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md). Weitere Informationen zu WMI finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für Diagnose](./wmi/index.md).
+Wenn Sie die Ablaufverfolgungsquelle deaktivieren möchten, verwenden Sie stattdessen das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements. Sie sollten all diese Attribute auf `false` festlegen. Dieser Schritt kann anhand der Konfigurationsdatei im vorigen Beispielcode über die Benutzeroberfläche des Configuration Editor oder über WMI durchgeführt werden. Weitere Informationen zum Konfigurations-Editor-Tool finden Sie unter [Configuration Editor-Tool (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md). Weitere Informationen zu WMI finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](./wmi/index.md).
 
 ## <a name="logging-levels-and-options"></a>Protokollieren von Ebenen und Optionen
 
@@ -71,7 +72,7 @@ Für eingehende Nachrichten erfolgt die Protokollierung direkt nach dem Erstelle
 
 Für ausgehende Nachrichten erfolgt die Protokollierung unmittelbar nachdem die Nachricht den Benutzercode verlassen hat und unmittelbar bevor die Nachricht abgesendet wird.
 
-WCF protokolliert Nachrichten auf zwei verschiedenen Ebenen, Dienst und Transport. Falsch formatierte Nachrichten werden auch protokolliert. Die drei Kategorien sind unabhängig voneinander und können in der Konfiguration getrennt aktiviert werden.
+WCF protokolliert Nachrichten auf zwei unterschiedlichen Ebenen: Dienst und Transport. Falsch formatierte Nachrichten werden auch protokolliert. Die drei Kategorien sind unabhängig voneinander und können in der Konfiguration getrennt aktiviert werden.
 
 Sie können die Protokollierungsebene steuern, indem Sie das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements festlegen.
 
@@ -85,7 +86,7 @@ Auf dieser Ebene protokollierte Nachrichten können vor oder nach dem Transport 
 
 ### <a name="malformed-level"></a>Falsch formatierte Ebene
 
-Falsch formatierte Nachrichten sind Nachrichten, die vom WCF-Stack in jeder Verarbeitungsphase abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie im Abschnitt Andere Optionen.
+Falsch formatierte Nachrichten sind Nachrichten, die von dem WCF-Stapel in jeder Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie im Abschnitt Weitere Optionen.
 
 ### <a name="other-options"></a>Weitere Optionen
 
@@ -102,11 +103,11 @@ Zusätzlich zu den Protokollierungsebenen kann der Benutzer die folgenden Option
 
 Wenn in der Konfigurationsdatei kein Ablaufverfolgungslistener definiert ist, wird unabhängig von der angegebenen Protokollierungsebene keine Protokollierungsausgabe generiert.
 
-Die Nachrichtenprotokollierungsoptionen, wie die in diesem Abschnitt beschriebenen Attribute, können zur Laufzeit mit der Windows-Verwaltungsinstrumentation (WMI) geändert werden. Dies kann durch den Zugriff auf die [AppDomainInfo-Instanz](./wmi/appdomaininfo.md) `LogMessagesAtServiceLevel`erfolgen, die die folgenden booleschen Eigenschaften verfügbar macht: , `LogMessagesAtTransportLevel`, und `LogMalformedMessages`. Wenn Sie einen Ablaufverfolgungslistener für die Nachrichtenprotokollierung konfigurieren, diese Optionen in der Konfiguration jedoch auf `false` festlegen, können Sie sie später, wenn die Anwendung ausgeführt wird, zu `true` ändern. Dadurch wird die Nachrichtenprotokollierung zur Laufzeit aktiviert. Entsprechend können Sie die Nachrichtenprotokollierung zur Laufzeit mit WMI deaktivieren, wenn Sie sie in der Konfigurationsdatei aktivieren. Weitere Informationen finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für Diagnose](./wmi/index.md).
+Die Nachrichtenprotokollierungsoptionen, wie die in diesem Abschnitt beschriebenen Attribute, können zur Laufzeit mit der Windows-Verwaltungsinstrumentation (WMI) geändert werden. Dies kann durchzugreifen auf die [AppDomainInfo](./wmi/appdomaininfo.md) -Instanz erfolgen, die diese booleschen Eigenschaften verfügbar macht: `LogMessagesAtServiceLevel` , `LogMessagesAtTransportLevel` und `LogMalformedMessages` . Wenn Sie einen Ablaufverfolgungslistener für die Nachrichtenprotokollierung konfigurieren, diese Optionen in der Konfiguration jedoch auf `false` festlegen, können Sie sie später, wenn die Anwendung ausgeführt wird, zu `true` ändern. Dadurch wird die Nachrichtenprotokollierung zur Laufzeit aktiviert. Entsprechend können Sie die Nachrichtenprotokollierung zur Laufzeit mit WMI deaktivieren, wenn Sie sie in der Konfigurationsdatei aktivieren. Weitere Informationen finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](./wmi/index.md).
 
 Das `source`-Feld in einem Nachrichtenprotokoll gibt an, in welchem Kontext die Nachricht protokolliert wird: beim Senden/Empfangen einer Anforderungsnachricht, für eine Anforderungsantwort oder eine unidirektionale Anforderung, auf der Dienstmodell- oder Transportschicht oder im Falle einer falsch formatierten Nachricht.
 
-Bei falsch formatierten `source` Nachrichten `Malformed`ist gleich . Andernfalls verfügt die Quelle über die folgenden Werte auf der Grundlage des Kontexts.
+Bei falsch formatierten Nachrichten `source` ist gleich `Malformed` . Andernfalls verfügt die Quelle über die folgenden Werte auf der Grundlage des Kontexts.
 
 Für Anforderung/Antwort
 
@@ -173,8 +174,8 @@ Sie können auch einen benutzerdefinierten Listener mit zusätzlichen Optionen k
 
 Das `type`-Attribut sollte auf einen vollqualifizierten Assemblynamen festgelegt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [\<MessageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [\<messageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
 - [Nachrichtenprotokollierung](message-logging.md)
 - [Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](./tracing/recommended-settings-for-tracing-and-message-logging.md)

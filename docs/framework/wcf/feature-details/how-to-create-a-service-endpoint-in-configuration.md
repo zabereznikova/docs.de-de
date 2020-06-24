@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration'
+description: Erfahren Sie, wie Endpunkte für einen WCF-Dienst mithilfe einer Konfigurationsdatei hinzugefügt werden, die sowohl relative als auch absolute Adressen enthält.
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 56b29da0c147eb9e73a08e2875e33e384da729ed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 184bcb5f7f3e83f12608757b55bbb4d57be58f7d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598917"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247064"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration
 Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein Windows Communication Foundation (WCF)-Dienst bietet. Sie können einen oder mehrere Endpunkte mit einer Kombination relativer und absoluter Endpunktadressen für den Dienst definieren. Wenn Sie keine Dienstendpunkte definieren, stellt die Runtime standardmäßig einige Endpunkte bereit. In diesem Thema wird beschrieben, wie Endpunkte, die sowohl relative als auch absolute Adressen enthalten, mit einer Konfigurationsdatei hinzugefügt werden.  

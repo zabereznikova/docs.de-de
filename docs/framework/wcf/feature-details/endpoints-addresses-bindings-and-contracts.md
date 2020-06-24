@@ -1,17 +1,18 @@
 ---
 title: 'Endpunkte: Adressen, Bindungen und Verträge'
+description: Erfahren Sie, wie die gesamte Kommunikation mit einem WCF-Dienst über die Dienst Endpunkte erfolgt, die Clients Zugriff auf die vom Dienst angebotenen Funktionen bieten.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3ac7f0b165b99a1ed3702628958f7d4c7702f5b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ce0874bfed716716b6fd1801b35a4266095cd752
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593515"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247311"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpunkte: Adressen, Bindungen und Verträge
 
@@ -88,8 +89,8 @@ Beschreibt, wie Sie einen Dienstendpunkt in einer Konfiguration erstellen.
 [Vorgehensweise: Erstellen eines Dienst Endpunkts im Code](how-to-create-a-service-endpoint-in-code.md)\
 Beschreibt, wie Sie einen Dienstendpunkt im Code erstellen.
 
-[Gewusst wie: Überprüfen von kompiliertem Dienst Code mithilfe von "Svcutil. exe"](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
-Beschreibt, wie Fehler in Dienst Implementierungen und Konfigurationen erkannt werden, ohne dass der Dienst mit dem Service [Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)gehostet wird.
+[Gewusst wie: Verwenden von Svcutil.exe zum Überprüfen von kompiliertem Dienst Code](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
+Beschreibt, wie Fehler in Dienst Implementierungen und Konfigurationen erkannt werden, ohne dass der Dienst mit dem Service [Model Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)gehostet wird.
 
 ## <a name="see-also"></a>Weitere Informationen
 

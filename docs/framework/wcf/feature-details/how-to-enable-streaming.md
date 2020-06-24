@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Aktivieren des Streamingmodus'
+description: Erfahren Sie, wie Sie per Streaming übertragene Nachrichten in WCF anstelle der standardmäßigen gepufferten Übertragungen aktivieren, die vor der Verarbeitung vollständig empfangen werden müssen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: c2c22ab699a996f4bc40d0b5f620ddd92ffe8059
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 538fd8634094aa6fbf097ddb94469d7bca749a63
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593229"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247025"
 ---
 # <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
 Windows Communication Foundation (WCF) kann Nachrichten mit gepufferten oder Streamingübertragungen senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
