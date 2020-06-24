@@ -25,6 +25,10 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: Anleitungen
   items:
+    - name: Broadcastleitfaden
+      href: how-to-guides/broadcast-guide.md
+    - name: Leitfaden für UDF
+      href: how-to-guides/udf-guide.md
     - name: Debuggen einer Anwendung
       href: how-to-guides/debug.md
     - name: Übermitteln von Aufträgen an HDInsight
