@@ -74,7 +74,7 @@ Wenn Sie die Anwendung lokal für IIS bereitgestellt haben, treten möglicherwei
 ## <a name="security"></a>Sicherheit
  Für eine lokale Veröffentlichung in IIS sind Administratorberechtigungen erforderlich, da IIS unter einem Administratorkonto ausgeführt werden muss. Wenn ein Benutzer ohne Administrator Berechtigung die WCF-Dienst Veröffentlichung öffnet, ist IIS nicht als Ziel Speicherort verfügbar. Das Veröffentlichen im Datei System oder in einer FTP-Site funktioniert ohne Administratorrechte.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [WCF Visual Studio-Vorlagen](wcf-vs-templates.md)
 - [WCF-Diensthost (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

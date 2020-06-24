@@ -76,7 +76,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)]
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Hosten in Internetinformationsdiensten](hosting-in-internet-information-services.md)
 - [Hosting-Dienste](../hosting-services.md)

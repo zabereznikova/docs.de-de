@@ -21,7 +21,7 @@ In diesem Tutorial wird die zweite von fünf Aufgaben beschrieben, die zum Erste
 
 Der nächste Schritt zum Erstellen einer WCF-Anwendung besteht darin, Code zum Implementieren der WCF-Dienst Schnittstelle hinzuzufügen, die Sie im vorherigen Schritt erstellt haben. In diesem Schritt erstellen Sie eine Klasse mit `CalculatorService` dem Namen, die die benutzerdefinierte `ICalculator` Schnittstelle implementiert. Jede Methode im folgenden Code Ruft einen Rechner Vorgang auf und schreibt Text in die Konsole, um Sie zu testen.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial erfahren Sie, wie Sie die folgenden Aufgaben durchführen:
 > [!div class="checklist"]
 >
 > - Fügen Sie Code hinzu, um den WCF-Dienstvertrag zu implementieren.
