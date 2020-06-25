@@ -1,5 +1,6 @@
 ---
 title: 'Übersicht über Common Language Runtime (CLR): .NET Framework'
+description: Führen Sie die ersten Schritte mit Common Language Runtime (CLR), der .NET-Laufzeitumgebung, durch. Die CLR führt Code aus und stellt Dienste bereit, um den Entwicklungsprozess zu vereinfachen.
 ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 74421f79c18f32e121d51c47f3eb32f3c2ed71fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ef455ac1c49c1f457d0fa432db91b5375c045840
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289245"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769209"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Übersicht: Common Language Runtime (CLR)
 

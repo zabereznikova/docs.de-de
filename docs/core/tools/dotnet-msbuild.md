@@ -2,20 +2,20 @@
 title: Befehl „dotnet msbuild“
 description: Der Befehl dotnet msbuild ermöglicht den Zugriff auf die MSBuild-Befehlszeile.
 ms.date: 02/14/2020
-ms.openlocfilehash: 88e85868e2d7de564b2e4c90ce6e78bde4cb350e
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9739fe782e17db3955db087ca1781ad4280cd491
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463629"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803173"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
-`dotnet msbuild`: Erstellt ein Projekt und alle seine Abhängigkeiten
+`dotnet msbuild`: Erstellt ein Projekt und alle seine Abhängigkeiten Hinweis: Wenn mehrere vorhanden sind, muss möglicherweise eine Projektmappe oder eine Projektdatei angegeben werden.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -31,7 +31,7 @@ Der `dotnet msbuild`-Befehl ermöglicht den Zugriff auf eine voll funktionsfähi
 
 Der Befehl weist genau die gleichen Funktionen wie der vorhandene MSBuild-Befehlszeilenclient für ausschließlich im SDK-Stil geschriebene Projekte auf. Alle Optionen sind gleich. Weitere Informationen zu den verfügbaren Optionen finden Sie in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference).
 
-Der [dotnet build](dotnet-build.md)-Befehl ist äquivalent zu `dotnet msbuild -restore -target:Build`. Der [dotnet build](dotnet-build.md)-Befehl wird häufiger zum Erstellen von Projekten verwendet, aber da dieser immer das Buildziel ausführt, können Sie `dotnet msbuild` verwenden, wenn Sie das Projekt nicht erstellen möchten. Wenn Sie z. B. ein bestimmtes Ziel haben, das Sie ausführen möchten, ohne das Projekt zu erstellen, verwenden Sie `dotnet msbuild`, und geben Sie das Ziel an.
+Der [dotnet build](dotnet-build.md)-Befehl ist äquivalent zu `dotnet msbuild -restore`. Wenn Sie das Projekt nicht erstellen und ein bestimmtes Ziel ausführen möchten, verwenden Sie `dotnet build` oder `dotnet msbuild`, und geben Sie das Ziel an.
 
 ## <a name="examples"></a>Beispiele
 
@@ -57,4 +57,5 @@ Der [dotnet build](dotnet-build.md)-Befehl ist äquivalent zu `dotnet msbuild -r
 
   ```dotnetcli
   dotnet msbuild -preprocess
+  dotnet msbuild -preprocess:<fileName>.xml
   ```

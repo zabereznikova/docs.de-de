@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 0d29407896145bc3b2ed8284c839ae8f2f0521b2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fb78e1439a680a8dbb9fc0eb8afdeee3efef7ead
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602717"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768395"
 ---
 
-Die [dotnet-install-Skripts](../../tools/dotnet-install-script.md) werden für die Automatisierung und Installation des **SDK** ohne Administratorrechte verwendet. Sie können das Skript unter <https://dot.net/v1/dotnet-install.sh> herunterladen.
+Die [dotnet-install-Skripts](../../tools/dotnet-install-script.md) werden für die Automatisierung sowie für Installationen von **SDK** und **Runtime** durch Benutzer ohne Administratorrechte verwendet. Sie können das Skript unter <https://dot.net/v1/dotnet-install.sh> herunterladen.
 
-Das Skript installiert standardmäßig die neueste [Langzeitunterstützungsversion](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), nämlich .NET Core 3.1. Um die aktuelle Version zu installieren, bei der es sich möglicherweise nicht um eine LTS-Version handelt, nutzen Sie den Parameter `-c Current`.
+Das Skript installiert standardmäßig die neueste [LTS](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)-SDK-Version (Long-Term Support), die derzeit .NET Core 3.1 entspricht. Um die aktuelle Version zu installieren, bei der es sich möglicherweise nicht um eine LTS-Version handelt, nutzen Sie den Parameter `-c Current`.
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -18,7 +18,7 @@ Das Skript installiert standardmäßig die neueste [Langzeitunterstützungsversi
 Um die .NET Core-Runtime anstelle des SDK zu installieren, geben Sie den Parameter `--runtime` an.
 
 ```bash
-./dotnet-install.sh -c Current --runtime
+./dotnet-install.sh -c Current --runtime aspnetcore
 ```
 
 Sie können eine bestimmte Version installieren, indem Sie mit dem Parameter `-c` die gewünschte Version angeben. Mit dem folgenden Befehl wird .NET Core SDK 3.1 installiert.

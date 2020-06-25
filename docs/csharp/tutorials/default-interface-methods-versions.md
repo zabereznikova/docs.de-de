@@ -4,12 +4,12 @@ description: In diesem fortgeschrittenen Tutorial wird erläutert, wie Sie vorha
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 650aea78b421783b3f249b3670578aa60e800ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e73f9001414631975248f1a1658833d2785169b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156778"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803209"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Tutorial: Aktualisieren von Schnittstellen mit Standardschnittstellenmethoden in C# 8.0
 
@@ -51,7 +51,7 @@ Das Team stimmte der wahrscheinlichsten Standardimplementierung zu: einem Treuer
 
 Das Upgrade sollte die Funktionalität zum Festlegen von zwei Eigenschaften bieten: die für den Rabatt erforderliche Anzahl an Bestellungen sowie den Prozentsatz des Rabatts. Damit wird es zum idealen Szenario für Standardschnittstellenmethoden. Sie können der `ICustomer`-Schnittstelle eine Methode hinzufügen und die wahrscheinlichste Implementierung bereitstellen. Alle vorhandenen und alle neuen Implementierungen können die Standardimplementierung verwenden oder ihre eigene angeben.
 
-Fügen Sie zunächst der Implementierung die neue Methode hinzu:
+Fügen Sie zunächst die neue Methode einschließlich deren Text der Schnittstelle hinzu:
 
 [!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 

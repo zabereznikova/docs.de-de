@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool list“
 description: Der Befehl „dotnet tool list“ listet die auf Ihrem Computer installierten .NET Core-Tools auf.
 ms.date: 02/14/2020
-ms.openlocfilehash: 28f9155407d1238f8b0960b69b34ea329ca0e8e6
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7ca894ab0f5daf0118ff92fb39e0118b952b3d83
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463349"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768273"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -24,6 +24,8 @@ dotnet tool list -g|--global
 
 dotnet tool list --tool-path <PATH>
 
+dotnet tool list --local
+
 dotnet tool list
 
 dotnet tool list -h|--help
@@ -33,9 +35,9 @@ dotnet tool list -h|--help
 
 Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- oder lokalen .NET Core-Tools aufzulisten, die auf Ihrem Computer installiert sind. Der Befehl listet den Paketnamen, die installierte Version und den Befehl für das Tool auf.  Um den Befehl zu verwenden, geben Sie eine der folgenden Optionen an:
 
-* Ein globales Tool, das am Standardspeicherort installiert ist. Verwenden Sie die Option `--global`.
-* Ein globales Tool, das an einem benutzerdefinierten Speicherort installiert ist. Verwenden Sie die `--tool-path`-Option.
-* Ein lokales Tool. Lassen Sie die Optionen `--global` und `--tool-path` weg.
+* Verwenden Sie zum Auflisten globaler Tools am Standardspeicherort die Option `--global`.
+* Verwenden Sie zum Auflisten globaler Tools an einem benutzerdefinierten Speicherort die Option `--tool-path`.
+* Verwenden Sie zum Auflisten lokaler Tools die Option `--local`, oder lassen Sie die Optionen `--global`, `--tool-path` und `--local` aus.
 
 **Lokale Tools sind ab .NET Core SDK 3.0 verfügbar.**
 
@@ -48,6 +50,10 @@ Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- 
 - **`-h|--help`**
 
   Druckt eine kurze Hilfe für den Befehl.
+
+- **`--local`**
+
+  Diese Option listet lokale Tools für das aktuelle Verzeichnis auf. Sie kann nicht mit der Option `--global` oder `--tool-path` kombiniert werden. Wenn Sie sowohl `--global` als auch `--tool-path` auslassen, werden lokale Tools aufgelistet, auch wenn `--local` nicht angegeben wird.
 
 - **`--tool-path <PATH>`**
 
@@ -67,7 +73,7 @@ Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- 
 
   Listet die globalen Tools in einem bestimmten Linux/macOS-Verzeichnis auf.
 
-- **`dotnet tool list`**
+- **`dotnet tool list`** oder **`dotnet tool list --local`**
 
   Listet alle lokalen Tools auf, die im aktuellen Verzeichnis verfügbar sind.
 

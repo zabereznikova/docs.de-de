@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden zum Schreiben von Kompon
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989368"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -48,6 +48,12 @@ Wenn Sie Tests für Ihren Code schreiben, wird dieser automatisch entkoppelt, da
 - **Wiederholbarkeit**. Das Ausführen eines Komponententests sollte immer zu den gleichen Ergebnissen führen. Wenn Sie zwischen den Ausführungen nichts ändern, sollte sich das Ergebnis auch nicht ändern.
 - **Selbstprüfung**. Der Test sollte in der Lage sein, automatisch und ohne menschliches Eingreifen zu erkennen, ob er erfolgreich war oder fehlgeschlagen ist.
 - **Verhältnismäßigkeit**. Ein Komponententest darf verglichen mit dem zu testenden Code nicht unverhältnismäßig lang für das Schreiben benötigen. Wenn Sie bemerken, dass der Codetest im Vergleich zum Schreiben des Codes viel Zeit in Anspruch nimmt, erwägen Sie einen Entwurf, der besser getestet werden kann.
+
+## <a name="code-coverage"></a>Codeabdeckung
+
+Ein hoher Code-Coverage-Prozentsatz steht oft im Zusammenhang mit einer höheren Codequalität. Durch die Messung an sich kann die Codequalität jedoch *nicht* bestimmt werden. Das Festlegen eines übermäßig ambitionierten Code-Coverage-Prozentsatzes kann kontraproduktiv sein. Stellen Sie sich ein komplexes Projekt mit Tausenden von bedingten Branches vor, und stellen Sie sich vor, dass Sie ein Code-Coverage-Ziel von 95 % festlegen. Derzeit weist das Projekt 90 % Code Coverage auf. Für die restlichen 5 % könnte für alle Grenzfälle sehr viel Zeit einkalkuliert werden müssen, und der Wertbeitrag verringert sich schnell.
+
+Ein hoher Code-Coverage-Prozentsatz ist weder ein Erfolgsindikator noch ein Hinweis auf eine hohe Codequalität. Er stellt lediglich die Menge an Code dar, die durch Komponententests abgedeckt ist. Weitere Informationen finden Sie unter [Verwenden von Code Coverage für Komponententests](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Begriffsklärung
 Der Begriff *Mock* ( Deutsch „Pseudo“) wird leider im Testkontext häufig falsch verwendet. Im Folgenden werden die häufigsten Arten von unechten Objekten, sogenannten *Fakes*, beim Schreiben von Komponententests definiert:
