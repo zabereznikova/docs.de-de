@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen von Steuerelementen
+description: Erfahren Sie, wie Sie ein Steuerelement in einem Windows Form zeichnen. Ein-Steuerelement ist eine Komponente in einem Formular, das Sie verwenden können, um Informationen anzuzeigen oder Benutzereingaben zu akzeptieren.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d9ab0d78fa0153cce20fb17d22f6e9e781229ece
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743959"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325877"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms
 
@@ -44,14 +45,14 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
     > [!NOTE]
     > Sie können auf ein Steuerelement in der **Toolbox** doppelklicken, um es der oberen linken Ecke des Formulars in seiner Standardgröße hinzuzufügen.
 
-    Sie können einem Formular auch zur Laufzeit dynamisch Steuerelemente hinzufügen. Im folgenden Codebeispiel wird dem Formular ein <xref:System.Windows.Forms.TextBox>-Steuerelement hinzugefügt, wenn auf ein <xref:System.Windows.Forms.Button> Steuerelement geklickt wird.
+    Sie können einem Formular auch zur Laufzeit dynamisch Steuerelemente hinzufügen. Im folgenden Codebeispiel <xref:System.Windows.Forms.TextBox> wird dem Formular ein-Steuerelement hinzugefügt, wenn auf ein- <xref:System.Windows.Forms.Button> Steuerelement geklickt wird.
 
     > [!NOTE]
-    > Für das folgende Verfahren ist es erforderlich, dass ein Formular mit einem **Schalt** Flächen-Steuerelement vorhanden ist, `Button1`bereits darauf platziert ist.
+    > Für das folgende Verfahren ist es erforderlich, dass ein Formular mit einem **Schalt** Flächen-Steuerelement vorhanden ist, das `Button1` bereits darauf platziert ist.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>So fügen Sie einem Formular ein Steuerelement Programm gesteuert hinzu
 
-1. Fügen Sie in der Methode, die das `Click`-Ereignis der Schaltfläche in der-Klasse des Formulars behandelt, Code ähnlich dem folgenden hinzu, um einen Verweis auf die Steuerelement Variable hinzuzufügen, die `Location`des Steuer Elements festzulegen und das-Steuerelement hinzuzufügen.
+1. Fügen Sie in der-Methode, die das-Ereignis der Schaltfläche `Click` in der-Klasse des Formulars behandelt, Code ähnlich dem folgenden hinzu, um einen Verweis auf die Steuerelement Variable hinzuzufügen, die des Steuer Elements festzulegen `Location` und das Steuerelement hinzuzufügen.
 
     ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -85,11 +86,11 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
     > Sie können auch Code hinzufügen, um andere Eigenschaften des Steuer Elements zu initialisieren.
 
     > [!IMPORTANT]
-    > Sie können den lokalen Computer über das Netzwerk mit einem Sicherheitsrisiko verfügbar machen, indem Sie auf eine böswillige `UserControl`verweisen. Dies wäre nur ein Problem, wenn eine böswillige Person ein schädliches benutzerdefiniertes Steuerelement erstellt, gefolgt von dem, das Sie versehentlich dem Projekt hinzufügen.
+    > Sie können den lokalen Computer mit einem Sicherheitsrisiko über das Netzwerk verfügbar machen, indem Sie auf eine böswillige verweisen `UserControl` . Dies wäre nur ein Problem, wenn eine böswillige Person ein schädliches benutzerdefiniertes Steuerelement erstellt, gefolgt von dem, das Sie versehentlich dem Projekt hinzufügen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Windows Forms-Steuerelemente](index.md)
-- [Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Texts](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows Forms Steuerelemente](index.md)
+- [Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

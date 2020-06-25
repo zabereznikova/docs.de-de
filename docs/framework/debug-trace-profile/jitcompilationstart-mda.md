@@ -1,6 +1,6 @@
 ---
-title: jitCompilationStart-MDA
-description: Verwenden Sie den JitCompilationStart-MDA (Managed Debug Assistant), der für die Berichterstellung gestartet wird, wenn der JIT-Compiler (Just-in-Time) mit dem Kompilieren einer .net-Funktion beginnt.
+title: JitCompilationStart-Assistent für verwaltetes Debuggen (MDA)
+description: Der JitCompilationStart-MDA (Managed Debugging Assistant) meldet, wann der JIT-Compiler (Just-in-Time) mit dem Kompilieren einer .net-Funktion beginnt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -8,30 +8,31 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904129"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325533"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart-MDA
+
 Der Assistent für verwaltetes Debuggen (MDA) `jitCompilationStart` berichtet, wann der JIT-Compiler mit der Kompilierung einer Funktion beginnt.  
   
 ## <a name="symptoms"></a>Symptome  
- Die Größe der Arbeitssätze vergrößert sich für ein Programm, das bereits im nativen Bildformat vorhanden ist, da „mscorjit.dll“ in den Prozess geladen wird.  
+ Die Workingsetgröße erhöht sich für ein Programm, das bereits im systemeigenen Bildformat vorliegt, da mscorjit.dll in den Prozess geladen wird.  
   
 ## <a name="cause"></a>Ursache  
- Nicht alle Assemblys, von denen die Anwendung abhängt, wurden im nativen Format generiert, oder die, für die das der Fall ist, wurden nicht korrekt registriert.  
-  
+Nicht alle Assemblys, von denen das Programm abhängt, wurden im nativen Format generiert, oder eine Assembly ist nicht ordnungsgemäß registriert.  
+
 ## <a name="resolution"></a>Lösung  
- Durch die Aktivierung dieses MDA können Sie bestimmen, welche Funktion JIT-kompiliert wird. Bestimmen Sie, ob die Assembly mit der Funktion im nativen Format generiert und ordnungsgemäß registriert wird.  
+ Wenn Sie diesen MDA aktivieren, können Sie identifizieren, welche Funktion JIT-kompiliert wird. Stellen Sie sicher, dass die Assembly, die die Funktion enthält, in das systemeigene Format generiert und ordnungsgemäß registriert wird.
   
-## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
- Dieser MDA protokolliert eine Meldung, kurz bevor eine Methode JIT-kompiliert wird. Deshalb hat die Aktivierung dieses MDA erhebliche Auswirkungen auf die Leistung. Beachten Sie, dass dieser MDA keine separate Nachricht generiert, wenn eine Methode inline ist.  
+## <a name="effect-on-the-runtime"></a>Auswirkung auf die Laufzeit  
+ Dieser MDA protokolliert eine Meldung, kurz bevor eine Methode JIT-kompiliert wird. Deshalb hat die Aktivierung dieses MDA erhebliche Auswirkungen auf die Leistung. Wenn eine Methode Inline ist, generiert dieser MDA keine separate Nachricht.  
   
-## <a name="output"></a>Output  
- Das folgende Codebeispiel zeigt eine Beispielausgabe. In diesem Fall zeigt die Ausgabe an, dass in der Assembly „Die M-Methode testen“ der Klasse „ns2.CO“ JIT-kompiliert wurde.  
+## <a name="output"></a>Ausgabe  
+ Das folgende Codebeispiel zeigt eine Beispielausgabe. In diesem Fall zeigt die Ausgabe, dass die Methode "m" für die Klasse "ns2.co" im assemblytest JIT-kompiliert wurde.  
   
 ```output
 method name="Test!ns2.C0::m"  
@@ -156,7 +157,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)

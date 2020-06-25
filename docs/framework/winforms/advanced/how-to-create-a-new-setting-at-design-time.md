@@ -1,18 +1,19 @@
 ---
 title: 'Vorgehensweise: Erstellen einer neuen Einstellung zur Entwurfszeit'
+description: Erfahren Sie, wie Sie eine neue Windows Forms Einstellung zur Entwurfszeit mithilfe des Einstellungs-Designers in Visual Studio erstellen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce37b42191999e29de2f2f7f7e7abfa0ec3f4d47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037906"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325847"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>Vorgehensweise: Erstellen einer neuen Einstellung zur Entwurfszeit
+# <a name="how-to-create-a-new-setting-at-design-time"></a>Gewusst wie: Erstellen einer neuen Einstellung zur Entwurfszeit
 
 Sie können eine neue Einstellung zur Entwurfszeit erstellen, indem Sie den Einstellungs-Designer in Visual Studio verwenden. Der Einstellungs-Designer ist eine Schnittstelle im Raster Stil, mit der Sie neue Einstellungen erstellen und Eigenschaften für diese Einstellungen angeben können. Sie müssen Name, Wert, Typ und Bereich für die neuen Einstellungen angeben. Nachdem eine Einstellung erstellt wurde, können Sie im Code darauf zugreifen.
 
@@ -40,4 +41,4 @@ Sie können eine neue Einstellung zur Entwurfszeit erstellen, indem Sie den Eins
 
 - [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
 - [Übersicht über Anwendungseinstellungen](application-settings-overview.md)
-- [How To: Ändern des Werts einer vorhandenen Einstellung zur Entwurfszeit](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Vorgehensweise: Ändern des Werts einer vorhandenen Einstellung zur Entwurfszeit](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

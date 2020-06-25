@@ -1,5 +1,6 @@
 ---
 title: Übersicht über Anwendungseinstellungen
+description: Erfahren Sie mehr über das Feature "Anwendungseinstellungen" Windows Forms, z. b. das Erstellen und Speichern von Einstellungsdaten im Namen Ihrer Anwendung und ihrer Benutzer.
 ms.date: 03/30/2017
 f1_keywords:
 - ApplicationsSettingsOverview
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 864cab72b26ff7989c570347fb88b4009e7d705a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990185"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324216"
 ---
 # <a name="application-settings-overview"></a>Übersicht über Anwendungseinstellungen
 
@@ -48,7 +49,7 @@ In diesem Artikel wird erläutert, wie Einstellungsdaten im Namen Ihrer Anwendun
 
  Sie können auch die <xref:System.Windows.Forms.Binding> -Klasse verwenden, um Einstellungen programmgesteuert an Eigenschaften in Formularen und Steuerelementen zu binden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>

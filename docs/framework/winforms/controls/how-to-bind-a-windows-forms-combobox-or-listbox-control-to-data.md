@@ -1,5 +1,6 @@
 ---
 title: ComboBox-Steuerelement oder ListBox-Steuerelement an Daten binden
+description: Erfahren Sie, wie Sie die Windows Forms ComboBox und ListBox an Daten binden, um Aufgaben wie das Durchsuchen von Daten in einer Datenbank, das Eingeben neuer Daten oder das Bearbeiten vorhandener Daten auszuführen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,25 +16,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 99d9b53b32d6faae888b134d4ed486980c05a75b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0c07dc90ddc91061c5f34b5a237082cb444e89d9
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742035"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324065"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Gewusst wie: Binden eines ComboBox-Steuerelements oder ListBox-Steuerelements in Windows Forms an Daten
-Sie können die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.ListBox> an Daten binden, um Aufgaben wie das Durchsuchen von Daten in einer Datenbank, das Eingeben neuer Daten oder das Bearbeiten vorhandener Daten auszuführen.  
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Vorgehensweise: Binden eines ComboBox-Steuerelements oder ListBox-Steuerelements in Windows Forms an Daten
+Sie können <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.ListBox> an Daten binden, um Aufgaben wie das Durchsuchen von Daten in einer Datenbank, das Eingeben neuer Daten oder das Bearbeiten vorhandener Daten auszuführen.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>So binden Sie ein ComboBox-oder ListBox-Steuerelement  
   
-1. Legen Sie die `DataSource`-Eigenschaft auf ein Datenquellen Objekt fest. Mögliche Datenquellen sind ein <xref:System.Windows.Forms.BindingSource> an Daten gebundene Daten, eine Datentabelle, eine Datenansicht, ein DataSet, ein Datenansichts-Manager, ein Array oder eine beliebige Klasse, die die <xref:System.Collections.IList>-Schnittstelle implementiert. Weitere Informationen finden Sie [unter von Windows Forms unterstützte Datenquellen](../data-sources-supported-by-windows-forms.md).  
+1. Legen Sie die- `DataSource` Eigenschaft auf ein Datenquellen Objekt fest. Mögliche Datenquellen sind eine <xref:System.Windows.Forms.BindingSource> gebundene Datenquelle, eine Datentabelle, eine Datenansicht, ein DataSet, ein Datenansichts-Manager, ein Array oder eine beliebige Klasse, die die <xref:System.Collections.IList> Schnittstelle implementiert. Weitere Informationen finden Sie [unter von Windows Forms unterstützte Datenquellen](../data-sources-supported-by-windows-forms.md).  
   
-2. Wenn Sie an eine Tabelle binden, legen Sie die `DisplayMember`-Eigenschaft auf den Namen einer Spalte in der Datenquelle fest.  
+2. Wenn Sie an eine Tabelle binden, legen Sie die- `DisplayMember` Eigenschaft auf den Namen einer Spalte in der Datenquelle fest.  
   
-     \- oder –  
+     \- oder -  
   
-     Wenn Sie an eine <xref:System.Collections.IList>binden, legen Sie den Anzeigemember auf eine öffentliche Eigenschaft des Typs in der Liste fest.  
+     Wenn Sie an eine binden <xref:System.Collections.IList> , legen Sie den Anzeigemember auf eine öffentliche Eigenschaft des Typs in der Liste fest.  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,12 +52,12 @@ Sie können die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Fo
     ```  
   
     > [!NOTE]
-    > Wenn Sie an eine Datenquelle gebunden sind, die die <xref:System.ComponentModel.IBindingList>-Schnittstelle nicht implementiert (z. b. eine <xref:System.Collections.ArrayList>), werden die Daten des gebundenen Steuer Elements nicht aktualisiert, wenn die Datenquelle aktualisiert wird. Wenn Sie z. b. ein Kombinations Feld haben, das an einen <xref:System.Collections.ArrayList> gebunden ist, und dem <xref:System.Collections.ArrayList>Daten hinzugefügt werden, werden diese neuen Elemente nicht im Kombinations Feld angezeigt. Sie können jedoch erzwingen, dass das Kombinations Feld aktualisiert wird, indem Sie die Methoden <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> und <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> für die Instanz der <xref:System.Windows.Forms.BindingContext> Klasse aufrufen, an die das Steuerelement gebunden ist.  
+    > Wenn Sie an eine Datenquelle gebunden sind, die die-Schnittstelle nicht implementiert (z. b.) <xref:System.ComponentModel.IBindingList> <xref:System.Collections.ArrayList> , werden die Daten des gebundenen Steuer Elements nicht aktualisiert, wenn die Datenquelle aktualisiert wird. Wenn Sie z. b. ein Kombinations Feld an ein-Element gebunden haben <xref:System.Collections.ArrayList> und Daten zu hinzugefügt <xref:System.Collections.ArrayList> werden, werden diese neuen Elemente nicht im Kombinations Feld angezeigt. Sie können jedoch erzwingen, dass das Kombinations Feld aktualisiert wird, indem Sie die <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> -Methode und die- <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> Methode für die Instanz der- <xref:System.Windows.Forms.BindingContext> Klasse aufrufen, an die das Steuerelement gebunden ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Windows Forms-Datenbindung](../windows-forms-data-binding.md)
-- [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md)
-- [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)
+- [Datenbindung in Web Forms](../windows-forms-data-binding.md)
+- [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md)
+- [Steuerelemente in Windows Forms zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit'
+title: 'Vorgehensweise: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit'
+description: Erfahren Sie, wie Sie Steuerelemente zu einem beliebigen Container Steuerelement in Ihren Formularen hinzufügen und entfernen, z. b. das Panel-Steuerelement oder das GroupBox-Steuerelement oder sogar das Formular selbst.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +13,15 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 369946581847b4bdcf8bc658aeb94b14c529061c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c3f2d1f42b130de4d808871265b50510cfb8f47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182287"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325867"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Gewusst wie: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit
-Häufige Aufgaben in der Anwendungsentwicklung sind das Hinzufügen von Steuerelementen zu <xref:System.Windows.Forms.Panel> <xref:System.Windows.Forms.GroupBox> steuerelementen und das Entfernen von Steuerelementen aus allen Containersteuerelementen in Ihren Formularen (z. B. das oder-Steuerelement oder sogar das Formular selbst). Zur Entwurfszeit können Steuerelemente direkt auf ein Panel oder Gruppenfeld gezogen werden. Zur Laufzeit verwalten diese Steuerelemente eine `Controls`-Auflistung, die protokolliert, welche Steuerelemente darauf platziert werden.  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Vorgehensweise: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit
+Häufige Aufgaben bei der Anwendungsentwicklung sind das Hinzufügen von Steuerelementen zu und das Entfernen von Steuerelementen aus einem beliebigen Container Steuerelement in Ihren Formularen (z. b. das- <xref:System.Windows.Forms.Panel> Steuerelement oder <xref:System.Windows.Forms.GroupBox> das-Steuerelement) Zur Entwurfszeit können Steuerelemente direkt auf ein Panel oder Gruppenfeld gezogen werden. Zur Laufzeit verwalten diese Steuerelemente eine `Controls`-Auflistung, die protokolliert, welche Steuerelemente darauf platziert werden.  
   
 > [!NOTE]
 > Das folgende Codebeispiel gilt für jedes Steuerelement, das eine Auflistung von Steuerelementen verwaltet.  
@@ -33,7 +34,7 @@ Häufige Aufgaben in der Anwendungsentwicklung sind das Hinzufügen von Steuerel
   
 3. Fügen Sie der `Controls`-Auflistung des übergeordneten Elements das Steuerelement hinzu.  
   
-     Das folgende Codebeispiel zeigt, wie <xref:System.Windows.Forms.Button> eine Instanz des Steuerelements erstellt wird. Es erfordert ein <xref:System.Windows.Forms.Panel> Formular mit einem Steuerelement und dass die `NewPanelButton_Click`Ereignisbehandlungsmethode für die zu erstellende Schaltfläche bereits vorhanden ist.  
+     Im folgenden Codebeispiel wird gezeigt, wie eine Instanz des-Steuer Elements erstellt wird <xref:System.Windows.Forms.Button> . Hierfür ist ein Formular mit einem <xref:System.Windows.Forms.Panel> -Steuerelement erforderlich, und die Ereignis Behandlungsmethode für die Schaltfläche, die erstellt wird, `NewPanelButton_Click` ist bereits vorhanden.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -66,11 +67,11 @@ Häufige Aufgaben in der Anwendungsentwicklung sind das Hinzufügen von Steuerel
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>So entfernen Sie Steuerelemente programmgesteuert aus einer Auflistung  
   
-1. Entfernen Sie den Ereignishandler aus dem Ereignis. Verwenden Sie in Visual Basic das [Schlüsselwort RemoveHandler-Anweisung.](../../../visual-basic/language-reference/statements/removehandler-statement.md) verwenden Sie den [Operator -=](../../../csharp/language-reference/operators/subtraction-operator.md).  
+1. Entfernen Sie den Ereignishandler aus dem Ereignis. Verwenden Sie in Visual Basic das [RemoveHandler-Anweisungs](../../../visual-basic/language-reference/statements/removehandler-statement.md) Schlüsselwort. Verwenden Sie in c# den [Operator-=](../../../csharp/language-reference/operators/subtraction-operator.md).  
   
 2. Verwenden Sie die Methode `Remove`, um das gewünschte Steuerelement aus der `Controls`-Auflistung des Panels zu löschen.  
   
-3. Rufen <xref:System.Windows.Forms.Control.Dispose%2A> Sie die Methode auf, um alle vom Steuerelement verwendeten Ressourcen freizugeben.  
+3. Ruft die- <xref:System.Windows.Forms.Control.Dispose%2A> Methode auf, um alle vom-Steuerelement verwendeten Ressourcen freizugeben.  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -100,7 +101,7 @@ Häufige Aufgaben in der Anwendungsentwicklung sind das Hinzufügen von Steuerel
     }  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.Panel>
 - [Panel-Steuerelement](panel-control-windows-forms.md)

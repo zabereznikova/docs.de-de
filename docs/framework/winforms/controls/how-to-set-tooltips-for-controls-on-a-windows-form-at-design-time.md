@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Festlegen von QuickInfos für Steuerelemente auf einem Windows Form zur Entwurfszeit'
+description: Erfahren Sie, wie Sie Quick Infos für Steuerelemente Programm gesteuert oder in der Windows Forms-Designer in Visual Studio festlegen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 0d6725fc1a00826870e6400bffce63a1788e802c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 15134b38d11de30d0e6a2f998f6ea266affc40d7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211687"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325969"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Vorgehensweise: Festlegen von QuickInfos für Steuerelemente in Windows Forms zur Entwurfszeit
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Gewusst wie: Festlegen von Quick Infos für Steuerelemente auf einem Windows Form zur Entwurfszeit
 
-Sie können festlegen, eine <xref:System.Windows.Forms.ToolTip> Zeichenfolge im Code oder in Windows Forms-Designer in Visual Studio. Weitere Informationen zu den <xref:System.Windows.Forms.ToolTip> Komponente finden Sie unter [Übersicht über die ToolTip-Komponente](tooltip-component-overview-windows-forms.md).
+Sie können eine <xref:System.Windows.Forms.ToolTip> Zeichenfolge im Code oder in der Windows Forms-Designer in Visual Studio festlegen. Weitere Informationen zur <xref:System.Windows.Forms.ToolTip> Komponente finden Sie unter Übersicht über die [ToolTip-Komponente](tooltip-component-overview-windows-forms.md).
 
-## <a name="set-a-tooltip-programmatically"></a>Programmgesteuertes Festlegen einer QuickInfos
+## <a name="set-a-tooltip-programmatically"></a>Programm gesteuertes Festlegen einer QuickInfo
 
-1. Fügen Sie das Steuerelement, das die QuickInfo angezeigt wird.
+1. Fügen Sie das Steuerelement hinzu, das die QuickInfo anzeigt.
 
-2. Verwenden der <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode der <xref:System.Windows.Forms.ToolTip> Komponente.
+2. Verwenden Sie die- <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode der- <xref:System.Windows.Forms.ToolTip> Komponente.
 
     ```vb
     ' In this example, Button1 is the control to display the ToolTip.
@@ -41,17 +42,17 @@ Sie können festlegen, eine <xref:System.Windows.Forms.ToolTip> Zeichenfolge im 
     toolTip1->SetToolTip(button1, "Save changes");
     ```
 
-## <a name="set-a-tooltip-in-the-designer"></a>Festlegen einer QuickInfos im designer
+## <a name="set-a-tooltip-in-the-designer"></a>Festlegen einer QuickInfo im Designer
 
-1. Fügen Sie in Visual Studio eine <xref:System.Windows.Forms.ToolTip> -Komponente zum Formular.
+1. Fügen Sie in Visual Studio <xref:System.Windows.Forms.ToolTip> dem Formular eine Komponente hinzu.
 
-2. Wählen Sie das Steuerelement, das die QuickInfo angezeigt, oder fügen Sie es dem Formular hinzu.
+2. Wählen Sie das Steuerelement aus, von dem die QuickInfo angezeigt wird, oder fügen Sie es dem Formular hinzu.
 
-3. In der **Eigenschaften** legen die **QuickInfo auf ToolTip1** Wert, der eine entsprechende Zeichenfolge des Texts.
+3. Legen Sie im Fenster **Eigenschaften** die QuickInfo **für den ToolTip1** -Wert auf eine entsprechende Text Zeichenfolge fest.
 
-### <a name="to-remove-a-tooltip-programmatically"></a>Das programmgesteuerte Entfernen von einer QuickInfo
+### <a name="to-remove-a-tooltip-programmatically"></a>So entfernen Sie eine QuickInfo Programm gesteuert
 
-1. Verwenden der <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode der <xref:System.Windows.Forms.ToolTip> Komponente.
+1. Verwenden Sie die- <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode der- <xref:System.Windows.Forms.ToolTip> Komponente.
 
     ```vb
     ' In this example, Button1 is the control displaying the ToolTip.
@@ -68,14 +69,14 @@ Sie können festlegen, eine <xref:System.Windows.Forms.ToolTip> Zeichenfolge im 
     toolTip1->SetToolTip(button1, NULL);
     ```
 
-## <a name="remove-a-tooltip-in-the-designer"></a>Entfernen einer QuickInfos im designer
+## <a name="remove-a-tooltip-in-the-designer"></a>Entfernen einer QuickInfo im Designer
 
-1. Wählen Sie in Visual Studio das Steuerelement, das die QuickInfo angezeigt wird.
+1. Wählen Sie in Visual Studio das Steuerelement aus, das die QuickInfo anzeigt.
 
-2. In der **Eigenschaften** Fenster, löschen Sie den Text in die **QuickInfo auf ToolTip1**.
+2. Löschen Sie im Fenster **Eigenschaften** den Text in der QuickInfo **auf ToolTip1**.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die ToolTip-Komponente](tooltip-component-overview-windows-forms.md)
-- [Vorgehensweise: Ändern der Verzögerung der ToolTip-Komponente von Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [Vorgehensweise: Ändern der Verzögerung der ToolTip-Komponente in Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip-Komponente](tooltip-component-windows-forms.md)
