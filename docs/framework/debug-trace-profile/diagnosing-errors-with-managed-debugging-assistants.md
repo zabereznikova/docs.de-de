@@ -1,5 +1,6 @@
 ---
 title: Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen
+description: Diagnostizieren von Fehlern in .net mit Assistenten für verwaltetes Debuggen. MDAs sind Debugginghilfen, die in Verbindung mit der CLR zum Bereitstellen von Lauf Zeit Zustandsinformationen arbeiten
 ms.date: 08/14/2018
 f1_keywords:
 - EHMDA
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-ms.openlocfilehash: 712fbbe9e0ad291385e8eef321c5e8a2fa092a5d
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ac6fdc09fb057cc55659ce076d37ab96fe2354d1
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216557"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416095"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debugging
 
@@ -64,11 +65,11 @@ In der folgenden Tabelle sind die MDAs aufgeführt, die mit dem .NET Framework a
 |[nonComVisibleBaseClass](noncomvisiblebaseclass-mda.md)|[notMarshalable](notmarshalable-mda.md)|
 |[openGenericCERCall](opengenericcercall-mda.md)|[overlappedFreeError](overlappedfreeerror-mda.md)|
 |[pInvokeLog](pinvokelog-mda.md)|[pInvokeStackImbalance](pinvokestackimbalance-mda.md)|
-|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[reentrancy](reentrancy-mda.md)|
+|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[Eintritts Invarianz](reentrancy-mda.md)|
 |[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
 |[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-Standardmäßig aktiviert .NET Framework eine Teilmenge von MDAs für alle verwalteten Debugger. Sie können den Standardsatz in Visual Studio anzeigen, indem Sie im Menü **Debuggen** die Option **Windows** > **Ausnahme Einstellungen** auswählen und dann die Liste der **Assistenten für verwaltetes Debuggen** erweitern.
+Standardmäßig aktiviert .NET Framework eine Teilmenge von MDAs für alle verwalteten Debugger. Sie können den Standardsatz in Visual Studio anzeigen, indem **Windows**Sie im  >  Menü **Debuggen** die Option Windows-**Ausnahme Einstellungen** auswählen und dann die Liste **Assistenten für verwaltetes Debuggen** erweitern.
 
 ![Fenster "Ausnahme Einstellungen" in Visual Studio](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
@@ -77,11 +78,11 @@ Standardmäßig aktiviert .NET Framework eine Teilmenge von MDAs für alle verwa
 Sie können MDAs mit einem Registrierungsschlüssel, einer Umgebungsvariablen und Anwendungskonfigurationseinstellungen bereitstellen sowie deren Bereitstellung aufheben. Sie müssen entweder den Registrierungsschlüssel oder die Umgebungsvariable für die Verwendung der Anwendungskonfigurationseinstellungen aktivieren.
 
 > [!TIP]
-> Anstatt MDAs zu deaktivieren, können Sie verhindern, dass Visual Studio das MDA-Dialogfeld anzeigt, wenn eine MDA-Benachrichtigung empfangen wird. Wählen Sie hierzu im Menü **Debuggen** die Option **Windows** - > **Ausnahme Einstellungen** aus, erweitern Sie die Liste der **Assistenten für verwaltetes Debuggen** , und aktivieren oder deaktivieren Sie das Kontrollkästchen unter **brechen bei** ausgelöst für den jeweiligen MDA.
+> Anstatt MDAs zu deaktivieren, können Sie verhindern, dass Visual Studio das MDA-Dialogfeld anzeigt, wenn eine MDA-Benachrichtigung empfangen wird. Wählen Sie hierzu **Windows**  >  im Menü **Debuggen** die Option Windows-**Ausnahme Einstellungen** aus, erweitern Sie die Liste **Assistenten für verwaltetes Debuggen** , und aktivieren oder deaktivieren Sie das Kontrollkästchen **bei auslösen Abbrechen** für den jeweiligen MDA.
 
 ### <a name="registry-key"></a>Registrierungsschlüssel
 
-Fügen Sie den **HKEY_LOCAL_MACHINE \Software\Microsoft\\hinzu, um MDAs zu aktivieren. NETFramework\MDA** Unterschlüssel (geben Sie REG_SZ, Wert 1) in der Windows-Registrierung ein. Kopieren Sie das folgende Beispiel in eine Textdatei mit dem Namen " *MDAEnable. reg*". Öffnen Sie den Windows-Registrierungs-Editor (regedit. exe), und wählen Sie im Menü **Datei** die Option **importieren**aus. Wählen Sie die Datei *MDAEnable. reg* aus, um MDAs auf diesem Computer zu aktivieren. Durch Festlegen des unter Schlüssels auf den Zeichen folgen Wert **1** (nicht DWORD-Wert **1**) wird das Lesen der MDA-Einstellungen aus der Datei *ApplicationName. Suffix*. MDA. config ermöglicht. Die MDA-Konfigurationsdatei für Notepad heißt beispielsweise "Notepad. exe. MDA. config".
+Fügen Sie zum Aktivieren von MDAs **HKEY_LOCAL_MACHINE \Software\Microsoft hinzu \\ . NETFramework\MDA** Unterschlüssel (geben Sie REG_SZ, Wert 1) in der Windows-Registrierung ein. Kopieren Sie das folgende Beispiel in eine Textdatei mit dem Namen " *MDAEnable. reg*". Öffnen Sie den Windows-Registrierungs-Editor (RegEdit.exe), und wählen Sie im Menü **Datei** die Option **importieren**aus. Wählen Sie die Datei *MDAEnable. reg* aus, um MDAs auf diesem Computer zu aktivieren. Beim Festlegen des unter Schlüssels auf den Zeichen folgen Wert **1** (nicht auf den DWORD-Wert **1**) wird das Lesen der MDA-Einstellungen aus der Datei " *ApplicationName. Suffix*.mda.config" aktiviert. Die MDA-Konfigurationsdatei für Notepad heißt beispielsweise notepad.exe.mda.config.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -127,7 +128,7 @@ Wenn widersprüchliche Einstellungen vorhanden sind, überschreiben die neueren 
 
 ### <a name="application-specific-configuration-settings"></a>Anwendungsspezifische Konfigurationseinstellungen
 
-In der MDA-Konfigurationsdatei für die Anwendung können Sie einige MDAs einzeln bereitstellen und konfigurieren bzw. deren Bereitstellung aufheben. Damit MDAs mithilfe einer Anwendungskonfigurationsdatei konfiguriert werden können, muss entweder der MDA-Registrierungsschlüssel oder die COMPLUS_MDA-Umgebungsvariable festgelegt sein. Die Anwendungskonfigurationsdatei befindet sich i. d. R. im selben Verzeichnis wie die ausführbare Datei (.exe) der Anwendung. Der Dateiname hat das Format *ApplicationName*. MDA. config; beispielsweise "Notepad. exe. MDA. config". In der Anwendungs Konfigurationsdatei aktivierte Assistenten verfügen möglicherweise über Attribute oder Elemente, die speziell zum Steuern des Verhaltens dieses Assistenten entworfen wurden.
+In der MDA-Konfigurationsdatei für die Anwendung können Sie einige MDAs einzeln bereitstellen und konfigurieren bzw. deren Bereitstellung aufheben. Damit MDAs mithilfe einer Anwendungskonfigurationsdatei konfiguriert werden können, muss entweder der MDA-Registrierungsschlüssel oder die COMPLUS_MDA-Umgebungsvariable festgelegt sein. Die Anwendungskonfigurationsdatei befindet sich i. d. R. im selben Verzeichnis wie die ausführbare Datei (.exe) der Anwendung. Der Dateiname hat das Format *ApplicationName*.mda.config; beispielsweise notepad.exe.mda.config. In der Anwendungs Konfigurationsdatei aktivierte Assistenten verfügen möglicherweise über Attribute oder Elemente, die speziell zum Steuern des Verhaltens dieses Assistenten entworfen wurden.
 
 Im folgenden Beispiel wird gezeigt, wie Sie das Marshalling aktivieren und [konfigurieren:](marshaling-mda.md)
 
@@ -146,7 +147,7 @@ Im folgenden Beispiel wird gezeigt, wie Sie das Marshalling aktivieren und [konf
 </mdaConfig>
 ```
 
-Der `Marshaling`-MDA gibt für jeden Übergang von verwaltetem zu nicht verwaltetem Code in der Anwendung Informationen darüber aus, welcher verwaltete Typ an einen nicht verwalteten Typ gemarshallt wird. Der `Marshaling`-MDA kann auch die Namen der Methoden-und Struktur Felder filtern, die in den untergeordneten **methodFilter** -und **fieldFilter** -Elementen bereitgestellt werden.
+Der `Marshaling`-MDA gibt für jeden Übergang von verwaltetem zu nicht verwaltetem Code in der Anwendung Informationen darüber aus, welcher verwaltete Typ an einen nicht verwalteten Typ gemarshallt wird. Der `Marshaling` MDA kann auch die Namen der Methoden-und Struktur Felder filtern, die in den untergeordneten **methodFilter** -und **fieldFilter** -Elementen bereitgestellt werden.
 
 Im folgenden Beispiel wird gezeigt, wie mehrere MDAs mithilfe ihrer Standardeinstellungen aktiviert werden:
 
@@ -168,14 +169,14 @@ Im folgenden Beispiel wird gezeigt, wie mehrere MDAs mithilfe ihrer Standardeins
 
 Wenn ein MDA aktiviert ist, ist es auch dann aktiv, wenn der Code nicht unter einem Debugger ausgeführt wird. Wenn ein MDA-Ereignis ausgelöst wird, wenn kein Debugger vorhanden ist, wird die Ereignismeldung in einem Dialogfeld für unbehandelte Ausnahmen angezeigt, obwohl dies keine unbehandelte Ausnahme darstellt. Um das Anzeigen dieses Dialogfelds zu vermeiden, entfernen Sie die Einstellungen zur Aktivierung des MDA, wenn der Code nicht in einer Debugumgebung ausgeführt wird.
 
-Wenn Ihr Code in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio ausgeführt wird, können Sie das Ausnahme Dialogfeld vermeiden, das für bestimmte MDA-Ereignisse angezeigt wird. Wählen Sie hierzu im Menü **Debuggen** die Option **Windows** - > **Ausnahme Einstellungen**aus. Erweitern Sie im Fenster " **Ausnahme Einstellungen** " die Liste der **Assistenten für verwaltetes Debuggen** , und deaktivieren Sie dann das Kontrollkästchen unter **brechen bei** ausgelöst für den jeweiligen MDA. Sie können dieses Dialogfeld auch verwenden, um die Anzeige von MDA-Ausnahme Dialogfeldern zu *aktivieren* .
+Wenn Ihr Code in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio ausgeführt wird, können Sie das Ausnahme Dialogfeld vermeiden, das für bestimmte MDA-Ereignisse angezeigt wird. Wählen Sie hierzu im Menü **Debuggen** die Option **Windows**-  >  **Ausnahme Einstellungen**aus. Erweitern Sie im Fenster " **Ausnahme Einstellungen** " die Liste der **Assistenten für verwaltetes Debuggen** , und deaktivieren Sie dann das Kontrollkästchen unter **brechen bei** ausgelöst für den jeweiligen MDA. Sie können dieses Dialogfeld auch verwenden, um die Anzeige von MDA-Ausnahme Dialogfeldern zu *aktivieren* .
 
 ## <a name="mda-output"></a>MDA-Ausgabe
 
-Die MDA-Ausgabe ähnelt dem folgenden Beispiel, das die Ausgabe der `PInvokeStackImbalance`-MDA anzeigt:
+Die MDA-Ausgabe ähnelt dem folgenden Beispiel, in dem die Ausgabe des `PInvokeStackImbalance` MDA angezeigt wird:
 
 **Ein Ping-Befehl an die PInvoke-Funktion "mdatest! Mdatest. Program:: stdcall"hat den Stapel nicht ausgeglichen. Dies liegt wahrscheinlich daran, dass die verwaltete PInvoke-Signatur nicht mit der nicht verwalteten Ziel Signatur identisch ist. Überprüfen Sie, ob die Aufruf Konvention und die Parameter der PInvoke-Signatur mit der nicht verwalteten Ziel Signatur übereinstimmen.**
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Debuggen, Ablaufverfolgung und Profilerstellung](index.md)

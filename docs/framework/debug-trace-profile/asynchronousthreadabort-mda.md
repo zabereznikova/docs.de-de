@@ -1,5 +1,6 @@
 ---
 title: asynchronousThreadAbort-MDA
+description: Überprüfen Sie, wie der AsynchronousThreadAbort-Assistent für verwaltetes Debuggen (MDA) aktiviert wird, wenn ein Thread versucht, einen asynchronen Abbruch in einen anderen Thread einzufügen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - asynchronous thread aborts
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 469372d57d9c21198353d171fec16458691eb25d
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217579"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415666"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort-MDA
 Der `asynchronousThreadAbort`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein Thread versucht, einen asynchronen Abbruch in einem anderen Thread hervorzurufen. Der `asynchronousThreadAbort`-MDA wird nicht durch synchrone Threadabbrüche aktiviert.
@@ -23,7 +24,7 @@ Der `asynchronousThreadAbort`-MDA (Managed Debugging Assistant, Assistent für v
 
  Als unteilbar konzipierte Vorgänge wurden wahrscheinlich nach der partiellen Fertigstellung unterbrochen. Dadurch befinden sich die Anwendungsdaten nun in einem nicht vorhersagbaren Zustand. Eine <xref:System.Threading.ThreadAbortException> kann während der Ausführung von Programmcode an scheinbar zufälligen Stellen generiert werden, häufig auch an Stellen, an denen das Auslösen einer Ausnahme nicht zu erwarten war. Der Code ist möglicherweise nicht in der Lage, so eine Ausnahme zu behandeln. Dies führt zu einem fehlerhaften Zustand.
 
- Aufgrund des willkürlichen Auftretens dieses Problems ist ein breites Spektrum unterschiedlicher Symptome möglich.
+ Die Symptome sind aufgrund der Zufälligkeit dieses Problems breit gefächert.
 
 ## <a name="cause"></a>Ursache
  Die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode wurde aus dem Code in einem Thread für einen Zielthread aufgerufen, um einen asynchronen Threadabbruch hervorzurufen. Der Threadabbruch ist asynchron, da der die <xref:System.Threading.Thread.Abort%2A>-Methode aufrufende Code in einem anderen Thread ausgeführt wird als das Ziel des Abbruchvorgangs. Synchrone Threadabbrüche stellen in der Regel kein Problem dar, da ein Thread die <xref:System.Threading.Thread.Abort%2A>-Methode dabei nur an einem sicheren Anhaltepunkt aufrufen sollte, an dem sich die Anwendung in einem konsistenten Zustand befindet.
@@ -68,7 +69,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Thread>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)

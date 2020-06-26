@@ -1,5 +1,6 @@
 ---
 title: dangerousThreadingAPI-MDA
+description: Überprüfen Sie den-MDA ("dangerousThreadingAPI Managed Debug Assistant"), der aktiviert wird, wenn "Thread. Suspend" in einem anderen Thread als dem aktuellen Thread aufgerufen wird.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - suspending threads
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-ms.openlocfilehash: d3fe7d11657c2f9edd1fea7ff639f878f993d6b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9069ccb6f106c83db94f88bc464bc0888d28586c
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174770"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416004"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI-MDA
 Der `dangerousThreadingAPI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>-Methode für einen anderen Thread als den aktuellen Thread aufgerufen wird.  
@@ -65,8 +66,8 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Thread>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [lock-Anweisung](../../csharp/language-reference/keywords/lock-statement.md)

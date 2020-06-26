@@ -1,5 +1,6 @@
 ---
 title: gcUnmanagedToManaged-MDA
+description: Überprüfen Sie den gcmanageddeunmanaged Debug Assistant in .net. Dieser MDA kann aufgrund von Garbage Heap-Beschädigungen während des Übergangs zu verwaltetem Code aktiviert werden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - unmanaged to managed garbage collection
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
-ms.openlocfilehash: dd4080870ae88da8d4e2055369cd36f3981f2eac
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 320d55224e6a204d330447d6c68eabe0fa6cf892
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216453"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415900"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged-MDA
 Der `gcUnmanagedToManaged`-Assistent für verwaltetes Debuggen (MDA) bewirkt eine Garbage Collection bei jedem Übergang eines Threads von nicht verwaltetem zu verwaltetem Code.  
@@ -47,9 +48,9 @@ Der `gcUnmanagedToManaged`-Assistent für verwaltetes Debuggen (MDA) bewirkt ein
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)
