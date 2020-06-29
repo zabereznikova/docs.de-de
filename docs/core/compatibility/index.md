@@ -2,12 +2,12 @@
 title: Arten von Breaking Changes
 description: Erfahren Sie, wie .NET Core versucht, die Kompatibilität für Entwickler für alle .NET-Versionen zu gewährleisten und welche Änderung als Breaking Change angesehen wird.
 ms.date: 06/10/2019
-ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628591"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415744"
 ---
 # <a name="changes-that-affect-compatibility"></a>Änderungen, die sich auf die Kompatibilität auswirken
 
@@ -19,15 +19,14 @@ Im Laufe seines Bestehens hat .NET versucht, ein hohes Maß an Kompatibilität v
 
 Neben der Kompatibilität zwischen .NET-Implementierungen erwarten Entwickler ein hohes Maß an Kompatibilität zwischen .NET Core-Versionen. Insbesondere sollte Code, der für eine frühere Version von .NET Core geschrieben wurde, problemlos auf einer späteren Version von .NET Core ausgeführt werden können. Tatsächlich erwarten viele Entwickler, dass die neuen APIs in den neu veröffentlichten Versionen von .NET Core auch mit den Vorabversionen kompatibel sein sollten, in denen diese APIs eingeführt wurden.
 
-Dieser Artikel beschreibt die Kategorien von Kompatibilitätsänderungen (oder Breaking Changes) und die Art und Weise, wie das .NET-Team Änderungen in jeder dieser Kategorien bewertet. Zu verstehen, wie das .NET-Team mit möglichen Breaking Changes umgeht, ist besonders hilfreich für Entwickler, die Pull Requests im GitHub-Repository [dotnet/runtime](https://github.com/dotnet/runtime) öffnen, das das Verhalten bestehender APIs ändert.
-
-> [!NOTE]
-> Eine Definition von Kompatibilitätskategorien, wie z.B. Binärkompatibilität und Abwärtskompatibilität, finden Sie unter [Breaking Change-Kategorien](categories.md).
+In diesem Artikel werden die Änderungen beschrieben, die die Kompatibilität sowie die Art und Weise beeinflussen, wie das .NET-Team die einzelnen Änderungstypen auswertet. Zu verstehen, wie das .NET-Team mit möglichen Breaking Changes umgeht, ist besonders hilfreich für Entwickler, die Pull Requests öffnen, die das Verhalten [bestehender .NET-APIs](https://github.com/dotnet/runtime) ändern.
 
 In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET Core-APIs und deren Auswirkungen auf die Anwendungskompatibilität beschrieben. Änderungen sind zulässig ✔️, nicht zulässig ❌, oder es muss beurteilt und bewertet werden, wie vorhersehbar, offensichtlich und konsistent das bisherige Verhalten war ❓.
 
 > [!NOTE]
-> Bibliotheksentwickler können diese Kriterien nicht nur als Leitfaden für die Bewertung von Änderungen an .NET Core-Bibliotheken verwenden, sondern auch für die Bewertung von Änderungen an ihren Bibliotheken, die auf mehrere .NET-Implementierungen und -Versionen ausgerichtet sind.
+>
+> - Bibliotheksentwickler können diese Kriterien nicht nur als Leitfaden für die Bewertung von Änderungen an .NET-Bibliotheken verwenden, sondern auch für die Bewertung von Änderungen an ihren Bibliotheken, die auf mehrere .NET-Implementierungen und -Versionen ausgerichtet sind.
+> - Weitere Informationen zu Kompatibilitätskategorien, zum Beispiel zur Aufwärts- und Abwärtskompatibilität, finden Sie unter [Kompatibilität](categories.md).
 
 ## <a name="modifications-to-the-public-contract"></a>Änderungen am öffentlichen Vertrag
 
