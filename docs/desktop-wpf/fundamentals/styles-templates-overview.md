@@ -1,18 +1,18 @@
 ---
 title: Stile und Vorlagen
 description: Erfahren Sie mehr über XAML-Ressourcen in Windows Presentation Foundation (WPF) für .NET Core. Informieren Sie sich über die Typen von XAML-Ressourcen im Zusammenhang mit Stilen und Designs.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 09/09/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f845e739ec3cae502d1e4fd6631f987c5364a42e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: faa54e0a3c827717114ca6ca4f033c1c4c3acfa8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "81433097"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325783"
 ---
 # <a name="styles-and-templates-in-wpf"></a>Stile und Vorlagen in WPF
 

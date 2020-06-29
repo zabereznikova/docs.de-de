@@ -1,15 +1,15 @@
 ---
 title: Verwenden der macOS Catalina-Notarisierung
 description: In diesem Artikel erfahren Sie, wie Sie Probleme mit der Notarisierung und mit Zertifikaten unter macOS behandeln, wenn Sie die .NET Core-Runtime, das SDK und mit .NET Core erstellte Apps installieren.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd3886b2e772a182156d212aefb9705a3fb5e17c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146748"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324626"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina-Notarisierung und die Auswirkungen auf .NET Core-Downloads und -Projekte
 

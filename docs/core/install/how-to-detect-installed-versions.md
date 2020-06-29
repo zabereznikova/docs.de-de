@@ -1,17 +1,17 @@
 ---
 title: Überprüfen der Installation von .NET Core-Versionen unter Windows, Linux und macOS (.NET Core)
 description: Erfahren Sie, wie Sie auflisten, welche .NET Core-Versionen auf Ihrem Computer installiert sind. Zu den Versionen zählen die .NET Core-Runtime und das .NET Core SDK.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645337"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324817"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Überprüfen, ob .NET Core bereits installiert ist
 

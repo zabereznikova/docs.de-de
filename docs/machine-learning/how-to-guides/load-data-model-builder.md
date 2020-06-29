@@ -5,12 +5,12 @@ ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, mlnet-tooling
-ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e366b3c66427ccd2810324abeb880f6cb9ebc1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78849158"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602205"
 ---
 # <a name="load-training-data-into-model-builder"></a>Laden von Trainingsdaten in den Modell-Generator
 
@@ -109,6 +109,6 @@ In der unten dargestellten Ordnerstruktur ist *flower_photos* das Verzeichnis de
 Führen Sie die Schritte dieses Tutorials aus, um mit dem Modell-Generator Machine Learning-Apps zu erstellen:
 
 - [Vorhersagen von Preisen per Regression](../tutorials/predict-prices-with-model-builder.md)
-- [Analysieren des Standpunkts in einer Webanwendung mithilfe der binären Klassifizierung](../tutorials/sentiment-analysis-model-builder.md )
+- [Analysieren des Standpunkts in einer Webanwendung mithilfe der binären Klassifizierung](../tutorials/sentiment-analysis-model-builder.md)
 
 Wenn Sie ein Modell mithilfe von Code trainieren, können Sie sich [hier informieren, wie Sie Daten mithilfe der ML.NET-API laden](load-data-ml-net.md).

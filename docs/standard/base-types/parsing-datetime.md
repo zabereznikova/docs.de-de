@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 4b3f0bdb3ade784f929718a3350ed3dec0c572f1
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 9fba80e4dbe1e4950ed24e7489ac48ea1b6ff20b
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242646"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662900"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
@@ -45,7 +45,7 @@ Wenn das Datum in der Zeichenfolge enthalten ist, muss es den Monat und einen Ta
 Sie können die Konstante <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> angeben, um diese Standardeinstellungen außer Kraft zu setzen. Wenn Sie diese Konstante verwenden, werden alle fehlenden Eigenschaften für Jahr, Monat oder Tag auf den Wert `1` festgelegt. Dieses Verhalten wird im [letzten Beispiel](#styles-example) durch die Verwendung von <xref:System.DateTime.Parse%2A> veranschaulicht.
 
 Zusätzlich zu einer Datums- und Zeitkomponente kann die Zeichenfolgendarstellung einer Datums- und Uhrzeitangabe einen Zeitraum enthalten, der angibt, um wie viel die Zeit von der koordinierten Weltzeit (UTC) abweicht. Beispielsweise definiert die Zeichenfolge „2/14/2007 5:32:00 -7:00“ eine Uhrzeit, die sieben Stunden vor UTC liegt. Wenn die Abweichung in der Zeichenfolgendarstellung einer Uhrzeit fehlt, gibt die Analyse ein <xref:System.DateTime>-Objekt zurück, dessen <xref:System.DateTime.Kind%2A>-Eigenschaft auf <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> festgelegt ist. Wird eine Abweichung angegeben, gibt die Analyse ein <xref:System.DateTime>-Objekt zurück, dessen <xref:System.DateTime.Kind%2A>-Eigenschaft auf <xref:System.DateTimeKind.Local?displayProperty=nameWithType> festgelegt ist und dessen Wert an die lokale Zeitzone des Computers angepasst wird. Sie können dieses Verhalten ändern, indem Sie einen <xref:System.Globalization.DateTimeStyles>-Wert mit der Analysemethode verwenden.
-  
+
 Der Formatanbieter wird auch zum Interpretieren mehrdeutiger numerischer Datumsangaben verwendet. Es ist nicht eindeutig zu erkennen, welche Komponenten des in der Zeichenfolge „02/03/04“ dargestellten Datums für den Monat, den Tag und das Jahr stehen. Die Komponenten werden entsprechend der Reihenfolge ähnlicher Datumsformate im Formatanbieter interpretiert.
 
 ## <a name="parse"></a>Parse
@@ -56,37 +56,37 @@ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.DateTi
 > Alle C#-Beispiele in diesem Artikel werden in Ihrem Browser ausgeführt. Klicken Sie auf die Schaltfläche **Ausführen**, um die Ausgabe anzuzeigen. Sie können auch Bearbeitungen vornehmen, um ein wenig zu experimentieren.
 
 > [!NOTE]
-> Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) als auch für [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions) verfügbar. Alternativ können Sie das Projekt als ZIP-Datei für [C#](https://github.com/dotnet/docs/blob/master/samples/snippets/csharp/how-to/conversions.zip) oder [Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/how-to/conversions.zip) herunterladen.
+> Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) als auch für [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions) verfügbar.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
 
-Sie können beim Analysieren einer Zeichenfolge auch explizit die Kultur angeben, deren Formatierungskonventionen verwendet werden sollen. Sie geben eines der <xref:System.Globalization.DateTimeFormatInfo>-Standardobjekte an, die von der Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> zurückgegeben werden. Im folgenden Beispiel wird ein Formatanbieter verwendet, um eine deutsche Zeichenfolge zu analysieren und in ein <xref:System.DateTime>-Objekt zu konvertieren. Es wird ein <xref:System.Globalization.CultureInfo>-Objekt erstellt, das die Kultur `de-DE` darstellt. Dieses `CultureInfo`-Objekt sorgt für eine erfolgreiche Analyse der Zeichenfolge. Hierdurch wird jegliche Einstellung in der <xref:System.Threading.Thread.CurrentCulture> von <xref:System.Threading.Thread.CurrentThread> ausgeschlossen.  
-  
-[!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+Sie können beim Analysieren einer Zeichenfolge auch explizit die Kultur angeben, deren Formatierungskonventionen verwendet werden sollen. Sie geben eines der <xref:System.Globalization.DateTimeFormatInfo>-Standardobjekte an, die von der Eigenschaft <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> zurückgegeben werden. Im folgenden Beispiel wird ein Formatanbieter verwendet, um eine deutsche Zeichenfolge zu analysieren und in ein <xref:System.DateTime>-Objekt zu konvertieren. Es wird ein <xref:System.Globalization.CultureInfo>-Objekt erstellt, das die Kultur `de-DE` darstellt. Dieses `CultureInfo`-Objekt sorgt für eine erfolgreiche Analyse der Zeichenfolge. Hierdurch wird jegliche Einstellung in der <xref:System.Threading.Thread.CurrentCulture> von <xref:System.Threading.Thread.CurrentThread> ausgeschlossen.
+
+[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
-Auch wenn Sie Überladungen der <xref:System.DateTime.Parse%2A>-Methode zur Angabe benutzerdefinierter Formatanbieter verwenden können, bietet die Methode keine Unterstützung für das Analysieren von Formaten, die nicht dem Standard entsprechen. Um ein Datum und eine Uhrzeit in einem nicht dem Standard entsprechenden Format zu analysieren, verwenden Sie stattdessen die <xref:System.DateTime.ParseExact%2A>-Methode.  
+Auch wenn Sie Überladungen der <xref:System.DateTime.Parse%2A>-Methode zur Angabe benutzerdefinierter Formatanbieter verwenden können, bietet die Methode keine Unterstützung für das Analysieren von Formaten, die nicht dem Standard entsprechen. Um ein Datum und eine Uhrzeit in einem nicht dem Standard entsprechenden Format zu analysieren, verwenden Sie stattdessen die <xref:System.DateTime.ParseExact%2A>-Methode.
 
-<a name="styles-example"></a>Im folgenden Codebeispiel wird anhand der <xref:System.Globalization.DateTimeStyles>-Enumeration angegeben, dass die aktuellen Datums- und Uhrzeitinformationen nur für angegebene Felder dem <xref:System.DateTime>-Objekt hinzugefügt werden sollen.  
+<a name="styles-example"></a>Im folgenden Codebeispiel wird anhand der <xref:System.Globalization.DateTimeStyles>-Enumeration angegeben, dass die aktuellen Datums- und Uhrzeitinformationen nur für angegebene Felder dem <xref:System.DateTime>-Objekt hinzugefügt werden sollen.
 
-[!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
 
 ## <a name="parseexact"></a>ParseExact
 
-Die Methode <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> konvertiert eine Zeichenfolge in ein <xref:System.DateTime>-Objekt, wenn es einem der angegebenen Zeichenfolgenmuster entspricht. Wird eine Zeichenfolge an diese Methode übergeben, die nicht dem angegebenen Format entspricht, wird eine <xref:System.FormatException> ausgelöst. Sie können einen der Standardformatbezeichner für Datum und Uhrzeit oder eine Kombination der benutzerdefinierten Formatbezeichner angeben. Mithilfe der benutzerdefinierten Formatbezeichner können Sie eine benutzerdefinierte Erkennungszeichenfolge erstellen. Erläuterungen zu den Bezeichnern finden Sie in den Themen [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md) und [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md).  
+Die Methode <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> konvertiert eine Zeichenfolge in ein <xref:System.DateTime>-Objekt, wenn es einem der angegebenen Zeichenfolgenmuster entspricht. Wird eine Zeichenfolge an diese Methode übergeben, die nicht dem angegebenen Format entspricht, wird eine <xref:System.FormatException> ausgelöst. Sie können einen der Standardformatbezeichner für Datum und Uhrzeit oder eine Kombination der benutzerdefinierten Formatbezeichner angeben. Mithilfe der benutzerdefinierten Formatbezeichner können Sie eine benutzerdefinierte Erkennungszeichenfolge erstellen. Erläuterungen zu den Bezeichnern finden Sie in den Themen [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md) und [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md).
 
-Im folgenden Codebeispiel wird die <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>-Methode an ein zu analysierendes Zeichenfolgenobjekt übergeben, gefolgt von einem Formatbezeichner und einem <xref:System.Globalization.CultureInfo>-Objekt. Diese <xref:System.DateTime.ParseExact%2A>-Methode kann nur Zeichenfolgen analysieren, die dem langen Datumsmuster in der Kultur `en-US` entsprechen.  
+Im folgenden Codebeispiel wird die <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>-Methode an ein zu analysierendes Zeichenfolgenobjekt übergeben, gefolgt von einem Formatbezeichner und einem <xref:System.Globalization.CultureInfo>-Objekt. Diese <xref:System.DateTime.ParseExact%2A>-Methode kann nur Zeichenfolgen analysieren, die dem langen Datumsmuster in der Kultur `en-US` entsprechen.
 
-[!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-Jede Überladung der Methode <xref:System.DateTime.Parse%2A> und <xref:System.DateTime.ParseExact%2A> umfasst auch einen <xref:System.IFormatProvider>-Parameter, der kulturspezifische Informationen zur Formatierung der Zeichenfolge enthält. In der Regel handelt es sich bei diesem <xref:System.IFormatProvider>-Objekt um ein <xref:System.Globalization.CultureInfo>-Objekt, das eine Standardkultur oder ein von der Eigenschaft <xref:System.Globalization.DateTimeFormatInfo> zurückgegebenes <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Objekt darstellt.  <xref:System.DateTime.ParseExact%2A> verwendet außerdem ein zusätzliches Zeichenfolgen- oder Zeichenfolgenarrayargument, mit dem mindestens ein benutzerdefiniertes Datums- und Uhrzeitformat definiert wird.  
+Jede Überladung der Methode <xref:System.DateTime.Parse%2A> und <xref:System.DateTime.ParseExact%2A> umfasst auch einen <xref:System.IFormatProvider>-Parameter, der kulturspezifische Informationen zur Formatierung der Zeichenfolge enthält. In der Regel handelt es sich bei diesem <xref:System.IFormatProvider>-Objekt um ein <xref:System.Globalization.CultureInfo>-Objekt, das eine Standardkultur oder ein von der Eigenschaft <xref:System.Globalization.DateTimeFormatInfo> zurückgegebenes <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Objekt darstellt.  <xref:System.DateTime.ParseExact%2A> verwendet außerdem ein zusätzliches Zeichenfolgen- oder Zeichenfolgenarrayargument, mit dem mindestens ein benutzerdefiniertes Datums- und Uhrzeitformat definiert wird.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Analysieren von Zeichenfolgen in .NET](parsing-strings.md)
+- [Analysieren von Zeichenfolgen](parsing-strings.md)
 - [Formatierung von Typen](formatting-types.md)
 - [Typkonvertierung in .NET](type-conversion.md)
 - [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)

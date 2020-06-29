@@ -5,12 +5,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: d9a50fa18e027b6df7415438e1a5584003f7a094
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201945"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245595"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Leitfaden zur Verwendung von Memory\<T> und Span\<T>
 
@@ -121,7 +121,7 @@ Die Verwendung eines Parameters vom Typ <xref:System.Span%601> anstelle von Typ 
 
 Manchmal müssen Sie einen <xref:System.Memory%601>-Parameter anstelle eines <xref:System.Span%601>-Parameters verwenden, auch wenn Sie vollständig synchron sind. Vielleicht akzeptiert eine API, von der Sie abhängen, nur <xref:System.Memory%601>-Argumente. Dies ist in Ordnung, aber beachten Sie die Vor- und Nachteile, die bei der synchronen Verwendung von <xref:System.Memory%601> auftreten.
 
-<a name="rule-2" />
+<a name="rule-2"></a>
 
 **Regel 2: ReadOnlySpan\<T> oder ReadOnlyMemory\<T> verwenden, wenn der Puffer schreibgeschützt sein soll.**
 
