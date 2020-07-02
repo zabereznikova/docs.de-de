@@ -1,5 +1,6 @@
 ---
 title: Drucken mithilfe der Seitenansicht
+description: Erfahren Sie, wie Sie der Anwendung mit dem Windows Forms PrintPreviewDialog-Steuerelement Druckvorschau Dienste hinzufügen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: 1975c902fdb56326c763f2e2fc11e381ffc7fbd3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: abcf77db40f648df1a0cd49922bb49e5c9407811
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621612"
 ---
-# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Gewusst wie: Drucken in Windows Forms unter Verwendung der Seitenansicht
+# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Vorgehensweise: Drucken in Windows Forms unter Verwendung der Seitenansicht
 Es ist üblich, in Windows Forms-Programmen zusätzlich zu Druckdiensten eine Seitenansicht zur Verfügung zu stellen. Eine einfache Möglichkeit, Dienste für Seitenansichten zu Ihrer Anwendung hinzufügen, besteht darin, ein <xref:System.Windows.Forms.PrintPreviewDialog> -Steuerelement in Kombination mit der Behandlungslogik für <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignisse zu verwenden, um eine Datei zu drucken.  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>So zeigen Sie eine Vorschau eines Textdokuments mit einem PrintPreviewDialog-Steuerelement an  
@@ -58,12 +59,12 @@ Es ist üblich, in Windows Forms-Programmen zusätzlich zu Druckdiensten eine Se
  [!code-vb[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Dieses Beispiel erfordert Folgendes:  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Verweise auf die Assemblys "System", "System.Windows.Forms" und "System.Drawing".  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
-- [Mehr Sicherheit beim Drucken in Windows Forms](../more-secure-printing-in-windows-forms.md)
+- [Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+- [Mehr Sicherheit beim Drucken in Windows Forms](../more-secure-printing-in-windows-forms.md)

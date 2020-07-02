@@ -1,5 +1,6 @@
 ---
 title: 'Gewusst wie: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignis Handler'
+description: Erfahren Sie, wie Sie mehrere Ereignisse mit einem einzelnen Ereignishandler in Windows Forms verbinden, indem Sie die Ereignisansicht des Eigenschaftenfenster in c# verwenden.
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 0591291522ab1da04fef90bf1c0a73cf33ba0518
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cca85c223b46d9a82dbc3e34e3377fb83c075959
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621885"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Gewusst wie: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler in Windows Forms
-Beim Anwendungs Entwurf ist es möglicherweise erforderlich, dass ein einzelner Ereignishandler für mehrere Ereignisse verwendet wird, oder dass mehrere Ereignisse dieselbe Prozedur ausführen. Beispielsweise ist es häufig ein leistungsfähiger Zeitersparnis, wenn ein Menübefehl dasselbe Ereignis wie eine Schaltfläche auf dem Formular aufhebt, wenn Sie die gleiche Funktionalität verfügbar machen. Hierzu können Sie die Ereignisansicht der Eigenschaftenfenster in C# oder das `Handles`-Schlüsselwort und die Dropdown Felder **Klassenname** und **Methodenname** im Visual Basic Code-Editor verwenden.  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Vorgehensweise: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler in Windows Forms
+Beim Anwendungs Entwurf ist es möglicherweise erforderlich, dass ein einzelner Ereignishandler für mehrere Ereignisse verwendet wird, oder dass mehrere Ereignisse dieselbe Prozedur ausführen. Beispielsweise ist es häufig ein leistungsfähiger Zeitersparnis, wenn ein Menübefehl dasselbe Ereignis wie eine Schaltfläche auf dem Formular aufhebt, wenn Sie die gleiche Funktionalität verfügbar machen. Hierzu können Sie die Ereignisansicht der Eigenschaftenfenster in c# oder das `Handles` Schlüsselwort und die Dropdown Felder **Klassenname** und **Methodenname** im Visual Basic Code-Editor verwenden.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>So verbinden Sie mehrere Ereignisse mit einem einzelnen Ereignishandler in Visual Basic  
   
@@ -28,7 +29,7 @@ Beim Anwendungs Entwurf ist es möglicherweise erforderlich, dass ein einzelner 
   
 3. Wählen Sie im Dropdown Feld **Methoden Name** eines der Ereignisse aus, die vom Ereignishandler behandelt werden sollen.  
   
-4. Der Code-Editor fügt den entsprechenden Ereignishandler ein und positioniert die Einfügemarke innerhalb der Methode. Im folgenden Beispiel ist es das <xref:System.Windows.Forms.Control.Click>-Ereignis für das <xref:System.Windows.Forms.Button>-Steuerelement.  
+4. Der Code-Editor fügt den entsprechenden Ereignishandler ein und positioniert die Einfügemarke innerhalb der Methode. Im folgenden Beispiel ist es das- <xref:System.Windows.Forms.Control.Click> Ereignis für das- <xref:System.Windows.Forms.Button> Steuerelement.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -36,7 +37,7 @@ Beim Anwendungs Entwurf ist es möglicherweise erforderlich, dass ein einzelner 
     End Sub  
     ```  
   
-5. Fügen Sie die anderen Ereignisse, die Sie behandeln möchten, an die `Handles`-Klausel an.  
+5. Fügen Sie die anderen Ereignisse, die Sie behandeln möchten, an die- `Handles` Klausel an.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  

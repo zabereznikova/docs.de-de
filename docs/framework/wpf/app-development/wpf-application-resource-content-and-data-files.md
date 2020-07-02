@@ -1,5 +1,6 @@
 ---
 title: Anwendungs Ressourcen-, Inhalts-und Datendateien
+description: Informieren Sie sich über die besondere Unterstützung für die Konfiguration, Identifizierung und Verwendung von Anwendungs Datendateien in Windows Presentation Foundation (WPF).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 19cb530fc5c70df3a7af7ac41836b3dfd97594e9
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 324b3eb922f0fd1d1d9ad00105a06a7fbdb8effd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622860"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
 Microsoft Windows-Anwendungen sind häufig von Dateien abhängig, die nicht ausführbare Daten enthalten, z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] . b. Bilder, Videos und Audiodaten. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung für das konfigurieren, identifizieren und Verwenden dieser Daten Dateitypen, die als Anwendungs Datendateien bezeichnet werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  

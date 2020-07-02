@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 46c1b8f03d054a63ea837a73fd30eeed163ab0a4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621586"
 ---
 # <a name="parameter-design"></a>Parameterentwurf
 
@@ -40,7 +40,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
 
  Dadurch wird die Beziehung zwischen den Methoden besser kommuniziert.
 
-### <a name="choose-between-enum-and-boolean-parameters"></a>Auswahl zwischen Aufzählungs-und booleschen Parametern
+### <a name="choosing-between-enum-and-boolean-parameters"></a>Auswählen zwischen Aufzählungs-und booleschen Parametern  
  ✔️ verwenden Enumerationswerte, wenn ein Member andernfalls mindestens zwei boolesche Parameter aufweisen würde.
 
  ❌Verwenden Sie keine booleschen Werte, es sei denn, Sie sind sicher, dass nie mehr als zwei Werte benötigt werden.
@@ -49,7 +49,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
 
  ✔️ sollten Sie die Verwendung von booleschen Werten für Konstruktorparameter in Erwägung gezogen, die tatsächlich zwei Zustands Werte sind und einfach zum Initialisieren von booleschen Eigenschaften verwendet werden.
 
-### <a name="validate-arguments"></a>Validieren von Argumenten
+### <a name="validating-arguments"></a>Validieren von Argumenten
  ✔️ Überprüfen Sie Argumente, die an öffentliche, geschützte oder explizit implementierte Member übermittelt werden. Throw <xref:System.ArgumentException?displayProperty=nameWithType> oder eine der zugehörigen Unterklassen, wenn die Validierung fehlschlägt.
 
  Beachten Sie, dass die tatsächliche Validierung nicht unbedingt im öffentlichen oder geschützten Member selbst erfolgen muss. Dies kann in einer privaten oder internen Routine auf einer niedrigeren Ebene vorkommen. Der Hauptgrund dafür ist, dass die gesamte Oberfläche, die den Endbenutzern zur Verfügung gestellt wird, die Argumente prüft.
@@ -66,10 +66,10 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
 
  Wenn der Member Sicherheits sensibel ist, wird empfohlen, eine Kopie zu erstellen und dann das Argument zu validieren und zu verarbeiten.
 
-### <a name="pass-parameters"></a>Übergeben von Parametern
+### <a name="parameter-passing"></a>Parameterübergabe
  Aus der Perspektive eines Framework-Designers besteht aus drei Hauptgruppen von Parametern: nach Wert Parametern, `ref` Parametern und `out` Parametern.
 
- Wenn ein Argument durch einen by-value-Parameter übergeben wird, empfängt der Member eine Kopie des tatsächlich übergebenen Arguments. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Referenztyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Bei den beliebtesten CLR-Sprachen, wie z. b. c#, Visual Basic und C++, wird standardmäßig die Übergabe von Parametern nach Wert angegeben.
+ Wenn ein Argument durch einen by-value-Parameter übergeben wird, empfängt der Member eine Kopie des tatsächlich übergebenen Arguments. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Referenztyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Bei den beliebtesten CLR-Sprachen, wie z. b. c#, VB.net und C++, wird standardmäßig die Übergabe von Parametern nach Wert angegeben.
 
  Wenn ein Argument durch einen Parameter übergeben wird `ref` , erhält der Member einen Verweis auf das tatsächlich übergebene Argument. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn es sich bei dem Argument um einen Verweistyp handelt, wird ein Verweis auf den Verweis auf den Stapel eingefügt. `Ref`Parameter können verwendet werden, um zuzulassen, dass der Member vom Aufrufer übergeben wird.
 
@@ -140,7 +140,7 @@ public class String {
 
  Einige CLR-Sprachen, wie z. b. C++, unterstützen eine alternative Konvention zum Übergeben von Variablen Parameterlisten mit dem Namen `varargs` Methoden. Die Konvention sollte nicht in Frameworks verwendet werden, da Sie nicht CLS-kompatibel ist.
 
-### <a name="pointer-parameters"></a>Zeiger Parameter
+### <a name="pointer-parameters"></a>Zeigerparameter
  Im Allgemeinen sollten Zeiger nicht in der öffentlichen Oberfläche eines gut entworfenen verwalteten Code-Frameworks angezeigt werden. In den meisten Fällen sollten Zeiger gekapselt werden. In einigen Fällen sind Zeiger aber aus Interoperabilitäts Gründen erforderlich, und die Verwendung von Zeigern in solchen Fällen ist angemessen.
 
  ✔️ eine Alternative für alle Member bereitstellen, die ein Zeigerargument verwenden, da Zeiger nicht CLS-kompatibel sind.
@@ -151,11 +151,11 @@ public class String {
 
  Beispielsweise ist es nicht erforderlich, den Start Index zu übergeben, da einfache Zeigerarithmetik verwendet werden kann, um das gleiche Ergebnis zu erzielen.
 
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
+ *Teile &copy; 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwurfs Richtlinien für Member](member.md)
 - [Framework-Entwurfs Richtlinien](index.md)

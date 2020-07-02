@@ -1,5 +1,6 @@
 ---
 title: pInvokeLog-MDA
+description: Verstehen Sie den PInvokeLog Managed Debug Assistant (MDA), der für jede eindeutige Platt Form Aufruf-Signatur aktiviert wird, die während der Ausführung in .NET verwendet wird.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - signatures, platform invoke
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-ms.openlocfilehash: 12d7f60bcaedc5a97a7718610f40188547f87050
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 05af4e17a91f7c0d8f3576a86d3d784ef6666aed
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803689"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog-MDA
 Der `pInvokeLog`-MDA (Assistent für verwaltetes Debuggen) wird für jede eindeutige Plattformaufrufsignatur aktiviert, die während der Ausführung verwendet wird.  
@@ -43,5 +44,5 @@ Der `pInvokeLog`-MDA (Assistent für verwaltetes Debuggen) wird für jede eindeu
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Verwenden nicht verwalteter DLL-Funktionen](../interop/consuming-unmanaged-dll-functions.md)

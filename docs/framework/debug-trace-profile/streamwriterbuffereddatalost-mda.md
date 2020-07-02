@@ -1,5 +1,6 @@
 ---
 title: streamWriterBufferedDataLost-MDA
+description: Überprüfen Sie den streamschreibbuffereddatalost Managed Debug Assistant (MDA), der aktiviert werden kann, wenn ein StreamWriter nicht die letzten 1 – 4 KB an Daten in eine Datei schreibt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 18b2a5a95756ed125d26b2846c0b1ddc320463ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c10ea6bb9dc0aaafa2ac1798696579af7592895
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803481"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost-MDA
 Der `streamWriterBufferedDataLost`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine <xref:System.IO.StreamWriter> geschrieben wird, aber die <xref:System.IO.StreamWriter.Flush%2A>- oder <xref:System.IO.StreamWriter.Close%2A>-Methode wird anschließend nicht aufgerufen, bevor die Instanz der <xref:System.IO.StreamWriter> zerstört wird. Wenn dieser MDA aktiviert ist, überprüft die Common Language Runtime, ob gepufferte Daten immer noch in <xref:System.IO.StreamWriter> vorhanden sind. Wenn die gepufferten Daten vorhanden sind, wird der MDA aktiviert. Ein Aufruf der <xref:System.GC.Collect%2A>- und <xref:System.GC.WaitForPendingFinalizers%2A>-Methoden kann erzwingen, dass Finalizer ausgeführt werden. Finalizer werden andernfalls zu scheinbar willkürlichen Zeiten und beim Beenden des Prozesses möglicherweise gar nicht ausgeführt. Wenn Finalizer explizit mit diesem aktiven MDA ausgeführt werden, wird diese Art von Problemen zuverlässiger reproduziert werden können.  
@@ -105,4 +106,4 @@ static WriteToFile()
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.StreamWriter>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)

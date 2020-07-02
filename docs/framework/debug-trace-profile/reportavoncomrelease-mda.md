@@ -1,5 +1,6 @@
 ---
 title: reportAvOnComRelease-MDA
+description: Überprüfen Sie den reportAvOnComRelease-MDA (Managed Debugging Assistant), der aufgrund von Zugriffs Verletzungen und Speicher Beschädigung in .NET aktiviert werden kann.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), reference counting errors
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - report access violation on Com release
 - reference counting errors
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
-ms.openlocfilehash: fca6b209e6432678a264f10762adb3871e3596ce
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: f9ba343060cb4d16de5909a5b619353546aca8ca
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803609"
 ---
 # <a name="reportavoncomrelease-mda"></a>reportAvOnComRelease-MDA
 Der `reportAvOnComRelease`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn aufgrund von Fehlern bei der Benutzerverweiszählung Ausnahmen ausgelöst werden, während COM-Interop durchgeführt und die <xref:System.Runtime.InteropServices.Marshal.Release%2A>- oder die <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A>-Methode in Kombination mit Rohdaten-COM-Aufrufen verwendet wird.  
@@ -49,5 +50,5 @@ Der `reportAvOnComRelease`-MDA (Managed Debugging Assistant, Assistent für verw
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

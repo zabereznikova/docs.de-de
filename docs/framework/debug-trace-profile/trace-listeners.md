@@ -1,5 +1,6 @@
 ---
 title: Ablaufverfolgungslistener
+description: Untersuchen Sie die Ablaufverfolgungslistener, die als Mechanismus zum Erfassen und Aufzeichnen von Ablauf Verfolgungs Nachrichten in .net Ein Listener sammelt, speichert und leitet Nachrichten.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +15,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803522"
 ---
 # <a name="trace-listeners"></a>Ablaufverfolgungslistener
-Wenn Sie mit **Trace**, **Debug** und <xref:System.Diagnostics.TraceSource> arbeiten, müssen Sie einen Mechanismus zum Sammeln und Aufzeichnen der gesendeten Meldungen einrichten. Ablaufverfolgungsmeldungen werden von *Listenern* empfangen. Der Zweck eines Listeners ist, die Ablaufverfolgungsnachrichten zu erfassen, zu speichern und weiterzuleiten. Die Listener leiten die Ablaufverfolgungsausgabe an ein geeignetes Ziel weiter, z. B. ein Protokoll, ein Fenster oder eine Textdatei.  
+Wenn Sie mit **Trace**, **Debug** und <xref:System.Diagnostics.TraceSource> arbeiten, müssen Sie einen Mechanismus zum Sammeln und Aufzeichnen der gesendeten Meldungen einrichten. Ablauf Verfolgungs Meldungen *werden von*Listenern empfangen. Der Zweck eines Listeners ist das Sammeln, Speichern und Weiterleiten von Ablaufverfolgungsmeldungen. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, beispielsweise ein Protokoll, ein Fenster oder eine Textdatei.  
   
  Listener stehen für die Klassen **Debug**, **Trace** und <xref:System.Diagnostics.TraceSource> zur Verfügung, von denen jede ihre Ausgabe an eine Vielzahl von Listenerobjekten senden kann. Im Folgenden werden die häufig verwendeten vordefinierten Listener aufgeführt:  
   
@@ -34,7 +35,7 @@ Wenn Sie mit **Trace**, **Debug** und <xref:System.Diagnostics.TraceSource> arbe
   
 - Ein <xref:System.Diagnostics.ConsoleTraceListener> leitet eine Ablaufverfolgungs- oder Debuggingausgabe an die Standardausgabe oder den Standardfehlerstream weiter.  
   
-- Ein <xref:System.Diagnostics.DelimitedListTraceListener> leitet eine Ablaufverfolgungs- oder Debuggingausgabe an einen Textwriter, z. B. einen Streamwriter, oder an einen Stream, z. B. einen Dateistream, weiter. Die Ablauf Verfolgungs Ausgabe befindet sich in einem durch Trennzeichen getrennten Textformat, das das durch die <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>-Eigenschaft angegebene Trennzeichen verwendet.  
+- Ein <xref:System.Diagnostics.DelimitedListTraceListener> leitet eine Ablaufverfolgungs- oder Debuggingausgabe an einen Textwriter, z. B. einen Streamwriter, oder an einen Stream, z. B. einen Dateistream, weiter. Die Ablauf Verfolgungs Ausgabe befindet sich in einem durch Trennzeichen getrennten Textformat, das das von der-Eigenschaft angegebene Trennzeichen verwendet <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> .  
   
 - Ein <xref:System.Diagnostics.XmlWriterTraceListener> leitet die Ablaufverfolgungs- oder Debuggingausgabe als XML-codierte Daten an einen <xref:System.IO.TextWriter> oder einen <xref:System.IO.Stream>, wie z. B. einen <xref:System.IO.FileStream>, weiter.  
   
@@ -72,7 +73,7 @@ System.Diagnostics.Trace.Listeners.Add(
 ```  
   
 ## <a name="developer-defined-listeners"></a>Entwicklerdefinierte Listener  
- Sie können eigene Listener durch Erben von der **TraceListener**-Basisklasse definieren und die dazugehörigen Methoden mit benutzerdefinierten Methoden überschreiben. Weitere Informationen zum Erstellen entwicklerdefinierter Listener finden Sie unter <xref:System.Diagnostics.TraceListener> in der Referenz zu .NET Framework.  
+ Sie können eigene Listener durch Erben von der **TraceListener**-Basisklasse definieren und die dazugehörigen Methoden mit benutzerdefinierten Methoden überschreiben. Weitere Informationen zum Erstellen entwicklerdefinierter Listener finden Sie unter <xref:System.Diagnostics.TraceListener> in der Referenz zu .NET Framework.   
   
 ## <a name="see-also"></a>Weitere Informationen
 

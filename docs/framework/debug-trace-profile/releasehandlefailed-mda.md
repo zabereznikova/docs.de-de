@@ -1,5 +1,6 @@
 ---
 title: ReleaseHandleFailed-MDA
+description: Überprüfen Sie den ReleaseHandleFailed-MDA (Managed Debugging Assistant), der aufgrund von Ressourcen-oder Speicher Verlusten in .NET aktiviert werden kann.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803637"
 ---
 # <a name="releasehandlefailed-mda"></a>ReleaseHandleFailed-MDA
 Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, um einen Entwickler zu benachrichtigen, wenn die <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode einer Klasse, die aus <xref:System.Runtime.InteropServices.SafeHandle> oder <xref:System.Runtime.InteropServices.CriticalHandle> abgeleitet wurde, `false` zurückgibt.  
@@ -91,5 +92,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop-Marshalling](../interop/interop-marshaling.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

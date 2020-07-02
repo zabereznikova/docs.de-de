@@ -1,5 +1,6 @@
 ---
 title: Festlegen des von einem Steuerelement angezeigten Texts
+description: Erfahren Sie, wie Sie den Text festlegen, der von einem Windows Forms Steuerelement angezeigt wird. Legen Sie den Text mithilfe der Text-Eigenschaft fest oder geben Sie ihn zurück, oder ändern Sie die Schriftart mithilfe der Font-Eigenschaft.
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 35bae5830bfee8ab91f7b6c7b9dcc6d6b8db00ca
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622847"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Gewusst wie: Festlegen des von einem Windows Forms-Steuerelement angezeigten Texts
 
-Windows Forms Steuerelemente zeigen normalerweise Text an, der mit der primären Funktion des Steuer Elements verknüpft ist. Beispielsweise zeigt ein <xref:System.Windows.Forms.Button> Steuerelement in der Regel eine Beschriftung an, die angibt, welche Aktion ausgeführt wird, wenn auf die Schaltfläche geklickt wird. Bei allen Steuerelementen können Sie den Text mithilfe der <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft festlegen oder zurückgeben. Sie können die Schriftart ändern, indem Sie die <xref:System.Windows.Forms.Control.Font%2A>-Eigenschaft verwenden.
+Windows Forms Steuerelemente zeigen normalerweise Text an, der mit der primären Funktion des Steuer Elements verknüpft ist. Ein Steuerelement zeigt beispielsweise <xref:System.Windows.Forms.Button> in der Regel eine Beschriftung an, die angibt, welche Aktion ausgeführt wird, wenn auf die Schaltfläche geklickt wird. Bei allen Steuerelementen können Sie den Text mithilfe der <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft festlegen oder zurückgeben. Sie können die Schriftart ändern, indem Sie die <xref:System.Windows.Forms.Control.Font%2A>-Eigenschaft verwenden.
 
 Sie können den Text auch mit dem- [Designer](#designer)festlegen.
 
@@ -78,7 +79,7 @@ Sie können den Text auch mit dem- [Designer](#designer)festlegen.
 
    Zum Erstellen einer unterstrichenen Tastenkombination enthält ein kaufmännisches und-(&) vor dem Buchstaben, der als Tastenkombination verwendet werden soll.
 
-2. Wählen Sie im Fenster **Eigenschaften** die Schaltfläche mit den Auslassungs Punkten (![Schaltfläche mit den Auslassungs Punkten (...) in der Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben der Eigenschaft **Schriftart** aus.
+2. Wählen Sie im Fenster **Eigenschaften** die Schaltfläche mit den Auslassungs Punkten (Auslassungs Zeichen ![ (...) im Eigenschaftenfenster von Visual Studio ](./media/visual-studio-ellipsis-button.png) ) neben der Eigenschaft **Schriftart** aus.
 
    Wählen Sie im Dialogfeld Standard Schriftart die Schriftart, den Schrift Schnitt, die Größe, die Effekte (z. b. durchgestrichen oder unterstreichen) und das gewünschte Skript aus.
 

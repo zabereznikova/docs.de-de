@@ -1,5 +1,6 @@
 ---
 title: Spalten Füll Modus im DataGridView-Steuerelement
+description: Erfahren Sie, wie das Windows Forms DataGridView-Steuerelement im Spalten Füll Modus seine Spalten automatisch ändert, sodass Sie die Breite des verfügbaren Anzeige Bereichs ausfüllen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 43b8915efe303b6f56cd4adf5fdbd69f51b0b754
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 766a58954250d78ce6e44404730332b3158e1fad
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622821"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms
 Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerelement seine Spalten automatisch so an, dass sie die Breite des verfügbaren Anzeigebereichs ausfüllen. Das Steuerelement zeigt die horizontale Bildlaufleiste nur an, wenn es erforderlich ist, dass die Breite jeder Spalte gleich oder größer als sein <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Eigenschaftenwert ist.  
@@ -56,7 +57,7 @@ Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerel
 - Ändern Sie die <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> Werte für einige Spalten. Beobachten Sie die Auswirkungen, wenn Sie die Größe von Spalten oder des Formulars ändern.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Dieses Beispiel erfordert Folgendes:  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
