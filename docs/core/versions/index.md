@@ -1,13 +1,13 @@
 ---
 title: Versionsverwaltung für .NET Core-Runtime und SDK
 description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
-ms.date: 07/26/2018
-ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.date: 06/24/2020
+ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619753"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
 
@@ -103,6 +103,9 @@ Jede Version von .NET Core implementiert eine Version von .NET Standard. Das Imp
 | 2.1       | bis zu 2.0     |
 | 2.2       | bis zu 2.0     |
 | 3.0       | bis zu 2.1     |
+| 3.1       | bis zu 2.1     |
+
+Eine interaktive Tabelle der .NET Standard-Versionen und deren Entsprechung mit .NET-Implementierungen finden Sie unter [.NET Standard-Versionen](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
 
 ## <a name="see-also"></a>Siehe auch
 
