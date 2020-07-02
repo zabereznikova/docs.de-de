@@ -1,5 +1,6 @@
 ---
 title: NotMarshalable-MDA
+description: Überprüfen Sie den notmarshalling-Assistenten für verwaltetes Debuggen, der aktiviert werden kann, wenn Aufrufe nicht gewartet werden oder im falschen Kontext für COM-Schnittstellen Zeiger auftreten.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), interface pointer not marshalable
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-ms.openlocfilehash: 45db0e70b2446fa6e3175409bcc3844042f0acc0
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b464d914a8d83504daaf4cb276914da7798262dc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803793"
 ---
 # <a name="notmarshalable-mda"></a>NotMarshalable-MDA
 Der `notMarshalable`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die Common Language Runtime (CLR) beim Versuch, eine Schnittstelle über Kontexte hinweg zu marshallen, einen COM-Schnittstellenzeiger ohne gültigen registrierten Proxy/Stub oder eine nicht ordnungsgemäß implementierte `IMarshal`-Schnittstelle erkennt.  
@@ -49,5 +50,5 @@ Der `notMarshalable`-MDA (Managed Debugging Assistant, Assistent für verwaltete
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

@@ -1,5 +1,6 @@
 ---
 title: OpenGenericCERCall-MDA
+description: Weitere Informationen finden Sie unter opengenericcercallverwalteter debugassistent, der aktiviert werden kann, wenn der CER-Code nicht ausgeführt wird, wenn ein Thread abgebrochen oder eine Anwendungsdomäne entladen wird.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4df33b0cdf9759edec47f02b3feb671d03284ec8
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803936"
 ---
 # <a name="opengenericcercall-mda"></a>OpenGenericCERCall-MDA
 
@@ -29,7 +30,7 @@ CER-Code, der nicht ausgeführt wird, wenn ein Thread abgebrochen oder eine Anwe
 
 Zum Zeitpunkt der JIT-Kompilierung ist eine Instanziierung, die einen Objektverweistyp enthält, nur repräsentativ, da der resultierende Code freigegeben wird und jede Variable des Objektverweistyps ggf. ein beliebiger Objektverweistyp sein kann. Dies kann die Vorbereitung einiger Laufzeitressourcen im Voraus verhindern.
 
-Methoden mit generischen Typvariablen können Ressourcen im Hintergrund verzögert zuordnen. Diese werden als generische Wörterbucheinträge bezeichnet. Beispielsweise muss die `List<T> list = new List<T>();` Laufzeit `T` für die Anweisung, bei der es sich um eine generische Typvariable handelt, nachschlagen und möglicherweise die genaue Instanziierung zur Laufzeit erstellen, z. B. `List<Object>, List<String>`usw. Dies kann aus einer Vielzahl von Gründen fehlschlagen, die außerhalb der Kontrolle des Entwicklers liegen, z.B. fehlendem Arbeitsspeicher.
+Methoden mit generischen Typvariablen können Ressourcen im Hintergrund verzögert zuordnen. Diese werden als generische Wörterbucheinträge bezeichnet. Beispielsweise muss für die Anweisung, `List<T> list = new List<T>();` bei der `T` es sich um eine generische Typvariable handelt, die Laufzeit nachschlagen und möglicherweise die genaue Instanziierung zur Laufzeit erstellen, z `List<Object>, List<String>` . b., usw. Dies kann aus einer Vielzahl von Gründen fehlschlagen, die außerhalb der Kontrolle des Entwicklers liegen, z.B. fehlendem Arbeitsspeicher.
 
 Dieser MDA sollte nur zum Zeitpunkt der JIT-Kompilierung aktiviert werden, und nicht bei einer genauen Instanziierung.
 
@@ -45,7 +46,7 @@ Dieser MDA hat keine Auswirkungen auf die CLR.
 
 ## <a name="output"></a>Output
 
-Im Folgenden finden Sie eine Ausgabeprobe dieses MDA:
+Im folgenden finden Sie ein Beispiel für die Ausgabe dieses MDA:
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
@@ -114,4 +115,4 @@ class MyClass
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
