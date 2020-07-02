@@ -639,6 +639,8 @@
       items:
         - name: Entscheidung zwischen Klasse und Struktur
           href: design-guidelines/choosing-between-class-and-struct.md
+        - name: Auswahl zwischen anonymen Typen und Tupeltypen
+          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: Entwurf abstrakter Klassen
           href: design-guidelines/abstract-class.md
         - name: Entwurf statischer Klassen
