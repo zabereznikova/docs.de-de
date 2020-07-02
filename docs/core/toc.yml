@@ -8,22 +8,12 @@ items:
   - name: Installieren
     items:
       - name: Übersicht
-        href: install/index.md
-      - name: Installieren des SDK
-        href: install/sdk.md
-      - name: Installieren der Runtime
-        href: install/runtime.md
-      - name: Unterstütztes Betriebssystem und Abhängigkeiten
-        href: install/dependencies.md
-      - name: Entfernen veralteter Runtimes und SDKs
-        href: install/remove-runtime-sdk-versions.md
-      - name: Verwalten von .NET-Vorlagen
-        href: install/templates.md
-      - name: Probleme mit der macOS-Notarisierung
-        href: install/macos-notarization-issues.md
-      - name: Überprüfung von .NET Core-Versionen
-        href: install/how-to-detect-installed-versions.md
-      - name: Linux
+        href: install/index.yml
+      - name: Installieren unter Windows
+        href: install/windows.md
+      - name: Installieren unter macOS
+        href: install/macos.md
+      - name: Installation unter Linux
         items:
           - name: Übersicht
             href: install/linux.md
@@ -43,6 +33,14 @@ items:
             href: install/linux-rhel.md
           - name: SLES
             href: install/linux-sles.md
+      - name: Entfernen veralteter Runtimes und SDKs
+        href: install/remove-runtime-sdk-versions.md
+      - name: Verwalten von .NET-Vorlagen
+        href: install/templates.md
+      - name: Probleme mit der macOS-Notarisierung
+        href: install/macos-notarization-issues.md
+      - name: Überprüfung von .NET Core-Versionen
+        href: install/how-to-detect-installed-versions.md
       - name: Installieren der lokalisierten IntelliSense-Instanz
         href: install/localized-intellisense.md
   - name: Erste Schritte
