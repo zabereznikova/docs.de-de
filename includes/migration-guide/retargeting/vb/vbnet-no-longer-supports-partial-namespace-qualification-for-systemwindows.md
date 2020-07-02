@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 8db115a46df3fcea103e8fa6896542d0116aa256
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cef8096c971da8ae245ff974697022f350cb9195
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616059"
 ---
-### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a><span data-ttu-id="71ec9-101">VB.NET unterstützt die Angabe partieller Namespaces für System.Windows-APIs nicht mehr</span><span class="sxs-lookup"><span data-stu-id="71ec9-101">VB.NET no longer supports partial namespace qualification for System.Windows APIs</span></span>
+### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a><span data-ttu-id="d1308-101">VB.NET unterstützt die Angabe partieller Namespaces für System.Windows-APIs nicht mehr</span><span class="sxs-lookup"><span data-stu-id="d1308-101">VB.NET no longer supports partial namespace qualification for System.Windows APIs</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="71ec9-102">Details</span><span class="sxs-lookup"><span data-stu-id="71ec9-102">Details</span></span>|<span data-ttu-id="71ec9-103">Ab .NET Framework 4.5.2 können VB.NET-Projekte keine System.Windows-APIs mit teilweise qualifizierten Namespaces angeben.</span><span class="sxs-lookup"><span data-stu-id="71ec9-103">Beginning in .NET Framework 4.5.2, VB.NET projects cannot specify System.Windows APIs with partially-qualified namespaces.</span></span> <span data-ttu-id="71ec9-104">Der Verweis auf <code>Windows.Forms.DialogResult</code> führt z. B. zu einem Fehler.</span><span class="sxs-lookup"><span data-stu-id="71ec9-104">For example, referring to <code>Windows.Forms.DialogResult</code> will fail.</span></span> <span data-ttu-id="71ec9-105">Stattdessen muss der Code auf den vollqualifizierten Namen (<xref:System.Windows.Forms.DialogResult>) verweisen oder den bestimmten Namespace importieren und dann einfach auf <xref:System.Windows.Forms.DialogResult?displayProperty=name> verweisen.</span><span class="sxs-lookup"><span data-stu-id="71ec9-105">Instead, code must refer to the fully qualified name (<xref:System.Windows.Forms.DialogResult>) or import the specific namespace and refer simply to <xref:System.Windows.Forms.DialogResult?displayProperty=name>.</span></span>|
-|<span data-ttu-id="71ec9-106">Vorschlag</span><span class="sxs-lookup"><span data-stu-id="71ec9-106">Suggestion</span></span>|<span data-ttu-id="71ec9-107">Der Code sollte aktualisiert werden, um auf <code>System.Windows</code>-APIs mit einfachen Namen (und den entsprechenden Namespace importieren) oder mit vollqualifizierten Namen zu verweisen.</span><span class="sxs-lookup"><span data-stu-id="71ec9-107">Code should be updated to refer to <code>System.Windows</code> APIs either with simple names (and importing the relevant namespace) or with fully qualified names.</span></span>|
-|<span data-ttu-id="71ec9-108">`Scope`</span><span class="sxs-lookup"><span data-stu-id="71ec9-108">Scope</span></span>|<span data-ttu-id="71ec9-109">Nebenversion</span><span class="sxs-lookup"><span data-stu-id="71ec9-109">Minor</span></span>|
-|<span data-ttu-id="71ec9-110">Version</span><span class="sxs-lookup"><span data-stu-id="71ec9-110">Version</span></span>|<span data-ttu-id="71ec9-111">4.5.2</span><span class="sxs-lookup"><span data-stu-id="71ec9-111">4.5.2</span></span>|
-|<span data-ttu-id="71ec9-112">Geben Sie Folgendes ein:</span><span class="sxs-lookup"><span data-stu-id="71ec9-112">Type</span></span>|<span data-ttu-id="71ec9-113">Neuzuweisung</span><span class="sxs-lookup"><span data-stu-id="71ec9-113">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="d1308-102">Details</span><span class="sxs-lookup"><span data-stu-id="d1308-102">Details</span></span>
+
+<span data-ttu-id="d1308-103">Ab .NET Framework 4.5.2 können VB.NET-Projekte keine System.Windows-APIs mit teilweise qualifizierten Namespaces angeben.</span><span class="sxs-lookup"><span data-stu-id="d1308-103">Beginning in .NET Framework 4.5.2, VB.NET projects cannot specify System.Windows APIs with partially-qualified namespaces.</span></span> <span data-ttu-id="d1308-104">Der Verweis auf `Windows.Forms.DialogResult` führt z. B. zu einem Fehler.</span><span class="sxs-lookup"><span data-stu-id="d1308-104">For example, referring to `Windows.Forms.DialogResult` will fail.</span></span> <span data-ttu-id="d1308-105">Stattdessen muss der Code auf den vollqualifizierten Namen (<xref:System.Windows.Forms.DialogResult>) verweisen oder den bestimmten Namespace importieren und dann einfach auf <xref:System.Windows.Forms.DialogResult?displayProperty=fullName> verweisen.</span><span class="sxs-lookup"><span data-stu-id="d1308-105">Instead, code must refer to the fully qualified name (<xref:System.Windows.Forms.DialogResult>) or import the specific namespace and refer simply to <xref:System.Windows.Forms.DialogResult?displayProperty=fullName>.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="d1308-106">Vorschlag</span><span class="sxs-lookup"><span data-stu-id="d1308-106">Suggestion</span></span>
+
+<span data-ttu-id="d1308-107">Der Code sollte aktualisiert werden, um auf `System.Windows`-APIs mit einfachen Namen (und den entsprechenden Namespace importieren) oder mit vollqualifizierten Namen zu verweisen.</span><span class="sxs-lookup"><span data-stu-id="d1308-107">Code should be updated to refer to `System.Windows` APIs either with simple names (and importing the relevant namespace) or with fully qualified names.</span></span>
+
+| <span data-ttu-id="d1308-108">name</span><span class="sxs-lookup"><span data-stu-id="d1308-108">Name</span></span>    | <span data-ttu-id="d1308-109">Wert</span><span class="sxs-lookup"><span data-stu-id="d1308-109">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="d1308-110">Bereich</span><span class="sxs-lookup"><span data-stu-id="d1308-110">Scope</span></span>   | <span data-ttu-id="d1308-111">Gering</span><span class="sxs-lookup"><span data-stu-id="d1308-111">Minor</span></span>       |
+| <span data-ttu-id="d1308-112">Version</span><span class="sxs-lookup"><span data-stu-id="d1308-112">Version</span></span> | <span data-ttu-id="d1308-113">4.5.2</span><span class="sxs-lookup"><span data-stu-id="d1308-113">4.5.2</span></span>       |
+| <span data-ttu-id="d1308-114">Typ</span><span class="sxs-lookup"><span data-stu-id="d1308-114">Type</span></span>    | <span data-ttu-id="d1308-115">Neuzuweisung</span><span class="sxs-lookup"><span data-stu-id="d1308-115">Retargeting</span></span> |
