@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 46d7faea76098406b8e0a91d22922bf9ca391e28
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 27e9f331151acd68d76233bc7dbb09c2d870afde
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618050"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Ausblenden von Spalten im DataGridView-Steuerelement in Windows Forms
 Manchmal möchten Sie nur einige der Spalten anzeigen, die in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement in Windows Forms verfügbar sind. Benutzern, die sich mit Anmeldeinformationen der Geschäftsleitung anmelden, möchten Sie beispielsweise eine Spalte mit den Gehältern der Angestellten anzeigen, diese aber für andere Benutzer ausblenden. Oder aber Sie möchten das Steuerelement an eine Datenquelle binden, die viele Spalten enthält, von denen Sie nur einige anzeigen möchten. In diesem Fall entfernen Sie in der Regel die Spalten, deren Anzeige Sie nicht interessiert, anstatt sie auszublenden.  
@@ -38,7 +38,7 @@ Manchmal möchten Sie nur einige der Spalten anzeigen, die in einem <xref:System
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>

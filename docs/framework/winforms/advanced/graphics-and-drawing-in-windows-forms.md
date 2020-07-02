@@ -1,5 +1,6 @@
 ---
 title: Grafiken und zeichnen
+description: Erfahren Sie mehr über Grafik-, Stift-, Pinsel-und Farb Objekte sowie über das Ausführen von Aufgaben wie das Zeichnen von Formen, das Zeichnen von Text oder das Anzeigen von Bildern in Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: 10ad18d38c84f6e447601ab6c8bf1a953dabb7cf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 58d8cde6aa102225cf9e3c342efe37218c818307
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618401"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Grafik und Zeichnen in Windows Forms
 Die Common Language Runtime verwendet eine erweiterte Implementierung der Windows Graphics Device Interface (GDI) mit dem Namen GDI+. Mit GDI+ können Sie Grafiken erstellen, Text zeichnen und grafische Bilder als Objekte bearbeiten. GDI+ wurde entwickelt, um Leistung und Benutzerfreundlichkeit zu bieten. Mit GDI+ können Sie grafische Bilder auf Windows Forms-und-Steuerelementen darstellen. Obwohl Sie GDI+ nicht direkt auf Web Forms verwenden können, können Sie grafische Bilder mit dem Image-Webserver Steuerelement anzeigen.  
@@ -31,7 +32,7 @@ Die Common Language Runtime verwendet eine erweiterte Implementierung der Window
  [Verwenden von verwalteten Grafikklassen](using-managed-graphics-classes.md)  
  Veranschaulicht, wie eine Vielzahl von Tasks mithilfe der verwalteten GDI+-Klassen ausgeführt wird.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Drawing>  
  Bietet Zugriff auf die grundlegenden GDI+-Grafikfunktionen.  
   
@@ -48,5 +49,5 @@ Die Common Language Runtime verwendet eine erweiterte Implementierung der Window
  Stellt Druckfunktionen bereit.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Zeichnen und Rendern von benutzerdefinierten Steuerelementen](../controls/custom-control-painting-and-rendering.md)  
+ [Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen](../controls/custom-control-painting-and-rendering.md)  
  Erläutert die Bereitstellung von Code zum Zeichnen von Steuerelementen.

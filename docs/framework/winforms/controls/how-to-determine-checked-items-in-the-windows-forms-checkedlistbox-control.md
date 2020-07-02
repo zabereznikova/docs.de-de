@@ -1,5 +1,6 @@
 ---
-title: Bestimmen von geprüften Elementen im CheckedListBox-Steuerelement
+title: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement
+description: Erfahren Sie, wie Sie überprüfte Elemente im Windows Forms CheckedListBox-Steuerelement ermitteln, indem Sie die Auflistung durchlaufen, die in der CheckedItems-Eigenschaft gespeichert ist.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +10,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 5d93a63e9c1c6aae91ecfe83590c59450a565afe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd8845ef83da7406ff4f1468506a23e3f4d386a0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618349"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Gewusst wie: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms
-Wenn Sie Daten in <xref:System.Windows.Forms.CheckedListBox> einem Windows Forms-Steuerelement darstellen, können <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> Sie entweder die in der <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Eigenschaft gespeicherte Auflistung durchlaufen oder die Liste mithilfe der Methode durchlaufen, um zu bestimmen, welche Elemente überprüft werden. Die <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Methode nimmt eine Elementindexnummer `true` als `false`Argument und gibt oder zurück. Im Gegensatz zu dem, <xref:System.Windows.Forms.ListBox.SelectedItems%2A> <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> was Sie erwarten, bestimmen die und Eigenschaften nicht, welche Elemente überprüft werden. sie bestimmen, welche Elemente hervorgehoben werden.  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms
+Wenn Sie Daten in einem Windows Forms-Steuerelement darstellen <xref:System.Windows.Forms.CheckedListBox> , können Sie entweder die in der-Eigenschaft gespeicherte Auflistung durchlaufen <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> oder die Liste durchlaufen, indem Sie die-Methode verwenden, <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> um zu bestimmen, welche Elemente geprüft werden. Die <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> -Methode nimmt eine Element Indexnummer als Argument an und gibt `true` oder zurück `false` . Im Gegensatz zu dem, was Sie möglicherweise erwarten, <xref:System.Windows.Forms.ListBox.SelectedItems%2A> bestimmen die-und- <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> Eigenschaften nicht, welche Elemente geprüft werden. Sie legen fest, welche Elemente hervorgehoben werden.  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>So ermitteln Sie geprüfte Elemente in einem CheckedListBox-Steuerelement  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>So bestimmen Sie aktivierte Elemente in einem CheckedListBox-Steuerelement  
   
-1. Durchlaufen der <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> Auflistung, beginnend bei 0, da die Auflistung auf Null basiert. Beachten Sie, dass diese Methode Ihnen die Artikelnummer in der Liste der geprüften Elemente und nicht die Gesamtliste angibt. Wenn also das erste Element in der Liste nicht aktiviert ist und das zweite Element aktiviert ist, wird der folgende Code Text wie "Checked Item 1 = MyListItem2" angezeigt.  
+1. Iterieren Sie die Auflistung <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> , beginnend bei 0, da die Auflistung NULL basiert. Beachten Sie, dass diese Methode die Element Nummer in der Liste der aktivierten Elemente und nicht die Gesamtliste enthält. Wenn das erste Element in der Liste nicht aktiviert ist und das zweite Element aktiviert ist, zeigt der nachfolgende Code z. b. Text wie "aktiviertes Element 1 = MyListItem2" an.  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -66,9 +67,9 @@ Wenn Sie Daten in <xref:System.Windows.Forms.CheckedListBox> einem Windows Forms
     }  
     ```  
   
-     - oder –  
+     - ODER  
   
-2. Gehen Sie <xref:System.Windows.Forms.CheckedListBox.Items%2A> durch die Auflistung, beginnend bei 0, da <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> die Auflistung nullbasiert ist, und rufen Sie die Methode für jedes Element auf. Beachten Sie, dass diese Methode Ihnen die Artikelnummer in der Gesamtliste gibt, wenn also das erste Element in der Liste nicht aktiviert ist und das zweite Element aktiviert ist, wird etwa "Artikel 2 = MyListItem2" angezeigt.  
+2. Durchlaufen Sie die Auflistung <xref:System.Windows.Forms.CheckedListBox.Items%2A> , beginnend bei 0, da die Auflistung NULL basiert ist, und die- <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Methode für jedes Element aufzurufen. Beachten Sie, dass diese Methode die Element Nummer in der Gesamtliste enthält. wenn das erste Element in der Liste nicht aktiviert und das zweite Element aktiviert ist, wird etwa "Item 2 = MyListItem2" angezeigt.  
   
     ```vb  
     Dim i As Integer  

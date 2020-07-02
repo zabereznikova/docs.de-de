@@ -1,5 +1,6 @@
 ---
 title: Vorgehensweise beim Hinzufügen eines Begrüßungs Bildschirms
+description: Erfahren Sie, wie Sie einer Windows Presentation Foundation (WPF)-Anwendung ein Startfenster oder einen Begrüßungsbildschirm hinzufügen.
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d0cf2e2a550320650c3b4a0c257071a0403c32b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617959"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Gewusst wie: Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung
 
@@ -30,7 +31,7 @@ In diesem Thema wird gezeigt, wie Sie einer Windows Presentation Foundation (WPF
 
 5. Wählen Sie in der Dropdown Liste die Option **SplashScreen** aus.
 
-6. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
+6. Drücken Sie **F5** , um die Anwendung zu erstellen und auszuführen.
 
      Das Bild mit dem Begrüßungsbildschirm wird in der Mitte des Bildschirms angezeigt und wird dann ausgeblendet, wenn das Hauptanwendungsfenster angezeigt wird.
 
@@ -47,4 +48,4 @@ Löschen Sie in **Projektmappen-Explorer**das Bild des Begrüßungs Bildschirms.
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.SplashScreen>
-- [Gewusst wie: Hinzufügen vorhandener Elemente zu einem Projekt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [Vorgehensweise: Hinzufügen vorhandener Elemente zu einem Projekt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

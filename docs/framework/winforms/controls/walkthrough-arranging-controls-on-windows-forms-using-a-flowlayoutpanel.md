@@ -1,5 +1,6 @@
 ---
 title: Anordnen von Steuerelementen mithilfe von FlowLayoutPanel
+description: Erfahren Sie, wie Sie mit dem FlowLayoutPanel-Steuerelement und dem TableLayoutPanel-Steuerelement intuitive Möglichkeiten zum Anordnen von Steuerelementen in Ihrem Windows Forms Projekt bereitstellen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 6df0a910ee346f319fbee835e5e632808630a99e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: efcb38275be7b0cf94afb6b68aa139876f7cf5fd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619285"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel
 
@@ -20,7 +21,7 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
 
 Das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement und das <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement stellen intuitive Verfahren zum Anordnen von Steuerelementen auf Formularen dar. Beide bieten die Möglichkeit, die relativen Positionen der in ihnen enthaltenen untergeordneten Steuerelemente automatisch und konfigurierbar zu steuern, und beide stellen dynamische Layoutfunktionen zur Laufzeit zur Verfügung, sodass sie Größe und Position von untergeordneten Steuerelementen ändern können, wenn sich die Abmessungen des übergeordneten Formulars ändern. Layoutbereiche können in Layoutbereichen geschachtelt werden, um die Realisierung raffinierter Benutzeroberflächen zu ermöglichen.
 
-Der <xref:System.Windows.Forms.TableLayoutPanel> ordnet seinen Inhalt in einem Raster an und bietet ähnliche Funktionen wie das HTML-\<Table >-Element. Seine Zellen sind in Zeilen und Spalten angeordnet, und diese können verschiedene Größen haben. Weitere Informationen finden Sie unter [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+Das <xref:System.Windows.Forms.TableLayoutPanel> ordnet seinen Inhalt in einem Raster an und bietet ähnliche Funktionen wie das HTML-- \<table> Element. Seine Zellen sind in Zeilen und Spalten angeordnet, und diese können verschiedene Größen haben. Weitere Informationen finden Sie unter [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 Das <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seinen Inhalt in einer bestimmten Flussrichtung an: horizontal oder vertikal. Dieser Inhalt kann von einer Zeile zur nächsten oder von einer Spalte zur nächsten umbrochen werden. Alternativ kann dieser Inhalt abgeschnitten werden, statt dass er umbrochen wird. In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
@@ -44,9 +45,9 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seinen Inhalt in einer be
 
 Wenn Sie fertig sind, haben Sie ein Verständnis der Rolle, die diese wichtigen Layoutfunktionen spielen.
 
-## <a name="create-the-project"></a>Erstellen des Projekts
+## <a name="create-the-project"></a>Erstellen eines Projekts
 
-1. Erstellen Sie in Visual Studio ein Windows-basiertes Anwendungsprojekt mit dem Namen "FlowLayoutPanelExample" (**Datei** > **Neues** > **Projekt** > **Visual C#**  oder **Visual Basic** >  > **Anwendung**für die **klassische Desktop** Windows Forms).
+1. Erstellen Sie in Visual Studio ein Windows-basiertes Anwendungsprojekt mit dem Namen "FlowLayoutPanelExample" (**Datei**  >  **neu**  >  **Projekt**  >  **Visual c#** oder **Visual Basic**  >  **klassische Desktop**  >  **Windows Forms Anwendung**).
 
 2. Wählen Sie das Formular im **Forms-Designer**aus.
 
@@ -150,7 +151,7 @@ Wenn Sie fertig sind, haben Sie ein Verständnis der Rolle, die diese wichtigen 
 
 ### <a name="to-insert-a-control-using-the-caret"></a>So fügen Sie ein Steuerelement mit der Einfügemarke ein
 
-1. Ziehen Sie ein <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement, und zeigen Sie auf den Abstand zwischen zwei <xref:System.Windows.Forms.Button> -Steuerelementen. Beachten Sie, dass eine Einfügeleiste gezeichnet wird, die angibt, wo die <xref:System.Windows.Forms.Button> platziert wird, wenn Sie im <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement abgelegt wird. Bevor Sie das neue <xref:System.Windows.Forms.Button> -Steuerelement auf dem <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement ablegen, bewegen Sie den Mauszeiger umher, um zu verfolgen, wie sich die Einfügemarke bewegt.
+1. Ziehen Sie ein <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement, und zeigen Sie auf den Abstand zwischen zwei <xref:System.Windows.Forms.Button> -Steuerelementen. Beachten Sie, dass eine Einfügeleiste gezeichnet wird, die angibt, wo der <xref:System.Windows.Forms.Button> platziert wird, wenn er im-Steuerelement abgelegt wird <xref:System.Windows.Forms.FlowLayoutPanel> . Bevor Sie das neue <xref:System.Windows.Forms.Button> -Steuerelement auf dem <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement ablegen, bewegen Sie den Mauszeiger umher, um zu verfolgen, wie sich die Einfügemarke bewegt.
 
 2. Legen Sie das neue <xref:System.Windows.Forms.Button> -Steuerelement auf dem <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement ab. Beachten Sie, dass das neue <xref:System.Windows.Forms.Button> -Steuerelement nicht an den anderen ausgerichtet ist, da seine <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft einen anderen Wert aufweist.
 
@@ -186,9 +187,9 @@ Wenn Sie fertig sind, haben Sie ein Verständnis der Rolle, die diese wichtigen 
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md)
-- [Gewusst wie: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Gewusst wie: Verankern von Steuerelementen in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Gewusst wie: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Gewusst wie: Verankern von Steuerelementen in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
 - [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md)

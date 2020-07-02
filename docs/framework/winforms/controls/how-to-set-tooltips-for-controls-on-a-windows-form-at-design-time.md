@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 15134b38d11de30d0e6a2f998f6ea266affc40d7
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 144ba5b6bffb4a538e345f7b2df4a453fc6fd63d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618024"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Gewusst wie: Festlegen von Quick Infos für Steuerelemente auf einem Windows Form zur Entwurfszeit
 
@@ -75,7 +75,7 @@ Sie können eine <xref:System.Windows.Forms.ToolTip> Zeichenfolge im Code oder i
 
 2. Löschen Sie im Fenster **Eigenschaften** den Text in der QuickInfo **auf ToolTip1**.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über die ToolTip-Komponente](tooltip-component-overview-windows-forms.md)
 - [Vorgehensweise: Ändern der Verzögerung der ToolTip-Komponente in Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)

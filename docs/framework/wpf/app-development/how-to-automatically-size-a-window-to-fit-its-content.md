@@ -1,5 +1,6 @@
 ---
-title: 'Vorgehensweise: Automatisches Anpassen der Größe eines Fensters an dessen Inhalt'
+title: 'Gewusst wie: Automatisches Anpassen der Größe eines Fensters an seinen Inhalt'
+description: Erfahren Sie, wie Sie die-Eigenschaft festlegen, die angibt, wie die Größe eines Fensters an seinen Inhalt in Windows Presentation Foundation (WPF) angepasst wird.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - windows [WPF], resizing to fit content
 - sizing windows to fit content [WPF]
 ms.assetid: 333ca72a-c2f3-4414-9303-3fdabaaa1b32
-ms.openlocfilehash: 920a7deac8efffe52a4837841b6327575e41b331
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a04089c737102895f1ff6da19fa6a0d17cc60ab6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617946"
 ---
-# <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>Vorgehensweise: Automatisches Anpassen der Größe eines Fensters an dessen Inhalt
-Dieses Beispiel veranschaulicht die legen Sie die <xref:System.Windows.Window.SizeToContent%2A> Eigenschaft, um anzugeben, wie die Fenstergröße um seinen Inhalt anzupassen.  
+# <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>Gewusst wie: Automatisches Anpassen der Größe eines Fensters an seinen Inhalt
+In diesem Beispiel wird gezeigt, wie die-Eigenschaft festgelegt wird <xref:System.Windows.Window.SizeToContent%2A> , um anzugeben, wie die Größe eines Fensters an seinen Inhalt angepasst wird.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]

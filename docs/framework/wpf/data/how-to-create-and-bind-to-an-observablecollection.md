@@ -1,5 +1,6 @@
 ---
 title: 'Gewusst wie: Erstellen und Binden an ObservableCollection'
+description: Erfahren Sie, wie Sie eine Sammlung erstellen und binden, die von der ObservableCollection-Klasse in Windows Presentation Foundation abgeleitet ist.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36e3d2d84aff0ab96c9b2914da28d4c968c32bac
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617868"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Gewusst wie: Erstellen und Binden an ObservableCollection
-In diesem Beispiel wird gezeigt, wie Sie eine Auflistung erstellen und binden, die von der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse abgeleitet ist. Dies ist eine Auflistungs Klasse, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden.  
+Dieses Beispiel zeigt, wie Sie eine Auflistung erstellen und binden, die von der-Klasse abgeleitet wird. dabei handelt es sich um eine Auflistungs <xref:System.Collections.ObjectModel.ObservableCollection%601> Klasse, die beim Hinzufügen oder Entfernen von Elementen Benachrichtigungen bereitstellt.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird die Implementierung einer `NameList`-Auflistung veranschaulicht:  
@@ -136,14 +137,14 @@ End Class
  Die Definition von `NameItemTemplate` wird hier nicht gezeigt.  
   
 > [!NOTE]
-> Die Objekte in der Auflistung müssen die unter [Übersicht über Bindungsquellen](binding-sources-overview.md) beschriebenen Anforderungen erfüllen. Insbesondere, wenn Sie <xref:System.Windows.Data.BindingMode.OneWay> oder <xref:System.Windows.Data.BindingMode.TwoWay> verwenden (z. b. Wenn Sie möchten, dass Ihr [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aktualisiert wird, wenn sich die Quell Eigenschaften dynamisch ändern), müssen Sie einen geeigneten Benachrichtigungs Mechanismus für eine geänderte Eigenschaft implementieren, wie z. b. die <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle.  
+> Die Objekte in der Auflistung müssen die unter [Übersicht über Bindungsquellen](binding-sources-overview.md) beschriebenen Anforderungen erfüllen. Insbesondere wenn Sie oder verwenden (z. b. Wenn <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> Sie möchten, dass sich [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] die Quell Eigenschaften dynamisch ändern), müssen Sie einen geeigneten Benachrichtigungs Mechanismus für geänderte Eigenschaften wie die- <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle implementieren.  
   
  Weitere Informationen finden Sie in der [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md) unter „Binden an Auflistungen“.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md)
 - [Filtern von Daten in einer Ansicht](how-to-filter-data-in-a-view.md)
 - [Sortieren und Gruppieren von Daten mit einer Ansicht in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
+- [Artikel zu Vorgehensweisen](data-binding-how-to-topics.md)

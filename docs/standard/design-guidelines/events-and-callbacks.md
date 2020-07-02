@@ -8,12 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619532"
 ---
 # <a name="events-and-callbacks"></a>Ereignisse und Rückrufe
 Rückrufe sind Erweiterungs Punkte, mit denen ein Framework über einen Delegaten den Benutzercode aufrufen kann. Diese Delegaten werden in der Regel über einen Parameter einer Methode an das Framework übergeben.
@@ -38,11 +38,11 @@ Rückrufe sind Erweiterungs Punkte, mit denen ein Framework über einen Delegate
 
  ✔️ verstehen, dass Sie durch Aufrufen eines Delegaten beliebigen Code ausführen, der Sicherheits-, Richtigkeit-und Kompatibilitäts Auswirkungen haben kann.
 
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
+ *Teile &copy; 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwerfen für Erweiterbarkeit](designing-for-extensibility.md)
 - [Framework-Entwurfs Richtlinien](index.md)

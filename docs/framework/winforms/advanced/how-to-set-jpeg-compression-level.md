@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Festlegen der JPEG-Komprimierungsebene'
+description: Erfahren Sie, wie Sie die Qualität eines JPEG-Bilds anpassen, indem Sie die Komprimierungs Ebene in Windows Forms ändern.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 1b325c0cb8fe9da4b198d19164c73af9b1609973
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f6a96e8a05fff40eb08da0ce318faa86a06cc3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618713"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Vorgehensweise: Festlegen der JPEG-Komprimierungsebene
-Möglicherweise möchten Sie die Parameter eines Bilds ändern, wenn Sie das Bild auf einem Datenträger speichern, um dadurch die Dateigröße zu minimieren oder die Qualität zu verbessern. Sie können die Qualität eines JPEG-Bilds anpassen, indem Sie seine Komprimierungsebene ändern. Zum Angeben der Komprimierungsebene beim Speichern eines JPEG-Bilds müssen Sie erstellen eine <xref:System.Drawing.Imaging.EncoderParameters> -Objekt und übergeben Sie sie an der <xref:System.Drawing.Image.Save%2A> Methode der <xref:System.Drawing.Image> Klasse. Initialisieren der <xref:System.Drawing.Imaging.EncoderParameters> Objekt so, dass die It verfügt über ein Array, das eine besteht <xref:System.Drawing.Imaging.EncoderParameter>. Bei der Erstellung der <xref:System.Drawing.Imaging.EncoderParameter>, geben Sie die <xref:System.Drawing.Imaging.Encoder.Quality> Encoder und die gewünschte Komprimierungsebene.  
+Möglicherweise möchten Sie die Parameter eines Bilds ändern, wenn Sie das Bild auf einem Datenträger speichern, um dadurch die Dateigröße zu minimieren oder die Qualität zu verbessern. Sie können die Qualität eines JPEG-Bilds anpassen, indem Sie seine Komprimierungsebene ändern. Um die Komprimierungs Ebene beim Speichern eines JPEG-Bilds anzugeben, müssen Sie ein <xref:System.Drawing.Imaging.EncoderParameters> -Objekt erstellen und es an die- <xref:System.Drawing.Image.Save%2A> Methode der- <xref:System.Drawing.Image> Klasse übergeben. Initialisieren Sie das- <xref:System.Drawing.Imaging.EncoderParameters> Objekt, sodass es über ein Array verfügt, das aus einem Array besteht <xref:System.Drawing.Imaging.EncoderParameter> . Wenn Sie das Erstellen <xref:System.Drawing.Imaging.EncoderParameter> , geben Sie den <xref:System.Drawing.Imaging.Encoder.Quality> Encoder und die gewünschte Komprimierungs Ebene an.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Beispielcode erstellt eine <xref:System.Drawing.Imaging.EncoderParameter> -Objekt und drei JPEG-Bilder gespeichert. Jedes JPEG-Bild wird mit einer anderen Qualitätsstufe gespeichert, durch Ändern der `long` übergebenen Wert die <xref:System.Drawing.Imaging.EncoderParameter> Konstruktor. Die Qualitätsstufe 0 steht für die höchste, die Qualitätsstufe 100 für die niedrigste Komprimierung.  
+ Im folgenden Beispielcode wird ein <xref:System.Drawing.Imaging.EncoderParameter> -Objekt erstellt und drei JPEG-Bilder gespeichert. Jedes JPEG-Bild wird mit einer anderen Qualitätsstufe gespeichert, indem der `long` an den Konstruktor übergeben Wert geändert wird <xref:System.Drawing.Imaging.EncoderParameter> . Die Qualitätsstufe 0 steht für die höchste, die Qualitätsstufe 100 für die niedrigste Komprimierung.  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -125,12 +126,12 @@ End Function
   
 - Eine Windows Forms-Anwendung  
   
-- Ein <xref:System.Windows.Forms.PaintEventArgs>, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
+- Ein <xref:System.Windows.Forms.PaintEventArgs> , bei dem es sich um einen Parameter von handelt <xref:System.Windows.Forms.PaintEventHandler> .  
   
 - Eine Bilddatei mit dem Namen `TestPhoto.jpg`, die unter **c:\\** gespeichert ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Vorgehensweise: Ermitteln der von einem Encoder unterstützten Parameter](how-to-determine-the-parameters-supported-by-an-encoder.md)
-- [Typen von Bitmaps](types-of-bitmaps.md)
+- [Bitmaptypen](types-of-bitmaps.md)
 - [Verwenden von Bildencodern und -decodern in Managed GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)

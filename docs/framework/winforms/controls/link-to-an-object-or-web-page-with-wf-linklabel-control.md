@@ -1,5 +1,6 @@
 ---
 title: Verknüpfung mit einem Objekt oder einer Webseite mit dem LinkLabel-Steuerelement
+description: Erfahren Sie, wie Sie mit dem Windows Forms LinkLabel-Steuerelement Webstil Verknüpfungen zu einem Objekt oder einer Webseite erstellen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,24 +16,24 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 1669a9d6aba39b02d228c735701ca4e31c8f8291
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a5fb1c03e9a8d82fe77f4133ba04c42114787d23
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618311"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Gewusst wie: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Vorgehensweise: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms
 
-Mit dem Windows Forms <xref:System.Windows.Forms.LinkLabel>-Steuerelement können Sie im Formular links im Webstil erstellen. Wenn auf den Link geklickt wird, können Sie die zugehörige Farbe ändern, um anzugeben, dass der Link besucht wurde. Weitere Informationen zum Ändern der Farbe finden Sie unter Gewusst [wie: Ändern der Darstellung des Windows Forms LinkLabel-Steuer](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)Elements.
+Das Windows Forms <xref:System.Windows.Forms.LinkLabel> Steuerelement ermöglicht das Erstellen von Links im Webformat auf Ihrem Formular. Wenn auf den Link geklickt wird, können Sie die zugehörige Farbe ändern, um anzugeben, dass der Link besucht wurde. Weitere Informationen zum Ändern der Farbe finden Sie unter Gewusst [wie: Ändern der Darstellung des Windows Forms LinkLabel-Steuer](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)Elements.
 
 ## <a name="linking-to-another-form"></a>Verknüpfen mit einem anderen Formular
 
 #### <a name="to-link-to-another-form-with-a-linklabel-control"></a>So verknüpfen Sie ein anderes Formular mit einem LinkLabel-Steuerelement
 
-1. Legen Sie die <xref:System.Windows.Forms.LinkLabel.Text%2A>-Eigenschaft auf eine entsprechende Beschriftung fest.
+1. Legen Sie die- <xref:System.Windows.Forms.LinkLabel.Text%2A> Eigenschaft auf eine entsprechende Beschriftung fest.
 
-2. Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>-Eigenschaft fest, um zu bestimmen, welcher Teil der Beschriftung als Link angegeben wird. Wie dies angegeben wird, hängt von den Darstellungs bezogenen Eigenschaften der Link Bezeichnung ab. Der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Wert wird durch ein <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Objekt dargestellt, das zwei Zahlen, die Position des Anfangs Zeichens und die Anzahl der Zeichen enthält. Die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>-Eigenschaft kann im Eigenschaftenfenster oder im Code auf eine Weise festgelegt werden, die der folgenden ähnelt:
+2. Legen Sie die- <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft fest, um zu bestimmen, welcher Teil der Beschriftung als Link angegeben wird. Wie dies angegeben wird, hängt von den Darstellungs bezogenen Eigenschaften der Link Bezeichnung ab. Der- <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Wert wird durch ein <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> -Objekt dargestellt, das zwei Zahlen enthält: die Position des Anfangs Zeichens und die Anzahl der Zeichen. Die- <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft kann im-Eigenschaftenfenster oder im Code auf eine Weise festgelegt werden, die der folgenden ähnelt:
 
     ```vb
     ' In this code example, the link area has been set to begin
@@ -55,10 +56,10 @@ Mit dem Windows Forms <xref:System.Windows.Forms.LinkLabel>-Steuerelement könne
     linkLabel1->LinkArea = LinkArea(0,8);
     ```
 
-3. Rufen Sie im Ereignishandler <xref:System.Windows.Forms.LinkLabel.LinkClicked> die <xref:System.Windows.Forms.Form.Show%2A>-Methode auf, um ein anderes Formular im Projekt zu öffnen, und legen Sie die Eigenschaft <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> auf `true`fest.
+3. <xref:System.Windows.Forms.LinkLabel.LinkClicked>Rufen Sie im-Ereignishandler die <xref:System.Windows.Forms.Form.Show%2A> -Methode auf, um ein anderes Formular im Projekt zu öffnen, und legen Sie die- <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaft auf fest `true` .
 
     > [!NOTE]
-    > Eine Instanz der <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs>-Klasse enthält einen Verweis auf das <xref:System.Windows.Forms.LinkLabel> Steuerelement, auf das geklickt wurde, sodass es nicht erforderlich ist, das `sender`-Objekt umzuwandeln.
+    > Eine Instanz der- <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> Klasse enthält einen Verweis auf das <xref:System.Windows.Forms.LinkLabel> Steuerelement, auf das geklickt wurde, sodass das-Objekt nicht umgewandelt werden muss `sender` .
 
     ```vb
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _
@@ -95,18 +96,18 @@ Mit dem Windows Forms <xref:System.Windows.Forms.LinkLabel>-Steuerelement könne
 
 ## <a name="linking-to-a-web-page"></a>Verknüpfen mit einer Webseite
 
-Das <xref:System.Windows.Forms.LinkLabel>-Steuerelement kann auch verwendet werden, um eine Webseite mit dem Standardbrowser anzuzeigen.
+Das- <xref:System.Windows.Forms.LinkLabel> Steuerelement kann auch verwendet werden, um eine Webseite mit dem Standardbrowser anzuzeigen.
 
 #### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>So starten Sie Internet Explorer und verknüpfen eine Webseite mit einem LinkLabel-Steuerelement
 
-1. Legen Sie die <xref:System.Windows.Forms.LinkLabel.Text%2A>-Eigenschaft auf eine entsprechende Beschriftung fest.
+1. Legen Sie die- <xref:System.Windows.Forms.LinkLabel.Text%2A> Eigenschaft auf eine entsprechende Beschriftung fest.
 
-2. Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>-Eigenschaft fest, um zu bestimmen, welcher Teil der Beschriftung als Link angegeben wird.
+2. Legen Sie die- <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft fest, um zu bestimmen, welcher Teil der Beschriftung als Link angegeben wird.
 
-3. In der <xref:System.Windows.Forms.LinkLabel.LinkClicked>-Ereignishandler wird in der Mitte eines Ausnahme Behandlungs Blocks eine zweite Prozedur aufgerufen, die die <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>-Eigenschaft auf `true` festlegt und die <xref:System.Diagnostics.Process.Start%2A>-Methode verwendet, um den Standardbrowser mit einer URL zu starten. Wenn Sie die <xref:System.Diagnostics.Process.Start%2A>-Methode verwenden möchten, müssen Sie einen Verweis auf den <xref:System.Diagnostics?displayProperty=nameWithType>-Namespace hinzufügen.
+3. Im- <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignishandler wird in der Mitte eines Ausnahme Behandlungs Blocks eine zweite Prozedur aufgerufen, mit der die <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> -Eigenschaft auf festgelegt wird `true` und die-Methode verwendet wird, <xref:System.Diagnostics.Process.Start%2A> um den Standardbrowser mit einer URL zu starten. Um die- <xref:System.Diagnostics.Process.Start%2A> Methode verwenden zu können, müssen Sie einen Verweis auf den- <xref:System.Diagnostics?displayProperty=nameWithType> Namespace hinzufügen.
 
     > [!IMPORTANT]
-    > Wenn der folgende Code in einer teilweise vertrauenswürdigen Umgebung (z. b. auf einem freigegebenen Laufwerk) ausgeführt wird, schlägt der JIT-Compiler fehl, wenn die `VisitLink`-Methode aufgerufen wird. Die `System.Diagnostics.Process.Start`-Anweisung verursacht einen Verbindungs Aufruf, der fehlschlägt. Wenn Sie die Ausnahme abfangen, wenn die `VisitLink`-Methode aufgerufen wird, stellt der folgende Code sicher, dass der Fehler ordnungsgemäß behandelt wird, wenn der JIT-Compiler fehlschlägt.
+    > Wenn der folgende Code in einer teilweise vertrauenswürdigen Umgebung (z. b. auf einem freigegebenen Laufwerk) ausgeführt wird, schlägt der JIT-Compiler fehl, wenn die- `VisitLink` Methode aufgerufen wird. Die- `System.Diagnostics.Process.Start` Anweisung verursacht einen Verbindungs Aufruf, der fehlschlägt. Wenn Sie die Ausnahme abfangen, wenn die- `VisitLink` Methode aufgerufen wird, stellt der folgende Code sicher, dass der Fehler ordnungsgemäß behandelt wird, wenn der JIT-Compiler fehlschlägt.
 
     ```vb
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _
@@ -184,5 +185,5 @@ Das <xref:System.Windows.Forms.LinkLabel>-Steuerelement kann auch verwendet werd
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [Übersicht über das LinkLabel-Steuerelement](linklabel-control-overview-windows-forms.md)
-- [Gewusst wie: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [LinkLabel-Steuerelement](linklabel-control-windows-forms.md)
