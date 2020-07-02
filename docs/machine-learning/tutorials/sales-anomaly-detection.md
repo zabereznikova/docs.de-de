@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Erkennen von Anomalien bei Produktverkäufen'
 description: Erfahren Sie, wie Sie eine Anwendung zur Anomalieerkennung bei Produktvertriebsdaten erstellen. Dieses Tutorial erstellt mithilfe von C# in Visual Studio 2019 eine .NET Core-Konsolenanwendung.
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 2fc9c552f5a00d59ea2fddcbcfcbd240cf2fc83c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: b744b2597abceb91d2c36f596b79fb75c2492563
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803286"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Erkennen von Anomalien in Produktverkäufen mit ML.NET
 
@@ -43,6 +43,8 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 2. Erstellen Sie ein Verzeichnis mit dem Namen *Data* in Ihrem Projekt, um die Datasetdateien zu speichern.
 
 3. Installieren des **Microsoft.ML NuGet-Pakets**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Klicken Sie dann auf die Registerkarte „Durchsuchen“ aus, suchen Sie nach **Microsoft.ML**, und klicken Sie anschließend auf **Installieren**. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen. Wiederholen Sie diese Schritte für **Microsoft.ML.TimeSeries**.
 

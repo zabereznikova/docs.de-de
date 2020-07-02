@@ -1,19 +1,21 @@
 ---
 title: Debuggen einer .NET für Apache Spark-Anwendung unter Windows
 description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung unter Windows debuggen.
-ms.date: 01/29/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9209d5bdec6dd85f6d21a502fb07204effef1934
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617755"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Debuggen einer .NET für Apache Spark-Anwendung
 
 Diese Anleitung zeigt die Schritte, die Sie zum Debuggen einer .NET für Apache Spark-Anwendung unter Windows ausführen müssen.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="debug-your-application"></a>Debuggen einer Anwendung
 

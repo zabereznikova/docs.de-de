@@ -3,14 +3,14 @@ title: Tutorial zu Structured Streaming mit .NET für Apache Spark
 description: In diesem Tutorial erfahren Sie, wie Sie .NET für Apache Spark für Spark Structured Streaming verwenden.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 12/04/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5420fe081db1704d7af647e8c88826c1bcf614d9
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79186510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617842"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Structured Streaming mit .NET für Apache Spark
 
@@ -23,6 +23,8 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Erstellen und Ausführen einer .NET für Apache Spark-Anwendung
 > * Verwenden von netcat zum Erstellen eines Datenstroms
 > * Verwenden von benutzerdefinierten Funktionen und SparkSQL zur Analyse von Streamingdaten
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

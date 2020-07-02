@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Vorhersagen von Preisen per Regression'
 description: In diesem Tutorial wird veranschaulicht, wie mit ML.NET ein Regressionsmodell für die Vorhersage von Preisen für Taxifahrten in New York City erstellt wird.
-ms.date: 09/30/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 91429383341cf718d38e636bd1d71dc25d30d20d
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0a8ab9ca07d2d83f41b40a3f5782e8e7e201976f
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803234"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Vorhersagen von Preisen per Regression mit ML.NET
 
@@ -36,6 +36,8 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 1. Erstellen Sie in Ihrem Projekt ein Verzeichnis mit dem Namen *Data*, um das Dataset und die Modelldateien zu speichern.
 
 1. Installieren Sie das NuGet-Paket **Microsoft.ML**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte **Durchsuchen** aus, suchen Sie nach **Microsoft.ML**, und wählen Sie das Paket in der Liste und anschließend die Schaltfläche **Installieren** aus. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen. Gehen Sie für das NuGet-Paket **Microsoft.ML.FastTreee** genauso vor.
 

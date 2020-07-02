@@ -1,15 +1,15 @@
 ---
 title: Bereitstellen einer .NET für Apache Spark-Anwendung in Amazon EMR Spark
 description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Amazon EMR Spark bereitstellen.
-ms.date: 05/17/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73454938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618258"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Bereitstellen einer .NET für Apache Spark-Anwendung in Amazon EMR Spark
 
@@ -23,6 +23,8 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Veröffentlichen einer .NET für Apache Spark-Anwendung
 > * Bereitstellen einer App in Amazon EMR Spark
 > * Ausführen der App
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Kategorisieren von Supportproblemen (Multiklassenklassifizierung)'
 description: Erfahren Sie hier, wie Sie mit ML.NET in einem Szenario zur Multiklassenklassifizierung GitHub-Issues klassifizieren, um sie einem bestimmten Bereich zuzuweisen.
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: f158b8dce81e00f652496cad4ec9217c516b3e9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 5233924dab063fd1ba0232672613f9701f637385
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803728"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Tutorial: Kategorisieren von Supportproblemen unter Verwendung von Multiklassenklassifizierung mit ML.NET
 
@@ -48,6 +48,8 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
     Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen** > **Neuer Ordner** aus. Geben Sie „Models“ ein, und drücken Sie die EINGABETASTE.
 
 4. Installieren des **Microsoft.ML NuGet-Pakets**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Klicken Sie dann auf die Registerkarte „Durchsuchen“ aus, suchen Sie nach **Microsoft.ML**, und klicken Sie anschließend auf **Installieren**. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 

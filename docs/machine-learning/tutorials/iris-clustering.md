@@ -2,15 +2,15 @@
 title: 'Tutorial: Kategorisieren von Schwertlilien (k-Means-Algorithmus)'
 description: Hier erfahren Sie, wie Sie ML.NET in einem Clusteringszenario verwenden.
 author: pkulikov
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: fe9c3eb1313fbacf512710f6872c543dca281b17
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0cc42a196589a7ffe77300c9f2cd9cb28229a0a9
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803975"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Tutorial: Kategorisieren von Schwertlilien unter Verwendung eines k-Means-Algorithmus mit ML.NET
 
@@ -48,6 +48,8 @@ Da Sie nicht wissen, zu welcher Gruppe jede Blume gehört, wählen Sie die Aufga
     Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen** > **Neuer Ordner** aus. Geben Sie „Data“ ein, und drücken Sie die EINGABETASTE.
 
 1. Installieren Sie das NuGet-Paket **Microsoft.ML**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Klicken Sie dann auf die Registerkarte **Durchsuchen**, suchen Sie nach **Microsoft.ML**, und klicken Sie anschließend auf **Installieren**. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 

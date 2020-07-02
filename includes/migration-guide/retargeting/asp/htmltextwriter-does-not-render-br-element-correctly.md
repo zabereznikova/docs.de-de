@@ -1,18 +1,28 @@
 ---
-ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f03e5166e7f1f598e9bba7fb8c550809f287b82
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615650"
 ---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter rendert das Element `<br/>` nicht ordnungsgemäß
 
-|   |   |
-|---|---|
-|Details|Ab .NET Framework 4.6 fügt der Aufruf von <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> und <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> mit einem <code>&lt;BR /&gt;</code>-Element ordnungsgemäß nur ein (anstatt zwei) <code>&lt;BR /&gt;</code> ein.|
-|Vorschlag|Wenn eine App vom zusätzlichen <code>&lt;BR /&gt;</code>-Tag abhängig ist, sollte <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ein zweites Mal aufgerufen werden. Beachten Sie, das sich diese Verhaltensänderung nur auf Apps mit der Zielplattform .NET Framework 4.6 oder höher auswirkt. Eine weitere Möglichkeit ist daher die Ausrichtung auf eine vorherige Version von .NET Framework, mit der das alte Verhalten genutzt werden kann.|
-|`Scope`|Edge|
-|Version|4.6|
-|Geben Sie Folgendes ein:|Neuzuweisung|
-|Betroffene APIs|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Details
+
+Ab .NET Framework 4.6 fügt der Aufruf von <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> und <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> mit einem `<BR />`-Element ordnungsgemäß nur ein (anstatt zwei) `<BR />` ein.
+
+#### <a name="suggestion"></a>Vorschlag
+
+Wenn eine App vom zusätzlichen `<BR />`-Tag abhängig ist, sollte <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ein zweites Mal aufgerufen werden. Beachten Sie, das sich diese Verhaltensänderung nur auf Apps mit der Zielplattform .NET Framework 4.6 oder höher auswirkt. Eine weitere Möglichkeit ist daher die Ausrichtung auf eine vorherige Version von .NET Framework, mit der das alte Verhalten genutzt werden kann.
+
+| name    | Wert       |
+|:--------|:------------|
+| Bereich   | Microsoft Edge        |
+| Version | 4.6         |
+| Typ    | Neuzuweisung |
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+- <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType>
+- <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType>

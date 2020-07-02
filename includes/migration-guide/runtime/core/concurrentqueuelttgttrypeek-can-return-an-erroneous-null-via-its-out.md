@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a93fbbd787aa50f080337a6170cf8f56d0d24e31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 02a15f6b9c02002b60c568b9e1d871af49744092
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622050"
 ---
-### <a name="concurrentqueuettrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue\<T>.TryPeek kann über einen out-Parameter einen fehlerhaften NULL-Wert zurückgeben
+### <a name="concurrentqueuelttgttrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue&lt;T&gt;.TryPeek kann über einen out-Parameter einen fehlerhaften NULL-Wert zurückgeben
 
-|   |   |
-|---|---|
-|Details|In einigen Multithreaded-Szenarien kann <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> „true“ zurückgeben, aber den Out-Parameter mit einem Nullwert füllen (anstelle des richtigen Werts).|
-|Vorschlag|Dieses Problem wurde in .NET Framework 4.5.1 behoben. Dieses Problem wird durch ein Upgrade auf diese .NET Framework-Version behoben.|
-|Bereich|Hauptversion|
+#### <a name="details"></a>Details
+
+In einigen Multithreaded-Szenarien kann <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=fullName> „true“ zurückgeben, aber den Out-Parameter mit einem Nullwert füllen (anstelle des richtigen Werts).
+
+#### <a name="suggestion"></a>Vorschlag
+
+Dieses Problem wurde in .NET Framework 4.5.1 behoben. Dieses Problem wird durch ein Upgrade auf diese .NET Framework-Version behoben.
+
+| name    | Wert       |
+|:--------|:------------|
+| Bereich   |Hauptversion|
 |Version|4.5|
-|Typ|Laufzeit|
-|Betroffene APIs|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
+|Typ|Laufzeit
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+-<xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|

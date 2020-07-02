@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 891c29b731214fb0028e960256b79cfc267d86b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5c949b79eefa68ea6f8d4ad27c716c438e24f170
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620213"
 ---
 ### <a name="deserialization-of-objects-across-appdomains-can-fail"></a>Deserialisierung von Objekten für mehrere Anwendungsdomänen kann einen Fehler auslösen
 
-|   |   |
-|---|---|
-|Details|In einigen Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen verwendet, löst der Versuch, Objekte im logischen Aufrufkontext über App-Domänen hinweg zu deserialisieren, eine Ausnahme aus.|
-|Vorschlag|Siehe [Entschärfung: Deserialisierung von Objekten über App-Domänen](~/docs/framework/migration-guide/mitigation-deserialization-of-objects-across-app-domains.md)|
-|Bereich|Microsoft Edge|
+#### <a name="details"></a>Details
+
+In einigen Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen verwendet, löst der Versuch, Objekte im logischen Aufrufkontext über App-Domänen hinweg zu deserialisieren, eine Ausnahme aus.
+
+#### <a name="suggestion"></a>Vorschlag
+
+Siehe [Entschärfung: Deserialisierung von Objekten über App-Domänen](~/docs/framework/migration-guide/mitigation-deserialization-of-objects-across-app-domains.md)
+
+| name    | Wert       |
+|:--------|:------------|
+| Bereich   |Microsoft Edge|
 |Version|4.5.1|
 |Typ|Laufzeit|

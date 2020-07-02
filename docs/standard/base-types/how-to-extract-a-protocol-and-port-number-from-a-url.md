@@ -1,6 +1,6 @@
 ---
 title: 'Gewusst wie: Extrahieren eines Protokolls und einer Portnummer aus einer URL'
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,16 +13,18 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: 48f2bf5c0d9af0a3fc286561ba978f86d1f11ac8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c1d45dbcb2916af86d645d7813594f2b278bb7c2
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803871"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Gewusst wie: Extrahieren eines Protokolls und einer Portnummer aus einer URL
 Das folgende Beispiel extrahiert ein Protokoll und eine Portnummer aus einer URL.  
-  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
 ## <a name="example"></a>Beispiel  
  Das Beispiel verwendet die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode, um das Protokoll, gefolgt von einem Doppelpunkt und der Portnummer, zurückzugeben.  
   

@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: e0846ebde07d1932c8344f2b1cce1ea398440ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f123f37d3f1be7d5b6805ac58529c1872a81f20b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620202"
 ---
 ### <a name="compiler-support-for-type-forwarding-when-multi-targeting-mscorlib"></a>Compilerunterstützung für Typweiterleitung bei Festlegung von Zielversionen für das mscorlib-Element
 
-|   |   |
-|---|---|
-|Details|Durch ein neues CodeDOM-Feature kann ein Compiler anhand der Zielversion von mscorlib.dll anstelle der .NET Framework 4.5-Version von mscorlib.dll kompilieren.|
-|Bereich|Microsoft Edge|
+#### <a name="details"></a>Details
+
+Durch ein neues CodeDOM-Feature kann ein Compiler anhand der Zielversion von mscorlib.dll anstelle der .NET Framework 4.5-Version von mscorlib.dll kompilieren.
+
+| name    | Wert       |
+|:--------|:------------|
+| Bereich   |Microsoft Edge|
 |Version|4.5|
 |Typ|Laufzeit|

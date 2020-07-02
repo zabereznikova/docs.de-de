@@ -1,19 +1,21 @@
 ---
 title: Bereitstellen des .NET für Apache Spark-Workers und für benutzerdefinierte Funktionsbinärdateien
 description: Erfahren Sie, wie Sie den .NET für Apache Spark-Worker und benutzerdefinierte Funktionsbinärdateien bereitstellen.
-ms.date: 01/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617716"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Bereitstellen des .NET für Apache Spark-Workers und für benutzerdefinierte Funktionsbinärdateien
 
 Diese Anleitung enthält allgemeine Anweisungen für die Bereitstellung des .NET für Apache Spark-Workers und für benutzerdefinierte Funktionsbinärdateien. Sie lernen, welche Umgebungsvariablen eingerichtet werden müssen, sowie einige häufig verwendete Parameter zum Starten von Anwendungen mit `spark-submit`.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="configurations"></a>Konfigurationen
 Die Konfigurationen zeigen die allgemeinen Umgebungsvariablen und Parametereinstellungen, um den .NET für Apache Spark-Worker und benutzerdefinierte Funktionsbinärdateien bereitzustellen.

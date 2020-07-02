@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 0bfaa88ea3a492cbf8426db45efa9322b8655169
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 57f68c10d5d1edc9b8deaca2f4fe7edda2dd69b0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620393"
 ---
 ### <a name="systemservicemodelwebwebservicehost-object-no-longer-adds-a-default-endpoint"></a>Das System.ServiceModel.Web.WebServiceHost-Objekt fügt keinen Standardendpunkt mehr hinzu
 
-|   |   |
-|---|---|
-|Details|Das <xref:System.ServiceModel.Web.WebServiceHost>-Objekt fügt keinen standardmäßigen Endpunkt mehr hinzu, wenn ein expliziter Endpunkt vom Anwendungscode hinzugefügt wurde.|
-|Vorschlag|Wenn Benutzer erwarten, dass sie eine Verbindung mit einem Standardendpunkt herstellen können und andere explizite Endpunkte zu <xref:System.ServiceModel.Web.WebServiceHost?displayProperty=name> hinzugefügt wurden, sollten (über <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints?displayProperty=name>) auch die Standardendpunkte explizit hinzugefügt werden.|
-|Bereich|Gering|
+#### <a name="details"></a>Details
+
+Das <xref:System.ServiceModel.Web.WebServiceHost>-Objekt fügt keinen standardmäßigen Endpunkt mehr hinzu, wenn ein expliziter Endpunkt vom Anwendungscode hinzugefügt wurde.
+
+#### <a name="suggestion"></a>Vorschlag
+
+Wenn Benutzer erwarten, dass sie eine Verbindung mit einem Standardendpunkt herstellen können und andere explizite Endpunkte zu <xref:System.ServiceModel.Web.WebServiceHost?displayProperty=fullName> hinzugefügt wurden, sollten (über <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints?displayProperty=fullName>) auch die Standardendpunkte explizit hinzugefügt werden.
+
+| name    | Wert       |
+|:--------|:------------|
+| Bereich   |Gering|
 |Version|4.5|
-|Typ|Laufzeit|
-|Betroffene APIs|<ul><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.String)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.String,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.ServiceModel.Description.ServiceEndpoint)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.String)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.String,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)?displayProperty=nameWithType></li></ul>|
+|Typ|Laufzeit
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+-<xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.String)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.String,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.ServiceModel.Description.ServiceEndpoint)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.String)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.String,System.Uri)?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)?displayProperty=nameWithType></li></ul>|

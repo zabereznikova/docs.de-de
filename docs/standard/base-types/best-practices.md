@@ -1,7 +1,7 @@
 ---
 title: Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 description: Erfahren Sie, wie Sie effiziente, effektive reguläre Ausdrücke in .NET erstellen.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,18 +10,20 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ecfe0cca59b50da9231709dbd9a2de9b56391d4f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 30d4a8f6ddc4ae1f83f5c0802e872661cbe6c6f1
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802925"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 
 Die Engine für reguläre Ausdrücke in .NET ist ein leistungsstarkes Tool mit vollem Funktionsumfang, das Texte auf Grundlage von Musterübereinstimmungen verarbeitet, anstatt Literaltext zu vergleichen und nach Übereinstimmungen mit diesem zu suchen. In den meisten Fällen wird die Suche nach Musterabgleichen schnell und effizient ausgeführt. Gelegentlich kann die Engine für reguläre Ausdrücke jedoch sehr langsam wirken. In Extremfällen kann auch der Eindruck entstehen, dass das Modul nicht mehr reagiert, wenn für die Verarbeitung relativ kleiner Eingaben mehrere Stunden oder sogar Tage benötigt werden.
 
 In diesem Thema werden einige Best Practices erläutert, mit denen Entwickler sicherstellen können, dass ihre regulären Ausdrücke optimale Leistung erzielen.
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="consider-the-input-source"></a>Bedenken der Eingabequelle
 
