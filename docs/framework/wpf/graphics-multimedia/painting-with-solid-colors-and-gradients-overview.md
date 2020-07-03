@@ -1,5 +1,6 @@
 ---
 title: Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen
+description: Erfahren Sie, wie Sie-Objekte verwenden, um mit voll Tonfarben, linearen Farbverläufen und radialen Farbverläufen in Windows Presentation Foundation (WPF) zu zeichnen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - solid colors [WPF], painting with
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: fb6b7da4be46f361b263c573339b1a6b73ef24bd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 957593d758afda06db106c99f6695294d4f84f73
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855885"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853671"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen
 
-In diesem Thema <xref:System.Windows.Media.SolidColorBrush>wird beschrieben, wie Sie mit <xref:System.Windows.Media.RadialGradientBrush> -, <xref:System.Windows.Media.LinearGradientBrush>-und-Objekten mit voll Tonfarben, linearen Farbverläufen und radialen Farbverläufen zeichnen können.
+In diesem Thema wird beschrieben, wie Sie <xref:System.Windows.Media.SolidColorBrush> <xref:System.Windows.Media.LinearGradientBrush> mit-,-und- <xref:System.Windows.Media.RadialGradientBrush> Objekten mit voll Tonfarben, linearen Farbverläufen und radialen Farbverläufen zeichnen können.
 
 <a name="solidcolor"></a>
 
 ## <a name="painting-an-area-with-a-solid-color"></a>Zeichnen einen Bereich mit einer Volltonfarbe
 
-Einer der gängigsten Vorgänge auf einer beliebigen Plattform ist das Zeichnen eines Bereichs mit einem soliden <xref:System.Windows.Media.Color>. Zum Ausführen dieser Aufgabe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt die <xref:System.Windows.Media.SolidColorBrush> -Klasse bereit. In den folgenden Abschnitten werden die verschiedenen Methoden zum Zeichnen mit <xref:System.Windows.Media.SolidColorBrush>einem beschrieben.
+Einer der gängigsten Vorgänge auf einer beliebigen Plattform ist das Zeichnen eines Bereichs mit einem soliden <xref:System.Windows.Media.Color> . Zum Ausführen dieser Aufgabe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt die- <xref:System.Windows.Media.SolidColorBrush> Klasse bereit. In den folgenden Abschnitten werden die verschiedenen Methoden zum Zeichnen mit einem beschrieben <xref:System.Windows.Media.SolidColorBrush> .
 
 <a name="solidcolorinxaml"></a>
 
@@ -32,15 +33,15 @@ Einer der gängigsten Vorgänge auf einer beliebigen Plattform ist das Zeichnen 
 
 Zum Zeichnen eines Bereichs mit einer Volltonfarbe in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], verwenden Sie eine der folgenden Optionen.
 
-- Wählen Sie einen vordefinierten Volltonfarbenpinsel über den Namen aus.  Beispielsweise können Sie eine Schaltfläche <xref:System.Windows.Controls.Control.Background%2A> auf "Red" oder "MediumBlue" festlegen.  Eine Liste mit anderen vordefinierten Pinsel Farben finden Sie in den statischen Eigenschaften <xref:System.Windows.Media.Brushes> der-Klasse. Nachfolgend finden Sie ein Beispiel:
+- Wählen Sie einen vordefinierten Volltonfarbenpinsel über den Namen aus.  Beispielsweise können Sie eine Schaltfläche <xref:System.Windows.Controls.Control.Background%2A> auf "Red" oder "MediumBlue" festlegen.  Eine Liste mit anderen vordefinierten Pinsel Farben finden Sie in den statischen Eigenschaften der- <xref:System.Windows.Media.Brushes> Klasse. Im Folgenden finden Sie ein Beispiel.
 
   [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]
 
-- Wählen Sie eine Farbe aus der 32-Bit-Farbpalette aus, indem Sie die Anteile von Rot, Grün und Blau festlegen, aus denen sich eine Volltonfarbe zusammensetzt.  Das Format zum Festlegen einer Farbe aus der 32-Bit-Palette ist „ *#rrggbb*“, wobei mit dem zweistelligen Hexadezimalwert *rr* der relative Anteil von Rot, mit *gg* der Anteil von Grün und *bb* der Anteil von Blau festgelegt wird.  Darüber hinaus kann die Farbe im Format „#*Aarrggbb*“ angegeben werden, wobei *aa* für den *Alpha*wert, also die Transparenz der Farbe, steht. Dieser Ansatz ermöglicht Ihnen die Erstellung von Farben, die teilweise transparent sind.  Im folgenden Beispiel <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button> wird der eines mit hexadezimal Schreibweise auf vollständig deckendes Rot festgelegt.
+- Wählen Sie eine Farbe aus der 32-Bit-Farbpalette aus, indem Sie die Anteile von Rot, Grün und Blau festlegen, aus denen sich eine Volltonfarbe zusammensetzt.  Das Format zum Festlegen einer Farbe aus der 32-Bit-Palette ist „*#rrggbb*“, wobei mit dem zweistelligen Hexadezimalwert *rr* der relative Anteil von Rot, mit *gg* der Anteil von Grün und *bb* der Anteil von Blau festgelegt wird.  Darüber hinaus kann die Farbe im Format „#*Aarrggbb*“ angegeben werden, wobei *aa* für den *Alpha*wert, also die Transparenz der Farbe, steht. Dieser Ansatz ermöglicht Ihnen die Erstellung von Farben, die teilweise transparent sind.  Im folgenden Beispiel <xref:System.Windows.Controls.Control.Background%2A> wird der eines <xref:System.Windows.Controls.Button> mit hexadezimal Schreibweise auf vollständig deckendes Rot festgelegt.
 
   [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]
 
-- Verwenden Sie die Eigenschaft Tagsyntax, <xref:System.Windows.Media.SolidColorBrush>um eine zu beschreiben. Diese Syntax ist ausführlicher, jedoch können Sie zusätzliche Einstellungen, z.B. die Deckkraft des Pinsels, angeben. Im folgenden Beispiel werden die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaften von zwei <xref:System.Windows.Controls.Button> -Elementen auf vollständig deckendes Rot festgelegt. Die Farbe des ersten Pinsels wird mit einem vordefinierten Farbnamen beschrieben. Die Farbe des zweiten Pinsels wird mithilfe der Hexadezimalschreibweise beschrieben.
+- Verwenden Sie die Eigenschaft Tagsyntax, um eine zu beschreiben <xref:System.Windows.Media.SolidColorBrush> . Diese Syntax ist ausführlicher, jedoch können Sie zusätzliche Einstellungen, z.B. die Deckkraft des Pinsels, angeben. Im folgenden Beispiel <xref:System.Windows.Controls.Control.Background%2A> werden die Eigenschaften von zwei- <xref:System.Windows.Controls.Button> Elementen auf vollständig deckendes Rot festgelegt. Die Farbe des ersten Pinsels wird mit einem vordefinierten Farbnamen beschrieben. Die Farbe des zweiten Pinsels wird mithilfe der Hexadezimalschreibweise beschrieben.
 
   [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]
 
@@ -50,17 +51,17 @@ Zum Zeichnen eines Bereichs mit einer Volltonfarbe in [!INCLUDE[TLA2#tla_xaml](.
 
 Zum Zeichnen eines Bereichs mit einer Volltonfarbe in Code, verwenden Sie eine der folgenden Optionen.
 
-- Verwenden Sie eines der vordefinierten Pinsel, die von <xref:System.Windows.Media.Brushes> der-Klasse bereitgestellt werden. Im folgenden Beispiel <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button> wird der eines auf <xref:System.Windows.Media.Brushes.Red%2A>festgelegt.
+- Verwenden Sie eines der vordefinierten Pinsel, die von der-Klasse bereitgestellt werden <xref:System.Windows.Media.Brushes> . Im folgenden Beispiel <xref:System.Windows.Controls.Control.Background%2A> wird der eines <xref:System.Windows.Controls.Button> auf festgelegt <xref:System.Windows.Media.Brushes.Red%2A> .
 
   [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]
 
-- Erstellen Sie <xref:System.Windows.Media.SolidColorBrush> einen, und <xref:System.Windows.Media.SolidColorBrush.Color%2A> legen Sie seine <xref:System.Windows.Media.Color> -Eigenschaft mithilfe einer-Struktur fest Sie können eine vordefinierte Farbe aus der <xref:System.Windows.Media.Colors> -Klasse verwenden, oder Sie <xref:System.Windows.Media.Color> können mithilfe der <xref:System.Windows.Media.Color.FromArgb%2A> statischen-Methode ein erstellen.
+- Erstellen Sie einen, <xref:System.Windows.Media.SolidColorBrush> und legen Sie seine- <xref:System.Windows.Media.SolidColorBrush.Color%2A> Eigenschaft mithilfe einer- <xref:System.Windows.Media.Color> Struktur fest Sie können eine vordefinierte Farbe aus der-Klasse verwenden, <xref:System.Windows.Media.Colors> oder Sie können <xref:System.Windows.Media.Color> mithilfe der statischen-Methode ein erstellen <xref:System.Windows.Media.Color.FromArgb%2A> .
 
-  Im folgenden Beispiel wird gezeigt, wie die <xref:System.Windows.Media.SolidColorBrush.Color%2A> -Eigenschaft <xref:System.Windows.Media.SolidColorBrush> eines mit einer vordefinierten Farbe festgelegt wird.
+  Im folgenden Beispiel wird gezeigt, wie die- <xref:System.Windows.Media.SolidColorBrush.Color%2A> Eigenschaft eines <xref:System.Windows.Media.SolidColorBrush> mit einer vordefinierten Farbe festgelegt wird.
 
   [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedColor1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedcolor1csharp)]
 
-Mit dem <xref:System.Windows.Media.Color.FromArgb%2A> statischen können Sie die Werte Alpha, rot, grün und blau der Farbe angeben. Der normale Bereich für jeden der folgenden Werte ist 0 bis 255. Beispielsweise gibt der Alphawert 0 an, dass eine Farbe völlig transparent, während der Wert 255 angibt, dass sie vollständig deckend ist. Entsprechend gibt der Wert 0 für die Farbe Rot an, dass eine Farbe keinen Rotanteil hat, während der Wert 255 angibt, dass eine Farbe den maximalen Rotanteil aufweist.  Im folgenden Beispiel wird die Farbe eines Pinsels beschrieben, indem rote, grüne und blaue Alphawert angegeben werden.
+Mit dem statischen <xref:System.Windows.Media.Color.FromArgb%2A> können Sie die Werte Alpha, rot, grün und blau der Farbe angeben. Der normale Bereich für jeden der folgenden Werte ist 0 bis 255. Beispielsweise gibt der Alphawert 0 an, dass eine Farbe völlig transparent, während der Wert 255 angibt, dass sie vollständig deckend ist. Entsprechend gibt der Wert 0 für die Farbe Rot an, dass eine Farbe keinen Rotanteil hat, während der Wert 255 angibt, dass eine Farbe den maximalen Rotanteil aufweist.  Im folgenden Beispiel wird die Farbe eines Pinsels beschrieben, indem rote, grüne und blaue Alphawert angegeben werden.
 
 [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushfromArgbExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushfromargbexample1csharp)]
 
@@ -70,13 +71,13 @@ Weitere Methoden zum Angeben von Farben finden Sie im <xref:System.Windows.Media
 
 ## <a name="painting-an-area-with-a-gradient"></a>Zeichnen eines Bereichs mit einem Farbverlauf
 
-Ein Farbverlaufspinsel zeichnet einen Bereich mit mehreren Farben, die sich auf einer Achse miteinander vermischen. Sie können Farbverlaufspinsel verwenden, um Eindrücke von Licht und Schatten zu erzeugen und den Steuerelementen ein dreidimensionales Aussehen zu verleihen. Sie können Sie auch verwenden, um Glas, Chrom, Wasser und andere glatte Oberflächen zu simulieren.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]stellt zwei Typen von Farbverlaufs <xref:System.Windows.Media.LinearGradientBrush> Pinsel <xref:System.Windows.Media.RadialGradientBrush>bereit: und.
+Ein Farbverlaufspinsel zeichnet einen Bereich mit mehreren Farben, die sich auf einer Achse miteinander vermischen. Sie können Farbverlaufspinsel verwenden, um Eindrücke von Licht und Schatten zu erzeugen und den Steuerelementen ein dreidimensionales Aussehen zu verleihen. Sie können Sie auch verwenden, um Glas, Chrom, Wasser und andere glatte Oberflächen zu simulieren.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]stellt zwei Typen von Farbverlaufs Pinsel bereit: <xref:System.Windows.Media.LinearGradientBrush> und <xref:System.Windows.Media.RadialGradientBrush> .
 
 <a name="lineargradientbrush"></a>
 
 ## <a name="linear-gradients"></a>Lineare Farbverläufe
 
-Ein <xref:System.Windows.Media.LinearGradientBrush> zeichnet einen Bereich mit einem Farbverlauf, der entlang einer Linie definiert ist, der *Farbverlaufs Achse*.  Mithilfe <xref:System.Windows.Media.GradientStop> von-Objekten geben Sie die Farben des Farbverlaufs und deren Position entlang der Farbverlaufs Achse an.  Sie können auch die Farbverlaufsachse ändern. Dies ermöglicht Ihnen, horizontale und vertikale Farbverläufe zu erstellen und die Richtung des Farbverlaufs umzukehren. Die Farbverlaufsachse wird im nächsten Abschnitt beschrieben. Standardmäßig wird ein diagonaler Farbverlauf erstellt.
+Ein <xref:System.Windows.Media.LinearGradientBrush> zeichnet einen Bereich mit einem Farbverlauf, der entlang einer Linie definiert ist, der *Farbverlaufs Achse*.  Mithilfe von-Objekten geben Sie die Farben des Farbverlaufs und deren Position entlang der Farbverlaufs Achse an <xref:System.Windows.Media.GradientStop> .  Sie können auch die Farbverlaufsachse ändern. Dies ermöglicht Ihnen, horizontale und vertikale Farbverläufe zu erstellen und die Richtung des Farbverlaufs umzukehren. Die Farbverlaufsachse wird im nächsten Abschnitt beschrieben. Standardmäßig wird ein diagonaler Farbverlauf erstellt.
 
 Das folgende Beispiel zeigt den Code, der einen linearen Farbverlauf mit vier Farben erstellt.
 
@@ -86,20 +87,20 @@ Das folgende Beispiel zeigt den Code, der einen linearen Farbverlauf mit vier Fa
 
 Dieser Code erzeugt den folgenden Farbverlauf:
 
-![Ein diagonaler, linearer Farbverlauf](./media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "Wcpsdk_graphicsmm_diaglgradient_nolabel")
+![Ein diagonaler, linearer Farbverlauf](./media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")
 
 > [!NOTE]
-> Die Farbverlaufs Beispiele in diesem Thema verwenden das Standard Koordinatensystem zum Festlegen von Startpunkten und Endpunkten. Das Standard Koordinatensystem ist relativ zu einem umgebenden Feld: der Wert 0 gibt 0 Prozent des umgebenden Felds und 1 100 Prozent des umgebenden Felds an. Sie können dieses Koordinatensystem ändern, indem Sie <xref:System.Windows.Media.GradientBrush.MappingMode%2A> die-Eigenschaft auf <xref:System.Windows.Media.BrushMappingMode.Absolute>den Wert festlegen. Ein absolutes Koordinatensystem ist nicht relativ zu einem umgebenden Feld. Werte werden direkt im lokalen Raum interpretiert.
+> Die Farbverlaufs Beispiele in diesem Thema verwenden das Standard Koordinatensystem zum Festlegen von Startpunkten und Endpunkten. Das Standardkoordinatensystem ist relativ zu einem umgebenden Feld: 0 gibt 0 Prozent des umgebenden Felds und 1 gibt 100 Prozent des umgebenden Felds an. Sie können dieses Koordinatensystem ändern, indem Sie die- <xref:System.Windows.Media.GradientBrush.MappingMode%2A> Eigenschaft auf den Wert festlegen <xref:System.Windows.Media.BrushMappingMode.Absolute> . Ein absolutes Koordinatensystem ist nicht relativ zu einem umgebenden Feld. Werte werden direkt im lokalen Raum interpretiert.
 
-Der <xref:System.Windows.Media.GradientStop> ist der Grundbaustein eines Farbverlaufs Pinsels.  Ein Farbverlaufs Ende <xref:System.Windows.Media.GradientStop.Color%2A> gibt ein <xref:System.Windows.Media.GradientStop.Offset%2A> an einem entlang der Farbverlaufs Achse an.
+Der <xref:System.Windows.Media.GradientStop> ist der Grundbaustein eines Farbverlaufs Pinsels.  Ein Farbverlaufs Ende gibt ein <xref:System.Windows.Media.GradientStop.Color%2A> an einem <xref:System.Windows.Media.GradientStop.Offset%2A> entlang der Farbverlaufs Achse an.
 
-- Die- <xref:System.Windows.Media.GradientStop.Color%2A> Eigenschaft des Farbverlaufs Stopps gibt die Farbe des Farbverlaufs Stopps an. Sie können die Farbe festlegen, indem Sie eine vordefinierte Farbe (die <xref:System.Windows.Media.Colors> von der-Klasse bereitgestellt wird) verwenden oder ScRGB-oder ARGB-Werte angeben. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] können Sie auch die Hexadezimalschreibweise verwenden, um eine Farbe zu beschreiben. Weitere Informationen finden Sie in der <xref:System.Windows.Media.Color> -Struktur.
+- Die-Eigenschaft des Farbverlaufs Stopps <xref:System.Windows.Media.GradientStop.Color%2A> gibt die Farbe des Farbverlaufs Stopps an. Sie können die Farbe festlegen, indem Sie eine vordefinierte Farbe (die von der-Klasse bereitgestellt wird <xref:System.Windows.Media.Colors> ) verwenden oder ScRGB-oder ARGB-Werte angeben. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] können Sie auch die Hexadezimalschreibweise verwenden, um eine Farbe zu beschreiben. Weitere Informationen finden Sie in der- <xref:System.Windows.Media.Color> Struktur.
 
-- Die- <xref:System.Windows.Media.GradientStop.Offset%2A> Eigenschaft des Farbverlaufs Stopps gibt die Position der Farbe des Farbverlaufs Stopps auf der Farbverlaufs Achse an. Der Offset liegt <xref:System.Double> zwischen 0 und 1. Je näher ist Offsetwert des Farbverlaufsstopps bei 0 liegt, desto näher befindet sich die Farbe am Beginn des Farbverlaufs. Je näher ist Offsetwert des Farbverlaufsstopps bei 1 liegt, desto näher befindet sich die Farbe am Ende des Farbverlaufs.
+- Die-Eigenschaft des Farbverlaufs Stopps <xref:System.Windows.Media.GradientStop.Offset%2A> gibt die Position der Farbe des Farbverlaufs Stopps auf der Farbverlaufs Achse an. Der Offset liegt <xref:System.Double> zwischen 0 und 1. Je näher ist Offsetwert des Farbverlaufsstopps bei 0 liegt, desto näher befindet sich die Farbe am Beginn des Farbverlaufs. Je näher ist Offsetwert des Farbverlaufsstopps bei 1 liegt, desto näher befindet sich die Farbe am Ende des Farbverlaufs.
 
-Die Farbe jedes Punkts zwischen Farbverlaufsstopps wird als eine Kombination der Farben, die durch die zwei umschließenden Farbverlaufsstopps angegeben werden, linear interpoliert. Die folgende Abbildung zeigt die im vorherigen Beispiel erstellten Farbverlaufsstopps. Die Kreise markieren die Position der Farbverlaufsstopps, und eine gestrichelte Linie zeigt die Farbverlaufsachse an.
+Die Farbe der einzelnen Punkte zwischen den Farbverlaufsstopps wird linear als eine Kombination der von den beiden umgebenden Farbverlaufsstopps angegebenen Farben interpoliert. Die folgende Abbildung zeigt die im vorherigen Beispiel erstellten Farbverlaufsstopps. Die Kreise markieren die Position der Farbverlaufsstopps, und eine gestrichelte Linie zeigt die Farbverlaufsachse an.
 
-![Farbverlaufstopps in einem linearen Farbverlauf](./media/wcpsdk-graphicsmm-4gradientstops.png "Wcpsdk_graphicsmm_4gradientstops")
+![Farbverlaufstopps in einem linearen Farbverlauf](./media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")
 
 Der erste Farbverlaufsstopp gibt die Farbe Gelb bei einem Offset von `0.0` an.  Der zweite Farbverlaufsstopp gibt die Farbe Rot bei einem Offset von `0.25` an.  Die Farbe der Punkte zwischen diesen zwei Stopps ändert sich allmählich von Gelb zu Rot, wenn Sie sich von links nach rechts auf der Farbverlaufsachse bewegen.  Der dritte Farbverlaufsstopp gibt die Farbe Blau bei einem Offset von `0.75` an.  Die Farbe der Punkte zwischen dem zweiten und dritten Farbverlaufsstopp ändert sich allmählich von Rot zu Blau. Der vierte Farbverlaufsstopp gibt die Farbe Gelbgrün bei einem Offset von `1.0` an. Die Farbe der Punkte zwischen dem dritten und vierten Farbverlaufsstopp ändert sich allmählich von Blau zu Gelbgrün.
 
@@ -107,13 +108,13 @@ Der erste Farbverlaufsstopp gibt die Farbe Gelb bei einem Offset von `0.0` an.  
 
 ### <a name="the-gradient-axis"></a>Die Farbverlaufsachse
 
-Wie bereits erwähnt, befinden sich die Farbverlaufsstopps eines Pinsel mit linearem Farbverlauf auf einer Linie, der Farbverlaufsachse. Sie können die Ausrichtung und die Größe der Linie mithilfe der-und <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> -Eigenschaften des Pinsels ändern. Durch die Bearbeitung des <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> Pinsels <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>und können Sie horizontale und vertikale Farbverläufe erstellen, die Richtung des Farbverlaufs umkehren, die Verlaufs Verteilung und vieles mehr umkehren.
+Wie bereits erwähnt, befinden sich die Farbverlaufsstopps eines Pinsel mit linearem Farbverlauf auf einer Linie, der Farbverlaufsachse. Sie können die Ausrichtung und die Größe der Linie mithilfe der-und-Eigenschaften des Pinsels ändern <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> . Durch die Bearbeitung des Pinsels <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> können Sie horizontale und vertikale Farbverläufe erstellen, die Richtung des Farbverlaufs umkehren, die Verlaufs Verteilung und vieles mehr umkehren.
 
-Standardmäßig sind die und <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> der lineare Farbverlaufs Pinsel relativ zum Bereich, der gezeichnet wird. Der Punkt (0,0) stellt die obere linke Ecke und der Punkt (1,1) die untere rechte Ecke des Bereichs dar, der gezeichnet wird. Der Standard <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> Wert <xref:System.Windows.Media.LinearGradientBrush> von ist (0,0), und der Standard <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Wert ist (1,1). Dadurch wird ein diagonaler Farbverlauf erstellt, beginnend mit der linken oberen Ecke und der Erweiterung auf die untere rechte Ecke des gezeichneten Bereichs. Die folgende Abbildung zeigt die Farbverlaufs Achse eines linearen Farbverlaufs <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> Pinsels mit der Standardeinstellung und. <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>
+Standardmäßig sind die und der lineare Farbverlaufs Pinsel <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> relativ zum Bereich, der gezeichnet wird. Der Punkt (0,0) stellt die obere linke Ecke und der Punkt (1,1) die untere rechte Ecke des Bereichs dar, der gezeichnet wird. Der Standardwert <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> von <xref:System.Windows.Media.LinearGradientBrush> ist (0,0), und der Standardwert <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> ist (1,1). Dadurch wird ein diagonaler Farbverlauf erstellt, beginnend mit der linken oberen Ecke und der Erweiterung auf die untere rechte Ecke des gezeichneten Bereichs. Die folgende Abbildung zeigt die Farbverlaufs Achse eines linearen Farbverlaufs Pinsels mit der Standardeinstellung <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> .
 
-![Farbverlaufsachse für einen diagonalen linearen Farbverlauf](./media/wcpsdk-graphicsmm-diagonalgradientaxis.png "Wcpsdk_graphicsmm_diagonalgradientaxis")
+![Farbverlaufachse für einen diagonalen linearen Farbverlauf](./media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk_graphicsmm_diagonalgradientaxis")
 
-Im folgenden Beispiel wird gezeigt, wie ein horizontaler Farbverlauf erstellt wird, <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> indem <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>der Pinsel und angegeben werden. Beachten Sie, dass die Farbverlaufs Stopps mit denen in den vorherigen Beispielen übereinstimmen. durch einfaches ändern <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> von und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>wurde der Farbverlauf von diagonal in horizontal geändert.
+Im folgenden Beispiel wird gezeigt, wie ein horizontaler Farbverlauf erstellt wird, indem der Pinsel und angegeben werden <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> . Beachten Sie, dass die Farbverlaufs Stopps mit denen in den vorherigen Beispielen übereinstimmen. durch einfaches Ändern von <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und wurde <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> der Farbverlauf von diagonal in horizontal geändert.
 
 [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]
 
@@ -121,7 +122,7 @@ Im folgenden Beispiel wird gezeigt, wie ein horizontaler Farbverlauf erstellt wi
 
 Die folgende Abbildung zeigt den erstellten Farbverlauf. Die Farbverlaufsachse wird mit einer gestrichelten Linie, und die Farbverlaufsstopps mit Kreisen gekennzeichnet.
 
-![Farbverlaufsachse für einen horizontalen linearen Farbverlauf](./media/wcpsdk-graphicsmm-horizontalgradient.jpg "Wcpsdk_graphicsmm_horizontalgradient")
+![Farbverlaufachse für einen horizontalen linearen Farbverlauf](./media/wcpsdk-graphicsmm-horizontalgradient.jpg "wcpsdk_graphicsmm_horizontalgradient")
 
 Das nächste Beispiel veranschaulicht die Erstellung eines vertikalen Farbverlaufs.
 
@@ -131,13 +132,13 @@ Das nächste Beispiel veranschaulicht die Erstellung eines vertikalen Farbverlau
 
 Die folgende Abbildung zeigt den erstellten Farbverlauf. Die Farbverlaufsachse wird mit einer gestrichelten Linie, und die Farbverlaufsstopps mit Kreisen gekennzeichnet.
 
-![Farbverlaufsachse für einen vertikalen Farbverlauf](./media/wcpsdk-graphicsmm-verticalgradient.jpg "Wcpsdk_graphicsmm_verticalgradient")
+![Farbverlaufachse für einen vertikalen Farbverlauf](./media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")
 
 <a name="radialgradients"></a>
 
 ## <a name="radial-gradients"></a>Strahlenförmige Farbverläufe
 
-Wie bei <xref:System.Windows.Media.LinearGradientBrush>einem zeichnet <xref:System.Windows.Media.RadialGradientBrush> ein Bereich mit Farben, die sich entlang einer Achse vermischen. In den vorherigen Beispielen wurde gezeigt, dass die Achse eines Pinsels mit linearem Farbverlauf eine gerade Linie ist. Die Achse eines Pinsels mit strahlenförmigem Farbverlauf wird durch einen Kreis definiert. Seine Farben „strahlen“ von seinem Ursprung nach außen.
+Wie <xref:System.Windows.Media.LinearGradientBrush> <xref:System.Windows.Media.RadialGradientBrush> bei einem zeichnet ein Bereich mit Farben, die sich entlang einer Achse vermischen. In den vorherigen Beispielen wurde gezeigt, dass die Achse eines Pinsels mit linearem Farbverlauf eine gerade Linie ist. Die Achse eines Pinsels mit strahlenförmigem Farbverlauf wird durch einen Kreis definiert. Seine Farben „strahlen“ von seinem Ursprung nach außen.
 
 Im folgenden Beispiel wird ein Pinsel mit strahlenförmigem Farbverlauf verwendet, um das Innere eines Rechtecks zu zeichnen.
 
@@ -147,11 +148,11 @@ Im folgenden Beispiel wird ein Pinsel mit strahlenförmigem Farbverlauf verwende
 
 Die folgende Abbildung zeigt den im vorherigen Beispiel erstellten Farbverlauf. Die Farbverlaufsstopps des Pinsels wurden hervorgehoben. Beachten Sie, dass trotz der unterschiedlichen Ergebnisse die Farbverlaufsstopps in diesem Beispiel identisch mit den Farbverlaufsstopps in den vorherigen Beispielen mit linearem Farbverlauf sind.
 
-![Farbverlaufstopps in einem radialen Farbverlauf](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "Wcpsdk_graphicsmm_4gradientstops_rg")
+![Farbverlaufstopps in einem radialen Farbverlauf](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")
 
-Der <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> gibt den Startpunkt der Farbverlaufs Achse eines radialen Farbverlaufs an. Die Farbverlaufsachse strahlt vom Farbverlaufsursprung zum Farbverlaufskreis aus. Der Farbverlaufs Kreis eines Pinsels wird <xref:System.Windows.Media.RadialGradientBrush.Center%2A>durch <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>seine- <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> ,-und-Eigenschaften definiert.
+Der <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> gibt den Startpunkt der Farbverlaufs Achse eines radialen Farbverlaufs an. Die Farbverlaufsachse strahlt vom Farbverlaufsursprung zum Farbverlaufskreis aus. Der Farbverlaufs Kreis eines Pinsels wird durch seine- <xref:System.Windows.Media.RadialGradientBrush.Center%2A> , <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A> -und- <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> Eigenschaften definiert.
 
-Die folgende Abbildung zeigt mehrere radiale Farbverläufe <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A>mit <xref:System.Windows.Media.RadialGradientBrush.Center%2A>unterschiedlichen Einstellungen <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> für,, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>und.
+Die folgende Abbildung zeigt mehrere radiale Farbverläufe mit unterschiedlichen <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> Einstellungen für, <xref:System.Windows.Media.RadialGradientBrush.Center%2A> , <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A> und <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> .
 
 ![RadialGradientBrush-Einstellungen](./media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii") RadialGradientBrush mit unterschiedlichen GradientOrigin-, Center-, radiingx-und radiey-Einstellungen.
 
@@ -159,13 +160,13 @@ Die folgende Abbildung zeigt mehrere radiale Farbverläufe <xref:System.Windows.
 
 ## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>Angeben transparenter oder teilweise transparenter Farbverlaufsstopps
 
-Da Farbverlaufs Stopps keine Deckkraft Eigenschaft bereitstellen, müssen Sie den Alphakanal der Farben mithilfe der ARGB-hexadezimal Schreibweise <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> in Markup angeben oder die-Methode verwenden, um Verlaufs Stopps zu erstellen, die transparent oder teilweise transparent sind. In den folgenden Abschnitten wird erläutert, wie teilweise transparente Farbverlaufsstopps in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und Code erstellt werden.
+Da Farbverlaufs Stopps keine Deckkraft Eigenschaft bereitstellen, müssen Sie den Alphakanal der Farben mithilfe der ARGB-hexadezimal Schreibweise in Markup angeben oder die- <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> Methode verwenden, um Verlaufs Stopps zu erstellen, die transparent oder teilweise transparent sind. In den folgenden Abschnitten wird erläutert, wie teilweise transparente Farbverlaufsstopps in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und Code erstellt werden.
 
 <a name="argbsyntax"></a>
 
 ### <a name="specifying-color-opacity-in-xaml"></a>Angeben der Deckkraft einer Farbe in „XAML“
 
-In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]verwenden Sie die hexadezimale Notation ARGB, um die Deckkraft einzelner Farben anzugeben. Bei der ARGB-hexadezimal Notation wird die folgende Syntax verwendet:
+In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] verwenden Sie die hexadezimale Notation ARGB, um die Deckkraft einzelner Farben anzugeben. Bei der ARGB-hexadezimal Notation wird die folgende Syntax verwendet:
 
 `#` **aa** *rrggbb*
 
@@ -177,17 +178,17 @@ In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]verwen
 
 ### <a name="specifying-color-opacity-in-code"></a>Angeben der Deckkraft einer Farbe in Code
 
-Wenn Sie Code verwenden, können <xref:System.Windows.Media.Color.FromArgb%2A> Sie mit der statischen-Methode einen Alphawert angeben, wenn Sie eine Farbe erstellen. Die-Methode benötigt vier Parameter vom <xref:System.Byte>Typ. Der erste Parameter gibt den Alphakanal der Farbe an. Die anderen drei Parameter geben die Rot-, Grün- und Blauwerte der Farbe an. Jeder Wert sollte zwischen einschließlich 0 und 255 liegen. Beispielsweise gibt der Alphawert 0 an, dass eine Farbe völlig transparent ist, während der Wert 255 angibt, dass sie vollständig deckend ist. Im folgenden Beispiel wird die <xref:System.Windows.Media.Color.FromArgb%2A> -Methode verwendet, um zwei Farben zu entwickeln. Die erste ist teilweise transparent (sie hat einen Alphawert von 32), während die zweite vollständig deckend ist.
+Wenn Sie Code verwenden, können Sie mit der statischen- <xref:System.Windows.Media.Color.FromArgb%2A> Methode einen Alphawert angeben, wenn Sie eine Farbe erstellen. Die-Methode benötigt vier Parameter vom Typ <xref:System.Byte> . Der erste Parameter gibt den Alphakanal der Farbe an. Die anderen drei Parameter geben die Rot-, Grün- und Blauwerte der Farbe an. Jeder Wert sollte zwischen einschließlich 0 und 255 liegen. Beispielsweise gibt der Alphawert 0 an, dass eine Farbe völlig transparent ist, während der Wert 255 angibt, dass sie vollständig deckend ist. Im folgenden Beispiel wird die- <xref:System.Windows.Media.Color.FromArgb%2A> Methode verwendet, um zwei Farben zu entwickeln. Die erste ist teilweise transparent (sie hat einen Alphawert von 32), während die zweite vollständig deckend ist.
 
 [!code-csharp[GradientBrushExamples_snip#TransparentGradientStopExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/GradientStopsExample.cs#transparentgradientstopexample1csharp)]
 
-Alternativ können Sie die <xref:System.Windows.Media.Color.FromScRgb%2A> -Methode verwenden, mit der Sie ScRGB-Werte verwenden können, um eine Farbe zu erstellen.
+Alternativ können Sie die- <xref:System.Windows.Media.Color.FromScRgb%2A> Methode verwenden, mit der Sie ScRGB-Werte verwenden können, um eine Farbe zu erstellen.
 
 <a name="otherbrushes"></a>
 
 ## <a name="painting-with-images-drawings-visuals-and-patterns"></a>Zeichnen mit Bildern, Zeichnungen, visuellen Elementen und Mustern
 
-<xref:System.Windows.Media.ImageBrush>mit <xref:System.Windows.Media.DrawingBrush>den Klassen <xref:System.Windows.Media.VisualBrush> , und können Sie einen Bereich mit Bildern, Zeichnungen oder visuellen Elementen zeichnen. Informationen über Zeichnen mit Bildern, Zeichnungen und Mustern finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md).
+<xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.VisualBrush> mit den Klassen, und können Sie einen Bereich mit Bildern, Zeichnungen oder visuellen Elementen zeichnen. Informationen über Zeichnen mit Bildern, Zeichnungen und Mustern finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md).
 
 ## <a name="see-also"></a>Siehe auch
 
