@@ -1,20 +1,21 @@
 ---
-title: 'Gewusst wie: Pingen eines Hosts'
+title: 'Vorgehensweise: Pingen eines Hosts'
+description: Verwenden Sie diesen Beispielcode, um zu erfahren, wie Sie einen Remotehost im .NET Framework pingen. Für dieses Beispiel sind Verweise auf den System.Net-Namespace erforderlich.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: 09ae830bbef078b94bd28e654d93c10cde6108fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac62f58eea41419de2d5651269154d9abb757aba
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180789"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502495"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="4b933-102">Gewusst wie: Pingen eines Hosts</span><span class="sxs-lookup"><span data-stu-id="4b933-102">How to: Ping a Host</span></span>
-<span data-ttu-id="4b933-103">In diesem Beispiel wird gezeigt, wie Sie einen Ping für einen Remotehost durchführen können.</span><span class="sxs-lookup"><span data-stu-id="4b933-103">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="61ab9-104">Vorgehensweise: Pingen eines Hosts</span><span class="sxs-lookup"><span data-stu-id="61ab9-104">How to: Ping a Host</span></span>
+<span data-ttu-id="61ab9-105">In diesem Beispiel wird gezeigt, wie Sie einen Ping für einen Remotehost durchführen können.</span><span class="sxs-lookup"><span data-stu-id="61ab9-105">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4b933-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4b933-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="61ab9-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="61ab9-106">Example</span></span>  
   
 ```csharp
 using System;  
@@ -120,7 +121,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4b933-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="4b933-105">Compiling the Code</span></span>  
- <span data-ttu-id="4b933-106">Dieses Beispiel erfordert Folgendes:</span><span class="sxs-lookup"><span data-stu-id="4b933-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="61ab9-107">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="61ab9-107">Compiling the Code</span></span>  
+ <span data-ttu-id="61ab9-108">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="61ab9-108">This example requires:</span></span>  
   
-- <span data-ttu-id="4b933-107">Verweise auf den Namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="4b933-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="61ab9-109">Verweise auf den Namespace **System.Net**</span><span class="sxs-lookup"><span data-stu-id="61ab9-109">References to the **System.Net** namespace.</span></span>
