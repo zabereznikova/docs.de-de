@@ -1,5 +1,6 @@
 ---
 title: Asynchroner Serversocket, Beispiel
+description: Dieses Beispiel für ein .NET Framework-Programm erstellt einen Server, der über einen asynchronen Socket Verbindungen von Clients empfängt. Er empfängt eine Zeichenfolge und gibt sie zurück.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: 8a9a3cb26968c548aa971bac548313a459c2fdf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 089de8ce9629e30cb6e4458c0f9a4613c9674a21
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180910"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502716"
 ---
 # <a name="asynchronous-server-socket-example"></a>Asynchroner Serversocket, Beispiel
-Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt. Der Server wird mit einem asynchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird. Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an, und gibt sie dann an den Client zurück. Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF>" enthalten, um das Ende der Meldung zu signalisieren.  
+Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt. Der Server wird mit einem asynchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird. Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an und gibt sie dann an den Client zurück. Die Zeichenfolge vom Client muss die Zeichenfolge \<EOF> enthalten, um das Ende der Meldung zu signalisieren.  
   
 ```vb  
 Imports System  
@@ -289,7 +290,7 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Asynchrone Clientsockets - Beispiel](asynchronous-client-socket-example.md)
 - [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)

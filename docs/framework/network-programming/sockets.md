@@ -1,5 +1,6 @@
 ---
 title: Sockets
+description: Informationen zur .NET Framework-Klasse „Socket“, bei der es sich um eine verwaltete Codeversion von Socketdiensten handelt, die von der Winsock32-API bereitgestellt wird
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, sockets
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b44409a0fafc770625be55881ccef3b57045acef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047256"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502131"
 ---
 # <a name="sockets"></a>Sockets
 Der <xref:System.Net.Sockets>-Namespace enthält eine verwaltete Implementierung der Windows Sockets-Schnittstelle. Alle anderen Netzwerkzugriffsklassen im <xref:System.Net>-Namespace sind auf dieser Implementierung von Sockets aufgebaut.  
@@ -29,8 +30,8 @@ Der <xref:System.Net.Sockets>-Namespace enthält eine verwaltete Implementierung
   
  Die **Socket**-Klasse unterstützt zwei grundlegende Modi: synchron und asynchron. Im synchronen Modus werden Funktionen, die Netzwerkvorgänge ausführen (z.B. <xref:System.Net.Sockets.Socket.Send%2A> und <xref:System.Net.Sockets.Socket.Receive%2A>), erst aufgerufen, wenn der Vorgang abgeschlossen ist, bevor die Steuerung an das aufrufende Programm zurückgegeben wird. Im asynchronen Modus werden diese Aufrufe sofort zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Erstellen eines Sockets](how-to-create-a-socket.md)
+- [How to: Erstellen eines Sockets](how-to-create-a-socket.md)
 
-- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](using-application-protocols.md)
+- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)

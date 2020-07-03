@@ -1,5 +1,6 @@
 ---
 title: Datensynchronisierung für Multithreading
+description: Informationen zum Synchronisieren von Daten zum Multithreading in .NET Wählen Sie Strategien wie synchronisierte Coderegionen, die manuelle Synchronisierung oder synchronisierte Kontexte aus.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291096"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769105"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Datensynchronisierung für Multithreading
 
@@ -67,7 +68,7 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
 
 Ausschließlich in .NET Framework- und Xamarin-Anwendungen können Sie das <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>-Element für beliebige <xref:System.ContextBoundObject>-Elemente verwenden, um alle Instanzmethoden und -felder zu synchronisieren. Alle Objekte in der gleichen Kontextdomäne teilen die gleiche Sperre. Mehrere Threads können auf die Methoden und Felder zugreifen, jedoch ist nur ein einzelner Thread gleichzeitig zulässig.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Threads and Threading (Threads und Threading)](threads-and-threading.md)

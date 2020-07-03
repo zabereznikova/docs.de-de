@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Streams im Netzwerk
+description: Das .NET Framework stellt die Netzwerkressourcen als Streams dar. Die NetworkStream-Klasse implementiert die Stream-Klasse für die Verwendung mit Netzwerkressourcen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8d35b43c9b46a77bfd0c78f7d0118093b6fe824
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180627"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501975"
 ---
 # <a name="using-streams-on-the-network"></a>Verwenden von Streams im Netzwerk
 Netzwerkressourcen werden in .NET Framework als Streams dargestellt. Durch die generische Verarbeitung von Streams verfügt .NET Framework über folgende Funktionen:  
@@ -102,7 +103,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse](how-to-request-data-using-the-webrequest-class.md)
-- [Anfordern von Daten](requesting-data.md)
+- [How to: Anfordern von Daten mithilfe der WebRequest-Klasse](how-to-request-data-using-the-webrequest-class.md)
+- [Requesting Data (Anfordern von Daten)](requesting-data.md)

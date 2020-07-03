@@ -1,13 +1,14 @@
 ---
 title: Peer Name Resolution-Protokoll (PNRP)
+description: Erfahren Sie mehr über das Peer Name Resolution-Protokoll (PNRP), ein sicheres, skalierbares und dynamisches Protokoll für die Namensregistrierung und -auflösung.
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72eb63c2c90f398c515d77cd2b2d693237e533a5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74428224"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502222"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution-Protokoll (PNRP)
 In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, um Namen oder andere Arten von Bezeichner in die Netzwerkadressen des jeweils anderen Peers (Adressen, Protokolle und Ports) aufzulösen. In der Vergangenheit ist die Peernamensauflösung durch die grundsätzlich flüchtige Konnektivität sowie andere Mängel im Domänennamenserver (DNS) erschwert worden.  
@@ -46,11 +47,11 @@ Das Peer Name Resolution-Protokoll hat die folgenden Eigenschaften:
   
 - <xref:System.Net.PeerToPeer.PeerNameResolver>: Definiert den Prozess zum Auflösen eines Peernamens in den/die zugehörigen Netzwerk-Endpunkt(e), einschließlich der synchronen und asynchronen Methoden für die Auflösung.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
-- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](network-programming-samples.md)
+- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)
 
 <!-- to-do: review sample links
 - [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)

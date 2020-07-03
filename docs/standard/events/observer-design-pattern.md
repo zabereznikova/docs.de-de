@@ -1,5 +1,6 @@
 ---
 title: Beobachterentwurfsmuster
+description: Erfahren Sie mehr über das Beobachterentwurfsmuster in .NET. Mit diesem Muster kann sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 5794cd1ec9b63a6e151b35c28e09e29f86dcfac6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291265"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662731"
 ---
 # <a name="observer-design-pattern"></a>Beobachterentwurfsmuster
 
@@ -94,5 +95,5 @@ Das folgende Beispiel enthält den Einstiegspunkt der Anwendung, die die `Baggag
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](observer-design-pattern-best-practices.md)|Beschreibt bewährte Methoden für die Entwicklung von Anwendungen, die das Entwurfsmuster "Beobachter" implementieren.|
-|[Gewusst wie: Implementieren eines Anbieters](how-to-implement-a-provider.md)|Enthält die schrittweise Implementierung eines Anbieters für eine Anwendung zur Temperaturüberwachung.|
-|[Gewusst wie: Implementieren eines Observers](how-to-implement-an-observer.md)|Enthält die schrittweise Implementierung eines Beobachters für eine Anwendung zur Temperaturüberwachung.|
+|[How to: Implementieren eines Anbieters](how-to-implement-a-provider.md)|Enthält die schrittweise Implementierung eines Anbieters für eine Anwendung zur Temperaturüberwachung.|
+|[How to: Implementieren eines Observers](how-to-implement-an-observer.md)|Enthält die schrittweise Implementierung eines Beobachters für eine Anwendung zur Temperaturüberwachung.|

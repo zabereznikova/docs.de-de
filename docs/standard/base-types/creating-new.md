@@ -1,5 +1,6 @@
 ---
 title: Erstellen neuer Zeichenfolgen in .NET
+description: Informationen zum Erstellen von Zeichenfolgen mithilfe von Zuweisungen, Klassenkonstruktoren oder System.String-Methoden, die mehrere Zeichenfolgen, Arrays von Zeichenfolgen oder Objekte in .NET kombinieren
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279011"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596447"
 ---
 # <a name="creating-new-strings-in-net"></a>Erstellen neuer Zeichenfolgen in .NET
 .NET Framework ermöglicht das Erstellen von Zeichenfolgen mithilfe einer einfachen Zuweisung und überlädt auch einen Klassenkonstruktor, um die Zeichenfolgenerstellung mithilfe einer Reihe verschiedener Parameter zu unterstützen. .NET Framework stellt auch verschiedene Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse bereit, die durch das Kombinieren verschiedener Zeichenfolgen, Zeichenfolgenarrays oder Objekte neue Zeichenfolgenobjekte erstellen.  
@@ -32,7 +33,7 @@ ms.locfileid: "84279011"
 ## <a name="methods-that-return-strings"></a>Methoden, die Zeichenfolgen zurückgeben  
  Die folgende Tabelle führt verschiedene nützliche Methoden auf, die neue Zeichenfolgenobjekte zurückgeben.  
   
-|Methodenname|Zweck|  
+|Methodenname|Verwendung|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Erstellt eine formatierte Zeichenfolge aus einem Satz von Eingabeobjekten.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|Erstellt Zeichenfolgen aus mindestens zwei Zeichenfolgen.|  
@@ -78,7 +79,7 @@ ms.locfileid: "84279011"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Grundlegende Zeichenfolgenoperationen](basic-string-operations.md)
 - [Kombinierte Formatierung](composite-formatting.md)

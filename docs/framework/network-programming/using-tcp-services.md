@@ -1,5 +1,6 @@
 ---
 title: Verwenden von TCP-Diensten
+description: Die TcpClient-Klasse abstrahiert die Details, um einen Socket zum Anfordern und Empfangen von Daten mithilfe von TCP zu erstellen. Verwenden Sie die .NET Framework-Streamverarbeitung, um Daten zu lesen und zu schreiben.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 3678586647dcf9c47b4494197fbf56cab865b3d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 329701e8f11ca7f87c40ee8b2cc6a337435242b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73039491"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501962"
 ---
 # <a name="using-tcp-services"></a>Verwenden von TCP-Diensten
 

@@ -1,17 +1,17 @@
 ---
-title: Breaking Change-Kategorien
-description: Erfahren Sie mehr über die Kategorisierung von Breaking Changes in .NET Core.
+title: Kompatibilität
+description: Hier erfahren Sie mehr darüber, wie sich Codeänderungen auf die Kompatibilität in .NET auswirken können.
 ms.date: 06/10/2019
-ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cf14b7ff4143367653bd1c305cc1dda6711f980
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093044"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415692"
 ---
-# <a name="breaking-change-categories"></a>Breaking Change-Kategorien
+# <a name="how-code-changes-can-affect-compatibility"></a>Auswirkungen von Codeänderungen auf die Kompatibilität
 
-*Kompatibilität* bezieht sich auf die Kompilierung oder Ausführung von Code in einer Version einer .NET-Implementierung, die nicht mit dem ursprünglich entwickelten Code zusammenhängt. Eine bestimmte Änderung kann die Kompatibilität auf sechs verschiedene Arten beeinträchtigen. Die [einzelnen Arten von Änderungen](index.md), die beim Auswerten der Kompatibilität berücksichtigt werden, fallen unter die folgenden Kategorien:
+*Kompatibilität* bezieht sich auf die Kompilierung oder Ausführung von Code in einer Version einer .NET-Implementierung, die nicht mit dem ursprünglich entwickelten Code zusammenhängt. Eine [Änderung](index.md) kann die Kompatibilität auf sechs verschiedene Arten beeinträchtigen.
 
 - [Verhaltensänderung](#behavioral-change)
 - [Binärkompatibilität](#binary-compatibility)
@@ -52,6 +52,6 @@ Durch die Beibehaltung der Aufwärtskompatibilität werden alle Änderungen oder
 
 Die Beibehaltung der Aufwärtskompatibilität ist kein Ziel von .NET Core.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Bewerten von Breaking Changes in .NET Core](index.md)

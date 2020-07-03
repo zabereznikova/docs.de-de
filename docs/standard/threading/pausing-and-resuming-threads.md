@@ -1,5 +1,6 @@
 ---
 title: Anhalten und Unterbrechen von Threads
+description: Erfahren Sie, wie Sie Threads in .NET anhalten und unterbrechen. Erfahren Sie außerdem, wie Sie Methoden wie Thread.Sleep und Thread.Interrupt sowie Ausnahmen wie ThreadInterruptedException verwenden.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7f414ec716bac5f1e840c5e8a0946024e059fb6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291161"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769118"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Anhalten und Unterbrechen von Threads
 
@@ -47,7 +48,7 @@ Die gängigsten Verfahren zum Synchronisieren der Aktivitäten von Threads beste
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> aktiviert einen Thread aus jedem Wartezustand heraus und veranlasst, dass eine <xref:System.Threading.ThreadAbortException> im Thread ausgelöst wird. Ausführliche Informationen finden Sie unter [Zerstören von Threads](destroying-threads.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>

@@ -1,5 +1,6 @@
 ---
 title: Web- und Socketberechtigungen
+description: Informationen dazu, wie die Klassen „WebPermission“ und „SocketPermission“ Internetsicherheit für die Verwendung des System.Net-Namespace im .NET Framework bereitstellen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: d1b993acbf20eac244e596075c3f826bba3211a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08ae360e8097f7281631da2a3f9846994dfbf5b6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046864"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501897"
 ---
 # <a name="web-and-socket-permissions"></a>Web- und Socketberechtigungen
 Internetsicherheit für Anwendungen, die den <xref:System.Net>-Namespace verwenden, wird von den <xref:System.Net.WebPermission>- und <xref:System.Net.SocketPermission>-Klassen bereitgestellt. Die **WebPermission**-Klasse steuert das Recht einer Anwendung, Daten aus einem URI abzufragen, oder einen URI für das Internet zu verarbeiten. Die **SocketPermission**-Klasse steuert das Recht einer Anwendung zur Verwendung von <xref:System.Net.Sockets.Socket> für das Annehmen von Daten auf einem lokalen Port oder für das Kontaktieren von Remotegeräten, die ein Transportprotokoll an einer anderen Adresse verwenden, und die auf dem Host, der Portnummer und dem Transportprotokoll des Sockets basieren.  
@@ -33,7 +34,7 @@ Internetsicherheit für Anwendungen, die den <xref:System.Net>-Namespace verwend
   
  Für **WebPermission**-Instanzen bedeutet „Akzeptieren“, dass eine Anwendung den von **WebPermission** gesteuerten URI weltweit exportieren kann. „Verbinden“ bedeutet, dass eine Anwendung Zugriff auf diesen URI hat (egal ob Remote oder lokal).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sicherheit](../../standard/security/index.md)
 - [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](security-in-network-programming.md)

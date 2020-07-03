@@ -1,5 +1,6 @@
 ---
 title: Abbruch in verwalteten Threads
+description: Machen Sie sich mit dem Abbrechen in verwalteten Threads vertraut. Erfahren Sie mehr über Abbruchtoken bei kooperativem Abbruch von asynchronen Vorgängen oder synchronen Vorgängen mit langer Laufzeit.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: e56d0f71afdc9281271b7d15316a133e7c720bd0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277881"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662835"
 ---
 # <a name="cancellation-in-managed-threads"></a>Abbruch in verwalteten Threads
 Ab .NET Framework 4 verwendet das .NET Framework ein einheitliches Modell für den kooperativen Abbruch von asynchronen oder lang andauernden synchronen Vorgängen. Dieses Modell basiert auf einem einfachen Objekt, dem sogenannten "Abbruchtoken". Das Objekt, das einen oder mehrere abbrechbare Vorgänge aufruft, z. B. durch Erstellen neuer Threads oder Aufgaben, übergibt das Token an jeden Vorgang. Einzelne Vorgänge können wiederum Kopien des Tokens an andere Vorgänge übergeben. Zu einem späteren Zeitpunkt kann das Objekt, das das Token erstellt hat, damit anfordern, dass die Vorgänge ihre aktuelle Aktivität einstellen. Nur das anfordernde Objekt kann die Abbruchanforderung ausgeben, und jeder Listener ist dafür verantwortlich, die Anforderung zu bemerken und angemessen und rechtzeitig darauf zu reagieren.  

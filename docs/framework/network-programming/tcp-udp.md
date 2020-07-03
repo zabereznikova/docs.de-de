@@ -1,5 +1,6 @@
 ---
 title: TCP-UDP
+description: Hier erfahren Sie, wie die Klassen „TcpClient“, „TcpListener“ und „UdpClient“ TCP- und UDP-Dienste verarbeiten, die sich um die Details der Datenübertragung im .NET Framework kümmern.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, TCP/UDP
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae6d2f9ced2235aa1b9b8fada8064d7e4be970a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047113"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502092"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Datagram Protocol (UDP) mit den <xref:System.Net.Sockets.TcpClient>-, <xref:System.Net.Sockets.TcpListener>- und <xref:System.Net.Sockets.UdpClient>-Klassen verwenden. Diese Protokollklassen bauen auf der <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse auf und kümmern sich um die Details der Datenübertragung.  
@@ -32,11 +33,11 @@ Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Dat
   
  Die **UdpClient**-Klasse verwendet ein Array von Bytes zum Speichern des UDP-Datagramms. Verwenden Sie die <xref:System.Net.Sockets.UdpClient.Send%2A>-Methode, um die Daten an das Netzwerk zu senden, und die <xref:System.Net.Sockets.UdpClient.Receive%2A>-Methode, um ein eingehendes Datagramm zu empfangen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verwenden von TCP-Diensten](using-tcp-services.md)
 - [Verwenden von UDP-Diensten](using-udp-services.md)
 - [Verwenden von Datenströmen im Netzwerk](using-streams-on-the-network.md)
 - [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)
 - [Verwenden von asynchronen Clientsockets](using-an-asynchronous-client-socket.md)
-- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](using-application-protocols.md)
+- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)

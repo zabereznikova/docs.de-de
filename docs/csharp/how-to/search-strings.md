@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662952"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324126"
 ---
 # <a name="how-to-search-strings"></a>Vorgehensweise: Durchsuchen von Zeichenfolgen
 
@@ -27,7 +27,7 @@ Die Methoden <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xre
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
-Das obige Beispiel veranschaulicht eine wichtigen Aspekt bei der Verwendung dieser Methoden. Bei Suchvorgängen wird standardmäßig **die Groß-/Kleinschreibung beachtet**. Um einen Suchvorgang anzugeben, bei dem die Groß-/Kleinschreibung nicht beachtet wird, verwenden Sie den Enumerationswert <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>.
+Das obige Beispiel veranschaulicht eine wichtigen Aspekt bei der Verwendung dieser Methoden. Bei Suchvorgängen wird standardmäßig **die Groß-/Kleinschreibung beachtet**. Verwenden Sie den Enumerationswert <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, um einen Suchvorgang anzugeben, bei dem die Groß-/Kleinschreibung nicht beachtet wird.
 
 ## <a name="where-does-the-sought-text-occur-in-a-string"></a>An welcher Stelle einer Zeichenfolge befindet sich der gesuchte Text ?
 
@@ -41,7 +41,7 @@ Die <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Kla
 
 Das folgende Codebeispiel sucht nach dem Wort „the“ oder „their“ in einem Satz, die Groß-/Kleinschreibung wird ignoriert. Die statische Methode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> führt die Suche aus. Die zu durchsuchende Zeichenfolge und ein Suchmuster werden an die Methode übergeben. In diesem Fall gibt ein drittes Argument an, dass die Groß-/Kleinschreibung nicht beachtet werden soll. Weitere Informationen finden Sie unter <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
-Das Suchmuster beschreibt den Text, nach dem Sie suchen. In der folgenden Tabelle werden die einzelnen Elemente des Suchmusters beschrieben. (In der Tabelle unten wird ein einzelnes `\`-Zeichen verwendet. Dieses muss in einer C#-Zeichenfolge durch das Escapezeichen `\\` ersetzt werden.)
+Das Suchmuster beschreibt den Text, nach dem Sie suchen. In der folgenden Tabelle werden die einzelnen Elemente des Suchmusters beschrieben. (In der folgenden Tabelle wird ein einzelnes `\`-Zeichen verwendet. Dieses muss in einer C#-Zeichenfolge durch das Escapezeichen `\\` ersetzt werden.)
 
 | Muster  | Bedeutung                          |
 |----------|----------------------------------|

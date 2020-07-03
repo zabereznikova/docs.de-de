@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Secure Sockets Layer
+description: Hier erfahren Sie, wie System.Net und erweiternde Klassen Secure Sockets Layer verwenden, um die Verbindung für mehrere Netzwerkprotokolle im .NET Framework zu verschlüsseln.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: ef2abc7574aea1b4f77ff93545ad84678c66ce48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67330962382e768849cbf67d5f412ea80f65569d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046905"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501988"
 ---
 # <a name="using-secure-sockets-layer"></a>Verwenden von Secure Sockets Layer
 Die <xref:System.Net>-Klassen verwenden Secure Sockets Layer (SSL) zum Verschlüsseln der Verbindung für mehrere Netzwerkprotokolle.  
@@ -58,11 +59,11 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Dieses Beispiel erfordert Folgendes:  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
-- Verweise auf den Namespace **System.Net**.  
+- Verweise auf den Namespace **System.Net**  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](security-in-network-programming.md)
 - [Netzwerkprogrammierung in .NET Framework](index.md)

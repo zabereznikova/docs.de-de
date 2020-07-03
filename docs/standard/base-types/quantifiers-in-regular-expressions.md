@@ -1,5 +1,6 @@
 ---
 title: Quantifizierer in regulären Ausdrücken
+description: Hier erfahren Sie mehr über reguläre Ausdrucksquantifizierer, die angeben, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe für eine Übereinstimmung vorhanden sein müssen.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276147"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662887"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  

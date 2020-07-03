@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation'
+title: 'Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation'
+description: Erfahren Sie, wie Sie in .NET anonyme Pipes zur lokalen prozessübergreifenden Kommunikation auf einem lokalen Computer verwenden. Anonyme Pipes verursachen weniger Verwaltungsaufwand als Named Pipes.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 090a25aea4f280fc2ad00cf7777a501c475dfc66
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291785"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594802"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation
 Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Computer bereit. Sie bieten zwar weniger Funktionen als benannte Pipes, erfordern aber auch weniger Mehraufwand. Sie können anonyme Pipes verwenden, um die prozessübergreifende Kommunikation auf einem lokalen Computer zu vereinfachen. Anonyme Pipes können nicht zur Kommunikation über ein Netzwerk verwendet werden.  
   
  Um anonyme Pipes zu implementieren, verwenden Sie die <xref:System.IO.Pipes.AnonymousPipeServerStream>- und <xref:System.IO.Pipes.AnonymousPipeClientStream>-Klassen.  
@@ -45,7 +46,7 @@ Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Comp
  [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Pipes](pipe-operations.md)
-- [Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [How to: Verwenden von Named Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](how-to-use-named-pipes-for-network-interprocess-communication.md)

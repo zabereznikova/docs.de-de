@@ -1,5 +1,6 @@
 ---
 title: Ausnahmen in verwalteten Threads
+description: Informationen zur Verarbeitung von Ausnahmefehlern in .NET Bei .NET-Version 2.0 werden die meisten Ausnahmefehler für Threads auf ordnungsgemäße Weise fortgesetzt und führen zu einem Anwendungsabbruch.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 56900ddab5e1e6ee5375c8979dc19694d4ad9c54
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2facb68c77815de7a6fb97ab8f2ee683ffbad724
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279697"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767883"
 ---
 # <a name="exceptions-in-managed-threads"></a>Ausnahmen in verwalteten Threads
 Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meisten Ausnahmefehlern in Threads deren ordnungsgemäße Fortsetzung. Das für i. d R. dazu, dass die Anwendung durch die unbehandelte Ausnahme beendet wird.  
@@ -76,6 +77,6 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
 ## <a name="host-override"></a>Hostüberschreibung  
  In .NET Framework, Version 2.0, kann ein nicht verwalteter Host über die [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)-Schnittstelle in der Hosting-API die Standardrichtlinie für unbehandelte Ausnahmen der Common Language Runtime überschreiben. Die [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)-Funktion wird zum Festlegen der Richtlinie für unbehandelte Ausnahmen verwendet.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Grundlagen des verwalteten Threadings](managed-threading-basics.md)

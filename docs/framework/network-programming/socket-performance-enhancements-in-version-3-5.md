@@ -1,13 +1,14 @@
 ---
 title: Erweiterungen der Socketleistung in Version 3.5
+description: Informieren Sie sich über Leistungsverbesserungen der System.Net.Sockets.Socket-Klasse in Version 3.5 im .NET Framework.
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047243"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502144"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Erweiterungen der Socketleistung in Version 3.5
 Die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse wurde in Version 3.5 für die Verwendung von Anwendungen verbessert, die asynchrone Netzwerk-E/A verwenden, um die höchste Leistung zu erreichen. Es wurde eine Serie neuer Klassen als Teil eines Satzes von Ergänzungen für die <xref:System.Net.Sockets.Socket>-Klasse hinzugefügt, durch die ein alternatives asynchrones Muster bereitgestellt wird, das von spezialisierten Socketanwendungen mit hoher Leistung verwendet werden kann. Diese Verbesserungen wurden speziell für Netzwerkserveranwendungen entwickelt, die hohe Leistung erfordern. Eine Anwendung kann die erweiterten asynchronen Muster ausschließlich oder nur in bestimmten Bereichen ihrer Anwendung nutzen (wenn z.B. große Datenmengen empfangen werden).  
@@ -33,11 +34,11 @@ Die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse wurde i
   
  Die Lebensdauer des neuen Kontextobjekts des asynchronen Socketvorgangs wird durch Verweise im Anwendungscode und asynchrone E/A-Verweise bestimmt. Es ist nicht erforderlich, dass die Anwendung einen Verweis auf das Kontextobjekt des asynchronen Socketvorgangs beibehält, nachdem er als Parameter an eine der Methoden des asynchronen Socketvorgangs gesendet wurde. Der Verweis bleibt bestehen, bis der Abschlussrückruf zurückgegeben wird. Es ist jedoch von Vorteil für die Anwendung, den Verweis auf das Kontextobjekt beizubehalten, damit er für einen weiteren asynchronen Socketvorgang wiederverwendet werden kann.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](network-programming-samples.md)
+- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)
 - [Socketcodebeispiele](socket-code-examples.md)

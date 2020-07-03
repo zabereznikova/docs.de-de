@@ -1,5 +1,6 @@
 ---
 title: Peverify.exe (PEVerify-Tool)
+description: Verwenden Sie „Peverify.exe“ (Portable Executable Verify), um zu bestimmen, ob MSIL-Code und -Metadaten (Microsoft Intermediate Language) den Typsicherheitsstandards in .NET entsprechen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - portable executable files, PEVerify
@@ -10,19 +11,18 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 478c04a45c7f9d3ad568a6bc4a12a89fe786583a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73104984"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325617"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify-Tool)
-Mit dem PEVerify-Tool können Entwickler, die MSIL (Microsoft Intermediate Language) generieren (Compilerentwickler, Skript-Engine-Entwickler usw.), herausfinden, ob ihr MSIL-Code und die zugeordneten Metadaten den Anforderungen an die Typsicherheit entsprechen. Einige Compiler generieren nur dann überprüfbar typsicheren Code, wenn bestimmte Sprachkonstrukte nicht verwendet werden. Wenn Sie als Entwickler einen solchen Compiler verwenden, sollten Sie unter Umständen prüfen, ob die Typsicherheit des Codes eingeschränkt wurde. Hierzu können Sie das PEVerify-Tool für die Dateien ausführen und damit die MSIL und Metadaten überprüfen.  
+
+Mit dem PEVerify-Tool können Entwickler, die MSIL (Microsoft Intermediate Language) generieren (wie Compilerentwickler und Skript-Engine-Entwickler), herausfinden, ob ihr MSIL-Code und die zugeordneten Metadaten den Anforderungen an die Typsicherheit entsprechen. Einige Compiler generieren nur dann überprüfbar typsicheren Code, wenn bestimmte Sprachkonstrukte nicht verwendet werden. Wenn Sie einen solchen Compiler verwenden, sollten Sie unter Umständen prüfen, ob die Typsicherheit des Codes beeinträchtigt wurde. Sie können das PEVerify-Tool für die Dateien ausführen und damit die MSIL und Metadaten überprüfen.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
-  
- Geben Sie an der Eingabeaufforderung Folgendes ein:  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ peverify filename [options]
 |**/ignore=** *hex.code* [, *hex.code*]|Ignoriert die angegebenen Fehlercodes.|  
 |**/ignore=@** *responseFile*|Ignoriert die in der angegebenen Antwortdatei aufgelisteten Fehlercodes.|  
 |**/il**|Führt Überprüfungen der MSIL-Typsicherheit für Methoden durch, die in der durch *dateiname* angegebenen Assembly implementiert sind. Das Tool gibt eine detaillierte Beschreibung aller gefundenen Probleme zurück, sofern Sie nicht die **/quiet**-Option angeben.|  
-|**/md**|Führt Validierungen von Metadaten in der durch *Dateiname* angegebenen Assembly aus. Dabei wird die gesamte Metadatenstruktur in der Datei durchlaufen und über alle gefundenen Validierungsprobleme berichtet.|  
+|**/md**|Führt Validierungen von Metadaten in der durch *Dateiname* angegebenen Assembly aus. Bei dieser Option wird die gesamte Metadatenstruktur in der Datei durchlaufen und über alle gefundenen Validierungsprobleme berichtet.|  
 |**/nologo**|Unterdrückt die Anzeige der Produktversion sowie von Copyrightinformationen.|  
 |**/nosymbols**|Unterdrückt in .NET Framework, Version 2.0, Zeilennummern, um Abwärtskompatibilität zu gewährleisten.|  
 |**/quiet**|Gibt den stillen Modus an. Hierbei wird die Ausgabe von Berichten über die während der Überprüfung gefundenen Probleme unterdrückt. "Peverify.exe" meldet weiterhin, ob die Datei typsicher ist, es werden jedoch keine Informationen zu Problemen ausgegeben, die die Überprüfung der Typsicherheit verhindern.|  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  "Peverify.exe" führt umfangreiche MSIL-Überprüfungen anhand der Datenflussanalyse sowie einer Liste mit mehreren hundert Regeln für die Gültigkeit von Metadaten durch. Detaillierte Informationen zu den von „Peverify.exe“ ausgeführten Überprüfungen finden Sie im Windows SDK im Ordner „Tools Developers Guide“ unter „Metadata Validation Specification“ und „MSIL Instruction Set Specification“.  
   
- Beachten Sie, dass .NET Framework, Version 2.0 oder höher, überprüfbare `byref`-Rückgaben unterstützt, die unter Verwendung der folgenden MSIL-Anweisungen angegeben werden: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` und `unbox`.  
+.NET Framework, Version 2.0 oder höher, unterstützt überprüfbare `byref`-Rückgaben, die unter Verwendung der folgenden MSIL-Anweisungen angegeben werden: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` und `unbox`.  
   
 ## <a name="examples"></a>Beispiele  
  Der folgende Befehl validiert Metadaten und verifiziert die MSIL-Typsicherheit von Methoden, die in der `myAssembly.exe`-Assembly implementiert sind.  

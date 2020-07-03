@@ -1,5 +1,6 @@
 ---
 title: 'Sicherheit in der Netzwerkprogrammierung: .NET Framework'
+description: Hier erfahren Sie mehr über beliebte Mechanismen zur Anwendungsauthentifizierung und über Codezugriffsberechtigungen, die von den System.Net-Namespaceklassen vom .NET Framework unterstützt werden.
 ms.date: 03/14/2018
 helpviewer_keywords:
 - sending data, Internet security
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: bbe30292e474c9cb5956d96fbbae4d78d464d603
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 546e7223ba4af3029a798fb3edfb503c07e1ab4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989232"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502170"
 ---
 # <a name="security-in-network-programming"></a>Sicherheit in der Netzwerkprogrammierung
 

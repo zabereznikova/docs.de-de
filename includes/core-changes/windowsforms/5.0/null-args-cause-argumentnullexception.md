@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: be496cd586f149ca9fd851d6aa00186e8080c66f
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 00f89e6ae49982917fa7591c3283adec3947eed2
+ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84680270"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85365644"
 ---
 ### <a name="winforms-methods-now-throw-argumentnullexception"></a>WinForms-Methoden lösen jetzt ArgumentNullException aus
 
@@ -49,6 +49,13 @@ In der folgenden Tabelle sind die betroffenen Methoden und Parameter aufgeführt
 > | <xref:System.Windows.Forms.ListBox.IntegerCollection.CopyTo(System.Array,System.Int32)?displayProperty=nameWithType> | `destination` | 5.0 Vorschau 5 |
 > | <xref:System.Windows.Forms.ListViewGroup.System%23Runtime%23Serialization%23ISerializable%23GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | `info` | 5.0 Vorschau 5 |
 > | <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor(System.String,System.Int32,System.Int32)> | `className` | 5.0 Vorschau 5 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox)> | `owner` | Version 5.0 Vorschau 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Object[])> | `owner`, `value` | Version 5.0 Vorschau 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Windows.Forms.ListBox.ObjectCollection)> | `owner`, `value` | Version 5.0 Vorschau 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Object[])?displayProperty=nameWithType> | `items` | Version 5.0 Vorschau 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Windows.Forms.ListBox.ObjectCollection)?displayProperty=nameWithType> | `value` | Version 5.0 Vorschau 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.CopyTo(System.Object[],System.Int32)?displayProperty=nameWithType> | `destination` | Version 5.0 Vorschau 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.System%23Collections%23ICollection%23CopyTo(System.Array,System.Int32)?displayProperty=nameWithType> | `destination`q` | Version 5.0 Vorschau 6 |
 
 <!-- 
 
@@ -68,5 +75,12 @@ In der folgenden Tabelle sind die betroffenen Methoden und Parameter aufgeführt
 - `M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor(System.String,System.Int32,System.Int32)`
 - `M:System.Windows.Forms.ListBox.IntegerCollection.%23ctor(System.Windows.Forms.ListBox)`
 - `M:System.Windows.Forms.ListBox.IntegerCollection.CopyTo(System.Array,System.Int32)`
+- `M:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox)`
+- `M:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Object[])`
+- `M:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Windows.Forms.ListBox.ObjectCollection)`
+- `M:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Object[])`
+- `M:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Windows.Forms.ListBox.ObjectCollection)`
+- `M:System.Windows.Forms.ListBox.ObjectCollection.CopyTo(System.Object[],System.Int32)`
+- `M:System.Windows.Forms.ListBox.ObjectCollection.System%23Collections%23ICollection%23CopyTo(System.Array,System.Int32)`
 
 -->

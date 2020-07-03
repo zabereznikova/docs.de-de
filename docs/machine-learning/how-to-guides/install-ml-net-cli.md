@@ -1,14 +1,14 @@
 ---
 title: Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 description: Erfahren Sie, wie Sie das ML.NET-CLI-Tool (Command-Line Interface, Befehlszeilenschnittstelle) installieren, aktualisieren, herabstufen und deinstallieren.
-ms.date: 12/18/2019
+ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848638"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602270"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 
@@ -21,13 +21,13 @@ Die ML.NET-CLI generiert qualitativ hochwertige ML.NET-Modelle und Quellcode mit
 
 ## <a name="pre-requisites"></a>Voraussetzungen
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-- (Optional) [Visual Studio 2017 oder 2019](https://visualstudio.microsoft.com/vs/)
+- (Optional) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
 Sie können die generierten C#-Codeprojekte mit Visual Studio durch Drücken der Taste `F5` oder mit dem Befehl `dotnet run` ausführen (.NET Core-CLI).
 
-Hinweis: Wenn nach der Installation von [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) der Befehl `dotnet tool` nicht funktioniert, melden Sie sich von Windows ab und erneut wieder an.
+Hinweis: Wenn nach der Installation des .NET Core SDK der Befehl `dotnet tool` nicht funktioniert, melden Sie sich von Windows ab und wieder an.
 
 ## <a name="install"></a>Installieren
 
@@ -54,7 +54,7 @@ Sie können bestätigen, dass die Installation erfolgreich war, indem Sie den fo
 mlnet
 ```
 
-Es sollte die Hilfe zu den verfügbaren Befehlen für das mlnet-Tool angezeigt werden, wie z.B. den Befehl „auto-train“.
+Es sollte die Hilfe zu den verfügbaren Befehlen für das ML.NET-Tool angezeigt werden, z. B. der Befehl „classification“.
 
 ## <a name="install-a-specific-release-version"></a>Installieren einer bestimmten Releaseversion
 

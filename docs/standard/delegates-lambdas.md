@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 43e896bfe267299d3b0cb12a8f71e42fe2c87a88
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280789"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244009"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 
@@ -108,7 +108,7 @@ public class Program
 
 Wie Sie sehen, besteht der Haupttext des Delegaten einfach nur aus einer Reihe von Ausdrücken, wie bei jedem anderen Delegaten auch. Anstatt aber eine separate Definition zu erstellen, haben wir ihn _ad hoc_ in den Aufruf der Methode <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> eingeführt.
 
-Selbst bei dieser Vorgehensweise bleibt immer noch zu viel Code übrig, den wir nicht benötigen. Hier kommen *Lambdaausdrücke* ins Spiel. Lambdaausdrücke (sogenannte Lambdas) wurden in C# 3.0 eingeführt und stellen einen der wichtigsten Bausteine von LINQ (Language Integrated Query) dar. Sie sind einfach eine praktischere Syntax für die Verwendung von Delegaten. Sie deklarieren eine Signatur und einen Methodentext, besitzen aber keine eigene formale Identität, sofern sie nicht einem Delegaten zugewiesen sind. Im Gegensatz zu Delegaten können sie direkt als linke Seite der Ereignisregistrierung oder in verschiedenen LINQ-Klauseln und -Methoden zugewiesen werden.
+Selbst bei dieser Vorgehensweise bleibt immer noch zu viel Code übrig, den wir nicht benötigen. Hier kommen *Lambdaausdrücke* ins Spiel. Lambdaausdrücke (sogenannte Lambdas) wurden in C# 3.0 eingeführt und stellen einen der wichtigsten Bausteine von LINQ (Language Integrated Query) dar. Sie sind einfach eine praktischere Syntax für die Verwendung von Delegaten. Sie deklarieren eine Signatur und einen Methodentext, besitzen aber keine eigene formale Identität, sofern sie nicht einem Delegaten zugewiesen sind. Im Gegensatz zu Delegaten können sie direkt als rechte Seite der Ereignisregistrierung oder in verschiedenen LINQ-Klauseln und -Methoden zugewiesen werden.
 
 Da ein Lambdaausdruck einfach nur eine weitere Möglichkeit ist, einen Delegaten anzugeben, können wir das obige Beispiel neu schreiben und einen Lambdaausdruck anstelle eines anonymen Delegaten verwenden.
 

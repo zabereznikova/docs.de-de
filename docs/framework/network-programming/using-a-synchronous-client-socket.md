@@ -1,5 +1,6 @@
 ---
 title: Verwenden eines synchronen Clientsockets
+description: Dieses Beispiel zeigt einen synchronen Clientsocket im .NET Framework, der das Anwendungsprogramm anhält, während der Netzwerkvorgang abgeschlossen wird.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: fdecd18dc5975cd469e49de0eb0b55081e738cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef682af33c10cf06ffc398c22e4a7dc1adf8290e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047072"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502066"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Verwenden eines synchronen Clientsockets
 Ein synchroner Clientsocket hält das Anwendungsprogramm an, während der Netzwerkvorgang abgeschlossen wird. Synchrone Serversockets eignen sich nicht für Anwendungen, die das Netzwerk in ihrem Betrieb stark nutzen, aber sie können einfachen Zugang zu Netzwerkdiensten für andere Anwendungen ermöglichen.  
@@ -70,8 +71,8 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verwenden von asynchronen Clientsockets](using-an-asynchronous-client-socket.md)
-- [Listening with Sockets (Überwachen mit Sockets)](listening-with-sockets.md)
+- [Überwachen mit Sockets](listening-with-sockets.md)
 - [Synchrone Clientsockets - Beispiel](synchronous-client-socket-example.md)

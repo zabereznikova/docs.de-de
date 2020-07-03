@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache'
+description: Hier erfahren Sie, wie Sie eine Assembly aus dem globalen Assemblycache in .NET entfernen, indem Sie entweder das Tool für globalen Assemblycache (Gacutil.exe) oder den Windows Installer verwenden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e3a596ea6029ded190c33032e96b601de9d4012d
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119857"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104764"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache
 
@@ -30,7 +31,7 @@ Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) 
 
 Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
-**gacutil -u** \<*Assemblyname*>
+**gacutil –u** \<*assembly name*>
 
 In diesem Befehl ist *Assemblyname* der Name der Assembly, die aus dem globalen Assemblycache entfernt werden soll.
 

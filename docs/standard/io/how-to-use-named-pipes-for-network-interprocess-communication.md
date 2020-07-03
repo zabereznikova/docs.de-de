@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk'
+title: 'Vorgehensweise: Verwenden von Named Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk'
+description: Zwei Beispiele für die Verwendung von Named Pipes für die prozessübergreifende Kommunikation zwischen einem Pipeserver und mindestens einem Pipeclient in einem Netzwerk
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-ms.openlocfilehash: bebfd136245fd7b577ffcd71954f46ca82bfc72d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a529d1d44a903df36099a59e07f4582554d230f2
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291746"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662562"
 ---
-# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk
+# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Vorgehensweise: Verwenden von Named Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk
 Benannte Pipes stellen prozessübergreifende Kommunikation zwischen einem Pipeserver und einem oder mehreren Pipeclients bereit. Sie bieten mehr Funktionen als anonyme Pipes, die eine prozessübergreifende Kommunikation auf einem lokalen Computer bereitstellen. Benannte Pipes unterstützen Vollduplexkommunikation über ein Netzwerk und mehrere Serverinstanzen, meldungsbasierte Kommunikation und Clientidentitätswechsel, die verbindenden Prozessen die Verwendung ihrer eigenen Berechtigungen auf Remoteservern ermöglichen.  
   
  Um Namenspipes zu implementieren, verwenden Sie die <xref:System.IO.Pipes.NamedPipeServerStream>- und <xref:System.IO.Pipes.NamedPipeClientStream>-Klassen.  
@@ -43,9 +44,9 @@ Benannte Pipes stellen prozessübergreifende Kommunikation zwischen einem Pipese
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Der Client- und der Serverprozess in diesem Beispiel sind zur Ausführung auf dem gleichen Computer vorgesehen, sodass der Servername, der dem <xref:System.IO.Pipes.NamedPipeClientStream>-Objekt bereitgestellt wird, `"."` lautet. Wenn der Client- und der Serverprozess auf verschiedenen Computern ausgeführt würden, würde `"."` durch den Netzwerknamen des Computers ersetzt, auf dem der Serverprozess ausgeführt wird.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>
 - [Pipes](pipe-operations.md)
-- [Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [How to: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

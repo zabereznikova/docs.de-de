@@ -1,13 +1,14 @@
 ---
 title: Automatische IPv6-Konfiguration
+description: Informationen dazu, wie IPv6 Plug & Play für Knoten unterstützt, wenn ein Knoten einem IPv6-Netzwerk beitritt und ohne Benutzereingriff konfiguriert wird.
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d65bc453478ac4679556e931b1758c18cfedcf3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047809"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502326"
 ---
 # <a name="ipv6-auto-configuration"></a>Automatische IPv6-Konfiguration
 Ein wichtiges Ziel von IPv6 ist die Unterstützung von Plug & Play für Knoten. Das bedeutet, dass es möglich sein soll, dass ein Knoten in ein IPv6-Netzwerk eingeführt und dann automatisch ohne Benutzereingriff konfiguriert wird.  
@@ -22,9 +23,9 @@ Ein wichtiges Ziel von IPv6 ist die Unterstützung von Plug & Play für Knoten. 
  Unabhängig davon, wie die Adresse bestimmt wird, muss der Knoten überprüfen, dass die potenzielle Adresse für den lokalen Link eindeutig ist. Dies erfolgt, indem eine Nachbaranfrage eine Nachricht an die potenzielle Adresse sendet. Wenn der Knoten eine Antwort empfängt, weiß er, dass die Adresse bereits verwendet wird und er eine andere Adresse bestimmen muss.  
   
 ## <a name="ipv6-mobility"></a>IPv6-Mobilität  
- Die Verbreitung von Mobilgeräten hat eine neue Anforderung eingeführt: Ein Gerät muss dazu in der Lage sein, seinen Standort beliebig im IPv6-Internet zu ändern und dennoch seine bestehenden Verbindungen beizubehalten. Zur Gewährleistung dieser Funktionalität wird einem mobilen Knoten eine Privatadresse zugewiesen, über die er immer erreicht werden kann. Wenn der mobile Knoten zuhause ist, verbindet er sich mit dem Privatlink und verwendet seine Privatadresse. Wenn der mobile Knoten nicht zuhause ist, überträgt ein eigener Agent, bei dem es sich üblicherweise um einen Router handelt, Nachrichten zwischen dem mobilen Knoten und den Knoten, mit denen er kommuniziert.  
+ Durch die weite Verbreitung mobiler Geräte wurde eine neue Anforderung nötig: Ein Gerät muss dazu in der Lage sein, seinen Standort beliebig im IPv6-Internet zu ändern und dennoch seine bestehenden Verbindungen beizubehalten. Zur Gewährleistung dieser Funktionalität wird einem mobilen Knoten eine Privatadresse zugewiesen, über die er immer erreicht werden kann. Wenn der mobile Knoten zuhause ist, verbindet er sich mit dem Privatlink und verwendet seine Privatadresse. Wenn der mobile Knoten nicht zuhause ist, überträgt ein eigener Agent, bei dem es sich üblicherweise um einen Router handelt, Nachrichten zwischen dem mobilen Knoten und den Knoten, mit denen er kommuniziert.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Internetprotokoll Version 6](internet-protocol-version-6.md)
 - [Sockets](sockets.md)

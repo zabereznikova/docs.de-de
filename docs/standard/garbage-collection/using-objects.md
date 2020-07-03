@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Objekten, die IDisposable implementieren
+description: Erfahren Sie, wie Sie in .NET Objekte verwenden, die die IDisposable-Schnittstelle implementieren. Typen, die nicht verwaltete Ressourcen verwenden, implementieren IDisposable, um das Freigeben von Ressourcen zu ermöglichen.
 ms.date: 05/13/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: 87eefe2bd347ba1564b2f06d49bbee3b85efdb97
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7d5d4080f22aab6870a230d495b4a4b9ebcb3b96
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599853"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Verwenden von Objekten, die IDisposable implementieren
 

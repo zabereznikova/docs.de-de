@@ -1,34 +1,36 @@
 ---
 title: Verwendung einer threadsicheren Auflistung
+description: Informieren Sie sich darüber, wann eine threadsichere Sammlung in .NET verwendet werden muss. Es gibt fünf Sammlungstypen, die speziell für die Unterstützung von multithreadbezogenen Hinzufüge- und Entfernungsvorgängen konzipiert sind.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288874"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326037"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Verwendung einer threadsicheren Auflistung
-Mit .NET Framework 4 werden fünf neue Auflistungstypen eingeführt, die speziell für die Unterstützung von Hinzufügungs- und Entfernungsvorgängen in mehreren Threads konzipiert sind. Zur Gewährleistung von Threadsicherheit verwenden diese neuen Typen unterschiedliche Arten effizienter sperrender und sperrfreier Synchronisierungsmechanismen. Ein Vorgang wird durch Synchronisierung aufwändiger. Das Ausmaß des Aufwands hängt von der Art der verwendeten Synchronisierung, der Art der ausgeführten Vorgänge und von anderen Faktoren ab, z.B. der Anzahl der Threads, die versuchen, gleichzeitig auf die Sammlung zuzugreifen.  
+
+Mit .NET Framework 4 wurden fünf neue Auflistungstypen eingeführt, die speziell für die Unterstützung von Hinzufügungs- und Entfernungsvorgängen in mehreren Threads konzipiert sind. Diese Typen verwenden unterschiedliche Arten effizienter sperrender und sperrfreier Synchronisierungsmechanismen, um die Threadsicherheit zu gewährleisten. Ein Vorgang wird durch Synchronisierung aufwändiger. Das Ausmaß des Aufwands hängt von der Art der verwendeten Synchronisierung, der Art der ausgeführten Vorgänge und von anderen Faktoren ab, z.B. der Anzahl der Threads, die versuchen, gleichzeitig auf die Sammlung zuzugreifen.  
   
  In einigen Szenarien ist der Synchronisierungsaufwand unwesentlich und ermöglicht eine deutlich schnellere Ausführung und bessere Skalierbarkeit des Multithreadtyps als beim nicht threadsicheren Äquivalent, wenn ein Schutz durch eine externe Sperre besteht. In anderen Szenarien kann der Aufwand dazu führen, dass der threadsichere Typ in etwa mit der gleichen oder sogar einer geringeren Leistung und Skalierbarkeit ausgeführt wird wie die extern gesperrte, nicht threadsichere Version des Typs.  
   
  Die folgenden Abschnitte enthalten eine allgemeine Anleitung dazu, wann eine threadsichere Sammlung anstelle ihres nicht threadsicheren Äquivalents verwendet wird, das eine vom Benutzer bereitgestellte Sperre für die Lese- und Schreibvorgänge besitzt. Da die Leistung von vielen Faktoren abhängig sein kann, handelt es sich nicht um eine spezielle Anleitung, die daher nicht unter allen Umständen gültig ist. Wenn die Leistung sehr wichtig ist, ist die am besten geeignete Methode zur Bestimmung des zu verwendenden Sammlungstyps die Messung der Leistung auf Basis von repräsentativen Computerkonfigurationen und Lasten. In diesem Dokument werden die folgenden Begriffe verwendet:  
   
- *Reines Producer-Consumer-Szenario*  
+ *Reines Producer-Consumer-Szenario*\
  In jedem vorhandenen Thread werden Elemente entweder hinzugefügt oder entfernt, es finden jedoch nicht beide Vorgänge statt.  
   
- *Gemischtes Producer-Consumer-Szenario*  
+ *Gemischtes Producer-Consumer-Szenario*\
  In jedem vorhandenen Thread werden Elemente sowohl hinzugefügt als auch entfernt.  
   
- *Geschwindigkeitszuwachs*  
+ *Geschwindigkeitszuwachs*\
  Höhere algorithmische Leistung relativ zu einem anderen Typ im gleichen Szenario.  
   
- *Skalierbarkeit*  
+ *Skalierbarkeit*\
  Die Zunahme der Leistung, die proportional zur Anzahl der Kerne des Computers ist. Mit einem Algorithmus, der skaliert wird, werden bei acht Kernen höhere Leistungen erzielt als bei zwei Kernen.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) oder Queue(T)  

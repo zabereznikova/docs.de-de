@@ -1,5 +1,6 @@
 ---
 title: Cacherichtlinie
+description: Hier erfahren Sie mehr über die Cacherichtlinie, d. h. die Regeln, durch die bestimmt wird, ob eine Anforderung mit der zwischengespeicherten Kopie der angeforderten Ressource erfüllt werden kann.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - time-based cache policies
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: 2d3d85ebd80f417ebd0fa0e619097e15f2a6a39b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d63d2b6bf8426968d2120647c8ecea2b7602825a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048776"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502664"
 ---
 # <a name="cache-policy"></a>Cacherichtlinie
 Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen, ob eine Anforderung mit der zwischengespeicherten Kopie der angeforderten Ressource erfüllt werden kann. Anwendungen geben Cache-Clientanforderungen für die Aktualität an, aber die effektive Cacherichtlinie richtet sich nach den Cache-Clientanforderungen, den Inhaltsablaufanforderungen des Servers sowie den Anforderungen zur erneuten Überprüfung des Servers. Die Interaktion der Cacherichtlinie und des Cacheservers für Clients resultiert immer in der konservativsten Cacherichtlinie, um sicherzustellen, dass die aktuellsten Inhalten an die Clientanwendung zurückgegeben werden.  
@@ -38,7 +39,7 @@ Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen
   
  Codebeispiele, die das Erstellen und Verwenden von Cacherichtlinien veranschaulichen, finden Sie unter [Konfigurieren der Zwischenspeicherung in Netzwerkanwendungen](configuring-caching-in-network-applications.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
 - [Speicherortbasierte Cacherichtlinien](location-based-cache-policies.md)

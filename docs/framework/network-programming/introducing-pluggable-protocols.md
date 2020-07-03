@@ -1,5 +1,6 @@
 ---
 title: Einführung in austauschbare Protokolle
+description: Hier erfahren Sie mehr über austauschbare Protokolle, die die Entwicklung von Anwendungen unterstützen, die unabhängig von den von Ressourcen verwendeten Protokolldetails Internetressourcen verwenden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data requests, pluggable protocols
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0bc2d0d005e50b04aff360866a146f6fe6b0ea02
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047860"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502352"
 ---
 # <a name="introducing-pluggable-protocols"></a>Einführung in austauschbare Protokolle
 Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Ihre Anwendungen integriert werden. Die Internetzugriffsklassen in den Namespaces <xref:System.Net> und <xref:System.Net.Sockets> können zur Implementierung von sowohl webbasierten als auch internetbasierten Anwendungen verwendet werden.  
@@ -66,8 +67,8 @@ Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete
   
  Die **System.Net.Sockets**-Klassen erweisen sich besonders für Entwickler als nützlich, die mit der Windows Sockets-Schnittstelle vertraut sind oder die die Kontrolle durch das Programmieren auf Socketebene benötigen. Die **System.Net.Sockets**-Klassen stellen innerhalb der **System.Net**-Klassen einen Übergangspunkt von verwaltetem zu nativem Code dar. In den meisten Fällen marshallen **System.Net.Sockets**-Klassen Daten in ihre jeweilige Windows-32-Bit-Entsprechung und führen alle erforderlichen Sicherheitsüberprüfungen durch.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](programming-pluggable-protocols.md)
+- [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md)
 - [Netzwerkprogrammierung in .NET Framework](index.md)
-- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](network-programming-samples.md)
+- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)

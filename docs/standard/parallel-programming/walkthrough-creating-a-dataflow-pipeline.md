@@ -1,5 +1,6 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen einer Datenflusspipeline'
+description: Erstellen Sie eine Datenflusspipeline, bei der es sich um eine Reihe von Komponenten handelt, auch Datenflussblöcke genannt. Ein Datenflussblock führt einen bestimmten Task aus, um zum Erreichen eines größeren Ziels beizutragen.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: cfe3296815dc344b0d9d1f7bad1ab4a130380e2b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7fe12b63b04d403334e4b64a421b105550467ca4
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284610"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767870"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Exemplarische Vorgehensweise: Erstellen einer Datenflusspipeline
 Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> verwenden können, um Nachrichten von Quellblöcken zu empfangen, können Sie auch Nachrichtenblöcke verbinden, um eine *Datenflusspipeline* zu bilden. Eine Datenpipeline besteht aus einer Reihe von Komponenten, oder *Datenflussblöcken*, von denen jede eine bestimmte Aufgabe ausführt, die zu einem größeren Ziel beiträgt. Jeder Datenflussblock in einer Datenflusspipeline erledigt eine Aufgabe, wenn er eine Meldung von einem anderen Datenflussblock empfangen hat. Eine Analogie hierzu ist eine Fertigungsstraße eines Fahrzeugherstellers. Jedes Fahrzeug durchläuft die Fertigungsstraße: In einer Station wird das Fahrgestell montiert, in der nächsten wird der Motor eingebaut usw. Da eine Fertigungsstraße ermöglicht, dass mehrere Fahrzeuge gleichzeitig montiert werden, bietet sie einen besseren Durchsatz als eine Einzelmontage eines vollständigen Fahrzeugs.

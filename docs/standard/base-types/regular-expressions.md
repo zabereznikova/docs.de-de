@@ -1,5 +1,6 @@
 ---
 title: Reguläre Ausdrücke von .NET Framework
+description: Verwenden Sie reguläre Ausdrücke, um in .NET nach bestimmten Zeichenmustern zu suchen, Text zu überprüfen, mit Text-Teilzeichenfolgen zu arbeiten und extrahierte Zeichenfolgen einer Sammlung hinzuzufügen.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635725"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768832"
 ---
 # <a name="net-regular-expressions"></a>Reguläre Ausdrücke von .NET
 
@@ -99,7 +100,7 @@ Die <xref:System.String>-Klasse enthält eine Reihe von Such- und Ersetzungsmeth
   
  Die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode wird aufgerufen, und die Optionen für den regulären Ausdruck sind auf <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> festgelegt. Beim Abgleichvorgang spielt die Groß- und Kleinschreibung daher keine Rolle, und die Teilzeichenfolge "This this" wird im Beispiel als Duplikat identifiziert.  
   
- Die Eingabezeichenfolge enthält die Teilzeichenfolge „this? This“. Aufgrund des dazwischenliegenden Satzzeichens wird diese jedoch nicht als Duplikat identifiziert.  
+ Die Eingabezeichenfolge enthält die Teilzeichenfolge „this? This" enthält. Aufgrund des dazwischenliegenden Satzzeichens wird diese jedoch nicht als Duplikat identifiziert.  
   
 ### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Beispiel 3: Dynamisches Erstellen eines kulturabhängigen regulären Ausdrucks  
 

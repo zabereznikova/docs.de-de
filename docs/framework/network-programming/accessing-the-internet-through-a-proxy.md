@@ -1,5 +1,6 @@
 ---
 title: Zugreifen auf das Internet über einen Proxy
+description: Erfahren Sie, wie Sie eine Proxyinstanz so konfigurieren, dass Ihre .NET Framework-Anwendung mit dem Webproxy kommunizieren kann.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77f46cdcedbeb9b1809621d64f239a6681e82590
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71049049"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502742"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Zugreifen auf das Internet über einen Proxy
 Wenn Ihre Website einen Proxy verwendet, um den Internetzugriff zu ermöglichen, müssen Sie eine Proxyinstanz zum Aktivieren der Anwendung für die Kommunikation mit dem Webproxy konfigurieren.  
@@ -28,11 +29,11 @@ Wenn Ihre Website einen Proxy verwendet, um den Internetzugriff zu ermöglichen,
   
 - [Automatische Proxyerkennung](automatic-proxy-detection.md)  
   
-- [Vorgehensweise: Aktivieren von WebRequest zur Verwendung eines Proxys für die Internetkommunikation](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [How to: Aktivieren einer WebRequest-Klasse zur Verwendung eines Proxys für die Internetkommunikation](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [Vorgehensweise: Überschreiben einer globalen Proxyauswahl](how-to-override-a-global-proxy-selection.md)  
+- [How to: Überschreiben einer globalen Proxyauswahl](how-to-override-a-global-proxy-selection.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](using-application-protocols.md)
+- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)
 - [Netzwerkprogrammierung in .NET Framework](index.md)

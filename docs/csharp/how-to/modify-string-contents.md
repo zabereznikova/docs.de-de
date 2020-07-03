@@ -3,16 +3,16 @@ title: 'Vorgehensweise: Ändern von Zeichenfolgeninhalten – C#-Leitfaden'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663004"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324175"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C\#
 
-In diesem Artikel werden verschiedene Methoden zum Erzeugen einer `string` durch Modifizieren einer vorhandenen `string` erläutert. Alle diese gezeigten Methoden geben das Ergebnis der Modifizierung als neues `string`-Objekt zurück. Um dies deutlich zu machen, wird das Ergebnis in den Beispielen als neue Variable gespeichert. Dann können Sie sich sowohl die ursprüngliche `string` als auch die `string` ansehen, die durch die Modifizierung beim Ausführen jedes Beispiels entsteht.
+In diesem Artikel werden verschiedene Methoden zum Erzeugen einer `string` durch Modifizieren einer vorhandenen `string` erläutert. Alle diese gezeigten Methoden geben das Ergebnis der Modifizierung als neues `string`-Objekt zurück. Die Beispiele speichern das Ergebnis in einer neuen Variable, um zu zeigen, dass es sich bei den ursprünglichen und den bearbeiteten Zeichenfolgen um unterschiedliche Instanzen handelt. Sie können die ursprüngliche `string` und die neue, bearbeitete `string` untersuchen, wenn Sie die einzelnen Beispiele ausführen.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -68,7 +68,7 @@ Da Zeichenfolgen unveränderlich sind, erzeugen die vorherigen Beispiele alle te
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-Sie können eine Zeichenfolge in einem festen Block mit unsicherem Code ändern. Es wird jedoch **unbedingt** davon abgeraten, den Inhalt der Zeichenfolge nach deren Erstellung zu ändern. Dadurch können Abläufe auf unvorhersehbare Weise beeinträchtigt werden. Wenn jemand beispielsweise eine Zeichenfolge internalisiert, die den gleichen Inhalt wie Ihre hat, erhält er Ihre Kopie und erwartet nicht, dass Sie seine Zeichenfolge überhaupt ändern.
+Sie können eine Zeichenfolge in einem festen Block mit unsicherem Code ändern. Es wird jedoch **stark** davon abgeraten, den Inhalt der Zeichenfolge nach deren Erstellung zu ändern. Dadurch können Abläufe auf unvorhersehbare Weise beeinträchtigt werden. Wenn jemand beispielsweise eine Zeichenfolge internalisiert, die den gleichen Inhalt wie Ihre hat, erhält er Ihre Kopie und erwartet nicht, dass Sie seine Zeichenfolge ändern.
 
 ## <a name="see-also"></a>Siehe auch
 

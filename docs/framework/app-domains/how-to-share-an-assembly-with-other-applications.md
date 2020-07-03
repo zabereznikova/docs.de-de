@@ -1,13 +1,14 @@
 ---
-title: 'Vorgehensweise: Verwenden einer Assembly mit anderen Anwendungen'
+title: 'Vorgehensweise: Freigeben einer Assembly für andere Anwendungen'
+description: Hier erfahren Sie, wie Sie eine Assembly für andere Anwendungen in .NET freigeben. Assemblys können privat (Standardeinstellung) oder freigegeben sein. Fügen Sie eine Assembly in den globalen Assemblycache ein, um sie freizugeben.
 ms.date: 08/19/2019
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: b4c183c3fc0b04121be8bbc2db4027887cbc3132
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 9cef25059968875f17ce5dc77b04c44a2f3945f6
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644291"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104647"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications"></a>Vorgehensweise: Freigeben einer Assembly für andere Anwendungen
 Assemblys können sowohl privat als auch freigegeben sein: Standardmäßig bestehen die meisten einfachen Programme aus einer privaten Assembly, da sie nicht für den Gebrauch durch andere Anwendungen vorgesehen sind.  

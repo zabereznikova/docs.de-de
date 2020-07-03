@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden zum Schreiben von Kompon
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989368"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324483"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -24,7 +24,7 @@ Von [John Reese](https://reese.dev) mit besonderem Dank an [Roy Osherove](https:
 ### <a name="less-time-performing-functional-tests"></a>Weniger Zeitaufwand für das Ausführen von Funktionstests
 Funktionstests sind kostspielig. Für Funktionstests muss normalerweise die Anwendung geöffnet werden, und Sie (oder eine andere Person) müssen mehrere Schritte ausführen, um das erwartete Verhalten zu überprüfen. Es kann durchaus sein, dass der Tester diese Schritte nicht kennt, was bedeutet, dass sich dieser an eine Person wenden muss, die sich in dem Bereich auskennt, um den Test auszuführen. Der Testvorgang selbst kann nur ein paar Sekunden für banale Änderungen oder Minuten für größere Änderungen in Anspruch nehmen. Abschließend muss der ganze Vorgang für jede Änderung, die Sie am System vornehmen, wiederholt werden.
 
-Im Vergleich dazu benötigen Komponententests nur Millisekunden. Außerdem können Sie durch Klicken auf eine Schaltfläche ausgeführt werden und erfordern nicht unbedingt tiefgreifende Kenntnisse zum System. Ob der Test erfolgreich ist oder fehlschlägt, hängt vom Testlauf und nicht von der einzelnen Person ab, die den Test ausführt.
+Im Vergleich dazu benötigen Komponententests nur Millisekunden. Außerdem können sie durch einen Klick auf eine Schaltfläche ausgeführt werden und erfordern keine tiefgreifenden Kenntnisse zum System. Ob der Test erfolgreich ist oder fehlschlägt, hängt vom Testlauf und nicht von der einzelnen Person ab, die den Test ausführt.
 
 ### <a name="protection-against-regression"></a>Schutz vor Regression
 Regressionsfehler sind Fehler, die auftreten, wenn eine Änderung an der Anwendung vorgenommen wird. Tester testen meist nicht nur ihr neues Feature sondern auch die Features, die zuvor schon vorhanden waren. So können sie überprüfen, ob die zuvor implementierten Features noch immer wie erwartet funktionieren.
@@ -53,12 +53,12 @@ Wenn Sie Tests für Ihren Code schreiben, wird dieser automatisch entkoppelt, da
 
 Ein hoher Code-Coverage-Prozentsatz steht oft im Zusammenhang mit einer höheren Codequalität. Durch die Messung an sich kann die Codequalität jedoch *nicht* bestimmt werden. Das Festlegen eines übermäßig ambitionierten Code-Coverage-Prozentsatzes kann kontraproduktiv sein. Stellen Sie sich ein komplexes Projekt mit Tausenden von bedingten Branches vor, und stellen Sie sich vor, dass Sie ein Code-Coverage-Ziel von 95 % festlegen. Derzeit weist das Projekt 90 % Code Coverage auf. Für die restlichen 5 % könnte für alle Grenzfälle sehr viel Zeit einkalkuliert werden müssen, und der Wertbeitrag verringert sich schnell.
 
-Ein hoher Code-Coverage-Prozentsatz ist weder ein Erfolgsindikator noch ein Hinweis auf eine hohe Codequalität. Er stellt lediglich die Menge an Code dar, die durch Komponententests abgedeckt ist. Weitere Informationen finden Sie unter [Verwenden von Code Coverage für Komponententests](unit-testing-code-coverage.md).
+Ein hoher Code-Coverage-Prozentsatz ist weder ein Erfolgsindikator noch ein Hinweis auf eine hohe Codequalität. Er stellt lediglich die Menge an Code dar, die durch Komponententests abgedeckt wird. Weitere Informationen finden Sie unter [Verwenden von Code Coverage für Komponententests](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Begriffsklärung
-Der Begriff *Mock* ( Deutsch „Pseudo“) wird leider im Testkontext häufig falsch verwendet. Im Folgenden werden die häufigsten Arten von unechten Objekten, sogenannten *Fakes*, beim Schreiben von Komponententests definiert:
+Der Begriff *Mock* (Deutsch: „Pseudo“) wird leider im Testkontext häufig falsch verwendet. Im Folgenden werden die häufigsten Arten von unechten Objekten, sogenannten *Fakes*, beim Schreiben von Komponententests definiert:
 
-*Fake*: Fake ist ein generischer Begriff, der sowohl für Stubs als auch für Pseudoobjekte („Mocks“) verwendet wird. Ob es sich um einen Stub oder einen Mock handelt, hängt vom Kontext ab. Das bedeutet, dass ein Fake entweder ein Stub oder ein Mock sein kann.
+*Fake*: Fake ist ein generischer Begriff, der sowohl für Stubs als auch für Pseudoobjekte („Mocks“) verwendet wird. Ob es sich um einen Stub oder um einen Mock handelt, hängt vom Kontext ab. Das bedeutet, dass ein Fake entweder ein Stub oder ein Mock sein kann.
 
 *Mock*: Ein Pseudoobjekt ist ein unechtes Objekt im System, das entscheidet, ob ein Komponententest erfolgreich war oder nicht. Ein Mock ist zunächst ein Fake, bis eine Assert-Anweisung ausgeführt wird.
 
@@ -75,7 +75,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Dies wäre ein Beispiel eines Stubs, der als Mock bezeichnet wird. In diesem Fall handelt es sich aber um einen Stub. Sie übergeben „Order“ nur, um `Purchase` instanziieren zu können (das System, das getestet wird). Die Bezeichnung `MockOrder` ist ebenfalls irreführend, da auch hier Order keinen Mock darstellt.
+Dies wäre ein Beispiel eines Stubs, der als Mock bezeichnet wird. In diesem Fall handelt es sich aber um einen Stub. Sie übergeben „Order“ nur, um `Purchase` instanziieren zu können (das System, das getestet wird). Die Bezeichnung `MockOrder` ist ebenfalls irreführend, da auch hier die Reihenfolge keinen Mock darstellt.
 
 Dies ist ein besserer Ansatz:
 
@@ -88,7 +88,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Indem die Klasse in `FakeOrder` umbenannt wird, wird sie generischer und kann so als Mock oder Stub verwendet werden, je nachdem, was für die Testsituation besser geeignet ist. Im Beispiel oben wird `FakeOrder` als Stub verwendet. Sie verwenden `FakeOrder` nicht in der Assert-Anweisung. `FakeOrder` wurde nur an die `Purchase`-Klasse übergeben, um die Anforderungen des Konstruktors zu erfüllen.
+Indem die Klasse in `FakeOrder` umbenannt wird, wird sie generischer und kann so als Mock oder Stub verwendet werden, je nachdem, was für die Testsituation besser geeignet ist. Im Beispiel oben wird `FakeOrder` als Stub verwendet. Sie verwenden `FakeOrder` nicht in der Assert-Anweisung. Die `FakeOrder` wurde nur an die Klasse `Purchase` übergeben, um die Anforderungen des Konstruktors zu erfüllen.
 
 Um „Purchase“ als Mock verwenden zu können, können Sie z.B. wie folgt vorgehen:
 
@@ -157,7 +157,7 @@ Die in einem Komponententest verwendete Eingabe soll so einfach wie möglich geh
 - Tests funktionieren auch nach Änderungen an der Codebasis wahrscheinlicher weiter.
 - Das Testverhalten steht im Vordergrund, nicht die Implementierung.
 
-Es ist wahrscheinlicher, dass Tests, die mehr Informationen enthalten, als für das Bestehen erforderlich sind, Fehler verursachen. Dadurch kann die Absicht des Tests weniger eindeutig sein. Wenn Sie Test schreiben, konzentrieren Sie sich auf das Verhalten. Die Festlegung von zusätzlichen Eigenschaften für Modelle oder die Verwendung von Werten, die nicht 0 (null) sind, wenn es nicht nötig ist, lenkt nur vom gewünschten Ergebnis ab.
+Es ist wahrscheinlicher, dass Tests, die mehr Informationen enthalten, als für das Bestehen erforderlich sind, Fehler verursachen. Dadurch kann die Absicht des Tests weniger eindeutig sein. Wenn Sie Tests schreiben, sollte das Verhalten im Vordergrund stehen. Die Festlegung von zusätzlichen Eigenschaften für Modelle oder die Verwendung von Werten, die nicht 0 (null) sind, wenn es nicht nötig ist, lenkt nur vom gewünschten Ergebnis ab.
 
 #### <a name="bad"></a>Nicht empfohlen:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]

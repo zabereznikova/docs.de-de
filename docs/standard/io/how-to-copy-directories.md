@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Kopieren von Verzeichnissen'
+description: Erfahren Sie, wie Sie Verzeichnisse mithilfe von E/A-Klassen kopieren, die die Inhalte eines Verzeichnisses synchron an einen anderen Ort kopieren.
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: f71f428037f33fdbc692ca2f02a4c767998d684e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 65fe28c90a6cd6f0b3c8c32da19c1d9603900670
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288575"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662588"
 ---
 # <a name="how-to-copy-directories"></a>Vorgehensweise: Kopieren von Verzeichnissen
 In diesem Thema wird gezeigt, wie E/A-Klassen zum synchronen Kopieren der Inhalte eines Verzeichnisses an einen anderen Speicherort verwendet werden.

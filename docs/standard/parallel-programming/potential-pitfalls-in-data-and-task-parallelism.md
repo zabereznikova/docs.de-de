@@ -1,5 +1,6 @@
 ---
 title: Potenzielle Fehler bei Daten- und Aufgabenparallelität
+description: Erfahren Sie mehr über potenzielle Fehlerquellen im Zusammenhang mit Daten- und Taskparallelität, da durch Parallelität eine bei sequenziellem Code nicht vorhandene Komplexität entsteht.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 00b4c89440223d229a06b0192032c9abcf931d58
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291694"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599762"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potenzielle Fehler bei Daten- und Aufgabenparallelität
 In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> erhebliche Leistungssteigerungen gegenüber gewöhnlichen sequenziellen Schleifen bieten. Die Parallelisierung der Schleife erhöht jedoch die Komplexität des Vorgangs, was Probleme nach sich ziehen kann, die in sequenziellem Code weniger häufig oder gar nicht vorkommen. In diesem Thema sind bestimmte Fehlerquellen aufgeführt, die beim Schreiben von parallelen Schleifen vermieden werden sollten.  

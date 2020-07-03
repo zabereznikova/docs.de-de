@@ -1,6 +1,6 @@
 ---
-title: 'Vorgehensweise: Analysieren von Zeichenfolgen mithilfe von „String.Split“ (C#-Anleitung)'
-description: „String.Split“ gibt einen Array mit Zeichenfolgen an, die von mehreren Trennzeichen getrennt werden. So können Sie auf einfache Weise Zeichenfolgen analysieren.
+title: Analysieren von Zeichenfolgen mithilfe von „String.Split“ (C#-Anleitung)
+description: Die Split-Methode gibt ein Array mit Zeichenfolgen an, die von mehreren Trennzeichen getrennt werden. So können Sie auf einfache Weise Zeichenfolgen analysieren.
 ms.date: 01/03/2018
 helpviewer_keywords:
 - splitting strings [C#]
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: 4f0056426fb29ec3d76093e57fa45e2046f27a4f
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7c5d8fa462775c6f3a9981693129997dda6c2286
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662991"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324141"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-in-c"></a>Analysieren von Zeichenfolgen mithilfe von String.Split in C\#
 
-Die <xref:System.String.Split%2A?displayProperty=nameWithType>-Methode erstellt ein Array mit Teilzeichenfolgen, indem die Eingabezeichenfolge von mindestens einem Trennzeichen geteilt wird. Dies stellt in der Regel die einfachste Methode dar, eine Zeichenfolge an Wortgrenzen zu teilen. Sie wird außerdem verwendet, um Zeichenfolgen nach anderen bestimmten Zeichen und Zeichenfolgen zu trennen.
+Die <xref:System.String.Split%2A?displayProperty=nameWithType>-Methode erstellt ein Array mit Teilzeichenfolgen, indem die Eingabezeichenfolge von mindestens einem Trennzeichen geteilt wird. Sie stellt in der Regel die einfachste Möglichkeit dar, eine Zeichenfolge an Wortgrenzen zu teilen. Sie wird außerdem verwendet, um Zeichenfolgen nach anderen bestimmten Zeichen und Zeichenfolgen zu trennen.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -35,7 +35,7 @@ Dieses Verhalten vereinfacht den Vorgang für Formate wie CSV (Comma Separated V
 Sie können einen optionalen <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType>-Parameter übergeben, um jegliche leeren Zeichenfolgen aus dem zurückgegebenen Array auszuschließen. Für kompliziertere Prozesse der zurückgegebenen Auflistung können Sie [LINQ](../programming-guide/concepts/linq/index.md) verwenden, um die Ergebnissequenz zu manipulieren.
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> kann mehrere Trennzeichen verwenden.
-In diesem Beispiel werden Leerräume, Kommas, Punkte, Doppelpunkte und Tabstopps verwendet, die alle in einem Array, das diese Trennzeichen enthält, an <xref:System.String.Split%2A>übergeben werden.
+In diesem Beispiel werden Leerräume, Kommas, Punkte, Doppelpunkte und Tabstopps verwendet, die an <xref:System.String.Split%2A> in einem Array übergeben werden.
 Die Schleife am Ende des Codes zeigt sämtliche Wörter im zurückgegeben Array an.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs" id="Snippet3":::

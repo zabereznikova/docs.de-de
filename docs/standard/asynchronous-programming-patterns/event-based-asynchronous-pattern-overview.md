@@ -1,5 +1,6 @@
 ---
 title: Übersicht über ereignisbasierte asynchrone Muster
+description: In diesem Artikel werden ereignisbasierte asynchrone Muster in .NET erläutert, die die Vorteile von Multithreadanwendungen verfügbar machen und gewisse Designschwierigkeiten beseitigen.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f4aac5afbb13cafa7bb0e9c1eb6bbd92ac41bf8c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289420"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768858"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Übersicht über ereignisbasierte asynchrone Muster
 Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin auf Benutzerinteraktionen reagieren, ist oft ein Entwurf erforderlich, der mehrere Threads verwendet. Der <xref:System.Threading>-Namespace bietet alle erforderlichen Tools für die Erstellung von leistungsstarken Multithreadanwendungen, aber für eine effektive Verwendung dieser Tools ist eine umfassende Erfahrung mit der Multithread-Softwareentwicklung erforderlich. Für relativ einfache Multithreadanwendungen bietet die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine unkomplizierte Lösung. Für komplexere asynchrone Anwendungen sollten Sie die Implementierung einer Klasse in Betracht ziehen, die den ereignisbasierten asynchronen Muster entspricht.  
@@ -131,14 +132,14 @@ public class AsyncExample
   
  Einige Klassen melden möglicherweise inkrementelle Ergebnisse, wenn asynchrone Vorgänge fortgesetzt werden. Diese Ergebnisse werden in einer Klasse gespeichert, die von <xref:System.ComponentModel.ProgressChangedEventArgs> abgeleitet ist und als Eigenschaften in der abgeleiteten Klasse angezeigt. Sie können auf diese Ergebnisse im Ereignishandler für das `ProgressChanged`-Ereignis so zugreifen, wie Sie auf die <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>-Eigenschaft zugreifen würden. Wenn mehrere asynchrone Vorgänge ausstehen, können Sie die Eigenschaft <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> verwenden, um zu unterscheiden, welcher Vorgang inkrementelle Ergebnisse meldet.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](event-based-asynchronous-pattern-eap.md)
+- [How to: How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [How to: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [How to: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Ereignisbasiertes asynchrones Muster (EAP)](event-based-asynchronous-pattern-eap.md)
 - [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

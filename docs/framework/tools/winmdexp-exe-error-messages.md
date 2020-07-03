@@ -1,5 +1,6 @@
 ---
 title: Winmdexp.exe-Fehlermeldungen
+description: Hier erfahren Sie Grundlegendes zu Winmdexp.exe-Fehlermeldungen (Exporttool für Metadaten der Windows-Runtime), die nur während des Buildprozesses angezeigt werden, wenn die .NET-Kompilierung erfolgreich ist.
 ms.date: 03/30/2017
 f1_keywords:
 - WME1095
@@ -157,21 +158,22 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b44273bd5a8868ba426d9ac0eabbefcb725e70f
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74447302"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325607"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe-Fehlermeldungen
+
 Der Buildprozess ruft [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](winmdexp-exe-windows-runtime-metadata-export-tool.md) auf, wenn Sie die Vorlage **Komponente für Windows-Runtime** in Visual Studio 2012 verwenden, sodass Winmdexp.exe-Fehlermeldungen in der **Fehlerliste** angezeigt werden. Winmdexp.exe arbeitet auf einem Modul, das mit der `/target:winmdobj`-Option kompiliert ist. Da ein kompiliertes Modul als Eingabe erforderlich ist, erscheinen die Fehlermeldungen nicht, bis die Kompilierung erfolgreich war.  
   
  Die Fehlermeldungen sollen alle Informationen enthalten, die Sie benötigen, um die Fehlerbedingungen anzugehen, die gemeldet werden. Jedoch erfordern einige Probleme mehr Informationen als in die Meldung passen. Zusätzliche Informationen finden Sie unter [Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
   
- Falls Ihr Fehler nicht in diesem Artikel behandelt wird, und Sie der Meinung sind, dass die Meldung nicht genügend Informationen enthält, um das Problem zu beheben, verwenden Sie den Link für Feedbackanforderung in diesem Artikel, und fügen Sie die Fehlermeldung ein. Oder melden Sie den Fehler auf der [Website der Entwicklercommunity](https://developercommunity.visualstudio.com/). Sie können in den [Microsoft-Foren](https://social.msdn.microsoft.com/Forums/) auch nach weiteren Informationen suchen.  
+ Falls Ihr Fehler nicht in diesem Artikel behandelt wird, und Sie der Meinung sind, dass die Meldung nicht genügend Informationen enthält, um das Problem zu beheben, verwenden Sie den Link für Feedback in diesem Artikel, und fügen Sie die Fehlermeldung ein. Oder melden Sie den Fehler auf der [Website der Entwicklercommunity](https://developercommunity.visualstudio.com/). Sie können in den [Microsoft-Foren](https://social.msdn.microsoft.com/Forums/) auch nach weiteren Informationen suchen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [Diagnostizieren von Fehlerbedingungen der Windows-Runtime-Komponente](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))

@@ -1,5 +1,6 @@
 ---
 title: Semaphore und SemaphoreSlim
+description: Erfahren Sie mehr über Semaphore und SemaphoreSlim. Bei der Klasse Semaphore handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt. Die Klasse SemaphoreSlim ist eine schnelle, einfache Variante der Klasse Semaphore.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 9a18a6517548bb402e1e3b9ac02e95aae32a8f4a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291135"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600450"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
 Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt ein benanntes (systemweites) oder lokales Semaphor dar. Dabei handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt. Win32-Semaphoren sind zählende Semaphoren, die zum Steuern des Zugriffs auf einen Ressourcenpool verwendet werden können.  
@@ -44,7 +45,7 @@ Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt
   
  Verwenden Sie die Zugriffssteuerungssicherheit zum Schutz eines <xref:System.Threading.Semaphore>-Objekts, das ein benanntes Semaphor darstellt, vorzugsweise unter Verwendung eines Konstruktors, der <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>-Objekt angibt. Sie können die Zugriffssteuerungssicherheit auch mithilfe der <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>-Methode anwenden, allerdings bleibt so ein Verwundbarkeitszeitfenster zwischen der Erstellung und dem Schutz des Semaphors. Der Schutz von Semaphoren mit Zugriffssteuerungssicherheit hilft beim Verhindern böswilliger Angriffe, das Problem unbeabsichtigter Namenskonflikte wird dadurch aber nicht gelöst.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>

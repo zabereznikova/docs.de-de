@@ -1,5 +1,6 @@
 ---
 title: Grundlagen des verwalteten Threadings
+description: In diesem Artikel finden Sie Links zu anderen Artikeln über verwaltetes Threading, in denen unter anderem Themen wie Ausnahmen, das Synchronisieren von Daten, Vordergrund- und Hintergrundthreads und lokaler Speicher behandelt werden.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: 4d2a96619fd1c48c79b5590efdb52c307d29710c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d4a4ceabf29bd0f6f537e59ba477f9da686b1ef5
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291005"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769092"
 ---
 # <a name="managed-threading-basics"></a>Grundlagen des verwalteten Threadings
 
@@ -44,7 +45,7 @@ Die ersten fünf Themen in diesem Abschnitt sollen Ihnen helfen, zu bestimmen, w
  [Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Beschreibt threadbezogene Speichermechanismen.  
   
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Referenz
 
  <xref:System.Threading.Thread>  
  Stellt die Referenzdokumentation für die **Thread**-Klasse bereit, die einen verwalteten Thread repräsentiert, und zwar unabhängig davon, ob er von nicht verwaltetem Code stammt oder in einer verwalteten Anwendung erstellt wurde.  

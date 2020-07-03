@@ -1,5 +1,6 @@
 ---
 title: Bewährte Methoden für System.Net-Klassen
+description: Halten Sie sich an die folgenden Empfehlungen zur optimalen Verwendung der in System.Net enthaltenen Klassen bei der .NET Framework-Programmierung.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - sending data, best practices
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: c7324dcbc27c95c7d799592700d46c195e7d952b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583fa5e57c7c4d60252dddfd425596e7acad7c0d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048893"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502677"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Bewährte Methoden für System.Net-Klassen
 Mit den folgenden Empfehlungen können Sie die in <xref:System.Net> enthaltenen Klassen bestmöglich verwenden:  
@@ -32,6 +33,6 @@ Mit den folgenden Empfehlungen können Sie die in <xref:System.Net> enthaltenen 
   
 - Verwenden Sie beim Zugriff auf Websites, die Anmeldeinformationen erfordern, die <xref:System.Net.CredentialCache>-Klasse zum Erstellen eines Zwischenspeichers für Anmeldeinformationen, anstatt sie mit jeder Anforderung bereitzustellen. Die **CredentialCache**-Klasse durchsucht den Zwischenspeicher nach den entsprechenden Anmeldeinformationen für eine Anforderung, sodass Sie keine Verantwortung für das Erstellen und Bereitstellen von Anmeldeinformationen auf Basis der URL haben.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Netzwerkprogrammierung in .NET Framework](index.md)

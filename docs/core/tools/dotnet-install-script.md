@@ -2,12 +2,12 @@
 title: Dotnet-Installationsskripts
 description: Erfahren Sie mehr über die dotnet-Installationsskripts zur Installation des .NET Core SDK und der Shared Runtime.
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802724"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324428"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -28,7 +28,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS:
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
+Das Bash-Skript liest auch PowerShell-Schalter, sodass Sie PowerShell-Schalter mit dem Skript auf Linux/macOS-Systemen verwenden können.
+
 ## <a name="description"></a>Beschreibung
 
-Die `dotnet-install`-Skripts werden verwendet, um eine Nicht-Administrator-Installation des .NET Core SDK durchzuführen, die die .NET Core-CLI und die freigegebene Runtime enthält.
+Die `dotnet-install`-Skripts werden verwendet, um eine Nicht-Administrator-Installation des .NET Core SDK durchzuführen, die die .NET Core-CLI und die freigegebene Runtime enthält. Es gibt zwei Skripts:
+
+* Ein PowerShell-Skript, das unter Windows verwendet werden kann
+* Ein Bash-Skript für Linux/macOS
+
+### <a name="purpose"></a>Zweck
+
+ Diese Skripts sind für die Verwendung in Continuous Integration-Szenarios (CI) konzipiert, in denen Folgendes zutrifft:
+
+* Das SDK muss ohne Benutzerinteraktion und ohne Administratorrechte installiert werden.
+* Die SDK-Installation muss nicht für mehrere CI-Ausführungen beibehalten werden.
+
+  Die typische Sequenz für Ereignisse lautet folgendermaßen:
+  * Die CI wird ausgelöst.
+  * Die CI installiert das SDK mithilfe eines dieser Skripts.
+  * Die CI schließt ihre Aufgaben ab und bereinigt temporäre Daten einschließlich der SDK-Installation.
+
+Verwenden Sie die Installationsprogramme anstatt dieser Skripts, um eine Entwicklungsumgebung einzurichten oder um Apps auszuführen.
+
+### <a name="recommended-version"></a>Empfohlene Version
 
 Es wird empfohlen, die stabile Version der Skripts zu verwenden:
 
 - Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
 
-Diese Skripts sind vor allem in Szenarios für die Automatisierung und Nicht-Administrator-Installationen nützlich. Es gibt zwei Skripts: eines für PowerShell unter Windows und ein Bash-Skript für Linux/macOS. Beide Skripts weisen das gleiche Verhalten auf. Das Bash-Skript liest auch PowerShell-Schalter, sodass Sie PowerShell-Schalter mit dem Skript auf Linux/macOS-Systemen verwenden können.
+### <a name="script-behavior"></a>Skriptverhalten
 
-Die Installationsskripts laden die ZIP/Tarball-Datei vom CLI-Build-Ablagespeicherort herunter und installieren sie entweder am Standardspeicherort oder an einem in `-InstallDir|--install-dir` angegebenen Speicherort. In der Standardeinstellung laden die Installationsskripts das SDK herunter und installieren es. Wenn Sie nur die freigegebene Laufzeit abrufen möchten, geben Sie das `-Runtime|--runtime`-Argument an.
+Beide Skripts weisen das gleiche Verhalten auf. Sie laden die ZIP-/Tarball-Datei vom CLI-Build-Ablagespeicherort herunter und installieren sie entweder am Standardspeicherort oder an einem in `-InstallDir|--install-dir` angegebenen Speicherort.
 
-In der Standardeinstellung fügt das Skript den Installationsort dem $PATH für die aktuelle Sitzung hinzu. Überschreiben Sie dieses Standardverhalten, indem sie das `-NoPath|--no-path`-Argument angeben.
+In der Standardeinstellung laden die Installationsskripts das SDK herunter und installieren es. Wenn Sie nur die freigegebene Laufzeit abrufen möchten, geben Sie das `-Runtime|--runtime`-Argument an.
+
+In der Standardeinstellung fügt das Skript den Installationsort dem $PATH für die aktuelle Sitzung hinzu. Überschreiben Sie dieses Standardverhalten, indem sie das `-NoPath|--no-path`-Argument angeben. Das Skript legt die Umgebungsvariable `DOTNET_ROOT` nicht fest.
 
 Bevor Sie das Skript ausführen, installieren Sie die erforderlichen [Abhängigkeiten](../install/dependencies.md).
 
-Installieren Sie eine bestimmte Version mithilfe des Arguments `-Version|--version`. Die Version muss als dreiteilige Version (z. B. `2.1.0`) angegeben werden. Wenn nicht angegeben, wird die `latest`-Version verwendet.
+Installieren Sie eine bestimmte Version mithilfe des Arguments `-Version|--version`. Die Version muss als dreiteilige Versionsnummer (z. B. `2.1.0`) angegeben werden. Wenn die Version nicht angegeben wird, installiert das Skript die `latest`-Version.
 
 Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Sie laden nur die gezippten Binärdateien herunter und kopieren sie in einen Ordner. Wenn Sie möchten, dass die Registrierungsschlüsselwerte aktualisiert werden, verwenden Sie die .NET Core-Installationsprogramme.
 
@@ -94,9 +117,9 @@ Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Si
 
   Wird als Abfragezeichenfolge zum Anfügen an den Azure-Feed verwendet. Ermöglicht das Ändern der URL, um nicht öffentliche Blob Storage-Konten verwenden zu können.
 
-- **`-Help|--help`**
+- **`--help`**
 
-  Druckt Hilfe für das Skript aus.
+  Druckt Hilfe für das Skript aus. Gilt nur für das Bash-Skript. Verwenden Sie `Get-Help ./dotnet-install.ps1` für PowerShell.
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 

@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Entladen einer Anwendungsdomäne'
+description: Lesen Sie, wie Sie eine Anwendungsdomäne in .NET entladen, indem Sie die Methode „AppDomain.Unload“ verwenden, um die angegebene Anwendungsdomäne ordnungsgemäß herunterzufahren.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - application domains, unloading
 - unloading application domains
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
-ms.openlocfilehash: 4d5f98229c3a9da69a350ae325cd42e8deb6b7bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b64a9553f63aa4a8deb57f23a97fa464edd64fee
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119844"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104653"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Vorgehensweise: Entladen einer Anwendungsdomäne
 Wenn Sie die Nutzung einer Anwendungsdomäne beenden möchten, entladen Sie sie mithilfe der <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>-Methode. Durch die **Unload**-Methode wird die angegebene Anwendungsdomäne ordnungsgemäß geschlossen. Während des Entladevorgangs können keine neuen Threads auf die Anwendungsdomäne zugreifen. Alle anwendungsdomänenspezifischen Strukturen werden freigegeben.  

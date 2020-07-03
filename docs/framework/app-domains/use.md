@@ -1,17 +1,18 @@
 ---
 title: Verwenden von Anwendungsdomänen
+description: Verwenden Sie Anwendungsdomänen. Diese stellen eine Isolationseinheit für die Common Language Runtime (CLR) bereit. Anwendungsdomänen werden in einem Prozess erstellt und ausgeführt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: df2a63716904ebfc6ee163121a1f07e53aa07514
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645430"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105185"
 ---
 # <a name="using-application-domains"></a>Verwenden von Anwendungsdomänen
 

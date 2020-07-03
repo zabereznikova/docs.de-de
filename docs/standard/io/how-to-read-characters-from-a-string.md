@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge'
+description: Informationen zum Lesen von Zeichen aus einer Zeichenfolge in .NET Hier finden Sie Beispiele für synchrone und asynchrone Lesevorgänge für Zeichen.
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: 6d32e9c5f89dba7590958bae6cc0489f104cd19a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40ff144e0899f3560805a31fa76f391afaeccd67
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291772"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594841"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge
 In den folgenden Codebeispielen wird das synchrone und asynchrone Lesen von Zeichen aus einer Zeichenfolge veranschaulicht.  

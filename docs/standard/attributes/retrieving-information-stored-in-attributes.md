@@ -1,5 +1,6 @@
 ---
 title: Abrufen von Informationen aus Attributen
+description: Hier erfahren Sie mehr über das Abrufen von in Attributen gespeicherten Informationen für eine Attributinstanz, viele Instanzen für denselben Bereich und viele Instanzen für verschiedene Bereiche.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276134"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661860"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Abrufen von Informationen aus Attributen
 Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuerst deklarieren Sie eine Instanz des Attributs, das Sie abrufen möchten. Dann verwenden Sie die <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>-Methode, um das neue Attribut auf den Wert des abzurufenden Attributs zu initialisieren. Sobald das neue Attribut initialisiert wurde, verwenden Sie einfach dessen Eigenschaften, um die Werte abzurufen.  
   
 > [!IMPORTANT]
-> In diesem Thema wird beschrieben, wie Attribute für Code abgerufen werden, der in den Ausführungskontext geladen wird. Zum Abrufen von Attributen für Code, der in den reflektionsbezogenen Kontext geladen wurde, müssen Sie die <xref:System.Reflection.CustomAttributeData>-Klasse verwenden, wie in [Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) beschrieben.  
+> In diesem Thema wird beschrieben, wie Attribute für Code abgerufen werden, der in den Ausführungskontext geladen wird. Zum Abrufen von Attributen für Code, der in den reflexionsbezogenen Kontext geladen wurde, müssen Sie die <xref:System.Reflection.CustomAttributeData>-Klasse verwenden, wie in [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  Dieser Abschnitt erläutert die folgenden Möglichkeiten zum Abrufen von Attributen:  
   
@@ -82,7 +83,7 @@ The attribute was not found.
   
  Sie können die Elemente der <xref:System.Type>-Klasse verwenden, um die einzelnen Methoden und Elemente der übergebenen Klasse abzurufen. In diesem Beispiel wird zuerst das **Type**-Objekt abgefragt, um Attributinformationen für die Klassenebene abzurufen. Als Nächstes wird <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> verwendet, um Instanzen aller Methoden in einem Array von <xref:System.Reflection.MemberInfo?displayProperty=nameWithType>-Objekten zu platzieren, um Attributinformationen für die Methodenebene abzurufen. Sie können mithilfe der <xref:System.Type.GetProperties%2A?displayProperty=nameWithType>-Methode nach Attributen auf Eigenschaftenebene oder mithilfe von <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> nach Attributen auf Konstruktorebene suchen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>

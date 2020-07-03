@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Festlegen einer Cacherichtlinie für eine Anforderung'
+title: 'Vorgehensweise: Festlegen einer Cacherichtlinie für eine Anforderung'
+description: Hier erfahren Sie, wie Sie eine Cacherichtlinie für eine Anforderung im .NET Framework festlegen. Diese Cacherichtlinie ermöglicht es, eine Ressource aus dem Cache bis zu einem Tag lang zu verwenden.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180764"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502430"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>Gewusst wie: Festlegen einer Cacherichtlinie für eine Anforderung
+# <a name="how-to-set-cache-policy-for-a-request"></a>Vorgehensweise: Festlegen einer Cacherichtlinie für eine Anforderung
 Das folgende Beispiel veranschaulicht das Festlegen einer Cacherichtlinie für eine Anforderung. Die Beispieleingabe ist eine URI wie `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Beispiel  
@@ -105,7 +106,7 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
 - [Cacherichtlinie](cache-policy.md)

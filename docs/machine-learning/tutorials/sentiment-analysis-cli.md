@@ -3,25 +3,25 @@ title: Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
 description: Automatisches Generieren eines ML-Modells und des zugehörigen C#-Codes aus einem Beispieldataset
 author: cesardl
 ms.author: cesardl
-ms.date: 12/23/2019
+ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243335"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326027"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
 
-Erfahren Sie, wie Sie mit der ML.NET-CLI automatisch ein ML.NET-Modell und den zugrunde liegenden C#-Code generieren. Sie stellen Ihr Dataset und die Machine Learning-Aufgabe bereit, die Sie implementieren möchten, und die CLI verwendet die AutoML-Engine, um Quellcode für die Modellgenerierung und Bereitstellung sowie das Binärmodell zu erstellen.
+Erfahren Sie, wie Sie mit der ML.NET-CLI automatisch ein ML.NET-Modell und den zugrunde liegenden C#-Code generieren. Sie stellen Ihr Dataset und die Machine Learning-Tasks bereit, die Sie implementieren möchten. Die CLI verwendet die AutoML-Engine, um Quellcode für die Modellgenerierung und Bereitstellung sowie das Klassifizierungsmodell zu erstellen.
 
 In diesem Tutorial führen Sie die folgenden Schritte durch:
 > [!div class="checklist"]
 >
 > - Vorbereiten der Daten für die ausgewählte Machine Learning-Aufgabe
-> - Ausführen des Befehls „mlnet auto-train“ über die CLI
+> - Ausführen des Befehls „mlnet classification“ über die CLI
 > - Überprüfen der Ergebnisse der Qualitätsmetriken
 > - Verstehen des generierten C#-Codes zur Verwendung des Modells in Ihrer Anwendung
 > - Untersuchen des generierten C#-Codes, der zum Trainieren des Modells verwendet wurde
@@ -35,8 +35,8 @@ Sie können die ML.NET-CLI über jede Eingabeaufforderung (Windows, Mac oder Lin
 
 ## <a name="pre-requisites"></a>Voraussetzungen
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) oder höher
-- (Optional) [Visual Studio 2017 oder 2019](https://visualstudio.microsoft.com/vs/)
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1) oder höher
+- (Optional) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 - [ML.NET-CLI](../how-to-guides/install-ml-net-cli.md)
 
 Sie können die generierten C#-Codeprojekte entweder über Visual Studio oder mit `dotnet run` ausführen (.NET Core-CLI).
@@ -76,34 +76,26 @@ Wir werden ein vorhandenes Dataset verwenden, das für ein Szenario „Standpunk
     Jetzt können Sie die CLI für das Szenario „Standpunktanalyse“ verwenden.
 
     > [!NOTE]
-    > Nach Abschluss dieses Tutorials können Sie auch eigene Datasets ausprobieren, sofern sie für die ML-Aufgaben geeignet sind, die derzeit von der ML.NET-CLI-Vorschau unterstützt werden, d.h. *„Binäre Klassifizierung“, „Multiklassenklassifizierung“ und „Regression“* ).
+    > Nach Abschluss dieses Tutorials können Sie auch eigene Datasets ausprobieren, sofern sie für die ML-Tasks geeignet sind, die derzeit von der ML.NET-CLI-Vorschauversion unterstützt werden, d. h. *„Binäre Klassifizierung“, „Klassifizierung“, „Regression“* und *„Empfehlung“* .
 
-## <a name="run-the-mlnet-auto-train-command"></a>Ausführen des Befehls „mlnet auto-train“
+## <a name="run-the-mlnet-classification-command"></a>Ausführen des Befehls „mlnet classification“
 
 1. Führen Sie den folgenden ML.NET CLI-Befehl aus:
 
     ```console
-    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
     ```
 
-    Dieser Befehl führt den **`mlnet auto-train`-Befehl** aus:
-    - für eine **ML-Aufgabe** des Typs **`binary-classification`**
+    Dieser Befehl führt den **`mlnet classification`-Befehl** aus:
+    - für den **ML-Task** der *Klassifizierung*
     - verwendet die **Datasetdatei `yelp_labelled.txt`** als Trainings- und Testdataset (intern verwendet die CLI entweder eine Kreuzvalidierung oder teilt sie in zwei Datasets, eine für das Training und eine für den Test)
     - wenn die **Objekt-/Zielspalte**, die Sie vorhersagen möchten (allgemein **Bezeichnung** genannt), die **Spalte mit dem Index 1** ist (das ist die zweite Spalte, da der Index nullbasiert ist)
     - verwendet **keinen Dateiheader** mit Spaltennamen, da diese spezielle Datasetdatei keinen Header hat
-    - die **angestrebte Explorationszeit** für das Experiment beträgt **10 Sekunden**
+    - die **angestrebte Untersuchungs-/Trainingszeit** für das Experiment beträgt **10 Sekunden**
 
     Die CLI-Ausgabe sieht in etwas so aus:
 
-    <!-- markdownlint-disable MD023 MD025 -->
-
-    # <a name="windows"></a>[Windows](#tab/windows)
-
-    ![Befehl „auto-train“ in der ML.NET-CLI auf PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
-
-    # <a name="macos-bash"></a>[MacOS-Bash](#tab/macosbash)
-
-    ![Befehl „auto-train“ in der ML.NET-CLI auf PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
+    ![ML.NET-CLI-Klassifizierung in PowerShell](./media/mlnet-cli/mlnet-classification-powershell.gif)
 
     In diesem speziellen Fall konnte das CLI-Tool in nur 10 Sekunden und mit dem bereitgestellten kleinen Dataset eine ganze Reihe von Iterationen durchführen. Das bedeutet, dass das Training basierend auf verschiedenen Kombinationen von Algorithmen/Konfigurationen mit unterschiedlichen internen Datentransformationen und den Hyperparametern des Algorithmus mehrfach durchgeführt wurde.
 
@@ -137,12 +129,12 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
 
 ## <a name="explore-the-generated-c-code-to-use-for-running-the-model-to-make-predictions"></a>Erkunden des generierten C#-Codes, der für die Ausführung des Modells zum Treffen von Vorhersagen verwendet werden kann
 
-1. Öffnen Sie in Visual Studio (2017 oder 2019) die Projektmappe, die in dem Ordner mit dem Namen `SampleBinaryClassification` in Ihrem ursprünglichen Zielordner generiert wurde (im Tutorial wurde der Name `/cli-test` verwendet). Die angezeigte Projektmappe sollte ungefähr so aussehen:
+1. Öffnen Sie in Visual Studio (2017 oder 2019) die Projektmappe, die in dem Ordner mit dem Namen `SampleClassification` in Ihrem ursprünglichen Zielordner generiert wurde (im Tutorial wurde der Name `/cli-test` verwendet). Die angezeigte Projektmappe sollte ungefähr so aussehen:
 
     > [!NOTE]
     > Im Tutorial empfehlen wir die Verwendung von Visual Studio. Sie können aber auch den generierten C#-Code (zwei Projekte) mit einem beliebigen Text-Editor untersuchen und die generierte Konsolen-App mit der `dotnet CLI` auf MacOS-, Linux- oder Windows-Computern ausführen.
 
-    ![Von der CLI generierte VS-Projektmappe](./media/mlnet-cli/generated-csharp-solution-detailed.png)
+    ![Von der CLI generierte VS-Projektmappe](./media/mlnet-cli/mlnet-cli-solution-explorer.png)
 
     - Die generierte **Klassenbibliothek**, die das serialisierte ML-Modell (ZIP-Datei) und die Datenklassen (Datenmodelle) enthält, können Sie direkt in Ihrer Endbenutzeranwendung verwenden, auch wenn Sie direkt auf diese Klassenbibliothek verweisen (oder den Code verschieben, ganz wie Sie möchten).
     - Die generierte **Konsolen-App** enthält Ausführungscode, den Sie überprüfen müssen. Dann wird der „Bewertungscode“ (Code, der das ML-Modell ausführt, um Vorhersagen zu treffen) in der Regel wiederverwendet, indem Sie diesen einfachen Code (nur ein paar Zeilen) in Ihre Endbenutzeranwendung verschieben, wo Sie die Vorhersagen machen möchten.
@@ -156,64 +148,38 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
     ```csharp
     static void Main(string[] args)
     {
-        MLContext mlContext = new MLContext();
+        // Create single instance of sample data from first line of dataset for model input
+        ModelInput sampleData = new ModelInput()
+        {
+            Col0 = @"Wow... Loved this place.",
+        };
 
-        // Training code used by ML.NET CLI and AutoML to generate the model
-        //ModelBuilder.CreateModel();
+        // Make a single prediction on the sample data and print results
+        var predictionResult = ConsumeModel.Predict(sampleData);
 
-        ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
-
-        // Create sample data to do a single prediction with it
-        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
-
-        // Try a single prediction
-        ModelOutput predictionResult = predEngine.Predict(sampleData);
-
-        Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
+        Console.WriteLine("Using model to make single prediction -- Comparing actual Col1 with predicted Col1 from sample data...\n\n");
+        Console.WriteLine($"Col0: {sampleData.Col0}");
+        Console.WriteLine($"\n\nPredicted Col1 value {predictionResult.Prediction} \nPredicted Col1 scores: [{String.Join(",", predictionResult.Score)}]\n\n");
+        Console.WriteLine("=============== End of process, hit any key to finish ===============");
+        Console.ReadKey();
     }
     ```
 
-    - Die erste Zeile des Codes erstellt einfach ein `MLContext`-Objekt, das bei der Ausführung von ML.NET-Code benötigt wird.
-
-    - Die zweite Codezeile wird auskommentiert, da Sie das Modell nicht trainieren müssen, da es bereits vom CLI-Tool für Sie trainiert und in der serialisierten ZIP-Datei des Modells gespeichert wurde. Wenn Sie jedoch sehen möchten, *„wie das Modell von der CLI trainiert wurde“* , können Sie die Auskommentierung dieser Zeile aufheben und den für dieses spezielle ML-Modell verwendeten Trainingscode ausführen/debuggen.
-
-    - In der dritten Zeile des Codes laden Sie das Modell mit der `mlContext.Model.Load()`-API aus der serialisierten ZIP-Datei des Modells, indem Sie den Pfad zu dieser Datei angeben.
-
-    - In der vierten Codezeile, die Sie laden, erstellen Sie das `PredictionEngine`-Objekt mit der `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`-API. Sie benötigen das `PredictionEngine`-Objekt, wenn Sie eine Vorhersage für ein einzelnes Datenbeispiel erstellen möchten (in diesem Fall ein einzelnes Textstück, um dessen Standpunkt vorherzusagen).
-
-    - In der fünften Zeile des Codes erstellen Sie die *einzelnen Beispieldaten*, die für die Vorhersage verwendet werden sollen, indem Sie die Funktion `CreateSingleDataSample()` aufrufen. Da das CLI-Tool nicht weiß, welche Art von Beispieldaten verwendet werden sollen, lädt es innerhalb dieser Funktion die erste Zeile des Datasets. Für diesen Fall können Sie jedoch auch eigene „hartcodierten“ Daten anstelle der aktuellen Implementierung der Funktion `CreateSingleDataSample()` erstellen, indem Sie diesen einfacheren Code aktualisieren, der diese Funktion implementiert:
+    - Die ersten Codezeilen erstellen *einzelne Beispieldaten*, die in diesem Fall auf der ersten Zeile Ihres Datasets basieren, das für die Vorhersage verwendet werden soll. Sie können auch eigene „hartcodierte“ Daten erstellen, indem Sie den Code aktualisieren:
 
         ```csharp
-        private static ModelInput CreateSingleDataSample()
+        ModelInput sampleData = new ModelInput()
         {
-            ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
-            return sampleForPrediction;
-        }
+            Col0 = "The ML.NET CLI is great for getting started. Very cool!"
+        };
         ```
+
+    - In der nächsten Codezeile wird die `ConsumeModel.Predict()`-Methode für die angegebenen Eingabedaten verwendet, um eine Vorhersage zu treffen und die Ergebnisse (basierend auf dem ModelOutput.cs-Schema) zurückzugeben.
+    - In den letzten Codezeilen werden die Eigenschaften der Beispieldaten (in diesem Fall der Kommentar) sowie die Stimmungsvorhersage und die entsprechenden Ergebnisse für positive Stimmungen (1) und negative Stimmungen (2) ausgegeben.
 
 1. Führen Sie das Projekt entweder mit den ursprünglichen Beispieldaten aus der ersten Zeile des Datasets oder mit Ihren eigenen, hartcodierten Beispieldaten aus. Die Vorhersage sollte ungefähr so aussehen:
 
-    # <a name="windows"></a>[Windows](#tab/windows)
-
-    Führen Sie die Konsolen-App über Visual Studio durch Drücken auf F5 („Wiedergabe“) aus:
-
-    ![Befehl „auto-train“ in der ML.NET-CLI auf PowerShell](./media/mlnet-cli/sample-cli-prediction-execution.png))
-
-    # <a name="macos-bash"></a>[MacOS-Bash](#tab/macosbash)
-
-    Führen Sie die Konsolen-App über die Eingabeaufforderung aus, indem Sie die folgenden Befehle eingeben:
-
-    ```dotnetcli
-    cd SampleBinaryClassification
-    cd SampleBinaryClassification.ConsoleApp
-
-    dotnet run
-    ```
-
-    ![Befehl „auto-train“ in der ML.NET-CLI auf PowerShell](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
-
-    ---
+![Ausführen der App durch ML.NET-CLI über Visual Studio](./media/mlnet-cli/mlnet-cli-console-app.png))
 
 1. Versuchen Sie, die hartcodierten Beispieldaten in andere Sätze mit verschiedenen Standpunkten zu ändern, und schauen Sie sich an, wie das Modell positive oder negative Standpunkte vorhersagt.
 
@@ -252,10 +218,10 @@ In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt wer
 > [!div class="checklist"]
 >
 > - Vorbereiten der Daten für die ausgewählte ML-Aufgabe (zu lösendes Problem)
-> - Ausführen des Befehls „mlnet auto-train“ über das CLI-Tool
+> - Ausführen des Befehls „mlnet classification“ über das CLI-Tool
 > - Überprüfen der Ergebnisse der Qualitätsmetriken
 > - Verstehen des generierten C#-Codes zur Ausführung des Modells (Code zur Verwendung in Ihrer Endbenutzer-App)
-> - Untersuchen des generierten C#-Codes, der zum Trainieren des „Modell mit der besten Qualität“ verwendet wurde (zu Lernzwecken)
+> - Untersuchen des generierten C#-Codes, der zum Trainieren des Modells mit der besten Qualität verwendet wurde (zu Lernzwecken)
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Auslösen und Behandeln von Ereignissen'
+title: 'Vorgehensweise: Auslösen und Verarbeiten von Ereignissen'
+description: Lösen Sie in .NET Ereignisse aus, und verarbeiten Sie sie. Dieser Artikel enthält Beispiele, in denen die Delegaten EventHandler, EventHandler<TEventArgs> sowie ein benutzerdefinierter Delegat verwendet werden.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 4d0b24b8a6f1b914745d819b90b973752e32447c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4054e1a26c3392870af994a6eceafae92176a332
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279957"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769274"
 ---
-# <a name="how-to-raise-and-consume-events"></a>Gewusst wie: Auslösen und Behandeln von Ereignissen
+# <a name="how-to-raise-and-consume-events"></a>Vorgehensweise: Auslösen und Verarbeiten von Ereignissen
 Mithilfe der Beispiele in diesem Thema wird veranschaulicht, wie mit Ereignissen gearbeitet wird. Sie schließen Beispiele für den <xref:System.EventHandler>-Delegaten, den <xref:System.EventHandler%601>-Delegaten und einen benutzerdefinierten Delegaten ein, um Ereignisse mit und ohne Daten zu veranschaulichen.  
   
  In den Beispielen werden die im Artikel [Ereignisse](index.md) beschriebenen Konzepte verwendet.  
@@ -42,6 +43,6 @@ Mithilfe der Beispiele in diesem Thema wird veranschaulicht, wie mit Ereignissen
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Ereignisse](index.md)

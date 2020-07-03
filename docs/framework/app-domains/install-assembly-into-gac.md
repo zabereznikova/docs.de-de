@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Installieren einer Assembly im globalen Assemblycache'
+description: Installieren Sie eine Assembly im globalen Assemblycache (Global Assembly Cache, GAC) in .NET, damit sie von mehreren Anwendungen gemeinsam genutzt werden kann. Verwenden Sie den Windows Installer oder das GAC-Hilfsprogramm.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08a5475d74327265f28b65676ae56be15afb57d3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155562"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104668"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Vorgehensweise: Installieren einer Assembly im globalen Assemblycache
 
@@ -43,9 +44,9 @@ Die Syntax zur Verwendung der *gacutil.exe* zum Installieren einer Assembly im G
 gacutil -i <assembly name>
 ```
 
-In diesem Befehl bezeichnet *\<Assemblyname>* den Namen der Assembly, die im globalen Assemblycache installiert werden soll.
+In diesem Befehl bezeichnet *\<assembly name>* den Namen der Assembly, die im globalen Assemblycache installiert werden soll.
 
-Wenn *gacutil.exe* sich nicht in Ihrem Systempfad befindet, verwenden Sie die [Developer-Eingabeaufforderung für VS *\<Version>* ](../tools/developer-command-prompt-for-vs.md).
+Wenn *gacutil.exe* sich nicht auf Ihrem Systempfad befindet, verwenden Sie die [Developer-Eingabeaufforderung für Visual Studio *\<version>* ](../tools/developer-command-prompt-for-vs.md).
 
 Im folgenden Beispiel wird eine Assembly mit dem Dateinamen *hello.dll* im globalen Assemblycache installiert.
 

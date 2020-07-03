@@ -1,14 +1,14 @@
 ---
 title: Automatisieren des Modelltrainings mit der ML.NET-CLI
 description: Erfahren Sie, wie Sie mit dem ML.NET-CLI-Tool automatisch das beste Modell über die Befehlszeile trainieren können.
-ms.date: 12/17/2019
+ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212411"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589660"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatisieren des Modelltrainings mit der ML.NET-CLI
 
@@ -33,24 +33,24 @@ Sie können diese Objekte aus Ihren eigenen Datasets generieren, ohne selbst zu 
 
 Derzeit unterstützt die ML.NET-CLI folgende Aufgaben:
 
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-- Zukünftig: weitere Machine Learning-Aufgaben wie `recommendation`, `ranking`, `anomaly-detection`, `clustering`
+- Klassifizierung (mit zwei oder mehr Klassen)
+- Regression
+- Empfehlung
+- In Zukunft: weitere Machine-Learning-Tasks wie Bildklassifizierung, Zuweisen von Rängen, Anomalieerkennung und Clustering
 
-Beispiel für die Verwendung:
+Verwendungsbeispiel (Klassifizierungsszenario):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![Bild](media/automate-training-with-cli/cli-model-generation.gif)
+![Bild](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 Sie können sie auf die gleiche Weise auf *Windows PowerShell*, *macOS-/Linux-Bash* oder *Windows CMD* ausführen. Die tabellarische automatische Vervollständigung (Parametervorschläge) funktioniert jedoch nicht unter *Windows-CMD*.
 
 ## <a name="output-assets-generated"></a>Generierte Ausgabeobjekte
 
-Der CLI-Befehl `auto-train` generiert die folgenden Objekte im Ausgabeordner:
+Die ML-Taskbefehle in der CLI generieren die folgenden Objekte im Ausgabeordner:
 
 - Eine serialisierte ZIP-Datei des Modells („bestes Modell“), die sofort für die Ausführung von Vorhersagen verwendet werden kann.
 - C#-Lösung mit:
@@ -68,23 +68,15 @@ Wenn Sie mit dem CLI-Tool ein „bestes Modell“ erstellen, werden Qualitätsme
 
 Hier werden diese Metriken zusammengefasst, die nach ML-Aufgaben gruppiert sind, damit Sie die Qualität Ihres automatisch generierten „besten Modells“ verstehen können.
 
-### <a name="metrics-for-binary-classification-models"></a>Metriken für binäre Klassifizierungsmodelle
+### <a name="metrics-for-classification-models"></a>Metriken für Klassifizierungsmodelle
 
-Im Folgenden wird die Metrikliste der binären ML-Klassifizierungsaufgaben für die fünf besten, von der CLI gefundenen Modelle angezeigt:
-
-![Bild](media/automate-training-with-cli/cli-binary-classification-metrics.png)
-
-Die Genauigkeit ist eine beliebte Metrik für Klassifizierungsprobleme. Allerdings ist die Genauigkeit nicht immer die beste Metrik, um das beste Modell auszuwählen, wie in den folgenden Referenzen erläutert. Es gibt Fälle, in denen Sie die Qualität Ihres Modells mit zusätzlichen Metriken bewerten müssen.
-
-Um die Metriken zu untersuchen und zu verstehen, die von der CLI ausgegeben werden, lesen Sie [Auswertungsmetriken für die binäre Klassifizierung](resources/metrics.md#evaluation-metrics-for-binary-classification).
-
-### <a name="metrics-for-multi-class-classification-models"></a>Metriken für Multiklassen-Klassifizierungsmodelle
-
-Im Folgenden wird die Metrikliste der ML-Aufgabe für die Multiklassenklassifizierung für die fünf besten Modelle angezeigt, die von der CLI ermittelt wurden:
+Im Folgenden wird die Liste mit Klassifizierungsmetriken für die fünf besten von der CLI gefundenen Modelle angezeigt:
 
 ![Bild](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-Um die Metriken zu untersuchen und zu verstehen, die von der CLI ausgegeben werden, lesen Sie [Auswertungsmetriken für mehrklassige Klassifizierung](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
+ Die Genauigkeit ist eine beliebte Metrik für Klassifizierungsprobleme. Allerdings ist die Genauigkeit nicht immer die beste Metrik, um das beste Modell auszuwählen, wie in den folgenden Referenzen erläutert. Es gibt Fälle, in denen Sie die Qualität Ihres Modells mit zusätzlichen Metriken bewerten müssen.
+
+Lesen Sie [Auswerten des ML.NET-Modells mit Metriken](resources/metrics.md#evaluation-metrics-for-multi-class-classification), um die Metriken kennenzulernen und zu verstehen, die von der CLI ausgegeben werden.
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>Metriken für Regressions- und Empfehlungsmodelle
 

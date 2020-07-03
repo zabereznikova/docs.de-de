@@ -1,5 +1,6 @@
 ---
 title: Verwenden eines asynchronen Serversockets
+description: Dieses Beispiel zeigt einen asynchronen Serversocket. Die Socket-Klasse verwendet die asynchrone .NET Framework-Programmierung, um Netzwerkdienstanforderungen zu verarbeiten.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 467804e685d800643c421ed1aad040a842b42886
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b85afb3ffdf69973eff37ccbb067b470ed44e3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180631"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502027"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Verwenden eines asynchronen Serversockets
 Asynchrone Serversockets verwenden das asynchrone Programmiermodell von .NET Framework, um Dienstanforderungen über das Netzwerk zu verarbeiten. Die <xref:System.Net.Sockets.Socket>-Klasse folgt dem asynchronen Standardbenennungsmuster von .NET Framework, z.B. entspricht die synchrone <xref:System.Net.Sockets.Socket.Accept%2A>-Methode den asynchronen <xref:System.Net.Sockets.Socket.BeginAccept%2A>- und <xref:System.Net.Sockets.Socket.EndAccept%2A>-Methoden.  
@@ -125,7 +126,7 @@ public void StartListening()
 }  
 ```  
   
- Die Accept-Rückrufmethode (`AcceptCallback` im vorherigen Beispiel) ist verantwortlich dafür, dass dem Thread der Hauptanwendung signalisiert wird, den Vorgang fortzusetzen, die Verbindung mit dem Client herzustellen, und das asynchrone Lesen der Datenmengen vom Client zu beginnen. Das folgende Beispiel ist der erste Teil einer Implementierung der `AcceptCallback`-Methode. Dieser Abschnitt der Methode signalisiert dem Hauptanwendungsthread, dass die Verarbeitung fortgesetzt wird, und stellt die Verbindung mit dem Client her. Ein globales **ManualResetEvent** mit dem Namen `allDone` wird vorausgesetzt.  
+ Die Accept-Rückrufmethode (`AcceptCallback` im vorherigen Beispiel) ist verantwortlich dafür, dass dem Thread der Hauptanwendung signalisiert wird, den Vorgang fortzusetzen, die Verbindung mit dem Client herzustellen, und das asynchrone Lesen der Datenmengen vom Client zu beginnen. Das folgende Beispiel ist der erste Teil einer Implementierung der `AcceptCallback`-Methode. Dieser Abschnitt der Methode signalisiert dem Hauptanwendungsthread, dass die Verarbeitung fortgesetzt wird, und stellt die Verbindung mit dem Client her. Es wird ein globales **ManualResetEvent** mit dem Namen `allDone` vorausgesetzt.  
   
 ```vb  
 Public Sub AcceptCallback(ar As IAsyncResult)  
@@ -268,9 +269,9 @@ public static void ReadCallback(IAsyncResult ar)
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verwenden eines synchronen Serversockets](using-a-synchronous-server-socket.md)
 - [Asynchroner Serversocket, Beispiel](asynchronous-server-socket-example.md)
 - [Threading](../../standard/threading/index.md)
-- [Listening with Sockets (Überwachen mit Sockets)](listening-with-sockets.md)
+- [Überwachen mit Sockets](listening-with-sockets.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei'
+description: Öffnen Sie eine Protokolldatei, und fügen Sie etwas an mithilfe der Klassen StreamWriter und StreamReader in .NET, die Zeichen in Datenströme schreiben bzw. Zeichen daraus lesen.
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: 025c35344b9262e1f2fa6da87b68e46e21a54222
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a66dadd24cc327824e91df733f11a23112cd384a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291824"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769170"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei
 <xref:System.IO.StreamWriter> und <xref:System.IO.StreamReader> schreiben Zeichen in Streams und lesen Zeichen daraus. Im folgenden Codebeispiel wird die *log.txt*-Datei für die Eingabe geöffnet bzw. diese Datei erstellt, falls sie noch nicht vorhanden ist, und Protokollinformationen an das Ende der Datei angefügt. Der Inhalt der Datei wird in diesem Beispiel dann zur Anzeige in die Standardausgabe geschrieben.

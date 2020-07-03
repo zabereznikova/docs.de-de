@@ -1,5 +1,6 @@
 ---
 title: Anfordern von Daten
+description: Hier erfahren Sie, wie Sie mit austauschbaren Protokollen Anwendungen entwickeln können, in denen über eine einzige Schnittstelle Daten aus mehreren Protokollen abgerufen werden.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047316"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502183"
 ---
 # <a name="requesting-data"></a>Anfordern von Daten
 Um Anwendungen zu entwickeln, die in der verteilten Betriebssystemumgebung des heutigen Internets ausgeführt werden können, benötigen Sie eine effiziente und einfach zu nutzende Methode für das Abrufen von Daten aus Ressourcen aller Art. Mithilfe austauschbarer Protokolle lassen sich Anwendungen entwickeln, in denen über eine einzige Schnittstelle Daten aus mehreren Internetprotokollen abgerufen werden.  
@@ -52,8 +53,8 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Netzwerkprogrammierung in .NET Framework](index.md)
-- [Vorgehensweise: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Vorgehensweise: Abrufen eines protokollspezifischen WebResponse, das einem WebRequest entspricht](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [How to: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [How to: Abrufen einer protokollspezifischen WebResponse-Klasse, die einer WebRequest-Klasse entspricht](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

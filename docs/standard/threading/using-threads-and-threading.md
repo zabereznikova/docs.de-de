@@ -1,17 +1,18 @@
 ---
 title: Verwenden von Threads und Threading
+description: Erfahren Sie mehr über die Verwendung von Threads und Threading in .NET, um Anwendungen erstellen zu können, die viele Vorgänge gleichzeitig ausführen (Multithreading).
 ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: c092994818c9105a555acaf63ceba4b8e99bcada
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588429"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663030"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 
@@ -52,7 +53,7 @@ In der folgenden Tabelle werden einige <xref:System.Threading.Thread>-Eigenschaf
 |<xref:System.Threading.Thread.Priority%2A>|Es wird ein <xref:System.Threading.ThreadPriority>-Wert abgerufen oder festgelegt, der vom Betriebssystem zum Priorisieren der Threadplanung verwendet wird. Weitere Informationen finden Sie unter [Scheduling Threads (Planen von Threads)](scheduling-threads.md) und in der <xref:System.Threading.ThreadPriority>-Referenz.|  
 |<xref:System.Threading.Thread.ThreadState%2A>|Ruft einen <xref:System.Threading.ThreadState>-Wert ab, der die aktuellen Zustände des Threads enthält.|  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [Threads and Threading (Threads und Threading)](threads-and-threading.md)

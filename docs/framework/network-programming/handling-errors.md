@@ -1,5 +1,6 @@
 ---
 title: Behandeln von Fehlern
+description: Hier erfahren Sie mehr über die system- und webspezifischen Ausnahmen, die von WebRequest und WebResponse ausgelöst werden. Verwenden Sie die Status-Eigenschaft, um das Problem zu verstehen und zu beheben.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 786b2bd8bc4d1b394bcfe920053b2f4f55d1cdea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180870"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502573"
 ---
 # <a name="handling-errors"></a>Behandeln von Fehlern
 
@@ -168,7 +169,7 @@ Anwendungen, die die Klasse <xref:System.Net.Sockets.Socket> verwenden, lösen <
   
 Wenn eine **SocketException** ausgelöst wird, legt die **SocketException**-Klasse die <xref:System.Net.Sockets.SocketException.ErrorCode%2A>-Eigenschaft auf den zuletzt aufgetretenen Betriebssystemsocketfehler fest. Weitere Informationen zu Socketfehlercodes finden Sie in der Fehlercodedokumentation von Winsock 2.0 API in MSDN.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Behandeln und Auslösen von Ausnahmen in .NET](../../standard/exceptions/index.md)
-- [Anfordern von Daten](requesting-data.md)
+- [Requesting Data (Anfordern von Daten)](requesting-data.md)

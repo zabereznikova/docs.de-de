@@ -1,5 +1,6 @@
 ---
 title: Typkonvertierung in .NET Framework
+description: Erfahren Sie mehr über die Typkonvertierung in .NET, bei der ein Wert mit einem neuen Typ erstellt wird, der dem Wert mit dem alten Typ entspricht, die Identität des ursprünglichen Typs jedoch möglicherweise nicht beibehält.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 33b8c49033c901917e674879048558799f484194
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 11345081610459dbf053d846aa04369301010732
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291655"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769222"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Typkonvertierung in .NET Framework
 Jeder Wert verfügt über einen zugeordneten Typ, durch den Attribute, z. B. der dem Wert zugewiesene Speicherplatz, der zulässige Wertebereich und die verfügbar gemachten Member, festgelegt werden. Viele Werte können durch mehrere Typen ausgedrückt werden. Beispielsweise kann der Wert 4 als ganze Zahl oder als Gleitkommawert dargestellt werden. Durch Typkonvertierung wird ein Wert neuen Typs erstellt, der mit dem Wert des alten Typs äquivalent ist. Die Identität (oder der exakte Wert) des ursprünglichen Objekts bleibt dabei nicht immer erhalten.  

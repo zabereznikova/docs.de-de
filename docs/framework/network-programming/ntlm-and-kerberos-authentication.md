@@ -1,5 +1,6 @@
 ---
 title: NTLM- und Kerberos-Authentifizierung
+description: Hier erfahren Sie, wie die Standard-NTLM-Authentifizierung und -Kerberos-Authentifizierung für eine .NET Framework-Anwendung funktionieren. Zudem erfahren Sie mehr über die Nicht-Standard-NTLM-Authentifizierung.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 372101763bdd84b454e6e2db3ec6cf0ebdf3f991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d91ebca084d84acd4eb8facb82ff08679ec35cd0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180703"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502235"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM- und Kerberos-Authentifizierung
 Die NTLM- und Kerberos-Authentifizierung verwendet standardmäßig die mit der aufrufenden Anwendung verbundenen Benutzeranmeldeinformationen von Microsoft Windows NT, um sich bei einem Server zu authentifizieren. Bei der nicht standardmäßigen NTLM-Authentifizierung wird der Authentifizierungstyp durch die Anwendung auf NTLM festgelegt. Mithilfe des <xref:System.Net.NetworkCredential>-Objekts wird, wie im folgenden Beispiel gezeigt, der Benutzername, das Kennwort und die Domäne an den Host übergeben.  
@@ -62,7 +63,7 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 > [!NOTE]
 > Die NTLM-Authentifizierung funktioniert nicht über einen Proxyserver.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Standard- und Digestauthentifizierung](basic-and-digest-authentication.md)
 - [Internet Authentication (Internetauthentifizierung)](internet-authentication.md)

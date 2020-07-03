@@ -1,5 +1,6 @@
 ---
 title: Internetauthentifizierung
+description: Hier erfahren Sie mehr über die verschiedenen Clientauthentifizierungsmechanismen, die von System.Net-Klassen für Ihre Anwendungen im .NET Framework unterstützt werden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [.NET Framework], classes
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047921"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502378"
 ---
 # <a name="internet-authentication"></a>Internetauthentifizierung
 Die <xref:System.Net>-Klassen unterstützen eine Vielzahl von Client-Authentifizierungsmechanismen, einschließlich folgender Standardmethoden zur Internetauthentifizierung: Basic, Digest, Negotiate, NTLM, die Kerberos-Authentifizierung und benutzerdefinierte Methoden, die Sie erstellen können.  
@@ -39,7 +40,7 @@ Die <xref:System.Net>-Klassen unterstützen eine Vielzahl von Client-Authentifiz
   
  Einige Authentifizierungsschemas können einen Benutzer authentifizieren, ohne zuvor eine Anforderung für eine Ressource durchzuführen. Eine Anwendung kann Zeit sparen, indem der Benutzer mit der Ressource präauthentifiziert wird. So wird mindestens ein Roundtrip zum Server vermieden. Sie können die Authentifizierung auch während des Programmstarts durchführen, um später besser auf den Benutzer reagieren zu können. Authentifizierungsschemas, die die Präauthentifizierung verwenden können, legen die <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A>-Eigenschaft auf **TRUE** fest.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Standard- und Digestauthentifizierung](basic-and-digest-authentication.md)
 - [NTLM- und Kerberos-Authentifizierung](ntlm-and-kerberos-authentication.md)

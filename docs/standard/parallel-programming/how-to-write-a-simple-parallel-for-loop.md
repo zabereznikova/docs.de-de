@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Schreiben einer einfachen Parallel.For-Schleife'
+title: 'Vorgehensweise: Schreiben einer einfachen Parallel.For-Schleife'
+description: Erfahren Sie, wie Sie Parallel.For-Schleifen in .NET erstellen, bei denen Sie weder die Schleife abbrechen müssen noch Schleifeniterationen unterbrechen oder einen threadlokalen Zustand beibehalten.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8307f2205653fbd213d824acffc405ee97580166
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290732"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662692"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Gewusst wie: Schreiben einer einfachen Parallel.For-Schleife
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Vorgehensweise: Schreiben einer einfachen Parallel.For-Schleife
 
 Dieses Thema enthält zwei Beispiele, die die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode veranschaulichen. Im ersten Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>-Methodenüberladung und im zweiten Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>-Überladung verwendet. Dies beiden Überladungen sind die einfachsten Überladungen der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode. Sie können diese beiden Überladungen der <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Methode verwenden, wenn keiner der folgenden Vorgänge erforderlich ist: Abbrechen der Schleife, vorzeitiges Beenden der Schleifeniterationen oder Beibehalten eines threadlokalen Zustands.
 
@@ -68,7 +69,7 @@ Synchrone Aufrufe freigegebener Ressourcen, wie die Konsole oder das Dateisystem
 
 Kopieren Sie diesen Code, und fügen Sie ihn in ein Visual Studio-Projekt ein.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>

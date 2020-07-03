@@ -1,13 +1,14 @@
 ---
 title: Beispiele zur Netzwerkprogrammierung
+description: Diese herunterladbaren Beispiele für die Netzwerkprogrammierung können Sie für System.Net-Klassen und erweiterte Klassen (.NET Framework) verwenden.
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 087b4b85c705ddfcda850422fa6d0392ba0bdc23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180716"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502261"
 ---
 # <a name="network-programming-samples"></a>Beispiele zur Netzwerkprogrammierung
 Dieser Abschnitt enthält Beschreibungen und Links zu Downloads von Programmierbeispielen für Netzwerke, die Klassen in <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> und in verwandten Namespaces verwenden.

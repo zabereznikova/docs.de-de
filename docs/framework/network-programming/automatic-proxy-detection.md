@@ -1,5 +1,6 @@
 ---
 title: Automatische Proxyerkennung
+description: Hier erfahren Sie mehr über die automatische Proxyerkennung, bei der das System einen Webproxyserver identifiziert und zum Senden von Anforderungen im Auftrag des Clients verwendet.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 4c5bc9e0efb39032d388d141e8bccf3e520ebd45
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbd5d7fa671ae5ec3b7dc00205f0c9d8381bb3ce
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180895"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502695"
 ---
 # <a name="automatic-proxy-detection"></a>Automatische Proxyerkennung
 Automatische Proxyerkennung ist ein Prozess, mit dem ein Webproxyserver vom System identifiziert und zum Senden von Anforderungen im Auftrag des Clients verwendet wird. Diese Funktion ist auch bekannt als Web Proxy Auto-Discovery (WPAD). Wenn die automatische Proxyerkennung aktiviert ist, versucht das System, ein Proxykonfigurationsskript zu finden, das für die Rückgabe des Proxysatzes verantwortlich ist, der für die Anforderung verwendet werden kann. Wenn das Proxykonfigurationsskript gefunden wird, wird es heruntergeladen, kompiliert und auf dem lokalen Computer ausgeführt, wenn Proxyinformationen, der Anforderungsstream oder die Antwort für eine Anforderung abgerufen werden, die eine <xref:System.Net.WebProxy>-Instanz verwendet.  
@@ -44,7 +45,7 @@ Automatische Proxyerkennung ist ein Prozess, mit dem ein Webproxyserver vom Syst
   
  Proxys werden pro Benutzeroberfläche konfiguriert. Eine Benutzeroberfläche ist ein Element im Netzwerkverbindungsdialogfeld und kann ein physisches Netzwerkgerät (Modem oder Ethernet-Karte) oder eine virtuelle Schnittstelle (z.B. eine über ein Netzwerkgerät ausgeführte VPN-Verbindung) sein. Wenn sich eine Benutzeroberfläche ändert (z.B. ändert eine Funkverbindung einen Zugriffspunkt oder ein VPN wird aktiviert), wird der Proxyerkennungsalgorithmus erneut ausgeführt.  
   
- Die Proxyeinstellungen werden standardmäßig von Internet Explorer verwendet, um den Proxy zu erkennen. Wenn Ihre Anwendung unter einem nicht interaktiven Konto (ohne eine einfache Möglichkeit zum Konfigurieren von Proxyeinstellungen für Internet Explorer) ausgeführt wird, oder wenn Sie Proxyeinstellungen verwenden möchten, die anders als die Internet Explorer-Einstellungen sind, können Sie den Proxy konfigurieren, indem Sie eine Konfigurationsdatei mit den Elementen [\<DefaultProxy>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) und [\<Proxy>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/proxy-element-network-settings.md) definieren.  
+ Die Proxyeinstellungen werden standardmäßig von Internet Explorer verwendet, um den Proxy zu erkennen. Wenn Ihre Anwendung unter einem nicht interaktiven Konto (ohne eine einfache Möglichkeit zum Konfigurieren von Proxyeinstellungen für Internet Explorer) ausgeführt wird, oder wenn Sie Proxyeinstellungen verwenden möchten, die sich von den Internet Explorer-Einstellungen unterscheiden, können Sie den Proxy konfigurieren, indem Sie eine Konfigurationsdatei mit dem [\<defaultProxy>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) und dem [\<proxy>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/proxy-element-network-settings.md) definieren.  
   
  Für Anforderungen, die Sie erstellen, können Sie automatische Proxyerkennung auf der Anforderungsebene deaktivieren, indem ein NULL-<xref:System.Net.WebRequest.Proxy%2A> mit Ihrer Anforderung verwendet wird. Dies wird im folgenden Codebeispiel gezeigt.  
   
@@ -67,7 +68,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
   
  Anforderungen, die keinen Proxy haben, verwenden den Standardproxy Ihrer Anwendungsdomäne, der in der <xref:System.Net.WebRequest.DefaultWebProxy%2A>-Eigenschaft verfügbar ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>

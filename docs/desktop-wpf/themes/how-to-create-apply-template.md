@@ -1,7 +1,7 @@
 ---
 title: 'Erstellen einer Vorlage in WPF: .NET-Desktop'
 description: In diesem Artikel erfahren Sie, wie Sie eine Vorlage für ein Steuerelement in Windows Presentation Foundation und .NET Core erstellen und darauf verweisen.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 11/15/2019
 no-loc:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - skinning controls [WPF]
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
-ms.openlocfilehash: c901864d387b8de976bbfa9a9b3c14a7d5a0b4d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c372659676b450cde789c96e45c7ec5de2aea194
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "81432539"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325727"
 ---
 # <a name="create-a-template-for-a-control"></a>Erstellen einer Vorlage für ein Steuerelement
 
@@ -59,11 +59,11 @@ Erstellen Sie eine neue WPF-Anwendung, und legen Sie in *MainWindow.xaml* (oder 
 
 |     |     |
 | --- | --- |
-| **[!OP.NO-LOC(Title)]**         | `Template Intro Sample` |
-| **[!OP.NO-LOC(SizeToContent)]** | `WidthAndHeight` |
-| **[!OP.NO-LOC(MinWidth)]**      | `250` |
+| **Title**         | `Template Intro Sample` |
+| **SizeToContent** | `WidthAndHeight` |
+| **MinWidth**      | `250` |
 
-Legen Sie den Inhalt der **\<Window>** -Elements auf den folgenden XAML-Code fest:
+Legen Sie den Inhalt des **\<Window>** -Elements auf den folgenden XAML-Code fest:
 
 [!code-xaml[Initial](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#Initial)]
 
@@ -83,7 +83,7 @@ Fügen Sie zunächst der Datei *MainWindow.xaml* ein `Window.Resources`-Element 
 
 [!code-xaml[WindowResStart](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window2.xaml#WindowResStart)]
 
-Erstellen Sie eine neue **\<ControlTemplate** mit den folgenden Eigenschaften:
+Erstellen Sie ein neues **\<ControlTemplate>** -Element mit den folgenden Eigenschaften:
 
 |     |     |
 | --- | --- |
@@ -120,7 +120,7 @@ Der Vorlage wird auch ein [\<ContentPresenter>](xref:System.Windows.Controls.Con
 </Button>
 ```
 
-In den beiden vorherigen Beispielen werden der Text und das Kontrollkästchen als [Button.Content](xref:System.Windows.Controls.ContentControl.Content)-Eigenschaft festgelegt. Was auch immer als Inhalt festgelegt wird, kann durch einen **\<ContentPresenter>** dargestellt werden, was die Vorlage auch leistet.
+In den beiden vorherigen Beispielen werden der Text und das Kontrollkästchen als [Button.Content](xref:System.Windows.Controls.ContentControl.Content)-Eigenschaft festgelegt. Was als Inhalt festgelegt wird, kann durch ein **\<ContentPresenter>** -Element dargestellt werden, was die Vorlage auch umsetzt.
 
 Wenn die <xref:System.Windows.Controls.ControlTemplate> auf einen <xref:System.Windows.Controls.ContentControl>-Typ angewendet wird, z. B. auf ein `Button`-Element, wird nach einem <xref:System.Windows.Controls.ContentPresenter>-Element in der-Elementstruktur gesucht. Wenn der `ContentPresenter` gefunden wird, bindet die Vorlage automatisch die <xref:System.Windows.Controls.ContentControl.Content>-Eigenschaft des Steuerelements an den `ContentPresenter`.
 
@@ -138,7 +138,7 @@ Wenn Sie das Projekt ausführen und das Ergebnis untersuchen, sehen Sie, dass di
 
 ![WPF-Fenster mit einer ovalen Vorlagenschaltfläche](media/create-apply-template/styled-button.png)
 
-Vielleicht haben Sie bemerkt, dass die Schaltfläche kein Kreis ist, sondern verzerrt ist. Aufgrund der Art und Weise, wie das **\<Ellipse>** -Element funktioniert, wird sie immer erweitert, um den verfügbaren Platz auszufüllen. Vereinheitlichen Sie den Kreis, indem Sie die Eigenschaften der Schaltfläche **:::no-loc text="width":::** und **:::no-loc text="height":::** in den gleichen Wert ändern:
+Vielleicht haben Sie bemerkt, dass die Schaltfläche kein Kreis ist, sondern verzerrt ist. Aufgrund der Art und Weise, wie das **\<Ellipse>** -Element funktioniert, wird es immer erweitert, um den verfügbaren Platz auszufüllen. Vereinheitlichen Sie den Kreis, indem Sie die Eigenschaften der Schaltfläche **:::no-loc text="width":::** und **:::no-loc text="height":::** in den gleichen Wert ändern:
 
 [!code-xaml[StyledButtonSize](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#StyledButtonSize)]
 
@@ -148,7 +148,7 @@ Vielleicht haben Sie bemerkt, dass die Schaltfläche kein Kreis ist, sondern ver
 
 Obwohl eine Schaltfläche mit einer angewendeten Vorlage anders aussieht, verhält sie sich wie jede andere Schaltfläche. Wenn Sie auf die Schaltfläche klicken, wird das <xref:System.Windows.Controls.Primitives.ButtonBase.Click>-Ereignis ausgelöst. Möglicherweise haben Sie jedoch bemerkt, dass die visuellen Elemente der Schaltfläche nicht geändert werden, wenn Sie den Mauszeiger über die Schaltfläche bewegen. Diese visuellen Interaktionen werden alle durch die Vorlage definiert.
 
-Durch die dynamischen Ereignis- und Eigenschaftensysteme, die von WPF bereitgestellt werden, können Sie eine bestimmte Eigenschaft für einen Wert beobachten und die Vorlage ggf. neu formatieren. In diesem Beispiel beobachten Sie die <xref:System.Windows.UIElement.IsMouseOver>-Eigenschaft der Schaltfläche. Wenn sich der Mauszeiger über dem Steuerelement befindet, formatieren Sie die **\<Ellipse>** mit einer neuen Farbe. Dieser Triggertyp wird als *PropertyTrigger* bezeichnet.
+Durch die dynamischen Ereignis- und Eigenschaftensysteme, die von WPF bereitgestellt werden, können Sie eine bestimmte Eigenschaft für einen Wert beobachten und die Vorlage ggf. neu formatieren. In diesem Beispiel beobachten Sie die <xref:System.Windows.UIElement.IsMouseOver>-Eigenschaft der Schaltfläche. Wenn sich der Mauszeiger über dem Steuerelement befindet, formatieren Sie das **\<Ellipse>** -Element mit einer neuen Farbe. Dieser Triggertyp wird als *PropertyTrigger* bezeichnet.
 
 Damit dies funktioniert, müssen Sie **\<Ellipse>** einen Namen hinzufügen, auf den Sie verweisen können. Vergeben Sie den Namen **backgroundElement**.
 
@@ -158,27 +158,27 @@ Fügen Sie als nun der [ControlTemplate.Triggers](xref:System.Windows.Controls.C
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window4.xaml?name=ControlTemplate&highlight=6-10)]
 
-Fügen Sie dem **\<Trigger>** nun einen **\<Setter>** hinzu, der die **Fill**-Eigenschaft von **\<Ellipse>** in eine neue Farbe ändert.
+Fügen Sie **\<Trigger>** nun ein **\<Setter>** -Element hinzu, das die **Fill**-Eigenschaft von **\<Ellipse>** in eine neue Farbe ändert.
 
 [!code-xaml[MouseOver](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#MouseOver)]
 
-Führen Sie das Projekt aus. Beachten Sie, dass beim Bewegen der Maus über die Schaltfläche sich die Farbe der **\<Ellipse>** ändert.
+Führen Sie das Projekt aus. Beachten Sie, dass sich beim Bewegen der Maus über die Schaltfläche die Farbe des **\<Ellipse>** -Elements ändert.
 
 ![Mausbewegung über die WPF-Schaltfläche, um die Füllfarbe zu ändern](media/create-apply-template/mouse-move-over-button.gif)
 
 ## <a name="use-a-visualstate"></a>Verwenden eines VisualState
 
-Visuelle Zustände werden von einem-Steuerelement definiert und ausgelöst. Wenn die Maus z. B. über das Steuerelement bewegt wird, wird der `CommonStates.MouseOver`-Zustand ausgelöst. Sie können Eigenschaftsänderungen auf der Grundlage des aktuellen Zustands des Steuerelements animieren. Im vorherigen Abschnitt wurde ein **\<PropertyTrigger>** verwendet, um den Vordergrund der Schaltfläche in `AliceBlue` zu ändern, wenn die `IsMouseOver`-Eigenschaft `true` war. Erstellen Sie stattdessen einen visuellen Zustand, der die Änderung dieser Farbe animiert und für einen fließenden Übergang sorgt. Weitere Informationen zu *VisualStates* finden Sie unter [Stile und Vorlagen in WPF](../fundamentals/styles-templates-overview.md#visual-states).
+Visuelle Zustände werden von einem-Steuerelement definiert und ausgelöst. Wenn die Maus z. B. über das Steuerelement bewegt wird, wird der `CommonStates.MouseOver`-Zustand ausgelöst. Sie können Eigenschaftsänderungen auf der Grundlage des aktuellen Zustands des Steuerelements animieren. Im vorherigen Abschnitt wurde ein **\<PropertyTrigger>** -Element verwendet, um den Vordergrund der Schaltfläche in `AliceBlue` zu ändern, wenn die `IsMouseOver`-Eigenschaft auf `true` festgelegt war. Erstellen Sie stattdessen einen visuellen Zustand, der die Änderung dieser Farbe animiert und für einen fließenden Übergang sorgt. Weitere Informationen zu *VisualStates* finden Sie unter [Stile und Vorlagen in WPF](../fundamentals/styles-templates-overview.md#visual-states).
 
-Wenn Sie den **\<PropertyTrigger>** in einen animierten visuellen Zustand konvertieren möchten, entfernen Sie zunächst das **\<ControlTemplate.Triggers>** -Element aus der Vorlage.
+Wenn Sie das **\<PropertyTrigger>** -Element in einen animierten visuellen Zustand konvertieren möchten, entfernen Sie zunächst das **\<ControlTemplate.Triggers>** -Element aus der Vorlage.
 
 [!code-xaml[CleanTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#CleanTemplate)]
 
-Fügen Sie dann im **\<Grid>** -Stamm der Steuerelementvorlage das **\<VisualStateManager.VisualStateGroups>** -Element mit einer **\<VisualStateGroup>** für `CommonStates` hinzu. Definieren Sie zwei Zustände, `Normal` und `MouseOver`.
+Fügen Sie als Nächstes im **\<Grid>** -Stamm der Steuerelementvorlage das **\<VisualStateManager.VisualStateGroups>** -Element mit einem **\<VisualStateGroup>** -Element für `CommonStates` hinzu. Definieren Sie zwei Zustände, `Normal` und `MouseOver`.
 
 [!code-xaml[VisualState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#VisualState)]
 
-Alle in einem **\<VisualState>** definierten Animationen werden angewendet, wenn dieser Zustand ausgelöst wird. Erstellen Sie Animationen für jeden Zustand. Animationen werden in einem **\<Storyboard>** -Element abgelegt. Weitere Informationen zu Storyboards finden Sie unter [Übersicht über Storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Alle in einem **\<VisualState>** -Element definierten Animationen werden angewendet, wenn dieser Zustand ausgelöst wird. Erstellen Sie Animationen für jeden Zustand. Animationen werden in einem **\<Storyboard>** -Element abgelegt. Weitere Informationen zu Storyboards finden Sie unter [Übersicht über Storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 - Normal
 
@@ -192,11 +192,11 @@ Alle in einem **\<VisualState>** definierten Animationen werden angewendet, wenn
 
   [!code-xaml[MouseOverState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#MouseOverState)]
 
-Die **\<ControlTemplate>** sollte nun wie folgt aussehen.
+Das **\<ControlTemplate>** -Element sollte nun wie folgt aussehen.
 
 [!code-xaml[FinalTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window7.xaml#FinalTemplate)]
 
-Führen Sie das Projekt aus. Beachten Sie, dass beim Bewegen der Maus über die Schaltfläche sich die Farbe der **\<Ellipse>** animiert wird.
+Führen Sie das Projekt aus. Beachten Sie, dass beim Bewegen der Maus über die Schaltfläche die Farbe des **\<Ellipse>** -Elements animiert wird.
 
 ![Mausbewegung über die WPF-Schaltfläche, um die Füllfarbe zu ändern](media/create-apply-template/mouse-move-over-button-visualstate.gif)
 

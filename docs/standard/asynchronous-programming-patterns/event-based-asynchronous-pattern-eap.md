@@ -1,5 +1,6 @@
 ---
 title: Ereignisbasiertes asynchrones Muster (EAP)
+description: Links zu Artikeln zu ereignisbasierten asynchronen Mustern (Event-based Asynchronous Pattern, EAP) in .NET, z. B. zur Implementierung, zu bewährten Methoden und zur Implementierung eines EAP-Clients
 ms.date: 07/23/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 03b4d914d72b96b882c774565654c022b145b5f2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289433"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768871"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Ereignisbasiertes asynchrones Muster (EAP)
 
@@ -35,16 +36,16 @@ Es gibt verschiedene Möglichkeiten, asynchrone Funktionen für Clientcode verf�
  [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  Beschreibt, wie Sie ermitteln, ob Sie das ereignisbasierte asynchrone Muster anstelle des <xref:System.IAsyncResult>-Musters implementieren sollen, das vom [Asynchronous Programming Model (APM) (Asynchrones Programmiermodell)](asynchronous-programming-model-apm.md) dargestellt wird
   
- [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [How to: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen](component-that-supports-the-event-based-asynchronous-pattern.md)  
  Beschreibt das Erstellen einer Komponente, die das ereignisbasierte asynchrone Muster implementiert. Dieses Muster wird mithilfe von Hilfsklassen aus dem <xref:System.ComponentModel?displayProperty=nameWithType>-Namespace implementiert, was eine einwandfreie Funktionsweise der Komponente unter jedem beliebigen Anwendungsmodell gewährleistet.  
 
- [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ [How to: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  Beschreibt das Erstellen eines Clients, der das ereignisbasierte asynchrone Muster implementiert.
   
- [How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [How to: How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Beschreibt die Verwendung einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt.  
   
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Referenz
 
  <xref:System.ComponentModel.AsyncOperation>  
  Beschreibt die <xref:System.ComponentModel.AsyncOperation>-Klasse und enthält Links zu allen Membern.  
@@ -63,7 +64,7 @@ Es gibt verschiedene Möglichkeiten, asynchrone Funktionen für Clientcode verf�
  [Threading](../threading/index.md)  
  Beschreibt Multithreadingfunktionen in .NET.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Empfohlene Vorgehensweise für das verwaltete Threading](../threading/managed-threading-best-practices.md)
 - [Ereignisse](../events/index.md)

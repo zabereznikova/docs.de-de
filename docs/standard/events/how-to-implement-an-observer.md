@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Implementieren eines Observers'
+title: 'Vorgehensweise: Implementieren eines Observers'
+description: Implementieren eines Observers in .NET Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Observer, der für den Empfang von Benachrichtigungen registriert ist, und einem Anbieter.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43236ead15be0777f4284ba553a2f2f5e09d0a73
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289719"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768994"
 ---
-# <a name="how-to-implement-an-observer"></a>Gewusst wie: Implementieren eines Observers
-Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Observer, der für den Empfang von Benachrichtigungen registriert wird, und einem Anbieter, der Daten überwacht und Benachrichtigungen an mindestens einen Observer sendet. In diesem Thema wird das Erstellen eines Observers behandelt. In dem verwandten Thema [Gewusst wie: Implementieren eines Anbieters](how-to-implement-a-provider.md) wird erläutert, wie ein Anbieter erstellt wird.  
+# <a name="how-to-implement-an-observer"></a>Vorgehensweise: Implementieren eines Observers
+Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Observer, der für den Empfang von Benachrichtigungen registriert wird, und einem Anbieter, der Daten überwacht und Benachrichtigungen an mindestens einen Observer sendet. In diesem Thema wird das Erstellen eines Observers behandelt. Im verwandten Thema [Vorgehensweise: Implementieren eines Anbieters](how-to-implement-a-provider.md) wird erläutert, wie ein Anbieter erstellt wird.  
   
 ### <a name="to-create-an-observer"></a>So erstellen Sie einen Observer  
   
@@ -47,9 +48,9 @@ Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Observe
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IObserver%601>
 - [Beobachterentwurfsmuster](observer-design-pattern.md)
-- [Gewusst wie: Implementieren eines Anbieters](how-to-implement-a-provider.md)
+- [How to: Implementieren eines Anbieters](how-to-implement-a-provider.md)
 - [Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](observer-design-pattern-best-practices.md)

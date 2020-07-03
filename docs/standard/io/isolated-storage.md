@@ -1,5 +1,6 @@
 ---
 title: Isolierte Speicherung
+description: Hier erfahren Sie mehr über die isolierte Speicherung. Dies ist ein Datenspeichermechanismus, der die Isolierung und Sicherheit ermöglicht, indem standardisierte Methoden zum Zuordnen von Code mit gespeicherten Daten definiert werden.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278881"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325932"
 ---
 # <a name="isolated-storage"></a>Isolierte Speicherung
 <a name="top"></a> Die isolierte Speicherung ist ein Mechanismus zur Datenspeicherung von Desktop-Apps, der Isolation und Sicherheit gewährleistet, indem er standardisierte Möglichkeiten zur Verknüpfung von Code mit gespeicherten Daten definiert. Die Standardisierung hat weitere Vorteile. Administratoren können spezielle Tools zum Ändern isolierter Speichervorgänge verwenden, um Speicherplätze für Dateien zu konfigurieren, Sicherheitsrichtlinien festzulegen und nicht verwendete Daten zu löschen. Dank isolierter Speicherung benötigt der Code keine eindeutigen Pfade zur Festlegung sicherer Speicherplätze im Dateisystem. Außerdem werden die Daten vor anderen Anwendungen geschützt, die nur über Zugriff auf isolierte Speicherplätze verfügen. Fest codierte Daten, die den Speicherbereich einer Anwendung angeben, sind nicht erforderlich.
@@ -104,6 +105,97 @@ Die durch <xref:System.Security.Permissions.IsolatedStorageFilePermission> festg
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|Wie bei `AssemblyIsolationByUser`, jedoch befindet sich der Speicher an einem Speicherplatz, für den Roaming möglich ist, sofern Roamingbenutzerprofile aktiviert und Kontingente nicht erzwungen sind.|Wie bei `AssemblyIsolationByUser`. Allerdings erhöht sich ohne Kontingente das Risiko eines Denial-of-Service-Angriffs.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|Isolation nach Benutzer. Normalerweise gilt diese Berechtigungsebene nur für Verwaltungs- oder Debugtools.|Durch den Zugriff mit dieser Berechtigung kann Code jede der Dateien oder Verzeichnisse in isolierten Speicherplätzen anzeigen oder löschen (unabhängig von Assemblyisolation). Es besteht u. a. das Risiko eines Informationslecks und des Datenverlusts.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|Isolation nach Benutzern, Domänen und Assemblys. Normalerweise gilt diese Berechtigungsebene nur für Verwaltungs- oder Debugtools.|Durch diese Berechtigung sind sämtliche isolierte Speicher aller Benutzer potenziell gefährdet.|
+
+## <a name="safety-of-isolated-storage-components-with-regard-to-untrusted-data"></a>Sicherheit isolierter Speicherkomponenten in Bezug auf nicht vertrauenswürdige Daten
+
+__Dieser Abschnitt gilt für die folgenden Frameworks:__
+
+- .NET Framework (alle Versionen)
+- .NET Core 2.1 oder höher
+- .NET 5.0 oder höher
+
+Das .NET Framework und .NET Core bieten die [isolierte Speicherung](/dotnet/standard/io/isolated-storage) als Mechanismus zum Speichern von Daten für einen Benutzer, eine Anwendung oder eine Komponente. Dabei handelt es sich um eine Legacykomponente, die in erster Linie für mittlerweile veraltete Szenarios für die Codezugriffssicherheit entwickelt wurde.
+
+Verschiedene isolierte Speicher-APIs und -Tools können zum vertrauensgrenzenübergreifenden Lesen von Daten verwendet werden. Durch das Lesen von Daten aus computerweiten Bereichen können möglicherweise Daten von weniger vertrauenswürdigen Benutzerkonten auf dem Computer aggregiert werden. Komponenten oder Anwendungen, die Elemente aus den isolierten computerweiten Speicherbereichen lesen, sollten die Konsequenzen des Lesens dieser Daten kennen.
+
+### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>Sicherheitsrelevante APIs zum Lesen von computerweiten Dateien
+
+Komponenten oder Anwendungen, die eine der folgenden APIs aufrufen, können computerweite Dateien lesen:
+
+* [IsolatedStorageFile.GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator) übergibt einen Bereich, der das „IsolatedStorageScope.Machine“-Flag enthält
+* [IsolatedStorageFile.GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+* [IsolatedStorageFile.GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+* [IsolatedStorageFile.GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+* [IsolatedStorageFile.GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore) übergibt einen Bereich, der das „IsolatedStorageScope.Machine“-Flag enthält
+* [IsolatedStorageFile.Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove) übergibt einen Bereich, der das `IsolatedStorageScope.Machine`-Flag enthält
+
+Das [Isolated Storage-Tool](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` ist betroffen, wenn es wie im folgenden Code veranschaulicht mit dem Switch `/machine` aufgerufen wird:
+
+```txt
+storeadm.exe /machine [any-other-switches]
+```
+
+Das Isolated Storage-Tool wird als Teil von Visual Studio und des .NET Framework SDK bereitgestellt.
+
+Wenn die Anwendung keine Aufrufe der vorangehenden APIs umfasst oder der Workflow keinen Aufruf von `storeadm.exe` auf diese Weise erfordert, gilt dieses Dokument nicht.
+
+### <a name="impact-in-multi-user-environments"></a>Auswirkungen auf Umgebungen mit mehreren Benutzern
+
+Wie bereits erwähnt sind die Auswirkungen dieser APIs auf die Sicherheit eine Folge davon, dass Daten aus einer vertrauenswürdigen Umgebung von einer anderen vertrauenswürdigen Umgebung gelesen werden. Bei der isolierten Speicherung wird im Allgemeinen einer von drei Speicherorten verwendet, um Daten zu lesen und zu schreiben:
+
+1. `%LOCALAPPDATA%\IsolatedStorage\`: Beispielsweise `C:\Users\<username>\AppData\Local\IsolatedStorage\` für den `User`-Bereich
+2. `%APPDATA%\IsolatedStorage\`: Beispielsweise `C:\Users\<username>\AppData\Roaming\IsolatedStorage\` für den `User|Roaming`-Bereich
+3. `%PROGRAMDATA%\IsolatedStorage\`: Beispielsweise `C:\ProgramData\IsolatedStorage\` für den `Machine`-Bereich
+
+Die ersten beiden Speicherorte sind pro Benutzer isoliert. Windows stellt sicher, dass unterschiedliche Benutzerkonten auf dem gleichen Computer nicht auf die Benutzerprofilordner der anderen Benutzer zugreifen können. Zwei verschiedene Benutzerkonten, die die Speicher `User` oder `User|Roaming` verwenden, können die Daten der anderen Benutzer nicht anzeigen und bearbeiten.
+
+Der dritte Speicherort wird für alle Benutzerkonten auf dem Computer freigegeben. Verschiedene Konten können im Zusammenhang mit diesem Speicherort Lese- und Schreibvorgänge durchführen und die Daten anderer Benutzer anzeigen.
+
+Die vorangehenden Pfade können sich abhängig von der verwendeten Windows-Version unterscheiden.
+
+Gehen wir jetzt von einem System mit den beiden registrierten Benutzern _Mallory_ und _Bob_ aus. Mallory kann auf ihr Benutzerprofilverzeichnis `C:\Users\Mallory\` und den freigegebenen computerweiten Speicherort `C:\ProgramData\IsolatedStorage\` zugreifen. Sie kann nicht auf das Benutzerprofilverzeichnis `C:\Users\Bob\` von Bob zugreifen.
+
+Wenn Mallory Bob angreifen möchte, könnte sie Daten in den computerweiten Speicherort schreiben und dann versuchen, Bob zu Lesevorgängen in diesem computerweiten Speicher zu bringen. Wenn Bob eine App ausführt, die aus diesem Speicher liest, wird die App mit den dort von Mallory platzierten Daten und im Rahmen von Bobs Benutzerkonto ausgeführt. Im restlichen Teil dieses Dokuments werden verschiedene Angriffsvektoren und die Schritte beschrieben, mit denen das Risiko für Apps durch diese Angriffe minimiert werden kann.
+
+__Hinweis__: Mallory benötigt Folgendes, damit ein solcher Angriff stattfinden kann:
+
+* Benutzerkonto auf dem Computer
+* Möglichkeit, eine Datei in einem bekannten Speicherort im Dateisystem zu platzieren
+* Gewissheit, dass Bob irgendwann eine App ausführt, die versucht, diese Daten zu lesen
+
+Dies sind nicht die Bedrohungsvektoren, die für Standarddesktopumgebungen mit einem Benutzer wie beispielsweise private PCs oder Arbeitsstationen von Einmannbetrieben gelten.
+
+#### <a name="elevation-of-privilege"></a>Rechteerweiterungen
+
+Ein __Angriff durch Rechteerweiterungen__ liegt vor, wenn Bobs App Mallorys Datei liest und automatisch versucht, basierend auf dem Inhalt dieser Nutzlast Aktionen auszuführen. Angenommen, eine App liest den Inhalt eines Startskripts aus dem computerweiten Speicher und übergibt diese Inhalte an `Process.Start`. Wenn Mallory ein schädliches Skript innerhalb des computerweiten Speichers platzieren kann und Bob dann seine App startet, geschieht Folgendes:
+
+* Seine App analysiert und startet Mallorys bösartiges Skript _im Kontext seines Benutzerprofils_.
+* Mallory erhält Zugriff auf Bobs Konto auf dem lokalen Computer.
+
+#### <a name="denial-of-service"></a>Denial-of-Service-Angriffe
+
+Ein __Denial-of-Service-Angriff__ tritt auf, wenn Bobs App Mallorys Datei liest und abstürzt oder andernfalls nicht mehr ordnungsgemäß funktioniert. Angenommen, die zuvor erwähnte App versucht wieder, ein Startskript aus dem computerweiten Speicher zu analysieren. Wenn Mallory eine Datei mit falsch formatierten Inhalten im computerweiten Speicher platzieren kann, ist Folgendes möglich:
+
+* Sie kann veranlassen, dass Bobs App früh im Startpfad eine Ausnahme auslöst.
+* Sie kann durch die Ausnahme verhindern, dass die App ordnungsgemäß gestartet wird.
+
+Sie hat Bob dann das Starten der App im Kontext seines eigenen Benutzerkontos verweigert.
+
+#### <a name="information-disclosure"></a>Offenlegung vertraulicher Informationen
+
+Ein Angriff durch die __Veröffentlichung von Informationen__ liegt vor, wenn Mallory Bob dazu bringen kann, den Inhalt einer Datei offenzulegen, auf die Mallory normalerweise keinen Zugriff hat. Angenommen, Bob verfügt über die Geheimnisdatei *C:\Users\Bob\secret.txt*, die Mallory lesen möchte. Sie kennt den Pfad zu dieser Datei, kann sie aber nicht lesen, da Windows ihr den Zugriff auf Bobs Benutzerprofilverzeichnis verbietet.
+
+Stattdessen platziert Mallory einen Hardlink zum computerweiten Speicher. Dabei handelt es sich um eine spezielle Datei, die selbst keinen Inhalt enthält, sondern auf eine andere Datei auf dem Datenträger verweist. Beim Versuch, die Hardlinkdatei zu lesen, wird stattdessen der Inhalt der Datei gelesen, auf die der Hardlink verweist. Nachdem Mallory den Hardlink erstellt hat, kann sie den Inhalt der Datei noch immer nicht lesen, da sie keinen Zugriff auf das Ziel (`C:\Users\Bob\secret.txt`) des Links hat. Bob hingegen _hat Zugriff auf diese Datei_.
+
+Wenn Bobs App aus dem computerweiten Speicher liest, liest sie nun versehentlich den Inhalt der `secret.txt`-Datei, so als wäre die Datei selbst im computerweiten Speicher vorhanden. Wenn Bobs App den Vorgang beendet und versucht, die Datei erneut im computerweiten Speicher zu speichern, wird tatsächlich eine Kopie der Datei im Verzeichnis C:\ProgramData\IsolatedStorage\* platziert. Da dieses Verzeichnis für jeden Benutzer auf dem Computer lesbar ist, kann Mallory nun den Inhalt der Datei lesen.
+
+### <a name="best-practices-to-defend-against-these-attacks"></a>Bewährte Methoden für die Verteidigung gegen diese Angriffe
+
+__Wichtig:__ Wenn Ihre Umgebung mehrere Benutzer umfasst, die gegenseitig nicht vertrauenswürdig sind, sollten Sie die API `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)` oder das Tool `storeadm.exe /machine /list` __nicht aufrufen__. In beiden Fällen wird davon ausgegangen, dass sie vertrauenswürdige Daten verarbeiten. Wenn ein Angreifer eine schädliche Nutzlast im computerweiten Speicher platzieren kann, kann diese Nutzlast zu einem Angriff durch Rechteerweiterungen im Kontext des Benutzers führen, der diese Befehle ausführt.
+
+Bei Arbeiten in einer Umgebung mit mehreren Benutzern sollten Sie die Verwendung der Features für den isolierten Speicher überdenken, die den _gesamten Computer_ als Ziel haben. Wenn eine App Daten aus einem computerweiten Speicherort lesen muss, empfiehlt es sich, die Daten aus einem Speicherort zu lesen, der nur für Administratorkonten beschreibbar ist. Das Verzeichnis `%PROGRAMFILES%` und die Registrierungsstruktur `HKLM` sind Beispiele für Speicherorte, die nur für Administratoren beschreibbar und lesbar für alle anderen Benutzer sind. Daten, die aus diesen Speicherorten gelesen werden, werden daher als vertrauenswürdig eingestuft.
+
+Wenn eine App in einer Umgebung mit mehreren Benutzern den _gesamten Computerbereich_ verwenden muss, sollten Sie den Inhalt aller Dateien überprüfen, die Sie aus dem computerweiten Speicher lesen. Wenn die App Objektgraphen aus diesen Dateien liest, empfiehlt es sich, sicherere Serialisierungsmodule wie `XmlSerializer` anstelle von gefährlichen Serialisierungsmodulen wie `BinaryFormatter` oder `NetDataContractSerializer` zu verwenden. Seien Sie vorsichtig bei der Verwendung von tief geschachtelten Objektgraphen oder Objektgraphen, die die Ressourcenzuordnung basierend auf dem Inhalt der Datei durchführen.
 
 <a name="isolated_storage_locations"></a>
 

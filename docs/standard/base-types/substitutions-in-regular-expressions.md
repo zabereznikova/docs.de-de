@@ -1,5 +1,6 @@
 ---
 title: Ersetzungen in regulären Ausdrücken
+description: Ersetzen Sie übereinstimmenden Text mithilfe von regulären Ausdrücken in .NET Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ab2ed6ff87f2d50d0f518ac64188bf8b5c98351c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288003"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768104"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
 Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  

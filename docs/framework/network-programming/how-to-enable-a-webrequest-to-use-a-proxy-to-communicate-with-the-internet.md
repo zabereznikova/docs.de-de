@@ -1,18 +1,19 @@
 ---
-title: 'Gewusst wie: Aktivieren von WebRequest zur Verwendung eines Proxys für die Internetkommunikation'
+title: 'Vorgehensweise: Aktivieren einer WebRequest-Klasse zur Verwendung eines Proxys für die Internetkommunikation'
+description: Hier erfahren Sie, wie Sie eine globale Proxyinstanz erstellen, damit WebRequest einen Proxy für die Kommunikation mit dem Internet im .NET Framework verwenden kann.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-ms.openlocfilehash: 8b38973e4cb2c83ce32b8a08e54d828a8eeef879
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0fc33cea3f5a7fe4669b110e53e71afdb9561c23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73039541"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502534"
 ---
-# <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Gewusst wie: Aktivieren von WebRequest zur Verwendung eines Proxys für die Internetkommunikation
+# <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Vorgehensweise: Aktivieren einer WebRequest-Klasse zur Verwendung eines Proxys für die Internetkommunikation
 
 In diesem Beispiel wird eine globale Proxyinstanz erstellt, die es jedem <xref:System.Net.WebRequest> ermöglicht, einen Proxy zu verwenden, um mit dem Internet zu kommunizieren. Im Beispiel wird davon ausgegangen, dass der Proxyserver `webproxy` heißt und auf Port 80 kommuniziert, dem Standard-HTTP-Port.
 
@@ -30,12 +31,12 @@ GlobalProxySelection.Select = proxyObject
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Dieses Beispiel erfordert Folgendes:
+Für dieses Beispiel benötigen Sie Folgendes:
 
 - Eine [`using`-Anweisung](../../csharp/language-reference/keywords/using-directive.md) in C# für den Namespace **System.Net**
 - Eine [`Imports`-Anweisung](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) in Visual Basic für den Namespace **System.Net**
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](using-application-protocols.md)
-- [Accessing the Internet Through a Proxy (Zugreifen auf das Internet über einen Proxy)](accessing-the-internet-through-a-proxy.md)
+- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)
+- [Zugreifen auf das Internet über einen Proxy](accessing-the-internet-through-a-proxy.md)

@@ -1,15 +1,16 @@
 ---
-title: 'Gewusst wie: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung'
+title: 'Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung'
+description: Hier erfahren Sie, wie Sie die Computerkonfigurationsdatei „machine.config“ ändern, um die IPv6-Unterstützung im .NET Framework zu ermöglichen.
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 73408afe9fcb35daa898c08b087a3411a6cb342b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb7b3665c0dbcf0edefa8c48a9e69297d7259067
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180804"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502521"
 ---
-# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Gewusst wie: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung
+# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung
 Das folgende Codebeispiel zeigt, wie Sie die Computerkonfigurationsdatei *machine.config* ändern, um die IPv6-Unterstützung zu aktivieren. Die Datei *machine.config* ist im Ordner *%Windir%\Microsoft.NET\Framework* in dem Verzeichnis gespeichert, in dem Windows installiert wurde. Es gibt für jede Version von .NET Framework, die auf dem Computer installiert ist, eine eigene Datei *machine.config* in den Unterordnern von *%Windir%\Microsoft.NET\Framework* (z.B. *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
   
  Diese Einstellungen können auch in der Konfigurationsdatei für die Anwendung vorgenommen werden. Die Anwendungskonfigurationsdatei hat Vorrang vor der Computerkonfigurationsdatei.  
@@ -35,8 +36,8 @@ Das folgende Codebeispiel zeigt, wie Sie die Computerkonfigurationsdatei *machin
 </system.net>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [IPv6-Adressierung](ipv6-addressing.md)
 - [Network Settings Schema (Schema für Netzwerkeinstellungen)](../configure-apps/file-schema/network/index.md)
-- [\<IPv6>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [\<ipv6>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

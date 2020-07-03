@@ -1,5 +1,6 @@
 ---
 title: Kovarianz und Kontravarianz in Generics
+description: Hier erfahren Sie mehr über die Kovarianz, die die Verwendung eines stärker abgeleiteten Typs ermöglicht, und die Kontravarianz, durch die Sie in .NET-Generics einen weniger abgeleiteten Typ verwenden können.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 12de1554bb6e33b69d0d2bba24001e7e4c2d8a65
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287557"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663043"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kovarianz und Kontravarianz in Generics
 Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, einen stärker abgeleiteten (spezifischeren) oder einen weniger abgeleiteten (allgemeineren) Typ zu verwenden als ursprünglich angegeben. Generische Typparameter unterstützen Kovarianz und Kontravarianz und bieten somit mehr Flexibilität beim Zuweisen und Verwenden von generischen Typen. Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invarianz die folgenden Definitionen. In den Beispielen wird von der Basisklasse `Base` und der abgeleiteten Klasse `Derived`ausgegangen.  

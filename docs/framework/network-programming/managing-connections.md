@@ -1,5 +1,6 @@
 ---
 title: Verwalten von Verbindungen
+description: Informationen dazu, wie Anwendungen, die HTTP für Datenressourcen verwenden, die .NET Framework-Klassen „ServicePoint“ und „ServicePointManager“ zum Verwalten von Verbindungen verwenden können
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 11c17c6893800fce8bbff8f49b3a207c161bcdfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 124dff1b104e323b929d13f73cf17d740e747c32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047646"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502287"
 ---
 # <a name="managing-connections"></a>Verwalten von Verbindungen
 Anwendungen, die HTTP zum Herstellen einer Verbindung mit Datenressourcen verwenden, können die <xref:System.Net.ServicePoint>- und <xref:System.Net.ServicePointManager>-Klassen von .NET Framework verwenden, um Verbindungen mit dem Internet zu verwalten und dabei zu helfen, dass diese eine optimale Skalierung und Leistung erreichen.  
@@ -64,7 +65,7 @@ Dim sp As ServicePoint = ServicePointManager.FindServicePoint(uri)
 sp.ConnectionLimit = newLimit  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Connection Grouping (Verbindungsgruppierung)](connection-grouping.md)
-- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](using-application-protocols.md)
+- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)

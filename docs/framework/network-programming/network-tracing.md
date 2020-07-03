@@ -1,5 +1,6 @@
 ---
 title: Netzwerkablaufverfolgung in .NET Framework
+description: Hier erfahren Sie mehr über die Netzwerkablaufverfolgung im .NET Framework, die Informationen über den Aufruf von Methoden sowie den Netzwerkdatenverkehr für eine verwaltete Anwendung bereitstellt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework], network tracing
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: afb9c3a04258b543e373b6973e576f71f90d7003
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 172f8ce4a50fe9294ee34cf65c0a39eb2f29badc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047592"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502248"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Netzwerkablaufverfolgung in .NET Framework
 Die Netzwerkablaufverfolgung im .NET Framework bietet Zugriff auf Informationen über den Aufruf von Methoden sowie Informationen zu dem von einer Anwendung generierten Netzwerkdatenverkehr. Dies ist nützlich für das Debuggen bei der Anwendungsentwicklung und für die Analyse von bereitgestellten Anwendungen. Die bei der Netzwerkablaufverfolgung ausgegebenen Informationen können für verschiedene Szenarien bei der Entwicklung und in Produktionsumgebungen angepasst werden.  
@@ -35,9 +36,9 @@ Die Netzwerkablaufverfolgung im .NET Framework bietet Zugriff auf Informationen 
 > [!NOTE]
 > Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter "Netzwerkablaufverfolgung".  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Aktivieren der Netzwerkablaufverfolgung](enabling-network-tracing.md)
-- [Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung](how-to-configure-network-tracing.md)
+- [How to: Konfigurieren der Netzwerkablaufverfolgung](how-to-configure-network-tracing.md)
 - [Interpretieren von Netzwerkablaufverfolgung](interpreting-network-tracing.md)
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Erstellen einer Einzeldateiassembly für das .NET Framework'
+description: Erfahren Sie, wie Sie eine Einzeldateiassembly in .NET erstellen. Dabei kann es sich um eine Bibliothek (.dll) für .NET oder eine ausführbare Datei (.exe) handeln.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 482a973631e899b8d4bfc4640eef1ea26173605e
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644302"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104927"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>Vorgehensweise: Erstellen einer Einzeldateiassembly für das .NET Framework
 
@@ -33,7 +34,7 @@ Das folgende Verfahren zeigt Ihnen, wie Sie Einzeldateiassemblys mithilfe von Be
 
 Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
-\<*compilerbefehl*> \<*modulname*>
+\<*compiler command*> \<*module name*>
 
 In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren.
 
@@ -51,7 +52,7 @@ vbc myCode.vb
 
 Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
-\<*compilerbefehl*>  **/out:** \<*dateiname*> \<*modulname*>
+\<*compiler command*> **/out:** \<*file name*> \<*module name*>
 
 In diesem Befehl ist *compilerbefehl* der Compilerbefehl für die in Ihrem Codemodul verwendete Sprache, *dateiname* ist der Name der Ausgabedatei und *modulname* der Name des Codemodul, das in die Assembly kompiliert wird.
 
@@ -70,7 +71,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 Geben Sie über die Eingabeaufforderung den folgenden Befehl ein, um eine Bibliotheksassembly zu erstellen:
 
-\<*Compilerbefehl*>  **-t:Bibliothek** \<*Modulname*>
+\<*compiler command*> **-t:library** \<*module name*>
 
 In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren. Sie können auch andere Compileroptionen verwenden, z.B. die Option **-out:** .
 

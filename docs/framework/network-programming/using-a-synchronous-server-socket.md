@@ -1,5 +1,6 @@
 ---
 title: Verwenden eines synchronen Serversockets
+description: Dieses Beispiel zeigt einen synchronen Serversocket im .NET Framework, der eine Anwendung anhält, bis eine Verbindungsanforderung für den Socket eingeht.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e7d32595f554b32ecc72bbb1f1a469ad5935467
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047036"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502053"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Verwenden eines synchronen Serversockets
 Synchrone Serversockets halten die Ausführung der Anwendung an, bis eine Verbindungsanforderung für den Socket empfangen wird. Synchrone Serversockets eignen sich nicht für Anwendungen, die das Netzwerk in ihrem Betrieb stark nutzen, aber sie können für einfache Netzwerkanwendungen geeignet sein.  
   
  Nachdem <xref:System.Net.Sockets.Socket> zum Lauschen an einem Endpunkt mithilfe der <xref:System.Net.Sockets.Socket.Bind%2A>- und <xref:System.Net.Sockets.Socket.Listen%2A>-Methoden festgelegt wurde, sind sie bereit zur Annahme von eingehenden Verbindungsanforderungen, die die <xref:System.Net.Sockets.Socket.Accept%2A>-Methode verwenden. Die Anwendung wird angehalten, bis eine Verbindungsanforderung beim Aufruf der **Accept**-Methode empfangen wird.  
   
- Wenn eine Verbindungsanforderung eingeht, gibt **Accept** eine neue **Socket**-Instanz zurück, die dem verbundenen Client zugeordnet ist. Das folgende Beispiel liest Daten aus dem Client, zeigt sie auf der Konsole an und gibt sie an den Client zurück. Der **Socket** gibt kein Messaging-Protokoll an, sodass die Zeichenfolge "\<EOF>" das Ende der Nachrichtendaten signalisiert. Es wird vorausgesetzt, dass ein **Socket** mit dem Namen `listener` initialisiert und an einen Endpunkt gebunden wurde.  
+ Wenn eine Verbindungsanforderung eingeht, gibt **Accept** eine neue **Socket**-Instanz zurück, die dem verbundenen Client zugeordnet ist. Das folgende Beispiel liest Daten aus dem Client, zeigt sie auf der Konsole an und gibt sie an den Client zurück. Der **Socket** gibt kein Messagingprotokoll an, sodass die Zeichenfolge \<EOF> das Ende der Nachrichtendaten signalisiert. Es wird vorausgesetzt, dass ein **Socket** mit dem Namen `listener` initialisiert und an einen Endpunkt gebunden wurde.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -75,8 +76,8 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)
 - [Synchroner Serversocket, Beispiel](synchronous-server-socket-example.md)
-- [Listening with Sockets (Überwachen mit Sockets)](listening-with-sockets.md)
+- [Überwachen mit Sockets](listening-with-sockets.md)

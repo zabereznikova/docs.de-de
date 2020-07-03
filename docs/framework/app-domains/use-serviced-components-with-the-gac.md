@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Serviced Components mit dem globalen Assemblycache
+description: Verwenden Sie verarbeitete Komponenten (COM+-Komponenten mit verwaltetem Code) mit dem globalen Assemblycache in .NET. Ermitteln Sie, ob die CLR- und COM+-Dienste Nicht-GAC-Komponenten verarbeiten können.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - serviced components, global assembly cache
 - global assembly cache, serviced components
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
-ms.openlocfilehash: 99627cb14088f037c58bfa1eec72bd4f88d06011
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b7371865b7b1cedda0ee03b2cc28c74b5c3da0b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119769"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104482"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Verwenden von Serviced Components mit dem globalen Assemblycache
 Serviced Components (COM+-Komponenten mit verwaltetem Code) sollten im globalen Assemblycache abgelegt werden. Nur in bestimmten Szenarios können die Common Language Runtime und die COM+-Dienste mit Serviced Components umgehen, die sich nicht im globalen Assemblycache befinden. Folgende Beispielszenarien verdeutlichen dies:  

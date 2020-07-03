@@ -1,5 +1,6 @@
 ---
 title: Socketcodebeispiele
+description: Anhand der folgenden Codebeispiele wird veranschaulicht, wie die Socket-Klasse für die Verbindung von einem Client zu Netzwerkdiensten und als Server zum Lauschen auf Verbindungen von Clients verwendet werden kann.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, sockets
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-ms.openlocfilehash: cbb77907c018b9b8f56895adf21f1f353ab71f88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a0911a779ed3d4938ad7ff57f048c176cf677fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047295"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502157"
 ---
 # <a name="socket-code-examples"></a>Socketcodebeispiele
 Die folgenden Codebeispiele veranschaulichen, wie die <xref:System.Net.Sockets.Socket>-Klasse als Client für die Verbindung zu einem Remotenetzwerkdienst und als Server zum Überwachen von Verbindungen von Remoteclients verwendet werden kann.  

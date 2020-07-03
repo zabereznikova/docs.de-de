@@ -9,17 +9,18 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b9e11a51048733dbfc42ff9f575e18effc80db07
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180523"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596245"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Vorgehensweise: Erstellen einer XML-Dokumentation mit CodeDOM
+
 CodeDOM kann zum Erstellen von Code verwendet werden, der eine XML-Dokumentation erstellt. Der Vorgang bringt die Erstellung des CodeDOM-Diagramms mit sich, das die XML-Dokumentationskommentare enthält, das Generieren des Codes und Kompilieren des generierten Codes mit der Compileroption, die die Ausgabe der XML-Dokumentation erstellt.  
   
-### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>SO erstellen Sie ein CodeDOM-Diagramm, das XML-Dokumentationskommentare enthält  
+## <a name="create-a-codedom-graph"></a>Erstellen eines CodeDOM-Graphen
   
 1. Erstellen Sie eine <xref:System.CodeDom.CodeCompileUnit>, die das CodeDOM-Diagramm für die Beispielanwendung enthält.  
   
@@ -28,27 +29,28 @@ CodeDOM kann zum Erstellen von Code verwendet werden, der eine XML-Dokumentation
      [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]
      [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
-### <a name="to-generate-the-code-from-the-codecompileunit"></a>So generieren Sie den Code aus der CodeCompileUnit  
+### <a name="generate-the-code-from-the-codecompileunit"></a>Generieren des Codes aus der CodeCompileUnit
   
 1. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>-Methode, um den Code zu generieren und eine Quelldatei zu erstellen, die kompiliert werden soll.  
   
      [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]
      [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
-### <a name="to-compile-the-code-and-generate-the-documentation-file"></a>So kompilieren Sie den Code und generieren die Dokumentationsdatei  
+### <a name="compile-the-code-and-generate-the-documentation-file"></a>Kompilieren des Codes und Generieren der Dokumentationsdatei
   
 1. Fügen Sie die Compileroption **/doc** der <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A>-Eigenschaft eines <xref:System.CodeDom.Compiler.CompilerParameters>-Objekts hinzu, und übermitteln Sie das Objekt an die <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A>-Methode, um die XML-Dokumentationsdatei zu erstellen, wenn der Code kompiliert wird.  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
      [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
   
-## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel erstellt ein CodeDOM-Diagramm mit Dokumentationskommentaren, generiert eine Codedatei aus dem Diagramm und kompiliert die Datei und erstellt eine zugeordnete XML-Dokumentationsdatei.  
+## <a name="example"></a>Beispiel
+
+Das folgende Codebeispiel erstellt ein CodeDOM-Diagramm mit Dokumentationskommentaren, generiert eine Codedatei aus dem Diagramm und kompiliert die Datei und erstellt eine zugeordnete XML-Dokumentationsdatei.  
   
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- Das Codebeispiel erstellt die folgende XML-Dokumentation in der „HelloWorldDoc.xml“-Datei.  
+ Das Codebeispiel erstellt die folgende XML-Dokumentation in der *HelloWorldDoc.xml*-Datei.  
   
 ```xml  
 <?xml version="1.0" ?>
@@ -60,8 +62,8 @@ CodeDOM kann zum Erstellen von Code verwendet werden, der eine XML-Dokumentation
     <member name="T:Samples.Class1">  
       <summary>  
         Create a Hello World application.
-        <seealso cref="M:Samples.Class1.Main" />
-      </summary>  
+      </summary>
+      <seealso cref="M:Samples.Class1.Main" />
     </member>  
     <member name="M:Samples.Class1.Main">  
       <summary>  
@@ -73,12 +75,12 @@ CodeDOM kann zum Erstellen von Code verwendet werden, der eine XML-Dokumentation
 </doc>  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
+## <a name="compile-permissions"></a>Kompilierberechtigungen
   
-- Dieses Codebeispiel benötigt die festgelegte `FullTrust`-Berechtigung, damit es erfolgreich ausgeführt werden kann.  
+Dieses Codebeispiel benötigt die festgelegte `FullTrust`-Berechtigung, damit es erfolgreich ausgeführt werden kann.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Dokumentieren von Code mit XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Dokumentieren von Code mit XML (Visual Basic)](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML-Dokumentationskommentare](../../csharp/programming-guide/xmldoc/index.md)
-- [XML-Dokumentation](/cpp/ide/xml-documentation-visual-cpp)
+- [XML-Dokumentation (Visual C++)](/cpp/ide/xml-documentation-visual-cpp)

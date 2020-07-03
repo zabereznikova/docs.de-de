@@ -1,18 +1,18 @@
 ---
 title: Übersicht über Datenbindung
 description: Erfahren Sie mehr über die verschiedenen Datenquellen, die Sie Ihrem Projekt in Windows Presentation Foundation für .NET Core hinzufügen können. Datenquellen können an XAML-Elemente gebunden werden, um dynamische Apps zu erstellen.
-author: thraka
+author: adegeo
 ms.date: 09/19/2019
 ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7f17ff094a35c04ba880c87c6966d7d249817516
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "81433253"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325755"
 ---
 # <a name="data-binding-overview-in-wpf"></a>Übersicht über die Datenbindung in WPF
 
@@ -99,7 +99,7 @@ In dieser Abbildung werden die unterschiedlichen Datenflusstypen veranschaulicht
 
 - In der Abbildung nicht gezeigt wird die <xref:System.Windows.Data.BindingMode.OneTime>-Bindung, die bewirkt, dass die Quelleigenschaft die Zieleigenschaft initialisiert, nachfolgende Änderungen jedoch nicht weitergegeben werden. Wenn sich der Datenkontext oder das Objekt im Datenkontext ändert, wird die Änderung in der Zieleigenschaft *nicht* angezeigt. Dieser Bindungstyp empfiehlt sich, wenn entweder eine Momentaufnahme des aktuellen Zustands verwendet werden kann oder die Daten tatsächlich statisch sind. Dieser Bindungstyp ist auch hilfreich, wenn die Zieleigenschaft mit einem bestimmten Wert der Quelleigenschaft initialisiert werden soll und der Datenkontext vorab nicht bekannt ist. Dieser Modus ist im Wesentlichen eine einfachere Form der <xref:System.Windows.Data.BindingMode.OneWay>-Bindung, die eine bessere Leistung in Situationen bietet, in denen sich der Quellwert nicht ändert.
 
-Zum Erkennen von Quelländerungen (das gilt für die <xref:System.Windows.Data.BindingMode.OneWay>-Bindung und die <xref:System.Windows.Data.BindingMode.TwoWay>-Bindung) muss die Quelle einen geeigneten Mechanismus für Benachrichtigungen bei Eigenschaftenänderungen implementieren, z. B. <xref:System.ComponentModel.INotifyPropertyChanged>. Weitere Informationen finden Sie unter [Gewusst wie: Implementieren von Benachrichtigungen bei Eigenschaftenänderungen](../../framework/wpf/data/how-to-implement-property-change-notification.md). Dort finden Sie auch ein Beispiel für eine <xref:System.ComponentModel.INotifyPropertyChanged>-Implementierung.
+Zum Erkennen von Quelländerungen (das gilt für die <xref:System.Windows.Data.BindingMode.OneWay>-Bindung und die <xref:System.Windows.Data.BindingMode.TwoWay>-Bindung) muss die Quelle einen geeigneten Mechanismus für Benachrichtigungen bei Eigenschaftenänderungen implementieren, z. B. <xref:System.ComponentModel.INotifyPropertyChanged>. Weitere Informationen finden Sie unter [How to: Implementieren von Benachrichtigungen bei Eigenschaftenänderungen](../../framework/wpf/data/how-to-implement-property-change-notification.md). Dort finden Sie auch ein Beispiel für eine <xref:System.ComponentModel.INotifyPropertyChanged>-Implementierung.
 
 Die <xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>-Eigenschaft bietet weitere Informationen zu Bindungsmodi und ein Beispiel zum Angeben der Bindungsrichtung.
 

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem Tool .NET Portability Analyzer bewert
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 815ac8e0f0c4392a3d89530947b0739d06a0b95d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278362"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903609"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -32,6 +32,20 @@ Laden Sie .NET Portability Analyzer in Visual Studio zunächst von [Visual Studi
 ![Screenshot von Portability Analyzer.](./media/portability-analyzer/portability-screenshot.png)
 
 Sie können auch die ApiPort-Konsolenanwendung verwenden. Laden Sie sie aus dem [ApiPort-Repository](https://aka.ms/apiportdownload) herunter. Sie können die Befehlsoption `listTargets` verwenden, um die Liste mit verfügbaren Zielen anzuzeigen. Anschließend wählen Sie Zielplattformen aus, indem Sie die Befehlsoption `-t` oder `--target` angeben.
+
+### <a name="solution-wide-view"></a>Projektmappenweite Ansicht
+
+Ein nützlicher Schritt bei der Analyse einer Projektmappe mit vielen Projekten wäre das Visualisieren der Abhängigkeiten, um zu verstehen, welche Teilmenge von Assemblys wovon abhängig ist. Die allgemeine Empfehlung ist, für die Ergebnisse der Analyse einen Bottom-up-Ansatz zu verwenden, beginnend mit den Blattknoten eines Abhängigkeitsdiagramms.
+
+Zum Abrufen können Sie den folgenden Befehl ausführen:
+
+```
+ApiPort.exe analyze -r DGML -f [directory or file]
+```
+
+In Visual Studio sieht das Ergebnis in etwa wie folgt aus:
+
+![Screenshot der DGML-Analyse](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>Analysieren der Portabilität
 Um das gesamte Projekt in Visual Studio zu analysieren, klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf Ihr Projekt, und wählen Sie **Assemblyportabilität analysieren** aus. Wechseln Sie andernfalls zum Menü **Analysieren**, und wählen Sie **Assemblyportabilität analysieren**. Wählen Sie dort die ausführbare Datei oder DLL-Datei des Projekts aus.

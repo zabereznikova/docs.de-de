@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Erstellen einer Mehrfachdateiassembly'
+description: Hier erfahren Sie anhand von Beispielcode zur Darstellung der einzelnen Schritte, wie Sie eine aus mehreren Dateien bestehende Assembly in .NET erstellen.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,12 +18,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429565"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104945"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Vorgehensweise: Erstellen einer Mehrfachdateiassembly
 
@@ -209,7 +210,7 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
 
     Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
-    **al** \<*modulname*> \<*modulname*> … **/main:** \<*Methodenname*>  **/out:** \<*Dateiname*>  **/target:** \<*Assemblydateityp*>
+    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*> **/out:** \<*file name*> **/target:** \<*assembly file type*>
 
     In diesem Befehl bezeichnen die *Modulname*-Argumente die Namen aller Module, die in der Assembly enthalten sein sollen. Die Option **/main:** gibt den Methodennamen an, der den Einstiegspunkt der Assembly darstellt. Die Option **/out:** gibt den Namen der Ausgabedatei an, die Assemblymetadaten enthält. Die Option **/target:** gibt an, dass die Assembly eine ausführbare Datei für eine Konsolenanwendung ( *.exe*), eine ausführbare Windows-Datei ( *.win*) oder eine Bibliothek ist ( *.lib*).
 

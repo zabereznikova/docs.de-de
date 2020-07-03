@@ -1,17 +1,18 @@
 ---
 title: Erstellen von Schattenkopien von Assemblys
+description: Erfahren Sie mehr über das Erstellen von Schattenkopien von Assemblys in .NET, die dafür sorgen, dass in einer Anwendungsdomäne verwendete Assemblys aktualisiert werden können, ohne die Anwendungsdomäne zu entladen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], shadow copying
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: a7ff72763dd26dbc50cd37e070c2d25ababa00f3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204573"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104564"
 ---
 # <a name="shadow-copying-assemblies"></a>Erstellen von Schattenkopien von Assemblys
 
@@ -74,7 +75,7 @@ Wenn eine Anwendungsdomäne, in der die Schattenkopiefunktion verwendet wird, ge
 
 Ab .NET Framework 4 besteht das standardmäßige Startverhalten darin, Datum und Uhrzeit jeder Assembly im Anwendungsverzeichnis direkt mit dem Datum und der Uhrzeit der Kopie im Schattenkopieverzeichnis zu vergleichen. Wenn die Assembly aktualisiert wurde, wird sie mit der gleichen Prozedur wie in älteren Versionen von .NET Framework kopiert; andernfalls wird die Schattenkopie im Schattenkopieverzeichnis geladen.
 
-Die sich hieraus ergebende Leistungsverbesserung ist enorm für Anwendungen, in denen Assemblys nicht häufig geändert werden und Änderungen in der Regel nur an einer kleinen Teilmenge von Assemblys vorgenommen werden. Wenn ein Großteil der Assemblys in einer Anwendung häufig geändert wird, kann das neue Standardverhalten zu einem Leistungsverlust führen. Sie können das Startverhalten vorheriger Versionen von .NET Framework wiederherstellen, indem Sie das [\<<shadowCopyVerifyByTimestamp>-Element](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) mit `enabled="false"` zur Konfigurationsdatei hinzufügen.
+Die sich hieraus ergebende Leistungsverbesserung ist enorm für Anwendungen, in denen Assemblys nicht häufig geändert werden und Änderungen in der Regel nur an einer kleinen Teilmenge von Assemblys vorgenommen werden. Wenn ein Großteil der Assemblys in einer Anwendung häufig geändert wird, kann das neue Standardverhalten zu einem Leistungsverlust führen. Sie können das Startverhalten vorheriger Versionen des .NET Frameworks wiederherstellen, indem Sie das [\<shadowCopyVerifyByTimestamp>-Element](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) mit `enabled="false"` zur Konfigurationsdatei hinzufügen.
 
 <a name="ObsoleteMethods"></a>
 

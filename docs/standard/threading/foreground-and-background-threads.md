@@ -1,5 +1,6 @@
 ---
 title: Vordergrund- und Hintergrundthreads
+description: Bestimmen Sie mithilfe der Eigenschaft „Thread.IsBackground“ in .NET, ob es sich bei einem Thread um einen Hintergrund- oder um einen Vordergrundthread handelt, oder verwenden Sie diese Eigenschaft, um diese Einstellung zu ändern.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-ms.openlocfilehash: 5e7ec9e2c2a5ba3de1b4518cea15eb5f512640d3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6cb7a92851728e16f4a317d6c24d072acee72a94
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279684"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769040"
 ---
 # <a name="foreground-and-background-threads"></a>Vordergrund- und Hintergrundthreads
 Ein verwalteter Thread ist entweder ein Hintergrund- oder Vordergrundthread. Hintergrundthreads sind mit einer Ausnahme identisch mit Vordergrundthreads: Ein Hintergrundthread erhält nicht die Ausführung der verwalteten Ausführungsumgebung aufrecht. Sobald alle Vordergrundthreads in einem verwalteten Prozess (wobei die EXE-Datei eine verwaltete Assembly ist) beendet sind, beendet das System alle Hintergrundthreads und fährt herunter.  
@@ -30,7 +31,7 @@ Ein verwalteter Thread ist entweder ein Hintergrund- oder Vordergrundthread. Hin
   
  Wenn Sie einen Thread zur Überwachung einer Aktivität, z.B. einer Socketverbindung, verwenden, legen Sie seine <xref:System.Threading.Thread.IsBackground%2A>-Eigenschaft auf `true` fest, sodass der Thread nicht das Beenden Ihres Prozesses verhindert.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
 - <xref:System.Threading.Thread>

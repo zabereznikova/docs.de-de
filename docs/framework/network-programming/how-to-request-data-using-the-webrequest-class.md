@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse'
+description: Hier erfahren Sie, wie Sie eine Ressource wie eine Webseite oder eine Datei von einem Server anfordern, indem Sie die WebRequest-Klasse im .NET Framework verwenden.
 ms.date: 03/21/2019
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5dcc1a7dad226288e3f74969b86e2dd457c0eed0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048164"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502469"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse
 

@@ -1,5 +1,6 @@
 ---
 title: Verwenden der StringBuilder-Klasse in .NET
+description: Hier erfahren Sie mehr über das Verwenden der StringBuilder-Klasse in .NET. Verwenden Sie diese Klasse, um eine Zeichenfolge zu ändern, ohne dabei ein neues Objekt zu erstellen.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289264"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803226"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Verwenden der StringBuilder-Klasse in .NET
 Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine der Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse verwenden, erstellen Sie ein neues Zeichenfolgenobjekt im Speicher, das eine neue Speicherbelegung für dieses neue Objekt erfordert. In Fällen, in denen Sie wiederholte Änderungen an einer Zeichenfolge vornehmen müssen, kann der Mehraufwand, der mit dem Erstellen eines neuen <xref:System.String>-Objekts verbunden ist, erheblich sein. Die <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klasse kann verwendet werden, wenn Sie eine Zeichenfolge ändern möchten, ohne ein neues Objekt zu erstellen. Beispielsweise lässt sich durch Verwenden der <xref:System.Text.StringBuilder>-Klasse die Leistung steigern, wenn zahlreiche Zeichenfolgen in einer Schleife verkettet werden.  
@@ -66,7 +67,7 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Ersetzt einen in einer Zeichenfolge übergebenen Formatbezeichner durch formatierten Text.|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Fügt eine Zeichenfolge oder ein Objekt in den angegebenen Index des aktuellen **StringBuilder**-Objekts ein.|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Entfernt eine angegebene Anzahl von Zeichen aus dem aktuellen **StringBuilder**-Objekt.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Ersetzt ein angegebenes Zeichen an einem angegebenen Index.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Hiermit werden alle Vorkommen eines angegebenen Zeichens bzw. einer angegebenen Zeichenfolge im aktuellen **StringBuilder**-Objekt durch ein anderes Zeichen bzw. eine andere Zeichenfolge ersetzt.|  
   
 ### <a name="append"></a>Append  
  Mithilfe der **Append**-Methode kann Text oder eine Zeichenfolgendarstellung eines Objekts am Ende einer Zeichenfolge hinzugefügt werden, die durch den aktuellen **StringBuilder** dargestellt wird. Im folgenden Beispiel wird ein **StringBuilder**-Objekt auf „Hello World“ initialisiert und anschließend Text am Ende des Objekts angefügt. Speicherplatz wird automatisch nach Bedarf zugeordnet.  

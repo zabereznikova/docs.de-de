@@ -1,5 +1,6 @@
 ---
 title: Proxykonfiguration
+description: Hier erfahren Sie, wie Sie adaptive und statische Proxyserver konfigurieren. Durch die Proxyserverkonfiguration wird gesteuert, wie ein Proxyserver Clientanforderungen für Ressourcen verarbeitet.
 ms.date: 06/18/2018
 helpviewer_keywords:
 - Networking
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d62f5736e9aa469be49d101e85851bc01b7c159
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047354"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141604"
 ---
 # <a name="proxy-configuration"></a>Proxykonfiguration
 Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann eine angeforderte Ressource aus dem Cache zurückgeben oder die Anforderung an den Server weiterleiten, auf dem sich die Ressource befindet. Proxys können die Netzwerkleistung durch Reduzierung der Anzahl der an Remote-Server gesendeten Anforderungen verbessern. Proxys können auch verwendet werden, um den Zugriff auf Ressourcen einzuschränken.  
@@ -66,7 +67,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
 <system.net>  
     <defaultProxy>  
         <proxy  proxyaddress="http://proxy.contoso.com:3128"  
-                bypassonlocal="true"  
+                bypassonlocal="True"  
         />  
         <bypasslist>  
             <add address="[a-z]+.blueyonderairlines.com$" />  
@@ -75,7 +76,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
 </system.net>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>

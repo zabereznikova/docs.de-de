@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente'
+title: 'Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente'
+description: Erfahren Sie, wie Sie Tasks und deren untergeordnete Elemente in .NET abbrechen. In den gezeigten Beispielen werden die Schritte von der Erstellung eines abbrechbaren Tasks bis hin zur Benachrichtigung über den Abbruch des Tasks beschrieben.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290031"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662679"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente
+# <a name="how-to-cancel-a-task-and-its-children"></a>Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente
 In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:  
   
 1. Erstellen und Starten einer abbrechbare Aufgabe  
@@ -36,7 +37,7 @@ In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:
   
  Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Klasse ist vollständig in das Abbruchmodell integriert, das auf dem <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>-Typ und dem <xref:System.Threading.CancellationToken?displayProperty=nameWithType>-Typ basiert. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](../threading/cancellation-in-managed-threads.md) und [Aufgabenabbruch](task-cancellation.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>
 - <xref:System.Threading.CancellationToken?displayProperty=nameWithType>

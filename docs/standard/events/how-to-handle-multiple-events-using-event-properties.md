@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften'
+title: 'Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften'
+description: Erfahren Sie, wie Sie mithilfe von Ereigniseigenschaften viele Ereignisse verarbeiten. Definieren Sie Delegatsammlungen, Ereignisschlüssel und Ereigniseigenschaften. Implementieren Sie die add- und die remove-Zugriffsmethode.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - event handling [.NET Framework], with multiple events
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: c5be541c1a40c5d16a0502e76adef24f6a41cc89
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5b528aa2145ba703ce605ce22ae7d643f1e5b8d0
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288471"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769014"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>Gewusst wie: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften
 Zur Verwendung von Ereigniseigenschaften müssen Sie die Ereigniseigenschaften in der Klasse definieren, die die Ereignisse auslöst. Anschließend müssen Sie die Delegaten für die Ereigniseigenschaften in den Klassen festlegen, die die Ereignisse behandeln. Zum Implementieren mehrerer Ereigniseigenschaften in einer Klasse muss die Klasse den für jedes Ereignis definierten Delegaten intern speichern und verwalten. Ein typischer Ansatz ist, eine Delegatauflistung zu implementieren, die von einem Ereignisschlüssel indiziert wird.  
   
  Zum Speichern der Delegaten für jedes Ereignis können Sie die <xref:System.ComponentModel.EventHandlerList>-Klasse verwenden oder eine eigene Auflistung implementieren. Die Auflistungsklasse muss Methoden für das Festlegen, Aufrufen und Abrufen des Ereignishandlerdelegaten auf der Grundlage des Ereignisschlüssels bereitstellen. Zum Beispiel könnten Sie eine <xref:System.Collections.Hashtable>-Klasse verwenden oder eine benutzerdefinierte Klasse von der <xref:System.Collections.DictionaryBase>-Klasse ableiten. Die Implementierungsdetails der Delegatauflistung müssen nicht außerhalb der Klasse verfügbar gemacht werden.  
@@ -45,9 +46,9 @@ Zur Verwendung von Ereigniseigenschaften müssen Sie die Ereigniseigenschaften i
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Ereignisse](index.md)
 - <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
-- [Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um Speicherplatz zu sparen](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [How to: Deklarieren von benutzerdefinierten Ereignissen zum Einsparen von Arbeitsspeicher](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144746"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767779"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 
@@ -94,7 +94,7 @@ Da Sie nun ein allgemeines Verständnis davon haben, was ONNX ist und wie Tiny Y
     - Wählen Sie „nuget.org“ als Paketquelle aus, wählen Sie die Registerkarte „Durchsuchen“ aus, und suchen Sie nach **Microsoft.ML**.
     - Wählen Sie die Schaltfläche **Installieren** aus.
     - Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
-    - Wiederholen Sie diese Schritte für **Microsoft.ML.ImageAnalytics** und **Microsoft.ML.OnnxTransformer**.
+    - Wiederholen Sie diese Schritte für **Microsoft.ML.ImageAnalytics**, **Microsoft.ML.OnnxTransformer** und **Microsoft.ML.OnnxRuntime**.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Vorbereiten der Daten und des vortrainierten Modells
 

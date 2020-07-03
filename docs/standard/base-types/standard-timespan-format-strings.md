@@ -1,5 +1,6 @@
 ---
 title: Standardmäßige TimeSpan-Formatzeichenfolgen
+description: Informationen zu den üblichen TimeSpan-Formatzeichenfolgen, die einen einzelnen Formatbezeichner verwenden, um die Textdarstellung eines TimeSpan-Werts in .NET zu definieren.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 2ed9ca7337e40b5520ddbfc92925c5bedb45f701
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 31e4158d42d794e830d9acfe666729846c43a1ee
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289277"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768117"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardmäßige TimeSpan-Formatzeichenfolgen
 

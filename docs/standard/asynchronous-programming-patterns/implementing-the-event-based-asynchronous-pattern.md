@@ -1,5 +1,6 @@
 ---
 title: Implementieren des ereignisbasierten asynchronen Entwurfsmusters
+description: Erfahren Sie, wie Sie das ereignisbasierte asynchrone Muster in .NET implementieren. Das ereignisbasierte asynchrone Muster ist ein Standardverfahren zum Packen einer Klasse mit asynchronen Features.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 484050b45b5da72386e9ac29805d7faf0ca9cbd6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e36ae21e1e03c8c5c688b7446f660ab1bb666a94
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904376"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementieren des ereignisbasierten asynchronen Entwurfsmusters
 
-Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen verursachen können, sollten Sie die Klasse mit einer asynchronen Funktionalität ausstatten, indem Sie das ereignisbasierte asynchrone Muster implementieren. Informationen zu diesem Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](event-based-asynchronous-pattern-overview.md).
+Wenn Sie eine Klasse mit einigen Vorgängen erstellen, die möglicherweise nennenswerte Verzögerungen verursachen, sollten Sie in Betracht ziehen, diese Klasse mit einer asynchronen Funktionalität auszustatten, indem Sie das [ereignisbasierte asynchrone Muster](event-based-asynchronous-pattern-overview.md) implementieren.
 
 Das ereignisbasierte asynchrone Muster bietet eine standardisierte Möglichkeit zum Verpacken einer Klasse, die asynchrone Features hat. Ist eine Klasse mit Hilfsklassen wie <xref:System.ComponentModel.AsyncOperationManager> implementiert, funktioniert sie unter jedem beliebigen Anwendungsmodell korrekt, einschließlich ASP.NET, Konsolenanwendungen und Windows Forms-Anwendungen.
 
-Ein Beispiel, in dem das ereignisbasierte asynchrone Muster implementiert ist, finden Sie unter [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](component-that-supports-the-event-based-asynchronous-pattern.md).
+Ein Beispiel, in dem das ereignisbasiertes asynchrone Muster implementiert wird, finden Sie unter [Vorgehensweise: Übersicht über ereignisbasierte asynchrone Muster](component-that-supports-the-event-based-asynchronous-pattern.md).
 
-Für einfache asynchrone Vorgänge ist möglicherweise die Komponente <xref:System.ComponentModel.BackgroundWorker> gut geeignet. Weitere Informationen zu <xref:System.ComponentModel.BackgroundWorker> finden Sie unter [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md).
+Für einfache asynchrone Vorgänge ist möglicherweise die Komponente <xref:System.ComponentModel.BackgroundWorker> gut geeignet. Weitere Informationen zum Verwenden von <xref:System.ComponentModel.BackgroundWorker> finden Sie unter [Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md).
 
 In der folgenden Liste sind die Features des ereignisbasierten asynchronen Musters aufgeführt, die in diesem Thema beschrieben sind.
 
@@ -257,13 +258,13 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [How to: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [How to: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [How to: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](event-based-asynchronous-pattern-eap.md)
+- [Ereignisbasiertes asynchrones Muster (EAP)](event-based-asynchronous-pattern-eap.md)

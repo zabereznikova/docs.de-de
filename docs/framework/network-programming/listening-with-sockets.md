@@ -1,5 +1,6 @@
 ---
 title: Überwachen mit Sockets
+description: Hier erfahren Sie, wie Sie einen Remotedienst erstellen, bei dem ein Serversocket einen Port im Netzwerk öffnet und darauf wartet, dass ein Client eine Verbindung mit diesem Port herstellt.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: cf8316ede6888b99a8b0c87cfa3426b33be18b7f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b6de67772bae397373e307ec02ce69a71b0542e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180742"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502313"
 ---
 # <a name="listening-with-sockets"></a>Überwachen mit Sockets
 Listener oder Serversockets öffnen einen Port auf dem Netzwerk und warten dann darauf, dass ein Client eine Verbindung zu diesem Port herstellt. Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie ein Remotedienst für ein TCP/IP-Netzwerk erstellt wird.  
@@ -59,10 +60,10 @@ listener.Listen(100);
   
  Die **Listener**-Methode verwendet einen einzigen Parameter, der angibt, wie viele ausstehende Verbindungen zum **Socket** zugelassen sind, bevor der Fehler „Server ausgelastet“ an den verbindenden Client zurückgegeben wird. In diesem Fall werden bis zu 100 Clients in der Verbindungswarteschlange platziert, bevor die Antwort „Server ausgelastet“ an den 101. Client zurückgegeben wird.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verwenden eines synchronen Serversockets](using-a-synchronous-server-socket.md)
 - [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)
 - [Verwenden von Clientsockets](using-client-sockets.md)
-- [Vorgehensweise: Erstellen eines Sockets](how-to-create-a-socket.md)
+- [How to: Erstellen eines Sockets](how-to-create-a-socket.md)
 - [Sockets](sockets.md)

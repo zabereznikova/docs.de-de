@@ -1,5 +1,6 @@
 ---
-title: 'Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse'
+title: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse
+description: Hier finden Sie ein Beispiel zum Hinzufügen, Abrufen, Aktualisieren und Entfernen von Elementen aus der „ConcurrentDictionary<TKey,TValue>“-Sammlung in .NET.
 ms.date: 05/04/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 6c093e907e43f9f2b978624a986dfe5d8a49869f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0bfc17d93ea3088a7b2e4209e25003856770b9e7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287899"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325961"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary
 
 Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und von einer <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> entfernt werden. Diese Auflistungsklasse ist eine threadsichere Implementierung. Es empfiehlt sich, diese Klasse immer dann zu verwenden, wenn möglicherweise mehrere Threads gleichzeitig versuchen, auf Elemente zuzugreifen.
 
@@ -36,7 +37,7 @@ Im folgenden Beispiel werden zwei Instanzen von <xref:System.Threading.Tasks.Tas
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> wurde für Multithread-Szenarios entworfen. Sie müssen keine Sperren in Ihrem Code verwenden, um Elemente zur Auflistung hinzuzufügen oder daraus zu entfernen. Es ist jedoch immer möglich, dass ein Thread einen Wert abruft und ein anderer Thread durch Zuweisen eines neuen Werts zum gleichen Schlüssel die Auflistung unmittelbar danach aktualisiert.
 
-Darüber hinaus sind zwar alle Methoden von <xref:System.Collections.Concurrent.ConcurrentDictionary%602> threadsicher, aber nicht alle Methoden sind atomisch – insbesondere <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Der an diese Methoden übergebene Benutzerdelegat wird außerhalb der internen Sperre des Wörterbuchs aufgerufen (um unbekannten Code davon abzuhalten, alle Threads zu blockieren). Daher ist es möglich, dass die folgende Ereignissequenz eintritt:
+Darüber hinaus sind zwar alle Methoden von <xref:System.Collections.Concurrent.ConcurrentDictionary%602> threadsicher, aber nicht alle Methoden sind atomisch – insbesondere <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Der an diese Methoden übergebene Benutzerdelegat wird außerhalb der internen Sperre des Wörterbuchs aufgerufen, um unbekannten Code davon abzuhalten, alle Threads zu blockieren. Daher ist es möglich, dass die folgende Ereignissequenz eintritt:
 
 1. _threadA_ ruft <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> auf, findet kein Element und erstellt ein neues hinzuzufügendes Element durch Aufrufen des `valueFactory`-Delegaten.
 

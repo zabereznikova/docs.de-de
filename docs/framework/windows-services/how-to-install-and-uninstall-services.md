@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 8937ef8b4007253b06444e59b292395084e4df2f
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 259b353edc269a77a51e790544018481a53af188
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607918"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596357"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Vorgehensweise: Installieren und Deinstallieren von Windows-Diensten
 
@@ -26,7 +26,7 @@ Wenn Sie einen Windows-Dienst mit dem .NET Framework entwickeln, können Sie Ihr
 > [!WARNING]
 > Wenn Sie einen Dienst auf Ihrem Computer deinstallieren möchten, befolgen Sie die Schritte in diesem Artikel nicht. In diesem Fall finden Sie heraus, welches Programm oder Software-Paket den Dienst installiert hat. Wählen Sie dann in den Einstellungen **Apps** aus, um das Programm zu deinstallieren. Beachten Sie, dass viele Dienste Bestandteile von Windows sind; wenn Sie sie entfernen, können Sie die Instabilität des Systems verursachen.
 
-Sie müssen zunächst ein Dienstinstallationsprogramm zu Ihrem Windows-Dienst hinzufügen, um die in diesem Artikel aufgeführten Schritte ausführen zu können. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](../windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).
+Sie müssen zunächst ein Dienstinstallationsprogramm zu Ihrem Windows-Dienst hinzufügen, um die in diesem Artikel aufgeführten Schritte ausführen zu können. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](walkthrough-creating-a-windows-service-application-in-the-component-designer.md).
 
 Sie können Windows-Dienstprojekte nicht durch Drücken von F5 direkt aus der Entwicklungsumgebung von Visual Studio ausführen. Bevor Sie das Projekt ausführen können, müssen Sie den Dienst im Projekt installieren.
 
@@ -35,7 +35,7 @@ Sie können Windows-Dienstprojekte nicht durch Drücken von F5 direkt aus der En
 
 ### <a name="install-your-service-manually-using-installutilexe-utility"></a>Manuelles Installieren Ihres Diensts mithilfe des Hilfsprogramms „InstallUtil.exe“
 
-1. Wählen Sie im Menü **Start** das Verzeichnis **Visual Studio\<*Version*>** aus, und wählen Sie anschließend **Developer-Eingabeaufforderung für VS \<*Version*>** aus.
+1. Wählen Sie erst im Menü **Start** das Verzeichnis **Visual Studio\<*version*>** und anschließend **Developer-Eingabeaufforderung für Visual Studio \<*version*>** aus.
 
      Daraufhin wird die Developer-Eingabeaufforderung für Visual Studio angezeigt.
 
@@ -55,7 +55,7 @@ Sie können Windows-Dienstprojekte nicht durch Drücken von F5 direkt aus der En
 
 ### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>Manuelles Deinstallieren Ihres Diensts mithilfe des Hilfsprogramms „InstallUtil.exe“
 
-1. Wählen Sie im Menü **Start** das Verzeichnis **Visual Studio\<*Version*>** aus, und wählen Sie anschließend **Developer-Eingabeaufforderung für VS \<*Version*>** aus.
+1. Wählen Sie erst im Menü **Start** das Verzeichnis **Visual Studio\<*version*>** und anschließend **Developer-Eingabeaufforderung für Visual Studio \<*version*>** aus.
 
      Daraufhin wird die Developer-Eingabeaufforderung für Visual Studio angezeigt.
 
@@ -97,7 +97,7 @@ Sie können Windows-Dienstprojekte nicht durch Drücken von F5 direkt aus der En
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in Windows-Dienstanwendungen](../windows-services/introduction-to-windows-service-applications.md)
-- [How to: Erstellen von Windows-Diensten](../windows-services/how-to-create-windows-services.md)
-- [How to: Hinzufügen von Installern zur Dienstanwendung](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
+- [How to: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
+- [How to: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
 - [Installutil.exe (Installer-Tool)](../tools/installutil-exe-installer-tool.md)

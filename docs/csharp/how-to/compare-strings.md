@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 725441f5399f72b6457af461d51419c35077f4c2
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d1ea0fc3573714347580a2aaded2d0f3118681a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662913"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324177"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Vergleichen von Zeichenfolgen in C\#
 
@@ -41,7 +41,7 @@ führen einen Ordinalvergleich unter Berücksichtigung der Groß/-Kleinschreibun
 
 Bei dem Standardordinalvergleich werden keine linguistischen Regeln berücksichtigt, wenn Zeichenfolgen verglichen werden. In ihm wird der binäre Wert jedes <xref:System.Char>-Objekts in zwei Zeichenfolgen verglichen. Dies bedingt, dass im Standardordinalvergleich ebenfalls die Groß-/Kleinschreibung beachtet wird.
 
-Beachten Sie, dass sich der Test auf Gleichheit mit <xref:System.String.Equals%2A?displayProperty=nameWithType> und den Operatoren `==` und `!=` von einem Zeichenfolgenvergleich mit den Methoden <xref:System.String.CompareTo%2A?displayProperty=nameWithType> und <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> unterscheidet. Während in den Tests auf Gleichheit ein Ordinalvergleich mit Beachtung der Groß-/Kleinschreibung ausgeführt wird, wird in den Vergleichsmethoden ein Vergleich unter Beachtung der Groß-/Kleinschreibung und der aktuellen Kultur ausgeführt. Weil die Standardvergleichsmethoden häufig unterschiedliche Arten von Vergleichen ausführen, sollten Sie die Absicht Ihres Codes immer verdeutlichen, indem Sie eine Überladung aufrufen, in der die Art des auszuführenden Vergleichs explizit angegeben ist.
+Der Test auf Gleichheit mit <xref:System.String.Equals%2A?displayProperty=nameWithType> und den Operatoren `==` und `!=` unterscheidet sich von einem Zeichenfolgenvergleich mit den Methoden <xref:System.String.CompareTo%2A?displayProperty=nameWithType> und <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Während in den Tests auf Gleichheit ein Ordinalvergleich mit Beachtung der Groß-/Kleinschreibung ausgeführt wird, wird in den Vergleichsmethoden ein Vergleich unter Beachtung der Groß-/Kleinschreibung und der aktuellen Kultur ausgeführt. Weil die Standardvergleichsmethoden häufig unterschiedliche Arten von Vergleichen ausführen, sollten Sie die Absicht Ihres Codes immer verdeutlichen, indem Sie eine Überladung aufrufen, in der die Art des auszuführenden Vergleichs explizit angegeben ist.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Ordinalvergleich ohne Beachtung der Groß- und Kleinschreibung
 
@@ -55,7 +55,7 @@ Wenn Sie einen Ordinalvergleich ohne Beachtung der Groß-/Kleinschreibung ausfü
 ## <a name="linguistic-comparisons"></a>Linguistische Vergleiche
 
 Zeichenfolgen können auch mit linguistischen Regeln für die aktuelle Kultur sortiert werden.
-Dies wird manchmal als „Wortsortierreihenfolge“ bezeichnet. Beim Ausführen eines linguistischen Vergleichs werden möglicherweise einigen nicht alphanumerischen Unicode-Zeichen bestimmte Gewichtungen zugewiesen. Beispielsweise wird dem Bindestrich („-“) ggf. eine sehr geringe Gewichtung zugeordnet, sodass „coop“ und „co-op“ in einer Sortierreihenfolge nebeneinander angezeigt werden. Darüber hinaus können einige Unicode-Zeichen einer Sequenz von <xref:System.Char>-Instanzen entsprechen. Im folgenden Beispiel werden die Sätze „Sie tanzen auf der Straße.“ und „Sie tanzen auf der Strasse.“ verwendet, in Deutsch mit „ss“ (U+0073 U+0073) in einer Zeichenfolge und „ß“ (U+00DF) in einer anderen. Unter Windows entspricht in den Kulturen „en-US“ und „de-DE“ die Zeichenfolge „ss“ linguistisch dem scharfen S/Eszett („ß“).
+Dies wird manchmal als „Wortsortierreihenfolge“ bezeichnet. Beim Ausführen eines linguistischen Vergleichs werden möglicherweise einigen nicht alphanumerischen Unicode-Zeichen bestimmte Gewichtungen zugewiesen. Beispielsweise wird dem Bindestrich („-“) ggf. eine geringe Gewichtung zugeordnet, sodass „coop“ und „co-op“ in einer Sortierreihenfolge nebeneinander angezeigt werden. Darüber hinaus können einige Unicode-Zeichen einer Sequenz von <xref:System.Char>-Instanzen entsprechen. Im folgenden Beispiel werden die Sätze „Sie tanzen auf der Straße.“ und „Sie tanzen auf der Strasse.“ verwendet, in Deutsch mit „ss“ (U+0073 U+0073) in einer Zeichenfolge und „ß“ (U+00DF) in einer anderen. Unter Windows entspricht in den Kulturen „en-US“ und „de-DE“ die Zeichenfolge „ss“ linguistisch dem scharfen S/Eszett („ß“).
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet3":::
 
@@ -92,7 +92,7 @@ Mit kulturabhängigen Vergleichen werden üblicherweise Zeichenfolgeneingaben un
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-Linguistische Vergleiche sind sowohl von der aktuellen Kultur als auch vom Betriebssystem abhängig. Dies muss bei Zeichenfolgenvergleichen berücksichtigt werden.
+Linguistische Vergleiche sind sowohl von der aktuellen Kultur als auch vom Betriebssystem abhängig. Berücksichtigen Sie dies bei Zeichenfolgenvergleichen.
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Linguistisches Sortieren und Suchen nach Zeichenfolgen in Arrays
 
@@ -102,7 +102,7 @@ Im nächsten Beispiel wird demonstriert, wie Sie Zeichenfolgen in einem Array un
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet5":::
 
-Nach der Sortierung des Arrays können Sie mit einer Binärsuche nach Einträgen suchen. Bei einer Binärsuche wird als Startposition die Mitte der Collection gewählt, um zu bestimmen, welche Hälfte der Collection die gesuchte Zeichenfolge enthält. Jeder nachfolgende Vergleich unterteilt den verbleibenden Teil der Collection in zwei weitere Teile.  Das Array wird mit der <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>-Eigenschaft sortiert. Die lokale Funktion `ShowWhere` gibt Informationen zur Position aus, an der die Zeichenfolge gefunden wurde. Wenn die Zeichenfolge nicht gefunden wurde, gibt der Rückgabewert an, an welcher Stelle sich die Zeichenfolge befände, wenn diese vorhanden wäre.
+Nach der Sortierung des Arrays können Sie mit einer Binärsuche nach Einträgen suchen. Bei einer Binärsuche wird als Startposition die Mitte der Collection gewählt, um zu bestimmen, welche Hälfte der Collection die gesuchte Zeichenfolge enthält. Jeder nachfolgende Vergleich unterteilt den verbleibenden Teil der Collection in zwei weitere Teile.  Das Array wird mit der <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>-Eigenschaft sortiert. Die lokale Funktion `ShowWhere` gibt Informationen zur Position aus, an der die Zeichenfolge gefunden wurde. Wenn die Zeichenfolge nicht gefunden wurde, gibt der zurückgegebene Wert an, an welcher Stelle sich die Zeichenfolge befände, wenn diese vorhanden wäre.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet6":::
 
@@ -122,7 +122,7 @@ Auflistungsklassen wie <xref:System.Collections.Hashtable?displayProperty=nameWi
 
 ## <a name="reference-equality-and-string-interning"></a>Verweisgleichheit und Internalisieren von Zeichenfolgen
 
-Bisher wurde für kein Beispiel <xref:System.Object.ReferenceEquals%2A> verwendet. Diese Methode erkennt, ob zwei Zeichenfolgen demselben Objekt entsprechen. Dies kann zu inkonsistenten Ergebnissen in Zeichenfolgenvergleichen führen. Im folgenden Beispiel wird das C#-Feature *Zeichenfolgeninternalisierung* demonstriert. Wenn ein Programm zwei oder mehr identische Zeichenfolgenvariablen deklariert, speichert der Compiler alle am selben Speicherort. Durch Aufrufen der <xref:System.Object.ReferenceEquals%2A>-Methode können Sie sehen, dass die beiden Zeichenfolgen tatsächlich auf das gleiche Objekt im Arbeitsspeicher verweisen. Mit der <xref:System.String.Copy%2A?displayProperty=nameWithType>-Methode können Sie eine Internalisierung verhindern. Nach der Erstellung der Kopie verfügen beide Zeichenfolgen über unterschiedliche Speicherorte, obwohl sie denselben Wert besitzen. Wenn Sie das folgende Beispiel ausführen, werden die Zeichenfolgen `a` und `b`*internalisiert* – für beide wird also derselbe Speicherort verwendet. Für die Zeichenfolgen `a` und `c` ist dies hingegen nicht der Fall.
+Bisher wurde für kein Beispiel <xref:System.Object.ReferenceEquals%2A> verwendet. Diese Methode bestimmt, ob zwei Zeichenfolgen dasselbe Objekt darstellen. Dies kann zu inkonsistenten Ergebnissen in Zeichenfolgenvergleichen führen. Im folgenden Beispiel wird das C#-Feature *Zeichenfolgeninternalisierung* demonstriert. Wenn ein Programm zwei oder mehr identische Zeichenfolgenvariablen deklariert, speichert der Compiler alle am selben Speicherort. Durch Aufrufen der <xref:System.Object.ReferenceEquals%2A>-Methode können Sie sehen, dass die beiden Zeichenfolgen tatsächlich auf das gleiche Objekt im Arbeitsspeicher verweisen. Mit der <xref:System.String.Copy%2A?displayProperty=nameWithType>-Methode können Sie eine Internalisierung verhindern. Nach der Erstellung der Kopie verfügen beide Zeichenfolgen über unterschiedliche Speicherorte, obwohl sie denselben Wert besitzen. Wenn Sie das folgende Beispiel ausführen, werden die Zeichenfolgen `a` und `b`*internalisiert* – für beide wird also derselbe Speicherort verwendet. Für die Zeichenfolgen `a` und `c` ist dies hingegen nicht der Fall.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet9":::
 

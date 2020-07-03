@@ -1,5 +1,6 @@
 ---
 title: Programmieren austauschbarer Protokolle
+description: Hier erfahren Sie, wie die abstrakten Klassen „WebRequest“ und „WebResponse“ austauschbare Protokolle unterstützen, die es einer Anwendung ermöglichen, Daten ohne Angabe eines Protokolls abzurufen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, pluggable protocols
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 510f616295abc13d93e0e0af5a37aca097d343e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047402"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502196"
 ---
 # <a name="programming-pluggable-protocols"></a>Programmieren austauschbarer Protokolle
 Die abstrakten Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> stellen die Grundlage für austauschbare Protokolle bereit. Durch Ableiten protokollspezifischer Klassen von <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> kann eine Anwendung Daten von einer Internetressource anfordern und die Antwort ohne Angabe des verwendeten Protokolls lesen.  
@@ -31,9 +32,9 @@ Die abstrakten Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResp
   
  Damit Sie von austauschbaren Protokollen profitieren können, müssen die <xref:System.Net.WebRequest>-Nachfolger eine Standardtransaktion für Anforderung und Antwort bereitstellen, für die keine protokollspezifischen Eigenschaften festgelegt werden müssen. So stellt beispielsweise die <xref:System.Net.HttpWebRequest>-Klasse, die für HTTP die <xref:System.Net.WebRequest>-Klasse implementiert, standardmäßig eine `GET`-Anforderung bereit und gibt eine <xref:System.Net.HttpWebResponse> zurück, die den vom Webserver zurückgegebenen Datenstrom enthält.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Deriving from WebRequest (Ableiten von WebRequest)](deriving-from-webrequest.md)
 - [Ableiten von WebResponse](deriving-from-webresponse.md)
 - [Netzwerkprogrammierung in .NET Framework](index.md)
-- [Vorgehensweise: Typumwandlung für ein WebRequest in zugriffsprotokollspezifische Eigenschaften](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [How to: Typumwandlung einer WebRequest-Klasse in protokollspezifische Zugriffseigenschaften](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

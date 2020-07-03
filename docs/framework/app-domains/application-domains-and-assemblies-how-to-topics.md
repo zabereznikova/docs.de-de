@@ -1,16 +1,17 @@
 ---
 title: Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys
+description: Hier finden Sie Links zu Vorgehensweisen in die konzeptionellen Dokumentation zur .NET-Programmierung mit Anwendungsdomänen und -assemblys.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-ms.openlocfilehash: bcb2ae00b02571b97dfc23100a1e5a7d3e7d8f12
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9489f23e6730e36fb43e367b34954d220f633c96
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119992"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104969"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys
 Die folgenden Abschnitte enthalten Links zu allen Themen zur Vorgehensweise in der Begriffsdokumentation zum Programmieren mit Anwendungsdomänen und Assemblys.  

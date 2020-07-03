@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei'
+description: Erfahren Sie, wie Sie mithilfe der Klassen System.IO.BinaryReader und System.IO.BinaryWriter in einer neu erstellten Datendatei in .NET lesen und schreiben.
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 18f44af81a38a48da3115d2082ef45af39f06529
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9a6b2985b7f532476c0f4c0f998d710f95e55d3a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291811"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769157"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei
 Die <xref:System.IO.BinaryWriter?displayProperty=nameWithType>-Klasse und die <xref:System.IO.BinaryReader?displayProperty=nameWithType>-Klasse werden zum Schreiben und Lesen von Daten, jedoch nicht von Zeichenfolgen, verwendet. Im folgenden Beispiel wird gezeigt, wie ein leerer Dateistream erstellt wird und Daten darin geschrieben und daraus gelesen werden.
