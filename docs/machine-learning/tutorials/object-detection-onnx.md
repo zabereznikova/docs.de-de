@@ -3,15 +3,15 @@ title: 'Tutorial: Erkennen von Objekten mithilfe eines ONNX-Deep-Learning-Modell
 description: In diesem Tutorial wird veranschaulicht, wie Sie ein vortrainiertes ONNX Deep Learning-Modell in ML.NET verwenden, um Objekte in Bildern zu erkennen.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803403"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 
@@ -19,10 +19,10 @@ Erfahren Sie, wie Sie ein vortrainiertes ONNX-Modell in ML.NET verwenden, um Obj
 
 Das von Grund auf neue Trainieren eines Objekterkennungsmodells erfordert das Festlegen von Millionen von Parametern, zahlreiche bezeichnete Trainingsdaten und eine große Menge an Computeressourcen (Hunderte von GPU-Stunden). Die Verwendung eines vortrainierten Modells ermöglicht es Ihnen, den Trainingsprozess zu verkürzen.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
 >
-> - Das Problem verstehen
+> - Verstehen des Problems
 > - Erfahren Sie, was ONNX ist und wie ONNX mit ML.NET funktioniert.
 > - Verstehen des Modells
 > - Wiederverwenden des vortrainierten Modells
@@ -89,6 +89,8 @@ Da Sie nun ein allgemeines Verständnis davon haben, was ONNX ist und wie Tiny Y
 1. Erstellen Sie eine **.NET Core-Konsolenanwendung** mit dem Namen „ObjectDetection“.
 
 1. Installieren des **Microsoft.ML NuGet-Pakets**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     - Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus.
     - Wählen Sie „nuget.org“ als Paketquelle aus, wählen Sie die Registerkarte „Durchsuchen“ aus, und suchen Sie nach **Microsoft.ML**.
@@ -705,14 +707,14 @@ Navigieren Sie zum Verzeichnis `assets/images/output/`, um die Bilder mit Begren
 
 ![Beispiel für ein verarbeitetes Bild eines Esszimmers](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
-Herzlichen Glückwunsch! Sie haben nun durch Wiederverwenden eines vortrainierten `ONNX`-Modells in ML.NET erfolgreich ein Machine Learning-Modell für die Objekterkennung erstellt.
+Glückwunsch! Sie haben nun durch Wiederverwenden eines vortrainierten `ONNX`-Modells in ML.NET erfolgreich ein Machine Learning-Modell für die Objekterkennung erstellt.
 
 Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx).
 
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
 >
-> - Das Problem verstehen
+> - Verstehen des Problems
 > - Erfahren Sie, was ONNX ist und wie ONNX mit ML.NET funktioniert.
 > - Verstehen des Modells
 > - Wiederverwenden des vortrainierten Modells

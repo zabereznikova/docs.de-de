@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: f1a5070c106055b268d43751300d84269fed6a36
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 68b1f723b3dcc4fd16073a653a778aa480cfa32e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621755"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Verwenden des aufgabenbasierten asynchronen Musters
 
@@ -380,7 +380,7 @@ while(imageTasks.Count > 0)
 }
 ```
 
-#### <a name="throttling"></a>Einschränkung
+#### <a name="throttling"></a>Drosselung
  Nehmen Sie das Beispiel für Überlappung mit dem Unterschied, dass der Benutzer so viele Bilder herunterlädt, dass die Downloads eingeschränkt werden müssen. Dazu möchte Sie z. B. so vorgehen, dass nur eine bestimmte Anzahl von Downloads gleichzeitig erfolgen darf. Um dies zu erreichen, können Sie eine Teilmenge der asynchronen Vorgänge starten.  Sobald Vorgänge abgeschlossen sind, können an derer Stelle weitere Vorgänge starten:
 
 ```csharp
@@ -521,7 +521,7 @@ public async void btnDownload_Click(object sender, RoutedEventArgs e)
             Task.WhenAll(from url in urls select GetBitmapAsync(url));
         if (downloads == await Task.WhenAny(downloads, Task.Delay(3000)))
         {
-            foreach(var bmp in downloads) panel.AddImage(bmp);
+            foreach(var bmp in downloads.Result) panel.AddImage(bmp);
             status.Text = "Downloaded";
         }
         else
@@ -834,7 +834,7 @@ private static void Produce(int data)
 > [!NOTE]
 > Der Namespace <xref:System.Threading.Tasks.Dataflow> ist in .NET Framework 4.5 über **NuGet** verfügbar. Zum Installieren der Assembly, die den <xref:System.Threading.Tasks.Dataflow>-Namespace enthält, öffnen Sie Ihr Projekt in Visual Studio, wählen **NuGet-Pakete verwalten** aus dem Menü „Projekt“ und suchen anschließend online nach dem Microsoft.Tpl.Dataflow-Paket.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](task-based-asynchronous-pattern-tap.md)
 - [Implementieren des aufgabenbasierten asynchronen Entwurfsmusters](implementing-the-task-based-asynchronous-pattern.md)

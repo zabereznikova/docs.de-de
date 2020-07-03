@@ -1,7 +1,7 @@
 ---
 title: 'Beispiel für regulären Ausdruck: Suchen nach HREFs'
 description: In diesem Artikel finden Sie ein Beispiel für reguläre Ausdrücke in .NET. In diesem Beispiel wird eine Eingabezeichenfolge gesucht, und es werden alle href-Attributwerte und ihre Positionen angezeigt.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802850"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Beispiel für regulären Ausdruck: Suchen nach HREFs
 Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden alle href="..."-Werte und ihre Positionen in der Zeichenfolge angezeigt.  
-  
-## <a name="the-regex-object"></a>Das Regex-Objekt  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
+## <a name="the-regex-object"></a>Das Regex-Objekt
  Da die `DumpHRefs`-Methode vom Benutzercode aus mehrmals aufgerufen werden kann, verwendet sie die `static` (`Shared` in Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode. Dies ermöglicht der Engine für reguläre Ausdrücke, den regulären Ausdruck zwischenzuspeichern, und vermeidet den Mehraufwand, bei jedem Aufruf der Methode ein neues <xref:System.Text.RegularExpressions.Regex>-Objekt zu instanziieren. Ein <xref:System.Text.RegularExpressions.Match>-Objekt wird anschließend verwendet, um alle Übereinstimmungen in der Zeichenfolge zu durchlaufen.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]

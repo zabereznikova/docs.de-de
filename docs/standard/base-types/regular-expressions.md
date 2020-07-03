@@ -1,7 +1,7 @@
 ---
-title: Reguläre Ausdrücke von .NET Framework
+title: Reguläre Ausdrücke von .NET
 description: Verwenden Sie reguläre Ausdrücke, um in .NET nach bestimmten Zeichenmustern zu suchen, Text zu überprüfen, mit Text-Teilzeichenfolgen zu arbeiten und extrahierte Zeichenfolgen einer Sammlung hinzuzufügen.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802896"
 ---
 # <a name="net-regular-expressions"></a>Reguläre Ausdrücke von .NET
 
@@ -68,6 +68,8 @@ Weitere Informationen über die Sprache für reguläre Ausdrücke finden Sie unt
 
 Die <xref:System.String>-Klasse enthält eine Reihe von Such- und Ersetzungsmethoden für Zeichenfolgen, die Sie verwenden können, wenn Sie Literalzeichenfolgen in einer größeren Zeichenfolge suchen möchten. Reguläre Ausdrücke sind besonders hilfreich, wenn Sie eine von mehreren Teilzeichenfolgen in einer größeren Zeichenfolge suchen oder wenn Sie Muster in einer Zeichenfolge identifizieren möchten, wie in den folgenden Beispielen veranschaulicht wird.
 
+[!INCLUDE [regex](../../../includes/regex.md)]
+
 > [!TIP]
 > Der Namespace <xref:System.Web.RegularExpressions> enthält eine Reihe von Objekten für reguläre Ausdrücke, die vordefinierte Muster für reguläre Ausdrucke zum Analysieren von Zeichenfolgen aus HTML-, XML- und ASP.NET-Dokumenten implementieren. Die Klasse <xref:System.Web.RegularExpressions.TagRegex> identifiziert beispielsweise Starttags in einer Zeichenfolge und die Klasse <xref:System.Web.RegularExpressions.CommentRegex> ASP.NET-Kommentare in einer Zeichenfolge.
 
@@ -102,7 +104,7 @@ Die <xref:System.String>-Klasse enthält eine Reihe von Such- und Ersetzungsmeth
   
  Die Eingabezeichenfolge enthält die Teilzeichenfolge „this? This" enthält. Aufgrund des dazwischenliegenden Satzzeichens wird diese jedoch nicht als Duplikat identifiziert.  
   
-### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Beispiel 3: Dynamisches Erstellen eines kulturabhängigen regulären Ausdrucks  
+### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Beispiel 3: Dynamisches Erstellen eines kulturabhängigen regulären Ausdrucks  
 
  Das folgende Beispiel veranschaulicht die Leistungsfähigkeit regulärer Ausdrücke in Kombination mit der Flexibilität der .NET-Globalisierungsfunktionen. Mit dem <xref:System.Globalization.NumberFormatInfo>-Objekt wird das Format von Währungswerten in der aktuellen Kultur des Systems bestimmt. Anschließend wird anhand dieser Informationen dynamisch ein regulärer Ausdruck erstellt, der Währungswerte aus dem Text extrahiert. Für jede Übereinstimmung wird die Untergruppe extrahiert, die nur die numerische Zeichenfolge enthält. Diese wird in einen <xref:System.Decimal>-Wert konvertiert, und dann wird ein laufender Gesamtbetrag berechnet.  
   
@@ -128,14 +130,14 @@ Die <xref:System.String>-Klasse enthält eine Reihe von Such- und Ersetzungsmeth
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)|Informationen zu Zeichensatz, Operatoren und Konstrukten, mit denen Sie reguläre Ausdrücke definieren können.|  
 |[Das Objektmodell für reguläre Ausdrücke](the-regular-expression-object-model.md)|Ausführliche Informationen und Codebeispiele, die die Verwendung von Klassen für reguläre Ausdrücke veranschaulichen.|  
 |[Einzelheiten zum Verhalten regulärer Ausdrücke](details-of-regular-expression-behavior.md)|Ausführliche Informationen zu den Funktionen und dem Verhalten von regulären Ausdrücken in .NET.|
 |[Verwenden von regulären Ausdrücken in Visual Studio](/visualstudio/ide/using-regular-expressions-in-visual-studio)||
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
