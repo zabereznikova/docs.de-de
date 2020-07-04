@@ -1,0 +1,59 @@
+### YamlMime:Landing
+title: Dokumentation zu Windows Presentation Foundation (WPF)
+summary: Erfahren Sie mehr über die Verwendung von Windows Presentation Foundation, einer grafischen Open-Source-Benutzeroberfläche für Windows in .NET Core.
+metadata:
+  title: Dokumentation zu Windows Presentation Foundation (WPF) für .NET Core
+  description: Erfahren Sie mehr über die Verwendung von Windows Presentation Foundation, einer grafischen Open-Source-Benutzeroberfläche für Windows in .NET Core.
+  ms.topic: landing-page
+  ms.date: 03/25/2020
+  ms.openlocfilehash: 8d3be7a04153ee0a120919fbb634001cd3257eb2
+  ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 04/02/2020
+  ms.locfileid: "85840280"
+landingContent:
+- title: Informationen zu WPF
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 'Windows Presentation Foundation: Übersicht'
+      url: overview/index.md
+    - text: XAML in Windows Presentation Foundation
+      url: fundamentals/xaml.md
+- title: Erste Schritte mit WPF
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Unterschiede zu WPF in .NET Framework
+      url: migration/differences-from-net-framework.md
+    - text: Migration von Framework zu Core
+      url: migration/convert-project-from-net-framework.md
+  - linkListType: tutorial
+    links:
+    - text: Erstellen einer WPF-Anwendung
+      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json
+- title: 'Grundlagen: XAML'
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Definieren von XAML-Ressourcen
+      url: fundamentals/xaml-resources-define.md
+    - text: Stile und Vorlagen
+      url: fundamentals/styles-templates-overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: Erstellen und Anwenden eines Stils
+      url: fundamentals/styles-templates-create-apply-style.md
+    - text: Erstellen und Anwenden einer Vorlage
+      url: themes/how-to-create-apply-template.md
+  - linkListType: reference
+    links:
+    - text: XAML-Sprachreferenz
+      url: xaml-services/index.md
+- title: 'Grundlagen: Daten'
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Datenbindung
+      url: data/data-binding-overview.md
