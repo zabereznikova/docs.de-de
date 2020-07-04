@@ -1,5 +1,6 @@
 ---
-title: 'Serialisierung: .net'
+title: 'Serialisierung: .NET'
+description: Dieser Artikel enthält Informationen zu .NET-Serialisierungstechnologien, einschließlich binärer Serialisierung, XML- und SOAP-Serialisierung und JSON-Serialisierung.
 ms.date: 09/02/2019
 helpviewer_keywords:
 - JSON serialization
@@ -9,24 +10,24 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: e6db24326c79ab6509b253c45c27f87a2aacd73c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.openlocfilehash: b3d76c14dc9180a5f19781122d1a42bcae603e76
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053349"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "85840303"
 ---
 # <a name="serialization-in-net"></a>Serialisierung in .NET
 
-Unter Serialisierung wird das Konvertieren des Zustands eines Objekts in eine Form verstanden, die erhalten oder transportiert werden kann. Das Gegenstück zur Serialisierung ist die Deserialisierung, die einen Stream in ein Objekt konvertiert. Diese Prozesse ermöglichen es Ihnen, Daten zu speichern und zu übertragen.  
+Unter Serialisierung wird das Konvertieren des Zustands eines Objekts in eine Form verstanden, die erhalten oder transportiert werden kann. Das Gegenstück zur Serialisierung ist die Deserialisierung, die einen Stream in ein Objekt konvertiert. Zusammen ermöglichen es diese Prozesse, dass Daten gespeichert und übertragen werden können.  
   
-.Net bietet die folgenden Serialisierungstechnologien:  
+.NET verwendet die folgenden Serialisierungstechnologien:  
   
-- Die [binäre Serialisierung](binary-serialization.md) behält die Typtreue bei, was für die Beibehaltung des Zustands eines Objekts zwischen verschiedenen Aufrufen einer Anwendung nützlich ist. So können Sie z.&#160;B. ein Objekt für unterschiedliche Anwendungen freigeben, indem Sie es in die Zwischenablage serialisieren. Sie können ein Objekt in einen Stream, einen Datenträger, den Arbeitsspeicher, über das Netzwerk usw. serialisieren. Die Serialisierung wird vom Remotingsystem dazu verwendet, um Objekte "als Wert" von einem Computer bzw. einer Anwendungsdomäne an einen anderen Computer bzw. eine andere Anwendungsdomäne zu übergeben.  
+- Bei der [binären Serialisierung](binary-serialization.md) wird die Typtreue beibehalten. Dies ist nützlich, um den Zustand eines Objekts zwischen verschiedenen Aufrufen einer Anwendung zu speichern. So können Sie z.&#160;B. ein Objekt für unterschiedliche Anwendungen freigeben, indem Sie es in die Zwischenablage serialisieren. Sie können ein Objekt in einen Stream, einen Datenträger, den Arbeitsspeicher, über das Netzwerk usw. serialisieren. Die Serialisierung wird vom Remotingsystem dazu verwendet, um Objekte "als Wert" von einem Computer bzw. einer Anwendungsdomäne an einen anderen Computer bzw. eine andere Anwendungsdomäne zu übergeben.  
   
-- Die [XML-und SOAP-Serialisierung](xml-and-soap-serialization.md) serialisiert nur öffentliche Eigenschaften und Felder und bewahrt die Typtreue nicht. Dies ist hilfreich, wenn Daten bereitgestellt oder benutzt werden sollen, ohne die Anwendung, welche die Daten verwendet, zu beschränken. Da XML ein offener Standard ist, stellt XML eine attraktive Möglichkeit für den Datenaustausch im Internet dar. Ebenso ist SOAP ein offener Standard und damit auch eine attraktive Alternative.  
+- Bei der [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md) werden nur öffentliche Eigenschaften und Felder serialisiert, und die Typtreue wird nicht beibehalten. Dies ist hilfreich, wenn Daten bereitgestellt oder benutzt werden sollen, ohne die Anwendung, welche die Daten verwendet, zu beschränken. Da XML ein offener Standard ist, stellt XML eine attraktive Möglichkeit für den Datenaustausch im Internet dar. Ebenso ist SOAP ein offener Standard und damit auch eine attraktive Alternative.  
   
-- Bei der [JSON-Serialisierung](system-text-json-overview.md) werden nur öffentliche Eigenschaften serialisiert, und die Typtreue wird nicht beibehalten. JSON ist ein offener Standard, der für die gemeinsame Nutzung von Daten im Internet geeignet ist.
+- Bei der [JSON-Serialisierung](system-text-json-overview.md) werden nur öffentliche Eigenschaften serialisiert, und die Typtreue wird nicht beibehalten. JSON ist ein offener Standard und stellt eine attraktive Möglichkeit für den Datenaustausch im Internet dar.
 
 ## <a name="reference"></a>Referenz
 
@@ -37,4 +38,4 @@ Enthält Klassen, mit denen Objekte serialisiert und deserialisiert werden könn
 Enthält Klassen, die zur Serialisierung von Objekten in Dokumente oder Streams im XML-Format verwendet werden können.
 
 <xref:System.Text.Json>  
-Enthält Klassen, die zum Serialisieren von Objekten in Dokumente oder Streams im JSON-Format verwendet werden können.
+Enthält Klassen, die zur Serialisierung von Objekten in Dokumente oder Streams im JSON-Format verwendet werden können.
