@@ -19,8 +19,11 @@
         - name: Wechseln und Zurücksetzen der Identität
           href: impersonating-and-reverting.md
     - name: Kryptografiemodell
-      href: cryptography-model.md
       items:
+        - name: Übersicht
+          href: cryptography-model.md
+        - name: Plattformübergreifend Kryptografie
+          href: cross-platform-cryptography.md
         - name: Kryptografische Dienste
           href: cryptographic-services.md
         - name: Erzeugen von Schlüsseln für die Ver- und Entschlüsselung
