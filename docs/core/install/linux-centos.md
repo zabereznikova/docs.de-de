@@ -4,53 +4,53 @@ description: Veranschaulicht verschiedene Möglichkeiten, das .NET Core SDK und 
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 9f4de70b4989be1d162f384518a015816a3e75a9
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 6b1bad3a6c967483bb683866de84c9e5077a336f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619506"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a><span data-ttu-id="acc42-103">Installieren des .NET Core SDK oder der .NET Core-Runtime unter CentOS</span><span class="sxs-lookup"><span data-stu-id="acc42-103">Install .NET Core SDK or .NET Core Runtime on CentOS</span></span>
+# <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a><span data-ttu-id="7ac34-103">Installieren des .NET Core SDK oder der .NET Core-Runtime unter CentOS</span><span class="sxs-lookup"><span data-stu-id="7ac34-103">Install .NET Core SDK or .NET Core Runtime on CentOS</span></span>
 
-<span data-ttu-id="acc42-104">.NET Core wird unter CentOS unterstützt.</span><span class="sxs-lookup"><span data-stu-id="acc42-104">.NET Core is supported on CentOS.</span></span> <span data-ttu-id="acc42-105">In diesem Artikel wird beschrieben, wie Sie .NET Core unter CentOS installieren.</span><span class="sxs-lookup"><span data-stu-id="acc42-105">This article describes how to install .NET Core on CentOS.</span></span>
+<span data-ttu-id="7ac34-104">.NET Core wird unter CentOS unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ac34-104">.NET Core is supported on CentOS.</span></span> <span data-ttu-id="7ac34-105">In diesem Artikel wird beschrieben, wie Sie .NET Core unter CentOS installieren.</span><span class="sxs-lookup"><span data-stu-id="7ac34-105">This article describes how to install .NET Core on CentOS.</span></span>
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
-## <a name="supported-distributions"></a><span data-ttu-id="acc42-106">Unterstützte Distributionen</span><span class="sxs-lookup"><span data-stu-id="acc42-106">Supported distributions</span></span>
+## <a name="supported-distributions"></a><span data-ttu-id="7ac34-106">Unterstützte Distributionen</span><span class="sxs-lookup"><span data-stu-id="7ac34-106">Supported distributions</span></span>
 
-<span data-ttu-id="acc42-107">Die folgende Tabelle ist eine Liste der derzeit unter CentOS 7 und CentOS 8 unterstützten .NET Core-Versionen.</span><span class="sxs-lookup"><span data-stu-id="acc42-107">The following table is a list of currently supported .NET Core releases on both CentOS 7 and CentOS 8.</span></span> <span data-ttu-id="acc42-108">Diese Versionen werden weiterhin unterstützt, bis entweder die Version von [.NET Core das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) erreicht oder die Version von CentOS nicht mehr unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="acc42-108">These versions remain supported until either the version of [.NET Core reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of CentOS is no longer supported.</span></span>
+<span data-ttu-id="7ac34-107">Die folgende Tabelle ist eine Liste der derzeit unter CentOS 7 und CentOS 8 unterstützten .NET Core-Versionen.</span><span class="sxs-lookup"><span data-stu-id="7ac34-107">The following table is a list of currently supported .NET Core releases on both CentOS 7 and CentOS 8.</span></span> <span data-ttu-id="7ac34-108">Diese Versionen werden weiterhin unterstützt, bis entweder die Version von [.NET Core das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) erreicht oder die Version von CentOS nicht mehr unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="7ac34-108">These versions remain supported until either the version of [.NET Core reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of CentOS is no longer supported.</span></span>
 
-- <span data-ttu-id="acc42-109">✔️ gibt an, dass die Version von CentOS oder .NET Core weiterhin unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="acc42-109">A ✔️ indicates that the version of CentOS or .NET Core is still supported.</span></span>
-- <span data-ttu-id="acc42-110">❌ gibt an, dass die Version von CentOS oder .NET Core in dieser CentOS-Version nicht unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="acc42-110">A ❌ indicates that the version of CentOS or .NET Core isn't supported on that CentOS release.</span></span>
-- <span data-ttu-id="acc42-111">Wenn sowohl eine Version von CentOS als auch eine Version von .NET Core über ✔️ verfügen, wird diese Kombination aus Betriebssystem und .NET unterstützt.</span><span class="sxs-lookup"><span data-stu-id="acc42-111">When both a version of CentOS and a version of .NET Core have ✔️, that OS and .NET combination are supported.</span></span>
+- <span data-ttu-id="7ac34-109">✔️ gibt an, dass die Version von CentOS oder .NET Core weiterhin unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="7ac34-109">A ✔️ indicates that the version of CentOS or .NET Core is still supported.</span></span>
+- <span data-ttu-id="7ac34-110">❌ gibt an, dass die Version von CentOS oder .NET Core in dieser CentOS-Version nicht unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="7ac34-110">A ❌ indicates that the version of CentOS or .NET Core isn't supported on that CentOS release.</span></span>
+- <span data-ttu-id="7ac34-111">Wenn sowohl eine Version von CentOS als auch eine Version von .NET Core über ✔️ verfügen, wird diese Kombination aus Betriebssystem und .NET unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ac34-111">When both a version of CentOS and a version of .NET Core have ✔️, that OS and .NET combination are supported.</span></span>
 
-| <span data-ttu-id="acc42-112">CentOS</span><span class="sxs-lookup"><span data-stu-id="acc42-112">CentOS</span></span>                   | <span data-ttu-id="acc42-113">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="acc42-113">.NET Core 2.1</span></span> | <span data-ttu-id="acc42-114">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="acc42-114">.NET Core 3.1</span></span> | <span data-ttu-id="acc42-115">.NET 5 Preview (nur manuelle Installation)</span><span class="sxs-lookup"><span data-stu-id="acc42-115">.NET 5 Preview (manual install only)</span></span> |
+| <span data-ttu-id="7ac34-112">CentOS</span><span class="sxs-lookup"><span data-stu-id="7ac34-112">CentOS</span></span>                   | <span data-ttu-id="7ac34-113">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="7ac34-113">.NET Core 2.1</span></span> | <span data-ttu-id="7ac34-114">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="7ac34-114">.NET Core 3.1</span></span> | <span data-ttu-id="7ac34-115">.NET 5 Preview (nur manuelle Installation)</span><span class="sxs-lookup"><span data-stu-id="7ac34-115">.NET 5 Preview (manual install only)</span></span> |
 |--------------------------|---------------|---------------|----------------|
-| <span data-ttu-id="acc42-116">✔️ [8](#centos-8-)</span><span class="sxs-lookup"><span data-stu-id="acc42-116">✔️ [8](#centos-8-)</span></span> | <span data-ttu-id="acc42-117">✔️ 2.1</span><span class="sxs-lookup"><span data-stu-id="acc42-117">✔️ 2.1</span></span>        | <span data-ttu-id="acc42-118">✔️ 3.1</span><span class="sxs-lookup"><span data-stu-id="acc42-118">✔️ 3.1</span></span>        | <span data-ttu-id="acc42-119">✔️ 5.0 Preview</span><span class="sxs-lookup"><span data-stu-id="acc42-119">✔️ 5.0 Preview</span></span> |
-| <span data-ttu-id="acc42-120">✔️ [7](#centos-7-)</span><span class="sxs-lookup"><span data-stu-id="acc42-120">✔️ [7](#centos-7-)</span></span> | <span data-ttu-id="acc42-121">✔️ 2.1</span><span class="sxs-lookup"><span data-stu-id="acc42-121">✔️ 2.1</span></span>        | <span data-ttu-id="acc42-122">✔️ 3.1</span><span class="sxs-lookup"><span data-stu-id="acc42-122">✔️ 3.1</span></span>        | <span data-ttu-id="acc42-123">✔️ 5.0 Preview</span><span class="sxs-lookup"><span data-stu-id="acc42-123">✔️ 5.0 Preview</span></span> |
+| <span data-ttu-id="7ac34-116">✔️ [8](#centos-8-)</span><span class="sxs-lookup"><span data-stu-id="7ac34-116">✔️ [8](#centos-8-)</span></span> | <span data-ttu-id="7ac34-117">✔️ 2.1</span><span class="sxs-lookup"><span data-stu-id="7ac34-117">✔️ 2.1</span></span>        | <span data-ttu-id="7ac34-118">✔️ 3.1</span><span class="sxs-lookup"><span data-stu-id="7ac34-118">✔️ 3.1</span></span>        | <span data-ttu-id="7ac34-119">✔️ 5.0 Preview</span><span class="sxs-lookup"><span data-stu-id="7ac34-119">✔️ 5.0 Preview</span></span> |
+| <span data-ttu-id="7ac34-120">✔️ [7](#centos-7-)</span><span class="sxs-lookup"><span data-stu-id="7ac34-120">✔️ [7](#centos-7-)</span></span> | <span data-ttu-id="7ac34-121">✔️ 2.1</span><span class="sxs-lookup"><span data-stu-id="7ac34-121">✔️ 2.1</span></span>        | <span data-ttu-id="7ac34-122">✔️ 3.1</span><span class="sxs-lookup"><span data-stu-id="7ac34-122">✔️ 3.1</span></span>        | <span data-ttu-id="7ac34-123">✔️ 5.0 Preview</span><span class="sxs-lookup"><span data-stu-id="7ac34-123">✔️ 5.0 Preview</span></span> |
 
-<span data-ttu-id="acc42-124">Die folgenden Versionen von .NET Core werden nicht mehr unterstützt.</span><span class="sxs-lookup"><span data-stu-id="acc42-124">The following versions of .NET Core are no longer supported.</span></span> <span data-ttu-id="acc42-125">Die Downloads dafür bleiben weiterhin veröffentlicht:</span><span class="sxs-lookup"><span data-stu-id="acc42-125">The downloads for these still remain published:</span></span>
+<span data-ttu-id="7ac34-124">Die folgenden Versionen von .NET Core werden nicht mehr unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7ac34-124">The following versions of .NET Core are no longer supported.</span></span> <span data-ttu-id="7ac34-125">Die Downloads dafür bleiben weiterhin veröffentlicht:</span><span class="sxs-lookup"><span data-stu-id="7ac34-125">The downloads for these still remain published:</span></span>
 
-- <span data-ttu-id="acc42-126">3.0</span><span class="sxs-lookup"><span data-stu-id="acc42-126">3.0</span></span>
-- <span data-ttu-id="acc42-127">2.2</span><span class="sxs-lookup"><span data-stu-id="acc42-127">2.2</span></span>
-- <span data-ttu-id="acc42-128">2.0</span><span class="sxs-lookup"><span data-stu-id="acc42-128">2.0</span></span>
+- <span data-ttu-id="7ac34-126">3.0</span><span class="sxs-lookup"><span data-stu-id="7ac34-126">3.0</span></span>
+- <span data-ttu-id="7ac34-127">2.2</span><span class="sxs-lookup"><span data-stu-id="7ac34-127">2.2</span></span>
+- <span data-ttu-id="7ac34-128">2.0</span><span class="sxs-lookup"><span data-stu-id="7ac34-128">2.0</span></span>
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="acc42-129">Installieren anderer Versionen</span><span class="sxs-lookup"><span data-stu-id="acc42-129">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="7ac34-129">Installieren anderer Versionen</span><span class="sxs-lookup"><span data-stu-id="7ac34-129">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="centos-8-"></a><span data-ttu-id="acc42-130">CentOS 8 ✔️</span><span class="sxs-lookup"><span data-stu-id="acc42-130">CentOS 8 ✔️</span></span>
+## <a name="centos-8-"></a><span data-ttu-id="7ac34-130">CentOS 8 ✔️</span><span class="sxs-lookup"><span data-stu-id="7ac34-130">CentOS 8 ✔️</span></span>
 
-<span data-ttu-id="acc42-131">NET Core 3.1 in den Standardpaketrepositorys für CentOS 8 verfügbar.</span><span class="sxs-lookup"><span data-stu-id="acc42-131">.NET Core 3.1 is available in the default package repositories for CentOS 8.</span></span>
+<span data-ttu-id="7ac34-131">NET Core 3.1 in den Standardpaketrepositorys für CentOS 8 verfügbar.</span><span class="sxs-lookup"><span data-stu-id="7ac34-131">.NET Core 3.1 is available in the default package repositories for CentOS 8.</span></span>
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
-## <a name="centos-7-"></a><span data-ttu-id="acc42-132">CentOS 7 ✔️</span><span class="sxs-lookup"><span data-stu-id="acc42-132">CentOS 7 ✔️</span></span>
+## <a name="centos-7-"></a><span data-ttu-id="7ac34-132">CentOS 7 ✔️</span><span class="sxs-lookup"><span data-stu-id="7ac34-132">CentOS 7 ✔️</span></span>
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -60,30 +60,30 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 [!INCLUDE [linux-yum-install-31](includes/linux-install-31-yum.md)]
 
-## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="acc42-133">Problembehandlung des Paket-Managers</span><span class="sxs-lookup"><span data-stu-id="acc42-133">Troubleshoot the package manager</span></span>
+## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="7ac34-133">Problembehandlung des Paket-Managers</span><span class="sxs-lookup"><span data-stu-id="7ac34-133">Troubleshoot the package manager</span></span>
 
-<span data-ttu-id="acc42-134">Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET Core auftreten können.</span><span class="sxs-lookup"><span data-stu-id="acc42-134">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
+<span data-ttu-id="7ac34-134">Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET Core auftreten können.</span><span class="sxs-lookup"><span data-stu-id="7ac34-134">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
 
-### <a name="failed-to-fetch"></a><span data-ttu-id="acc42-135">Fehler beim Abrufen</span><span class="sxs-lookup"><span data-stu-id="acc42-135">Failed to fetch</span></span>
+### <a name="failed-to-fetch"></a><span data-ttu-id="7ac34-135">Fehler beim Abrufen</span><span class="sxs-lookup"><span data-stu-id="7ac34-135">Failed to fetch</span></span>
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a><span data-ttu-id="acc42-136">Snap</span><span class="sxs-lookup"><span data-stu-id="acc42-136">Snap</span></span>
+## <a name="snap"></a><span data-ttu-id="7ac34-136">Snap</span><span class="sxs-lookup"><span data-stu-id="7ac34-136">Snap</span></span>
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
-## <a name="dependencies"></a><span data-ttu-id="acc42-137">Abhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="acc42-137">Dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="7ac34-137">Abhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="7ac34-137">Dependencies</span></span>
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
-## <a name="scripted-install"></a><span data-ttu-id="acc42-138">Per Skript gesteuerte Installation</span><span class="sxs-lookup"><span data-stu-id="acc42-138">Scripted install</span></span>
+## <a name="scripted-install"></a><span data-ttu-id="7ac34-138">Per Skript gesteuerte Installation</span><span class="sxs-lookup"><span data-stu-id="7ac34-138">Scripted install</span></span>
 
 [!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
 
-## <a name="manual-install"></a><span data-ttu-id="acc42-139">Manuelle Installation</span><span class="sxs-lookup"><span data-stu-id="acc42-139">Manual install</span></span>
+## <a name="manual-install"></a><span data-ttu-id="7ac34-139">Manuelle Installation</span><span class="sxs-lookup"><span data-stu-id="7ac34-139">Manual install</span></span>
 
 [!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
 
-## <a name="next-steps"></a><span data-ttu-id="acc42-140">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="acc42-140">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="7ac34-140">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="7ac34-140">Next steps</span></span>
 
-- [<span data-ttu-id="acc42-141">Tutorial: Erstellen einer Konsolenanwendung mit dem .NET Core SDK in Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="acc42-141">Tutorial: Create a console application with .NET Core SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)
+- [<span data-ttu-id="7ac34-141">Tutorial: Erstellen einer Konsolenanwendung mit dem .NET Core SDK in Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="7ac34-141">Tutorial: Create a console application with .NET Core SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)

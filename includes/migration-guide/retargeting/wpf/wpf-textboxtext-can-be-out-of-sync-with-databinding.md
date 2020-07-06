@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 8b0617d8f021a9534289fd7ae8539cd054684862
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d0de1a262d57c67dd4dfb258d5ac013af5d8783d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617230"
 ---
-### <a name="wpf-textboxtext-can-be-out-of-sync-with-databinding"></a><span data-ttu-id="c98ae-101">WPF-TextBox.Text wird möglicherweise nicht mehr mit der Datenbindung synchronisiert</span><span class="sxs-lookup"><span data-stu-id="c98ae-101">WPF TextBox.Text can be out-of-sync with databinding</span></span>
+### <a name="wpf-textboxtext-can-be-out-of-sync-with-databinding"></a><span data-ttu-id="2a3ac-101">WPF-TextBox.Text wird möglicherweise nicht mehr mit der Datenbindung synchronisiert</span><span class="sxs-lookup"><span data-stu-id="2a3ac-101">WPF TextBox.Text can be out-of-sync with databinding</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="c98ae-102">Details</span><span class="sxs-lookup"><span data-stu-id="c98ae-102">Details</span></span>|<span data-ttu-id="c98ae-103">In einigen Fällen stellt die <xref:System.Windows.Controls.TextBox.Text>-Eigenschaft einen früheren Wert des datengebundenen Eigenschaftswerts dar, wenn die Eigenschaft während eines Datenbindungsschreibvorgangs geändert wird.</span><span class="sxs-lookup"><span data-stu-id="c98ae-103">In some cases, the <xref:System.Windows.Controls.TextBox.Text> property reflects a previous value of the databound property value if the property is modified during a databinding write operation.</span></span>|
-|<span data-ttu-id="c98ae-104">Vorschlag</span><span class="sxs-lookup"><span data-stu-id="c98ae-104">Suggestion</span></span>|<span data-ttu-id="c98ae-105">Dies sollte keine negativen Auswirkungen haben.</span><span class="sxs-lookup"><span data-stu-id="c98ae-105">This should have no negative impact.</span></span> <span data-ttu-id="c98ae-106">Sie können jedoch das vorherige Verhalten wiederherstellen, indem Sie die <xref:System.Windows.FrameworkCompatibilityPreferences.KeepTextBoxDisplaySynchronizedWithTextProperty>-Eigenschaft auf <code>false</code> festlegen.</span><span class="sxs-lookup"><span data-stu-id="c98ae-106">However, you can restore the previous behavior by setting the <xref:System.Windows.FrameworkCompatibilityPreferences.KeepTextBoxDisplaySynchronizedWithTextProperty> property to <code>false</code>.</span></span>|
-|<span data-ttu-id="c98ae-107">Bereich</span><span class="sxs-lookup"><span data-stu-id="c98ae-107">Scope</span></span>|<span data-ttu-id="c98ae-108">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="c98ae-108">Edge</span></span>|
-|<span data-ttu-id="c98ae-109">Version</span><span class="sxs-lookup"><span data-stu-id="c98ae-109">Version</span></span>|<span data-ttu-id="c98ae-110">4.5</span><span class="sxs-lookup"><span data-stu-id="c98ae-110">4.5</span></span>|
-|<span data-ttu-id="c98ae-111">Typ</span><span class="sxs-lookup"><span data-stu-id="c98ae-111">Type</span></span>|<span data-ttu-id="c98ae-112">Neuzuweisung</span><span class="sxs-lookup"><span data-stu-id="c98ae-112">Retargeting</span></span>|
-|<span data-ttu-id="c98ae-113">Betroffene APIs</span><span class="sxs-lookup"><span data-stu-id="c98ae-113">Affected APIs</span></span>|<ul><li><xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="2a3ac-102">Details</span><span class="sxs-lookup"><span data-stu-id="2a3ac-102">Details</span></span>
+
+<span data-ttu-id="2a3ac-103">In einigen Fällen stellt die <xref:System.Windows.Controls.TextBox.Text>-Eigenschaft einen früheren Wert des datengebundenen Eigenschaftswerts dar, wenn die Eigenschaft während eines Datenbindungsschreibvorgangs geändert wird.</span><span class="sxs-lookup"><span data-stu-id="2a3ac-103">In some cases, the <xref:System.Windows.Controls.TextBox.Text> property reflects a previous value of the databound property value if the property is modified during a databinding write operation.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="2a3ac-104">Vorschlag</span><span class="sxs-lookup"><span data-stu-id="2a3ac-104">Suggestion</span></span>
+
+<span data-ttu-id="2a3ac-105">Dies sollte keine negativen Auswirkungen haben.</span><span class="sxs-lookup"><span data-stu-id="2a3ac-105">This should have no negative impact.</span></span> <span data-ttu-id="2a3ac-106">Sie können jedoch das vorherige Verhalten wiederherstellen, indem Sie die <xref:System.Windows.FrameworkCompatibilityPreferences.KeepTextBoxDisplaySynchronizedWithTextProperty>-Eigenschaft auf `false` festlegen.</span><span class="sxs-lookup"><span data-stu-id="2a3ac-106">However, you can restore the previous behavior by setting the <xref:System.Windows.FrameworkCompatibilityPreferences.KeepTextBoxDisplaySynchronizedWithTextProperty> property to `false`.</span></span>
+
+| <span data-ttu-id="2a3ac-107">name</span><span class="sxs-lookup"><span data-stu-id="2a3ac-107">Name</span></span>    | <span data-ttu-id="2a3ac-108">Wert</span><span class="sxs-lookup"><span data-stu-id="2a3ac-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="2a3ac-109">Bereich</span><span class="sxs-lookup"><span data-stu-id="2a3ac-109">Scope</span></span>   | <span data-ttu-id="2a3ac-110">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="2a3ac-110">Edge</span></span>        |
+| <span data-ttu-id="2a3ac-111">Version</span><span class="sxs-lookup"><span data-stu-id="2a3ac-111">Version</span></span> | <span data-ttu-id="2a3ac-112">4.5</span><span class="sxs-lookup"><span data-stu-id="2a3ac-112">4.5</span></span>         |
+|<span data-ttu-id="2a3ac-113">Typ</span><span class="sxs-lookup"><span data-stu-id="2a3ac-113">Type</span></span>|<span data-ttu-id="2a3ac-114">Neuzuweisung</span><span class="sxs-lookup"><span data-stu-id="2a3ac-114">Retargeting</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="2a3ac-115">Betroffene APIs</span><span class="sxs-lookup"><span data-stu-id="2a3ac-115">Affected APIs</span></span>
+
+- <xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType>
