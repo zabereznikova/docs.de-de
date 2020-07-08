@@ -1,5 +1,6 @@
 ---
 title: Bereitstellen einer Interop-Anwendung
+description: Stellen Sie eine Interop-Anwendung bereit, die in der Regel über eine .NET-Clientassembly, Interopassemblys verschiedener COM-Typbibliotheken und registrierte COM-Komponenten verfügt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 744307d4175d151d07acbedd5815e538307c8973
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617482"
 ---
 # <a name="deploying-an-interop-application"></a>Bereitstellen einer Interop-Anwendung
 Eine Interop-Anwendung enthält üblicherweise eine .NET-Clientassembly, eine oder mehr Interopassemblys, die unterschiedliche COM-Typbibliotheken darstellen, sowie eine oder mehrere COM-Komponenten. Visual Studio und das Windows SDK stellen Tools zum Importieren und Konvertieren einer Typbibliothek in eine Interopassembly bereit, wie in [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md) beschrieben. Es gibt zwei Möglichkeiten zum Bereitstellen einer Interop-Anwendung:  

@@ -1,17 +1,18 @@
 ---
 title: Verfügbarmachen von COM-Komponenten für .NET Framework
+description: Lernen Sie den Prozess des Verfügbarmachens von COM-Komponenten für .NET kennen. COM-Komponenten sind in verwaltetem Code als Geschäftsanwendungen mittlerer Ebene oder isolierte Funktionalität nützlich.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-ms.openlocfilehash: 914f72b5e4840555541943620ca2df1f629b0604
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 459ba7ffed2e4f6c458f89a63b2baa37180d270d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620845"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Verfügbarmachen von COM-Komponenten für .NET Framework
 In diesem Abschnitt wird der Prozess zusammengefasst, der benötigt wird, um eine vorhandene COM-Komponente für verwalteten Code verfügbar zu machen. Details zum Schreiben von COM-Servern, die eng in .NET Framework eingebunden sind, finden Sie unter [Entwurfsüberlegungen für die Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).

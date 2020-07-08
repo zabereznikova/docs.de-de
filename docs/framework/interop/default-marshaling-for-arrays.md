@@ -1,5 +1,6 @@
 ---
 title: Standardmäßiges Marshalling für Arrays
+description: Machen Sie sich mit dem standardmäßigen Marshalling für Arrays vertraut. Erfahren Sie mehr über verwaltete Arrays, nicht verwaltete Arrays, das Übergeben von Arrayparametern an .NET-Code und das Übergeben von Arrays an COM.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eafed0e0a0150923aae0fa68a1b96e6d9d66b07a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622561"
 ---
 # <a name="default-marshaling-for-arrays"></a>Standardmäßiges Marshalling für Arrays
 In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die Common Language Runtime Arraytypen als In-/Out-Parameter. Im Gegensatz dazu übergibt der Interopmarshaller außerdem ein Array als In-Parameter in der Standardeinstellung.  
@@ -182,9 +183,9 @@ void New3(ref String ar);
   
 |Verwalteter Arraytyp|Exportiert als|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *Typ* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ wird in der Signatur angegeben. Rang ist immer 1, Untergrenze ist immer 0. Größe ist immer zur Laufzeit bekannt.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *Typ* **>** **\<** *Rang* **>** [ **\<** *Grenzen* **>** ]|**UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ, Rang und Grenzen sind in der Signatur angegeben. Die Größe ist immer zur Laufzeit bekannt.|  
-|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> Typ, Rang, Grenzen und Größe sind immer zur Laufzeit bekannt.|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ wird in der Signatur angegeben. Rang ist immer 1, Untergrenze ist immer 0. Die Größe ist immer zur Laufzeit bekannt.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ, Rang und Grenzen sind in der Signatur angegeben. Die Größe ist immer zur Laufzeit bekannt.|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>** >**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> Typ, Rang, Grenzen und Größe sind immer zur Laufzeit bekannt.|  
   
  In der OLE-Automatisierung, gibt es im Zusammenhang mit Arrays von Strukturen, die LPSTR oder LPWSTR enthalten eine Einschränkung.  Aus diesem Grund müssen **Zeichenfolge**-Felder als **UnmanagedType.BSTR** gemarshallt werden. Andernfalls wird eine Ausnahme ausgelöst.  
   

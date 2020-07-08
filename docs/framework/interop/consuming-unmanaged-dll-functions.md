@@ -1,5 +1,6 @@
 ---
 title: Verwenden nicht verwalteter DLL-Funktionen
+description: Nutzen Sie nicht verwaltete DLL-Funktionen mithilfe des Diensts zum Aufrufen der Plattform, mit dem verwalteter Code nicht verwaltete Funktionen aufrufen kann, die in DLL-Bibliotheken implementiert sind.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 880cbd4701ae4aee35038f6402b3beb70e60290c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622184"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Verwenden nicht verwalteter DLL-Funktionen
 Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht verwaltete Funktionen aufzurufen, die in DLLs (Dynamic Link Library) implementiert sind, z.B. die in der Windows-API enthaltenen Funktionen. Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.  

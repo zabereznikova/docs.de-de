@@ -1,16 +1,17 @@
 ---
 title: Konfigurieren der Umleitung der Assemblybindung
+description: Erfahren Sie, wie Sie in .NET die Bindungsumleitung von Assemblys konfigurieren, indem Sie das applyTo-Attribut im assemblyBinding-Element einer Anwendungskonfigurationsdatei verwenden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-ms.openlocfilehash: 5b24d99aa23358272eecd042c40001413965d7f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f3e2270d92e11ea467d6cefc2b19b4faff563b4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621729"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Konfigurieren der Umleitung der Assemblybindung
 Standardmäßig verwenden Anwendungen eine Reihe von .NET Framework-Assemblys, die mit der Laufzeitversion bereitgestellt werden, die zum Kompilieren der Anwendung verwendet wird. Mithilfe des **appliesTo**-Attributs im [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)-Element in einer Anwendungskonfigurationsdatei können Sie Assemblybindungsverweise zu einer bestimmten Version der .NET Framework-Assemblys umleiten. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Ohne Angabe eines **appliesTo**-Attributs gilt das **\<assemblyBinding>** -Element für alle Versionen von .NET Framework.  
@@ -55,6 +56,6 @@ Standardmäßig verwenden Anwendungen eine Reihe von .NET Framework-Assemblys, d
   
  Sie können feststellen, ob eine Konfigurationsdatei genutzt wird, indem Sie ermitteln, ob Umleitungen der Assemblybindung auftreten. Verwenden Sie die [Assemblybindungs-Protokollanzeige (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md), um zu sehen, welche Assemblys geladen werden. Um alle Assemblybindungen anzuzeigen, müssen Sie in der Registrierung einen Eintrag für **ForceLog** anlegen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [How to: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

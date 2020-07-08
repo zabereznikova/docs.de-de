@@ -1,5 +1,6 @@
 ---
 title: Marshalling von Zeichenfolgen
+description: Erfahren Sie mehr zum Marshalling von Zeichenfolgen. Erfahren Sie mehr über die Möglichkeiten zum Marshallen von Zeichenfolgen nach Wert oder Verweis, als Ergebnis, in einer Struktur oder Klasse nach Wert oder Verweis und vieles mehr.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, samples
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-ms.openlocfilehash: 88b6342038f99bf06fa2986c43f422e63cffd31e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0be5a5817bd92c5be6b701200a74650ef9de1955
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621482"
 ---
 # <a name="marshaling-strings"></a>Marshalling von Zeichenfolgen
 Der Plattformaufruf kopiert Zeichenfolgenparameter, wobei das .NET Framework-Format (Unicode) bei Bedarf in das nicht verwaltete Format (ANSI) konvertiert wird. Da verwaltete Zeichenfolgen unveränderlich sind, kopieren Plattformaufrufe sie bei Rückgabe der Funktion nicht aus dem nicht verwalteten Speicher in den verwalteten Arbeitsspeicher.  

@@ -1,5 +1,6 @@
 ---
 title: Marshallen verschiedener Typen von Arrays
+description: Marshallen Sie verschiedene Typen von Arrays, wie z. B. ganze Zahlen nach Wert oder Verweis, zweidimensionale ganze Zahlen nach Wert, Zeichenfolgen nach Wert und Strukturen mit ganzen Zahlen oder Zeichenfolgen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1473c7917189f0b36c96b2adcf20005c5fd6b48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621495"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshallen verschiedener Typen von Arrays
 Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente des gleichen Typs enthält. Obwohl es sich bei Arrays um Verweistypen handelt, werden sie als In-Parameter an unverwaltete Funktionen übergeben. Dieses Verhalten entspricht nicht der Art und Weise, wie verwaltete Arrays an verwaltete Objekte übergeben werden, d. h. Als In-/Out-Parameter. Weitere Details finden Sie unter [Kopieren und Fixieren](copying-and-pinning.md).  

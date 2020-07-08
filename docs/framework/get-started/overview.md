@@ -1,5 +1,6 @@
 ---
 title: Übersicht über .NET Framework
+description: .NET Framework ist eine Technologie, die die Erstellung und Ausführung von Windows-Apps und -Webdiensten unterstützt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application development [.NET Framework]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 6beedb8e3fd03049cd58ce1d2dac78d1adb820ef
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618752"
 ---
 # <a name="overview-of-net-framework"></a>Übersicht über .NET Framework
 

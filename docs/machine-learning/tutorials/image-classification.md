@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: ML.NET-Bildklassifizierungsmodell aus TensorFlow'
 description: Erfahren Sie, wie Sie das erworbene Wissen aus einem vorhandenen TensorFlow-Modell in ein neues ML.NET-Bildklassifizierungsmodell übertragen können. Das TensorFlow-Modell wurde trainiert, um Bilder in tausend Kategorien zu klassifizieren. Das ML.NET-Modell nutzt Übertragungslernen, um Bilder in weniger umfassendere Kategorien zu klassifizieren.
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 38fa349e743da54a21aeb65b76a0273a17c3fae7
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85804001"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generieren eines ML.NET-Bildklassifizierungsmodells aus einem vortrainierten TensorFlow-Modell
 
@@ -122,12 +122,14 @@ Die Trainings- und Testbilder befinden sich in dem Assetsordner, den Sie in eine
 
 1. Installieren des **Microsoft.ML NuGet-Pakets**:
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     * Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus.
     * Wählen Sie „nuget.org“ als Paketquelle aus, wählen Sie die Registerkarte „Durchsuchen“ aus, und suchen Sie nach **Microsoft.ML**.
-    * Klicken Sie auf die Dropdownliste **Version**, und wählen Sie das Paket mit der Version **1.4.0** in der Liste aus. Klicken Sie dann auf die Schaltfläche **Installieren**.
+    * Wählen Sie die Schaltfläche **Installieren** aus.
     * Klicken Sie im Dialogfeld **Vorschau der Änderungen** auf die Schaltfläche **OK**.
     * Wählen Sie die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz**, wenn Sie mit den Lizenzbedingungen für die aufgeführten Pakete einverstanden sind.
-    * Wiederholen Sie diese Schritte für **Microsoft.ML.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** und **Microsoft.ML.TensorFlow v1.4.0**.
+    * Wiederholen Sie diese Schritte für **Microsoft.ML.ImageAnalytics**, **SciSharp.TensorFlow.Redist** und **Microsoft.ML.TensorFlow**.
 
 ### <a name="download-assets"></a>Herunterladen von Ressourcen
 

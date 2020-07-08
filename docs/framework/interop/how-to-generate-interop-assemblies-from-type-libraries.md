@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken'
+description: Generieren Sie Interopassemblys aus Typbibliotheken. Konvertieren Sie mit dem Type Library Importer-Tool (Tlbimp.exe) Co-Klassen und Schnittstellen aus einer COM-Typbibliothek in Metadaten.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-ms.openlocfilehash: f4f099dfaf5ff02edd3958d7eab9354ce727a239
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6f54875d6aadb1da18cf25a1bec0a0e451f4a24c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619558"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken
 [Type Library Importer (Tlbexp.exe)](../tools/tlbimp-exe-type-library-importer.md) ist ein Befehlszeilentool, das die Co-Klassen- und Schnittstellen einer COM-Typbibliothek in Metadaten konvertiert. Dieses Tool erstellt automatisch eine Interop-Assembly und den Namespace für die Typinformationen. Nachdem die Metadaten einer Klasse verfügbar sind, können verwaltete Clients Instanzen des COM-Typs erstellen und seine Methoden aufrufen, als ob es sich um eine .NET-Instanz handeln würde. „Tlbimp.exe“ konvertiert eine ganze Typbibliothek auf einmal in Metadaten und kann keine Typinformationen für eine Teilmenge der in einer Typbibliothek definierten Typen generieren.  

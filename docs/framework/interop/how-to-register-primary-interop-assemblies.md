@@ -1,18 +1,19 @@
 ---
-title: 'Vorgehensweise: Registrieren primärer Interopassemblys'
+title: 'Vorgehensweise: Registrieren primärer Interop-Assemblys'
+description: Registrieren Sie primäre Interopassemblys mit dem Assembly Registration-Tool (Regasm.exe), und informieren Sie sich über andere Aspekte im Zusammenhang mit Interopassemblys.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a15bda7b40f160b31028c62cf7c73bdedd9541fa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622743"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Vorgehensweise: Registrieren primärer Interopassemblys
+# <a name="how-to-register-primary-interop-assemblies"></a>Vorgehensweise: Registrieren primärer Interop-Assemblys
 
 Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md).
 

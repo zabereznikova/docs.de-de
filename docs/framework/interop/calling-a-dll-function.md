@@ -1,5 +1,6 @@
 ---
 title: Aufrufen einer DLL-Funktion
+description: Erfahren Sie mehr zum Aufruf einer DLL-Funktion, der verwirrend erscheinen kann. Der Prozess beim Funktionsaufruf unterscheidet sich je nachdem, ob der Rückgabetyp für Blitting geeignet ist oder nicht.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-ms.openlocfilehash: 14589544e05f6c59f4f58f7723fef40e75af9823
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90f8f47148e652a9942a35be1564bed94c155216
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620897"
 ---
 # <a name="calling-a-dll-function"></a>Aufrufen einer DLL-Funktion
 Obwohl Aufrufe nicht verwalteter DLL-Funktionen nahezu identisch mit anderen Aufrufen von verwaltetem Code sind, bestehen Unterschiede, die DLL-Funktionen zuerst verwirrend erscheinen lassen. Dieser Abschnitt enthält Themen, in denen einige ungewöhnliche aufrufbezogene Probleme beschrieben werden.  

@@ -1,5 +1,6 @@
 ---
 title: Registrieren von Assemblys mit COM
+description: Sie können mit dem Assembly Registration-Tool (Regasm.exe), das der Systemregistrierung Informationen über die Klasse hinzufügt, Assemblys bei COM registrieren oder die Registrierung aufheben.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, registering assemblies
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1b73a79b8167e7f75b8c68f708179e88c575d66a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621898"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrieren von Assemblys mit COM
 Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) ausführen, um eine Assembly für die Verwendung mit COM zu registrieren bzw. eine bestehende Registrierung aufzuheben. Regasm.exe fügt der Systemregistrierung Informationen über die Klasse hinzu, damit COM-Clients die .NET Framework-Klasse transparent nutzen können. Die Klasse <xref:System.Runtime.InteropServices.RegistrationServices> stellt gleichwertige Funktionen bereit.  

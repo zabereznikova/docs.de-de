@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken'
+description: Erfahren Sie, wie Verweise auf Typbibliotheken in Visual Studio oder für die Kompilierung über die Befehlszeile hinzugefügt werden können.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 1e82a499b77cc6d1d49eaf13e243201bbdc4c5fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3c24385c9cc7debe95aa10369b050897415bc46
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617430"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken
 Visual Studio generiert eine Interopassembly mit Metadaten, wenn Sie einer Typbibliothek einen Verweis hinzufügen. Wenn eine primäre Interopassembly verfügbar ist, verwendet Visual Studio die bereits vorhandene Assembly, bevor eine neue Interopassembly generiert wird.  

@@ -1,5 +1,6 @@
 ---
-title: Best Practices für das Laden von Assemblys
+title: Bewährte Methoden für das Laden von Assemblys
+description: Erkunden Sie bewährte Methoden für das Laden von Assemblys in .NET. Vermeiden Sie Probleme mit Typidentität, die zu ungültigen Umwandlungen, fehlenden Methoden und anderen Ausnahmen führen können.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803498"
 ---
-# <a name="best-practices-for-assembly-loading"></a>Best Practices für das Laden von Assemblys
+# <a name="best-practices-for-assembly-loading"></a>Bewährte Methoden für das Laden von Assemblys
 In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können. In diesem Artikel werden folgende Empfehlungen besprochen:  
   
 - [Vor- und Nachteile von Load-Kontexten](#load_contexts)  
@@ -42,7 +43,7 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
   
 - Der LoadFrom-Kontext enthält Assemblys, die von Speicherorten geladen werden, die vom Ladeprogramm nicht durchsucht wurden. Add-Ins können z.B. in einem Verzeichnis installiert sein, dass sich nicht im Anwendungspfad befindet. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> und <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> sind Beispiel für Methoden, die anhand des Pfads laden.  
   
-- Der ReflectionOnly-Kontext enthält Assemblys, die mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> geladen wurden. Code, der sich in diesem Kontext befindet, kann nicht ausgeführt werden. Deshalb wird darauf hier nicht weiter eingegangen. Weitere Informationen finden Sie unter [How to: Load Assemblies into the Reflection-Only Context (Vorgehensweise: Laden von Assemblys in den ReflectionOnly-Kontext)](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Der ReflectionOnly-Kontext enthält Assemblys, die mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> geladen wurden. Code, der sich in diesem Kontext befindet, kann nicht ausgeführt werden. Deshalb wird darauf hier nicht weiter eingegangen. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 - Wenn Sie eine vorübergehende dynamische Assembly mit der Reflektionsausgabe erstellt haben, befindet die Assembly sich in keinem Kontext. Außerdem werden Assemblys, die mit der <xref:System.Reflection.Assembly.LoadFile%2A>-Methode geladen wurden, ohne Kontext geladen. Assemblys, die aus Bytearrays geladen werden, werden ohne Kontext geladen, es sei denn, ihre Identität (nachdem eine Richtlinie angewendet wurde) gibt an, dass sie sich im globalen Assemblycache befinden.  
   
@@ -162,7 +163,7 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
   
  Beachten Sie, dass Sie diese Assemblys mit der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>-Methode laden können. Da sie sich nun im Suchpfad befinden, werden sie in den Standard-Load-Kontext geladen statt in den LoadFrom-Kontext. Es wird allerdings empfohlen, dass Sie zur <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>-Methode wechseln und vollständige Assemblyanzeigenamen angeben, um sicherzustellen, dass immer die korrekten Versionen verwendet werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

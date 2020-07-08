@@ -1,17 +1,18 @@
 ---
 title: Handbuch für die Bereitstellung von .NET Framework für Entwickler
+description: Weitere Informationen finden Sie im Handbuch für die Bereitstellung von .NET für Entwickler. Nutzen Sie diese Informationen, wenn Sie eine beliebige Version von .NET von Version 4.5 bis 4.8 mit Ihren Apps installieren möchten.
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95c2cacc062bbe05ce0bc5c3e832bfe3006cf412
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622665"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version von .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.

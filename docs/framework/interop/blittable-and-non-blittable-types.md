@@ -1,18 +1,19 @@
 ---
-title: Blitfähige und nicht blitfähige Typen
+title: Für Blitting geeignete und nicht geeignete Typen
+description: Erfahren Sie mehr zu für Blitting geeignete und nicht geeignete Typen. Für Blitting geeignete Datentypen werden üblicherweise in verwaltetem und nicht verwaltetem Speicher dargestellt und benötigen keine besondere Behandlung.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 816b854120f09efef69bd8ceb2d3650e5a8e7af0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621534"
 ---
-# <a name="blittable-and-non-blittable-types"></a>Blitfähige und nicht blitfähige Typen
+# <a name="blittable-and-non-blittable-types"></a>Für Blitting geeignete und nicht geeignete Typen
 Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltetem und unverwaltetem Speicher und erfordern keine besondere Behandlung durch den Interop-Marshaller. Diese Typen werden *blitfähige Typen* genannt, da keine Konvertierung erforderlich ist, wenn sie zwischen verwaltetem und nicht verwaltetem Code übergeben werden.  
   
  Strukturen, die von Plattformaufrufen zurückgegeben werden, müssen blitfähige Typen sein. Der Plattformaufruf unterstützt keine nicht blitfähigen Strukturen als Rückgabetypen.  

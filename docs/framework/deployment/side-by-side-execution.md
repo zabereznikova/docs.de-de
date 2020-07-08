@@ -1,15 +1,16 @@
 ---
 title: Parallele Ausführung in .NET Framework
+description: Erkunden Sie die parallele Ausführung in .NET. Die parallele Ausführung ermöglicht die Ausführung mehrerer Versionen einer Anwendung oder Komponenten auf demselben Computer.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6cd6fb73b27957fdea85cd9a92bf2aa3bafda1ce
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619402"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
 
@@ -61,7 +62,7 @@ Der Dateiheader der PE-Datei (Portable Executable, übertragbare ausführbare Da
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>Laufzeitversionsinformationen in der Anwendungskonfigurationsdatei  
 
-Zusätzlich zu den Informationen im Dateiheader der PE-Datei kann eine Anwendung auch über eine Anwendungskonfigurationsdatei verfügen, die die Informationen über die Laufzeitversion bereitstellt. Die Anwendungskonfigurationsdatei ist eine XML-Datei, die vom Anwendungsentwickler erstellt wird und mit der Anwendung ausgeliefert wird. Das [\<<RequiredRuntime>-Element](../configure-apps/file-schema/startup/requiredruntime-element.md) des [\<<Startup>-Abschnitts](../configure-apps/file-schema/startup/startup-element.md), wenn in dieser Datei vorhanden, gibt an, welche Versionen der Runtime und welche Versionen einer Komponente von der Anwendung unterstützt werden. Diese Datei kann auch beim Testen der Kompatibilität einer Anwendung mit verschiedenen Laufzeitversionen verwendet werden.  
+Zusätzlich zu den Informationen im Dateiheader der PE-Datei kann eine Anwendung auch über eine Anwendungskonfigurationsdatei verfügen, die die Informationen über die Laufzeitversion bereitstellt. Die Anwendungskonfigurationsdatei ist eine XML-Datei, die vom Anwendungsentwickler erstellt wird und mit der Anwendung ausgeliefert wird. Das [\<requiredRuntime>-Element](../configure-apps/file-schema/startup/requiredruntime-element.md) des [\<startup>-Abschnitts](../configure-apps/file-schema/startup/startup-element.md), wenn in dieser Datei vorhanden, gibt an, welche Versionen der Runtime und welche Versionen einer Komponente von der Anwendung unterstützt werden. Diese Datei kann auch beim Testen der Kompatibilität einer Anwendung mit verschiedenen Laufzeitversionen verwendet werden.  
   
 Nicht verwalteter Code, einschließlich COM- und COM+-Anwendungen, können über Anwendungskonfigurationsdateien verfügen, die die Common Language Runtime für das Zusammenwirken mit verwaltetetem Code verwendet. Die Anwendungskonfigurationsdatei wirkt sich auf beliebigen verwalteten Code aus, der über COM aktiviert wird. Die Datei kann angeben, welche Laufzeitversionen unterstützt und welche Assemblyumleitungen durchgeführt werden. COM-Interop-Anwendungen, die verwalteten Code aufrufen, verwenden standardmäßig die zuletzt auf dem Computer installierte Laufzeitversion.  
   
@@ -81,7 +82,7 @@ Die Common Language Runtime verwendet die Anwendungskonfigurationsdatei und den 
   
 Wenn eine Anwendungskonfigurationsdatei vorhanden ist, bestimmt die Runtime die entsprechende zu ladende Runtime-Version anhand der Ergebnisse der folgenden Vorgehensweise:  
   
-1. Die Runtime überprüft das [\<<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md) in der Konfigurationsdatei der Anwendung. Sind eine oder mehrere der unterstützten Runtime-Versionen vorhanden, die im **\<<supportedRuntime>** -Element angegeben sind, lädt die Common Language Runtime die Runtime-Version, die im ersten **\<<supportedRuntime>** -Element angegeben ist. Wenn diese Version nicht verfügbar ist, überprüft die Common Language Runtime das nächste **\<<supportedRuntime>** -Element und versucht, die angegebene Runtime-Version zu laden. Wenn auch diese Runtime-Version nicht verfügbar ist, werden die weiteren **\<<supportedRuntime>** -Elemente überprüft. Wenn keine der unterstützten Runtime-Versionen verfügbar ist, kann die Common Language Runtime keine Runtime-Version laden, und sie zeigt eine Meldung an (siehe Schritt 3).  
+1. Die Runtime überprüft das [\<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md) in der Konfigurationsdatei der Anwendung. Sind eine oder mehrere der unterstützten Runtime-Versionen vorhanden, die im **\<supportedRuntime>** -Element angegeben sind, lädt die Common Language Runtime die Runtime-Version, die im ersten **\<supportedRuntime>** -Element angegeben ist. Wenn diese Version nicht verfügbar ist, überprüft die Common Language Runtime das nächste **\<supportedRuntime>** -Element und versucht, die angegebene Runtime-Version zu laden. Wenn auch diese Runtime-Version nicht verfügbar ist, werden die weiteren **\<supportedRuntime>** -Elemente überprüft. Wenn keine der unterstützten Runtime-Versionen verfügbar ist, kann die Common Language Runtime keine Runtime-Version laden, und sie zeigt eine Meldung an (siehe Schritt 3).  
   
 2. Die Common Language Runtime liest den PE-Dateiheader der ausführbaren Datei der Anwendung. Ist die im PE-Dateiheader angegebene Runtime-Version verfügbar, lädt die Common Language Runtime diese Version. Ist die angegebene Runtime-Version nicht verfügbar, sucht die Runtime nach einer Runtime-Version, für die Microsoft festgestellt hat, dass sie mit der Common Language Runtime-Version im PE-Dateiheader kompatibel ist. Wird diese Version nicht gefunden, wird die Vorgehensweise mit Schritt 3 fortgesetzt.  
   
@@ -97,7 +98,7 @@ Wenn eine Anwendungskonfigurationsdatei vorhanden ist, bestimmt die Runtime die 
 
 Teilweise gekennzeichnete Assemblyverweise können lediglich zum Binden von Assemblies in einem Anwendungsverzeichnis verwendet werden, da sie eine mögliche Problemquelle bei der parallelen Ausführung darstellen. Vermeiden Sie teilweise gekennzeichnete Assemblyverweise in Ihrem Code.  
   
-Um teilweise gekennzeichnete Assemblyverweise in Code zu verringern, können Sie das [\<<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md)-Element in einer Anwendungskonfigurationsdatei verwenden, um im Code vorhandene teilweise gekennzeichnete Assemblyverweise vollständig zu kennzeichnen (qualifizieren). Verwenden Sie das **\<<qualifyAssembly>** -Element, um nur die Felder anzugeben, die im partiellen Verweis nicht festgelegt wurden. Die im **fullName**-Attribut aufgeführte Assemblyidentität muss alle Informationen enthalten, die für die vollständige Kennzeichnung (Qualifizierung) des Assemblynamens erforderlich sind: Assemblyname, öffentlicher Schlüssel, Kultur und Version.  
+Um teilweise gekennzeichnete Assemblyverweise in Code zu verringern, können Sie das [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md)-Element in einer Anwendungskonfigurationsdatei verwenden, um im Code vorhandene teilweise gekennzeichnete Assemblyverweise vollständig zu kennzeichnen (qualifizieren). Verwenden Sie das **\<qualifyAssembly>** -Element, um nur die Felder anzugeben, die im partiellen Verweis nicht festgelegt wurden. Die im **fullName**-Attribut aufgeführte Assemblyidentität muss alle Informationen enthalten, die für die vollständige Kennzeichnung (Qualifizierung) des Assemblynamens erforderlich sind: Assemblyname, öffentlicher Schlüssel, Kultur und Version.  
   
  Im folgenden Beispiel wird der Eintrag in der Anwendungskonfigurationsdatei dargestellt, mit dem die Assembly `myAssembly` vollständig qualifiziert wird.  
   
@@ -120,12 +121,12 @@ publicKeyToken=...,
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
+|[How to: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
 |[Konfigurieren der Umleitung der Assemblybindung](configuring-assembly-binding-redirection.md)|Erläutert, wie Assemblybindungsverweise zur einer bestimmten Version der .NET Framework-Assemblys umgeleitet werden.|  
 |[Prozessinterne parallele Ausführung](in-process-side-by-side-execution.md)|Erläutert, wie mehrere CLR-Versionen mithilfe der prozessinternen parallelen Laufzeithostaktivierung in einem Prozess ausgeführt werden können.|  
 |[Assemblys in .NET](../../standard/assembly/index.md)|Bietet eine konzeptionelle Übersicht über Assemblys.|  
 |[Anwendungsdomänen](../app-domains/application-domains.md)|Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.|  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
 
-[\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)
+[\<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

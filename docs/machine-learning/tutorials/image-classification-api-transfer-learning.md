@@ -3,15 +3,15 @@ title: 'Tutorial: Automatisierte visuelle Überprüfung mithilfe von Transferler
 description: In diesem Tutorial wird gezeigt, wie Sie anhand von Transferlernen ein TensorFlow-Modell mit Deep Learning in ML.NET mit der Bilderkennungs-API trainieren, um Bilder von Betonoberflächen als gerissen oder nicht gerissen zu klassifizieren.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803741"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: Automatisierte visuelle Überprüfung mithilfe von Transferlernen mit der ML.NET-Bildklassifizierungs-API
 
@@ -81,7 +81,10 @@ Das in diesem Tutorial verwendete vorab trainierte Modell ist die 101-Ebenen-Var
 Nachdem Sie nun grundlegende Kenntnisse über das Transferlernen und die Bildklassifizierungs-API haben, ist es an der Zeit, die Anwendung zu erstellen.
 
 1. Erstellen Sie eine **.NET Core-Konsolenanwendung in C#** namens „DeepLearning_ImageClassification_Binary“.
-1. Installieren Sie das NuGet-Paket **Microsoft.ML**, Version **1.4.0**:
+1. Installieren Sie das NuGet-Paket **Microsoft.ML**:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus.
     1. Wählen Sie als Paketquelle „nuget.org“ aus.
     1. Wählen Sie die Registerkarte **Durchsuchen** aus.
@@ -89,7 +92,7 @@ Nachdem Sie nun grundlegende Kenntnisse über das Transferlernen und die Bildkla
     1. Suchen Sie nach **Microsoft.ML**.
     1. Wählen Sie die Schaltfläche **Installieren** aus.
     1. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
-    1. Wiederholen Sie diese Schritte für die NuGet-Pakete **Microsoft.ML.Vision**, Version **1.4.0**, **SciSharp.TensorFlow.Redist**, Version **1.15.0** und **Microsoft.ML.ImageAnalytics**, Version **1.4.0**.
+    1. Wiederholen Sie diese Schritte für die NuGet-Pakete **Microsoft.ML.Vision**, **SciSharp.TensorFlow.Redist** und **Microsoft.ML.ImageAnalytics**.
 
 ### <a name="prepare-and-understand-the-data"></a>Vorbereiten und Verstehen der Daten
 

@@ -1,5 +1,6 @@
 ---
 title: Standardmarshallingverhalten
+description: Erfahren Sie mehr zum standardmäßigen Marshallingverhalten in .NET. Überprüfen Sie die Speicherverwaltung mit Interop-Marshalling, und erfahren Sie mehr über das standardmäßige Marshalling für Klassen, Delegaten und Werttypen.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 0469874d016725eb6423bb8453e9657b2be923d4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618570"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  

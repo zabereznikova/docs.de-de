@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Analysieren der Überprüfungsstimmung mithilfe eines TensorFlow-Modells'
 description: In diesem Tutorial wird gezeigt, wie Sie ein vortrainiertes TensorFlow-Modell verwenden, um die Stimmung in Websitekommentaren zu klassifizieren. Der binäre Stimmungsklassifizierer ist eine C#-Konsolenanwendung, die mit Visual Studio entwickelt wurde.
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 688c5b83cef8f21eef8fa24521a85449a9cfbd48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c1e45f183bd5edc488e4f37bea648566d124c65
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241116"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803260"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Analysieren der Stimmung von Filmkritiken mithilfe eines vortrainierten TensorFlow-Modells in ML.NET
 
@@ -40,7 +40,9 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 3. Installieren des **Microsoft.ML NuGet-Pakets**:
 
-    Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie „nuget.org“ als Paketquelle aus und anschließend die Registerkarte **Durchsuchen**. Suchen Sie nach **Microsoft.ML**, wählen Sie das gewünschte Paket aus, und wählen Sie dann die Schaltfläche **Installieren** aus. Fahren Sie mit der Installation fort, indem Sie den Lizenzbedingungen für das von Ihnen gewählte Paket zustimmen. Wiederholen Sie diese Schritte für **Microsoft.ML.TensorFlow** und **SciSharp.TensorFlow.Redist**.
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie „nuget.org“ als Paketquelle aus und anschließend die Registerkarte **Durchsuchen**. Suchen Sie nach **Microsoft.ML**, wählen Sie das gewünschte Paket aus, und wählen Sie dann die Schaltfläche **Installieren** aus. Fahren Sie mit der Installation fort, indem Sie den Lizenzbedingungen für das von Ihnen gewählte Paket zustimmen. Wiederholen Sie diese Schritte für **Microsoft.ML.TensorFlow**, **Microsoft.ML.SampleUtils** und **SciSharp.TensorFlow.Redist**.
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>Hinzufügen des TensorFlow-Modells zum Projekt
 

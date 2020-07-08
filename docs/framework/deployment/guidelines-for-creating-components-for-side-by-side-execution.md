@@ -1,16 +1,17 @@
 ---
 title: Richtlinien für die Erstellung von Komponenten für die parallele Ausführung
+description: Prüfen Sie Richtlinien für die Erstellung von Komponenten für die parallele Ausführung. Binden Sie z. B. die Typidentität an eine bestimmte Dateiversion, oder verwenden Sie die versionsabhängige Speicherung.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622639"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Richtlinien für die Erstellung von Komponenten für die parallele Ausführung
 Befolgen Sie die nachstehenden allgemeinen Richtlinien zum Erstellen von verwalteten Anwendungen oder Komponenten, die für die parallele Ausführung entwickelt wurden:  
@@ -60,7 +61,7 @@ Befolgen Sie die nachstehenden allgemeinen Richtlinien zum Erstellen von verwalt
   
  Mit dem [Tool für den globalen Assemblycache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) können Sie eine Assembly ersetzen, wenn lediglich die Dateiversionsnummer höher ist. Der Installer führt in in der Regel nur dann eine Installation über eine Assembly durch, wenn die Assemblyversionsnummer höher ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Parallele Ausführung](side-by-side-execution.md)
-- [Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [How to: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

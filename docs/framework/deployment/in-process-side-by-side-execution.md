@@ -1,16 +1,17 @@
 ---
 title: Prozessinterne parallele Ausführung
+description: Sie können mit prozessinternem parallelem Hosting in einem einzelnen .NET-Prozess viele Versionen der Common Language Runtime (CLR) ausführen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622600"
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzigen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -58,7 +59,7 @@ Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere V
   
      Installierte .NET Framework-Versionen: Eine frühere Version von .NET Framework sowie .NET Framework 4.  
   
-     Vorgehensweise: Verwenden Sie in der [Anwendungskonfigurationsdatei](../configure-apps/index.md) im Anwendungsverzeichnis das [Element \<startup>](../configure-apps/file-schema/startup/startup-element.md) und das [Element \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md), die wie folgt festgelegt sind:  
+     Vorgehensweise: Verwenden Sie in der [Anwendungskonfigurationsdatei](../configure-apps/index.md) im Anwendungsverzeichnis das [\<startup>-Element](../configure-apps/file-schema/startup/startup-element.md) und das [\<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md), die wie folgt festgelegt sind:  
   
     ```xml  
     <configuration>  
@@ -174,4 +175,4 @@ int _tmain(int argc, _TCHAR* argv[])
 ## <a name="see-also"></a>Siehe auch
 
 - [\<startup>-Element](../configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

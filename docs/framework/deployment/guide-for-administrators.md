@@ -1,16 +1,17 @@
 ---
 title: Handbuch für die Bereitstellung von .NET Framework für Administratoren
+description: Lesen Sie das Handbuch für die Bereitstellung von .NET für Administratoren. Stellen Sie anhand dieser Informationen die .NET Version 4.5 und ihre Systemabhängigkeiten in einem Netzwerk bereit.
 ms.date: 04/10/2018
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d58eac4f21e4f1069ac392aacb4e9818831e914c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622652"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 
@@ -276,7 +277,7 @@ Sonstige Fehlercodes
 
 - [Ergebniscodes für Windows Update Agent](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Bereitstellungshandbuch für Entwickler](deployment-guide-for-developers.md)
 - [Systemanforderungen](../get-started/system-requirements.md)

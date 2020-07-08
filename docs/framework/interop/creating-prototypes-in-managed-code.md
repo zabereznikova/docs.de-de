@@ -1,5 +1,6 @@
 ---
 title: Erstellen von Prototypen in verwaltetem Code
+description: Erstellen Sie in verwaltetem .NET-Code Prototypen, damit Sie auf nicht verwaltete Funktionen zugreifen und Attributfelder verwenden können, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622158"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Erstellen von Prototypen in verwaltetem Code
 In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).  

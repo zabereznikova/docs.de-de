@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen'
+description: Erfahren Sie, wie von COM-Methoden zurückgegebene HRESULT-Werte von .NET-Methoden ausgelösten Ausnahmen zugeordnet werden können. Die Runtime ist für den Übergang zwischen COM and .NET zuständig.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 827e79bdefcde7ae94567e5341ade76097dc8eaa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619103"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen
 COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  

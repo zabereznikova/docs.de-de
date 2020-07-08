@@ -1,17 +1,18 @@
 ---
 title: 'Fehler beim Initialisieren von .NET Framework: Verwalten der Benutzerfreundlichkeit'
+description: Steuern Sie die Benutzererfahrung, wenn ein .NET-Initialisierungsfehler auftritt, z. B. wenn das Aktivierungssystem nicht die richtige zu ladende CLR-Version finden kann.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6db68b43381dfe275c93cae5610386e10a6f09ae
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619688"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Fehler beim Initialisieren von .NET Framework: Verwalten der Benutzerfreundlichkeit
 
