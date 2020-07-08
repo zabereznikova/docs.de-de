@@ -1,5 +1,6 @@
 ---
 title: moduloObjectHashcode-MDA
+description: Überprüfen Sie den moduloObjectHashcode Managed Debug Assistant (MDA), der die Objektklasse ändert, um einen Restwert für ein GetHashCode-Methoden Ergebnis zu erhalten.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), hashcode modulus
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-ms.openlocfilehash: 65bbdfec2d7050d1b474a8186a9ea6e9bb93bd9e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a929ec2b9196f1f6cad0528fdf7323839a86fa55
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216181"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052064"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode-MDA
 Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das Verhalten der <xref:System.Object>-Klasse, um einen Modulo-Vorgang auf dem Hashcode auszuführen, der von der <xref:System.Object.GetHashCode%2A>-Methode zurückgegeben wurde. Der Standard-Modulo dieses MDA beträgt 1, wodurch <xref:System.Object.GetHashCode%2A> für alle Objekte 0 zurückgibt.  
@@ -44,11 +44,11 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Anwendungen werden langsamer ausgeführt, wenn dieser MDA aktiviert ist. Dieser MDA übernimmt lediglich den Hashcode, der zurückgegeben wurde und gibt stattdessen den Rest nach dem Dividieren durch einen Modulo zurück.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Es gibt keine Ausgabe für diesen MDA.  
   
 ## <a name="configuration"></a>Konfiguration  
- Das `modulus`-Attribut gibt den Modulo an, der auf dem Hashcode verwendet wird. Der Standardwert ist 1.  
+ Das `modulus`-Attribut gibt den Modulo an, der auf dem Hashcode verwendet wird. Der Standardwert ist 1.  
   
 ```xml  
 <mdaConfig>  
@@ -58,8 +58,8 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
