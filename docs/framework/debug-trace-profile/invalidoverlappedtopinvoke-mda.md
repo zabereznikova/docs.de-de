@@ -1,5 +1,6 @@
 ---
 title: invalidOverlappedToPinvoke-MDA
+description: Überprüfen Sie den invalidoverlappedtopcallback-MDA (Managed Debugging Assistant) in .net, der während eines Absturzes oder einer nicht erklärenden Heap Beschädigung aktiviert werden kann.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overlapped pointers
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped pointers
 - pointers, overlapped
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
-ms.openlocfilehash: 1f557cc370d5c6121b0ad9a4528bd75dcb70a93c
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 162efd55bf636cf2e8698706bd011379f2f6f11f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216279"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051700"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke-MDA
 Der `invalidOverlappedToPinvoke`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein überlappender Zeiger, der nicht auf dem Garbage Collection-Heap erstellt wurde, an spezifische Win32-Funktionen übergeben wird.  
@@ -55,7 +55,7 @@ Der `invalidOverlappedToPinvoke`-MDA (Managed Debugging Assistant, Assistent fü
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Im Folgenden finden Sie ein Beispiel für die Ausgabe dieses MDA.  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
@@ -70,8 +70,8 @@ Der `invalidOverlappedToPinvoke`-MDA (Managed Debugging Assistant, Assistent fü
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

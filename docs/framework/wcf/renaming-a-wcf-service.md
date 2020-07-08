@@ -2,18 +2,17 @@
 title: Umbenennen eines WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-ms.openlocfilehash: 8cb86621972423f55bfa18c60c1d4eb60cacb205
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 1179e7b235130e1967c79843b7a11f55622a01fb
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651042"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052051"
 ---
 # <a name="renaming-a-wcf-service"></a>Umbenennen eines WCF-Diensts
 In diesem Thema wird beschrieben, wie Sie einen Windows Communication Foundation (WCF)-Dienst umbenennen können.  
   
 ## <a name="renaming-a-wcf-service"></a>Umbenennen eines WCF-Diensts  
- Führen Sie die folgenden Schritte aus, um einen Dienst in einer Windows Communication Foundation (WCF)-Vorlage umzubenennen,  
+ Führen Sie die folgenden Schritte aus, um einen Dienst in einer Windows Communication Foundation (WCF)-Vorlage umzubenennen:  
   
 - Ändern Sie den Namen der Klasse, die den Dienst implementiert.  
   
@@ -28,9 +27,9 @@ In diesem Thema wird beschrieben, wie Sie einen Windows Communication Foundation
 </system.servicemodel>  
 ```  
   
-- Handelt es sich um einen WebHosted-Dienst, verwendet er eine *.svc-Datei. Öffnen Sie die svc-Datei, und ändern Sie den Namen des Diensts, wie im folgenden Beispiel dargestellt. Dieser Schritt ist für selbst gehostete Anwendungen nicht erforderlich, da keine svc-Datei vorhanden ist.  
+- Wenn Ihr Dienst webgehostet ist, wird eine * \* svc* -Datei verwendet. Öffnen Sie die svc-Datei, und ändern Sie den Namen des Diensts, wie im folgenden Beispiel dargestellt. Dieser Schritt ist für selbst gehostete Anwendungen nicht erforderlich, da keine svc-Datei vorhanden ist.  
   
-```  
+```aspx-csharp
 <%@ ServiceHost Service="WcfService.NewName">  
 ```  
   

@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern'
+title: 'Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern'
+description: Erstellen, initialisieren und Konfigurieren von Ablauf Verfolgungs Schaltern mithilfe der Klassen "System. Diagnostics. BooleanSwitch" und "System. Diagnostics. TraceSwitch" in .net.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +12,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 8bf3b974ff0ef9f719274ab684b3dce85295c917
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181825"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051323"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Gewusst wie: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern.  
   
 <a name="create"></a>
@@ -31,7 +31,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
 1. Definieren Sie einen Schalter entweder mit dem Typ <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> oder mit dem Typ <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, und legen Sie den Namen und die Beschreibung des Schalters fest.  
   
-2. Konfigurieren Sie Ihren Ablaufverfolgungsschalter. Weitere Informationen finden Sie unter [Konfigurieren von Ablaufverfolgungsschaltern](#configure).  
+2. Konfigurieren Sie Ihren Ablaufverfolgungsschalter. Weitere Informationen finden Sie unter [Konfigurieren von Ablauf Verfolgungs Schaltern](#configure).  
   
      Im folgenden Code werden zwei Schalter erstellt, jeweils ein Schalter jedes Typs:  
   
@@ -52,7 +52,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
 ## <a name="configuring-trace-switches"></a>Konfigurieren von Ablaufverfolgungsschaltern  
  Nachdem Ihre Anwendung bereitgestellt wurde, können weiterhin Ablaufverfolgungsausgabe aktivieren oder deaktivieren, indem Sie die Ablaufverfolgungsschalter in der Anwendung konfigurieren. Konfigurieren eines Schalters bedeutet, dass sein Wert aus einer externen Quelle geändert wird, nachdem er initialisiert wurde. Sie können die Werte der Schalterobjekte mithilfe der Konfigurationsdatei ändern. Sie konfigurieren einen Ablaufverfolgungsschalter so, dass er aktiviert oder deaktiviert oder dass seine Ebene festgelegt wird. Dabei bestimmen Sie den Umfang und die Art der Meldungen, die der Schalter an Listener weiterleitet.  
   
- Ihre Schalter werden über die .config-Datei konfiguriert. Für eine Webanwendung ist dies die "Web.config"-Datei, die dem Projekt zugeordnet ist. In einer Windows-Anwendung wird diese Datei benannt (Anwendungsname).exe.config. In einer bereitgestellten Anwendung muss sich diese Datei im selben Ordner wie die ausführbare Datei befinden.  
+ Ihre Schalter werden über die .config-Datei konfiguriert. Für eine Webanwendung ist dies die "Web.config"-Datei, die dem Projekt zugeordnet ist. In einer Windows-Anwendung hat diese Datei den Namen (Anwendungsname) .exe.config. In einer bereitgestellten Anwendung muss sich diese Datei im selben Ordner befinden wie die ausführbare Datei.  
   
  Wenn die Anwendung den Code, der eine Instanz eines Schalters erstellt, zum ersten Mal ausführt, prüft sie die Konfigurationsdatei auf Ablaufverfolgungsebenen-Informationen zu dem angegebenen Schalter. Das Ablaufverfolgungssystem durchsucht die Konfigurationsdatei für jeden Schalter nur ein Mal – wenn die Anwendung den Schalter erstmalig erstellt.  
   
@@ -123,9 +123,9 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](tracing-and-instrumenting-applications.md)
-- [Gewusst wie: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md)
+- [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgungsschalter](trace-switches.md)
-- [Ablaufverfolgungs- und Debugeinstellungsschema](../configure-apps/file-schema/trace-debug/index.md)
+- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../configure-apps/file-schema/trace-debug/index.md)

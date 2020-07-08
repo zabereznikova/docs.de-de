@@ -2,12 +2,11 @@
 title: 'Vorgehensweise: Auswählen zwischen HTTP POST- und HTTP GET-Anforderungen für ASP.NET AJAX-Endpunkte'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 15d7ad43ce9120e97aba9119aff6a6c1a19f301f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: c74b1acdf3802ab680123cd9d676919fe47236e8
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596915"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051583"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Vorgehensweise: Auswählen zwischen HTTP POST- und HTTP GET-Anforderungen für ASP.NET AJAX-Endpunkte
 
@@ -75,7 +74,7 @@ Mit Windows Communication Foundation (WCF) können Sie einen Dienst erstellen, d
   
 3. Erstellen Sie eine neue Datei mit einer SVC-Erweiterung in der Anwendung. Bearbeiten Sie diese Datei, indem Sie die entsprechenden [ \@ Service Host](../../configure-apps/file-schema/wcf-directive/servicehost.md) -Direktiveninformationen für den Dienst hinzufügen. Geben Sie an, dass <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> in der [ \@ Service Host](../../configure-apps/file-schema/wcf-directive/servicehost.md) -Direktive verwendet werden soll, um einen ASP.NET AJAX-Endpunkt automatisch zu konfigurieren.  
   
-    ```
+    ```aspx-csharp
     <%@ServiceHost
         language=c#
         Debug="true"
@@ -90,7 +89,7 @@ Mit Windows Communication Foundation (WCF) können Sie einen Dienst erstellen, d
   
 2. Sie können Dienste mit GET-Vorgängen auf gleiche Weise wie jeden anderen ASP.NET AJAX-Dienst verwenden &#8211; indem Sie die Dienst-URL in die Scripts-Auflistung des ASP.NET AJAX Script Manager-Steuerelements eingeben. Ein Beispiel finden Sie unter [grundlegender AJAX-Dienst](../samples/basic-ajax-service.md).
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von WCF-Diensten für ASP.NET AJAX](creating-wcf-services-for-aspnet-ajax.md)
 - [Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

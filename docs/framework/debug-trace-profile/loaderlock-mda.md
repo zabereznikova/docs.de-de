@@ -1,5 +1,6 @@
 ---
 title: loaderLock-MDA
+description: Überprüfen Sie den loaderLock-MDA (Managed Debugging Assistant) in .net, der versucht, verwalteten Code in einem Thread auszuführen, der die Windows-Betriebssystem Lade Sperre enthält.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 055b07a805c5f0b613519d6019950a9b249a4b38
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217349"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051621"
 ---
 # <a name="loaderlock-mda"></a>loaderLock-MDA
 Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur Ausführung von verwaltetem Code in einem Thread, der die Loadersperre für das Microsoft Windows-Betriebssystem enthält.  Eine solche Ausführung ist ungültig, da sie zu Deadlocks führen und DLLs verwenden kann, bevor sie vom Ladeprogramm des Betriebssystems initialisiert wird.  
@@ -40,7 +40,7 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
   
  In einigen seltenen Fällen ist es auch möglich, dass Zugriffsverletzungen oder ähnlichen Probleme in DLLs ausgelöst werden, die vor ihrer Initialisierung aufgerufen wurden.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Dieser MDA meldet, dass eine ungültige verwaltete Ausführung versucht wird.  Überprüfen Sie die Threadstapel, um zu bestimmen, warum die Loadersperre geschieht und wie Sie das Problem beheben können.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -53,6 +53,6 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)

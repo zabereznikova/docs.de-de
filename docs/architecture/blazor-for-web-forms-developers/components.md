@@ -4,12 +4,11 @@ description: Erfahren Sie, wie Sie wiederverwendbare UI-Komponenten mit blazor e
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378317"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051451"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit blazor
 
@@ -77,7 +76,7 @@ Razor-Direktiven beginnen mit dem `@` Zeichen und werden in der Regel am Anfang 
 
 In der folgenden Tabelle werden die verschiedenen Razor-Direktiven, die in blazor verwendet werden, und deren Web Forms ASP.NET-Entsprechungen zusammengefasst, sofern vorhanden
 
-|Direktive    |Beschreibung|Beispiel|Web Forms Äquivalent|
+|Anweisung    |Beschreibung|Beispiel|Web Forms Äquivalent|
 |-------------|-----------|-------|--------------------|
 |`@attribute` |Fügt der Komponente ein Attribut auf Klassenebene hinzu.|`@attribute [Authorize]`|Keine|
 |`@code`      |Fügt der Komponente Klassenmember hinzu.|`@code { ... }`|`<script runat="server">...</script>`|
@@ -88,7 +87,7 @@ In der folgenden Tabelle werden die verschiedenen Razor-Direktiven, die in blazo
 |`@namespace` |Legt den Namespace für die Komponente fest.|`@namespace MyNamespace`|Keine|
 |`@page`      |Gibt die Route für die Komponente an.|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Gibt einen generischen Typparameter für die Komponente an.|`@typeparam TItem`|Verwenden des CodeBehinds|
-|`@using`     |Gibt einen Namespace an, der in den Gültigkeitsbereich|`@using MyComponentNamespace`|Namespace in der Datei " *Web. config* " hinzufügen|
+|`@using`     |Gibt einen Namespace an, der in den Gültigkeitsbereich|`@using MyComponentNamespace`|Namespace in *web.config* hinzufügen|
 
 Razor-Komponenten machen außerdem eine umfassende Verwendung von *direktivenattributen* für Elemente, um verschiedene Aspekte der Kompilierung von Komponenten zu steuern (Ereignis Behandlung, Datenbindung, Verweise auf Komponenten & Elemente usw.). Direktivenattribute folgen allen allgemeinen generischen Syntax, bei der die Werte in Klammern optional sind:
 
@@ -98,7 +97,7 @@ Razor-Komponenten machen außerdem eine umfassende Verwendung von *direktivenatt
 
 In der folgenden Tabelle werden die verschiedenen Attribute der in blazor verwendeten Razor-Direktiven zusammengefasst.
 
-|attribute    |Beschreibung|Beispiel|
+|attribute    |BESCHREIBUNG|Beispiel|
 |-------------|-----------|-------|
 |`@attributes`|Rendert ein Wörterbuch von Attributen.|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |Erstellt eine bidirektionale Datenbindung.    |`<input @bind="username" @bind:event="oninput" />`|
@@ -110,7 +109,7 @@ Die verschiedenen von blazor ( `@onclick` ,, usw.) verwendeten Direktivenattribu
 
 Viele der Syntaxen, die in *aspx* -und *ASCX* -Dateien verwendet werden, haben eine parallele Syntax in Razor. Im folgenden finden Sie einen einfachen Vergleich der Syntaxen für ASP.net Web Forms und Razor.
 
-|Feature                      |Web Forms           |Syntax               |Razor         |Syntax |
+|Komponente                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Anweisungen                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Codeblöcke                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -146,7 +145,7 @@ Abgesehen von normalem HTML können Komponenten auch andere Komponenten als Teil
 Im Gegensatz zu ASP.net-Web Forms Komponenten in blazor:
 
 - Verwenden Sie kein Element Präfix (z `asp:` . b.).
-- Sie müssen nicht auf der Seite oder in der Datei " *Web. config*" registriert werden.
+- Sie müssen nicht auf der Seite oder in der *web.config*registriert werden.
 
 Stellen Sie sich die Razor-Komponenten wie .NET-Typen vor, denn das ist genau das, was Sie sind. Wenn auf die Assembly verwiesen wird, die die Komponente enthält, kann die Komponente verwendet werden. Um den Namespace der Komponente in den Gültigkeitsbereich zu bringen, wenden Sie die- `@using` Anweisung an
 
@@ -602,8 +601,8 @@ Die Ausgabe dieser Komponente sieht wie folgt aus:
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 

@@ -2,12 +2,11 @@
 title: 'Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 5b01ddfd95db2f7e88f9481265c348f4f16fbbee
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579475"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052038"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung
 
@@ -27,13 +26,13 @@ Die Quell Kopie dieses Beispiels finden Sie unter [zuverlässige WS-Sitzung](../
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. Erstellen Sie eine *Web. config* -Datei, um einen Endpunkt für die zu konfigurieren `CalculatorService` , die <xref:System.ServiceModel.WSHttpBinding> mit aktivierter zuverlässiger Sitzung und geordneter Übermittlung von Nachrichten verwendet.
+1. Erstellen Sie eine *Web.config* -Datei, um einen Endpunkt für die zu konfigurieren `CalculatorService` , die <xref:System.ServiceModel.WSHttpBinding> mit aktivierter zuverlässiger Sitzung und geordneter Übermittlung von Nachrichten verwendet.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
 1. Erstellen Sie eine *Service. svc* -Datei, die die folgende Zeile enthält:
 
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
@@ -41,7 +40,7 @@ Die Quell Kopie dieses Beispiels finden Sie unter [zuverlässige WS-Sitzung](../
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurieren des Clients mit WSHttpBinding zur Verwendung einer zuverlässigen Sitzung
 
-1. Verwenden Sie das [Service Model Metadata Utility-Tool (*Svcutil. exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) in der Befehlszeile, um Code aus Dienst Metadaten zu generieren:
+1. Verwenden Sie das [Service Model Metadata Utility-Tool (*Svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) von der Befehlszeile aus, um Code aus Dienst Metadaten zu generieren:
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -55,7 +54,7 @@ Die Quell Kopie dieses Beispiels finden Sie unter [zuverlässige WS-Sitzung](../
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil. exe* generiert auch die Konfiguration für den Client, der die- <xref:System.ServiceModel.WSHttpBinding> Klasse verwendet. Benennen Sie die Konfigurationsdatei " *app. config* ", wenn Sie Visual Studio verwenden.
+1. *Svcutil.exe* generiert auch die Konfiguration für den Client, der die- <xref:System.ServiceModel.WSHttpBinding> Klasse verwendet. Benennen Sie die Konfigurationsdatei *App.config* , wenn Sie Visual Studio verwenden.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
@@ -77,6 +76,6 @@ Mehrere der vom System bereitgestellten Bindungen unterstützen standardmäßig 
 
 Ein Beispiel für das Erstellen einer benutzerdefinierten Bindung, die zuverlässige Sitzungen unterstützt, finden Sie unter Gewusst [wie: Erstellen einer benutzerdefinierten zuverlässigen Sitzungs Bindung mit HTTPS](how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Zuverlässige Sitzungen](reliable-sessions.md)

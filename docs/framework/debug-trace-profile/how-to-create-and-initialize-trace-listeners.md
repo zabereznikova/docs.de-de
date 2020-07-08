@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungslistenern'
+title: 'Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern'
+description: Erfahren Sie, wie Sie Ablaufverfolgungslistener erstellen und initialisieren, indem Sie Klassen wie System. Diagnostics. DefaultTraceListener in .NET verwenden.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,18 +12,17 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 752306124e41a7fb7458daccc8c2891631eb9616
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217444"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051206"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungslistenern
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern
 
 Die Klassen <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace?displayProperty=nameWithType> senden Nachrichten an Objekte, die Listener genannt werden, welche diese Meldungen empfangen und verarbeiten. Ein solcher Listener, der <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, wird bei Aktivierung der Ablaufverfolgung oder des Debuggens automatisch erstellt und initialisiert. Wenn die <xref:System.Diagnostics.Trace>- oder <xref:System.Diagnostics.Debug>-Ausgabe an zusätzliche Quellen geleitet werden soll, müssen Sie zusätzliche Ablaufverfolgungslistener erstellen und initialisieren.
 
-Erstellen Sie Listener, die auf die Anforderungen Ihrer Anwendung abgestimmt sind. Wenn Sie ein Textprotokoll der gesamten Ablaufverfolgungsausgabe brauchen, erstellen Sie einen <xref:System.Diagnostics.TextWriterTraceListener>-Listener, der die gesamte Ausgabe in eine neue Textdatei schreibt, sobald er aktiviert wird. Wenn Sie die Ausgabe nur während der Anwendungsausführung anzeigen möchten, erstellen Sie einen <xref:System.Diagnostics.ConsoleTraceListener>-Listener, der die gesamte Ausgabe an ein Konsolenfenster leitet. Der <xref:System.Diagnostics.EventLogTraceListener> kann die Ablaufverfolgungsausgabe an ein Ereignisprotokoll leiten. Weitere Informationen finden Sie unter [Ablaufverfolgungslistener](trace-listeners.md).
+Erstellen Sie Listener, die auf die Anforderungen Ihrer Anwendung abgestimmt sind. Wenn Sie ein Textprotokoll der gesamten Ablaufverfolgungsausgabe brauchen, erstellen Sie einen <xref:System.Diagnostics.TextWriterTraceListener>-Listener, der die gesamte Ausgabe in eine neue Textdatei schreibt, sobald er aktiviert wird. Wenn Sie die Ausgabe nur während der Anwendungsausführung anzeigen möchten, erstellen Sie einen <xref:System.Diagnostics.ConsoleTraceListener>-Listener, der die gesamte Ausgabe an ein Konsolenfenster leitet. Der <xref:System.Diagnostics.EventLogTraceListener> kann die Ablaufverfolgungsausgabe an ein Ereignisprotokoll leiten. Weitere Informationen finden Sie unter [Trace Listeners](trace-listeners.md)Ablaufverfolgungslistener.
 
 Sie können Ablaufverfolgungslistener in einer [Anwendungskonfigurationsdatei](../configure-apps/index.md) oder im Code erstellen. Wir empfehlen die Verwendung von Anwendungskonfigurationsdateien, da Sie mit diesen Dateien Ablaufverfolgungslistener hinzufügen, ändern oder entfernen können, ohne den Code ändern zu müssen.
 
@@ -75,7 +75,7 @@ Sie können Ablaufverfolgungslistener in einer [Anwendungskonfigurationsdatei](.
     Trace.Flush();
     ```
 
-    \- oder –
+    \- oder -
 
 - Wenn Sie nicht möchten, dass der Listener die Ablaufverfolgungsausgabe empfängt, fügen Sie diesen nicht zur <xref:System.Diagnostics.Trace.Listeners%2A>-Auflistung hinzu. Sie können die Ausgabe über einen Listener unabhängig von der <xref:System.Diagnostics.Trace.Listeners%2A>-Auflistung durch Aufrufen der eigenen Ausgabemethoden des Listeners ausgeben. Im folgenden Beispiel wird gezeigt, wie eine Zeile in einen Listener geschrieben wird, der nicht in der <xref:System.Diagnostics.Trace.Listeners%2A>-Auflistung vorhanden ist.
 
@@ -93,7 +93,7 @@ Sie können Ablaufverfolgungslistener in einer [Anwendungskonfigurationsdatei](.
     myListener.Flush();
     ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgungslistener](trace-listeners.md)
 - [Ablaufverfolgungsschalter](trace-switches.md)

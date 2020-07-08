@@ -1,5 +1,6 @@
 ---
 title: invalidVariant-MDA
+description: Überprüfen Sie den invalidVariant-Assistenten für verwaltetes Debuggen, der aufgerufen wird, wenn eine ungültige Variante bei einem Aufruf von System eigenem/nicht verwaltetem zu verwaltetem Code auftritt
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid variant
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - invalid VARIANT types
 - managed debugging assistants (MDAs), invalid variant
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
-ms.openlocfilehash: 8d686621ae4aa087e1b4f4bea9df7fc3de758d40
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: ab1233d9faa86ef1508fa8fe2b5af46cb37bd523
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216275"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051635"
 ---
 # <a name="invalidvariant-mda"></a>invalidVariant-MDA
 Der Assistent für verwaltetes Debugging (MDA) `invalidVariant` wird aktiviert, wenn während eines Aufrufs aus systemeigenem oder unverwaltetem Code an verwalteten Code eine ungültige `VARIANT`-Struktur erkannt wird.  
@@ -30,7 +30,7 @@ Der Assistent für verwaltetes Debugging (MDA) `invalidVariant` wird aktiviert, 
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die Laufzeit.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Eine MDA-Meldung, die angibt, dass zur Laufzeit ein ungültiger `VARIANT` erkannt wurde, der von einem unverwalteten Modul an verwalteten Code übergeben wurde.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -43,8 +43,8 @@ Der Assistent für verwaltetes Debugging (MDA) `invalidVariant` wird aktiviert, 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

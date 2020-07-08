@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungsquellen'
+title: 'Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen'
+description: Erstellen und Initialisieren von Ablauf Verfolgungs Quellen mithilfe der TraceSource-Klasse in .net. Diese Klasse stellt Methoden zum Nachverfolgen von Ereignissen und Daten und zum Ausgeben von Informations Ablauf Verfolgungen bereit.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +10,18 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-ms.openlocfilehash: eeccad44bd2719a3cb2a721ba4e32a7bf477636f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 55d7854bff991ba185d3f5d6e4c6e7222c9e3039
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174731"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051271"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungsquellen
+# <a name="how-to-create-and-initialize-trace-sources"></a>Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen
 Die <xref:System.Diagnostics.TraceSource>-Klasse wird von Anwendungen verwendet, um Ablaufverfolgungen zu erzeugen, die der Anwendung zugeordnet werden können. <xref:System.Diagnostics.TraceSource> stellt Ablaufverfolgungsmethoden bereit, mit denen Sie Ereignisse und Daten einfach verfolgen und Ablaufverfolgungen zu Informationszwecken ausgeben können. Die Ablaufverfolgungsausgabe von <xref:System.Diagnostics.TraceSource> kann mit oder ohne Konfigurationsdateien erstellt und initialisiert werden. Dieses Thema enthält Anweisungen für beide Varianten. Es wird jedoch empfohlen, Konfigurationsdateien zu verwenden, um die Neukonfiguration der durch die Ablaufverfolgungsquellen erzeugten Ablaufverfolgungen zur Laufzeit zu vereinfachen.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>So erstellen und initialisieren Sie eine Ablaufverfolgungsquelle mit einer Konfigurationsdatei  
   
-1. Erstellen Sie ein Visual Studio-Konsolenanwendungsprojekt (.NET Framework), und ersetzen Sie den bereitgestellten Code durch den folgenden Code. Dieser Code protokolliert Fehler und Warnungen und gibt einige davon in der Konsole aus und einige davon in der myListener-Datei, die von den Einträgen in der Konfigurationsdatei erstellt wird.  
+1. Erstellen Sie ein Visual Studio-Konsolen Anwendungsprojekt (.NET Framework), und ersetzen Sie den bereitgestellten Code durch den folgenden Code. Dieser Code protokolliert Fehler und Warnungen und gibt einige davon in der Konsole aus und einige davon in der myListener-Datei, die von den Einträgen in der Konfigurationsdatei erstellt wird.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
@@ -76,7 +76,7 @@ Die <xref:System.Diagnostics.TraceSource>-Klasse wird von Anwendungen verwendet,
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

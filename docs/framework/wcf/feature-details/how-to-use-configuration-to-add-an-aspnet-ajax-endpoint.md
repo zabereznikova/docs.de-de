@@ -2,12 +2,11 @@
 title: 'Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 0aa59ce04e09d700d853f213c6fc9d3a25cdb43b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601152"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051661"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts
 Mit Windows Communication Foundation (WCF) können Sie einen Dienst erstellen, der einen ASP.NET AJAX-fähigen Endpunkt zur Verfügung stellt, der von JavaScript auf einer Client Website aufgerufen werden kann. Zum Erstellen eines solchen Endpunkts können Sie entweder eine Konfigurationsdatei wie alle anderen Windows Communication Foundation (WCF)-Endpunkte verwenden oder eine Methode verwenden, die keine Konfigurationselemente erfordert. In diesem Thema wird die Konfigurationsmethode veranschaulicht.  
@@ -90,7 +89,7 @@ Mit Windows Communication Foundation (WCF) können Sie einen Dienst erstellen, d
   
 1. Um den Dienst in IIS zu hosten, erstellen Sie in der Anwendung eine neue Datei mit dem Namen service und einer SVC-Erweiterung. Bearbeiten Sie diese Datei, indem Sie die entsprechenden [ \@ Service Host](../../configure-apps/file-schema/wcf-directive/servicehost.md) -Direktiveninformationen für den Dienst hinzufügen. Die Dienstdatei für das `CalculatorService`-Beispiel enthält z.&#160;B. folgende Informationen.  
   
-    ```
+    ```aspx-csharp
     <%@ServiceHost
     language=c#
     Debug="true"
@@ -104,7 +103,7 @@ Mit Windows Communication Foundation (WCF) können Sie einen Dienst erstellen, d
   
 1. Der Endpunkt wird mit einer leeren Adresse relativ zur SVC-Datei konfiguriert, sodass der Dienst jetzt verfügbar ist und aufgerufen werden kann, indem Anforderungen an Service. svc gesendet werden, z. b. " \<operation> Service. svc/Add" für den `Add` Vorgang. Sie können ihn verwenden, indem Sie die Endpunkt-URL in die Scripts-Auflistung des ASP.NET AJAX Script Manager-Steuerelements eingeben. Ein Beispiel finden Sie unter der [AJAX-Dienst mit HTTP Post](../samples/ajax-service-using-http-post.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von WCF-Diensten für ASP.NET AJAX](creating-wcf-services-for-aspnet-ajax.md)
 - [Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

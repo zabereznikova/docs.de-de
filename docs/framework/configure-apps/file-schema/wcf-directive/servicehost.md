@@ -2,12 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: fdd6d83836c4ef31a4d7c8e68cb0cc050ac6bea4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
-ms.translationtype: MT
+ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76787801"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051362"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -15,7 +14,7 @@ Ordnet die Factory zu, die zum Generieren des Diensthosts mit dem zu hostenden D
 
 ## <a name="syntax"></a>Syntax
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service = "Service, ServiceNamespace"
 Factory = "Factory, FactoryNamespace"
@@ -35,7 +34,7 @@ Der CLR-Typname des gehosteten Diensts. Dabei sollte es sich um einen qualifizie
 
 Der CLR-Typname der Diensthostfactory, der zum Instanziieren des Diensthosts verwendet wird. Dieses Attribut ist optional. Falls nicht angegeben, wird die Standard-<xref:System.ServiceModel.Activation.ServiceHostFactory> verwendet, die eine Instanz von <xref:System.ServiceModel.ServiceHost> zurückgibt.
 
-### <a name="debug"></a>Debuggen
+### <a name="debug"></a>Debug
 
 Gibt an, ob der Windows Communication Foundation (WCF)-Dienst mit Debugsymbolen kompiliert werden soll. `true`, wenn der WCF-Dienst mit Debugsymbolen kompiliert werden soll. andernfalls `false` .
 
@@ -47,7 +46,7 @@ Gibt die Sprache zum Kompilieren des gesamten Inlinecodes in der Datei (SVC) an.
 
 Gibt die Quelldatei an, die den XML-Webdienst implementiert, wenn sich die Klasse, die den XML-Webdienst implementiert, nicht in derselben Datei befindet und nicht in eine Assembly kompiliert und im Verzeichnis " *\bin* " abgelegt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der <xref:System.ServiceModel.ServiceHost> , der zum Hosten des Diensts verwendet wird, ist ein Erweiterbarkeits Punkt innerhalb des Windows Communication Foundation (WCF)-Programmiermodells. Ein Factorymuster wird zum Instanziieren von <xref:System.ServiceModel.ServiceHost> verwendet, da es sich möglicherweise um einen polymorphen Typ handelt, der von der Hostumgebung nicht direkt instanziiert werden sollte.
 
@@ -63,7 +62,7 @@ Halten Sie die Factoryimplementierungen so einfach wie möglich. Falls die benut
 
 Wenn Sie z. b. einen AJAX-aktivierten Endpunkt für aktivieren möchten `MyService` , geben Sie den <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> für den Wert des `Factory` Attributs anstelle des Standardwerts <xref:System.ServiceModel.Activation.ServiceHostFactory> in der- `@ServiceHost` Direktive an, wie im folgenden Beispiel gezeigt:
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service="MyService"
 Language="C#"
@@ -72,6 +71,6 @@ Factory="WebScriptServiceHostFactory"
 %>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Benutzerdefinierter Diensthost](../../../wcf/samples/custom-service-host.md)

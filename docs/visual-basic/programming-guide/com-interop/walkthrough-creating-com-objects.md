@@ -8,17 +8,16 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396739"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051479"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic
 Beim Erstellen neuer Anwendungen oder Komponenten empfiehlt es sich, .NET Framework Assemblys zu erstellen. Visual Basic ist es jedoch auch einfach, eine .NET Framework Komponente für com verfügbar zu machen. Dies ermöglicht es Ihnen, neue Komponenten für frühere Anwendungs Suites bereitzustellen, die COM-Komponenten erfordern. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie mit Visual Basic .NET Framework-Objekte als COM-Objekte verfügbar machen, sowohl mit als auch ohne die com-Klassen Vorlage.  
   
- Die einfachste Möglichkeit, com-Objekte verfügbar zu machen, ist die Verwendung der com-Klassen Vorlage. Die com-Klassen Vorlage erstellt eine neue Klasse und konfiguriert dann das Projekt, um die Klasse und die Interoperabilitäts Schicht als COM-Objekt zu generieren und Sie beim Betriebssystem zu registrieren.  
+ Die einfachste Möglichkeit, com-Objekte verfügbar zu machen, ist die Verwendung der com-Klassen Vorlage. Mit dieser Vorlage wird eine neue Klasse erstellt. Anschließend wird das Projekt so konfiguriert, dass die Klasse mit einer Interoperabilitäts Schicht als COM-Objekt generiert und beim Betriebssystem registriert wird.  
   
 > [!NOTE]
 > Obwohl Sie eine Klasse, die in Visual Basic erstellt wurde, auch als COM-Objekt für nicht verwalteten Code verfügbar machen können, handelt es sich nicht um ein echtes com-Objekt, das nicht von Visual Basic verwendet werden kann. Weitere Informationen finden Sie unter [com-Interoperabilität in .NET Framework Anwendungen](com-interoperability-in-net-framework-applications.md).  
@@ -90,7 +89,7 @@ Beim Erstellen neuer Anwendungen oder Komponenten empfiehlt es sich, .NET Framew
     > [!NOTE]
     > Die mit Visual Basic generierten COM-Objekte können von anderen Visual Basic Anwendungen nicht verwendet werden, da es sich nicht um echte COM-Objekte handelt. Versuche, Verweise auf solche COM-Objekte hinzuzufügen, geben einen Fehler aus. Weitere Informationen finden Sie unter [com-Interoperabilität in .NET Framework Anwendungen](com-interoperability-in-net-framework-applications.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM-Interop](index.md)

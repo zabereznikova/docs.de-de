@@ -1,5 +1,6 @@
 ---
 title: invalidApartmentStateChange-MDA
+description: Erfahren Sie mehr über den invalidApartmentStateChange-MDA (Managed Debugging Assistant) in .net, der aktiviert wird, wenn es Probleme mit dem com-Apartment Zustand gibt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217415"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051826"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange-MDA
 Der `invalidApartmentStateChange`-MDA (Assistent für verwaltetes Debuggen) wird durch eines der folgenden zwei Probleme aktiviert:  
@@ -45,7 +45,7 @@ Der `invalidApartmentStateChange`-MDA (Assistent für verwaltetes Debuggen) wird
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Der COM-Apartmentzustand des aktuellen Threads und der Zustand, den der Code versucht hat anzuwenden.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -75,8 +75,8 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

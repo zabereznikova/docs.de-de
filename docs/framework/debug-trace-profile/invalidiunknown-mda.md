@@ -1,5 +1,6 @@
 ---
 title: invalidIUnknown-MDA
+description: Überprüfen Sie den invalidIUnknown-MDA (Managed Debug Assistant), der aktiviert wird, wenn ein ungültiger IUnknown-Zeiger von System eigenem Code an verwalteten Code übergeben wird.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid IUnknown pointer
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - IUnknown pointers
 - managed debugging assistants (MDAs), invalid IUnknown pointer
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
-ms.openlocfilehash: 5df9a3f506d8c2de6f1a3125459adc2d59d510bf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 65d704463ed746390ff1710b590bf080013bf53d
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217365"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051726"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown-MDA
 Der Assistent für verwaltetes Debuggen (Managed Debugging Assistant, MDA) `invalidIUnknown` wird aktiviert, wenn ein `IUnknown`-Zeiger aus dem systemeigenen Code an verwalteten Code übergeben wird. Die Rückgabe einer Erfolgsmeldung durch `IUnknown` schlägt fehl, wenn die `IUnknown`-Schnittstelle abgefragt wird.  
@@ -30,7 +30,7 @@ Der Assistent für verwaltetes Debuggen (Managed Debugging Assistant, MDA) `inva
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Die Beschreibung des Fehlers.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -43,8 +43,8 @@ Der Assistent für verwaltetes Debuggen (Managed Debugging Assistant, MDA) `inva
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

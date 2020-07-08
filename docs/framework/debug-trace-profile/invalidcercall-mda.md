@@ -1,5 +1,6 @@
 ---
 title: invalidCERCall-MDA
+description: Überprüfen Sie den invalidcercallmda (Managed Debug Assistant), der aktiviert wird, wenn ein Ungültiger Aufruf innerhalb des CER-Diagramms (eingeschränkter Ausführungs Bereich) vorliegt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid CER calls
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: dec32a81929d72274757b75cb03d6615d9fa948b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217386"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051791"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall-MDA
 Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein Aufruf innerhalb des Diagramms des eingeschränkten Ausführungsbereichs (CER) an eine Methode stattfindet, die keinen Zuverlässigkeitsvertrag oder einen übermäßig schwachen Vertrag besitzt. Ein schwacher Vertrag ist ein Vertrag, der deklariert, dass die schlimmste Zustandsbeschädigung einen größeren Umfang hat als die an den Aufruf übergebene Instanz. <xref:System.AppDomain> oder der Prozessstatus werden also möglicherweise beschädigt oder das Ergebnis bei einem Aufruf innerhalb eines CER kann nicht immer deterministisch berechnet werden.  
@@ -37,7 +37,7 @@ Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, w
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Der Aufruf eines schwachen Vertrags aus einem CER führt möglicherweise dazu, dass der CER seine Vorgänge nicht vollständig ausführen kann. Dies kann zu einer Beschädigung des <xref:System.AppDomain>-Prozesszustands führen.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Im Folgenden finden Sie eine Beispielausgabe dieses MDAs.  
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
@@ -52,8 +52,8 @@ Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, w
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)
