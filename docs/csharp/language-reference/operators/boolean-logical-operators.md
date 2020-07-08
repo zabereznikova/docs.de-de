@@ -1,7 +1,7 @@
 ---
 title: 'Logische boolesche Operatoren: C#-Referenz'
 description: Erfahren Sie mehr über C#-Operatoren, die logische Negation, Konjunktion (AND), inklusive und exklusive Disjunktion (OR) mit booleschen Operanden durchführen.
-ms.date: 09/27/2019
+ms.date: 06/29/2020
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a19c804c624153ef608885bc6493537302275765
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618193"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logische boolesche Operatoren (C#-Referenz)
 
@@ -115,8 +115,14 @@ Der [logische OR-Operator](#logical-or-operator-) `|` berechnet auch die logisch
 
 ## <a name="nullable-boolean-logical-operators"></a>Logische boolesche Operatoren, die NULL-Werte zulassen
 
-Für `bool?`-Operanden unterstützen die `&`- und `|`-Operatoren dreiwertige Logik. Die Semantik dieser Operatoren ist in der folgenden Tabelle definiert:  
-  
+Für `bool?`-Operanden unterstützen die Operatoren [`&` (logisches UND)](#logical-and-operator-) und [`|` (logisches ODER)](#logical-or-operator-) die dreiwertige Logik wie folgt:
+
+- Für den Operator `&` wird nur `true` zurückgegeben, wenn auch beide seiner Operanden `true` ergeben. Wenn für `x` und `y` `false` zurückgegeben wird, ergibt `x & y` `false` (auch wenn ein anderer Operand `null` ergibt). Andernfalls ist das Ergebnis von `x & y` `null`.
+
+- Für den Operator `|` wird nur `false` zurückgegeben, wenn auch beide seiner Operanden `false` ergeben. Wenn für `x` und `y` `true` zurückgegeben wird, ergibt `x | y` `true` (auch wenn ein anderer Operand `null` ergibt). Andernfalls ist das Ergebnis von `x | y` `null`.
+
+Der folgenden Tabelle können Sie die Semantik entnehmen:
+
 |w|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  

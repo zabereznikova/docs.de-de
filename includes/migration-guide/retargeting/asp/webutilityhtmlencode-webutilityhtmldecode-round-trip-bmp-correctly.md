@@ -1,18 +1,28 @@
 ---
-ms.openlocfilehash: ca662b57fae9b1d0d41290f3052f71bca66e9bf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: acb5b467fc8f0692d8fa1b3b8263fd27308cc124
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617164"
 ---
 ### <a name="webutilityhtmlencode-and-webutilityhtmldecode-round-trip-bmp-correctly"></a>WebUtility.HtmlEncode und WebUtility.HtmlDecode führen für die BMP eine ordnungsgemäße Roundtripkonvertierung durch
 
-|   |   |
-|---|---|
-|Details|Bei Anwendungen mit der Zielplattform .NET Framework 4.5 wird für Zeichen, die sich außerhalb der Basic Multilingual Plane (BMP) befinden, eine erfolgreiche Roundtripkonvertierung durchgeführt, wenn sie an die <xref:System.Net.WebUtility.HtmlDecode(System.String)>-Methoden übergeben werden.|
-|Vorschlag|Diese Änderung sollte keine Auswirkung auf aktuelle Anwendungen haben. Wenn Sie jedoch das ursprüngliche Verhalten wiederherstellen möchten, legen Sie das Attribut <code>targetFramework</code> des Elements <code>&lt;httpRuntime&gt;</code> auf eine andere Zeichenfolge als &quot;4.5&quot; fest. Sie können die <code>unicodeEncodingConformance</code>- und <code>unicodeDecodingConformance</code>-Attribute des <code>&lt;webUtility&gt;</code>-Konfigurationselements auch festlegen, um dieses Verhalten unabhängig von der Zielversion von .NET Framework zu steuern.|
-|Bereich|Microsoft Edge|
-|Version|4.5|
-|Typ|Neuzuweisung|
-|Betroffene APIs|<ul><li><xref:System.Net.WebUtility.HtmlEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Net.WebUtility.HtmlEncode(System.String,System.IO.TextWriter)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Details
+
+Bei Anwendungen mit der Zielplattform .NET Framework 4.5 wird für Zeichen, die sich außerhalb der Basic Multilingual Plane (BMP) befinden, eine erfolgreiche Roundtripkonvertierung durchgeführt, wenn sie an die <xref:System.Net.WebUtility.HtmlDecode(System.String)>-Methoden übergeben werden.
+
+#### <a name="suggestion"></a>Vorschlag
+
+Diese Änderung sollte keine Auswirkung auf aktuelle Anwendungen haben. Wenn Sie jedoch das ursprüngliche Verhalten wiederherstellen möchten, legen Sie das Attribut `targetFramework` des Elements `<httpRuntime>` auf eine andere Zeichenfolge als „4.5“ fest. Sie können die `unicodeEncodingConformance`- und `unicodeDecodingConformance`-Attribute des `<webUtility>`-Konfigurationselements auch festlegen, um dieses Verhalten unabhängig von der Zielversion von .NET Framework zu steuern.
+
+| name    | Wert       |
+|:--------|:------------|
+| Bereich   | Microsoft Edge        |
+| Version | 4.5         |
+| Typ    | Neuzuweisung |
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+- <xref:System.Net.WebUtility.HtmlEncode(System.String)?displayProperty=nameWithType>
+- <xref:System.Net.WebUtility.HtmlEncode(System.String,System.IO.TextWriter)?displayProperty=nameWithType>

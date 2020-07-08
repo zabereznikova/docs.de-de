@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803026"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -98,7 +98,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf Ihr Projekt (nicht auf die Projektmappe), und klicken Sie auf **SCD.csproj bearbeiten** oder **SCD.vbproj bearbeiten**. Fügen Sie der Datei dann die folgenden hervorgehobenen Zeilen hinzu:
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. Erstellen Sie einen Debugbuild Ihrer Anwendung.
 
@@ -192,9 +192,9 @@ Führen Sie die folgenden Schritte für jede Zielplattform der Anwendung durch:
 
 1. Wählen Sie aus, wo Ihre Anwendung von Visual Studio veröffentlicht werden soll.
 
-   Wenn Sie die Anwendung auf einer einzigen Plattform veröffentlichen, können Sie den Standardwert im Textfeld **Ordner auswählen** übernehmen. Die frameworkabhängige Bereitstellung Ihrer Anwendung wird dann im Verzeichnis *\<Projektverzeichnis>\bin\Release\netcoreapp2.1\publish* veröffentlicht.
+   Wenn Sie die Anwendung auf einer einzigen Plattform veröffentlichen, können Sie den Standardwert im Textfeld **Ordner auswählen** übernehmen. Die frameworkabhängige Bereitstellung Ihrer Anwendung wird dann im Verzeichnis *\<project-directory>\bin\Release\netcoreapp2.1\publish* veröffentlicht.
 
-   Wenn Sie die Anwendung auf mehreren Plattformen veröffentlichen, fügen Sie eine Zeichenfolge an, mit der die Zielplattform identifiziert wird. Wenn Sie beispielsweise die Zeichenfolge „linux“ an den Dateipfad anfügen, veröffentlicht Visual Studio die frameworkabhängige Bereitstellung Ihrer Anwendung im Verzeichnis *\<Projektverzeichnis>\bin\Release\netcoreapp2.1\publish\linux*.
+   Wenn Sie die Anwendung auf mehreren Plattformen veröffentlichen, fügen Sie eine Zeichenfolge an, mit der die Zielplattform identifiziert wird. Wenn Sie beispielsweise die Zeichenfolge „linux“ an den Dateipfad anfügen, veröffentlicht Visual Studio die frameworkabhängige Bereitstellung Ihrer Anwendung im Verzeichnis *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux*.
 
 1. Erstellen Sie das Profil, indem Sie auf das Symbol für die Dropdownliste neben der Schaltfläche **Veröffentlichen** klicken und die Option **Profil erstellen** auswählen. Klicken Sie anschließend auf **Profil erstellen**, um das Profil zu erstellen.
 

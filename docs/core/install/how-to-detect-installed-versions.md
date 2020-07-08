@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 96db0d707cefed791d9c2c01a6615e9af5168cc5
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802987"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Überprüfen, ob .NET Core bereits installiert ist
 
@@ -19,7 +19,7 @@ In diesem Artikel erfahren Sie, wie Sie überprüfen, welche Versionen der .NET 
 
 Durch das Installieren eines SDK wird die entsprechende Runtime installiert.
 
-Falls ein beliebiger Befehl in diesem Artikel fehlschlägt, haben Sie die Runtime oder den SDK nicht installiert. Weitere Informationen finden Sie unter [Herunterladen und Installieren von .NET Core](index.md).
+Falls ein beliebiger Befehl in diesem Artikel fehlschlägt, haben Sie die Runtime oder den SDK nicht installiert. Weitere Informationen finden Sie in den Installationsartikeln für [Windows](windows.md), [macOS](macos.md) und [Linux](linux.md).
 
 ## <a name="check-sdk-versions"></a>Überprüfen der SDK-Versionen
 

@@ -1,15 +1,16 @@
 ---
 title: Entwicklungshandbuch für .NET Framework
+description: Entdecken Sie den .NET-Entwicklerleitfaden, in dem erläutert wird, wie Sie .NET-Apps erstellen, konfigurieren, debuggen, sichern und bereitstellen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 6e0051e3181e03070436b8d53d30326e8d71d096
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622574"
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
 

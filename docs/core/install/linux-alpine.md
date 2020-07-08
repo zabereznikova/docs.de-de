@@ -4,12 +4,12 @@ description: Hier werden verschiedene Möglichkeiten veranschaulicht, das.NET Co
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0efe3bbacbe573b77eae8818ea29b5a3867e4570
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619519"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Installieren des .NET Core SDK oder der .NET Core-Runtime unter Alpine
 
@@ -21,7 +21,7 @@ Es sind keine Installationsprogramme für Alpine vorhanden. Sie müssen entweder
 
 ## <a name="supported-distributions"></a>Unterstützte Distributionen
 
-Die folgende Tabelle enthält die derzeit unterstützten .NET Core-Releases und die Alpine-Versionen, die diese unterstützen. Diese Versionen werden weiterhin unterstützt, bis entweder die Version von [.NET Core das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) oder die Version von [Alpine das Ende ihrer Lebensdauer erreicht](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases).
+Die folgende Tabelle enthält die derzeit unterstützten .NET Core-Releases und die Alpine-Versionen, die diese unterstützen. Diese Versionen werden weiterhin unterstützt, bis entweder die Version von [.NET Core das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) oder die Version von [Alpine das Ende ihrer Lebensdauer](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases) erreicht.
 
 - ✔️ gibt an, dass die Version von Alpine oder .NET Core weiterhin unterstützt wird.
 - ❌ gibt an, dass die Version von Alpine oder .NET Core in diesem Alpine-Release nicht unterstützt wird.
@@ -47,12 +47,11 @@ Die folgenden Versionen von .NET Core werden nicht mehr unterstützt. Die Downlo
 
 - icu-libs
 - krb5-libs
+- libgcc
 - libintl
 - libssl1.1 (Alpine 3.9 oder höher)
-- libssl1.0 (Alpine 3.8)
+- libssl1.0 (Alpine 3.8 oder weniger)
 - libstdc++
-- lttng-ust
-- numactl (optional)
 - zlib
 
 ## <a name="scripted-install"></a>Per Skript gesteuerte Installation

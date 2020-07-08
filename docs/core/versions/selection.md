@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie .NET Core automatisch Laufzeitv
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803117"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
 
@@ -80,13 +80,13 @@ Ein bestimmtes SDK unterstützt einen festen Satz von Frameworks, der auf das Zi
 
 Wenn Sie eine Anwendung von der Quelle aus mit [`dotnet run`](../tools/dotnet-run.md) ausführen, von einer [**Framework-abhängigen Bereitstellung**](../deploying/index.md#publish-runtime-dependent) aus mit [`dotnet myapp.dll`](../tools/dotnet.md#description) oder von einer [**Framework-abhängigen ausführbaren Datei**](../deploying/index.md#publish-runtime-dependent) aus mit `myapp.exe`, ist die ausführbare `dotnet`-Datei der **Host** für die Anwendung.
 
-Der Host wählt die neueste Patchversion aus, die auf dem Computer installiert ist. Wenn Sie beispielsweise `netcoreapp3.0` in Ihrer Projektdatei angegeben haben und `3.0.4` die zuletzt installierte .NET-Laufzeit ist, wird die Laufzeit `3.0.4` verwendet.
+Der Host wählt die neueste Patchversion aus, die auf dem Computer installiert ist. Wenn Sie beispielsweise `netcoreapp3.0` in Ihrer Projektdatei angegeben haben und `3.0.2` die zuletzt installierte .NET-Laufzeit ist, wird die Laufzeit `3.0.2` verwendet.
 
 Wenn keine gültige `3.0.*`-Version gefunden wird, wird eine neue `3.*`-Version verwendet. Wenn Sie beispielsweise `netcoreapp3.0` angegeben haben und nur `3.1.0` installiert ist, wird die Anwendung mit der Laufzeit `3.1.0` ausgeführt. Dieses Verhalten wird als „Rollforward einer Nebenversion“ bezeichnet. Frühere Versionen werden ebenfalls nicht berücksichtigt. Wenn keine gültige Laufzeit installiert ist, wird die Anwendung nicht ausgeführt.
 
 Einige Verwendungsbeispiele veranschaulichen das Verhalten, wenn Sie für Version 3.0 programmieren:
 
-- ✔️ 3.0 ist angegeben. 3.0.5 ist die höchste installierte Patchversion. 3.0.5 wird verwendet.
+- ✔️ 3.0 ist angegeben. 3.0.3 ist die höchste installierte Patchversion. 3.0.3 wird verwendet.
 - ❌ 3.0 ist angegeben. Es sind keine 3.0.*-Versionen installiert. 2.1.1 ist die höchste installierte Runtime. Eine Fehlermeldung wird angezeigt.
 - ✔️ 3.0 ist angegeben. Es sind keine 3.0.*-Versionen installiert. 3.1.0 ist die höchste installierte Runtimeversion. 3.1.0 wird verwendet.
 - ❌ 2.0 ist angegeben. Es sind keine 2.x-Versionen installiert. 3.0.0 ist die höchste installierte Runtime. Eine Fehlermeldung wird angezeigt.
@@ -95,27 +95,27 @@ Der Rollforward einer Nebenversion hat einen Nebeneffekt, der sich auf Endbenutz
 
 1. Die Anwendung gibt an, dass Version 3.0 erforderlich ist.
 2. Bei Ausführung der Anwendung wird zwar nicht Version 3.0.* installiert, dafür aber Version 3.1.0. Es wird Version 3.1.0 verwendet.
-3. Wenn der Benutzer später die Version 3.0.5 installiert und die Anwendung erneut ausführt, wird Version 3.0.5 verwendet.
+3. Wenn der Benutzer später die Version 3.0.3 installiert und die Anwendung noch mal ausführt, wird Version 3.0.3 verwendet.
 
-Möglicherweise verhalten sich Version 3.0.5 und Version 3.1.0 unterschiedlich, insbesondere in Szenarien wie der Serialisierung von Binärdaten.
+Möglicherweise verhalten sich Version 3.0.3 und Version 3.1.0 unterschiedlich, insbesondere in Szenarios wie der Serialisierung von Binärdaten.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Eigenständige Bereitstellungen umfassen die ausgewählte Laufzeit
 
 Sie können eine Anwendung als [**eigenständige Bereitstellung**](../deploying/index.md#publish-self-contained) veröffentlichen. Bei diesem Ansatz werden die .NET Core-Laufzeit und -Bibliotheken mit Ihrer Anwendung zusammengeführt. Eigenständige Bereitstellungen sind nicht von Laufzeitumgebungen abhängig. Die Auswahl der Laufzeitversion erfolgt bei der Veröffentlichung, nicht bei der Ausführung.
 
-Der Veröffentlichungsprozess wählt die neueste Patchversion der angegebenen Laufzeitfamilie aus. Beispielsweise wählt `dotnet publish` .NET Core 3.0.4 aus, wenn dies die neueste Patchversion der .NET Core 3.0-Runtimefamilie ist. Das Zielframework (einschließlich der neuesten installierten Sicherheitspatches) ist in der Anwendung enthalten.
+Der Veröffentlichungsprozess wählt die neueste Patchversion der angegebenen Laufzeitfamilie aus. Beispielsweise wählt `dotnet publish` .NET Core 3.0.3 aus, wenn es sich hierbei um die neueste Patchversion der .NET Core 3.0-Runtimefamilie handelt. Das Zielframework (einschließlich der neuesten installierten Sicherheitspatches) ist in der Anwendung enthalten.
 
 Wenn die für eine Anwendung angegebene Mindestversion nicht erfüllt wird, tritt ein Fehler auf. `dotnet publish` wird an die neueste Laufzeitpatchversion gebunden (innerhalb einer bestimmten Haupt-/Nebenversionfamilie). `dotnet publish` unterstützt nicht die Rollforwardsemantik von `dotnet run`. Weitere Informationen zu Patches und eigenständigen Bereitstellungen finden Sie im Artikel zur [Auswahl von Laufzeitpatches](../deploying/runtime-patch-selection.md) bei der Bereitstellung von .NET Core-Anwendungen.
 
 Eigenständige Bereitstellungen erfordern möglicherweise eine bestimmte Patchversion. Sie können die mindestens erforderliche Laufzeitpatchversion in der Projektdatei überschreiben (mit einer höheren/niedrigeren Version), wie im folgenden Beispiel gezeigt:
 
 ``` xml
-<RuntimeFrameworkVersion>3.0.4</RuntimeFrameworkVersion>
+<RuntimeFrameworkVersion>3.0.3</RuntimeFrameworkVersion>
 ```
 
 Das Element `RuntimeFrameworkVersion` überschreibt die Standardversionsrichtlinie. Für eigenständige Bereitstellungen gibt `RuntimeFrameworkVersion` die *genaue* Laufzeitframeworkversion an. Für Anwendungen, die von Frameworks abhängen, gibt `RuntimeFrameworkVersion` die *mindestens* erforderliche Laufzeitframeworkversion an.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Herunterladen und Installieren von .NET Core](../install/index.md)
+- [Herunterladen und Installieren von .NET Core](../install/index.yml)
 - [Entfernen von .NET Core-Runtime und SDK](../install/remove-runtime-sdk-versions.md)

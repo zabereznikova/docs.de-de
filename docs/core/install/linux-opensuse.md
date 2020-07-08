@@ -4,12 +4,12 @@ description: Veranschaulicht verschiedene Möglichkeiten, das .NET Core SDK und 
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 3a2ff1ca1519428f42c88048dde22aa11baaaa01
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619467"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>Installieren des .NET Core SDK oder der .NET Core-Runtime unter openSUSE
 
@@ -69,7 +69,22 @@ Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwen
 
 ## <a name="dependencies"></a>Abhängigkeiten
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+Wenn die Installation mit einem Paket-Manager erfolgt, werden diese Bibliotheken für Sie installiert. Wenn Sie jedoch .NET Core manuell installieren oder eine eigenständige Anwendung veröffentlichen, müssen Sie sicherstellen, dass diese Bibliotheken installiert sind:
+
+- krb5
+- libicu
+- libopenssl1_0_0
+
+Wenn die OpenSSL-Version der Zielruntime-Umgebung 1.1 oder neuer ist, müssen Sie **compat-openssl10** installieren.
+
+Weitere Informationen zu den Abhängigkeiten finden Sie unter [Eigenständige Linux-Apps](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+
+Für .NET Core-Apps, die die Assembly *System.Drawing.Common* verwenden, benötigen Sie außerdem die folgende Abhängigkeit:
+
+- [libgdiplus (Version 6.0.1 oder höher)](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > Sie können eine neuere Version von *libgdiplus* installieren, indem Sie Ihrem System das Mono-Repository hinzufügen. Weitere Informationen finden Sie unter <https://www.mono-project.com/download/stable/>.
 
 ## <a name="scripted-install"></a>Per Skript gesteuerte Installation
 

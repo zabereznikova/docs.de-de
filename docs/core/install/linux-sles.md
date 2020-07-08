@@ -4,12 +4,12 @@ description: Veranschaulicht verschiedene Möglichkeiten, das .NET Core SDK und 
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: e1a2490c1d653eb07aebdd51e34e1bf462906482
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 8f64efcc8206b47855871104e5b6914570c06da0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619415"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-sles"></a>Installieren des .NET Core SDK oder der .NET Core-Runtime unter SLES
 
@@ -78,7 +78,22 @@ Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwen
 
 ## <a name="dependencies"></a>Abhängigkeiten
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+Wenn die Installation mit einem Paket-Manager erfolgt, werden diese Bibliotheken für Sie installiert. Wenn Sie jedoch .NET Core manuell installieren oder eine eigenständige Anwendung veröffentlichen, müssen Sie sicherstellen, dass diese Bibliotheken installiert sind:
+
+- krb5
+- libicu
+- libopenssl1_1
+
+Wenn die OpenSSL-Version der Zielruntime-Umgebung 1.1 oder neuer ist, müssen Sie **compat-openssl10** installieren.
+
+Weitere Informationen zu den Abhängigkeiten finden Sie unter [Eigenständige Linux-Apps](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+
+Für .NET Core-Apps, die die Assembly *System.Drawing.Common* verwenden, benötigen Sie außerdem die folgende Abhängigkeit:
+
+- [libgdiplus (Version 6.0.1 oder höher)](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > Sie können eine neuere Version von *libgdiplus* installieren, indem Sie Ihrem System das Mono-Repository hinzufügen. Weitere Informationen finden Sie unter <https://www.mono-project.com/download/stable/>.
 
 ## <a name="scripted-install"></a>Per Skript gesteuerte Installation
 

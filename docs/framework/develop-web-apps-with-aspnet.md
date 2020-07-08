@@ -1,17 +1,18 @@
 ---
 title: Entwickeln von Webanwendungen mit ASP.NET
+description: Entwickeln von Web-Apps mit ASP.NET Core, einer Abwandlung von ASP.NET 4.x , die plattformübergreifend, schlanker, modularer und für die Erstellung von Webbenutzeroberflächen und Web-APIs vereinheitlicht ist
 ms.date: 09/25/2018
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 60d7cf67a21216a8deada2baf0d6a30183c3ee44
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 82f6b9421abbfd9f547cac1c7e08c63de2b2cf48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619376"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>Entwickeln von Web-Apps mit ASP.NET
 
@@ -39,6 +40,6 @@ Weitere Informationen zu ASP.NET Core (/aspnet/core) finden Sie hier:
 - [Erstellen einer Web-API](/aspnet/core/tutorials/first-web-api)
 - [Erstellen einer ASP.NET Core-Web-App in Azure](/azure/app-service/app-service-web-get-started-dotnet)
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Entwicklungshandbuch](development-guide.md)

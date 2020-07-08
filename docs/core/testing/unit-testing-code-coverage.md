@@ -3,13 +3,13 @@ title: Verwenden von Code Coverage für Komponententests
 description: Hier erfahren Sie, wie Sie die Code-Coverage-Funktionen für .NET-Komponententests verwenden.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/16/2020
-ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.date: 07/01/2020
+ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105411"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853900"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Verwenden von Code Coverage für Komponententests
 
@@ -18,6 +18,8 @@ Komponententests helfen beim Sicherstellen der Funktionalität und bieten eine �
 In diesem Artikel werden die Verwendung von Code Coverage für Komponententests mit Coverlet sowie die Berichtsgenerierung mithilfe von ReportGenerator erläutert. Der Fokus dieses Artikels liegt auf C# und xUnit als Testframework. Es funktioniert aber auch mit MSTest und NUnit. Coverlet ist ein [Open-Source-Projekt auf GitHub](https://github.com/coverlet-coverage/coverlet), das ein plattformübergreifendes Code-Coverage-Framework für C# bereitstellt. [Coverlet](https://dotnetfoundation.org/projects/coverlet) ist Teil der .NET Foundation. Coverlet sammelt Code-Coverage-Testlaufdaten von Cobertura, die für die Berichtsgenerierung verwendet werden.
 
 Außerdem wird in diesem Artikel erläutert, wie die Code-Coverage-Informationen, die von einem Coverlet-Testlauf gesammelt wurden, zum Generieren eines Berichts verwendet werden. Die Berichtsgenerierung ist mithilfe eines anderen [Open-Source-Projekts auf GitHub, ReportGenerator,](https://github.com/danielpalme/ReportGenerator) möglich. ReportGenerator wandelt von Cobertura und vielen anderen generierte Coverageberichte in für Menschen lesbare Berichte in unterschiedlichen Formaten um.
+
+Dieser Artikel basiert auf dem [Beispiequellcodeprojekt](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs), das im Beispielbrowser verfügbar ist.
 
 ## <a name="system-under-test"></a>Getestetes System
 
@@ -300,6 +302,7 @@ Nachdem Sie diesen Befehl ausgeführt haben, stellt eine HTML-Datei den generier
 - [GitHub-Repository „ReportGenerator“](https://github.com/danielpalme/ReportGenerator)
 - [Projektwebsite zu ReportGenerator](https://danielpalme.github.io/ReportGenerator)
 - [Testbefehl in der Dokumentation zur .NET Core-CLI](../tools/dotnet-test.md)
+- [Beispielquellcode](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
