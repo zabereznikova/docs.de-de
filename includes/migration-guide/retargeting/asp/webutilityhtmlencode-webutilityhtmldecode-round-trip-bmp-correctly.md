@@ -1,18 +1,28 @@
 ---
-ms.openlocfilehash: ca662b57fae9b1d0d41290f3052f71bca66e9bf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: acb5b467fc8f0692d8fa1b3b8263fd27308cc124
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617164"
 ---
-### <a name="webutilityhtmlencode-and-webutilityhtmldecode-round-trip-bmp-correctly"></a><span data-ttu-id="8a701-101">WebUtility.HtmlEncode und WebUtility.HtmlDecode führen für die BMP eine ordnungsgemäße Roundtripkonvertierung durch</span><span class="sxs-lookup"><span data-stu-id="8a701-101">WebUtility.HtmlEncode and WebUtility.HtmlDecode round-trip BMP correctly</span></span>
+### <a name="webutilityhtmlencode-and-webutilityhtmldecode-round-trip-bmp-correctly"></a><span data-ttu-id="93154-101">WebUtility.HtmlEncode und WebUtility.HtmlDecode führen für die BMP eine ordnungsgemäße Roundtripkonvertierung durch</span><span class="sxs-lookup"><span data-stu-id="93154-101">WebUtility.HtmlEncode and WebUtility.HtmlDecode round-trip BMP correctly</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="8a701-102">Details</span><span class="sxs-lookup"><span data-stu-id="8a701-102">Details</span></span>|<span data-ttu-id="8a701-103">Bei Anwendungen mit der Zielplattform .NET Framework 4.5 wird für Zeichen, die sich außerhalb der Basic Multilingual Plane (BMP) befinden, eine erfolgreiche Roundtripkonvertierung durchgeführt, wenn sie an die <xref:System.Net.WebUtility.HtmlDecode(System.String)>-Methoden übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="8a701-103">For applications that target the .NET Framework 4.5, characters that are outside the Basic Multilingual Plane (BMP) round-trip correctly when they are passed to the <xref:System.Net.WebUtility.HtmlDecode(System.String)> methods.</span></span>|
-|<span data-ttu-id="8a701-104">Vorschlag</span><span class="sxs-lookup"><span data-stu-id="8a701-104">Suggestion</span></span>|<span data-ttu-id="8a701-105">Diese Änderung sollte keine Auswirkung auf aktuelle Anwendungen haben. Wenn Sie jedoch das ursprüngliche Verhalten wiederherstellen möchten, legen Sie das Attribut <code>targetFramework</code> des Elements <code>&lt;httpRuntime&gt;</code> auf eine andere Zeichenfolge als &quot;4.5&quot; fest.</span><span class="sxs-lookup"><span data-stu-id="8a701-105">This change should have no effect on current applications, but to restore the original behavior, set the <code>targetFramework</code> attribute of the <code>&lt;httpRuntime&gt;</code> element to a string other than &quot;4.5&quot;.</span></span> <span data-ttu-id="8a701-106">Sie können die <code>unicodeEncodingConformance</code>- und <code>unicodeDecodingConformance</code>-Attribute des <code>&lt;webUtility&gt;</code>-Konfigurationselements auch festlegen, um dieses Verhalten unabhängig von der Zielversion von .NET Framework zu steuern.</span><span class="sxs-lookup"><span data-stu-id="8a701-106">You can also set the <code>unicodeEncodingConformance</code> and <code>unicodeDecodingConformance</code> attributes of the <code>&lt;webUtility&gt;</code> configuration element to control this behavior independently of the targeted version of the .NET Framework.</span></span>|
-|<span data-ttu-id="8a701-107">Bereich</span><span class="sxs-lookup"><span data-stu-id="8a701-107">Scope</span></span>|<span data-ttu-id="8a701-108">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="8a701-108">Edge</span></span>|
-|<span data-ttu-id="8a701-109">Version</span><span class="sxs-lookup"><span data-stu-id="8a701-109">Version</span></span>|<span data-ttu-id="8a701-110">4.5</span><span class="sxs-lookup"><span data-stu-id="8a701-110">4.5</span></span>|
-|<span data-ttu-id="8a701-111">Typ</span><span class="sxs-lookup"><span data-stu-id="8a701-111">Type</span></span>|<span data-ttu-id="8a701-112">Neuzuweisung</span><span class="sxs-lookup"><span data-stu-id="8a701-112">Retargeting</span></span>|
-|<span data-ttu-id="8a701-113">Betroffene APIs</span><span class="sxs-lookup"><span data-stu-id="8a701-113">Affected APIs</span></span>|<ul><li><xref:System.Net.WebUtility.HtmlEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Net.WebUtility.HtmlEncode(System.String,System.IO.TextWriter)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="93154-102">Details</span><span class="sxs-lookup"><span data-stu-id="93154-102">Details</span></span>
+
+<span data-ttu-id="93154-103">Bei Anwendungen mit der Zielplattform .NET Framework 4.5 wird für Zeichen, die sich außerhalb der Basic Multilingual Plane (BMP) befinden, eine erfolgreiche Roundtripkonvertierung durchgeführt, wenn sie an die <xref:System.Net.WebUtility.HtmlDecode(System.String)>-Methoden übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="93154-103">For applications that target the .NET Framework 4.5, characters that are outside the Basic Multilingual Plane (BMP) round-trip correctly when they are passed to the <xref:System.Net.WebUtility.HtmlDecode(System.String)> methods.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="93154-104">Vorschlag</span><span class="sxs-lookup"><span data-stu-id="93154-104">Suggestion</span></span>
+
+<span data-ttu-id="93154-105">Diese Änderung sollte keine Auswirkung auf aktuelle Anwendungen haben. Wenn Sie jedoch das ursprüngliche Verhalten wiederherstellen möchten, legen Sie das Attribut `targetFramework` des Elements `<httpRuntime>` auf eine andere Zeichenfolge als „4.5“ fest.</span><span class="sxs-lookup"><span data-stu-id="93154-105">This change should have no effect on current applications, but to restore the original behavior, set the `targetFramework` attribute of the `<httpRuntime>` element to a string other than "4.5".</span></span> <span data-ttu-id="93154-106">Sie können die `unicodeEncodingConformance`- und `unicodeDecodingConformance`-Attribute des `<webUtility>`-Konfigurationselements auch festlegen, um dieses Verhalten unabhängig von der Zielversion von .NET Framework zu steuern.</span><span class="sxs-lookup"><span data-stu-id="93154-106">You can also set the `unicodeEncodingConformance` and `unicodeDecodingConformance` attributes of the `<webUtility>` configuration element to control this behavior independently of the targeted version of the .NET Framework.</span></span>
+
+| <span data-ttu-id="93154-107">name</span><span class="sxs-lookup"><span data-stu-id="93154-107">Name</span></span>    | <span data-ttu-id="93154-108">Wert</span><span class="sxs-lookup"><span data-stu-id="93154-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="93154-109">Bereich</span><span class="sxs-lookup"><span data-stu-id="93154-109">Scope</span></span>   | <span data-ttu-id="93154-110">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="93154-110">Edge</span></span>        |
+| <span data-ttu-id="93154-111">Version</span><span class="sxs-lookup"><span data-stu-id="93154-111">Version</span></span> | <span data-ttu-id="93154-112">4.5</span><span class="sxs-lookup"><span data-stu-id="93154-112">4.5</span></span>         |
+| <span data-ttu-id="93154-113">Typ</span><span class="sxs-lookup"><span data-stu-id="93154-113">Type</span></span>    | <span data-ttu-id="93154-114">Neuzuweisung</span><span class="sxs-lookup"><span data-stu-id="93154-114">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="93154-115">Betroffene APIs</span><span class="sxs-lookup"><span data-stu-id="93154-115">Affected APIs</span></span>
+
+- <xref:System.Net.WebUtility.HtmlEncode(System.String)?displayProperty=nameWithType>
+- <xref:System.Net.WebUtility.HtmlEncode(System.String,System.IO.TextWriter)?displayProperty=nameWithType>
