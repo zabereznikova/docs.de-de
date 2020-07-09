@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: Offizielle .NET-Docker-Images
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: Architekturentwurf von Container- und auf Microservice basierenden Apps
+    - name: Architekturcontainer und auf Microservice basierende Anwendungen
       href: architect-microservice-container-applications/index.md
       items:
         - name: Containerisieren monolithischer Anwendungen
@@ -60,12 +60,12 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: Entwicklungsprozess bei Docker-basierten Apps
+    - name: Entwicklungsprozess für auf Docker-basierende Anwendungen
       href: docker-application-development-process/index.md
       items:
         - name: Entwicklungsworkflow für Docker-Apps
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: Entwerfen und Entwickeln von auf mehreren Containern und Microservice-basierenden .NET-Apps
+    - name: 'Entwerfen und Entwickeln von .NET-Anwendungen, die auf mehreren Containern und Microservice basieren'
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: Entwerfen einer an Microservice orientierten Anwendung
@@ -118,14 +118,14 @@
         - name: Entwerfen der Persistenzebene der Infrastruktur
           href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
         - name: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
-          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implementation-entity-framework-core.md
         - name: Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
           href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
         - name: Entwerfen der Microserviceanwendungsschicht und Web-API
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: Implementieren resilienter Apps
+    - name: Implementieren von widerstandsfähigen Anwendungen
       href: implement-resilient-applications/index.md
       items:
         - name: Behandeln von Teilfehlern
@@ -144,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: Systemüberwachung
           href: implement-resilient-applications/monitor-app-health.md
-    - name: Sichere .NET-Microservices und -Webanwendungen
+    - name: Sichern von .NET-Microservices und Webanwendungen
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
