@@ -10,6 +10,7 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051648"
@@ -37,7 +38,7 @@ Der `loadFromContext`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, 
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Der MDA hat keinen Einfluss auf die CLR. Er gibt den Kontext an, der als Ergebnis einer Ladeanforderung verwendet wurde.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Der MDA meldet, dass die Assembly in den `LoadFrom`-Kontext geladen wurde. Er gibt den einfachen Namen der Assembly und den Pfad an. Er weist auch auf Möglichkeiten hin, um das Verwenden des `LoadFrom`-Kontexts zu vermeiden.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -70,6 +71,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)

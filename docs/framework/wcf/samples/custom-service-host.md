@@ -4,6 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
 ms.openlocfilehash: 8302c3c829883da954d200526ca641eb4c169f98
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052025"
@@ -173,6 +174,6 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 
 5. Führen Sie *Cleanup.bat*aus, um die IIS 7,0-Anwendung zu entfernen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Vorgehensweise: Hosten eines WCF-Diensts in IIS](../feature-details/how-to-host-a-wcf-service-in-iis.md)

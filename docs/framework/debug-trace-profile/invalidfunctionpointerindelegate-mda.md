@@ -14,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
 ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051739"
@@ -33,7 +34,7 @@ Der `invalidFunctionPointerInDelegate` Assistent für verwaltetes Debuggen (MDA)
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Der ungültige Funktionszeiger.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -46,7 +47,7 @@ Der `invalidFunctionPointerInDelegate` Assistent für verwaltetes Debuggen (MDA)
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)

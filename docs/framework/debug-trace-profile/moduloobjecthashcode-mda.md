@@ -13,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 ms.openlocfilehash: a929ec2b9196f1f6cad0528fdf7323839a86fa55
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052064"
@@ -44,7 +45,7 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Anwendungen werden langsamer ausgeführt, wenn dieser MDA aktiviert ist. Dieser MDA übernimmt lediglich den Hashcode, der zurückgegeben wurde und gibt stattdessen den Rest nach dem Dividieren durch einen Modulo zurück.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Es gibt keine Ausgabe für diesen MDA.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -58,7 +59,7 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
