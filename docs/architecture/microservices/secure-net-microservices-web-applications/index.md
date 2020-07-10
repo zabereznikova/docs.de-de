@@ -3,12 +3,12 @@ title: Sichern von .NET-Microservices und Webanwendungen
 description: Sicherheit in .NET-Microservices und -Webanwendungen – Lernen Sie die Authentifizierungsoptionen in ASP.NET Core-Webanwendungen kennen.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 56ebd95c8a24c7c8d30d3c6acef6650cb63383c6
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 2b503b326d1869ae095f9b177c04389bda9fe46c
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988114"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100781"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Erstellen sicherer .NET-Microservices und -Webanwendungen
 
@@ -16,7 +16,7 @@ Das Thema Sicherheit in Microservices und Webanwendungen hat so viele Aspekte, d
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>Implementieren von Authentifizierung in .NET-Microservices und -Webanwendungen
 
-Ressourcen und APIs, die durch einen Dienst veröffentlicht wurden, müssen oftmals auf bestimmte vertrauenswürdige Benutzer oder Clients beschränkt werden. Der erste Schritt zur Durchführung dieser Entscheidungen über die Vertrauenswürdigkeit auf API-Ebene ist die Authentifizierung. Authentifizierung bezeichnet den Vorgang der zuverlässigen Überprüfung der Identität eines Benutzers.
+Ressourcen und APIs, die durch einen Dienst veröffentlicht wurden, müssen oftmals auf bestimmte vertrauenswürdige Benutzer oder Clients beschränkt werden. Der erste Schritt zur Durchführung dieser Entscheidungen über die Vertrauenswürdigkeit auf API-Ebene ist die Authentifizierung. Authentifizierung bezeichnet den Vorgang, die Identität eines Benutzers zuverlässig zu überprüfen.
 
 In Microservice-Szenarios wird die Authentifizierung in der Regel zentral verarbeitet. Wenn Sie ein API-Gateway verwenden, ist dieses Gateway ein guter Ort, um die Authentifizierung durchzuführen, so wie in Abbildung 9-1 dargestellt. Wenn Sie nach diesem Ansatz vorgehen, stellen Sie sicher, dass die einzelnen Microservices nicht direkt (ohne das API-Gateway) erreicht werden können, außer es kann zusätzliche Sicherheit garantiert werden, um Benachrichtigen danach zu authentifizieren, ob sie vom Gateway stammen oder nicht.
 
