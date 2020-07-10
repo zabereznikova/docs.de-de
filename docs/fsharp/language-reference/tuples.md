@@ -1,13 +1,13 @@
 ---
 title: Tupel
-description: Erfahren Sie mehr F# über das Tupel, eine Gruppierung unbenannter, aber geordneter Werte, die möglicherweise unterschiedliche Typen haben.
+description: 'Erfahren Sie mehr über das F #-Tupel, eine Gruppierung unbenannter, aber geordneter Werte, die möglicherweise unterschiedlich sind.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a15d7e0c6c9b42118dd75066f02cbb2e05335fc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d26fd5d7ec5b4939a895a6d2a6a0d7fc6c6c733
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630239"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173288"
 ---
 # <a name="tuples"></a>Tupel
 
@@ -20,9 +20,9 @@ Ein *Tupel* ist eine Gruppierung unbenannter, aber geordneter Werte, die möglic
 struct(element, ... ,element )
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Jedes *Element* in der vorherigen Syntax kann jeder gültige F# Ausdruck sein.
+Jedes *Element* in der vorherigen Syntax kann ein beliebiger gültiger F #-Ausdruck sein.
 
 ## <a name="examples"></a>Beispiele
 
@@ -36,7 +36,7 @@ Sie können den Musterabgleich zum Zugreifen auf und Zuweisen von Namen für Tup
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-Sie können ein Tupel auch über einen Musterabgleich außerhalb eines Ausdrucks `match` über `let` eine Bindung dekonstruieren:
+Sie können ein Tupel auch über einen Musterabgleich außerhalb eines `match` Ausdrucks über eine `let` Bindung dekonstruieren:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
@@ -80,17 +80,17 @@ Wenn Sie ein Tupel als Parameter verwenden, wird die Currying deaktiviert. Weite
 
 ## <a name="names-of-tuple-types"></a>Namen von Tupeltypen
 
-Wenn Sie den Namen eines Typs schreiben, bei dem es sich um ein Tupel handelt, `*` verwenden Sie das Symbol zum Trennen von Elementen. Bei einem Tupel `int`, das aus `float`,, `(10, 10.0, "ten")`und `string`besteht, z. b., würde der Typ wie folgt geschrieben werden.
+Wenn Sie den Namen eines Typs schreiben, bei dem es sich um ein Tupel handelt, verwenden Sie das `*` Symbol zum Trennen von Elementen. Bei einem Tupel, das aus `int` ,, `float` und besteht `string` , z `(10, 10.0, "ten")` . b., würde der Typ wie folgt geschrieben werden.
 
 ```fsharp
 int * float * string
 ```
 
-## <a name="interoperation-with-c-tuples"></a>Interoperation mit C# Tupeln
+## <a name="interoperation-with-c-tuples"></a>Interoperation mit c#-Tupeln
 
-C#7,0 hat Tupel in der Sprache eingeführt.  Tupel in C# sind Strukturen und Strukturieren von Tupeln in F# entsprechen.  Wenn Sie mit C#interagieren müssen, müssen Sie strukturtupel verwenden.
+In c# 7,0 wurden Tupel in die Sprache eingeführt.  Tupel in c# sind Strukturen und entsprechen strukturtupeln in F #.  Wenn Sie mit c# interagieren müssen, müssen Sie strukturtupel verwenden.
 
-Dies ist einfach.  Stellen Sie sich beispielsweise vor, Sie müssen ein Tupel an C# eine Klasse übergeben und dann das Ergebnis, das auch ein Tupel ist, verbrauchen:
+Dies ist einfach.  Stellen Sie sich beispielsweise vor, Sie müssen ein Tupel an eine c#-Klasse übergeben und dann das Ergebnis, das auch ein Tupel ist, verbrauchen:
 
 ```csharp
 namespace CSharpTupleInterop
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-In Ihrem F# Code können Sie dann ein strukturtupel als Parameter übergeben und das Ergebnis als strukturtupel verarbeiten.
+Im F #-Code können Sie dann ein strukturtupel als Parameter übergeben und das Ergebnis als strukturtupel verarbeiten.
 
 ```fsharp
 open TupleInterop
@@ -118,7 +118,7 @@ Da verweistupel und strukturtupel über eine völlig andere zugrunde liegende Da
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-Sie müssen eine Muster Übereinstimmung für ein Tupel erstellen und das andere mit den Bestandteilen erstellen.  Zum Beispiel:
+Sie müssen eine Muster Übereinstimmung für ein Tupel erstellen und das andere mit den Bestandteilen erstellen.  Beispiele:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
@@ -126,13 +126,13 @@ Sie müssen eine Muster Übereinstimmung für ein Tupel erstellen und das andere
 
 In diesem Abschnitt wird die Form von Tupeln erläutert, wenn Sie kompiliert werden.  Die hier aufgeführten Informationen sind nur erforderlich, wenn Sie .NET Framework 3,5 oder niedriger abzielen.
 
-Tupel werden in Objekte von einem von mehreren generischen Typen kompiliert, die `System.Tuple`alle den Namen haben, die auf die Stelligkeit überladen werden, oder die Anzahl der Typparameter. Tuple-Typen werden in diesem Formular angezeigt, bei der Anzeige in einer anderen Sprache, z. B. C# oder Visual Basic, oder wenn Sie ein Tool verwenden, die F#-Konstrukte unbekannt ist. Die `Tuple` Typen wurden in .NET Framework 4 eingeführt. Wenn Sie eine frühere Version von .NET Framework Anzielen, verwendet der Compiler Versionen der [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) aus der Version 2.0 der F#-Kernbibliothek. Die Typen in dieser Bibliothek werden nur für Anwendungen verwendet, die auf die Versionen 2,0, 3,0 und 3,5 der .NET Framework abzielen. Die Typweiterleitung wird verwendet, um die binäre Kompatibilität zwischen .NET Framework 2,0 F# -und .NET Framework 4-Komponenten sicherzustellen.
+Tupel werden in Objekte von einem von mehreren generischen Typen kompiliert, die alle den Namen haben, die `System.Tuple` auf die Stelligkeit überladen werden, oder die Anzahl der Typparameter. Tupeltypen werden in dieser Form angezeigt, wenn Sie Sie aus einer anderen Sprache anzeigen, z. b. c# oder Visual Basic, oder wenn Sie ein Tool verwenden, das keine F #-Konstrukte kennt. Die `Tuple` Typen wurden in .NET Framework 4 eingeführt. Wenn Sie eine frühere Version des .NET Framework als Ziel verwenden, verwendet der Compiler Versionen von [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) aus Version 2,0 der F #-Kernbibliothek. Die Typen in dieser Bibliothek werden nur für Anwendungen verwendet, die auf die Versionen 2,0, 3,0 und 3,5 der .NET Framework abzielen. Die Typweiterleitung wird verwendet, um die binäre Kompatibilität zwischen .NET Framework 2,0-und .NET Framework 4 F #-Komponenten sicherzustellen.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Kompilierte Form von strukturtupeln
 
-Strukturtupel (z `struct (x, y)`. b.) unterscheiden sich grundlegend von verweistupeln.  Sie werden in den <xref:System.ValueTuple> Typ kompiliert, überlastet durch Stelligkeit oder die Anzahl der Typparameter.  Sie entsprechen [ C# 7,0-Tupeln](../../csharp/tuples.md) und [Visual Basic 2017-Tupeln](../../visual-basic/programming-guide/language-features/data-types/tuples.md)und interagieren bidirektional.
+Strukturtupel (z. b. `struct (x, y)` ) unterscheiden sich grundlegend von verweistupeln.  Sie werden in den <xref:System.ValueTuple> Typ kompiliert, überlastet durch Stelligkeit oder die Anzahl der Typparameter.  Sie entsprechen [c# 7,0-Tupeln](../../csharp/language-reference/builtin-types/value-tuples.md) und [Visual Basic 2017-Tupeln](../../visual-basic/programming-guide/language-features/data-types/tuples.md)und interagieren bidirektional.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [F#-Sprachreferenz](index.md)
 - [F#-Typen](fsharp-types.md)

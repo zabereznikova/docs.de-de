@@ -1,29 +1,30 @@
 ---
 title: 'Vorgehensweise: Erstellen von übergeordneten MDI-Formularen'
+description: Erfahren Sie, wie Sie ein übergeordnetes MDI-Formular Programm gesteuert und mithilfe des Windows Forms-Designer erstellen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 2aa4261d6354f744f000f36a87e70a39f5c004ea
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: d387837a565ca247f62828c19f353990b35117c7
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211390"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174704"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Vorgehensweise: Erstellen von übergeordneten MDI-Formularen
 
 > [!IMPORTANT]
-> In diesem Thema wird das Steuerelement <xref:System.Windows.Forms.MainMenu> verwendet, welches durch das Steuerelement <xref:System.Windows.Forms.MenuStrip> ersetzt wurde. Das Steuerelement <xref:System.Windows.Forms.MainMenu> kann, falls gewünscht, für die Abwärtskompatibilität und zur künftigen Verwendung beibehalten werden. Informationen zum Erstellen einer MDI übergeordneten Formular mit einem <xref:System.Windows.Forms.MenuStrip>, finden Sie unter [Vorgehensweise: Erstellen eine MDI-Fensterliste mithilfe von MenuStrip](../controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).
+> In diesem Thema wird das Steuerelement <xref:System.Windows.Forms.MainMenu> verwendet, welches durch das Steuerelement <xref:System.Windows.Forms.MenuStrip> ersetzt wurde. Das Steuerelement <xref:System.Windows.Forms.MainMenu> kann, falls gewünscht, für die Abwärtskompatibilität und zur künftigen Verwendung beibehalten werden. Weitere Informationen zum Erstellen eines übergeordneten MDI-Formulars mit einem finden Sie unter Gewusst <xref:System.Windows.Forms.MenuStrip> [wie: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip](../controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).
 
 Die Grundlage einer MDI (Multiple Document Interface)-Anwendung ist das übergeordnete MDI-Formular. Dies ist das Formular, das untergeordnete MDI-Fenster enthält. In diesen Unterfenstern interagiert der Benutzer mit der MDI-Anwendung. Ein übergeordnetes MDI-Formular lässt sich sowohl im Windows Forms-Designer als auch programmgesteuert leicht erstellen.
 
-## <a name="create-an-mdi-parent-form-at-design-time"></a>Erstellen Sie einen übergeordneten MDI-Formulars zur Entwurfszeit
+## <a name="create-an-mdi-parent-form-at-design-time"></a>Erstellen eines übergeordneten MDI-Formulars zur Entwurfszeit
 
 1. Erstellen Sie ein Windows-Anwendungsprojekt in Visual Studio.
 
-2. In der **Eigenschaften** legen die <xref:System.Windows.Forms.Form.IsMdiContainer%2A> Eigenschaft **"true"**.
+2. Legen Sie im Fenster **Eigenschaften** die- <xref:System.Windows.Forms.Form.IsMdiContainer%2A> Eigenschaft auf **true**fest.
 
      Dies kennzeichnet das Formular als MDI-Container für untergeordnete Fenster.
 
@@ -34,9 +35,9 @@ Die Grundlage einer MDI (Multiple Document Interface)-Anwendung ist das übergeo
 
      Durch das erste Menü werden Menüelemente zur Laufzeit erstellt und ausgeblendet, während über das zweite Menü die offenen untergeordneten MDI-Fenster nachverfolgt werden. Jetzt haben Sie ein übergeordnetes MDI-Fenster erstellt.
 
-4. Drücken Sie **F5**, um die Anwendung auszuführen. Informationen zum Erstellen von untergeordneten MDI-Fenstern, innerhalb von übergeordneten MDI-Formulars verwendet werden, finden Sie unter [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md).
+4. Drücken Sie **F5**, um die Anwendung auszuführen. Informationen zum Erstellen von untergeordneten MDI-Fenstern, die innerhalb der übergeordneten MDI-Formulars verwendet werden, finden Sie unter [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [MDI-Anwendungen (Multiple Document Interface)](multiple-document-interface-mdi-applications.md)
 - [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md)

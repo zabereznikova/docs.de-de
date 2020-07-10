@@ -1,5 +1,6 @@
 ---
 title: Webbrowser Funktionen zur APP hinzufügen
+description: Erfahren Sie, wie Sie mit dem Webbrowser-Steuerelement einer Windows Forms Anwendung Webbrowser Funktionen hinzufügen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 7cb789121f4aa9a1e7cef54f992d0697ce6dfc62
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a5a33961ac8301bda86bb5f34e65ac159308987f
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543572"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174548"
 ---
 # <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Vorgehensweise beim Hinzufügen von Webbrowser Funktionen zu einer Windows Forms Anwendung
 
@@ -33,11 +34,11 @@ Im folgenden Beispielcode werden eine Adressleiste, typische Browserschaltfläch
   
 ## <a name="compile-the-code"></a>Kompilieren des Codes
 
-Dieses Beispiel erfordert Folgendes:
+Für dieses Beispiel benötigen Sie Folgendes:
 
 - Verweise auf die Assemblys `System`, `System.Drawing` und `System.Windows.Forms`.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.WebBrowser>
 - [WebBrowser-Steuerelement](webbrowser-control-windows-forms.md)

@@ -1,22 +1,25 @@
 ---
-title: Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit blazor
-description: Erfahren Sie, wie Sie wiederverwendbare UI-Komponenten mit blazor erstellen und wie Sie mit ASP.net-Web Forms Steuerelementen vergleichen.
+title: Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mitBlazor
+description: Erfahren Sie, wie Sie wiederverwendbare UI-Komponenten mit erstellen Blazor und wie Sie mit ASP.net-Web Forms Steuerelementen vergleichen.
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 9577fc916bb11783b885b2641242820865c0b115
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051451"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173339"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a>Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit blazor
+# <a name="build-reusable-ui-components-with-blazor"></a>Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mitBlazor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Eine der schönen Aspekte von ASP.net Web Forms ist, wie Sie wiederverwendbare Elemente von Benutzeroberflächen Code in wiederverwendbare UI-Steuerelemente einkapseln kann. Benutzerdefinierte Benutzer Steuerelemente können mithilfe von *ASCX* -Dateien im Markup definiert werden. Mit vollständiger Designer Unterstützung können Sie auch aufwändige Server Steuerelemente im Code erstellen.
 
-Blazor unterstützt auch die Benutzeroberflächen Kapselung durch- *Komponenten*. Eine Komponente:
+Blazorunterstützt auch die Benutzeroberflächen Kapselung durch *Komponenten*. Eine Komponente:
 
 - Bei handelt es sich um einen eigenständigen Block von Benutzeroberflächen.
 - Behält seine eigene Zustands-und Renderinglogik bei.
@@ -74,7 +77,7 @@ Razor-Direktiven beginnen mit dem `@` Zeichen und werden in der Regel am Anfang 
 @namespace MyComponentNamespace
 ```
 
-In der folgenden Tabelle werden die verschiedenen Razor-Direktiven, die in blazor verwendet werden, und deren Web Forms ASP.NET-Entsprechungen zusammengefasst, sofern vorhanden
+In der folgenden Tabelle werden die verschiedenen Razor-Direktiven, die in verwendet werden Blazor , sowie deren Web Forms ASP.NET-Entsprechungen zusammengefasst, sofern vorhanden
 
 |Anweisung    |Beschreibung|Beispiel|Web Forms Äquivalent|
 |-------------|-----------|-------|--------------------|
@@ -95,7 +98,7 @@ Razor-Komponenten machen außerdem eine umfassende Verwendung von *direktivenatt
 @directive(-suffix(:name))(="value")
 ```
 
-In der folgenden Tabelle werden die verschiedenen Attribute der in blazor verwendeten Razor-Direktiven zusammengefasst.
+In der folgenden Tabelle werden die verschiedenen Attribute der in verwendeten Razor-Direktiven zusammengefasst Blazor .
 
 |attribute    |BESCHREIBUNG|Beispiel|
 |-------------|-----------|-------|
@@ -105,11 +108,11 @@ In der folgenden Tabelle werden die verschiedenen Attribute der in blazor verwen
 |`@key`       |Gibt einen Schlüssel an, der vom diffingalgorithmus zum Beibehalten von Elementen in einer Auflistung verwendet werden soll.|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |Zeichnet einen Verweis auf die Komponente oder das HTML-Element auf.|`<MyDialog @ref="myDialog" />`|
 
-Die verschiedenen von blazor ( `@onclick` ,, usw.) verwendeten Direktivenattribute `@bind` `@ref` werden in den Abschnitten unten und in späteren Kapiteln behandelt.
+Die verschiedenen von verwendeten Direktivenattribute Blazor ( `@onclick` , `@bind` , `@ref` usw.) werden in den Abschnitten unten und in späteren Kapiteln behandelt.
 
 Viele der Syntaxen, die in *aspx* -und *ASCX* -Dateien verwendet werden, haben eine parallele Syntax in Razor. Im folgenden finden Sie einen einfachen Vergleich der Syntaxen für ASP.net Web Forms und Razor.
 
-|Komponente                      |Web Forms           |Syntax               |Razor         |Syntax |
+|Merkmal                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Anweisungen                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Codeblöcke                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -130,7 +133,7 @@ Verwenden Sie die-Direktive, um der Razor-Komponenten Klasse Elemente hinzuzufü
 }
 ```
 
-Da Razor auf c# basiert, muss es in einem c#-Projekt (*. csproj*) kompiliert werden. *Razor* -Dateien können nicht aus einem Visual Basic Projekt (*vbproj*) kompiliert werden. Sie können weiterhin auf Visual Basic Projekte aus Ihrem blazor-Projekt verweisen. Das Gegenteil gilt auch für.
+Da Razor auf c# basiert, muss es in einem c#-Projekt (*. csproj*) kompiliert werden. *Razor* -Dateien können nicht aus einem Visual Basic Projekt (*vbproj*) kompiliert werden. Sie können weiterhin auf Visual Basic Projekte aus Ihrem Blazor Projekt verweisen. Das Gegenteil gilt auch für.
 
 Eine vollständige Razor-Syntax Referenz finden Sie unter [Razor-Syntax Referenz für ASP.net Core](/aspnet/core/mvc/views/razor).
 
@@ -142,7 +145,7 @@ Abgesehen von normalem HTML können Komponenten auch andere Komponenten als Teil
 <Counter />
 ```
 
-Im Gegensatz zu ASP.net-Web Forms Komponenten in blazor:
+Im Gegensatz zu ASP.net-Web Forms Komponenten in Blazor :
 
 - Verwenden Sie kein Element Präfix (z `asp:` . b.).
 - Sie müssen nicht auf der Seite oder in der *web.config*registriert werden.
@@ -155,7 +158,7 @@ Stellen Sie sich die Razor-Komponenten wie .NET-Typen vor, denn das ist genau da
 <Counter />
 ```
 
-Wie in den standardmäßigen blazor-Projekten gezeigt, werden `@using` Direktiven häufig in eine *_Imports. Razor* -Datei eingefügt, sodass Sie in alle *Razor* -Dateien im gleichen Verzeichnis und in untergeordneten Verzeichnissen importiert werden.
+Wie in den Standard Blazor Projekten zu sehen ist, werden `@using` Direktiven häufig in eine *_Imports. Razor* -Datei eingefügt, sodass Sie in alle *Razor* -Dateien im gleichen Verzeichnis und in untergeordneten Verzeichnissen importiert werden.
 
 Wenn sich der Namespace für eine Komponente nicht im Gültigkeitsbereich befindet, können Sie eine Komponente mit dem vollständigen Typnamen wie in c# angeben:
 
@@ -165,7 +168,7 @@ Wenn sich der Namespace für eine Komponente nicht im Gültigkeitsbereich befind
 
 ## <a name="component-parameters"></a>Komponentenparameter
 
-In ASP.net Web Forms können Sie mithilfe öffentlicher Eigenschaften Parameter und Daten an Steuerelemente weitergeleitet. Diese Eigenschaften können in Markup mithilfe von Attributen festgelegt oder direkt im Code festgelegt werden. Blazor-Komponenten funktionieren in ähnlicher Weise, obwohl die Komponenteneigenschaften auch mit dem-Attribut gekennzeichnet werden müssen `[Parameter]` , um als Komponenten Parameter angesehen zu werden.
+In ASP.net Web Forms können Sie mithilfe öffentlicher Eigenschaften Parameter und Daten an Steuerelemente weitergeleitet. Diese Eigenschaften können in Markup mithilfe von Attributen festgelegt oder direkt im Code festgelegt werden. BlazorKomponenten funktionieren in ähnlicher Weise, obwohl die Komponenteneigenschaften auch mit dem-Attribut gekennzeichnet werden müssen `[Parameter]` , um als Komponenten Parameter angesehen zu werden.
 
 Die folgende `Counter` Komponente definiert einen Komponenten Parameter mit dem Namen `IncrementAmount` , der verwendet werden kann, um den Betrag anzugeben, der bei `Counter` jedem Klicken auf die Schaltfläche erhöht werden soll.
 
@@ -189,7 +192,7 @@ Die folgende `Counter` Komponente definiert einen Komponenten Parameter mit dem 
 }
 ```
 
-Um einen Komponenten Parameter in blazor anzugeben, verwenden Sie ein Attribut wie in ASP.net Web Forms:
+Um einen Komponenten Parameter in anzugeben Blazor , verwenden Sie ein Attribut wie in ASP.net Web Forms:
 
 ```razor
 <Counter IncrementAmount="10" />
@@ -197,7 +200,7 @@ Um einen Komponenten Parameter in blazor anzugeben, verwenden Sie ein Attribut w
 
 ## <a name="event-handlers"></a>Ereignishandler
 
-Sowohl ASP.net Web Forms als auch blazor stellen ein Ereignis basiertes Programmiermodell für die Behandlung von Benutzeroberflächen Ereignissen bereit. Beispiele für derartige Ereignisse sind Schaltflächen Klicks und Texteingaben. In ASP.net Web Forms verwenden Sie HTML-Server Steuerelemente zur Handhabung von Benutzeroberflächen Ereignissen, die vom DOM verfügbar gemacht werden, oder Sie können Ereignisse behandeln, die von Webserver Steuerelementen verfügbar gemacht werden. Die Ereignisse werden auf dem Server über Formular-POST Back Anforderungen angezeigt. Beachten Sie die folgenden Web Forms Schaltflächen-Click-Beispiel:
+Beide ASP.net Web Forms und Blazor stellen ein Ereignis basiertes Programmiermodell für die Behandlung von Benutzeroberflächen Ereignissen bereit. Beispiele für derartige Ereignisse sind Schaltflächen Klicks und Texteingaben. In ASP.net Web Forms verwenden Sie HTML-Server Steuerelemente zur Handhabung von Benutzeroberflächen Ereignissen, die vom DOM verfügbar gemacht werden, oder Sie können Ereignisse behandeln, die von Webserver Steuerelementen verfügbar gemacht werden. Die Ereignisse werden auf dem Server über Formular-POST Back Anforderungen angezeigt. Beachten Sie die folgenden Web Forms Schaltflächen-Click-Beispiel:
 
 *Counter. ascx*
 
@@ -217,7 +220,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-In blazor können Sie Handler für DOM UI-Ereignisse direkt mithilfe von direktivenattributen im Formular registrieren `@on{event}` . Der `{event}` Platzhalter stellt den Namen des Ereignisses dar. Beispielsweise können Sie auf Schaltflächen Klicks wie folgt lauschen:
+In Blazor können Sie Handler für DOM-UI-Ereignisse direkt mithilfe von direktivenattributen im Formular registrieren `@on{event}` . Der `{event}` Platzhalter stellt den Namen des Ereignisses dar. Beispielsweise können Sie auf Schaltflächen Klicks wie folgt lauschen:
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -308,7 +311,7 @@ Komponenten können auch eigene Ereignisse definieren, indem Sie einen Komponent
 
 ## <a name="data-binding"></a>Datenbindung
 
-Blazor stellt einen einfachen Mechanismus bereit, mit dem Daten aus einer Benutzeroberflächen Komponente an den Status der Komponente gebunden werden können. Diese Vorgehensweise unterscheidet sich von den Features in ASP.net Web Forms für das Binden von Daten aus Datenquellen an UI-Steuerelemente. Im Abschnitt [Umgang mit Daten](data.md) wird die Behandlung von Daten aus verschiedenen Datenquellen behandelt.
+Blazorstellt einen einfachen Mechanismus bereit, mit dem Daten aus einer Benutzeroberflächen Komponente an den Status der Komponente gebunden werden können. Diese Vorgehensweise unterscheidet sich von den Features in ASP.net Web Forms für das Binden von Daten aus Datenquellen an UI-Steuerelemente. Im Abschnitt [Umgang mit Daten](data.md) wird die Behandlung von Daten aus verschiedenen Datenquellen behandelt.
 
 Verwenden Sie zum Erstellen einer bidirektionalen Datenbindung von einer Benutzeroberflächen Komponente zum Status der Komponente das `@bind` direktivenattribut. Im folgenden Beispiel ist der Wert des Kontrollkästchens an das- `isChecked` Feld gebunden.
 
@@ -430,9 +433,9 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor-Komponenten verfügen auch über einen klar definierten Lebenszyklus. Der Lebenszyklus einer Komponente kann verwendet werden, um den Komponenten Status zu initialisieren und erweiterte Komponenten Verhalten zu implementieren.
+BlazorKomponenten verfügen auch über einen klar definierten Lebenszyklus. Der Lebenszyklus einer Komponente kann verwendet werden, um den Komponenten Status zu initialisieren und erweiterte Komponenten Verhalten zu implementieren.
 
-Alle Komponenten Lebenszyklus-Methoden von blazor haben sowohl synchrone als auch asynchrone Versionen. Das Komponenten Rendering ist synchron. Asynchrone Logik kann nicht als Teil des Komponenten Rendering ausgeführt werden. Alle asynchronen Logik muss als Teil einer `async` Lebenszyklus Methode ausgeführt werden.
+Alle Blazor Komponenten Lebenszyklus-Methoden haben synchrone und asynchrone Versionen. Das Komponenten Rendering ist synchron. Asynchrone Logik kann nicht als Teil des Komponenten Rendering ausgeführt werden. Alle asynchronen Logik muss als Teil einer `async` Lebenszyklus Methode ausgeführt werden.
 
 ### <a name="oninitialized"></a>Oninitialisiert
 
@@ -479,7 +482,7 @@ Der- `firstRender` Parameter ist `true` das erste Mal, wenn die Komponente geren
 
 ### <a name="idisposable"></a>IDisposable
 
-Blazor-Komponenten können implementieren `IDisposable` , um Ressourcen freizugeben, wenn die Komponente aus der Benutzeroberfläche entfernt wird. Eine Razor-Komponente kann `IDispose` mithilfe der- `@implements` Direktive implementiert werden:
+BlazorKomponenten können implementieren `IDisposable` , um Ressourcen freizugeben, wenn die Komponente aus der Benutzeroberfläche entfernt wird. Eine Razor-Komponente kann `IDispose` mithilfe der- `@implements` Direktive implementiert werden:
 
 ```razor
 @using System
@@ -497,9 +500,9 @@ Blazor-Komponenten können implementieren `IDisposable` , um Ressourcen freizuge
 
 ## <a name="capture-component-references"></a>Komponenten Verweise erfassen
 
-In ASP.net Web Forms ist es üblich, eine Steuerelement Instanz direkt im Code zu bearbeiten, indem Sie sich auf Ihre ID bezieht. In blazor ist es auch möglich, einen Verweis auf eine Komponente zu erfassen und zu bearbeiten, obwohl Sie viel weniger häufig ist.
+In ASP.net Web Forms ist es üblich, eine Steuerelement Instanz direkt im Code zu bearbeiten, indem Sie sich auf Ihre ID bezieht. In ist Blazor es auch möglich, einen Verweis auf eine Komponente zu erfassen und zu bearbeiten, obwohl Sie viel weniger häufig ist.
 
-Um einen Komponenten Verweis in blazor zu erfassen, verwenden Sie das `@ref` direktivenattribut. Der Wert des-Attributs sollte mit dem Namen eines festleg baren Felds mit dem gleichen Typ wie die Komponente übereinstimmen, auf die verwiesen wird.
+Um einen Komponenten Verweis in zu erfassen Blazor , verwenden Sie das `@ref` direktivenattribut. Der Wert des-Attributs sollte mit dem Namen eines festleg baren Felds mit dem gleichen Typ wie die Komponente übereinstimmen, auf die verwiesen wird.
 
 ```razor
 <MyLoginDialog @ref="loginDialog" ... />
@@ -520,17 +523,17 @@ Das direkte Bearbeiten des Komponenten Zustands mithilfe von Komponenten verweis
 
 ## <a name="capture-element-references"></a>Element Verweise erfassen
 
-Blazor-Komponenten können Verweise auf ein Element erfassen. Im Gegensatz zu HTML-Server Steuerelementen in ASP.net-Web Forms können Sie das DOM nicht direkt mithilfe eines Element Verweises in blazor manipulieren. Blazor verarbeitet die meisten Dom-Interaktionen für Sie mithilfe des DOM-diffingalgorithmus. Erfasste Element Verweise in blazor sind nicht transparent. Sie werden jedoch verwendet, um einen bestimmten Element Verweis in einem JavaScript-Interop-Befehl zu übergeben. Weitere Informationen zum JavaScript-Interop finden Sie unter [ASP.net Core blazor JavaScript-Interop](/aspnet/core/blazor/javascript-interop).
+BlazorKomponenten können Verweise auf ein Element erfassen. Im Gegensatz zu HTML-Server Steuerelementen in ASP.net-Web Forms können Sie das DOM nicht direkt mithilfe eines Element Verweises in bearbeiten Blazor . Blazorbehandelt die meisten Dom-Interaktionen für Sie mit dem Dom-diffingalgorithmus. Erfasste Element Verweise in sind nicht transparent Blazor . Sie werden jedoch verwendet, um einen bestimmten Element Verweis in einem JavaScript-Interop-Befehl zu übergeben. Weitere Informationen zum JavaScript-Interop finden Sie unter [ASP.net Core Blazor JavaScript-Interop](/aspnet/core/blazor/javascript-interop).
 
 ## <a name="templated-components"></a>Komponenten mit Vorlagen
 
 In ASP.net Web Forms können Sie Steuer *Elemente*mit Vorlagen erstellen. Mithilfe von Vorlagen basierten Steuerelementen kann der Entwickler einen Teil des HTML-Code angeben, der zum Rendering eines Container Steuer Elements verwendet wird. Die Mechanismen der Erstellung von Vorlagen basierten Server Steuerelementen sind komplex, aber Sie ermöglichen leistungsstarke Szenarios zum Rendern von Daten auf Benutzer anpassbare Weise. Beispiele für Steuerelemente mit Vorlagen sind `Repeater` und `DataList` .
 
-Blazor-Komponenten können auch durch Definieren von Komponenten Parametern vom Typ oder Vorlagen Weise durch definiert werden `RenderFragment` `RenderFragment<T>` . Ein `RenderFragment` stellt einen Block von Razor-Markup dar, der dann von der Komponente gerendert werden kann. Ein `RenderFragment<T>` ist ein Block von Razor-Markup, das einen Parameter annimmt, der beim Rendern des renderfragments angegeben werden kann.
+BlazorKomponenten können auch durch Definition von Komponenten Parametern vom Typ oder Vorlagen Weise durch definiert werden `RenderFragment` `RenderFragment<T>` . Ein `RenderFragment` stellt einen Block von Razor-Markup dar, der dann von der Komponente gerendert werden kann. Ein `RenderFragment<T>` ist ein Block von Razor-Markup, das einen Parameter annimmt, der beim Rendern des renderfragments angegeben werden kann.
 
 ### <a name="child-content"></a>Untergeordneter Inhalt
 
-Blazor-Komponenten können ihren untergeordneten Inhalt als einen erfassen `RenderFragment` und diesen Inhalt als Teil des Komponenten Rendering rendern. Zum Erfassen von untergeordnetem Inhalt definieren Sie einen Komponenten Parameter vom Typ, `RenderFragment` und benennen Sie ihn `ChildContent` .
+BlazorKomponenten können ihren untergeordneten Inhalt als einen erfassen `RenderFragment` und diesen Inhalt als Teil des Komponenten Rendering rendern. Zum Erfassen von untergeordnetem Inhalt definieren Sie einen Komponenten Parameter vom Typ, `RenderFragment` und benennen Sie ihn `ChildContent` .
 
 *Childcontentcomponent. Razor*
 
@@ -555,7 +558,7 @@ Eine übergeordnete Komponente kann dann untergeordneten Inhalt mithilfe von nor
 
 ### <a name="template-parameters"></a>Vorlagenparameter
 
-Eine vorlagenbasierte blazor-Komponente kann auch mehrere Komponenten Parameter vom Typ `RenderFragment` oder definieren `RenderFragment<T>` . Der-Parameter für einen `RenderFragment<T>` kann angegeben werden, wenn er aufgerufen wird. Um einen generischen Typparameter für eine Komponente anzugeben, verwenden Sie die `@typeparam` Razor-Direktive.
+Eine auf Vorlagen basierende Blazor Komponente kann auch mehrere Komponenten Parameter vom Typ `RenderFragment` oder definieren `RenderFragment<T>` . Der-Parameter für einen `RenderFragment<T>` kann angegeben werden, wenn er aufgerufen wird. Um einen generischen Typparameter für eine Komponente anzugeben, verwenden Sie die `@typeparam` Razor-Direktive.
 
 *Simplelistview. Razor*
 
@@ -608,7 +611,7 @@ Die Ausgabe dieser Komponente sieht wie folgt aus:
 
 ## <a name="code-behind"></a>CodeBehind
 
-Eine blazor-Komponente wird in der Regel in einer einzelnen *Razor* -Datei erstellt. Es ist jedoch auch möglich, den Code und das Markup mithilfe einer Code Behind-Datei zu trennen. Um eine Komponenten Datei zu verwenden, fügen Sie eine c#-Datei hinzu, die mit dem Dateinamen der Komponenten Datei übereinstimmt, jedoch mit einer hinzugefügten Erweiterung *. cs* (*counter.Razor.cs*). Verwenden Sie die c#-Datei, um eine Basisklasse für die Komponente zu definieren. Sie können der Basisklasse einen beliebigen Namen benennen, aber es ist üblich, die Klasse mit der Komponenten Klasse zu benennen, aber mit einer `Base` Erweiterung hinzugefügt ( `CounterBase` ). Die komponentenbasierte Klasse muss auch von abgeleitet werden `ComponentBase` . Fügen Sie dann in der Razor-Komponenten Datei die- `@inherits` Direktive hinzu, um die Basisklasse für die Komponente ( `@inherits CounterBase` ) anzugeben.
+Eine Blazor Komponente wird in der Regel in einer einzelnen *Razor* -Datei erstellt. Es ist jedoch auch möglich, den Code und das Markup mithilfe einer Code Behind-Datei zu trennen. Um eine Komponenten Datei zu verwenden, fügen Sie eine c#-Datei hinzu, die mit dem Dateinamen der Komponenten Datei übereinstimmt, jedoch mit einer hinzugefügten Erweiterung *. cs* (*counter.Razor.cs*). Verwenden Sie die c#-Datei, um eine Basisklasse für die Komponente zu definieren. Sie können der Basisklasse einen beliebigen Namen benennen, aber es ist üblich, die Klasse mit der Komponenten Klasse zu benennen, aber mit einer `Base` Erweiterung hinzugefügt ( `CounterBase` ). Die komponentenbasierte Klasse muss auch von abgeleitet werden `ComponentBase` . Fügen Sie dann in der Razor-Komponenten Datei die- `@inherits` Direktive hinzu, um die Basisklasse für die Komponente ( `@inherits CounterBase` ) anzugeben.
 
 *Counter. Razor*
 
@@ -640,7 +643,7 @@ Die Sichtbarkeit der Komponenten Elemente in der Basisklasse muss oder sein, um 
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-Das vorherige ist keine umfassende Behandlung aller Aspekte von blazor-Komponenten. Weitere Informationen zum [Erstellen und Verwenden von ASP.net Core Razor-Komponenten](/aspnet/core/blazor/components)finden Sie in der blazor-Dokumentation.
+Die vorhergehende Behandlung aller Aspekte von Komponenten ist nicht vollständig Blazor . Weitere Informationen zum [Erstellen und Verwenden von ASP.net Core Razor-Komponenten](/aspnet/core/blazor/components)finden Sie in der Blazor Dokumentation zu.
 
 >[!div class="step-by-step"]
 >[Zurück](app-startup.md)

@@ -1,20 +1,21 @@
 ---
 title: 'Vorgehensweise: Hinzufügen mehrerer Gruppen von Einstellungen zur Anwendung in C#'
+description: Erfahren Sie, wie Sie Ihrer Anwendung in c# mithilfe von Visual Studio mehrere Sätze von Windows Forms Einstellungen hinzufügen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: c6842d11c04e905d42734af939f2c3f0cfeacd47
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 579374ff101758b3224bc122c46b891280ed2609
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040124"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173444"
 ---
-# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Vorgehensweise: Fügen Sie Ihrer Anwendung mehrere Einstellungs Sätze in C hinzu.\#
+# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Gewusst wie: Hinzufügen mehrerer Einstellungs Sätze zu Ihrer Anwendung in C\#
 
-In einigen Fällen möchten Sie möglicherweise mehrere Einstellungs Sätze in einer Anwendung haben. Wenn Sie z. b. eine Anwendung entwickeln, in der eine bestimmte Gruppe von Einstellungen häufig geändert werden soll, kann es ratsam sein, Sie in eine einzelne Datei aufzuteilen, damit die Datei im Einzelhandel ersetzt werden kann, sodass andere Einstellungen nicht betroffen sind. Mit Visual Studio können Sie Ihrem Projekt mehrere Einstellungs Sätze hinzufügen. Auf zusätzliche Einstellungs Sätze kann über das `Properties.Settings` -Objekt zugegriffen werden.
+In einigen Fällen möchten Sie möglicherweise mehrere Einstellungs Sätze in einer Anwendung haben. Wenn Sie z. b. eine Anwendung entwickeln, in der eine bestimmte Gruppe von Einstellungen häufig geändert werden soll, kann es ratsam sein, Sie in eine einzelne Datei aufzuteilen, damit die Datei im Einzelhandel ersetzt werden kann, sodass andere Einstellungen nicht betroffen sind. Mit Visual Studio können Sie Ihrem Projekt mehrere Einstellungs Sätze hinzufügen. Auf zusätzliche Einstellungs Sätze kann über das-Objekt zugegriffen werden `Properties.Settings` .
 
 ## <a name="add-an-additional-set-of-settings"></a>Zusätzlichen Einstellungs Satz hinzufügen
 
@@ -26,9 +27,9 @@ In einigen Fällen möchten Sie möglicherweise mehrere Einstellungs Sätze in e
 
 3. Ziehen Sie die neue Einstellungsdatei in **Projektmappen-Explorer**in den Ordner **Properties** . Dadurch können Ihre neuen Einstellungen im Code verfügbar sein.
 
-4. Fügen Sie die Einstellungen in dieser Datei hinzu, und verwenden Sie Sie wie jede andere Einstellungsdatei. Sie können über das `Properties.Settings` -Objekt auf diese Gruppe von Einstellungen zugreifen.
+4. Fügen Sie die Einstellungen in dieser Datei hinzu, und verwenden Sie Sie wie jede andere Einstellungsdatei. Sie können über das-Objekt auf diese Gruppe von Einstellungen zugreifen `Properties.Settings` .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
 - [Übersicht über Anwendungseinstellungen](application-settings-overview.md)

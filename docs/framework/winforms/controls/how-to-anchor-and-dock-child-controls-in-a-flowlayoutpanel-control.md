@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement'
+description: Informationen zum programmgesteuerten verankern und Andocken von untergeordneten Steuerelementen in einem Windows Forms FlowLayoutPanel-Steuerelement.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 3e9a5be944e199254ddb9cee0772c4d55be8fb77
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b4fb3bf6d148a526a75926bd67c1f967286332bf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046065"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174535"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement
 
@@ -22,11 +23,11 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die E
 
 1. Erstellen Sie ein <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement auf dem Formular.
 
-2. Legen Sie <xref:System.Windows.Forms.Control.Width%2A> für das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement den Wert **300**fest <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> , <xref:System.Windows.Forms.FlowDirection.TopDown>und legen Sie dessen auf fest.
+2. Legen Sie für das-Steuerelement den Wert <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.FlowLayoutPanel> **300**fest, und legen <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Sie dessen auf fest <xref:System.Windows.Forms.FlowDirection.TopDown> .
 
 3. Erstellen Sie zwei <xref:System.Windows.Forms.Button>-Steuerelemente, und platzieren Sie diese im <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.
 
-4. Legen Sie <xref:System.Windows.Forms.Control.Width%2A> die der ersten Schaltfläche auf **200**fest.
+4. Legen <xref:System.Windows.Forms.Control.Width%2A> Sie die der ersten Schaltfläche auf **200**fest.
 
 5. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft der zweiten Schaltfläche auf <xref:System.Windows.Forms.DockStyle.Fill> fest.
 
@@ -42,11 +43,11 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die E
 
 ## <a name="example"></a>Beispiel
 
-Die folgende Abbildung zeigt vier Schaltflächen, die relativ zur blauen Schaltfläche in einem <xref:System.Windows.Forms.FlowLayoutPanel> verankert und angedockt sind. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> ist <xref:System.Windows.Forms.FlowDirection.LeftToRight>.
+Die folgende Abbildung zeigt vier Schaltflächen, die relativ zur blauen Schaltfläche in einem <xref:System.Windows.Forms.FlowLayoutPanel> verankert und angedockt sind. Der Jointyp (<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>) lautet <xref:System.Windows.Forms.FlowDirection.LeftToRight>.
 
 ![FlowLayoutPanel-Verankerung](./media/net-flpanchorexp.gif "NET_FLPanchorExp")
 
-Die folgende Abbildung zeigt vier Schaltflächen, die relativ zur blauen Schaltfläche in einem <xref:System.Windows.Forms.FlowLayoutPanel> verankert und angedockt sind. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> ist <xref:System.Windows.Forms.FlowDirection.TopDown>.
+Die folgende Abbildung zeigt vier Schaltflächen, die relativ zur blauen Schaltfläche in einem <xref:System.Windows.Forms.FlowLayoutPanel> verankert und angedockt sind. Der Jointyp (<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>) lautet <xref:System.Windows.Forms.FlowDirection.TopDown>.
 
 ![FlowLayoutPanel-Verankerung](./media/vs-flpanchor2.gif "VS_FLPanchor2")
 
@@ -61,7 +62,7 @@ Für dieses Beispiel benötigen Sie Folgendes:
 
 - Verweise auf die Assemblys "System", "System.Data", "System.Drawing" und "System.Windows.Forms".
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - [Übersicht über das FlowLayoutPanel-Steuerelement](flowlayoutpanel-control-overview.md)

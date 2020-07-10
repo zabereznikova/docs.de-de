@@ -2,13 +2,16 @@
 title: gRPC
 description: Erfahren Sie mehr über GrpC, seine Rolle in Cloud native-Anwendungen und die Unterschiede zwischen der http-Rest-Kommunikation.
 author: robvet
+no-loc:
+- Blazor
+- Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201334"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173158"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -81,7 +84,7 @@ Bevorzugen Sie GrpC für die folgenden Szenarien:
 - Point-to-Point-Echtzeitkommunikation: der GrpC kann Nachrichten in Echtzeit ohne Abruf per Push Übertragung und bietet hervorragende Unterstützung für bidirektionales Streaming.
 - Eingeschränkte Netzwerkumgebungen – binäre GrpC-Nachrichten sind immer kleiner als eine entsprechende textbasierte JSON-Nachricht.
 
-Zum Zeitpunkt der Erstellung dieses Dokuments wird GrpC hauptsächlich mit Back-End-Diensten verwendet. Die meisten modernen Browser können das für die Unterstützung eines Front-End-GrpC-Clients erforderliche Maß an http/2-Kontrolle nicht bereitstellen. Das heißt, es gibt eine [frühe Initiative](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) , die die GrpC-Kommunikation von browserbasierten Apps ermöglicht, die mit JavaScript-oder blazor-webassemblytechnologien erstellt wurden. Mit dem [GrpC-Web für .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) kann eine ASP.net Core GrpC-App GrpC-Features in Browser-apps unterstützen:
+Zum Zeitpunkt der Erstellung dieses Dokuments wird GrpC hauptsächlich mit Back-End-Diensten verwendet. Die meisten modernen Browser können das für die Unterstützung eines Front-End-GrpC-Clients erforderliche Maß an http/2-Kontrolle nicht bereitstellen. Das heißt, es gibt eine [frühe Initiative](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) , die die GrpC-Kommunikation mit browserbasierten Apps ermöglicht, die mit JavaScript oder Technologien erstellt wurden Blazor WebAssembly . Mit dem [GrpC-Web für .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) kann eine ASP.net Core GrpC-App GrpC-Features in Browser-apps unterstützen:
 
 - Stark typisierte, Code generierte Clients
 - Compact protobuf-Meldungen

@@ -1,15 +1,17 @@
 ---
 title: Datenzugriff und-Verwaltung
-description: Erfahren Sie, wie Sie auf Daten in ASP.net Web Forms und blazor zugreifen und diese verarbeiten.
+description: Erfahren Sie, wie Sie auf Daten in ASP.net Web Forms und zugreifen und diese verarbeiten Blazor .
 author: csharpfritz
 ms.author: jefritz
+no-loc:
+- Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: b9805da60722de1b5d4f91107e856f647f7564a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446474"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173303"
 ---
 # <a name="work-with-data"></a>Arbeiten mit Daten
 
@@ -75,7 +77,7 @@ services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer("MY DATABASE CONNECTION STRING"));
 ```
 
-Der vorangehende Code stellt eine Verbindung mit einer SQL Server Datenbank mit der angegebenen Verbindungs Zeichenfolge her. Sie können die Verbindungs Zeichenfolge in die Datei " *appSettings. JSON* ", Umgebungsvariablen oder andere Konfigurations Speicherorte platzieren und diese eingebettete Zeichenfolge entsprechend ersetzen.
+Der vorangehende Code stellt eine Verbindung mit einer SQL Server Datenbank mit der angegebenen Verbindungs Zeichenfolge her. Sie können die Verbindungs Zeichenfolge in Ihrer *appsettings.jsfür* Datei, Umgebungsvariablen oder andere Konfigurations Speicherorte platzieren und diese eingebettete Zeichenfolge entsprechend ersetzen.
 
 Anschließend können Sie die für diese Klasse geeignete Datenbanktabelle mithilfe der folgenden Befehle generieren:
 
@@ -102,7 +104,7 @@ Weitere Informationen zu [EF Core](/ef/core/) finden Sie auf der Microsoft-Dokum
 
 ## <a name="interact-with-web-services"></a>Interagieren mit Webdiensten
 
-Bei der ersten Veröffentlichung von ASP.net waren SOAP-Dienste die bevorzugte Methode für Webserver und Clients zum Austauschen von Daten. Seit dieser Zeit hat sich viel geändert, und die bevorzugten Interaktionen mit Diensten wurden zu direkten http-Client Interaktionen verlagert. Mit ASP.net Core und blazor können Sie die Konfiguration Ihrer `HttpClient` in der `Startup` -Methode der-Klasse registrieren `ConfigureServices` . Verwenden Sie diese Konfiguration, wenn Sie mit dem HTTP-Endpunkt interagieren müssen. Beachten Sie den folgenden Konfigurations Code:
+Bei der ersten Veröffentlichung von ASP.net waren SOAP-Dienste die bevorzugte Methode für Webserver und Clients zum Austauschen von Daten. Seit dieser Zeit hat sich viel geändert, und die bevorzugten Interaktionen mit Diensten wurden zu direkten http-Client Interaktionen verlagert. Mit ASP.net Core und Blazor können Sie die Konfiguration Ihrer `HttpClient` in der `Startup` -Methode der-Klasse registrieren `ConfigureServices` . Verwenden Sie diese Konfiguration, wenn Sie mit dem HTTP-Endpunkt interagieren müssen. Beachten Sie den folgenden Konfigurations Code:
 
 ```csharp
 services.AddHttpClient("github", client =>
@@ -115,7 +117,7 @@ services.AddHttpClient("github", client =>
 });
 ```
 
-Wenn Sie auf Daten von GitHub zugreifen müssen, erstellen Sie einen Client mit dem Namen `github` . Der Client wird mit der Basisadresse konfiguriert, und die Anforderungs Header sind entsprechend festgelegt. Fügen `IHttpClientFactory` Sie den in Ihre blazor-Komponenten mit der- `@inject` Direktive oder einem- `[Inject]` Attribut für eine Eigenschaft ein. Erstellen Sie den benannten Client, und interagieren Sie mit den Diensten mit der folgenden Syntax:
+Wenn Sie auf Daten von GitHub zugreifen müssen, erstellen Sie einen Client mit dem Namen `github` . Der Client wird mit der Basisadresse konfiguriert, und die Anforderungs Header sind entsprechend festgelegt. Fügen `IHttpClientFactory` Sie das- Blazor Objekt mit der- `@inject` Anweisung oder einem- `[Inject]` Attribut für eine Eigenschaft in die-Komponenten ein. Erstellen Sie den benannten Client, und interagieren Sie mit den Diensten mit der folgenden Syntax:
 
 ```razor
 @inject IHttpClientFactory factory

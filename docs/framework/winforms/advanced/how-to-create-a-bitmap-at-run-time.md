@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Erstellen einer Bitmap zur Laufzeit'
+description: Erfahren Sie, wie Sie ein Bitmap-Objekt erstellen und es in einem vorhandenen Windows Forms PictureBox-Steuerelement anzeigen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: 3027f87cb56d1fca7756e14ae03e04e31804b6a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e18f58abb93744aeb567ec8dc1a41004565c2bd3
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624207"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174717"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Vorgehensweise: Erstellen einer Bitmap zur Laufzeit
-In diesem Beispiel wird erstellt, und zeichnet Sie einem <xref:System.Drawing.Bitmap> -Objekt und zeigt ihn in einer vorhandenen Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement.  
+In diesem Beispiel wird ein-Objekt erstellt und erstellt <xref:System.Drawing.Bitmap> und in einem vorhandenen Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement angezeigt.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[System.Drawing.CreateBitmapAtRuntime#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/CS/Form1.cs#1)]
@@ -25,9 +26,9 @@ In diesem Beispiel wird erstellt, und zeichnet Sie einem <xref:System.Drawing.Bi
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
-- Ein Windows-Formular, das die Assemblys System, "System.Drawing" und "System.Windows.Forms" importiert.  
+- Ein Windows Form, das die Assemblys System, System. Drawing und System. Windows. Forms importiert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.Bitmap>
 - [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)

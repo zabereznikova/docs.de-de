@@ -1,17 +1,20 @@
 ---
-title: Eine Einführung in blazor für ASP.net Web Forms-Entwicklern
-description: Eine Einführung in blazor und das Schreiben von voll Stapel-Web-Apps mit .net
+title: Eine Einführung zu Blazor für ASP.net Web Forms-Entwicklern
+description: Eine Einführung in das Erstellen Blazor und Schreiben von vollständig Stapel-Web-Apps mit .net
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8ef2c7d66d50abb34e536b6333e3aa68ee2bb07d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841930"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173132"
 ---
-# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Eine Einführung in blazor für ASP.net Web Forms-Entwicklern
+# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Eine Einführung zu Blazor für ASP.net Web Forms-Entwicklern
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -34,7 +37,7 @@ Die meisten modernen Webframe Works sind nun auch Open-Source-Funktionen, die ei
 
 Die .net-Community hat sowohl plattformübergreifende als auch Open-Source-Unterstützung angenommen. .Net Core ist eine Open-Source-und plattformübergreifende Implementierung von .net, die auf einer Vielzahl von Plattformen ausgeführt wird, darunter Windows, macOS und verschiedene Linux-Distributionen. Xamarin stellt Mono, eine Open Source-Version von .net, bereit. Mono kann auf Android, IOS und einer Vielzahl anderer Formfaktoren, einschließlich Uhren und smarttvs, ausgeführt werden. Microsoft hat angekündigt, dass .net Core und Mono von .net [5](https://devblogs.microsoft.com/dotnet/introducing-net-5/) in eine einzelne .NET-Laufzeit und ein .NET-Framework abgestimmt werden, die überall verwendet werden können und die über einheitliche Laufzeitverhalten und Entwickler Erfahrung verfügen.
 
-Werden ASP.net Web Forms von der Umstellung auf Open Source-und plattformübergreifende Unterstützung profitieren? Die Antwort ist leider nicht, oder zumindest nicht der gleiche Block wie der Rest der Plattform. Das .net-Team hat [vor kurzem fest](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) stellen, dass ASP.net Web Forms nicht in .net Core oder .net 5 portiert werden. Warum ist das so?
+Werden ASP.net Web Forms von der Umstellung auf Open Source-und plattformübergreifende Unterstützung profitieren? Die Antwort ist leider nicht, oder zumindest nicht der gleiche Block wie der Rest der Plattform. Das .net-Team hat [vor kurzem fest](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) stellen, dass ASP.net Web Forms nicht in .net Core oder .net 5 portiert werden. Warum?
 
 In den frühen Tagen von .net Core zu portieren ASP.net Web Forms. Die Anzahl der erforderlichen wichtigen Änderungen wurde als zu drastisch festgestellt. Es gibt auch eine Möglichkeit, auch für Microsoft eine Beschränkung für die Anzahl der Webframe Works zu bieten, die es gleichzeitig unterstützen kann. Vielleicht nimmt jemand in der Community die Ursache für die Erstellung einer Open Source-und plattformübergreifenden Version von ASP.net Web Forms auf. Der [Quellcode für ASP.net Web Forms](https://github.com/microsoft/referencesource) wurde in einem Verweis Formular öffentlich verfügbar gemacht. Aber zu diesem Zeitpunkt scheint es ASP.net, Web Forms nur Windows und ohne ein Open-Source-Beitragsmodell beibehalten wird. Wenn plattformübergreifende Unterstützung oder Open-Source-Unterstützung für Ihre Szenarien wichtig ist, müssen Sie nach etwas neuem suchen.
 
@@ -50,17 +53,17 @@ Browser werden jedoch zu vielseitiger Plattformen. Sie implementieren eine stän
 
 Das Bridging von zwei verschiedenen Plattformen und Ökosystemen (.net und JavaScript) ist jedoch mit Kosten verbunden. Das Fachwissen ist in zwei parallelen Welten mit unterschiedlichen Sprachen, Frameworks und Tools erforderlich. Code und Logik können nicht einfach zwischen Client und Server freigegeben werden, was zu Duplizierung und Engineering-Aufwand führt. Es kann auch schwierig sein, mit dem JavaScript-Ökosystem Schritt zu halten, das den Verlauf der Entwicklung mit Break-Break-Geschwindigkeit hat. Das Front-End-Framework und die buildtooleinstellungen ändern sich schnell. Die Branche hat den Fortschritt von grunt zu Gulp zu WebPack und so weiter beobachtet. Die gleiche fehlerlose Abwanderung ist bei Front-End-Frameworks wie jQuery, Knockout, Angular, reagieren und Vue aufgetreten. Aber angesichts des Browser Monopols von JavaScript gab es kaum eine Auswahl. Das heißt, bis die webrolle vereint ist und ein *Wunder* ausgelöst hat!
 
-## <a name="webassembly-fulfills-a-need"></a>Webassembly erfüllt einen Bedarf
+## <a name="webassembly-fulfills-a-need"></a>WebAssemblyerfüllt einen Bedarf
 
-In 2015 haben sich die wichtigsten Browserhersteller in einer W3C-Community-Gruppe gezwungen, einen neuen geöffneten Webstandard namens Webassembly zu erstellen. Webassembly ist ein Bytecode für das Web. Wenn Sie Ihren Code in Webassembly kompilieren können, kann er in einem beliebigen Browser auf jeder beliebigen Plattform mit nahezu nativer Geschwindigkeit ausgeführt werden. Anfängliche Bemühungen mit Schwerpunkt aufC++C/. Das Ergebnis war eine dramatische Demonstration der Ausführung nativer 3D-Grafikmodule direkt im Browser ohne Plug-ins. Webassembly wurde seitdem von allen wichtigen Browsern standardisiert und implementiert.
+In 2015 haben die Haupt Browserhersteller die Erzwingung in einer W3C-Community-Gruppe erzwungen, um einen neuen geöffneten Webstandard namens zu erstellen WebAssembly . WebAssemblyist ein Bytecode für das Web. Wenn Sie den Code in kompilieren können WebAssembly , kann er in einem beliebigen Browser auf jeder beliebigen Plattform mit nahezu nativer Geschwindigkeit ausgeführt werden. Erste Bemühungen mit Schwerpunkt auf C/C++. Das Ergebnis war eine dramatische Demonstration der Ausführung nativer 3D-Grafikmodule direkt im Browser ohne Plug-ins. WebAssemblywurde seit standardisiert und von allen wichtigen Browsern implementiert.
 
-Die Ausführung von .net in Webassembly wurde in späterer 2017 angekündigt, und es wird erwartet, dass Sie 2020, einschließlich der Unterstützung von .net 5, ausgeliefert werden. Die Möglichkeit, .NET-Code direkt im Browser auszuführen, ermöglicht eine vollständige Webentwicklung mit .net.
+Die Ausführung von .net unter WebAssembly wurde in späterer 2017 angekündigt, und es wird erwartet, dass Sie 2020, einschließlich der Unterstützung von .net 5, ausgeliefert werden. Die Möglichkeit, .NET-Code direkt im Browser auszuführen, ermöglicht eine vollständige Webentwicklung mit .net.
 
-## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: vollständige Stapel basierte Webentwicklung mit .net
+## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: vollständige Stapel-Webentwicklung mit .net
 
-Die Möglichkeit, .NET-Code in einem Browser auszuführen, bietet keine End-to-End-Umgebung zum Erstellen von Client seitigen Web-Apps. An dieser Stelle kommt blazor ins Spiel. Blazor ist ein clientseitiges Framework für Webbenutzeroberflächen, das auf C# anstelle von JavaScript basiert. Blazor kann direkt im Browser über Webassembly ausgeführt werden. Es sind keine Browser-Plug-Ins erforderlich. Alternativ können blazor-apps serverseitig auf .net Core ausgeführt werden und alle Benutzerinteraktionen über eine Echtzeitverbindung mit dem Browser verarbeiten.
+Die Möglichkeit, .NET-Code in einem Browser auszuführen, bietet keine End-to-End-Umgebung zum Erstellen von Client seitigen Web-Apps. Das ist der Ort, an dem sich befindet Blazor . Blazorist ein Client seitiges Webbenutzer Oberflächen-Framework, das auf c# anstelle von JavaScript basiert. Blazorkann direkt im Browser über ausgeführt werden WebAssembly . Es sind keine Browser-Plug-Ins erforderlich. Alternativ Blazor können apps serverseitig auf .net Core ausführen und alle Benutzerinteraktionen über eine Echtzeitverbindung mit dem Browser verarbeiten.
 
-Blazor bietet hervorragend Unterstützung in Visual Studio und Visual Studio Code. Das Framework umfasst auch ein vollständiges UI-Komponentenmodell und verfügt über integrierte Funktionen für:
+Blazorbietet hervorragend Unterstützung für Tools in Visual Studio und Visual Studio Code. Das Framework umfasst auch ein vollständiges UI-Komponentenmodell und verfügt über integrierte Funktionen für:
 
 - Formulare und Überprüfung
 - Dependency Injection
@@ -69,18 +72,18 @@ Blazor bietet hervorragend Unterstützung in Visual Studio und Visual Studio Cod
 - Debuggen im Browser
 - JavaScript-Interoperabilität
 
-Blazor ist mit ASP.net Web Forms sehr häufig. Beide Frameworks bieten komponentenbasierte, ereignisgesteuerte, Zustands behaftete UI-Programmier Modelle. Der wesentliche Unterschied bei der Architektur besteht darin, dass ASP.net Web Forms nur auf dem Server ausgeführt wird. Blazor kann auf dem Client im Browser ausgeführt werden. Wenn Sie jedoch aus einem ASP.net-Web Forms Hintergrund kommen, gibt es eine Menge in blazor, die sich vertraut machen wird. Blazor ist eine natürliche Lösung für ASP.net Web Forms-Entwicklern, die eine Möglichkeit zum Nutzen der Client seitigen Entwicklung und der plattformübergreifenden Open Source-Entwicklung von .net suchen.
+Blazorhat viele Gemeinsamkeiten bei ASP.net-Web Forms. Beide Frameworks bieten komponentenbasierte, ereignisgesteuerte, Zustands behaftete UI-Programmier Modelle. Der wesentliche Unterschied bei der Architektur besteht darin, dass ASP.net Web Forms nur auf dem Server ausgeführt wird. Blazorkann auf dem Client im Browser ausgeführt werden. Wenn Sie jedoch von einem ASP.net-Web Forms Hintergrund kommen, gibt es viele Möglichkeiten, Blazor die Ihnen vertraut sind. Blazorist eine natürliche Lösung für ASP.net Web Forms-Entwicklern, die eine Möglichkeit zum Nutzen der Client seitigen Entwicklung und der plattformübergreifenden Open Source-Entwicklung von .net suchen.
 
-Dieses Buch bietet eine Einführung in blazor, das speziell für ASP.net Web Forms-Entwicklern berücksichtigt wird. Jedes blazor-Konzept wird im Kontext von Analog ASP.net Web Forms Features und Verfahren präsentiert. Am Ende dieses Buchs haben Sie Folgendes Verständnis:
+Dieses Buch bietet eine Einführung in Blazor , was speziell für ASP.net Web Forms-Entwicklern berücksichtigt wird. Jedes Blazor Konzept wird im Kontext von Analog ASP.net Web Forms Features und Verfahren dargestellt. Am Ende dieses Buchs haben Sie Folgendes Verständnis:
 
-- Erfahren Sie, wie Sie blazor-Apps erstellen.
-- Funktionsweise von blazor
-- So bezieht sich blazor auf .net Core.
-- Angemessene Strategien für die Migration vorhandener ASP.net Web Forms-apps zu blazor, wenn dies angebracht ist.
+- Erstellen von Blazor apps
+- Funktionsweise von Blazor .
+- BlazorBezieht sich auf .net Core.
+- Angemessene Strategien für die Migration vorhandener ASP.net-Web Forms-apps zu nach Blazor Bedarf.
 
-## <a name="get-started-with-blazor"></a>Einstieg in blazor
+## <a name="get-started-with-blazor"></a>Erste Schritte mit Blazor
 
-Der Einstieg in blazor ist einfach. Wechseln Sie zu <https://blazor.net>, und befolgen Sie die Links, um die entsprechenden .net Core SDK-und blazor-Projektvorlagen zu installieren. Außerdem finden Sie Anweisungen zum Einrichten der blazor-Tools in Visual Studio oder Visual Studio Code.
+Der Einstieg in Blazor ist einfach. Wechseln Sie zu, <https://blazor.net> und befolgen Sie die Links, um die entsprechenden .net Core SDK und Blazor Projektvorlagen zu installieren. Außerdem finden Sie Anweisungen zum Einrichten der Tools Blazor in Visual Studio oder Visual Studio Code.
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Drucken in Windows Forms'
+description: Erfahren Sie, wie Sie mithilfe der CopyFromScreen-Methode eine Kopie des aktuellen Windows Forms Programm gesteuert drucken.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: cd10e0a43ff37b921dc8e024d7a6a51fafbb0400
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b59ea4b5347903b36a166c4f8ac0d8d7db18635e
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591852"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174691"
 ---
 # <a name="how-to-print-a-windows-form"></a>Vorgehensweise: Drucken in Windows Forms
-Im Rahmen des Entwicklungsprozesses sollten Sie in der Regel eine Kopie Ihres Windows-Formulars drucken. Im folgenden Codebeispiel wird veranschaulicht, wie so drucken Sie eine Kopie des aktuellen Formulars mithilfe der <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode.  
+Im Rahmen des Entwicklungsprozesses möchten Sie in der Regel eine Kopie Ihres Windows Forms drucken. Im folgenden Codebeispiel wird gezeigt, wie eine Kopie des aktuellen Formulars mit der-Methode gedruckt wird <xref:System.Drawing.Graphics.CopyFromScreen%2A> .  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
@@ -27,15 +28,15 @@ Im Rahmen des Entwicklungsprozesses sollten Sie in der Regel eine Kopie Ihres Wi
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
-- Sie haben keine Berechtigung zum Zugriff auf den Drucker.  
+- Sie haben keine Berechtigung für den Zugriff auf den Drucker.  
   
 - Es ist kein Drucker installiert.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Um dieses Codebeispiel ausführen, benötigen Sie die Berechtigung zum Zugriff auf den Drucker, die, den Sie mit Ihrem Computer zu verwenden.  
+ Um dieses Codebeispiel ausführen zu können, müssen Sie über die Berechtigung verfügen, auf den Drucker zuzugreifen, den Sie mit Ihrem Computer verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Vorgehensweise: Darstellen von Bildern mit GDI +](how-to-render-images-with-gdi.md)
-- [Vorgehensweise: Drucken von Grafiken in Windows Forms](how-to-print-graphics-in-windows-forms.md)
+- [Vorgehensweise: Darstellen von Bildern mit GDI+](how-to-render-images-with-gdi.md)
+- [How to: Drucken von Grafiken in Windows Forms](how-to-print-graphics-in-windows-forms.md)

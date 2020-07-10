@@ -3,25 +3,27 @@ title: Module, Handler und Middleware
 description: Erfahren Sie mehr über die Verarbeitung von HTTP-Anforderungen mit Modulen, Handlern und Middleware.
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ff2b3fd41316a1c8c20a0eed9a585e5fd2733af3
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337478"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173184"
 ---
 # <a name="modules-handlers-and-middleware"></a>Module, Handler und Middleware
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Eine ASP.net Core-App basiert auf einer Reihe von *Middleware*. Middleware ist Handler, die in einer Pipeline angeordnet sind, um Anforderungen und Antworten zu verarbeiten. In einer Web Forms-App lösen HTTP-Handler und-Module ähnliche Probleme aus. In ASP.net Core werden Module, Handler, *Global.asax.cs*und der Lebenszyklus der app durch Middleware ersetzt. In diesem Kapitel erfahren Sie, welche Middleware im Kontext einer blazor-App angezeigt wird.
+Eine ASP.net Core-App basiert auf einer Reihe von *Middleware*. Middleware ist Handler, die in einer Pipeline angeordnet sind, um Anforderungen und Antworten zu verarbeiten. In einer Web Forms-App lösen HTTP-Handler und-Module ähnliche Probleme aus. In ASP.net Core werden Module, Handler, *Global.asax.cs*und der Lebenszyklus der app durch Middleware ersetzt. In diesem Kapitel erfahren Sie, welche Middleware im Kontext einer-APP ist Blazor .
 
-## <a name="overview"></a>Übersicht über
+## <a name="overview"></a>Übersicht
 
 Die ASP.NET Core-Anforderungspipeline besteht aus einer Sequenz von Anforderungsdelegaten, die nacheinander aufgerufen werden. Das Konzept wird im folgenden Diagramm veranschaulicht. Der Ausführungsthread folgt den schwarzen Pfeilen.
 
-![Pipeline](media/middleware/request-delegate-pipeline.png)
+![pipeline](media/middleware/request-delegate-pipeline.png)
 
 Im vorangehenden Diagramm fehlt ein Konzept von Lebenszyklus Ereignissen. Dieses Konzept ist grundlegend für die Behandlung von ASP.net-Web Forms Anforderungen. Dieses System erleichtert das Auftreten des Vorgangs und ermöglicht das Einfügen von Middleware zu jedem beliebigen Zeitpunkt. Die Middleware wird in der Reihenfolge ausgeführt, in der Sie der Anforderungs Pipeline hinzugefügt wird. Sie werden auch im Code anstelle von Konfigurationsdateien hinzugefügt, normalerweise in *Startup.cs*.
 
@@ -35,7 +37,7 @@ ASP.NET 4. x umfasst viele Module. In ähnlicher Weise verfügt ASP.net Core auc
 
 In der folgenden Tabelle werden die Ersetzungs Middleware und Komponenten in ASP.net Core aufgelistet.
 
-|Module                 |ASP.NET 4. x-Modul           |ASP.net Core Option|
+|Modul                 |ASP.NET 4. x-Modul           |ASP.net Core Option|
 |-----------------------|-----------------------------|-------------------|
 |HTTP-Fehler            |`CustomErrorModule`          |[Middleware für Statuscodeseiten](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Standarddokument       |`DefaultDocumentModule`      |[Middleware für Standarddateien](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
@@ -49,7 +51,7 @@ In der folgenden Tabelle werden die Ersetzungs Middleware und Komponenten in ASP
 |ISAPI-Filter          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |ISAPI                  |`IsapiModule`                |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |Anforderungsfilterung      |`RequestFilteringModule`     |[URL-Umschreib Ende Middleware-iRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
-|URL-Umschreibung&#8224;   |`RewriteModule`              |[URL-umschreibende Middleware](/aspnet/core/fundamentals/url-rewriting)|
+|URL-Umschreib&#8224;   |`RewriteModule`              |[URL-umschreibende Middleware](/aspnet/core/fundamentals/url-rewriting)|
 |Statische Komprimierung     |`StaticCompressionModule`    |[Antworten komprimierende Middleware](/aspnet/core/performance/response-compression)|
 |Statischer Inhalt         |`StaticFileModule`           |[Middleware für statische Dateien](/aspnet/core/fundamentals/static-files)|
 |URL-Autorisierung      |`UrlAuthorizationModule`     |[ASP.NET Core-Identität](/aspnet/core/security/authentication/identity)|
@@ -88,7 +90,7 @@ public class Startup
 }
 ```
 
-Middleware kann auch als Klasse definiert werden, indem entweder die `IMiddleware`-Schnittstelle oder die folgende Middleware-Konvention implementiert wird. Weitere Informationen finden Sie unter [Schreiben von benutzerdefinierten ASP.net Core Middleware](/aspnet/core/fundamentals/middleware/write).
+Middleware kann auch als Klasse definiert werden, indem entweder die- `IMiddleware` Schnittstelle oder die folgende Middleware-Konvention implementiert wird. Weitere Informationen finden Sie unter [Schreiben von benutzerdefinierten ASP.net Core Middleware](/aspnet/core/fundamentals/middleware/write).
 
 >[!div class="step-by-step"]
 >[Zurück](data.md)
