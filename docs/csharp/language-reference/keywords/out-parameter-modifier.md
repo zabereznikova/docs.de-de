@@ -4,12 +4,12 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 30946c85d2b64ead3f42e03da61108fa5b367779
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805861"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174808"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modifizierer für out-Parameter (C#-Verweis)
 
@@ -56,7 +56,7 @@ Für [Erweiterungsmethoden](../../programming-guide/classes-and-structs/extensio
 
 ## <a name="declaring-out-parameters"></a>Deklarieren eines `out`-Parameters
 
-Das Deklarieren einer Methode mit `out`-Argumenten ist eine gängige Methode, um mehrere Werte zurückzugeben. Ab C# 7.0 sollten Sie [Tupel](../../tuples.md) für ähnliche Szenarien berücksichtigen. Im folgenden Beispiel wird `out` verwendet, um mit einem Methodenaufruf drei Variablen zurückzugeben. Das dritte Argument ist NULL zugewiesen. Dadurch können Methoden Werte optional zurückgeben.  
+Das Deklarieren einer Methode mit `out`-Argumenten ist eine gängige Methode, um mehrere Werte zurückzugeben. Ab C# 7.0 sollten Sie [Werttupel](../builtin-types/value-tuples.md) für ähnliche Szenarien berücksichtigen. Im folgenden Beispiel wird `out` verwendet, um mit einem Methodenaufruf drei Variablen zurückzugeben. Das dritte Argument ist NULL zugewiesen. Dadurch können Methoden Werte optional zurückgeben.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 

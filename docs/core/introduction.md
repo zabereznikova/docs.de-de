@@ -4,12 +4,12 @@ description: .NET Core ist eine modulare, hochleistungsfähige Implementierung v
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: f99b446bbd38b2b814c13afa13ab34cd5c9aa086
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: b28ad965e54680e2e1134c389266741ade28084f
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645521"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226581"
 ---
 # <a name="introduction-to-net-core"></a>Einführung in .NET Core
 

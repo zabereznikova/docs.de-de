@@ -3,12 +3,12 @@ title: 'Tutorial: Schreiben Ihres ersten Analysetools und Codefixes'
 description: Dieses Tutorial enthält Schritt-für-Schritt-Anleitungen zum Erstellen eines Analysetools und eines Codefixes mithilfe des .NET Compiler SDK (Roslyn-APIs).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396279"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100937"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Schreiben Ihres ersten Analysetools und Codefixes
 
@@ -17,6 +17,25 @@ Das .NET Compiler Platform SDK stellt die Tools zur Verfügung, die Sie zum Erst
 In diesem Tutorial lernen Sie die Erstellung eines **Analysetools** und eines begleitenden **Codefixes** unter Verwendung der Roslyn-APIs kennen. Ein Analysetool ist eine Möglichkeit, Quellcodeanalyse auszuführen und dem Benutzer ein Problem zu melden. Optional kann ein Analysetool auch einen Codefix bereitstellen, der eine Änderung am Quellcode des Benutzers darstellt. In diesem Tutorial wird ein Analysetool erstellt, das Deklarationen von lokalen Variablen enthält, die mithilfe des `const`-Modifizierers deklariert werden könnten, es aber nicht sind. Der begleitende Codefix ändert diese Deklarationen, indem er den `const`-Modifizierer hinzufügt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
+
+> [!NOTE]
+> Die aktuelle Visual Studio-Vorlage **Analyzer mit Codekorrektur (.NET Standard)** enthält einen bekannten Fehler, der in Visual Studio 2019, Version 16.7 behoben sein sollte. Die Projekte in der Vorlage werden nur kompiliert, wenn die folgenden Änderungen vorgenommen werden:
+>
+> 1. Klicken Sie auf **Extras** > **Optionen** > **NuGet-Paket-Manager** > **Paketquellen**.
+>    - Klicken Sie auf das Pluszeichen, um eine neue Quelle hinzuzufügen:
+>    - Legen Sie die **Quelle** auf `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` fest, und wählen Sie **Aktualisieren** aus.
+> 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **MakeConst.Vsix**, und wählen Sie **Projektdatei bearbeiten** aus.
+>    - Aktualisieren Sie den Knoten `<AssemblyName>`, um das Suffix `.Visx` hinzuzufügen:
+>      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
+>    - Aktualisieren Sie den Knoten `<ProjectReference>` in Zeile 41, um den `TargetFramework`-Wert zu ändern:
+>      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
+> 1. Aktualisieren Sie die Datei *MakeConstUnitTests.cs* im Projekt *MakeConst.Test*:
+>    - Ändern Sie Zeile 9 in Folgendes, und beachten Sie die Namespaceänderung:
+>      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
+>    - Ändern Sie Zeile 24 in die folgende Methode:
+>      - `await Verify.VerifyAnalyzerAsync(test);`
+>    - Ändern Sie Zeile 62 in die folgende Methode:
+>      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -55,7 +74,7 @@ Dies bringt die Analyse mit sich, mit der bestimmt wird, ob eine Variable zu ein
 - Wählen Sie unter **Visual C# > Erweiterbarkeit** **Analyzer with code fix (.NET Standard)** (Analysetool mit Codefix (.NET Standard)) aus.
 - Benennen Sie Ihr Projekt "**MakeConst**", und klicken Sie auf „OK“.
 
-Die Vorlage für das Analysetool mit Codefix erstellt drei Projekte: Das erste enthält das Analysetool und den Codefix, das zweite ist ein Komponententestprojekt, und das dritte ist das VSIX-Projekt. Das Standardstartprojekt ist das VSIX-Projekt. Drücken Sie **F5**, um das VSIX-Projekt zu starten. Dadurch wird eine zweite Instanz von Visual Studio mit geladenem neuem Analysemodul gestartet.
+Die Vorlage für das Analysetool mit Codefix erstellt drei Projekte: Das erste enthält das Analysetool und den Codefix, das zweite ist ein Komponententestprojekt, und das dritte ist das VSIX-Projekt. Das Standardstartprojekt ist das VSIX-Projekt. Drücken Sie <kbd>F5</kbd>, um das VSIX-Projekt zu starten. Dadurch wird eine zweite Instanz von Visual Studio mit geladenem neuem Analysemodul gestartet.
 
 > [!TIP]
 > Wenn Sie das Analysetool ausführen, wird eine zweite Instanz von Visual Studio gestartet. Diese zweite Kopie verwendet eine andere Registrierungsstruktur zum Speichern von Einstellungen. Dadurch können Sie in beiden Instanzen von Visual Studio verschiedene Anzeigeeinstellungen verwenden. Sie können für die Testinstanz von Visual Studio ein anderes Design auswählen. Achten Sie außerdem darauf, Ihre Einstellungen oder Ihre Anmeldung nicht mithilfe der Testinstanz von Visual Studio als mobiler Benutzer auf Ihr Visual Studio-Konto zu übertragen. Auf diese Weise bleiben die unterschiedlichen Einstellungen erhalten.
@@ -170,7 +189,7 @@ Der Code, den Sie soeben hinzugefügt haben, stellt sicher, dass die Variable ni
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-Sie können Ihren Fortschritt überprüfen, indem Sie **F5** drücken, um Ihr Analysetool auszuführen. Sie können die Konsolenanwendung laden, die Sie zuvor erstellt haben, und dann den folgenden Testcode hinzufügen:
+Sie können Ihren Fortschritt überprüfen, indem Sie <kbd>F5</kbd> drücken, um Ihr Analysetool auszuführen. Sie können die Konsolenanwendung laden, die Sie zuvor erstellt haben, und dann den folgenden Testcode hinzufügen:
 
 ```csharp
 int x = 0;
@@ -251,7 +270,7 @@ Fügen Sie den folgenden Code am Ende der `MakeConstAsync`-Methode hinzu:
 
 [!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-Ihr Codefix ist nun bereit, ausprobiert zu werden.  Drücken Sie F5, um das Analysetoolprojekt in einer zweiten Instanz von Visual Studio auszuführen. Erstellen Sie in der zweiten Visual Studio-Instanz ein neues Konsolenanwendungsprojekt in C#, und fügen Sie der Methode „Main“ einige lokale Variablendeklarationen hinzu, die mit konstanten Werten initialisiert sind. Sie sehen, dass sie als Warnungen gemeldet werden, wie unten dargestellt.
+Ihr Codefix ist nun bereit, ausprobiert zu werden.  Drücken Sie <kbd>F5</kbd>, um das Analysetoolprojekt in einer zweiten Instanz von Visual Studio auszuführen. Erstellen Sie in der zweiten Visual Studio-Instanz ein neues Konsolenanwendungsprojekt in C#, und fügen Sie der Methode „Main“ einige lokale Variablendeklarationen hinzu, die mit konstanten Werten initialisiert sind. Sie sehen, dass sie als Warnungen gemeldet werden, wie unten dargestellt.
 
 ![Warnungen „Kann als ‚const‘ deklariert werden“](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -310,7 +329,7 @@ Im vorstehenden Code wurden außerdem ein paar Änderungen an dem Code vorgenomm
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-Führen Sie diese zwei Tests aus, um sicherzustellen, dass sie bestanden werden. Öffnen Sie in Visual Studio den **Test-Explorer**, indem Sie **Test** > **Windows** > **Test-Explorer** auswählen.  Aktivieren Sie dann den Link **Run All** (Alle ausführen).
+Führen Sie diese zwei Tests aus, um sicherzustellen, dass sie bestanden werden. Öffnen Sie in Visual Studio den **Test-Explorer**, indem Sie **Test** > **Windows** > **Test-Explorer** auswählen. Wählen Sie dann den Link **Alle ausführen** aus.
 
 ## <a name="create-tests-for-valid-declarations"></a>Erstellen von Tests für gültige Deklarationen
 
@@ -503,12 +522,12 @@ Sie müssen eine `using`-Anweisung hinzufügen, um den <xref:Microsoft.CodeAnaly
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-Führen Sie Ihre Tests aus – sie sollten alle bestanden werden. Gratulieren Sie sich, indem Sie Ihr fertiges Analysetool ausführen. Drücken Sie STRG+F5, um das Analysetoolprojekt in einer zweiten Instanz von Visual Studio mit geladener Roslyn-Vorschauerweiterung auszuführen.
+Führen Sie Ihre Tests aus – sie sollten alle bestanden werden. Gratulieren Sie sich, indem Sie Ihr fertiges Analysetool ausführen. Drücken Sie <kbd>STRG+F5</kbd>, um das Analysetoolprojekt in einer zweiten Instanz von Visual Studio mit geladener Roslyn-Vorschauerweiterung auszuführen.
 
 - Erstellen Sie in der zweiten Visual Studio-Instanz ein neues C#-Konsolenanwendungsprojekt, und fügen Sie `int x = "abc";` zur Methode „Main“ hinzu. Dank der ersten Fehlerbehebung sollte keine Warnung für diese lokale Variablendeklaration gemeldet werden (obwohl es erwartungsgemäß einen Compilerfehler gibt).
 - Fügen Sie als Nächstes `object s = "abc";` zur Methode „Main“ hinzu. Aufgrund der zweiten Fehlerbehebung sollte keine Warnung gemeldet werden.
 - Fügen Sie schließlich eine weitere lokale Variable hinzu, die das Schlüsselwort `var` verwendet. Sie sehen, dass eine Warnung gemeldet und ein Vorschlag links unterhalb der Meldung angezeigt wird.
-- Bewegen Sie den Textcursor des Editors über die Wellenlinien-Unterstreichung, und drücken Sie STRG+., um den vorgeschlagenen Codefix anzuzeigen. Beachten Sie beim Auswählen des Codefixes, dass das Schlüsselwort „var“ jetzt ordnungsgemäß behandelt wird.
+- Bewegen Sie den Textcursor des Editors über die Wellenlinien-Unterstreichung, und drücken Sie <kbd>STRG+</kbd>, um den vorgeschlagenen Codefix anzuzeigen. Beachten Sie beim Auswählen des Codefixes, dass das Schlüsselwort „var“ jetzt ordnungsgemäß behandelt wird.
 
 Fügen Sie schließlich den folgenden Code hinzu:
 

@@ -2,12 +2,12 @@
 title: Neuerungen in C# 7.3
 description: Eine Übersicht der neuen Features in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd8f554516fb5078d9d2ed1eec787f36e8f4c7a7
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204558"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174756"
 ---
 # <a name="whats-new-in-c-73"></a>Neuerungen in C# 7.3
 
@@ -39,7 +39,7 @@ Der übrige Teil dieses Artikels enthält Informationen und Links, über die Sie
 1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
 1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
 1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
-1. Führen Sie `dotnet try` aus.
+1. Führen Sie aus `dotnet try`.
 
 ## <a name="enabling-more-efficient-safe-code"></a>Ermöglichen von effizienterem sicherem Code
 
@@ -141,7 +141,7 @@ Das zweite Design enthält Verbesserungen der Features in der Sprache. Die Produ
 
 ### <a name="tuples-support--and-"></a>Tupel unterstützen `==` und `!=`
 
-Die C#-Tupeltypen unterstützen jetzt `==` und `!=`. Weitere Informationen finden Sie unter dem [Gleichheit](../tuples.md#equality-and-tuples) behandelnden Abschnitt im Artikel zu [Tupeln](../tuples.md).
+Die C#-Tupeltypen unterstützen jetzt `==` und `!=`. Weitere Informationen finden Sie im Abschnitt [Tupelgleichheit](../language-reference/builtin-types/value-tuples.md#tuple-equality) im Artikel [Tupeltypen](../language-reference/builtin-types/value-tuples.md).
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Anfügen von Attributen zu den Unterstützungsfeldern für automatisch implementierte Eigenschaften
 

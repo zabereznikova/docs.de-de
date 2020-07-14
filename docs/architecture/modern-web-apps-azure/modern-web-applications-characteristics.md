@@ -3,13 +3,16 @@ title: Merkmale moderner Webanwendungen
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Merkmale moderner Webanwendungen
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451563"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174795"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Merkmale moderner Webanwendungen
 
@@ -67,7 +70,7 @@ ASP.NET Core-Anwendungen können mithilfe einfacher Text-Editoren und Befehlszei
 
 Neben ASP.NET Core ist das herkömmliche ASP.NET 4.x weiterhin eine stabile und zuverlässige Plattform zum Erstellen von Webanwendungen. ASP.NET unterstützt MVC- und Web-API-Entwicklungsmodelle sowie Web Forms, die gut für eine umfassende seitenbasierte Anwendungsentwicklung geeignet sind, und bietet eine umfangreiches Ökosystem für Drittanbieterkomponenten. Microsoft Azure bietet seit langem eine hervorragende Unterstützung für ASP.NET 4.x-Anwendungen, und viele Entwickler sind mit dieser Plattform vertraut.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
 Blazor ist in ASP.NET Core 3.0 und höher enthalten. Das Tool bietet einen neuen Mechanismus zur Erstellung komplexer interaktiver Webclientanwendungen mit Razor, C# und ASP.NET Core. Es bietet eine weitere Lösung, die bei der Entwicklung moderner Webanwendungen berücksichtigt werden sollte. Es gibt zwei Versionen von Blazor: serverseitig und clientseitig.
 
@@ -81,7 +84,7 @@ Clientseitiges Blazor wird 2020 veröffentlicht und macht das Rendern von Änder
 >   <https://docs.microsoft.com/aspnet/core/>
 > - **Testen in ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Erste Schritte mit Blazor**  
+> - **Blazor – Erste Schritte**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]

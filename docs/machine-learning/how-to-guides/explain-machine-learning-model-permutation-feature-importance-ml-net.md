@@ -5,12 +5,12 @@ ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed0d6736f1f2e988d96a397cad77a7fc743489da
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77092615"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174230"
 ---
 # <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretieren von Modellvorhersagen mit Permutation Feature Importance
 

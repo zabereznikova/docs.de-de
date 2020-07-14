@@ -3,13 +3,16 @@ title: Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwe
 description: In diesem Artikel erfahren Sie, wie Sie beim Erstellen von Webanwendungen zwischen herkömmlichen Web-Apps und Single-Page-Webanwendungen (Single Page Application, SPAs) auswählen.
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662705"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174366"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
 
@@ -38,7 +41,7 @@ Darüber hinaus erfordern SPA-Frameworks ausführlichere Kenntnisse zur Architek
 
 Die durch den SPA-Ansatz ermöglichte Verbesserung der Benutzererfahrung muss mit diesen Aspekten abgewogen werden.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
 ASP.NET Core 3.0 führt mit Blazor ein neues Modell zur Erstellung umfassender interaktiver und zusammensetzbarer Benutzeroberflächen ein. Blazor auf Serverseite ermöglicht Entwicklern, eine Benutzeroberfläche mit C# und Razor auf dem Server zu erstellen. Die Benutzeroberfläche kann über eine ständige SignalR-Verbindung in Echtzeit interaktiv mit dem Browser verbunden werden.
 
@@ -52,7 +55,7 @@ Erwägen Sie die Entwicklung Ihrer Webanwendung mit Blazor in folgenden Fällen:
 
 - Ihr Team ist mit der .NET-Entwicklung besser vertraut als mit der JavaScript- oder TypeScript-Entwicklung.
 
-Weitere Informationen zu Blazor finden Sie unter [Einführung in Blazor](https://blazor.net/docs/get-started.html).
+Weitere Informationen zu Blazorfinden Sie unter [Erste Schritte mit Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Fälle für die Verwendung von herkömmlichen Webanwendungen
 
@@ -97,7 +100,7 @@ Das Schreiben von SPAs erfordert Erfahrung mit JavaScript und bzw. oder TypeScri
 
 Wenn Sie bereits eine Web-API für die Verwendung durch andere Clients unterstützen, erfordert es möglicherweise weniger Aufwand, eine SPA-Implementierung zu erstellen, die diese APIs nutzt, anstatt die Logik im serverseitigen Format zu reproduzieren. SPAs machen umfangreichen Gebrauch von Web-APIs, um Daten abzufragen und zu aktualisieren, während Benutzer mit der Anwendung interagieren.
 
-## <a name="when-to-choose-blazor"></a>In welchen Fällen sollte Blazor verwendet werden?
+## <a name="when-to-choose-blazor"></a>Fälle für die Verwendung von Blazor
 
 Im Folgenden finden Sie eine ausführlichere Erläuterung der Vorteile von Blazor für Ihre Webanwendung.
 

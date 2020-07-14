@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 011ef8b570a0bbbc38ec71df4286c3b08c3109da
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110918"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174782"
 ---
 # <a name="equality-operators-c-reference"></a>Gleichheitsoperatoren (C#-Referenz)
 
@@ -43,7 +43,7 @@ Zwei Operanden desselben [enum](../builtin-types/enum.md)-Typs sind gleich, wenn
 
 Benutzerdefinierte [Strukturtypen](../builtin-types/struct.md) unterstützen den `==`-Operator nicht standardmäßig. Eine benutzerdefinierte Struktur muss den `==`-Operator [überladen](operator-overloading.md), damit er unterstützt wird.
 
-Ab C# 7.3 werden die Operatoren `==` und `!=` für [C#-Tupel](../../tuples.md) unterstützt. Weitere Informationen finden Sie im Abschnitt [Gleichheit und Tupel](../../tuples.md#equality-and-tuples) im Artikel [C#-Tupeltypen](../../tuples.md).
+Ab C# 7.3 werden die Operatoren `==` und `!=` für [C#-Tupel](../builtin-types/value-tuples.md) unterstützt. Weitere Informationen finden Sie im Abschnitt [Tupelgleichheit](../builtin-types/value-tuples.md#tuple-equality) im Artikel [Tupeltypen](../builtin-types/value-tuples.md).
 
 ### <a name="reference-types-equality"></a>Gleichheit von Verweistypen
 

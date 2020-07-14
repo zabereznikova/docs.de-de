@@ -2,12 +2,12 @@
 title: Neues in C# 7.1
 description: Eine Übersicht der neuen Features in C# 7.1
 ms.date: 04/09/2019
-ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe6e49eb01e24a27bc7970900c05150378ab194a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398352"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174769"
 ---
 # <a name="whats-new-in-c-71"></a>Neues in C# 7.1
 
@@ -35,7 +35,7 @@ Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktio
 1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
 1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
 1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
-1. Führen Sie `dotnet try` aus.
+1. Führen Sie aus `dotnet try`.
 
 ## <a name="async-main"></a>Async Main
 
@@ -106,7 +106,7 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Weitere Informationen über dieses Feature finden Sie im Artikel [Tupel](../tuples.md).
+Weitere Informationen zu diesem Feature finden Sie im Artikel [Tupeltypen](../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="pattern-matching-on-generic-type-parameters"></a>Musterabgleich für generische Typparameter
 

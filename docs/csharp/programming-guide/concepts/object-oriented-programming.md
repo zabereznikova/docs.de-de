@@ -2,17 +2,18 @@
 title: Objektorientiertes Programmieren (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241889"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226633"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
-C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Kapselung, Vererbung und Polymorphie.
+C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Abstraktion, Kapselung, Vererbung und Polymorphie.
 
+- *Abstraktion* bedeutet, dass die unnötigen Details von Typconsumern ausgeblendet werden.
 - *Kapselung* bedeutet, dass eine Gruppe verwandter Eigenschaften, Methoden sowie anderer Member als eine Einheit bzw. ein Objekt behandelt wird.
 - *Vererbung* beschreibt die Fähigkeit, neue Klassen basierend auf einer vorhandenen Klasse zu erstellen.
 - *Polymorphismus* bedeutet, dass Sie mehrere Klassen untereinander austauschen können, obwohl jede Klasse dieselben Eigenschaften oder Methoden auf unterschiedliche Art und Weise implementiert.
@@ -29,7 +30,7 @@ class SampleClass
 }
 ```
 
-C# stellt auch Typen namens *Strukturen* bereit, die nützlich sind, wenn Sie keine Unterstützung für Vererbungen oder Polymorphie benötigen.
+C# stellt auch Typen namens *Strukturen* bereit, die nützlich sind, wenn Sie keine Unterstützung für Vererbungen oder Polymorphie benötigen. Weitere Informationen finden Sie unter [Auswählen zwischen Klassen und Strukturen](../../../standard/design-guidelines/choosing-between-class-and-struct.md).
 
 So definieren Sie eine Struktur
 

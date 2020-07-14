@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet tool update“
 description: Der Befehl „dotnet tool update“ aktualisiert das angegebene .NET Core-Tool auf Ihrem Computer.
-ms.date: 02/14/2020
-ms.openlocfilehash: 6176846dbe8e2a91d9c6959dede15718d8f983b2
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.date: 07/08/2020
+ms.openlocfilehash: 7c4bde44ac9964828074baeb1a697ba64ed17887
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463302"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226620"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -20,17 +20,24 @@ ms.locfileid: "81463302"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet tool update <PACKAGE_NAME> -g|--global
+dotnet tool update <PACKAGE_ID> -g|--global
     [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [-v|--verbosity <LEVEL>] [--add-source <SOURCE>]
+    [--add-source <SOURCE>] [--disable-parallel]
+    [--ignore-failed-sources] [--interactive] [--no-cache]
+    [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
-dotnet tool update <PACKAGE_NAME> --tool-path <PATH>
+dotnet tool update <PACKAGE_ID> --tool-path <PATH>
     [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [-v|--verbosity <LEVEL>] [--add-source <SOURCE>]
+    [--add-source <SOURCE>] [--disable-parallel]
+    [--ignore-failed-sources] [--interactive] [--no-cache]
+    [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
-dotnet tool update <PACKAGE_NAME>
+dotnet tool update <PACKAGE_ID> --local
     [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [-v|--verbosity <LEVEL>] [--add-source <SOURCE>]
+    [--add-source <SOURCE>] [--disable-parallel]
+    [--ignore-failed-sources] [--interactive] [--no-cache]
+    [--tool-manifest <PATH>]
+    [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
 dotnet tool update -h|--help
 ```
@@ -41,13 +48,13 @@ Der Befehl `dotnet tool update` ermöglicht Ihnen das Aktualisieren der .NET Cor
 
 * Verwenden Sie zum Aktualisieren eines globalen Tools, das am Standardspeicherort installiert wurde, die Option `--global`.
 * Verwenden Sie zum Aktualisieren eines globalen Tools, das an einem benutzerdefinierten Speicherort installiert wurde, die Option `--tool-path`.
-* Wenn Sie ein lokales Tool aktualisieren möchten, lassen Sie die Optionen `--global` und `--tool-path` weg.
+* Um ein lokales Tool zu aktualisieren, verwenden Sie die Option `--local`.
 
 **Lokale Tools sind ab .NET Core SDK 3.0 verfügbar.**
 
 ## <a name="arguments"></a>Argumente
 
-- **`PACKAGE_NAME`**
+- **`PACKAGE_ID`**
 
   Name oder ID des NuGet-Pakets, das das zu aktualisierende globale .NET Core-Tool enthält. Mithilfe des Befehls [dotnet tool list](dotnet-tool-list.md) können Sie den Paketnamen abrufen.
 
@@ -61,9 +68,41 @@ Der Befehl `dotnet tool update` ermöglicht Ihnen das Aktualisieren der .NET Cor
 
   Die zu verwendende NuGet-Konfigurationsdatei (*nuget.config*).
 
+- **`--disable-parallel`**
+
+  Verhindert die parallele Wiederherstellung mehrerer Projekte.
+
 - **`--framework <FRAMEWORK>`**
 
   Legt das [Zielframework](../../standard/frameworks.md) des zu aktualisierenden Tools fest.
+
+- **`--ignore-failed-sources`**
+
+  Paketquellenfehler werden als Warnungen behandelt.
+
+- **`--interactive`**
+
+  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten (z.B. um die Authentifizierung abzuschließen).
+
+- **`--local`**
+
+  Aktualisieren Sie das Tool und das lokale Toolmanifest. Kann nicht mit der Option `--global` kombiniert werden.
+
+- **`--no-cache`**
+
+  Pakete und HTTP-Anforderungen werden nicht zwischengespeichert.
+
+- **`--tool-manifest <PATH>`**
+
+  Pfad zur Manifestdatei.
+
+- **`--tool-path <PATH>`**
+
+  Gibt den Speicherort an, in dem das globale Tool installiert ist. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu aktualisierende Tool ein lokales Tool ist.
+
+- **`--version <VERSION>`**
+
+  Der Versionsbereich des Toolpakets, auf das aktualisiert werden soll. Dies kann nicht zum Herabstufen von Versionen verwendet werden. Sie müssen zuerst neuere Versionen `uninstall`.
 
 - **`-g|--global`**
 
@@ -72,10 +111,6 @@ Der Befehl `dotnet tool update` ermöglicht Ihnen das Aktualisieren der .NET Cor
 - **`-h|--help`**
 
   Druckt eine kurze Hilfe für den Befehl.
-
-- **`--tool-path <PATH>`**
-
-  Gibt den Speicherort an, in dem das globale Tool installiert ist. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu aktualisierende Tool ein lokales Tool ist.
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -99,8 +134,17 @@ Der Befehl `dotnet tool update` ermöglicht Ihnen das Aktualisieren der .NET Cor
 
   Aktualisiert das lokale Tool [dotnetsay](https://www.nuget.org/packages/dotnetsay/), das im lokalen Verzeichnis installiert ist.
 
+- **`dotnet tool update -g dotnetsay --version 2.0.*`**
+
+  Aktualisiert das globale Tool [dotnetsay](https://www.nuget.org/packages/dotnetsay/) auf die neueste Patchversion mit einer Hauptversion von `2` und einer Nebenversion von `0`.
+
+- **`dotnet tool update -g dotnetsay --version (2.0.*,2.1.4)`**
+
+  Aktualisiert das globale Tool [dotnetsay](https://www.nuget.org/packages/dotnetsay/) auf die niedrigste Version innerhalb des angegebenen Bereichs `(> 2.0.0 && < 2.1.4)`, Version `2.1.0` würde installiert. Weitere Informationen zu Bereichen der semantischen Versionsverwaltung finden Sie unter [Versionsbereiche von NuGet-Paketen](/nuget/concepts/package-versioning#version-ranges).
+
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET Core-Tools](global-tools.md)
+- [Semantische Versionsverwaltung](https://semver.org)
 - [Tutorial: Erstellen und Verwenden eines globalen .NET Core-Tools mithilfe der .NET Core-CLI](global-tools-how-to-use.md)
 - [Tutorial: Erstellen und Verwenden eines lokalen .NET Core-Tools mithilfe der .NET Core-CLI](local-tools-how-to-use.md)
