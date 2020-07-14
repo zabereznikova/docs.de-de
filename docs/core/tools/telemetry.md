@@ -3,12 +3,12 @@ title: .NET Core SDK-Telemetrie
 description: Entdecken Sie die Telemetriefeatures des .NET Core SDK, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden. Erfahren Sie außerdem, wie Sie diese Features deaktivieren können.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507281"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226568"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK-Telemetrie
 
@@ -52,7 +52,7 @@ Um diese Meldung und die .NET Core-Willkommensmeldung zu deaktivieren, legen Sie
 
 Das Telemetriefeature erfasst keine personenbezogenen Daten wie Benutzernamen oder E-Mail-Adressen. Es überprüft Ihren Code nicht und extrahiert keine vertraulichen Daten auf Projektebene wie den Namen, das Repository oder den Autor. Die Daten werden mithilfe von [Azure Monitor](https://azure.microsoft.com/services/monitor/) sicher an die Microsoft-Server gesendet, unter eingeschränktem Zugriff gespeichert und unter strikter Sicherheitskontrolle durch die Systeme von [Azure Storage](https://azure.microsoft.com/services/storage/) veröffentlicht.
 
-Der Schutz Ihrer Privatsphäre ist uns wichtig. Wenn Sie vermuten, dass durch die Telemetrie vertrauliche Daten erfasst oder die Daten nicht sicher oder ordnungsgemäß verarbeitet werden, melden Sie ein Problem mit dem [dotnet/cli](https://github.com/dotnet/cli/issues)-Repository, oder senden Sie eine E-Mail an [dotnet@microsoft.com](mailto:dotnet@microsoft.com), damit dies überprüft wird.
+Der Schutz Ihrer Privatsphäre ist uns wichtig. Wenn Sie vermuten, dass durch die Telemetrie vertrauliche Daten erfasst oder die Daten nicht sicher oder ordnungsgemäß verarbeitet werden, melden Sie ein Problem mit dem [dotnet/sdk](https://github.com/dotnet/sdk/issues)-Repository, oder senden Sie eine E-Mail an [dotnet@microsoft.com](mailto:dotnet@microsoft.com), damit dies überprüft wird.
 
 Das Telemetriefeature erfasst die folgenden Daten:
 
@@ -139,4 +139,4 @@ Aus diesem Grund sollten benutzerdefinierte Builds des .NET Core SDK nicht in V
 ## <a name="see-also"></a>Siehe auch
 
 - [Telemetrie zur .NET Core-CLI: Daten zum 2. Quartal 2019](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
-- [Telemetrieverweisquelle (dotnet- bzw. cli-Repository)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
+- [Telemetrieverweisquelle (dotnet/sdk-Repository)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)
