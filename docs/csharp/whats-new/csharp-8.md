@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 27c2d7e2d6f0e665e7abe4fdcfb94c140224cc89
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895432"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174730"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -194,7 +194,7 @@ Ein Musterabgleich erstellt eine präzise Syntax,. um diesen Algorithmus auszudr
 
 ### <a name="tuple-patterns"></a>Tupelmuster
 
-Einige Algorithmen sind von mehreren Eingaben abhängig. **Tupelmuster** erlauben Ihnen, auf Grundlage mehrerer Werte, ausgedrückt als ein [Tupel](../tuples.md), zu wechseln („switch“).  Der folgende Code zeigt einen switch-Ausdruck für das Spiel *Stein, Schere, Papier* (Schnick, Schnack, Schnuck):
+Einige Algorithmen sind von mehreren Eingaben abhängig. **Tupelmuster** erlauben Ihnen, auf Grundlage mehrerer Werte, ausgedrückt als ein [Tupel](../language-reference/builtin-types/value-tuples.md), zu wechseln („switch“).  Der folgende Code zeigt einen switch-Ausdruck für das Spiel *Stein, Schere, Papier* (Schnick, Schnack, Schnuck):
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -322,7 +322,7 @@ In beiden Fällen generiert der Compiler den Aufruf von `Dispose()`. Der Compile
 
 ## <a name="static-local-functions"></a>Statische lokale Funktionen
 
-Sie können nun den `static`-Modifikator zu lokalen Funktionen hinzufügen, um sicherzustellen, dass die lokale Funktion keine Variablen aus dem umschließenden Bereich erfasst (referenziert). Dadurch wird `CS8421` erzeugt: „Eine statische lokale Funktion kann keine Referenz auf \<variable> enthalten.“
+Sie können nun den `static`-Modifikator zu lokalen Funktionen hinzufügen, um sicherzustellen, dass die lokale Funktion keine Variablen aus dem umschließenden Bereich erfasst (referenziert). Dadurch wird `CS8421` erzeugt, „Eine statische lokale Funktion kann keine Referenz auf \<variable> enthalten.“
 
 Betrachten Sie folgenden Code. Die lokale Funktion `LocalFunction` greift auf die Variable `y` zu, die im umschließenden Bereich (die Methode `M`) deklariert ist. Daher kann `LocalFunction` nicht mit dem `static`-Modifikator deklariert werden:
 

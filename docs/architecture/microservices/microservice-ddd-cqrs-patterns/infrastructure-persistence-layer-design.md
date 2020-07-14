@@ -2,12 +2,12 @@
 title: Entwerfen der Persistenzebene der Infrastruktur
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über das Repositorymuster im Entwurf der Infrastrukturpersistenzebene
 ms.date: 10/08/2018
-ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c18582eb5db61a61b366c06f361d297e698b39a
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988478"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100846"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Entwerfen der Persistenzebene der Infrastruktur
 
@@ -129,4 +129,4 @@ Repositorys können nützlich sein, sind jedoch nicht so wichtig für Ihren dom�
 
 >[!div class="step-by-step"]
 >[Zurück](domain-events-design-implementation.md)
->[Weiter](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Weiter](infrastructure-persistence-layer-implementation-entity-framework-core.md)

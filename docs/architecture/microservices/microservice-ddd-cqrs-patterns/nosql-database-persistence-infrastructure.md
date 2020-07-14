@@ -2,12 +2,12 @@
 title: Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 description: Übersicht über die Verwendung von NoSql-Datenbanken im Allgemeinen und Azure Cosmos DB im Speziellen als Option zum Implementieren von Persistenz.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: a478809895b0c20824f08f20558f2d47e10223d0
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988439"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100807"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 
@@ -342,5 +342,5 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]
->[Zurück](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Zurück](infrastructure-persistence-layer-implementation-entity-framework-core.md)
 >[Weiter](microservice-application-layer-web-api-design.md)

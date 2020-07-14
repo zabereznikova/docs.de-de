@@ -2,12 +2,12 @@
 title: Entwerfen von Validierungen auf der Domänenmodellebene
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wichtige Konzepte für Validierungen von Domänenmodellen
 ms.date: 10/08/2018
-ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988504"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100911"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Entwerfen von Validierungen auf der Domänenmodellebene
 
@@ -53,7 +53,7 @@ Ein ähnlicher Ansatz kann im Entitätskonstruktor verwendet werden, wodurch ein
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Verwenden von Validierungsattributen im Modell anhand von Datenanmerkungen
 
-Datenanmerkungen können ähnlich wie die Required- oder MaxLength-Attribute zum Konfigurieren von EF Core-Datenbankfeld-Eigenschaften verwendet werden, wie im Abschnitt [Tabellenzuordnung](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) detailliert erläutert. Allerdings [können sie nicht mehr für die Entitätsvalidierung EF Core verwendet werden](https://github.com/dotnet/efcore/issues/3680) (Gleiches gilt für die <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>-Methode), wie dies seit EF 4.x in .NET Framework der Fall war.
+Datenanmerkungen können ähnlich wie die Required- oder MaxLength-Attribute zum Konfigurieren von EF Core-Datenbankfeld-Eigenschaften verwendet werden, wie im Abschnitt [Tabellenzuordnung](infrastructure-persistence-layer-implementation-entity-framework-core.md#table-mapping) detailliert erläutert. Allerdings [können sie nicht mehr für die Entitätsvalidierung EF Core verwendet werden](https://github.com/dotnet/efcore/issues/3680) (Gleiches gilt für die <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>-Methode), wie dies seit EF 4.x in .NET Framework der Fall war.
 
 Datenanmerkungen und die <xref:System.ComponentModel.DataAnnotations.IValidatableObject>-Schnittstelle können weiterhin für die Modellvalidierung während der Modellbindung verwendet werden, bevor die Controlleraktionen aufgerufen werden. Dies ist jedoch für ein ViewModel- oder DTO-Modell vorgesehen. Dabei handelt es sich um einen MVC- oder API-Aspekt, der nicht im Domänenmodell behandelt wird.
 

@@ -1,5 +1,6 @@
 ---
 title: Problematische Berechtigungen und Richtlinienverwaltung
+description: Weitere Informationen finden Sie unter Links zu den verschiedenen gefährlichen Berechtigungen in .net. Diese Berechtigungen sollten nur bei Bedarf für vertrauenswürdigen Code erteilt werden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - permissions [.NET Framework], policy administration
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-ms.openlocfilehash: 15d28ff7d11b5d15ce44d9ab1f56548256850ff8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: ba3d47dc445e4b368f57d59d735fc331f5d6de81
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645759"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281614"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Problematische Berechtigungen und Richtlinienverwaltung
 Verschiedene der geschützten Operationen, für die von .NET Framework Berechtigungen bereitgestellt werden, ermöglichen unter Umständen die Umgehung des Sicherheitssystems. Diese problematischen Berechtigungen sollten nur bei Bedarf für vertrauenswürdigen Code erteilt werden. Es gibt in der Regel keinen Schutz vor bösartigem Code, wenn dem Code diese Berechtigungen gewährt werden.  
   
 > [!NOTE]
-> In .NET Framework 4 wurden wichtige Änderungen am .NET Framework-Sicherheitsmodell und der Terminologie vorgenommen. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
+> In .NET Framework 4 gab es wichtige Änderungen am .NET Framework Sicherheitsmodell und der Terminologie. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
   
  Die problematischen Berechtigungen werden in der folgenden Tabelle erläutert.  
   
@@ -36,6 +37,6 @@ Verschiedene der geschützten Operationen, für die von .NET Framework Berechtig
 |<xref:System.Security.Permissions.ReflectionPermission>||  
 |<xref:System.MemberAccessException>|Kann private Member zur Überwindung von Zugriffsmechanismen verwenden.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

@@ -4,12 +4,12 @@ description: Hier erfahren Sie, welcher Azure-Migrationspfad für Ihre ASP.NET-W
 author: CESARDELATORRE
 ms.author: cesardl
 ms.date: 03/01/2020
-ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 162dc8eb87dfd78d050b93b1c24ac573d7092126
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81433349"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174295"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>Auswählen der passenden Azure-Hostingoption
 
@@ -46,7 +46,7 @@ Wenn Sie relationale Datenbanken zu Azure migrieren möchten, haben Sie mehrere 
 
 ## <a name="networking-and-security-considerations"></a>Netzwerk- und Sicherheitsaspekte
 
-Wenn Sie Anwendungen in einer öffentlichen Cloud wie Microsoft Azure bereitstellen, empfiehlt es sich unter Umständen, bestimmte Netzwerke durch [Erstellen von Netzwerk-DMZs](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/) zu isolieren und zu schützen – etwa durch eine [DMZ zwischen Azure und Ihrem lokalen Datencenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) oder durch eine [ DMZ zwischen Azure und dem Internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). DMZs können mit [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) implementiert werden.
+Wenn Sie Anwendungen in einer öffentlichen Cloud wie Microsoft Azure bereitstellen, empfiehlt es sich unter Umständen, bestimmte Netzwerke durch [Erstellen von Netzwerk-DMZs](/azure/architecture/reference-architectures/dmz/) zu isolieren und zu schützen – etwa durch eine [DMZ zwischen Azure und Ihrem lokalen Datencenter](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) oder durch eine [ DMZ zwischen Azure und dem Internet](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). DMZs können mit [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) implementiert werden.
 
 Virtuelle Azure-Netzwerke ermöglichen Folgendes:
 
@@ -57,15 +57,15 @@ Virtuelle Azure-Netzwerke ermöglichen Folgendes:
 - Erstellen durchdachter Netzwerktopologien mit virtuellen Geräten
 - Schaffen einer isolierten und hochgradig sicheren Umgebung für Ihre Anwendungen
 
-Informationen zu den ersten Schritten beim Erstellen eines eigenen virtuellen Netzwerks finden Sie in der [Dokumentation zu Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/).
+Informationen zu den ersten Schritten beim Erstellen eines eigenen virtuellen Netzwerks finden Sie in der [Dokumentation zu Azure Virtual Network](/azure/virtual-network/).
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Authentifizierungs- und Autorisierungsaspekte bei der Migration zu Azure
 
 Die Sicherheit ist eines der Hauptanliegen von Organisationen, die eine Migration in die Cloud durchführen. Die meisten Unternehmen haben viel Zeit, Geld und Know-how in die Gestaltung und Entwicklung eines Sicherheitsmodells investiert. Daher ist es wichtig, dass ihre Investitionen in Maßnahmen wie Identitätsspeicher und Lösungen für einmaliges Anmelden nicht umsonst waren.
 
-Viele lokal ausgeführte B2E-.NET-Unternehmensanwendungen nutzen zur Authentifizierung und Identitätsverwaltung Active Directory. Mit Azure AD Connect können Sie Ihre lokalen Verzeichnisse in Azure Active Directory integrieren. Informationen zu den ersten Schritten finden Sie unter [Integrieren Ihrer lokalen Verzeichnisse in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+Viele lokal ausgeführte B2E-.NET-Unternehmensanwendungen nutzen zur Authentifizierung und Identitätsverwaltung Active Directory. Mit Azure AD Connect können Sie Ihre lokalen Verzeichnisse in Azure Active Directory integrieren. Informationen zu den ersten Schritten finden Sie unter [Integrieren Ihrer lokalen Verzeichnisse in Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
 
-Ausführlichere Informationen zur Azure Active Directory-Planung finden Sie unter [Ermitteln der Identitätsanforderungen für Ihre Hybrid-Identitätslösung](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs).
+Ausführlichere Informationen zur Azure Active Directory-Planung finden Sie unter [Ermitteln der Identitätsanforderungen für Ihre Hybrid-Identitätslösung](/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs).
 
 Als Authentifizierungsprotokolle stehen außerdem [OAuth](https://en.wikipedia.org/wiki/OAuth) und [OpenID](https://en.wikipedia.org/wiki/OpenID) zur Verfügung, die häufig in kundenorientierten Anwendungen zum Einsatz kommen. Bei Verwendung autonomer Identitätsdatenbanken (etwa eine SQL-basierte ASP.NET-Identitätsdatenbank, die unter Verwendung von OAuth in IdentityServer4 eingeschlossen ist) ist in der Regel keine Verbindung mit lokalen Datenbanken oder Verzeichnissen erforderlich.
 

@@ -3,12 +3,12 @@ title: .NET Core-Tools
 description: Informationen zum Installieren, Verwenden, Aktualisieren und Entfernen von .NET Core-Tools. In diesem Artikel werden globale, Toolpfad- und lokale Tools vorgestellt.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: 2f0101c6385c41eda49bcb2458428c1f14552617
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583dbb461543d1efb7328d55f6ecce4a99afcaca
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847785"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226607"
 ---
 # <a name="how-to-manage-net-core-tools"></a>Verwalten von .NET Core-Tools
 
@@ -251,7 +251,7 @@ Entfernen Sie ein Tool mit dem Befehl [dotnet tool uninstall](dotnet-tool-uninst
 
 ```dotnetcli
 dotnet tool uninstall --global <packagename>
-dotnet tool uninstall --tool-path<packagename>
+dotnet tool uninstall --tool-path <packagename>
 dotnet tool uninstall <packagename>
 ```
 

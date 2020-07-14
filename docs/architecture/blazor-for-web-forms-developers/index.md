@@ -3,13 +3,16 @@ title: Blazor für ASP.NET Web Forms-Entwickler
 description: Erfahren Sie, wie Sie mit .NET unter Verwendung von Blazor und .NET Core auf einfache und vertraute Weise ausgewachsene Web-Apps entwickeln können.
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 779eb47d9796c61df9939d0e7de287443870576e
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73088128"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173249"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor für ASP.NET Web Forms-Entwickler
 

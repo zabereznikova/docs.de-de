@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a05b2b0f3f2a8377fdba6144b8aeb12bdee1086
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398268"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86172950"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 
@@ -56,7 +56,7 @@ Alle einfachen Typen sind Strukturtypen und unterscheiden sich von anderen Struk
 
 - Konstante Ausdrücke, deren Operanden alle Konstanten der einfachen Typen sind, werden zur Kompilierzeit ausgewertet.
 
-Ab C# 7.0 unterstützt C# [Werttupel](../../tuples.md). Ein Werttupel ist ein Werttyp, aber kein einfacher Typ.
+Ab C# 7.0 unterstützt C# [Werttupel](value-tuples.md). Ein Werttupel ist ein Werttyp, aber kein einfacher Typ.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

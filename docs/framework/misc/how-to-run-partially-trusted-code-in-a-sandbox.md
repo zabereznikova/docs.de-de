@@ -1,5 +1,6 @@
 ---
 title: 'Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox'
+description: Erfahren Sie, wie teilweise vertrauenswürdiger Code in einem Sandkasten in .NET ausgeführt wird. Die AppDomain-Klasse ist eine effektive Methode für das Sandbox von verwalteten Anwendungen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181179"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282033"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -88,7 +89,7 @@ AppDomain.CreateDomain( string friendlyName,
         params StrongName[] fullTrustAssemblies)  
     ```  
   
-     Zusätzliche Informationen:  
+     Weitere Informationen:  
   
     - Dies ist die einzige Überladung der <xref:System.AppDomain.CreateDomain%2A>-Methode, die einen <xref:System.Security.PermissionSet> als Parameter akzeptiert und daher die einzige Überladung, mit der Sie eine Anwendung in einer teilweise vertrauenswürdigen Umgebung laden können.  
   
@@ -114,7 +115,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - Sie können eine Codebasis verwenden, die auf einen Speicherort verweist, der nicht Ihre Assembly enthält.  
   
-    - Sie können die Erstellung unter einem <xref:System.Security.CodeAccessPermission.Assert%2A> für vollständige Vertrauenswürdigkeit (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) vornehmen, wodurch Sie in der Lage sind, eine Instanz einer kritischen Klasse zu erstellen. (Dies geschieht immer dann, wenn Ihre Baugruppe keine Transparenzmarkierungen hat und als voll vertrauenswürdig geladen wird.) Daher müssen Sie darauf achten, nur Code zu erstellen, dem Sie mit dieser Funktion vertrauen, und es wird empfohlen, nur Instanzen vollständig vertrauenswürdiger Klassen in der neuen Anwendungsdomäne zu erstellen.  
+    - Sie können die Erstellung unter einem <xref:System.Security.CodeAccessPermission.Assert%2A> für vollständige Vertrauenswürdigkeit (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) vornehmen, wodurch Sie in der Lage sind, eine Instanz einer kritischen Klasse zu erstellen. (Dies geschieht, wenn die Assembly keine Transparenz Markierungen aufweist und als vollständig vertrauenswürdig geladen wird.) Daher müssen Sie darauf achten, nur den Code zu erstellen, den Sie mit dieser Funktion als vertrauenswürdig einstufen. es wird empfohlen, dass Sie nur Instanzen von vollständig vertrauenswürdigen Klassen in der neuen Anwendungsdomäne erstellen.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
