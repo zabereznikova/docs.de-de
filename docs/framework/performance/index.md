@@ -1,16 +1,17 @@
 ---
 title: .NET Framework-Leistung
+description: Entwerfen und planen Sie die Leistung in ihren .net-apps. Verwenden Sie die von Microsoft bereitgestellten Tools, um die Leistung Ihrer APP zu messen und Verbesserungen vorzunehmen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: 47d85ae63f0594b778523425631ff54f9f3ca32f
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee8260056bd87dfc66d96e394f9b93bb9427afd8
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504089"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309754"
 ---
 # <a name="net-framework-performance"></a>.NET Framework-Leistung
 Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leistungsorientiert entwerfen und planen, wie Sie jede andere Funktion der App entwerfen würden. Sie können die von Microsoft bereitgestellten Tools verwenden, um die Leistung der App zu messen und gegebenenfalls Verbesserungen der Arbeitsspeichernutzung, des Codedurchsatzes und der Reaktionsfähigkeit vorzunehmen. In diesem Thema werden die von Microsoft bereitgestellten Leistungsanalysetools aufgelistet sowie Links zu anderen Themen bereitgestellt, die die Leistung für bestimmte Bereiche der App-Entwicklung behandeln.  
@@ -41,18 +42,18 @@ Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leist
 ## <a name="performance-by-app-type"></a>Leistung nach App-Typ  
  Für jeden Typ von .NET Framework-App gibt es eigene bewährte Methoden, Überlegungen und Tools für die Auswertung der Leistung. Die folgende Tabelle enthält Links zu den Leistungsthemen für bestimmte .NET Framework-App-Typen.  
   
-|App-Typ|Finden Sie unter|  
+|App-Typ|Siehe|  
 |--------------|---------|  
 |.NET Framework-Apps für alle Plattformen|[Garbage Collection und Leistung](../../standard/garbage-collection/performance.md)<br /><br /> [Leistungstipps](performance-tips.md)|  
-|Windows 8. x Store-Apps, C++die C#in-,-und-Visual Basic geschrieben sind|[Performance best practices for Windows Store apps using C++, C#, and Visual Basic (Bewährte Methoden zur Leistungssteigerung für Windows Store-Apps mit C++, C# und Visual Basic)](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
-|WPF (Windows Presentation Foundation)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
+|Windows 8. x Store-Apps, die in C++, c# und Visual Basic geschrieben sind|[Performance best practices for Windows Store apps using C++, C#, and Visual Basic (Bewährte Methoden zur Leistungssteigerung für Windows Store-Apps mit C++, C# und Visual Basic)](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
+|Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET Performance Overview (Die Leistung von ASP.NET im Überblick)](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Caching in .NET Framework Applications (Caching in .NET Framework-Anwendungen)](caching-in-net-framework-applications.md)|Beschreibt Techniken zum Zwischenspeichern von Daten, um die Leistung der Anwendung zu verbessern.|  
-|[Lazy Initialization (Verzögerte Initialisierung)](lazy-initialization.md)|Beschreibt, wie Objekte bei Bedarf initialisiert werden, um die Leistung, insbesondere beim App-Start, zu verbessern.|  
+|[Caching in .NET Framework-Anwendungen](caching-in-net-framework-applications.md)|Beschreibt Techniken zum Zwischenspeichern von Daten, um die Leistung der Anwendung zu verbessern.|  
+|[Verzögerte Initialisierung](lazy-initialization.md)|Beschreibt, wie Objekte bei Bedarf initialisiert werden, um die Leistung, insbesondere beim App-Start, zu verbessern.|  
 |[Zuverlässigkeit](reliability.md)|Stellt Informationen zum Verhindern von asynchronen Ausnahmen in einer Serverumgebung bereit.|  
-|[Writing Large, Responsive .NET Framework Apps (Schreiben großer, reaktionsfähiger .NET Framework-Apps)](writing-large-responsive-apps.md)|Gibt Tipps zur Verbesserung der Leistung aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code und enthält echte Beispiele aus dem C#-Compiler.|
+|[Schreiben großer, reaktionsfähiger .NET Framework-Apps](writing-large-responsive-apps.md)|Gibt Tipps zur Verbesserung der Leistung aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code und enthält echte Beispiele aus dem C#-Compiler.|

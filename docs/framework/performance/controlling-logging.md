@@ -1,15 +1,16 @@
 ---
 title: Steuern der Protokollierung in .NET Framework
+description: Verwenden Sie die Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw), um die .net-Protokollierung zu steuern und Ereignisse aufzuzeichnen Common Language Runtime Verwenden Sie Tools wie logman, tracerpt und XPerf.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504101"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309585"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabe Aufforderungs Verzeichnis in den Ordner .NET Framework 4 (%windir%\Microsoft.NET\Framework [64] \v4.\<.NET-Version > \). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:
+Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabe Aufforderungs Verzeichnis in den Ordner .NET Framework 4 (%windir%\Microsoft.NET\Framework [64] \v4. \<.NET version> ). \ ). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:
 
 `wevtutil im CLR-ETW.man`
 
@@ -112,4 +113,4 @@ Verwenden Sie die unten aufgeführten Befehle, um die CLR-ETW-Ereignisse anzuzei
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
-- [ETW-Ereignisse in der Common Language Runtime](etw-events-in-the-common-language-runtime.md)
+- [ETW-Ereignisse in der Common Language Runtime](etw-events-in-the-common-language-runtime.md)

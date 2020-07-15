@@ -2,12 +2,12 @@
 title: Azure-Sicherheit für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | Azure-Sicherheit für Native Cloud-apps
 ms.date: 05/13/2020
-ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614252"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374493"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Azure-Sicherheit für Native Cloud-apps
 
@@ -66,7 +66,7 @@ Dies ist ein perfektes Beispiel für ein scheinbar niedriges Ziel, das zum Unter
 
 .NET Framework ist bereits ein sehr sicheres Framework. Dabei werden einige der Fehler von nicht verwaltetem Code vermieden, z. b. das Durchlaufen der Enden von Arrays. Die Arbeit wird aktiv durchgeführt, um Sicherheitslücken zu beheben, wenn Sie erkannt werden. Es gibt sogar ein [Programm zur Fehler](https://www.microsoft.com/msrc/bounty) Behebung, mit dem Forscher Probleme im Framework finden und Sie melden, anstatt sie auszunutzen.
 
-Es gibt viele Möglichkeiten, .NET-Code sicherer zu machen. Die folgenden Richtlinien, wie z. b. die [Richtlinien für die sichere Codierung für .net](https://docs.microsoft.com/dotnet/standard/security/secure-coding-guidelines) , sind ein angemessener Schritt, um sicherzustellen, dass der Code von Grund auf sicher ist. Der [OWASP Top 10](https://owasp.org/www-project-top-ten/) ist ein weiterer unschätzbarer Leitfaden zum Erstellen von sicherem Code.
+Es gibt viele Möglichkeiten, .NET-Code sicherer zu machen. Die folgenden Richtlinien, wie z. b. die [Richtlinien für die sichere Codierung für .net](../../standard/security/secure-coding-guidelines.md) , sind ein angemessener Schritt, um sicherzustellen, dass der Code von Grund auf sicher ist. Der [OWASP Top 10](https://owasp.org/www-project-top-ten/) ist ein weiterer unschätzbarer Leitfaden zum Erstellen von sicherem Code.
 
 Der Buildprozess ist ein guter Ausgangspunkt, um Scan Tools zu platzieren, um Probleme im Quellcode zu erkennen, bevor Sie Sie in die Produktion versetzen. Die meisten Projekte weisen Abhängigkeiten von einigen anderen Paketen auf. Ein Tool, das nach veralteten Paketen suchen kann, fängt Probleme in einem nächtlichen Build ab. Selbst beim Erstellen von Docker-Images ist es sinnvoll, zu überprüfen und sicherzustellen, dass das Basis Image keine bekannten Sicherheitsrisiken aufweist. Ein weiterer zu überprüfende Punkt ist, dass niemand versehentlich Anmelde Informationen eingecheckt hat.
 

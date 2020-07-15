@@ -1,33 +1,34 @@
 ---
-title: Verwenden eines "DataSet" von einem XML-Webdienst aus
-ms.date: 03/30/2017
+title: Verwenden eines Datasets von einem XML-Webdienst
+ms.date: 07/14/2020
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2c8924ee3374489dded7e819ecde8e4d9da750bb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389755"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374385"
 ---
-# <a name="consume-a-dataset-from-an-xml-web-service"></a>Verwenden eines DataSets aus einem XML-Webdienst
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>Verwenden eines Datasets von einem XML-Webdienst
 
-Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstellt. Auf diese Art und Weise wird z. B. eine komfortable Übertragung von Daten über das Internet ermöglicht. Das **DataSet** ist "serialisierbar", da es als Eingabe für XML-Webdienste oder als Ausgabe von XML-Webdiensten angegeben werden kann, ohne dass zusätzliche Codierung erforderlich ist, um den Inhalt des **DataSets** von einem XML-Webdienst auf einen Client und zurück zu streamen. Das **DataSet** wird implizit im DiffGram-Format in einen XML-Stream konvertiert, über das Netzwerk gesendet und dann aus dem XML-Stream als **DataSet** auf dem empfangenden Ende rekonstruiert. Dadurch steht Ihnen eine sehr einfache und flexible Methode zum Übertragen und Zurückübertragen von relationalen Daten mithilfe von XML-Webdiensten zur Verfügung. Weitere Informationen zum DiffGram-Format finden Sie unter [DiffGrams](diffgrams.md).  
+Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstellt. Auf diese Art und Weise wird z. B. eine komfortable Übertragung von Daten über das Internet ermöglicht. Das **DataSet** ist "serialisierbar", da es als Eingabe oder Ausgabe aus XML-Webdiensten angegeben werden kann, ohne dass zusätzliche Codierungen erforderlich sind, um den Inhalt des **DataSets** von einem XML-Webdienst zu einem Client und zurück zu streamen. Das **DataSet** wird implizit in einen XML-Stream mit dem DiffGram-Format konvertiert, über das Netzwerk gesendet und anschließend aus dem XML-Stream als **DataSet** am empfangenden Ende rekonstruiert. Dadurch erhalten Sie eine einfache und flexible Methode zum übertragen und Zurückgeben von relationalen Daten mithilfe von XML-Webdiensten. Weitere Informationen über das DiffGram-Format finden Sie unter [DiffGrams](diffgrams.md).  
   
- Das folgende Beispiel zeigt, wie Sie einen XML-Webdienst und -client erstellen, die das **DataSet** zum Transport relationaler Daten (einschließlich geänderter Daten) und zum Auflösen von Aktualisierungen in die ursprüngliche Datenquelle verwenden.  
+ Im folgenden Beispiel wird gezeigt, wie ein XML-Webdienst und-Client erstellt werden, die das **DataSet** zum transportieren relationaler Daten (einschließlich der geänderten Daten) und zum Auflösen von Aktualisierungen in die ursprüngliche Datenquelle verwenden.  
   
 > [!NOTE]
-> Es wird empfohlen, beim Erstellen eines XML-Webdiensts immer die Sicherheitsaspekte zu berücksichtigen. Informationen zum Sichern eines XML-Webdiensts finden Sie unter [Sichern von XML-Webdiensten,](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))die mit ASP.NET erstellt wurden.  
+> `DataSet`Das Übertragen von-oder- `DataTable` Instanzen als Teil von XML-Webdienst aufrufen ist nicht sicher, wenn die Eingabe nicht vertrauenswürdig ist. Weitere Informationen finden Sie unter [Leitfaden für Datasets und Daten](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance)Tabelle.
+> Außerdem wird empfohlen, dass Sie beim Erstellen eines XML-Webdiensts stets Sicherheits Implikationen in Erwägung gezogen. Informationen zum Sichern eines XML-Webdiensts finden [Sie unter Sichern von mit ASP.NET erstellten XML-Webdiensten](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ## <a name="create-an-xml-web-service"></a>Erstellen eines XML-Webdiensts
   
 1. Erstellen Sie den XML-Webdienst.  
   
-     Im Beispiel wird ein XML-Webdienst erstellt, der Daten zurückgibt, in diesem Fall eine Liste von Kunden aus der **Northwind-Datenbank,** und ein **DataSet** mit Aktualisierungen der Daten empfängt, die der XML-Webdienst in der ursprünglichen Datenquelle auflöst.  
+     Im Beispiel wird ein XML-Webdienst erstellt, der Daten zurückgibt, in diesem Fall eine Kundenliste aus der **Northwind** -Datenbank, und ein **DataSet** mit Updates an den Daten empfängt, die der XML-Webdienst wieder in die ursprüngliche Datenquelle auflöst.  
   
-     Der XML-Webdienst macht zwei Methoden verfügbar: **GetCustomers**, um die Liste der Kunden zurückzugeben, und **UpdateCustomers**, um Aktualisierungen an die Datenquelle zurückzusenden. Der XML-Webdienst wird in einer Datei auf dem Webserver mit dem Namen "DataSetSample.asmx" gespeichert. Im folgenden Code wird der Inhalt von "DataSetSample.asmx" dargestellt.  
+     Der XML-Webdienst macht zwei Methoden verfügbar: **GetCustomers**, um die Kundenliste zurückzugeben, und **UpdateCustomer**, um Updates wieder in die Datenquelle aufzulösen. Der XML-Webdienst wird in einer Datei auf dem Webserver mit dem Namen "DataSetSample.asmx" gespeichert. Im folgenden Code wird der Inhalt von "DataSetSample.asmx" dargestellt.  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -158,13 +159,13 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
     }  
     ```  
   
-     In einem typischen Szenario wird die **UpdateCustomers-Methode** geschrieben, um optimistische Parallelitätsverletzungen abzufangen. Zur Vereinfachung wurde in diesem Beispiel darauf verzichtet. Weitere Informationen zur optimistischen Parallelität finden Sie unter [Optimistische Parallelität](../optimistic-concurrency.md).  
+     In einem typischen Szenario würde die **UpdateCustomer-Methode** geschrieben, um Verletzungen der vollständigen Parallelität abzufangen. Zur Vereinfachung wurde in diesem Beispiel darauf verzichtet. Weitere Informationen [zur optimistischen](../optimistic-concurrency.md)Parallelität finden Sie unter vollständige Parallelität.  
   
 2. Erstellen Sie einen XML-Webdienstproxy.  
   
      Clients des XML-Webdiensts benötigen einen SOAP-Proxy, um die verfügbar gemachten Methoden verarbeiten zu können. Sie können diesen Proxy von Visual Studio generieren lassen. Das in diesem Schritt beschriebene Verhalten wird transparent, wenn Sie einen Webverweis auf einen vorhandenen Webdienst von Visual Studio aus festlegen. Wenn Sie die Proxyklasse selbst erstellen möchten, finden Sie im Folgenden die notwendigen Informationen. In den meisten Fällen ist es jedoch ausreichend, wenn die Proxyklasse für die Clientanwendung mithilfe von Visual Studio erstellt wird.  
   
-     Ein Proxy kann mit dem Web Services Description Language-Tool erstellt werden. Wenn der XML-Webdienst z. B. unter der URL `http://myserver/data/DataSetSample.asmx`verfügbar gemacht wird, geben Sie einen Befehl wie den folgenden aus, um einen Visual Basic .NET-Proxy mit einem Namespace von **WebData.DSSample** zu erstellen und im Dateibeispiel zu speichern.vb.  
+     Ein Proxy kann mit dem Web Services Description Language-Tool erstellt werden. Wenn der XML-Webdienst z. b. über die URL verfügbar gemacht wird `http://myserver/data/DataSetSample.asmx` , geben Sie einen Befehl wie den folgenden aus, um einen Visual Basic .NET-Proxy mit einem Namespace von " **WebData. DSSample** " zu erstellen und in der Datei Sample. VB zu speichern.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
@@ -190,11 +191,11 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
   
 3. Erstellen Sie einen XML-Webdienstclient.  
   
-     Wenn Visual Studio die Webdienstproxyklasse für Sie generieren soll, erstellen Sie einfach das Clientprojekt, und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie dann**Dienstreferenz** **hinzufügen** > aus. Wählen Sie im Dialogfeld **Dienstreferenz hinzufügen** die Option **Erweitert**aus, und wählen Sie dann **Webreferenz hinzufügen**aus. Wählen Sie den Webdienst aus der Liste der verfügbaren Webdienste aus (dies erfordert möglicherweise die Angabe der Adresse des Webdienstendpunkts, wenn der Webdienst nicht innerhalb der aktuellen Lösung oder auf dem aktuellen Computer verfügbar ist). Wenn Sie den XML-Webdienstproxy (wie im vorigen Schritt beschrieben) selbst erstellen, können Sie ihn in den Clientcode importieren und die XML-Webdienstmethoden verwenden.
+     Wenn Sie möchten, dass Visual Studio die Webdienst-Proxy Klasse für Sie generiert, erstellen Sie einfach das Client Projekt, und klicken Sie im Projektmappen-Explorer Fenster mit der rechten Maustaste auf das Projekt, **Add**und wählen Sie dann  >  **Dienst Verweis**hinzufügen aus. Wählen Sie im Dialogfeld **Dienstverweis hinzufügen** die Option **erweitert**aus, und klicken Sie dann auf **Webverweis hinzufügen**. Wählen Sie in der Liste der verfügbaren Webdienste den Webdienst aus (Dies erfordert möglicherweise die Angabe der Adresse des Webdienst-Endpunkts, wenn der Webdienst nicht innerhalb der aktuellen Projekt Mappe oder auf dem aktuellen Computer verfügbar ist). Wenn Sie den XML-Webdienstproxy (wie im vorigen Schritt beschrieben) selbst erstellen, können Sie ihn in den Clientcode importieren und die XML-Webdienstmethoden verwenden.
 
-     Der folgende Beispielcode importiert die Proxybibliothek, ruft **GetCustomers** auf, um eine Kundenliste abzubekommen, fügt einen neuen Kunden hinzu und gibt dann ein **DataSet** mit den Updates an **UpdateCustomers**zurück.  
+     Im folgenden Beispielcode wird die Proxy Bibliothek importiert, **GetCustomers** aufgerufen, um eine Kundenliste zu erhalten, ein neuer Kunde hinzugefügt und dann ein **DataSet** mit den Updates an **UpdateCustomer**zurückgegeben.  
   
-     Das Beispiel übergibt das von **DataSet.GetChanges** zurückgegebene **DataSet** an **UpdateCustomers,** da nur geänderte Zeilen an **UpdateCustomers**übergeben werden müssen. **UpdateCustomers** gibt das aufgelöste **DataSet**zurück, das Sie dann in das vorhandene **DataSet** **zusammenführen** können, um die behobenen Änderungen und alle Zeilenfehlerinformationen aus dem Update zu integrieren. Der folgende Code geht davon aus, dass Sie Visual Studio zum Erstellen des Webverweises verwendet haben und dass Sie den Webverweis im Dialogfeld **Webreferenz** hinzufügen in DsSample umbenannt haben.  
+     Das Beispiel übergibt das von DataSet zurückgegebene **DataSet** **. GetChanges** an **UpdateCustomer** , da nur geänderte Zeilen an **UpdateCustomer**weitergegeben werden müssen. **UpdateCustomer** gibt das aufgelöste **DataSet**zurück, das Sie dann in das vorhandene **DataSet** zusammen **führen** können, um die aufgelösten Änderungen und alle Zeilen Fehlerinformationen aus dem Update einzubeziehen. Der folgende Code setzt voraus, dass Sie Visual Studio zum Erstellen des Webverweises verwendet haben und dass Sie im Dialogfeld " **Webverweis hinzufügen** " den Webverweis in "DsSample" umbenannt haben.  
   
     ```vb  
     Imports System  

@@ -2,12 +2,12 @@
 title: Richtlinien für das Formatieren von F#-Code
 description: 'Hier finden Sie Richtlinien zum Formatieren von F #'
 ms.date: 11/04/2019
-ms.openlocfilehash: dde69c573f1ef58d398ae47676b9403f588680b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a65600a6c685929aef8582e49caded6340fb09e2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617268"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309702"
 ---
 # <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
@@ -102,25 +102,34 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Parameter für lange Element Definitionen in einer neuen Zeile platzieren
 
-Wenn Sie über eine sehr lange Element Definition verfügen, platzieren Sie die Parameter in neuen Zeilen, und fügen Sie Sie in einen Bereich ein.
+Wenn Sie über eine sehr lange Element Definition verfügen, platzieren Sie die Parameter in neuen Zeilen, und fügen Sie Sie ein, damit Sie der Einzugs Ebene des nachfolgenden Parameters entsprechen.
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(
-        aVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
         // ... the body of the method follows
 ```
 
 Dies gilt auch für Konstruktoren:
 
 ```fsharp
-type C(
-    aVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+type C(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
     // ... the body of the class follows
+```
+
+Wenn eine explizite Rückgabetyp Anmerkung vorhanden ist, kann Sie entweder am Ende von `)` und vor `=` oder in einer neuen Zeile stehen. Wenn der Rückgabetyp auch einen langen Namen hat, kann der Letztere vorzuziehen sein:
+
+```fsharp
+type C() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse)
+                                            : AVeryLongReturnType =
+        // ... the body of the method follows
 ```
 
 ### <a name="type-annotations"></a>Typanmerkungen

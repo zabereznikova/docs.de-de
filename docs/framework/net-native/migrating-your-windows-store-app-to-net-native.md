@@ -2,12 +2,12 @@
 title: Migrieren der Windows Store-App auf .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389704"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309195"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migrieren Ihrer Windows Store-App zu .net Native
 
@@ -58,7 +58,7 @@ Der .net Native-Compiler kann auch häufig verwendete generische Typen verarbeit
 > [!NOTE]
 > Sie sollten alle dynamischen Codepfade gründlich testen, wenn Sie Ihre APP auf .net Native portieren.
 
-Die Standardkonfiguration für .net Native ist für die meisten Entwickler ausreichend, aber einige Entwickler möchten Ihre Konfigurationen möglicherweise mithilfe einer laufzeitdirektivendatei (. rd. Xml) optimieren. Außerdem kann der .net Native Compiler in einigen Fällen nicht ermitteln, welche Metadaten für die Reflektion verfügbar sein müssen, und hängt auf Hinweise aus, insbesondere in den folgenden Fällen:
+Die Standardkonfiguration für .net Native ist für die meisten Entwickler ausreichend, aber einige Entwickler möchten Ihre Konfigurationen möglicherweise mithilfe einer laufzeitdirektivendatei (.rd.xml) optimieren. Außerdem kann der .net Native Compiler in einigen Fällen nicht ermitteln, welche Metadaten für die Reflektion verfügbar sein müssen, und hängt auf Hinweise aus, insbesondere in den folgenden Fällen:
 
 - Einige Konstrukte wie <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> und <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> können nicht statisch bestimmt werden.
 
@@ -278,7 +278,7 @@ Andere nicht unterstützte Interop-Features sind:
 
 - Delegaten
 
-- Zeichenfolgen (Unicode, Ansi und HSTRING)
+- Zeichen folgen (Unicode, ANSI und hstring)
 
 - Strukturen (`byref` und `byval`)
 

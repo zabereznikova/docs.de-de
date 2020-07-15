@@ -1,23 +1,24 @@
 ---
 title: CLR-ETW-Anbieter
+description: 'Überprüfen Sie die Details zu den beiden Common Language Runtime (CLR)-Anbieter für die Ereignis Ablauf Verfolgung für Windows (ETW): den runtimne-Anbieter und den rundownanbieter.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: 33ef7491c2bffeda4ef737ed8f826cdfbfbb119d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f86e8334482880c4f7cb23ec93a3c826c083389
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401004"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309650"
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
   
  Der Laufzeitanbieter löst Ereignisse in Abhängigkeit von den aktivierten Schlüsselwörtern (Ereigniskategorien) aus. Sie können z. B. Ladeprogrammereignisse sammeln, indem Sie das Schlüsselwort `LoaderKeyword` aktivieren.  
   
- Ereignisablaufverfolgung für Windows-Ereignisse (ETW) werden in einer Datei mit der Erweiterung .etl protokolliert, die später nach Bedarf in kommasgetrennten Wertdateien (.csv) nachbearbeitet werden kann. Informationen zum Konvertieren der ETL-Datei in eine CSV-Datei finden Sie unter [Steuern der Protokollierung in .NET Framework](controlling-logging.md).  
+ Ereignisse der Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw) werden in einer Datei mit der Erweiterung ETL protokolliert, die später nach Bedarf in durch Trennzeichen getrennten Werten (CSV-Dateien) verarbeitet werden kann. Informationen zum Konvertieren der ETL-Datei in eine CSV-Datei finden Sie unter [Steuern der Protokollierung in .NET Framework](controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Der Laufzeitanbieter  
  Der Laufzeitanbieter ist der zentrale CLR-ETW-Anbieter.  
@@ -35,7 +36,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
  Normalerweise wird die ETW-Protokollierung vor dem Start eines Prozesses aktiviert, und die Protokollierung wird nach dem Beenden des Prozesses deaktiviert. Wenn jedoch die ETW-Protokollierung aktiviert wird, während der Prozess ausgeführt wird, werden zusätzliche Informationen zum Prozess benötigt. Für die Symbolauflösung müssen Sie zum Beispiel Methodenereignisse für Methoden protokollieren, die bereits vor dem Aktivieren der Protokollierung geladen wurden.  
   
- Das `DCStart`-Ereignis und das `DCEnd`-Ereignis erfassen den Zustand des Prozesses, als die Datensammlung gestartet und beendet wurde. (Status bezieht sich auf Informationen auf hoher Ebene, einschließlich der Methoden, die bereits just-in-time (JIT) kompiliert wurden, und Assemblys, die geladen wurden.) Diese beiden Ereignisse können Informationen darüber liefern, was bereits im Prozess geschehen ist. z. B. welche Methoden JIT-kompiliert wurden usw.  
+ Das `DCStart`-Ereignis und das `DCEnd`-Ereignis erfassen den Zustand des Prozesses, als die Datensammlung gestartet und beendet wurde. (State bezieht sich auf Informationen auf hoher Ebene, einschließlich der Methoden, die bereits JIT-kompilierte (Just-in-Time)-und geladene Assemblys waren.) Diese beiden Ereignisse können Informationen darüber bereitstellen, was bereits im Prozess passiert ist. beispielsweise, welche Methoden JIT-kompiliert wurden, usw.  
   
  Nur die Ereignisse mit `DC`, `DCStart`, `DCEnd` oder `DCInit` in ihren Namen werden unter dem Rundownanbieter ausgelöst. Darüber hinaus werden diese Ereignisse nur unter dem Rundownanbieter ausgelöst.  
   

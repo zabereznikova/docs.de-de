@@ -11,23 +11,23 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 287c3651be0272f1941fb2320640970d70a1bd0f
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: a7ef419cf3959cf7a3ffde874353dacd3815c81a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282046"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309390"
 ---
 # <a name="securing-method-access"></a>Sichern des Methodenzugriffs
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Einige Methoden sind möglicherweise nicht geeignet, um den Aufruf von beliebigem, nicht vertrauenswürdigen Code zu gestatten. Solche Methoden weisen gewisse Risiken auf: Die Methode bietet möglicherweise eingeschränkte Informationen. Sie akzeptiert evtl. alle an sie übergebenen Informationen. Möglicherweise erfolgt keine Fehlerüberprüfung für die Parameter, oder bei den falschen Parametern können Fehler auftreten oder schädliche Aktionen ausgeführt werden. Sie sollten sich dieser Fälle bewusst sein und Maßnahmen zum Schutz der Methode ergreifen.  
   
- In einigen Fällen müssen Sie Methoden möglicherweise einschränken, die nicht für die öffentliche Verwendung vorgesehen sind, aber dennoch öffentlich sein müssen. Möglicherweise liegt z. B. eine Schnittstelle vor, die zwischen Ihren eigenen DLLs aufgerufen werden muss und daher öffentlich sein muss. Sie möchten sie aber nicht öffentlich verfügbar machen, damit sie weder von Kunden verwendet wird noch bösartigem Code die Gelegenheit bietet, den Einstiegspunkt in Ihre Komponente verfügbar zu machen. Eine anderer häufiger Grund zum Einschränken einer Methode, die nicht für die öffentliche Verwendung vorgesehen ist (jedoch öffentlich sein muss), ist es zu vermeiden, dass diese überaus interne Schnittstelle dokumentiert und unterstützt werden muss.  
+ In einigen Fällen müssen Sie Methoden möglicherweise einschränken, die nicht für die öffentliche Verwendung vorgesehen sind, aber dennoch öffentlich sein müssen. Möglicherweise liegt z. B. eine Schnittstelle vor, die zwischen Ihren eigenen DLLs aufgerufen werden muss und daher öffentlich sein muss. Sie möchten sie aber nicht öffentlich verfügbar machen, damit sie weder von Kunden verwendet wird noch bösartigem Code die Gelegenheit bietet, den Einstiegspunkt in Ihre Komponente verfügbar zu machen. Ein weiterer häufiger Grund für die Einschränkung einer Methode, die nicht für die öffentliche Verwendung vorgesehen ist (aber öffentlich sein muss), besteht darin, zu vermeiden, dass eine interne Schnittstelle dokumentiert und unterstützt werden muss.  
   
  Verwalteter Code bietet mehrere Möglichkeiten zum Einschränken des Zugriffs auf Methoden:  
   
-- Einschränken des Zugriffsbereichs auf die Klasse, Assembly oder abgeleiteten Klassen, wenn diese vertrauenswürdig sind. Dies ist die einfachste Möglichkeit, um den Methodenzugriff einzuschränken. Beachten Sie, dass abgeleitete Klassen im Allgemeinen weniger vertrauenswürdig sind als die Klasse, von der sie abgeleitet wurden, obwohl sie in einigen Fällen die Identität der übergeordneten Klasse teilen. Sie sollten insbesondere keine Vertrauensstellung vom Schlüsselwort " **geschützt**" ableiten, das nicht notwendigerweise im Sicherheitskontext verwendet wird.  
+- Einschränken des Zugriffsbereichs auf die Klasse, Assembly oder abgeleiteten Klassen, wenn diese vertrauenswürdig sind. Dies ist die einfachste Möglichkeit, um den Methodenzugriff einzuschränken. Im Allgemeinen können abgeleitete Klassen weniger vertrauenswürdig sein als die Klasse, von der Sie abgeleitet sind, obwohl Sie in einigen Fällen die Identität der übergeordneten Klasse gemeinsam nutzen. Sie sollten insbesondere keine Vertrauensstellung vom Schlüsselwort ableiten `protected` , das nicht notwendigerweise im Sicherheitskontext verwendet wird.  
   
 - Schränken Sie den Methoden Zugriff auf Aufrufer einer angegebenen Identität ein. im Wesentlichen werden bestimmte [Beweise](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (starker Name, Herausgeber, Zone usw.) ausgewählt.  
   
@@ -56,7 +56,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Ausschließen von Klassen und Membern von der Verwendung durch nicht vertrauenswürdigen Code  
- Verwenden Sie die in diesem Abschnitt gezeigten Deklarationen, um bestimmte Klassen und Methoden sowie Eigenschaften und Ereignisse daran zu hindern, von teilweise vertrauenswürdigem Code verwendet zu werden. Durch die Anwendung dieser Deklarationen auf eine Klasse wenden Sie den Schutz auf ihre gesamten Methoden, Eigenschaften und Ereignisse an. Beachten Sie jedoch, dass sich die deklarative Sicherheit nicht auf den Feldzugriff auswirkt. Beachten Sie außerdem, dass Verknüpfungsaufrufe möglicherweise nur Schutz vor direkten Aufrufern bieten und möglicherweise immer noch anfällig sind für Lockangriffe.  
+ Verwenden Sie die in diesem Abschnitt gezeigten Deklarationen, um bestimmte Klassen und Methoden sowie Eigenschaften und Ereignisse daran zu hindern, von teilweise vertrauenswürdigem Code verwendet zu werden. Indem Sie diese Deklarationen auf eine Klasse anwenden, wenden Sie den Schutz auf alle Methoden, Eigenschaften und Ereignisse an. Der Feld Zugriff wird jedoch von der deklarativen Sicherheit nicht beeinträchtigt. Beachten Sie außerdem, dass Verknüpfungsaufrufe möglicherweise nur Schutz vor direkten Aufrufern bieten und möglicherweise immer noch anfällig sind für Lockangriffe.  
   
 > [!NOTE]
 > In der .NET Framework 4 wurde ein neues Transparenz Modell eingeführt. Der [Sicherheits transparente Code, das Modell der Ebene 2,](security-transparent-code-level-2.md) identifiziert den sicheren Code mit dem- <xref:System.Security.SecurityCriticalAttribute> Attribut. Sicherheitsrelevanter Code erfordert, dass sowohl Aufrufer als auch Erben voll vertrauenswürdig sind. Assemblys, die gemäß den Regeln für die Codezugriffssicherheit von früheren Versionen von .NET Framework ausgeführt werden, können Assemblys der Ebene 2 aufrufen. In diesem Fall werden die sicherheitsrelevanten Attribute für die volle Vertrauenswürdigkeit als Verknüpfungsaufrufe behandelt.  
@@ -237,7 +237,7 @@ class Implemented : ICanCastToMe
   
  In den .NET Framework Versionen 1,0 und 1,1 müssen Sie eine Nuance des Typsystem Zugriffs berücksichtigen, wenn Sie bestätigen, dass Ihr Code für andere Assemblys nicht verfügbar ist. Eine Methode, die als " **Virtual** " und " **internal** " (**Overloads Overridable Friend** in Visual Basic) deklariert ist, kann den vtable-Eintrag der übergeordneten Klasse überschreiben und kann nur innerhalb derselben Assembly verwendet werden, da Sie intern ist. Der Zugriff auf das Überschreiben wird jedoch durch das **Virtual** -Schlüsselwort bestimmt und kann von einer anderen Assembly überschrieben werden, solange dieser Code Zugriff auf die Klasse selbst hat. Wenn die Möglichkeit einer außer Kraft Setzung ein Problem darstellt, verwenden Sie die deklarative Sicherheit, um Sie zu beheben, oder entfernen Sie das Schlüsselwort " **Virtual** ", wenn es nicht unbedingt erforderlich ist.  
   
- Auch wenn ein Sprachcompiler diese Außerkraftsetzungen durch einen Kompilierungsfehler verhindert, ist die Außerkraftsetzung mithilfe von Code möglich, der mit anderen Compilern geschrieben wurde.  
+ Selbst wenn ein sprach Compiler diese außer Kraft setzungen aufgrund eines Kompilierungs Fehlers verhindert, kann der Code, der mit anderen Compilern geschrieben wurde, überschreiben.  
   
 ## <a name="see-also"></a>Weitere Informationen
 

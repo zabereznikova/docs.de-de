@@ -1,5 +1,6 @@
 ---
 title: Sicherheitstransparenter Code, Ebene 2
+description: Verstehen Sie den transparenten Code der Ebene 2. Weitere Informationen finden Sie unter Verwendungs Beispiele und Verhalten, außer Kraft setzen von Mustern, Vererbungs Regeln und mehr.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparency
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 12e991e4977b0866343158c05681ddf4bd0c869b
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645732"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309208"
 ---
 # <a name="security-transparent-code-level-2"></a>Sicherheitstransparenter Code, Ebene 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Transparenz der Stufe 2 wurde in .NET Framework 4 eingeführt. Die drei Grundsätze dieses Modells sind transparenter Code, sicherheitsgeschützter Code und sicherheitskritischer Code.
+Transparenz der Ebene 2 wurde in der .NET Framework 4 eingeführt. Die drei Grundsätze dieses Modells sind transparenter Code, sicherheitsgeschützter Code und sicherheitskritischer Code.
 
 - Transparenter Code, einschließlich Code, der mit voller Vertrauenswürdigkeit ausgeführt wird, kann anderen transparenten Code oder sicherheitsgeschützten Code nur aufrufen. Er kann nur Aktionen durchführen, die von der domänenspezifischen Berechtigungseinstellung für teilweise Vertrauenswürdigkeit zugelassen werden. Transparenter Code ist nicht für die folgenden Vorgänge vorgesehen:
 
@@ -42,7 +43,7 @@ Transparenz der Stufe 2 wurde in .NET Framework 4 eingeführt. Die drei Grundsä
 
 ## <a name="usage-examples-and-behaviors"></a>Verwendungsbeispiele und Verhalten
 
-Um .NET Framework 4-Regeln (Transparenz der Ebene 2) anzugeben, verwenden Sie die folgende Anmerkung für eine Assembly:
+Verwenden Sie zum Angeben von .NET Framework 4-Regeln (Transparenz der Ebene 2) die folgende Anmerkung für eine Assembly:
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -54,7 +55,7 @@ Um die .NET Framework 2.0-Regeln (Transparenz der Ebene 1) festzulegen, verwende
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-Wenn Sie eine Assembly nicht mit Anmerkungen kommentieren, werden die .NET Framework 4-Regeln standardmäßig verwendet. Es wird jedoch empfohlen, das <xref:System.Security.SecurityRulesAttribute> Attribut zu verwenden, anstatt es von der Standardeinstellung abhängig zu machen.
+Wenn Sie keine Assembly mit Anmerkungen versehen, werden standardmäßig die .NET Framework 4-Regeln verwendet. Es wird jedoch empfohlen, das- <xref:System.Security.SecurityRulesAttribute> Attribut anstelle der Standardeinstellung zu verwenden.
 
 ### <a name="assembly-wide-annotation"></a>Assemblyweite Anmerkung
 
@@ -68,7 +69,7 @@ Die folgenden Regeln gelten für die Verwendung von Attributen auf Assemblyebene
 
 - `AllowPartiallyTrustedCallers` (nur Ebene 2): Der gesamte Code ist standardmäßig transparent. Einzelne Typen und Member können jedoch andere Attribute haben.
 
-In der folgenden Tabelle wird das Verhalten auf Baugruppenebene für Ebene 2 mit Ebene 1 verglichen.
+In der folgenden Tabelle wird das Verhalten auf Assemblyebene für Ebene 2 mit Ebene 1 verglichen.
 
 |Assembly-Attribut|Ebene 2|Ebene 1|
 |------------------------|-------------|-------------|
@@ -165,7 +166,7 @@ Das Aufrufen einer wichtigen Methode oder das Lesen eines wichtigen Felds löst 
 Die folgenden Eigenschaften wurden dem Namespace "<xref:System.Reflection>" hinzugefügt, um zu bestimmen, ob der Typ, die Methode oder das Feld `SecurityCritical`, `SecuritySafeCritical` oder `SecurityTransparent` ist:  <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> und <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>. Verwenden Sie diese Eigenschaften zur Bestimmung der Transparenz durch Reflektion statt durch Prüfen auf das Vorhandensein des Attributs. Die Transparenzregeln sind komplex, und das Prüfen auf das Attribut ist möglicherweise nicht ausreichend.
 
 > [!NOTE]
-> Eine `SafeCritical` Methode `true` gibt <xref:System.Type.IsSecurityCritical%2A> <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>für `SafeCritical` beide und zurück, da sie in der Tat kritisch ist (sie verfügt über dieselben Funktionen wie kritischer Code, kann jedoch aus transparentem Code aufgerufen werden).
+> Eine `SafeCritical` Methode gibt `true` sowohl für <xref:System.Type.IsSecurityCritical%2A> als auch zurück <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> , da `SafeCritical` tatsächlich kritisch ist (Sie hat die gleichen Funktionen wie kritischer Code, aber Sie kann aus transparentem Code aufgerufen werden).
 
 Dynamische Methoden erben die Transparenz der Module, denen sie zugeordnet sind. Sie erben nicht die Transparenz des Typs (sofern sie einem Typ zugeordnet sind).
 
@@ -175,9 +176,9 @@ Sie können die Überprüfung für vollständig vertrauenswürdige transparente 
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-Die Eigenschaft "<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A>" ist standardmäßig "`false`" und muss daher auf "`true`" festgelegt werden, um die Überprüfung zu überspringen. Dies sollte nur zu Optimierungszwecken erfolgen. Sie sollten sicherstellen, dass der transparente Code in der `transparent` Assembly überprüfbar ist, indem Sie die Option im [PEVerify-Tool](../tools/peverify-exe-peverify-tool.md)verwenden.
+Die Eigenschaft "<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A>" ist standardmäßig "`false`" und muss daher auf "`true`" festgelegt werden, um die Überprüfung zu überspringen. Dies sollte nur zu Optimierungszwecken erfolgen. Stellen Sie sicher, dass der transparente Code in der Assembly überprüfbar ist. verwenden Sie dazu die `transparent` Option im [Tool "Peer Verify](../tools/peverify-exe-peverify-tool.md)".
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheitstransparenter Code, Ebene 1](security-transparent-code-level-1.md)
+- [Sicherheits transparenter Code, Ebene 1](security-transparent-code-level-1.md)
 - [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)

@@ -1,16 +1,17 @@
 ---
 title: Eingeschränkte Ausführungsbereiche (CERs)
+description: Beginnen Sie mit eingeschränkten Ausführungs Bereichen (CER), die zu einem Mechanismus zum Erstellen von zuverlässigem verwaltetem Code gehören.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: 3161f77399030c287649ee5757814963b6afb7cf
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d928c9357af4a02e389d9ffd5df4ad0195edab06
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247726"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309611"
 ---
 # <a name="constrained-execution-regions"></a>Eingeschränkte Ausführungsbereiche (CERs)
 Ein eingeschränkter Ausführungsbereich (Constrained Execution Region, CER) ist Bestandteil eines Mechanismus zum Erstellen von zuverlässigem verwaltetem Code. Mit einem CER wird ein Bereich definiert, in dem die Common Language Runtime (CLR) keine Out-of-Band-Ausnahmen auslösen kann, die verhindern würden, dass der Code in dem Bereich vollständig ausgeführt werden würde. Benutzercode kann innerhalb dieses Bereichs keinen Code ausführen, der zum Auslösen von Out-of-Band-Ausnahmen führen könnte. Die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>-Methode muss einem `try`-Block unmittelbar vorangestellt sein. Sie markiert die Blöcke `catch`, `finally` und `fault` als eingeschränkte Anwendungsbereiche. Wenn Code als eingeschränkter Bereich markiert ist, muss er nur anderen Code mit starken Zuverlässigkeitsvereinbarungen aufrufen. Code sollte keine unvorbereiteten oder nicht zuverlässigen Methoden zuordnen oder virtuelle Aufrufe für diese vornehmen, es sei denn, der Code ist für die Behandlung von Fehlern ausgelegt. Die CLR verzögert Threadabbrüche für Code, der in einem eingeschränkten Ausführungsbereich ausgeführt wird.  

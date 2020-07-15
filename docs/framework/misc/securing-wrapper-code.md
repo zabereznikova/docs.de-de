@@ -8,12 +8,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 64c5b2455882ca121a6eeb0c0bbcbc4d04ed88cd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281445"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309377"
 ---
 # <a name="securing-wrapper-code"></a>Sichern von Wrappercode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "86281445"
  Um derartige Sicherheitslücken zu vermeiden, erweitert das Common Language Runtime die Überprüfung auf einen vollständigen Stapel Abruf bei jedem indirekten Aufruf einer Methode, eines Konstruktors, einer Eigenschaft oder eines Ereignisses, das durch einen **LinkDemand**geschützt wird. Dieser Schutz geht zu Lasten der Leistung und ändert die Semantik der Sicherheitsüberprüfung. Für die vollständige Stapelforderung kann ein Fehler auftreten, der bei der schnelleren Überprüfung einer Ebene nicht auftreten würde.  
   
 ## <a name="assembly-loading-wrappers"></a>Wrapper zum Laden von Assemblys  
- Mehrere Methoden werden zum Laden von verwaltetem Code verwendet, z. B. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>. Dabei werden Assemblys mit dem Beweis des Aufrufers geladen. Wenn Sie eine dieser Methoden in einen Wrapper einschließen, könnte das Sicherheitssystem die Berechtigung Ihres Codes anstelle der Berechtigungen des Aufrufers Ihres Wrappers zum Laden von Assemblys verwenden. Sie sollten nicht zulassen, dass wenig vertrauenswürdiger Code anderen Code laden kann, dem höhere Berechtigungen als dem Aufrufer Ihres Wrappers gewährt wurden.  
+ Mehrere Methoden werden zum Laden von verwaltetem Code verwendet, z. B. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>. Dabei werden Assemblys mit dem Beweis des Aufrufers geladen. Wenn Sie eine dieser Methoden in einen Wrapper einschließen, könnte das Sicherheitssystem die Berechtigung Ihres Codes anstelle der Berechtigungen des Aufrufers Ihres Wrappers zum Laden von Assemblys verwenden. Gestatten Sie nicht weniger vertrauenswürdigem Code das Laden von Code, dem höhere Berechtigungen gewährt werden, als die des Aufrufers für den Wrapper.  
   
  Jeglicher Code, der eine vollständige Vertrauensstellung oder eine höhere Vertrauensstellung als ein möglicher Aufrufer (einschließlich eines Aufrufers mit Berechtigungen auf Internetebene) aufweist, kann die Sicherheit auf diese Weise herabsetzen. Wenn Ihr Code über eine öffentliche Methode verfügt, die ein Bytearray annimmt und es an **Assembly. Load**übergibt und dadurch eine Assembly im Auftrag des Aufrufers erstellt, kann dies die Sicherheit unterbrechen.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86281445"
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>"Demand" im Vergleich zu "LinkDemand"  
- Die deklarative Sicherheit stellt zwei Arten von Sicherheitsüberprüfungen bereit, die zwar ähnlich sind, jedoch sehr unterschiedliche Überprüfungen ausführen. Sie sollten beide Formen kennen, weil die falsche Auswahl zu schwacher Sicherheit oder Leistungverlusten führen kann.  
+ Die deklarative Sicherheit bietet zwei Arten von Sicherheitsüberprüfungen, die ähnlich sind, aber unterschiedliche Überprüfungen ausführen. Es ist gut, beide Formulare zu verstehen, da die falsche Auswahl zu schwacher Sicherheit oder Leistungseinbußen führen kann.  
   
  Die deklarative Sicherheit bietet die folgenden Sicherheitsüberprüfungen:  
   

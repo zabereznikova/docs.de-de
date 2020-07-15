@@ -1,19 +1,20 @@
 ---
 title: ETW-Ereignisse in der Task Parallel Library und PLINQ
+description: Informieren Sie sich über etw-Ereignisse in den Task Parallel Library und PLINQ. Verwenden Sie diese Ereignisse, um Anwendungen zu erstellen und Probleme zu beheben.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: 61429babf7378b9d271ffd60a6228ae4bfe7a5e5
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644248"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309637"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>ETW-Ereignisse in der Task Parallel Library und PLINQ
 
-Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablaufverfolgung für Windows (ETW), die Sie zur Profilerstellung und Problembehebung für Anwendungen verwenden können, indem Sie Tools wie den Windows Performance Analyzer verwenden. In den meisten Szenarien ist es jedoch am besten, parallelen Anwendungscode zu profilieren, den [Parallelitäts-Visualisierungserin in](/visualstudio/profiling/concurrency-visualizer) Visual Studio zu verwenden.
+Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablaufverfolgung für Windows (ETW), die Sie zur Profilerstellung und Problembehebung für Anwendungen verwenden können, indem Sie Tools wie den Windows Performance Analyzer verwenden. In den meisten Szenarien ist es jedoch am besten, den parallelen Anwendungscode zu erstellen, indem die Parallelitäts schnell [Ansicht in Visual](/visualstudio/profiling/concurrency-visualizer) Studio verwendet wird.
 
 ## <a name="task-parallel-library-etw-events"></a>Task Parallel Library-ETW-Ereignisse
 
@@ -112,7 +113,7 @@ EVENT_DESCRIPTOR.Id = 1
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|Ein eindeutiger Bezeichner der Abfrage.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ETW-Ereignisse in .NET Framework](etw-events.md)
 - [Task Parallel Library (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)

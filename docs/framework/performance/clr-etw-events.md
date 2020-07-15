@@ -1,17 +1,18 @@
 ---
 title: CLR-ETW-Ereignisse
+description: 'Weitere Informationen finden Sie in den Artikeln über Common Language Runtime (CLR) Ereignis Ablauf Verfolgung für Windows (ETW)-Ereignisse. Es gibt zwei Ereignis Anbieter: den Lauf Zeit Anbieter und den rundownanbieter.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504124"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309832"
 ---
 # <a name="clr-etw-events"></a>CLR-ETW-Ereignisse
 Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Windows-Ereignisse (ETW). Jedes Ereignis verfügt über ein zugeordnetes Schlüsselwort und die Ebene, die im Thema [CLR-ETW-Schlüsselwörter und-Ebenen](clr-etw-keywords-and-levels.md) beschrieben werden. Die CLR verfügt über zwei Anbieter für die Ereignisse:  
@@ -62,7 +63,7 @@ Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Win
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Verbessertes Debugging und Leistungsoptimierung mit ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Controlling .NET Framework Logging (Steuern der Protokollierung in .NET Framework)](controlling-logging.md)
-- [CLR ETW Providers (CLR-ETW-Anbieter)](clr-etw-providers.md)
-- [CLR ETW Keywords and Levels (CLR-ETW-Schlüsselwörter und -Ebenen)](clr-etw-keywords-and-levels.md)
-- [ETW-Ereignisse in der Common Language Runtime](etw-events-in-the-common-language-runtime.md)
+- [Steuern der Protokollierung in .NET Framework](controlling-logging.md)
+- [CLR-ETW-Anbieter](clr-etw-providers.md)
+- [CLR-ETW-Schlüsselwörter und -Ebenen](clr-etw-keywords-and-levels.md)
+- [ETW-Ereignisse in der Common Language Runtime](etw-events-in-the-common-language-runtime.md)

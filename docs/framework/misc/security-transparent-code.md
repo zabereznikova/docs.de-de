@@ -1,16 +1,17 @@
 ---
 title: Sicherheitstransparenter Code
+description: Verstehen Sie den Zweck des transparenten Code Modells, wie Sie die Transparenzstufe angeben und Transparenz in der Sicherheit.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a167efe12b88f796fba4abc6d60ebffe4693709a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215834"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309845"
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
 
@@ -33,7 +34,7 @@ Das primäre Ziel der Transparenzerzwingung besteht darin, einen einfachen, effe
 Transparenz wurde in .NET Framework, Version 2.0, eingeführt, um das Sicherheitsmodell zu vereinfachen und das Schreiben und Bereitstellen von sicheren Bibliotheken und Anwendungen zu erleichtern. Transparenter Code wird auch in Microsoft Silverlight verwendet, um die Entwicklung von teilweise vertrauenswürdigen Anwendungen zu vereinfachen.
 
 > [!NOTE]
-> Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [Gewusst wie: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.
+> Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [How to: Debug a ClickOnce Application with Restricted Permissions](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.
 
 ## <a name="specifying-the-transparency-level"></a>Angeben der Transparenzebene
 
@@ -41,7 +42,7 @@ Das <xref:System.Security.SecurityRulesAttribute>-Attribut auf Assemblyebene wä
 
 Die Ebenen lauten folgendermaßen:
 
-- Ebene 2 (<xref:System.Security.SecurityRuleSet.Level2>) – die Transparenzregeln .NET Framework 4.
+- Ebene 2 ( <xref:System.Security.SecurityRuleSet.Level2> ) – die Transparenzregeln für .NET Framework 4.
 
 - Ebene 1 (<xref:System.Security.SecurityRuleSet.Level1>) – die .NET Framework 2.0-Transparenzregeln.
 
@@ -97,4 +98,4 @@ Transparenzregeln werden erst erzwungen, wenn Transparenz berechnet wird. Zu die
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheits transparenter Code, Ebene 1](security-transparent-code-level-1.md)
-- [Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md)
+- [Sicherheitstransparenter Code, Ebene 2](security-transparent-code-level-2.md)

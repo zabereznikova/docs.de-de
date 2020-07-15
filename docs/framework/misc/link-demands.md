@@ -15,19 +15,19 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: cd89c4ef27abb92fba567a1f3b490cb9d78fdddd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: eaf9ee1bb5cd10c724240bacac014503685a0c8c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282057"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309104"
 ---
 # <a name="link-demands"></a>Verknüpfungsaufrufe
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Ein Linkaufruf (Verknüpfungsaufruf) bewirkt eine Sicherheitsüberprüfung während der Just-In-Time-Kompilierung, wobei nur die direkt aufrufende Assembly Ihres Codes überprüft wird. Das Verlinken erfolgt, wenn der Code an einen Typverweis, einschließlich Funktionszeigerverweise und Methodenaufrufe, gebunden wird. Hat die aufrufende Assembly keine ausreichende Berechtigung, Ihren Code zu verlinken, ist der Link unzulässig, und beim Laden und Ausführen des Codes wird eine Laufzeitausnahme ausgelöst.  Linkaufrufe können in Klassen, die von Ihrem Code erben, überschrieben werden.  
   
- Beachten Sie, dass bei diesem Typ von Forderung kein vollständiger Stackwalk durchgeführt wird und der Code weiterhin anfällig für Täuschungsmanöver ist. Wenn eine Methode in Assembly a z. b. durch einen Link Aufruf geschützt ist, wird ein direkter Aufrufer in Assembly b basierend auf den Berechtigungen von Assembly b ausgewertet.  Der Link Aufruf wertet jedoch keine Methode in Assembly C aus, wenn er die Methode in Assembly a mithilfe der-Methode in Assembly B indirekt aufruft. Der Link Aufruf gibt nur die Berechtigungen an, die direkte Aufrufer in der unmittelbaren aufrufenden Assembly zum Verknüpfen mit dem Code benötigen. Er gibt nicht die Berechtigungen an, die alle Aufrufer haben müssen, um Ihren Code auszuführen.  
+ Ein vollständiger Stackwalk wird bei dieser Art von Nachfrage nicht durchgeführt, und der Code ist weiterhin anfällig für Lock Angriffe. Wenn eine Methode in Assembly a z. b. durch einen Link Aufruf geschützt ist, wird ein direkter Aufrufer in Assembly b basierend auf den Berechtigungen von Assembly b ausgewertet.  Der Link Aufruf wertet jedoch keine Methode in Assembly C aus, wenn er die Methode in Assembly a mithilfe der-Methode in Assembly B indirekt aufruft. Der Link Aufruf gibt nur die Berechtigungen an, die direkte Aufrufer in der unmittelbaren aufrufenden Assembly zum Verknüpfen mit dem Code benötigen. Er gibt nicht die Berechtigungen an, die alle Aufrufer haben müssen, um Ihren Code auszuführen.  
   
  Die Stackwalkmodifizierer <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> und <xref:System.Security.CodeAccessPermission.PermitOnly%2A> haben keinen Einfluss auf die Auswertung von Linkaufrufen.  Da Linkaufrufe keinen Stackwalk ausführen, haben die Stackwalkmodifizierer keinen Einfluss auf Linkaufrufe.  
   
