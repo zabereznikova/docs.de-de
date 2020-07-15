@@ -1,6 +1,8 @@
 - name: '"DataSets", "DataTables" und "DataViews"'
   href: index.md
   items:
+    - name: Sicherheitsleitfaden
+      href: security-guidance.md
     - name: Erstellen eines "DataSets"
       href: creating-a-dataset.md
     - name: Hinzufügen einer "DataTable" zu einem "DataSet"

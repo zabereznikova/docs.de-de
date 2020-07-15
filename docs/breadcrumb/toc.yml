@@ -124,10 +124,10 @@
             - name: Installationshandbuch
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
-            - name: Neuigkeiten
+            - name: Neues
               tocHref: /dotnet/core/whats-new/
               topicHref: /dotnet/core/whats-new/dotnet-core-3-0
-            - name: Breaking Changes
+            - name: Aktuelle Änderungen
               tocHref: /dotnet/core/compatibility/
               topicHref: /dotnet/core/compatibility/index
             - name: Tutorials
@@ -151,10 +151,10 @@
             - name: Diagnosetools
               tocHref: /dotnet/core/diagnostics/
               topicHref: /dotnet/core/diagnostics/index
-            - name: Komponententest
+            - name: Komponententests
               tocHref: /dotnet/core/testing/
               topicHref: /dotnet/core/testing/index
-            - name: Versionskontrolle
+            - name: Versionsverwaltung
               tocHref: /dotnet/core/versions/
               topicHref: /dotnet/core/versions/index
             - name: SDK-Projekte
@@ -172,7 +172,7 @@
             - name: Laden von Abhängigkeiten
               tocHref: /dotnet/core/dependency-loading/
               topicHref: /dotnet/core/dependency-loading/overview
-        - name: ".NET\_Framework"
+        - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
           items:
@@ -189,7 +189,7 @@
               tocHref: /dotnet/framework/configure-apps/
               topicHref: /dotnet/framework/configure-apps/index
               items:
-                - name: Konfigurationsdateischema
+                - name: Schema der Konfigurationsdatei
                   tocHref: /dotnet/framework/configure-apps/file-schema/
                   topicHref: /dotnet/framework/configure-apps/file-schema/index
                   items:
@@ -281,7 +281,7 @@
             - name: Managed Extensibility Framework (MEF)
               tocHref: /dotnet/framework/mef/
               topicHref: /dotnet/framework/mef/index
-            - name: Migrationshandbuch
+            - name: Migrationsleitfaden
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
             - name: Kompilieren von Apps mit .NET Native
@@ -407,7 +407,7 @@
                 - name: Anwendungsentwicklung
                   tocHref: /dotnet/framework/wpf/app-development/
                   topicHref: /dotnet/framework/wpf/app-development/index
-                - name: Steuerelemente
+                - name: Kontrollen
                   tocHref: /dotnet/framework/wpf/controls/
                   topicHref: /dotnet/framework/wpf/controls/index
                 - name: Daten
@@ -435,11 +435,11 @@
             - name: Datenbindung
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'Leitfaden für C#'
+        - name: Leitfaden für C#
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
-            - name: 'Einführung in C#'
+            - name: Einführung in C#
               tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
               topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
             - name: Erste Schritte
@@ -451,7 +451,7 @@
             - name: Überblick
               tocHref: /dotnet/csharp/tour-of-csharp/
               topicHref: /dotnet/csharp/tour-of-csharp/index
-            - name: Neuigkeiten
+            - name: Neues
               tocHref: /dotnet/csharp/whats-new/
               topicHref: /dotnet/csharp/whats-new/index
             - name: .NET Compiler Platform SDK
@@ -461,7 +461,7 @@
               tocHref: /dotnet/csharp/programming-guide/
               topicHref: /dotnet/csharp/programming-guide/index
               items:
-                - name: 'Einblicke in ein C#-Programm'
+                - name: Einblicke in ein C#-Programm
                   tocHref: /dotnet/csharp/programming-guide/inside-a-program/
                   topicHref: /dotnet/csharp/programming-guide/inside-a-program/index
                 - name: Arrays
@@ -473,7 +473,7 @@
                 - name: Delegaten
                   tocHref: /dotnet/csharp/programming-guide/delegates/
                   topicHref: /dotnet/csharp/programming-guide/delegates/index
-                - name: Ereignisse
+                - name: Events
                   tocHref: /dotnet/csharp/programming-guide/events/
                   topicHref: /dotnet/csharp/programming-guide/events/index
                 - name: Ausnahmen und Ausnahmebehandlung
@@ -507,7 +507,7 @@
                     - name: Asynchrone Programmierung
                       tocHref: /dotnet/csharp/programming-guide/concepts/async/
                       topicHref: /dotnet/csharp/programming-guide/concepts/async/index
-                    - name: Attribute
+                    - name: Attributes
                       tocHref: /dotnet/csharp/programming-guide/concepts/attributes/
                       topicHref: /dotnet/csharp/programming-guide/concepts/attributes/index
                     - name: Kovarianz und Kontravarianz
@@ -544,7 +544,7 @@
               tocHref: /dotnet/csharp/language-reference/
               topicHref: /dotnet/csharp/language-reference/index
               items:
-                - name: Stichwörter
+                - name: Keywords
                   tocHref: /dotnet/csharp/language-reference/keywords/
                   topicHref: /dotnet/csharp/language-reference/keywords/index
                 - name: Operatoren
@@ -562,25 +562,25 @@
                 - name: Compilerfehler
                   tocHref: /dotnet/csharp/language-reference/compiler-messages/
                   topicHref: /dotnet/csharp/language-reference/compiler-messages/index
-                - name: 'C# 6.0 draft specification (C# 6.0 - Entwurfsspezifikationen)'
+                - name: C# 6.0 draft specification (C# 6.0 - Entwurfsspezifikationen)
                   tocHref: /dotnet/csharp/language-reference/language-specification/
                   topicHref: /dotnet/csharp/language-reference/language-specification/index
-                - name: 'C# 7.0-Sprachvorschläge'
+                - name: C# 7.0-Sprachvorschläge
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/index
-                - name: 'C# 7.1-Sprachvorschläge'
+                - name: C# 7.1-Sprachvorschläge
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/index
-                - name: 'C# 7.2-Sprachvorschläge'
+                - name: C# 7.2-Sprachvorschläge
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/index
-                - name: 'C# 7.3-Sprachvorschläge'
+                - name: C# 7.3-Sprachvorschläge
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/index
-                - name: 'C# 8.0-Sprachvorschläge'
+                - name: C# 8.0-Sprachvorschläge
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/index
-        - name: 'Leitfaden für F#'
+        - name: Leitfaden für F#
           tocHref: /dotnet/fsharp/
           topicHref: /dotnet/fsharp/index
         - name: Leitfaden für Visual Basic
@@ -600,7 +600,7 @@
                 - name: Asynchrone Programmierung
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/async/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/async/index
-                - name: Attribute
+                - name: Attributes
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/attributes/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/attributes/index
                 - name: Ausdrucksbaumstrukturen
@@ -646,7 +646,7 @@
                 - name: Frühes und spätes Binden
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/index
-                - name: Ereignisse
+                - name: Events
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/events/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/events/index
                 - name: LINQ
@@ -676,7 +676,7 @@
             - name: Sprachreferenz
               tocHref: /dotnet/visual-basic/language-reference/
               topicHref: /dotnet/visual-basic/language-reference/index
-            - name: Referenz
+            - name: Verweis
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
         - name: Leitfaden für ML.MET
@@ -699,6 +699,6 @@
           tocHref: /dotnet/azure/
           topicHref: /dotnet/azure/index
           items:
-            - name: Azure SDK für .NET
-              tocHref: /dotnet/azure/sdk/
-              topicHref: /dotnet/azure/sdk/index
+            - name: Azure für .NET-Entwickler
+              tocHref: /dotnet/azure/
+              topicHref: /dotnet/azure/index
