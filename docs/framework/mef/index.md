@@ -1,5 +1,6 @@
 ---
 title: Managed Extensibility Framework (MEF)
+description: Erkunden Sie das Managed Extensibility Framework (MEF), mit dem Anwendungsentwickler Erweiterungen ohne Konfiguration in .NET 4 oder höher ermitteln und verwenden können.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-ms.openlocfilehash: 9a601ac860ac3bf81dd01980b020470d3323772f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00ed48f2202d4c04039ac264b1fe71474a02432e
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181287"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281250"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
