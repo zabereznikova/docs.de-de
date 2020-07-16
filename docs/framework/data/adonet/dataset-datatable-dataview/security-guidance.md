@@ -3,12 +3,12 @@ title: Leitfaden für DataSet und Datentabelle
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: c6b32afeadccc3fd22d6611d282840233280440f
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
+ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382467"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405291"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Leitfaden für DataSet und Datentabelle
 
@@ -195,7 +195,8 @@ Sobald der Überwachungsmodus aktiviert ist, können Sie _App.config_ verwenden,
 
 Weitere Informationen zu `TraceSource` und `TraceListener` finden Sie im Dokument Gewusst [wie: Verwenden von TraceSource und Filtern mit](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners)Ablaufverfolgungslistenern.
 
-**Hinweis**: das Ausführen einer APP im Überwachungsmodus ist in .net Core oder .net 5,0 und höher nicht verfügbar.
+> [!NOTE]
+> Das Ausführen einer APP im Überwachungsmodus ist in .net Core oder .net 5,0 und höher nicht verfügbar.
 
 <a name="ratr"></a>
 
@@ -207,7 +208,7 @@ Wenn eine APP alle typeinschränkungs Einschränkungen von und entfernen muss `D
 * Welche Optionen verfügbar sind, hängt vom Framework ab, auf das die APP abzielt.
 
 > [!WARNING]
-> Wenn alle Typeinschränkungen entfernt werden, kann dies zu einer Sicherheitslücke in der APP führen. Wenn Sie diesen Mechanismus verwenden, stellen Sie sicher, dass die APP **nicht** `DataSet` oder `DataTable` zum Lesen nicht vertrauenswürdiger Eingaben verwendet. Weitere Informationen finden Sie unter [CVE-2020-1147](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1147) und im folgenden Abschnitt mit dem Titel [Sicherheit in Bezug auf nicht vertrauenswürdige Eingaben](#swr).
+> Wenn alle Typeinschränkungen entfernt werden, kann dies zu einer Sicherheitslücke in der APP führen. Wenn Sie diesen Mechanismus verwenden, stellen Sie sicher, dass die APP **nicht** `DataSet` oder `DataTable` zum Lesen nicht vertrauenswürdiger Eingaben verwendet. Weitere Informationen finden Sie unter [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) und im folgenden Abschnitt mit dem Titel [Sicherheit in Bezug auf nicht vertrauenswürdige Eingaben](#swr).
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>Über appContext-Konfiguration (.NET Framework 4,6-4,8, .net Core 2,1 und höher, .net 5,0 und höher)
 
@@ -463,7 +464,8 @@ public class MyClass
 
 Das Deserialisieren `DataSet` `DataTable` von oder auf diese Weise aus einem nicht vertrauenswürdigen JSON-BLOB ist nicht sicher. Dieses Muster ist anfällig für einen Denial-of-Service-Angriff. Ein solcher Angriff könnte die APP abstürzen oder nicht mehr reagiert.
 
-**Hinweis**: Microsoft kann die Implementierung von Bibliotheken von Drittanbietern, wie _Newtonsoft.Jsauf_, nicht rechtfertigen oder unterstützen. Diese Informationen werden aus Gründen der Vollständigkeit bereitgestellt und sind zum Zeitpunkt der Erstellung dieses Artikels genau.
+> [!NOTE]
+> Die Implementierung von Bibliotheken von Drittanbietern, wie z. b. _Newtonsoft.Js_, wird von Microsoft nicht garantiert oder unterstützt. Diese Informationen werden aus Gründen der Vollständigkeit bereitgestellt und sind zum Zeitpunkt der Erstellung dieses Artikels genau.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Deserialisieren eines Datasets oder einer Datentabelle über BinaryFormatter
 
