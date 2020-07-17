@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: baa21908b85130f8a0dd992b10cdc95c6e42912e
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75713920"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415916"
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C\#
 
@@ -30,7 +30,7 @@ Folgende Themen sind verfügbar:
 
 - [Erstellen einer Klassenbibliothek mit C# und .NET Standard in Visual Studio](../../core/tutorials/library-with-visual-studio.md)
 
-   Mit einer Klassenbibliothek können Sie Typen und Typmember definieren, die von einer anderen Anwendung aufgerufen werden können. In diesem Thema erstellen Sie eine Klassenbibliothek mit einer einzigen Methode, die festlegt, ob eine Zeichenfolge mit einem Großbuchstaben beginnt. Nachdem Sie die Bibliothek erstellt haben, können Sie einen [Komponententest](../../core/tutorials/testing-library-with-visual-studio.md) entwickeln, um sicherzustellen, dass die Bibliothek wie erwartet funktioniert. Dann machen Sie die Bibliothek verfügbar für [Anwendungen, von denen sie genutzt werden soll](../../core/tutorials/consuming-library-with-visual-studio.md).
+   Mit einer Klassenbibliothek können Sie Typen und Typmember definieren, die von einer anderen Anwendung aufgerufen werden können. In diesem Thema erstellen Sie eine Klassenbibliothek mit einer einzigen Methode, die festlegt, ob eine Zeichenfolge mit einem Großbuchstaben beginnt. Nachdem Sie die Bibliothek erstellt haben, können Sie einen [Komponententest](../../core/tutorials/testing-library-with-visual-studio.md) entwickeln, um sicherzustellen, dass die Bibliothek wie erwartet funktioniert. Dann machen Sie die Bibliothek verfügbar für [Anwendungen, von denen sie genutzt werden soll](/nuget/quickstart/install-and-use-a-package-in-visual-studio).
 
 - [Erste Schritte mit C# und Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
@@ -52,6 +52,6 @@ Folgende Themen sind verfügbar:
 
     Enthält Links zu exemplarischen Vorgehensweisen für die Programmierung in C# und eine kurze Beschreibung jeder exemplarischen Vorgehensweise.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Entwicklung mit Visual Studio](/visualstudio/get-started/csharp/)

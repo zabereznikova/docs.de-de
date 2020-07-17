@@ -4,12 +4,12 @@ description: Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bi
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: a685b7d8d6c849cfea061a997780b9cafeb6d938
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c26d3e2e55723fed98f2013fe7131d2b06f910d2
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283727"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415941"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Kennenlernen der .NET Core- und .NET Core SDK-Tools mithilfe der folgenden Tutorials
 
@@ -42,7 +42,7 @@ In diesen Tutorials lernen Sie, wie Sie Visual Studio Code oder andere Code-Edit
 ## <a name="use-visual-studio-for-mac"></a>Verwenden Sie Visual Studio für Mac
 
 - [Erstellen einer Konsolen-App](using-on-mac-vs.md)
-- [Erstellen einer Bibliothek und Durchführen von Komponententests](using-on-mac-vs-full-solution.md)
+- [Erstellen einer Bibliothek und Durchführen von Komponententests](library-with-visual-studio-mac.md)
 - [Installieren und Verwenden eines Pakets](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 ## <a name="advanced-topics"></a>Weiterführende Themen
