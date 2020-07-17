@@ -16,7 +16,7 @@
           href: fundamental-concepts.md
         - name: Windows Communication Foundation-Architektur
           href: architecture.md
-        - name: 'Clientprofil für WCF und .NET&#160;Framework'
+        - name: Clientprofil für WCF und .NET&#160;Framework
           href: wcf-and-net-framework-client-profile.md
     - name: Tutorial für die ersten Schritte
       href: getting-started-tutorial.md

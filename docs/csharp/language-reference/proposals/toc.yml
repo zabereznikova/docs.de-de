@@ -1,6 +1,6 @@
 - name: Die neusten Featurespezifikationen
   items:
-    - name: 'Vorschläge für die C# 7.0-Spezifikation'
+    - name: Vorschläge für die C# 7.0-Spezifikation
       items:
         - name: Musterabgleich
           href: ../../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -14,7 +14,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: Zahlentrennzeichen
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-    - name: 'Vorschläge für die C# 7.1-Spezifikation'
+    - name: Vorschläge für die C# 7.1-Spezifikation
       items:
         - name: Async Main-Methode
           href: ../../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -24,7 +24,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
         - name: Musterabgleich mit Generics
           href: ../../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-    - name: 'Vorschläge für die C# 7.2-Spezifikation'
+    - name: Vorschläge für die C# 7.2-Spezifikation
       items:
         - name: Schreibgeschützte Verweise
           href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -58,7 +58,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
         - name: Verbesserte Überladungskandidaten
           href: ../../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-    - name: 'Vorschläge für die C# 8.0-Spezifikation'
+    - name: Vorschläge für die C# 8.0-Spezifikation
       items:
         - name: Nullable-Verweistypen – Vorschlag
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
