@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8cb7ee2ea2418602d944c3c08cec2b9279dca3b9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601061"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441816"
 ---
 # <a name="security-considerations-for-data"></a>Sicherheitsüberlegungen zu Daten
 
@@ -284,7 +284,7 @@ Diese Situation ist vermeidbar, wenn folgenden Punkte beachtet werden:
 
 ph x="1" /&gt; ist eine Serialisierungs-Engine, das eng verknüpfte Typen verwendet. Das ist mit <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>vergleichbar. Das heißt, es bestimmt, welcher Typ instanziiert werden soll, indem er die .NET Framework Assembly und den Typnamen aus den eingehenden Daten liest. Obwohl es Teil von WCF ist, gibt es keine Möglichkeit, diese Serialisierungs-Engine zu überspringen. benutzerdefinierter Code muss geschrieben werden. Der `NetDataContractSerializer` wird hauptsächlich zur Erleichterung der Migration von .NET Framework Remoting zu WCF bereitgestellt. Weitere Informationen finden Sie im entsprechenden Abschnitt unter [Serialisierung und Deserialisierung](serialization-and-deserialization.md).
 
-Da die Nachricht selbst möglicherweise alle ladbaren Typen angibt, ist der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Mechanismus grundsätzlich unsicher und sollte nur mit vertrauenswürdigen Daten verwendet werden. Sie können den Mechanismus sichern, indem Sie einen sicheren, Typen einschränkenden Typbinder schreiben, der nur das Laden sicherer Typen zulässt (mithilfe der <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> -Eigenschaft).
+Da die Nachricht selbst möglicherweise alle ladbaren Typen angibt, ist der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Mechanismus grundsätzlich unsicher und sollte nur mit vertrauenswürdigen Daten verwendet werden. Weitere Informationen finden Sie im [BinaryFormatter-Sicherheitshandbuch](/dotnet/standard/serialization/binaryformatter-security-guide).
 
 Selbst wenn das Modul mit vertrauenswürdigen Daten arbeitet, geben die eingehenden Daten möglicherweise den zu ladenden Typ nur ungenau an, insbesondere, wenn die <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> -Eigenschaft auf <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>festgelegt ist. Jeder, der Zugriff auf das Verzeichnis der Anwendung oder den globalen Assemblycache besitzt, kann den vorhandenen zu ladenden Typ durch einen schädlichen Typ ersetzen. Stellen Sie stets sicher, dass das Verzeichnis der Anwendung und der globale Anwendungscache gesichert sind, indem Sie die Berechtigungen richtig festlegen.
 

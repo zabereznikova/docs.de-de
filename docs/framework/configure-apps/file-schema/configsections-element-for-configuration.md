@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155348"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441686"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configSections>-Element für \<configuration>
 
@@ -32,12 +32,10 @@ Keine
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-|     | BESCHREIBUNG |
+|     | Beschreibung |
 | --- | ----------- |
 | [**\<section>**](section-element.md) | Enthält eine Konfigurations Abschnitts Deklaration. |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurations Abschnitte. |
-| [**\<remove>**](remove-element-for-configsections.md) | Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe. |
-| [**\<clear>**](clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen. |
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -61,7 +59,7 @@ Im folgenden Beispiel wird gezeigt, wie ein Konfigurations Abschnitt definiert u
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, der Computer Konfigurationsdatei (*Machine.config*) und *Web.config* Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Weitere Informationen
 

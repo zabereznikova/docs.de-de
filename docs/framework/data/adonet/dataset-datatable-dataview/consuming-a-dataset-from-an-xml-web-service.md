@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 2c8924ee3374489dded7e819ecde8e4d9da750bb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: e6dc32274cc3b0d7ec9d66a837a422c87fb2468b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374385"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416213"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>Verwenden eines Datasets von einem XML-Webdienst
 
@@ -19,7 +19,7 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
  Im folgenden Beispiel wird gezeigt, wie ein XML-Webdienst und-Client erstellt werden, die das **DataSet** zum transportieren relationaler Daten (einschließlich der geänderten Daten) und zum Auflösen von Aktualisierungen in die ursprüngliche Datenquelle verwenden.  
   
 > [!NOTE]
-> `DataSet`Das Übertragen von-oder- `DataTable` Instanzen als Teil von XML-Webdienst aufrufen ist nicht sicher, wenn die Eingabe nicht vertrauenswürdig ist. Weitere Informationen finden Sie unter [Leitfaden für Datasets und Daten](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance)Tabelle.
+> `DataSet`Das Übertragen von-oder- `DataTable` Instanzen als Teil von XML-Webdienst aufrufen ist nicht sicher, wenn die Eingabe nicht vertrauenswürdig ist. Weitere Informationen finden Sie unter [Leitfaden für Datasets und Daten](security-guidance.md)Tabelle.
 > Außerdem wird empfohlen, dass Sie beim Erstellen eines XML-Webdiensts stets Sicherheits Implikationen in Erwägung gezogen. Informationen zum Sichern eines XML-Webdiensts finden [Sie unter Sichern von mit ASP.NET erstellten XML-Webdiensten](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ## <a name="create-an-xml-web-service"></a>Erstellen eines XML-Webdiensts

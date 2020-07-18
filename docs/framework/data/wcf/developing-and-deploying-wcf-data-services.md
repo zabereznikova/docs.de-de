@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200053"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416071"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 
@@ -32,7 +32,7 @@ Wenn Sie WCF Data Services verwenden, um einen Datendienst zu erstellen, der die
 
 3. **Konfigurieren des Datendiensts**
 
-     Standardmäßig deaktiviert WCF Data Services den Zugriff auf Ressourcen, die von einem Entitätencontainer verfügbar gemacht werden. Die <xref:System.Data.Services.DataServiceConfiguration> -Schnittstelle ermöglicht Ihnen das Konfigurieren des Zugriffs auf Ressourcen und Dienst Vorgänge, das Angeben der unterstützten Version von odata und das definieren anderer Dienst weiter Verhalten, z. b. das Batch Verarbeitungs Verhalten oder die maximale Anzahl von Entitäten, die in einem einzelnen Antwort Feed zurückgegeben werden können. Weitere Informationen finden Sie unter [Konfigurieren des Daten Dienstanbieter](configuring-the-data-service-wcf-data-services.md).
+     Standardmäßig deaktiviert WCF Data Services den Zugriff auf Ressourcen, die von einem Entitätencontainer verfügbar gemacht werden. Die- <xref:System.Data.Services.DataServiceConfiguration> Schnittstelle ermöglicht Ihnen das Konfigurieren des Zugriffs auf Ressourcen und Dienst Vorgänge, das Angeben der unterstützten Version von odata und das definieren anderer Dienst weiter Verhalten, z. b. das Batch Verarbeitungs Verhalten oder die maximale Anzahl von Entitäten, die in einem einzelnen Antwort Feed zurückgegeben werden können. Weitere Informationen finden Sie unter [Konfigurieren des Daten Dienstanbieter](configuring-the-data-service-wcf-data-services.md).
 
 In diesem Artikel wird hauptsächlich die Entwicklung und Bereitstellung von Datendiensten mithilfe von Visual Studio behandelt. Informationen zur Flexibilität, die WCF Data Services zum verfügbar machen Ihrer Daten als odata-Feeds bietet, finden Sie unter [Definieren von WCF Data Services](defining-wcf-data-services.md).
 
@@ -63,14 +63,14 @@ Wenn Sie einen WCF Data Service mithilfe von Visual Studio 2015 als ASP.NET-Anwe
 
     - Dieser Server kann keine aufgeteilten http-Streams verarbeiten, die vom WCF Data Services Client standardmäßig gesendet werden, wenn auf große Binärdaten vom Datendienst zugegriffen wird. Weitere Informationen finden Sie unter [streaminganbieter](streaming-provider-wcf-data-services.md).
 
-    - Bei diesem Server treten Probleme bei der Verarbeitung des`.`Period ()-Zeichens in einer URL auf, obwohl dieses Zeichen von WCF Data Services in Schlüsselwerten unterstützt wird.
+    - Bei diesem Server treten Probleme bei der Verarbeitung des Period ( `.` )-Zeichens in einer URL auf, obwohl dieses Zeichen von WCF Data Services in Schlüsselwerten unterstützt wird.
 
     > [!TIP]
     > Obwohl Sie die Visual Studio Development Server verwenden können, um Ihre Datendienste während der Entwicklung zu testen, sollten Sie Sie nach der Bereitstellung auf einem Webserver, auf dem IIS ausgeführt wird, erneut testen.
 
 3. **Azure-Entwicklungsumgebung**
 
-     Azure Tools für Visual Studio umfasst einen integrierten Satz von Tools für die Entwicklung von Azure-Diensten in Visual Studio. Mit diesen Tools können Sie einen Datendienst entwickeln, der in Azure bereitgestellt werden kann, und Sie können den Datendienst vor der Bereitstellung auf dem lokalen Computer testen. Verwenden Sie diese Tools, wenn Sie Visual Studio verwenden, um einen Datendienst zu entwickeln, der auf der Azure-Plattform ausgeführt wird. Weitere Informationen zum Installieren der Tools finden Sie unter [Azure Tools für Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Weitere Informationen zum Entwickeln eines Daten Dienstanbieter, der in Azure ausgeführt wird, finden Sie im Beitrag bereitstellen [eines odata-Dienstanbieter in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Azure Tools für Visual Studio umfasst einen integrierten Satz von Tools für die Entwicklung von Azure-Diensten in Visual Studio. Mit diesen Tools können Sie einen Datendienst entwickeln, der in Azure bereitgestellt werden kann, und Sie können den Datendienst vor der Bereitstellung auf dem lokalen Computer testen. Verwenden Sie diese Tools, wenn Sie Visual Studio verwenden, um einen Datendienst zu entwickeln, der auf der Azure-Plattform ausgeführt wird. Weitere Informationen zum Installieren der Tools finden Sie unter [Azure Tools für Visual Studio 2015](../../../azure/vs2015-install.md). Weitere Informationen zum Entwickeln eines Daten Dienstanbieter, der in Azure ausgeführt wird, finden Sie im Beitrag bereitstellen [eines odata-Dienstanbieter in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Tipps für die Entwicklung
 
@@ -115,7 +115,7 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
 - **Azure**
 
-     Sie können einen Datendienst mithilfe von [Azure Tools für Visual Studio](../../../azure/sdk/vs2015-install.md)in Azure bereitstellen. Weitere Informationen zum Bereitstellen eines Daten Dienstanbieter in Azure finden Sie unter Bereitstellen [eines odata-Dienstanbieter in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Sie können einen Datendienst mithilfe von [Azure Tools für Visual Studio](../../../azure/vs2015-install.md)in Azure bereitstellen. Weitere Informationen zum Bereitstellen eines Daten Dienstanbieter in Azure finden Sie unter Bereitstellen [eines odata-Dienstanbieter in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung
 
