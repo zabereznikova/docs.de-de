@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden zum Schreiben von Kompon
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ffeaa1e11512cab64695c120f844594b8c5014a8
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324483"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281107"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -22,21 +22,25 @@ Von [John Reese](https://reese.dev) mit besonderem Dank an [Roy Osherove](https:
 ## <a name="why-unit-test"></a>Weshalb sollte ich Komponententests durchführen?
 
 ### <a name="less-time-performing-functional-tests"></a>Weniger Zeitaufwand für das Ausführen von Funktionstests
+
 Funktionstests sind kostspielig. Für Funktionstests muss normalerweise die Anwendung geöffnet werden, und Sie (oder eine andere Person) müssen mehrere Schritte ausführen, um das erwartete Verhalten zu überprüfen. Es kann durchaus sein, dass der Tester diese Schritte nicht kennt, was bedeutet, dass sich dieser an eine Person wenden muss, die sich in dem Bereich auskennt, um den Test auszuführen. Der Testvorgang selbst kann nur ein paar Sekunden für banale Änderungen oder Minuten für größere Änderungen in Anspruch nehmen. Abschließend muss der ganze Vorgang für jede Änderung, die Sie am System vornehmen, wiederholt werden.
 
 Im Vergleich dazu benötigen Komponententests nur Millisekunden. Außerdem können sie durch einen Klick auf eine Schaltfläche ausgeführt werden und erfordern keine tiefgreifenden Kenntnisse zum System. Ob der Test erfolgreich ist oder fehlschlägt, hängt vom Testlauf und nicht von der einzelnen Person ab, die den Test ausführt.
 
 ### <a name="protection-against-regression"></a>Schutz vor Regression
+
 Regressionsfehler sind Fehler, die auftreten, wenn eine Änderung an der Anwendung vorgenommen wird. Tester testen meist nicht nur ihr neues Feature sondern auch die Features, die zuvor schon vorhanden waren. So können sie überprüfen, ob die zuvor implementierten Features noch immer wie erwartet funktionieren.
 
 Durch Komponententests ist es möglich, die gesamte Testsammlung nach jedem Build oder sogar nach jeder Änderung an einer Codezeile erneut durchzuführen. So können Sie sicherstellen, dass Ihr neuer Code die vorhandene Funktionalität nicht beeinträchtigt.
 
 ### <a name="executable-documentation"></a>Dokumentation zur Ausführbarkeit
+
 Es ist nicht immer offensichtlich, was genau eine bestimmte Methode tut oder wie sie sich bei einer bestimmten Eingabe verhält. Sie fragen sich vielleicht: Wie verhält sich diese Methode, wenn ich ihr eine leere Zeichenfolge übergebe? Oder was geschieht, wenn ich NULL übergebe?
 
 Wenn Sie über eine Sammlung von sinnvoll benannten Komponententests verfügen, sollte jeder Test die erwartete Ausgabe für eine gegebene Eingabe eindeutig erklären können. Zusätzlich sollte er überprüfen, ob sie tatsächlich funktioniert.
 
 ### <a name="less-coupled-code"></a>Weniger gekoppelter Code
+
 Wenn Code eng gekoppelt ist, kann es schwierig sein, Komponententests dafür auszuführen. Ohne das Erstellen von Komponententests für den von Ihnen geschriebenen Code kann die Kopplung weniger offensichtlich sein.
 
 Wenn Sie Tests für Ihren Code schreiben, wird dieser automatisch entkoppelt, da es ansonsten schwieriger wäre, diesen zu testen.
@@ -56,6 +60,7 @@ Ein hoher Code-Coverage-Prozentsatz steht oft im Zusammenhang mit einer höheren
 Ein hoher Code-Coverage-Prozentsatz ist weder ein Erfolgsindikator noch ein Hinweis auf eine hohe Codequalität. Er stellt lediglich die Menge an Code dar, die durch Komponententests abgedeckt wird. Weitere Informationen finden Sie unter [Verwenden von Code Coverage für Komponententests](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Begriffsklärung
+
 Der Begriff *Mock* (Deutsch: „Pseudo“) wird leider im Testkontext häufig falsch verwendet. Im Folgenden werden die häufigsten Arten von unechten Objekten, sogenannten *Fakes*, beim Schreiben von Komponententests definiert:
 
 *Fake*: Fake ist ein generischer Begriff, der sowohl für Stubs als auch für Pseudoobjekte („Mocks“) verwendet wird. Ob es sich um einen Stub oder um einen Mock handelt, hängt vom Kontext ab. Das bedeutet, dass ein Fake entweder ein Stub oder ein Mock sein kann.
@@ -111,6 +116,7 @@ Der Hauptunterschied zwischen Mocks und Stubs ist also der folgende: Mocks unter
 ## <a name="best-practices"></a>Bewährte Methoden
 
 ### <a name="naming-your-tests"></a>Benennen Ihrer Tests
+
 Der Name Ihres Tests sollte aus drei Teilen bestehen:
 
 - aus dem Namen der Methode, die getestet wird
@@ -124,12 +130,15 @@ Der Name Ihres Tests sollte aus drei Teilen bestehen:
 Tests sind nicht nur dazu da sicherzustellen, dass Ihr Code funktioniert, sie bieten auch Dokumentation. Sie sollten anhand der Komponententestsammlung in der Lage sein, das Verhalten Ihres Codes abzuleiten, auch wenn Sie nicht den Code selbst ansehen. Wenn Tests fehlschlagen, können Sie zusätzlich genau erkennen, welche Szenarios nicht Ihren Erwartungen entsprechen.
 
 #### <a name="bad"></a>Nicht empfohlen:
+
 [!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Empfohlen:
+
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>Anordnen Ihrer Tests
+
 **Arrange, Act, Assert** ist ein häufiges Muster beim Ausführen von Komponententests. Dieses Muster besteht aus drei Hauptteilen:
 
 - *Arrange*: Ordnen Sie Ihrer Objekte an, und erstellen und planen Sie diese nach Bedarf.
@@ -144,12 +153,15 @@ Tests sind nicht nur dazu da sicherzustellen, dass Ihr Code funktioniert, sie bi
 Die Lesbarkeit ist einer der wichtigsten Punkte beim Schreiben eines Tests. Durch die Aufteilung innerhalb des Tests werden die Abhängigkeiten deutlich, die beim Codeaufruf, der Art und Weise des Codeaufrufs und bei der Überprüfung entstehen. Einige Schritte können zwar möglicherweise kombiniert werden, wodurch die Größe Ihres Tests verringert wird, jedoch liegt das Hauptaugenmerk darauf, den Test besser lesbar zu machen.
 
 #### <a name="bad"></a>Nicht empfohlen:
+
 [!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Empfohlen:
+
 [!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>Schreiben von minimal erfolgreichen Tests
+
 Die in einem Komponententest verwendete Eingabe soll so einfach wie möglich gehalten werden, damit das Verhalten, das Sie gerade testen, überprüft werden kann.
 
 #### <a name="why"></a>Warum?
@@ -160,12 +172,15 @@ Die in einem Komponententest verwendete Eingabe soll so einfach wie möglich geh
 Es ist wahrscheinlicher, dass Tests, die mehr Informationen enthalten, als für das Bestehen erforderlich sind, Fehler verursachen. Dadurch kann die Absicht des Tests weniger eindeutig sein. Wenn Sie Tests schreiben, sollte das Verhalten im Vordergrund stehen. Die Festlegung von zusätzlichen Eigenschaften für Modelle oder die Verwendung von Werten, die nicht 0 (null) sind, wenn es nicht nötig ist, lenkt nur vom gewünschten Ergebnis ab.
 
 #### <a name="bad"></a>Nicht empfohlen:
+
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Empfohlen:
+
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>Vermeiden „magischer“ Zeichenfolgen
+
 Das Benennen von Variablen in Komponententests ist genauso wichtig, wenn nicht noch wichtiger, wie das Benennen von Variablen im Produktionscode. Komponententests sollten keine „magischen“ Zeichenfolgen enthalten.
 
 #### <a name="why"></a>Warum?
@@ -179,12 +194,15 @@ Magische Zeichenfolgen können den Leser Ihrer Tests verwirren. Wenn eine Zeiche
 > Gehen Sie deshalb so genau wie möglich auf die Absicht ein, wenn Sie Tests schreiben. Im Fall von magischen Zeichenfolgen ist es ein guter Ansatz, diese Werte Kontanten zuzuweisen.
 
 #### <a name="bad"></a>Nicht empfohlen:
+
 [!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Empfohlen:
+
 [!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>Vermeiden von Logik in Tests
+
 Wenn Sie Ihre Komponententests schreiben, vermeiden Sie manuelle Zeichenfolgenverkettungen und logische Bedingungen, z.B. `if`, `while`, `for`, `switch` usw.
 
 #### <a name="why"></a>Warum?
@@ -198,12 +216,15 @@ Wenn Sie Logik in Ihre Testsammlung einfügen, erhöht sich die Wahrscheinlichke
 > Wenn Logik in Ihrem Test unvermeidlich scheint, dann erwägen Sie, den Test in zwei oder mehr Tests aufzuteilen.
 
 #### <a name="bad"></a>Nicht empfohlen:
+
 [!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Empfohlen:
+
 [!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Hilfsmethoden statt SetUp und TearDown
+
 Wenn Sie für Ihre Test ein ähnliches Objekt oder einen ähnlichen Zustand benötigen, nutzen Sie anstatt der „Setup“- und „Teardown“-Attribute (falls vorhanden) lieber eine Hilfsmethode.
 
 #### <a name="why"></a>Warum?
@@ -218,6 +239,7 @@ In Komponententestframeworks wird `Setup` vor jedem Komponententest innerhalb Ih
 > Ab xUnit Version 2.x sind SetUp und TearDown nicht mehr verfügbar.
 
 #### <a name="bad"></a>Nicht empfohlen:
+
 [!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
@@ -227,6 +249,7 @@ In Komponententestframeworks wird `Setup` vor jedem Komponententest innerhalb Ih
 [!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>Empfohlen:
+
 [!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
@@ -236,6 +259,7 @@ In Komponententestframeworks wird `Setup` vor jedem Komponententest innerhalb Ih
 [!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>Vermeiden mehrerer Assert-Anweisungen
+
 Wenn Sie Ihre Tests schreiben, versuchen Sie, nur eine Assert-Anweisung pro Test einzuschließen. Allgemeine Ansätze zur Verwendung von nur einer Assert-Anweisung sind die folgenden:
 
 - Erstellen eines separaten Tests für jede Assert-Anweisung
@@ -253,12 +277,15 @@ Wenn mehrere Assert-Anweisungen in einer Testsituation verwendet werden, kann ni
 > Eine Ausnahme bestätigt die Regel: das Überprüfen eines Objekts In diesem Fall sind mehrere Assert-Anweisungen für jede Eigenschaft kein Problem, denn damit wird sichergestellt, dass sich das Objekt in dem Zustand befindet, den Sie von ihm erwarten.
 
 #### <a name="bad"></a>Nicht empfohlen:
+
 [!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Empfohlen:
+
 [!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Überprüfen privater Methoden durch Komponententest von öffentlichen Methoden
+
 In den meisten Fällen sollte es nicht nötig sein, eine private Methode zu testen. Private Methoden sind ein Implementierungsdetail. Sie können sich diese wie folgt vorstellen: Private Methoden sind nie isoliert vorhanden. Irgendwann wird eine öffentliche Methode die private Methode als Teil ihrer Implementierung aufrufen. Sie sollten sich über das Endergebnis der öffentlichen Methode Gedanken machen, die die private abruft.
 
 Betrachten Sie folgenden Fall:
@@ -281,7 +308,7 @@ Möglicherweise versuchen Sie zunächst, einen Test für `TrimInput` zu schreibe
 Der echte Test sollte für die öffentliche Methode, `ParseLogLine`, ausgeführt werden, denn darum sollten Sie sich letztendlich kümmern.
 
 ```csharp
-public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
+public void ParseLogLine_StartsAndEndsWithSpace_ReturnsTrimmedResult()
 {
     var parser = new Parser();
 
@@ -294,12 +321,13 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Wenn Sie mit diesem Wissen eine private Methode erkennen, suchen Sie nach der öffentlichen Methode, und schreiben Sie Ihre Tests für diese. Nur weil eine private Methode die erwarteten Ergebnisse liefert, bedeutet das nicht, dass das System, das letztendlich die private Methode aufruft, das Ergebnis richtig verwendet.
 
 ### <a name="stub-static-references"></a>Statische Verweise für Stub
+
 Ein Komponententest muss das zu testende System vollständig steuern können. Wenn der Produktionscode Aufrufe von statischen Verweisen (z.B. `DateTime.Now`) enthält, kann dies zu Problemen führen. Betrachten Sie folgenden Code:
 
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+    if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
@@ -313,7 +341,7 @@ public int GetDiscountedPrice(int price)
 Wie kann für diesen Code am besten ein Komponententest ausgeführt werden? Sie können beispielsweise folgenden Ansatz ausprobieren:
 
 ```csharp
-public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
+public void GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
 {
     var priceCalculator = new PriceCalculator();
 
@@ -347,7 +375,7 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
+    if (dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
@@ -361,7 +389,7 @@ public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 Ihre Testsammlung sieht nun so aus:
 
 ```csharp
-public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
+public void GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
 {
     var priceCalculator = new PriceCalculator();
     var dateTimeProviderStub = new Mock<IDateTimeProvider>();

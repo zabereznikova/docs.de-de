@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507428"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417325"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -87,9 +87,9 @@ Dieses Tutorial veranschaulicht viele der Features von LINQ und die Sprachelemen
 
 Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine einfache .NET Core-Konsolen-App erstellen.
 
-**[Building a complete .NET Core solution on macOS using Visual Studio for Mac (Erstellen einer vollständigen .NET Core-Projektmappe unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[Erstellen einer .NET-Standard-Bibliothek in macOS mit Visual Studio für Mac](../core/tutorials/library-with-visual-studio-mac.md)**
 
-In diesem Tutorial erfahren Sie, wie Sie eine vollständige .NET Core-Projektmappe erstellen, die eine wiederverwendbare Bibliothek und Komponententests enthält.
+Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine .NET-Standard-Bibliothek erstellen.
 
 **[Creating a .NET Core application that supports plugins (Erstellen einer .NET Core-Anwendung, die Plug-Ins unterstützt)](../core/tutorials/creating-app-with-plugin-support.md)**
 

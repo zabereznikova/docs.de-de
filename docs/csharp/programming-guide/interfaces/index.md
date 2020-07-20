@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 5e39279183f7e3745c9373df246d14d69d5ff99b
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 50f2c5fc3570b6d66ed83206660caf4bd02f1f5b
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805899"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441335"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
@@ -50,7 +50,7 @@ Eine Basisklasse kann zudem Schnittstellenmember mithilfe von virtuellen Membern
 
 Eine Schnittstelle verfügt über die folgenden Eigenschaften:
 
-- Eine Schnittstelle ähnelt in der Regel einer abstrakten Basisklasse, die nur abstrakte Member enthält. Jede die Schnittstelle implementierende Klasse oder Struktur muss alle zugehörigen Member implementieren. Optional kann eine Schnittstelle die Standardimplementierungen für einige ihrer Member definieren.
+- Eine Schnittstelle ähnelt in der Regel einer abstrakten Basisklasse, die nur abstrakte Member enthält. Jede die Schnittstelle implementierende Klasse oder Struktur muss alle zugehörigen Member implementieren. Optional kann eine Schnittstelle die Standardimplementierungen für einige ihrer Member definieren. Weitere Informationen finden Sie unter [Standardschnittstellenmethoden](../../tutorials/default-interface-methods-versions.md).
 - Eine Schnittstelle kann nicht direkt instanziiert werden. Die zugehörigen Member werden durch die die Schnittstelle implementierende Klasse oder Struktur implementiert.
 - Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann eine Basisklasse erben und zudem eine oder mehrere Schnittstellen implementieren.
 
@@ -61,12 +61,13 @@ Eine Schnittstelle verfügt über die folgenden Eigenschaften:
 - [Implementieren von Schnittstellenereignissen](../events/how-to-implement-interface-events.md)
 - [Klassen und Strukturen](../classes-and-structs/index.md)  
 - [Vererbung](../classes-and-structs/inheritance.md)  
+- [Schnittstellen](../../language-reference/keywords/interface.md)
 - [Methoden](../classes-and-structs/methods.md)  
 - [Polymorphismus](../classes-and-structs/polymorphism.md)  
 - [Abstrakte und versiegelte Klassen und Klassenmember](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Eigenschaften](../classes-and-structs/properties.md)  
 - [Ereignisse](../events/index.md)  
-- [Indexer](../indexers/index.md)  
+- [Indexer](../indexers/index.md)
   
 ## <a name="see-also"></a>Siehe auch
 

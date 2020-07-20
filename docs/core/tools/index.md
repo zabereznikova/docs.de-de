@@ -3,12 +3,12 @@ title: .NET Core-CLI
 titleSuffix: ''
 description: Eine Übersicht über die .NET Core-CLI und ihre Features.
 ms.date: 02/13/2020
-ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110840"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415960"
 ---
 # <a name="net-core-cli-overview"></a>Übersicht über die .NET Core-CLI
 
@@ -16,7 +16,7 @@ ms.locfileid: "80110840"
 
 Die .NET Core-Befehlszeilenschnittstelle (CLI) ist eine plattformübergreifende Toolkette zum Entwicklung, Erstellen, Ausführen und Veröffentlichen von .NET Core-Anwendungen.
 
-Die .NET Core-CLI ist im [.NET Core SDK](../sdk.md) enthalten. Informationen zum Installieren des .NET Core SDK finden Sie unter [Installieren des .NET Core SDK](../install/sdk.md).
+Die .NET Core-CLI ist im [.NET Core SDK](../sdk.md) enthalten. Informationen zum Installieren des .NET Core SDK finden Sie unter [Installieren von .NET Core](../install/windows.md).
 
 ## <a name="cli-commands"></a>CLI-Befehle
 
@@ -104,4 +104,4 @@ Die Optionen, die Sie in der Befehlszeile übergeben, sind die Optionen für den
 ## <a name="see-also"></a>Siehe auch
 
 - [GitHub-Repository „dotnet/sdk“](https://github.com/dotnet/sdk/)
-- [.NET Core installation guide (.NET Core-Installationshandbuch)](../install/sdk.md)
+- [.NET Core installation guide (.NET Core-Installationshandbuch)](../install/windows.md)

@@ -2,12 +2,12 @@
 title: Anpassen des Marshallings für Parameter – .NET
 description: Erfahren Sie, wie Sie anpassen können, wie .NET Ihre Parameter in eine native Darstellung marshallt.
 ms.date: 01/18/2019
-ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1999cad057875f15b283421f87f485c2e5ca2306
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401160"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374311"
 ---
 # <a name="customizing-parameter-marshaling"></a>Anpassen des Marshallings für Parameter
 
@@ -40,7 +40,7 @@ Wenn Sie mit WinRT-APIs interagieren, können Sie das Format <xref:System.Runtim
 
 .NET bietet Ihnen außerdem mehrere Möglichkeiten zum Marshallen von Arrayparametern. Wenn Sie eine API aufrufen, die ein Array im C-Stil verwendet, verwenden Sie den nicht verwalteten Typ <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType>. Wenn die Werte im Array benutzerdefiniertes Marshalling benötigen, können Sie dafür das Feld <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> im Attribut `[MarshalAs]` verwenden.
 
-Wenn Sie COM-APIs verwenden, müssen Sie Ihre Arrayparameter wahrscheinlich als `SAFEARRAY*` marshallen. Dafür können Sie den nicht verwalteten Typ <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> verwenden. Der Standardtyp der Elemente von `SAFEARRAY` werden in der Tabelle in den Feldern [Anpassen`object` angezeigt](./customize-struct-marshaling.md#marshaling-systemobjects). Sie können die Felder <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> und <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> verwenden, um den genauen Elementtyp von `SAFEARRAY` anzupassen.
+Wenn Sie COM-APIs verwenden, müssen Sie Ihre Arrayparameter wahrscheinlich als `SAFEARRAY*` marshallen. Dafür können Sie den nicht verwalteten Typ <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> verwenden. Der Standardtyp der Elemente von `SAFEARRAY` werden in der Tabelle in den Feldern [Anpassen`object` angezeigt](./customize-struct-marshaling.md#marshal-systemobject). Sie können die Felder <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> und <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> verwenden, um den genauen Elementtyp von `SAFEARRAY` anzupassen.
 
 ## <a name="customizing-boolean-or-decimal-parameters"></a>Anpassen von booleschen oder dezimalen Parametern
 
@@ -62,7 +62,7 @@ Wenn Ihr Typ außerdem mit `[ComVisible(true)]` markiert ist oder Sie ein Marsha
 
 ### <a name="marshaling-to-a-variant"></a>Marshalling zu einer `VARIANT`
 
-Wenn Ihre native API eine Win32-`VARIANT` verwendet, können Sie das <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>-Format für Ihren `object`-Parameter verwenden, um Ihre Objekte als `VARIANT` zu marshallen. Informationen zur Zuordnung zwischen .NET-Typen und `VARIANT`-Typen finden Sie in der Dokumentation zum [Anpassen von `object`-Feldern](customize-struct-marshaling.md#marshaling-systemobjects).
+Wenn Ihre native API eine Win32-`VARIANT` verwendet, können Sie das <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>-Format für Ihren `object`-Parameter verwenden, um Ihre Objekte als `VARIANT` zu marshallen. Informationen zur Zuordnung zwischen .NET-Typen und `VARIANT`-Typen finden Sie in der Dokumentation zum [Anpassen von `object`-Feldern](customize-struct-marshaling.md#marshal-systemobject).
 
 ### <a name="custom-marshalers"></a>Benutzerdefinierte Marshaller
 

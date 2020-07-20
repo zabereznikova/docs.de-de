@@ -2,12 +2,12 @@
 title: Continuous Integration (CI) mit dem .NET Core SDK und Tools
 description: Erfahren Sie, wie Sie das .NET Core SDK und die zugehörigen Tools auf dem Buildserver mit Continuous Integration verwenden.
 ms.date: 05/18/2017
-ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ddccb477bc112157a155e2217e04c329e7ab51c5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451037"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415985"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
 
@@ -32,7 +32,7 @@ Das Installationsskript ist automatisiert, sodass es zu Beginn des Buildvorgangs
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> Bei Verwendung des Installationsskripts werden native Abhängigkeiten nicht automatisch installiert. Sie müssen die nativen Abhängigkeiten installieren, wenn das Betriebssystem diese nicht umfasst. Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](../install/dependencies.md).
+> Bei Verwendung des Installationsskripts werden native Abhängigkeiten nicht automatisch installiert. Sie müssen die nativen Abhängigkeiten installieren, wenn das Betriebssystem diese nicht umfasst. Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](../install/windows.md#dependencies).
 
 ## <a name="ci-setup-examples"></a>Beispiele für die CI-Einrichtung
 
