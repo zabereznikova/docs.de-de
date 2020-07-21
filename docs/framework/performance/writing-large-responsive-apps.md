@@ -1,15 +1,16 @@
 ---
 title: Schreiben großer, reaktionsfähiger .NET Framework-Apps
+description: Schreiben Sie große, reaktionsschnelle .net-apps oder apps, die große Datenmengen verarbeiten, z. b. Dateien oder Datenbanken.
 ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 57f65feff5260cb83df5354f5d7ee1bad0babb3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b1c9ab25299fcbafca6aba7b13217713a941ce8
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180580"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475189"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 
@@ -24,7 +25,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
   
  Wenn Ihre Endbenutzer mit der App interagieren, erwarten sie, dass die App reaktionsfähig ist. Eingaben oder Befehlsverarbeitung sollten nie blockiert sein. Die Hilfe sollte schnell angezeigt oder geschlossen werden, wenn der Benutzer die Eingabe fortsetzt. Ihre App sollte vermeiden, den UI-Thread mit langen Berechnungen zu blockieren, die Ihre App langsam machen.
   
- Weitere Informationen zu Roslyn-Compilern finden Sie im [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md).
+ Weitere Informationen zu Roslyn-Compilern finden Sie [im .NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md).
   
 ## <a name="just-the-facts"></a>Reine Tatsachen  
  Berücksichtigen Sie die folgenden Tatsachen, wenn Sie die Leistung optimieren und reaktionsfähige .NET Framework-Apps erstellen.
@@ -38,7 +39,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
  Sie sollten Leistungsziele für wichtige Kundenerfahrungen oder -szenarien in Ihrer App festlegen und Tests schreiben, um die Leistung zu messen. Untersuchen Sie fehlschlagende Tests, indem Sie die wissenschaftliche Methode anwenden: Verwenden Sie Profile, um Ihnen die Richtung zu weisen, stellen Sie Hypothesen auf, worin das Problem bestehen könnte, und testen Sie Ihre Hypothese mit einem Experiment oder einer Codeänderung. Richten Sie Baselineleistungsmessungen über die Zeit mit regelmäßigen Tests ein, damit Sie Änderungen isolieren können, die Leistungsregressionen verursachen. Wenn Sie die Leistungsarbeit auf eine rigorose Weise angehen, verschwenden Sie keine Zeit mit Codeaktualisierungen, die Sie nicht benötigen.
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Tatsache 3: Gute Tools machen einen großen Unterschied.  
- Mit guten Tools können Sie schnell einen Drilldown in die größten Leistungsprobleme (CPU, Speicher oder Datenträger) ausführen und den Code finden, der diese Engpässe verursacht. Microsoft liefert eine Vielzahl von Leistungstools wie [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) und [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)aus.
+ Mit guten Tools können Sie schnell einen Drilldown in die größten Leistungsprobleme (CPU, Speicher oder Datenträger) ausführen und den Code finden, der diese Engpässe verursacht. Microsoft umfasst eine Reihe von Leistungs Tools wie [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) und [perfview](https://www.microsoft.com/download/details.aspx?id=28567).
   
  PerfView ist ein kostenloses und erstaunlich leistungsstarkes Tool, mit dem Sie sich auf tiefliegende Probleme wie Datenträger-E/A, GC-Ereignisse und Arbeitsspeicher konzentrieren können. Sie erfassen leistungsrelevante Ereignisse der [Ereignisablaufverfolgung für Windows](../wcf/samples/etw-tracing.md) (Event Tracing for Windows, ETW) und zeigen auf einfache Weise Informationen pro App, pro Prozess, pro Stapel und pro Thread an. PerfView zeigt Ihnen, wie viel und welche Art von Speicher Ihre App zuweist und welche Funktionen oder Aufrufstapel zu welchem Anteil der Speicherbelegungen beitragen. Einzelheiten finden Sie in den umfassenden Hilfethemen, Demos und Videos, die mit dem Tool ausgeliefert werden (zum Beispiel die [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) auf Channel 9).
   
@@ -196,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...
 ```  
   
- Die erste Version von `WriteFormattedDocComment()` hat ein Array, mehrere untergeordnete Zeichenfolgen und eine abgeschnittene Zeichenfolge zusammen mit einem leeren `params`-Array zugeordnet. Es wurde auch auf "///" überprüft. Der überarbeitete Code verwendet nur die Indizierung und ordnet nichts zu. Es findet das erste Zeichen, das kein Leerzeichen ist, und überprüft dann Zeichen für Zeichen, um zu sehen, ob die Zeichenfolge mit "///" beginnt. Der neue `IndexOfFirstNonWhiteSpaceChar` Code <xref:System.String.TrimStart%2A> verwendet anstelle des ersten Indexes (nach einem angegebenen Startindex), in dem ein Nicht-Leerzeichen auftritt. Die Korrektur ist nicht vollständig, aber Sie können sehen, wie Sie ähnliche Korrekturen für eine vollständige Lösung anwenden können. Durch Anwendung dieses Ansatzes im gesamten Code können Sie alle Zuordnungen in `WriteFormattedDocComment()` entfernen.
+ Die erste Version von `WriteFormattedDocComment()` hat ein Array, mehrere untergeordnete Zeichenfolgen und eine abgeschnittene Zeichenfolge zusammen mit einem leeren `params`-Array zugeordnet. Es wurde auch auf "///" geprüft. Der überarbeitete Code verwendet nur die Indizierung und ordnet nichts zu. Es findet das erste Zeichen, das kein Leerzeichen ist, und überprüft dann Zeichen nach Zeichen, um festzustellen, ob die Zeichenfolge mit "///" beginnt. Der neue Code verwendet `IndexOfFirstNonWhiteSpaceChar` anstelle von <xref:System.String.TrimStart%2A> , um den ersten Index (nach einem angegebenen Start Index) zurückzugeben, bei dem ein nicht-Leerzeichen auftritt. Die Korrektur ist nicht vollständig, aber Sie können sehen, wie Sie ähnliche Korrekturen für eine vollständige Lösung anwenden können. Durch Anwendung dieses Ansatzes im gesamten Code können Sie alle Zuordnungen in `WriteFormattedDocComment()` entfernen.
   
  **Beispiel 4: StringBuilder**  
   
@@ -277,9 +278,9 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Diese einfache Zwischenspeicherstrategie entspricht einem guten Cachedesign, da sie über eine Größenbeschränkung verfügt. Jetzt ist jedoch mehr Code als im Original vorhanden, was höhere Wartungskosten bedeutet. Sie sollten die Zwischenspeicherstrategie nur übernehmen, wenn Sie ein Leistungsproblem gefunden haben und PerfView gezeigt hat, dass <xref:System.Text.StringBuilder>-Zuordnungen einen signifikanten Beitrag dazu leisten.
   
 ### <a name="linq-and-lambdas"></a>LINQ und Lambdas  
-Language-Integrated Query (LINQ) in Verbindung mit Lambda-Ausdrücken ist ein Beispiel für ein Produktivitätsmerkmal. Die Verwendung kann sich jedoch im Laufe der Zeit erheblich auf die Leistung auswirken, und Sie müssen den Code möglicherweise neu schreiben.
+Language-Integrated Query (LINQ) ist in Verbindung mit Lambda-Ausdrücken ein Beispiel für ein Produktivitäts Feature. Allerdings kann sich seine Verwendung im Laufe der Zeit erheblich auf die Leistung auswirken, und Sie müssen möglicherweise den Code neu schreiben.
   
- **Example 5: Lambdas, List\<T> und IEnumerable\<T>**  
+ **Beispiel 5: Lambdas, List \<T> und IEnumerable\<T>**  
   
  Dieses Beispiel verwendet [LINQ und Funktionsformatcode](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming), um ein Symbol im Modell des Compilers anhand einer Namenszeichenfolge zu finden:  
   
@@ -413,7 +414,7 @@ class Compilation { /*...*/
   
  **Korrektur für Beispiel 6**  
   
- Um die <xref:System.Threading.Tasks.Task> abgeschlossene Zuordnung zu entfernen, können Sie das Task-Objekt mit dem abgeschlossenen Ergebnis zwischenspeichern:  
+ Zum Entfernen der abgeschlossenen <xref:System.Threading.Tasks.Task> Zuordnung können Sie das Aufgaben Objekt mit dem abgeschlossenen Ergebnis Zwischenspeichern:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -440,7 +441,7 @@ class Compilation { /*...*/
 ### <a name="additional-considerations"></a>Weitere Überlegungen  
  Hier sind einige weitere Punkt zu potenziellen Problemen in großen Apps oder Apps, die viele Daten verarbeiten.
   
- **Wörterbücher**  
+ **Festlegen**  
   
  Wörterbücher sind in vielen Programmen allgegenwärtig, denn sie sind sehr praktisch und an sich effizient. Aber oft werden sie nicht ordnungsgemäß verwendet. In Visual Studio und den Compilern zeigen Analysen, dass viele der Wörterbücher ein einziges Element enthielten oder leer waren. Ein leeres <xref:System.Collections.Generic.Dictionary%602> hat zehn Felder und belegt 48 Byte auf dem Heap in einem x86-Computer. Wörterbücher sind großartig, wenn Sie eine Zuordnung oder assoziative Datenstruktur mit konstanter Zeitsuche benötigen. Wenn Sie jedoch nur einige wenige Elemente haben, verschwenden Sie viel Speicherplatz, wenn Sie ein Wörterbuch verwenden. Stattdessen könnten Sie beispielsweise ebenso schnell iterativ ein `List<KeyValuePair\<K,V>>` durchsuchen. Wenn Sie ein Wörterbuch nur verwenden, um es mit Daten zu laden und dann daraus zu lesen (ein sehr übliches Muster), ist die Verwendung eines sortierten Arrays mit einer N(log(N))-Suche möglicherweise je nach Anzahl der verwendeten Elemente nahezu ebenso schnell.
   
@@ -465,9 +466,9 @@ class Compilation { /*...*/
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Video mit einer Darstellung dieses Themas](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
-- [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Einführung in die Leistungsprofil Erstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Leistung](index.md)
 - [.NET-Leistungstipps](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Channel 9 PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform-SDK](../../csharp/roslyn-sdk/index.md)
-- [dotnet/roslyn-Repository auf GitHub](https://github.com/dotnet/roslyn)
+- [DotNet/Roslyn-Repository auf GitHub](https://github.com/dotnet/roslyn)

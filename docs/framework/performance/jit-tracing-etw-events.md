@@ -1,16 +1,17 @@
 ---
 title: JIT-ETW-Ablaufverfolgungsereignisse
+description: Grundlegendes zur JIT-Ablauf Verfolgung (Just-in-Time)-ETW-Ereignisse Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des JIT-Inlining und der JIT-endaufrufe.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716010"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474461"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT-ETW-Ablaufverfolgungsereignisse
 Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just-In-Time (JIT)-Inlining und der JIT-Endaufrufe.
@@ -20,19 +21,19 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed-Ereignis
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Ausführlich (5)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|Das JIT-Inlining ist fehlgeschlagen.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Der Namespace der Methode, die kompiliert wird.|  
 |MethodBeingCompiledName|win:UnicodeString|Der Name der Methode, die kompiliert wird.|  
@@ -50,19 +51,19 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Ausführlich (5)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|Das Methoden-Inlining war erfolgreich.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Der Namespace der Methode, die kompiliert wird.|  
 |MethodBeingCompiledName|win:UnicodeString|Der Name der Methode, die kompiliert wird.|  
@@ -80,19 +81,19 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Ausführlich (5)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Fehler beim Methodenendaufruf.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Der Namespace der Methode, die kompiliert wird.|  
 |MethodBeingCompiledName|win:UnicodeString|Der Name der Methode, die kompiliert wird.|  
@@ -110,19 +111,19 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Ausführlich (5)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|Der Methodenendaufruf war erfolgreich.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Der Namespace der Methode, die kompiliert wird.|  
 |MethodBeingCompiledName|win:UnicodeString|Der Name der Methode, die kompiliert wird.|  
@@ -137,6 +138,6 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 |TailCallType|win:UnicodeString|Der Typ des Endaufrufs.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [CLR-ETW-Ereignisse](clr-etw-events.md)

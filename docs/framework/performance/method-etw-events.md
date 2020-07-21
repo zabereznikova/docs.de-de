@@ -1,16 +1,17 @@
 ---
 title: ETW-Methodenereignisse
+description: Weitere Informationen finden Sie unter ETW-Ereignisse, die spezifische Informationen zu Methoden sammeln, z. b. CLR-Methoden Ereignisse, CLR-Methoden Marker oder ausführliche CLR-Methoden Ereignisse und methodjittingstarted.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f48867a0aef417ad0b19a15d78e0c0f01a7c30a1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715996"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474318"
 ---
 # <a name="method-etw-events"></a>ETW-Methodenereignisse
 
@@ -24,7 +25,7 @@ Alle Methodenereignisse werden unter dem Laufzeitanbieter vom Schlüsselwort `JI
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. Weitere Informationen finden Sie unter [CLR-ETW-Schlüsselwörter und-Ebenen](clr-etw-keywords-and-levels.md).
 
-|Schlüsselwort zum Auslösen des Ereignisses|Level|
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)-Laufzeitanbieter|Information (4)|
 |`NGenKeyword` (0x20)-Laufzeitanbieter|Information (4)|
@@ -33,7 +34,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. Weitere Informat
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|Event|Ereignis-ID|Beschreibung|
+|Ereignis|Ereignis-ID|BESCHREIBUNG|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|Wird ausgelöst, wenn eine Methode Just-in-Time geladen (JIT-geladen) oder ein NGEN-Image geladen wird. Dynamische und generische Methoden verwenden diese Version nicht für Methodenladevorgänge. JIT-Hilfen verwenden nie diese Version.|
 |`MethodUnLoad_V1`|137|Wird ausgelöst, wenn ein Modul entladen oder eine Anwendungsdomäne zerstört wird. Dynamische Methoden verwenden nie diese Version für das Entladen von Methoden.|
@@ -42,7 +43,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|Beschreibung|
+|Feldname|Datentyp|BESCHREIBUNG|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Der eindeutige Bezeichner einer Methode. Bei JIT-Hilfsmethoden wird dies auf die Startadresse der Methode festgelegt.|
 |ModuleID|win:UInt64|Der Bezeichner des Moduls, zu dem diese Methode gehört (0 für JIT-Hilfen).|
@@ -58,7 +59,7 @@ Diese Ereignisse werden nur unter dem Rundownanbieter ausgelöst. Sie bezeichnen
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Level|
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800)-Rundownanbieter|Information (4)|
 |`JitRundownKeyword` (0x10)-Rundownanbieter|Information (4)|
@@ -66,7 +67,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|Event|Ereignis-ID|Beschreibung|
+|Ereignis|Ereignis-ID|BESCHREIBUNG|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|Wird vor dem Start der Enumeration während eines Startrundowns gesendet.|
 |`DCStartComplete_V1`|145|Wird am Ende der Enumeration während eines Startrundowns gesendet.|
@@ -75,7 +76,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|Beschreibung|
+|Feldname|Datentyp|BESCHREIBUNG|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
 
@@ -83,7 +84,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Level|
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)-Laufzeitanbieter|Ausführlich (5)|
 |`NGenKeyword` (0x20)-Laufzeitanbieter|Ausführlich (5)|
@@ -92,7 +93,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|Event|Ereignis-ID|Beschreibung|
+|Ereignis|Ereignis-ID|BESCHREIBUNG|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Wird ausgelöst, wenn eine Methode JIT-geladen oder ein NGEN-Image geladen wird. Dynamische und generische Methoden verwenden immer diese Version für das Laden von Methoden. JIT-Hilfen verwenden immer diese Version.|
 |`MethodUnLoadVerbose_V1`|144|Wird ausgelöst, wenn eine dynamische Methode zerstört, ein Modul entladen oder eine Anwendungsdomäne zerstört wird. Dynamische Methoden verwenden immer diese Version für das Entladen von Methoden.|
@@ -101,7 +102,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|Beschreibung|
+|Feldname|Datentyp|BESCHREIBUNG|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Der eindeutige Bezeichner der Methode. Bei JIT-Hilfsmethoden wird dies auf die Startadresse der Methode festgelegt.|
 |ModuleID|win:UInt64|Der Bezeichner des Moduls, zu dem diese Methode gehört (0 für JIT-Hilfen).|
@@ -118,7 +119,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Level|
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)-Laufzeitanbieter|Ausführlich (5)|
 |`NGenKeyword` (0x20)-Laufzeitanbieter|Ausführlich (5)|
@@ -127,13 +128,13 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|Event|Ereignis-ID|Beschreibung|
+|Ereignis|Ereignis-ID|BESCHREIBUNG|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Wird ausgelöst, wenn eine Methode JIT-kompiliert wird.|
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|Beschreibung|
+|Feldname|Datentyp|BESCHREIBUNG|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Der eindeutige Bezeichner der Methode.|
 |ModuleID|win:UInt64|Der Bezeichner des Moduls, zu dem diese Methode gehört.|
@@ -144,6 +145,6 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 |MethodSignature|win:UnicodeString|Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [CLR-ETW-Ereignisse](clr-etw-events.md)

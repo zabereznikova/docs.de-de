@@ -1,5 +1,6 @@
 ---
 title: Zuverlässigkeit
+description: Verstehen der Zuverlässigkeit in .net. Schutz vor asynchronen Ausnahmen in Hosts, die in .NET ausgeführt werden, z. b. SQL Server.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQL Server [.NET Framework]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - writing reliable code
 - code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
-ms.openlocfilehash: 2d6601c4cbad32f768ff16301307083f35d986a0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ce9ffbb7f58c2f5dc016c56c0e2ce13b45c30f26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715966"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474253"
 ---
 # <a name="reliability"></a>Zuverlässigkeit
 Code, der in Serverumgebungen wie SQL Server ausgeführt wird, muss unbedingt vor asynchronen Ausnahmen geschützt werden. Die in diesem Thema dargestellte Zuverlässigkeit ist nicht nur für SQL Server relevant, sondern für jeden Host, der in einer .NET Framework-Umgebung Version 2.0 ausgeführt wird. Da jedoch SQL Server der erste Dienst ist, der die neuen Zuverlässigkeitsfunktionen von Version 2.0 umfassend verwendet, dient es hier als Beispiel.  
@@ -27,7 +28,7 @@ Code, der in Serverumgebungen wie SQL Server ausgeführt wird, muss unbedingt vo
  [Empfohlene Vorgehensweisen für die Zuverlässigkeit](reliability-best-practices.md)  
  Enthält Richtlinien zum Schreiben von Code, der die Zuverlässigkeitsanforderungen erfüllt.  
   
- [Eingeschränkte Ausführungsbereiche](constrained-execution-regions.md)  
+ [Eingeschränkte Ausführungsbereiche (CERs)](constrained-execution-regions.md)  
  Beschreibt die Funktion und das Verhalten von eingeschränkten Ausführungsbereichen (Constrained Execution Regions, CERs).  
   
 ## <a name="reference"></a>Referenz  

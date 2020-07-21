@@ -1,16 +1,17 @@
 ---
 title: ETW-Threadpoolereignisse
+description: Überprüfen Sie die ETW-Ereignisse des Thread Pools, die Informationen zu Threads in .net sammeln. Thread Pool Ereignisse sind Arbeits Thread Pool-Ereignisse oder e/a-Thread Pool Ereignisse.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240492"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475202"
 ---
 # <a name="thread-pool-etw-events"></a>ETW-Threadpoolereignisse
 Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.  
@@ -33,7 +34,7 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Ein Arbeitsthread wird erstellt.|  
 |`ThreadPoolWorkerThreadStop`|51|Ein Arbeitsthread wird beendet.|  
@@ -42,7 +43,7 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|Die Anzahl der Arbeitsthreads, die zum Verarbeiten der Arbeitsvorgänge verfügbar sind, einschließlich der Threads, die bereits Arbeitsvorgänge verarbeiten.|  
 |RetiredWorkerThreadCount|win:UInt32|Die Anzahl der Arbeitsthreads, die nicht zum Verarbeiten von Arbeitsvorgängen verfügbar sind, die aber für den Fall als Reserve vorgehalten werden, dass später weitere Threads benötigt werden.|  
@@ -60,15 +61,15 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Beschreibung|  
+|Ereignis|Ereignis-ID|BESCHREIBUNG|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Bezieht sich auf die Auflistung von Informationen für ein Beispiel, d. h. eine Messung des Durchsatzes mit einer bestimmten Parallelitätsebene zu einem bestimmten Zeitpunkt.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
-|Durchsatz|win:Double|Anzahl von Abschlüssen pro Zeiteinheit.|  
+|Throughput|win:Double|Anzahl von Abschlüssen pro Zeiteinheit.|  
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
@@ -80,17 +81,17 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Beschreibung|  
+|Ereignis|Ereignis-ID|BESCHREIBUNG|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Zeichnet eine Änderung der Steuerung auf, wenn der Algorithmus zur Threadinjektion (Hill-Climbing) ermittelt, dass auf der Parallelitätsebene eine Änderung vorgenommen wird.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|Durchschnittlicher Durchsatz für eine Stichprobe von Messungen.|  
 |NewWorkerThreadCount|win:UInt32|Neue Anzahl aktiver Arbeitsthreads.|  
-|Grund|win:UInt32|Grund für die Anpassung.<br /><br /> 0x00 – Aufwärmphase.<br /><br /> 0x01 – Initialisierung.<br /><br /> 0x02 - Zufällige Verschiebung.<br /><br /> 0x03 – Steigende Verschiebung.<br /><br /> 0x04 – Änderungspunkt.<br /><br /> 0x05 – Stabilisierung.<br /><br /> 0x06 – Außerkraftsetzung.<br /><br /> 0x07 – Zeitlimit für Thread überschritten.|  
+|`Reason`|win:UInt32|Grund für die Anpassung.<br /><br /> 0x00 – Aufwärmphase.<br /><br /> 0x01 – Initialisierung.<br /><br /> 0x02 - Zufällige Verschiebung.<br /><br /> 0x03 – Steigende Verschiebung.<br /><br /> 0x04 – Änderungspunkt.<br /><br /> 0x05 – Stabilisierung.<br /><br /> 0x06 – Außerkraftsetzung.<br /><br /> 0x07 – Zeitlimit für Thread überschritten.|  
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
@@ -102,20 +103,20 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Beschreibung|  
+|Ereignis|Ereignis-ID|BESCHREIBUNG|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Erfasst Daten zum Threadpool.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
-|Dauer|win:Double|Zeitdauer in Sekunden, in der diese statistischen Daten erfasst wurden.|  
-|Durchsatz|win:Double|Durchschnittliche Anzahl von Abschlüssen pro Sekunde während dieses Intervalls.|  
-|ThreadWave|win:Double|Für die interne Verwendung vorgesehen.|  
-|ThroughputWave|win:Double|Für die interne Verwendung vorgesehen.|  
-|ThroughputErrorEstimate|win:Double|Für die interne Verwendung vorgesehen.|  
-|AverageThroughputErrorEstimate|win:Double|Für die interne Verwendung vorgesehen.|  
+|Duration|win:Double|Zeitdauer in Sekunden, in der diese statistischen Daten erfasst wurden.|  
+|Throughput|win:Double|Durchschnittliche Anzahl von Abschlüssen pro Sekunde während dieses Intervalls.|  
+|ThreadWave|win:Double|Für die interne Verwendung reserviert.|  
+|ThroughputWave|win:Double|Für die interne Verwendung reserviert.|  
+|ThroughputErrorEstimate|win:Double|Für die interne Verwendung reserviert.|  
+|AverageThroughputErrorEstimate|win:Double|Für die interne Verwendung reserviert.|  
 |ThroughputRatio|win:Double|Die relative Verbesserung beim Durchsatz, die durch Abweichungen bei der aktiven Arbeitsthreadanzahl während dieses Intervalls verursacht wurde.|  
 |Confidence|win:Double|Ein Maß für die Gültigkeit des „ThroughputRatio“-Felds.|  
 |NewcontrolSetting|win:Double|Die Anzahl der aktiven Arbeitsthreads, die als Grundlage für zukünftige Abweichungen bei der Anzahl aktiver Threads dienen werden.|  
@@ -134,13 +135,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Ein E/A-Thread wird im Threadpool erstellt.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |Anzahl|win:UInt64|Anzahl der E/A-Threads, einschließlich des neu erstellten Threads.|  
 |NumRetired|win:UInt64|Anzahl deaktivierter Arbeitsthreads.|  
@@ -155,13 +156,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Ein E/A-Thread wird zum Kandidaten für die Deaktivierung.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |Anzahl|win:UInt64|Anzahl der im Threadpool verbleibenden E/A-Threads.|  
 |NumRetired|win:UInt64|Anzahl deaktivierter E/A-Threads.|  
@@ -176,13 +177,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|Ein E/A-Threads wird aufgrund von E/A-Vorgängen erneut aktiviert, die während einer Wartefrist auftreten, nachdem der Thread zum Kandidaten für die Deaktivierung geworden ist.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |Anzahl|win:UInt64|Anzahl der E/A-Threads im Threadpool, einschließlich dieses Threads.|  
 |NumRetired|win:UInt64|Anzahl deaktivierter E/A-Threads.|  
@@ -197,18 +198,18 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|Ein e/a-Thread wird im Thread Pool beendet.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |Anzahl|win:UInt64|Anzahl der im Threadpool verbleibenden E/A-Threads.|  
 |NumRetired|win:UInt64|Anzahl deaktivierter E/A-Threads.|  
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [CLR ETW Events (CLR-ETW-Ereignisse)](clr-etw-events.md)
+- [CLR-ETW-Ereignisse](clr-etw-events.md)

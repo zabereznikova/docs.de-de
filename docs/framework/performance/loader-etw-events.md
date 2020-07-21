@@ -1,16 +1,17 @@
 ---
 title: ETW-Ladeprogrammereignisse
+description: Überprüfen Sie Lade Programm-ETW-Ereignisse, die Anwendungs Domänen Ereignisse, CLR-loaderassemblyereignisse, Modul Ereignisse, CLR-Domänen Modul Ereignisse und Modul Bereichs Ereignisse einschließen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 0f8f96cf73882ef6556e5b9e64cf9adf389a2318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180551"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474357"
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
 In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
@@ -28,7 +29,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|Ereignis|Ereignis-ID|BESCHREIBUNG|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (protokolliert für alle Anwendungsdomänen)|156|Wird ausgelöst, wenn eine Anwendungsdomäne während der Lebensdauer eines Prozesses erstellt wird.|  
 |`AppDomainUnLoad_V1`|157|Wird ausgelöst, wenn eine Anwendungsdomäne während der Lebensdauer eines Prozesses zerstört wird.|  
@@ -37,7 +38,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Der eindeutige Bezeichner für eine Anwendungsdomäne.|  
 |AppDomainFlags|win:UInt32|0x1: Standarddomäne.<br /><br /> 0x2: Ausführbare Datei.<br /><br /> 0x4: Anwendungsdomäne, Bit 28-31: Freigaberichtlinie für diese Domäne.<br /><br /> 0: Eine freigegebene Domäne.|  
@@ -56,7 +57,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|Ereignis|Ereignis-ID|BESCHREIBUNG|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Wird beim Laden einer Assembly ausgelöst.|  
 |`AssemblyUnload_V1`|155|Wird beim Entladen einer Assembly ausgelöst.|  
@@ -65,7 +66,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |AssemblyID|win:UInt64|Eindeutige ID für die Assembly.|  
 |AppDomainID|win:UInt64|ID der Domäne dieser Assembly.|  
@@ -86,7 +87,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|Ereignis|Ereignis-ID|BESCHREIBUNG|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Wird ausgelöst, wenn ein Modul während der Lebensdauer eines Prozesses geladen wird.|  
 |`ModuleUnload_V2`|153|Wird ausgelöst, wenn ein Modul während der Lebensdauer eines Prozesses entladen wird.|  
@@ -95,7 +96,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|Eindeutige ID für das Modul.|  
 |AssemblyID|win:UInt64|ID der Assembly, in der sich das Modul befindet.|  
@@ -111,7 +112,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 |NativePdbAge|win:UInt32|Die Alterszahl, die in die NGen-PDB geschrieben wird, die diesem Modul entspricht, sofern zutreffend. (Siehe Hinweise.)|  
 |NativePdbBuildPath|win:UnicodeString|Der Pfad zu dem Ort, an dem die NGen-PDB erstellt wurde, die diesem Modul entspricht, sofern zutreffend. In einigen Fällen kann dies nur ein Dateiname sein. (Siehe Hinweise.)|  
   
-### <a name="remarks"></a>Bemerkungen  
+### <a name="remarks"></a>Hinweise  
   
 - Die Felder mit "Pdb" im Namen können von Profilerstellungstools verwendet werden, um PDBs zu suchen, die den Modulen entsprechen, die während der Profilerstellungssitzung geladen wurden. Die Werte dieser Felder entsprechen den Daten, die in die IMAGE_DIRECTORY_ENTRY_DEBUG-Abschnitte des Moduls geschrieben werden, das normalerweise von Debuggern verwendet wird, um die Suche nach PDBs zu erleichtern, die den geladenen Modulen entsprechen.  
   
@@ -130,7 +131,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|Ereignis|Ereignis-ID|BESCHREIBUNG|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Wird ausgelöst, wenn ein Modul für eine Anwendungsdomäne geladen wird.|  
 |`DomainModuleDCStart_V1`|151|Listet während eines Startrundowns für eine Anwendungsdomäne geladene Module auf und wird für alle Anwendungsdomänen protokolliert.|  
@@ -138,7 +139,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|Kennzeichnet die Assembly, zu der dieses Modul gehört.|  
 |AssemblyID|win:UInt64|ID der Assembly, in der sich das Modul befindet.|  
@@ -160,7 +161,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|Ereignis|Ereignis-ID|BESCHREIBUNG|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Dieses Ereignis ist vorhanden, wenn ein geladenes Native Image Generator (NGen)-Image mit IBC optimiert wurde und Informationen über die aktiven Bereiche des NGen-Image enthält.|  
 |`ModuleRangeDCStart`|160|Ein `ModuleRange` -Ereignis, das zu Beginn eines Rundowns ausgelöst wird.|  
@@ -168,7 +169,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
-|Feldname|Datentyp|Beschreibung|  
+|Feldname|Datentyp|BESCHREIBUNG|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|Identifiziert eine bestimmte Instanz der CLR in einem Prozess eindeutig, wenn mehrere Instanzen der CLR geladen sind.|  
 |ModuleID|win:UInt64|Kennzeichnet die Assembly, zu der dieses Modul gehört.|  
@@ -178,7 +179,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 |RangeSize1|win:UInt32|0 gibt ungültige Daten an.|  
 |RangeBegin2|win:UnicodeString||  
   
-### <a name="remarks"></a>Bemerkungen  
+### <a name="remarks"></a>Hinweise  
  Wenn ein geladenes NGen-Image in einem .NET Framework-Prozess mit IBC optimiert wurde, wird das `ModuleRange` -Ereignis, das die heißen Bereiche im NGen-Image enthält, zusammen mit dem `moduleID` und `ClrInstanceID`protokolliert.  Wenn das NGen-Image nicht mit IBC optimiert wurde, wird dieses Ereignis nicht protokolliert. Um den Modulnamen zu bestimmen, muss dieses Ereignis mit modulbezogenen ETW-Ereignissen sortiert werden.  
   
  Die Nutzlastgröße für dieses Ereignis ist variabel; das `Count` -Feld gibt die Anzahl von Bereichsoffsets an, die im Ereignis enthalten sind.  Dieses Ereignis muss mit dem Windows `IStart` -Ereignis sortiert werden, um die tatsächlichen Bereiche zu bestimmen. Das Windows-Image-Load-Ereignis wird protokolliert, wenn ein Bild geladen wird, und enthält die virtuelle Adresse des geladenen Bilds.  
