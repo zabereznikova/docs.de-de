@@ -1,5 +1,6 @@
 ---
 title: C#-Programmierhandbuch
+description: Verwenden Sie diese Ressourcen, um ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen zu erhalten, die über .NET für C# verfügbar sind.
 ms.date: 05/02/2017
 f1_keywords:
 - cs.langref
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241655"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473876"
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
 

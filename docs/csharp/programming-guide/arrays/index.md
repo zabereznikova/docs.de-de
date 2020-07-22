@@ -1,16 +1,17 @@
 ---
 title: Arrays – C#-Programmierhandbuch
+description: Speichern Sie mehrere Variablen des gleichen Typs in einer Arraydatenstruktur in C#. Deklarieren Sie ein Array, indem Sie einen Typ angeben, oder geben Sie ein Objekt an, um beliebige Typen zu speichern.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715052"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474734"
 ---
 # <a name="arrays-c-programming-guide"></a>Arrays (C#-Programmierhandbuch)
 
@@ -48,7 +49,7 @@ Ein Array verfügt über die folgenden Eigenschaften:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Sammlungen](../concepts/collections.md)
