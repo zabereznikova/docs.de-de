@@ -1,16 +1,17 @@
 ---
 title: Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
+description: Lesen Sie eine Übersicht über Benutzeroberflächenautomatisierungs-Strukturen. Erfahren Sie mehr über die verschiedenen Ansichten einer Benutzeroberflächenautomatisierungs-Struktur, z. b. Rohdaten Ansicht, Steuerelement Ansicht und Inhaltsansicht.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: a0b888e8ecc80e3739c583931a86da3cdb7242d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ffe4b4e6157f5bff3284d6978e0ec28641cf72d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179451"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924551"
 ---
 # <a name="ui-automation-tree-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
 > [!NOTE]
@@ -18,7 +19,7 @@ ms.locfileid: "79179451"
   
  Hilfstechnologieprodukte und Testskripts navigieren durch die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Struktur, um Informationen über die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] und deren Elemente zu sammeln.  
   
- Innerhalb [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] der Struktur befindet sich<xref:System.Windows.Automation.AutomationElement.RootElement%2A>ein Stammelement ( ), das den aktuellen Desktop darstellt und dessen untergeordnete Elemente Anwendungsfenster darstellen. Jedes dieser untergeordneten Elemente kann Elemente enthalten, die Komponenten der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] darstellen, z. B. Menüs, Schaltflächen, Symbolleisten und Listenfelder. Diese Elemente können wiederum Elemente, etwa Listeneinträge, enthalten.  
+ Innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur befindet sich ein root-Element ( <xref:System.Windows.Automation.AutomationElement.RootElement%2A> ), das den aktuellen Desktop darstellt und dessen untergeordnete Elemente Anwendungsfenster darstellen. Jedes dieser untergeordneten Elemente kann Elemente enthalten, die Komponenten der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] darstellen, z. B. Menüs, Schaltflächen, Symbolleisten und Listenfelder. Diese Elemente können wiederum Elemente, etwa Listeneinträge, enthalten.  
   
  Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Struktur ist keine feststehende Struktur und wird selten vollständig angezeigt, da sie Tausende von Elementen enthalten kann. Teile der Struktur werden bei Bedarf erstellt, und die Struktur kann sich durch Hinzufügen, Verschieben oder Entfernen von Elementen ändern.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "79179451"
   
 <a name="uiautomation_raw_view"></a>
 ### <a name="raw-view"></a>Rohdatenansicht  
- Die Rohdatenansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Struktur ist die vollständige Struktur der <xref:System.Windows.Automation.AutomationElement>-Objekte, deren Stamm der Desktop ist. Die Rohdatenansicht orientiert sich stark an der programmatischen Struktur einer Anwendung und ist daher die ausführlichste verfügbare Ansicht. Sie stellt gleichzeitig die Basis zum Erstellen anderer Ansichten der Struktur dar. Da diese Ansicht vom [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] zugrunde liegenden Framework [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] abhängt, hat die unformatierte Ansicht einer Schaltfläche eine andere unformatierte Ansicht als eine Win32-Schaltfläche.  
+ Die Rohdatenansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Struktur ist die vollständige Struktur der <xref:System.Windows.Automation.AutomationElement>-Objekte, deren Stamm der Desktop ist. Die Rohdatenansicht orientiert sich stark an der programmatischen Struktur einer Anwendung und ist daher die ausführlichste verfügbare Ansicht. Sie stellt gleichzeitig die Basis zum Erstellen anderer Ansichten der Struktur dar. Da diese Ansicht vom zugrunde liegenden [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Framework abhängt, hat die unformatierte Ansicht einer [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Schaltfläche eine andere unformatierte Ansicht als eine Win32-Schaltfläche.  
   
  Sie erhalten die Rohdatenansicht, indem Sie ohne Angabe von Eigenschaften nach Elementen suchen oder mit <xref:System.Windows.Automation.TreeWalker.RawViewWalker> in der Struktur navigieren.  
   

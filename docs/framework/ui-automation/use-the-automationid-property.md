@@ -1,5 +1,6 @@
 ---
 title: Verwenden der AutomationID-Eigenschaft
+description: Überprüfen von Szenarien und Beispielcode, die zeigen, wie und wann die AutomationId-Eigenschaft verwendet wird, um ein Element in der Benutzeroberflächenautomatisierungs-Struktur zu finden
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9e6dd3935a1b4d15690e1dfecd73e9b07330ec6c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741375"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924525"
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
@@ -31,11 +32,11 @@ ms.locfileid: "75741375"
  Es wurden drei primäre Szenarien für Benutzeroberflächenautomatisierungs-Client-Anwendungen bestimmt, in denen <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> verwendet werden muss, damit richtige und konsistente Ergebnisse erzielt werden, wenn nach Elementen gesucht wird.  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird von allen Benutzeroberflächenautomatisierungs-Elementen in der Steuerelement Ansicht unterstützt, ausgenommen Anwendungsfenster der obersten Ebene, Benutzeroberflächenautomatisierungs-Elemente, die von [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Steuerelementen ohne ID oder x:UID abgeleitet wurden, und Benutzeroberflächenautomatisierungs-Elemente, die von Win32-Steuerelementen abgeleitet wurden, die keine Steuerelement-  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>wird von allen Benutzeroberflächenautomatisierungs-Elementen in der Steuerelement Ansicht unterstützt, ausgenommen Anwendungsfenster der obersten Ebene, Benutzeroberflächenautomatisierungs-Elemente, die von Steuerelementen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ohne ID oder x:UID abgeleitet wurden, und Benutzeroberflächenautomatisierungs-Elemente, die von Win32-Steuerelementen abgeleitet wurden, die keine Steuerelement  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Suchen eines bestimmten Elements in der Benutzeroberflächenautomatisierungs-Struktur anhand einer eindeutigen und erkennbaren AutomationID  
   
-- Verwenden Sie ein Tool wie z. b. UI Spy, um die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] relevanten Elements zu melden. Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
+- Verwenden Sie ein Tool wie z. b. UI Spy, um die eines relevanten Elements zu melden <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
   
 > [!CAUTION]
 > Grundsätzlich sollten Sie nur versuchen, direkt untergeordnete Elemente des Elements abzurufen, das von der <xref:System.Windows.Automation.AutomationElement.RootElement%2A>-Eigenschaft angegeben wird. Eine Suche nach Nachfolgerelementen kann hunderte oder sogar tausende Elemente durchlaufen und möglicherweise einen Stapelüberlauf verursachen. Wenn Sie versuchen, ein bestimmtes Element auf einer niedrigeren Ebene abzurufen, sollten Sie die Suche aus dem Anwendungsfenster oder aus einem Container auf niedrigerer Ebene starten.  
@@ -56,7 +57,7 @@ ms.locfileid: "75741375"
   
 - Da AutomationID nur bei nebengeordneten Elementen garantiert eindeutig ist, haben unter bestimmten Umständen möglicherweise mehrere Elemente in der Benutzeroberflächenautomatisierungs-Struktur identische AutomationID-Eigenschaftswerte. In diesen Fällen können die Elemente anhand ihres übergeordneten Elements und ggf. ihres über-übergeordneten Elements eindeutig identifiziert werden. Beispielsweise könnte ein Entwickler eine Menüleiste mit mehreren Menüelementen bereitstellen, die jeweils mehrere untergeordnete Menüelemente haben, wobei die untergeordneten Elemente mit sequenziellen AutomationIDs wie „Element1“, „Element2“ usw. bezeichnet sind. Jedes Menüelement kann dann anhand seiner eigenen AutomationID sowie der seines übergeordneten Elements und ggf. seines über-übergeordneten Elements eindeutig identifiziert werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)

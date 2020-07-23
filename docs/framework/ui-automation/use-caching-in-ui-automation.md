@@ -1,5 +1,6 @@
 ---
 title: Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung
+description: Weitere Informationen finden Sie unter Verwenden von Caching in der Benutzeroberflächen Automatisierung. Lesen Sie die Schritte zum Aktivieren einer Cache Anforderung, zum Zwischenspeichern von AutomationElement-Eigenschaften und zum erhalten von zwischengespeicherten Mustern.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 679192b611a423e095ee9acc956d247364940edf
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8dff9db77e39dc66a16b6a7b395c76a3c768d48e
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800795"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924486"
 ---
 # <a name="use-caching-in-ui-automation"></a>Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -23,7 +24,7 @@ ms.locfileid: "74800795"
   
 ### <a name="activate-a-cache-request"></a>Aktivieren einer Cacheanforderung  
   
-1. Erstellen Sie ein <xref:System.Windows.Automation.CacheRequest>.  
+1. Erstellen Sie eine <xref:System.Windows.Automation.CacheRequest>.  
   
 2. Geben Sie über <xref:System.Windows.Automation.CacheRequest.Add%2A>die Eigenschaften und Muster an, die zwischengespeichert werden sollen.  
   
@@ -33,9 +34,9 @@ ms.locfileid: "74800795"
   
 5. Legen Sie die <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> -Eigenschaft auf <xref:System.Windows.Automation.AutomationElementMode.None> fest, wenn Sie die Effizienz dadurch steigern möchten, dass auf das Abrufen eines vollständigen Verweises auf Objekte verzichtet wird. (Dadurch wird es unmöglich, aktuelle Werte aus diesen Objekten abzurufen.)  
   
-6. Aktivieren Sie die Anforderung, indem Sie <xref:System.Windows.Automation.CacheRequest.Activate%2A> in einem `using` Block verwenden (`Using` in Microsoft Visual Basic .net).  
+6. Aktivieren Sie die Anforderung mithilfe von <xref:System.Windows.Automation.CacheRequest.Activate%2A> innerhalb eines- `using` Blocks ( `Using` in Microsoft Visual Basic .net).  
   
- Deaktivieren Sie nach dem Abrufen von <xref:System.Windows.Automation.AutomationElement> -Objekten oder dem Abonnieren von Ereignissen die Anforderung, indem Sie <xref:System.Windows.Automation.CacheRequest.Pop%2A> verwenden (wenn <xref:System.Windows.Automation.CacheRequest.Push%2A> verwendet wurde) oder indem Sie das durch <xref:System.Windows.Automation.CacheRequest.Activate%2A>erstellte Objekt löschen. (Verwenden Sie <xref:System.Windows.Automation.CacheRequest.Activate%2A> in einem `using` Block (`Using` in Microsoft Visual Basic .net).  
+ Deaktivieren Sie nach dem Abrufen von <xref:System.Windows.Automation.AutomationElement> -Objekten oder dem Abonnieren von Ereignissen die Anforderung, indem Sie <xref:System.Windows.Automation.CacheRequest.Pop%2A> verwenden (wenn <xref:System.Windows.Automation.CacheRequest.Push%2A> verwendet wurde) oder indem Sie das durch <xref:System.Windows.Automation.CacheRequest.Activate%2A>erstellte Objekt löschen. (Verwenden Sie <xref:System.Windows.Automation.CacheRequest.Activate%2A> in einem- `using` Block ( `Using` in Microsoft Visual Basic .net).  
   
 ### <a name="cache-automationelement-properties"></a>Zwischenspeichern von AutomationElement-Eigenschaften  
   
@@ -63,6 +64,6 @@ ms.locfileid: "74800795"
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](caching-in-ui-automation-clients.md)
