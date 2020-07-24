@@ -1,14 +1,14 @@
 ---
 title: Übersicht über Diagnosetools – .NET Core
 description: Eine Übersicht über die Tools und Techniken, die zur Diagnose von .NET Core-Anwendungen zur Verfügung stehen.
-ms.date: 12/17/2019
+ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 0a78ec6c88f5323104277cddea4480a5e13b4e41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc64c03ee9c8cee6a5b3c5cc089b4a1a2c27f84a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397575"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924781"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Welche Diagnosetools sind in .NET Core verfügbar?
 
@@ -47,3 +47,11 @@ Mit dem Tool [dotnet-dump](dotnet-dump.md) können Sie Windows- und Linux-Kernsp
 ### <a name="debug-a-memory-leak"></a>Debuggen eines Speicherverlusts
 
 [Tutorial: Debuggen eines Speicherverlusts](debug-memory-leak.md). Hier wird erläutert, wie ein Speicherverlust gefunden wird. Das [dotnet-counters](dotnet-counters.md)-Tool wird zum Bestätigen des Verlusts und das [dotnet-dump](dotnet-dump.md)-Tool zur Diagnose des Verlusts verwendet.
+
+### <a name="debug-high-cpu-usage"></a>Debuggen einer hohen CPU-Auslastung
+
+[Tutorial: Debuggen einer hohen CPU-Auslastung](debug-highcpu.md). Hier lernen Sie, wie Sie eine hohe CPU-Auslastung untersuchen. In diesem Tutorial wird das Tool [dotnet-counters](dotnet-counters.md) verwendet, um eine solche Auslastung zu bestätigen. Danach erfahren Sie, wie Sie das [`dotnet-trace`-Hilfsprogramm für Leistungsanalysen](dotnet-trace.md) oder `perf` in Linux verwenden, um das CPU-Auslastungsprofil zu erfassen und anzuzeigen.
+
+### <a name="debug-deadlock"></a>Debuggen eines Deadlocks
+
+[Tutorial: Debuggen eines Deadlocks](debug-deadlock.md). Hier erfahren Sie, wie Sie das Tool [dotnet-dump](dotnet-dump.md) verwenden, um Threads und Sperren zu untersuchen.

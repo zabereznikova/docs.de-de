@@ -1,12 +1,13 @@
 ---
 title: Attribute (C#)
+description: Erfahren Sie, wie Sie Attribute verwenden, um Metadaten oder deklarative Informationen mit Code in C# zu verknüpfen. Ein Attribut kann mithilfe der Reflexion zur Laufzeit abgefragt werden.
 ms.date: 04/26/2018
-ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 5c57838b649531d8e8fe89919771adf8830e7f54
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241577"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924984"
 ---
 # <a name="attributes-c"></a>Attribute (C#)
 

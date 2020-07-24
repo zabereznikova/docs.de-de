@@ -304,6 +304,10 @@ items:
         items:
           - name: Debuggen eines Speicherverlusts
             href: diagnostics/debug-memory-leak.md
+          - name: Debuggen einer hohen CPU-Auslastung
+            href: diagnostics/debug-highcpu.md
+          - name: Debuggen eines Deadlocks
+            href: diagnostics/debug-deadlock.md
   - name: Zusätzliche Tools für .NET Core
     items:
       - name: Übersicht
