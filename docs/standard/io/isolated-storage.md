@@ -19,38 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325932"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416375"
 ---
-# <a name="isolated-storage"></a>Isolierte Speicherung
-<a name="top"></a> Die isolierte Speicherung ist ein Mechanismus zur Datenspeicherung von Desktop-Apps, der Isolation und Sicherheit gewährleistet, indem er standardisierte Möglichkeiten zur Verknüpfung von Code mit gespeicherten Daten definiert. Die Standardisierung hat weitere Vorteile. Administratoren können spezielle Tools zum Ändern isolierter Speichervorgänge verwenden, um Speicherplätze für Dateien zu konfigurieren, Sicherheitsrichtlinien festzulegen und nicht verwendete Daten zu löschen. Dank isolierter Speicherung benötigt der Code keine eindeutigen Pfade zur Festlegung sicherer Speicherplätze im Dateisystem. Außerdem werden die Daten vor anderen Anwendungen geschützt, die nur über Zugriff auf isolierte Speicherplätze verfügen. Fest codierte Daten, die den Speicherbereich einer Anwendung angeben, sind nicht erforderlich.
+# <a name="isolated-storage"></a>Isolierter Speicher
+
+Isolierter Speicher ist ein Mechanismus zur Datenspeicherung für Desktop-Apps, der Isolation und Sicherheit gewährleistet, indem er standardisierte Möglichkeiten zur Verknüpfung von Code mit gespeicherten Daten definiert. Die Standardisierung hat weitere Vorteile. Administratoren können spezielle Tools zum Ändern isolierter Speichervorgänge verwenden, um Speicherplätze für Dateien zu konfigurieren, Sicherheitsrichtlinien festzulegen und nicht verwendete Daten zu löschen. Dank isolierter Speicherung benötigt der Code keine eindeutigen Pfade zur Festlegung sicherer Speicherplätze im Dateisystem. Außerdem werden die Daten vor anderen Anwendungen geschützt, die nur über Zugriff auf isolierte Speicherplätze verfügen. Fest codierte Daten, die den Speicherbereich einer Anwendung angeben, sind nicht erforderlich.
 
 > [!IMPORTANT]
 > Die isolierte Speicherung ist nicht für Windows 8.x Store-Apps verfügbar. Verwenden Sie stattdessen zum Speichern von lokalen Daten und Dateien die in der Windows-Runtime-API enthaltenen Anwendungsdatenklassen in den `Windows.Storage`-Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .
-
-Dieses Thema enthält folgende Abschnitte:
-
-- [Datendepots und -speicher](#data_compartments_and_stores)
-
-- [Kontingente für isolierte Speicherung](#quotas)
-
-- [Sicherer Zugriff](#secure_access)
-
-- [Zulässige Verwendung und Sicherheitsrisiken](#allowed_usage)
-
-- [Isolierte Speicherorte](#isolated_storage_locations)
-
-- [Erstellen, Auflisten und Löschen von isoliertem Speicher](#isolated_storage_tasks)
-
-- [Szenarien für die isolierte Speicherung](#scenarios_for_isolated_storage)
-
-- [Verwandte Themen](#related_topics)
-
-- [Verweis](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -114,11 +95,11 @@ __Dieser Abschnitt gilt für die folgenden Frameworks:__
 - .NET Core 2.1 oder höher
 - .NET 5.0 oder höher
 
-Das .NET Framework und .NET Core bieten die [isolierte Speicherung](/dotnet/standard/io/isolated-storage) als Mechanismus zum Speichern von Daten für einen Benutzer, eine Anwendung oder eine Komponente. Dabei handelt es sich um eine Legacykomponente, die in erster Linie für mittlerweile veraltete Szenarios für die Codezugriffssicherheit entwickelt wurde.
+Das .NET Framework und .NET Core bieten isolierten Speicher als Mechanismus zum dauerhaften Speichern von Daten für einen Benutzer, eine Anwendung oder eine Komponente. Dabei handelt es sich um eine Legacykomponente, die in erster Linie für mittlerweile veraltete Szenarios für die Codezugriffssicherheit entwickelt wurde.
 
 Verschiedene isolierte Speicher-APIs und -Tools können zum vertrauensgrenzenübergreifenden Lesen von Daten verwendet werden. Durch das Lesen von Daten aus computerweiten Bereichen können möglicherweise Daten von weniger vertrauenswürdigen Benutzerkonten auf dem Computer aggregiert werden. Komponenten oder Anwendungen, die Elemente aus den isolierten computerweiten Speicherbereichen lesen, sollten die Konsequenzen des Lesens dieser Daten kennen.
 
-### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>Sicherheitsrelevante APIs zum Lesen von computerweiten Dateien
+### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>Sicherheitsrelevante APIs mit computerweiten Leseberechtigungen
 
 Komponenten oder Anwendungen, die eine der folgenden APIs aufrufen, können computerweite Dateien lesen:
 
@@ -129,7 +110,7 @@ Komponenten oder Anwendungen, die eine der folgenden APIs aufrufen, können comp
 * [IsolatedStorageFile.GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore) übergibt einen Bereich, der das „IsolatedStorageScope.Machine“-Flag enthält
 * [IsolatedStorageFile.Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove) übergibt einen Bereich, der das `IsolatedStorageScope.Machine`-Flag enthält
 
-Das [Isolated Storage-Tool](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` ist betroffen, wenn es wie im folgenden Code veranschaulicht mit dem Switch `/machine` aufgerufen wird:
+Das [Isolated Storage-Tool](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe` ist betroffen, wenn es wie im folgenden Code veranschaulicht mit dem Switch `/machine` aufgerufen wird:
 
 ```txt
 storeadm.exe /machine [any-other-switches]
@@ -252,7 +233,7 @@ Viele Anwendungen verwenden Datenbanken zur Speicherung und Isolation von Daten,
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-articles"></a>Verwandte Artikel
 
 |Titel|Beschreibung|
 |-----------|-----------------|

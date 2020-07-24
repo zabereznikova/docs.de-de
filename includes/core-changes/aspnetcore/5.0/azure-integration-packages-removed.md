@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d8506893f5b3eefa6f46dc9f773e43b125ee5210
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 19ccdb634d4e53ea66c032502f2adb70423ab121
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291635"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416250"
 ---
 ### <a name="azure-microsoft-prefixed-azure-integration-packages-removed"></a>Azure: Azure-Integrationspakete mit Präfix „Microsoft“ entfernt
 
@@ -41,9 +41,9 @@ Ersetzen Sie in Projekten mit ASP.NET Core 2.1 oder höher die alten `Microsoft
 
 | Alt | Neu |
 |--|--|
-| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Azure.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Keys) |
-| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Azure.AspNetCore.DataProtection.Blobs](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Blobs) |
-| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.Extensions.Configuration.Secrets](https://www.nuget.org/packages/Azure.Extensions.Configuration.Secrets) |
+| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Azure.Extensions.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys) |
+| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Azure.Extensions.AspNetCore.DataProtection.Blobs](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs) |
+| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.Extensions.AspNetCore.Configuration.Secrets](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets) |
 
 Die neuen Pakete verwenden eine neue Azure SDK-Version, die Breaking Changes umfasst. Die allgemeinen Nutzungsmuster haben sich nicht verändert. Einige Überladungen und Optionen können abweichen, um sich an Änderungen in den zugrunde liegenden Azure SDK-APIs anzupassen.
 

@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174730"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309403"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -398,7 +398,7 @@ Sie können asynchrone Streams selbst in unserem Tutorial zum [Erstellen und Ver
 
 ## <a name="asynchronous-disposable"></a>Asynchrone verwerfbare Typen
 
-Ab C# 8.0 unterstützt die Sprache asynchrone verwerfbare Typen, die die <xref:System.IAsyncDisposable?displayProperty=nameWithType>-Schnittstelle implementieren. Der Operand eines `using`-Ausdrucks kann entweder <xref:System.IDisposable> oder <xref:System.IAsyncDisposable> implementieren. Für `IAsyncDisposable` generiert der Compiler Code für einen `await`-Operator für die von <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> zurückgegebene <xref:System.Threading.Tasks.Task>-Klasse. Weitere Informationen finden Sie unter [`using`-Anweisung](../language-reference/keywords/using-statement.md).
+Ab C# 8.0 unterstützt die Sprache asynchrone verwerfbare Typen, die die <xref:System.IAsyncDisposable?displayProperty=nameWithType>-Schnittstelle implementieren. Verwenden Sie die Anweisung `await using`, um mit einem asynchron verwerfbaren Objekt zu arbeiten. Weitere Informationen finden Sie im Artikel [Implementieren einer DisposeAsync-Methode](../../standard/garbage-collection/implementing-disposeasync.md).
 
 ## <a name="indices-and-ranges"></a>Indizes und Bereiche
 

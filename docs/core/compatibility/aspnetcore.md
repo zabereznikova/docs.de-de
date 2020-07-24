@@ -2,15 +2,15 @@
 title: Breaking Changes in ASP.NET Core
 titleSuffix: ''
 description: Listet die Breaking Changes in ASP.NET Core auf.
-ms.date: 07/08/2020
+ms.date: 07/15/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: ca9e615e88964e1c37e9c0b721bca8c34bf671ac
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174392"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441946"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Breaking Changes in ASP.NET Core
 
@@ -26,8 +26,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [Autorisierung: AddAuthorization-Überladung wurde in andere Assembly verschoben](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Autorisierung: IAllowAnonymous wurde aus AuthorizationFilterContext.Filters entfernt](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Autorisierung: Implementierungen von IAuthorizationPolicyProvider erfordern eine neue Methode](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Autorisierung: Die Ressource im Endpunktrouting ist HttpContext](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: Azure-Integrationspakete mit Präfix „Microsoft“ entfernt](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Blazor: Unbedeutende Leerzeichen zur Kompilierzeit aus Komponenten entfernt](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor: Das Zielframework von NuGet-Paketen wurde geändert](#blazor-target-framework-of-nuget-packages-changed)
 - [Zwischenspeicherung: CompactOnMemoryPressure-Eigenschaft wurde entfernt](#caching-compactonmemorypressure-property-removed)
 - [Zwischenspeicherung: Microsoft.Extensions.Caching.SqlServer verwendet neues SqlClient-Paket](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Zwischenspeicherung: „pubternal“-Typen wurden in ResponseCaching in „internal“-Typen geändert](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -62,6 +64,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [Kestrel: Transportabstraktionsebene wurde geändert](#kestrel-transport-abstractions-removed-and-made-public)
 - [Lokalisierung: APIs wurden als veraltet markiert](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
 - [Lokalisierung: „Pubternal“-APIs entfernt](#localization-pubternal-apis-removed)
+- [Lokalisierung: Ein veralteter Konstruktor wurde in der Middleware für Anforderungslokalisierung entfernt](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [Lokalisierung: ResourceManagerWithCultureStringLocalizer-Klasse und WithCulture-Schnittstellenmember entfernt](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Protokollierung: DebugLogger-Klasse wurde als „internal“ deklariert](#logging-debuglogger-class-made-internal)
 - [MVC: Async-Suffix wurde für Controlleraktion entfernt](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -70,6 +73,8 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [MVC: Typen wurden in „internal“ geändert](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Web-API-Kompatibilitätsshim wurde entfernt](#mvc-web-api-compatibility-shim-removed)
 - [Razor: Laufzeitkompilierung wurde in ein Paket verschoben](#razor-runtime-compilation-moved-to-a-package)
+- [Sicherheit: Die Codierung für Cookienamen wurde entfernt](#security-cookie-name-encoding-removed)
+- [Sicherheit: Die Versionen des IdentityModel-NuGet-Pakets wurden aktualisiert](#security-identitymodel-nuget-package-versions-updated)
 - [Sitzungszustand: Veraltete APIs wurden entfernt](#session-state-obsolete-apis-removed)
 - [Freigegebenes Framework: Assembly aus Microsoft.AspNetCore.App wurde entfernt](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
 - [Freigegebenes Framework: Microsoft.AspNetCore.All wurde entfernt](#shared-framework-removed-microsoftaspnetcoreall)
@@ -88,11 +93,19 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
 
+[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
+
+***
+
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
 
 ***
 
@@ -131,7 +144,19 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 ***
 
+[!INCLUDE[Localization: Obsolete constructor removed in request localization middleware](~/includes/core-changes/aspnetcore/5.0/localization-requestlocalizationmiddleware-constructor-removed.md)]
+
+***
+
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
+
+***
+
+[!INCLUDE[Security: IdentityModel NuGet package versions updated](~/includes/core-changes/aspnetcore/5.0/security-identitymodel-nuget-package-versions-updated.md)]
 
 ***
 

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 96db0d707cefed791d9c2c01a6615e9af5168cc5
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b8825dee595c601e8adef0a52e651ac4a4f04831
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802987"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416038"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Überprüfen, ob .NET Core bereits installiert ist
 
@@ -217,5 +217,4 @@ Sie können sowohl die SDK-Versionen als auch die Runtime-Versionen mit dem `dot
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Installieren der .NET Core-Runtime](runtime.md)
-- [Installieren des .NET Core SDK](sdk.md)
+- [Installieren Sie die .NET Core-Runtime und das .NET Core SDK.](windows.md)

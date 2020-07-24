@@ -2,12 +2,12 @@
 title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 description: Echte Produktionsanwendungen müssen mithilfe von Orchestratoren bereitgestellt und verwaltet werden, die Status, Workload und Lebenszyklen aller Container behandeln können.
 ms.date: 02/15/2019
-ms.openlocfilehash: 369971455168026d768220dae6e2da5ce92bc698
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988998"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374480"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
@@ -74,7 +74,7 @@ Um mit der Nutzung von AKS zu beginnen, stellen Sie über das Azure-Portal oder 
 
 Für die durch AKS standardmäßig installierte Software fallen keine Gebühren an. Alle Standardoptionen werden mit Open Source-Software implementiert. AKS ist für viele virtuelle Computer in Azure verfügbar. Sie zahlen nur für die von Ihnen ausgewählten Compute-Instanzen und den Verbrauch von Ressourcen der zugrunde liegenden Infrastruktur, wie z.B. Netzwerkfunktionen und Speicher. Für AKS selbst fallen keine zusätzlichen Gebühren an.
 
-Weitere Implementierungsinformationen zur Bereitstellung in Kubernetes basierend auf `kubectl`-und ursprünglichen `.yaml`-Dateien finden Sie im Beitrag zum [Setting eShopOnContainers up in AKS (Azure Kubernetes Service)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)) (Einrichten von eShopOnContainers in AKS).
+Weitere Implementierungsinformationen zur Bereitstellung in Kubernetes basierend auf `kubectl`-und ursprünglichen `.yaml`-Dateien finden Sie unter [Bereitstellungen in Azure Kubernetes Service (AKS)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)).
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Bereitstellen mit Helm-Charts in Kubernetes-Clustern
 
@@ -86,7 +86,7 @@ Darüber hinaus wird die Verwendung von Helm empfohlen, weil zusätzliche Kubern
 
 Helm wird von der [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) in Zusammenarbeit mit Microsoft, Google, Bitnami und der Helm-Community verwaltet.
 
-Weitere Informationen zur Implementierung in Helm-Charts und Kubernetes finden Sie im Beitrag über [Using Helm Charts to deploy eShopOnContainers to AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts) (Verwenden von Helm-Charts zum Bereitstellen von eShopOnContainers in AKS).
+Weitere Informationen zur Implementierung in Helm-Charts und Kubernetes finden Sie unter [Installieren von eShopOnContainers mithilfe von Helm](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#install-eshoponcontainers-using-helm).
 
 ## <a name="use-azure-dev-spaces-for-you-kubernetes-application-lifecycle"></a>Verwenden von Azure Dev Spaces für den Lebenszyklus Ihrer Kubernetes-Anwendungen
 
@@ -106,9 +106,9 @@ Azure Dev Spaces kann Produktionsmicroservices transparent mit Entwicklungsconta
 
 Azure Dev Spaces stellt das Konzept eines Bereichs bereit, das es Ihnen ermöglicht, isoliert zu arbeiten, ohne die Arbeit Ihrer Teammitglieder zu beeinträchtigen. Dieses Feature basiert auf URL-Präfixen. Wenn Sie also ein Präfix für einen Entwicklungsbereich in der URL angeben, wird für die Anforderungen eines Containers eine bestimmte Version des Containers ausgeführt, die für den betreffenden Bereich bereitgestellt wurde, wenn eine solche vorhanden ist. Andernfalls wird die globale/konsolidierte Version ausgeführt.
 
-Auf der [Wiki-Seite für eShopOnContainers in Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS) finden Sie eine praktische Ansicht eines konkreten Beispiels.
+Unter [Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces) finden Sie ein konkretes Beispiel.
 
-Weitere Informationen finden Sie im Artikel zur [Teamentwicklung mit Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
+Weitere Informationen finden Sie im Artikel [Entwicklung im Team mit .NET Core und Visual Studio Code über Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

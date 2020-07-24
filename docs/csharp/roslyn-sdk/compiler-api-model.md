@@ -1,14 +1,14 @@
 ---
 title: '.NET Compiler Platform SDK: Konzepte und Objektmodell'
 description: In dieser Übersicht erhalten Sie die nötigen Hintergrundinformationen, damit Sie effektiv mit dem .NET Compiler SDK arbeiten können. Erfahren Sie mehr über API-Ebenen, die wichtigsten beteiligten Typen und das gesamte Objektmodell.
-ms.date: 10/10/2017
+ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975939"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374467"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Verstehen des .NET Compiler Platform SDK-Modells
 
@@ -24,27 +24,25 @@ Jede Phase dieser Pipeline stellt eine separate Komponente dar. Zunächst wird i
 
 ![Über die API der Compilerpipeline wird Zugriff auf sämtliche Schritte gewährt, die Bestandteil der Compilerpipeline sind.](media/compiler-api-model/compiler-pipeline-api.png)
 
-Für jede dieser Phasen stellt das .NET Compiler Platform SDK ein Objektmodell zur Verfügung, das Zugriff auf die Informationen zu der jeweiligen Phase gewährt. In der Analysephase wird eine Syntaxstruktur zur Verfügung gestellt, in der Deklarationsphase eine hierarchische Symboltabelle, in der Bindungsphase das Ergebnis der semantischen Analyse des Compilers, und die Ausgabephase besteht aus einer API, die IL-Bytecode erstellt.
+Für jede dieser Phasen stellt das .NET Compiler Platform SDK ein Objektmodell zur Verfügung, das Zugriff auf die Informationen zu der jeweiligen Phase gewährt. In der Analysephase wird eine Syntaxstruktur zur Verfügung gestellt, in der Deklarationsphase eine hierarchische Symboltabelle und in der Bindungsphase das Ergebnis der semantischen Analyse des Compilers. Die Ausgabephase besteht aus einer API, die IL-Bytecode erstellt.
 
 ![Die über die Compiler-API zugänglichen Sprachdienste bei jedem Schritt der Compilerpipeline](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Jeder Compiler vereint diese Komponenten zu einem End-to-End-Objekt.
 
-Bei diesen APIs handelt es sich um dieselben, die von Visual Studio verwendet werden. Beispielsweise verwenden die Komponenten, die den Code gliedern und formatieren, die Syntaxstrukturen. Der Objektkatalog und die Navigationskomponenten verwenden die Symboltabelle, beim Refactoring und bei Gehe zu Definitionen werden Semantikmodelle verwendet und „Bearbeiten und Fortfahren“ verwendet all diese Elemente, einschließlich der Ausgabe-API.
+Bei diesen APIs handelt es sich um dieselben, die von Visual Studio verwendet werden. Beispielsweise verwenden die Features zur Codegliederung und -formatierung die Syntaxstrukturen. Der **Objektkatalog** und die Navigationsfeatures verwenden die Symboltabelle, beim Refactoring und bei **Zu Definition wechseln** wird das Semantikmodell verwendet, und **Bearbeiten und Fortfahren** verwendet all diese Elemente, einschließlich der Ausgabe-API.
 
 ## <a name="api-layers"></a>API-Ebenen
 
-Das .NET-Compiler SDK besteht aus zwei Hauptebenen von APIs: Compiler-APIs und Arbeitsbereich-APIs.
-
-![Die API-Ebenen, die von den APIs der Compilerpipeline dargestellt werden](media/compiler-api-model/api-layers.png)
+Das .NET-Compiler-SDK besteht aus mehreren Ebenen von APIs: Compiler-APIs, Diagnose-APIs, Skript-APIs und Arbeitsbereich-APIs.
 
 ### <a name="compiler-apis"></a>Compiler-APIs
 
-Die Compilerebene enthält die Objektmodelle, die mit den Informationen syntaktisch und semantisch übereinstimmen, die in den einzelnen Phasen der Compilerpipeline zur Verfügung gestellt werden. Die Compilerebene enthält außerdem eine nicht veränderbare Momentaufnahme eines einzelnen Aufrufs eines Compilers, einschließlich Assemblyverweisen, Compileroptionen und Quellcodedateien. Es gibt zwei unterschiedliche APIs, die die Sprachen C# und Visual Basic darstellen. Diese beiden APIs haben eine ähnliche Form, aber sind auf die treue Wiedergabe der einzelnen Sprachen ausgerichtet. Diese Ebene ist unabhängig von Visual Studio-Komponenten.
+Die Compilerebene enthält die Objektmodelle, die mit den Informationen syntaktisch und semantisch übereinstimmen, die in den einzelnen Phasen der Compilerpipeline zur Verfügung gestellt werden. Die Compilerebene enthält außerdem eine nicht veränderbare Momentaufnahme eines einzelnen Aufrufs eines Compilers, einschließlich Assemblyverweisen, Compileroptionen und Quellcodedateien. Es gibt zwei unterschiedliche APIs, die die Sprachen C# und Visual Basic darstellen. Diese beiden APIs verfügen zwar über eine ähnliche Form, sind aber jeweils auf einen hohen Treuegrad in Bezug auf die einzelnen Sprachen ausgelegt. Diese Ebene ist unabhängig von Visual Studio-Komponenten.
 
 ### <a name="diagnostic-apis"></a>Diagnose-APIs
 
-Im Rahmen einer Analyse erstellt der Compiler möglicherweise mehrere Diagnosen, die angefangen bei Syntax, Semantik und eindeutigen Zuweisungsfehlern bis hin zu Warnungen und informativen Diagnosen alles abdecken. Die API-Ebene des Compilers stellt über eine erweiterbare API Diagnosen zur Verfügung, über die benutzerdefinierte Analysetools an den Kompilierungsprozess angeschlossen werden. Außerdem können dadurch neben compilerdefinierten Diagnosen benutzerdefinierte Diagnosen erstellt werden, die z.B. von Tools wie StyleCop oder FxCop erstellt werden. Wenn Diagnosen so erstellt werden, hat das den Vorteil, dass diese auf natürliche Weise in Tools wie MSBuild und Visual Studio integriert werden. Diese Tools sind von Diagnosen abhängig, um z.B. einen Buildvorgang anhand von Richtlinien anzuhalten oder um Wellenlinien im Editor anzuzeigen und Behebungen von Codefehlern vorzuschlagen.
+Im Rahmen einer Analyse erstellt der Compiler möglicherweise mehrere Diagnosen, die angefangen bei Syntax, Semantik und eindeutigen Zuweisungsfehlern bis hin zu Warnungen und informativen Diagnosen alles abdecken. Die API-Ebene des Compilers stellt über eine erweiterbare API Diagnosen zur Verfügung, über die benutzerdefinierte Analysetools an den Kompilierungsprozess angeschlossen werden. Außerdem können dadurch neben compilerdefinierten Diagnosen benutzerdefinierte Diagnosen erstellt werden, die z.B. von Tools wie StyleCop oder FxCop erstellt werden. Wenn Diagnosen so erstellt werden, hat dies den Vorteil, dass diese auf natürliche Weise in Tools wie MSBuild und Visual Studio integriert werden. Diese Tools sind von Diagnosen abhängig, um z. B. einen Build basierend auf Richtlinien anzuhalten oder Wellenlinien direkt im Editor anzuzeigen und Behebungen für Codefehler vorzuschlagen.
 
 ### <a name="scripting-apis"></a>Erstellung von API-Skripts
 

@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie Probleme mit der Notarisier
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: cd3886b2e772a182156d212aefb9705a3fb5e17c
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324626"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415956"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina-Notarisierung und die Auswirkungen auf .NET Core-Downloads und -Projekte
 
@@ -77,7 +77,7 @@ Weitere Informationen zur Behandlung von ASP.NET Core-Zertifikatproblemen finden
 
 ## <a name="default-entitlements"></a>Standardberechtigungen
 
-Der Standardhost von .NET Core (`dotnet`-Befehl) verfügt über einige Standardberechtigungen. Diese Berechtigungen sind für den ordnungsgemäßen Betrieb von .NET Core erforderlich. Manchmal erfordert Ihre Anwendung zusätzliche Berechtigungen. In diesem Fall müssen Sie eine [appHost-Datei](#apphost-is-disabled-by-default) generieren und verwenden und anschließend die erforderlichen Berechtigungen lokal hinzufügen.
+Der Standardhost von .NET Core (der Befehl `dotnet`) verfügt über einige Standardberechtigungen. Diese Berechtigungen sind für den ordnungsgemäßen Betrieb von .NET Core erforderlich. Manchmal erfordert Ihre Anwendung zusätzliche Berechtigungen. In diesem Fall müssen Sie eine [appHost-Datei](#apphost-is-disabled-by-default) generieren und verwenden und anschließend die erforderlichen Berechtigungen lokal hinzufügen.
 
 Standardberechtigungen für .NET Core:
 
@@ -93,5 +93,4 @@ Wenn Sie Ihre Anwendung unter macOS Catalina (Version 10.15) oder höher ausfü
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [.NET Core-Abhängigkeiten und -Anforderungen](dependencies.md)
-- [Installieren des .NET Core SDK](sdk.md)
-- [Installieren der .NET Core-Runtime](runtime.md)
+- [Installieren Sie die .NET Core-Runtime und das .NET Core SDK.](macos.md)

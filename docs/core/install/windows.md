@@ -4,12 +4,12 @@ description: Informationen zu den Windows-Versionen, unter denen Sie .NET Core i
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804450"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308948"
 ---
 # <a name="install-net-core-on-windows"></a>Installieren von .NET Core unter Windows
 
@@ -23,7 +23,8 @@ In diesem Artikel wird erläutert, wie Sie .NET Core unter Windows installieren.
 
 Version 3.1 ist die aktuelle Version von .NET Core.
 
-[.NET Core herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Unterstützte Versionen
 
@@ -71,13 +72,15 @@ Diese führt .NET Core-Desktop-Apps für Windows aus, die unter WPF oder Windows
 *.NET Core-Runtime*\
 Hierbei handelt es sich um die einfachste Runtime, die keine weiteren Runtimes beinhaltet. Es wird dringend empfohlen, dass Sie sowohl die *ASP.NET Core-Runtime* als auch die *Desktop-Runtime* installieren, um die bestmögliche Kompatibilität mit .NET Core-Apps zu erzielen.
 
-[.NET Core-Runtime herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core-Runtime herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informationen zum SDK
 
 Das SDK wird zum Erstellen und Veröffentlichen von .NET Core-Apps und -Bibliotheken verwendet. Die Installation des SDK umfasst alle drei [Runtimes](#runtime-information): ASP.NET Core, Desktop und .NET Core.
 
-[.NET Core SDK herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core SDK herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>Abhängigkeiten
 
@@ -218,7 +221,8 @@ Wenn Sie Visual Studio bereits installiert haben, können Sie Ihre Version mit d
 
 Visual Studio kann das neueste .NET Core SDK und die Runtime installieren.
 
-- [Visual Studio herunterladen](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+> [!div class="button"]
+> [Visual Studio herunterladen](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
 
 ### <a name="select-a-workload"></a>Workload auswählen
 

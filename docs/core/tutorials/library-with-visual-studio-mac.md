@@ -2,12 +2,12 @@
 title: Erstellen einer .NET Standard-Klassenbibliothek in Visual Studio für Mac
 description: Erfahren Sie, wie Sie eine .NET Standard-Klassenbibliothek mit Visual Studio für Mac erstellen.
 ms.date: 06/08/2020
-ms.openlocfilehash: 3a107fff2fd6aef5e06d9af3eac334fbf5688fa5
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713418"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416002"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio für Mac
 
@@ -39,7 +39,7 @@ Eine Visual Studio-Projektmappe dient als ein Container für mindestens ein Proj
 
 1. Wählen Sie im Dialogfeld **Neues Projekt** unter dem Knoten **Multi-Plattform** erst **Bibliothek** und dann die Vorlage **.NET Standard-Bibliothek** aus. Wählen Sie dann **Weiter** aus.
 
-   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Dialogfeld „Neues Projekt“":::
+   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Dialogfeld "Neues Projekt"":::
 
 1. Wählen Sie im Dialogfeld **Neue .NET Standard-Bibliothek konfigurieren** die Option „.NET Standard 2.1“ und dann **Weiter** aus.
 
@@ -53,7 +53,7 @@ Eine Visual Studio-Projektmappe dient als ein Container für mindestens ein Proj
 
    :::image type="content" source="media/library-with-visual-studio-mac/solution-dock-icon.png" alt-text="Andocksymbol für Pad „Projektmappe“":::
 
-1. Erweitern Sie im Pad **Projektmappe** den Knoten `StringLibrary`, um die von der Vorlage bereitgestellte Klassendatei *Class1.cs* anzuzeigen. Klicken Sie bei gedrückter <kbd>CTRL-TASTE</kbd> auf die Datei. Wählen Sie im Kontextmenü **Umbenennen** aus, und benennen Sie die Datei in *StringLibrary.cs* um. Öffnen Sie die Datei und ersetzen Sie den Inhalt durch den folgenden Code:
+1. Erweitern Sie im Pad **Projektmappe** den `StringLibrary`-Knoten, um die von der Vorlage bereitgestellte Klassendatei *Class1.cs* anzuzeigen. Klicken Sie bei gedrückter <kbd>CTRL-TASTE</kbd> auf die Datei. Wählen Sie im Kontextmenü **Umbenennen** aus, und benennen Sie die Datei in *StringLibrary.cs* um. Öffnen Sie die Datei und ersetzen Sie den Inhalt durch den folgenden Code:
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibrary/Class1.cs":::
 

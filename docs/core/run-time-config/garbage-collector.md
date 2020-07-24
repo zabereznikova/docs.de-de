@@ -1,14 +1,14 @@
 ---
 title: Garbage-Collector-Konfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, um zu konfigurieren, wie der Garbage Collector Arbeitsspeicher für .NET Core-Apps verwaltet.
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202101"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441405"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Laufzeitkonfigurationsoptionen für die Garbage Collection
 
@@ -240,6 +240,7 @@ Beispiel:
 
 - Gibt die maximale Commitgröße in Bytes für den GC-Heap und die GC-Buchhaltung an
 - Diese Einstellung gilt nur für 64-Bit-Computer.
+- Diese Einstellung wird ignoriert, wenn die [Grenzwerte pro Objektheap](#per-object-heap-limits) konfiguriert sind.
 - Der Standardwert, der nur in bestimmten Fällen gilt, ist der größere Wert von 20 MB oder 75 % der Speichergrenze für den Container. Der Standardwert wird in folgenden Fällen angewendet:
 
   - Der Prozess wird in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben ist.
@@ -271,6 +272,7 @@ Beispiel:
 - Wenn außerdem [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) festgelegt ist, wird diese Einstellung ignoriert.
 - Diese Einstellung gilt nur für 64-Bit-Computer.
 - Wenn der Prozess in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben wurde, wird der Prozentsatz als Prozentsatz dieses Arbeitsspeicherlimits berechnet.
+- Diese Einstellung wird ignoriert, wenn die [Grenzwerte pro Objektheap](#per-object-heap-limits) konfiguriert sind.
 - Der Standardwert, der nur in bestimmten Fällen angewendet wird, beträgt weniger als 20 MB oder 75 % des Arbeitsspeicherlimits für den Container. Der Standardwert wird in folgenden Fällen angewendet:
 
   - Der Prozess wird in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben ist.
@@ -295,6 +297,40 @@ Beispiel:
 
 > [!TIP]
 > Wenn Sie die Option in *runtimeconfig.json* festlegen, geben Sie einen Dezimalwert an. Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Beispielsweise würden bei einer Begrenzung des Heapverbrauchs auf 30 % die Werte für die JSON-Datei 30 und für die Umgebungsvariable 0x1E oder 1E betragen.
+
+### <a name="per-object-heap-limits"></a>Grenzwerte pro Objektheap
+
+Sie können die zulässige Heapnutzung bei der Garbage Collection pro Objektheap angeben. Die verschiedenen Arten von Heaps sind: große Objektheaps (Large Object Heap, LOH), kleine Objektheaps (Small Object Heap, SOH) und fixierte Objektheaps (Pinned Object Heap, POH).
+
+#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH, COMPLUS_GCHeapHardLimitLOH, COMPLUS_GCHeapHardLimitPOH
+
+- Wenn Sie für eine der Einstellungen `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` oder `COMPLUS_GCHeapHardLimitPOH` einen Wert angeben, müssen Sie auch einen Wert für `COMPLUS_GCHeapHardLimitSOH` und `COMPLUS_GCHeapHardLimitLOH` angeben. Andernfalls kann die Laufzeit nicht initialisiert werden.
+- Der Standardwert für `COMPLUS_GCHeapHardLimitPOH` ist 0. `COMPLUS_GCHeapHardLimitSOH` und `COMPLUS_GCHeapHardLimitLOH` verfügen über keine Standardwerte.
+
+| | Einstellungsname | Werte | Eingeführt in Version |
+| - | - | - | - |
+| **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitSOH` | *Hexadezimalwert* | .NET 5.0 |
+| **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitLOH` | *Hexadezimalwert* | .NET 5.0 |
+| **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitPOH` | *Hexadezimalwert* | .NET 5.0 |
+
+> [!TIP]
+> Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Wenn Sie z. B. eine feste Heapgrenze von 200 Mebibyte (MiB) angeben möchten, wäre der Wert 0xC800000 oder C800000.
+
+#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent, COMPLUS_GCHeapHardLimitLOHPercent, COMPLUS_GCHeapHardLimitPOHPercent
+
+- Wenn Sie für eine der Einstellungen `COMPLUS_GCHeapHardLimitSOHPercent`, `COMPLUS_GCHeapHardLimitLOHPercent` oder `COMPLUS_GCHeapHardLimitPOHPercent` einen Wert angeben, müssen Sie auch einen Wert für `COMPLUS_GCHeapHardLimitSOHPercent` und `COMPLUS_GCHeapHardLimitLOHPercent` angeben. Andernfalls kann die Laufzeit nicht initialisiert werden.
+- Diese Einstellungen werden ignoriert, wenn `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` und `COMPLUS_GCHeapHardLimitPOH` angegeben sind.
+- Der Wert 1 bedeutet, dass die Garbage Collection 1 % des gesamten physischen Speichers für diesen Objektheap verwendet.
+- Jeder Wert muss größer als 0 (null) und kleiner als 100 sein. Außerdem muss die Summe der drei Prozentwerte kleiner als 100 sein. Andernfalls tritt ein Fehler bei der Initialisierung der Laufzeit auf.
+
+| | Einstellungsname | Werte | Eingeführt in Version |
+| - | - | - | - |
+| **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitSOHPercent` | *Hexadezimalwert* | .NET 5.0 |
+| **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitLOHPercent` | *Hexadezimalwert* | .NET 5.0 |
+| **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitPOHPercent` | *Hexadezimalwert* | .NET 5.0 |
+
+> [!TIP]
+> Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Wenn Sie z. B. die Heapnutzung auf 30 % beschränken möchten, wäre der entsprechende Wert 0x1E oder 1E.
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 

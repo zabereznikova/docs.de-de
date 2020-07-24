@@ -1,18 +1,18 @@
 ---
 title: 'Der Operator „await“: C#-Referenz'
-ms.date: 11/08/2019
+ms.date: 07/13/2020
 f1_keywords:
 - await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 83ee51fcbcc5911c688e30542cefb1c56578a578
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 76c6b24c1cd061585c7a6964d30bc81cc5fc5975
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141028"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308844"
 ---
 # <a name="await-operator-c-reference"></a>Der Operator „await“ (C#-Referenz)
 
@@ -31,11 +31,17 @@ Der Operator `await` kann nur in einer Methode, einem [Lambdaausdruck](../../pro
 
 Der Operand des Operators `await` gehört normalerweise einem der folgenden .NET-Typen an: <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> oder <xref:System.Threading.Tasks.ValueTask%601>. Allerdings kann es sich bei jedem Awaitable-Ausdruck um den Operanden des Operators `await` handeln. Weitere Informationen finden Sie im Abschnitt [Awaitable-Ausdrücke](~/_csharplang/spec/expressions.md#awaitable-expressions) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-Ab C# 8.0 können Sie die `await foreach`-Anweisung verwenden, um einen asynchronen Datenstrom zu verarbeiten. Weitere Informationen finden Sie im Artikel [`foreach`-Anweisung](../keywords/foreach-in.md) und im Abschnitt [ Asynchrone Datenströme](../../whats-new/csharp-8.md#asynchronous-streams) des Artikels [Neues in C# 8.0](../../whats-new/csharp-8.md).
-
 Der Ausdruck `await t` ist vom Typ `TResult`, wenn der Ausdruck `t` vom Typ <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.ValueTask%601> ist. Wenn der Ausdruck `t` vom Typ <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.ValueTask> ist, ist `await t` vom Typ `void`. In beiden Fällen löst `await t` die Ausnahme erneut aus, wenn `t` eine Ausnahme auslöst. Weitere Informationen zur Bearbeitung von Ausnahmen finden Sie im Abschnitt [Ausnahmen in Async-Methoden](../keywords/try-catch.md#exceptions-in-async-methods) des Artikels [Try-catch-Anweisung](../keywords/try-catch.md).
 
 Die Schlüsselwörter `async` und `await` sind in C# 5 und höher verfügbar.
+
+## <a name="asynchronous-streams-and-disposables"></a>Asynchrone Datenströme und verwerfbare Objekte
+
+Ab C# 8.0 können Sie asynchrone Datenströme und verwerfbare Elemente verwenden.
+
+Sie können die `await foreach`-Anweisung verwenden, um einen asynchronen Datenstrom zu verarbeiten. Weitere Informationen finden Sie im Artikel [`foreach`-Anweisung](../keywords/foreach-in.md) und im Abschnitt [ Asynchrone Datenströme](../../whats-new/csharp-8.md#asynchronous-streams) des Artikels [Neues in C# 8.0](../../whats-new/csharp-8.md).
+
+Sie können die `await using`-Anweisung nutzen, um ein asynchron verwerfbares Objekt zu nutzen, d. h. ein Objekt eines Typs, der eine <xref:System.IAsyncDisposable>-Schnittstelle implementiert. Weitere Informationen erhalten Sie im Abschnitt [Verwenden von asynchron verwerfbar](../../../standard/garbage-collection/implementing-disposeasync.md#using-async-disposable) des Artikels [Implementieren einer DisposeAsync-Methode](../../../standard/garbage-collection/implementing-disposeasync.md).
 
 ## <a name="await-operator-in-the-main-method"></a>Der Operator „await“ in der Methode „Main“
 

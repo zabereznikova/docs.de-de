@@ -6,16 +6,16 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: 251a330ec327366ce458dd8066061365ab0e1dad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9edbd76e7b7a249743a201adccb5659bee6e5980
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713456"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441348"
 ---
 # <a name="in-c-reference"></a>in (C#-Referenz)
 
-Das Schlüsselwort `in` wird in vier Kontexten verwendet:  
+Das `in`-Schlüsselwort kann in folgendem Kontext verwendet werden:  
   
 - [generische Typparameter](in-generic-modifier.md) in generischen Schnittstellen und Delegaten
 - Als [Parametermodifizierer](in-parameter-modifier.md), mit dem Sie ein Argument an eine Methode nach Verweis anstatt nach Wert übergeben können.
@@ -23,7 +23,7 @@ Das Schlüsselwort `in` wird in vier Kontexten verwendet:
 - [from-Klauseln](from-clause.md) in LINQ-Abfrageausdrücken
 - [join-Klauseln](join-clause.md) in LINQ-Abfrageausdrücken
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Schlüsselwörter](index.md)
 - [C#-Referenz](../index.md)

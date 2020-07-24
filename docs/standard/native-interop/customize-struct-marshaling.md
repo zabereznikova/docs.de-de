@@ -1,18 +1,18 @@
 ---
 title: Anpassen des Marshallings für Strukturen – .NET
-description: Erfahren Sie, wie Sie anpassen können, wie .NET Ihre Strukturen in eine native Darstellung marshallt.
+description: In diesem Artikel erfahren Sie, wie Sie anpassen können, wie .NET Ihre Strukturen in eine native Darstellung marshallt.
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003892"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374532"
 ---
-# <a name="customizing-structure-marshaling"></a>Anpassen des Marshallings für Strukturen
+# <a name="customize-structure-marshaling"></a>Anpassen des Marshallings für Strukturen
 
 Manchmal entsprechen die Standardregeln für das Marshallen nicht genau Ihren Anforderungen. Die .NET-Runtimes bieten einige Erweiterungspunkte, mit denen Sie das Layout der Struktur und das Marshallen von Feldern anpassen können.
 
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-Wenn Sie eine WinRT-basierte API verwenden, müssen Sie eine Zeichenfolge möglicherweise als `HSTRING` marshallen.  Mit dem Wert <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> können Sie eine Zeichenfolge als `HSTRING` marshallen.
+Wenn Sie eine WinRT-basierte API verwenden, müssen Sie eine Zeichenfolge möglicherweise als `HSTRING` marshallen. Mit dem Wert <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> können Sie eine Zeichenfolge als `HSTRING` marshallen.
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Anpassen des Marshallens von Dezimalfeldern
 
-Wenn Sie Windows verwenden, treffen Sie möglicherweise auf einige APIs, die die native [`CY`- oder `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1)-Struktur verwenden. Standardmäßig marshallt der .NET-`decimal`-Typ in die native [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)-Struktur. Sie können jedoch ein <xref:System.Runtime.InteropServices.MarshalAsAttribute> mit dem Wert <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> verwenden, um den Marshaller zur Konvertierung eines `decimal`-Werts in einen nativen `CY`-Wert anzuweisen.
+Wenn Sie Windows verwenden, treffen Sie möglicherweise auf einige APIs, die die native [`CY`- oder `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy-r1)-Struktur verwenden. Standardmäßig marshallt der .NET-`decimal`-Typ in die native [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1)-Struktur. Sie können jedoch ein <xref:System.Runtime.InteropServices.MarshalAsAttribute> mit dem Wert <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> verwenden, um den Marshaller zur Konvertierung eines `decimal`-Werts in einen nativen `CY`-Wert anzuweisen.
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>Marshalling von `System.Object`
+## <a name="marshal-systemobject"></a>Marshallen von `System.Object`
 
 Unter Windows können Sie Felder vom Typ `object` in nativen Code marshallen. Diese Felder können in einen der drei folgenden Typen gemarshallt werden:
 

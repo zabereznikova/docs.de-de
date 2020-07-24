@@ -1,5 +1,6 @@
 ---
 title: Angeben eines Zeichensatzes
+description: In diesem Artikel erfahren Sie, wie Sie einen Zeichensatz angeben, der Codierung im engeren (ANSI) oder weiteren (Unicode) Sinne verwendet. Alternativ können Sie eine automatische Runtimeauswahl angeben.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125179"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309793"
 ---
-# <a name="specifying-a-character-set"></a>Angeben eines Zeichensatzes
+# <a name="specify-a-character-set"></a>Angeben eines Zeichensatzes
+
 Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld steuert das Marshallen von Zeichenfolgen und bestimmt, wie Plattformaufrufe Funktionsnamen in einer DLL finden. In diesem Abschnitt werden beide Verhaltensweisen beschrieben.  
   
  Einige APIs exportieren zwei Versionen von Funktionen, die Zeichenfolgenargumente verwenden: schmal (ANSI) und breit (Unicode). Die Windows-API enthält z.B. die folgenden Einstiegspunktnamen für die **MessageBox**-Funktion:  
@@ -61,11 +63,12 @@ Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayPrope
   
 - Der Plattformaufruf basierend auf der Zielplattform zur Laufzeit wählt zwischen ANSI- und Unicode-Formaten.  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Festlegen eines Zeichensatzes in Visual Basic  
- Das folgende Beispiel deklariert die **MessageBox**-Funktion dreimal, wobei der Zeichensatz sich jedes Mal unterschiedlich verhält. Sie können das Verhalten des Zeichensatzes in Visual Basic angeben, indem Sie die Schlüsselwörter **Ansi**, **Unicode** oder **Auto** zur Deklarationsanweisung hinzufügen.  
-  
- Wenn Sie das Zeichensatzschlüsselwort weglassen, wie es in der ersten Deklarationsanweisung der Fall ist, erfolgt das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld standardmäßig im ANSI-Zeichensatz. Die zweite und dritte Anweisung in diesem Beispiel geben einen Zeichensatz explizit mit einem Schlüsselwort an.  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>Festlegen eines Zeichensatzes in Visual Basic
+
+Sie können das Verhalten des Zeichensatzes in Visual Basic angeben, indem Sie die Schlüsselwörter `Ansi`, `Unicode` oder `Auto` zur Deklarationsanweisung hinzufügen. Wenn Sie das Zeichensatzschlüsselwort weglassen, wird auf das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld standardmäßig der ANSI-Zeichensatz angewendet.
+
+Das folgende Beispiel deklariert die **MessageBox**-Funktion dreimal, wobei der Zeichensatz sich jedes Mal unterschiedlich verhält. Die erste Anweisung lässt das Zeichensatzschlüsselwort aus, sodass ANSI standardmäßig als Zeichensatz verwendet wird. Die zweite und dritte Anweisung geben einen Zeichensatz explizit mit einem Schlüsselwort an.
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -88,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>Festlegen eines Zeichensatzes in C# und C++  
- Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld identifiziert den zugrunde liegenden Zeichensatz als ANSI oder Unicode. Der Zeichensatz steuert, wie die Zeichenfolgenargumente an eine Methode gemarshallt werden sollen. Verwenden Sie eines der folgenden Formate, um den Zeichensatz anzugeben:  
+## <a name="specify-a-character-set-in-c-and-c"></a>Festlegen eines Zeichensatzes in C# und C++
+
+Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld identifiziert den zugrunde liegenden Zeichensatz als ANSI oder Unicode. Der Zeichensatz steuert, wie die Zeichenfolgenargumente an eine Methode gemarshallt werden sollen. Verwenden Sie eines der folgenden Formate, um den Zeichensatz anzugeben:  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]

@@ -14,16 +14,17 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-ms.openlocfilehash: 07c4a813d4e2c838fb236d2a7798f54a9ead3a6d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cd702085beff4ed6710eca83ac748a5915478387
+ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502014"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86401964"
 ---
 # <a name="using-application-protocols"></a>Verwenden von Anwendungsprotokollen
-.NET Framework unterstützt häufig verwendete Internetanwendungsprotokolle. Dieser Abschnitt enthält Informationen zur Verwendung der [HTTP](http.md)-, „TCP“- und „UDP“-Protokolle sowie Informationen zur Verwendung der [Windows Sockets](sockets.md)-Schnittstelle zum Implementieren von benutzerdefinierten Protokollen.  
-  
+
+.NET Framework unterstützt häufig verwendete Internetanwendungsprotokolle. Dieser Abschnitt enthält Informationen zur Verwendung der [HTTP](http.md)-, [TCP](using-tcp-services.md)- und [UDP](using-udp-services.md)-Protokolle sowie Informationen zur Verwendung der [Windows Sockets](sockets.md)-Schnittstelle zum Implementieren von benutzerdefinierten Protokollen.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Netzwerkprogrammierung in .NET Framework](index.md)

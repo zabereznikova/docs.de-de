@@ -4,12 +4,12 @@ description: Informationen zu den macOS-Versionen, unter denen Sie .NET Core ins
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804449"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308922"
 ---
 # <a name="install-net-core-on-macos"></a>Installieren von .NET Core unter macOS
 
@@ -23,7 +23,8 @@ In diesem Artikel wird erläutert, wie Sie .NET Core unter macOS installieren. .
 
 Version 3.1 ist die aktuelle Version von .NET Core.
 
-[.NET Core herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Unterstützte Versionen
 
@@ -59,13 +60,15 @@ Diese führt ASP.NET Core-Apps aus. Sie umfasst die .NET Core-Runtime.
 *.NET Core-Runtime*\
 Hierbei handelt es sich um die einfachste Runtime, die keine weiteren Runtimes beinhaltet. Es wird dringend empfohlen, dass Sie die *ASP.NET Core-Runtime* installieren, um die bestmögliche Kompatibilität mit .NET Core-Apps zu erzielen.
 
-[.NET Core-Runtime herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core-Runtime herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informationen zum SDK
 
 Das SDK wird zum Erstellen und Veröffentlichen von .NET Core-Apps und -Bibliotheken verwendet. Die Installation des SDK umfasst beide [Runtimes](#runtime-information): ASP.NET Core und .NET Core.
 
-[.NET Core SDK herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core SDK herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>Abhängigkeiten
 

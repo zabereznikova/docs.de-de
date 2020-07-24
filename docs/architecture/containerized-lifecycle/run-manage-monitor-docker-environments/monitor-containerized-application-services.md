@@ -2,12 +2,12 @@
 title: Überwachen von Containeranwendungsdiensten
 description: Lernen Sie einige wichtige Aspekte des Überwachens von Containerarchitekturen kennen.
 ms.date: 02/15/2019
-ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e41df53ad94784436442c3cf7defed3fab510455
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673457"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374441"
 ---
 # <a name="monitor-containerized-application-services"></a>Überwachen von Containeranwendungsdiensten
 
@@ -47,7 +47,7 @@ Azure bietet die Tools, um vier kritische Aspekte Ihrer Cloud- und lokalen Resso
   - Halten Sie Ihre Sicherungsdaten während der Übertragung und im Ruhezustand verschlüsselt.
   - Stellen Sie Zugriff auf der Grundlage von mehrstufiger Authentifizierung sicher, um unberechtigte Nutzung zu verhindern.
 
-- **Lokale Ressourcen**. Mit [einer wirklich konsistenten hybriden Cloudumgebung](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
+- **Lokale Ressourcen**. Mit [Hybrid-Cloud-Lösungen](https://azure.microsoft.com/solutions/hybrid-cloud-app/)
 
 >[!div class="step-by-step"]
 >[Zurück](manage-production-docker-environments.md)

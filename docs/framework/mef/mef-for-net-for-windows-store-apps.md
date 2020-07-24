@@ -1,13 +1,14 @@
 ---
 title: MEF für .NET für Windows Store-Apps
+description: Befassen Sie sich mit den MEF-Namespaces (Managed Extensibility Framework), die Typen zum Entwickeln erweiterbarer Windows 8.x Store-Apps enthalten.
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-ms.openlocfilehash: 3a4c2a2f7f6096794f9ea723eec56aa74f5c44c5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 764c42265ed7523d3581484cc9564b17e9a9b3bd
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802177"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281237"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF für .NET für Windows Store-Apps
 <xref:System.Composition?displayProperty=nameWithType> und die zugehörigen untergeordneten Namespaces enthalten Typen zum Entwickeln erweiterbarer Windows 8.x Store-Apps mithilfe des Managed Extensibility Frameworks (MEF). Diese Namespaces gehören zur .NET-Teilmenge der Windows 8.x Store-Apps für das Betriebssystem Windows 8.  
