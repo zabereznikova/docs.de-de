@@ -2,12 +2,12 @@
 title: Anwendungsveröffentlichung
 description: Erfahren Sie mehr über die Möglichkeiten zum Veröffentlichen einer .NET Core-Anwendung. Mit .NET Core können plattformspezifische oder plattformübergreifende Apps veröffentlicht werden. Sie können eine App als eigenständige oder als Runtime-abhängige App veröffentlichen. Der Modus wirkt sich darauf aus, wie ein Benutzer Ihre App ausführt.
 ms.date: 04/01/2020
-ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
-ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
+ms.openlocfilehash: 201363ad314373ec3be44eb8496f92a8e0c8e418
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665541"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164934"
 ---
 # <a name="net-core-application-publishing-overview"></a>Übersicht über die .NET Core-Anwendungsveröffentlichung
 
@@ -152,6 +152,5 @@ dotnet publish -r win-x64
 
 - [Bereitstellen von .NET Core-Apps mit der .NET Core-CLI](deploy-with-cli.md)
 - [Bereitstellen von .NET Core-Apps mit Visual Studio](deploy-with-vs.md)
-- [Pakete, Metapakete und Frameworks](../packages.md)
 - [.NET Core-RID-Katalog (Runtime Identifier)](../rid-catalog.md)
 - [Auswählen der zu verwendenden .NET Core-Version](../versions/selection.md)
