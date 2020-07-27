@@ -1,16 +1,17 @@
 ---
 title: Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients
+description: Anzeigen einer Steuerelement Muster-Mapping-Tabelle für Benutzeroberflächenautomatisierungs-Clients Aktionen für bestimmte Steuerelement Typen werden möglicherweise unterstützt, bedingt unterstützt oder nicht unterstützt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 689e649343c93d0670c6870098a09f61097f4fb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7673ce4ac88cc36a7c35e2e946a31d23b2ce6eca
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180230"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164179"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -34,18 +35,18 @@ ms.locfileid: "79180230"
   
 |Steuerelementtyp|Unterstützt|Bedingte Unterstützung|Nicht unterstützt|  
 |------------------|---------------|-------------------------|-------------------|  
-|Taste|Keine|Aufrufen, Ein-/ausschalten, Erweitern Reduzieren|Keine|  
-|Kalender|Raster, Tabelle|Auswahl, Scroll|value|  
-|Kontrollkästchen|Ein-/ausschalten|Keine|Keine|  
+|Schaltfläche|Keine|Aufrufen, Ein-/ausschalten, Erweitern Reduzieren|Keine|  
+|Kalender|Raster, Tabelle|Auswahl, Scroll|Wert|  
+|Kontrollkästchen|Ein-/Ausschalten|Keine|Keine|  
 |Kombinationsfeld|Erweitern Reduzieren|Auswahl, Wert|Scroll|  
 |Datentabelle|Raster|Scroll, Auswahl, Tabelle|Keine|  
 |Datenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Scroll-Element, Tabelle, Ein-/ausschalten, Wert|Keine|  
 |Dokument|Text|Scroll, Wert|Keine|  
-|Edit (Bearbeiten)|Keine|Text, Bereichswert, Wert|Keine|  
+|Bearbeiten|Keine|Text, Bereichswert, Wert|Keine|  
 |Group|Keine|Erweitern Reduzieren|Keine|  
 |Header|Keine|Transformieren|Keine|  
 |Headerelement|Keine|Transformation, Aufrufen|Keine|  
-|Link|Invoke|value|Keine|  
+|Hyperlink|Invoke|Wert|Keine|  
 |Image|Keine|Rasterelement, Tabellenelement|Aufrufen, Auswahlelement|  
 |List|Keine|Raster, mehrere Ansichten, Scroll, Auswahl|Tabelle|  
 |Listenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Aufrufen, Ein-/ausschalten, Wert|Keine|  
@@ -54,7 +55,7 @@ ms.locfileid: "79180230"
 |Menübefehl|Keine|Erweitern Reduzieren, Aufrufen, Auswahlelement, Ein-/ausschalten|Keine|  
 |Bereich|Keine|Andocken Scroll, Transformation|Fenster|  
 |Statusanzeige|Keine|Bereichswert, Wert|Keine|  
-|Radio Button|SelectionItem|Keine|Ein-/ausschalten|  
+|Radio Button|SelectionItem|Keine|Ein-/Ausschalten|  
 |Bildlaufleiste|Keine|Bereichswert|Scroll|  
 |Trennzeichen|Keine|Keine|Keine|  
 |Schieberegler|Keine|Bereichswert, Auswahl, Wert|Keine|  
@@ -64,14 +65,14 @@ ms.locfileid: "79180230"
 |Registerkarte|Auswahl|Scroll|Keine|  
 |TabItem|SelectionItem|Keine|Invoke|  
 |Tabelle|Raster, Rasterelement, Tabelle, Tabellenelement|Keine|Keine|  
-|Text|Keine|Rasterelement, Tabellenelement, Text|value|  
+|Text|Keine|Rasterelement, Tabellenelement, Text|Wert|  
 |Ziehpunkt|Transformieren|Keine|Keine|  
 |Titelleiste|Keine|Keine|Keine|  
 |Symbolleiste|Keine|Andocken, Erweitern Reduzieren, Transformation|Keine|  
 |QuickInfo|Keine|Text, Fenster|Keine|  
 |Struktur|Keine|Scroll, Auswahl|Keine|  
 |Strukturelement|Erweitern Reduzieren|Aufrufen, Scroll-Element, Auswahlelement, Ein-/ausschalten|Keine|  
-|Fenster|Transformation, Fenster|Andocken|Keine|  
+|Fenster|Transformation, Fenster|Dock|Keine|  
   
 > [!NOTE]
 > Wenn für einen Steuerelementtyp keine unterstützten Steuerelementmuster aufgeführt sind, es aber über mindestens ein bedingt unterstütztes Steuerelementmuster verfügt, dann wird eines dieser bedingten Steuerelementmuster jederzeit unterstützt.  

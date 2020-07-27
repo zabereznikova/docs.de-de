@@ -1,16 +1,17 @@
 ---
 title: Abrufen von Benutzeroberflächenautomatisierungs-Elementen
+description: Überprüfen Sie verschiedene Möglichkeiten zum Abrufen von Benutzeroberflächenautomatisierungs-Element Objekten (AutomationElement) für Elemente der Benutzeroberfläche (UI).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: eab4e59ee219808a4c0ae9ca5331a14928b66b5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b741dde3b30334ba8fa990d73044da7e3bdd2da
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179997"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168164"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Abrufen von Benutzeroberflächenautomatisierungs-Elementen
 > [!NOTE]
@@ -100,4 +101,4 @@ ms.locfileid: "79179997"
 
 - [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)

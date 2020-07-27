@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127544"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924382"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Verwaltetes und nicht verwaltetes Threading in Windows
 
@@ -23,9 +23,6 @@ Die Verwaltung aller Threads erfolgt über die <xref:System.Threading.Thread> -K
  Wenn ein nicht verwalteter Thread beispielsweise über einen COM Callable Wrapper in die Runtime eintritt, überprüft das System den lokalen Threadspeicher auf ein intern verwaltetes <xref:System.Threading.Thread> -Objekt. Wird eins gefunden, ist der Laufzeit dieser Thread bereits bewusst. Wird keins gefunden, erstellt die Runtime jedoch ein neues <xref:System.Threading.Thread> -Objekt und installiert es im lokalen Threadspeicher dieses Threads.  
   
  Beim verwalteten Threading ist <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> die stabile ID für den verwalteten Thread. Für die Lebensdauer des Threads wird kein Konflikt mit dem Wert eines anderen Threads entstehen, unabhängig von der Anwendungsdomäne, aus der Sie diesen Wert erhalten.  
-  
-> [!NOTE]
-> Eine Betriebssystem- **ThreadId** hat keine feste Beziehung zu einem verwalteten Thread, da ein nicht verwalteter Host die Beziehung zwischen verwalteten und nicht verwalteten Threads steuern kann. Insbesondere kann ein komplexer Host die Fiber-API verwenden, um viele verwaltete mit demselben Betriebssystemthread zu verwalten oder einen verwalteten Thread unter verschiedenen Betriebssystemthreads zu verschieben.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Zuordnen zwischen Win32-Threading und verwaltetem Threading
 
@@ -65,13 +62,13 @@ Ein verwalteter Thread kann gekennzeichnet werden, um anzugeben, dass er ein [Si
   
 ## <a name="blocking-issues"></a>Blockierprobleme  
 
-Wenn ein Thread einen nicht verwalteten Aufruf in der Betriebssystem vornimmt, das den Thread in nicht verwaltetem Code blockiert hat, übernimmt die Laufzeit keine Kontrolle darüber für <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> oder <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Im Fall von <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>kennzeichnet die Laufzeit den Thread für **Abort** und übernimmt die Kontrolle darüber, wenn der verwaltete Code erneut eingegeben wird. Sie sollten vorzugsweise die verwaltete Blockierung statt die nicht verwaltete Blockierung verwenden. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>und so weiter reagieren alle auf <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> und auf <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Wenn sich Ihr Thread in einem Singlethread-Apartment befindet, werden all diese verwalteten Blockierungsvorgänge außerdem Meldungen in Ihr Apartment verschieben, während Ihr Thread blockiert ist.  
+Wenn ein Thread einen nicht verwalteten Aufruf in der Betriebssystem vornimmt, das den Thread in nicht verwaltetem Code blockiert hat, übernimmt die Laufzeit keine Kontrolle darüber für <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> oder <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Im Fall von <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>kennzeichnet die Laufzeit den Thread für **Abort** und übernimmt die Kontrolle darüber, wenn der verwaltete Code erneut eingegeben wird. Sie sollten vorzugsweise die verwaltete Blockierung statt die nicht verwaltete Blockierung verwenden. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> usw. reagieren alle auf <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> und <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Wenn sich Ihr Thread in einem Singlethread-Apartment befindet, werden all diese verwalteten Blockierungsvorgänge außerdem Meldungen in Ihr Apartment verschieben, während Ihr Thread blockiert ist.  
 
 ## <a name="threads-and-fibers"></a>Threads und Fibers
 
 Das .NET-Threadingmodell unterstützt keine [Fibers](/windows/desktop/procthread/fibers). Sie sollten keine nicht verwaltete Funktion aufrufen, die mithilfe von Fibers implementiert wurde. Solche Aufrufe können zu einem Absturz der .NET-Runtime führen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>
 - <xref:System.Threading.ThreadState>

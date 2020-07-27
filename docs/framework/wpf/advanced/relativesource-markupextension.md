@@ -1,5 +1,6 @@
 ---
 title: RelativeSource-Markuperweiterung
+description: Gibt Eigenschaften einer RelativeSource-Bindungs Quelle innerhalb einer Bindungs Markup Erweiterung an oder wenn die RelativeSource-Eigenschaft einer Bindung in XAML festgelegt wird.
 ms.date: 03/30/2017
 f1_keywords:
 - RelativeSource
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 47117d684a981f31e22cf513fc78e1e2dda73f8a
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 2da702d23413651a85b45404e088f6708546cc25
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141267"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165936"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource-Markuperweiterung
 
-Gibt Eigenschaften einer <xref:System.Windows.Data.RelativeSource> Bindungs Quelle an, die innerhalb einer [Bindungs Markup Erweiterung](binding-markup-extension.md)verwendet werden sollen, oder, wenn <xref:System.Windows.Data.Binding.RelativeSource%2A> die-Eigenschaft <xref:System.Windows.Data.Binding> eines in XAML eingerichteten-Elements festgelegt wird.
+Gibt Eigenschaften einer <xref:System.Windows.Data.RelativeSource> Bindungs Quelle an, die innerhalb einer [Bindungs Markup Erweiterung](binding-markup-extension.md)verwendet werden sollen, oder, wenn die- <xref:System.Windows.Data.Binding.RelativeSource%2A> Eigenschaft eines <xref:System.Windows.Data.Binding> in XAML eingerichteten-Elements festgelegt wird.
 
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen
 
@@ -58,30 +59,30 @@ Oder
 
 |||
 |-|-|
-|`modeEnumValue`|Einer der folgenden:<br /><br /> -Das Zeichen folgen `Self`Token; entspricht einer <xref:System.Windows.Data.RelativeSource> , die erstellt wird, <xref:System.Windows.Data.RelativeSource.Mode%2A> wobei die- <xref:System.Windows.Data.RelativeSourceMode.Self>Eigenschaft auf festgelegt ist.<br />-Das Zeichen folgen `TemplatedParent`Token; entspricht einer <xref:System.Windows.Data.RelativeSource> , die erstellt wird, <xref:System.Windows.Data.RelativeSource.Mode%2A> wobei die- <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>Eigenschaft auf festgelegt ist.<br />-Das Zeichen folgen `PreviousData`Token; entspricht einer <xref:System.Windows.Data.RelativeSource> , die erstellt wird, <xref:System.Windows.Data.RelativeSource.Mode%2A> wobei die- <xref:System.Windows.Data.RelativeSourceMode.PreviousData>Eigenschaft auf festgelegt ist.<br />-Weitere Informationen zum `FindAncestor` -Modus finden Sie unten.|
+|`modeEnumValue`|Einer der folgenden:<br /><br /> -Das Zeichen folgen Token `Self` . entspricht einem, das erstellt wird, <xref:System.Windows.Data.RelativeSource> wobei die- <xref:System.Windows.Data.RelativeSource.Mode%2A> Eigenschaft auf festgelegt ist <xref:System.Windows.Data.RelativeSourceMode.Self> .<br />-Das Zeichen folgen Token `TemplatedParent` . entspricht einem, das erstellt wird, <xref:System.Windows.Data.RelativeSource> wobei die- <xref:System.Windows.Data.RelativeSource.Mode%2A> Eigenschaft auf festgelegt ist <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent> .<br />-Das Zeichen folgen Token `PreviousData` . entspricht einem, das erstellt wird, <xref:System.Windows.Data.RelativeSource> wobei die- <xref:System.Windows.Data.RelativeSource.Mode%2A> Eigenschaft auf festgelegt ist <xref:System.Windows.Data.RelativeSourceMode.PreviousData> .<br />-Weitere Informationen zum-Modus finden Sie unten `FindAncestor` .|
 |`FindAncestor`|Die Tokenzeichenfolge `FindAncestor`. Bei Verwendung dieses Tokens wird ein Modus aktiviert, in dem eine `RelativeSource` einen Vorgängertyp und optional eine Vorgängerebene angibt. Dies entspricht einer <xref:System.Windows.Data.RelativeSource>, die mit einer auf <xref:System.Windows.Data.RelativeSource.Mode%2A> festgelegten <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>-Eigenschaft erstellt wurde.|
 |`typeName`|Erforderlich für `FindAncestor`-Modus. Der Name eines Typs, der die <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Eigenschaft auffüllt.|
 |`intLevel`|Optional für `FindAncestor`-Modus. Eine Vorgängerebene (ausgewertet bezüglich der übergeordneten Richtung in der logischen Struktur).|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-`{RelativeSource TemplatedParent}`Bindungs Verwendungen sind eine wichtige Technik, die ein größeres Konzept der Trennung der Benutzeroberfläche eines Steuer Elements und der Logik eines Steuer Elements adressiert. Dies ermöglicht die Bindung aus der Vorlagendefinition mit dem vorlagenbasierten übergeordneten Element (der Laufzeitobjektinstanz, in der die Vorlage angewendet wird). In diesem Fall ist die [TemplateBinding-Markup Erweiterung](templatebinding-markup-extension.md) tatsächlich eine Kurzform für den folgenden Bindungs Ausdruck: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding`die `{RelativeSource TemplatedParent}` -oder-Verwendungen sind sowohl innerhalb des XAML-Codes, der eine Vorlage definiert, nur relevant. Weitere Informationen finden Sie unter [TemplateBinding-Markup Erweiterung](templatebinding-markup-extension.md).
+`{RelativeSource TemplatedParent}`Bindungs Verwendungen sind eine wichtige Technik, die ein größeres Konzept der Trennung der Benutzeroberfläche eines Steuer Elements und der Logik eines Steuer Elements adressiert. Dies ermöglicht die Bindung aus der Vorlagendefinition mit dem vorlagenbasierten übergeordneten Element (der Laufzeitobjektinstanz, in der die Vorlage angewendet wird). In diesem Fall ist die [TemplateBinding-Markup Erweiterung](templatebinding-markup-extension.md) tatsächlich eine Kurzform für den folgenden Bindungs Ausdruck: `{Binding RelativeSource={RelativeSource TemplatedParent}}` . `TemplateBinding`die-oder- `{RelativeSource TemplatedParent}` Verwendungen sind sowohl innerhalb des XAML-Codes, der eine Vorlage definiert, nur relevant. Weitere Informationen finden Sie unter [TemplateBinding-Markup Erweiterung](templatebinding-markup-extension.md).
 
 `{RelativeSource FindAncestor}`wird hauptsächlich in Steuerelement Vorlagen oder vorhersagbaren eigenständigen UI-Kompositionen verwendet, in Fällen, in denen ein Steuerelement immer in einer visuellen Struktur eines bestimmten Vorgänger Typs zu erwarten ist. Beispielsweise können Elemente eines Elementsteuerelements `FindAncestor`-Verwendungen zum Binden an Eigenschaften des übergeordneten Vorgängers des Elementsteuerelements verwenden. Oder Elemente, die Teil der Steuerelementzusammensetzung in einer Vorlage sind, können `FindAncestor`-Bindungen mit übergeordneten Elemente in derselben Kompositionsstruktur verwenden.
 
-In der Objektelementsyntax für den `FindAncestor`-Modus, wie in den XAML-Syntaxabschnitten dargestellt, wird die zweite Objektelementsyntax speziell für den `FindAncestor`-Modus verwendet. Der `FindAncestor`-Modus erfordert einen <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Wert. Sie müssen als <xref:System.Windows.Data.RelativeSource.AncestorType%2A> Attribut festlegen, indem Sie einen [x:Type-Markup Erweiterungs](../../../desktop-wpf/xaml-services/xtype-markup-extension.md) Verweis auf den Typ des übergeordneten Elements festlegen, nach dem gesucht werden soll. Der <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Wert wird verwendet, wenn die Bindungsanforderung zur Laufzeit verarbeitet wird.
+In der Objektelementsyntax für den `FindAncestor`-Modus, wie in den XAML-Syntaxabschnitten dargestellt, wird die zweite Objektelementsyntax speziell für den `FindAncestor`-Modus verwendet. Der `FindAncestor`-Modus erfordert einen <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Wert. Sie müssen <xref:System.Windows.Data.RelativeSource.AncestorType%2A> als Attribut festlegen, indem Sie [einen x:Type-Markup Erweiterungs](../../../desktop-wpf/xaml-services/xtype-markup-extension.md) Verweis auf den Typ des übergeordneten Elements festlegen, nach dem gesucht werden soll. Der <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Wert wird verwendet, wenn die Bindungsanforderung zur Laufzeit verarbeitet wird.
 
 Im `FindAncestor`-Modus kann die optionale Eigenschaft <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> dazu beitragen, die Vorgängersuche in den Fällen eindeutig zu machen, in denen eventuell mehr als ein Vorgänger dieses Typs in der Elementstruktur vorhanden ist.
 
 Weitere Informationen zur Verwendung des `FindAncestor`-Modus finden Sie unter <xref:System.Windows.Data.RelativeSource>.
 
-`{RelativeSource Self}`ist nützlich für Szenarien, in denen eine Eigenschaft einer Instanz von dem Wert einer anderen Eigenschaft derselben Instanz abhängen sollte und keine allgemeine Beziehung der Abhängigkeits Eigenschaft (z. b. Umwandlung) zwischen diesen beiden Eigenschaften vorhanden ist. Obwohl es selten vorkommt, dass zwei Eigenschaften für ein Objekt vorhanden sind, sodass die Werte buchstäblich identisch sind (und identisch typisiert sind), können Sie auch `Converter` einen Parameter auf eine Bindung anwenden `{RelativeSource Self}`, die über verfügt, und den Konverter verwenden, um zwischen Quell-und Zieltyp zu konvertieren. Ein anderes Szenario `{RelativeSource Self}` für ist als Teil von <xref:System.Windows.MultiDataTrigger>.
+`{RelativeSource Self}`ist nützlich für Szenarien, in denen eine Eigenschaft einer Instanz von dem Wert einer anderen Eigenschaft derselben Instanz abhängen sollte und keine allgemeine Beziehung der Abhängigkeits Eigenschaft (z. b. Umwandlung) zwischen diesen beiden Eigenschaften vorhanden ist. Obwohl es selten vorkommt, dass zwei Eigenschaften für ein Objekt vorhanden sind, sodass die Werte buchstäblich identisch sind (und identisch typisiert sind), können Sie auch einen `Converter` Parameter auf eine Bindung anwenden, die über verfügt, `{RelativeSource Self}` und den Konverter verwenden, um zwischen Quell-und Zieltyp zu konvertieren. Ein anderes Szenario für `{RelativeSource Self}` ist als Teil von <xref:System.Windows.MultiDataTrigger> .
 
 Beispielsweise definiert der folgende XAML-Code ein <xref:System.Windows.Shapes.Rectangle>-Element so, dass unabhängig davon, welcher Wert für <xref:System.Windows.FrameworkElement.Width%2A> eingegeben wird, <xref:System.Windows.Shapes.Rectangle> immer ein Quadrat ist: `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`
 
 `{RelativeSource PreviousData}`ist entweder in Datenvorlagen oder in Fällen nützlich, in denen Bindungen eine Auflistung als Datenquelle verwenden. Sie können verwenden `{RelativeSource PreviousData}` , um Beziehungen zwischen benachbarten Datenelementen in der Auflistung hervorzuheben. Eine verwandte Methode besteht darin, eine <xref:System.Windows.Data.MultiBinding> zwischen dem aktuellen und vorherigen Element in der Datenquelle herzustellen und mit einem Konverter für diese Bindung die Differenz zwischen den beiden Elementen und deren Eigenschaften zu ermitteln.
 
-Im folgenden Beispiel zeigt der erste <xref:System.Windows.Controls.TextBlock> in der Elementvorlage die aktuelle Zahl an. Die zweite <xref:System.Windows.Controls.TextBlock> Bindung ist eine <xref:System.Windows.Data.MultiBinding> , die nominale zwei <xref:System.Windows.Data.Binding> Bestandteile hat: der aktuelle Datensatz und eine Bindung, die den vorherigen Daten Satz absichtlich mithilfe `{RelativeSource PreviousData}`von verwendet. Anschließend berechnet ein Konverter in der <xref:System.Windows.Data.MultiBinding> den Unterschied und gibt ihn an die Bindung zurück.
+Im folgenden Beispiel zeigt der erste <xref:System.Windows.Controls.TextBlock> in der Elementvorlage die aktuelle Zahl an. Die zweite <xref:System.Windows.Controls.TextBlock> Bindung ist eine <xref:System.Windows.Data.MultiBinding> , die nominale zwei <xref:System.Windows.Data.Binding> Bestandteile hat: der aktuelle Datensatz und eine Bindung, die den vorherigen Daten Satz absichtlich mithilfe von verwendet `{RelativeSource PreviousData}` . Anschließend berechnet ein Konverter in der <xref:System.Windows.Data.MultiBinding> den Unterschied und gibt ihn an die Bindung zurück.
 
 ```xml
 <ListBox Name="fibolist">
@@ -106,9 +107,9 @@ Im folgenden Beispiel zeigt der erste <xref:System.Windows.Controls.TextBlock> i
 
 Die Beschreibung der Datenbindung als Konzept wird hier nicht behandelt. Informationen hierzu finden Sie unter [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md).
 
-In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML-Prozessor Implementierung wird die Handhabung dieser Markup Erweiterung durch die <xref:System.Windows.Data.RelativeSource> -Klasse definiert.
+In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML-Prozessor Implementierung wird die Handhabung dieser Markup Erweiterung durch die- <xref:System.Windows.Data.RelativeSource> Klasse definiert.
 
-`RelativeSource` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markup Erweiterungen in XAML verwenden die `{` Zeichen `}` und in der Attribut Syntax. dabei handelt es sich um die Konvention, mit der ein XAML-Prozessor erkennt, dass das Attribut von einer Markup Erweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).
+`RelativeSource` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markup Erweiterungen in XAML verwenden die `{` `}` Zeichen und in der Attribut Syntax. dabei handelt es sich um die Konvention, mit der ein XAML-Prozessor erkennt, dass das Attribut von einer Markup Erweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Verweisassemblys, eine spezielle Art von As
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43a9dab037f4d0f1926ff67f8f38eaa6734a6d67
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79141067"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164518"
 ---
 # <a name="reference-assemblies"></a>Verweisassemblys
 
@@ -25,7 +25,7 @@ Darüber hinaus kann eine Referenzassembly einen Vertrag darstellen, d.h. einen 
 
 Um bestimmte APIs aus Ihrem Projekt zu verwenden, müssen Sie Verweise auf deren Assemblys hinzufügen. Sie können Verweise sowohl zu Implementierungsassemblys als auch zu Referenzassemblys hinzufügen. Die Verwendung von Referenzassemblys wird immer empfohlen, wenn sie zur Verfügung stehen. Dadurch können Sie sicherstellen, dass Sie nur die unterstützten API-Mitglieder in der Zielversion verwenden, deren Verwendung von den API-Entwicklern geplant ist. Das Verwenden der Referenzassembly stellt sicher, dass Sie keine Abhängigkeit in Implementierungsdetails einbringen.
 
-Verweisassemblys für .NET Framework-Bibliotheken werden mit Zielpaketen verteilt. Sie können sie abrufen, indem Sie einen eigenständigen Installer herunterladen oder eine Komponente im Visual Studio-Installer auswählen. Weitere Informationen finden Sie unter [Installieren von .NET Framework für Entwickler](../../framework/install/guide-for-developers.md). Für .NET Core und .NET Standard werden Verweisassemblys nach Bedarf automatisch heruntergeladen (über NuGet), und es wird darauf verwiesen. Für .NET Core 3.0 und höher befinden sich die Verweisassemblys für das Kernframework im Paket [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) (das Paket [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) wird stattdessen für Versionen vor 3.0 verwendet). Weitere Informationen finden Sie unter [Pakete, Metapakete und Frameworks](../../core/packages.md) im .NET Core-Leitfaden.
+Verweisassemblys für .NET Framework-Bibliotheken werden mit Zielpaketen verteilt. Sie können sie abrufen, indem Sie einen eigenständigen Installer herunterladen oder eine Komponente im Visual Studio-Installer auswählen. Weitere Informationen finden Sie unter [Installieren von .NET Framework für Entwickler](../../framework/install/guide-for-developers.md). Für .NET Core und .NET Standard werden Verweisassemblys nach Bedarf automatisch heruntergeladen (über NuGet), und es wird darauf verwiesen. Für .NET Core 3.0 und höher befinden sich die Verweisassemblys für das Kernframework im Paket [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) (das Paket [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) wird stattdessen für Versionen vor 3.0 verwendet).
 
 Wenn Sie in Visual Studio über das Dialogfeld **Verweis hinzufügen** Verweise auf .NET-Framework-Assemblys hinzufügen, wählen Sie eine Assembly aus der Liste aus, und Visual Studio ermittelt automatisch Verweisassemblys, die der in Ihrem Projekt ausgewählten Zielframeworkversion entsprechen. Dasselbe gilt für das direkte Hinzufügen von Verweisen im MSBuild-Projekt mit dem Projektelement [Reference](/visualstudio/msbuild/common-msbuild-project-items#reference): Sie müssen nur den Assemblynamen angeben, nicht den vollständigen Dateipfad. Wenn Sie in der Befehlszeile Verweise auf diese Assemblys mit der Compileroption `-reference` ([in C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) und [in Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) oder mit der Methode <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> in der Roslyn-API hinzufügen, müssen Sie manuell Verweisassemblydateien für die richtige Zielplattformversion angeben. .NET Framework-Verweisassemblydateien befinden sich im Verzeichnis *%ProgramFiles (x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework*. Für .NET Core können Sie erzwingen, dass der Veröffentlichungsvorgang Verweisassemblys für Ihre Zielplattform in das Unterverzeichnis *publish/refs* des Ausgabeverzeichnisses kopiert, indem Sie die `PreserveCompilationContext`-Projekteigenschaft auf `true` festlegen. Anschließend können Sie diese Verweisassemblydateien an den Compiler übergeben. Die Verwendung von `DependencyContext` aus dem Paket [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) kann helfen, ihre Pfade zu ermitteln.
 

@@ -1,17 +1,18 @@
 ---
 title: Implementieren des Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung
+description: Informationen zu Richtlinien und Konventionen für das Implementieren des GridPattern Grid-Steuerelement Musters in der Benutzeroberflächen Automatisierung. Erfahren Sie, wie Sie die IGridProvider-Schnittstelle implementieren.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 04f3ee1e01054df6a13ab2391e14a6a7f7274bb9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7aae8e8070c989c4b36e0581aa5f48f51416f97
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180213"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165875"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementieren des Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -46,7 +47,7 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
 ## <a name="required-members-for-igridprovider"></a>Erforderliche Member für IGridProvider  
  Zum Implementieren der IGridProvider-Schnittstelle werden die folgenden Eigenschaften und Methoden benötigt.  
   
-|Erforderliche Member|type|Notizen|  
+|Erforderliche Member|type|Hinweise|  
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Eigenschaft|Keine|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Eigenschaft|Keine|  
@@ -60,8 +61,8 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - Wenn die angeforderte Zeilenkoordinate größer als <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> die <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>oder die Spaltenkoordinate größer als die ist.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - Wenn eine der angeforderten Zeilen- oder Spaltenkoordinaten kleiner als Null ist.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -, Wenn die angeforderte Zeilen Koordinate größer als ist <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> oder die Spalten Koordinate größer als ist <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> .|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -, Wenn eine der angeforderten Zeilen-oder Spalten Koordinaten kleiner als 0 (null) ist.|  
   
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -69,5 +70,5 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
 - [Implementieren des GridItem-Steuerelementmusters der Benutzeroberflächenautomatisierung](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)

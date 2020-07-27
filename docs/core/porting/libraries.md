@@ -3,12 +3,12 @@ title: Portieren von Bibliotheken auf .NET Core
 description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NET Core portieren.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac9da2f850bf1e4e36367ad2154849a0c7efd535
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397908"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164293"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portieren von .NET Framework-Bibliotheken auf .NET Core
 
@@ -26,9 +26,6 @@ Sie sollten sich auch mit dem Inhalten in den folgenden Artikeln vertraut machen
 
 [.NET-Standard](../../standard/net-standard.md)\
 Dieser Artikel beschreibt die formale Spezifikation von .NET-APIs, die in allen .NET-Implementierungen verfügbar sein sollen.
-
-[Pakete, Metapakete und Frameworks](../packages.md)\
-In diesem Artikel wird erläutert, wie .NET Core Pakete definiert und verwendet und wie Pakete Code unterstützen, der in mehreren .NET-Implementierungen ausgeführt wird.
 
 [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](../tutorials/libraries.md)\
 Dieser Artikel erläutert, wie Sie mithilfe der .NET Core-CLI Bibliotheken schreiben.

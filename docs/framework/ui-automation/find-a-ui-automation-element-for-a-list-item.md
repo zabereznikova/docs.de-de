@@ -1,5 +1,6 @@
 ---
 title: Suchen eines Benutzeroberflächenautomatisierungs-Elements für ein Listenelement
+description: Sehen Sie sich ein Beispiel an, das zeigt, wie Sie ein Benutzeroberflächenautomatisierungs-Element für ein Listenelement suchen, wenn der Index des Elements bekannt ist.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +10,27 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 2474edf95bf598ba9284b5f6ac36a9e0af1317a1
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ec6464bc0ec504fd34ed113c9bed1a54a7d4eaec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741756"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168404"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>Suchen eines Benutzeroberflächenautomatisierungs-Elements für ein Listenelement
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
- In diesem Thema wird gezeigt, wie ein <xref:System.Windows.Automation.AutomationElement> für ein Element in einer Liste abgerufen wird, wenn der Index des Elements bekannt ist.  
+ In diesem Thema wird gezeigt, wie ein- <xref:System.Windows.Automation.AutomationElement> Objekt für ein Element in einer Liste abgerufen wird, wenn der Index des Elements bekannt ist.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt zwei Möglichkeiten, ein angegebenes Element aus einer Liste abzurufen, wobei ein Element <xref:System.Windows.Automation.TreeWalker> und das andere mithilfe <xref:System.Windows.Automation.AutomationElement.FindAll%2A>verwendet wird.  
+ Das folgende Beispiel zeigt zwei Möglichkeiten, ein angegebenes Element aus einer Liste abzurufen, wobei eine mit <xref:System.Windows.Automation.TreeWalker> und die andere mithilfe von verwendet wird <xref:System.Windows.Automation.AutomationElement.FindAll%2A> .  
   
  Das erste Verfahren ist tendenziell für Win32-Steuerelemente schneller, aber das zweite ist schneller für Windows Presentation Foundation (WPF)-Steuerelemente.  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abrufen von Benutzeroberflächenautomatisierungs-Elementen](obtaining-ui-automation-elements.md)

@@ -1,17 +1,18 @@
 ---
 title: Benutzeroberflächenautomatisierungs-Unterstützung für den Group-Steuerelementtyp
+description: Informationen zur Benutzeroberflächenautomatisierungs-Unterstützung für den Gruppen Steuerelement-Typ. Erlernen Sie die erforderliche Struktur, Eigenschaften, Steuerelement Muster und Ereignisse.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Group control type
 - Group control type
 - control types, Group
 ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
-ms.openlocfilehash: 3044461d6d8cd157c06c48f236e1c13005774d00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d635e33cf192a388dea65cf614b250e93f6703f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179745"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167910"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Group-Steuerelementtyp
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179745"
   
  Das Gruppensteuerelement stellt einen Knoten innerhalb einer Hierarchie dar. Der Steuerelementtyp „Group“ erstellt eine Trennung in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, sodass gruppierte Elemente eine logische Unterteilung innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur aufweisen.  
   
- In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Group“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen gelten für alle [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Gruppensteuerelemente, ob , Win32 oder Windows Forms.  
+ In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Group“ erforderlich sind. Die- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen gelten für alle Gruppen Steuerelemente, ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 oder Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Erforderliche Benutzeroberflächenautomatisierungs-Struktur  
@@ -29,15 +30,15 @@ ms.locfileid: "79179745"
   
 |Steuerelementansicht|Inhaltsansicht|  
 |------------------|------------------|  
-|Group<br /><br /> - 0 oder viele Steuerelemente|Group<br /><br /> - 0 oder viele Steuerelemente|  
+|Group<br /><br /> -0 oder viele Steuerelemente|Group<br /><br /> -0 oder viele Steuerelemente|  
   
- In der Regel verfügen Gruppensteuerelemente über die [Benutzeroberflächenautomatisierungsunterstützung für den ListItem-Steuerelementtyp](ui-automation-support-for-the-listitem-control-type.md), die [BENUTZERautomatisierungsunterstützung für den TreeItem-Steuerelementtyp](ui-automation-support-for-the-treeitem-control-type.md)oder die [Benutzeroberflächenautomatisierungsunterstützung für die DataItem-Steuerelementtypsteuerungstypen,](ui-automation-support-for-the-dataitem-control-type.md) die in der Unterstruktur darunter enthalten sind. Da es sich bei „Group“ um einen generischen Container handelt, kann sich in der Struktur unter dem Group-Steuerelement jeder Typ von Steuerelement befinden.  
+ Gruppen Steuerelemente verfügen in der Regel über die Benutzeroberflächenautomatisierungs- [Unterstützung für den Steuer Elementtyp "ListItem](ui-automation-support-for-the-listitem-control-type.md)", die Benutzeroberflächenautomatisierungs- [Unterstützung für den TreeItem-Steuer Elementtyp](ui-automation-support-for-the-treeitem-control-type.md)oder die [Benutzeroberflächenautomatisierungs-Unterstützung für die](ui-automation-support-for-the-dataitem-control-type.md) Steuerelement Typen "DataItem Da es sich bei „Group“ um einen generischen Container handelt, kann sich in der Struktur unter dem Group-Steuerelement jeder Typ von Steuerelement befinden.  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für Gruppensteuerelemente besonders relevant sind. Weitere Informationen zu Eigenschaften [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -finden Sie unter [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|value|Notizen|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
@@ -47,8 +48,8 @@ ms.locfileid: "79179745"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Siehe Hinweise.|Gruppensteuerelemente sind in der Regel selbstbezeichnend. Wenn dies der Fall ist, wird hier `null` zurückgegeben. Wenn für die Gruppe eine statische Textbezeichnung vorhanden ist, muss diese Bezeichnung als Wert der Eigenschaft „LabeledBy“ zurückgegeben werden.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Group|Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Gruppe“|Lokalisierte Zeichenfolge für den Steuerelementtyp „Group“.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Das Gruppensteuerelement ist stets in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur enthalten.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Das Gruppensteuerelement ist stets in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur enthalten.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Richtig|Das Gruppensteuerelement ist stets in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur enthalten.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Richtig|Das Gruppensteuerelement ist stets in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur enthalten.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
 ## <a name="required-ui-automation-control-patterns"></a>Erforderliche Benutzeroberflächenautomatisierungs-Steuerelementmuster  

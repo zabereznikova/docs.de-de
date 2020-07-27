@@ -1,15 +1,16 @@
 ---
 title: Kategorien von Steuerelementen
+description: Überprüfen Sie Windows Presentation Foundation in Kategorien gruppierte Steuerelemente, die Ihnen helfen können, das entsprechende Steuerelement durch Vergleichen ähnlicher Steuerelemente auszuwählen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 226e037dc26f817b96a5aa869565f08ee6ff6574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636210"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166289"
 ---
 # <a name="controls-by-category"></a>Kategorien von Steuerelementen
 WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschiedene Kategorien eingeteilt werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
@@ -56,7 +57,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Schaltflächen  
- Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen führen in der Regel eine Aufgabe im <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis aus, wenn ein Benutzer darauf klickt.  
+ Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen führen in der Regel eine Aufgabe im Ereignis aus, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Wenn ein Benutzer darauf klickt.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -87,7 +88,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
   
 - <xref:System.Windows.Controls.ToolBar>  
   
-## <a name="selection"></a>Markierung  
+## <a name="selection"></a>Auswahl  
  Auswahlsteuerelemente werden verwendet, damit Benutzer eine oder mehrere Optionen auswählen können.  
   
 - <xref:System.Windows.Controls.CheckBox>  
@@ -100,7 +101,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>-Navigation  
+## <a name="navigation"></a>Navigation  
  Navigationssteuerelemente verbessern oder erweitern die Anwendungsnavigation mithilfe von Zielframes oder Registerkarten.  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -152,7 +153,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Input  
+## <a name="input"></a>Eingabe  
  Eingabesteuerelemente ermöglichen dem Benutzer die Eingabe von Text und anderem Inhalt.  
   
 - <xref:System.Windows.Controls.TextBox>  
@@ -177,6 +178,6 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Steuerelementbibliothek](control-library.md)

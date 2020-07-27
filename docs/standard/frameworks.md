@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Zielframeworks für .NET Core-Anwendungen u
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1fd3a6fe07526d9f6828851c591ed0155c79a19
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398796"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164297"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Zielframeworks in Projekten im SDK-Format
 
@@ -129,7 +129,6 @@ Die folgenden Zielframeworks sind veraltet. Pakete, die für diese Zielframework
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Pakete, Metapakete und Frameworks](../core/packages.md)
 - [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](../core/tutorials/libraries.md)
 - [.NET-Standard](net-standard.md)
 - [.NET Core-Versionskontrolle](../core/versions/index.md)

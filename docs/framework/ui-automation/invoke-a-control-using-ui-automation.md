@@ -1,5 +1,6 @@
 ---
 title: Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung
+description: Verwenden Sie die Benutzeroberflächen Automatisierung, um ein Steuerelement zu finden, das bestimmten Eigenschafts Bedingungen entspricht, erstellen Sie ein AutomationElement, rufen Sie ein InvokePattern ab, und verwenden Sie den Aufruf
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-ms.openlocfilehash: e1b489e8daaaf9f5b8c0cb46374fa54bf165d49c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2347a620aab848bf6bcc649a9780aa5a3a520822
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447000"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168177"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -38,6 +39,6 @@ ms.locfileid: "74447000"
 [!code-csharp[InvokePatternApp#1102](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1102)]
 [!code-vb[InvokePatternApp#1102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1102)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [InvokePattern, expandredusepattern und TogglePattern (Beispiel)](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

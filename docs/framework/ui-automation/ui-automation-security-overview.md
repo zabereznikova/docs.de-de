@@ -1,16 +1,17 @@
 ---
 title: Übersicht über die Benutzeroberflächenautomatisierungs-Sicherheit
+description: Lesen Sie eine Übersicht über das Sicherheitsmodell für Microsoft UI Automation. Verstehen Sie die Benutzerkontensteuerung, Aufgaben, die höhere Berechtigungen erfordern, und Manifestressourcen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: 70d24c3dcc531abcec6d4dce75b5f0b31757e0c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d483f282db8ce8e5653d6d83361fa44df05f63f5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448771"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163138"
 ---
 # <a name="ui-automation-security-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Sicherheit
 
@@ -41,7 +42,7 @@ Damit sie für den Datenaustausch mit Anwendungen, die mit höheren Berechtigung
 
 ## <a name="manifest-files"></a>Manifestdateien
 
-Für den Zugriff auf die Benutzeroberfläche des geschützten Systems müssen Anwendungen wie folgt mit einer Manifest-Datei erstellt werden, die das `uiAccess`-Attribut im `requestedExecutionLevel`-Tag enthält:
+Für den Zugriff auf die Benutzeroberfläche des geschützten Systems müssen Anwendungen wie folgt mit einer Manifest-Datei erstellt werden, die das- `uiAccess` Attribut im- `requestedExecutionLevel` Tag enthält:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,4 +58,4 @@ Für den Zugriff auf die Benutzeroberfläche des geschützten Systems müssen An
 
 Der Wert des `level` -Attributs in diesem Code stellt nur ein Beispiel dar.
 
-`uiAccess` ist standardmäßig "false". Das heißt, wenn das Attribut ausgelassen wird oder kein Manifest für die Assembly vorhanden ist, kann die Anwendung keinen Zugriff auf die geschützte Benutzeroberfläche erhalten.
+`uiAccess`ist standardmäßig "false"; Das heißt, wenn das Attribut ausgelassen wird oder kein Manifest für die Assembly vorhanden ist, kann die Anwendung keinen Zugriff auf die geschützte Benutzeroberfläche erhalten.

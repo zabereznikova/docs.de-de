@@ -1,5 +1,6 @@
 ---
-title: 'Vorgehensweise: Ändern des Cursortyps'
+title: 'Gewusst wie: Ändern des Cursortyps'
+description: Ändern Sie den Mauszeiger Cursor für ein Element und für eine Anwendung in Windows Presentation Foundation. Dieses Beispiel besteht aus XAML und einer Code Behind-Datei.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +9,30 @@ helpviewer_keywords:
 - mouse pointer [WPF], cursor type
 - cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
-ms.openlocfilehash: 5c9e6931f6addb62a51e44b06a159d4e7b1e5f8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce0bc290948a0e52e85f76ceb62a330b49fd87ea
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776674"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165960"
 ---
-# <a name="how-to-change-the-cursor-type"></a>Vorgehensweise: Ändern des Cursortyps
-Dieses Beispiel zeigt, wie Sie ändern die <xref:System.Windows.Input.Cursor> des Mauszeigers für ein bestimmtes Element, und für die Anwendung.  
+# <a name="how-to-change-the-cursor-type"></a>Gewusst wie: Ändern des Cursortyps
+In diesem Beispiel wird gezeigt, wie der <xref:System.Windows.Input.Cursor> des Mauszeigers für ein bestimmtes Element und für die Anwendung geändert wird.  
   
- In diesem Beispiel besteht aus einem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] -Datei und eine CodeBehind-Datei.  
+ Dieses Beispiel besteht aus einer [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Datei und einer Code Behind-Datei.  
   
 ## <a name="example"></a>Beispiel  
- Die Benutzeroberfläche wird erstellt, die besteht aus einer <xref:System.Windows.Controls.ComboBox> , wählen Sie die gewünschte <xref:System.Windows.Input.Cursor>, ein Paar von <xref:System.Windows.Controls.RadioButton> zu bestimmen, ob die Cursor Änderung für nur ein einzelnes Element gilt oder für die gesamte Anwendung gilt Objekte und eine <xref:System.Windows.Controls.Border> Hierbei handelt es sich um das Element, dem auf der neue Cursor angewendet wird.  
+ Die Benutzeroberfläche wird erstellt. Diese besteht aus einem <xref:System.Windows.Controls.ComboBox> zum Auswählen der gewünschten <xref:System.Windows.Input.Cursor> , einem Paar von- <xref:System.Windows.Controls.RadioButton> Objekten, um zu bestimmen, ob die Cursor Änderung nur auf ein einzelnes Element angewendet wird oder auf die gesamte Anwendung angewendet wird, und ein-Element, auf das das Element angewendet wird, auf das <xref:System.Windows.Controls.Border> der neue Cursor angewendet wird.  
   
  [!code-xaml[cursors#ChangeCursorsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml#changecursorsxaml)]  
   
- Hinter der folgende Code erstellt eine <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> -Ereignishandler, der aufgerufen wird, wenn der Cursortyp, in geändert wurde der <xref:System.Windows.Controls.ComboBox>.  Eine Switch-Anweisung filtert auf den Cursornamen und legt die <xref:System.Windows.FrameworkElement.Cursor%2A> Eigenschaft für die <xref:System.Windows.Controls.Border> mit dem Namen *DisplayArea*.  
+ Der folgende Code Behind erstellt einen- <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> Ereignishandler, der aufgerufen wird, wenn der Cursortyp in geändert wird <xref:System.Windows.Controls.ComboBox> .  Eine Switch-Anweisung filtert nach dem Cursor Namen und legt die- <xref:System.Windows.FrameworkElement.Cursor%2A> Eigenschaft auf dem-Objekt fest <xref:System.Windows.Controls.Border> , das den Namen *DisplayArea*hat.  
   
- Wenn die Änderung der Cursor auf "Gesamte Anwendung" festgelegt ist die <xref:System.Windows.Input.Mouse.OverrideCursor%2A> -Eigenschaftensatz auf die <xref:System.Windows.FrameworkElement.Cursor%2A> Eigenschaft der <xref:System.Windows.Controls.Border> Steuerelement.  Dies zwingt den Cursor für die gesamte Anwendung zu ändern.  
+ Wenn die Cursor Änderung auf "gesamte Anwendung" festgelegt ist, <xref:System.Windows.Input.Mouse.OverrideCursor%2A> wird die-Eigenschaft auf die-Eigenschaft des-Steuer Elements festgelegt <xref:System.Windows.FrameworkElement.Cursor%2A> <xref:System.Windows.Controls.Border> .  Dadurch wird erzwungen, dass der Cursor für die gesamte Anwendung geändert wird.  
   
  [!code-csharp[cursors#ChangeCursorsSample](~/samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml.cs#changecursorssample)]
  [!code-vb[cursors#ChangeCursorsSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/cursors/VisualBasic/Window1.xaml.vb#changecursorssample)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über die Eingabe](input-overview.md)

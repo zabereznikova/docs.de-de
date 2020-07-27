@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289472"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924577"
 ---
 # <a name="model-builder-azure-training-resources"></a>Azure-Trainingsressourcen für den Modellgenerator
 
@@ -56,7 +56,7 @@ Folgendes ist erforderlich, um einen Azure Machine Learning-Arbeitsbereich zu er
 
 ## <a name="training"></a>Aus- und Weiterbildung
 
-Das Training in Azure ist nur für das Bildklassifizierungsszenario für den Modellgenerator verfügbar. Der zum Trainieren dieses Modells verwendete Algorithmus ist ein Deep Neural Network und basiert auf der ResNet50-Architektur. Der Trainingsprozess nimmt einige Zeit in Anspruch. Diese Zeitspanne kann je nach Computegröße und Datenmenge variieren. Wenn ein Modell zum ersten Mal trainiert wird, können Sie eine etwas längere Trainingszeit erwarten, da erst Ressourcen bereitgestellt werden müssen. Sie können den Status Ihrer Ausführung verfolgen, indem Sie den Link „Monitor current run in Azure portal“ (Aktuelle Ausführung im Azure-Portal verfolgen) in Visual Studio auswählen.
+Das Training in Azure ist nur für das Bildklassifizierungsszenario für den Modellgenerator verfügbar. Der zum Trainieren dieses Modells verwendete Algorithmus ist ein Deep Neural Network und basiert auf der ResNet50-Architektur. Der Trainingsprozess nimmt einige Zeit in Anspruch. Diese Zeitspanne kann je nach Computegröße und Datenmenge variieren. Sie können den Status Ihrer Ausführung verfolgen, indem Sie den Link „Monitor current run in Azure portal“ (Aktuelle Ausführung im Azure-Portal verfolgen) in Visual Studio auswählen.
 
 ## <a name="results"></a>Ergebnisse
 

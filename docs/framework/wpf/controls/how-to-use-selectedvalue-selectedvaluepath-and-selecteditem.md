@@ -1,5 +1,6 @@
 ---
-title: 'Vorgehensweise: Verwendung von SelectedValue, SelectedValuePath und SelectedItem'
+title: 'Gewusst wie: Verwendung von SelectedValue, SelectedValuePath und SelectedItem'
+description: Erfahren Sie, wie Sie mit den Eigenschaften SelectedValue und SelectedValuePath einen Wert für das SelectedItem-Element einer Windows Presentation Foundation TreeView angeben.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], SelectedValue properties
@@ -12,34 +13,34 @@ helpviewer_keywords:
 - Control class [WPF], SelectedValuePath properties
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
-ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddac2455dee0bf69d25307340eddd5364e43e823
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699135"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166272"
 ---
-# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Vorgehensweise: Verwendung von SelectedValue, SelectedValuePath und SelectedItem
-Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.TreeView.SelectedValue%2A> und <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> Eigenschaften, die einen Wert für die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> von einem <xref:System.Windows.Controls.TreeView>.  
+# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Gewusst wie: Verwendung von SelectedValue, SelectedValuePath und SelectedItem
+In diesem Beispiel wird gezeigt, wie die-Eigenschaft und die-Eigenschaft verwendet werden <xref:System.Windows.Controls.TreeView.SelectedValue%2A> <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> , um einen Wert für den einer anzugeben <xref:System.Windows.Controls.TreeView.SelectedItem%2A> <xref:System.Windows.Controls.TreeView> .  
   
 ## <a name="example"></a>Beispiel  
- Die <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> Eigenschaft bietet eine Möglichkeit zum Angeben einer <xref:System.Windows.Controls.TreeView.SelectedValue%2A> für die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> in eine <xref:System.Windows.Controls.TreeView>. Die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> stellt ein Objekt in der <xref:System.Windows.Controls.ItemsControl.Items%2A> Auflistung und die <xref:System.Windows.Controls.TreeView> zeigt den Wert einer einzelnen Eigenschaft des ausgewählten Elements. Die <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> -Eigenschaft gibt den Pfad der Eigenschaft, die verwendet wird, um zu bestimmen, den Wert des der <xref:System.Windows.Controls.TreeView.SelectedValue%2A> Eigenschaft. In die Beispielen in diesem Thema veranschaulichen dieses Konzept.  
+ Die- <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> Eigenschaft stellt eine Möglichkeit zum Angeben eines <xref:System.Windows.Controls.TreeView.SelectedValue%2A> für den <xref:System.Windows.Controls.TreeView.SelectedItem%2A> in einer bereit <xref:System.Windows.Controls.TreeView> . <xref:System.Windows.Controls.TreeView.SelectedItem%2A>Stellt ein Objekt in der Auflistung dar <xref:System.Windows.Controls.ItemsControl.Items%2A> und <xref:System.Windows.Controls.TreeView> zeigt den Wert einer einzelnen Eigenschaft des ausgewählten Elements an. Die- <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> Eigenschaft gibt den Pfad zu der Eigenschaft an, die verwendet wird, um den Wert der-Eigenschaft zu bestimmen <xref:System.Windows.Controls.TreeView.SelectedValue%2A> . In den Beispielen in diesem Thema wird dieses Konzept veranschaulicht.  
   
- Das folgende Beispiel zeigt eine <xref:System.Windows.Data.XmlDataProvider> , die Mitarbeiterinformationen enthält.  
+ Das folgende Beispiel zeigt eine <xref:System.Windows.Data.XmlDataProvider> , die Mitarbeiter Informationen enthält.  
   
  [!code-xaml[TreeViewSelectedValue#XMLDataProvider](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#xmldataprovider)]  
   
- Das folgende Beispiel definiert eine <xref:System.Windows.HierarchicalDataTemplate> angezeigt, die die `EmployeeName` und `EmployeeWorkDay` von der `Employee`. Beachten Sie, dass die <xref:System.Windows.HierarchicalDataTemplate> gibt keinen der `EmployeeNumber` als Teil der Vorlage.  
+ Im folgenden Beispiel wird eine definiert <xref:System.Windows.HierarchicalDataTemplate> , `EmployeeName` mit der und der angezeigt werden `EmployeeWorkDay` `Employee` . Beachten Sie, dass die <xref:System.Windows.HierarchicalDataTemplate> nicht `EmployeeNumber` als Teil der Vorlage angibt.  
   
  [!code-xaml[TreeViewSelectedValue#HierarchicalDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#hierarchicaldatatemplate)]  
   
- Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.TreeView> , verwendet die zuvor definierte <xref:System.Windows.HierarchicalDataTemplate> und legt sie fest, die die <xref:System.Windows.Controls.TreeView.SelectedValue%2A> Eigenschaft, um die `EmployeeNumber`. Bei der Auswahl einer `EmployeeName` in die <xref:System.Windows.Controls.TreeView>, <xref:System.Windows.Controls.TreeView.SelectedItem%2A> -Eigenschaft gibt die `EmployeeInfo` Datenelement, das dem ausgewählten `EmployeeName`. Allerdings da die <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> dieses <xref:System.Windows.Controls.TreeView> ist eingestellt auf `EmployeeNumber`, <xref:System.Windows.Controls.TreeView.SelectedValue%2A> ist eingestellt auf der `EmployeeNumber`.  
+ Das folgende Beispiel zeigt einen <xref:System.Windows.Controls.TreeView> , der den zuvor definierten verwendet <xref:System.Windows.HierarchicalDataTemplate> und die- <xref:System.Windows.Controls.TreeView.SelectedValue%2A> Eigenschaft auf festlegt `EmployeeNumber` . Wenn Sie ein `EmployeeName` in der auswählen <xref:System.Windows.Controls.TreeView> , gibt die- <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Eigenschaft das `EmployeeInfo` Datenelement zurück, das dem ausgewählten entspricht `EmployeeName` . Da jedoch <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> <xref:System.Windows.Controls.TreeView> auf festgelegt ist `EmployeeNumber` , <xref:System.Windows.Controls.TreeView.SelectedValue%2A> wird der auf festgelegt `EmployeeNumber` .  
   
  [!code-xaml[TreeViewSelectedValue#SelectedValuePath](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#selectedvaluepath)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
 - [Übersicht über TreeView](treeview-overview.md)
-- [Themen zu Vorgehensweisen](treeview-how-to-topics.md)
+- [Artikel zu Vorgehensweisen](treeview-how-to-topics.md)

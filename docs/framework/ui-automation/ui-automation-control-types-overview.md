@@ -1,16 +1,17 @@
 ---
 title: Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung
+description: Lesen Sie eine Übersicht über Steuerelement Typen der Benutzeroberflächen Automatisierung, bei denen es sich um bekannte Bezeichner handelt, die verwendet werden können, um anzugeben, welche Art von Steuerelement ein Element darstellt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: 643c89e8f6c5e34aa1fb3c5c7c6c750c72046277
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 204e950fca74c4f7bd2c13dc8a8891152954c071
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179932"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166128"
 ---
 # <a name="ui-automation-control-types-overview"></a>Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -58,11 +59,11 @@ ms.locfileid: "79179932"
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den HeaderItem-Steuerelementtyp](ui-automation-support-for-the-headeritem-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Link-Steuerelementtyp](ui-automation-support-for-the-hyperlink-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Hyperlink-Steuerelementtyp](ui-automation-support-for-the-hyperlink-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den Bild-Steuerelementtyp](ui-automation-support-for-the-image-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Listen-Steuerelementtyp](ui-automation-support-for-the-list-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den List-Steuerelementtyp](ui-automation-support-for-the-list-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den ListItem-Steuerelementtyp](ui-automation-support-for-the-listitem-control-type.md)  
   
@@ -72,7 +73,7 @@ ms.locfileid: "79179932"
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den MenuItem-Steuerelementtyp](ui-automation-support-for-the-menuitem-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Bereich-Steuerelementtyp](ui-automation-support-for-the-pane-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Pane-Steuerelementtyp](ui-automation-support-for-the-pane-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den ProgressBar-Steuerelementtyp](ui-automation-support-for-the-progressbar-control-type.md)  
   

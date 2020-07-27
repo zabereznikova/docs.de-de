@@ -1,22 +1,23 @@
 ---
 title: Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente
+description: Hier finden Sie Informationen zur Benutzeroberflächenautomatisierungs-Unterstützung für Standard Steuerelemente in Anwendungen, die für Windows Presentation Foundation (WPF), Win32 und Windows Forms entwickelt wurden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 36028d589e98177f6a0e83092edd656860b1a8d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17916a6978008439e91caae00d8b6f26045f9018
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179848"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166116"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
- Dieses Thema enthält [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Informationen zur Unterstützung von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]Standardsteuerelementen in Anwendungen, die für die , Win32- und Windows Forms-Frameworks entwickelt wurden.  
+ Dieses Thema enthält Informationen zur- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Unterstützung für Standard Steuerelemente in Anwendungen, die für die [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Frameworks, Win32 und Windows Forms entwickelt wurden.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>
 ## <a name="windows-presentation-foundation-controls"></a>WPF-Steuerelemente (Windows Presentation Foundation)  
@@ -24,7 +25,7 @@ ms.locfileid: "79179848"
   
 <a name="Win32_Controls"></a>
 ## <a name="win32-controls"></a>Win32-Steuerelemente  
- Die meisten Win32-Steuerelemente werden [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] über clientseitige Anbieter in UIAutomationClientsideProviders.dll verfügbar gemacht. Diese Assembly wird automatisch für die Verwendung mit Benutzeroberflächenautomatisierungs-Clientanwendungen registriert.  
+ Die meisten Win32-Steuerelemente werden [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] über Client seitige Anbieter in UIAutomationClientsideProviders.dll bereitgestellt. Diese Assembly wird automatisch für die Verwendung mit Benutzeroberflächenautomatisierungs-Clientanwendungen registriert.  
   
  Vollständige Unterstützung wird nur für Steuerelemente ab Version 6 von *ComCtrl32.dll*bereitgestellt.  
   
@@ -32,26 +33,26 @@ ms.locfileid: "79179848"
   
 |Klassenname|Steuerelementtyp|  
 |----------------|------------------|  
-|Taste|Taste|  
-|Taste|RadioButton|  
-|Taste|Group|  
-|Taste|CheckBox|  
-|Taste|Link|  
-|Taste|SplitButton|  
-|Taste|CheckBox|  
-|ComboBoxEx32|Kombinationsfeld|  
-|Kombinationsfeld|Kombinationsfeld|  
-|Edit (Bearbeiten)|Dokument|  
-|Edit (Bearbeiten)|Edit (Bearbeiten)|  
-|SysLink|Link|  
+|Schaltfläche|Schaltfläche|  
+|Schaltfläche|RadioButton|  
+|Schaltfläche|Group|  
+|Schaltfläche|CheckBox|  
+|Schaltfläche|Hyperlink|  
+|Schaltfläche|SplitButton|  
+|Schaltfläche|CheckBox|  
+|ComboBoxEx32|ComboBox|  
+|ComboBox|ComboBox|  
+|Bearbeiten|Dokument|  
+|Bearbeiten|Bearbeiten|  
+|SysLink|Hyperlink|  
 |statischen|Text|  
 |statischen|Image|  
 |SysIPAddress32|Benutzerdefiniert|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|List|  
-|Listenfeld|List|  
-|Listenfeld|ListItem|  
+|ListBox|List|  
+|ListBox|ListItem|  
 |#32768|Menü|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
@@ -67,7 +68,7 @@ ms.locfileid: "79179848"
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
-|ToolbarWindow32|Taste|  
+|ToolbarWindow32|Schaltfläche|  
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
 |ToolbarWindow32|Trennzeichen|  
@@ -77,7 +78,7 @@ ms.locfileid: "79179848"
 |SysTreeView32|Struktur|  
 |SysTreeView32|TreeItem|  
   
- **Hinweis** Das RichEdit-Steuerelement wird nur für Versionen unterstützt, die mit Windows Vista ausgeliefert werden (in RichEd20.dll Version 3.1 und höher und MsftEdit.dll Version 4.1 und höher).  
+ **Hinweis** Das RichEdit-Steuerelement wird nur für Versionen unterstützt, die mit Windows Vista ausgeliefert wurden (in RichEd20.dll Version 3,1 und höher sowie MsftEdit.dll Version 4,1 und höher).  
   
  Die folgenden Steuerelemente werden nicht unterstützt:  
   
@@ -94,24 +95,24 @@ ms.locfileid: "79179848"
   
 <a name="Windows_Forms_Controls"></a>
 ## <a name="windows-forms-controls"></a>Windows Forms-Steuerelemente  
- Windows Forms-Steuerelemente [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] werden über clientseitige Anbieter in UIAutomationClientsideProviders.dll verfügbar gemacht. Diese Assembly wird automatisch für die Verwendung mit Benutzeroberflächenautomatisierungs-Clientanwendungen registriert.  
+ Windows Forms-Steuerelemente werden [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] über Client seitige Anbieter in UIAutomationClientsideProviders.dll bereitgestellt. Diese Assembly wird automatisch für die Verwendung mit Benutzeroberflächenautomatisierungs-Clientanwendungen registriert.  
   
- In der Regel werden Windows Forms-Steuerelemente, die verwaltete [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Wrapper für allgemeine Win32-Steuerelemente sind, von unterstützt. Die folgenden Steuerelemente werden unterstützt:  
+ In der Regel werden Windows Forms Steuerelemente, die verwaltete Wrapper für allgemeine Win32-Steuerelemente sind, von unterstützt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Die folgenden Steuerelemente werden unterstützt:  
   
 |Klassenname|  
 |----------------|  
-|Taste|  
+|Schaltfläche|  
 |CheckBox|  
 |CheckedListBox|  
 |ColorDialog|  
-|Kombinationsfeld|  
+|ComboBox|  
 |FolderBrowser|  
 |FontDialog|  
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
 |Bezeichnung|  
-|Listenfeld|  
+|ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
 |MonthCalendar|  
@@ -134,11 +135,11 @@ ms.locfileid: "79179848"
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
-|Webbrowser|  
+|WebBrowser|  
   
- Die folgenden Steuerelemente [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] werden nur durch ihre Unterstützung für Microsoft Active Accessibility verfügbar gemacht. Möglicherweise sind nicht alle Funktionen verfügbar.  
+ Die folgenden Steuerelemente sind nur für die [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Unterstützung von Microsoft Active Accessibility verfügbar. Möglicherweise sind nicht alle Funktionen verfügbar.  
   
-|Steuerelementname|  
+|Name des Steuerelements|  
 |------------------|  
 |BindingSource|  
 |DataGrid|  
@@ -147,7 +148,7 @@ ms.locfileid: "79179848"
 |DomainUpDown|  
 |ErrorProvider|  
 |FlowLayoutPanel|  
-|Form|  
+|Formular|  
 |LinkLabel|  
 |HelpProvider|  
 |MaskedTextBox|  

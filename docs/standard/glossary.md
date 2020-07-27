@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287453"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163117"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -140,8 +140,6 @@ Die Wörter „Bibliothek“ und [Framework](#framework) werden häufig synonym 
 
 Ein NuGet-Paket, das über keine eigene Bibliothek verfügt, sondern nur eine Liste der Abhängigkeiten darstellt. Die enthaltenen Pakete können optional die API für ein Zielframework erzeugen.
 
-Siehe [Pakete, Metapakete und Frameworks](../core/packages.md).
-
 ## <a name="mono"></a>Mono
 
 Bei Mono handelt es sich um eine [plattformübergreifend](#cross-platform) Open Source-.NET-Implementierung, die in erster Linie verwendet wird, wenn eine kleine Runtime erforderlich ist. Mono ist die Runtime für Xamarin-Anwendungen unter Android, Mac, iOS, tvOS und watchOS und ist hauptsächlich auf Apps mit geringem Ressourcenbedarf ausgelegt.
@@ -194,7 +192,7 @@ UWP war das erste Anwendungsframework, das von .NET Native unterstützt wurde. N
 
 Siehe [Intro to .NET Native and CoreRT (Einführung in .NET Native und CoreRT)](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="net-standard"></a>.NET-Standard
+## <a name="net-standard"></a>.NET Standard
 
 Eine formale Spezifikation der .NET-APIs, die in jeder .NET-Implementierung verfügbar sind.
 

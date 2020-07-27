@@ -1,5 +1,6 @@
 ---
 title: Befehlsübersicht
+description: Erfahren Sie mehr über die Befehls Methode, einen Eingabe Mechanismus in Windows Presentation Foundation, der die Eingabe Verarbeitung auf einer stärker semantischen Ebene als die Geräte Eingabe ermöglicht.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f7d12fbf0de9b1546f15061ab7eb1318378bbbb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186211"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168129"
 ---
 # <a name="commanding-overview"></a>Befehlsübersicht
 <a name="introduction"></a> Befehle sind ein Eingabemechanismus in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], der Eingabeverarbeitung auf einer höheren Ebene als die Geräteeingabe bereitstellt. Beispiele für Befehle sind die in vielen Programmen enthaltenen Vorgänge **Kopieren**, **Ausschneiden** und **Einfügen**.  
@@ -173,9 +174,9 @@ ms.locfileid: "79186211"
 ## <a name="command-library"></a>Befehlsbibliothek  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Reihe von vordefinierten Befehlen bereit.  Die Befehlsbibliothek besteht aus den folgenden Klassen: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> und <xref:System.Windows.Input.ComponentCommands>.  Diese Klassen stellen Befehle wie die Folgenden bereit: <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> und <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Viele dieser Befehle enthalten einen Satz von Standardeingabebindungen.  Wenn Sie beispielsweise angeben, dass Ihre Anwendung den Kopierbefehl verarbeitet, erhalten Sie automatisch die Tastaturbindung "STRG+C" Sie erhalten auch Bindungen für andere Eingabegeräte, z. B. Tablet PC-Stiftgesten und Sprachinformationen.  
+ Viele dieser Befehle enthalten einen Satz von Standardeingabebindungen.  Wenn Sie z. b. angeben, dass die Anwendung den Kopier Befehl verarbeitet, erhalten Sie automatisch die Tastatur Bindung "STRG + C", und Sie erhalten auch Bindungen für andere Eingabegeräte, z. b. Tablet PC-Stift Gesten und Sprachinformationen.  
   
- Wenn Sie in den verschiedenen Bibliotheken mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf Befehle verweisen, können Sie normalerweise den Klassennamen der Bibliotheksklasse weglassen, die die statische Befehlseigenschaft verfügbar macht. In der Regel sind die Befehlsnamen als Zeichenfolgen eindeutig, und die besitzenden Typen sind vorhanden, um eine logische Gruppierung der Befehle bereitzustellen. Zur Mehrdeutigkeitsvermeidung sind sie nicht erforderlich. Sie können z.B. `Command="Cut"` anstelle des ausführlicheren `Command="ApplicationCommands.Cut"` angeben. Dies ist ein Komfortmechanismus, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] der im Prozessor für Befehle integriert ist <xref:System.Windows.Input.ICommand>(genauer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] gesagt, es ist ein Typkonverterverhalten von , auf das der Prozessor zur Ladezeit verweist).  
+ Wenn Sie in den verschiedenen Bibliotheken mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf Befehle verweisen, können Sie normalerweise den Klassennamen der Bibliotheksklasse weglassen, die die statische Befehlseigenschaft verfügbar macht. In der Regel sind die Befehlsnamen als Zeichenfolgen eindeutig, und die besitzenden Typen sind vorhanden, um eine logische Gruppierung der Befehle bereitzustellen. Zur Mehrdeutigkeitsvermeidung sind sie nicht erforderlich. Sie können z.B. `Command="Cut"` anstelle des ausführlicheren `Command="ApplicationCommands.Cut"` angeben. Dies ist ein Hilfsmechanismus, der in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor für Befehle integriert ist (genauer betrachtet handelt es sich um ein Typkonverterverhalten von <xref:System.Windows.Input.ICommand> , auf das der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor zur Ladezeit verweist).  
   
 <a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>Erstellen von benutzerdefinierten Befehlen  

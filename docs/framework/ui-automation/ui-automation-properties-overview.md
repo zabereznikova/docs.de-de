@@ -1,16 +1,17 @@
 ---
 title: Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften
+description: Eine umfassende Übersicht über die Eigenschaften der Microsoft UI-Automatisierung finden Sie unter. Weitere Informationen zu Eigenschafts bezeichmern, Eigenschaften nach Kategorie, Lokalisierung und Eigenschaften und Ereignissen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d780c059530be8c91890302ea4066de2d4aa73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179866"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163207"
 ---
 # <a name="ui-automation-properties-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften
 > [!NOTE]
@@ -26,11 +27,11 @@ ms.locfileid: "79179866"
   
 <a name="Property_Identifiers"></a>
 ## <a name="property-identifiers"></a>Eigenschaftsbezeichner  
- Jede Eigenschaft wird mit einer Zahl und einem Namen bezeichnet. Die Namen von Eigenschaften werden nur zum Debuggen und zu Diagnosezwecken verwendet. Anbieter verwenden die numerischen IDs, um eingehende Eigenschaftsanforderungen zu identifizieren. Clientanwendungen verwenden dagegen, um die abzurufenden Eigenschaften zu kennzeichnen, nur <xref:System.Windows.Automation.AutomationProperty>-Objekte, in denen die Zahl und der Name gekapselt werden.  
+ Jede Eigenschaft wird mit einer Zahl und einem Namen bezeichnet. Die Namen von Eigenschaften werden nur zum Debuggen und zu Diagnosezwecken verwendet. Anbieter verwenden die numerischen IDs, um eingehende Eigenschaften Anforderungen zu identifizieren. Clientanwendungen verwenden dagegen, um die abzurufenden Eigenschaften zu kennzeichnen, nur <xref:System.Windows.Automation.AutomationProperty>-Objekte, in denen die Zahl und der Name gekapselt werden.  
   
  <xref:System.Windows.Automation.AutomationProperty> -Objekte, die bestimmte Eigenschaften darstellen, sind als Felder in verschiedenen Klassen verfügbar. Aus Sicherheitsgründen rufen Benutzeroberflächenautomatisierungs-Anbieter diese Objekte aus einem separaten Satz von Klassen ab, die in „Uiautomationtypes.dll“ enthalten sind.  
   
- In der folgenden Tabelle werden Eigenschaften nach <xref:System.Windows.Automation.AutomationProperty>den Klassen kategorisiert, die die IDs enthalten.  
+ In der folgenden Tabelle werden die Eigenschaften durch die Klassen, die die IDs enthalten, kategorisiert <xref:System.Windows.Automation.AutomationProperty> .  
   
 |Arten von Eigenschaften|Clients rufen IDs ab von|Anbieter rufen IDs ab von|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +54,7 @@ ms.locfileid: "79179866"
   
 <a name="Properties_by_Category"></a>
 ## <a name="properties-by-category"></a>Eigenschaften nach Kategorie  
- In den folgenden Tabellen werden die Eigenschaften kategorisiert, deren IDs in <xref:System.Windows.Automation.AutomationElement> und <xref:System.Windows.Automation.AutomationElementIdentifiers>gefunden werden. Diese Eigenschaften hat jedes der Steuerelemente. Bis auf einige Ausnahmen sind wahrscheinlich alle diese Eigenschaften während der gesamten Lebensdauer der Anbieteranwendung statisch. Die meisten dynamischen Eigenschaften sind mit Steuerelementmustern verknüpft.  
+ In den folgenden Tabellen sind die Eigenschaften kategorisiert, deren IDs in und enthalten sind <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers> . Diese Eigenschaften hat jedes der Steuerelemente. Bis auf einige Ausnahmen sind wahrscheinlich alle diese Eigenschaften während der gesamten Lebensdauer der Anbieteranwendung statisch. Die meisten dynamischen Eigenschaften sind mit Steuerelementmustern verknüpft.  
   
  In der Spalte **Eigenschaftenzugriff** werden zusätzlich zu <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> und <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>alle weiteren Accessoren für jede Eigenschaft aufgeführt. Weitere Informationen zum Abrufen von Eigenschaften in einer Clientanwendung finden Sie unter [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
@@ -80,7 +81,7 @@ ms.locfileid: "79179866"
 |<xref:System.Windows.Automation.AutomationElement.ItemTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.LocalizedControlType%2A>|  
   
-### <a name="identification"></a>Identifikation  
+### <a name="identification"></a>Identifizierung  
   
 |Eigenschaftsbezeichner|Eigenschaftenzugriff|  
 |-------------------------|---------------------|  

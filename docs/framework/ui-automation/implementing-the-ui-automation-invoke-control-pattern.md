@@ -1,17 +1,18 @@
 ---
 title: Implementieren des Invoke-Steuerelementmusters der Benutzeroberflächenautomatisierung
+description: Lesen Sie Richtlinien und Konventionen, um das Aufruf Steuerungs Muster in der Benutzeroberflächen Automatisierung zu implementieren. Siehe erforderliche Member für die IInvokeProvider-Schnittstelle.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Invoke control pattern
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 30ae83aa4b73f36afce1251387598ef9b61816d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b464b3ab5cd2b0789798f8b865b946c5eae017eb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435163"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166167"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementieren des Invoke-Steuerelementmusters der Benutzeroberflächenautomatisierung
 
@@ -51,7 +52,7 @@ Beachten Sie beim Implementieren des Invoke-Steuerelementmusters die folgenden R
 
 - Ein Element kann, wenn es aufgerufen wird, sofort aus der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur ausgeblendet werden. Dies kann zur Folge haben, dass das Anfordern von Informationen von dem Element, die durch den Ereignisrückruf bereitgestellt werden, fehlschlägt. Als Problemlösung wird empfohlen, zwischengespeicherte Informationen vorab abzurufen.
 
-- Steuerelemente können mehrere Steuerelementmuster implementieren. Beispielsweise implementiert das Füllfarbe-Steuerelement auf der Microsoft Excel-Symbolleiste sowohl das <xref:System.Windows.Automation.InvokePattern>-als auch das <xref:System.Windows.Automation.ExpandCollapsePattern>-Steuerelement Muster. Das<xref:System.Windows.Automation.ExpandCollapsePattern> macht das Menü verfügbar, und das I <xref:System.Windows.Automation.InvokePattern> füllt die aktive Auswahl mit der ausgewählten Farbe.
+- Steuerelemente können mehrere Steuerelementmuster implementieren. Beispielsweise implementiert das Füllfarbe-Steuerelement auf der Microsoft Excel-Symbolleiste sowohl das <xref:System.Windows.Automation.InvokePattern> -als auch das- <xref:System.Windows.Automation.ExpandCollapsePattern> Steuerelement Muster. Das<xref:System.Windows.Automation.ExpandCollapsePattern> macht das Menü verfügbar, und das I <xref:System.Windows.Automation.InvokePattern> füllt die aktive Auswahl mit der ausgewählten Farbe.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
@@ -59,9 +60,9 @@ Beachten Sie beim Implementieren des Invoke-Steuerelementmusters die folgenden R
 
 Die folgenden Eigenschaften und Methoden sind für das Implementieren von <xref:System.Windows.Automation.Provider.IInvokeProvider>erforderlich.
 
-|Erforderliche Member|Elementtyp|Hinweise|
+|Erforderliche Member|Memberart|Hinweise|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|Methode|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> ist ein asynchroner Aufruf und muss die Kontrolle sofort zurückgeben, ohne zu blockieren.<br /><br /> Dieses Verhalten ist insbesondere für Steuerelemente wichtig, die direkt oder indirekt ein modales Dialogfeld starten, wenn sie aufgerufen werden. Jeder Benutzeroberflächenautomatisierungs-Client, der das Ereignis ausgelöst hat, bleibt blockiert, bis das modale Dialogfeld geschlossen wird.|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|method|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> ist ein asynchroner Aufruf und muss die Kontrolle sofort zurückgeben, ohne zu blockieren.<br /><br /> Dieses Verhalten ist insbesondere für Steuerelemente wichtig, die direkt oder indirekt ein modales Dialogfeld starten, wenn sie aufgerufen werden. Jeder Benutzeroberflächenautomatisierungs-Client, der das Ereignis ausgelöst hat, bleibt blockiert, bis das modale Dialogfeld geschlossen wird.|
 
 <a name="Exceptions"></a>
 
@@ -73,11 +74,11 @@ Anbieter müssen die folgenden Ausnahmen auslösen.
 |--------------------|---------------|
 |<xref:System.Windows.Automation.ElementNotEnabledException>|Wenn das Steuerelement nicht aktiviert ist.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)
+- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
+- [Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung](invoke-a-control-using-ui-automation.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)
