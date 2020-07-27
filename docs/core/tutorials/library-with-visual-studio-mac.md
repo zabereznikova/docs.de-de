@@ -39,7 +39,7 @@ Eine Visual Studio-Projektmappe dient als ein Container für mindestens ein Proj
 
 1. Wählen Sie im Dialogfeld **Neues Projekt** unter dem Knoten **Multi-Plattform** erst **Bibliothek** und dann die Vorlage **.NET Standard-Bibliothek** aus. Wählen Sie dann **Weiter** aus.
 
-   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Dialogfeld "Neues Projekt"":::
+   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Dialogfeld Neues Projekt":::
 
 1. Wählen Sie im Dialogfeld **Neue .NET Standard-Bibliothek konfigurieren** die Option „.NET Standard 2.1“ und dann **Weiter** aus.
 
