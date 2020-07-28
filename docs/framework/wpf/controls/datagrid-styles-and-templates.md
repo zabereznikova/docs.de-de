@@ -1,5 +1,6 @@
 ---
 title: DataGrid-Stile und -Vorlagen
+description: Erfahren Sie mehr über Stile und Vorlagen für das Windows Presentation Foundation DataGrid-Steuerelement. Ändern Sie ControlTemplate, um dem Steuerelement eine eindeutige Darstellung zu verschaffen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], DataGrid
@@ -9,69 +10,69 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd526ec64d5077dad58f31c004f47e63c57ec9de
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283806"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168326"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.DataGrid>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
+In diesem Thema werden die Stile und Vorlagen für das-Steuerelement beschrieben <xref:System.Windows.Controls.DataGrid> . Sie können die Standardeinstellung ändern <xref:System.Windows.Controls.ControlTemplate> , um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="datagrid-parts"></a>DataGrid-Teile  
- In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.DataGrid>-Steuerelement aufgelistet.  
+ In der folgenden Tabelle sind die benannten Teile für das-Steuerelement aufgeführt <xref:System.Windows.Controls.DataGrid> .  
   
-|-Komponente|Typ|Beschreibung|  
+|Teil|type|BESCHREIBUNG|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Die Zeile, die die Spaltenheader enthält.|  
   
- Wenn Sie einen <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.DataGrid>erstellen, enthält die Vorlage möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb eines <xref:System.Windows.Controls.ScrollViewer>. (Die <xref:System.Windows.Controls.ItemsPresenter> zeigt jedes Element in der <xref:System.Windows.Controls.DataGrid>an; das <xref:System.Windows.Controls.ScrollViewer> ermöglicht das Scrollen im Steuerelement).  Wenn das <xref:System.Windows.Controls.ItemsPresenter> nicht das direkt untergeordnete Element des <xref:System.Windows.Controls.ScrollViewer>ist, müssen Sie dem <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter`.  
+ Wenn Sie einen <xref:System.Windows.Controls.ControlTemplate> für eine erstellen <xref:System.Windows.Controls.DataGrid> , enthält die Vorlage möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb eines <xref:System.Windows.Controls.ScrollViewer> . (Die <xref:System.Windows.Controls.ItemsPresenter> zeigt jedes Element in der an <xref:System.Windows.Controls.DataGrid> ; das <xref:System.Windows.Controls.ScrollViewer> ermöglicht das Scrollen im-Steuerelement).  Wenn das <xref:System.Windows.Controls.ItemsPresenter> nicht das direkt untergeordnete Element von ist <xref:System.Windows.Controls.ScrollViewer> , müssen Sie den <xref:System.Windows.Controls.ItemsPresenter> Namen, `ItemsPresenter` .  
   
- Die Standardvorlage für die <xref:System.Windows.Controls.DataGrid> enthält ein <xref:System.Windows.Controls.ScrollViewer>-Steuerelement. Weitere Informationen zu den von der <xref:System.Windows.Controls.ScrollViewer>definierten Teilen finden Sie unter [ScrollViewer-Stile und-Vorlagen](scrollviewer-styles-and-templates.md).  
+ Die Standardvorlage für das- <xref:System.Windows.Controls.DataGrid> Steuerelement enthält ein- <xref:System.Windows.Controls.ScrollViewer> Steuerelement. Weitere Informationen zu den Teilen, die von definiert <xref:System.Windows.Controls.ScrollViewer> werden, finden Sie unter [ScrollViewer-Stile und-Vorlagen](scrollviewer-styles-and-templates.md).  
   
 ## <a name="datagrid-states"></a>DataGrid-Zustände  
- In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.DataGrid>-Steuerelement aufgelistet.  
+ In der folgenden Tabelle werden die visuellen Zustände für das-Steuerelement aufgelistet <xref:System.Windows.Controls.DataGrid> .  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardstatus.|  
+|Normal|CommonStates|Der Standardzustand|  
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |InvalidFocused|ValidationStates|Das Steuerelement ist nicht gültig und besitzt den Fokus.|  
 |InvalidUnfocused|ValidationStates|Das Steuerelement ist nicht gültig und besitzt keinen Fokus.|  
 |Gültig|ValidationStates|Das Steuerelement ist gültig.|  
   
 ## <a name="datagridcell-parts"></a>DataGridCell-Teile  
- Das <xref:System.Windows.Controls.DataGridCell>-Element verfügt über keine benannten Teile.  
+ Das- <xref:System.Windows.Controls.DataGridCell> Element verfügt über keine benannten Teile.  
   
 ## <a name="datagridcell-states"></a>DataGridCell-Zustände  
- In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.DataGridCell>-Element aufgelistet.  
+ In der folgenden Tabelle werden die visuellen Zustände für das- <xref:System.Windows.Controls.DataGridCell> Element aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardstatus.|  
+|Normal|CommonStates|Der Standardzustand|  
 |MouseOver|CommonStates|Der Mauszeiger wird auf der Zelle positioniert.|  
-|Mit Fokus|FocusStates|Die Zelle hat den Fokus.|  
+|Focused|FocusStates|Die Zelle hat den Fokus.|  
 |Ohne Fokus|FocusStates|Die Zelle hat keinen Fokus.|  
 |Aktuell|Currentstates|Die Zelle ist die aktuelle Zelle.|  
 |Regulär|Currentstates|Die Zelle ist nicht die aktuelle Zelle.|  
 |Anzeige|Interaktionstates|Die Zelle befindet sich im Anzeigemodus.|  
-|Bearbeitung|Interaktionstates|Die Zelle befindet sich im Bearbeitungsmodus.|  
-|Ausgewählt|SelectionStates|Die Zelle ist ausgewählt.|  
+|Bearbeiten|Interaktionstates|Die Zelle befindet sich im Bearbeitungsmodus.|  
+|Aktiviert|SelectionStates|Die Zelle ist ausgewählt.|  
 |Nicht markiert|SelectionStates|Die Zelle ist nicht ausgewählt.|  
 |InvalidFocused|ValidationStates|Die Zelle ist ungültig und hat den Fokus.|  
 |InvalidUnfocused|ValidationStates|Die Zelle ist ungültig und besitzt keinen Fokus.|  
 |Gültig|ValidationStates|Die Zelle ist gültig.|  
   
 ## <a name="datagridrow-parts"></a>DataGridRow-Teile  
- Das <xref:System.Windows.Controls.DataGridRow>-Element verfügt über keine benannten Teile.  
+ Das- <xref:System.Windows.Controls.DataGridRow> Element verfügt über keine benannten Teile.  
   
 ## <a name="datagridrow-states"></a>DataGridRow-Zustände  
- In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.DataGridRow>-Element aufgelistet.  
+ In der folgenden Tabelle werden die visuellen Zustände für das- <xref:System.Windows.Controls.DataGridRow> Element aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardstatus.|  
+|Normal|CommonStates|Der Standardzustand|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über der Zeile.|  
 |MouseOver_Editing|CommonStates|Der Mauszeiger befindet sich über der Zeile, und die Zeile befindet sich im Bearbeitungsmodus.|  
 |MouseOver_Selected|CommonStates|Der Mauszeiger befindet sich über der Zeile, und die Zeile wird ausgewählt.|  
@@ -87,19 +88,19 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |Gültig|ValidationStates|Das Steuerelement ist gültig.|  
   
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader-Teile  
- In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.DataGridRowHeader>-Element aufgelistet.  
+ In der folgenden Tabelle sind die benannten Teile für das- <xref:System.Windows.Controls.Primitives.DataGridRowHeader> Element aufgeführt.  
   
-|-Komponente|Typ|Beschreibung|  
+|Teil|type|BESCHREIBUNG|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Das Element, das verwendet wird, um die Größe des Zeilen Headers vom oberen Rand zu ändern.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Das Element, das verwendet wird, um die Größe des Zeilen Headers von unten zu ändern.|  
   
 ## <a name="datagridrowheader-states"></a>DataGridRowHeader-Zustände  
- In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.Primitives.DataGridRowHeader>-Element aufgelistet.  
+ In der folgenden Tabelle werden die visuellen Zustände für das- <xref:System.Windows.Controls.Primitives.DataGridRowHeader> Element aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardstatus.|  
+|Normal|CommonStates|Der Standardzustand|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über der Zeile.|  
 |MouseOver_CurrentRow|CommonStates|Der Mauszeiger befindet sich über der Zeile, und die Zeile ist die aktuelle Zeile.|  
 |MouseOver_CurrentRow_Selected|CommonStates|Der Mauszeiger befindet sich über der Zeile, und die Zeile ist aktuell und ausgewählt.|  
@@ -120,14 +121,14 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |Gültig|ValidationStates|Das Steuerelement ist gültig.|  
   
 ## <a name="datagridcolumnheaderspresenter-parts"></a>Datagridcolumnheaderationsenter-Teile  
- In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>-Element aufgelistet.  
+ In der folgenden Tabelle sind die benannten Teile für das- <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> Element aufgeführt.  
   
-|-Komponente|Typ|Beschreibung|  
+|Teil|type|BESCHREIBUNG|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Der Platzhalter für Spaltenüberschriften.|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>Datagridcolumnheaderationsenter-Zustände  
- In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>-Element aufgelistet.  
+ In der folgenden Tabelle werden die visuellen Zustände für das- <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> Element aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
@@ -136,19 +137,19 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |Gültig|ValidationStates|Die Zelle ist gültig.|  
   
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader-Teile  
- In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>-Element aufgelistet.  
+ In der folgenden Tabelle sind die benannten Teile für das- <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> Element aufgeführt.  
   
-|-Komponente|Typ|Beschreibung|  
+|Teil|type|BESCHREIBUNG|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Das Element, das verwendet wird, um die Größe des Spalten Headers von Links zu ändern.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Das Element, das verwendet wird, um die Größe des Spalten Headers von rechts zu ändern.|  
   
 ## <a name="datagridcolumnheader-states"></a>DataGridColumnHeader-Zustände  
- In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>-Element aufgelistet.  
+ In der folgenden Tabelle werden die visuellen Zustände für das- <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> Element aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardstatus.|  
+|Normal|CommonStates|Der Standardzustand|  
 |MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
 |Gedrückt|CommonStates|Das Steuerelement wird gedrückt.|  
 |SortAscending|Sortstates|Die Spalte wird in aufsteigender Reihenfolge sortiert.|  
@@ -159,7 +160,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |Gültig|ValidationStates|Das Steuerelement ist gültig.|  
   
 ## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate-Beispiel  
- Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.DataGrid>-Steuerelement und die zugehörigen Typen definiert werden.  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.DataGrid> -Steuerelement und die zugehörigen Typen definiert werden.  
   
  [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   

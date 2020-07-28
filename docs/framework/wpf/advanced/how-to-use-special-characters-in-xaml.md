@@ -1,5 +1,6 @@
 ---
 title: 'Gewusst wie: Verwenden von Sonderzeichen in XAML'
+description: Erfahren Sie mehr über die Syntax für das Codieren von Sonderzeichen im Unicode-UTF-8-Dateiformat in Visual Studio zur Verwendung in XAML-Dateien in Windows Presentation Foundation.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Unicode UTF-8 file format
@@ -8,19 +9,19 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 59449637bb45f6b75462b6809c354af7972fc2e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ac2388fd96aa26ddd99408ac9f847ce517958568
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740840"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168362"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>Gewusst wie: Verwenden von Sonderzeichen in XAML
 Markup Dateien, die in Visual Studio erstellt werden, werden automatisch im Unicode-UTF-8-Dateiformat gespeichert, was bedeutet, dass die meisten Sonderzeichen (z. b. Akzentzeichen) ordnungsgemäß codiert werden. Es gibt jedoch eine Reihe von häufig verwendeten Sonderzeichen, die anders behandelt werden. Diese Sonderzeichen folgen dem World Wide Web Consortium (W3C) XML-Standard für die Codierung.  
   
  Die folgende Tabelle zeigt die Syntax zum Codieren dieser Sonderzeichen:  
   
-|Zeichen|Syntax|Beschreibung|  
+|Zeichen|Syntax|BESCHREIBUNG|  
 |---------------|------------|-----------------|  
 |<|`&lt;`|Kleiner als-Zeichen.|  
 |>|`&gt;`|Größer als-Zeichen|  

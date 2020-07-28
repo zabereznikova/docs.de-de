@@ -1,5 +1,6 @@
 ---
 title: Erstellen eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
+description: Sehen Sie sich ein Beispiel für das Erstellen eines Client seitigen Benutzeroberflächenautomatisierungs-Anbieters an. Im Beispiel wird ein einfacher Client seitiger Anbieter für ein Konsolenfenster implementiert.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, creating client-side provider
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
-ms.openlocfilehash: 79accd23392ff9e1e8157348f7a1042ee2b3cc47
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a25966d0f11e409bd4e53f944fc2528360327039
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433654"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168473"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>Erstellen eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]

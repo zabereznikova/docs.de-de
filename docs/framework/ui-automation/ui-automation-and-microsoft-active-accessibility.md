@@ -1,5 +1,6 @@
 ---
 title: Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
+description: Machen Sie sich mit den Unterschieden zwischen der Benutzeroberflächen Automatisierung und Microsoft Active Accessibility vertraut
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144785"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164066"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
 > [!NOTE]
@@ -70,7 +71,7 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
   
 |Active Accessibility Rolle|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementtyp|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
-|ROLE_SYSTEM_PUSHBUTTON|Taste|  
+|ROLE_SYSTEM_PUSHBUTTON|Schaltfläche|  
 |ROLE_SYSTEM_CLIENT|Kalender|  
 |ROLE_SYSTEM_CHECKBUTTON|Kontrollkästchen|  
 |ROLE_SYSTEM_COMBOBOX|Kombinationsfeld|  
@@ -90,11 +91,11 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
 |ROLE_SYSTEM_MENUBAR|Menüleiste|  
 |ROLE_SYSTEM_MENUITEM|Menüelement|  
 |ROLE_SYSTEM_PANE|Bereich|  
-|ROLE_SYSTEM_PROGRESSBAR|Statusanzeige|  
+|ROLE_SYSTEM_PROGRESSBAR|Statusleiste|  
 |ROLE_SYSTEM_RADIOBUTTON|Optionsfeld|  
 |ROLE_SYSTEM_SCROLLBAR|Bildlaufleiste|  
 |ROLE_SYSTEM_SEPARATOR|Trennzeichen|  
-|ROLE_SYSTEM_SLIDER|Slider|  
+|ROLE_SYSTEM_SLIDER|Schieberegler|  
 |ROLE_SYSTEM_SPINBUTTON|Spinner|  
 |ROLE_SYSTEM_SPLITBUTTON|Unterteilte Schaltfläche|  
 |ROLE_SYSTEM_STATUSBAR|Statusleiste|  
@@ -124,7 +125,7 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
   
  Die folgende Tabelle zeigt die Übereinstimmung zwischen Eigenschaften der beiden Modelle.  
   
-|Active Accessibility-Eigenschafts Accessor|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften-ID|Hinweise|  
+|Active Accessibility-Eigenschafts Accessor|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften-ID|Bemerkungen|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
 |`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> oder <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|`AccessKeyProperty` hat Vorrang, wenn beide vorhanden sind.|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
@@ -139,9 +140,9 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
   
 |Active Accessibility Status|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Eigenschaft|Löst Zustandsänderung aus?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
-|STATE_SYSTEM_CHECKED|Für Kontrollkästchen ist dies <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Für Optionsfelder ist dies <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
-|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
-|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> oder <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|Y|  
+|STATE_SYSTEM_CHECKED|Für Kontrollkästchen ist dies <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Für Optionsfelder ist dies <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|„Y“ zugeordnet ist|  
+|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|„Y“ zugeordnet ist|  
+|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> oder <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|„Y“ zugeordnet ist|  
 |STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|N|  
 |STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|N|  
 |STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern> für Menüelemente|N|  
@@ -156,11 +157,11 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
 |STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> wird unterstützt|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
-|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|Y|  
+|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|„Y“ zugeordnet ist|  
   
  Die folgenden Zustände wurden entweder von den meisten Active Accessibility-Steuerungs Servern nicht implementiert oder verfügen in über keine Entsprechung [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
-|Active Accessibility Status|Hinweise|  
+|Active Accessibility Status|Bemerkungen|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -251,4 +252,4 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Grundlagen der Oberflächen Automatisierung](index.md)
+- [Grundlagen der Benutzeroberflächenautomatisierung](index.md)

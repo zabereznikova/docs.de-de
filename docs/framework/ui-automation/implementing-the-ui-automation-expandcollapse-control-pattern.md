@@ -1,17 +1,18 @@
 ---
 title: Implementieren des ExpandCollapse-Steuerelementmusters der Benutzeroberflächenautomatisierung
+description: Erlernen von Implementierungs Richtlinien und-Konventionen für das ExpandCollapse-Steuerelement Muster in der Benutzeroberflächen Automatisierung. Sie wissen, wie iexpandreduseprovider implementiert wird.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, ExpandCollapse control pattern
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 073ff0727fc6aab1189f73a254aa95da60820cc3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 525b57816071ba2d879036676201a0506d1a29db
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447147"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165857"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementieren des ExpandCollapse-Steuerelementmusters der Benutzeroberflächenautomatisierung
 
@@ -53,7 +54,7 @@ Beachten Sie beim Implementieren des „ExpandCollapse“-Steuerelementmusters d
 
 Die folgenden Eigenschaften und Methoden sind für das Implementieren von <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>erforderlich.
 
-|Erforderliche Member|Elementtyp|Hinweise|
+|Erforderliche Member|Memberart|Hinweise|
 |----------------------|-----------------|-----------|
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Eigenschaft|Keine|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Methode|Keine|
@@ -74,7 +75,7 @@ Anbieter müssen die folgenden Ausnahmen auslösen.
 
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
 - [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)

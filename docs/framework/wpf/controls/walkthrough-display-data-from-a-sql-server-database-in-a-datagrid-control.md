@@ -1,5 +1,6 @@
 ---
 title: 'Exemplarische Vorgehensweise: Anzeigen von Daten aus einer SQL Server-Datenbank in einem DataGrid-Steuerelement'
+description: In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie Daten aus einer SQL Server Datenbank und in einem Windows Presentation Foundation DataGrid-Steuerelement anzeigen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cc41979c869021c9c363f3f68ce590d4702e068c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591032"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167551"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Exemplarische Vorgehensweise: Anzeigen von Daten aus einer SQL Server Datenbank in einem DataGrid-Steuerelement
 
@@ -23,7 +24,7 @@ In dieser exemplarischen Vorgehensweise rufen Sie Daten aus einer SQL Server Dat
 
 Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
-- Visual Studio.
+- Visual Studio
 
 - Zugriff auf eine laufende Instanz von SQL Server oder SQL Server Express, der die AdventureWorks-Beispieldatenbank angefügt ist. Sie können die AdventureWorks-Datenbank von [GitHub](https://github.com/Microsoft/sql-server-samples/releases)herunterladen.
 
@@ -47,7 +48,7 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
 6. Stellen Sie im Bildschirm Wählen Sie Ihre Datenverbindung aus die Verbindung mit der AdventureWorksLT2008-Datenbank her. Weitere Informationen finden Sie unter [Auswählen der Datenverbindung (Dialog Feld](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100))).
 
-    Stellen Sie sicher, dass der Name lautet `AdventureWorksLT2008Entities` und dass das Kontrollkästchen **Entitäts Verbindungseinstellungen in app. config speichern** aktiviert ist, und klicken Sie dann auf **weiter**.
+    Stellen Sie sicher, dass der Name lautet `AdventureWorksLT2008Entities` und dass das Kontrollkästchen **Entitäts Verbindungseinstellungen in App.Config as speichern** aktiviert ist, und klicken Sie dann auf **weiter**.
 
 7. Erweitern Sie im Bildschirm Wählen Sie Ihre Datenbankobjekte aus den Knoten Tabellen, und wählen Sie die Tabelle **Product** und **ProductCategory** aus.
 
@@ -97,6 +98,6 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
      ![DataGrid mit Daten aus SQL-Datenbank](./media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Controls.DataGrid>
