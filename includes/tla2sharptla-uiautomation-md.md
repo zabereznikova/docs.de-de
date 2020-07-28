@@ -6,4 +6,4 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65670125"
 ---
-<span data-ttu-id="9608b-101">Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="9608b-101">UI Automation</span></span>
+<span data-ttu-id="c9707-101">Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c9707-101">UI Automation</span></span>
