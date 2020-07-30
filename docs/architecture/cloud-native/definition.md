@@ -3,12 +3,12 @@ title: Definition von cloudbasiert
 description: Erfahren Sie mehr über die grundlegenden Säulen, die das Fundament für Native cloudsysteme bereitstellen.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f50c144d99fae0c4702965342fd76ec22e8bd8c8
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614171"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427033"
 ---
 # <a name="defining-cloud-native"></a>Definieren von Cloud Native
 
@@ -32,9 +32,9 @@ Im folgenden finden Sie einige Unternehmen, die diese Techniken implementiert ha
 
 | Company | Erfahrung |
 | :-------- | :-------- |
-| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Umfasst 600 Dienste in der Produktionsumgebung. Wird hundert Mal pro Tag bereitgestellt. |
+| [Stream](https://www.infoq.com/news/2013/06/netflix/) | Umfasst 600 Dienste in der Produktionsumgebung. Wird hundert Mal pro Tag bereitgestellt. |
 | [Räuber](https://eng.uber.com/micro-deploy/) | Hat in der Produktion 1000 Dienste. Stellt mehrere tausend Male pro Woche bereit. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | In der Produktionsumgebung sind 300 Dienste und höher. Stellt 1.000 Mal täglich bereit. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Verfügt über 3000 Dienste in der Produktionsumgebung. Stellt 1.000 Mal täglich bereit. |
 
 Wie Sie sehen, machen Netflix, uber und WeChat Systeme verfügbar, die aus Hunderten von unabhängigen mikrodiensten bestehen. Dieser Architekturstil ermöglicht es Ihnen, schnell auf Marktbedingungen zu reagieren. Sie können kleine Bereiche einer aktiven, komplexen Anwendung sofort aktualisieren und diese Bereiche bei Bedarf einzeln skalieren.
 
@@ -123,7 +123,7 @@ In der Entwurfs Umgebung kapselt jeder microservice seine eigenen Daten, wodurch
 
 Verteilte Daten werden in Kapitel 5, in der *Cloud Native Datenmuster*, ausführlich behandelt.
 
-*Identity*
+*Identität*
 
 Wie wird Ihr Dienst ermitteln, wer auf ihn zugreift und welche Berechtigungen er hat?
 
@@ -173,7 +173,7 @@ Sie können mit jeder modernen Entwicklungsplattform erstellt werden.
 
 Die Microsoft .net Core-Plattform ist eine hervorragende Wahl. Kostenlos und Open Source verfügt über viele integrierte Features zur Vereinfachung der Entwicklung von Webdiensten. .Net Core ist plattformübergreifend. Anwendungen können unter Windows, macOS und den meisten Linux-Versionen erstellt und ausgeführt werden.
 
-.Net Core ist äußerst leistungsfähig und wurde im Vergleich zu Node. js und anderen konkurrierenden Plattformen gut bewertet. Interessanterweise hat [techperformance](https://www.techempower.com/) einen umfangreichen Satz von [Leistungs Benchmarks](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) für viele Webanwendungs Plattformen und-Frameworks durchgeführt. .Net Core wurde in den ersten 10 über Node. js und anderen konkurrierenden Plattformen bewertet.
+.Net Core ist äußerst leistungsfähig und wurde im Vergleich zu Node.js und anderen konkurrierenden Plattformen gut bewertet. Interessanterweise hat [techperformance](https://www.techempower.com/) einen umfangreichen Satz von [Leistungs Benchmarks](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) für viele Webanwendungs Plattformen und-Frameworks durchgeführt. .Net Core wurde in den ersten 10 über Node.js und anderen konkurrierenden Plattformen bewertet.
 
 .Net Core wird von Microsoft und der .net-Community auf GitHub verwaltet.
 
@@ -276,7 +276,7 @@ Cloudanbieter stellen APIs bereit, mit denen Sie mit ihren proprietären Unterst
 
 Unterstützende Dienste werden in Kapitel 5, in der *Cloud Native Datenmuster*und in Kapitel 4, in der *Cloud Native Kommunikationsmuster*erläutert.
 
-## <a name="automation"></a>Automation
+## <a name="automation"></a>Automatisierung
 
 Wie Sie gesehen haben, sind in der Cloud Native Systeme zum Erreichen von Geschwindigkeit und Agilität für die Entwicklung von Funktionen, Containern und modernen System Entwürfen konzipiert. Aber das ist nur ein Teil der Story. Wie stellen Sie die cloudumgebungen bereit, auf denen diese Systeme ausgeführt werden? Wie werden App-Features und Updates schnell bereitgestellt? Wie wird das vollständige Bild abgerundet?
 
@@ -331,7 +331,7 @@ Azure Pipelines ist ein clouddienst, der Continuous Integration (CI) und Continu
 Sie definieren die Pipeline im Code in einer YAML-Datei neben dem Rest des Codes für Ihre APP.
 
 - Die Pipeline wird mit dem Code versioniert und folgt derselben Verzweigungs Struktur.
-- Sie erhalten die Überprüfung Ihrer Änderungen durch Code Überprüfungen in Pull Requests und Verzweigungs Erstellungs Richtlinien.
+- Eine Überprüfung Ihrer Änderungen erzielen Sie durch Code Reviews in Pull Requests und Brancherstellungsrichtlinien.
 - Jede Verzweigung, die Sie verwenden, kann die Buildrichtlinie durch Ändern der Datei Azure-Pipelines. yml anpassen.
 - Die Pipeline Datei wird in die Versionskontrolle eingecheckt und kann bei einem Problem untersucht werden.
 

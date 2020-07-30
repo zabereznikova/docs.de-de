@@ -1,17 +1,17 @@
 ---
-title: 'Rekursive Funktionen: Das Rec-Schlüsselwort'
-description: Erfahren Sie, F# wie das Schlüsselwort "Rec" mit dem Schlüsselwort "Let" verwendet wird, um eine rekursive Funktion zu definieren.
+title: 'Rekursive Funktionen: Das rec-Schlüsselwort'
+description: "Erfahren Sie, wie das F #-Schlüsselwort ' REC ' mit dem ' Let '-Schlüsselwort verwendet wird, um eine rekursive Funktion zu definieren."
 ms.date: 05/16/2016
-ms.openlocfilehash: 7edaa7206b2109c7b1a405624b9b2330968f9c52
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630650"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426975"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>Rekursive Funktionen: Das Rec-Schlüsselwort
+# <a name="recursive-functions-the-rec-keyword"></a>Rekursive Funktionen: Das rec-Schlüsselwort
 
-Das `rec` Schlüsselwort wird in Verbindung mit `let` dem-Schlüsselwort verwendet, um eine rekursive Funktion zu definieren.
+Das `rec` Schlüsselwort wird in Verbindung mit dem- `let` Schlüsselwort verwendet, um eine rekursive Funktion zu definieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,22 +28,49 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Rekursive Funktionen, Funktionen, die selbst aufrufen, werden in der Sprache F# explizit identifiziert. Dadurch ist der zu definierenden identierer im Gültigkeitsbereich der Funktion verfügbar.
+Rekursive Funktionen, die sich selbst aufzurufen, werden explizit in der F #-Sprache identifiziert. Dadurch ist der zu definierenden identierer im Gültigkeitsbereich der Funktion verfügbar.
 
-Der folgende Code veranschaulicht eine rekursive Funktion, die die *n*<sup></sup> -te "fbonacci"-Zahl berechnet.
+Der folgende Code veranschaulicht eine rekursive Funktion, die die *n*<sup>th</sup> -te-Datei "mebonacci" mit der mathematischen Definition berechnet.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 > [!NOTE]
-> In der Praxis ist der oben genannte Code verschwenderisch für Arbeitsspeicher und Prozessorzeit, da er die Neuberechnung der zuvor berechneten Werte einschließt.
+> In der Praxis ist Code wie das vorherige Beispiel nicht ideal, da er bereits berechnete Werte nicht mehr berechnet. Dies liegt daran, dass es sich nicht um einen endrekursiven handelt, was in diesem Artikel ausführlicher erläutert wird.
 
-Methoden sind implizit rekursiv innerhalb des Typs. Es ist nicht erforderlich, das `rec` -Schlüsselwort hinzuzufügen. Let-Bindungen in Klassen sind nicht implizit rekursiv.
+Methoden sind implizit rekursiv innerhalb des Typs. Es ist nicht erforderlich, das- `rec` Schlüsselwort hinzuzufügen. Let-Bindungen in Klassen sind nicht implizit rekursiv.
+
+## <a name="tail-recursion"></a>Endrekursion
+
+Für einige rekursive Funktionen ist es erforderlich, eine "reine" Definition in eine "Pure"-Definition zu umgestalten, die [endrekursiv](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)ist. Dadurch werden unlogische Neuberechnungen verhindert. Beispielsweise kann der vorherige "fbonacci Number"-Generator wie folgt umgeschrieben werden:
+
+```fsharp
+let fib n =
+    let rec loop acc1 acc2 n =
+        match n with
+        | 0 -> acc1
+        | 1 -> acc2
+        | _ ->
+            loop acc2 (acc1 + acc2) (n - 1)
+    loop 0 1 n
+```
+
+Dies ist eine kompliziertere Implementierung. Das Erstellen einer "fbonacci"-Nummer ist ein gutes Beispiel für einen "naive" Algorithmus, der mathematisch rein, aber in der Praxis ineffizient ist. Einige Aspekte machen es in F # effizient und bleiben weiterhin rekursiv definiert:
+
+* Eine rekursive innere Funktion namens `loop` , bei der es sich um ein idiomatische F #-Muster handelt.
+* Zwei akkumulatorparameter, die Akkumulations Werte an rekursive Aufrufe übergeben.
+* Eine Prüfung auf den Wert von `n` , um eine bestimmte Kumulierung zurückzugeben.
+
+Wenn dieses Beispiel iterativ mit einer Schleife geschrieben wurde, sieht der Code mit zwei unterschiedlichen Werten ähnlich aus, bis eine bestimmte Bedingung erfüllt ist.
+
+Der Grund dafür ist, dass dies endrekursiv ist, da der rekursive Aufruf keine Werte in der Aufruf Stapel speichern muss. Alle Zwischenwerte, die berechnet werden, werden über Eingaben in die innere Funktion akkumuliert. Dies ermöglicht es dem F #-Compiler auch, den Code so schnell wie möglich zu optimieren, wenn Sie etwas ähnliches wie eine-Schleife geschrieben hätten `while` .
+
+Es ist üblich, F #-Code zu schreiben, der rekursiv etwas mit einer inneren und äußeren Funktion verarbeitet, wie im vorherigen Beispiel gezeigt. Die innere Funktion verwendet die Endrekursion, während die äußere Funktion über eine bessere Schnittstelle für Aufrufer verfügt.
 
 ## <a name="mutually-recursive-functions"></a>Gegenseitig rekursive Funktionen
 
-Manchmal sind Funktionen *gegenseitig rekursiv*. Dies bedeutet, dass Aufrufe einen Kreis bilden, wobei eine Funktion eine andere aufruft, die wiederum den ersten aufruft, wobei eine beliebige Anzahl von Aufrufen dazwischen ist. Sie müssen diese Funktionen in der eine `let` Bindung zusammen definieren, indem Sie das `and` -Schlüsselwort verwenden, um Sie miteinander zu verknüpfen.
+Manchmal sind Funktionen *gegenseitig rekursiv*. Dies bedeutet, dass Aufrufe einen Kreis bilden, wobei eine Funktion eine andere aufruft, die wiederum den ersten aufruft, wobei eine beliebige Anzahl von Aufrufen dazwischen ist. Sie müssen diese Funktionen in der eine Bindung zusammen definieren `let` , indem Sie das- `and` Schlüsselwort verwenden, um Sie miteinander zu verknüpfen.
 
 Das folgende Beispiel zeigt zwei gegenseitig rekursive Funktionen.
 
