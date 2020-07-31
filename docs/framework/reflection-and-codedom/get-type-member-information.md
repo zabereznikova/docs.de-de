@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Abrufen von Typ- und Memberinformationen mithilfe von Reflektion'
+description: Hier erfahren Sie, wie Sie mit der Reflexion mithilfe des System.Reflection-Namespace Informationen zum Typ und Member erhalten.
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
@@ -9,26 +10,26 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130213"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865319"
 ---
-# <a name="how-to-get-type-and-member-information-by-using-reflection"></a><span data-ttu-id="8f740-102">Vorgehensweise: Abrufen von Typ- und Memberinformationen mithilfe von Reflektion</span><span class="sxs-lookup"><span data-stu-id="8f740-102">How to: Get type and member information by using reflection</span></span>
-<span data-ttu-id="8f740-103">Der <xref:System.Reflection>-Namespace enthält viele Methoden zum Abrufen von Informationen zu Typen und deren Membern.</span><span class="sxs-lookup"><span data-stu-id="8f740-103">The <xref:System.Reflection> namespace contains many methods for obtaining information about types and their members.</span></span> <span data-ttu-id="8f740-104">In diesem Artikel wird eine dieser Methoden, nämlich <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>, veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="8f740-104">This article demonstrates one of these methods, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="8f740-105">Weitere Informationen finden Sie unter [Übersicht über Reflektion](reflection.md).</span><span class="sxs-lookup"><span data-stu-id="8f740-105">For additional information, see [Reflection overview](reflection.md).</span></span>
+# <a name="how-to-get-type-and-member-information-by-using-reflection"></a><span data-ttu-id="02105-103">Vorgehensweise: Abrufen von Typ- und Memberinformationen mithilfe von Reflektion</span><span class="sxs-lookup"><span data-stu-id="02105-103">How to: Get type and member information by using reflection</span></span>
+<span data-ttu-id="02105-104">Der <xref:System.Reflection>-Namespace enthält viele Methoden zum Abrufen von Informationen zu Typen und deren Membern.</span><span class="sxs-lookup"><span data-stu-id="02105-104">The <xref:System.Reflection> namespace contains many methods for obtaining information about types and their members.</span></span> <span data-ttu-id="02105-105">In diesem Artikel wird eine dieser Methoden, nämlich <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>, veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="02105-105">This article demonstrates one of these methods, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="02105-106">Weitere Informationen finden Sie unter [Übersicht über Reflektion](reflection.md).</span><span class="sxs-lookup"><span data-stu-id="02105-106">For additional information, see [Reflection overview](reflection.md).</span></span>
   
-## <a name="example"></a><span data-ttu-id="8f740-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8f740-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="02105-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="02105-107">Example</span></span>
 
-<span data-ttu-id="8f740-107">In folgendem Beispiel werden mithilfe von Reflektion Typ- und Memberinformationen aus einer Assembly abgerufen:</span><span class="sxs-lookup"><span data-stu-id="8f740-107">The following example obtains type and member information by using reflection:</span></span>
+<span data-ttu-id="02105-108">In folgendem Beispiel werden mithilfe von Reflektion Typ- und Memberinformationen aus einer Assembly abgerufen:</span><span class="sxs-lookup"><span data-stu-id="02105-108">The following example obtains type and member information by using reflection:</span></span>
 
 [!code-cpp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cpp)]
 [!code-csharp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cs)]
 [!code-vb[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.vb)]
 
-## <a name="see-also"></a><span data-ttu-id="8f740-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8f740-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02105-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="02105-109">See also</span></span>
 
-- [<span data-ttu-id="8f740-109">Programmieren mit Anwendungsdomänen</span><span class="sxs-lookup"><span data-stu-id="8f740-109">Program with application domains</span></span>](../app-domains/application-domains.md#programming-with-application-domains)
-- [<span data-ttu-id="8f740-110">Reflexion</span><span class="sxs-lookup"><span data-stu-id="8f740-110">Reflection</span></span>](reflection.md)
-- [<span data-ttu-id="8f740-111">Verwenden von Anwendungsdomänen</span><span class="sxs-lookup"><span data-stu-id="8f740-111">Use application domains</span></span>](../app-domains/use.md)
+- [<span data-ttu-id="02105-110">Programmieren mit Anwendungsdomänen</span><span class="sxs-lookup"><span data-stu-id="02105-110">Program with application domains</span></span>](../app-domains/application-domains.md#programming-with-application-domains)
+- [<span data-ttu-id="02105-111">Reflexion</span><span class="sxs-lookup"><span data-stu-id="02105-111">Reflection</span></span>](reflection.md)
+- [<span data-ttu-id="02105-112">Verwenden von Anwendungsdomänen</span><span class="sxs-lookup"><span data-stu-id="02105-112">Use application domains</span></span>](../app-domains/use.md)

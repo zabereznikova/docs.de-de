@@ -1,23 +1,24 @@
 ---
 title: 'Vorgehensweise: Suchen nach Elementen mit bestimmten Attributen (XPath-LINQ to XML) (C#)'
+description: In diesem C#-Beispiel wird verglichen, wie XPath und LINQ to XML Elemente mit einem bestimmten Attribut finden.
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb0b5c27fb3993b487c5e8d70c6562c1d0562860
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141040"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105261"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="c1cf0-102">Vorgehensweise: Suchen nach Elementen mit bestimmten Attributen (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c1cf0-102">How to find elements with a specific attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="c1cf0-103">Es kann passieren, dass Sie alle Elemente ermitteln möchten, die ein bestimmtes Attribut besitzen.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="c1cf0-104">Welchen Inhalt das Attribut hat, ist Ihnen dabei egal.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="c1cf0-105">Alleiniges Kriterium für die Auswahl ist dessen Existenz.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="20136-103">Vorgehensweise: Suchen nach Elementen mit bestimmten Attributen (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="20136-103">How to find elements with a specific attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="20136-104">Es kann passieren, dass Sie alle Elemente ermitteln möchten, die ein bestimmtes Attribut besitzen.</span><span class="sxs-lookup"><span data-stu-id="20136-104">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="20136-105">Welchen Inhalt das Attribut hat, ist Ihnen dabei egal.</span><span class="sxs-lookup"><span data-stu-id="20136-105">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="20136-106">Alleiniges Kriterium für die Auswahl ist dessen Existenz.</span><span class="sxs-lookup"><span data-stu-id="20136-106">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="c1cf0-106">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="c1cf0-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="20136-107">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="20136-107">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="c1cf0-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c1cf0-107">Example</span></span>  
- <span data-ttu-id="c1cf0-108">Der folgende Code wählt nur die Elemente aus, die das `Select`-Attribut besitzen:</span><span class="sxs-lookup"><span data-stu-id="c1cf0-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="20136-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="20136-108">Example</span></span>  
+ <span data-ttu-id="20136-109">Der folgende Code wählt nur die Elemente aus, die das `Select`-Attribut besitzen:</span><span class="sxs-lookup"><span data-stu-id="20136-109">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -48,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="c1cf0-109">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="c1cf0-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="20136-110">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="20136-110">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  
