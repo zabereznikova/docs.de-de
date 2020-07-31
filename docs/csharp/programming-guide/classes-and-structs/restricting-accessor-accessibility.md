@@ -1,5 +1,6 @@
 ---
 title: Einschränken des Zugriffsmethodenzugriffs – C#-Programmierhandbuch
+description: Die Zugriffsmethoden „Get“ und „Set“ einer Eigenschaft in C# haben standardmäßig die gleiche Sichtbarkeit oder Zugriffsebene wie die Eigenschaft, zu der sie gehören. Sie können den Zugriff einschränken.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - read-only properties [C#]
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18fd1d58dc6125b5180118b2e0d3edc885a4b971
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714693"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863967"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Einschränken des Accessorzugriffs (C#-Programmierhandbuch)
-Die [Get](../../language-reference/keywords/get.md)- und [Set](../../language-reference/keywords/set.md)-Teile einer Eigenschaft oder eines Indexers werden *Zugriffsmethoden* oder Accessoren genannt. Standardmäßig weisen diese Zugriffsmethoden dieselbe Sichtbarkeit oder Zugriffsebene auf: nämlich die der Eigenschaft oder des Indexers, zu dem sie gehören. Weitere Informationen finden Sie unter [Zugriffsebenen](../../language-reference/keywords/accessibility-levels.md). Allerdings ist es manchmal sinnvoll, den Zugriff auf eine der beiden Zugriffsmethoden einzuschränken. Dies bedeutet in der Regel, dass der Zugriff auf den `set`-Accessor eingeschränkt wird, während der `get`-Accessor öffentlich zugänglich bleibt. Beispiel:  
+Die [Get](../../language-reference/keywords/get.md)- und [Set](../../language-reference/keywords/set.md)-Teile einer Eigenschaft oder eines Indexers werden *Zugriffsmethoden* oder Accessoren genannt. Standardmäßig weisen diese Zugriffsmethoden dieselbe Sichtbarkeit oder Zugriffsebene auf: nämlich die der Eigenschaft oder des Indexers, zu dem sie gehören. Weitere Informationen finden Sie unter [Zugriffsebenen](../../language-reference/keywords/accessibility-levels.md). Allerdings ist es manchmal sinnvoll, den Zugriff auf eine der beiden Zugriffsmethoden einzuschränken. Dies bedeutet in der Regel, dass der Zugriff auf den `set`-Accessor eingeschränkt wird, während der `get`-Accessor öffentlich zugänglich bleibt. Zum Beispiel:  
   
  [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
@@ -35,7 +36,7 @@ Die [Get](../../language-reference/keywords/get.md)- und [Set](../../language-re
 - Die Zugriffsebene des Accessors muss restriktiver sein als die Zugriffsebene der Eigenschaft oder des Indexers selbst.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>Zugriffsmodifizierer für Override-Accessoren  
- Beim Überschreiben einer Eigenschaft oder eines Indexers müssen die überschriebenen Accessoren für den überschreibenden Code zugänglich sein. Außerdem müssen der Zugriff der Eigenschaft/des Indexers als auch der Accessoren mit der entsprechenden überschriebenen Eigenschaft/dem Indexer und den Accessoren übereinstimmen. Beispiel:  
+ Beim Überschreiben einer Eigenschaft oder eines Indexers müssen die überschriebenen Accessoren für den überschreibenden Code zugänglich sein. Außerdem müssen der Zugriff der Eigenschaft/des Indexers als auch der Accessoren mit der entsprechenden überschriebenen Eigenschaft/dem Indexer und den Accessoren übereinstimmen. Zum Beispiel:  
   
  [!code-csharp[csProgGuideIndexers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#7)]  
   
@@ -63,7 +64,7 @@ Die [Get](../../language-reference/keywords/get.md)- und [Set](../../language-re
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Eigenschaften](./properties.md)

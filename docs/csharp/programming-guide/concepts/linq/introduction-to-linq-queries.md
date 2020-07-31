@@ -1,5 +1,6 @@
 ---
 title: Einführung in LINQ-Abfragen (C#)
+description: LINQ bietet ein konsistentes Modell für Abfragen von Daten in verschiedenen Datenquellen und Formaten. In einer LINQ-Abfrage arbeiten Sie immer mit Objekten.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - deferred execution [LINQ]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 5a9d97ff14f087ddfc55986bf77f18492cbf8a04
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ce878dc255d2502f0594626b294393c399c932e5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389582"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165839"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Einführung in LINQ-Abfragen (C#)
 Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden normalerweise in einer spezialisierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für die verschiedenen Datenquellen entwickelt, beispielsweise SQL für relationale Datenbanken und XQuery für XML. Aus diesem Grund mussten Entwickler für jeden Typ von Datenquelle oder Datenformat, den sie unterstützen müssen, eine neue Abfragesprache erlernen. LINQ vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer LINQ-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für die Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, ADO.NET-Datasets, .NET-Auflistungen sowie allen anderen Quellen und Formaten, für die ein LINQ-Anbieter verfügbar ist.  

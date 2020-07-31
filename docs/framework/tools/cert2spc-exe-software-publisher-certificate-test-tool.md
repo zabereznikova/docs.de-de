@@ -1,5 +1,6 @@
 ---
 title: Cert2spc.exe (Software Publisher Certificate Test-Tool)
+description: Verwenden Sie mit „Cert2spc.exe“ das Software Publisher Certificate Test-Tool. Dieses Tool erstellt ein Softwareherausgeberzertifikat (Software Publisher‘s Certificate, SPC) aus einem oder mehreren X.509-Zertifikaten.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SPC
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Cert2spc.exe
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
-ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2eb6339aa6f5d23a5b87986410cbeaac2dac2bec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129883"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167315"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Software Publisher Certificate Test-Tool)
 Das Software Publisher Certificate Test-Tool erstellt ein SPC (Software Publisher's Certificate, Softwareherausgeberzertifikat) aus einem oder mehreren X.509-Zertifikaten. "Cert2spc.exe" wird ausschließlich zu Textzwecken verwendet. Sie erhalten ein gültiges SPC von einer Zertifizierungsstelle, beispielsweise VeriSign oder Thawte. Weitere Informationen zum Erstellen von X.509-Zertifikaten finden Sie unter [Makecert.exe (Certificate Creation-Tool)](/windows/desktop/SecCrypto/makecert).  
@@ -30,13 +31,13 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`certN.cer`|Der Name eines X.509-Zertifikats, das in die SPC-Datei eingebunden werden soll. Sie können mehrere Namen angeben, die durch Leerzeichen voneinander getrennt werden müssen.|  
 |`crlN.crl`|Der Name einer Zertifikatssperrliste, die in die SPC-Datei aufgenommen werden soll. Sie können mehrere Namen angeben, die durch Leerzeichen voneinander getrennt werden müssen.|  
 |`outputSPCfile.spc`|Der Name des PKCS #7-Objekts, das die X.509-Zertifikate enthält.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
@@ -53,7 +54,7 @@ cert2spc myCertificate.cer mySPCFile.spc
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Extras](index.md)
 - [Makecert.exe (Tool für die Zertifikaterstellung)](/windows/desktop/SecCrypto/makecert)

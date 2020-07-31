@@ -1,13 +1,14 @@
 ---
 title: 'Entschärfung: Benutzerdefinierte IMessageFilter.PreFilterMessage-Implementierungen'
+description: In diesem Artikel erfahren Sie mehr über die benutzerdefinierte Implementierung der Methode „IMessageFilter.PreFilterMessage“ in Windows Forms-Apps, die auf .NET Framework 4.6.1 oder höher ausgerichtet sind.
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5fe7500d3ed6ff293514495df150a747e7946dda
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398646"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475254"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Entschärfung: Benutzerdefinierte IMessageFilter.PreFilterMessage-Implementierungen
 
@@ -29,7 +30,7 @@ Für Windows Forms-Apps, die auf vorherige Versionen von .NET Framework ausgeric
 
 ## <a name="mitigation"></a>Minderung
 
-Ist diese Änderung nicht erwünscht, kann sie für Apps, die für .NET Framework 4.6.1 oder höhere Versionen vorgesehen sind, deaktiviert werden. Dazu muss dem Abschnitt [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) der App-Konfigurationsdatei die folgende Konfigurationseinstellung hinzugefügt werden:
+Ist diese Änderung nicht erwünscht, kann sie in Apps, die für .NET Framework 4.6.1 oder höher konzipiert sind, deaktiviert werden. Dazu muss dem Abschnitt [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) der App-Konfigurationsdatei die folgende Konfigurationseinstellung hinzugefügt werden:
 
 ```xml
 <runtime>
@@ -37,7 +38,7 @@ Ist diese Änderung nicht erwünscht, kann sie für Apps, die für .NET Framewo
 </runtime>
 ```
 
-Für Apps, die für frühere Versionen von .NET Framework vorgesehen sind, aber unter .NET Framework 4.6.1 oder einer höheren Version ausgeführt werden, kann dieses Verhalten aktiviert werden, indem dem Abschnitt [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) der App-Konfigurationsdatei die folgende Konfigurationseinstellung hinzugefügt wird:
+Für Apps, die für frühere Versionen des .NET Framework vorgesehen sind, aber unter .NET Framework 4.6.1 oder einer höheren Version ausgeführt werden, kann dieses Verhalten aktiviert werden, indem dem Abschnitt [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) der App-Konfigurationsdatei die folgende Konfigurationseinstellung hinzugefügt wird:
 
 ```xml
 <runtime>
@@ -45,6 +46,6 @@ Für Apps, die für frühere Versionen von .NET Framework vorgesehen sind, aber
 </runtime>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Anwendungskompatibilität](application-compatibility.md)

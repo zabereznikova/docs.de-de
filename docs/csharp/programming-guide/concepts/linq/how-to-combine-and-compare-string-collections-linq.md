@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)'
+description: In diesem Beispiel werden Dateien zusammengeführt, die Textzeilen enthalten. In diesem Artikel erfahren Sie, wie Sie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge für die Zeilen in LINQ in C# durchführen.
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169453"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105359"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)
 In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren. Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.  
@@ -171,7 +172,7 @@ class MergeStrings
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)
-- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)
+- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)
+- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)

@@ -1,17 +1,18 @@
 ---
 title: Konstruktoren – C#-Programmierhandbuch
+description: In C# wird bei Erstellung einer Klasse oder einer Struktur ein Konstruktor erstellt. Verwenden Sie Konstruktoren, um Standardwerte festzulegen, Instanziierungen zu begrenzen und flexiblen, einfach lesbaren Code zu schreiben.
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 8eedfaed111f01cc2ec55a2f42df66d4588bd42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a731e648143f5e0ecf8860625962d8baa29fe26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398400"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474903"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktoren (C#-Programmierhandbuch)
 

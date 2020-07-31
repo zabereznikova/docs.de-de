@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Steuern des Typs einer Projektion (C#)'
+description: Hier erfahren Sie, wie Sie den Typ einer Projektion in LINQ in C# steuern, um Typensammlungen außerhalb von IEnumerable<T> von XElement zu erstellen.
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: cb7c272fbe67c0700b5740691befc483993f4e29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32b019b5e1574e7160b4dce5fb0322caa3c1ca71
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141355"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103344"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Vorgehensweise: Steuern des Typs einer Projektion (C#)
 Bei einer Projektion wird ein Satz von Daten gefiltert und in der Form und sogar im Typ geändert. Die meisten Abfrageausdrücke führen Projektionen aus. Bei den meisten Abfrageausdrücken in diesem Abschnitt ist das Ergebnis der Auswertung eine <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement>, aber Sie können festlegen, welcher Projektionstyp verwendet werden soll, um Auflistungen eines anderen Typs zu erstellen. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  

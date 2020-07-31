@@ -1,5 +1,6 @@
 ---
 title: Erstellen von Ressourcendateien für .NET-Apps
+description: Hier erfahren Sie, wie Sie Ressourcendateien für .NET-Apps erstellen. Sie erstellen programmgesteuert Textdateien mit Zeichenfolgenressourcen, XML- oder Binärdateien, oder XML-Dateien mit Zeichenfolgen-, Bild- oder Objektdaten.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 4730a14e499c75176d7ba7c8378626070d5211e9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111776"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865176"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Erstellen von Ressourcendateien für .NET-Apps
 

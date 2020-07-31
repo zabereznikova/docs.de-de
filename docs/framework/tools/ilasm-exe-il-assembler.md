@@ -1,5 +1,6 @@
 ---
 title: Ilasm.exe (IL-Assembler)
+description: Hier erfahren Sie mehr über die ersten Schritte mit dem IL-Assembler „Ilasm.exe“. Dieses Tool generiert eine portierbare ausführbare Datei (Portable Executable, PE) aus Zwischensprache (Intermediate Language, IL).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MSIL generators
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a85b3bf9509ffba6c2331d14196a6bef2bfa080
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105095"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166984"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
@@ -34,11 +35,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parameter
 
-| Argument | Beschreibung |
+| Argument | BESCHREIBUNG |
 | -------- | ----------- |
 |`filename`|Der Name der IL-Quelldatei. Diese Datei besteht aus Direktiven für die Deklaration von Metadaten und symbolischen IL-Anweisungen. Zum Erstellen einer einzelnen PE-Datei mithilfe von *Ilasm.exe* können mehrere Quelldateiargumente angegeben werden. **Hinweis**: Vergewissern Sie sich, dass die letzte Codezeile in der IL-Quelldatei entweder ein nachgestelltes Leerzeichen oder ein Zeilenendezeichen besitzt.|
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/32bitpreferred**|Erstellt ein Abbild im PE32-Format (vorzugweise 32 Bit).|
 |**/alignment:** `integer`|Legt FileAlignment auf den Wert fest, der im NT Optional-Header per `integer` angegeben ist. Wenn die .alignment-IL-Direktive in der Datei angegeben ist, wird sie durch diese Option überschrieben.|

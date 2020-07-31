@@ -1,17 +1,18 @@
 ---
-title: Veraltete Typen in .NET Framework
+title: Veraltete Typen im .NET Framework
+description: Hier finden Sie eine Liste von in .NET Framework 4.5 und .NET 4.6 veralteten Typen, jeweils nach Assembly sortiert. Empfohlene Alternativen sind ebenfalls aufgeführt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: b7932a553f39e1f1da2a3946878d6224099da8da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802686"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925812"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Veraltete Typen in .NET Framework
 
@@ -79,14 +80,14 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 
 ### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.ExecutionEngineException?displayProperty=nameWithType>|Dieser Typ hat bisher einen nicht näher beschriebenen schwerwiegenden Fehler angegeben. Die Laufzeit löst diese Ausnahme nicht mehr aus, sodass dieser Typ veraltet ist.|
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.StringComparer?displayProperty=nameWithType>.|
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|Die <xref:System.Configuration.Assemblies.AssemblyHash>-Klasse ist veraltet.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5. Verwenden Sie stattdessen die <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType>-Klasse im System.Runtime.CompilerServices-Namespace.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Es steht eine alternative API zur Verfügung: Geben Sie stattdessen das benutzerdefinierte <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>-Attribut aus.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Eine alternative API ist verfügbar: Geben Sie stattdessen das benutzerdefinierte Attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> aus.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|
@@ -139,36 +140,36 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|Die Deklarationssicherheit auf Assemblyebene wurde als veraltet eingestuft und wird von der CLR nicht mehr als Standardeinstellung erzwungen.|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Dieser Typ ist veraltet und wird in einem der nächsten Releases von .NET Framework entfernt.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="Core"></a>
 
 ### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Verwenden Sie diesen Typ nicht.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="data"></a>
 
 ### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> ist veraltet.|
 |<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> ist veraltet.|
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|Die <xref:System.Data.TypedDataSetGenerator>-Klasse wird in einer der nächsten Versionen entfernt. Verwenden Sie <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> in "System.Design.dll".|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|Die <xref:System.Xml.XmlDataDocument>-Klasse wird in einer der nächsten Versionen entfernt.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="oracleclient"></a>
 
 ### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> ist veraltet.|
 |<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> ist veraltet.|
@@ -179,13 +180,13 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> ist veraltet.|
 |<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> ist veraltet.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="design"></a>
 
 ### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>.|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|Die Verwendung dieses Typs wird nicht empfohlen, da die Bearbeitung von Datenbindungen über <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> gestartet wird, anstatt über das Eigenschaftenraster.|
@@ -202,13 +203,13 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=nameWithType>|Die Verwendung dieses Typs wird nicht empfohlen, da das Dialogfeld "AutoFormat" vom Designerhost gestartet wird. Die Liste der verfügbaren automatischen Formatierungen wird für <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> in der <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType>-Eigenschaft verfügbar gemacht.|
 |<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=nameWithType>|Die empfohlene Alternative ist das <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=nameWithType>-Objekt, da es ein <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>-Objekt zum Bearbeiten des Inhalts verwendet. Designerbereiche ermöglichen eine bessere Steuerung des zu bearbeitenden Inhalts.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="system"></a>
 
 ### <a name="assembly-systemdll"></a>Assembly: System.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Diese Schnittstelle ist veraltet. Fügen Sie stattdessen einen <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> hinzu, um den Typ <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> zu behandeln.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType>, um mit dem neuen Einstellungsmodell zu arbeiten.|
@@ -216,43 +217,43 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Diese Klasse ist veraltet.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen die Leistungsindikatoren über die <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>-Klasse.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType>, um auf den globalen Standardproxy zuzugreifen und diesen festzulegen. Verwenden Sie "null" anstelle von <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|
-|<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
+|<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="enterpriseservices"></a>
 
 ### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|Die <xref:System.EnterpriseServices.RegistrationHelperTx>-Klasse ist veraltet.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="net"></a>
 
 ### <a name="assembly-systemnetdll"></a>Assembly: System.Net.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
-|<xref:System.Net.INetworkProgress?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
-|<xref:System.Net.IUnsafeWebRequestCreate?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
-|<xref:System.Net.NetworkProgressChangedEventArgs?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
-|<xref:System.Net.UiSynchronizationContext?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
-|<xref:System.Net.Sockets.HttpPolicyDownloaderProtocol?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
-|<xref:System.Net.Sockets.SecurityCriticalAction?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
-|<xref:System.Net.Sockets.SocketPolicy?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
-|<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
-|<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
+|<xref:System.Net.INetworkProgress?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
+|<xref:System.Net.IUnsafeWebRequestCreate?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
+|<xref:System.Net.NetworkProgressChangedEventArgs?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
+|<xref:System.Net.UiSynchronizationContext?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
+|<xref:System.Net.Sockets.HttpPolicyDownloaderProtocol?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
+|<xref:System.Net.Sockets.SecurityCriticalAction?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
+|<xref:System.Net.Sockets.SocketPolicy?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
+|<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
+|<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="servicemodel"></a>
 
 ### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Peerchannelfunktion ist veraltet und wird demnächst entfernt.|
 |<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Dieser Typ ist veraltet. Um HTTP <xref:System.Net.CookieContainer> zu aktivieren, verwenden Sie die `AllowCookies`-Eigenschaft auf der HTTP-Bindung oder auf <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.|
@@ -263,13 +264,13 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.ServiceModel.Configuration.PeerTransportElement?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Peerchannelfunktion ist veraltet und wird demnächst entfernt.|
 |<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Peerchannelfunktion ist veraltet und wird demnächst entfernt.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="web"></a>
 
 ### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|Dieser Typ ist veraltet. Das Passport-Authentifizierungsprodukt wird nicht mehr unterstützt und wurde durch ein [Microsoft-Konto](https://account.microsoft.com/account/Account?destrt=home-index) abgelöst.|
 |<xref:System.Web.Mail.MailAttachment?displayProperty=nameWithType>|Die empfohlene Alternative ist <xref:System.Net.Mail.Attachment?displayProperty=nameWithType>.|
@@ -285,13 +286,13 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Dieser Typ ist veraltet. Das Passport-Authentifizierungsprodukt wird nicht mehr unterstützt und wurde durch ein [Microsoft-Konto](https://account.microsoft.com/account/Account?destrt=home-index) abgelöst.|
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|Die empfohlenen Alternativen sind <xref:System.Convert?displayProperty=nameWithType> und <xref:System.String.Format%2A?displayProperty=nameWithType>.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="mobile"></a>
 
 ### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.Web.Mobile.CookielessData?displayProperty=nameWithType>|Die Assembly "System.Web.Mobile.dll" ist veraltet und sollte nicht mehr verwendet werden. Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie auf den Webseiten über [mobile Apps und Websites mit ASP.NET](/aspnet/mobile/overview).|
 |<xref:System.Web.Mobile.DeviceFilterElement?displayProperty=nameWithType>|Die Assembly "System.Web.Mobile.dll" ist veraltet und sollte nicht mehr verwendet werden. Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie auf den Webseiten über [mobile Apps und Websites mit ASP.NET](/aspnet/mobile/overview).|
@@ -486,13 +487,13 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidationSummaryAdapter?displayProperty=nameWithType>|Die Assembly "System.Web.Mobile.dll" ist veraltet und sollte nicht mehr verwendet werden. Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie auf den Webseiten über [mobile Apps und Websites mit ASP.NET](/aspnet/mobile/overview).|
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidatorAdapter?displayProperty=nameWithType>|Die Assembly "System.Web.Mobile.dll" ist veraltet und sollte nicht mehr verwendet werden. Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie auf den Webseiten über [mobile Apps und Websites mit ASP.NET](/aspnet/mobile/overview).|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="workflow_activities"></a>
 
 ### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly: System.Workflow.Activities.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |Alle Typen im <xref:System.Workflow.Activities?displayProperty=nameWithType>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
 |<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
@@ -500,13 +501,13 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
 |<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="workflow_componentmodel"></a>
 
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly: System.Workflow.ComponentModel.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |Alle Typen im <xref:System.Workflow.ComponentModel>-Namespace außer <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> und <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
 |Alle Typen im <xref:System.Workflow.ComponentModel.Compiler>-Namespace außer <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> und <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
@@ -519,13 +520,13 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
 |<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="workflow_runtime"></a>
 
 ### <a name="assembly-systemworkflowruntimedll"></a>Assembly: System.Workflow.Runtime.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br />Die Workflow Foundation 3.0-Typen sind veraltet. Verwenden Sie stattdessen die Workflow 4.0-Typen von <xref:System.Activities>\*.|
 |<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br />Die Workflow Foundation 3.0-Typen sind veraltet. Verwenden Sie stattdessen die Workflow 4.0-Typen von <xref:System.Activities>\*.|
@@ -535,13 +536,13 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |Alle Typen im <xref:System.Workflow.Runtime.Hosting>-Namespace außer <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
 |Alle Typen im <xref:System.Workflow.Runtime.Tracking>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die System.Workflow.\*-Typen sind veraltet. Verwenden Sie stattdessen die neuen Typen von <xref:System.Activities>\*.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="workflowservices"></a>
 
 ### <a name="assembly-systemworkflowservicesdll"></a>Assembly: System.WorkflowServices.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|
 |<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|
@@ -565,41 +566,41 @@ In den folgenden Tabellen sind die Typen aufgeführt, die in Systemassemblys als
 |Alle Typen im <xref:System.Workflow.Activities?displayProperty=nameWithType>-Namespace|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|
 |<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die WF 3-Typen sind veraltet. Verwenden Sie stattdessen die neuen WF 4-Typen von <xref:System.Activities>\*.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="xaml"></a>
 
 ### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Nachricht|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|Wird vom XAML-Parser nicht verwendet. Sehen Sie unter <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType> nach.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="xml"></a>
 
 ### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
-|<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
+|<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Typs generiert einen Compilerfehler.<br /><br /> Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
 |<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=nameWithType>|Verwenden Sie <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> für die Schemakompilierung und -validierung.|
 |<xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType>|Verwenden Sie stattdessen ein <xref:System.Xml.XmlReader?displayProperty=nameWithType>-Objekt, das von der <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType>-Methode erstellt wird, mit dem entsprechenden <xref:System.Xml.XmlReaderSettings?displayProperty=nameWithType>-Objekt.|
-|<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|Die Verwendung dieses Typs generiert einen Compilerfehler. Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung aus dem Code vorgesehen.|
+|<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|Die Verwendung dieses Typs generiert einen Compilerfehler. Diese API unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung vom Code aus vorgesehen.|
 |<xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType>.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="WindowsBase"></a>
 
 ### <a name="assembly-windowsbasedll"></a>Assembly: WindowsBase.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> ist veraltet. Diese Schnittstelle wird nicht mehr verwendet.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="obsolete_types_in_microsoft_assemblies"></a>
 
@@ -613,24 +614,24 @@ In den folgenden Abschnitten sind die veralteten Typen in Microsoft-Assemblys au
 
 Die IEHost.dll-Assembly und die IEExec.exe-Assembly wurden aus .NET Framework entfernt. Alle zugehörigen Typen und Member sind veraltet und werden ab .NET Framework 4 nicht mehr unterstützt. Diese Assemblys wurden verwendet, um Windows Forms-Steuerelemente zu hosten und ausführbare Dateien in Internet Explorer auszuführen. Empfohlene Alternativen schließen ClickOnce, XAML-Browseranwendungen (XBAP) und Microsoft Silverlight ein.
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="Engine"></a>
 
 ### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen bitte <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> aus der *Microsoft.Build*-Assembly.|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Diese Klasse ist veraltet. Verwenden Sie stattdessen bitte <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> aus der *Microsoft.Build*-Assembly.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="jscript"></a>
 
 ### <a name="assembly-microsoftjscriptdll"></a>Assembly: Microsoft.JScript.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=nameWithType>|Dieser Typ ist seit Visual Studio 2005 veraltet. Für dieses Feature gibt es keinen Ersatz. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|
 |<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=nameWithType>|Dieser Typ ist seit Visual Studio 2005 veraltet. Für dieses Feature gibt es keinen Ersatz. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|
@@ -651,7 +652,7 @@ Die IEHost.dll-Assembly und die IEExec.exe-Assembly wurden aus .NET Framework en
 |<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=nameWithType>|Dieser Typ ist seit Visual Studio 2005 veraltet. Für dieses Feature gibt es keinen Ersatz. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|
 |<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=nameWithType>|Dieser Typ ist seit Visual Studio 2005 veraltet. Für dieses Feature gibt es keinen Ersatz. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="VBCompat"></a>
 
@@ -659,7 +660,7 @@ Die IEHost.dll-Assembly und die IEExec.exe-Assembly wurden aus .NET Framework en
 
 Weitere Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual Basic 6.0 Resource Center (Ressourcencenter für Visual Basic 6.0)](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Dieser Member ist veraltet.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray?displayProperty=nameWithType>|Dieser Member ist veraltet.|
@@ -729,13 +730,13 @@ Weitere Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual 
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.WebItemUnexpectedErrorReadingTemplateFile?displayProperty=nameWithType>|Dieser Member ist veraltet.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ZOrderConstants?displayProperty=nameWithType>|Dieser Member ist veraltet.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="VBCompatData"></a>
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Assembly: Microsoft.VisualBasic.Compatibility.Data.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC?displayProperty=nameWithType>|Dieser Member ist veraltet.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum?displayProperty=nameWithType>|Dieser Member ist veraltet.|
@@ -787,13 +788,13 @@ Weitere Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual 
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UNAME?displayProperty=nameWithType>|Dieser Member ist veraltet.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode?displayProperty=nameWithType>|Dieser Member ist veraltet.|
 
-[Zurück zum Anfang](#introduction)
+[Zurück nach oben](#introduction)
 
 <a name="visualc"></a>
 
 ### <a name="assembly-microsoftvisualcdll"></a>Assembly: Microsoft.VisualC.dll
 
-|Geben Sie Folgendes ein:|Nachricht|
+|Typ|Meldung|
 |----------|-------------|
 |<xref:Microsoft.VisualC.DebugInfoInPDBAttribute?displayProperty=nameWithType>|"Microsoft.VisualC.dll" ist eine veraltete Assembly und ist nur aus Gründen der Abwärtskompatibilität vorhanden.|
 |<xref:Microsoft.VisualC.DecoratedNameAttribute?displayProperty=nameWithType>|"Microsoft.VisualC.dll" ist eine veraltete Assembly und ist nur aus Gründen der Abwärtskompatibilität vorhanden.|
@@ -806,7 +807,7 @@ Weitere Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual 
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|"Microsoft.VisualC.dll" ist eine veraltete Assembly und ist nur aus Gründen der Abwärtskompatibilität vorhanden.|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|"Microsoft.VisualC.dll" ist eine veraltete Assembly und ist nur aus Gründen der Abwärtskompatibilität vorhanden.|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Veraltete Elemente in der Klassenbibliothek](whats-obsolete.md)
 - [Veraltete Member](obsolete-members.md)

@@ -1,17 +1,18 @@
 ---
 title: Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden? – C#-Programmierhandbuch
+description: Hier erhalten Sie Informationen zum Verwenden der Schlüsselwörter „new“ und „override“ in C# zum Angeben davon, wie Methoden mit demselben Namen in einer Basis-und einer abgeleiteten Klasse miteinander interagieren.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 493c6c5f5bf47c6b2cd140ac0f6922f91ca4252b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 732a37c08b4c7bb998a7cc5dcfbd00d4e706b06c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170259"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864539"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Wann müssen die Schlüsselwörter "override" und "new" verwendet werden? (C#-Programmierhandbuch)
 
@@ -542,7 +543,7 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)

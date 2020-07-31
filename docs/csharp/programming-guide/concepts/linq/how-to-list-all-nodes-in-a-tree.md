@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Auflisten aller Knoten in einer Struktur (C#)'
+description: In diesem Artikel erfahren Sie, wie Sie alle Knoten in einem Baum durch Ausführen eines XPath-Ausdrucks mit LINQ to XML in C# auflisten. Sie können sehen, wie sich eine Methode oder Eigenschaft auf den Baum auswirkt.
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28400712154138fa474665a796b77572b095fe13
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345868"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104976"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Vorgehensweise: Auflisten aller Knoten in einer Struktur (C#)
 

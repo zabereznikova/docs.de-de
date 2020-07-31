@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Durchführen einer Streamingtransformation von Text in XML (C#)'
+description: In diesem Artikel erfahren Sie, wie Sie eine Streamingtransformation von XML-Text in C# ausführen. Hierfür wird eine Textdatei zeilenweise gestreamt und eine LINQ-Abfrage zum Verarbeiten der Textdatei verwendet.
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f933064be70d39b59cf7dbe51b4ee92e5226647a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345793"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104744"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Vorgehensweise: Durchführen einer Streamingtransformation von Text in XML (C#)
 
@@ -88,6 +89,6 @@ class Program
 </Root>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Linq.XStreamingElement>

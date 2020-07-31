@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie entladbaren AssemblyLoadContext zum Laden und
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d1f604816dcbd7a84a3692b3cfd24481532789a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159740"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865345"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core
 
@@ -30,7 +30,7 @@ Dieser Abschnitt enthält ein detailliertes schrittweises Tutorial, das eine ein
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>Erstellen eines entladbaren AssemblyLoadContext
 
-Sie müssen die Klasse von <xref:System.Runtime.Loader.AssemblyLoadContext> ableiten und ihre <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>-Methode überladen. Diese Methode löst Verweise auf alle Assemblys auf, die Abhängigkeiten von in diesen `AssemblyLoadContext` geladenen Assemblys sind.
+Sie müssen die Klasse von <xref:System.Runtime.Loader.AssemblyLoadContext> ableiten und ihre <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>-Methode überschreiben. Diese Methode löst Verweise auf alle Assemblys auf, die Abhängigkeiten von in diesen `AssemblyLoadContext` geladenen Assemblys sind.
 
 Der folgende Code ist ein Beispiel für den einfachsten benutzerdefinierten `AssemblyLoadContext`:
 

@@ -1,13 +1,14 @@
 ---
 title: Durchlaufen von Sammlungen in C#
+description: Hier erfahren Sie, wie Sie einen Iterator verwenden, um Sammlungen wie Listen und Arrays schrittweise zu durchlaufen. Iteratoren werden im Clientcode über eine foreach-Anweisung oder eine LINQ-Abfrage verwendet.
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 310fff68a242812620357517c212ddd5f053775c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240693"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104252"
 ---
 # <a name="iterators-c"></a>Iteratoren (C#)
 

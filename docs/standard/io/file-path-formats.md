@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447133"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165790"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -124,7 +124,7 @@ Die meisten Pfade, die an Windows-APIs übergeben werden, werden normalisiert. W
 
 Diese Normalisierung erfolgt implizit, Sie können sie jedoch explizit ausführen, indem Sie die Methode <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> aufrufen, die einen Aufruf der [GetFullPathName()-Funktion](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) umschließt. Sie können die Windows-Funktion [GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) auch aufrufen, indem Sie „P/Invoke“ verwenden
 
-### <a name="identifying-the-path"></a>Identifizieren des Pfads
+### <a name="identify-the-path"></a>Identifizieren des Pfads
 
 Der erste Schritt der Pfadnormalisierung ist das Identifizieren des Pfadtyps. Pfade gehören zu einer von wenigen Kategorien:
 
@@ -138,13 +138,13 @@ Der erste Schritt der Pfadnormalisierung ist das Identifizieren des Pfadtyps. Pf
 
 Der Typ des Pfad bestimmt, ob ein aktuelles Verzeichnis in irgendeiner Weise angewendet wird. Er bestimmt auch den „Stamm“ des Pfads.
 
-### <a name="handling-legacy-devices"></a>Handhaben von Legacygeräten
+### <a name="handle-legacy-devices"></a>Verarbeiten von Legacygeräten
 
 Wenn der Pfad ein DOS-Legacygerät wie `CON`, `COM1` oder `LPT1` ist, wird er durch Voranstellen von `\\.\` in einen Gerätepfad konvertiert und zurückgegeben.
 
 Ein Pfad, der mit einem Legacygerätenamen beginnt, wird von der Methode <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> immer als Legacygerät interpretiert. Beispielsweise ist der DOS-Gerätepfad für `CON.TXT``\\.\CON`, und der DOS-Gerätepfad für `COM1.TXT\file1.txt` ist `\\.\COM1`.
 
-### <a name="applying-the-current-directory"></a>Anwenden des aktuellen Verzeichnisses
+### <a name="apply-the-current-directory"></a>Anwenden des aktuellen Verzeichnisses
 
 Wenn ein Pfad nicht absolut ist, wendet Windows das aktuelle Verzeichnis an. Das aktuelle Verzeichnis wird nicht auf UNC- und Gerätepfade angewendet. Auch nicht auf ein volles Laufwerk mit dem Trennzeichen C:\\.
 
@@ -157,11 +157,11 @@ Wenn der Pfad mit etwas anderem als einem Trennzeichen beginnt, werden das aktue
 > [!IMPORTANT]
 > Relative Pfade sind in Multithreadanwendungen gefährlich (d.h. in den meisten Anwendungen), da das aktuelle Verzeichnis eine prozessspezifische Einstellung ist. Jeder Thread kann das aktuelle Verzeichnis jederzeit ändern. Beginnend mit .NET Core 2.1 können Sie die Methode <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> aufrufen, um einen absoluten Pfad von einem relativen Pfad und dem Basispfad (dem aktuellen Verzeichnis) abzurufen, gegen die Sie auflösen möchten.
 
-### <a name="canonicalizing-separators"></a>Kanonisierende Trennzeichen
+### <a name="canonicalize-separators"></a>Umwandeln von Trennzeichen in eine kanonische Form
 
 Alle führenden Schrägstriche (`/`) werden in das standardmäßige Trennzeichen von Windows konvertiert, den umgekehrten Schrägstrich (`\`). Wenn sie vorhanden sind, wird eine Reihe von Schrägstrichen, die auf die ersten zwei Schrägstriche folgt, auf einen einzelnen Schrägstrich reduziert.
 
-### <a name="evaluating-relative-components"></a>Auswerten relativer Komponenten
+### <a name="evaluate-relative-components"></a>Auswerten relativer Komponenten
 
 Während der Pfad verarbeitet wird, werden alle Komponenten oder Segmente ausgewertet, die aus einem oder zwei Punkten (`.` oder `..`) bestehen:
 
@@ -171,7 +171,7 @@ Während der Pfad verarbeitet wird, werden alle Komponenten oder Segmente ausgew
 
    Übergeordnete Verzeichnisse werden nur entfernt, wenn sie sich nicht nach dem Stamm des Pfads befinden. Der Stamm des Pfads ist abhängig von der Art des Pfads. Für DOS-Pfade ist es das Laufwerk (`C:\`), für UNC-Pfade ist es „server/share“ (`\\Server\Share`) und für Gerätepfade ist es das Gerätepfadpräfix (`\\?\` oder `\\.\`).
 
-### <a name="trimming-characters"></a>Entfernen von Zeichen
+### <a name="trim-characters"></a>Kürzen von Zeichen
 
 Zusätzlich zu den Ausführungen von Trennzeichen und Segmenten, die weiter oben entfernt wurden, werden einige zusätzliche Zeichen während der Normalisierung entfernt:
 
@@ -184,7 +184,7 @@ Zusätzlich zu den Ausführungen von Trennzeichen und Segmenten, die weiter oben
    > [!IMPORTANT]
    > Sie sollten **nie** Verzeichnisse oder Dateinamen mit nachstehenden Leerzeichen erstellen. Nachstehende Leerzeichen machen es schwer, wenn nicht sogar unmöglich, auf ein Verzeichnis zuzugreifen. Außerdem treten häufig Fehler auf, wenn Anwendungen versuchen, Verzeichnisse oder Dateien zu verarbeiten, deren Namen nachstehende Leerzeichen enthalten.
 
-## <a name="skipping-normalization"></a>Überspringen der Normalisierung
+## <a name="skip-normalization"></a>Überspringen der Normalisierung
 
 Normalerweise werden alle Pfade, die an die Windows-API übergeben werden, effektiv an die [GetFullPathName-Funktion](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) übergeben und normalisiert. Es gibt eine wichtige Ausnahme: ein Gerätepfad, der mit einem Fragezeichen statt einem Punkt beginnt. Sofern der Pfad nicht mit `\\?\` beginnt (beachten Sie die Verwendung des kanonischen umgekehrten Schrägstrichs), ist er normalisiert.
 

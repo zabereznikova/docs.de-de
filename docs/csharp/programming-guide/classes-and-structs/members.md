@@ -1,16 +1,17 @@
 ---
 title: Member – C#-Programmierhandbuch
+description: Klassen und Strukturen in C# verfügen über Member, die Daten und Verhalten darstellen, einschließlich in der Klasse und den dazugehörigen Vererbungshierarchien deklarierten Membern.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa4981ea20d86994bfae92d5db8c9abfa7c8f906
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705508"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864591"
 ---
 # <a name="members-c-programming-guide"></a>Member (C#-Programmierhandbuch)
 
@@ -31,7 +32,7 @@ Klassen und Strukturen verfügen über Member, die ihre Daten und ihr Verhalten 
 |[Finalizer](./destructors.md)|Finalizer werden in C# sehr selten verwendet. Bei Destruktoren handelt es sich um Methoden, die von der Ausführungs-Engine der Laufzeit aufgerufen werden, wenn das Objekt aus dem Speicher entfernt werden soll. In der Regel werden sie verwendet, um sicherzustellen, dass Ressourcen, die freigegeben werden müssen, angemessen verarbeitet werden.|  
 |[Geschachtelte Typen](./nested-types.md)|Geschachtelte Typen sind Typen, die in einem anderen Typ deklariert sind. Geschachtelte Typen werden häufig verwendet, um Objekte zu beschreiben, die nur von den Typen verwendet werden, in denen sie enthalten sind.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen](./classes.md)

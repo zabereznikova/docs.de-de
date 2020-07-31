@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe'
+description: Hier erfahren Sie, wie Sie einen generischen Typ mit Reflexionsausgabe definieren. Erstellen Sie einen generischen Typ mit zwei Typparametern, und wenden Sie Klasseneinschränkungen, Schnittstelleneinschränkungen und mehr an.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: b553fd2235c73cf879474dc4f44f958dddcb649c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe8fb731fd160ab87e5c65debf367a96bc0dea2a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130154"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865124"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe
 In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.  

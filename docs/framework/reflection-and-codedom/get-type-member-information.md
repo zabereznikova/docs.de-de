@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Abrufen von Typ- und Memberinformationen mithilfe von Reflektion'
+description: Hier erfahren Sie, wie Sie mit der Reflexion mithilfe des System.Reflection-Namespace Informationen zum Typ und Member erhalten.
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
@@ -9,12 +10,12 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130213"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865319"
 ---
 # <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Vorgehensweise: Abrufen von Typ- und Memberinformationen mithilfe von Reflektion
 Der <xref:System.Reflection>-Namespace enthält viele Methoden zum Abrufen von Informationen zu Typen und deren Membern. In diesem Artikel wird eine dieser Methoden, nämlich <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>, veranschaulicht. Weitere Informationen finden Sie unter [Übersicht über Reflektion](reflection.md).

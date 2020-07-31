@@ -1,15 +1,16 @@
 ---
 title: 'Minderung: Deserialisierung von Objekten über App-Domänen'
+description: Hier erfahren Sie, wie Sie ein Problem diagnostizieren und behandeln, bei dem beim Versuch, Objekte im logischen Aufrufkontext anwendungsdomänenübergreifend zu deserialisieren, eine Ausnahme ausgelöst wird.
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20ea0f2f0b49000b7d1993adb583a803d9f5be6c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457928"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475241"
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Minderung: Deserialisierung von Objekten über App-Domänen
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Entschärfung: Deserialisierung von Objekten über App-Domänen
 In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen verwendet, löst der Versuch, Objekte im logischen Aufrufkontext über App-Domänen hinweg zu deserialisieren, eine Ausnahme aus.  
   
 ## <a name="diagnosing-the-issue"></a>Diagnose des Problems  
@@ -46,6 +47,6 @@ In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen 
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Anwendungskompatibilität](application-compatibility.md)

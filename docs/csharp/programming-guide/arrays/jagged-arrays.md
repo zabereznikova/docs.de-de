@@ -1,16 +1,17 @@
 ---
 title: Verzweigte Arrays – C#-Programmierhandbuch
+description: Ein Jagged Array in C# ist ein Array, dessen Elemente Arrays verschiedener Dimensionen und Größe sind. Hier erfahren Sie, wie Sie Jagged Arrays deklarieren, initialisieren und auf sie zugreifen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40da9fbda34aef4e69ebf2ae20485e883b79f871
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705703"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474682"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Verzweigte Arrays (C#-Programmierhandbuch)
 
@@ -26,7 +27,7 @@ Ein verzweigtes Array ist ein Array, dessen Elemente wiederum Arrays sind. Die E
   
  Jedes Element ist ein eindimensionales Array aus ganzen Zahlen. Das erste Element ist ein Array aus 5 ganzen Zahlen, das zweite aus 4 und das dritte aus 2.  
   
- Sie können auch Initialisierer verwenden, um die Arrayelemente mit Werten zu füllen. In diesem Fall wird die Arraygröße nicht benötigt. Beispiel:  
+ Sie können auch Initialisierer verwenden, um die Arrayelemente mit Werten zu füllen. In diesem Fall wird die Arraygröße nicht benötigt. Zum Beispiel:  
   
  [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   
@@ -64,7 +65,7 @@ Ein verzweigtes Array ist ein Array, dessen Elemente wiederum Arrays sind. Die E
   
  [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Array>
 - [C#-Programmierhandbuch](../index.md)

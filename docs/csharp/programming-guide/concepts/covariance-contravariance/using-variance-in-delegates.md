@@ -1,13 +1,14 @@
 ---
 title: Verwenden von Varianz bei Delegaten (C#)
+description: Hier erfahren Sie, wie Sie die Varianz in Delegaten mithilfe der enthaltenen Ko- und Kontravarianzcodebeispiele verwenden.
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 83e86e760edb17f6d9ae61864c154062d41416e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62b0555ee29c5e7d2ba0954a8949d61596122cc7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169765"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105689"
 ---
 # <a name="using-variance-in-delegates-c"></a>Verwenden von Varianz bei Delegaten (C#)
 Wenn Sie einem Delegat eine Methode zuweisen, bieten *Kovarianz* und *Kontravarianz* Flexibilität für das Abgleichen eines Delegattyps mit einer Methodensignatur. Kovarianz lässt die Verfügung einer Methode über einen Rückgabetyp zu, der stärker abgeleitet ist als der im Delegat definierte Typ. Kontravarianz lässt eine Methode zu, die über Typen verfügt, die weniger abgeleitet sind als die im Delegattyp.  
@@ -92,7 +93,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Variance in Delegates (C#) (Varianz bei Delegaten (C#))](./variance-in-delegates.md)
-- [Using Variance for Func and Action Generic Delegates C# (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](./using-variance-for-func-and-action-generic-delegates.md)
+- [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

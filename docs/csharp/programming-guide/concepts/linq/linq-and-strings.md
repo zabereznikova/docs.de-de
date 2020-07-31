@@ -1,13 +1,14 @@
 ---
 title: LINQ und Zeichenfolgen (C#)
+description: LINQ kann Zeichenfolgen und Sammlungen von Zeichenfolgen abfragen und transformieren. Sie können LINQ-Abfragen mit C#-Zeichenfolgenfunktionen und regulären Ausdrücken vereinen.
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635534"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165612"
 ---
 # <a name="linq-and-strings-c"></a>LINQ und Zeichenfolgen (C#)
 
@@ -64,7 +65,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
   
   Zeigt, wie Zeichenfolgen in zwei Listen mit einem übereinstimmenden Schlüssel in einer einzigen Zeichenfolge vereint werden
 
-- [Vorgehensweise: Aufteilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
   
   Veranschaulicht, wie neue Dateien mithilfe einer einzelnen Datei als Datenquelle erstellt werden
 
@@ -72,7 +73,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
   
   Zeigt, wie mathematische Berechnungen bei Textdaten in CSV-Dateien ausgeführt werden
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Language-Integrated Query (LINQ) (C#)](index.md)
+- [Language Integrated Query (LINQ) (C#)](index.md)
 - [Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)

@@ -1,5 +1,6 @@
 ---
 title: Erstellen von Satellitenassemblys für Desktop-Apps
+description: Hier erhalten Sie Informationen für das Erstellen von Satellitenassemblys für Desktop-Apps. Eine Satellitenassembly kann einfach aktualisiert oder ersetzt werden, um lokalisierte Ressourcen bereitzustellen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-ms.openlocfilehash: 5efc5001a1a9756e09053d684a2f6673d15fadcf
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: be6603f3a593d9756d55204024214660b2220af3
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458019"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166207"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Erstellen von Satellitenassemblys für Desktop-Apps
 

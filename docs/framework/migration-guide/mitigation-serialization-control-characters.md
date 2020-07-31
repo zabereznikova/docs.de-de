@@ -1,5 +1,6 @@
 ---
 title: Serialisierung von Steuerzeichen mit DataContractJsonSerializer
+description: Hier erfahren Sie mehr darüber, wie sich die Serialisierung von Steuerzeichen geändert hat, damit diese mit ECMAScript V6 und V8 in .NET Framework 4.7 konform ist.
 ms.date: 04/07/2017
 helpviewer_keywords:
 - .NET Framework 4.7 retargeting changes
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-ms.openlocfilehash: b60b78f9ee944552fafbe75754ecd29d60dd4093
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a317884da014097a7a60aef2cef4ec146ccb04f7
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181212"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475384"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Entschärfung: Serialisierung von Steuerzeichen mit DataContractJsonSerializer
 

@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)'
+description: In diesem Artikel erfahren Sie, wie Sie ein Dokument mit einem Namespace in LINQ to XML in C# erstellen, indem Sie ein XNamespace-Objekt verwenden, um den Namespace mit dem lokalen Namen zu kombinieren.
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6472baefc73285af1c6dca0bfe7d874003940fc4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141334"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103394"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)
 In diesem Thema wird das Erstellen von Dokumenten mit Namespaces beschrieben.  
@@ -142,6 +143,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Namespaces: Übersicht (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

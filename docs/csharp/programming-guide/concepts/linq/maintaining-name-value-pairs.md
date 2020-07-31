@@ -1,13 +1,14 @@
 ---
 title: Warten von Name-Wert-Paaren (C#)
+description: LINQ to XML enthält Methoden, die das Verwalten von Name-Wert-Paaren entweder als Attribute oder als mehrere untergeordnete Elemente vereinfacht.
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: 9c42a154a4c3ed1463e428faab4c7d33197ef4a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92a45d160cbb1ef470d93bf740d0b6f584681e72
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591699"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165270"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Warten von Name/Wert-Paaren (C#)
 Viele Anwendungen müssen Informationen verwalten, die am besten als Name/Wert-Paare geführt werden. Solche Informationen können z. B. Konfigurationsinformationen oder globale Einstellungen sein. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enthält einige Methoden, die das Unterhalten von Name/Wert-Paaren vereinfachen. Sie können die Informationen entweder als Attribute oder als Satz untergeordneter Elemente unterhalten.  
@@ -118,7 +119,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>

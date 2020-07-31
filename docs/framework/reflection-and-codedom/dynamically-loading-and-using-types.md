@@ -1,5 +1,6 @@
 ---
 title: Dynamisches Laden und Verwenden von Typen
+description: Hier erfahren Sie mehr über das dynamische Laden und Verwenden von Typen in .NET. Verwenden Sie die Reflexion, mit der die Infrastruktur bereitgestellt wird, die von Sprachcompilern für die Implementierung impliziter später Bindungen verwendet wird.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130269"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475085"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamisches Laden und Verwenden von Typen
 Reflektion stellt Infrastruktur bereit, die von Sprachcompilern für die Implementierung impliziter später Bindungen verwendet wird. Unter Binden versteht man das Auffinden der Deklaration (d.h. der Implementierung), die einem eindeutig festgelegten Typ entspricht. Wenn dieser Prozess zur Runtime und nicht zum Zeitpunkt der Kompilierung stattfindet, wird von einer späten Bindung gesprochen. Visual Basic ermöglicht Ihnen, die implizite späte Bindung in Ihrem Code zu verwenden. Der Visual Basic-Compiler ruft eine Hilfsmethode auf, die mithilfe von Reflektion den Objekttyp abruft. Aufgrund der an die Hilfsmethode übergebenen Argumente wird die entsprechende Methode zur Runtime aufgerufen. Diese Argumente sind die Instanz (ein Objekt), auf der die Methode aufgerufen werden muss, der Namen der aufgerufenen Methode (eine Zeichenfolge) und die Argumente, die an die aufgerufene Methode übergeben werden (ein Array von Objekten).  

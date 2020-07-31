@@ -1,17 +1,18 @@
 ---
 title: 'Vorgehensweise: Erstellen von Windows-Diensten'
+description: Verwenden Sie die Projektvorlage „Windows-Dienst“, um einen Dienst zu erstellen. Legen Sie die Eigenschaft ServiceName fest, erstellen Sie Installationsprogramme, und setzen Sie die Methoden OnStart und OnStop außer Kraft.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 514675b3c3ce1f6701dff571361df672fb520c6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6918225e39c15a52710fd0d56342aae869b42325
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053657"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925773"
 ---
 # <a name="how-to-create-windows-services"></a>Vorgehensweise: Erstellen von Windows-Diensten
 Wenn Sie einen Dienst erstellen möchten, können Sie die Visual Studio-Projektvorlage **Windows-Dienst** verwenden. Von dieser Vorlage wird ein großer Teil der Arbeit übernommen, indem auf die entsprechenden Klassen und Namespaces verwiesen wird, die Vererbung von den Basisklassen für Dienste eingerichtet wird und eine Reihe von Methoden überschrieben werden, die voraussichtlich überschrieben werden sollen.  
@@ -36,7 +37,7 @@ Wenn Sie einen Dienst erstellen möchten, können Sie die Visual Studio-Projektv
   
 2. Legen Sie im Fenster **Eigenschaften** die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>-Eigenschaft für den Dienst fest.  
   
-     ![Legen Sie die ServiceName-Eigenschaft fest.](./media/windowsservice-servicename.PNG "Windows_Dienstname")  
+     ![Legen Sie die Eigenschaft ServiceName fest.](./media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
     > Der Wert der <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>-Eigenschaft muss immer mit dem Namen übereinstimmen, der in den Installationsprogrammklassen aufgezeichnet wurde. Wenn Sie diese Eigenschaft ändern, muss auch die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>-Eigenschaft der Installationsprogrammklassen aktualisiert werden.  

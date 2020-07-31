@@ -1,16 +1,17 @@
 ---
 title: Implizit typisierte lokale Variablen – C#-Programmierhandbuch
+description: Das var-Schlüsselwort in C# weist den Compiler an, den Typ der Variablen vom Ausdruck auf der rechten Seite der Initialisierungsanweisung abzuleiten.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 842f73b7af9671157495df961f5db22702ae897e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6badb8588dedda80227ab38bee027cf2890c8672
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240706"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864214"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Implizit typisierte lokale Variablen (C#-Programmierhandbuch)
 

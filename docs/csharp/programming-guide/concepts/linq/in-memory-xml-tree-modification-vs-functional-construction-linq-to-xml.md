@@ -1,13 +1,14 @@
 ---
 title: Änderung der XML-Struktur im Arbeitsspeicher und Funktionale Konstruktion (LINQ to XML) (C#)
+description: Diese Beispiele ändern die Form eines XML-Dokuments, indem es direkt bearbeitet und die funktionale LINQ to XML-Konstruktion in C# verwendet wird.
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 55eb95585bdd5d2c52175cacae2e6d049bd06f69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a2e3d2ddcd452cf6a58e9d5cc886f3e8b8dd325
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66484553"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165782"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Änderung der XML-Struktur im Arbeitsspeicher und Funktionale Konstruktion (LINQ to XML) (C#)
 Zur Änderung der Form eines XML-Dokuments wird üblicherweise die XML-Struktur an Ort und Stelle geändert. Eine typische Anwendung lädt ein Dokument in einen Datenspeicher, z. B. DOM oder [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], verwendet eine Programmierschnittstelle, um Knoten einzufügen, zu löschen oder zu ändern, und speichert den XML-Code dann in einer Datei bzw. überträgt ihn über ein Netzwerk.  

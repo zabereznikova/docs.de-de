@@ -1,15 +1,16 @@
 ---
 title: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer – C#-Programmierhandbuch
+description: Hier erfahren Sie, wie Sie ein Wörterbuch in C# mit der Add-Methode oder einem Indexinitialisierer initialisieren. In diesem Beispiel werden beide Optionen gezeigt.
 ms.date: 12/20/2018
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-ms.openlocfilehash: 1e6e7fac9dd49ad1943ac9046bd9e4932c383257
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f33240b02785c5c886a1ebebb8984d29c9f7795
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75741365"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865046"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer (C#-Programmierhandbuch)
 
@@ -23,7 +24,7 @@ Im folgenden Codebeispiel wird <xref:System.Collections.Generic.Dictionary%602> 
 
 Beachten Sie die zwei Paare geschweifter Klammern in jedem Element der Collection in der ersten Deklaration. Die inneren Klammern umschließen den Objektinitialisierer für `StudentName`, und die äußeren Klammern umschließen den Initialisierer für das Schlüssel-Wert-Paar, das `students` <xref:System.Collections.Generic.Dictionary%602> hinzugefügt wird. Schließlich wird der ganze Auflistungsinitialisierer für das Wörterbuch in geschweifte Klammern eingeschlossen. Bei der zweiten Initialisierung ist die linke Seite des Arbeitsauftrags der Schlüssel und die rechte Seite ist der Wert. Für `StudentName` wird ein Objektinitialisierer verwendet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Objekt- und Auflistungsinitialisierer](./object-and-collection-initializers.md)

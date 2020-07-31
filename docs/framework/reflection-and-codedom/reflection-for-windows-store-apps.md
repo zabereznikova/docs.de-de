@@ -1,5 +1,6 @@
 ---
 title: Reflektion in .NET Framework für Windows Store-Apps
+description: Verwenden von Reflexion in .NET für Windows Store-Apps Es gibt eine Reihe von Reflexionstypen und -membern, die in Windows Store-Apps verwendet werden können und für alle .NET Framework-Versionen verfügbar sind.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-ms.openlocfilehash: 42bcfd4a1adc66511a1183807c09e77d1448c754
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 86bb633e97f0f88dc2a2a042b6897695a258cc3c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715881"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865267"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflektion in .NET Framework für Windows Store-Apps
 

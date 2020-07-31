@@ -1,16 +1,17 @@
 ---
 title: Zwischenmaterialisierung (C#)
+description: Dieses C#-Beispiel zeigt eine Zwischenmaterialisierung, bei der eine Abfrage bewirkt, dass AppendString Ihre gesamte Quelle enumeriert, bevor das erste Element angehalten wird.
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30951aaeea261efbd414205bcc54b63106324344
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253165"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165713"
 ---
 # <a name="intermediate-materialization-c"></a>Zwischenmaterialisierung (C#)
-Bei fehlender Sorgfalt kann es in bestimmten Situationen dazu kommen, dass die Auflistungen in Ihren Abfragen vorzeitig materialisiert werden, wodurch sich das Speicher- und Leistungsprofil Ihrer Anwendung radikal ändert. Einige Standardabfrageoperatoren verursachen die Materialisierung ihrer Quellauflistung, bevor auch nur ein einziges Element zurückgegeben wird. So durchläuft beispielsweise <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> zuerst die gesamte Quellauflistung, sortiert dann alle Elemente und gibt zum Schluss das erste Element zurück. Das bedeutet, dass es zwar aufwendig ist, das erste Element einer sortierten Auflistung abzurufen, das Abrufen aller folgenden Elemente hingegen ist nicht aufwendig. Dies ist sinnvoll, denn anders würde dieser Abfrageoperator nicht funktionieren.  
+Bei fehlender Sorgfalt kann es in bestimmten Situationen dazu kommen, dass die Auflistungen in Ihren Abfragen vorzeitig materialisiert werden, wodurch sich das Speicher- und Leistungsprofil Ihrer Anwendung radikal ändert. Einige Standardabfrageoperatoren verursachen die Materialisierung ihrer Quellauflistung, bevor auch nur ein einziges Element zurückgegeben wird. So durchläuft beispielsweise <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> zuerst die gesamte Quellauflistung, sortiert dann alle Elemente und gibt zum Schluss das erste Element zurück. Das bedeutet, dass es zwar aufwendig ist, das erste Element einer sortierten Auflistung abzurufen, das Abrufen aller folgenden Elemente hingegen ist nicht aufwendig. Dies ergibt Sinn: Anders würde dieser Abfrageoperator nicht funktionieren.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel ändert das vorherige Beispiel. Die `AppendString`-Methode ruft vor dem Durchlaufen der Quelle <xref:System.Linq.Enumerable.ToList%2A> auf. Dies verursacht eine Materialisierung.  
@@ -86,6 +87,6 @@ Main: str >GHI!!!<
   
 - [Verketten von Standardabfrageoperatoren (C#)](./chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Chaining Queries Together (C#) (Tutorial: Verketten von Abfragen (C#))](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: Verketten von Abfragen (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

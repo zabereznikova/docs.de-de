@@ -1,16 +1,17 @@
 ---
 title: Methoden – C#-Programmierhandbuch
+description: Eine Methode in C# ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Programm führt die Anweisungen durch Aufrufen der Methode und Angeben von Argumenten aus.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: db35b48d4d7e70a54b38342e79fa2881b3857bd7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626528"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864149"
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
 
@@ -38,7 +39,7 @@ Das Aufrufen einer Methode für ein Objekt ähnelt dem Zugreifen auf ein Feld. F
 
 ## <a name="method-parameters-vs-arguments"></a>Methodenparameter und Argumente
 
-Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn aufrufender Code die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der im aufrufenden Code verwendete Name des Arguments (sofern vorhanden) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Beispiel:
+Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn aufrufender Code die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der im aufrufenden Code verwendete Name des Arguments (sofern vorhanden) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Zum Beispiel:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -119,7 +120,7 @@ Weitere Informationen finden Sie unter [return](../../language-reference/keyword
 
 Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen.
 
-Wenn Sie eine Methode mit dem [async](../../language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](../../language-reference/operators/await.md) Operator in der Methode verwenden. Wenn ein await-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
+Wenn Sie eine Methode mit dem Modifizierer [async](../../language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](../../language-reference/operators/await.md) in der Methode verwenden. Wenn ein await-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
 
 > [!NOTE]
 > Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.
@@ -132,7 +133,7 @@ Die `startButton_Click` -Methode ist ein Beispiel für eine asynchrone Methode m
 
 [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
 
-Mit einer asynchronen Methode können keine [ref](../../language-reference/keywords/ref.md)- oder [out](../../language-reference/keywords/out-parameter-modifier.md)-Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
+Mit einer asynchronen Methode können keine [ref](../../language-reference/keywords/ref.md) - oder [out](../../language-reference/keywords/out-parameter-modifier.md) -Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
 
 Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](../concepts/async/index.md), [Ablaufsteuerung in asynchronen Programmen](../concepts/async/control-flow-in-async-programs.md) und [Asynchrone Rückgabetypen](../concepts/async/async-return-types.md).
 
@@ -153,7 +154,7 @@ Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode hand
 
 ## <a name="iterators"></a>Iterators
 
-Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](../../language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine [yield return](../../language-reference/keywords/yield.md) -Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
+Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die [yield return](../../language-reference/keywords/yield.md) -Anweisung, um jedes Element einzeln nacheinander zurückzugeben. Wenn eine [yield return](../../language-reference/keywords/yield.md) -Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
 
 Sie rufen einen Iterator im Clientcode mithilfe einer [foreach](../../language-reference/keywords/foreach-in.md) Anweisung auf.
 
@@ -165,7 +166,7 @@ Weitere Informationen finden Sie unter [Iteratoren](../concepts/iterators.md).
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](index.md)

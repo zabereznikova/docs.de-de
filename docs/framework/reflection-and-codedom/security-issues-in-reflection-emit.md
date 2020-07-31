@@ -1,5 +1,6 @@
 ---
 title: Sicherheitsaspekte bei der Reflektionsausgabe
+description: Informieren Sie sich über Sicherheitsprobleme bei der Reflexionsausgabe, die durch dynamische Assemblys oder dynamische Methoden verursacht werden, die mit vorhandenen Assemblys verbunden sind oder anonym gehostet werden.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d1b6994f7ee9efa9f6472deffb2f3d869606e182
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644200"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865241"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 .NET Framework bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), die jeweils mit eigenen Sicherheitsproblemen verbunden sind:  

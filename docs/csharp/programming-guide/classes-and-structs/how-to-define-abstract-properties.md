@@ -1,16 +1,17 @@
 ---
 title: 'Gewusst wie: Definieren von abstrakten Eigenschaften – C#-Programmierhandbuch'
+description: Hier erfahren Sie, wie Sie abstrakte Eigenschaften in C# definieren. Das Deklarieren einer abstrakten Eigenschaft bedeutet, dass eine Klasse eine Eigenschaft unterstützt. Die abgeleiteten Klassen implementieren Zugriffsmethoden.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4db71721495857c634e8090b986704d8a592b4e2
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705612"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864396"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Gewusst wie: Definieren von abstrakten Eigenschaften (C#-Programmierhandbuch)
 Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-reference/keywords/abstract.md) Eigenschaften definieren: Eine abstrakte Eigenschaftendeklaration stellt keine Implementierung des Eigenschaftenaccessors bereit, sondern deklariert, dass die Klasse Eigenschaften unterstützt, die Accessorenimplementierung jedoch abgeleiteten Klassen überlässt. Das folgende Beispiel veranschaulicht das Implementieren von abstrakten Eigenschaften, die von einer Basisklasse geerbt wurden.  
@@ -21,7 +22,7 @@ Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-refere
   
 - shapes.cs: die Unterklassen der `Shape`-Klasse.  
   
-- shapetest.cs: ein Testprogramm zum Anzeigen der Bereiche einiger abgeleiteten `Shape`-Objekte.  
+- shapetest.cs: ein Testprogramm zum Anzeigen der Bereiche einiger von `Shape` abgeleiteter Objekte.  
   
  Verwenden Sie den folgenden Befehl, um das Beispiel zu kompilieren:  
   
@@ -34,7 +35,7 @@ Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-refere
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- Modifizierer der Eigenschaft sind in der Deklaration der Eigenschaft selbst platziert. Beispiel:  
+- Modifizierer der Eigenschaft sind in der Deklaration der Eigenschaft selbst platziert. Zum Beispiel:  
   
     ```csharp  
     public abstract double Area  
@@ -52,7 +53,7 @@ Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-refere
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)

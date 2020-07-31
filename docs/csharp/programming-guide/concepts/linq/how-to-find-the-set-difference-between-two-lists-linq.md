@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Ermitteln der Unterschiedsmenge zwischen zwei Listen (LINQ) (C#)'
+description: In diesem Artikel erfahren Sie, wie Sie LINQ in C# verwenden, um zwei Listen mit Zeichenfolgen zu vergleichen und die Zeilen auszugeben, die nur in einer Liste enthalten sind.
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24509488d91f9861ee9bf84277238bea7031e5f6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169180"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105090"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Vorgehensweise: Ermitteln der Unterschiedsmenge zwischen zwei Listen (LINQ) (C#)
 In diesem Beispiel wird veranschaulicht, wie Sie mit LINQ zwei Listen mit Zeichenfolgen vergleichen und die Zeilen ausgeben, die in names1.txt, aber nicht in names2.txt enthalten sind.  
@@ -57,6 +58,6 @@ class CompareLists
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)
+- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)

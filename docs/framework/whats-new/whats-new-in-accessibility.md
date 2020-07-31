@@ -1,5 +1,6 @@
 ---
 title: Neuerungen der Barrierefreiheit in .NET Framework
+description: Hier erfahren Sie, welche Neuigkeiten es bei der Barrierefreiheit in .NET ab .NET Framework 4.7.1 gibt. Barrierefreiheitsfeatures ermöglichen es, dass eine App genau die Servicequalität bietet, die für Benutzer von Hilfstechnologien erforderlich ist.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244152"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925838"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework
 
@@ -448,7 +449,7 @@ Folgende APIs wurden zu WPF hinzugefügt, um dynamische Bereiche zu unterstütze
   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType> Das Element sendet keine Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType> Das Element sendet nicht unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType> Das Element sendet unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Das Element sendet unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
 
 Sie können einen dynamischen Bereich erstellen, indem Sie die Eigenschaft **AutomationProperties.LiveSetting** wie im folgenden Beispiel dargestellt auf das relevante Element festlegen:
 

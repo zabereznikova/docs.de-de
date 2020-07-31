@@ -1,5 +1,6 @@
 ---
 title: 'Entschärfung: Zeigerbasierte Touch- und Stiftunterstützung'
+description: Hier erfahren Sie mehr über die Auswirkungen auf das Aktivieren eines optionalen WPF-Touch-/Tablettstiftstapels für WPF-Apps, die auf .NET Framework 4.7 ausgerichtet sind.
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0c0effeaa727c615dddc3b92cdd34aafde65705
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77094474"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475423"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Entschärfung: Zeigerbasierte Touch- und Stiftunterstützung
 
@@ -52,6 +53,6 @@ Entwickler, die diesen Stapel aktivieren möchten, können der *app.config*-Date
 
 Das Entfernen dieses Eintrags oder das Festlegen seines Werts auf `false` deaktiviert diesen optionalen Stapel.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Anwendungskompatibilität](application-compatibility.md)

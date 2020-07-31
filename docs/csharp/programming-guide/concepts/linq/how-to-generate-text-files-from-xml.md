@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Generieren von Textdateien aus XML (C#)'
+description: Hier erfahren Sie, wie Sie eine CSV-Datei aus einer XML-Datei in C# erstellen. Für dieses Beispiel wird die Methodensyntax und der Aggregate-Operator verwendet.
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6e9ce803ddfac3f1609d60a4f51661232cbb2f4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345928"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105053"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>Vorgehensweise: Generieren von Textdateien aus XML (C#)
 In diesem Beispiel wird gezeigt, wie Sie aus einer XML-Datei eine CSV-Datei generieren können.  
@@ -53,6 +54,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Projections and Transformations (LINQ to XML) (C#) (Projektionen und Transformationen (LINQ to XML) (C#))](how-to-work-with-dictionaries-using-linq-to-xml.md)
+- [Projektionen und Transformationen (LINQ to XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)

@@ -1,13 +1,14 @@
 ---
 title: Beispiel für das Verketten von Abfragen (C#)
+description: Dieses Beispiel zeigt, was passiert, wenn Sie zwei Abfragen miteinander verketten, die beide mit verzögerter Ausführung und verzögerter Auswertung in C# arbeiten.
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cfcfe1c8f537778fd1ef909277d95d83991af51
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70205413"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105541"
 ---
 # <a name="chaining-queries-example-c"></a>Beispiel für das Verketten von Abfragen (C#)
 Dieses Beispiel baut auf dem vorherigen Beispiel auf und zeigt, was passiert, wenn Sie zwei Abfragen miteinander verketten, die beide mit verzögerter Ausführung und verzögerter Auswertung arbeiten.  
@@ -86,6 +87,6 @@ Main: str >GHI!!!<
   
 - [Zwischenmaterialisierung (C#)](./intermediate-materialization.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Chaining Queries Together (C#) (Tutorial: Verketten von Abfragen (C#))](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: Verketten von Abfragen (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

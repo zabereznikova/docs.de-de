@@ -1,13 +1,14 @@
 ---
 title: 'Entschärfung: WPF-Layout'
+description: Hier erfahren Sie, wie Sie Probleme beheben, die von einer Änderung des WPF-Layouts für Steuerelemente verursacht werden, z. B. durch die Platzierung eines Objekts durch Verschiebung um einen Pixel.
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4e4612f7b39eefbf0e76ac86c8eb644c257ba75
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457782"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475345"
 ---
 # <a name="mitigation-wpf-layout"></a>Entschärfung: WPF-Layout
 Das Layout der WPF-Steuerelemente kann sich leicht ändern.  
@@ -36,6 +37,6 @@ Das Layout der WPF-Steuerelemente kann sich leicht ändern.
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Anwendungskompatibilität](application-compatibility.md)

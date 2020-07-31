@@ -1,13 +1,14 @@
 ---
 title: Funktionale Programmierung und Imperative Programmierung (C#)
+description: In diesem Artikel wird die funktionale Programmierung in C# mit dem prozeduralen Ansatz verglichen. Die funktionale Programmierung erzwingt die Unveränderlichkeit durch reine Funktionen.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc421d654e532293b522dab9d43920d0fffd7b92
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594316"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103751"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Funktionale Programmierung und Imperative Programmierung (C#)
 In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung erläutert.  

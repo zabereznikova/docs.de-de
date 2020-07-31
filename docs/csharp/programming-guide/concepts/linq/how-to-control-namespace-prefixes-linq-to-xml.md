@@ -1,13 +1,14 @@
 ---
 title: 'Gewusst wie: Steuern von Namespacepräfixen (C#) (LINQ to XML)'
+description: Hier erfahren Sie, wie Sie Namespacepräfixe beim Serialisieren eines XML-Baums in LINQ to XML in C# steuern. Für einige Szenarios ist die Steuerung von Namespacepräfixen erforderlich.
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b0c5cbfa7488f3a7105595830ef6765e6bfb1f12
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141382"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105305"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Gewusst wie: Steuern von Namespacepräfixen (C#) (LINQ to XML)
 In diesem Thema wird beschrieben, wie Sie beim Serialisieren einer XML-Struktur Namespacepräfixe steuern können.  
@@ -54,6 +55,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Namespaces: Übersicht (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

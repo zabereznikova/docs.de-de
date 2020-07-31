@@ -1,5 +1,6 @@
 ---
 title: Einführung in Windows-Dienstanwendungen
+description: Lesen Sie sich die Einführung zu Windows-Dienstanwendungen durch. Mithilfe der Dienste können Sie ausführbare Apps mit langer Laufzeit erstellen, die in eigenen Windows-Sitzungen ausgeführt werden.
 ms.date: 03/30/2017
 f1_keywords:
 - ServiceController
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: 8ff1adaa025dc11417c3dcfdaf42ea203828be57
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 13bd1f42776ac76a43a83667465ac0ca277e3452
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053522"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925669"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Einführung in Windows-Dienstanwendungen
 Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstellen von ausführbaren Anwendungen mit langer Laufzeit ermöglicht, die in eigenen Windows-Sitzungen ausgeführt werden. Die Dienste können automatisch gestartet werden, sobald der Computer gestartet wird. Sie können angehalten und neu gestartet werden. Es wird jedoch keine Benutzeroberfläche angezeigt. Dienste eignen sich mit diesen Funktionen ideal zur Verwendung auf einem Server. Sie sind darüber hinaus für alle Fälle geeignet, in denen Funktionen mit langer Laufzeit benötigt werden und Benutzer, die am gleichen Computer arbeiten, nicht gestört werden sollen. Dienste können auch im Sicherheitskontext eines bestimmten Benutzerkontos ausgeführt werden, bei dem es sich nicht um einen angemeldeten Benutzer oder das Standardcomputerkonto handelt. Weitere Informationen zu Diensten und Windows-Sitzungen finden Sie in der Windows SDK-Dokumentation.  

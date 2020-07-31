@@ -1,5 +1,6 @@
 ---
 title: Reflektion und generische Typen
+description: Einführung in die Reflexion und in generische Typen in .NET Im Gegensatz zu einem normalen Typ ist ein generischer Typ Typparametern oder -argumenten zugeordnet.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-ms.openlocfilehash: 4894b5cc64dca431c8d05b638847dd6cb7017bde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd0dda92dc4473e05c59072973076cbb06bcaa06
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180492"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865293"
 ---
 # <a name="reflection-and-generic-types"></a>Reflektion und generische Typen
 Aus Sicht der Reflexion besteht der Unterschied zwischen einem generischen und einem normalen Typ darin, dass ein generischer Typ mit einem Typparameterset (bei einer generischen Typdefinition) oder mit Typargumenten (bei einem konstruierten Typ) verknüpft ist. Auf dieselbe Art unterscheidet sich eine generische Methode von einer normalen Methode.  

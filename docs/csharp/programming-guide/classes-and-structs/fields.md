@@ -1,15 +1,16 @@
 ---
 title: Felder – C#-Programmierhandbuch
+description: Ein Feld in C# ist eine Variable eines beliebigen Typs, die direkt in einer Klasse oder Struktur deklariert ist. Felder sind Member Ihres enthaltenden Typs.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bd2e198cd623788a21d4da73e89851a6d77e3bb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628240"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474786"
 ---
 # <a name="fields-c-programming-guide"></a>Felder (C#-Programmierhandbuch)
 
@@ -25,7 +26,7 @@ Felder werden innerhalb des Class-Blocks deklariert, indem Sie die Zugriffsebene
 
 [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]
 
-Um auf ein Feld in einem Objekt zuzugreifen, fügen Sie einen Punkt hinter dem Objektnamen ein, gefolgt vom Namen des Felds, wie in `objectname.fieldname`. Beispiel:
+Um auf ein Feld in einem Objekt zuzugreifen, fügen Sie einen Punkt hinter dem Objektnamen ein, gefolgt vom Namen des Felds, wie in `objectname.fieldname`. Zum Beispiel:
 
 [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]
 
@@ -48,7 +49,7 @@ Ein Feld kann als [readonly](../../language-reference/keywords/readonly.md) dekl
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)

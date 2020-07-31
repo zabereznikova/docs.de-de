@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 69259b1d47a8e30945c578db10c6d697c81fa261
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701564"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164411"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio
 
@@ -111,7 +111,7 @@ Anfänglich besitzt das neue Konsolen-App-Projekt keinen Zugriff auf die Klassen
 
    ![Visual Studio-Projektkontextmenü zum Festlegen des Startprojekts](media/library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Drücken Sie <kbd>UMSCHALT</kbd>+<kbd>F5</kbd>, um das Programm ohne Debuggen zu kompilieren und auszuführen.
+1. Drücken Sie <kbd>STRG</kbd>+<kbd>F5</kbd>, um das Programm ohne Debuggen zu kompilieren und auszuführen.
 
    ![Visual Studio-Projektsymbolleiste mit Schaltfläche „Debuggen“](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 

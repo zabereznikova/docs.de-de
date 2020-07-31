@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Definieren und Ausführen von dynamischen Methoden'
+description: So definieren Sie dynamische Methoden in .NET und führen diese aus. Sehen Sie sich Beispiele für eine einfache dynamische Methode sowie eine dynamische Methode an, die an eine Instanz einer Klasse gebunden ist.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: 7da9d0bea755b90f73077fcd56558ed66a80e2eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c68be91deb59ea9439e81561f50b7cc40766a45
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130152"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865111"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Vorgehensweise: Definieren und Ausführen von dynamischen Methoden
 Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, definiert und ausgeführt werden. Weitere Informationen zu dynamischen Methoden finden Sie in der <xref:System.Reflection.Emit.DynamicMethod>-Klasse und unter [Szenarios für die Reflektionsausgabe mit dynamischen Methoden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  

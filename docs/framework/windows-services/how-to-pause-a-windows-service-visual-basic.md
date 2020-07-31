@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Anhalten von Windows-Diensten (Visual Basic)'
+description: Hier erfahren Sie, wie Sie die ServiceController-Komponente verwenden, um einen Windows-Dienst (z. B. den IIS-Verwaltungsdienst) auf einem lokalen Computer mit Visual Basic anzuhalten.
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: 166eda4a9348188fa6e5048fd3ce41645cde4816
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 628cc2e896f7f8a289e52674b721c4aef605854c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053595"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925565"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Vorgehensweise: Anhalten von Windows-Diensten (Visual Basic)
 In diesem Beispiel wird die <xref:System.ServiceProcess.ServiceController>-Komponente verwendet, um den IIS-Verwaltungsdienst auf dem lokalen Computer anzuhalten.  

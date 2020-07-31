@@ -1,13 +1,14 @@
 ---
 title: Konvertieren von Datentypen (C#)
+description: Konvertierungsmethoden ändern den Typ von Eingabeobjekten. Hier erfahren Sie mehr über Konvertierungsvorgänge in LINQ-Abfragen in C# wie beispielsweise „Enumerable.AsEnumerable“ und „Enumerable.OfType“.
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 328c790a1a360907c91f69b3b6330b0b25eb414b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3291690f9aaee945ca7feb04ebbc676db2612894
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347204"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105488"
 ---
 # <a name="converting-data-types-c"></a>Konvertieren von Datentypen (C#)
 Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
@@ -29,7 +30,7 @@ Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
 |-----------------|-----------------|---------------------------------|----------------------|
 |AsEnumerable|Gibt die Eingabe als <xref:System.Collections.Generic.IEnumerable%601> typisiert zurück|Nicht zutreffend.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|Konvertiert ein (generisches) <xref:System.Collections.IEnumerable>-Element in ein (generisches) <xref:System.Linq.IQueryable>-Element|Nicht zutreffend.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
-|Typumwandlung|Kopiert die Elemente einer Auflistung in einen bestimmten Typ.|Verwenden Sie eine explizit typisierte Bereichsvariable. Beispiel:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
+|Typumwandlung|Kopiert die Elemente einer Auflistung in einen bestimmten Typ.|Verwenden Sie eine explizit typisierte Bereichsvariable. Zum Beispiel:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
 |OfType|Filtert Werte, je nach ihrer Fähigkeit, die in einen angegebenen Typ umgewandelt werden sollen.|Nicht zutreffend.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
 |ToArray|Konvertiert eine Auflistung in ein Array. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
 |ToDictionary|Platziert Elemente in ein <xref:System.Collections.Generic.Dictionary%602> auf Grundlage einer Schlüsselauswahlfunktion. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
@@ -75,10 +76,10 @@ static void Cast()
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [from-Klausel](../../../language-reference/keywords/from-clause.md)
 - [LINQ-Abfrageausdrücke](../../../linq/index.md)
 - [Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)

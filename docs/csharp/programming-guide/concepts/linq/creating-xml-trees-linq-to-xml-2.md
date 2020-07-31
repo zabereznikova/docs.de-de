@@ -1,13 +1,14 @@
 ---
 title: Erstellen von XML-Strukturen in C# (LINQ to XML)
+description: Hier erfahren Sie mehr über das Erstellen von XML-Bäumen in C# einschließlich der Konstruktion von Elementen und der Verwendung von XElement-Konstruktoren.
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3991f461c4c870a64320853ccd1d45026a8a6bf6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169544"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105470"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Erstellen von XML-Bäumen in C# (LINQ to XML)
 Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in C#.  
@@ -42,7 +43,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>„XElement“-Konstruktoren  
  Die <xref:System.Xml.Linq.XElement>-Klasse verwendet für die funktionale Konstruktion die folgenden Konstruktoren. Beachten Sie, dass es auch noch andere Konstruktoren für <xref:System.Xml.Linq.XElement> gibt. Diese werden nicht für die funktionale Konstruktion verwendet und sind daher hier auch nicht aufgeführt.  
   
-|Konstruktor|Beschreibung|  
+|Konstruktor|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|Erstellt ein <xref:System.Xml.Linq.XElement>. Der `name`-Parameter gibt den Namen des Elements an, und `content` gibt den Inhalt des Elements an.|  
 |`XElement(XName name)`|Erstellt ein <xref:System.Xml.Linq.XElement> mit seinem <xref:System.Xml.Linq.XName>, initialisiert für den angegebenen Namen.|  
@@ -234,6 +235,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](./linq-to-xml-overview.md)

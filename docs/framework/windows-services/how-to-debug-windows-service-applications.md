@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Debuggen von Windows-Dienstanwendungen'
+description: Hier erfahren Sie, wie Sie Windows-Dienstanwendungen debuggen, die nicht so einfach wie andere Visual Studio-Anwendungstypen debuggt werden können.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fb58f2ff4f480347f0f233ecd9a619cf287cfdfd
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053622"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925760"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Vorgehensweise: Debuggen von Windows-Dienstanwendungen
 Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb von Visual Studio ausgeführt werden. Aus diesem Grund ist das Debuggen eines Dienstes nicht so einfach wie das Debuggen anderer Anwendungstypen in Visual Studio. Damit ein Dienst gedebuggt werden kann, muss er gestartet werden. Danach muss ein Debugger an den Prozess angehängt werden, in dem er ausgeführt wird. Anschließend kann die Anwendung mit allen Standarddebugfunktionen von Visual Studio gedebuggt werden.  

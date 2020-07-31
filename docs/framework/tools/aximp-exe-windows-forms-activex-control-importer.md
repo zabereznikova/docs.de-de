@@ -1,5 +1,6 @@
 ---
 title: Aximp.exe (Windows Forms ActiveX Control Importer-Tool)
+description: Hier erhalten Sie Informationen zu Aximp.exe, dem Windows Forms ActiveX Control Importer-Tool. Dieses Tool konvertiert Typdefinitionen in einer COM-Typbibliothek für ActiveX in ein Windows Forms-Steuerelement.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180425"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167345"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Control Importer-Tool)
 Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliothek für ein ActiveX-Steuerelement in ein Windows Forms-Steuerelement.  
@@ -32,13 +33,13 @@ Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliot
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
-|*file*|Der Name der Quelldatei mit dem zu konvertierenden ActiveX-Steuerelement. Das Dateiargument muss die Erweiterung ".dll" oder ".ocx" aufweisen.|  
+|*datei*|Der Name der Quelldatei mit dem zu konvertierenden ActiveX-Steuerelement. Das Dateiargument muss die Erweiterung ".dll" oder ".ocx" aufweisen.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |`/delaysign`|Legt fest, dass "Aximp.exe" das resultierende Steuerelement verzögert signiert. Diese Option müssen Sie entweder mit der Option `/keycontainer:`, `/keyfile:` oder `/publickey:` angeben. Weitere Informationen zum verzögerten Signieren finden Sie unter [Verzögertes Signieren einer Assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
@@ -47,7 +48,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |`/out:` *dateiname*|Legt den Namen der zu erstellenden Assembly fest.|  
 |`/publickey:` *dateiname*|Signiert das resultierende Steuerelement unter Verwendung des öffentlichen Schlüssels, der in der durch *dateiname* angegebenen Datei enthalten ist, mit einem starken Namen.|  
-|`/rcw:` *dateiname*|Verwendet den angegebenen Runtime Callable Wrapper, anstatt einen neuen zu generieren. Sie können mehrere Instanzen angeben. Das aktuelle Verzeichnis wird für relative Pfade verwendet. Weitere Informationen finden Sie im Abschnitt [RCW](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|`/rcw:` *Dateiname*|Verwendet den angegebenen Runtime Callable Wrapper, anstatt einen neuen zu generieren. Sie können mehrere Instanzen angeben. Das aktuelle Verzeichnis wird für relative Pfade verwendet. Weitere Informationen finden Sie im Abschnitt [RCW](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
 |`/source`|Erstellt C#-Quellcode für den Windows Forms-Wrapper.|  
 |`/verbose`|Gibt den ausführlichen Modus an und zeigt zusätzliche Verlaufsinformationen an.|  
@@ -57,7 +58,7 @@ aximp [options]{file.dll | file.ocx}
   
  Common Language Runtime-Proxy für COM-Typen: „*progid*.dll“  
   
- Windows Forms-Proxy für ActiveX-Steuerelemente, wobei Ax ActiveX angibt: „Ax*progid*.dll“  
+ Windows Forms-Proxy für ActiveX-Steuerelemente, wobei Ax für ActiveX steht: Ax*progid*.dll  
   
 > [!NOTE]
 > Wenn der Name eines Members des ActiveX-Steuerelements mit einem in .NET Framework definierten Namen übereinstimmt, stellt "Aximp.exe" beim Erstellen der abgeleiteten AxHost-Klasse dem Membernamen das Präfix "Ctl" voran. Wenn das ActiveX-Steuerelement beispielsweise einen Member mit dem Namen "Layout" besitzt, wird dieser in der abgeleiteten AxHost-Klasse in "CtlLayout" umbenannt, da das Layout-Ereignis in .NET Framework definiert ist.  
@@ -77,7 +78,7 @@ aximp [options]{file.dll | file.ocx}
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Extras](index.md)
 - [Ildasm.exe (IL-Disassembler)](ildasm-exe-il-disassembler.md)

@@ -1,16 +1,17 @@
 ---
 title: Migrieren von .NET Framework 1.1
+description: In diesem Artikel erfahren Sie mehr über die Schritte, die erforderlich sind, um eine Anwendung auszuführen, die mithilfe von .NET Framework 1.1 unter Windows 7 und höher kompiliert wurde.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974973"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475267"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>Migrieren von .NET Framework 1.1
 
@@ -20,7 +21,7 @@ Windows 7 und neuere Versionen des Windows-Betriebssystems unterstützen .NET Fr
 
 Es gibt zwei Möglichkeiten, eine mit .NET Framework 1.1 kompilierte Anwendung unter Windows 7 oder neueren Versionen des Windows-Betriebssystems auszuführen:
 
-- Neuausrichtung der Anwendung für die Ausführung unter .NET Framework 4 und späteren Versionen. Für Neuausrichtung müssen Sie der Konfigurationsdatei der Anwendung, die das Ausführen unter .NET Framework 4 und späteren Versionen ermöglicht, ein [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element hinzufügen. Diese Konfigurationsdatei besitzt das folgende Format:
+- Neuausrichtung der Anwendung für die Ausführung unter .NET Framework 4 und späteren Versionen. Für eine Neuausrichtung müssen Sie der Konfigurationsdatei der Anwendung, die das Ausführen unter .NET Framework 4 und höheren Versionen ermöglicht, ein [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element hinzufügen. Diese Konfigurationsdatei besitzt das folgende Format:
 
     ```xml
     <configuration>
@@ -42,7 +43,7 @@ Unabhängig davon, ob Sie eine Neukompilierung oder eine neue Zielversion für d
 
 ## <a name="breaking-changes"></a>Breaking Changes
 
-Bei einer Änderung, die die Lauffähigkeit der Anwendung beeinträchtigt, ist ggf. eine Problemumgehung sowohl für Anwendungen mit neuer Zielversion als auch für neu kompilierte Anwendungen verfügbar. In einigen Fällen können Sie dem [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Konfigurationsdatei der Anwendung ein untergeordnetes Element hinzufügen, um das vorherige Verhalten wiederherzustellen. Die folgende Konfigurationsdatei stellt z.B. die in .NET Framework 1.1 verwendete Zeichenfolgensortierung und das Vergleichsverhalten wieder her und kann bei neu zugewiesener Zielversion oder einer neu kompilierten Anwendung verwendet werden.
+Bei einer Änderung, die die Lauffähigkeit der Anwendung beeinträchtigt, ist ggf. eine Problemumgehung sowohl für Anwendungen mit neuer Zielversion als auch für neu kompilierte Anwendungen verfügbar. In einigen Fällen können Sie dem Element [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md) der Konfigurationsdatei der Anwendung ein untergeordnetes Element hinzufügen, um das vorherige Verhalten wiederherzustellen. Die folgende Konfigurationsdatei stellt z.B. die in .NET Framework 1.1 verwendete Zeichenfolgensortierung und das Vergleichsverhalten wieder her und kann bei neu zugewiesener Zielversion oder einer neu kompilierten Anwendung verwendet werden.
 
 ```xml
 <configuration>

@@ -1,13 +1,14 @@
 ---
 title: Verzögerte Ausführung und Auswertung in LINQ to XML (C#)
+description: Abfrage- und Achsenvorgänge können die verzögerte Ausführung in C# verwenden. Hier erfahren Sie mehr über die Ausführungen und die Vorteile der verzögerten Ausführung und zu Überlegungen zur Implementierung.
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8559505572404f895d75e0d9895f9ae2c07b795e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594570"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105460"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Verzögerte Ausführung und Auswertung in LINQ to XML (C#)
 Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzögerte Ausführung (Deferred Execution) verwenden. In diesem Thema werden die Voraussetzungen und die Vorteile der verzögerten Ausführung erläutert und einige Überlegungen zur Implementierung angestellt.  
@@ -33,9 +34,9 @@ Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzög
   
 - [Beispiel für eine verzögerte Ausführung (C#)](./deferred-execution-example.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Chaining Queries Together (C#) (Tutorial: Verketten von Abfragen (C#))](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: Verketten von Abfragen (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 - [Konzepte und Terminologie (funktionale Transformation) (C#)](./concepts-and-terminology-functional-transformation.md)
 - [Aggregation Operations (C#) (Aggregationsvorgänge (C#))](./aggregation-operations.md)
 - [yield](../../../language-reference/keywords/yield.md)

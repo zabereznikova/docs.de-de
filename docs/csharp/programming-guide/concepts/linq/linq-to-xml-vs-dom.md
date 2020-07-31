@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML im Vergleich zu DOM (C#)
+description: Hier erfahren Sie mehr über einige wichtige Unterschiede zwischen LINQ to XML und der XML-Programmier-API des W3C-Dokumentobjektmodells (DOM).
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 92d0da494829d57517d52fe93a3cbcf1398fdbe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5fc3fd7869079d47d7c9031e3668afeed7a117b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168388"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165346"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML im Vergleich zu DOM (C#)
 In diesem Abschnitt werden einige der wichtigsten Unterschiede zwischen [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] und der derzeit verbreitetsten XML-Programmier-API, dem W3C-Dokumentobjektmodell (DOM), beschrieben.  

@@ -1,16 +1,17 @@
 ---
 title: Automatisch implementierte Eigenschaften – C#-Programmierhandbuch
+description: Für eine automatisch implementierte Eigenschaft in C# erstellt der Compiler eine private, anonyme Unterstützungsvariable, auf die nur über Zugriffsmethoden „get“ und „set“ der Eigenschaft zugegriffen werden kann.
 ms.date: 01/31/2020
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 791455c1eaef752da2b551e20187d390ca6c65e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f58f9a23f26bde7e80d834528d94e38af1231e7b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170324"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474474"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Automatisch implementierte Eigenschaften (C#-Programmierhandbuch)
 

@@ -1,13 +1,14 @@
 ---
 title: Funktionale Konstruktion (LINQ to XML) (C#)
+description: Hier erfahren Sie, wie die LINQ to XML-Programmierschnittstelle funktionale Konstruktion ermöglicht, also die Möglichkeit, einen XML-Baum in einer einzelnen Anweisung in C# zu erstellen.
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f209a7ef2a4597ec8eeccb3083b77223a27e7a65
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635755"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103770"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>Funktionale Konstruktion (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet mit der *funktionalen Konstruktion* eine leistungsfähige Möglichkeit zur Erstellung von XML-Elementen. Funktionale Konstruktion ist die Fähigkeit, eine XML-Struktur in einer einzelnen Anweisung zu erstellen.  

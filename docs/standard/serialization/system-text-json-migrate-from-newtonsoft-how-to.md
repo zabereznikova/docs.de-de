@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "83703580"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865332"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Migration von Newtonsoft.Json zu System.Text.Json
 
@@ -318,11 +318,27 @@ Damit die Deserialisierung fehlschlägt, wenn der JSON-Code keine `Date`-Eigensc
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs für die POCO-Klasse](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:System.Text.Json.JsonSerializerOptions.Converters>-Sammlung.
+Registrieren Sie diesen benutzerdefinierten Konverter durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType>-Sammlung.
 
-Wenn Sie sich an dieses Muster halten, übergeben Sie das options-Objekt nicht, wenn Sie <xref:System.Text.Json.JsonSerializer.Serialize%2A> oder <xref:System.Text.Json.JsonSerializer.Deserialize%2A> rekursiv aufrufen. Das options-Objekt enthält die <xref:System.Text.Json.JsonSerializerOptions.Converters%2A>-Sammlung. Wenn Sie es an `Serialize` oder `Deserialize` übergeben, ruft sich der benutzerdefinierte Konverter selbst auf, wodurch eine Endlosschleife entsteht, die zu einer Stapelüberlaufausnahme führt. Wenn die Standardoptionen nicht praktikabel sind, erstellen Sie eine neue Instanz der Optionen mit den Einstellungen, die Sie benötigen. Diese Vorgehensweise ist langsam, da jede neue Instanz unabhängig zwischengespeichert wird.
+Für dieses Muster rekursiver Aufrufe des Konverters ist erforderlich, dass Sie den Konverter mit <xref:System.Text.Json.JsonSerializerOptions> registrieren, anstatt mithilfe eines Attributs. Wenn Sie den Konverter mithilfe eines Attributs registrieren, ruft der benutzerdefinierte Konverter sich rekursiv selbst auf. Dies resultiert in einer Endlosschleife, die mit einer Stapelüberlaufausnahme endet.
 
-Der vorherige Konvertercode ist ein vereinfachtes Beispiel. Zusätzliche Logik wäre erforderlich, wenn Sie Attribute (z. B. [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)) oder andere Optionen (z. B. benutzerdefinierte Encoder) behandeln müssen. Der Beispielcode verarbeitet außerdem keine Eigenschaften, für die im Konstruktor ein Standardwert festgelegt ist. Und dieser Ansatz unterscheidet nicht zwischen den folgenden Szenarien:
+Wenn Sie den Konverter mithilfe des Optionsobjekts registrieren, vermeiden Sie eine Endlosschleife, indem Sie nicht das Options-Objekt übergeben, wenn <xref:System.Text.Json.JsonSerializer.Serialize%2A> oder <xref:System.Text.Json.JsonSerializer.Deserialize%2A> rekursiv aufgerufen wird. Das options-Objekt enthält die <xref:System.Text.Json.JsonSerializerOptions.Converters%2A>-Sammlung. Wenn Sie es an `Serialize` oder `Deserialize` übergeben, ruft sich der benutzerdefinierte Konverter selbst auf, wodurch eine Endlosschleife entsteht, die zu einer Stapelüberlaufausnahme führt. Wenn die Standardoptionen nicht praktikabel sind, erstellen Sie eine neue Instanz der Optionen mit den Einstellungen, die Sie benötigen. Diese Vorgehensweise ist langsam, da jede neue Instanz unabhängig zwischengespeichert wird.
+
+Es gibt ein alternatives Muster, dass die `JsonConverterAttribute`-Registrierung für die zu konvertierende Klasse verwenden kann. Bei diesem Ansatz ruft der Code des Konverters `Serialize` oder `Deserialize` für eine Klasse auf, die von der zu konvertierenden Klasse abgeleitet wird. `JsonConverterAttribute` wird nicht auf die abgeleitete Klasse angewendet. Im folgenden Beispiel dieser Alternative:
+
+* ist `WeatherForecastWithRequiredPropertyConverterAttribute` die zu deserialisierende Klasse, und `JsonConverterAttribute` wurde auf diese angewendet.
+* ist `WeatherForecastWithoutRequiredPropertyConverterAttribute` die abgeleitete Klasse, die das Konverterattribut nicht aufweist.
+* Der Code im Konverter ruft `Serialize` und `Deserialize` für `WeatherForecastWithoutRequiredPropertyConverterAttribute` auf, um eine Endlosschleife zu vermeiden. Bei diesem Serialisierungsansatz kommt es zu Leistungseinbußen, da eine zusätzliche Objektinstanziierung und Kopien von Eigenschaftswerten vorgenommen werden.
+
+Im Folgenden werden die `WeatherForecast*`-Typen veranschaulicht:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+So sieht der Konverter aus:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+Der erforderliche Eigenschaftenkonverter würde zusätzliche Logik erfordern, wenn Sie Attribute wie [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) oder verschiedene Optionen wie benutzerdefinierte Encoder verarbeiten müssten. Der Beispielcode verarbeitet außerdem keine Eigenschaften, für die im Konstruktor ein Standardwert festgelegt ist. Und dieser Ansatz unterscheidet nicht zwischen den folgenden Szenarien:
 
 * Im JSON fehlt eine Eigenschaft.
 * Im JSON ist eine Eigenschaft für einen Non-Nullable-Typ vorhanden, aber der Wert ist der Standardwert für den Typ, z. B. Null für einen `int`.
@@ -391,7 +407,7 @@ Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs 
 Wenn Sie einen benutzerdefinierten Konverter verwenden, der sich am vorangehenden Beispiel orientiert:
 
 * Der `OnDeserializing`-Code hat keinen Zugriff auf die neue POCO-Instanz. Um die neue POCO-Instanz zu Beginn der Deserialisierung zu bearbeiten, fügen Sie diesen Code in den POCO-Konstruktor ein.
-* Übergeben Sie das options-Objekt nicht, wenn Sie `Serialize` oder `Deserialize` rekursiv aufrufen. Das options-Objekt enthält die `Converters`-Sammlung. Wenn Sie es an `Serialize` oder `Deserialize` übergeben, wird der Konverter verwendet, wodurch eine Endlosschleife entsteht, die zu einer Stapelüberlaufausnahme führt.
+* Vermeiden Sie eine Endlosschleife, indem Sie den Konverter im Options-Objekt registrieren und dieses nicht übergeben, wenn `Serialize` oder `Deserialize` rekursiv aufgerufen wird. Weitere Informationen finden Sie weiter oben in diesem Artikel im Abschnitt [Erforderliche Eigenschaften](#required-properties).
 
 ### <a name="public-and-non-public-fields"></a>Öffentliche und nicht öffentliche Felder
 

@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher'
+description: Anhand des in diesem Artikel vorgestellten Beispiels erfahren Sie, wie Sie Ihre Desktop-App zur Unterstützung von .NET Framework 4 oder höher konfigurieren.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-ms.openlocfilehash: 30fb1da8d758b0e8996b4fcdebbb7fbf545a46c1
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 58d71cb7fac7a3c2bef975c99cfab1ca730fb6eb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228756"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475462"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher
 
@@ -20,7 +21,7 @@ Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten
 
 - Konfigurationsdatei.
 
-     Wenn die Anwendungskonfigurationsdatei [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Einträge enthält, die mindestens eine .NET Framework-Version angeben, und eine dieser Versionen auf dem Computer des Benutzers vorhanden ist, wird die Anwendung in dieser Version ausgeführt. Die Konfigurationsdatei liest [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Einträge in der Reihenfolge, in der sie aufgelistet werden, und verwendet die erste aufgeführte .NET Framework-Version, die auf dem Computer des Benutzers vorhanden ist. (Verwenden Sie das [\<requiredRuntime>-Element](../configure-apps/file-schema/startup/requiredruntime-element.md) für Version 1.0.)
+     Wenn die Anwendungskonfigurationsdatei [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Einträge enthält, die mindestens eine .NET Framework-Version angeben, und eine dieser Versionen auf dem Computer des Benutzers vorhanden ist, wird die Anwendung in dieser Version ausgeführt. Die Konfigurationsdatei liest [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Einträge in der Reihenfolge, in der sie aufgelistet werden, und verwendet die erste aufgeführte .NET Framework-Version, die auf dem Computer des Benutzers vorhanden ist. (Verwenden Sie das [\<requiredRuntime>-Element](../configure-apps/file-schema/startup/requiredruntime-element.md) für Version 1.0.)
 
 - Kompilierte Version.
 
@@ -28,7 +29,7 @@ Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten
 
 - Neueste installierte Version.
 
-     Wenn die .NET Framework-Version, für die die App erstellt wurde, nicht vorhanden ist, und die Version nicht im [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Konfigurationsdatei angegeben ist, wird die App in der neuesten .NET Framework-Version ausgeführt, die auf dem Computer des Benutzers installiert ist.
+     Wenn die .NET Framework-Version, für die die App erstellt wurde, nicht vorhanden ist, und die Version nicht im [\<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md) der Konfigurationsdatei angegeben ist, wird die App in der neuesten .NET Framework-Version ausgeführt, die auf dem Computer des Benutzers installiert ist.
 
      Allerdings werden .NET Framework 1.0-, 1.1-, 2.0-, 3.0- und 3.5-Apps nicht automatisch in .NET Framework 4 oder höher ausgeführt, und in einigen Fällen kann der Benutzer eine Fehlermeldung erhalten und aufgefordert werden, .NET Framework 3.5 zu installieren. Das Aktivierungsverhalten kann auch je nach Betriebssystem des Benutzers unterschiedlich sein, da verschiedene Versionen des Windows-Systems unterschiedliche Versionen von .NET Framework enthalten. Wenn Ihre App .NET Framework 3.5 und 4 oder höher unterstützt, wird empfohlen, dies mit mehreren Einträgen in der Konfigurationsdatei kenntlich zu machen, um .NET Framework-Initialisierungsfehler zu vermeiden. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](versions-and-dependencies.md).
 

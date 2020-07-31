@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML-Sicherheit (C#)
+description: Hier erfahren Sie mehr über die Sicherheitsprobleme im Zusammenhang mit LINQ to XML, und Sie erhalten hilfreiche Informationen zur Minderung von Sicherheitsrisiken.
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: 5b7eb815b058cba008f1db2cf683c8934c19b743
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc9fd13f19dcf6d9cbbb2b0b7608009cc4da1108
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73423377"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165318"
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML-Sicherheit (C#)
 In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörtert. Darüber hinaus finden Sie hier einige Empfehlungen zur Minderung der Sicherheitsrisiken.  
@@ -99,6 +100,6 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
   
  Ein gewisses Maß an Sicherheit wird durch die CLR (Common Language Runtime) bereitgestellt. So kann z. B. eine Komponente, die keine private Klasse enthält, auch nicht auf Anmerkungen zugreifen, die von dieser Klasse verschlüsselt wurden. Es ist aber möglich, dass Komponenten Anmerkungen löschen können, die sie gar nicht lesen können. Dieses Verhalten könnte für einen Manipulationsangriff missbraucht werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](linq-to-xml-overview.md)

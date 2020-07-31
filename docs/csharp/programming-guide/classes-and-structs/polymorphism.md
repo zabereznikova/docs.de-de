@@ -1,16 +1,17 @@
 ---
 title: Polymorphismus – C#-Programmierhandbuch
+description: In diesem Artikel erfahren Sie mehr über Polymorphie, einem wichtigen Konzept für objektorientierte Programmiersprachen wie C#, das die Beziehung zwischen Basis und abgeleiteten Klassen beschreibt.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 65f5c882ec4d7f8cbcc7ec7bf535091febfba64d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 59b5f5d2d5a8f274845607aeca370c316670bd68
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662653"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925448"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 

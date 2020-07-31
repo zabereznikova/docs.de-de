@@ -1,13 +1,14 @@
 ---
 title: Auflistungen (C#)
+description: Hier erfahren Sie mehr über Sammlungen in C#, die für das Arbeiten mit Gruppen von Objekten verwendet werden. Sammlungen können dynamisch vergrößert und verkleinert werden, wenn sich die Anforderungen der Anwendung ändern.
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 2375980e2915d4daa5a221a94eee2aea41959852
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241395"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924928"
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
 
@@ -200,7 +201,7 @@ Zum Erstellen einer generischen Auflistung verwenden Sie eine der Klassen im <xr
 
 In der folgenden Tabelle werden einige der häufig verwendeten Klassen des <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace aufgelistet:
 
-|Klasse|Beschreibung|
+|Klasse|BESCHREIBUNG|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, deren Reihenfolge anhand des Schlüssels bestimmt wird.|
 |<xref:System.Collections.Generic.List%601>|Stellt eine Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.|

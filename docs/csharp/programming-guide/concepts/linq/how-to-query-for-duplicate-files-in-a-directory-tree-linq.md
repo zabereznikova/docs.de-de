@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (C#)'
+description: In diesem Artikel erfahren Sie, wie Sie LINQ in C# verwenden, um doppelte Dateinamen in unterschiedlichen Verzeichnissen abzufragen, und wie Sie Dateien abfragen, deren Größen und LastWriteTime-Eigenschaften ebenfalls übereinstimmen.
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72acb0e0823138821d321ed3845ff7ac137aee0c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168881"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104565"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (C#)
 Manchmal können sich Dateien mit demselben Namen in mehr als einem Ordner befinden. Beispielsweise enthalten mehrere Ordner unter dem Installationsordner von Visual Studio eine Datei „readme.htm“. Dieses Beispiel zeigt, wie solche mehrfach vorkommenden Dateinamen in einem angegebenen Stammordner abgefragt werden können. Das zweite Beispiel zeigt, wie Dateien abgefragt werden können, deren Größe und LastWrite-Zeiten ebenfalls übereinstimmen.  
@@ -172,7 +173,7 @@ class QueryDuplicateFileNames
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)
+- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)

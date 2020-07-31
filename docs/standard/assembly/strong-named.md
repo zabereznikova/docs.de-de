@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-ms.openlocfilehash: a2db0efcb57226a757796c311309ce8f749a398b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 069e42af6f8d49363d0264c0f6167b4afa3acd61
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378601"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925656"
 ---
 # <a name="strong-named-assemblies"></a>Assemblys mit starkem Namen
 
@@ -30,9 +30,7 @@ Assemblys mit starkem Namen enthalten den einfachen Textnamen der Assembly, die 
 
 ## <a name="why-strong-name-your-assemblies"></a>Warum sollten Sie starke Namen für Ihre Assemblys vergeben?
 
-Wenn Sie auf eine Assembly mit einem starken Namen verweisen, erhalten Sie dadurch bestimmte Vorteile, z. B. Versions- und Namensschutz. Assemblys mit starkem Namen können im .NET Framework im globalen Assemblycache installiert werden, was für einige Szenarios erforderlich ist.
-
-Assemblys mit starkem Namen sind in den folgenden Szenarien nützlich:
+Für das .NET Framework sind Assemblys mit starken Namen in den folgenden Szenarios nützlich:
 
 - Auf Ihre Assemblys kann durch Assemblys mit starkem Namen verwiesen werden. Alternativ können Sie den `friend`-Zugriff auf Ihre Assemblys von anderen Assemblys mit starkem Namen ermöglichen.
 
@@ -42,7 +40,9 @@ Assemblys mit starkem Namen sind in den folgenden Szenarien nützlich:
 
 - Sie möchten die Wartung Ihrer App durch Anwendung einer Verlegerrichtlinie zentralisieren. Die Assembly muss daher im globalen Assemblycache installiert sein.
 
-Wenn Sie Open-Source-Entwickler sind und den Nutzen von Assemblys mit starkem Namen ermitteln möchten, können Sie den privaten Schlüssel zusammen mit der zugehörigen Assembly in Ihr Quellcodeverwaltungssystem einchecken.
+Für .NET Core bieten Assemblys mit starken Namen keine wesentlichen Vorteile.
+
+Wenn Sie Open-Source-Entwickler sind und herausfinden möchten, welchen Nutzen Assemblys mit starken Namen für die Kompatibilität mit dem .NET Framework haben, können Sie den privaten Schlüssel zusammen mit der zugehörigen Assembly in Ihr Quellcodeverwaltungssystem einchecken.
 
 ## <a name="see-also"></a>Siehe auch
 

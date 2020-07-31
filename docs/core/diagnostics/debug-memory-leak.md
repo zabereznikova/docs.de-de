@@ -3,16 +3,16 @@ title: 'Tutorial: Debuggen eines Arbeitsspeicherverlusts'
 description: Erfahren Sie, wie Sie einen Arbeitsspeicherverlust in .NET Core debuggen.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021356"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924889"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Tutorial: Debuggen eines Arbeitsspeicherverlusts in .NET Core
+# <a name="debug-a-memory-leak-in-net-core"></a>Debuggen eines Arbeitsspeicherverlusts in .NET Core
 
-**Dieser Artikel gilt für:** ✔️ .NET Core 3.0 SDK und neuere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 3.1 SDK und höher
 
 In diesem Tutorial werden die Tools zum Analysieren eines .NET Core-Arbeitsspeicherverlusts vorgestellt.
 
@@ -30,7 +30,7 @@ In diesem Tutorial werden Sie Folgendes durchführen:
 
 Im Tutorial wird Folgendes verwendet:
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) oder eine höhere Version.
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) oder höher
 - [dotnet-trace](dotnet-trace.md) zu Auflisten von Prozessen.
 - [dotnet-counters](dotnet-counters.md) zum Untersuchen der verwalteten Speicherauslastung.
 - [dotnet-dump](dotnet-dump.md) zum Erfassen und Analysieren einer Dumpdatei.
@@ -102,7 +102,7 @@ Konzentrieren Sie sich auf diese Zeile:
 
 Sie können sehen, dass der verwaltete Heapspeicher nach dem Start 4 MB groß ist.
 
-Verwenden Sie nun die URL `http://localhost:5000/api/diagscenario/memleak/20000`.
+Verwenden Sie nun die URL `https://localhost:5001/api/diagscenario/memleak/20000`.
 
 Beachten Sie, dass die Speicherauslastung auf 30 MB angewachsen ist.
 
@@ -133,7 +133,7 @@ Complete
 
 Nachdem das Speicherabbild erfasst wurde, sollten Sie über genügend Informationen verfügen, um den fehlgeschlagenen Prozess zu diagnostizieren. Wenn der fehlgeschlagene Prozess auf einem Produktionsserver ausgeführt wird, ist dies jetzt der ideale Zeitpunkt für die kurzfristige Wartung, indem der Prozess neu gestartet wird.
 
-In diesem Tutorial benötigen Sie das [Beispieldebugziel](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) nicht mehr, und Sie können es schließen. Navigieren Sie zu dem Terminal, über das der Server gestartet wurde, und drücken Sie `Control-C`.
+In diesem Tutorial benötigen Sie das [Beispieldebugziel](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) nicht mehr, und Sie können es schließen. Navigieren Sie zu dem Terminal, über das der Server gestartet wurde, und drücken Sie <kbd>STRG+C</kbd>.
 
 ### <a name="analyze-the-core-dump"></a>Analysieren des Speicherabbilds
 
@@ -232,14 +232,14 @@ In diesem Tutorial haben Sie einen Beispielwebserver gestartet. Dieser Server so
 
 Sie können auch die erstellte Speicherabbilddatei löschen.
 
+## <a name="see-also"></a>Siehe auch
+
+- [dotnet-trace](dotnet-trace.md) zum Auflisten von Prozessen
+- [dotnet-counters](dotnet-counters.md) zum Überprüfen der Auslastung des verwalteten Speichers
+- [dotnet-dump](dotnet-dump.md) zum Erfassen und Analysieren einer Speicherabbilddatei.
+- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-Damit haben Sie das Tutorial erfolgreich abgeschlossen.
-
-Wir werden weitere Tutorials zum Thema Diagnose veröffentlichen. Sie können die Entwurfsversionen im [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)-Repository abrufen.
-
-Dieses Tutorial hat die Grundlagen der wichtigsten .NET-Diagnosetools behandelt. Informationen zur erweiterten Verwendung finden Sie in der folgenden Referenzdokumentation:
-
-* [dotnet-trace](dotnet-trace.md) zu Auflisten von Prozessen.
-* [dotnet-counters](dotnet-counters.md) zum Untersuchen der verwalteten Speicherauslastung.
-* [dotnet-dump](dotnet-dump.md) zum Erfassen und Analysieren einer Dumpdatei.
+> [!div class="nextstepaction"]
+> [Debuggen von hoher CPU-Auslastung in .NET Core](debug-highcpu.md)

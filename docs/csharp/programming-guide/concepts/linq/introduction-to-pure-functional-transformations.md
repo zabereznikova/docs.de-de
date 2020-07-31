@@ -1,13 +1,14 @@
 ---
 title: Einführung in reine funktionale Transformationen (C#)
+description: Dieser Abschnitt führt Sie in das Thema „funktionale Transformationen“ ein und bietet eine Übersicht über die zugrunde liegenden Konzepte und Sprachkonstrukte in C#. Diese Ressourcen verwenden die XML-Transformation für Beispiele.
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 34e2fdfae7c0243ca6f59354c453396648c3fa85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17f9dcb072b5f67521f668b1802d12a455f383fa
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69592102"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165682"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Einführung in reine funktionale Transformationen (C#)
 Dieser Abschnitt führt Sie in das Thema "funktionale Transformationen" ein und bietet eine Übersicht über die zugrunde liegenden Konzepte und die zugehörigen Sprachkonstrukte. Es werden die Unterschiede zwischen dem Programmieren mit dem objektorientierten Ansatz und dem Programmieren mit der funktionalen Transformation erläutert und Empfehlungen für die Umstellung auf die funktionale Transformation gegeben. In diesem Abschnitt wird die XML-Transformation zu Illustrationszwecken verwendet, funktionale Transformationen können aber auch in vielen anderen Programmierszenarios verwendet werden.  
@@ -18,7 +19,7 @@ Dieser Abschnitt führt Sie in das Thema "funktionale Transformationen" ein und 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Konzepte und Terminologie (funktionale Transformation) (C#)](./concepts-and-terminology-functional-transformation.md)|Enthält eine Einführung in die Konzepte und Begriffe der Transformationen mit reinen Funktionen.|  
 |[Funktionale Programmierung und Imperative Programmierung (C#)](./functional-programming-vs-imperative-programming.md)|Benennt die Gemeinsamkeiten und Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung.|  

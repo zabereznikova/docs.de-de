@@ -1,5 +1,6 @@
 ---
 title: 'Problembehandlung: Debuggen von Windows-Diensten'
+description: Hier erfahren Sie mehr über die ersten Schritte beim Debuggen von Windows-Diensten. Beim Debuggen einer Windows-Dienstanwendung interagiert der Dienst mit dem Windows-Dienst-Manager.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
 author: ghogen
-ms.openlocfilehash: cbedb0051cbb08c2875e145a2bad35ae4d02a74e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 935f5dcbd369ba5d723cc0e947ba708afdd590ea
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053512"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925539"
 ---
 # <a name="troubleshooting-debugging-windows-services"></a>Problembehandlung: Debuggen von Windows-Diensten
 Beim Debuggen einer Windows-Dienstanwendung interagiert der Dienst mit dem **Windows Service Manager**. Der **Service Manager** startet den Dienst durch Aufrufen der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode und wartet dann 30 Sekunden auf die Rückgabe der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode. Erfolgt in diesem Zeitraum keine Rückgabe durch die Methode, wird im Manager die Fehlermeldung angezeigt, dass der Dienst nicht gestartet werden kann.  

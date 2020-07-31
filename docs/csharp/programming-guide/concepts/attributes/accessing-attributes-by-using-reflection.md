@@ -1,13 +1,14 @@
 ---
 title: Zugriff auf Attribute mit Reflektion (C#)
+description: Verwenden Sie die Reflexion, um mithilfe der GetCustomAttributes-Methode mit benutzerdefinierten Attributen definierte Informationen in C# zu erhalten.
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9425141d64fd061d0c1f628228693cce02f7bfa0
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595502"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925097"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Zugriff auf Attribute mit Reflektion (C#)
 Die Tatsache, dass Sie benutzerdefinierte Attribute definieren und diese in Ihren Quellcode platzieren können, hätte keinen Nutzen, wenn Sie diese Informationen nicht abrufen und darauf reagieren könnten. Mithilfe der Reflektion können Sie die Informationen abrufen, die mit benutzerdefinierten Attributen definiert wurden. Die Schlüsselmethode ist `GetCustomAttributes`, die ein Array von Objekten zurück gibt, die die Laufzeitäquivalente der Quellcodeattribute sind. Diese Methode hat mehrere überladene Versionen. Weitere Informationen finden Sie unter <xref:System.Attribute>.  
@@ -113,7 +114,7 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>

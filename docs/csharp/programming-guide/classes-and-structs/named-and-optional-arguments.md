@@ -1,5 +1,6 @@
 ---
 title: Benannte und optionale Argumente – C#-Programmierhandbuch
+description: Benannte Argumente in C# geben Argumente nach Name und nicht nach Position an. Optionale Argumente können ausgelassen werden.
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 15b685248730c1f742035612a201d97d180bbc41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46b9dc23644e68aea2767f2b990fe7f243a4f357
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398418"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864981"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Benannte und optionale Argumente (C#-Programmierhandbuch)
 C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglichen es Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen anstatt der Position des Parameters in der Parameterliste zuordnen. *Optionale Argumente* ermöglichen es Ihnen, Argumente für einige Parameter auszulassen. Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
@@ -126,9 +127,9 @@ C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglic
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Verwenden von dynamischen Typen](../types/using-type-dynamic.md)
 - [Verwenden von Konstruktoren](./using-constructors.md)
 - [Verwenden von Indexern](../indexers/using-indexers.md)

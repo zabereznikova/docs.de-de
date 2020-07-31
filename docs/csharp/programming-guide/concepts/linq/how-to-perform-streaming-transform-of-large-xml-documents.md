@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)'
+description: Hier erfahren Sie, wie Sie eine Streamingtransformation von Text in XML in C# durchführen, um eine übermäßige Speicherauslastung für einige Dateien zu vermeiden.
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 9eb2e832f798e550ef3b534b0c9a0e3416378b43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1ab2866079b2244dc764271d7ba63173349e2f3
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169103"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104862"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)
 Es kann vorkommen, dass Sie große XML-Dateien transformieren und Ihre Anwendung so schreiben müssen, dass der Arbeitsspeicherbedarf der Anwendung vorhersehbar ist. Wenn Sie versuchen, eine XML-Struktur mit einer sehr großen XML-Datei zu füllen, ändert sich Ihre Speicherbeanspruchung proportional zur Größe der Datei, also exzessiv. Deshalb sollten Sie stattdessen ein Streamingverfahren verwenden.  

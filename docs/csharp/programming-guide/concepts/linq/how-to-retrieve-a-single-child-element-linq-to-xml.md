@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Abrufen eines einzelnen untergeordneten Elements (LINQ to XML) (C#)'
+description: In diesem Artikel erfahren Sie, wie Sie mit LINQ to XML ein einzelnes untergeordnetes Element als Namen abrufen. In diesem C#-Beispiel gibt die Element-Methode das erste angegebene untergeordnete Element zurück.
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3a044f30cf2e411bdff52586c7a370b626f41bc
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347472"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103279"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Vorgehensweise: Abrufen eines einzelnen untergeordneten Elements (LINQ to XML) (C#)
 In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen untergeordneten Elements nach dessen Namen erläutert. Wenn Sie den Namen des untergeordneten Elements kennen und wissen, dass es nur ein Element mit diesem Namen gibt, ist es möglicherweise sinnvoll, statt einer ganzen Auflistung nur ein einzelnes Element abzurufen.  
@@ -21,7 +22,7 @@ In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen untergeordn
   
  Das Visual Basic-Beispiel zeigt die Verwendung der Arrayindexernotation, um ein einzelnes Element abzurufen.  
   
- Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -53,6 +54,6 @@ Console.WriteLine(e);
 <aw:DeliveryNotes xmlns:aw="http://www.adventure-works.com">Please leave packages in shed by driveway.</aw:DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](./linq-to-xml-axes-overview.md)

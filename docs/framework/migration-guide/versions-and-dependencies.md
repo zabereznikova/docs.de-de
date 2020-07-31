@@ -1,16 +1,17 @@
 ---
 title: .NET Framework- und Windows-Betriebssystemversionen
+description: Hier erhalten Sie Informationen zu wichtigen Features der einzelnen .NET Framework-Versionen, einschließlich zugrunde liegender CLR-Versionen und vom Windows-Betriebssystem installierter Versionen.
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77504058"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475475"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework-Versionen und -Abhängigkeiten
 
@@ -199,7 +200,7 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 
 |||
 |-|-|
-|**CLR-Version**|2,0|
+|**CLR-Version**|2.0|
 |**In Visual Studio-Version enthalten**|2008|
 |**Windows-Versionen**|✔️ 10\*<br/>✔️ 8.1\*<br />✔️ 8\*<br />✔️ 7<br /><br />➕ Vista|
 |**Windows Server-Versionen**|➕ Windows Server, Version 1803\*<br/>➕ Windows Server, Version 1709\*<br/>➕ 2016\*<br/>➕ 2012 R2\*<br />➕ 2012\*<br /><br />✔️2008 R2 SP1\*<br /><br/>➕ 2008 R2 SP1<br />➕ 2003|
@@ -216,7 +217,7 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 
 |||
 |-|-|
-|**CLR-Version**|2,0|
+|**CLR-Version**|2.0|
 |**Windows-Versionen**|✔️ Vista|
 |**Windows Server-Versionen**|✔️ 2008 R2 SP1*<br />✔️ 2008 SP2\*<br /><br />➕ 2003|
 |**Ermitteln der installierten .NET-Version**|Weitere Informationen finden Sie in den [Anweisungen](how-to-determine-which-versions-are-installed.md).|
@@ -234,9 +235,9 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 
 |||
 |-|-|
-|**CLR-Version**|2,0|
+|**CLR-Version**|2.0|
 |**In Visual Studio-Version enthalten**|2005|
-|**Windows-Versionen**|–|
+|**Windows-Versionen**|Nicht zutreffend|
 |**Windows Server-Versionen**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 2003|
 |**Ermitteln der installierten .NET-Version**|Siehe [Anweisungen](how-to-determine-which-versions-are-installed.md)|
 
@@ -250,9 +251,9 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 
 |||
 |-|-|
-|**CLR-Version**|1,1|
+|**CLR-Version**|1.1|
 |**In Visual Studio-Version enthalten**|2003|
-|**Windows-Versionen**|–|
+|**Windows-Versionen**|Nicht zutreffend|
 |**Windows Server-Versionen**|✔️ 2003|
 |**Ermitteln der installierten .NET-Version**|Siehe [Anweisungen](how-to-determine-which-versions-are-installed.md)|
 
@@ -260,10 +261,10 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 
 |||
 |-|-|
-|**CLR-Version**|1,0|
+|**CLR-Version**|1.0|
 |**In Visual Studio-Version enthalten**|Visual Studio .NET|
-|**Windows-Versionen**|–|
-|**Windows Server-Versionen**|–|
+|**Windows-Versionen**|Nicht zutreffend|
+|**Windows Server-Versionen**|Nicht zutreffend|
 |**Ermitteln der installierten .NET-Version**|Siehe [Anweisungen](how-to-determine-which-versions-are-installed.md)|
 
 > [!NOTE]
@@ -302,7 +303,7 @@ Wenn die App für die Version 2.0, 3.0 oder 3.5 vorgesehen ist, werden die Benu
 
 - Informationen zum Bestimmen der auf einem Computer installierten Versionen oder Updates finden Sie unter [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](how-to-determine-which-versions-are-installed.md) und [Gewusst wie: Bestimmen der installierten .NET Framework-Updates](how-to-determine-which-net-framework-updates-are-installed.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Versionskompatibilität](version-compatibility.md)
 | [Offizielle .NET Framework-Supportrichtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)

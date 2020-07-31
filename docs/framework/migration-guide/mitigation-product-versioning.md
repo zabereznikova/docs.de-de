@@ -1,13 +1,14 @@
 ---
 title: 'Entschärfung: Produktversionsverwaltung'
+description: In diesem Artikel erfahren Sie, wie sich die Produktversionsverwaltung in .NET Framework 4.6 und höher im Vergleich zu früheren Releases geändert hat.
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
-ms.openlocfilehash: 64a68d2b79a0a3ccdd806949ffd6cb3760974390
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 442c06446e763758d3a150ee9ff884a616541c07
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457827"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475397"
 ---
 # <a name="mitigation-product-versioning"></a>Entschärfung: Produktversionsverwaltung
 
@@ -29,7 +30,7 @@ Im Folgenden finden Sie die detaillierten Änderungen:
 
 Im Allgemeinen sollten Anwendungen von den empfohlenen Verfahren zum Erkennen solcher Faktoren, wie beispielsweise die Laufzeitversion von .NET Framework und das Installationsverzeichnis, abhängen:
 
-- Weitere Informationen zum Erkennen der Laufzeitversion von .NET Framework finden Sie unter [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](how-to-determine-which-versions-are-installed.md).
+- Wie Sie die Laufzeitversion von .NET Framework ermitteln, erfahren Sie unter [ Gewusst wie: Determine Which .NET Framework Versions Are Installed](how-to-determine-which-versions-are-installed.md) (Bestimmen der installierten .NET Framework-Versionen).
 
 - Um den Installationspfad für .NET Framework zu ermitteln, verwenden Sie den Wert des `InstallPath`-Eintrags im `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` Schlüssel.
 
@@ -40,6 +41,6 @@ Im Allgemeinen sollten Anwendungen von den empfohlenen Verfahren zum Erkennen so
 
 - Um die CLR-Version zu erhalten, rufen Sie die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType>-Methode auf.   Für .NET Framework 4 und die zugehörigen Punktreleases (.NET Framework 4.5, 4.5.1, 4.5.2 sowie .NET Framework 4.6, 4.6.1, 4.6.2 und 4.7) wird die Zeichenfolge `v4.0.30319` zurückgegeben.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Anwendungskompatibilität](application-compatibility.md)

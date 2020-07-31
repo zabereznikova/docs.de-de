@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb3a591ba7b58e187eb03e65a3da6dfb47c9475c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446938"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473980"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C#-Compileroptionen alphabetisch sortiert
 
@@ -77,7 +77,7 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[-resource](resource-compiler-option.md)|Bettet die angegebene Ressource ein.|
 |-ruleset:\<file>|Geben Sie eine Regelsatzdatei an, die bestimmte Diagnosefunktionen deaktiviert.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Gibt die mindestens erforderliche Version des Subsystems an, die die generierte ausführbare Datei verwenden kann.|
-|[-target](target-compiler-option.md)|Gibt das Format der Ausgabedatei mit einer der folgenden Optionen an: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md), [-target:winmdobj](target-winmdobj-compiler-option.md)|
+|[-target](target-compiler-option.md)|Gibt das Format der Ausgabedatei mit einer der folgenden Optionen an: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) und [-target:winmdobj](target-winmdobj-compiler-option.md).|
 |[/unsafe](unsafe-compiler-option.md)|Ermöglicht [unsicheren](../keywords/unsafe.md) Code|
 |[-utf8output](utf8output-compiler-option.md)|Gibt Compilermeldungen in einer UTF-8-Codierung aus.|
 |-version|Anzeigen der Compilerversionsnummer und Beenden.|

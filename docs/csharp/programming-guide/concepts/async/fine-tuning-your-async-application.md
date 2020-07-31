@@ -1,13 +1,14 @@
 ---
 title: Feinabstimmung der Async-Anwendung (C#)
+description: In diesen C#-Beispielen werden „CancellationToken“ und wichtige „Task“-Methoden wie „Task.WhenAll“ und „Task.WhenAny“ verwendet, um asynchrone Anwendungen zu optimieren.
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46457f889a78932e306d2bd21dca666625d744eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73970243"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925318"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Feinabstimmung der Async-Anwendung (C#)
 Sie können Genauigkeit und Flexibilität Ihren asynchronen Anwendungen hinzufügen, indem Sie die Methoden und Eigenschaften verwenden, die der <xref:System.Threading.Tasks.Task>-Typ bereitstellt. Die Themen in diesem Abschnitt zeigen Beispiele, die das <xref:System.Threading.CancellationToken> und wichtige `Task`-Methoden wie <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> verwenden.  
@@ -39,8 +40,8 @@ Sie können Genauigkeit und Flexibilität Ihren asynchronen Anwendungen hinzufü
   
  ![WPF-Fenster mit Schaltfläche „Abbrechen“](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Dialogfeld mit einer Schaltfläche „Start“ und einer Schaltfläche „Beenden“")  
   
- Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.  
+ Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](./index.md)

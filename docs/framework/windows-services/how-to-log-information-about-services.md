@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Protokollinformationen über Dienste'
+description: In diesem Artikel erhalten Sie Informationen zum Protokollieren von Informationen zu Diensten. Legen Sie die AutoLog-Eigenschaft fest, wenn Sie möchten, dass Ihr Windows-Dienstprojekt mit dem Anwendungsereignisprotokoll interagiert.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: 3c974d5a98f8056e45899b109878e5a28ab2938e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6ebce5464dc25ba4101b3898ee791714f8efc5d6
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053604"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925747"
 ---
 # <a name="how-to-log-information-about-services"></a>Vorgehensweise: Protokollinformationen über Dienste
 Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisprotokoll zugreifen und Informationen sowie Ausnahmen in das Protokoll schreiben. Sie geben über die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft an, ob Sie diese Funktionalität in Ihrer Anwendung nutzen möchten. Standardmäßig ist die Protokollierung für jeden Dienst aktiviert, den Sie mit den Projektvorlagen für Windows-Dienste erstellen. Sie können eine statische Form der <xref:System.Diagnostics.EventLog> -Klasse verwenden, um Dienstinformationen in ein Protokoll zu schreiben, ohne dass Sie eine Instanz von einer <xref:System.Diagnostics.EventLog> -Komponente erstellen oder eine Quelle manuell registrieren müssen.  

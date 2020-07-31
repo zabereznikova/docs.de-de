@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Projektieren eines anonymen Typs (C#)'
+description: Informationen zum Projizieren einer Abfrage ab einen anonymen Typ in C# Es kann einfacher sein, einen anonymen Typ zu verwenden, als einen neuen Typ zu erstellen, der nur kurz verwendet wird.
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: 7797c8bfb12943af1ce7f975b170bf002aa7d6fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6598796a4ba95362340f2551b1da6ac6d857eaae
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345735"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104624"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>Vorgehensweise: Projektieren eines anonymen Typs (C#)
 Es gibt Fälle, in denen Sie eine Abfrage in einen neuen Typ projizieren möchten, obwohl Sie wissen, dass dieser Typ nur für kurze Zeit verwendet werden wird. Das Erstellen eines neuen Typs für die Verwendung in der Projektion bedeutet viel Zusatzarbeit. Effizienter wäre es in diesem Fall, eine Projektion in einen anonymen Typ vorzunehmen. Mit anonymen Typen können Sie eine Klasse definieren und dann ein Objekt dieser Klasse deklarieren und initialisieren, ohne der Klasse dazu einen Namen geben zu müssen.  

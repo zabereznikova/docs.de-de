@@ -1,19 +1,20 @@
 ---
 title: Private Konstruktoren – C#-Programmierhandbuch
+description: Ein privater Konstruktor ist ein spezieller Instanzkonstruktor in C#, der verwendet wird, um einzuschränken, wie ein Objekt erstellt werden kann. Sie können mit Factorymethoden oder anderen Konstruktionsausdrücken verwendet werden.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 2f8b93fbeb7c2996f3e2683fe86f159fbfa61a92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6b86ccb870da0262bcbc516e176e00d17724f9f
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705443"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864058"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Private Konstruktoren (C#-Programmierhandbuch)
-Ein privater Konstruktor ist ein spezieller Instanzenkonstruktor. Er wird im Allgemeinen in Klassen verwenden, die nur statische Member enthalten. Wenn eine Klasse einen oder mehrere private und keine öffentlichen Konstruktoren besitzt, können andere Klassen (außer geschachtelte Klassen) keine Instanzen dieser Klasse erstellen. Beispiel:  
+Ein privater Konstruktor ist ein spezieller Instanzenkonstruktor. Er wird im Allgemeinen in Klassen verwenden, die nur statische Member enthalten. Wenn eine Klasse einen oder mehrere private und keine öffentlichen Konstruktoren besitzt, können andere Klassen (außer geschachtelte Klassen) keine Instanzen dieser Klasse erstellen. Zum Beispiel:  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
@@ -34,7 +35,7 @@ Ein privater Konstruktor ist ein spezieller Instanzenkonstruktor. Er wird im All
 
 Weitere Informationen erhalten Sie unter [Private Konstruktoren](~/_csharplang/spec/classes.md#private-constructors) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)

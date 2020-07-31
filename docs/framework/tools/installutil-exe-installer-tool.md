@@ -1,5 +1,6 @@
 ---
 title: Installutil.exe (Installer-Tool)
+description: Verwenden des Installationstools „Installutil.exe“. Dieses Tool ermöglicht das Installieren und Deinstallieren von Serverressourcen durch Ausführen der Installationsprogrammkomponenten in bestimmten Assemblys.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - uninstalling server resources
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 042e5f64a7a863173db9c4e601d3152b0df46d97
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105071"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164449"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Installer-Tool)
 
@@ -36,15 +37,15 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="parameters"></a>Parameter
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`assembly`|Der Dateiname der Assembly, in der die Installationsprogrammkomponenten ausgeführt werden sollen. Lassen Sie diesen Parameter aus, wenn Sie den starken Namen der Assembly angeben möchten, indem Sie die `/AssemblyName`-Option verwenden.|
 
 <a name="options"></a>
 
-## <a name="options"></a>Optionen
+## <a name="options"></a>Tastatur
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
 |`/h[elp]`<br /><br /> - oder -<br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
 |`/help` *assembly*<br /><br /> - oder -<br /><br /> `/?` *assembly*|Zeigt zusätzliche Optionen, die von einzelnen Installationsprogrammen innerhalb der angegebenen Assembly erkannt werden, zusammen mit der Befehlssyntax und Optionen für "InstallUtil.exe" an. Mit dieser Option wird dem Hilfetext von "InstallUtil.exe" der von der <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>-Eigenschaft aller Installationsprogrammkomponenten zurückgegebene Text hinzugefügt.|
@@ -89,7 +90,7 @@ Verzögert signierte Assemblys können mit "Installutil.exe" weder installiert n
 
 Ab .NET Framework, Version 2.0, ist im Lieferumfang der 32-Bit-Version der Common Language Runtime (CLR) ausschließlich die 32-Bit-Version des Installationstools enthalten. Der Lieferumfang der 64-Bit-Version der Common Language Runtime umfasst hingegen sowohl eine 32-Bit-Version als auch eine 64-Bit-Version des Installationstools. Verwenden Sie in der 64-Bit-Common Language Runtime zur Installation von 32-Bit-Assemblys das 32-Bit-Installationstool und zur Installation von 64-Bit-Assemblys sowie von Microsoft Intermediate Language (MSIL)-Assemblys das 64-Bit-Installationstool. Beide Versionen des Installationstools verhalten sich gleich.
 
-Sie können "Installutil.exe" nicht verwenden, um einen Windows-Dienst bereitzustellen, der mit C++ erstellt wurde, da "Installutil.exe" den eingebetteten systemeigenen Code nicht erkennen kann, der vom C++-Compiler erzeugt wird. Wenn Sie versuchen, einen mit C++ erstellten Windows-Dienst mit "Installutil.exe" bereitzustellen, wird eine Ausnahme, z. B. <xref:System.BadImageFormatException>, ausgelöst. Um mit diesem Szenario zu arbeiten, verschieben Sie den Dienstknoten in ein C++-Modul, und schreiben Sie dann das Installationsprogrammobjekt in C# oder Visual Basic.
+Sie können „Installutil.exe“ nicht verwenden, um einen Windows-Dienst bereitzustellen, der mit C++ erstellt wurde, da „Installutil.exe“ den eingebetteten nativen Code nicht erkennen kann, der vom C++-Compiler erzeugt wird. Wenn Sie versuchen, einen mit C++ erstellten Windows-Dienst mit "Installutil.exe" bereitzustellen, wird eine Ausnahme, z. B. <xref:System.BadImageFormatException>, ausgelöst. Um mit diesem Szenario zu arbeiten, verschieben Sie den Dienstknoten in ein C++-Modul, und schreiben Sie dann das Installationsprogrammobjekt in C# oder Visual Basic.
 
 ## <a name="examples"></a>Beispiele
 

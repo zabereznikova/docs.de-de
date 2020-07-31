@@ -1,15 +1,16 @@
 ---
 title: 'Gewusst wie: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck – C#-Programmierhandbuch'
+description: Verwenden Sie implizit typisierte lokale Variablen in C#, damit der Compiler den Typ einer lokalen Variablen bestimmt. Sie müssen sie verwenden, um anonyme Typen zu speichern.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: f4ff71fc4dc1a0b2affa1f032ab1d3d6bb04d297
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b69c646aa878166cca3adc1a568ce16454fb7574
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705560"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864331"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Gewusst wie: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck (C#-Programmierhandbuch)
 Sie können implizit typisierte lokale Variablen immer dann verwenden, wenn Sie möchten, dass der Compiler den Typ einer lokalen Variablen bestimmt. Sie müssen implizit typisierte lokale Variablen verwenden, um anonyme Typen zu speichern, die häufig in Abfrageausdrücken verwendet werden. In den folgenden Beispielen werden sowohl optionale als auch erforderliche Einsatzmöglichkeiten von implizit typisierte lokale Variablen in einer Abfrage veranschaulicht.  
@@ -26,7 +27,7 @@ Sie können implizit typisierte lokale Variablen immer dann verwenden, wenn Sie 
   
  [!code-csharp[csProgGuideLINQ#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#33)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Erweiterungsmethoden](./extension-methods.md)

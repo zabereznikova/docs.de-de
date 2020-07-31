@@ -1,17 +1,18 @@
 ---
 title: Änderungen der Runtime und Neuausrichtung in .NET Framework
+description: Hier erfahren Sie mehr über die Anwendungskompatibilität in .NET Framework und die Auswirkungen auf die Laufzeit und Neuzuweisungen von Änderungen bei der Migration zu einer anderen Version.
 ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26f36dd34c6c5ecae8fc5ab373ff60d9e56f8245
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73196696"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475488"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität in .NET Framework
 
@@ -62,7 +63,7 @@ Eine Änderung, die nur Apps in sehr spezifischen Szenarien beeinflusst, die nic
 **Transparent**\
 Eine Änderung, die keine nennenswerten Auswirkungen hat, die Entwickler oder Benutzer beachten müssten. Die App sollte keine Änderung benötigen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Versionen und Abhängigkeiten](versions-and-dependencies.md)
 - [Neuigkeiten](../whats-new/index.md)

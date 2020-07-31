@@ -1,13 +1,14 @@
 ---
 title: Debuggen von Ausdrucksbäumen in Visual Studio (C#)
+description: Hier erhalten Sie Informationen zur DebugView-Eigenschaft in Visual Studio. Sie erfahren, wie Sie diese Eigenschaft verwenden, um die Struktur und den Inhalt einer Ausdrucksbaumstruktur zu analysieren.
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 4c522f2c24cff037ff33d400c8bdfa7500fd4c32
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5d62a5e6fa5ce537a1ea8b316e7322eb976200c0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614374"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105646"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debuggen von Ausdrucksbäumen in Visual Studio (C#)
 Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um eine Übersicht über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die Ausdrucksbaumstrukturen mit einer [speziellen Syntax](debugview-syntax.md) darstellt. (Beachten Sie, dass `DebugView` nur im Debugmodus verfügbar ist.)  

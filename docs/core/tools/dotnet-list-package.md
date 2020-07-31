@@ -2,12 +2,12 @@
 title: Befehl „dotnet list package“
 description: Der Befehl „dotnet list package“ bietet eine praktische Option zum Listen von Pakettverweisen auf ein Projekt oder eine Projektmappe.
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463662"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164755"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463662"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -78,6 +79,10 @@ Die zu verwendende Projekt- oder Projektmappendatei. Wenn keine angegeben ist, s
 
   Die bei der Suche nach neueren Paketen zu verwendenden NuGet-Quellen. Hierfür ist die Option `--outdated` erforderlich.
 
+- **`--deprecated`**
+
+  Hiermit werden die Pakete angezeigt, die veraltet sind.
+
 - **`--framework <FRAMEWORK>`**
 
   Zeigt nur die Pakete an, die für das angegebene [Zielframework](../../standard/frameworks.md) gelten. Um mehrere Frameworks anzugeben, wiederholen Sie die Option mehrmals. Beispiel: `--framework netcoreapp2.2 --framework netstandard2.0`.
@@ -88,15 +93,15 @@ Die zu verwendende Projekt- oder Projektmappendatei. Wenn keine angegeben ist, s
 
 - **`--highest-minor`**
 
-  Hiermit werden bei der Suche nach neueren Paketen nur die Pakete mit übereinstimmender Hauptversionsnummer berücksichtigt. Hierfür ist die Option `--outdated` erforderlich.
+  Hiermit werden bei der Suche nach neueren Paketen nur die Pakete mit übereinstimmender Hauptversionsnummer berücksichtigt. Hierfür ist die Option `--outdated` oder `--deprecated` erforderlich.
 
 - **`--highest-patch`**
 
-  Hiermit werden bei der Suche nach neueren Paketen nur die Pakete mit übereinstimmender Haupt- und Nebenversionsnummer berücksichtigt. Hierfür ist die Option `--outdated` erforderlich.
+  Hiermit werden bei der Suche nach neueren Paketen nur die Pakete mit übereinstimmender Haupt- und Nebenversionsnummer berücksichtigt. Hierfür ist die Option `--outdated` oder `--deprecated` erforderlich.
 
 - **`--include-prerelease`**
 
-  Hiermit werden bei der Suche nach neueren Pakete auch Pakete mit Vorabversionen berücksichtigt. Hierfür ist die Option `--outdated` erforderlich.
+  Hiermit werden bei der Suche nach neueren Pakete auch Pakete mit Vorabversionen berücksichtigt. Hierfür ist die Option `--outdated` oder `--deprecated` erforderlich.
 
 - **`--include-transitive`**
 
@@ -112,7 +117,7 @@ Die zu verwendende Projekt- oder Projektmappendatei. Wenn keine angegeben ist, s
 
 - **`-s|--source <SOURCE>`**
 
-  Die bei der Suche nach neueren Paketen zu verwendenden NuGet-Quellen. Hierfür ist die Option `--outdated` erforderlich.
+  Die bei der Suche nach neueren Paketen zu verwendenden NuGet-Quellen. Hierfür ist die Option `--outdated` oder `--deprecated` erforderlich.
 
 ## <a name="examples"></a>Beispiele
 

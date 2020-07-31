@@ -1,13 +1,14 @@
 ---
 title: Aktivieren einer Datenquelle für LINQ-Abfragen
+description: In diesem Artikel erfahren Sie, wie Sie LINQ für eine Abfrage im LINQ-Muster in C# erweitern, mit dem Clients die Abfrage von Datenquellen erleichtert wird.
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 9a143f0da74d4e91ef697f468d7fda225e75245b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3a03aa3c67ef80507de4607e21eee4d247d622d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635768"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103935"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Aktivieren einer Datenquelle für LINQ-Abfragen
 Es gibt verschiedene Möglichkeiten, LINQ zu erweitern, um die Abfrage einer beliebigen Datenquelle im LINQ-Muster zu ermöglichen. Bei der Datenquelle kann es sich u. a. um eine Datenstruktur, einen Webdienst, ein Dateisystem oder eine Datenbank handeln. Das LINQ-Muster erleichtert Clients das Ausführen von Abfragen für eine Datenquelle mit aktivierter LINQ-Abfrage, da die Syntax und das Muster der Abfrage unverändert bleiben. LINQ kann u.a. auf folgende Weisen für die Verwendung dieser Datenquellen erweitert werden:  
@@ -39,10 +40,10 @@ Es gibt verschiedene Möglichkeiten, LINQ zu erweitern, um die Abfrage einer bel
   
  Ein komplexer `IQueryable`-Anbieter, wie z. B. der [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Anbieter, kann möglicherweise vollständige LINQ-Abfragen in eine ausdrucksbasierte Abfragesprache wie SQL übersetzen. Ein komplexer Anbieter arbeitet universeller als ein weniger komplexer Anbieter, da er eine größere Bandbreite von Fragen in der Abfrage verarbeiten kann. Außerdem verfügt er über ein offenes Typsystem und benötigt daher eine umfassende Infrastruktur für die Zuordnung benutzerdefinierter Typen. Die Entwicklung eines komplexen Anbieters ist ziemlich arbeitsaufwändig.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - <xref:System.Linq.Enumerable>
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [LINQ to Objects (C#)](./linq-to-objects.md)

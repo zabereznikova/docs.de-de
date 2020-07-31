@@ -1,13 +1,14 @@
 ---
 title: LINQ to ADO.NET (Portalseite)
+description: Mit LINQ to ADO.NET können Sie in ADO.NET mithilfe des Programmiermodells von LINQ jedes aufzählbare Objekt abfragen. Hier erfahren Sie mehr über die drei LINQ-Technologien in ADO.NET.
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 84412e43a9d6b1e256e4ac8306a94126a3eaaaf4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b09e678d29d27de5758cf5a5fcacd7391342792
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635547"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165756"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Portalseite)
 Mit LINQ to ADO.NET können Sie in ADO.NET mithilfe des LINQ-Programmiermodells (Language Integrated Query) jedes aufzählbare Objekt abfragen.  

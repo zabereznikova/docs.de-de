@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (C#)'
+description: In diesem Artikel erfahren Sie, wie Sie ein in C# codiertes XML-Dokument erstellen, indem Sie eine XDeclaration zum XML-Baum hinzufügen und die Codierung auf den gewünschten Codeseitennamen festlegen.
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed02b7467f4de71455da516a6c894070337684e7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347664"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104316"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (C#)
 Fügen Sie zum Erstellen eines codierten XML-Dokuments der XML-Struktur eine <xref:System.Xml.Linq.XDeclaration> hinzu, die die Codierung auf den gewünschten Codeseitennamen festlegt.  
@@ -76,6 +77,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>

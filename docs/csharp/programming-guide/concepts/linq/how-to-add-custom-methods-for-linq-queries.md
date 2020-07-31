@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (C#)'
+description: Hier erfahren Sie mehr über die Erweiterung der Methoden, die Sie durch Hinzufügen von Erweiterungsmethoden zur IEnumerable<T>-Schnittstelle in C# verwenden können.
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: e3f8ba8810d06a2e79093e6022ad6e79f3599468
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fac0eb4e14eb3bb36313232a7d7fa3060c0ac171
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447029"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103597"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (C#)
 
@@ -216,7 +217,7 @@ foreach (var element in query)
 */
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Erweiterungsmethoden](../../classes-and-structs/extension-methods.md)

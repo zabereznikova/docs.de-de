@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)'
+description: In diesem Beispiel wird LINQ verwendet, um eine ArrayList in C# abzufragen. Sie müssen den Typ der Bereichsvariablen deklarieren, damit der Typ der Objekte in der Sammlung widergespiegelt wird.
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: fa185ba3793b628b0d65e1f513a70ec68f6f2425
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c251e17de062a4578f06fc1a40ea3ede9f3ab67
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168933"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104600"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)
 Bei Verwendung von LINQ zum Abfragen nicht generischer <xref:System.Collections.IEnumerable>-Auflistungen wie z.B. <xref:System.Collections.ArrayList> müssen Sie den Typ der Bereichsvariablen entsprechend dem spezifischen Typ der Objekte in der Auflistung explizit deklarieren. Wenn Sie zum Beispiel eine <xref:System.Collections.ArrayList> mit `Student`-Objekten haben, sollte die [from-Klausel](../../../language-reference/keywords/from-clause.md) wie folgt aussehen:  
@@ -83,6 +84,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)

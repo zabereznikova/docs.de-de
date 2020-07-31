@@ -1,5 +1,6 @@
 ---
 title: Versionskompatibilität im .NET Framework
+description: Informationen zur Kompatibilität zwischen verschiedenen Versionen des .NET Framework, einschließlich Abwärtskompatibilität und paralleler Ausführung
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796001"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475501"
 ---
 # <a name="version-compatibility"></a>Versionskompatibilität
 
@@ -22,7 +23,7 @@ Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Pl
 
 Standardmäßig wird eine App in der Version des .NET Framework ausgeführt, für die sie erstellt wurde. Wenn diese Version nicht vorhanden ist und die App-Konfigurationsdatei keine unterstützten Versionen definiert, tritt möglicherweise ein .NET Framework-Initialisierungsfehler auf. In diesem Fall schlägt der Versuch fehl, die App auszuführen.
 
-Fügen Sie der Konfigurationsdatei der App ein oder mehrere [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Elemente hinzu, um die Versionen zu definieren, in denen die App ausgeführt werden kann. Jedes `<supportedRuntime>`-Element führt eine unterstützte Version der Laufzeit auf. Dabei gibt das erste Element die bevorzugte Version der Laufzeit an und das letzte die am wenigsten bevorzugte Version.
+Fügen Sie der Konfigurationsdatei der App mindestens ein [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element hinzu, um die Versionen zu definieren, in denen die App ausgeführt werden kann. Jedes `<supportedRuntime>`-Element führt eine unterstützte Version der Laufzeit auf. Dabei gibt das erste Element die bevorzugte Version der Laufzeit an und das letzte die am wenigsten bevorzugte Version.
 
 ```xml
 <configuration>
@@ -59,7 +60,7 @@ Wenn Ihre App oder Komponente nicht wie erwartet in .NET Framework 4.5 (einschli
 
 - Wenn Sie vorhandenen Quellcode neu kompilieren, sodass er in .NET Framework 4.5 oder den zugehörigen Releases ausgeführt werden kann, oder wenn Sie eine neue Version einer App oder einer Komponente entwickeln, die basierend auf vorhandenem Quellcode auf .NET Framework 4.5 oder die zugehörigen Releases ausgerichtet ist, überprüfen Sie [Veraltete Elemente in der Klassenbibliothek](../whats-new/whats-obsolete.md) auf veraltete Typen und Member, und wenden Sie die beschriebene Problemumgehung an. (Bereits kompilierter Code wird weiterhin mit Typen und Membern ausgeführt, die als veraltet markiert wurden.)
 
-- Wenn Sie feststellen, dass eine Änderung in .NET Framework 4.5 das ordnungsgemäße Funktionieren der App verhindert hat, überprüfen Sie im [Schema für Runtimeeinstellungen](../configure-apps/file-schema/runtime/index.md) und insbesondere die Einstellung [\<AppContextSwitchOverrides> Element](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), ob Sie eine Runtimeeinstellung in der App-Konfigurationsdatei verwenden können, um das vorherige Verhalten wiederherzustellen.
+- Wenn Sie feststellen, dass eine Änderung in .NET Framework 4.5 verhindert, dass die App ordnungsgemäß funktioniert, überprüfen Sie im [Schema für Runtimeeinstellungen](../configure-apps/file-schema/runtime/index.md) und insbesondere für das [Element \<AppContextSwitchOverrides>](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), ob Sie eine Runtimeeinstellung in der App-Konfigurationsdatei verwenden können, um das vorherige Verhalten wiederherzustellen.
 
 - Wenn Sie auf ein Problem stoßen, das noch nicht dokumentiert ist, öffnen Sie ein Ticket auf der [Website für die .NET-Entwickler-Community](https://developercommunity.visualstudio.com/spaces/61/index.html) oder im [Microsoft/dotnet GitHub-Repository](https://github.com/microsoft/dotnet/issues).
 

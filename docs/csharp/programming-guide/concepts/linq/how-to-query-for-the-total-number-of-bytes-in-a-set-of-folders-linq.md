@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Abfragen der Gesamtzahl an Bytes in einem Ordnersatz (LINQ) (C#)'
+description: Hier erfahren Sie, wie Sie mit LINQ in C# die Gesamtanzahl von Bytes abrufen, die von allen Dateien in einem angegebenen Ordner und dessen Unterordnern verwendet werden.
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: c6bfe6bb6d76e7ce8ea8887eef85cd64f2a025df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 964d92a55599d60388f7add937c7f7338f697817
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344815"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104286"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Vorgehensweise: Abfragen der Gesamtzahl an Bytes in einem Ordnersatz (LINQ) (C#)
 Dieses Beispiel zeigt, wie die Gesamtanzahl der Bytes, die von allen Dateien in einem angegebenen Ordner und allen Unterordnern verwendet werden, abgerufen wird.  
@@ -76,7 +77,7 @@ class QuerySize
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
 Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)
+- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)

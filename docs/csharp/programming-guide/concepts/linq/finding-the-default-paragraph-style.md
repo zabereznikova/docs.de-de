@@ -1,20 +1,21 @@
 ---
 title: Suchen der standardmäßigen Absatzformatvorlage (C#)
+description: Hier erfahren Sie, wie Sie ein WordprocessingML-Dokument mit LINQ in C# verarbeiten. Mit diesem Beispiel finden Sie den Standardstil von Absätzen im Dokument.
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 8cc1f1b9df208b0b180e5fe4a50922b5ee46b480
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e18bbbdbd5b2627c9ff4c3c3eedd84d7cb166a62
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169531"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103820"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Suchen der standardmäßigen Absatzformatvorlage (C#)
 Die erste Aufgabe im Tutorial „Bearbeiten des Inhalts eines WordprocessingML-Dokuments“ besteht darin, die Standardabsatzformatvorlage im Dokument zu ermitteln.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
  Das folgende Beispiel öffnet ein Office Open XML-WordprocessingML-Dokument, bestimmt den Dokument- und den Formatvorlagenteil des Pakets und führt dann eine Abfrage aus, um den Namen der Standardformatvorlage zu ermitteln. Informationen zu Office Open-XML-Dokumentpaketen und deren Bestandteilen finden Sie unter [Details of Office Open XML WordprocessingML Documents (C#) (Details eines Office Open-XML-WordprocessingML-Dokuments (C#))](./wordprocessingml-document-with-styles.md).  
   
  Die Abfrage sucht nach einem Knoten mit dem Namen `w:style`, der ein `w:type`-Attribut mit dem Wert "paragraph" und ein `w:default`-Attribut mit dem Wert "1" besitzt. Da es nur einen XML-Knoten mit diesen Attributen gibt, verwendet die Abfrage den <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType>-Operator, um eine Auflistung in ein Singleton umzuwandeln. Dann ruft die Abfrage den Wert des Attributs mit dem Namen `w:styleId` ab.  

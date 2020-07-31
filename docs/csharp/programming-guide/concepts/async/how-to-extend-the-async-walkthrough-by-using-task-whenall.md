@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)'
+description: Hier erfahren Sie, wie Sie die Leistung der asynchronen Projektmappe in C# mithilfe von Task.WhenAll verbessern können. Diese Methode wartet asynchron auf mehrere asynchrone Vorgänge.
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 275f4aeca854f8938642dbea40bf7fd9dc5362d9
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73970025"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925214"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)
 
@@ -18,13 +19,13 @@ Sie haben möglicherweise in der exemplarischen Vorgehensweise bemerkt, dass die
 Sie wenden die `Task.WhenAll`-Methode auf eine Aufgabenauflistung an. Die Anwendung von `WhenAll` gibt eine einzelne Aufgabe zurück, die nicht abgeschlossen ist, bevor jede Aufgabe in der Auflistung abgeschlossen ist. Die Aufgaben scheinen parallel ausgeführt zu werden, es werden jedoch keine weiteren Threads erstellt. Die Aufgaben können in jeder Reihenfolge abschließen.
 
 > [!IMPORTANT]
-> Die folgenden Prozeduren beschreiben Erweiterungen zu asynchronen Anwendungen, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt werden. Sie können die Anwendungen entwickeln, indem Sie entweder die exemplarische Vorgehensweise durcharbeiten oder den Code von [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) herunterladen.
+> Die folgenden Prozeduren beschreiben Erweiterungen zu asynchronen Anwendungen, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt werden. Sie können die Anwendungen entwickeln, indem Sie entweder die exemplarische Vorgehensweise durcharbeiten oder den Code von [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) herunterladen.
 >
 > Für die Ausführung des Beispiels muss Visual Studio 2012 oder höher auf dem Computer installiert sein.
 
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>So fügen Sie der GetURLContentsAsync-Lösung Task.WhenAll hinzu
 
-1. Fügen Sie die `ProcessURLAsync`-Methode der ersten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt wurde.
+1. Fügen Sie die `ProcessURLAsync`-Methode der ersten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt werden.
 
     - Wenn Sie die [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) heruntergeladen haben, öffnen Sie das „AsyncWalkthrough“-Projekt, und fügen Sie dann `ProcessURLAsync` der Datei „MainWindow.xaml.cs“ hinzu.
 
@@ -96,7 +97,7 @@ Sie wenden die `Task.WhenAll`-Methode auf eine Aufgabenauflistung an. Die Anwend
 
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>So fügen Sie der HttpClient.GetByteArrayAsync-Lösung Task.WhenAll hinzu
 
-1. Fügen Sie die folgende Version von `ProcessURLAsync` der zweiten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt wurde.
+1. Fügen Sie die folgende Version von `ProcessURLAsync` der zweiten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt werden.
 
     - Wenn Sie den Code von [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) heruntergeladen haben, öffnen Sie das „AsyncWalkthrough_HttpClient“-Projekt und fügen dann `ProcessURLAsync` entweder der „MainWindow.xaml.cs“-Datei hinzu.
 
@@ -171,7 +172,7 @@ Sie wenden die `Task.WhenAll`-Methode auf eine Aufgabenauflistung an. Die Anwend
 
 ### <a name="to-test-the-taskwhenall-solutions"></a>So testen Sie die Task.WhenAll-Lösungen
 
-- Drücken Sie in beiden Projektmappen F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten**. Die Ausgabe sollte in etwa der Ausgabe der async-Lösungen in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) entsprechen. Beachten Sie jedoch, dass die Websites in einer jeweils anderen Reihenfolge angezeigt werden.
+- Drücken Sie in beiden Projektmappen F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten**. Die Ausgabe sollte der Ausgabe der asynchronen Projektmappen in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) entsprechen. Beachten Sie jedoch, dass die Websites in einer jeweils anderen Reihenfolge angezeigt werden.
 
 ## <a name="example"></a>Beispiel
 
@@ -437,7 +438,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)

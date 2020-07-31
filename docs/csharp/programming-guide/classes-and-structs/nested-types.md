@@ -1,15 +1,16 @@
 ---
 title: Geschachtelte Typen – C#-Programmierhandbuch
+description: Ein innerhalb einer Klasse, Struktur oder Schnittstelle definierter Typ wird in C# als geschachtelter Typ bezeichnet.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 12e44ccc1254424c152a238c8390f133550fa54c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e1c6c1e8b22b5447d43915ab02984aa13146301
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626489"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864942"
 ---
 # <a name="nested-types-c-programming-guide"></a>Geschachtelte Typen (C#-Programmierhandbuch)
 

@@ -1,16 +1,17 @@
 ---
 title: Objekt- und Auflistungsinitialisierer – C#-Programmierhandbuch
+description: Objektinitialisierer in C# weisen bei der Erstellung verfügbaren Feldern oder Eigenschaften eines Objekts Werte zu, nachdem ein Konstruktor aufgerufen wurde.
 ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: ae8741e2f29db0a470ad8d3b121375fbdeaff0d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81deed8a21bff10364524c3e0784c562d4e727e6
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170194"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864773"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Objekt- und Auflistungsinitialisierer (C#-Programmierhandbuch)
 
@@ -122,7 +123,7 @@ Im folgenden Beispiel wird ein Objekt veranschaulicht, das <xref:System.Collecti
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [LINQ in C#](../../linq/index.md)

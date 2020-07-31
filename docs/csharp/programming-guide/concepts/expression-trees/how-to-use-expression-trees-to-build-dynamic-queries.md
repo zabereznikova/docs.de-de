@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (C#)'
+description: Hier erfahren Sie, wie Sie Ausdrucksbaumstrukturen verwenden können, um dynamische LINQ-Abfragen zu erstellen. Diese Abfragen sind nützlich, wenn die Eigenschaften einer Abfrage zur Kompilierzeit unbekannt sind.
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edcef4068c19ba8e789683cf6ba4d5ef2477e0d8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635898"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105597"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (C#)
 Ausdrucksbaumstrukturen werden in LINQ dazu verwendet, strukturierte Abfragen für Datenquellen zu repräsentieren, die <xref:System.Linq.IQueryable%601> implementieren. Der LINQ-Anbieter implementiert z.B. die <xref:System.Linq.IQueryable%601>-Schnittstelle, um relationale Datenspeicher abzufragen. Die Compiler für C# kompilieren Abfragen solcher Datenquellen in Code, der zur Laufzeit eine Ausdrucksbaumstruktur erzeugt. Anschließend kann der Abfrageanbieter die Datenstruktur der Ausdrucksbaumstruktur durchlaufen und in eine für die Datenquelle geeignete Abfragesprache übersetzen.  
@@ -105,7 +106,7 @@ foreach (string company in results)
   
 - Binden Sie den System.Linq.Expressions-Namespace ein.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Ausdrucksbaumstrukturen (C#)](./index.md)
 - [Ausführen von Ausdrucksbaumstrukturen (C#)](./how-to-execute-expression-trees.md)

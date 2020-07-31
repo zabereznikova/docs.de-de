@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Neuordnen der Felder einer Datei mit Trennzeichen (LINQ) (C#)'
+description: Informationen zum Neuordnen von Feldern in einer CSV-Datei in LINQ in C# Im Beispiel werden die Reihenfolgen von Spalten geändert, Spalten zusammengeführt und Zeilen nach Spaltenwert sortiert.
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ebc56b418d2732a296896a19d770136a56e2fbb
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347657"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103414"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Vorgehensweise: Neuordnen der Felder einer Datei mit Trennzeichen (LINQ) (C#)
 Eine Datei mit kommagetrennten Werten (CSV) ist eine Textdatei, die häufig verwendet wird, um Tabellenkalkulationsdaten oder andere Tabellendaten zu speichern, die durch Zeilen und Spalten dargestellt werden. Mithilfe der Methode <xref:System.String.Split%2A> zum Trennen von Feldern ist es sehr einfach, CSV-Dateien mithilfe von LINQ abzufragen und zu bearbeiten. Tatsächlich kann das gleiche Verfahren verwendet werden, um die Teile von beliebigen strukturierten Textzeilen neu anzuordnen. Es ist nicht auf CSV-Dateien beschränkt.  
@@ -78,8 +79,8 @@ class CSVFiles
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
 Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)
-- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)
+- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)
+- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)
 - [Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)](./how-to-generate-xml-from-csv-files.md)

@@ -1,13 +1,14 @@
 ---
 title: Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)
+description: Verwenden Sie diese Beispiele, um eine Schaltfläche hinzuzufügen, die das Ausführen einer asynchronen Anwendung vor dem Abschluss abbricht. Diese C#-Anwendung lädt den Inhalt einer oder mehrerer Websites herunter.
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bdbc3bc7c3b752fab160429d71356fb87d9976
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595717"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925345"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Abbrechen einer asynchronen Aufgabe oder Aufgabenliste (C#)
 
@@ -22,15 +23,15 @@ In den Beispielen wird die Benutzeroberfläche verwendet, die in [Feinabstimmung
 
 Im ersten Beispiel wird die Schaltfläche **Abbrechen** einer Aufgabe mit einem einzigen Download zugeordnet. Wenn Sie die Schaltfläche auswählen, während die Anwendung Inhalt herunterlädt, wird der Download abgebrochen.
 
-### <a name="download-the-example"></a>Das Beispiel herunterladen
+### <a name="download-the-example"></a>Herunterladen des Beispiels
 
-Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.
+Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.
 
 1. Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.
 
 2. Wählen Sie auf der Menüleiste **Datei** > **Öffnen** > **Projekt/Projektmappe** aus.
 
-3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS oder AsyncFineTuningVB.
+3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS.
 
 4. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das **CancelATask**-Projekt, und wählen Sie dann **Als Startprojekt festlegen** aus.
 
@@ -142,19 +143,19 @@ Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von 
 
 Sie können das vorherige Beispiel so erweitern, dass viele Aufgaben abgebrochen werden, indem Sie jeder Aufgabe die gleiche `CancellationTokenSource`-Instanz zuordnen. Wenn Sie die Schaltfläche **Abbrechen** auswählen, brechen Sie alle Aufgaben ab, die noch nicht abgeschlossen sind.
 
-### <a name="download-the-example"></a>Das Beispiel herunterladen
+### <a name="download-the-example"></a>Herunterladen des Beispiels
 
-Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.
+Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.
 
 1. Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.
 
 2. Wählen Sie auf der Menüleiste **Datei** > **Öffnen** > **Projekt/Projektmappe** aus.
 
-3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS oder AsyncFineTuningVB.
+3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS.
 
 4. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das **CancelAListOfTasks**-Projekt, und wählen Sie dann **Als Startprojekt festlegen** aus.
 
-5. Drücken Sie die **F5**-Taste, um das Projekt auszuführen.
+5. Drücken Sie die Taste **F5**, um das Projekt auszuführen.
 
      Drücken Sie die Tasten **STRG**+**F5**, um das Projekt auszuführen, ohne es zu debuggen.
 
@@ -258,7 +259,7 @@ Um das Beispiel selbst zu erweitern, befolgen Sie Schritt für Schritt die Anwei
 
 Die folgenden Abschnitte enthalten den Code für jedes der vorherigen Beispiele. Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.
 
-Sie können die Projekte von [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.
+Sie können die Projekte hier herunterladen: [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.
 
 ### <a name="example---cancel-a-task"></a>Beispiel: Abbrechen einer Aufgabe
 
@@ -517,10 +518,10 @@ namespace CancelAListOfTasks
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](./index.md)
 - [Feinabstimmung der Async-Anwendung (C#)](./fine-tuning-your-async-application.md)
-- [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)

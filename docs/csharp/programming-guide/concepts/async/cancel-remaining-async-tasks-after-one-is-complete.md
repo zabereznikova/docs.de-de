@@ -1,13 +1,14 @@
 ---
 title: Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)
+description: Verwenden Sie die Task.WhenAny-Methode in diesem Beispiel zusammen mit einem CancellationToken in C#, um alle verbleibenden Aufgaben abzubrechen, sobald eine Aufgabe abgeschlossen wurde.
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: e829254c1cd47da16b14aa9c2c90312a97b4b581
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6de60c8faa93752961e3703a042885a71972cc4a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169973"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925279"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)
 Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>-Methode zusammen mit einem <xref:System.Threading.CancellationToken> können Sie alle verbleibenden Aufgaben abbrechen, wenn eine Aufgabe abgeschlossen wurde. Die `WhenAny`-Methode akzeptiert ein Argument, das eine Auflistung von Aufgaben ist. Die Methode startet alle Aufgaben und gibt eine einzelne Aufgabe zurück. Die einzelne Aufgabe ist abgeschlossen, wenn eine beliebige Aufgabe in der Auflistung abgeschlossen ist.  
@@ -18,13 +19,13 @@ Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithTyp
 > Zum Ausführen der Beispiele müssen Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf dem Computer installiert sein.  
   
 ## <a name="downloading-the-example"></a>Herunterladen des Beispiels  
- Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.  
+ Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.  
   
 1. Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
 2. Klicken Sie in der Menüleiste auf **Datei**, dann auf **Öffnen**und **Projekt/Projektmappe**.  
   
-3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS oder AsyncFineTuningVB.  
+3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS.  
   
 4. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das **CancelAfterOneTask**-Projekt, und wählen Sie dann **Als Startprojekt festlegen** aus.  
   
@@ -34,7 +35,7 @@ Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithTyp
   
 6. Führen Sie das Programm mehrmals aus, um zu überprüfen, dass unterschiedliche Downloads als erste beendet werden.  
   
- Wenn Sie das Projekt nicht herunterladen möchten, können Sie die Datei „MainWindow.xaml.cs“ am Ende dieses Themas überprüfen.  
+ Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich die Dateien „MainWindow.xaml.vb“ und „MainWindow.xaml.cs“ am Ende dieses Themas anschauen.  
   
 ## <a name="building-the-example"></a>Erstellen des Beispiels  
  Das Beispiel in diesem Thema baut auf dem Projekt auf, das unter [Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)](./cancel-an-async-task-or-a-list-of-tasks.md) entwickelt wurde, um eine Aufgabenliste abzubrechen. Im Beispiel wird die gleiche UI verwendet, obwohl die Schaltfläche **Abbrechen** nicht explizit verwendet wird.  
@@ -107,7 +108,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.  
   
- Sie können das Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.  
+ Sie können das Projekt hier herunterladen: [Async Sample: Fine Tuning Your Application (Async-Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```csharp  
 using System;  
@@ -257,9 +258,9 @@ namespace CancelAfterOneTask
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Feinabstimmung der Async-Anwendung (C#)](./fine-tuning-your-async-application.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](./index.md)
-- [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)

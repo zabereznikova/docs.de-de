@@ -1,17 +1,18 @@
 ---
 title: Verwenden von Eigenschaften – C#-Programmierhandbuch
+description: Diese Beispiele veranschaulichen die Verwendung von Eigenschaften in C#. Hier erfahren Sie, wie die Zugriffsmethoden „get“ und „set“ Lese- und Schreibzugriff implementieren, und lernen Sie Verwendungsmöglichkeiten für Eigenschaften kennen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51ca0a37022c99bfbd9d61f2cc47f529d535e72a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77452018"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864656"
 ---
 # <a name="using-properties-c-programming-guide"></a>Verwenden von Eigenschaften (C#-Programmierhandbuch)
 
@@ -21,7 +22,7 @@ Im Gegensatz zu Feldern, werden Eigenschaften nicht als Variablen klassifiziert.
 
 Eigenschaften sind vielseitig verwendbar: Sie können Daten überprüfen, bevor sie eine Änderung zulassen. Sie können Daten in einer Klasse transparent verfügbar machen, in denen die Daten in Wirklichkeit von einer anderen Quelle abgerufen werden, z.B. einer Datenbank. Sie können eine Aktion ausführen, wenn Daten geändert werden, z.B. ein Ereignis auslösen, oder den Wert anderer Felder verändern.
 
-Eigenschaften werden im Klassenblock deklariert, indem die Zugriffsebene des Felds angegeben wird, gefolgt vom Typ der Eigenschaft, gefolgt vom Namen der Eigenschaft und gefolgt von einem Codeblock, der einen `get`-Accessor und/oder einen `set` Accessor deklariert. Beispiel:
+Eigenschaften werden im Klassenblock deklariert, indem die Zugriffsebene des Felds angegeben wird, gefolgt vom Typ der Eigenschaft, gefolgt vom Namen der Eigenschaft und gefolgt von einem Codeblock, der einen `get`-Accessor und/oder einen `set` Accessor deklariert. Zum Beispiel:
 
 [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]
 
@@ -35,7 +36,7 @@ Der Text des `get` Accessors ähnelt dem einer Methode. Er muss einen Wert des E
 
 [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]
 
-Wenn Sie auf die Eigenschaft, außer als Ziel einer Zuweisung, verweisen, wird der `get`-Accessor aufgerufen, um den Wert der Eigenschaft zu lesen. Beispiel:
+Wenn Sie auf die Eigenschaft, außer als Ziel einer Zuweisung, verweisen, wird der `get`-Accessor aufgerufen, um den Wert der Eigenschaft zu lesen. Zum Beispiel:
 
 [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]
 
@@ -45,7 +46,7 @@ Es ist ein unzulässiger Programmierstil den Zustand des Objekts mithilfe des `g
 
 [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]
 
-Der `get`-Accessor kann verwendet werden, um den Wert des Felds zurückzugeben, oder um den Wert des Felds zu berechnen und zurückgeben. Beispiel:
+Der `get`-Accessor kann verwendet werden, um den Wert des Felds zurückzugeben, oder um den Wert des Felds zu berechnen und zurückgeben. Zum Beispiel:
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
@@ -57,7 +58,7 @@ Der `set`-Accessor ähnelt einer Methode, deren Rückgabetyp [void](../../langua
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
-Wenn Sie der Eigenschaft einen Wert zuweisen, wird der `set`-Accessor mit einem Argument aufgerufen, das den neuen Wert bereitstellt. Beispiel:
+Wenn Sie der Eigenschaft einen Wert zuweisen, wird der `set`-Accessor mit einem Argument aufgerufen, das den neuen Wert bereitstellt. Zum Beispiel:
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 
@@ -106,7 +107,7 @@ In diesem Beispiel implementieren zwei Klassen `Cube` und `Square` eine abstrakt
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Eigenschaften](properties.md)

@@ -1,13 +1,14 @@
 ---
 title: Übersicht der LINQ to XML-Klassen (C#)
+description: In diesem Artikel werden die LINQ to XML-Klassen in C# im System.Xml.Linq-Namespace zusammengefasst, wobei jeweils eine kurze Beschreibung angezeigt wird.
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: 55be666fc0db0becb12ec8b525e7fc443536e1df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34508f86792cdc7589569b8f12584ffc4379a5fb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591887"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165432"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Übersicht der LINQ to XML-Klassen (C#)
 In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen im <xref:System.Xml.Linq>-Namespace sowie jeweils eine kurze Beschreibung.  
@@ -86,6 +87,6 @@ In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqlt
 ### <a name="xtext-class"></a>"XText"-Klasse  
  <xref:System.Xml.Linq.XText> stellt einen Textknoten dar. Diese Klasse muss in den meisten Fällen nicht verwendet werden. Sie wird hauptsächlich für gemischten Inhalt eingesetzt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Working with XML Namespaces (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)
+- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)

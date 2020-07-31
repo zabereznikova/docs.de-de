@@ -1,13 +1,14 @@
 ---
 title: Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)
+description: 'Hier erhalten Sie Informationen zu den Ausführungsmöglichkeiten des Standardabfrageoperators in C# für LINQ to Objects: direkt, zurückgestelltes Streaming und zurückgestelltes Nicht-Streaming.'
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd496e232de2c7ed10a8aaa7cec84f8136495cce
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69924294"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105505"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)
 Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit einer von zwei möglichen Arten ausgeführt: direkt oder zurückgestellt. Abfrageoperatoren, die die verzögerte Ausführung verwenden, können darüber hinaus in zwei Kategorien unterteilt werden: Streaming und Nicht-Streaming. Wenn Sie wissen, wie die einzelnen Abfrageoperatoren ausgeführt werden, erleichtert dies das Verständnis der Ergebnisse, die Sie von einer Abfrage erhalten. Dies ist insbesondere dann der Fall, wenn die Datenquelle geändert wird oder wenn Sie eine Abfrage auf Grundlage einer anderen Abfrage erstellen. In diesem Thema werden die Standardabfrageoperatoren gemäß ihrer Ausführungsarten klassifiziert.  
@@ -87,9 +88,9 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.Enumerable>
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)](./query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (C#)](./linq-to-objects.md)

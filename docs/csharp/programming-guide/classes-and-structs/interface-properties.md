@@ -1,16 +1,17 @@
 ---
 title: Schnittstelleneigenschaften – C#-Programmierhandbuch
+description: Eigenschaften können für eine Schnittstelle in C# deklariert werden. In diesem Beispiel wird eine Zugriffsmethode für Schnittstelleneigenschaften deklariert.
 ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 920381ae804a6a968bfd667171269377f3d7e448
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626619"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864968"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Schnittstelleneigenschaften (C#-Programmierhandbuch)
 
@@ -43,7 +44,7 @@ die Eigenschaft `Name` für die Schnittstelle `ICitizen`.
 
 **`210 Hazem Abolrous`**
 
-## <a name="sample-output"></a>Beispielausgabe:
+## <a name="sample-output"></a>Beispielausgabe
 
 ```console
 Enter number of employees: 210
@@ -53,7 +54,7 @@ Employee number: 211
 Employee name: Hazem Abolrous
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Eigenschaften](./properties.md)

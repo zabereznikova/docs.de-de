@@ -1,13 +1,14 @@
 ---
 title: Ändern von Ausdrucksbaumstrukturen (C#)
+description: Hier erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern, indem Sie eine Kopie einer vorhandenen Ausdrucksbaumstruktur erstellen und die erforderlichen Änderungen vornehmen.
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45aea18e253811d4e5c60f23f7f8496d4358f64c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969900"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105610"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Ändern von Ausdrucksbaumstrukturen (C#)
 In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können. Ausdrucksbaumstrukturen sind unveränderlich, d.h. sie können nicht direkt modifiziert werden. Um eine Ausdrucksbaumstruktur zu verändern, müssen Sie eine Kopie eines vorhandenen Ausdrucksbaumstruktur erstellen und währenddessen die erforderlichen Änderungen vornehmen. Sie können die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse verwenden, um einen vorhandenen Ausdrucksbaum zu durchlaufen und jeden Knoten zu kopieren, der durchlaufen wird.  
@@ -70,7 +71,7 @@ In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können
   
 6. Kompilieren Sie die Anwendung, und führen Sie sie aus.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Ausführen von Ausdrucksbaumstrukturen (C#)](./how-to-execute-expression-trees.md)
 - [Ausdrucksbaumstrukturen (C#)](./index.md)

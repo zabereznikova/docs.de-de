@@ -2,15 +2,15 @@
 title: Breaking Changes in ASP.NET Core
 titleSuffix: ''
 description: Listet die Breaking Changes in ASP.NET Core auf.
-ms.date: 07/15/2020
+ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441946"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474825"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Breaking Changes in ASP.NET Core
 
@@ -60,6 +60,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [Kestrel: Standardmäßig unterstützte TLS-Protokollversionen geändert](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: Leere HTTPS-Assembly wurde entfernt](#kestrel-empty-https-assembly-removed)
 - [Kestrel: HTTP/2 wird bei inkompatiblen Windows-Versionen über TLS deaktiviert](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
+- [Kestrel: Markierung von libuv-Transport als veraltet](#kestrel-libuv-transport-marked-as-obsolete)
 - [Kestrel: Anforderungstrailer-Header wurden in neue Sammlung verschoben](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: Transportabstraktionsebene wurde geändert](#kestrel-transport-abstractions-removed-and-made-public)
 - [Lokalisierung: APIs wurden als veraltet markiert](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -137,6 +138,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 ***
 
 [!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
+
+***
+
+[!INCLUDE[Kestrel: Libuv transport marked as obsolete](~/includes/core-changes/aspnetcore/5.0/kestrel-libuv-transport-obsolete.md)]
 
 ***
 

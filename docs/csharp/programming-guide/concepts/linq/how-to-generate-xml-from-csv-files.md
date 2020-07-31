@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)'
+description: Informationen zur Verwendung von LINQ und LINQ to XML in C# für die Generierung von XML aus CSV-Dateien Die Abfrage verwendet eine let-Klausel, um Zeichenfolgen in Arrays von Feldern zu unterteilen.
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635807"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105170"
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)
 In diesem Beispiel wird gezeigt, wie Sie mit LINQ (Language Integrated Query) und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  

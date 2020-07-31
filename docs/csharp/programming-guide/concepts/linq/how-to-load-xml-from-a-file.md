@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Laden von XML aus einer Datei (C#)'
+description: Informationen zum Laden von XML aus einem URI mithilfe der XElement.Load-Methode in C# In diesem Beispiel wird die XML-Datei geladen und der XML-Baum auf der Konsole ausgegeben.
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: 635b338bbaf9c15779bccab4d4c824037858b338
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29de914139d1e9abcda2097addca9219d44d2696
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169051"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104957"
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Vorgehensweise: Laden von XML aus einer Datei (C#)
 In diesem Thema wird gezeigt, wie mit der <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>-Methode XML aus einem URI geladen werden kann.  

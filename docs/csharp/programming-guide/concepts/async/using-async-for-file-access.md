@@ -1,13 +1,14 @@
 ---
 title: Using Async for File Access (C#) (Verwenden von Async für Dateizugriff (C#))
+description: Informationen zur Verwendung des Async-Features für den Zugriff auf Dateien in C# Sie können asynchrone Methoden aufrufen, ohne Rückrufe verwenden oder den Code methodenübergreifend aufteilen zu müssen.
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: eb67bd408fe37b99e6c5ffdc2550e8f95110d7eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396959"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925123"
 ---
 # <a name="using-async-for-file-access-c"></a>Using Async for File Access (C#) (Verwenden von Async für Dateizugriff (C#))
 Sie können die Async-Funktion verwenden, um auf Dateien zuzugreifen. Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne Rückrufe zu verwenden oder den Code über mehrere Methoden oder Lambdaausdrücke teilen zu müssen. Um synchronen Code asynchron auszuführen, rufen Sie einfach eine asynchrone Methode anstelle einer synchronen Methode auf und fügen Sie dem Code einige Schlüsselwörter hinzu.  
@@ -78,7 +79,7 @@ await theTask;
  Die erste Anweisung gibt eine Aufgabe zurück und löst die Dateiverarbeitung aus. Die zweite await-Anweisung führt dazu, dass die Methode sofort beendet wird und eine andere Aufgabe zurückgibt. Wenn die Dateiverarbeitung später abgeschlossen wird, wird die Ausführung bei der Anweisung fortgesetzt, die auf die „await“-Anweisung folgt. Weitere Informationen finden Sie unter [Ablaufsteuerung in asynchronen Programmen (C#)](./control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Lesen von Text  
- Im folgenden Beispiel wird Text aus einer Datei gelesen. Der Text wird gepuffert und in diesem Fall in <xref:System.Text.StringBuilder> abgelegt. Anders als im vorherigen Beispiel generiert die Auswertung von „await“ einen Wert. Die Methode <xref:System.IO.Stream.ReadAsync%2A> gibt ein <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>> zurück, sodass die Auswertung von await einen `Int32`-Wert (`numRead`) erzeugt, nachdem der Vorgang abgeschlossen ist. Weitere Informationen finden Sie unter [Async Return Types (C#) (Asynchrone Rückgabetypen (C#))](./async-return-types.md).  
+ Im folgenden Beispiel wird Text aus einer Datei gelesen. Der Text wird gepuffert und in diesem Fall in <xref:System.Text.StringBuilder> abgelegt. Anders als im vorherigen Beispiel generiert die Auswertung von „await“ einen Wert. Die Methode <xref:System.IO.Stream.ReadAsync%2A> gibt ein <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>-Element zurück, sodass die Auswertung von „await“ einen `Int32`-Wert (`numRead`) erzeugt, nachdem der Vorgang abgeschlossen wurde. Weitere Informationen finden Sie unter [Async Return Types (C#) (Asynchrone Rückgabetypen (C#))](./async-return-types.md).  
   
 ```csharp  
 public async Task ProcessReadAsync()  

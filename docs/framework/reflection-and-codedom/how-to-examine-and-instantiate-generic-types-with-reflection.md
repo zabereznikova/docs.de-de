@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion'
+description: Hier erfahren Sie, wie Sie generische Typen mit der Reflexion überprüfen und instanziieren. Verwenden Sie die Eigenschaften „IsGenericType“, „IsGenericParameter“ und „GenericParameterPosition“.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130134"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865098"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion
 Informationen zu generischen Typen können Sie genauso abrufen wie Informationen zu anderen Typen: indem Sie sich ein <xref:System.Type>-Objekt anschauen, das den generischen Typ darstellt. Der größte Unterschied besteht dabei darin, dass eine generischer Type eine Liste von <xref:System.Type>-Objekten hat, die dessen generischen Typparameter darstellen. Die erste Prozedur in diesem Abschnitt beschäftigt sich mit generischen Typen.  

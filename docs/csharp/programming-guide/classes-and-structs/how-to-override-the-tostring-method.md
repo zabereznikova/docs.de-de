@@ -1,16 +1,17 @@
 ---
 title: 'Gewusst wie: Überschreiben der ToString-Methode – C#-Programmierhandbuch'
+description: Hier erfahren Sie, wie Sie die ToString-Methode in C# überschreiben. Jede Klasse oder Struktur erbt ein Objekt und ruft „ToString“ ab. Dadurch wird eine Zeichenfolgendarstellung dieses Objekts zurückgegeben.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 7c7196df56821c134b31982d7956a75039e9f929
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65b34b485d4b90173a4c956dd0ebaaa590a0c7c9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705573"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865007"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Gewusst wie: Überschreiben der ToString-Methode (C#-Programmierhandbuch)
 
@@ -43,7 +44,7 @@ Außerkraftsetzen der `ToString`-Methode in Ihrer Klasse oder Struktur:
   
      [!code-csharp[csProgGuideInheritance#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#38)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IFormattable>
 - [C#-Programmierhandbuch](../index.md)

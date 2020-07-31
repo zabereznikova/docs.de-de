@@ -1,19 +1,20 @@
 ---
 title: 'Entschärfung: Neuer 64-Bit-JIT-Compiler'
+description: Informationen zum neuen 64-Bit-JIT-Compiler, der in .NET Framework 4.6 enthalten ist, sowie zu unerwartetem Verhalten oder Ausnahmen, die während der Kompilierung auftreten können.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: 883aaf032bde632b08f965d3450cfbea4feb8e65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f059cbdd3b2a66ac8a668b7b8a80d9ad1551fa64
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181256"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475228"
 ---
-# <a name="mitigation-new-64-bit-jit-compiler"></a>Entschärfung: Neuer 64-Bit-JIT-Compiler
+# <a name="mitigation-new-64-bit-jit-compiler"></a>Entschärfung: Der neue 64-Bit-JIT-Compiler
 Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für die Just-in-Time-Kompilierung. Diese Änderung wirkt sich nicht auf die Kompilierung mit dem 32-Bit-JIT-Compiler aus.  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>Unerwartetes Verhalten oder Ausnahmen  
@@ -67,7 +68,7 @@ Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für 
   
  Ferner können Sie uns über das Problem informieren, indem Sie einen Bug auf [Microsoft Connect](https://connect.microsoft.com/VisualStudio) melden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Anwendungskompatibilität](application-compatibility.md)
-- [\<useLegacyJit> Element](../configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [\<useLegacyJit>-Element](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

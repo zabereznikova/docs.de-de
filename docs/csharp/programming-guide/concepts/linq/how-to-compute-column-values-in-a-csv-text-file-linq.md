@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (C#)'
+description: In diesem Beispiel wird veranschaulicht, wie Sie mithilfe von LINQ in C# Aggregatberechnungen wie „Sum“, „Average“, „Min“ und „Max“ für die Spalten einer CSV-Datei ausführen.
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 458950d58b15dcd572329228d76d85881043e07a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169349"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105325"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Vorgehensweise: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (C#)
 In diesem Beispiel wird veranschaulicht, wie Sie Aggregatberechnungen wie „Sum“, „Average“, „Min“ und „Max“ für die Spalten einer CSV-Datei ausführen. Die hier gezeigten Beispielprinzipien können auf andere Typen von strukturiertem Text angewendet werden.  
@@ -161,7 +162,7 @@ class SumColumns
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)
-- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)
+- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)
+- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)

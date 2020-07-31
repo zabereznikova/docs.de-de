@@ -1,5 +1,6 @@
 ---
 title: Datentransformationen mit LINQ (C#)
+description: Informationen zur Verwendung von LINQ-Abfragen in C# für die Transformation von Daten Sie können mithilfe der SELECT-Klausel durch Sortieren und Gruppieren die Sequenz ändern und neue Typen erstellen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], data transformations
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: d20f5d826620ad8654ddf1e9471ecc894b2c0391
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408522"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104014"
 ---
 # <a name="data-transformations-with-linq-c"></a>Datentransformationen mit LINQ (C#)
 Bei Language Integrated Query (LINQ) geht es nicht nur um das Abrufen von Daten. Es ist auch ein leistungsstarkes Tool zur Datentransformation. Mithilfe einer LINQ-Abfrage können Sie eine Quellsequenz als Eingabe verwenden und sie auf viele Arten zum Erstellen einer neuen Ausgabesequenz ändern. Sie können die Sequenz selbst durch Sortieren und Gruppieren ändern, ohne die Elemente zu ändern. Aber das vielleicht leistungsstärkste Feature von LINQ-Abfragen ist die Fähigkeit, neue Typen zu erstellen. Dies erfolgt in der [select](../../../language-reference/keywords/select-clause.md)-Klausel. Sie können z. B. folgende Aufgaben ausführen:  

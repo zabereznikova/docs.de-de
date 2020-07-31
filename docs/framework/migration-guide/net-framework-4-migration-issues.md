@@ -1,16 +1,17 @@
 ---
 title: Migrationsprobleme in .NET Framework 4
+description: Informationen zu den Migrationsproblemen zwischen .NET Framework 3.5 Service Pack 1 und .NET Framework 4, einschließlich Korrekturen und Änderungen hinsichtlich der Einhaltung von Standards und der Sicherheit
 ms.date: 05/02/2017
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 8e83859733f021afbe074a7b4818b155d74efdff
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bbb9a3803986c922fd1ef04a87cd1e230fc3d623
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420460"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475280"
 ---
 # <a name="net-framework-4-migration-issues"></a>Migrationsprobleme in .NET Framework 4
 
@@ -126,7 +127,7 @@ Assembly: mscorlib (in „mscorlib.dll“)
 | ------- | ------------------------ | ------------------- |
 | **Pufferlänge** (nicht verwaltete API) | Um Arbeitsspeicher zu sparen, wurde die Funktionalität des `pBufferLengthOffset`-Parameters für die [ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)-Methode geändert und entspricht jetzt dem `pStringLengthOffset`-Parameter. Beide Parameter zeigen jetzt auf die Offsetposition der Länge der Zeichenfolge. Die Pufferlänge wurde aus der Darstellung der Zeichenfolgenklasse entfernt. | Entfernen Sie alle Abhängigkeiten von der Pufferlänge. |
 | **JIT-Debuggen** | Um die Registrierung für das Just-in-Time-Debuggen (JIT) zu vereinfachen, verwendet der .NET Framework-Debugger jetzt nur den AeDebug-Registrierungsschlüssel, der das JIT-Debuggingverhalten für nativen Code steuert. Diese Änderung hat folgende Auswirkungen:<br><br>\* Sie können keine zwei verschiedenen Debugger mehr für verwalteten und nativen Code registrieren.<br>\* Sie können den Debugger nicht mehr automatisch bei einem nicht interaktiven Prozess starten, aber Sie können Benutzer zu einem interaktiven Prozess auffordern.<br>\* Sie werden nicht mehr benachrichtigt, wenn der Debugger nicht gestartet werden kann oder kein registrierter Debugger vorhanden ist, der gestartet werden soll.<br>\* Automatisch gestartete Richtlinien, die von der Interaktivität der Anwendung abhängig sind, werden nicht mehr unterstützt. | Passen Sie Debuggingvorgänge nach Bedarf an. |
-| **Plattformaufruf** | Um die Leistung der Interoperabilität mit nicht verwaltetem Code zu verbessern, rufen falsche Aufrufkonventionen bei einem Plattformaufruf jetzt einen Fehler in der Anwendung hervor. In früheren Versionen behoben hat die Marshalling-Ebene diese Fehler im Stapel gelöst. | Beim Debuggen Ihrer Anwendungen in Microsoft Visual Studio werden Sie auf diese Fehler aufmerksam gemacht, damit Sie sie korrigieren können.<br><br>Bei nicht aktualisierbaren Binärdateien kann das [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)-Element in der Anwendungskonfigurationsdatei einschließen, damit aufrufende Fehler im Stapel wie in früheren Versionen gelöst werden können. Allerdings kann dies auf die Leistung Ihrer Anwendung auswirken. |
+| **Plattformaufruf** | Um die Leistung der Interoperabilität mit nicht verwaltetem Code zu verbessern, rufen falsche Aufrufkonventionen bei einem Plattformaufruf jetzt einen Fehler in der Anwendung hervor. In früheren Versionen behoben hat die Marshalling-Ebene diese Fehler im Stapel gelöst. | Beim Debuggen Ihrer Anwendungen in Microsoft Visual Studio werden Sie auf diese Fehler aufmerksam gemacht, damit Sie sie korrigieren können.<br><br>Bei nicht aktualisierbaren Binärdateien können Sie das Element [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) zur Anwendungskonfigurationsdatei hinzufügen, damit Fehler beim Aufrufen im Stapel wie in früheren Versionen gelöst werden können. Allerdings kann dies auf die Leistung Ihrer Anwendung auswirken. |
 | **Entfernte Schnittstellen** (nicht verwaltete API) | Um Verwirrung bei den Entwicklern zu vermeiden, wurden die folgenden Schnittstellen entfernt, da sie keine nützlichen Szenarios bereitstellen und die CLR keine Implementierung bereitgestellt oder übernommen hat:<br><br>\* **INativeImageINativeImageDependency**<br>\* **INativeImageInstallInfo**<br>\* **INativeImageEvaluate**<br>\* **INativeImageConverter**<br>\* **ICorModule**<br>\* **IMetaDataConverter** | Keine |
 
 ## <a name="data"></a>Daten

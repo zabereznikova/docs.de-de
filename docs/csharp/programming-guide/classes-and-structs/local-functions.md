@@ -1,14 +1,15 @@
 ---
 title: Lokale Funktionen – C#-Programmierhandbuch
+description: Lokale Funktionen in C# sind private Methoden, die in einem anderen Member geschachtelt sind und aus dem enthaltenden Member aufgerufen werden können.
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 200fbd097b7c71a1cd392d62622955528a80fd66
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9987d6d5ad57c1dceb3a4bffbae22a81c240c794
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102943"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864526"
 ---
 # <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
 

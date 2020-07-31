@@ -1,17 +1,18 @@
 ---
 title: LINQ und generische Typen (C#)
+description: Hier erfahren Sie mehr über die grundlegenden Konzepte von generischen Typen in C#, die Abfragen unterstützen.  LINQ-Abfragen basieren auf generischen Typen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 98054a4a21704293faa1194dac342bc48aef138d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241759"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165636"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ und generische Typen (C#)
 LINQ-Abfragen basieren auf generischen Typen, die mit Version 2.0 von .NET Framework eingeführt wurden. Sie benötigen kein ausführliches Wissen über Generics, um Abfragen schreiben zu können. Dennoch sollten Sie zwei grundlegende Konzepte verstehen:  

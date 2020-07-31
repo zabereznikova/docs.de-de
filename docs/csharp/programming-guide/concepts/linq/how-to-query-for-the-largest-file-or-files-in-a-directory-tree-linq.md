@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (C#)'
+description: Dieses C#-Beispiel zeigt fünf LINQ-Abfragen mit Bezug auf die Dateigröße in Byte. Sie können diese Abfragen so bearbeiten, dass andere Eigenschaften des FileInfo-Objekts abgefragt werden.
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: ed7d610bd292be4062db89f3c94af280e851141f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168764"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104373"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Vorgehensweise: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (C#)
 Dieses Beispiel zeigt fünf Abfragen mit Bezug auf die Dateigröße in Bytes:  
@@ -145,7 +146,7 @@ class QueryBySize
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
 Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)
+- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)

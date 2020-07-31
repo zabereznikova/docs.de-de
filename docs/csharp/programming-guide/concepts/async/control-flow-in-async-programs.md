@@ -1,13 +1,14 @@
 ---
 title: Ablaufsteuerung in asynchronen Programmen (C#)
+description: Hier erfahren Sie mehr über die Ablaufsteuerung in einem einfachen asynchronen C#-Programm, um zu verstehen, wie asynchrone Programme mithilfe der Schlüsselwörter „async“ und „await“ entwickelt und verwaltet werden.
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3946db958466a9f9914a5fa7b37c0db3a64d4b3d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204445"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925370"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Ablaufsteuerung in asynchronen Programmen (C#)
 

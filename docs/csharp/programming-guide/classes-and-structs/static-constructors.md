@@ -1,16 +1,17 @@
 ---
 title: Statische Konstruktoren – C#-Programmierhandbuch
+description: Ein statischer Konstruktor in C# initialisiert statische Daten oder führt eine Aktion aus, die nur einmal ausgeführt wird, bevor die erste Instanz erstellt oder auf statische Member verwiesen wird.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 744bcacbc38299c0ef7d16e814c415ec5caf95dd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e324b2aa968ff5fdf9c268fa3891f67e8530ff87
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170116"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863981"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statische Konstruktoren (C#-Programmierhandbuch)
 Ein statischer Konstruktor wird verwendet, um [static](../../language-reference/keywords/static.md)-Daten zu initialisieren oder um eine bestimmte Aktion auszuführen, die nur einmal ausgeführt werden muss. Er wird automatisch aufgerufen, bevor die erste Instanz erstellt oder auf irgendwelche statischen Member verwiesen wird.  

@@ -1,16 +1,17 @@
 ---
 title: Definieren von Konstanten in C#
+description: Hier erfahren Sie, wie Sie Konstanten in C# definieren. Dies sind Felder, deren Werte zur Kompilierzeit festgelegt werden. Verwenden Sie Konstanten, um aussagekräftige Namen für spezielle Werte bereitzustellen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: afa2799cf76f976e332f91b631dc90e2799a0aa0
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337656"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864643"
 ---
 # <a name="how-to-define-constants-in-c"></a>Definieren von Konstanten in C\#
 Konstanten sind Felder, deren Wert bei der Kompilierung festgelegt wird und nie geändert werden kann. Verwenden Sie Konstanten, um aussagekräftige Namen anstelle numerischer Literale („magische Zahlen“) für spezielle Werte bereitzustellen.  
@@ -27,6 +28,6 @@ Konstanten sind Felder, deren Wert bei der Kompilierung festgelegt wird und nie 
   
  Die Verwendung des Klassennamenqualifizierers hilft Ihnen sicherzustellen, dass Sie und andere Benutzer der Konstante verstehen, dass diese konstant ist und nicht verändert werden kann.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Klassen und Strukturen](./index.md)

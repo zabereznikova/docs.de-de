@@ -1,13 +1,14 @@
 ---
 title: Das aufgabenbasierte asynchrone Programmiermodell (TAP) mit Async und Await (C#)
+description: Hier erfahren Sie mehr über die Verwendung der asynchronen, „Task“-basierten Programmierung. Dabei handelt es sich um einen vereinfachten Ansatz für die asynchrone Programmierung in C#.
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ddda97e9c77473120ed32b0e224b07d7c4d71b1e
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990078"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925136"
 ---
 # <a name="task-asynchronous-programming-model"></a>Aufgabenbasiertes asynchrones Programmiermodell
 

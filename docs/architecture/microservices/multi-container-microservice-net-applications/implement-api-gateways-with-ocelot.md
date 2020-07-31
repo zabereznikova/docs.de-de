@@ -2,12 +2,12 @@
 title: Implementieren von API-Gateways mit Ocelot
 description: Hier erfahren Sie, wie Sie API-Gateways mit Ocelot implementieren und Ocelot in einer containerbasierten Umgebung verwenden.
 ms.date: 03/02/2020
-ms.openlocfilehash: 28b9ca22d232baf3545d71b876cecf72fea05c92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f103c1e394a3f829489b61fd17af749798b02f70
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846945"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864097"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementieren von API-Gateways mit Ocelot
 
@@ -84,7 +84,7 @@ public async Task<IActionResult> GetItemById(int id)
 
 Die HTTP-Anforderung führt letztendlich diese Art von C#-Code durch Zugriff auf die Microservicedatenbank sowie alle weiteren erforderlichen Aktionen aus.
 
-Mit Blick auf die Microservice-URL wird bei der Bereitstellung der Container im lokalen Entwicklungs-PC (lokaler Docker-Host) für jeden Container eines Microservices immer ein interner Port (meist Port 80) in der entsprechenden Dockerfile-Datei angegeben, wie im folgenden Beispiel zu sehen:
+Mit Blick auf die Microservice-URL wird bei der Bereitstellung der Container auf dem lokalen Entwicklungs-PC (lokaler Docker-Host) wie im folgenden Beispiel zu sehen ist für jeden Container eines Microservices immer ein interner Port (meist Port 80) im entsprechenden Dockerfile angegeben:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base

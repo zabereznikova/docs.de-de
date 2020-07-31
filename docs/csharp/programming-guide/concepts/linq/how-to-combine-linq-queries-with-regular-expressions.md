@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (C#)'
+description: In diesem Beispiel wird mithilfe der RegEx-Klasse in C# ein regulärer Ausdruck für den Abgleich in Textzeichenfolgen erstellt.
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: af63d096e3c2f19ed557180d82d606989a016120
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169428"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105350"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Vorgehensweise: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (C#)
 In diesem Beispiel wird gezeigt, wie Sie die <xref:System.Text.RegularExpressions.Regex>-Klasse verwenden, um einen regulären Ausdruck für komplexere Übereinstimmungen in Textzeichenfolgen erstellen. Die LINQ-Abfrage erleichtert das Filtern nach genau den Dateien, die Sie mithilfe des regulären Ausdrucks suchen möchten, sowie das Formen der Ergebnisse.  
@@ -98,7 +99,7 @@ class QueryWithRegEx
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)
-- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)
+- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)
+- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)

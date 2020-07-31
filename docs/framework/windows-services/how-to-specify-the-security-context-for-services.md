@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Angeben des Sicherheitskontexts für Dienste'
+description: Geben Sie den Sicherheitskontext für Dienste an. Dienste, die im Kontext des Standardsystemkontos ausgeführt werden, haben andere Zugriffsrechte für Systemressourcen als der angemeldete Benutzer.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ed531cb520a781fd38f8bf5491da6948901a1d5
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053585"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925734"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Vorgehensweise: Angeben des Sicherheitskontexts für Dienste
 Standardmäßig werden Dienste in einem anderen Sicherheitskontext ausgeführt als dem des angemeldeten Benutzers. Dienste werden im Kontext des Standardsystemkontos, `LocalSystem`, ausgeführt, das ihnen andere Zugriffsberechtigungen für Systemressourcen erteilt als dem Benutzer. Sie können dieses Verhalten ändern und ein anderes Benutzerkonto angeben, unter dem Ihr Dienst ausgeführt werden sollte.  

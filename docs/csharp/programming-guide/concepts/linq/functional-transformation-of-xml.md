@@ -1,13 +1,14 @@
 ---
 title: Funktionale Transformation von XML (C#)
+description: Hier erfahren Sie, wie Sie XML-Dokumente mithilfe des reinen funktionalen Transformationsansatzes in C# ändern und wie sich dieser von einem prozeduralen Ansatz unterscheidet.
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ccc6859f3663eb3760c7faeaf115a5e88a2278a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75336797"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103674"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Funktionale Transformation von XML (C#)
 In diesem Thema wird der Ansatz der reinen funktionalen Transformation zum Ändern von XML-Dokumenten erläutert und dem prozeduralen Ansatz gegenübergestellt.  
@@ -26,7 +27,7 @@ In diesem Thema wird der Ansatz der reinen funktionalen Transformation zum Ände
 ### <a name="xml-functional-transformational-technologies"></a>Technologien für die funktionale XML-Transformation  
  Microsoft bietet zwei funktionale Transformationstechnologien für XML-Dokumente: XSLT und LINQ to XML. XSLT wird im verwalteten <xref:System.Xml.Xsl>-Namespace und in der systemeigenen COM-Implementierung von MSXML unterstützt. XSLT ist zwar eine robuste Technologie zum Ändern von XML-Dokumenten, erfordert aber Kenntnisse auf einem speziellen Gebiet: der XSLT-Sprache und der sie unterstützenden APIs.  
   
- LINQ to XML stellt die Tools bereit, die für das ausdrucksstarke und leistungsfähige Codieren reiner funktionaler Transformationen innerhalb des C#- und des Visual Basic-Codes benötigt werden. So verwenden z. B. viele der in der LINQ to XML-Dokumentation verwendeten Beispiele reine Funktionen. Auch im [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md) wird LINQ to XML in einer funktionalen Herangehensweise verwendet, um Informationen in einem Microsoft Word-Dokument zu bearbeiten.  
+ LINQ to XML stellt die Tools bereit, die für das ausdrucksstarke und leistungsfähige Codieren reiner funktionaler Transformationen innerhalb des C#- und des Visual Basic-Codes benötigt werden. So verwenden z. B. viele der in der LINQ to XML-Dokumentation verwendeten Beispiele reine Funktionen. Auch im [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten des Inhalts eines WordprocessingML-Dokuments (C#))](./shape-of-wordprocessingml-documents.md) wird LINQ to XML in einer funktionalen Herangehensweise verwendet, um Informationen in einem Microsoft Word-Dokument zu bearbeiten.  
   
  Einen ausführlicheren Vergleich zwischen LINQ to XML und anderen XML-Technologien von Microsoft finden Sie unter [LINQ to XML vs.(LINQ to XML im Vergleich zu) Other XML Technologies (anderen XML-Technologien)](./linq-to-xml-vs-other-xml-technologies.md).  
   

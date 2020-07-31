@@ -1,13 +1,14 @@
 ---
 title: Verarbeiten asynchroner Aufgaben nach Abschluss
+description: In diesem Beispiel wird gezeigt, wie Sie mit Task.WhenAny in C# mehrere Tasks starten und deren Ergebnisse jeweils nach Abschluss der Durchführung verarbeiten, anstatt sie in der Reihenfolge zu verarbeiten, in der sie gestartet wurden.
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7cfa0bdf783fe9bb735241ca398fde7895f1493
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71736731"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925149"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (C#)
 
@@ -20,7 +21,7 @@ Im folgenden Beispiel wird eine Abfrage verwendet, um eine Auflistung von Aufgab
 
 ## <a name="download-an-example-solution"></a>Herunterladen einer Beispielprojektmappe
 
-Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.
+Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.
 
 > [!TIP]
 > Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich stattdessen die Datei *MainWindow.xaml.cs* am Ende dieses Themas ansehen.
@@ -87,7 +88,7 @@ Führen Sie das Programm mehrmals aus, um zu bestätigen, dass die heruntergelad
 
 Der folgende Code besteht aus dem vollständigen Text der Datei *MainWindow.xaml.cs* für das Beispiel. Sternchen markieren die Elemente, die für dieses Beispiel hinzugefügt wurden. Beachten Sie ferner, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.
 
-Sie können das Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.
+Sie können das Projekt hier herunterladen: [Async Sample: Fine Tuning Your Application (Async-Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -225,9 +226,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Feinabstimmung der Async-Anwendung (C#)](fine-tuning-your-async-application.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](index.md)
-- [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)

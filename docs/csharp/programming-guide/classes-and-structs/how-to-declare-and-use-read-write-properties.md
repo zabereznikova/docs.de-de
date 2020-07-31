@@ -1,5 +1,6 @@
 ---
 title: 'Gewusst wie: Deklarieren und Verwenden von Lese-/Schreibeigenschaften – C#-Programmierhandbuch'
+description: Hier erfahren Sie, wie Sie Lese- und Schreibeigenschaften in C# verwenden. Dieses Beispiel enthält zwei Eigenschaften, von denen jede über die Zugriffsmethoden „get“ und „set“ verfügt, sodass es sich um Eigenschaften mit Lese- und Schreibzugriff handelt.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 4b9db5f15746ab9a1f42239150c6783154723371
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08bdaa9446491d473cfb16e3b82bac41d7af5b79
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170285"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864448"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Gewusst wie: Deklarieren und Verwenden von Lese-/Schreibeigenschaften (C#-Programmierhandbuch)
 Eigenschaften stellen die Vorteile von öffentlichen Datenmembern bereit, ohne die mit dem ungeschützten, nicht kontrollierten und nicht geprüften Zugriff auf die Daten eines Objekts verknüpften Risiken aufzuweisen. Dies wird durch *Accessoren* erreicht: Dies sind besondere Methoden, die den zugrunde liegenden Datenmembern Werte zuweisen bzw. diese Werte abrufen. Der [set](../../language-reference/keywords/set.md)-Accessor ermöglicht das Zuweisen von Datenmembern, und der [get](../../language-reference/keywords/get.md)-Accessor ruft Datenmemberwerte ab.  
@@ -54,7 +55,7 @@ person.SetAge(person.GetAge() + 1);
   
  Beachten Sie, dass `ToString` im Programm nicht explizit verwendet wird. Es wird standardmäßig durch die `WriteLine`-Aufrufe aufgerufen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Eigenschaften](./properties.md)

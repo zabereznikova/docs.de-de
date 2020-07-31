@@ -1,15 +1,16 @@
 ---
 title: Verwenden von Konstruktoren – C#-Programmierhandbuch
+description: Dieses Beispiel zeigt, wie eine Klasse mithilfe des new-Operators in C# instanziiert wird. Der einfache Konstruktor wird aufgerufen, nachdem der Arbeitsspeicher für das new-Objekt zugewiesen wurde.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b441b04bd6bfcb5564f40a90718e822f56ac21e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626411"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863954"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Verwenden von Konstruktoren (C#-Programmierhandbuch)
 
@@ -54,7 +55,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Es ist also nicht erforderlich, einen parameterlosen Konstruktor für einen Werttyp aufzurufen.  
   
- Sowohl Klassen als auch `structs` können Konstruktoren definieren, die Parameter annehmen. Konstruktoren, die Parameter annehmen, müssen über eine `new`- oder [base](../../language-reference/keywords/base.md)-Anweisung aufgerufen werden. Klassen und `structs` können also mehrere Konstruktoren definieren, und keine von beiden wird zum Definieren eines parameterlosen Konstruktors benötigt. Beispiel:  
+ Sowohl Klassen als auch `structs` können Konstruktoren definieren, die Parameter annehmen. Konstruktoren, die Parameter annehmen, müssen über eine `new`- oder [base](../../language-reference/keywords/base.md)-Anweisung aufgerufen werden. Klassen und `structs` können also mehrere Konstruktoren definieren, und keine von beiden wird zum Definieren eines parameterlosen Konstruktors benötigt. Zum Beispiel:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -62,7 +63,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- Ein Konstruktor kann das Schlüsselwort `base` verwenden, um den Konstruktor einer Basisklasse aufzurufen. Beispiel:  
+ Ein Konstruktor kann das Schlüsselwort `base` verwenden, um den Konstruktor einer Basisklasse aufzurufen. Zum Beispiel:  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   
@@ -92,7 +93,7 @@ Console.WriteLine("{0}, {1}", a, b);
 
 Weitere Informationen erhalten Sie unter [Instanzkonstruktoren](~/_csharplang/spec/classes.md#instance-constructors) und [Statische Konstruktoren](~/_csharplang/spec/classes.md#static-constructors) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)

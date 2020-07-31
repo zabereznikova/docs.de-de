@@ -1,16 +1,17 @@
 ---
 title: 'Gewusst wie: Schreiben eines Kopierkonstruktors – C#-Programmierhandbuch'
+description: Hier erfahren Sie, wie Sie einen Kopierkonstruktor in C# erstellen, der eine Instanz einer Klasse akzeptiert und eine neue Instanz mit den Werten der Eingabe zurückgibt.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: aa6feb1b07f491a90a78684e254910d387b9bccd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: beb2fcfaa36303eeaabd5278cf5e7a128282270e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714842"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864227"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Gewusst wie: Schreiben eines Kopierkonstruktors (C#-Programmierhandbuch)
 C# stellt keinen Kopierkonstruktor für Objekte bereit. Sie können jedoch selbst einen schreiben.  
@@ -20,7 +21,7 @@ C# stellt keinen Kopierkonstruktor für Objekte bereit. Sie können jedoch selbs
   
  [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ICloneable>
 - [C#-Programmierhandbuch](../index.md)

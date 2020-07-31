@@ -1,5 +1,6 @@
 ---
 title: Reflektion in .NET
+description: Überprüfen Sie die Reflexion in .NET. Hier erhalten Sie Informationen zu geladenen Assemblys und den darin definierten Typen, z. B. Klassen, Schnittstellen, Strukturen und Enumerationen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET], reflection
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180476"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865280"
 ---
 # <a name="reflection-in-net"></a>Reflektion in .NET
 

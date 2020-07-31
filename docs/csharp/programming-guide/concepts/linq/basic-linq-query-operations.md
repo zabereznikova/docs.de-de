@@ -1,5 +1,6 @@
 ---
 title: Grundlegende LINQ-Abfragevorgänge (C#)
+description: Informieren Sie sich über die LINQ-Abfrageausdrücke und einige der Vorgänge, die Sie bei einer Abfrage möglicherweise ausführen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - orderby clause [LINQ in C#]
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9653be8b67ef4d971c157b8dd8d82b2ae3c2287
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635937"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105529"
 ---
 # <a name="basic-linq-query-operations-c"></a>Grundlegende LINQ-Abfragevorgänge (C#)
 Dieses Thema gibt einen kurzen Überblick über LINQ-Abfrageausdrücke und einige der geläufigsten Vorgänge, die Sie in einer Abfrage durchführen können. Ausführlichere Informationen finden Sie unter den folgenden Themen:  
   
  [LINQ-Abfrageausdrücke](../../../linq/index.md)  
   
- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)  
+ [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)  
   
- [Walkthrough: Writing Queries in C# (Exemplarische Vorgehensweise: Schreiben von Abfragen in C#)](./walkthrough-writing-queries-linq.md)  
+ [Exemplarische Vorgehensweise: Schreiben von Abfragen in C#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 > Wenn Sie sich bereits mit einer Abfragesprache wie SQL oder XQuery auskennen, können Sie einen Großteil dieses Themas überspringen. Im nächsten Abschnitt erfahren Sie mehr über die `from`-Klausel und die Reihenfolge von Klauseln in einem LINQ-Abfrageausdruck.  
@@ -46,7 +47,7 @@ Dieses Thema gibt einen kurzen Überblick über LINQ-Abfrageausdrücke und einig
 > [!NOTE]
 > Die Bereichsvariable muss für nicht generische Datenquellen wie <xref:System.Collections.ArrayList> explizit typisiert sein. Weitere Informationen finden Sie unter [Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) und [from-Klausel](../../../language-reference/keywords/from-clause.md).  
   
-## <a name="filtering"></a>Filterung  
+## <a name="filtering"></a>Filtern  
  Die wahrscheinlich üblichste Abfrageoperation ist das Anwenden eines Filters in Form eines booleschen Ausdrucks. Das Filtern bewirkt, dass die Abfrage nur jene Elemente zurückgibt, für die der Ausdruck den Wert TRUE hat. Das Ergebnis wird durch Verwendung der `where`-Klausel erzeugt. Faktisch gibt der Filter an, welche Elemente nicht in die Quellsequenz eingeschlossen werden sollen. In folgendem Beispiel werden nur die `customers` zurückgegeben, die eine Londoner Adresse haben.  
   
  [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
@@ -70,7 +71,7 @@ Dieses Thema gibt einen kurzen Überblick über LINQ-Abfrageausdrücke und einig
   
  Weitere Informationen finden Sie unter [orderby-Klausel](../../../language-reference/keywords/orderby-clause.md).  
   
-## <a name="grouping"></a>Gruppieren  
+## <a name="grouping"></a>Gruppierung  
  Die `group`-Klausel ermöglicht Ihnen, die Ergebnisse auf Grundlage eines von Ihnen angegebenen Schlüssels zu gruppieren. Sie können z.B. angeben, dass die Ergebnisse nach `City` gruppiert werden sollen, sodass sich alle Kunden aus London oder Paris in einer einzelnen Gruppe befinden. In diesem Fall ist `cust.City` der Schlüssel.  
   
  [!code-csharp[csLINQGettingStarted#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#28)]  
@@ -99,9 +100,9 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>Auswählen (Projektionen)  
  Die `select`-Klausel erzeugt die Ergebnisse der Abfrage und gibt die „Form“ oder den Typ jedes zurückgegebenen Elements an. Sie können z.B. bestimmen, ob Ihre Ergebnisse aus vollständigen `Customer`-Objekte, aus lediglich einem Member, aus einer Teilmenge von Membern oder aus einem ganz anderen Ergebnistyp, der auf einer Berechnung oder einem neu erstellten Objekt basiert, bestehen sollen. Wenn die `select`-Klausel etwas anderes als eine Kopie des Quellelements erzeugt, wird dieser Vorgang als *Projektion* bezeichnet. Das Verwenden von Projektionen zur Datentransformation ist eine leistungsfähige Funktion von LINQ-Abfrageausdrücken. Weitere Informationen finden Sie unter [Datentransformationen mit LINQ (C#)](./data-transformations-with-linq.md) und [select-Klausel](../../../language-reference/keywords/select-clause.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ-Abfrageausdrücke](../../../linq/index.md)
-- [Walkthrough: Writing Queries in C# (Exemplarische Vorgehensweise: Schreiben von Abfragen in C#)](./walkthrough-writing-queries-linq.md)
+- [Exemplarische Vorgehensweise: Schreiben von Abfragen in C#](./walkthrough-writing-queries-linq.md)
 - [Abfrageschlüsselwörter (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Anonyme Typen](../../classes-and-structs/anonymous-types.md)

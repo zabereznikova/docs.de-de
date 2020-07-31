@@ -1,13 +1,14 @@
 ---
 title: 'Entschärfung: Rendern von WPF-Fenstern'
+description: Hier erfahren Sie mehr über die Auswirkung und Entschärfung für das Rendern von WPF-Fenstern in .NET Framework 4.6 unter Windows 8 oder höher.
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-ms.openlocfilehash: 42d6abf1ba6ed7c17a5a5604e98b5ee46d0c3ac2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d624478d17a4076107438f71b0a86eeb6d9f3ea4
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457767"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475332"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Entschärfung: Rendern von WPF-Fenstern
 
@@ -39,6 +40,6 @@ Sie können diese Änderung deaktivieren und das vorherige Verhalten des Clippin
 
 - Durch das Festlegen der <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A>-Eigenschaft auf `true` beim Starten der App.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Anwendungskompatibilität](application-compatibility.md)

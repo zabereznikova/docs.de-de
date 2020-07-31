@@ -1,5 +1,6 @@
 ---
 title: Veraltete Elemente in .NET Framework
+description: Hier erfahren Sie, wie die .NET-Klassenbibliothek Member als veraltet kennzeichnet. Sie erhalten Informationen zum ObsoleteAttribute-Attribut und beispielsweise dazu, wie Sie veraltete Typen und Member verarbeiten.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 7cfebfde859a95495e9d2d5e42bd034ad5d55e61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f39f5ec614b669f3a0f63677cb6f8a6f9ed11cf
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143134"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925799"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 
@@ -37,7 +38,7 @@ Wenn Sie vorhandenen Code aktualisieren und neu kompilieren, kann ohne weiteres 
 
 - Ändern Sie, falls möglich, den Code durch Entfernen der Verwendung des Typs oder des Members.
 
-     \- oder -
+     - oder -
 
 - Lesen Sie die Dokumentation für diesen Technologiebereich, um zu bestimmen, wie darauf reagiert werden soll, dass die Komponente veraltet ist.
 
@@ -64,10 +65,10 @@ Um eine bestimmte Version von .NET Framework als Ziel zu verwenden, weisen Sie d
 |4.6 (einschließlich 4.6.1 und 4.6.2)|v4.0|
 |4.5 (inklusive 4.5.1 und 4.5.2)|v4.0|
 |4|v4.0|
-|3,5|v2.0.50727|
-|2,0|v2.0.50727|
-|1,1|v1.1.4322|
-|1,0|v1.0.3705|
+|3.5|v2.0.50727|
+|2.0|v2.0.50727|
+|1.1|v1.1.4322|
+|1.0|v1.0.3705|
 
 ## <a name="obsolete-apis-for-net-framework-45-and-later-versions"></a>Veraltete APIs für .NET Framework 4.5 und höhere Versionen
 
@@ -81,6 +82,6 @@ Um eine bestimmte Version von .NET Framework als Ziel zu verwenden, weisen Sie d
 - [Liste veralteter Elemente in .NET Framework 3.5](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
 - [Liste veralteter Elemente in .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

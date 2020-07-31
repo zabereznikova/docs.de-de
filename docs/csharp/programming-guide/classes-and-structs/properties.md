@@ -1,5 +1,6 @@
 ---
 title: Eigenschaften – C#-Programmierhandbuch
+description: Eine Eigenschaft in C# ist ein Member, der Zugriffsmethoden zum Lesen, Schreiben oder Berechnen des Werts eines privaten Felds verwendet, als würde es sich um einen öffentlichen Datenmember handeln.
 ms.date: 03/10/2017
 f1_keywords:
 - cs.properties
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ee530e981e0c85302b2b11cc739d6c51d6650ddd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170103"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863941"
 ---
 # <a name="properties-c-programming-guide"></a>Eigenschaften (C#-Programmierhandbuch)
 
@@ -22,7 +23,7 @@ Eine Eigenschaft ist ein Member, das einen flexiblen Mechanismus zum Lesen, Schr
   
 - Mithilfe von Eigenschaften kann eine Klasse eine öffentliche Methode zum Abrufen und Festlegen von Werten verfügbar machen und dabei den Implementierungs- oder Verifizierungscode ausblenden.  
   
-- Ein [get](../../language-reference/keywords/get.md) -Eigenschaftenaccessor wird verwendet, um den Wert der Eigenschaft zurückzugeben. Ein [set](../../language-reference/keywords/set.md) -Eigenschaftenaccessor wird verwendet, um einen neuen Wert zuzuweisen. Diese Zugriffsmethoden können über verschiedene Zugriffsebenen verfügen. Weitere Informationen finden Sie unter [Einschränken des Accessorzugriffs](./restricting-accessor-accessibility.md).  
+- Eine [get](../../language-reference/keywords/get.md)-Eigenschaftenaccessor wird verwendet, um den Wert der Eigenschaft zurückzugeben. Ein [set](../../language-reference/keywords/set.md)-Eigenschaftenaccessor wird verwendet, um einen neuen Wert zuzuweisen. Diese Zugriffsmethoden können über verschiedene Zugriffsebenen verfügen. Weitere Informationen finden Sie unter [Einschränken des Accessorzugriffs](./restricting-accessor-accessibility.md).  
   
 - Das [value](../../language-reference/keywords/value.md)-Schlüsselwort wird verwendet, um den Wert zu definieren, der vom `set`-Accessor zugewiesen wird.  
 - Eigenschaften können sein: *Lesen/Schreiben* (beide verfügen über einen `get`- und `set`-Accessor), *schreibgeschützt* (verfügen über einen `get`-Accessor, jedoch keinen `set`-Accessor), oder *lesegeschützt* (verfügen über einen `set`-Accessor, jedoch keinen `get` Accessor). Lesegeschützte Eigenschaften sind selten und werden am häufigsten verwendet, um den Zugriff auf vertrauliche Daten einzuschränken.
@@ -73,7 +74,7 @@ Wenn eine Eigenschaft jeweils über einen `get`- und `set`-Accessor verfügt, m�
 
 Weitere Informationen finden Sie unter [Eigenschaften](~/_csharplang/spec/classes.md#properties) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Verwenden von Eigenschaften](./using-properties.md)

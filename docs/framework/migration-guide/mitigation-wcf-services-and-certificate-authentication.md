@@ -1,13 +1,14 @@
 ---
 title: 'Entschärfung: WCF-Dienste und Zertifikatauthentifizierung'
+description: In diesem Artikel erfahren Sie, wie Sie Probleme mit der Zertifikatauthentifizierung reduzieren, die durch Änderungen an der Standardliste für WCF-SSL-Protokolle in .NET Framework 4.6 entstehen.
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-ms.openlocfilehash: 8c8493efa2c3223809ad87e01e3faddaea859ca8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b6460e58bb32151003430d6573c4bcf1b514081b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457794"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475371"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Entschärfung: WCF-Dienste und Zertifikatauthentifizierung
 
@@ -15,7 +16,7 @@ ms.locfileid: "73457794"
 
 ## <a name="impact"></a>Auswirkungen
 
-TLS 1.2 unterstützt die MD5-Zertifikatauthentifizierung nicht. Wenn ein Kunde ein SSL-Zertifikat verwendet, das MD5 als Hashalgorithmus einsetzt, kann der WCF-Client daher keine Verbindung mit dem WCF-Dienst herstellen. Weitere Informationen finden Sie unter [Entschärfung: WCF-Dienste und Zertifikatauthentifizierung](mitigation-wcf-services-and-certificate-authentication.md).
+TLS 1.2 unterstützt die MD5-Zertifikatauthentifizierung nicht. Wenn ein Kunde ein SSL-Zertifikat verwendet, das MD5 als Hashalgorithmus einsetzt, kann der WCF-Client keine Verbindung mit dem WCF-Dienst herstellen. Weitere Informationen finden Sie unter [Entschärfung: WCF-Dienste und Zertifikatauthentifizierung](mitigation-wcf-services-and-certificate-authentication.md).
 
 ## <a name="mitigation"></a>Minderung
 
@@ -54,6 +55,6 @@ Sie können dieses Problem umgehen, sodass ein WCF-Client eine Verbindung mit ei
   > [!CAUTION]
   > Diese Problemumgehung wird nicht empfohlen, da ein Zertifikat mit MD5-Hashalgorithmus als unsicher angesehen wird.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Anwendungskompatibilität](application-compatibility.md)

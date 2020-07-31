@@ -1,5 +1,6 @@
 ---
 title: Lc.exe (License Compiler-Tool)
+description: Verwenden Sie Lc.exe, den Lizenzcompiler. Dieses Tool liest Textdateien mit Lizenzierungsinformationen und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei für die CLR eingebettet werden soll.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Lc.exe
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180399"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164244"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler-Tool)
 Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
@@ -38,7 +39,7 @@ targetPE /complist:filename [-outdir:path]
 /i:modules [/nologo] [/v]  
 ```  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/complist:** *filename*|Gibt den Namen einer Datei an, die die Liste der lizenzierten Komponenten enthält, die in die LICENSES-Datei eingebunden werden sollen. Auf die einzelnen Komponenten wird mit dem vollständigen Namen verwiesen, wobei pro Zeile jeweils nur eine Komponente aufgeführt wird.<br /><br /> Benutzer der Befehlszeile können für jedes Formular des Projekts eine eigene Datei angeben. "Lc.exe" akzeptiert mehrere Eingabedateien und erstellt eine einzige LICENSES-Datei.|  
 |**-h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  

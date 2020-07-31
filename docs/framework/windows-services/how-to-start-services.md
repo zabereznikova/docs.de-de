@@ -1,17 +1,18 @@
 ---
 title: 'Vorgehensweise: Starten von Diensten'
+description: Hier lernen Sie verschiedene Möglichkeiten zum Starten von Diensten kennen. Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wird die „OnStart“-Methode für die Dienstklasse aufgerufen.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4a2f9b291e60b12b1465fbb6bbbd1604572359a7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053572"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925721"
 ---
 # <a name="how-to-start-services"></a>Vorgehensweise: Starten von Diensten
 

@@ -1,5 +1,6 @@
 ---
 title: Verpacken und Bereitstellen von Ressourcen in .NET-Apps
+description: In diesem Artikel erfahren Sie, wie Sie Ressourcen in .NET-Apps mithilfe einer Hauptassembly (Hub) und Satellitenassemblys (Spokes) packen und bereitstellen. Spokes enthalten lokalisierte Ressourcen, aber keinen Code.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243049"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166190"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Verpacken und Bereitstellen von Ressourcen in .NET-Apps
 
@@ -71,7 +72,7 @@ Um die Suchleistung zu verbessern, wenden Sie das Attribut <xref:System.Resource
 Der .NET Framework-Ressourcenfallbackprozess besteht aus folgenden Schritten:
 
 > [!TIP]
-> Möglicherweise können Sie auch den Fallbackprozess von Ressourcen und den Suchprozess der Runtime nach Ressourcenassemblys mit dem Konfigurationselement [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) verbessern. Weitere Informationen finden Sie im Abschnitt [Verbessern des Ressourcenfallbackprozesses](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Möglicherweise können Sie auch den Fallbackprozess von Ressourcen und den Runtimesuchprozess nach Ressourcenassemblys mit dem Konfigurationselement [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) verbessern. Weitere Informationen finden Sie im Abschnitt [Verbessern des Ressourcenfallbackprozesses](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. Zunächst prüft die Runtime den [globalen Assemblycache](../app-domains/gac.md) auf eine Assembly, die der angeforderten Kultur für Ihre Anwendung entspricht.
 
@@ -116,7 +117,7 @@ Unter folgenden Bedingungen können Sie den Prozess optimieren, mit dem die Runt
 
 - Der Anwendungscode behandelt nicht das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-Sie können die Überprüfung auf Satellitenassemblys durch das Integrieren des Elements [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) optimieren, und indem Sie dessen `enabled`-Attribut in der Anwendungskonfigurationsdatei auf `true` festlegen, wie in folgendem Beispiel veranschaulicht.
+Sie können die Überprüfung auf Satellitenassemblys durch das Integrieren des Elements [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) optimieren, und indem Sie dessen `enabled`-Attribut wie im folgendem Beispiel in der Anwendungskonfigurationsdatei auf `true` festlegen.
 
 ```xml
 <configuration>
@@ -126,7 +127,7 @@ Sie können die Überprüfung auf Satellitenassemblys durch das Integrieren des 
 </configuration>
 ```
 
-Die optimierte Überprüfung auf Satellitenassemblys ist ein Opt-In-Feature. Das heißt, dass die Runtime die Schritte aus [Der Ressourcenfallback-Prozess](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) durchführt, es sei denn, das Element [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) befindet sich in der Anwendungskonfigurationsdatei, während dessen `enabled`-Attribut auf `true` festgelegt ist. Wenn dies der Fall ist, wird der Suchprozess nach einer Satellitenassembly wie folgt angepasst:
+Die optimierte Überprüfung auf Satellitenassemblys ist ein Opt-In-Feature. Das heißt, dass die Runtime die im Abschnitt [Der Ressourcenfallbackprozess](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) aufgeführten Schritte durchführt, es sei denn, das Element [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) ist in der Anwendungskonfigurationsdatei vorhanden, während dessen `enabled`-Attribut auf `true` festgelegt ist. Wenn dies der Fall ist, wird der Suchprozess nach einer Satellitenassembly wie folgt angepasst:
 
 - Die Runtime verwendet den Speicherort der übergeordneten Codeassembly, um nach der Satellitenassembly zu suchen. Wenn die übergeordnete Assembly im globalen Assemblycache installiert ist, durchsucht die Runtime den Cache, aber nicht das Anwendungsverzeichnis. Wenn die übergeordnete Assembly im Anwendungsverzeichnis installiert ist, durchsucht die Runtime das Anwendungsverzeichnis, aber nicht den globalen Assemblycache.
 

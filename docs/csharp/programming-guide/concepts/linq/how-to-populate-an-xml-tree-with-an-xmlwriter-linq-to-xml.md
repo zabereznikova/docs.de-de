@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Auffüllen einer XML-Struktur mit einem XmlWriter (LINQ to XML) (C#)'
+description: Hier erfahren Sie, wie Sie einen XML-Baum mit CreateWriter mit Daten füllen, um eine XmlWriter-Klasse zu erstellen, und anschließend in LINQ to XML in C# in die XmlWriter-Klasse schreiben.
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: f48843af403f2ee0e6d2850deab009a143f55dc7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9639c5947583bccf4f8ba427fc8611e181ef1536
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345771"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104793"
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Vorgehensweise: Auffüllen einer XML-Struktur mit einem XmlWriter (LINQ to XML) (C#)
 Eine Möglichkeit, eine XML-Struktur aufzufüllen, besteht darin, mit <xref:System.Xml.Linq.XContainer.CreateWriter%2A> einen <xref:System.Xml.XmlWriter> zu erstellen und dann in den <xref:System.Xml.XmlWriter> zu schreiben. Die XML-Struktur wird mit allen Knoten aufgefüllt, die in den <xref:System.Xml.XmlWriter> geschrieben werden.  
@@ -62,7 +63,7 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>

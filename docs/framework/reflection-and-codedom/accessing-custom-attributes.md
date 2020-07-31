@@ -1,5 +1,6 @@
 ---
 title: Zugreifen auf benutzerdefinierte Attribute
+description: Hier erfahren Sie, wie Sie in .NET auf benutzerdefinierte Attribute zugreifen. Nachdem Attribute Programmierelementen zugeordnet worden sind, können Sie die Reflexion verwenden, um deren Existenz und Werte abzufragen.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130304"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475137"
 ---
 # <a name="accessing-custom-attributes"></a>Zugreifen auf benutzerdefinierte Attribute
 Nachdem Attribute Programmierelementen zugeordnet worden sind, kann Reflektion benutzt werden, um deren Existenz und Werte abzufragen. In der .NET Framework Version 1.0 und 1.1 werden benutzerdefinierte Attribute im Ausführungskontext untersucht. Die .NET Framework Version 2.0 stellt einen neuen Ladekontext bereit, den reflektionsbezogener Ladekontext, der zum Untersuchen von Code benutzt werden kann, der nicht für die Ausführung geladen werden kann.  

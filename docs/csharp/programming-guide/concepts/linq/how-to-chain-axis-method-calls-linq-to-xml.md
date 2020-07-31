@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Verketten von Achsenmethodenaufrufen (LINQ to XML) (C#)'
+description: Die Beispiele für LINQ to XML in C# zeigen die Aufrufe von zwei Achsen, um alle Elemente eines bestimmten Namens auf einer bestimmten Ebene im Baum zu finden.
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 56fa5c9e8358883d838b68e99664240aa97f347f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f26efd2ca918fd36916eb4f01462af70066219a0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169466"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105383"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Vorgehensweise: Verketten von Achsenmethodenaufrufen (LINQ to XML) (C#)
 Eine gebräuchliche Vorgehensweise im Code besteht darin, erst eine Achsenmethode und dann eine der Erweiterungsmethodenachsen aufzurufen.  
@@ -17,7 +18,7 @@ Eine gebräuchliche Vorgehensweise im Code besteht darin, erst eine Achsenmethod
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel werden <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> und <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> verwendet, um "nach allen `Name`-Elementen in allen `Address`-Elementen in allen `PurchaseOrder`-Elementen" zu suchen.  
   
- Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: mehrfache Bestellung (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XElement purchaseOrders = XElement.Load("PurchaseOrders.xml");  
@@ -90,7 +91,7 @@ foreach (XElement cp in configParameters)
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird dieselbe Vorgehensweise für XML gezeigt, das sich in einem Namespace befindet. Weitere Informationen finden Sie unter [Namespaces: Übersicht (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: mehrfache Bestellung in einem Namespace](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen in einem Namespace](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -116,6 +117,6 @@ foreach (XElement e in names)
 <aw:Name xmlns:aw="http://www.adventure-works.com">Jessica Arnold</aw:Name>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](linq-to-xml-axes-overview.md)

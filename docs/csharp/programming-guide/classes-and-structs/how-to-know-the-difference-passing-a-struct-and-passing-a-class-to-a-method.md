@@ -1,17 +1,18 @@
 ---
 title: 'Gewusst wie: Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode – C#-Programmierhandbuch'
+description: Die Übergabe einer Struktur an eine Methode unterscheidet sich von der Übergabe einer Klasseninstanz an eine Methode in C#. In diesem Beispiel werden die Struktur und die Klasseninstanz als Werte übergeben.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: a280a6df873d7c03c204bc5c86468e7e7298d723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee4e6adf5c01cea786219407c1c0ffdb73f21b2a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673432"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865020"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Gewusst wie: Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode (C#-Programmierhandbuch)
 Das folgende Beispiel stellt dar, wie die Übergabe einer [Struktur](../../language-reference/builtin-types/struct.md) an eine Methode sich von der Übergabe einer [Klasseninstanz](../../language-reference/keywords/class.md) an eine Methode unterscheidet. Im Beispiel werden beide Argumente (Struktur und Klasseninstanz) nach Wert übergeben, und beide Methoden ändern den Wert eines Felds des Arguments. Allerdings sind die Ergebnisse der beiden Methoden nicht identisch, denn wenn Sie eine Struktur übergeben, unterscheidet sich dies von dem, wenn Sie eine Instanz einer Klasse übergeben.  

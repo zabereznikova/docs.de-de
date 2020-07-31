@@ -1,5 +1,6 @@
 ---
 title: Angeben vollständig gekennzeichneter Typnamen
+description: Wenn Sie gültige Eingaben für Reflexionsvorgänge verwenden möchten, sollten Sie vollqualifizierte Typnamen verwenden, die Spezifikationen für den Assemblynamen und den Namespace sowie Typnamen aufweisen.
 ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff33b6abd31a82c6b80aa794564c5c48648cde63
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130033"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865228"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Angeben vollqualifizierter Typnamen
 
@@ -126,7 +127,7 @@ Verwenden Sie den umgekehrten Schrägstrich (\\) als Escapezeichen, um die folge
 |\\*|Zeigertyp|
 |\\[|Arraydimensionstrennzeichen|
 |\\]|Arraydimensionstrennzeichen|
-|\\|Verwenden Sie den umgekehrten Schrägstrich nur dann vor einem Punkt, wenn der Punkt in einer Arrayspezifikation verwendet wird. Punkte in NamespaceSpec akzeptieren keine umgekehrten Schrägstriche.|
+|\\.|Verwenden Sie den umgekehrten Schrägstrich nur dann vor einem Punkt, wenn der Punkt in einer Arrayspezifikation verwendet wird. Punkte in NamespaceSpec akzeptieren keine umgekehrten Schrägstriche.|
 |\\\| Bei Bedarf kann der umgekehrte Schrägstrich als Zeichenfolgenliteral verwendet werden.|
 
 Beachten Sie, dass in allen TypeSpec-Komponenten außer AssemblyNameSpec Leerzeichen relevant sind. In AssemblyNameSpec sind Leerzeichen vor dem Trennzeichen „,“ (Komma) relevant, aber dahinter werden sie nicht beachtet.
@@ -187,7 +188,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>Angeben von generischen Typen
 
-SimpleTypeSpec\`NUMBER stellt einen offenen generischen Typ mit 1 bis *n* generischen Typparametern dar. Um beispielsweise den Verweis auf den offenen generischen Typ List\<T> oder den geschlossenen generischen Typ List\<String> zu erhalten, verwenden Sie ``Type.GetType("System.Collections.Generic.List`1")``. Um einen Verweis auf den generischen Typ Dictionary\<TKey,TValue> zu erhalten, verwenden Sie ``Type.GetType("System.Collections.Generic.Dictionary`2")``.
+SimpleTypeSpec\`NUMBER stellt einen offenen generischen Typ mit 1 bis *n* generischen Typparametern dar. Wenn Sie beispielsweise einen Verweis auf den offenen generischen Typ „List\<T>“ oder den geschlossenen generischen Typ „List\<String>“ abrufen möchten, verwenden Sie ``Type.GetType("System.Collections.Generic.List`1")``. Wenn Sie einen Verweis auf den generischen Typ „Dictionary\<TKey,TValue>“ abrufen möchten, verwenden Sie ``Type.GetType("System.Collections.Generic.Dictionary`2")``.
 
 ## <a name="specifying-pointers"></a>Angeben von Zeigern
 

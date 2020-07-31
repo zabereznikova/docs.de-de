@@ -1,5 +1,6 @@
 ---
 title: Ausgeben von dynamischen Methoden und Assemblys
+description: Hier erfahren Sie, wie Sie dynamische Methoden und Assemblys mithilfe des Namespace „System.Reflection.Emit“ ausgeben. So können ein Compiler oder ein Tool Metadaten und MSIL-Code zur Laufzeit ausgeben.
 ms.date: 08/30/2017
 helpviewer_keywords:
 - reflection emit
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76d2a83943d9df06cc66cf86c6869f18fac2a12c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180526"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475046"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Ausgeben von dynamischen Methoden und Assemblys
 
