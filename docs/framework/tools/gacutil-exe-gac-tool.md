@@ -1,5 +1,6 @@
 ---
 title: Gacutil.exe (Global Assembly Cache-Tool)
+description: Informationen zu Gacutil.exe, dem Global Assembly Cache-Tool. Dieses Tool ermöglicht das Anzeigen und Bearbeiten des globalen Assemblycaches sowie des Downloadcaches.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-ms.openlocfilehash: 87f3cb799ba4e406906759e1facd19d00c8bdace
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1fe79a09aa99c9d91d8223e7642408a56da20dfe
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73107500"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166937"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Global Assembly Cache-Tool)
 
@@ -40,13 +41,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 ## <a name="parameters"></a>Parameter
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |*assemblyName*|Der Name einer Assembly. Sie können entweder einen teilweise angegebenen Assemblynamen, z. B. `myAssembly`, oder einen vollständig angegebenen Assemblynamen, z B. `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`, verwenden.|
 |*assemblyPath*|Der Name einer Datei, die ein Assemblymanifest enthält.|
 |*assemblyListFile*|Der Pfad zu einer ANSI-Textdatei, in der zu installierende oder zu deinstallierende Assemblys aufgeführt sind. Wenn Sie zum Installieren von Assemblys eine Textdatei verwenden möchten, geben Sie den Pfad zu den einzelnen Assemblys in der Datei jeweils in eigenen Zeilen an. Das Tool interpretiert relative Pfade als relativ zum Speicherort von *assemblyListFile*. Wenn Sie zum Deinstallieren von Assemblys eine Textdatei verwenden möchten, geben Sie den vollqualifizierten Namen der einzelnen Assemblys jeweils in eigenen Zeilen in der Datei an. Weitere Informationen hierzu finden Sie in den Beispielen zum Inhalt von *assemblyListFile* weiter unten in diesem Thema.|
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
 |**/cdl**|Löscht den Inhalt des Downloadcaches.|
 |**/f**|Geben Sie zum Erzwingen der Neuinstallation einer Assembly diese Option mit der **/i**-Option oder der **/il**-Option an. Wenn im globalen Assemblycache bereits eine Assembly mit demselben Namen vorhanden ist, wird diese vom Tool überschrieben.|

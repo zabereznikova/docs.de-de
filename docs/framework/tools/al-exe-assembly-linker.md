@@ -1,5 +1,6 @@
 ---
 title: Al.exe (Assembly Linker-Tool)
+description: Verwendung von AI.exe, dem Assembly Linker-Tool. Dieses Tool generiert eine Datei mit einem Assemblymanifest aus einer oder mehreren Dateien, bei denen es sich um Module oder Ressourcendateien handelt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Al.exe
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: b7081f00e31dfa8ac46909e61c7d389ba7954878
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 66408b11f4e82776058ac19b8454bf50906b4b86
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83611405"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167360"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker-Tool)
 
@@ -43,7 +44,7 @@ Sie können eine oder mehrere der folgenden Quellen (`sources`) angeben.
 
 Sie können die folgenden Optionen (`options`) angeben. Die Angabe von **/out** ist obligatorisch.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/algid:** `id`|Legt einen Algorithmus zum Hashen aller Dateien in einer Mehrfachdateiassembly mit Ausnahme der Datei, die das Assemblymanifest enthält, fest. Standardmäßig wird der Algorithmus "CALG_SHA1" verwendet. Informationen zu anderen Algorithmen finden Sie unter "ALG_ID" in der Platform SDK-Dokumentation. Für das erste Release von .NET Framework sind nur "CALG_SHA1" und "CALG_MD5" gültig.<br /><br /> Die Hashwerte werden in der Dateitabelle des Assemblymanifests gespeichert. Bei der Installation und beim Laden werden die Dateien der Assembly anhand ihrer Hashwerte überprüft.<br /><br /> Sie können diese Option auch als benutzerdefiniertes Attribut (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) im Quellcode für ein beliebiges Modul angeben.|
 |**/base[Adresse]:** `addr`|Legt die Adresse fest, an der eine DLL zur Laufzeit auf dem Computer des Benutzers geladen wird. Das Laden von Anwendungen kann beschleunigt werden, wenn nicht das Betriebssystem die DLLs im Prozessbereich verschiebt, sondern die Basisadresse der DLLs angegeben wird.|

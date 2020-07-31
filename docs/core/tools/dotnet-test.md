@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 04/29/2020
-ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803156"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251191"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,14 +21,17 @@ ms.locfileid: "84803156"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
-    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-a|--test-adapter-path <ADAPTER_PATH>] [--blame] [--blame-crash]
+    [--blame-crash-dump-type <DUMP_TYPE>] [--blame-crash-collect-always]
+    [--blame-hang] [--blame-hang-dump-type <DUMP_TYPE>]
+    [--blame-hang-timeout <TIMESPAN>]
     [-c|--configuration <CONFIGURATION>]
-    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
-    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--collect <DATA_COLLECTOR_NAME>]
+    [-d|--diag <LOG_FILE>] [-f|--framework <FRAMEWORK>]
     [--filter <EXPRESSION>] [--interactive]
-    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [-l|--logger <LOGGER>] [--no-build]
     [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-r|--results-directory <RESULTS_DIR>] [--runtime <RUNTIME_IDENTIFIER>]
     [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
     [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
@@ -64,7 +67,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 ## <a name="options"></a>Optionen
 
-- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
   Der Pfad zu einem Verzeichnis, das nach zusätzlichen Testadaptern durchsucht werden soll. Nur *DLL*-Dateien mit dem Suffix `.TestAdapter.dll` werden untersucht. Wenn nichts angegeben ist, wird das Verzeichnis der Test-*DLL* durchsucht.
 
@@ -72,11 +75,42 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
   Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren von fehlerhaften Tests, die den Absturz des Testhosts verursachen. Wenn ein Absturz erkannt wird, wird in `TestResults/<Guid>/<Guid>_Sequence.xml` eine Sequenzdatei erstellt, die die Reihenfolge der Tests erfasst, die vor dem Absturz ausgeführt wurden.
 
+- **`--blame-crash`** (Verfügbar seit .NET 5.0 Preview SDK)
+
+  Führt die Tests im Modus „Verantwortung zuweisen“ aus und erfasst ein Absturzabbild, wenn der Testhost unerwartet beendet wird. Diese Option wird nur unter Windows unterstützt. Ein Verzeichnis, das *procdump.exe* und *procdump64.exe* enthält, muss in der PATH- oder PROCDUMP_PATH-Umgebungsvariablen enthalten sein. [Tools herunterladen](https://docs.microsoft.com/sysinternals/downloads/procdump). Impliziert `--blame`.
+
+- **`--blame-crash-dump-type <DUMP_TYPE>`** (Verfügbar seit .NET 5.0 Preview SDK)
+
+  Der Typ des zu erfassenden Absturzspeicherabbilds. Impliziert `--blame-crash`.
+
+- **`--blame-crash-collect-always`** (Verfügbar seit .NET 5.0 Preview SDK)
+
+  Erfasst ein Absturzabbild bei einer erwarteten und einer unerwarteten Beendigung des Testhosts.
+
+- **`--blame-hang`** (Verfügbar seit .NET 5.0 Preview SDK)
+
+  Hiermit werden Tests im Modus „Verantwortung zuweisen“ ausgeführt, und ein Blockadeabbild wird erfasst, wenn der Test länger als angegeben dauert.
+
+- **`--blame-hang-dump-type <DUMP_TYPE>`** (Verfügbar seit .NET 5.0 Preview SDK)
+
+  Der Typ des zu erfassenden Absturzspeicherabbilds. Möglich sind `full`, `mini` oder `none`. Wenn `none` angegeben wird, wird der Testhost bei einem Timeout beendet, es wird jedoch kein Abbild erfasst. Impliziert `--blame-hang`.
+
+- **`--blame-hang-timeout <TIMESPAN>`** (Verfügbar seit .NET 5.0 Preview SDK)
+
+  Testspezifisches Timeout, nach dem ein Blockadeabbild ausgelöst und der Testhostprozess beendet wird. Der Timeoutwert wird in einem der folgenden Formate angegeben:
+  
+  - 1,5 Std.
+  - 90 Min.
+  - 5\.400 S
+  - 5\.400.000 ms
+
+  Wenn keine Einheit verwendet wird (z. B. 5.400.000), wird angenommen, dass der Wert in Millisekunden angegeben wird. Bei Verwendung in Verbindung mit datenorientierten Tests hängt das Timeoutverhalten vom verwendeten Testadapter ab. Bei xUnit und NUnit wird das Timeout nach jedem Testfall erneuert. Für MSTest wird das Timeout für alle Testfälle verwendet. Diese Option wird unter Windows mit netcoreapp2.1 und höher und unter Linux mit netcoreapp3.1 und höher unterstützt. macOS wird nicht unterstützt.
+
 - **`-c|--configuration <CONFIGURATION>`**
 
   Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
 
-- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_NAME>`**
 
   Aktiviert den Datensammler für den Testlauf. Weitere Informationen finden Sie unter [Monitor and analyze test run (Überwachen und Analysieren eines Testlaufs)](https://aka.ms/vstest-collect).
   
@@ -84,7 +118,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
   Unter Windows können Sie Code Coverage mithilfe der `--collect "Code Coverage"`-Option erfassen. Mit dieser Option wird eine *COVERAGE*-Datei generiert, die in Visual Studio 2019 Enterprise geöffnet werden kann. Weitere Informationen finden Sie unter [Verwenden von Code Coverage](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) und [Anpassen der Code Coverage-Analyse](/visualstudio/test/customizing-code-coverage-analysis).
 
-- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <LOG_FILE>`**
 
   Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei sowie in benachbarte Dateien. Der Prozess, der die Meldungen protokolliert, bestimmt, welche Dateien erstellt werden, z. B. `*.host_<date>.txt` für das Testhostprotokoll und `*.datacollector_<date>.txt` für das Datensammlerprotokoll.
 
@@ -104,7 +138,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
   Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten. Beispielsweise, um die Authentifizierung abzuschließen. Verfügbar seit .NET Core 3.0 SDK.
 
-- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER>`**
 
   Gibt eine Protokollierung für die Testergebnisse an. Im Gegensatz zu MSBuild akzeptiert der Befehl „dotnet test“ keine Abkürzungen: verwenden Sie `-l "console;verbosity=detailed"` anstelle von `-l "console;v=d"`.
 
@@ -124,7 +158,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
   Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind. Wenn nicht angegeben, ist der Standardpfad `./bin/<configuration>/<framework>/`.  Bei Projekten mit mehreren Zielframeworks (über die `TargetFrameworks`-Eigenschaft) müssen Sie auch `--framework` definieren, wenn Sie diese Option angeben. `dotnet test` führt Tests immer über das Ausgabeverzeichnis aus. Sie können <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> verwenden, um die Testobjekte im Ausgabeverzeichnis zu verarbeiten.
 
-- **`-r|--results-directory <PATH>`**
+- **`-r|--results-directory <RESULTS_DIR>`**
 
   Das Verzeichnis, in dem die Testergebnisse gespeichert werden. Wenn das Verzeichnis noch nicht vorhanden ist, wird es erstellt. Der Standardwert ist `TestResults` in dem Verzeichnis, das die Projektdatei enthält.
 
@@ -141,7 +175,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`-t|--list-tests`**
 
-  Listen Sie alle ermittelten Tests im aktuellen Projekt auf.
+  Hiermit werden die gefundenen Tests aufgelistet, anstatt sie auszuführen.
 
 - **`-v|--verbosity <LEVEL>`**
 

@@ -1,16 +1,17 @@
 ---
 title: Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
+description: Erste Schritte mit Mage.exe, dem Tool zum Generieren und Bearbeiten von Manifesten. Dieses Tool unterstützt die Erstellung und Bearbeitung von Anwendungs- und Bereitstellungsmanifesten.
 ms.date: 12/06/2018
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: b04fda81ae51462d9e686585de1477b4c9af4b26
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 864d3d7bd7cf32b5c2a5ce83819f4e78cd8ce043
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180391"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164267"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 
@@ -32,7 +33,7 @@ Mage [commands] [commandOptions]
 
 In der folgenden Tabelle werden die von *Mage.exe* unterstützten Befehle angezeigt. Weitere Informationen zu den Optionen, die diese Befehle unterstützen, finden Sie unter [Befehlsoptionen für "New" und "Update"](#new-and-update-command-options) und ["Sign"-Befehlsoptionen](#sign-command-options).
 
-|Befehl|Beschreibung|
+|Get-Help|BESCHREIBUNG|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Löscht den heruntergeladenen Anwendungscache aller Anwendungen, die nur online ausgeführt werden.|
 |**-n, -New** *fileType [newOptions]*|Erstellt eine neue Datei des angegebenen Typs. Gültige Typen sind:<br /><br /> -   `Deployment`: Erstellt ein neues Bereitstellungsmanifest.<br />-   `Application`: Erstellt ein neues Anwendungsmanifest.<br /><br /> Wenn Sie mit diesem Befehl keine weiteren Parameter angeben, wird eine Datei des entsprechenden Typs mit den zugehörigen Standardtags und Attributwerten erstellt.<br /><br /> Verwenden Sie die Option **-ToFile** (siehe folgende Tabelle), um den Dateinamen und den Pfad der neuen Datei anzugeben.<br /><br /> Verwenden Sie die Option **-FromDirectory** (siehe folgende Tabelle), um ein Anwendungsmanifest mit allen Assemblys für eine dem \<dependency>-Abschnitt des Manifests hinzugefügte Anwendung zu erstellen.|
@@ -45,7 +46,7 @@ In der folgenden Tabelle werden die von *Mage.exe* unterstützten Befehle angeze
 
 In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `-New` und `-Update` unterstützt werden:
 
-|Optionen|Standardwert|Gilt für|Beschreibung|
+|Optionen|Standardwert|Gilt für|BESCHREIBUNG|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Gibt den Algorithmus an, mit dem Abhängigkeitsdigests generiert werden sollen. Der Wert muss "sha256RSA" oder "sha1RSA" lauten.<br /><br /> Verwenden Sie diese Option mit dem Befehl "-Update". Diese Option wird bei der Verwendung des Befehls "-Sign" ignoriert.|
 |**-appc, -AppCodeBase** `manifestReference`||Bereitstellungsmanifeste|Fügt einen URL- oder Dateipfadverweis in die Anwendungsmanifestdatei ein. Dieser Wert muss der vollständige Pfad zum Anwendungsmanifest sein.|
@@ -76,7 +77,7 @@ In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `
 
 In der folgenden Tabelle werden die Optionen angezeigt, die von dem Befehl `-Sign` unterstützt werden und für alle Dateitypen gelten.
 
-|Optionen|Beschreibung|
+|Tastatur|BESCHREIBUNG|
 |-------------|-----------------|
 |**-cf, -CertFile** `filePath`|Gibt den Speicherort eines digitalen Zertifikats zum Signieren eines Manifests an. Diese Option kann in Verbindung mit der Option **-Password** verwendet werden, wenn ein Zertifikat ein Kennwort für Personal Information Exchange (PFX)-Dateien erfordert. Ab .NET Framework 4.7 ist, wenn die Datei keinen privaten Schlüssel enthält, eine Kombination der Optionen **-CryptoProvider** und **-KeyContainer** erforderlich.<br/><br/>Ab .NET Framework 4.6.2 signiert *Mage.exe* Manifeste mit CNG- sowie CAPI-Zertifikaten.|
 |**-ch, -CertHash** `hashSignature`|Der Hash eines im persönlichen Zertifikatspeicher des Clientcomputers gespeicherten digitalen Zertifikats. Dieser entspricht der Eigenschaft "Fingerabdruck" eines digitalen Zertifikats, das in der Zertifikatkonsole von Windows angezeigt wird.<br /><br /> `hashSignature` kann groß oder klein geschrieben werden und als einzelne Zeichenfolge oder so angegeben werden, dass die einzelnen Oktette des Fingerabdrucks durch Leerzeichen getrennt sind und der vollständige Fingerabdruck in Anführungszeichen eingeschlossen ist.|

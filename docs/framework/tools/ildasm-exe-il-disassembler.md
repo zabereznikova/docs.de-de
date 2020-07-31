@@ -1,5 +1,6 @@
 ---
 title: Ildasm.exe (IL Disassembler)
+description: Verwendung von Ildasm.exe (IL Disassembler), womit aus einer portierbaren ausführbaren Datei (Portable Executable, PE) mit IL-Code (Intermediate Language) eine Textdatei für Ilasm.exe erstellt werden kann.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PE files, MSIL Disassembler
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f2611488e7f653783cab833ad47131978bf74aa
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105059"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166839"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -34,7 +35,7 @@ ildasm [options] [PEfilename] [options]
 
 Für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* stehen die folgenden Optionen zur Verfügung.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/out=** `filename`|Erstellt eine Ausgabedatei mit dem angegebenen `filename`, anstatt die Ergebnisse in einer grafischen Benutzeroberfläche anzuzeigen.|
 |**/rtf**|Erzeugt die Ausgabe im RTF-Format. Ungültig mit der Option **/text**.|
@@ -44,7 +45,7 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* s
 
 Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgenden zusätzlichen Optionen zur Verfügung.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/bytes**|Zeigt die Bytes selbst im Hexadezimalformat als Kommentare zu Anweisungen an.|
 |**/caverbal**|Erzeugt BLOBs des benutzerdefinierten Attributs im verbalen Format. Der Standard entspricht dem binären Format.|
@@ -61,7 +62,7 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgen
 
 Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* bei der Ausgabe in einer Datei oder der Konsole.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/all**|Gibt eine Kombination der Optionen **/header**, **/bytes**, **/stats**, **/classlist** und **/tokens** an.|
 |**/classlist**|Umfasst eine Liste der im Modul definierten Klassen.|
@@ -76,13 +77,13 @@ Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.d
 
 Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* bei der Ausgabe in einer Datei oder der Konsole.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Zeigt Metadaten an. Dabei entspricht `specifier` Folgendem:<br /><br /> **MDHEADER**: Zeigt die Headerinformationen und -größen der Metadaten an.<br /><br /> **HEX**: Zeigt Informationen im Hexadezimalformat sowie in Wörtern an.<br /><br /> **CSV**: Zeigt die Anzahl von Datensätzen und die Heapgrößen an.<br /><br /> **UNREX**: Zeigt nicht aufgelöste Externe an.<br /><br /> **SCHEMA**: Zeigt den Metadatenheader und Schemainformationen an.<br /><br /> **RAW**: Zeigt die nicht formatierten Metadatentabellen an.<br /><br /> **HEAPS**: zeigt die unformatierten Heaps an.<br /><br /> **VALIDATE**: Überprüft die Konsistenz der Metadaten.<br /><br /> Sie können **/metadata** mehrmals angeben und unterschiedliche Werte für `specifier` verwenden.|
 
 Die folgenden Optionen gelten nur für *LIB*-Dateien bei der Ausgabe in eine Datei oder auf der Konsole.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Zeigt die Metadaten einer einzelnen Objektdatei in der angegebenen Bibliothek an.|
 

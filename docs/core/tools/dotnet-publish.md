@@ -2,12 +2,12 @@
 title: Befehl „dotnet publish“
 description: Der Befehl „dotnet publish“ dient zum Veröffentlichen eines .NET Core-Projekts oder einer .NET Core-Projektmappe in einem Verzeichnis.
 ms.date: 02/24/2020
-ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365582"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251178"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -54,8 +54,10 @@ Der Befehl `dotnet publish` ruft MSBuild auf, welches das `Publish`-Ziel aufruft
 Der `dotnet publish`-Befehl akzeptiert MSBuild-Optionen, z. B. `-p` zum Festlegen von Eigenschaften oder `-l` zum Definieren eines Protokolls. Beispielsweise können Sie eine MSBuild-Eigenschaft mit dem folgenden Format festlegen: `-p:<NAME>=<VALUE>`. Sie können auch Veröffentlichungseigenschaften festlegen, indem Sie auf eine *PUBXML*-Datei verweisen, wie z. B. in der folgenden Codezeile:
 
 ```dotnetcli
-dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+dotnet publish -p:PublishProfile=FolderProfile
 ```
+
+Im vorherigen Beispiel wird die Datei *FolderProfile.pubxml* verwendet, die sich im Ordner *\<project_folder>/Properties/PublishProfiles* befindet. Wenn Sie beim Festlegen der `PublishProfile`-Eigenschaft einen Pfad und eine Dateierweiterung angeben, werden diese ignoriert. MSBuild sucht standardmäßig im Ordner *Properties/PublishProfiles* und übernimmt die *PUBXML*-Dateierweiterung. Um den Pfad und den Dateinamen einschließlich der Erweiterung anzugeben, legen Sie die `PublishProfileFullPath`-Eigenschaft anstelle der `PublishProfile`-Eigenschaft fest.
 
 Weitere Informationen finden Sie in den folgenden Ressourcen:
 

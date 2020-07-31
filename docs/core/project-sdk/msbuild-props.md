@@ -3,12 +3,12 @@ title: MSBuild-Eigenschaften für Microsoft.NET.Sdk
 description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET Core SDK verstanden werden.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206108"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164379"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>MSBuild-Referenz für .NET Core SDK-Projekte
 
@@ -25,7 +25,7 @@ Diese Seite ist eine Referenz für die MSBuild-Eigenschaften und -Elemente, mit 
 
 ### <a name="targetframework"></a>TargetFramework
 
-Die Eigenschaft `TargetFramework` gibt die Zielframeworkversion für die App an, die implizit auf ein [Metapaket](../packages.md#metapackages) verweist. Eine Liste gültiger Zielframeworkmoniker finden Sie unter [Zielframeworks in Projekten im SDK-Format](../../standard/frameworks.md#supported-target-framework-versions).
+Die Eigenschaft `TargetFramework` gibt die Zielframeworkversion für die App an. Eine Liste gültiger Zielframeworkmoniker finden Sie unter [Zielframeworks in Projekten im SDK-Format](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <PropertyGroup>
@@ -55,7 +55,7 @@ Weitere Informationen finden Sie unter [Zielframeworks in Projekten im SDK-Forma
 > [!NOTE]
 > Diese Eigenschaft gilt nur für Projekte, die `netstandard1.x` verwenden. Sie gilt nicht für Projekte, die `netstandard2.x` verwenden.
 
-Verwenden Sie die Eigenschaft `NetStandardImplicitPackageVersion`, wenn Sie eine Frameworkversion angeben möchten, die niedriger ist als die [Metapaketversion](../packages.md#metapackages). Die Projektdatei im folgenden Beispiel gilt für `netstandard1.3`, verwendet aber Version 1.6.0 von `NETStandard.Library`.
+Verwenden Sie die Eigenschaft `NetStandardImplicitPackageVersion`, wenn Sie eine Frameworkversion angeben möchten, die niedriger ist als die Metapaketversion. Die Projektdatei im folgenden Beispiel gilt für `netstandard1.3`, verwendet aber Version 1.6.0 von `NETStandard.Library`.
 
 ```xml
 <PropertyGroup>
@@ -292,7 +292,7 @@ Sie können die Eigenschaft `AssetTargetFallback` auf eine oder mehrere [Zielfra
 
 ### <a name="packagereference"></a>PackageReference
 
-Das `PackageReference`-Element definiert einen Verweis auf ein NuGet-Paket. Beispiel: Sie möchten auf ein einzelnes Paket verweisen statt auf ein [Metapaket](../packages.md#metapackages).
+Das `PackageReference`-Element definiert einen Verweis auf ein NuGet-Paket.
 
 Das `Include`-Attribut gibt die Paket-ID an. Das `Version`-Attribut gibt die Version oder den Versionsbereich an. Informationen, wie Sie eine Mindestversion, Maximalversion, einen Versionsbereich oder eine exakte Versionsübereinstimmung angeben, finden Sie unter [Versionsbereiche](/nuget/concepts/package-versioning#version-ranges). Sie können auch die folgenden Metadaten zu einem Projektverweis hinzufügen: `IncludeAssets`, `ExcludeAssets` und `PrivateAssets`.
 

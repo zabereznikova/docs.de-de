@@ -1,5 +1,6 @@
 ---
 title: Certmgr.exe (Certificate Manager-Tool)
+description: Untersuchen von Certmgr.exe, dem Certificate Manager-Tool. Dieses Tool verwaltet Zertifikate, CTLs (Certificate Trust Lists, Zertifikatsvertrauenslisten) und CRLs (Certificate Revocation Lists, Zertifikatssperrlisten).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129879"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167262"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Certificate Manager-Tool)
 Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifikatvertrauenslisten (Certificate Trust Lists, CTLs) und Zertifikatsperrlisten (Certificate Revocation Lists, CRLs) verwalten.  
@@ -44,12 +45,12 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |*sourceStorename*|Der Zertifikatspeicher, der die vorhandenen Zertifikate, die CTLs oder CRLs enthält, die hinzugefügt, gelöscht, gespeichert oder angezeigt werden sollen. Dabei kann es sich um eine Speicherdatei oder einen Systemspeicher handeln.|  
 |*destinationStorename*|Der Ausgabezertifikatsspeicher bzw. die Ausgabedatei.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/add**|Fügt einem Zertifikatsspeicher Zertifikate, CTLs und CRLs hinzu.|  
 |**/all**|Fügt bei der Verwendung mit **/add** alle Einträge hinzu. Löscht bei der Verwendung mit **/del** alle Einträge. Zeigt bei der Verwendung ohne die Option **/add** oder **/del** alle Einträge an. Die Option **/all** kann nicht mit **/put** verwendet werden.|  

@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607479"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167403"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -76,11 +76,11 @@ Eine bestimmte Komponente wie `System.Runtime` beschreibt Folgendes:
 Abgeleitete Elemente werden bereitgestellt, um ein einfacheres Lesen und bestimmte Entwicklungsszenarios (z.B. die Verwendung eines Compilers) zu ermöglichen.
 
 - [API-Liste in Markdown](https://github.com/dotnet/standard/tree/master/docs/versions)
-- Referenzassemblys, die als [NuGet-Pakete](../core/packages.md) verteilt und vom Metapaket [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) referenziert werden.
+- Referenzassemblys, die als NuGet-Pakete verteilt und vom Metapaket [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) referenziert werden.
 
 ### <a name="package-representation"></a>Paketdarstellung
 
-Das primäre Verteilungsinstrument für .NET Standard sind [NuGet-Pakete](../core/packages.md). Implementierungen werden in einer Vielzahl von Methoden abgeleitet, die jeweils für die einzelnen .NET-Implementierungen geeignet sind.
+Das primäre Verteilungsinstrument für .NET Standard sind NuGet-Pakete. Implementierungen werden in einer Vielzahl von Methoden abgeleitet, die jeweils für die einzelnen .NET-Implementierungen geeignet sind.
 
 NuGet-Pakete sind auf mindestens ein [Framework](frameworks.md) ausgerichtet. Die Pakete von .NET Standard sind für das Framework „.NET Standard“ ausgelegt. Sie können über den `netstandard` [komprimierten TFM](frameworks.md) (z. B. `netstandard1.4`) das .NET Standard-Framework als Ziel angeben. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Ein Großteil der APIs sollte auf `netstandard2.0` ausgerichtet sein, da sich die Anzahl an verfügbaren APIs im Laufe der Versionen .NET Standard 1.6 und 2.0 mehr als verdoppelt hat.
 
@@ -102,7 +102,7 @@ Die Versionskontrolle von .NET Standard ist wichtig für die Nutzung. Mit einer 
 
 ## <a name="target-net-standard"></a>Verwenden von .NET Standard als Ziel
 
-Sie können .NET-Standardbibliotheken anhand einer Kombination aus dem `netstandard`-Framework und dem NETStandard.Library-Metapaket [erstellen](../core/tutorials/libraries.md). Sehen Sie sich Beispiele dafür an, wie [.NET Standard mithilfe von .NET Core-Tools als Ziel festgelegt wird](../core/packages.md).
+Sie können .NET-Standardbibliotheken anhand einer Kombination aus dem `netstandard`-Framework und dem NETStandard.Library-Metapaket [erstellen](../core/tutorials/libraries.md).
 
 ## <a name="net-framework-compatibility-mode"></a>Der .NET Framework-Kompatibilitätsmodus
 
