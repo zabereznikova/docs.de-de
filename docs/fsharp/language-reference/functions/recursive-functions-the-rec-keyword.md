@@ -2,12 +2,12 @@
 title: 'Rekursive Funktionen: Das rec-Schlüsselwort'
 description: "Erfahren Sie, wie das F #-Schlüsselwort ' REC ' mit dem ' Let '-Schlüsselwort verwendet wird, um eine rekursive Funktion zu definieren."
 ms.date: 05/16/2016
-ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426975"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455658"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Rekursive Funktionen: Das rec-Schlüsselwort
 
@@ -28,7 +28,7 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Rekursive Funktionen, die sich selbst aufzurufen, werden explizit in der F #-Sprache identifiziert. Dadurch ist der zu definierenden identierer im Gültigkeitsbereich der Funktion verfügbar.
 
@@ -43,7 +43,7 @@ Methoden sind implizit rekursiv innerhalb des Typs. Es ist nicht erforderlich, d
 
 ## <a name="tail-recursion"></a>Endrekursion
 
-Für einige rekursive Funktionen ist es erforderlich, eine "reine" Definition in eine "Pure"-Definition zu umgestalten, die [endrekursiv](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)ist. Dadurch werden unlogische Neuberechnungen verhindert. Beispielsweise kann der vorherige "fbonacci Number"-Generator wie folgt umgeschrieben werden:
+Für einige rekursive Funktionen ist es erforderlich, eine "reine" Definition in eine "Pure"-Definition zu umgestalten, die [endrekursiv](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)ist. Dies verhindert unnötige Neuberechnungen. Beispielsweise kann der vorherige "fbonacci Number"-Generator wie folgt umgeschrieben werden:
 
 ```fsharp
 let fib n =
