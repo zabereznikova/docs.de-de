@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool restore“
 description: Der Befehl dotnet tool restore installiert auf Ihrem Computer die lokalen .NET Core-Tools, die im Geltungsbereich des aktuellen Verzeichnisses liegen.
 ms.date: 02/14/2020
-ms.openlocfilehash: a518c2d45bbe9522bddfed4bbef61b30f1ad634b
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463335"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302671"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -20,7 +20,7 @@ ms.locfileid: "81463335"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME>
+dotnet tool restore
     [--configfile <FILE>] [--add-source <SOURCE>]
     [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
     [--ignore-failed-sources] [--no-cache] [--interactive]
@@ -32,12 +32,6 @@ dotnet tool restore -h|--help
 ## <a name="description"></a>Beschreibung
 
 Der Befehl `dotnet tool restore` findet die Manifestdatei des Tools, die im Geltungsbereich des aktuellen Verzeichnisses liegt, und installiert die darin aufgelisteten Tools. Informationen zu Manifestdateien finden Sie unter [Installieren eines lokalen Tools](global-tools.md#install-a-local-tool) und [Aufrufen eines lokalen Tools](global-tools.md#invoke-a-local-tool).
-
-## <a name="arguments"></a>Argumente
-
-- **`PACKAGE_NAME`**
-
-Name oder ID des NuGet-Pakets, das das zu installierende .NET Core-Tool enthält.
 
 ## <a name="options"></a>Optionen
 
