@@ -1,12 +1,13 @@
 ---
 title: Serialisierung (C#)
+description: Bei der Serialisierung wird ein Objekt in einen Bytestream konvertiert, um das Objekt zu speichern oder in den Arbeitsspeicher, eine Datenbank oder eine Datei zu übertragen.
 ms.date: 01/02/2020
-ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 29625648b19c97556c107997ef9ecd3f0f971cbf
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241980"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455746"
 ---
 # <a name="serialization-c"></a>Serialisierung (C#)
 
@@ -44,6 +45,8 @@ Bei der JSON-Serialisierung werden die öffentlichen Eigenschaften eines Objekts
 Der <xref:System.Runtime.Serialization>-Namespace enthält Klassen für die binäre Serialisierung und Deserialisierung sowie die XML-Serialisierung und -Deserialisierung.
 
 Die binäre Serialisierung verwendet zum Generieren einer kompakten Serialisierung die binäre Codierung für den Speicher oder für socketbasierte Netzwerkstreams. Bei der binären Serialisierung werden alle Member einschließlich der schreibgeschützten Member serialisiert, und die Leistung wird verbessert.
+
+[!INCLUDE [binary-serialization-warning](~/includes/binary-serialization-warning.md)]
 
 Bei der XML-Serialisierung werden die öffentlichen Felder und Eigenschaften eines Objekts bzw. die Parameter und Rückgabewerte von Methoden in einen XML-Stream serialisiert, der einem bestimmtem XSD-Dokument (XML Schema Definition) entspricht. Die XML-Serialisierung führt zu stark typisierten Klassen mit öffentlichen Eigenschaften und Feldern, die in XML konvertiert werden. <xref:System.Xml.Serialization> enthält Klassen zum Serialisieren und Deserialisieren in XML. Sie wenden Attribute auf Klassen und Klassenmember an, um die Art der Serialisierung oder Deserialisierung einer Instanz der Klasse durch <xref:System.Xml.Serialization.XmlSerializer> zu steuern.
 

@@ -1,16 +1,17 @@
 ---
 title: Delegaten – C#-Programmierhandbuch
+description: In C# ist ein Delegat ein Typ, der auf Methoden verweist und eine Parameterliste und einen Rückgabetyp enthält. Delegaten werden verwendet, um Methoden als Argumente an anderen Methoden zu übergeben.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94e7c130bd5d8e136d03ccdbaed643bc1a47d112
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75705365"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302164"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../language-reference/builtin-types/reference-types.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt. Nach Instanziierung eines Delegaten können Sie die Instanz mit einer beliebigen Methode verknüpfen, die eine kompatible Signatur und einen kompatiblen Rückgabetyp aufweist. Sie können die Methode über die Delegatinstanz aufrufen.  

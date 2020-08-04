@@ -1,16 +1,17 @@
 ---
 title: Namespaces – C#-Programmierhandbuch
+description: Hier erfahren Sie mehr über Namespaces bei der C#-Programmierung. Zudem finden Sie eine Übersicht der Namespaceeigenschaften und zusätzliche Ressourcen.
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fca2c641520bd9cd19a48bff2119a6f09c3713ea
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75937612"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382099"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
 
@@ -45,11 +46,11 @@ Namespaces verfügen über die folgenden Eigenschaften:
 
 Weitere Informationen finden Sie im Abschnitt [Namespaces](~/_csharplang/spec/namespaces.md) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Using-Namespaces](using-namespaces.md)
 - [Verwenden des My-Namespaces](how-to-use-the-my-namespace.md)
 - [Bezeichnernamen](../inside-a-program/identifier-names.md)
 - [using-Direktive](../../language-reference/keywords/using-directive.md)
-- [::-Operator](../../language-reference/operators/namespace-alias-qualifier.md)
+- [:: Operator](../../language-reference/operators/namespace-alias-qualifier.md)

@@ -1,5 +1,6 @@
 ---
 title: Indexer – C#-Programmierhandbuch
+description: Mithilfe von Indexern in C# können Klassen- oder Strukturinstanzen wie Arrays indiziert werden. Sie können den indizierten Wert festlegen oder abrufen, ohne einen Typ oder Instanzmember anzugeben.
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167539"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303113"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexer (C#-Programmierhandbuch)
 
@@ -33,7 +34,7 @@ Get- oder Set-Accessoren eines Indexers bestehen häufig aus einer einzelnen Anw
 
 Beachten Sie, dass `=>` den Ausdruckstext vorstellt und dass das `get`-Schlüsselwort nicht verwendet wird.
 
-Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermember implementiert werden. In diesem Fall müssen die Schlüsselwörter `get` und `set` verwendet werden. Beispiel:
+Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermember implementiert werden. In diesem Fall müssen die Schlüsselwörter `get` und `set` verwendet werden. Zum Beispiel:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -53,7 +54,7 @@ Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermembe
   
 - Indexer können mehr als einen formalen Parameter aufweisen, beispielsweise beim Zugreifen auf ein 2D-Array.  
   
-## <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> Verwandte Abschnitte  
   
 - [Verwenden von Indexern](./using-indexers.md)  
   
@@ -67,7 +68,7 @@ Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermembe
 
 Weitere Informationen erhalten Sie unter [Indexer](~/_csharplang/spec/classes.md#indexers) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Eigenschaften](../classes-and-structs/properties.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Unsicherer Code und Zeiger: C#-Programmierhandbuch'
+Description: Hier erfahren Sie mehr über unsicheren Code und Zeiger. C# unterstützt keine Zeiger, Sie können jedoch einen unsicheren Kontext definieren, in dem Zeiger mit dem Schlüsselwort unsafe verwendet werden können.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [C#], type safety
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5684a97ed6f7b6632d8fe3d52747d9187c4b8cbc
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711830"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381774"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Unsicherer Code und Zeiger (C#-Programmierhandbuch)
 
@@ -50,7 +51,7 @@ Weitere Informationen finden Sie unter:
 
 Weitere Informationen finden Sie unter [Unsicherer Code](~/_csharplang/spec/unsafe-code.md) in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
