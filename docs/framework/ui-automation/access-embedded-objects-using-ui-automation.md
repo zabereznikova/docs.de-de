@@ -1,5 +1,6 @@
 ---
 title: Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung
+description: Weitere Informationen finden Sie unter Zugreifen auf eingebettete Objekte mit Benutzeroberflächen Automatisierung innerhalb von Text Steuerungs Inhalt. Eingebettete Objekte werden als untergeordnete Elemente des Benutzeroberflächenautomatisierungs-Text Anbieters betrachtet.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 75c63360eab2cde95698bdaded5c5249a3ca89fd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 031d9c90318eec59ad2b77d611e0ed0d5a3ae719
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447266"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516969"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -27,7 +28,7 @@ ms.locfileid: "74447266"
   
  Eingebettete Objekte werden als untergeordnete Elemente des [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Textanbieters angesehen Dadurch können sie über dieselbe Benutzeroberflächenautomatisierungs-Struktur wie alle anderen [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Elemente verfügbar gemacht werden. Funktionen werden dagegen über die Steuerelementmuster verfügbar gemacht, die üblicherweise für den Steuerelementtyp der eingebetteten Objekte erforderlich sind (Links sind beispielsweise textbasiert und unterstützen daher <xref:System.Windows.Automation.TextPattern>).  
   
- ![Eingebettete Objekte in einem Text Container.](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+ ![Eingebettete Objekte in einem Textcontainer.](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
 Ein Beispiel Dokument mit Text Inhalt ("Wussten Sie schon?" ...) und zwei eingebettete Objekte (ein Bild von einem Wal und einem Textlink), die als Ziel für die Codebeispiele verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
@@ -56,6 +57,6 @@ Ein Beispiel Dokument mit Text Inhalt ("Wussten Sie schon?" ...) und zwei eingeb
 
 - [Übersicht über TextPattern für die Benutzeroberflächenautomatisierung](ui-automation-textpattern-overview.md)
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
 - [Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung](add-content-to-a-text-box-using-ui-automation.md)
 - [Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung](find-and-highlight-text-using-ui-automation.md)
