@@ -1,27 +1,33 @@
 ---
 title: 'Vorgehensweise: Erstellen eines WindowsPrincipal-Objekts'
-ms.date: 03/30/2017
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WindowsPrincipal objects, creating
-- security [.NET Framework], creating a WindowsPrincipal object
-- security [.NET Framework], principals
+- security [.NET], creating a WindowsPrincipal object
+- security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 6064c98c4e1e5153f4e0de4849de196228972a89
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d99d63dc766f37e7cc30888d2e77657595f909af
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284428"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557033"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Vorgehensweise: Erstellen eines WindowsPrincipal-Objekts
+
+> [!NOTE]
+> Dieser Artikel bezieht sich auf Windows.
+>
+> Weitere Informationen zu ASP.net Core finden Sie unter [ASP.net Core Sicherheit](/aspnet/core/security/).
+
 Es gibt zwei Möglichkeiten, ein <xref:System.Security.Principal.WindowsPrincipal>-Objekt zu erstellen. Diese hängen davon ab, ob Code eine rollenbasierte Validierung mehrfach oder nur einmal ausführen muss.  
   
- Wenn Code eine rollenbasierte Validierung mehrfach ausführen muss, verursacht die erste der folgenden Methoden einen geringeren Mehraufwand. Wenn Code eine rollenbasierte Validierung nur einmal ausführen muss, können Sie ein <xref:System.Security.Principal.WindowsPrincipal>-Objekt mit dem zweiten der folgenden Verfahren erstellen.  
+Wenn Code eine rollenbasierte Validierung mehrfach ausführen muss, verursacht die erste der folgenden Methoden einen geringeren Mehraufwand. Wenn Code eine rollenbasierte Validierung nur einmal ausführen muss, können Sie ein <xref:System.Security.Principal.WindowsPrincipal>-Objekt mit dem zweiten der folgenden Verfahren erstellen.  
   
 ### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>So erstellen Sie ein WindowsPrincipal-Objekt für eine mehrfache Validierung  
   
@@ -75,6 +81,7 @@ Es gibt zwei Möglichkeiten, ein <xref:System.Security.Principal.WindowsPrincipa
   
 3. Nachdem das Principal-Objekt erstellt wurde, können Sie es mit einer von mehreren Methoden überprüfen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Principal- und Identitätsobjekte](principal-and-identity-objects.md)
+- [ASP.net Core Sicherheit](https://docs.microsoft.com/aspnet/core/security/)

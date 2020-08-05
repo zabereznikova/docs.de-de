@@ -1,46 +1,44 @@
 ---
-title: Kryptografiedienste
-description: Lesen Sie eine Übersicht über die von .NET unterstützten Verschlüsselungsmethoden und-Verfahren wie ClickOnce-Manifeste, Suite B & Cryptography Next Generation (CNG)-Unterstützung.
-ms.date: 03/30/2017
+title: Kryptografische Dienste
+description: Eine Übersicht über die von .NET unterstützten Verschlüsselungsmethoden und-Methoden.
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- cryptography [.NET Framework]
+- cryptography [.NET]
 - pattern of derived class inheritance
 - digital signatures
 - asymmetric cryptographic algorithms
 - digital signatures, public-key systems
 - public keys
-- decryption [.NET Framework]
+- decryption [.NET]
 - private keys
 - MAC algorithms
 - cryptographic algorithms
 - private keys, overview
-- encryption [.NET Framework]
-- security [.NET Framework], encryption
+- encryption [.NET]
+- security [.NET], encryption
 - cryptographic services
 - symmetric cryptographic algorithms
 - hash
 - message authentication codes
 - derived class inheritance
-- cryptography [.NET Framework], about
+- cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 701dce82669395743c884a613512bfadc06c91b3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4cd4e493e0e7d159b2749dac78b9a560e20fd75c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596331"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557020"
 ---
-# <a name="cryptographic-services"></a>Kryptografiedienste
+# <a name="cryptographic-services"></a>Kryptografische Dienste
 
 Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.
 
-In .NET Framework werden viele Aspekte der Kryptografie von den Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType> -Namespace verwaltet. Einige davon sind Wrapper für die nicht verwaltete Microsoft Cryptography API (CryptoAPI), bei anderen handelt es sich um rein verwaltete Implementierungen. Sie müssen kein Experte in Sachen Kryptografie sein, um diese Klassen verwenden zu können. Wenn Sie eine neue Instanz einer Verschlüsselungsalgorithmusklasse erstellen, werden der Einfachheit halber automatisch Schlüssel erzeugt. Die Standardeigenschaften sind dabei auf möglichst hohe Sicherheit und hohen Schutz ausgelegt.
+In .net werden <xref:System.Security.Cryptography> viele Details der Kryptografie von den Klassen im-Namespace verwaltet. Bei manchen handelt es sich um Wrapper für Betriebssystem Implementierungen, bei anderen handelt es sich um rein verwaltete Implementierungen. Sie müssen kein Experte in Sachen Kryptografie sein, um diese Klassen verwenden zu können. Wenn Sie eine neue Instanz einer Verschlüsselungsalgorithmusklasse erstellen, werden der Einfachheit halber automatisch Schlüssel erzeugt. Die Standardeigenschaften sind dabei auf möglichst hohe Sicherheit und hohen Schutz ausgelegt.
 
-Diese Übersicht enthält eine Zusammenfassung der Verschlüsselungsmethoden und-Methoden, die von der .NET Framework unterstützt werden, einschließlich der ClickOnce-Manifeste, Suite B und der Unterstützung von Cryptography Next Generation (CNG), die in der .NET Framework 3,5 eingeführt wurde.
-
-Weitere Informationen zur Kryptografie sowie zu Microsoft-Diensten, -Komponenten und -Tools, mit deren Hilfe Sie Ihre Anwendungen mit kryptografischer Sicherheit versehen können, finden Sie in dieser Dokumentation im Abschnitt Sicherheit unter Win32- und COM-Entwicklung.
+Diese Übersicht enthält eine Zusammenfassung der Verschlüsselungsmethoden und-Methoden, die von .NET unterstützt werden, einschließlich der ClickOnce-Manifeste.
 
 ## <a name="cryptographic-primitives"></a>Kryptografische Grundelemente
 
@@ -85,19 +83,11 @@ Die Verschlüsselung mit geheimem Schlüssel hat den Nachteil, dass sich zwei Te
 
 Wenn es sich bei Alice und Bob um zwei Teilnehmer handelt, die über einen unsicheren Kanal miteinander kommunizieren möchten, könnten sie die Verschlüsselung mit geheimem Schlüssel wie nachfolgend beschrieben vornehmen: Alice und Bob einigen sich darauf, einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erstellt einen Netzwerkstream (vielleicht eine Named Pipe oder eine Netzwerk-e-Mail), an die die Nachricht gesendet werden soll. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann die ursprüngliche Nachricht vom Interceptor nicht wieder hergestellt werden, da Sie den Schlüssel nicht kennen. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.
 
-Der .NET Framework stellt die folgenden Klassen bereit, die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementieren:
+.NET stellt die folgenden Klassen bereit, die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementieren:
 
-- <xref:System.Security.Cryptography.AesManaged>(eingeführt in der .NET Framework 3,5).
+- <xref:System.Security.Cryptography.Aes>
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
-
-- <xref:System.Security.Cryptography.HMACSHA1> (Technisch gesehen handelt es sich hierbei um einen Algorithmus mit geheimem Schlüssel, da er einen Nachrichtenauthentifizierungscode darstellt, der mithilfe einer kryptografischen Hashfunktion und einem geheimen Schlüssel berechnet wird. Siehe [Hashwerte](#hash-values)weiter unten in diesem Thema.)
-
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
-
-- <xref:System.Security.Cryptography.RijndaelManaged>.
-
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
+- <xref:System.Security.Cryptography.HMACSHA256>, <xref:System.Security.Cryptography.HMACSHA384> und <xref:System.Security.Cryptography.HMACSHA512>. (Hierbei handelt es sich um technische Algorithmen mit geheimem Schlüssel, da Sie Nachrichten Authentifizierungscodes darstellen, die mithilfe einer kryptografischen Hash Funktion in Kombination mit einem geheimen Schlüssel berechnet werden. Siehe [Hashwerte](#hash-values)weiter unten in diesem Artikel.)
 
 ## <a name="public-key-encryption"></a>Verschlüsselung mit öffentlichem Schlüssel
 
@@ -123,23 +113,17 @@ In der folgenden Liste werden Kryptographiealgorithmen mit öffentlichem und geh
 
 - Algorithmen mit öffentlichem Schlüssel sind im Vergleich zu Algorithmen mit geheimem Schlüssel extrem langsam und für die Verschlüsselung großer Datenmengen nicht geeignet. Algorithmen mit öffentlichem Schlüssel sind nur für die Übertragung sehr kleiner Datenmengen sinnvoll. In der Regel werden bei der Verschlüsselung mit öffentlichem Schlüssel ein Schlüssel und ein Initialisierungsvektor verschlüsselt, die in einem Algorithmus mit geheimem Schlüssel verwendet werden sollen. Nach der Übertragung von Schlüssel und Initialisierungsvektor wird für die restliche Sitzung die Verschlüsselung mit geheimem Schlüssel verwendet.
 
-Der .NET Framework stellt die folgenden Klassen bereit, die Verschlüsselungsalgorithmen mit öffentlichem Schlüssel implementieren:
+.NET stellt die folgenden Klassen bereit, die Algorithmen mit öffentlichem Schlüssel implementieren:
 
-- <xref:System.Security.Cryptography.DSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.RSA>
 
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.ECDsa>
 
-- <xref:System.Security.Cryptography.ECDiffieHellman> (Basisklasse)
+- <xref:System.Security.Cryptography.ECDiffieHellman>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCng>
+- <xref:System.Security.Cryptography.DSA>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> (Basisklasse)
-
-- <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> (Basisklasse)
-
-- <xref:System.Security.Cryptography.ECDsaCng>
-
-RSA ermöglicht sowohl die Verschlüsselung als auch die Signatur. DSA kann dagegen nur für die Signatur und Diffie-Hellman nur für die Erzeugung von Schlüsseln verwendet werden. Algorithmen mit öffentlichem Schlüssel sind im Hinblick auf ihre Verwendung stärker eingeschränkt als Algorithmen mit privatem Schlüssel.
+RSA ermöglicht sowohl die Verschlüsselung als auch die Signatur, aber DSA kann nur für die Signierung verwendet werden. DSA ist nicht so sicher wie RSA, und wir empfehlen RSA. Diffie-Hellman kann nur für die Schlüsselgenerierung verwendet werden. Algorithmen mit öffentlichem Schlüssel sind im Hinblick auf ihre Verwendung stärker eingeschränkt als Algorithmen mit privatem Schlüssel.
 
 ## <a name="digital-signatures"></a>Digitale Signaturen
 
@@ -150,15 +134,13 @@ Um die Kryptografie mit öffentlichem Schlüssel zum digitalen Signieren einer N
 > [!NOTE]
 > Eine Signatur kann von jedem überprüft werden, da der öffentliche Schlüssel des Absenders allgemein bekannt und in der Regel im digitalen Signaturformat enthalten ist. Mit dieser Methode wird die Nachricht nicht geheim gehalten. Hierzu muss sie zusätzlich verschlüsselt werden.
 
-Der .NET Framework stellt die folgenden Klassen bereit, die digitale Signatur Algorithmen implementieren:
+.NET stellt die folgenden Klassen bereit, die digitale Signatur Algorithmen implementieren:
 
-- <xref:System.Security.Cryptography.DSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.RSA>
 
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.ECDsa>
 
-- <xref:System.Security.Cryptography.ECDsa> (Basisklasse)
-
-- <xref:System.Security.Cryptography.ECDsaCng>
+- <xref:System.Security.Cryptography.DSA>
 
 ## <a name="hash-values"></a>Hashwerte
 
@@ -184,38 +166,21 @@ Zwei Teilnehmer (Alice und Bob) könnten eine Hashfunktion verwenden, um die Nac
 
 Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten von Alice lesen, da sie als Klartext übertragen werden. Vollständige Sicherheit ist in der Regel nur mit digitalen Signaturen (Signieren von Nachrichten) und Verschlüsselung möglich.
 
-Der .NET Framework stellt die folgenden Klassen bereit, die Hash Algorithmen implementieren:
+.NET stellt die folgenden Klassen bereit, die Hash Algorithmen implementieren:
 
-- <xref:System.Security.Cryptography.HMACSHA1>.
+- <xref:System.Security.Cryptography.SHA256>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>.
+- <xref:System.Security.Cryptography.SHA384>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.SHA512>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>.
-
-- <xref:System.Security.Cryptography.SHA1Managed>.
-
-- <xref:System.Security.Cryptography.SHA256Managed>.
-
-- <xref:System.Security.Cryptography.SHA384Managed>.
-
-- <xref:System.Security.Cryptography.SHA512Managed>.
-
-- HMAC-Varianten aller SHA-Algorithmen (Secure Hash Algorithm), MD5-Algorithmen (Message Digest 5) und RIPEMD-160-Algorithmen.
-
-- CryptoServiceProvider-Implementierungen (Wrapper für verwalteten Code) aller SHA-Algorithmen.
-
-- CNG-Implementierungen (Cryptography Next Generation) aller MD5- und SHA-Algorithmen.
-
-> [!NOTE]
-> Fehler im Design von MD5 wurden 1996 erkannt und stattdessen SHA-1 empfohlen. 2004 wurden weitere Fehler festgestellt, und der MD5-Algorithmus galt nicht mehr als sicher. Der SHA-1-Algorithmus wurde ebenfalls als unsicher eingestuft, und nun wird stattdessen SHA-2 empfohlen.
+.Net bietet auch <xref:System.Security.Cryptography.MD5> und <xref:System.Security.Cryptography.SHA1> . Die MD5-und SHA-1-Algorithmen wurden jedoch als unsicher eingestuft, und SHA-2 wird jetzt empfohlen. SHA-2 umfasst SHA256, SHA384 und SHA512.
 
 ## <a name="random-number-generation"></a>Zufallszahlengenerierung
 
 Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in der .NET Framework verwenden Zufallszahlengeneratoren, um kryptografische Schlüssel zu generieren.
 
-Die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> -Klasse ist die Implementierung eines Algorithmus mit Zufallszahlengenerator.
+Die <xref:System.Security.Cryptography.RandomNumberGenerator> -Klasse ist die Implementierung eines Algorithmus mit Zufallszahlengenerator.
 
 ## <a name="clickonce-manifests"></a>ClickOnce-Manifeste
 
@@ -237,25 +202,9 @@ In den .NET Framework 3,5 können Sie mithilfe der folgenden Kryptografieklassen
 
 - <xref:System.Security.Cryptography.X509Certificates.TrustStatus> Liefert eine einfache Möglichkeit, um zu überprüfen, ob eine Authenticode-Signatur vertrauenswürdig ist.
 
-## <a name="suite-b-support"></a>Suite B-Unterstützung
-
-Der .NET Framework 3,5 unterstützt den Suite B Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht wurden. Weitere Informationen zur Suite B finden Sie im [NSA-Suite-B-Kryptographie-Merkblatt](https://www.nsa.gov/what-we-do/information-assurance/).
-
-Dazu gehören die folgenden Algorithmen:
-
-- AES-Algorithmus (Advanced Encryption Standard) mit Schlüsselgrößen von 128, 192 und 256 Bit für die Verschlüsselung.
-
-- SHA-1, SHA-256, SHA-384 und SHA-512 für Hashverfahren. (Die letzten beiden werden meist unter der Bezeichnung SHA-2 zusammengefasst.)
-
-- ECDSA (Elliptic Curve Digital Signature Algorithm) unter Verwendung von Kurven von 256-Bit-, 384-Bit- und 521-Bit-Primzahlenmodulen für Signaturen. Die NSA-Dokumentation definiert diese Kurven ausdrücklich und nennt sie P-256, P-384 und P-521. Dieser Algorithmus wird von der <xref:System.Security.Cryptography.ECDsaCng> -Klasse bereitgestellt. Er ermöglicht das Signieren mit einem privaten Schlüssel und das Überprüfen mit einem öffentlichen Schlüssel.
-
-- ECDH-Algorithmus (Elliptic Curve Diffie-Hellman) mit Kurven von 256-Bit-, 384-Bit- und 521-Bit-Primzahlenmodulen für den Schlüsselaustausch und Geheimvertrag. Dieser Algorithmus wird von der <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Klasse bereitgestellt.
-
-Wrapper für verwalteten Code für die FIPS-zertifizierten (Federal Information Processing Standard) Implementierungen von AES, SHA-256, SHA-384 und SHA-512 sind in den neuen Klassen <xref:System.Security.Cryptography.AesCryptoServiceProvider>, <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>, <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>und <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> verfügbar.
-
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG-Klassen (Cryptography Next Generation)
 
-Die CNG-Klassen (Cryptography Next Generation) stellen einen verwalteten Wrapper um die systemeigenen CNG-Funktionen bereit. (CNG ist der Ersatz für CryptoAPI.) Diese Klassen verfügen über "CNG" als Teil ihrer Namen. Zentrales Element dieser CNG-Wrapperklassen ist die <xref:System.Security.Cryptography.CngKey> -Schlüsselcontainerklasse, die die Speicherung und Verwendung von CNG-Schlüsseln abstrahiert. Diese Klasse ermöglicht es, ein Schlüsselpaar oder einen öffentlichen Schlüssel sicher zu speichern und mittels eines einfachen Zeichenfolgennamens auf diesen zu verweisen. Die ECDSA-basierte <xref:System.Security.Cryptography.ECDsaCng> -Signaturklasse und die <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Verschlüsselungsklasse können <xref:System.Security.Cryptography.CngKey> -Objekte verwenden.
+In den .NET Framework 3,5 und höheren Versionen stellen die CNG-Klassen (Cryptography Next Generation) einen verwalteten Wrapper für die nativen CNG-Funktionen bereit. (CNG ist der Ersatz für CryptoAPI.) Diese Klassen verfügen über "CNG" als Teil ihrer Namen. Zentrales Element dieser CNG-Wrapperklassen ist die <xref:System.Security.Cryptography.CngKey> -Schlüsselcontainerklasse, die die Speicherung und Verwendung von CNG-Schlüsseln abstrahiert. Diese Klasse ermöglicht es, ein Schlüsselpaar oder einen öffentlichen Schlüssel sicher zu speichern und mittels eines einfachen Zeichenfolgennamens auf diesen zu verweisen. Die ECDSA-basierte <xref:System.Security.Cryptography.ECDsaCng> -Signaturklasse und die <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Verschlüsselungsklasse können <xref:System.Security.Cryptography.CngKey> -Objekte verwenden.
 
 Die <xref:System.Security.Cryptography.CngKey> -Klasse wird für eine Vielzahl zusätzlicher Operationen verwendet, einschließlich dem Öffnen, Erstellen, Löschen und Exportieren von Schlüsseln. Sie stellt auch den Zugriff auf das zugrunde liegende Schlüsselhandle bereit, das für den direkten Aufruf systemeigener Funktionen verwendet wird.
 
@@ -267,10 +216,9 @@ Der .NET Framework 3,5 umfasst auch eine Reihe von unterstützenden CNG-Klassen,
 
 - <xref:System.Security.Cryptography.CngProperty> verwaltet häufig verwendete Schlüsseleigenschaften.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="see-also"></a>Weitere Informationen
 
-|Titel|BESCHREIBUNG|
-|-----------|-----------------|
-|[Kryptografiemodell](cryptography-model.md)|Beschreibt das Implementieren von Kryptografie in der Basisklassenbibliothek.|
-|[Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung](walkthrough-creating-a-cryptographic-application.md)|Veranschaulicht grundlegende Verschlüsselungs- und Entschlüsselungsaufgaben.|
-|[Konfigurieren kryptografischer Klassen](../../framework/configure-apps/configure-cryptography-classes.md)|Beschreibt das Zuordnen von Algorithmusnamen zu kryptografischen Klassen und von Objektbezeichnern zu einem kryptografischen Algorithmus.|
+- [Kryptografiemodell](cryptography-model.md) : Beschreibt, wie Kryptografie in der Basisklassen Bibliothek implementiert wird.
+- [Plattformübergreifende Kryptografie](cross-platform-cryptography.md)
+- [Verwenden der Auffüllung für die Zeitsteuerung bei Sicherheitsrisiken mit symmetrischer Entschlüsselung im CBC-Modus](vulnerabilities-cbc-mode.md)
+- [ASP.net Core Datenschutz](/aspnet/core/security/data-protection/introduction)

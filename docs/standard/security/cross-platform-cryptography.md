@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 793a9bc55e5bd660374abd2ae81899e63ce3f36a
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854024"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557150"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>Plattformübergreifende Kryptografie in .net Core und .net 5
 
@@ -123,7 +123,7 @@ Die Betriebssystem Bibliotheken werden zum Verschlüsseln und Entschlüsseln von
 
 .Net macht Typen verfügbar, damit Programme mit den vom .net-Kryptografiecode verwendeten Betriebssystem Bibliotheken interagieren können. Die beteiligten Typen übersetzen nicht zwischen Plattformen und sollten nur bei Bedarf direkt verwendet werden.
 
-| Typ                                                         | Windows | Linux         | macOS         |
+| type                                                         | Windows | Linux         | macOS         |
 |--------------------------------------------------------------|---------|---------------|---------------|
 | <xref:System.Security.Cryptography.RSACryptoServiceProvider> | ✔️     | ⚠️<sup>1</sup>| ⚠️<sup>1</sup> |
 | <xref:System.Security.Cryptography.RSACng>                   | ✔️     | ❌            | ❌            |
@@ -139,7 +139,7 @@ ECDSA (Elliptic Curve Digital Signature Algorithmus) die Schlüsselgenerierung e
 
 ECDSA-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und unterliegen ihren Einschränkungen.
 
-| Elliptische-Kurven-                     | Windows 10    | Windows 7-8,1 | Linux         | macOS         |
+| Elliptische-Kurven-                     | Windows 10    | Windows 7-8,1 | Linux         | macOS         |
 |------------------------------------|---------------|-----------------|---------------|---------------|
 | NIST P-256 (secp256r1)             | ✔️           | ✔️              | ✔️           | ✔️            |
 | NIST P-384 (secp384r1)             | ✔️           | ✔️              | ✔️           | ✔️            |
@@ -159,7 +159,7 @@ ECDSA-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und
 
 .Net macht Typen verfügbar, damit Programme mit den vom .net-Kryptografiecode verwendeten Betriebssystem Bibliotheken interagieren können. Die beteiligten Typen übersetzen nicht zwischen Plattformen und sollten nur bei Bedarf direkt verwendet werden.
 
-| Typ                                             | Windows | Linux | macOS |
+| type                                             | Windows | Linux | macOS |
 |--------------------------------------------------|---------|-------|-------|
 | <xref:System.Security.Cryptography.ECDsaCng>     | ✔️     | ❌    | ❌    |
 | <xref:System.Security.Cryptography.ECDsaOpenSsl> | ❌     | ✔️    | ⚠️\*  |
@@ -182,7 +182,7 @@ Die <xref:System.Security.Cryptography.ECDiffieHellman> Klasse gibt den "RAW"-We
 
 ECDH-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und unterliegen ihren Einschränkungen.
 
-| Elliptische-Kurven-                     | Windows 10    | Windows 7-8,1 | Linux         | macOS         |
+| Elliptische-Kurven-                     | Windows 10    | Windows 7-8,1 | Linux         | macOS         |
 |------------------------------------|---------------|-----------------|---------------|---------------|
 | NIST P-256 (secp256r1)             | ✔️           | ✔️              | ✔️           | ✔️            |
 | NIST P-384 (secp384r1)             | ✔️           | ✔️              | ✔️           | ✔️            |
@@ -202,7 +202,7 @@ ECDH-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und 
 
 .Net macht Typen verfügbar, damit Programme mit den von .NET verwendeten Betriebssystem Bibliotheken interagieren können. Die beteiligten Typen übersetzen nicht zwischen Plattformen und sollten nur bei Bedarf direkt verwendet werden.
 
-| Typ                                                       | Windows | Linux | macOS |
+| type                                                       | Windows | Linux | macOS |
 |------------------------------------------------------------|---------|-------|-------|
 | <xref:System.Security.Cryptography.ECDiffieHellmanCng>     | ✔️     | ❌    | ❌   |
 | <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> | ❌     | ✔️    | ⚠️\* |
@@ -236,7 +236,7 @@ Die Schlüsselgenerierung von DSA (Digital Signature Algorithmus) wird von den S
 
 .Net macht Typen verfügbar, damit Programme mit den vom .net-Kryptografiecode verwendeten Betriebssystem Bibliotheken interagieren können. Die beteiligten Typen übersetzen nicht zwischen Plattformen und sollten nur bei Bedarf direkt verwendet werden.
 
-| Typ                                                         | Windows | Linux         | macOS         |
+| type                                                         | Windows | Linux         | macOS         |
 |--------------------------------------------------------------|---------|---------------|---------------|
 | <xref:System.Security.Cryptography.DSACryptoServiceProvider> | ✔️     | ⚠️<sup>1</sup> | ⚠️<sup>1</sup> |
 | <xref:System.Security.Cryptography.DSACng>                   | ✔️     | ❌             | ❌            |
@@ -369,3 +369,5 @@ macOS unterstützt kein vom Benutzer initiiertes Timeout bei der CRL (Zertifikat
 
 * [.Net-Kryptografiemodell](cryptography-model.md)
 * [.Net-Kryptografiedienste](cryptographic-services.md)
+* [Verwenden der Auffüllung für die Zeitsteuerung bei Sicherheitsrisiken mit symmetrischer Entschlüsselung im CBC-Modus](vulnerabilities-cbc-mode.md)
+* [ASP.net Core Datenschutz](/aspnet/core/security/data-protection/introduction)

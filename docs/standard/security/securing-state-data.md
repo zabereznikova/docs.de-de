@@ -4,19 +4,20 @@ description: Deklarieren Sie Zustandsdaten als private oder interne Variablen, u
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- security [.NET Framework], state data
+- security [.NET], state data
 - code security, state data
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: b7fcb520fe6fa28cc098c4e1cbb56ce7da759c11
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 73bd0ace28e5b9661cc86d6749ceef9aa4c9ac92
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291044"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557124"
 ---
 # <a name="securing-state-data"></a>Sichern von Statusdaten
+
 Anwendungen, die vertrauliche Daten verarbeiten oder irgendwelche Sicherheitsentscheidungen treffen, müssen diese Daten unter eigener Kontrolle behalten und sie vor dem direkten Zugriff durch möglicherweise böswilligen Code schützen. Die beste Möglichkeit, Daten im Speicher zu schützen, besteht darin, diese als private oder interne (Gültigkeitsbereich ist auf dieselbe Assembly beschränkt) Variablen zu deklarieren. Allerdings wird auch auf diese Daten zugegriffen, also sollten Sie Folgendes berücksichtigen:  
   
 - Über Reflektionsmechanismen kann sehr vertrauenswürdiger Code, der auf das Objekt verweisen kann, private Member abrufen und festlegen.  
@@ -27,6 +28,7 @@ Anwendungen, die vertrauliche Daten verarbeiten oder irgendwelche Sicherheitsent
   
  Stellen Sie sicher, dass diese Werte in keiner Ihrer Methoden oder Eigenschaften versehentlich verfügbar gemacht werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Richtlinien für das Schreiben von sicherem Code](secure-coding-guidelines.md)
+- [ASP.net Core Sicherheit](/aspnet/core/security/)

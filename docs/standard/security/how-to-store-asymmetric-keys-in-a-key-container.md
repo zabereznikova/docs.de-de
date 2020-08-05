@@ -7,25 +7,28 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [.NET Framework], asymmetric keys
+- cryptography [.NET], asymmetric keys
 - storing asymmetric keys
 - keys, asymmetric
 - encryption keys
 - keys, storing in key containers
-- asymmetric keys [.NET Framework]
-- encryption [.NET Framework], asymmetric keys
+- asymmetric keys [.NET]
+- encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: a0fbde37491043cc1aab71e9733087bf410b997d
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769028"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556292"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>Speichern von asymmetrischen Schlüsseln in einem Schlüssel Container
 
 Asymmetrische private Schlüssel sollten in keinem Fall in vollem Wortlaut oder in Klartext auf dem lokalen Computer gespeichert werden. Wenn Sie einen privaten Schlüssel speichern müssen, verwenden Sie einen Schlüssel Container. Weitere Informationen zu Schlüssel Containern finden Sie Untergrund Legendes zu [RSA-Schlüssel Containern auf Computer Ebene und Benutzerebene](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).
+
+> [!NOTE]
+> Der Code in diesem Artikel gilt für Windows.
 
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Erstellen Sie einen asymmetrischen Schlüssel, und speichern Sie ihn in einem Schlüssel Container.
 
@@ -244,7 +247,10 @@ Key deleted.
 
 ## <a name="see-also"></a>Weitere Informationen
 
+- [Kryptografiemodell](cryptography-model.md)
+- [Kryptografische Dienste](cryptographic-services.md)
+- [Plattformübergreifende Kryptografie](cross-platform-cryptography.md)
 - [Erzeugen von Schlüsseln für die Verschlüsselung und Entschlüsselung](generating-keys-for-encryption-and-decryption.md)
 - [Verschlüsseln von Daten](encrypting-data.md)
 - [Entschlüsseln von Daten](decrypting-data.md)
-- [Kryptografiedienste](cryptographic-services.md)
+- [ASP.net Core Datenschutz](/aspnet/core/security/data-protection/introduction)

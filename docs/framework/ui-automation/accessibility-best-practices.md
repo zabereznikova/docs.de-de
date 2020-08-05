@@ -6,38 +6,39 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 725bb0c60972e2d0dc6089b4370dd7e3e436e444
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 2980881bbcd34ca82f6cca7723cf976e0890f463
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517060"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557085"
 ---
-# <a name="accessibility-best-practices"></a>Bewährte Methoden für Eingabehilfen
+# <a name="accessibility-best-practices"></a>Bewährte Methoden für die Barrierefreiheit
+
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
+> Dieser Artikel ist für .NET Framework Entwickler gedacht, die die im-Namespace definierten Klassen der Managed UI Automation verwenden möchten <xref:System.Windows.Automation> . Die neuesten Informationen zur Benutzeroberflächen Automatisierung finden Sie unter [Windows Automation-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
- Durch das Implementieren der folgenden bewährten Methoden in Steuerelementen oder Anwendungen wird die Barrierefreiheit für Personen verbessert, die Hilfstechnologiegeräte verwenden. Viele dieser bewährten Methoden konzentrieren sich auf einen guten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Entwurf. Jede bewährte Methode umfasst Implementierungsinformationen für [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] -Steuerelemente oder -Anwendungen. In vielen Fällen enthalten die [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Steuerelemente bereits die Funktionen, um diese bewährten Methoden zu erfüllen.  
+ Durch das Implementieren der folgenden bewährten Methoden in Steuerelementen oder Anwendungen wird die Barrierefreiheit für Personen verbessert, die Hilfstechnologiegeräte verwenden. Viele dieser bewährten Methoden konzentrieren sich auf einen guten Entwurf der Benutzeroberfläche. Jede bewährte Vorgehensweise umfasst Implementierungs Informationen für Windows Presentation Foundation (WPF)-Steuerelemente oder-Anwendungen. In vielen Fällen ist die Arbeit zum erfüllen dieser bewährten Methoden bereits in WPF-Steuerelementen enthalten.  
   
 <a name="Programmatic_Access"></a>
 ## <a name="programmatic-access"></a>Programmgesteuerter Zugriff  
- Beim programmgesteuerten Zugriff muss sichergestellt werden, dass alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente eine Bezeichnung aufweisen, Eigenschaftswerte verfügbar gemacht und entsprechende Ereignisse ausgelöst werden. Für [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelemente ist der größte Teil dieser Arbeit bereits über <xref:System.Windows.Automation.Peers.AutomationPeer>erfolgt. Benutzerdefinierte Steuerelemente erfordern zusätzliche Arbeit, um sicherzustellen, dass der programmgesteuerte Zugriff ordnungsgemäß implementiert wurde.  
+ Der programmgesteuerte Zugriff umfasst die Sicherstellung, dass alle Elemente der Benutzeroberfläche gekennzeichnet sind, Eigenschaftswerte verfügbar gemacht und entsprechende Ereignisse ausgelöst werden. Für WPF-Standard Steuerelemente ist der größte Teil dieser Arbeit bereits über erfolgt <xref:System.Windows.Automation.Peers.AutomationPeer> . Benutzerdefinierte Steuerelemente erfordern zusätzliche Arbeit, um sicherzustellen, dass der programmgesteuerte Zugriff ordnungsgemäß implementiert wurde.  
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Aktivieren des programmgesteuerten Zugriffs auf alle Elemente der Benutzeroberfläche und auf Text  
- Benutzeroberflächen Elemente (UI) sollten den programmgesteuerten Zugriff aktivieren. Wenn [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ein [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelement ist, ist die Unterstützung für den programmgesteuerten Zugriff im Steuerelement enthalten. Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, d. h. ein Steuerelement, das als Unterklasse eines allgemeinen Steuerelements oder als Unterklasse von "Control" abgeleitet wurde, müssen Sie die <xref:System.Windows.Automation.Peers.AutomationPeer> -Implementierung auf Bereiche prüfen, für die möglicherweise eine Änderung erforderlich ist.  
+ Benutzeroberflächen Elemente (UI) sollten den programmgesteuerten Zugriff aktivieren. Wenn die Benutzeroberfläche ein Standardmäßiges WPF-Steuerelement ist, ist die Unterstützung für den programmgesteuerten Zugriff im Steuerelement enthalten. Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, d. h. ein Steuerelement, das als Unterklasse eines allgemeinen Steuerelements oder als Unterklasse von "Control" abgeleitet wurde, müssen Sie die <xref:System.Windows.Automation.Peers.AutomationPeer> -Implementierung auf Bereiche prüfen, für die möglicherweise eine Änderung erforderlich ist.  
   
- Durch Befolgen dieser bewährten Vorgehensweise können hilfstechnologiehersteller Elemente Ihres Produkts identifizieren und bearbeiten [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
+ Durch Befolgen dieser bewährten Vorgehensweise können Hilfstechnologieanbieter Elemente der Benutzeroberfläche Ihres Produkts identifizieren und bearbeiten.  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Platzieren von Namen, Titeln und Beschreibungen auf Benutzeroberflächenobjekte, Frames und Seiten  
- Hilfstechnologien, insbesondere Sprachausgaben, verwenden den Titel, um die Position von Frames, Objekten oder Seiten im Navigationsschema zu verstehen. Aus diesem Grund muss der Titel sehr aussagekräftig sein. Beispielsweise ist der Titel "Microsoft-Webseite" für eine Webseite unbrauchbar, wenn der Benutzer weit in einen bestimmten Bereich vorgedrungen ist. Ein aussagekräftiger Titel ist wichtig für Benutzer, die blind sind und auf Sprachausgaben angewiesen sind. Ebenso sind für Steuer [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Elemente <xref:System.Windows.Automation.AutomationProperties.NameProperty> und für <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> Hilfstechnologiegeräte wichtig.  
+ Hilfstechnologien, insbesondere Sprachausgaben, verwenden den Titel, um die Position von Frames, Objekten oder Seiten im Navigationsschema zu verstehen. Daher muss der Titel beschreibend sein. Beispielsweise ist der Titel "Microsoft-Webseite" für eine Webseite unbrauchbar, wenn der Benutzer weit in einen bestimmten Bereich vorgedrungen ist. Ein aussagekräftiger Titel ist wichtig für Benutzer, die blind sind und auf Sprachausgaben angewiesen sind. Ebenso sind für WPF-Steuerelemente <xref:System.Windows.Automation.AutomationProperties.NameProperty> und für <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> Hilfstechnologiegeräte wichtig.  
   
- Durch Befolgen dieser bewährten Vorgehensweise können unterstützende Technologys [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in Beispiel Steuerelementen und-Anwendungen identifizieren und bearbeiten.  
+ Durch Befolgen dieser bewährten Vorgehensweise können Hilfstechnologien die Benutzeroberfläche in Beispiel Steuerelementen und-Anwendungen identifizieren und bearbeiten.  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>Gewährleisten der Auslösung programmgesteuerter Ereignisse durch alle Aktivitäten auf der Benutzeroberfläche  
- Durch Befolgen dieser bewährten Vorgehensweise können unterstützende Technologys auf Änderungen in lauschen [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] und den Benutzer über diese Änderungen benachrichtigen.  
+ Durch Befolgen dieser bewährten Vorgehensweise können Hilfstechnologien auf Änderungen in der Benutzeroberfläche lauschen und den Benutzer über diese Änderungen benachrichtigen.  
   
 <a name="User_Settings"></a>
 ## <a name="user-settings"></a>Benutzereinstellungen  
@@ -61,13 +62,13 @@ ms.locfileid: "87517060"
   
 <a name="Support_High_Contrast_and_all_System_Display_Attributes"></a>
 ### <a name="support-high-contrast-and-all-system-display-attributes"></a>Unterstützen von hohem Kontrast und allen Systemanzeigeattributen  
- Anwendungen sollten vom Benutzer ausgewählte, systemweite Kontrasteinstellungen, Farbauswahlen oder andere systemweite Anzeigeeinstellungen und -attribute nicht stören oder deaktivieren. Die von einem Benutzer übernommenen systemweiten Einstellungen erhöhen die Barrierefreiheit von Anwendungen, daher sollten sie von Anwendungen nicht deaktiviert oder ignoriert werden. Farben müssen in der richtigen Kombination für Vorder- und Hintergrund verwendet werden, um den geeigneten Kontrast zu bieten. Nicht verbundene Farben sollten nicht kombiniert und Farben nicht invertiert werden.  
+ Anwendungen sollten vom Benutzer ausgewählte, systemweite Kontrasteinstellungen, Farbauswahlen oder andere systemweite Anzeigeeinstellungen und -attribute nicht stören oder deaktivieren. Die von einem Benutzer übernommenen systemweiten Einstellungen erhöhen die Barrierefreiheit von Anwendungen, daher sollten sie von Anwendungen nicht deaktiviert oder ignoriert werden. Farben müssen in der richtigen Kombination für Vorder- und Hintergrund verwendet werden, um den geeigneten Kontrast zu bieten. Kombinieren Sie keine nicht verknüpften Farben, und ändern Sie keine Farben.  
   
  Viele Benutzer benötigen bestimmte kontrastreiche Kombinationen, z. B. weißen Text auf schwarzem Hintergrund. Die invertierte Darstellung mit schwarzem Text auf weißem Hintergrund führt dazu, dass der Hintergrund auf den Vordergrund übergreift und das Lesen für manche Benutzer erschwert wird.  
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Gewährleisten der ordnungsgemäßen Skalierung aller Benutzeroberflächenelemente bei beliebiger DPI-Einstellung  
- Stellen Sie sicher, dass alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] nach jeder dpi-Einstellung (dpi) ordnungsgemäß skaliert werden können. Stellen Sie außerdem sicher, dass die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente auf einem Bildschirm von 1024 x 768 mit 120 Punkten pro Zoll (dpi) passen.  
+ Stellen Sie sicher, dass die gesamte Benutzeroberfläche nach jeder dpi-Einstellung (dpi) ordnungsgemäß skaliert werden kann. Stellen Sie außerdem sicher, dass Benutzeroberflächen Elemente in einem Bildschirm von 1024 x 768 mit 120 Punkten pro Zoll (dpi) passen.  
   
 <a name="Navigation"></a>
 ## <a name="navigation"></a>Navigation  
@@ -75,7 +76,7 @@ ms.locfileid: "87517060"
   
 <a name="Provide_Keyboard_Interface_for_all_UI_Elements"></a>
 ### <a name="provide-keyboard-interface-for-all-ui-elements"></a>Bereitstellen einer Tastaturschnittstelle für alle Elemente der Benutzeroberfläche  
- Tabstopps bieten Benutzern besonders bei sorgfältiger Planung eine weitere Möglichkeit zum Navigieren der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Tabstopps, insbesondere wenn Sie sorgfältig geplant sind, haben Benutzern eine weitere Möglichkeit, die Benutzeroberfläche zu navigieren.  
   
  Anwendungen sollten die folgenden Tastaturschnittstellen bereitstellen:  
   
@@ -85,7 +86,7 @@ ms.locfileid: "87517060"
   
 <a name="Show_the_Keyboard_Focus"></a>
 ### <a name="show-the-keyboard-focus"></a>Anzeigen des Tastaturfokus  
- Benutzer müssen wissen, welches Objekt den Tastaturfokus hat, damit sie die Auswirkungen ihrer Tastatureingaben voraussehen können. Verwenden Sie Farben, Schriftarten oder grafische Darstellungen (z. B. Rechtecke oder eine Vergrößerung), um den Tastaturfokus hervorzuheben. Um den Tastaturfokus akustisch hervorzuheben, ändern Sie die Lautstärke, Tonhöhe oder Tonqualität.  
+ Benutzer müssen wissen, welches Objekt den Tastaturfokus hat, damit sie die Auswirkungen ihrer Tastatureingaben voraussehen können. Verwenden Sie Farben, Schriftarten oder grafische Darstellungen (z. B. Rechtecke oder eine Vergrößerung), um den Tastaturfokus hervorzuheben. Um den Tastaturfokus zu verdeutlichen, ändern Sie das Volume, die Größe oder die Tonqualität.  
   
  Um Verwechselungen zu vermeiden, sollten Anwendungen alle visuellen Fokusindikatoren ausblenden und die Auswahl abblenden, die sich in inaktiven Fenstern (oder Bereichen) befindet.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "87517060"
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Unterstützen von Navigationsstandards und leistungsstarken Navigationsschemas  
- Unterschiedliche Aspekte der Tastaturnavigation bieten verschiedene Möglichkeiten zum Navigieren der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Verschiedene Aspekte der Tastaturnavigation bieten verschiedene Möglichkeiten für Benutzer, die Benutzeroberfläche zu navigieren.  
   
  Anwendungen sollten die folgenden Tastaturschnittstellen bereitstellen:  
   
@@ -111,17 +112,17 @@ ms.locfileid: "87517060"
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Vermeiden störender Auswirkungen der Mausposition auf die Tastaturnavigation  
- Die Position des Mauszeigers sollte nicht die Tastaturnavigation behindern. Wenn sich der Mauszeiger z. B. an einer beliebigen Position befindet und der Benutzer über die Tastatur navigiert, darf ein Mausklick nur auftreten, wenn er vom Benutzer initiiert wird.  
+ Die Position des Mauszeigers sollte nicht die Tastaturnavigation behindern. Wenn sich die Maus z. b. an einer bestimmten Position befindet und der Benutzer mit der Tastatur navigiert, darf ein Mausklick nur auftreten, wenn er vom Benutzer initiiert wird.  
   
 <a name="Multimodal_Interface"></a>
 ## <a name="multimodal-interface"></a>Multimodale Schnittstelle  
- Die bewährten Methoden in diesem Abschnitt stellen sicher, dass die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] der Anwendung auch Alternativen für visuelle Elemente umfasst.  
+ Die bewährten Methoden in diesem Abschnitt stellen sicher, dass die Benutzeroberfläche der Anwendung Alternativen für visuelle Elemente enthält.  
   
 <a name="Provide_User_Selectable_Equivalents_for_Non_Text"></a>
 ### <a name="provide-user-selectable-equivalents-for-non-text-elements"></a>Bereitstellen von auswählbaren Entsprechungen für Nicht-Text-Elemente  
  Geben Sie für jedes Nicht-Textelement eine vom Benutzer auswählbare Entsprechung für Text, Aufzeichnungen oder Audiobeschreibungen ein, z. B. alternativen Text, Beschriftungen oder visuelles Feedback.  
   
- Nicht-Textelemente decken eine breite Palette von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elementen ab, einschließlich: Bilder, Imagemapbereiche, Animationen, Applets, Frames, Skripts, grafische Schaltflächen, Sounds, eigenständige Audiodateien und Video. Nicht-Textelemente sind wichtig, wenn sie visuelle Informationen, Sprache oder allgemeine Informationen enthalten, auf die der Benutzer zugreifen können muss, um den Inhalt der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]zu verstehen.  
+ Nicht-Textelemente decken eine breite Palette von Elementen der Benutzeroberfläche ab, einschließlich: Bilder, Imagemapbereiche, Animationen, Applets, Frames, Skripts, grafische Schaltflächen, Sounds, eigenständige Audiodateien und Videos. Nicht-Textelemente sind wichtig, wenn Sie visuelle Informationen, Sprache oder allgemeine Audioinformationen enthalten, auf die der Benutzer Zugriff hat, um den Inhalt der Benutzeroberfläche zu verstehen.  
   
 <a name="Use_Color_but_also_Provide_Alternatives_to_Color"></a>
 ### <a name="use-color-but-also-provide-alternatives-to-color"></a>Verwenden von Farbe und Bereitstellen von Alternativen für Farbe  
@@ -129,9 +130,9 @@ ms.locfileid: "87517060"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Verwenden von Standardeingabe-APIs mit geräteunabhängigen Aufrufen  
- Geräteunabhängige Aufrufe stellen die Gleichheit von Tastatur-und Mausfunktionen sicher, während Sie Hilfstechnologien mit erforderlichen Informationen über das bereitstellen [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
+ Geräteunabhängige Aufrufe stellen die Gleichheit von Tastatur-und Mausfunktionen sicher, während Sie Hilfstechnologien mit erforderlichen Informationen über die Benutzeroberfläche bereitstellen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Automation.Peers>
 - [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))(Benutzerdefiniertes NumericUpDown-Steuerelement mit Unterstützung von Design und Automatisierung)
