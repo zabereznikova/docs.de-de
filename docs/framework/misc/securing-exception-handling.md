@@ -10,14 +10,17 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: c7643bb34da0cbcbd267fc90e6294bc0b565985e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309039"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855776"
 ---
 # <a name="securing-exception-handling"></a>Sichern der Ausnahmebehandlung
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 In Visual C++ und Visual Basic wird ein Filter Ausdruck, der weiter oben im Stapel steht, vor jeder `finally` Anweisung ausgeführt. Der **catch** -Block, der diesem Filter zugeordnet ist, wird nach der- `finally` Anweisung ausgeführt. Weitere Informationen finden Sie unter [Verwenden von Benutzer gefilterten Ausnahmen](../../standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Sicherheitsauswirkungen dieser Bestellung erläutert. Sehen Sie sich das folgende Pseudo Codebeispiel an, das die Reihenfolge veranschaulicht, in der Filter Anweisungen und `finally` Anweisungen ausgeführt werden.  
   
 ```cpp  

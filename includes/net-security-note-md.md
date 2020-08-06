@@ -1,14 +1,18 @@
 ---
-ms.openlocfilehash: f70452cbadc8927521f0fcfda693586c277e4d0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b0edd9a49ca431355ab4f57fa041c5d1756d7eb
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70041161"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855664"
 ---
 > [!CAUTION]
-> Codezugriffssicherheit und teilweise vertrauenswürdiger Code
+> Code Zugriffssicherheit (Code Access Security, CAS) und teilweise vertrauenswürdiger Code
 >
-> .NET Framework bietet einen Mechanismus namens Codezugriffssicherheit (Code Access Security, CAS) zur Erzwingung verschiedener Vertrauensebenen für anderen Code, der in der gleichen Anwendung ausgeführt wird.  Die Codezugriffssicherheit sollte in .NET Framework nicht als Mechanismus zum Erzwingen von Sicherheitsbegrenzungen verwendet werden, die auf dem Codeursprung oder anderen Identitätsaspekten beruhen. Wir aktualisieren unsere Leitfäden, um darauf hinzuweisen, dass die Codezugriffssicherheit und sicherheitstransparenter Code als Sicherheitsbegrenzung bei teilweise vertrauenswürdigem Code nicht unterstützt werden, insbesondere bei Code mit unbekannter Herkunft. Wir raten davon ab, Code unbekannter Herkunft zu laden und auszuführen, ohne alternative Sicherheitsmaßnahmen zu treffen.
+> .NET Framework bietet einen Mechanismus namens Codezugriffssicherheit (Code Access Security, CAS) zur Erzwingung verschiedener Vertrauensebenen für anderen Code, der in der gleichen Anwendung ausgeführt wird.
+>
+> **CAS wird in .net Core, .net 5 oder höheren Versionen nicht unterstützt. CAS werden von Versionen von c# höher als 7,0 nicht unterstützt.**
+>
+> CAS in .NET Framework sollten nicht als Mechanismus zum Erzwingen von Sicherheitsgrenzen auf der Grundlage von Code Ursprungs oder anderen Identitäts Aspekten verwendet werden. CAS und Sicherheits transparenter Code werden nicht als Sicherheitsgrenze mit teilweise vertrauenswürdigem Code unterstützt, insbesondere bei Code mit unbekannter Herkunft. Wir raten davon ab, Code unbekannter Herkunft zu laden und auszuführen, ohne alternative Sicherheitsmaßnahmen zu treffen.
 >
 > Diese Richtlinie gilt für alle Versionen von .NET Framework, außer für die in Silverlight enthaltene .NET Framework-Version.

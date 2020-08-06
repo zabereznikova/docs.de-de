@@ -1,5 +1,5 @@
 ---
-title: Sicherheits transparenter Code, Ebene 1
+title: Sicherheitstransparenter Code, Ebene 1
 description: Sehen Sie sich die Beispiele für Transparenz, Transparenz und Transparenz der Ebene 1 an.
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: c44fe3339f3bf24d266fa97487868ce090d51bb1
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 75cf38412f3ba21832c5e63898b10bcf681f5904
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309093"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855698"
 ---
-# <a name="security-transparent-code-level-1"></a>Sicherheits transparenter Code, Ebene 1
+# <a name="security-transparent-code-level-1"></a>Sicherheitstransparenter Code, Ebene 1
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Ab .NET Framework 4 können Sie [Transparenz der Ebene 2](security-transparent-code-level-2.md)verwenden. Allerdings wurde Transparenz der Ebene 1 beibehalten, damit Legacycode identifiziert werden kann, der mit den früheren Sicherheitsregeln ausgeführt werden muss.  
