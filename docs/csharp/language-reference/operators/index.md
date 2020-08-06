@@ -1,6 +1,7 @@
 ---
-title: C#-Operatoren – C#-Referenz
-ms.date: 04/28/2020
+title: 'C#-Operatoren und -Ausdrücke: C#-Referenz'
+description: Informationen zu C#-Operatoren und -Ausdrücken, zur Operatorrangfolge und Operatorassoziativität
+ms.date: 08/04/2020
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -9,18 +10,52 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 96bb97690f8954cce2cc75cad921e21985972798
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301774"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556552"
 ---
-# <a name="c-operators-c-reference"></a>C#-Operatoren (C#-Referenz)
+# <a name="c-operators-and-expressions-c-reference"></a>C#-Operatoren und -Ausdrücke (C#-Referenz)
 
-C# bietet eine Reihe von Operatoren, die von den integrierten Typen unterstützt werden. Beispielsweise führen [arithmetische Operatoren](arithmetic-operators.md) arithmetische Vorgänge mit numerischen Operanden durch, und [boolesche logische Operatoren](boolean-logical-operators.md) führen logische Vorgänge mit den [bool](../builtin-types/bool.md)-Operanden durch. Bestimmte Operatoren können [überladen](operator-overloading.md) werden. Mit Operatorüberladung können Sie das Operatorverhalten für die Operanden eines benutzerdefinierten Typs angeben.
+C# bietet viele verschiedene Operatoren. Viele dieser Operatoren werden von den [integrierten Typen](../builtin-types/built-in-types.md) unterstützt und ermöglichen es Ihnen, grundlegende Vorgänge mit den Werten dieser Typen auszuführen. Diese Operatoren sind in folgende Gruppen unterteilt:
 
-In einem [Ausdruck](../../programming-guide/statements-expressions-operators/expressions.md) legen die Operatorrangfolge und -assoziativität die Reihenfolge fest, in der die Vorgänge durchgeführt werden. Sie können Klammern verwenden, um die Reihenfolge der Auswertung zu ändern, die durch die Operatorrangfolge und -assoziativität festgelegt wird.
+- [Arithmetische Operatoren](arithmetic-operators.md), die arithmetische Operationen mit numerischen Operanden ausführen
+- [Vergleichsoperatoren](comparison-operators.md), die numerische Operanden vergleichen
+- [Boolesche Logikoperatoren](boolean-logical-operators.md), die logische Vorgänge mit [`bool`](../builtin-types/bool.md)-Operanden ausführen
+- [Bitweise Operatoren und Schiebeoperatoren](bitwise-and-shift-operators.md), die bitweise Vorgänge oder Schiebevorgänge mit Operanden des integralen Typs ausführen
+- [Gleichheitsoperatoren](equality-operators.md), die überprüfen, ob Operanden gleich sind oder nicht
+
+In der Regel können Sie diese Operatoren [überladen](operator-overloading.md), also das Operatorverhalten für die Operanden eines benutzerdefinierten Typs angeben.
+
+Die einfachsten C#-Ausdrücke sind Literale (zum Beispiel [Integer](../builtin-types/integral-numeric-types.md#integer-literals) und [reelle](../builtin-types/floating-point-numeric-types.md#real-literals) Zahlen) sowie Namen von Variablen. Sie können diese mithilfe von Operatoren in komplexen Ausdrücken kombinieren. Die [Operatorrangfolge](#operator-precedence) und [-assoziativität](#operator-associativity) legen die Reihenfolge fest, in der die Vorgänge in einem Ausdruck durchgeführt werden. Sie können Klammern verwenden, um die Reihenfolge der Auswertung zu ändern, die durch die Operatorrangfolge und -assoziativität festgelegt wird.
+
+Im folgenden Code befinden sich die Beispiele der Ausdrücke auf der rechten Seite der Zuweisungen:
+
+[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+
+In der Regel erzeugt ein Ausdruck ein Ergebnis und kann in einen anderen Ausdruck eingeschlossen werden. Ein [`void`](../builtin-types/void.md)-Methodenaufruf ist ein Beispiel eines Ausdrucks, der kein Ergebnis erzeugt. Er kann nur als [Anweisung](../../programming-guide/statements-expressions-operators/statements.md) wie im folgenden Beispiel verwendet werden.
+
+```csharp
+Console.WriteLine("Hello, world!");
+```
+
+Im Folgenden finden Sie einige weitere Ausdrücke, die von C# bereitgestellt werden:
+
+- [Interpolierte Zeichenfolgenausdrücke](../tokens/interpolated.md), die eine bequeme Syntax zum Erstellen formatierter Zeichenfolgen bereitstellen:
+
+  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+
+- [Lambdaausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md), mit denen Sie anonyme Funktionen erstellen können:
+
+  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+
+- [Abfrageausdrücke](../keywords/query-keywords.md), mit denen Sie Abfragefunktionen direkt in C# verwenden können:
+
+  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+
+Sie können eine [Ausdruckskörperfunktion](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) verwenden, um eine präzise Definition für eine Methode, einen Konstruktor, eine Eigenschaft, einen Indexer oder einen Finalizer bereitzustellen.
 
 ## <a name="operator-precedence"></a>Operatorrangfolge
 
@@ -90,9 +125,13 @@ In der Regel werden alle Operanden eines Operators ausgewertet. Einige Operatore
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-Weitere Informationen finden Sie im Abschnitt [Operatoren](~/_csharplang/spec/expressions.md#operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
+Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md):
+
+- [Ausdrücke](~/_csharplang/spec/expressions.md)
+- [Operatoren](~/_csharplang/spec/expressions.md#operators)
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [Ausdrücke](../../programming-guide/statements-expressions-operators/expressions.md)
+- [Operatorüberladung](operator-overloading.md)
+- [Ausdrucksbaumstrukturen](../../programming-guide/concepts/expression-trees/index.md)
