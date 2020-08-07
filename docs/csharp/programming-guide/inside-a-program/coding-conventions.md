@@ -1,17 +1,18 @@
 ---
 title: Codekonventionen für C# – C#-Programmierhandbuch
+description: Erfahren Sie mehr über die Codekonventionen in C#. Codekonventionen sorgen für ein einheitliches Erscheinungsbild des Codes und vereinfachen das Kopieren, Ändern und Verwalten des Codes.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 772aebff0b8c7aebe7c7d5c7634cd2931f4570b1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398376"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301852"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Codekonventionen für C# (C#-Programmierhandbuch)
 
@@ -170,7 +171,7 @@ Wenn Sie einen Ereignishandler definieren, den Sie später nicht entfernen müss
   
 ### <a name="static-members"></a>Statische Member  
   
-Rufen Sie [statische](../../language-reference/keywords/static.md) Member über den Klassennamen *ClassName.StaticMember* auf. Durch diese Empfehlung ist der Code besser lesbar, da der statische Zugriff eindeutig ist.  Qualifizieren Sie keinen statischen Member, der in einer Basisklasse mit dem Namen einer abgeleiteten Klasse definiert ist.  Während dieser Code kompiliert wird, ist die Lesbarkeit des Codes irreführend, und der Code kann später beschädigt werden, wenn Sie der abgeleiteten Klasse einen statischen Member mit dem gleichen Namen hinzufügen.  
+Rufen Sie [statische](../../language-reference/keywords/static.md) Member über diesen Klassennamen auf: *ClassName.StaticMember*. Durch diese Empfehlung ist der Code besser lesbar, da der statische Zugriff eindeutig ist.  Qualifizieren Sie keinen statischen Member, der in einer Basisklasse mit dem Namen einer abgeleiteten Klasse definiert ist.  Während dieser Code kompiliert wird, ist die Lesbarkeit des Codes irreführend, und der Code kann später beschädigt werden, wenn Sie der abgeleiteten Klasse einen statischen Member mit dem gleichen Namen hinzufügen.  
   
 ### <a name="linq-queries"></a>LINQ-Abfragen  
   
@@ -204,7 +205,7 @@ Rufen Sie [statische](../../language-reference/keywords/static.md) Member über 
 
 Befolgen Sie die Richtlinien in [Richtlinien für das Schreiben von sicherem Code](../../../standard/security/secure-coding-guidelines.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic-Codierungskonventionen](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Richtlinien für das Schreiben von sicherem Code](../../../standard/security/secure-coding-guidelines.md)

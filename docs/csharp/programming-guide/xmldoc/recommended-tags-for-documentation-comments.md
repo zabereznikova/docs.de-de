@@ -1,16 +1,17 @@
 ---
 title: Empfohlene Tags für Dokumentationskommentare – C#-Programmierhandbuch
+description: Erfahren Sie mehr über die empfohlenen Tags für Dokumentationskommentare. Hier finden Sie eine Liste der empfohlenen Tags sowie zusätzliche verfügbare Ressourcen.
 ms.date: 01/21/2020
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: c746615d0d7a7a3058fbe2f8506a7a7c5c4a8779
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65bca6f979c5ffd91507b571a4f049377315192d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789723"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381514"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Empfohlene Tags für Dokumentationskommentare (C#-Programmierhandbuch)
 
@@ -44,7 +45,7 @@ Wenn Sie möchten, dass im Text eines Dokumentationskommentars spitze Klammern e
 /// </summary>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [-doc (C#-Compileroptionen)](../../language-reference/compiler-options/doc-compiler-option.md)

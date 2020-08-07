@@ -1,5 +1,6 @@
 ---
 title: SqlMetal.exe (Tool zur Codegenerierung)
+description: Informieren Sie sich über „SqlMetal.exe“, das Tool zur Codegenerierung. Verwenden Sie das Tool, um Code und Zuordnungen für die LINQ to SQL-Komponente von .NET zu generieren.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84cad85a7a9fc4b420b57543b7f258607be4ab52
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71044079"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517047"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
 Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]-Komponente von .NET Framework. Durch Anwenden der später in diesem Thema behandelten Optionen können Sie SqlMetal anweisen, mehrere verschiedene Aktionen wie etwa die folgenden auszuführen:  
@@ -38,12 +39,12 @@ Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE
 sqlmetal [options] [<input file>]  
 ```  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Geben Sie zum Anzeigen der aktuellsten Optionsliste `sqlmetal /?` in einer Eingabeaufforderung am installierten Speicherort ein.  
   
  **Verbindungsoptionen**  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/server:** *\<name>*|Gibt den Datenbank-Servernamen an.|  
 |**/database:** *\<name>*|Gibt den Datenbankkatalog auf dem Server an.|  
@@ -54,7 +55,7 @@ sqlmetal [options] [<input file>]
   
  **Extraktionsoptionen**  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/views**|Extrahiert Datenbankansichten.|  
 |**/functions**|Extrahiert Datenbankfunktionen.|  
@@ -62,7 +63,7 @@ sqlmetal [options] [<input file>]
   
  **Ausgabeoptionen**  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Sendet die Ausgabe als DBML-Datei. Kann nicht zusammen mit der Option **/map** verwendet werden.|  
 |**/code** *[:file]*|Sendet die Ausgabe als Quellcode. Kann nicht zusammen mit der Option **/dbml** verwendet werden.|  
@@ -70,9 +71,9 @@ sqlmetal [options] [<input file>]
   
  **Verschiedenes**  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|**/language:** *\<language>*|Gibt die Quellcodesprache an.<br /><br /> Gültige *\<<sprache>* : vb, csharp.<br /><br /> Standardwert: von der Erweiterung des Namens der Codedatei abgeleitet.|  
+|**/language:** *\<language>*|Gibt die Quellcodesprache an.<br /><br /> Gültige *\<language>* : vb, csharp.<br /><br /> Standardwert: von der Erweiterung des Namens der Codedatei abgeleitet.|  
 |**/namespace:** *\<name>*|Gibt den Namespace des generierten Codes an. Standardwert: kein Namespace.|  
 |**/context:** *\<type>*|Gibt Namen der Datenkontextklasse an. Standardwert: vom Datenbanknamen abgeleitet.|  
 |**/entitybase:** *\<type>*|Gibt die Basisklasse der Entitätsklassen im generierten Code an. Standardwert: Entitäten verfügen über keine Basisklasse.|  
@@ -81,9 +82,9 @@ sqlmetal [options] [<input file>]
   
  **Eingabedatei**  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|**\<eingabedatei>**|Gibt eine SQL Server Express-Datei (.mdf), eine SQL Server Compact 3.5-Datei (.sdf) oder eine Zwischendatei (.dbml) an.|  
+|**\<input file>**|Gibt eine SQL Server Express-Datei (.mdf), eine SQL Server Compact 3.5-Datei (.sdf) oder eine Zwischendatei (.dbml) an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die SqlMetal-Funktionalität umfasst eigentlich zwei Schritte:  

@@ -1,15 +1,16 @@
 ---
 title: Ausdruckskörpermember – C#-Programmierhandbuch
+description: Erfahren Sie mehr über Ausdruckskörpermember. Hier finden Sie Codebeispiele, die Ausdruckskörperdefinitionen für Eigenschaften, Konstruktoren, Finalizer und andere Elemente verwenden.
 ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e68e96e4aa3ff6a64590459a7197da1833e1a275
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711986"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381657"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Ausdruckskörpermember (C#-Programmierhandbuch)
 
@@ -27,7 +28,7 @@ Die Unterstützung für Ausdruckskörperdefinitionen wurde für Methoden und sch
 |---------|---------|
 |[Methode](#methods)  |C# 6 |
 |[Schreibgeschützte Eigenschaft](#read-only-properties)   |C# 6  |
-|[Eigenschaft](#properties)  |C# 7.0 |
+|[Property](#properties)  |C# 7.0 |
 |[Konstruktor](#constructors)   |C# 7.0 |
 |[Finalizer](#finalizers)     |C# 7.0 |
 |[Indexer](#indexers)       |C# 7.0 |

@@ -3,12 +3,12 @@ title: 'Tutorial: Schreiben Ihres ersten Analysetools und Codefixes'
 description: Dieses Tutorial enthält Schritt-für-Schritt-Anleitungen zum Erstellen eines Analysetools und eines Codefixes mithilfe des .NET Compiler SDK (Roslyn-APIs).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100937"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381592"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Schreiben Ihres ersten Analysetools und Codefixes
 
@@ -504,7 +504,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-Sie müssen etwas mehr Code in Ihrem Codefixanbieter schreiben, um das Schlüsselwort „var“ durch den korrekten Typnamen zu ersetzen. Wechseln Sie zu **CodeFixProvider.cs** zurück. Der Code, den Sie hinzufügen, führt die folgenden Schritte aus:
+Sie müssen etwas mehr Code in Ihrem Codefixanbieter schreiben, um das Schlüsselwort `var` durch den korrekten Typnamen zu ersetzen. Wechseln Sie zu **CodeFixProvider.cs** zurück. Der Code, den Sie hinzufügen, führt die folgenden Schritte aus:
 
 - Überprüft, ob die Deklaration eine `var`-Deklaration ist, und wenn dies zutrifft:
 - Erstellt einen neuen Typ für den abgeleiteten Typ.
@@ -522,12 +522,12 @@ Sie müssen eine `using`-Anweisung hinzufügen, um den <xref:Microsoft.CodeAnaly
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-Führen Sie Ihre Tests aus – sie sollten alle bestanden werden. Gratulieren Sie sich, indem Sie Ihr fertiges Analysetool ausführen. Drücken Sie <kbd>STRG+F5</kbd>, um das Analysetoolprojekt in einer zweiten Instanz von Visual Studio mit geladener Roslyn-Vorschauerweiterung auszuführen.
+Führen Sie Ihre Tests aus – sie sollten alle bestanden werden. Gratulieren Sie sich, indem Sie Ihr fertiges Analysetool ausführen. Drücken Sie <kbd>STRG</kbd>+<kbd>F5</kbd>, um das Analysetoolprojekt in einer zweiten Instanz von Visual Studio mit geladener Roslyn-Vorschauerweiterung auszuführen.
 
 - Erstellen Sie in der zweiten Visual Studio-Instanz ein neues C#-Konsolenanwendungsprojekt, und fügen Sie `int x = "abc";` zur Methode „Main“ hinzu. Dank der ersten Fehlerbehebung sollte keine Warnung für diese lokale Variablendeklaration gemeldet werden (obwohl es erwartungsgemäß einen Compilerfehler gibt).
 - Fügen Sie als Nächstes `object s = "abc";` zur Methode „Main“ hinzu. Aufgrund der zweiten Fehlerbehebung sollte keine Warnung gemeldet werden.
 - Fügen Sie schließlich eine weitere lokale Variable hinzu, die das Schlüsselwort `var` verwendet. Sie sehen, dass eine Warnung gemeldet und ein Vorschlag links unterhalb der Meldung angezeigt wird.
-- Bewegen Sie den Textcursor des Editors über die Wellenlinien-Unterstreichung, und drücken Sie <kbd>STRG+</kbd>, um den vorgeschlagenen Codefix anzuzeigen. Beachten Sie beim Auswählen des Codefixes, dass das Schlüsselwort „var“ jetzt ordnungsgemäß behandelt wird.
+- Bewegen Sie den Textcursor des Editors über die Wellenlinien-Unterstreichung, und drücken Sie <kbd>STRG</kbd>+<kbd>.</kbd>, um den vorgeschlagenen Codefix anzuzeigen. Beachten Sie beim Auswählen des Codefixes, dass das Schlüsselwort `var` jetzt ordnungsgemäß verarbeitet wird.
 
 Fügen Sie schließlich den folgenden Code hinzu:
 

@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Suchen nach Nachfolgern mit einem bestimmten Elementnamen (C#)'
+description: Erfahren Sie, wie Sie über die Descendants-Achse alle Nachfolgerelemente mit einem bestimmten Namen suchen. Hier finden Sie Codebeispiele und weitere Ressourcen.
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: b3200a2fdf75dbf52079a2b3d27aa1a88d313406
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 96ebf2d10a9ed5e07aab2870142f9869903ad442
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141080"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303243"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Vorgehensweise: Suchen nach Nachfolgern mit einem bestimmten Elementnamen (C#)
 Es kann vorkommen, dass Sie alle Nachfolgerelemente mit einem bestimmten Namen ermitteln möchten. Dazu könnten Sie Code schreiben, der alle Nachfolgerelemente durchläuft, einfacher ist es aber, die <xref:System.Xml.Linq.XContainer.Descendants%2A>-Achse zu verwenden.  

@@ -1,16 +1,17 @@
 ---
 title: Puffer fester Größe – C#-Programmierhandbuch
+description: Erfahren Sie mehr über Puffer mit fester Größe. Puffer mit fester Größe werden zum Schreiben von Methoden verwendet, die mit Datenquellen aus anderen Sprachen zusammenarbeiten.
 ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 932ff3d57995ce47c4b74e8e888a479f0d09d0ed
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1d4f5068121cdc98976954f2d99f4ac020c3b2a8
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397427"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381241"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Puffer fester Größe (C#-Programmierhandbuch)
 

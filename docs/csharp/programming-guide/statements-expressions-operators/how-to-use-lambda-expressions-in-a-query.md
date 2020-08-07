@@ -1,15 +1,16 @@
 ---
 title: 'Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage (C#-Programmierleitfaden)'
+description: Erfahren Sie, wie Sie Lambdaausdrücke in einer Abfrage verwenden. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 501e67011707e2d165a3b9c1ff9f206db7f55448
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711960"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381631"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage (C#-Programmierleitfaden)
 Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sondern nur in Methodenaufrufen. Abfrageausdrücke können Methodenaufrufe enthalten. Einige Abfragevorgänge können nur in Methodensyntax ausgedrückt werden. Weitere Informationen zu den Unterschieden zwischen Abfragesyntax und Methodensyntax finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -29,7 +30,7 @@ Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sonder
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Um diesen Code auszuführen, kopieren Sie die Methode, und fügen Sie sie in die `StudentClass` ein, die in [Abfragen einer Sammlung von Objekten](../../linq/query-a-collection-of-objects.md) bereitgestellt wird. Rufen Sie diese Methode dann in der `Main`-Methode auf.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Lambda-Ausdrücke](./lambda-expressions.md)
 - [Ausdrucksbaumstrukturen (C#)](../concepts/expression-trees/index.md)

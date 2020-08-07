@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)'
+description: Erfahren Sie, wie Sie nach dem Namespace eines Elements oder Attributs filtern,um alle Knoten in diesem Namespace zu suchen.
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf739480c6b4e2c53d5c430d47ff833e8995f6a4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141183"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303308"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)
 Sie können nach den Namespaces der einzelnen Elemente oder Attribute filtern und so alle Knoten im jeweiligen Namespace ermitteln.  
@@ -46,7 +47,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Beispiel  
  Die XML-Datei, auf die die folgende Abfrage zugreift, enthält Aufträge in zwei verschiedenen Namespaces. Die Abfrage erstellt eine neue Struktur, die nur die Elemente in einem der Namespaces enthält.  
   
- Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Konsolidierte Bestellungen](./sample-xml-file-consolidated-purchase-orders.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Konsolidierte Bestellungen](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

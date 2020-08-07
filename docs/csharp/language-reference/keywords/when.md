@@ -7,19 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b041ca3a821f45dd63ce3f6bee7a920eb495651
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712831"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426994"
 ---
 # <a name="when-c-reference"></a>when (C#-Referenz)
 
-Sie können das kontextabhängige Schlüsselwort `when` verwenden, um eine Filterbedingung in zwei Kontexten anzugeben:
+Sie können das kontextabhängige Schlüsselwort `when` verwenden, um in den folgenden Kontexten eine Filterbedingung anzugeben:
 
 - In der `catch`-Anweisung eines [try/catch](try-catch.md)- oder [try/catch/finally](try-catch-finally.md)-Blocks
 - In der `case`-Bezeichnung einer [switch](switch.md)-Anweisung
+- Im [`switch`-Ausdruck](../operators/switch-expression.md)
 
 ## <a name="when-in-a-catch-statement"></a>`when` in einer `catch`-Anweisung
 
@@ -49,7 +50,7 @@ Im folgenden Beispiel wird das Schlüsselwort `when` verwendet, um auf `Shape`-O
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [switch-Anweisung](switch.md)
 - [Try-Catch-Anweisung](try-catch.md)

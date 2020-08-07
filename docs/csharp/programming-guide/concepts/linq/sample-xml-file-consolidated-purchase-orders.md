@@ -1,13 +1,14 @@
 ---
 title: 'Beispiel-XML-Datei: Konsolidierte Bestellungen2'
+description: Diese XML-Datei wird in verschiedenen Beispielen in der LINQ to XML-Dokumentation verwendet. Sie enthält Aufträge in unterschiedlichen Formen von mehreren Unternehmen.
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-ms.openlocfilehash: abd9a8f49cbd1308dfb1c043f310601decf64336
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 99cb9e09f9ea14420908aa7cd28f70ff6329baeb
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483793"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302567"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Beispiel-XML-Datei: Konsolidierte Bestellungen
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei besteht aus einem Satz von unterschiedlich geformten Aufträgen verschiedener Unternehmen. Für die Aufträge eines Unternehmens gibt es jeweils einen eigenen Namespace.  

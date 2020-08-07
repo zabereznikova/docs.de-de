@@ -8,12 +8,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 891e56b064f8a327abe28293223a85b9d95e8fd3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713547"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301813"
 ---
 # <a name="extern-alias-c-reference"></a>extern-Alias (C#-Referenz)
 Sie müssen möglicherweise auf zwei Versionen von Assemblys verweisen, die denselben vollqualifizierten Namen besitzen. Beispielsweise müssen Sie möglicherweise zwei oder mehr Versionen einer Assembly in derselben Anwendung verwenden. Indem Sie einen externen Assemblyalias verwenden, können die Namespaces jeder Assembly in Namespaces auf Stammebene, benannt durch den Alias, umschlossen werden, was es ihnen ermöglicht, von derselben Datei verwendet zu werden.  
@@ -37,13 +37,35 @@ Sie müssen möglicherweise auf zwei Versionen von Assemblys verweisen, die dens
   
  Im vorherigen Beispiel wäre `GridV1::Grid` das Steuerelement von `grid.dll`, und `GridV2::Grid` wäre das Steuerelement von `grid20.dll`.  
   
+## <a name="using-visual-studio"></a>Verwenden von Visual Studio
+
+Wenn Sie Visual Studio verwenden, können Aliase auf ähnliche Weise bereitgestellt werden.
+
+Fügen Sie Ihrem Projekt in Visual Studio Verweise auf *grid.dll* und *grid20.dll* hinzu. Öffnen Sie eine Registerkarte mit Eigenschaften, und ändern Sie die Aliase von „global“ in „GridV1“ bzw. „GridV2“.
+
+Verwenden Sie diese Aliase auf die gleiche Weise wie oben:
+
+```csharp
+ extern alias GridV1;  
+  
+ extern alias GridV2;  
+```
+
+Jetzt können Sie einen Alias für einen Namespace oder Typ erstellen, indem Sie eine *using-alias-Anweisung* verwenden. Weitere Information finden Sie unter [using-Anweisung](using-directive.md).
+
+```csharp
+using Class1V1 = GridV1::Namespace.Class1;
+
+using Class1V2 = GridV2::Namespace.Class1;
+```
+
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](./index.md)
-- [::-Operator](../operators/namespace-alias-qualifier.md)
+- [:: Operator](../operators/namespace-alias-qualifier.md)
 - [-reference (C#-Compileroptionen)](../compiler-options/reference-compiler-option.md)

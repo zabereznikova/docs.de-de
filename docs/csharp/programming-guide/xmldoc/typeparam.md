@@ -1,5 +1,6 @@
 ---
 title: <typeparam> – C#-Programmierhandbuch
+description: Erfahren Sie mehr über das XML-Tag <typeparam> ein. Dieses Tag wird im Kommentar für eine generische Typ- oder Methodendeklaration verwendet, um einen Typparameter zu beschreiben.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793363"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380786"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam> (C#-Programmierhandbuch)
 
@@ -26,7 +27,7 @@ ms.locfileid: "76793363"
 
 - `name`
 
-  Der Name des Typparameters. Setzen Sie den Namen in doppelte Anführungszeichen (" ").
+  Der Name des Typparameters. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").
 
 - `description`
 
@@ -46,7 +47,7 @@ Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compile
 
 [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../../language-reference/index.md)
 - [C#-Programmierhandbuch](../index.md)

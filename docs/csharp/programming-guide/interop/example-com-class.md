@@ -1,16 +1,17 @@
 ---
 title: COM-Beispielklasse – C#-Programmierhandbuch
+description: Erfahren Sie, wie Sie eine Klasse als COM-Objekt in C# verfügbar machen. Dieses Beispiel fügt Code in einer CS-Datei zu einem Projekt hinzu und legt die Registrierung für die COM-Interop-Eigenschaft fest.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 6051ff91d13a3cb3ca6229d813db34dd6a9f3af6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 4ea66ba26595c5bae2e579d1cc85c4b0d58616df
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241850"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303035"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM-Beispielklasse (C#-Programmierhandbuch)
 Das Folgende ist ein Beispiel für eine Klasse, die Sie als COM-Objekt offenlegen würden. Nachdem dieser Code in eine CS-Datei platziert und Ihrem Projekt hinzugefügt wurde, legen Sie die Eigenschaft **für COM-Interop registrieren** auf **TRUE** fest. Weitere Informationen finden Sie unter [Vorgehensweise: Registrieren einer Komponente für COM-Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
@@ -36,7 +37,7 @@ Das Folgende ist ein Beispiel für eine Klasse, die Sie als COM-Objekt offenlege
 ## <a name="example"></a>Beispiel  
  [!code-csharp[csProgGuideInterop#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/ExampleCOM.cs#8)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Interoperabilität](./index.md)

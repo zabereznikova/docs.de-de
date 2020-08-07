@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Definieren von Wertgleichheit für einen Typ (C#-Programmierleitfaden)'
+description: Erfahren Sie, wie Sie Wertgleichheit für einen Typ definieren. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 140be18698a40be8f394b31fcd42b97d6685cb98
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf4449618c2b57f21855354f2250d41a403b4d57
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157090"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381644"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Vorgehensweise: Definieren von Wertgleichheit für einen Typ (C#-Programmierleitfaden)
 
@@ -21,7 +22,7 @@ Wenn Sie eine Klasse oder Struktur definieren, entscheiden Sie, ob es sinnvoll i
 
 In beiden Fällen und in beiden Klassen und Strukturen sollte Ihre Implementierung den fünf Garantien der Äquivalenz folgen (für die folgenden Regeln wird angenommen, dass `x`, `y` und `z` nicht NULL sind):  
   
-1. `true` gibt `x.Equals(x)` zurück. Dies wird als reflexive Eigenschaft bezeichnet.  
+1. `x.Equals(x)` gibt `true` zurück. Dies wird als reflexive Eigenschaft bezeichnet.  
   
 2. `x.Equals(y)` gibt denselben Wert zurück wie `y.Equals(x)`. Die wird als symmetrische Eigenschaft bezeichnet.  
   
@@ -37,13 +38,13 @@ In beiden Fällen und in beiden Klassen und Strukturen sollte Ihre Implementieru
   
 1. Überschreiben Sie die [virtuelle](../../language-reference/keywords/virtual.md) Methode <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. In den meisten Fällen sollte Ihre Implementierung von `bool Equals( object obj )` nur die typspezifische `Equals`-Methode aufrufen, die die Implementierung der Schnittstelle <xref:System.IEquatable%601?displayProperty=nameWithType> darstellt. (Siehe Schritt 2)  
   
-2. Implementieren Sie die Schnittstelle <xref:System.IEquatable%601?displayProperty=nameWithType>, indem Sie eine typspezifische `Equals`-Methode bereitstellen. An dieser Stelle wird der eigentliche Äquivalenzvergleich ausgeführt. Sie könnten Gleichheit z.B. nur über den Vergleich von ein oder zwei Feldern in Ihrem Typ definieren. Lösen Sie keine Ausnahmen aus `Equals`aus. Nur für Klassen: Diese Methode sollte nur Felder prüfen, die in der Klasse deklariert sind. Sie sollte `base.Equals` aufrufen, um Felder in der Basisklasse zu prüfen. (Tun Sie dies nicht, wenn der Typ direkt von <xref:System.Object> erbt, da die <xref:System.Object>-Implementierung von <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> eine Überprüfung der Verweisgleichheit durchführt.)  
+2. Implementieren Sie die Schnittstelle <xref:System.IEquatable%601?displayProperty=nameWithType>, indem Sie eine typspezifische `Equals`-Methode bereitstellen. An dieser Stelle wird der eigentliche Äquivalenzvergleich ausgeführt. Sie könnten Gleichheit z.B. nur über den Vergleich von ein oder zwei Feldern in Ihrem Typ definieren. Lösen Sie keine Ausnahmen aus `Equals` aus. Nur für Klassen: Diese Methode sollte nur Felder prüfen, die in der Klasse deklariert sind. Sie sollte `base.Equals` aufrufen, um Felder in der Basisklasse zu prüfen. (Tun Sie dies nicht, wenn der Typ direkt von <xref:System.Object> erbt, da die <xref:System.Object>-Implementierung von <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> eine Überprüfung der Verweisgleichheit durchführt.)  
   
 3. Optional, aber empfohlen: Überladen Sie die Operatoren [==](../../language-reference/operators/equality-operators.md#equality-operator-) und [!=](../../language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4. Überschreiben Sie <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>, damit zwei Objekte, die Wertgleichheit besitzen, den gleichen Hashcode erzeugen.  
   
-5. Optional: Implementieren Sie zur Unterstützung von Definitionen für „größer als“ oder „kleiner als“ die Schnittstelle <xref:System.IComparable%601> für Ihren Typ, und überladen Sie die Operatoren [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) und [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-).  
+5. Optional: Implementieren Sie zur Unterstützung von Definitionen für „größer als“ oder „kleiner als“ die Schnittstelle <xref:System.IComparable%601> für Ihren Typ, und überladen Sie auch die Operatoren [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) und [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-).  
   
  Das erste nachfolgende Beispiel zeigt die Implementierung einer Klasse. Das zweite nachfolgende Beispiel zeigt die Implementierung einer Struktur.  
 
@@ -67,7 +68,7 @@ In beiden Fällen und in beiden Klassen und Strukturen sollte Ihre Implementieru
   
  Die Operatoren [==](../../language-reference/operators/equality-operators.md#equality-operator-) und [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) können nicht auf Strukturen operieren, es sei denn, die Struktur überlädt sie explizit.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Übereinstimmungsvergleiche](equality-comparisons.md)
 - [C#-Programmierhandbuch](../index.md)

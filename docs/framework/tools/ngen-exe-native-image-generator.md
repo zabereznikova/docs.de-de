@@ -1,5 +1,6 @@
 ---
 title: Ngen.exe (Native Image Generator)
+description: Sehen Sie sich „Ngen.exe“ an, den Generator für native Images. Verbessern Sie die Leistung verwalteter Anwendungen, indem Sie native Images erstellen und im lokalen nativen Imagecache installieren.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae86aed773a9a13f102b1ad111cac5a3ee563508
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741791"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517268"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
 
@@ -107,7 +108,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="scenarios"></a>Szenarien
 
-|Szenario|Beschreibung|
+|Szenario|BESCHREIBUNG|
 |--------------|-----------------|
 |`/Debug`|Generiert systemeigene Images, die unter einem Debugger verwendet werden können.|
 |`/Profile`|Generiert systemeigene Images, die unter einem Profiler verwendet werden können.|
@@ -117,7 +118,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="config"></a>Konfigurationen
 
-|Konfiguration|Beschreibung|
+|Konfiguration|BESCHREIBUNG|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Verwendet die Konfiguration der angegebenen ausführbaren Assembly.<br /><br /> "Ngen.exe" muss beim Binden an Abhängigkeiten die gleichen Entscheidungen wie das Ladeprogramm treffen. Wenn eine freigegebene Komponente zur Laufzeit mit der <xref:System.Reflection.Assembly.Load%2A>-Methode geladen wird, bestimmt die Konfigurationsdatei der Anwendung die Abhängigkeiten, die für die freigegebene Komponente geladen werden, beispielsweise die Version einer zu ladenden Abhängigkeit. Über den Schalter `/ExeConfig` erhält "Ngen.exe" Anweisungen dazu, welche Abhängigkeiten zur Laufzeit geladen werden.|
 |`/AppBase:` `directoryPath`|Verwendet das angegebene Verzeichnis beim Suchen nach Abhängigkeiten als Anwendungsbasis.|

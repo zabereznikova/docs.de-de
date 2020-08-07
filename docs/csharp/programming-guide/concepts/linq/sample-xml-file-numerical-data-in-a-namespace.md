@@ -1,18 +1,19 @@
 ---
 title: 'Beispiel-XML-Datei: Numerische Daten in einem Namespace3'
+description: Diese XML-Datei wird in verschiedenen Beispielen in der LINQ to XML-Dokumentation verwendet. Sie enthält Daten für die Summenbildung, zur Durchschnittsberechnung und zum Gruppieren. Der XML-Code befindet sich in einem Namespace.
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: 02788b73a7af9922b5a50237f2d2e401cba8abe2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe467604840851c2af2533a620f9b7e32367fbb3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483704"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302502"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Beispiel-XML-Datei: Numerische Daten in einem Namespace
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält numerische Daten zum Summieren, zur Durchschnittsberechnung und zum Gruppieren. Der XML-Code befindet sich in einem Namespace.  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>Daten  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  

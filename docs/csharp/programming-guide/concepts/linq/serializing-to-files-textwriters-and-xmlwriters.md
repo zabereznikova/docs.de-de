@@ -1,13 +1,14 @@
 ---
 title: Serialisieren in Dateien, TextWriters und XmlWriters
+description: Erfahren Sie mehr über die Optionen zum Serialisieren von XML-Strukturen in eine Datei, einen TextWriter oder einen XmlWriter in C# mithilfe der Methode „ToString“ oder „Save“.
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 20cb84a9f79ca8de3e86a996f18c388dc53340ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43c51ae7e9bf1a7848d45fd900424d6186671e53
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68868856"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302385"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serialisieren in Dateien, TextWriters und XmlWriters
 
@@ -31,6 +32,6 @@ Wenn Sie möchten, dass keine Einzüge vorgenommen werden und der nicht signifik
 
 Beispiele finden Sie im entsprechenden Referenzthema.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Serializing XML Trees (C#) (Serialisieren von XML-Strukturen (C#))](serializing-to-files-textwriters-and-xmlwriters.md)
+- [Serialisieren von XML-Strukturen (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

@@ -1,16 +1,17 @@
 ---
 title: Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
+description: Informationen zu „Winmdexp.exe“, dem Windows-Runtime-Tool für den Export von Metadaten. Dieses Tool transformiert ein .NET-Modul in eine Datei, die Windows-Runtime-Metadaten enthält.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: 52820b78f6ed7b02e80df66f90a01143b31d9b29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10626e00eb340d84653419da18a0b219ef1d197e
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74447275"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517021"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
 Das Windows-Runtime-Metadatenexport-Tool (Winmdexp.exe) transformiert ein .NET Framework-Modul in eine Datei, die Windows-Runtime-Metadaten enthält. Obwohl .NET Framework-Assemblys und Windows-Runtime-Metadatendateien dasselbe physische Format haben, gibt es Unterschiede bezüglich des Inhalts der Metadatentabellen, was bedeutet, dass .NET Framework-Assemblys nicht automatisch als Komponenten für Windows-Runtime verwendet werden können. Der Prozess des Konvertierens eines .NET Framework-Moduls in eine Komponente für Windows-Runtime wird als *Exportieren* bezeichnet. In .NET Framework 4.5 und .NET Framework 4.5.1 enthält die resultierende Windows-Metadatendatei (.winmd) sowohl die Metadaten als auch die Implementierung.  
@@ -48,7 +49,7 @@ winmdexp [options] winmdmodule
   
  Wenn Sie eine Windows 8.x Store-App oder eine Komponente für Windows-Runtime mit C# oder Visual Basic schreiben, bietet .NET Framework Unterstützung für das einfachere Programmieren mit der Windows-Runtime. Dies wird im Artikel [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) behandelt. Während dieses Vorgangs werden einige häufig verwendete Windows-Runtime-Typen .NET Framework-Typen zugeordnet. „Winmdexp.ex“e kehrt diesen Prozess um und erzeugt eine API-Schnittstelle, die die entsprechenden Windows-Runtime-Typen verwendet. So werden beispielsweise Typen, die aus der <xref:System.Collections.Generic.IList%601>-Schnittstelle erstellt werden, Typen zugeordnet, die über die <xref:Windows.Foundation.Collections.IVector%601>-Schnittstelle von Windows-Runtime erstellt werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [Erstellen von Windows-Runtime-Komponenten in C# und Visual Basic](https://docs.microsoft.com/previous-versions/br230301(v=vs.110))

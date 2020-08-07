@@ -1,13 +1,14 @@
 ---
 title: Übersicht über Namespaces (LINQ to XML)
+description: Informieren Sie sich über Namespaces, die XName-Klasse, die XNamespace-Klasse und weitere Aspekte von XML-Namen.
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-ms.openlocfilehash: 010d8661afe063c06f042084f6b320acb1235ac4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 56dca481dd5f3066fa5359fc57b3311cf2569ee0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241434"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300162"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Übersicht über Namespaces (LINQ to XML)
 

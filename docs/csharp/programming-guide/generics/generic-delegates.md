@@ -1,16 +1,17 @@
 ---
 title: Generische Delegaten – C#-Programmierhandbuch
+description: Erfahren Sie mehr über die Verwendung generischer Delegaten in C#. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 4e57256328fc81a485670b47fcf8fd1c38e26fac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d99271ca9f12e95743d633caac16aaa4151e9c41
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712220"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301904"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Generische Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../language-reference/builtin-types/reference-types.md) kann seine eigenen Typparameter definieren. Wie im folgenden Beispiel gezeigt, kann Code, der auf den generischen Delegaten verweist, das Typargument zum Erstellen eines geschlossenen konstruierten Typs angeben, genau wie wenn eine generische Klasse instanziiert oder eine generische Methode aufgerufen wird:  

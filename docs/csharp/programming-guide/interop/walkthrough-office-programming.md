@@ -1,5 +1,6 @@
 ---
 title: 'Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)'
+description: Lernen Sie die Features kennen, die Visual Studio in C# und Visual Basic zur Verbesserung der Programmierung für Microsoft Office bietet.
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf4725f3f636bb208450cb9b5c58766d84947f86
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635352"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302944"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
 
@@ -32,13 +33,13 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 ### <a name="to-set-up-an-excel-add-in-application"></a>So richten Sie eine Excel-Add-In-Anwendung ein
 
-1. Starten Sie Visual Studio.
+1. Starten Sie Visual Studio.
 
 2. Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.
 
 3. Erweitern Sie im Bereich **Installierte Vorlagen** die Option **Visual Basic** oder **Visual C#** , erweitern Sie dann **Office**, und klicken Sie auf die Jahreszahl der Version des Office-Produkts.
 
-4. Klicken Sie im Bereich **Vorlagen** auf **Excel\<version > Add-in**.
+4. Klicken Sie im Bereich **Vorlagen** auf **Excel \<version> Add-in**.
 
 5. Sehen Sie am oberen Rand des Bereichs **Vorlagen** nach, um sicherzustellen, dass **.NET Framework 4** oder eine höhere Version im Feld **Zielframework** angezeigt wird.
 
@@ -124,7 +125,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 ### <a name="to-invoke-displayinexcel"></a>So rufen Sie DisplayInExcel auf
 
-1. Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp` -Methode hinzu. Der Aufruf von `DisplayInExcel` enthält zwei Argumente. Das erste Argument ist der Name der Liste mit Konten, die verarbeitet werden sollen. Das zweite Argument ist ein mehrzeiliger Lambda-Ausdruck, der definiert, wie die Daten verarbeitet werden. Die `ID`- und `balance`-Werte für jedes Konto werden in angrenzenden Zellen angezeigt, und die Zeile wird rot dargestellt, wenn der Saldo kleiner als Null ist. Weitere Informationen finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp`-Methode hinzu. Der Aufruf von `DisplayInExcel` enthält zwei Argumente. Das erste Argument ist der Name der Liste mit Konten, die verarbeitet werden sollen. Das zweite Argument ist ein mehrzeiliger Lambda-Ausdruck, der definiert, wie die Daten verarbeitet werden. Die `ID`- und `balance`-Werte für jedes Konto werden in angrenzenden Zellen angezeigt, und die Zeile wird rot dargestellt, wenn der Saldo kleiner als Null ist. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -144,7 +145,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 ### <a name="to-run-the-application"></a>So führen Sie die Anwendung aus
 
-1. Drücken Sie die Taste F5, um die Anwendung auszuführen. Excel wird gestartet und zeigt eine Tabelle mit den Informationen der beiden Konten in `bankAccounts` an. Anschließend wird ein Word-Dokument angezeigt, das einen Link zur Excel-Tabelle enthält.
+1. Drücken Sie F5, um die Anwendung auszuführen. Excel wird gestartet und zeigt eine Tabelle mit den Informationen der beiden Konten in `bankAccounts` an. Anschließend wird ein Word-Dokument angezeigt, das einen Link zur Excel-Tabelle enthält.
 
 ### <a name="to-clean-up-the-completed-project"></a>So bereinigen Sie das abgeschlossene Projekt
 
@@ -154,13 +155,13 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 1. Führen Sie die Anwendung erneut aus, klicken Sie jedoch nicht auf **Projektmappe bereinigen**.
 
-2. Wählen Sie **Start** aus. Suchen Sie **Microsoft Visual Studio \<version>** und öffnen Sie eine Developer-Eingabeaufforderung.
+2. Wählen Sie **Start** aus. Suchen Sie **Microsoft Visual Studio \<version>** , und öffnen Sie eine Entwicklereingabeaufforderung.
 
 3. Geben Sie in der Developer-Eingabeaufforderung für Visual Studio `ildasm` ein, und drücken Sie dann die EINGABETASTE. Das IL DASM-Fenster wird angezeigt.
 
-4. Klicken Sie im IL DASM-Fenster im Menü **Datei** auf **Datei** > **Öffnen**. Doppelklicken Sie auf **Visual Studio \<version>** und dann noch einmal auf **Projekte**. Öffnen Sie den Ordner für das Projekt, und suchen Sie im Ordner „bin/Debug“ nach der Datei *Projektname*.dll. Doppelklicken Sie auf *Projektname*.dll. In einem neuen Fenster werden die Attribute Ihres Projekts sowie Verweise auf andere Module und Assemblys angezeigt. Beachten Sie, dass die Namespaces `Microsoft.Office.Interop.Excel` und `Microsoft.Office.Interop.Word` in der Assembly enthalten sind. Standardmäßig importiert der Compiler in Visual Studio die benötigten Typen aus einer referenzierten PIA in Ihre Assembly.
+4. Klicken Sie im IL DASM-Fenster im Menü **Datei** auf **Datei** > **Öffnen**. Doppelklicken Sie nacheinander auf **Visual Studio\<version>** und **Projekte**. Öffnen Sie den Ordner für das Projekt, und suchen Sie im Ordner „bin/Debug“ nach der Datei *Projektname*.dll. Doppelklicken Sie auf *Projektname*.dll. In einem neuen Fenster werden die Attribute Ihres Projekts sowie Verweise auf andere Module und Assemblys angezeigt. Beachten Sie, dass die Namespaces `Microsoft.Office.Interop.Excel` und `Microsoft.Office.Interop.Word` in der Assembly enthalten sind. Standardmäßig importiert der Compiler in Visual Studio die benötigten Typen aus einer referenzierten PIA in Ihre Assembly.
 
-     Weitere Informationen finden Sie unter [Vorgehensweise: Ansichtsassemblyinhalt](../../../standard/assembly/view-contents.md).
+     Weitere Informationen finden Sie unter [Vorgehensweise: View Assembly Contents (Vorgehensweise: Anzeigen von Assemblyinhalt)](../../../standard/assembly/view-contents.md).
 
 5. Doppelklicken Sie auf das Symbol **MANIFEST**. Es wird ein Fenster angezeigt, das eine Liste von Assemblys enthält, die vom Projekt referenzierte Elemente enthalten. `Microsoft.Office.Interop.Excel` und `Microsoft.Office.Interop.Word` sind nicht in der Liste enthalten. Da die Typen, die das Projekt benötigt, in die Assembly importiert wurden, sind keine Verweise auf eine PIA erforderlich. Dadurch wird die Bereitstellung vereinfacht. Die PIAs müssen nicht auf dem Computer des Benutzers vorhanden sein, und da für eine Anwendung keine bestimmte PIA-Version bereitgestellt werden muss, können die Anwendungen so konzipiert sein, dass sie mit mehreren Versionen von Office funktionieren, sofern die erforderlichen APIs in allen Versionen vorhanden sind.
 
@@ -189,7 +190,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 8. Klicken Sie in Visual Studio im Menü **Erstellen** auf **Projektmappe bereinigen**, um das abgeschlossene Projekt zu bereinigen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Automatisch implementierte Eigenschaften (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Automatisch implementierte Eigenschaften (C#)](../classes-and-structs/auto-implemented-properties.md)
@@ -205,7 +206,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 - [Lambdaausdrücke (C#)](../statements-expressions-operators/lambda-expressions.md)
 - [Indizierte Eigenschaften bei der COM-Interop-Programmierung](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md)
-- [Exemplarische Vorgehensweise: Erstellen des ersten VSTO-Add-Ins für Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../standard/assembly/embed-types-visual-studio.md)
+- [Exemplarische Vorgehensweise: Creating Your First VSTO Add-in for Excel (Exemplarische Vorgehensweise: Erstellen Ihres ersten VSTO-Add-Ins für Excel)](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilität](./index.md)

@@ -3,12 +3,12 @@ title: Grundlegendes zur Authentifizierung in den Azure-Bibliotheken für .NET
 description: Enthält eine Beschreibung der unterschiedlichen Authentifizierungsmöglichkeiten mit dem Azure SDK für .NET.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: 5ed29d5485dc7f59bcc757c8903116edf6bd5d7d
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 727842b34faa37558220a3035ac5228fae196201
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174844"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301618"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Authentifizieren mit dem Azure SDK für .NET
 
@@ -63,6 +63,15 @@ var azure = Microsoft.Azure.Management.Fluent.Azure
     .Configure()
     .Authenticate(credentials)
     .WithDefaultSubscription();
+```
+
+Es empfiehlt sich, die *subscriptionId* aus der JSON-Ausgabe explizit für das `Azure`-Objekt bereitzustellen:
+
+```csharp
+var azure = Microsoft.Azure.Management.Fluent.Azure
+    .Configure()
+    .Authenticate(credentials)
+    .WithSubscription(subscriptionId);
 ```
 
 ### <a name="file-based-authentication"></a><a name="mgmt-file"></a>Dateibasierte Authentifizierung

@@ -1,5 +1,6 @@
 ---
 title: Typbeziehungen in LINQ-Abfragevorgängen (C#)
+description: Erfahren Sie, welche Variablentypen in einer LINQ-Abfrage miteinander in Zusammenhang stehen. LINQ-Abfragevorgänge sind in der Datenquelle, in der Abfrage und in der Ausführung stark typisiert.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20f0b37a156e3b3f9c63f14cb83d678d26f685ee
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635612"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302281"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Typbeziehungen in LINQ-Abfragevorgängen (C#)
 Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, wie die Variablentypen in einer vollständigen Abfrageoperation miteinander zusammenhängen. Wenn Sie diese Beziehungen verstehen, können Sie die LINQ-Beispiele und die Codebeispiele in der Dokumentation besser nachvollziehen. Weiterhin können Sie dann besser verstehen, was im Hintergrund abläuft, wenn Variablen implizit mithilfe von `var` typisiert werden.  

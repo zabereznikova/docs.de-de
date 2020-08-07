@@ -1,19 +1,20 @@
 ---
-title: Reflexion (C#)
+title: Reflektion (C#)
+description: Die Reflexion stellt Objekte bereit, die Assemblys, Module und Typen in C# beschreiben. Wenn Ihr Code Attribute enthält, ermöglicht die Reflexion Ihnen den Zugriff auf diese Attribute.
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: a56fb24b63e4d80dbb67b079466b67cd11672023
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d4f4c082dd2d58e212bae53524e5dd4fd06fb75
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711658"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302801"
 ---
-# <a name="reflection-c"></a>Reflexion (C#)
+# <a name="reflection-c"></a>Reflektion (C#)
 
-Reflexion bietet Objekte (des Typs <xref:System.Type>), die Assemblys, Module und Typen beschreiben. Mithilfe von Reflexion können Sie dynamisch eine Instanz eines Typs erzeugen, den Typ an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann. Wenn Sie Attribute in Ihrem Code verwenden, können Sie mit Reflexion auf diese zugreifen. Weitere Informationen finden Sie unter [Attribute](../../../standard/attributes/index.md).
+Reflektion bietet Objekte (des Typs <xref:System.Type>), die Assemblys, Module und Typen beschreiben. Mithilfe von Reflektion können Sie dynamisch eine Instanz eines Typs erzeugen, den Typ an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann. Wenn Sie Attribute in Ihrem Code verwenden, können Sie mit Reflektion auf diese zugreifen. Weitere Informationen finden Sie unter [Attribute](../../../standard/attributes/index.md).
 
-Hier sehen Sie ein einfaches Beispiel für Reflexion mit der Methode <xref:System.Object.GetType>, die von allen Typen der Basisklasse `Object` geerbt wird, zum Abrufen von Typinformationen einer Variable:
+Hier sehen Sie ein einfaches Beispiel für Reflektion mit der Methode <xref:System.Object.GetType>, die von allen Typen der Basisklasse `Object` geerbt wird, zum Abrufen von Typinformationen einer Variable:
 
 > [!NOTE]
 > Stellen Sie sicher, dass Sie `using System;` und `using System.Reflection;` am Anfang Ihrer *.cs*-Datei hinzufügen.
@@ -27,7 +28,7 @@ Console.WriteLine(type);
 
 Die Ausgabe ist: `System.Int32`.
 
-Im folgenden Beispiel wird Reflexion verwendet, um den vollständigen Namen der geladenen Assembly abzurufen.
+Im folgenden Beispiel wird Reflektion verwendet, um den vollständigen Namen der geladenen Assembly abzurufen.
 
 ```csharp
 // Using Reflection to get information of an Assembly:
@@ -38,11 +39,11 @@ Console.WriteLine(info);
 Die Ausgabe ist: `System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e`.
 
 > [!NOTE]
-> Die C#-Schlüsselwörter `protected` und `internal` haben in IL keine Bedeutung und werden nicht in Reflexions-APIs verwendet. Die entsprechenden Begriffe in IL sind *Family* und *Assembly*. Verwenden Sie zum Identifizieren einer `internal`-Methode mithilfe von Reflexion die Eigenschaft <xref:System.Reflection.MethodBase.IsAssembly%2A>. Verwenden Sie <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> zum Identifizieren einer Methode `protected internal`.
+> Die C#-Schlüsselwörter `protected` und `internal` haben in IL keine Bedeutung und werden nicht in Reflektions-APIs verwendet. Die entsprechenden Begriffe in IL sind *Family* und *Assembly*. Verwenden Sie zum Identifizieren einer `internal`-Methode mithilfe von Reflektion die Eigenschaft <xref:System.Reflection.MethodBase.IsAssembly%2A>. Verwenden Sie <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> zum Identifizieren einer Methode `protected internal`.
 
-## <a name="reflection-overview"></a>Übersicht über Reflexion
+## <a name="reflection-overview"></a>Übersicht über Reflektion
 
-Reflexion ist in folgenden Situationen nützlich:
+Reflektion ist in folgenden Situationen nützlich:
 
 - Wenn Sie in den Metadaten Ihres Programms auf Attribute zugreifen müssen Weitere Informationen finden Sie unter [Abrufen von Informationen aus Attributen](../../../standard/attributes/retrieving-information-stored-in-attributes.md).
 - Zum Untersuchen und Instanziieren von Typen in einer Assembly
@@ -55,7 +56,7 @@ Weitere Informationen finden Sie unter:
 
 - [Reflexion](../../../framework/reflection-and-codedom/reflection.md)
 - [Anzeigen von Typinformationen](../../../framework/reflection-and-codedom/viewing-type-information.md)
-- [Reflexion und generische Typen](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [Reflektion und generische Typen](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - <xref:System.Reflection.Emit>
 - [Abrufen von Informationen aus Attributen](../../../standard/attributes/retrieving-information-stored-in-attributes.md)
 

@@ -1,16 +1,17 @@
 ---
 title: Generische Klassen – C#-Programmierhandbuch
+description: Erfahren Sie mehr über generische Klassen, die in Auflistungen wie verknüpften Listen, Hashtabellen, Stapeln, Warteschlangen und Strukturen verwendet werden.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 308f4328540e1001018942738d931be3d8be53ed
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937505"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301917"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Generische Klassen (C#-Programmierhandbuch)
 Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmten Datentyp sind. Generische Klassen werden am häufigsten bei Auflistungen verwendet, z.B. bei verknüpften Listen, Hashtabellen, Stapeln, Warteschlangen, Strukturen usw. Vorgänge wie das Hinzufügen oder Entfernen von Elementen aus der Auflistung werden nahezu auf die gleiche Art und Weise ausgeführt, unabhängig vom Typ der gespeicherten Daten.  

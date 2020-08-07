@@ -1,17 +1,18 @@
 ---
 title: Exemplarische Vorgehensweisen für C#
+description: Hier finden Sie Schrittanleitungen für gängige Szenarien. Diese exemplarischen Vorgehensweisen für C# sind ein guter Einstieg in ein Produkt oder einen bestimmten Funktionsbereich.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: f563e5ed1b14831f9fea6575ced0f7a95d9157fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 746fe35e6d6d4a75f363ccb82ae8dc6106854d8d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626359"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381891"
 ---
 # <a name="c-walkthroughs"></a>Exemplarische Vorgehensweisen für C#
 
@@ -71,7 +72,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
 - [Beispiele und exemplarische Vorgehensweisen für die Bereitstellung](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)\
   Bietet detaillierte Beispiele für häufige Bereitstellungsszenarien.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](./programming-guide/index.md)
 - [Visual Studio-Beispiele](/visualstudio/ide/visual-studio-ide)

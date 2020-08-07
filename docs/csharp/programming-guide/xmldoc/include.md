@@ -1,5 +1,6 @@
 ---
 title: <include> – C#-Programmierhandbuch
+description: Erfahren Sie mehr über das XML-Tag <include> ein. Mit diesem Tag können Sie auf Kommentare in einer anderen Datei verweisen, die die Typen und Member in Ihrem Quellcode beschreiben.
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: bf41019c775fed25afe4bdb9453a8e52f44856b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 15a99444d464594cc91a7c8805c564c703c3b608
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287349"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381904"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C#-Programmierhandbuch)
 
@@ -75,7 +76,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>Programmausgabe
 
-Die folgende Ausgabe wird generiert, wenn Sie die Klassen „Test“ und „Test2“ mit der folgenden Befehlszeile kompilieren: `-doc:DocFileName.xml.` In Visual Studio geben Sie die Option für XML-Dokumentkommentare im Buildbereich des Projekt-Designers an. Erkennt der C#-Compiler das `<include>`-Tag, so sucht er statt in der aktuellen Quelldatei in *xml_include_tag.doc* nach Dokumentationskommentaren. Der Compiler generiert dann *DocFileName.xml*. Dies ist die Datei, die von Dokumentationstools wie [DocFX](https://dotnet.github.io/docfx/) oder [Sandcastle](https://github.com/EWSoftware/SHFB) für das Erstellen der endgültigen Dokumentation verwendet wird.  
+Die folgende Ausgabe wird generiert, wenn Sie die Klassen „Test“ und „Test2“ mit der folgenden Befehlszeile kompilieren: `-doc:DocFileName.xml.` In Visual Studio geben Sie die Option für XML-Dokumentkommentare im Buildbereich des Projekt-Designers an. Erkennt der C#-Compiler das `<include>`-Tag, so sucht er statt in der aktuellen Quelldatei in *xml_include_tag.doc* nach Dokumentationskommentaren. Der Compiler generiert dann *DocFileName.xml*. Dies ist die Datei, die von Dokumentationstools wie z. B. [Sandcastle](https://github.com/EWSoftware/SHFB) genutzt wird, um die endgültige Dokumentation zu erzeugen.  
   
 ```xml
 <?xml version="1.0"?>
@@ -98,7 +99,7 @@ The summary for this other type.
 </doc>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

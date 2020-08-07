@@ -1,13 +1,14 @@
 ---
 title: Refactoring in reine Funktionen (C#)
+description: Erfahren Sie, wie Sie Code mithilfe von reinen Funktionen umgestalten. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc5dd26923e2edaed34c8f1b742b3dfa1e935e68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253112"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300227"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactoring in reine Funktionen (C#)
 
@@ -24,7 +25,7 @@ Ein wichtiger Aspekt bei dem Studium reiner funktionaler Transformationen besteh
   
  Eine Möglichkeit des Umstiegs auf die funktionale Programmierung besteht darin, vorhandenen Code umzugestalten und so unnötige Nebenwirkungen und externe Abhängigkeiten abzuschaffen. Auf diese Weise können Sie Versionen von reinen Funktionen von vorhandenem Code erstellen.  
   
- In diesem Thema wird erläutert, was eine reine Funktion ist und was nicht. Im [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md) wird gezeigt, wie Sie ein WordprocessingML-Dokument bearbeiten können. Außerdem enthält dieses Tutorial zwei Beispiele für das Refactoring mithilfe einer reinen Funktion.  
+ In diesem Thema wird erläutert, was eine reine Funktion ist und was nicht. Im [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](./shape-of-wordprocessingml-documents.md) wird gezeigt, wie Sie ein WordprocessingML-Dokument bearbeiten können. Außerdem enthält dieses Tutorial zwei Beispiele für das Umgestalten mithilfe einer reinen Funktion.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Beseitigen von Nebenwirkungen und externen Abhängigkeiten  
  In den folgenden Beispielen werden zwei nicht reine Funktionen einer reinen Funktion gegenübergestellt.  

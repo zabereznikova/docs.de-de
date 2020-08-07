@@ -1,13 +1,14 @@
 ---
 title: Refactoring mit einer Erweiterungsmethode (C#)
+description: Erfahren Sie, wie Sie Code mithilfe einer Erweiterungsmethode umgestalten. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e786f0e1514156535fd6a6033e37ed8879e99709
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253101"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381943"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactoring mit einer Erweiterungsmethode (C#)
 Dieses Beispiel baut auf dem vorhergehenden Beispiel, [Retrieving the Text of the Paragraphs (C#) (Abrufen des Textes der Absätze (C#))](./retrieving-the-text-of-the-paragraphs.md), auf. Es gestaltet die Verkettung von Zeichenfolgen mit einer reinen Funktion um, die als Erweiterungsmethode implementiert wird.  
@@ -244,9 +245,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel wird gezeigt, wie dieser Code durch Verwendung von reinen Funktionen umgestaltet werden kann:  
   
-- [Refactoring mit reiner Funktion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Refactoring mit einer reinen Funktion (C#)](./refactoring-using-a-pure-function.md)
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](./shape-of-wordprocessingml-documents.md)
-- [Refactoring Into Pure Functions (Refactoring in reine Funktionen (C#))](./refactoring-into-pure-functions.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md)
+- [Refactoring in reine Funktionen (C#)](./refactoring-into-pure-functions.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten (C# und Visual Basic)'
+description: In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie dynamische Objekte erstellen und verwenden. Erstellen Sie ein benutzerdefiniertes dynamisches Objekt und ein Projekt, das eine IronPython-Bibliothek verwendet.
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 3b5a92948a3e692a734f3ddee3c7238d5d27588f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 144651d3b14f6f6093ab07f1df7be10e6d05ae89
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157051"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381254"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten (C# und Visual Basic)
 

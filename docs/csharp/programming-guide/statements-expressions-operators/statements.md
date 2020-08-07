@@ -1,16 +1,17 @@
 ---
 title: Anweisungen – C#-Programmierhandbuch
+description: Erfahren Sie mehr über Anweisungen in der C#-Programmierung. Hier finden Sie eine Liste mit Anweisungstypen sowie Codebeispiele und zusätzliche Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: d50b50bb291d0d087015ea5bd075ae90ced66ff5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b941e46f959167f78f1366a3863aca4240810013
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711934"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381761"
 ---
 # <a name="statements-c-programming-guide"></a>Anweisungen (C#-Programmierhandbuch)
 
@@ -34,7 +35,7 @@ Die folgende Tabelle enthält die verschiedenen Typen von Anweisungen in C# und 
 |Ausnahmebehandlungsanweisungen|Mit Ausnahmebehandlungsanweisungen können Sie ordnungsgemäß von Ausnahmebedingungen wiederherstellen, die zur Laufzeit auftreten. Weitere Informationen finden Sie unter den folgenden Themen: <ul><li>[throw](../../language-reference/keywords/throw.md)</li><li>[try-catch](../../language-reference/keywords/try-catch.md)</li><li>[try-finally](../../language-reference/keywords/try-finally.md)</li><li>[try-catch-finally](../../language-reference/keywords/try-catch-finally.md)</li></ul>|
 |[Checked und unchecked](../../language-reference/keywords/checked-and-unchecked.md)|Die Anweisungen „checked“ und „unchecked“ helfen Ihnen anzugeben, ob numerische Vorgänge einen Überlauf verursachen dürfen, wenn das Ergebnis in einer Variable gespeichert ist, die zu klein ist, um den resultierenden Wert zu speichern. Weitere Informationen finden Sie unter [checked](../../language-reference/keywords/checked.md) und [unchecked](../../language-reference/keywords/unchecked.md).|
 |Die Anweisung `await`|Wenn Sie eine Methode mit dem [async](../../language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](../../language-reference/operators/await.md) Operator in der Methode verwenden. Wenn ein Ausdruck `await` in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.<br /><br /> Ein einfaches Beispiel finden Sie im Abschnitt „Async-Methoden“ unter [Methoden](../classes-and-structs/methods.md). Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](../concepts/async/index.md).|
-|Die Anweisung `yield return`|Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](../../language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.<br /><br /> Weitere Informationen finden Sie unter [Iteratoren](../concepts/iterators.md).|
+|Die Anweisung `yield return`|Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die [yield return](../../language-reference/keywords/yield.md) -Anweisung, um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.<br /><br /> Weitere Informationen finden Sie unter [Iteratoren](../concepts/iterators.md).|
 |Die Anweisung `fixed`|Die fixed-Anweisung verhindert, dass der Garbage Collector eine bewegliche Variable verschiebt. Weitere Informationen finden Sie unter [fixed](../../language-reference/keywords/fixed-statement.md).|
 |Die Anweisung `lock`|Die lock-Anweisung hilft Ihnen, den Zugriff auf Codeblöcke auf jeweils einen Thread zu beschränken. Weitere Informationen finden Sie unter [lock](../../language-reference/keywords/lock-statement.md).|
 |Anweisungen mit Bezeichnung|Sie können einer Anweisung eine Bezeichnung geben, und anschließend mit dem Schlüsselwort [goto](../../language-reference/keywords/goto.md) zu der Anweisung mit Bezeichnung springen. (Ein Beispiel finden Sie in der folgenden Zeile.)|

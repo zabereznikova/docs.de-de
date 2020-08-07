@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (C#)'
+description: Erfahren Sie, wie Sie leere Abfrageresultsets debuggen. Diese Resultsets können vorkommen, wenn ein Entwickler eine Abfrage so geschrieben hat, als wäre XML nicht in einem Namespace.
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 2716f7c525ac6bee8d2fb374e4ecc4c975d852a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad6d39697e5a59fe23ca700ceeb2a9860d05bb94
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141291"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302905"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (C#)
 Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.  

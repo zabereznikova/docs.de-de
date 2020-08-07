@@ -1,15 +1,16 @@
 ---
 title: Zeigertypen – C#-Programmierhandbuch
+description: Erfahren Sie mehr über Zeigertypen. Hier finden Sie Beispiele für verschiedene Zeiger, Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 492b37460c05ffbc82e020facb354be22706f8d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9c62a31f9a4a090fe56fb10ac45fe2f93f1b036e
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396258"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382034"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 

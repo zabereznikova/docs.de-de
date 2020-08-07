@@ -1,15 +1,16 @@
 ---
 title: Verwenden von Delegaten – C#-Programmierhandbuch
+description: Erfahren Sie, wie Delegaten verwendet werden. Delegaten sind ein objektorientierter, typsicherer und sicherer Typ, der eine Methode sicher kapselt.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 9a81ee5ccdc2697ca435d40be27568b651977f96
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a9b625b8c0785ed2f446be27c11dc76108bc4bce
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241590"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302151"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Verwenden von Delegaten (C#-Programmierhandbuch)
 
@@ -63,11 +64,11 @@ Delegaten mit mehr als einer Methode in der Aufrufliste werden von <xref:System.
 
 Multicastdelegaten werden ausgiebig bei der Ereignisbehandlung verwendet. Ereignisquellobjekte senden Ereignisbenachrichtigungen an Empfängerobjekte, die für den Erhalt dieses Ereignisses registriert wurden. Um sich für ein Ereignis zu registrieren, erstellt der Empfänger eine Methode zur Behandlung des Ereignisses, dann erstellt er einen Delegaten für die Methode und übergibt den Delegaten an die Ereignisquelle. Die Quelle ruft den Delegaten auf, wenn das Ereignis eintritt. Der Delegat ruft dann die Ereignisbehandlungsmethode für den Empfänger auf und übermittelt die Ereignisdaten. Der Delegattyp für ein bestimmtes Ereignis wird von der Ereignisquelle definiert. Weitere Informationen finden Sie unter [Ereignisse](../events/index.md).
 
-Beim Vergleichen von zwei unterschiedlichen zugewiesenen Typen zur Kompilierzeit kommt es zu einem Kompilierungsfehler. Falls die Delegatinstanzen statisch vom Typ `System.Delegate` sind, dann ist der Vergleich zulässig, gibt jedoch zur Laufzeit "False" zurück. Zum Beispiel:
+Beim Vergleichen von zwei unterschiedlichen zugewiesenen Typen zur Kompilierzeit kommt es zu einem Kompilierungsfehler. Falls die Delegatinstanzen statisch vom Typ `System.Delegate` sind, dann ist der Vergleich zulässig, gibt jedoch zur Laufzeit "False" zurück. Beispiel:
 
 [!code-csharp[csProgGuideDelegates#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#30)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Delegaten](./index.md)

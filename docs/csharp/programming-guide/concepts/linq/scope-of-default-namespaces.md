@@ -1,13 +1,14 @@
 ---
 title: Bereich von Standardnamespaces in C#
+description: Erfahren Sie, wie Sie Abfragen in XML-Standardnamespaces in LINQ to XML in C# durchführen. Verwenden Sie eine XNamespace-Variable und den lokalen Namen, um einen qualifizierten Namen für die Abfrage anzugeben.
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 912e47099f89daa9b80ac58b422d39d598509ac9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253042"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302398"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Bereich von Standardnamespaces in C\#
 Standardnamespaces, wie sie in der XML-Struktur dargestellt werden, befinden sich bei Abfragen nicht innerhalb des gültigen Bereichs. Bei XML, das sich in einem Standardnamespace befindet, müssen Sie weiterhin eine <xref:System.Xml.Linq.XNamespace>-Variable deklarieren und diese Variable mit dem lokalen Namen kombinieren, um einen qualifizierten Namen zu erhalten, der in der Abfrage verwendet werden kann.  
@@ -88,6 +89,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Namespaces: Übersicht (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

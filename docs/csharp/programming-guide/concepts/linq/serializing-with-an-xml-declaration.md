@@ -1,13 +1,14 @@
 ---
 title: Serialisieren mit einer XML-Deklaration (C#)
+description: Erfahren Sie mehr über die Konfigurationen, in denen die Serialisierung in C# eine XML-Deklaration generiert, einschließlich der Serialisierung in eine Datei, in TextWriter und in XmlWriter.
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-ms.openlocfilehash: 4533d69f2b0bee68b4adee6e18fe28dde18078ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91b61f037d28149f7c2355f4233dc319b54627
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483484"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302359"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>Serialisieren mit einer XML-Deklaration (C#)
 In diesem Thema wird beschrieben, wie Sie steuern können, ob die Serialisierung eine XML-Deklaration generiert.  
@@ -61,6 +62,6 @@ Console.WriteLine(sb.ToString());
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Serializing XML Trees (C#) (Serialisieren von XML-Strukturen (C#))](serializing-to-files-textwriters-and-xmlwriters.md)
+- [Serialisieren von XML-Strukturen (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

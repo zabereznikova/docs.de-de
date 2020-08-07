@@ -2,12 +2,12 @@
 title: NuGet für .NET-Bibliotheken
 description: Best Practices für die Paketerstellung mit NuGet für .NET-Bibliotheken
 ms.date: 01/15/2019
-ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9f8d7cc4402a87e1429791b57a0306b318dfbe4
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398532"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382112"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -52,7 +52,7 @@ Ein NuGet-Paket unterstützt viele [Metadateneigenschaften](/nuget/reference/nus
 | `Description`                      | `description`              | Eine ausführliche Beschreibung des Pakets, die in der Benutzeroberfläche angezeigt wird.             |
 | `Authors`                          | `authors`                  | Eine durch Trennzeichen getrennte Liste von Paketerstellern, die den Profilnamen auf nuget.org entspricht.             |
 | `PackageTags`                      | `tags`                     | Eine durch Leerzeichen getrennte Liste von Tags und Schlüsselwörtern, die das Paket beschreiben. Tags werden bei der Suche nach Paketen verwendet.             |
-| `PackageIconUrl`                   | `iconUrl`                  | Eine URL für ein Bild, das als Symbol für das Paket verwendet wird. Es muss sich um eine HTTPS-URL handeln, und das Bild muss die Maße 64x64 sowie einen transparenten Hintergrund haben.             |
+| `PackageIcon`                   | `icon`                  | Ein Pfad zu einem Bild im Paket, das als Paketsymbol verwendet werden soll. Erfahren Sie mehr über [`icon`-Metadaten](/nuget/reference/nuspec#icon). |
 | `PackageProjectUrl`                | `projectUrl`               | Eine URL für die Projekthomepage oder das Quellrepository.             |
 | `PackageLicenseExpression`         | `license`                  | Die [SPDX-ID](https://spdx.org/licenses/) der Projektlizenz. Nur OSI- und FSF-genehmigte Lizenzen können eine ID verwenden. Andere Lizenzen sollten `PackageLicenseFile` verwenden. Erfahren Sie mehr über [`license`-Metadaten](/nuget/reference/nuspec#license). |
 

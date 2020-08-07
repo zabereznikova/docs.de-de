@@ -2,12 +2,12 @@
 title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: a0cbead27e52af3114d9c44fd19c966e665a2850
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251204"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427007"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -342,9 +342,9 @@ Sie müssen sicherstellen, dass die Lizenzdatei gepackt ist, indem Sie sie expli
 
 Eine URL für die Lizenz, die auf das Paket angewendet werden kann. (_seit Visual Studio 15.9.4, .NET SDK 2.1.502 und 2.2.101 veraltet_)
 
-### <a name="packageiconurl"></a>PackageIconUrl
+### <a name="packageicon"></a>PackageIcon
 
-Eine URL für ein 64x64-Bild mit transparentem Hintergrund, das als Symbol für das Paket in der UI-Anzeige verwendet wird.
+Ein Pfad zu einem Bild im Paket, das als Paketsymbol verwendet werden soll. Erfahren Sie mehr über [`icon`-Metadaten](/nuget/reference/nuspec#icon). [PackageIconUrl ist veraltet](/nuget/reference/msbuild-targets#packageiconurl) und wurde durch PackageIcon ersetzt.
 
 ### <a name="packagereleasenotes"></a>PackageReleaseNotes
 

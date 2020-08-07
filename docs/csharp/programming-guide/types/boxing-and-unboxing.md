@@ -1,5 +1,6 @@
 ---
 title: Boxing und Unboxing – C#-Programmierhandbuch
+description: Erfahren Sie mehr über Boxing und Unboxing in der C#-Programmierung. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 f1_keywords:
 - cs.boxing
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a5bfcc79de8ba3ff66ca8aab9d86d69d89f9221
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76745416"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380695"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing und Unboxing (C#-Programmierhandbuch)
 
@@ -112,8 +113,8 @@ int j = (int) o;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
-- [Reference types (Verweistypen)](../../language-reference/keywords/reference-types.md)
-- [Value types (Werttypen)](../../language-reference/builtin-types/value-types.md)
+- [Verweistypen](../../language-reference/keywords/reference-types.md)
+- [Werttypen](../../language-reference/builtin-types/value-types.md)

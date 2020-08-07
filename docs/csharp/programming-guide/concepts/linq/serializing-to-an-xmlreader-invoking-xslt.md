@@ -1,13 +1,14 @@
 ---
 title: Serialisieren in einen XmlReader (XSLT aufrufen) (C#)
+description: Erfahren Sie, wie Sie CreateReader verwenden, um einen XmlReader in C# zu erstellen. Das Modul, das aus diesem XmlReader liest, liest die Knoten aus der XML-Struktur und verarbeitet sie.
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa5a232c74c5314cb7f1cf03c2a8875ca1cd04df
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487181"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302411"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serialisieren in einen XmlReader (XSLT aufrufen) (C#)
 Wenn Sie die <xref:System.Xml?displayProperty=nameWithType>-Interoperabilitätsfunktionen von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] verwenden, können Sie <xref:System.Xml.Linq.XNode.CreateReader%2A> verwenden, um einen <xref:System.Xml.XmlReader> zu erstellen. Das Modul, das aus diesem <xref:System.Xml.XmlReader> liest, liest die Knoten aus der XML-Struktur und verarbeitet sie entsprechend.  
@@ -59,6 +60,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Serializing XML Trees (C#) (Serialisieren von XML-Strukturen (C#))](serializing-to-files-textwriters-and-xmlwriters.md)
+- [Serialisieren von XML-Strukturen (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

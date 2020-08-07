@@ -1,5 +1,6 @@
 ---
 title: „Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
+description: Verwenden Sie „Winres.exe“, den Windows-Editor für die Ressourcenlokalisierung. Dieses visuelle Layouttool hilft Lokalisierungsexperten dabei, Windows Forms-Benutzeroberflächenressourcen zu lokalisieren, die von Formularen verwendet werden.
 ms.date: 08/15/2018
 helpviewer_keywords:
 - Winres.exe
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715708"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516904"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
 
@@ -33,11 +34,11 @@ winres /?
 
 ## <a name="arguments"></a>Argumente
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`resourceFile`|Die zu lokalisierende Ressourcendatei. Diese Datei muss ein als RESX- oder RESOURCES-Datei durch den Visual Studio-Designer generiertes Windows Forms-Formular sein. "Winres.exe" kann generische RESX- bzw. RESOURCES-Dateien nicht öffnen.|
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
@@ -88,13 +89,13 @@ Mithilfe der endgültigen Versionen der Kulturressourcendateien können lokalisi
 
 Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen verwendeten Version von .NET Framework veröffentlicht wurde. In der folgenden Tabelle werden die kompatiblen Versionen aufgeführt:
 
-|Visual Studio|.NET Framework|Winres.exe|
+|Visual Studio|.NET Framework|Winres.exe|
 |-------------------|--------------------|----------------|
-|Visual Studio .NET 2002|1,0|1,0|
-|Visual Studio .NET 2003|1,1|1,1|
-|Visual Studio 2005|2,0|2,0|
+|Visual Studio .NET 2002|1.0|1.0|
+|Visual Studio .NET 2003|1.1|1.1|
+|Visual Studio 2005|2.0|2.0|
 |Visual Studio 2008|3.0 und 3.5|3.0 und 3.5|
-|Visual Studio 2010|4.0|4.0|
+|Visual Studio 2010|4,0|4,0|
 |Visual Studio 2017|4.6|4.6|
 
 > [!NOTE]
@@ -108,7 +109,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
 2. Um die Standardressourcen für ein zu lokalisierendes Formular zu öffnen, klicken Sie im Menü **Datei** auf den Befehl **Öffnen**, und navigieren Sie zu der zu öffnenden Datei.
 
-     \- oder -
+     - oder -
 
      Geben Sie die zu öffnende Datei beim Starten von "Winres.exe" in der Befehlszeile an.
 
@@ -135,7 +136,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
    Die Datei wird gespeichert, wobei die Benennungskonvention verwendet wird, die die Laufzeit für lokalisierte Ressourcendateien erwartet. Wenn Sie beispielsweise `TestApp.resources` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resources`. Wenn Sie `TestApp.resx` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resx`. Weitere Informationen zu Benennungskonventionen für Ressourcen finden Sie unter [Verpacken und Bereitstellen von Ressourcen](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Eine Liste der von der Runtime verwendeten vordefinierten Kulturnamen finden Sie unter der Klasse <xref:System.Globalization.CultureInfo>.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

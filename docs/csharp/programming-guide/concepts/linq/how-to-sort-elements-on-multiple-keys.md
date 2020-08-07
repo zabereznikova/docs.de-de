@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (C#)'
+description: Erfahren Sie, wie Sie Elemente nach mehreren Schlüsseln sortieren. Hier finden Sie Beispiele für das Sortieren von Elementen anhand von XML-Beispieldokumenten.
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347386"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301501"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (C#)
 

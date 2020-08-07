@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)'
+description: Erfahren Sie, wie Sie eine Auflistung der Absätze aus einem Office Open XML-Dokument abrufen. Hier finden Sie ein Beispiel, das die Erweiterungsmethode „StringConcatenate“ verwendet.
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64678b39d9d0bfb23574a09998248c8e33ec01d6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347460"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301592"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet und eine Auflistung aller in diesem Dokument vorhandenen Absätze abruft.  

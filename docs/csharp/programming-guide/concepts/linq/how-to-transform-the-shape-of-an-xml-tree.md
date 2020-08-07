@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Transformieren der Form einer XML-Struktur (C#)'
+description: Erfahren Sie, wie Sie die Form einer XML-Struktur transformieren. Die Form eines XML-Dokuments bezieht sich auf die Element- und Attributnamen sowie die Hierarchiemerkmale des Dokuments.
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa3cc18f235d061ae1778c177c4ac9b626f4b71
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347307"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302645"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Vorgehensweise: Transformieren der Form einer XML-Struktur (C#)
 Die *Form* eines XML-Dokuments wird von dessen Elementnamen, Attributnamen und den Merkmalen seiner Hierarchie bestimmt.  
@@ -90,7 +91,7 @@ Console.WriteLine(newCustOrd);
   
  Der Code ruft `ConvertAddress` auf, wodurch eine Liste von <xref:System.Xml.Linq.XElement>-Objekten zurückgegeben wird. Das Argument für die Methode ist eine Abfrage, die das komplexe `Address`-Element bestimmt, wobei das `Type`-Attribut den Wert `"Shipping"` hat.  
   
- Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  

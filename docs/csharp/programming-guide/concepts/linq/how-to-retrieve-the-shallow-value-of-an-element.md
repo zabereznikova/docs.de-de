@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Abrufen des Shallow-Werts eines Elements (C#)'
+description: Erfahren Sie, wie Sie den Shallow-Wert eines Elements abrufen. Der Shallow-Wert gilt nur für dieses spezifische Element.
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: b9b69b5a18106f82d13cb54208c2362f8239711e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 597859e5b66606aa0cff9c1a475e79e6b66c39fc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347449"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301579"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Vorgehensweise: Abrufen des Shallow-Werts eines Elements (C#)
 In diesem Thema wird gezeigt, wie Sie den flachen Wert eines Elements abrufen. Der flache Wert ist ausschließlich der Wert des jeweiligen Elements, im Gegensatz zum tiefen Wert, der die Werte aller Nachfolgerelemente enthält, die zu einer einzelnen Zeichenkette verkettet werden.  
@@ -79,6 +80,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](./linq-to-xml-axes-overview.md)

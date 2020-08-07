@@ -1,13 +1,14 @@
 ---
 title: 'Beispiel-XML-Datei: Numerische Daten (LINQ to XML)'
+description: Diese XML-Datei wird in verschiedenen Beispielen in der LINQ to XML-Dokumentation verwendet. Sie enthält numerische Daten für die Summenbildung, zur Durchschnittsberechnung und zum Gruppieren.
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
-ms.openlocfilehash: 921d2a42d0d553b08ecd291b3480d040dd379a96
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3cc2c47425d2eabba7a0967d7ecc25a79291eb6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168102"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302489"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Beispiel-XML-Datei: Numerische Daten (LINQ to XML)
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält numerische Daten zum Summieren, zur Durchschnittsberechnung und zum Gruppieren.  

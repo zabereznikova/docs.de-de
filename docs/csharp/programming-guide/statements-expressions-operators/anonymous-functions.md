@@ -1,17 +1,18 @@
 ---
 title: Anonyme Funktionen – C#-Programmierhandbuch
+description: Erfahren Sie mehr über anonyme Funktionen. Sie können einen Lambdaausdruck oder eine anonyme Methode verwenden, um eine anonyme Funktion zu erstellen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], as anonymous functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: c99aaf4f35d2d294a9f07de54129bb3b4fbfbfde
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241902"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381670"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Anonyme Funktionen (C#-Programmierhandbuch)
 

@@ -1,15 +1,16 @@
 ---
 title: cref-Attribut – C#-Programmierhandbuch
+description: Erfahren Sie mehr über das cref-Attribut. „cref“ bedeutet „Codereferenz“ und weist darauf hin, dass der innere Text des Tags ein Codeelement ist.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31fa1a3f182d7b72a1dfbe1ce47386f87fbbff75
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157012"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381995"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref-Attribut (C#-Programmierhandbuch)
 
@@ -17,7 +18,7 @@ Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. E
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Attribute `cref`, die in [\<see>](./see.md)-Tags verwendet werden.
+Das folgende Beispiel zeigt Attribute `cref`, die in [\<see>](./see.md)-Tags verwendet werden.
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
@@ -82,7 +83,7 @@ Beim Kompilieren erzeugt das Programm die folgende XML-Datei. Beachten Sie, dass
 </doc>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [XML-Dokumentationskommentare](./index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

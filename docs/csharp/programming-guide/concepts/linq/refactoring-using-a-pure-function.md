@@ -1,16 +1,17 @@
 ---
 title: Refactoring mithilfe einer reinen Funktion (C#)
+description: Erfahren Sie, wie Sie Code mithilfe einer reinen Funktion umgestalten. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3f0084d9de27f3f215cc3ba527ada93f7a3d61a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253076"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300110"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring mithilfe einer reinen Funktion (C#)
-Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring Using an Extension Method (Refactoring mit einer Erweiterungsmethode (C#))](./refactoring-using-an-extension-method.md) so um, dass es eine reine Funktion verwendet. In diesem Beispiel wird der Code, der den Text eines Absatzes ermitteln soll, in die reine statische Methode `ParagraphText` verschoben.  
+Das folgende Beispiel gestaltet das vorherige Beispiel [Refactoring mit einer Erweiterungsmethode (C#)](./refactoring-using-an-extension-method.md) so um, dass eine reine Funktion verwendet wird. In diesem Beispiel wird der Code, mit dem der Text eines Absatzes gesucht wird, in die reine statische Methode `ParagraphText` verschoben.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verarbeitet ein WordprocessingML-Dokument, indem es die Absatzknoten aus einem WordprocessingML-Dokument abruft. Außerdem ermittelt es für jeden Absatz die verwendete Formatvorlage. Das Beispiel baut auf den vorherigen Beispielen dieses Lernprogramms auf. Der umgestaltete Code wird im Code durch entsprechende Kommentare gekennzeichnet.  
@@ -154,7 +155,7 @@ class Program
 }  
 ```  
   
- Dieses Beispiel erzeugt dieselbe Ausgabe wie vor dem Refactoring:  
+ Dieses Beispiel erzeugt dieselbe Ausgabe wie vor der Umgestaltung:  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -179,8 +180,8 @@ StyleName:Code >Hello World<
   
 - [Projecting XML in a Different Shape (C#) (Projektieren von XML in eine andere Form (C#))](./projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md)
 - [Refactoring mit einer Erweiterungsmethode (C#)](./refactoring-using-an-extension-method.md)
-- [Refactoring Into Pure Functions (Refactoring in reine Funktionen (C#))](./refactoring-into-pure-functions.md)
+- [Refactoring in reine Funktionen (C#)](./refactoring-into-pure-functions.md)

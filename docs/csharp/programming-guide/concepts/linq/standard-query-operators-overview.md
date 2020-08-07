@@ -1,13 +1,14 @@
 ---
 title: Übersicht über Standardabfrageoperatoren (C#)
+description: Die LINQ-Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation und Sortierung in C# bereit.
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 095a0b7a7a8265f235d28a4634ea82cdcd7a60c0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990007"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302320"
 ---
 # <a name="standard-query-operators-overview-c"></a>Übersicht über Standardabfrageoperatoren (C#)
 Die *Standardabfrageoperatoren* sind die Methoden, die das LINQ-Muster bilden. Die meisten dieser Methoden bearbeiten Sequenzen. Eine Sequenz ist hier ein Objekt, dessen Typ die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung und weitere bereit.  

@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Suchen einer Liste untergeordneter Elemente (XPath-LINQ to XML) (C#)'
+description: Erfahren Sie, wie Sie mithilfe eines XPath-Ausdrucks eine Liste untergeordneter Elemente suchen. Sehen Sie sich ein Codebeispiel an, das alle untergeordneten Elemente eines bestimmten Elements sucht.
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 2b6f6031441e7d1bd015e25a8debad7dd7f3b261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3025aca7fb1055acd55e5ce98914d8359ebe4b7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141230"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301722"
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen einer Liste untergeordneter Elemente (XPath-LINQ to XML) (C#)
 In diesem Thema wird die Achse der untergeordneten XPath-Elemente mit der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>-Achse verglichen.  

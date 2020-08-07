@@ -1,15 +1,16 @@
 ---
 title: Verwenden von Indexern – C#-Programmierhandbuch
+description: Erfahren Sie, wie Sie einen Indexer für eine Klasse, Struktur oder Schnittstelle in C# deklarieren und verwenden. Dieser Artikel enthält Beispielcode.
 ms.date: 07/15/2020
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: e742e4dd5ea92ec3baf37c915e024e713022b7b6
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: a8a9e05c1d2e44841177a924c6ff51c6c9e6a05a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416240"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301865"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Verwenden von Indexern (C#-Programmierhandbuch)
 

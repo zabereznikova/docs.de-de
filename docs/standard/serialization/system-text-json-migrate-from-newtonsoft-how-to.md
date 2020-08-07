@@ -11,14 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865332"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303477"
 ---
-# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Migration von Newtonsoft.Json zu System.Text.Json
+# <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Migration von Newtonsoft.Json zu System.Text.Json
 
 In diesem Artikel wird erläutert, wie Sie von [Newtonsoft.Json](https://www.newtonsoft.com/json) zu <xref:System.Text.Json> migrieren.
 
@@ -34,7 +34,7 @@ Der `System.Text.Json`-Namespace bietet Funktionalitäten zum Serialisieren in u
 
 Der Großteil dieses Artikels behandelt die Verwendungsweise der <xref:System.Text.Json.JsonSerializer>-API, aber er enthält auch Anleitungen zur Verwendung der Typen <xref:System.Text.Json.JsonDocument> (der das Dokumentobjektmodell (DOM) darstellt), <xref:System.Text.Json.Utf8JsonReader> und <xref:System.Text.Json.Utf8JsonWriter>.
 
-## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Tabelle mit Unterschieden zwischen Newtonsoft.Json und System.Text.Json
+## <a name="table-of-differences-between-no-locnewtonsoftjson-and-no-locsystemtextjson"></a>Tabelle mit Unterschieden zwischen Newtonsoft.Json und System.Text.Json
 
 In der folgenden Tabelle sind die `Newtonsoft.Json`-Funktionen mit ihren Entsprechungen in `System.Text.Json` aufgeführt. Die Entsprechungen lassen sich in die folgenden Kategorien einteilen:
 
@@ -83,7 +83,7 @@ In der folgenden Tabelle sind die `Newtonsoft.Json`-Funktionen mit ihren Entspre
 
 Dies ist keine vollständige Liste der `Newtonsoft.Json`-Funktionen. Die Liste enthält viele der Szenarien, die in [GitHub-Issues](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) oder [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json)-Beiträgen angefordert wurden. Wenn Sie eine Problemumgehung für eins der hier aufgelisteten Szenarien implementieren, für das derzeit kein Beispielcode vorhanden ist, und wenn Sie Ihre Lösung teilen möchten, wählen Sie **Diese Seite** im Abschnitt **Feedback** unten auf dieser Seite aus. Dadurch wird ein Issue im GitHub-Repository dieser Dokumentation erstellt und dieses ebenfalls im Abschnitt **Feedback** auf dieser Seite aufgeführt.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Unterschiede beim Standardverhalten von JsonSerializer im Vergleich zu Newtonsoft.Json
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>Unterschiede beim Standardverhalten von JsonSerializer im Vergleich zu Newtonsoft.Json
 
 <xref:System.Text.Json> ist standardmäßig strikt und vermeidet jegliche Vermutung oder Interpretation im Namen des Aufrufers, womit deterministisches Verhalten betont wird. Die Bibliothek ist absichtlich auf diese Weise für Leistung und Sicherheit konzipiert. `Newtonsoft.Json` ist standardmäßig flexibel. Dieser grundlegende Unterschied beim Design steht hinter vielen der folgenden spezifischen Unterschiede im Standardverhalten.
 
@@ -402,12 +402,14 @@ In <xref:System.Text.Json> können Sie Rückrufe simulieren, indem Sie einen ben
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastCallbacksConverter.cs)]
 
-Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs für die Klasse](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:System.Text.Json.JsonSerializerOptions.Converters>-Sammlung.
+Registrieren Sie diesen benutzerdefinierten Konverter durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:System.Text.Json.JsonSerializerOptions.Converters>-Sammlung.
 
 Wenn Sie einen benutzerdefinierten Konverter verwenden, der sich am vorangehenden Beispiel orientiert:
 
 * Der `OnDeserializing`-Code hat keinen Zugriff auf die neue POCO-Instanz. Um die neue POCO-Instanz zu Beginn der Deserialisierung zu bearbeiten, fügen Sie diesen Code in den POCO-Konstruktor ein.
-* Vermeiden Sie eine Endlosschleife, indem Sie den Konverter im Options-Objekt registrieren und dieses nicht übergeben, wenn `Serialize` oder `Deserialize` rekursiv aufgerufen wird. Weitere Informationen finden Sie weiter oben in diesem Artikel im Abschnitt [Erforderliche Eigenschaften](#required-properties).
+* Vermeiden Sie eine Endlosschleife, indem Sie den Konverter im Options-Objekt registrieren und dieses nicht übergeben, wenn `Serialize` oder `Deserialize` rekursiv aufgerufen wird.
+
+Weitere Informationen zu benutzerdefinierten Konvertern, die`Serialize` oder `Deserialize` rekursiv aufrufen, finden Sie unter [Erforderliche Eigenschaften](#required-properties) weiter oben in diesem Artikel.
 
 ### <a name="public-and-non-public-fields"></a>Öffentliche und nicht öffentliche Felder
 

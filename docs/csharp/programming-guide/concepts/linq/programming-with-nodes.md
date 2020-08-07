@@ -1,13 +1,14 @@
 ---
 title: Programmieren mit Knoten (C#)
+description: Erfahren Sie mehr über das Programmieren mit Knoten. Hiermit können Entwickler Programme schreiben, die auf detaillierterer Ebene arbeiten, als Elemente und Attribute bieten können.
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 05c2e95fe97effda7b537a7ac2d8f5780f4e212b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a31d6459ab644a682d480239cabc3d88fd7dc14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168313"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301683"
 ---
 # <a name="programming-with-nodes-c"></a>Programmieren mit Knoten (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Entwickler, die Programme, wie einen XML-Editor, ein Transformationssystem oder einen Berichts-Generator schreiben müssen, müssen häufig Programme schreiben, die auf einer detaillierteren Ebene als Elemente und Attribute arbeiten. Sie müssen oft auf der Ebene der Knoten arbeiten und dabei Textknoten, Verarbeitungsanweisungen und Kommentare bearbeiten. Dieses Thema beschäftigt sich mit einigen Aspekten des Programmierens auf Knotenebene.  

@@ -1,5 +1,6 @@
 ---
 title: <typeparamref> – C#-Programmierhandbuch
+description: Erfahren Sie mehr über das XML-Tag <typeparamref>. Dieses Tag ermöglicht es Nutzern der Dokumentationsdatei, ein Wort auf unterschiedliche Weise zu formatieren, z. B. kursiv.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a39e896f1242452c7bcc94faa1e7ef3086ae2149
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789658"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380721"
 ---
 # <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (C#-Programmierhandbuch)
 
@@ -26,7 +27,7 @@ ms.locfileid: "76789658"
 
 - `name`
 
-  Der Name des Typparameters. Setzen Sie den Namen in doppelte Anführungszeichen (" ").
+  Der Name des Typparameters. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").
 
 ## <a name="remarks"></a>Hinweise
 
@@ -40,7 +41,7 @@ Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compile
 
 [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

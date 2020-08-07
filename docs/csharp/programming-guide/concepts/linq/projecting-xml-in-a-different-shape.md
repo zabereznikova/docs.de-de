@@ -1,13 +1,14 @@
 ---
 title: Projektieren von XML in eine andere Form (C#)
+description: Erfahren Sie, wie Sie XML in eine andere Form als das Quell-XML-Format projizieren. Sehen Sie sich ein Codebeispiel an, das Klassen aus der WindowsBase-Assembly verwendet.
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 492c0671b6a81f7e6b8d5f93698f84b88b14bd23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591534"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299096"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projektieren von XML in eine andere Form (C#)
 In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere Form als das Quell-XML projizieren können.  
@@ -233,5 +234,5 @@ class Program
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel werden Sie eine Abfrage erstellen, die sämtlichen Text in einem Word-Dokument ermittelt:  
   
-- [Suchen von Text in Word-Dokumenten (C#)](./finding-text-in-word-documents.md)  
+- [Finding Text in Word Documents (C#) (Suchen von Text in Word-Dokumenten (C#))](./finding-text-in-word-documents.md)  
   

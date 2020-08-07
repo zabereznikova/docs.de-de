@@ -1,16 +1,17 @@
 ---
 title: SecAnnotate.exe (.NET Security Annotator-Tool)
+description: Verwenden Sie „SecAnnotate.exe“, das .NET Security Annotator-Tool. Identifiziert die Abschnitte „SecurityCritical“ und „SecuritySafeCritical“ einer oder mehrerer Assemblys.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: ffc275c588775fb79da276be904ada90a5a31bad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 440ad39f1afb54ad517bc73f05d1e60748b7b520
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75937924"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517216"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator-Tool)
 Das .NET Security Annotator-Tool (SecAnnotate.exe) ist eine Befehlszeilenanwendung, die die `SecurityCritical`- und `SecuritySafeCritical`-Teile einer oder mehrerer Assemblys identifiziert.  
@@ -29,7 +30,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 ## <a name="parameters"></a>Parameter  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |`/a`<br /><br /> oder<br /><br /> `/showstatistics`|Zeigt eine Statistik zur Verwendung der Transparenz in Assemblys an, die analysiert werden.|  
 |`/d:` *verzeichnis*<br /><br /> oder<br /><br /> `/referencedir:` *verzeichnis*|Gibt ein Verzeichnis an, das während der Anmerkung nach abhängigen Assemblys durchsucht werden soll.|  

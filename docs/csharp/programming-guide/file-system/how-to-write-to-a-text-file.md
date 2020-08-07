@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Schreiben in eine Textdatei (C#-Programmierleitfaden)'
+description: Erfahren Sie, wie Sie mit C# eine Textdatei schreiben. Hier finden Sie verschiedene Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 f1_keywords:
 - TextWriter.WriteLine
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ac16fb971eae5654a55e2f1753d78a6458f03315
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4108163121d56268b810121ca3ae2b2c1338aeab
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712246"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301644"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Vorgehensweise: Schreiben in eine Textdatei (C#-Programmierleitfaden)
 In diesen Beispielen werden verschiedene Möglichkeiten veranschaulicht, Text in eine Datei zu schreiben. In den ersten beiden Beispielen werden statische Hilfsmethoden für die <xref:System.IO.File?displayProperty=nameWithType>-Klasse verwendet, um jedes Element von `IEnumerable<string>` und eine Zeichenfolge in eine Textdatei zu schreiben. In Beispiel 3 wird dargestellt, wie Text einer Datei hinzugefügt wird, wenn jede Zeile beim Schreiben in die Datei einzeln verarbeitet werden muss. Die Beispiele 1–3 überschreiben alle vorhandenen Inhalte in der Datei. In Beispiel 4 wird jedoch gezeigt, wie einer vorhandenen Datei Text angefügt wird.  

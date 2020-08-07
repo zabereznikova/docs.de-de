@@ -1,13 +1,14 @@
 ---
 title: Übersicht der XAttribute-Klasse (C#)
+description: Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind. Das XAttribute repräsentiert XML-Attribute. Hier erfahren Sie, wie Sie in LINQ to XML in C# mit Attributen arbeiten.
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a19de601041bbb20241c959e909483b97bcf797
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635664"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302229"
 ---
 # <a name="xattribute-class-overview-c"></a>Übersicht der XAttribute-Klasse (C#)
 Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind. Die <xref:System.Xml.Linq.XAttribute>-Klasse stellt XML-Attribute dar.  
@@ -20,7 +21,7 @@ Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind. Die <xref:Sys
 ## <a name="the-xattribute-constructor"></a>Der "XAttribute"-Konstruktor  
  Der folgende Konstruktor der <xref:System.Xml.Linq.XAttribute>-Klasse ist der Konstruktor, den Sie am häufigsten verwenden werden:  
   
-|Konstruktor|Beschreibung|  
+|Konstruktor|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|Sie erstellt ein <xref:System.Xml.Linq.XAttribute>-Objekt. Das `name`-Argument gibt den Namen des Attributs an, während `content` den Inhalt des Attributs angibt.|  
   
@@ -79,6 +80,6 @@ Console.WriteLine(c);
   
  Diese Unterscheidung ist im Wesentlichen nur für Entwickler von Bedeutung, die Code schreiben, der mit XML-Strukturen auf Knotenebene arbeitet. Für die meisten Entwickler dürfte dieser Unterschied ohne praktische Bedeutung sein.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Working with XML Namespaces (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)
+- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)

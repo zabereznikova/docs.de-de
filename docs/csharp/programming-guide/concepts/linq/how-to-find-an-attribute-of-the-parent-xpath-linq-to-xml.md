@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Suchen eines Attributs eines übergeordneten Elements (XPath-LINQ to XML) (C#)'
+description: Erfahren Sie, wie Sie nach einem Attribut eines übergeordneten Elements suchen. Hier finden Sie ein Codebeispiel, das ein XML-Beispieldokument verwendet.
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: bfe7554a5c767adde5e7170c8e1ea0537155f6df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03344bb66f617970d9598c91366eb7d69514397a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141173"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303295"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen eines Attributs eines übergeordneten Elements (XPath-LINQ to XML) (C#)
 

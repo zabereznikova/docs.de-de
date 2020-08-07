@@ -1,16 +1,17 @@
 ---
 title: Vergleich zwischen Eigenschaften und Indexern – C#-Programmierhandbuch
+description: Vergleichen Sie Indexer in C# mit Eigenschaften. Abgesehen von einigen Unterschieden gelten die für Eigenschaftenaccessoren definierten Regeln auch für Indexeraccessoren.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], vs. indexers
 - indexers [C#], vs. properties
 ms.assetid: 3358a89f-44a0-4a4d-bf8c-07237a90af39
-ms.openlocfilehash: 330d222083ce599719698c023803196dfe88da84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b83ce3db3d4b53fb7bcc5f3b3cd603a375d5d473
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712129"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299174"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>Vergleich zwischen Eigenschaften und Indexern (C#-Programmierhandbuch)
 Indexer sind wie Eigenschaften. Mit Ausnahme der in der folgenden Tabelle aufgeführten Unterschiede gelten alle für Eigenschaftenaccessoren definierten Regeln auch für Indexeraccessoren.  

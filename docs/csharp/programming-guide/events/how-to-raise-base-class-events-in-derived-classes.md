@@ -1,15 +1,16 @@
 ---
 title: 'Vorgehensweise: Auslösen von Basisklassenereignissen in abgeleiteten Klassen (C#-Programmierleitfaden)'
+description: Erfahren Sie, wie Sie Basisklassenereignisse in abgeleiteten Klassen auslösen. Hier finden Sie ein Codebeispiel und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: e2d2dfc2809a4de1756bfc362880eebc79076b94
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b0b0a16a1fd165e437fc79ccacb20d406f5cff63
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240631"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302099"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Vorgehensweise: Auslösen von Basisklassenereignissen in abgeleiteten Klassen (C#-Programmierleitfaden)
 Das folgende einfache Beispiel zeigt das Standardverfahren zum Deklarieren von Ereignissen in einer Basisklasse, sodass sie auch von abgeleiteten Klassen ausgelöst werden können. Dieses Muster wird häufig in Windows Forms-Klassen in .NET-Klassenbibliotheken verwendet.  
@@ -22,7 +23,7 @@ Das folgende einfache Beispiel zeigt das Standardverfahren zum Deklarieren von E
 ## <a name="example"></a>Beispiel  
  [!code-csharp[csProgGuideEvents#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Ereignisse](./index.md)

@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (C#)'
+description: Erfahren Sie, wie Sie mithilfe eines XPath-Ausdrucks Elemente in einem Namespace suchen. Hier finden Sie ein Beispiel, das eine XML-Struktur mit zwei Namespaces liest.
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: da9d819be5234a2429b6eab276f89bd0d877d4a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bf15c4183e3ca339fa7090c21baff83526e37d3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141068"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303230"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (C#)
 

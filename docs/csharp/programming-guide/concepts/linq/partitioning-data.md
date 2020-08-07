@@ -1,13 +1,14 @@
 ---
 title: Partitionieren von Daten (C#)
+description: Erfahren Sie, wie Sie Daten in LINQ partitionieren. Sehen Sie sich eine Abbildung mit den Ergebnissen von Partitionierungsvorgängen an.
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: d9330e9973b2f25903e1f81a7296362e2a7c756b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c85eaec2dc01b683234a27714750354982be440
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591589"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302606"
 ---
 # <a name="partitioning-data-c"></a>Partitionieren von Daten (C#)
 Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz in zwei Abschnitte unterteilt wird, ohne die Elemente dabei neu anzuordnen, und bei dem anschließend einer der Abschnitte zurückzugeben wird.  
@@ -27,7 +28,7 @@ Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz
 |Take|Übernimmt Elemente bis zu einer angegebenen Position in einer Sequenz|Nicht zutreffend.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
 |TakeWhile|Übernimmt Elemente, die auf einer Prädikatfunktion basieren, bis ein Element der Bedingung nicht erfüllt|Nicht zutreffend.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)

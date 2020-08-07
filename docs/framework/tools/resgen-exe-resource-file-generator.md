@@ -1,5 +1,6 @@
 ---
 title: Resgen.exe (Resource File Generator)
+description: Verwenden Sie „Resgen.exe“, den Generator für Ressourcendateien. Konvertieren Sie Dateien in Textformaten (TXT, RESTEXT) und XML-Ressourcenformaten (RESX) in CLR-Laufzeitbinärdateien, die eingebettet werden können.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resource files, .resources files
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: b9be030689ecf78b3482743e486e32012e9ca5d4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f51ee6c8537abafc82017f3cc29d734e939a254f
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201107"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517229"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
 Der Resource File Generator (Resgen.exe) konvertiert Textdateien (TXT- oder RESTEXT-Dateien) und Dateien im XML-basierten Ressourcenformat (RESX-Dateien) in binäre Common Language Runtime-Dateien (RESOURCES-Dateien), die in ausführbare Laufzeit-Binärdateien oder Satellitenassemblys eingebettet werden können. (Weitere Informationen finden Sie unter [Erstellen von Ressourcendateien](../resources/creating-resource-files-for-desktop-apps.md).)  

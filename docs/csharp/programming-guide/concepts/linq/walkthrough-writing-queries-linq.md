@@ -1,5 +1,6 @@
 ---
 title: 'Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)'
+description: Diese exemplarische Vorgehensweise zeigt, wie C#-Sprachfeatures in LINQ-Abfrageausdrücken verwendet werden. In diesem Artikel wird Visual Studio als Entwicklungsumgebung verwendet.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49cb725c9ce9a417f78f638795e98a75a086893
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73418057"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302216"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)
 Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von LINQ-Abfrageausdrücke verwendet werden.  
@@ -24,9 +25,9 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 #### <a name="to-create-a-project-in-visual-studio"></a>So erstellen Sie ein Projekt in Visual Studio  
   
-1. Starten Sie Visual Studio.  
+1. Starten Sie Visual Studio.  
   
-2. Wählen Sie in der Menüleiste **Datei** > **Neu** > **Projekt** aus.  
+2. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
@@ -182,7 +183,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Language-Integrated Query (LINQ) (C#)](./index.md)
+- [Language Integrated Query (LINQ) (C#)](./index.md)
 - [LINQ-Abfrageausdrücke](../../../linq/index.md)

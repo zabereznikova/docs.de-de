@@ -1,5 +1,6 @@
 ---
 title: Mgmtclassgen.exe (Management Strongly Typed Class Generator)
+description: Lernen Sie „Mgmtclassgen.exe“ kennen, den Generator für stark typisierte Verwaltungsklassen. Mit diesem Tool können Sie schnell eine früh gebundene verwaltete Klasse für eine WMI-Klasse generieren.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 89facd4369dad6168e46febd3e34d7f7c235faf0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201865"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517294"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Mit dem Management Strongly Typed Class Generator-Tool können Sie schnell eine früh gebundene Klasse für eine angegebene WMI (Windows Management Instrumentation)-Klasse generieren. Die generierte Klasse vereinfacht den Code, den Sie für den Zugriff auf eine Instanz der WMI-Klasse schreiben müssen.  
@@ -28,11 +29,11 @@ mgmtclassgen
 WMIClass [options]
 ```  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |*WMIClass*|Die WMI (Windows Management Instrumentation)-Klasse, für die eine früh gebundene verwaltete Klasse generiert wird.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/l**  *language*|Gibt die Programmiersprache an, in der die früh gebundene verwaltete Klasse generiert werden soll. Als Sprachargument können Sie **CS** (C#, Standard), **VB** (Visual Basic), **MC** (C++) oder **JS** (JScript) festlegen.|  
 |**/m**  *machine*|Gibt den Computer an, auf dem sich die WMI-Klasse befindet und mit dem eine Verbindung hergestellt werden soll. Die Standardeinstellung ist der lokale Computer.|  

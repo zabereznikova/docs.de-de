@@ -1,13 +1,14 @@
 ---
 title: Abrufen der Absätze und ihrer Stile (C#)
+description: Erfahren Sie, wie Sie eine Abfrage schreiben, die Absätze abruft und dann die Formatvorlage jedes Absatzes ermittelt.
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94d01a13485f70bc9d9cef55b5f390c3b30d7f14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168296"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303399"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Abrufen der Absätze und ihrer Stile (C#)
 In diesem Beispiel schreiben wir eine Abfrage, die die Absatzknoten aus einem WordprocessingML-Dokument abruft. Außerdem ermittelt es für jeden Absatz die verwendete Formatvorlage.  
@@ -109,7 +110,7 @@ foreach (var p in paragraphs)
     Console.WriteLine("StyleName:{0}", p.StyleName);  
 ```  
   
- Dieses Beispiel generiert bei Anwendung auf das in [Erstellen eines Office Open-Quell-XML-Dokuments (C#)](./creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe.  
+ Dieses Beispiel produziert bei Anwendung auf das in [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](./creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe.  
   
 ```output  
 StyleName:Heading1  
@@ -132,6 +133,6 @@ StyleName:Code
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Thema, [Abrufen des Texts der Absätze (C#)](./retrieving-the-text-of-the-paragraphs.md), erstellen Sie eine Abfrage zum Abrufen des Texts der Absätze.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md)

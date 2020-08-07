@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Implementieren von Schnittstellenereignissen (C#-Programmierleitfaden)'
+description: Erfahren Sie, wie Sie Schnittstellenereignisse in einer Klasse implementieren. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd86aed4f8d8ac6e291c11fe441f87ac97593b03
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167479"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302125"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Vorgehensweise: Implementieren von Schnittstellenereignissen (C#-Programmierleitfaden)
 Eine [Schnittstelle](../../language-reference/keywords/interface.md) kann ein [Ereignis](../../language-reference/keywords/event.md) deklarieren. Das folgende Beispiel zeigt, wie Schnittstellenereignisse in einer Klasse implementiert werden. Die Regeln sind mit den Regeln zum Implementieren von Schnittstellenmethoden oder -eigenschaften weitestgehend identisch.  

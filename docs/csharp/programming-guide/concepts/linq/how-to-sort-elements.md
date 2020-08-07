@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Sortieren von Elementen (C#)'
+description: Erfahren Sie, wie Sie Elemente sortieren. Hier finden Sie Beispiele dafür, wie Sie eine Abfrage schreiben, die ihre Ergebnisse in einem XML-Dokument sortiert.
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 7fad9fcb43905072c88a5704c56672917bfc377c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 669d9cf583e6ab70c93be39ad271eaf104f88718
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347363"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301436"
 ---
 # <a name="how-to-sort-elements-c"></a>Vorgehensweise: Sortieren von Elementen (C#)
 In diesem Beispiel wird gezeigt, wie Sie eine Abfrage schreiben können, die ihre Ergebnisse sortiert.  

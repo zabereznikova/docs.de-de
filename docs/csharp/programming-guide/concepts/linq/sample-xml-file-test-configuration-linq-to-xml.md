@@ -1,13 +1,14 @@
 ---
 title: 'Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)'
+description: Diese XML-Datei wird in verschiedenen Beispielen in der LINQ to XML-Dokumentation verwendet. Sie ist eine Testkonfigurationsdatei.
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
-ms.openlocfilehash: 713e0b69ea896d9f4198ae68f1a3a258d74f24f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14402a4d7988e767464a53a159bcb25661dc82f8
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487236"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302463"
 ---
 # <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dies ist eine Testkonfigurationsdatei.  

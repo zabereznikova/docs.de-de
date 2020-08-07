@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447172"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455739"
 ---
 # <a name="implement-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
-Die Implementierung der <xref:System.IDisposable.Dispose%2A>-Methode ist hauptsächlich für die Freigabe nicht verwalteter Ressourcen bestimmt, die von Ihrem Code verwendet werden. Beim Arbeiten mit Instanzmembern, die <xref:System.IDisposable>-Implementierungen sind, werden <xref:System.IDisposable.Dispose%2A>-Aufrufe häufig weitergegeben. Es gibt weitere Gründe für die Implementierung von <xref:System.IDisposable.Dispose%2A>, z. B. das Rückgängigmachen eines zuvor ausgeführten Vorgangs. Ein Beispiel ist das Freigeben von Arbeitsspeicher, der zugewiesen wurde, das Entfernen eines Elements aus einer Sammlung, das hinzugefügt wurde, das Signalisieren der Freigabe einer Sperre, die abgerufen wurde, usw.
+Die Implementierung der <xref:System.IDisposable.Dispose%2A>-Methode ist hauptsächlich für die Freigabe nicht verwalteter Ressourcen bestimmt. Beim Arbeiten mit Instanzmembern, die <xref:System.IDisposable>-Implementierungen sind, werden <xref:System.IDisposable.Dispose%2A>-Aufrufe häufig weitergegeben. Es gibt weitere Gründe für die Implementierung von <xref:System.IDisposable.Dispose%2A>, wie beispielsweise das Freigeben von zugeordnetem Arbeitsspeicher, das Entfernen eines Elements, das einer Auflistung hinzugefügt wurde, oder das Signalisieren der Aufhebung einer abgerufenen Sperre.
 
 Der [.NET-Garbage Collector](index.md) ordnet nicht verwalteten Arbeitsspeicher weder zu noch gibt er diesen frei. Das Muster für das Verwerfen eines Objekts, Dispose-Muster genannt, legt die Ordnung für die Lebensdauer eines Objekts fest. Das Dispose-Muster wird für Objekte verwendet, die die <xref:System.IDisposable>-Schnittstelle implementieren, und ist üblich bei der Interaktion mit Datei- und Pipehandles, Registrierungshandles, Wait-Handles oder Zeigern auf Blöcke nicht verwalteten Speichers. Dies liegt daran, dass der Garbage Collector nicht verwaltete Objekte nicht freigeben kann.
 

@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Zugreifen auf Office-Interop-Objekte (C#-Programmierleitfaden)'
+description: Erfahren Sie mehr über die C#-Features, die den Zugriff auf Office-API-Objekte vereinfachen. Verwenden Sie die neuen Features, um Code zu schreiben, der ein Excel-Arbeitsblatt erstellt und anzeigt.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700834"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303022"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Vorgehensweise: Zugreifen auf Office-Interop-Objekte (C#-Programmierleitfaden)
 

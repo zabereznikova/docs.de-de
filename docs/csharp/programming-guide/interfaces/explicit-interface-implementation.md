@@ -1,16 +1,17 @@
 ---
 title: Explizite Schnittstellenimplementierung – C#-Programmierhandbuch
+description: Eine Klasse kann Schnittstellen implementieren, die einen Member mit derselben Signatur in C# enthalten. Durch die explizite Implementierung wird für jede Schnittstelle ein spezifischer Klassenmember erstellt.
 ms.date: 01/24/2020
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: ea32a279b7c464174a7fada5ef93ccf62ef39884
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6ec328c08d1da84a11431d9400a094df8c72223
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167672"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303086"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Explizite Schnittstellenimplementierung (C#-Programmierhandbuch)
 
@@ -44,7 +45,7 @@ Im folgenden Beispiel wird die Standardimplementierung aufgerufen:
 
 Alle Klassen, die die `IControl`-Schnittstelle implementieren, können die Standardmethode `Paint` überschreiben: entweder als öffentliche Methode oder als explizite Schnittstellenimplementierung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](../classes-and-structs/index.md)

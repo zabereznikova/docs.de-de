@@ -1,17 +1,18 @@
 ---
 title: 'Vorgehensweise: Ausführen von Bereinigungscode mit finally (C#-Programmierleitfaden)'
+description: Erfahren Sie, wie Sie Bereinigungscode mit einer finally-Anweisung ausführen. Mit finally-Anweisungen wird sichergestellt, dass alle notwendigen Bereinigungsvorgänge für Objekte sofort ausgeführt werden.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - try/finally blocks [C#]
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: d1ba761e64053d656ad4cd004133fc455a57c6f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 148c1f9fba67659a07c667bb15619d6f3f7c3b2f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705274"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302021"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Vorgehensweise: Ausführen von Bereinigungscode mit finally (C#-Programmierleitfaden)
 `finally`-Anweisungen sollen sicherstellen, dass die notwendige Bereinigung von Objekten, die externe Ressourcen enthalten, sofort erfolgen, auch wenn eine Ausnahme ausgelöst wird. Ein Beispiel für eine solche Bereinigung ist der Aufruf von <xref:System.IO.Stream.Close%2A> auf einem <xref:System.IO.FileStream> sofort nach der Verwendung, anstatt abzuwarten, bis das Objekt durch die Common Language Runtime wie folgt speicherbereinigt wird:  

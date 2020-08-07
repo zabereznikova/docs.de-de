@@ -1,5 +1,6 @@
 ---
 title: Storeadm.exe (Isolated Storage-Tool)
+description: Erfahren Sie mehr über „Storeadm.exe“, das Tool für isolierten Speicher. Dieses Tool listet alle vorhandenen Speicher des aktuellen Benutzers auf oder entfernt diese.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storeadm.exe
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 153fc2b4b5a955fd5ed768d1492f053595363e6e
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715719"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517008"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Isolated Storage-Tool)
 Das Isolated Storage-Tool listet alle vorhandenen Speicher des aktuellen Benutzers auf oder löscht diese.  
@@ -30,7 +31,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>Parameter  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |**/list**|Zeigt sämtliche vorhandenen Speicher des aktuellen Benutzers an. Dies schließt die Speicher für alle von diesem Benutzer ausgeführten Anwendungen oder Assemblys ein.|  
@@ -58,7 +59,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Ob Roaming für den Benutzer tatsächlich aktiviert ist, wirkt sich nicht auf die Verwaltung von "Storeadm.exe" aus. Wenn das Tool ohne Optionen ausgeführt wird, werden sämtliche Aktionen auf den lokalen Speicher angewendet. Wird das Tool mit der **/roaming**-Option ausgeführt, werden alle Aktionen auf den Speicher angewendet, der Roaming zulässt. Wenn das Tool mit der **/machine**-Option ausgeführt wird, werden sämtliche Aktionen auf den Computerspeicher angewendet.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Extras](index.md)
 - [Isolierter Speicher](../../standard/io/isolated-storage.md)

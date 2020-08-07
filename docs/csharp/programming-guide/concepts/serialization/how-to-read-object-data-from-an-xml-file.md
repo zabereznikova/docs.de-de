@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)'
+description: Dieses C#-Beispiel liest Objektdaten, die zuvor mithilfe der XmlSerializer-Klasse in eine XML-Datei geschrieben wurden.
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241876"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302788"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)
 In diesem Beispiel werden Objektdaten gelesen, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  

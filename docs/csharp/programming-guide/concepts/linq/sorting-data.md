@@ -1,13 +1,14 @@
 ---
 title: Sortieren von Daten (C#)
+description: Hier erfahren Sie mehr über Sortiervorgänge und die Methoden von Standardabfrageoperatoren, die Sortiervorgänge in LINQ in C# ausführen.
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 29a5e3e685bdc73536961b7783f4986796b46bdf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5feeb0e2229fc370fdcb9608817f41832bffd7cc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167906"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302333"
 ---
 # <a name="sorting-data-c"></a>Sortieren von Daten (C#)
 Bei einem Sortiervorgang werden die Elemente einer Sequenz auf Grundlage eines oder mehrerer Attribute sortiert. Mit dem ersten Sortierkriterium wird eine primäre Sortierung der Elemente ausgeführt. Sie können die Elemente innerhalb jeder primären Sortiergruppe sortieren, indem Sie ein zweites Sortierkriterium angeben.  
@@ -126,10 +127,10 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [orderby-Klausel](../../../language-reference/keywords/orderby-clause.md)
 - [Sortieren der Ergebnisse einer Join-Klausel](../../../linq/order-the-results-of-a-join-clause.md)
 - [Vorgehensweise: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

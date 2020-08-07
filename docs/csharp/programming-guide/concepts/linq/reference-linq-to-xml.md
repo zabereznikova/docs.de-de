@@ -1,13 +1,14 @@
 ---
 title: Verweis (LINQ to XML)
+description: Sehen Sie sich Links zu LINQ to XML-Referenzthemen an. Diese Links führen zur Dokumentation für LINQ to XML-Klassen und -Erweiterungsmethoden.
 ms.date: 07/20/2015
 ms.assetid: 815b45e2-3527-4dee-9986-b1277a693cde
-ms.openlocfilehash: b33e1ddbecb6be46f2ee9b6ce043c12c345fcf21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 654e691adc7e4c0005e3ad125cf3bdd33477397a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591270"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303139"
 ---
 # <a name="reference-linq-to-xml"></a>Verweis (LINQ to XML)
 Dieses Thema enthält Links zu den Referenzthemen für LINQ to XML.  
@@ -19,6 +20,6 @@ Dieses Thema enthält Links zu den Referenzthemen für LINQ to XML.
   
  Die Referenzdokumentation für die Erweiterungsmethoden, mit denen Sie XPath-Abfragen für eine XML-Struktur auswerten können, finden Sie unter <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ to XML (C#)](./linq-to-xml-overview.md)

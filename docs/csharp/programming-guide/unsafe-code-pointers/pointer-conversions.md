@@ -1,31 +1,32 @@
 ---
 title: Zeigerkonvertierungen – C#-Programmierhandbuch
+description: Erfahren Sie mehr über Zeigerkonvertierungen. Hier finden Sie Tabellen mit impliziten und expliziten Zeigerkonvertierungen, Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c39be5cb52964abbea5bc5636c6fa74d8411a331
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76745363"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382086"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Zeigerkonvertierungen (C#-Programmierhandbuch)
 Die folgende Tabelle zeigt vordefinierte implizite Zeigerkonvertierungen. Implizite Konvertierungen können in vielen Situationen auftreten, einschließlich methodenaufrufender und Zuweisungsansweisungen.  
   
 ## <a name="implicit-pointer-conversions"></a>Implizite Zeigerkonvertierungen  
   
-|Von|An|  
+|Von|Beschreibung|  
 |----------|--------|  
 |Beliebiger Zeigertyp|void*|  
-|null|Beliebiger Zeigertyp|  
+|NULL|Beliebiger Zeigertyp|  
   
  Die explizite Zeigerkonvertierung wird verwendet, um Konvertierungen, für die keine implizite Konvertierung vorliegt, mithilfe eines CAST-Ausdrucks durchzuführen. Die folgende Tabelle zeigt diese Konvertierungen.  
   
 ## <a name="explicit-pointer-conversions"></a>Explizite Zeigerkonvertierungen  
   
-|Von|An|  
+|Von|Beschreibung|  
 |----------|--------|  
 |Beliebiger Zeigertyp|Ein beliebiger anderer Zeigertyp|  
 |sbyte, byte, short, ushort, int, uint, long oder ulong|Beliebiger Zeigertyp|  
@@ -42,8 +43,8 @@ Die folgende Tabelle zeigt vordefinierte implizite Zeigerkonvertierungen. Impliz
 
 - [C#-Programmierhandbuch](../index.md)
 - [Zeigertypen](pointer-types.md)
-- [Reference types (Verweistypen)](../../language-reference/keywords/reference-types.md)
-- [Value types (Werttypen)](../../language-reference/builtin-types/value-types.md)
+- [Verweistypen](../../language-reference/keywords/reference-types.md)
+- [Werttypen](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed-Anweisung](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

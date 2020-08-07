@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierleitfaden)'
+description: Erfahren Sie, wie Sie in C# eine Zeichenfolge in eine Zahl konvertieren, indem Sie die Methoden „Parse“, „TryParse“ oder „Convert“ aufrufen.
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 8c46117579a5b787e5d9f3f317296d33bdd1cce1
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442201"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381969"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierleitfaden)
 

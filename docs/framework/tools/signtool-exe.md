@@ -1,16 +1,17 @@
 ---
 title: SignTool.exe (Signaturtool)
+description: Erfahren Sie mehr über „SignTool.exe“, das Signaturtool. Dieses Befehlszeilentool signiert Dateien digital, überprüft Signaturen in Dateien und fügt Dateien Zeitstempel hinzu.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 8ce31b1399700906d6d6e2a369dcfc4b61fe9646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1254f345a8b3bb796217442cbad36d2e942b403
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180322"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517203"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
 Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digital signiert, Signaturen in Dateien überprüft und Dateien Zeitstempel hinzufügt.  
@@ -27,7 +28,7 @@ signtool [command] [options] [file_name | ...]
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`command`|Einer von vier Befehlen (`catdb`, `sign`, `Timestamp` oder `Verify`), der einen für eine Datei auszuführenden Vorgang angibt. In der folgenden Tabelle finden Sie eine Beschreibung der einzelnen Befehle.|  
 |`options`|Eine Option, die einen Befehl ändert. Neben der globalen `/q`-Option und `/v`-Option wird von jedem Befehl ein eindeutiger Satz von Optionen unterstützt.|  
@@ -35,7 +36,7 @@ signtool [command] [options] [file_name | ...]
   
  Vom Signierungstool werden die folgenden Befehle unterstützt. Jeder Befehl wird mit einem unterschiedlichem Satz von Optionen verwendet, die in den jeweiligen Abschnitten aufgeführt sind.  
   
-|Befehl|Beschreibung|  
+|Get-Help|Beschreibung|  
 |-------------|-----------------|  
 |`catdb`|Fügt einer Katalogdatenbank eine Katalogdatei hinzu oder entfernt sie daraus. Katalogdatenbanken werden für die automatische Suche von Katalogdateien verwendet und mit einer GUID gekennzeichnet. Eine Liste der vom `catdb`-Befehl unterstützten Optionen finden Sie unter [catdb-Befehlsoptionen](signtool-exe.md#catdb).|  
 |`sign`|Signiert Dateien digital. Digitale Signaturen schützen Dateien vor Manipulationen und ermöglichen es Benutzern, den Signaturgeber anhand eines Signaturzertifikats zu überprüfen. Eine Liste der vom `sign`-Befehl unterstützten Optionen finden Sie unter [sign-Befehlsoptionen](signtool-exe.md#sign).|  
@@ -140,7 +141,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>Rückgabewert  
  Beim Beenden wird vom Signierungstool einer der folgenden Exitcodes zurückgegeben.  
   
-|Exitcode|Beschreibung|  
+|Exitcode|BESCHREIBUNG|  
 |---------------|-----------------|  
 |0|Ausführung war erfolgreich.|  
 |1|Ausführung ist fehlgeschlagen.|  

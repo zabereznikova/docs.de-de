@@ -1,16 +1,17 @@
 ---
 title: 'Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen (C#-Programmierleitfaden)'
+description: In diesem C#-Beispiel erfahren Sie, wie Sie explizit zwei Schnittstellen implementieren, die über dieselben Membernamen verfügen, und wie Sie für jeden Schnittstellenmember eine separate Implementierung einrichten.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d60ec43f734d5e8bfa7f467874440bd3514877fe
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75701237"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303061"
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen (C#-Programmierleitfaden)
 Die explizite [Schnittstellenimplementierung](../../language-reference/keywords/interface.md) erlaubt dem Programmierer auch, zwei Schnittstellen zu implementieren, die über die gleichen Membernamen verfügen, sowie jedem Schnittstellenmember eine separate Implementierung zu geben. Dieses Beispiel zeigt die Dimensionen eines Felds in jeweils der metrischen und der englischen Einheit. Das Feld [class](../../language-reference/keywords/class.md) implementiert zwei Schnittstellen, „IEnglishDimensions“ und „IMetricDimensions“, die die unterschiedlichen Messsysteme darstellen. Beide Schnittstellen verfügen über identische Elementnamen, sowie unterschiedliche Länge und Breite.  

@@ -1,13 +1,14 @@
 ---
 title: Voratomisierung von XName-Objekten (LINQ to XML) (C#)
+description: Erfahren Sie mehr über die Voratomisierung von XName-Objekten. Die Voratomisierung von Objekten verbessert die Leistung beim Erstellen von großen XML-Strukturen, in denen bestimmte Namen wiederholt werden.
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
-ms.openlocfilehash: 2fd754a352bd2988e52ec9c67a9915a8e587b107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d217f6c78dc5d83ce424fb3ba95785f2dac0b73
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591495"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302827"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>Voratomisierung von XName-Objekten (LINQ to XML) (C#)
 Eine Möglichkeit zum Verbessern der Leistung in LINQ to XML ist, <xref:System.Xml.Linq.XName>-Objekte vorab zu atomisieren. Voratomisierung bedeutet, dass einem <xref:System.Xml.Linq.XName>-Objekt eine Zeichenfolge zugeordnet wird, bevor Sie mithilfe der Konstruktoren der <xref:System.Xml.Linq.XElement>-Klasse und der <xref:System.Xml.Linq.XAttribute>-Klasse die XML-Struktur erstellen. Anschließend wird anstelle der Übergabe einer Zeichenfolge an den Konstruktor, der die implizite Konvertierung von Zeichenfolge in <xref:System.Xml.Linq.XName> verwenden würde, das initialisierte <xref:System.Xml.Linq.XName>-Objekt übergeben.  
@@ -117,6 +118,6 @@ DateTime t2 = DateTime.Now;
 Console.WriteLine("Time to construct:{0}", t2 - t1);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Atomized XName and XNamespace Objects (LINQ to XML) (C#) (Atomisierte XName- und XNamespace-Objekte (LINQ to XML) (C#))](./atomized-xname-and-xnamespace-objects-linq-to-xml.md)

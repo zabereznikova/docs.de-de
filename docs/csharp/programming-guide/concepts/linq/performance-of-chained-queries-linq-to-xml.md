@@ -1,13 +1,14 @@
 ---
 title: Leistung verketteter Abfragen (LINQ to XML) (C#)
+description: Erfahren Sie mehr über die Leistung verketteter Abfragen. Eine verkettete Abfrage ist eine Abfrage, die als Quelle eine andere Abfrage verwendet.
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 7deff9205e6535877efabd85257baa5b3906f41a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e9173e85845dd085f4d7bf6deec7eb498acd7f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253124"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302853"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Leistung verketteter Abfragen (LINQ to XML) (C#)
 
@@ -47,7 +48,7 @@ Diese verkettete Abfrage bietet dasselbe Leistungsprofil wie das Durchlaufen ein
 
 - In `query1` wird von der Abfrage durch die `where`-Klausel die <xref:System.Linq.Enumerable.Where%2A>-Methode aufgerufen. Diese Methode ist auch als Iterator implementiert. Die Einrichtung besteht neben den normalen Einrichtungsschritten für einen Iterator aus dem Instanziieren des Delegaten, der auf den Lambdaausdruck verweist. Der Delegat wird bei jeder Iteration aufgerufen, um das Prädikat auszuführen. Diese Einrichtungsschritte und die Arbeitsschritte, die in jeder Iteration durchgeführt werden, ähneln den Arbeitsschritten, die beim Durchlaufen einer Iteration der Achse durchgeführt werden.
 
-- In `query1` wird von der Abfrage durch die <xref:System.Linq.Enumerable.Select%2A>select<xref:System.Linq.Enumerable.Select%2A>-Klausel die {3}-Methode aufgerufen. Diese Methode weist dasselbe Leistungsprofil wie die <xref:System.Linq.Enumerable.Where%2A>-Methode auf.
+- In `query1` wird von der Abfrage durch die select<xref:System.Linq.Enumerable.Select%2A>-Klausel die -Methode aufgerufen. Diese Methode weist dasselbe Leistungsprofil wie die <xref:System.Linq.Enumerable.Where%2A>-Methode auf.
 
 - In `query2` verfügen sowohl die `where`-Klausel als auch die `select`-Klausel über dasselbe Leistungsprofil wie in `query1`.
 
@@ -55,4 +56,4 @@ Die Iteration durch `query2` ist daher direkt proportional zur Anzahl der Elemen
 
 Weitere Informationen zu Iteratoren finden Sie unter [yield](../../../language-reference/keywords/yield.md).
 
-Ein ausführlicheres Tutorial zum Verketten von Abfragen finden Sie unter [Tutorial: Verketten von Abfragen](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Ein ausführlicheres Tutorial finden Sie unter [Tutorial: Verketten von Abfragen](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).

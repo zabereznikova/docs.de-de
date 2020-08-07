@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Arbeiten mit Wörterbüchern unter Verwendung von LINQ to XML (C#)'
+description: Erfahren Sie, wie Sie unter Verwendung von LINQ to XML mit Wörterbüchern arbeiten. Hier finden Sie Beispiele für die Konvertierung von Wörterbüchern in XML sowie für die Konvertierung aus XML in andere Datenstrukturen.
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdba7a2b3dfc16fab1e239ac804c317dfefb7d9e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347224"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302619"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Vorgehensweise: Arbeiten mit Wörterbüchern unter Verwendung von LINQ to XML (C#)
 Es ist häufig sinnvoll, verschiedene Datenstrukturen in XML und aus XML in andere Datenstrukturen umzuwandeln. In diesem Thema wird eine konkrete Implementierung dieser allgemeinen Herangehensweise gezeigt, bei der ein <xref:System.Collections.Generic.Dictionary%602> in XML umgewandelt und dann wieder zurückgewandelt wird.  

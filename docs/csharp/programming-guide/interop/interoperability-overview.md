@@ -1,5 +1,6 @@
 ---
 title: Überblick über die Interoperabilität – C#-Programmierhandbuch
+description: Erfahren Sie mehr über die Interoperabilität zwischen C# und nicht verwaltetem Code, einschließlich Plattformaufrufen, C++-Interoperabilität, Verfügbarmachen von COM-Komponenten für C# und Verfügbarmachen von C# für COM.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241733"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302957"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
 Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.  

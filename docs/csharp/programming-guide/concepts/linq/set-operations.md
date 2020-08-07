@@ -1,13 +1,14 @@
 ---
 title: Mengenvorgänge (C#)
+description: Hier erfahren Sie mehr über Mengenvorgänge und die Methoden von Standardabfrageoperatoren, die Mengenvorgänge in LINQ in C# ausführen.
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 44a145a625b5e2e16d2469b20f8cfda1858560a2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab2608b267113ad5d47a33e64cd9a5e21496f668
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167932"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302372"
 ---
 # <a name="set-operations-c"></a>Mengenvorgänge (C#)
 Mengenvorgänge in LINQ sind Abfrageoperationen, die ein Satz von Ergebnissen erzeugen, der auf der Existenz oder Abwesenheit äquivalenter Elemente in derselben oder in einer getrennten Auflistung (oder einem Satz) basiert.  
@@ -49,13 +50,13 @@ Mengenvorgänge in LINQ sind Abfrageoperationen, die ein Satz von Ergebnissen er
 ### <a name="union"></a>Union  
  Das folgende Beispiel veranschaulicht einen Vereinigungsvorgang zweier Zeichensequenzen. Die zurückgegebene Sequenz enthält die eindeutigen Elemente aus beiden Eingabesequenzen.  
   
- ![Grafische Darstellung der Verbindung von zwei Sequenzen.](./media/set-operations/union-operation-two-sequences.png)  
+ ![Grafische Darstellung der Verbindung von zwei Sequenzen](./media/set-operations/union-operation-two-sequences.png)  
 
 [!code-csharp-interactive[Union](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#4)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
 - [Vorgehensweise: Suchen der Unterschiedsmenge zwischen zwei Listen (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

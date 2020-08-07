@@ -1,16 +1,17 @@
 ---
 title: Generics und Attribute – C#-Programmierhandbuch
+description: Erfahren Sie mehr über das Anwenden von Attributen auf generische Typen. Hier finden Sie Codebeispiele und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 47bf4e8f07a8b6778db8fa675d745d362dc10d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17556af2e1bc2963de953cea242d7000509acbcd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75703025"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299876"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Generics und Attribute (C#-Programmierhandbuch)
 Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie auf nicht generische Typen. Weitere Informationen zum Anwenden von Attributen finden Sie unter [Attribute](../concepts/attributes/index.md).  

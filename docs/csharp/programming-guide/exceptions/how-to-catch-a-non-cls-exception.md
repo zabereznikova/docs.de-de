@@ -1,15 +1,16 @@
 ---
 title: Abfangen einer Nicht-CLS-Ausnahme
+description: Erfahren Sie, wie Sie eine Nicht-CLS-Ausnahme abfangen. Hier finden Sie ein Codebeispiel und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 635cf0a9142f56dea4b2722fbf3f3eda505d85ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 255de4cab9a72491eb3b9624d968539d432e0442
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346277"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302008"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Abfangen einer Nicht-CLS-Ausnahme
 Einige .NET-Sprachen, einschließlich C++/CLI, erlauben Objekten, Ausnahmen auszulösen, die nicht aus <xref:System.Exception> stammen. Diese Ausnahmen werden als *Nicht-CLS-Ausnahmen* oder *Nicht-Ausnahmen* bezeichnet. In C# können Sie keine Nicht-CLS-Ausnahmen auslösen. Sie können sie jedoch auf zwei Arten abfangen:  
@@ -49,7 +50,7 @@ catch (RuntimeWrappedException e)
 }
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
 - [Ausnahmen und Ausnahmebehandlung](./index.md)

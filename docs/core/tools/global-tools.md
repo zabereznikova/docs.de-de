@@ -3,12 +3,12 @@ title: .NET Core-Tools
 description: Informationen zum Installieren, Verwenden, Aktualisieren und Entfernen von .NET Core-Tools. In diesem Artikel werden globale, Toolpfad- und lokale Tools vorgestellt.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: 583dbb461543d1efb7328d55f6ecce4a99afcaca
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 75bdedcbc3ebe9c23477795415076d160ab9a642
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226607"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455724"
 ---
 # <a name="how-to-manage-net-core-tools"></a>Verwalten von .NET Core-Tools
 
@@ -37,11 +37,11 @@ Ein .NET Core-Tool ist ein spezielles NuGet-Paket, das eine Konsolenanwendung en
 
 Derzeit bietet .NET Core keine Suchfunktion für Tools. Es folgen einige Möglichkeiten, Tools zu finden:
 
+* Durchsuchen Sie die [NuGet](https://www.nuget.org)-Website mithilfe des Pakettypfilters „.NET tool“. Weitere Informationen finden Sie unter [Finding and choosing packages (Suchen und Auswählen von Paketen)](/nuget/consume-packages/finding-and-choosing-packages).
 * Sehen Sie sich die Liste der Tools im GitHub-Repository [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) an.
 * Verwenden Sie [ToolGet](https://www.toolget.net/), um nach .NET-Tools zu suchen.
 * Sehen Sie sich den Quellcode der vom ASP.NET Core-Team im [GitHub-Repository dotnet/aspnetcore im Verzeichnis „Tools“](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) erstellten Tools an.
 * Weitere Informationen zu Diagnosetools finden Sie unter [Globale .NET Core-dotnet-Diagnosetools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
-* Durchsuchen Sie die [NuGet](https://www.nuget.org)-Website. Die NuGet-Website bietet jedoch noch keine Funktion, mit der Sie ausschließlich nach Toolpaketen suchen können.
 
 ## <a name="check-the-author-and-statistics"></a>Überprüfen des Autors und der Statistiken
 

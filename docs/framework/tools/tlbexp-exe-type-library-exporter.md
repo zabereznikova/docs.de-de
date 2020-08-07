@@ -1,5 +1,6 @@
 ---
 title: Tlbexp.exe (Type Library Exporter-Tool)
+description: Verwenden Sie „Tlbexp.exe“, das Tool zum Exportieren von Typbibliotheken. Dieses Tool generiert eine Typbibliothek, die die in einer Common Language Runtime-Assembly (CLR) definierten Typen beschreibt.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exporting type library [.NET Framework]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cfaa83590fefe31c437d2ff607fb579aec1da61
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180269"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517034"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
@@ -30,11 +31,11 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |*assemblyName*|Die Assembly, für die eine Typbibliothek exportiert werden soll.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/asmpath:** *directory*|Gibt den Speicherort an, der nach Assemblys durchsucht werden soll. Wenn Sie diese Option verwenden, müssen Sie die Speicherorte, die nach Assemblys durchsucht werden sollen, auf die verwiesen wird, explizit angeben, einschließlich des aktuellen Verzeichnisses.<br /><br /> Wenn Sie die **asmpath**-Option verwenden, sucht das Type Library Exporter-Tool nicht nach einer Assembly im globalen Assemblycache (GAC).|  
 |**/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|  

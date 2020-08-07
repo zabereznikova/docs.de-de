@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (C#)'
+description: Erfahren Sie, wie Sie eine XML-Struktur anhand einer XSD-Datei (Sprache der XML-Schemadefinition) validieren. Hier finden Sie Codebeispiele und weitere Ressourcen.
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4d2137d511efbe20e4d31ad27e4975d5444ec9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347256"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302632"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (C#)
 Der <xref:System.Xml.Schema>-Namespace enthält Erweiterungsmethoden, die ein einfaches Validieren von XML-Strukturen anhand von XSD-Dateien ermöglichen. Weitere Informationen finden Sie in der Dokumentation zur <xref:System.Xml.Schema.Extensions.Validate%2A>-Methode.  
@@ -80,7 +81,7 @@ doc2 did not validate
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- In diesem Beispiel wird das folgende XML-Schema verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](./sample-xsd-file-customers-and-orders1.md).  
+ In diesem Beispiel wird das folgende XSD-Schema verwendet: [Beispiel-XSD-Datei: Kunden und Bestellungen](./sample-xsd-file-customers-and-orders1.md).  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  
@@ -120,7 +121,7 @@ The key sequence 'AAAAA' in Keyref fails to refer to some key.
 custOrdDoc did not validate  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
 - [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](creating-xml-trees-linq-to-xml-2.md)

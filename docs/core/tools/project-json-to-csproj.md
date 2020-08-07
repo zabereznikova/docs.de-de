@@ -3,12 +3,12 @@ title: Vergleich von project.json und csproj
 description: Informationen zur Zuordnung zwischen project.json und csproj-Elementen.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205833"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427020"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
 
@@ -475,7 +475,7 @@ Siehe auch [Dateien](#files).
   <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
   <PackageTags>machine learning;framework</PackageTags>
   <PackageReleaseNotes>Version 0.9.12-beta</PackageReleaseNotes>
-  <PackageIconUrl>http://numl.net/images/ico.png</PackageIconUrl>
+  <PackageIcon>ico.png</PackageIcon>
   <PackageProjectUrl>http://numl.net</PackageProjectUrl>
   <PackageLicenseUrl>https://raw.githubusercontent.com/sethjuarez/numl/master/LICENSE.md</PackageLicenseUrl>
   <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -485,7 +485,7 @@ Siehe auch [Dateien](#files).
 </PropertyGroup>
 ```
 
-Es gibt keine Entsprechung für das `owners`-Element in MSBuild. Für `summary` können Sie die MSBuild-Eigenschaft `<Description>` verwenden. Der Wert von `summary` wird nicht automatisch zu dieser Eigenschaft migriert, da die Eigenschaft dem [`description`](#other-common-root-level-options)-Element zugeordnet ist.
+Es gibt keine Entsprechung für das `owners`-Element in MSBuild. Für `summary` können Sie die MSBuild-Eigenschaft `<Description>` verwenden. Der Wert von `summary` wird nicht automatisch zu dieser Eigenschaft migriert, da die Eigenschaft dem [`description`](#other-common-root-level-options)-Element zugeordnet ist.  [PackageIconUrl ist veraltet](/nuget/reference/msbuild-targets#packageiconurl) und wurde durch PackageIcon ersetzt.
 
 ## <a name="scripts"></a>Skripts
 

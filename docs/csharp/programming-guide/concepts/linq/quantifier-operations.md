@@ -1,13 +1,14 @@
 ---
 title: Quantifizierer-Vorgänge (C#)
+description: Erfahren Sie mehr über Quantifizierervorgänge. Diese Vorgänge geben einen booleschen Wert zurück, der angibt, ob einige oder alle Elemente in einer Sequenz eine Bedingung erfüllen.
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 5c931e0971a2ae7970415905be8772a64a82ee39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce06f887d3ad7b10cbdedf9e33072df2c0819ef1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635482"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299148"
 ---
 # <a name="quantifier-operations-c"></a>Quantifizierer-Vorgänge (C#)
 Quantifizierer-Vorgänge geben einen <xref:System.Boolean>-Wert zurück, der angibt, ob einige oder alle Elemente in einer Sequenz eine Bedingung erfüllen.  
@@ -43,9 +44,9 @@ Im folgenden Beispiel wird `Contains` verwendet, um zu überprüfen, ob ein Arra
   
 [!code-csharp[Contains](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Contains)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [Dynamisches Festlegen von Prädikatfiltern zur Laufzeit](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [Vorgehensweise: Abfragen von Sätzen, die bestimmte Wörter enthalten (LINQ) (C#)](./how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)

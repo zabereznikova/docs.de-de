@@ -1,13 +1,13 @@
 ---
 title: Breaking Changes hinsichtlich der Basisklassenbibliothek
 description: Listet die Breaking Changes in .NET-Kernbibliotheken auf.
-ms.date: 09/20/2019
-ms.openlocfilehash: 64510809a1cf69ea0e4c4816eb2df54233e8eceb
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.date: 07/27/2020
+ms.openlocfilehash: 558aa1d76831cd15e2028c17d2b0b2e82f64ef9a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281301"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517325"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Breaking Changes und .NET-Kernbibliotheken
 
@@ -17,6 +17,9 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
+| [UTF-7-Codepfade sind veraltet](#utf-7-code-paths-are-obsolete) | 5.0 |
+| [Vector\<T> löst immer eine NotSupportedException für nicht unterstützte Typen aus](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
 | [Das ActivityIdFormat-Standardformat ist W3C](#default-activityidformat-is-w3c) | 5.0 |
 | [Behavior Change für Vector2.Lerp und Vector4.Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [Die CompareGreaterThan-Methoden von SSE und SSE2 behandeln NaN-Eingaben ordnungsgemäß](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs). | 5.0 |
@@ -30,7 +33,6 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Ersetzen von falsch formatierten UTF-8-Bytesequenzen richtet sich nach Unicode-Vorgaben](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute wurde in andere Assembly verschoben](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [ZipArchiveEntry verarbeitet keine Archive mit inkonsistenten Eintragsgrößen mehr](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [JSON-Serialisierungsausnahmetyp wurde von JsonException in NotSupportedException geändert](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
 | [Änderung der Semantik von (string)null in Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
 | [JsonEncodedText.Encode-Methoden weisen ein zusätzliches JavaScriptEncoder-Argument auf](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
 | [Änderung der JsonFactoryConverter.CreateConverter-Signatur](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
@@ -45,6 +47,18 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Process.StartInfo löst InvalidOperationException für Prozesse aus, die Sie nicht gestartet haben](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
+
+***
+
+[!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
+
+***
+
+[!INCLUDE [vectort-throws-notsupportedexception](../../../includes/core-changes/corefx/5.0/vectort-throws-notsupportedexception.md)]
+
+***
 
 [!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
 
@@ -97,10 +111,6 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-***
-
-[!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
 
 ***
 

@@ -1,15 +1,16 @@
 ---
 title: 'Vorgehensweise: Kopieren, Löschen und Verschieben von Dateien und Ordnern (C#-Programmierleitfaden)'
+description: Erfahren Sie, wie Sie Dateien und Ordner mithilfe der Klassen „File“, „Directory“, „FileInfo“ und „DirectoryInfo“ kopieren, löschen und verschieben.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
-ms.openlocfilehash: 662f0ab3b9e69aa8bfb0085f42f577b850029e4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 208502651080f4fd614e34d1bf5b088dfb1207a6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712272"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303360"
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Vorgehensweise: Kopieren, Löschen und Verschieben von Dateien und Ordnern (C#-Programmierleitfaden)
 Die folgenden Beispiele veranschaulichen, wie Dateien und Ordner mithilfe der Klassen <xref:System.IO.File?displayProperty=nameWithType>, <xref:System.IO.Directory?displayProperty=nameWithType>, <xref:System.IO.FileInfo?displayProperty=nameWithType> und <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> aus dem Namespace <xref:System.IO?displayProperty=nameWithType> synchron kopiert, verschoben und gelöscht werden können. Diese Beispiele stellen keine Statusanzeige oder irgendeine andere Benutzeroberfläche bereit. Informationen zur Bereitstellung eines standardmäßigen Fortschrittsdialogfelds finden Sie unter [Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateioperationen](how-to-provide-a-progress-dialog-box-for-file-operations.md).  

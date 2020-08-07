@@ -1,16 +1,17 @@
 ---
 title: MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
+description: Erkunden Sie „MageUI.exe“, das Manifest Generation and Editing Tool im grafischen Client. Erstellen, bearbeiten und signieren Sie Bereitstellungs- und Anwendungsmanifeste mit diesem GUI-Tool.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ff7c10a478f0f0f53d7b00f34b228b9070f798d
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74714461"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516722"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 
@@ -77,7 +78,7 @@ ms.locfileid: "74714461"
   
  Die Registerkarte **Anwendungsmanifest** enthält die folgenden Registerkarten.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Name**|Gibt bezeichnende Informationen zur Bereitstellung an.|  
 |**Beschreibung**|Gibt Herausgeber-, Produkt- und Supportinformationen an.|  
@@ -88,13 +89,13 @@ ms.locfileid: "74714461"
 ### <a name="name-tab"></a>Registerkarte "Name"  
  Die Registerkarte **Name** wird angezeigt, wenn Sie ein Anwendungsmanifest erstmalig erstellen oder öffnen. Sie identifiziert die Bereitstellung eindeutig und gibt optional eine gültige Zielplattform an.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Name**|Erforderlich. Der Name des Anwendungsmanifests. In der Regel identisch mit dem Dateinamen.|  
 |**Version**|Erforderlich. Die Versionsnummer der Bereitstellung im Format *N.N.N.N*. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
 |**Prozessor**|Dies ist optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur vorkompiliert haben. Weitere Informationen zur Vorkompilierung finden Sie unter [Ngen.exe (Native Image Generator)](ngen-exe-native-image-generator.md).|  
 |**Kultur**|Dies ist optional. Der zweiteilige ISO-Land- und Regionscode, in dem die Anwendung ausgeführt wird. Der Standardwert ist `neutral`.|  
-|**Öffentliches Schlüsseltoken**|Dies ist optional. Der öffentliche Schlüssel, mit dem dieses Anwendungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
+|**Öffentliches Schlüsseltoken**|Optional. Der öffentliche Schlüssel, mit dem dieses Anwendungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
   
 ### <a name="description-tab"></a>Registerkarte "Beschreibung"  
  Diese Informationen werden normalerweise im Bereitstellungsmanifest bereitgestellt. Diese Felder können nur geändert werden, wenn das Kontrollkästchen **Anwendungsmanifest für Vertrauensinformationen verwenden** auf der Registerkarte **Anwendungsoptionen** aktiviert ist.  
@@ -120,7 +121,7 @@ ms.locfileid: "74714461"
 |**Auffüllen**|Fügt alle Dateien im Anwendungsverzeichnis und in den Unterverzeichnissen zum Anwendungsmanifest hinzu. Wenn "MageUI.exe" im Verzeichnis eine einzelne ausführbare Datei findet, wird diese automatisch als Einstiegspunkt gekennzeichnet. Hierbei handelt es sich um die Datei, die zuerst ausgeführt wird, wenn die ClickOnce-Anwendung auf dem Client gestartet wird.|  
 |**Anwendungsdateien**|Zeigt eine Liste aller Dateien in der Anwendung an. Jede Datei verfügt über drei bearbeitbare Attribute, die unten erläutert werden.|  
 |**Dateityp**|Der Dateityp kann einen von vier Werten aufweisen:<br /><br /> –  Keine.<br />– Einstiegspunkt. Die primäre ausführbare Datei der Anwendung. Nur eine ausführbare Datei kann als Einstiegspunkt markiert werden.<br />– Datendatei. Eine Datei, z. B. eine XML-Datei, die Daten für die Anwendung bereitstellt.<br />– Symboldatei. Ein Anwendungssymbol, das auf dem Desktop oder in der Ecke des Anwendungsfensters angezeigt wird.|  
-|**Optional**|Als "optional" markierte Dateien werden nicht bei der ersten Installation oder Aktualisierung heruntergeladen, aber werden möglicherweise zur Laufzeit mithilfe der bedarfsabhängigen API "System.Deployment" heruntergeladen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Bedarfsgerechtes Herunterladen von Assemblys mit der API für die ClickOnce-Bereitstellung unter Verwendung des Designers](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
+|**Optional**|Als "optional" markierte Dateien werden nicht bei der ersten Installation oder Aktualisierung heruntergeladen, aber werden möglicherweise zur Laufzeit mithilfe der bedarfsabhängigen API "System.Deployment" heruntergeladen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Herunterladen von Assemblys bei Bedarf mit der API für die ClickOnce-Bereitstellung unter Verwendung des Designers](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Gruppieren**|Eine Bezeichnung für einen Satz optionaler Dateien. Sie können einem Satz von Dateien die Bezeichnung "Gruppieren" zuweisen und einen Batch von Dateien mithilfe der bedarfsabhängigen API in einem einzigen API-Aufruf herunterladen.|  
   
 ### <a name="permissions-required-tab"></a>Registerkarte "Erforderliche Berechtigungen"  
@@ -134,7 +135,7 @@ ms.locfileid: "74714461"
 ### <a name="deployment-manifest-tab"></a>Registerkarte "Bereitstellungsmanifest"  
  Die Registerkarte **Bereitstellungsmanifest** enthält die folgenden Registerkarten.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Name**|Gibt bezeichnende Informationen zur Bereitstellung an.|  
 |**Beschreibung**|Gibt Herausgeber-, Produkt- und Supportinformationen an.|  
@@ -145,7 +146,7 @@ ms.locfileid: "74714461"
 ### <a name="name-tab"></a>Registerkarte "Name"  
  Die Registerkarte **Name** wird angezeigt, wenn Sie ein Bereitstellungsmanifest erstmalig erstellen oder öffnen. Sie identifiziert die Bereitstellung eindeutig und gibt optional eine gültige Zielplattform an.  
   
-|Benutzeroberflächenelement|Beschreibung|  
+|Benutzeroberflächenelement|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Name**|Erforderlich. Der Namen des Bereitstellungsmanifests. In der Regel identisch mit dem Dateinamen.|  
 |**Version**|Erforderlich. Die Versionsnummer der Bereitstellung im Format *N.N.N.N*. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
@@ -179,7 +180,7 @@ ms.locfileid: "74714461"
 |----------------|-----------------|  
 |**Diese Anwendung soll nach Updates suchen**|Gibt an, ob ClickOnce nach Anwendungsupdates suchen soll. Wenn dieses Kontrollkästchen nicht aktiviert ist, sucht die Anwendung nicht nach Updates, sofern Sie sie nicht mithilfe der APIs im <xref:System.Deployment.Application>-Namespace programmgesteuert aktualisieren.|  
 |**Zeitpunkt für das Prüfen auf Updates auswählen**|Bietet zwei Optionen zum Prüfen auf Updates:<br /><br /> -   **Vor dem Starten der Anwendung**. Das Prüfen auf Updates erfolgt vor der Ausführung der Anwendung.<br />-   **Nach dem Starten der Anwendung**. Das Prüfen auf Updates beginnt, sobald das Hauptformular der Anwendung initialisiert wurde, und wird beim nächsten Starten der Anwendung ausgeführt.|  
-|**Häufigkeit des Prüfens auf Updates**|Bestimmt, wie oft ClickOnce auf Updates überprüfen soll:<br /><br /> -   **Bei jedem Ausführen der Anwendung überprüfen**. ClickOnce führt jedes Mal eine Überprüfung auf Updates durch, wenn der Benutzer die Anwendung öffnet.<br />-   **Prüfung alle**: Wählen Sie ein vor der Prüfung auf Updates zu verstreichendes Zeitintervall und eine Einheit (Stunden, Tage oder Wochen) aus.|  
+|**Häufigkeit des Prüfens auf Updates**|Bestimmt, wie oft ClickOnce auf Updates überprüfen soll:<br /><br /> -   **Bei jedem Ausführen der Anwendung überprüfen**. ClickOnce führt jedes Mal eine Überprüfung auf Updates durch, wenn der Benutzer die Anwendung öffnet.<br />-   **Prüfen alle:** Wählen Sie ein vor der Prüfung auf Updates zu verstreichendes Zeitintervall und eine Einheit (Stunden, Tage oder Wochen) aus.|  
 |**Mindestens erforderliche Version für diese Anwendung angeben**|Dies ist optional. Gibt an, dass eine bestimmte Version der Anwendung installiert sein muss, wodurch verhindert wird, dass Ihre Benutzer mit einer früheren Version arbeiten.|  
 |**Version**|Diese ist erforderlich, wenn das Kontrollkästchen **Mindestens erforderliche Version für diese Anwendung angeben** aktiviert ist. Die Versionsnummer muss im Format *N.N.N.N* bereitgestellt werden. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
   
@@ -190,7 +191,7 @@ ms.locfileid: "74714461"
 |----------------|-----------------|  
 |**Manifest auswählen**|Ermöglicht Ihnen die Auswahl des Anwendungsmanifests. Alle anderen Felder auf dieser Seite werden aufgefüllt, wenn Sie ein Anwendungsmanifest auswählen.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)

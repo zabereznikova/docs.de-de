@@ -1,5 +1,6 @@
 ---
 title: <permission> – C#-Programmierhandbuch
+description: Erfahren Sie mehr über das XML-Tag <permission> ein. Mit diesem Tag können Sie den Zugriff auf einen Member dokumentieren. Die PermissionSet-Klasse ermöglicht die Angabe des Zugriffs auf einen Member.
 ms.date: 07/20/2015
 f1_keywords:
 - permission
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: bb7172042f0b472d03c3fa2d9dbd0d4d4265076b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 38c87505b8b2973875e474ffd296dc02b7fb9de6
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287271"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381722"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (C#-Programmierhandbuch)
 

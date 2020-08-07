@@ -1,13 +1,14 @@
 ---
 title: Übersicht über die XDocument-Klasse (C#)
+description: Die XDocument-Klasse in C# enthält die Informationen, die für ein gültiges XML-Dokument erforderlich sind, einschließlich einer XML-Deklaration, Verarbeitungsanweisungen und Kommentaren.
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: de49dc071d22dd77dddea29ca114663261e3edda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d522cef25e99e4a5ea54e644855c8dfa7a05f4a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590844"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302190"
 ---
 # <a name="xdocument-class-overview-c"></a>Übersicht über die XDocument-Klasse (C#)
 Dieses Thema enthält eine Einführung in die <xref:System.Xml.Linq.XDocument>-Klasse.  
@@ -86,6 +87,6 @@ d.Save("test.xml");
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Working with XML Namespaces (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)
+- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)

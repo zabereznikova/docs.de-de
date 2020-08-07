@@ -1,13 +1,14 @@
 ---
 title: 'Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (C#)'
+description: Erfahren Sie, wie Sie nach einem Element suchen, das über ein Attribut mit einem bestimmten Wert verfügt. Hier finden Sie Codebeispiele und weitere Ressourcen.
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44875ca2104e7a8f83e83da983af49ef85c89f0a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141166"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303282"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (C#)
 In diesem Thema wird gezeigt, wie Sie nach einem Element mit einem bestimmten Wert suchen können.  
@@ -15,7 +16,7 @@ In diesem Thema wird gezeigt, wie Sie nach einem Element mit einem bestimmten We
 ## <a name="example"></a>Beispiel  
  Das Beispiel zeigt die Suche nach dem `Address`-Element mit dem `Type`-Attribut und dem Wert "Billing".  
   
- Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -69,9 +70,9 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [Projection Operations (C#) (Projektionsvorgänge (C#))](./projection-operations.md)
