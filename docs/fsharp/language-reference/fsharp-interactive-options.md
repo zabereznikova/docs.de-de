@@ -2,20 +2,20 @@
 title: Interaktive Optionen
 description: Erfahren Sie mehr über die von F# Interactive unterstützten Befehlszeilenoptionen fsi.exe.
 ms.date: 07/22/2020
-ms.openlocfilehash: f9932cac24fad187c332306968fb13981912e80a
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795462"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855347"
 ---
 # <a name="f-interactive-options"></a>F# Interactive Optionen
 
-In diesem Artikel werden die von F# Interactive unterstützten Befehlszeilenoptionen beschrieben `fsi.exe` . F# Interactive akzeptiert viele Befehlszeilenoptionen des F#-Compilers, jedoch auch einige zusätzliche Optionen.
+In diesem Artikel werden die von F# Interactive unterstützten Befehlszeilenoptionen beschrieben `fsi.exe` . F# Interactive akzeptiert viele der gleichen Befehlszeilenoptionen wie der F #-Compiler, akzeptiert aber auch einige zusätzliche Optionen.
 
 ## <a name="use-f-interactive-for-scripting"></a>Verwenden von F# Interactive für die Skripterstellung
 
-F# Interactive, `dotnet fsi` , kann interaktiv gestartet werden, oder es kann über die Befehlszeile gestartet werden, um ein Skript auszuführen. Die Befehlszeilensyntax lautet wie folgt:
+F# Interactive, `dotnet fsi` , kann interaktiv gestartet werden, oder es kann über die Befehlszeile gestartet werden, um ein Skript auszuführen. Die Befehlszeilen Syntax lautet:
 
 ```dotnetcli
 dotnet fsi [options] [ script-file [arguments] ]
@@ -25,7 +25,7 @@ Die Dateierweiterung für F#-Skriptdateien lautet `.fsx`.
 
 ## <a name="table-of-f-interactive-options"></a>Tabelle der F# Interactive-Optionen
 
-In der folgenden Tabelle werden die von F# Interactive unterstützten Optionen zusammengefasst. Sie können diese Optionen an der Befehlszeile oder in der Visual Studio-IDE festlegen. Um diese Optionen in der Visual Studio-IDE festzulegen, öffnen Sie das Menü Extras, wählen Sie **Optionen**aus, erweitern Sie **dann den Knoten** **F #-Tools** , und wählen Sie **F# Interactive**aus.
+In der folgenden Tabelle werden die von F# Interactive unterstützten Optionen zusammengefasst. Sie können diese Optionen in der Befehlszeile oder über die Visual Studio-IDE festlegen. Um diese Optionen in der Visual Studio-IDE festzulegen, öffnen Sie **das Menü Extras** , wählen Sie **Optionen**aus, erweitern Sie den Knoten **F #-Tools** , und wählen Sie dann **F# Interactive**aus.
 
 Wenn F# Interactive-Optionsargumente Listen enthalten, werden Listenelemente durch Semikolons (`;`) getrennt.
 
@@ -42,7 +42,7 @@ Wenn F# Interactive-Optionsargumente Listen enthalten, werden Listenelemente dur
 |**--Exec**|Weist das Beenden von F# Interactive an, nachdem die Dateien geladen wurden oder die in der Befehlszeile angegebene Skriptdatei ausgeführt wurde.|
 |**--FullPath**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 |**--GUI**[ **+**&#124;**-** ]|Aktiviert oder deaktiviert die Windows Forms-Ereignisschleife. Die Standardeinstellung ist aktiviert.|
-|**--Hilfe**<br /><br />**-?**|Wird verwendet, um die Befehlszeilensyntax und eine kurze Beschreibung jeder Option anzuzeigen.|
+|**--Hilfe**<br /><br />**-?**|Wird verwendet, um die Befehlszeilen Syntax und eine kurze Beschreibung der einzelnen Optionen anzuzeigen.|
 |**--lib: &lt; Ordner-List&gt;**<br /><br />**-I: &lt; Ordnerliste&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 |**--Load: &lt; Dateiname&gt;**|Kompiliert beim Start den angegebenen Quellcode und lädt die kompilierten F#-Konstrukte in die Sitzung. Wenn die Ziel Quelle Skript Direktiven wie **#use** oder **#Load**enthält, müssen Sie **--use** oder **#use** anstelle von **--Load** oder **#Load**verwenden.|
 |**--mlcompatibility**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
@@ -56,7 +56,7 @@ Wenn F# Interactive-Optionsargumente Listen enthalten, werden Listenelemente dur
 |**--Read Line**[ **+**&#124;**-** ]|Aktiviert oder deaktiviert die Vervollständigung mit der TAB-TASTE im interaktiven Modus.|
 |**--Reference: &lt; Dateiname&gt;**<br /><br />**-r: &lt; Dateiname&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 |**--tailcalls**[ **+**&#124;**-** ]|Aktiviert oder deaktiviert die Verwendung der Tail-IL-Anweisung, die für endrekursive Funktionen die Wiederverwendung des Stapelrahmens verursacht. Diese Option ist standardmäßig aktiviert.|
-|**--targetprofile: &lt; Zeichenfolge&gt;**|Gibt das zielframeworkprofil dieser Assembly an. Gültige Werte sind "mscorlib", "Netcore" oder "netstandard".  Der Standardwert ist mscorlib.|
+|**--targetprofile: &lt; Zeichenfolge&gt;**|Gibt das zielframeworkprofil dieser Assembly an. Gültige Werte sind `mscorlib`, `netcore` oder `netstandard`. Der Standardwert lautet `mscorlib`.|
 |**--use: &lt; filename&gt;**|Weist den Interpreter an, beim Start die angegebene Datei als anfängliche Eingabe zu verwenden.|
 |**--utf8output**|Identisch mit der fsc.exe-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 |**--Warn: &lt; Warnstufe&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
@@ -73,7 +73,7 @@ F# Interactive ( `dotnet fsi` ) verwendet eine erweiterte Version der [strukturi
 
 3. Es wird ein Grenzwert für die Länge der angezeigten Zeichen folgen festgelegt, es sei denn, Sie bewerten diese Zeichenfolge explizit.
 
-4. Ein Satz von benutzerdefinierbaren Einstellungen ist über das- `fsi` Objekt verfügbar.
+4. Eine Reihe von benutzerdefinierbaren Einstellungen ist über das- `fsi` Objekt verfügbar.
 
 Die verfügbaren Einstellungen zum Anpassen des Klartext-Druckens für gemeldete Werte lauten:
 

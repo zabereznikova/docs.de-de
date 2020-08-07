@@ -2,19 +2,18 @@
 title: Abfrageausdrücke
 description: 'Erfahren Sie mehr über die Unterstützung von Abfrage Ausdrücken für LINQ in der Programmiersprache F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419186"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855035"
 ---
 # <a name="query-expressions"></a>Abfrageausdrücke
 
-> [!NOTE]
-> Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
-
 Mit Abfrage Ausdrücken können Sie eine Datenquelle Abfragen und die Daten in einem gewünschten Formular ablegen. Abfrage Ausdrücke bieten Unterstützung für LINQ in F #.
+> [!NOTE]
+> Die docs.Microsoft.com-API-Referenz für F # ist nicht fertig. Wenn Sie auf unterbrochene Verknüpfungen stoßen, verweisen Sie stattdessen auf die [Dokumentation der F #-Kernbibliothek](https://fsharp.github.io/fsharp-core-docs/) .
 
 ## <a name="syntax"></a>Syntax
 
@@ -22,7 +21,7 @@ Mit Abfrage Ausdrücken können Sie eine Datenquelle Abfragen und die Daten in e
 query { expression }
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Abfrage Ausdrücke sind eine Art von Berechnungs Ausdruck ähnlich Sequence Expressions. Ebenso wie Sie eine Sequenz durch Bereitstellen von Code in einem Sequenz Ausdruck angeben, geben Sie einen Satz von Daten an, indem Sie Code in einem Abfrage Ausdruck bereitstellen. In einem Sequenz Ausdruck identifiziert das- `yield` Schlüsselwort Daten, die als Teil der resultierenden Sequenz zurückgegeben werden sollen. In Abfrage Ausdrücken führt das `select` Schlüsselwort dieselbe Funktion aus. Zusätzlich zum `select` Schlüsselwort unterstützt F # auch eine Reihe von Abfrage Operatoren, die den Teilen einer SQL-SELECT-Anweisung ähneln. Im folgenden finden Sie ein Beispiel für einen einfachen Abfrage Ausdruck sowie Code, der eine Verbindung mit der Northwind-odata-Quelle herstellt.
 
@@ -2437,8 +2436,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [F #-Sprachreferenz](index.md)
+- [F#-Sprachreferenz](index.md)
 - [LINQ. QueryBuilder-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [Berechnungsausdrücke](Computation-Expressions.md)
