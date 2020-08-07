@@ -38,8 +38,6 @@
           href: cryptographic-signatures.md
         - name: Gewährleisten der Datenintegrität über Hashcodes
           href: ensuring-data-integrity-with-hash-codes.md
-        - name: Erstellen eines kryptografischen Schemas
-          href: creating-a-cryptographic-scheme.md
         - name: 'Vorgehensweise: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln'
           href: how-to-encrypt-xml-elements-with-symmetric-keys.md
         - name: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln'
