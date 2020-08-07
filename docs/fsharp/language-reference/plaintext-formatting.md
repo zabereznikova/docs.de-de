@@ -2,12 +2,12 @@
 title: Formatieren von nur Text
 description: 'Erfahren Sie, wie Sie printf und andere Klartext-Formatierungen in F #-Anwendungen und-Skripts verwenden.'
 ms.date: 07/22/2020
-ms.openlocfilehash: a0f2c52431be894c4f74dd2940345a518f620589
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795757"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854918"
 ---
 # <a name="plain-text-formatting"></a>Formatieren von nur Text
 
@@ -81,15 +81,15 @@ Formatspezifikationen für `printf` Formate sind Zeichen folgen mit `%` Markieru
 | `%f`               | ein Basistyp für Gleit Komma Zahlen | Wird als signierter Wert mit dem Format formatiert `[-]dddd.dddd` , wobei `dddd` eine oder mehrere Dezimalstellen sind. Die Anzahl der Ziffern vor dem Dezimaltrennzeichen ist abhängig von der Größe der Zahl, und die Anzahl der Ziffern nach dem Dezimaltrennzeichen ist abhängig von der angeforderten Genauigkeit. |
 | `%g`, `%G` | ein Basistyp für Gleit Komma Zahlen |  Formatiert mithilfe von als Wert mit Vorzeichen `%f` im `%e` Format oder, je nachdem, welcher Wert für den angegebenen Wert und die Genauigkeit kompakter ist. |
 | `%M` | ein- `System.Decimal` Wert  |    Formatiert mit dem Format Bezeichner `"G"` für`System.Decimal.ToString(format)` |
-| `%O` | beliebiger Wert  |   Formatiert durch das Boxing des Objekts und das valling seiner `System.Object.ToString()` Methode. |
+| `%O` | beliebiger Wert  |   Formatiert durch Boxing des-Objekts und Aufrufen seiner- `System.Object.ToString()` Methode. |
 | `%A` | beliebiger Wert  |   Formatiert mit [strukturierter Klartext-Formatierung](plaintext-formatting.md) mit den Standardlayouteinstellungen |
 | `%a` | beliebiger Wert  |   Erfordert zwei Argumente: eine Formatierungsfunktion, die einen Kontext Parameter und den Wert akzeptiert, und den zu Druck Ende Wert. |
-| `%t` | beliebiger Wert  |   Erfordert ein Argument, eine Formatierungsfunktion, die einen Kontext Parameter annimmt, der den entsprechenden Text entweder ausgibt oder zurückgibt. |
+| `%t` | beliebiger Wert  |   Erfordert ein Argument: eine Formatierungsfunktion, die einen Kontext Parameter annimmt, der den entsprechenden Text entweder ausgibt oder zurückgibt. |
 
 Einfache ganzzahlige Typen sind `byte` ( `System.Byte` ), `sbyte` ( `System.SByte` ), `int16` ( `System.Int16` ), `uint16` ( `System.UInt16` ), `int32` ( `System.Int32` ), (), `uint32` `System.UInt32` `int64` ( `System.Int64` ), `uint64` ( `System.UInt64` ), `nativeint` ( `System.IntPtr` ) und `unativeint` ( `System.UIntPtr` ).
 Grundlegende Gleit Komma Typen sind `float` ( `System.Double` ) und `float32` ( `System.Single` ).
 
-Die optionale Breite ist eine ganze Zahl, die die minimale Breite des Ergebnisses angibt. Gibt beispielsweise `%6d` eine ganze Zahl aus, die Leerzeichen vorangestellt ist, um mindestens 6 Zeichen auszufüllen. Wenn Width `*` gleich ist, wird ein zusätzliches ganzzahliges Argument zum Angeben der entsprechenden Breite verwendet.
+Die optionale Breite ist eine ganze Zahl, die die minimale Breite des Ergebnisses angibt. Gibt beispielsweise `%6d` eine ganze Zahl aus, die Leerzeichen vorangestellt ist, um mindestens sechs Zeichen auszufüllen. Wenn Width `*` gleich ist, wird ein zusätzliches ganzzahliges Argument zum Angeben der entsprechenden Breite verwendet.
 
 Gültige Flags sind:
 
@@ -161,7 +161,7 @@ Culture 2: 12/31/1999 12:00:00 AM
 
 ### <a name="structured-values"></a>Strukturierte Werte
 
-Beim Formatieren von nur-Text mit dem- `%A` Spezifizierer wird der Block Einzug für F #-Listen und-Tupel verwendet. Der wird im vorherigen Beispiel gezeigt.
+Beim Formatieren von nur-Text mit dem- `%A` Spezifizierer wird der Block Einzug für F #-Listen und-Tupel verwendet. Dies wird im vorherigen Beispiel gezeigt.
 Die Struktur von Arrays wird ebenfalls verwendet, einschließlich mehrdimensionaler Arrays.  Eindimensionale Arrays werden mit Syntax angezeigt `[| ... |]` . Ein auf ein Objekt angewendeter
 
 ```fsharp
@@ -200,12 +200,12 @@ Ergebnissen
 [|(1, 1); (2, 4); (3, 9); (4, 16); (5, 25)|]
 ```
 
-Wenn eine Druckbreite von 0 angegeben wird, wird keine Druckbreite verwendet. Eine einzelne Textzeile ergibt sich, außer wenn eingebettete Zeichen folgen in der Ausgabe selbst LineBreaks enthalten.  Beispiel:
+Wenn eine Druckbreite von 0 angegeben wird, wird keine Druckbreite verwendet. Eine einzelne Textzeile wird angezeigt, außer wenn eingebettete Zeichen folgen in der Ausgabezeilen Umbrüche enthalten.  Beispiel:
 
 ```fsharp
 printfn "%0A" [| for i in 1 .. 5 -> (i, i*i) |]
 
-printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef |]
+printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef" |]
 ```
 
 Ergebnissen
@@ -318,7 +318,7 @@ Ergebnissen
 
 Verzögerte Werte werden als `Value is not created` oder entsprechender Text gedruckt, wenn der Wert noch nicht ausgewertet wurde.
 
-NULL-Werte werden als gedruckt `null` , es sei denn, für den statischen Typ des Werts wird ein Union-Typ festgelegt, bei dem es `null` sich um eine zulässige Neudarstellung handelt.
+NULL-Werte werden als gedruckt `null` , es sei denn, der statische Typ des Werts wird als Union-Typ festgelegt, wobei `null` eine zugelassene Darstellung ist.
 
 F #-Funktions Werte werden als Ihr intern generierter Schließungs Name gedruckt, z `<fun:it@43-7>` . b..
 

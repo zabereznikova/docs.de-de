@@ -16,19 +16,19 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9c04d1ea4d7e7ee46d875b3fa791f3eee2059e52
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556292"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854723"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>Speichern von asymmetrischen Schlüsseln in einem Schlüssel Container
 
 Asymmetrische private Schlüssel sollten in keinem Fall in vollem Wortlaut oder in Klartext auf dem lokalen Computer gespeichert werden. Wenn Sie einen privaten Schlüssel speichern müssen, verwenden Sie einen Schlüssel Container. Weitere Informationen zu Schlüssel Containern finden Sie Untergrund Legendes zu [RSA-Schlüssel Containern auf Computer Ebene und Benutzerebene](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).
 
 > [!NOTE]
-> Der Code in diesem Artikel gilt für Windows.
+> Der Code in diesem Artikel gilt für Windows und verwendet Features, die in .net Core 2,2 und früheren Versionen nicht verfügbar sind. Weitere Informationen finden Sie unter [dotnet/Runtime # 23391](https://github.com/dotnet/runtime/issues/23391).
 
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Erstellen Sie einen asymmetrischen Schlüssel, und speichern Sie ihn in einem Schlüssel Container.
 
