@@ -1,19 +1,20 @@
 ---
 title: 'Vorgehensweise: Serialisieren mit DataContractSerializer (C#)'
+description: Erfahren Sie, wie Sie Objekte mit DataContractSerializer serialisieren. Hier finden Sie ein Beispiel, das Objekte erstellt, in Textdateien serialisiert und dann wieder deserialisiert.
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 0b6d35a2f73ac512f05341f5aaffa61484657576
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b713f36cde594f7cd7011073345d33c6f46585e0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168699"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301527"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="83eb9-102">Vorgehensweise: Serialisieren mit DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="83eb9-102">How to serialize using DataContractSerializer (C#)</span></span>
-<span data-ttu-id="83eb9-103">Dieses Thema enthält ein Beispiel, das zum Serialisieren und Deserialisieren <xref:System.Runtime.Serialization.DataContractSerializer> verwendet.</span><span class="sxs-lookup"><span data-stu-id="83eb9-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="d8b0a-104">Vorgehensweise: Serialisieren mit DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="d8b0a-104">How to serialize using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="d8b0a-105">Dieses Thema enthält ein Beispiel, das zum Serialisieren und Deserialisieren <xref:System.Runtime.Serialization.DataContractSerializer> verwendet.</span><span class="sxs-lookup"><span data-stu-id="d8b0a-105">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="83eb9-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="83eb9-104">Example</span></span>  
- <span data-ttu-id="83eb9-105">Im folgenden Beispiel wird eine Reihe von Objekten erstellt, die <xref:System.Xml.Linq.XElement>-Objekte enthalten.</span><span class="sxs-lookup"><span data-stu-id="83eb9-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="83eb9-106">Anschließend werden diese Objekte in Textdateien serialisiert und dann aus den Textdateien wieder deserialisiert.</span><span class="sxs-lookup"><span data-stu-id="83eb9-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="d8b0a-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d8b0a-106">Example</span></span>  
+ <span data-ttu-id="d8b0a-107">Im folgenden Beispiel wird eine Reihe von Objekten erstellt, die <xref:System.Xml.Linq.XElement>-Objekte enthalten.</span><span class="sxs-lookup"><span data-stu-id="d8b0a-107">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="d8b0a-108">Anschließend werden diese Objekte in Textdateien serialisiert und dann aus den Textdateien wieder deserialisiert.</span><span class="sxs-lookup"><span data-stu-id="d8b0a-108">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -80,7 +81,7 @@ public class XElementNullContainer
 }  
 ```  
   
- <span data-ttu-id="83eb9-107">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="83eb9-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="d8b0a-109">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="d8b0a-109">This example produces the following output:</span></span>  
   
 ```output  
 Testing for type: System.Xml.Linq.XElement  

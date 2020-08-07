@@ -1,27 +1,28 @@
 ---
 title: 'Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)'
+description: Erfahren Sie, wie Sie eine Auflistung der Absätze aus einem Office Open XML-Dokument abrufen. Hier finden Sie ein Beispiel, das die Erweiterungsmethode „StringConcatenate“ verwendet.
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64678b39d9d0bfb23574a09998248c8e33ec01d6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347460"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301592"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a><span data-ttu-id="6cee0-102">Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)</span><span class="sxs-lookup"><span data-stu-id="6cee0-102">How to retrieve paragraphs from an Office Open XML document (C#)</span></span>
-<span data-ttu-id="6cee0-103">Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet und eine Auflistung aller in diesem Dokument vorhandenen Absätze abruft.</span><span class="sxs-lookup"><span data-stu-id="6cee0-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a><span data-ttu-id="6264a-104">Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)</span><span class="sxs-lookup"><span data-stu-id="6264a-104">How to retrieve paragraphs from an Office Open XML document (C#)</span></span>
+<span data-ttu-id="6264a-105">Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet und eine Auflistung aller in diesem Dokument vorhandenen Absätze abruft.</span><span class="sxs-lookup"><span data-stu-id="6264a-105">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
   
- <span data-ttu-id="6cee0-104">Weitere Informationen zu Office Open XML finden Sie unter [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) (Open XML-SDK) und [www.ericwhite.com](http://ericwhite.com/).</span><span class="sxs-lookup"><span data-stu-id="6cee0-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
+ <span data-ttu-id="6264a-106">Weitere Informationen zu Office Open XML finden Sie unter [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) (Open XML-SDK) und [www.ericwhite.com](http://ericwhite.com/).</span><span class="sxs-lookup"><span data-stu-id="6264a-106">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6cee0-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6cee0-105">Example</span></span>  
- <span data-ttu-id="6cee0-106">Dieses Beispiel öffnet ein Office Open XML-Paket und verwendet zum Suchen nach dem Dokumentteil und dem Formatvorlagenteil die Beziehungen innerhalb des Open XML-Pakets.</span><span class="sxs-lookup"><span data-stu-id="6cee0-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="6cee0-107">Anschließend fragt es das Dokument ab und projiziert dabei eine Auflistung eines anonymen Typs, die den Absatz-<xref:System.Xml.Linq.XElement>-Knoten, den Namen der Formatvorlage der einzelnen Absätze und den Text der einzelnen Absätze enthält.</span><span class="sxs-lookup"><span data-stu-id="6cee0-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
+## <a name="example"></a><span data-ttu-id="6264a-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6264a-107">Example</span></span>  
+ <span data-ttu-id="6264a-108">Dieses Beispiel öffnet ein Office Open XML-Paket und verwendet zum Suchen nach dem Dokumentteil und dem Formatvorlagenteil die Beziehungen innerhalb des Open XML-Pakets.</span><span class="sxs-lookup"><span data-stu-id="6264a-108">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="6264a-109">Anschließend fragt es das Dokument ab und projiziert dabei eine Auflistung eines anonymen Typs, die den Absatz-<xref:System.Xml.Linq.XElement>-Knoten, den Namen der Formatvorlage der einzelnen Absätze und den Text der einzelnen Absätze enthält.</span><span class="sxs-lookup"><span data-stu-id="6264a-109">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
   
- <span data-ttu-id="6cee0-108">Das Beispiel verwendet eine Erweiterungsmethode mit dem Namen `StringConcatenate`, die ebenfalls im Beispiel angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="6cee0-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
+ <span data-ttu-id="6264a-110">Das Beispiel verwendet eine Erweiterungsmethode mit dem Namen `StringConcatenate`, die ebenfalls im Beispiel angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="6264a-110">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
   
- <span data-ttu-id="6cee0-109">Ein ausführliches Tutorial, in dem das Arbeiten mit diesem Beispiel erläutert wird, finden Sie unter [Pure Functional Transformations of XML (C#) (Reine funktionale XML-Transformationen (C#))](./introduction-to-pure-functional-transformations.md).</span><span class="sxs-lookup"><span data-stu-id="6cee0-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (C#)](./introduction-to-pure-functional-transformations.md).</span></span>  
+ <span data-ttu-id="6264a-111">Ein ausführliches Tutorial, in dem das Arbeiten mit diesem Beispiel erläutert wird, finden Sie unter [Pure Functional Transformations of XML (C#) (Reine funktionale XML-Transformationen (C#))](./introduction-to-pure-functional-transformations.md).</span><span class="sxs-lookup"><span data-stu-id="6264a-111">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (C#)](./introduction-to-pure-functional-transformations.md).</span></span>  
   
- <span data-ttu-id="6cee0-110">Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly.</span><span class="sxs-lookup"><span data-stu-id="6cee0-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="6cee0-111">Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.</span><span class="sxs-lookup"><span data-stu-id="6cee0-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="6264a-112">Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly.</span><span class="sxs-lookup"><span data-stu-id="6264a-112">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="6264a-113">Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.</span><span class="sxs-lookup"><span data-stu-id="6264a-113">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -163,7 +164,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="6cee0-112">Dieses Beispiel produziert bei Anwendung auf das in [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](./creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="6cee0-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="6264a-114">Dieses Beispiel produziert bei Anwendung auf das in [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](./creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="6264a-114">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
