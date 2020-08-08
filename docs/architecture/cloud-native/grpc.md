@@ -6,12 +6,12 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4a0c88472d2b19efb2ff0f58395003b1b6409131
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173158"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914893"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -31,10 +31,11 @@ GrpC bietet umfassende Unterstützung für die beliebtesten Entwicklungs Stapel,
 
 GrpC verwendet http/2 für das Transportprotokoll. Obwohl http/2 mit HTTP 1,1 kompatibel ist, bietet es viele erweiterte Funktionen:
 
-- Ein binäres Protokoll für den Datentransport-im Gegensatz zu HTTP 1,1, bei dem Daten als Klartext gesendet werden.
+- Ein binäres Rahmen Protokoll für den Datentransport-im Gegensatz zu HTTP 1,1, das Text basiert ist.
 - Multiplexing-Unterstützung für das Senden mehrerer paralleler Anforderungen über dieselbe Verbindung-http 1,1 beschränkt die Verarbeitung auf eine Anforderungs-/Antwort-Nachricht gleichzeitig.
 - Bidirektionale Vollduplex Kommunikation für das gleichzeitige Senden von Client Anforderungen und Server Antworten.
 - Integriertes Streaming, das Anforderungen und Antworten zum asynchronen streamen großer Datasets ermöglicht.
+- Header Komprimierung, die die Netzwerk Auslastung reduziert.
 
 GrpC ist einfach und leistungsstark. Es kann bis zu 8-mal schneller als die JSON-Serialisierung mit Nachrichten von 60-80% kleiner sein. In der Microsoft [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) -Sprache überschreitet die GrpC-Leistung die Geschwindigkeit und Effizienz der stark optimierten [NetTcp-Bindungen](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Anders als NetTcp, das den Microsoft Stack bevorzugt, ist GrpC plattformübergreifend.
 
@@ -84,7 +85,7 @@ Bevorzugen Sie GrpC für die folgenden Szenarien:
 - Point-to-Point-Echtzeitkommunikation: der GrpC kann Nachrichten in Echtzeit ohne Abruf per Push Übertragung und bietet hervorragende Unterstützung für bidirektionales Streaming.
 - Eingeschränkte Netzwerkumgebungen – binäre GrpC-Nachrichten sind immer kleiner als eine entsprechende textbasierte JSON-Nachricht.
 
-Zum Zeitpunkt der Erstellung dieses Dokuments wird GrpC hauptsächlich mit Back-End-Diensten verwendet. Die meisten modernen Browser können das für die Unterstützung eines Front-End-GrpC-Clients erforderliche Maß an http/2-Kontrolle nicht bereitstellen. Das heißt, es gibt eine [frühe Initiative](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) , die die GrpC-Kommunikation mit browserbasierten Apps ermöglicht, die mit JavaScript oder Technologien erstellt wurden Blazor WebAssembly . Mit dem [GrpC-Web für .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) kann eine ASP.net Core GrpC-App GrpC-Features in Browser-apps unterstützen:
+Zum Zeitpunkt der Erstellung dieses Dokuments wird GrpC hauptsächlich mit Back-End-Diensten verwendet. Moderne Browser können das für die Unterstützung eines Front-End-GrpC-Clients erforderliche Maß an http/2-Kontrolle nicht bereitstellen. Das heißt, es wird Unterstützung für [GrpC-Web mit .net](https://devblogs.microsoft.com/aspnet/grpc-web-for-net-now-available/) unterstützt, die die georedun-Kommunikation mit browserbasierten Apps ermöglicht, die mit JavaScript oder Technologien erstellt wurden Blazor WebAssembly . [GrpC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) ermöglicht einer ASP.net Core GrpC-APP die Unterstützung von GrpC-Features in Browser-apps:
 
 - Stark typisierte, Code generierte Clients
 - Compact protobuf-Meldungen

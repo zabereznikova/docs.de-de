@@ -1,13 +1,13 @@
 ---
 title: Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-ms.date: 02/15/2019
-ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 013918a5b3f0b9dc6c60416af186dc3e51a29a98
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295030"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914922"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 

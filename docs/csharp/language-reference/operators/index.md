@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556552"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916814"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C#-Operatoren und -Ausdrücke (C#-Referenz)
 
@@ -33,7 +33,7 @@ Die einfachsten C#-Ausdrücke sind Literale (zum Beispiel [Integer](../builtin-t
 
 Im folgenden Code befinden sich die Beispiele der Ausdrücke auf der rechten Seite der Zuweisungen:
 
-[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+[!code-csharp[expression examples](snippets/shared/Overview.cs#Expressions)]
 
 In der Regel erzeugt ein Ausdruck ein Ergebnis und kann in einen anderen Ausdruck eingeschlossen werden. Ein [`void`](../builtin-types/void.md)-Methodenaufruf ist ein Beispiel eines Ausdrucks, der kein Ergebnis erzeugt. Er kann nur als [Anweisung](../../programming-guide/statements-expressions-operators/statements.md) wie im folgenden Beispiel verwendet werden.
 
@@ -45,15 +45,15 @@ Im Folgenden finden Sie einige weitere Ausdrücke, die von C# bereitgestellt wer
 
 - [Interpolierte Zeichenfolgenausdrücke](../tokens/interpolated.md), die eine bequeme Syntax zum Erstellen formatierter Zeichenfolgen bereitstellen:
 
-  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+  [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
 - [Lambdaausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md), mit denen Sie anonyme Funktionen erstellen können:
 
-  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+  [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
 - [Abfrageausdrücke](../keywords/query-keywords.md), mit denen Sie Abfragefunktionen direkt in C# verwenden können:
 
-  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+  [!code-csharp-interactive[query expression](snippets/shared/Overview.cs#Query)]
 
 Sie können eine [Ausdruckskörperfunktion](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) verwenden, um eine präzise Definition für eine Methode, einen Konstruktor, eine Eigenschaft, einen Indexer oder einen Finalizer bereitzustellen.
 
