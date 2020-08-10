@@ -1,21 +1,21 @@
-- name: 'F#-Dokumentation'
+- name: F#-Dokumentation
   href: index.yml
-- name: 'Was ist F#?'
+- name: Was ist F#?
   href: what-is-fsharp.md
 - name: Erste Schritte
   href: get-started/index.md
   items:
-    - name: 'Installieren von F#'
+    - name: Installieren von F#
       href: get-started/install-fsharp.md
-    - name: 'F# in Visual Studio'
+    - name: F# in Visual Studio
       href: get-started/get-started-visual-studio.md
-    - name: 'F# in Visual Studio Code'
+    - name: F# in Visual Studio Code
       href: get-started/get-started-vscode.md
-    - name: 'F# mit der .NET Core-CLI'
+    - name: F# mit der .NET Core-CLI
       href: get-started/get-started-command-line.md
-    - name: 'F# in Visual Studio für Mac'
+    - name: F# in Visual Studio für Mac
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'Einführung in F#'
+- name: Einführung in F#
   href: tour.md
 - name: Tutorials
   items:
@@ -37,17 +37,17 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: Problembehandlung bei Typanbietern
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: 'F# Interactive'
+    - name: F# Interactive
       href: tutorials/fsharp-interactive/index.md
-- name: 'Neues in F#'
+- name: Neues in F#
   items:
-    - name: 'F# 4.7'
+    - name: F# 4.7
       href: whats-new/fsharp-47.md
-    - name: 'F# 4.6'
+    - name: F# 4.6
       href: whats-new/fsharp-46.md
-    - name: 'F# 4.5'
+    - name: F# 4.5
       href: whats-new/fsharp-45.md
-- name: 'F#-Referenz'
+- name: F#-Referenz
   href: language-reference/index.md
   items:
     - name: Schlüsselwortreferenz
@@ -87,7 +87,7 @@
           href: language-reference/values/null-values.md
     - name: Literale
       href: language-reference/literals.md
-    - name: 'F#-Typen'
+    - name: F#-Typen
       href: language-reference/fsharp-types.md
     - name: Typableitung
       href: language-reference/type-inference.md
@@ -99,7 +99,7 @@
       href: language-reference/strings.md
     - name: Tupel
       href: language-reference/tuples.md
-    - name: 'F#-Auflistungstypen'
+    - name: F#-Auflistungstypen
       href: language-reference/fsharp-collection-types.md
     - name: Listen
       href: language-reference/lists.md
@@ -226,6 +226,8 @@
       href: language-reference/signature-files.md
     - name: Maßeinheiten
       href: language-reference/units-of-measure.md
+    - name: Formatieren von Nur-Text
+      href: language-reference/plaintext-formatting.md
     - name: XML-Dokumentation
       href: language-reference/xml-documentation.md
     - name: Nicht strikte Ausdrücke
@@ -248,7 +250,7 @@
       href: language-reference/compiler-directives.md
     - name: Compileroptionen
       href: language-reference/compiler-options.md
-    - name: 'F# Interactive-Optionen'
+    - name: F# Interactive-Optionen
       href: language-reference/fsharp-interactive-options.md
     - name: 'Quellzeilen-, Datei- und Pfadbezeichner'
       href: language-reference/source-line-file-path-identifiers.md
@@ -258,25 +260,25 @@
       href: language-reference/verbose-syntax.md
     - name: Compilerfehler und -warnungen
       href: language-reference/compiler-messages/index.md
-- name: 'F#-Styleguide'
+- name: F#-Styleguide
   href: style-guide/index.md
   items:
-    - name: 'Richtlinien für das Formatieren von F#-Code'
+    - name: Richtlinien für das Formatieren von F#-Code
       href: style-guide/formatting.md
-    - name: 'Codekonventionen für F#'
+    - name: Codekonventionen für F#
       href: style-guide/conventions.md
-    - name: 'Entwurfsrichtlinien für eine F#-Komponente'
+    - name: Entwurfsrichtlinien für eine F#-Komponente
       href: style-guide/component-design-guidelines.md
-- name: 'F# in Azure'
+- name: F# in Azure
   href: using-fsharp-on-azure/index.md
   items:
-    - name: 'Erste Schritte mit Azure Blob Storage mit F#'
+    - name: Erste Schritte mit Azure Blob Storage mit F#
       href: using-fsharp-on-azure/blob-storage.md
-    - name: 'Erste Schritte mit Azure File Storage mit F#'
+    - name: Erste Schritte mit Azure File Storage mit F#
       href: using-fsharp-on-azure/file-storage.md
-    - name: 'Erste Schritte mit Azure Queue Storage mit F#'
+    - name: Erste Schritte mit Azure Queue Storage mit F#
       href: using-fsharp-on-azure/queue-storage.md
-    - name: 'Erste Schritte mit Azure Table Storage mit F#'
+    - name: Erste Schritte mit Azure Table Storage mit F#
       href: using-fsharp-on-azure/table-storage.md
-    - name: 'Verwalten von Paketen für F#-Azure-Abhängigkeiten'
+    - name: Verwalten von Paketen für F#-Azure-Abhängigkeiten
       href: using-fsharp-on-azure/package-management.md
