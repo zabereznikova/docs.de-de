@@ -1,7 +1,7 @@
 ---
 title: Zusätzliche Klassenbibliotheken und APIs
 description: Erkunden Sie zusätzliche Klassenbibliotheken und APIs in .net, einschließlich out-of-Band-Projekte (OOB), plattformspezifischen Bibliotheken und privaten APIs.
-ms.date: 06/12/2020
+ms.date: 08/11/2020
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 ms.topic: conceptual
-ms.openlocfilehash: 0b888d2f0e80685ba993682b2f3067cf8aee15bc
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: c6404df5d4f0be381bc0a9c1924fcf82cf078306
+ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989732"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88075474"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
 
@@ -24,7 +24,7 @@ In diesem Artikel werden .NET Framework APIs aufgelistet, die entweder out-of-Ba
 
 Um die plattformübergreifende Entwicklung zu verbessern und neue Funktionen frühzeitig einzuführen, wurden einige .NET Framework Features out-of-Band (OOB) veröffentlicht.
 
-| Project | BESCHREIBUNG |  
+| Projekt | Beschreibung |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Bietet Auflistungen, die threadsicher sind und garantiert nie ihren Inhalt ändern. |
 | <xref:System.Net.Http.WinHttpHandler> | Stellt einen Meldungshandler für <xref:System.Net.Http.HttpClient> auf Grundlage der WinHTTP-Schnittstelle von Windows bereit. |
@@ -35,7 +35,7 @@ Um die plattformübergreifende Entwicklung zu verbessern und neue Funktionen fr�
 
 Einige Bibliotheken richten sich an bestimmte Plattformen. Beispielsweise macht die- <xref:System.Text.CodePagesEncodingProvider> Klasse Code Page Codierungen für UWP-apps verfügbar, die mit .NET Framework entwickelt wurden.
   
-| Project | BESCHREIBUNG |  
+| Projekt | Beschreibung |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Erweitert die- <xref:System.Text.EncodingProvider> Klasse, um Code Page Codierungen für Apps zur Verfügung zu stellen, die auf die universelle Windows-Plattform abzielen. |  
   
@@ -87,6 +87,7 @@ Diese APIs unterstützen die Produkt Infrastruktur und sind nicht für die direk
 * [System .net. WebHeaderCollection. addinternal-Methode](system.net.webheadercollection.addinternal.md)
 * [System. Service Model. Channels. Message. bodydestring-Methode](system.servicemodel.channels.message.bodytostring.md)
 * [System. Service Model. Channels. Message. Write-starteaders-Methode](system.servicemodel.channels.message.writestartheaders.md)
+* [System. Web. Compilation. controlbuilderinterceptor-Klasse](controlbuilderinterceptor-class.md)
 * [System. Windows. Diagnostics. visualdiagnostics. s \_ isdebuggercheckdisabledfortesttargets-Feld](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System. Windows. Forms. Design. DataMemberFieldEditor-Klasse](datamemberfieldeditor-class.md)
 * [System. Windows. Forms. Design. datamemberlisteditor-Klasse](datamemberlisteditor-class.md)
