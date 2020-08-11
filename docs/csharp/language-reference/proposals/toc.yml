@@ -82,3 +82,35 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
         - name: stackalloc bei Verschachtelungen
           href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md
+    - name: "Vorschläge für die C#\_9.0-Spezifikation"
+      items:
+        - name: Datensätze
+          href: ../../../../_csharplang/proposals/csharp-9.0/records.md
+        - name: Top-Level-Anweisungen
+          href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: 'Verbesserungen am Musterabgleich:'
+          href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
+        - name: init-only-Setter
+          href: ../../../../_csharplang/proposals/csharp-9.0/init.md
+        - name: Zieltypisierte neue Ausdrücke
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-new.md
+        - name: Modulinitialisierer
+          href: ../../../../_csharplang/proposals/csharp-9.0/module-initializers.md
+        - name: Erweitern von partiellen Methoden
+          href: ../../../../_csharplang/proposals/csharp-9.0/extending-partial-methods.md
+        - name: Statische anonyme Funktionen
+          href: ../../../../_csharplang/proposals/csharp-9.0/static-anonymous-functions.md
+        - name: Zieltypisierter bedingter Ausdrücke
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
+        - name: Kovariante Rückgabetypen
+          href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: Parameter zum Verwerfen von Lambdafunktion
+          href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
+        - name: Attribute in lokalen Funktionen
+          href: ../../../../_csharplang/proposals/csharp-9.0/local-function-attributes.md
+        - name: Integerwerte mit nativer Größe
+          href: ../../../../_csharplang/proposals/csharp-9.0/native-integers.md
+        - name: Funktionszeiger
+          href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
+        - name: Unterdrücken der Ausgabe des localsinit-Flags
+          href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md

@@ -2,17 +2,17 @@
 title: Sichern von .NET-Microservices und Webanwendungen
 description: Sicherheit in .NET-Microservices und -Webanwendungen – Lernen Sie die Authentifizierungsoptionen in ASP.NET Core-Webanwendungen kennen.
 author: mjrousos
-ms.date: 01/30/2020
-ms.openlocfilehash: 2b503b326d1869ae095f9b177c04389bda9fe46c
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.date: 08/07/2020
+ms.openlocfilehash: 9ce62039374f2256cd9adbddbb850aa4135af9f4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100781"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024614"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Erstellen sicherer .NET-Microservices und -Webanwendungen
 
-Das Thema Sicherheit in Microservices und Webanwendungen hat so viele Aspekte, dass zu seiner Behandlung gleich mehrere Bücher wie dieses erforderlich wären – daher wollen wir uns in diesem Abschnitt auf Authentifizierung, Autorisierung und Anwendungsgeheimnisse konzentrieren.
+Das Thema Sicherheit in Microservices und Webanwendungen hat so viele Aspekte, dass zu seiner Behandlung gleich mehrere Bücher wie dieses erforderlich wären. Daher konzentriert sich dieser Abschnitt auf Authentifizierung, Autorisierung und Anwendungsgeheimnisse.
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>Implementieren von Authentifizierung in .NET-Microservices und -Webanwendungen
 
@@ -174,7 +174,7 @@ public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
-    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
+    var sessionCookieLifetime = Configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 

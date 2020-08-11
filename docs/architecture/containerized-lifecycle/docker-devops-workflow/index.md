@@ -1,13 +1,13 @@
 ---
 title: Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 description: 'Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools: DevOps-Workflow mit Microsoft-Tools'
-ms.date: 02/15/2019
-ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295072"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915200"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 
@@ -23,7 +23,7 @@ Die Komplexität der Entwicklung von Containanwendungen nimmt abhängig von der 
 
 - Azure DevOps Services/Team Foundation Server-Quellcodeverwaltung (basierend auf Git oder Team Foundation-Versionskontrolle), Agile-Planung (Agile, Scrum und CMMI werden unterstützt), CI, Release Management und andere Tools für Agile-Teams.
 
-- Azure DevOps Services und Team Foundation Server umfassen ein leistungsstarkes und wachsendes Ökosystem aus Erst- und Drittanbietererweiterungen, mit denen Sie mühelos eine CI-, Build-, Test-, Bereitstellungs- und Release Management-Pipeline für Microservices erstellen können.
+- Azure DevOps Services und Team Foundation Server bieten ein leistungsstarkes und wachsendes Ökosystem aus Erst- und Drittanbietererweiterungen, mit denen Sie mühelos eine CI-, Build-, Test-, Bereitstellungs- und Release-Management-Pipeline für Microservices erstellen können.
 
 - Führen Sie automatisierte Tests als Teil Ihrer Buildpipeline in Azure DevOps Services aus.
 
