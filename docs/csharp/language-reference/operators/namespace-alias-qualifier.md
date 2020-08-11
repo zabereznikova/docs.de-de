@@ -4,18 +4,19 @@ ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
 - global_CSharpKeyword
+- global
 helpviewer_keywords:
 - ':: operator [C#]'
 - namespace alias qualifier [C#]
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: f91287ed281a2c6b10bed93cff10b08972a8445e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507125"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855126"
 ---
 # <a name="-operator-c-reference"></a>Operator „::“ (C#-Referenz)
 
@@ -65,5 +66,5 @@ Weitere Informationen finden Sie im Abschnitt [Namespacealias-Qualifizierer](~/_
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [Verwenden von Namespaces](../../programming-guide/namespaces/using-namespaces.md)

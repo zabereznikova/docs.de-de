@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7eb6666d10c44c342f69c7cfc763feb1b7b98c9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 3728778b31a4b4adc51933e8fdc6287f28e03d83
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738604"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916708"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatoren im Zusammenhang mit Zeigern (C#-Referenz)
 
@@ -46,11 +46,11 @@ Informationen zu Zeigertypen finden Sie unter [Zeigertypen](../../programming-gu
 
 Der unäre Operator `&` gibt die Adresse seines Operanden zurück:
 
-[!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](snippets/shared/PointerOperators.cs#AddressOf)]
 
 Der Operand des Operators `&` muss eine feste Variable sein. *Feste* Variablen befinden sich an Speicherorten, auf die sich [Garbage Collector](../../../standard/garbage-collection/index.md)-Operationen nicht auswirken. Im vorherigen Beispiel ist die lokale Variable `number` eine feste Variable, da sie im Stapel angeordnet ist. Variablen an Speicherorten, auf die sich der Garbage Collector auswirken kann (z. B. durch eine Verschiebung), werden als *bewegliche* Variablen bezeichnet. Objektfelder und Arrayelemente sind Beispiele für bewegliche Variablen. Sie können die Adresse einer beweglichen Variablen erhalten, wenn Sie sie mit einer [`fixed`-Anweisung](../keywords/fixed-statement.md) „fixieren“ bzw. „anheften“. Die erhaltene Adresse ist nur innerhalb des Blocks einer `fixed`-Anweisung gültig. Im folgenden Beispiel wird veranschaulicht, wie Sie eine `fixed`-Anweisung und den `&`-Operator verwenden:
 
-[!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](snippets/shared/PointerOperators.cs#AddressOfFixed)]
 
 Sie können nicht die Adresse einer Konstanten oder eines Werts abrufen.
 
@@ -62,7 +62,7 @@ Mit dem binären Operator `&` wird der Wert für [logisches UND](boolean-logical
 
 Mit dem unären Zeigerdereferenzierungsoperator `*` wird die Variable abgerufen, auf die der Operand verweist. Er wird auch kurz als Dereferenzierungsoperator bezeichnet. Der Operand des Operators `*` muss einen Zeigertyp aufweisen.
 
-[!code-csharp[pointer indirection](snippets/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](snippets/shared/PointerOperators.cs#PointerIndirection)]
 
 Sie können den Operator `*` nicht auf einen Ausdruck vom Typ `void*` anwenden.
 
@@ -84,7 +84,7 @@ für die folgende Syntax:
 
 Im folgenden Beispiel wird die Verwendung des `->`-Operators veranschaulicht:
 
-[!code-csharp[pointer member access](snippets/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](snippets/shared/PointerOperators.cs#MemberAccess)]
 
 Sie können den Operator `->` nicht auf einen Ausdruck vom Typ `void*` anwenden.
 
@@ -94,7 +94,7 @@ Für einen Ausdruck `p` mit einem Zeigertyp wird ein Zeigerelementzugriff der Fo
 
 Im folgenden Beispiel wird veranschaulicht, wie Sie mit einem Zeiger und dem Operator `[]` auf Arrayelemente zugreifen:
 
-[!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](snippets/shared/PointerOperators.cs#ElementAccess)]
 
 Im vorangegangenen Beispiel ordnet ein [`stackalloc`-Ausdruck](stackalloc.md) einen Speicherblock im Stapel zu.
 
@@ -128,7 +128,7 @@ Mit dem Operator [`sizeof`](sizeof.md) wird die Größe eines Typs in Byte abger
 
 Im folgenden Beispiel wird die Verwendung des Operators `+` mit einem Zeiger veranschaulicht:
 
-[!code-csharp[pointer addition](snippets/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](snippets/shared/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>Zeigersubtraktion
 
@@ -136,7 +136,7 @@ Für die beiden Zeiger `p1` und `p2` vom Typ `T*` ergibt der Ausdruck `p1 - p2` 
 
 Im folgenden Beispiel ist die Zeigersubtraktion dargestellt:
 
-[!code-csharp[pointer subtraction](snippets/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](snippets/shared/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>Inkrementieren und Dekrementieren von Zeigern
 
@@ -146,7 +146,7 @@ Für beide Operatoren werden zwei Formen unterstützt: Postfix (`p++` und `p--`)
 
 Im folgenden Beispiel wird das Verhalten von Postfix- und Präfix-Inkrementoperatoren veranschaulicht:
 
-[!code-csharp[pointer increment](snippets/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](snippets/shared/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>Vergleichsoperatoren für Zeiger
 
@@ -188,7 +188,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [unsafe (Schlüsselwort)](../keywords/unsafe.md)
 - [fixed (Schlüsselwort)](../keywords/fixed-statement.md)

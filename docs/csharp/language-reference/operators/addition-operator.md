@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 18364d80b8117fd4074c2c4231eac07c76829bb3
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: f1db0054ad2411bfe23f10b64bc2727a71ad7463
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135736"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916963"
 ---
 # <a name="-and--operators-c-reference"></a>Operatoren „+“ und „+=“ (C#-Referenz)
 
@@ -30,17 +30,17 @@ Informationen zum arithmetischen Operator `+` finden Sie in den Abschnitten [Un�
 
 Wenn ein Operand oder beide Operanden vom Typ [String](../builtin-types/reference-types.md#the-string-type) sind, verkettet der `+`-Operator die Zeichenfolgendarstellungen der Operanden (die Zeichenfolgendarstellung von `null` is eine leere Zeichenfolge):
 
-[!code-csharp-interactive[string concatenation](snippets/AdditionOperator.cs#AddStrings)]
+[!code-csharp-interactive[string concatenation](snippets/shared/AdditionOperator.cs#AddStrings)]
 
 Ab C# 6 bietet die [Zeichenfolgeninterpolation](../tokens/interpolated.md) eine benutzerfreundliche Option zum Formatieren von Zeichenfolgen:
 
-[!code-csharp-interactive[string interpolation](snippets/AdditionOperator.cs#UseStringInterpolation)]
+[!code-csharp-interactive[string interpolation](snippets/shared/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>Kombinieren von Delegaten
 
 Für Operanden des gleichen [Delegattyps](../builtin-types/reference-types.md#the-delegate-type) gibt der Operator `+` eine neue Delegatinstanz zurück, die bei Aufruf den linken Operanden und dann den rechten Operanden aufruft. Wenn einer der Operanden `null` lautet, gibt der `+`-Operator den Wert eines anderen Operanden zurück (der ggf. ebenfalls `null` ist). Das folgende Beispiel zeigt, wie Delegaten mit dem `+`-Operator kombiniert werden können:
 
-[!code-csharp-interactive[delegate combination](snippets/AdditionOperator.cs#AddDelegates)]
+[!code-csharp-interactive[delegate combination](snippets/shared/AdditionOperator.cs#AddDelegates)]
 
 Um eine Delegatentfernung auszuführen, verwenden Sie den [`-`-Operator](subtraction-operator.md#delegate-removal).
 
@@ -64,7 +64,7 @@ außer dass `x` nur einmal überprüft wird.
 
 Im folgenden Beispiel wird die Verwendung des `+=`-Operators veranschaulicht:
 
-[!code-csharp-interactive[+= examples](snippets/AdditionOperator.cs#AddAndAssign)]
+[!code-csharp-interactive[+= examples](snippets/shared/AdditionOperator.cs#AddAndAssign)]
 
 Sie verwenden den `+=`-Operator auch, um eine Ereignishandlermethode anzugeben, wenn Sie ein [Ereignis](../keywords/event.md) abonnieren. Weitere Informationen finden Sie unter [Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
@@ -79,7 +79,7 @@ Weitere Informationen finden Sie unter [C#-Sprachspezifikation](~/_csharplang/sp
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [Verketten mehrerer Zeichenfolgen](../../how-to/concatenate-multiple-strings.md)
 - [Ereignisse](../../programming-guide/events/index.md)
 - [Arithmetic operators (Arithmetische Operatoren)](arithmetic-operators.md)

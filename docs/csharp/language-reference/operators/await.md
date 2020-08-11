@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 76c6b24c1cd061585c7a6964d30bc81cc5fc5975
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308844"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916919"
 ---
 # <a name="await-operator-c-reference"></a>Der Operator „await“ (C#-Referenz)
 
@@ -20,7 +20,7 @@ Der Operator `await` hält die Auswertung der einschließenden [async](../keywor
 
 Im folgenden Beispiel gibt die Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> die Instanz `Task<byte[]>` zurück, die einen asynchronen Vorgang darstellt, der ein Bytearray erzeugt, wenn er abgeschlossen wird. Der Operator `await` hält so lange die Methode `DownloadDocsMainPageAsync` an, bis der Vorgang abgeschlossen ist. Wenn `DownloadDocsMainPageAsync` angehalten wird, wird die Steuerung an die Methode `Main` zurückgegeben. Bei dieser handelt es sich um den Aufrufer von `DownloadDocsMainPageAsync`. Die Methode `Main` wird so lange ausgeführt, bis sie das Ergebnis des asynchronen Vorgangs benötigt, der von der Methode `DownloadDocsMainPageAsync` ausgeführt wird. Wenn <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> alle Bytes abruft, wird der Rest der Methode `DownloadDocsMainPageAsync` ausgewertet. Danach wird der Rest der Methode `Main` ausgewertet.
 
-[!code-csharp[await example](snippets/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/shared/AwaitOperator.cs)]
 
 Im vorangehenden Beispiel wird die [asynchrone `Main`-Methode](../../programming-guide/main-and-command-args/index.md) verwendet. Dies ist ab C# 7.1 möglich. Weitere Informationen finden Sie im Abschnitt [Der Operator „await“ in der Methode „Main“](#await-operator-in-the-main-method).
 
@@ -54,7 +54,7 @@ Weitere Informationen finden Sie im Abschnitt [Await-Ausdrücke](~/_csharplang/s
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [async](../keywords/async.md)
 - [Aufgabenbasiertes asynchrones Programmiermodell](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [Asynchrone Programmierung](../../async.md)

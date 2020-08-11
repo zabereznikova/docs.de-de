@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 1a17ba092d4228ba909c8774a2f7e15c2c50cfdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fcde0476935108122d7f7e825d701e48952873f6
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398214"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916857"
 ---
 # <a name="-operator-c-reference"></a>Operator „?“ (C#-Referenz)
 
@@ -51,7 +51,7 @@ a ? b : (c ? d : e)
 
 Im folgenden Beispiel wird die Verwendung des bedingten Operators veranschaulicht:
 
-[!code-csharp-interactive[non ref conditional](snippets/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](snippets/shared/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Bedingter ref-Ausdruck
 
@@ -69,13 +69,13 @@ Im Fall des bedingten ref-Ausdrucks muss der Typ von `consequent` und `alternati
 
 Im folgenden Beispiel wird die Verwendung des bedingten ref-Ausdrucks veranschaulicht:
 
-[!code-csharp-interactive[conditional ref](snippets/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](snippets/shared/ConditionalOperator.cs#ConditionalRef)]
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>Bedingter Operator und eine `if..else`-Anweisung
 
 Die Verwendung des bedingten Operators anstelle einer [if-else](../keywords/if-else.md)-Anweisung führt in Fällen, in denen Sie einen Wert bedingt berechnen müssen, möglicherweise zu präziserem Code. Das folgende Beispiel zeigt zwei Möglichkeiten, eine ganze Zahl als negativ oder nicht negativ zu klassifizieren:
 
-[!code-csharp[conditional and if-else](snippets/ConditionalOperator.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](snippets/shared/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
@@ -90,7 +90,7 @@ Weitere Informationen zum bedingten REF-Ausdruck finden Sie unter [Hinweis zum F
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [if-else-Anweisung](../keywords/if-else.md)
 - [?.- und ?[]-Operatoren](member-access-operators.md#null-conditional-operators--and-)
 - [??- und ??=-Operatoren](null-coalescing-operator.md)

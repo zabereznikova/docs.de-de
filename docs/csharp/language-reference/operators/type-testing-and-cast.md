@@ -8,6 +8,8 @@ f1_keywords:
 - as_CSharpKeyword
 - ()_CSharpKeyword
 - typeof_CSharpKeyword
+- as
+- typeof
 helpviewer_keywords:
 - type-testing operators [C#]
 - conversion operators [C#]
@@ -18,12 +20,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: bc293c359af5744eebc63c0d0f94b4cebe3d450a
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 0bf0c3b1cea667456780ff56deb43467fd3bbffd
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021242"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916643"
 ---
 # <a name="type-testing-operators-and-cast-expression-c-reference"></a>Typtestoperatoren und Cast-Ausdrücke (C#-Referenz)
 
@@ -50,11 +52,11 @@ Der `E is T`-Ausdruck gibt `true` zurück, wenn das Ergebnis von `E` nicht NULL 
 
 Das folgende Beispiel zeigt, dass der `is`-Operator `true` zurückgibt, wenn der Laufzeittyp eines Ausdrucksergebnisses von einem angegebenen Typ abgeleitet ist, wenn also eine Verweiskonvertierung zwischen Typen besteht:
 
-[!code-csharp[is with reference conversion](snippets/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
+[!code-csharp[is with reference conversion](snippets/shared/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
 Das nächste Beispiel zeigt, dass der `is`-Operator Boxing- und Unboxingkonvertierungen berücksichtigt, [numerische Konvertierungen](../builtin-types/numeric-conversions.md) aber nicht:
 
-[!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
+[!code-csharp-interactive[is with int](snippets/shared/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
 Informationen zu C#-Konvertierungen finden Sie im Kapitel [Konvertierungen](~/_csharplang/spec/conversions.md) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
@@ -70,7 +72,7 @@ Hierbei ist `E` ein Ausdruck, der einen Wert zurückgibt, `T` ist der Name eines
 
 Das folgende Beispiel veranschaulicht die Verwendung des `is`-Operators mit dem Typmuster:
 
-[!code-csharp-interactive[is with type pattern](snippets/TypeTestingAndConversionOperators.cs#IsTypePattern)]
+[!code-csharp-interactive[is with type pattern](snippets/shared/TypeTestingAndConversionOperators.cs#IsTypePattern)]
 
 Weitere Informationen zum Typmuster und weiteren unterstützten Mustern finden Sie unter [Musterabgleich mit „is“](../keywords/is.md#pattern-matching-with-is).
 
@@ -96,7 +98,7 @@ Der `as`-Operator berücksichtigt nur Verweis-, Nullable-, Boxing- und Unboxingk
 
 Im folgenden Beispiel wird die Verwendung des `as`-Operators veranschaulicht:
 
-[!code-csharp-interactive[as operator](snippets/TypeTestingAndConversionOperators.cs#AsOperator)]
+[!code-csharp-interactive[as operator](snippets/shared/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
 > Wie das vorherige Beispiel zeigt, müssen Sie das Ergebnis des `as`-Ausdrucks mit `null` vergleichen, um zu überprüfen, ob die Konvertierung erfolgreich war. Ab C# 7.0 können Sie den [is-Operator](#type-testing-with-pattern-matching) verwenden, um sowohl die erfolgreiche Durchführung der Konvertierung zu überprüfen als auch bei Erfolg das Ergebnis einer neuen Variable zuzuweisen.
@@ -107,7 +109,7 @@ Ein cast-Ausdruck der Form `(T)E` führt eine explizite Konvertierung des Ergebn
 
 Das folgende Beispiel zeigt explizite numerische und Verweiskonvertierungen:
 
-[!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
+[!code-csharp-interactive[cast expression](snippets/shared/TypeTestingAndConversionOperators.cs#Cast)]
 
 Informationen zu expliziten Konvertierungen finden Sie im Abschnitt [Explizite Konvertierungen](~/_csharplang/spec/conversions.md#explicit-conversions) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md). Informationen zum Definieren einer benutzerdefinierten expliziten oder impliziten Typkonvertierung finden Sie unter [Benutzerdefinierte Konvertierungsoperatoren](user-defined-conversion-operators.md).
 
@@ -121,11 +123,11 @@ Mit Klammern können Sie auch die Reihenfolge anpassen, in der Vorgänge in eine
 
 Der `typeof`-Operator ruft die <xref:System.Type?displayProperty=nameWithType>-Instanz für einen Typ ab. Das Argument für den `typeof`-Operator muss der Name eines Typs oder Typparameters sein, wie das folgende Beispiel zeigt:
 
-[!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
+[!code-csharp-interactive[typeof operator](snippets/shared/TypeTestingAndConversionOperators.cs#TypeOf)]
 
 Sie können den `typeof`-Operator auch mit ungebundenen generischen Typen verwenden. Der Name eines ungebundenen generischen Typs muss die entsprechende Anzahl von Kommas enthalten: eines weniger als die Anzahl von Typparametern. Das folgende Beispiel zeigt die Verwendung des `typeof`-Operators mit einem ungebundenen generischen Typ:
 
-[!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
+[!code-csharp-interactive[typeof unbound generic](snippets/shared/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
 Ein Ausdruck kann kein Argument des `typeof`-Operators sein. Verwenden Sie die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Methode, um die <xref:System.Type?displayProperty=nameWithType>-Instanz für den Laufzeittyp eines Ausdrucksergebnisses abzurufen.
 
@@ -133,7 +135,7 @@ Ein Ausdruck kann kein Argument des `typeof`-Operators sein. Verwenden Sie die <
 
 Verwenden Sie den `typeof`-Operator, um zu überprüfen, ob der Laufzeittyp des Ausdrucksergebnisses exakt mit einem angegebenen Typ übereinstimmt. Das folgende Beispiel zeigt den Unterschied zwischen der Typüberprüfung mit dem `typeof`-Operator und mit dem [is-Operator](#is-operator):
 
-[!code-csharp[typeof vs is](snippets/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
+[!code-csharp[typeof vs is](snippets/shared/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
@@ -153,6 +155,6 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und den Operatoren „is“ und „as“](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Generics in .NET](../../../standard/generics/index.md)

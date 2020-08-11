@@ -1,13 +1,13 @@
 ---
 title: Ausführen von zusammengesetzten und auf Microservices basierenden Anwendungen in Produktionsumgebungen
 description: Lernen Sie die wichtigsten Komponenten zum Ausführen containerbasierter Anwendungen in Produktionsumgebungen kennen
-ms.date: 02/15/2019
-ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: a045804e2e40dcf401a697d3e58b13f05ca61b94
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68672917"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915048"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Ausführen von zusammengesetzten und auf Microservices basierenden Anwendungen in Produktionsumgebungen
 

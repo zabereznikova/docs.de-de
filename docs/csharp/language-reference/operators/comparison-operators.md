@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: eda039d950e4be13d9c041c8bb95b6ea773b83f6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9fa739d8b5461d4043f3ae51f5d14949a95c68e5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207225"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916884"
 ---
 # <a name="comparison-operators-c-reference"></a>Vergleichsoperatoren (C#-Referenz)
 
@@ -43,25 +43,25 @@ Die Operatoren [`==` und `!=`](equality-operators.md) überprüfen, ob die Opera
 
 Der `<`-Operator gibt `true` zurück, wenn sein linker Operand kleiner ist als sein rechter Operand, andernfalls `false`:
 
-[!code-csharp-interactive[less than example](snippets/ComparisonOperators.cs#Less)]
+[!code-csharp-interactive[less than example](snippets/shared/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>„Größer als“-Operator >
 
 Der `>`-Operator gibt `true` zurück, wenn sein linker Operand größer ist als sein rechter Operand, andernfalls `false`:
 
-[!code-csharp-interactive[greater than example](snippets/ComparisonOperators.cs#Greater)]
+[!code-csharp-interactive[greater than example](snippets/shared/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>„Kleiner oder gleich“-Operator \<=
 
 Der `<=`-Operator gibt `true` zurück, wenn sein linker Operand kleiner ist als der rechte Operand oder diesem entspricht, andernfalls `false`:
 
-[!code-csharp-interactive[less than or equal example](snippets/ComparisonOperators.cs#LessOrEqual)]
+[!code-csharp-interactive[less than or equal example](snippets/shared/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>„Größer oder gleich“-Operator >=
 
 Der `>=`-Operator gibt `true` zurück, wenn sein linker Operand größer ist als der rechte Operand oder diesem entspricht, andernfalls `false`:
 
-[!code-csharp-interactive[greater than or equal example](snippets/ComparisonOperators.cs#GreaterOrEqual)]
+[!code-csharp-interactive[greater than or equal example](snippets/shared/ComparisonOperators.cs#GreaterOrEqual)]
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
@@ -76,6 +76,6 @@ Weitere Informationen finden Sie im Abschnitt [Relationale und Typtestoperatoren
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Gleichheitsoperatoren](equality-operators.md)

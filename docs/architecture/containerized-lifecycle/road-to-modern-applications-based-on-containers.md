@@ -1,13 +1,13 @@
 ---
 title: Der Weg zu modernen containerbasierten Anwendungen
 description: Verstehen Sie, dass Docker, Container und eine Microservicearchitektur keine Universallösung für alle Fälle sind. Hier finden Sie einige Referenzen, die Ihnen bei der Entscheidung helfen.
-ms.date: 11/23/2018
-ms.openlocfilehash: 0bc1adcd89c19b512032ee8fdf1a6e28cea96ee8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 7c18bc2ce1face4a5419305a48a16f23fcdc2735
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72770708"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914978"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Der Weg zu modernen containerbasierten Anwendungen
 

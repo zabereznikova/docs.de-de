@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: a2fc2c56eeb29f5e89dc0b9f94636408ff10700f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446365"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556799"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 
@@ -94,8 +94,8 @@ Gruppierungskonstrukte grenzen Teilausdrücke eines regulären Ausdrucks ab und 
 |Gruppierungskonstrukt|Beschreibung|Muster|Übereinstimmungen|
 |------------------------|-----------------|-------------|-------------|
 |`(` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck auf und weist diesem eine einsbasierte Ordinalzahl zu.|`(\w)\1`|`"ee"` in `"deep"`|
-|`(?<` *Name* `>` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck in einer benannten Gruppe auf.|`(?<double>\w)\k<double>`|`"ee"` in `"deep"`|
-|`(?<` *Name1* `-` *Name2* `>` *Teilausdruck* `)`|Definiert eine Ausgleichsgruppendefinition. Weitere Informationen finden Sie im Abschnitt „Ausgleichen von Gruppendefinitionen“ in [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` in `"3+2^((1-3)*(3-1))"`|
+|`(?<` *Name* `>` *Teilausdruck* `)`<br /> oder <br />`(?'` *Name* `'` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck in einer benannten Gruppe auf.|`(?<double>\w)\k<double>`|`"ee"` in `"deep"`|
+|`(?<` *Name1* `-` *Name2* `>` *Teilausdruck* `)` <br /> oder <br /> `(?'` *Name1* `-` *Name2* `'` *Teilausdruck* `)`|Definiert eine Ausgleichsgruppendefinition. Weitere Informationen finden Sie im Abschnitt „Ausgleichen von Gruppendefinitionen“ in [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` in `"3+2^((1-3)*(3-1))"`|
 |`(?:` *Teilausdruck* `)`|Definiert eine Nicht-Erfassungsgruppe.|`Write(?:Line)?`|`"WriteLine"` in `"Console.WriteLine()"`<br /><br /> `"Write"` in `"Console.Write(value)"`|
 |`(?imnsx-imnsx:` *Teilausdruck* `)`|Aktiviert oder deaktiviert die angegebenen Optionen in *Teilausdruck*. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` in `"A12xl A12XL a12xl"`|
 |`(?=` *Teilausdruck* `)`|Positive Lookaheadassertion mit einer Breite von Null.|`\w+(?=\.)`|`"is"`, `"ran"` und `"out"` in `"He is. The dog ran. The sun is out."`|

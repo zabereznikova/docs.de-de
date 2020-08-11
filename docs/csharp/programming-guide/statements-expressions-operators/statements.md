@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: b941e46f959167f78f1366a3863aca4240810013
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3f8ac88525c44f9572f4f647145ad251537aba57
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381761"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556747"
 ---
 # <a name="statements-c-programming-guide"></a>Anweisungen (C#-Programmierhandbuch)
 
@@ -28,7 +28,7 @@ Die folgende Tabelle enthält die verschiedenen Typen von Anweisungen in C# und 
 |Kategorie|C#-Schlüsselwörter / Hinweise|
 |--------------|---------------------------|
 |[Declaration statements (Deklarationsanweisungen)](#declaration-statements)|Eine Deklarationsanweisung führt eine neue Variable oder Konstante ein. Eine Deklaration einer Variable kann der Variable optional einen Wert zuweisen. Bei einer Deklaration einer Konstante ist die Zuweisung erforderlich.|
-|[Expression statements (Ausdrucksanweisungen)](expressions.md)|Ausdrucksanweisungen, die einen Wert berechnen, müssen den Wert in einer Variablen speichern. Weitere Informationen finden Sie unter [Ausdrucksanweisungen](#expression-statements).|
+|[Expression statements (Ausdrucksanweisungen)](#expression-statements)|Ausdrucksanweisungen, die einen Wert berechnen, müssen den Wert in einer Variablen speichern.|
 |Auswahlanweisungen|Auswahlanweisungen helfen Ihnen in unterschiedliche Codeabschnitte zu verzweigen, abhängig von einer oder mehreren angegebenen Bedingungen. Weitere Informationen finden Sie unter den folgenden Themen: <ul><li>[if](../../language-reference/keywords/if-else.md)</li><li>[else](../../language-reference/keywords/if-else.md)</li><li>[switch](../../language-reference/keywords/switch.md)</li><li>[case](../../language-reference/keywords/switch.md)</li></ul>|
 |Iterationsanweisungen|Iterationsanweisungen helfen Ihnen, Auflistungen, wie z.B. Arrays, zu durchlaufen oder den selben Satz von Anweisungen solange zu wiederholen, bis eine angegebene Bedingung erfüllt ist. Weitere Informationen finden Sie unter den folgenden Themen: <ul><li>[do](../../language-reference/keywords/do.md)</li><li>[for](../../language-reference/keywords/for.md)</li><li>[foreach](../../language-reference/keywords/foreach-in.md)</li><li>[in](../../language-reference/keywords/foreach-in.md)</li><li>[while](../../language-reference/keywords/while.md)</li></ul>|
 |Sprunganweisungen|Sprunganweisungen übertragen Steuerelemente zu einem anderen Codeabschnitt. Weitere Informationen finden Sie unter den folgenden Themen: <ul><li>[break](../../language-reference/keywords/break.md)</li><li>[continue](../../language-reference/keywords/continue.md)</li><li>[default](../../language-reference/keywords/switch.md)</li><li>[goto](../../language-reference/keywords/goto.md)</li><li>[return](../../language-reference/keywords/return.md)</li><li>[yield](../../language-reference/keywords/yield.md)</li></ul>|
@@ -92,5 +92,5 @@ Weitere Informationen finden Sie im Abschnitt [Anweisungen](~/_csharplang/spec/s
 ## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
-- [Anweisungsschlüsselwörter](../../language-reference/keywords/statement-keywords.md)  
-- [Ausdrücke](expressions.md)  
+- [Anweisungsschlüsselwörter](../../language-reference/keywords/statement-keywords.md)
+- [C#-Operatoren und -Ausdrücke](../../language-reference/operators/index.md)

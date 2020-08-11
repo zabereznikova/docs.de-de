@@ -7,12 +7,12 @@ f1_keywords:
 - default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: f03971efa87bf03967c79512e44d22134dd80c17
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507177"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916862"
 ---
 # <a name="default-value-expressions-c-reference"></a>Standardwertausdrücke (C#-Referenz)
 
@@ -24,7 +24,7 @@ Außerdem verwenden Sie das Schlüsselwort `default` in einer [`switch`-Anweisun
 
 Das Argument für den `default`-Operator muss der Name eines Typs oder Typparameters sein, wie das folgende Beispiel zeigt:
 
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/shared/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>default-Literal
 
@@ -37,7 +37,7 @@ Ab C# 7.1 können Sie das `default`-Literal verwenden, um den Standardwert eines
 
 Im folgenden Beispiel wird die Verwendung des `default`-Literals veranschaulicht:
 
-[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/shared/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -48,6 +48,6 @@ Weitere Informationen zum `default`-Literal finden Sie unter [Hinweis zum Featur
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [Standardwerte der C#-Typen](../builtin-types/default-values.md)
 - [Generics in .NET](../../../standard/generics/index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 327183ccdf79cb8e15cd15aa3cffb044120808f8
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847286"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916695"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof-Operator (C#-Verweis)
 
@@ -40,7 +40,7 @@ Sie müssen auch keinen unsicheren Kontext verwenden, wenn der Operand des `size
 
 Im folgenden Beispiel wird die Verwendung des `sizeof`-Operators veranschaulicht:
 
-[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/shared/SizeOfOperator.cs)]
 
 Der `sizeof`-Operator gibt die Anzahl der Bytes zurück, die von der Common Language Runtime im verwalteten Speicher belegt werden. Wie im vorherigen Beispiel veranschaulicht, enthält dieser Wert für [Strukturtypen](../builtin-types/struct.md) alle Auffüllzeichen. Das Ergebnis des `sizeof`-Operators unterscheidet sich möglicherweise von dem Ergebnis der <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>-Methode, die die Größe eines Typs in *nicht verwaltetem* Speicher zurückgibt.
 
@@ -51,7 +51,7 @@ Weitere Informationen finden Sie im Abschnitt [Der sizeof-Operator](~/_csharplan
 ## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [Operatoren im Zusammenhang mit Zeigern](pointer-related-operators.md)
 - [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Memory- und Span-bezogene Typen](../../../standard/memory-and-spans/index.md)

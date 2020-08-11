@@ -5,12 +5,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc expression [C#]
-ms.openlocfilehash: 2e99ce8b1e44dfa040c1acac799a3a55b375bd91
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 4f20f3262b77cc2fe16480e53d13960e68d230b5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546600"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916673"
 ---
 # <a name="stackalloc-expression-c-reference"></a>stackalloc-Ausdruck (C#-Referenz)
 
@@ -20,24 +20,24 @@ Sie können das Ergebnis eines `stackalloc`-Ausdrucks einer Variablen mit einem 
 
 - Ab C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> oder <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, wie im folgenden Beispiel gezeigt:
 
-  [!code-csharp[stackalloc span](snippets/StackallocOperator.cs#AssignToSpan)]
+  [!code-csharp[stackalloc span](snippets/shared/StackallocOperator.cs#AssignToSpan)]
 
   Sie müssen keinen [unsicheren](../keywords/unsafe.md) Kontext verwenden, wenn Sie der Variablen <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601> einen im Stapel zugeordneten Speicherblock zuweisen.
 
   Wenn Sie mit diesen Typen arbeiten, können Sie einen `stackalloc`-Ausdruck in [bedingten](conditional-operator.md) oder Zuweisungsausdrücken verwenden, wie das folgende Beispiel zeigt:
 
-  [!code-csharp[stackalloc expression](snippets/StackallocOperator.cs#AsExpression)]
+  [!code-csharp[stackalloc expression](snippets/shared/StackallocOperator.cs#AsExpression)]
 
   Ab C# 8.0 können Sie einen `stackalloc`-Ausdruck innerhalb anderer Ausdrücke immer dann verwenden, wenn eine <xref:System.Span%601>- oder <xref:System.ReadOnlySpan%601>-Variable zulässig ist, wie im folgenden Beispiel zu sehen:
 
-  [!code-csharp[stackalloc in nested expressions](snippets/StackallocOperator.cs#Nested)]
+  [!code-csharp[stackalloc in nested expressions](snippets/shared/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
   > Wir empfehlen, die Typen <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601> zu verwenden, um nach Möglichkeit mit dem im Stapel zugeordneten Speicher zu arbeiten.
 
 - Ein [Zeigertyp](../../programming-guide/unsafe-code-pointers/pointer-types.md), wie im folgenden Beispiel gezeigt:
 
-  [!code-csharp[stackalloc pointer](snippets/StackallocOperator.cs#AssignToPointer)]
+  [!code-csharp[stackalloc pointer](snippets/shared/StackallocOperator.cs#AssignToPointer)]
 
   Wie das vorhergehende Beispiel zeigt, müssen Sie einen `unsafe`-Kontext verwenden, wenn Sie mit Zeigertypen arbeiten.
 
@@ -47,7 +47,7 @@ Die Menge des verfügbaren Speichers im Stapel ist begrenzt. Wenn Sie zu viel Sp
 
 - Begrenzen Sie die Speichermenge, die Sie mit `stackalloc` zuordnen:
 
-  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+  [!code-csharp[limit stackalloc](snippets/shared/StackallocOperator.cs#LimitStackalloc)]
 
   Da die Menge des auf im Stapel verfügbaren Speichers von der Umgebung abhängt, in der der Code ausgeführt wird, sollten Sie bei der Festlegung des tatsächlichen Grenzwerts konservativ vorgehen.
 
@@ -57,7 +57,7 @@ Der Inhalt des neu zugeordneten Speichers ist undefiniert. Er sollte vor Verwend
 
 Ab C# 7.3 können Sie mit der Arrayinitialisierungssyntax den Inhalt des neu zugeordneten Speichers definieren. Das folgende Beispiel zeigt verschiedene Möglichkeiten, dies zu erreichen:
 
-[!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
+[!code-csharp[stackalloc initialization](snippets/shared/StackallocOperator.cs#StackallocInit)]
 
 Im Ausdruck `stackalloc T[E]` muss `T` ein [nicht verwalteter Typ](../builtin-types/unmanaged-types.md) sein und `E` in einen nicht negativen [int](../builtin-types/integral-numeric-types.md)-Wert ausgewertet werden.
 
@@ -72,7 +72,7 @@ Weitere Informationen finden Sie im Abschnitt [Stapelzuordnung](~/_csharplang/sp
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [Operatoren im Zusammenhang mit Zeigern](pointer-related-operators.md)
 - [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Memory- und Span-bezogene Typen](../../../standard/memory-and-spans/index.md)

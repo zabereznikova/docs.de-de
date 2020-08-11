@@ -1,13 +1,13 @@
 ---
 title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 description: Echte Produktionsanwendungen müssen mithilfe von Orchestratoren bereitgestellt und verwaltet werden, die Status, Workload und Lebenszyklen aller Container behandeln können.
-ms.date: 02/15/2019
-ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/06/2020
+ms.openlocfilehash: 61c66e1f3835df543cbc9ba23d9c098ad52c90cd
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374480"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915475"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
@@ -62,7 +62,7 @@ Abbildung 4–7 zeigt die Struktur eines Kubernetes-Clusters, in dem ein Masterk
 
 ## <a name="development-environment-for-kubernetes"></a>Entwicklungsumgebung für Kubernetes
 
-In der [von Docker im Juli 2018 angekündigten](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) Entwicklungsumgebung kann Kubernetes auch auf einem einzelnen Entwicklungscomputer (Windows 10 oder macOS) ausgeführt werden, indem Sie einfach [Docker Desktop](https://www.docker.com/community-edition) installieren. Sie können die Bereitstellung später in die Cloud (AKS) ausweiten, um weitere Integrationstests auszuführen, wie in Abbildung 4–8 gezeigt.
+In der [von Docker im Juli 2018 angekündigten](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) Entwicklungsumgebung kann Kubernetes auch auf einem einzelnen Entwicklungscomputer (Windows 10 oder macOS) ausgeführt werden, indem Sie einfach [Docker Desktop](https://www.docker.com/products/docker-desktop) installieren. Sie können die Bereitstellung später in die Cloud (AKS) ausweiten, um weitere Integrationstests auszuführen, wie in Abbildung 4–8 gezeigt.
 
 ![Die Abbildung zeigt Kubernetes auf einem Entwicklungscomputer mit anschließender Bereitstellung für AKS.](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 

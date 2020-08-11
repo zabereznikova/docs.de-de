@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: d71acf0cf7d5cdcfa5310455af2120fa1f82d567
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: b00c5f6f97d27290fb3773dcbb422bf9fb4c425b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135918"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916777"
 ---
 # <a name="nameof-expression-c-reference"></a>nameof-Ausdruck (C#-Referenz)
 
 Ein `nameof`-Ausdruck erzeugt den Namen einer Variablen, eines Typs oder eines Members als Zeichenfolgenkonstante:
 
-[!code-csharp-interactive[nameof expression](snippets/NameOfOperator.cs#Examples)]
+[!code-csharp-interactive[nameof expression](snippets/shared/NameOfOperator.cs#Examples)]
 
 Im Falle eines Typs und eines Namespace ist der erzeugte Name in der Regel nicht [vollqualifiziert](~/_csharplang/spec/basic-concepts.md#fully-qualified-names), wie im obigen Beispiel zu sehen.
 
 Im Fall von [ausführlichen Bezeichnern](../tokens/verbatim.md) ist das `@`-Zeichen nicht der Teil eines Namens, wie im folgenden Beispiel gezeigt:
 
-[!code-csharp-interactive[nameof verbatim](snippets/NameOfOperator.cs#Verbatim)]
+[!code-csharp-interactive[nameof verbatim](snippets/shared/NameOfOperator.cs#Verbatim)]
 
 Ein `nameof`-Ausdruck wird zur Kompilierzeit ausgewertet und hat zur Laufzeit keine Auswirkung.
 
 Sie können einen `nameof`-Ausdruck nutzen, um den Code zur Argumentüberprüfung besser verwalten zu können:
 
-[!code-csharp[nameof and argument check](snippets/NameOfOperator.cs#ExceptionMessage)]
+[!code-csharp[nameof and argument check](snippets/shared/NameOfOperator.cs#ExceptionMessage)]
 
 Der `nameof`-Ausdruck ist ab C# 6 verfügbar.
 
@@ -41,4 +41,4 @@ Weitere Informationen finden Sie im Abschnitt [Nameof-Ausdrücke](~/_csharplang/
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)

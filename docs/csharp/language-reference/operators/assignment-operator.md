@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 420b41f586a6980d40cf1171eef00dad37bf5abf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b4f3b3f4d6b697903461f08435552f2df36bfe4
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398058"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916929"
 ---
 # <a name="assignment-operators-c-reference"></a>Zuweisungsoperatoren (C#-Referenz)
 
@@ -31,13 +31,13 @@ a = (b = c)
 
 Das folgende Beispiel zeigt die Verwendung des Zuweisungsoperators mit einer lokalen Variablen, einer Eigenschaft und einem Indexerelement als linksseitigem Operanden:
 
-[!code-csharp-interactive[simple assignment](snippets/AssignmentOperator.cs#Simple)]
+[!code-csharp-interactive[simple assignment](snippets/shared/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>ref-Zuweisungsoperator
 
 Ab C# 7.3 können Sie mit dem ref-Zuweisungsoperator `= ref` eine [ref local](../keywords/ref.md#ref-locals)- oder [ref readonly local](../keywords/ref.md#ref-readonly-locals)-Variable neu zuweisen. Im folgenden Beispiel wird die Verwendung des ref-Zuweisungsoperators veranschaulicht:
 
-[!code-csharp[ref assignment operator](snippets/AssignmentOperator.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](snippets/shared/AssignmentOperator.cs#RefAssignment)]
 
 Im Fall des REF-Zuweisungsoperators müssen beide Operanden vom gleichen Typ sein.
 
@@ -78,5 +78,5 @@ Weitere Informationen zum REF-Zuweiseungsoperator `= ref` finden Sie unter [Hinw
 ## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [ref (C#-Referenz)](../keywords/ref.md)

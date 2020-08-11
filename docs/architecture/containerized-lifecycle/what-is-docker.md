@@ -1,13 +1,13 @@
 ---
 title: Was ist Docker?
 description: Beim tieferen Einstieg in Ihre Docker-Kenntnisse kann Ihnen vielleicht eine einfache Analogie helfen.
-ms.date: 02/15/2019
-ms.openlocfilehash: e3b3685f2fc6d5a9d33bb176d04ca910f0289344
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 73b6032465583861169a8ac2bed81585027f42ec
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76919880"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915063"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
@@ -19,7 +19,7 @@ ms.locfileid: "76919880"
 
 Wie in dem vorherigen Diagramm gezeigt, können Docker-Container überall ausgeführt werden, lokal im Rechenzentrum des Kunden, bei einem externen Dienstanbieter oder in der Cloud auf Azure. Docker-Imagecontainer können auch nativ unter Linux und Windows ausgeführt werden. Allerdings können Windows-Images nur auf Windows-Hosts ausgeführt werden, während Linux-Images sowohl auf Linux-Hosts als auch auf Windows-Hosts ausgeführt werden können (bis dato mithilfe einer Hyper-V-Linux-VM), wobei Host einen Server oder eine VM bedeutet.
 
-Entwickler können Entwicklungsumgebungen unter Windows, Linux oder macOS verwenden. Der Entwickler führt auf dem Entwicklungscomputer einen Docker-Host aus, in dem Docker-Images bereitgestellt werden, einschließlich der App und ihrer Abhängigkeiten. Entwickler, die unter Linux oder auf dem Mac arbeiten, verwenden einen Linux-basierten Docker-Host und können nur Images für Linux-Container erstellen. (Entwickler, die auf dem Mac arbeiten, können Code bearbeiten oder die Docker-CLI unter macOS ausführen, aber zum Entstehungszeitpunkt dieses Texts können Container nicht direkt unter macOS ausgeführt werden.) Entwickler, die unter Windows arbeiten, können Images wahlweise für Linux- oder für Windows-Container erstellen.
+Entwickler können Entwicklungsumgebungen unter Windows, Linux oder macOS verwenden. Der Entwickler führt auf dem Entwicklungscomputer einen Docker-Host aus, in dem Docker-Images bereitgestellt werden, einschließlich der App und ihrer Abhängigkeiten. Entwickler, die unter Linux oder auf dem Mac arbeiten, verwenden einen Linux-basierten Docker-Host und können nur Images für Linux-Container erstellen. (Entwickler, die auf dem Mac arbeiten, können Code bearbeiten oder die Docker-Befehlszeilenschnittstelle (CLI) unter macOS ausführen, aber zum Entstehungszeitpunkt dieses Texts können Container nicht direkt unter macOS ausgeführt werden.) Entwickler, die unter Windows arbeiten, können Images wahlweise für Linux- oder für Windows-Container erstellen.
 
 Um Container in Entwicklungsumgebungen zu hosten und zusätzliche Entwicklertools bereitzustellen, vertreibt Docker die [Docker Community Edition (CE)](https://www.docker.com/community-edition) für Windows oder für macOS. Diese Produkte installieren die erforderliche VM (den Docker-Host) zum Hosten der Container. Docker stellt außerdem [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition) zur Verfügung, das für die Entwicklung in Unternehmen vorgesehen ist und von IT-Teams verwendet wird, die große, unternehmenswichtige Anwendungen im Produktionsbetrieb erstellen, ausliefern und ausführen.
 
@@ -80,5 +80,5 @@ Sie können sich ein Image als eine schreibgeschützte Behelfsfestplatte vorstel
 In ähnlicher Weise stellt ein Container diesen „Computer“ dar, mit angeschlossener Image-„Festplatte“. Der Container kann ein- und ausgeschaltet werden, ganz wie ein Computer.
 
 >[!div class="step-by-step"]
->[Zurück](index.md)
+>[Zurück](introduction-to-containers-and-docker.md)
 >[Weiter](docker-terminology.md)
