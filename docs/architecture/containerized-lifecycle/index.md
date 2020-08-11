@@ -1,31 +1,89 @@
 ---
-title: Einführung in Container und Docker
-description: Verschaffen Sie sich einen allgemeinen Überblick der Hauptvorteile beim Einsatz von Docker.
-ms.date: 02/15/2019
-ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Hier erhalten Sie einen allgemeinen Überblick über den Entwicklungs- und Bereitstellungsprozess für containerisierte Anwendungen mit Docker- und Microsoft-Plattformen und -Tools.
+ms.date: 07/30/2020
+ms.openlocfilehash: d8055315b25f73d7b0b355026ab6b2c4767f9d89
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73738173"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915156"
 ---
-# <a name="introduction-to-containers-and-docker"></a><span data-ttu-id="2f11a-103">Einführung in Container und Docker</span><span class="sxs-lookup"><span data-stu-id="2f11a-103">Introduction to containers and Docker</span></span>
+# <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a><span data-ttu-id="57498-103">Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools</span><span class="sxs-lookup"><span data-stu-id="57498-103">Containerized Docker Application Lifecycle with Microsoft Platform and Tools</span></span>
 
-<span data-ttu-id="2f11a-104">*Das Containerisieren ist ein Ansatz in der Softwareentwicklung, bei dem eine Anwendung oder ein Dienst sowie die zugehörigen Abhängigkeiten und Konfigurationen (abstrahiert als Bereitstellungsmanifestdateien) zusammen als Containerimage verpackt werden. Die Containeranwendung kann anschließend als Einheit getestet und als Instanz eines Containerimages für das Hostbetriebssystem bereitgestellt werden.*</span><span class="sxs-lookup"><span data-stu-id="2f11a-104">*Containerization is an approach to software development in which an application or service, its dependencies, and its configuration (abstracted as deployment manifest files) are packaged together as a container image. You then can test the containerized application as a unit and deploy it as a container image instance to the host operating system (OS).*</span></span>
+![Bucheinband](./media/devops-book-cover-large-we.png)
 
-<span data-ttu-id="2f11a-105">So wie das Versenden von Containern es ermöglicht, Güter unabhängig von der enthaltenen Fracht per Schiff, Zug oder LKW zu transportieren, agieren Softwarecontainer als Standardeinheit für Softwarebereitstellung und können verschiedenen Code und verschiedene Abhängigkeiten enthalten.</span><span class="sxs-lookup"><span data-stu-id="2f11a-105">Just as shipping containers allow goods to be transported by ship, train, or truck regardless of the cargo inside, software containers act as a standard unit of software deployment that can contain different code and dependencies.</span></span> <span data-ttu-id="2f11a-106">Das Containerisieren von Software auf diese Weise ermöglicht es Entwicklern und IT-Experten, diese ohne oder mit geringfügigen Änderungen in verschiedenen Umgebungen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="2f11a-106">Containerizing software this way enables developers and IT professionals to deploy them across environments with little or no modification.</span></span>
+<span data-ttu-id="57498-105">**EDITION v3.1** – für ASP.NET Core 3.1 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="57498-105">**EDITION v3.1** - Updated to ASP.NET Core 3.1</span></span>
 
-<span data-ttu-id="2f11a-107">Container isolieren Anwendungen auf einem gemeinsamen Betriebssystem außerdem voneinander.</span><span class="sxs-lookup"><span data-stu-id="2f11a-107">Containers also isolate applications from each other on a shared OS.</span></span> <span data-ttu-id="2f11a-108">Containeranwendungen werden auf einem Containerhost ausgeführt, der auf dem Betriebssystem (Linux oder Windows) ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2f11a-108">Containerized applications run on top of a container host that in turn runs on the OS (Linux or Windows).</span></span> <span data-ttu-id="2f11a-109">Daher haben Container einen viel geringeren Speicherbedarf als die Images für virtuelle Computer (VM).</span><span class="sxs-lookup"><span data-stu-id="2f11a-109">Containers therefore have a much smaller footprint than virtual machine (VM) images.</span></span>
+<span data-ttu-id="57498-106">Dieser Leitfaden bietet eine allgemeine Übersicht über die Entwicklung und Bereitstellung containerisierter ASP.NET Core-Anwendungen in Docker mithilfe der Microsoft-Plattform und -Tools.</span><span class="sxs-lookup"><span data-stu-id="57498-106">This guide is a general overview for developing and deploying containerized ASP.NET Core applications with Docker, using the Microsoft platform and tools.</span></span> <span data-ttu-id="57498-107">Zudem ist eine allgemeine Einführung in Azure DevOps für die Implementierung von CI/CD-Pipelines und in Azure Container Registry (ACR) und Azure Kubernetes Service (AKS) für die Bereitstellung enthalten.</span><span class="sxs-lookup"><span data-stu-id="57498-107">The guide includes a high-level introduction to Azure DevOps, for implementing CI/CD pipelines, as well as Azure Container Registry (ACR), and Azure Kubernetes Services AKS for deployment.</span></span>
 
-<span data-ttu-id="2f11a-110">Jeder Container kann wie in Abbildung 1-1 gezeigt eine gesamte Webanwendung oder einen gesamten Dienst ausführen.</span><span class="sxs-lookup"><span data-stu-id="2f11a-110">Each container can run a whole web application or a service, as shown in Figure 1-1.</span></span> <span data-ttu-id="2f11a-111">In diesem Beispiel ist Docker-Host ein Containerhost und App1, App2, Svc1 und Svc2 sind die Containeranwendungen oder -dienste.</span><span class="sxs-lookup"><span data-stu-id="2f11a-111">In this example, Docker host is a container host, and App1, App2, Svc1, and Svc2 are containerized applications or services.</span></span>
+<span data-ttu-id="57498-108">Ausführlichere entwicklungsbezogene Details finden Sie im Leitfaden [.NET-Microservices: Architektur für containerisierte .NET-Anwendungen](https://docs.microsoft.com/dotnet/architecture/microservices/) und in der zugehörigen Referenzanwendung [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).</span><span class="sxs-lookup"><span data-stu-id="57498-108">For low-level, development-related details you can see the [.NET Microservices: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/architecture/microservices/) guide and it related reference application [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).</span></span>
 
-![Diagramm, das vier Container zeigt, die auf einem virtuellen Computer oder einem Server ausgeführt werden.](./media/index/multiple-containers-single-host.png)
+## <a name="send-us-your-feedback"></a><span data-ttu-id="57498-109">Senden Sie uns Ihr Feedback!</span><span class="sxs-lookup"><span data-stu-id="57498-109">Send us your feedback!</span></span>
 
-<span data-ttu-id="2f11a-113">**(Abbildung 1-1)** .</span><span class="sxs-lookup"><span data-stu-id="2f11a-113">**Figure 1-1**.</span></span> <span data-ttu-id="2f11a-114">Mehrere Container, die auf einem Containerhost ausgeführt werden</span><span class="sxs-lookup"><span data-stu-id="2f11a-114">Multiple containers running on a container host</span></span>
+<span data-ttu-id="57498-110">Dieser Leitfaden wurde geschrieben, um Ihnen die Architektur von Containeranwendungen und Microservices in .NET näherzubringen.</span><span class="sxs-lookup"><span data-stu-id="57498-110">We wrote this guide to help you understand the architecture of containerized applications and microservices in .NET.</span></span> <span data-ttu-id="57498-111">Der Leitfaden und die verknüpfte Verweisanwendung werden weiterentwickelt. Wir freuen uns über Ihr Feedback!</span><span class="sxs-lookup"><span data-stu-id="57498-111">The guide and related reference application will be evolving, so we welcome your feedback!</span></span> <span data-ttu-id="57498-112">Wenn Sie Kommentare dazu haben, wie dieser Leitfaden verbessert werden kann, senden Sie Ihr Feedback bitte an <https://aka.ms/ebookfeedback>.</span><span class="sxs-lookup"><span data-stu-id="57498-112">If you have comments about how this guide can be improved, submit feedback at <https://aka.ms/ebookfeedback>.</span></span>
 
-<span data-ttu-id="2f11a-115">Ein weiterer Vorteil, den Containerisierung mit sich bringt, ist die Skalierbarkeit.</span><span class="sxs-lookup"><span data-stu-id="2f11a-115">Another benefit you can derive from containerization is scalability.</span></span> <span data-ttu-id="2f11a-116">Ein schnelles Skalieren ist möglich, indem Sie neue Container für kurzfristige Aufgaben erstellen.</span><span class="sxs-lookup"><span data-stu-id="2f11a-116">You can scale out quickly by creating new containers for short-term tasks.</span></span> <span data-ttu-id="2f11a-117">Aus der Sicht einer Anwendung ähnelt das Instanziieren eines Images (Erstellen eines Containers) dem Instanziieren eines Prozesses wie ein Dienst oder eine Web-App.</span><span class="sxs-lookup"><span data-stu-id="2f11a-117">From an application point of view, instantiating an image (creating a container) is similar to instantiating a process like a service or web app.</span></span> <span data-ttu-id="2f11a-118">Für die Zuverlässigkeit beim Ausführen von mehreren Instanzen desselben Images auf mehreren Hostservern sollte jedoch jeder Container (Instanz des Images) auf einem anderen Hostserver oder virtuellen Computer in verschiedenen Fehlerdomänen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="2f11a-118">For reliability, however, when you run multiple instances of the same image across multiple host servers, you typically want each container (image instance) to run in a different host server or VM in different fault domains.</span></span>
+## <a name="credits"></a><span data-ttu-id="57498-113">Mitwirkende</span><span class="sxs-lookup"><span data-stu-id="57498-113">Credits</span></span>
 
-<span data-ttu-id="2f11a-119">Kurz gesagt bieten Container die Vorteile der Isolation, Portabilität, Agilität, Skalierbarkeit und Steuerung des gesamten Workflows des Lebenszyklus der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="2f11a-119">In short, containers offer the benefits of isolation, portability, agility, scalability, and control across the entire application lifecycle workflow.</span></span> <span data-ttu-id="2f11a-120">Der wichtigste Vorteil ist die Isolation der Umgebung zwischen Entwicklung und Betrieb (Dev and Ops).</span><span class="sxs-lookup"><span data-stu-id="2f11a-120">The most important benefit is the environment isolation provided between Dev and Ops.</span></span>
+<span data-ttu-id="57498-114">Autor:</span><span class="sxs-lookup"><span data-stu-id="57498-114">Author:</span></span>
+
+> <span data-ttu-id="57498-115">**Cesar de la Torre**, leitender PM, .NET-Produktteam, Microsoft Corp.</span><span class="sxs-lookup"><span data-stu-id="57498-115">**Cesar de la Torre**, Sr. PM, .NET product team, Microsoft Corp.</span></span>
+
+<span data-ttu-id="57498-116">Autorenbetreuung:</span><span class="sxs-lookup"><span data-stu-id="57498-116">Acquisitions Editor:</span></span>
+
+> <span data-ttu-id="57498-117">**Janine Patrick**</span><span class="sxs-lookup"><span data-stu-id="57498-117">**Janine Patrick**</span></span>
+
+<span data-ttu-id="57498-118">Entwicklungslektor:</span><span class="sxs-lookup"><span data-stu-id="57498-118">Developmental Editor:</span></span>
+
+> <span data-ttu-id="57498-119">**Bob Russell**, Solutions Professional bei Microsoft</span><span class="sxs-lookup"><span data-stu-id="57498-119">**Bob Russell**, Solutions Professional at Microsoft</span></span>
+>
+> [<span data-ttu-id="57498-120">**Octal Publishing, Inc.** </span><span class="sxs-lookup"><span data-stu-id="57498-120">**Octal Publishing, Inc.**</span></span>](http://www.octalpub.com/)
+
+<span data-ttu-id="57498-121">Redaktionelle Produktion:</span><span class="sxs-lookup"><span data-stu-id="57498-121">Editorial Production:</span></span>
+
+> [<span data-ttu-id="57498-122">Dianne Russell</span><span class="sxs-lookup"><span data-stu-id="57498-122">Dianne Russell</span></span>](http://www.octalpub.com/)
+>
+> <span data-ttu-id="57498-123">**Octal Publishing, Inc.**</span><span class="sxs-lookup"><span data-stu-id="57498-123">**Octal Publishing, Inc.**</span></span>
+
+<span data-ttu-id="57498-124">Redakteur:</span><span class="sxs-lookup"><span data-stu-id="57498-124">Copyeditor:</span></span>
+
+> <span data-ttu-id="57498-125">**Bob Russell**, Solutions Professional bei Microsoft</span><span class="sxs-lookup"><span data-stu-id="57498-125">**Bob Russell**, Solutions Professional at Microsoft</span></span>
+
+<span data-ttu-id="57498-126">Teilnehmer und Prüfer:</span><span class="sxs-lookup"><span data-stu-id="57498-126">Participants and reviewers:</span></span>
+
+> <span data-ttu-id="57498-127">**Nish Anil**, Senior Program Manager, .NET-Team, Microsoft</span><span class="sxs-lookup"><span data-stu-id="57498-127">**Nish Anil**, Sr. Program Manager, .NET team, Microsoft</span></span>
+>
+> <span data-ttu-id="57498-128">**Miguel Veloso**, Software Development Engineer bei Plain Concepts</span><span class="sxs-lookup"><span data-stu-id="57498-128">**Miguel Veloso**, Software Development Engineer at Plain Concepts</span></span>
+>
+> <span data-ttu-id="57498-129">**Sumit Ghosh**, Principal Consultant bei Neudesic</span><span class="sxs-lookup"><span data-stu-id="57498-129">**Sumit Ghosh**, Principal Consultant at Neudesic</span></span>
+
+## <a name="copyright"></a><span data-ttu-id="57498-130">Copyright</span><span class="sxs-lookup"><span data-stu-id="57498-130">Copyright</span></span>
+
+<span data-ttu-id="57498-131">VERÖFFENTLICHT VON</span><span class="sxs-lookup"><span data-stu-id="57498-131">PUBLISHED BY</span></span>
+
+<span data-ttu-id="57498-132">Microsoft Developer Division, .NET- und Visual Studio-Produktteams</span><span class="sxs-lookup"><span data-stu-id="57498-132">Microsoft Developer Division, .NET and Visual Studio product teams</span></span>
+
+<span data-ttu-id="57498-133">Eine Abteilung der Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="57498-133">A division of Microsoft Corporation</span></span>
+
+<span data-ttu-id="57498-134">One Microsoft Way</span><span class="sxs-lookup"><span data-stu-id="57498-134">One Microsoft Way</span></span>
+
+<span data-ttu-id="57498-135">Redmond, Washington 98052-6399</span><span class="sxs-lookup"><span data-stu-id="57498-135">Redmond, Washington 98052-6399</span></span>
+
+<span data-ttu-id="57498-136">Copyright &copy; 2020 Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="57498-136">Copyright &copy; 2020 by Microsoft Corporation</span></span>
+
+<span data-ttu-id="57498-137">Alle Rechte vorbehalten.</span><span class="sxs-lookup"><span data-stu-id="57498-137">All rights reserved.</span></span> <span data-ttu-id="57498-138">Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.</span><span class="sxs-lookup"><span data-stu-id="57498-138">No part of the contents of this book may be reproduced or transmitted in any form or by any means without the written permission of the publisher.</span></span>
+
+<span data-ttu-id="57498-139">Dieses Buch wird unverändert bereitgestellt und drückt die Ansichten und Meinungen des Autors aus.</span><span class="sxs-lookup"><span data-stu-id="57498-139">This book is provided "as-is" and expresses the author's views and opinions.</span></span> <span data-ttu-id="57498-140">Die Ansichten, Meinungen und Informationen, die in diesem Buch zum Ausdruck gebracht werden, einschließlich URLs und anderer Verweise auf Internetwebsites, können ohne vorherige Ankündigung geändert werden.</span><span class="sxs-lookup"><span data-stu-id="57498-140">The views, opinions and information expressed in this book, including URL and other Internet website references, may change without notice.</span></span>
+
+<span data-ttu-id="57498-141">Einige der hier dargestellten Beispiele dienen nur zu Illustrationszwecken und sind fiktiv.</span><span class="sxs-lookup"><span data-stu-id="57498-141">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="57498-142">Keinerlei Zuordnung oder Verbindung zu realen Gegebenheiten ist beabsichtigt oder sollte gefolgert werden.</span><span class="sxs-lookup"><span data-stu-id="57498-142">No real association or connection is intended or should be inferred.</span></span>
+
+<span data-ttu-id="57498-143">Microsoft und die auf der Webseite „Marken“ unter <https://www.microsoft.com> aufgelisteten Marken sind Marken der Microsoft-Unternehmensgruppe.</span><span class="sxs-lookup"><span data-stu-id="57498-143">Microsoft and the trademarks listed at <https://www.microsoft.com> on the "Trademarks" webpage are trademarks of the Microsoft group of companies.</span></span>
+
+<span data-ttu-id="57498-144">Mac und macOS sind Marken von Apple Inc.</span><span class="sxs-lookup"><span data-stu-id="57498-144">Mac and macOS are trademarks of Apple Inc.</span></span>
+
+<span data-ttu-id="57498-145">Das Logo des Docker-Wals ist eine registrierte Marke von Docker, Inc. Verwendet mit Genehmigung.</span><span class="sxs-lookup"><span data-stu-id="57498-145">The Docker whale logo is a registered trademark of Docker, Inc. Used by permission.</span></span>
+
+<span data-ttu-id="57498-146">Alle anderen Marken und Logos sind Eigentum der jeweiligen Besitzer.</span><span class="sxs-lookup"><span data-stu-id="57498-146">All other marks and logos are property of their respective owners.</span></span>
 
 >[!div class="step-by-step"]
->[<span data-ttu-id="2f11a-121">Nächste</span><span class="sxs-lookup"><span data-stu-id="2f11a-121">Next</span></span>](what-is-docker.md)
+>[<span data-ttu-id="57498-147">Nächste</span><span class="sxs-lookup"><span data-stu-id="57498-147">Next</span></span>](introduction-to-containers-and-docker.md)

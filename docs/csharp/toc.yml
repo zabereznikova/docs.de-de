@@ -1829,7 +1829,7 @@
       href: language-reference/compiler-messages/index.md
     - name: C# 6.0 draft specification (C# 6.0 - Entwurfsspezifikationen)
       href: language-reference/specification/
-    - name: "Vorschläge für C#\_7.0–8.0"
+    - name: "Vorschläge für C#\_7.0 bis 9.0"
       href: language-reference/proposals/
 - name: Exemplarische Vorgehensweisen
   href: walkthroughs.md

@@ -290,6 +290,8 @@ items:
         href: diagnostics/index.md
       - name: Verwaltete Debugger
         href: diagnostics/managed-debuggers.md
+      - name: EventCounters
+        href: diagnostics/event-counters.md
       - name: Protokollierung und Ablaufverfolgung
         href: diagnostics/logging-tracing.md
       - name: Globale .NET Core-CLI-Tools
@@ -302,6 +304,8 @@ items:
             href: diagnostics/dotnet-trace.md
       - name: Tutorials zur .NET Core-Diagnose
         items:
+          - name: Abrufen von Leistungsmetriken mit EventCounters
+            href: diagnostics/event-counter-perf.md
           - name: Debuggen eines Speicherverlusts
             href: diagnostics/debug-memory-leak.md
           - name: Debuggen einer hohen CPU-Auslastung
