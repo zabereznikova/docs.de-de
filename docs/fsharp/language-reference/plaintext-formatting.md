@@ -1,13 +1,13 @@
 ---
-title: Formatieren von nur Text
+title: Formatieren von Nur-Text
 description: 'Erfahren Sie, wie Sie printf und andere Klartext-Formatierungen in F #-Anwendungen und-Skripts verwenden.'
 ms.date: 07/22/2020
-ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 90a861736dae69dfbc199a19e24f587c42404737
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854918"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063782"
 ---
 # <a name="plain-text-formatting"></a>Formatieren von nur Text
 
@@ -85,6 +85,7 @@ Formatspezifikationen für `printf` Formate sind Zeichen folgen mit `%` Markieru
 | `%A` | beliebiger Wert  |   Formatiert mit [strukturierter Klartext-Formatierung](plaintext-formatting.md) mit den Standardlayouteinstellungen |
 | `%a` | beliebiger Wert  |   Erfordert zwei Argumente: eine Formatierungsfunktion, die einen Kontext Parameter und den Wert akzeptiert, und den zu Druck Ende Wert. |
 | `%t` | beliebiger Wert  |   Erfordert ein Argument: eine Formatierungsfunktion, die einen Kontext Parameter annimmt, der den entsprechenden Text entweder ausgibt oder zurückgibt. |
+| `%%` | (none)  |   Erfordert keine Argumente und druckt ein einfaches Prozentzeichen:`%` |
 
 Einfache ganzzahlige Typen sind `byte` ( `System.Byte` ), `sbyte` ( `System.SByte` ), `int16` ( `System.Int16` ), `uint16` ( `System.UInt16` ), `int32` ( `System.Int32` ), (), `uint32` `System.UInt32` `int64` ( `System.Int64` ), `uint64` ( `System.UInt64` ), `nativeint` ( `System.IntPtr` ) und `unativeint` ( `System.UIntPtr` ).
 Grundlegende Gleit Komma Typen sind `float` ( `System.Double` ) und `float32` ( `System.Single` ).
@@ -93,7 +94,7 @@ Die optionale Breite ist eine ganze Zahl, die die minimale Breite des Ergebnisse
 
 Gültige Flags sind:
 
-| Flag   | Wirkung        | Bemerkungen                      |
+| Flag   | Auswirkung        | Bemerkungen                      |
 |:-------------------|:---------------|:-----------------------------|
 | `0`  | Fügen Sie Nullen anstelle von Leerzeichen hinzu, um die erforderliche Breite zu bilden. |    |
 | `-` |  Linksbündig das Ergebnis innerhalb der angegebenen Breite begründen |   |
@@ -417,6 +418,6 @@ Diese Attribute werden bei der Klartext-Formatierung in F # ignoriert, aber es k
 ## <a name="see-also"></a>Siehe auch
 
 - [Zeichenfolgen](strings.md)
-- [Best](records.md)
+- [Datensätze](records.md)
 - [Unterscheidungs-Unions](discriminated-unions.md)
 - [F# Interactive](fsharp-interactive-options.md)
