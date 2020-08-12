@@ -4,12 +4,12 @@ description: Erfahren Sie etwas über Apache Spark in Big Data-Szenarien.
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cde66c4084b7c86e1b78d89c2bad94402dbd7d60
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73458178"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555993"
 ---
 # <a name="what-is-apache-spark"></a>Was ist Apache Spark?
 
@@ -82,7 +82,7 @@ Die folgenden Programmiersprachen werden von Apache Spark unterstützt:
 * Java
 * SQL
 * R
-* .NET
+* .NET-Sprachen (C#/F#)
 
 ## <a name="spark-apis"></a>Spark-APIs
 

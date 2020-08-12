@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303477"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916975"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Migration von Newtonsoft.Json zu System.Text.Json
 
@@ -91,7 +91,7 @@ Dies ist keine vollständige Liste der `Newtonsoft.Json`-Funktionen. Die Liste e
 
 Während der Deserialisierung führt `Newtonsoft.Json` standardmäßig einen Abgleich der Eigenschaftsnamen ohne Berücksichtigung von Groß-/Kleinschreibung durch. Das Standardverhalten von <xref:System.Text.Json> berücksichtigt die Groß-/Kleinschreibung, was eine bessere Leistung liefert, weil ein exakter Abgleich erfolgt. Informationen, wie Sie einen Abgleich ohne Berücksichtigung von Groß-/Kleinschreibung durchführen, finden Sie unter [Eigenschaftenabgleich ohne Berücksichtigung von Groß-/Kleinschreibung](system-text-json-how-to.md#case-insensitive-property-matching).
 
-Wenn Sie `System.Text.Json` indirekt durch Verwendung von ASP.NET Core verwenden, müssen Sie nichts tun, um ein Verhalten wie `Newtonsoft.Json` zu erhalten. ASP.NET Core gibt die Einstellungen für die Verwendung von [Eigenschaftsnamen mit Camel-Case-Schreibweise](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) an sowie für den Abgleich ohne Berücksichtigung von Groß-/Kleinschreibung, wenn `System.Text.Json` verwendet wird.
+Wenn Sie `System.Text.Json` indirekt durch Verwendung von ASP.NET Core verwenden, müssen Sie nichts tun, um ein Verhalten wie `Newtonsoft.Json` zu erhalten. ASP.NET Core gibt die Einstellungen für die Verwendung von [Eigenschaftsnamen mit Camel-Case-Schreibweise](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) an sowie für den Abgleich ohne Berücksichtigung von Groß-/Kleinschreibung, wenn `System.Text.Json` verwendet wird. Die Standardwerte werden in der [JsonOptions-Klasse](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28) festgelegt.
 
 ### <a name="minimal-character-escaping"></a>Minimales Escapen von Zeichen
 
@@ -128,6 +128,8 @@ Weitere Informationen zur Registrierung benutzerdefinierter Konverter finden Sie
 ### <a name="maximum-depth"></a>Maximale Tiefe
 
 `Newtonsoft.Json` besitzt kein standardmäßiges Limit für die maximale Tiefe. Für <xref:System.Text.Json> gibt es ein Standardlimit von 64, das sich durch Festlegen von <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType> konfigurieren lässt.
+
+Wenn Sie `System.Text.Json` indirekt durch ASP.NET Core verwenden, beträgt die Obergrenze für die maximale Tiefe standardmäßig 32. Der Standardwert ist der gleiche wie bei Modellbindung und wird in der [JsonOptions-Klasse](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L17-L20) festgelegt.
 
 ### <a name="json-strings-property-names-and-string-values"></a>JSON-Zeichenfolgen (Eigenschaftsnamen und Zeichenfolgenwerte)
 

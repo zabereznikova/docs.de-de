@@ -3,18 +3,18 @@ title: Grundlegendes zur Authentifizierung in den Azure-Bibliotheken für .NET
 description: Enthält eine Beschreibung der unterschiedlichen Authentifizierungsmöglichkeiten mit dem Azure SDK für .NET.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: 727842b34faa37558220a3035ac5228fae196201
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: e588499a789fc5e7da7eb51009f97090ca75e562
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301618"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916602"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Authentifizieren mit dem Azure SDK für .NET
 
 ## <a name="recommended-azureidentity"></a>Empfohlen: Azure.Identity
 
-Für die neuesten Pakete im Azure SDK für .NET wird für die Authentifizierung ein gemeinsames Authentifizierungspaket verwendet: `Azure.Identity`. Wir empfehlen Ihnen, `Azure.Identity` anstelle der anderen Authentifizierungsmechanismen zu nutzen, die weiter unten in diesem Dokument beschrieben sind. Pakete, die die von `Azure.Identity` bereitgestellten Anmeldeinformationen unterstützen, verfügen über Paketbezeichner, die mit *Azure.* beginnen. [Weitere Informationen finden Sie unter den neuesten Releases im Azure SDK für .NET](https://azure.github.io/azure-sdk/releases/latest/index.html#net).
+Für die neuesten Pakete im Azure SDK für .NET wird für die Authentifizierung ein gemeinsames Authentifizierungspaket verwendet: `Azure.Identity`. Wir empfehlen Ihnen, `Azure.Identity` anstelle der anderen Authentifizierungsmechanismen zu nutzen, die weiter unten in diesem Dokument beschrieben sind. Pakete, die die von `Azure.Identity` bereitgestellten Anmeldeinformationen unterstützen, bauen auf `Azure.Core` auf und verfügen über Paketbezeichner, die mit *Azure.* beginnen. Eine Liste der Pakete, die `Azure.Core` verwenden, finden Sie in der [Paketliste](packages.md).
 
 Eine vollständige Anleitung zur Nutzung von `Azure.Identity` in Ihrem Projekt finden Sie in der Dokumentation zum [Azure Identity-Client für .NET](/dotnet/api/overview/azure/identity-readme).
 

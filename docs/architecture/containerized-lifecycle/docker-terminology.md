@@ -1,13 +1,13 @@
 ---
 title: Docker-Terminologie
 description: Lernen Sie etwas von der grundlegenden Terminologie kennen, die beim Arbeiten mit Docker alltäglich ist.
-ms.date: 04/16/2020
-ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/06/2020
+ms.openlocfilehash: b47639a2995c3a0a30ea7111c16bbea21f1048ba
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507324"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915189"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -29,7 +29,7 @@ docker build
 
 **Tag:** Eine Markierung oder eine Bezeichnung, die Sie auf Images anwenden können, damit verschiedene Images oder Versionen desselben Images (abhängig von der Versionsnummer oder der Zielumgebung) identifiziert werden können.
 
-**Mehrstufige Builds:** Ein Feature seit Docker 17.05 oder höher, das dabei hilft, die Größe der endgültigen Images zu verringern. Kurz gesagt können Sie mit einem mehrstufigen Build beispielsweise ein großes Basisimage verwenden, das das SDK enthält, um die Anwendung zu kompilieren und zu veröffentlichen, und den Veröffentlichungsordner anschließend mit einem kleinen Basisimage verwenden, das nur als Runtime dient, um ein viel kleineres endgültiges Image zu erzeugen.
+**Mehrstufige Builds:** Ein Feature seit Docker 17.05 oder höher, das dabei hilft, die Größe der endgültigen Images zu verringern. Beispielsweise kann ein großes Basisimage, das das SDK enthält, zum Kompilieren und Veröffentlichen und dann ein kleines Basisimage, das nur zur Laufzeit zur Verfügung steht, zum Hosten der Anwendung verwendet werden.
 
 **Repositoryname (Repo):** Eine Auflistung von zugehörigen Docker-Images mit dem Tag, das die Version des Images angibt. Einige Repositorys enthalten mehrere Varianten eines bestimmtes Images, z.B. ein Image mit SDKs (schwerer), ein Image nur mit Runtimes (leichter), usw. Diese Varianten können mit Tags markiert werden. Ein Repository kann Plattformvarianten enthalten, wie z.B. ein Linux-Image und ein Windows-Image.
 
@@ -41,7 +41,7 @@ docker build
 
 **Azure Container Registry:** Eine öffentliche Ressource zur Arbeit mit Docker-Images und deren Komponenten in Azure. Dies stellt eine Registrierung in der Nähe Ihrer Bereitstellungen in Azure zur Verfügung. Sie erhalten somit Kontrolle über den Zugriff und können Ihre Azure Active Directory-Gruppen und -Berechtigungen verwenden.
 
-**Docker Trusted Registry (DTR):** Ein Docker-Registrierungsdienst (von Docker), der lokal installiert werden kann, sodass er innerhalb des Datencenters und Netzwerks des Unternehmens aktiv ist. Er ist praktisch für private Images, die innerhalb des Unternehmens verwaltet werden sollen. Docker Trusted Registry ist als Bestandteil im Produkt Docker Datacenter enthalten. Weitere Informationen finden Sie unter [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Docker Trusted Registry (DTR):** Ein Docker-Registrierungsdienst (von Docker), der lokal installiert werden kann, sodass er innerhalb des Datencenters und Netzwerks des Unternehmens aktiv ist. Er ist praktisch für private Images, die innerhalb des Unternehmens verwaltet werden sollen. Docker Trusted Registry ist als Bestandteil im Produkt Docker Datacenter enthalten. Weitere Informationen finden Sie unter [Docker Trusted Registry (DTR)](https://www.docker.com/sites/default/files/Docker%20Trusted%20Registry.pdf).
 
 **Docker Community Edition (CE):** Entwicklungstools für Windows und macOS zum lokalen Erstellen, Ausführen und Testen von Containern. Docker CE für Windows bietet Entwicklungsumgebungen für Linux- und Windows-Container. Der Linux-Docker-Host auf Windows basiert auf einer [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization)-VM. Der Host für die Windows-Container basiert direkt auf Windows. Docker CE für Mac basiert auf dem Apple Hypervisor-Framework und dem [Xhyve-Hypervisor](https://github.com/mist64/xhyve), der eine Linux-Docker-Host-VM auf Mac OS X bereitstellt. Docker CE für Windows und für Mac ersetzt Docker Toolbox, das auf Oracle VirtualBox basiert.
 

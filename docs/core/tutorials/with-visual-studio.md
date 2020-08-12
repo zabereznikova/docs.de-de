@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
+ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811652"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795384"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio
 
@@ -79,7 +79,7 @@ Wenn die gewünschte Sprache nicht angezeigt wird, ändern Sie die Sprachauswahl
 
 ## <a name="run-the-app"></a>Ausführen der App
 
-1. Drücken Sie <kbd>UMSCHALT</kbd>+<kbd>F5</kbd>, um das Programm ohne Debuggen auszuführen.
+1. Drücken Sie <kbd>STRG</kbd>+<kbd>F5</kbd>, um das Programm ohne Debuggen auszuführen.
 
    Ein Konsolenfenster wird geöffnet, das den Text „Hello World!“ auf dem Bildschirm sowie einige Visual Studio-Debuginformationen ausgibt.
 
@@ -102,7 +102,7 @@ Erweitern Sie die Anwendung, um den Benutzer aufzufordern, seinen Namen einzugeb
 
    Mit dem Dollarzeichen (`$`) vor einer Zeichenfolge können Sie Ausdrücke wie Variablennamen in geschweifte Klammern in der Zeichenfolge einschließen. Der Ausdruckswert wird anstelle des Ausdrucks in die Zeichenfolge eingefügt. Diese Syntax wird als [interpolierte Zeichenfolgen](../../csharp/language-reference/tokens/interpolated.md) bezeichnet.
 
-1. Drücken Sie <kbd>UMSCHALT</kbd>+<kbd>F5</kbd>, um das Programm ohne Debuggen auszuführen.
+1. Drücken Sie <kbd>STRG</kbd>+<kbd>F5</kbd>, um das Programm ohne Debuggen auszuführen.
 
 1. Reagieren Sie auf die Eingabeaufforderung, indem Sie einen Namen eingeben und die <kbd>EINGABETASTE</kbd> drücken.
 

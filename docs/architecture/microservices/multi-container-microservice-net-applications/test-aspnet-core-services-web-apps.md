@@ -1,13 +1,13 @@
 ---
 title: Testen von ASP.NET Core-Diensten und -Webanwendungen
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Architektur zum Testen von ASP.NET Core-Diensten und -Webanwendungen in Containern
-ms.date: 01/30/2020
-ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/07/2020
+ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988231"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024601"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -198,11 +198,11 @@ Wie Sie sehen können, starten diese „docker-compose“-Dateien nur die Micros
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Infodatei für Tests** im GitHub-Repository „eShopOnContainers“ \
-    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
+- **Komponenten- und Integrationstests** für eShopOnContainers\
+    <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Unit-and-integration-testing>
 
-- **Infodatei für Auslastungstests** im GitHub-Repository „eShopOnContainers“ \
-    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
+- **Auslastungstests** für eShopOnContainers\
+    <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Load-testing>
 
 > [!div class="step-by-step"]
 > [Zurück](subscribe-events.md)

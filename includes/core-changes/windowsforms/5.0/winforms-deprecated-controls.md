@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: c9720f51e40ada4cd2cf6997ba7006a232893553
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d3bfeda8309af83d8e4199999ed91263a17caeea
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702457"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556183"
 ---
 ### <a name="removed-status-bar-controls"></a>Statusleisten-Steuerelement wurde entfernt
 
-Ab .NET Core 5.0 Preview 1 sind einige Windows Forms-Steuerelemente nicht mehr verfügbar.
+Ab .NET 5.0 sind einige Windows Forms-Steuerelemente nicht mehr verfügbar.
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-Ab .NET Core 5.0 Preview 1 sind einige Windows Forms-Steuerelemente für Statusleistenfunktionen nicht mehr verfügbar. Ersatzsteuerelemente, die ein besseres Design und eine umfassendere Unterstützung bieten, wurden in .NET Framework 2.0 eingeführt. Die veralteten Steuerelemente wurden zwar bereits aus den Designer-Toolboxen entfernt, konnten aber weiterhin verwendet werden. Nun wurden sie vollständig entfernt.
+Ab .NET 5.0 sind einige Windows Forms-Steuerelemente für Statusleistenfunktionen nicht mehr verfügbar. Ersatzsteuerelemente, die ein besseres Design und eine umfassendere Unterstützung bieten, wurden in .NET Framework 2.0 eingeführt. Die veralteten Steuerelemente wurden zwar bereits aus den Designer-Toolboxen entfernt, konnten aber weiterhin verwendet werden. Nun wurden sie vollständig entfernt.
 
 Die folgenden Typen stehen nicht mehr länger zur Verfügung:
 

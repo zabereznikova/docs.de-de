@@ -1,13 +1,13 @@
 ---
 title: Entwerfen von Docker-Anwendungen
 description: Referenz zu einem tiefgreifenden Leitfaden zur Architektur von Microservices, da dieses Thema in diesem Leitfaden nicht ausführlich behandelt wird.
-ms.date: 02/15/2019
-ms.openlocfilehash: b8a08658ec6c3df3e1aed596a0240223768dd647
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 08/06/2020
+ms.openlocfilehash: b63d4344abb358a393587bdacf91f6091b531af0
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738465"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915976"
 ---
 # <a name="design-docker-applications"></a>Entwerfen von Docker-Anwendungen
 
@@ -15,7 +15,7 @@ In Kapitel 1 wurden die grundlegenden Konzepte zu Containern und Docker vorgeste
 
 **Weitere Informationen** Weitere, ausführliche Informationen zu Unternehmensanwendungen und Microservicearchitektur finden Sie in dem Leitfaden [.NET-Microservices:  .NET-Microservices-Architektur für .NET-Containeranwendungen](../../microservices/index.md) (NET-Microservices: Architektur für containerbasierte .NET-Anwendungen), den Sie auch von <https://aka.ms/MicroservicesEbook> herunterladen können.
 
-Bevor wir uns allerdings mit dem Anwendungslebenszyklus und DevOps befassen, müssen wir wissen, wie Sie Ihre Anwendung entwerfen und konstruieren möchten und welche Entwurfsoptionen sich Ihnen bieten.
+Bevor Sie sich jedoch mit dem Anwendungslebenszyklus und DevOps befassen, müssen Sie wissen, wie Sie Ihre Anwendung entwerfen und erstellen möchten und welche Entwurfsoptionen verfügbar sind.
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)

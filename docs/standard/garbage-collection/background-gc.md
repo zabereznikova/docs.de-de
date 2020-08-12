@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: bf88c14b2aeed94a548b6116749fa8669576afe1
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990238"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916992"
 ---
 # <a name="background-garbage-collection"></a>Garbage Collection im Hintergrund
 
 Bei der Garbage Collection (GC) im Hintergrund werden kurzlebige Generationen (0 und 1) bei Bedarf bereinigt, während die Garbage Collection von Generation 2 ausgeführt wird. Die Garbage Collection wird für einen oder mehrere dedizierte Threads ausgeführt – je nachdem ob sie im Hintergrund oder für Server ausgeführt wird – und gilt nur für Generation 2.
 
-Die Garbage Collection im Hintergrund ist standardmäßig aktiviert. Sie kann mit der Konfigurationseinstellung [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) in .NET Framework-Apps oder der Einstellung [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) in .NET Core-Apps aktiviert oder deaktiviert werden.
+Die Garbage Collection im Hintergrund ist standardmäßig aktiviert. Sie kann mit der Konfigurationseinstellung [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) in .NET Framework-Apps oder der Einstellung [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#background-gc) in .NET Core- oder .NET 5-Apps (oder höher) aktiviert oder deaktiviert werden.
 
 > [!NOTE]
 > Ab .NET Framework 4 ersetzt die Garbage Collection im Hintergrund die [gleichzeitige Garbage Collection](#concurrent-garbage-collection). In .NET Framework 4 wird sie nur für die Garbage Collection für *Arbeitsstationen* unterstützt. Ab .NET Framework 4.5 ist die Garbage Collection im Hintergrund für *Arbeitsstationen* und *Server* verfügbar.

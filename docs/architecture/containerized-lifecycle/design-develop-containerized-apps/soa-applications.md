@@ -1,19 +1,19 @@
 ---
 title: SOA-Anwendungen
 description: Beachten Sie, dass Container auch eine nützliche Bereitstellungsoption für SOA-Anwendungen sein können.
-ms.date: 02/15/2019
-ms.openlocfilehash: f8619cb50a7d90b911db9ff2c8ef37c3c5fde210
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 08/06/2020
+ms.openlocfilehash: 5cc616eaf3be31ae704320df6ec54deed9529989
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738384"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915260"
 ---
 # <a name="service-oriented-applications"></a>Dienstorientierte Anwendungen
 
 Der Begriff dienstorientierte Architektur (Service-Oriented Architecture, SOA) hat eine inflationäre Verwendung erfahren und daher verschiedene Bedeutungen entwickelt. Der gemeinsame Nenner der Bedeutung von „serviceorientierter Architektur“ ist jedoch, dass die Architektur Ihrer Anwendung strukturiert wird, indem sie in mehrere Dienste zerlegt wird (meistens HTTP-Dienste), die als unterschiedliche Typen klassifiziert werden können, z.B. als Subsysteme oder in anderen Fällen als Schichten.
 
-Heutzutage können Sie diese Dienste als Docker-Container bereitstellen. Dadurch werden Bereitstellungsprobleme gelöst, da alle Abhängigkeiten im Containerimage enthalten sind. Beim horizontalen Skalieren von SOAs können Sie sich jedoch Herausforderungen gegenüber sehen, wenn Sie die Bereitstellung auf der Grundlage einzelner Instanzen vornehmen. Diese Herausforderung kann mithilfe von Docker-Clustersoftware auf einem Orchestrator gemeistert werden. Wir betrachten Orchestratoren im nächsten Abschnitt ausführlicher, in dem wir Ansätze für Microservices untersuchen.
+Heutzutage können Sie diese Dienste als Docker-Container bereitstellen. Dadurch werden Bereitstellungsprobleme gelöst, da alle Abhängigkeiten im Containerimage enthalten sind. Beim horizontalen Skalieren von SOAs können Sie sich jedoch Herausforderungen gegenüber sehen, wenn Sie die Bereitstellung auf der Grundlage einzelner Instanzen vornehmen. Diese Herausforderung kann mithilfe von Docker-Clustersoftware auf einem Orchestrator gemeistert werden. Sie beschäftigen sich im nächsten Abschnitt ausführlicher mit Orchestratoren, in dem Sie Ansätze für Microservices untersuchen.
 
 Für herkömmliche serviceorientierte Architekturen und erweiterte Microservicesarchitekturen sind Docker-Container nützlich, jedoch nicht erforderlich.
 

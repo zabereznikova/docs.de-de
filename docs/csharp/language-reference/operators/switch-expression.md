@@ -2,12 +2,12 @@
 title: switch-Ausdruck – C#-Referenz
 description: Erfahren Sie, wie Sie den C#-Ausdruck „switch“ für einen Musterabgleich und die Selbstprüfung von Daten verwenden.
 ms.date: 03/19/2020
-ms.openlocfilehash: f53cbe873c841271f64496e4e5ff1f11750c7b8a
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 2249afc1ff1cc81e9ad423d910ebb95df8c787d4
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140670"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916662"
 ---
 # <a name="switch-expression-c-reference"></a>switch-Ausdruck (C#-Referenz)
 
@@ -17,7 +17,7 @@ Im vorliegenden Artikel wird der in C# 8.0 eingeführte `switch`-Ausdruck vorge
 
 Der `switch`-Ausdruck stellt eine ähnliche Semantik wie `switch` im Kontext eines Ausdrucks bereit. Er bietet eine kompakte Syntax, wenn die switch-Verzweigungsarme einen Wert generieren. Das folgende Beispiel zeigt die Struktur eines switch-Ausdrucks. Die Werte aus einem `enum` zur Darstellung visueller Richtungen in einer Onlinekarte entsprechen der jeweiligen Himmelsrichtung:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetBasicStructure":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetBasicStructure":::
 
 Das vorstehende Beispiel zeigt die grundlegenden Elemente eines switch-Ausdrucks:
 
@@ -30,21 +30,21 @@ Die *switch-Ausdrucksverzweigungsarme* werden in der Textreihenfolge ausgewertet
 
 ## <a name="patterns-and-case-guards"></a>Muster und case-Wächter
 
-Viele Muster werden in Verzweigungsarmen von switch-Ausdrücken unterstützt. Im vorangegangenen Beispiel wurde ein *Wertmuster* verwendet. Ein *Wertmuster* vergleicht den Bereichsausdruck mit einem Wert. Dieser Wert muss eine Kompilierzeitkonstante sein. Ein *Typmuster* vergleicht den Bereichsausdruck mit einem bekannten Typ. Das folgende Beispiel ruft das dritte Element aus einer Sequenz ab. Basierend auf dem Typ der Sequenz werden unterschiedliche Methoden verwendet:
+Viele Muster werden in Verzweigungsarmen von switch-Ausdrücken unterstützt. Das Beispiel oben verwendet ein *Konstantenmuster*. Ein *Konstantenmuster* vergleicht den Bereichsausdruck mit einem Wert. Dieser Wert muss eine Kompilierzeitkonstante sein. Ein *Typmuster* vergleicht den Bereichsausdruck mit einem bekannten Typ. Das folgende Beispiel ruft das dritte Element aus einer Sequenz ab. Basierend auf dem Typ der Sequenz werden unterschiedliche Methoden verwendet:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetTypePattern":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetTypePattern":::
 
 Muster können rekursiv sein. Hierbei testet ein Muster einen Typ, und wenn dieser Typ übereinstimmt, gleicht das Muster einen oder mehrere Eigenschaftswerte des Bereichsausdrucks ab. Sie können rekursive Muster verwenden, um das vorstehende Beispiel zu erweitern. Sie fügen switch-Ausdrucksverzweigungsarme für Arrays hinzu, die weniger als 3 Elemente umfassen. Rekursive Muster werden im folgenden Beispiel gezeigt:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetRecursivePattern":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetRecursivePattern":::
 
 Rekursive Muster können Eigenschaften des Bereichsausdrucks untersuchen, aber keinen arbiträren Code ausführen. Sie können den in einer `when`-Klausel angegebenen *case-Wächter* verwenden, um ähnliche Überprüfungen für andere Sequenztypen bereitzustellen:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetGuardCase":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetGuardCase":::
 
 Schließlich können Sie das `_`-Muster und das `null`-Muster hinzufügen, um Argumente abzufangen, die nicht über einen anderen switch-Ausdrucksverzweigungsarm verarbeitet werden. So wird der switch-Ausdruck *umfassend ausgeschöpft*, d. h. es werden alle möglichen Werte des Bereichsausdrucks behandelt. Das folgende Beispiel fügt diese Ausdrucksverzweigungsarme hinzu:
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetExhaustive":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetExhaustive":::
 
 Das vorstehende Beispiel fügt ein `null`-Muster hinzu und ändert das `IEnumerable<T>`-Muster in ein `_`-Muster. Das `null`-Muster bietet eine NULL-Überprüfung als switch-Ausdrucksverzweigungsarm. Der Ausdruck für diesen Verzweigungsarm löst eine <xref:System.ArgumentNullException> aus. Das `_`-Muster gleicht alle Eingaben ab, die nicht durch vorherige Verzweigungsarme abgeglichen wurden. Es muss nach der `null`-Überprüfung eingefügt werden, weil es ansonsten die `null`-Eingaben abgleichen würde.
 
@@ -53,5 +53,5 @@ Weitere Informationen finden Sie im C#-Sprachspezifikationsvorschlag für [rekur
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Operatoren](index.md)
+- [C#-Operatoren und -Ausdrücke](index.md)
 - [Mustervergleich](../../pattern-matching.md)

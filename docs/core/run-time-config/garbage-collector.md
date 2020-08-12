@@ -3,12 +3,12 @@ title: Garbage-Collector-Konfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, um zu konfigurieren, wie der Garbage Collector Arbeitsspeicher für .NET Core-Apps verwaltet.
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 91d155b638c7e69b3d2c0216266a7c0c0410db4c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441405"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915989"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Laufzeitkonfigurationsoptionen für die Garbage Collection
 
@@ -30,7 +30,10 @@ Die Untervarianten der Garbage Collection sind Hintergrund-GC und nicht gleichze
 
 Verwenden Sie die folgenden Einstellungen, um Varianten der Garbage Collection auszuwählen:
 
-### <a name="systemgcservercomplus_gcserver"></a>System.GC.Server/COMPlus_gcServer
+- [Garbage Collection für Arbeitsstationen und Server im Vergleich](#workstation-vs-server)
+- [Garbage Collection im Hintergrund](#background-gc)
+
+### <a name="workstation-vs-server"></a>Arbeitsstationen und Server im Vergleich
 
 - Konfiguriert, ob die Anwendung die Arbeitsstation-GC oder die Server-GC verwendet
 - Standard: Arbeitsstation-Garbage Collection. Dies entspricht der Einstellung des Werts auf `false`.
@@ -42,7 +45,7 @@ Verwenden Sie die folgenden Einstellungen, um Varianten der Garbage Collection a
 | **Umgebungsvariable** | `COMPlus_gcServer` | `0` – Arbeitsstation<br/>`1` – Server | .NET Core 1.0 |
 | **app.config für .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` – Arbeitsstation<br/>`true` – Server |  |
 
-### <a name="examples"></a>Beispiele
+#### <a name="examples"></a>Beispiele
 
 *runtimeconfig.json*-Datei:
 
@@ -68,7 +71,7 @@ Projektdatei:
 </Project>
 ```
 
-### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
+### <a name="background-gc"></a>Garbage Collection im Hintergrund
 
 - Konfiguriert, ob die (gleichzeitige) Hintergrund-GC aktiviert ist
 - Standard: Garbage Collection im Hintergrund verwenden. Dies entspricht der Einstellung des Werts auf `true`.
@@ -81,7 +84,7 @@ Projektdatei:
 | **Umgebungsvariable** | `COMPlus_gcConcurrent` | `1` – Hintergrund-GC<br/>`0` – nicht gleichzeitige GC | .NET Core 1.0 |
 | **app.config für .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` – Hintergrund-GC<br/>`false` – nicht gleichzeitige GC |  |
 
-### <a name="examples"></a>Beispiele
+#### <a name="examples"></a>Beispiele
 
 *runtimeconfig.json*-Datei:
 
@@ -109,16 +112,28 @@ Projektdatei:
 
 ## <a name="manage-resource-usage"></a>Verwalten des Ressourceneinsatzes
 
-Verwenden Sie die in diesem Abschnitt beschriebenen Einstellungen, um die Speicher- und Prozessorauslastung des Garbage Collectors zu verwalten.
+Verwenden Sie die folgenden Einstellungen, um die Speicher- und Prozessorauslastung des Garbage Collectors zu verwalten:
+
+- [Zuordnen](#affinitize)
+- [Maske zuordnen](#affinitize-mask)
+- [Bereiche zuordnen](#affinitize-ranges)
+- [CPU-Gruppen](#cpu-groups)
+- [Heapanzahl](#heap-count)
+- [Heapgrenzwert](#heap-limit)
+- [Heapgrenzwert (Prozent)](#heap-limit-percent)
+- [Hohe Speicherauslastung (Prozent)](#high-memory-percent)
+- [Grenzwerte pro Objektheap](#per-object-heap-limits)
+- [Grenzwerte pro Objektheap (Prozent)](#per-object-heap-limit-percents)
+- [VM beibehalten](#retain-vm)
 
 Weitere Informationen zu einigen dieser Einstellungen finden Sie im Blogeintrag [Mittelweg zwischen Arbeitsstation- und Server-GC](https://devblogs.microsoft.com/dotnet/middle-ground-between-server-and-workstation-gc/).
 
-### <a name="systemgcheapcountcomplus_gcheapcount"></a>System.GC.HeapCount/COMPlus_GCHeapCount
+### <a name="heap-count"></a>Heapanzahl
 
 - Schränkt die Anzahl von Heaps ein, die vom Garbage Collector erstellt werden
 - Gilt nur für die Garbage Collection des Servers.
-- Wenn die [GC-Prozessoraffinität](#systemgcnoaffinitizecomplus_gcnoaffinitize) aktiviert ist (Standardeinstellung), ordnet die Einstellung für die Heapanzahl den ersten `n` Prozessoren `n` GC-Heaps/-Threads zu. (Verwenden Sie die Einstellungen [AffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) oder [AffinitizeRanges](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges), um genau anzugeben, welche Prozessoren zugeordnet werden sollen.)
-- Wenn die [GC-Prozessoraffinität](#systemgcnoaffinitizecomplus_gcnoaffinitize) deaktiviert ist, wird mit dieser Einstellung die Anzahl der GC-Heaps eingeschränkt.
+- Wenn die [GC-Prozessoraffinität](#affinitize) aktiviert ist (Standardeinstellung), ordnet die Einstellung für die Heapanzahl den ersten `n` Prozessoren `n` GC-Heaps/-Threads zu. (Verwenden Sie die Einstellungen [AffinitizeMask](#affinitize-mask) oder [AffinitizeRanges](#affinitize-ranges), um genau anzugeben, welche Prozessoren zugeordnet werden sollen.)
+- Wenn die [GC-Prozessoraffinität](#affinitize) deaktiviert ist, wird mit dieser Einstellung die Anzahl der GC-Heaps eingeschränkt.
 - Weitere Informationen finden Sie unter [Hinweise zu GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks).
 
 | | Einstellungsname | Werte | Eingeführt in Version |
@@ -142,10 +157,10 @@ Beispiel:
 > [!TIP]
 > Wenn Sie die Option in *runtimeconfig.json* festlegen, geben Sie einen Dezimalwert an. Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Für eine Einschränkung der Heapanzahl auf 16 wären die Werte beispielsweise 16 für die JSON-Datei und 0x10 oder 10 für die Umgebungsvariable.
 
-### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
+### <a name="affinitize-mask"></a>Maske zuordnen
 
 - Gibt die genauen Prozessoren an, die Garbage-Collector-Threads verwenden sollen
-- Wenn die [GC-Prozessoraffinität](#systemgcnoaffinitizecomplus_gcnoaffinitize) deaktiviert ist, wird diese Einstellung ignoriert.
+- Wenn die [GC-Prozessoraffinität](#affinitize) deaktiviert ist, wird diese Einstellung ignoriert.
 - Gilt nur für die Garbage Collection des Servers.
 - Der Wert ist eine Bitmaske, die die für den Prozess verfügbaren Prozessoren definiert. Beispielsweise ist ein Dezimalwert von 1023 (oder ein Hexadezimalwert von 0x3FF oder 3FF bei Verwendung der Umgebungsvariablen) in Binärschreibweise 0011 1111 1111. Dies gibt an, dass die ersten zehn Prozessoren verwendet werden sollen. Geben Sie einen Dezimalwert von 1047552 (oder einen Hexadezimalwert von 0xFFC00 oder FFC00) an, der einem Binärwert von 1111 1111 1100 0000 0000 entspricht, um die nächsten zehn Prozessoren anzugeben, d. h. die Prozessoren 10 bis 19.
 
@@ -167,12 +182,12 @@ Beispiel:
 }
 ```
 
-### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
+### <a name="affinitize-ranges"></a>Bereiche zuordnen
 
 - Gibt die Liste der Prozessoren an, die für Garbage-Collector-Threads verwendet werden sollen
-- Diese Einstellung ähnelt [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask), abgesehen davon, dass Sie mehr als 64 Prozessoren angeben können.
+- Diese Einstellung ähnelt [System.GC.HeapAffinitizeMask](#affinitize-mask), abgesehen davon, dass Sie mehr als 64 Prozessoren angeben können.
 - Stellen Sie für Windows-Betriebssysteme der Prozessornummer oder dem Prozessorbereich die entsprechende [CPU-Gruppe](/windows/win32/procthread/processor-groups) voran, z. B. „0:1-10,0:12,1:50-52,1:70“.
-- Wenn die [GC-Prozessoraffinität](#systemgcnoaffinitizecomplus_gcnoaffinitize) deaktiviert ist, wird diese Einstellung ignoriert.
+- Wenn die [GC-Prozessoraffinität](#affinitize) deaktiviert ist, wird diese Einstellung ignoriert.
 - Gilt nur für die Garbage Collection des Servers.
 - Weitere Informationen finden Sie unter [Optimieren der CPU-Konfiguration für GC auf Computern mit mehr als 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) im Blog von Maoni Stephens.
 
@@ -193,7 +208,7 @@ Beispiel:
 }
 ```
 
-### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
+### <a name="cpu-groups"></a>CPU-Gruppen
 
 - Konfiguriert, ob der Garbage Collector [CPU-Gruppen](/windows/win32/procthread/processor-groups) verwendet
 
@@ -205,14 +220,14 @@ Beispiel:
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
-| **runtimeconfig.json** | Nicht zutreffend | Nicht zutreffend | Nicht zutreffend |
+| **runtimeconfig.json** | `System.GC.CpuGroup` | `0` – deaktiviert<br/>`1` – aktiviert | .NET 5.0 |
 | **Umgebungsvariable** | `COMPlus_GCCpuGroup` | `0` – deaktiviert<br/>`1` – aktiviert | .NET Core 1.0 |
 | **app.config für .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false` – deaktiviert<br/>`true` – aktiviert |  |
 
 > [!NOTE]
 > Aktivieren Sie die Option [Thread_UseAllCpuGroups-Element](../../framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md), um die Common Language Runtime (CLR) so zu konfigurieren, dass auch Threads aus dem Threadpool in allen CPU-Gruppen verteilt werden. Für .NET Core-Apps können Sie diese Option aktivieren, indem Sie den Wert der Umgebungsvariablen `COMPlus_Thread_UseAllCpuGroups` auf `1` setzen.
 
-### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>System.GC.NoAffinitize/COMPlus_GCNoAffinitize
+### <a name="affinitize"></a>Zuordnen
 
 - Gibt an, ob Garbage-Collection-Threads Prozessoren *zugeordnet* werden sollen. Einen GC-Thread zuzuordnen, bedeutet, dass dieser nur auf der jeweiligen CPU ausgeführt werden kann. Für jeden GC-Thread wird ein Heap erstellt.
 - Gilt nur für die Garbage Collection des Servers.
@@ -236,7 +251,7 @@ Beispiel:
 }
 ```
 
-### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
+### <a name="heap-limit"></a>Heapgrenzwert
 
 - Gibt die maximale Commitgröße in Bytes für den GC-Heap und die GC-Buchhaltung an
 - Diese Einstellung gilt nur für 64-Bit-Computer.
@@ -244,7 +259,7 @@ Beispiel:
 - Der Standardwert, der nur in bestimmten Fällen gilt, ist der größere Wert von 20 MB oder 75 % der Speichergrenze für den Container. Der Standardwert wird in folgenden Fällen angewendet:
 
   - Der Prozess wird in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben ist.
-  - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) ist nicht festgelegt.
+  - [System.GC.HeapHardLimitPercent](#heap-limit-percent) ist nicht festgelegt.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
@@ -266,17 +281,17 @@ Beispiel:
 > [!TIP]
 > Wenn Sie die Option in *runtimeconfig.json* festlegen, geben Sie einen Dezimalwert an. Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Wenn Sie beispielsweise eine feste Heapgrenze von 200 MiB festlegen, würden die Werte für die JSON-Datei 209715200 und für die Umgebungsvariable 0xc800000 oder C800000 betragen.
 
-### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
+### <a name="heap-limit-percent"></a>Heapgrenzwert (Prozent)
 
 - Gibt den zulässigen GC-Heapverbrauch in Prozent des gesamten physischen Speichers an.
-- Wenn außerdem [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) festgelegt ist, wird diese Einstellung ignoriert.
+- Wenn außerdem [System.GC.HeapHardLimit](#heap-limit) festgelegt ist, wird diese Einstellung ignoriert.
 - Diese Einstellung gilt nur für 64-Bit-Computer.
 - Wenn der Prozess in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben wurde, wird der Prozentsatz als Prozentsatz dieses Arbeitsspeicherlimits berechnet.
 - Diese Einstellung wird ignoriert, wenn die [Grenzwerte pro Objektheap](#per-object-heap-limits) konfiguriert sind.
 - Der Standardwert, der nur in bestimmten Fällen angewendet wird, beträgt weniger als 20 MB oder 75 % des Arbeitsspeicherlimits für den Container. Der Standardwert wird in folgenden Fällen angewendet:
 
   - Der Prozess wird in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben ist.
-  - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) ist nicht festgelegt.
+  - [System.GC.HeapHardLimit](#heap-limit) ist nicht festgelegt.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
@@ -302,21 +317,30 @@ Beispiel:
 
 Sie können die zulässige Heapnutzung bei der Garbage Collection pro Objektheap angeben. Die verschiedenen Arten von Heaps sind: große Objektheaps (Large Object Heap, LOH), kleine Objektheaps (Small Object Heap, SOH) und fixierte Objektheaps (Pinned Object Heap, POH).
 
-#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH, COMPLUS_GCHeapHardLimitLOH, COMPLUS_GCHeapHardLimitPOH
-
 - Wenn Sie für eine der Einstellungen `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` oder `COMPLUS_GCHeapHardLimitPOH` einen Wert angeben, müssen Sie auch einen Wert für `COMPLUS_GCHeapHardLimitSOH` und `COMPLUS_GCHeapHardLimitLOH` angeben. Andernfalls kann die Laufzeit nicht initialisiert werden.
 - Der Standardwert für `COMPLUS_GCHeapHardLimitPOH` ist 0. `COMPLUS_GCHeapHardLimitSOH` und `COMPLUS_GCHeapHardLimitLOH` verfügen über keine Standardwerte.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitSOH` | *Dezimalwert* | .NET 5.0 |
 | **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitSOH` | *Hexadezimalwert* | .NET 5.0 |
+
+| | Einstellungsname | Werte | Eingeführt in Version |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitLOH` | *Dezimalwert* | .NET 5.0 |
 | **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitLOH` | *Hexadezimalwert* | .NET 5.0 |
+
+| | Einstellungsname | Werte | Eingeführt in Version |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitPOH` | *Dezimalwert* | .NET 5.0 |
 | **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitPOH` | *Hexadezimalwert* | .NET 5.0 |
 
 > [!TIP]
-> Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Wenn Sie z. B. eine feste Heapgrenze von 200 Mebibyte (MiB) angeben möchten, wäre der Wert 0xC800000 oder C800000.
+> Wenn Sie die Option in *runtimeconfig.json* festlegen, geben Sie einen Dezimalwert an. Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Wenn Sie beispielsweise eine feste Heapgrenze von 200 MiB festlegen, würden die Werte für die JSON-Datei 209715200 und für die Umgebungsvariable 0xc800000 oder C800000 betragen.
 
-#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent, COMPLUS_GCHeapHardLimitLOHPercent, COMPLUS_GCHeapHardLimitPOHPercent
+### <a name="per-object-heap-limit-percents"></a>Grenzwerte pro Objektheap (Prozent)
+
+Sie können die zulässige Heapnutzung bei der Garbage Collection pro Objektheap angeben. Die verschiedenen Arten von Heaps sind: große Objektheaps (Large Object Heap, LOH), kleine Objektheaps (Small Object Heap, SOH) und fixierte Objektheaps (Pinned Object Heap, POH).
 
 - Wenn Sie für eine der Einstellungen `COMPLUS_GCHeapHardLimitSOHPercent`, `COMPLUS_GCHeapHardLimitLOHPercent` oder `COMPLUS_GCHeapHardLimitPOHPercent` einen Wert angeben, müssen Sie auch einen Wert für `COMPLUS_GCHeapHardLimitSOHPercent` und `COMPLUS_GCHeapHardLimitLOHPercent` angeben. Andernfalls kann die Laufzeit nicht initialisiert werden.
 - Diese Einstellungen werden ignoriert, wenn `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` und `COMPLUS_GCHeapHardLimitPOH` angegeben sind.
@@ -325,14 +349,40 @@ Sie können die zulässige Heapnutzung bei der Garbage Collection pro Objektheap
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitSOHPercent` | *Dezimalwert* | .NET 5.0 |
 | **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitSOHPercent` | *Hexadezimalwert* | .NET 5.0 |
+
+| | Einstellungsname | Werte | Eingeführt in Version |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitLOHPercent` | *Dezimalwert* | .NET 5.0 |
 | **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitLOHPercent` | *Hexadezimalwert* | .NET 5.0 |
+
+| | Einstellungsname | Werte | Eingeführt in Version |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitPOHPercent` | *Dezimalwert* | .NET 5.0 |
 | **Umgebungsvariable** | `COMPLUS_GCHeapHardLimitPOHPercent` | *Hexadezimalwert* | .NET 5.0 |
 
 > [!TIP]
-> Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Wenn Sie z. B. die Heapnutzung auf 30 % beschränken möchten, wäre der entsprechende Wert 0x1E oder 1E.
+> Wenn Sie die Option in *runtimeconfig.json* festlegen, geben Sie einen Dezimalwert an. Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Beispielsweise würden bei einer Begrenzung des Heapverbrauchs auf 30 % die Werte für die JSON-Datei 30 und für die Umgebungsvariable 0x1E oder 1E betragen.
 
-### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
+### <a name="high-memory-percent"></a>Hohe Speicherauslastung (Prozent)
+
+Die Arbeitsspeicherauslastung wird durch den Prozentsatz des verwendeten physischen Speichers angegeben. Wenn die physische Arbeitsspeicherauslastung **90 %** erreicht, wird die Garbage Collection standardmäßig aggressiver, um vollständige, komprimierende Garbage Collection-Vorgänge durchzuführen, um Auslagerungsvorgänge zu vermeiden. Wenn die Arbeitsspeicherauslastung unter 90 % liegt, bevorzugt GC Hintergrundsammlungen für vollständige Garbage Collections, die kürzere Pausen aufweisen, aber die Gesamtheapgröße nicht wesentlich verringern. Auf Computern mit einer beträchtlichen Menge an Arbeitsspeicher (80 GB oder mehr) liegt der Standardwert für die Auslastung zwischen 90 % und 97 %.
+
+Der Schwellenwert für hohe Arbeitsspeicherauslastung kann durch die Umgebungsvariable `COMPlus_GCHighMemPercent` oder die JSON-Konfigurationseinstellung `System.GC.HighMemoryPercent` angepasst werden. Wenn Sie die Heapgröße steuern möchten, sollten Sie den Schwellenwert anpassen. Beispielsweise ist es für den vorherrschenden Prozess auf einem Computer mit 64 GB Arbeitsspeicher sinnvoll, dass GC zu reagieren beginnt, wenn 10 % des Arbeitsspeichers verfügbar sind. Für kleinere Prozesse (z. B. für einen Prozess, der nur 1 GB Arbeitsspeicher verbraucht) kann GC bequem mit weniger als 10 % des verfügbaren Speichers ausgeführt werden. Für diese kleineren Prozesse sollten Sie den Schwellenwert auf einen höheren Wert festlegen. Wenn andererseits größere Prozesse kleinere Heapgrößen haben sollen (auch wenn genügend physischer Arbeitsspeicher verfügbar ist), ist die Herabsetzung dieses Schwellenwerts eine effektive Methode, mit der GC schneller reagieren kann, um den Heap zu komprimieren.
+
+> [!NOTE]
+> Bei Prozessen, die in einem Container ausgeführt werden, berücksichtigt GC den physischen Arbeitsspeicher basierend auf dem Containergrenzwert.
+
+| | Einstellungsname | Werte | Eingeführt in Version |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HighMemoryPercent` | *Dezimalwert* | .NET 5.0 |
+| **Umgebungsvariable** | `COMPlus_GCHighMemPercent` | *Hexadezimalwert* | |
+
+> [!TIP]
+> Wenn Sie die Option in *runtimeconfig.json* festlegen, geben Sie einen Dezimalwert an. Wenn Sie die Option als Umgebungsvariable festlegen, geben Sie einen Hexadezimalwert an. Wenn Sie beispielsweise den Schwellenwert für hohe Arbeitsspeicherauslastung auf 75 % festlegen, würden die Werte für die JSON-Datei 75 und für die Umgebungsvariable 0x4B oder 4B betragen.
+
+### <a name="retain-vm"></a>VM beibehalten
 
 - Konfiguriert, ob Segmente, die gelöscht werden sollen, zur späteren Verwendung auf eine Standbyliste aufgenommen oder an das Betriebssystem zurückgegeben werden
 - Standard: Segmente werden an das Betriebssystem zurückgegeben. Dies entspricht der Einstellung des Werts auf `false`.
@@ -343,7 +393,7 @@ Sie können die zulässige Heapnutzung bei der Garbage Collection pro Objektheap
 | **MSBuild-Eigenschaft** | `RetainVMGarbageCollection` | `false` – Freigabe an Betriebssystem<br/>`true` – in Standbymodus versetzen | .NET Core 1.0 |
 | **Umgebungsvariable** | `COMPlus_GCRetainVM` | `0` – Freigabe an Betriebssystem<br/>`1` – in Standbymodus versetzen | .NET Core 1.0 |
 
-### <a name="examples"></a>Beispiele
+#### <a name="examples"></a>Beispiele
 
 *runtimeconfig.json*-Datei:
 
@@ -371,20 +421,16 @@ Projektdatei:
 
 ## <a name="large-pages"></a>Umfangreiche Seiten
 
-### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
-
 - Gibt an, ob umfangreiche Seiten verwendet werden sollen, wenn eine feste Heapgrenze festgelegt wird
 - Standard: Verwenden Sie keine großen Seiten, wenn eine feste Heapgrenze festgelegt ist. Dies entspricht der Einstellung des Werts auf `0`.
 - Dies ist eine experimentelle Einstellung.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
-| **runtimeconfig.json** | Nicht zutreffend | Nicht zutreffend | Nicht zutreffend |
+| **runtimeconfig.json** | Nicht zutreffend | – | Nicht zutreffend |
 | **Umgebungsvariable** | `COMPlus_GCLargePages` | `0` – deaktiviert<br/>`1` – aktiviert | .NET Core 3.0 |
 
-## <a name="large-objects"></a>Große Objekte
-
-### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
+## <a name="allow-large-objects"></a>Große Objekte zulassen
 
 - Konfiguriert die Garbage-Collector-Unterstützung auf 64-Bit-Plattformen für Arrays mit einer Gesamtgröße von mehr als 2 Gigabytes (GB)
 - Standard: GC unterstützt Arrays, die größer als 2 GB sind. Dies entspricht der Einstellung des Werts auf `1`.
@@ -392,13 +438,11 @@ Projektdatei:
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
-| **runtimeconfig.json** | Nicht zutreffend | Nicht zutreffend | Nicht zutreffend |
+| **runtimeconfig.json** | Nicht zutreffend | – | Nicht zutreffend |
 | **Umgebungsvariable** | `COMPlus_gcAllowVeryLargeObjects` | `1` – aktiviert<br/> `0` – deaktiviert | .NET Core 1.0 |
 | **app.config für .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1` – aktiviert<br/> `0` – deaktiviert | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>Großer Objektheapschwellenwert
-
-### <a name="systemgclohthresholdcomplus_gclohthreshold"></a>System.GC.LOHThreshold/COMPlus_GCLOHThreshold
 
 - Gibt die Größe des Schwellenwerts in Bytes an, der bewirkt, dass Objekte auf den großen Objektheap (Large Object Heap, LOH) gehen
 - Der Standardschwellenwert beträgt 85.000 Bytes.
@@ -427,12 +471,10 @@ Beispiel:
 
 ## <a name="standalone-gc"></a>Eigenständige GC
 
-### <a name="complus_gcname"></a>COMPlus_GCName
-
 - Gibt einen Pfad zu der Bibliothek an, die den Garbage Collector enthält, der von der Runtime geladen werden soll
 - Weitere Informationen finden Sie unter [Entwurf eines eigenständigen GC-Ladeprogramms](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md).
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
-| **runtimeconfig.json** | Nicht zutreffend | Nicht zutreffend | Nicht zutreffend |
+| **runtimeconfig.json** | Nicht zutreffend | – | Nicht zutreffend |
 | **Umgebungsvariable** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |
