@@ -2,13 +2,14 @@
 title: .NET Core-CLI
 titleSuffix: ''
 description: Eine Übersicht über die .NET Core-CLI und ihre Features.
+ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415960"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062690"
 ---
 # <a name="net-core-cli-overview"></a>Übersicht über die .NET Core-CLI
 

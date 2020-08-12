@@ -3,12 +3,12 @@ title: Ausdrucksbaumstrukturen (C#)
 description: Erfahren Sie mehr zu Ausdrucksbaumstrukturen. Erfahren Sie, wie Code, der von diesen Datenstrukturen dargestellt wird, kompiliert und ausgeführt wird, wobei jeder Knoten einen Ausdruck darstellt.
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a5c84673f0b45b92be18b955a6d1e7268bb73c26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105573"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063314"
 ---
 # <a name="expression-trees-c"></a>Ausdrucksbaumstrukturen (C#)
 Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, in denen jeder Knoten ein Ausdruck ist, z. B. ein Methodenaufruf oder eine binäre Operation wie `x < y`.  
@@ -22,7 +22,7 @@ Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, 
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>Erstellen von Ausdrucksbaumstrukturen aus Lambda-Ausdrücken  
  Wenn ein Lambda-Ausdruck einer Variablen vom Typ <xref:System.Linq.Expressions.Expression%601> zugewiesen ist, gibt der Compiler Code aus, um eine Ausdrucksbaumstruktur zu erstellen, die den Lambda-Ausdruck verkörpert.  
   
- Der C#-Compiler kann Ausdrucksbaumstrukturen nur aus Ausdrucklambdas (oder einzeiligen Lambdas) erstellen. Es kann keine Anweisungslambdas (oder mehrzeiligen Lambdas) analysieren. Weitere Informationen zu Lambdaausdrücken in C# finden Sie unter [Lambdaausdrücke](../../statements-expressions-operators/lambda-expressions.md).  
+ Der C#-Compiler kann Ausdrucksbaumstrukturen nur aus Ausdrucklambdas (oder einzeiligen Lambdas) erstellen. Es kann keine Anweisungslambdas (oder mehrzeiligen Lambdas) analysieren. Weitere Informationen zu Lambdaausdrücken in C# finden Sie unter [Lambdaausdrücke](../../../language-reference/operators/lambda-expressions.md).  
   
  In den folgenden Codebeispielen wird veranschaulicht, wie Sie C#-Compiler dazu veranlassen, eine Ausdrucksbaumstruktur zu erstellen, die den Lambdaausdruck `num => num < 5` verkörpert.  
   
@@ -153,6 +153,6 @@ Console.WriteLine(expr.Compile()(4));
 - <xref:System.Linq.Expressions>
 - [Ausführen von Ausdrucksbaumstrukturen (C#)](./how-to-execute-expression-trees.md)
 - [Ändern von Ausdrucksbaumstrukturen (C#)](./how-to-modify-expression-trees.md)
-- [Lambda-Ausdrücke](../../statements-expressions-operators/lambda-expressions.md)
+- [Lambda-Ausdrücke](../../../language-reference/operators/lambda-expressions.md)
 - [Übersicht über die Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [Programmierkonzepte (C#)](../index.md)

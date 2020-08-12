@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 854d7c1278319869104e1758ba91eb3594741126
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916814"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063184"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C#-Operatoren und -Ausdrücke (C#-Referenz)
 
@@ -47,7 +47,7 @@ Im Folgenden finden Sie einige weitere Ausdrücke, die von C# bereitgestellt wer
 
   [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
-- [Lambdaausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md), mit denen Sie anonyme Funktionen erstellen können:
+- [Lambdaausdrücke](lambda-expressions.md), mit denen Sie anonyme Funktionen erstellen können:
 
   [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
