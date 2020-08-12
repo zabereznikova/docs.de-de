@@ -1,32 +1,97 @@
 ---
 title: Zustandsverwaltung
-description: Erfahren Sie mehr über die verschiedenen Ansätze zum Verwalten des Zustands in ASP.net Web Forms und Blazor .
-author: danroth27
-ms.author: daroth
-no-loc:
-- Blazor
-ms.date: 09/11/2019
-ms.openlocfilehash: 390822ff93a928c84540505687472a361a0c5f4b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+description: Lernen Sie verschiedene Ansätze zum Verwalten des Zustands in ASP.net Web Forms und blazor kennen.
+author: csharpfritz
+ms.author: jefritz
+ms.date: 05/15/2020
+ms.openlocfilehash: bac2f00330113725f09259ca31bdf857a8769f24
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173093"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062339"
 ---
-# <a name="state-management"></a><span data-ttu-id="7f6b5-103">Zustandsverwaltung</span><span class="sxs-lookup"><span data-stu-id="7f6b5-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="900ad-103">Zustandsverwaltung</span><span class="sxs-lookup"><span data-stu-id="900ad-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="7f6b5-104">*Dieser Inhalt wird in Kürze verfügbar sein.*</span><span class="sxs-lookup"><span data-stu-id="7f6b5-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="900ad-104">Die Zustands Verwaltung ist ein wichtiges Konzept für Web Forms Anwendungen, das durch den Ansichts Zustand, den Sitzungszustand, den Anwendungs Zustand und die Post Back Funktionen ermöglicht wird.</span><span class="sxs-lookup"><span data-stu-id="900ad-104">State management is a key concept of Web Forms applications, facilitated through View State, Session State, Application State, and Postback features.</span></span> <span data-ttu-id="900ad-105">Diese Zustands behafteten Features des Frameworks trugen dazu bei, die für eine Anwendung erforderliche Zustands Verwaltung zu verbergen und Anwendungsentwicklern den Schwerpunkt auf die Bereitstellung ihrer Funktionalität zu geben.</span><span class="sxs-lookup"><span data-stu-id="900ad-105">These stateful features of the framework helped to hide the state management required for an application and allow application developers to focus on delivering their functionality.</span></span> <span data-ttu-id="900ad-106">Mit ASP.net Core und blazor wurden einige dieser Features verschoben, und einige dieser Features wurden vollständig entfernt.</span><span class="sxs-lookup"><span data-stu-id="900ad-106">With ASP.NET Core and Blazor, some of these features have been relocated and some have been removed altogether.</span></span> <span data-ttu-id="900ad-107">In diesem Kapitel wird erläutert, wie Sie den Status verwalten und die gleichen Funktionen mit den neuen Funktionen in blazor bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="900ad-107">This chapter reviews how to maintain state and deliver the same functionality with the new features in Blazor.</span></span>
 
-<!--
-- View state
-- Session state
-- Local storage
-- App state
--->
+## <a name="request-state-management-with-viewstate"></a><span data-ttu-id="900ad-108">Anfordern der Zustands Verwaltung mit "ViewState"</span><span class="sxs-lookup"><span data-stu-id="900ad-108">Request state management with ViewState</span></span>
+
+<span data-ttu-id="900ad-109">Bei der Erörterung der Zustands Verwaltung in Web Forms Anwendung stellen viele Entwickler sofort eine Vorstellung von ViewState.</span><span class="sxs-lookup"><span data-stu-id="900ad-109">When discussing state management in Web Forms application, many developers will immediately think of ViewState.</span></span> <span data-ttu-id="900ad-110">In Web Forms verwaltet ViewState den Status des Inhalts zwischen HTTP-Anforderungen, indem ein großer codierter TextBlock an den Browser zurückgesendet wird.</span><span class="sxs-lookup"><span data-stu-id="900ad-110">In Web Forms, ViewState manages the state of the content between HTTP requests by sending a large encoded block of text back and forth to the browser.</span></span> <span data-ttu-id="900ad-111">Das Feld "ViewState" kann mit dem Inhalt einer Seite, die viele Elemente enthält, überlastet werden, was möglicherweise auf mehrere Megabyte aufwächst.</span><span class="sxs-lookup"><span data-stu-id="900ad-111">The ViewState field could be overwhelmed with content from a page containing many elements, potentially expanding to several megabytes in size.</span></span>
+
+<span data-ttu-id="900ad-112">Mit dem blazor-Server unterhält die APP eine fortlaufende Verbindung mit dem Server.</span><span class="sxs-lookup"><span data-stu-id="900ad-112">With Blazor Server, the app maintains an ongoing connection with the server.</span></span> <span data-ttu-id="900ad-113">Der Status der APP, *der als Verbindung bezeichnet wird, wird*im Server Speicher gehalten, während die Verbindung als aktiv betrachtet wird.</span><span class="sxs-lookup"><span data-stu-id="900ad-113">The app's state, called a *circuit*, is held in server memory while the connection is considered active.</span></span> <span data-ttu-id="900ad-114">Der Status wird nur verworfen, wenn der Benutzer von der APP oder einer bestimmten Seite in der APP weg navigiert.</span><span class="sxs-lookup"><span data-stu-id="900ad-114">State will only be disposed when the user navigates away from the app or a particular page in the app.</span></span> <span data-ttu-id="900ad-115">Alle Mitglieder der aktiven Komponenten sind zwischen Interaktionen mit dem Server verfügbar.</span><span class="sxs-lookup"><span data-stu-id="900ad-115">All members of the active components are available between interactions with the server.</span></span>
+
+<span data-ttu-id="900ad-116">Dieses Feature bietet mehrere Vorteile:</span><span class="sxs-lookup"><span data-stu-id="900ad-116">There are several advantages of this feature:</span></span>
+
+- <span data-ttu-id="900ad-117">Der Komponenten Status ist sofort verfügbar und wird zwischen Interaktionen nicht neu erstellt.</span><span class="sxs-lookup"><span data-stu-id="900ad-117">Component state is readily available and not rebuilt between interactions.</span></span>
+- <span data-ttu-id="900ad-118">Der Status wird nicht an den Browser übermittelt.</span><span class="sxs-lookup"><span data-stu-id="900ad-118">State isn't transmitted to the browser.</span></span>
+
+<span data-ttu-id="900ad-119">Allerdings gibt es einige Nachteile der Persistenz im Speicher des Komponenten Zustands, die beachtet werden sollten:</span><span class="sxs-lookup"><span data-stu-id="900ad-119">However, there are some disadvantages to in-memory component state persistence to be aware of:</span></span>
+
+- <span data-ttu-id="900ad-120">Wenn der Server zwischen der Anforderung neu gestartet wird, geht der Status verloren.</span><span class="sxs-lookup"><span data-stu-id="900ad-120">If the server restarts between request, state is lost.</span></span>
+- <span data-ttu-id="900ad-121">Die Lösung für den Lastenausgleich des Anwendungs Webservers muss persistente Sitzungen enthalten, um sicherzustellen, dass alle Anforderungen desselben Browsers an denselben Server zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="900ad-121">Your application web server load-balancing solution must include sticky sessions to ensure that all requests from the same browser return to the same server.</span></span> <span data-ttu-id="900ad-122">Wenn eine Anforderung an einen anderen Server weitergeleitet wird, geht der Status verloren.</span><span class="sxs-lookup"><span data-stu-id="900ad-122">If a request goes to a different server, state will be lost.</span></span>
+- <span data-ttu-id="900ad-123">Die Persistenz des Komponenten Status auf dem Server kann zu ungenügendem Arbeitsspeicher auf dem Webserver führen.</span><span class="sxs-lookup"><span data-stu-id="900ad-123">Persistence of component state on the server can lead to memory pressure on the web server.</span></span>
+
+<span data-ttu-id="900ad-124">Verlassen Sie sich aus den vorangehenden Gründen nicht darauf, dass sich der Zustand der Komponente auf dem Server im Arbeitsspeicher befindet.</span><span class="sxs-lookup"><span data-stu-id="900ad-124">For the preceding reasons, don't rely on just the state of the component to reside in-memory on the server.</span></span> <span data-ttu-id="900ad-125">Die Anwendung sollte auch einen Sicherungsdaten Speicher für Daten zwischen Anforderungen enthalten.</span><span class="sxs-lookup"><span data-stu-id="900ad-125">Your application should also include some backing data store for data between requests.</span></span> <span data-ttu-id="900ad-126">Einige einfache Beispiele für diese Strategie:</span><span class="sxs-lookup"><span data-stu-id="900ad-126">Some simple examples of this strategy:</span></span>
+
+- <span data-ttu-id="900ad-127">Bewahren Sie in einer Einkaufswagen Anwendung den Inhalt der neuen Elemente auf, die dem Warenkorb in einem Datenbankdaten Satz hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="900ad-127">In a shopping cart application, persist the content of new items added to the cart in a database record.</span></span> <span data-ttu-id="900ad-128">Wenn der Status auf dem Server verloren geht, können Sie ihn aus den Datenbankdaten Sätzen wiederherstellen.</span><span class="sxs-lookup"><span data-stu-id="900ad-128">If the state on the server is lost, you can reconstitute it from the database records.</span></span>
+- <span data-ttu-id="900ad-129">In einem mehrteiligen Webformular erwarten Ihre Benutzer, dass Ihre Anwendung Werte zwischen den einzelnen Anforderungen speichert.</span><span class="sxs-lookup"><span data-stu-id="900ad-129">In a multi-part web form, your users will expect your application to remember values between each request.</span></span> <span data-ttu-id="900ad-130">Schreiben Sie die Daten zwischen den einzelnen Beiträgen Ihres Benutzers in einen Datenspeicher, sodass Sie abgerufen und in der endgültigen Form Antwort Struktur zusammengefasst werden können, wenn das mehrteilige Formular abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="900ad-130">Write the data between each of your user's posts to a data store so that they can be fetched and assembled into the final form response structure when the multi-part form is completed.</span></span>
+
+<span data-ttu-id="900ad-131">Weitere Informationen zum Verwalten des Zustands in blazor-apps finden Sie unter [ASP.net Core blazor State Management](/aspnet/core/blazor/state-management).</span><span class="sxs-lookup"><span data-stu-id="900ad-131">For additional details on managing state in Blazor apps, see [ASP.NET Core Blazor state management](/aspnet/core/blazor/state-management).</span></span>
+
+## <a name="maintain-state-with-session"></a><span data-ttu-id="900ad-132">Status mit Sitzung beibehalten</span><span class="sxs-lookup"><span data-stu-id="900ad-132">Maintain state with Session</span></span>
+
+<span data-ttu-id="900ad-133">Web Forms Entwickler können Informationen über den aktuell aktiven Benutzer mit dem <xref:Microsoft.AspNetCore.Http.ISession?displayProperty=nameWithType> Dictionary-Objekt verwalten.</span><span class="sxs-lookup"><span data-stu-id="900ad-133">Web Forms developers could maintain information about the currently acting user with the <xref:Microsoft.AspNetCore.Http.ISession?displayProperty=nameWithType> dictionary object.</span></span> <span data-ttu-id="900ad-134">Es ist einfach genug, dem ein Objekt mit einem Zeichen folgen Schlüssel hinzuzufügen `Session` , und dieses Objekt wäre zu einem späteren Zeitpunkt während der Interaktion des Benutzers mit der Anwendung verfügbar.</span><span class="sxs-lookup"><span data-stu-id="900ad-134">It's easy enough to add an object with a string key to the `Session`, and that object would be available at a later time during the user's interactions with the application.</span></span> <span data-ttu-id="900ad-135">Bei dem Versuch, die Interaktion mit http zu vermeiden, machte das-Objekt die Verwaltung des `Session` Zustands leicht.</span><span class="sxs-lookup"><span data-stu-id="900ad-135">In an attempt to eliminate managing interacting with HTTP, the `Session` object made it easy to maintain state.</span></span>
+
+<span data-ttu-id="900ad-136">Die Signatur des .NET Framework `Session` Objekts ist nicht mit dem ASP.net Core Objekt identisch `Session` .</span><span class="sxs-lookup"><span data-stu-id="900ad-136">The signature of the .NET Framework `Session` object isn't the same as the ASP.NET Core `Session` object.</span></span> <span data-ttu-id="900ad-137">Sehen Sie sich [die Dokumentation für die neue ASP.net Core Sitzung](/dotnet/api/microsoft.aspnetcore.http.isession) an, bevor Sie sich für die Migration und die Verwendung des neuen Sitzungs Zustands Features entscheiden.</span><span class="sxs-lookup"><span data-stu-id="900ad-137">Consider [the documentation for the new ASP.NET Core Session](/dotnet/api/microsoft.aspnetcore.http.isession) before deciding to migrate and use the new session state feature.</span></span>
+
+<span data-ttu-id="900ad-138">Die Sitzung ist in ASP.net Core-und blazor-Server verfügbar, wird jedoch nicht von der Verwendung unterbunden, um Daten in einem Datenrepository entsprechend zu speichern.</span><span class="sxs-lookup"><span data-stu-id="900ad-138">Session is available in ASP.NET Core and Blazor Server, but is discouraged from use in favor of storing data in a data repository appropriately.</span></span> <span data-ttu-id="900ad-139">Der Sitzungszustand ist auch nicht funktionsfähig, wenn Besucher die Verwendung von HTTP-Cookies in Ihrer Anwendung aufgrund von Datenschutzbedenken ablehnen.</span><span class="sxs-lookup"><span data-stu-id="900ad-139">Session state is also not functional if visitors decline the use HTTP cookies in your application due to privacy concerns.</span></span>
+
+<span data-ttu-id="900ad-140">Die Konfiguration für ASP.net Core und den Sitzungszustand ist im [Artikel Sitzungs-und Zustands Verwaltung in ASP.net Core](/aspnet/core/fundamentals/app-state#session-state)verfügbar.</span><span class="sxs-lookup"><span data-stu-id="900ad-140">Configuration for ASP.NET Core and Session state is available in the [Session and state management in ASP.NET Core article](/aspnet/core/fundamentals/app-state#session-state).</span></span>
+
+## <a name="application-state"></a><span data-ttu-id="900ad-141">Status der Anwendung</span><span class="sxs-lookup"><span data-stu-id="900ad-141">Application state</span></span>
+
+<span data-ttu-id="900ad-142">Das `Application` -Objekt im Web Forms Framework stellt ein riesiges, Anforderungs übergreifendes Repository für die Interaktion mit der Konfiguration und dem Zustand des Anwendungsbereichs bereit.</span><span class="sxs-lookup"><span data-stu-id="900ad-142">The `Application` object in the Web Forms framework provides a massive, cross-request repository for interacting with application-scope configuration and state.</span></span> <span data-ttu-id="900ad-143">Der Anwendungs Zustand war ein idealer Ort zum Speichern verschiedener Anwendungs Konfigurations Eigenschaften, auf die von allen Anforderungen verwiesen wird, unabhängig vom Benutzer, der die Anforderung sendet.</span><span class="sxs-lookup"><span data-stu-id="900ad-143">Application state was an ideal place to store various application configuration properties that would be referenced by all requests, regardless of the user making the request.</span></span> <span data-ttu-id="900ad-144">Das Problem mit dem `Application` Objekt war, dass Daten nicht über mehrere Server hinweg persistent gespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="900ad-144">The problem with the `Application` object was that data didn't persist across multiple servers.</span></span> <span data-ttu-id="900ad-145">Der Status des Anwendungs Objekts wurde zwischen Neustarts getrennt.</span><span class="sxs-lookup"><span data-stu-id="900ad-145">The state of the application object was lost between restarts.</span></span>
+
+<span data-ttu-id="900ad-146">Wie bei `Session` wird empfohlen, dass Daten in einen permanenten Sicherungs Speicher verschoben werden, auf den mehrere Server Instanzen zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="900ad-146">As with `Session`, it's recommended that data move to a persistent backing store that could be accessed by multiple server instances.</span></span> <span data-ttu-id="900ad-147">Wenn flüchtige Daten vorhanden sind, auf die Sie über Anforderungen und Benutzer zugreifen können, können Sie Sie problemlos in einem Singleton-Dienst speichern, der in Komponenten eingefügt werden kann, die diese Informationen oder Interaktionen benötigen.</span><span class="sxs-lookup"><span data-stu-id="900ad-147">If there is volatile data that you would like to be able to access across requests and users, you could easily store it in a singleton service that can be injected into components that require this information or interaction.</span></span>
+
+<span data-ttu-id="900ad-148">Die Erstellung eines Objekts, um den Anwendungs Zustand und seinen Verbrauch aufrechtzuerhalten, könnte der folgenden Implementierung ähneln:</span><span class="sxs-lookup"><span data-stu-id="900ad-148">The construction of an object to maintain application state and its consumption could resemble the following implementation:</span></span>
+
+```csharp
+public class MyApplicationState
+{
+    public int VisitorCounter { get; private set; } = 0;
+
+    public void IncrementCounter() => VisitorCounter += 1;
+}
+```
+
+```csharp
+app.AddSingleton<MyApplicationState>();
+```
+
+```razor
+@inject MyApplicationState AppState
+
+<label>Total Visitors: @AppState.VisitorCounter</label>
+```
+
+<span data-ttu-id="900ad-149">Das `MyApplicationState` Objekt wird nur einmal auf dem Server erstellt, und der Wert `VisitorCounter` wird abgerufen und in der Bezeichnung der Komponente ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="900ad-149">The `MyApplicationState` object is created only once on the server, and the value `VisitorCounter` is fetched and output in the component's label.</span></span> <span data-ttu-id="900ad-150">Der `VisitorCounter` Wert sollte persistent gespeichert und aus einem Sicherungsdaten Speicher abgerufen werden, um Dauerhaftigkeit und Skalierbarkeit zu gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="900ad-150">The `VisitorCounter` value should be persisted and retrieved from a backing data store for durability and scalability.</span></span>
+
+## <a name="in-the-browser"></a><span data-ttu-id="900ad-151">Im Browser</span><span class="sxs-lookup"><span data-stu-id="900ad-151">In the browser</span></span>
+
+<span data-ttu-id="900ad-152">Anwendungsdaten können auch auf der Clientseite auf dem Gerät des Benutzers gespeichert werden, sodass Sie später verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="900ad-152">Application data can also be stored client-side on the user's device so that is available later.</span></span> <span data-ttu-id="900ad-153">Es gibt zwei Browserfunktionen, die die Persistenz von Daten in verschiedenen Bereichen des Browsers des Benutzers ermöglichen:</span><span class="sxs-lookup"><span data-stu-id="900ad-153">There are two browser features that allow for persistence of data in different scopes of the user's browser:</span></span>
+
+- <span data-ttu-id="900ad-154">`localStorage`: der Bereich des gesamten Browsers des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="900ad-154">`localStorage` - scoped to the user's entire browser.</span></span> <span data-ttu-id="900ad-155">Wenn die Seite erneut geladen wird, wird der Browser geschlossen und erneut geöffnet, oder eine andere Registerkarte mit derselben URL wird `localStorage` vom Browser bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="900ad-155">If the page is reloaded, the browser is closed and reopened, or another tab is opened with the same URL then the same `localStorage` is provided by the browser</span></span>
+- <span data-ttu-id="900ad-156">`sessionStorage`-Bereich der aktuellen Browser Registerkarte des Benutzers. Wenn die Registerkarte erneut geladen wird, bleibt der Zustand erhalten.</span><span class="sxs-lookup"><span data-stu-id="900ad-156">`sessionStorage` - scoped to the user's current browser tab. If the tab is reloaded, the state persists.</span></span> <span data-ttu-id="900ad-157">Wenn der Benutzer jedoch eine weitere Registerkarte für die Anwendung öffnet oder den Browser schließt und erneut öffnet, geht der Status verloren.</span><span class="sxs-lookup"><span data-stu-id="900ad-157">However, if the user opens another tab to your application or closes and reopens the browser the state is lost.</span></span>
+
+<span data-ttu-id="900ad-158">Sie können benutzerdefinierten JavaScript-Code schreiben, um mit diesen Features zu interagieren, oder es gibt eine Reihe von nuget-Paketen, die Sie verwenden können, um diese Funktionalität bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="900ad-158">You can write some custom JavaScript code to interact with these features, or there are a number of NuGet packages that you can use that provide this functionality.</span></span> <span data-ttu-id="900ad-159">Eines dieser Pakete ist [Microsoft. aspnetcore. protectedbrowserstorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage).</span><span class="sxs-lookup"><span data-stu-id="900ad-159">One such package is [Microsoft.AspNetCore.ProtectedBrowserStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage).</span></span>
+
+<span data-ttu-id="900ad-160">Anweisungen zur Verwendung dieses Pakets für die Interaktion mit `localStorage` und `sessionStorage` finden Sie im Artikel [blazor State Management (blazor State Management](/aspnet/core/blazor/state-management#protected-browser-storage-experimental-package) ).</span><span class="sxs-lookup"><span data-stu-id="900ad-160">For instructions on utilizing this package to interact with `localStorage` and `sessionStorage`, see the [Blazor State Management](/aspnet/core/blazor/state-management#protected-browser-storage-experimental-package) article.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="7f6b5-105">[Zurück](pages-routing-layouts.md)
->[Weiter](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="7f6b5-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="900ad-161">[Zurück](pages-routing-layouts.md)
+>[Weiter](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="900ad-161">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>
