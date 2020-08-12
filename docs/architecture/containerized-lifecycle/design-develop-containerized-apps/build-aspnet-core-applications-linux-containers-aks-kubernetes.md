@@ -1,227 +1,434 @@
 ---
-title: Erstellen von ASP.NET Core 2.2-Anwendungen, die als Linux-Container in AKS-/Kubernetes-Clustern bereitgestellt werden
+title: Erstellen von ASP.NET Core-Anwendungen, die als Linux-Container in AKS-/Kubernetes-Clustern bereitgestellt werden
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-ms.date: 02/25/2019
-ms.openlocfilehash: 83d4d0a60db4bdc112bb35bfbf61c0396646ad31
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/06/2020
+ms.openlocfilehash: 4b04e5d56c73918c665ad6e2825205870aac9606
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989024"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916399"
 ---
-# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a><span data-ttu-id="18fbe-103">Erstellen von ASP.NET Core 2.2-Anwendungen, die als Linux-Container in einem AKS-/Kubernetes-Orchestrator bereitgestellt werden</span><span class="sxs-lookup"><span data-stu-id="18fbe-103">Build ASP.NET Core 2.2 applications deployed as Linux containers into an AKS/Kubernetes orchestrator</span></span>
+# <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a><span data-ttu-id="19015-103">Erstellen von als Linux-Container in einem AKS-/Kubernetes-Orchestrator bereitgestellten ASP.NET Core-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="19015-103">Build ASP.NET Core applications deployed as Linux containers into an AKS/Kubernetes orchestrator</span></span>
 
-<span data-ttu-id="18fbe-104">Azure Kubernetes Services (AKS) ist der verwaltete Kubernetes-Orchestrierungsdienst von Azure, der die Bereitstellung und Verwaltung von Containern vereinfacht.</span><span class="sxs-lookup"><span data-stu-id="18fbe-104">Azure Kubernetes Services (AKS) is Azure's managed Kubernetes orchestrations services that simplify container deployment and management.</span></span>
+<span data-ttu-id="19015-104">Azure Kubernetes Services (AKS) ist der verwaltete Kubernetes-Orchestrierungsdienst von Azure, der die Bereitstellung und Verwaltung von Containern vereinfacht.</span><span class="sxs-lookup"><span data-stu-id="19015-104">Azure Kubernetes Services (AKS) is Azure's managed Kubernetes orchestrations services that simplify container deployment and management.</span></span>
 
-<span data-ttu-id="18fbe-105">Dies sind die wichtigsten Features von AKS:</span><span class="sxs-lookup"><span data-stu-id="18fbe-105">AKS main features are:</span></span>
+<span data-ttu-id="19015-105">Dies sind die wichtigsten Features von AKS:</span><span class="sxs-lookup"><span data-stu-id="19015-105">AKS main features are:</span></span>
 
-- <span data-ttu-id="18fbe-106">Eine auf Azure gehostete Steuerungsebene</span><span class="sxs-lookup"><span data-stu-id="18fbe-106">An Azure-hosted control plane</span></span>
-- <span data-ttu-id="18fbe-107">Automatisierte Upgrades</span><span class="sxs-lookup"><span data-stu-id="18fbe-107">Automated upgrades</span></span>
-- <span data-ttu-id="18fbe-108">Selbstreparatur</span><span class="sxs-lookup"><span data-stu-id="18fbe-108">Self-healing</span></span>
-- <span data-ttu-id="18fbe-109">Vom Benutzer zu konfigurierende Skalierung</span><span class="sxs-lookup"><span data-stu-id="18fbe-109">User configurable scaling</span></span>
-- <span data-ttu-id="18fbe-110">Eine einfacheres Benutzererlebnis sowohl für Entwickler als auch für Clusterbetreiber.</span><span class="sxs-lookup"><span data-stu-id="18fbe-110">A simpler user experience for both developers and cluster operators.</span></span>
+- <span data-ttu-id="19015-106">Eine auf Azure gehostete Steuerungsebene</span><span class="sxs-lookup"><span data-stu-id="19015-106">An Azure-hosted control plane</span></span>
+- <span data-ttu-id="19015-107">Automatisierte Upgrades</span><span class="sxs-lookup"><span data-stu-id="19015-107">Automated upgrades</span></span>
+- <span data-ttu-id="19015-108">Selbstreparatur</span><span class="sxs-lookup"><span data-stu-id="19015-108">Self-healing</span></span>
+- <span data-ttu-id="19015-109">Durch den Benutzer konfigurierbare Skalierung</span><span class="sxs-lookup"><span data-stu-id="19015-109">User-configurable scaling</span></span>
+- <span data-ttu-id="19015-110">Einfacheres Benutzererlebnis sowohl für Entwickler als auch für Clusterbetreiber.</span><span class="sxs-lookup"><span data-stu-id="19015-110">Simpler user experience for both developers and cluster operators.</span></span>
 
-<span data-ttu-id="18fbe-111">Die folgenden Beispiele untersuchen die Erstellung einer ASP.NET Core 2.2-Anwendung, die unter Linux ausgeführt und auf einem AKS-Cluster in Azure bereitgestellt wird, während die Entwicklung in Visual Studio 2017 erfolgt.</span><span class="sxs-lookup"><span data-stu-id="18fbe-111">The following examples explore the creation of an ASP.NET Core 2.2 application that runs on Linux and deploys to an AKS Cluster in Azure, while development is done using Visual Studio 2017.</span></span>
+<span data-ttu-id="19015-111">Die folgenden Beispiele untersuchen die Erstellung einer ASP.NET Core 3.1-Anwendung, die unter Linux ausgeführt und auf einem AKS-Cluster in Azure bereitgestellt wird, während die Entwicklung in Visual Studio 2019 erfolgt.</span><span class="sxs-lookup"><span data-stu-id="19015-111">The following examples explore the creation of an ASP.NET Core 3.1 application that runs on Linux and deploys to an AKS Cluster in Azure, while development is done using Visual Studio 2019.</span></span>
 
-## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a><span data-ttu-id="18fbe-112">Erstellen des ASP.NET Core 2.2-Projekts mithilfe von Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="18fbe-112">Creating the ASP.NET Core 2.2 Project using Visual Studio 2017</span></span>
+## <a name="creating-the-aspnet-core-project-using-visual-studio-2019"></a><span data-ttu-id="19015-112">Erstellen des ASP.NET Core 2019-Projekts mithilfe von Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="19015-112">Creating the ASP.NET Core Project using Visual Studio 2019</span></span>
 
-<span data-ttu-id="18fbe-113">ASP.NET Core ist eine universelle Entwicklungsplattform, die von Microsoft und der .NET-Community auf GitHub gepflegt wird.</span><span class="sxs-lookup"><span data-stu-id="18fbe-113">ASP.NET Core is a general-purpose development platform maintained by Microsoft and the .NET community on GitHub.</span></span> <span data-ttu-id="18fbe-114">Sie ist plattformübergreifend, d.h. sie unterstützt Windows, macOS und Linux und kann lokal, in der Cloud und in Einbettungs- und IoT-Szenarios verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="18fbe-114">It's cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</span></span>
+<span data-ttu-id="19015-113">ASP.NET Core ist eine universelle Entwicklungsplattform, die von Microsoft und der .NET-Community auf GitHub gepflegt wird.</span><span class="sxs-lookup"><span data-stu-id="19015-113">ASP.NET Core is a general-purpose development platform maintained by Microsoft and the .NET community on GitHub.</span></span> <span data-ttu-id="19015-114">Sie ist plattformübergreifend, d.h. sie unterstützt Windows, macOS und Linux und kann lokal, in der Cloud und in Einbettungs- und IoT-Szenarios verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="19015-114">It's cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</span></span>
 
-<span data-ttu-id="18fbe-115">Dieses Beispiel verwendet ein einfaches Projekt, das auf einer Visual Studio Web-API-Vorlage basiert, sodass Sie zum Erstellen des Beispiels keine weiteren Kenntnisse benötigen.</span><span class="sxs-lookup"><span data-stu-id="18fbe-115">This example uses a simple project that's based on a Visual Studio Web API template, so you don't need any additional knowledge to create the sample.</span></span> <span data-ttu-id="18fbe-116">Sie müssen lediglich das Projekt mithilfe einer Standardvorlage erstellen, die alle Elemente zum Ausführen eines kleinen Projekts mit einer REST-API beinhaltet und ASP.NET Core 2.2-Technologie verwendet.</span><span class="sxs-lookup"><span data-stu-id="18fbe-116">You only have to create the project using a standard template that includes all the elements to run a small project with a REST API, using ASP.NET Core 2.2 technology.</span></span>
+<span data-ttu-id="19015-115">In diesem Beispiel werden einige einfache Projekte verwendet, die auf Visual Studio-Vorlagen basieren, sodass Sie zum Erstellen des Beispiels nicht viel zusätzliches Wissen benötigen.</span><span class="sxs-lookup"><span data-stu-id="19015-115">This example uses a couple of simple projects based on Visual Studio templates, so you don't need much additional knowledge to create the sample.</span></span> <span data-ttu-id="19015-116">Sie müssen das Projekt nur mit einer Standardvorlage erstellen, die alle Elemente enthält, um ein kleines Projekt mit einer REST-API und einer Web-App mit Razor Pages unter Verwendung von ASP.NET Core 3.1-Technologie auszuführen.</span><span class="sxs-lookup"><span data-stu-id="19015-116">You only have to create the project using a standard template that includes all the elements to run a small project with a REST API and a Web App with Razor pages, using ASP.NET Core 3.1 technology.</span></span>
 
-![Fenster zum Hinzufügen eines neuen Projekts in Visual Studio mit ausgewählter ASP.NET Core-Webanwendung.](media/create-aspnet-core-application.png)
+![Fenster zum Hinzufügen eines neuen Projekts in Visual Studio mit ausgewählter ASP.NET Core-Webanwendung.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-aspnet-core-application.png)
 
-<span data-ttu-id="18fbe-118">**Abbildung 4–36**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-118">**Figure 4-36**.</span></span> <span data-ttu-id="18fbe-119">Erstellen einer ASP.NET Core-Anwendung</span><span class="sxs-lookup"><span data-stu-id="18fbe-119">Creating ASP.NET Core Application</span></span>
+<span data-ttu-id="19015-118">**Abbildung 4–35**.</span><span class="sxs-lookup"><span data-stu-id="19015-118">**Figure 4-35**.</span></span> <span data-ttu-id="19015-119">Erstellen einer ASP.NET Core-Webanwendung in Visual Studio 2019.</span><span class="sxs-lookup"><span data-stu-id="19015-119">Creating an ASP.NET Core Web Application in Visual Studio 2019.</span></span>
 
-<span data-ttu-id="18fbe-120">Wählen Sie zum Erstellen des Beispielprojekts in Visual Studio **Datei** > **Neu** > **Projekt** aus, und wählen Sie dann im linken Bereich die **Web**-Projekttypen aus, gefolgt von **ASP.NET Core-Webanwendung**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-120">To create the sample project in Visual Studio, select **File** > **New** > **Project**, select the **Web** project types in the left pane, followed by **ASP.NET Core Web Application**.</span></span>
+<span data-ttu-id="19015-120">Um das Beispielprojekt in Visual Studio zu erstellen, wählen Sie **Datei** > **Neu** > **Projekt** aus, wählen Sie den Projekttyp **Web** und dann die Vorlage **ASP.NET Core-Webanwendung** aus.</span><span class="sxs-lookup"><span data-stu-id="19015-120">To create the sample project in Visual Studio, select **File** > **New** > **Project**, select the **Web** project type and then the **ASP.NET Core Web Application** template.</span></span> <span data-ttu-id="19015-121">Sie können auch nach der Vorlage suchen, wenn Sie sie benötigen.</span><span class="sxs-lookup"><span data-stu-id="19015-121">You can also search for the template if you need it.</span></span>
 
-<span data-ttu-id="18fbe-121">Visual Studio listet Vorlagen für Webprojekte auf.</span><span class="sxs-lookup"><span data-stu-id="18fbe-121">Visual Studio lists templates for web projects.</span></span> <span data-ttu-id="18fbe-122">Wählen Sie für unser Beispiel **API** aus, um eine ASP.NET Web-API-Anwendung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="18fbe-122">For our example, select **API** to create an ASP.NET Web API Application.</span></span>
+<span data-ttu-id="19015-122">Geben Sie dann den Namen und den Speicherort der Anwendung wie in der nächsten Abbildung gezeigt ein.</span><span class="sxs-lookup"><span data-stu-id="19015-122">Then enter the application name and location as shown in the next image.</span></span>
 
-<span data-ttu-id="18fbe-123">Vergewissern Sie sich, dass Sie ASP.NET Core 2.2 als Framework ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="18fbe-123">Verify that you've selected ASP.NET Core 2.2 as the framework.</span></span> <span data-ttu-id="18fbe-124">.NET Core 2.2 ist in der letzten Version von Visual Studio 2017 enthalten und wird automatisch für Sie installiert und konfiguriert, wenn Sie Visual Studio 2017 installieren.</span><span class="sxs-lookup"><span data-stu-id="18fbe-124">.NET Core 2.2 is included in the last version of Visual Studio 2017 and is automatically installed and configured for you when you install Visual Studio 2017.</span></span>
+![Geben Sie den Projektnamen und den Speicherort ein.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/enter-project-name-and-location.png)
 
-![Visual Studio-Dialogfeld zum Auswählen des Typs einer ASP.NET Core-Webanwendung mit ausgewählter API-Option.](media/create-web-api-application.png)
+<span data-ttu-id="19015-124">**Abbildung 4–36**.</span><span class="sxs-lookup"><span data-stu-id="19015-124">**Figure 4-36**.</span></span> <span data-ttu-id="19015-125">Geben Sie den Projektnamen und den Speicherort in Visual Studio 2019 ein.</span><span class="sxs-lookup"><span data-stu-id="19015-125">Enter the project name and location in Visual Studio 2019.</span></span>
 
-<span data-ttu-id="18fbe-126">**Abbildung 4–37**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-126">**Figure 4-37**.</span></span> <span data-ttu-id="18fbe-127">Auswählen des Projekttyps ASP.NET CORE 2.2 und Web-API</span><span class="sxs-lookup"><span data-stu-id="18fbe-127">Selecting ASP.NET CORE 2.2 and Web API project type</span></span>
+<span data-ttu-id="19015-126">Vergewissern Sie sich, dass Sie ASP.NET Core 3.1 als Framework ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="19015-126">Verify that you've selected ASP.NET Core 3.1 as the framework.</span></span> <span data-ttu-id="19015-127">.NET Core 3.1 ist im neuesten Release von Visual Studio 2019 enthalten und wird automatisch für Sie installiert und konfiguriert, wenn Sie Visual Studio installieren.</span><span class="sxs-lookup"><span data-stu-id="19015-127">.NET Core 3.1 is included in the latest release of Visual Studio 2019 and is automatically installed and configured for you when you install Visual Studio.</span></span>
 
-<span data-ttu-id="18fbe-128">Wenn Sie über eine frühere Version von .NET Core verfügen, können Sie die Version 2.2 hier herunterladen und installieren: <https://dotnet.microsoft.com/download>.</span><span class="sxs-lookup"><span data-stu-id="18fbe-128">If you have any previous version of .NET Core, you can download and install the 2.2 version from <https://dotnet.microsoft.com/download>.</span></span>
+![Visual Studio-Dialogfeld zum Auswählen des Typs einer ASP.NET Core-Webanwendung mit ausgewählter API-Option.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-web-api-application.png)
 
-<span data-ttu-id="18fbe-129">Sie können Docker-Unterstützung beim Erstellen des Projekts oder später hinzufügen – Sie können Ihr Projekt also jederzeit „Dockern“.</span><span class="sxs-lookup"><span data-stu-id="18fbe-129">You can add Docker support when creating the project or afterwards, so you can "Dockerize" your project at any time.</span></span> <span data-ttu-id="18fbe-130">Um Docker-Unterstützung nach der Projekterstellung hinzuzufügen, klicken Sie mit der rechten Maustaste auf den Projektknoten im Projektmappen-Explorer, und wählen Sie im Kontextmenü **Hinzufügen** > **Docker-Unterstützung** aus.</span><span class="sxs-lookup"><span data-stu-id="18fbe-130">To add Docker support after project creation, right-click on the project node in Solution Explorer and select **Add** > **Docker support** on the context menu.</span></span>
+<span data-ttu-id="19015-129">**Abbildung 4–37**.</span><span class="sxs-lookup"><span data-stu-id="19015-129">**Figure 4-37**.</span></span> <span data-ttu-id="19015-130">Auswählen von ASP.NET Core 3.1 und des Projekttyps „Web-API“</span><span class="sxs-lookup"><span data-stu-id="19015-130">Selecting ASP.NET CORE 3.1 and Web API project type</span></span>
 
-![Kontextmenüoption zum Hinzufügen von Docker-Unterstützung zu einem vorhandenen Projekt: Mit der rechten Maustaste (auf dem Projekt) klicken > Hinzufügen > Docker-Unterstützung.](media/add-docker-support-to-project.png)
+<span data-ttu-id="19015-131">Beachten Sie, dass Docker-Unterstützung jetzt nicht aktiviert ist, um zu zeigen, dass dies nach der Projekterstellung erfolgen kann.</span><span class="sxs-lookup"><span data-stu-id="19015-131">Notice Docker support is not enabled now, just to show it can be done after project creation.</span></span>
 
-<span data-ttu-id="18fbe-132">**Abbildung 4–38**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-132">**Figure 4-38**.</span></span> <span data-ttu-id="18fbe-133">Hinzufügen von Docker-Unterstützung zu einem vorhandenen Projekt</span><span class="sxs-lookup"><span data-stu-id="18fbe-133">Adding Docker support to existing project</span></span>
+<span data-ttu-id="19015-132">Wenn Sie über eine frühere Version von .NET Core verfügen, können Sie Version 3.1 hier herunterladen und installieren: <https://dotnet.microsoft.com/download>.</span><span class="sxs-lookup"><span data-stu-id="19015-132">If you have any previous version of .NET Core, you can download and install the 3.1 version from <https://dotnet.microsoft.com/download>.</span></span>
 
-<span data-ttu-id="18fbe-134">Um das Hinzufügen von Docker-Unterstützung abzuschließen, können Sie Windows oder Linux auswählen.</span><span class="sxs-lookup"><span data-stu-id="18fbe-134">To complete adding Docker support, you can choose Windows or Linux.</span></span> <span data-ttu-id="18fbe-135">Wählen Sie in diesem Fall **Linux** aus, da AKS keine Windows-Container unterstützt (Stand: Ende 2018).</span><span class="sxs-lookup"><span data-stu-id="18fbe-135">In this case, select **Linux**, because AKS doesn't support Windows Containers (as of late 2018).</span></span>
+<span data-ttu-id="19015-133">Um zu zeigen, dass Sie das Projekt jederzeit „dockerisieren“ können, fügen Sie jetzt Docker-Unterstützung hinzu.</span><span class="sxs-lookup"><span data-stu-id="19015-133">To show you can "Dockerize" your project at any time, you'll add Docker support now.</span></span> <span data-ttu-id="19015-134">Klicken Sie also mit der rechten Maustaste im Projektmappen-Explorer auf den Projektknoten, und wählen Sie im Kontextmenü **Hinzufügen** > **Docker-Unterstützung** aus.</span><span class="sxs-lookup"><span data-stu-id="19015-134">So right-click on the project node in Solution Explorer and select **Add** > **Docker support** on the context menu.</span></span>
 
-![Optionsdialogfeld für die Auswahl des Betriebssystems für Dockerfile.](media/select-linux-docker-support.png)
+![Kontextmenüoption zum Hinzufügen von Docker-Unterstützung zu einem vorhandenen Projekt: Klicken Sie mit der rechten Maustaste (im Projekt) auf „Hinzufügen > Docker-Unterstützung“.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-docker-support-to-project.png)
 
-<span data-ttu-id="18fbe-137">**Abbildung 4–39**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-137">**Figure 4-39**.</span></span> <span data-ttu-id="18fbe-138">Auswählen von Linux-Containern.</span><span class="sxs-lookup"><span data-stu-id="18fbe-138">Selecting Linux containers.</span></span>
+<span data-ttu-id="19015-136">**Abbildung 4–38**.</span><span class="sxs-lookup"><span data-stu-id="19015-136">**Figure 4-38**.</span></span> <span data-ttu-id="19015-137">Hinzufügen von Docker-Unterstützung zu einem vorhandenen Projekt</span><span class="sxs-lookup"><span data-stu-id="19015-137">Adding Docker support to an existing project</span></span>
 
-<span data-ttu-id="18fbe-139">Mit diesen einfachen Schritten haben Sie festgelegt, dass Ihre ASP.NET Core 2.2-Anwendung in einem Linux-Container ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="18fbe-139">With these simple steps, you have your ASP.NET Core 2.2 application running on a Linux container.</span></span>
+<span data-ttu-id="19015-138">Um das Hinzufügen von Docker-Unterstützung abzuschließen, können Sie Windows oder Linux auswählen.</span><span class="sxs-lookup"><span data-stu-id="19015-138">To complete adding Docker support, you can choose Windows or Linux.</span></span> <span data-ttu-id="19015-139">Wählen Sie in diesem Fall **Linux** aus.</span><span class="sxs-lookup"><span data-stu-id="19015-139">In this case, select **Linux**.</span></span>
 
-<span data-ttu-id="18fbe-140">Wie Sie sehen können, ist die Integration von Visual Studio 2017 und Docker völlig auf die Produktivität des Entwicklers ausgelegt.</span><span class="sxs-lookup"><span data-stu-id="18fbe-140">As you can see, the integration between Visual Studio 2017 and Docker is totally oriented to the developer's productivity.</span></span>
+![Optionsdialogfeld für die Auswahl des Betriebssystems für Dockerfile.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-linux-docker-support.png)
 
-<span data-ttu-id="18fbe-141">Jetzt können Sie Ihre Anwendung mit der Taste **F5** oder der Schaltfläche **Wiedergabe** ausführen.</span><span class="sxs-lookup"><span data-stu-id="18fbe-141">Now you can run your application with the **F5** key or by using the **Play** button.</span></span>
+<span data-ttu-id="19015-141">**Abbildung 4–39**.</span><span class="sxs-lookup"><span data-stu-id="19015-141">**Figure 4-39**.</span></span> <span data-ttu-id="19015-142">Auswählen von Linux-Containern.</span><span class="sxs-lookup"><span data-stu-id="19015-142">Selecting Linux containers.</span></span>
 
-<span data-ttu-id="18fbe-142">Nach dem Ausführen des Projekts können Sie die Images mithilfe des Befehls `docker images` auflisten.</span><span class="sxs-lookup"><span data-stu-id="18fbe-142">After running the project, you can list the images using the `docker images` command.</span></span> <span data-ttu-id="18fbe-143">Sie sollten das Image `mssampleapplication` sehen, das von der automatischen Bereitstellung Ihres Projekts mit Visual Studio 2017 erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="18fbe-143">You should see the `mssampleapplication` image created by the automatic deployment of our project with Visual Studio 2017.</span></span>
+<span data-ttu-id="19015-143">Mit diesen einfachen Schritten haben Sie festgelegt, dass Ihre ASP.NET Core 3.1-Anwendung in einem Linux-Container ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="19015-143">With these simple steps, you have your ASP.NET Core 3.1 application running on a Linux container.</span></span>
+
+<span data-ttu-id="19015-144">In ähnlicher Weise können Sie auch ein sehr einfaches **WebApp**-Projekt (Abbildung 4-40) hinzufügen, um den Web-API-Endpunkt zu nutzen, auch wenn die Details hier nicht behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="19015-144">In a similar way, you can also add a very simple **WebApp** project (Figure 4-40) to consume the web API endpoint, although the details are not discussed here.</span></span>
+
+<span data-ttu-id="19015-145">Danach fügen Sie Orchestratorunterstützung für Ihr **WebApi**-Projekt hinzu, wie im Folgenden in Abbildung 4-40 dargestellt.</span><span class="sxs-lookup"><span data-stu-id="19015-145">After that, you add orchestrator support for your **WebApi** project as shown next, in image 4-40.</span></span>
+
+![Hinzufügen von Orchestratorunterstützung zum WebApi-Projekt](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-orchestrator-support.png)
+
+<span data-ttu-id="19015-147">**Abbildung 4–40**.</span><span class="sxs-lookup"><span data-stu-id="19015-147">**Figure 4-40**.</span></span> <span data-ttu-id="19015-148">Hinzufügen von Orchestratorunterstützung zum *WebApi*-Projekt.</span><span class="sxs-lookup"><span data-stu-id="19015-148">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="19015-149">Wenn Sie die Option `Docker Compose` auswählen, die für lokale Entwicklung gut geeignet ist, fügt Visual Studio das docker-compose-Projekt mit den docker-compose-Dateien hinzu, wie in Abbildung 4-41 gezeigt.</span><span class="sxs-lookup"><span data-stu-id="19015-149">When you choose the `Docker Compose` option, which is fine for local development, Visual Studio adds the docker-compose project, with the docker-compose files as shown in image 4-41.</span></span>
+
+![Docker-compose wurde der Projektmappe hinzugefügt](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/docker-compose-project-in-visual-studio.png)
+
+<span data-ttu-id="19015-151">**Abbildung 4–41**.</span><span class="sxs-lookup"><span data-stu-id="19015-151">**Figure 4-41**.</span></span> <span data-ttu-id="19015-152">Hinzufügen von Orchestratorunterstützung zum *WebApi*-Projekt.</span><span class="sxs-lookup"><span data-stu-id="19015-152">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="19015-153">Die ersten hinzugefügten Dateien ähneln den folgenden Dateien:</span><span class="sxs-lookup"><span data-stu-id="19015-153">The initial files added are similar to these ones:</span></span>
+
+`docker-compose.yml`
+
+```yml
+version: "3.4"
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+
+  webapp:
+    image: ${DOCKER_REGISTRY-}webapp
+    build:
+      context: .
+      dockerfile: WebApp/Dockerfile
+```
+
+`docker-compose.override.yml`
+
+```yml
+version: "3.4"
+
+services:
+  webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  webapp:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+```
+
+<span data-ttu-id="19015-154">Damit Sie die App mit Docker Compose ausführen können, müssen Sie nur einige Anpassungen an `docker-compose.override.yml` vornehmen.</span><span class="sxs-lookup"><span data-stu-id="19015-154">To have you app running with Docker Compose you just have to make a few tweaks to `docker-compose.override.yml`</span></span>
+
+```yml
+services:
+  webapi:
+    #...
+    ports:
+      - "51080:80"
+      - "51443:443"
+    #...
+  webapp:
+    environment:
+      #...
+      - WebApiBaseAddress=http://webapi
+    ports:
+      - "50080:80"
+      - "50443:443"
+    #...
+```
+
+<span data-ttu-id="19015-155">Jetzt können Sie Ihre Anwendung mit der Taste **F5** oder mit der Schaltfläche **Wiedergabe** oder der Tastenkombination **STRG+F5** ausführen und das docker-compose-Projekt auswählen, wie in Abbildung 4-42 gezeigt.</span><span class="sxs-lookup"><span data-stu-id="19015-155">Now you can run your application with **F5** key, or by using the **Play** button, or the **Ctrl+F5** key, selecting the docker-compose project, as shown in image 4-42.</span></span>
+
+![Ausführen des docker-compose-Projekts mit Visual Studio](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/running-docker-compose-with-visual-studio.png)
+
+<span data-ttu-id="19015-157">**Abbildung 4–42**.</span><span class="sxs-lookup"><span data-stu-id="19015-157">**Figure 4-42**.</span></span> <span data-ttu-id="19015-158">Hinzufügen von Orchestratorunterstützung zum *WebApi*-Projekt.</span><span class="sxs-lookup"><span data-stu-id="19015-158">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="19015-159">Wenn Sie die Anwendung „docker-vompose“ wie beschrieben ausführen, erhalten Sie folgendes Ergebnis:</span><span class="sxs-lookup"><span data-stu-id="19015-159">When running the docker-compose application as explained, you get:</span></span>
+
+1. <span data-ttu-id="19015-160">Die gemäß der docker-compose-Datei erstellten Images und Container.</span><span class="sxs-lookup"><span data-stu-id="19015-160">The images built and containers created as per the docker-compose file.</span></span>
+2. <span data-ttu-id="19015-161">Öffnen des Browsers in der Adresse, die im Dialogfeld „Eigenschaften“ für das `docker-compose`-Projekt konfiguriert ist.</span><span class="sxs-lookup"><span data-stu-id="19015-161">The browser open in the address configured in the "Properties" dialog for the `docker-compose` project.</span></span>
+3. <span data-ttu-id="19015-162">Öffnen des Fensters **Container** (in Visual Studio 2019, Version 16.4 oder höher).</span><span class="sxs-lookup"><span data-stu-id="19015-162">The **Container** window open (in Visual Studio 2019 version 16.4 and later).</span></span>
+4. <span data-ttu-id="19015-163">Debuggerunterstützung für alle Projekte in der Projektmappe, wie in den folgenden Abbildungen gezeigt.</span><span class="sxs-lookup"><span data-stu-id="19015-163">Debugger support for all projects in the solution, as shown in the following images.</span></span>
+
+<span data-ttu-id="19015-164">Geöffneter Browser:</span><span class="sxs-lookup"><span data-stu-id="19015-164">Browser opened:</span></span>
+
+![Browseransicht mit ausgeführter Web-App](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/browser-opened.png)
+
+<span data-ttu-id="19015-166">**Abbildung 4–43**.</span><span class="sxs-lookup"><span data-stu-id="19015-166">**Figure 4-43**.</span></span> <span data-ttu-id="19015-167">Browserfenster, in dem eine Anwendung für mehrere Container ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="19015-167">Browser window with an application running on multiple containers.</span></span>
+
+<span data-ttu-id="19015-168">Fenster „Container“:</span><span class="sxs-lookup"><span data-stu-id="19015-168">Containers window:</span></span>
+
+![Visual Studio-Fenster „Container“](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/visual-studio-containers-window.png)
+
+<span data-ttu-id="19015-170">**Abbildung 4–44**.</span><span class="sxs-lookup"><span data-stu-id="19015-170">**Figure 4-44**.</span></span> <span data-ttu-id="19015-171">Visual Studio-Fenster „Container“</span><span class="sxs-lookup"><span data-stu-id="19015-171">Visual Studio "Containers" window</span></span>
+
+<span data-ttu-id="19015-172">Über das Fenster **Container** können Sie ausgeführte Container, Umgebungsvariablen, Protokolle und Portzuordnungen anzeigen, verfügbare Images durchsuchen, das Dateisystem untersuchen, einen Debugger anfügen oder ein Terminalfenster in der Containerumgebung öffnen.</span><span class="sxs-lookup"><span data-stu-id="19015-172">The **Containers** window lets you view running containers, browse available images, view environment variables, logs, and port mappings, inspect the filesystem, attach a debugger, or open a terminal window inside the container environment.</span></span>
+
+<span data-ttu-id="19015-173">Wie Sie sehen können, ist die Integration von Visual Studio 2019 und Docker völlig auf die Produktivität des Entwicklers ausgelegt.</span><span class="sxs-lookup"><span data-stu-id="19015-173">As you can see, the integration between Visual Studio 2019 and Docker is completely oriented to the developer's productivity.</span></span>
+
+<span data-ttu-id="19015-174">Natürlich können Sie die Images auch mit dem Befehl `docker images` auflisten.</span><span class="sxs-lookup"><span data-stu-id="19015-174">Of course, you can also list the images using the `docker images` command.</span></span> <span data-ttu-id="19015-175">Sie sollten die Images `webapi` und `webapp` mit den `dev`-Tags sehen, die von der automatischen Bereitstellung Ihres Projekts mit Visual Studio 2019 erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="19015-175">You should see the `webapi` and `webapp` images with the `dev` tags created by the automatic deployment of our project with Visual Studio 2019.</span></span>
 
 ```console
 docker images
 ```
 
-![Konsolenausgabe des docker images-Befehls, eine Liste mit diesem Inhalt: Repository, Tag, Image-ID, Erstellungsdatum und Größe.](media/docker-images-command.png)
+![Konsolenausgabe des docker images-Befehls, eine Liste mit diesem Inhalt: Repository, Tag, Image-ID, Erstellungsdatum und Größe.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/docker-images-command.png)
 
-<span data-ttu-id="18fbe-145">**Abbildung 4–40**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-145">**Figure 4-40**.</span></span> <span data-ttu-id="18fbe-146">Ansicht von Docker-Images</span><span class="sxs-lookup"><span data-stu-id="18fbe-146">View of Docker images</span></span>
+<span data-ttu-id="19015-177">**Abbildung 4–45**.</span><span class="sxs-lookup"><span data-stu-id="19015-177">**Figure 4-45**.</span></span> <span data-ttu-id="19015-178">Ansicht von Docker-Images</span><span class="sxs-lookup"><span data-stu-id="19015-178">View of Docker images</span></span>
 
-## <a name="register-the-solution-in-the-azure-container-registry"></a><span data-ttu-id="18fbe-147">Registrieren der Projektmappe in der Azure Container Registry</span><span class="sxs-lookup"><span data-stu-id="18fbe-147">Register the Solution in the Azure Container Registry</span></span>
+## <a name="register-the-solution-in-an-azure-container-registry-acr"></a><span data-ttu-id="19015-179">Registrieren der Projektmappe in einer Azure Container Registry (ACR)</span><span class="sxs-lookup"><span data-stu-id="19015-179">Register the Solution in an Azure Container Registry (ACR)</span></span>
 
-<span data-ttu-id="18fbe-148">Laden Sie das Image in eine beliebige Docker-Registrierung hoch, wie etwa [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) oder Docker Hub, damit die Images aus dieser Registrierung auf dem AKS-Cluster bereitgestellt werden können.</span><span class="sxs-lookup"><span data-stu-id="18fbe-148">Upload the image to any Docker registry, like [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) or Docker Hub, so the images can be deployed to the AKS cluster from that registry.</span></span> <span data-ttu-id="18fbe-149">In diesem Fall wird das Image in Azure Container Registry hochgeladen.</span><span class="sxs-lookup"><span data-stu-id="18fbe-149">In this case, we're uploading the image to Azure Container Registry.</span></span>
+<span data-ttu-id="19015-180">Sie können die Images in [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) hochladen, aber Sie können auch Docker Hub oder eine andere Registrierung verwenden, sodass die Images aus dieser Registrierung im AKS-Cluster bereitgestellt werden können.</span><span class="sxs-lookup"><span data-stu-id="19015-180">You can upload the images to the [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/), but you could also use Docker Hub or any other registry, so the images can be deployed to the AKS cluster from that registry.</span></span>
 
-### <a name="create-the-image-in-release-mode"></a><span data-ttu-id="18fbe-150">Erstellen des Images im Releasemodus</span><span class="sxs-lookup"><span data-stu-id="18fbe-150">Create the image in Release mode</span></span>
+### <a name="create-an-acr-instance"></a><span data-ttu-id="19015-181">Erstellen einer ACR-Instanz</span><span class="sxs-lookup"><span data-stu-id="19015-181">Create an ACR instance</span></span>
 
-<span data-ttu-id="18fbe-151">Wir erstellen jetzt das Image im **Releasemodus** (für die Produktion bereit), indem wir zu **Release** wechseln, wie in Abbildung 4–41 dargestellt, und die Anwendung ausführen wie zuvor.</span><span class="sxs-lookup"><span data-stu-id="18fbe-151">We'll now create the image in **Release** mode (ready for production) by changing to **Release**, as shown in Figure 4-41, and running the application as we did before.</span></span>
+<span data-ttu-id="19015-182">Führen Sie den folgenden Befehl mit **az cli** aus:</span><span class="sxs-lookup"><span data-stu-id="19015-182">Run the following command from the **az cli**:</span></span>
 
-![Symbolleistenoption in Visual Studio zum Erstellen im Releasemodus.](media/select-release-mode.png)
-
-<span data-ttu-id="18fbe-153">**Abbildung 4–41**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-153">**Figure 4-41**.</span></span> <span data-ttu-id="18fbe-154">Auswählen des Releasemodus</span><span class="sxs-lookup"><span data-stu-id="18fbe-154">Selecting Release Mode</span></span>
-
-<span data-ttu-id="18fbe-155">Wenn Sie den Befehl `docker image` ausführen, sehen Sie, dass beide Images erstellt werden, eins für den `debug`- und das andere für den `release`-Modus.</span><span class="sxs-lookup"><span data-stu-id="18fbe-155">If you execute the `docker image` command, you'll see both images created, one for `debug` and the other for `release` mode.</span></span>
-
-### <a name="create-a-new-tag-for-the-image"></a><span data-ttu-id="18fbe-156">Erstellen eines neuen Tags für das Image</span><span class="sxs-lookup"><span data-stu-id="18fbe-156">Create a new Tag for the Image</span></span>
-
-<span data-ttu-id="18fbe-157">Jedes Containerimage muss mit dem `loginServer`-Namen der Registrierung gekennzeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="18fbe-157">Each container image needs to be tagged with the `loginServer` name of the registry.</span></span> <span data-ttu-id="18fbe-158">Dieses Tag wird beim Übertragen von Containerimages per Push in eine Imageregistrierung für das Routing verwendet.</span><span class="sxs-lookup"><span data-stu-id="18fbe-158">This tag is used for routing when pushing container images to an image registry.</span></span>
-
-<span data-ttu-id="18fbe-159">Sie können den Namen des `loginServer` im Azure-Portal anzeigen, indem Sie die Informationen aus der Azure Container Registry übernehmen.</span><span class="sxs-lookup"><span data-stu-id="18fbe-159">You can view the `loginServer` name from the Azure portal, taking the information from the Azure Container Registry</span></span>
-
-![Browseransicht des Namens in der Azure Container Registry rechts oben.](media/loginServer-name.png)
-
-<span data-ttu-id="18fbe-161">**Abbildung 4–42**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-161">**Figure 4-42**.</span></span> <span data-ttu-id="18fbe-162">Ansicht des Namens der Registry</span><span class="sxs-lookup"><span data-stu-id="18fbe-162">View of the name of the Registry</span></span>
-
-<span data-ttu-id="18fbe-163">Alternativ können Sie den folgenden Befehl ausführen:</span><span class="sxs-lookup"><span data-stu-id="18fbe-163">Or by running the following command:</span></span>
-
-```console
-az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
+```powershell
+az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
 
-![Konsolenausgabe des Befehls oben.](media/az-cli-loginServer-name.png)
+### <a name="create-the-image-in-release-mode"></a><span data-ttu-id="19015-183">Erstellen des Images im Releasemodus</span><span class="sxs-lookup"><span data-stu-id="19015-183">Create the image in Release mode</span></span>
 
-<span data-ttu-id="18fbe-165">**Abbildung 4–43**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-165">**Figure 4-43**.</span></span> <span data-ttu-id="18fbe-166">Rufen Sie den Namen der Registrierung mithilfe von PowerShell ab</span><span class="sxs-lookup"><span data-stu-id="18fbe-166">Get the name of the registry using PowerShell</span></span>
+<span data-ttu-id="19015-184">Sie erstellen jetzt das Image im **Releasemodus** (für die Produktion bereit), indem Sie zu **Release** wechseln, wie in Abbildung 4–46 dargestellt, und die Anwendung ausführen wie zuvor.</span><span class="sxs-lookup"><span data-stu-id="19015-184">You'll now create the image in **Release** mode (ready for production) by changing to **Release**, as shown in Figure 4-46, and running the application as you did before.</span></span>
 
-<span data-ttu-id="18fbe-167">In beiden Fällen erhalten Sie den Namen.</span><span class="sxs-lookup"><span data-stu-id="18fbe-167">In both cases, you'll obtain the name.</span></span> <span data-ttu-id="18fbe-168">In unserem Beispiel `mssampleacr.azurecr.io`.</span><span class="sxs-lookup"><span data-stu-id="18fbe-168">In our example, `mssampleacr.azurecr.io`.</span></span>
+![Symbolleistenoption in Visual Studio zum Erstellen im Releasemodus.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-release-mode.png)
 
-<span data-ttu-id="18fbe-169">Jetzt können Sie das Image mit einem Tag kennzeichnen, indem Sie für das aktuellste Image (das Releaseimage) diesen Befehl ausführen:</span><span class="sxs-lookup"><span data-stu-id="18fbe-169">Now you can tag the image, taking the latest image (the Release image), with the command:</span></span>
+<span data-ttu-id="19015-186">**Abbildung 4–46**.</span><span class="sxs-lookup"><span data-stu-id="19015-186">**Figure 4-46**.</span></span> <span data-ttu-id="19015-187">Auswählen des Releasemodus</span><span class="sxs-lookup"><span data-stu-id="19015-187">Selecting Release Mode</span></span>
 
-```console
-docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
-```
+<span data-ttu-id="19015-188">Wenn Sie den Befehl `docker images` ausführen, sehen Sie, dass beide Images erstellt werden, ein Image für den `debug`- (**Entwicklung**) und ein weiteres für den `release`-Modus (**neuestes Image**).</span><span class="sxs-lookup"><span data-stu-id="19015-188">If you execute the `docker images` command, you'll see both images created, one for `debug` (**dev**) and the other for `release` (**latest**) mode.</span></span>
 
-<span data-ttu-id="18fbe-170">Nach dem Ausführen des `docker tag`-Befehls können Sie die Images mit dem Befehl `docker images` auflisten, dann sollten Sie das Image mit dem neuen Tag sehen.</span><span class="sxs-lookup"><span data-stu-id="18fbe-170">After running the `docker tag` command, list the images with the `docker images` command, and you should see the image with the new tag.</span></span>
+### <a name="create-a-new-tag-for-the-image"></a><span data-ttu-id="19015-189">Erstellen eines neuen Tags für das Image</span><span class="sxs-lookup"><span data-stu-id="19015-189">Create a new Tag for the Image</span></span>
 
-![Konsolenausgabe des docker images-Befehls.](media/tagged-docker-images-list.png)
+<span data-ttu-id="19015-190">Jedes Containerimage muss mit dem `loginServer`-Namen der Registrierung gekennzeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="19015-190">Each container image needs to be tagged with the `loginServer` name of the registry.</span></span> <span data-ttu-id="19015-191">Dieses Tag wird beim Übertragen von Containerimages per Push in eine Imageregistrierung für das Routing verwendet.</span><span class="sxs-lookup"><span data-stu-id="19015-191">This tag is used for routing when pushing container images to an image registry.</span></span>
 
-<span data-ttu-id="18fbe-172">**Abbildung 4–44**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-172">**Figure 4-44**.</span></span> <span data-ttu-id="18fbe-173">Ansicht von mit Tags gekennzeichneten Images</span><span class="sxs-lookup"><span data-stu-id="18fbe-173">View of tagged images</span></span>
+<span data-ttu-id="19015-192">Sie können den Namen des `loginServer` im Azure-Portal anzeigen, indem Sie die Informationen aus der Azure Container Registry übernehmen.</span><span class="sxs-lookup"><span data-stu-id="19015-192">You can view the `loginServer` name from the Azure portal, taking the information from the Azure Container Registry</span></span>
 
-### <a name="push-the-image-into-the-azure-acr"></a><span data-ttu-id="18fbe-174">Pushen des Images in die Azure ACR</span><span class="sxs-lookup"><span data-stu-id="18fbe-174">Push the image into the Azure ACR</span></span>
+![Browseransicht des Namens in der Azure Container Registry rechts oben.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/loginServer-name.png)
 
-<span data-ttu-id="18fbe-175">Melden Sie sich bei der Azure Container Registry an.</span><span class="sxs-lookup"><span data-stu-id="18fbe-175">Log in to the Azure Container Registry</span></span>
+<span data-ttu-id="19015-194">**Abbildung 4–47**.</span><span class="sxs-lookup"><span data-stu-id="19015-194">**Figure 4-47**.</span></span> <span data-ttu-id="19015-195">Ansicht des Namens der Registry</span><span class="sxs-lookup"><span data-stu-id="19015-195">View of the name of the Registry</span></span>
 
-```console
-az acr login --name mssampleacr
-```
-
-<span data-ttu-id="18fbe-176">Übertragen Sie das Image mit dem folgenden Befehl per Push in die Azure ACR:</span><span class="sxs-lookup"><span data-stu-id="18fbe-176">Push the image into the Azure ACR, using the following command:</span></span>
+<span data-ttu-id="19015-196">Alternativ können Sie den folgenden Befehl ausführen:</span><span class="sxs-lookup"><span data-stu-id="19015-196">Or by running the following command:</span></span>
 
 ```console
-docker push mssampleacr.azurecr.io/mssampleaksapplication:v1
+az acr list --resource-group <resource-group-name> --query "[].{acrLoginServer:loginServer}" --output table
 ```
 
-<span data-ttu-id="18fbe-177">Dieser Befehl benötigt etwas Zeit zum Hochladen von Images, gibt Ihnen aber Feedback zum Verlauf.</span><span class="sxs-lookup"><span data-stu-id="18fbe-177">This command takes a while uploading the images but gives you feedback in the process.</span></span>
+![Konsolenausgabe des Befehls oben.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/az-cli-loginServer-name.png)
 
-![Konsolenausgabe des docker push-Befehls: Zeigt einen zeichenbasierten Verlaufsbalken für jede Schicht an.](media/uploading-image-to-acr.png)
+<span data-ttu-id="19015-198">**Abbildung 4–48**.</span><span class="sxs-lookup"><span data-stu-id="19015-198">**Figure 4-48**.</span></span> <span data-ttu-id="19015-199">Abrufen des Namens der Registrierung mit **az cli**</span><span class="sxs-lookup"><span data-stu-id="19015-199">Get the name of the registry using **az cli**</span></span>
 
-<span data-ttu-id="18fbe-179">**Abbildung 4–45**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-179">**Figure 4-45**.</span></span> <span data-ttu-id="18fbe-180">Hochladen des Images in die ACR</span><span class="sxs-lookup"><span data-stu-id="18fbe-180">Uploading the image to the ACR</span></span>
+<span data-ttu-id="19015-200">In beiden Fällen erhalten Sie den Namen.</span><span class="sxs-lookup"><span data-stu-id="19015-200">In both cases, you'll obtain the name.</span></span> <span data-ttu-id="19015-201">In unserem Beispiel `exploredocker.azurecr.io`.</span><span class="sxs-lookup"><span data-stu-id="19015-201">In our example, `exploredocker.azurecr.io`.</span></span>
 
-<span data-ttu-id="18fbe-181">Unten sehen Sie das Ergebnis, das Sie nach Abschluss des Prozesses erhalten sollten:</span><span class="sxs-lookup"><span data-stu-id="18fbe-181">You can see below the result you should get when the process completes:</span></span>
+<span data-ttu-id="19015-202">Jetzt können Sie das Image mit einem Tag kennzeichnen, indem Sie für das aktuellste Image (das Releaseimage) diesen Befehl ausführen:</span><span class="sxs-lookup"><span data-stu-id="19015-202">Now you can tag the image, taking the latest image (the Release image), with the command:</span></span>
 
-![Konsolenausgabe des docker push-Befehls nach dem Abschluss mit Anzeige aller Schichten oder Knoten.](media/uploading-docker-images-complete.png)
+```console
+docker tag <image-name>:latest <login-server-name>/<image-name>:v1
+```
 
-<span data-ttu-id="18fbe-183">**Abbildung 4–46**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-183">**Figure 4-46**.</span></span> <span data-ttu-id="18fbe-184">Ansicht von Knoten</span><span class="sxs-lookup"><span data-stu-id="18fbe-184">View of nodes</span></span>
+<span data-ttu-id="19015-203">Nach dem Ausführen des `docker tag`-Befehls können Sie die Images mit dem Befehl `docker images` auflisten, dann sollten Sie das Image mit dem neuen Tag sehen.</span><span class="sxs-lookup"><span data-stu-id="19015-203">After running the `docker tag` command, list the images with the `docker images` command, and you should see the image with the new tag.</span></span>
 
-<span data-ttu-id="18fbe-185">Der nächste Schritt besteht im Bereitstellen Ihres Containers in Ihrem AKS Kubernetes-Cluster.</span><span class="sxs-lookup"><span data-stu-id="18fbe-185">The next step is to deploy your container into your AKS Kubernetes cluster.</span></span> <span data-ttu-id="18fbe-186">Dazu benötigen Sie eine Datei (**YML-Bereitstellungsdatei**), die folgende Informationen enthält:</span><span class="sxs-lookup"><span data-stu-id="18fbe-186">For that, you need a file (**.yml deploy file**) that contains the following:</span></span>
+![Konsolenausgabe des docker images-Befehls.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/tagged-docker-images-list.png)
+
+<span data-ttu-id="19015-205">**Abbildung 4–49**.</span><span class="sxs-lookup"><span data-stu-id="19015-205">**Figure 4-49**.</span></span> <span data-ttu-id="19015-206">Ansicht von mit Tags gekennzeichneten Images</span><span class="sxs-lookup"><span data-stu-id="19015-206">View of tagged images</span></span>
+
+### <a name="push-the-image-into-the-azure-acr"></a><span data-ttu-id="19015-207">Pushen des Images in die Azure ACR</span><span class="sxs-lookup"><span data-stu-id="19015-207">Push the image into the Azure ACR</span></span>
+
+<span data-ttu-id="19015-208">Melden Sie sich bei der Azure Container Registry an.</span><span class="sxs-lookup"><span data-stu-id="19015-208">Log in to the Azure Container Registry</span></span>
+
+```console
+az acr login --name exploredocker
+```
+
+<span data-ttu-id="19015-209">Übertragen Sie das Image mit dem folgenden Befehl per Push in die Azure ACR:</span><span class="sxs-lookup"><span data-stu-id="19015-209">Push the image into the Azure ACR, using the following command:</span></span>
+
+```console
+docker push <login-server-name>/<image-name>:v1
+```
+
+<span data-ttu-id="19015-210">Dieser Befehl benötigt etwas Zeit zum Hochladen von Images, gibt Ihnen aber Feedback zum Verlauf.</span><span class="sxs-lookup"><span data-stu-id="19015-210">This command takes a while uploading the images but gives you feedback in the process.</span></span> <span data-ttu-id="19015-211">In der folgenden Abbildung sehen Sie, dass die Ausgabe eines Images abgeschlossen wurde und ein weiteres Image in Bearbeitung ist.</span><span class="sxs-lookup"><span data-stu-id="19015-211">In the following image you can see the output from one image completed and another in progress.</span></span>
+
+![Konsolenausgabe des docker push-Befehls.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/uploading-docker-images-complete.png)
+
+<span data-ttu-id="19015-213">**Abbildung 4-50**.</span><span class="sxs-lookup"><span data-stu-id="19015-213">**Figure 4-50**.</span></span> <span data-ttu-id="19015-214">Konsolenausgabe des push-Befehls.</span><span class="sxs-lookup"><span data-stu-id="19015-214">Console output from the push command.</span></span>
+
+<span data-ttu-id="19015-215">Um Ihre App mit mehreren Containern in Ihrem AKS-Cluster bereitzustellen, benötigen Sie einige `.yaml`-Manifestdateien, deren Eigenschaften größtenteils aus den `docker-compose.yml`- und `docker-compose.override.yml`-Dateien stammen.</span><span class="sxs-lookup"><span data-stu-id="19015-215">To deploy your multi-container app into your AKS cluster you need some manifest `.yaml` files that have, most of the properties taken from the `docker-compose.yml` and `docker-compose.override.yml` files.</span></span>
+
+#### `deploy-webapi.yml`
 
 ```yml
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mssamplesbook
+  name: webapi
+  labels:
+    app: weather-forecast
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      service: webapi
   template:
     metadata:
       labels:
-        app: mssample-kub-app
+        app: weather-forecast
+        service: webapi
     spec:
       containers:
-        - name: mssample-services-app
-          image: mssampleacr.azurecr.io/mssampleaksapplication:v1
+        - name: webapi
+          image: exploredocker.azurecr.io/webapi:v1
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-    name: mssample-kub-app
+  name: webapi
+  labels:
+    app: weather-forecast
+    service: webapi
 spec:
   ports:
-    - name: http-port
-      port: 80
+    - port: 80
       targetPort: 80
+      protocol: TCP
   selector:
-    app: mssample-kub-app
+    service: webapi
+```
+
+#### `deploy-webapp.yml`
+
+```yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels:
+    app: weather-forecast
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: webapp
+  template:
+    metadata:
+      labels:
+        app: weather-forecast
+        service: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: exploredocker.azurecr.io/webapp:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
+            - name: WebApiBaseAddress
+              value: http://webapi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+  labels:
+    app: weather-forecast
+    service: webapp
+spec:
   type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    service: webapp
 ```
 
 > [!NOTE]
-> <span data-ttu-id="18fbe-187">Weitere Informationen zur Bereitstellung mit Kubernetes finden Sie unter <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>.</span><span class="sxs-lookup"><span data-stu-id="18fbe-187">For more information on deployment with Kubernetes see: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span></span>
+> <span data-ttu-id="19015-216">Die vorherigen `.yml`-Dateien aktivieren nur die `HTTP`-Ports mithilfe des Parameters `ASPNETCORE_URLS`, um Probleme mit dem fehlenden Zertifikat in der Beispiel-App zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="19015-216">The previous `.yml` files only enable the `HTTP` ports, using the `ASPNETCORE_URLS` parameter, to avoid issues with the missing certificate in the sample app.</span></span>
 
-<span data-ttu-id="18fbe-188">Jetzt sind Sie fast zur Bereitstellung mit **Kubectl** bereit, zunächst müssen Sie jedoch die Anmeldeinformationen für den AKS-Cluster mit diesem Befehl abrufen:</span><span class="sxs-lookup"><span data-stu-id="18fbe-188">Now you're almost ready to deploy using **Kubectl**, but first you must get the credentials to the AKS Cluster with this command:</span></span>
+> [!TIP]
+> <span data-ttu-id="19015-217">Informationen zum Erstellen des AKS-Clusters für dieses Beispiel finden Sie in Abschnitt [**Bereitstellen für Azure Kubernetes Service (AKS)** ](deploy-azure-kubernetes-service.md) in diesem Handbuch.</span><span class="sxs-lookup"><span data-stu-id="19015-217">You can see how to create the AKS Cluster for this sample in section [**Deploy to Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) on this guide.</span></span>
 
-```console
-az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
-```
-
-![Konsolenausgabe des Befehls oben: Merge von „MSSampleK8Cluster“ als aktueller Kontext in „/root/.kube/config“](media/getting-aks-credentials.png)
-
-<span data-ttu-id="18fbe-190">**Abbildung 4–47**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-190">**Figure 4-47**.</span></span> <span data-ttu-id="18fbe-191">Abrufen von Anmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="18fbe-191">getting credentials</span></span>
-
-<span data-ttu-id="18fbe-192">Verwenden Sie anschließend den `kubectl create`-Befehl, um die Bereitstellung zu starten.</span><span class="sxs-lookup"><span data-stu-id="18fbe-192">Then, use the `kubectl create` command to launch the deployment.</span></span>
+<span data-ttu-id="19015-218">Jetzt sind Sie fast für die Bereitstellung mit **kubectl** bereit. Zunächst müssen Sie jedoch die Anmeldeinformationen aus dem AKS-Cluster mit diesem Befehl abrufen:</span><span class="sxs-lookup"><span data-stu-id="19015-218">Now you're almost ready to deploy using **kubectl**, but first you must get the credentials from the AKS Cluster with this command:</span></span>
 
 ```console
-kubectl create -f mssample-deploy.yml
+az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks
 ```
 
-![Konsolenausgabe des Befehls oben: „deployment ‚mssamplesbook‘ created.](media/kubectl-create-command.png)
+![Konsolenausgabe des Befehls oben: „explore-docker-aks“ als aktueller Kontext in „C:\Users\Miguel.kube\config“ gemergt](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/getting-aks-credentials.png)
 
-<span data-ttu-id="18fbe-195">**Abbildung 4–48**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-195">**Figure 4-48**.</span></span> <span data-ttu-id="18fbe-196">Bereitstellen in Kubernetes</span><span class="sxs-lookup"><span data-stu-id="18fbe-196">Deploy to Kubernetes</span></span>
+<span data-ttu-id="19015-220">**Abbildung 4-51**.</span><span class="sxs-lookup"><span data-stu-id="19015-220">**Figure 4-51**.</span></span> <span data-ttu-id="19015-221">Abrufen von Anmeldeinformationen aus AKS in die kubectl-Umgebung.</span><span class="sxs-lookup"><span data-stu-id="19015-221">Getting credentials from AKS into the kubectl environment.</span></span>
 
-<span data-ttu-id="18fbe-197">Wenn die Bereitstellung abgeschlossen ist, können Sie mit einem lokalen Proxy, auf den Sie zeitweilig mit diesem Befehl zugreifen können, auf die Kubernetes-Konsole zugreifen:</span><span class="sxs-lookup"><span data-stu-id="18fbe-197">When the deployment completes, you can access the Kubernetes console with a local proxy that you can temporally access with this command:</span></span>
+<span data-ttu-id="19015-222">Sie müssen dem AKS-Cluster außerdem das Pullen von Images aus ACR mithilfe dieses Befehls erlauben:</span><span class="sxs-lookup"><span data-stu-id="19015-222">You also have to allow the AKS cluster to pull images from the ACR, using this command:</span></span>
 
 ```console
-az aks browse --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
+az aks update --name explore-docker-aks --resource-group explore-docker-aks-rg --attach-acr exploredocker
 ```
 
-<span data-ttu-id="18fbe-198">Und greifen Sie auf die URL `http://127.0.0.1:8001` zu.</span><span class="sxs-lookup"><span data-stu-id="18fbe-198">And accessing the url `http://127.0.0.1:8001`.</span></span>
+<span data-ttu-id="19015-223">Die Ausführung des vorherigen Befehls kann einige Minuten dauern.</span><span class="sxs-lookup"><span data-stu-id="19015-223">The previous command might take a couple of minutes to complete.</span></span> <span data-ttu-id="19015-224">Verwenden Sie dann den Befehl `kubectl apply`, um die Bereitstellungen zu starten, und verwenden Sie anschließend `kubectl get all` get list, um die Clusterobjekte aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="19015-224">Then, use the `kubectl apply` command to launch the deployments, and then `kubectl get all` get list the cluster objects.</span></span>
 
-![Browseransicht des Kubernetes-Dashboards mit Bereitstellungen, Pods, Replikatsätzen und Diensten.](media/kubernetes-cluster-information.png)
+```console
+kubectl apply -f deploy-webapi.yml
+kubectl apply -f deploy-webapp.yml
 
-<span data-ttu-id="18fbe-200">**Abbildung 4–49**.</span><span class="sxs-lookup"><span data-stu-id="18fbe-200">**Figure 4-49**.</span></span> <span data-ttu-id="18fbe-201">Anzeigen von Kubernetes-Clusterinformationen</span><span class="sxs-lookup"><span data-stu-id="18fbe-201">View Kubernetes cluster information</span></span>
+kubectl get all
+```
 
-<span data-ttu-id="18fbe-202">Sie haben jetzt Ihre Anwendung auf Azure bereitgestellt und dazu einen Linux-Container und einen AKS Kubernetes-Cluster verwendet.</span><span class="sxs-lookup"><span data-stu-id="18fbe-202">Now you have your application deployed on Azure, using a Linux Container, and an AKS Kubernetes Cluster.</span></span> <span data-ttu-id="18fbe-203">Sie können auf Ihre App zugreifen, indem Sie zur öffentlichen IP-Adresse Ihres Diensts navigieren, die Sie im Azure-Portal abrufen können.</span><span class="sxs-lookup"><span data-stu-id="18fbe-203">You can access your app browsing to the public IP of your service, which you can get from the Azure portal.</span></span>
+![Konsolenausgabe der Befehle oben: Bereitstellungen angewendet.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/kubectl-apply-command.png)
+
+<span data-ttu-id="19015-227">**Abbildung 4-52**.</span><span class="sxs-lookup"><span data-stu-id="19015-227">**Figure 4-52**.</span></span> <span data-ttu-id="19015-228">Bereitstellung in Kubernetes</span><span class="sxs-lookup"><span data-stu-id="19015-228">Deployment to Kubernetes</span></span>
+
+<span data-ttu-id="19015-229">Sie müssen eine Weile warten, bis der Load Balancer die externe IP-Adresse abruft und mit `kubectl get services` prüft. Anschließend sollte die Anwendung unter dieser Adresse verfügbar sein, wie in der folgenden Abbildung gezeigt:</span><span class="sxs-lookup"><span data-stu-id="19015-229">You'll have to wait a while until the load balancer gets the external IP, checking with `kubectl get services`, and then the application should be available at that address, as shown in the next image:</span></span>
+
+![Browseransicht der in AKS bereitgestellten Anwendung](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/aks-deployed-application.png)
+
+<span data-ttu-id="19015-231">**Abbildung 4.53**.</span><span class="sxs-lookup"><span data-stu-id="19015-231">**Figure 4-53**.</span></span> <span data-ttu-id="19015-232">Bereitstellung in Kubernetes</span><span class="sxs-lookup"><span data-stu-id="19015-232">Deployment to Kubernetes</span></span>
+
+<span data-ttu-id="19015-233">Wenn die Bereitstellung abgeschlossen ist, können Sie mit einem lokalen Proxy über einen SSH-Tunnel auf die [Kubernetes-Webbenutzeroberfläche](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) zugreifen.</span><span class="sxs-lookup"><span data-stu-id="19015-233">When the deployment completes, you can access the [Kubernetes Web UI](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) with a local proxy, using an ssh tunnel.</span></span>
+
+<span data-ttu-id="19015-234">Zunächst müssen Sie eine ClusterRoleBinding mit dem folgenden Befehl erstellen:</span><span class="sxs-lookup"><span data-stu-id="19015-234">First you must create a ClusterRoleBinding with the following command:</span></span>
+
+```console
+kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
+```
+
+<span data-ttu-id="19015-235">Verwenden Sie dann diesen Befehl, um den Proxy zu starten:</span><span class="sxs-lookup"><span data-stu-id="19015-235">And then this command to start the proxy:</span></span>
+
+```console
+az aks browse --resource-group exploredocker-aks-rg --name explore-docker-aks
+```
+
+<span data-ttu-id="19015-236">Ein Browserfenster sollte unter `http://127.0.0.1:8001` mit einer Ansicht geöffnet werden, die der folgenden ähnelt:</span><span class="sxs-lookup"><span data-stu-id="19015-236">A browser window should open at `http://127.0.0.1:8001` with a view similar to this one:</span></span>
+
+![Browseransicht des Kubernetes-Dashboards mit Bereitstellungen, Pods, Replikatsätzen und Diensten.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/kubernetes-cluster-information.png)
+
+<span data-ttu-id="19015-238">**Abbildung 4-54**.</span><span class="sxs-lookup"><span data-stu-id="19015-238">**Figure 4-54**.</span></span> <span data-ttu-id="19015-239">Anzeigen von Kubernetes-Clusterinformationen</span><span class="sxs-lookup"><span data-stu-id="19015-239">View Kubernetes cluster information</span></span>
+
+<span data-ttu-id="19015-240">Nun verfügen Sie über Ihre ASP.NET Core Anwendung, die in Linux-Containern ausgeführt und in einem AKS-Cluster in Azure bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="19015-240">Now you have your ASP.NET Core application, running in Linux containers, and deployed to an AKS cluster on Azure.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="18fbe-204">Informationen zum Erstellen des AKS-Clusters für dieses Beispiel finden Sie in Abschnitt [**Bereitstellen für Azure Kubernetes Service (AKS)** ](deploy-azure-kubernetes-service.md) in diesem Handbuch.</span><span class="sxs-lookup"><span data-stu-id="18fbe-204">You can see how to create the AKS Cluster for this sample in section [**Deploy to Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) on this guide.</span></span>
+> <span data-ttu-id="19015-241">Weitere Informationen zur Bereitstellung mit Kubernetes finden Sie unter <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>.</span><span class="sxs-lookup"><span data-stu-id="19015-241">For more information on deployment with Kubernetes see: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span></span>
 
->[!div class="step-by-step"]
-><span data-ttu-id="18fbe-205">[Zurück](set-up-windows-containers-with-powershell.md)
->[Weiter](../docker-devops-workflow/index.md)</span><span class="sxs-lookup"><span data-stu-id="18fbe-205">[Previous](set-up-windows-containers-with-powershell.md)
+> [!div class="step-by-step"]
+> <span data-ttu-id="19015-242">[Zurück](set-up-windows-containers-with-powershell.md)
+> [Weiter](../docker-devops-workflow/index.md)</span><span class="sxs-lookup"><span data-stu-id="19015-242">[Previous](set-up-windows-containers-with-powershell.md)
 [Next](../docker-devops-workflow/index.md)</span></span>
