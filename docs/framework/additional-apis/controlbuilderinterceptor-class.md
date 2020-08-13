@@ -1,5 +1,5 @@
 ---
-title: Controlbuilderinterceptor-Klasse
+title: ControlBuilderInterceptor-Klasse
 ms.date: 08/11/2020
 api_name:
 - System.Web.Compilation.ControlBuilderInterceptor
@@ -9,14 +9,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 312d977f832d262b1bebc6638280b67b133babdf
-ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
+ms.openlocfilehash: 0cd7409deb9cb84783cfa70600999fa4b2a2d2e2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88084406"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187983"
 ---
-# <a name="controlbuilderinterceptor-class"></a>Controlbuilderinterceptor-Klasse
+# <a name="controlbuilderinterceptor-class"></a>ControlBuilderInterceptor-Klasse
 
 Mit der- `ControlBuilderInterceptor` Klasse kann der Kompilierungsprozess angepasst oder gesteuert werden.
 
@@ -57,8 +57,9 @@ Registrieren Sie den Interceptor Type mithilfe des `aspnet:20ControlBuilderInter
          value="Fabrikam.Interceptor, Fabrikam, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2b3831f2f2b744f7" />
   </appSettings>
 </configuration>
+```
 
-To retrieve the assembly-qualified name of a type, use the <xref:System.Type.AssemblyQualifiedName?displayProperty=nameWithType> property, as demonstrated in the following code.
+Um den durch die Assembly qualifizierten Namen eines Typs abzurufen, verwenden Sie die- <xref:System.Type.AssemblyQualifiedName?displayProperty=nameWithType> Eigenschaft, wie im folgenden Code gezeigt.
 
 ```csharp
 string assemblyQualifiedName = typeof(Fabrikam.Interceptor).AssemblyQualifiedName;
@@ -66,7 +67,7 @@ string assemblyQualifiedName = typeof(Fabrikam.Interceptor).AssemblyQualifiedNam
 
 Wenn die Interceptor Unterstützung vorhanden ist, interagiert der Kompilierungsprozess mit dem aufgelisteten Typ in der oben beschriebenen Weise. Wenn die Interceptor Unterstützung fehlt, wird die Anwendungs Einstellung ignoriert und hat keine Auswirkungen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 **Namespace:** System. Web. Compilation
 
