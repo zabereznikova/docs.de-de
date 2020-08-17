@@ -1,21 +1,19 @@
 ---
-title: Architektur Vergleich von ASP.net-Web Forms undBlazor
+title: Architektur Vergleich von ASP.net-Web Forms und Blazor
 description: Erfahren Sie, wie die Architekturen von ASP.net Web Forms und Blazor vergleichen.
 author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 51b114c842e131ad9b9a589bf5137a522e135082
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 9a8e78338aff53002647a10ed9007296e4682b5a
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267710"
 ---
-# <a name="architecture-comparison-of-aspnet-web-forms-and-blazor"></a>Architektur Vergleich von ASP.net-Web Forms undBlazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="architecture-comparison-of-aspnet-web-forms-and-no-locblazor"></a>Architektur Vergleich von ASP.net-Web Forms und Blazor
 
 Obwohl ASP.net Web Forms und Blazor viele ähnliche Konzepte aufweisen, gibt es Unterschiede bei der Funktionsweise. In diesem Kapitel werden die inneren Abläufe und Architekturen von ASP.net Web Forms und untersucht Blazor .
 
@@ -40,19 +38,19 @@ Steuerelemente auf einer Seite werden in der Regel auf dieselbe Seite zurückges
 
 ## Blazor
 
-Blazorist ein Client seitiges Webbenutzer Oberflächen-Framework, das in der Art von JavaScript-Front-End-Frameworks wie Angular oder reagieren ähnlich ist. Blazorbehandelt Benutzerinteraktionen und rendert die erforderlichen Aktualisierungen der Benutzeroberfläche. Blazorbasiert *nicht* auf einem Anforderungs-Antwort-Modell. Benutzerinteraktionen werden als Ereignisse behandelt, die sich nicht im Kontext einer bestimmten HTTP-Anforderung befinden.
+Blazor ist ein Client seitiges Webbenutzer Oberflächen-Framework, das in der Art von JavaScript-Front-End-Frameworks wie Angular oder reagieren ähnlich ist. Blazor behandelt Benutzerinteraktionen und rendert die erforderlichen Aktualisierungen der Benutzeroberfläche. Blazorbasiert *nicht* auf einem Anforderungs-Antwort-Modell. Benutzerinteraktionen werden als Ereignisse behandelt, die sich nicht im Kontext einer bestimmten HTTP-Anforderung befinden.
 
-BlazorApps bestehen aus einer oder mehreren Stamm Komponenten, die auf einer HTML-Seite gerendert werden.
+Blazor Apps bestehen aus einer oder mehreren Stamm Komponenten, die auf einer HTML-Seite gerendert werden.
 
-![BlazorKomponenten in HTML](./media/architecture-comparison/blazor-components-in-html.png)
+![::: NO-LOC (blazor)::: Components in HTML](./media/architecture-comparison/blazor-components-in-html.png)
 
 Die Art und Weise, wie der Benutzer angibt, wo Komponenten dargestellt werden sollen und wie die Komponenten dann für Benutzerinteraktionen miteinander verknüpft werden, ist das [Hostingmodell](hosting-models.md) .
 
 Blazor[Komponenten](components.md) sind .NET-Klassen, die eine wiederverwendbare Benutzeroberfläche darstellen. Jede Komponente behält ihren eigenen Zustand bei und gibt Ihre eigene Renderinglogik an, die das Rendering anderer Komponenten einschließen kann. Komponenten geben Ereignishandler für bestimmte Benutzerinteraktionen an, um den Status der Komponente zu aktualisieren.
 
-Nachdem eine Komponente ein Ereignis verarbeitet hat, wird Blazor die Komponente von gerendert und verfolgt, was sich in der gerenderten Ausgabe geändert hat. Komponenten werden nicht direkt in die Dokumentobjektmodell (DOM). Stattdessen werden Sie in einer Speicher internen Darstellung des DOM mit dem Namen dargestellt, `RenderTree` sodass Blazor die Änderungen nachverfolgt werden können. BlazorVergleicht die neu gerenderte Ausgabe mit der vorherigen Ausgabe, um einen Benutzeroberflächen diff zu berechnen, der dann effizient auf das DOM angewendet wird.
+Nachdem eine Komponente ein Ereignis verarbeitet hat, wird Blazor die Komponente von gerendert und verfolgt, was sich in der gerenderten Ausgabe geändert hat. Komponenten werden nicht direkt in die Dokumentobjektmodell (DOM). Stattdessen werden Sie in einer Speicher internen Darstellung des DOM mit dem Namen dargestellt, `RenderTree` sodass Blazor die Änderungen nachverfolgt werden können. Blazor Vergleicht die neu gerenderte Ausgabe mit der vorherigen Ausgabe, um einen Benutzeroberflächen diff zu berechnen, der dann effizient auf das DOM angewendet wird.
 
-![BlazorDOM-Interaktion](./media/architecture-comparison/blazor-dom-interaction.png)
+![::: NO-LOC (blazor)::: DOM-Interaktion](./media/architecture-comparison/blazor-dom-interaction.png)
 
 Komponenten können auch manuell angeben, dass Sie gerendert werden sollen, wenn sich Ihr Status außerhalb eines normalen Benutzeroberflächen Ereignisses ändert. Blazor verwendet eine `SynchronizationContext`-Eigenschaft, um einen einzelnen logischen Ausführungsthread zu erzwingen. Die Lebenszyklusmethoden einer Komponente und alle Ereignisrückrufe, die von Blazor ausgelöst werden, werden in dieser `SynchronizationContext`-Eigenschaft ausgeführt.
 

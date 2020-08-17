@@ -6,22 +6,20 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/19/2019
-ms.openlocfilehash: fc1f6f9420c7149b6e67123f2f68bef75667aa0c
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 714ba0be7c2014895a75250a47e6ce448863eb6c
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267788"
 ---
 # <a name="pages-routing-and-layouts"></a>Seiten, Routing und Layouts
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ASP.net Web Forms-apps bestehen aus Seiten, die in *aspx* -Dateien definiert sind. Die Adresse jeder Seite basiert auf dem physischen Dateipfad im Projekt. Wenn ein Browser eine Anforderung an die Seite sendet, wird der Inhalt der Seite auf dem Server dynamisch gerendert. Die renderingkonten sowohl für das HTML-Markup der Seite als auch für die zugehörigen Server Steuerelemente.
 
 In Blazor ist jede Seite in der App eine Komponente, die in der Regel in *einer Razor* -Datei mit einer oder mehreren angegebenen Routen definiert ist. Das Routing erfolgt größtenteils auf Clientseite, ohne eine bestimmte Server Anforderung einzubeziehen. Der Browser sendet zuerst eine Anforderung an die Stamm Adresse der app. Eine Stamm `Router` Komponente in der Blazor App behandelt dann abfangen-Navigationsanforderungen und Sie an die richtige Komponente.
 
-Blazorunterstützt auch *Deep Linking*. Eine Deep-Verknüpfung tritt auf, wenn der Browser eine Anforderung an eine bestimmte Route sendet, die nicht der Stamm der APP ist. Anforderungen für Deep-Links, die an den Server gesendet werden, werden an die APP weitergeleitet Blazor , die dann die Client seitige Clientseite an die richtige Komponente weiterleitet.
+Blazor unterstützt auch *Deep Linking*. Eine Deep-Verknüpfung tritt auf, wenn der Browser eine Anforderung an eine bestimmte Route sendet, die nicht der Stamm der APP ist. Anforderungen für Deep-Links, die an den Server gesendet werden, werden an die APP weitergeleitet Blazor , die dann die Client seitige Clientseite an die richtige Komponente weiterleitet.
 
 Eine einfache Seite in ASP.net-Web Forms kann das folgende Markup enthalten:
 
@@ -94,7 +92,7 @@ Um eine Seite in zu erstellen Blazor , erstellen Sie eine-Komponente und fügen 
 
 Der Routen Vorlagen Parameter ist erforderlich. Im Gegensatz zu ASP.net Web Forms wird die Route zu einer Blazor Komponente nicht von Ihrem Datei Speicherort abgeleitet (obwohl dies möglicherweise eine in der Zukunft hinzugefügte Funktion *ist* ).
 
-Die Syntax der Routen Vorlage ist die gleiche grundlegende Syntax, die für das Routing in ASP.net-Web Forms verwendet wird. Routen Parameter werden in der Vorlage mithilfe von geschweiften Klammern angegeben. Blazorbindet Routen Werte an Komponenten Parameter mit dem gleichen Namen (ohne Beachtung der Groß-/Kleinschreibung).
+Die Syntax der Routen Vorlage ist die gleiche grundlegende Syntax, die für das Routing in ASP.net-Web Forms verwendet wird. Routen Parameter werden in der Vorlage mithilfe von geschweiften Klammern angegeben. Blazor bindet Routen Werte an Komponenten Parameter mit dem gleichen Namen (ohne Beachtung der Groß-/Kleinschreibung).
 
 ```razor
 @page "/product/{id}"
@@ -156,9 +154,9 @@ protected void NavigateButton_Click(object sender, EventArgs e)
 }
 ```
 
-Das Zurückgeben einer Umleitungs Antwort ist in der Regel nicht möglich Blazor . Blazorverwendet kein Anforderungs-Antwort-Modell. Sie können Browser Navigation jedoch direkt wie bei JavaScript auslassen.
+Das Zurückgeben einer Umleitungs Antwort ist in der Regel nicht möglich Blazor . Blazor verwendet kein Anforderungs-Antwort-Modell. Sie können Browser Navigation jedoch direkt wie bei JavaScript auslassen.
 
-Blazorstellt einen `NavigationManager` Dienst bereit, der für folgende Aktionen verwendet werden kann:
+Blazor stellt einen `NavigationManager` Dienst bereit, der für folgende Aktionen verwendet werden kann:
 
 - Aktuelle Browser Adresse erhalten
 - Basisadresse erhalten

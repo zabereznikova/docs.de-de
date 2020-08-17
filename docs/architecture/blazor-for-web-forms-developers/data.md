@@ -6,26 +6,24 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 8bd326e6952708b2099c3a575d6811990335df17
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267593"
 ---
 # <a name="work-with-data"></a>Arbeiten mit Daten
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 Der Datenzugriff ist der Backbone einer ASP.net-Web Forms-app. Was geschieht mit diesen Daten, wenn Sie Formulare für das Web entwickeln? Mit Web Forms gab es mehrere Datenzugriffs Techniken, die Sie verwenden können, um mit einer Datenbank zu interagieren:
 
-- Datenquellen
+- Projektmappen-Explorer
 - ADO.NET
 - Entity Framework
 
 Datenquellen waren Steuerelemente, die Sie auf einer Web Forms Seite platzieren und wie andere Steuerelemente konfigurieren können. Visual Studio bot einen benutzerfreundlichen Satz von Dialogfeldern, mit denen die Steuerelemente konfiguriert und an Ihre Web Forms Seiten gebunden werden können. Entwickler, die einen "niedrigen Code"-oder "No-Code"-Ansatz nutzen, bevorzugten diese Technik, als Web Forms erstmals veröffentlicht wurde.
 
-![Datenquellen](media/data/datasources.png)
+![Projektmappen-Explorer](media/data/datasources.png)
 
 ADO.net ist der Ansatz auf niedriger Ebene für die Interaktion mit einer-Datenbank. Ihre apps können eine Verbindung mit der Datenbank mit Befehlen, Recordsets und Datasets für die Interaktion herstellen. Die Ergebnisse können dann ohne großen Code an Felder auf dem Bildschirm gebunden werden. Der Nachteil dieses Ansatzes bestand darin, dass jeder Satz von ADO.NET-Objekten ( `Connection` , `Command` und `Recordset` ) an Bibliotheken gebunden wurde, die von einem Datenbankanbieter bereitgestellt werden. Durch die Verwendung dieser Komponenten wurde der Code starr und schwer zu einer anderen Datenbank migriert.
 
@@ -57,8 +55,8 @@ public class Product
 Das Produkt verfügt über einen Primärschlüssel und drei zusätzliche Felder, die in der Datenbank erstellt werden:  
 
 - EF identifiziert die `Id` Eigenschaft gemäß der Konvention als Primärschlüssel.
-- `Name`wird in einer Spalte gespeichert, die für die Text Speicherung konfiguriert ist. Das `[Required]` Attribut, das diese Eigenschaft schmückt, fügt eine `not null` Einschränkung hinzu, um dieses deklarierte Verhalten der Eigenschaft zu erzwingen.
-- `Description`wird in einer Spalte gespeichert, die für die Text Speicherung konfiguriert ist, und kann eine maximale Länge von 4000 Zeichen aufweisen, die vom-Attribut vorgegeben wird `[MaxLength]` . Das Datenbankschema wird mit einer Spalte namens konfiguriert, die den- `MaxLength` Datentyp verwendet `varchar(4000)` .
+- `Name` wird in einer Spalte gespeichert, die für die Text Speicherung konfiguriert ist. Das `[Required]` Attribut, das diese Eigenschaft schmückt, fügt eine `not null` Einschränkung hinzu, um dieses deklarierte Verhalten der Eigenschaft zu erzwingen.
+- `Description` wird in einer Spalte gespeichert, die für die Text Speicherung konfiguriert ist, und kann eine maximale Länge von 4000 Zeichen aufweisen, die vom-Attribut vorgegeben wird `[MaxLength]` . Das Datenbankschema wird mit einer Spalte namens konfiguriert, die den- `MaxLength` Datentyp verwendet `varchar(4000)` .
 - Die `Price` Eigenschaft wird als Währung gespeichert. Das- `[Range]` Attribut generiert geeignete Einschränkungen, um die Datenspeicherung außerhalb der deklarierten Mindest-und Höchstwerte zu verhindern.
 
 Wir müssen diese `Product` Klasse einer Daten Bank Kontext Klasse hinzufügen, die die Verbindungs-und Übersetzungs Vorgänge mit unserer Datenbank definiert.

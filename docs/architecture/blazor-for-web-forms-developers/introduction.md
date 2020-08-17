@@ -7,16 +7,14 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 8ef2c7d66d50abb34e536b6333e3aa68ee2bb07d
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a5aae6cf02ccec84ac8642b6ce8d9c919755e868
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267567"
 ---
-# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Eine Einführung zu Blazor für ASP.net Web Forms-Entwicklern
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="an-introduction-to-no-locblazor-for-aspnet-web-forms-developers"></a>Eine Einführung zu Blazor für ASP.net Web Forms-Entwicklern
 
 Das ASP.net-Web Forms Framework war eine Grundvoraussetzung für die .net-Webentwicklung seit dem ersten .NET Framework in 2002. Wenn sich das Web immer noch in seiner Kindheit befand, haben ASP.net Web Forms die einfache und produktive Erstellung von Web-Apps erleichtert, indem viele der Muster übernommen wurden, die für die Desktop Entwicklung verwendet wurden. In ASP.net Web Forms können Webseiten schnell aus wiederverwendbaren UI-Steuerelementen zusammengesetzt werden. Benutzerinteraktionen werden auf natürliche Weise als Ereignisse behandelt. Es gibt ein umfassendes Ökosystem von Web Forms UI-Steuerelementen, die von Microsoft-und Steuerungs Anbietern bereitgestellt werden. Die-Steuerelemente erleichtern das Herstellen von Verbindungen mit Datenquellen und das Anzeigen von umfangreichen Datenvisualisierungen. Beim visuellen Element stellt der Web Forms-Designer eine einfache Drag & Drop-Schnittstelle zum Verwalten von Steuerelementen bereit.
 
@@ -49,21 +47,21 @@ Es ist jedoch ein anderer Trend zu berücksichtigen, und das ist die Umstellung 
 
 Alle. NET-basierte Webframe Works, einschließlich ASP.net-Web Forms, haben in der Vergangenheit eine gemeinsame Funktion: Sie sind *Server gerendert*. In vom Server gerenderten Web-Apps sendet der Browser eine Anforderung an den Server, der Code (.NET-Code in ASP.net-apps) ausführt, um eine Antwort zu erhalten. Diese Antwort wird zurück an den Browser gesendet, der verarbeitet werden soll. In diesem Modell wird der Browser als Thin Rendering-Engine verwendet. Die harte Arbeit bei der Erstellung der Benutzeroberfläche, beim Ausführen der Geschäftslogik und beim Verwalten des Zustands tritt auf dem Server auf.
 
-Browser werden jedoch zu vielseitiger Plattformen. Sie implementieren eine ständig steigende Anzahl offener Webstandards, die den Zugriff auf die Funktionen des Computers des Benutzers ermöglichen. Warum können Sie die Rechenleistung, den Speicher, den Arbeitsspeicher und andere Ressourcen des Client Geräts nicht nutzen? Insbesondere Interaktionen mit der Benutzeroberfläche können von einem umfassenderen und interaktiven Gefühl profitieren, wenn Sie mindestens teilweise oder vollständig Client seitig behandelt werden. Logik und Daten, die auf dem Server behandelt werden sollen, können weiterhin serverseitig verarbeitet werden. Web-API-Aufrufe oder sogar über echt Zeitprotokolle, wie z. b. websockets, können verwendet werden. Diese Vorteile stehen Webentwicklern kostenlos zur Verfügung, wenn Sie bereit sind, JavaScript zu schreiben. Client seitige Benutzeroberflächen-Frameworks wie Angular, reagieren und Vue vereinfachen die Client seitige Webentwicklung und sind immer beliebter geworden. ASP.net Web Forms Entwickler können auch von der Nutzung des Clients profitieren und sogar über integrierte JavaScript-Frameworks wie ASP.NET AJAX verfügen.
+Browser werden jedoch zu vielseitiger Plattformen. Sie implementieren eine ständig steigende Anzahl offener Webstandards, die den Zugriff auf die Funktionen des Computers des Benutzers ermöglichen. Warum können Sie die Rechenleistung, den Speicher, den Arbeitsspeicher und andere Ressourcen des Client Geräts nicht nutzen? Insbesondere Interaktionen mit der Benutzeroberfläche können von einem umfassenderen und interaktiven Gefühl profitieren, wenn Sie mindestens teilweise oder vollständig Client seitig behandelt werden. Logik und Daten, die auf dem Server behandelt werden sollen, können weiterhin serverseitig verarbeitet werden. Web-API-Aufrufe oder sogar echt Zeitprotokolle, wie z. b. websockets, können verwendet werden. Diese Vorteile stehen Webentwicklern kostenlos zur Verfügung, wenn Sie bereit sind, JavaScript zu schreiben. Client seitige Benutzeroberflächen-Frameworks wie Angular, reagieren und Vue vereinfachen die Client seitige Webentwicklung und sind immer beliebter geworden. ASP.net Web Forms Entwickler können auch von der Nutzung des Clients profitieren und sogar über integrierte JavaScript-Frameworks wie ASP.NET AJAX verfügen.
 
 Das Bridging von zwei verschiedenen Plattformen und Ökosystemen (.net und JavaScript) ist jedoch mit Kosten verbunden. Das Fachwissen ist in zwei parallelen Welten mit unterschiedlichen Sprachen, Frameworks und Tools erforderlich. Code und Logik können nicht einfach zwischen Client und Server freigegeben werden, was zu Duplizierung und Engineering-Aufwand führt. Es kann auch schwierig sein, mit dem JavaScript-Ökosystem Schritt zu halten, das den Verlauf der Entwicklung mit Break-Break-Geschwindigkeit hat. Das Front-End-Framework und die buildtooleinstellungen ändern sich schnell. Die Branche hat den Fortschritt von grunt zu Gulp zu WebPack und so weiter beobachtet. Die gleiche fehlerlose Abwanderung ist bei Front-End-Frameworks wie jQuery, Knockout, Angular, reagieren und Vue aufgetreten. Aber angesichts des Browser Monopols von JavaScript gab es kaum eine Auswahl. Das heißt, bis die webrolle vereint ist und ein *Wunder* ausgelöst hat!
 
-## <a name="webassembly-fulfills-a-need"></a>WebAssemblyerfüllt einen Bedarf
+## <a name="no-locwebassembly-fulfills-a-need"></a>WebAssembly erfüllt einen Bedarf
 
-In 2015 haben die Haupt Browserhersteller die Erzwingung in einer W3C-Community-Gruppe erzwungen, um einen neuen geöffneten Webstandard namens zu erstellen WebAssembly . WebAssemblyist ein Bytecode für das Web. Wenn Sie den Code in kompilieren können WebAssembly , kann er in einem beliebigen Browser auf jeder beliebigen Plattform mit nahezu nativer Geschwindigkeit ausgeführt werden. Erste Bemühungen mit Schwerpunkt auf C/C++. Das Ergebnis war eine dramatische Demonstration der Ausführung nativer 3D-Grafikmodule direkt im Browser ohne Plug-ins. WebAssemblywurde seit standardisiert und von allen wichtigen Browsern implementiert.
+In 2015 haben die Haupt Browserhersteller die Erzwingung in einer W3C-Community-Gruppe erzwungen, um einen neuen geöffneten Webstandard namens zu erstellen WebAssembly . WebAssembly ist ein Bytecode für das Web. Wenn Sie den Code in kompilieren können WebAssembly , kann er in einem beliebigen Browser auf jeder beliebigen Plattform mit nahezu nativer Geschwindigkeit ausgeführt werden. Erste Bemühungen mit Schwerpunkt auf C/C++. Das Ergebnis war eine dramatische Demonstration der Ausführung nativer 3D-Grafikmodule direkt im Browser ohne Plug-ins. WebAssembly wurde seit standardisiert und von allen wichtigen Browsern implementiert.
 
 Die Ausführung von .net unter WebAssembly wurde in späterer 2017 angekündigt, und es wird erwartet, dass Sie 2020, einschließlich der Unterstützung von .net 5, ausgeliefert werden. Die Möglichkeit, .NET-Code direkt im Browser auszuführen, ermöglicht eine vollständige Webentwicklung mit .net.
 
-## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: vollständige Stapel-Webentwicklung mit .net
+## <a name="no-locblazor-full-stack-web-development-with-net"></a>Blazor: vollständige Stapel-Webentwicklung mit .net
 
-Die Möglichkeit, .NET-Code in einem Browser auszuführen, bietet keine End-to-End-Umgebung zum Erstellen von Client seitigen Web-Apps. Das ist der Ort, an dem sich befindet Blazor . Blazorist ein Client seitiges Webbenutzer Oberflächen-Framework, das auf c# anstelle von JavaScript basiert. Blazorkann direkt im Browser über ausgeführt werden WebAssembly . Es sind keine Browser-Plug-Ins erforderlich. Alternativ Blazor können apps serverseitig auf .net Core ausführen und alle Benutzerinteraktionen über eine Echtzeitverbindung mit dem Browser verarbeiten.
+Die Möglichkeit, .NET-Code in einem Browser auszuführen, bietet keine End-to-End-Umgebung zum Erstellen von Client seitigen Web-Apps. Das ist der Ort, an dem sich befindet Blazor . Blazor ist ein clientseitiges Framework für Webbenutzeroberflächen, das auf C# anstelle von JavaScript basiert. Blazor kann direkt im Browser über ausgeführt werden WebAssembly . Es sind keine Browser-Plug-Ins erforderlich. Alternativ Blazor können apps serverseitig auf .net Core ausführen und alle Benutzerinteraktionen über eine Echtzeitverbindung mit dem Browser verarbeiten.
 
-Blazorbietet hervorragend Unterstützung für Tools in Visual Studio und Visual Studio Code. Das Framework umfasst auch ein vollständiges UI-Komponentenmodell und verfügt über integrierte Funktionen für:
+Blazor bietet hervorragend Unterstützung für Tools in Visual Studio und Visual Studio Code. Das Framework umfasst auch ein vollständiges UI-Komponentenmodell und verfügt über integrierte Funktionen für:
 
 - Formulare und Überprüfung
 - Dependency Injection
@@ -72,7 +70,7 @@ Blazorbietet hervorragend Unterstützung für Tools in Visual Studio und Visual 
 - Debuggen im Browser
 - JavaScript-Interoperabilität
 
-Blazorhat viele Gemeinsamkeiten bei ASP.net-Web Forms. Beide Frameworks bieten komponentenbasierte, ereignisgesteuerte, Zustands behaftete UI-Programmier Modelle. Der wesentliche Unterschied bei der Architektur besteht darin, dass ASP.net Web Forms nur auf dem Server ausgeführt wird. Blazorkann auf dem Client im Browser ausgeführt werden. Wenn Sie jedoch von einem ASP.net-Web Forms Hintergrund kommen, gibt es viele Möglichkeiten, Blazor die Ihnen vertraut sind. Blazorist eine natürliche Lösung für ASP.net Web Forms-Entwicklern, die eine Möglichkeit zum Nutzen der Client seitigen Entwicklung und der plattformübergreifenden Open Source-Entwicklung von .net suchen.
+Blazor hat viele Gemeinsamkeiten bei ASP.net-Web Forms. Beide Frameworks bieten komponentenbasierte, ereignisgesteuerte, Zustands behaftete UI-Programmier Modelle. Der wesentliche Unterschied bei der Architektur besteht darin, dass ASP.net Web Forms nur auf dem Server ausgeführt wird. Blazor kann auf dem Client im Browser ausgeführt werden. Wenn Sie jedoch von einem ASP.net-Web Forms Hintergrund kommen, gibt es viele Möglichkeiten, Blazor die Ihnen vertraut sind. Blazor ist eine natürliche Lösung für ASP.net Web Forms-Entwicklern, die eine Möglichkeit zum Nutzen der Client seitigen Entwicklung und der plattformübergreifenden Open Source-Entwicklung von .net suchen.
 
 Dieses Buch bietet eine Einführung in Blazor , was speziell für ASP.net Web Forms-Entwicklern berücksichtigt wird. Jedes Blazor Konzept wird im Kontext von Analog ASP.net Web Forms Features und Verfahren dargestellt. Am Ende dieses Buchs haben Sie Folgendes Verständnis:
 
@@ -81,7 +79,7 @@ Dieses Buch bietet eine Einführung in Blazor , was speziell für ASP.net Web Fo
 - BlazorBezieht sich auf .net Core.
 - Angemessene Strategien für die Migration vorhandener ASP.net-Web Forms-apps zu nach Blazor Bedarf.
 
-## <a name="get-started-with-blazor"></a>Erste Schritte mit Blazor
+## <a name="get-started-with-no-locblazor"></a>Erste Schritte mit Blazor
 
 Der Einstieg in Blazor ist einfach. Wechseln Sie zu, <https://blazor.net> und befolgen Sie die Links, um die entsprechenden .net Core SDK und Blazor Projektvorlagen zu installieren. Außerdem finden Sie Anweisungen zum Einrichten der Tools Blazor in Visual Studio oder Visual Studio Code.
 

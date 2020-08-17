@@ -4,16 +4,14 @@ description: Lernen Sie verschiedene Ansätze zum Verwalten des Zustands in ASP.
 author: csharpfritz
 ms.author: jefritz
 ms.date: 05/15/2020
-ms.openlocfilehash: bac2f00330113725f09259ca31bdf857a8769f24
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2ca811f886c6a245ac16c2bd66a68ff16e5bfc44
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267723"
 ---
 # <a name="state-management"></a>Zustandsverwaltung
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Die Zustands Verwaltung ist ein wichtiges Konzept für Web Forms Anwendungen, das durch den Ansichts Zustand, den Sitzungszustand, den Anwendungs Zustand und die Post Back Funktionen ermöglicht wird. Diese Zustands behafteten Features des Frameworks trugen dazu bei, die für eine Anwendung erforderliche Zustands Verwaltung zu verbergen und Anwendungsentwicklern den Schwerpunkt auf die Bereitstellung ihrer Funktionalität zu geben. Mit ASP.net Core und blazor wurden einige dieser Features verschoben, und einige dieser Features wurden vollständig entfernt. In diesem Kapitel wird erläutert, wie Sie den Status verwalten und die gleichen Funktionen mit den neuen Funktionen in blazor bereitzustellen.
 
@@ -84,8 +82,8 @@ Das `MyApplicationState` Objekt wird nur einmal auf dem Server erstellt, und der
 
 Anwendungsdaten können auch auf der Clientseite auf dem Gerät des Benutzers gespeichert werden, sodass Sie später verfügbar ist. Es gibt zwei Browserfunktionen, die die Persistenz von Daten in verschiedenen Bereichen des Browsers des Benutzers ermöglichen:
 
-- `localStorage`: der Bereich des gesamten Browsers des Benutzers. Wenn die Seite erneut geladen wird, wird der Browser geschlossen und erneut geöffnet, oder eine andere Registerkarte mit derselben URL wird `localStorage` vom Browser bereitgestellt.
-- `sessionStorage`-Bereich der aktuellen Browser Registerkarte des Benutzers. Wenn die Registerkarte erneut geladen wird, bleibt der Zustand erhalten. Wenn der Benutzer jedoch eine weitere Registerkarte für die Anwendung öffnet oder den Browser schließt und erneut öffnet, geht der Status verloren.
+- `localStorage` : der Bereich des gesamten Browsers des Benutzers. Wenn die Seite erneut geladen wird, wird der Browser geschlossen und erneut geöffnet, oder eine andere Registerkarte mit derselben URL wird `localStorage` vom Browser bereitgestellt.
+- `sessionStorage` -Bereich der aktuellen Browser Registerkarte des Benutzers. Wenn die Registerkarte erneut geladen wird, bleibt der Zustand erhalten. Wenn der Benutzer jedoch eine weitere Registerkarte für die Anwendung öffnet oder den Browser schließt und erneut öffnet, geht der Status verloren.
 
 Sie können benutzerdefinierten JavaScript-Code schreiben, um mit diesen Features zu interagieren, oder es gibt eine Reihe von nuget-Paketen, die Sie verwenden können, um diese Funktionalität bereitzustellen. Eines dieser Pakete ist [Microsoft. aspnetcore. protectedbrowserstorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage).
 

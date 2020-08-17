@@ -4,16 +4,14 @@ description: Erfahren Sie, wie Sie die Start Logik für Ihre APP definieren.
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: 3d460750c36f64b8ad343755bd63b47af5c310d9
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267697"
 ---
 # <a name="app-startup"></a>App-Start
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Anwendungen, die für ASP.NET geschrieben werden, verfügen in der Regel über eine `global.asax.cs` Datei, in der das `Application_Start` Ereignis definiert ist, das steuert, welche Dienste für HTML-Rendering und .NET-Verarbeitung zur Verfügung gestellt werden. In diesem Kapitel wird erläutert, wie sich die Dinge bei ASP.net Core-und blazor-Server geringfügig unterscheiden.
 
@@ -21,10 +19,10 @@ Anwendungen, die für ASP.NET geschrieben werden, verfügen in der Regel über e
 
 Die standardmäßige Web Forms- `Application_Start` Methode wurde im Laufe der Zeit über Jahre erweitert, um viele Konfigurationsaufgaben zu verarbeiten.  Ein neues Web Forms-Projekt mit der Standardvorlage in Visual Studio 2019 enthält jetzt die folgende Konfigurations Logik:
 
-- `RouteConfig`-Anwendungs-URL-Routing
-- `BundleConfig`-CSS und JavaScript-Bündelung und-Minimierung
+- `RouteConfig` -Anwendungs-URL-Routing
+- `BundleConfig` -CSS und JavaScript-Bündelung und-Minimierung
 
-Jede dieser einzelnen Dateien befindet sich im `App_Start` Ordner und wird nur einmal am Anfang der Anwendung ausgeführt.  `RouteConfig`Fügt in der Standard Projektvorlage den `FriendlyUrlSettings` für Web Forms hinzu, damit Anwendungs-URLs die Dateierweiterung weglassen können `.ASPX` .  Die Standardvorlage enthält auch eine-Direktive, die permanente http-Umleitungs Statuscodes (http 301) für die `.ASPX` Seiten an die Friendly URL mit dem Dateinamen bereitstellt, der die Erweiterung auslässt.
+Jede dieser einzelnen Dateien befindet sich im `App_Start` Ordner und wird nur einmal am Anfang der Anwendung ausgeführt.  `RouteConfig` Fügt in der Standard Projektvorlage den `FriendlyUrlSettings` für Web Forms hinzu, damit Anwendungs-URLs die Dateierweiterung weglassen können `.ASPX` .  Die Standardvorlage enthält auch eine-Direktive, die permanente http-Umleitungs Statuscodes (http 301) für die `.ASPX` Seiten an die Friendly URL mit dem Dateinamen bereitstellt, der die Erweiterung auslässt.
 
 Mit ASP.net Core und blazor werden diese Methoden entweder vereinfacht und in der-Klasse konsolidiert, `Startup` oder Sie werden zugunsten gängiger Webtechnologien eliminiert.
 

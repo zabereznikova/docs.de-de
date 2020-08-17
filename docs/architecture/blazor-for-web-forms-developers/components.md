@@ -1,25 +1,23 @@
 ---
-title: Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mitBlazor
+title: Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit Blazor
 description: Erfahren Sie, wie Sie wiederverwendbare UI-Komponenten mit erstellen Blazor und wie Sie mit ASP.net-Web Forms Steuerelementen vergleichen.
 author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 9577fc916bb11783b885b2641242820865c0b115
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267684"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a>Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mitBlazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="build-reusable-ui-components-with-no-locblazor"></a>Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit Blazor
 
 Eine der schönen Aspekte von ASP.net Web Forms ist, wie Sie wiederverwendbare Elemente von Benutzeroberflächen Code in wiederverwendbare UI-Steuerelemente einkapseln kann. Benutzerdefinierte Benutzer Steuerelemente können mithilfe von *ASCX* -Dateien im Markup definiert werden. Mit vollständiger Designer Unterstützung können Sie auch aufwändige Server Steuerelemente im Code erstellen.
 
-Blazorunterstützt auch die Benutzeroberflächen Kapselung durch *Komponenten*. Eine Komponente:
+Blazor unterstützt auch die Benutzeroberflächen Kapselung durch *Komponenten*. Eine Komponente:
 
 - Bei handelt es sich um einen eigenständigen Block von Benutzeroberflächen.
 - Behält seine eigene Zustands-und Renderinglogik bei.
@@ -112,11 +110,11 @@ Die verschiedenen von verwendeten Direktivenattribute Blazor ( `@onclick` , `@bi
 
 Viele der Syntaxen, die in *aspx* -und *ASCX* -Dateien verwendet werden, haben eine parallele Syntax in Razor. Im folgenden finden Sie einen einfachen Vergleich der Syntaxen für ASP.net Web Forms und Razor.
 
-|Merkmal                      |Web Forms           |Syntax               |Razor         |Syntax |
+|Funktion                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Anweisungen                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Codeblöcke                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|Ausdrücke<br>(HTML-codiert)|`<%: %>`            |`<%:DateTime.Now %>` |Verzerrungen`@`<br>Explizite`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|Ausdrücke<br>(HTML-codiert)|`<%: %>`            |`<%:DateTime.Now %>` |Verzerrungen `@`<br>Explizite `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |Kommentare                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Datenbindung                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
@@ -168,7 +166,7 @@ Wenn sich der Namespace für eine Komponente nicht im Gültigkeitsbereich befind
 
 ## <a name="component-parameters"></a>Komponentenparameter
 
-In ASP.net Web Forms können Sie mithilfe öffentlicher Eigenschaften Parameter und Daten an Steuerelemente weitergeleitet. Diese Eigenschaften können in Markup mithilfe von Attributen festgelegt oder direkt im Code festgelegt werden. BlazorKomponenten funktionieren in ähnlicher Weise, obwohl die Komponenteneigenschaften auch mit dem-Attribut gekennzeichnet werden müssen `[Parameter]` , um als Komponenten Parameter angesehen zu werden.
+In ASP.net Web Forms können Sie mithilfe öffentlicher Eigenschaften Parameter und Daten an Steuerelemente weitergeleitet. Diese Eigenschaften können in Markup mithilfe von Attributen festgelegt oder direkt im Code festgelegt werden. Blazor Komponenten funktionieren in ähnlicher Weise, obwohl die Komponenteneigenschaften auch mit dem-Attribut gekennzeichnet werden müssen `[Parameter]` , um als Komponenten Parameter angesehen zu werden.
 
 Die folgende `Counter` Komponente definiert einen Komponenten Parameter mit dem Namen `IncrementAmount` , der verwendet werden kann, um den Betrag anzugeben, der bei `Counter` jedem Klicken auf die Schaltfläche erhöht werden soll.
 
@@ -311,7 +309,7 @@ Komponenten können auch eigene Ereignisse definieren, indem Sie einen Komponent
 
 ## <a name="data-binding"></a>Datenbindung
 
-Blazorstellt einen einfachen Mechanismus bereit, mit dem Daten aus einer Benutzeroberflächen Komponente an den Status der Komponente gebunden werden können. Diese Vorgehensweise unterscheidet sich von den Features in ASP.net Web Forms für das Binden von Daten aus Datenquellen an UI-Steuerelemente. Im Abschnitt [Umgang mit Daten](data.md) wird die Behandlung von Daten aus verschiedenen Datenquellen behandelt.
+Blazor stellt einen einfachen Mechanismus bereit, mit dem Daten aus einer Benutzeroberflächen Komponente an den Status der Komponente gebunden werden können. Diese Vorgehensweise unterscheidet sich von den Features in ASP.net Web Forms für das Binden von Daten aus Datenquellen an UI-Steuerelemente. Im Abschnitt [Umgang mit Daten](data.md) wird die Behandlung von Daten aus verschiedenen Datenquellen behandelt.
 
 Verwenden Sie zum Erstellen einer bidirektionalen Datenbindung von einer Benutzeroberflächen Komponente zum Status der Komponente das `@bind` direktivenattribut. Im folgenden Beispiel ist der Wert des Kontrollkästchens an das- `isChecked` Feld gebunden.
 
@@ -433,7 +431,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-BlazorKomponenten verfügen auch über einen klar definierten Lebenszyklus. Der Lebenszyklus einer Komponente kann verwendet werden, um den Komponenten Status zu initialisieren und erweiterte Komponenten Verhalten zu implementieren.
+Blazor Komponenten verfügen auch über einen klar definierten Lebenszyklus. Der Lebenszyklus einer Komponente kann verwendet werden, um den Komponenten Status zu initialisieren und erweiterte Komponenten Verhalten zu implementieren.
 
 Alle Blazor Komponenten Lebenszyklus-Methoden haben synchrone und asynchrone Versionen. Das Komponenten Rendering ist synchron. Asynchrone Logik kann nicht als Teil des Komponenten Rendering ausgeführt werden. Alle asynchronen Logik muss als Teil einer `async` Lebenszyklus Methode ausgeführt werden.
 
@@ -476,13 +474,13 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 }
 ```
 
-`OnAfterRender`und werden `OnAfterRenderAsync` *nicht aufgerufen, wenn Sie auf dem Server vorab verwendet*werden.
+`OnAfterRender` und werden `OnAfterRenderAsync` *nicht aufgerufen, wenn Sie auf dem Server vorab verwendet*werden.
 
 Der- `firstRender` Parameter ist `true` das erste Mal, wenn die Komponente gerendert wird, andernfalls ist der Wert `false` .
 
 ### <a name="idisposable"></a>IDisposable
 
-BlazorKomponenten können implementieren `IDisposable` , um Ressourcen freizugeben, wenn die Komponente aus der Benutzeroberfläche entfernt wird. Eine Razor-Komponente kann `IDispose` mithilfe der- `@implements` Direktive implementiert werden:
+Blazor Komponenten können implementieren `IDisposable` , um Ressourcen freizugeben, wenn die Komponente aus der Benutzeroberfläche entfernt wird. Eine Razor-Komponente kann `IDispose` mithilfe der- `@implements` Direktive implementiert werden:
 
 ```razor
 @using System
@@ -523,17 +521,17 @@ Das direkte Bearbeiten des Komponenten Zustands mithilfe von Komponenten verweis
 
 ## <a name="capture-element-references"></a>Element Verweise erfassen
 
-BlazorKomponenten können Verweise auf ein Element erfassen. Im Gegensatz zu HTML-Server Steuerelementen in ASP.net-Web Forms können Sie das DOM nicht direkt mithilfe eines Element Verweises in bearbeiten Blazor . Blazorbehandelt die meisten Dom-Interaktionen für Sie mit dem Dom-diffingalgorithmus. Erfasste Element Verweise in sind nicht transparent Blazor . Sie werden jedoch verwendet, um einen bestimmten Element Verweis in einem JavaScript-Interop-Befehl zu übergeben. Weitere Informationen zum JavaScript-Interop finden Sie unter [ASP.net Core Blazor JavaScript-Interop](/aspnet/core/blazor/javascript-interop).
+Blazor Komponenten können Verweise auf ein Element erfassen. Im Gegensatz zu HTML-Server Steuerelementen in ASP.net-Web Forms können Sie das DOM nicht direkt mithilfe eines Element Verweises in bearbeiten Blazor . Blazor behandelt die meisten Dom-Interaktionen für Sie mit dem Dom-diffingalgorithmus. Erfasste Element Verweise in sind nicht transparent Blazor . Sie werden jedoch verwendet, um einen bestimmten Element Verweis in einem JavaScript-Interop-Befehl zu übergeben. Weitere Informationen zum JavaScript-Interop finden Sie unter [ASP.net Core Blazor JavaScript-Interop](/aspnet/core/blazor/javascript-interop).
 
 ## <a name="templated-components"></a>Komponenten mit Vorlagen
 
 In ASP.net Web Forms können Sie Steuer *Elemente*mit Vorlagen erstellen. Mithilfe von Vorlagen basierten Steuerelementen kann der Entwickler einen Teil des HTML-Code angeben, der zum Rendering eines Container Steuer Elements verwendet wird. Die Mechanismen der Erstellung von Vorlagen basierten Server Steuerelementen sind komplex, aber Sie ermöglichen leistungsstarke Szenarios zum Rendern von Daten auf Benutzer anpassbare Weise. Beispiele für Steuerelemente mit Vorlagen sind `Repeater` und `DataList` .
 
-BlazorKomponenten können auch durch Definition von Komponenten Parametern vom Typ oder Vorlagen Weise durch definiert werden `RenderFragment` `RenderFragment<T>` . Ein `RenderFragment` stellt einen Block von Razor-Markup dar, der dann von der Komponente gerendert werden kann. Ein `RenderFragment<T>` ist ein Block von Razor-Markup, das einen Parameter annimmt, der beim Rendern des renderfragments angegeben werden kann.
+Blazor Komponenten können auch durch Definition von Komponenten Parametern vom Typ oder Vorlagen Weise durch definiert werden `RenderFragment` `RenderFragment<T>` . Ein `RenderFragment` stellt einen Block von Razor-Markup dar, der dann von der Komponente gerendert werden kann. Ein `RenderFragment<T>` ist ein Block von Razor-Markup, das einen Parameter annimmt, der beim Rendern des renderfragments angegeben werden kann.
 
 ### <a name="child-content"></a>Untergeordneter Inhalt
 
-BlazorKomponenten können ihren untergeordneten Inhalt als einen erfassen `RenderFragment` und diesen Inhalt als Teil des Komponenten Rendering rendern. Zum Erfassen von untergeordnetem Inhalt definieren Sie einen Komponenten Parameter vom Typ, `RenderFragment` und benennen Sie ihn `ChildContent` .
+Blazor Komponenten können ihren untergeordneten Inhalt als einen erfassen `RenderFragment` und diesen Inhalt als Teil des Komponenten Rendering rendern. Zum Erfassen von untergeordnetem Inhalt definieren Sie einen Komponenten Parameter vom Typ, `RenderFragment` und benennen Sie ihn `ChildContent` .
 
 *Childcontentcomponent. Razor*
 

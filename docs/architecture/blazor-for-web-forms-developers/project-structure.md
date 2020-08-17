@@ -7,16 +7,14 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 473b708a9b58fa88844bc6f79a898943d5a7db71
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 225ebbdd5e23516ae7d5465371e95c73c440c82b
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267775"
 ---
-# <a name="project-structure-for-blazor-apps"></a>Projektstruktur für Blazor apps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="project-structure-for-no-locblazor-apps"></a>Projektstruktur für Blazor apps
 
 Trotz ihrer erheblichen Unterschiede in der Projektstruktur werden ASP.net Web Forms und Blazor viele ähnliche Konzepte gemeinsam nutzen. Hier betrachten wir die Struktur eines Blazor Projekts und vergleichen es mit einem ASP.net-Web Forms Projekt.
 
@@ -24,7 +22,7 @@ Um Ihre erste APP zu erstellen Blazor , befolgen Sie die Anweisungen in den [ Bl
 
 ## <a name="project-file"></a>Projektdatei
 
-BlazorServer-apps sind .net Core-Projekte. Die Projektdatei für die Blazor Server-APP ist ungefähr so einfach wie möglich:
+Blazor Server-apps sind .net Core-Projekte. Die Projektdatei für die Blazor Server-APP ist ungefähr so einfach wie möglich:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -95,7 +93,7 @@ public class Program
 
 BlazorWebAssemblyapps definieren außerdem einen Einstiegspunkt in *Program.cs*. Der Code sieht etwas anders aus. Der Code ähnelt dem Einrichten des App-Hosts, um die gleichen Dienste auf Hostebene für die APP bereitzustellen. Der WebAssembly App-Host richtet jedoch keinen HTTP-Server ein, da er direkt im Browser ausgeführt wird.
 
-BlazorApps verfügen `Startup` anstelle einer *Global. asax* -Datei über eine-Klasse, um die Start Logik für die APP zu definieren. Die `Startup` -Klasse wird verwendet, um die APP und alle App-spezifischen Dienste zu konfigurieren. In der Blazor Server-APP wird die- `Startup` Klasse verwendet, um den Endpunkt für die Echtzeitverbindung einzurichten, die von Blazor zwischen den Client Browsern und dem Server verwendet wird. In der Blazor WebAssembly App definiert die `Startup` -Klasse die Stamm Komponenten für die APP und wo Sie gerendert werden sollen. Wir werfen einen tieferen Einblick in die- `Startup` Klasse im Abschnitt [App-Start](./app-startup.md) .
+Blazor Apps verfügen `Startup` anstelle einer *Global. asax* -Datei über eine-Klasse, um die Start Logik für die APP zu definieren. Die `Startup` -Klasse wird verwendet, um die APP und alle App-spezifischen Dienste zu konfigurieren. In der Blazor Server-APP wird die- `Startup` Klasse verwendet, um den Endpunkt für die Echtzeitverbindung einzurichten, die von Blazor zwischen den Client Browsern und dem Server verwendet wird. In der Blazor WebAssembly App definiert die `Startup` -Klasse die Stamm Komponenten für die APP und wo Sie gerendert werden sollen. Wir werfen einen tieferen Einblick in die- `Startup` Klasse im Abschnitt [App-Start](./app-startup.md) .
 
 ## <a name="static-files"></a>Statische Dateien
 
@@ -103,7 +101,7 @@ Im Gegensatz zu ASP.net-Web Forms Projekten können nicht alle Dateien in einem 
 
 ## <a name="configuration"></a>Konfiguration
 
-Die Konfiguration in ASP.net Web Forms-apps wird in der Regel mit einer oder mehreren *web.config* Dateien gehandhabt. BlazorApps verfügen in der Regel nicht über *web.config* Dateien. Wenn dies der Fall ist, wird die Datei nur zum Konfigurieren von IIS-spezifischen Einstellungen verwendet, wenn Sie auf IIS gehostet wird. Stattdessen Blazor verwenden Server-Apps die ASP.net Core Konfigurations Abstraktionen ( Blazor WebAssembly apps unterstützen derzeit nicht dieselben Konfigurations Abstraktionen, aber dies kann ein in der Zukunft hinzugefügtes Feature sein). Beispielsweise werden in der Standard Blazor Server-App einige Einstellungen in *appsettings.js*gespeichert.
+Die Konfiguration in ASP.net Web Forms-apps wird in der Regel mit einer oder mehreren *web.config* Dateien gehandhabt. Blazor Apps verfügen in der Regel nicht über *web.config* Dateien. Wenn dies der Fall ist, wird die Datei nur zum Konfigurieren von IIS-spezifischen Einstellungen verwendet, wenn Sie auf IIS gehostet wird. Stattdessen Blazor verwenden Server-Apps die ASP.net Core Konfigurations Abstraktionen ( Blazor WebAssembly apps unterstützen derzeit nicht dieselben Konfigurations Abstraktionen, aber dies kann ein in der Zukunft hinzugefügtes Feature sein). Beispielsweise werden in der Standard Blazor Server-App einige Einstellungen in *appsettings.js*gespeichert.
 
 ```json
 {
@@ -142,7 +140,7 @@ Die *_Imports. Razor* -Dateien sind keine Razor-Komponenten Dateien. Stattdessen
 
 ## <a name="pages"></a>Seiten
 
-Wo befinden sich die Seiten in den Blazor apps? Blazordefiniert keine separate Dateierweiterung für adressierbare Seiten, wie z. b. die *aspx* -Dateien in ASP.net-Web Forms-apps. Stattdessen werden Seiten durch Zuweisen von Routen zu Komponenten definiert. Eine Route wird in der Regel mithilfe der `@page` Razor-Direktive zugewiesen. Die `Counter` in der Datei *pages/Counter. Razor* erstellte Komponente definiert z. b. die folgende Route:
+Wo befinden sich die Seiten in den Blazor apps? Blazor definiert keine separate Dateierweiterung für adressierbare Seiten, wie z. b. die *aspx* -Dateien in ASP.net-Web Forms-apps. Stattdessen werden Seiten durch Zuweisen von Routen zu Komponenten definiert. Eine Route wird in der Regel mithilfe der `@page` Razor-Direktive zugewiesen. Die `Counter` in der Datei *pages/Counter. Razor* erstellte Komponente definiert z. b. die folgende Route:
 
 ```razor
 @page "/counter"
@@ -158,7 +156,7 @@ Weitere Details finden Sie im Blazor Abschnitt " [Seiten, Routing und Layouts](.
 
 In ASP.net Web Forms-apps wird das allgemeine Seitenlayout mithilfe von Masterseiten (*Site. Master*) behandelt. In- Blazor apps wird das Seitenlayout mithilfe von Layoutkomponenten (*Shared/MainLayout. Razor*) behandelt. Layoutkomponenten werden im Abschnitt "Seite" [, "Routing" und "Layouts](./pages-routing-layouts.md) " ausführlicher erläutert.
 
-## <a name="bootstrap-blazor"></a>BootstrapBlazor
+## <a name="bootstrap-no-locblazor"></a>Bootstrap Blazor
 
 Zum Bootstrapping Blazor muss die app folgende Aktionen ausführen:
 
@@ -167,7 +165,7 @@ Zum Bootstrapping Blazor muss die app folgende Aktionen ausführen:
 
 In der Blazor Server-APP wird die Hostseite der Stamm Komponente in der Datei *_Host. cshtml* definiert. Diese Datei definiert eine Razor-Seite und keine Komponente. Razor Pages verwenden Sie Razor-Syntax, um eine Server adressierbare Seite zu definieren, ähnlich wie eine *aspx* -Seite. Die- `Html.RenderComponentAsync<TComponent>(RenderMode)` Methode wird verwendet, um zu definieren, wo eine Komponente auf Stamm Ebene gerendert werden soll. Die- `RenderMode` Option gibt die Art an, in der die Komponente gerendert werden soll. In der folgenden Tabelle werden die unterstützten `RenderMode` Optionen beschrieben.
 
-|Option                        |Beschreibung       |
+|Option                        |BESCHREIBUNG       |
 |------------------------------|------------------|
 |`RenderMode.Server`           |Wird interaktiv gerendert, sobald eine Verbindung mit dem Browser hergestellt wurde|
 |`RenderMode.ServerPrerendered`|Zuerst vorab und dann interaktiv gerendert|
@@ -243,7 +241,7 @@ Wenn ein Blazor Projekt erstellt wird, werden alle Razor-Komponenten-und Code Da
 
 ## <a name="run-the-app"></a>Ausführen der App
 
-Um die Blazor Server-App auszuführen, drücken Sie `F5` in Visual Studio. BlazorApps unterstützen keine Lauf Zeit Kompilierung. Um die Ergebnisse von Code-und Komponenten Markup Änderungen anzuzeigen, müssen Sie die APP mit dem angefügten Debugger neu erstellen und neu starten. Wenn Sie ausführen, ohne dass der Debugger angefügt `Ctrl+F5` ist (), beobachtet Visual Studio die Dateiänderungen und startet die APP neu, sobald Änderungen vorgenommen werden. Sie müssen den Browser manuell aktualisieren, wenn Änderungen vorgenommen werden.
+Um die Blazor Server-App auszuführen, drücken Sie `F5` in Visual Studio. Blazor Apps unterstützen keine Lauf Zeit Kompilierung. Um die Ergebnisse von Code-und Komponenten Markup Änderungen anzuzeigen, müssen Sie die APP mit dem angefügten Debugger neu erstellen und neu starten. Wenn Sie ausführen, ohne dass der Debugger angefügt `Ctrl+F5` ist (), beobachtet Visual Studio die Dateiänderungen und startet die APP neu, sobald Änderungen vorgenommen werden. Sie müssen den Browser manuell aktualisieren, wenn Änderungen vorgenommen werden.
 
 Blazor WebAssembly Wählen Sie einen der folgenden Ansätze aus, um die APP auszuführen:
 

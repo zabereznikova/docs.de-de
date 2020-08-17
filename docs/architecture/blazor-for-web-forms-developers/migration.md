@@ -1,5 +1,5 @@
 ---
-title: Migrieren von ASP.net Web Forms zuBlazor
+title: Migrieren von ASP.net Web Forms zu Blazor
 description: Erfahren Sie, wie Sie eine vorhandene ASP.net-Web Forms-APP zu migrieren Blazor .
 author: twsouthwick
 ms.author: tasou
@@ -7,16 +7,14 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 464d2f535acd3b9774fe240b4feeda1875f98022
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267801"
 ---
-# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrieren von ASP.net Web Forms zuBlazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migrieren von ASP.net Web Forms zu Blazor
 
 Das Migrieren einer Codebasis von ASP.net Web Forms zu Blazor ist eine zeitaufwändige Aufgabe, für die eine Planung erforderlich ist. In diesem Kapitel wird der Prozess beschrieben. Eine Möglichkeit, den Übergang zu vereinfachen, besteht darin sicherzustellen, dass die APP einer *N-Tier-* Architektur entspricht, bei der das App-Modell (in diesem Fall Web Forms) von der Geschäftslogik getrennt ist. Diese logische Trennung von Ebenen macht es klar, was zu .net Core und verschoben werden muss Blazor .
 
@@ -24,8 +22,8 @@ In diesem Beispiel wird die auf [GitHub](https://github.com/dotnet-architecture/
 
 Warum sollte eine funktionierende APP zu migriert werden Blazor ? Oft ist es nicht erforderlich. ASP.net Web Forms wird noch viele Jahre lang unterstützt. Viele der Funktionen, die Blazor bereitstellt, werden jedoch nur für eine migrierte App unterstützt. Zu diesen Features gehören:
 
-- Leistungsverbesserungen im Framework, z. b.`Span<T>`
-- Möglichkeit zum Ausführen alsWebAssembly
+- Leistungsverbesserungen im Framework, z. b. `Span<T>`
+- Möglichkeit zum Ausführen als WebAssembly
 - Plattformübergreifende Unterstützung für Linux und macOS
 - Lokale App-Bereitstellung oder Bereitstellung von freigegebenen Frameworks ohne Auswirkung auf andere apps
 
@@ -525,7 +523,7 @@ Bei der Konvertierung in Blazor wird die Web Forms Seite in den folgenden Code �
 
 Beachten Sie, dass sich der Code und das Markup in derselben Datei befinden. Alle erforderlichen Dienste werden mit dem-Attribut zugänglich gemacht `@inject` . Gemäß der- `@page` Direktive kann auf diese Seite über die `Catalog/Details/{id}` Route zugegriffen werden. Der Wert des Platzhalters der Route wurde `{id}` auf einen Integer-Wert beschränkt. Wie im Abschnitt [Routing](pages-routing-layouts.md) beschrieben, gibt eine Razor-Komponente im Gegensatz zu Web Forms explizit Ihre Route und alle darin enthaltenen Parameter an. Viele Web Forms Steuerelemente weisen in möglicherweise keine exakten Entsprechungen auf Blazor . Häufig gibt es einen äquivalenten HTML-Code Ausschnitt, der denselben Zweck erfüllt. Beispielsweise kann das `<asp:Label />` Steuerelement durch ein HTML-Element ersetzt werden `<label>` .
 
-### <a name="model-validation-in-blazor"></a>Modell Validierung inBlazor
+### <a name="model-validation-in-no-locblazor"></a>Modell Validierung in Blazor
 
 Wenn Ihr Web Forms Code die Validierung umfasst, können Sie viele der Funktionen übertragen, bei denen es sich um geringfügige Änderungen handelt. Ein Vorteil der Ausführung von in Blazor besteht darin, dass dieselbe Validierungs Logik ohne benutzerdefiniertes JavaScript ausgeführt werden kann. Daten Anmerkungen ermöglichen eine einfache Modell Validierung.
 
@@ -657,4 +655,4 @@ Viele Vorgänge in ASP.net Core sind asynchron, wodurch das Laden von e/a-gebund
 An diesem Punkt haben Sie viele Beispiele dafür gesehen, wie ein Web Forms Projekt in verschoben wird Blazor . Ein vollständiges Beispiel finden Sie im [eshopon Blazor ](https://github.com/dotnet-architecture/eShopOnBlazor) -Projekt.
 
 >[!div class="step-by-step"]
->[Vorherige](security-authentication-authorization.md)
+>[Zurück](security-authentication-authorization.md)

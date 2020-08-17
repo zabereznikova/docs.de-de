@@ -6,16 +6,14 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/01/2020
-ms.openlocfilehash: a13f663c2c6908ba906e42cb939c3b8707b8cccd
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267502"
 ---
 # <a name="app-configuration"></a>App-Konfiguration
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Die primäre Methode zum Laden der APP-Konfiguration in Web Forms ist die Verwendung von Einträgen in der *web.config* Datei &mdash; auf dem Server oder einer zugehörigen Konfigurationsdatei, auf die von *web.config*verwiesen wird. Sie können das statische `ConfigurationManager` Objekt für die Interaktion mit App-Einstellungen, Datenrepository-Verbindungs Zeichenfolgen und anderen erweiterten Konfigurations Anbietern verwenden, die der app hinzugefügt werden. Es ist üblich, Interaktionen mit der APP-Konfiguration wie im folgenden Code zu sehen:
 
