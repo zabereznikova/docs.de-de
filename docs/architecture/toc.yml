@@ -5,22 +5,19 @@
   items:
     - name: Entwerfen moderner Webanwendungen mit ASP.NET Core und Microsoft Azure
       href: modern-web-apps-azure/
+    - name: Architektur von cloudnativen .NET-Apps für Azure
+      href: cloud-native/
     - name: ASP.NET Core gRPC für WCF-Entwickler
       href: grpc-for-wcf-developers/
-    - name: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern
-      href: modernize-with-azure-containers/
+    - name: Blazor für ASP.NET Web Forms-Entwickler
+      href: blazor-for-web-forms-developers/
     - name: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
       href: containerized-lifecycle/
+    - name: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern
+      href: modernize-with-azure-containers/
+    - name: "Modernisieren von Desktop-Apps unter Windows\_10 mit .NET Core\_3.1"
+      href: modernize-desktop/
     - name: '.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen'
       href: microservices/
     - name: 'Serverlose Apps: Architektur, Muster und Azure-Implementierung'
       href: serverless/
-    - name: Architektur von cloudnativen .NET-Apps für Azure
-      href: cloud-native/
-    - name: "Modernisieren von Desktop-Apps unter Windows\_10 mit .NET Core\_3.1"
-      href: modernize-desktop/
-- name: E-Books in der Vorschau anzeigen
-  expanded: true
-  items:
-    - name: Blazor für ASP.NET Web Forms-Entwickler
-      href: blazor-for-web-forms-developers/
