@@ -2,13 +2,14 @@
 title: Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 description: Informieren Sie sich über allgemeine Probleme beim Ausführen von .NET Core-Tools sowie über mögliche Lösungen.
 author: kdollard
+ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b98b2735770c8259c2daf94575fc087b91bb61fd
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146449"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062635"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 

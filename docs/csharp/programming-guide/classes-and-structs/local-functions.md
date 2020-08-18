@@ -4,12 +4,12 @@ description: Lokale Funktionen in C# sind private Methoden, die in einem anderen
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 9987d6d5ad57c1dceb3a4bffbae22a81c240c794
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 854ec7ab4a4cc637c0a5ad03e0344d2f1f7679d2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864526"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063301"
 ---
 # <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
 
@@ -78,7 +78,7 @@ Wie beim Methodeniterator kann der Code aus diesem Beispiel umgestaltet werden, 
 
 ## <a name="local-functions-vs-lambda-expressions"></a>Lokale Funktionen im Vergleich zu Lambdaausdrücken
 
-Auf den ersten Blick sind lokale Funktionen und [Lambdaausdrücke](../statements-expressions-operators/lambda-expressions.md) sehr ähnlich. In vielen Fällen ist die Entscheidung zwischen Lamdaausdrücken und lokalen Funktionen eine Frage des Formats und persönlicher Präferenz. Es gibt allerdings tatsächliche Unterschiede, wann das eine oder das andere verwendet werden kann. Diese sollten Ihnen bekannt sein.
+Auf den ersten Blick sind lokale Funktionen und [Lambdaausdrücke](../../language-reference/operators/lambda-expressions.md) sehr ähnlich. In vielen Fällen ist die Entscheidung zwischen Lamdaausdrücken und lokalen Funktionen eine Frage des Formats und persönlicher Präferenz. Es gibt allerdings tatsächliche Unterschiede, wann das eine oder das andere verwendet werden kann. Diese sollten Ihnen bekannt sein.
 
 Sehen wir uns die Unterschiede zwischen der Implementierungen des Fakultätsalgorithmus als lokale Funktion und als Lambdaausdruck an. Erste die Version mit einer lokalen Funktion:
 

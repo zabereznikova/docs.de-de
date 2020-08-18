@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: dbe9b47625589de834b7a8021640885ca0920b96
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021273"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062495"
 ---
 # <a name="structure-types-c-reference"></a>Strukturtypen (C#-Referenz)
 
@@ -111,7 +111,7 @@ Ab C# 7.2 können Sie bei der Deklaration eines Strukturtyps den Modifizierer `r
 - Eine `ref`-Struktur kann keine Schnittstellen implementieren.
 - Für eine `ref`-Struktur kann kein Boxing in <xref:System.ValueType?displayProperty=nameWithType> oder <xref:System.Object?displayProperty=nameWithType> durchgeführt werden.
 - Eine `ref`-Struktur kann kein Typargument sein.
-- Eine `ref`-Strukturvariable kann nicht von einem [Lambdaausdruck](../../programming-guide/statements-expressions-operators/lambda-expressions.md) oder einer [lokalen Funktion](../../programming-guide/classes-and-structs/local-functions.md) erfasst werden.
+- Eine `ref`-Strukturvariable kann nicht von einem [Lambdaausdruck](../operators/lambda-expressions.md) oder einer [lokalen Funktion](../../programming-guide/classes-and-structs/local-functions.md) erfasst werden.
 - Eine `ref`-Strukturvariable kann nicht in einer [`async`](../keywords/async.md)-Methode verwendet werden. Sie können `ref`-Strukturvariablen jedoch in synchronen Methoden verwenden, z. B. in solchen, die <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurückgeben.
 - Eine `ref`-Strukturvariable kann nicht in [Iteratoren](../../iterators.md) verwendet werden.
 

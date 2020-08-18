@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1307599a3832be5f48cd62a7b8c1be7f76a3d4a5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244009"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063743"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 
@@ -159,4 +159,4 @@ Der `+=`-Operator in diesem Kontext wird zum Abonnieren eines [Ereignisses](../c
 
 * [Delegaten](../csharp/programming-guide/delegates/index.md)
 * [Anonyme Funktionen](../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-* [Lambda-Ausdrücke](../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Lambda-Ausdrücke](../csharp/language-reference/operators/lambda-expressions.md)

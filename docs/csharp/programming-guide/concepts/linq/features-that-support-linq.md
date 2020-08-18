@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: f72b82180d794086dcea9f11a7a057dc26ab0b26
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 13254c69193e04ffcf11e3e23f1deb460063a6c1
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105429"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063691"
 ---
 # <a name="c-features-that-support-linq"></a>C#-Funktionen mit LINQ-Unterstützung
 
@@ -97,7 +97,7 @@ Weitere Informationen finden Sie unter:
 
 - [Anonyme Funktionen](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Lambda-Ausdrücke](../../statements-expressions-operators/lambda-expressions.md)
+- [Lambda-Ausdrücke](../../../language-reference/operators/lambda-expressions.md)
 
 - [Ausdrucksbaumstrukturen (C#)](../expression-trees/index.md)
 

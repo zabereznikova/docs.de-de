@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 1941174d7e8d1676d11a13fa3ee6c7b84fe3952c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916919"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063236"
 ---
 # <a name="await-operator-c-reference"></a>Der Operator „await“ (C#-Referenz)
 
@@ -27,7 +27,7 @@ Im vorangehenden Beispiel wird die [asynchrone `Main`-Methode](../../programming
 > [!NOTE]
 > Eine Einführung in die asynchrone Programmierung finden Sie unter [Asynchrone Programmierung mit „async“ und „await“](../../programming-guide/concepts/async/index.md). Die asynchrone Programmierung mit `async` und `await` folgt dem [aufgabenbasierten asynchronen Muster](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
-Der Operator `await` kann nur in einer Methode, einem [Lambdaausdruck](../../programming-guide/statements-expressions-operators/lambda-expressions.md) oder einer [anonymen Methode](delegate-operator.md) verwendet werden, die von dem Schlüsselwort [async](../keywords/async.md) geändert wird. Innerhalb einer Async-Methode können Sie den Operator `await` nicht im Text einer synchronen Funktion, innerhalb des Blocks einer [Lock-Anweisung](../keywords/lock-statement.md) oder in einem [unsicheren](../keywords/unsafe.md) Kontext verwenden.
+Der Operator `await` kann nur in einer Methode, einem [Lambdaausdruck](lambda-expressions.md) oder einer [anonymen Methode](delegate-operator.md) verwendet werden, die von dem Schlüsselwort [async](../keywords/async.md) geändert wird. Innerhalb einer Async-Methode können Sie den Operator `await` nicht im Text einer synchronen Funktion, innerhalb des Blocks einer [Lock-Anweisung](../keywords/lock-statement.md) oder in einem [unsicheren](../keywords/unsafe.md) Kontext verwenden.
 
 Der Operand des Operators `await` gehört normalerweise einem der folgenden .NET-Typen an: <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> oder <xref:System.Threading.Tasks.ValueTask%601>. Allerdings kann es sich bei jedem Awaitable-Ausdruck um den Operanden des Operators `await` handeln. Weitere Informationen finden Sie im Abschnitt [Awaitable-Ausdrücke](~/_csharplang/spec/expressions.md#awaitable-expressions) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 

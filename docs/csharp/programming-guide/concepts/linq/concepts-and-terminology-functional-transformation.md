@@ -3,12 +3,12 @@ title: Konzepte und Terminologie (funktionale Transformation) (C#)
 description: Funktionale Programmierfunktionen vereinfachen die Transformation von XML. Hier erfahren Sie mehr über die Konzepte und die Terminologie von reinen Funktionstransformationen in C#.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ca05a914f6156730e773d1effebfc72626b16507
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103980"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063275"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Konzepte und Terminologie (funktionale Transformation) (C#)
 
@@ -55,7 +55,7 @@ Weitere Informationen finden Sie unter [Übersicht über Standardabfrageoperator
 Lambdaausdruck \
 Im Wesentlichen eine anonyme Inlinefunktion, die überall dort verwendet werden kann, wo ein Delegattyp erwartet wird. Dies ist zwar eine vereinfachte Definition für Lambdaausdrücke, im Rahmen dieses Lernprogramms reicht sie aber aus.
 
-Weitere Informationen dazu finden Sie unter [Lambdaausdrücke](../../statements-expressions-operators/lambda-expressions.md).
+Weitere Informationen dazu finden Sie unter [Lambdaausdrücke](../../../language-reference/operators/lambda-expressions.md).
 
 Sammlung \
 Strukturierter Satz von Daten, die in der Regel alle denselben Typ haben. Zur Gewährleistung der Kompatibilität mit LINQ muss eine Auflistung die <xref:System.Collections.IEnumerable>-Schnittstelle oder die <xref:System.Linq.IQueryable>-Schnittstelle (oder eines ihrer generischen Gegenstücke, <xref:System.Collections.Generic.IEnumerator%601> bzw. <xref:System.Linq.IQueryable%601>) implementieren.

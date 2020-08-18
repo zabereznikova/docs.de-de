@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: b72b058c1709e7a643a70233cc3289d5d9165ca4
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 30e1a3546f83a0a1ba5b1363238878868e94ab93
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916805"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063132"
 ---
 # <a name="-operator-c-reference"></a>Operator „=>-“ (C#-Referenz)
 
@@ -20,7 +20,7 @@ Das Token `=>` wird auf zwei Weisen unterstützt: als [Lambdaoperator](#lambda-o
 
 ## <a name="lambda-operator"></a>Lambdaoperator
 
-In [Lambdaausdrücken](../../programming-guide/statements-expressions-operators/lambda-expressions.md) trennt der Lambdaoperator `=>` die Eingabeparameter auf der linken Seite vom Lambdakörper auf der rechten Seite.
+In [Lambdaausdrücken](lambda-expressions.md) trennt der Lambdaoperator `=>` die Eingabeparameter auf der linken Seite vom Lambdakörper auf der rechten Seite.
 
 Im folgenden Beispiel wird das [LINQ](../../programming-guide/concepts/linq/index.md)-Feature mit der Methodensyntax verwendet, um die Verwendung von Lambdaausdrücken zu veranschaulichen:
 
@@ -34,7 +34,7 @@ Im folgenden Beispiel wird gezeigt, wie ein Lambdaausdruck ohne Eingabeparameter
 
 [!code-csharp-interactive[without input variables](snippets/shared/LambdaOperator.cs#WithoutInput)]
 
-Weitere Informationen finden Sie unter [Lambdaausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+Weitere Informationen finden Sie unter [Lambdaausdrücke](lambda-expressions.md).
 
 ## <a name="expression-body-definition"></a>Ausdruckskörperdefinition
 

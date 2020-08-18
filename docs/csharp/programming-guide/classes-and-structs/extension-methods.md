@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e57447c89749451862bbb80047ed74135a0eb752
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 116087ac1aab57f2869b05f436801c7861c56eca
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474812"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063704"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 
@@ -22,7 +22,7 @@ Die häufigsten Erweiterungsmethoden sind die LINQ-Standardabfrageoperatoren, di
 
 ### <a name="orderby-example"></a>OrderBy-Beispiel
 
-Das folgende Beispiel zeigt, wie Sie die Standardabfrageoperator-Methode `OrderBy` für ein Ganzzahlarray aufrufen können. Der Ausdruck in Klammern ist ein Lambda-Ausdruck. Viele Standardabfrageoperatoren verwenden Lambda-Ausdrücke als Parameter, dies ist jedoch keine Voraussetzung für Erweiterungsmethoden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../statements-expressions-operators/lambda-expressions.md).
+Das folgende Beispiel zeigt, wie Sie die Standardabfrageoperator-Methode `OrderBy` für ein Ganzzahlarray aufrufen können. Der Ausdruck in Klammern ist ein Lambda-Ausdruck. Viele Standardabfrageoperatoren verwenden Lambda-Ausdrücke als Parameter, dies ist jedoch keine Voraussetzung für Erweiterungsmethoden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../language-reference/operators/lambda-expressions.md).
 
 [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]
 
@@ -121,7 +121,7 @@ Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erwe
 
 - [C#-Programmierhandbuch](../index.md)
 - [Parallel Programming Samples (Beispiele für parallele Programmierung (dazu gehören viele Beispielerweiterungsmethoden))](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
-- [Lambda-Ausdrücke](../statements-expressions-operators/lambda-expressions.md)
+- [Lambda-Ausdrücke](../../language-reference/operators/lambda-expressions.md)
 - [Übersicht über Standardabfrageoperatoren](../concepts/linq/standard-query-operators-overview.md)
 - [Conversion rules for Instance parameters and their impact (Konvertierungsregeln für Instanzenparameter und ihre Auswirkungen)](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
 - [Extension methods Interoperability between languages (Erweiterungsmethoden-Interoperabilität zwischen Sprachen)](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)

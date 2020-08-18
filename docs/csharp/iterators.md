@@ -4,12 +4,12 @@ description: Erfahren Sie, wie integrierte C#-Iteratoren verwendet werden und wi
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: c2a1dfe38b6a65e382e140541c71e94bb0fc76aa
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507376"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062482"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -195,7 +195,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-Dies wurde geändert, da das frühere Verhalten zu kleinen und schwierig zu diagnostizierenden Fehlern im Zusammenhang mit Lambdaausdrücken führen konnte. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambdaausdrücke](./programming-guide/statements-expressions-operators/lambda-expressions.md).
+Dies wurde geändert, da das frühere Verhalten zu kleinen und schwierig zu diagnostizierenden Fehlern im Zusammenhang mit Lambdaausdrücken führen konnte. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambdaausdrücke](language-reference/operators/lambda-expressions.md).
 
 Der genaue, vom Compiler generierte Code ist etwas komplizierter und behandelt Situationen, in denen das von `GetEnumerator()` zurückgegebene Objekt die `IDisposable`-Schnittstelle implementiert. Der durch vollständige Erweiterung generierte Code sieht eher wie folgt aus:
 

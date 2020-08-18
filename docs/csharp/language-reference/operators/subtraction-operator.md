@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: a00957c8d36a96b5ee23b9e5a309b6139b33fd36
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c126837309b5fe3495a5e9e6af589892670b62c3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916684"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063080"
 ---
 # <a name="--and---operators-c-reference"></a>Operatoren „-“ und -=“ (C#-Referenz)
 
@@ -37,7 +37,7 @@ Für Operanden des gleichen [Delegattyps](../builtin-types/reference-types.md#th
 
   [!code-csharp-interactive[delegate removal with no effect](snippets/shared/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  Das vorherige Beispiel veranschaulicht auch, dass Delegatinstanzen beim Entfernen von Delegaten verglichen werden. Delegaten, die durch die Auswertung identischer [Lambdaausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md) erzeugt werden, sind beispielsweise nicht gleich. Weitere Informationen über die Delegatgleichheit finden Sie in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md) unter [Delegieren von Gleichheitsoperatoren](~/_csharplang/spec/expressions.md#delegate-equality-operators).
+  Das vorherige Beispiel veranschaulicht auch, dass Delegatinstanzen beim Entfernen von Delegaten verglichen werden. Delegaten, die durch die Auswertung identischer [Lambdaausdrücke](lambda-expressions.md) erzeugt werden, sind beispielsweise nicht gleich. Weitere Informationen über die Delegatgleichheit finden Sie in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md) unter [Delegieren von Gleichheitsoperatoren](~/_csharplang/spec/expressions.md#delegate-equality-operators).
 
 - Ist der linke Operand `null`, ist das Ergebnis des Vorgangs `null`. Ist der rechte Operand `null`, ist das Ergebnis des Vorgangs der linke Operand.
 
