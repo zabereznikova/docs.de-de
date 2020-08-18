@@ -1,13 +1,14 @@
 ---
 title: Wichtige Änderungen beim C#-Compiler
 description: Informieren Sie sich über Breaking Changes im C#-Compiler, den Sie verwenden.
+ms.topic: troubleshooting
 ms.date: 12/12/2019
-ms.openlocfilehash: 1b1f5d57c5fa6e86878d8aa59f602a92f59288d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 539282441a407e348f214981e4117c357effa682
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75437942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267970"
 ---
 # <a name="learn-about-any-breaking-changes-in-the-c-compiler"></a>Informationen zu Breaking Changes im C#-Compiler
 
