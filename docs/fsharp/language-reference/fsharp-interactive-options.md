@@ -1,13 +1,13 @@
 ---
 title: Interaktive Optionen
 description: Erfahren Sie mehr über die von F# Interactive unterstützten Befehlszeilenoptionen fsi.exe.
-ms.date: 07/22/2020
-ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855347"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558607"
 ---
 # <a name="f-interactive-options"></a>F# Interactive Optionen
 
@@ -44,7 +44,7 @@ Wenn F# Interactive-Optionsargumente Listen enthalten, werden Listenelemente dur
 |**--GUI**[ **+**&#124;**-** ]|Aktiviert oder deaktiviert die Windows Forms-Ereignisschleife. Die Standardeinstellung ist aktiviert.|
 |**--Hilfe**<br /><br />**-?**|Wird verwendet, um die Befehlszeilen Syntax und eine kurze Beschreibung der einzelnen Optionen anzuzeigen.|
 |**--lib: &lt; Ordner-List&gt;**<br /><br />**-I: &lt; Ordnerliste&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--Load: &lt; Dateiname&gt;**|Kompiliert beim Start den angegebenen Quellcode und lädt die kompilierten F#-Konstrukte in die Sitzung. Wenn die Ziel Quelle Skript Direktiven wie **#use** oder **#Load**enthält, müssen Sie **--use** oder **#use** anstelle von **--Load** oder **#Load**verwenden.|
+|**--Load: &lt; Dateiname&gt;**|Kompiliert beim Start den angegebenen Quellcode und lädt die kompilierten F#-Konstrukte in die Sitzung.|
 |**--mlcompatibility**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 |**--noframework**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md) .|
 |**--nologo**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
@@ -97,7 +97,7 @@ fsi.ShowIEnumerable <- false // Control whether sequence values are expanded by 
 fsi.ShowDeclarationValues <- false // Control whether values are shown for declaration outputs
 ```
 
-### <a name="customize-with-addprinter-and-addprinttransformer"></a>Anpassen mit `AddPrinter` und`AddPrintTransformer`
+### <a name="customize-with-addprinter-and-addprinttransformer"></a>Anpassen mit `AddPrinter` und `AddPrintTransformer`
 
 Das Drucken in F# Interactive Ausgaben kann mithilfe von und angepasst werden `fsi.AddPrinter` `fsi.AddPrintTransformer` .
 Die erste Funktion gibt Text an, um das Drucken eines Objekts zu ersetzen. Die zweite Funktion gibt ein Ersatzobjekt zurück, das stattdessen angezeigt werden soll. Sehen Sie sich beispielsweise den folgenden F #-Code an:
@@ -126,7 +126,7 @@ val newYearsDay1999 : DateAndLabel = { Date = 1999-01-01T00:00:00
                                        Label = "New Year" }
 ```
 
-`fsi.AddPrintTransformer`kann verwendet werden, um ein Ersatzobjekt zum Drucken zu geben:
+`fsi.AddPrintTransformer` kann verwendet werden, um ein Ersatzobjekt zum Drucken zu geben:
 
 ```fsharp
 type MyList(values: int list) =

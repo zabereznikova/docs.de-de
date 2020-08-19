@@ -1,13 +1,13 @@
 ---
 title: Flexible Typen
-description: Erfahren Sie, wie F# Sie eine flexible Typanmerkung verwenden, die angibt, dass ein Parameter, eine Variable oder ein Wert einen Typ aufweist, der mit einem angegebenen Typ kompatibel ist.
-ms.date: 05/16/2016
-ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+description: 'Erfahren Sie, wie Sie eine flexible F #-Typanmerkung verwenden, die angibt, dass ein Parameter, eine Variable oder ein Wert einen Typ aufweist, der mit einem angegebenen Typ kompatibel ist.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 44241ad082cd7f3de9e0cc6a48b8a8946e7b33d3
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083062"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557749"
 ---
 # <a name="flexible-types"></a>Flexible Typen
 
@@ -37,7 +37,7 @@ Beachten Sie die folgenden zwei Funktionen, von denen eine eine Sequenz zurückg
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4101.fs)]
 
-Betrachten Sie als weiteres Beispiel die Bibliotheksfunktion " [setq. Concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) ":
+Betrachten Sie als weiteres Beispiel die Bibliotheksfunktion " [setq. Concat](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#concat) ":
 
 ```fsharp
 val concat: sequences:seq<#seq<'T>> -> seq<'T>
@@ -65,9 +65,9 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-In F# sind wie in anderen objektorientierten Sprachen Kontexte, die in denen abgeleiteten Typen oder Typen, die Schnittstellen implementieren automatisch in einem Basistyp oder der Schnittstellentyp konvertiert werden. Diese automatischen Konvertierungen erfolgen in direkten Argumenten, jedoch nicht, wenn sich der Typ in einer untergeordneten Position befindet, als Teil eines komplexeren Typs, z. b. eines Rückgabe Typs eines Funktions Typs, oder als Typargument. Daher ist die flexible typnotation vor allem dann nützlich, wenn der Typ, auf den Sie Sie anwenden, Teil eines komplexeren Typs ist.
+In F # gibt es wie in anderen objektorientierten Sprachen Kontexte, in denen abgeleitete Typen oder Typen, die Schnittstellen implementieren, automatisch in einen Basistyp oder Schnittstellentyp konvertiert werden. Diese automatischen Konvertierungen erfolgen in direkten Argumenten, jedoch nicht, wenn sich der Typ in einer untergeordneten Position befindet, als Teil eines komplexeren Typs, z. b. eines Rückgabe Typs eines Funktions Typs, oder als Typargument. Daher ist die flexible typnotation vor allem dann nützlich, wenn der Typ, auf den Sie Sie anwenden, Teil eines komplexeren Typs ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [F#-Sprachreferenz](index.md)
-- [Generika](./generics/index.md)
+- [Generics](./generics/index.md)

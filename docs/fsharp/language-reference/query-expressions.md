@@ -1,19 +1,17 @@
 ---
 title: Abfrageausdrücke
 description: 'Erfahren Sie mehr über die Unterstützung von Abfrage Ausdrücken für LINQ in der Programmiersprache F #.'
-ms.date: 05/16/2016
-ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855035"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559062"
 ---
 # <a name="query-expressions"></a>Abfrageausdrücke
 
 Mit Abfrage Ausdrücken können Sie eine Datenquelle Abfragen und die Daten in einem gewünschten Formular ablegen. Abfrage Ausdrücke bieten Unterstützung für LINQ in F #.
-> [!NOTE]
-> Die docs.Microsoft.com-API-Referenz für F # ist nicht fertig. Wenn Sie auf unterbrochene Verknüpfungen stoßen, verweisen Sie stattdessen auf die [Dokumentation der F #-Kernbibliothek](https://fsharp.github.io/fsharp-core-docs/) .
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,9 +43,9 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-Im vorherigen Codebeispiel befindet sich der Abfrage Ausdruck in geschweiften Klammern. Die Bedeutung des Codes im-Ausdruck ist, dass alle Kunden in der Customers-Tabelle in der-Datenbank in den Abfrage Ergebnissen zurückgegeben werden. Abfrage Ausdrücke geben einen Typ zurück, <xref:System.Linq.IQueryable%601> der und implementiert <xref:System.Collections.Generic.IEnumerable%601> , sodass Sie mit dem- [Modul](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) von "-" durchlaufen werden können, wie im Beispiel gezeigt.
+Im vorherigen Codebeispiel befindet sich der Abfrage Ausdruck in geschweiften Klammern. Die Bedeutung des Codes im-Ausdruck ist, dass alle Kunden in der Customers-Tabelle in der-Datenbank in den Abfrage Ergebnissen zurückgegeben werden. Abfrage Ausdrücke geben einen Typ zurück, <xref:System.Linq.IQueryable%601> der und implementiert <xref:System.Collections.Generic.IEnumerable%601> , sodass Sie mit dem- [Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) von "-" durchlaufen werden können, wie im Beispiel gezeigt.
 
-Alle Berechnungs Ausdrucks Typen werden aus einer Generator-Klasse erstellt. Die Builder-Klasse für den Abfrage Berechnungs Ausdruck ist `QueryBuilder` . Weitere Informationen finden Sie unter [Berechnungs Ausdrücke](computation-expressions.md) und [LINQ. QueryBuilder-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
+Alle Berechnungs Ausdrucks Typen werden aus einer Generator-Klasse erstellt. Die Builder-Klasse für den Abfrage Berechnungs Ausdruck ist `QueryBuilder` . Weitere Informationen finden Sie unter [Berechnungs Ausdrücke](computation-expressions.md) und [QueryBuilder-Klasse](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).
 
 ## <a name="query-operators"></a>Abfrageoperatoren
 
@@ -55,7 +53,7 @@ Abfrage Operatoren ermöglichen es Ihnen, die Details der Abfrage anzugeben, z. 
 
 Nur Ausdrücke, die in SQL übersetzt werden können, sind in Abfrage Ausdrücken zulässig. Beispielsweise sind keine Funktionsaufrufe in den Ausdrücken zulässig, wenn Sie den `where` Abfrage Operator verwenden.
 
-Tabelle 1 zeigt verfügbare Abfrage Operatoren. Weitere Informationen finden Sie weiter unten in diesem Thema unter Table2, in dem SQL-Abfragen und die entsprechenden F #-Abfrage Ausdrücke verglichen werden. Einige Abfrage Operatoren werden von einigen typanbietern nicht unterstützt. Insbesondere wird der odata-Typanbieter in den von ihm unterstützten Abfrage Operatoren aufgrund von Einschränkungen in odata eingeschränkt. Weitere Informationen finden Sie unter [odataservice-Typanbieter (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tabelle 1 zeigt verfügbare Abfrage Operatoren. Weitere Informationen finden Sie weiter unten in diesem Thema unter Table2, in dem SQL-Abfragen und die entsprechenden F #-Abfrage Ausdrücke verglichen werden. Einige Abfrage Operatoren werden von einigen typanbietern nicht unterstützt. Insbesondere wird der odata-Typanbieter in den von ihm unterstützten Abfrage Operatoren aufgrund von Einschränkungen in odata eingeschränkt.
 
 Diese Tabelle geht von einer Datenbank in der folgenden Form aus:
 
@@ -682,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>ein Satz angegebener Werte<br/>
+<code>IN</code> ein Satz angegebener Werte<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -723,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>mit fest gelegster Muster Übereinstimmung<br/>
+<code>LIKE</code> mit fest gelegster Muster Übereinstimmung<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -740,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>mit dem Set-Ausschluss Muster.<br/>
+<code>LIKE</code> mit dem Set-Ausschluss Muster.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -759,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>Wählen Sie in einem Feld ein anderes Feld aus.<br/>
+<code>LIKE</code> Wählen Sie in einem Feld ein anderes Feld aus.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -809,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>mit zwei Tabellen.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> mit zwei Tabellen.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -911,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>mit Reihenfolge<br/>
+</td></tr><tr><td><code>OR</code> mit Reihenfolge<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -951,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>von zwei Abfragen.<br/>
+</td></tr><tr><td><code>UNION</code> von zwei Abfragen.<br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -1006,7 +1004,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>Anlage.<br/>
+</td></tr><tr><td><code>CASE</code> Anlage.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -2439,5 +2437,5 @@ end
 ## <a name="see-also"></a>Weitere Informationen
 
 - [F#-Sprachreferenz](index.md)
-- [LINQ. QueryBuilder-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [QueryBuilder-Klasse](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)
 - [Berechnungsausdrücke](Computation-Expressions.md)

@@ -2,12 +2,12 @@
 title: Richtlinien für das Formatieren von F#-Code
 description: 'Hier finden Sie Richtlinien zum Formatieren von F #'
 ms.date: 11/04/2019
-ms.openlocfilehash: a65600a6c685929aef8582e49caded6340fb09e2
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: fe8da6070e1c92bb5205e9cb408b8ac75372b061
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309702"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558308"
 ---
 # <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
@@ -100,37 +100,51 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Parameter für lange Element Definitionen in einer neuen Zeile platzieren
+### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>Parameter für lange Definitionen in einer neuen Zeile platzieren
 
-Wenn Sie über eine sehr lange Element Definition verfügen, platzieren Sie die Parameter in neuen Zeilen, und fügen Sie Sie ein, damit Sie der Einzugs Ebene des nachfolgenden Parameters entsprechen.
+Wenn Sie über eine sehr lange Funktionsdefinition verfügen, platzieren Sie die Parameter in neuen Zeilen, und fügen Sie Sie ein, damit Sie der Einzugs Ebene des nachfolgenden Parameters entsprechen.
 
 ```fsharp
-type C() =
-    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
-                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
-                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+module M =
+    let LongFunctionWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        =
         // ... the body of the method follows
 ```
 
-Dies gilt auch für Konstruktoren:
+Dies gilt auch für Member, Konstruktoren und Parameter mithilfe von Tupeln:
 
 ```fsharp
-type C(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
-       aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
-       aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+type TM() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse) =
+        // ... the body of the method
+
+type TC(aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
+        aSecondVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
+        aThirdVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse) =
     // ... the body of the class follows
 ```
 
-Wenn eine explizite Rückgabetyp Anmerkung vorhanden ist, kann Sie entweder am Ende von `)` und vor `=` oder in einer neuen Zeile stehen. Wenn der Rückgabetyp auch einen langen Namen hat, kann der Letztere vorzuziehen sein:
+Wenn die Parameter klassifiziert werden oder eine explizite Rückgabetyp Anmerkung vorliegt, ist es vorzuziehen, das `=` Zeichen in einer neuen Zeile zu platzieren:
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
-                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
-                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse)
-                                            : AVeryLongReturnType =
-        // ... the body of the method follows
+    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                            : AReturnType =
+        // ... the body of the method
+    member _.LongMethodWithLotsOfCurrifiedParams(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                =
+        // ... the body of the method
 ```
+
+Dies ist eine Methode, um zu lange Zeilen zu vermeiden (für den Fall, dass der Rückgabetyp einen langen Namen aufweisen kann) und weniger Zeilen Schaden beim Hinzufügen von Parametern hat
 
 ### <a name="type-annotations"></a>Typanmerkungen
 
@@ -187,7 +201,7 @@ Inline Kommentare sollten den ersten Buchstaben ausnutzen.
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a>Benennungskonventionen
+## <a name="naming-conventions"></a>Namenskonventionen
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Verwenden Sie "CamelCase" für Klassen gebundene, Ausdrucks gebundene und Muster gebundene Werte und Funktionen.
 

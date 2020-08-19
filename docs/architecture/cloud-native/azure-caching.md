@@ -3,12 +3,12 @@ title: Zwischenspeichern einer cloudnativen Anwendung
 description: Erfahren Sie mehr über das Zwischenspeichern von Strategien in einer Cloud-native Anwendung.
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a33f143499b5f9545493bc4bc757cc3d152f7aa9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614291"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557515"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Caching in einer cloudbasierten App
 
@@ -28,7 +28,7 @@ Während die Zustands losen Dienste zustandslos sein sollten, kann ein verteilte
 
 Beachten Sie auch Caching, um wiederkehrende Berechnungen zu vermeiden. Wenn ein Vorgang Daten transformiert oder eine komplizierte Berechnung durchführt, wird das Ergebnis für nachfolgende Anforderungen zwischengespeichert.
 
-## <a name="caching-architecture"></a>Zwischen Speicherungs Architektur
+## <a name="caching-architecture"></a>Cachingarchitektur
 
 Native Cloud-Anwendungen implementieren in der Regel eine verteilte zwischen Speicherungs Architektur. Der Cache wird als cloudbasierter [Sicherungsdienst](./definition.md#backing-services)(getrennt von den-Diensten) gehostet. In Abbildung 5-15 wird die Architektur dargestellt.
 
@@ -57,7 +57,7 @@ Azure Cache für redis ist mehr als ein einfacher Cache Server. Es kann eine Rei
   
 Für erweiterte Szenarien kann eine Kopie der zwischengespeicherten Daten [auf dem](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-how-to-premium-persistence)Datenträger persistent gespeichert werden. Wenn ein schwerwiegender Ereignis sowohl den primären als auch den Replikat Cache deaktiviert, wird der Cache aus der neuesten Momentaufnahme rekonstruiert.
 
-Azure redis Cache ist für eine Reihe vordefinierter Konfigurationen und Tarife verfügbar.  Der [Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-premium-tier-intro) -Tarif bietet viele Features auf Unternehmensebene, z. b. Clustering, Daten Persistenz, georeplikation und Virtual-Network-Isolation.
+Azure redis Cache ist für eine Reihe vordefinierter Konfigurationen und Tarife verfügbar. Der [Premium](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-overview#service-tiers) -Tarif bietet viele Features auf Unternehmensebene, z. b. Clustering, Daten Persistenz, georeplikation und Virtual-Network-Isolation.
 
 >[!div class="step-by-step"]
 >[Zurück](relational-vs-nosql-data.md)

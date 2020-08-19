@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/18/2020
 ms.locfileid: "88559192"
 ---
-# <a name="events"></a>Events
+# <a name="events"></a>Ereignisse
 
 Mit Ereignissen ordnen Sie Benutzeraktionen Funktionsaufrufe zu. Sie sind wichtig in der GUI-Programmierung. Ereignisse können auch von den Anwendungen oder dem Betriebssystem ausgelöst werden.
 

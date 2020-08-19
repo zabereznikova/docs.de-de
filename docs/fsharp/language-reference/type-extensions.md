@@ -1,13 +1,13 @@
 ---
 title: Typerweiterungen
-description: Erfahren Sie F# , wie Sie mit Typerweiterungen einem zuvor definierten Objekttyp neue Member hinzufügen können.
+description: 'Erfahren Sie, wie Sie mit F #-Typerweiterungen einem zuvor definierten Objekttyp neue Member hinzufügen können.'
 ms.date: 02/05/2020
-ms.openlocfilehash: 9ab3a007783f67fd8d80cff840ac3085fdcd60f7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 8fdb2d5e527643b23d24a6118e8cef6b11f1a546
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092680"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559127"
 ---
 # <a name="type-extensions"></a>Typerweiterungen
 
@@ -68,10 +68,10 @@ type Variant with
 Die Verwendung einer Typerweiterung ermöglicht es Ihnen, die folgenden voneinander zu trennen:
 
 - Die Deklaration eines `Variant` Typs.
-- Funktionalität zum Drucken der `Variant` Klasse abhängig von ihrer Form "Form"
-- Eine Möglichkeit für den Zugriff auf die Druck Funktionalität mit `.`Notation im Objekt Stil
+- Funktionalität zum Drucken der `Variant` Klasse, abhängig von ihrer Form.
+- Eine Möglichkeit für den Zugriff auf die Druck Funktionalität mit Objekt Stil `.` Notation
 
-Dies ist eine Alternative zum Definieren alles als Mitglied in `Variant`. Obwohl es sich nicht um einen naturgemäß besseren Ansatz handelt, kann es in einigen Situationen eine saubere Darstellung der Funktionalität sein.
+Dies ist eine Alternative zum Definieren alles als Member in `Variant` . Obwohl es sich nicht um einen naturgemäß besseren Ansatz handelt, kann es in einigen Situationen eine saubere Darstellung der Funktionalität sein.
 
 Systeminterne Typerweiterungen werden als Member des Typs, den Sie erweitern, kompiliert und für den Typ angezeigt, wenn der Typ durch Reflektion untersucht wird.
 
@@ -93,13 +93,13 @@ type IEnumerable<'T> with
         }
 ```
 
-Sie können jetzt auf `RepeatElements` zugreifen, als ob es Mitglied von <xref:System.Collections.Generic.IEnumerable%601> ist, solange das `Extensions`-Modul in dem Bereich geöffnet ist, in dem Sie arbeiten.
+Sie können jetzt `RepeatElements` so aufrufen, als ob es ein Member von <xref:System.Collections.Generic.IEnumerable%601> ist, solange das `Extensions` Modul in dem Bereich geöffnet ist, in dem Sie arbeiten.
 
 Optionale Erweiterungen werden nicht für den erweiterten Typ angezeigt, wenn Sie durch Reflektion untersucht werden. Optionale Erweiterungen müssen sich in Modulen befinden und befinden sich nur im Gültigkeitsbereich, wenn das Modul, das die Erweiterung enthält, geöffnet ist oder sich andernfalls im Gültigkeitsbereich befindet.
 
 Member optionaler Erweiterungen werden in statische Member kompiliert, für die die Objektinstanz implizit als erster Parameter übergeben wird. Sie agieren jedoch so, als ob Sie Instanzmember oder statische Member sind, je nachdem, wie Sie deklariert werden.
 
-Optionale Erweiterungs Mitglieder sind auch für C# -oder-Visual Basic Consumer nicht sichtbar. Sie können nur in anderem F# Code verwendet werden.
+Optionale Erweiterungs Elemente sind auch für c#-oder Visual Basic Consumer nicht sichtbar. Sie können nur in anderem F #-Code verwendet werden.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Generische Einschränkung von systeminternen und optionalen Typerweiterungen
 
@@ -119,21 +119,22 @@ type IEnumerable<'T> with
 
 Es gibt keine Möglichkeit, diesen Code zu erhalten, um mit einer optionalen Typerweiterung zu arbeiten:
 
-- Der `Sum` Member hat eine andere Einschränkung für `'T` (`static member get_Zero` und `static member (+)`) als die Typerweiterung definiert.
-- Wenn Sie die Typerweiterung so ändern, dass Sie die gleiche Einschränkung wie `Sum` hat, stimmt nicht mehr mit der definierten Einschränkung auf `IEnumerable<'T>`überein.
-- Wenn `member this.Sum` in `member inline this.Sum` geändert wird, wird ein Fehler ausgegeben, dass Typeinschränkungen nicht übereinstimmen.
+- Der `Sum` Member hat eine andere Einschränkung für `'T` ( `static member get_Zero` und `static member (+)` ) als für die Typerweiterung definiert ist.
+- Wenn Sie die Typerweiterung so ändern, dass Sie die gleiche Einschränkung wie hat, `Sum` stimmt nicht mehr mit der definierten Einschränkung für überein `IEnumerable<'T>` .
+- Wenn `member this.Sum` Sie in ändern, `member inline this.Sum` wird ein Fehler ausgegeben, dass Typeinschränkungen nicht übereinstimmen.
 
 Was gewünscht ist, sind statische Methoden, die "float in Space" sind, und können so dargestellt werden, als ob Sie einen Typ erweitern. An dieser Stelle werden Erweiterungs Methoden benötigt.
 
 ## <a name="extension-methods"></a>Erweiterungsmethoden
 
-Schließlich können Erweiterungsmethoden (manchmal als "Erweiterungsmember des C#-Stil" bezeichnet) in F# als statische Membermethode in einer Klasse deklariert werden.
+Schließlich können Erweiterungs Methoden (manchmal auch als "c#-Stil Erweiterungs Member" bezeichnet) in F # als statische Element Methode für eine Klasse deklariert werden.
 
 Erweiterungs Methoden sind hilfreich, wenn Sie Erweiterungen für einen generischen Typ definieren möchten, der die Typvariable einschränkt. Beispiel:
 
 ```fsharp
 namespace Extensions
 
+open System.Collections.Generic
 open System.Runtime.CompilerServices
 
 [<Extension>]
@@ -142,9 +143,9 @@ type IEnumerableExtensions =
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-Wenn der Code verwendet wird, wird er so angezeigt, als ob `Sum` für <xref:System.Collections.Generic.IEnumerable%601>definiert ist, solange `Extensions` geöffnet wurde oder sich im Gültigkeitsbereich befindet.
+Wenn Sie verwendet wird, wird dieser Code so angezeigt, als ob `Sum` für definiert ist <xref:System.Collections.Generic.IEnumerable%601> , solange `Extensions` geöffnet ist oder sich im Gültigkeitsbereich befindet.
 
-Damit die Erweiterung für VB.NET-Code verfügbar ist, ist eine zusätzliche `ExtensionAttribute` auf Assemblyebene erforderlich:
+Damit die Erweiterung für VB.NET-Code verfügbar `ExtensionAttribute` ist, ist auf Assemblyebene eine zusätzliche erforderlich:
 
 ```fsharp
 module AssemblyInfo
@@ -159,7 +160,7 @@ Typerweiterungen verfügen auch über die folgenden Attribute:
 
 - Alle Typen, auf die zugegriffen werden kann, können erweitert werden.
 - Systeminterne und optionale Typerweiterungen können _einen beliebigen_ Elementtyp definieren, nicht nur Methoden. Erweiterungs Eigenschaften sind z. b. ebenfalls möglich.
-- Das `self-identifier` Token in der [Syntax](type-extensions.md#syntax) stellt die Instanz des aufgerufenen Typs dar, wie normale Member.
+- Das `self-identifier` Token in der [Syntax](type-extensions.md#syntax) stellt die Instanz des aufgerufenen Typs dar, genau wie normale Member.
 - Erweiterte Member können statische Member oder Instanzmember sein.
 - Typvariablen für eine Typerweiterung müssen mit den Einschränkungen des deklarierten Typs identisch sein.
 
@@ -170,9 +171,9 @@ Für Typerweiterungen gibt es auch die folgenden Einschränkungen:
 - Typerweiterungen unterstützen keine [statisch aufgelösten Typparameter](./generics/statically-resolved-type-parameters.md).
 - Optionale Typerweiterungen unterstützen keine Konstruktoren als Erweiterungen.
 - Typerweiterungen können nicht für [typabkürzungen](type-abbreviations.md)definiert werden.
-- Typerweiterungen sind für `byref<'T>` ungültig (obwohl Sie deklariert werden können).
+- Typerweiterungen sind für ungültig `byref<'T>` (obwohl Sie deklariert werden können).
 - Typerweiterungen sind für Attribute ungültig (Sie können jedoch als deklariert werden).
-- Sie können definieren, Erweiterungen, die andere Methoden, mit dem gleichen Namen zu überladen, aber F#-Compiler bevorzugt nicht-Erweiterungsmethoden gibt es ist ein Mehrdeutiger Aufruf.
+- Sie können Erweiterungen definieren, die andere Methoden desselben Namens überladen, der F #-Compiler bevorzugt jedoch nicht-Erweiterungs Methoden, wenn ein mehrdeutiger-Befehl vorliegt.
 
 Wenn zum Schluss mehrere systeminterne Typerweiterungen für einen Typ vorhanden sind, müssen alle Elemente eindeutig sein. Bei optionalen Typerweiterungen können Member in unterschiedlichen Typerweiterungen, die auf den gleichen Typ erweitert werden, die gleichen Namen aufweisen. Mehrdeutigkeitsfehler treten nur auf, wenn Clientcode zwei unterschiedliche Gültigkeitsbereiche öffnet, die die gleichen Membernamen definieren.
 

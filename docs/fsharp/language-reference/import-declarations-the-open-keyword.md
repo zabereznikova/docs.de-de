@@ -1,13 +1,13 @@
 ---
 title: 'Importdeklarationen: Das open-Schlüsselwort'
 description: 'Erfahren Sie mehr über F #-Import Deklarationen und wie Sie ein Modul oder einen Namespace angeben, auf dessen Elemente verwiesen werden kann, ohne einen voll qualifizierten Namen zu verwenden.'
-ms.date: 04/04/2019
-ms.openlocfilehash: 2b88427ca92212fb4a7598447dd1a5e12061093a
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855087"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557606"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Import Deklarationen: das- `open` Schlüsselwort
 
@@ -19,10 +19,7 @@ Eine *Import Deklaration* gibt ein Modul oder einen Namespace an, auf dessen Ele
 open module-or-namespace-name
 ```
 
-## <a name="remarks"></a>Bemerkungen
-
-> [!NOTE]
-> Die docs.Microsoft.com-API-Referenz für F # ist nicht fertig. Wenn Sie auf unterbrochene Verknüpfungen stoßen, verweisen Sie stattdessen auf die [Dokumentation der F #-Kernbibliothek](https://fsharp.github.io/fsharp-core-docs/) .
+## <a name="remarks"></a>Hinweise
 
 Wenn Sie den voll qualifizierten Namespace-oder Modulpfad jedes Mal auf Code verweisen, können Sie Code erstellen, der schwer zu schreiben, zu lesen und zu warten ist. Stattdessen können Sie das `open` -Schlüsselwort für häufig verwendete Module und Namespaces verwenden, sodass Sie die Kurzform des Namens anstelle des voll qualifizierten Namens verwenden können, wenn Sie auf ein Member dieses Moduls oder Namespace verweisen. Dieses Schlüsselwort ähnelt dem `using` -Schlüsselwort in c#, `using namespace` in Visual C++ und `Imports` in Visual Basic.
 
@@ -52,19 +49,19 @@ Einige Namespaces werden so häufig in F #-Code verwendet, dass Sie implizit ge�
 
 |Namespace|BESCHREIBUNG|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Enthält grundlegende F #-Typdefinitionen für integrierte Typen wie `int` und `float` .|
-|`Microsoft.FSharp.Core.Operators`|Enthält grundlegende arithmetische Operationen wie `+` und `*` .|
-|`Microsoft.FSharp.Collections`|Enthält unveränderliche Auflistungs Klassen, `List` z `Array` . b. und.|
-|`Microsoft.FSharp.Control`|Enthält Typen für steuerungskonstrukte, wie z. b. Lazy Evaluation und asynchrone Workflows.|
-|`Microsoft.FSharp.Text`|Enthält Funktionen für formatierte e/a, z `printf` . b. die Funktion.|
+|`FSharp.Core`|Enthält grundlegende F #-Typdefinitionen für integrierte Typen wie `int` und `float` .|
+|`FSharp.Core.Operators`|Enthält grundlegende arithmetische Operationen wie `+` und `*` .|
+|`FSharp.Collections`|Enthält unveränderliche Auflistungs Klassen, `List` z `Array` . b. und.|
+|`FSharp.Control`|Enthält Typen für steuerungskonstrukte, wie z. b. Lazy Evaluation und asynchrone Workflows.|
+|`FSharp.Text`|Enthält Funktionen für formatierte e/a, z `printf` . b. die Funktion.|
 
 ## <a name="autoopen-attribute"></a>AutoOpen-Attribut
 
-Sie können das- `AutoOpen` Attribut auf eine Assembly anwenden, wenn Sie einen Namespace oder ein Modul automatisch öffnen möchten, wenn auf die Assembly verwiesen wird. Sie können auch das- `AutoOpen` Attribut auf ein Modul anwenden, um dieses Modul automatisch zu öffnen, wenn das übergeordnete Modul oder der übergeordnete Namespace geöffnet wird. Weitere Informationen finden Sie unter [Core. AutoOpenAttribute-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d).
+Sie können das- `AutoOpen` Attribut auf eine Assembly anwenden, wenn Sie einen Namespace oder ein Modul automatisch öffnen möchten, wenn auf die Assembly verwiesen wird. Sie können auch das- `AutoOpen` Attribut auf ein Modul anwenden, um dieses Modul automatisch zu öffnen, wenn das übergeordnete Modul oder der übergeordnete Namespace geöffnet wird. Weitere Informationen finden Sie unter [AutoOpenAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-autoopenattribute.html).
 
 ## <a name="requirequalifiedaccess-attribute"></a>Requirements qualifiedaccess-Attribut
 
-Einige Module, Datensätze oder Union-Typen können das- `RequireQualifiedAccess` Attribut angeben. Wenn Sie auf Elemente dieser Module, Datensätze oder Unions verweisen, müssen Sie einen qualifizierten Namen verwenden, unabhängig davon, ob Sie eine Import Deklaration einschließen. Wenn Sie dieses Attribut bei Typen, die häufig verwendete Namen definieren, strategisch verwenden, vermeiden Sie Namenskollisionen und sorgen dadurch für eine stabilere Codeänderung gegenüber den Änderungen in Bibliotheken. Weitere Informationen finden Sie unter [Core. Requirements qualifiedaccessattribute-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D).
+Einige Module, Datensätze oder Union-Typen können das- `RequireQualifiedAccess` Attribut angeben. Wenn Sie auf Elemente dieser Module, Datensätze oder Unions verweisen, müssen Sie einen qualifizierten Namen verwenden, unabhängig davon, ob Sie eine Import Deklaration einschließen. Wenn Sie dieses Attribut bei Typen, die häufig verwendete Namen definieren, strategisch verwenden, vermeiden Sie Namenskollisionen und sorgen dadurch für eine stabilere Codeänderung gegenüber den Änderungen in Bibliotheken. Weitere Informationen finden Sie unter "Requirements [qualifiedaccessattribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html)".
 
 ## <a name="see-also"></a>Weitere Informationen
 

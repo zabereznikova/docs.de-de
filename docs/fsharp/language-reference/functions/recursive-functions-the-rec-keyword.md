@@ -1,13 +1,13 @@
 ---
 title: 'Rekursive Funktionen: Das rec-Schlüsselwort'
 description: "Erfahren Sie, wie das F #-Schlüsselwort ' REC ' mit dem ' Let '-Schlüsselwort verwendet wird, um eine rekursive Funktion zu definieren."
-ms.date: 05/16/2016
-ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.date: 08/12/2020
+ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455658"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558711"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Rekursive Funktionen: Das rec-Schlüsselwort
 
@@ -18,28 +18,44 @@ Das `rec` Schlüsselwort wird in Verbindung mit dem- `let` Schlüsselwort verwen
 ```fsharp
 // Recursive function:
 let rec function-nameparameter-list =
-function-body
+    function-body
 
 // Mutually recursive functions:
 let rec function1-nameparameter-list =
-function1-body
+    function1-body
+
 and function2-nameparameter-list =
-function2-body
+    function2-body
 ...
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Rekursive Funktionen, die sich selbst aufzurufen, werden explizit in der F #-Sprache identifiziert. Dadurch ist der zu definierenden identierer im Gültigkeitsbereich der Funktion verfügbar.
+Rekursive Funktionen: Funktionen, die sich selbst anrufen, werden explizit in der Sprache F # mit dem- `rec` Schlüsselwort identifiziert. Mit dem- `rec` Schlüsselwort wird der Name der `let` Bindung im Textkörper verfügbar.
 
-Der folgende Code veranschaulicht eine rekursive Funktion, die die *n*<sup>th</sup> -te-Datei "mebonacci" mit der mathematischen Definition berechnet.
+Das folgende Beispiel zeigt eine rekursive Funktion, die die *n*<sup>th</sup> -te-Datei "mebonacci" mit der mathematischen Definition berechnet.
 
-[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
+```fsharp
+let fib n =
+    match n with
+    | 0 | 1 -> 1
+    | n -> fib (n-1) + fib (n-2)
+```
 
 > [!NOTE]
 > In der Praxis ist Code wie das vorherige Beispiel nicht ideal, da er bereits berechnete Werte nicht mehr berechnet. Dies liegt daran, dass es sich nicht um einen endrekursiven handelt, was in diesem Artikel ausführlicher erläutert wird.
 
-Methoden sind implizit rekursiv innerhalb des Typs. Es ist nicht erforderlich, das- `rec` Schlüsselwort hinzuzufügen. Let-Bindungen in Klassen sind nicht implizit rekursiv.
+Methoden sind implizit rekursiv innerhalb des Typs, in dem Sie definiert sind, d. h. es ist nicht erforderlich, das- `rec` Schlüsselwort hinzuzufügen. Beispiel:
+
+```fsharp
+type MyClass() =
+    member this.Fib(n) =
+        match n with
+        | 0 | 1 -> 1
+        | n -> this.Fib(n-1) + this.Fib(n-2)
+```
+
+Let-Bindungen in Klassen sind jedoch nicht implizit rekursiv. Für alle `let` gebundenen Funktionen ist das- `rec` Schlüsselwort erforderlich.
 
 ## <a name="tail-recursion"></a>Endrekursion
 
@@ -75,6 +91,14 @@ Manchmal sind Funktionen *gegenseitig rekursiv*. Dies bedeutet, dass Aufrufe ein
 Das folgende Beispiel zeigt zwei gegenseitig rekursive Funktionen.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
+
+## <a name="recursive-values"></a>Rekursive Werte
+
+Sie können auch einen `let` gebundenen Wert definieren, um rekursiv zu sein. Dies erfolgt manchmal für die Protokollierung. Mit F # 5 und der- `nameof` Funktion können Sie Folgendes tun:
+
+```fsharp
+let rec nameDoubles = nameof nameDoubles + nameof nameDoubles
+```
 
 ## <a name="see-also"></a>Siehe auch
 

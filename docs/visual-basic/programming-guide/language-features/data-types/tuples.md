@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 378ee4e7d3a3b106b719e5da819b09f336ff218e
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: b169a1c13b3f20d7b5e2a1386cfb28a9cc093dcd
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226659"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559088"
 ---
 # <a name="tuples-visual-basic"></a>Tupel (Visual Basic)
 
@@ -84,14 +84,14 @@ Wenn benutzerdefinierte Member, die Validierung von Eigenschaften und Feldern od
 
 Ein Visual Basic Tupel erbt die Member seines **valuetuple** -Typs. Zusätzlich zu den zugehörigen Feldern umfassen diese die folgenden Methoden:
 
-| Member | Beschreibung |
+| Methode | BESCHREIBUNG |
 | ---|---|
 | CompareTo | Vergleicht das aktuelle Tupel mit einem anderen Tupel mit der gleichen Anzahl von Elementen. |
-| Ist gleich | Bestimmt, ob das aktuelle Tupel einem anderen Tupel oder Objekt entspricht. |
+| Equals | Bestimmt, ob das aktuelle Tupel einem anderen Tupel oder Objekt entspricht. |
 | GetHashCode | Berechnet den Hashcode für die aktuelle Instanz. |
 | ToString | Gibt die Zeichen folgen Darstellung dieses Tupels zurück, die das Formular annimmt `(Item1, Item2...)` , wobei `Item1` und `Item2` die Werte der Felder des Tupels darstellen. |
 
-Außerdem implementieren die **valuetuple** <xref:System.Collections.IStructuralComparable> -Typen-und- <xref:System.Collections.IStructuralEquatable> Schnittstellen, die es Ihnen ermöglichen, Kunden Vergleiche zu definieren.
+Außerdem implementieren die **valuetuple** <xref:System.Collections.IStructuralComparable> -Typen-und- <xref:System.Collections.IStructuralEquatable> Schnittstellen, die es Ihnen ermöglichen, benutzerdefinierte Vergleiche zu definieren.
 
 ## <a name="assignment-and-tuples"></a>Zuweisung und Tupel
 
@@ -101,7 +101,7 @@ Visual Basic unterstützt die Zuweisung zwischen Tupeltypen, die über die gleic
 
 - Eine erweiternde (oder implizite) Konvertierung des Quell Typs in den Zieltyp ist definiert.
 
-- `Option Strict`ist `On` , und eine einschränkende (oder explizite) Konvertierung des Quell Typs in den Zieltyp ist definiert. Diese Konvertierung kann eine Ausnahme auslösen, wenn der Quellwert außerhalb des Bereichs des Zieltyps liegt.
+- `Option Strict` ist `On` , und eine einschränkende (oder explizite) Konvertierung des Quell Typs in den Zieltyp ist definiert. Diese Konvertierung kann eine Ausnahme auslösen, wenn der Quellwert außerhalb des Bereichs des Zieltyps liegt.
 
 Andere Konvertierungen gelten nicht für Zuordnungen. Sehen wir uns die Arten von Zuweisungen an, die zwischen Tupeltypen zulässig sind.
 

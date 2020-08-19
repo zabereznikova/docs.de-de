@@ -1,7 +1,6 @@
 ---
-title: <supportedRuntime>Configuration-Element-.net
+title: <supportedRuntime> Configuration-Element-.net
 ms.date: 04/02/2019
-ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: ecbe73593e5b8b87909499f6fff7e865e29b1ec8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cc221c71b68c21b61b5fa27e0972b9e9156dbc3b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "82796040"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558672"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime>-Element
 
@@ -65,16 +64,16 @@ Das- `runtime` Attribut gibt die CLR-Version (Common Language Runtime) an, die f
 |1.1|"v1.1.4322"|
 |2.0|"v2.0.50727"|
 |3.0|"v2.0.50727"|
-|3.5|"v2.0.50727"|
+|3,5|"v2.0.50727"|
 |4.0-4.8|"v4.0"|
 
-## <a name="sku-id-values"></a><a name="sku"></a>SKU-ID-Werte
+## <a name="sku-id-values"></a><a name="sku"></a> SKU-ID-Werte
 
 Das- `sku` Attribut verwendet einen zielframeworkmoniker (TFM), um die Version der .NET Framework anzugeben, die die APP als Ziel hat und für die Ausführung erforderlich ist. In der folgenden Tabelle werden die gültigen Werte aufgelistet, die vom-Attribut unterstützt werden `sku` , beginnend mit dem .NET Framework 4.
 
 |.NET Framework-Version|`sku`-Attribut|
 |----------------------------|---------------------|
-|4.0|".NETFramework,Version=v4.0"|
+|4,0|".NETFramework,Version=v4.0"|
 |4.0, Clientprofil|".NETFramework,Version=v4.0,Profile=Client"|
 |4.0, Plattformupdate 1|". NETFramework, Version = v 4.0.1 "|
 |4.0, Clientprofil, Update 1|". NETFramework, Version = v 4.0.1, Profile = Client "|
@@ -85,10 +84,10 @@ Das- `sku` Attribut verwendet einen zielframeworkmoniker (TFM), um die Version d
 |4,5|".NETFramework,Version=v4.5"|
 |4.5.1|".NETFramework,Version=v4.5.1"|
 |4.5.2|".NETFramework,Version=v4.5.2"|
-|4.6|".NETFramework,Version=v4.6"|
+|4,6|".NETFramework,Version=v4.6"|
 |4.6.1|".NETFramework,Version=v4.6.1"|
 |4.6.2|". NETFramework, Version = v 4.6.2 "|
-|4.7|". NETFramework, Version = v 4.7 "|
+|4,7|". NETFramework, Version = v 4.7 "|
 |4.7.1|". NETFramework, Version = v 4.7.1 "|
 |4.7.2|". NETFramework, Version = v 4.7.2 "|
 |4.8|". NETFramework, Version = v 4.8 "|

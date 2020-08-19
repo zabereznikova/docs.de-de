@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267801"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557541"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migrieren von ASP.net Web Forms zu Blazor
 
@@ -39,7 +39,7 @@ Wie im Kapitel [Hostingmodelle](hosting-models.md) beschrieben, kann eine- Blazo
 
 Zum Zeitpunkt des Schreibens ähnelt das serverseitige Modell Web Forms. In diesem Kapitel liegt der Schwerpunkt auf dem serverseitigen Hostingmodell, da es in der Produktion bereit ist.
 
-## <a name="create-a-new-project"></a>Erstellen eines neuen Projekts
+## <a name="create-a-new-project"></a>Erstellt ein neues Projekt
 
 Dieser erste Migrationsschritt besteht darin, ein neues Projekt zu erstellen. Dieser Projekttyp basiert auf den SDK-Stil Projekten von .net Core und vereinfacht einen Großteil der Bausteine, die in früheren Projekt Formaten verwendet wurden. Weitere Details finden Sie im Kapitel zur [Projektstruktur](project-structure.md).
 
@@ -559,10 +559,6 @@ In Blazor wird das entsprechende Markup in einer *Create. Razor* -Datei bereitge
 ```
 
 Der `EditForm` Kontext umfasst Validierungs Unterstützung und kann um Eingaben umschlossen werden. Daten Anmerkungen sind eine gängige Methode zum Hinzufügen der Validierung. Diese Validierungs Unterstützung kann über die Komponente hinzugefügt werden `DataAnnotationsValidator` . Weitere Informationen zu diesem Mechanismus finden Sie unter [ASP.net Core Blazor Forms und Validierung](/aspnet/core/blazor/forms-validation).
-
-## <a name="migrate-built-in-web-forms-controls"></a>Migrieren integrierter Web Forms Steuerelemente
-
-*Dieser Inhalt wird in Kürze verfügbar sein.*
 
 ## <a name="migrate-configuration"></a>Migrating Configuration (Migrieren der Konfiguration)
 

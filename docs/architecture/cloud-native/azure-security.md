@@ -2,12 +2,12 @@
 title: Azure-Sicherheit für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | Azure-Sicherheit für Native Cloud-apps
 ms.date: 05/13/2020
-ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374493"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557645"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Azure-Sicherheit für Native Cloud-apps
 
@@ -201,7 +201,7 @@ kubectl apply -f ./secret.yaml
 
 Diese geheimen Schlüssel können dann in Volumes bereitgestellt oder für Container Prozesse über Umgebungsvariablen verfügbar gemacht werden. Der Ansatz der [12-stufigen App](https://12factor.net/) zum Entwickeln von Anwendungen schlägt vor, den kleinsten gemeinsamen Nenner zum Übertragen von Einstellungen an eine Anwendung zu verwenden. Umgebungsvariablen sind der kleinste gemeinsame Nenner, da Sie unabhängig vom Betriebssystem oder der Anwendung unterstützt werden.
 
-Eine Alternative zur Verwendung der integrierten Kubernetes-Geheimnisse besteht darin, innerhalb von Kubernetes auf die geheimen Schlüssel in Azure Key Vault zuzugreifen. Die einfachste Möglichkeit hierfür ist, dem Container eine RBAC-Rolle zuzuweisen, um geheime Schlüssel zu laden. Die Anwendung kann dann die Azure Key Vault-APIs verwenden, um auf die geheimen Schlüssel zuzugreifen. Dieser Ansatz erfordert jedoch Änderungen am Code und befolgt nicht das Muster der Verwendung von Umgebungsvariablen. Stattdessen ist es möglich, Werte in einen Container einzufügen, indem der [Azure Key Vault injetor](https://mrdevops.io/introducing-azure-key-vault-to-kubernetes-931f82364354)verwendet wird. Diese Vorgehensweise ist sicherer als die Verwendung der Kubernetes-Geheimnisse direkt, da Benutzer im Cluster darauf zugreifen können.
+Eine Alternative zur Verwendung der integrierten Kubernetes-Geheimnisse besteht darin, innerhalb von Kubernetes auf die geheimen Schlüssel in Azure Key Vault zuzugreifen. Die einfachste Möglichkeit hierfür ist, dem Container eine RBAC-Rolle zuzuweisen, um geheime Schlüssel zu laden. Die Anwendung kann dann die Azure Key Vault-APIs verwenden, um auf die geheimen Schlüssel zuzugreifen. Dieser Ansatz erfordert jedoch Änderungen am Code und befolgt nicht das Muster der Verwendung von Umgebungsvariablen. Stattdessen ist es möglich, Werte in einen Container einzufügen. Diese Vorgehensweise ist sicherer als die Verwendung der Kubernetes-Geheimnisse direkt, da Benutzer im Cluster darauf zugreifen können.
 
 ## <a name="encryption-in-transit-and-at-rest"></a>Verschlüsselung während der Übertragung und im Ruhezustand
 

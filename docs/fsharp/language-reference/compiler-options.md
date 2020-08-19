@@ -1,13 +1,13 @@
 ---
 title: Compileroptionen
 description: 'Verwenden Sie f #-Compilerbefehlszeilenoptionen, um die Kompilierung ihrer F #-apps und-Bibliotheken zu steuern.'
-ms.date: 12/10/2018
-ms.openlocfilehash: 79c175e1daa43d23e0a90b6a09ca29358566aca0
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/15/2020
+ms.openlocfilehash: 7f7b7dac2060213cd7d783669cb4de2b96a88968
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374324"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557359"
 ---
 # <a name="compiler-options"></a>Compileroptionen
 
@@ -38,7 +38,7 @@ In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einig
 |`--keycontainer:key-container-name`|Gibt einen Schlüsselcontainer mit starkem Namen an.|
 |`--keyfile:filename`|Gibt den Namen einer Datei mit öffentlichem Schlüssel zum Signieren der generierten Assembly an.|
 |`--lib:folder-name`<br /><br />`-I:folder-name`|Gibt ein Verzeichnis an, in dem Assemblys gesucht werden sollen, auf die verwiesen wird.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;lib &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/lib-compiler-option.md).|
-|`--linkresource:resource-info`|Verknüpft eine angegebene Ressource mit der Assembly. Das Format von Ressourcen-Info ist<code>filename[name[public&#124;private]]</code><br /><br />Diese Option zum Verknüpfen einer einzelnen Ressource bietet eine Alternative zum Einbetten einer gesamten Ressourcendatei mit der `--resource`-Option.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;linkresource &#40;C&#35;-Compileroptionen&#41;](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).|
+|`--linkresource:resource-info`|Verknüpft eine angegebene Ressource mit der Assembly. Das Format von Ressourcen-Info ist <code>filename[name[public&#124;private]]</code><br /><br />Diese Option zum Verknüpfen einer einzelnen Ressource bietet eine Alternative zum Einbetten einer gesamten Ressourcendatei mit der `--resource`-Option.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;linkresource &#40;C&#35;-Compileroptionen&#41;](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).|
 |`--mlcompatibility`|Ignoriert Warnungen, die bei der Verwendung von Funktionen angezeigt werden, die für Kompatibilität mit anderen ML-Versionen konzipiert sind.|
 |`--noframework`|Deaktiviert den Standardverweis auf die .NET Framework-Assembly.|
 |`--nointerfacedata`|Weist den Compiler an, die Ressource wegzulassen, die normalerweise einer Assembly hinzugefügt wird, die F#-spezifische Metadaten enthält.|
@@ -51,7 +51,7 @@ In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einig
 |`--pathmap:path=sourcePath,...`|Gibt an, wie physische Pfade den Quellpfadnamen zugeordnet werden, die vom Compiler ausgegeben werden.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;"pathmap" &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/pathmap-compiler-option.md).|
 |`--pdb:pdb-filename`|Benennt die PDB-(Program Database-)Ausgabedebugdatei. Diese Option wird nur angewendet, wenn `--debug` ebenfalls aktiviert ist.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;PDB-&#40;C&#35;-Compileroptionen&#41;](../../csharp/language-reference/compiler-options/pdb-compiler-option.md).|
 |`--platform:platform-name`|Gibt an, dass der generierte Code nur auf der angegebenen Plattform (`x86`, `Itanium` oder `x64`) ausgeführt wird, oder, wenn der Plattformname `anycpu` ausgewählt wird, dass der generierte Code auf jeder Plattform ausgeführt werden kann.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;Platform &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/platform-compiler-option.md).|
-|`--preferreduilang:lang`| Gibt den bevorzugten Kultur Namen der Ausgabesprache an (z `es-ES` `ja-JP` . b.,). |
+|`--preferreduilang:lang`| Gibt den bevorzugten Kultur Namen der Ausgabesprache an (z  `es-ES` `ja-JP` . b.,). |
 |`--quotations-debug`|Gibt an, dass zusätzliche Debuginformationen für Ausdrücke ausgegeben werden, die von F#-Quotation-Literalen und reflektierten Definitionen abgeleitet werden. Die Debuginformationen werden zu den benutzerdefinierten Attributen eines F#-Ausdrucksstrukturknotens hinzugefügt. Weitere Informationen finden Sie unter [Code Notierungen](code-quotations.md) und [expr. CustomAttribute](https://msdn.microsoft.com/visualfsharpdocs/conceptual/expr.customattributes-property-%5bfsharp%5d).|
 |`--reference:assembly-filename`<br /><br />`-r:assembly-filename`|Macht Code aus einer F#- oder .NET Framework-Assembly für den Code verfügbar, der kompiliert wird.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;Reference &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/reference-compiler-option.md).|
 |`--resource:resource-filename`|Bettet eine verwaltete Ressourcendatei in die generierte Assembly ein.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;Resource &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/resource-compiler-option.md).|
@@ -65,7 +65,7 @@ In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einig
 |`--times`|Zeigt Zeitinformationen für die Kompilierung an.|
 |`--utf8output`|Aktiviert das Drucken der Compilerausgabe mit UTF-8-Codierung.|
 |`--warn:warning-level`|Legt eine Warnstufe (0 bis 5) fest. Der Standardwert ist 3. Jeder Warnung wird auf Grundlage ihres Schweregrads eine Stufe zugewiesen. Bei Stufe 5 werden mehr Warnungen (jedoch mit geringerem Schweregrad) als bei Stufe 1 angezeigt.<br /><br />Warnungen der Stufe 5 sind: 21 (rekursive Verwendung zur Laufzeit aktiviert), 22 (`let rec` in der falschen Reihenfolge), 45 (vollständige Abstraktion) und 52 (tiefe Kopie). Alle anderen Warnungen sind Stufe 2.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;warnen &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/warn-compiler-option.md).|
-|`--warnon:warning-number-list`|Aktivieren Sie bestimmte Warnungen, die standardmäßig deaktiviert oder durch eine andere Befehlszeilenoption deaktiviert werden können. In F# 3.0 ist nur die Warnung 1182 (nicht verwendete Variablen) standardmäßig deaktiviert.|
+|`--warnon:warning-number-list`|Aktivieren Sie bestimmte Warnungen, die standardmäßig deaktiviert oder durch eine andere Befehlszeilenoption deaktiviert werden können. Die Warnung 1182 (nicht verwendete Variablen) ist standardmäßig deaktiviert.|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|Aktiviert oder deaktiviert die Option zum Ausgeben von Warnungen als Fehler. Sie können bestimmte Warnungsnummern angeben, die deaktiviert oder aktiviert werden sollen. Optionen, die später in der Befehlszeile stehen, überschreiben Optionen, die früher in der Befehlszeile stehen. Wenn Sie z. b. die Warnungen angeben möchten, die nicht als Fehler gemeldet werden sollen, geben Sie an `--warnaserror+` `--warnaserror-:warning-number-list` .<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;warnaserror &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md).|
 |`--win32manifest:manifest-filename`|Fügt eine Win32-Manifestdatei zur Kompilierung hinzu. Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;win32manifest &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).|
 |`--win32res:resource-filename`|Fügt eine Win32-Ressourcendatei zur Kompilierung hinzu.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;win32res-Compileroptionen (&#40;C&#35;)&#41;](../../csharp/language-reference/compiler-options/win32res-compiler-option.md).|
