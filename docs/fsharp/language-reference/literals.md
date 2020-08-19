@@ -1,20 +1,17 @@
 ---
 title: Literale
 description: 'Erfahren Sie mehr über die Literaltypen in der Programmiersprache F #.'
-ms.date: 06/28/2019
-ms.openlocfilehash: 98d609a1cf0beb00c0dd4d45ea343aaa2280b62e
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 15f73db3c36f7c60ab1eeba96c63a28ebc6d7f01
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855022"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559153"
 ---
 # <a name="literals"></a>Literale
 
 Dieser Artikel enthält eine Tabelle, in der gezeigt wird, wie der Typ eines Literals in F # angegeben wird.
-
-> [!NOTE]
-> Die docs.Microsoft.com-API-Referenz für F # ist nicht fertig. Wenn Sie auf unterbrochene Verknüpfungen stoßen, verweisen Sie stattdessen auf die [Dokumentation der F #-Kernbibliothek](https://fsharp.github.io/fsharp-core-docs/) .
 
 ## <a name="literal-types"></a>Literaltypen
 
@@ -34,19 +31,19 @@ In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, d
 |uint64|Ganzzahl ohne Vorzeichen 64-Bit-natürlicher Zahl|UL|`86UL`|
 |single, float32|32-Bit-Gleitkommazahl|F oder f|`4.14F` oder `4.14f`|
 |||lf|`0x00000000lf`|
-|float; double|64-Bit-Gleit Komma Zahl|none|`4.14` oder `2.3E+32` oder `2.3e+32`|
+|float; double|64-Bit-Gleit Komma Zahl|Keine|`4.14` oder `2.3E+32` oder `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |BIGINT|ganze Zahl, die nicht auf 64-Bit-Darstellung beschränkt ist|I|`9999999999999999999999999999I`|
 |Decimal|als Festkommazahl oder rationale Zahl dargestellte Bruchzahl|M oder m|`0.7833M` oder `0.7833m`|
-|Char|Unicode-Zeichen|none|`'a'` oder `'\u0061'`|
-|String|Unicode-Zeichenfolge|none|`"text\n"`<br /><br />oder<br /><br />`@"c:\filename"`<br /><br />oder<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />oder<br /><br />`"string1" + "string2"`<br /><br />Siehe auch [Zeichen](Strings.md)folgen.|
+|Char|Unicode-Zeichen|Keine|`'a'` oder `'\u0061'`|
+|String|Unicode-Zeichenfolge|Keine|`"text\n"`<br /><br />oder<br /><br />`@"c:\filename"`<br /><br />oder<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />oder<br /><br />`"string1" + "string2"`<br /><br />Siehe auch [Zeichen](Strings.md)folgen.|
 |byte|ASCII-Zeichen|B|`'a'B`|
 |byte[]|ASCII-Zeichenfolge|B|`"text"B`|
-|String oder byte[]|wörtliche Zeichenfolge|@-Präfix|`@"\\server\share"`Unicode-<br /><br />`@"\\server\share"B`ASCII-|
+|String oder byte[]|wörtliche Zeichenfolge|@-Präfix|`@"\\server\share"` Unicode-<br /><br />`@"\\server\share"B` ASCII-|
 
 ## <a name="named-literals"></a>Benannte Literale
 
-Werte, die als Konstanten gedacht sind, können mit dem [Literalattribut](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) gekennzeichnet werden. Dieses Attribut bewirkt, dass ein Wert als Konstante kompiliert wird.
+Werte, die als Konstanten gedacht sind, können mit dem [Literalattribut](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-literalattribute.html) gekennzeichnet werden. Dieses Attribut bewirkt, dass ein Wert als Konstante kompiliert wird.
 
 In Musterabgleichsausdrücken werden Bezeichner, die mit Kleinbuchstaben beginnen, immer als zu bindende Variablen statt als Literale behandelt. Verwenden Sie daher im Allgemeinen Großbuchstaben am Wortanfang, wenn Sie Literale definieren.
 
@@ -93,7 +90,3 @@ let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
 let exampleSSN = 123_456_7890
 ```
-
-## <a name="see-also"></a>Weitere Informationen
-
-- [Core. LiteralAttribute-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)

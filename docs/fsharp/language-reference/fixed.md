@@ -1,17 +1,17 @@
 ---
 title: Das fixed-Schlüsselwort
-description: Erfahren Sie, wie Sie "pin" eine lokale im Stapel, um zu verhindern, dass bei der Sammlung mit den F# 'fixed'-Schlüsselwort.
-ms.date: 04/24/2017
-ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+description: 'Erfahren Sie, wie Sie eine lokale auf dem Stapel anheften können, um die Auflistung mit dem F #-Schlüsselwort "Fixed" zu verhindern.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 786ffd706c243fc83f8fb3afc2201d2a34536372
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772657"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559179"
 ---
 # <a name="the-fixed-keyword"></a>Das fixed-Schlüsselwort
 
-F#4.1 führt die `fixed` -Schlüsselwort, das Ihnen ermöglicht, eine lokale im Stapel, um zu verhindern, dass es gesammelt oder während der Garbage Collection verschoben "anheften".  Sie wird für Low-Level Programmierszenarios verwendet.
+Mit dem- `fixed` Schlüsselwort können Sie eine lokale auf dem Stapel anheften, um zu verhindern, dass Sie während der Garbage Collection gesammelt oder verschoben wird.  Sie wird für Programmier Szenarios auf niedriger Ebene verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -19,15 +19,15 @@ F#4.1 führt die `fixed` -Schlüsselwort, das Ihnen ermöglicht, eine lokale im 
 use ptr = fixed expression
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Dadurch wird die Syntax von Ausdrücken können Sie einen Zeiger zu extrahieren und binden Sie ihn in einen Namen verhindert gesammelt oder während der Garbage Collection verschoben wird, erweitert.  
+Dadurch wird die Syntax von Ausdrücken erweitert, sodass ein Zeiger extrahiert und an einen Namen gebunden werden kann, der während der Garbage Collection nicht gesammelt oder verschoben werden kann.  
 
-Ein Zeiger von einem Ausdruck wurde behoben, über die `fixed` Schlüsselwort gebunden ist, auf einen Bezeichner über die `use` Schlüsselwort.  Die Semantik dieser ähneln denen auf die ressourcenverwaltung, über die `use` Schlüsselwort.  Der Zeiger wurde behoben, während er im Gültigkeitsbereich befindet, und sobald sie außerhalb des gültigen Bereichs ist, ist es nicht mehr festgelegt.  `fixed` kann nicht verwendet werden, außerhalb des Kontexts einer `use` Bindung.  Sie müssen den Zeiger in einen Namen mit binden `use`.
+Ein Zeiger von einem Ausdruck wird durch das `fixed` Schlüsselwort korrigiert, das über das-Schlüsselwort an einen Bezeichner gebunden ist `use` .  Die Semantik dieser ähnelt der Ressourcenverwaltung über das- `use` Schlüsselwort.  Der Zeiger wird korrigiert, während er sich im Gültigkeitsbereich befindet, und sobald er sich außerhalb des gültigen Bereichs befindet, wird er nicht mehr korrigiert.  `fixed` kann nicht außerhalb des Kontexts einer Bindung verwendet werden `use` .  Der Zeiger muss mit an einen Namen gebunden werden `use` .
 
-Verwenden von `fixed` muss innerhalb eines Ausdrucks zu einer Funktion oder Methode erfolgen.  Es kann nicht in einem Skript auf Serverebene oder auf Modulebene Bereich verwendet werden.
+Die Verwendung von `fixed` muss innerhalb eines Ausdrucks in einer Funktion oder Methode auftreten.  Sie kann nicht auf Skript-oder Modulebene verwendet werden.
 
-Wie alle Zeiger-Code Dies ist eine unsichere-Funktion und gibt eine Warnung generiert wird.
+Wie beim gesamten Zeiger Code ist dies ein unsicherer Feature, das eine Warnung ausgibt, wenn es verwendet wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -61,6 +61,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [NativePtr-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [NativePtr-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-nativeinterop-nativeptrmodule.html)
