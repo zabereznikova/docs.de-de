@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: a861ee38963f77bffe23bbca19a6f895289e372d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444494"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656813"
 ---
 # <a name="serialization-and-deserialization"></a>Serialisierung und Deserialisierung
 Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, das <xref:System.Runtime.Serialization.DataContractSerializer> . Der <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt zwischen .NET Framework-Objekten und XML in beide Richtungen. In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, d
   
  WCF enthält auch einen begleitenden Serialisierer, den <xref:System.Runtime.Serialization.NetDataContractSerializer> . Die <xref:System.Runtime.Serialization.NetDataContractSerializer>:
 
-* Ist ***nicht*** sicher. Weitere Informationen finden Sie im [BinaryFormatter-Sicherheitshandbuch](/dotnet/standard/serialization/binaryformatter-security-guide).
+* Ist ***nicht*** sicher. Weitere Informationen finden Sie im [BinaryFormatter-Sicherheitshandbuch](../../../standard/serialization/binaryformatter-security-guide.md).
 * Ähnelt dem <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> -und dem- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Serialisierungstyp, da es auch .NET Framework Typnamen als Teil der serialisierten Daten ausgibt.
 * Wird verwendet, wenn die gleichen Typen für die Serialisierung und die Deserialisierung verwendet werden.
 

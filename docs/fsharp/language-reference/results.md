@@ -1,17 +1,17 @@
 ---
 title: Ergebnisse
-description: Erfahren Sie, wie Sie F# den Ergebnistyp verwenden, um fehlertoleranten Code zu schreiben.
-ms.date: 04/24/2017
-ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+description: 'Erfahren Sie, wie Sie den F #-Typ "result" verwenden, um fehlertoleranten Code zu schreiben.'
+ms.date: 08/13/2020
+ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424849"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656917"
 ---
 # <a name="results"></a>Ergebnisse
 
-Ab F# 4,1 gibt es einen `Result<'T,'TFailure>` Typ, den Sie zum Schreiben von fehlertoleranter Code verwenden können, der zusammengesetzt werden kann.
+Der- `Result<'T,'TFailure>` Typ ermöglicht es Ihnen, fehlertoleranten Code zu schreiben, der zusammengesetzt werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,13 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Beachten Sie, dass der Ergebnistyp eine von der Struktur Unterscheidungs- [Union](discriminated-unions.md#struct-discriminated-unions)ist F# , die eine andere in 4,1 eingeführte Funktion ist.  Strukturelle Gleichheits Semantik wird hier angewendet.
+Weitere Informationen finden Sie unter dem- [`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html) Modul für die integrierten Kombinatoren für `Result` . umgewandelt.
 
-Der `Result` Typ wird in der Regel in der monadische-Fehlerbehandlung verwendet, die in der F# Community häufig als [Bahn orientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) bezeichnet wird.  Diese Vorgehensweise wird im folgenden trivialen Beispiel veranschaulicht.
+Beachten Sie, dass der Ergebnistyp eine Struktur Unterscheidungs- [Union](discriminated-unions.md#struct-discriminated-unions)ist. Strukturelle Gleichheits Semantik wird hier angewendet.
+
+Der `Result` Typ wird in der Regel in der monadische-Fehlerbehandlung verwendet, die in der F #-Community oft als [Bahn orientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) bezeichnet wird.  Diese Vorgehensweise wird im folgenden trivialen Beispiel veranschaulicht.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,9 +82,9 @@ let test() =
 test()
 ```
 
-Wie Sie sehen können, ist es recht einfach, verschiedene Validierungs Funktionen zu verketten, wenn Sie erzwingen, dass Sie eine `Result`zurückgeben.  Auf diese Weise können Sie Funktionen wie diese in kleine Teile aufteilen, die so zusammensetzbar sind, wie Sie es benötigen.  Dies hat auch den zusätzlichen Wert, um die Verwendung des [Muster](pattern-matching.md) Abgleich am Ende einer überprüfungsrunde zu *erzwingen* , die wiederum einen höheren Grad an Programm Richtigkeit erzwingt.
+Wie Sie sehen können, ist es recht einfach, verschiedene Validierungs Funktionen zu verketten, wenn Sie erzwingen, dass Sie eine zurückgeben `Result` .  Auf diese Weise können Sie Funktionen wie diese in kleine Teile aufteilen, die so zusammensetzbar sind, wie Sie es benötigen.  Dies hat auch den zusätzlichen Wert, um die Verwendung des [Muster](pattern-matching.md) Abgleich am Ende einer überprüfungsrunde zu *erzwingen* , die wiederum einen höheren Grad an Programm Richtigkeit erzwingt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Unterscheidbare Unions](discriminated-unions.md)
+- [Unterscheidungs-Unions](discriminated-unions.md)
 - [Mustervergleich](pattern-matching.md)

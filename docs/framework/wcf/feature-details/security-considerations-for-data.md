@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 8b54aea1409f2b4c0a3d39d215922ba62c2a3563
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441816"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656969"
 ---
 # <a name="security-considerations-for-data"></a>Sicherheitsüberlegungen zu Daten
 
@@ -90,7 +90,7 @@ Auch der MTOM-Nachrichtenencoder verfügt über eine `MaxBufferSize` -Einstellun
 
 ## <a name="xml-based-streaming-attacks"></a>XML-basierte Streamingangriffe
 
-`MaxBufferSize`allein reicht nicht aus, um sicherzustellen, dass WCF nicht in die Pufferung gezwungen werden kann, wenn ein Streaming erwartet wird. Beispielsweise Puffern die WCF-XML-Reader immer das gesamte Starttag des XML-Elements, wenn mit dem Lesen eines neuen Elements begonnen wird. Das dient der ordnungsgemäßen Verarbeitung von Namespaces und Attributen. Wenn `MaxReceivedMessageSize` hoch konfiguriert wird (z. B. um eine umfangreiches Streaming direkt auf die Festplatte zu ermöglichen), könnte eine böswillige Nachricht erstellt werden, in der der gesamte Nachrichtentext aus einem großen Starttag für XML-Elemente besteht. Der Versuch, dieses Starttag zu lesen, führt zu einer <xref:System.OutOfMemoryException>. Dies ist einer von vielen möglichen XML-basierten Denial-of-Service-Angriffen, die mithilfe von XML-Readerkontingenten vermieden werden können, die im Abschnitt "Sicheres Verwenden von XML" weiter unten in diesem Thema erläutert werden. Beim Streaming ist es besonders wichtig, alle diese Kontingente festzulegen.
+`MaxBufferSize` allein reicht nicht aus, um sicherzustellen, dass WCF nicht in die Pufferung gezwungen werden kann, wenn ein Streaming erwartet wird. Beispielsweise Puffern die WCF-XML-Reader immer das gesamte Starttag des XML-Elements, wenn mit dem Lesen eines neuen Elements begonnen wird. Das dient der ordnungsgemäßen Verarbeitung von Namespaces und Attributen. Wenn `MaxReceivedMessageSize` hoch konfiguriert wird (z. B. um eine umfangreiches Streaming direkt auf die Festplatte zu ermöglichen), könnte eine böswillige Nachricht erstellt werden, in der der gesamte Nachrichtentext aus einem großen Starttag für XML-Elemente besteht. Der Versuch, dieses Starttag zu lesen, führt zu einer <xref:System.OutOfMemoryException>. Dies ist einer von vielen möglichen XML-basierten Denial-of-Service-Angriffen, die mithilfe von XML-Readerkontingenten vermieden werden können, die im Abschnitt "Sicheres Verwenden von XML" weiter unten in diesem Thema erläutert werden. Beim Streaming ist es besonders wichtig, alle diese Kontingente festzulegen.
 
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>Kombinieren von Streaming- und Pufferprogrammiermodellen
 
@@ -284,7 +284,7 @@ Diese Situation ist vermeidbar, wenn folgenden Punkte beachtet werden:
 
 ph x="1" /&gt; ist eine Serialisierungs-Engine, das eng verknüpfte Typen verwendet. Das ist mit <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>vergleichbar. Das heißt, es bestimmt, welcher Typ instanziiert werden soll, indem er die .NET Framework Assembly und den Typnamen aus den eingehenden Daten liest. Obwohl es Teil von WCF ist, gibt es keine Möglichkeit, diese Serialisierungs-Engine zu überspringen. benutzerdefinierter Code muss geschrieben werden. Der `NetDataContractSerializer` wird hauptsächlich zur Erleichterung der Migration von .NET Framework Remoting zu WCF bereitgestellt. Weitere Informationen finden Sie im entsprechenden Abschnitt unter [Serialisierung und Deserialisierung](serialization-and-deserialization.md).
 
-Da die Nachricht selbst möglicherweise alle ladbaren Typen angibt, ist der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Mechanismus grundsätzlich unsicher und sollte nur mit vertrauenswürdigen Daten verwendet werden. Weitere Informationen finden Sie im [BinaryFormatter-Sicherheitshandbuch](/dotnet/standard/serialization/binaryformatter-security-guide).
+Da die Nachricht selbst möglicherweise alle ladbaren Typen angibt, ist der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Mechanismus grundsätzlich unsicher und sollte nur mit vertrauenswürdigen Daten verwendet werden. Weitere Informationen finden Sie im [BinaryFormatter-Sicherheitshandbuch](../../../standard/serialization/binaryformatter-security-guide.md).
 
 Selbst wenn das Modul mit vertrauenswürdigen Daten arbeitet, geben die eingehenden Daten möglicherweise den zu ladenden Typ nur ungenau an, insbesondere, wenn die <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> -Eigenschaft auf <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>festgelegt ist. Jeder, der Zugriff auf das Verzeichnis der Anwendung oder den globalen Assemblycache besitzt, kann den vorhandenen zu ladenden Typ durch einen schädlichen Typ ersetzen. Stellen Sie stets sicher, dass das Verzeichnis der Anwendung und der globale Anwendungscache gesichert sind, indem Sie die Berechtigungen richtig festlegen.
 
