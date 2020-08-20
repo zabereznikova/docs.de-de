@@ -1,19 +1,19 @@
 ---
 title: Ergebnisse
-description: Erfahren Sie, wie Sie F# den Ergebnistyp verwenden, um fehlertoleranten Code zu schreiben.
-ms.date: 04/24/2017
-ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+description: 'Erfahren Sie, wie Sie den F #-Typ "result" verwenden, um fehlertoleranten Code zu schreiben.'
+ms.date: 08/13/2020
+ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424849"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656917"
 ---
-# <a name="results"></a><span data-ttu-id="2b2ba-103">Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="2b2ba-103">Results</span></span>
+# <a name="results"></a><span data-ttu-id="0dcbc-103">Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="0dcbc-103">Results</span></span>
 
-<span data-ttu-id="2b2ba-104">Ab F# 4,1 gibt es einen `Result<'T,'TFailure>` Typ, den Sie zum Schreiben von fehlertoleranter Code verwenden können, der zusammengesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="2b2ba-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
+<span data-ttu-id="0dcbc-104">Der- `Result<'T,'TFailure>` Typ ermöglicht es Ihnen, fehlertoleranten Code zu schreiben, der zusammengesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="0dcbc-104">The `Result<'T,'TFailure>` type lets you write error-tolerant code that can be composed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="2b2ba-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="2b2ba-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="0dcbc-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="0dcbc-105">Syntax</span></span>
 
 ```fsharp
 // The definition of Result in FSharp.Core
@@ -25,11 +25,13 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a><span data-ttu-id="2b2ba-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2b2ba-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0dcbc-106">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="0dcbc-106">Remarks</span></span>
 
-<span data-ttu-id="2b2ba-107">Beachten Sie, dass der Ergebnistyp eine von der Struktur Unterscheidungs- [Union](discriminated-unions.md#struct-discriminated-unions)ist F# , die eine andere in 4,1 eingeführte Funktion ist.</span><span class="sxs-lookup"><span data-stu-id="2b2ba-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="2b2ba-108">Strukturelle Gleichheits Semantik wird hier angewendet.</span><span class="sxs-lookup"><span data-stu-id="2b2ba-108">Structural equality semantics apply here.</span></span>
+<span data-ttu-id="0dcbc-107">Weitere Informationen finden Sie unter dem- [`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html) Modul für die integrierten Kombinatoren für `Result` .</span><span class="sxs-lookup"><span data-stu-id="0dcbc-107">See the [`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html) module for the built-in combinators for the `Result`.</span></span> <span data-ttu-id="0dcbc-108">umgewandelt.</span><span class="sxs-lookup"><span data-stu-id="0dcbc-108">type.</span></span>
 
-<span data-ttu-id="2b2ba-109">Der `Result` Typ wird in der Regel in der monadische-Fehlerbehandlung verwendet, die in der F# Community häufig als [Bahn orientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) bezeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="2b2ba-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="2b2ba-110">Diese Vorgehensweise wird im folgenden trivialen Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="2b2ba-110">The following trivial example demonstrates this approach.</span></span>
+<span data-ttu-id="0dcbc-109">Beachten Sie, dass der Ergebnistyp eine Struktur Unterscheidungs- [Union](discriminated-unions.md#struct-discriminated-unions)ist.</span><span class="sxs-lookup"><span data-stu-id="0dcbc-109">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions).</span></span> <span data-ttu-id="0dcbc-110">Strukturelle Gleichheits Semantik wird hier angewendet.</span><span class="sxs-lookup"><span data-stu-id="0dcbc-110">Structural equality semantics apply here.</span></span>
+
+<span data-ttu-id="0dcbc-111">Der `Result` Typ wird in der Regel in der monadische-Fehlerbehandlung verwendet, die in der F #-Community oft als [Bahn orientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) bezeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="0dcbc-111">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="0dcbc-112">Diese Vorgehensweise wird im folgenden trivialen Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="0dcbc-112">The following trivial example demonstrates this approach.</span></span>
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,9 +82,9 @@ let test() =
 test()
 ```
 
-<span data-ttu-id="2b2ba-111">Wie Sie sehen können, ist es recht einfach, verschiedene Validierungs Funktionen zu verketten, wenn Sie erzwingen, dass Sie eine `Result`zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="2b2ba-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="2b2ba-112">Auf diese Weise können Sie Funktionen wie diese in kleine Teile aufteilen, die so zusammensetzbar sind, wie Sie es benötigen.</span><span class="sxs-lookup"><span data-stu-id="2b2ba-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="2b2ba-113">Dies hat auch den zusätzlichen Wert, um die Verwendung des [Muster](pattern-matching.md) Abgleich am Ende einer überprüfungsrunde zu *erzwingen* , die wiederum einen höheren Grad an Programm Richtigkeit erzwingt.</span><span class="sxs-lookup"><span data-stu-id="2b2ba-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
+<span data-ttu-id="0dcbc-113">Wie Sie sehen können, ist es recht einfach, verschiedene Validierungs Funktionen zu verketten, wenn Sie erzwingen, dass Sie eine zurückgeben `Result` .</span><span class="sxs-lookup"><span data-stu-id="0dcbc-113">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="0dcbc-114">Auf diese Weise können Sie Funktionen wie diese in kleine Teile aufteilen, die so zusammensetzbar sind, wie Sie es benötigen.</span><span class="sxs-lookup"><span data-stu-id="0dcbc-114">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="0dcbc-115">Dies hat auch den zusätzlichen Wert, um die Verwendung des [Muster](pattern-matching.md) Abgleich am Ende einer überprüfungsrunde zu *erzwingen* , die wiederum einen höheren Grad an Programm Richtigkeit erzwingt.</span><span class="sxs-lookup"><span data-stu-id="0dcbc-115">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2b2ba-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2b2ba-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0dcbc-116">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="0dcbc-116">See also</span></span>
 
-- [<span data-ttu-id="2b2ba-115">Unterscheidbare Unions</span><span class="sxs-lookup"><span data-stu-id="2b2ba-115">Discriminated Unions</span></span>](discriminated-unions.md)
-- [<span data-ttu-id="2b2ba-116">Mustervergleich</span><span class="sxs-lookup"><span data-stu-id="2b2ba-116">Pattern Matching</span></span>](pattern-matching.md)
+- [<span data-ttu-id="0dcbc-117">Unterscheidungs-Unions</span><span class="sxs-lookup"><span data-stu-id="0dcbc-117">Discriminated Unions</span></span>](discriminated-unions.md)
+- [<span data-ttu-id="0dcbc-118">Mustervergleich</span><span class="sxs-lookup"><span data-stu-id="0dcbc-118">Pattern Matching</span></span>](pattern-matching.md)
