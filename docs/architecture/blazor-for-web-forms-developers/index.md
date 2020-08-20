@@ -7,18 +7,16 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 779eb47d9796c61df9939d0e7de287443870576e
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 1c869cce6ab8a0ab7c4b83817fe1afc3d6a4a7fd
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267468"
 ---
-# <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor für ASP.NET Web Forms-Entwickler
+# <a name="no-locblazor-for-aspnet-web-forms-developers"></a>Blazor für ASP.NET Web Forms-Entwickler
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-![Screenshot: Covers des E-Books „Serverless Apps“ (Serverlose Apps)](./media/index/blazor-for-web-forms-developers-cover.png)
+![Screenshot: Covers des E-Books „Serverless Apps“ (Serverlose Apps)](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
 > DOWNLOAD verfügbar unter: <https://aka.ms/blazor-ebook>
 
@@ -32,7 +30,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 Microsoft Corporation
+Copyright © 2020 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 
@@ -55,6 +53,8 @@ Autoren:
 > **[Taylor Southwick](https://github.com/twsouthwick)** , Senior Software Engineer, Microsoft Corp.
 
 > **[Scott Addie](https://github.com/scottaddie)** , Senior Content Developer, Microsoft Corp.
+
+> **[Steve „ardalis“ Smith](https://ardalis.com)** , Softwarearchitekt und Trainer, Ardalis Services LLC
 
 ## <a name="introduction"></a>Einführung
 
