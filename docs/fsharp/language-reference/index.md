@@ -1,17 +1,21 @@
 ---
 title: Sprachreferenz
 description: Hier finden Sie Informationen zu F#-Sprachfeatures, von diesem Verweis bis hin zu Sprachtoken, Konzepten, Typen, Ausdrücken und vom Compiler unterstützte Erstellungsthemen.
-ms.date: 05/16/2016
-ms.openlocfilehash: 43272c6684c8fc763e8f99611901f35695f48981
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/13/2020
+ms.openlocfilehash: 02711489c214c1fcdb2da80f30bff63d67769c17
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854957"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558152"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 
 Dieser Abschnitt ist eine Sprachreferenz für F#, eine Programmiersprache mit vielen Paradigmen, die auf .NET ausgerichtet ist. Die Sprache F# unterstützt funktionale, objektorientierte und imperative Programmiermodelle.
+
+## <a name="f-core-library-api-reference"></a>API-Referenz zur F# Core-Bibliothek
+
+Die [API-Referenz zur F# Core-Bibliothek (FSharp.Core)](https://fsharp.github.io/fsharp-core-docs/) ist die Referenz für alle Namespaces, Module, Typen und Funktionen der F# Core-Bibliothek.
 
 ## <a name="f-tokens"></a>F#-Token
 
