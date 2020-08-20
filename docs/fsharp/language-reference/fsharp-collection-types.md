@@ -2,12 +2,12 @@
 title: Auflistungstypen
 description: 'Erfahren Sie mehr über F #-Auflistungs Typen und deren Unterschiede zu den Sammlungs Typen .net.'
 ms.date: 08/14/2020
-ms.openlocfilehash: 197ba754d632051b5a0bf9c8364d45a1fb932f48
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267281"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656904"
 ---
 # <a name="f-collection-types"></a>F#-Auflistungstypen
 
@@ -19,13 +19,13 @@ Sammlungs Typen unterscheiden sich auch in dem Typ der Datenstruktur, in der-Obj
 
 In der folgenden Tabelle sind die F #-Sammlungs Typen aufgeführt.
 
-|type|BESCHREIBUNG|Verwandte Links|
+|type|BESCHREIBUNG|Ähnliche Themen|
 |----|-----------|-------------|
-|[Liste](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Eine geordnete, unveränderliche Reihe von Elementen desselben Typs. Wird als verknüpfte Liste implementiert.|[Listen](lists.md)<br /><br />[List-Modul](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[Array](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Eine Null basierte, änderbare Auflistung mit fester Größe von aufeinander folgenden Datenelementen, die alle denselben Typ haben.|[Arrays](arrays.md)<br /><br />[Array-Modul](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D-Modul](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D-Modul](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Eine logische Reihe von Elementen, die alle einen Typ haben. Sequenzen sind besonders nützlich, wenn Sie über eine große, geordnete Auflistung von Daten verfügen, aber nicht unbedingt alle Elemente erwarten. Einzelne Sequenz Elemente werden nur bei Bedarf berechnet, sodass eine Sequenz eine bessere Leistung als eine Liste erzielen kann, wenn nicht alle Elemente verwendet werden. Sequenzen werden durch den- `seq<'T>` Typ dargestellt, bei dem es sich um einen Alias für handelt `IEnumerable<T>` . Daher kann jeder .NET Framework Typ, der implementiert, `System.Collections.Generic.IEnumerable<'T>` als Sequenz verwendet werden.|[Sequenzen](sequences.md)<br /><br />[SQ-Modul](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Map](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Ein unveränderliches Wörterbuch von Elementen. Der Zugriff auf Elemente erfolgt über den Schlüssel.|[Map-Modul](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Eine unveränderliche Gruppe, die auf binären Strukturen basiert, wobei der Vergleich die strukturelle Vergleichsfunktion von F # ist, die potenziell Implementierungen der- `System.IComparable` Schnittstelle für Schlüsselwerte verwendet.|[Modul festlegen](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Liste](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|Eine geordnete, unveränderliche Reihe von Elementen desselben Typs. Wird als verknüpfte Liste implementiert.|[Listen](lists.md)<br /><br />[List-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
+|[Array](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|Eine Null basierte, änderbare Auflistung mit fester Größe von aufeinander folgenden Datenelementen, die alle denselben Typ haben.|[Arrays](arrays.md)<br /><br />[Array-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
+|[Seq](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seq-1.html)|Eine logische Reihe von Elementen, die alle einen Typ haben. Sequenzen sind besonders nützlich, wenn Sie über eine große, geordnete Auflistung von Daten verfügen, aber nicht unbedingt alle Elemente erwarten. Einzelne Sequenz Elemente werden nur bei Bedarf berechnet, sodass eine Sequenz eine bessere Leistung als eine Liste erzielen kann, wenn nicht alle Elemente verwendet werden. Sequenzen werden durch den- `seq<'T>` Typ dargestellt, bei dem es sich um einen Alias für handelt `IEnumerable<T>` . Daher kann jeder .NET Framework Typ, der implementiert, `System.Collections.Generic.IEnumerable<'T>` als Sequenz verwendet werden.|[Sequenzen](sequences.md)<br /><br />[SQ-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html)|
+|[Map](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpmap-2.html)|Ein unveränderliches Wörterbuch von Elementen. Der Zugriff auf Elemente erfolgt über den Schlüssel.|[Map-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-mapmodule.html)|
+|[Set](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpset-1.html)|Eine unveränderliche Gruppe, die auf binären Strukturen basiert, wobei der Vergleich die strukturelle Vergleichsfunktion von F # ist, die potenziell Implementierungen der- `System.IComparable` Schnittstelle für Schlüsselwerte verwendet.|[Modul festlegen](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-setmodule.html)|
 
 ### <a name="table-of-functions"></a>Tabelle mit Funktionen
 
@@ -93,7 +93,7 @@ In diesem Abschnitt werden die Funktionen verglichen, die für F #-Auflistungs T
 |max|O (N)|O (N)|O (N)|-|-|Gibt das größte Element in der Auflistung zurück, verglichen mit dem [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) -Operator.|
 |maxBy|O (N)|O (N)|O (N)|-|-|Gibt das größte Element in der Auflistung zurück, verglichen mit [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) im Funktionsergebnis.|
 |maxElement|-|-|-|-|O (Log (N))|Gibt das größte Element in der Menge entsprechend der Reihenfolge zurück, die für die Menge verwendet wird.|
-|Min.|O (N)|O (N)|O (N)|-|-|Gibt das kleinste Element in der Auflistung zurück, verglichen mit dem [Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) -Operator.|
+|Min|O (N)|O (N)|O (N)|-|-|Gibt das kleinste Element in der Auflistung zurück, verglichen mit dem [Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) -Operator.|
 |minBy|O (N)|O (N)|O (N)|-|-|Gibt das kleinste Element in der Auflistung zurück, verglichen mit dem [Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) -Operator für das Ergebnis der Funktion.|
 |minElement|-|-|-|-|O (Log (N))|Gibt das niedrigste Element im Satz entsprechend der für den Satz verwendeten Reihenfolge zurück.|
 |ofArray|-|O (N)|O(1)|O (N)|O (N)|Erstellt eine Auflistung, die die gleichen Elemente wie das angegebene Array enthält.|
