@@ -2,12 +2,12 @@
 title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 08/06/2020
-ms.openlocfilehash: 42c4ff59a520a1b99bbb2fb01d79d8902e16bdd5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9fa292e8e85832d831f36cf0f21512aa0cf32580
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063548"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656227"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#
 
@@ -15,7 +15,7 @@ C# (Aussprache „C Sharp“) ist eine moderne, objektorientierte und typsichere
 
 C# ist eine objektorientierte,  ***komponentenorientierte*** Programmiersprache. C# bietet Sprachkonstrukte zur direkten Unterstützung dieser Konzepte, was C# zu einer natürlichen Sprache macht, in der Softwarekomponenten erstellt und verwendet werden. Seit Veröffentlichung wurden C# Features hinzugefügt, um neue Workloads und Methoden zur Gestaltung von Software zu unterstützen.
 
-Einige C#-Features helfen beim Entwickeln stabiler und dauerhafter Anwendungen. Die [***Garbage Collection***](../../standard/garbage-collection/index.md) gibt Arbeitsspeicher automatisch frei, der von unerreichbaren nicht verwendeten Objekten belegt wird. Die [***Ausnahmebehandlung***](../programming-guide/exceptions/index.md) bietet einen strukturierten und erweiterbaren Ansatz zur Fehlererkennung und Wiederherstellung. [***Lambda-Ausdrücke***](../programming-guide/statements-expressions-operators/lambda-expressions.md) unterstützen funktionale Programmiertechniken. Die [***Abfragesyntax***](../linq/index.md) schafft ein einheitliches Muster für das Arbeiten mit Daten aus beliebigen Quellen. Dank Sprachunterstützung für [***asynchrone Vorgänge***](../programming-guide/concepts/async/index.md) wird eine Syntax für den Aufbau verteilter Systeme bereitgestellt. Der [***Musterabgleich***](..//pattern-matching.md) bietet eine Syntax, mit der sich Daten und Algorithmen in modernen verteilten Systemen leicht voneinander trennen lassen. C# bietet ein [***einheitliches Typsystem***](../programming-guide/types/index.md). Alle C#-Typen, einschließlich primitiver Typen wie `int` und `double`, erben von einem einzelnen `object`-Stammtyp. Allen Typen teilen sich eine Reihe allgemeiner Vorgänge. Werte jeglicher Art können einheitlich gespeichert, transportiert und bearbeitet werden. Darüber hinaus unterstützt C# benutzerdefinierte Verweis- und Werttypen. C# ermöglicht die dynamische Zuteilung von Objekten und die Inlinespeicherung schlanker Strukturen.
+Einige C#-Features helfen beim Entwickeln stabiler und dauerhafter Anwendungen. Die [***Garbage Collection***](../../standard/garbage-collection/index.md) gibt Arbeitsspeicher automatisch frei, der von unerreichbaren nicht verwendeten Objekten belegt wird. Die [***Ausnahmebehandlung***](../programming-guide/exceptions/index.md) bietet einen strukturierten und erweiterbaren Ansatz zur Fehlererkennung und Wiederherstellung. [***Lambda-Ausdrücke***](../language-reference/operators/lambda-expressions.md) unterstützen funktionale Programmiertechniken. Die [***Abfragesyntax***](../linq/index.md) schafft ein einheitliches Muster für das Arbeiten mit Daten aus beliebigen Quellen. Dank Sprachunterstützung für [***asynchrone Vorgänge***](../programming-guide/concepts/async/index.md) wird eine Syntax für den Aufbau verteilter Systeme bereitgestellt. Der [***Musterabgleich***](..//pattern-matching.md) bietet eine Syntax, mit der sich Daten und Algorithmen in modernen verteilten Systemen leicht voneinander trennen lassen. C# bietet ein [***einheitliches Typsystem***](../programming-guide/types/index.md). Alle C#-Typen, einschließlich primitiver Typen wie `int` und `double`, erben von einem einzelnen `object`-Stammtyp. Allen Typen teilen sich eine Reihe allgemeiner Vorgänge. Werte jeglicher Art können einheitlich gespeichert, transportiert und bearbeitet werden. Darüber hinaus unterstützt C# benutzerdefinierte Verweis- und Werttypen. C# ermöglicht die dynamische Zuteilung von Objekten und die Inlinespeicherung schlanker Strukturen.
 
 In C# dient die ***Versionsverwaltung*** zum Sicherstellen, dass sich Programme und Bibliotheken im Laufe der Zeit kompatibel weiterentwickeln können. Zu den Aspekten der Entwicklung von C#, die direkt von Überlegungen bei der Versionskontrolle beeinflusst wurden, gehören die separaten `virtual`- und `override`-Modifizierer, die Regeln für die Überladungsauflösung und die Unterstützung für explizite Schnittstellenmember-Deklarationen.
 
@@ -45,7 +45,7 @@ Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
   - [Einfache Typen](../language-reference/builtin-types/value-types.md#built-in-value-types)
     - [Integral mit Vorzeichen](../language-reference/builtin-types/integral-numeric-types.md): `sbyte`, `short`, `int`, `long`
     - [Integral ohne Vorzeichen](../language-reference/builtin-types/integral-numeric-types.md): `byte`, `ushort`, `uint`, `ulong`
-    - [Unicode-Zeichen](/dotnet/standard/base-types/character-encoding-introduction): `char`, das ein Zeichen als UTF-16-Codeeinheit darstellt
+    - [Unicode-Zeichen](../../standard/base-types/character-encoding-introduction.md): `char`, das ein Zeichen als UTF-16-Codeeinheit darstellt
     - [Binäres Gleitkomma (IEEE)](../language-reference/builtin-types/floating-point-numeric-types.md): `float`, `double`
     - [Dezimale Gleitkommazahl mit hoher Genauigkeit](../language-reference/builtin-types/floating-point-numeric-types.md): `decimal`
     - Boolesch: `bool` dient zur Darstellung boolescher Werte, die entweder `true` oder `false` sind
@@ -55,18 +55,18 @@ Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
     - Benutzerdefinierte Typen der Form `struct S {...}`
   - [Auf NULL festlegbare Werttypen](../language-reference/builtin-types/nullable-value-types.md)
     - Erweiterungen aller anderen Werttypen mit einem `null`-Wert
-  - [Tupelwerttypen](../tuples.md)
+  - [Tupelwerttypen](../language-reference/builtin-types/value-tuples.md)
     - Benutzerdefinierte Typen der Form `(T1, T2, ...)`
 - [Verweistypen](../language-reference/keywords/reference-types.md)
   - [Klassentypen](../language-reference/keywords/class.md)
     - Ultimative Basisklasse aller anderen Typen:`object`
-    - [Unicode-Zeichenfolgen](/dotnet/standard/base-types/character-encoding-introduction): `string`, die eine Sequenz von UTF-16-Codeeinheiten darstellt
+    - [Unicode-Zeichenfolgen](../../standard/base-types/character-encoding-introduction.md): `string`, die eine Sequenz von UTF-16-Codeeinheiten darstellt
     - Benutzerdefinierte Typen der Form `class C {...}`
   - [Schnittstellentypen](../language-reference/keywords/interface.md)
     - Benutzerdefinierte Typen der Form `interface I {...}`
   - [Array types (Arraytypen)](../programming-guide/arrays/index.md)
     - Ein- und mehrdimensional und verzweigt, z. B. `int[]`, `int[,]` und `int[][]`
-  - [Delegattypen](../language-reference/keywords/delegate.md)
+  - [Delegattypen](../language-reference/builtin-types/reference-types.md#the-delegate-type)
     - Benutzerdefinierte Typen der Form `delegate int D(...)`
 
 C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typdeklaration gibt den Namen und die Member des neuen Typs an. Fünf Typkategorien von C# sind benutzerdefinierbar: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen und Delegattypen.

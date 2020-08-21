@@ -1,15 +1,15 @@
 ---
-title: Zusätzliche Tools
+title: Weitere Tools
 description: Eine Übersicht über zusätzliche Tools, die Sie zum Unterstützen und Erweitern der .NET Core-Funktionalität installieren können.
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: c0224a1cc6cbb9ae6fa88e5f869c47a1e84289e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77451524"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557931"
 ---
 # <a name="net-core-additional-tools-overview"></a>Zusätzliche .NET Core-Tools – Übersicht
 
@@ -24,6 +24,8 @@ Mit dem [.NET Core-Deinstallationstool](https://github.com/dotnet/cli-lab/releas
 [dotnet-counters](../diagnostics/dotnet-counters.md) ist ein Tool zur Leistungsüberwachung der Integrität auf erster Ebene und zur Leistungsuntersuchung.
 
 Mit dem Tool [dotnet-dump](../diagnostics/dotnet-dump.md) können Sie Windows- und Linux-Kernspeicherabbilder ohne einen nativen Debugger erfassen und analysieren.
+
+Mit [dotnet-gcdump](../diagnostics/dotnet-gcdump.md) können Sie GC-Speicherabbilder (Garbage Collector) aus .NET-Liveprozessen erfassen.
 
 [dotnet-trace](../diagnostics/dotnet-trace.md) erfasst Profilerstellungsdaten von Ihrer App, die Sie in Szenarien unterstützen können, in denen Sie die Ursachen für eine langsame App-Ausführung herausfinden müssen.
 

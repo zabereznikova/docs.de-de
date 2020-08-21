@@ -1,13 +1,13 @@
 ---
 title: Erstellen eines einfachen datengesteuerten CRUD-Microservice
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Grundlagen der Erstellung eines einfachen CRUD-Microservice (datengesteuert) im Kontext einer Microserviceanwendung.
-ms.date: 01/30/2020
-ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Grundlagen der Erstellung eines einfachen CRUD-Microservice (datengesteuert) im Kontext einer Microserviceanwendung
+ms.date: 08/14/2020
+ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267957"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -47,7 +47,7 @@ Wählen Sie zuerst eine ASP.NET Core-Webanwendung und dann den API-Typ aus, um e
 
 **Abbildung 6-7**. Abhängigkeiten in einem einfachen CRUD-Web-API-Microservice
 
-Das API-Projekt enthält Verweise auf das NuGet-Paket „Microsoft.AspNetCore.App“, das wiederum Verweise auf alle erforderliche Pakete enthält. Einige weitere Pakete können ebenfalls enthalten sein.
+Das API-Projekt enthält Verweise auf das NuGet-Paket „Microsoft.AspNetCore.App“, das wiederum Verweise auf alle erforderlichen Pakete enthält. Einige weitere Pakete können ebenfalls enthalten sein.
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Implementieren von CRUD-Web-API-Services mit Entity Framework Core
 
@@ -57,7 +57,7 @@ Der Microservice Katalog verwendet EF und den SQL Server-Anbieter, da seine Date
 
 #### <a name="the-data-model"></a>Das Datenmodell
 
-Bei EF Core erfolgt der Datenzugriff über ein Modell. Ein Modell setzt sich aus Entitätsklassen (Domänenmodell) und einem abgeleiteten Kontext (DbContext) zusammen, der eine Sitzung bei der Datenbank darstellt und Ihnen das Abfragen und Speichern von Daten ermöglicht. Mithilfe des Code-First-Ansatzes können Sie ein Modell aus einer vorhandenen Datenbank generieren, ein Modell manuell anhand Ihrer Datenbank schreiben oder mithilfe von EF-Migrationen eine Datenbank aus Ihrem Modell erstellen (hiermit wird die Entwicklung der Datenbank vereinfacht, während Ihr Modell sich im Laufe der Zeit weiterentwickelt). Für den Microservice Katalog verwenden wir den letztgenannten Ansatz. Das folgende Codebeispiel zeigt die Entitätsklasse CatalogItem. Hierbei handelt es sich um eine einfache POCO-Entitätsklasse ([Plain Old CLR Object](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)).
+Bei EF Core erfolgt der Datenzugriff über ein Modell. Ein Modell setzt sich aus Entitätsklassen (Domänenmodell) und einem abgeleiteten Kontext (DbContext) zusammen, der eine Sitzung bei der Datenbank darstellt und Ihnen das Abfragen und Speichern von Daten ermöglicht. Mithilfe des Code-First-Ansatzes (der die Weiterentwicklung der Datenbank vereinfacht, da sich das Modell im Laufe der Zeit ändert) können Sie ein Modell aus einer vorhandenen Datenbank generieren, manuell ein Modell für Ihre Datenbank schreiben oder mithilfe von EF-Migrationsmethoden eine Datenbank aus Ihrem Modell erstellen. Für den Katalogmicroservice wird der letztgenannte Ansatz verwendet. Das folgende Codebeispiel zeigt die Entitätsklasse CatalogItem. Hierbei handelt es sich um eine einfache POCO-Entitätsklasse ([Plain Old CLR Object](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)).
 
 ```csharp
 public class CatalogItem
@@ -185,15 +185,14 @@ _context.SaveChanges();
 
 In ASP.NET Core können Sie die vorkonfigurierte Abhängigkeitseinfügung (DI, Dependency Injection) verwenden. Sie müssen keinen IoC-Container (Inversion of Control) eines Drittanbieters einrichten, können aber Ihren bevorzugten IoC-Container in die ASP.NET Core-Infrastruktur einbinden, wenn Sie möchten. In diesem Fall können Sie den erforderlichen EF-DBContext oder zusätzliche Repositorys direkt über den Controller-Konstruktor einfügen.
 
-Im obigen Beispiel für die `CatalogController`-Klasse fügen wir ein Objekt des `CatalogContext`-Typs und andere Objekte über den `CatalogController()`-Konstruktor ein.
+In der zuvor erwähnten Klasse `CatalogController` wird der Typ `CatalogContext` (der von `DbContext` erbt) zusammen mit weiteren erforderlichen Objekten in den Konstruktor `CatalogController()` eingefügt.
 
-Ein wichtiger Konfigurationsschritt bei der Einrichtung des Web-API-Projekts ist die Registrierung der DbContext-Klasse im IoC-Container des Diensts. Hierzu rufen Sie in der Regel in der `Startup`-Klasse die `services.AddDbContext<DbContext>()`-Methode innerhalb der `ConfigureServices()`-Methode auf, wie im folgenden **vereinfachten** Beispiel gezeigt:
+Ein wichtiger Konfigurationsschritt bei der Einrichtung des Web-API-Projekts ist die Registrierung der DbContext-Klasse im IoC-Container des Diensts. Hierzu rufen Sie in der Regel in der `Startup`-Klasse die `services.AddDbContext<CatalogContext>()`-Methode innerhalb der `ConfigureServices()`-Methode auf, wie im folgenden **vereinfachten** Beispiel gezeigt:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     // Additional code...
-
     services.AddDbContext<CatalogContext>(options =>
     {
         options.UseSqlServer(Configuration["ConnectionString"],
@@ -279,7 +278,7 @@ Weitere Informationen finden Sie in der *Dokumentation zu Azure Key Vault*.
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>Implementieren einer Versionsverwaltung in ASP.NET Web-APIs
 
-Wenn sich die Geschäftsanforderungen ändern, werden möglicherweise neue Sammlungen von Ressourcen hinzugefügt, die Beziehungen zwischen Ressourcen können sich ändern, und die Struktur der Daten in Ressourcen wird möglicherweise modifiziert. Es ist relativ einfach, eine Web-API zu aktualisieren, damit sie neue Anforderungen verarbeiten kann. Sie müssen jedoch die Auswirkungen berücksichtigen, die derartige Änderungen auf Clientanwendungen haben, die die Web-API nutzen. Zwar hat der Entwickler, der eine Web-API entwirft und implementiert, die vollständige Kontrolle über diese API, er hat allerdings nicht das gleiche Maß an Kontrolle über Clientanwendungen, die möglicherweise von Drittanbietern erstellt werden.
+Wenn sich die Geschäftsanforderungen ändern, werden möglicherweise neue Sammlungen von Ressourcen hinzugefügt, die Beziehungen zwischen Ressourcen können sich ändern, und die Struktur der Daten in Ressourcen wird möglicherweise modifiziert. Es ist relativ einfach, eine Web-API zu aktualisieren, damit sie neue Anforderungen verarbeiten kann. Sie müssen jedoch die Auswirkungen berücksichtigen, die derartige Änderungen auf Clientanwendungen haben, die die Web-API nutzen. Der Entwickler, der eine Web-API entwirft und implementiert, hat zwar vollständige Kontrolle über diese API, dies gilt jedoch nicht für die Clientanwendungen, die möglicherweise von unabhängig agierenden Drittanbietern erstellt werden.
 
 Mit der Versionsverwaltung kann eine Web-API angeben, welche Features und Ressourcen sie bereitstellt. Eine Clientanwendung kann dann Anforderungen an eine bestimmte Version eines Features oder einer Ressource senden. Es gibt verschiedene Methoden für das Implementieren einer Versionsverwaltung:
 
@@ -317,7 +316,7 @@ Dieser Mechanismus für die Versionsverwaltung ist einfach und richtet sich nach
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generieren von Swagger-Beschreibungsmetadaten aus Ihrer ASP.NET Core-Web-API
 
-[Swagger](https://swagger.io/) ist ein häufig verwendetes Open-Source-Framework, hinter dem ein großes Ökosystem von Tools steht, die Sie beim Entwerfen, Erstellen, Dokumentieren und Nutzen Ihrer RESTful-APIs unterstützen. Swagger wird immer mehr zum Standard für die Beschreibungsmetadaten-Domäne von APIs. Wie im folgenden Abschnitt erläutert wird, sollten Sie Swagger-Beschreibungsmetadaten in sämtliche Arten von Microservices integrieren, d.h. sowohl in datengesteuerte Microservices als auch in komplexere domänengesteuerte Microservices.
+[Swagger](https://swagger.io/) ist ein häufig verwendetes Open-Source-Framework, hinter dem ein großes Ökosystem von Tools steht, die Sie beim Entwerfen, Erstellen, Dokumentieren und Nutzen Ihrer RESTful-APIs unterstützen. Swagger wird immer mehr zum Standard für die Beschreibungsmetadaten-Domäne von APIs. Wie im folgenden Abschnitt erläutert wird, sollten Sie Swagger-Beschreibungsmetadaten in sämtliche Arten von Microservices integrieren, d. h. sowohl in datengesteuerte als auch in komplexere domänengesteuerte Microservices.
 
 Das Herzstück von Swagger ist die Swagger-Spezifikation, bei der es sich um API-Beschreibungsmetadaten in einer JSON- oder YAML-Datei handelt. Die Spezifikation erstellt den RESTful-Vertrag für Ihre API und legt die Details zu allen ihren Ressourcen und Vorgängen in einem visuell lesbaren und einem maschinenlesbaren Format für einfache Entwicklungs-, Ermittlungs- und Integrationsvorgänge fest.
 
@@ -363,7 +362,7 @@ Dies bedeutet, dass Sie Ihre API um eine benutzerfreundliche Ermittlungs-UI erg�
 
 Die von Swashbuckle generierte Dokumentation der Swagger-Benutzeroberflächen-API enthält alle veröffentlichten Aktionen Der API Explorer hat hierbei nicht den höchsten Stellenwert. Sobald Sie über eine Web-API verfügen, die sich selbst in Swagger-Metadaten beschreiben kann, kann Ihre API nahtlos von Swagger-basierten Tools verwendet werden, einschließlich Client-Proxy-Klassencodegeneratoren, die für eine Vielzahl von Plattformen geeignet sind. Wie bereits erwähnt wurde, generiert beispielsweise [AutoRest](https://github.com/Azure/AutoRest) automatisch .NET-Clientklassen. Es stehen jedoch zusätzliche Tools wie [swagger-codegen](https://github.com/swagger-api/swagger-codegen) zur Verfügung, die eine automatische Codegenerierung von API-Client-Bibliotheken, Server-Stubs und Dokumentation ermöglichen.
 
-Derzeit besteht Swashbuckle aus fünf NuGet-Paketen im allgemeinen Metapaket [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) für ASP.NET Core-Anwendungen.
+Derzeit besteht Swashbuckle aus fünf internen NuGet-Paketen im allgemeinen Metapaket [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) für ASP.NET Core-Anwendungen.
 
 Nachdem Sie diese NuGet-Pakete in Ihrem Web-API-Projekt installiert haben, müssen Sie Swagger wie im folgenden **vereinfachten** Code gezeigt in der Startup-Klasse konfigurieren:
 

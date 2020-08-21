@@ -6,12 +6,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: df7acc788943e9655dbbb03ffaaa88ff22b81ad2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475475"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187902"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework-Versionen und -Abhängigkeiten
 
@@ -31,8 +31,9 @@ Die CLR wird durch ihre eigene Versionsnummer identifiziert. Die .NET Framework-
 
 Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Versionsverlaufs und korrelieren die einzelnen Versionen mit Visual Studio, Windows und Windows Server. Visual Studio unterstützt die Festlegung mehrerer Zielversionen, sodass Sie nicht auf die .NET Framework-Version beschränkt sind, die aufgeführt ist.
 
-- Das Häkchensymbol ✔️ kennzeichnet Betriebssystemversionen, unter denen .NET Framework installiert ist, aber [in der Systemsteuerung](../install/dotnet-35-windows-10.md) (für Windows) oder über den Server-Manager (für Windows Server) aktiviert werden muss.
+- Das Häkchensymbol ✔️ kennzeichnet Betriebssystemversionen, unter denen das .NET Framework von vornherein installiert ist.
 - Das Pluszeichensymbol ➕ kennzeichnet Betriebssystemversionen, unter denen .NET Framework nicht installiert ist, aber installiert werden kann.
+- Der Asterisk **\*** kennzeichnet Betriebssystemversionen, unter denen das .NET Framework (vorinstalliert und nicht vorinstalliert) [in der Systemsteuerung](../install/dotnet-35-windows-10.md) oder über den Server-Manager (für Windows Server) aktiviert werden muss.
 
 | | |
 | - | - |

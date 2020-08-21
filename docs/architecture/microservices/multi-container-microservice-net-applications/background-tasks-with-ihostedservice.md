@@ -1,17 +1,17 @@
 ---
 title: Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über neue Optionen zum Implementieren von Hintergrundtasks in Microservices in .NET Core mit IHostedService und BackgroundService
-ms.date: 01/30/2020
-ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/14/2020
+ms.openlocfilehash: 4ab215f2196cd2e66b116465c3a582a9846c8066
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267996"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
 
-Ab einem bestimmten Zeitpunkt müssen möglicherweise in auf Microservices basierende Anwendungen oder auch in anderen Anwendungen Hintergrundtasks und geplante Aufträge implementiert werden. Die Besonderheit bei der Verwendung einer Microservicesarchitektur ist, dass Sie einen einzelnen Microserviceprozess oder -container implementieren können, um diese Hintergrundtasks zu hosten. Dadurch kann bei Bedarf eine vertikale Skalierung vorgenommen und zusätzlich sichergestellt werden, dass nur eine Instanz des Microserviceprozesses oder -containers ausgeführt wird.
+Hintergrundaufgaben und geplante Aufträge können in jeder beliebigen Anwendung eingesetzt werden, unabhängig davon, ob diese auf einer Microservicearchitektur basiert. Der Unterschied bei Verwendung einer Microservicearchitektur besteht darin, dass Sie die Hintergrundaufgabe in einem separaten Hostingprozess oder -container implementieren können, damit Sie diesen je nach Bedarf hoch- oder herunterskalieren können.
 
 In .NET Core werden diese Tasks als *gehostete Dienste* bezeichnet, da sie Dienste oder Logiken darstellen, die in einem Host, einer Anwendung oder einem Microservice gehostet werden. Beachten Sie, dass in diesem Fall der gehostete Dienst einfach einer Klasse mit der Logik des Hintergrundtasks entspricht.
 
@@ -68,29 +68,7 @@ Ohne die Nutzung von `IHostedService` ließe sich ein Hintergrundthread erstelle
 
 ## <a name="the-ihostedservice-interface"></a>Die IHostedService-Schnittstelle
 
-Beim Registrieren von `IHostedService` ruft .NET Core die Methoden `StartAsync()` und `StopAsync()` des Typs `IHostedService` während des Anwendungsstarts und -stopps auf. Nach dem Serverstart wird die Startmethode aufgerufen, und `IApplicationLifetime.ApplicationStarted` wird ausgelöst.
-
-Die `IHostedService`-Schnittstelle sieht in .NET Core wie folgt aus:
-
-```csharp
-namespace Microsoft.Extensions.Hosting
-{
-    //
-    // Summary:
-    //     Defines methods for objects that are managed by the host.
-    public interface IHostedService
-    {
-        //
-        // Summary:
-        // Triggered when the application host is ready to start the service.
-        Task StartAsync(CancellationToken cancellationToken);
-        //
-        // Summary:
-        // Triggered when the application host is performing a graceful shutdown.
-        Task StopAsync(CancellationToken cancellationToken);
-    }
-}
-```
+Beim Registrieren von `IHostedService` ruft .NET Core die Methoden `StartAsync()` und `StopAsync()` des Typs `IHostedService` während des Anwendungsstarts und -stopps auf. Weitere Informationen finden Sie unter [Schnittstelle „IHostedService“](https://docs.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio#ihostedservice-interface).
 
 Sie können mehrere Implementierungen von IHostedService erstellen und wie zuvor gezeigt in der `ConfigureService()`-Methode des Dependency Injection-Containers registrieren. Alle gehosteten Dienste werden zusammen mit der Anwendung und dem Microservice gestartet und beendet.
 
@@ -210,7 +188,7 @@ Im Fall von eShopOnContainers wird eine Anwendungsmethode ausgeführt, durch die
 
 Sie könnten allerdings auch andere Geschäftshintergrundtasks ausführen.
 
-Standardmäßig wird für das Abbruchtoken ein Zeitlimit von 5 Sekunden festgelegt, obwohl der Wert beim Erstellen von `WebHost` mithilfe der `UseShutdownTimeout`-Erweiterung von `IWebHostBuilder` geändert werden kann. Der Dienst muss also innerhalb von fünf Sekunden beendet werden, da er ansonsten sofort beendet wird.
+Standardmäßig wird für das Abbruchtoken ein Zeitlimit von 5 Sekunden festgelegt, obwohl der Wert beim Erstellen von `WebHost` mithilfe der Erweiterung `UseShutdownTimeout` von `IWebHostBuilder` geändert werden kann. Der Dienst muss also innerhalb von fünf Sekunden beendet werden, da er ansonsten sofort beendet wird.
 
 Im Folgenden Codeausschnitt wird dieses Zeitlimit geändert und auf 10 Sekunden festgelegt.
 
@@ -236,7 +214,7 @@ Sie sollten beachten, dass die konkrete Bereitstellung von ASP.NET Core-`WebHost
 
 Auch wenn eine `WebHost`-Instanz in einem Anwendungspool bereitgestellt würde, müssten andere Szenarios wie das Leeren oder nochmalige Auffüllen des speicherinternen Anwendungscaches berücksichtigt werden.
 
-Die `IHostedService`-Schnittstelle bietet eine einfache Möglichkeit, Hintergrundtasks in einer ASP.NET Core-Webanwendung ( ab .NET 2.0 Core) oder in einem Prozess oder Host zu starten (ab .NET Core 2.1 mit `IHost`). Der Hauptvorteil besteht darin, dass Sie durch einen ordnungsgemäßen Abbruch Bereinigungscode in Ihren Hintergrundtasks ausführen können, wenn der Host heruntergefahren wird.
+Die `IHostedService`-Schnittstelle bietet eine einfache Möglichkeit, Hintergrundtasks in einer ASP.NET Core-Webanwendung ( ab .NET 2.0 Core) oder in einem Prozess oder Host zu starten (ab .NET Core 2.1 mit `IHost`). Ihr Hauptvorteil besteht darin, dass Sie bei einem ordnungsgemäßen Abbruch den Code Ihrer Hintergrundaufgaben bereinigen können, wenn der Host heruntergefahren wird.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

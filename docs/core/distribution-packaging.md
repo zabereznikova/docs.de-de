@@ -3,12 +3,12 @@ title: Verpacken einer Verteilung von .NET Core
 description: Erfahren Sie, wie Sie .NET Core für die Verteilung verpacken, benennen und mit einer Versionsnummer versehen.
 author: tmds
 ms.date: 10/09/2019
-ms.openlocfilehash: a345aeded29b3058c6c56abbff439ea26cbc7afb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 3324a6a151fc6dc46a8f13ea17c89da99d108d82
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "81386639"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062885"
 ---
 # <a name="net-core-distribution-packaging"></a>Verpacken einer Verteilung von .NET Core
 
@@ -67,9 +67,9 @@ Da .NET Core auf immer mehr Plattformen verfügbar wird, ist es hilfreich zu erf
 
 Es gibt nur einen Host, die meisten anderen Komponenten befinden sich jedoch in Verzeichnissen mit Versionsangabe (2, 3, 5, 6). Das bedeutet, dass auf dem System mehrere Versionen vorhanden sein können, da sie nebeneinander installiert werden können.
 
-- (2) **host/fxr/\<fxr version>** : Enthält die vom Host verwendete Framework-Auflösungslogik. Der Host verwendet die neueste installierte hostfxr-Version. „hostfxr“ ist für die Auswahl der geeigneten Runtime beim Ausführen einer .NET Core-Anwendung zuständig. Eine Anwendung, die für .NET Core 2.0.0 erstellt wurde, verwendet beispielsweise die Runtime 2.0.5, wenn sie verfügbar ist. Ebenso wählt „hostfxr“ während der Entwicklung das geeignete SDK aus.
+- (2) **host/fxr/\<fxr version>** : Enthält die vom Host verwendete Frameworkauflösungslogik. Der Host verwendet die neueste installierte hostfxr-Version. „hostfxr“ ist für die Auswahl der geeigneten Runtime beim Ausführen einer .NET Core-Anwendung zuständig. Eine Anwendung, die für .NET Core 2.0.0 erstellt wurde, verwendet beispielsweise die Runtime 2.0.5, wenn sie verfügbar ist. Ebenso wählt „hostfxr“ während der Entwicklung das geeignete SDK aus.
 
-- (3) **sdk/\<sdk version>** : Das SDK (auch bekannt als „die Tools“) ist ein Satz verwalteter Tools, die zum Schreiben und Erstellen von .NET Core-Bibliotheken und -Anwendungen verwendet werden. Das SDK enthält die .NET Core-CLI, die verwalteten Sprachcompiler, MSBuild und zugehörige Buildtasks und -ziele, NuGet, neue Projektvorlagen usw.
+- (3) **sdk/\<sdk version>** : Bei dem SDK (auch „die Tools“) handelt es sich um mehrere verwaltete Tools, die zum Schreiben und Erstellen von .NET Core-Bibliotheken und -Anwendungen verwendet werden. Das SDK enthält die .NET Core-CLI, die verwalteten Sprachcompiler, MSBuild und zugehörige Buildtasks und -ziele, NuGet, neue Projektvorlagen usw.
 
 - (4) **sdk/NuGetFallbackFolder** enthält einen Cache der NuGet-Pakete, die von einem SDK während der Wiederherstellung verwendet werden, etwa bei der Ausführung von `dotnet restore` oder `dotnet build`. Dieser Ordner wird nur vor .NET Core 3.0 verwendet. Er kann nicht aus der Quelle erstellt werden, da er vorgefertigte binäre Ressourcen aus `nuget.org` enthält.
 
@@ -77,9 +77,9 @@ Der Ordner **shared** enthält Frameworks. Ein gemeinsames (shared) Framework st
 
 - (5) **shared/Microsoft.NETCore.App/\<runtime version>** : Dieses Framework enthält die .NET-Runtime und die unterstützenden verwalteten Bibliotheken.
 
-- (6) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore version>** enthält die ASP.NET Core-Bibliotheken. Die Bibliotheken unter `Microsoft.AspNetCore.App` werden im Rahmen des .NET Core-Projekts entwickelt und unterstützt. Die Bibliotheken unter `Microsoft.AspNetCore.All` sind ein übergeordnetes Set, das auch Drittanbieterbibliotheken enthält.
+- (6) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore version>** : Enthält die ASP.NET Core-Bibliotheken. Die Bibliotheken unter `Microsoft.AspNetCore.App` werden im Rahmen des .NET Core-Projekts entwickelt und unterstützt. Die Bibliotheken unter `Microsoft.AspNetCore.All` sind ein übergeordnetes Set, das auch Drittanbieterbibliotheken enthält.
 
-- (7) **shared/Microsoft.Desktop.App/\<desktop app version>** enthält die Windows-Desktopbibliotheken. Dies ist nur in Windows enthalten, und nicht in anderen Plattformen.
+- (7) **shared/Microsoft.Desktop.App/\<desktop app version>** : Enthält die Windows-Desktopbibliotheken. Dies ist nur in Windows enthalten, und nicht in anderen Plattformen.
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt**: Dies sind die .NET Core-Lizenzen und die Lizenzen von Drittanbieterbibliotheken, die in .NET Core jeweils verwendet werden.
 
@@ -87,7 +87,7 @@ Der Ordner **shared** enthält Frameworks. Ein gemeinsames (shared) Framework st
 
 - (11,12) **Microsoft.NETCore.App.Ref,Microsoft.AspNetCore.App.Ref** beschreibt jeweils die API einer `x.y`-Version von .NET Core und ASP.NET Core. Diese Pakete werden bei der Kompilierung für diese Zielversionen verwendet.
 
-- (13) **Microsoft.NETCore.App.Host.\<rid>** enthält eine native Binärdatei für die Plattform `rid`. Diese Binärdatei ist eine Vorlage für das Kompilieren einer .NET Core-Anwendung in eine native Binärdatei für diese Plattform.
+- (13) **Microsoft.NETCore.App.Host.\<rid>** : Enthält eine native Binärdatei für die Plattform `rid`. Diese Binärdatei ist eine Vorlage für das Kompilieren einer .NET Core-Anwendung in eine native Binärdatei für diese Plattform.
 
 - (14) **Microsoft.WindowsDesktop.App.Ref** beschreibt die API der `x.y`-Version von Windows-Desktopanwendungen. Diese Dateien werden beim Kompilieren für dieses Ziel verwendet. Dies wird nur unter Windows bereitgestellt, und nicht für andere Plattformen.
 
@@ -111,49 +111,49 @@ Der Rest der Version ist im Versionsnamen nicht enthalten. Dies ermöglicht dem 
 Im Folgenden werden die empfohlenen Pakete aufgeführt:
 
 - `dotnet-sdk-[major].[minor]`: installiert das neueste SDK für eine spezifische Runtime.
-  - **Version:** \<runtimeversion>
+  - **Version:** \<sdk version>
   - **Beispiel:** dotnet-sdk-2.1
   - **Enthält:** (3), (4)
   - **Abhängigkeiten:** `dotnet-runtime-[major].[minor]`, `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]`: installiert eine spezifische ASP.NET Core-Runtime.
-  - **Version:** \<aspnetcore runtimeversion>
+  - **Version:** \<aspnetcore runtime version>
   - **Beispiel:** aspnetcore-runtime-2.1
   - **Enthält:** (6)
   - **Abhängigkeiten:** `dotnet-runtime-[major].[minor]`
 
 - `dotnet-runtime-deps-[major].[minor]` _(Optional):_ Installiert die Abhängigkeiten zum Ausführen eigenständiger Anwendungen.
-  - **Version:** \<runtimeversion>
+  - **Version:** \<runtime version>
   - **Beispiel:** dotnet-runtime-deps-2.1
   - **Abhängigkeiten:** _Verteilungsspezifische Abhängigkeiten_
 
 - `dotnet-runtime-[major].[minor]`: installiert eine spezifische Runtime
-  - **Version:** \<runtimeversion>
+  - **Version:** \<runtime version>
   - **Beispiel:** dotnet-runtime-2.1
   - **Enthält:** (5)
   - **Abhängigkeiten:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
 - `dotnet-hostfxr-[major].[minor]`: Abhängigkeit
-  - **Version:** \<runtimeversion>
+  - **Version:** \<runtime version>
   - **Beispiel:** dotnet-hostfxr-3.0
   - **Enthält:** (2)
   - **Abhängigkeiten:** `dotnet-host`
 
 - `dotnet-host`: Abhängigkeit
-  - **Version:** \<runtimeversion>
+  - **Version:** \<runtime version>
   - **Beispiel:** dotnet-host
   - **Enthält:** (1),(8),(9),(10),(16)
 
 - `dotnet-apphost-pack-[major].[minor]`: Abhängigkeit
-  - **Version:** \<runtimeversion>
+  - **Version:** \<runtime version>
   - **Enthält:** (13)
 
 - `dotnet-targeting-pack-[major].[minor]`: ermöglicht eine ältere Runtime als Ziel.
-  - **Version:** \<runtimeversion>
+  - **Version:** \<runtime version>
   - **Enthält:** (12)
 
 - `aspnetcore-targeting-pack-[major].[minor]`: ermöglicht eine ältere Runtime als Ziel.
-  - **Version:** \<aspnetcore runtimeversion>
+  - **Version:** \<aspnetcore runtime version>
   - **Enthält:** (11)
 
 - `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`: ermöglicht eine NetStandard-Zielversion

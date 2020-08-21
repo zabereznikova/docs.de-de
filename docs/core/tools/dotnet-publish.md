@@ -2,12 +2,12 @@
 title: Befehl „dotnet publish“
 description: Der Befehl „dotnet publish“ dient zum Veröffentlichen eines .NET Core-Projekts oder einer .NET Core-Projektmappe in einem Verzeichnis.
 ms.date: 02/24/2020
-ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251178"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187971"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -51,7 +51,9 @@ Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausf�
 
 Der Befehl `dotnet publish` ruft MSBuild auf, welches das `Publish`-Ziel aufruft. Alle Parameter, die an `dotnet publish` übergeben werden, werden an MSBuild übergeben. Die Parameter `-c` und `-o` verweisen auf die MSBuild-Eigenschaften `Configuration` bzw. `PublishDir`.
 
-Der `dotnet publish`-Befehl akzeptiert MSBuild-Optionen, z. B. `-p` zum Festlegen von Eigenschaften oder `-l` zum Definieren eines Protokolls. Beispielsweise können Sie eine MSBuild-Eigenschaft mit dem folgenden Format festlegen: `-p:<NAME>=<VALUE>`. Sie können auch Veröffentlichungseigenschaften festlegen, indem Sie auf eine *PUBXML*-Datei verweisen, wie z. B. in der folgenden Codezeile:
+Der `dotnet publish`-Befehl akzeptiert MSBuild-Optionen, z. B. `-p` zum Festlegen von Eigenschaften oder `-l` zum Definieren eines Protokolls. Beispielsweise können Sie eine MSBuild-Eigenschaft mit dem folgenden Format festlegen: `-p:<NAME>=<VALUE>`.
+
+Sie können auch auf die Veröffentlichung bezogene Eigenschaften festlegen, indem Sie auf eine *PUBXML*-Datei verweisen (seit dem .NET Core 3.1 SDK verfügbar). Beispiel:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile

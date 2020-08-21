@@ -3,12 +3,12 @@ title: Übersicht über Diagnosetools – .NET Core
 description: Eine Übersicht über die Tools und Techniken, die zur Diagnose von .NET Core-Anwendungen zur Verfügung stehen.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: dc64c03ee9c8cee6a5b3c5cc089b4a1a2c27f84a
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: ae3b9a1961f331c9cdea786bd5fe06b7bfa10927
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924781"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558113"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Welche Diagnosetools sind in .NET Core verfügbar?
 
@@ -37,6 +37,10 @@ Die [Protokollierung und Ablaufverfolgung](logging-tracing.md) sind verwandte Te
 ### <a name="dotnet-dump"></a>dotnet-dump
 
 Mit dem Tool [dotnet-dump](dotnet-dump.md) können Sie Windows- und Linux-Kernspeicherabbilder ohne nativen Debugger erfassen und analysieren.
+
+### <a name="dotnet-gcdump"></a>dotnet-gcdump
+
+Mit dem Tool [dotnet-gcdump](dotnet-gcdump.md) können Sie GC-Speicherabbilder (Garbage Collector) aus .NET-Liveprozessen erfassen.
 
 ### <a name="dotnet-trace"></a>dotnet-trace
 

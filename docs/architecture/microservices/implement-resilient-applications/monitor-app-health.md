@@ -2,12 +2,12 @@
 title: Systemüberwachung
 description: Entdecken Sie eine Möglichkeit zum Implementieren der Systemüberwachung.
 ms.date: 03/02/2020
-ms.openlocfilehash: 88354ae0ae59dbfbe40dbe1b25320f8f93d042ce
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3e3e8ec41de1469f0c397d8d80d224dd2f7a2bd2
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267892"
 ---
 # <a name="health-monitoring"></a>Systemüberwachung
 
@@ -195,7 +195,6 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
     Predicate = _ => true,
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-}
 ```
 
 ### <a name="query-your-microservices-to-report-about-their-health-status"></a>Abfragen eines Berichts zum Integritätsstatus der Microservices
@@ -220,7 +219,7 @@ Das eShopOnContainers-Beispiel enthält eine Webseite, auf der wie in Abbildung 
 
 **Abbildung 8-9.** Beispielbericht zur Integritätsüberprüfung in eShopOnContainers
 
-Dieser Überwachungsdienst fragt also den Endpunkt „/hc“ aller Microservices ab. Dadurch werden alle darin definierten Integritätsüberprüfungen ausgeführt und ein allgemeiner Integritätsstatus zurückgegeben, der von diesen Überprüfungen abhängig ist. HealthChecksUI ist mit wenigen Konfigurationseinträgen und zwei Codezeilen, die zur Datei „Startup.cs“ des Überwachungsdiensts hinzugefügt werden müssen, leicht zu verarbeiten.
+Dieser Überwachungsdienst fragt also den Endpunkt „/hc“ aller Microservices ab. Dadurch werden alle darin definierten Integritätsüberprüfungen ausgeführt und ein allgemeiner Integritätsstatus zurückgegeben, der von diesen Überprüfungen abhängig ist. Die Bedienung der Benutzeroberfläche der Integritätsüberprüfung ist einfach, da der Datei *Startup.cs* des Überwachungsdiensts nur einige Konfigurationseinträge und zwei Codezeilen hinzugefügt werden müssen.
 
 Beispielkonfigurationsdatei für HealthChecksUI:
 
@@ -242,7 +241,7 @@ Beispielkonfigurationsdatei für HealthChecksUI:
 }
 ```
 
-Datei „Startup.cs“, die HealthChecksUI hinzufügt:
+„HealthChecksUI“ wird der Datei *Startup.cs* hinzufügt:
 
 ```csharp
 // Startup.cs from WebStatus(Watch Dog) service
@@ -257,7 +256,7 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecksUI(config=> config.UIPath = "/hc-ui");
+    app.UseHealthChecksUI(config => config.UIPath = "/hc-ui");
     //…
 }
 ```

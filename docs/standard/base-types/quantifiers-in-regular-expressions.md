@@ -15,12 +15,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 3ffdd481ac001b4e1bd229c6f5fa0bf285b508b2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662887"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063808"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  
@@ -48,7 +48,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 ### <a name="match-zero-or-more-times-"></a>Übereinstimmung mit null oder mehr Vorkommen: *  
  Der `*`-Quantifizierer gleicht das vorangehende Element nullmal oder häufiger ab. Dies entspricht dem `{0,}`-Quantifizierer. `*` ist ein gieriger Quantifizierer, dessen träges Äquivalent `*?` lautet.  
   
- Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht. Von den neun Ziffern in der Eingabezeichenfolge entsprechen fünf dem Muster, bei vier Ziffern (`95`, `929`, `9219` und `9919`) ist das nicht der Fall.  
+ Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht. Von den neun Zifferngruppen in der Eingabezeichenfolge entsprechen fünf dem Muster, bei vier Gruppen (`95`, `929`, `9219` und `9919`) ist dies nicht der Fall.  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
