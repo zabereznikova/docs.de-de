@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-ms.openlocfilehash: 58ad874ef6a12c18c404640aa66577c391573534
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 2e1e0fda5c1a80627c8dde7f49954a867b9a2b66
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309741"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720136"
 ---
 # <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse
 
@@ -23,6 +23,7 @@ Diese Kategorie umfasst die folgenden Ereignisse:
 - [GCStart_V1-Ereignis](#gcstart_v1-event)
 - [GCEnd_V1-Ereignis](#gcend_v1-event)
 - [GCHeapStats_V1-Ereignis](#gcheapstats_v1-event)
+- [GCHeapStats_V2 Ereignis](#gcheapstats_v2-event)
 - [GCCreateSegment_V1-Ereignis](#gccreatesegment_v1-event)
 - [GCFreeSegment_V1-Ereignis](#gcfreesegment_v1-event)
 - [GCRestartEEBegin_V1-Ereignis](#gcrestarteebegin_v1-event)
@@ -30,6 +31,7 @@ Diese Kategorie umfasst die folgenden Ereignisse:
 - [GCSuspendEE_V1-Ereignis](#gcsuspendee_v1-event)
 - [GCSuspendEEEnd_V1-Ereignis](#gcsuspendeeend_v1-event)
 - [GCAllocationTick_V2-Ereignis](#gcallocationtick_v2-event)
+- [GCAllocationTick_V3 Ereignis](#gcallocationtick_v3-event)
 - [GCFinalizersBegin_V1-Ereignis](#gcfinalizersbegin_v1-event)
 - [GCFinalizersEnd_V1-Ereignis](#gcfinalizersend_v1-event)
 - [GCCreateConcurrentThread_V1-Ereignis](#gccreateconcurrentthread_v1-event)
@@ -55,7 +57,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 |----------------|---------------|-----------------|
 |Anzahl|win:UInt32|Die *N*-te Garbage Collection.|
 |Tiefe|win:UInt32|Die erfasste Generation.|
-|Ursache|win:UInt32|Grund für die Auslösung der Garbage Collection:<br /><br /> 0x0 – Zuordnung für kleinen Objektheap.<br /><br /> 0x1 – Induziert.<br /><br /> 0x2 – Wenig Arbeitsspeicher<br /><br /> 0x3 – Leer.<br /><br /> 0x4 – Zuordnung für großen Objektheap.<br /><br /> 0x5 – Nicht genug Speicherplatz (für kleinen Objektheap).<br /><br /> 0x6 – Nicht genügend Speicherplatz (für großen Objektheap)<br /><br /> 0x7 – Induziert, aber nicht als blockierend erzwungen.|
+|`Reason`|win:UInt32|Grund für die Auslösung der Garbage Collection:<br /><br /> 0x0 – Zuordnung für kleinen Objektheap.<br /><br /> 0x1 – Induziert.<br /><br /> 0x2 – Wenig Arbeitsspeicher<br /><br /> 0x3 – Leer.<br /><br /> 0x4 – Zuordnung für großen Objektheap.<br /><br /> 0x5 – Nicht genug Speicherplatz (für kleinen Objektheap).<br /><br /> 0x6 – Nicht genügend Speicherplatz (für großen Objektheap)<br /><br /> 0x7 – Induziert, aber nicht als blockierend erzwungen.|
 |type|win:UInt32|0x0 – Blockieren der Garbage Collection außerhalb der Garbage Collection im Hintergrund aufgetreten.<br /><br /> 0x1 – Garbage Collection im Hintergrund.<br /><br /> 0x2 – Blockieren der Garbage Collection während der Garbage Collection im Hintergrund aufgetreten.|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
 
@@ -91,13 +93,13 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|Ereignis|Ereignis-ID|BESCHREIBUNG|
+|Ereignis|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
 |`GCHeapStats_V1`|4|Zeigt die Heapstatistik am Ende jeder Garbage Collection an.|
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|BESCHREIBUNG|
+|Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
 |GenerationSize0|win:UInt64|Die Größe des Arbeitsspeichers der Generation 0 in Bytes.|
 |TotalPromotedSize0|win:UInt64|Die Anzahl der Bytes, die von Generation 0 zu Generation 1 höher gestuft werden.|
@@ -113,6 +115,41 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 |SinkBlockCount|win:UInt32|Die Anzahl der verwendeten Synchronisierungsblöcke.|
 |GCHandleCount|win:UInt32|Die Anzahl der verwendeten Garbage Collection-Handles.|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
+  
+## <a name="gcheapstats_v2-event"></a>GCHeapStats_V2 Ereignis
+
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
+
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|-----------------------------------|-----------|
+|`GCKeyword` (0x1)|Information (4)|
+
+Die folgende Tabelle zeigt die Ereignisinformationen an:
+
+|Ereignis|Ereignis-ID|Beschreibung|
+|-----------|--------------|-----------------|
+|`GCHeapStats_V2`|4|Zeigt die Heapstatistik am Ende jeder Garbage Collection an.|
+
+Die folgende Tabelle zeigt die Ereignisdaten an:
+
+|Feldname|Datentyp|Beschreibung|
+|----------------|---------------|-----------------|
+|GenerationSize0|win:UInt64|Die Größe des Arbeitsspeichers der Generation 0 in Bytes.|
+|TotalPromotedSize0|win:UInt64|Die Anzahl der Bytes, die von Generation 0 zu Generation 1 höher gestuft werden.|
+|GenerationSize1|win:UInt64|Die Größe des Arbeitsspeichers der Generation 1 in Bytes.|
+|TotalPromotedSize1|win:UInt64|Die Anzahl der Bytes, die von Generation 1 zu Generation 2 höher gestuft werden.|
+|GenerationSize2|win:UInt64|Die Größe des Arbeitsspeichers der Generation 2 in Bytes.|
+|TotalPromotedSize2|win:UInt64|Die Anzahl der Bytes, die nach der letzten Garbage Collection in Generation 2 noch vorhanden sind.|
+|GenerationSize3|win:UInt64|Die Größe des großen Objektheaps in Bytes.|
+|TotalPromotedSize3|win:UInt64|Die Anzahl der Bytes, die nach der letzten Garbage Collection im großen Objektheap noch vorhanden sind.|
+|FinalizationPromotedSize|win:UInt64|Die Gesamtgröße der Objekte in Bytes, die auf einen Abschluss warten.|
+|FinalizationPromotedCount|win:UInt64|Die Anzahl der Objekte, die auf einen Abschluss warten.|
+|PinnedObjectCount|win:UInt32|Die Anzahl der fixierten (unverschiebbaren) Objekte.|
+|SinkBlockCount|win:UInt32|Die Anzahl der verwendeten Synchronisierungsblöcke.|
+|GCHandleCount|win:UInt32|Die Anzahl der verwendeten Garbage Collection-Handles.|
+|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
+|GenerationSize4|win:UInt64|Die Größe des fixierten Objekt Heaps in Bytes.|
+|TotalPromotedSize4|win:UInt64|Die Anzahl der Bytes, die nach der letzten Auflistung im angehefteten Objekt Heap noch nicht angezeigt wurden.|
   
 ## <a name="gccreatesegment_v1-event"></a>GCCreateSegment_V1-Ereignis
 
@@ -130,7 +167,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|BESCHREIBUNG|
+|Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
 |Adresse|win:UInt64|Die Adresse des Segments.|
 |Size|win:UInt64|Die Größe des Segments.|
@@ -155,7 +192,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|BESCHREIBUNG|
+|Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
 |Adresse|win:UInt64|Die Adresse des Segments.|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
@@ -208,7 +245,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|BESCHREIBUNG|
+|Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
 |Grund|win:UInt16|0x0 – Andere.<br /><br /> 0x1 – Garbage Collection.<br /><br /> 0x2 – Herunterfahren der Anwendungsdomäne.<br /><br /> 0x3 – Codepitching.<br /><br /> 0x4 – Herunterfahren.<br /><br /> 0x5 – Debugger.<br /><br /> 0x6 – Vorbereitung auf Garbage Collection.|
 |Anzahl|win:UInt32|Die Anzahl der GCs zu diesem Zeitpunkt. Normalerweise würde Ihnen danach ein nachfolgender GC-Start angezeigt werden. Diese Anzahl würde dabei um 1 erhöht werden, da der GC-Index während der Garbage Collection erhöht wird.|
@@ -246,7 +283,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 Die folgende Tabelle zeigt die Ereignisdaten an:
 
-|Feldname|Datentyp|BESCHREIBUNG|
+|Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
 |AllocationAmount|win:UInt32|Die Zuordnungsgröße in Bytes. Dieser Wert ist für Zuordnungen präzise, die kleiner als die Länge von ULONG sind (4.294.967.295 Bytes). Wenn die Zuordnung größer ist, enthält dieses Feld einen abgeschnittenen Wert. Verwenden Sie `AllocationAmount64` für sehr große Zuordnungen.|
 |AllocationKind|win:UInt32|0x0 – Kleine Objektzuordnung (Zuordnung erfolgt im kleinen Objektheap).<br /><br /> 0x1 – Große Objektzuordnung (Zuordnung erfolgt im großen Objektheap).|
@@ -255,6 +292,33 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 |TypeId|win:Pointer|Die Adresse der Methodentabelle. Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies die Adresse der Methodentabelle, die dem zuletzt zugeordneten Objekt (das Objekt, das den Schwellenwert von 100 KB überschritten hat) entspricht.|
 |TypName|win:UnicodeString|Der Name des zugeordneten Typs. Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies der Typ des zuletzt zugeordneten Objekts (das Objekt, das den Schwellenwert von 100 KB überschritten hat).|
 |HeapIndex|win:UInt32|Der Heap, auf dem das Objekt zugeordnet wurde. Dieser Wert ist 0 (null), wenn die Ausführung mit Garbage Collection für die Arbeitsstation erfolgt.|
+
+## <a name="gcallocationtick_v3-event"></a>GCAllocationTick_V3 Ereignis
+
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
+
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|-----------------------------------|-----------|
+|`GCKeyword` (0x1)|Information (4)|
+
+Die folgende Tabelle zeigt die Ereignisinformationen an:
+
+|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|
+|-----------|--------------|-----------------|
+|`GCAllocationTick_V3`|10|Jedes Mal werden ungefähr 100 KB zugeordnet.|
+
+Die folgende Tabelle zeigt die Ereignisdaten an:
+
+|Feldname|Datentyp|Beschreibung|
+|----------------|---------------|-----------------|
+|AllocationAmount|win:UInt32|Die Zuordnungsgröße in Bytes. Dieser Wert ist für Zuordnungen präzise, die kleiner als die Länge von ULONG sind (4.294.967.295 Bytes). Wenn die Zuordnung größer ist, enthält dieses Feld einen abgeschnittenen Wert. Verwenden Sie `AllocationAmount64` für sehr große Zuordnungen.|
+|AllocationKind|win:UInt32|0x0 – Kleine Objektzuordnung (Zuordnung erfolgt im kleinen Objektheap).<br /><br /> 0x1 – Große Objektzuordnung (Zuordnung erfolgt im großen Objektheap).|
+|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
+|AllocationAmount64|win:UInt64|Die Zuordnungsgröße in Bytes. Dieser Wert ist für sehr große Zuordnungen präzise.|
+|TypeId|win:Pointer|Die Adresse der Methodentabelle. Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies die Adresse der Methodentabelle, die dem zuletzt zugeordneten Objekt (das Objekt, das den Schwellenwert von 100 KB überschritten hat) entspricht.|
+|TypName|win:UnicodeString|Der Name des zugeordneten Typs. Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies der Typ des zuletzt zugeordneten Objekts (das Objekt, das den Schwellenwert von 100 KB überschritten hat).|
+|HeapIndex|win:UInt32|Der Heap, auf dem das Objekt zugeordnet wurde. Dieser Wert ist 0 (null), wenn die Ausführung mit Garbage Collection für die Arbeitsstation erfolgt.|
+|Adresse|win:Pointer|Die Adresse des zuletzt zugeordneten Objekts.|
 
 ## <a name="gcfinalizersbegin_v1-event"></a>GCFinalizersBegin_V1-Ereignis
 
@@ -327,6 +391,6 @@ Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 Keine Ereignisdaten.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [CLR-ETW-Ereignisse](clr-etw-events.md)
