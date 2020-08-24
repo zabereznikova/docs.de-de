@@ -3,12 +3,12 @@ title: '.NET Core: Debuggen von Deadlocks'
 description: In diesem Tutorial lernen Sie, wie Sie ein Sperrproblem in .NET Core debuggen.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 247521176297254180d794d4d4fc850f30e343b0
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926361"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557879"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>Debuggen eines Deadlocks in .NET Core
 
@@ -51,7 +51,7 @@ dotnet-trace ps
 
 Notieren Sie sich die in der Befehlsausgabe angezeigte Prozess-ID. Die Prozess-ID lautet in diesem Beispiel `4807`, Sie werden jedoch eine andere erhalten. Rufen Sie die folgende URL auf, bei dieser handelt es sich um einen API-Endpunkt auf der Beispielwebsite:
 
-[https://localhost:5001/api/diagscenario/deadlock](https://localhost:5001/api/diagscenario/deadlock)
+`https://localhost:5001/api/diagscenario/deadlock`
 
 Die API-Anforderung an die Website wird nicht mehr reagieren. Lassen Sie die Anforderung etwa 10-15 Sekunden laufen. Erstellen Sie dann das Kernspeicherabbild mithilfe des folgenden Befehls:
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c5204e8c80cb737338b053c39083c0cc43786447
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 7cb146d19486618a4cee9976abe2220ea4b72790
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517326"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88204017"
 ---
 ### <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten
 
@@ -12,7 +12,7 @@ ms.locfileid: "87517326"
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-Aufgrund von [Sicherheitsrisiken](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities) in <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sind die folgenden Methoden jetzt veraltet. Darüber hinaus lösen sie in Apps mit ASP.NET 5.0 oder höher eine <xref:System.NotSupportedException> aus, es sei denn, die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Funktionalität wurde durch die Web-App wieder aktiviert.
+Aufgrund von [Sicherheitsrisiken](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities) in <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sind die folgenden Methoden jetzt veraltet. Darüber hinaus wird <xref:System.NotSupportedException> in ASP.NET Core 5.0-Apps (und höher)ausgelöst, es sei denn, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wurde durch die Web-App wieder aktiviert.
 
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>

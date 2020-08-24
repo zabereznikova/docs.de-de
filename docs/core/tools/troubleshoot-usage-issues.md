@@ -4,12 +4,12 @@ description: Informieren Sie sich über allgemeine Probleme beim Ausführen von 
 author: kdollard
 ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: b98b2735770c8259c2daf94575fc087b91bb61fd
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: db88958e1605fef589c5dbcb12065a6318183705
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062635"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608309"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 
@@ -74,7 +74,7 @@ Der Name der ausführbaren Datei bestimmt, wie Sie das Tool aufrufen. Das Format
 
 ### <a name="runtime-not-found"></a>Runtime nicht gefunden
 
-.NET Core-Tools sind [Framework-abhängige Anwendungen](../deploying/index.md#publish-runtime-dependent), d. h. sie sind von der auf Ihrem Computer installierten .NET Core-Runtime abhängig. Wenn die erwartete Runtime nicht gefunden wurde, orientieren sie sich an den normalen Regeln für das Rollforward der .NET Core-Runtime, zum Beispiel:
+.NET Core-Tools sind [Framework-abhängige Anwendungen](../deploying/index.md#publish-framework-dependent), d. h. sie sind von der auf Ihrem Computer installierten .NET Core-Runtime abhängig. Wenn die erwartete Runtime nicht gefunden wurde, orientieren sie sich an den normalen Regeln für das Rollforward der .NET Core-Runtime, zum Beispiel:
 
 * Eine Anwendung wird auf das neueste Patchrelease der angegebenen Haupt- und Nebenversion gebracht.
 * Wenn keine übereinstimmende Runtime mit einer übereinstimmenden Haupt- und Nebenversion vorhanden ist, wird die nächsthöhere Nebenversion verwendet.

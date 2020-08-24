@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024588"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063834"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Verketten von Tasks mithilfe von Fortsetzungstasks
 
@@ -52,7 +52,7 @@ Sie erstellen eine Fortsetzung, die durch Aufrufen der Methode <xref:System.Thre
 
 Sie können auch eine Fortsetzung erstellen, die ausgeführt wird, wenn beliebige oder alle Aufgaben einer Gruppe abgeschlossen wurden. Zum Ausführen einer Fortsetzung nach dem Abschluss aller Vorgängeraufgaben rufen Sie die statische (`Shared` in Visual Basic) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> -Instanzmethode auf. Zum Ausführen einer Fortsetzung nach dem Abschluss einer beliebigen Vorgängeraufgabe rufen Sie die statische (`Shared` in Visual Basic) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> -Instanzmethode auf.
 
-Beachten Sie, dass Aufrufe der <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> - und <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> -Überladungen den aufrufenden Thread nicht blockieren. Allerdings rufen Sie in der Regel alle Methoden außer <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> auf, um die zurückgegebene <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>-Eigenschaft abzurufen, die den aufrufenden Thread blockiert.
+Aufrufe der Überladungen <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> blockieren nicht den aufrufenden Thread. Allerdings rufen Sie in der Regel alle Methoden außer <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> auf, um die zurückgegebene <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>-Eigenschaft abzurufen, die den aufrufenden Thread blockiert.
 
 Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> -Methode aufgerufen, um eine Fortsetzungsaufgabe zu erstellen, die die Ergebnisse ihrer zehn Vorgängeraufgaben wiedergibt. Jede Vorgängeraufgabe errechnet das Quadrat eines Indexwerts aus dem Bereich von 1 bis 10. Wenn die Vorgänger erfolgreich ausgeführt werden (also ihre <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> -Eigenschaft <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>ist), stellt die <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> -Eigenschaft der Fortsetzung ein Array der <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> -Werte dar, die von den einzelnen Vorgängern zurückgegeben wurden. Im Beispiel werden sie addiert, um die Summe der Quadrate für alle Zahlen zwischen eins und zehn zu berechnen.
 

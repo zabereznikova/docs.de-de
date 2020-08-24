@@ -1,14 +1,13 @@
 ---
 title: Installieren von .NET Framework unter Windows XP
 description: Informationen zum Installieren von .NET Framework unter Windows XP.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 8d05c8c9cf961d3902b1d1287be5b1c2c73d349e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b39e47327672031e21cd560cddd65b2544a079fa
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716301"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558516"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Installieren von .NET Framework unter Windows XP und Windows Server 2003
 

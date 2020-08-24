@@ -2,12 +2,12 @@
 title: dotnet-counters – .NET Core
 description: Erfahren Sie, wie Sie das Befehlszeilentool dotnet-counter installieren und verwenden.
 ms.date: 02/26/2020
-ms.openlocfilehash: 71e3c4f0a60960c4e672b95000bc0d67bd427514
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024627"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062898"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -76,7 +76,7 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`--format <csv|json>`**
 
-  Diese Option beschreibt das Dateiformat, in das die Werte exportiert werden. Derzeit sind die folgenden Formate verfügbar: CSV und JSON.
+  Das zu exportierende Format Derzeit sind die folgenden Formate verfügbar: CSV und JSON.
 
 - **`-o|--output <output>`**
 

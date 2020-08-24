@@ -1,14 +1,13 @@
 ---
 title: Installieren von .NET Framework unter Windows 8.1
-ms.custom: updateeachrelease
 description: Informationen zum Installieren von .NET Framework unter Windows 8.1
 ms.date: 04/18/2019
-ms.openlocfilehash: a13f31641be8a9289abbbac17bc4866b8f2dc4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bcbd8540c7e216a69c28beb521660b66f1a4eb8a
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716770"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559101"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Installieren von .NET Framework unter Windows 8.1 und Windows Server 2012 R2
 

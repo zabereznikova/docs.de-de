@@ -1,13 +1,13 @@
 ---
 title: Anwendungsveröffentlichung
-description: Erfahren Sie mehr über die Möglichkeiten zum Veröffentlichen einer .NET Core-Anwendung. Mit .NET Core können plattformspezifische oder plattformübergreifende Apps veröffentlicht werden. Sie können eine App als eigenständige oder als Runtime-abhängige App veröffentlichen. Der Modus wirkt sich darauf aus, wie ein Benutzer Ihre App ausführt.
+description: Erfahren Sie mehr über die Möglichkeiten zum Veröffentlichen einer .NET Core-Anwendung. Mit .NET Core können plattformspezifische oder plattformübergreifende Apps veröffentlicht werden. Sie können eine App als eigenständige oder frameworkabhängige App veröffentlichen. Der Modus wirkt sich darauf aus, wie ein Benutzer Ihre App ausführt.
 ms.date: 04/01/2020
-ms.openlocfilehash: 201363ad314373ec3be44eb8496f92a8e0c8e418
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164934"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720110"
 ---
 # <a name="net-core-application-publishing-overview"></a>Übersicht über die .NET Core-Anwendungsveröffentlichung
 
@@ -15,38 +15,38 @@ Mit .NET Core erstellte Anwendungen können in zwei verschiedenen Modi veröffen
 
 Die Veröffentlichung als *eigenständige* App erzeugt eine Anwendung, die die .NET Core-Runtime und die Bibliotheken, Ihre Anwendung und zugehörige Abhängigkeiten enthält. Benutzer der Anwendung können diese auf einem Computer ausführen, auf dem die .NET Core-Runtime nicht installiert ist.
 
-Die Veröffentlichung einer *runtimeabhängigen* App (zuvor *frameworkabhängig*) erzeugt eine Anwendung, die nur die Anwendung selbst und die zugehörigen Abhängigkeiten umfasst. Benutzer der Anwendung müssen die .NET Core-Runtime separat installieren.
+Die Veröffentlichung als *frameworkabhängige* App erzeugt eine Anwendung, die nur die Anwendung selbst und die zugehörigen Abhängigkeiten umfasst. Benutzer der Anwendung müssen die .NET Core-Runtime separat installieren.
 
-Beide Veröffentlichungsmodi erzeugen standardmäßig eine plattformspezifische ausführbare Datei. Von der Runtime abhängige Anwendungen können ohne eine ausführbare Datei erstellt werden, und diese Anwendungen sind plattformübergreifend.
+Beide Veröffentlichungsmodi erzeugen standardmäßig eine plattformspezifische ausführbare Datei. Frameworkabhängige Anwendungen können ohne ausführbare Datei erstellt werden, und sie sind plattformübergreifend.
 
 Wenn eine ausführbare Datei erstellt wird, können Sie die Zielplattform mit einem Runtime-Bezeichner (RID) angeben. Weitere Informationen zu RIDs finden Sie im [.NET Core-RID-Katalog](../rid-catalog.md).
 
-Die folgende Tabelle gibt einen Überblick über die Befehle, die zum Veröffentlichen einer App als Runtime-abhängige oder eigenständige App verwendet werden, gruppiert nach SDK-Version:
+Die folgende Tabelle bietet einen Überblick über die Befehle, die zum Veröffentlichen einer App als frameworkabhängige oder eigenständige App verwendet werden, gruppiert nach SDK-Version:
 
-| Typ                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
-| -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
-| [Runtime-abhängige ausführbare Datei](#publish-runtime-dependent) für die aktuelle Plattform |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
-| [Runtime-abhängige ausführbare Datei](#publish-runtime-dependent) für eine spezifische Plattform  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
-| [Runtime-abhängige, plattformübergreifende Binärdatei](#publish-runtime-dependent)               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
-| [Eigenständige ausführbare Datei](#publish-self-contained)                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
+| Typ                                                                                     | SDK 2.1 | SDK 3.x | Befehl |
+| ---------------------------------------------------------------------------------------  | ------- | ------- | ------- |
+| [Frameworkabhängige ausführbare Datei](#publish-framework-dependent) für die aktuelle Plattform |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [Frameworkabhängige ausführbare Datei](#publish-framework-dependent) für eine bestimmte Plattform  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [Frameworkabhängige, plattformübergreifende Binärdatei](#publish-framework-dependent)               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [Eigenständige ausführbare Datei](#publish-self-contained)                                    | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
 Weitere Informationen finden Sie im Artikel zum [.NET Core-Befehl „dotnet publish“](../tools/dotnet-publish.md).
 
 ## <a name="produce-an-executable"></a>Erstellen einer ausführbaren Datei
 
-Ausführbare Dateien sind nicht plattformübergreifend. Sie sind spezifisch für ein Betriebssystem und eine CPU-Architektur. Wenn Sie Ihre App veröffentlichen und eine ausführbare Datei erstellen, können Sie die App als [eigenständige](#publish-self-contained) oder [Runtime-abhängige](#publish-runtime-dependent) App veröffentlichen. Eine eigenständige App umfasst bei Veröffentlichung die .NET Core-Runtime gemeinsam mit der App, und Benutzer der App müssen sich keine Gedanken über die Installation von .NET Core machen, bevor sie die App ausführen. Als Runtime-abhängige Apps veröffentlichte Apps umfassen die .NET Core-Runtime sowie die zugehörigen Bibliotheken hingegen nicht, es werden nur die App- und Drittanbieterabhängigkeiten eingeschlossen.
+Ausführbare Dateien sind nicht plattformübergreifend. Sie sind spezifisch für ein Betriebssystem und eine CPU-Architektur. Wenn Sie Ihre App veröffentlichen und eine ausführbare Datei erstellen, können Sie die App als [eigenständige](#publish-self-contained) oder [frameworkabhängige](#publish-framework-dependent) App veröffentlichen. Eine eigenständige App umfasst bei Veröffentlichung die .NET Core-Runtime gemeinsam mit der App, und Benutzer der App müssen sich keine Gedanken über die Installation von .NET Core machen, bevor sie die App ausführen. Als frameworkabhängige Apps veröffentlichte Apps enthalten weder die .NET Core-Runtime noch die zugehörigen Bibliotheken, sondern nur die App- und Drittanbieterabhängigkeiten.
 
 Mit den folgenden Befehlen wird eine ausführbare Datei erstellt:
 
-| Typ                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
-| ------------------------------------------------------------------------------------ | ------- | ------- | ------- |
-| [Runtime-abhängige ausführbare Datei](#publish-runtime-dependent) für die aktuelle Plattform |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
-| [Runtime-abhängige ausführbare Datei](#publish-runtime-dependent) für eine spezifische Plattform  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
-| [Eigenständige ausführbare Datei](#publish-self-contained)                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
+| Typ                                                                                     | SDK 2.1 | SDK 3.x | Befehl |
+| ---------------------------------------------------------------------------------------- | ------- | ------- | ------- |
+| [Frameworkabhängige ausführbare Datei](#publish-framework-dependent) für die aktuelle Plattform |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [Frameworkabhängige ausführbare Datei](#publish-framework-dependent) für eine bestimmte Plattform  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [Eigenständige ausführbare Datei](#publish-self-contained)                                    | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
 ## <a name="produce-a-cross-platform-binary"></a>Erzeugen einer plattformübergreifenden Binärdatei
 
-Beim Veröffentlichen Ihrer App als [Runtime-abhängige](#publish-runtime-dependent) App werden plattformübergreifende Binärdateien in Form einer *DLL*-Datei erstellt. Die *DLL*-Datei wird nach Ihrem Projekt benannt. Wenn Sie beispielsweise über eine App namens **word_reader** verfügen, wird eine Datei mit dem Namen *word_reader.dll* erstellt. Auf diese Weise veröffentlichte Apps werden mit dem Befehl `dotnet <filename.dll>` ausgeführt und können auf einer beliebigen Plattform verwendet werden.
+Beim Veröffentlichen Ihrer App als [frameworkabhängige](#publish-framework-dependent) App werden plattformübergreifende Binärdateien in Form von *DLL*-Dateien erstellt. Die *DLL*-Datei wird nach Ihrem Projekt benannt. Wenn Sie beispielsweise über eine App namens **word_reader** verfügen, wird eine Datei mit dem Namen *word_reader.dll* erstellt. Auf diese Weise veröffentlichte Apps werden mit dem Befehl `dotnet <filename.dll>` ausgeführt und können auf einer beliebigen Plattform verwendet werden.
 
 Plattformübergreifende Binärdateien können auf beliebigen Betriebssystemen ausgeführt werden, sofern die anvisierte .NET Core-Runtime bereits installiert ist. Wenn die vorgesehene .NET Core-Runtime nicht installiert ist, kann die App möglicherweise mit einer neueren Runtime ausgeführt werden, wenn die App für ein Rollforward konfiguriert ist. Weitere Informationen finden Sie unter [Von Frameworks abhängige Apps führen einen Rollforward aus](../versions/selection.md#framework-dependent-apps-roll-forward).
 
@@ -54,16 +54,16 @@ Plattformübergreifende Binärdateien können auf beliebigen Betriebssystemen au
 
 | Typ                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
-| [Runtime-abhängige, plattformübergreifende Binärdatei](#publish-runtime-dependent)               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [Frameworkabhängige, plattformübergreifende Binärdatei](#publish-framework-dependent)           | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
-## <a name="publish-runtime-dependent"></a>Veröffentlichen einer Runtime-abhängigen App
+## <a name="publish-framework-dependent"></a>Veröffentlichen als frameworkabhängige App
 
-Apps, die als Runtime-abhängig veröffentlicht werden, sind plattformübergreifend und enthalten nicht die .NET Core-Runtime. Die Benutzer Ihrer App müssen die .NET Core-Runtime installieren.
+Apps, die als frameworkabhängig veröffentlicht werden, sind plattformübergreifend und enthalten die .NET Core-Runtime nicht. Die Benutzer Ihrer App müssen die .NET Core-Runtime installieren.
 
-Bei Veröffentlichung einer Runtime-abhängigen App werden eine [ plattformübergreifende Binärdatei](#produce-a-cross-platform-binary) als *DLL*-Datei und eine [ plattformspezifische ausführbare Datei](#produce-an-executable) erzeugt, die auf Ihre aktuelle Plattform abzielt. Die *DLL*-Datei ist plattformübergreifend, die ausführbare Datei hingegen nicht. Wenn Sie beispielsweise eine auf Windows ausgerichtete App namens **word_reader** veröffentlichen, werden die ausführbare Datei *word_reader.exe* und die Binärdatei *word_reader.dll* erstellt. Wenn Sie als Zielplattform Linux oder macOS verwenden, werden eine ausführbare *word_reader*-Datei und die Binärdatei *word_reader.dll* erstellt. Weitere Informationen zu RIDs finden Sie im [.NET Core-RID-Katalog](../rid-catalog.md).
+Beim Veröffentlichen einer frameworkabhängigen App werden eine [ plattformübergreifende Binärdatei](#produce-a-cross-platform-binary) als *DLL*-Datei und eine [ plattformspezifische ausführbare Datei](#produce-an-executable) speziell für Ihre aktuelle Plattform erzeugt. Die *DLL*-Datei ist plattformübergreifend, die ausführbare Datei hingegen nicht. Wenn Sie beispielsweise eine auf Windows ausgerichtete App namens **word_reader** veröffentlichen, werden die ausführbare Datei *word_reader.exe* und die Binärdatei *word_reader.dll* erstellt. Wenn Sie als Zielplattform Linux oder macOS verwenden, werden eine ausführbare *word_reader*-Datei und die Binärdatei *word_reader.dll* erstellt. Weitere Informationen zu RIDs finden Sie im [.NET Core-RID-Katalog](../rid-catalog.md).
 
 > [!IMPORTANT]
-> .NET Core SDK 2.1 erzeugt keine plattformspezifischen ausführbaren Dateien, wenn Sie eine Runtime-abhängige App veröffentlichen.
+> Das .NET Core SDK 2.1 erzeugt keine plattformspezifischen ausführbaren Dateien, wenn Sie eine frameworkabhängige App veröffentlichen.
 
 Die plattformübergreifende Binärdatei Ihrer App kann mit dem Befehl `dotnet <filename.dll>` auf einer beliebigen Plattform ausgeführt werden. Wenn die App ein NuGet-Paket mit plattformspezifischen Implementierungen verwendet, werden alle Plattformabhängigkeiten gemeinsam mit der App in den Veröffentlichungsordner kopiert.
 
@@ -91,17 +91,17 @@ Es ist möglich, dass die .NET Core-Runtime und die Bibliotheken auf dem Compute
 Die folgenden Nachteile gelten nur für das .NET Core 2.1 SDK.
 
 - **Verwenden des Befehls `dotnet` zum Starten der App**\
-Benutzer müssen den Befehl `dotnet <filename.dll>` verwenden, um Ihre App zu starten. Das .NET Core 2.1 SDK erzeugt keine plattformspezifischen ausführbaren Dateien, wenn Sie eine Runtime-abhängige App veröffentlichen.
+Benutzer müssen den Befehl `dotnet <filename.dll>` verwenden, um Ihre App zu starten. Das .NET Core 2.1 SDK erzeugt keine plattformspezifischen ausführbaren Dateien für Apps, die als frameworkabhängige Apps veröffentlicht werden.
 
 ### <a name="examples"></a>Beispiele
 
-Veröffentlichung einer von Plattform und Runtime unabhängigen App. Für Ihre App werden eine ausführbare Datei für Ihre aktuelle Plattform sowie eine *DLL*-Datei erstellt.
+Veröffentlichen einer plattformübergreifenden, frameworkabhängigen App. Für Ihre App werden eine ausführbare Datei für Ihre aktuelle Plattform sowie eine *DLL*-Datei erstellt.
 
 ```dotnet
 dotnet publish
 ```
 
-Veröffentlichung einer von Plattform und Runtime unabhängigen App. Für die App werden eine ausführbare 64-Bit-Datei für Linux und eine *DLL*-Datei erstellt. Dieser Befehl funktioniert nicht mit dem .NET Core SDK 2.1.
+Veröffentlichen einer plattformübergreifenden, frameworkabhängigen App. Für die App werden eine ausführbare 64-Bit-Datei für Linux und eine *DLL*-Datei erstellt. Dieser Befehl funktioniert nicht mit dem .NET Core SDK 2.1.
 
 ```dotnet
 dotnet publish -r linux-x64 --self-contained false
@@ -126,13 +126,16 @@ Da Sie Ihre App für jede Plattform veröffentlichen müssen, kennen Sie die Aus
 ### <a name="disadvantages"></a>Nachteile
 
 - **Größere Bereitstellungen**\
-Da Ihre App die .NET Core-Runtime und sämtliche App-Abhängigkeiten enthält, sind die Downloadgröße und der benötigte Festplattenspeicher größer als bei einer [Runtime-abhängigen](#publish-runtime-dependent) Version.
+Da Ihre App die .NET Core-Runtime und sämtliche App-Abhängigkeiten enthält, sind die Downloadgröße und der benötigte Festplattenspeicher umfangreicher als bei einer [frameworkabhängigen](#publish-framework-dependent) Version.
 
   > [!TIP]
   > Sie können die Größe Ihrer Bereitstellung für Linux-Systeme um etwa 28 MB reduzieren, indem Sie den [*invarianten Globalisierungsmodus*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) von .NET Core verwenden. Hierdurch wird Ihre App gezwungen, alle Kulturen wie die [invariante Kultur](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType) zu behandeln.
 
+  > [!TIP]
+  > Mit dem [Kürzungsfeature](trim-self-contained.md) (Vorschauphase) können Sie die Größe Ihrer Bereitstellung weiter reduzieren.
+
 - **Schwierigere Aktualisierung der .NET Core-Version**\
-Die (mit Ihrer App verteilte) .NET Core-Runtime kann nur durch die Veröffentlichung einer neuen Version Ihrer App aktualisiert werden. Es liegt in Ihrer Verantwortung, eine aktualisierte Version Ihrer App für Sicherheitspatches für die .NET Core-Runtime bereitzustellen.
+Die (mit Ihrer App verteilte) .NET Core-Runtime kann nur durch die Veröffentlichung einer neuen Version Ihrer App aktualisiert werden. Nach Bedarf aktualisiert .NET Core jedoch kritische Sicherheitspatches für die Frameworkbibliothek auf dem Computer, auf dem Ihre App ausgeführt wird. Sie sind für die gesamte Validierung dieses Sicherheitspatchszenarios verantwortlich.
 
 ### <a name="examples"></a>Beispiele
 

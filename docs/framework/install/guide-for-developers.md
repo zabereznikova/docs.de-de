@@ -1,7 +1,6 @@
 ---
 title: Installieren des .NET Framework Developer Packs oder des Redistributable-Pakets
 description: Entwickler können das .NET Framework Developer Pack und das Zielpaket herunterladen und installieren. Sie können das .NET Framework Redistributable-Paket in Ihre Apps einschließen.
-ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 0a099c5fb0492cd6cb9fd02e2c2ee1af63e7166e
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: d2bb964c3d034ea6913c91922fcff1e62130e0dc
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506995"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558464"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 

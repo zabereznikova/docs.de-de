@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 64cb561acd72ff5d4a11fcae7ce59eaad750f74e
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 656ef9aa2745c935c37b69ae5a54b8d126700e55
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644369"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608299"
 ---
 # <a name="whats-new-in-net-core-22"></a>Neuerungen in .NET Core 2.2
 
@@ -18,7 +18,7 @@ ms.locfileid: "81644369"
 
 ## <a name="new-deployment-mode"></a>Neuer Bereitstellungsmodus
 
-Ab .NET Core 2.2 können Sie [frameworkabhängige ausführbare Dateien](../deploying/index.md#publish-runtime-dependent) bereitstellen, die **.exe**-Dateien anstelle von **.dll**-Dateien sind. Frameworkabhängige ausführbare Dateien (FDE) funktionieren ähnlich wie frameworkabhängige Bereitstellungen, benötigen aber zur Ausführung eine freigegebene Version von .NET Core für das gesamte System. Ihre Anwendung enthält nur Code und alle Drittanbieterabhängigkeiten. Im Gegensatz zu frameworkabhängigen Bereitstellungen sind FDEs plattformspezifisch.
+Ab .NET Core 2.2 können Sie [frameworkabhängige ausführbare Dateien](../deploying/index.md#publish-framework-dependent) bereitstellen, die **.exe**-Dateien anstelle von **.dll**-Dateien sind. Frameworkabhängige ausführbare Dateien (FDE) funktionieren ähnlich wie frameworkabhängige Bereitstellungen, benötigen aber zur Ausführung eine freigegebene Version von .NET Core für das gesamte System. Ihre Anwendung enthält nur Code und alle Drittanbieterabhängigkeiten. Im Gegensatz zu frameworkabhängigen Bereitstellungen sind FDEs plattformspezifisch.
 
 Dieser neue Bereitstellungsmodus hat den entscheidenden Vorteil, dass Sie eine ausführbare Datei anstelle einer Bibliothek erstellen, was bedeutet, dass Sie Ihre Anwendung direkt ausführen können, ohne vorher `dotnet` aufzurufen.
 

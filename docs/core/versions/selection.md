@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie .NET Core automatisch Laufzeitv
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 82b5522601b0ed5d3f4faf6e6c6c970ba285b11f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803117"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608205"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
 
@@ -78,7 +78,7 @@ Ein bestimmtes SDK unterstützt einen festen Satz von Frameworks, der auf das Zi
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Von Frameworks abhängige Apps führen einen Rollforward aus
 
-Wenn Sie eine Anwendung von der Quelle aus mit [`dotnet run`](../tools/dotnet-run.md) ausführen, von einer [**Framework-abhängigen Bereitstellung**](../deploying/index.md#publish-runtime-dependent) aus mit [`dotnet myapp.dll`](../tools/dotnet.md#description) oder von einer [**Framework-abhängigen ausführbaren Datei**](../deploying/index.md#publish-runtime-dependent) aus mit `myapp.exe`, ist die ausführbare `dotnet`-Datei der **Host** für die Anwendung.
+Wenn Sie eine Anwendung von der Quelle aus mit [`dotnet run`](../tools/dotnet-run.md) ausführen, von einer [**Framework-abhängigen Bereitstellung**](../deploying/index.md#publish-framework-dependent) aus mit [`dotnet myapp.dll`](../tools/dotnet.md#description) oder von einer [**Framework-abhängigen ausführbaren Datei**](../deploying/index.md#publish-framework-dependent) aus mit `myapp.exe`, ist die ausführbare `dotnet`-Datei der **Host** für die Anwendung.
 
 Der Host wählt die neueste Patchversion aus, die auf dem Computer installiert ist. Wenn Sie beispielsweise `netcoreapp3.0` in Ihrer Projektdatei angegeben haben und `3.0.2` die zuletzt installierte .NET-Laufzeit ist, wird die Laufzeit `3.0.2` verwendet.
 

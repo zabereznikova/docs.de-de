@@ -1,19 +1,18 @@
 ---
 title: 'Veraltete Member: .NET Framework'
 description: Sehen Sie sich die Liste der Typmember an, die in .NET 4.5 und höheren Versionen veraltet sind. Typmember werden nach Assembly gruppiert. Member veralteter Typen werden hier ausgeschlossen.
-ms.custom: updateeachrelease
 ms.date: 10/17/2017
 helpviewer_keywords:
 - .NET Framework, obsolete members
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: c0e320b8499fec0c56d2e3560bf6f64194f73dad
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: c3418675bf69ffaf60d6b16202fc6cb8a112ebab
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925825"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558932"
 ---
 # <a name="obsolete-members-in-net-framework"></a>Veraltete Member in .NET Framework
 

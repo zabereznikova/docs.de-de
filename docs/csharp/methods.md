@@ -4,12 +4,12 @@ description: Übersicht über Methoden, Methodenparameter und Methodenrückgabew
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398712"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063353"
 ---
 # <a name="methods"></a>Methoden
 
@@ -81,7 +81,7 @@ Typen können geerbte Member überschreiben, indem das Schlüsselwort `override`
 
 ## <a name="passing-parameters"></a>Übergeben von Parametern
 
-Typen in C# sind entweder *Werttypen* oder *Verweistypen*. Eine Liste der integrierten Werttypen finden Sie unter [Typen und Variablen](./tour-of-csharp/types-and-variables.md). Sowohl Werttypen als auch Verweistypen werden standardmäßig als Wert an eine Methode übergeben.
+Typen in C# sind entweder *Werttypen* oder *Verweistypen*. Eine Liste der integrierten Werttypen finden Sie unter [Typen](./tour-of-csharp/types.md). Sowohl Werttypen als auch Verweistypen werden standardmäßig als Wert an eine Methode übergeben.
 
 <a name="byval"></a>
 
@@ -140,8 +140,8 @@ Eine Methodendefinition kann angeben, dass seine Parameter erforderlich oder opt
 Der Standardwert des Parameters muss von einer der folgenden Ausdrucksarten zugewiesen werden:
 
 - Eine Konstante, z.B. eine Zeichenfolgenliteral oder eine Zahl
-- Ein Ausdruck in Form von `new ValType()`, wobei `ValType` ein Werttyp ist Beachten Sie, dass dies den impliziten parameterlosen Konstruktor des Werttyps aufruft, der eigentlich kein Member des Typs ist.
-- Ein Ausdruck in Form von `default(ValType)`, wobei `ValType` ein Werttyp ist
+- Ein Ausdruck in Form von `new ValType()`, wobei `ValType` ein Werttyp ist. Beachten Sie, dass dies den impliziten parameterlosen Konstruktor des Werttyps aufruft, der eigentlich kein Member des Typs ist.
+- Ein Ausdruck in Form von `default(ValType)`, wobei `ValType` ein Werttyp ist.
 
 Wenn eine Methode erforderliche und optionale Parameter enthält, werden optionale Parameter nach allen benötigten Parametern am Ende der Parameterliste definiert.
 
@@ -240,7 +240,7 @@ Weitere Informationen finden Sie unter [Erweiterungsmethoden](programming-guide/
 
 Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen.
 
-Wenn Sie eine Methode mit dem [async](language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](language-reference/operators/await.md) Operator in der Methode verwenden. Wenn ein `await`-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, wenn die erwartete Aufgabe nicht fertig ist, und die Ausführung der Methode mit dem Schlüsselwort `await` wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
+Wenn Sie eine Methode mit dem Modifizierer [async](language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](language-reference/operators/await.md) in der Methode verwenden. Wenn ein `await`-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, wenn die erwartete Aufgabe nicht fertig ist, und die Ausführung der Methode mit dem Schlüsselwort `await` wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
 
 > [!NOTE]
 > Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.
@@ -276,7 +276,7 @@ Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode hand
 
 ## <a name="iterators"></a>Iterators
 
-Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position gespeichert, sodass der Aufrufer das nächste Element in der Sequenz anfordern kann.
+Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die [yield return](language-reference/keywords/yield.md) -Anweisung, um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position gespeichert, sodass der Aufrufer das nächste Element in der Sequenz anfordern kann.
 
 Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.
 
