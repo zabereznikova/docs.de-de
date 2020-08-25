@@ -3,17 +3,17 @@ title: .NET-Beispiele und -Tutorials
 description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET Core und die Sprache C#, die Sie beim Erlernen von .NET unterstützen.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 04/11/2017
-ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.date: 08/19/2020
+ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86417325"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656956"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
-Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](https://fsharp.org/learn.html). Wenn Sie daran interessiert sind, C# mit einem Online-Code-Editor zu erkunden, beginnen Sie mit [diesem interaktiven Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), und fahren Sie dann mit dem [interaktiven C#-Tutorial](../csharp/tutorials/intro-to-csharp/index.md) fort. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).
+Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. In diesem Artikel wird erläutert, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](https://fsharp.org/learn/). Wenn Sie daran interessiert sind, C# mit einem Online-Code-Editor zu erkunden, beginnen Sie mit [diesem interaktiven Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), und fahren Sie dann mit dem [interaktiven C#-Tutorial](../csharp/tutorials/intro-to-csharp/index.md) fort. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#view-and-download-samples).
 
 ## <a name="net-core"></a>.NET Core
 
@@ -25,9 +25,9 @@ Dieser Leitfaden zeigt, wie Sie eine ASP.NET Core-Webanwendung sowie die zugehö
 
 ### <a name="tutorials"></a>Tutorials
 
-**[Schreiben von .NET Core-Konsolen-Apps mithilfe der .NET Core-CLI: ausführlicher Leitfaden](../core/tutorials/cli-create-console-app.md)**
+**[Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code](../core/tutorials/with-visual-studio-code.md)**
 
-In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle plattformübergreifende Konsolen-Apps erstellen können. Dabei beginnen Sie mit einer einfachen Konsolen-App, die immer mehr erweitert wird und sich schließlich über mehrere Projekte mit zugehörigen Tests erstreckt. Sie fügen nach und nach Funktionen hinzu und erweitern so Ihre Kenntnisse. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/console-apps) finden Sie im dotnet/samples-Repository auf GitHub.
+In diesem Tutorial wird gezeigt, wie Sie eine .NET Core-Konsolenanwendung erstellen und ausführen, indem Sie Visual Studio Code und die .NET Core-CLI verwenden. Projektaufgaben, wie z. B. das Erstellen, Kompilieren und Ausführen eines Projekts, erfolgen mithilfe der .NET Core CLI.
 
 **[Schreiben von Bibliotheken mit plattformübergreifenden Tools](../core/tutorials/libraries.md)**
 
@@ -83,7 +83,7 @@ Dieses Tutorial veranschaulicht Webkommunikation, JSON-Serialisierung und objekt
 
 Dieses Tutorial veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) finden Sie im dotnet/samples-Repository auf GitHub.
 
-**[Getting started with .NET Core on macOS using Visual Studio for Mac (Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs.md)**
+**[Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac](../core/tutorials/with-visual-studio-mac.md)**
 
 Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine einfache .NET Core-Konsolen-App erstellen.
 
@@ -101,13 +101,13 @@ In diesem Tutorial erfahren Sie, wie Sie eine einfache .NET Core-Anwendung erste
 
 Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen ASP.NET-MVC-App in einem Windows-Docker-Container. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) finden Sie im dotnet/samples-Repository auf GitHub.
 
-## <a name="viewing-and-downloading-samples"></a>Anzeigen und Herunterladen von Beispielen
+## <a name="view-and-download-samples"></a>Anzeigen und Herunterladen von Beispielen
 
 Viele Themen enthalten Quellcode und Beispiele, die zum Anzeigen oder Herunterladen in GitHub zur Verfügung stehen. Um ein Beispiel anzuzeigen, folgen Sie einfach dem Beispiel-Link. Um den Code herunterzuladen, gehen Sie folgendermaßen vor:
 
 1. Laden Sie mit einem der folgenden Verfahren das Repository herunter, das den Beispielcode enthält:
    * Laden Sie ein ZIP-Archiv des Repositorys auf Ihr lokales System herunter. Entzippen Sie das komprimierte Archiv.
-   * [Verzweigen](https://help.github.com/articles/fork-a-repo/) Sie das Repository, und [klonen](https://help.github.com/articles/cloning-a-repository/) Sie die Verzweigung in Ihrem lokalen System. Durch Verzweigen und Klonen können Sie zur Dokumentation beitragen, indem Sie Änderungen an Ihrer Verzweigung vornehmen und dann eine Pullanforderung für das offizielle Dokumentrepository erstellen. Weitere Informationen finden Sie im [Leitfaden für Beiträge zur .NET-Dokumentation](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) und im [Leitfaden für Beiträge zur ASP.NET Core-Dokumentation](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
+   * [Verzweigen](https://help.github.com/articles/fork-a-repo/) Sie das Repository, und [klonen](https://help.github.com/articles/cloning-a-repository/) Sie die Verzweigung in Ihrem lokalen System. Durch Verzweigen und Klonen können Sie zur Dokumentation beitragen, indem Sie Änderungen an Ihrer Verzweigung vornehmen und dann eine Pullanforderung für das offizielle Dokumentrepository erstellen. Weitere Informationen finden Sie im [Leitfaden für Beiträge zur .NET-Dokumentation](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) und im [Leitfaden für Beiträge zur ASP.NET Core-Dokumentation](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
    * Klonen Sie das Repository lokal. Wenn Sie ein Dokumentrepository direkt auf Ihrem lokalen System klonen, können Sie Änderungen nicht direkt im offiziellen Repository vornehmen und daher später auch keine Beiträge zur Dokumentation erstellen. Verwenden Sie das oben beschriebene Verfahren zum Verzweigen und Klonen, wenn Sie sich die Möglichkeit vorbehalten möchten, später zur Dokumentation beizutragen.
 1. Navigieren Sie in den Ordnern des Repositorys zum Speicherort des Beispiels. Der relative Pfad zum Speicherort des Beispiels wird in der Adressleiste Ihres Browsers angezeigt, wenn Sie dem Link zum Beispiel folgen.
 1. Zum Ausführen eines Beispiels stehen Ihnen verschiedene Optionen zur Verfügung:
