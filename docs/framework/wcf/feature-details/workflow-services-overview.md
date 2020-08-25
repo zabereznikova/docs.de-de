@@ -2,12 +2,12 @@
 title: Übersicht über Workflow Dienste
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: f752eca621f9d30f38d85d7e71228fdfe1343c32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7055ea6e6b6d6a5d7bef8d5ff465d2eb0c838bf6
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594867"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812184"
 ---
 # <a name="workflow-services-overview"></a>Übersicht über Workflow Dienste
 
@@ -60,7 +60,7 @@ Workflow Dienste, die in einer verwalteten .NET Framework-Anwendung oder einem v
 
 Um einen Workflowdienst unter IIS zu hosten, fügen Sie die XAMLX-Datei mit der Workflowdienstdefinition in ein virtuelles Verzeichnis ein. Ein Standard Endpunkt (mit <xref:System.ServiceModel.BasicHttpBinding> ) wird automatisch erstellt, um weitere Informationen zu erhalten. Weitere Informationen finden Sie unter [vereinfachte Konfiguration](../simplified-configuration.md). Sie können auch eine Web.config-Datei in das virtuelle Verzeichnis einfügen, um eigene Endpunkte anzugeben. Wenn sich die Workflowdefinition in einer Assembly befindet, können Sie eine SVC-Datei in das virtuelle Verzeichnis und die Workflowassembly in das Verzeichnis "App_Code" einfügen. In der SVC-Datei muss die Diensthostfactory und die Klasse angegeben sein, die den Workflowdienst implementiert. Das folgende Beispiel zeigt, wie Sie die Diensthostfactory und die Klasse angeben, die den Workflowdienst implementiert.
 
-```
-<%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory
+```aspx-csharp
+<%@ServiceHost Factory="System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory"
 Service="EchoService"%>
 ```

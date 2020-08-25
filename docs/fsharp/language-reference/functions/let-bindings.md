@@ -1,17 +1,17 @@
 ---
 title: let-Bindungen
-description: Erfahren Sie, wie Sie F# eine Let-Bindung verwenden, die einen Bezeichner einem Wert oder einer Funktion zuordnet.
+description: 'Erfahren Sie, wie Sie eine F #-"Let"-Bindung verwenden, die einen Bezeichner einem Wert oder einer Funktion zuordnet.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 654631c7d1c48d8737e6098c98efee54cfdd91be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6f2396f480c5e6c631d0022f4732419ee5b07db6
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630642"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812223"
 ---
 # <a name="let-bindings"></a>let-Bindungen
 
-Eine *Bindung* ordnet einen Bezeichner einem Wert oder einer Funktion zu. Verwenden Sie das `let` -Schlüsselwort, um einen Namen an einen Wert oder eine Funktion zu binden.
+Eine *Bindung* ordnet einen Bezeichner einem Wert oder einer Funktion zu. Verwenden Sie das- `let` Schlüsselwort, um einen Namen an einen Wert oder eine Funktion zu binden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ Anstelle eines Namens kann ein Muster, das Namen enthält, z. b. ein Tupel angeg
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1103.fs)]
 
-Der *Text Ausdruck* ist der Ausdruck, in dem die Namen verwendet werden. Der Textkörper Ausdruck wird in einer eigenen Zeile angezeigt, um genau mit dem ersten Zeichen im `let` -Schlüsselwort zu versehen:
+Der *Text Ausdruck* ist der Ausdruck, in dem die Namen verwendet werden. Der Textkörper Ausdruck wird in einer eigenen Zeile angezeigt, um genau mit dem ersten Zeichen im- `let` Schlüsselwort zu versehen:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1104.fs)]
 
@@ -54,7 +54,7 @@ Im Allgemeinen sind Parameter Muster, z. b. ein tupelmuster:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1107.fs)]
 
-Ein `let` Bindungs Ausdruck ergibt den Wert des letzten Ausdrucks. Daher wird im folgenden Codebeispiel der Wert von `result` aus `100 * function3 (1, 2)`berechnet, `300`der ergibt.
+Ein `let` Bindungs Ausdruck ergibt den Wert des letzten Ausdrucks. Daher wird im folgenden Codebeispiel der Wert von `result` aus berechnet, der ergibt `100 * function3 (1, 2)` `300` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1109.fs)]
 
@@ -62,7 +62,7 @@ Weitere Informationen finden Sie unter [Funktionen](index.md).
 
 ## <a name="type-annotations"></a>Typanmerkungen
 
-Sie können Typen für Parameter angeben, indem Sie einen Doppelpunkt (:) gefolgt von einem Typnamen, der in Klammern eingeschlossen ist. Sie können auch den Typ des Rückgabewerts angeben, indem Sie den Doppelpunkt anfügen und nach dem letzten Parameter eingeben. Die vollständigen Typanmerkungen für `function1`, mit ganzen Zahlen als Parametertypen, lauten wie folgt.
+Sie können Typen für Parameter angeben, indem Sie einen Doppelpunkt (:) gefolgt von einem Typnamen, der in Klammern eingeschlossen ist. Sie können auch den Typ des Rückgabewerts angeben, indem Sie den Doppelpunkt anfügen und nach dem letzten Parameter eingeben. Die vollständigen Typanmerkungen für `function1` , mit ganzen Zahlen als Parametertypen, lauten wie folgt.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1108.fs)]
 
@@ -72,11 +72,11 @@ Weitere Informationen finden Sie unter [Automatische Generalisierung](../generic
 
 ## <a name="let-bindings-in-classes"></a>let-Bindungen in Klassen
 
-Eine `let` Bindung kann in einem Klassentyp, jedoch nicht in einer Struktur oder einem Daten Satz Typen vorkommen. Damit eine Let-Bindung in einem Klassentyp verwendet werden kann, muss die Klasse über einen primären Konstruktor verfügen. Konstruktorparameter müssen nach dem Typnamen in der Klassendefinition angezeigt werden. Eine `let` Bindung in einem Klassentyp definiert private Felder und Member für diesen Klassentyp und bildet `do` in Verbindung mit Bindungen im Typ den Code für den primären Konstruktor für den Typ. Die folgenden Codebeispiele zeigen eine- `MyClass` Klasse mit privaten `field1` Feldern `field2`und.
+Eine `let` Bindung kann in einem Klassentyp, jedoch nicht in einer Struktur oder einem Daten Satz Typen vorkommen. Damit eine Let-Bindung in einem Klassentyp verwendet werden kann, muss die Klasse über einen primären Konstruktor verfügen. Konstruktorparameter müssen nach dem Typnamen in der Klassendefinition angezeigt werden. Eine `let` Bindung in einem Klassentyp definiert private Felder und Member für diesen Klassentyp und `do` bildet in Verbindung mit Bindungen im Typ den Code für den primären Konstruktor für den Typ. Die folgenden Codebeispiele zeigen eine `MyClass` -Klasse mit privaten Feldern `field1` und `field2` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1110.fs)]
 
-Die Bereiche von `field1` und `field2` sind auf den Typ beschränkt, in dem Sie deklariert werden. Weitere Informationen finden [ `let` Sie unter Bindungen in Klassen](../members/let-bindings-in-classes.md) und [Klassen](../classes.md).
+Die Bereiche von `field1` und `field2` sind auf den Typ beschränkt, in dem Sie deklariert werden. Weitere Informationen finden Sie unter [ `let` Bindungen in Klassen](../members/let-bindings-in-classes.md) und [Klassen](../classes.md).
 
 ## <a name="type-parameters-in-let-bindings"></a>Typparameter in let-Bindungen
 
@@ -92,9 +92,9 @@ Attribute können auf Bindungen auf oberster Ebene `let` in einem Modul angewend
 
 Der Gültigkeitsbereich einer mit einer Let-Bindung deklarierten Entität ist auf den Teil des enthaltenden Bereichs beschränkt (z. b. eine Funktion, ein Modul, eine Datei oder eine Klasse), nachdem die Bindung angezeigt wurde. Daher kann man sagen, dass eine Let-Bindung einen Namen in einen Bereich einführt. In einem Modul ist ein Let-gebundener Wert oder eine Funktion für Clients eines Moduls zugänglich, solange auf das Modul zugegriffen werden kann, da die let-Bindungen in einem Modul in öffentliche Funktionen des Moduls kompiliert werden. Im Gegensatz dazu sind Bindungen in einer Klasse für die Klasse privat.
 
-Funktionen in Modulen müssen normalerweise durch den Namen des Moduls qualifiziert werden, wenn Sie vom Client Code verwendet werden. Wenn ein Modul `Module1` z. b. über eine `function1`Funktion verfügt, geben `Module1.function1` die Benutzer an, dass auf die Funktion verwiesen werden soll.
+Funktionen in Modulen müssen normalerweise durch den Namen des Moduls qualifiziert werden, wenn Sie vom Client Code verwendet werden. Wenn ein Modul z. b `Module1` . über eine Funktion verfügt `function1` , geben die Benutzer an, dass auf `Module1.function1` die Funktion verwiesen werden soll.
 
-Benutzer eines Moduls können eine Import Deklaration verwenden, um die Funktionen innerhalb dieses Moduls zur Verwendung verfügbar zu machen, ohne dass der Modulname qualifiziert ist. Im soeben erwähnten Beispiel können Benutzer des Moduls in diesem Fall das Modul öffnen, indem Sie die Import Deklaration öffnen `Module1` und anschließend direkt auf `function1` verweisen.
+Benutzer eines Moduls können eine Import Deklaration verwenden, um die Funktionen innerhalb dieses Moduls zur Verwendung verfügbar zu machen, ohne dass der Modulname qualifiziert ist. Im soeben erwähnten Beispiel können Benutzer des Moduls in diesem Fall das Modul öffnen, indem Sie die Import Deklaration öffnen `Module1` und anschließend direkt auf verweisen `function1` .
 
 ```fsharp
 module Module1 =
@@ -110,11 +110,11 @@ let function3 x =
     function1 x
 ```
 
-Einige Module verfügen über das-Attribut "Requirements [qualifiedaccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)", was bedeutet, dass die Funktionen, die Sie verfügbar machen, mit dem Namen des Moduls qualifiziert werden müssen. Das F# Listen Modul verfügt beispielsweise über dieses Attribut.
+Einige Module verfügen über das-Attribut "Requirements [qualifiedaccess](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html)", was bedeutet, dass die Funktionen, die Sie verfügbar machen, mit dem Namen des Moduls qualifiziert werden müssen. Das F #-Listen Modul verfügt beispielsweise über dieses Attribut.
 
 Weitere Informationen zu Modulen und zur Zugriffs Steuerung finden Sie unter [Module](../modules.md) und [Access Control](../access-control.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Funktionen](index.md)
-- [`let`-Bindungen in Klassen](../members/let-bindings-in-classes.md)
+- [`let` Bindungen in Klassen](../members/let-bindings-in-classes.md)

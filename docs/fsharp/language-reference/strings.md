@@ -1,22 +1,19 @@
 ---
 title: Zeichenfolgen
 description: "Erfahren Sie, wie der F #-Typ ' String ' als Sequenz von Unicode-Zeichen unveränderlichen Text darstellt."
-ms.date: 07/05/2019
-ms.openlocfilehash: 67a6506b4b8c479da1022c069a7f53402f904b4d
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: f6ec36feeb197bf785c702e7b626cf5cf80696ab
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855412"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812210"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
 Der- `string` Typ stellt unveränderlichen Text als Sequenz von Unicode-Zeichen dar. `string` ist ein Alias für `System.String` in .NET.
 
-> [!NOTE]
-> Die docs.Microsoft.com-API-Referenz für F # ist nicht fertig. Wenn Sie auf unterbrochene Verknüpfungen stoßen, verweisen Sie stattdessen auf die [Dokumentation der F #-Kernbibliothek](https://fsharp.github.io/fsharp-core-docs/) .
-
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Zeichen folgen Literale werden durch das Anführungszeichen (") getrennt. Der umgekehrte Schrägstrich ( \\ ) wird verwendet, um bestimmte Sonderzeichen zu codieren. Der umgekehrte Schrägstrich und das nächste Zeichen werden als *Escapesequenz*bezeichnet. In F #-Zeichenfolgenliteralen unterstützte Escapesequenzen werden in der folgenden Tabelle gezeigt.
 
@@ -32,10 +29,10 @@ Zeichen folgen Literale werden durch das Anführungszeichen (") getrennt. Der um
 |Umgekehrter Schrägstrich|`\\`|
 |Anführungszeichen|`\"`|
 |Apostroph|`\'`|
-|Unicode-Zeichen|`\DDD`(wobei `D` eine Dezimal Ziffer angibt; Bereich von 000-255, z. b. `\231` = "ç")|
-|Unicode-Zeichen|`\xHH`(wobei `H` eine hexadezimale Ziffer angibt; Bereich von 00-FF, z. b. `\xE7` = "ç")|
-|Unicode-Zeichen|`\uHHHH`(UTF-16) (wobei `H` eine hexadezimale Ziffer angibt; Bereich von 0000-FFFF;  Beispiel: `\u00E7` = "ç")|
-|Unicode-Zeichen|`\U00HHHHHH`(UTF-32) (wobei `H` eine hexadezimale Ziffer angibt; Bereich von 000000-10FFFF;  Beispiel: `\U0001F47D` = " 👽 ")|
+|Unicode-Zeichen|`\DDD` (wobei `D` eine Dezimal Ziffer angibt; Bereich von 000-255, z. b. `\231` = "ç")|
+|Unicode-Zeichen|`\xHH` (wobei `H` eine hexadezimale Ziffer angibt; Bereich von 00-FF, z. b. `\xE7` = "ç")|
+|Unicode-Zeichen|`\uHHHH` (UTF-16) (wobei `H` eine hexadezimale Ziffer angibt; Bereich von 0000-FFFF;  Beispiel: `\u00E7` = "ç")|
+|Unicode-Zeichen|`\U00HHHHHH` (UTF-32) (wobei `H` eine hexadezimale Ziffer angibt; Bereich von 000000-10FFFF;  Beispiel: `\U0001F47D` = " 👽 ")|
 
 > [!IMPORTANT]
 > Die `\DDD` Escapesequenz ist eine Dezimal Schreibweise, keine oktale Notation wie in den meisten anderen Sprachen. Daher sind Ziffern `8` und `9` gültig, und eine Sequenz von `\032` stellt ein Leerzeichen (U + 0020) dar, während derselbe Codepunkt in der Oktalnotation ist `\040` .
@@ -102,7 +99,7 @@ Mithilfe der- `Chars` Eigenschaft von `System.String` können Sie auf die einzel
 
 ## <a name="string-module"></a>Zeichen folgen Modul
 
-Zusätzliche Funktionen für die Zeichen folgen Behandlung sind im- `String` Modul im- `FSharp.Core` Namespace enthalten. Weitere Informationen finden Sie unter [Core. String-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+Zusätzliche Funktionen für die Zeichen folgen Behandlung sind im- `String` Modul im- `FSharp.Core` Namespace enthalten. Weitere Informationen finden Sie unter [Zeichen folgen Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-stringmodule.html).
 
 ## <a name="see-also"></a>Weitere Informationen
 

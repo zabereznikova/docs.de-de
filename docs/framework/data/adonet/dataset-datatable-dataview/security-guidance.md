@@ -3,12 +3,12 @@ title: Leitfaden für DataSet und Datentabelle
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608529"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812236"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Leitfaden für DataSet und Datentabelle
 
@@ -34,7 +34,14 @@ Unter allen unterstützten Versionen von .NET Framework, .net Core und .net, `Da
 
 Wenn die eingehenden XML-Daten ein Objekt enthalten, dessen Typ nicht in dieser Liste enthalten ist:
 
-* Es wird eine Ausnahme ausgelöst.
+* Eine Ausnahme wird mit der folgenden Meldung und Stapel Überwachung ausgelöst.  
+Fehlermeldung:  
+System. InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' ist hier nicht zulässig. Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) .  
+Stapelüberwachung:  
+bei System. Data. typelimiter. ensuretypeisallowed (Type type, typelimiter capturedlimiter)  
+bei System. Data. datacolenn. updatecolumschlag Type (Type type, StorageType TypeCode)  
+System. Data. datacolenumn. set_DataType (Typwert)  
+
 * Der Deserialisierungsvorgang schlägt fehl.
 
 Beim Laden von XML in eine vorhandene- `DataSet` Instanz oder- `DataTable` Instanz werden die vorhandenen Spaltendefinitionen ebenfalls berücksichtigt. Wenn die Tabelle bereits eine Spaltendefinition eines benutzerdefinierten Typs enthält, wird dieser Typ für die Dauer des XML-Deserialisierungsvorgangs vorübergehend zur Zulassungsliste hinzugefügt.

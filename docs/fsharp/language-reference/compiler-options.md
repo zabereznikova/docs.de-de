@@ -2,12 +2,12 @@
 title: Compileroptionen
 description: 'Verwenden Sie f #-Compilerbefehlszeilenoptionen, um die Kompilierung ihrer F #-apps und-Bibliotheken zu steuern.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 7f7b7dac2060213cd7d783669cb4de2b96a88968
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c10808e97d31bd3bdb469fc2a8e57a4650170dec
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557359"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812145"
 ---
 # <a name="compiler-options"></a>Compileroptionen
 
@@ -52,7 +52,7 @@ In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einig
 |`--pdb:pdb-filename`|Benennt die PDB-(Program Database-)Ausgabedebugdatei. Diese Option wird nur angewendet, wenn `--debug` ebenfalls aktiviert ist.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;PDB-&#40;C&#35;-Compileroptionen&#41;](../../csharp/language-reference/compiler-options/pdb-compiler-option.md).|
 |`--platform:platform-name`|Gibt an, dass der generierte Code nur auf der angegebenen Plattform (`x86`, `Itanium` oder `x64`) ausgeführt wird, oder, wenn der Plattformname `anycpu` ausgewählt wird, dass der generierte Code auf jeder Plattform ausgeführt werden kann.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;Platform &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/platform-compiler-option.md).|
 |`--preferreduilang:lang`| Gibt den bevorzugten Kultur Namen der Ausgabesprache an (z  `es-ES` `ja-JP` . b.,). |
-|`--quotations-debug`|Gibt an, dass zusätzliche Debuginformationen für Ausdrücke ausgegeben werden, die von F#-Quotation-Literalen und reflektierten Definitionen abgeleitet werden. Die Debuginformationen werden zu den benutzerdefinierten Attributen eines F#-Ausdrucksstrukturknotens hinzugefügt. Weitere Informationen finden Sie unter [Code Notierungen](code-quotations.md) und [expr. CustomAttribute](https://msdn.microsoft.com/visualfsharpdocs/conceptual/expr.customattributes-property-%5bfsharp%5d).|
+|`--quotations-debug`|Gibt an, dass zusätzliche Debuginformationen für Ausdrücke ausgegeben werden, die von F#-Quotation-Literalen und reflektierten Definitionen abgeleitet werden. Die Debuginformationen werden zu den benutzerdefinierten Attributen eines F#-Ausdrucksstrukturknotens hinzugefügt. Weitere Informationen finden Sie unter [Code Notierungen](code-quotations.md) und [expr. CustomAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes).|
 |`--reference:assembly-filename`<br /><br />`-r:assembly-filename`|Macht Code aus einer F#- oder .NET Framework-Assembly für den Code verfügbar, der kompiliert wird.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;Reference &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/reference-compiler-option.md).|
 |`--resource:resource-filename`|Bettet eine verwaltete Ressourcendatei in die generierte Assembly ein.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [&#47;Resource &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/resource-compiler-option.md).|
 |`--sig:signature-filename`|Generiert eine Signaturdatei auf Grundlage der generierten Assembly. Weitere Informationen zu Signatur Dateien finden Sie unter [Signaturen](signature-files.md).|

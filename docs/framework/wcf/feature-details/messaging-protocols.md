@@ -2,26 +2,26 @@
 title: Messagingprotokolle
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 814347c77b54c4450aabf0a4f3966df223360663
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 69a92bfb406e2e1af3bdcbb0316711dbf531204b
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463830"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812054"
 ---
 # <a name="messaging-protocols"></a>Messagingprotokolle
 
-Der Windows Communication Foundation (WCF)-Kanalstapel verwendet Codierungs- und Transportkanäle, um die interne Nachrichtendarstellung in sein Drahtformat umzuwandeln und mithilfe eines bestimmten Transports zu senden. Der am häufigsten verwendete Transport, der für die Interoperabilität bei Webdiensten verwendet wird, ist HTTP, und die am häufigsten von Webdiensten verwendeten Codierungen sind das XML-basierte SOAP 1.1, SOAP 1.2 und der Message Transmission Optimization Mechanism (MTOM).
+Der Windows Communication Foundation (WCF)-Kanal Stapel wendet Codierungs-und Transportkanäle an, um die interne Nachrichtendarstellung in das Wire-Format umzuwandeln und Sie mithilfe eines bestimmten Transports zu senden. Der am häufigsten verwendete Transport, der für die Interoperabilität bei Webdiensten verwendet wird, ist HTTP, und die am häufigsten von Webdiensten verwendeten Codierungen sind das XML-basierte SOAP 1.1, SOAP 1.2 und der Message Transmission Optimization Mechanism (MTOM).
 
-In diesem Thema werden WCF-Implementierungsdetails für die folgenden Protokolle behandelt, die von <xref:System.ServiceModel.Channels.HttpTransportBindingElement>verwendet werden.
+In diesem Thema werden WCF-Implementierungsdetails für die folgenden Protokolle behandelt, die von verwendet werden <xref:System.ServiceModel.Channels.HttpTransportBindingElement> .
 
 Spezifikation/Dokument:
 
 - [HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)
-- [SOAP 1.1 HTTP-Bindung](https://www.w3.org/TR/2000/NOTE-SOAP-20000508), Abschnitt 7
-- [SOAP 1.2 HTTP-Bindung](https://www.w3.org/TR/soap12-part2) Abschnitt 7
+- [SOAP 1,1-http-Bindung](https://www.w3.org/TR/2000/NOTE-SOAP-20000508), Abschnitt 7
+- [SOAP 1,2-HTTP-Bindung](https://www.w3.org/TR/soap12-part2) Abschnitt 7
 
-In diesem Thema werden WCF-Implementierungsdetails für die folgenden Protokolle behandelt, die und <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> die sie verwenden.
+In diesem Thema werden WCF-Implementierungsdetails für die folgenden Protokolle behandelt, die <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> verwenden.
 
 Spezifikation/Dokument:
 
@@ -31,21 +31,21 @@ Spezifikation/Dokument:
 - [WS-Adressierung 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
 - [W3C Web Services Addressing 1.0 - Core](https://www.w3.org/TR/2006/REC-ws-addr-core-20060509)
 - [W3C Web Services Addressing 1.0 - SOAP-Bindung](https://www.w3.org/TR/2006/REC-ws-addr-soap-20060509)
-- [W3C Web Services Addressing 1.0 - WSDL-Bindung](https://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/)
+- [W3C-Webdienste Adressierung 1,0-WSDL-Bindung](https://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/)
 - [W3C Web Services Addressing 1.0 - Metadaten](https://www.w3.org/TR/ws-addr-metadata/)
 - [WSDL SOAP1.1-Bindung](https://www.w3.org/TR/wsdl/)
 - [WSDL SOAP1.2-Bindung](https://www.w3.org/Submission/wsdl11soap12/)
 
-In diesem Thema werden WCF-Implementierungsdetails für die folgenden Protokolle behandelt, die verwendet werden. <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+In diesem Thema werden WCF-Implementierungsdetails für die folgenden Protokolle behandelt, die von <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> verwendet werden.
 
 Spezifikation/Dokument:
 
-- [Xop](https://www.w3.org/TR/xop10/)
+- [XOP](https://www.w3.org/TR/xop10/)
 - [MTOM + SOAP 1.2-Bindung](https://www.w3.org/TR/soap12-mtom/)
 - [MTOM SOAP 1.1-Bindung](https://www.w3.org/Submission/soap11mtom10/)
 - [MTOM WS-Richtlinienassertion](https://www.w3.org/Submission/2006/SUBM-WS-MTOMPolicy-20061101/)
 
-Die folgenden XML-Namespaces und zugehörigen Präfixe werden in diesem Thema verwendet:
+Die folgenden XML-Namespaces und zugeordneten Präfixe werden in diesem Thema verwendet:
 
 | Präfix | Namespace Uniform Resource Identifier (URI) |
 |------------|---------------------------------------------------|
@@ -63,41 +63,41 @@ Die folgenden XML-Namespaces und zugehörigen Präfixe werden in diesem Thema ve
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 und SOAP 1.2
 
 ### <a name="envelope-and-processing-model"></a>Umschlag und Verarbeitungsmodell
-WCF implementiert SOAP 1.1-Hüllkurvenverarbeitung nach Basisprofil 1.1 (BP11) und Basisprofil 1.0 (SSBP10). SOAP 1.2-Umschlagsverarbeitung wird unter Befolgung von SOAP12-Part1 implementiert.
+WCF implementiert die SOAP 1,1-Umschlag Verarbeitung nach Basic Profile 1,1 (BP11) und Basic Profile 1,0 (SSBP10). SOAP 1.2-Umschlagsverarbeitung wird unter Befolgung von SOAP12-Part1 implementiert.
 
-In diesem Abschnitt werden bestimmte Implementierungsoptionen erläutert, die WCF in Bezug auf BP11 und SOAP12-Part1 getroffen hat.
+In diesem Abschnitt werden bestimmte Implementierungs Optionen erläutert, die von WCF in Bezug auf BP11 und SOAP12-Part1 übernommen werden.
 
 #### <a name="mandatory-header-processing"></a>Erforderliche Headerverarbeitung
-WCF folgt den Regeln `mustUnderstand` für die Verarbeitung von Headern, die in den Soap 1.1- und SOAP 1.2-Spezifikationen mit den folgenden Varianten gekennzeichnet sind.
+WCF befolgt Regeln für die Verarbeitung von Headern `mustUnderstand` , die in den SOAP 1,1-und SOAP 1,2-Spezifikationen beschrieben sind, mit den folgenden Variationen.
 
-Eine Nachricht, die in den WCF-Kanalstapel eindringt, wird von einzelnen Kanälen verarbeitet, die durch zugeordnete Bindungselemente konfiguriert sind, z. B. Textnachrichtencodierung, Sicherheit, zuverlässiges Messaging und Transaktionen. Jeder Kanal erkennt Header des zugeordneten Namespace, und kennzeichnet sie als verstanden. Sobald eine Nachricht in den Verteiler eingeht, liest der Vorgangsformatierer Header, die vom entsprechenden Nachrichten-/Vorgangsvertrag erwartet werden, und kennzeichnet sie als verstanden. Der Verteiler überprüft, ob einige der verbleibenden Header nicht verstanden, aber als `mustUnderstand` gekennzeichnet sind, und löst eine Ausnahme aus. Nachrichten, die an den Empfänger gerichtete `mustUnderstand`-Header enthalten, werden nicht vom Empfängeranwendungscode verarbeitet.
+Eine Nachricht, die in den WCF-Kanal Stapel eintritt, wird von einzelnen Kanälen verarbeitet, die durch zugeordnete Bindungs Elemente konfiguriert werden, z. b. Text Nachrichten Codierung, Sicherheit, zuverlässiges Messaging und Transaktionen. Jeder Kanal erkennt Header des zugeordneten Namespace, und kennzeichnet sie als verstanden. Sobald eine Nachricht in den Verteiler eingeht, liest der Vorgangsformatierer Header, die vom entsprechenden Nachrichten-/Vorgangsvertrag erwartet werden, und kennzeichnet sie als verstanden. Der Verteiler überprüft, ob einige der verbleibenden Header nicht verstanden, aber als `mustUnderstand` gekennzeichnet sind, und löst eine Ausnahme aus. Nachrichten, die an den Empfänger gerichtete `mustUnderstand`-Header enthalten, werden nicht vom Empfängeranwendungscode verarbeitet.
 
 Eine derartige schichtweise Verarbeitung lässt eine Trennung zwischen den Infrastrukturschichten und Anwendungsschichten auf dem SOAP-Knoten zu:
 
-- B1111: Header, die nicht verstanden werden, werden erkannt, nachdem die Nachricht vom WCF-Infrastrukturkanalstapel verarbeitet wurde, aber bevor sie von der Anwendung verarbeitet wird
+- B1111: Nachrichten, die nicht verstanden werden, werden erkannt, nachdem die Nachricht vom WCF-Infrastruktur Kanal Stapel verarbeitet, aber bevor Sie von der Anwendung verarbeitet wurde.
 
      Der `mustUnderstand` Headerwert variiert zwischen SOAP 1.1 und SOAP 1.2. Basic Profile 1.1 erfordert, dass der `mustUnderstand`-Wert für SOAP 1.1-Nachrichten "0" (null) oder "1" sein muss. SOAP 1.2 lässt 0 (null), 1 `false` und `true` als Werte zu, empfiehlt aber die Ausgabe einer standardisierten Darstellung der `xs:boolean`-Werte (`false`, `true`).
 
-- B1112: WCF gibt `mustUnderstand` die Werte 0 und 1 sowohl für SOAP 1.1- als auch für SOAP 1.2-Versionen des SOAP-Umschlags aus. WCF akzeptiert den gesamten `xs:boolean` Wertbereich für die `mustUnderstand` `false`Kopfzeile (0, 1, , `true`)
+- B1112: WCF gibt `mustUnderstand` die Werte 0 und 1 sowohl für SOAP 1,1-als auch für SOAP 1,2-Versionen des SOAP-Umschlags aus. WCF akzeptiert den gesamten Wert Bereich von `xs:boolean` für den- `mustUnderstand` Header (0, 1, `false` , `true` ).
 
 #### <a name="soap-faults"></a>SOAP-Fehler
-Im Folgenden finden Sie eine Liste der WCF-spezifischen SOAP-Fehlerimplementierungen.
+Im folgenden finden Sie eine Liste von WCF-spezifischen SOAP-Fehler Implementierungen.
 
-- B2121: WCF gibt die folgenden SOAP `s11:mustUnderstand`1.1-Fehlercodes zurück: , `s11:Client`, und `s11:Server`.
+- B2121: WCF gibt die folgenden SOAP 1,1-Fehler Codes zurück: `s11:mustUnderstand` , `s11:Client` und `s11:Server` .
 
-- B2122: WCF gibt die folgenden SOAP `s12:MustUnderstand`1.2-Fehlercodes zurück: , `s12:Sender`, und `s12:Receiver`.
+- B2122: WCF gibt die folgenden SOAP 1,2-Fehler Codes zurück: `s12:MustUnderstand` , `s12:Sender` und `s12:Receiver` .
 
 ### <a name="http-binding"></a>HTTP-Bindung
 
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP-Bindung
-WCF implementiert die SOAP1.1-HTTP-Bindung gemäß der Basic Profile 1.1-Spezifikation Abschnitt 3.4 mit den folgenden Erläuterungen:
+WCF implementiert eine SOAP 1.1-http-Bindung, die dem grundlegenden Profil 1,1-Spezifikations Abschnitt 3,4 mit den folgenden Erläuterungen folgt:
 
-- B2211: Der WCF-Dienst implementiert keine Umleitung von HTTP-POST-Anforderungen.
+- B2211: der WCF-Dienst implementiert keine Umleitung von HTTP POST-Anforderungen.
 
-- B2212: WCF-Clients unterstützen HTTP-Cookies gemäß 3.4.8.
+- B2212: WCF-Clients unterstützen HTTP-Cookies in Übereinstimmung mit 3.4.8.
 
 #### <a name="soap-12-http-binding"></a>SOAP 1,2 HTTP-Bindung
-WCF implementiert die SOAP 1.2-HTTP-Bindung, wie in der SOAP 1.2-Part 2 (SOAP12Part2)-Spezifikation beschrieben, mit den folgenden Erläuterungen.
+WCF implementiert die SOAP 1,2-HTTP-Bindung, wie in der SOAP 1,2-Part 2 (SOAP12Part2)-Spezifikation beschrieben, mit den folgenden Erläuterungen.
 
 SOAP 1.2 hat einen optionalen Aktionsparameter für den `application/soap+xml`-Medientyp eingeführt. Dieser Parameter ist nützlich bei der Optimierung des Sendens von Nachrichten, ohne dass der Text der SOAP-Nachricht analysiert werden muss, wenn die WS-Adressierung nicht verwendet wird.
 
@@ -108,7 +108,7 @@ SOAP 1.2 hat einen optionalen Aktionsparameter für den `application/soap+xml`-M
 Wenn die WS-Adressierung deaktiviert ist und eine eingehende Anforderung keinen Aktionsparameter enthält, gilt die Nachrichten-`Action` als nicht angegeben.
 
 ## <a name="ws-addressing"></a>WS-Adressierung
-WCF implementiert 3 Versionen von WS-Addressing:
+WCF implementiert drei Versionen der WS-Adressierung:
 
 - WS-Adressierung 2004/08
 
@@ -117,21 +117,21 @@ WCF implementiert 3 Versionen von WS-Addressing:
 - WS-Addressing 1.0 - Metadata
 
 ### <a name="endpoint-references"></a>Endpunktverweise
-Alle Versionen von WS-Addressing, die WCF implementiert, verwenden Endpunktverweise, um Endpunkte zu beschreiben.
+Alle Versionen der WS-Adressierung, die von WCF implementiert werden, verwenden Endpunkt Verweise, um Endpunkte zu beschreiben.
 
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Endpunktverweise und WS-Adressierungsversionen
-WCF implementiert eine Reihe von Infrastrukturprotokollen, die WS-Addressing `W3C.WsAddressing.EndpointReferenceType` verwenden, insbesondere das Element und die `EndpointReference` Klasse (z. B. WS-ReliableMessaging, WS-SecureConversation und WS-Trust). WCF unterstützt die Verwendung einer der beiden Versionen von WS-Addressing mit anderen Infrastrukturprotokollen. WCF-Endpunkte unterstützen eine Version von WS-Addressing pro Endpunkt.
+WCF implementiert eine Reihe von Infrastruktur Protokollen, die WS-Adressierung verwenden, und insbesondere das `EndpointReference` Element und die `W3C.WsAddressing.EndpointReferenceType` Klasse (z. b. WS-ReliableMessaging, WS-SecureConversation und WS-Trust). WCF unterstützt die Verwendung beider Versionen der WS-Adressierung mit anderen Infrastruktur Protokollen. WCF-Endpunkte unterstützen eine Version der WS-Adressierung pro Endpunkt.
 
-Für R3111 muss der `EndpointReference` Namespace für das Element oder den Typ, der in Nachrichten verwendet wird, die mit einem WCF-Endpunkt ausgetauscht werden, mit der Version von WS-Addressing übereinstimmen, die von diesem Endpunkt implementiert ist.
+Bei R3111 muss der Namespace für das `EndpointReference` Element oder den Typ, der in Nachrichten verwendet wird, die mit einem WCF-Endpunkt ausgetauscht wurden, mit der Version der WS-Adressierung, die von diesem Endpunkt implementiert
 
-Wenn ein WCF-Endpunkt beispielsweise WS-ReliableMessaging `AcksTo` implementiert, verwendet der Header, der von einem solchen Endpunkt innerhalb `CreateSequenceResponse` zurückgegeben wird, die WS-Addressing-Version, die das `EncodingBinding` Element für diesen Endpunkt angibt.
+Wenn ein WCF-Endpunkt z. b. WS-ReliableMessaging implementiert, verwendet der Header, der `AcksTo` von einem solchen Endpunkt innerhalb von zurückgegeben wird, `CreateSequenceResponse` die WS-Adressierungs Version, die das- `EncodingBinding` Element für diesen Endpunkt angibt.
 
 #### <a name="endpoint-references-and-metadata"></a>Endpunktverweise und Metadaten
 Eine Anzahl von Szenarien erfordert kommunizierende Metadaten oder einen Verweis auf Metadaten für einen bestimmten Endpunkt.
 
-B3121: WCF verwendet Mechanismen, die in der WS-MetadataExchange (MEX)-Spezifikation Abschnitt 6 beschrieben werden, um Metadaten für Endpunktverweise nach Wert oder Verweis einzuschließen.
+B3121: WCF wendet Mechanismen an, die im Abschnitt 6 der WS-MetadataExchange (MEX)-Spezifikation beschrieben werden, um Metadaten für Endpunkt Verweise nach Wert oder Verweis einzuschließen.
 
-Betrachten Sie ein Szenario, in dem ein WCF-Dienst eine Authentifizierung mit einem SAML-Token (Security Assertions Markup Language) erfordert, das vom Tokenaussteller unter `http://sts.fabrikam123.com`ausgegeben wird. Der WCF-Endpunkt beschreibt diese `sp:IssuedToken` Authentifizierungsanforderung, indem eine Assertion mit einer geschachtelten `sp:Issuer` Assertion verwendet wird, die auf den Tokenaussteller verweist. Clientanwendungen, die auf die `sp:Issuer`-Assertion zugreifen, müssen mit dem Tokenausstellerendpunkt kommunizieren können. Der Client muss Metadaten über den Tokenaussteller kennen. Mithilfe der in MEX definierten Endpunktreferenzmetadatenerweiterungen stellt WCF einen Verweis auf die Tokenausstellermetadaten bereit.
+Stellen Sie sich ein Szenario vor, in dem ein WCF-Dienst eine Authentifizierung mit einem SAML-Token (Security Assertionen Markup Language) erfordert, das vom Tokenaussteller `http://sts.fabrikam123.com` bei Der WCF-Endpunkt beschreibt diese Authentifizierungsanforderung, indem er die-Assertion verwendet `sp:IssuedToken` `sp:Issuer` , die auf den Tokenaussteller zeigt. Clientanwendungen, die auf die `sp:Issuer`-Assertion zugreifen, müssen mit dem Tokenausstellerendpunkt kommunizieren können. Der Client muss Metadaten über den Tokenaussteller kennen. Mithilfe der in Mex definierten Endpunkt Verweis-Metadatenerweiterungen bietet WCF einen Verweis auf die Metadaten des Tokenausstellers.
 
 ```xml
 <sp:IssuedToken>
@@ -157,25 +157,25 @@ Betrachten Sie ein Szenario, in dem ein WCF-Dienst eine Authentifizierung mit ei
 ### <a name="message-addressing-headers"></a>Nachrichtenadressierungsheader
 
 #### <a name="message-headers"></a>Nachrichtenheader
-Für beide WS-Addressing-Versionen verwendet WCF die folgenden Nachrichtenheader `wsa:To` `wsa:ReplyTo`gemäß `wsa:Action` `wsa:MessageID`den `wsa:RelatesTo`Spezifikationen , , , und .
+Für beide Versionen der WS-Adressierung verwendet WCF die folgenden Nachrichten Header gemäß den Spezifikationen, `wsa:To` `wsa:ReplyTo` ,, `wsa:Action` `wsa:MessageID` und `wsa:RelatesTo` .
 
-B3211: Für alle WS-Adressierungsversionen ehrt WCF, erzeugt jedoch nicht sofort WS-Adressierungs-Nachrichtenheader `wsa:FaultTo` und `wsa:From`.
+B3211: für alle Versionen der WS-Adressierung werden WCF berücksichtigt, aber keine Standard-, WS-Adressierungs-Nachrichten Header `wsa:FaultTo` und `wsa:From` .
 
-Anwendungen, die mit WCF-Anwendungen interagieren, können diese Nachrichtenheader hinzufügen, und WCF verarbeitet sie entsprechend.
+Anwendungen, die mit WCF-Anwendungen interagieren, können diese Nachrichten Header hinzufügen, die von WCF entsprechend verarbeitet werden.
 
 #### <a name="reference-parameters-and-properties"></a>Verweisparameter und -eigenschaften
 
-WCF implementiert die Verarbeitung von Endpunktreferenzparametern und Referenzeigenschaften nach den jeweiligen Spezifikationen.
+WCF implementiert die Verarbeitung von Endpunkt Verweis Parametern und Verweis Eigenschaften in Übereinstimmung mit den jeweiligen Spezifikationen.
 
-B3221: Bei der Konfiguration für die Verwendung von WS-Addressing 2004/08 unterscheiden WCF-Endpunkte nicht zwischen der Verarbeitung von Referenzeigenschaften und Referenzparametern.
+B3221: Wenn die Verwendung der WS-Adressierung 2004/08 konfiguriert ist, unterscheiden WCF-Endpunkte nicht zwischen den Verarbeitungs Verweis Eigenschaften und Verweis Parametern.
 
 ### <a name="message-exchange-patterns"></a>Nachrichtenaustauschmuster
-Die Abfolge der Nachrichten, die am Aufruf zum Webdienstvorgang beteiligt sind, wird als *Nachrichtenaustauschmuster*bezeichnet. WCF unterstützt einseitige, Anforderungsantwort- und Duplex-Nachrichtenaustauschmuster. Dieser Abschnitt klärt die WS-Adressierungsanforderungen während der Nachrichtenverarbeitung, die vom verwendeten Nachrichtenaustauschmuster abhängig sind.
+Die Reihenfolge der Nachrichten, die an dem Aufruf des Webdienst Vorgangs beteiligt sind, wird als *Nachrichtenaustausch Muster*bezeichnet. WCF unterstützt unidirektionale, Anforderungs-Antwort-und Duplex Nachrichtenaustausch Muster. Dieser Abschnitt klärt die WS-Adressierungsanforderungen während der Nachrichtenverarbeitung, die vom verwendeten Nachrichtenaustauschmuster abhängig sind.
 
 Überall in diesem Abschnitt sendet der Anforderungsdienst die erste Nachricht, und der Antwortdienst empfängt die erste Nachricht.
 
 #### <a name="one-way-message"></a>Unidirektionale Nachricht
-Wenn ein WCF-Endpunkt so konfiguriert ist, dass Nachrichten mit einer bestimmten `Action` Datei unterstützt werden, die einem einseitigen Muster folgt, folgt der WCF-Endpunkt den folgenden Verhaltensweisen und Anforderungen. Sofern nicht anders angegeben, gelten Verhaltensweisen und Regeln für beide Versionen von WS-Addressing, die in WCF unterstützt werden:
+Wenn ein WCF-Endpunkt so konfiguriert ist, dass Nachrichten mit einer bestimmten unterstützt werden, die einem unidirektionalen `Action` Muster folgen, befolgt der WCF-Endpunkt die folgenden Verhaltensweisen und Anforderungen. Sofern nicht anders angegeben, gelten die Verhalten und Regeln für beide Versionen der WS-Adressierung, die in WCF unterstützt werden:
 
 - R3311: Der Anforderungsdienst muss `wsa:To`, `wsa:Action` und Header für alle Verweisparameter, die vom Endpunktverweis angegeben werden, enthalten. Wenn die WS-Adressierung 2004/08 verwendet wird und [Verweiseigenschaften] vom Endpunktverweis angegeben werden, müssen auch die entsprechenden Header der Nachricht hinzugefügt werden.
 
@@ -185,32 +185,32 @@ Wenn ein WCF-Endpunkt so konfiguriert ist, dass Nachrichten mit einer bestimmten
 
      Wenn die HTTP-Transportmethode verwendet wird und der Vorgangsvertrag eine Nachricht als unidirektional ausweist, kann die HTTP-Antwort immer noch zum Senden von Infrastrukturnachrichten verwendet werden – Reliable Messaging kann beispielsweise eine `SequenceAcknowledgement`-Nachricht in einer HTTP-Antwort senden.
 
-- B3314: Der WCF-Responder sendet keine Fehlermeldung als Antwort auf eine einseitige Nachricht.
+- B3314: der WCF-Beantworter sendet keine Fehlermeldung als Antwort auf eine unidirektionale Nachricht.
 
 #### <a name="request-reply"></a>Anforderung-Antwort
-Wenn ein WCF-Endpunkt für eine Nachricht `Action` konfiguriert ist, die dem Anforderungsantwortmuster folgt, folgt der WCF-Endpunkt den folgenden Verhaltensweisen und Anforderungen. Sofern nicht anders angegeben, gelten Verhaltensweisen und Regeln für beide Versionen von WS-Addressing, die in WCF unterstützt werden:
+Wenn ein WCF-Endpunkt für eine Nachricht mit einer angegebenen konfiguriert ist `Action` , um dem Anforderung-Antwort-Muster zu folgen, befolgt der WCF-Endpunkt die unten aufgeführten Verhalten und Anforderungen. Sofern nicht anders angegeben, gelten die Verhalten und Regeln für beide Versionen der WS-Adressierung, die in WCF unterstützt werden:
 
-- R3321: Der Anforderer `wsa:To`muss `wsa:Action` `wsa:MessageID`in die Anforderung , , und Header für alle Referenzparameter oder Referenzeigenschaften (oder beide) einschließen, die durch den Endpunktverweis angegeben sind.
+- R3321: der Anforderer muss in der Anforderungs `wsa:To` `wsa:Action` -, `wsa:MessageID` -und-Kopfzeile für alle Verweis Parameter oder Verweis Eigenschaften (oder beides) enthalten, die vom Endpunkt Verweis angegeben werden.
 
 - R3322: Wenn die WS-Adressierung 2004/08 verwendet wird, muss `ReplyTo` auch in der Anforderung enthalten sein.
 
-- R3323: Wenn WS-Addressing 1.0 `ReplyTo` verwendet wird und in der Anforderung nicht vorhanden ist, `http://www.w3.org/2005/08/addressing/anonymous` wird ein Standardendpunktverweis mit der Eigenschaft [address] verwendet, der gleich ist.
+- R3323: Wenn die WS-Adressierung 1,0 verwendet wird und `ReplyTo` in der Anforderung nicht vorhanden ist, wird ein standardend Punkt Verweis verwendet, bei dem die [address]-Eigenschaft gleich ist `http://www.w3.org/2005/08/addressing/anonymous` .
 
-- R3324: Der Anforderer muss `wsa:To`, `wsa:Action`und `wsa:RelatesTo` Header in die Antwortnachricht sowie Header für alle Referenzparameter `ReplyTo` oder Referenzeigenschaften (oder beide) einschließen, die durch den Endpunktverweis in der Anforderung angegeben sind.
+- R3324: der Anforderer muss `wsa:To` , `wsa:Action` -und- `wsa:RelatesTo` Header in der Antwortnachricht sowie Header für alle Verweis Parameter oder Verweis Eigenschaften (oder beides) enthalten, die vom `ReplyTo` Endpunkt Verweis in der Anforderung angegeben werden.
 
 ### <a name="web-services-addressing-faults"></a>Fehler bei Web Services Addressing
-R3411: WCF erzeugt die folgenden Fehler, die durch WS-Addressing 2004/08 definiert wurden.
+R3411: WCF erzeugt die folgenden Fehler, die von der WS-Adressierung 2004/08 definiert werden.
 
 | Code | Ursache |
 |----------|-----------|
 | `wsa:DestinationUnreachable` | Die Nachricht ist mit `ReplyTo` angekommen, das sich von der Antwortadresse, die für diesen Kanal festgelegt ist, unterscheidet; für die in der To-Headerzeile angegebene Adresse gibt es kein Endpunkt-Listening. |
 | `wsa:ActionNotSupported` | Die Infrastrukturkanäle und -verteiler, die mit dem Endpunkt verbunden sind, erkennen die Aktion, die in der Headerzeile `Action` angegeben ist, nicht. |
 
-R3412: WCF erzeugt die folgenden Fehler, die durch WS-Addressing 1.0 definiert werden.
+R3412: WCF erzeugt die folgenden Fehler, die von der WS-Adressierung 1,0 definiert werden.
 
 | Code | Ursache |
 |----------|-----------|
-| `wsa10:InvalidAddressingHeader` | Duplizieren `wsa:To`, `wsa:ReplyTo`oder `wsa:From` `wsa:MessageID`. Duplizieren `wsa:RelatesTo` `RelationshipType`Sie mit der gleichen . |
+| `wsa10:InvalidAddressingHeader` | Duplizieren Sie `wsa:To` , `wsa:ReplyTo` `wsa:From` oder `wsa:MessageID` . Duplizieren `wsa:RelatesTo` mit dem gleichen `RelationshipType` . |
 | `wsa10:MessageAddressingHeaderRequired` | Der erforderliche Adressierungsheader fehlt. |
 | `wsa10:DestinationUnreachable` | Die Nachricht ist mit `ReplyTo` angekommen, das sich von der Antwortadresse, die für diesen Kanal eingeführt wurde, unterscheidet. An der Adresse, die im To-Header angegeben ist, gibt es kein Endpunkt-Listening. |
 | `wsa10:ActionNotSupported` | Eine Aktion, die im `Action`-Header angegeben ist, wird von den Infrastrukturkanälen oder dem Verteiler, die/der mit dem Endpunkt verbunden sind/ist, nicht erkannt. |
@@ -221,7 +221,7 @@ Code in den vorangehenden Tabellen wird auf `FaultCode` in SOAP 1.1 und `SubCode
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1-Bindung und WS-Richtlinienassertionen
 
 #### <a name="indicating-use-of-ws-addressing"></a>Angeben der Verwendung von WS-Adressierung
-WCF verwendet Richtlinienassertionen, um die Endpunktunterstützung für eine bestimmte WS-Adressierungsversion anzugeben.
+WCF verwendet Richtlinien Assertionen, um die Endpunkt Unterstützung für eine bestimmte Version der WS-Adressierung anzugeben.
 
 Die folgende Richtlinienassertion verfügt über das Endpoint Policy Subject [WS-PA] und gibt an, dass von diesem Endpunkt gesendete und empfangene Nachrichten WS-Adressierung 2004/08 verwenden müssen.
 
@@ -265,7 +265,7 @@ Die vollständige Richtlinienassertion kann wie folgt aussehen:
 
 Es gibt aber Nachrichtenaustauschmuster, die davon profitieren, zwei unabhängige, entgegengesetzte HTTP-Verbindungen zwischen dem Anforderungsdienst und dem Antwortdienst etabliert zu haben, z. B. unaufgeforderte unidirektionale Nachrichten, die vom Antwortdienst gesendet werden.
 
-WCF bietet eine Funktion, mit der zwei zugrunde liegende Transportkanäle einen Composite Duplex-Kanal bilden können, wobei ein Kanal für Eingabemeldungen und der andere für Ausgabenachrichten verwendet wird. Im Fall des HTTP-Transports stellt Composite Duplex zwei umgekehrte HTTP-Verbindungen bereit. Der Anforderungsdienst verwendet eine Verbindung, um Nachrichten an den Antwortdienst zu senden, und der Antwortdienst verwendet die andere, um Nachrichten zurück an den Anforderungsdienst zu senden.
+WCF bietet eine Funktion, mit der zwei zugrunde liegende Transportkanäle einen zusammengesetzten Duplex Kanal bilden können, wobei ein Kanal für Eingabe Nachrichten verwendet wird und der andere für Ausgabe Nachrichten verwendet wird. Im Fall des HTTP-Transports stellt Composite Duplex zwei umgekehrte HTTP-Verbindungen bereit. Der Anforderungsdienst verwendet eine Verbindung, um Nachrichten an den Antwortdienst zu senden, und der Antwortdienst verwendet die andere, um Nachrichten zurück an den Anforderungsdienst zu senden.
 
 Die WS-AM-Assertion von Antworten, die über separate HTTP-Anforderungen gesendet werden, ist Folgende:
 
@@ -291,11 +291,11 @@ Die Verwendung der folgenden Assertion, die über Endpoint Policy Subject [WS-PA
 
 Die vorherige Anweisung führt bei Anforderungsnachrichten zu den folgenden Anforderungen an den `wsa:ReplyTo`-Header:
 
-- R3514: An einen Endpunkt gesendete `ReplyTo` Anforderungsnachrichten müssen einen Header mit der Eigenschaft haben, `[address]` die nicht gleich ist, `http://www.w3.org/2005/08/addressing/anonymous` wenn `wsap10:UsingAddressing` der `wsap:UsingAddressing` Endpunkt `cdp:CompositeDuplex` eine WSDL 1.1 SOAP 1.x HTTP-Bindung verwendet und eine Richtlinienalternative mit einer oder einer Assertion mit angehängten hat.
+- R3514: die an einen Endpunkt gesendeten Anforderungs Nachrichten müssen über einen-Header verfügen, `ReplyTo` bei dem die- `[address]` Eigenschaft nicht gleich ist, `http://www.w3.org/2005/08/addressing/anonymous` Wenn der Endpunkt eine WSDL 1,1 SOAP 1. x HTTP-Bindung verwendet und über eine Richtlinien Alternative verfügt, bei der die-oder-Assertionen `wsap10:UsingAddressing` `wsap:UsingAddressing` mit `cdp:CompositeDuplex` angehängt
 
-- R3515: An einen Endpunkt gesendete `ReplyTo` Anforderungsnachrichten müssen über einen Header mit `[address]` der Eigenschaft "gleich `http://www.w3.org/2005/08/addressing/anonymous`" oder gar keinen `ReplyTo` Header verfügen, wenn der `wsap10:UsingAddressing` Endpunkt `cdp:CompositeDuplex` eine WSDL 1.1 SOAP 1.x HTTP-Bindung verwendet und eine Richtlinienalternative mit Assertion und ankeine Assertion zugeordnet ist.
+- R3515: die an einen Endpunkt gesendeten Anforderungs Nachrichten müssen über einen- `ReplyTo` Header verfügen, bei dem die- `[address]` Eigenschaft gleich `http://www.w3.org/2005/08/addressing/anonymous` ist oder über keinen `ReplyTo` -Header verfügt, wenn der Endpunkt eine WSDL 1,1 SOAP 1. x HTTP-Bindung verwendet und über eine Richtlinien Alternative mit-Assertionen `wsap10:UsingAddressing` und einer angefügten-Bestätigung verfügt `cdp:CompositeDuplex` .
 
-- R3516: An einen Endpunkt gesendete `ReplyTo` Anforderungsnachrichten müssen über einen Header `[address]` mit einer Eigenschaft verfügen, die der Eigenschaft `http://www.w3.org/2005/08/addressing/anonymous` entspricht, wenn der Endpunkt eine WSDL 1.1 SOAP 1.x HTTP-Bindung verwendet und eine Richtlinienalternative mit `wsap:UsingAddressing` Assertion und ankeine `cdp:CompositeDuplex` Assertion zugeordnet ist.
+- R3516: die an einen Endpunkt gesendeten Anforderungs Nachrichten müssen über einen- `ReplyTo` Header mit einer- `[address]` Eigenschaft verfügen, `http://www.w3.org/2005/08/addressing/anonymous` die gleich ist, wenn der Endpunkt eine WSDL 1,1 SOAP 1. x HTTP-Bindung verwendet und über eine Richtlinien Alternative mit-Assertionen `wsap:UsingAddressing` und ohne `cdp:CompositeDuplex` angehängte Bestätigung verfügt
 
 Die WS-Adressierung-WSDL-Spezifikation versucht, ähnliche Protokollbindungen zu beschreiben, indem sie ein `<wsaw:Anonymous/>`-Element mit drei Textwerten (erforderlich, optional und verboten) einführt, um die Anforderungen im `wsa:ReplyTo`-Header (Abschnitt 3.2) anzugeben. Leider ist eine derartige Elementdefinition im Kontext einer WS-Richtlinie als Assertion nicht besonders nützlich, da sie domänenspezifische Erweiterungen benötigt, um den Knotenpunkt von Alternativen zu unterstützen, die ein derartiges Element als Assertion verwenden. Eine derartige Elementdefinition gibt außerdem den Wert des `ReplyTo`-Headers als Gegenstück zum Endpunktverhalten auf dem Kabel an und macht ihn somit spezifisch für den HTTP-Transport.
 
@@ -304,22 +304,22 @@ WS-Adressierung 2004/08 definiert ein `wsa:Action`-Attribut für die `wsdl:portT
 
 Der einzige Unterschied zwischen den beiden ist die Standardaktionsmustersemantik, die in Abschnitt 3.3.2 von WS-ADDR bzw. Abschnitt 4.4.4 der 4.4.4 von WS-ADDR10-WSDL beschrieben wird.
 
-Es ist sinnvoll, zwei Endpunkte zu `portType` haben, die denselben (oder Vertrag in der WCF-Terminologie) gemeinsam nutzen, aber verschiedene Versionen von WS-Addressing verwenden. Da aber "Aktion" durch den `portType` definiert wird und sich nicht zwischen den Endpunkten, die den `portType` implementieren, ändern sollte, ist es unmöglich, beide Standardaktionsmuster zu unterstützen.
+Es ist sinnvoll, zwei Endpunkte zu verwenden, die denselben `portType` (oder einen Vertrag in der WCF-Terminologie) aufweisen, aber unterschiedliche Versionen der WS-Adressierung verwenden. Da aber "Aktion" durch den `portType` definiert wird und sich nicht zwischen den Endpunkten, die den `portType` implementieren, ändern sollte, ist es unmöglich, beide Standardaktionsmuster zu unterstützen.
 
-Um diese Kontroverse zu lösen, unterstützt `Action` WCF eine einzelne Version des Attributs.
+Um diese Kontroverse zu beheben, unterstützt WCF eine einzelne Version des `Action` Attributs.
 
-B3521: WCF `wsaw10:Action` verwendet `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` das Attribut für Elemente, wie in WS-ADDR10-WSDL definiert, um den `Action` URI für die entsprechenden Nachrichten unabhängig von der WS-Addressing-Version zu bestimmen, die vom Endpunkt verwendet wird.
+B3521: WCF verwendet das- `wsaw10:Action` Attribut für `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` Elemente, die in WS-ADDR10-WSDL definiert sind, um den `Action` URI für die entsprechenden Nachrichten unabhängig von der vom Endpunkt verwendeten WS-Adressierungs Version zu bestimmen.
 
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Verwenden des Endpunktverweises im WSDL-Anschluss
-Abschnitt 4.1 von WS-ADDR10-WSDL erweitert das `wsdl:port`-Element durch das untergeordnete `<wsa10:EndpointReference…/>`-Element, um den Endpunkt in WS-Adressierungsbegriffen zu beschreiben. WCF erweitert dieses Dienstprogramm auf WS-Addressing 2004/08, `<wsa:EndpointReference…/>` sodass `wsdl:port`es als untergeordnetes Element von angezeigt werden kann.
+Abschnitt 4.1 von WS-ADDR10-WSDL erweitert das `wsdl:port`-Element durch das untergeordnete `<wsa10:EndpointReference…/>`-Element, um den Endpunkt in WS-Adressierungsbegriffen zu beschreiben. WCF erweitert dieses Hilfsprogramm auf WS-Adressierung 2004/08 und ermöglicht so, dass `<wsa:EndpointReference…/>` als untergeordnetes Element von angezeigt wird `wsdl:port` .
 
 - R3531: Wenn einem Endpunkt eine Richtlinienalternative mit einer `<wsaw10:UsingAddressing/>``wsdl:port` enthalten.
 
-- R3532: Wenn `wsdl:port` a ein `<wsa10:EndpointReference …/>`untergeordnetes Element enthält, muss der wert `wsa10:EndpointReference/wsa10:Address` des untergeordneten Elements mit `@address` dem Wert des Attributs des gleichgeordneten `wsdl:port` / `wsdl:location` Elements übereinstimmen.
+- R3532: Wenn ein- `wsdl:port` Element ein untergeordnetes-Element enthält `<wsa10:EndpointReference …/>` , muss der Wert des untergeordneten `wsa10:EndpointReference/wsa10:Address` Elements mit dem Wert des- `@address` Attributs des `wsdl:port` / `wsdl:location` neben geordneten Elements identisch sein.
 
 - R3533: Wenn einem Endpunkt eine Richtlinienalternative mit einer `<wsap:UsingAddressing/>``wsdl:port` enthalten.
 
-- R3534: Wenn `wsdl:port` a ein `<wsa:EndpointReference …/>`untergeordnetes Element enthält, muss der wert `wsa:EndpointReference/wsa:Address` des untergeordneten Elements mit `@address` dem Wert des Attributs des gleichgeordneten `wsdl:port` / `wsdl:location` Elements übereinstimmen.
+- R3534: Wenn ein- `wsdl:port` Element ein untergeordnetes-Element enthält `<wsa:EndpointReference …/>` , muss der Wert des untergeordneten `wsa:EndpointReference/wsa:Address` Elements mit dem Wert des- `@address` Attributs des `wsdl:port` / `wsdl:location` neben geordneten Elements identisch sein.
 
 ### <a name="composition-with-ws-security"></a>Gestaltung mit WS-Sicherheit
 Gemäß den Sicherheitsüberlegungsabschnitten in WS-ADDR und WS-ADDR10 wird empfohlen, dass alle adressierenden Header zusammen mit dem Nachrichtentext signiert werden, um sie zusammenzubinden.
@@ -333,11 +333,11 @@ In diesem Szenario sendet der Absender eine unidirektionale Nachricht zum Empfä
 
 Die Anforderungsnachrichtenstruktur: Zu den Nachrichtenheadern gehören die Elemente `wsa10:To` und `wsa10:Action`. Der Nachrichtentext schließt ein bestimmtes `<app:Ping>`-Element vom Anwendungsnamespace ein.
 
-HTTP-Header: Das Ziel in POST `wsa10:To` stimmt mit dem URI im Element überein.
+HTTP-Header: das Ziel in Post stimmt mit dem URI im- `wsa10:To` Element überein.
 
 Der Content-Type-Header entspricht dem Wert `application/soap+xml`, wie von SOAP 1.2 vorausgesetzt. Die Parameter `charset` und `action` sind eingeschlossen. Der Parameter `action` des Content-Type-Headers entspricht dem Wert des `wsa10:Action`-Nachrichtenheaders.
 
-```
+```http
 POST http://fabrikam123.com/Service HTTP/1.1
 Content-Type: application/soap+xml; charset=utf-8;  
               action="http://fabrikam123.com/Service/OneWay"
@@ -364,7 +364,7 @@ Proxy-Connection: Keep-Alive
 
 Der Empfänger antwortet mit einer leeren HTTP-Antwort und dem Status 202. Ein Beispiel für die HTTP-Antwort:
 
-```
+```http
 HTTP/1.1 202 Accepted
 Date: Fri, 15 Jul 2005 08:56:07 GMT
 Server: Microsoft-IIS/6.0
@@ -376,7 +376,7 @@ Content-Length: 0
 ```
 
 ## <a name="soap-message-transmission-optimization-mechanism"></a>SOAP-Nachrichten-Übertragungsoptimierungsmechanismus
-In diesem Abschnitt werden die WCF-Implementierungsdetails für das HTTP SOAP MTOM beschrieben. Die MTOM-Technologie ist ein SOAP-Nachrichtencodierungsmechanismus derselben Klasse wie herkömmliche Text-/XML-Codierung oder WCF-Binärcodierung. Zu MTOM gehören folgende Elemente:
+In diesem Abschnitt werden die WCF-Implementierungsdetails für das HTTP-SOAP-MTOM beschrieben. Die MTOM-Technologie ist ein SOAP-Nachrichten Codierungs Mechanismus derselben Klasse wie herkömmliche Text/XML-Codierung oder binäre WCF-Codierung. Zu MTOM gehören folgende Elemente:
 
 - Ein XML-Codierungs- und Verpackungsmechanismus, der von [XOP] beschrieben wird, und XML-Informationselemente, die base64-codierte Binärdaten enthalten, die in einzelne Binärteile optimiert wurden.
 
@@ -386,7 +386,7 @@ In diesem Abschnitt werden die WCF-Implementierungsdetails für das HTTP SOAP MT
 
 - Eine HTTP-Transportbindung.
 
-Es ist möglich, MTOM mit Nicht-HTTP-Transporten mit WCF zu verwenden. In diesem Thema konzentrieren wir uns jedoch auf HTTP.
+Es ist möglich, MTOM mit nicht-http-Transporten mit WCF zu verwenden. In diesem Thema konzentrieren wir uns jedoch auf HTTP.
 
 Das MTOM-Format setzt einen großen Satz von Spezifikationen ein, der MTOM selbst, XOP und MIME abdeckt. Die Modularität dieses Spezifikationssatzes macht es schwierig, die genauen Anforderungen an die Format- und Verarbeitungssemantik zu rekonstruieren. In diesem Abschnitt werden die Format- und Verarbeitungsanforderungen an MTOM-HTTP-Bindungen beschrieben.
 
@@ -397,11 +397,11 @@ Das MTOM-Format setzt einen großen Satz von Spezifikationen ein, der MTOM selbs
 
 Die folgende Sequenz von Schritten beschreibt den MTOM-spezifischen Codierungsprozess:
 
-1. Stellen Sie sicher, dass der zu codierende `[namespace name]` SOAP-Umschlag kein Elementinformationselement mit einem von `http://www.w3.org/2004/08/xop/include` und einem `[local name]` `Include`enthält.
+1. Stellen Sie sicher, dass der zu codierende SOAP-Umschlag kein Element Informationselement mit dem `[namespace name]` `http://www.w3.org/2004/08/xop/include` und dem von enthält `[local name]` `Include` .
 
 2. Erstellen Sie ein leeres MIME-Paket.
 
-3. Identifizieren Sie die Elementinformationselemente, die optimiert werden sollten, innerhalb des Original XML Infoset. Damit die Elemente optimiert werden können, `[children]` müssen die Zeichen, aus denen das Elementinformationselement besteht, in der kanonischen Form von `xs:base64Binary` (siehe XSD-2, 3.2.16 base64Binary) sein und dürfen keine Leerzeichen enthalten, die dem Inhalt des nicht weißen Raums vor, inline mit oder dem Inhalt des nicht weißen Raums vorangehen oder diesem folgen.
+3. Identifizieren Sie die Elementinformationselemente, die optimiert werden sollten, innerhalb des Original XML Infoset. Für die zu optimierenden Elemente müssen die Zeichen, aus denen das Element Informationselement besteht, `[children]` in der kanonischen Form von `xs:base64Binary` (siehe XSD-2, 3.2.16 base64Binary) enthalten sein und dürfen keine Leerzeichen enthalten, die vorher, Inline mit oder nach dem nicht-Leerzeichen-Inhalt vorhanden sind.
 
 4. Erstellen Sie einen XOP SOAP-Umschlag, der eine Kopie des Original-SOAP-Umschlags ist, aber bei dem das untergeordnete Element jedes Elementinformationselements, das im vorherigen Schritt identifiziert wurde, durch ein `xop:Include`-Elementinformationselement ersetzt wurde, das wie folgt erstellt wird:
 
@@ -415,7 +415,7 @@ Die folgende Sequenz von Schritten beschreibt den MTOM-spezifischen Codierungspr
 
     5. Generieren Sie ein neues MIME-Teil mit einem Inhalt aus Binärdaten, die aus den ersetzten Zeichen entschlüsselt wurden, die als base64, Content-ID-Header aus 4b, Content-Transfer-Encoding-Header und Content-Type-Header bei Generierung in Schritt 4d aus 4c verarbeitet wurden.
 
-    6. Fügen Sie ein `href`-Attribut zum `xop:Include`-Element mit dem Wert "cid: uri" hinzu, der in Schritt 4b aus dem Content-ID-Headerwert erstellt wurde. Entfernen Sie die\<einschließenden Zeichen " " und ">", setzen `cid:`Sie die verbleibende Zeichenfolge url-escape, und fügen Sie das Präfix hinzu. Der folgende minimale Zeichensatz ist erforderlich, um RFC1738 und RFC2396 mit einem Escapezeichen zu versehen. Andere Zeichen können mit Escapezeichen versehen werden.
+    6. Fügen Sie ein `href`-Attribut zum `xop:Include`-Element mit dem Wert "cid: uri" hinzu, der in Schritt 4b aus dem Content-ID-Headerwert erstellt wurde. Entfernen \<" and "> Sie die einschließenden Zeichen "", URL-Escapezeichen der restlichen Zeichenfolge, und fügen Sie das Präfix hinzu `cid:` . Der folgende minimale Zeichensatz ist erforderlich, um RFC1738 und RFC2396 mit einem Escapezeichen zu versehen. Andere Zeichen können mit Escapezeichen versehen werden.
 
         ```
         Hexadecimal 00-1F , 7F, 20, "<" | ">" | "#" | "%" | <">
@@ -437,14 +437,14 @@ Die Verarbeitung einer MTOM-Nachricht ist das genaue Gegenteil des Vorgangs, der
 
 3. Für jedes Elementinformationselement im erstellten SOAP-Umschlag, der, als einziges Mitglied seiner [untergeordneten] Eigenschaft, ein `xop:Include`-Elementinformationselement enthält:
 
-    1. Löschen Sie das Präfix `cid:`, und entfernen Sie alle URI-Escape-Zeichensequenzen (RFC 2396) im Wert des `@href`-Attributs des Elements `xop:Include`. Schließen Sie die Ergebniszeichenfolge in "\<", ">" ein.
+    1. Löschen Sie das Präfix `cid:`, und entfernen Sie alle URI-Escape-Zeichensequenzen (RFC 2396) im Wert des `@href`-Attributs des Elements `xop:Include`. Schließen Sie die Ergebnis Zeichenfolge in " \<", "> " ein.
 
     2. Suchen Sie den MIME-Teil mit dem Content-ID-Headerwert, der mit der in Schritt 3a abgeleiteten Zeichenfolge übereinstimmt.
 
     3. Ersetzen Sie das Elementinformationselement `xop:Include`, das in der Eigenschaft `children` jedes Elements vorkommt, durch Zeicheninformationselemente, die die vorschriftsmäßige base64-Codierung (siehe XSD-2, 3.2.16 base64Binary) des Entitätstexts des in Schritt 3b identifizierten MIME-Teils repräsentieren (ersetzen Sie wirksam das Elementinformationselement `xop:Include` durch die Daten, die im Paketteil rekonstruiert wurden).
 
 #### <a name="http-content-type-header"></a>HTTP Content-Type Header
-Im Folgenden finden Sie eine Liste von WCF-Klarstellungen für das Format des HTTP Content-Type-Headers einer SOAP 1.x MTOM-codierten Nachricht, die von den in der MTOM-Spezifikation selbst angegebenen Anforderungen abgeleitet und von MTOM und RFC 2387 abgeleitet ist.
+Im folgenden finden Sie eine Liste von WCF-Erläuterungen für das Format des HTTP-Inhaltstyp Headers einer SOAP 1. x MTOM-codierten Nachricht, die von den in der MTOM-Spezifikation selbst angegebenen Anforderungen abgeleitet ist und von MTOM und RFC 2387 abgeleitet ist.
 
 - R4131: Ein HTTP-Content-Type-Header muss den Wert mehrteilig/verwandt (Groß- und Kleinschreibung nicht beachtend) und seine Parameter besitzen. Bei den Parameternamen braucht die Groß- und Kleinschreibung nicht berücksichtigt werden. Die Parameterreihenfolge ist nicht wichtig.
 
@@ -452,7 +452,7 @@ Im Folgenden finden Sie eine Liste von WCF-Klarstellungen für das Format des HT
 
 - R4132: Ein HTTP Content-Type-Header muss über einen Typparameter mit dem Wert `application/xop+xml` verfügen, der von doppelten Anführungszeichen umschlossen ist.
 
-Obwohl die Anforderung, doppelte Anführungszeichen zu verwenden, in RFC 2387 nicht explizit ist, wird im Text\@darauf verwendet, dass alle mehrteiligen/verwandten Medientypparameter höchstwahrscheinlich reservierte Zeichen wie " " oder "/" enthalten und daher doppelte Anführungszeichen benötigen.
+Obwohl die Anforderung, doppelte Anführungszeichen zu verwenden, in RFC 2387 nicht explizit ist, stellt der Text fest, dass alle mehrteiligen/verwandten Medientyp Parameter höchstwahrscheinlich reservierte Zeichen wie " \@ " oder "/" enthalten und daher doppelte Anführungszeichen benötigen.
 
 - R4133: Ein HTTP Content-Type-Header sollte einen Startparameter mit dem Wert des Content-ID-Headers des MIME-Teils, der den SOAP 1.x Envelope enthält, in doppelten Anführungszeichen besitzen. Wenn der Startparameter weggelassen wird, muss der erste MIME-Teil den SOAP 1.x Envelope enthalten.
 
@@ -473,19 +473,19 @@ Obwohl die Anforderung, doppelte Anführungszeichen zu verwenden, in RFC 2387 ni
 
      RICHTIG
 
-    ```
+    ```http
     Content-Type: multipart/related; type="application/xop+xml";start=" <part0@tempuri.org>";boundary="uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=1";start-info="text/xml"
     ```
 
      RICHTIG
 
-    ```
+    ```http
     Content-Type: Multipart/Related; type="application/xop+xml";start-info="text/xml";boundary="uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=1"
     ```
 
      FALSCH
 
-    ```
+    ```http
     Content-Type: Multipart/Related; type=application/xop+xml;start=" <part0@tempuri.org>";start-info="text/xml";boundary="uuid:0ca0e16e-feb1-426c-97d8-c4508ada5e82+id=1"
     ```
 
@@ -508,11 +508,11 @@ definiert, wobei `msg-id` in RFC 2822 (das RFC 822, auf das in RFC 2045 verwiese
 msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
 ```
 
-und ist effektiv eine E-Mail-Adresse, die in "\<" und ">" eingeschlossen ist. Das `[CFWS]`-Präfix und -Suffix wurden in RFC 2822 hinzugefügt, um Kommentare auszuführen, und sollten nicht verwendet werden, um die Kompatibilität aufrechtzuerhalten.
+und ist eine e-Mail-Adresse, die in "" eingeschlossen ist \<" and  "> . Das `[CFWS]`-Präfix und -Suffix wurden in RFC 2822 hinzugefügt, um Kommentare auszuführen, und sollten nicht verwendet werden, um die Kompatibilität aufrechtzuerhalten.
 
 R4143: Der Wert des Content-ID-Headers des Infoset MIME-Teils muss der Produktion `msg-id` von RFC 2822 folgen, wobei die Präfix- und Suffixteile des `[CFWS]` entfallen.
 
-Eine Reihe von MIME-Implementierungen lockerte die\<Anforderungen an den Wert, der `absoluteURI` in "\<" und ">" als E-Mail-Adresse eingeschlossen ist und zusätzlich zur E-Mail-Adresse in " , ">" verwendet wird. Diese Version von WCF verwendet Werte des Content-ID MIME-Headers des Formulars:
+Eine Reihe von MIME-Implementierungen hat die Anforderungen für den in "" eingeschlossenen Wert \<" and "> in eine e-Mail-Adresse und `absoluteURI` \<" , "> in "" zusätzlich zur e-Mail-Adresse gelockert. Diese WCF-Version verwendet Werte des Content-ID-MIME-Headers in der Form:
 
 ```
 Content-ID: <http://tempuri.org/0>
@@ -535,16 +535,16 @@ MIME (RFC 2045) stellt den Content-Transfer-Encoding-Header bereit, um die Codie
 
 - Gemäß [XOP] Abschnitt 5,
 
-- R4148: SOAP1.1 Infoset-Teil muss Content-Type-Header mit Medientyp application/xop+xml und Parametern type="text/xml" und charset enthalten
+- R4148: das SOAP 1.1-infosetpart muss den Content-Type-Header mit dem Medientyp application/xop + xml und Parameters Type = "Text/XML" und charset enthalten.
 
-    ```
+    ```http
     Content-Type: application/xop+xml;
                   charset=utf-8;type="text/xml"
     ```
 
-- R4149: Das SOAP 1.2 Infoset-Teil muss den `application/xop+xml` Content-Type-Header`application/soap+xml`mit `charset`Medientyp und Parametern type=" " und enthalten.
+- R4149: der SOAP 1,2-Infosetteil muss den Content-Type-Header mit Medientyp `application/xop+xml` und Parametertyp = " `application/soap+xml` " und enthalten `charset` .
 
-    ```
+    ```http
     Content-Type: application/xop+xml;
                   charset=utf-8;type="application/soap+xml"
     ```
@@ -558,12 +558,12 @@ Der Zweck von MTOM ist es, eine SOAP-Nachricht zu codieren, um base64-codierte D
 
 - R4151: Jedes Elementinformationselement, das base64-codierte Daten enthält, kann optimiert werden.
 
-- B4152: WCF optimiert Elementinformationselemente, die base64-codierte Daten enthalten und eine Länge von 1024 Byte aufweisen.
+- B4152: WCF optimiert Element Informationselemente, die Base64-codierte Daten enthalten, und überschreitet 1024 Bytes.
 
-Ein WCF-Endpunkt, der für die Verwendung von MTOM konfiguriert ist, sendet immer MTOM-codierte Nachrichten. Selbst wenn kein Teil die erforderlichen Kriterien erfüllt, ist die Nachricht noch immer MTOM-codiert (als MIME-Paket mit einem einzelnen MIME-Teil serialisiert, der den SOAP-Umschlag enthält).
+Ein WCF-Endpunkt, der zur Verwendung von MTOM konfiguriert ist, sendet immer MTOM-codierte Nachrichten. Selbst wenn kein Teil die erforderlichen Kriterien erfüllt, ist die Nachricht noch immer MTOM-codiert (als MIME-Paket mit einem einzelnen MIME-Teil serialisiert, der den SOAP-Umschlag enthält).
 
 ### <a name="ws-policy-assertion-for-mtom"></a>WS-Policy-Assertion für MTOM
-WCF verwendet die folgende Richtlinienassertion, um die MTOM-Verwendung nach Endpunkt anzugeben:
+WCF verwendet die folgende Richtlinien Assertion, um die MTOM-Verwendung durch den Endpunkt anzugeben:
 
 ```xml
 <wsoma:OptimizedMimeSerialization />
@@ -571,16 +571,16 @@ WCF verwendet die folgende Richtlinienassertion, um die MTOM-Verwendung nach End
 
 - R4211: Die vorangehende Richtlinienassertion verfügt über ein Endpoint Policy Subject und gibt an, dass alle Nachrichten, die an den Endpunkt gesendet und von diesem empfangen werden, durch den Einsatz von MTOM optimiert werden.
 
-- B4212: Wenn ein WCF-Endpunkt für die Verwendung der MTOM-Optimierung konfiguriert ist, fügt er der Richtlinie, die der entsprechenden `wsdl:binding`zugeordnet ist, eine MTOM-Richtlinienassertion hinzu.
+- B4212: bei der Konfiguration für die Verwendung der MTOM-Optimierung fügt ein WCF-Endpunkt der Richtlinie, die an die entsprechende angefügt ist, eine MTOM-Richtlinien Bestätigung `wsdl:binding`
 
 ### <a name="composition-with-ws-security"></a>Gestaltung mit WS-Sicherheit
-MTOM ist ein Codierungsmechanismus, `text/xml` der WCF Binary XML ähnelt und. MTOM bietet eine natürliche Zusammensetzung aus WS-Sicherheit und anderen WS-*-Protokollen: eine über WS-Sicherheit gesicherte Nachricht kann durch den Einsatz von MTOM optimiert werden.
+MTOM ist ein Codierungs Mechanismus, der mit `text/xml` und WCF Binary XML vergleichbar ist. MTOM bietet eine natürliche Zusammensetzung aus WS-Sicherheit und anderen WS-*-Protokollen: eine über WS-Sicherheit gesicherte Nachricht kann durch den Einsatz von MTOM optimiert werden.
 
 ### <a name="examples"></a>Beispiele
 
 #### <a name="wcf-soap-11-message-encoded-using-mtom"></a>WCF-SOAP 1.1-Nachricht, mit MTOM codiert
 
-```
+```http
 POST http://131.107.72.15/Mtom/svc/service.svc/Soap11MtomUTF8 HTTP/1.1
 SOAPAction: "http://xmlsoap.org/echoBinaryAsString"
 Content-Type: multipart/related;type="application/xop+xml";
@@ -612,9 +612,9 @@ Content-Type: application/octet-stream
 ```
 
 #### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>WCF Secure SOAP 1.2-Nachricht, mit MTOM codiert
-In diesem Beispiel wird eine Nachricht mit MTOM und SOAP 1.2 codiert, die mit WS-Sicherheit geschützt wird. Die für die Codierung identifizierten Binärteile sind die Inhalte des `BinarySecurityToken`, `CipherValue` der `EncryptedData`, die zu der verschlüsselten Signatur und dem verschlüsselten Text gehören. Beachten Sie, dass der `CipherValue` der von WCF nicht für die `EncryptedKey` Optimierung identifiziert wurde, da seine Länge weniger als 1024 Bytes beträgt.
+In diesem Beispiel wird eine Nachricht mit MTOM und SOAP 1.2 codiert, die mit WS-Sicherheit geschützt wird. Die für die Codierung identifizierten Binärteile sind die Inhalte des `BinarySecurityToken`, `CipherValue` der `EncryptedData`, die zu der verschlüsselten Signatur und dem verschlüsselten Text gehören. Beachten Sie, dass der `CipherValue` von `EncryptedKey` nicht zur Optimierung durch WCF identifiziert wurde, da seine Länge kleiner als 1024 Bytes ist.
 
-```
+```http
 POST http://131.107.72.15/Mtom/service.svc/Soap12MtomSecureSignEncrypt HTTP/1.1
 Content-Type: multipart/related; type="application/xop+xml";
               start="<http://tempuri.org/0>";

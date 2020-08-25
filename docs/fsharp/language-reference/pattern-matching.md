@@ -1,13 +1,13 @@
 ---
 title: Musterabgleich
-description: Erfahren Sie, wie Muster in F# verwendet werden, um Daten mit logischen Strukturen zu vergleichen, Daten in Bestandteile zu zerlegen oder Informationen aus Daten zu extrahieren.
-ms.date: 10/27/2019
-ms.openlocfilehash: 1acb795cbe5581898ae5e1439098f906a8a16b93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+description: 'Erfahren Sie, wie Muster in F # verwendet werden, um Daten mit logischen Strukturen zu vergleichen, Daten in Bestandteile zu zerlegen oder Informationen aus Daten zu extrahieren.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041014"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811508"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -17,7 +17,7 @@ Muster sind Regeln zum Transformieren von Eingabedaten. Sie werden in F# stets v
 
 Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Match Expressions](match-expressions.md), [let-Bindungen](./functions/let-bindings.md), [Lambda-Ausdrücke: das `fun` Schlüsselwort](./functions/lambda-expressions-the-fun-keyword.md)und [Ausnahmen: der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
 
-Im `match` Ausdruck ist das *Muster* z. b. das Symbol, das auf das Pipe-Symbol folgt.
+Im `match` Ausdruck ist das *Muster* z. b. das, was dem Pipe-Symbol folgt.
 
 ```fsharp
 match expression with
@@ -29,7 +29,7 @@ Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausd
 
 In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit wird die Eingabe anhand jedes der folgenden Muster in der in der Tabelle aufgeführten Reihenfolge überprüft. Die Muster werden rekursiv vom ersten bis zum letzten Muster im Code und von links nach rechts in den einzelnen Zeilen angewendet.
 
-|-Name|Beschreibung|Beispiel|
+|Name|BESCHREIBUNG|Beispiel|
 |----|-----------|-------|
 |Konstantenmuster|Ein beliebiges numerisches Literal, Zeichenliteral oder Zeichenfolgenliteral, eine Enumerationskonstante oder ein definierter Literalbezeichner.|`1.0`, `"test"`, `30`, `Color.Red`|
 |Bezeichnermuster|Der Wert eines Falls einer Unterscheidungs-Union, eine Ausnahmebezeichnung oder ein Fall eines aktiven Musters.|`Some(x)`<br /><br />`Failure(msg)`|
@@ -37,12 +37,12 @@ In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit w
 |`as`-Muster|*Muster* als *Bezeichner*|`(a, b) as tuple1`|
 |OR-Muster|*muster1* &#124; *muster2*|<code>([h] &#124; [h; _])</code>|
 |AND-Muster|*muster1* &amp; *muster2*|`(a, b) & (_, "test")`|
-|Cons-Muster|*Bezeichner:: List-Identifier*|`h :: t`|
+|Cons-Muster|*identifier* *Bezeichner:: List-Identifier*|`h :: t`|
 |Listenmuster|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
 |Arraymuster|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Muster in Klammern|( *Muster* )|`( a )`|
 |Tupelmuster|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
-|Datensatzmuster|{ *Bezeichner1* = *pattern_1*;...; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|Datensatzmuster|{ *Bezeichner1*  =  *pattern_1*; ... ; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
 |Platzhaltermuster|_|`_`|
 |Muster zusammen mit Typanmerkung|*Pattern* : *Type*|`a : int`|
 |Typtestmuster|:? *Type* [as *Identifier* ]|`:? System.DateTime as dt`|
@@ -133,7 +133,7 @@ Das OR-Muster wird im folgenden Beispiel veranschaulicht.
 
 Das AND-Muster erfordert, dass die Eingabe mit zwei Mustern übereinstimmt. Die Typen beider Seiten des AND-Musters müssen kompatibel sein.
 
-Das folgende Beispiel ähnelt `detectZeroTuple` im Abschnitt [tupelmuster](https://msdn.microsoft.com/library/#tuple) weiter unten in diesem Thema. hier werden jedoch sowohl `var1` als auch `var2` mit dem Muster und als Werte abgerufen.
+Das folgende Beispiel ist ähnlich wie `detectZeroTuple` im Abschnitt tupelmuster weiter unten in diesem Thema dargestellt. hier werden jedoch sowohl `var1` `var2` als auch Werte mithilfe des-Musters und des-Musters abgerufen.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
@@ -215,7 +215,7 @@ Im folgenden Beispiel werden das NULL-Muster und das Variablenmuster verwendet.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Vergleichsausdrücke](match-expressions.md)
 - [Aktive Muster](active-patterns.md)

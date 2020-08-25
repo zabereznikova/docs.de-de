@@ -4,14 +4,16 @@ ms.date: 07/20/2015
 f1_keywords:
 - vb.isnot
 helpviewer_keywords:
+- comparison operators [Visual Basic]
+- TypeOf...IsNot expression
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: 616506f64d20e1f150b443433f1b69040136a5ba
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ea978f8874cee20fb3a005189fd846f7564da777
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336064"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811040"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot-Operator (Visual Basic)
 
@@ -23,28 +25,45 @@ Vergleicht zwei Objekt Verweis Variablen.
 result = object1 IsNot object2
 ```
 
-## <a name="parts"></a>-Komponenten
- `result` ist erforderlich. Ein `Boolean`-Wert.
+## <a name="parts"></a>Bestandteile
 
- `object1` ist erforderlich. Beliebige `Object` Variable oder Ausdruck.
+- `result`
 
- `object2` ist erforderlich. Beliebige `Object` Variable oder Ausdruck.
+  Erforderlich. Ein `Boolean`-Wert.
+
+- `object1`
+
+  Erforderlich. Eine beliebige `Object` Variable oder ein Ausdruck.
+
+- `object2`
+
+  Erforderlich. Eine beliebige `Object` Variable oder ein Ausdruck.
 
 ## <a name="remarks"></a>Hinweise
- Der `IsNot`-Operator bestimmt, ob zwei Objekt Verweise auf unterschiedliche Objekte verweisen. Es werden jedoch keine Wert Vergleiche durchgeführt. Wenn `object1` und `object2` beide auf genau dieselbe Objektinstanz verweisen, ist `result` `False`. Wenn dies nicht der Fall ist, wird `result` `True`.
 
- `IsNot` ist das Gegenteil des `Is`-Operators. Der Vorteil von `IsNot` besteht darin, dass Sie eine umständliche Syntax mit `Not` und `Is`vermeiden können, was schwierig zu lesen ist.
+Der- `IsNot` Operator bestimmt, ob zwei Objekt Verweise auf unterschiedliche Objekte verweisen. Es werden jedoch keine Wert Vergleiche durchgeführt. Wenn `object1` und `object2` beide auf genau dieselbe Objektinstanz verweisen, ist `result` . wenn dies nicht der Fall ist `False` , `result` ist `True` .
 
- Mit den Operatoren `Is` und `IsNot` können Sie sowohl früh gebundene als auch spät gebundene Objekte testen.
+`IsNot` ist das Gegenteil des- `Is` Operators. Der Vorteil von `IsNot` besteht darin, dass Sie eine umständliche Syntax mit und vermeiden können `Not` `Is` , was schwierig zu lesen ist.
+
+ Sie können die `Is` `IsNot` Operatoren und verwenden, um früh gebundene und spät gebundene Objekte zu testen.
 
 ## <a name="example"></a>Beispiel
- Im folgenden Codebeispiel werden sowohl der `Is`-Operator als auch der `IsNot`-Operator verwendet, um denselben Vergleich durchzuführen.
 
- [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
+Im folgenden Codebeispiel wird der `Is` -Operator und der `IsNot` -Operator verwendet, um denselben Vergleich durchzuführen.
+
+[!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
+
+## <a name="use-typeof-operator-with-isnot-operator"></a>Typeof-Operator mit IsNot-Operator verwenden
+
+Ab Visual Basic 14 können Sie den- `TypeOf` Operator mit dem-Operator verwenden, `IsNot` um zu testen, ob ein Objekt *nicht* mit einem-Datentyp kompatibel ist. Beispiel:
+
+```vb
+If TypeOf sender IsNot Button Then
+```
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Is-Operator](is-operator.md)
-- [TypeOf-Operator](typeof-operator.md)
-- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](operator-precedence.md)
-- [Gewusst wie: Überprüfen, ob zwei Objekte identisch sind](../../programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
+- [Typeof-Operator](typeof-operator.md)
+- [Operatorrangfolge in Visual Basic](operator-precedence.md)
+- [Vorgehensweise: Überprüfen, ob zwei Objekte identisch sind](../../programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

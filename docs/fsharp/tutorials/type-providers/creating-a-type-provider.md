@@ -2,12 +2,12 @@
 title: 'Tutorial: Erstellen eines Typanbieters'
 description: 'Erfahren Sie, wie Sie eigene f #-Typanbieter in f # 3,0 erstellen, indem Sie mehrere einfache Typanbieter untersuchen, um die Grundkonzepte zu veranschaulichen.'
 ms.date: 11/04/2019
-ms.openlocfilehash: 67ebd91007ff814370573ebc1a65b2c7a8399f7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202128"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810871"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Erstellen eines Typanbieters
 
@@ -19,7 +19,7 @@ Das F #-Ökosystem enthält einen Bereich von typanbietern für häufig verwende
 
 - [SqlProvider](https://fsprojects.github.io/SQLProvider/) bietet über eine Objekt Zuordnung und F #-LINQ-Abfragen für diese Datenquellen einen stark typisierten Zugriff auf SQL-Datenbanken.
 
-- [FSharp. Data. SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) verfügt über eine Reihe von typanbietern für die Kompilierzeit-überprüfte Einbettung von T-SQL in F #.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) verfügt über eine Reihe von Typanbietern für die zur Kompilierzeit überprüfte Einbettung von T-SQL in F#.
 
 - [FSharp. Data. typeproviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) ist ein älterer Satz von typanbietern, der nur mit .NET Framework Programmierung für den Zugriff auf SQL-, Entity Framework-, odata-und WSDL-Datendienste verwendet werden kann.
 
@@ -175,9 +175,9 @@ In diesem Abschnitt werden die wichtigsten Schritte bei der Implementierung eine
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Dieser Typ muss öffentlich sein, und Sie müssen ihn mit dem [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) -Attribut markieren, damit der Compiler den Typanbieter erkennt, wenn ein separates F #-Projekt auf die Assembly verweist, die den Typ enthält. Der *config* -Parameter ist optional und enthält, falls vorhanden, kontextbezogene Konfigurationsinformationen für die Typanbieter Instanz, die der F #-Compiler erstellt.
+Dieser Typ muss öffentlich sein, und Sie müssen ihn mit dem [TypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) -Attribut markieren, damit der Compiler den Typanbieter erkennt, wenn ein separates F #-Projekt auf die Assembly verweist, die den Typ enthält. Der *config* -Parameter ist optional und enthält, falls vorhanden, kontextbezogene Konfigurationsinformationen für die Typanbieter Instanz, die der F #-Compiler erstellt.
 
-Als nächstes implementieren Sie die Schnittstelle [itypeer Provider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) . In diesem Fall verwenden Sie den `TypeProviderForNamespaces`-Typ aus der `ProvidedTypes`-API als Basistyp. Dieser Hilfstyp kann eine endliche Auflistung vorzeitig bereitgestellter Namespaces bereitstellen, von denen jeder direkt eine begrenzte Zahl fester, vorzeitig bereitgestellter Typen enthält. In diesem *Kontext generiert der* Anbieter auch dann Typen, wenn Sie nicht benötigt oder verwendet werden.
+Als nächstes implementieren Sie die Schnittstelle [itypeer Provider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-itypeprovider.html) . In diesem Fall verwenden Sie den `TypeProviderForNamespaces`-Typ aus der `ProvidedTypes`-API als Basistyp. Dieser Hilfstyp kann eine endliche Auflistung vorzeitig bereitgestellter Namespaces bereitstellen, von denen jeder direkt eine begrenzte Zahl fester, vorzeitig bereitgestellter Typen enthält. In diesem *Kontext generiert der* Anbieter auch dann Typen, wenn Sie nicht benötigt oder verwendet werden.
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
@@ -236,7 +236,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 
 Beachten Sie die folgenden Punkte:
 
-- Dieser bereitgestellte Typ wird gelöscht.  Da Sie angeben, dass der Basistyp ist `obj` , werden-Instanzen im kompilierten Code als Werte des Typs " [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) " angezeigt.
+- Dieser bereitgestellte Typ wird gelöscht.  Da Sie angeben, dass der Basistyp ist `obj` , werden-Instanzen im kompilierten Code als Werte des Typs " [obj](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-obj.html) " angezeigt.
 
 - Wenn Sie einen nicht geschachtelten Typ angeben, müssen Sie die Assembly und den Namespace angeben. Bei gelöschten Typen sollte die Assembly die Typanbieterassembly selbst sein.
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-Beim Abrufen dieser Eigenschaft wird immer die Zeichenfolge "Hello!" zurückgegeben. Der `GetterCode` für die Eigenschaft verwendet ein F#-Zitat, das den Code darstellt, den der Hostcompiler zum Abrufen der Eigenschaft generiert. Weitere Informationen zu Anführungszeichen finden Sie unter [Code Zitate (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
+Beim Abrufen dieser Eigenschaft wird immer die Zeichenfolge "Hello!" zurückgegeben. Der `GetterCode` für die Eigenschaft verwendet ein F#-Zitat, das den Code darstellt, den der Hostcompiler zum Abrufen der Eigenschaft generiert. Weitere Informationen zu Anführungszeichen finden Sie unter [Code Zitate (F #)](../../language-reference/code-quotations.md).
 
 Fügen Sie der Eigenschaft eine XML-Dokumentation hinzu.
 
@@ -282,7 +282,7 @@ Der `InvokeCode` für den Konstruktor gibt ein F#-Zitat zurück, das den Code da
 new Type10()
 ```
 
-Eine Instanz des angegebenen Typs wird mit den ihm zugrunde liegenden Daten erstellt ("The object data"). Der Code in Anführungszeichen enthält eine Konvertierung in [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) , da dieser Typ die Löschung dieses bereitgestellten Typs ist (wie Sie angegeben haben, als Sie den bereitgestellten Typ deklariert haben).
+Eine Instanz des angegebenen Typs wird mit den ihm zugrunde liegenden Daten erstellt ("The object data"). Der Code in Anführungszeichen enthält eine Konvertierung in [obj](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-obj.html) , da dieser Typ die Löschung dieses bereitgestellten Typs ist (wie Sie angegeben haben, als Sie den bereitgestellten Typ deklariert haben).
 
 Fügen Sie dem Konstruktor eine XML-Dokumentation hinzu, und fügen Sie dann den bereitgestellten Konstruktor dem bereitgestellten Typ hinzu:
 
@@ -461,7 +461,7 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-Beachten Sie folgende Punkte:
+Beachten Sie dabei folgende Punkte:
 
 - Der Regex-Standardtyp stellt den parametrisierten `RegexTyped`-Typ dar.
 
@@ -527,7 +527,7 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-Beachten Sie folgende Punkte:
+Beachten Sie dabei folgende Punkte:
 
 - Der Typanbieter erwartet zwei statische Parameter: `pattern`, ein erforderlicher Parameter, und den optionalen Parameter `options` (für den ein Standardwert bereitgestellt wird).
 
@@ -742,7 +742,7 @@ Als einfaches Beispiel soll ein Typanbieter für den Zugriff auf wissenschaftlic
 
 |Abstand (Meter)|Zeit (Sekunden)|
 |----------------|-------------|
-|50.0|3.7|
+|50.0|3,7|
 |100.0|5,2|
 |150.0|6.4|
 
@@ -750,7 +750,7 @@ In diesem Abschnitt wird erläutert, wie Sie einen Typ bereitstellen, mit dem Si
 
 - Header Namen sind entweder Einheiten frei oder haben die Form "Name (Unit)" und enthalten keine Kommas.
 
-- Einheiten sind alle System International-Einheiten (SI), wie das Modul [Microsoft. FSharp. Data. unitsystems. si. unitnames Module (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) definiert.
+- Einheiten sind alle System International-Einheiten (SI), wie das [FSharp. Data. unitsystems. si. unitnames Module (F #)](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-data-unitsystems-si-unitnames.html) -Modul definiert.
 
 - Bei den Einheiten handelt es sich nur um einfache Einheiten (z. B. Meter) und nicht um zusammengesetzte Einheiten (z. B. Meter/Sekunde).
 
@@ -877,7 +877,7 @@ Beachten Sie die folgenden Punkte in der Implementierung:
 
 - Überladene Konstruktoren gestatten es, entweder die ursprüngliche Datei oder eine andere Datei mit einem identischen Schema zu laden. Dieses Vorgehen ist üblich, wenn Sie einen Typanbieter für lokale oder Remotedatenquellen schreiben. Es ermöglicht die Verwendung einer lokalen Datei als Vorlage für die Remotedaten.
 
-- Sie können den [typeproviderconfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) -Wert, der an den Typanbieter-Konstruktor übergeben wird, verwenden, um relative Dateinamen aufzulösen.
+- Sie können den [typeproviderconfig](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderconfig.html) -Wert, der an den Typanbieter-Konstruktor übergeben wird, verwenden, um relative Dateinamen aufzulösen.
 
 - Sie können die `AddDefinitionLocation`-Methode verwenden, um den Speicherort der bereitgestellten Eigenschaften zu definieren. Wenn Sie daher `Go To Definition` für eine bereitgestellte Eigenschaft verwenden, wird die CSV-Datei in Visual Studio geöffnet.
 
@@ -1052,7 +1052,7 @@ Die ProvidedTypes-API stellt Hilfsprogramme zur Angabe von Maßeinheiten für We
 
 Jede Instanz eines Typanbieters kann während der Erstellung als `TypeProviderConfig`-Wert angegeben werden. Dieser Wert enthält den „Auflösungsordner“ für den Anbieter (dass heißt, den Projektordner für die Kompilierung oder das Verzeichnis, das ein Skript enthält), die Liste der Assemblys, auf die verwiesen wird, und einige andere Informationen.
 
-### <a name="invalidation"></a>Aufheben einer Validierung
+### <a name="invalidation"></a>Invalidierung
 
 Anbieter können Signale zum Aufheben einer Validierung auslösen, um den F#-Sprachdienst zu benachrichtigen, dass sich die Schemaannahmen möglicherweise geändert haben. Bei einer Invalidierung wird die Typüberprüfung wiederholt, sofern der Anbieter in Visual Studio gehostet wird. Dieses Signal wird ignoriert, wenn der Anbieter in F# Interactive oder vom F#-Compiler (fsc.exe) gehostet wird.
 
@@ -1118,7 +1118,7 @@ Möglicherweise sind die folgenden Tipps während des Entwicklungsprozesses hilf
 
 Sie können den Typanbieter in einer Instanz entwickeln und in der anderen Instanz testen, da die Test-IDE eine Sperre für die DLL-Datei definiert, die verhindert, dass der Typanbieter neu erstellt wird. Daher müssen Sie die zweite Instanz von Visual Studio schließen, wenn der Anbieter in der ersten Instanz erstellt wird, und anschließend die zweite Instanz erneut öffnen, sobald die Erstellung abgeschlossen ist.
 
-### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Debuggen von typanbietern mithilfe von Aufrufen von FSC. exe
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Debuggen von typanbietern mithilfe von Aufrufen von fsc.exe
 
 Sie können Typanbieter mit den folgenden Tools aufrufen:
 

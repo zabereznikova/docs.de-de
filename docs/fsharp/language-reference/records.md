@@ -2,12 +2,12 @@
 title: Datensätze
 description: 'Erfahren Sie, wie F #-Datensätze einfache Aggregate benannter Werte darstellen, optional mit Membern.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559049"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812353"
 ---
 # <a name="records"></a>Datensätze
 
@@ -24,7 +24,7 @@ type [accessibility-modifier] typename =
     [ member-list ]
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 In der vorherigen Syntax ist *tykame* der Name des Daten Satz Typs, *Label1* und *Label2* sind Namen von Werten, die als *Bezeichnungen*bezeichnet werden, und *Typ1* und *Typ2* sind die Typen dieser Werte. "Element *-List* " ist die optionale Liste der Member für den Typ.  Mit dem-Attribut können Sie `[<Struct>]` einen Strukturdaten Satz anstelle eines Datensatzes erstellen, bei dem es sich um einen Verweistyp handelt.
 
@@ -184,5 +184,5 @@ Wenn Sie Verweis Gleichheit für Datensätze benötigen, fügen Sie das Attribut
 - [F#-Typen](fsharp-types.md)
 - [Klassen](classes.md)
 - [F#-Sprachreferenz](index.md)
-- [Verweis-Gleichheit](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Verweis-Gleichheit](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
 - [Mustervergleich](pattern-matching.md)

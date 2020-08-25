@@ -1,15 +1,15 @@
 ---
 title: Berechnungsausdrücke
 description: 'Erfahren Sie, wie Sie eine bequeme Syntax zum Schreiben von Berechnungen in F # erstellen, die mithilfe von Ablaufsteuerungskonstrukten und Bindungen sequenziert und kombiniert werden können.'
-ms.date: 11/04/2019
+ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 32638e9493fb2c6b7aae30d044a0cda2a97f2178
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855360"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812158"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -81,7 +81,7 @@ let doThingsAsync url =
 
 Wenn Sie den-Ausdruck an einen Berechnungs Ausdruck mit binden `let` , wird das Ergebnis des Berechnungs Ausdrucks nicht angezeigt. Stattdessen haben Sie den Wert des *nicht erkannten* Aufrufes an diesen Berechnungs Ausdruck gebunden. Verwenden `let!` Sie, um eine Bindung an das Ergebnis herzustellen.
 
-`let!`wird vom- `Bind(x, f)` Member für den Builder-Typ definiert.
+`let!` wird vom- `Bind(x, f)` Member für den Builder-Typ definiert.
 
 ### `do!`
 
@@ -97,7 +97,7 @@ let doThingsAsync data url =
 
 Für den [Async-Workflow](asynchronous-workflows.md)ist dieser Typ `Async<unit>` . Bei anderen Berechnungs Ausdrücken ist der Typ wahrscheinlich `CExpType<unit>` .
 
-`do!`wird vom- `Bind(x, f)` Member für den Builder-Typ definiert, wobei `f` eine erzeugt `unit` .
+`do!` wird vom- `Bind(x, f)` Member für den Builder-Typ definiert, wobei `f` eine erzeugt `unit` .
 
 ### `yield`
 
@@ -144,7 +144,7 @@ let weekdays includeWeekend =
 
 Ebenso wie das [yield-Schlüsselwort in c#](../../csharp/language-reference/keywords/yield.md)wird jedes Element im Berechnungs Ausdruck beim Durchlaufen zurückgegeben.
 
-`yield`wird vom- `Yield(x)` Member für den Builder-Typ definiert, wobei `x` das Element ist, das zurückzugeben ist.
+`yield` wird vom- `Yield(x)` Member für den Builder-Typ definiert, wobei `x` das Element ist, das zurückzugeben ist.
 
 ### `yield!`
 
@@ -172,7 +172,7 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 
 Bei der Auswertung werden die Elemente des von aufgerufenen Berechnungs Ausdrucks `yield!` nacheinander zurückgegeben und das Ergebnis vereinfacht.
 
-`yield!`wird vom- `YieldFrom(x)` Member für den Builder-Typ definiert, wobei `x` eine Auflistung von-Werten ist.
+`yield!` wird vom- `YieldFrom(x)` Member für den Builder-Typ definiert, wobei `x` eine Auflistung von-Werten ist.
 
 Anders `yield` als `yield!` muss explizit angegeben werden. Das Verhalten ist in Berechnungs Ausdrücken nicht implizit.
 
@@ -191,7 +191,7 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return`wird vom- `Return(x)` Member für den Builder-Typ definiert, wobei `x` das zu Umbruch Ende Element ist.
+`return` wird vom- `Return(x)` Member für den Builder-Typ definiert, wobei `x` das zu Umbruch Ende Element ist.
 
 ### `return!`
 
@@ -207,7 +207,7 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!`wird vom- `ReturnFrom(x)` Member für den Builder-Typ definiert, wobei `x` ein anderer Berechnungs Ausdruck ist.
+`return!` wird vom- `ReturnFrom(x)` Member für den Builder-Typ definiert, wobei `x` ein anderer Berechnungs Ausdruck ist.
 
 ### `match!`
 
@@ -262,7 +262,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 Im obigen Code werden die Aufrufe von `Run` und `Delay` ausgelassen, wenn Sie in der Berechnungs Ausdrucks-Generator-Klasse nicht definiert sind. Der Text des Berechnungs Ausdrucks, der hier als bezeichnet wird, `{| cexpr |}` wird in Aufrufe mit den Methoden der Builder-Klasse durch die in der folgenden Tabelle beschriebenen Übersetzungen übersetzt. Der Berechnungs Ausdruck `{| cexpr |}` wird rekursiv gemäß diesen Übersetzungen definiert, wobei `expr` ein F #-Ausdruck und `cexpr` ein Berechnungs Ausdruck ist.
 
-|expression|Sprachübersetzung|
+|Ausdruck|Sprachübersetzung|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -410,20 +410,20 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-Ein Berechnungs Ausdruck verfügt über einen zugrunde liegenden Typ, der vom Ausdruck zurückgegeben wird. Der zugrunde liegende Typ kann ein berechnetes Ergebnis oder eine verzögerte Berechnung darstellen, die durchgeführt werden kann, oder es kann eine Möglichkeit bieten, einen Auflistungstyp zu durchlaufen. Im vorherigen Beispiel war der zugrunde liegende Typ **schließlich**. Bei einem Sequenz Ausdruck ist der zugrunde liegende Typ <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Bei einem Abfrage Ausdruck ist der zugrunde liegende Typ <xref:System.Linq.IQueryable?displayProperty=nameWithType> . Bei einem asynchronen Workflow ist der zugrunde liegende Typ [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7) . Das- `Async` Objekt stellt die Arbeit dar, die zum Berechnen des Ergebnisses ausgeführt werden soll. Beispielsweise wird aufgerufen, [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) um eine Berechnung auszuführen und das Ergebnis zurückzugeben.
+Ein Berechnungs Ausdruck verfügt über einen zugrunde liegenden Typ, der vom Ausdruck zurückgegeben wird. Der zugrunde liegende Typ kann ein berechnetes Ergebnis oder eine verzögerte Berechnung darstellen, die durchgeführt werden kann, oder es kann eine Möglichkeit bieten, einen Auflistungstyp zu durchlaufen. Im vorherigen Beispiel war der zugrunde liegende Typ **schließlich**. Bei einem Sequenz Ausdruck ist der zugrunde liegende Typ <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Bei einem Abfrage Ausdruck ist der zugrunde liegende Typ <xref:System.Linq.IQueryable?displayProperty=nameWithType> . Bei einem asynchronen Workflow ist der zugrunde liegende Typ [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) . Das- `Async` Objekt stellt die Arbeit dar, die zum Berechnen des Ergebnisses ausgeführt werden soll. Beispielsweise wird aufgerufen, [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) um eine Berechnung auszuführen und das Ergebnis zurückzugeben.
 
 ## <a name="custom-operations"></a>Benutzerdefinierte Vorgänge
 
-Sie können einen benutzerdefinierten Vorgang für einen Berechnungs Ausdruck definieren und einen benutzerdefinierten Vorgang als Operator in einem Berechnungs Ausdruck verwenden. Beispielsweise können Sie einen Abfrage Operator in einen Abfrage Ausdruck einschließen. Wenn Sie einen benutzerdefinierten Vorgang definieren, müssen Sie die Yield-und for-Methoden im Berechnungs Ausdruck definieren. Um einen benutzerdefinierten Vorgang zu definieren, fügen Sie ihn in eine Builder-Klasse für den Berechnungs Ausdruck ein, und wenden Sie dann das an [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19) . Dieses Attribut verwendet eine Zeichenfolge als Argument. Dies ist der Name, der in einem benutzerdefinierten Vorgang verwendet werden soll. Dieser Name tritt am Anfang der öffnenden geschweiften Klammer des Berechnungs Ausdrucks auf. Daher sollten Sie keine Bezeichner verwenden, die denselben Namen wie ein benutzerdefinierter Vorgang in diesem Block haben. Vermeiden Sie z. b. die Verwendung von bezeichlern wie `all` oder `last` in Abfrage Ausdrücken.
+Sie können einen benutzerdefinierten Vorgang für einen Berechnungs Ausdruck definieren und einen benutzerdefinierten Vorgang als Operator in einem Berechnungs Ausdruck verwenden. Beispielsweise können Sie einen Abfrage Operator in einen Abfrage Ausdruck einschließen. Wenn Sie einen benutzerdefinierten Vorgang definieren, müssen Sie die Yield-und for-Methoden im Berechnungs Ausdruck definieren. Um einen benutzerdefinierten Vorgang zu definieren, fügen Sie ihn in eine Builder-Klasse für den Berechnungs Ausdruck ein, und wenden Sie dann das an [`CustomOperationAttribute`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-customoperationattribute.html) . Dieses Attribut verwendet eine Zeichenfolge als Argument. Dies ist der Name, der in einem benutzerdefinierten Vorgang verwendet werden soll. Dieser Name tritt am Anfang der öffnenden geschweiften Klammer des Berechnungs Ausdrucks auf. Daher sollten Sie keine Bezeichner verwenden, die denselben Namen wie ein benutzerdefinierter Vorgang in diesem Block haben. Vermeiden Sie z. b. die Verwendung von bezeichlern wie `all` oder `last` in Abfrage Ausdrücken.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Erweitern vorhandener Generatoren mit neuen benutzerdefinierten Vorgängen
 
 Wenn Sie bereits über eine Builder-Klasse verfügen, können die benutzerdefinierten Vorgänge von außerhalb dieser Builder-Klasse erweitert werden. Erweiterungen müssen in Modulen deklariert werden. Namespaces dürfen keine Erweiterungs Elemente enthalten, außer in derselben Datei und derselben Namespace-Deklarations Gruppe, in der der Typ definiert ist.
 
-Das folgende Beispiel zeigt die Erweiterung der vorhandenen- `Microsoft.FSharp.Linq.QueryBuilder` Klasse.
+Das folgende Beispiel zeigt die Erweiterung der vorhandenen- `FSharp.Linq.QueryBuilder` Klasse.
 
 ```fsharp
-type Microsoft.FSharp.Linq.QueryBuilder with
+type FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
     member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
@@ -434,5 +434,5 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 
 - [F#-Sprachreferenz](index.md)
 - [Asynchrone Workflows](asynchronous-workflows.md)
-- [Sequenzen](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-- [Abfrage Ausdrücke](query-expressions.md)
+- [Sequenzen](sequences.md)
+- [Abfrageausdrücke](query-expressions.md)

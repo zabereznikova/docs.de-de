@@ -2,12 +2,12 @@
 title: Interaktive Optionen
 description: Erfahren Sie mehr über die von F# Interactive unterstützten Befehlszeilenoptionen fsi.exe.
 ms.date: 08/15/2020
-ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: adc8dc86f14366720e1acbf35115d4e318a76aef
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810532"
 ---
 # <a name="f-interactive-options"></a>F# Interactive Optionen
 
@@ -52,11 +52,11 @@ Wenn F# Interactive-Optionsargumente Listen enthalten, werden Listenelemente dur
 |**--optimieren**[ **+**&#124;**-** ]|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 |**--preferreduilang: &lt; lang&gt;**| Gibt den bevorzugten Kultur Namen der Ausgabesprache an (z. b. "es-es", "ja-JP"). |
 |**--Quiet**|Unterdrücken der F# Interactive Ausgabe in den **stdout** -Datenstrom.|
-|**--Zitate-Debuggen**|Gibt an, dass zusätzliche Debuginformationen für Ausdrücke ausgegeben werden, die von F#-Quotation-Literalen und reflektierten Definitionen abgeleitet werden. Die Debuginformationen werden zu den benutzerdefinierten Attributen eines F#-Ausdrucksstrukturknotens hinzugefügt. Weitere Informationen finden Sie unter [Code Notierungen](code-quotations.md) und [expr. CustomAttribute](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--Zitate-Debuggen**|Gibt an, dass zusätzliche Debuginformationen für Ausdrücke ausgegeben werden, die von F#-Quotation-Literalen und reflektierten Definitionen abgeleitet werden. Die Debuginformationen werden zu den benutzerdefinierten Attributen eines F#-Ausdrucksstrukturknotens hinzugefügt. Weitere Informationen finden Sie unter [Code Notierungen](code-quotations.md) und [expr. CustomAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes).|
 |**--Read Line**[ **+**&#124;**-** ]|Aktiviert oder deaktiviert die Vervollständigung mit der TAB-TASTE im interaktiven Modus.|
 |**--Reference: &lt; Dateiname&gt;**<br /><br />**-r: &lt; Dateiname&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 |**--tailcalls**[ **+**&#124;**-** ]|Aktiviert oder deaktiviert die Verwendung der Tail-IL-Anweisung, die für endrekursive Funktionen die Wiederverwendung des Stapelrahmens verursacht. Diese Option ist standardmäßig aktiviert.|
-|**--targetprofile: &lt; Zeichenfolge&gt;**|Gibt das zielframeworkprofil dieser Assembly an. Gültige Werte sind `mscorlib`, `netcore` oder `netstandard`. Der Standardwert lautet `mscorlib`.|
+|**--targetprofile: &lt; Zeichenfolge&gt;**|Gibt das zielframeworkprofil dieser Assembly an. Gültige Werte sind `mscorlib`, `netcore` oder `netstandard`. Der Standardwert ist `mscorlib`.|
 |**--use: &lt; filename&gt;**|Weist den Interpreter an, beim Start die angegebene Datei als anfängliche Eingabe zu verwenden.|
 |**--utf8output**|Identisch mit der fsc.exe-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 |**--Warn: &lt; Warnstufe&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
