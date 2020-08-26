@@ -299,38 +299,25 @@
         - name: Übersicht
           displayName: programming concepts
           href: programming-guide/concepts/index.md
-        - name: Asynchrone Programmierung mit async und await
+        - name: Asynchrone Programmierung
+          displayName: 'async, await, asynchronous programming, task, cancellation'
           items:
             - name: Übersicht
               displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: Aufgabenbasiertes asynchrones Programmiermodell
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
-            - name: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“'
-              href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll
-              href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: Paralleles Erstellen mehrerer Webanforderungen mit Async and Await
-              href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
             - name: Asynchrone Rückgabetypen
               href: programming-guide/concepts/async/async-return-types.md
-            - name: Ablaufsteuerung in asynchronen Programmen
-              href: programming-guide/concepts/async/control-flow-in-async-programs.md
-            - name: Abbrechen von Tasks und Verarbeiten abgeschlossener Tasks
+            - name: Abbrechen von Tasks
               items:
-                - name: Übersicht
-                  href: programming-guide/concepts/async/fine-tuning-your-async-application.md
-                - name: Eine asynchrone Aufgabe oder Aufgabenliste abbrechen
+                - name: Abbrechen einer Aufgabenliste
                   href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
-                - name: Asynchrone Aufgaben nach einer Zeitperiode abbrechen
+                - name: Abbrechen asynchroner Tasks nach einem bestimmten Zeitraum
                   href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
-                - name: Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen
-                  href: programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md
-                - name: Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten
-                  href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
-            - name: Ablauf des erneuten Eintretens in asynchronen Anwendungen
-              href: programming-guide/concepts/async/handling-reentrancy-in-async-apps.md
-            - name: Verwenden von Async für Dateizugriff
+            - name: Verarbeiten asynchroner Aufgaben nach Abschluss
+              href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
+            - name: Asynchroner Dateizugriff
               href: programming-guide/concepts/async/using-async-for-file-access.md
         - name: Attribute
           items:
