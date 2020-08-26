@@ -77,38 +77,17 @@
               href: sqlclient-for-ef-types.md
             - name: Bekannte Probleme in SqlClient für Entity Framework
               href: known-issues-in-sqlclient-for-entity-framework.md
-    - name: Schreiben eines Entity Framework-Datenanbieters
-      href: writing-an-ef-data-provider.md
+    - name: Überlegungen zur Entwicklung und Bereitstellung
+      href: development-and-deployment-considerations.md
       items:
-        - name: SQL-Generierung
-          href: sql-generation.md
-          items:
-            - name: Form der Befehlsstrukturen
-              href: the-shape-of-the-command-trees.md
-            - name: Generieren von SQL aus Befehlsstrukturen – Best Practices
-              href: generating-sql-from-command-trees-best-practices.md
-            - name: SQL-Generierung im Beispielanbieter
-              href: sql-generation-in-the-sample-provider.md
-              items:
-                - name: Architektur und Entwurf
-                  href: architecture-and-design.md
-                - name: 'Exemplarische Vorgehensweise: SQL-Generierung'
-                  href: walkthrough-sql-generation.md
-        - name: Generierung von Änderungen in SQL
-          href: modification-sql-generation.md
-        - name: Anbietermanifestspezifikation
-          href: provider-manifest-specification.md
-- name: Überlegungen zur Entwicklung und Bereitstellung
-  href: development-and-deployment-considerations.md
-  items:
-    - name: Sicherheitsüberlegungen
-      href: security-considerations.md
-    - name: Überlegungen zur Leistung
-      href: performance-considerations.md
-    - name: Überlegungen zu Migration
-      href: migration-considerations.md
-    - name: Überlegungen zur Bereitstellung
-      href: deployment-considerations.md
+        - name: Sicherheitsüberlegungen
+          href: security-considerations.md
+        - name: Überlegungen zur Leistung
+          href: performance-considerations.md
+        - name: Überlegungen zu Migration
+          href: migration-considerations.md
+        - name: Überlegungen zur Bereitstellung
+          href: deployment-considerations.md
 - name: Entity Framework-Ressourcen
   href: resources.md
 - name: Entity Framework-Terminologie
