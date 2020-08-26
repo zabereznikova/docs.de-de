@@ -2,16 +2,16 @@
 title: 'Protobuf-Zuordnungen für Wörterbücher: GrpC für WCF-Entwickler'
 description: Erfahren Sie, wie protobuf-Zuordnungen verwendet werden, um Wörterbuchtypen in .net darzustellen.
 ms.date: 09/09/2019
-ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2c2ae76d47b2309227d22235b5acbe2afa794158
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543130"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867464"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Protobuf-Zuordnungen für Wörterbücher
 
-Es ist wichtig, dass Sie beliebige Auflistungen benannter Werte in Nachrichten darstellen können. In .net wird dies häufig durch Wörterbuchtypen gehandhabt. Die Entsprechung des .net-<xref:System.Collections.Generic.IDictionary%602> Typs in Protokollpuffer (protobuf) ist der `map<key_type, value_type>`-Typ. In diesem Abschnitt wird gezeigt, wie Sie einen `map` Typ in protobuf deklarieren und wie Sie den generierten Code verwenden.
+Es ist wichtig, dass Sie beliebige Auflistungen benannter Werte in Nachrichten darstellen können. In .net wird dies häufig durch Wörterbuchtypen gehandhabt. Die Entsprechung des .net- <xref:System.Collections.Generic.IDictionary%602> Typs in Protokollpuffer (protobuf) ist der- `map<key_type, value_type>` Typ. In diesem Abschnitt wird gezeigt, wie Sie einen `map` Typ in protobuf deklarieren und wie Sie den generierten Code verwenden.
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-Im generierten Code verwenden `map` Felder die `Google.Protobuf.Collections.MapField<TKey, TValue>`-Klasse. Diese Klasse implementiert die standardmäßigen .net-Auflistungs Schnittstellen, einschließlich <xref:System.Collections.Generic.IDictionary%602>.
+Im generierten Code `map` werden Felder durch schreibgeschützte Eigenschaften des- [`Google.Protobuf.Collections.MapField<TKey, TValue>`][map-field] Typs dargestellt. Dieser Typ implementiert die .NET-Standard Auflistungs Schnittstellen, einschließlich <xref:System.Collections.Generic.IDictionary%602> .
 
-Karten Felder können nicht direkt in einer Nachrichten Definition wiederholt werden. Sie können jedoch eine Nachricht erstellen, die eine Zuordnung enthält, und `repeated` für den Nachrichtentyp verwenden, wie im folgenden Beispiel gezeigt:
+Karten Felder können nicht direkt in einer Nachrichten Definition wiederholt werden. Sie können jedoch eine Nachricht erstellen, die eine Zuordnung enthält und `repeated` für den Nachrichtentyp verwendet wird, wie im folgenden Beispiel gezeigt:
 
 ```protobuf
 message Order {
@@ -34,7 +34,7 @@ message Order {
 
 ## <a name="using-mapfield-properties-in-code"></a>Verwenden von mapField-Eigenschaften im Code
 
-Die aus `map` Feldern generierten `MapField` Eigenschaften sind schreibgeschützt und werden niemals `null`. Um eine Zuordnungs Eigenschaft festzulegen, verwenden Sie die `Add(IDictionary<TKey,TValue> values)`-Methode der leeren `MapField`-Eigenschaft, um Werte aus einem beliebigen .net-Wörterbuch zu kopieren.
+Die `MapField` aus Feldern generierten Eigenschaften sind schreibgeschützt `map` und werden niemals verwendet `null` . Verwenden Sie zum Festlegen einer Zuordnungs Eigenschaft die- `Add(IDictionary<TKey,TValue> values)` Methode für die leere- `MapField` Eigenschaft, um Werte aus einem beliebigen .net-Wörterbuch zu kopieren.
 
 ```csharp
 public Order CreateOrder(Dictionary<string, string> attributes)
@@ -45,9 +45,11 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 }
 ```
 
-## <a name="further-reading"></a>Weitere Informationsquellen
+## <a name="further-reading"></a>Weitere nützliche Informationen
 
 Weitere Informationen zu protobuf finden Sie in der offiziellen [protobuf-Dokumentation](https://developers.google.com/protocol-buffers/docs/overview).
+
+[map-field]: https://developers.google.cn/protocol-buffers/docs/reference/csharp/class/google/protobuf/collections/map-field-t-key-t-value-
 
 >[!div class="step-by-step"]
 >[Zurück](protobuf-enums.md)
