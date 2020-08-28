@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 9f553e9af16be0891f208832c5daa444a1b736e2
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281510"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608207"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -54,7 +54,7 @@ Wenn Sie Visual Studio verwenden, benötigen Sie [Visual Studio 2019](https://vi
 
 ### <a name="default-executables"></a>Standardmäßig ausführbare Dateien
 
-.NET Core erstellt nun standardmäßig [Runtime-abhängige ausführbare Dateien](../deploying/index.md#publish-runtime-dependent). Dieses Verhalten ist neu für Anwendungen, die eine global installierte Version von .NET Core verwenden. Vorher produzierten nur [eigenständige Bereitstellungen](../deploying/index.md#publish-self-contained) eine ausführbare Datei.
+.NET Core erstellt die [frameworkabhängigen ausführbaren Dateien](../deploying/index.md#publish-framework-dependent) jetzt standardmäßig. Dieses Verhalten ist neu für Anwendungen, die eine global installierte Version von .NET Core verwenden. Vorher produzierten nur [eigenständige Bereitstellungen](../deploying/index.md#publish-self-contained) eine ausführbare Datei.
 
 Während `dotnet build` oder `dotnet publish` wird eine ausführbare Datei (**appHost**) erstellt, die der Umgebung und Plattform des von Ihnen verwendeten SDKs entspricht. Diese ausführbaren Dateien bieten Ihnen die gleichen Möglichkeiten wie andere native ausführbare Dateien, wie z.B.:
 
@@ -69,7 +69,7 @@ Ab dem notarisierten .NET Core SDK 3.0 für macOS ist die Einstellung zum Erste
 
 Wenn die appHost-Einstellung aktiviert ist, erzeugt .NET Core eine native ausführbare Mach-O-Datei, wenn Sie einen Build- oder Veröffentlichungsprozess ausführen. Ihre App wird im Kontext von appHost ausgeführt, wenn sie mit dem Befehl `dotnet run` über den Quellcode oder durch direktes Starten der ausführbaren Mach-O-Datei ausgeführt wird.
 
-Ohne die appHost-Datei können Benutzer eine [Runtime-abhängige](../deploying/index.md#publish-runtime-dependent) App nur mit dem Befehl `dotnet <filename.dll>` starten. Es wird immer eine appHost-Datei erstellt, wenn Sie Ihre App [eigenständig](../deploying/index.md#publish-self-contained) veröffentlichen.
+Ohne die appHost-Datei können Benutzer eine [frameworkabhängige](../deploying/index.md#publish-framework-dependent) App nur mit dem Befehl `dotnet <filename.dll>` starten. Es wird immer eine appHost-Datei erstellt, wenn Sie Ihre App [eigenständig](../deploying/index.md#publish-self-contained) veröffentlichen.
 
 Sie können die appHost-Datei entweder auf Projektebene konfigurieren oder für einen spezifischen `dotnet`-Befehl mit dem `-p:UseAppHost`-Parameter aktivieren:
 

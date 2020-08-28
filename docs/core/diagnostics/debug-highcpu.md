@@ -3,12 +3,12 @@ title: Debuggen einer hohen CPU-Auslastung – .NET Core
 description: In diesem Tutorial lernen Sie, wie Sie eine hohe CPU-Auslastung in .NET Core debuggen.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: e69585d0eb6f04bf37d0c023a1956be62c2a1cf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926358"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557801"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>Debuggen einer hohen CPU-Auslastung in .NET Core
 
@@ -85,7 +85,7 @@ Press p to pause, r to resume, q to quit.
 
 Wenn die Web-App ausgeführt wird, werden unmittelbar nach dem Start keine CPU-Ressourcen verbraucht, und die Auslastung wird mit `0%` gemeldet. Navigieren Sie zur Route `api/diagscenario/highcpu`, und verwenden Sie `60000` als Routenparameter:
 
-[https://localhost:5001/api/diagscenario/highcpu/60000](https://localhost:5001/api/diagscenario/highcpu/60000)
+`https://localhost:5001/api/diagscenario/highcpu/60000`
 
 Führen Sie nun noch einmal den Befehl [dotnet-counters](dotnet-counters.md) aus. Wenn Sie nur `cpu-usage` überwachen möchten, müssen Sie `System.Runtime[cpu-usage]` im Befehl angeben.
 
@@ -127,7 +127,7 @@ export COMPlus_PerfMapEnabled=1
 dotnet run
 ```
 
-Rufen Sie noch einmal den API-Endpunkt (<https://localhost:5001/api/diagscenario/highcpu/60000>) auf, der die hohe CPU-Auslastung verursacht. Führen Sie den Befehl `perf` mit Ihrer Prozess-ID aus, während der Endpunkt innerhalb der 1-minütigen Anforderung aufgerufen wird:
+Rufen Sie noch einmal den API-Endpunkt (`https://localhost:5001/api/diagscenario/highcpu/60000`) auf, der die hohe CPU-Auslastung verursacht. Führen Sie den Befehl `perf` mit Ihrer Prozess-ID aus, während der Endpunkt innerhalb der 1-minütigen Anforderung aufgerufen wird:
 
 ```bash
 sudo perf record -p 2266 -g
@@ -152,7 +152,7 @@ Dieser Befehl generiert eine `flamegraph.svg`-Datei, die Sie im Browser anzeigen
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-Unter Windows können Sie das Tool [dotnet-trace](dotnet-trace.md) als Profiler verwenden. Rufen Sie unter Verwendung des vorherigen [Beispieldebugziels](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) noch einmal den Endpunkt (<https://localhost:5001/api/diagscenario/highcpu/60000>) auf, der eine hohe CPU-Auslastung verursacht. Verwenden Sie den Befehl `collect` wie folgt, während der Endpunkt innerhalb der 1-minütigen Anforderung aufgerufen wird:
+Unter Windows können Sie das Tool [dotnet-trace](dotnet-trace.md) als Profiler verwenden. Rufen Sie unter Verwendung des vorherigen [Beispieldebugziels](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) noch einmal den Endpunkt (`https://localhost:5001/api/diagscenario/highcpu/60000`) auf, der eine hohe CPU-Auslastung verursacht. Verwenden Sie den Befehl `collect` wie folgt, während der Endpunkt innerhalb der 1-minütigen Anforderung aufgerufen wird:
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler

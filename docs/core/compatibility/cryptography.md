@@ -2,12 +2,12 @@
 title: Breaking Changes bei der Kryptografie
 description: Listet die Breaking Changes bei der Kryptografie in .NET Core auf.
 ms.date: 04/22/2020
-ms.openlocfilehash: 34098027c4cbe5e5fb31a22d981af706e07cb7da
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: f7d580938fb7620728b8ff7f67412c9f5bbbb6c3
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556024"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558001"
 ---
 # <a name="cryptography-breaking-changes"></a>Breaking Changes bei der Kryptografie
 
@@ -15,11 +15,18 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [Funktionalität von System.Security.Cryptography.Oid mit init-only-Eigenschaft](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
 | [BEGIN TRUSTED CERTIFICATE-Syntax nicht mehr für Stammzertifikate unter Linux unterstützt](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
 | [EnvelopedCms verwendet standardmäßig AES-256-Verschlüsselung](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
 | [Die Mindestgröße für die Generierung von RSAOpenSsl-Schlüsseln wurde heraufgesetzt](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
 | [.NET Core 3.0 zieht OpenSSL 1.1.x OpenSSL 1.0.x vor](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
 | [Der boolesche Parameter von SignedCms.ComputeSignature wird beachtet](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
+
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [cryptography-oid-init-only](../../../includes/core-changes/cryptography/5.0/cryptography-oid-init-only.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

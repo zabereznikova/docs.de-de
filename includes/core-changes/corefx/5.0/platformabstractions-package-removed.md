@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d85fb8df7afdc5f4c3faecebcd24d11677798bc9
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: a635e2ed6a735b5234c92fd8f5ffa1685fe9373e
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365613"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558175"
 ---
 ### <a name="microsoftdotnetplatformabstractions-package-removed"></a>Das Paket Microsoft.DotNet.PlatformAbstractions wurde entfernt
 
@@ -39,7 +39,7 @@ Version 5.0 Vorschau 6
   | `RuntimeEnvironment.OperatingSystemVersion` | <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> und <xref:System.Environment.OSVersion?displayProperty=nameWithType> |
 
   > [!NOTE]
-  > Die meisten Anwendungsfälle für `RuntimeEnvironment.OperatingSystem` und `RuntimeEnvironment.OperatingSystemVersion` dienen zu Anzeigezwecken, zum Beispiel die Anzeige eines Benutzers, der Protokollierung und der Telemetrie. Es wird nicht empfohlen, Entscheidungen zur Runtime basierend auf der Betriebssystemversion zu treffen. <xref:System.Environment.OSVersion?displayProperty=nameWithType> gibt nun die korrekte Version für die Betriebssysteme Windows und macOS zurück. Für die meisten Unix-Distributionen ist das, was man als „Betriebssystemversion“ bezeichnet, nicht ganz so einfach. Es kann beispielsweise hier die Linux-Kernelversion sein oder die Distributionsversion. Bei den meisten Unix-Plattformen geben <xref:System.Environment.OSVersion?displayProperty=nameWithType> und <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> die Version zurück, die von `uname` zurückgegeben wird. Der empfohlene Ansatz zum Abrufen des Linux-Distributionsnamens und der Version ist es, die Datei */etc/os-release* zu lesen.
+  > Die meisten Anwendungsfälle für `RuntimeEnvironment.OperatingSystem` und `RuntimeEnvironment.OperatingSystemVersion` dienen zu Anzeigezwecken, zum Beispiel die Anzeige eines Benutzers, der Protokollierung und der Telemetrie. Es wird nicht empfohlen, Entscheidungen zur Runtime basierend auf der Betriebssystemversion zu treffen. <xref:System.Environment.OSVersion?displayProperty=nameWithType> gibt nun die [korrekte Version](../../../../docs/core/compatibility/corefx.md#environmentosversion-returns-the-correct-operating-system-version) für die Betriebssysteme Windows und macOS zurück. Für die meisten Unix-Distributionen ist das, was man als „Betriebssystemversion“ bezeichnet, nicht ganz so einfach. Es kann beispielsweise hier die Linux-Kernelversion sein oder die Distributionsversion. Bei den meisten Unix-Plattformen geben <xref:System.Environment.OSVersion?displayProperty=nameWithType> und <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> die Version zurück, die von `uname` zurückgegeben wird. Der empfohlene Ansatz zum Abrufen des Linux-Distributionsnamens und der Version ist es, die Datei */etc/os-release* zu lesen.
 
 #### <a name="category"></a>Kategorie
 

@@ -2,12 +2,12 @@
 title: 'Einführung in C#: Definieren von Typen und ihren Membern'
 description: Die Bausteine für Programme sind Typen. Hier erfahren Sie, wie Sie Klassen, Strukturen, Schnittstellen und mehr in C# erstellen.
 ms.date: 08/06/2020
-ms.openlocfilehash: 69d6f0fe1e11f287fb5e385761fc210a61929d10
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068465"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559114"
 ---
 # <a name="types-and-members"></a>Typen und Member
 
@@ -97,7 +97,7 @@ Im folgenden Beispiel werden Deklaration der beiden Enumerationen veranschaulich
 
 ## <a name="nullable-types"></a>Nullable-Typen
 
-Jede Art von Variable kann als ***Non-Nullable*** oder ***Nullable*** deklariert werden. Eine Nullable-Variable kann einen zusätzlichen `null`-Wert enthalten, der angibt, dass kein Wert vorliegt. Nullable-Werttypen (Strukturen oder Enumerationen) werden mit <xref:System.Nullable%601?displayProperty=nameWithType> dargestellt. Non-Nullable- und Nullable-Verweistypen werden beide vom zugrunde liegenden Verweistyp repräsentiert. Der Unterschied wird von Metadaten dargestellt, die vom Compiler und einigen Bibliotheken gelesen werden. Der Compiler gibt Warnungen aus, wenn Nullable-Verweise dereferenziert werden, ohne dass ihr Wert zunächst auf `null` geprüft wird. Der Compiler gibt auch Warnungen aus, wenn Non-Nullable-Verweise einem Wert zugewiesen werden, der `null` sein kann. Im folgenden Beispiel wird ein ***nullable int***-Wert deklariert und mit `null` initialisiert. Dann wird der Wert auf `5` festgelegt. Dasselbe Konzept wird mit ***nullable string*** veranschaulicht. Weitere Informationen finden Sie unter [Nullable-Werttypen](../language-reference/builtin-types/nullable-value-types.md) und [Nullable-Verweistypen](../nullable-references.md).
+Jede Art von Variable kann als ***Non-Nullable*** oder ***Nullable*** deklariert werden. Eine Nullable-Variable kann einen zusätzlichen `null`-Wert enthalten, der angibt, dass kein Wert vorliegt. Nullable-Werttypen (Strukturen oder Enumerationen) werden mit <xref:System.Nullable%601?displayProperty=nameWithType> dargestellt. Non-Nullable- und Nullable-Verweistypen werden beide vom zugrunde liegenden Verweistyp repräsentiert. Der Unterschied wird von Metadaten dargestellt, die vom Compiler und einigen Bibliotheken gelesen werden. Der Compiler gibt Warnungen aus, wenn Nullable-Verweise dereferenziert werden, ohne dass ihr Wert zunächst auf `null` geprüft wird. Der Compiler gibt auch Warnungen aus, wenn Non-Nullable-Verweisen ein Wert zugewiesen wird, der `null` sein kann. Im folgenden Beispiel wird ein ***nullable int***-Wert deklariert und mit `null` initialisiert. Dann wird der Wert auf `5` festgelegt. Dasselbe Konzept wird mit ***nullable string*** veranschaulicht. Weitere Informationen finden Sie unter [Nullable-Werttypen](../language-reference/builtin-types/nullable-value-types.md) und [Nullable-Verweistypen](../nullable-references.md).
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DeclareNullable":::
 

@@ -1,7 +1,6 @@
 ---
 title: Systemanforderungen für .NET Framework
 description: Finden Sie heraus, was die Anforderungen der Hardware, des Betriebssystems und der Software sind, um .NET Framework 4.5 und höhere Versionen zu installieren.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - software requirements
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 571075f7d0f330cf88ac9618376876b4f72e75ed
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 92cc95f80d18251314db8d953520732841b0274c
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389473"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557333"
 ---
 # <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
 
@@ -54,6 +53,8 @@ Für die Installation von .NET Framework sind Administratorrechte erforderlich.
 
 | Betriebssystem | Unterstützte Editionen | Mit vorinstalliertem Betriebssystem | Separat installierbar |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows 10-Update von Mai 2020<br/> (Version 2004) | 32 Bit und 64 Bit | .NET Framework 4.8 | -- |
+| Windows 10-Update von November 2019<br/> (Version 1909) | 32 Bit und 64 Bit | .NET Framework 4.8 | -- |
 | Windows 10-Update von Mai 2019<br/> (Version 1903) | 32 Bit und 64 Bit | .NET Framework 4.8 | -- |
 | Windows 10-Update von Oktober 2018<br/> (Version 1809) | 32 Bit und 64 Bit | .NET Framework 4.7.2 | .NET Framework 4.8 |
 | Windows 10-Update vom April 2018<br/> (Version 1803) | 32 Bit und 64 Bit | .NET Framework 4.7.2 |.NET Framework 4.8|

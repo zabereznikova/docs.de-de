@@ -2,12 +2,12 @@
 title: Breaking Changes hinsichtlich der Basisklassenbibliothek
 description: Listet die Breaking Changes in .NET-Kernbibliotheken auf.
 ms.date: 07/27/2020
-ms.openlocfilehash: c8eb5ec7d2bb1879a38a18337463230c7b731d29
-ms.sourcegitcommit: d3c09791297f0edc468a4849a5f11ef62e0e90fd
+ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88137498"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720193"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Breaking Changes und .NET-Kernbibliotheken
 
@@ -17,6 +17,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [Änderung von Parameternamen in Referenzassemblys](#parameter-names-changed-in-reference-assemblies) | 5.0 |
+| [Ordnungsgemäße Analyse von URI-Pfaden mit Nicht-ASCII-Zeichen unter UNIX](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
+| [URI-Erkennung von UNC-Pfaden unter UNIX](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
+| [Rückgabe der korrekten Betriebssystemversion durch Environment.OSVersion](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
 | [Die Komplexität von OrderBy.First{OrDefault} in LINQ wurde erhöht](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
 | [IntPtr und UIntPtr implementieren IFormattable](#intptr-and-uintptr-implement-iformattable) | 5.0 |
 | [PrincipalPermissionAttribute ist als Fehler veraltet](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
@@ -46,6 +50,22 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Process.StartInfo löst InvalidOperationException für Prozesse aus, die Sie nicht gestartet haben](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
+
+***
+
+[!INCLUDE [non-ascii-chars-in-uri-parsed-correctly](../../../includes/core-changes/corefx/5.0/non-ascii-chars-in-uri-parsed-correctly.md)]
+
+***
+
+[!INCLUDE [unc-path-recognition-unix](../../../includes/core-changes/corefx/5.0/unc-path-recognition-unix.md)]
+
+***
+
+[!INCLUDE [environment-osversion-returns-correct-version](../../../includes/core-changes/corefx/5.0/environment-osversion-returns-correct-version.md)]
+
+***
 
 [!INCLUDE [orderby-firstordefault-complexity-increase](../../../includes/core-changes/corefx/5.0/orderby-firstordefault-complexity-increase.md)]
 

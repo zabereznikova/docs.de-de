@@ -1,6 +1,6 @@
 ---
-title: Einführung in die Zeichencodierung in .NET
-description: Erfahren Sie mehr über die Zeichencodierung und -decodierung in .NET.
+title: Einführung in die char-Codierung in .NET
+description: Hier erfahren Sie mehr über die char-Codierung und -Decodierung in .NET.
 ms.date: 03/09/2020
 no-loc:
 - Rune
@@ -10,20 +10,20 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599866"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656292"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 
-Dieser Artikel bietet eine Einführung in die von .NET verwendeten Zeichencodierungssysteme. Es wird erläutert, wie die Typen <xref:System.String>, <xref:System.Char>, <xref:System.Text.Rune> und <xref:System.Globalization.StringInfo> mit Unicode, UTF-16 und UTF-8 funktionieren.
+Dieser Artikel bietet eine Einführung in die von .NET verwendeten char-Codierungssysteme. Es wird erläutert, wie die Typen <xref:System.String>, <xref:System.Char>, <xref:System.Text.Rune> und <xref:System.Globalization.StringInfo> mit Unicode, UTF-16 und UTF-8 funktionieren.
 
-Der Begriff *Zeichen* wird hier im allgemeinen Sinn für ein Zeichen verwendet, das *vom Leser als einzelnes Anzeigeelement wahrgenommen wird*. Gängige Beispiele sind der Buchstabe „a“, das Symbol „@“ und das Emoji 🐂. Mitunter setzt sich ein als ein Zeichen wahrgenommenes Zeichen tatsächlich aus mehreren unabhängigen Anzeigeelementen zusammen, dies wird im Abschnitt zu [Graphemhaufen](#grapheme-clusters) erläutert.
+Der Begriff *char* wird hier im allgemeinen Sinn für ein Zeichen verwendet, das *vom Leser als einzelnes Anzeigeelement wahrgenommen wird*. Gängige Beispiele sind der Buchstabe „a“, das Symbol „@“ und das Emoji 🐂. Mitunter setzt sich ein als ein Zeichen wahrgenommenes char tatsächlich aus mehreren unabhängigen Anzeigeelementen zusammen. Dies wird im Abschnitt zu [Graphemhaufen](#grapheme-clusters) erläutert.
 
-## <a name="the-string-and-char-types"></a>Die string- und char-Typen.
+## <a name="the-no-locstring-and-no-locchar-types"></a>Die string- und char-Typen.
 
 Eine Instanz der [string](xref:System.String)-Klasse stellt Text dar. Ein `string` ist logisch gesehen eine Abfolge von 16-Bit-Werten, von denen jeder eine Instanz der [char](xref:System.Char)-Struktur ist. Die [string.Length](xref:System.String.Length)-Eigenschaft gibt die Anzahl von `char`-Instanzen in der `string`-Instanz zurück.
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-Jedes Zeichen wird durch einen einzelnen `char`-Wert repräsentiert. Dieses Muster gilt für die meisten Sprachen der Welt. Beispielsweise sehen Sie nachfolgend die Ausgabe für zwei chinesische Zeichen, die ausgesprochen wie *nǐ hǎo* klingen und *Hallo* bedeuten:
+Jedes char wird durch einen einzelnen `char`-Wert repräsentiert. Dieses Muster gilt für die meisten Sprachen der Welt. Beispielsweise sehen Sie nachfolgend die Ausgabe für zwei chinesische char, die ausgesprochen wie *nǐ hǎo* klingen und *Hallo* bedeuten:
 
 ```csharp
 PrintChars("你好");
@@ -58,7 +58,7 @@ s[0] = '你' ('\u4f60')
 s[1] = '好' ('\u597d')
 ```
 
-Für einige Sprachen und für einige Symbole und Emojis werden jedoch zwei `char`-Instanzen benötigt, um ein einzelnes Zeichen darzustellen. Vergleichen Sie beispielsweise die Zeichen und `char`-Instanzen in dem Wort, das in der Osage-Sprache *Osage* bedeutet:
+Für einige Sprachen und für einige Symbole und Emojis werden jedoch zwei `char`-Instanzen benötigt, um ein einzelnes char darzustellen. Vergleichen Sie beispielsweise die char und `char`-Instanzen in dem Wort, das in der Osage-Sprache *Osage* bedeutet:
 
 ```csharp
 PrintChars("𐓏𐓘𐓻𐓘𐓻𐓟 𐒻𐓟");
@@ -85,7 +85,7 @@ s[15] = '�' ('\ud801')
 s[16] = '�' ('\udcdf')
 ```
 
-Im vorherigen Beispiel wird jedes Zeichen mit Ausnahme des Leerzeichens durch zwei `char`-Instanzen repräsentiert.
+Im vorherigen Beispiel wird jedes char mit Ausnahme des Leerzeichens durch zwei `char`-Instanzen repräsentiert.
 
 Ein einzelnes Unicode-Emoji wird ebenfalls durch zwei `char`s dargestellt, wie im folgenden Beispiel eines Emojis für einen Ochsen:
 
@@ -95,22 +95,22 @@ s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
 ```
 
-Diese Beispiele zeigen, dass der Wert von `string.Length`, der die Anzahl von `char`-Instanzen angibt, nicht notwendigerweise der Anzahl angezeigter Zeichen entsprechen muss. Eine einzelne `char`-Instanz repräsentiert für sich genommen nicht zwingend ein Zeichen.
+Diese Beispiele zeigen, dass der Wert von `string.Length`, der die Anzahl von `char`-Instanzen angibt, nicht notwendigerweise der Anzahl angezeigter char entsprechen muss. Eine einzelne `char`-Instanz repräsentiert für sich genommen nicht zwingend ein char.
 
-Die `char`-Paare, die einem einzelnen Zeichen zugeordnet sind, werden als *Ersatzzeichenpaare* bezeichnet. Um deren Funktionsweise zu verstehen, müssen wir die Unicode- und die UTF-16-Codierung verstehen.
+Die `char`-Paare, die einem einzelnen char zugeordnet sind, werden als *Ersatzzeichenpaare* bezeichnet. Um deren Funktionsweise zu verstehen, müssen wir die Unicode- und die UTF-16-Codierung verstehen.
 
 ## <a name="unicode-code-points"></a>Unicode-Codepunkte
 
 Unicode ist ein internationaler Codierungsstandard, der in zahlreichen Plattformen und mit verschiedenen Sprachen und Skripts eingesetzt wird.
 
-Der Unicode-Standard definiert über 1,1 Millionen [Codepunkte](https://www.unicode.org/glossary/#code_point). Ein Codepunkt ist ein ganzzahliger Wert, der zwischen 0 und `U+10FFFF` liegen kann (in Dezimalschreibweise: 1.114.111). Einige Codepunkte sind Buchstaben, Symbolen oder Emojis zugewiesen. Andere sind Aktionen zugeordnet, die steuern, wie Textelemente oder Zeichen angezeigt werden – beispielsweise ein Zeilenvorschub. Viele Codepunkte sind noch nicht zugewiesen.
+Der Unicode-Standard definiert über 1,1 Millionen [Codepunkte](https://www.unicode.org/glossary/#code_point). Ein Codepunkt ist ein ganzzahliger Wert, der zwischen 0 und `U+10FFFF` liegen kann (in Dezimalschreibweise: 1.114.111). Einige Codepunkte sind Buchstaben, Symbolen oder Emojis zugewiesen. Andere sind Aktionen zugeordnet, die steuern, wie Textelemente oder char angezeigt werden – beispielsweise ein Zeilenvorschub. Viele Codepunkte sind noch nicht zugewiesen.
 
-Nachfolgend werden einige Beispiele für Codepunktzuweisungen aufgelistet, mit Links zu Unicode-Diagrammen, in denen sie angezeigt werden:
+Nachfolgend werden einige Beispiele für Codepunktzuweisungen aufgelistet, mit Links zu Unicode-charts, in denen sie angezeigt werden:
 
 |Decimal|Hex       |Beispiel|Beschreibung|
 |------:|----------|-------|-----------|
 |10     | `U+000A` |Nicht zutreffend| [ZEILENVORSCHUB](https://www.unicode.org/charts/PDF/U0000.pdf) |
-|65     | `U+0061` | eine | [LATEINISCHER KLEINBUCHSTABE A](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|65     | `U+0061` | a | [LATEINISCHER KLEINBUCHSTABE A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [LATEINISCHER GROSSBUCHSTABE MIT MAKRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68.675 | `U+10C43`| 𐱃 | [ALTTÜRKISCHES ORCHON-SCHRIFTZEICHEN AT](https://www.unicode.org/charts/PDF/U10C00.pdf) |
 |127.801| `U+1F339`| 🌹 | [Rosen-Emoji](https://www.unicode.org/charts/PDF/U1F300.pdf) |
@@ -128,7 +128,7 @@ Das folgende Diagramm veranschaulicht die Beziehung zwischen der BMP und den erg
 
 ## <a name="utf-16-code-units"></a>UTF-16-Codeeinheiten
 
-16-Bit Unicode Transformation Format ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) ist ein Zeichencodierungssystem, das 16-Bit-*Codeeinheiten* zur Darstellung von Unicode-Codepunkten verwendet. .NET verwendet UTF-16 zum Codieren von Text in einem `string`. Eine `char`-Instanz repräsentiert eine 16-Bit-Codeeinheit.
+16-Bit Unicode Transformation Format ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) ist ein char-Codierungssystem, das *16-Bit-Codeeinheiten* zur Darstellung von Unicode-Codepunkten verwendet. .NET verwendet UTF-16 zum Codieren von Text in einem `string`. Eine `char`-Instanz repräsentiert eine 16-Bit-Codeeinheit.
 
 Eine einzelne 16-Bit-Codeeinheit kann jeden Codepunkt im 16-Bit-Bereich der Basic Multilingual Plane (BMP) repräsentieren. Aber für einen Codepunkt im ergänzenden Bereich werden zwei `char`-Instanzen benötigt.
 
@@ -180,13 +180,13 @@ Das vorstehende Beispiel zeigt, dass es sich bei `"\ud83c\udf39"` um die UTF-16-
 
 ## <a name="unicode-scalar-values"></a>Unicode-Skalarwerte
 
-Der Begriff [Unicode-Skalarwert](https://www.unicode.org/glossary/#unicode_scalar_value) bezieht sich auf alle Codepunkte mit Ausnahme der Ersatzcodepunkte. Anders ausgedrückt: Ein Skalarwert ist ein beliebiger Codepunkt, der einem Zeichen zugewiesen ist oder in Zukunft einem Zeichen zugewiesen werden kann. „Zeichen“ bezieht sich hierbei auf ein beliebiges Element, das einem Codepunkt zugewiesen werden kann, darunter z. B. Aktionen zum Steuern der Anzeige von Text oder Zeichen.
+Der Begriff [Unicode-Skalarwert](https://www.unicode.org/glossary/#unicode_scalar_value) bezieht sich auf alle Codepunkte mit Ausnahme der Ersatzcodepunkte. Anders ausgedrückt: Ein Skalarwert ist ein beliebiger Codepunkt, der einem char zugewiesen ist oder in Zukunft einem char zugewiesen werden kann. „Zeichen“ bezieht sich hierbei auf ein beliebiges Element, das einem Codepunkt zugewiesen werden kann, darunter z. B. Aktionen zum Steuern der Anzeige von Text oder char.
 
 Das nachstehende Diagramm veranschaulicht die Skalarwert-Codepunkte.
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="Skalarwerte":::
 
-### <a name="the-rune-type-as-a-scalar-value"></a>Der Rune-Typ als Skalarwert
+### <a name="the-no-locrune-type-as-a-scalar-value"></a>Der Rune-Typ als Skalarwert
 
 Ab .NET Core 3.0 repräsentiert der <xref:System.Text.Rune?displayProperty=fullName>-Typ einen Unicode-Skalarwert. **`Rune` ist in .NET Core 2. oder .NET Framework 4.x nicht verfügbar.**
 
@@ -202,7 +202,7 @@ Das nachstehende Beispiel führt zu einer Ausnahme, weil der Codepunkt nicht im 
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="rune-usage-example-changing-letter-case"></a>Beispiel für die Verwendung von Rune: Änderung der Groß-/Kleinschreibung
+### <a name="no-locrune-usage-example-changing-letter-case"></a>Beispiel für die Verwendung von Rune: Änderung der Groß-/Kleinschreibung
 
 Eine API, die einen `char`-Wert verwendet und annimmt, dass sie mit einem Codepunkt arbeitet, bei dem es sich um einen Skalarwert handelt, funktioniert nicht ordnungsgemäß, wenn der `char`-Wert aus einem Ersatzzeichenpaar stammt. Betrachten Sie beispielsweise die folgende Methode, die <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> für jeden char in einem string aufruft:
 
@@ -217,7 +217,7 @@ Hier sind zwei Optionen für die korrekte Konvertierung von string in Großbuchs
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-rune-apis"></a>Andere Rune-APIs
+### <a name="other-no-locrune-apis"></a>Andere Rune-APIs
 
 Der `Rune`-Typ macht Entsprechungen vieler der `char`-APIs verfügbar. Beispielsweise spiegeln die folgenden Methoden statische APIs für den `char`-Typ:
 
@@ -236,9 +236,9 @@ Weitere Informationen zum .NET-Typ `Rune` finden Sie in der [`Rune`API-Referenz]
 
 ## <a name="grapheme-clusters"></a>Graphemhaufen
 
-Was wie ein einziges Zeichen aussieht, kann tatsächlich eine Kombination mehrerer Codepunkte sein, deshalb wird zur Beschreibung anstelle des Begriffs „Zeichen“ häufig der Begriff [Graphemhaufen](https://www.unicode.org/glossary/#grapheme_cluster) verwendet. Der äquivalente Begriff in .NET lautet [Textelement](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A).
+Was wie ein einziges char aussieht, kann tatsächlich eine Kombination mehrerer Codepunkte sein, deshalb wird zur Beschreibung anstelle des Begriffs „char“ häufig der Begriff [Graphemhaufen](https://www.unicode.org/glossary/#grapheme_cluster) verwendet. Der äquivalente Begriff in .NET lautet [Textelement](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A).
 
-Betrachten Sie die `string`-Instanzen „a“, „á“, „á“ und `👩🏽‍🚒`. Wenn Ihr Betriebssystem diese gemäß Spezifikation im Unicode-Standard verarbeitet, wird jede dieser `string`-Instanzen als ein einzelnes Textelement bzw. als Graphemhaufen angezeigt. Aber die letzten beiden werden durch mehr als einen Skalarwert-Codepunkt repräsentiert.
+Betrachten Sie die `string`-Instanzen „a“, „á“, „á“ und „`👩🏽‍🚒`“. Wenn Ihr Betriebssystem diese gemäß Spezifikation im Unicode-Standard verarbeitet, wird jede dieser `string`-Instanzen als ein einzelnes Textelement bzw. als Graphemhaufen angezeigt. Aber die letzten beiden werden durch mehr als einen Skalarwert-Codepunkt repräsentiert.
 
 * Die string-Instanz „a“ wird durch einen Skalarwert repräsentiert und enthält eine `char`-Instanz.
 
@@ -260,11 +260,11 @@ Betrachten Sie die `string`-Instanzen „a“, „á“, „á“ und `👩🏽
   * `U+200D ZERO WIDTH JOINER`
   * `U+1F692 FIRE ENGINE` (ergänzender Bereich, erfordert ein Ersatzzeichenpaar)
 
-In einigen der vorhergehenden Beispiele – beispielsweise dem kombinierten Akzentmodifizierer oder dem Modifizierer für den Hautton – wird der Codepunkt nicht als eigenständiges Element auf dem Bildschirm angezeigt. Stattdessen dient er zum Ändern des Aussehens eines vorangegangenen Textelements. Diese Beispiele zeigen, dass möglicherweise mehrere Skalarwerte erforderlich sind, um ein einzelnes „Zeichen“ oder einen „Graphemhaufen“ zu erzeugen.
+In einigen der vorhergehenden Beispiele – beispielsweise dem kombinierten Akzentmodifizierer oder dem Modifizierer für den Hautton – wird der Codepunkt nicht als eigenständiges Element auf dem Bildschirm angezeigt. Stattdessen dient er zum Ändern des Aussehens eines vorangegangenen Textelements. Diese Beispiele zeigen, dass möglicherweise mehrere Skalarwerte erforderlich sind, um ein einzelnes char oder einen Graphemhaufen zu erzeugen.
 
 Um die Graphemhaufen für einen `string` aufzulisten, verwenden Sie die <xref:System.Globalization.StringInfo>-Klasse wie im folgenden Beispiel gezeigt. Wenn Sie mit Swift vertraut sind: Der .NET-Typ `StringInfo` ähnelt vom Konzept her dem [`character`-Typ in Swift](https://developer.apple.com/documentation/swift/character).
 
-### <a name="example-count-char-rune-and-text-element-instances"></a>Beispiel: Zählen von char-, Rune- und Textelementinstanzen
+### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>Beispiel: Zählen von char-, Rune- und Textelementinstanzen
 
 In den .NET-APIs wird ein Graphemhaufen als *Textelement* bezeichnet. Die folgenden Methoden veranschaulichen die Unterschiede zwischen `char`-, `Rune`- und Textelementinstanzen in einem `string`:
 
@@ -274,9 +274,9 @@ In den .NET-APIs wird ein Graphemhaufen als *Textelement* bezeichnet. Die folgen
 
 Wenn Sie diesen Code in .NET Framework oder .NET Code 3.1 oder früher ausführen, wird die Textelementanzahl für das Emoji als `4` angezeigt. Dies liegt an einem Fehler in der `StringInfo`-Klasse, der in .NET 5 behoben wurde.
 
-### <a name="example-splitting-string-instances"></a>Beispiel: Aufteilen von string-Instanzen
+### <a name="example-splitting-no-locstring-instances"></a>Beispiel: Aufteilen von string-Instanzen
 
-Vermeiden Sie beim Aufteilen von `string`-Instanzen das Teilen von Ersatzzeichenpaaren und Graphemhaufen. Sehen Sie sich das folgende fehlerhafte Codebeispiel an, bei dem nach jeweils 10 Zeichen in einem string ein Zeilenumbruch eingefügt werden soll:
+Vermeiden Sie beim Aufteilen von `string`-Instanzen das Teilen von Ersatzzeichenpaaren und Graphemhaufen. Sehen Sie sich das folgende fehlerhafte Codebeispiel an, bei dem nach jeweils 10 char in einer string ein Zeilenumbruch eingefügt werden soll:
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InsertNewlines.cs" id="SnippetBadExample":::
 
@@ -365,16 +365,16 @@ In .NET enthalten `string`-Instanzen fast immer wohlgeformte UTF-16-Daten, aber 
   const string s = "\ud800";
   ```
 
-* Eine Teilzeichenfolge, die ein Ersatzzeichenpaar aufteilt:
+* Eine Teil-string, die ein Ersatzzeichenpaar aufteilt:
 
   ```csharp
   string x = "\ud83e\udd70"; // "🥰"
   string y = x.Substring(1, 1); // "\udd70" standalone low surrogate
   ```
 
-APIs wie [`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) geben keine nicht wohlgeformten `string`-Instanzen zurück. Die Methoden `Encoding.GetString` und `Encoding.GetBytes` erkennen nicht wohlgeformte Sequenzen in der Eingabe und führen beim Generieren der Ausgabe Zeichenersetzungen durch. Wenn [`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) beispielsweise ein Nicht-ASCII-Byte (außerhalb des Bereichs U+0000..U+007F) in der Eingabe erkennt, wird ein ? in die zurückgegebene `string`-Instanz eingefügt. [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A) ersetzt nicht wohlgeformte UTF-8-Sequenzen in der zurückgegebenen `string`-Instanz durch `U+FFFD REPLACEMENT CHARACTER ('�')`. Weitere Informationen finden Sie unter [Unicode-Standard](https://www.unicode.org/versions/latest/) in den Abschnitten 5.22 und 3.9.
+APIs wie [`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) geben keine nicht wohlgeformten `string`-Instanzen zurück. Die Methoden `Encoding.GetString` und `Encoding.GetBytes` erkennen falsch formatierte Sequenzen in der Eingabe und führen beim Generieren der Ausgabe char-Ersetzungen durch. Wenn [`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) beispielsweise ein Nicht-ASCII-Byte (außerhalb des Bereichs U+0000..U+007F) in der Eingabe erkennt, wird ein ? in die zurückgegebene `string`-Instanz eingefügt. [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A) ersetzt nicht wohlgeformte UTF-8-Sequenzen in der zurückgegebenen `string`-Instanz durch `U+FFFD REPLACEMENT CHARACTER ('�')`. Weitere Informationen finden Sie unter [Unicode-Standard](https://www.unicode.org/versions/latest/) in den Abschnitten 5.22 und 3.9.
 
-Die integrierten `Encoding`-Klassen können auch so konfiguriert werden, dass sie anstelle einer Zeichenersetzung eine Ausnahme auslösen, wenn falsch formatierte Sequenzen erkannt werden. Dieser Ansatz findet häufig in Anwendungen mit hohen Sicherheitsanforderungen Anwendung, bei denen eine Zeichenersetzung möglicherweise nicht akzeptabel ist.
+Die integrierten `Encoding`-Klassen können auch so konfiguriert werden, dass sie anstelle einer char-Ersetzung eine Ausnahme auslösen, wenn falsch formatierte Sequenzen erkannt werden. Dieser Ansatz findet häufig in Anwendungen mit hohen Sicherheitsanforderungen Anwendung, bei denen eine char-Ersetzung möglicherweise nicht akzeptabel ist.
 
 ```csharp
 byte[] utf8Bytes = ReadFromNetwork();
@@ -382,7 +382,7 @@ UTF8Encoding encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false,
 string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is ill-formed
 ```
 
-Informationen zur Verwendung der integrierten `Encoding`-Klassen finden Sie unter [Verwenden von Zeichencodierungsklassen in .NET](character-encoding.md).
+Informationen zur Verwendung der integrierten `Encoding`-Klassen finden Sie unter [Verwenden von char-Codierungsklassen in .NET](character-encoding.md).
 
 ## <a name="see-also"></a>Siehe auch
 

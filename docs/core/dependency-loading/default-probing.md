@@ -4,12 +4,12 @@ description: Übersicht über die Überprüfungslogik in System.Runtime.Loader.A
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 13ce4c7de5f6ce1b76b2e61db810c0f19717540f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859512"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608427"
 ---
 # <a name="default-probing"></a>Standardüberprüfung
 
@@ -31,16 +31,18 @@ Jede der Überprüfungseigenschaften ist optional. Ist eine Eigenschaft vorhande
 
 ### <a name="how-are-the-properties-populated"></a>Wie werden diese Eigenschaften aufgefüllt?
 
-Es gibt zwei Hauptszenarien für das Auffüllen der Eigenschaften, die davon abhängen, ob eine Datei *\<meineapp>.deps.json* vorhanden ist.
+Es gibt zwei Hauptszenarios für das Auffüllen der Eigenschaften, die davon abhängen, ob eine *\<myapp>.deps.json*-Datei vorhanden ist.
 
 - Wenn eine *\*.deps.json*-Datei vorhanden ist, wird sie analysiert, um die Überprüfungseigenschaften aufzufüllen.
 - Wenn keine *\*.deps.json*-Datei vorhanden ist, wird davon ausgegangen, dass alle Abhängigkeiten im Anwendungsverzeichnis enthalten sind. Der Inhalt des Verzeichnisses wird dann verwendet, um die Überprüfungseigenschaften aufzufüllen.
 
 Außerdem werden die *\*.deps.json*-Dateien auf die gleiche Weise auf referenzierte Frameworks analysiert.
 
-Schließlich kann auch die Umgebungsvariable `ADDITIONAL_DEPS` verwendet werden, um zusätzliche Abhängigkeiten hinzuzufügen.
+Schließlich kann auch die Umgebungsvariable `ADDITIONAL_DEPS` verwendet werden, um zusätzliche Abhängigkeiten hinzuzufügen.  `dotnet.exe` enthält auch einen optionalen `--additional-deps`-Parameter, um diesen Wert beim Anwendungsstart festzulegen.
 
 Die Eigenschaften `APP_PATHS` und `APP_NI_PATHS` werden nicht standardmäßig aufgefüllt und für die meisten Anwendungen weggelassen.
+
+Die Liste aller *\*.deps.json*-Dateien, die von der Anwendung verwendet werden, kann über `System.AppContext.GetData("APP_CONTEXT_DEPS_FILES")` aufgerufen werden.
 
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Wie kann ich die Überprüfungseigenschaften von verwaltetem Code anzeigen?
 

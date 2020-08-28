@@ -4,12 +4,12 @@ description: In diesem Artikel werden die Sicherheitsrisiken beschrieben, die de
 ms.date: 07/11/2020
 ms.author: levib
 author: GrabYourPitchforks
-ms.openlocfilehash: f6a54b34bbf1e19212fe37aadb448a1722fe9ff0
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 2c76a81650e5b83677f6c4df64770bd1ef5f775e
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444749"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88607937"
 ---
 # <a name="binaryformatter-security-guide"></a>BinaryFormatter-Sicherheitsleitfaden
 
@@ -87,7 +87,6 @@ __Stellen Sie sich eine App vor, die von einem Desktopinstallationsmodell zu ein
 ## <a name="further-resources"></a>Weitere Ressourcen
 
 * [YSoSerial.Net:](https://github.com/pwntester/ysoserial.net) Erfahren Sie mehr darüber, wie Angreifer Apps angreifen, die `BinaryFormatter` verwenden.
-* [Bedrohungsmodellierung:](/securityengineering/sdl/threatmodeling) Informationen zu Apps und Diensten für die Bedrohungsmodellierung
 * Allgemeine Hintergrundinformationen zu Sicherheitsrisiken im Zusammenhang mit der Deserialisierung:
   * [OWASP Top 10: A8:2017 – Unsichere Deserialisierung](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization)
   * [CWE-502: Deserialisierung von nicht vertrauenswürdigen Daten](https://cwe.mitre.org/data/definitions/502.html)

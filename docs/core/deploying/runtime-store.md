@@ -2,12 +2,12 @@
 title: Laufzeitpaketspeicher
 description: Erfahren Sie, wie Sie den Laufzeitpaketspeicher für Manifeste nutzen, die von .NET Core verwendet werden.
 ms.date: 08/12/2017
-ms.openlocfilehash: 4395370c3bb2d97511d549a63813022fb8cac4b7
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: e9e27ef535dbd9e7197c323f7e49a9960aeff0f9
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158288"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608357"
 ---
 # <a name="runtime-package-store"></a>Laufzeitpaketspeicher
 
@@ -128,11 +128,11 @@ Geben Sie die Zielmanifeste nur in der Projektdatei an, wenn die Zielumgebung f�
 
 Der implizite Speicher für ASP.NET Core gilt nur für ASP.NET Core 2.0. Es wird dringend empfohlen, ASP.NET Core 2.1 und höher für Anwendungen zu verwenden, die den impliziten Speicher **nicht** verwenden. ASP.NET Core 2.1 und höher verwenden das freigegebene Framework.
 
-Bei .NET Core 2.0 wird das Feature für den Laufzeitpaketspeicher implizit von einer ASP.NET Core-App verwendet, wenn die App als [laufzeitabhängige Bereitstellung](index.md#publish-runtime-dependent) verfügbar gemacht wird. Die Ziele in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) beinhalten Manifeste, die auf implizite Paketspeicher auf dem Zielsystem verweisen. Darüber hinaus resultiert jede laufzeitabhängige App, die vom Paket `Microsoft.AspNetCore.All` abhängig ist, in einer veröffentlichten App, die nur die App und ihre Objekte enthält, nicht aber die Pakete, die im Metapaket `Microsoft.AspNetCore.All` aufgelistet sind. Es wird davon ausgegangen, dass diese Pakete auf dem Zielsystem vorhanden sind.
+Bei .NET Core 2.0 wird das Feature für den Runtimepaketspeicher implizit von einer ASP.NET Core-App verwendet, wenn die App als [frameworkabhängige Bereitstellung](index.md#publish-framework-dependent) verfügbar gemacht wird. Die Ziele in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) beinhalten Manifeste, die auf implizite Paketspeicher auf dem Zielsystem verweisen. Darüber hinaus resultiert jede frameworkabhängige App, die vom Paket `Microsoft.AspNetCore.All` abhängig ist, in einer veröffentlichten App, die nur die App und ihre Objekte enthält, nicht aber die Pakete, die im Metapaket `Microsoft.AspNetCore.All` aufgelistet sind. Es wird davon ausgegangen, dass diese Pakete auf dem Zielsystem vorhanden sind.
 
 Der Laufzeitpaketspeicher wird bei der Installation des .NET Core SDK auf dem Host installiert. Andere Installationsprogramme stellen möglicherweise den Laufzeitpaketspeicher bereit, einschließlich der Zip-/Tarball-Installationen des .NET Core SDK, `apt-get`, Red Hat Yum, dem .NET Core Windows Server-Hostingpakets und manuellen Installationen des Laufzeitpaketspeichers.
 
-Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist, wenn Sie eine App mit [laufzeitabhängiger Bereitstellung](index.md#publish-runtime-dependent) verfügbar machen. Wenn die App für eine Umgebung bereitgestellt wird, die ASP.NET Core nicht enthält, können Sie den impliziten Speicher deaktivieren, indem Sie **\<PublishWithAspNetCoreTargetManifest>** angeben, das in der Projektdatei wie im folgenden Beispiel auf `false` festgelegt ist:
+Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist, wenn Sie eine App für eine [frameworkabhängige Bereitstellung](index.md#publish-framework-dependent) bereitstellen. Wenn die App für eine Umgebung bereitgestellt wird, die ASP.NET Core nicht enthält, können Sie den impliziten Speicher deaktivieren, indem Sie die auf `false` festgelegte Option **\<PublishWithAspNetCoreTargetManifest>** in der Projektdatei wie im folgenden Beispiel angeben:
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,7 @@ Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist,
 ```
 
 > [!NOTE]
-> Bei Apps mit [eigenständiger Bereitstellung](index.md#publish-self-contained) wird davon ausgegangen, dass das Zielsystem die erforderlichen Manifestpakete nicht unbedingt enthält. Deshalb kann **\<PublishWithAspNetCoreTargetManifest>** für eine App mit eigenständiger Bereitstellung nicht auf `true` festgelegt werden.
+> Bei Apps mit [eigenständiger Bereitstellung](index.md#publish-self-contained) wird davon ausgegangen, dass das Zielsystem die erforderlichen Manifestpakete nicht unbedingt enthält. Daher kann **\<PublishWithAspNetCoreTargetManifest>** für eine eigenständige App nicht auf `true` festgelegt werden.
 
 ## <a name="see-also"></a>Siehe auch
 

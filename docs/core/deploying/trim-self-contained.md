@@ -4,23 +4,23 @@ description: Erfahren Sie, wie Sie eigenständige Apps zuschneiden, um ihre Grö
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: bb8ac88c5e16b7fd20a7670e4ad76dbe4b44da1b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242908"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720123"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kürzen eigenständiger Bereitstellungen und ausführbarer Dateien
 
-Beim Veröffentlichen einer eigenständigen Anwendung wird die .NET Core-Laufzeit mit der Anwendung gebündelt. Durch diese Bündelung wird die Menge des Inhalts der gepackten Anwendung beträchtlich erhöht. Wenn Sie Ihre Anwendung bereitstellen, ist die Größe häufig ein wichtiger Faktor. Anwendungsentwickler versuchen in der Regel, die Größe des Anwendungspakets so gering wie möglich zu halten.
+Das [frameworkabhängige Bereitstellungsmodell](index.md#publish-framework-dependent) ist seit der Einführung von .NET das erfolgreichste Bereitstellungsmodell. In diesem Szenario bündelt der Anwendungsentwickler nur die Anwendung und Drittanbieterassemblys mit der Annahme, dass die .NET-Runtime und Frameworkbibliotheken auf dem Clientcomputer verfügbar sind. Dieses Bereitstellungsmodell ist in .NET Core auch weiterhin das wichtigste Bereitstellungsmodell, allerdings gibt es einige Szenarios, in denen das frameworkabhängige Modell nicht optimal ist. Die Alternative besteht darin, eine [unabhängige Anwendung](index.md#publish-self-contained) zu veröffentlichen, bei der die .NET Core-Runtime und das Framework zusammen mit der Anwendung und den Drittanbieterassemblys gebündelt werden.
 
-Abhängig von der Komplexität der Anwendung ist für ihre Ausführung nur eine Teilmenge der Laufzeit erforderlich. Diese nicht verwendeten Teile der Laufzeit sind unnötig und können aus der gepackten Anwendung abgeschnitten werden.
+Das unabhängige Bereitstellungsmodell zum Kürzen ist eine spezialisierte Version des eigenständigen Bereitstellungsmodells, das für die Minimierung der Bereitstellungsgröße optimiert ist. Das Minimieren der Bereitstellungsgröße ist für einige clientseitige Szenarios wie Blazor-Anwendungen eine wichtige Anforderung. Abhängig von der Komplexität der Anwendung ist für ihre Ausführung nur eine Teilmenge der Frameworkassemblys erforderlich. Diese nicht verwendeten Teile der Bibliothek sind unnötig und können aus der gepackten Anwendung entfernt werden. Es besteht jedoch das Risiko, dass die Buildzeitanalyse der Anwendung zur Laufzeit Fehler verursachen kann, da verschiedene problematische Codemuster nicht zuverlässig analysiert werden können (hauptsächlich bei Reflexion). Da die Zuverlässigkeit nicht garantiert werden kann, wird dieses Bereitstellungsmodell als Previewfunktion angeboten. Die Engine für die Buildzeitanalyse liefert Warnungen für den Entwickler von Codemustern, die problematisch sind und daher korrigiert werden müssen. Nach Möglichkeit empfiehlt es sich, alle Runtimereflexionsabhängigkeiten in der Anwendung zu erstellen, indem Sie Code verwenden, der die gleichen Anforderungen erfüllt.
 
-Zum Kürzen der Anwendung werden ihre Binärdateien untersucht, um die erforderlichen Laufzeitassemblys zu ermitteln und einen entsprechenden Graphen zu erstellen. Die verbleibenden Runtimeassemblys, auf die nicht verwiesen wird, werden ausgeschlossen.
+Der Kürzungsmodus für die Anwendungen kann über die TrimMode-Option konfiguriert werden und wird standardmäßig (`copyused`) verwendet, um in der Anwendung verwendete Assemblys zu bündeln. Blazor WebAssembly-Anwendungen verwenden einen aggressiveren Modus (`link`), der ungenutzten Code in den Assemblys abschneidet. Kürzungsanalysewarnungen bieten Informationen zu Codemustern, bei denen keine vollständige Abhängigkeitsanalyse möglich war. Diese Warnungen werden standardmäßig unterdrückt und können aktiviert werden, indem das Flag `SuppressTrimAnalysisWarnings` auf „false“ festgelegt wird. Weitere Informationen zu den verfügbaren Kürzungsoptionen finden Sie auf der [ILLinker-Seite](https://github.com/mono/linker/blob/master/docs/illink-options.md).
 
 > [!NOTE]
-> Das Kürzen ist ein experimentelles Feature in .NET Core 3.1 und _nur_ für Anwendungen verfügbar, die eigenständig veröffentlicht werden.
+> Das Kürzen ist ein experimentelles Feature in .NET Core 3.1 und 5.0 und _nur_ für Anwendungen verfügbar, die eigenständig veröffentlicht werden.
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>Verhindern, dass Assemblys zugeschnitten werden
 
@@ -39,13 +39,25 @@ Wenn der Code per Reflexion indirekt auf eine Assembly verweist, können Sie mit
 Sie können Ihre Anwendung mit dem Befehl [dotnet publish](../tools/dotnet-publish.md) zuschneiden. Beim Veröffentlichen Ihrer App legen Sie die folgenden drei Einstellungen fest:
 
 - Als eigenständige App veröffentlichen: `--self-contained true`
-- Veröffentlichung von Einzeldateien deaktivieren: `-p:PublishSingleFile=false`
 - Zuschneiden aktivieren: `p:PublishTrimmed=true`
 
-Das folgende Beispiel veröffentlicht eine App für Windows 10 als eigenständige App und schneidet die Ausgabe zu.
+Das folgende Beispiel veröffentlicht eine App für Windows als eigenständige App und schneidet die Ausgabe zu.
 
-```dotnetcli
-dotnet publish -c Release -r win10-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=true
+```xml
+<ItemGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>true</PublishTrimmed>
+</ItemGroup>
+```
+
+Im folgenden Beispiel wird eine App mithilfe des aggressiven Kürzungsmodus veröffentlicht, bei dem nicht verwendeter Code in Assemblys abgeschnitten und Kürzungswarnungen aktiviert werden.
+
+```xml
+<ItemGroup>
+    <TrimMode>link</TrimMode>
+    <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+</ItemGroup>
 ```
 
 Weitere Informationen finden Sie unter [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](deploy-with-cli.md).
