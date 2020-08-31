@@ -2,63 +2,63 @@
 title: Erstellen einer .NET Standard-Klassenbibliothek in Visual Studio Code
 description: Hier erfahren Sie, wie Sie eine .NET Standard-Klassenbibliothek mit Visual Studio Code erstellen.
 ms.date: 06/08/2020
-ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 146dfd49e448494cce0c844282bc0394a8739ac9
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308883"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810858"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a><span data-ttu-id="05412-103">Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="05412-103">Tutorial: Create a .NET Standard library using Visual Studio Code</span></span>
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a><span data-ttu-id="87473-103">Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="87473-103">Tutorial: Create a .NET Standard library using Visual Studio Code</span></span>
 
-<span data-ttu-id="05412-104">In diesem Tutorial erstellen Sie eine einfache Hilfsprogrammbibliothek, die eine einzelne Methode zur Behandlung von Zeichenfolgen enthält.</span><span class="sxs-lookup"><span data-stu-id="05412-104">In this tutorial, you create a simple utility library that contains a single string-handling method.</span></span> <span data-ttu-id="05412-105">Sie implementieren sie als [Erweiterungsmethode](../../csharp/programming-guide/classes-and-structs/extension-methods.md), damit sie aufgerufen werden kann, als wäre sie ein Mitglied der <xref:System.String>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="05412-105">You implement it as an [extension method](../../csharp/programming-guide/classes-and-structs/extension-methods.md) so that you can call it as if it were a member of the <xref:System.String> class.</span></span>
+<span data-ttu-id="87473-104">In diesem Tutorial erstellen Sie eine einfache Hilfsprogrammbibliothek, die eine einzelne Methode zur Behandlung von Zeichenfolgen enthält.</span><span class="sxs-lookup"><span data-stu-id="87473-104">In this tutorial, you create a simple utility library that contains a single string-handling method.</span></span> <span data-ttu-id="87473-105">Sie implementieren sie als [Erweiterungsmethode](../../csharp/programming-guide/classes-and-structs/extension-methods.md), damit sie aufgerufen werden kann, als wäre sie ein Mitglied der <xref:System.String>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="87473-105">You implement it as an [extension method](../../csharp/programming-guide/classes-and-structs/extension-methods.md) so that you can call it as if it were a member of the <xref:System.String> class.</span></span>
 
-<span data-ttu-id="05412-106">Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="05412-106">A *class library* defines types and methods that are called by an application.</span></span> <span data-ttu-id="05412-107">Eine Klassenbibliothek, die sich auf .NET Standard 2.0 bezieht, ermöglicht das Aufrufen der Bibliothek aus jeder .NET-Implementierung, die diese Version von .NET Standard unterstützt.</span><span class="sxs-lookup"><span data-stu-id="05412-107">A class library that targets .NET Standard 2.0 allows your library to be called by any .NET implementation that supports that version of .NET Standard.</span></span> <span data-ttu-id="05412-108">Wenn Sie Ihre Klassenbibliothek fertig gestellt haben, können Sie sie als Komponente eines Drittanbieters oder als gebündelte Komponente mit einer oder mehreren Anwendungen verteilen.</span><span class="sxs-lookup"><span data-stu-id="05412-108">When you finish your class library, you can distribute it as a third-party component or as a bundled component with one or more applications.</span></span>
+<span data-ttu-id="87473-106">Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="87473-106">A *class library* defines types and methods that are called by an application.</span></span> <span data-ttu-id="87473-107">Eine Klassenbibliothek, die sich auf .NET Standard 2.0 bezieht, ermöglicht das Aufrufen der Bibliothek aus jeder .NET-Implementierung, die diese Version von .NET Standard unterstützt.</span><span class="sxs-lookup"><span data-stu-id="87473-107">A class library that targets .NET Standard 2.0 allows your library to be called by any .NET implementation that supports that version of .NET Standard.</span></span> <span data-ttu-id="87473-108">Wenn Sie Ihre Klassenbibliothek fertig gestellt haben, können Sie sie als Komponente eines Drittanbieters oder als gebündelte Komponente mit einer oder mehreren Anwendungen verteilen.</span><span class="sxs-lookup"><span data-stu-id="87473-108">When you finish your class library, you can distribute it as a third-party component or as a bundled component with one or more applications.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="05412-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="05412-109">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="87473-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="87473-109">Prerequisites</span></span>
 
-1. <span data-ttu-id="05412-110">[Visual Studio Code](https://code.visualstudio.com/) mit installierter [C#-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).</span><span class="sxs-lookup"><span data-stu-id="05412-110">[Visual Studio Code](https://code.visualstudio.com/) with the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) installed.</span></span> <span data-ttu-id="05412-111">Informationen zum Installieren von Erweiterungen für Visual Studio Code finden Sie unter [Marketplace für VS Code-Erweiterungen](https://code.visualstudio.com/docs/editor/extension-gallery).</span><span class="sxs-lookup"><span data-stu-id="05412-111">For information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
-2. <span data-ttu-id="05412-112">[.NET Core 3.1 SDK oder höher](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="05412-112">The [.NET Core 3.1 SDK or later](https://dotnet.microsoft.com/download)</span></span>
+1. <span data-ttu-id="87473-110">[Visual Studio Code](https://code.visualstudio.com/) mit installierter [C#-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).</span><span class="sxs-lookup"><span data-stu-id="87473-110">[Visual Studio Code](https://code.visualstudio.com/) with the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) installed.</span></span> <span data-ttu-id="87473-111">Informationen zum Installieren von Erweiterungen für Visual Studio Code finden Sie unter [Marketplace für VS Code-Erweiterungen](https://code.visualstudio.com/docs/editor/extension-gallery).</span><span class="sxs-lookup"><span data-stu-id="87473-111">For information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+2. <span data-ttu-id="87473-112">[.NET Core 3.1 SDK oder höher](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="87473-112">The [.NET Core 3.1 SDK or later](https://dotnet.microsoft.com/download)</span></span>
 
-## <a name="create-a-solution"></a><span data-ttu-id="05412-113">Erstellen einer Projektmappe</span><span class="sxs-lookup"><span data-stu-id="05412-113">Create a solution</span></span>
+## <a name="create-a-solution"></a><span data-ttu-id="87473-113">Erstellen einer Projektmappe</span><span class="sxs-lookup"><span data-stu-id="87473-113">Create a solution</span></span>
 
-<span data-ttu-id="05412-114">Beginnen Sie, indem Sie eine leere Projektmappe erstellen, um das Klassenbibliotheksprojekt darin zu speichern.</span><span class="sxs-lookup"><span data-stu-id="05412-114">Start by creating a blank solution to put the class library project in.</span></span> <span data-ttu-id="05412-115">Eine Projektmappe dient als ein Container für mindestens ein Projekt.</span><span class="sxs-lookup"><span data-stu-id="05412-115">A solution serves as a container for one or more projects.</span></span> <span data-ttu-id="05412-116">Sie fügen der gleichen Projektmappe weitere verwandte Projekte hinzu.</span><span class="sxs-lookup"><span data-stu-id="05412-116">You'll add additional, related projects to the same solution.</span></span>
+<span data-ttu-id="87473-114">Beginnen Sie, indem Sie eine leere Projektmappe erstellen, um das Klassenbibliotheksprojekt darin zu speichern.</span><span class="sxs-lookup"><span data-stu-id="87473-114">Start by creating a blank solution to put the class library project in.</span></span> <span data-ttu-id="87473-115">Eine Projektmappe dient als ein Container für mindestens ein Projekt.</span><span class="sxs-lookup"><span data-stu-id="87473-115">A solution serves as a container for one or more projects.</span></span> <span data-ttu-id="87473-116">Sie fügen der gleichen Projektmappe weitere verwandte Projekte hinzu.</span><span class="sxs-lookup"><span data-stu-id="87473-116">You'll add additional, related projects to the same solution.</span></span>
 
-1. <span data-ttu-id="05412-117">Starten Sie Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="05412-117">Start Visual Studio Code.</span></span>
+1. <span data-ttu-id="87473-117">Starten Sie Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="87473-117">Start Visual Studio Code.</span></span>
 
-1. <span data-ttu-id="05412-118">Wählen Sie im Hauptmenü **Datei** > **Ordner öffnen** (**Öffnen...** unter macOS) aus.</span><span class="sxs-lookup"><span data-stu-id="05412-118">Select **File** > **Open Folder** (**Open...** on macOS) from the main menu</span></span>
+1. <span data-ttu-id="87473-118">Wählen Sie im Hauptmenü **Datei** > **Ordner öffnen** (**Öffnen...** unter macOS) aus.</span><span class="sxs-lookup"><span data-stu-id="87473-118">Select **File** > **Open Folder** (**Open...** on macOS) from the main menu</span></span>
 
-1. <span data-ttu-id="05412-119">Erstellen Sie im Dialogfeld **Ordner öffnen** den Ordner *ClassLibraryProjects*, und klicken Sie auf **Ordner auswählen** (**Öffnen** unter macOS).</span><span class="sxs-lookup"><span data-stu-id="05412-119">In the **Open Folder** dialog, create a *ClassLibraryProjects* folder and click **Select Folder** (**Open** on macOS).</span></span>
+1. <span data-ttu-id="87473-119">Erstellen Sie im Dialogfeld **Ordner öffnen** den Ordner *ClassLibraryProjects*, und klicken Sie auf **Ordner auswählen** (**Öffnen** unter macOS).</span><span class="sxs-lookup"><span data-stu-id="87473-119">In the **Open Folder** dialog, create a *ClassLibraryProjects* folder and click **Select Folder** (**Open** on macOS).</span></span>
 
-1. <span data-ttu-id="05412-120">Öffnen Sie das **Terminal** in Visual Studio Code, indem Sie im Hauptmenü **Ansicht** > **Terminal** auswählen.</span><span class="sxs-lookup"><span data-stu-id="05412-120">Open the **Terminal** in Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
+1. <span data-ttu-id="87473-120">Öffnen Sie das **Terminal** in Visual Studio Code, indem Sie im Hauptmenü **Ansicht** > **Terminal** auswählen.</span><span class="sxs-lookup"><span data-stu-id="87473-120">Open the **Terminal** in Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
 
-   <span data-ttu-id="05412-121">Das **Terminal** wird mit der Eingabeaufforderung im Ordner *ClassLibraryProjects* geöffnet.</span><span class="sxs-lookup"><span data-stu-id="05412-121">The **Terminal** opens with the command prompt in the *ClassLibraryProjects* folder.</span></span>
+   <span data-ttu-id="87473-121">Das **Terminal** wird mit der Eingabeaufforderung im Ordner *ClassLibraryProjects* geöffnet.</span><span class="sxs-lookup"><span data-stu-id="87473-121">The **Terminal** opens with the command prompt in the *ClassLibraryProjects* folder.</span></span>
 
-1. <span data-ttu-id="05412-122">Geben Sie im **Terminal** den folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="05412-122">In the **Terminal**, enter the following command:</span></span>
+1. <span data-ttu-id="87473-122">Geben Sie im **Terminal** den folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="87473-122">In the **Terminal**, enter the following command:</span></span>
 
    ```dotnetcli
    dotnet new sln
    ```
 
-   <span data-ttu-id="05412-123">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="05412-123">The terminal output looks like the following example:</span></span>
+   <span data-ttu-id="87473-123">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="87473-123">The terminal output looks like the following example:</span></span>
 
-   ```
+   ```output
    The template "Solution File" was created successfully.
    ```
 
-## <a name="create-a-class-library-project"></a><span data-ttu-id="05412-124">Erstellen eines Klassenbibliotheksprojekts</span><span class="sxs-lookup"><span data-stu-id="05412-124">Create a class library project</span></span>
+## <a name="create-a-class-library-project"></a><span data-ttu-id="87473-124">Erstellen eines Klassenbibliotheksprojekts</span><span class="sxs-lookup"><span data-stu-id="87473-124">Create a class library project</span></span>
 
-<span data-ttu-id="05412-125">Fügen Sie der Projektmappe ein neues .NET Standard-Klassenbibliotheksprojekt mit dem Namen „StringLibrary“ hinzu.</span><span class="sxs-lookup"><span data-stu-id="05412-125">Add a new .NET Standard class library project named "StringLibrary" to the solution.</span></span>
+<span data-ttu-id="87473-125">Fügen Sie der Projektmappe ein neues .NET Standard-Klassenbibliotheksprojekt mit dem Namen „StringLibrary“ hinzu.</span><span class="sxs-lookup"><span data-stu-id="87473-125">Add a new .NET Standard class library project named "StringLibrary" to the solution.</span></span>
 
-1. <span data-ttu-id="05412-126">Führen Sie im Terminal den folgenden Befehl aus, um das Bibliotheksprojekt zu erstellen:</span><span class="sxs-lookup"><span data-stu-id="05412-126">In the terminal, run the following command to create the library project:</span></span>
+1. <span data-ttu-id="87473-126">Führen Sie im Terminal den folgenden Befehl aus, um das Bibliotheksprojekt zu erstellen:</span><span class="sxs-lookup"><span data-stu-id="87473-126">In the terminal, run the following command to create the library project:</span></span>
 
    ```dotnetcli
    dotnet new classlib -o StringLibrary
    ```
 
-   <span data-ttu-id="05412-127">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="05412-127">The terminal output looks like the following example:</span></span>
+   <span data-ttu-id="87473-127">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="87473-127">The terminal output looks like the following example:</span></span>
 
-   ```
+   ```output
    The template "Class library" was created successfully.
    Processing post-creation actions...
    Running 'dotnet restore' on StringLibrary\StringLibrary.csproj...
@@ -67,21 +67,21 @@ ms.locfileid: "86308883"
    Restore succeeded.
    ```
 
-1. <span data-ttu-id="05412-128">Führen Sie den folgenden Befehl aus, um das Bibliotheksprojekt zur Projektmappe hinzuzufügen:</span><span class="sxs-lookup"><span data-stu-id="05412-128">Run the following command to add the library project to the solution:</span></span>
+1. <span data-ttu-id="87473-128">Führen Sie den folgenden Befehl aus, um das Bibliotheksprojekt zur Projektmappe hinzuzufügen:</span><span class="sxs-lookup"><span data-stu-id="87473-128">Run the following command to add the library project to the solution:</span></span>
 
    ```dotnetcli
    dotnet sln add StringLibrary/StringLibrary.csproj
    ```
 
-   <span data-ttu-id="05412-129">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="05412-129">The terminal output looks like the following example:</span></span>
+   <span data-ttu-id="87473-129">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="87473-129">The terminal output looks like the following example:</span></span>
 
-   ```
+   ```output
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. <span data-ttu-id="05412-130">Stellen Sie sicher, dass die Bibliothek die richtige Version von .NET Standard als Ziel verwendet.</span><span class="sxs-lookup"><span data-stu-id="05412-130">Check to make sure that the library targets the correct version of .NET Standard.</span></span> <span data-ttu-id="05412-131">Öffnen Sie im **Explorer** die Datei *StringLibrary/StringLibrary.csproj*.</span><span class="sxs-lookup"><span data-stu-id="05412-131">In **Explorer**, open *StringLibrary/StringLibrary.csproj*.</span></span>
+1. <span data-ttu-id="87473-130">Stellen Sie sicher, dass die Bibliothek die richtige Version von .NET Standard als Ziel verwendet.</span><span class="sxs-lookup"><span data-stu-id="87473-130">Check to make sure that the library targets the correct version of .NET Standard.</span></span> <span data-ttu-id="87473-131">Öffnen Sie im **Explorer** die Datei *StringLibrary/StringLibrary.csproj*.</span><span class="sxs-lookup"><span data-stu-id="87473-131">In **Explorer**, open *StringLibrary/StringLibrary.csproj*.</span></span>
 
-   <span data-ttu-id="05412-132">Das Element `TargetFramework` gibt an, dass das Projekt für .NET Standard 2.0 vorgesehen ist.</span><span class="sxs-lookup"><span data-stu-id="05412-132">The `TargetFramework` element shows that the project targets .NET Standard 2.0.</span></span>
+   <span data-ttu-id="87473-132">Das Element `TargetFramework` gibt an, dass das Projekt für .NET Standard 2.0 vorgesehen ist.</span><span class="sxs-lookup"><span data-stu-id="87473-132">The `TargetFramework` element shows that the project targets .NET Standard 2.0.</span></span>
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
@@ -93,23 +93,23 @@ ms.locfileid: "86308883"
    </Project>
    ```
 
-1. <span data-ttu-id="05412-133">Öffnen Sie die Datei *Class1.cs*, und ersetzen Sie den Code durch den folgenden:</span><span class="sxs-lookup"><span data-stu-id="05412-133">Open *Class1.cs* and replace the code with the following code.</span></span>
+1. <span data-ttu-id="87473-133">Öffnen Sie die Datei *Class1.cs*, und ersetzen Sie den Code durch den folgenden:</span><span class="sxs-lookup"><span data-stu-id="87473-133">Open *Class1.cs* and replace the code with the following code.</span></span>
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibrary/Class1.cs":::
 
-   <span data-ttu-id="05412-134">Die Klassenbibliothek (`UtilityLibraries.StringLibrary`) enthält eine Methode namens `StartsWithUpper`.</span><span class="sxs-lookup"><span data-stu-id="05412-134">The class library, `UtilityLibraries.StringLibrary`, contains a method named `StartsWithUpper`.</span></span> <span data-ttu-id="05412-135">Diese Methode gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob die aktuelle Zeichenfolgeninstanz mit einem Großbuchstaben beginnt.</span><span class="sxs-lookup"><span data-stu-id="05412-135">This method returns a <xref:System.Boolean> value that indicates whether the current string instance begins with an uppercase character.</span></span> <span data-ttu-id="05412-136">Der Unicode-Standard unterscheidet Groß- und Kleinschreibung.</span><span class="sxs-lookup"><span data-stu-id="05412-136">The Unicode standard distinguishes uppercase characters from lowercase characters.</span></span> <span data-ttu-id="05412-137">Die Methode <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> gibt `true` zurück, wenn ein Zeichen ein Großbuchstabe ist.</span><span class="sxs-lookup"><span data-stu-id="05412-137">The <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> method returns `true` if a character is uppercase.</span></span>
+   <span data-ttu-id="87473-134">Die Klassenbibliothek (`UtilityLibraries.StringLibrary`) enthält eine Methode namens `StartsWithUpper`.</span><span class="sxs-lookup"><span data-stu-id="87473-134">The class library, `UtilityLibraries.StringLibrary`, contains a method named `StartsWithUpper`.</span></span> <span data-ttu-id="87473-135">Diese Methode gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob die aktuelle Zeichenfolgeninstanz mit einem Großbuchstaben beginnt.</span><span class="sxs-lookup"><span data-stu-id="87473-135">This method returns a <xref:System.Boolean> value that indicates whether the current string instance begins with an uppercase character.</span></span> <span data-ttu-id="87473-136">Der Unicode-Standard unterscheidet Groß- und Kleinschreibung.</span><span class="sxs-lookup"><span data-stu-id="87473-136">The Unicode standard distinguishes uppercase characters from lowercase characters.</span></span> <span data-ttu-id="87473-137">Die Methode <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> gibt `true` zurück, wenn ein Zeichen ein Großbuchstabe ist.</span><span class="sxs-lookup"><span data-stu-id="87473-137">The <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> method returns `true` if a character is uppercase.</span></span>
 
-1. <span data-ttu-id="05412-138">Speichern Sie die Datei.</span><span class="sxs-lookup"><span data-stu-id="05412-138">Save the file.</span></span>
+1. <span data-ttu-id="87473-138">Speichern Sie die Datei.</span><span class="sxs-lookup"><span data-stu-id="87473-138">Save the file.</span></span>
 
-1. <span data-ttu-id="05412-139">Führen Sie den folgenden Befehl aus, um die Projektmappe zu erstellen und zu überprüfen, ob das Projekt fehlerfrei kompiliert wird:</span><span class="sxs-lookup"><span data-stu-id="05412-139">Run the following command to build the solution and verify that the project compiles without error.</span></span>
+1. <span data-ttu-id="87473-139">Führen Sie den folgenden Befehl aus, um die Projektmappe zu erstellen und zu überprüfen, ob das Projekt fehlerfrei kompiliert wird:</span><span class="sxs-lookup"><span data-stu-id="87473-139">Run the following command to build the solution and verify that the project compiles without error.</span></span>
 
    ```dotnetcli
    dotnet build
    ```
 
-   <span data-ttu-id="05412-140">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="05412-140">The terminal output looks like the following example:</span></span>
+   <span data-ttu-id="87473-140">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="87473-140">The terminal output looks like the following example:</span></span>
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0 for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
@@ -122,19 +122,19 @@ ms.locfileid: "86308883"
    Time Elapsed 00:00:02.78
    ```
 
-## <a name="add-a-console-app-to-the-solution"></a><span data-ttu-id="05412-141">Hinzufügen einer Konsolen-App zur Projektmappe</span><span class="sxs-lookup"><span data-stu-id="05412-141">Add a console app to the solution</span></span>
+## <a name="add-a-console-app-to-the-solution"></a><span data-ttu-id="87473-141">Hinzufügen einer Konsolen-App zur Projektmappe</span><span class="sxs-lookup"><span data-stu-id="87473-141">Add a console app to the solution</span></span>
 
-<span data-ttu-id="05412-142">Im Folgenden fügen Sie eine Konsolenanwendung hinzu, die die Klassenbibliothek verwendet.</span><span class="sxs-lookup"><span data-stu-id="05412-142">Add a console application that uses the class library.</span></span> <span data-ttu-id="05412-143">Die App fordert den Benutzer dazu auf, eine Zeichenfolge einzugeben, und meldet, ob die Zeichenfolge mit einem Großbuchstaben beginnt.</span><span class="sxs-lookup"><span data-stu-id="05412-143">The app will prompt the user to enter a string and report whether the string begins with an uppercase character.</span></span>
+<span data-ttu-id="87473-142">Im Folgenden fügen Sie eine Konsolenanwendung hinzu, die die Klassenbibliothek verwendet.</span><span class="sxs-lookup"><span data-stu-id="87473-142">Add a console application that uses the class library.</span></span> <span data-ttu-id="87473-143">Die App fordert den Benutzer dazu auf, eine Zeichenfolge einzugeben, und meldet, ob die Zeichenfolge mit einem Großbuchstaben beginnt.</span><span class="sxs-lookup"><span data-stu-id="87473-143">The app will prompt the user to enter a string and report whether the string begins with an uppercase character.</span></span>
 
-1. <span data-ttu-id="05412-144">Führen Sie im Terminal den folgenden Befehl aus, um das Konsolen-App-Projekt zu erstellen:</span><span class="sxs-lookup"><span data-stu-id="05412-144">In the terminal, run the following command to create the console app project:</span></span>
+1. <span data-ttu-id="87473-144">Führen Sie im Terminal den folgenden Befehl aus, um das Konsolen-App-Projekt zu erstellen:</span><span class="sxs-lookup"><span data-stu-id="87473-144">In the terminal, run the following command to create the console app project:</span></span>
 
    ```dotnetcli
    dotnet new console -o ShowCase
    ```
 
-   <span data-ttu-id="05412-145">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="05412-145">The terminal output looks like the following example:</span></span>
+   <span data-ttu-id="87473-145">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="87473-145">The terminal output looks like the following example:</span></span>
 
-   ```
+   ```output
    The template "Console Application" was created successfully.
    Processing post-creation actions...
    Running 'dotnet restore' on ShowCase\ShowCase.csproj...  
@@ -143,57 +143,57 @@ ms.locfileid: "86308883"
    Restore succeeded.
    ```
 
-1. <span data-ttu-id="05412-146">Führen Sie den folgenden Befehl aus, um das Konsolen-App-Projekt zur Projektmappe hinzuzufügen:</span><span class="sxs-lookup"><span data-stu-id="05412-146">Run the following command to add the console app project to the solution:</span></span>
+1. <span data-ttu-id="87473-146">Führen Sie den folgenden Befehl aus, um das Konsolen-App-Projekt zur Projektmappe hinzuzufügen:</span><span class="sxs-lookup"><span data-stu-id="87473-146">Run the following command to add the console app project to the solution:</span></span>
 
    ```dotnetcli
    dotnet sln add ShowCase/ShowCase.csproj
    ```
 
-   <span data-ttu-id="05412-147">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="05412-147">The terminal output looks like the following example:</span></span>
+   <span data-ttu-id="87473-147">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="87473-147">The terminal output looks like the following example:</span></span>
 
-   ```
+   ```output
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. <span data-ttu-id="05412-148">Öffnen Sie die Datei *ShowCase/Program.cs*, und ersetzen Sie den gesamten Code durch den folgenden:</span><span class="sxs-lookup"><span data-stu-id="05412-148">Open *ShowCase/Program.cs* and replace all of the code with the following code.</span></span>
+1. <span data-ttu-id="87473-148">Öffnen Sie die Datei *ShowCase/Program.cs*, und ersetzen Sie den gesamten Code durch den folgenden:</span><span class="sxs-lookup"><span data-stu-id="87473-148">Open *ShowCase/Program.cs* and replace all of the code with the following code.</span></span>
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
 
-   <span data-ttu-id="05412-149">Der Code verwendet die `row`-Variable, um die Anzahl der in das Konsolenfenster geschriebenen Datenzeilen festzuhalten.</span><span class="sxs-lookup"><span data-stu-id="05412-149">The code uses the `row` variable to maintain a count of the number of rows of data written to the console window.</span></span> <span data-ttu-id="05412-150">Wenn sie mindestens 25 beträgt, löscht der Code das Konsolenfenster und zeigt eine Meldung für den Benutzer an.</span><span class="sxs-lookup"><span data-stu-id="05412-150">Whenever it's greater than or equal to 25, the code clears the console window and displays a message to the user.</span></span>
+   <span data-ttu-id="87473-149">Der Code verwendet die `row`-Variable, um die Anzahl der in das Konsolenfenster geschriebenen Datenzeilen festzuhalten.</span><span class="sxs-lookup"><span data-stu-id="87473-149">The code uses the `row` variable to maintain a count of the number of rows of data written to the console window.</span></span> <span data-ttu-id="87473-150">Wenn sie mindestens 25 beträgt, löscht der Code das Konsolenfenster und zeigt eine Meldung für den Benutzer an.</span><span class="sxs-lookup"><span data-stu-id="87473-150">Whenever it's greater than or equal to 25, the code clears the console window and displays a message to the user.</span></span>
 
-   <span data-ttu-id="05412-151">Das Programm selbst fordert den Benutzer zur Eingabe einer Zeichenfolge auf.</span><span class="sxs-lookup"><span data-stu-id="05412-151">The program prompts the user to enter a string.</span></span> <span data-ttu-id="05412-152">Es zeigt an, ob die Zeichenfolge mit einem Großbuchstaben beginnt.</span><span class="sxs-lookup"><span data-stu-id="05412-152">It indicates whether the string starts with an uppercase character.</span></span> <span data-ttu-id="05412-153">Wenn der Benutzer die <kbd>EINGABETASTE</kbd> drückt, ohne eine Zeichenfolge einzugeben, wird die Anwendung beendet und das Konsolenfenster geschlossen.</span><span class="sxs-lookup"><span data-stu-id="05412-153">If the user presses the <kbd>Enter</kbd> key without entering a string, the application ends, and the console window closes.</span></span>
+   <span data-ttu-id="87473-151">Das Programm selbst fordert den Benutzer zur Eingabe einer Zeichenfolge auf.</span><span class="sxs-lookup"><span data-stu-id="87473-151">The program prompts the user to enter a string.</span></span> <span data-ttu-id="87473-152">Es zeigt an, ob die Zeichenfolge mit einem Großbuchstaben beginnt.</span><span class="sxs-lookup"><span data-stu-id="87473-152">It indicates whether the string starts with an uppercase character.</span></span> <span data-ttu-id="87473-153">Wenn der Benutzer die <kbd>EINGABETASTE</kbd> drückt, ohne eine Zeichenfolge einzugeben, wird die Anwendung beendet und das Konsolenfenster geschlossen.</span><span class="sxs-lookup"><span data-stu-id="87473-153">If the user presses the <kbd>Enter</kbd> key without entering a string, the application ends, and the console window closes.</span></span>
 
-1. <span data-ttu-id="05412-154">Speichern Sie die Änderungen.</span><span class="sxs-lookup"><span data-stu-id="05412-154">Save your changes.</span></span>
+1. <span data-ttu-id="87473-154">Speichern Sie die Änderungen.</span><span class="sxs-lookup"><span data-stu-id="87473-154">Save your changes.</span></span>
 
-## <a name="add-a-project-reference"></a><span data-ttu-id="05412-155">Hinzufügen eines Projektverweises</span><span class="sxs-lookup"><span data-stu-id="05412-155">Add a project reference</span></span>
+## <a name="add-a-project-reference"></a><span data-ttu-id="87473-155">Hinzufügen eines Projektverweises</span><span class="sxs-lookup"><span data-stu-id="87473-155">Add a project reference</span></span>
 
-<span data-ttu-id="05412-156">Anfänglich besitzt das neue Konsolen-App-Projekt keinen Zugriff auf die Klassenbibliothek.</span><span class="sxs-lookup"><span data-stu-id="05412-156">Initially, the new console app project doesn't have access to the class library.</span></span> <span data-ttu-id="05412-157">Damit es Methoden in der Klassenbibliothek aufrufen kann, erstellen Sie einen Projektverweis auf das Klassenbibliotheksprojekt.</span><span class="sxs-lookup"><span data-stu-id="05412-157">To allow it to call methods in the class library, create a project reference to the class library project.</span></span>
+<span data-ttu-id="87473-156">Anfänglich besitzt das neue Konsolen-App-Projekt keinen Zugriff auf die Klassenbibliothek.</span><span class="sxs-lookup"><span data-stu-id="87473-156">Initially, the new console app project doesn't have access to the class library.</span></span> <span data-ttu-id="87473-157">Damit es Methoden in der Klassenbibliothek aufrufen kann, erstellen Sie einen Projektverweis auf das Klassenbibliotheksprojekt.</span><span class="sxs-lookup"><span data-stu-id="87473-157">To allow it to call methods in the class library, create a project reference to the class library project.</span></span>
 
-1. <span data-ttu-id="05412-158">Führen Sie den folgenden Befehl aus:</span><span class="sxs-lookup"><span data-stu-id="05412-158">Run the following command:</span></span>
+1. <span data-ttu-id="87473-158">Führen Sie den folgenden Befehl aus:</span><span class="sxs-lookup"><span data-stu-id="87473-158">Run the following command:</span></span>
 
    ```dotnetcli
    dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
    ```
 
-   <span data-ttu-id="05412-159">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="05412-159">The terminal output looks like the following example:</span></span>
+   <span data-ttu-id="87473-159">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="87473-159">The terminal output looks like the following example:</span></span>
 
-   ```
+   ```output
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-## <a name="run-the-app"></a><span data-ttu-id="05412-160">Ausführen der App</span><span class="sxs-lookup"><span data-stu-id="05412-160">Run the app</span></span>
+## <a name="run-the-app"></a><span data-ttu-id="87473-160">Ausführen der App</span><span class="sxs-lookup"><span data-stu-id="87473-160">Run the app</span></span>
 
-1. <span data-ttu-id="05412-161">Führen Sie die folgenden Befehle im Terminal aus:</span><span class="sxs-lookup"><span data-stu-id="05412-161">Run the following command in the terminal:</span></span>
+1. <span data-ttu-id="87473-161">Führen Sie die folgenden Befehle im Terminal aus:</span><span class="sxs-lookup"><span data-stu-id="87473-161">Run the following command in the terminal:</span></span>
 
    ```dotnetcli
    dotnet run --project ShowCase/ShowCase.csproj
    ```
 
-1. <span data-ttu-id="05412-162">Testen Sie das Programm, indem Sie Zeichenfolgen eingeben und die <kbd>EINGABETASTE</kbd> drücken, und drücken Sie dann die <kbd>EINGABETASTE</kbd>, um das Programm zu beenden.</span><span class="sxs-lookup"><span data-stu-id="05412-162">Try out the program by entering strings and pressing <kbd>Enter</kbd>, then press <kbd>Enter</kbd> to exit.</span></span>
+1. <span data-ttu-id="87473-162">Testen Sie das Programm, indem Sie Zeichenfolgen eingeben und die <kbd>EINGABETASTE</kbd> drücken, und drücken Sie dann die <kbd>EINGABETASTE</kbd>, um das Programm zu beenden.</span><span class="sxs-lookup"><span data-stu-id="87473-162">Try out the program by entering strings and pressing <kbd>Enter</kbd>, then press <kbd>Enter</kbd> to exit.</span></span>
 
-   <span data-ttu-id="05412-163">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="05412-163">The terminal output looks like the following example:</span></span>
+   <span data-ttu-id="87473-163">Die Terminalausgabe sieht wie das folgende Beispiel aus:</span><span class="sxs-lookup"><span data-stu-id="87473-163">The terminal output looks like the following example:</span></span>
 
-   ```
+   ```output
    Press <Enter> only to exit; otherwise, enter a string and press <Enter>:
 
    A string that starts with an uppercase letter
@@ -205,14 +205,14 @@ ms.locfileid: "86308883"
    Begins with uppercase? : Yes
    ```
 
-## <a name="additional-resources"></a><span data-ttu-id="05412-164">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="05412-164">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="87473-164">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="87473-164">Additional resources</span></span>
 
-* [<span data-ttu-id="05412-165">Entwickeln von Bibliotheken mit der .NET Core-CLI</span><span class="sxs-lookup"><span data-stu-id="05412-165">Develop libraries with the .NET Core CLI</span></span>](libraries.md)
-* <span data-ttu-id="05412-166">[.NET Standard-Versionen und die von ihnen unterstützten Plattformen](../../standard/net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="05412-166">[.NET Standard versions and the platforms they support](../../standard/net-standard.md).</span></span>
+* [<span data-ttu-id="87473-165">Entwickeln von Bibliotheken mit der .NET Core-CLI</span><span class="sxs-lookup"><span data-stu-id="87473-165">Develop libraries with the .NET Core CLI</span></span>](libraries.md)
+* <span data-ttu-id="87473-166">[.NET Standard-Versionen und die von ihnen unterstützten Plattformen](../../standard/net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="87473-166">[.NET Standard versions and the platforms they support](../../standard/net-standard.md).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="05412-167">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="05412-167">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="87473-167">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="87473-167">Next steps</span></span>
 
-<span data-ttu-id="05412-168">In diesem Tutorial haben Sie eine Projektmappe erstellt, ein Bibliotheksprojekt hinzugefügt und ein Konsolen-App-Projekt hinzugefügt, das die Bibliothek verwendet.</span><span class="sxs-lookup"><span data-stu-id="05412-168">In this tutorial, you created a solution, added a library project, and added a console app project that uses the library.</span></span> <span data-ttu-id="05412-169">Im nächsten Tutorial fügen Sie der Projektmappe ein Komponententestprojekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="05412-169">In the next tutorial, you add a unit test project to the solution.</span></span>
+<span data-ttu-id="87473-168">In diesem Tutorial haben Sie eine Projektmappe erstellt, ein Bibliotheksprojekt hinzugefügt und ein Konsolen-App-Projekt hinzugefügt, das die Bibliothek verwendet.</span><span class="sxs-lookup"><span data-stu-id="87473-168">In this tutorial, you created a solution, added a library project, and added a console app project that uses the library.</span></span> <span data-ttu-id="87473-169">Im nächsten Tutorial fügen Sie der Projektmappe ein Komponententestprojekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="87473-169">In the next tutorial, you add a unit test project to the solution.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="05412-170">Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="05412-170">Test a .NET Standard library with .NET Core using Visual Studio Code</span></span>](testing-library-with-visual-studio-code.md)
+> [<span data-ttu-id="87473-170">Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="87473-170">Test a .NET Standard library with .NET Core using Visual Studio Code</span></span>](testing-library-with-visual-studio-code.md)

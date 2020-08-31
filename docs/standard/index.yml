@@ -6,12 +6,12 @@ metadata:
   description: Hier erfahren Sie mehr über .NET, eine Open-Source-Entwicklerplattform für viele verschiedene Anwendungstypen.
   ms.topic: landing-page
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 37908d252d6dfcef92ce642f6f7c6f7e12f551f1
+  ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135814"
+  ms.lasthandoff: 08/28/2020
+  ms.locfileid: "89053211"
 landingContent:
 - title: Informationen zu .NET
   linkLists:
@@ -141,6 +141,8 @@ landingContent:
       url: garbage-collection/fundamentals.md
     - text: Implementieren einer Dispose-Methode
       url: garbage-collection/implementing-dispose.md
+    - text: Implementieren einer DisposeAsync-Methode
+      url: garbage-collection/implementing-disposeasync.md
 - title: Grundlegendes zur parallelen Programmierung
   linkLists:
   - linkListType: overview
