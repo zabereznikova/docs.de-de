@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 11de13a6674411bbad52678b59879ed26366e0f1
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916975"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811053"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Migration von Newtonsoft.Json zu System.Text.Json
 
@@ -147,7 +147,7 @@ Während der Deserialisierung akzeptiert `Newtonsoft.Json` Eigenschaftsnamen, di
 
 Ein in einfache Anführungszeichen eingeschlossener Wert führt zu einer [JsonException](xref:System.Text.Json.JsonException) mit folgender Meldung:
 
-```
+```output
 ''' is an invalid start of a value.
 ```
 
@@ -174,7 +174,7 @@ public class ExampleClass
 
 `System.Text.Json` deserialisiert Werte, die keine Zeichenfolgen sind, nicht in Zeichenfolgeneigenschaften. Ein für ein Zeichenfolgenfeld empfangener Wert, der keine Zeichenfolge ist, führt zu einer [JsonException](xref:System.Text.Json.JsonException) mit folgender Meldung:
 
-```
+```output
 The JSON value could not be converted to System.String.
 ```
 

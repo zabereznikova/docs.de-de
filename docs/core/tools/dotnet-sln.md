@@ -2,12 +2,12 @@
 title: Befehl „dotnet sln“
 description: Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
 ms.date: 02/14/2020
-ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: efe52f64a29c8825070bae9ee96b430b32176ffa
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463397"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053030"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -180,7 +180,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 - Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu, indem Sie ein Globmuster (nur Windows PowerShell) verwenden:
 
   ```dotnetcli
-  dotnet sln todo.sln add (ls **/*.csproj)
+  dotnet sln todo.sln add (ls -r **/*.csproj)
   ```
 
 - Entfernen Sie mehrere C#-Projekte aus einer Projektmappe, indem Sie ein Globmuster (nur UNIX/Linux) verwenden:
@@ -192,5 +192,5 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 - Entfernen Sie mehrere C#-Projekte aus einer Projektmappe, indem Sie ein Globmuster (nur Windows PowerShell) verwenden:
 
   ```dotnetcli
-  dotnet sln todo.sln remove (ls **/*.csproj)
+  dotnet sln todo.sln remove (ls -r **/*.csproj)
   ```

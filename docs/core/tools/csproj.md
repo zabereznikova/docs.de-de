@@ -3,12 +3,12 @@ title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608327"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810884"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -20,13 +20,13 @@ Es wird implizit auf Metapakete verwiesen, basierend auf der Grundlage des/der Z
 
 ```xml
  <PropertyGroup>
-   <TargetFramework>netcoreapp2.1</TargetFramework>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
  </PropertyGroup>
  ```
 
  ```xml
  <PropertyGroup>
-   <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+   <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
  </PropertyGroup>
  ```
 
@@ -116,11 +116,15 @@ Sie können die `<EnableDefaultItems>`-Eigenschaft wie im folgenden Beispiel auf
 
 Obwohl diese csproj-Änderungen für eine erhebliche Vereinfachung der Projektdateien sorgen, möchten Sie vielleicht das vollständig erweiterte Projekt anzeigen, so wie es von MSBuild erkannt wird, nachdem das SDK und die zugehörigen Ziele eingeschlossen wurden. Führen Sie eine Vorverarbeitung des Projekts mit der [`/pp`-Option](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) des Befehls [`dotnet msbuild`](dotnet-msbuild.md) durch. Dieser zeigt die importierten Dateien, ihre Quellen und ihren Beitrag zum Build, ohne das Projekt tatsächlich zu erstellen:
 
-`dotnet msbuild -pp:fullproject.xml`
+```dotnetcli
+dotnet msbuild -pp:fullproject.xml
+```
 
 Wenn das Projekt mehrere Zielframeworks umfasst, sollten nur Ergebnisse für ein Framework ausgegeben werden, indem dieses als MSBuild-Eigenschaft angegeben wird:
 
-`dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
+```dotnetcli
+dotnet msbuild -p:TargetFramework=netcoreapp3.1 -pp:fullproject.xml
+```
 
 ## <a name="additions"></a>Erweiterungen
 
@@ -218,10 +222,10 @@ Im folgenden Beispiel werden die Fallbacks für alle Ziele in Ihrem Projekt bere
 </PackageTargetFallback >
 ```
 
-Im folgenden Beispiel werden nur die Fallbacks für das `netcoreapp2.1`-Ziel angegeben:
+Im folgenden Beispiel werden nur die Fallbacks für das `netcoreapp3.1`-Ziel angegeben:
 
 ```xml
-<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp3.1'">
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```

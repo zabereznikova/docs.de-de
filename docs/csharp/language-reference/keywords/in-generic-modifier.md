@@ -1,19 +1,20 @@
 ---
+description: in (generischer Modifizierer) – C#-Referenz
 title: in (generischer Modifizierer) – C#-Referenz
 ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: 57da13f6dc6719166b9051afeb2532ba5fbeff3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: feae17be7bdf29f6bc90e8c85b3878d4714699f4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713488"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118454"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (generischer Modifizierer) (C#-Referenz)
 
-Das Schlüsselwort `in` gibt für generische Typparameter an, dass der Typparameter kontravariant ist. Sie können das Schlüsselwort `in` in generischen Schnittstellen und Delegaten verwenden.
+Das Schlüsselwort `in` gibt für generische Typparameter an, dass der Typparameter kontravariant ist. Sie können das `in`-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.
 
 Kontravarianz ermöglicht Ihnen die Verwendung eines weniger stark abgeleiteten Typs als der durch den generischen Parameter angegebene. Dadurch wird eine implizite Konvertierung von Klassen berücksichtigt, die kontravariante Schnittstellen und implizite Konvertierung von Delegattypen implementieren. Kovarianz und Kontravarianz in generischen Typparametern werden für Verweistypen unterstützt, aber nicht für Werttypen.
 
@@ -41,7 +42,7 @@ Das folgende Beispiel zeigt, wie Sie einen kontravarianten generischen Delegaten
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [out](out-generic-modifier.md)
 - [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84279762"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811066"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung (Marshallen) in .NET
 
@@ -93,7 +93,7 @@ Der Typ `Enum` ähnelt einem offenen generischen Typ: Ein Konverter für `Enum` 
 
 Wenn Sie im Fehlerbehandlungscode eine Ausnahme auslösen müssen, sollten Sie erwägen, eine <xref:System.Text.Json.JsonException> ohne Meldung auszulösen. Dieser Ausnahmetyp erstellt automatisch eine Meldung, die den Pfad zu dem Teil des JSON-Codes enthält, der den Fehler verursacht hat. Beispielsweise erzeugt die Anweisung `throw new JsonException();` eine Fehlermeldung wie im folgenden Beispiel:
 
-```
+```output
 Unhandled exception. System.Text.Json.JsonException:
 The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.

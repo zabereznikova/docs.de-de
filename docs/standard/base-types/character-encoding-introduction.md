@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656292"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812119"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 
@@ -89,7 +89,7 @@ Im vorherigen Beispiel wird jedes char mit Ausnahme des Leerzeichens durch zwei 
 
 Ein einzelnes Unicode-Emoji wird ebenfalls durch zwei `char`s dargestellt, wie im folgenden Beispiel eines Emojis für einen Ochsen:
 
-```
+```output
 "🐂".Length = 2
 s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')

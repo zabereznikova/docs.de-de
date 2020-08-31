@@ -2,12 +2,12 @@
 title: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
 description: Erstellen Sie ein Komponententestprojekt für eine .NET Core-Klassenbibliothek. Sie überprüfen mithilfe von Komponententests, ob die .NET Core-Klassenbibliothek ordnungsgemäß funktioniert.
 ms.date: 06/08/2020
-ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701032"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811716"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
 
@@ -112,7 +112,7 @@ So erstellen Sie die Testmethoden:
 
    Die Terminalausgabe gibt an, dass alle Tests bestanden wurden.
 
-   ```
+   ```output
    Starting test execution, please wait...
 
    A total of 1 test files matched the specified pattern.
@@ -142,7 +142,7 @@ Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie
 
    Die Terminalausgabe zeigt, dass bei einem Test ein Fehler auftritt, und gibt eine Fehlermeldung für diesen Test an: „Fehler bei Assert.IsFalse. Für 'Error' erwartet: False; tatsächlich: True“. Wegen des Fehlers wurden keine auf „Error“ folgenden Zeichenfolgen im Array getestet.
 
-   ```
+   ```output
    Starting test execution, please wait...
 
    A total of 1 test files matched the specified pattern.
