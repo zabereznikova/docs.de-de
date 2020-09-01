@@ -1,4 +1,5 @@
 ---
+description: -delaysign (C#-Compileroptionen)
 title: -delaysign (C#-Compileroptionen)
 ms.date: 05/15/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5512ebeca4672f5d69852ab07c3f3fa40c305327
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970444"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125838"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C#-Compileroptionen)
 
@@ -31,7 +32,7 @@ Durch diese Option reserviert der Compiler Speicherplatz in der Ausgabedatei, da
 
 Verwenden Sie **-delaysign-** , wenn die Assembly vollständig signiert werden soll. Verwenden Sie **-delaysign+** , wenn Sie nur den öffentlichen Schlüssel in der Assembly platzieren möchten. Der Standardwert ist **-delaysign-** .
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die Option **-delaysign** hat keine Auswirkung, wenn Sie nicht mit [-keyfile](./keyfile-compiler-option.md) oder [-keycontainer](./keycontainer-compiler-option.md) verwendet wird.
 

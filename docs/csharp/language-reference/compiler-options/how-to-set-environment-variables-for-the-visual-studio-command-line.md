@@ -1,4 +1,5 @@
 ---
+description: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile
 title: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile
 ms.date: 12/20/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 99e2a837877494dd4c7e0106047bce3cc39a9282
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b985c85e2fddce459ed68b3d07ba7d54a8b2d0a7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75342363"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125604"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile
 
@@ -50,6 +51,6 @@ Um die verfügbaren Optionen für „VsDevCmd.BAT“ anzuzeigen, führen Sie den
 VsDevCmd.bat -help
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen über die Befehlszeile mit csc.exe](./command-line-building-with-csc-exe.md)

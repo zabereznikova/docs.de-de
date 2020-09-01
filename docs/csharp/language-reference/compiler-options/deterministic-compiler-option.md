@@ -1,4 +1,5 @@
 ---
+description: -deterministic (C#-Compileroptionen)
 title: -deterministic (C#-Compileroptionen)
 ms.date: 04/12/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d0bcc2957e5a666c21cdc2ce61e74fc90fe3530
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73455189"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125825"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -52,7 +53,7 @@ Der Compiler berücksichtigt die folgenden Eingaben für den Determinismus:
 
 Wenn Quellen öffentlich verfügbar sind, kann die deterministische Kompilierung verwendet werden, um festzustellen, ob eine Binärdatei aus einer vertrauenswürdigen Quelle kompiliert wird. Sie kann auch in einem fortlaufenden Buildsystem verwendet werden, um zu bestimmen, ob Buildschritte, die von den Änderungen einer Binärdatei abhängig sind, ausgeführt werden müssen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

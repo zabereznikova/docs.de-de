@@ -1,4 +1,5 @@
 ---
+description: -keycontainer (C#-Compileroptionen)
 title: -keycontainer (C#-Compileroptionen)
 ms.date: 05/16/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: fead2d4296cfa6fb0195cb4b43f6448c0fc7e6a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b11380683159b7792149558a5dd432707ba3818
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970140"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125500"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (C#-Compileroptionen)
 Gibt den Namen des kryptografischen Schlüsselcontainers an.  
@@ -28,7 +29,7 @@ Gibt den Namen des kryptografischen Schlüsselcontainers an.
  `string`  
  Der Name des Containers mit dem Schlüssel für einen starken Namen  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Option **-keycontainer** verwendet wird, erstellt der Compiler eine teilbare Komponente. Der Compiler fügt einen öffentlichen Schlüssel vom angegebenen Container in das Assemblymanifest ein und signiert die endgültige Assembly mit dem privaten Schlüssel. Geben Sie `sn -k file` in die Befehlszeile ein, um eine Schlüsseldatei zu generieren. `sn -i` installiert das Schlüsselpaar im Container. Diese Option wird nicht unterstützt, wenn der Compiler auf CoreCLR ausgeführt wird. Verwenden Sie zum Signieren einer Assembly beim Erstellen auf CoreCLR die Option [-keyfile](keyfile-compiler-option.md).
   
  Wenn Sie mit der Option [-target:module](./target-module-compiler-option.md) kompilieren, wird der Name der Schlüsseldatei im Modul aufbewahrt und in die Assembly integriert, wenn Sie dieses Modul in eine Assembly mit [-addmodule](./addmodule-compiler-option.md) kompilieren.  

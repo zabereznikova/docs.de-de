@@ -1,4 +1,5 @@
 ---
+description: -moduleassemblyname (C#-Compileroption)
 title: -moduleassemblyname (C#-Compileroption)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 1477eeb0f2e16e18cb86009739bc8e7d9dee2ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d669a1687abe496b921d5670b9149b0e933b2d95
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173717"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125253"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C#-Compileroption)
 Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.  
@@ -28,7 +29,7 @@ Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreif
  `assembly_name`  
  Der Name einer Assembly, auf deren nicht öffentliche Typen die NETMODULE-Datei zugreifen kann  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **-moduleassemblyname** sollte beim Erstellen einer NETMODULE-Datei und wenn die folgenden Bedingungen erfüllt sind verwendet werden:  
   
 - Die NETMODULE-Datei benötigt Zugriff auf nicht öffentliche Typen in einer vorhandenen Assembly.  

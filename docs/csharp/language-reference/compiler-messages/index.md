@@ -1,4 +1,5 @@
 ---
+description: C#-Compilerfehler
 title: C#-Compilerfehler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: af1ec49e6c7eb94c4e324b947e8ead8149d0a997
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7c0290c799a7ae4a371578396d2d2d747d00d28
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72771879"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126241"
 ---
 # <a name="c-compiler-errors"></a>C#-Compilerfehler
 

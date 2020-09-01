@@ -1,15 +1,16 @@
 ---
+description: Zugriffsmodifizierer – C#-Referenz
 title: Zugriffsmodifizierer – C#-Referenz
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 754949e42771de30cc2dce7e4e610f70ada6dfd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ea7a65c23b6a1edee572f6f6ff6c52d14358408
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713841"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127151"
 ---
 # <a name="access-modifiers-c-reference"></a>Zugriffsmodifizierer (C#-Referenz)
 Zugriffsmodifizierer sind Schlüsselwörter, die verwendet werden, um die deklarierte Zugriffsart eines Members oder Typs anzugeben. In diesem Abschnitt werden die vier Zugriffsmodifizierer beschrieben:  
@@ -29,7 +30,7 @@ Zugriffsmodifizierer sind Schlüsselwörter, die verwendet werden, um die deklar
   
 - [`protected internal`](protected-internal.md): Der Zugriff ist auf die aktuelle Assembly oder auf Typen beschränkt, die von der enthaltenden Klasse abgeleitet sind.  
   
-- [`private`](private.md): Der Zugriff ist auf den enthaltenden Typ beschränkt.  
+- [`private`](private.md): Der Zugriff ist auf die enthaltende Klasse beschränkt.  
 
 - [`private protected`](private-protected.md): Der Zugriff ist auf die enthaltende Klasse oder auf Typen beschränkt, die von der enthaltenden Klasse innerhalb der aktuellen Assembly abgeleitet sind.  
   
@@ -41,7 +42,7 @@ Zugriffsmodifizierer sind Schlüsselwörter, die verwendet werden, um die deklar
   
 - [Einschränkungen bei der Verwendung von Zugriffsebenen](./restrictions-on-using-accessibility-levels.md): Ein Überblick über die Einschränkungen bei der Verwendung deklarierter Zugriffsebenen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

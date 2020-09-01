@@ -1,4 +1,5 @@
 ---
+description: -addmodule (C#-Compileroptionen)
 title: -addmodule (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bcc615d52aec0a09ebf3913b3ece71f2cbfcbda9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970188"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126124"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C#-Compileroptionen)
 Mit dieser Option wird ein Modul hinzugefügt, das mit dem Schalter „target:mocule“ in der aktuellen Kompilierung erstellt wurde.  
@@ -28,7 +29,7 @@ Mit dieser Option wird ein Modul hinzugefügt, das mit dem Schalter „target:mo
  `file`, `file2`  
  Eine Ausgabedatei, die Metadaten enthält. Die Datei kann kein Assemblymanifest enthalten. Trennen Sie die Dateinamen entweder mit einem Komma oder einem Semikolon, um mehr als eine Datei zu importieren.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Alle Module, die mit **-addmodule** hinzugefügt werden, müssen sich zur Laufzeit im gleichen Verzeichnis wie die Ausgabedatei befinden. Das bedeutet, dass Sie zur Kompilierzeit ein beliebiges Modul in einem Verzeichnis angeben können, sich das Modul aber zur Laufzeit im Anwendungsverzeichnis befinden muss. Wenn sich das Modul zur Laufzeit nicht im Anwendungsverzeichnis befindet, wird eine <xref:System.TypeLoadException> ausgelöst.  
   
  `file` kann keine Assembly enthalten. Wenn die Ausgabedatei z.B. mit [-target:module](./target-module-compiler-option.md) erstellt wurde, können die Metadaten mit **-addmodule** importiert werden.  
@@ -49,4 +50,4 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
 - [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
 - [Mehrfachdateiassemblys](../../../framework/app-domains/multifile-assemblies.md)
-- [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../framework/app-domains/build-multifile-assembly.md)
+- [How to: Erstellen einer Mehrfachdateiassembly](../../../framework/app-domains/build-multifile-assembly.md)

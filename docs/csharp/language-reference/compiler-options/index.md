@@ -1,4 +1,5 @@
 ---
+description: C#-Compileroptionen
 title: C#-Compileroptionen
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bcb246055ecb553bbefad2a0d5c95bf6a083ee6f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972748"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125526"
 ---
 # <a name="c-compiler-options"></a>C#-Compileroptionen
 
@@ -23,7 +24,7 @@ Der Compiler generiert ausführbare Dateien (EXE), Dynamic Link Libraries (DLL) 
 
 Jede Compileroption ist in zwei Varianten verfügbar: **-option** und **/option**. In der Dokumentation wird nur das Formular **-option** angezeigt.
 
-In Visual Studio legen Sie Compileroptionen in der Datei *web.config* fest. Weitere Informationen finden Sie unter [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).
+In Visual Studio legen Sie Compileroptionen in der Datei *web.config* fest. Weitere Informationen finden Sie unter [\<compiler>Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

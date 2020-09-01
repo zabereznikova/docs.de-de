@@ -1,4 +1,5 @@
 ---
+description: -linkresource (C#-Compileroptionen)
 title: -linkresource (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 41af8e0ba8ffebd07d3cb1d2bc5fbc04b8cd595d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 162baad57397b6d992dcf8f03f0b3661e0105cb8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173730"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125344"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C#-Compileroptionen)
 Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt. Dies ist ein Unterschied zur Option [-resource](./resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.  
@@ -37,7 +38,7 @@ Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressour
  `accessibility-modifier` (optional)  
  Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist public.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verknüpfte Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mit den C#-Compiler erstellt werden. Geben Sie `private` als Modifizierer der Barrierefreiheit an. Außer `public` und `private` sind keine anderen Modifizierer zulässig.  
   
  **-linkresource** erfordert eine andere [-target](./target-compiler-option.md)-Option als **-target:module**.  

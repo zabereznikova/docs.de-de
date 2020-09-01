@@ -1,16 +1,17 @@
 ---
+description: Zugriffsebenen – C#-Referenz
 title: Zugriffsebenen – C#-Referenz
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26b8f78595b1406deb371113cf491b80ad7c1474
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713815"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127021"
 ---
 # <a name="accessibility-levels-c-reference"></a>Zugriffsebenen (C#-Referenz)
 
@@ -39,7 +40,7 @@ Verwenden Sie die Zugriffsmodifizierer `public`, `protected`, `internal` oder `p
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|Keiner|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Keiner|  
+|`interface`|`public`|Keine|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  Der Zugriff auf einen geschachtelten Typ hängt von seiner [Zugriffsdomäne](./accessibility-domain.md) ab, die sowohl durch den deklarierten Zugriffstyp des Members als auch durch die Zugriffsdomäne des direkt enthaltenden Typs bestimmt wird. Die Zugriffsdomäne eines geschachtelten Typs kann jedoch nicht über die des enthaltenden Typs hinausgehen.  
@@ -47,7 +48,7 @@ Verwenden Sie die Zugriffsmodifizierer `public`, `protected`, `internal` oder `p
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

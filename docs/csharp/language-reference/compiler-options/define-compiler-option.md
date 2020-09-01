@@ -1,4 +1,5 @@
 ---
+description: -define (C#-Compileroptionen)
 title: -define (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b7a1c6e92d2c60ce289f29044774c3aa42ca84f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173743"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125877"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C#-Compileroptionen)
 Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihres Programms.  
@@ -31,7 +32,7 @@ Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihr
  `name`, `name2`  
  Der Name eines oder mehrerer Symbole, die Sie definieren möchten.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Option **-define** hat dieselbe Auswirkung wie die Verwendung einer [#define](../preprocessor-directives/preprocessor-define.md)-Präprozessoranweisung, außer dass die Compileroption für alle Dateien im Projekt gültig ist. Ein Symbol bleibt in einer Quelldatei definiert, bis eine [#undef](../preprocessor-directives/preprocessor-undef.md)-Anweisung in der Quelldatei die Definition entfernt. Wenn Sie die Option „-define“ verwenden, hat eine `#undef`-Anweisung in einer Datei keinerlei Auswirkung auf andere Quellcodedateien im Projekt.  
   
  Sie können die durch diese Option erstellten Symbole in Verbindung mit [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md), und [#endif](../preprocessor-directives/preprocessor-endif.md) verwenden, um Quelldateien bedingt zu kompilieren.  

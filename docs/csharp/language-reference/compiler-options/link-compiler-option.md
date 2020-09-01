@@ -1,4 +1,5 @@
 ---
+description: -link (C#-Compileroptionen)
 title: -link (C#-Compileroptionen)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: d5684298bbd736cae2d9c13381431036806aab17
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0f6927fd240f3f8535478d163be615fc74dad8d2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144460"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125396"
 ---
 # <a name="-link-c-compiler-options"></a>-link (C#-Compileroptionen)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.
@@ -82,7 +83,7 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
 ## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md)
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../standard/assembly/embed-types-visual-studio.md)
 - [-reference (C#-Compileroptionen)](./reference-compiler-option.md)
 - [-noconfig (C#-Compileroptionen)](./noconfig-compiler-option.md)
 - [Erstellen über die Befehlszeile mit csc.exe](./command-line-building-with-csc-exe.md)

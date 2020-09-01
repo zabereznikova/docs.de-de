@@ -1,4 +1,5 @@
 ---
+description: -debug (C#-Compileroptionen)
 title: -debug (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 164530a5ec99e7d5b9f34dbcdfb18d80f3102308
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69922513"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125916"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C#-Compileroptionen)
 Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generiert und sie in der Ausgabedatei bzw. in Ausgabedateien platziert.  
@@ -48,7 +49,7 @@ Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generier
   
 1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2. Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Erstellen**.  
   
 3. Klicken Sie auf die Schaltfläche **Erweitert** .  
   
@@ -63,7 +64,7 @@ Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generier
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

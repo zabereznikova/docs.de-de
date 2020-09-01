@@ -1,4 +1,5 @@
 ---
+description: -lib (C#-Compileroptionen)
 title: -lib (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606817"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125448"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C#-Compileroptionen)
 Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird. Dies geschieht mithilfe der Option [-reference (C#-Compileroptionen)](./reference-compiler-option.md).  
@@ -31,7 +32,7 @@ Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
  `dir2`  
  Mindestens ein zusätzliches Verzeichnis, in dem nach Assemblyverweisen gesucht werden kann. Trennen Sie zusätzliche Verzeichnisnamen mit einem Komma, aber ohne Leerzeichen zu verwenden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Compiler sucht in folgender Reihenfolge nach Assemblyverweisen, die nicht voll qualifiziert sind:  
   
 1. Aktuelles Arbeitsverzeichnis Dies ist das Arbeitsverzeichnis, aus dem der Compiler abgerufen wird.  
