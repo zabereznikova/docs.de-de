@@ -1,4 +1,5 @@
 ---
+description: is – C#-Referenz
 title: is – C#-Referenz
 ms.date: 06/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398304"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134509"
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz)
 
@@ -44,7 +45,7 @@ Der Ausdruck `is` ist `true`, wenn *expr* nicht `null` ist und eine der folgende
 
 - *expr* ist eine Instanz eines Typs, der von *Typ* abgeleitet wird. Das Ergebnis von *expr* kann, in anderen Worten, in eine Instanz von *Typ* umgewandelt werden.
 
-- *expr* hat einen Kompilierzeittyp, der eine Basisklasse von *Typ* ist, und *expr* hat einen Runtime-Typ,der *Typ* ist oder von *Typ* abgeleitet wird. Der *Kompilierzeittyp* einer Variablen ist der Typ der Variablen, wie in der Deklaration des Typs definiert. Der *Laufzeittyp* einer Variablen ist der Typ der Instanz, die dieser Variablen zugewiesen wird.
+- *expr* hat einen Kompilierzeittyp, der eine Basisklasse von *type* ist, und *expr* hat einen Laufzeittyp,der *type* ist oder von *type* abgeleitet wurde. Der *Kompilierzeittyp* einer Variablen ist der Typ der Variablen, wie in der Deklaration des Typs definiert. Der *Laufzeittyp* einer Variablen ist der Typ der Instanz, die dieser Variable zugewiesen wird.
 
 - *expr* ist eine Instanz eines Typs, der die Schnittstelle *Typ* implementiert.
 
@@ -70,21 +71,21 @@ Der gleichwertige Code erfordert ohne einen Musterabgleich eine gesonderte Zuwei
 
 ### <a name="constant-pattern"></a>Konstantenmuster
 
-Beim Durchführen eines Musterabgleichs mit einem Konstantenmuster prüft `is`, ob ein Ausdruck einer angegebenen Konstanten entspricht. In C# 6 und früheren Versionen wird das Konstantenmuster von der Anweisung [switch](switch.md) unterstützt. Ab C# 7.0 wird es ebenfalls von der Anweisung `is` unterstützt. Die Syntax lautet:
+Beim Durchführen eines Musterabgleichs mit einem Konstantenmuster prüft `is`, ob ein Ausdruck einer angegebenen Konstanten entspricht. In C# 6 und früheren Versionen wird das Konstantenmuster von der Anweisung [switch](switch.md) unterstützt. Ab C# 7.0 wird es ebenfalls von der Anweisung `is` unterstützt. Die Syntax sieht wie folgt aus:
 
 ```csharp
    expr is constant
 ```
 
-Hier ist *expr* der auszuwertende Ausdruck, und *constant* ist der Wert, auf den geprüft werden soll. *constant* kann einer der folgenden konstanten Ausdrücke sein:
+Hier ist *expr* der auszuwertende Ausdruck, und *constant* ist der Wert, auf den geprüft werden soll. *constant* kann eine der folgenden konstanten Ausdrücke sein:
 
-- Ein Literalwert.
+- Ein Literalwert
 
-- Der Name einer deklarierten `const`-Variable.
+- Der Name einer deklarierten `const`-Variablen
 
 - Eine Enumerationskonstante.
 
-Der konstante Ausdruck wird wie folgt ausgewertet:
+Der Konstantenausdruck wird wie folgt ausgewertet:
 
 - Wenn *expr* und *constant* integrale Typen sind, bestimmt der C#-Gleichheitsoperator, ob der Ausdruck `true` (d.h., ob `expr == constant`) zurückgibt.
 
@@ -94,7 +95,7 @@ Im folgenden Beispiel werden Typ- und Konstantenmuster miteinander vereint, um z
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-Die Überprüfung auf `null` kann mithilfe des Konstantenmusters erfolgen. Das Schlüsselwort `null` wird von der `is`-Anweisung unterstützt. Die Syntax lautet:
+Die Überprüfung auf `null` kann mithilfe des Konstantenmusters erfolgen. Das Schlüsselwort `null` wird von der `is`-Anweisung unterstützt. Die Syntax sieht wie folgt aus:
 
 ```csharp
    expr is null
@@ -106,7 +107,7 @@ Das folgende Beispiel zeigt einen Vergleich von `null`-Überprüfungen:
 
 ### <a name="var-pattern"></a>var-Muster
 
-Eine Musterübereinstimmung mit einem `var`-Muster wird immer erfolgreich ausgeführt. Die Syntax lautet:
+Eine Musterübereinstimmung mit einem `var`-Muster wird immer erfolgreich ausgeführt. Die Syntax sieht wie folgt aus:
 
 ```csharp
    expr is var varname
@@ -129,7 +130,7 @@ Weitere Informationen finden Sie im Abschnitt [is-Operator](~/_csharplang/spec/e
 - [Mustervergleich](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Musterabgleich mit Generics](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](index.md)

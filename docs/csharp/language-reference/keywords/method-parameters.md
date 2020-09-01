@@ -1,4 +1,5 @@
 ---
+description: Methodenparameter – C#-Referenz
 title: Methodenparameter – C#-Referenz
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-ms.openlocfilehash: 2cc7f9178fa5c1a040be9d45ba66fac292bb0e28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7090bf1c3df65cf1e65942404f883b49612e7521
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713376"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134405"
 ---
 # <a name="method-parameters-c-reference"></a>Methodenparameter (C#-Referenz)
 
@@ -27,7 +28,7 @@ Parameter, die ohne [in](./in-parameter-modifier.md), [ref](./ref.md) oder [out]
   
 - Mit [out](./out-parameter-modifier.md) wird festgelegt, dass dieser Parameter als Verweis übergeben wird und von der aufgerufenen Methode geschrieben wird.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

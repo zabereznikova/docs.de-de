@@ -1,4 +1,5 @@
 ---
+description: override-Modifizierer – C#-Referenz
 title: override-Modifizierer – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: acad3aa3b196c184132ad1acdf52b18a799b0896
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51ca806310214981b7ff24a796fe078d902dca4d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713247"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134457"
 ---
 # <a name="override-c-reference"></a>override (C#-Referenz)
 
@@ -46,7 +47,7 @@ In diesem Beispiel wird eine Basisklasse namens `Employee` und eine abgeleitete 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
