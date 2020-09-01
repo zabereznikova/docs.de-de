@@ -1,4 +1,5 @@
 ---
+description: -nostdlib (C#-Compileroptionen)
 title: -nostdlib (C#-Compileroptionen)
 ms.date: 12/20/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 214918b32f1f1276eb936e66daba3d372a1e9228
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345075"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125097"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C#-Compileroptionen)
 
@@ -25,11 +26,11 @@ ms.locfileid: "75345075"
 -nostdlib[+ | -]
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie diese Option, wenn Sie Ihren eigenen Systemnamespace und die entsprechenden Objekte definieren oder erstellen möchten.
 
-Wenn Sie **-nostdlib** nicht angeben, wird „mscorlib.dll“ in das Programm importiert (entspricht der Angabe von **-nostdlib-** ). Die Angabe von **-nostdlib** entspricht der Angabe von **-nostdlib+** .
+Wenn Sie **-nostdlib** nicht angeben, wird „mscorlib.dll“ in das Programm importiert (entspricht der Angabe von **-nostdlib-**). Die Angabe von **-nostdlib** entspricht der Angabe von **-nostdlib+** .
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>So legen Sie diese Compileroption in Visual Studio fest
 

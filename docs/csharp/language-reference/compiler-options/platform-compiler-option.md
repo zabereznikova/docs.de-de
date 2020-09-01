@@ -1,4 +1,5 @@
 ---
+description: -platform (C#-Compileroptionen)
 title: -platform (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2e4fc37418243ff6998d19165250b895c0a4fa1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70849867"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124863"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C#-Compileroptionen)
 
@@ -30,7 +31,7 @@ Gibt an, welche Version der Common Language Runtime (CLR) die Assembly ausführe
 `string` \
 anycpu (Standard), anycpu32bitpreferred, ARM, x64, x86, oder Itanium.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 - **anycpu** (Standard) kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Ihre Anwendung wird nach Möglichkeit als 64-Bit-Prozess ausgeführt und wechselt zurück zu 32-Bit, wenn nur dieser Modus verfügbar ist.
 
@@ -64,7 +65,7 @@ Weitere Informationen zum Entwickeln einer Anwendung, die auf einem 64-Bit-Windo
 
 1. Öffnen Sie die Seite **Eigenschaften** für das Projekt.
 
-2. Klicken Sie auf die Eigenschaftenseite **Build** .
+2. Klicken Sie auf die Eigenschaftenseite **Erstellen**.
 
 3. Ändern Sie die Eigenschaft **Zielplattform**, und aktivieren oder deaktivieren Sie für Projekte, die auf .NET Framework 4.5 ausgerichtet sind, das Kontrollkästchen **32-Bit bevorzugen**.
 

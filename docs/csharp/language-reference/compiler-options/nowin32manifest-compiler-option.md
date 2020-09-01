@@ -1,4 +1,5 @@
 ---
+description: -nowin32manifest (C#-Compileroptionen)
 title: -nowin32manifest (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -nowin32manifest compiler option [C#]
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
-ms.openlocfilehash: 8820410bfdbce2f9986605f37af4d14957471126
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8514ab5b118e320d456d1b7367fab3b463c3607a
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602715"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125058"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (C#-Compileroptionen)
 Verwenden Sie die Option **-nowin32manifest**, um den Compiler anzuweisen, kein Anwendungsmanifest in die ausführbare Datei einzubetten.  

@@ -1,4 +1,5 @@
 ---
+description: -optimize (C#-Compileroptionen)
 title: -optimize (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fd268414c4e54e7b4865733480f8917389015d0
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606599"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125032"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C#-Compileroptionen)
 Die Option **-optimize** aktiviert oder deaktiviert die vom Compiler durchgeführten Optimierungen, damit Ihre Ausgabedatei kleiner, schneller und effizienter wird.  
@@ -28,7 +29,7 @@ Die Option **-optimize** aktiviert oder deaktiviert die vom Compiler durchgefüh
 -optimize[+ | -]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Außerdem weist **-optimize** die Common Language Runtime an, den Code zur Laufzeit zu optimieren.  
   
  Optimierungen sind standardmäßig deaktiviert. Geben Sie **-optimize+** an, um Optimierungen zu aktivieren.  
@@ -43,7 +44,7 @@ Die Option **-optimize** aktiviert oder deaktiviert die vom Compiler durchgefüh
   
 1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2. Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Erstellen**.  
   
 3. Ändern Sie die Eigenschaft **Code optimieren**.  
   
