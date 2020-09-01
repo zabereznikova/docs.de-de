@@ -1,15 +1,16 @@
 ---
+description: Modifizierer für out-Parameter – C#-Verweis
 title: Modifizierer für out-Parameter – C#-Verweis
 ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 30946c85d2b64ead3f42e03da61108fa5b367779
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 23bf841c002f9be5fdd4e8d8da48e68e9f6e5fcc
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174808"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122425"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modifizierer für out-Parameter (C#-Verweis)
 
