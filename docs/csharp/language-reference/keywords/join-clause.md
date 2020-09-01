@@ -1,4 +1,5 @@
 ---
+description: join-Klausel – C#-Referenz
 title: join-Klausel – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44b35bd1243e4715f81513eef9968f30a8f315a3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713408"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139748"
 ---
 # <a name="join-clause-c-reference"></a>join-Klausel (C#-Referenz)
 
@@ -85,7 +86,7 @@ In folgendem Beispiel werden die Ergebnisse einer inneren Verknüpfung, einer Gr
 
 [!code-csharp[cscsrefQueryKeywords#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#23)]
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Eine `join`-Klausel, auf die kein `into` folgt, wird in einen <xref:System.Linq.Enumerable.Join%2A>-Methodenaufruf übersetzt. Eine `join`-Klausel, auf die `into` folgt, wird in einen <xref:System.Linq.Enumerable.GroupJoin%2A>-Methodenaufruf übersetzt.
 
@@ -100,4 +101,4 @@ Eine `join`-Klausel, auf die kein `into` folgt, wird in einen <xref:System.Linq.
 - [Ausführen von Gruppenverknüpfungen](../../linq/perform-grouped-joins.md)
 - [Sortieren der Ergebnisse einer Join-Klausel](../../linq/order-the-results-of-a-join-clause.md)
 - [Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../linq/join-by-using-composite-keys.md)
-- [Compatible database systems for Visual Studio (Kompatible Datenbanksysteme für Visual Studio)](/visualstudio/data-tools/installing-database-systems-tools-and-samples)
+- [Kompatible Datenbanksysteme für Visual Studio](/visualstudio/data-tools/installing-database-systems-tools-and-samples)
