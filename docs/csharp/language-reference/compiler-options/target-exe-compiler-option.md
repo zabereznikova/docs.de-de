@@ -1,4 +1,5 @@
 ---
+description: -target:exe (C#-Compileroptionen)
 title: -target:exe (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 6087a64bea5a59bfcfc5372f6a9d6eb8b9c940cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cea52fe872fcb407206ee2063b93dc81447a3b2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606457"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128503"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C#-Compileroptionen)
 Die Option **-target:exe** bewirkt, dass der Compiler eine ausführbare Konsolenanwendung (EXE) erstellt.  
@@ -24,7 +25,7 @@ Die Option **-target:exe** bewirkt, dass der Compiler eine ausführbare Konsolen
 -target:exe  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Option **-target:exe** ist standardmäßig aktiviert. Die ausführbare Datei wird mit der Dateiendung „.exe“ erstellt.  
   
  Verwenden Sie [-target:winexe](./target-winexe-compiler-option.md), um ein ausführbares Windows-Programm zu erstellen.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 03d00fb802032b981a5ebe80f7166eba0fb54a60
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 7ef8782c15ad816b8bb0356e74615a49387f73b9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326051"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89129127"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
 
@@ -43,6 +43,28 @@ ms.locfileid: "85326051"
 
 > [!NOTE]
 > In diesem Thema wird nicht erläutert, <xref:System.TimeZone> weil seine Funktionalität fast vollständig in die-Klasse integriert ist <xref:System.TimeZoneInfo> . Verwenden Sie nach Möglichkeit die- <xref:System.TimeZoneInfo> Klasse anstelle der- <xref:System.TimeZone> Klasse.
+
+## <a name="the-datetimeoffset-structure"></a>Die DateTimeOffset-Struktur
+
+Die <xref:System.DateTimeOffset> -Struktur stellt einen Datums- und Uhrzeitwert zusammen mit einem Offset dar, der angibt, um wie viel dieser Wert von UTC abweicht. Somit identifiziert der Wert immer eindeutig einen einzigen Zeitpunkt.
+
+Der <xref:System.DateTimeOffset> -Typ bietet die gesamte Funktionalität des <xref:System.DateTime> -Typs plus Unterstützung von Zeitzonen. Dies eignet sich für Anwendungen, für die Folgendes möglich ist:
+
+- Eindeutiges und unzweideutiges Identifizieren eines einzigen Zeitpunkts. Der <xref:System.DateTimeOffset> -Typ kann zur eindeutigen Definition der Bedeutung von "jetzt" verwendet werden, um Transaktionszeiten zu protokollieren, die Zeiten von System- oder Anwendungsereignissen zu protokollieren und um die Zeiten der Erstellung und Änderung von Dateien aufzuzeichnen.
+
+- Ausführen von allgemeinen Datums- und Uhrzeitberechnungen
+
+- Erhalten mehrerer verwandter Uhrzeiten, solange diese Zeiten als zwei gesonderte Werte oder als zwei Member einer Struktur gespeichert werden.
+
+> [!NOTE]
+> Diese Verwendungsarten für <xref:System.DateTimeOffset> -Werte sind sehr viel häufiger als die für <xref:System.DateTime> -Werte. Als Ergebnis sollten Sie <xref:System.DateTimeOffset> als Standardtyp für Datum und Uhrzeit für die Anwendungsentwicklung in Erwägung gezogen werden.
+
+Ein <xref:System.DateTimeOffset> Wert ist nicht an eine bestimmte Zeitzone gebunden, kann aber aus einer Vielzahl von Zeitzonen stammen. Das folgende Beispiel listet die Zeitzonen auf, zu denen eine Reihe von <xref:System.DateTimeOffset> Werten (einschließlich einer lokalen Pacific Standard Time) gehören können.
+
+[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
+
+Die Ausgabe zeigt, dass jeder Datums- und Uhrzeitwert in diesem Beispiel zu mindestens drei verschiedenen Zeitzonen gehören kann. Der <xref:System.DateTimeOffset> Wert 6/10/2007 zeigt, dass, wenn ein Datums-und Uhrzeitwert eine Sommerzeit darstellt, der Offset von UTC nicht gleich dem Basis-UTC-Offset der Ursprungs Zeitzone oder dem Offset von UTC im anzeigen Amen entspricht. Da ein einzelner <xref:System.DateTimeOffset> Wert nicht eng mit seiner Zeitzone verknüpft ist, kann er nicht den Übergang einer Zeitzone zur und von der Sommerzeit widerspiegeln. Dies kann problematisch sein, wenn die Datums-und Uhrzeit Arithmetik zum Bearbeiten eines Werts verwendet wird <xref:System.DateTimeOffset> . Eine Erläuterung der Durchführung von Datums- und Uhrzeitberechnungen auf eine Weise, die die Anpassungsregeln einer Zeitzone berücksichtigt, finden Sie unter [Durchführen arithmetischer Datums- und Uhrzeitoperationen](performing-arithmetic-operations.md).
 
 ## <a name="the-datetime-structure"></a>Die DateTime-Struktur
 
@@ -68,28 +90,6 @@ Wenn nicht ein bestimmter <xref:System.DateTime> -Wert UTC darstellt, ist dieser
 
 > [!IMPORTANT]
 > Beim Speichern oder Freigeben von <xref:System.DateTime> -Daten sollte UTC verwendet werden, und die <xref:System.DateTime> - <xref:System.DateTime.Kind%2A> -Eigenschaft des Werts sollte auf <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>festgelegt werden.
-
-## <a name="the-datetimeoffset-structure"></a>Die DateTimeOffset-Struktur
-
-Die <xref:System.DateTimeOffset> -Struktur stellt einen Datums- und Uhrzeitwert zusammen mit einem Offset dar, der angibt, um wie viel dieser Wert von UTC abweicht. Somit identifiziert der Wert immer eindeutig einen einzigen Zeitpunkt.
-
-Der <xref:System.DateTimeOffset> -Typ bietet die gesamte Funktionalität des <xref:System.DateTime> -Typs plus Unterstützung von Zeitzonen. Dies eignet sich für Anwendungen, für die Folgendes möglich ist:
-
-- Eindeutiges und unzweideutiges Identifizieren eines einzigen Zeitpunkts. Der <xref:System.DateTimeOffset> -Typ kann zur eindeutigen Definition der Bedeutung von "jetzt" verwendet werden, um Transaktionszeiten zu protokollieren, die Zeiten von System- oder Anwendungsereignissen zu protokollieren und um die Zeiten der Erstellung und Änderung von Dateien aufzuzeichnen.
-
-- Ausführen von allgemeinen Datums- und Uhrzeitberechnungen
-
-- Erhalten mehrerer verwandter Uhrzeiten, solange diese Zeiten als zwei gesonderte Werte oder als zwei Member einer Struktur gespeichert werden.
-
-> [!NOTE]
-> Diese Verwendungsarten für <xref:System.DateTimeOffset> -Werte sind sehr viel häufiger als die für <xref:System.DateTime> -Werte. Als Ergebnis sollten Sie <xref:System.DateTimeOffset> als Standardtyp für Datum und Uhrzeit für die Anwendungsentwicklung in Erwägung gezogen werden.
-
-Ein <xref:System.DateTimeOffset> Wert ist nicht an eine bestimmte Zeitzone gebunden, kann aber aus einer Vielzahl von Zeitzonen stammen. Das folgende Beispiel listet die Zeitzonen auf, zu denen eine Reihe von <xref:System.DateTimeOffset> Werten (einschließlich einer lokalen Pacific Standard Time) gehören können.
-
-[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
-
-Die Ausgabe zeigt, dass jeder Datums- und Uhrzeitwert in diesem Beispiel zu mindestens drei verschiedenen Zeitzonen gehören kann. Der <xref:System.DateTimeOffset> Wert 6/10/2007 zeigt, dass, wenn ein Datums-und Uhrzeitwert eine Sommerzeit darstellt, der Offset von UTC nicht gleich dem Basis-UTC-Offset der Ursprungs Zeitzone oder dem Offset von UTC im anzeigen Amen entspricht. Da ein einzelner <xref:System.DateTimeOffset> Wert nicht eng mit seiner Zeitzone verknüpft ist, kann er nicht den Übergang einer Zeitzone zur und von der Sommerzeit widerspiegeln. Dies kann problematisch sein, wenn die Datums-und Uhrzeit Arithmetik zum Bearbeiten eines Werts verwendet wird <xref:System.DateTimeOffset> . Eine Erläuterung der Durchführung von Datums- und Uhrzeitberechnungen auf eine Weise, die die Anpassungsregeln einer Zeitzone berücksichtigt, finden Sie unter [Durchführen arithmetischer Datums- und Uhrzeitoperationen](performing-arithmetic-operations.md).
 
 ## <a name="the-timespan-structure"></a>Die TimeSpan-Struktur
 
@@ -119,6 +119,6 @@ In einigen Fällen kann noch weitere Entwicklungsarbeit erforderlich sein, um di
 
 Um die Zeit Zonen Unterstützung in .net zu nutzen, müssen Sie die Zeitzone kennen, zu der ein Datums-und Uhrzeitwert gehört, wenn das Datums-und Uhrzeit Objekt instanziiert wird. Die Zeitzone ist oft nicht bekannt, insbesondere in Web-oder Netzwerk-apps.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Datumsangaben, Uhrzeiten und Zeitzonen](index.md)

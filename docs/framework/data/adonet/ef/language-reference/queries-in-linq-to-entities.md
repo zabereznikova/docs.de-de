@@ -3,12 +3,12 @@ title: Abfragen in LINQ to Entities
 description: Erfahren Sie, wie LINQ ein einfaches, konsistentes Modell zum Arbeiten mit Daten über verschiedene Arten von Datenquellen und Formaten mithilfe von Programmier Objekten bietet.
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: eaf44cf6c995be335c6127f42d7aaec0dd98527c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 908a4a601c075e0845ba6d1eeeaa0f4dbaa3b53d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063730"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89129139"
 ---
 # <a name="queries-in-linq-to-entities"></a>Abfragen in LINQ to Entities
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. Language-Integrated Query (LINQ) bietet ein einfacheres, konsistenteres Modell zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer LINQ-Abfrage arbeiten Sie immer mit Programmierobjekten.  

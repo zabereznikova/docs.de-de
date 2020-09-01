@@ -1,4 +1,5 @@
 ---
+description: '@ (C#-Compileroptionen)'
 title: '@ (C#-Compileroptionen)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70202910"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128646"
 ---
 # <a name="-c-compiler-options"></a>@ (C#-Compileroptionen)
 Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kompilierende Quellcodedateien enthält.  
@@ -27,7 +28,7 @@ Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kom
  `response_file`  
  Eine Datei, die Compileroptionen oder zu kompilierende Quellcodedateien auflistet.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Compileroptionen und Quellcodedateien werden vom Compiler so verarbeitet, als ob sie in der Befehlszeile angegeben wären.  
   
  Wenn Sie mehr als eine Antwortdatei in einer Kompilierung angeben möchten, geben Sie mehrere Antwortdateioptionen an. Beispiel:  

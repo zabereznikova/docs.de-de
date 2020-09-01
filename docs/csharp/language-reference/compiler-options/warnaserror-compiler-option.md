@@ -1,4 +1,5 @@
 ---
+description: -warnaserror (C#-Compileroptionen)
 title: -warnaserror (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ccd4546402dbc8e5d9245af6411ba2d831d4959
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503476"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127242"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C#-Compileroptionen)
 Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.  
@@ -24,7 +25,7 @@ Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.
 -warnaserror[+ | -][:warning-list]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Alle Nachrichten, die in der Regel als Warnungen gemeldet worden wären, werden stattdessen als Fehler gemeldet, und der Buildprozesses wird angehalten (keine Ausgabedateien werden erstellt).  
   
  **-warnaserror-** ist standardmäßig gültig, wodurch Warnungen nicht die Generierung einer Ausgabedatei verhindern. **-warnaserror**, ist identisch mit **-warnaserror+** und bewirkt, dass Warnungen als Fehler behandelt werden.  
@@ -37,11 +38,11 @@ Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.
   
 1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2. Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Erstellen**.  
   
 3. Ändern Sie die Eigenschaft **Warnungen als Fehler behandeln**.  
   
- Um diese Compileroption programmgesteuert festzulegen, sehen Sie sich <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors> an.  
+ Wie Sie diese Compileroption programmgesteuert festlegen, erfahren Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>.  
   
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie `in.cs`, und konfigurieren Sie den Compiler so, dass keine Warnungen angezeigt werden:  

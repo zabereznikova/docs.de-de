@@ -1,13 +1,14 @@
 ---
+description: -subsystemversion (C#-Compileroptionen)
 title: -subsystemversion (C#-Compileroptionen)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: d76c9424340b4b6f3c211c849b466be55eb79d1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8001d8db214123e75fec4e1d1117ef90a9df606
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74802035"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128594"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C#-Compileroptionen)
 
@@ -36,12 +37,12 @@ Die folgende Tabelle enthält allgemeine Subsystemversionen von Windows.
 
 |Windows-Version|Subsystemversion|
 |---------------------|-----------------------|
-|Windows 2000|5.00|
-|Windows XP|5,01|
+|Windows 2000|5.00|
+|Windows XP|5.01|
 |Windows Server 2003|5.02|
 |Windows Vista|6.00|
-|Windows 7|6.01|
-|Windows Server 2008|6.01|
+|Windows 7|6.01|
+|Windows Server 2008|6.01|
 |Windows 8|6.02|
 
 ## <a name="default-values"></a>Standardwerte
@@ -64,6 +65,6 @@ Der Standardwert der Compileroption **-subsystemversion** hängt von den Bedingu
 
 Sie müssen die CSPROJ-Datei öffnen und einen Wert für die Eigenschaft `SubsystemVersion` im MSBuild-XML angeben, um die Compileroption **-subsystemversion** in Visual Studio festzulegen. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Compileroptionen](./index.md)
