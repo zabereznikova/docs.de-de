@@ -1,4 +1,5 @@
 ---
+description: sealed-Modifizierer – C#-Referenz
 title: sealed-Modifizierer – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 686afd5d9d0394bb1a802551b65083732599f384
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b945503c6f6546f571a2422ae77760da0363b08
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713104"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136966"
 ---
 # <a name="sealed-c-reference"></a>sealed (C#-Referenz)
 
@@ -39,7 +40,7 @@ Der Modifizierer `sealed` muss immer mit [override](override.md) verwendet werde
 
 Da Strukturen implizit versiegelt sind, können sie nicht geerbt werden.
 
-Weitere Informationen finden Sie unter [Inheritance (Vererbung)](../../programming-guide/classes-and-structs/inheritance.md).
+Weitere Informationen finden Sie unter [Vererbung](../../programming-guide/classes-and-structs/inheritance.md).
 
 Weitere Beispiele finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 
@@ -55,7 +56,7 @@ Daraus ergibt sich eine Fehlermeldung:
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Sie sollten generell die folgenden zwei Punkte in Betracht ziehen, um festzustellen, ob Sie eine Klasse, Methode oder Eigenschaft versiegeln sollten:
 
@@ -67,7 +68,7 @@ Sie sollten generell die folgenden zwei Punkte in Betracht ziehen, um festzustel
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

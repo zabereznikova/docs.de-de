@@ -1,16 +1,17 @@
 ---
+description: Abfrageschlüsselwörter – C#-Referenz
 title: Abfrageschlüsselwörter – C#-Referenz
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0beea8634d13222aa18f14d79fdbd95a35cc832e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173522"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137135"
 ---
 # <a name="query-keywords-c-reference"></a>Abfrageschlüsselwörter (C#-Referenz)
 
@@ -18,7 +19,7 @@ Dieser Abschnitt enthält die kontextabhängigen Schlüsselwörter, die in Abfra
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-|Klausel|Beschreibung|
+|Klausel|BESCHREIBUNG|
 |------------|-----------------|
 |[from](from-clause.md)|Gibt eine Datenquelle und eine Bereichsvariable (ähnlich einer Iterationsvariable) an|
 |[where](where-clause.md)|Filtert Quellelemente basierend auf einem oder mehreren boolschen Ausdrücken, die durch logische AND- und OR-Operatoren (`&&` oder <code>&#124;&#124;</code>) getrennt sind|
@@ -35,7 +36,7 @@ Dieser Abschnitt enthält die kontextabhängigen Schlüsselwörter, die in Abfra
 |[ascending](ascending.md)|Kontextabhängiges Schlüsselwort in einer [orderby](orderby-clause.md)-Klausel|
 |[descending](descending.md)|Kontextabhängiges Schlüsselwort in einer [orderby](orderby-clause.md)-Klausel|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Schlüsselwörter](index.md)
 - [LINQ (Language Integrated Query)](../../programming-guide/concepts/linq/index.md)
