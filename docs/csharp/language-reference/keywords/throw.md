@@ -1,4 +1,5 @@
 ---
+description: throw – C#-Referenz
 title: throw – C#-Referenz
 ms.date: 03/02/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 4cad4810b89f976f92ce576917feb2398acce636
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063119"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142036"
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
 
 Signalisiert das Auftreten einer Ausnahme während der Programmausführung.  
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die Syntax von `throw` lautet:
 
@@ -47,7 +48,7 @@ Methodenaufrufer verwenden anschließend einen `try-catch`- oder `try-catch-fina
 
 ## <a name="the-throw-expression"></a>Der `throw`-Ausdruck
 
-Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werden. Dadurch wird eine Ausnahme in Kontexten ausgelöst, die zuvor nicht unterstützt wurden. Dazu gehören:
+Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werden. Dadurch wird eine Ausnahme in Kontexten ausgelöst, die zuvor nicht unterstützt wurden. Dazu zählen unter anderem folgende Einstellungen:
 
 - [Der bedingte Operator](../operators/conditional-operator.md). Im folgenden Beispiel wird ein `throw`-Ausdruck verwendet, um eine <xref:System.ArgumentException> auszulösen, wenn eine Methode an ein leeres Zeichenfolgenarray übergeben wird. Diese Logik müsste vor C# 7.0 in einer `if`/`else`-Anweisung erscheinen.
 
@@ -65,10 +66,10 @@ Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werd
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [try-catch](try-catch.md)
 - [C#-Schlüsselwörter](index.md)
-- [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [How to: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

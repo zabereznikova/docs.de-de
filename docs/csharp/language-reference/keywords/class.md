@@ -1,4 +1,5 @@
 ---
+description: class-Schlüsselwort – C#-Referenz
 title: class-Schlüsselwort – C#-Referenz
 ms.date: 07/18/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67c9c4be55cce25edf9ecb84b257a8523f193bec
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673094"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142114"
 ---
 # <a name="class-c-reference"></a>class (C#-Referenz)
 
@@ -26,14 +27,14 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 In C# ist nur die einfache Vererbung zulässig. Eine Klasse kann also Implementierungen aus nur einer Basisklasse erben. Es kann allerdings mehr als eine Schnittstelle implementiert werden. Die folgende Tabelle zeigt Beispiele für Klassenvererbung und Implementierung der Schnittstelle:
 
 |Vererbung|Beispiel|
 |-----------------|-------------|
 |Keine|`class ClassA { }`|
-|Single|`class DerivedClass : BaseClass { }`|
+|Einfach|`class DerivedClass : BaseClass { }`|
 |Keine, Implementierung von zwei Schnittstellen|`class ImplClass : IFace1, IFace2 { }`|
 |Single, Implementierung einer Schnittstelle|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 

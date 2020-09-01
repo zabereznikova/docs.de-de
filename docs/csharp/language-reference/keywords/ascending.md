@@ -1,4 +1,5 @@
 ---
+description: ascending – C#-Referenz
 title: ascending – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: 975d004296ace3dc4cebabc41e166a0722288bee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f131cc94824f6c975c65b2d63875197115e01511
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713793"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140801"
 ---
 # <a name="ascending-c-reference"></a>ascending (C#-Referenz)
 Das kontextbezogene Schlüsselwort `ascending` wird in der [orderby-Klausel](./orderby-clause.md) in Abfrageausdrücken verwendet, um die Sortierreihenfolge vom kleinsten zum größten Element festzulegen. `ascending` ist die standardmäßige Sortierreihenfolge und muss nicht extra festgelegt werden.  
@@ -22,7 +23,7 @@ Das kontextbezogene Schlüsselwort `ascending` wird in der [orderby-Klausel](./o
   
 [!code-csharp[csrefKeywordsContextual#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#14)]
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [LINQ in C#](../../linq/index.md)

@@ -1,20 +1,21 @@
 ---
+description: out-Schlüsselwort (generischer Modifizierer) – C#-Referenz
 title: out-Schlüsselwort (generischer Modifizierer) – C#-Referenz
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-ms.openlocfilehash: 97ddae2efe55be89840f7a483c18d61259020283
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84f3647309c0772f6ae61d3614f8649fe277f153
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713287"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142335"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (generischer Modifizierer) (C#-Referenz)
 
-Das Schlüsselwort `out` gibt für generische Typparameter an, dass der Typparameter kovariant ist. Sie können das Schlüsselwort `out` in generischen Schnittstellen und Delegaten verwenden.
+Das Schlüsselwort `out` gibt für generische Typparameter an, dass der Typparameter kovariant ist. Sie können das `out`-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.
 
 Kovarianz ermöglicht Ihnen die Verwendung eines stärker abgeleiteten Typs als durch den generischen Parameter angegeben. Dadurch wird eine implizite Konvertierung von Klassen berücksichtigt, die kovariante Schnittstellen und Konvertierung von Delegattypen implementiert. Kovarianz und Kontravarianz werden für Verweistypen unterstützt, aber nicht für Werttypen.
 
@@ -51,8 +52,8 @@ In einem generischen Delegaten kann ein Typ als kovariant deklariert werden, wen
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Varianz in generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Abweichungen bei generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [in](in-generic-modifier.md)
 - [Modifizierer](index.md)

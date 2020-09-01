@@ -1,15 +1,16 @@
 ---
+description: using-Anweisung – C#-Referenz
 title: using-Anweisung – C#-Referenz
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093148"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141945"
 ---
 # <a name="using-directive-c-reference"></a>using-Anweisung (C#-Referenz)
 
@@ -53,7 +54,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Der Bereich einer `using`-Direktive ist auf die Datei beschränkt, in der er enthalten ist.
 
@@ -83,7 +84,7 @@ Das folgende Beispiel zeigt, wie Sie einen `using`-Alias für einen Namespace de
 
 Eine using-Aliasanweisung kann auf der rechten Seite nicht über einen offenen generischen Typen verfügen. Sie können zum Beispiel keinen using-Alias für `List<T>` erstellen, jedoch für `List<int>`.
 
-## <a name="example-2"></a>Beispiel 2
+## <a name="example-2"></a>Beispiel 2
 
 Das folgende Beispiel zeigt, wie Sie eine `using`-Direktive und einen `using`-Alias für eine Klasse definieren:
 
@@ -93,7 +94,7 @@ Das folgende Beispiel zeigt, wie Sie eine `using`-Direktive und einen `using`-Al
 
 Weitere Informationen finden Sie unter [using-Direktiven](~/_csharplang/spec/namespaces.md#using-directives) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

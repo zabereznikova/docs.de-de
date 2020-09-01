@@ -1,4 +1,5 @@
 ---
+description: unchecked-Schlüsselwort – C#-Referenz
 title: unchecked-Schlüsselwort – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb66639e3657b247b9ebcad1594daf1f57a5c76b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713000"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141984"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C#-Referenz)
 
@@ -38,10 +39,10 @@ Im folgenden Beispiel wird die Verwendung des Schlüsselworts `unchecked` verans
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [AKtiviert und nicht aktiviert](checked-and-unchecked.md)
+- [Checked und Unchecked](checked-and-unchecked.md)
 - [checked](checked.md)
