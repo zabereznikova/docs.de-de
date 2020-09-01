@@ -3,12 +3,12 @@ title: Elasticsearch in Cloud-native Anwendungen
 description: Erfahren Sie mehr über das Hinzufügen elastischer Suchfunktionen zu cloudbasierten Anwendungen.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e956f28877d88ce5279944964a877efc324918b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614083"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271801"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Elasticsearch in einer cloudbasierten App
 
@@ -38,9 +38,9 @@ In diesem Kapitel wurde eine ausführliche Betrachtung der Daten in Cloud-Native
 
 ### <a name="references"></a>Referenzen
 
-- [Muster „CQRS“ (Command and Query Responsibility Segregation)](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [Cqrs-Muster (Command and Query Responsibility Segregation)](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
-- [Muster für Ereignis Beschaffung](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Muster „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 
 - [Warum ist RDBMS im Cap-Theorem nicht tolerant und warum ist es verfügbar?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
@@ -74,7 +74,7 @@ In diesem Kapitel wurde eine ausführliche Betrachtung der Daten in Cloud-Native
 
 - [Nicht mehr](https://vitess.io/)
 
-- [Elasticsearch: The Definitive Guide (Elasticsearch: Die ultimative Anleitung)](http://shop.oreilly.com/product/0636920028505.do)
+- [Elasticsearch: The Definitive Guide (Elasticsearch: Die ultimative Anleitung)](https://shop.oreilly.com/product/0636920028505.do)
   
 - [Einführung in Apache Lucene](https://www.baeldung.com/lucene)
 
