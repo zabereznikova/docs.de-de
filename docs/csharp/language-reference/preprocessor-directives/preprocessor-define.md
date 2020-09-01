@@ -1,4 +1,5 @@
 ---
+description: '#define – C#-Referenz'
 title: '#define – C#-Referenz'
 ms.date: 06/30/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: c08d6f42c11184a4d14aa6712f9f0f8706a72cab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a37f883a249ec74b66769ee40b84b20e8568c451
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173431"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132338"
 ---
 # <a name="define-c-reference"></a>#define (C#-Referenz)
 Mit `#define` wird ein Symbol definiert. Wenn Sie das Symbol als Ausdruck verwenden, der an die [#if](./preprocessor-if.md)-Anweisung übergeben wird, wird der Ausdruck als `true` ausgewertet, wie in folgendem Beispiel dargestellt:  
@@ -20,7 +21,7 @@ Mit `#define` wird ein Symbol definiert. Wenn Sie das Symbol als Ausdruck verwen
  #define DEBUG
  ```
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!NOTE]
 > Die `#define`-Direktive kann nicht zur Deklaration konstanter Werte wie in C und C++ verwendet werden. Definieren Sie Konstanten in C# als statische Member einer Klasse oder einer Struktur. Wenn Sie über mehrere solcher Konstanten verfügen, erwägen Sie, eine separate "Constants"-Klasse zu erstellen.  
@@ -63,12 +64,12 @@ public class TestDefine
   
  Ein Beispiel dafür, wie eine Symboldefinition aufgehoben wird, finden Sie unter [#undef](./preprocessor-undef.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Präprozessoranweisungen](./index.md)
 - [const](../keywords/const.md)
-- [Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [How to: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [#undef](./preprocessor-undef.md)
 - [#if](./preprocessor-if.md)
