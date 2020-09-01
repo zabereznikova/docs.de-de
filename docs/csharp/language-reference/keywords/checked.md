@@ -1,4 +1,5 @@
 ---
+description: checked-Schlüsselwort – C#-Referenz
 title: checked-Schlüsselwort – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dd8bc02d3af89d6bab3aef55a88cb8b40704da6
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713709"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138279"
 ---
 # <a name="checked-c-reference"></a>checked (C#-Referenz)
 
@@ -40,10 +41,10 @@ Dieses Beispiel zeigt, wie mit `checked` die Überlaufüberprüfung zur Laufzeit
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](./index.md)
-- [AKtiviert und nicht aktiviert](./checked-and-unchecked.md)
+- [Checked und Unchecked](./checked-and-unchecked.md)
 - [unchecked](./unchecked.md)

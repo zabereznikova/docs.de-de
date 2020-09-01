@@ -3,12 +3,12 @@ title: Leitfaden für DataSet und Datentabelle
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812236"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137616"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Leitfaden für DataSet und Datentabelle
 
@@ -45,6 +45,9 @@ System. Data. datacolenumn. set_DataType (Typwert)
 * Der Deserialisierungsvorgang schlägt fehl.
 
 Beim Laden von XML in eine vorhandene- `DataSet` Instanz oder- `DataTable` Instanz werden die vorhandenen Spaltendefinitionen ebenfalls berücksichtigt. Wenn die Tabelle bereits eine Spaltendefinition eines benutzerdefinierten Typs enthält, wird dieser Typ für die Dauer des XML-Deserialisierungsvorgangs vorübergehend zur Zulassungsliste hinzugefügt.
+
+> [!NOTE]
+> Wenn Sie einem Spalten hinzufügen `DataTable` , `ReadXml` liest das Schema nicht aus dem XML-Code, und wenn das Schema nicht mit dem Schema identisch ist, werden die Datensätze ebenfalls nicht gelesen, sodass Sie alle Spalten selbst hinzufügen müssen, um diese Methode zu verwenden.
 
 ```cs
 XmlReader xmlReader = GetXmlReader();
@@ -275,7 +278,7 @@ Wenn `AppContext` nicht verfügbar ist, können typeinschränkungs Überprüfung
 * Ein Administrator muss die Registrierung konfigurieren.
 * Die Verwendung der Registrierung ist eine Computer weite Änderung und wirkt sich auf _alle_ Apps aus, die auf dem Computer ausgeführt werden.
 
-| type  |  Wert |
+| Typ  |  Wert |
 |---|---|
 | **Registrierungsschlüssel** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Wertname** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |

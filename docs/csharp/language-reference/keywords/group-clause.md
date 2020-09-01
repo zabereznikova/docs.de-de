@@ -1,4 +1,5 @@
 ---
+description: group-Klausel – C#-Referenz
 title: group-Klausel – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e642492b4b36bb0464baf16baa80c58c19ba9f1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713468"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138227"
 ---
 # <a name="group-clause-c-reference"></a>group-Klausel (C#-Referenz)
 
@@ -81,7 +82,7 @@ Dieses Beispiel zeigt, wie zusätzliche Logik auf die Gruppen ausgeführt wird, 
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 `group`-Klauseln werden zur Kompilierzeit in Aufrufe der <xref:System.Linq.Enumerable.GroupBy%2A>-Methode übersetzt.
 
@@ -91,7 +92,7 @@ Dieses Beispiel zeigt, wie zusätzliche Logik auf die Gruppen ausgeführt wird, 
 - <xref:System.Linq.Enumerable.GroupBy%2A>
 - <xref:System.Linq.Enumerable.ThenBy%2A>
 - <xref:System.Linq.Enumerable.ThenByDescending%2A>
-- [Schlüsselwörter für Abfragen](query-keywords.md)
+- [Abfrageschlüsselwörter](query-keywords.md)
 - [Language-Integrated Query (LINQ)](../../linq/index.md)
 - [Erstellen einer geschachtelten Gruppe](../../linq/create-a-nested-group.md)
 - [Gruppieren von Abfrageergebnissen](../../linq/group-query-results.md)
