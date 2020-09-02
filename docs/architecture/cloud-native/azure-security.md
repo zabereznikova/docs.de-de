@@ -2,12 +2,12 @@
 title: Azure-Sicherheit für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | Azure-Sicherheit für Native Cloud-apps
 ms.date: 05/13/2020
-ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557645"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358972"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Azure-Sicherheit für Native Cloud-apps
 
@@ -147,7 +147,7 @@ Ablehnungs Regeln haben Vorrang vor Zulassungsregeln. Die Darstellung des gleich
 
 ## <a name="checking-access"></a>Überprüfen des Zugriffs
 
-Wie Sie sich vorstellen können, kann es schwierig sein, die effektive Berechtigung eines Dienst Prinzipals zu ermitteln, wenn eine große Anzahl von Rollen und Bereichen vorhanden ist. Das Anheften von Ablehnungs Regeln wird nur zur Erhöhung der Komplexität dienen. Glücklicherweise gibt es einen Berechtigungs Rechner, der die effektiven Berechtigungen für jeden Dienst Prinzipal anzeigen kann. Sie befindet sich in der Regel auf der Registerkarte IAM im Portal, wie in Abbildung 10-3 dargestellt.
+Wie Sie sich vorstellen können, kann es schwierig sein, die effektive Berechtigung eines Dienst Prinzipals zu ermitteln, wenn eine große Anzahl von Rollen und Bereichen vorhanden ist. Das Anheften von Ablehnungs Regeln wird nur zur Erhöhung der Komplexität dienen. Glücklicherweise gibt es einen [Berechtigungs Rechner](https://docs.microsoft.com/azure/role-based-access-control/check-access) , der die effektiven Berechtigungen für jeden Dienst Prinzipal anzeigen kann. Sie befindet sich in der Regel auf der Registerkarte IAM im Portal, wie in Abbildung 10-3 dargestellt.
 
 ![Abbildung 9-4 Berechtigungs Rechner für App Service](./media/check-rbac.png)
 
