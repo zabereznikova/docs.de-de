@@ -1,4 +1,5 @@
 ---
+description: -doc (C#-Compileroptionen)
 title: -doc (C#-Compileroptionen)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73422972"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125747"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C#-Compileroptionen)
 Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei einfügen.  
@@ -32,7 +33,7 @@ Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei e
  `file`  
  Die Ausgabedatei für XML, die mit den Kommentaren in den Quellcodedateien der Kompilierung aufgefüllt wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In Quellcodedateien können Dokumentationskommentare, die Folgendem vorausgehen, verarbeitet und der XML-Datei hinzugefügt werden:  
   
 - Benutzerdefinierte Typen wie eine [Klasse](../keywords/class.md), ein [Delegat](../builtin-types/reference-types.md#the-delegate-type), oder eine [Schnittstelle](../keywords/interface.md)  

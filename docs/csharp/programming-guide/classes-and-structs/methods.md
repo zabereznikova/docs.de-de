@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: db35b48d4d7e70a54b38342e79fa2881b3857bd7
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7b411283822360f3057b0d4f4e60ebade4fe45bc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864149"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810936"
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
 
@@ -24,7 +24,7 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
 
 Methoden werden in einer [Klasse](../../language-reference/keywords/class.md), [Struktur](../../language-reference/builtin-types/struct.md) oder [Schnittstelle](../interfaces/index.md) deklariert, indem die Zugriffsebene wie z. B. `public` oder `private`, optionale Modifizierer wie z. B. `abstract` oder `sealed`, der Rückgabewert, der Name der Methode und die Methodenparameter angegeben werden. Diese Teile bilden zusammen die Signatur der Methode.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Ein Rückgabetyp einer Methode ist nicht Teil der Signatur der Methode, wenn es um die Methodenüberladung geht. Er ist jedoch Teil der Methodensignatur, wenn die Kompatibilität zwischen einem Delegaten und der Methode bestimmt wird, auf die dieser verweist.
 
 Methodenparameter werden in Klammern eingeschlossen und durch Kommas getrennt. Leere Klammern geben an, dass für die Methode keine Parameter erforderlich sind. Diese Klasse enthält vier Methoden:
@@ -129,13 +129,13 @@ Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%
 
 Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode mit dem Rückgabetyp <xref:System.Threading.Tasks.Task%601>. `DelayAsync` enthält eine `return` -Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund muss die Methodendeklaration von `DelayAsync` den Rückgabetyp `Task<int>`haben. Da der Rückgabetyp `Task<int>`ist, ergibt die Auswertung des `await` -Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende Anweisung veranschaulicht: `int result = await delayTask`.
 
-Die `startButton_Click` -Methode ist ein Beispiel für eine asynchrone Methode mit void-Rückgabetyp. Da `DoSomethingAsync` eine asynchrone Methode ist, muss die Aufgabe für den Aufruf von `DoSomethingAsync` abgewartet werden, wie in der folgenden Anweisung dargestellt: `await DoSomethingAsync();`. Die `startButton_Click` -Methode muss mit dem `async` -Modifizierer definiert werden, da die Methode über einen `await` -Ausdruck verfügt.
+Die `Main`-Methode ist ein Beispiel für eine asynchrone Methode mit dem <xref:System.Threading.Tasks.Task>-Rückgabetyp. Es folgt die `DoSomethingAsync`-Methode, und da sie mit einer einzelnen Zeile ausgedrückt wird, können Sie die Schlüsselwörter `async` und `await` weglassen. Da `DoSomethingAsync` eine asynchrone Methode ist, muss die Aufgabe für den Aufruf von `DoSomethingAsync` abgewartet werden, wie in der folgenden Anweisung dargestellt: `await DoSomethingAsync();`.
 
-[!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
+:::code language="csharp" source="snippets/classes-and-structs/methods/Program.cs":::
 
 Mit einer asynchronen Methode können keine [ref](../../language-reference/keywords/ref.md) - oder [out](../../language-reference/keywords/out-parameter-modifier.md) -Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
 
-Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](../concepts/async/index.md), [Ablaufsteuerung in asynchronen Programmen](../concepts/async/control-flow-in-async-programs.md) und [Asynchrone Rückgabetypen](../concepts/async/async-return-types.md).
+Weitere Informationen zu den asynchronen Methoden finden Sie unter [Asynchrone Programmierung mit async und await](../concepts/async/index.md) und [Asynchrone Rückgabetypen (C#)](../concepts/async/async-return-types.md).
 
 ## <a name="expression-body-definitions"></a>Ausdruckstextdefinitionen
 

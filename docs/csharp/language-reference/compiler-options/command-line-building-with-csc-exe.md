@@ -1,16 +1,17 @@
 ---
+description: Erstellen über die Befehlszeile mit csc.exe
 title: Erstellen über die Befehlszeile mit csc.exe
 ms.date: 04/19/2017
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9ffd164602862fce7f5e4f0982d3eda7cb403e60
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789870"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125929"
 ---
 # <a name="command-line-build-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
 
@@ -18,18 +19,18 @@ Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren D
 
 Wenn Sie das Fenster **Developer-Eingabeaufforderung für Visual Studio** verwenden, werden alle erforderlichen Umgebungsvariablen für Sie festgelegt. Weitere Informationen zum Zugreifen auf dieses Tool finden Sie unter [Developer-Eingabeaufforderung für Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
 
-Wenn Sie ein standardmäßiges Eingabeaufforderungsfenster verwenden, müssen Sie die Pfadangabe anpassen, bevor Sie *csc.exe* aus einem Unterverzeichnis auf dem Computer aufrufen können. Außerdem müssen Sie *vsvars32.bat* ausführen, um die entsprechenden Umgebungsvariablen zur Unterstützung von Befehlszeilenbuilds festzulegen. Weitere Informationen zu *vsvars32.bat*, einschließlich Anweisungen zum Suchen und Ausführen, finden Sie unter [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Wenn Sie ein standardmäßiges Eingabeaufforderungsfenster verwenden, müssen Sie die Pfadangabe anpassen, bevor Sie *csc.exe* aus einem Unterverzeichnis auf dem Computer aufrufen können. Außerdem müssen Sie *VsDevCmd.bat* ausführen, um die entsprechenden Umgebungsvariablen zur Unterstützung von Befehlszeilenbuilds festzulegen. Weitere Informationen zu *VsDevCmd.bat*, einschließlich Anweisungen zum Suchen und Ausführen, finden Sie unter [Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 Wenn Sie auf einem Computer arbeiten, auf dem nur das Windows Software Development Kit (SDK) installiert ist, können Sie den C#-Compiler an der **SDK-Eingabeaufforderung** verwenden. Diese öffnen Sie über die Menüoption **Microsoft .NET Framework SDK**.
 
 Sie können auch MSBuild verwenden, um C#-Programme programmgesteuert zu erstellen. Weitere Informationen finden Sie unter [MSBuild](/visualstudio/msbuild/msbuild).
 
-Die ausführbare Datei *csc.exe* befindet sich in der Regel im *Windows*-Verzeichnis im Ordner Microsoft.NET\Framework\\*\<Version>*. Der Speicherort unterscheidet sich je nach Konfiguration auf den einzelnen Computern. Wenn mehr als eine Version von .NET Framework auf dem Computer installiert ist, werden Sie mehrere Versionen dieser Datei finden. Weitere Informationen zu dieser Art von Installation finden Sie unter [How to: determine which versions of the .NET Framework are installed (Vorgehensweise: Bestimmen der installierten .NET Framework-Version)](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Die ausführbare Datei *csc.exe* befindet sich in der Regel im *Windows*-Verzeichnis im Ordner Microsoft.NET\Framework\\ *\<Version>* . Der Speicherort unterscheidet sich je nach Konfiguration auf den einzelnen Computern. Wenn mehr als eine Version von .NET Framework auf dem Computer installiert ist, werden Sie mehrere Versionen dieser Datei finden. Weitere Informationen zu dieser Art von Installation finden Sie unter [How to: determine which versions of the .NET Framework are installed (Vorgehensweise: Bestimmen der installierten .NET Framework-Version)](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
 > Wenn Sie ein Projekt mit der Visual Studio-IDE erstellen, können Sie den Befehl **csc** und seine zugeordneten Compileroptionen im Fenster **Ausgabe** anzeigen. Um diese Informationen anzuzeigen, befolgen Sie die Anweisungen in [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log), in denen erläutert wird, wie der Ausführlichkeitsgrad der Protokolldaten in **Normal** oder **Detailliert** geändert wird. Nachdem Sie das Projekt neu erstellt haben, durchsuchen Sie das Fenster **Ausgabe** nach **csc** nach, um den Aufruf des C#-Compilers zu finden.
 
- **In diesem Thema**
+ **Inhalt**
 
 - [Regeln für die Syntax der Befehlszeile](#rules-for-command-line-syntax-for-the-c-compiler)
 
@@ -104,5 +105,5 @@ Durch den Aufruf des C#-Compilers werden keine Objektdateien ( *.obj*) erstellt,
 - [C#-Compileroptionen nach Kategorien sortiert](./listed-by-category.md)
 - [Main() und Befehlszeilenargumente](../../programming-guide/main-and-command-args/index.md)
 - [Befehlszeilenargumente](../../programming-guide/main-and-command-args/command-line-arguments.md)
-- [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Anzeigen von Befehlszeilenargumenten](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Main()-Rückgabewerte](../../programming-guide/main-and-command-args/main-return-values.md)

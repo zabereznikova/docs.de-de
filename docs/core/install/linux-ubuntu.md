@@ -4,12 +4,12 @@ description: Veranschaulicht verschiedene Möglichkeiten, das .NET Core SDK und 
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c590bd89b718a5cd31dae9f83049eac910cb4049
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9694dac719024264edee849044f048970b63b7b7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863890"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132941"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Installieren des .NET Core SDK oder der .NET Core-Runtime unter Ubuntu
 
@@ -173,7 +173,7 @@ sudo apt-get upgrade
 
 Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Installation von .NET Core mit APT auftreten können.
 
-### <a name="unable-to-locate"></a>Auffinden nicht möglich
+### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>"Das Paket kann nicht gefunden werden"/"Die Pakete konnten nicht installiert werden"
 
 [!INCLUDE [package-manager-failed-to-find-deb](includes/package-manager-failed-to-find-deb.md)]
 

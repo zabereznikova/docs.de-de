@@ -4,20 +4,24 @@ description: Erfahren Sie, wie Sie eigenständige Apps zuschneiden, um ihre Grö
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720123"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053106"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kürzen eigenständiger Bereitstellungen und ausführbarer Dateien
 
 Das [frameworkabhängige Bereitstellungsmodell](index.md#publish-framework-dependent) ist seit der Einführung von .NET das erfolgreichste Bereitstellungsmodell. In diesem Szenario bündelt der Anwendungsentwickler nur die Anwendung und Drittanbieterassemblys mit der Annahme, dass die .NET-Runtime und Frameworkbibliotheken auf dem Clientcomputer verfügbar sind. Dieses Bereitstellungsmodell ist in .NET Core auch weiterhin das wichtigste Bereitstellungsmodell, allerdings gibt es einige Szenarios, in denen das frameworkabhängige Modell nicht optimal ist. Die Alternative besteht darin, eine [unabhängige Anwendung](index.md#publish-self-contained) zu veröffentlichen, bei der die .NET Core-Runtime und das Framework zusammen mit der Anwendung und den Drittanbieterassemblys gebündelt werden.
 
-Das unabhängige Bereitstellungsmodell zum Kürzen ist eine spezialisierte Version des eigenständigen Bereitstellungsmodells, das für die Minimierung der Bereitstellungsgröße optimiert ist. Das Minimieren der Bereitstellungsgröße ist für einige clientseitige Szenarios wie Blazor-Anwendungen eine wichtige Anforderung. Abhängig von der Komplexität der Anwendung ist für ihre Ausführung nur eine Teilmenge der Frameworkassemblys erforderlich. Diese nicht verwendeten Teile der Bibliothek sind unnötig und können aus der gepackten Anwendung entfernt werden. Es besteht jedoch das Risiko, dass die Buildzeitanalyse der Anwendung zur Laufzeit Fehler verursachen kann, da verschiedene problematische Codemuster nicht zuverlässig analysiert werden können (hauptsächlich bei Reflexion). Da die Zuverlässigkeit nicht garantiert werden kann, wird dieses Bereitstellungsmodell als Previewfunktion angeboten. Die Engine für die Buildzeitanalyse liefert Warnungen für den Entwickler von Codemustern, die problematisch sind und daher korrigiert werden müssen. Nach Möglichkeit empfiehlt es sich, alle Runtimereflexionsabhängigkeiten in der Anwendung zu erstellen, indem Sie Code verwenden, der die gleichen Anforderungen erfüllt.
+Das unabhängige Bereitstellungsmodell zum Kürzen ist eine spezialisierte Version des eigenständigen Bereitstellungsmodells, das für die Minimierung der Bereitstellungsgröße optimiert ist. Das Minimieren der Bereitstellungsgröße ist für einige clientseitige Szenarios wie Blazor-Anwendungen eine wichtige Anforderung. Abhängig von der Komplexität der Anwendung ist für deren Ausführung nur eine Teilmenge der Frameworkassemblys, auf die verwiesen wird, und eine Teilmenge des Codes innerhalb der einzelnen Assemblys erforderlich. Die nicht verwendeten Teile der Bibliotheken sind unnötig und können aus der gepackten Anwendung entfernt werden.
 
-Der Kürzungsmodus für die Anwendungen kann über die TrimMode-Option konfiguriert werden und wird standardmäßig (`copyused`) verwendet, um in der Anwendung verwendete Assemblys zu bündeln. Blazor WebAssembly-Anwendungen verwenden einen aggressiveren Modus (`link`), der ungenutzten Code in den Assemblys abschneidet. Kürzungsanalysewarnungen bieten Informationen zu Codemustern, bei denen keine vollständige Abhängigkeitsanalyse möglich war. Diese Warnungen werden standardmäßig unterdrückt und können aktiviert werden, indem das Flag `SuppressTrimAnalysisWarnings` auf „false“ festgelegt wird. Weitere Informationen zu den verfügbaren Kürzungsoptionen finden Sie auf der [ILLinker-Seite](https://github.com/mono/linker/blob/master/docs/illink-options.md).
+Es besteht jedoch das Risiko, dass die Buildzeitanalyse der Anwendung zur Laufzeit Fehler verursachen kann, da verschiedene problematische Codemuster nicht zuverlässig analysiert werden können (hauptsächlich bei Reflexion). Da die Zuverlässigkeit nicht garantiert werden kann, wird dieses Bereitstellungsmodell als Previewfunktion angeboten.
+
+Die Engine für die Buildzeitanalyse liefert Warnungen für den Entwickler von Codemustern, die schwer zu erkennen sind und daher korrigiert werden müssen. Code kann mit Attributen kommentiert werden, um dem Trimmer mitzuteilen, was sonst noch enthalten sein soll. Mithilfe von [Quellen-Generatoren](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md) können viele Reflexionsmuster durch die Generierung von Code zur Buildzeit ersetzt werden.
+
+Der Kürzungsmodus für diese Anwendungen wird mit der `TrimMode`-Einstellung konfiguriert. Der Standardwert ist `copyused`, und Assemblys, auf die verwiesen wird, werden mit der Anwendung gebündelt. Der `link`-Wert wird mit Blazor WebAssembly-Anwendungen verwendet und entfernt nicht verwendeten Code in Assemblys. Kürzungsanalysewarnungen bieten Informationen zu Codemustern, bei denen keine vollständige Abhängigkeitsanalyse möglich war. Diese Warnungen werden standardmäßig unterdrückt und können aktiviert werden, indem das Flag `SuppressTrimAnalysisWarnings` auf `false` festgelegt wird. Weitere Informationen zu den verfügbaren Kürzungsoptionen finden Sie unter [Kürzungsoptionen](trimming-options.md).
 
 > [!NOTE]
 > Das Kürzen ist ein experimentelles Feature in .NET Core 3.1 und 5.0 und _nur_ für Anwendungen verfügbar, die eigenständig veröffentlicht werden.
@@ -36,28 +40,29 @@ Wenn der Code per Reflexion indirekt auf eine Assembly verweist, können Sie mit
 
 ## <a name="trim-your-app---cli"></a>Zuschneiden der App: CLI
 
-Sie können Ihre Anwendung mit dem Befehl [dotnet publish](../tools/dotnet-publish.md) zuschneiden. Beim Veröffentlichen Ihrer App legen Sie die folgenden drei Einstellungen fest:
+Sie können Ihre Anwendung mit dem Befehl [dotnet publish](../tools/dotnet-publish.md) zuschneiden. Legen Sie die folgenden Eigenschaften fest, wenn Sie Ihre App veröffentlichen:
 
-- Als eigenständige App veröffentlichen: `--self-contained true`
-- Zuschneiden aktivieren: `p:PublishTrimmed=true`
+- Veröffentlichung als eigenständige App für eine bestimmte Runtime: `-r win-x64`
+- Zuschneiden aktivieren: `/p:PublishTrimmed=true`
 
 Das folgende Beispiel veröffentlicht eine App für Windows als eigenständige App und schneidet die Ausgabe zu.
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <SelfContained>true</SelfContained>
     <PublishTrimmed>true</PublishTrimmed>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 Im folgenden Beispiel wird eine App mithilfe des aggressiven Kürzungsmodus veröffentlicht, bei dem nicht verwendeter Code in Assemblys abgeschnitten und Kürzungswarnungen aktiviert werden.
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
     <TrimMode>link</TrimMode>
     <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 Weitere Informationen finden Sie unter [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](deploy-with-cli.md).

@@ -2,21 +2,21 @@
 title: dotnet-dump – .NET Core
 description: Installieren und Verwenden des Befehlszeilentools dotnet-dump.
 ms.date: 10/14/2019
-ms.openlocfilehash: c78ddb6447021f61f2452c075733b7d33e051ca0
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888201"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140931"
 ---
-# <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Hilfsprogramm zum Sammeln und Analysieren von Speicherabbildern (`dotnet-dump`)
+# <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Hilfsprogramm zum Sammeln und Analysieren von Speicherabbildern (dotnet-dump)
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 3.0 SDK und neuere Versionen
 
 > [!NOTE]
 > `dotnet-dump` wird unter macOS nicht unterstützt.
 
-## <a name="installing-dotnet-dump"></a>Installieren von `dotnet-dump`
+## <a name="install-dotnet-dump"></a>Installieren von dotnet-dump
 
 Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-dump) `dotnet-dump` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
 
@@ -223,3 +223,8 @@ In Linux-Docker-Images des Microsoft .NET Core SDK können einige `dotnet-dump`-
 > Ausnahmefehler: System.DllNotFoundException: Ausnahme, da die freigegebene Bibliothek „libdl.so“ oder eine ihrer Abhängigkeiten nicht geladen werden kann.
 
 Um dieses Problem zu umgehen, installieren Sie das Paket „libc6-dev“.
+
+## <a name="see-also"></a>Weitere Informationen
+
+- [Blog zum Sammeln und Analysieren von Speicherabbildern](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/)
+- [Heapanalysetool (dotnet-gcdump)](dotnet-gcdump.md)
