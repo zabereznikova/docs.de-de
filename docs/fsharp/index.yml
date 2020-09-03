@@ -1,21 +1,21 @@
 ### YamlMime:Landing
-title: F#Dokumentation
-summary: Erfahren Sie, wie Sie eine beliebige Anwendung F# mithilfe der Programmiersprache in .net schreiben.
+title: F#-Dokumentation
+summary: Hier erfahren Sie, wie Sie eine beliebige Anwendung mithilfe der Programmiersprache F# auf .NET schreiben.
 metadata:
-  title: 'F#Dokumentation: Einstieg, Tutorials, Referenz.'
-  description: 'Erlernen F# der Programmierung: für Entwickler, F#die für Entwickler F# neu sind und erfahrene/.NET-Entwickler'
+  title: 'F#-Dokumentation: Einstieg, Tutorials, Referenz.'
+  description: 'Einstieg in das Programmieren mit F#: für Entwickler, die keine Erfahrung mit F# haben und für Entwickler, die mit F# und .NET vertraut sind.'
   ms.topic: landing-page
   author: cartermp
   ms.author: phcart
-  ms.date: 11/25/2019
-  ms.openlocfilehash: 113a99d75f77cba56639abf485bf646155f0ff36
-  ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
-  ms.translationtype: MT
+  ms.date: 08/29/2020
+  ms.openlocfilehash: 7d7f9492bcd41975616ddd4d8f552aea5217b2d7
+  ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+  ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/28/2019
-  ms.locfileid: "74569498"
+  ms.lasthandoff: 09/01/2020
+  ms.locfileid: "89271853"
 landingContent:
-- title: Erlernen Sie das Programmieren inF#
+- title: Einstieg in das Programmieren mit F#
   linkLists:
   - linkListType: get-started
     links:
@@ -23,15 +23,15 @@ landingContent:
       url: what-is-fsharp.md
     - text: Installieren von F#
       url: get-started/install-fsharp.md
-    - text: Einstieg F# in Visual Studio
+    - text: Erste Schritte mit F# in Visual Studio
       url: get-started/get-started-visual-studio.md
-    - text: Beginnen Sie mit F# in Visual Studio Code
+    - text: Erste Schritte mit F# in Visual Studio Code
       url: get-started/get-started-vscode.md
   - linkListType: download
     links:
-    - text: Herunterladen der .net Core SDK
+    - text: .NET Core SDK herunterladen
       url: https://dotnet.microsoft.com/download
-- title: F#lagen
+- title: 'Grundlagen von F#:'
   linkLists:
   - linkListType: overview
     links:
@@ -51,29 +51,35 @@ landingContent:
       url: style-guide/conventions.md
   - linkListType: tutorial
     links:
-    - text: Asynchrone Programmierung inF#
+    - text: Asynchrone Programmierung in F#
       url: tutorials/asynchronous-and-concurrent-programming/async.md
-- title: Neue Features inF#
+- title: Neue Features in F#
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Neuerungen in F# 4,7
+    - text: Neues in F# 4.7
       url: whats-new/fsharp-47.md
-    - text: Neuerungen in F# 4,6
+    - text: Neues in F# 4.6
       url: whats-new/fsharp-46.md
-    - text: Neuerungen in F# 4,5
+    - text: Neues in F# 4.5
       url: whats-new/fsharp-45.md
-- title: F#Sprachreferenz
+- title: F#-Referenz
   linkLists:
   - linkListType: reference
     links:
     - text: Sprachreferenz
       url: language-reference/index.md
-    - text: Schlüsselwort Verweis
+    - text: Schlüsselwortreferenz
       url: language-reference/keyword-reference.md
-    - text: Symbol-und Operator Verweis
+    - text: Symbol- und Operatorenreferenz
       url: language-reference/symbol-and-operator-reference/index.md
-    - text: Funktionen
+    - text: Functions
       url: language-reference/functions/index.md
-    - text: F#solche
+    - text: F#-Typen
       url: language-reference/fsharp-types.md
+- title: Referenz zur F#-Kernbibliothek
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: API-Referenz zu FSharp.Core
+      url: https://fsharp.github.io/fsharp-core-docs/
