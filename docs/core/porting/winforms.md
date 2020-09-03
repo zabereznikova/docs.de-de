@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie eine .NET Framework Windows Forms-Anwend
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 71bd5740e1ea380fdde86328a5aed71fded64765
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206135"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118545"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Portieren einer Windows Forms-Desktop-App zu .NET Core 3.0
 
@@ -26,7 +26,7 @@ In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migr
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) oder höher für alle Aufgaben, die Sie mit dem Designer durchführen möchten. Sie sollten ein Update auf die neueste [Vorschauversion von Visual Studio](https://visualstudio.microsoft.com/vs/preview/) durchführen.
+- [Visual Studio 2019, Version 16.5 oder höher](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16) für beliebige Designerarbeiten, die Sie tätigen möchten Es wird empfohlen, ein Update auf die [neueste Version von Visual Studio](https://visualstudio.microsoft.com/vs/) durchzuführen.
 
   Installieren Sie die folgenden Visual Studio-Workloads:
   
@@ -37,7 +37,7 @@ In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migr
 - Ein in C# programmiertes Projekt.
 
 > [!NOTE]
-> .NET Core 3.0-Projekte werden nur in **Visual Studio 2019** oder einer höheren Version unterstützt. Ab **Visual Studio 2019 16.5 Preview 1** wird auch der .NET Core-Windows Forms-Designer unterstützt.
+> .NET Core-Windows Forms-Projekte werden in Visual Studio 2019 und höheren Versionen unterstützt. Der .NET Core-Windows Forms-Designer wird ab Version 16.5 von Visual Studio 2019 unterstützt.
 >
 > Um den Designer zu aktivieren, wechseln Sie zu **Extras** > **Optionen** > **Umgebung** > **Vorschaufeatures**, und wählen Sie Option **Use the preview Windows Forms designer for .NET Core apps** (Vorschauversion des Windows Forms-Designers für .NET Core-Apps verwenden) aus.
 

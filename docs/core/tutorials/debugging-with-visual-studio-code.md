@@ -2,12 +2,12 @@
 title: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 description: Erfahren Sie, wie Sie eine .NET Core-Konsolen-App mit Visual Studio Code debuggen.
 ms.date: 05/26/2020
-ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702126"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118298"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 
@@ -15,7 +15,7 @@ In diesem Tutorial werden die Debugtools vorgestellt, die in Visual Studio Code 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Dieses Tutorial funktioniert mit der Konsolen-App, die Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio Code](with-visual-studio-code.md) erstellen.
+- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code](with-visual-studio-code.md) erstellen.
 
 ## <a name="use-debug-build-configuration"></a>Verwenden der Debugbuildkonfiguration
 
@@ -27,7 +27,7 @@ Standardmäßig wird in den Visual Studio Code-Starteinstellungen die Debugbuild
 
 1. Starten Sie Visual Studio Code.
 
-1. Öffnen Sie den Ordner des Projekts, das Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio Code](with-visual-studio-code.md) erstellt haben.
+1. Öffnen Sie den Ordner des Projekts, das Sie in [Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code](with-visual-studio-code.md) erstellt haben.
 
 ## <a name="set-a-breakpoint"></a>Haltepunkt festlegen
 
@@ -35,7 +35,7 @@ Ein *Haltepunkt* unterbricht vorübergehend die Ausführung der Anwendung, bevor
 
 1. Öffnen Sie die Datei *Program.cs*.
 
-1. Legen Sie einen *Breakpoint* in der Zeile fest, in der der Name, das Datum und die Uhrzeit angezeigt werden, indem Sie auf den linken Rand des Codefensters klicken. Der linke Rand befindet sich links von den Zeilennummern. Andere Möglichkeiten zum Festlegen eines Haltepunkts bestehen darin, <kbd>F9</kbd> zu drücken oder bei ausgewählter Codezeile im Menü **Ausführen** > **Haltepunkt umschalten** auszuwählen.
+1. Legen Sie einen *Breakpoint* in der Zeile fest, in der der Name, das Datum und die Uhrzeit angezeigt werden, indem Sie auf den linken Rand des Codefensters klicken. Der linke Rand befindet sich links von den Zeilennummern. Andere Möglichkeiten zum Festlegen eines Breakpoints bestehen darin, <kbd>F9</kbd> zu drücken oder **Ausführen** > **Haltepunkt umschalten** aus dem Menü auszuwählen, während die Codezeile ausgewählt ist.
 
    Visual Studio Code gibt die Zeile an, in der der Haltepunkt festgelegt ist, indem ein roter Punkt am linken Rand angezeigt wird.
 
@@ -51,13 +51,13 @@ Der Breakpoint befindet sich hinter einem `Console.ReadLine`-Methodenaufruf. Die
 
    Von:
 
-   ```
+   ```json
    "console": "internalConsole",
    ```
 
    Nach:
 
-   ```
+   ```json
    "console": "integratedTerminal",
    ```
 
@@ -69,7 +69,7 @@ Der Breakpoint befindet sich hinter einem `Console.ReadLine`-Methodenaufruf. Die
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Öffnen der Registerkarte „Debuggen“ in Visual Studio Code":::
 
-1. Wählen Sie den grünen Pfeil am oberen Rand des Bereichs neben **.NET Core starten (Konsole)** aus. Eine andere Möglichkeit, das Programm im Debugmodus zu starten, besteht darin, im Menü **Ausführen** > **Debuggen starten** zu wählen.
+1. Wählen Sie den grünen Pfeil am oberen Rand des Bereichs neben **.NET Core starten (Konsole)** aus. Andere Möglichkeiten zum Starten des Programms im Debugmodus besteht darin, <kbd>F5</kbd> zu drücken oder **Ausführen** > **Debuggen starten** aus dem Menü auszuwählen.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Starten des Debuggens":::
 
@@ -133,7 +133,7 @@ Das Programm zeigt die Zeichenfolge an, die der Benutzer eingibt. Aber was gesch
 
 1. Drücken Sie auf der Registerkarte **Terminal** die <kbd>EINGABETASTE</kbd>, wenn Sie zur Eingabe Ihres Namens aufgefordert werden.
 
-   Da die angegebene Bedingung erfüllt wurde (`name` ist `null` oder <xref:System.String.Empty?displayProperty=nameWithType>), wird die Ausführung des Programms beendet, wenn sie den Breakpoint erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird.
+   Da die angegebene Bedingung erfüllt wurde (`name` ist entweder `null` oder <xref:System.String.Empty?displayProperty=nameWithType>), endet die Ausführung des Programms, wenn sie den Breakpoint erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird.
 
    Im Fenster **Variablen** wird angezeigt, dass der Wert der `name`-Variablen `""` oder <xref:System.String.Empty?displayProperty=nameWithType> ist.
 

@@ -2,12 +2,12 @@
 title: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac
 description: Erfahren Sie, wie Sie eine .NET Core-Konsolenanwendung mit Visual Studio für Mac erstellen.
 ms.date: 06/02/2020
-ms.openlocfilehash: 9cab838eaab2c59d8a0270267514f57acb7c60fb
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 8ffcb05ad85f53180ca1aaefbd2dfc7496946142
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811672"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867658"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac
 
@@ -86,7 +86,7 @@ Erweitern Sie die Anwendung, um den Benutzer aufzufordern, seinen Namen einzugeb
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
-   Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die <kbd>EINGABETASTE</kbd> gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` zu. Schließlich werden diese Werte im Konsolenfenster angezeigt.
+   Mit diesem Code wird eine Eingabeaufforderung im Konsolenfenster angezeigt und gewartet, bis der Benutzer eine Zeichenfolge eingibt und die <kbd>EINGABETASTE</kbd> drückt. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` zu. Außerdem werden diese Werte im Konsolenfenster angezeigt. Schließlich wird eine Eingabeaufforderung im Konsolenfenster angezeigt, und die <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType>-Methode wird aufgerufen, um auf eine Benutzereingabe zu warten.
 
    `\n` stellt ein Zeilenvorschubzeichen dar.
 
@@ -105,4 +105,4 @@ Erweitern Sie die Anwendung, um den Benutzer aufzufordern, seinen Namen einzugeb
 In diesem Tutorial haben Sie eine .NET Core-Konsolenanwendung erstellt. Im nächsten Tutorial debuggen Sie die App.
 
 > [!div class="nextstepaction"]
-> [Debuggen einer .NET Core-Konsolenanwendung in Visual Studio](debugging-with-visual-studio-mac.md)
+> [Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac](debugging-with-visual-studio-mac.md)

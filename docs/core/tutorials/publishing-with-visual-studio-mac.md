@@ -2,12 +2,12 @@
 title: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac
 description: Bei der Veröffentlichung werden die Dateien erstellt, die zum Ausführen Ihrer .NET Core-Anwendung benötigt werden.
 ms.date: 06/08/2020
-ms.openlocfilehash: 67762481d3a56b8473e643f71b8df909b6e54fc6
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: ec6b867f145ffdea491187de3745149f2cebd8dd
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713352"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867541"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac
 
@@ -15,13 +15,13 @@ In diesem Tutorial wird gezeigt, wie eine Konsolen-App veröffentlicht wird, dam
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Dieses Tutorial funktioniert mit der Konsolen-App, die Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio für Mac](with-visual-studio-mac.md) erstellen.
+- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac](with-visual-studio-mac.md) erstellen.
 
 ## <a name="publish-the-app"></a>Veröffentlichen der App
 
 1. Starten Sie Visual Studio für Mac.
 
-1. Öffnen Sie das Projekt HelloWorld, das Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio für Mac](with-visual-studio-mac.md) erstellt haben.
+1. Öffnen Sie das HelloWorld-Projekt, das Sie in [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac](with-visual-studio-mac.md) erstellt haben.
 
 1. Stellen Sie sicher, dass Visual Studio die endgültige Produktversion der Anwendung erstellt. Ändern Sie ggf. die Einstellung der Buildkonfiguration auf der Symbolleiste von **Debuggen** in **Freigabe**.
 
@@ -69,7 +69,7 @@ Wie in der vorherigen Abbildung gezeigt, enthält die veröffentlichte Ausgabe d
 
 1. Öffnen Sie ein Terminal, und navigieren Sie zum Ordner *publish*. Geben Sie dazu `cd` ein, und fügen Sie dann den zuvor kopierten Pfad ein. Zum Beispiel:
 
-   ```
+   ```console
    cd ~/Projects/HelloWorld/HelloWorld/bin/Release/netcoreapp3.1/publish/
    ```
 
@@ -88,4 +88,4 @@ Wie in der vorherigen Abbildung gezeigt, enthält die veröffentlichte Ausgabe d
 In diesem Tutorial haben Sie eine Konsolen-App veröffentlicht. Im nächsten Tutorial erstellen Sie eine Klassenbibliothek.
 
 > [!div class="nextstepaction"]
-> [Erstellen einer .NET Standard-Bibliothek in Visual Studio für Mac](library-with-visual-studio-mac.md)
+> [Tutorial: Erstellen einer .NET-Standard-Bibliothek mit Visual Studio für Mac](library-with-visual-studio-mac.md)

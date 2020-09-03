@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: 4cd18aca4396f902268d59867760424d65ddcf6d
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795384"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867632"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio
 
@@ -96,7 +96,7 @@ Erweitern Sie die Anwendung, um den Benutzer aufzufordern, seinen Namen einzugeb
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
    :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="MainMethod":::
 
-   Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die <kbd>EINGABETASTE</kbd> gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType>-Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` (`currentDate` in Visual Basic) zu. Schließlich werden diese Werte im Konsolenfenster angezeigt.
+   Mit diesem Code wird eine Eingabeaufforderung im Konsolenfenster angezeigt und gewartet, bis der Benutzer eine Zeichenfolge eingibt und die <kbd>EINGABETASTE</kbd> drückt. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType>-Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` (`currentDate` in Visual Basic) zu. Außerdem werden diese Werte im Konsolenfenster angezeigt. Schließlich wird eine Eingabeaufforderung im Konsolenfenster angezeigt, und die <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType>-Methode wird aufgerufen, um auf eine Benutzereingabe zu warten.
 
    `\n` (`vbCrLf` in Visual Basic) stellt ein Zeilenvorschubzeichen dar.
 
@@ -115,4 +115,4 @@ Erweitern Sie die Anwendung, um den Benutzer aufzufordern, seinen Namen einzugeb
 In diesem Tutorial haben Sie eine .NET Core-Konsolenanwendung erstellt. Im nächsten Tutorial debuggen Sie die App.
 
 > [!div class="nextstepaction"]
-> [Debuggen einer .NET Core-Konsolenanwendung in Visual Studio](debugging-with-visual-studio.md)
+> [Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio](debugging-with-visual-studio.md)

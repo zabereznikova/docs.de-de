@@ -1,4 +1,5 @@
 ---
+description: Informationen zum integrierten booleschen Typ in C#
 title: 'bool-Typ: C#-Referenz'
 ms.date: 11/26/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 4623dc7d6c8c6c437c78aee45f0eeee8a92e3200
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 23e5bc34f1751b0a706c20dae340920239fcda9d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854879"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126462"
 ---
 # <a name="bool-c-reference"></a>bool (C#-Referenz)
 
@@ -50,5 +51,5 @@ Weitere Informationen finden Sie im Abschnitt [Der Typ „bool“](~/_csharplang
 ## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
-- [Value types (Werttypen)](value-types.md)
-- [Operatoren „true“ und „false“](../operators/true-false-operators.md)
+- [Werttypen](value-types.md)
+- [true- und false-Operatoren](../operators/true-false-operators.md)

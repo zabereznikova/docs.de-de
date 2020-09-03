@@ -1,4 +1,5 @@
 ---
+description: try-catch – C#-Referenz
 title: try-catch – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e3154da2103029f704abd6873d16d372f1ae19ac
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619701"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141997"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
 
@@ -131,9 +132,9 @@ Weitere Informationen zu „catch“ finden Sie unter [try-catch-finally](try-ca
 
 Eine asynchrone Methode wird mit einem [async](async.md)-Modifizierer gekennzeichnet und enthält in der Regel eine oder mehrere await-Ausdrücke oder -Anweisungen. Ein „await“-Ausdruck wendet den [await](../operators/await.md)-Operator auf ein <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> an.
 
-Wenn ein `await`-Ausdruck in der asynchchronen Methode erreicht wird, wird die Ausführung der Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden. Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](../../programming-guide/concepts/async/index.md) und [Ablaufsteuerung in asynchronen Programmen](../../programming-guide/concepts/async/control-flow-in-async-programs.md).
+Wenn ein `await`-Ausdruck in der asynchchronen Methode erreicht wird, wird die Ausführung der Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden. Weitere Informationen finden Sie unter [Asynchrone Programmierung mit async und await](../../programming-guide/concepts/async/index.md).
 
-Die abgeschlossene Aufgabe, auf die `await` angewendet wird, kann sich aufgrund einer unbehandelten Ausnahme in der Methode, die die Aufgabe zurückgibt, in einem fehlerhaften Zustand befinden. Das Warten auf die Aufgabe löst eine Ausnahme aus. Eine Aufgabe kann auch in einem abgebrochenen Zustand enden, wenn der asynchrone Prozess, der sie zurückgibt, abgebrochen wird. Das Warten auf eine abgebrochene Aufgabe löst eine `OperationCanceledException` aus. Weitere Informationen zum Abbrechen eines asynchronen Prozesses finden Sie unter [Feinabstimmung der Async-Anwendung](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Die abgeschlossene Aufgabe, auf die `await` angewendet wird, kann sich aufgrund einer unbehandelten Ausnahme in der Methode, die die Aufgabe zurückgibt, in einem fehlerhaften Zustand befinden. Das Warten auf die Aufgabe löst eine Ausnahme aus. Eine Aufgabe kann auch in einem abgebrochenen Zustand enden, wenn der asynchrone Prozess, der sie zurückgibt, abgebrochen wird. Das Warten auf eine abgebrochene Aufgabe löst eine `OperationCanceledException`-Ausnahme aus.
 
 Um die Ausnahme abzufangen, warten Sie in einem `try`-Block auf die Aufgabe, und fangen Sie die Ausnahme im zugehörigen `catch`-Block ab. Ein Beispiel hierfür finden Sie im Abschnitt [Beispiel zu einer Async-Methode](#async-method-example).
 

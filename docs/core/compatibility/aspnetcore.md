@@ -2,21 +2,27 @@
 title: Breaking Changes in ASP.NET Core
 titleSuffix: ''
 description: Listet die Breaking Changes in ASP.NET Core auf.
-ms.date: 07/17/2020
+ms.date: 08/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 443494291f4ec58aecd7c8d8ed42cb4086e64095
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720240"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957729"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Breaking Changes in ASP.NET Core
 
 ASP.NET Core stellt die von .NET Core verwendeten Web-App-Entwicklungsfeatures bereit.
 
-Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
+Klicken Sie auf einen der folgenden Links, um Breaking Changes in einer bestimmten Version anzuzeigen:
+
+* [ASP.NET Core 5.0](#aspnet-core-50)
+* [ASP.NET Core 3.1](#aspnet-core-31)
+* [ASP.NET Core 3.0](#aspnet-core-30)
+
+Die folgenden Breaking Changes in ASP.NET Core 3.0, 3.1 und 5.0 sind auf dieser Seite dokumentiert:
 
 - [Veraltete Antifälschungs-, CORS-, Diagnose-, MVC- und Routing-APIs wurden entfernt](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Authentifizierung: Google+ ist veraltet](#authentication-google-deprecated-and-replaced)
@@ -69,11 +75,13 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [Lokalisierung: Ein veralteter Konstruktor wurde in der Middleware für Anforderungslokalisierung entfernt](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [Lokalisierung: ResourceManagerWithCultureStringLocalizer-Klasse und WithCulture-Schnittstellenmember entfernt](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Protokollierung: DebugLogger-Klasse wurde als „internal“ deklariert](#logging-debuglogger-class-made-internal)
+- [Middleware: Datenbankfehlerseite als veraltet markiert](#middleware-database-error-page-marked-as-obsolete)
 - [MVC: Async-Suffix wurde für Controlleraktion entfernt](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult wurde in Microsoft.AspNetCore.Mvc.Core verschoben](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
 - [MVC: Vorkompilierungstool wurde als veraltet markiert](#mvc-precompilation-tool-deprecated)
 - [MVC: Typen wurden in „internal“ geändert](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Web-API-Kompatibilitätsshim wurde entfernt](#mvc-web-api-compatibility-shim-removed)
+- [Razor: RazorTemplateEngine-API wurde entfernt](#razor-razortemplateengine-api-removed)
 - [Razor: Laufzeitkompilierung wurde in ein Paket verschoben](#razor-runtime-compilation-moved-to-a-package)
 - [Sicherheit: Die Codierung für Cookienamen wurde entfernt](#security-cookie-name-encoding-removed)
 - [Sicherheit: Die Versionen des IdentityModel-NuGet-Pakets wurden aktualisiert](#security-identitymodel-nuget-package-versions-updated)
@@ -159,6 +167,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Middleware: Database error page marked as obsolete](~/includes/core-changes/aspnetcore/5.0/middleware-database-error-page-obsolete.md)]
 
 ***
 
@@ -343,6 +355,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 ***
 
 [!INCLUDE[MVC: Web API compatibility shim removed](~/includes/core-changes/aspnetcore/3.0/mvc-webapi-compat-shim-removed.md)]
+
+***
+
+[!INCLUDE[Razor: RazorTemplatEengine API removed](~/includes/core-changes/aspnetcore/3.0/razor-razortemplateengine-api-removed.md)]
 
 ***
 

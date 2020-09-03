@@ -4,14 +4,14 @@ description: Übersicht über Methoden, Methodenparameter und Methodenrückgabew
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063353"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810572"
 ---
-# <a name="methods"></a>Methoden
+# <a name="methods-in-c"></a>Methoden in C#
 
 Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Programm bewirkt die Ausführung der Anweisungen, indem die Methode aufgerufen wird und alle erforderlichen Methodenargumente angegeben werden. In C# werden alle Anweisungen im Kontext einer Methode ausgeführt. Die Methode `Main` ist der Einstiegspunkt jeder C#-Anwendung und wird von der Common Language Runtime (CLR) aufgerufen, wenn das Programm gestartet wird.
 
@@ -32,7 +32,7 @@ Methoden werden in `class` oder `struct` durch folgende Angaben deklariert:
 
 Diese Teile bilden zusammen die Signatur der Methode.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Ein Rückgabetyp einer Methode ist nicht Teil der Signatur der Methode, wenn es um die Methodenüberladung geht. Er ist jedoch Teil der Methodensignatur, wenn die Kompatibilität zwischen einem Delegaten und der Methode bestimmt wird, auf die dieser verweist.
 
 Im folgenden Beispiel wird eine Klasse mit dem Namen `Motorcycle` deklariert, die fünf Methoden enthält:
@@ -249,11 +249,11 @@ Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%
 
 Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode, die eine Rückgabeanweisung besitzt, die eine ganze Zahl zurückgibt. Da es sich um eine async-Methode handelt, muss die Methodendeklaration einen `Task<int>`-Rückgabetyp haben. Da der Rückgabetyp `Task<int>` ist, ergibt die Auswertung des `await`-Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende `int result = await delayTask`-Anweisung veranschaulicht.
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+:::code language="csharp" source="programming-guide/classes-and-structs/snippets/classes-and-structs/methods/Program.cs":::
 
 Mit einer asynchronen Methode können keine [in](language-reference/keywords/in-parameter-modifier.md)-, [ref](language-reference/keywords/ref.md)- oder [out](language-reference/keywords/out-parameter-modifier.md)-Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
 
- Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](async.md), [Ablaufsteuerung in asynchronen Programmen](programming-guide/concepts/async/control-flow-in-async-programs.md) und [Asynchrone Rückgabetypen](programming-guide/concepts/async/async-return-types.md).
+ Weitere Informationen zu den asynchronen Methoden finden Sie unter [Asynchrone Programmierung mit async und await](async.md) und [Asynchrone Rückgabetypen (C#)](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
 

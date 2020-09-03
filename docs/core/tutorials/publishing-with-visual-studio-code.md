@@ -2,12 +2,12 @@
 title: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 description: Bei der Veröffentlichung werden die Dateien erstellt, die zum Ausführen Ihrer .NET Core-Anwendung benötigt werden.
 ms.date: 07/04/2020
-ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051882"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867645"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 
@@ -17,13 +17,13 @@ Die .NET Core-CLI wird zum Veröffentlichen der App verwendet. Sie können diese
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Dieses Tutorial funktioniert mit der Konsolen-App, die Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio Code](with-visual-studio-code.md) erstellen.
+- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code](with-visual-studio-code.md) erstellen.
 
 ## <a name="publish-the-app"></a>Veröffentlichen der App
 
 1. Starten Sie Visual Studio Code.
 
-1. Öffnen Sie den *HelloWorld*-Projektordner, den Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio Code](with-visual-studio-code.md) erstellt haben.
+1. Öffnen Sie den *HelloWorld*-Projektordner, den Sie in [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code](with-visual-studio-code.md) erstellt haben.
 
 1. Klicken Sie im Hauptmenü auf **Ansicht** > **Terminal**.
 
@@ -39,7 +39,7 @@ Die .NET Core-CLI wird zum Veröffentlichen der App verwendet. Sie können diese
 
    Die Befehlsausgabe ähnelt dem folgenden Beispiel:
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -112,4 +112,4 @@ In den folgenden Schritten sehen Sie sich die durch den Veröffentlichungsvorgan
 In diesem Tutorial haben Sie eine Konsolen-App veröffentlicht. Im nächsten Tutorial erstellen Sie eine Klassenbibliothek.
 
 > [!div class="nextstepaction"]
-> [Erstellen einer .NET Standard-Bibliothek in Visual Studio Code](library-with-visual-studio-code.md)
+> [Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio Code](library-with-visual-studio-code.md)

@@ -1,13 +1,13 @@
 ---
 title: Implementieren von Wertobjekten
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Einführung in die Details und Optionen zum Implementieren von Wertobjekten mithilfe neuer Features von Entity Framework
-ms.date: 01/30/2020
-ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 08/21/2020
+ms.openlocfilehash: 02eed7baaa364c62aa2df599f1d8b0e700dd215f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805739"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811118"
 ---
 # <a name="implement-value-objects"></a>Implementieren von Wertobjekten
 
@@ -37,7 +37,7 @@ Mithilfe von Wertobjekten können Sie aufgrund ihrer Unveränderlichkeit bestimm
 
 ## <a name="value-object-implementation-in-c"></a>Implementieren von Wertobjekten in C\#
 
-Im Hinblick auf die Implementierung können Sie über eine Wertobjektbasisklasse mit grundlegenden Hilfsprogrammmethoden wie Gleichheit, die auf einem Vergleich aller Attribute basiert (da Wertobjekte nicht auf einer Identität basieren dürfen), und anderen grundlegenden Merkmalen verfügen. Im folgenden Beispiel wird eine Wertobjektbasisklasse angezeigt, die im eShopOnContainers-Microservice für Bestellungen verwendet wird.
+Im Hinblick auf die Implementierung können Sie über eine Wertobjekt-Basisklasse mit grundlegenden Hilfsprogrammmethoden wie Gleichheit, die auf einem Vergleich aller Attribute basiert (da Wertobjekte nicht auf einer Identität basieren dürfen), und anderen grundlegenden Merkmalen verfügen. Im folgenden Beispiel wird eine Wertobjektbasisklasse angezeigt, die im eShopOnContainers-Microservice für Bestellungen verwendet wird.
 
 ```csharp
 public abstract class ValueObject
@@ -56,7 +56,7 @@ public abstract class ValueObject
         return !(EqualOperator(left, right));
     }
 
-    protected abstract IEnumerable<object> GetAtomicValues();
+    protected abstract IEnumerable<object> GetEqualityComponents();
 
     public override bool Equals(object obj)
     {
@@ -65,31 +65,16 @@ public abstract class ValueObject
             return false;
         }
 
-        ValueObject other = (ValueObject)obj;
-        IEnumerator<object> thisValues = GetAtomicValues().GetEnumerator();
-        IEnumerator<object> otherValues = other.GetAtomicValues().GetEnumerator();
-        while (thisValues.MoveNext() && otherValues.MoveNext())
-        {
-            if (ReferenceEquals(thisValues.Current, null) ^
-                ReferenceEquals(otherValues.Current, null))
-            {
-                return false;
-            }
+        var other = (ValueObject)obj;
 
-            if (thisValues.Current != null &&
-                !thisValues.Current.Equals(otherValues.Current))
-            {
-                return false;
-            }
-        }
-        return !thisValues.MoveNext() && !otherValues.MoveNext();
+        return this.GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
     }
 
     public override int GetHashCode()
     {
-        return GetAtomicValues()
-         .Select(x => x != null ? x.GetHashCode() : 0)
-         .Aggregate((x, y) => x ^ y);
+        return GetEqualityComponents()
+            .Select(x => x != null ? x.GetHashCode() : 0)
+            .Aggregate((x, y) => x ^ y);
     }
     // Other utility methods
 }
@@ -106,7 +91,7 @@ public class Address : ValueObject
     public String Country { get; private set; }
     public String ZipCode { get; private set; }
 
-    private Address() { }
+    public Address() { }
 
     public Address(string street, string city, string state, string country, string zipcode)
     {
@@ -117,7 +102,7 @@ public class Address : ValueObject
         ZipCode = zipcode;
     }
 
-    protected override IEnumerable<object> GetAtomicValues()
+    protected override IEnumerable<object> GetEqualityComponents()
     {
         // Using a yield return statement to return each element one at a time
         yield return Street;
@@ -133,7 +118,7 @@ Sie können sehen, wie diese Implementierung des Wertobjekts „Address“ über
 
 In einer Klasse über kein von Entity Framework (EF) verwendbares ID-Feld zu verfügen, war bis EF Core 2.0 nicht möglich. Dies ist für das Implementieren besserer Wertobjekte ohne ID ausgesprochen hilfreich. Außerdem entspricht dies der Erklärung des nächsten Abschnitts.
 
-Es ließe sich die Ansicht vertreten, dass Wertobjekte – da sie unveränderlich sind – schreibgeschützte Eigenschaften aufweisen sollten, und dies stimmt tatsächlich. Allerdings werden Wertobjekte in der Regel zum Durchlaufen von Warteschlangen serialisiert und deserialisiert. Wenn sie schreibgeschützt sind, kann das Deserialisierungsprogramm keine Werte zuweisen. Daher wird die Eigenschaft `private set` beibehalten, wodurch sie zu eine Maß schreibgeschützt sind, dass sie dennoch verwendet werden können.
+Es ließe sich die Ansicht vertreten, dass Wertobjekte – da sie unveränderlich sind – schreibgeschützte Eigenschaften aufweisen sollten, und dies stimmt tatsächlich. Allerdings werden Wertobjekte in der Regel zum Durchlaufen von Warteschlangen serialisiert und deserialisiert. Wenn sie schreibgeschützt sind, kann das Deserialisierungsprogramm keine Werte zuweisen. Daher behalten Sie die Eigenschaft `private set` bei, wodurch sie zu einem Maß schreibgeschützt sind, dass sie dennoch verwendet werden können.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Beibehalten von Wertobjekten in der Datenbank mit EF Core 2.0 und höher
 
@@ -170,7 +155,7 @@ Das eigene Entitätstypenfeature wurde schon mit Version 2.0 von EF Core hinzuge
 
 Über einen eigenen Entitätstyp können Sie Typen zuordnen, für die keine Identität im Domänenmodell explizit definiert ist und die als Eigenschaften verwendet werden, also z.B. als ein Wertobjekt in einer Entität. Ein nicht eigenständiger Entitätstyp teilt sich denselben CLR-Typ mit einem anderen Entitätstyp (d. h., es handelt sich lediglich um eine reguläre Klasse). Die Entität, die die definierende Navigation enthält, ist die besitzende Entität. Beim Abfragen des Besitzers werden standardmäßig eigene Typen eingeschlossen.
 
-Bei alleiniger Betrachtung des Domänenmodell sieht es so aus, als ob ein nicht eigenständiger Typ keine Identität aufweist. Die Identität des eigenen Typs befindet sich allerdings im Hintergrund, und die Eigenschaft zur Besitzernavigation ist Teil dieser Identität.
+Bei alleiniger Betrachtung des Domänenmodell sieht es so aus, als ob ein nicht eigenständiger Typ keine Identität aufweist. Allerdings verfügen die eigenen Typen im Hintergrund über die Identität, aber die Besitzernavigationseigenschaft ist Teil dieser Identität.
 
 Die Identität von Instanzen von eigenen Typen ist nicht ausschließlich auf diese beschränkt. Sie besteht aus drei Hauptkomponenten:
 
@@ -180,7 +165,7 @@ Die Identität von Instanzen von eigenen Typen ist nicht ausschließlich auf die
 
 - Im Fall von Sammlungen nicht eigenständiger Entitätstypen eine unabhängige Komponente (unterstützt ab EF Core 2.2).
 
-Beispielsweise wird im Domänenmodell für die Bestellung in eShopOnContainers das Wertobjekt „Address“ als Teil der Entität „Order“ als eigener Entitätstyp in die besitzende Entität (also der Entität „Order“) implementiert. Bei „Address“ handelt es sich um einen Typ ohne Identitätseigenschaft, der im Domänenmodell definiert ist. Dieser Typ wird als Eigenschaft des Typs „Order“ verwendet, um die Lieferadresse für eine bestimmte Bestellung anzugeben.
+Beispielsweise wird im Domänenmodell für die Bestellung in eShopOnContainers das Wertobjekt „Address“ als Teil der Entität „Order“ als eigener Entitätstyp in die besitzende Entität (also der Entität „Order“) implementiert. `Address` ist ein Typ, für den keine Identitätseigenschaft im Domänenmodell definiert ist. Dieser Typ wird als Eigenschaft des Typs „Order“ verwendet, um die Lieferadresse für eine bestimmte Bestellung anzugeben.
 
 Gemäß den Konventionen wird ein Schattenprimärschlüssel für den eigenen Typ erstellt und mithilfe der Tabellenaufteilung derselben Tabelle wie der Besitzer zugeordnet. Dies ermöglicht die Verwendung von eigenen Typen, ähnlich wie bei den in EF 6 im herkömmlichen .NET Framework verwendeten komplexen Typen.
 
@@ -295,7 +280,7 @@ public class Address
 
 - Sie können für nicht eigenständige Entitätstypen (derzeit gezielt) `ModelBuilder.Entity<T>()` nicht aufrufen.
 
-- Optionale (d. h. Nullwerte zulassende) nicht eigenständige Entitätstypen, die (über Tabellenaufteilung) dem Besitzer in derselben Tabelle zugeordnet sind, werden nicht unterstützt. Der Grund hierfür ist, dass die Zuordnung für jede Eigenschaft durchgeführt wird, weshalb es keinen separaten Sentinel für den komplexen NULL-Wert gibt.
+- Optionale (d. h. Nullwerte zulassende) nicht eigenständige Entitätstypen, die (über Tabellenaufteilung) dem Besitzer in derselben Tabelle zugeordnet sind, werden nicht unterstützt. Der Grund hierfür ist, dass die Zuordnung für jede Eigenschaft erfolgt, es gibt keinen separaten Sentinel für den komplexen NULL-Wert.
 
 - Die Vererbungszuordnung für eigene Typen wird nicht unterstützt, aber Sie sollten zwei Blatttypen derselben Schnittstellenvererbungshierarchie als unterschiedliche eigene Typen zuordnen können. EF Core hat keine Probleme mit der Verarbeitung, weil diese Typen Teil derselben Hierarchie sind.
 

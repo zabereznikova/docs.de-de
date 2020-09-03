@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: e0033d52ab54259ce5e4ccf2a25bf4e3d4f244de
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701283"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867554"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung in Visual Studio
 
@@ -19,13 +19,13 @@ In diesem Tutorial wird gezeigt, wie eine Konsolen-App veröffentlicht wird, dam
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Dieses Tutorial funktioniert mit der Konsolen-App, die Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio Code 2019](with-visual-studio.md) erstellen.
+- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](with-visual-studio.md) erstellen.
 
 ## <a name="publish-the-app"></a>Veröffentlichen der App
 
 1. Starten Sie Visual Studio.
 
-1. Öffnen Sie das Projekt *HelloWorld*, das Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio](with-visual-studio.md) erstellt haben.
+1. Öffnen Sie das *HelloWorld*-Projekt, das Sie in [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](with-visual-studio.md) erstellt haben.
 
 1. Stellen Sie sicher, dass Visual Studio die Releasebuildkonfiguration verwendet. Ändern Sie ggf. die Einstellung der Buildkonfiguration auf der Symbolleiste von **Debuggen** in **Release**.
 
@@ -87,7 +87,7 @@ In den folgenden Schritten sehen Sie sich die durch den Veröffentlichungsvorgan
 
 1. Öffnen Sie eine Eingabeaufforderung, und navigieren Sie zum Ordner *publish*. Geben Sie dazu `cd` ein, und fügen Sie dann den vollständigen Pfad ein. Zum Beispiel:
 
-   ```
+   ```console
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
    ```
 

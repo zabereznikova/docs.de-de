@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163117"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957572"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -32,7 +32,7 @@ Siehe [ASP.NET-Dokumentation](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-Eine plattformübergreifende, leistungsstarke Open Source-Implementierung von ASP.NET, die auf .NET Core basiert.
+Hierbei handelt es sich um eine plattformübergreifende, leistungsstarke Open-Source-Implementierung von ASP.NET.
 
 Siehe [ASP.NET Core-Dokumentation](/aspnet/#pivot=core).
 
@@ -42,32 +42,37 @@ Eine *DLL*/*EXE*-Datei, die eine Sammlung von APIs enthalten kann, die von Anwen
 
 Eine Assembly kann Typen wie Schnittstellen, Klassen, Strukturen, Enumerationen und Delegaten enthalten. Assemblys im Ordner *bin* eines Projekts werden manchmal als *Binärdateien* bezeichnet. Siehe auch [Bibliotheken](#library).
 
+## <a name="bcl"></a>BCL
+
+Basisklassenbibliothek Auch bekannt als *Frameworkbibliotheken*.
+
+Eine Reihe von Bibliotheken, aus denen die Namespaces System.\* (und in beschränktem Umfang Microsoft.\*) bestehen. Bei der BCL handelt es sich um ein allgemeines Framework auf niedriger Ebene, auf dem Anwendungsframeworks auf höherer Ebene, z.B. ASP.NET Core, basieren.
+
+Der Quellcode der Basisklassenbibliothek für [.NET 5 (und .NET Core) und höheren Versionen](#net-5-and-later-versions) befindet sich im [.NET-Runtimerepository](https://github.com/dotnet/runtime). Der Großteil der APIs der Basisklassenbibliothek für diese neue Implementierung von .NET sind auch in .NET Framework verfügbar. Sie können sich diesen Quellcode also als Fork des Quellcodes für die .NET Framework-Basisklassenbibliothek vorstellen.
+
 ## <a name="clr"></a>CLR
 
 Common Language Runtime
 
-Die genaue Bedeutung hängt vom Kontext ab, normalerweise bezieht sich Common Language Runtime jedoch auf die Runtime von .NET Framework. Die CLR behandelt die Speicherbelegung und -verwaltung. Bei der CLR handelt es sich auch um einen virtuellen Computer, der nicht nur Apps ausführt, sondern auch mithilfe eines [JIT](#jit)-Compilers dynamisch Code generiert und kompiliert. Die aktuelle Microsoft CLR-Implementierung ist nur unter Windows möglich.
+Die genaue Bedeutung hängt vom Kontext ab. Common Language Runtime bezeichnet in der Regel die Runtime von [.NET Framework](#net-framework) oder die Runtime von [.NET 5 (und .NET Core) und höheren Versionen](#net-5-and-later-versions).
 
-## <a name="coreclr"></a>CoreCLR
+Die CLR verarbeitet die Speicherbelegung und -verwaltung. Bei der CLR handelt es sich auch um einen virtuellen Computer, der nicht nur Apps ausführt, sondern auch mithilfe eines [JIT](#jit)-Compilers dynamisch Code generiert und kompiliert.
 
-.NET Core Common Language Runtime
+Die CLR-Implementierung für .NET Framework ist nur für Windows vorgesehen.
 
-Die CoreCLR basiert auf demselben Code wie die CLR. rsprünglich war CoreCLR die Runtime von Silverlight und wurde entworfen, um auf mehreren Plattformen ausgeführt zu werden, besonders unter Windows und OS X. CoreCLR ist nun Teil von .NET Core und stellt eine vereinfachte Version der CLR dar. Es handelt sich dabei immer noch um eine [plattformübergreifende](#cross-platform) Runtime, die nun viele Linux-Distributionen unterstützt. CoreCLR ist auch ein virtueller Computer mit JIT und Funktionen für die Codeausführung.
+Die CLR-Implementierung für .NET 5 und höhere Versionen (auch bekannt als „Core-CLR“) basiert auf derselben Codebasis wie die .NET Framework-CLR. Ursprünglich war die Core-CLR die Runtime von Silverlight und für die Ausführung auf mehreren Plattformen konzipiert, insbesondere Windows und Mac OS X. Sie ist weiterhin eine [plattformübergreifende](#cross-platform) Runtime, die nun viele Linux-Distributionen unterstützt.
 
-## <a name="corefx"></a>CoreFx
+Weitere Informationen finden Sie unter [Runtime](#runtime).
 
-.NET Core-Basisklassenbibliothek (BCL)
+## <a name="core-clr"></a>Core-CLR
 
-> [!TIP]
-> *Fx* steht für *Framework*.
+Hierbei handelt es sich um die Common Language Runtime für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions).
 
-Eine Reihe von Bibliotheken, aus denen die Namespaces System.\* (und in beschränktem Umfang Microsoft.\*) bestehen. Bei der BCL handelt es sich um ein allgemeines Framework auf niedriger Ebene, auf dem Anwendungsframeworks auf höherer Ebene, z.B. ASP.NET Core, basieren. Der Quellcode der .NET Core-BCL ist im [.NET Core-Runtimerepository](https://github.com/dotnet/runtime) enthalten. Der Großteil der .NET Core-APIs ist jedoch auch im .NET Framework verfügbar, sodass Sie sich CoreFX als einen Fork der .NET Framework-BCL vorstellen können.
+Weitere Informationen finden Sie unter [CLR](#clr).
 
 ## <a name="corert"></a>CoreRT
 
-.NET Core-Runtime
-
-Im Gegensatz zu CLR und CoreCLR handelt es sich bei CoreRT nicht um einen virtuellen Computer. Das bedeutet, dass die Funktionen zum dynamischen Generieren und Ausführen von Code nicht enthalten sind, da kein [JIT](#jit) enthalten ist. Es ist jedoch ein [GC](#gc) enthalten sowie die Möglichkeit zur Identifikation und Reflektion des Laufzeittyps (RTTI). Das Typsystem wurde jedoch so entwickelt, dass keine Metadaten für die Reflektion erforderlich sind. Dies ermöglicht eine [AOT](#aot)-Toolkette, die die Verknüpfung zu überflüssigen Metadaten aufheben und (was noch wichtiger ist) Code identifizieren kann, der von der App nicht verwendet wird. CoreRT befindet sich in der Entwicklung.
+Im Gegensatz zu [CLR](#clr) handelt es sich bei CoreRT nicht um einen virtuellen Computer. Das bedeutet, dass die Funktionen zum dynamischen Generieren und Ausführen von Code nicht enthalten sind, da keine [JIT](#jit)-Kompilierung enthalten ist. Es ist jedoch ein [GC](#gc) enthalten sowie die Möglichkeit zur Identifikation und Reflektion des Laufzeittyps (RTTI). Das Typsystem wurde jedoch so entwickelt, dass keine Metadaten für die Reflektion erforderlich sind. Dies ermöglicht eine [AOT](#aot)-Toolkette, die die Verknüpfung zu überflüssigen Metadaten aufheben und (was noch wichtiger ist) Code identifizieren kann, der von der App nicht verwendet wird. CoreRT befindet sich in der Entwicklung.
 
 Weitere Informationen finden Sie unter [Einführung in .NET Native und CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
@@ -87,13 +92,14 @@ Der Begriff „.NET-Umgebung“ unterscheidet sich von ähnlichen Begriffen wie 
 
 Allgemein handelt es sich dabei um eine umfassende Sammlung von APIs, die die Entwicklung und Bereitstellung von Anwendungen erleichtert, die auf einer bestimmten Technologie basieren. Allgemein sind ASP.NET Core und Windows Forms Beispiele für Anwendungsframeworks. Siehe auch [Bibliotheken](#library).
 
-Das Wort „Framework“ hat in den folgenden Begriffen eine spezifischere technische Bedeutung:
+Das Wort „Framework“ hat in den folgenden Begriffen verschiedene Bedeutungen:
 
 - [.NET Framework](#net-framework)
 - [Zielframework](#target-framework)
 - [TFM (Zielframeworkmoniker)](#tfm)
+- [Frameworkabhängige App](../core/deploying/index.md#publish-framework-dependent)
 
-In der bestehenden Dokumentation bezieht sich „Framework“ manchmal auf eine [Implementierung von .NET](#implementation-of-net). In einem Artikel kann .NET Core beispielsweise als Framework bezeichnet werden. Diese verwirrende Verwendung soll aus der Dokumentation beseitigt werden.
+In der Legacydokumentation zu .NET bezieht sich „Framework“ manchmal auf eine [Implementierung von .NET](#implementation-of-net). Beispielsweise könnte .NET 5 in einem Artikel als Framework bezeichnet werden.
 
 ## <a name="gc"></a>GC
 
@@ -119,26 +125,23 @@ Just-In-Time-Compiler
 
 Eine Implementierung von .NET umfasst:
 
-- Mindestens eine Runtime. Beispiele: CLR, CoreCLR, CoreRT.
-- Eine Klassenbibliothek, die eine Version des .NET Standards implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek.
-- Optional mindestens ein Anwendungsframework. Beispiele: ASP.NET, Windows Forms und WPF sind im .NET Framework enthalten.
+- Mindestens eine Runtime. Beispiele: [CLR](#clr) und [CoreRT](#corert).
+- Eine Klassenbibliothek, die eine Version des .NET Standards implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: Die [Basisklassenbibliotheken](#bcl) für [.NET Framework](#net-framework) und [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions).
+- Optional mindestens ein Anwendungsframework. Beispiele: [ASP.NET](#aspnet), Windows Forms und WPF sind in .NET Framework und .NET 5 enthalten.
 - Optional Entwicklungstools. Einige Entwicklungstools werden zwischen mehreren Implementierungen freigegeben.
 
 Beispiele für .NET-Implementierungen:
 
 - [.NET Framework](#net-framework)
-- [.NET Core](#net-core)
+- [.NET 5 und höhere Versionen (einschließlich .NET Core 2.1 bis 3.1)](#net-5-and-later-versions)
 - [Universelle Windows-Plattform (UWP)](#uwp)
+- [Mono](#mono)
 
 ## <a name="library"></a>Bibliothek
 
 Eine Sammlung von APIs, die durch Apps oder andere Bibliotheken aufgerufen werden können. Eine .NET-Bibliothek besteht aus einer oder mehreren [Assemblys](#assembly).
 
 Die Wörter „Bibliothek“ und [Framework](#framework) werden häufig synonym verwendet.
-
-## <a name="metapackage"></a>Metapaket
-
-Ein NuGet-Paket, das über keine eigene Bibliothek verfügt, sondern nur eine Liste der Abhängigkeiten darstellt. Die enthaltenen Pakete können optional die API für ein Zielframework erzeugen.
 
 ## <a name="mono"></a>Mono
 
@@ -148,43 +151,45 @@ Außerdem unterstützt Mono alle derzeit veröffentlichten Versionen des .NET St
 
 In der Vergangenheit hat Mono die größere API des .NET Framework implementiert und einige der beliebtesten Funktionen unter Unix emuliert. Manchmal wird es zum Ausführen von .NET-Anwendungen verwendet, die auf diesen Unix-Funktionen basieren.
 
-Mono wird in der Regel mit einem Just-In-Time-Compiler verwendet. Es enthält aber auch einen vollständig statischen Compiler (Ahead-of-time-Kompilierung), der auf Plattformen wie iOS verwendet wird.
+Mono wird in der Regel mit einem [Just-In-Time-Compiler](#jit) verwendet. Es enthält aber auch einen vollständigen [statischen Compiler (Ahead-of-time-Kompilierung)](#aot), der auf Plattformen wie iOS verwendet wird.
 
-Weitere Informationen zu Mono finden Sie in der [Mono-Dokumentation](https://www.mono-project.com/docs/).
+Weitere Informationen finden Sie in der [Mono-Dokumentation](https://www.mono-project.com/docs/).
 
 ## <a name="net"></a>.NET
 
 Der Oberbegriff für [.NET Standard](#net-standard) und alle [.NET-Implementierungen](#implementation-of-net) und Workloads. Immer ausschließlich in Großbuchstaben, niemals „.Net“.
 
+Mit dem Release von [.NET 5](#net-5-and-later-versions) (derzeit in der Vorschauphase) wird dies die empfohlene .NET-Implementierung für jegliche neuen .NET-Entwicklungen sein. Daher wird „.NET“ in einigen Kontexten „.NET 5 und höhere Versionen“ implizieren.
+
 Siehe den [Leitfaden für .NET](index.yml).
+
+## <a name="net-5-and-later-versions"></a>.NET 5 und höhere Versionen
+
+Eine plattformübergreifende, leistungsstarke Open Source-Implementierung von .NET. Sie umfasst eine Common Language Runtime ([CLR](#clr)), eine [AOT](#aot)-Runtime ([CoreRT](#corert), in der Entwicklung), eine Basisklassenbibliothek ([BCL](#bcl)) und das [.NET SDK](#net-sdk).
+
+Frühere Versionen dieser .NET-Implementierung werden als .NET Core bezeichnet. .NET 5.0 ist die nächste Version nach .NET Core 3.1. Version 4 wurde übersprungen, um eine Verwechslung dieser neuen Implementierung von .NET mit der älteren Implementierung zu vermeiden, die als [.NET Framework](#net-framework) bekannt ist. Die aktuelle Version von .NET Framework ist Version 4.8.
+
+Weitere Informationen finden Sie unter [.NET](../core/index.yml).
+
+## <a name="net-cli"></a>.NET CLI
+
+Hierbei handelt es sich um eine plattformübergreifende Toolkette für die Entwicklung von Anwendungen und Bibliotheken für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions). Diese Toolkette ist auch als .NET Core-CLI bekannt.
+
+Weitere Informationen finden Sie unter [.NET-CLI](../core/tools/index.md).
 
 ## <a name="net-core"></a>.NET Core
 
-Eine plattformübergreifende, leistungsstarke Open Source-Implementierung von .NET. Enthält die Common Language Runtime (CoreCLR), die Core AOT Runtime (CoreRT, in der Entwicklung), die Core-Basisklassenbibliothek und das Core SDK.
-
-Siehe [.NET Core](../core/index.yml).
-
-## <a name="net-core-cli"></a>.NET Core-CLI
-
-Eine plattformübergreifende Toolkette zum Entwickeln von .NET Core-Anwendungen.
-
-Informationen finden Sie unter [.NET Core-CLI](../core/tools/index.md).
-
-## <a name="net-core-sdk"></a>.NET Core SDK
-
-Eine Sammlung von Bibliotheken und Tools, mit der Entwickler .NET Core-Anwendungen und -Bibliotheken erstellen können. Enthält die [.NET Core-CLI](#net-core-cli) zum Erstellen von Apps, die .NET Core-Bibliotheken und -Runtime zum Erstellen und Ausführen von Apps und die ausführbare dotnet-Datei (*dotnet.exe*), durch die CLI-Befehle und Anwendungen ausgeführt werden.
-
-Siehe [.NET Core SDK – Übersicht](../core/sdk.md).
+Weitere Informationen finden Sie unter [.NET 5 und höhere Versionen](#net-5-and-later-versions).
 
 ## <a name="net-framework"></a>.NET Framework
 
-Eine Implementierung von .NET, die nur unter Windows ausgeführt werden kann. Enthält die Common Language Runtime (CLR), die Basisklassenbibliothek und Bibliotheken für Anwendungsframeworks wie ASP.NET, Windows Forms und WPF.
+Eine Implementierung von .NET, die nur unter Windows ausgeführt werden kann. Diese Implementierung enthält die Common Language Runtime ([CLR](#clr)), die Basisklassenbibliothek ([BCL](#bcl)) und Bibliotheken für Anwendungsframeworks wie [ASP.NET](#aspnet), Windows Forms und WPF.
 
 Siehe [Leitfaden für .NET Framework](../framework/index.yml).
 
 ## <a name="net-native"></a>.NET systemeigen
 
-Eine Compiler-Toolkette, die nativen Code vorzeitig (Ahead-of-Time, AOT) statt rechtzeitig (Just-in-Time, JIT) erzeugt.
+Hierbei handelt es sich um eine Compiler-Toolkette, die nativen Code im Voraus (Ahead-of-Time, [AOT](#aot)) erzeugt, anstelle von „rechtzeitig“ (Just-In-Time, [JIT](#jit)).
 
 Die Kompilierung erfolgt auf dem Computer des Entwicklers und funktioniert ähnlich wie ein C++-Compiler und -Linker. Nicht verwendeter Code wird entfernt und es wird mehr Zeit in die Optimierung des Codes investiert. Es wird Code aus den Bibliotheken extrahiert und in die ausführbare Datei eingefügt. Das Ergebnis ist ein einzelnes Modul, das die gesamte App darstellt.
 
@@ -192,11 +197,19 @@ UWP war das erste Anwendungsframework, das von .NET Native unterstützt wurde. N
 
 Siehe [Intro to .NET Native and CoreRT (Einführung in .NET Native und CoreRT)](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
+## <a name="net-sdk"></a>.NET SDK
+
+Hierbei handelt es sich um eine Reihe von Bibliotheken und Tools, mit denen Entwickler .NET-Anwendungen und Bibliotheken für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions) erstellen können. Dies wird auch als .NET Core SDK bezeichnet.
+
+Darin enthalten sind die [.NET-CLI](#net-cli) zum Erstellen von Apps, die .NET-Bibliotheken und -Runtime zum Erstellen und Ausführen von Apps und die ausführbare dotnet-Datei (*dotnet.exe*), durch die CLI-Befehle und Anwendungen ausgeführt werden.
+
+Weitere Informationen finden Sie in der [Übersicht über .NET SDK](../core/sdk.md).
+
 ## <a name="net-standard"></a>.NET Standard
 
 Eine formale Spezifikation der .NET-APIs, die in jeder .NET-Implementierung verfügbar sind.
 
-Die Spezifikation von .NET Standard wird in der Dokumentation manchmal als „Bibliothek“ bezeichnet. Da eine Bibliothek API-Implementierungen enthält und nicht nur Spezifikationen (Schnittstellen), ist es irreführend, .NET Standard als „Bibliothek“ zu bezeichnen. Diese Verwendung soll aus der Dokumentation beseitigt werden. Ausgenommen davon ist der Verweis auf den Namen des .NET Standard-Metapakets (`NETStandard.Library`).
+Die Spezifikation von .NET Standard wird in der Dokumentation manchmal als „Bibliothek“ bezeichnet. Da eine Bibliothek API-Implementierungen enthält und nicht nur Spezifikationen (Schnittstellen), ist es irreführend, .NET Standard als „Bibliothek“ zu bezeichnen.
 
 Siehe [.NET Standard](net-standard.md).
 
@@ -204,7 +217,7 @@ Siehe [.NET Standard](net-standard.md).
 
 Native Imagegenerierung
 
-Sie können sich diese Technologie als einen permanenten JIT-Compiler vorstellen. Normalerweise wird der Code auf dem Computer kompiliert, auf dem er ausgeführt wird. Die Kompilierung findet jedoch normalerweise während der Installation statt.
+Sie können sich diese Technologie als einen persistenten [JIT](#jit)-Compiler vorstellen. Normalerweise wird der Code auf dem Computer kompiliert, auf dem er ausgeführt wird. Die Kompilierung findet jedoch normalerweise während der Installation statt.
 
 ## <a name="package"></a>package
 
@@ -221,26 +234,33 @@ Hier sind Beispiele für die Verwendung in Sätzen:
 - „.NET Core ist eine plattformübergreifende Implementierung von .NET.“
 - „PCL-Profile stehen für Microsoft-Plattformen, während .NET Standard plattformunabhängig ist.“
 
-Die .NET-Dokumentation verwendet häufig „.NET-Plattform“, um sich entweder auf eine Implementierung von .NET oder den .NET-Stapel, der alle Implementierungen enthält, zu beziehen. Beide dieser Verwendungen werden häufig mit der primären Bedeutung (Betriebssystem/Hardware) verwechselt, sodass wir diese Verwendungen aus der Dokumentation beseitigen werden.
+In der Legacydokumentation zu .NET wird manchmal der Begriff „.NET-Plattform“ für eine [Implementierung von .NET](#implementation-of-net) oder den [.NET-Stapel](#stack), einschließlich aller Implementierungen, verwendet. Beide dieser Verwendungsmöglichkeiten werden häufig mit der primären Bedeutung (Betriebssystem/Hardware) verwechselt. Daher werden diese Verwendungen nach Möglichkeit vermieden.
+
+„Plattform“ hat im Begriff „Entwicklerplattform“ eine andere Bedeutung, die sich auf Software bezieht, die Tools und Bibliotheken zum Erstellen und Ausführen von Apps bereitstellt. .NET ist eine plattformübergreifende Open-Source-Entwicklerplattform zum Erstellen vieler verschiedener Arten von Anwendungen.
 
 ## <a name="runtime"></a>Laufzeit
 
-Die Ausführungsumgebung eines verwalteten Programms.
+Im Allgemeinen handelt es sich hierbei um die Ausführungsumgebung für ein verwaltetes Programm. Das Betriebssystem ist Teil der Laufzeitumgebung, gehört jedoch nicht zur .NET-Runtime. Im Folgenden finden Sie einige Beispiele für .NET-Runtimes, die diese Bedeutung haben:
 
-Das Betriebssystem ist Teil der Laufzeitumgebung, gehört jedoch nicht zur .NET-Runtime. Dies sind einige Beispiele für .NET-Runtimes:
-
-- Common Language Runtime (CLR)
-- Core Common Language Runtime (CoreCLR)
+- Common Language Runtime ([CLR](#clr))
 - .NET Native (für UWP)
 - Mono Runtime
 
-Die .NET-Dokumentation bezeichnet mit „Runtime“ manchmal eine Implementierung von .NET. Beispielsweise sollte „Runtime“ in den folgenden Sätzen durch „Implementierung“ ersetzt werden:
+Das Wort „Runtime“ hat in den folgenden Kontexten verschiedene Bedeutungen:
+
+* Die [Downloadseite für .NET](https://dotnet.microsoft.com/download)
+
+  In diesem Fall bezieht sich „Runtime“ auf die [CLR](#clr) zusammen mit der [BCL](#bcl) (Frameworkbibliotheken), die Sie herunterladen und auf einem Computer installieren, damit Sie [frameworkabhängige](../core/deploying/index.md#publish-framework-dependent) Apps auf dem Computer ausführen können.
+
+* Die [Runtime-ID (RID)](../core/rid-catalog.md) für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions).
+
+  „Runtime“ bezieht sich in diesem Fall auf die Betriebssystemplattform und CPU-Architektur, auf der eine .NET-App ausgeführt wird, z. B. `linux-x64`.
+
+In der Legacydokumentation zu .NET bezieht sich „Runtime“ manchmal auf eine [Implementierung von .NET](#implementation-of-net). Dies wird in den folgenden Beispielen veranschaulicht:
 
 - „Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Standard.“
 - „Bibliotheken, die auf mehreren Runtimes ausgeführt werden sollen, sollten dieses Framework als Ziel haben.“ (bezogen auf .NET Standard)
 - „Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Standard. … Jede Version der .NET-Runtime kündigt die höchste Version von .NET Standard an, die sie unterstützt ...“
-
-Diese inkonsistente Verwendung soll beseitigt werden.
 
 ## <a name="stack"></a>Stapel
 
@@ -252,9 +272,9 @@ Eine Reihe von Programmiertechnologien, die zusammen verwendet werden, um Anwend
 
 Die Sammlung von APIs, auf der eine .NET-App oder -Bibliothek basiert.
 
-Eine App oder Bibliothek kann eine Version von .NET Standard (beispielsweise .NET Standard 2.0) anzielen. Dabei handelt es sich um eine Spezifikation für eine standardisierte Reihe von APIs für alle .NET-Implementierungen. Eine App oder Bibliothek kann auch eine Version einer bestimmten .NET-Implementierung anzielen. In diesem Fall erhält diese Zugriff auf die implementierungsspezifischen APIs. Beispielsweise erhält eine App, die Xamarin iOS anzieht, Zugriff auf die von Xamarin bereitgestellten iOS-API-Wrapper.
+Eine App oder Bibliothek kann auf eine Version von .NET Standard (beispielsweise .NET Standard 2.0) ausgelegt sein. Dabei handelt es sich um eine Spezifikation für eine standardisierte Reihe von APIs für alle .NET-Implementierungen. Eine App oder Bibliothek kann auch eine Version einer bestimmten .NET-Implementierung anzielen. In diesem Fall erhält diese Zugriff auf die implementierungsspezifischen APIs. Beispielsweise erhält eine App, die Xamarin iOS anzieht, Zugriff auf die von Xamarin bereitgestellten iOS-API-Wrapper.
 
-Für einige Zielplattformen (z.B. .NET Framework) werden die verfügbaren APIs von den Assemblys definiert, die eine .NET-Implementierung auf einem System installiert, zu denen Anwendungsframework-APIs zählen können (z.B. ASP.NET, WinForms). Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die Framework-APIs von den Paketen definiert, die in der App oder der Bibliothek installiert sind. In diesem Fall gibt das Zielframework implizit ein Metapaket an, das auf alle Pakete verweist, aus denen das Framework besteht.
+Für einige Zielplattformen (z.B. .NET Framework) werden die verfügbaren APIs von den Assemblys definiert, die eine .NET-Implementierung auf einem System installiert, zu denen Anwendungsframework-APIs zählen können (z.B. ASP.NET, WinForms). Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die Framework-APIs von den Paketen definiert, die in der App oder der Bibliothek installiert sind. In diesem Fall gibt das Zielframework implizit ein Paket an, das auf alle Pakete verweist, aus denen das Framework besteht.
 
 Siehe [Zielframeworks](frameworks.md).
 
@@ -270,7 +290,7 @@ Siehe [Zielframeworks](frameworks.md).
 
 Universelle Windows-Plattform
 
-Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets und Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Die .NET-APIs für C# und Visual Basic werden von .NET Core bereitgestellt.
+Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets und Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Bei Verwendung von C# und Visual Basic werden die .NET-APIs von .NET 5 (und .NET Core) und höheren Versionen bereitgestellt.
 
 ## <a name="see-also"></a>Siehe auch
 

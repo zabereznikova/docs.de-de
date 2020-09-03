@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: fa87fdba830398786cce8951d353e86bc4ff7491
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 947a3bc7da0949781ae89ed74a87edb2637daf73
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111048"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126514"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -155,14 +155,14 @@ Die meisten Integrationstests in Ihren ASP.NET Core-Apps sollten Testdienste und
 
 Die `TestServer`-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Sie konfigurieren einen `TestServer` mit `WebHostBuilder` (oder `HostBuilder`) direkt (wie Sie es normalerweise für Ihre Anwendung tun) oder mit dem Typ `WebApplicationFactory` (verfügbar seit Version 2.1). Verwenden Sie nach Möglichkeit einen Testhost, der dem Produktionshost so ähnlich wie möglich ist, damit das Verhalten der Tests dem Verhalten der App in der Produktion ähnelt. Die `WebApplicationFactory`-Klasse ist hilfreich für die ContentRoot-Konfiguration der TestServer-Klasse, die von ASP.NET Core verwendet wird, um statische Ressourcen wie Ansichten zu finden.
 
-Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die IClassFixture\<WebApplicationFactory\<TEntry>> implementiert, wobei es sich bei „TEntry“ um die Startklasse Ihrer Webanwendung handelt. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der CreateClient-Methode der Zuordnungsinstanz erstellen:
+Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die „IClassFixture\<WebApplicationFactory\<TEntry>>“ implementiert, wobei „TEntry“ der Startklasse Ihrer Webanwendung entspricht. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der CreateClient-Methode der Zuordnungsinstanz erstellen:
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 {
     protected readonly HttpClient _client;
 
-    public BaseWebTest(WebApplicationFactory<Startup> factory)
+    public BasicWebTests(WebApplicationFactory<Startup> factory)
     {
         _client = factory.CreateClient();
     }
@@ -171,7 +171,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-In vielen Fällen führen Sie zusätzliche Konfigurationen für Ihre Website durch, bevor jeder Test ausgeführt wird, z.B. das Konfigurieren der Anwendung für die Verwendung eines Datenspeichers im Arbeitsspeicher und das anschließende Seeding der Anwendung mit Testdaten. Hierzu sollten Sie eine eigene Unterklasse von „WebApplicationFactory\<TEntry>“ erstellen und die dazugehörige Methode „ConfigureWebHost“ überschreiben. Das folgende Beispiel stammt vom Funktionstestprojekt „eShopOnWeb“ und wird als Teil der Tests für die Hauptwebanwendung verwendet.
+In vielen Fällen führen Sie zusätzliche Konfigurationen für Ihre Website durch, bevor jeder Test ausgeführt wird, z.B. das Konfigurieren der Anwendung für die Verwendung eines Datenspeichers im Arbeitsspeicher und das anschließende Seeding der Anwendung mit Testdaten. Hierzu sollten Sie eine eigene Unterklasse von WebApplicationFactory\<TEntry> erstellen und die dazugehörige ConfigureWebHost-Methode außer Kraft setzen. Das folgende Beispiel stammt vom Funktionstestprojekt „eShopOnWeb“ und wird als Teil der Tests für die Hauptwebanwendung verwendet.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;

@@ -12,12 +12,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 17d33b25867f75419a0e65ab0d75950bad13af57
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: 72198287028c73f0e518d7bcfd0b694bb267e132
+  ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88267398"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88812275"
 items:
 - durationInMinutes: 1
   content: >
@@ -52,7 +52,7 @@ items:
     > Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen.
 
 
-    Ihr erstes Programm gibt nur eine Meldung aus. Mithilfe von **Variablen** können Sie weitere nützliche Programme schreiben. Eine **Variable** ist ein Symbol, durch das Sie einen Code mit unterschiedlichen Werten ausführen können. Probieren Sie es aus! Ersetzen Sie den Code, den Sie in das interaktive Fenster geschrieben haben, durch den folgenden Code:
+    Ihr erstes Programm gibt nur eine Meldung aus. Mithilfe von *Variablen* können Sie weitere nützliche Programme schreiben. Eine *Variable* ist ein Symbol, durch das Sie einen Code mit unterschiedlichen Werten ausführen können. Probieren Sie es aus! Ersetzen Sie den Code, den Sie in das interaktive Fenster geschrieben haben, durch den folgenden Code:
 
 
     ```csharp
@@ -149,11 +149,11 @@ items:
 
     > [!TIP]
 
-    > An dieser Stelle können Sie nun etwas experimentieren. Sie haben erfahren, dass mit `Console.WriteLine()` Text auf den Bildschirm geschrieben wird. Zudem haben Sie erfahren, wie Variablen deklariert und Zeichenfolgen miteinander verkettet werden. Experimentieren Sie im interaktiven Fenster und Das Fenster verfügt über ein Feature mit dem Namen **IntelliSense**, das Vorschläge für Ihre möglichen Aktionen unterbreitet. Geben Sie einen `.` hinter dem `d` in `firstFriend` ein. Sie sehen eine Liste mit Vorschlägen für Eigenschaften und Methoden, die Sie verwenden können.
+    > An dieser Stelle können Sie nun etwas experimentieren. Sie haben erfahren, dass mit `Console.WriteLine()` Text auf den Bildschirm geschrieben wird. Zudem haben Sie erfahren, wie Variablen deklariert und Zeichenfolgen miteinander verkettet werden. Experimentieren Sie im interaktiven Fenster und Das Fenster verfügt über ein Feature mit dem Namen *IntelliSense*, das Vorschläge für Ihre möglichen Aktionen unterbreitet. Geben Sie einen `.` hinter dem `d` in `firstFriend` ein. Sie sehen eine Liste mit Vorschlägen für Eigenschaften und Methoden, die Sie verwenden können.
 - title: Weitere Möglichkeiten zur Verwendung von Zeichenfolgen
   durationInMinutes: 5
   content: >
-    Sie haben mithilfe der **Methode**<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Meldungen ausgegeben. Eine **Methode** ist ein Codeblock, der eine bestimmte Aktion implementiert. Diesem ist ein Name zugewiesen, damit Sie auf diesen zugreifen können.
+    Sie haben mithilfe der *Methode*<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Meldungen ausgegeben. Eine *Methode* ist ein Codeblock, der eine bestimmte Aktion implementiert. Diesem ist ein Name zugewiesen, damit Sie auf diesen zugreifen können.
 
 
     Nehmen wir an, Ihre Zeichenfolgen weisen führende oder schließende Leerzeichen auf, die Sie nicht anzeigen möchten. Sie möchten die Zeichenfolgen um die Leerzeichen **kürzen**.
@@ -234,7 +234,7 @@ items:
     ```
 
 
-    Die <xref:System.String.Contains%2A>-Methode gibt einen Wert vom Typ **boolean** zurück, der angibt, ob die Zeichenfolge, nach der Sie gesucht haben, gefunden wurde. Ein **boolean**-Datentyp speichert entweder den Wert `true` oder `false`. Bei einer Anzeige als Textausgabe werden sie groß geschrieben: `True` bzw. `False`. In einer späteren Lektion erfahren Sie mehr über **boolean**-Werte.
+    Die <xref:System.String.Contains%2A>-Methode gibt einen Wert vom Typ *boolean* zurück, der angibt, ob die Zeichenfolge, nach der Sie gesucht haben, gefunden wurde. Ein *boolean*-Datentyp speichert entweder den Wert `true` oder `false`. Bei einer Anzeige als Textausgabe werden sie groß geschrieben: `True` bzw. `False`. In einer späteren Lektion erfahren Sie mehr über *boolean*-Werte.
 
 
     ***Übung***

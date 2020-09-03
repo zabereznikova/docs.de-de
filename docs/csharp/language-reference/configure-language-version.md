@@ -3,12 +3,12 @@ title: Verwaltung der C#-Sprachversion – Leitfaden für C#
 description: Erfahren Sie mehr darüber, wie und aus welchen Gründen die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird. Erfahren Sie, wie Sie den Standardwert manuell überschreiben.
 ms.custom: updateeachrelease
 ms.date: 05/20/2020
-ms.openlocfilehash: a27f3210f399f1bed190c18d778cf3824772d576
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 24797c564890b034683d2989010bc694aabc423c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811950"
 ---
 # <a name="c-language-versioning"></a>Verwaltung der C#-Sprachversion
 
@@ -37,6 +37,9 @@ Der Compiler bestimmt basierend auf den folgenden Regeln eine Standardversion:
 | .NET Framework   | alle     | C# 7.3                      |
 
 Wenn Ihr Projekt auf eine Vorschauframework abzielt, das eine entsprechende Vorschausprachversion besitzt, wird die Vorschausprachversion als Sprachversion verwendet. In dieser Vorschau können Sie die neuesten Features in beliebigen Umgebungen verwenden, ohne Auswirkungen auf Projekte für eine veröffentlichte .NET Core-Version zu haben.
+
+> [!TIP]
+> Wenn Sie wissen möchten, welche Sprachversion Sie derzeit verwenden, fügen Sie `#error version` (Groß-/Kleinschreibung beachten) in Ihren Code ein. Dadurch erzeugt der Compiler eine Diagnose (CS8304) mit einer Nachricht, die die verwendete Compilerversion und die aktuelle ausgewählte Sprachversion enthält.
 
 ## <a name="override-a-default"></a>Überschreiben eines Standardwerts
 

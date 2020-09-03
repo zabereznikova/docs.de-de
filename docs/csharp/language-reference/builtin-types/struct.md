@@ -1,4 +1,5 @@
 ---
+description: Informationen zum struct-Typ in C#
 title: Strukturtypen – C#-Referenz
 ms.date: 04/21/2020
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062495"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132728"
 ---
 # <a name="structure-types-c-reference"></a>Strukturtypen (C#-Referenz)
 
@@ -38,14 +39,14 @@ Alle Datenmember einer `readonly`-Struktur müssen als schreibgeschützt gekennz
 - Alle Felddeklarationen müssen den [`readonly`-Modifizierer](../keywords/readonly.md) aufweisen.
 - Alle Eigenschaften – auch automatisch implementierte – müssen schreibgeschützt sein.
 
-Auf diese Weise ist garantiert, dass kein Member einer `readonly`-Struktur den Status der Struktur ändert.
+Auf diese Weise ist garantiert, dass kein Member einer `readonly`-Struktur den Status der Struktur ändert. In C# 8.0 und höher bedeutet dies, dass andere Instanzmember mit Ausnahme von Konstruktoren implizit [`readonly`](#readonly-instance-members) werden.
 
 > [!NOTE]
 > In einer `readonly`-Struktur kann ein Datenmember eines änderbaren Verweistyps weiterhin den eigenen Status ändern. Beispielsweise können Sie eine <xref:System.Collections.Generic.List%601>-Instanz nicht ersetzen, aber neue Elemente zur Instanz hinzufügen.
 
 ## <a name="readonly-instance-members"></a>`readonly`-Instanzmember
 
-Ab C# 8.0 können Sie auch den `readonly`-Modifizierer verwenden, um zu deklarieren, dass ein Instanzmember den Zustand einer Struktur nicht ändert. Wenn Sie nicht den gesamten Strukturtyp als `readonly` deklarieren können, verwenden Sie den `readonly`-Modifizierer, um die Instanzmember zu markieren, die den Zustand der Struktur nicht ändern. In einer `readonly`-Struktur ist jeder Instanzmember implizit `readonly`.
+Ab C# 8.0 können Sie auch den `readonly`-Modifizierer verwenden, um zu deklarieren, dass ein Instanzmember den Zustand einer Struktur nicht ändert. Wenn Sie nicht den gesamten Strukturtyp als `readonly` deklarieren können, verwenden Sie den `readonly`-Modifizierer, um die Instanzmember zu markieren, die den Zustand der Struktur nicht ändern.
 
 Innerhalb eines `readonly`-Instanzmembers können Sie den Instanzfeldern einer Struktur nichts zuweisen. Ein `readonly`-Member kann jedoch ein Nicht-`readonly`-Member aufrufen. In diesem Fall erstellt der Compiler eine Kopie der Strukturinstanz und ruft den Nicht-`readonly`-Member in dieser Kopie auf. Folglich wird die ursprüngliche Strukturinstanz nicht geändert.
 

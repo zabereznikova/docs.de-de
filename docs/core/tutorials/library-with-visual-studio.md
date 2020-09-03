@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187943"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118259"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio
 
@@ -70,7 +70,7 @@ So erstellen Sie eine leere Projektmappe:
 
    Die Methode `StartsWithUpper` wird als [Erweiterungsmethode](../../csharp/programming-guide/classes-and-structs/extension-methods.md) implementiert, damit sie wie ein Member der Klasse <xref:System.String> aufgerufen werden kann.
 
-1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus, um zu bestätigen, dass das Projekt ohne Fehler kompiliert wird.
+1. Klicken Sie auf der Menüleiste auf **Erstellen** > **Projektmappe erstellen**, oder drücken Sie <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>B</kbd>, um zu bestätigen, dass das Projekt ohne Fehler kompiliert wird.
 
 ## <a name="add-a-console-app-to-the-solution"></a>Hinzufügen einer Konsolen-App zur Projektmappe
 

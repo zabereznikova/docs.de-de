@@ -2,12 +2,12 @@
 title: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 description: Erfahren Sie, wie Sie eine .NET Core-Konsolenanwendung mit Visual Studio Code und der .NET Core-CLI erstellen.
 ms.date: 05/22/2020
-ms.openlocfilehash: 466a1353b574711a73570428569b58eab7ad8135
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811697"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811925"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code
 
@@ -40,7 +40,7 @@ Erstellen Sie ein .NET Core-Konsolen-App-Projekt mit dem Namen HelloWorld.
    dotnet new console
    ```
 
-Die Vorlage erstellt eine einfache „Hello World“-Anwendung. Sie ruft die <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Methode auf, um „Hello World!“ im Konsolenfenster anzuzeigen.
+Die Vorlage erstellt eine einfache „Hello World“-Anwendung. Sie ruft die <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Methode auf, um „:::no-loc text="Hello World!":::“ im Konsolenfenster anzuzeigen.
 
 Der Code der Vorlage definiert die Klasse `Program` mit der einzelnen Methode `Main`, die ein <xref:System.String>-Array als Argument verwendet:
 
@@ -91,7 +91,7 @@ Erweitern Sie die Anwendung, um den Benutzer aufzufordern, seinen Namen einzugeb
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
-   Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die <kbd>EINGABETASTE</kbd> gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` zu. Schließlich werden diese Werte im Konsolenfenster angezeigt.
+   Mit diesem Code wird eine Eingabeaufforderung im Konsolenfenster angezeigt und gewartet, bis der Benutzer eine Zeichenfolge eingibt und die <kbd>EINGABETASTE</kbd> drückt. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` zu. Außerdem werden diese Werte im Konsolenfenster angezeigt. Schließlich wird eine Eingabeaufforderung im Konsolenfenster angezeigt, und die <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType>-Methode wird aufgerufen, um auf eine Benutzereingabe zu warten.
 
    `\n` stellt ein Zeilenvorschubzeichen dar.
 

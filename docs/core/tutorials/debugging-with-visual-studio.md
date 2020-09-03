@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 743603cb037406948190c7090ca3527bfc40db18
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702066"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957224"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio
 
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Debugtools vorgestellt, die in Visual Studio verf�
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Dieses Tutorial funktioniert mit der Konsolen-App, die Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio Code 2019](with-visual-studio.md) erstellen.
+- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](with-visual-studio.md) erstellen.
 
 ## <a name="use-debug-build-configuration"></a>Verwenden der Debugbuildkonfiguration
 
@@ -27,11 +27,11 @@ In diesem Tutorial werden die Debugtools vorgestellt, die in Visual Studio verf�
 
 In der Debugkonfiguration wird ein Programm mit vollständigen symbolischen Debuginformationen und ohne Optimierung kompiliert. Die Optimierung gestaltet das Debuggen etwas schwieriger, da die Beziehung zwischen Quellcode und generierten Anweisungen komplexer ist. Die Releasekonfiguration eines Programms verfügt über keine symbolischen Debuginformationen und wird vollständig optimiert.
 
- Standardmäßig verwendet Visual Studio Code die Debugbuildkonfiguration, sodass Sie diese Einstellung vor dem Debuggen nicht ändern müssen.
+ Standardmäßig verwendet Visual Studio die Debugbuildkonfiguration, sodass Sie diese Einstellung vor dem Debuggen nicht ändern müssen.
 
 1. Starten Sie Visual Studio.
 
-1. Öffnen Sie das Projekt, das Sie in [Erstellen einer .NET Core-Konsolenanwendung in Visual Studio 2019](with-visual-studio.md) erstellt haben.
+1. Öffnen Sie das Projekt, das Sie in [Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](with-visual-studio.md) erstellt haben.
 
    Die aktuelle Buildkonfiguration wird auf der Symbolleiste angezeigt. Das folgende Symbolleistenbild zeigt, dass Visual Studio konfiguriert wurde, um die Debugversion Ihrer Anwendung zu kompilieren:
 
@@ -41,7 +41,7 @@ In der Debugkonfiguration wird ein Programm mit vollständigen symbolischen Debu
 
 Ein *Haltepunkt* unterbricht vorübergehend die Ausführung der Anwendung, bevor die Zeile mit dem Haltepunkt ausgeführt wird.
 
-1. Legen Sie einen *Haltepunkt* in der Zeile fest, in der der Name, das Datum und die Uhrzeit angezeigt werden, indem Sie in der betreffenden Zeile auf den linken Rand des Codefensters klicken. Der linke Rand befindet sich links von den Zeilennummern.  Sie können einen Haltepunkt auch festlegen, indem Sie den Cursor in der Codezeile platzieren und dann auf der Menüleiste **Debuggen** > **Haltepunkt umschalten** auswählen.
+1. Legen Sie einen *Haltepunkt* in der Zeile fest, in der der Name, das Datum und die Uhrzeit angezeigt werden, indem Sie in der betreffenden Zeile auf den linken Rand des Codefensters klicken. Der linke Rand befindet sich links von den Zeilennummern.  Sie können einen Breakpoint auch festlegen, indem Sie den Cursor in der Codezeile platzieren und dann <kbd>F9</kbd> drücken oder **Debuggen** > **Haltepunkt umschalten** in der Menüleiste auswählen.
 
    Wie in der folgenden Abbildung gezeigt, hebt Visual Studio die Zeile hervor, in der der Breakpoint festgelegt ist, und zeigt am linken Rand einen roten Punkt an.
 
@@ -127,7 +127,7 @@ Das Programm zeigt die Zeichenfolge an, die der Benutzer eingibt. Aber was gesch
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und das Debuggen zu beenden.
 
-1. Löschen Sie den Breakpoint durch Klicken auf den Punkt am linken Rand des Codefensters. Eine andere Möglichkeit, einen Breakpoint zu löschen, besteht darin, **Debuggen > Breakpoint umschalten** auszuwählen, während die Codezeile ausgewählt ist.
+1. Löschen Sie den Breakpoint durch Klicken auf den Punkt am linken Rand des Codefensters. Andere Möglichkeiten zum Löschen eines Breakpoints bestehen darin, <kbd>F9</kbd> zu drücken oder **Debuggen > Haltepunkt umschalten** auszuwählen, während die Codezeile ausgewählt ist.
 
 ## <a name="step-through-a-program"></a>Schrittweises Ausführen eines Programms
 
@@ -188,4 +188,4 @@ Wenn Sie <kbd>F5</kbd> drücken oder **Projektmappe erstellen** im Menü **Build
 In diesem Tutorial haben Sie Debugtools von Visual Studio verwendet. Im nächsten Tutorial veröffentlichen Sie eine bereitstellbare Version der App.
 
 > [!div class="nextstepaction"]
-> [Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio](publishing-with-visual-studio.md)
+> [Veröffentlichen einer .NET Core-Konsolenanwendung in Visual Studio](publishing-with-visual-studio.md)
