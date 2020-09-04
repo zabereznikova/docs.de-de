@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 1d6b1fccd9751180ee096531a34b2afb60547072
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 85ba856fd695f264f75a6dab2dca3aded4e5cdc1
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557320"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414967"
 ---
 # <a name="get-started-with-net-framework"></a>Erste Schritte mit .NET Framework
 
 .NET Framework ist eine Ausführungsumgebung für die Laufzeit, die Apps für .NET Framework verwaltet. Sie besteht aus der Common Language Runtime, die Speicherverwaltung und andere Systemdienste bereitstellt, und einer umfangreichen Klassenbibliothek, die Programmierern stabilen, zuverlässigen Code für alle wesentlichen Bereiche der App-Entwicklung zur Verfügung stellt.
 
 > [!NOTE]
-> .NET Framework ist ausschließlich auf Windows-Systemen verfügbar. Sie können [.NET Core](../../core/index.yml) verwenden, um Apps unter Windows, macOS und Linux zu entwickeln und auszuführen.
+> .NET Framework ist ausschließlich auf Windows-Systemen verfügbar. Sie können [.NET Core](../../core/introduction.md) verwenden, um Apps unter Windows, macOS und Linux zu entwickeln und auszuführen.
 
 ## <a name="what-is-net-framework"></a>Was ist .NET Framework?
 
@@ -73,14 +73,14 @@ Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgericht
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-| Titel | Beschreibung |
+| Titel | BESCHREIBUNG |
 | ----- |------------ |
 | [Übersicht](overview.md) | Enthält ausführliche Informationen für Entwickler, die Apps für .NET Framework erstellen. |
 | [Installationshandbuch](../install/index.md) | Stellt Informationen zum Installieren von .NET Framework bereit. |  
 | [.NET Framework und Out-of-Band-Releases](the-net-framework-and-out-of-band-releases.md) | Beschreibt die Out-of-Band-Releases von .NET Framework und ihre Verwendung in der App. |
 | [Systemanforderungen](system-requirements.md) | Führt die Hardware- und Softwareanforderungen für das Ausführen von .NET Framework auf. |
 | [.NET Core und Open-Source](net-core-and-open-source.md) | Beschreibt .NET Core in Bezug auf .NET Framework, und wie Sie auf die Open-Source-Projekte von .NET Core zugreifen können. |
-| [.NET Core-Dokumentation](../../core/index.yml) | Stellt die konzeptionelle und API-Referenzdokumentation für .NET Core bereit. |
+| [.NET Core-Dokumentation](../../core/introduction.md) | Stellt die konzeptionelle und API-Referenzdokumentation für .NET Core bereit. |
 | [.NET-Standard](../../standard/net-standard.md) | Erläutert .NET Standard, eine Spezifikation mit Versionsangabe, die von einzelnen .NET-Implementierungen unterstützt wird, um sicherzustellen, dass die gleichen APIs auf mehreren Plattformen verfügbar sind.
 
 ## <a name="see-also"></a>Siehe auch

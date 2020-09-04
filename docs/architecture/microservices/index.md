@@ -1,19 +1,19 @@
 ---
 title: .NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Microservices sind modulare und unabhängig bereitstellbare Dienste. Docker-Container (für Linux und Windows) vereinfachen die Bereitstellung und das Testen, indem ein Dienst und seine Abhängigkeiten zu einer einzigen Einheit gebündelt werden, die dann in einer isolierten Umgebung ausgeführt wird.
-ms.date: 01/30/2020
-ms.openlocfilehash: 9cdd5556f92e1acde540b647e7b68628a3ecf67f
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 09/02/2020
+ms.openlocfilehash: aea5012fee102f388827d146043e69592e14f22b
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988790"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379134"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen
 
 ![Bucheinband](./media/cover-small.png)
 
-**EDITION v3.1** – für ASP.NET Core 3.1 aktualisiert
+**EDITION v3.1.2:** für ASP.NET Core 3.1 aktualisiert
 
 Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern.
 
@@ -145,6 +145,8 @@ Teilnehmer und Prüfer:
 > **Charles Lowell**, Softwareentwickler, VS CAT-Team, Microsoft
 >
 > **Miguel Veloso**, Software Development Engineer bei Plain Concepts
+>
+> **Sumit Ghosh**, Principal Consultant bei Neudesic
 
 ## <a name="copyright"></a>Copyright
 

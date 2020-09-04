@@ -1,22 +1,19 @@
 ---
 title: Symbol- und Operatorenreferenz
 description: Hier erfahren Sie mehr über die Symbole und Operatoren, die in der F#-Programmiersprache verwendet werden.
-ms.date: 02/11/2019
+ms.date: 08/15/2020
 fl_keywords:
 - '|>_FS'
-ms.openlocfilehash: 4c3af80e8f5a686535b7c09579d29bb3da8591a3
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 5943352f0a1710ba7a666a79b7871b7269c75a6b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855391"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359089"
 ---
 # <a name="symbol-and-operator-reference"></a>Symbol- und Operatorenreferenz
 
 Dieser Artikel enthält eine Tabelle mit Symbolen und Operatoren, die in der Sprache F# verwendet werden.
-
-> [!NOTE]
-> Die API-Referenz für F# auf docs.microsoft.com ist nicht abgeschlossen. Wenn Sie auf fehlerhafte Links stoßen, können Sie stattdessen die [Dokumentation zur F#-Kernbibliothek](https://fsharp.github.io/fsharp-core-docs/) nutzen.
 
 ## <a name="table-of-symbols-and-operators"></a>Tabelle der Symbole und Operatoren
 
@@ -76,9 +73,12 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`<>?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "nicht gleich"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
 |`<=`|[Arithmetic Operators (Arithmetische Operatoren)](arithmetic-operators.md)|<ul><li>Gibt `true` zurück, wenn die linke Seite kleiner gleich die rechte Seite ist; andernfalls wird `false` zurückgegeben.<br /></li></ul>|
 |`<=?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "kleiner gleich"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
+|<code>&#124;></code>|[Funktionen](../functions/index.md)|<ul><li>Übergibt das Ergebnis der linken Seite an die Funktion auf der rechten Seite (Vorwärtspipeoperator).<br /></li></ul>|
+|<code>&#124;&#124;></code>|[&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; Funktion](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%3E%20))|<ul><li>Übergibt das Tupel aus zwei Argumenten auf der linken Seite an die Funktion auf der rechten Seite.<br /></li></ul>|
+|<code>&#124;&#124;&#124;></code>|[&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; Funktion](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%7C%3E%20))|<ul><li>Übergibt das Tupel aus drei Argumenten auf der linken Seite an die Funktion auf der rechten Seite.<br /></li></ul>|
 |<code>&lt;&#124;</code>|[Funktionen](../functions/index.md)|<ul><li>Übergibt das Ergebnis des Ausdrucks auf der rechten Seite an die Funktion auf der linken Seite (Rückwärtspipeoperator).<br /></li></ul>|
-|<code>&lt;&#124;&#124;</code>|[Operatoren.&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; Funktion](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Übergibt das Tupel aus zwei Argumenten auf der rechten Seite an die Funktion auf der linken Seite.<br /></li></ul>|
-|<code>&lt;&#124;&#124;&#124;</code>|[Operatoren.&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; Funktion](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Übergibt das Tupel aus drei Argumenten auf der rechten Seite an die Funktion auf der linken Seite.<br /></li></ul>|
+|<code>&lt;&#124;&#124;</code>|[&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; Funktion](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%20))|<ul><li>Übergibt das Tupel aus zwei Argumenten auf der rechten Seite an die Funktion auf der linken Seite.<br /></li></ul>|
+|<code>&lt;&#124;&#124;&#124;</code>|[&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; Funktion](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%7C%20))|<ul><li>Übergibt das Tupel aus drei Argumenten auf der rechten Seite an die Funktion auf der linken Seite.<br /></li></ul>|
 |`<@...@>`|[Zitieren von Code](../code-quotations.md)|<ul><li>Begrenzt eine typisierte Codequotation.<br /></li></ul>|
 |`<@@...@@>`|[Zitieren von Code](../code-quotations.md)|<ul><li>Begrenzt eine nicht typisierte Codequotation.<br /></li></ul>|
 |`=`|[Arithmetic Operators (Arithmetische Operatoren)](arithmetic-operators.md)|<ul><li>Gibt `true` zurück, wenn die linke Seite gleich der rechten Seite ist; andernfalls wird `false` zurückgegeben.<br /></li></ul>|
@@ -108,9 +108,6 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |<code>&#124;</code>|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Begrenzt einzelne Übereinstimmungsfälle, einzelne diskriminierte Union-Fälle und Enumerationswerte.<br /></li></ul>|
 |<code>&#124;&#124;</code>|[Boolesche Operatoren](boolean-operators.md)|<ul><li>Berechnet die boolesche OR-Operation.<br /></li></ul>|
 |<code>&#124;&#124;&#124;</code>|[Bitwise Operators (Bitweise Operatoren)](bitwise-operators.md)|<ul><li>Berechnet die bitweise OR-Operation.<br /></li></ul>|
-|<code>&#124;></code>|[Funktionen](../functions/index.md)|<ul><li>Übergibt das Ergebnis der linken Seite an die Funktion auf der rechten Seite (Vorwärtspipeoperator).<br /></li></ul>|
-|<code>&#124;&#124;></code>|[Operatoren.&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; Funktion](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Übergibt das Tupel aus zwei Argumenten auf der linken Seite an die Funktion auf der rechten Seite.<br /></li></ul>|
-|<code>&#124;&#124;&#124;></code>|[Operatoren.&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; Funktion](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Übergibt das Tupel aus drei Argumenten auf der linken Seite an die Funktion auf der rechten Seite.<br /></li></ul>|
 |`~~`|[Operatorüberladung](../operator-overloading.md)|<ul><li>Wird verwendet, um eine Überladung für den unären Negationsoperator zu deklarieren.<br /></li></ul>|
 |`~~~`|[Bitwise Operators (Bitweise Operatoren)](bitwise-operators.md)|<ul><li>Berechnet die bitweise NOT-Operation.<br /></li></ul>|
 |`~-`|[Operatorüberladung](../operator-overloading.md)|<ul><li>Wird verwendet, um eine Überladung für den unären Minusoperator zu deklarieren.<br /></li></ul>|

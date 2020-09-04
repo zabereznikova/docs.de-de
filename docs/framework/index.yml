@@ -11,12 +11,12 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67e1549395ab5657a5d609b186fc1816211c5af3
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 47781bbc5b1b1a2f4c0bc44929c5bb29fe3e7978
+  ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135905"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89379173"
 landingContent:
 - title: Informationen zum .NET Framework
   linkLists:
@@ -74,24 +74,16 @@ landingContent:
     links:
     - text: Installieren und Deinstallieren von Windows-Diensten
       url: windows-services/how-to-install-and-uninstall-services.md
-- title: Erstellen von Windows Forms-Apps
+- title: Erstellen von Desktop-Apps
   linkLists:
   - linkListType: overview
     links:
-    - text: Windows Forms
-      url: winforms/index.md
-  - linkListType: tutorial
-    links:
-    - text: Erste Schritte mit dem Windows Forms-Designer
-      url: /visualstudio/designers/walkthrough-windows-forms-designer
-    - text: 'Vorgehensweise: Erstellen einer Windows Forms-Anwendung über die Befehlszeile'
-      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
-  - linkListType: how-to-guide
-    links:
-    - text: 'Vorgehensweise: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms'
-      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
-    - text: 'Vorgehensweise: Threadsichere Aufrufe von Windows Forms-Steuerelementen durchführen'
-      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+    - text: Einführung in den Desktop-Leitfaden
+      url: /dotnet/desktop/
+    - text: WPF (.NET Framework)
+      url: wpf/index.md
+    - text: Windows Forms (.NET Framework)
+      url: /dotnet/desktop/winforms/?view=netframework-4-8
 - title: Erstellen von WPF-Apps
   linkLists:
   - linkListType: overview
