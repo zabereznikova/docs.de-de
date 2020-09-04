@@ -217,6 +217,16 @@
       href: cs2032.md
     - name: Compilerfehler CS7003
       href: cs7003.md
+    - name: Compilerfehler CS8400
+      href: cs8400.md
+    - name: Compilerfehler CS8401
+      href: cs8401.md
+    - name: Compilerfehler CS8403
+      href: cs8403.md
+    - name: Compilerfehler CS8410
+      href: cs8410.md
+    - name: Compilerfehler CS8411
+      href: cs8411.md
     - name: Compilerwarnung (Stufe 1) CS0420
       href: cs0420.md
     - name: Compilerwarnung (Stufe 1) CS0465
