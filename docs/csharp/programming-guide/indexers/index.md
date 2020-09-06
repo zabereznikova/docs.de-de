@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: ea95eef7bb9ba232e4d59e3f833b82e98398fc33
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303113"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495303"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexer (C#-Programmierhandbuch)
 
@@ -46,7 +46,7 @@ Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermembe
   
 - Das [this](../../language-reference/keywords/this.md)-Schlüsselwort wird zum Definieren des Indexers verwendet.  
   
-- Das [value](../../language-reference/keywords/value.md)-Schlüsselwort wird verwendet, um den Wert zu definieren, der vom `set`-Indexer zugewiesen wird.  
+- Das [value](../../language-reference/keywords/value.md)-Schlüsselwort wird verwendet, um den Wert zu definieren, der vom `set`-Accessor zugewiesen wird.  
   
 - Indexer müssen nicht durch einen Ganzzahlwert indiziert werden. Sie können entscheiden, wie Sie den spezifischen Suchmechanismus definieren möchten.  
   
