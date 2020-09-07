@@ -2,12 +2,12 @@
 title: Entwicklungsworkflow für Docker-Apps
 description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf Docker basierenden Anwendungen. Beginnen Sie mit den Grundlagen. Gehen Sie dann ausführlicher auf das Optimieren von Dockerfiles ein. Arbeiten Sie zum Schluss mit dem vereinfachten Workflow, der bei der Verwendung mit Visual Studio verfügbar ist.
 ms.date: 01/30/2020
-ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 421b1aaf3965bd3aa80c6e09da963404d2a46c09
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389201"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359074"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -383,7 +383,7 @@ services:
       - sqldata
 
   sqldata:
-    image: mssql-server-linux:latest
+    image: mcr.microsoft.com/mssql/server:latest
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y

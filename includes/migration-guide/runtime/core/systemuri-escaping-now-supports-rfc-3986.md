@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1d7dc808d5b514acc582675d6ccdbd5778314624
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e7001fcfdf88fd9e710fbb702f2ed39d63b1e080
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620263"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497858"
 ---
 ### <a name="systemuri-escaping-now-supports-rfc-3986"></a>RFC 3986 kann jetzt verwendet werden, um System.Uri mit Escapezeichen zu versehen
 
@@ -20,8 +20,20 @@ URI-Escapezeichen in .NET Framework 4.5 wurden geändert, um [RFC 3986](https://
 |:--------|:------------|
 | Bereich   |Gering|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Uri.EscapeDataString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Uri.EscapeDataString(System.String)?displayProperty=nameWithType>
+- <xref:System.Uri.EscapeUriString(System.String)?displayProperty=nameWithType>
+- <xref:System.Uri.UnescapeDataString(System.String)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Uri.EscapeDataString(System.String)`
+- `M:System.Uri.EscapeUriString(System.String)`
+- `M:System.Uri.UnescapeDataString(System.String)`
+
+-->

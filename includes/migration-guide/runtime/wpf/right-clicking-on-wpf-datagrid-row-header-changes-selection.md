@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6d804dd335cb18d5febc2ca5f794af92963bece1
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e1faee846627b22b88eb888d6241d47d8ea6ea06
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620495"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497377"
 ---
 ### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>Bei einem Rechtsklick auf einen Zeilenheader des WPF-DataGrid-Steuerelements wird die DataGrid-Auswahl geändert
 
@@ -20,8 +20,16 @@ Dieses Problem wurde in .NET Framework 4.6 behoben und kann durch ein Upgrade au
 |:--------|:------------|
 | Bereich   |Microsoft Edge|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Windows.Controls.DataGrid.%23ctor></li></ul>|
+- <xref:System.Windows.Controls.DataGrid.%23ctor>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Controls.DataGrid.#ctor`
+
+-->

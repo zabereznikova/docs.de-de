@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c462c7b4ec8423ce8fd331d3cd31154283cf1f1d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 086dac69d085d070511fcfd5820bd2644ee4598e
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620262"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496175"
 ---
 ### <a name="marshalsizeof-and-marshalptrtostructure-overloads-break-dynamic-code"></a>Marshal.SizeOf- und Marshal.PtrToStructure-Überladungen führen bei dynamischem Code zu Fehlern
 
@@ -21,3 +21,15 @@ Aktualisieren Sie die Skripts, um eindeutig anzugeben, welche Überladung verwen
 | Bereich   |Gering|
 |Version|4.5.1|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

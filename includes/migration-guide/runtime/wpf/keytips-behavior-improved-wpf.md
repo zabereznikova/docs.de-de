@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9659068304eb208fd6a0a753273453bc669fbc56
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1487b5f47966cfcae0e47848dae99b39b42db18d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621270"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497623"
 ---
 ### <a name="keytips-behavior-improved-in-wpf"></a>Besseres KeyTips-Verhalten in WPF
 
@@ -21,3 +21,15 @@ Nicht zutreffend
 | Bereich   |Microsoft Edge|
 |Version|4.7.2|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

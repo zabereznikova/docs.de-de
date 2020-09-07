@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 87cb2570d3d47a2acb85b5557141c0fef885516a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bbeca87b3f498213b91d942cc4f197c9d80457a8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621794"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496482"
 ---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>Der Versuch, eine TCP/IP-Verbindung mit einer SQL Server-Datenbank herzustellen, die zu `localhost` aufgelöst wird, schlägt fehl
 
@@ -21,3 +21,15 @@ Dieses Problem wurde behoben und das vorherige Verhalten in .NET Framework 4.6.2
 | Bereich   |Gering|
 |Version|4.6|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

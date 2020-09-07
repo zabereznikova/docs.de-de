@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1be68c2968d0eaa9024007bcf37abf9e44c36f1c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 31ada197db36be192317e32a37a353d375d9cc65
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622055"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497823"
 ---
 ### <a name="scrolling-a-wpf-treeview-or-grouped-listbox-in-a-virtualizingstackpanel-can-cause-a-hang"></a>Das Scrollen für ein WPF-TreeView-Steuerelement oder ein gruppiertes ListBox-Steuerelement in VirtualizingStackPanel kann zu einem Absturz führen
 
@@ -20,8 +20,16 @@ Dieser Fehler kann durch ein Upgrade auf .NET Framework 4.5.1 vermieden werden. 
 |:--------|:------------|
 | Bereich   |Hauptversion|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)`
+
+-->

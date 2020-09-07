@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6da589057cebfbf3f67a46b8d49d3a61f037c4c7
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f50022d9a7bacd7be40fe3050ced26e7c25cf7aa
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622247"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497671"
 ---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>Selektor stürzt ab, wenn ein Element aus einer benutzerdefinierten INCC-Sammlung entfernt wird
 
@@ -21,3 +21,15 @@ Upgrade auf .NET Framework 4.7.1
 | Bereich   |Gering|
 |Version|4.7|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd59818fe674e10a206725bea8a74c4aceed99b1
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c01705002ad87a12389078d75ffd0f91f934d36e
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620471"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496701"
 ---
 ### <a name="wpf-textbox-selected-text-appears-a-different-color-when-the-text-box-is-inactive"></a>In einem WPF-TextBox-Element markierter Text wird in einer anderen Farbe angezeigt, wenn das Textfeld inaktiv ist
 
@@ -20,8 +20,16 @@ Das vorherige Verhalten (.NET Framework 4.0) kann wiederhergestellt werden, inde
 |:--------|:------------|
 | Bereich   |Microsoft Edge|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.TextBox`
+
+-->

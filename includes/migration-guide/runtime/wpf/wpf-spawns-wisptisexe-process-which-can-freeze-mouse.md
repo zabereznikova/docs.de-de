@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e0f72d19a884087b1f0f6ebd1b6baea75bc37af4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c3114277445daaae988b41782721c443c1e780d1
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620484"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497475"
 ---
 ### <a name="wpf-spawns-a-wisptisexe-process-which-can-freeze-the-mouse"></a>WPF erzeugt einen „wiptis.exe“-Prozess, der die Maus sperren kann
 
@@ -21,3 +21,15 @@ Eine Problembehebung steht in einem Service Release von .NET Framework 4.5.2 (Ho
 | Bereich   |Hauptversion|
 |Version|4.5.2|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

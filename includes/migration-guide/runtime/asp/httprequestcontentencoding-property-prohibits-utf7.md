@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7d3568fef933758c40e47cefa86c24d31d4119fc
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cf34c5df1badcfd86d8a07bafdf1b759234712e0
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620130"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496601"
 ---
 ### <a name="httprequestcontentencoding-property-prohibits-utf7"></a>HttpRequest.ContentEncoding-Eigenschaft verhindert UTF7
 
@@ -20,8 +20,16 @@ Im Idealfall sollten Anwendungen aktualisiert verwenden, damit sie die UTF-7-Cod
 |:--------|:------------|
 | Bereich   |Microsoft Edge|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Web.HttpRequest.ContentEncoding`
+
+-->

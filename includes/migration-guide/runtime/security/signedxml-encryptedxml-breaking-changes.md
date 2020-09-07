@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8cc4f2ba2923774ef4e4e6861a89a7797ca988e1
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5c8ea3565fbe599dd53a71ba8bd339704f7d7f8a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621198"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497352"
 ---
 ### <a name="signedxml-and-encryptedxml-breaking-changes"></a>Breaking Changes bei SignedXml und EncryptedXml
 
@@ -20,8 +20,20 @@ Entwickler sollten die Verwendung von <xref:System.Security.Cryptography.Xml.Xml
 |:--------|:------------|
 | Bereich   |Gering|
 |Version|4.6.2|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType></li></ul>|
+- <xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Security.Cryptography.Xml.Transform`
+- `T:System.Security.Cryptography.Xml.XmlDsigXPathTransform`
+- `T:System.Security.Cryptography.Xml.XmlDsigXsltTransform`
+
+-->

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 506c1cdeb577452628d67ab00df20dd30881f406
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159688"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495433"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Alternierungskonstrukte in regulären Ausdrücken
 
@@ -60,7 +60,7 @@ Der reguläre Ausdruck `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend d
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Eine der folgenden Varianten muss übereinstimmen: zwei Dezimalstellen gefolgt von einem Bindestrich gefolgt von sieben Dezimalstellen; oder drei Dezimalstellen, ein Bindestrich, zwei Dezimalstellen, ein weiterer Bindestrich und vier Dezimalstellen.|  
-|`\d`|Der Vergleich endet an einer Wortgrenze.|  
+|`\b`|Der Vergleich endet an einer Wortgrenze.|  
   
 <a name="Conditional_Expr"></a>
 ## <a name="conditional-matching-with-an-expression"></a>Bedingte Übereinstimmung mit einem Ausdruck

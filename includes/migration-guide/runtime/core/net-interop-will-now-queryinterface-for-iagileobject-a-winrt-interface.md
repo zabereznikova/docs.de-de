@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 150b94b55fa8f2a29f1da7cf7ac7bf6dd06b9666
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 65fa5d8629ce8e426cf1623590a056e5cad0b91f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621980"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497603"
 ---
 ### <a name="net-interop-will-now-queryinterface-for-iagileobject-a-winrt-interface"></a>.NET Interop verwendet jetzt QueryInterface für IAgileObject (eine WinRT-Oberfläche)
 
@@ -21,3 +21,15 @@ Wenn die QI für IAgileObject die Ausführung unterbricht, können Sie diesen Co
 | Bereich   |Microsoft Edge|
 |Version|4.8|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

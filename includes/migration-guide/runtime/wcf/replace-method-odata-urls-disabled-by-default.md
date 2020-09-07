@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b2fcacdb02c411c4dcb12051bf0c6759faccdea2
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fccf349517133245ec85ae3c25cedbfb27a7dd8b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620392"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497216"
 ---
 ### <a name="the-replace-method-in-odata-urls-is-disabled-by-default"></a>Die Replace-Methode in OData-URLs ist standardmäßig deaktiviert
 
@@ -20,8 +20,16 @@ Wenn die Replace-Methode erforderlich ist (was nicht üblich ist), kann sie übe
 |:--------|:------------|
 | Bereich   |Microsoft Edge|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Data.Services.DataService%601?displayProperty=nameWithType></li></ul>|
+- <xref:System.Data.Services.DataService%601?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- ``T:System.Data.Services.DataService`1``
+
+-->

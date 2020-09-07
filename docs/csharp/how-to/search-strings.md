@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 17bf6e080542242d30791b70ffbf00b05f03a7b0
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: b6a2ab25efa64b2bbf33ea234dba07cdf9582e66
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473993"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465129"
 ---
 # <a name="how-to-search-strings"></a>Vorgehensweise: Durchsuchen von Zeichenfolgen
 
@@ -79,6 +79,6 @@ Dieses einzelne Suchmuster findet alle gültigen Zeichenfolgen. Reguläre Ausdr�
 - [Zeichenfolgen](../programming-guide/strings/index.md)
 - [LINQ und Zeichenfolgen](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
-- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Reguläre Ausdrücke in .NET](../../standard/base-types/regular-expressions.md)
 - [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)
 - [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../../standard/base-types/best-practices-strings.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2e13268d4983af5d2fdd6d12b4d9e67d61d07f3d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c679cb2603d39f580203d9373d76481e904e6c1d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622031"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497896"
 ---
 ### <a name="profiling-aspnet-mvc4-apps-can-lead-to-fatal-execution-engine-error"></a>Bei der Profilerstellung für ASP.NET MVC4-Apps kann ein schwerwiegender Fehler der Ausführungs-Engine entstehen
 
@@ -21,3 +21,15 @@ Dieses Problem wurde in .NET Framework 4.5.2 behoben. Der Profiler kann das Prob
 | Bereich   |Microsoft Edge|
 |Version|4.5|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

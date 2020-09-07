@@ -2,12 +2,12 @@
 title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lernen Sie die Schritte für die „äußere Schleife“ des DevOps-Workflows
 ms.date: 08/06/2020
-ms.openlocfilehash: 5515c204b09cecba323540572c6769c65c6c93ab
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915265"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271906"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 
@@ -94,7 +94,7 @@ Mit diesen Visual Studio Team Services-Aufgaben, einem in Azure bereitgestellten
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Erstellen eines Linux-basierten Visual Studio Team Service-Buildcomputers mit Docker-Unterstützung: \
->   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+>   <https://www.donovanbrown.com/post/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>Integrieren, Testen und Validieren von Docker-Anwendungen mit mehreren Containern
 

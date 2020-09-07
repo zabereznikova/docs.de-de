@@ -4,12 +4,12 @@ description: Hier finden Sie Beispiele für verschiedene Techniken zum Ändern v
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: bae54757fdb6f02cdc0dc8fc15ad3f7583c230a7
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473967"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465051"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C\#
 
@@ -73,5 +73,5 @@ Sie können eine Zeichenfolge in einem festen Block mit unsicherem Code ändern.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Reguläre Ausdrücke in .NET](../../standard/base-types/regular-expressions.md)
 - [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)

@@ -2,12 +2,12 @@
 title: 'Einführung in C#: Wichtige Sprachbereiche'
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 08/06/2020
-ms.openlocfilehash: f0e9bff144cc3c853a82f2ee6b400049df60683d
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068462"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414902"
 ---
 # <a name="major-language-areas"></a>Wichtige Sprachbereiche
 
@@ -60,7 +60,7 @@ Die [***Zeichenfolgeninterpolation***](../language-reference/tokens/interpolated
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-Eine interpolierte Zeichenfolge wird mithilfe des `$`-Tokens deklariert. Die Zeichenfolgeninterpolation wertet die Ausdrücke zwischen `{` und `}` aus, konvertiert das Ergebnis in `string` und ersetzt den Text zwischen den Klammern durch das Zeichenfolgenergebnis des Ausdrucks. Mit `:` im ersten Ausdruck gibt `{weatherData.Data:MM-DD-YYYY}` die *Formatzeichenfolge* an. Im obigen Beispiel wird festgelegt, dass das Datum im Format „MM-TT-JJJJ“ ausgegeben werden soll.
+Eine interpolierte Zeichenfolge wird mithilfe des `$`-Tokens deklariert. Die Zeichenfolgeninterpolation wertet die Ausdrücke zwischen `{` und `}` aus, konvertiert das Ergebnis in `string` und ersetzt den Text zwischen den Klammern durch das Zeichenfolgenergebnis des Ausdrucks. Mit `:` im ersten Ausdruck gibt `{weatherData.Date:MM-DD-YYYY}` die *Formatzeichenfolge* an. Im obigen Beispiel wird festgelegt, dass das Datum im Format „MM-TT-JJJJ“ ausgegeben werden soll.
 
 ## <a name="pattern-matching"></a>Musterabgleich
 

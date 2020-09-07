@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Zählen der Vorkommen eines Worts in einer Zeichenfolge 
 description: Dieses Beispiel zeigt, wie Sie eine LINQ-Abfrage in C# verwenden, um zu zählen, wie oft ein bestimmtes Wort in einer Zeichenfolge vorkommt. Die Split-Methode wird verwendet, um ein Array von Wörtern zu erstellen.
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 1621e776510e366aa779f1d45468be34b3dec373
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: e0ac7b338706c3f363fb21284e895bd1c7c48b6c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103363"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466117"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Vorgehensweise: Zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (C#)
 Dieses Beispiel zeigt, wie Sie eine LINQ-Abfrage verwenden, um die Vorkommen eines angegebenen Worts in einer Zeichenfolge zu zählen. Beachten Sie, dass zuerst die <xref:System.String.Split%2A>-Methode aufgerufen wird, um ein Array von Worten zu erstellen, damit die Zählung ausgeführt werden kann. Für die <xref:System.String.Split%2A>-Methode werden Leistungskosten berechnet. Wenn der einzige Vorgang in der Zeichenfolge die Zählung der Wörter ist, überlegen Sie sich, ob Sie nicht stattdessen die <xref:System.Text.RegularExpressions.Regex.Matches%2A>- oder <xref:System.String.IndexOf%2A>-Methode verwenden möchten. Wenn jedoch die Leistung kein zentrales Problem ist oder Sie die Sequenz in eine Reihenfolge gebracht haben, um andere Abfragetypen darauf auszuführen, macht es Sinn, auch LINQ zum Zählen der Wörter oder Sätze zu verwenden.  
@@ -23,7 +23,7 @@ class CountWords
         string text = @"Historically, the world of data and the world of objects" +  
           @" have not been well integrated. Programmers work in C# or Visual Basic" +  
           @" and also in SQL or XQuery. On the one side are concepts such as classes," +  
-          @" objects, fields, inheritance, and .NET Framework APIs. On the other side" +  
+          @" objects, fields, inheritance, and .NET APIs. On the other side" +  
           @" are tables, columns, rows, nodes, and separate languages for dealing with" +  
           @" them. Data types often require translation between the two worlds; there are" +  
           @" different standard functions. Because the object world has no notion of query, a" +  

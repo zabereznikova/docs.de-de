@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b92dc8a1c48e83846c3d9a1d86e66629f31b7722
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bca76daca6e9c424377a80aa56e1a5ff191be5ca
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622020"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496271"
 ---
 ### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a>Das Scrollen zum untersten Eintrag in ItemsControl-Steuerelementen (z.B. ListBox und DataGrid) war bei Verwendung von benutzerdefinierten DataTemplates zeitweilig nicht möglich.
 
@@ -21,3 +21,15 @@ Dieses Problem wurde in .NET Framework 4.5.2 behoben und kann durch ein Upgrade 
 | Bereich   |Gering|
 |Version|4.5|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

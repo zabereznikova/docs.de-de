@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f123f37d3f1be7d5b6805ac58529c1872a81f20b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 151f88f1214e3abedf491761144ffc1a89d29e43
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620202"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496766"
 ---
 ### <a name="compiler-support-for-type-forwarding-when-multi-targeting-mscorlib"></a>Compilerunterstützung für Typweiterleitung bei Festlegung von Zielversionen für das mscorlib-Element
 
@@ -17,3 +17,15 @@ Durch ein neues CodeDOM-Feature kann ein Compiler anhand der Zielversion von msc
 | Bereich   |Microsoft Edge|
 |Version|4.5|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

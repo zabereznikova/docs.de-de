@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bae6d7c0f8843211c721c68ce6f16000b35b4401
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 61749f59f9379a6d18bb013b2612a07cb7822b3a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620459"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496960"
 ---
 ### <a name="new-enum-values-in-wpfs-pagerangeselection"></a>Neue Enumerationswerte in der PageRangeSelection-Enumeration für WPF
 
@@ -20,8 +20,16 @@ In den meisten Fällen wirken sich diese Änderungen nicht auf Benutzercode aus.
 |:--------|:------------|
 | Bereich   |Microsoft Edge|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.PageRangeSelection`
+
+-->

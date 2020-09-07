@@ -2,12 +2,12 @@
 title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
 ms.date: 10/08/2018
-ms.openlocfilehash: 630bd0a0b060431e565df98faa77f452e2045fa2
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0cc2072408e110d94b47bd47a9c337a604d4c1a3
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144304"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271775"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -130,7 +130,7 @@ Wichtig: Wenn Domänenereignisse asynchron mit einer Warteschlange verarbeitet w
 
 Die nächste Frage lautet, wie ein Domänenereignis ausgelöst wird, damit es seine zugehörigen Ereignishandler erreicht. Mehrere Methoden stehen zur Verfügung.
 
-Udi Dahan hat ursprünglich (z.B. in mehreren Beiträgen wie [Domain Events – Take 2 (Domänenereignisse – Teil 2)](http://udidahan.com/2008/08/25/domain-events-take-2/)) die Verwendung einer statischen Klasse für die Verwaltung und Auslösung von Ereignissen vorgeschlagen. Dazu gehören beispielsweise eine statische Klasse mit dem Namen DomainEvents, die Domänenereignisse sofort auslöst, wenn sie aufgerufen wird, und eine Syntax wie `DomainEvents.Raise(Event myEvent)` verwendet. Jimmy Bogard empfiehlt in seinem Blogbeitrag ([Strengthening your domain: Domain Events (Stärken Ihrer Domäne: Domänenereignisse)](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) einen ähnlichen Ansatz.
+Udi Dahan hat ursprünglich (z.B. in mehreren Beiträgen wie [Domain Events – Take 2 (Domänenereignisse – Teil 2)](https://udidahan.com/2008/08/25/domain-events-take-2/)) die Verwendung einer statischen Klasse für die Verwaltung und Auslösung von Ereignissen vorgeschlagen. Dazu gehören beispielsweise eine statische Klasse mit dem Namen DomainEvents, die Domänenereignisse sofort auslöst, wenn sie aufgerufen wird, und eine Syntax wie `DomainEvents.Raise(Event myEvent)` verwendet. Jimmy Bogard empfiehlt in seinem Blogbeitrag ([Strengthening your domain: Domain Events (Stärken Ihrer Domäne: Domänenereignisse)](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) einen ähnlichen Ansatz.
 
 Wenn die Domänenereignisklasse statisch ist, sendet sie auch sofort an Handler. Dies erschwert das Testen und Debuggen, da die Ereignishandler mit Nebenwirkungslogik unmittelbar nach der Auslösung des Ereignisses ausgeführt werden. Wenn Sie testen und debuggen, sollten Sie sich nur auf das konzentrieren, was in den aktuellen Aggregatklassen geschieht. Achten Sie darauf, dass Sie nicht plötzlich zu anderen Ereignishandlern für Nebenwirkungen im Zusammenhang mit anderen Aggregaten oder anderer Anwendungslogik umgeleitet werden. Aus diesem Grund wurden weitere Methoden entwickelt, die im nächsten Abschnitt erläutert werden.
 

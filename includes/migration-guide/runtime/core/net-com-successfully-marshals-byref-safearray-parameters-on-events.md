@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 77e9d28d79a92cf1523e4ef5779d78394b00ae80
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1907c9b82c9685899d328f67da8001c0fa4fb697
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621985"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497862"
 ---
 ### <a name="net-com-successfully-marshals-byref-safearray-parameters-on-events"></a>.NET COM hat die ByRef-SafeArray-Parameter für Ereignisse erfolgreich gemarshallt.
 
@@ -21,3 +21,15 @@ Wenn ein ordnungsgemäßes Marshalling des ByRef-SafeArray-Parameters bei COM-Er
 | Bereich   |Gering|
 |Version|4.8|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 52406f1e4ea4eda417909e52cf6529631cb0ae33
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9d0791f00db7d830fc5d327af30218a0bbfcb25f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620222"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496465"
 ---
 ### <a name="change-in-behavior-for-taskwaitall-methods-with-time-out-arguments"></a>Änderung des Verhaltens für Task.WaitAll-Methoden mit Timeout-Argumenten
 
@@ -24,4 +24,16 @@ Wenn eine <xref:System.AggregateException?displayProperty=fullName> als Mittel z
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)`
+- `M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)`
+- `M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)`
+
+-->

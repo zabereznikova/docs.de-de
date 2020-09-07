@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f955e270f709ddf6eea2e44bbcf386e372b9f6e3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4e685722271a8079e727ea9c2e0e501f68b30fc9
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621317"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497300"
 ---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>TargetFrameworkName für die Standardanwendungsdomäne erhält nicht mehr standardmäßig den Wert NULL, wenn kein Wert festgelegt wurde
 
@@ -20,8 +20,16 @@ Der Code sollte aktualisiert werden, um nicht davon abhängig zu sein, dass <xre
 |:--------|:------------|
 | Bereich   |Microsoft Edge|
 |Version|4.6|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
+- <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.AppDomainSetup.TargetFrameworkName`
+
+-->

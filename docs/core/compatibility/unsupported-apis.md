@@ -3,12 +3,12 @@ title: Nicht unterstützte APIs in .NET Core
 titleSuffix: ''
 description: Erfahren Sie, welche APIs aus .NET Framework immer eine Ausnahme in .NET Core auslösen.
 ms.date: 12/23/2019
-ms.openlocfilehash: 941e9149c7679afe4a888149108d0a9a28e5e7ab
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 94f334d7e4b7daf407f489ba274172ced9eefa81
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794597"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414434"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>APIs, die in .NET Core immer Ausnahmen auslösen
 
@@ -267,14 +267,13 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 | Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)> | Alle |
-| <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | Alle |
 | <xref:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Certificates
 
 | Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
-| <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Alle |
+| <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | All |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | Alle |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Alle |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType> (nur „set“) | Alle |
@@ -307,7 +306,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 | Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
-| <xref:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
+| <xref:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | All |
 | <xref:System.Threading.ExecutionContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 | <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> | Alle |
 | <xref:System.Threading.Thread.ResetAbort?displayProperty=nameWithType> | Alle |
@@ -318,12 +317,12 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 | Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
-| <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Alle |
+| <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | All |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Alle |
 | <xref:System.Xml.XmlDictionaryWriter.CreateMtomWriter(System.IO.Stream,System.Text.Encoding,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType> | Alle |
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Breaking Changes für die Migration von .NET Framework 3.0 zu .NET Core](fx-core.md)
+- [Breaking Changes für die Migration von .NET Framework zu .NET Core](fx-core.md)
 - [Binäre Serialisierung in .NET Core](../../standard/serialization/binary-serialization.md#net-core)
 - [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)

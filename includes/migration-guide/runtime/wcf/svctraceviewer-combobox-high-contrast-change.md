@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 06f4186e8f233f5c769dfc5e05d2de5eacd9b053
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 6a6c0af9cc0f3e5d1bbc3a4462a9ff7eaa748a5f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621990"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497068"
 ---
 ### <a name="svctraceviewer-combobox-high-contrast-change"></a>Änderungen bei ComboBox in svcTraceViewer
 
@@ -21,3 +21,15 @@ Bei bestimmten Designs mit hohem Kontrast wurden ComboBox-Steuerelemente im Tool
 | Bereich   |Microsoft Edge|
 |Version|4.8|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

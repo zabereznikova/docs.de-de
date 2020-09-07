@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d587e542a72d584502ac3ac892619cc38b88ef77
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12fb72d5ee9fc0d6c57899589cb2b0da7db41f4a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620142"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497389"
 ---
 ### <a name="httputilityjavascriptstringencode-escapes-ampersand"></a>HttpUtility.JavaScriptStringEncode versieht kaufmännisches Und-Zeichen mit Escapezeichen
 
@@ -20,8 +20,18 @@ Wenn Ihre App vom vorherigen Verhalten dieser Methode abhängig ist, können Sie
 |:--------|:------------|
 | Bereich   |Gering|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType>
+- <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Web.HttpUtility.JavaScriptStringEncode(System.String)`
+- `M:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)`
+
+-->

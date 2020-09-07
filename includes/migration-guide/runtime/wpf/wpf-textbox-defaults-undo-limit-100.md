@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 13d3799aeede86b01aa81ce1cd69b3c4c22311ca
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9d960774161fc44810f90ca30f56eb98f98de3ff
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620483"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497589"
 ---
 ### <a name="wpf-textbox-defaults-to-undo-limit-of-100"></a>WPF TextBox verwendet standardmäßig 100 als Grenzwert für die Aktion „Rückgängig machen“
 
@@ -20,8 +20,16 @@ Wenn der Grenzwert von 100 für die Aktion „Rückgängig machen“ zu niedrig 
 |:--------|:------------|
 | Bereich   |Microsoft Edge|
 |Version|4.5|
-|Typ|Laufzeit
+|Typ|Laufzeit|
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
--<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.TextBox`
+
+-->

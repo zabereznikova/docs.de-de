@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5e2e8d1ec5d698d1c1649c2a0a1b4b77dbdf4022
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e42bce91afab68e509cb35a8992fa3ca2f096872
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621281"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496157"
 ---
 ### <a name="wpf-printing-stack-update"></a>Update für WPF-Druckstapel
 
@@ -21,3 +21,15 @@ Legen Sie den <code>UseXpsOMPrinting</code>-REG_DWORD-Wert des <code>HKEY_CURREN
 | Bereich   |Microsoft Edge|
 |Version|4.7|
 |Typ|Laufzeit|
+
+#### <a name="affected-apis"></a>Betroffene APIs
+
+Nicht über API-Analyse erkennbar.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->
