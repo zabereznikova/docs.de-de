@@ -3,17 +3,17 @@ title: 'Vorgehensweise: Zählen der Vorkommen eines Worts in einer Zeichenfolge 
 description: Dieses Beispiel zeigt, wie Sie eine LINQ-Abfrage in C# verwenden, um zu zählen, wie oft ein bestimmtes Wort in einer Zeichenfolge vorkommt. Die Split-Methode wird verwendet, um ein Array von Wörtern zu erstellen.
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 1621e776510e366aa779f1d45468be34b3dec373
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: e0ac7b338706c3f363fb21284e895bd1c7c48b6c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103363"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466117"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="d6ebf-104">Vorgehensweise: Zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d6ebf-104">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
-<span data-ttu-id="d6ebf-105">Dieses Beispiel zeigt, wie Sie eine LINQ-Abfrage verwenden, um die Vorkommen eines angegebenen Worts in einer Zeichenfolge zu zählen.</span><span class="sxs-lookup"><span data-stu-id="d6ebf-105">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="d6ebf-106">Beachten Sie, dass zuerst die <xref:System.String.Split%2A>-Methode aufgerufen wird, um ein Array von Worten zu erstellen, damit die Zählung ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="d6ebf-106">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="d6ebf-107">Für die <xref:System.String.Split%2A>-Methode werden Leistungskosten berechnet.</span><span class="sxs-lookup"><span data-stu-id="d6ebf-107">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="d6ebf-108">Wenn der einzige Vorgang in der Zeichenfolge die Zählung der Wörter ist, überlegen Sie sich, ob Sie nicht stattdessen die <xref:System.Text.RegularExpressions.Regex.Matches%2A>- oder <xref:System.String.IndexOf%2A>-Methode verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="d6ebf-108">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="d6ebf-109">Wenn jedoch die Leistung kein zentrales Problem ist oder Sie die Sequenz in eine Reihenfolge gebracht haben, um andere Abfragetypen darauf auszuführen, macht es Sinn, auch LINQ zum Zählen der Wörter oder Sätze zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="d6ebf-109">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="62aea-104">Vorgehensweise: Zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="62aea-104">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
+<span data-ttu-id="62aea-105">Dieses Beispiel zeigt, wie Sie eine LINQ-Abfrage verwenden, um die Vorkommen eines angegebenen Worts in einer Zeichenfolge zu zählen.</span><span class="sxs-lookup"><span data-stu-id="62aea-105">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="62aea-106">Beachten Sie, dass zuerst die <xref:System.String.Split%2A>-Methode aufgerufen wird, um ein Array von Worten zu erstellen, damit die Zählung ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="62aea-106">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="62aea-107">Für die <xref:System.String.Split%2A>-Methode werden Leistungskosten berechnet.</span><span class="sxs-lookup"><span data-stu-id="62aea-107">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="62aea-108">Wenn der einzige Vorgang in der Zeichenfolge die Zählung der Wörter ist, überlegen Sie sich, ob Sie nicht stattdessen die <xref:System.Text.RegularExpressions.Regex.Matches%2A>- oder <xref:System.String.IndexOf%2A>-Methode verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="62aea-108">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="62aea-109">Wenn jedoch die Leistung kein zentrales Problem ist oder Sie die Sequenz in eine Reihenfolge gebracht haben, um andere Abfragetypen darauf auszuführen, macht es Sinn, auch LINQ zum Zählen der Wörter oder Sätze zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="62aea-109">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d6ebf-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d6ebf-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="62aea-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="62aea-110">Example</span></span>  
   
 ```csharp  
 class CountWords  
@@ -23,7 +23,7 @@ class CountWords
         string text = @"Historically, the world of data and the world of objects" +  
           @" have not been well integrated. Programmers work in C# or Visual Basic" +  
           @" and also in SQL or XQuery. On the one side are concepts such as classes," +  
-          @" objects, fields, inheritance, and .NET Framework APIs. On the other side" +  
+          @" objects, fields, inheritance, and .NET APIs. On the other side" +  
           @" are tables, columns, rows, nodes, and separate languages for dealing with" +  
           @" them. Data types often require translation between the two worlds; there are" +  
           @" different standard functions. Because the object world has no notion of query, a" +  
@@ -55,9 +55,9 @@ class CountWords
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d6ebf-111">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="d6ebf-111">Compiling the Code</span></span>  
- <span data-ttu-id="d6ebf-112">Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.</span><span class="sxs-lookup"><span data-stu-id="d6ebf-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="62aea-111">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="62aea-111">Compiling the Code</span></span>  
+ <span data-ttu-id="62aea-112">Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.</span><span class="sxs-lookup"><span data-stu-id="62aea-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6ebf-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6ebf-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62aea-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="62aea-113">See also</span></span>
 
-- [<span data-ttu-id="d6ebf-114">LINQ und Zeichenfolgen (C#)</span><span class="sxs-lookup"><span data-stu-id="d6ebf-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="62aea-114">LINQ und Zeichenfolgen (C#)</span><span class="sxs-lookup"><span data-stu-id="62aea-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
