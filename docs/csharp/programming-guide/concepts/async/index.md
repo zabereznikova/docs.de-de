@@ -2,12 +2,12 @@
 title: Asynchrone Programmierung in C#
 description: Ein Überblick über die C#-Sprachunterstützung für asynchrone Programmierung mit async, await, Task und Task<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 992ccd3a015653ea9ee13dfc309d47711ad0fca4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619714"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414980"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Asynchrone Programmierung mit async und await
 
@@ -45,7 +45,7 @@ Wenn der Computer die obigen Anweisungen asynchron ausführen soll, müssen Sie 
 
 Diese Überlegungen sind wichtig für die Programme, die Sie heutzutage schreiben. Wenn Sie Client-Programme schreiben, möchten Sie, dass die Benutzeroberfläche auf Benutzereingaben reagiert. Ihre Anwendung sollte nicht den Eindruck erwecken, dass sich das Smartphone aufgehängt hat, während es Daten aus dem Web herunterlädt. Wenn Sie Serverprogramme schreiben, möchten Sie nicht, dass Threads blockiert werden. Diese Threads könnten für andere Anforderungen benötigt werden. Die Verwendung von synchronem Code, wenn asynchrone Alternativen vorhanden sind, beeinträchtigt Ihre Möglichkeiten für günstigere Erweiterungen. Sie bezahlen für die blockierten Threads.
 
-Erfolgreiche moderne Anwendungen erfordern asynchronen Code. Ohne Sprachunterstützung erforderte das Schreiben von asynchronem Code Rückrufe, Abschlussereignisse oder andere Methoden, die die ursprüngliche Absicht des Codes verdeckten. Synchroner Code hat den Vorteil, dass er einfach zu verstehen ist. Dank der schrittweise durchgeführten Aktionen lässt sich der Code leicht überprüfen und nachvollziehen. Bei traditionellen asynchronen Modellen mussten Sie sich auf die asynchronen Eigenschaften des Codes und nicht auf die grundlegenden Aktionen des Codes konzentrieren.
+Erfolgreiche moderne Anwendungen erfordern asynchronen Code. Ohne Sprachunterstützung erforderte das Schreiben von asynchronem Code Rückrufe, Abschlussereignisse oder andere Methoden, die die ursprüngliche Absicht des Codes verdeckten. Der Vorteil des synchronen Codes besteht darin, dass seine schrittweisen Aktionen das Scannen und Verstehen erleichtern. Bei traditionellen asynchronen Modellen mussten Sie sich auf die asynchronen Eigenschaften des Codes und nicht auf die grundlegenden Aktionen des Codes konzentrieren.
 
 ## <a name="dont-block-await-instead"></a>Nicht blockieren, stattdessen „await“ verwenden
 
