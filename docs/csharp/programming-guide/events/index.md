@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 3160d1e381c6cb3af0f017538f9555b3fded9910
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: f56de15dd2c7b0a10e40a886dbd82a4147a03014
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302073"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466156"
 ---
 # <a name="events-c-programming-guide"></a>Ereignisse (C#-Programmierhandbuch)
 Ereignisse aktivieren eine [Klasse](../../language-reference/keywords/class.md) oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder *auslöst*), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder *behandeln*), werden als *Abonnenten*bezeichnet.  
@@ -32,7 +32,7 @@ In einer typischen C#-Windows Forms oder Web-Anwendung abonnieren Sie Ereignisse
   
 - Wenn ein Ereignis mehrere Abonnenten hat, werden die Ereignishandler synchron aufgerufen, wenn ein Ereignis ausgelöst wird. Informationen zum asynchronen Aufrufen von Ereignissen finden Sie unter [Asynchrones Aufrufen von synchronen Methoden](../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
-- In der .NET Framework-Klassenbibliothek basieren Ereignisse auf dem <xref:System.EventHandler>-Delegaten und der <xref:System.EventArgs>-Basisklasse.  
+- In der .NET-Klassenbibliothek basieren Ereignisse auf dem Delegaten <xref:System.EventHandler> und der Basisklasse <xref:System.EventArgs>.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:  

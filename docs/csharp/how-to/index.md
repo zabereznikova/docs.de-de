@@ -2,12 +2,12 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794701"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465155"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -94,7 +94,7 @@ Ereignisse sind Funktionen zum Veröffentlichen oder Abonnieren von Benachrichti
 
 - [Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 - [Implementieren von Schnittstellenereignissen](../programming-guide/events/how-to-implement-interface-events.md).
-- [Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
+- [Veröffentlichen von mit den .NET-Richtlinien konformen Ereignissen (C#-Programmierhandbuch)](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Auslösen von Basisklassenereignissen in abgeleiteten Klassen](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md).
 - [Implementieren von benutzerdefinierten Ereigniszugriffsmethoden](../programming-guide/events/how-to-implement-custom-event-accessors.md).
 

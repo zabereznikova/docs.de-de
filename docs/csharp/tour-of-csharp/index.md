@@ -2,12 +2,12 @@
 title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 08/06/2020
-ms.openlocfilehash: 9fa292e8e85832d831f36cf0f21512aa0cf32580
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 84775a436deb0958d3c05ec7d0207e76be28f27c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656227"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89464999"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#
 
@@ -37,7 +37,7 @@ Es gibt zwei Arten von Typen in C#: *Werttypen* und *Verweistypen*. Variablen vo
 
 Ein ***Bezeichner*** ist ein Variablenname. Ein Bezeichner ist eine Sequenz von Unicode-Zeichen ohne Leerzeichen. Ein Bezeichner kann ein in C# reserviertes Wort sein, wenn ihm das Präfix `@` vorangestellt ist. Das kann bei der Interaktion mit anderen Sprachen nützlich sein.
 
-C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *Strukturtypen* und *Nullable-Werttypen*. C#-Verweistypen sind weiter unterteilt in *Klassentypen*, *Schnittstellentypen*, *Arraytypen* und *Delegattypen*.
+C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *Strukturtypen*, *Nullable-Werttypen* und *Tuple-Werttypen*. C#-Verweistypen sind weiter unterteilt in *Klassentypen*, *Schnittstellentypen*, *Arraytypen* und *Delegattypen*.
 
 Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
 
@@ -65,11 +65,11 @@ Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
   - [Schnittstellentypen](../language-reference/keywords/interface.md)
     - Benutzerdefinierte Typen der Form `interface I {...}`
   - [Array types (Arraytypen)](../programming-guide/arrays/index.md)
-    - Ein- und mehrdimensional und verzweigt, z. B. `int[]`, `int[,]` und `int[][]`
+    - eindimensionale Arrays, mehrdimensionale Arrays und Jagged Arrays, beispielsweise `int[]`, `int[,]` und `int[][]`
   - [Delegattypen](../language-reference/builtin-types/reference-types.md#the-delegate-type)
     - Benutzerdefinierte Typen der Form `delegate int D(...)`
 
-C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typdeklaration gibt den Namen und die Member des neuen Typs an. Fünf Typkategorien von C# sind benutzerdefinierbar: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen und Delegattypen.
+C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typdeklaration gibt den Namen und die Member des neuen Typs an. Sechs Typkategorien von C# können von Benutzern definiert werden: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen, Delegattypen und Tuple-Werttypen.
 
 - Ein `class`-Typ definiert eine Datenstruktur, die Datenmember (Felder) und Funktionsmember (Methoden, Eigenschaften usw.) enthält. Klassentypen unterstützen einzelne Vererbung und Polymorphie. Dies sind Mechanismen, durch die abgeleitete Klassen erweitert und Basisklassen spezialisiert werden können.
 - Ein `struct`-Typ ähnelt einem Klassentyp, da er eine Struktur mit Datenmembern und Funktionsmembern darstellt. Im Gegensatz zu Klassen sind Strukturen Werttypen, die in der Regel keine Heapzuordnung erfordern. Strukturtypen unterstützen keine benutzerdefinierte Vererbung, und alle Strukturtypen erben implizit vom Typ `object`.
@@ -78,7 +78,7 @@ C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typd
 
 Die Typen, `class`, `struct`, `interface` und `delegate` unterstützen Generics, wodurch sie mit anderen Typen parametrisiert werden können.
 
-C# unterstützt ein- und mehrdimensionale Arrays beliebigen Typs. Im Gegensatz zu den oben aufgeführten Typen müssen Arraytypen nicht deklariert werden, bevor sie verwendet werden können. Stattdessen werden Arraytypen erstellt, indem hinter einen Typnamen eckige Klammern gesetzt werden. Beispielsweise ist `int[]` ein eindimensionales Array von `int`, `int[,]` ein zweidimensionales Array von `int` und `int[][]` ein eindimensionales Array des eindimensionalen oder „verzweigten“ Arrays von `int`.
+C# unterstützt ein- und mehrdimensionale Arrays aller beliebigen Typen. Im Gegensatz zu den oben aufgeführten Typen müssen Arraytypen nicht deklariert werden, bevor sie verwendet werden können. Stattdessen werden Arraytypen erstellt, indem hinter einen Typnamen eckige Klammern gesetzt werden. `int[]` ist beispielsweise ein eindimensionales Array aus `int`, `int[,]` ein zweidimensionales Array aus `int`, während `int[][]` ein eindimensionales Array aus eindimensionalen Arrays oder ein Jagged Array aus `int` ist.
 
 Nullable-Typen erfordern keine getrennte Definition. Für jeden Non-Nullable-Typ `T` gibt es einen entsprechenden Nullable-Typ `T?`, der einen zusätzlichen Wert, `null`, enthalten kann. Beispielsweise ist `int?` ein Typ, der jeden 32-Bit-Ganzzahlwert oder den Wert `null` enthalten kann. `string?` ist ein Typ, der beliebige `string`-Typen oder den Wert `null` enthalten kann.
 

@@ -3,12 +3,12 @@ title: Kovarianz und Kontravarianz (C#)
 description: Informationen zur Kovarianz und Kontravarianz und deren Auswirkung auf die Zuweisungskompatibilität. Hier sehen Sie ein Codebeispiel, dass die Unterschiede zwischen Kovarianz und Kontravarianz aufzeigt.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 65c75029c27b6c9a5ddc96f01622b520e8698f55
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ad4b2a7d7925d7893eb5a8e1d2d7c9ee3dcbd527
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105697"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465662"
 ---
 # <a name="covariance-and-contravariance-c"></a>Kovarianz und Kontravarianz (C#)
 Kovarianz und Kontravarianz in C# ermöglichen die implizite Referenzkonvertierung für Arraytypen, Delegattypen und generische Typargumente. Die Kovarianz behält die Zuweisungskompatibilität bei und die Kontravarianz kehrt sie um.  
@@ -84,9 +84,9 @@ IEnumerable<Object> objects = strings;
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Varianz in generischen Schnittstellen](./variance-in-generic-interfaces.md)|Erläutert Ko- und Kontravarianz in generischen Schnittstellen und enthält eine Liste der Varianten generischen Schnittstellen in .NET Framework.|  
+|[Varianz in generischen Schnittstellen](./variance-in-generic-interfaces.md)|Erläutert die Ko- und Kontravarianz in generischen Schnittstellen und enthält eine Liste der verschiedenen generischen Schnittstellen in .NET|  
 |[Creating Variant Generic Interfaces (C#) (Erstellen von varianten generischen Schnittstellen (C#))](./creating-variant-generic-interfaces.md)|Zeigt, wie benutzerdefinierte variante Schnittstellen erstellt werden.|  
 |[Using Variance in Interfaces for Generic Collections (C#) (Verwenden von Varianz in Schnittstellen für generische Auflistungen (C#))](./using-variance-in-interfaces-for-generic-collections.md)|Zeigt, wie die Unterstützung durch Kovarianz und Kontravarianz bei <xref:System.Collections.Generic.IEnumerable%601>- und <xref:System.IComparable%601>-Schnittstellen bei der Wiederverwendung Ihres Codes helfen kann.|  
-|[Variance in Delegates (C#) (Varianz bei Delegaten (C#))](./variance-in-delegates.md)|Erläutert Ko- und Kontravarianz in generischen und nicht generischen Delegaten und stellt eine Liste von varianten generischen Delegaten im .NET Framework bereit.|  
+|[Variance in Delegates (C#) (Varianz bei Delegaten (C#))](./variance-in-delegates.md)|Erläutert die Ko- und Kontravarianz in generischen und nicht generischen Delegaten und enthält eine Liste der unterschiedlichen generischen Delegate in .NET|  
 |[Using Variance in Delegates (C#) (Verwenden von Varianz in Delegaten (C#))](./using-variance-in-delegates.md)|Zeigt, wie die Unterstützung durch Kovarianz und Kontravarianz in nicht generischen Delegaten verwendet werden kann, um Methodensignaturen mit Delegattypen abzugleichen.|  
 |[Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)|Zeigt, wie die Unterstützung durch Kovarianz und Kontravarianz bei `Func`- und `Action`-Delegaten bei der Wiederverwendung Ihres Codes helfen kann.|
