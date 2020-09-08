@@ -136,6 +136,8 @@ items:
             href: ../core/tutorials/index.md
   - name: Neues
     items:
+      - name: "Entwicklung von .NET Core zu .NET\_5"
+        href: ../core/dotnet-five.md
       - name: Neuerungen in .NET Core 3.1
         href: ../core/whats-new/dotnet-core-3-1.md
       - name: Neuerungen in .NET Core 3.0
@@ -407,6 +409,8 @@ items:
             href: ../core/deploying/creating-nuget-packages.md
           - name: Rollforward der eigenständigen Runtimebereitstellung
             href: ../core/deploying/runtime-patch-selection.md
+          - name: Einzeldateibereitstellung und ausführbare Datei
+            href: ../core/deploying/single-file.md
           - name: Kürzen eigenständiger Bereitstellungen und ausführbarer Dateien
             href: ../core/deploying/trim-self-contained.md
           - name: Laufzeitpaketspeicher
