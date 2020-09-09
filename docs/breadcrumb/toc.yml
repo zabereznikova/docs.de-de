@@ -76,6 +76,9 @@ items:
               - name: Globalisierung und Lokalisierung
                 tocHref: /dotnet/standard/globalization-localization/
                 topicHref: /dotnet/standard/globalization-localization/index
+              - name: LINQ
+                tocHref: /dotnet/standard/linq/
+                topicHref: /dotnet/standard/linq/index
               - name: Sicherheit in .NET
                 tocHref: /dotnet/standard/security/
                 topicHref: /dotnet/standard/security/index
@@ -346,7 +349,7 @@ items:
               - name: Überblick
                 tocHref: /dotnet/csharp/tour-of-csharp/
                 topicHref: /dotnet/csharp/tour-of-csharp/index
-              - name: Neues
+              - name: Neuigkeiten
                 tocHref: /dotnet/csharp/whats-new/
                 topicHref: /dotnet/csharp/whats-new/index
               - name: .NET Compiler Platform SDK
@@ -402,7 +405,7 @@ items:
                       - name: Asynchrone Programmierung
                         tocHref: /dotnet/csharp/programming-guide/concepts/async/
                         topicHref: /dotnet/csharp/programming-guide/concepts/async/index
-                      - name: Attributes
+                      - name: Attribute
                         tocHref: /dotnet/csharp/programming-guide/concepts/attributes/
                         topicHref: /dotnet/csharp/programming-guide/concepts/attributes/index
                       - name: Kovarianz und Kontravarianz
@@ -495,7 +498,7 @@ items:
                   - name: Asynchrone Programmierung
                     tocHref: /dotnet/visual-basic/programming-guide/concepts/async/
                     topicHref: /dotnet/visual-basic/programming-guide/concepts/async/index
-                  - name: Attributes
+                  - name: Attribute
                     tocHref: /dotnet/visual-basic/programming-guide/concepts/attributes/
                     topicHref: /dotnet/visual-basic/programming-guide/concepts/attributes/index
                   - name: Ausdrucksbaumstrukturen
