@@ -1,46 +1,65 @@
 ---
-ms.openlocfilehash: 47d3829748deef2c7c3610816b8941bf88da7ec6
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 895d09e4ec39bd4a92ed1f4910da80474334d99b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614592"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497598"
 ---
 ### <a name="accessibility-improvements-in-wpf"></a>Verbesserungen der Barrierefreiheit in WPF
 
 #### <a name="details"></a>Details
 
 **Verbesserungen beim hohen Kontrast**
-<ul><li>Der Fokus für das <xref:System.Windows.Controls.Expander>-Steuerelement wird nun angezeigt. In früheren Versionen von .NET Framework war dies nicht der Fall.
-- Der Text, der in den Steuerelementen <xref:System.Windows.Controls.CheckBox> und <xref:System.Windows.Controls.RadioButton> angezeigt wird, wenn diese ausgewählt sind, ist nun einfacher erkennbar als in den vorherigen Versionen von .NET Framework.
-- Der Rahmen eines deaktivierten <xref:System.Windows.Controls.ComboBox>-Elements hat nun die gleiche Farbe wie der deaktivierte Text. In früheren Versionen von .NET Framework war dies nicht der Fall.
-- Deaktivierte Schaltflächen und Schaltflächen mit Fokus verwenden nun das richtige Farbdesign. In früheren Versionen von .NET Framework war dies nicht der Fall.
-- Die Dropdownschaltfläche ist nun sichtbar, wenn das Format eines <xref:System.Windows.Controls.ComboBox>-Steuerelements auf <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey?displayProperty=nameWithType> festgelegt ist. In früheren Versionen vom .NET Framework war dies nicht der Fall.
-- Der Pfeil für die Sortieranzeige in einem <xref:System.Windows.Controls.DataGrid>-Steuerelement verwendet nun die Farben des Designs. In früheren Versionen von .NET Framework war dies nicht der Fall.
-- Das Standardformat für Links ändert sich nun in das richtige Farbdesign, wenn mit der Maus darauf gezeigt wird. In früheren Versionen von .NET Framework war dies nicht der Fall.
-- Es wird nun angezeigt, wenn der Tastaturfokus sich auf Optionsfeldern befindet. In früheren Versionen von .NET Framework war dies nicht der Fall.
-- Die Spalte für Kontrollkästchen des <xref:System.Windows.Controls.DataGrid>-Steuerelements verwendet nun die erwarteten Farben für das Feedback des Tastaturfokus. In früheren Versionen von .NET Framework war dies nicht der Fall.
-- Die visuellen Elemente des Tastaturfokus werden nun für <xref:System.Windows.Controls.ComboBox>- und <xref:System.Windows.Controls.ListBox>-Steuerelemente angezeigt. In früheren Versionen von .NET Framework war dies nicht der Fall.</p>
+
+- Der Fokus für das <xref:System.Windows.Controls.Expander>-Steuerelement wird nun angezeigt. In früheren Versionen des .NET Framework war dies nicht der Fall.
+- Der Text, der in den <xref:System.Windows.Controls.CheckBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelementen angezeigt wird, wenn diese ausgewählt sind, ist nun einfacher erkennbar als in den vorherigen Versionen von .NET Framework.
+- Der Rahmen eines deaktivierten <xref:System.Windows.Controls.ComboBox>-Elements hat nun die gleiche Farbe wie der deaktivierte Text. In früheren Versionen des .NET Framework war dies nicht der Fall.
+- Deaktivierte Schaltflächen und Schaltflächen mit Fokus verwenden nun das richtige Farbdesign. In früheren Versionen des .NET Framework war dies nicht der Fall.
+- Die Dropdownschaltfläche ist nun sichtbar, wenn der Stil eines <xref:System.Windows.Controls.ComboBox>-Steuerelements auf <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey?displayProperty=nameWithType> festgelegt ist. In früheren Versionen des .NET Framework war dies nicht der Fall.
+- Der Pfeil für die Sortieranzeige in einem <xref:System.Windows.Controls.DataGrid>-Steuerelement verwendet nun die Farben des Designs. In früheren Versionen des .NET Framework war dies nicht der Fall.
+- Das Standardformat für Links ändert sich nun in das richtige Farbdesign, wenn mit der Maus darauf gezeigt wird. In früheren Versionen des .NET Framework war dies nicht der Fall.
+- Es wird nun angezeigt, wenn der Tastaturfokus sich auf Optionsfeldern befindet. In früheren Versionen des .NET Framework war dies nicht der Fall.
+- Die Spalte für Kontrollkästchen des <xref:System.Windows.Controls.DataGrid>-Steuerelements verwendet nun die erwarteten Farben für das Feedback des Tastaturfokus. In früheren Versionen des .NET Framework war dies nicht der Fall.
+- Die visuellen Elemente des Tastaturfokus werden nun für <xref:System.Windows.Controls.ComboBox>- und <xref:System.Windows.Controls.ListBox>-Steuerelemente angezeigt. In früheren Versionen des .NET Framework war dies nicht der Fall.
+
 **Verbesserungen der Interaktion mit der Sprachausgabe**
-<ul><li><xref:System.Windows.Controls.Expander>-Steuerelemente werden von der Sprachausgabe nun richtig als Gruppen (erweitern/reduzieren) ausgegeben.
+
+- <xref:System.Windows.Controls.Expander>-Steuerelemente werden von der Sprachausgabe nun richtig als Gruppen (erweitern/reduzieren) ausgegeben.
 - <xref:System.Windows.Controls.DataGridCell>-Steuerelemente werden von der Sprachausgabe nun richtig als Datenrasterzellen (lokalisiert) ausgegeben.
 - Die Sprachausgabe gibt nun den Namen eines bearbeitbaren <xref:System.Windows.Controls.ComboBox>-Elements aus.
-- <xref:System.Windows.Controls.PasswordBox>-Steuerelemente werden von der Sprachausgabe nicht mehr als &quot;Es befindet sich kein Element in der Ansicht.&quot; ausgegeben.</p>
-**LiveRegion-Unterstützung** Sprachausgaben wie die Microsoft-Sprachausgabe unterstützen die Benutzer dabei, die Inhalte der Benutzeroberfläche einer Anwendung zu erkennen. Üblicherweise wird dies durch eine Beschreibung des Teils der Benutzeroberfläche erreicht, auf dem zum jeweiligen Zeitpunkt der Fokus liegt, da es sich dabei wahrscheinlich um das Element handelt, das für den Benutzer gerade am wichtigsten ist. Wenn ein Element der Benutzeroberfläche sich jedoch an einer beliebigen Stelle des Bildschirms ändert und nicht fokussiert wird, wird der Benutzer möglicherweise nicht informiert und verpasst wichtige Informationen. LiveRegions wurden dafür entwickelt, dieses Problem zu lösen. Entwickler können diese verwenden, um der Sprachausgabe oder einem anderen [Benutzeroberflächen-Automatisierungsclient](~/docs/framework/ui-automation/ui-automation-overview.md) mitzuteilen, dass eine wichtige Änderung an einem Element der Benutzeroberfläche vorgenommen wurde. Die Sprachausgabe kann dann entscheiden, wie und wann der Benutzer über diese Änderung informiert wird. Die LiveSetting-Eigenschaft sorgt ebenfalls dafür, dass die Sprachausgabe den Benutzer über Änderungen an der Benutzeroberfläche informiert.
+- <xref:System.Windows.Controls.PasswordBox>-Steuerelemente werden von der Sprachausgabe nicht mehr als „Es befindet sich kein Element in der Ansicht“ ausgegeben.
+
+**LiveRegion-Unterstützung**
+
+Sprachausgaben wie das Feature „Sprachausgabe“ helfen Benutzern, die Benutzeroberfläche einer Anwendung zu verstehen. In der Regel wird dazu das Benutzeroberflächenelement beschrieben, das gerade im Fokus ist. Wenn ein Element der Benutzeroberfläche sich jedoch an einer beliebigen Stelle des Bildschirms ändert und nicht fokussiert wird, wird der Benutzer möglicherweise nicht informiert und verpasst wichtige Informationen. LiveRegions wurden dafür entwickelt, dieses Problem zu lösen. Entwickler können diese verwenden, um der Sprachausgabe oder einem anderen [Benutzeroberflächen-Automatisierungsclient](~/docs/framework/ui-automation/ui-automation-overview.md) mitzuteilen, dass eine wichtige Änderung an einem Element der Benutzeroberfläche vorgenommen wurde. Die Sprachausgabe kann dann entscheiden, wie und wann der Benutzer über diese Änderung informiert wird. Die LiveSetting-Eigenschaft sorgt ebenfalls dafür, dass die Sprachausgabe den Benutzer über Änderungen an der Benutzeroberfläche informiert.
 
 #### <a name="suggestion"></a>Vorschlag
 
-**Aktivieren oder Deaktivieren dieser Änderungen**: Damit die Anwendung von diesen Änderungen profitieren kann, muss sie unter .NET Framework 4.7.1 oder höher ausgeführt werden. Die Anwendung kann von diesen Änderungen profitieren, wenn Sie Folgendes durchführen:
+**Aktivieren bzw. Deaktivieren dieser Änderungen**
 
-- Festlegen von .NET Framework 4.7.1 als Ziel. Dies ist die empfohlene Vorgehensweise. Diese Änderungen der Barrierefreiheit werden standardmäßig für WPF-Anwendungen aktiviert, die .NET Framework 4.7.1 oder höher anzielen.
+Damit die Anwendung von diesen Änderungen profitieren kann, muss sie unter .NET Framework 4.7.1 oder höher ausgeführt werden. Die Anwendung kann von diesen Änderungen profitieren, wenn Sie Folgendes durchführen:
+
+- Richten Sie die Anwendung auf .NET Framework-Version 4.7.1 aus. Dies ist die empfohlene Vorgehensweise. Diese Änderungen für mehr Barrierefreiheit werden automatisch für WPF-Anwendungen aktiviert, die für .NET Framework 4.7.1 oder höher entwickelt wurden.
 - Veraltete Verhaltensweisen der Barrierefreiheit werden deaktiviert, indem wie im folgenden Beispiel dargestellt folgender [AppContext-Schalter](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) im Abschnitt `<runtime>` der Datei „app.config“ hinzugefügt und auf `false` festgelegt wird.
 
-<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <configuration>
+    <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7"/>
+    </startup>
+    <runtime>
+      <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true/false;key2=true/false'  -->
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false" />
+    </runtime>
+  </configuration>
+  ```
 
-Bei Anwendungen, die .NET Framework 4.7.1 oder höher als Zielplattform verwenden und die Legacy-Barrierefreiheitsverhalten beibehalten sollen, können Sie die Verwendung des veralteten Features für die Barrierefreiheit aktivieren, indem Sie die AppContext-Option auf `true` festlegen.
-Einen Überblick über die Benutzeroberflächenautomatisierung finden Sie unter [Benutzeroberflächenautomatisierung: Übersicht](~/docs/framework/ui-automation/ui-automation-overview.md).
+Bei Anwendungen, deren Zielplattform .NET Framework 4.7.1 oder höher ist und für die das Legacyverhalten für die Barrierefreiheit beibehalten sollen, können Sie das Legacyfeature für die Barrierefreiheit aktivieren, indem Sie die AppContext-Option auf `true` festlegen.
+Einen Überblick über die Benutzeroberflächenautomatisierung finden Sie unter [Übersicht über die Benutzeroberflächenautomatisierung](~/docs/framework/ui-automation/ui-automation-overview.md).
 
-| name    | Wert       |
+| Name    | Wert       |
 |:--------|:------------|
 | Bereich   | Hauptversion       |
 | Version | 4.7.1       |

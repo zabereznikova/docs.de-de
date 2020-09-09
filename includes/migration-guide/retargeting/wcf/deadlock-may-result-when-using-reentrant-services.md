@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dd7d3e445772e4b5ec148576ccd1374d56e251bd
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f61cf21f9f30662cc8e383bb3aeb5c642f1665b8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614527"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497952"
 ---
 ### <a name="deadlock-may-result-when-using-reentrant-services"></a>Bei der Verwendung von Eintrittsinvarianzdiensten können Deadlocks auftreten
 
@@ -20,7 +20,7 @@ Ein Deadlock kann zu einem Eintrittsinvarianzdienst führen, der Instanzen des D
 
 Dieses Problem können Sie wie folgt beheben:
 
-- Legen Sie den Parallelitätsmodus des Diensts auf <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> oder &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt; fest. Zum Beispiel:
+- Legen Sie den Parallelitätsmodus des Diensts auf <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> oder <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> fest. Zum Beispiel:
 
 ```csharp
 [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
