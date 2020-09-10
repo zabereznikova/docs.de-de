@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: f3e28adc2cf7c24cee9ee344eb78404f01b79793
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ec9415f63151443d5008fbce471fabeb89cdb91
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780719"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656170"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>"SqlDependency" in einer ASP.NET-Anwendung
-Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System.Data.SqlClient.SqlDependency> durch Verwendung des ASP.NET-<xref:System.Web.Caching.SqlCacheDependency>-Objekts. Das <xref:System.Web.Caching.SqlCacheDependency>-Objekt verwendet eine <xref:System.Data.SqlClient.SqlDependency>, um Benachrichtigungen zu empfangen und den Cache ordnungsgemäß zu aktualisieren.  
+Das Beispiel in diesem Abschnitt zeigt, wie <xref:System.Data.SqlClient.SqlDependency> durch die Nutzung des ASP.NET <xref:System.Web.Caching.SqlCacheDependency>-Objekts indirekt verwendet werden kann. Das <xref:System.Web.Caching.SqlCacheDependency>-Objekt verwendet ein <xref:System.Data.SqlClient.SqlDependency>, um auf Benachrichtigungen zu lauschen und den Cache ordnungsgemäß zu aktualisieren.  
   
 > [!NOTE]
 > Im Beispielcode wird davon ausgegangen, dass Sie Abfrage Benachrichtigungen aktiviert haben, indem Sie die Skripts unter [Aktivieren von Abfrage Benachrichtigungen](enabling-query-notifications.md)ausführen.  
   
 ## <a name="about-the-sample-application"></a>Die Beispielanwendung  
- In der Beispielanwendung wird eine einzelne ASP.NET-Webseite verwendet, um Produktinformationen aus der **AdventureWorks** -SQL Server <xref:System.Web.UI.WebControls.GridView> -Datenbank in einem-Steuerelement anzuzeigen. Beim Laden der Seite schreibt der Code die aktuelle Zeit in ein <xref:System.Web.UI.WebControls.Label>-Steuerelement. Anschließend wird ein <xref:System.Web.Caching.SqlCacheDependency>-Objekt definiert, und es werden Eigenschaften für das <xref:System.Web.Caching.Cache>-Objekt festgelegt, um die Daten für bis zu drei Minuten zwischenzuspeichern. Der Code stellt dann eine Verbindung mit der Datenbank her und ruft die Daten ab. Wenn die Seite geladen ist und die Anwendung ausgeführt wird, ruft ASP.NET Daten aus dem Cache ab, die Sie anhand dessen verifizieren können, dass sich die Zeit auf der Seite nicht ändert. Wenn sich die überwachten Daten ändern, macht ASP.NET den Cache ungültig und füllt das `GridView`-Steuerelement mit frischen Daten auf. Dabei wird die im `Label`-Steuerelement angezeigte Zeit aktualisiert.  
+ In der Beispielanwendung wird eine einzelne ASP.NET-Webseite verwendet, um Produktinformationen aus der SQL Server-**AdventureWorks**-Datenbank in einem <xref:System.Web.UI.WebControls.GridView>-Steuerelement anzuzeigen. Wenn die Seite geladen wird, schreibt der Code die aktuelle Uhrzeit in ein <xref:System.Web.UI.WebControls.Label>-Steuerelement. Anschließend wird ein <xref:System.Web.Caching.SqlCacheDependency>-Objekt definiert, und es werden Eigenschaften für das <xref:System.Web.Caching.Cache>-Objekt festgelegt, um die Cachedaten bis zu drei Minuten zu speichern. Der Code stellt dann eine Verbindung mit der Datenbank her und ruft die Daten ab. Wenn die Seite geladen ist und die Anwendung ausgeführt wird, ruft ASP.NET Daten aus dem Cache ab, was Sie bestätigen können, indem Sie feststellen, dass sich die Zeit auf der Seite nicht ändert. Wenn sich die überwachten Daten ändern, macht ASP.NET den Cache ungültig und füllt das `GridView`-Steuerelement erneut mit aktuellen Daten auf, wobei die im `Label`-Steuerelement angezeigte Uhrzeit aktualisiert wird.  
   
 ## <a name="creating-the-sample-application"></a>Erstellen der Beispielanwendung  
- Gehen Sie zum Erstellen und Ausführen der Beispielanwendung wie folgt vor:  
+ Befolgen Sie diese Anweisungen, um die Beispielanwendung zu erstellen und auszuführen:  
   
 1. Erstellen Sie eine neue ASP.NET-Website.  
   
-2. Fügen Sie der Seite Default.aspx<xref:System.Web.UI.WebControls.Label> ein <xref:System.Web.UI.WebControls.GridView>-Steuerelement und ein -Steuerelement hinzu.  
+2. Fügen Sie der Seite „Default.aspx“ die Steuerelemente <xref:System.Web.UI.WebControls.Label> und <xref:System.Web.UI.WebControls.GridView> hinzu.  
   
 3. Öffnen Sie das Klassenmodul der Seite, und fügen Sie die folgenden Anweisungen hinzu:  
   
@@ -42,22 +42,26 @@ Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System
     using System.Web.Caching;  
     ```  
   
-4. Fügen Sie dem `Page_Load`-Ereignis der Seite folgenden Code hinzu:  
+4. Fügen Sie den folgenden Code in das Ereignis `Page_Load` der Seite ein:  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5. Fügen Sie zwei Hilfsmethoden hinzu, `GetConnectionString` und `GetSQL`. Die definierte Verbindungszeichenfolge verwendet integrierte Sicherheit. Sie müssen sicherstellen, dass das verwendete Konto über die erforderlichen Daten Bank Berechtigungen verfügt und dass für die-Beispieldatenbank, **AdventureWorks**, Benachrichtigungen aktiviert sind.
+5. Fügen Sie die beiden Hilfsmethoden `GetConnectionString` und `GetSQL` hinzu. Die definierte Verbindungszeichenfolge verwendet die integrierte Sicherheit. Sie müssen sicherstellen, dass das verwendete Konto über die erforderlichen Datenbankberechtigungen verfügt und dass für die Beispieldatenbank **AdventureWorks** Benachrichtigungen aktiviert sind.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  
   
 ### <a name="testing-the-application"></a>Testen der Anwendung  
- Die im Webformular angezeigten Daten werden von der Anwendung zwischengespeichert und, sofern keine Aktivitäten zu verzeichnen sind, alle drei Minuten aktualisiert. Wenn eine Änderung an der Datenbank vorgenommen wird, wird der Cache sofort aktualisiert. Starten Sie die Anwendung von Visual Studio aus. Visual Studio lädt die Seite in den Browser. Die angezeigte Uhrzeit für das Cacheupdate gibt an, wann der Cache zuletzt aktualisiert wurde. Warten Sie drei Minuten, und aktualisieren Sie dann die Seite. Daraufhin kommt es zu einem Postbackereignis. Beachten Sie, dass sich die auf der Seite angezeigte Zeit geändert hat. Wenn Sie die Seite vor Ablauf von drei Minuten aktualisieren, ändert sich die auf der Seite angezeigte Uhrzeit nicht.  
+ Die Anwendung speichert die auf dem Webformular angezeigten Daten im Cache und aktualisiert sie alle drei Minuten, sofern keine Aktivität stattfindet. Wenn eine Änderung an der Datenbank vorgenommen wird, wird der Cache sofort aktualisiert. Führen Sie die Anwendung in Visual Studio aus, wodurch die Seite in den Browser geladen wird. Die gezeigte Aktualisierungszeit des Caches gibt an, wann der Cache zuletzt aktualisiert wurde. Warten Sie drei Minuten, und laden Sie dann die Seite neu, wodurch ein Postback-Ereignis ausgelöst wird. Beachten Sie, dass sich die auf der Seite gezeigte Zeit geändert hat. Wenn Sie die Seite in weniger als drei Minuten aktualisieren, bleibt die auf der Seite gezeigte Zeit gleich.  
   
- Aktualisieren Sie jetzt die Daten in der Datenbank mit einem Transact-SQL-UPDATE-Befehl. Die angezeigte Uhrzeit gibt jetzt an, dass der Cache mit den neuen Daten aus der Datenbank aktualisiert wurde. Beachten Sie, dass der Cache zwar aktualisiert wurde, dass aber die auf der Seite angezeigte Uhrzeit sich erst ändert, wenn ein Postbackereignis eintritt.  
-  
-## <a name="see-also"></a>Siehe auch
+ Aktualisieren Sie nun mit dem Transact-SQL-Befehl UPDATE die Daten in der Datenbank und anschließend die Seite. Die jetzt gezeigte Zeit bedeutet, dass der Cache mit den neuen Daten aus der Datenbank aktualisiert wurde. Beachten Sie, dass, obwohl der Cache aktualisiert wurde, die auf der Seite gezeigte Zeit sich solange nicht ändert, bis ein Postback-Ereignis eintritt.  
 
-- [Abfragebenachrichtigungen in SQL Server](query-notifications-in-sql-server.md)
+## <a name="distributed-cache-synchronization-using-sql-dependency"></a>Synchronisierung verteilter Caches mithilfe von SQL-Abhängigkeit
+
+Einige der verteilten Caches von Drittanbietern, z. b. [NCache](https://www.alachisoft.com/ncache) , bieten Unterstützung für die Synchronisierung von SQL-Datenbank und Cache mithilfe von [SQL-Abhängigkeiten](https://www.alachisoft.com/resources/docs/ncache/prog-guide/sql-dependency.html). Weitere Informationen und eine Beispiel-Quell Code Implementierung finden Sie unter [SQL-Abhängigkeits Beispiel für verteilte Caches](https://github.com/Alachisoft/NCache-Samples/tree/master/dotnet/Dependencies/SQLDependency).
+
+## <a name="see-also"></a>Weitere Informationen
+
+- [Abfrage Benachrichtigungen in SQL Server](query-notifications-in-sql-server.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)
