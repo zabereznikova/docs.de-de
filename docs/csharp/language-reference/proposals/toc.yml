@@ -104,6 +104,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
         - name: Kovariante Rückgabetypen
           href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: Erweiterung GetEnumerator in foreach-Schleifen
+          href: ../../../../_csharplang/proposals/csharp-9.0/extension-getenumerator.md
         - name: Parameter zum Verwerfen von Lambdafunktion
           href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
         - name: Attribute in lokalen Funktionen
