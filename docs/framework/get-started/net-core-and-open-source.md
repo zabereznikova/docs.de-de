@@ -3,16 +3,16 @@ title: .NET Core und Open-Source
 description: .NET Core ist eine allgemeine, modulare, plattformübergreifende Open-Source-Implementierung von .NET Standard.
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 08d30d047c25b3b6d681d72b46b81a0cb21f8e0a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4627d4cc1bf45f3a7ad3f269279384b4a303f00d
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622756"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414915"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core und Open-Source
 
-Dieser Artikel enthält einen kurzen Überblick über .NET Core und zeigt, wie Sie weitere Informationen erhalten können. Die vollständige Liste der Dokumentation zu .NET Core finden Sie im [Leitfaden für .NET Core](../../core/index.yml).
+Dieser Artikel enthält einen kurzen Überblick über .NET Core und zeigt, wie Sie weitere Informationen erhalten können.
 
 ## <a name="what-is-net-core"></a>Was ist .NET Core?  
 
@@ -47,5 +47,5 @@ Die .NET Core-Plattform besteht aus mehreren Komponenten, die den verwalteten Co
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET-Tutorial: Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [Leitfaden für .NET Core](../../core/index.yml)
+- [Einführung in .NET](../../core/introduction.md)
 - [Dokumentation zu ASP.NET Core](/aspnet/core/)

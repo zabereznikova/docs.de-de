@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 0f6927fd240f3f8535478d163be615fc74dad8d2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6fd291c49c282713ea56ca20d8d58616d38ec752
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125396"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465714"
 ---
 # <a name="-link-c-compiler-options"></a>-link (C#-Compileroptionen)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.
@@ -52,7 +52,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
 
 - Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.
 
- Wie die Compileroption [-reference](./reference-compiler-option.md) verwendet auch die Compileroption `-link` die Antwortdatei „Csc.rsp“, die auf häufig verwendete .NET Framework-Assemblys verweist. Verwenden Sie die Compileroption [-noconfig](./noconfig-compiler-option.md), wenn Sie nicht möchten, dass der Compiler die Datei „Csc.rsp“ verwendet.
+ Wie die Compileroption [-reference](./reference-compiler-option.md) verwendet auch die Compileroption `-link` die Antwortdatei „Csc.rsp“, die auf häufig verwendete .NET-Assemblys verweist. Verwenden Sie die Compileroption [-noconfig](./noconfig-compiler-option.md), wenn Sie nicht möchten, dass der Compiler die Datei „Csc.rsp“ verwendet.
 
  Die Kurzform von `-link` ist `-l`.
 

@@ -4,12 +4,12 @@ description: Übersicht über Methoden, Methodenparameter und Methodenrückgabew
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810572"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495537"
 ---
 # <a name="methods-in-c"></a>Methoden in C#
 
@@ -61,7 +61,7 @@ Sie können auch *benannte Argumente* anstatt Positionsargumente verwenden, wenn
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
-Sie können eine Methode aufrufen, indem Sie sowohl Positionsargumente als auch benannte Argumente verwenden. Auf ein benanntes Argument kann jedoch kein Positionsargument folgen. Im folgenden Beispiel wird die `TestMotorcycle.Drive`-Methode des vorherigen Beispiels aufgerufen, indem jeweils ein Positionsargument und ein benanntes Argument verwendet wird.
+Sie können eine Methode aufrufen, indem Sie sowohl Positionsargumente als auch benannte Argumente verwenden. Positionellen Argumenten können benannten Argumenten nur folgen, wenn diese an der richtigen Position verwendet werden. Im folgenden Beispiel wird die `TestMotorcycle.Drive`-Methode des vorherigen Beispiels aufgerufen, indem jeweils ein Positionsargument und ein benanntes Argument verwendet wird.
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 

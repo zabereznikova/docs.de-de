@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: e2e4fc37418243ff6998d19165250b895c0a4fa1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3fdb030dfc141b011f5faa827a4e4bb45ae38d19
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124863"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466013"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C#-Compileroptionen)
 
@@ -35,7 +35,7 @@ anycpu (Standard), anycpu32bitpreferred, ARM, x64, x86, oder Itanium.
 
 - **anycpu** (Standard) kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Ihre Anwendung wird nach Möglichkeit als 64-Bit-Prozess ausgeführt und wechselt zurück zu 32-Bit, wenn nur dieser Modus verfügbar ist.
 
-- **anycpu32bitpreferred** kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Die Anwendung wird auf Systemen, die sowohl 64-Bit- als auch 32-Bit-Anwendungen unterstützen, im 32-Bit-Modus ausgeführt. Sie können diese Option nur für Projekte angeben, die auf .NET Framework 4.5 ausgerichtet sind.
+- **anycpu32bitpreferred** kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Die Anwendung wird auf Systemen, die sowohl 64-Bit- als auch 32-Bit-Anwendungen unterstützen, im 32-Bit-Modus ausgeführt. Sie können diese Option nur für Projekte angeben, die auf .NET Framework 4.5 oder höher ausgerichtet sind.
 
 - **ARM** kompiliert Ihre Assembly für die Ausführung auf einem Computer mit einem ARM-Prozessor (Advanced RISC-Computer).
 
@@ -57,7 +57,7 @@ Auf einem 64-Bit-Windows-Betriebssystem:
 
 - Ausführbare Dateien, die mit **-platform:anycpu32bitpreferred** kompiliert werden, werden in der 32-Bit-CLR ausgeführt.
 
-Die Einstellung **anycpu32bitpreferred** gilt nur für ausführbare Dateien (.exe) und erfordert .NET Framework 4.5.
+Die Einstellung **anycpu32bitpreferred** gilt nur für ausführbare Dateien (.exe) und erfordert .NET Framework 4.5 oder höher.
 
 Weitere Informationen zum Entwickeln einer Anwendung, die auf einem 64-Bit-Windows-Betriebssystem ausgeführt werden soll, finden Sie unter [64-Bit-Anwendungen](../../../framework/64-bit-apps.md).
 
@@ -67,7 +67,7 @@ Weitere Informationen zum Entwickeln einer Anwendung, die auf einem 64-Bit-Windo
 
 2. Klicken Sie auf die Eigenschaftenseite **Erstellen**.
 
-3. Ändern Sie die Eigenschaft **Zielplattform**, und aktivieren oder deaktivieren Sie für Projekte, die auf .NET Framework 4.5 ausgerichtet sind, das Kontrollkästchen **32-Bit bevorzugen**.
+3. Ändern Sie die Eigenschaft **Zielplattform**, und aktivieren oder deaktivieren Sie für Projekte, die auf .NET Framework 4.5 oder höher ausgerichtet sind, das Kontrollkästchen **32-Bit bevorzugen**.
 
 > [!NOTE]
 > `-platform` ist in der Entwicklungsumgebung in Visual C# Express nicht verfügbar.

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Musterabgleichausdrücke in C#.
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 2dd1401e3ef22a02f327e44ff884182ee3e22278
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249232"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414993"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -47,7 +47,7 @@ In dieser aktualisierten Version testet der `is`-Ausdruck die Variable und weist
 
 Sprachregeln für Musterabgleichausdrücke helfen Ihnen, das Ergebnis eines Musterausdrucks nicht falsch zu verwenden. Im obigen Beispiel sind die Variablen `s`, `c` und `r` nur im Geltungsbereich und werden definitiv zugewiesen, wenn die entsprechenden Musterabgleichausdrücke `true`-Ergebnisse haben. Wenn Sie versuchen, eine der Variablen an einem anderen Ort zu verwenden, erzeugt Ihr Code Compilerfehler.
 
-Betrachten wir beide dieser Regeln im Detail, beginnend mit dem Geltungsbereich. Die Variable `c` ist im Geltungsbereich nur im `else`-Zweig der ersten `if`-Anweisung. Die Variable `s` liegt im Geltungsbereich in der Methode `ComputeAreaModernIs`. Jeder Zweig einer `if`-Anweisung bildet nämlich einen separaten Geltungsbereich für Variablen. Die eigentliche `if`-Anweisung macht dies jedoch nicht. Das bedeutet, dass Variablen, die in der `if`-Anweisung deklariert wurden, im gleichen Geltungsbereich der `if`-Anweisung sind (in diesem Fall die Methode). Dieses Verhalten ist nicht spezifisch für den Musterabgleich, entspricht jedoch dem definierten Verhalten für variable Geltungsbereiche sowie für `if`- und `else`-Anweisungen.
+Betrachten wir beide dieser Regeln im Detail, beginnend mit dem Geltungsbereich. Die Variable `c` ist im Geltungsbereich nur im `else`-Zweig der ersten `if`-Anweisung. Die Variable `s` liegt im Geltungsbereich in der Methode `ComputeAreaModernIs`. Jeder Zweig einer `if`-Anweisung bildet nämlich einen separaten Geltungsbereich für Variablen. Die eigentliche `if`-Anweisung macht dies jedoch nicht. Das bedeutet, dass Variablen, die in der `if`-Anweisung deklariert wurden, im gleichen Gültigkeitsbereich der `if`-Anweisung sind (in diesem Fall die Methode). Dieses Verhalten ist nicht spezifisch für den Musterabgleich, entspricht jedoch dem definierten Verhalten für variable Geltungsbereiche sowie für `if`- und `else`-Anweisungen.
 
 Die Variablen `c` und `s` werden zugewiesen, wenn die jeweiligen `if`-Anweisungen aufgrund des definitiv zugewiesenen „when true“-Mechanismus „true“ sind.
 

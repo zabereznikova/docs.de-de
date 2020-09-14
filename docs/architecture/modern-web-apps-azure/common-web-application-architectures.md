@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häu
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: c9a8e9450d81ac2e63a8c8ea54592ed81e646e05
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: de90db9061d0b7bd15141b277ae4272b5208f76b
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988127"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379160"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
@@ -145,28 +145,34 @@ Bei monolithischen Anwendungen werden Projekte für den Anwendungskern, die Infr
 
 In einer gemäß der Clean Architecture erstellten Projektmappe verfügt jedes Projekt über klare Zuständigkeiten. Daher gehören zu jedem Projekt bestimmte Typen, und häufig entsprechen Ordner im jeweiligen Projekt diesen Typen.
 
+#### <a name="application-core"></a>Anwendungskern
+
 Der Anwendungskern enthält das Geschäftsmodell, das wiederum Entitäten, Dienste und Schnittstellen umfasst. Diese Schnittstellen umfassen Abstraktionen für Vorgänge, die unter Verwendung der Infrastruktur ausgeführt werden. Damit sind z.B. der Datenzugriff, der Zugriff auf Dateisysteme und Netzwerkaufrufe gemeint. Gelegentlich müssen für diese Schicht installierte Dienste und Schnittstellen mit Typen zusammenarbeiten, bei denen es sich nicht um Entitäten handelt und die nicht von der Benutzeroberfläche oder der Infrastruktur abhängig sind. Diese Dienste und Schnittstellen können als einfache Datentransferobjekte (Data Transfer Objects, DTOs) definiert sein.
 
-### <a name="application-core-types"></a>Typen des Anwendungskerns
+##### <a name="application-core-types"></a>Typen des Anwendungskerns
 
 - Entitäten (Klassen von Geschäftsmodellen, die dauerhaft gespeichert werden)
 - Schnittstellen
 - Dienste
 - DTOs
 
+#### <a name="infrastructure"></a>Infrastruktur
+
 Das Infrastrukturprojekt umfasst in der Regel Implementierungen für den Datenzugriff. In einer herkömmlichen ASP.NET Core-Webanwendung umfassen diese Implementierungen die Entity Framework-Klasse „DbContext“, jegliche `Migration`-Objekte von EF Core, die definiert wurden, und Klassen für die Implementierungen des Datenzugriffs. Die beste Möglichkeit, Implementierungscode für den Datenzugriff zu implementieren, stellt das [Entwurfsmuster Repository](https://deviq.com/repository-pattern/) dar.
 
 Das Infrastrukturprojekt sollte neben Implementierungen für den Datenzugriff Implementierungen von Diensten enthalten, die mit verschiedenen Bestandteilen der Infrastruktur interagieren. Diese Dienste sollten im Anwendungskern definierte Schnittstellen implementierten. Daher sollte im Infrastrukturprojekt ein Verweis auf das Anwendungskernprojekt enthalten sein.
 
-### <a name="infrastructure-types"></a>Typen der Infrastruktur
+##### <a name="infrastructure-types"></a>Typen der Infrastruktur
 
 - EF Core-Typen (`DbContext`, `Migration`)
 - Implementierungstypen für den Datenzugriff (Repositorys)
 - Infrastrukturspezifische Dienste (z.B. `FileLogger` oder `SmtpNotifier`)
 
+#### <a name="ui-layer"></a>Benutzeroberflächenschicht
+
 Die UI-Schicht in einer ASP.NET Core MVC-Anwendung stellt den Einstiegspunkt für die Anwendung dar. Dieses Projekt sollte auf das Anwendungskernprojekt verweisen, und dessen Typen sollten ausschließlich über im Anwendungskern definierte Schnittstellen mit der Infrastruktur interagieren. In der UI-Schicht sollten keine direkte Instanziierung oder statische Aufrufe von Typen von Infrastrukturebenen zugelassen werden.
 
-### <a name="ui-layer-types"></a>Typen der UI-Schicht
+##### <a name="ui-layer-types"></a>Arten von Benutzeroberflächenschichten
 
 - Controller
 - Filter

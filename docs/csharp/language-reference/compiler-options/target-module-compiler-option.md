@@ -9,12 +9,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 2c592d2fe001bb0908a06a6eb3287a39040b8715
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 2074e170ab177c39fdf3954fa93ae4b666bf853d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128451"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466052"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (C#-Compileroptionen)
 Diese Option bewirkt, dass der Compiler kein Assemblymanifest generiert.  
@@ -28,7 +28,7 @@ Diese Option bewirkt, dass der Compiler kein Assemblymanifest generiert.
 ## <a name="remarks"></a>Bemerkungen  
  Standardmäßig weist die Ausgabedatei, die durch Kompilieren mit dieser Option erstellt wird, eine Dateierweiterung .NETMODULE auf.  
   
- Eine Datei, die nicht über ein Assemblymanifest verfügt, kann nicht von der Common Language Runtime von .NET Framework geladen werden. Allerdings kann eine solche Datei mithilfe von [-addmodule](./addmodule-compiler-option.md) in das Assemblymanifest integriert werden.  
+ Eine Datei ohne Assemblymanifest kann nicht von der .NET-Runtime geladen werden. Allerdings kann eine solche Datei mithilfe von [-addmodule](./addmodule-compiler-option.md) in das Assemblymanifest integriert werden.  
   
  Wird mehr als ein Modul in einer einzigen Kompilierung erstellt, werden [interne](../keywords/internal.md) Typen in einem Modul für andere Module in der Kompilierung verfügbar. Wenn der Code in einem Modul auf `internal`-Typen in einem anderen Modul verweist, dann müssen beide Module mithilfe von **-addmodule** in ein Assemblymanifest aufgenommen werden.  
   

@@ -2,12 +2,12 @@
 title: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
 description: Erstellen Sie ein Komponententestprojekt für eine .NET Core-Klassenbibliothek. Sie überprüfen mithilfe von Komponententests, ob die .NET Core-Klassenbibliothek ordnungsgemäß funktioniert.
 ms.date: 06/08/2020
-ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811716"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359167"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
 
@@ -15,7 +15,7 @@ In diesem Tutorial wird gezeigt, wie Sie Komponententests automatisieren, indem 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Erstellen einer .NET Standard-Bibliothek in Visual Studio Code](library-with-visual-studio-code.md) erstellen.
+- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Erstellen einer .NET Standard-Bibliothek mithilfe von Visual Studio Code](library-with-visual-studio-code.md) erstellen.
 
 ## <a name="create-a-unit-test-project"></a>Ein Komponententestprojekt erstellen
 
@@ -23,7 +23,7 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
 
 1. Starten Sie Visual Studio Code.
 
-1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Erstellen einer .NET Standard-Bibliothek in Visual Studio](library-with-visual-studio.md) erstellt haben.
+1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Erstellen einer .NET Standard-Bibliothek mithilfe von Visual Studio Code](library-with-visual-studio-code.md) erstellt haben.
 
 1. Erstellen Sie ein Komponententestprojekt namens „StringLibraryTest“.
 

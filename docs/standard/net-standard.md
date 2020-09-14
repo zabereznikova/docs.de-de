@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e96a03ca55682d3e30bc13fb20a8e443105301fc
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167403"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359310"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -92,7 +92,7 @@ Die Spezifikation ist nicht singulär, sondern ein ständig wachsender und linea
 
 .NET Standard ist weder spezifisch auf eine bestimmte .NET-Implementierung ausgelegt, noch entspricht sie dem Versionierungsschema einer dieser Runtimes.
 
-APIs, die einer der Implementierungen (z.B. .NET Framework, .NET Core und Mono) hinzugefügt werden, können als Kandidaten für die Spezifikation betrachtet werden, insbesondere, wenn sie von grundlegender Natur sind. Neue [Versionen von .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) werden basierend auf .NET-Implementierungsversionen erstellt, sodass Sie neue APIs über eine .NET Standard-PCL adressieren können. Die Mechanismen der Versionskontrolle werden ausführlich unter [.NET Core-Versionskontrolle](../core/versions/index.md) beschrieben.
+APIs, die einer .NET-Implementierung (z. B. .NET Framework, .NET Core oder Mono) hinzugefügt werden, können potenziell zur Spezifikation hinzugefügt werden. Das gilt insbesondere, wenn es sich um allgemeine APIs handelt. Neue [Versionen von .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) werden auf Grundlage der .NET-Implementierungsreleases erstellt, sodass Sie neue APIs über eine .NET Standard-PCL (Portable Class Library, portierbare Klassenbibliothek) adressieren können. Die Mechanismen der Versionskontrolle werden ausführlich unter [.NET Core-Versionskontrolle](../core/versions/index.md) beschrieben.
 
 Die Versionskontrolle von .NET Standard ist wichtig für die Nutzung. Mit einer bestimmten Version von .NET Standard können Sie Bibliotheken verwenden, die auf dieselbe oder eine niedrigere Version ausgerichtet sind. Die folgende Vorgehensweise beschreibt den Workflow für die Verwendung von PCLs von .NET Standard, die auf .NET Standard ausgerichtet sind.
 

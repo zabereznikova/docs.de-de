@@ -7,12 +7,12 @@ ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 3c9615d7d79b5da1c180bb505f5f37b99aeae775
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325755"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271996"
 ---
 # <a name="data-binding-overview-in-wpf"></a>Übersicht über die Datenbindung in WPF
 
@@ -173,12 +173,12 @@ Möglicherweise müssen Sie benutzerdefinierte Logik anwenden, damit die Daten f
 
 Bevor auf weitere Features und Verwendungsmöglichkeiten der Datenbindung eingegangen wird, ist es sinnvoll, sich mit der <xref:System.Windows.Data.BindingExpression>-Klasse zu befassen. Wie die vorherigen Abschnitte gezeigt haben, handelt es sich bei der <xref:System.Windows.Data.Binding>-Klasse um die Klasse höherer Ebene für die Deklaration einer Bindung. Diese Klasse bietet zahlreiche Eigenschaften, mit denen Sie die Merkmale einer Bindung angeben können. Die verwandte <xref:System.Windows.Data.BindingExpression>-Klasse ist das zugrunde liegende Objekt, das die Verbindung zwischen Quelle und Ziel aufrechterhält. Ein Bindung enthält sämtliche Informationen, die von mehreren Bindungsausdrücken gemeinsam genutzt werden können. <xref:System.Windows.Data.BindingExpression> ist ein Instanzenausdruck, der nicht gemeinsam genutzt werden kann und sämtliche Instanzeninformationen von <xref:System.Windows.Data.Binding> enthält.
 
-Sehen Sie sich das folgende Beispiel an, bei dem `myDataObject` eine Instanz der `MyData`-Klasse ist, `myBinding` das Quellobjekt von <xref:System.Windows.Data.Binding> ist und `MyData` eine definierte Klasse ist, die eine Zeichenfolgeneigenschaft namens `MyDataProperty` enthält. In diesem Beispiel wird der Textinhalt von `myText`, einer Instanz von <xref:System.Windows.Controls.TextBlock>, an `MyDataProperty` gebunden.
+Sehen Sie sich das folgende Beispiel an, bei dem `myDataObject` eine Instanz der `MyData`-Klasse ist, `myBinding` das Quellobjekt von <xref:System.Windows.Data.Binding> ist und `MyData` eine definierte Klasse ist, die eine Zeichenfolgeneigenschaft namens `ColorName` enthält. In diesem Beispiel wird der Textinhalt von `myText`, einer Instanz von <xref:System.Windows.Controls.TextBlock>, an `ColorName` gebunden.
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ManualBinding.cs#CodeOnlyBinding)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ManualBinding.vb#CodeOnlyBinding)]
 
-Mit demselben *myBinding*-Objekt können Sie auch andere Bindungen erstellen. Sie können beispielsweise mit dem *myBinding*-Objekt eine Bindung des Textinhalts eines Kontrollkästchens an *MyDataProperty* herstellen. In diesem Szenario werden zwei Instanzen von <xref:System.Windows.Data.BindingExpression> verwendet, die das *myBinding*-Objekt gemeinsam nutzen.
+Mit demselben *myBinding*-Objekt können Sie auch andere Bindungen erstellen. Sie können beispielsweise mit dem *myBinding*-Objekt eine Bindung des Textinhalts eines Kontrollkästchens an *ColorName* herstellen. In diesem Szenario werden zwei Instanzen von <xref:System.Windows.Data.BindingExpression> verwendet, die das *myBinding*-Objekt gemeinsam nutzen.
 
 Ein <xref:System.Windows.Data.BindingExpression>-Objekt wird durch Aufrufen von <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> für ein datengebundenes Objekt zurückgegeben. In den folgenden Artikeln werden einige Verwendungsmöglichkeiten der <xref:System.Windows.Data.BindingExpression>-Klasse veranschaulicht:
 

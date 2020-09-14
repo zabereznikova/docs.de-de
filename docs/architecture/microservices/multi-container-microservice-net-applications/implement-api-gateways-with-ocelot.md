@@ -2,12 +2,12 @@
 title: Implementieren von API-Gateways mit Ocelot
 description: Hier erfahren Sie, wie Sie API-Gateways mit Ocelot implementieren und Ocelot in einer containerbasierten Umgebung verwenden.
 ms.date: 03/02/2020
-ms.openlocfilehash: f103c1e394a3f829489b61fd17af749798b02f70
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3611ffa7a163ff632ca854fafb910fcd3e228306
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864097"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358985"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementieren von API-Gateways mit Ocelot
 
@@ -15,6 +15,7 @@ ms.locfileid: "86864097"
 > Die Referenzanwendung für Microservices [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) verwendet derzeit Features, die von [Envoy](https://www.envoyproxy.io/) zur Verfügung gestellt werden, um das API-Gateway anstelle des bereits erwähnten [Ocelot](https://github.com/ThreeMammals/Ocelot) zu implementieren.
 > Wir haben uns aufgrund der integrierten Unterstützung des WebSocket-Protokolls durch Envoy für die neue, in eShopOnContainers implementierte gRPC-Kommunikation zwischen den Diensten für diese Lösung entschieden.
 > Wir haben diesen Abschnitt jedoch im Leitfaden beibehalten, damit Sie Ocelot als ein einfaches, leistungsfähiges und schlankes API-Gateway in Betracht ziehen können, das sich für Produktionsszenarien eignet.
+> Zudem enthält die neueste Version von Ocelot einen Breaking Change in Bezug auf das JSON-Schema. Verwenden Sie ggf. eine ältere Ocelot-Version als 16.0.0 oder die Haupt-Routes-Objekte statt ReRoutes-Objekten.
 
 ## <a name="architect-and-design-your-api-gateways"></a>Erstellen und Entwerfen der API-Gateways
 

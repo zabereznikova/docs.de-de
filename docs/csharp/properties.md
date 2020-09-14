@@ -3,12 +3,12 @@ title: Eigenschaften
 description: Erfahren Sie mehr über C#-Eigenschaften, die Funktionen für die Validierung, berechnete Werte, die verzögerte Auswertung und Benachrichtigungen für Eigenschaftsänderungen umfassen.
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398688"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358907"
 ---
 # <a name="properties"></a>Eigenschaften
 
@@ -59,7 +59,7 @@ Sie können Code im `set`-Accessor schreiben, um sicherzustellen, dass die durch
 
 [!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#6)]
 
-Das vorausgehende Beispiel kann unter Verwendung eines `throw`-Ausdrucks als Teil der Validierung des Eigenschaftensetters vereinfacht werden.
+Das vorausgehende Beispiel kann unter Verwendung eines `throw`-Ausdrucks als Teil der Validierung des Eigenschaftensetters vereinfacht werden:
 
 [!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#7)]
 
@@ -146,7 +146,7 @@ Mithilfe von `nameof` können Fehler reduziert werden, bei denen Sie den Namen d
 
 Erneut ist die Implementierung von <xref:System.ComponentModel.INotifyPropertyChanged> ein Beispiel für einen Fall, in dem Sie Code in Ihren Accessoren schreiben können, um die benötigten Szenarios zu unterstützen.
 
-## <a name="summing-up"></a>Schlussbemerkung
+## <a name="summing-up"></a>Zusammenfassung
 
 Eigenschaften sind eine Form intelligenter Felder in einer Klasse oder einem Objekt. Außerhalb des Objekts wirken diese wie Felder in dem Objekt. Eigenschaften können jedoch mithilfe der vollständigen Palette der C#-Funktionalität implementiert werden.
 Sie können Überprüfung, verschiedene Eingabehilfen, verzögerte Auswertung oder alle Anforderungen, die Ihre Szenarios benötigen, bereitstellen.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 27445b6685f48f7acf646c16de3201e68767da69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: a1b65db6efb60d27ab82ab47854c0399b9476729
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125292"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466078"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C#-Compileroptionen nach Kategorien sortiert
 
@@ -41,7 +41,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[-target](target-compiler-option.md)|Gibt das Format der Ausgabedatei mit einer der folgenden Optionen an: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) oder [-target:winmdobj](target-winmdobj-compiler-option.md).|
 |-modulename:\<string>|Geben Sie den Namen des Quellmoduls an|
 
-## <a name="net-framework-assemblies"></a>.NET Framework-Assemblys
+## <a name="net-assemblies"></a>.NET-Assemblys
 
 |Option|Zweck|
 |------------|-------------|
@@ -85,7 +85,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |------------|-------------|
 |[-link](link-compiler-option.md)|Macht COM-Typinformationen in den angegebenen Assemblys für das Projekt verfügbar.|
 |[-linkresource](linkresource-compiler-option.md)|Erstellt einen Link zu einer verwalteten Ressource.|
-|[-resource](resource-compiler-option.md)|Bettet eine .NET Framework-Ressource in die Ausgabedatei ein.|
+|[-resource](resource-compiler-option.md)|Bettet eine .NET-Ressource in die Ausgabedatei ein|
 |[-win32icon](win32icon-compiler-option.md)|Gibt eine ICO-Datei an, die in die Ausgabedatei eingefügt werden soll.|
 |[/win32res:](win32res-compiler-option.md)|Gibt eine Win32-Ressource an, die in die Ausgabedatei eingefügt werden soll.|
 

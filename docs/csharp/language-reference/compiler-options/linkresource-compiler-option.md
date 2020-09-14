@@ -12,15 +12,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 162baad57397b6d992dcf8f03f0b3661e0105cb8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: cd1150f3fa0dd0eca4e9352ce3809e73a15126c7
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125344"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466104"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C#-Compileroptionen)
-Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt. Dies ist ein Unterschied zur Option [-resource](./resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.  
+Erstellt einen Link zur .NET-Ressource in der Ausgabedatei Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt. Dies ist ein Unterschied zur Option [-resource](./resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,7 +30,7 @@ Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressour
   
 ## <a name="arguments"></a>Argumente  
  `filename`  
- Die Ressourcendatei von .NET Framework, die Sie mit der Assembly verknüpfen möchten  
+ Die .NET-Ressourcendatei, die Sie mit der Assembly verknüpfen möchten  
   
  `identifier` (optional)  
  Der logische Name der Ressource. Der Name, mit dem die Ressource geladen wird. Der Standardwert ist der Name der Datei.  
@@ -43,7 +43,7 @@ Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressour
   
  **-linkresource** erfordert eine andere [-target](./target-compiler-option.md)-Option als **-target:module**.  
   
- Wenn es sich bei `filename` um eine .NET Framework-Ressourcendatei handelt, die beispielsweise von [resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern im <xref:System.Resources>-Namespace möglich. Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Verwenden Sie für alle anderen Ressourcen die `GetManifestResource`-Methoden in der <xref:System.Reflection.Assembly>-Klasse, um zur Laufzeit auf die Ressource zuzugreifen.  
+ Wenn es sich bei `filename` um eine .NET-Ressourcendatei handelt, die beispielsweise von [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern im <xref:System.Resources>-Namespace möglich. Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Verwenden Sie für alle anderen Ressourcen die `GetManifestResource`-Methoden in der <xref:System.Reflection.Assembly>-Klasse, um zur Laufzeit auf die Ressource zuzugreifen.  
   
  Die in `filename` angegebene Datei kann jedes Format haben. Sie können z.B. eine native DLL zu einem Teil der Assembly machen, sodass sie im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly darauf zugegriffen werden kann. Das zweite Beispiel zeigt die dazu erforderliche Vorgehensweise. Sie können dasselbe aber auch im Assemblylinker vornehmen. Das dritte Beispiel zeigt die dazu erforderliche Vorgehensweise. Weitere Informationen finden Sie unter [Al.exe (Assembly Linker-Tool)](../../../framework/tools/al-exe-assembly-linker.md) und [Arbeiten mit Assemblys und dem globalen Assemblycache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).  
   

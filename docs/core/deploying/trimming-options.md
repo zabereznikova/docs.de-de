@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie die Kürzung von eigenständigen Apps st
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 5597d4cdb9e8e96dcec6545e039d43295ca991bd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142257"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465415"
 ---
 # <a name="trimming-options"></a>Kürzungsoptionen
 
@@ -25,11 +25,11 @@ Wenn Sie `Microsoft.NET.Sdk` verwenden, wird eine Kürzung der Frameworkassembly
 
 ## <a name="trimming-granularity"></a>Kürzungsgranularität
 
-Die folgenden Granularitätseinstellungen steuern, wie aggressiv nicht verwendete IL verworfen wird. Dies kann als Eigenschaft oder als Metadaten für eine [einzelne Assembly](#Trimmed-assemblies) festgelegt werden.
+Die folgenden Granularitätseinstellungen steuern, wie aggressiv nicht verwendete IL verworfen wird. Dies kann als Eigenschaft oder als Metadaten für eine [einzelne Assembly](#trimmed-assemblies) festgelegt werden.
 
 - `<TrimMode>copyused</TrimMode>`
 
-   Aktivieren Sie das Kürzen auf Assemblyebene, wodurch eine gesamte Assembly beibehalten wird, wenn ein beliebiger Teil davon verwendet wird (im statischen Kontext).
+   Aktivieren Sie das Kürzen auf Assemblyebene, wodurch die gesamte Assembly erhalten bleibt, wenn ein beliebiger Teil davon verwendet wird (im statischen Kontext).
 
 - `<TrimMode>link</TrimMode>`
 
@@ -39,7 +39,7 @@ Assemblys mit den Metadaten `<IsTrimmable>true</IsTrimmable>`, aber ohne explizi
 
 ## <a name="trimmed-assemblies"></a>Gekürzte Assemblys
 
-Beim Veröffentlichen einer gekürzten App berechnet das SDK ein `ItemGroup`-Element namens `ManagedAssemblyToLink`, das die Dateien darstellt, die für die Kürzung verarbeitet werden sollen. `ManagedAssemblyToLink` kann über Metadaten verfügen, die das Kürzungsverhalten pro Assembly steuern. Erstellen Sie ein Ziel, das vor dem integrierten `PrepareForILLink`-Ziel ausgeführt wird, um diese Metadaten festzulegen. Dieses Beispiel zeigt, wie Sie das Kürzen von `MyAssembly` aktivieren:
+Beim Veröffentlichen einer gekürzten App berechnet das SDK ein `ItemGroup`-Element namens `ManagedAssemblyToLink`, das die Dateien darstellt, die für die Kürzung verarbeitet werden sollen. `ManagedAssemblyToLink` kann über Metadaten verfügen, die das Kürzungsverhalten pro Assembly steuern. Erstellen Sie ein Ziel, das vor dem integrierten `PrepareForILLink`-Ziel ausgeführt wird, um diese Metadaten festzulegen. Das folgende Beispiel zeigt, wie Sie das Kürzen von `MyAssembly` aktivieren.
 
 ```xml
 <Target Name="ConfigureTrimming"
@@ -60,11 +60,11 @@ Fügen Sie `ManagedAssemblyToLink` keine Elemente hinzu, oder entfernen Sie kein
 
 - `<TrimMode>copyused</TrimMode>` oder `<TrimMode>link</TrimMode>`
 
-  Hiermit wird die [Kürzungsgranularität](#Trimming-granularity) dieser Assembly gesteuert. Diese hat Vorrang vor dem globalen `TrimMode`. Das Festlegen von `TrimMode` für eine Assembly impliziert `<IsTrimmable>true</IsTrimmable>`.
+  Hiermit wird die [Kürzungsgranularität](#trimming-granularity) dieser Assembly gesteuert. Diese hat Vorrang vor dem globalen `TrimMode`. Das Festlegen von `TrimMode` für eine Assembly impliziert `<IsTrimmable>true</IsTrimmable>`.
 
 ## <a name="root-assemblies"></a>Stammassemblys
 
-Alle Assemblys, die nicht die Metadaten `<IsTrimmable>true</IsTrimmable>` aufweisen, werden als Stämme für die Analyse angesehen. Das bedeutet, dass sie und alle statisch verstandenen Abhängigkeiten beibehalten werden. Zusätzliche Assemblys können je nach Name zu Stammassemblys werden (ohne die Erweiterung `.dll`):
+Alle Assemblys, die `<IsTrimmable>true</IsTrimmable>` nicht aufweisen, werden als Stämme für die Analyse angesehen. Das bedeutet, dass sie und alle statisch verstandenen Abhängigkeiten beibehalten werden. Zusätzliche Assemblys können je nach Name zu Stammassemblys werden (ohne die Erweiterung `.dll`):
 
 ```xml
 <ItemGroup>
@@ -106,7 +106,7 @@ Dies schließt Warnungen zur gesamten App ein, einschließlich Ihres eigenen Cod
 
 ## <a name="warning-versions"></a>Warnungsversionen
 
-Bei der Kürzungsanalyse wird die [`AnalysisLevel`](../project-sdk/msbuild-props.md#AnalysisLevel)-Eigenschaft berücksichtigt, die die Version der Analysewarnungen im gesamten SDK steuert. Es gibt eine andere Eigenschaft, die die Version von Kürzungsanalysewarnungen unabhängig voneinander steuert (ähnlich wie `WarningLevel` für den Compiler):
+Bei der Kürzungsanalyse wird die [`AnalysisLevel`](../project-sdk/msbuild-props.md#analysislevel)-Eigenschaft berücksichtigt, die die Version der Analysewarnungen im gesamten SDK steuert. Es gibt eine andere Eigenschaft, die die Version von Kürzungsanalysewarnungen unabhängig voneinander steuert (ähnlich wie `WarningLevel` für den Compiler):
 
 - `<ILLinkWarningLevel>5</ILLinkWarningLevel>`
 

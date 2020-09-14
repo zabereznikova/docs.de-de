@@ -4,13 +4,13 @@ description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend au
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 04/10/2020
-ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 09/01/2020
+ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173119"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495472"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -62,15 +62,15 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Konsolenanwendung                          | [console](#console)             | [C#], F#, VB | Common/Console                        | 1.0        |
 | Klassenbibliothek                                | [classlib](#classlib)           | [C#], F#, VB | Common/Library                        | 1.0        |
-| WPF-Anwendung                              | [wpf](#wpf)                     | [C#]         | Common/WPF                            | 3.0        |
-| WPF-Klassenbibliothek                            | [wpflib](#wpf)                  | [C#]         | Common/WPF                            | 3.0        |
-| WPF-Benutzerdefinierte Steuerelementbibliothek                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Common/WPF                            | 3.0        |
-| Bibliothek mit WPF-Benutzersteuerelementen                     | [wpfcustomcontrollib](#wpf)       | [C#]         | Common/WPF                            | 3.0        |
-| Windows Forms-Anwendung (WinForms)         | [winforms](#winforms)           | [C#]         | Common/WinForms                       | 3.0        |
-| Windows Forms-Klassenbibliothek (WinForms)       | [winforms](#winforms)        | [C#]         | Common/WinForms                       | 3.0        |
+| WPF-Anwendung                              | [wpf](#wpf)                     | [C#], VB     | Common/WPF                            | 3.0 (5.0 für VB)|
+| WPF-Klassenbibliothek                            | [wpflib](#wpf)                  | [C#], VB     | Common/WPF                            | 3.0 (5.0 für VB)|
+| WPF-Benutzerdefinierte Steuerelementbibliothek                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Common/WPF                            | 3.0 (5.0 für VB)|
+| Bibliothek mit WPF-Benutzersteuerelementen                     | [wpfcustomcontrollib](#wpf)       | [C#], VB     | Common/WPF                            | 3.0 (5.0 für VB)|
+| Windows Forms-Anwendung (WinForms)         | [winforms](#winforms)           | [C#], VB     | Common/WinForms                       | 3.0 (5.0 für VB)|
+| Windows Forms-Klassenbibliothek (WinForms)       | [winforms](#winforms)        | [C#], VB     | Common/WinForms                       | 3.0 (5.0 für VB)|
 | Workerdienst                               | [worker](#web-others)           | [C#]         | Common/Worker/Web                     | 3.0        |
 | Komponententestprojekt                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
-| NUnit 3-Testprojekt                         | [nunit](#nunit)                  | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
+| NUnit 3-Testprojekt                         | [nunit](#nunit)                 | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
 | NUnit 3-Testelement                            | `nunit-test`                    | [C#], F#, VB | Test/NUnit                            | 2.2        |
 | xUnit-Testprojekt                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
 | Razor-Komponente                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
@@ -78,7 +78,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor Server-App                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly-App                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                            | 3.1.300    |
+| Blazor WebAssembly-App                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
 | ASP.NET Core leer                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
 | ASP.NET Core-Web-App (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core-Web-App                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |

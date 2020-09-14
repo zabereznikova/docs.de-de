@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 947a3bc7da0949781ae89ed74a87edb2637daf73
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1883662f736361a947cbad440aeefda839265251
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126514"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465636"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -121,7 +121,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Wegen der direkten Abhängigkeit von `System.IO.File`, die diese Methode zum Lesen aus dem Dateisystem verwendet, ist es schwer, Komponententests für sie durchzuführen. Sie können dieses Verhalten testen, um sicherzustellen, dass es wie erwartet funktioniert. Wenn Sie dies jedoch mit echten Dateien durchführen, handelt es sich um einen Integrationstest. Beachten Sie, dass Sie die Route dieser Methode nicht mit Komponententests testen können. Wie Sie diese mit einem Funktionstest testen können, wird im Folgenden erläutert.
+Wegen der direkten Abhängigkeit von `System.IO.File`, die diese Methode zum Lesen aus dem Dateisystem verwendet, ist es schwer, Komponententests für sie durchzuführen. Sie können dieses Verhalten testen, um sicherzustellen, dass es wie erwartet funktioniert. Wenn Sie dies jedoch mit echten Dateien durchführen, handelt es sich um einen Integrationstest. Beachten Sie, dass Sie die Route dieser Methode nicht mit Komponententests testen können. Wie Sie sie mit einem Funktionstest testen können, wird im Folgenden erläutert.
 
 Wenn Sie keinen direkten Komponententest für das Verhalten des Dateisystems und die Route durchführen können, gibt es dennoch Tests, die Sie durchführen sollten. Nach dem Refactoring zum Ermöglichen von Komponententests werden Ihnen möglicherweise Testfälle und fehlendes Verhalten auffallen, wie z.B. die Problembehandlung. Wie reagiert die Methode, wenn eine Datei nicht gefunden werden kann? Wie sollte sie reagieren? In diesem Beispiel sieht die umgestaltete Methode wie folgt aus:
 
@@ -155,9 +155,9 @@ Die meisten Integrationstests in Ihren ASP.NET Core-Apps sollten Testdienste und
 
 Die `TestServer`-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Sie konfigurieren einen `TestServer` mit `WebHostBuilder` (oder `HostBuilder`) direkt (wie Sie es normalerweise für Ihre Anwendung tun) oder mit dem Typ `WebApplicationFactory` (verfügbar seit Version 2.1). Verwenden Sie nach Möglichkeit einen Testhost, der dem Produktionshost so ähnlich wie möglich ist, damit das Verhalten der Tests dem Verhalten der App in der Produktion ähnelt. Die `WebApplicationFactory`-Klasse ist hilfreich für die ContentRoot-Konfiguration der TestServer-Klasse, die von ASP.NET Core verwendet wird, um statische Ressourcen wie Ansichten zu finden.
 
-Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die „IClassFixture\<WebApplicationFactory\<TEntry>>“ implementiert, wobei „TEntry“ der Startklasse Ihrer Webanwendung entspricht. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der CreateClient-Methode der Zuordnungsinstanz erstellen:
+Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die `IClassFixture\<WebApplicationFactory\<TEntry>>` implementiert, wobei `TEntry` der `Startup`-Klasse Ihrer Webanwendung entspricht. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der Methode `CreateClient` der Factory erstellen:
 
-```cs
+```csharp
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 {
     protected readonly HttpClient _client;
@@ -171,9 +171,9 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-In vielen Fällen führen Sie zusätzliche Konfigurationen für Ihre Website durch, bevor jeder Test ausgeführt wird, z.B. das Konfigurieren der Anwendung für die Verwendung eines Datenspeichers im Arbeitsspeicher und das anschließende Seeding der Anwendung mit Testdaten. Hierzu sollten Sie eine eigene Unterklasse von WebApplicationFactory\<TEntry> erstellen und die dazugehörige ConfigureWebHost-Methode außer Kraft setzen. Das folgende Beispiel stammt vom Funktionstestprojekt „eShopOnWeb“ und wird als Teil der Tests für die Hauptwebanwendung verwendet.
+In vielen Fällen führen Sie zusätzliche Konfigurationen für Ihre Website durch, bevor jeder Test ausgeführt wird, z.B. das Konfigurieren der Anwendung für die Verwendung eines Datenspeichers im Arbeitsspeicher und das anschließende Seeding der Anwendung mit Testdaten. Erstellen Sie hierzu eine eigene Unterklasse von `WebApplicationFactory\<TEntry>`, und überschreiben Sie die dazugehörige Methode `ConfigureWebHost`. Das folgende Beispiel stammt vom Funktionstestprojekt „eShopOnWeb“ und wird als Teil der Tests für die Hauptwebanwendung verwendet.
 
-```cs
+```csharp
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -290,7 +290,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-Dieser Funktionstest führt den gesamten ASP.NET Core MVC/Razor Pages-Anwendungsstapel aus, einschließlich aller Middleware, Filter, Binder usw., die verfügbar sind. Er überprüft, ob eine bestimmte Route („/“) den erwarteten Erfolgsstatuscode und die HTML-Ausgabe zurückgibt. Das funktioniert, ohne dass ein echter Webserver eingerichtet werden muss, und vermeidet deshalb einen Großteil der Fehleranfälligkeit, die bei einem echten Webserver auftreten kann (z.B. Probleme mit den Einstellungen der Firewall). Funktionstests, die für den TestServer ausgeführt werden, sind in der Regel langsamer als Integrations- und Komponententests, aber deutlich schneller als Tests, die über das Netzwerk auf einem Testwebserver ausgeführt werden. Verwenden Sie Funktionstests, um sicherzustellen, dass der Front-End-Stapel Ihrer Anwendung wie erwartet funktioniert. Diese Tests sind besonders hilfreich, wenn Sie Duplizierung in Ihren Controllern oder Seiten finden und Sie diese durch Hinzufügen von Filtern behandeln. Im Idealfall ändert dieses Refactoring nicht das Verhalten der Anwendung, und eine Reihe von Funktionstests überprüft, ob dies der Fall ist.
+Dieser Funktionstest führt den gesamten ASP.NET Core-MVC-/Razor Pages-Anwendungsstapel aus, einschließlich der gesamten eingerichteten Middleware sowie aller geltenden Filter und Binder. Er überprüft, ob eine bestimmte Route („/“) den erwarteten Erfolgsstatuscode und die HTML-Ausgabe zurückgibt. Während des Tests muss dazu kein echter Webserver eingerichtet werden. So wird ein Großteil der Fehleranfälligkeit vermieden, die bei einem echten Testwebserver auftreten kann (z. B. Probleme mit den Einstellungen der Firewall). Funktionstests, die für den TestServer ausgeführt werden, sind in der Regel langsamer als Integrations- und Komponententests, aber deutlich schneller als Tests, die über das Netzwerk auf einem Testwebserver ausgeführt werden. Verwenden Sie Funktionstests, um sicherzustellen, dass der Front-End-Stapel Ihrer Anwendung wie erwartet funktioniert. Diese Tests sind besonders hilfreich, wenn Sie Duplizierung in Ihren Controllern oder Seiten finden und Sie diese durch Hinzufügen von Filtern behandeln. Im Idealfall ändert dieses Refactoring nicht das Verhalten der Anwendung, und eine Reihe von Funktionstests überprüft, ob dies der Fall ist.
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Ressourcen: Testen von ASP.NET Core MVC-Apps
 >

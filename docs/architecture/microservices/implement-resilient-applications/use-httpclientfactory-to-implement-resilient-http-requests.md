@@ -1,13 +1,13 @@
 ---
 title: Verwenden von IHttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 description: Erfahren Sie, wie Sie IHttpClientFactory, verfügbar seit .NET Core 2.1, zum Erstellen von `HttpClient`-Instanzen verwenden, damit Sie es mühelos in Ihren Anwendungen verwenden können.
-ms.date: 03/03/2020
-ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/31/2020
+ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507298"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271827"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Verwenden von IHttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 
@@ -17,9 +17,9 @@ ms.locfileid: "82507298"
 
 Die ursprüngliche und bekannte <xref:System.Net.Http.HttpClient>-Klasse kann problemlos verwendet werden, allerdings wird sie von vielen Entwicklern in einigen Fällen nicht richtig verwendet.
 
-Während diese Klasse `IDisposable` implementiert, wird die Deklaration und Instanziierung innerhalb einer `using`-Anweisung nicht bevorzugt, da beim Verwerfen des `HttpClient`-Objekts der zugrunde liegende Socket nicht sofort freigegeben wird, was zur _Erschöpfung von Sockets_ führen kann. Weitere Informationen zu diesem Problem finden Sie im Blogbeitrag [You're using HttpClient wrong and it is destabilizing your software (Sie verwenden HttpClient falsch und destabilisieren dadurch Ihre Software)](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/).
+Obwohl diese Klasse `IDisposable` implementiert, wird die Deklaration und Instanziierung innerhalb einer `using`-Anweisung nicht bevorzugt, da beim Verwerfen des `HttpClient`-Objekts der zugrunde liegende Socket nicht sofort freigegeben wird, was zur _Erschöpfung von Sockets_ führen kann. Weitere Informationen zu diesem Problem finden Sie im Blogbeitrag [You're using HttpClient wrong and it is destabilizing your software (Sie verwenden HttpClient falsch und destabilisieren dadurch Ihre Software)](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/).
 
-Deshalb sollte `HttpClient` einmal instanziiert und während der Lebensdauer einer Anwendung wiederverwendet werden. Das Instanziieren einer `HttpClient`-Klasse für jede Anforderung erschöpft die Anzahl der verfügbaren Sockets und führt zu hoher Auslastung. Dieses Problem führt zu `SocketException`-Fehlern. Mögliche Ansätze zur Lösung dieses Problems basieren auf der Erstellung des `HttpClient`-Objekts als Singleton-Objekt oder statisches Objekt. Dies wird in diesem [Microsoft-Artikel zur Verwendung von HttpClient](../../../csharp/tutorials/console-webapiclient.md) erläutert. Dies kann eine gute Lösung für kurzlebige Konsolen-Apps o. ä. sein, die einige Male am Tag ausgeführt werden.
+Deshalb sollte `HttpClient` einmal instanziiert und während der Lebensdauer einer Anwendung wiederverwendet werden. Das Instanziieren einer `HttpClient`-Klasse für jede Anforderung erschöpft die Anzahl der verfügbaren Sockets und führt zu hoher Auslastung. Dieses Problem führt zu `SocketException`-Fehlern. Mögliche Ansätze zur Lösung dieses Problems basieren auf der Erstellung des `HttpClient`-Objekts als Singleton-Objekt oder statisches Objekt. Dies wird in diesem [Microsoft-Artikel zur Verwendung von HttpClient](../../../csharp/tutorials/console-webapiclient.md) erläutert. Das kann eine gute Lösung für kurzlebige Konsolen-Apps o. ä. sein, die mehrmals am Tag ausgeführt werden.
 
 Ein weiteres Problem, auf das Entwickler stoßen, ist die Verwendung einer gemeinsam genutzten Instanz von `HttpClient` in zeitintensiven Prozessen. In einer Situation, in der der HttpClient als Singleton oder statisches Objekt instanziiert wird, kann er die DNS-Änderungen nicht wie in dieser [Ausgabe](https://github.com/dotnet/runtime/issues/18348) des GitHub-Repositorys „dotnet/runtime“ beschrieben behandeln.
 
@@ -153,11 +153,11 @@ public class CatalogService : ICatalogService
 
 Der typisierte Client (`CatalogService` im Beispiel) wird von der Abhängigkeitsinjektion aktiviert. Das bedeutet, dass dieser alle registrierten Dienste (zusätzlich zu `HttpClient`) im Konstruktor akzeptieren kann.
 
-Ein typisierter Client ist im Prinzip ein temporäres Objekt. Das bedeutet, dass eine neue Instanz immer bei Bedarf erstellt wird und dass der Client immer eine neue `HttpClient`-Instanz erhält, wenn er erstellt wird. Die `HttpMessageHandler`-Objekte im Pool sind jedoch die Objekte, die von mehreren `HttpClient`-Instanzen wiederverwendet werden.
+Ein typisierter Client ist ein temporäres Objekt. Das bedeutet, dass immer dann eine neue Instanz erstellt wird, wenn eine benötigt wird. Bei jeder Konstruktion wird also eine neue `HttpClient`-Instanz empfangen. Die `HttpMessageHandler`-Objekte im Pool sind jedoch die Objekte, die von mehreren `HttpClient`-Instanzen wiederverwendet werden.
 
 ### <a name="use-your-typed-client-classes"></a>Verwenden von typisierten Clientklassen
 
-Nachdem Sie Ihre typisierten Klassen implementiert und bei `AddHttpClient()` registriert und konfiguriert haben, können Sie sie überall dort verwenden, wo Dienste durch die Abhängigkeitsinjektion eingeschleust werden können. Beispielsweise in Code einer Razor Page-App oder Controllern einer MVC-Web-App, wie im folgenden Code aus eShopOnContainers:
+Nachdem Sie Ihre typisierten Klassen implementiert haben, können Sie sie registrieren und mit `AddHttpClient()` konfigurieren. Anschließend können Sie sie überall dort verwenden, wo Dienste mithilfe von DI eingefügt werden. Beispielsweise in Code einer Razor Page-App oder Controllern einer MVC-Web-App, wie im folgenden Code aus eShopOnContainers:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -186,7 +186,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-Bis zu diesem Punkt führt der Code nur reguläre HTTP-Anforderungen aus. In den folgenden Abschnitten wird jedoch nur durch das Hinzufügen von Richtlinien und das Delegieren von Handlern an Ihre registrierten typisierten Clients erreicht, dass alle von `HttpClient` durchgeführten HTTP-Anforderungen ihr Verhalten unter Berücksichtigung von Stabilitätsrichtlinien anpassen, z. B. Wiederholungen mit exponentiellem Backoff, Circuit Breakers oder andere benutzerdefinierte delegierende Handler für die Implementierung zusätzlicher Sicherheitsfeatures (z. B. Authentifizierungstokens) oder anderer benutzerdefinierter Features.
+Bis zu diesem Punkt hat der obige Codeausschnitt nur das Beispiel zum Ausführen regulärer HTTP-Anforderungen gezeigt. In den folgenden Abschnitten wird jedoch gezeigt, wie alle HTTP-Anforderungen von `HttpClient` mit resilienten Richtlinien wie Wiederholungen mit exponentiellem Backoff, Circuit Breakern, Sicherheitsfeatures mit Authentifizierungstokens oder beliebigen benutzerdefinierten Features kombiniert werden können. Hierfür müssen Sie nur Richtlinien hinzufügen und den registrierten typisierten Clients Handler zuweisen.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

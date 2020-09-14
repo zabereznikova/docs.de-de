@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8de15dc033ecda3137f5f3ea37b9e35ac9df7e13
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134386"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359297"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -236,7 +236,7 @@ Windows Registry Editor Version 5.00
 
 Sie können die Registrierung verwenden, um die Protokolle, die Ihre Client- und/oder Server-App aushandelt, genau zu steuern. Die Vernetzung Ihrer App erfolgt über Schannel (eine andere Bezeichnung für [Secure Channel](/windows/desktop/SecAuthN/secure-channel)). Durch die Konfiguration von `Schannel` können Sie das Verhalten Ihrer App konfigurieren.
 
-Beginnen Sie mit dem Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Unter diesem Schlüssel können Sie beliebige Unterschlüssel im Satz `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` und `TLS 1.2` anlegen. Unter jedem dieser Unterschlüssel können Sie die Unterschlüssel `Client` und/oder `Server` anlegen. Unter `Client` und `Server` können Sie die DWORD-Werte `DisabledByDefault` (0 oder 1) und `Enabled` (0 oder 0xFFFFFFFF) anlegen.
+Beginnen Sie mit dem Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Unter diesem Schlüssel können Sie beliebige Unterschlüssel im Satz `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` und `TLS 1.2` anlegen. Unter jedem dieser Unterschlüssel können Sie die Unterschlüssel `Client` und/oder `Server` anlegen. Unter `Client` und `Server` können Sie die DWORD-Werte `DisabledByDefault` (0 oder 1) und `Enabled` (0 oder 1) erstellen.
 
 ## <a name="the-sch_use_strong_crypto-flag"></a><a name="the-sch_use_strong_crypto-flag"></a>Das Flag SCH_USE_STRONG_CRYPTO
 

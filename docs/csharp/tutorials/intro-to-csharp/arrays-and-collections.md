@@ -3,12 +3,12 @@ title: Arbeiten mit Sammlungen – Tutorial zur Einführung in C#
 description: Machen Sie sich mit C# vertraut, indem Sie die Listenauflistung in diesem Tutorial erkunden.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e2282df21420630634911e07f4fb3b94f34a792b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396892"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414682"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informationen zum Verwalten von Datensammlungen mithilfe des generischen Listentyps
 
@@ -230,4 +230,4 @@ Mit jeder Iteration der Schleife werden die letzten beiden Ganzzahlen in der Lis
 
 Herzlichen Glückwunsch, Sie haben das Listentutorial abgeschlossen. Sie können mit dem Tutorial [Einführung in Klassen](introduction-to-classes.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
-Weitere Informationen zum Arbeiten mit dem `List`-Typ finden Sie im Artikel [Leitfaden für .NET](../../../standard/index.yml) unter [Sammlungen](../../../standard/collections/index.md). Sie werden auch viele andere Sammlungstypen kennenlernen.
+Weitere Informationen zum Arbeiten mit dem `List`-Typ finden Sie im Artikel „.NET-Grundlagen“ unter [Sammlungen](../../../standard/collections/index.md). Sie werden auch viele andere Sammlungstypen kennenlernen.

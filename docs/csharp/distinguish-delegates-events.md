@@ -4,12 +4,12 @@ description: Informationen zum Unterschied zwischen Delegaten und Ereignissen un
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 193a9b0fe0e0c36deb6552449c92135057412225
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805764"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414668"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Unterscheidung zwischen Delegaten und Ereignissen
 
@@ -23,7 +23,7 @@ Mit all diesen Ähnlichkeiten ist es einfach nur schwer zu bestimmen, wann welch
 
 ## <a name="listening-to-events-is-optional"></a>Das Überwachen von Ereignissen ist optional
 
-Der wichtigste Aspekt bei der Bestimmung, welche Sprachfunktion verwendet werden soll, ist die Frage, ob ein angefügter Abonnent vorhanden sein muss. Wenn der Code den Code vom Abonnenten aufrufen muss, sollten Sie einen Entwurf basierend auf den Delegaten verwenden. Wenn Ihr Code all seine Arbeit ohne Aufruf von Abonnenten abschließen kann, sollten Sie einen Entwurf auf Grundlage von Ereignissen verwenden.
+Der wichtigste Aspekt bei der Bestimmung, welche Sprachfunktion verwendet werden soll, ist die Frage, ob ein angefügter Abonnent vorhanden sein muss. Wenn der Code den vom Abonnenten bereitgestellten Code aufrufen muss, sollten Sie einen delegatbasierten Entwurf werden, wenn ein Callback implementiert werden muss. Wenn Ihr Code all seine Arbeit ohne Aufruf von Abonnenten abschließen kann, sollten Sie einen Entwurf auf Grundlage von Ereignissen verwenden.
 
 Betrachten Sie die Beispiele, die während dieses Abschnitts erstellt wurden. Dem Code, den Sie mithilfe von `List.Sort()` erstellt haben, muss eine Vergleichsfunktion gegeben werden, um die Elemente ordnungsgemäß zu sortieren. LINQ-Abfragen müssen mit Delegaten bereitgestellt werden, um zu bestimmen, welche Elemente zurückgeben werden sollen. Beide verwenden einen mit Delegaten erstellten Entwurf.
 

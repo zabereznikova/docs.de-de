@@ -2,12 +2,12 @@
 title: Bausteine der C#-Programme
 description: Hier lernen Sie Member, Ausdrücke und Anweisungen von C# kennen. Typen enthalten Member, die Sie schreiben. Diese Member werden aus Anweisungen und Ausdrücken erstellt.
 ms.date: 08/06/2020
-ms.openlocfilehash: 142fe7b5a3424a8925638bfb4e4437392347f4c6
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3bdc6a4da6ae76148c7d1d5cb8ccb65d91fda61a
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268139"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358816"
 ---
 # <a name="program-building-blocks"></a>Programmbausteine
 
@@ -192,8 +192,6 @@ Im Gegensatz zu anderen Membern werden Instanzkonstruktoren nicht geerbt. Eine K
 Eine Eigenschaft wird wie ein Feld deklariert, abgesehen davon, dass die Deklaration nicht auf ein Semikolon, sondern auf einen get- oder set-Accessor endet, der von den Trennzeichen `{` und `}` umschlossen wird. Eine Eigenschaft, die sowohl einen get- als auch einen set-Accessor aufweist, ist eine *Eigenschaft mit Lese- und Schreibzugriff*. Eine Eigenschaft, die nur einen get-Accessor aufweist, ist *schreibgeschützt*, eine Eigenschaft, die nur einen set-Accessor aufweist, ist *lesegeschützt*.
 
 Ein get-Accessor entspricht einer Methode ohne Parameter mit einem Rückgabewert des Eigenschaftstyps. Ein set-Accessor entspricht einer Methode mit einem einzigen Parameter namens „value“ ohne Rückgabetyp. Die get-Zugriffsmethode berechnet den Wert der Eigenschaft. Die set-Zugriffsmethode stellt einen neuen Wert für die Eigenschaft bereit. Wenn die Eigenschaft das Ziel einer Zuweisung oder der Operand von `++` oder `--` ist, wird die set-Zugriffsmethode aufgerufen. In anderen Fällen, in denen die Eigenschaft referenziert wird, wird die get-Zugriffsmethode aufgerufen.
-
- Wenn auf eine Eigenschaft als Ziel einer Zuweisung der als Operand ++ oder -- verwiesen wird, erfolgt der Aufruf des set-Accessors mit einem Argument, das den neuen Wert bereitstellt.
 
 Die `MyList<T>`-Klasse deklariert die beiden Eigenschaften „`Count`“ und „`Capacity`“, von denen die eine schreibgeschützt ist und die andere Lese- und Schreibzugriff besitzt. Im folgenden Beispielcode wird die Verwendung dieser Eigenschaften veranschaulicht:
 

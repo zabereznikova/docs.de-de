@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 5e75fec12390cb694126c5bec684c40caa378915
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: dff93496dfeceaf67777abe0b02ee2d620b3a5ca
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139098"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466039"
 ---
 # <a name="event-c-reference"></a>event (C#-Referenz)
 
@@ -23,7 +23,7 @@ Das `event`-Schlüsselwort wird verwendet, um ein Ereignis in einer Publisher-Kl
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt das Deklarieren und Auslösen eines Ereignisses, das <xref:System.EventHandler> als zugrunde liegenden Delegattyp verwendet. Für das vollständige Codebeispiel, das auch veranschaulicht, wie der generische Delegattyp <xref:System.EventHandler%601> verwendet wird und wie ein Ereignis abonniert und eine Ereignishandlermethode erstellt wird, finden Sie unter [Vorgehensweise: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
+Das folgende Beispiel zeigt das Deklarieren und Auslösen eines Ereignisses, das <xref:System.EventHandler> als zugrunde liegenden Delegattyp verwendet. Das vollständige Codebeispiel, das auch veranschaulicht, wie der generische Delegattyp <xref:System.EventHandler%601> verwendet, ein Ereignis abonniert und eine Ereignishandlermethode erstellt wird, finden Sie unter [Veröffentlichen von Ereignissen, die den .NET-Richtlinien entsprechen](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 
 [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
 

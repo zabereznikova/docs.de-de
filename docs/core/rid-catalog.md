@@ -1,13 +1,13 @@
 ---
 title: .NET Core-RID-Katalog (Runtime Identifier)
-description: Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
+description: Hier erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
 ms.date: 02/22/2019
-ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 719c84248b955ec05d7cd9b361c7e5ebea6aa37b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903284"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414564"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -72,7 +72,7 @@ Alle RIDs bilden schließlich wieder den Stamm `any`-RID ab.
 
 Es gibt einige Aspekte zu RIDs, die Sie bei der Verwendung bedenken müssen:
 
-- RIDs sind **opake Zeichenfolgen** und sollten als Blackboxes behandelt werden.
+- Versuchen Sie nicht, RIDs zu analysieren, um Komponententeile abzurufen.
 - Erstellen Sie RIDs nicht programmgesteuert.
 - Verwenden Sie RIDs, die bereits für die Plattform definiert sind.
 - Die RIDs müssen spezifisch sein. Leiten Sie daher keine Annahmen anhand des tatsächlichen RID-Werts ab.

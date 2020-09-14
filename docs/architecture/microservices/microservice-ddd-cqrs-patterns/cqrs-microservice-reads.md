@@ -2,12 +2,12 @@
 title: Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung der Abfrageseite von CQRS im Microservice für Bestellungen in eShopOnContainers mit Dapper
 ms.date: 10/08/2018
-ms.openlocfilehash: 71db95e6fc17475693183be9c6854884cd331ce1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 41932122326cf4c49b9c9e2c344d2ac17da7466b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614408"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358894"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 
@@ -33,7 +33,7 @@ Da durch Abfragen Daten abgerufen werden, die für die Clientanwendungen erforde
 
 Die zurückgegebenen Daten (also die ViewModels) können das Ergebnis einer Verknüpfung von Daten aus mehreren Entitäten oder Tabellen in der Datenbank oder einer Verknüpfung mehrerer Aggregate sein, die im Domänenmodell für den Transaktionsbereich definiert wurden. Da Sie in diesem Fall Abfragen unabhängig vom Domänenmodell erstellen, werden die Aggregatsgrenzen und -einschränkungen ignoriert, sodass alle erforderlichen Tabellen und Spalten abgefragt werden können. Dieser Ansatz sorgt dafür, dass Entwickler, die Abfragen erstellen oder aktualisieren, flexibler und produktiver arbeiten können.
 
-Die ViewModels können als statische Typen in Klassen definiert werden. Alternativ lassen sie sich auch auf der Grundlage bereits durchgeführter Abfragen dynamisch erstellen, was im Microservice für Bestellungen implementiert wurde. Hierdurch wird die Entwicklungsagilität gefördert.
+ViewModels können statische Typen sein, die in Klassen definiert sind (wie im Microservice für Bestellungen implementiert). Alternativ können sie auf Grundlage bereits durchgeführter Abfragen dynamisch und flexibel erstellt werden.
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Verwenden von Dapper als Micro-ORM zum Ausführen von Abfragen
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165790"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271788"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -33,19 +33,19 @@ Wenn alle drei Komponenten vorhanden sind, ist der Pfad absolut. Wenn kein Volum
 
 |Pfad  |Beschreibung  |
 | -- | -- |
-| `C:\Documents\Newsletters\Summer2018.pdf` | Ein absoluter Dateipfad aus dem Stamm vom Laufwerk „C:“ |
+| `C:\Documents\Newsletters\Summer2018.pdf` | Ein absoluter Dateipfad vom Stamm des Laufwerks `C:` |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ein absoluter Pfad aus dem Stamm des aktuellen Laufwerks |
 | `2018\January.xlsx` | Ein relativer Pfad zu einer Datei in einem Unterverzeichnis des aktuellen Verzeichnisses |
 | `..\Publications\TravelBrochure.pdf` | Ein relativer Pfad zu einer Datei in einem Verzeichnis, das ein Peer des aktuellen Verzeichnisses ist |
-| `C:\Projects\apilibrary\apilibrary.sln` | Ein absoluter Pfad zu einer Datei aus dem Stamm vom Laufwerk „C:“ |
-| `C:Projects\apilibrary\apilibrary.sln` | Ein relativer Pfad aus dem aktuellen Verzeichnis des Laufwerks „C:“ |
+| `C:\Projects\apilibrary\apilibrary.sln` | Ein absoluter Pfad zu einer Datei vom Stamm des Laufwerks `C:` |
+| `C:Projects\apilibrary\apilibrary.sln` | Ein relativer Pfad vom aktuellen Verzeichnis des Laufwerks `C:` |
 
 > [!IMPORTANT]
-> Beachten Sie den Unterschied zwischen den letzten beiden Pfaden. Beide geben den optionalen Volumebezeichner (in beiden Fällen „C:“) an, jedoch beginnt der erste im Gegensatz zum zweiten mit dem Stamm des angegebenen Volume. Daher ist der erste ein absoluter Pfad aus dem Stammverzeichnis vom Laufwerk „C:“, während der zweite ein relativer Pfad aus dem aktuellen Verzeichnis vom Laufwerk „C:“ ist. Verwenden Sie das zweite Format, wenn das erste als Ursache für Fehler mit Windows-Dateipfaden bekannt ist.
+> Beachten Sie den Unterschied zwischen den letzten beiden Pfaden. Beide geben den optionalen Volumebezeichner (in beiden Fällen `C:`) an. Der erste beginnt jedoch im Gegensatz zum zweiten mit dem Stamm des angegebenen Volumes. Daher ist der erste ein absoluter Pfad vom Stammverzeichnis des Laufwerks `C:`, während der zweite ein relativer Pfad vom aktuellen Verzeichnis des Laufwerks `C:` ist. Verwenden Sie das zweite Format, wenn das erste als Ursache für Fehler mit Windows-Dateipfaden bekannt ist.
 
 Sie können ermitteln, ob ein Dateipfad absolut ist (d.h. der Pfad ist unabhängig vom aktuellen Verzeichnis und ändert sich nicht, wenn das aktuelle Verzeichnis geändert wird), indem Sie die Methode <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> aufrufen. Beachten Sie, dass ein solcher Pfad relative Verzeichnissegmente (`.` und `..`) enthalten und weiterhin absolut sein kann, wenn der aufgelöste Pfad immer zum gleichen Speicherort führt.
 
-Im folgenden Beispiel wird der Unterschied zwischen absoluten und relativen Pfaden veranschaulicht. Es wird davon ausgegangen, dass das Verzeichnis „D:\FY2018\“ vorhanden ist, und dass Sie kein aktuelles Verzeichnis für „D:\“ über die Eingabeaufforderung festgelegt haben, bevor Sie das Beispiel ausführen.
+Im folgenden Beispiel wird der Unterschied zwischen absoluten und relativen Pfaden veranschaulicht. Es wird vorausgesetzt, dass das Verzeichnis `D:\FY2018\` vorhanden ist, und dass Sie kein aktuelles Verzeichnis für `D:\` über die Eingabeaufforderung festgelegt haben, bevor Sie das Beispiel ausführen.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -56,8 +56,8 @@ Im folgenden Beispiel wird der Unterschied zwischen absoluten und relativen Pfad
 
 UNC-Pfade (Universal Naming Convention), die für den Zugriff auf Netzwerkressourcen verwendet werden, weisen das folgende Format auf:
 
-- Ein Server- oder Hostname, dem \\\\ vorangestellt ist. Der Servername kann ein NetBIOS-Computername oder eine IP-/FQDN-Adresse sein (IPv4 und v6 werden unterstützt).
-- Ein Freigabename, der durch \\ vom Hostnamen getrennt wird. Gemeinsam bilden der Server- und Freigabename das Volume.
+- Ein Server- oder Hostname, dem `\\` vorangestellt ist. Der Servername kann ein NetBIOS-Computername oder eine IP-/FQDN-Adresse sein (IPv4 und v6 werden unterstützt).
+- Ein Freigabename, der durch `\` vom Hostnamen getrennt wird. Gemeinsam bilden der Server- und Freigabename das Volume.
 - Ein Verzeichnisname. Das [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) trennt Unterverzeichnisse innerhalb der geschachtelten Verzeichnishierarchie.
 - Ein optionaler Dateiname. Das [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) trennt den Dateipfad und den Dateinamen.
 
@@ -65,8 +65,8 @@ Im Folgenden werden einige Beispiele für UNC-Pfade aufgeführt:
 
 |Pfad  |Beschreibung  |
 | -- | -- |
-| `\\system07\C$\` | Das Stammverzeichnis des Laufwerks „C:“ auf `system07`. |
-| `\\Server2\Share\Test\Foo.txt` | Die Datei „Foo.txt“ im Testverzeichnis des Volume „\\\\Server2\\Share“.|
+| `\\system07\C$\` | Das Stammverzeichnis des Laufwerks `C:` auf `system07` |
+| `\\Server2\Share\Test\Foo.txt` | Die Datei `Foo.txt` im Testverzeichnis des Volumes `\\Server2\Share`|
 
 UNC-Pfade müssen immer absolut sein. Sie können relative Verzeichnissegmente (`.` und `..`) enthalten, jedoch müssen diese Teil eines absoluten Pfads sein. Sie können relative Pfade nur verwenden, indem Sie einem Laufwerkbuchstaben einen UNC-Pfad zuordnen.
 
@@ -101,7 +101,7 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Bei Geräte-UNCs bildet der Abschnitt „server/share“ das Volume. Zum Beispiel entspricht der Abschnitt „server/share“ bei `\\?\server1\e:\utilities\\filecomparer\` „server1\utilities“. Dies ist beim Aufrufen einer Methode mit relativen Verzeichnissegmenten wie <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> wichtig. Es ist nicht möglich, weiter als zum Volume zu navigieren.
+    Bei Geräte-UNCs bildet der Abschnitt „server/share“ das Volume. Zum Beispiel entspricht der Abschnitt „server/share“ in `\\?\server1\e:\utilities\\filecomparer\` dem Teil `server1\utilities`. Dies ist beim Aufrufen einer Methode mit relativen Verzeichnissegmenten wie <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> wichtig. Es ist nicht möglich, weiter als zum Volume zu navigieren.
 
 DOS-Gerätepfade sind definitionsgemäß absolut. Die relativen Verzeichnissegmente (`.` und `..`) sind nicht zulässig. Aktuelle Verzeichnisse haben bei Verwendung von UNC-Pfaden keine Relevanz.
 
@@ -146,7 +146,7 @@ Ein Pfad, der mit einem Legacygerätenamen beginnt, wird von der Methode <xref:S
 
 ### <a name="apply-the-current-directory"></a>Anwenden des aktuellen Verzeichnisses
 
-Wenn ein Pfad nicht absolut ist, wendet Windows das aktuelle Verzeichnis an. Das aktuelle Verzeichnis wird nicht auf UNC- und Gerätepfade angewendet. Auch nicht auf ein volles Laufwerk mit dem Trennzeichen C:\\.
+Wenn ein Pfad nicht absolut ist, wendet Windows das aktuelle Verzeichnis an. Das aktuelle Verzeichnis wird nicht auf UNC- und Gerätepfade angewendet. Es wird auch nicht auf ein volles Laufwerk mit dem Trennzeichen `C:\` angewendet.
 
 Wenn der Pfad mit einem einzelnen Komponententrennzeichen beginnt, wird das Laufwerk des aktuellen Verzeichnisses angewendet. Wenn der Gerätepfad beispielsweise `\utilities` entspricht und das aktuelle Verzeichnis `C:\temp\` ist, erzeugt die Normalisierung `C:\utilities`.
 

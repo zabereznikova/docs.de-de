@@ -3,12 +3,12 @@ title: Einführung in Ereignisse
 description: Erfahren Sie in diesem Überblick etwas über Ereignisse in .NET Core und über Ziele beim Sprachentwurf für Ereignisse.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4da44c151244e8b5de34f550040c271131d9598c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146113"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465233"
 ---
 # <a name="introduction-to-events"></a>Einführung in Ereignisse
 
@@ -77,7 +77,7 @@ Sie melden sich mithilfe des `-=`-Operators ab:
 fileLister.Progress -= onProgress;
 ```
 
-Es ist wichtig, zu beachten, dass ich eine lokale Variable für den Ausdruck deklariert habe, der den Ereignishandler darstellt. Damit wird sichergestellt, dass UNSUBSCRIBE den Handler entfernt.
+Sie müssen eine lokale Variable für den Ausdruck deklarieren, der den Ereignishandler darstellt. Damit wird sichergestellt, dass UNSUBSCRIBE den Handler entfernt.
 Wenn Sie stattdessen den Text des Lambdaausdrucks verwendet haben, versuchen Sie einen Handler, der nicht angefügt wurde und nichts tut, zu entfernen.
 
 Im nächsten Artikel erfahren Sie mehr über das typische Ereignismuster und verschiedene Varianten dieses Beispiels.

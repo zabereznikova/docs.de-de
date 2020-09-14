@@ -2,12 +2,12 @@
 title: Breaking Changes hinsichtlich der Basisklassenbibliothek
 description: Listet die Breaking Changes in .NET-Kernbibliotheken auf.
 ms.date: 07/27/2020
-ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: d8d886785ff71f22a3b2da65e973d899cf0371f6
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720193"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465885"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Breaking Changes und .NET-Kernbibliotheken
 
@@ -17,6 +17,8 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [Veraltete Eigenschaften in ConsoleLoggerOptions](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
+| [Hardwareintrinsische IsSupported-Überprüfungen können für geschachtelte Typen abweichen](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [Änderung von Parameternamen in Referenzassemblys](#parameter-names-changed-in-reference-assemblies) | 5.0 |
 | [Ordnungsgemäße Analyse von URI-Pfaden mit Nicht-ASCII-Zeichen unter UNIX](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
 | [URI-Erkennung von UNC-Pfaden unter UNIX](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
@@ -50,6 +52,14 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Process.StartInfo löst InvalidOperationException für Prozesse aus, die Sie nicht gestartet haben](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [obsolete-consoleloggeroptions-properties](../../../includes/core-changes/corefx/5.0/obsolete-consoleloggeroptions-properties.md)]
+
+***
+
+[!INCLUDE [hardware-instrinsics-issupported-checks](../../../includes/core-changes/corefx/5.0/hardware-instrinsics-issupported-checks.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
 
