@@ -2,12 +2,12 @@
 title: Breaking Changes
 description: Hier erhalten Sie Informationen zu den Breaking Changes in den verschiedenen .NET Core-Versionen.
 ms.date: 11/27/2019
-ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: eea6542acb9fa659af764bfd3a2af00fd9740191
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810897"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656274"
 ---
 # <a name="breaking-change-selectors"></a>Breaking Change-Selektoren
 
@@ -43,6 +43,7 @@ Wählen Sie den gewünschten .NET Core-Technologiebereich aus. Die einzelnen Än
 > - [Serialisierung](serialization.md)
 > - [Visual Basic](visualbasic.md)
 > - [Windows Forms](winforms.md)
+> - [WPF](wpf.md)
 
 ## <a name="github-issues-and-announcements"></a>GitHub-Probleme und -Ankündigungen
 

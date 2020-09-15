@@ -2,12 +2,12 @@
 title: 'Reservierte C#-Attribute: Statische Analysen, die NULL-Werte zulassen'
 ms.date: 04/14/2020
 description: Diese Attribute werden vom Compiler interpretiert, um eine bessere statische Analyse für Nullable- und Non-Nullable-Verweistypen zu liefern.
-ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102709"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656306"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Reservierte Attribute zur Unterstützung der statischen NULL-Zustandsanalyse des Compilers
 
@@ -57,10 +57,10 @@ Betrachten Sie eine Eigenschaft mit Lese-/Schreibzugriff, die niemals `null` zur
 ```csharp
 public string ScreenName
 {
-   get => screenName;
-   set => screenName = value ?? GenerateRandomScreenName();
+   get => _screenName;
+   set => _screenName = value ?? GenerateRandomScreenName();
 }
-private string screenName;
+private string _screenName;
 ```
 
 Wenn Sie den vorstehenden Code in einem Kontext ohne Nullable-Beachtung kompilieren, ist alles in Ordnung. Sobald Sie Nullable-Verweistypen aktivieren, wird die `ScreenName`-Eigenschaft zu einem Non-Nullable-Verweis. Dies ist für die `get`-Zugriffsmethode korrekt: sie gibt nie `null` zurück. Aufrufer müssen die zurückgegebene Eigenschaft für `null` nicht überprüfen. Aber bei Festlegung der Eigenschaft auf `null` wird jetzt eine Warnung generiert. Um diese Art von Code weiterhin zu unterstützen, fügen Sie der Eigenschaft das Attribut <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> hinzu, wie im folgenden Code gezeigt:
@@ -69,10 +69,10 @@ Wenn Sie den vorstehenden Code in einem Kontext ohne Nullable-Beachtung kompilie
 [AllowNull]
 public string ScreenName
 {
-   get => screenName;
-   set => screenName = value ?? GenerateRandomScreenName();
+   get => _screenName;
+   set => _screenName = value ?? GenerateRandomScreenName();
 }
-private string screenName = GenerateRandomScreenName();
+private string _screenName = GenerateRandomScreenName();
 ```
 
 Sie müssen möglicherweise eine `using`-Direktive für <xref:System.Diagnostics.CodeAnalysis> hinzufügen, um diese und weitere Attribute zu verwenden, die in diesem Artikel besprochen werden. Das Attribut wird auf die Eigenschaft angewendet, nicht auf die `set`-Zugriffsmethode. Das `AllowNull`-Attribut gibt *Vorbedingungen* an und wird nur auf Eingaben angewendet. Die `get`-Zugriffsmethode umfasst einen Rückgabewert, aber keine Eingabeargumente. Deshalb gilt das `AllowNull`-Attribut nur für die `set`-Zugriffsmethode.
@@ -132,14 +132,14 @@ Sie haben wahrscheinlich schon eine Methode wie diese geschrieben, um `null` zur
 Aus Gründen, die unter [Generische Definitionen und NULL-Zulässigkeit](../../nullable-migration-strategies.md#generic-definitions-and-nullability) erläutert werden, funktioniert diese Technik nicht bei generischen Methoden. Angenommen, Sie verfügen über eine generische Methode, die einem ähnlichen Muster folgt:
 
 ```csharp
-public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
+public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 ```
 
 Sie können nicht angeben, dass der Rückgabewert `T?` lautet. Die Methode gibt `null` zurück, wenn das gesuchte Element nicht gefunden wird. Da es nicht möglich ist, `T?` als Rückgabetyp zu deklarieren, fügen Sie die `MaybeNull`-Anmerkung zur Methodenrückgabe hinzu:
 
 ```csharp
 [return: MaybeNull]
-public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
+public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 ```
 
 Der Code oben informiert Aufrufer darüber, dass der Vertrag einen Non-Nullable-Typ vorsieht, aber der Rückgabewert tatsächlich NULL sein *darf*.  Verwenden Sie das `MaybeNull`-Attribut, wenn Ihre API einen Non-Nullable-Typ verwenden soll – in der Regel einen generischen Typparameter –, aber in bestimmten Fällen `null` zurückgegeben werden kann.
@@ -162,7 +162,7 @@ EnsureCapacity<string>(messages, 50);
 Nach dem Aktivieren von NULL-Verweistypen möchten Sie sicherstellen, dass der vorstehende Code ohne Warnungen kompiliert wird. Wenn die Methode ein Ergebnis zurückgibt, wird garantiert, dass das `storage`-Argument ungleich NULL ist. Es ist jedoch weiterhin zulässig, `EnsureCapacity` mit einem NULL-Verweis aufzurufen. Sie können `storage` als Nullable-Verweistyp festlegen und die Nachbedingung `NotNull` zur Parameterdeklaration hinzufügen:
 
 ```csharp
-public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
+public void EnsureCapacity<T>([NotNull] ref T[]? storage, int size)
 ```
 
 Der vorangehende Code drückt den vorhanden Vertrag klar aus: Aufrufer können eine Variable mit dem Wert `null` übergeben, aber es wird garantiert, dass der Rückgabewert nie NULL ist. Das `NotNull`-Attribut ist besonders nützlich für `ref`- und `out`-Argumente, bei denen `null` als Argument übergeben werden kann, aber das Argument garantiert ungleich NULL ist, wenn die Methode ein Ergebnis zurückgibt.
@@ -177,7 +177,7 @@ Sie geben nicht bedingte Nachbedingungen mit den folgenden Attributen an:
 Ihnen ist die `string`-Methode <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> wahrscheinlich vertraut. Diese Methode gibt `true` zurück, wenn das Argument NULL oder eine leere Zeichenfolge ist. Die Methode ist eine Form der NULL-Überprüfung: Aufrufer müssen eine NULL-Überprüfung des Arguments durchführen, wenn die Methode `false` zurückgibt. Um eine Methode wie diese NULL-fähig zu machen, legen Sie das Argument auf einen Nullable-Verweistyp fest und fügen das `NotNullWhen`-Attribut hinzu:
 
 ```csharp
-bool IsNullOrEmpty([NotNullWhen(false)]string? value);
+bool IsNullOrEmpty([NotNullWhen(false)] string? value);
 ```
 
 Auf diese Weise wird der Compiler darüber informiert, dass jeglicher Code mit Rückgabewert `false` nicht auf NULL überprüft werden muss. Durch das Hinzufügen des Attributs wird die statische Analyse des Compilers darüber informiert, dass `IsNullOrEmpty` die erforderliche NULL-Überprüfung durchführt: bei Rückgabe von `false` ist das Eingabeargument nicht `null`.
@@ -246,38 +246,44 @@ Im ersten Fall können Sie das `DoesNotReturn`-Attribut zur Methodendeklaration 
 [DoesNotReturn]
 private void FailFast()
 {
-   throw new InvalidOperationException();
+    throw new InvalidOperationException();
 }
 
 public void SetState(object containedField)
 {
-   if (!isInitialized)
-      FailFast();
+    if (!isInitialized)
+    {
+        FailFast();
+    }
 
-   // unreachable code:
-   this.field = containedField;
+    // unreachable code:
+    _field = containedField;
 }
 ```
 
 Im zweiten Fall fügen Sie das `DoesNotReturnIf`-Attribut einem booleschen Parameter der Methode hinzu. Sie können das vorherige Beispiel folgendermaßen abändern:
 
 ```csharp
-private void FailFast([DoesNotReturnIf(false)]bool isValid)
+private void FailFast([DoesNotReturnIf(false)] bool isValid)
 {
-   if (!isValid)
-       throw new InvalidOperationException();
+    if (!isValid)
+    {
+        throw new InvalidOperationException();
+    }
 }
 
 public void SetState(object containedField)
 {
-   FailFast(isInitialized);
+    FailFast(isInitialized);
 
-   // unreachable code when "isInitialized" is false:
-   this.field = containedField;
+    // unreachable code when "isInitialized" is false:
+    _field = containedField;
 }
 ```
 
 ## <a name="summary"></a>Zusammenfassung
+
+[!INCLUDE [C# version alert](../../includes/csharp-version-alert.md)]
 
 Das Hinzufügen von Nullable-Verweistypen ermöglicht eine Beschreibung der Erwartungen für Ihre APIs für Variablen, die den Wert `null` annehmen könnten. Die zusätzlichen Attribute erweitern die Möglichkeiten zur Beschreibung des NULL-Zustands von Variablen als Vor- und Nachbedingungen. Durch diese Attribute werden Ihre Erwartungen klarer beschrieben und verbessern das Benutzererlebnis für Entwickler, die Ihre APIs nutzen.
 

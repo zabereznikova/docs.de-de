@@ -2,12 +2,12 @@
 title: Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 ms.date: 04/28/2018
-ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987868"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516124"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 
@@ -212,7 +212,7 @@ Das Bereitstellen von Windows-Containern mit vollständigem .NET Framework/ASP.N
 
 Als Hauptschluss ergibt sich hieraus, dass die Verwendung von Azure Container Instances eine sehr überzeugende Option für Entwicklungs-/Testszenarien und für CI/CD-Pipelines ist.
 
-## <a name="next-steps"></a>Nächste Schritte
+### <a name="next-steps"></a>Nächste Schritte
 
 Erkunden Sie diesen Inhalt ausführlicher im GitHub-Wiki:
 
@@ -274,7 +274,7 @@ Mit Kubernetes können Entwickler von Überlegungen zu physischen und virtuellen
 
 - Überprüfung der Anwendungsintegrität
 
-## <a name="next-steps"></a>Nächste Schritte
+### <a name="next-steps"></a>Nächste Schritte
 
 Erkunden Sie diesen Inhalt ausführlicher im GitHub-Wiki: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
@@ -302,7 +302,7 @@ Das Ziel dieser exemplarischen Vorgehensweise ist, Ihnen zu zeigen, wie Sie eine
 
 Die Bereitstellung in Azure App Service für Container bietet die Vorteile von Containern in Kombination mit den PaaS-Vorteilen von Azure App Service. Der App-Dienst kann problemlos vertikal und horizontal skaliert werden und lässt sich für eine automatische Skalierung konfigurieren, um sich an geänderte Anforderungen anzupassen und diese zu erfüllen. Updates können ohne Ausfallzeiten ausgeführt werden, und die Konfiguration von Continuous Deployment aus einer Registrierung heraus lässt sich ebenfalls leicht konfigurieren.
 
-## <a name="next-steps"></a>Nächste Schritte
+### <a name="next-steps"></a>Nächste Schritte
 
 Erkunden Sie diesen Inhalt ausführlicher im GitHub-Wiki: <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
