@@ -24,7 +24,7 @@ Wenn dieses Verhalten nicht erwünscht ist, können Sie das vorherige Verhalten 
 </configuration>
 ```
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Microsoft Edge        |
 | Version | 4.6.2       |

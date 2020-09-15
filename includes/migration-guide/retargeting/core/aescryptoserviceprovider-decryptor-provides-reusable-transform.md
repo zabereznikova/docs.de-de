@@ -30,7 +30,7 @@ Für Anwendungen, die für frühere Versionen von .NET Framework vorgesehen sind
 </runtime>
 ```
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Gering       |
 | Version | 4.6.2       |

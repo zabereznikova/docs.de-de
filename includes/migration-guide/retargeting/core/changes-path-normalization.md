@@ -42,7 +42,7 @@ Für Apps mit der Zielplattform .NET Framework 4.6.1 oder niedriger, die unter .
 </runtime>
 ```
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Gering       |
 | Version | 4.6.2       |

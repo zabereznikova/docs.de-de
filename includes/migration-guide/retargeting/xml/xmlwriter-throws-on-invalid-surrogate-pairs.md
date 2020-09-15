@@ -16,7 +16,7 @@ Bei Apps, die auf .NET Framework 4.5.2 oder niedrigere Versionen abzielen, löst
 
 Falls erforderlich, kann dieser Fehler umgangen werden, indem als Zielplattform.NET Framework 4.5.2 oder eine ältere Version verwendet wird. Alternativ können ungültige Ersatzzeichenpaare vor dem Schreiben auch zuerst in gültigen XML-Code umgewandelt werden.
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Microsoft Edge        |
 | Version | 4.6         |

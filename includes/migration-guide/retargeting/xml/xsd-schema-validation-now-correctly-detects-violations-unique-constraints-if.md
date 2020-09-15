@@ -16,7 +16,7 @@ Versionen von .NET Framework vor 4.6 wiesen einen Fehler auf, der dazu geführt 
 
 Wenn eine weniger strenge Überprüfung für .NET Framework 4.0 erforderlich ist, kann die überprüfende Anwendung auf Version 4.5 (oder niedriger) von .NET Framework ausgerichtet werden. Wenn eine Neuausrichtung auf .NET Framework 4.6 erfolgt, sollte jedoch eine Code Review erfolgen, um sicherzustellen, dass die Validierung doppelter Verbundschlüssel (wie in dieser Problembeschreibung erläutert) nicht erwartet wird.
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Microsoft Edge        |
 | Version | 4.6         |

@@ -35,7 +35,7 @@ Standardmäßig verwenden Apps mit einer .NET Framework-Zielplattform ab .NET Fr
 
 Der Wert `true` legt den alten Algorithmus fest, `false` den neuen.
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Gering       |
 | Version | 4.7         |

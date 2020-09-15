@@ -16,7 +16,7 @@ In .NET Framework-Versionen, die älter sind als Version 4.6.2, können Kunden, 
 
 Wenn eine Ausnahmebehandlungslogik auf dem vorherigen Verhalten basiert, durch das eine <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> ausgelöst wird, sobald eine von der Standardgröße abweichende Schlüsselgröße verwendet wird, kann das Entfernen der Logik sinnvoll sein.
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Microsoft Edge        |
 | Version | 4.6.2       |

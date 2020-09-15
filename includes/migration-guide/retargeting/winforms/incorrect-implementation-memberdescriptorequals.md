@@ -33,7 +33,7 @@ Wenn Ihre Anwendung für .NET Framework 4.6.1 oder frühere Versionen konzipiert
 </runtime>
 ```
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Microsoft Edge        |
 | Version | 4.6.2       |

@@ -22,7 +22,7 @@ Standardmäßig wird dieses neue Feature nur für Apps aktiviert, die für .NET 
 </runtime>
 ```
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Microsoft Edge        |
 | Version | 4.7         |

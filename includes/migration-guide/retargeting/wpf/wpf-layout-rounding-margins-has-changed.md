@@ -27,7 +27,7 @@ Apps, die auf .NET Framework 4.6 ausgelegt sind, aber WPF-Steuerelemente zum Ren
 
 <pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true&quot; /&gt;&#39;.&#13;&#10;</code></pre>
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Gering       |
 | Version | 4.6         |

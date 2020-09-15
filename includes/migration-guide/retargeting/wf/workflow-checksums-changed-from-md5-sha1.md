@@ -30,7 +30,7 @@ Stattdessen können Sie dies auch im Rahmen der Konfiguration vornehmen:
 </configuration>
 ```
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Gering       |
 | Version | 4.7         |

@@ -39,7 +39,7 @@ Einige Benutzer haben erkannt, dass der richtige zu übergebende Wert die Adress
 
 Benutzer, die sich umgekehrt für das neue Verhalten der Laufzeit von .NET Framework 4.7 entscheiden, können die AppContext-Option auf `false` festlegen, wenn die Anwendung in älteren Versionen von .NET Framework geladen wird.
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Gering       |
 | Version | 4.7         |

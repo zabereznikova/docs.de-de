@@ -19,7 +19,7 @@ Sie können mit einer der folgenden Möglichkeiten auf diese Änderung reagieren
 - Behandeln Sie die `T:System.NullReferenceException`, wenn Ihre Anwendung in .NET Framework 4.6.2 ausgeführt wird.
 - Führen Sie ein Upgrade auf .NET Framework 4.7 durch, sodass das vorherige Verhalten wiederhergestellt und eine `T:System.ArgumentNullException` ausgelöst wird.
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Microsoft Edge        |
 | Version | 4.6.2       |

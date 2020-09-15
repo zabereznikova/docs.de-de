@@ -20,7 +20,7 @@ Für Apps, die unter .NET Framework 4.7.1 oder einer neueren Version ausgeführt
 <AppContextSwitchOverrides value="Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true" />
 ```
 
-| Name    | Wert       |
+| name    | Wert       |
 |:--------|:------------|
 | Bereich   | Microsoft Edge        |
 | Version | 4.6.2       |
