@@ -11,12 +11,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2761d17846009ba06a2ffb1fc58b430f3ec9a949
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662718"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558939"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 
@@ -46,7 +46,7 @@ Beim Aufrufen von Methoden des Dateisystems sollten Sie immer eine robuste Ausna
 
 Neben der Verwendung dieser Klassen können Benutzer von Visual Basic die von der <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType>-Klasse für Datei-E/A-Vorgänge bereitgestellten Methoden und Eigenschaften verwenden.
 
-Weitere Informationen finden Sie unter [How to: Kopieren von Verzeichnissen](how-to-copy-directories.md), [Vorgehensweise: Erstellen einer Verzeichnisauflistung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) und [Vorgehensweise: Auflisten von Verzeichnissen und Dateien](how-to-enumerate-directories-and-files.md).
+Weitere Informationen finden Sie unter [How to: Kopieren von Verzeichnissen](how-to-copy-directories.md), [Vorgehensweise: Erstellen einer Verzeichnisauflistung](/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) und [Vorgehensweise: Auflisten von Verzeichnissen und Dateien](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Streams
 
@@ -128,7 +128,7 @@ Weitere Informationen finden Sie unter [How to: Komprimieren und Extrahieren von
 
 Isolierte Speicherung ist ein Mechanismus zur Datenspeicherung, der Isolation und Sicherheit gewährleistet. Dies wird durch die Definition standardisierter Verknüpfungen von Code mit gespeicherten Daten ermöglicht. Der Speicher enthält ein virtuelles Dateisystem, das nach Benutzer, Assembly und Domäne (optional) isoliert ist. Ein isolierter Speicher ist besonders nützlich, wenn Ihre Anwendung keine Berechtigung für den Zugriff auf Benutzerdateien hat. Sie können die Einstellungen oder Dateien für die Anwendung so speichern, dass eine Kontrolle durch die Sicherheitsrichtlinien des Computers gewährleistet ist.
 
-Isolierter Speicher ist für Windows Store-Apps Version 8.x nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace. Weitere Informationen finden Sie unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+Isolierter Speicher ist für Windows Store-Apps Version 8.x nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace. Weitere Informationen finden Sie unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).
 
 Die folgenden Klassen werden häufig zum Implementieren isolierter Speicher verwendet:
 
@@ -148,7 +148,7 @@ Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge
 
 - Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind in den .NET für Windows 8.x Store-Apps nicht enthalten. Verwenden Sie stattdessen die Typen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace der Windows-Runtime, wie z.B. <xref:Windows.Storage.StorageFile> und <xref:Windows.Storage.StorageFolder>.
 
-- Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
+- Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)).
 
 - Verwenden Sie asynchrone Methoden, wie <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>, um zu verhindern, dass UI-Threads blockiert werden.
 
@@ -156,13 +156,13 @@ Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge
 
 Sie können .NET Framework-Streams in Windows-Runtime-Streams konvertieren und umgekehrt, falls erforderlich. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](how-to-convert-between-dotnet-streams-and-winrt-streams.md) oder unter <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
-Weitere Informationen zu E/A-Vorgängen in einer Windows Store-App Version 8.x finden Sie unter [Schnellstart: Lesen und Schreiben von Dateien](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Weitere Informationen zu E/A-Vorgängen in einer Windows Store-App Version 8.x finden Sie unter [Schnellstart: Lesen und Schreiben von Dateien](/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>E/A und Sicherheit
 
 Wenn Sie die Klassen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](how-to-add-or-remove-access-control-list-entries.md).
 
-Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) für Windows Store-Apps Version 8.x.
+Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)) für Windows Store-Apps Version 8.x.
 
 Eine Sicherheitsüberprüfung wird nur beim Erstellen des Streams ausgeführt. Übergeben Sie daher keinen geöffneten Stream an weniger vertrauenswürdigen Code oder an Anwendungsdomänen.
 

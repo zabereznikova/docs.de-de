@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: e4c5bc03038a3df9df2b7629da762caee175b6e8
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c75e26ea083f8144bfaf2f67872004ef33365377
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202151"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558757"
 ---
 # <a name="wcf-data-services-overview"></a>Übersicht über WCF Data Services
 WCF Data Services ermöglicht die Erstellung und Nutzung von Datendiensten für das Internet oder ein Intranet mithilfe des Open Data Protocol (odata). Mit odata können Sie Ihre Daten als Ressourcen verfügbar machen, die durch URIs adressierbar sind. Dies ermöglicht Ihnen das Zugreifen auf und Ändern von Daten mit der REST (Representational State Transfer)-Semantik, insbesondere mit den Standard-HTTP-Verben GET, PUT, POST und DELETE. Dieses Thema enthält eine Übersicht über die von odata definierten Muster und Methoden sowie über die von WCF Data Services bereitgestellten Funktionen, um odata in .NET Framework basierten Anwendungen zu nutzen.  
@@ -60,6 +60,6 @@ Odata definiert einen Satz von Erweiterungen für das Atom Publishing Protocol (
 - [WCF Data Services 4.5](index.md)
 - [Erste Schritte](getting-started-with-wcf-data-services.md)
 - [Definieren von WCF Data Services](defining-wcf-data-services.md)
-- [Zugreifen auf Datendienstressourcen (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
+- [Zugreifen auf Datendienstressourcen (WCF Data Services)](/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)
 - [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

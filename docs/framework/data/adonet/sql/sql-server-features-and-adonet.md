@@ -3,12 +3,12 @@ title: SQL Server-Funktionen und ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 30eb7d7f3f98d3cd3999c74f660986bef887c05d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 743e0eb9761cdc58018aab8aaed50a99b197116c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451823"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552621"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Funktionen und ADO.NET
 In den Themen dieses Abschnitts werden Funktionen von SQL Server diskutiert, die für die Entwicklung von Datenbankanwendungen mit ADO.NET vorgesehen sind.  
@@ -17,39 +17,39 @@ In den Themen dieses Abschnitts werden Funktionen von SQL Server diskutiert, die
   
  **SQL Server-Dokumentation**  
   
-1. [Entwicklung (Datenbank-Engine)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
+1. [Entwicklung (Datenbank-Engine)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Aufzählen von SQL Server-Instanzen (ADO.NET)](enumerating-instances-of-sql-server.md)  
+ [Auflisten von Instanzen von SQL Server (ADO.net)](enumerating-instances-of-sql-server.md)  
  Beschreibt das Auflisten aktiver Instanzen von SQL Server 2000.  
   
- [Anbieterstatistiken für SQL Server](provider-statistics-for-sql-server.md)  
- Beschreibt Unterstützung für das Abrufen von SQL Server-Laufzeitstatistik.  
+ [Anbieter Statistiken für SQL Server](provider-statistics-for-sql-server.md)  
+ Informationen zur Unterstützung des Abrufens von SQL Server-Laufzeitstatistiken.  
   
- [SQL Server Express-Benutzerinstanzen](sql-server-express-user-instances.md)  
- Beschreibt die Unterstützung für SQL Server Express-Benutzerinstanzen.  
+ [SQL Server Express Benutzer Instanzen](sql-server-express-user-instances.md)  
+ Beschreibung der Unterstützung für SQL Server Express-Benutzerinstanzen.  
   
- [Datenbankspiegelungen in SQL Server](database-mirroring-in-sql-server.md)  
- Beschreibt die Funktionen zum Spiegeln von Datenbanken.  
+ [Daten Bank Spiegelung in SQL Server](database-mirroring-in-sql-server.md)  
+ Beschreibt die Funktionsweise der Datenbankspiegelung.  
   
  [Common Language Runtime-Integration in SQL Server](sql-server-common-language-runtime-integration.md)  
  Beschreibt, wie von einem CLR-Datenbankobjekt (Common Language Runtime) in SQL Server aus auf Daten zugegriffen werden kann.  
   
- [Abfragebenachrichtigungen in SQL Server](query-notifications-in-sql-server.md)  
+ [Abfrage Benachrichtigungen in SQL Server](query-notifications-in-sql-server.md)  
  Beschreibt, wie .NET Framework-Anwendungen Benachrichtigungen vom SQL Server anfordern können, wenn Daten geändert wurden.  
   
- [Momentaufnahmeisolation in SQL Server](snapshot-isolation-in-sql-server.md)  
- Beschreibt die Unterstützung für Momentaufnahmenisolation, einem Zeilenversionsmechanismus, der entworfen wurde, um das Blockieren in Transaktionsanwendungen zu reduzieren.  
+ [Momentaufnahme Isolation in SQL Server](snapshot-isolation-in-sql-server.md)  
+ Beschreibung der Unterstützung der Momentaufnahmenisolation, eines Mechanismus für die Zeilenversionsverwaltung zum Verringern von Blockierungen in Transaktionsanwendungen.  
   
- [SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](sqlclient-support-for-high-availability-disaster-recovery.md)  
- Beschreibt die SqlClient-Unterstützung für AlwaysOn-Verfügbarkeitsgruppen mit hoher Verfügbarkeit und Notfallwiederherstellung.  
+ [SqlClient-Unterstützung für hohe Verfügbarkeit, Notfall Wiederherstellung](sqlclient-support-for-high-availability-disaster-recovery.md)  
+ Beschreibt die SqlClient-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung bei (Always On-)Verfügbarkeitsgruppen  
   
- [SqlClient-Unterstützung für LocalDB](sqlclient-support-for-localdb.md)  
- Beschreibt die SqlClient-Unterstützung für LocalDB-Datenbanken.  
+ [SqlClient-Unterstützung für localdb](sqlclient-support-for-localdb.md)  
+ Beschreibt die SqlClient-Unterstützung für LocalDB-Datenbanken  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](sql-server-data-operations.md)
+- [SQL Server von Daten Vorgängen in ADO.net](sql-server-data-operations.md)
 - [Abrufen und Ändern von Daten in ADO.NET](../retrieving-and-modifying-data.md)
 - [LINQ to SQL](./linq/index.md)
 - [SQL Server und ADO.NET](index.md)

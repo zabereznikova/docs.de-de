@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 9c041f6e9505d2ec5865dd512359b497a411cb40
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d4e034e3e18433714fcbcc3f061cb05bd8f2f441
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602283"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552879"
 ---
 # <a name="windows-service-host"></a>Windows-Diensthost
 In diesem Beispiel wird ein Windows Communication Foundation (WCF)-Dienst veranschaulicht, der in einem verwalteten Windows-Dienst gehostet wird. Windows-Dienste werden mithilfe des Applets "Dienste" in der **Systemsteuerung** gesteuert und können so konfiguriert werden, dass Sie nach einem Neustart des Systems automatisch gestartet werden. Das Beispiel besteht aus einem Clientprogramm und einem Windows-Dienstprogramm. Der Dienst wird als EXE-Programm implementiert und enthält seinen eigenen Hostingcode. In anderen Hostumgebungen, z. B. WAS (Windows Process Activation Services, Windows-Prozessaktivierungsdienste) oder IIS (Internet Information Services, Internetinformationsdienste), müssen Sie keinen Hostcode schreiben.
@@ -59,10 +59,10 @@ In diesem Beispiel wird ein Windows Communication Foundation (WCF)-Dienst verans
   
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.  
   
-3. Nachdem die Projekt Mappe erstellt wurde, führen Sie Setup. bat an einer Visual Studio 2012-Eingabeaufforderung mit erhöhten Rechten aus, um den Windows-Dienst mit dem Tool installutil. exe zu installieren. Der Dienst sollte unter Dienste angezeigt werden.  
+3. Nachdem die Projekt Mappe erstellt wurde, führen Sie Setup.bat an einer Visual Studio 2012-Eingabeaufforderung mit erhöhten Rechten aus, um den Windows-Dienst mithilfe des Installutil.exe Tools zu installieren. Der Dienst sollte unter Dienste angezeigt werden.  
   
 4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting- und -Persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric-Hosting- und -Persistenzbeispiele](/previous-versions/appfabric/ff383418(v=azure.10))

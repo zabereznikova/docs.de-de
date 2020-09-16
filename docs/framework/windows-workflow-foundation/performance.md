@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 – Leistung
 description: In diesem Artikel werden die Leistungsmerkmale der Haupt Revision von Windows Workflow Foundation erläutert, die Teil von .NET Framework 4 ist.
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 9b1b9e7c4fd7cdd122d425b2746859dde30ec209
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421565"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558341"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 
@@ -18,11 +18,11 @@ ms.locfileid: "83421565"
 
 ## <a name="terminology"></a>Begriff
 
- Die Version von [!INCLUDE[wf1](../../../includes/wf1-md.md)] , die in .NET Framework 4 eingeführt wurde, wird im weiteren Verlauf dieses Themas als WF4 bezeichnet. [!INCLUDE[wf1](../../../includes/wf1-md.md)]wurde in .NET Framework 3,0 eingeführt und enthielt einige geringfügige Revisionen durch .NET Framework 3,5 SP1. Die .NET Framework 3,5-Version von Workflow Foundation wird im weiteren Verlauf dieses Themas als WF3 bezeichnet. WF3 wird in .NET Framework 4 nebeneinander mit WF4 ausgeliefert. Weitere Informationen zum Migrieren von WF3-Artefakten zu WF4 finden Sie im [Migrations Handbuch zu Windows Workflow Foundation 4](migration-guidance.md).
+ Die Version von [!INCLUDE[wf1](../../../includes/wf1-md.md)] , die in .NET Framework 4 eingeführt wurde, wird im weiteren Verlauf dieses Themas als WF4 bezeichnet. [!INCLUDE[wf1](../../../includes/wf1-md.md)] wurde in .NET Framework 3,0 eingeführt und enthielt einige geringfügige Revisionen durch .NET Framework 3,5 SP1. Die .NET Framework 3,5-Version von Workflow Foundation wird im weiteren Verlauf dieses Themas als WF3 bezeichnet. WF3 wird in .NET Framework 4 nebeneinander mit WF4 ausgeliefert. Weitere Informationen zum Migrieren von WF3-Artefakten zu WF4 finden Sie im [Migrations Handbuch zu Windows Workflow Foundation 4](migration-guidance.md).
 
  Windows Communication Foundation (WCF) ist das vereinheitlichte Programmiermodell von Microsoft zum entwickeln Dienst orientierter Anwendungen. Sie wurde zuerst als Teil von .NET 3,0 zusammen mit WF3 eingeführt und ist jetzt eine der Hauptkomponenten des .NET Framework.
 
- Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
+ Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric 1,0](/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Ziele
  In diesem Thema werden die Leistungsmerkmale von WF4 anhand von Daten gezeigt, die für unterschiedliche Szenarien gemessen wurden. Außerdem werden ausführliche Vergleiche zwischen WF4 und WF3 bereitgestellt und so die Verbesserungen in dieser neuen Revision veranschaulicht. Die Szenarien und Daten in diesem Artikel quantifizieren die zugrunde liegenden Kosten für verschiedene Aspekte von WF4 und WF3. Diese Daten sind nützlich, um die Leistungsmerkmale von WF4 zu verstehen, und können bei der Planung von Migrationen von WF3 zu WF4 oder beim Einsatz von WF4 in der Anwendungsentwicklung hilfreich sein. Sie sollten jedoch vorsichtig sein, aus den in diesem Artikel präsentierten Daten Schlüsse zu ziehen. Die Leistung einer zusammengesetzten Workflowanwendung hängt stark von der Art der Workflowimplementierung und der Integration der verschiedenen Komponenten ab. Jede Anwendung muss gemessen werden, um die Leistungsmerkmale dieser Anwendung zu bestimmen.
@@ -56,7 +56,7 @@ ms.locfileid: "83421565"
  Die vereinheitlichte Pipeline zur Nachrichtenverarbeitung in WCF in .NET 4 unterstützt WF4-Dienste bei einer deutlich besseren Leistung und Skalierbarkeit als bei WF3. WF4 stellt außerdem eine umfangreichere Messagingprogrammierungsunterstützung bereit, die komplexe Nachrichtenaustauschmuster (MEPs) modellieren kann. Entwickler verwenden entweder typisierte Dienstverträge, um eine einfache Programmierung zu erreichen, oder nicht typisierte Dienstverträge, um bessere Leistung ohne Bezahlung von Serialisierungskosten zu erzielen. Die clientseitige Channelzwischenspeicherunterstützung über die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse in WF4 hilft Entwicklern beim Erstellen schneller Anwendungen mit minimalem Aufwand. Weitere Informationen finden Sie unter [Ändern der Cache Freigabe Ebenen für Sendeaktivitäten](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
 ### <a name="declarative-programming"></a>Deklarative Programmierung
- WF4 stellt ein reines und einfaches, deklaratives Programmierframework bereit, um Geschäftsprozesse und -dienste zu modellieren. Das Programmiermodell unterstützt die vollständig deklarative Komposition von Aktivitäten ohne Code-Beside, was die Workflowerstellung sehr vereinfacht. In .NET Framework 4 wurde das XAML-basierte deklarative Programmier Framework in der einzelnen Assembly System. XAML. dll vereinheitlicht, um sowohl WPF als auch WF zu unterstützen.
+ WF4 stellt ein reines und einfaches, deklaratives Programmierframework bereit, um Geschäftsprozesse und -dienste zu modellieren. Das Programmiermodell unterstützt die vollständig deklarative Komposition von Aktivitäten ohne Code-Beside, was die Workflowerstellung sehr vereinfacht. In .NET Framework 4 wurde das XAML-basierte deklarative Programmier Framework in der einzelnen Assembly vereinheitlicht System.Xaml.dll, um sowohl WPF als auch WF zu unterstützen.
 
  In WF4 stellt XAML eine wirklich deklarative Erfahrung bereit und lässt die vollständige Definition des Workflows in XML-Markup zu, wobei auf Aktivitäten und Typen verwiesen wird, die mithilfe von .NET erstellt wurden. Ohne Einbeziehen benutzerdefinierter Code-Behind-Logik war dies in WF3 mit dem XOML-Format schwierig. Der neue XAML-Stapel in .NET 4 bietet eine viel bessere Leistung beim Serialisieren/Deserialisieren von Workflow Artefakten und macht die deklarative Programmierung ansprechender und stabiler.
 
@@ -183,7 +183,7 @@ Im folgenden Diagramm wird der grundlegende Kompensations Workflow gezeigt. Der 
 
  Die zwei Back-End-Dienste, Bestellungsvalidierungsdienst und Warehouse-Dienst, bleiben für beide Tests gleich.  Der Teil, der sich ändert, ist der Onlineshopdienst, von dem die Orchestrierung ausgeführt wird.  In einem Fall ist der Dienst handcodiert als WCF-Dienst.  Im anderen Fall wird der Dienst als WCF-Workflow Dienst in WF4 geschrieben. [!INCLUDE[wf1](../../../includes/wf1-md.md)]-spezifische Funktionen wie Nachverfolgen und Persistenz sind für diesen Test deaktiviert.
 
-### <a name="environment"></a>Environment
+### <a name="environment"></a>Umgebung
 ![Einrichten der Umgebung für die Leistungsmessung](./media/performance/performance-test-environment.gif)
 
  Clientanforderungen werden dem Onlineshopdienst über HTTP von mehreren Computern gestellt.  Ein einzelner Computer hostet alle drei Dienste.  Die Transportebene zwischen dem Onlineshopdienst und den Back-End-Diensten ist TCP oder HTTP.  Die Messung der Vorgänge pro Sekunde basiert auf der Anzahl der beim Onlineshopdienst eingegangenen `PurchaseOrder`-Aufrufe.  Channelpooling ist eine neue, in WF4 verfügbare Funktion.  Im WCF-Teil dieses Test Kanal-Pooling wird nicht standardmäßig bereitgestellt, sodass eine Hand codierte Implementierung einer einfachen Pooling-Technik im Online Store-Dienst verwendet wurde.

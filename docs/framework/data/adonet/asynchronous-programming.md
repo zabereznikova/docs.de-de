@@ -3,12 +3,12 @@ title: Asynchrone Programmierung
 description: Erfahren Sie mehr über die asynchrone Programmierung in den .NET Framework Datenanbieter für SQL Server, einschließlich der in .NET Framework 4,5 eingeführten Erweiterungen.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287102"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558471"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -37,11 +37,11 @@ Weitere Informationen zum asynchronen Programmier Feature, das in .NET Framework
 
 - [Asynchrone Programmierung in C#](../../../csharp/async.md)
 
-- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [Verwenden der neuen Async-Methoden von SqlDataReader in .NET 4,5 (Teil 1)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [Verwenden der neuen Async-Methoden von SqlDataReader in .NET 4,5 (Teil 1)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [Verwenden der neuen Async-Methoden von SqlDataReader in .NET 4,5 (Teil 2)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [Verwenden der neuen Async-Methoden von SqlDataReader in .NET 4,5 (Teil 2)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 Wenn die Benutzeroberfläche nicht mehr reagiert oder der Server nicht skaliert, ist es wahrscheinlich, dass Sie den Code asynchroner programmieren müssen. Das Schreiben von asynchronem Code umfasste üblicherweise die Installation eines Rückrufs (auch als Fortsetzung bekannt), um die Logik auszudrücken, die nach Ende des asynchronen Vorgangs ausgeführt wird. Dadurch wird die Struktur des asynchronen Codes im Vergleich zu synchronem Code komplizierter.
 
@@ -182,7 +182,7 @@ class A {
 
 Möglicherweise müssen Sie ein Tool erstellen, das eine Verbindung mit verschiedenen Datenbanken herstellen und Abfragen ausführen kann. Sie können das Basisanbietermodell und die neue asynchrone Funktion verwenden.
 
-Microsoft Distributed Transaction Controller (MSDTC) muss auf dem Server aktiviert sein, damit verteilte Transaktionen verwendet werden können. Informationen zum Aktivieren von MSDTC finden Sie unter [Aktivieren von MSDTC auf einem Webserver](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90)).
+Microsoft Distributed Transaction Controller (MSDTC) muss auf dem Server aktiviert sein, damit verteilte Transaktionen verwendet werden können. Informationen zum Aktivieren von MSDTC finden Sie unter [Aktivieren von MSDTC auf einem Webserver](/previous-versions/commerce-server/dd327979(v=cs.90)).
 
 ```csharp
 using System;

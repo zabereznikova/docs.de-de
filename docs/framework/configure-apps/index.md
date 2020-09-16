@@ -25,12 +25,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 444d3700f36a2928b79f40dd5265d6166de762da
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105370"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559290"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  
@@ -53,7 +53,7 @@ ms.locfileid: "85105370"
 ```  
   
 ## <a name="machine-configuration-files"></a>Computerkonfigurationsdateien  
- Die Computerkonfigurationsdatei Machine.config enthält Einstellungen, die für den gesamten Computer gelten. Diese Datei befindet sich im Verzeichnis "%*runtime install path*%\Config". Machine.config enthält Konfigurationseinstellungen für die computerweite Assemblybindung, für integrierte [Remotingkanäle](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) und für ASP.NET.  
+ Die Computerkonfigurationsdatei Machine.config enthält Einstellungen, die für den gesamten Computer gelten. Diese Datei befindet sich im Verzeichnis "%*runtime install path*%\Config". Machine.config enthält Konfigurationseinstellungen für die computerweite Assemblybindung, für integrierte [Remotingkanäle](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) und für ASP.NET.  
   
  Das Konfigurationssystem sucht zunächst in der Computer Konfigurationsdatei nach dem [ **\<appSettings>** Element](./file-schema/appsettings/index.md) und anderen Konfigurations Abschnitten, die ein Entwickler definieren kann. Anschließend wird die Anwendungskonfigurationsdatei durchsucht. Aus Gründen der Übersichtlichkeit der Computerkonfigurationsdatei empfiehlt es sich, diese Einstellungen in der Anwendungskonfigurationsdatei zu speichern. Wenn sich diese Einstellungen in der Computerkonfigurationsdatei befinden, ist das System jedoch u. U. einfacher zu warten. Wird z. B. die Komponente eines Drittanbieters sowohl von der Client- als auch von der Serveranwendung verwendet, ist es einfacher, die Einstellungen für diese Komponente in der gleichen Datei zu speichern. In diesem Fall ist die Computerkonfigurationsdatei dafür am besten geeignet, und Sie vermeiden redundante Informationen in zwei verschiedenen Dateien.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "85105370"
   
 - Von ASP.NET gehostete App.  
   
-     Weitere Informationen zu ASP.NET-Konfigurationsdateien finden Sie unter [ASP.NET-Konfigurationseinstellungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
+     Weitere Informationen zu ASP.NET-Konfigurationsdateien finden Sie unter [ASP.NET-Konfigurationseinstellungen](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
 - Von Internet Explorer gehostete App.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85105370"
 - [Konfigurationsdateischema](./file-schema/index.md)
 - [Festlegen des Speicherortes einer Assembly](specify-assembly-location.md)
 - [Umleiten von Assemblyversionen](redirect-assembly-versions.md)
-- [ASP.NET-Websiteverwaltung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
-- [Verwaltung von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [ASP.NET-Websiteverwaltung](/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Verwaltung von Sicherheitsrichtlinien](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (Richtlinientool für die Codezugriffssicherheit)](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [Assemblys in .NET](../../standard/assembly/index.md)

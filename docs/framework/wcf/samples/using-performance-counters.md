@@ -2,12 +2,12 @@
 title: Verwenden von Leistungsindikatoren
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 0b63cdc145ff8806c26b255500bcb2a132e9ef9f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2b0f39303d000e2e9aab8fc5280f75ab9309c4d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596499"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553043"
 ---
 # <a name="using-performance-counters"></a>Verwenden von Leistungsindikatoren
 In diesem Beispiel wird veranschaulicht, wie auf Windows Communication Foundation (WCF)-Leistungsindikatoren zugegriffen wird und wie benutzerdefinierte Leistungsindikatoren erstellt werden. Dieses Beispiel basiert [auf den ersten](getting-started-sample.md)Schritten.  
@@ -27,7 +27,7 @@ In diesem Beispiel wird veranschaulicht, wie auf Windows Communication Foundatio
 </configuration>  
 ```  
   
- Diese Aufgabe kann auch mit dem Konfigurations- [Editor-Tool (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md)ausgeführt werden.  
+ Diese Aufgabe kann auch mithilfe des- [Konfigurations-Editor-Tools (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md)ausgeführt werden.  
   
  Wenn Leistungsindikatoren aktiviert sind, wird die gesamte Sammlung von WCF-Leistungsindikatoren für den Dienst aktiviert. .NET Framework behält Leistungsdaten automatisch auf drei Ebenen bei: `ServiceModelService`, `ServiceModelEndpoint` und `ServiceModelOperation`. Jede dieser Ebenen verfügt über Leistungsindikatoren wie "Calls", "Calls per Second" und "Security Calls Not Authorized".  
   
@@ -76,6 +76,6 @@ In diesem Beispiel wird veranschaulicht, wie auf Windows Communication Foundatio
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Überwachungsbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric-Überwachungsbeispiele](/previous-versions/appfabric/ff383407(v=azure.10))

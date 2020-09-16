@@ -3,12 +3,12 @@ title: WCF-Dienste und ASP.net
 description: Informieren Sie sich über das parallele Hosting von WCF-Diensten mit ASP.net und das Hosting im ASP.NET-Kompatibilitätsmodus.
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 1d7401f6a326bc50923123acf803e26ce8238415
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 765a509f94a0a934cdbbf0212cfc1d4053d29f9c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246414"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553316"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF-Dienste und ASP.net
 
@@ -66,7 +66,7 @@ Anders als bei der standardmäßigen parallelen Konfiguration, bei der die WCF-H
 
 - Konfigurierbare URL-Autorisierung: ASP. Die URL-Autorisierungs Regeln von NET werden für WCF-Anforderungen erzwungen, wenn der WCF-Dienst im ASP.NET-Kompatibilitätsmodus ausgeführt wird.
 
-- <xref:System.Web.HttpModuleCollection>Erweiterbarkeit: da WCF-Dienste, die im ASP.NET-Kompatibilitätsmodus ausgeführt werden, vollständig im ASP.NET HTTP-Anforderungs Lebenszyklus teilnehmen, kann jedes in der HTTP-Pipeline konfigurierte HTTP-Modul sowohl vor als auch nach dem Dienst Aufruf auf WCF-Anforderungen angewendet werden.
+- <xref:System.Web.HttpModuleCollection> Erweiterbarkeit: da WCF-Dienste, die im ASP.NET-Kompatibilitätsmodus ausgeführt werden, vollständig im ASP.NET HTTP-Anforderungs Lebenszyklus teilnehmen, kann jedes in der HTTP-Pipeline konfigurierte HTTP-Modul sowohl vor als auch nach dem Dienst Aufruf auf WCF-Anforderungen angewendet werden.
 
 - ASP.NET-Identitätswechsel: WCF-Dienste werden mithilfe der aktuellen Identität des Thread mit ASP.net-Identität ausgeführt, der sich von der IIS-Prozess Identität unterscheiden kann, wenn ASP.NET-Identitätswechsel für die Anwendung aktiviert wurde. Wenn ASP.NET-Identitätswechsel und WCF-Identitätswechsel für einen bestimmten Dienst Vorgang aktiviert sind, wird die Dienst Implementierung letztendlich mit der aus WCF erhaltenen Identität ausgeführt.
 
@@ -104,7 +104,7 @@ In der folgenden Tabelle wird gezeigt, wie die Einstellung des anwendungsweiten 
 
 Weitere Informationen zum Aktivieren des ASP.NET-Kompatibilitätsmodus für WCF-Dienste finden Sie unter <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> und im [ASP.NET Compatibility](../samples/aspnet-compatibility.md) -Beispiel.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
-- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

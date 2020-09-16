@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: f1ff707c90e884dc66ab10563dc41ea7789f5cda
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 63c6e903fa811d5c61550d086b4f1ce84973f2bc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202006"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553622"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Aufrufen von Dienstvorgängen (WCF Data Services)
 Der Open Data Protocol (odata) definiert Dienst Vorgänge für einen Datendienst. WCF Data Services ermöglicht es Ihnen, solche Vorgänge als Methoden für den Datendienst zu definieren. Wie andere Datendienstressourcen werden diese Dienstvorgänge durch URIs adressiert. Ein Dienstvorgang kann Auflistungen von Entitätstypen, einzelnen Entitätstypinstanzen und primitiven Typen zurückgeben, z. B. ganze Zahl und Zeichenfolge. Ein Dienstvorgang kann auch `null` (`Nothing` in Visual Basic) zurückgeben. Die WCF Data Services-Client Bibliothek kann verwendet werden, um auf Dienst Vorgänge zuzugreifen, die HTTP GET-Anforderungen unterstützen. Diese Arten von Dienstvorgängen werden als Methoden definiert, die über das <xref:System.ServiceModel.Web.WebGetAttribute> verfügen. Weitere Informationen finden Sie unter [Dienst Vorgänge](service-operations-wcf-data-services.md).  
   
- Dienst Vorgänge werden in den Metadaten verfügbar gemacht, die von einem Datendienst zurückgegeben werden, der odata implementiert. In den Metadaten werden Dienstvorgänge als `FunctionImport`-Elemente dargestellt. Beim Erstellen der stark typisierten <xref:System.Data.Services.Client.DataServiceContext> wird dieses Element vom Dienstverweis hinzufügen-und dem DataSvcUtil. exe-Tool ignoriert. Daher finden Sie keine Methode im Kontext, die zum direkten Aufrufen eines Dienstvorgangs verwendet werden kann. Sie können jedoch weiterhin den WCF Data Services-Client verwenden, um Dienst Vorgänge auf eine der beiden folgenden Arten aufzurufen:  
+ Dienst Vorgänge werden in den Metadaten verfügbar gemacht, die von einem Datendienst zurückgegeben werden, der odata implementiert. In den Metadaten werden Dienstvorgänge als `FunctionImport`-Elemente dargestellt. Beim Erstellen der stark typisierten <xref:System.Data.Services.Client.DataServiceContext> wird dieses Element von den Dienstverweis hinzufügen-und DataSvcUtil.exe Tools ignoriert. Daher finden Sie keine Methode im Kontext, die zum direkten Aufrufen eines Dienstvorgangs verwendet werden kann. Sie können jedoch weiterhin den WCF Data Services-Client verwenden, um Dienst Vorgänge auf eine der beiden folgenden Arten aufzurufen:  
   
 - Durch das Aufrufen der <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>-Methode im <xref:System.Data.Services.Client.DataServiceContext> und das Angeben des URI des Dienstvorgangs zusammen mit Parametern. Diese Methode wird verwendet, um GET-Dienstvorgänge aufzurufen.  
   
@@ -32,7 +32,7 @@ Der Open Data Protocol (odata) definiert Dienst Vorgänge für einen Datendienst
   
 - Sie können einen GET-Dienstvorgang, der ein einzelnes Ergebnis des Typs Entität oder Primitiv zurückgibt oder mehr als einen Eingabeparameter erfordert, nicht mithilfe von <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> aufrufen. Sie müssen stattdessen die <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>-Methode aufrufen.  
   
-- Erstellen Sie ggf. eine Erweiterungsmethode für die stark typisierte <xref:System.Data.Services.Client.DataServiceContext> partielle Klasse, die von den-Tools generiert wird, die entweder die- <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> Methode oder die-Methode verwendet, <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> um einen Dienst Vorgang aufzurufen. Dies ermöglicht es Ihnen, Dienstvorgänge direkt aus dem Kontext heraus aufzurufen. Weitere Informationen finden Sie im Blogbeitrag [Dienst Vorgänge und der WCF Data Services-Client](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client).  
+- Erstellen Sie ggf. eine Erweiterungsmethode für die stark typisierte <xref:System.Data.Services.Client.DataServiceContext> partielle Klasse, die von den-Tools generiert wird, die entweder die- <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> Methode oder die-Methode verwendet, <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> um einen Dienst Vorgang aufzurufen. Dies ermöglicht es Ihnen, Dienstvorgänge direkt aus dem Kontext heraus aufzurufen. Weitere Informationen finden Sie im Blogbeitrag [Dienst Vorgänge und der WCF Data Services-Client](/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client).  
   
 - Wenn Sie verwenden, <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> um einen Dienst Vorgang aufzurufen, werden die von bereitgestellten Zeichen von der Client Bibliothek automatisch mit Escapezeichen versehen, <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> indem reservierte Zeichen in Prozent codiert werden, wie z. b. kaufmännisches und-Zeichen (&). Wenn Sie jedoch eine der *Execute* -Methoden zum aufzurufen eines Dienst Vorgangs aufzurufen, müssen Sie daran denken, dass Sie diese Escapezeichen für alle vom Benutzer bereitgestellten Zeichen folgen Werte ausführen müssen. Einfache Anführungszeichen in URIs werden als Paare einfacher Anführungszeichen mit Escapezeichen versehen.  
   

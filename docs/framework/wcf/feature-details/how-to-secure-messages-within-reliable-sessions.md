@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Schützen von Nachrichten innerhalb einer zuverlässigen Sitzung'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 306d0f96b5163fe5c24d270b4b9a7c1d3f499e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cec9356467886be022d05ead55d5cb6ccddcd838
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596954"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558679"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Vorgehensweise: Schützen von Nachrichten innerhalb einer zuverlässigen Sitzung
 
@@ -21,7 +21,7 @@ Dieses Verfahren besteht aus den folgenden drei Hauptaufgaben:
 
 1. Angeben des Clientanmeldeinformationstyps, den der Client verwenden muss, um sich selbst beim Server authentifizieren zu können.
 
-In der ersten Aufgabe ist es wichtig, dass das Endpunkt Konfigurationselement ein- `bindingConfiguration` Attribut enthält, das auf eine Bindungs Konfiguration mit dem Namen verweist (in diesem Beispiel) `MessageSecurity` . Das [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md) Konfigurationselement verweist dann auf diesen Namen, um zuverlässige Sitzungen zu aktivieren, indem das- `enabled` Attribut des-Elements auf festgelegt wird [**\<reliableSession>**](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) `true` . Sie können angeben, dass eine Zusicherung der Zustellung in der richtigen Reihenfolge innerhalb einer zuverlässigen Sitzung verfügbar ist, indem Sie das `ordered`-Attribut auf `true` festlegen.
+In der ersten Aufgabe ist es wichtig, dass das Endpunkt Konfigurationselement ein- `bindingConfiguration` Attribut enthält, das auf eine Bindungs Konfiguration mit dem Namen verweist (in diesem Beispiel) `MessageSecurity` . Das [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md) Konfigurationselement verweist dann auf diesen Namen, um zuverlässige Sitzungen zu aktivieren, indem das- `enabled` Attribut des-Elements auf festgelegt wird [**\<reliableSession>**](/previous-versions/ms731375(v=vs.90)) `true` . Sie können angeben, dass eine Zusicherung der Zustellung in der richtigen Reihenfolge innerhalb einer zuverlässigen Sitzung verfügbar ist, indem Sie das `ordered`-Attribut auf `true` festlegen.
 
 Die Quell Kopie des Beispiels, auf dem diese Konfigurations Prozedur basiert, finden Sie in der [zuverlässigen WS-Sitzung](../samples/ws-reliable-session.md).
 

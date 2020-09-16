@@ -2,12 +2,12 @@
 title: Übersicht über den erweiterten Schutz für die Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964604"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559264"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Übersicht über den erweiterten Schutz für die Authentifizierung
 Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-Middle (MITM)-Angriffe, bei denen die Anmeldeinformationen eines Clients von einem Angreifer abgefangen und an einen Server weitergeleitet werden.  
@@ -24,14 +24,14 @@ Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-
   
  Der Server kann folgende Sicherheitsstufen aufweisen:  
   
-- Keine Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
+- Keine. Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
   
-- Partiell Alle aktualisierten Clients müssen Kanalbindungsinformationen für den Server bereitstellen. Dies gilt nicht für nicht aktualisierte Clients. Dies ist eine Zwischenoption, durch die Anwendungskompatibilität gewahrt wird.  
+- Teilweise. Alle aktualisierten Clients müssen Kanalbindungsinformationen für den Server bereitstellen. Dies gilt nicht für nicht aktualisierte Clients. Dies ist eine Zwischenoption, durch die Anwendungskompatibilität gewahrt wird.  
   
-- Vollständig Alle Clients müssen Kanalbindungsinformationen bereitstellen. Authentifizierungsanfragen von Clients, bei denen dies nicht der Fall ist, werden abgewiesen.  
+- Vollständig. Alle Clients müssen Kanalbindungsinformationen bereitstellen. Authentifizierungsanfragen von Clients, bei denen dies nicht der Fall ist, werden abgewiesen.  
   
  Weitere Informationen finden Sie im Beispiel zu Win7 CBT/Erweiterter Schutz.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

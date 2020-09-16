@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: c61e960078557282de39bdc30f1d614ce8a77f29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 264c639656b592c0cc660d3745528df7cc89c851
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405118"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559336"
 ---
 # <a name="events-visual-basic"></a>Ereignisse (Visual Basic)
 Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren können, die in einer Sequenz ausgeführt werden, sind die meisten Programme in der Praxis ereignisgesteuert – das bedeutet, dass der Ausführungs Fluss von externen vorkommen, die als *Ereignisse*bezeichnet werden, bestimmt wird.  
@@ -74,7 +74,7 @@ Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- Für `RemoveHandler`, wodurch ein Ereignis von einem Ereignishandler getrennt wird, wird die gleiche Syntax verwendet wie für `AddHandler`. Beispiel:  
+ Für `RemoveHandler`, wodurch ein Ereignis von einem Ereignishandler getrennt wird, wird die gleiche Syntax verwendet wie für `AddHandler`. Zum Beispiel:  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
@@ -91,7 +91,7 @@ Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren
   
 ### <a name="to-handle-events-from-a-base-class"></a>So behandeln Sie Ereignisse aus einer Basisklasse  
   
-- Deklarieren Sie einen Ereignishandler in der abgeleiteten Klasse, indem Sie der Deklarationszeile der Prozedur für den Ereignishandler eine `Handles MyBase.`*Ereignisname*-Anweisung hinzufügen. Dabei ist *Ereignisname* der Name des zu behandelnden Ereignisses in der Basisklasse. Beispiel:  
+- Deklarieren Sie einen Ereignishandler in der abgeleiteten Klasse, indem Sie der Deklarationszeile der Prozedur für den Ereignishandler eine `Handles MyBase.`*Ereignisname*-Anweisung hinzufügen. Dabei ist *Ereignisname* der Name des zu behandelnden Ereignisses in der Basisklasse. Zum Beispiel:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   
@@ -102,8 +102,8 @@ Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren
 |[Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](walkthrough-declaring-and-raising-events.md)|Stellt eine Schritt-für-Schritt-Beschreibung des Deklarierens und Auslösens von Ereignissen für eine Klasse bereit.|  
 |[Exemplarische Vorgehensweise: Behandeln von Ereignissen](walkthrough-handling-events.md)|Veranschaulicht das Schreiben einer Ereignishandlerprozedur.|  
 |[Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen, um eine Blockierung zu vermeiden](how-to-declare-custom-events-to-avoid-blocking.md)|Veranschaulicht die Definition eines benutzerdefinierten Ereignisses, das einen asynchronen Aufruf seiner Ereignishandler zulässt.|  
-|[Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen zum Einsparen von Arbeitsspeicher](how-to-declare-custom-events-to-conserve-memory.md)|Veranschaulicht die Definition eines benutzerdefinierten Ereignisses, das nur bei der Behandlung des Ereignisses Arbeitsspeicher nutzt.|  
+|[How to: Deklarieren von benutzerdefinierten Ereignissen zum Einsparen von Arbeitsspeicher](how-to-declare-custom-events-to-conserve-memory.md)|Veranschaulicht die Definition eines benutzerdefinierten Ereignisses, das nur bei der Behandlung des Ereignisses Arbeitsspeicher nutzt.|  
 |[Problembehandlung für geerbte Ereignishandler in Visual Basic](troubleshooting-inherited-event-handlers.md)|Führt häufige Probleme auf, die bei Ereignishandlern in geerbten Komponenten auftreten können.|  
 |[Ereignisse](../../../../standard/events/index.md)|Bietet eine Übersicht über das Ereignismodell in .NET Framework.|  
-|[Erstellen von Ereignishandlern in Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Beschreibt die Verwendung von Ereignissen, die Windows Forms-Objekten zugeordnet sind.|  
+|[Erstellen von Ereignishandlern in Windows Forms](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)|Beschreibt die Verwendung von Ereignissen, die Windows Forms-Objekten zugeordnet sind.|  
 |[Delegaten](../delegates/index.md)|Stellt eine Übersicht über Delegaten in Visual Basic bereit.|

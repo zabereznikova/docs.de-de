@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: aeffc1e2a7b61dfd9406b9f06678064533ea61ec
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595504"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559251"
 ---
 # <a name="federation-and-issued-tokens"></a>Verbund und ausgestellte Token
 Mit Windows Communication Foundation (WCF) können Sie Clients erstellen, die sicher mit Diensten kommunizieren, die die WS-Verbund-und WS-Trust-Spezifikationen implementieren. Die Spezifikationen verwenden XML, SOAP und Web Services Description Language (WSDL), um Mechanismen zu bieten, die Authentifizierung und Autorisierung über verschiedene Vertrauensbereiche hinweg zu ermöglichen.  
@@ -65,4 +65,4 @@ Mit Windows Communication Foundation (WCF) können Sie Clients erstellen, die si
 
 - [Autorisierung](authorization-in-wcf.md)
 - [Benutzerdefinierte Token](../extending/custom-tokens.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

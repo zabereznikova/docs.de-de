@@ -2,12 +2,12 @@
 title: Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937725"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558432"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Features eingeführt, einschließlich verschiedener Erweiterungen der Workflow-Designer-Darstellung. In diesem Thema wird erörtert, welche dieser Funktionen im neu gehosteten Designer bzw. derzeit überhaupt nicht unterstützt werden.
@@ -19,7 +19,7 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  Die integrierte Aktivitätsbibliothek enthält neue Aktivitäten und neue Funktionen für vorhandene Aktivitäten. Alle diese neuen Aktivitäten werden im neu gehosteten Designer unterstützt. Weitere Informationen zu diesen neuen Aktivitäten finden Sie im Abschnitt " [Aktivitäten](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) " unter [Neues in Windows Workflow Foundation in .NET 4,5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>C#-Ausdrücke
- Vor .NET Framework 4,5 konnten alle Ausdrücke in Workflows nur in Visual Basic geschrieben werden. In .NET Framework 4,5 werden Visual Basic Ausdrücke nur für Projekte verwendet, die mit Visual Basic erstellt werden. Visual C#-Projekte verwenden jetzt die Programmiersprache C# für Ausdrücke. Beim Erstellen von Workflows in Visual Studio 2012 wird ein voll C# funktionsfähiger Ausdrucks-Editor bereitgestellt, der Funktionen wie Grammatik Hervorhebung und IntelliSense bietet. Die in früheren Versionen erstellten C#-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, sind weiterhin funktionsfähig.
+ Vor .NET Framework 4,5 konnten alle Ausdrücke in Workflows nur in Visual Basic geschrieben werden. In .NET Framework 4,5 werden Visual Basic Ausdrücke nur für Projekte verwendet, die mit Visual Basic erstellt werden. Visual C#-Projekte verwenden jetzt die Programmiersprache C# für Ausdrücke. Beim Erstellen von Workflows in Visual Studio 2012 wird ein voll funktionsfähiger c#-Ausdrucks-Editor bereitgestellt, der Funktionen wie Grammatik Hervorhebung und IntelliSense bietet. Die in früheren Versionen erstellten C#-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, sind weiterhin funktionsfähig.
 
 > [!WARNING]
 > C#-Ausdrücke werden im neu gehosteten Designer nicht unterstützt.
@@ -40,7 +40,7 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  ![Kontextmenü des Variablen- und Argument-Designers](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Automatisches Umschließen mit Sequenz
- Da ein Workflow oder bestimmte Containeraktivitäten (z. B. <xref:System.Activities.Statements.NoPersistScope>) nur eine einzelne Textkörperaktivität enthalten können, musste der Entwickler zum Hinzufügen einer zweiten Aktivität die erste Aktivität löschen, eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzufügen und der Sequenzaktivität dann beide Aktivitäten hinzufügen. Ab .NET Framework 4,5 wird automatisch eine `Sequence` Aktivität erstellt, um beide Aktivitäten zu umschließen, wenn der Designer Oberfläche eine zweite Aktivität hinzugefügt wird. Diese Funktion wird im neu gehosteten Designer unterstützt.
+ Da ein Workflow oder bestimmte Containeraktivitäten (z. B. <xref:System.Activities.Statements.NoPersistScope>) nur eine einzelne Textkörperaktivität enthalten können, musste der Entwickler zum Hinzufügen einer zweiten Aktivität die erste Aktivität löschen, eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzufügen und der Sequenzaktivität dann beide Aktivitäten hinzufügen. Beginnend mit .NET Framework 4,5 wird beim Hinzufügen einer zweiten Aktivität zur Designer Oberfläche automatisch eine- `Sequence` Aktivität erstellt, um beide Aktivitäten zu umschließen. Diese Funktion wird im neu gehosteten Designer unterstützt.
 
  Die folgende Bildschirmaufnahme zeigt eine `WriteLine`-Aktivität in `Body` von `NoPersistScope`.
 
@@ -72,7 +72,7 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  ![Screenshot der Gliederungs Ansicht mit einem sequenziellen Workflow in Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Bessere Kontrolle über die Sichtbarkeit der Shellleiste und Headerelemente
- In einem neu gehosteten Designer sind einige standardmäßigen Benutzeroberflächen-Steuerelemente für einen bestimmten Workflow möglicherweise bedeutungslos und deaktiviert. In .NET Framework 4 wird diese Anpassung nur von der shellleiste am unteren Rand des Designers unterstützt. In .NET Framework 4,5 kann die Sichtbarkeit von shellheadern am oberen Rand des Designers angepasst werden, indem <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> mit dem entsprechenden <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> Wert festgelegt wird.
+ In einem neu gehosteten Designer sind einige standardmäßigen Benutzeroberflächen-Steuerelemente für einen bestimmten Workflow möglicherweise bedeutungslos und deaktiviert. In .NET Framework 4 wird diese Anpassung nur von der shellleiste am unteren Rand des Designers unterstützt. In .NET Framework 4,5 kann die Sichtbarkeit von shellheadern am oberen Rand des Designers angepasst werden, indem <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> mit dem entsprechenden Wert festgelegt wird <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> .
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Automatisches Verbinden und Einfügen in Flussdiagramm- und Zustandsautomatworkflows
  In .NET Framework 4 mussten Verbindungen zwischen Knoten in einem Flussdiagramm-Workflow manuell hinzugefügt werden. In .NET Framework 4,5 verfügen Flussdiagramm-und Zustands Automaten Knoten über automatische Verbindungspunkte, die sichtbar werden, wenn eine Aktivität aus der Toolbox auf die Designer Oberfläche gezogen wird. Durch Ablegen einer Aktivität auf einem dieser Punkte wird die Aktivität automatisch zusammen mit der erforderlichen Verbindung hinzugefügt.
@@ -95,7 +95,7 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  Designer-Anmerkungen werden im neu gehosteten Designer unterstützt.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definieren und Nutzen von ActivityDelegate-Objekten im Designer
- Die Aktivitäten in .NET Framework 4 wurden <xref:System.Activities.ActivityDelegate> Objekten verwendet, um Ausführungs Punkte verfügbar zu machen, an denen andere Teile des Workflows mit der Ausführung eines Workflows interagieren konnten, aber die Verwendung dieser Ausführungs Punkte erforderte normalerweise eine ziemlich große Menge an Code. In diesem Release können Entwickler die Aktivitätsdelegaten mit dem Workflow-Designer definieren und nutzen. Weitere Informationen finden Sie unter Gewusst [wie: definieren und](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)verarbeiten von Aktivitäts Delegaten im Workflow-Designer.
+ Die Aktivitäten in .NET Framework 4 verwendeten <xref:System.Activities.ActivityDelegate> Objekte zum verfügbar machen von Ausführungs Punkten, an denen andere Teile des Workflows mit der Ausführung eines Workflows interagieren konnten, aber die Verwendung dieser Ausführungs Punkte erforderte in der Regel eine ziemlich große Menge an Code. In diesem Release können Entwickler die Aktivitätsdelegaten mit dem Workflow-Designer definieren und nutzen. Weitere Informationen finden Sie unter Gewusst [wie: definieren und](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)verarbeiten von Aktivitäts Delegaten im Workflow-Designer.
 
  Aktivitätsdelegaten werden im neu gehosteten Designer unterstützt.
 
@@ -122,7 +122,7 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  Zusätzlich zu den Entwicklungsmodellen für sequenzielle oder Flussdiagramm-Workflows umfasst dieses Release Zustandsautomatworkflows und Vertrag zuerst-Workflowdienste.  
   
 ### <a name="state-machine-workflows"></a>Zustandsautomatworkflows  
- Zustandsautomatworkflows wurden als Teil der .NET Framework 4.0.1 im [Microsoft .NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:  
+ Zustandsautomatworkflows wurden als Teil der .NET Framework 4.0.1 im [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:  
   
 1. Festlegen von Haltepunkten für Zustände  
   
@@ -136,7 +136,7 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
   
  ![Die Abbildung zeigt den abgeschlossenen Zustandsautomatworkflow.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
- Weitere Informationen zum Erstellen von Zustandsautomatworkflows finden Sie unter [Zustandsautomatworkflows](state-machine-workflows.md). Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.  
+ Weitere Informationen zum Erstellen von Zustands Automaten Workflows finden Sie [State Machine Workflows](state-machine-workflows.md)unter Zustandsautomatworkflows. Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.  
   
 ### <a name="contract-first-workflow-development"></a>Vertrag zuerst-Workflowentwicklung  
  Mit dem Contract-First-Workflow-Entwicklungs Tool können Entwickler zunächst einen Vertrag im Code entwerfen und dann mit wenigen Klicks in Visual Studio automatisch eine Aktivitäts Vorlage in der Toolbox generieren, die die einzelnen Vorgänge darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Diensten finden Sie unter Gewusst [wie: Erstellen eines Workflow Dienstanbieter, der einen vorhandenen Dienstvertrag](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)verwendet.  

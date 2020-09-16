@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 86b9a1d7b0c772a308b9f059bb31c1f489635300
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245332"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559401"
 ---
 # <a name="bindings-and-security"></a>Bindungen und Sicherheit
 
@@ -196,8 +196,8 @@ In der folgenden Tabelle werden die Funktionen aufgeführt, die in der Sicherhei
 |Einstellung|Funktionen|
 |-------------|--------------|
 |Transport|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> Point-to-Point-Sicherheit<br /><br /> Interoperabilität<br /><br /> Hardwarebeschleunigung.<br /><br /> Hoher Durchsatz<br /><br /> Sichere Firewall<br /><br /> Hohe-Wartezeit-Anwendungen<br /><br /> Wiederverschlüsselung über mehrere Hops|
-|`Message`|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> End-to-End-Sicherheit<br /><br /> Interoperabilität<br /><br /> Rich Claims<br /><br /> Verbund<br /><br /> Multi-Factor Authentication<br /><br /> Benutzerdefinierte Token<br /><br /> Notar-/Timestampdienst<br /><br /> Hohe-Wartezeit-Anwendungen<br /><br /> Beständigkeit von Nachrichtensignaturen|
-|TransportWithMessageCredential|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> Point-to-Point-Sicherheit<br /><br /> Interoperabilität<br /><br /> Hardwarebeschleunigung.<br /><br /> Hoher Durchsatz<br /><br /> Rich Client-Claims<br /><br /> Verbund<br /><br /> Multi-Factor Authentication<br /><br /> Benutzerdefinierte Token<br /><br /> Sichere Firewall<br /><br /> Hohe-Wartezeit-Anwendungen<br /><br /> Wiederverschlüsselung über mehrere Hops|
+|Nachricht|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> End-to-End-Sicherheit<br /><br /> Interoperabilität<br /><br /> Rich Claims<br /><br /> Verbund<br /><br /> Mehrstufige Authentifizierung<br /><br /> Benutzerdefinierte Token<br /><br /> Notar-/Timestampdienst<br /><br /> Hohe-Wartezeit-Anwendungen<br /><br /> Beständigkeit von Nachrichtensignaturen|
+|TransportWithMessageCredential|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> Point-to-Point-Sicherheit<br /><br /> Interoperabilität<br /><br /> Hardwarebeschleunigung.<br /><br /> Hoher Durchsatz<br /><br /> Rich Client-Claims<br /><br /> Verbund<br /><br /> Mehrstufige Authentifizierung<br /><br /> Benutzerdefinierte Token<br /><br /> Sichere Firewall<br /><br /> Hohe-Wartezeit-Anwendungen<br /><br /> Wiederverschlüsselung über mehrere Hops|
 
 In der folgenden Tabelle werden die Bindungen aufgeführt, die die verschiedenen Moduseinstellungen unterstützen. Wählen Sie eine Bindung aus der Tabelle aus, die verwendet werden soll, um den Dienstendpunkt zu erstellen.
 
@@ -207,19 +207,19 @@ In der folgenden Tabelle werden die Bindungen aufgeführt, die die verschiedenen
 |`WSHttpBinding`|Ja|Ja|Ja|
 |`WSDualHttpBinding`|Nein|Ja|Nein|
 |`NetTcpBinding`|Ja|Ja|Ja|
-|`NetNamedPipeBinding`|Ja|Nein|Nein |
+|`NetNamedPipeBinding`|Ja|Nein|Nein|
 |`NetMsmqBinding`|Ja|Ja|Nein|
 |`MsmqIntegrationBinding`|Ja|Nein|Nein|
-|`wsFederationHttpBinding`|Nein |Ja|Ja|
+|`wsFederationHttpBinding`|Nein|Ja|Ja|
 
 ## <a name="transport-credentials-in-bindings"></a>Transportieren von Anmeldeinformationen in Bindungen
 
 In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgeführt, die bei der Nutzung von `BasicHttpBinding` oder `WSHttpBinding` im Transportsicherheitsmodus zur Verfügung stehen.
 
-|type|BESCHREIBUNG|
+|Typ|BESCHREIBUNG|
 |----------|-----------------|
 |Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|
-|Basic|Standardauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – http Authentication: Basic and Digest Authentication, verfügbar unter <https://go.microsoft.com/fwlink/?LinkId=84023> .|
+|Standard|Standardauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – http Authentication: Basic and Digest Authentication, verfügbar unter <https://go.microsoft.com/fwlink/?LinkId=84023> .|
 |Digest|Hashwertauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – http Authentication: Basic and Digest Authentication, verfügbar unter <https://go.microsoft.com/fwlink/?LinkId=84023> .|
 |NTLM|NT-LAN-Manager (NTLM)-Authentifizierung.|
 |Windows|Windows-Authentifizierung.|
@@ -230,7 +230,7 @@ In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgef�
 
 In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgeführt, die bei der Nutzung einer Bindung im Nachrichtensicherheitsmodus zur Verfügung stehen.
 
-|type|BESCHREIBUNG|
+|Typ|BESCHREIBUNG|
 |----------|-----------------|
 |Keine|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|
 |Windows|Ermöglicht SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen.|
@@ -238,11 +238,11 @@ In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgef�
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|
 |IssuedToken|Ermöglicht es dem Dienst, einen Sicherheitstokendienst zu verwenden, um ein benutzerdefiniertes Token zu liefern.|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsübersicht](security-overview.md)
 - [Sichern von Diensten und Clients](securing-services-and-clients.md)
 - [Wählen eines Typs von Anmeldeinformationen](selecting-a-credential-type.md)
 - [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](security-capabilities-with-custom-bindings.md)
 - [Sicherheitsverhalten](security-behaviors-in-wcf.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7b0cc58975ee145e5234adf51e24109898853e1c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245348"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558900"
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -143,7 +143,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Sie können einen benutzerdefinierten Ablaufverfolgungslistener konfigurieren, um Ablaufverfolgungen zu übertragen, z. B. an eine Remotedatenbank. Stellen Sie beim Bereitstellen von Anwendungen eine ordnungsgemäße Zugriffsteuerung für die Protokolle auf dem Remotecomputer sicher.  
   
- Sie können einen Ablaufverfolgungslistener auch programmgesteuert konfigurieren. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen und initialisieren](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) von Ablaufverfolgungslistenern und [Erstellen eines benutzerdefinierten TraceListener](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
+ Sie können einen Ablaufverfolgungslistener auch programmgesteuert konfigurieren. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen und initialisieren](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) von Ablaufverfolgungslistenern und [Erstellen eines benutzerdefinierten TraceListener](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
   
 > [!CAUTION]
 > Da `System.Diagnostics.XmlWriterTraceListener` nicht threadsicher ist, werden Ressourcen durch die Ablaufverfolgungsquelle bei der Ausgabe von Ablaufverfolgungen möglicherweise exklusiv gesperrt. Wenn viele Threads Ablaufverfolgungen an eine Ablaufverfolgungsquelle ausgeben, die für die Verwendung dieses Listeners konfiguriert ist, treten möglicherweise Ressourcenkonflikte auf. Das kann die Leistung erheblich beeinträchtigen. Implementieren Sie einen threadsicheren benutzerdefinierten Listener, um dieses Problem zu beheben.  
@@ -153,14 +153,14 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
 |Ablaufverfolgungsebene|Art der verfolgten Ereignisse|Inhalt der verfolgten Ereignisse|Verfolgte Ereignisse|Zielgruppe|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Aus|–|–|Keine Ablaufverfolgungen werden ausgegeben.|–|  
-|Kritisch|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder einen Fehlerzustand hinweisen.||Nicht behandelte Ausnahmen (einschließlich der folgenden) werden protokolliert:<br /><br /> -Ouyf memoryexception<br />-ThreadAbortException (die CLR ruft jeden ThreadAbortExceptionHandler auf)<br />-StackOverflowException (kann nicht abgefangen werden)<br />-ConfigurationErrorsException<br />-SEH Exception<br />-Fehler beim Starten der Anwendung<br />-FailFast-Ereignisse<br />-System hängt nicht aus<br />-Nicht verarbeitbare Nachrichten: Nachrichten Ablauf Verfolgungen, die zu einem Fehler der Anwendung führen|Administrators<br /><br /> Anwendungsentwickler|  
-|Fehler|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder einen Fehlerzustand hinweisen.|Eine unerwartete Verarbeitung ist aufgetreten. Die Anwendung konnte die Aufgabe nicht wie erwartet ausführen. Die Anwendung wird jedoch weiter ordnungsgemäß ausgeführt.|Alle Ausnahmen werden protokolliert.|Administrators<br /><br /> Anwendungsentwickler|  
-|Warnung|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder einen Fehlerzustand hinweisen.|Ein mögliches Problem ist aufgetreten oder tritt möglicherweise auf, die Anwendung funktioniert jedoch noch ordnungsgemäß. Allerdings ist nicht sicher, dass sie weiterhin ordnungsgemäß ausgeführt wird.|-Die Anwendung empfängt mehr Anforderungen, als ihre einschrändungs Einstellungen zulassen.<br />-Die empfangende Warteschlange liegt fast der konfigurierten Kapazität.<br />-Timeout wurde überschritten.<br />-Anmelde Informationen werden abgelehnt.|Administrators<br /><br /> Anwendungsentwickler|  
-|Information|"Positive" Ereignisse: Ereignisse, die erfolgreiche Meilensteine markieren|Wichtige und erfolgreiche Meilensteine der Anwendungsausführung, unabhängig davon, ob die Anwendung ordnungsgemäß funktioniert.|In der Regel werden Meldungen generiert, die bei der Überwachung und Diagnose des Systemstatus, der Leistungsmessung oder Profilerstellung nützlich sind. Solche Informationen können zur Kapazitätsplanung und Leistungsverwaltung genutzt werden:<br /><br /> -Kanäle werden erstellt.<br />-Endpunkt Listener werden erstellt.<br />-Message gelangt/verlässt den Transport.<br />-Das Sicherheits Token wird abgerufen.<br />-Die Konfigurationseinstellung wird gelesen.|Administrators<br /><br /> Anwendungsentwickler<br /><br /> Produktentwickler|  
-|Ausführlich|"Positive" Ereignisse: Ereignisse, die erfolgreiche Meilensteine markieren.|Ereignisse auf niedriger Ebene für Benutzercode und Wartung werden ausgegeben.|Im Allgemeinen können Sie diese Ebene zum Debuggen oder zur Anwendungsoptimierung verwenden.<br /><br /> -Der Nachrichten Header wurde verstanden.|Administrators<br /><br /> Anwendungsentwickler<br /><br /> Produktentwickler|  
-|ActivityTracing||Ablaufereignisse zwischen Verarbeitungsaktivitäten und Komponenten.|Diese Ebene ermöglicht es Administratoren und Entwicklern, Anwendungen in einer Anwendungsdomäne zu korrelieren:<br /><br /> -Ablauf Verfolgungen für Aktivitäts Grenzen, z. b. Start/Ende.<br />-Ablauf Verfolgungen für Übertragungen.|All|  
-|All||Die Anwendung funktioniert möglicherweise ordnungsgemäß. Alle Ereignisse werden ausgegeben.|Alle vorherigen Ereignisse.|All|  
+|Aus|Nicht zutreffend|Nicht zutreffend|Keine Ablaufverfolgungen werden ausgegeben.|–|  
+|Kritisch|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder einen Fehlerzustand hinweisen.||Nicht behandelte Ausnahmen (einschließlich der folgenden) werden protokolliert:<br /><br /> -Ouyf memoryexception<br />-ThreadAbortException (die CLR ruft jeden ThreadAbortExceptionHandler auf)<br />-StackOverflowException (kann nicht abgefangen werden)<br />-ConfigurationErrorsException<br />-SEH Exception<br />-Fehler beim Starten der Anwendung<br />-FailFast-Ereignisse<br />-System hängt nicht aus<br />-Nicht verarbeitbare Nachrichten: Nachrichten Ablauf Verfolgungen, die zu einem Fehler der Anwendung führen|Administratoren<br /><br /> Anwendungsentwickler|  
+|Fehler|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder einen Fehlerzustand hinweisen.|Eine unerwartete Verarbeitung ist aufgetreten. Die Anwendung konnte die Aufgabe nicht wie erwartet ausführen. Die Anwendung wird jedoch weiter ordnungsgemäß ausgeführt.|Alle Ausnahmen werden protokolliert.|Administratoren<br /><br /> Anwendungsentwickler|  
+|Warnung|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder einen Fehlerzustand hinweisen.|Ein mögliches Problem ist aufgetreten oder tritt möglicherweise auf, die Anwendung funktioniert jedoch noch ordnungsgemäß. Allerdings ist nicht sicher, dass sie weiterhin ordnungsgemäß ausgeführt wird.|-Die Anwendung empfängt mehr Anforderungen, als ihre einschrändungs Einstellungen zulassen.<br />-Die empfangende Warteschlange liegt fast der konfigurierten Kapazität.<br />-Timeout wurde überschritten.<br />-Anmelde Informationen werden abgelehnt.|Administratoren<br /><br /> Anwendungsentwickler|  
+|Information|"Positive" Ereignisse: Ereignisse, die erfolgreiche Meilensteine markieren|Wichtige und erfolgreiche Meilensteine der Anwendungsausführung, unabhängig davon, ob die Anwendung ordnungsgemäß funktioniert.|In der Regel werden Meldungen generiert, die bei der Überwachung und Diagnose des Systemstatus, der Leistungsmessung oder Profilerstellung nützlich sind. Solche Informationen können zur Kapazitätsplanung und Leistungsverwaltung genutzt werden:<br /><br /> -Kanäle werden erstellt.<br />-Endpunkt Listener werden erstellt.<br />-Message gelangt/verlässt den Transport.<br />-Das Sicherheits Token wird abgerufen.<br />-Die Konfigurationseinstellung wird gelesen.|Administratoren<br /><br /> Anwendungsentwickler<br /><br /> Produktentwickler|  
+|Ausführlich|"Positive" Ereignisse: Ereignisse, die erfolgreiche Meilensteine markieren.|Ereignisse auf niedriger Ebene für Benutzercode und Wartung werden ausgegeben.|Im Allgemeinen können Sie diese Ebene zum Debuggen oder zur Anwendungsoptimierung verwenden.<br /><br /> -Der Nachrichten Header wurde verstanden.|Administratoren<br /><br /> Anwendungsentwickler<br /><br /> Produktentwickler|  
+|ActivityTracing||Ablaufereignisse zwischen Verarbeitungsaktivitäten und Komponenten.|Diese Ebene ermöglicht es Administratoren und Entwicklern, Anwendungen in einer Anwendungsdomäne zu korrelieren:<br /><br /> -Ablauf Verfolgungen für Aktivitäts Grenzen, z. b. Start/Ende.<br />-Ablauf Verfolgungen für Übertragungen.|Alle|  
+|Alle||Die Anwendung funktioniert möglicherweise ordnungsgemäß. Alle Ereignisse werden ausgegeben.|Alle vorherigen Ereignisse.|Alle|  
   
  Die Ebenen von Verbose bis Critical bauen aufeinander auf, d. h. jede Ablaufverfolgungsebene umfasst alle Ebenen darüber, außer der Off-Ebene. Beispielsweise empfängt en Listener, der die Warning-Ebene überwacht, Critical-, Error- and Warning-Ablaufverfolgungen. Die All-Ebene schließt Ereignisse von Verbose- bis Critical- und ActivityTracing-Ereignissen ein.  
   
@@ -181,9 +181,9 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Das `propagateActivity`-Attribut kann nicht bei benutzerdefinierten Ablaufverfolgungsquellen verwendet werden. Stellen Sie bei der Aktivitäts-ID-Weitergabe in Benutzercode sicher, dass Sie `ActivityTracing` von ServiceModel nicht festlegen, während das `propagateActivity`-Attribute von ServiceModel noch auf `true` festgelegt ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgung](index.md)
 - [Verwaltung und Diagnose](../index.md)
 - [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
-- [Erstellen eines benutzerdefinierten TraceListener](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
+- [Erstellen eines benutzerdefinierten TraceListener](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)

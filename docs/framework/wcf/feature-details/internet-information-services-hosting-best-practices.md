@@ -2,12 +2,12 @@
 title: Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: e62fed4f6a711ecc317b8f758d4948a477d136e1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c875920ed70ea8bd35642d0b7725b2dfad08f2b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595270"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558874"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 In diesem Thema werden einige bewährte Methoden für das Hosting von Windows Communication Foundation (WCF)-Diensten beschrieben.  
@@ -30,7 +30,7 @@ In diesem Thema werden einige bewährte Methoden für das Hosting von Windows Co
 ## <a name="optimizing-performance-in-middle-tier-scenarios"></a>Optimieren der Leistung in Szenarien der mittleren Ebene  
  Für eine optimale Leistung in einem *Szenario der mittleren Ebene*– ein Dienst, der andere Dienste als Reaktion auf eingehende Nachrichten aufruft – den WCF-Dienst Client einmal mit dem Remote Dienst instanziieren und ihn über mehrere eingehende Anforderungen hinweg wieder verwenden. Das Instanziieren von WCF-Dienst Clients ist ein aufwendiger Vorgang im Verhältnis zum Durchführen eines Dienst Aufrufens für eine bereits vorhandene Client Instanz, und Szenarien der mittleren Ebene führen zu unterschiedlichen Leistungssteigerungen, indem Remote Clients über Anforderungen hinweg zwischengespeichert werden. WCF-Dienst Clients sind Thread sicher, sodass der Zugriff auf einen Client nicht über mehrere Threads hinweg synchronisiert werden muss.  
   
- Szenarien der mittleren Ebene erzeugen außerdem Leistungssteigerungen durch Verwendung von asynchronen, von der `svcutil /a`-Option generierten APIs. Die- `/a` Option bewirkt, dass das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) `BeginXXX/EndXXX` Methoden für jeden Dienst Vorgang generiert, sodass möglicherweise Aufrufe von Remote Diensten mit langer Ausführungszeit für Hintergrundthreads ausgeführt werden können.  
+ Szenarien der mittleren Ebene erzeugen außerdem Leistungssteigerungen durch Verwendung von asynchronen, von der `svcutil /a`-Option generierten APIs. Die- `/a` Option bewirkt, dass das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) `BeginXXX/EndXXX` Methoden für jeden Dienst Vorgang generiert, wodurch möglicherweise Aufrufe von Remote Diensten mit langer Ausführungszeit für Hintergrundthreads ausgeführt werden.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF in Szenarien mit mehreren Adressen oder mehreren Namen  
  Sie können WCF-Dienste in einer IIS-Webfarm bereitstellen, in der eine Gruppe von Computern einen gemeinsamen externen Namen (z. b.) gemeinsam nutzen, `http://www.contoso.com` aber von anderen Hostnamen einzeln adressiert wird (z. b. `http://www.contoso.com` kann Datenverkehr an zwei verschiedene Computer mit dem Namen und weiterleiten `http://machine1.internal.contoso.com` `http://machine2.internal.contoso.com` ) Dieses Bereitstellungs Szenario wird von WCF vollständig unterstützt, erfordert jedoch eine spezielle Konfiguration der IIS-Website, auf der WCF-Dienste gehostet werden, um den korrekten (externen) Hostnamen in den Metadaten des Diensts (Web Services Description Language) anzuzeigen.  
@@ -42,7 +42,7 @@ In diesem Thema werden einige bewährte Methoden für das Hosting von Windows Co
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Anwendungspools, die in unterschiedlichen Benutzerkontexten ausgeführt werden, überschreiben Assemblys anderer Konten im temporären Ordner.  
  Um sicherzustellen, dass Anwendungs Pools, die in unterschiedlichen Benutzer Kontexten ausgeführt werden, keine Assemblys anderer Konten im temporären Ordner ASP.NET Files überschreiben können, verwenden Sie unterschiedliche Identitäten und temporäre Ordner für verschiedene Anwendungen. Wenn Sie beispielsweise zwei virtuelle Anwendungen /Application1 und /Application2 haben, können Sie zwei Anwendungspools (A und B) mit zwei unterschiedlichen Identitäten erstellen. Der Anwendungspool A kann unter einer Benutzeridentität ausgeführt werden (user1), während der Anwendungspool B unter einer anderen Benutzeridentität (user2) ausgeführt wird. Konfigurieren Sie /Application1 zur Verwendung von A und /Application2 zur Verwendung von B.  
   
- In Web. config können Sie den temporären Ordner mit konfigurieren \<system.web/compilation/@tempFolder> . Für/application1 kann es "c:\tempForUser1" lauten, und für Taste zweiten Anwendung kann es "c:\tempForUser2" lauten. Gewähren Sie den beiden Identitäten die entsprechende Schreibberechtigung für diese Ordner.  
+ In Web.config können Sie den temporären Ordner mit konfigurieren \<system.web/compilation/@tempFolder> . Für/application1 kann es "c:\tempForUser1" lauten, und für Taste zweiten Anwendung kann es "c:\tempForUser2" lauten. Gewähren Sie den beiden Identitäten die entsprechende Schreibberechtigung für diese Ordner.  
   
  Dann kann user2 den Codegenerierungsordner für /application2 (unter c:\tempForUser1) nicht ändern.  
   
@@ -81,7 +81,7 @@ In diesem Thema werden einige bewährte Methoden für das Hosting von Windows Co
   </system.webServer>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Beispiele für Dienst Hosting](../samples/hosting.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: a12e723c763cdc3b9cf2105df9d0ee601f8bda1a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246401"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559017"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.
 
-Digitale Zertifikate sind Teil einer *Public Key-Infrastruktur* (PKI). Dabei handelt es sich um ein System aus digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen zur Überprüfung und Authentifizierung der Gültigkeit aller beteiligten Parteien in einer elektronischen Transaktion unter Verwendung der Public Key-Kryptografie. Die Zertifikate werden von einer Zertifizierungsstelle ausgestellt, und jedes Zertifikat enthält eine Reihe von Feldern mit Daten, z.B. *Antragsteller* (die Entität, für die das Zertifikat ausgestellt wird), Gültigkeitsdatum (das Datum, bis zu dem das Zertifikat gültig ist), Aussteller (die Entität, von der das Zertifikat ausgestellt wurde) und öffentlicher Schlüssel. In WCF werden diese Eigenschaften als <xref:System.IdentityModel.Claims.Claim> verarbeitet, und jeder Anspruch wird weiter in zwei Typen unterteilt: Identität und Recht. Weitere Informationen zu X.509-Zertifikaten finden Sie unter [X.509 Public Key Certificates (X.509-Zertifikate mit öffentlichem Schlüssel)](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Weitere Informationen über Ansprüche und Autorisierung in WCF finden Sie unter [Managing Claims and Authorization with the Identity Model (Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell)](managing-claims-and-authorization-with-the-identity-model.md). Weitere Informationen zum Implementieren einer PKI finden Sie [unter Unternehmens-PKI mit Windows Server 2012 R2 Active Directory Certificate Services](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2).
+Digitale Zertifikate sind Teil einer *Public Key-Infrastruktur* (PKI). Dabei handelt es sich um ein System aus digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen zur Überprüfung und Authentifizierung der Gültigkeit aller beteiligten Parteien in einer elektronischen Transaktion unter Verwendung der Public Key-Kryptografie. Die Zertifikate werden von einer Zertifizierungsstelle ausgestellt, und jedes Zertifikat enthält eine Reihe von Feldern mit Daten, z.B. *Antragsteller* (die Entität, für die das Zertifikat ausgestellt wird), Gültigkeitsdatum (das Datum, bis zu dem das Zertifikat gültig ist), Aussteller (die Entität, von der das Zertifikat ausgestellt wurde) und öffentlicher Schlüssel. In WCF werden diese Eigenschaften als <xref:System.IdentityModel.Claims.Claim> verarbeitet, und jeder Anspruch wird weiter in zwei Typen unterteilt: Identität und Recht. Weitere Informationen zu X.509-Zertifikaten finden Sie unter [X.509 Public Key Certificates (X.509-Zertifikate mit öffentlichem Schlüssel)](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Weitere Informationen über Ansprüche und Autorisierung in WCF finden Sie unter [Managing Claims and Authorization with the Identity Model (Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell)](managing-claims-and-authorization-with-the-identity-model.md). Weitere Informationen zum Implementieren einer PKI finden Sie [unter Unternehmens-PKI mit Windows Server 2012 R2 Active Directory Certificate Services](/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2).
 
 Die zentrale Funktion eines Zertifikats ist die Authentifizierung der Identität des Besitzers des Zertifikats gegenüber anderen. Ein Zertifikat enthält den *öffentlichen Schlüssel* des Besitzers, während der Besitzer den privaten Schlüssel behält. Der öffentliche Schlüssel kann zum Verschlüsseln von Nachrichten verwendet werden, die an den Besitzer des Zertifikats gesendet werden. Nur der Besitzer hat Zugriff auf den privaten Schlüssel, sodass niemand anders diese Nachrichten entschlüsseln kann.
 
@@ -165,9 +165,9 @@ Sie können Zertifikate auch in der Konfiguration festlegen. Wenn Sie einen Dien
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Zuordnen eines Zertifikats zu einem Benutzerkonto
 
-IIS und Active Directory bieten u. a. die Möglichkeit, ein Zertifikat einem Windows-Benutzerkonto zuzuordnen. Weitere Informationen über das Feature finden Sie unter [Map certificates to user accounts (Zuordnen von Zertifikaten zu Benutzerkonten)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10)).
+IIS und Active Directory bieten u. a. die Möglichkeit, ein Zertifikat einem Windows-Benutzerkonto zuzuordnen. Weitere Informationen über das Feature finden Sie unter [Map certificates to user accounts (Zuordnen von Zertifikaten zu Benutzerkonten)](/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10)).
 
-Informationen zur Verwendung der Azure Directory-Zuweisung finden Sie unter [Mapping Client Certificates with Directory Service Mapping (Zuordnen von Clientzertifikaten mit der Verzeichnisdienstzuordnung)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10)).
+Informationen zur Verwendung der Azure Directory-Zuweisung finden Sie unter [Mapping Client Certificates with Directory Service Mapping (Zuordnen von Clientzertifikaten mit der Verzeichnisdienstzuordnung)](/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10)).
 
 Wenn diese Funktion aktiviert ist, können Sie die <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A>-Eigenschaft der <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>-Klasse auf `true` festlegen. In der Konfiguration können Sie das- `mapClientCertificateToWindowsAccount` Attribut des- [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) Elements auf festlegen `true` , wie im folgenden Code gezeigt.
 
@@ -189,7 +189,7 @@ Wenn Sie .NET Framework 3,5 oder höhere Versionen verwenden, stellt WCF sicher,
 
 Im ersten Release von WCF erfolgt die Zuordnung ohne auf die Domänenrichtlinie zurückzugreifen. Möglicherweise tritt daher bei älteren Anwendungen, die mit dem ersten Release ausgeführt werden konnten, ein Fehler auf, wenn die Zuordnung aktiviert ist und die Anforderungen der Domänenrichtlinie vom X.509-Zertifikat nicht erfüllt werden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>

@@ -2,41 +2,41 @@
 title: SQL Server Express-Sicherheit
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 55f1d141e50ed7afd851d7330cfaf2e3b6380f18
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 503b23602752375006b1a32a342af8a7789596b2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791686"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552725"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express-Sicherheit
-Microsoft SQL Server Express Edition (SQL Server Express) basiert auf Microsoft SQL Server und unterstützt die meisten Funktionen der Datenbank-Engine. Entbehrliche Funktionen und die Netzwerkkonnektivität sind standardmäßig deaktiviert. Auf diese Weise wird böswilligen Angreifern weniger Angriffsfläche geboten.  
+Microsoft SQL Server Express Edition (SQL Server Express) basiert auf Microsoft SQL Server und unterstützt den Großteil der Funktionen der Datenbank-Engine. Die Lösung ist so konzipiert, dass nicht erforderliche Features und Netzwerkkonnektivität standardmäßig deaktiviert sind. Dadurch wird die Angriffsfläche für böswillige Benutzer verkleinert.  
   
- SQL Server Express wird in der Regel als benannte Instanz installiert. Der Standardname der Instanz lautet `SQLExpress`. Eine benannte Instanz wird durch den Netzwerknamen des Computers und den Instanznamen identifiziert, den Sie beim Installieren angeben.  
+ SQL Server Express wird im Allgemeinen als benannte Instanz installiert. Der Standardname der Instanz lautet `SQLExpress`. Eine benannte Instanz wird anhand des Netzwerknamens des Computers und des Instanznamens, den Sie bei der Installation angeben, identifiziert.  
   
 ## <a name="network-access"></a>Netzwerkzugriff  
- Aus Sicherheitsgründen sind Netzwerkprotokolle in SQL Server Express standardmäßig deaktiviert. Dadurch werden Angriffe außenstehender Benutzer verhindert, die den Computer, der die SQL Server Express-Instanz hostet, gefährden könnten. Sie müssen die Netzwerkkonnektivität explizit aktivieren und den SQL Server-Browserdienst starten, um eine Verbindung mit einer SQL Server Express-Instanz auf einem anderen Computer herstellen zu können.  
+ Aus Sicherheitsgründen sind Netzwerkprotokolle in SQL Server Express standardmäßig deaktiviert. Dies verhindert Angriffe externer Benutzer, die den Computer, der die Instanz von SQL Server Express hostet, gefährden könnten. Sie müssen die Netzwerkkonnektivität explizit aktivieren und den SQL Server-Browser-Dienst starten, um von einem anderen Computer aus eine Verbindung mit einer SQL Server Express-Instanz herzustellen.  
   
- Nach Aktivierung der Netzwerkkonnektivität gelten für eine SQL Server Express-Instanz dieselben Sicherheitsanforderungen wie für die Instanzen anderer SQL Server-Editionen.  
+ Sobald die Netzwerkkonnektivität aktiviert ist, hat eine SQL Server Express-Instanz die gleichen Sicherheitsanforderungen wie die anderen Editionen von SQL Server.  
   
 ## <a name="user-instances"></a>Benutzerinstanzen  
- Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten SQL Server Express-Instanz generiert wird. Die Hauptaufgabe einer Benutzerinstanz besteht darin, Benutzern, die Windows mit einem Konto der untersten Berechtigungsebene (LUA) ausführen, für die SQL Server Express-Instanz auf ihrem lokalen Computer Systemadministratorrechte (`sysadmin`) einzuräumen. Benutzerinstanzen sind nicht für Benutzer gedacht, die bereits Administratorberechtigungen für ihren Computer besitzen.  
+ Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten Instanz von SQL Server Express generiert wird. Das Hauptziel einer Benutzerinstanz ist, Benutzern, die Windows unter einem Benutzerkonto mit den geringsten Rechten ausführen, Systemadministratorrechte (`sysadmin`) für die SQL Server Express-Instanz auf ihrem lokalen Computer zu erteilen. Benutzerinstanzen sind nicht für Benutzer gedacht, die auf ihren eigenen Computern Systemadministratoren sind.  
   
- Benutzerinstanzen werden im Namen eines Benutzers aus einer primären SQL Server- oder SQL Server Express-Instanz generiert. Sie werden als Benutzerprozesse im Windows-Sicherheitskontext des Benutzers und nicht als Dienst ausgeführt. SQL Server-Anmeldungen sind nicht zugelassen, es werden nur Windows-Anmeldungen unterstützt. Auf diese Weise wird verhindert, dass Software, die auf einer Benutzerinstanz ausgeführt wird, systemweite Änderungen vornimmt, für die der Benutzer gar keine Berechtigung besitzt. Benutzerinstanzen werden auch als untergeordnete oder Clientinstanzen bezeichnet. Mitunter wird für deren Bezeichnung auch die Abkürzung RANU ("run as normal user") verwendet.  
+ Eine Benutzerinstanz wird von einer primären Instanz von SQL Server oder SQL Server Express im Auftrag eines Benutzers generiert. Sie wird als Benutzerprozess unter dem Windows-Sicherheitskontext des Benutzers und nicht als Dienst ausgeführt. SQL Server-Anmeldungen sind nicht zulässig. Nur Windows-Anmeldungen werden unterstützt. Dadurch wird verhindert, dass Software, die in einer Benutzerinstanz ausgeführt wird, systemweite Änderungen vornimmt, für die der Benutzer keine Berechtigungen hat. Eine Benutzerinstanz ist auch als untergeordnete oder Clientinstanz bekannt und wird mitunter mit dem Akronym RANU (Run As Normal User, Als normaler Benutzer ausführen) abgekürzt.  
   
- Jede Benutzerinstanz ist von ihrer übergeordneten Instanz und von anderen Benutzerinstanzen isoliert, die auf demselben Computer ausgeführt werden. Auf Benutzerinstanzen installierte Datenbanken werden nur im Einzelbenutzermodus geöffnet, sodass immer nur ein Benutzer mit der Datenbank verbunden sein kann. Replikation, verteilte Abfragen und Remoteverbindungen sind für Benutzerinstanzen deaktiviert. Bei Verbindung mit einer Benutzerinstanz besitzen die Benutzer keine besonderen Rechte für die übergeordnete SQL Server Express-Instanz.  
+ Jede Benutzerinstanz ist von ihrer übergeordneten Instanz sowie von anderen Benutzerinstanzen isoliert, die auf demselben Computer ausgeführt werden. In Benutzerinstanzen installierte Datenbanken werden nur im Einzelbenutzermodus geöffnet. Mehrere Benutzer können sich nicht mit ihnen verbinden. Replikation, verteilte Abfragen und Remoteverbindungen sind für Benutzerinstanzen ebenfalls deaktiviert. Bei Verbindung mit einer Benutzerinstanz haben die Benutzer keine besonderen Berechtigungen für die übergeordnete SQL Server Express-Instanz.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Weitere Informationen zu SQL Server Express finden Sie in den folgenden Ressourcen:  
+ Weitere Informationen zu SQL Server Express finden Sie in den folgenden Ressourcen.  
   
 |||  
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition-Online Dokumentation](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Enthält die vollständige Dokumentation zu SQL Server 2005 Express Edition.|  
-|[Benutzer Instanzen für nicht Administratoren](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) in SQL Server-Onlinedokumentation|Beschreibt das Erstellen und Bereitstellen von Benutzerinstanzen.|  
-|[SQL Server Express-Benutzerinstanzen](sql-server-express-user-instances.md)|Beschreibt Benutzerinstanzfunktionen in einer ADO.NET-Anwendung. Enthält Informationen zum Aktivieren von Benutzerinstanzen, zum Herstellen einer Verbindung mit einer Benutzerinstanz über eine <xref:System.Data.SqlClient.SqlConnection>, zur Lebensdauer von Benutzerinstanzen und zu Benutzerinstanzszenarien.|  
+|[Microsoft SQL Server 2005 Express Edition-Onlinedokumentation](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Vollständige Dokumentation für SQL Server 2005 Express Edition.|  
+|[Benutzerinstanzen für Nichtadministratoren](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) in der SQL Server-Onlinedokumentation|Beschreibt die Erstellung und Bereitstellung von Benutzerinstanzen.|  
+|[SQL Server Express Benutzer Instanzen](sql-server-express-user-instances.md)|Beschreibt Benutzerinstanzfunktionen in einer ADO.NET-Anwendung. Bietet Informationen über das Aktivieren einer Benutzerinstanz, das Herstellen einer Verbindung mit einer Benutzerinstanz mithilfe von <xref:System.Data.SqlClient.SqlConnection>, die Lebensdauer der Benutzerinstanz und Szenarien mit Benutzerinstanzen.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server Security (SQL Server-Sicherheit)](sql-server-security.md)
-- [SQL Server Express-Benutzerinstanzen](sql-server-express-user-instances.md)
+- [SQL Server Sicherheit](sql-server-security.md)
+- [SQL Server Express Benutzer Instanzen](sql-server-express-user-instances.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

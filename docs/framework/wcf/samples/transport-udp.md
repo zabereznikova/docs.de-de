@@ -2,12 +2,12 @@
 title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 44e47dd2d291ffc27d1777a04b645d57984919cd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dcf2d9896ab7c95101e224521174b54c88ca3fc2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591435"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559002"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Das UDP-Transport Beispiel veranschaulicht, wie UDP-Unicast und Multicast als benutzerdefinierter Windows Communication Foundation (WCF)-Transport implementiert werden. Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF mithilfe des Channel-Frameworks und der folgenden bewährten WCF-Methoden beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Es enthält auch Member zum Klonen des `BindingElement` und Zurückgeben unseres Schemas (soap.udp).  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Hinzufügen von Metadatenunterstützung für ein Transportbindungselement  
- Um den Transport in ein Metadatensystem zu integrieren, muss dieser sowohl den Import als auch den Export von Richtlinien unterstützen. Dies ermöglicht es uns, Clients unserer Bindung über das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)zu generieren.  
+ Um den Transport in ein Metadatensystem zu integrieren, muss dieser sowohl den Import als auch den Export von Richtlinien unterstützen. Dies ermöglicht es uns, Clients unserer Bindung über das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)zu generieren.  
   
 ### <a name="adding-wsdl-support"></a>Hinzufügen von WSDL-Unterstützung  
  Das Transportbindungselement in einer Bindung ist für den Export und Import von Adressierungsinformationen in/zu Metadaten verantwortlich. Bei der Nutzung einer SOAP-Bindung sollte das Transportbindungselement ebenfalls einen korrekten Transport-URI in die Metadaten exportieren.  
@@ -185,7 +185,7 @@ if (soapBinding != null)
   
  Bei der Ausführung von "Svcutil.exe" gibt es zwei Optionen, um "Svcutil.exe" dazu zu bewegen, die WSDL-Importerweiterungen zu laden:  
   
-1. Zeigen Sie "Svcutil. exe" mithilfe von "/SvcutilConfig:" auf die Konfigurationsdatei \<file> .  
+1. Zeigen Sie Svcutil.exe mithilfe von/svcutilConfig auf unsere Konfigurationsdatei \<file> .  
   
 2. Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
   
@@ -247,7 +247,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Dann implementieren Sie `IPolicyImporterExtension` aus der registrierten Klasse (`UdpBindingElementImporter`). Prüfen Sie in `ImportPolicy()` die Assertionen im entsprechenden Namespace, verarbeiten Sie sie für die Generierung des Transports, und prüfen Sie, ob Multicast vorliegt. Entfernen Sie darüber hinaus die gehandhabten Assertionen aus der Liste der Bindungsassertionen. Erneut stehen bei der Ausführung von "Svcutil.exe" zwei Optionen für die Integration zur Verfügung:  
   
-1. Zeigen Sie "Svcutil. exe" mithilfe von "/SvcutilConfig:" auf die Konfigurationsdatei \<file> .  
+1. Zeigen Sie Svcutil.exe mithilfe von/svcutilConfig auf unsere Konfigurationsdatei \<file> .  
   
 2. Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Der UDP-Testdienst und der Client  
- Testcode für die Verwendung dieses Beispieltransports ist in den UdpTestService- und UdpTestClient-Verzeichnissen verfügbar. Der Dienstcode besteht aus zwei Tests: Ein Test richtet die Bindungen und Endpunkte über den Code ein und der andere über die Konfiguration. Beide Tests verwenden zwei Endpunkte. Ein Endpunkt verwendet `SampleUdpProfileBinding` , wobei [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) auf festgelegt ist `true` . Der andere Endpunkt verwendet eine benutzerdefinierte Bindung mit `UdpTransportBindingElement`. Dies entspricht der Verwendung `SampleUdpProfileBinding` von [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) , wobei auf festgelegt ist `false` . Beide Tests erstellen einen Dienst, fügen einen Endpunkt für jede Bindung hinzu, öffnen den Dienst und warten anschließend darauf, dass der Benutzer die EINGABETASTE drückt, bevor der Dienst beendet wird.  
+ Testcode für die Verwendung dieses Beispieltransports ist in den UdpTestService- und UdpTestClient-Verzeichnissen verfügbar. Der Dienstcode besteht aus zwei Tests: Ein Test richtet die Bindungen und Endpunkte über den Code ein und der andere über die Konfiguration. Beide Tests verwenden zwei Endpunkte. Ein Endpunkt verwendet `SampleUdpProfileBinding` , wobei [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) auf festgelegt ist `true` . Der andere Endpunkt verwendet eine benutzerdefinierte Bindung mit `UdpTransportBindingElement`. Dies entspricht der Verwendung `SampleUdpProfileBinding` von [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) , wobei auf festgelegt ist `false` . Beide Tests erstellen einen Dienst, fügen einen Endpunkt für jede Bindung hinzu, öffnen den Dienst und warten anschließend darauf, dass der Benutzer die EINGABETASTE drückt, bevor der Dienst beendet wird.  
   
  Wenn Sie die Testanwendung für den Dienst starten, sollte folgende Ausgabe angezeigt werden:  
   
