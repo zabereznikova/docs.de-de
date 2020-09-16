@@ -114,9 +114,9 @@
 - name: Referenz
   items:
     - name: ML.NET-API-Referenz
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+      href: ../../api/index.md?view=ml-dotnet
     - name: ML.NET-API-Vorschau – API-Referenz
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+      href: ../../api/index.md?view=ml-dotnet-preview
     - name: CLI-Referenz
       href: reference/ml-net-cli-reference.md
 - name: Ressourcen
