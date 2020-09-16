@@ -256,7 +256,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
  LINQ to SQL unterstützt keine anderen Typmappings für diese Typen.  Weitere Informationen finden Sie unter [Lauf Zeit Verhaltens-Matrix für Typzuordnung](#BehaviorMatrix).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Attributbasiertes Zuordnen](attribute-based-mapping.md)
 - [External Mapping (Externe Zuordnung)](external-mapping.md)

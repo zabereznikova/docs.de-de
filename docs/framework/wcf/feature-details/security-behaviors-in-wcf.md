@@ -2,12 +2,12 @@
 title: Sicherheitsverhalten in WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: b25d476e9c9b4a70834274c6970dad1b056cecb9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f15a5aec2f5da89e4069deec946cc20b54f414e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595205"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554064"
 ---
 # <a name="security-behaviors-in-wcf"></a>Sicherheitsverhalten in WCF
 In Windows Communication Foundation (WCF) ändern Verhalten das Laufzeitverhalten auf Dienst Ebene oder auf Endpunkt Ebene. (Weitere Informationen zu Verhaltensweisen im Allgemeinen finden Sie unter [angeben des Dienst Lauf Zeit Verhaltens](../specifying-service-run-time-behavior.md).) Mithilfe von *Sicherheits Verhaltensweisen* können Anmelde Informationen, Authentifizierungs-, Autorisierungs-und Überwachungs Protokolle gesteuert werden. Sie können Verhalten entweder mittels Programmierung oder mittels Konfiguration verwenden. In diesem Thema wird die Konfiguration der folgenden, auf Sicherheitsfunktionen bezogenen Verhalten erläutert:  
@@ -55,10 +55,10 @@ In Windows Communication Foundation (WCF) ändern Verhalten das Laufzeitverhalte
   
  Weitere Informationen zum Verwenden des-Elements finden Sie unter Gewusst [wie: Angeben von Client](../how-to-specify-client-credential-values.md)Anmelde Informations Werten.  
   
-### <a name="certificate-of-clientcertificate-element"></a>\<certificate>of- \<clientCertificate> Element  
+### <a name="certificate-of-clientcertificate-element"></a>\<certificate> of- \<clientCertificate> Element  
  Verwenden [\<certificate>](../../configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) Sie das-Element, wenn der Dienst über das Zertifikat des Clients im Voraus verfügen muss, um sicher mit dem Client zu kommunizieren. Dies ist bei der Duplexkommunikation der Fall. Bei der üblicheren Kommunikation mit Anforderung und Antwort fügt der Client das Zertifikat in die Anforderung ein, das dann wiederum vom Dienst zum Schutz seiner Antwort an den Client verwendet wird. Bei der Duplexkommunikation gibt es keine Anforderungen und Antworten. Der Dienst kann das Zertifikat des Clients nicht aus der Kommunikation ableiten. Daher muss der Dienst bereits im Voraus über das Clientzertifikat verfügen, um seine Nachricht an den Client schützen zu können. Sie müssen das Zertifikat des Clients in einem Out-of-Band-Verfahren beziehen und das Zertifikat mit diesem Element angeben. Weitere Informationen zu Duplex Diensten finden Sie unter Gewusst [wie: Erstellen eines Duplex Vertrags](how-to-create-a-duplex-contract.md).  
   
-### <a name="authentication-of-clientcertificate-element"></a>\<authentication>of- \<clientCertificate> Element  
+### <a name="authentication-of-clientcertificate-element"></a>\<authentication> of- \<clientCertificate> Element  
  Mit dem- [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) Element können Sie die Art und Weise anpassen, wie Clients authentifiziert werden. Sie können als Wert für das `CertificateValidationMode`-Attribut `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` oder `Custom` festlegen. Standardmäßig ist die-Ebene auf festgelegt `ChainTrust` , wodurch angegeben wird, dass jedes Zertifikat in einer Hierarchie von Zertifikaten gefunden werden *root authority* muss, die in eine Stamm Zertifizierungsstelle am Anfang der Kette gelangen. Dies ist der sicherste Modus. Sie können auch den Wert `PeerOrChainTrust` verwenden, der vorgibt, dass neben den Zertifikaten in einer Vertrauenskette auch selbst ausgestellte Zertifikate (Peervertrauen) akzeptiert werden. Sie können diesen Wert beim Entwickeln und Debuggen von Clients und Diensten verwenden, da selbst ausgestellte Zertifikate nicht von einer vertrauenswürdigen Zertifizierungsstelle bezogen werden müssen. Verwenden Sie beim Bereitstellen eines Clients jedoch den Wert `ChainTrust`. Sie können den Wert auch auf `Custom` setzen. Wenn Sie den Wert `Custom` verwenden, müssen Sie für das `CustomCertificateValidatorType`-Attribut zudem ein Assembly und einen Typ, mit dem das Zertifikat überprüft wird, festlegen. Wenn Sie Ihre eigene Überprüfung erstellen möchten, müssen Sie die abstrakte <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse vererben.  
   
 ### <a name="issuedtokenauthentication-element"></a>\<issuedTokenAuthentication>-Element  
@@ -119,7 +119,7 @@ In Windows Communication Foundation (WCF) ändern Verhalten das Laufzeitverhalte
  Legen Sie mit diesem Element das Zertifikat fest, mit dem der Client authentifiziert wird. Weitere Informationen finden Sie unter Gewusst [wie: Angeben von Client](../how-to-specify-client-credential-values.md)Anmelde Informations Werten.  
   
 #### \<httpDigest>  
- Diese Funktion muss mit Active Directory unter Windows und unter IIS (Internet Information Services) aktiviert werden. Weitere Informationen finden Sie unter [Digest-Authentifizierung in IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
+ Diese Funktion muss mit Active Directory unter Windows und unter IIS (Internet Information Services) aktiviert werden. Weitere Informationen finden Sie unter [Digest-Authentifizierung in IIS 6,0](/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken>-Element  
  Die [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) enthält die Elemente, die zum Konfigurieren eines lokalen Ausstellers von Token oder Verhalten verwendet werden, die mit einem Sicherheitstokendienst verwendet werden. Anweisungen zum Konfigurieren eines Clients für die Verwendung eines lokalen Ausstellers finden Sie unter Vorgehens [Weise: Konfigurieren eines lokalen Ausstellers](how-to-configure-a-local-issuer.md).  
@@ -221,7 +221,7 @@ In Windows Communication Foundation (WCF) ändern Verhalten das Laufzeitverhalte
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Auditing](auditing-security-events.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Überwachung](auditing-security-events.md)
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

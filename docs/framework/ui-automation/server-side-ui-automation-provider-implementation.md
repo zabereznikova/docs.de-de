@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ea1b5e668e29d854233d4dde4c0e6152d591da97
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: ee9fe5b3180abcc9ecbc4515e0af1e1c4b2e8b87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903895"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555431"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 
@@ -25,7 +25,7 @@ Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nich
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>Überlegungen zur Sicherheit
+## <a name="security-considerations"></a>Sicherheitsüberlegungen
 
 Anbieter sollten so erstellt werden, dass sie in einer teilweise vertrauenswürdigen Umgebung funktionieren können. Da UIAutomationClient.dll nicht für die Ausführung mit teilweiser Vertrauenswürdigkeit konfiguriert ist, sollte der Anbietercode nicht auf diese Assembly verweisen. Wenn dies der Fall ist, kann der Code in einer voll vertrauenswürdigen Umgebung ausgeführt werden, während in einer teilweise vertrauenswürdigen Umgebung Fehler auftreten.
 
@@ -35,7 +35,7 @@ Verwenden Sie insbesondere keine Felder von Klassen in UIAutomationClient.dll, z
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Anbieterimplementierung durch Windows Presentation Foundation-Elemente
 
-Weitere Informationen zu diesem Thema finden Sie unter [Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements](../wpf/controls/ui-automation-of-a-wpf-custom-control.md).
+Weitere Informationen zu diesem Thema finden Sie unter [Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements](/dotnet/desktop/wpf/controls/ui-automation-of-a-wpf-custom-control).
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 

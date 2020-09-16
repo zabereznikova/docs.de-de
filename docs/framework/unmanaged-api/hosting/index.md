@@ -6,12 +6,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], hosting
 - hosting [.NET Framework], using the unmanaged API
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
-ms.openlocfilehash: e6430e16de39b4acecf55d855785503ff19673ec
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 550b663ec7fc41309c000d7c616d94c846b0cb40
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842308"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555691"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hosting (Referenz zur nicht verwalteten API)
 Die Hosting-API ermöglicht, dass nicht verwaltete Hosts die CLR (Common Language Runtime) in ihre Anwendungen integrieren können.  
@@ -33,5 +33,5 @@ Die Hosting-API ermöglicht, dass nicht verwaltete Hosts die CLR (Common Languag
  Beschreibt die nicht verwalteten Strukturen, die die Hosting-API verwendet.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Laufzeithosts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
+ [Laufzeithosts](/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
  Beschreibt die in .NET Framework enthaltenen Laufzeithosts.

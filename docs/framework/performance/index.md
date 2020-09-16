@@ -6,12 +6,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: ee8260056bd87dfc66d96e394f9b93bb9427afd8
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 50ba2f51ea2fb935c2a5db27ad6249e87cb86dc7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309754"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554657"
 ---
 # <a name="net-framework-performance"></a>.NET Framework-Leistung
 Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leistungsorientiert entwerfen und planen, wie Sie jede andere Funktion der App entwerfen würden. Sie können die von Microsoft bereitgestellten Tools verwenden, um die Leistung der App zu messen und gegebenenfalls Verbesserungen der Arbeitsspeichernutzung, des Codedurchsatzes und der Reaktionsfähigkeit vorzunehmen. In diesem Thema werden die von Microsoft bereitgestellten Leistungsanalysetools aufgelistet sowie Links zu anderen Themen bereitgestellt, die die Leistung für bestimmte Bereiche der App-Entwicklung behandeln.  
@@ -32,8 +32,8 @@ Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leist
 |Tool|BESCHREIBUNG|  
 |----------|-----------------|  
 |Visual Studio-Leistungsanalyse|Verwenden Sie dieses Tool, um die CPU-Auslastung durch die .NET Framework-Apps zu analysieren, die auf Computern bereitgestellt werden, auf denen das Betriebssystem Windows ausgeführt wird.<br /><br /> Dieses Tool ist in Visual Studio im Menü **Debuggen** verfügbar, nachdem Sie ein Projekt geöffnet haben. Weitere Informationen finden Sie unter [Leistungs-Explorer](/visualstudio/profiling/performance-explorer). **Hinweis:** Verwenden Sie Windows Phone Application Analysis (siehe folgende Zeile), wenn Sie für Windows Phone entwickeln.|  
-|Windows Phone Application Analysis|Verwenden Sie dieses Tool, um die CPU und den Arbeitsspeicher, die Netzwerkdatenübertragungsrate, die App-Reaktionsfähigkeit und den Akkuenergieverbrauch in Windows Phone-Apps zu analysieren.<br /><br /> Dieses Tool ist in Visual Studio für ein Windows Phone-Projekt im Menü **Debuggen** verfügbar, nachdem Sie das [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) installiert haben. Weitere Informationen finden Sie unter [App-Profilerstellung für Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Verwenden Sie dieses Tool, um Leistungsprobleme bezüglich der CPU und des Arbeitsspeichers zu identifizieren. Dieses Tool verwendet die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) und CLR-Profilerstellungs-APIs für erweiterte Überprüfungen des Arbeitsspeichers und der CPU sowie zum Bereitstellen von Informationen zur Garbage Collection und zur JIT-Kompilierung. Weitere Informationen zur Verwendung von PerfView finden Sie im Tutorial und in den Hilfedateien, die in der App enthalten sind, in [Channel 9-Videotutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) und in [Blogbeiträgen](https://docs.microsoft.com/archive/blogs/vancem/).<br /><br /> Informationen zu arbeitsspeicherspezifischen Problemen finden Sie unter [Using PerfView for Memory Investigations (Verwenden von PerfView für die Untersuchung des Arbeitsspeichers)](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
+|Windows Phone Application Analysis|Verwenden Sie dieses Tool, um die CPU und den Arbeitsspeicher, die Netzwerkdatenübertragungsrate, die App-Reaktionsfähigkeit und den Akkuenergieverbrauch in Windows Phone-Apps zu analysieren.<br /><br /> Dieses Tool ist in Visual Studio für ein Windows Phone-Projekt im Menü **Debuggen** verfügbar, nachdem Sie das [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) installiert haben. Weitere Informationen finden Sie unter [App-Profilerstellung für Windows Phone 8](/previous-versions/windows/apps/jj215908(v=vs.105)).|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Verwenden Sie dieses Tool, um Leistungsprobleme bezüglich der CPU und des Arbeitsspeichers zu identifizieren. Dieses Tool verwendet die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) und CLR-Profilerstellungs-APIs für erweiterte Überprüfungen des Arbeitsspeichers und der CPU sowie zum Bereitstellen von Informationen zur Garbage Collection und zur JIT-Kompilierung. Weitere Informationen zur Verwendung von PerfView finden Sie im Tutorial und in den Hilfedateien, die in der App enthalten sind, in [Channel 9-Videotutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) und in [Blogbeiträgen](/archive/blogs/vancem/).<br /><br /> Informationen zu arbeitsspeicherspezifischen Problemen finden Sie unter [Using PerfView for Memory Investigations (Verwenden von PerfView für die Untersuchung des Arbeitsspeichers)](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Verwenden Sie dieses Tool, um die Gesamtsystemleistung zu bestimmen, beispielsweise die Arbeitsspeicher- und Speichernutzung der App, wenn mehrere Apps auf demselben Computer ausgeführt werden. Dieses Tool ist im Download Center als Teil des Windows Assessment and Deployment Kit (ADK) für Windows 8 verfügbar. Weitere Informationen finden Sie unter [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|
   
 ### <a name="event-tracing-for-windows-etw"></a>Ereignisablaufverfolgung für Windows (ETW)  
@@ -44,10 +44,10 @@ Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leist
   
 |App-Typ|Siehe|  
 |--------------|---------|  
-|.NET Framework-Apps für alle Plattformen|[Garbage Collection und Leistung](../../standard/garbage-collection/performance.md)<br /><br /> [Leistungstipps](performance-tips.md)|  
-|Windows 8. x Store-Apps, die in C++, c# und Visual Basic geschrieben sind|[Performance best practices for Windows Store apps using C++, C#, and Visual Basic (Bewährte Methoden zur Leistungssteigerung für Windows Store-Apps mit C++, C# und Visual Basic)](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
-|Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
-|ASP.NET|[ASP.NET Performance Overview (Die Leistung von ASP.NET im Überblick)](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
+|.NET Framework-Apps für alle Plattformen|[Garbage Collection und Leistung](../../standard/garbage-collection/performance.md)<br /><br /> [Tipps zur Leistungssteigerung](performance-tips.md)|  
+|Windows 8. x Store-Apps, die in C++, c# und Visual Basic geschrieben sind|[Performance best practices for Windows Store apps using C++, C#, and Visual Basic (Bewährte Methoden zur Leistungssteigerung für Windows Store-Apps mit C++, C# und Visual Basic)](/previous-versions/windows/apps/hh750313(v=win.10))|  
+|Windows Presentation Foundation (WPF)|[WPF Performance Suite](/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
+|ASP.NET|[ASP.NET Performance Overview (Die Leistung von ASP.NET im Überblick)](/previous-versions/aspnet/cc668225(v=vs.100))|  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   

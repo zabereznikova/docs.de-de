@@ -2,12 +2,12 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465155"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537404"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -106,23 +106,23 @@ LINQ ermöglicht Ihnen Code zu schreiben, mit dem Sie Datenquellen abfragen kön
 - [Verwenden von Lambdaausdrücken in einer Abfrage](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
 - [Verwenden von `var` in Abfrageausdrücken](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 - [Zurückgeben von Teilmengen von Elementeigenschaften aus einer Abfrage](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).
-- [Schreiben von Abfragen mit komplexer Filterung](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md).
-- [Sortieren von Elementen einer Datenquelle](../programming-guide/concepts/linq/how-to-sort-elements.md).
-- [Sortieren von Elementen nach mehreren Schlüsseln](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md).
-- [Steuern des Typs einer Projektion](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md).
+- [Schreiben von Abfragen mit komplexer Filterung](../../standard/linq/write-queries-complex-filtering.md).
+- [Sortieren von Elementen einer Datenquelle](../../standard/linq/sort-elements.md).
+- [Sortieren von Elementen nach mehreren Schlüsseln](../../standard/linq/sort-elements-multiple-keys.md).
+- [Steuern des Typs einer Projektion](../../standard/linq/control-type-projection.md).
 - [Zählen der Vorkommnisse eines Werts in einer Quellsequenz](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
-- [Berechnen von Zwischenwerten](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md).
+- [Berechnen von Zwischenwerten](../../standard/linq/calculate-intermediate-values.md).
 - [Zusammenführen von Daten aus mehreren Quellen](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md).
 - [Suchen der Unterschiedsmenge zwischen zwei Sequenzen](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md).
-- [Debuggen von leeren Abfrageergebnissen](../programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md).
+- [Debuggen von leeren Abfrageergebnissen](../../standard/linq/debug-empty-query-results-sets.md).
 - [Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen](../programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md).
 
 ## <a name="multiple-threads-and-async-processing"></a>Mehrere Threads und asynchrone Verarbeitung
 
 Moderne Programme verwenden häufig asynchrone Vorgänge. In den folgenden Artikeln erfahren Sie, wie Sie mit diesen Methoden arbeiten.
 
-- [Verbessern der asynchronen Leistung mit `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
-- [Paralleles Erstellen mehrerer Webanforderungen mit `async` und `await`](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
+- [Verbessern der asynchronen Leistung mit `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/index.md).
+- [Paralleles Erstellen mehrerer Webanforderungen mit `async` und `await`](../programming-guide/concepts/async/index.md).
 - [Verwenden von Threadpools](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Befehlszeilenargumente für Ihr Programm

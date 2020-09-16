@@ -3,12 +3,12 @@ title: Windows Workflow Foundation-Funktionsdetails
 description: In diesem Artikel werden neue Features beschrieben, die von .NET Framework 4 Windows Workflow Foundation und Szenarien, in denen die Features nützlich sein können, hinzugefügt werden.
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: fb490b3dd368710bf2ed98f7c53b7b184fa15b0b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419953"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554605"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 
@@ -16,7 +16,7 @@ ms.locfileid: "83419953"
 
 ## <a name="messaging-activities"></a>Messagingaktivitäten
 
-Die Messaging Aktivitäten ( <xref:System.ServiceModel.Activities.Receive> , <xref:System.ServiceModel.Activities.SendReply> , <xref:System.ServiceModel.Activities.Send> , <xref:System.ServiceModel.Activities.ReceiveReply> ) werden verwendet, um WCF-Nachrichten aus dem Workflow zu senden und zu empfangen. <xref:System.ServiceModel.Activities.Receive>-und- <xref:System.ServiceModel.Activities.SendReply> Aktivitäten werden verwendet, um einen Windows Communication Foundation (WCF)-Dienst Vorgang zu bilden, der wie Standard-WCF-Webdienste über WSDL verfügbar gemacht wird. <xref:System.ServiceModel.Activities.Send>und <xref:System.ServiceModel.Activities.ReceiveReply> werden für die Nutzung eines Webdiensts ähnlich wie für WCF verwendet <xref:System.ServiceModel.ChannelFactory> . eine **Dienstverweis hinzufügen** -Funktion ist auch für Workflow Foundation vorhanden, die vorkonfigurierte Aktivitäten generiert.
+Die Messaging Aktivitäten ( <xref:System.ServiceModel.Activities.Receive> , <xref:System.ServiceModel.Activities.SendReply> , <xref:System.ServiceModel.Activities.Send> , <xref:System.ServiceModel.Activities.ReceiveReply> ) werden verwendet, um WCF-Nachrichten aus dem Workflow zu senden und zu empfangen. <xref:System.ServiceModel.Activities.Receive> -und- <xref:System.ServiceModel.Activities.SendReply> Aktivitäten werden verwendet, um einen Windows Communication Foundation (WCF)-Dienst Vorgang zu bilden, der wie Standard-WCF-Webdienste über WSDL verfügbar gemacht wird. <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.ReceiveReply> werden für die Nutzung eines Webdiensts ähnlich wie für WCF verwendet <xref:System.ServiceModel.ChannelFactory> . eine **Dienstverweis hinzufügen** -Funktion ist auch für Workflow Foundation vorhanden, die vorkonfigurierte Aktivitäten generiert.
 
 ### <a name="getting-started-with-messaging-activities"></a>Erste Schritte mit Messagingaktivitäten
 
@@ -54,7 +54,7 @@ Der <xref:System.ServiceModel.WorkflowServiceHost> ist der vorkonfigurierte Work
 
 Ein Best Price Finder-Dienst ruft bei mehreren Fluggesellschaften Dienste auf, um den besten Ticketpreis für eine bestimmte Route zu ermitteln. Das Implementieren dieses Szenarios erfordert, dass Sie den Workflow in hosten <xref:System.ServiceModel.WorkflowServiceHost> . Außerdem werden die Nachrichten Aktivitäten verwendet, um die Preis Anforderung zu empfangen, die Preise von den Back-End-Diensten abzurufen und auf die Preis Anforderung mit dem besten Preis zu antworten.
 
-## <a name="correlation"></a>Correlation
+## <a name="correlation"></a>Korrelation
 
 Eine Korrelation kann wie folgt definiert werden:
 
@@ -86,7 +86,7 @@ Ein Auftrags Verarbeitungs Workflow wird verwendet, um die Erstellung neuer Auft
 
 Das WCF-Konfigurations Schema ist komplex und bietet Benutzern viele schwer zu suchende Features. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] konzentrieren wir uns auf die Unterstützung von WCF-Benutzern bei der Konfiguration Ihrer Dienste mit den folgenden Features:
 
-- Es ist keine explizite Einzeldienstkonfiguration mehr notwendig. Wenn Sie keine \< Dienst> Elemente für den Dienst konfigurieren und der Dienst keinen Endpunkt Programm gesteuert definiert, wird dem Dienst automatisch ein Satz von Endpunkten hinzugefügt, einer pro Dienst Basisadresse und pro Vertrag, der vom Dienst implementiert wird.
+- Es ist keine explizite Einzeldienstkonfiguration mehr notwendig. Wenn Sie keine \<service> Elemente für den Dienst konfigurieren und der Dienst keinen Endpunkt Programm gesteuert definiert, wird dem Dienst automatisch ein Satz von Endpunkten hinzugefügt, einer pro Dienst Basisadresse und pro Vertrag, der vom Dienst implementiert wird.
 
 - Der Benutzer kann Standardwerte für WCF-Bindungen und -Verhalten definieren, die ohne explizite Konfiguration auf Dienste angewendet werden.
 
@@ -96,15 +96,15 @@ Das WCF-Konfigurations Schema ist komplex und bietet Benutzern viele schwer zu s
 
 ### <a name="getting-started"></a>Erste Schritte
 
-- [Entwicklerhandbuch für WCF 4.0](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
+- [Entwicklerhandbuch für WCF 4.0](/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
 - [Konfigurationskanalfactory](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
 - [Standardendpunktelement](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Verbesserungen der Dienst Konfiguration in .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
+- [Verbesserungen der Dienst Konfiguration in .NET Framework 4](/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [Häufiger Benutzerfehler in .NET 4: Falsche Schreibweise des WF/WCF-Dienstkonfigurationsnamens](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
+- [Häufiger Benutzerfehler in .NET 4: Falsche Schreibweise des WF/WCF-Dienstkonfigurationsnamens](/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>Vereinfachte Konfigurationsszenarien
 
@@ -128,7 +128,7 @@ Der [DataContractResolver](../wcf/samples/datacontractresolver.md) löst diese P
 
 - [Dokumentation zur Datenvertragsresolver-API](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Einführung in den Datenvertragsresolver](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
+- [Einführung in den Datenvertragsresolver](/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - Beispiele:
 
@@ -206,7 +206,7 @@ Verfahrensaktivitäten stellen einen Mechanismus bereit, um sequenzielle Ablaufs
 
   - [Parallel-Aktivitätsdesigner](/visualstudio/workflow-designer/parallel-activity-designer)
 
-  - [ParallelForEach \< T> Aktivitäts Designer](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - \<T>ParallelForEach[-Aktivitätsdesigners](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Verfahrensaktivitätsszenarien
 
@@ -288,7 +288,7 @@ Der Routing Dienst in .NET 4 ist so konzipiert, dass diese Probleme leichter gel
 
 2. Beispiele: [Routing Dienste &#91;WCF-Beispiele&#93;](../wcf/samples/routing-services.md)
 
-3. Blog: [Routing Regeln!](https://docs.microsoft.com/archive/blogs/RoutingRules/)
+3. Blog: [Routing Regeln!](/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Routingszenarien
 
@@ -328,7 +328,7 @@ Ein Entwickler möchte Endpunkte nicht hartcodieren, da noch nicht feststeht, wa
 
 ## <a name="tracking"></a>Nachverfolgung
 
-Die Workflow Nachverfolgung bietet Einblicke in die Ausführung einer Workflow Instanz. Die nach Verfolgungs Ereignisse werden von einem Workflow auf der Workflowinstanzebene ausgegeben, und wenn Aktivitäten innerhalb des Workflows ausgeführt werden. Dem Workflowhost muss eine Workflownachverfolgungskomponente hinzugefügt werden, um Nachverfolgungsdatensätze zu abonnieren. Die Nachverfolgungsdatensätze werden mit einem Nachverfolgungsprofil gefiltert. Der .NET Framework stellt einen etw-nach Verfolgungs Teilnehmer (Ereignis Ablauf Verfolgung für Windows) bereit, und in der Datei Machine. config ist ein einfaches Profil installiert.
+Die Workflow Nachverfolgung bietet Einblicke in die Ausführung einer Workflow Instanz. Die nach Verfolgungs Ereignisse werden von einem Workflow auf der Workflowinstanzebene ausgegeben, und wenn Aktivitäten innerhalb des Workflows ausgeführt werden. Dem Workflowhost muss eine Workflownachverfolgungskomponente hinzugefügt werden, um Nachverfolgungsdatensätze zu abonnieren. Die Nachverfolgungsdatensätze werden mit einem Nachverfolgungsprofil gefiltert. Der .NET Framework stellt einen etw-nach Verfolgungs Teilnehmer (Ereignis Ablauf Verfolgung für Windows) bereit, und in der machine.config-Datei wird ein Basisprofil installiert.
 
 ### <a name="getting-started"></a>Erste Schritte
 

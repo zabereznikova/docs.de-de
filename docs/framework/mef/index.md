@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-ms.openlocfilehash: 00ed48f2202d4c04039ac264b1fe71474a02432e
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: b743a26dd401e7015c588be2a197551aa891a687
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281250"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555574"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -62,7 +62,7 @@ In früheren Versionen von .NET Framework wurde das Managed Add-in Framework (MA
 
 Die einfachste Möglichkeit zur Entdeckung der Möglichkeiten von MEF ist das Erstellen einer einfachen MEF-Anwendung. In diesem Beispiel erstellen Sie einen einfachen Rechner namens SimpleCalculator. Das Ziel von SimpleCalculator ist die Erstellung einer Konsolenanwendung, die grundlegende arithmetische Befehle wie "5+3" oder "6-2" verarbeiten kann und korrekte Ergebnisse liefert. Mit MEF können mühelos neue Operatoren hinzugefügt werden, ohne dabei den Anwendungscode ändern zu müssen.
 
-Der vollständige Code für dieses Beispiel kann unter [SimpleCalculator-Beispiel (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/) heruntergeladen werden.
+Der vollständige Code für dieses Beispiel kann unter [SimpleCalculator-Beispiel (Visual Basic)](/samples/dotnet/samples/simple-calculator-vb/) heruntergeladen werden.
 
 > [!NOTE]
 > Mit SimpleCalculator sollen die Konzepte und die Syntax des MEF veranschaulicht werden. Auf ein realistisches Verwendungsszenario wird in diesem Fall kein Wert gelegt. Viele der Anwendungen, die am meisten von der Leistungsfähigkeit von MEF profitieren würden, sind komplexer als SimpleCalculator. Ausführlichere Beispiele finden Sie unter [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) auf GitHub.
@@ -484,6 +484,6 @@ In diesem Thema wurden die grundlegenden Konzepte des MEF behandelt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Der vollständige Code für dieses Beispiel kann unter [SimpleCalculator-Beispiel (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/) heruntergeladen werden.
+Der vollständige Code für dieses Beispiel kann unter [SimpleCalculator-Beispiel (Visual Basic)](/samples/dotnet/samples/simple-calculator-vb/) heruntergeladen werden.
 
  Weitere Informationen und Codebeispiele finden Sie unter [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef). Eine Liste der MEF-Typen finden Sie unter dem <xref:System.ComponentModel.Composition?displayProperty=nameWithType>-Namespace.
