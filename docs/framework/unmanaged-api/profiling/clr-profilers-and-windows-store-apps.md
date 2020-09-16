@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 6330a4c2733729da264065d1eec8c3c9eaf9f05c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501026"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553355"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR-Profiler und Windows Store-Apps
 
@@ -25,7 +25,7 @@ In diesem Thema wird erläutert, was Sie beim Schreiben von Diagnosetools berüc
 
 ## <a name="introduction"></a>Einführung
 
-Wenn Sie den Einführungs Absatz überschreiten, sind Sie mit der CLR-Profilerstellungs-API vertraut. Sie haben bereits ein Diagnosetool geschrieben, das gut für verwaltete Desktop Anwendungen geeignet ist. Nun sind Sie neugierig, was Sie tun müssen, damit Ihr Tool mit einer verwalteten Windows Store-App funktioniert. Vielleicht haben Sie bereits versucht, dies zu tun, und haben festgestellt, dass es sich nicht um eine einfache Aufgabe handelt. Tatsächlich gibt es eine Reihe von Überlegungen, die für alle Entwickler von Tools möglicherweise nicht offensichtlich sind. Beispiel:
+Wenn Sie den Einführungs Absatz überschreiten, sind Sie mit der CLR-Profilerstellungs-API vertraut. Sie haben bereits ein Diagnosetool geschrieben, das gut für verwaltete Desktop Anwendungen geeignet ist. Nun sind Sie neugierig, was Sie tun müssen, damit Ihr Tool mit einer verwalteten Windows Store-App funktioniert. Vielleicht haben Sie bereits versucht, dies zu tun, und haben festgestellt, dass es sich nicht um eine einfache Aufgabe handelt. Tatsächlich gibt es eine Reihe von Überlegungen, die für alle Entwickler von Tools möglicherweise nicht offensichtlich sind. Zum Beispiel:
 
 - Windows Store-Apps werden in einem Kontext mit stark reduzierten Berechtigungen ausgeführt.
 
@@ -76,7 +76,7 @@ Windows RT-Geräte sind recht gesperrt. Profiler von Drittanbietern können einf
 
 In einer Reihe von Szenarios, die in den folgenden Abschnitten erläutert werden, muss ihre Profiler UI Desktop-Anwendung einige neue Windows-Runtime-APIs nutzen. Sie sollten sich mit der Dokumentation vertraut machen, um zu verstehen, welche Windows-Runtime APIs von Desktop Anwendungen verwendet werden können und ob Ihr Verhalten bei der Aufruf von Desktop Anwendungen und Windows Store-Apps unterschiedlich ist.
 
-Wenn die Profiler-Benutzeroberfläche in verwaltetem Code geschrieben ist, müssen Sie einige Schritte ausführen, um die Nutzung dieser Windows-Runtime APIs zu erleichtern. Weitere Informationen finden Sie im Artikel [verwaltete Desktop-Apps und Windows-Runtime](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) .
+Wenn die Profiler-Benutzeroberfläche in verwaltetem Code geschrieben ist, müssen Sie einige Schritte ausführen, um die Nutzung dieser Windows-Runtime APIs zu erleichtern. Weitere Informationen finden Sie im Artikel [verwaltete Desktop-Apps und Windows-Runtime](/previous-versions/windows/apps/jj856306(v=win.10)) .
 
 ## <a name="loading-the-profiler-dll"></a>Laden der Profiler-DLL
 
@@ -98,7 +98,7 @@ Wenn Windows versucht, die Profiler-DLL zu laden, wird überprüft, ob die Profi
 
 - Stellen Sie sicher, dass die Profiler-DLL signiert ist.
 
-- Teilen Sie dem Benutzer mit, dass vor der Verwendung des Tools eine Entwicklerlizenz auf dem Windows 8-Computer installiert werden muss. Dies kann automatisch über Visual Studio oder manuell über eine Eingabeaufforderung erfolgen. Weitere Informationen finden Sie unter [erwerben einer Entwicklerlizenz](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
+- Teilen Sie dem Benutzer mit, dass vor der Verwendung des Tools eine Entwicklerlizenz auf dem Windows 8-Computer installiert werden muss. Dies kann automatisch über Visual Studio oder manuell über eine Eingabeaufforderung erfolgen. Weitere Informationen finden Sie unter [erwerben einer Entwicklerlizenz](/previous-versions/windows/apps/hh974578(v=win.10)).
 
 **Dateisystem Berechtigungen**
 
@@ -122,7 +122,7 @@ Wenn Prozess a versucht, den Windows Store-App-Prozess B zu erzeugen, muss Proze
 
 Zuerst sollten Sie Ihren Profiler-Benutzer auffordern, welche Windows Store-App gestartet werden soll. Bei Desktop-Apps wird möglicherweise ein Dialogfeld zum Durchsuchen von Dateien angezeigt, und der Benutzer würde eine exe-Datei suchen und auswählen. Windows Store-Apps sind jedoch anders, und die Verwendung eines Dialog Felds zum Durchsuchen ist nicht sinnvoll. Stattdessen ist es besser, dem Benutzer eine Liste der Windows Store-Apps anzuzeigen, die für diesen Benutzer installiert wurden.
 
-Sie können die- <xref:Windows.Management.Deployment.PackageManager> Klasse verwenden, um diese Liste zu generieren. `PackageManager`ist eine Windows-Runtime-Klasse, die für Desktop-Apps verfügbar ist und tatsächlich *nur* für Desktop-Apps verfügbar ist.
+Sie können die- <xref:Windows.Management.Deployment.PackageManager> Klasse verwenden, um diese Liste zu generieren. `PackageManager` ist eine Windows-Runtime-Klasse, die für Desktop-Apps verfügbar ist und tatsächlich *nur* für Desktop-Apps verfügbar ist.
 
 Das folgende Codebeispiel aus einer hypothetischen Profiler-Benutzeroberfläche, die als Desktop-app in c# geschrieben wurde `PackageManager` , verwendet, um eine Liste von Windows-apps zu generieren:
 
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 Mit der neuen COM-Schnittstelle [ipackagedebugsettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)können Sie das Ausführungs Verhalten einer Windows Store-App anpassen, um Diagnose Arten einfacher zu gestalten. Mit einer der Methoden " [enabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)" können Sie einen Umgebungsblock an die Windows Store-App übergeben, wenn dieser gestartet wird, sowie weitere nützliche Effekte wie das Deaktivieren der automatischen Prozessunterbrechung. Der Umgebungsblock ist wichtig, da Sie die Umgebungsvariablen (, und) angeben müssen, die `COR_PROFILER` `COR_ENABLE_PROFILING` `COR_PROFILER_PATH)` von der CLR verwendet werden, um die Profiler-DLL zu laden.
 
-Sehen Sie sich den folgenden Codeausschnitt an:
+Betrachten Sie den folgenden Codeausschnitt:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
@@ -147,9 +147,9 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 Es gibt eine Reihe von Elementen, die Sie richtig machen müssen:
 
-- `packageFullName`kann beim Durchlaufen der Pakete und beim Durchlaufen bestimmt werden `package.Id.FullName` .
+- `packageFullName` kann beim Durchlaufen der Pakete und beim Durchlaufen bestimmt werden `package.Id.FullName` .
 
-- `debuggerCommandLine`ist etwas interessanter. Um den benutzerdefinierten Umgebungsblock an die Windows Store-App zu übergeben, müssen Sie einen eigenen, vereinfachten Dummy-Debugger schreiben. Windows erzeugt die Windows Store-App angehalten und fügt dann Ihren Debugger an, indem Sie den Debugger mit einer Befehlszeile wie in diesem Beispiel starten:
+- `debuggerCommandLine` ist etwas interessanter. Um den benutzerdefinierten Umgebungsblock an die Windows Store-App zu übergeben, müssen Sie einen eigenen, vereinfachten Dummy-Debugger schreiben. Windows erzeugt die Windows Store-App angehalten und fügt dann Ihren Debugger an, indem Sie den Debugger mit einer Befehlszeile wie in diesem Beispiel starten:
 
     ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
@@ -271,7 +271,7 @@ Möglicherweise ist es nicht möglich, ohne eine bestimmte API zu verwenden, und
 
 ### <a name="reduced-permissions"></a>Reduzierte Berechtigungen
 
-In diesem Thema wird nicht erläutert, wie die Windows Store-App-Berechtigungen von Desktop-Apps abweichen. Das Verhalten unterscheidet sich jedoch jedes Mal, wenn ihre Profiler-DLL (beim Laden in eine Windows Store-App im Vergleich zu einer Desktop-App) versucht, auf Ressourcen zuzugreifen. Das Dateisystem ist das gängigste Beispiel. Eine bestimmte Windows Store-App kann auf eine bestimmte Stelle auf dem Datenträger zugreifen (siehe [Dateizugriff und Berechtigungen (Windows-Runtime-apps](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))), und die Profiler-DLL unterliegt den gleichen Einschränkungen. Testen Sie Ihren Code gründlich.
+In diesem Thema wird nicht erläutert, wie die Windows Store-App-Berechtigungen von Desktop-Apps abweichen. Das Verhalten unterscheidet sich jedoch jedes Mal, wenn ihre Profiler-DLL (beim Laden in eine Windows Store-App im Vergleich zu einer Desktop-App) versucht, auf Ressourcen zuzugreifen. Das Dateisystem ist das gängigste Beispiel. Eine bestimmte Windows Store-App kann auf eine bestimmte Stelle auf dem Datenträger zugreifen (siehe [Dateizugriff und Berechtigungen (Windows-Runtime-apps](/previous-versions/windows/apps/hh967755(v=win.10))), und die Profiler-DLL unterliegt den gleichen Einschränkungen. Testen Sie Ihren Code gründlich.
 
 ### <a name="inter-process-communication"></a>Prozessübergreifende Kommunikation
 
@@ -302,7 +302,7 @@ In der Zwischenzeit kann die Profiler-DLL im Grunde dasselbe tun, aber Sie kann 
 
 Wenn Sie eine einfache Signal Semantik zwischen Ihrer Profiler-Benutzeroberfläche und der Profiler-DLL wünschen, können Sie Ereignisse in Windows Store-Apps und Desktop-Apps verwenden.
 
-In der Profiler-DLL können Sie [einfach die Funktion](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) "-Funktion" aufrufen, um ein benanntes Ereignis mit einem beliebigen Namen zu erstellen. Beispiel:
+In der Profiler-DLL können Sie [einfach die Funktion](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) "-Funktion" aufrufen, um ein benanntes Ereignis mit einem beliebigen Namen zu erstellen. Zum Beispiel:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -317,7 +317,7 @@ Die Profiler-Benutzeroberfläche muss dann das benannte Ereignis im Namespace de
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>`die appcontainer-SID der Windows Store-App. In einem früheren Abschnitt dieses Themas wurde gezeigt, wie die für den aktuellen Benutzer installierten Pakete durchlaufen werden. Aus diesem Beispielcode können Sie die PackageID abrufen. Und aus PackageID können Sie mit Code abrufen, der dem `<acSid>` folgenden ähnelt:
+`<acSid>` die appcontainer-SID der Windows Store-App. In einem früheren Abschnitt dieses Themas wurde gezeigt, wie die für den aktuellen Benutzer installierten Pakete durchlaufen werden. Aus diesem Beispielcode können Sie die PackageID abrufen. Und aus PackageID können Sie mit Code abrufen, der dem `<acSid>` folgenden ähnelt:
 
 ```csharp
 IntPtr acPSID;
@@ -378,11 +378,11 @@ Die Garbage Collector und der verwaltete Heap unterscheiden sich in einer Window
 
 Bei der Speicher Profilerstellung erstellt die Profiler-DLL in der Regel einen separaten Thread, von dem die Methode der [ForceGC-Methode](icorprofilerinfo-forcegc-method.md) aufgerufen wird. Das ist nichts Neues. Es kann jedoch überraschend sein, dass der Vorgang der Durchführung einer Garbage Collection in einer Windows Store-App den Thread in einen verwalteten Thread umwandelt (z. b. wird eine Profilerstellungs-API für diesen Thread erstellt).
 
-Um die Folgen zu verstehen, ist es wichtig, die Unterschiede zwischen synchronen und asynchronen Aufrufen zu verstehen, wie von der CLR-Profilerstellungs-API definiert. Beachten Sie, dass sich dies vom Konzept der asynchronen Aufrufe in Windows Store-Apps unterscheidet. Weitere Informationen finden Sie im Blog [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) Beitrag.
+Um die Folgen zu verstehen, ist es wichtig, die Unterschiede zwischen synchronen und asynchronen Aufrufen zu verstehen, wie von der CLR-Profilerstellungs-API definiert. Beachten Sie, dass sich dies vom Konzept der asynchronen Aufrufe in Windows Store-Apps unterscheidet. Weitere Informationen finden Sie im Blog [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) Beitrag.
 
 Der relevante Punkt ist, dass Aufrufe von Threads, die von Ihrem Profiler erstellt wurden, immer als synchron angesehen werden, auch wenn diese Aufrufe von außerhalb einer Implementierung einer der [ICorProfilerCallback](icorprofilercallback-interface.md) -Methoden ihrer Profiler-DLL vorgenommen werden. Dies war zumindest der Fall. Nun, da die CLR den Thread Ihres Profilers aufgrund des Aufrufens der [ForceGC-Methode](icorprofilerinfo-forcegc-method.md)in einen verwalteten Thread verwandelt hat, wird dieser Thread nicht mehr als Thread des Profilers angesehen. Die CLR erzwingt daher eine strengere Definition, was für diesen Thread synchron ist – d.., dass ein-Befehl aus einer der [ICorProfilerCallback](icorprofilercallback-interface.md) -Methoden ihrer Profiler-DLL stammen muss, um als synchron zu qualifizieren.
 
-Was bedeutet dies in der Praxis? Die meisten [ICorProfilerInfo](icorprofilerinfo-interface.md) -Methoden können nur synchron aufgerufen werden. andernfalls tritt ein Fehler auf. Wenn Ihre Profiler-DLL Ihren [ForceGC-Methoden](icorprofilerinfo-forcegc-method.md) Thread für andere Aufrufe wieder verwendet, die in der Regel für von Profiler erstellte Threads (z. b. [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit](icorprofilerinfo4-requestrejit-method.md)oder [requestrevert](icorprofilerinfo4-requestrevert-method.md)) durchgeführt werden, haben Sie Probleme. Auch eine asynchrone sichere Funktion wie [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) verfügt über spezielle Regeln, wenn Sie von verwalteten Threads aufgerufen wird. (Weitere Informationen finden Sie im Blogbeitrag [Profiler Stack Walking: Basics und Beyond](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) .)
+Was bedeutet dies in der Praxis? Die meisten [ICorProfilerInfo](icorprofilerinfo-interface.md) -Methoden können nur synchron aufgerufen werden. andernfalls tritt ein Fehler auf. Wenn Ihre Profiler-DLL Ihren [ForceGC-Methoden](icorprofilerinfo-forcegc-method.md) Thread für andere Aufrufe wieder verwendet, die in der Regel für von Profiler erstellte Threads (z. b. [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit](icorprofilerinfo4-requestrejit-method.md)oder [requestrevert](icorprofilerinfo4-requestrevert-method.md)) durchgeführt werden, haben Sie Probleme. Auch eine asynchrone sichere Funktion wie [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) verfügt über spezielle Regeln, wenn Sie von verwalteten Threads aufgerufen wird. (Weitere Informationen finden Sie im Blogbeitrag [Profiler Stack Walking: Basics und Beyond](/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) .)
 
 Daher empfiehlt es sich, dass jeder Thread, der von der Profiler-DLL zum Aufrufen der [ForceGC-Methode](icorprofilerinfo-forcegc-method.md) erstellt wird, *nur* für das Auslösen von GCS und dann das reagieren auf die GC-Rückrufe verwendet werden soll. Es sollte nicht in die Profilerstellungs-API aufgerufen werden, um andere Aufgaben wie z. b
 
@@ -410,8 +410,8 @@ Es ist möglich, mit der CLR-Profilerstellungs-API verwalteten Code zu analysier
 
 **Windows Store-Apps**
 
-- [Dateizugriff und-Berechtigungen (Windows-Runtime-apps](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
+- [Dateizugriff und-Berechtigungen (Windows-Runtime-apps](/previous-versions/windows/apps/hh967755(v=win.10))
 
-- [Anfordern einer Entwicklerlizenz](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
+- [Anfordern einer Entwicklerlizenz](/previous-versions/windows/apps/hh974578(v=win.10))
 
 - [Ipackagedebugsettings-Schnittstelle](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

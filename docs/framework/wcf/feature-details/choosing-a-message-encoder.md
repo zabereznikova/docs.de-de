@@ -2,12 +2,12 @@
 title: Auswählen eines Nachrichtenencoders
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: dbc5981013fe5e023f1d6d9eaf64b2e1fa18e2df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fd5bc2270f2e4095ef6ad2b1d89af3560fb8d312
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587338"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559370"
 ---
 # <a name="choose-a-message-encoder"></a>Auswählen eines Nachrichten Encoders
 
@@ -33,7 +33,7 @@ In diesem Artikel werden die Kriterien für die Auswahl der Nachrichten Encoder 
   
 |Faktor|BESCHREIBUNG|Encoder, die diesen Faktor unterstützen|  
 |------------|-----------------|---------------------------------------|  
-|Unterstützte Zeichensätze|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>und <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> unterstützen nur die UTF8-und UTF16-Unicode-Codierungen (*Big-d* und *Little-enddian*). Sind andere Codierungen erforderlich (beispielsweise UTF7 oder ASCII), muss ein benutzerdefinierter Encoder verwendet werden. Ein Beispiel für einen benutzerdefinierten Encoder finden Sie unter [benutzerdefinierter Nachrichten Encoder](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Text|  
+|Unterstützte Zeichensätze|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> unterstützen nur die UTF8-und UTF16-Unicode-Codierungen (*Big-d* und *Little-enddian*). Sind andere Codierungen erforderlich (beispielsweise UTF7 oder ASCII), muss ein benutzerdefinierter Encoder verwendet werden. Ein Beispiel für einen benutzerdefinierten Encoder finden Sie unter [benutzerdefinierter Nachrichten Encoder](../samples/custom-message-encoder-custom-text-encoder.md).|Text|  
 |Inspektion|Inspektion ist die Fähigkeit, Nachrichten während der Übertragung zu untersuchen. Textcodierungem, entweder mit oder ohne die Verwendung von SOAP, ermöglichen die Inspektion und Analyse von Nachrichten mit vielen Anwendungen, ohne spezielle Tools zu verwenden. Die Verwendung der Übertragungssicherheit auf der Nachrichten-oder Transport Ebene wirkt sich auf die Fähigkeit aus, Nachrichten zu überprüfen. Vertraulichkeit schützt eine Nachricht davor, untersucht zu werden, und Integrität schützt eine Nachricht davor, geändert zu werden.|Text|  
 |Zuverlässigkeit|Zuverlässigkeit ist die Widerstandsfähigkeit eines Encoders gegen Übertragungsfehler. Zuverlässigkeit kann auch auf Nachrichten-, Transport- oder Anwendungsebene bereitgestellt werden. Alle WCF-Standard Encoder nehmen an, dass eine andere Ebene Zuverlässigkeit bereitstellt. Der Encoder hat wenige Möglichkeiten, nach einem Übertragungsfehler eine Wiederherstellung durchzuführen.|Keine|  
 |Einfachheit|Einfachheit stellt die Leichtigkeit dar, mit der Sie Encoder und Decoder für eine Codierungsspezifikation erstellen können. Textcodierungen sind besonders vorteilhaft für die Einfachheit. Die POX-Textcodierung hat den zusätzlichen Vorteil, dass keine Unterstützung der SOAP-Verarbeitung erforderlich ist.|Text (POX)|  
@@ -83,6 +83,6 @@ Da diese Eigenschaft nur für das BinaryMessageEncodingBindingElement verfügbar
 
 Sowohl der Client als auch der Dienst müssen dem Senden und empfangen von komprimierten Nachrichten zustimmen. Daher muss die compressionformat-Eigenschaft für das binaryMessageEncoding-Element sowohl auf dem Client als auch auf dem Dienst konfiguriert werden. Eine ProtocolException wird ausgelöst, wenn entweder der Dienst oder der Client nicht für die Komprimierung konfiguriert ist, aber die andere Seite ist. Die Aktivierung der Komprimierung sollte sorgfältig in Erwägung gezogen werden. Die Komprimierung ist vor allem dann nützlich, wenn die Netzwerkbandbreite beschränkt ist. Wenn die CPU der Engpass ist, mindert die Komprimierung den Durchsatz. Es müssen entsprechende Tests in einer simulierten Umgebung ausgeführt werden, um zu ermitteln, ob dies für die Anwendung Vorteile erbringt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Bindungen](bindings.md)
