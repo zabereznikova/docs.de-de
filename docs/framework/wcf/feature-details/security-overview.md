@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 517d80395e09598fcbd067034223dc6ba58cbe2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7dd73b755c7aed91a1fd59baaf9d5e090a36768
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600437"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541460"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Übersicht über Windows Communication Foundation Sicherheit
 Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende verteilte Programmierplattform, und das Sichern von Nachrichten zwischen Clients und Diensten ist für den Schutz von Daten entscheidend. WCF bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf der Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  
@@ -97,7 +97,7 @@ Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende 
 ### <a name="auditing"></a>Überwachung  
  Die *Überwachung ist die* Protokollierung von Sicherheits Ereignissen im Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). Weitere Informationen finden Sie unter [Auditing](auditing-security-events.md). Weitere Informationen zur Programmierung finden [Sie unter Gewusst wie:](how-to-audit-wcf-security-events.md)überwachen von Sicherheits Ereignissen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Sichern von Diensten](../securing-services.md)
@@ -107,10 +107,10 @@ Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende 
 - [Authentifizierung](authentication-in-wcf.md)
 - [Autorisierung](authorization-in-wcf.md)
 - [Verbund und ausgestellte Token](federation-and-issued-tokens.md)
-- [Auditing](auditing-security-events.md)
+- [Überwachung](auditing-security-events.md)
 - [Sicherheitsleitfaden und empfohlene Vorgehensweisen](security-guidance-and-best-practices.md)
 - [Konfigurieren von Diensten mit Konfigurationsdateien](../configuring-services-using-configuration-files.md)
 - [Vom System bereitgestellte Bindungen](../system-provided-bindings.md)
 - [Übersicht über die Endpunkterstellung](../endpoint-creation-overview.md)
 - [Erweitern der Sicherheit](../extending/extending-security.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

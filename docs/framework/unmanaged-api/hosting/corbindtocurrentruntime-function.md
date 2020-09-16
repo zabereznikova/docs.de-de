@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 4c015d77deb4e6ed3d43074f2903e26b687de84f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c5d83b5f2ffb06c9fb14f715a3ea7ff12319086
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493564"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547829"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime-Funktion
 Lädt die Common Language Runtime (CLR) in einen Prozess, indem in einer XML-Datei gespeicherte Versionsinformationen verwendet werden. Das Format der XML-Datei wird nach der Standard Anwendungs Konfigurationsdatei modelliert. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../configure-apps/file-schema/index.md).  
   
- Diese Funktion wurde im .NET Framework 4 als veraltet markiert. Weitere Informationen finden Sie [unter Laden der Common Language Runtime in einen Prozess](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert. Weitere Informationen finden Sie [unter Laden der Common Language Runtime in einen Prozess](/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,16 +55,16 @@ HRESULT CorBindToCurrentRuntime (
  `ppv`  
  vorgenommen Der zurückgegebene Schnittstellen Zeiger.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 - [CorBindToRuntime-Funktion](corbindtoruntime-function.md)
 - [CorBindToRuntimeByCfg-Funktion](corbindtoruntimebycfg-function.md)

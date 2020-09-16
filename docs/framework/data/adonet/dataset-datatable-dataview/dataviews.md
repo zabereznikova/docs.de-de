@@ -2,21 +2,21 @@
 title: "\"DataViews\""
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 1b202af052c05ed9dc671fa20c9c366f280ec5c7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fe6adac35c157b454f5e33d3526196d4f408fd89
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774164"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546867"
 ---
 # <a name="dataviews"></a>"DataViews"
 Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in einer <xref:System.Data.DataTable> gespeicherten Daten erstellen. Diese Funktion wird oft in Datenbindungsanwendungen verwendet. Mithilfe einer **DataView**können Sie die Daten in einer Tabelle mit unterschiedlichen Sortier Reihenfolgen verfügbar machen, und Sie können die Daten nach Zeilen Status oder basierend auf einem Filter Ausdruck filtern.
 
- Eine **DataView** stellt eine dynamische Ansicht der Daten in **der zugrunde liegenden Datentabelle**bereit: der Inhalt, die Reihenfolge und die Mitgliedschaft reflektieren Änderungen, sobald sie auftreten. Dieses Verhalten unterscheidet sich von der **Select** -Methode der **Daten**Tabelle, die ein <xref:System.Data.DataRow> Array aus einer Tabelle basierend auf einem bestimmten Filter und/oder einer Sortierreihenfolge zurückgibt: dieser Inhalt spiegelt die Änderungen an der zugrunde liegenden Tabelle wider, aber seine Mitgliedschaft und Reihenfolge bleiben statisch. Die dynamischen Funktionen von **DataView** machen es ideal für Daten Bindungs Anwendungen.
+ Eine **DataView** stellt eine dynamische Ansicht der Daten in **der zugrunde liegenden Datentabelle**bereit: der Inhalt, die Reihenfolge und die Mitgliedschaft reflektieren Änderungen, sobald sie auftreten. Dieses Verhalten unterscheidet sich von der **Select** -Methode der **Daten**Tabelle, die ein <xref:System.Data.DataRow> Array aus einer Tabelle basierend auf einem bestimmten Filter und/oder einer bestimmten Sortierreihenfolge zurückgibt: dieser Inhalt spiegelt die Änderungen an der zugrunde liegenden Tabelle wider, seine Mitgliedschaft und Reihenfolge bleiben jedoch statisch. Die dynamischen Funktionen von **DataView** machen es ideal für Daten Bindungs Anwendungen.
 
  Eine **DataView** stellt eine dynamische Ansicht eines einzelnen Datensatzes bereit, ähnlich wie eine Daten Bank Sicht, auf die Sie andere Sortier-und Filterkriterien anwenden können. Anders als bei einer Daten Bank Sicht kann eine **DataView** jedoch nicht als Tabelle behandelt werden und kann keine Ansicht von verbundenen Tabellen bereitstellen. Sie können auch keine Spalten ausschließen, die in der Quell Tabelle vorhanden sind, oder Spalten anfügen, die in der Quell Tabelle nicht vorhanden sind, z. b. Berechnungs Spalten.
 
- Sie können eine <xref:System.Data.DataView.DataViewManager%2A> verwenden, um die Ansichts Einstellungen für alle Tabellen in einem **DataSet**zu verwalten. Der **DataViewManager** bietet Ihnen eine bequeme Möglichkeit, die Standard Ansichts Einstellungen für jede Tabelle zu verwalten. Wenn Sie ein Steuerelement an mehr als eine Tabelle eines **DataSets**binden, ist die Bindung an einen **DataViewManager** die ideale Wahl.
+ Sie können <xref:System.Data.DataView.DataViewManager%2A> zum Verwalten von Ansichts Einstellungen für alle Tabellen in einem **DataSet**verwenden. Der **DataViewManager** bietet Ihnen eine bequeme Möglichkeit, die Standard Ansichts Einstellungen für jede Tabelle zu verwalten. Wenn Sie ein Steuerelement an mehr als eine Tabelle eines **DataSets**binden, ist die Bindung an einen **DataViewManager** die ideale Wahl.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
  [Erstellen einer DataView](creating-a-dataview.md) Beschreibt das Erstellen einer **DataView** für eine **Daten**Tabelle.
@@ -36,9 +36,9 @@ Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in 
  [Verwalten von DataViews](managing-dataviews.md) Beschreibt, wie ein **DataViewManager** verwendet wird, um die **DataView** -Einstellungen für jede Tabelle in einem **DataSet**zu verwalten.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
- [ASP.NET-Webanwendungen](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100)) Bietet Übersichten und ausführliche schrittweise Anleitungen zum Erstellen von ASP.NET-Anwendungen,-Web Forms und-Webdiensten.
+ [ASP.NET-Webanwendungen](/previous-versions/655cec97(v=vs.100)) Bietet Übersichten und ausführliche schrittweise Anleitungen zum Erstellen von ASP.NET-Anwendungen,-Web Forms und-Webdiensten.
 
- [Windows-Anwendungen](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100)) Bietet ausführliche Informationen zum Arbeiten mit Windows Forms und Konsolen Anwendungen.
+ [Windows-Anwendungen](/previous-versions/ms184421(v=vs.100)) Bietet ausführliche Informationen zum Arbeiten mit Windows Forms und Konsolen Anwendungen.
 
  [Datasets, DataTables und DataViews](index.md) Beschreibt das **DataSet** -Objekt und wie Sie es zum Verwalten von Anwendungsdaten verwenden können.
 

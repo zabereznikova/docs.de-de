@@ -2,12 +2,12 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4350287aedae73a7ca9556de7ae3f597950e32ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144889"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549613"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 
@@ -51,13 +51,13 @@ Der Überwachungsteilnehmer abonniert eine Teilmenge der ausgegebenen Überwachu
 
 4. Öffnen Sie im Datei-Explorer den WCF-Test Client.
 
-    Der WCF-Test Client (WcfTestClient. exe) befindet sich im \<Visual Studio 2010 installation folder> Ordner "\common7\ide\".
+    Der WCF-Test Client (WcfTestClient.exe) befindet sich im \<Visual Studio 2010 installation folder> Ordner "\common7\ide\".
 
     Der Standard Installationsordner von Visual Studio 2010 ist c:\Programme\Microsoft Visual Studio 10,0.
 
 5. Wählen Sie im WCF-Test Client im Menü **Datei** die Option **Dienst hinzufügen** aus.
 
-    Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Der Standardwert lautet `http://localhost:53797/SampleWorkflowService.xamlx`.
+    Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Der Standardwert ist `http://localhost:53797/SampleWorkflowService.xamlx`.
 
 6. Öffnen Sie die Ereignisanzeige.
 
@@ -153,4 +153,4 @@ Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatens
 
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Überwachungsbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric-Überwachungsbeispiele](/previous-versions/appfabric/ff383407(v=azure.10))

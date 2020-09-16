@@ -3,12 +3,12 @@ title: WCF-Dienstpublishing
 description: Mithilfe der WCF-Dienst Veröffentlichung können Sie Ihre Anwendung zu Testzwecken in einer Produktionsumgebung bereitstellen.
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 99798b75e1dc01c8db361f4d8d1f162c7f7617b1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ccd3fe80e51ef28f7a037d624e9099c42d867d95
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245673"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544569"
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 
@@ -22,7 +22,7 @@ Die WCF-Dienst Veröffentlichung unterstützt das Veröffentlichen von WCF-Diens
 
 - Syndication-Dienstbibliothek
 
-Sie finden diese Dienst Vorlagen, indem Sie auf **Datei**  >  **Neues Projekt** > [**Visual Basic** oder **Visual c#**] **> WCF**klicken. Für andere WCF-Vorlagen an diesem Speicherort (einschließlich der WCF-Workflow Dienst Anwendung und der WCF-Dienst Anwendung) können Sie mithilfe der [One-Click-Veröffentlichung für Webanwendungen](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))veröffentlichen.
+Sie finden diese Dienst Vorlagen, indem Sie auf **Datei**  >  **Neues Projekt** > [**Visual Basic** oder **Visual c#**] **> WCF**klicken. Für andere WCF-Vorlagen an diesem Speicherort (einschließlich der WCF-Workflow Dienst Anwendung und der WCF-Dienst Anwendung) können Sie mithilfe der [One-Click-Veröffentlichung für Webanwendungen](/previous-versions/aspnet/dd465337(v=vs.110))veröffentlichen.
 
 Der Dienst kann an den folgenden Zielorten veröffentlicht werden:
 
@@ -69,7 +69,7 @@ Wenn Sie die Anwendung lokal für IIS bereitgestellt haben, treten möglicherwei
 - Einstellungen im `<diagnostics>`-Element werden übersprungen, um die Ablaufverfolgungseinstellungen der Zielplattform beizubehalten.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Veröffentlichen von WCF-Diensten mit Nicht-HTTP-Bindungen in IIS
- Wenn Sie IIS 7.0 oder höher verwenden, können Sie WCF-Dienste mit nicht-HTTP-Bindungen in IIS veröffentlichen. Hierfür müssen einige vorbereitende Konfigurationsschritte ausgeführt werden. Weitere Informationen finden Sie in den Themen unter [Hosting in Windows Process Activation Service](./feature-details/hosting-in-windows-process-activation-service.md).
+ Wenn Sie IIS 7.0 oder höher verwenden, können Sie WCF-Dienste mit nicht-HTTP-Bindungen in IIS veröffentlichen. Hierfür müssen einige vorbereitende Konfigurationsschritte ausgeführt werden. Weitere Informationen finden Sie in den Themen unter  [Hosting in Windows Process Activation Service](./feature-details/hosting-in-windows-process-activation-service.md).
 
 ## <a name="security"></a>Sicherheit
  Für eine lokale Veröffentlichung in IIS sind Administratorberechtigungen erforderlich, da IIS unter einem Administratorkonto ausgeführt werden muss. Wenn ein Benutzer ohne Administrator Berechtigung die WCF-Dienst Veröffentlichung öffnet, ist IIS nicht als Ziel Speicherort verfügbar. Das Veröffentlichen im Datei System oder in einer FTP-Site funktioniert ohne Administratorrechte.

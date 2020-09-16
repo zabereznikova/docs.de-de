@@ -2,17 +2,17 @@
 title: Programmierhandbuch
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 542567cf07e86b642a23a879fa6e5476253005b8
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: 0746d14d7be0b67bc9966ae0c5a4af0a3226c1e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78848937"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546561"
 ---
 # <a name="programming-guide"></a>Programmierhandbuch
-Dieser Abschnitt enthält Informationen zur Erstellung und Nutzung Ihres [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodells. Wenn Sie Visual Studio verwenden, können Sie auch den Objektrelational-Designer verwenden, um viele dieser Aufgaben auszuführen.  
+Dieser Abschnitt enthält Informationen zur Erstellung und Nutzung Ihres [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodells. Wenn Sie Visual Studio verwenden, können Sie auch den objektrelationaler Designer verwenden, um viele dieser Aufgaben auszuführen.  
   
- Sie können auch Microsoft Docs nach bestimmten Problemen durchsuchen und am [LINQ-Forum](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)teilnehmen, in dem Sie komplexere Themen mit Experten ausführlich diskutieren können. Schließlich wird die [LINQ to SQL: .NET Language-Integrated Query for Relational](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10)) Data-Whitepaper-Detailstechnologie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mit Visual Basic- und C-Codebeispielen beschrieben.  
+ Sie können auch Microsoft-Dokumentation auf bestimmte Probleme durchsuchen, und Sie können am [LINQ-Forum](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)teilnehmen, in dem Sie komplexere Themen ausführlich mit Experten erörtern können. Zum Schluss ist die [LINQ to SQL: .NET Language-Integrated Query for Relational Data](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) Whitepaper Details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Technology, Complete with Visual Basic und c# Code examples (in englischer Sprache).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen des Objektmodells](creating-the-object-model.md)  
@@ -27,7 +27,7 @@ Dieser Abschnitt enthält Informationen zur Erstellung und Nutzung Ihres [!INCLU
  [Vornehmen und Übergeben von Datenänderungen](making-and-submitting-data-changes.md)  
  Beschreibt, wie Daten in der Datenbank geändert werden.  
   
- [Debugging-Unterstützung](debugging-support.md)  
+ [Debugunterstützung](debugging-support.md)  
  Beschreibt die verfügbare Unterstützung für das Debugging von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Projekten.  
   
  [Hintergrundinformationen](background-information.md)  
@@ -41,7 +41,7 @@ Dieser Abschnitt enthält Informationen zur Erstellung und Nutzung Ihres [!INCLU
  Umfasst Links zu Themen, die die Verwendung gespeicherter Prozeduren erläutern.  
   
  [Einführung in LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
- Stellt Ressourcen bereit, mit denen Sie informationen zu LINQ to SQL mithilfe von C- und SQL-Code erfahren können.
+ Enthält Ressourcen, die Ihnen helfen, sich mit der Verwendung von LINQ to SQL mit c# vertraut zu machen.
 
  [Introduction to LINQ (Visual Basic) (Einführung in LINQ (Visual Basic))](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- Stellt Ressourcen bereit, mit denen Sie mit Visual Basic mehr über LINQ in SQL erfahren können.
+ Hier finden Sie Ressourcen, die Ihnen helfen, sich mit LINQ to SQL mithilfe von Visual Basic vertraut zu machen.

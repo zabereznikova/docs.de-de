@@ -2,12 +2,12 @@
 title: WAS-Aktivierungsarchitektur
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600671"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545981"
 ---
 # <a name="was-activation-architecture"></a>WAS-Aktivierungsarchitektur
 In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungsdiensts (auch WAS genannt) aufgeführt und erläutert.  
@@ -32,7 +32,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 ### <a name="listener-adapters"></a>Listeneradapter  
  Listeneradapter sind einzelne Windows-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren. In der folgenden Tabelle sind die Listeneradapter für Windows Communication Foundation (WCF)-Protokolle aufgeführt.  
   
-|Dienstname des Listeneradapters|Protocol|Notizen|  
+|Dienstname des Listeneradapters|Protokoll|Hinweise|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|Allgemeine Komponente, die die HTTP-Aktivierung für IIS 7,0 und WCF bereitstellt.|  
 |NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing-Dienst ab.|  
@@ -85,7 +85,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Konfigurieren von WAS für die Verwendung mit WCF](configuring-the-wpa--service-for-use-with-wcf.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

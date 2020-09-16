@@ -2,17 +2,17 @@
 title: LINQ und Zeichenfolgen
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 73ce4bf5586f1f9ff4995ea6f425b90744b7e333
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ee2a44175e8546f879473a3af6bf1a2de92d2501
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353283"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549848"
 ---
-# <a name="linq-and-strings-visual-basic"></a>LINQ und Zeichen folgen (Visual Basic)
+# <a name="linq-and-strings-visual-basic"></a>LINQ und Zeichenfolgen (Visual Basic)
 LINQ kann zum Abfragen und Transformieren von Zeichenfolgen und Auflistungen von Zeichenfolgen verwendet werden. Dieses Verfahren ist bei halbstrukturierten Daten in Textdateien besonders nützlich. LINQ-Abfragen können mit herkömmlichen Zeichenfolgenfunktionen und regulären Ausdrücken verbunden werden. Beispielsweise können Sie die Methode <xref:System.String.Split%2A> oder <xref:System.Text.RegularExpressions.Regex.Split%2A> verwenden, um ein Array von Zeichenfolgen zu erstellen, das Sie anschließend mit LINQ abfragen oder ändern können. Sie können die Methode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> in der `where`-Klausel einer LINQ-Abfrage verwenden. Sie können LINQ außerdem zum Abfragen und Ändern der <xref:System.Text.RegularExpressions.MatchCollection>-Ergebnisse, die von einem regulären Ausdruck zurückgegeben werden, verwenden.  
   
- Sie können auch die Techniken verwenden, die in diesem Abschnitt beschrieben werden, um halbstrukturierte Textdaten in XML zu transformieren. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md).  
+ Sie können auch die Techniken verwenden, die in diesem Abschnitt beschrieben werden, um halbstrukturierte Textdaten in XML zu transformieren. Weitere Informationen finden Sie unter Gewusst [wie: Generieren von XML aus CSV-Dateien](../../../../standard/linq/generate-xml-csv-files.md).  
   
  Die Beispiele in diesem Abschnitt gehören zu einer der folgenden beiden Kategorien:  
   
@@ -22,7 +22,7 @@ LINQ kann zum Abfragen und Transformieren von Zeichenfolgen und Auflistungen von
  [Gewusst wie: zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (Visual Basic)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
  Zeigt die Verwendung von LINQ für einfache Textabfragen.  
   
- [Gewusst wie: Abfragen von Sätzen, die eine angegebene Gruppe von Wörtern (LINQ) enthalten (Visual Basic)](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
+ [How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic) (Gewusst wie: Abfragen von Sätzen, die bestimmte Wörter enthalten (LINQ) (C#))](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
 
  Zeigt, wie Textdateien an beliebigen Grenzen unterteilt wird und wie Abfragen mit jedem Teil ausgeführt werden.  
   
@@ -61,5 +61,5 @@ LINQ kann zum Abfragen und Transformieren von Zeichenfolgen und Auflistungen von
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Language-Integrated Query (LINQ) (Visual Basic)](index.md)
-- [Gewusst wie: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)
+- [Language Integrated Query (LINQ) (Visual Basic)](index.md)
+- [Gewusst wie: Generieren von XML aus CSV-Dateien](../../../../standard/linq/generate-xml-csv-files.md)

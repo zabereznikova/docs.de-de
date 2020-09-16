@@ -3,12 +3,12 @@ title: Migrieren von .NET-Remoting zu WCF
 description: Erfahren Sie, wie Sie eine Anwendung migrieren, die .NET Remoting verwendet, um WCF zu verwenden. Sie können mehrere gängige Remotingszenarios in WCF ausführen.
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: f6f526db09806008314980b71233b208d25359fc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 73bdac5d8f4d39694f038bb600828c79e527efb0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246154"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542849"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrieren von .NET-Remoting zu WCF
 Dieser Artikel beschreibt die Vorgehensweise zum Migrieren einer Anwendung, die .NET Remoting zur Verwendung von Windows Communication Foundation (WCF) nutzt. Es werden ähnliche Konzepte dieser zwei Produkte verglichen, und es wird beschrieben, wie verschiedene Remoting-Szenarien in WCF realisiert werden können.  
@@ -269,7 +269,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
  Weitere Informationen zu Fehlerverträgen finden Sie unter <xref:System.ServiceModel.FaultException>.  
   
-### <a name="security-considerations"></a>Überlegungen zur Sicherheit  
+### <a name="security-considerations"></a>Sicherheitsüberlegungen  
   
 #### <a name="security-in-net-remoting"></a>Sicherheit in .NET Remoting  
  Einige .NET Remoting-Kanäle unterstützen Sicherheitsfunktionen wie beispielsweise Authentifizierung und Verschlüsselung auf Kanalebene (IPC und TCP). Der HTTP-Kanal nutzt sowohl für die Authentifizierung als auch für die Verschlüsselung Internetinformationsdienste (IIS). Trotz dieser Unterstützung sollten Sie .NET Remoting als unsicheres Kommunikationsprotokoll betrachten und nur in vollständig vertrauenswürdigen Umgebungen einsetzen. Machen Sie niemals einen öffentlichen Remoting-Endpunkt für das Internet oder nicht vertrauenswürdige Clients verfügbar.  
@@ -285,7 +285,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>Welche Vorteile bietet die Migration von Remoting nach WCF?  
   
-- **.NET Remoting ist ein Legacy-Produkt.** Wie in [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)beschrieben, wird es als Legacy-Produkt betrachtet und wird nicht für die neue Entwicklung empfohlen. Für neue und vorhandene Anwendungen wird der Einsatz von WCF oder ASP.NET-Web-API empfohlen.  
+- **.NET Remoting ist ein Legacy-Produkt.** Wie in [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))beschrieben, wird es als Legacy-Produkt betrachtet und wird nicht für die neue Entwicklung empfohlen. Für neue und vorhandene Anwendungen wird der Einsatz von WCF oder ASP.NET-Web-API empfohlen.  
   
 - **WCF verwendet plattformübergreifende Standards.** WCF wurde unter dem Gesichtspunkt einer plattformübergreifenden Interoperabilität entwickelt und unterstützt zahlreiche Industriestandards (SOAP, WS-Security, WS-Trust, usw.). Ein WCF-Dienst kann mit Clients interagieren, auf denen andere Betriebssysteme als Windows ausgeführt werden. Remoting wurde hauptsächlich für Umgebungen entwickelt, in denen Server-und Client Anwendungen mit .NET Framework auf einem Windows-Betriebssystem ausgeführt werden.
   
@@ -308,7 +308,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 - **Beenden Sie die Verwendung von [Serializable] und ISerializable.** Das [Serializable]-Attribut und die ISerializable-Schnittstelle wurden ursprünglich zum Serialisieren von Typen in vertrauenswürdigen Umgebungen entworfen und werden von Remoting verwendet. Die WCF-Serialisierung beruht auf Typen, die mit [DataContract] und [DataMember] markiert sind. Die von einer Anwendung verwendeten Datentypen sollten geändert werden, um [DataContract] zu verwenden und nicht ISerializable oder [Serializable].  
   
-### <a name="migration-scenarios"></a>Migrationsszenarien  
+### <a name="migration-scenarios"></a>Migrationsszenarios  
  Betrachten wir nun, wie die folgenden gängigen Remoting-Szenarien in WCF realisiert werden:  
   
 1. Server gibt ein Objekt als Wert an den Client zurück  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: f90906b4c3fc1d1d76977451abfb238bb33fb581
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29ac26616313ec8bd7661cb92c42f726ec051cd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595114"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542886"
 ---
 # <a name="trusted-subsystem"></a>Vertrauenswürdiges Subsystem
 Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden. Die Webdienste sind so ausgelegt, dass der Zugriff auf zusätzliche Ressourcen (beispielsweise Datenbanken oder andere Webdienste) in der Geschäftslogik des Webdiensts gekapselt sind. Diese Ressourcen müssen vor nicht autorisiertem Zugriff geschützt werden. Die folgende Abbildung stellt einen vertrauenswürdigen Subsystemprozess dar.  
@@ -31,14 +31,14 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
   
 |Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|Sicherheitsmodus|`Message`|  
+|Sicherheitsmodus|Nachricht|  
 |Interoperabilität|Nur Windows Communication Foundation (WCF).|  
 |Authentifizierung (Dienst)|Sicherheitstokendienst authentifiziert und autorisiert Clients.|  
 |Authentifizierung (Client)|Das vertrauenswürdige Subsystem authentifiziert den Client, und die Ressource authentifiziert den vertrauenswürdigen Subsystemdienst.|  
 |Integrität|Ja|  
 |Vertraulichkeit|Ja|  
 |Transport|HTTP zwischen Client und dem vertrauenswürdigen Subsystemdienst.<br /><br /> NET.TCP zwischen dem vertrauenswürdigen Subsystemdienst und der Ressource (Back-End-Dienst).|  
-|Bindung|<xref:System.ServiceModel.WSHttpBinding>immer<xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Bindung|<xref:System.ServiceModel.WSHttpBinding> immer <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Ressource (Back-End-Dienst)  
   
@@ -210,7 +210,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsübersicht](security-overview.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

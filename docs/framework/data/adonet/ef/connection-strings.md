@@ -3,12 +3,12 @@ title: Verbindungs Zeichenfolgen in der ADO.NET-Entity Framework
 description: Erfahren Sie mehr über Verbindungs Zeichenfolgen in der Entity Framework, die Informationen zum Herstellen einer Verbindung mit dem ADO.NET-Datenanbieter sowie zu Modell-und Mapping-Dateien enthalten.
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 2ae25f5881c033a84d65f5b0b4ed14b4866dbcb3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36b7724bc8dbb8f427f4bbf748b7b7801adea8db
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286869"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542756"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Verbindungs Zeichenfolgen in der ADO.NET-Entity Framework
 
@@ -16,7 +16,7 @@ Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Par
 
 Der EntityClient-Anbieter verwendet die Verbindungszeichenfolge für den Zugriff auf Modell- und Zuordnungsmetadaten sowie zum Herstellen einer Verbindung mit der Datenquelle. Mithilfe der <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>-Eigenschaft der <xref:System.Data.EntityClient.EntityConnection> kann auf die Verbindungszeichenfolge zugegriffen und diese festgelegt werden. Mit der <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse können Parameter in der Verbindungszeichenfolge programmgesteuert erstellt werden, sie ermöglicht auch den Zugriff auf diese Parameter. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen einer EntityConnection-Verbindungs Zeichenfolge](how-to-build-an-entityconnection-connection-string.md).
 
-Die [Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) generieren eine Verbindungs Zeichenfolge, die in der Konfigurationsdatei der Anwendung gespeichert ist. <xref:System.Data.Objects.ObjectContext> ruft diese Verbindungsinformationen beim Erstellen von Objektabfragen automatisch ab. Auf die <xref:System.Data.EntityClient.EntityConnection>, die von einer <xref:System.Data.Objects.ObjectContext>-Instanz verwendet wird, kann von der <xref:System.Data.Objects.ObjectContext.Connection%2A>-Eigenschaft aus zugegriffen werden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).
+Die [Entity Data Model Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) generieren eine Verbindungs Zeichenfolge, die in der Konfigurationsdatei der Anwendung gespeichert ist. <xref:System.Data.Objects.ObjectContext> ruft diese Verbindungsinformationen beim Erstellen von Objektabfragen automatisch ab. Auf die <xref:System.Data.EntityClient.EntityConnection>, die von einer <xref:System.Data.Objects.ObjectContext>-Instanz verwendet wird, kann von der <xref:System.Data.Objects.ObjectContext.Connection%2A>-Eigenschaft aus zugegriffen werden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).
 
 ## <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
 
@@ -29,7 +29,7 @@ Die folgende Tabelle enthält die gültigen Namen für Schlüsselwortwerte im <x
 |Schlüsselwort|Beschreibung|
 |-------------|-----------------|
 |`Provider`|Erforderlich, wenn das Schlüsselwort `Name` nicht angegeben ist. Der Anbietername, mit dem das <xref:System.Data.Common.DbProviderFactory>-Objekt für den zugrunde liegenden Anbieter abgerufen wird. Dieser Wert ist konstant.<br /><br /> Wenn in einer Entitätsverbindungszeichenfolge nicht das Schlüsselwort `Name` eingefügt wurde, ist für das Schlüsselwort `Provider` ein nicht leerer Wert erforderlich. Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.|
-|`Provider Connection String`|Optional. Gibt die anbieterspezifische Verbindungszeichenfolge an, die an die zugrunde liegende Datenquelle übergeben wird. Diese Verbindungs Zeichenfolge enthält gültige Schlüsselwort-Wert-Paare für den Datenanbieter. Eine ungültige `Provider Connection String` löst bei der Auswertung durch die Datenquelle einen Laufzeitfehler aus.<br /><br /> Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.<br /><br /> Stellen Sie sicher, dass Sie den Wert gemäß der allgemeinen Syntax der [ADO.NET-Verbindungs](../connection-strings.md)Zeichenfolgen mit Escapezeichen Sehen Sie sich beispielsweise die folgende Verbindungs Zeichenfolge an: `Server=serverName; User ID = userID` . Er muss mit Escapezeichen versehen werden, da er ein Semikolon enthält Da Sie keine doppelten Anführungszeichen enthält, können Sie für Escapezeichen verwendet werden:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
+|`Provider Connection String`|Dies ist optional. Gibt die anbieterspezifische Verbindungszeichenfolge an, die an die zugrunde liegende Datenquelle übergeben wird. Diese Verbindungs Zeichenfolge enthält gültige Schlüsselwort-Wert-Paare für den Datenanbieter. Eine ungültige `Provider Connection String` löst bei der Auswertung durch die Datenquelle einen Laufzeitfehler aus.<br /><br /> Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.<br /><br /> Stellen Sie sicher, dass Sie den Wert gemäß der allgemeinen Syntax der [ADO.NET-Verbindungs](../connection-strings.md)Zeichenfolgen mit Escapezeichen Sehen Sie sich beispielsweise die folgende Verbindungs Zeichenfolge an: `Server=serverName; User ID = userID` . Er muss mit Escapezeichen versehen werden, da er ein Semikolon enthält Da Sie keine doppelten Anführungszeichen enthält, können Sie für Escapezeichen verwendet werden:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
 |`Metadata`|Erforderlich, wenn das Schlüsselwort `Name` nicht angegeben ist. Eine durch senkrechte Striche getrennte Liste von Verzeichnissen, Dateien und Ressourcenspeicherorten, die nach Metadaten und Mappinginformationen durchsucht werden sollen. Es folgt ein Beispiel:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Leerzeichen zu beiden Seiten des senkrechten Strichs werden ignoriert.<br /><br /> Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.|
 |`Name`|Der Verbindungsname kann von der Anwendung optional in einer Anwendungskonfigurationsdatei angegeben werden, die die erforderlichen Verbindungszeichenfolgen-Werte mit den Schlüsselwort-Wert-Paaren enthält. In diesem Fall können diese nicht direkt in der Verbindungszeichenfolge bereitgestellt werden. Das Schlüsselwort `Name` ist in einer Konfigurationsdatei nicht zulässig.<br /><br /> Wenn das Schlüsselwort `Name` in der Verbindungszeichenfolge nicht eingefügt wurde, ist für das Provider-Schlüsselwort ein nicht leerer Wert erforderlich.<br /><br /> Dieses Schlüsselwort und alle anderen Schlüsselwörter für Verbindungszeichenfolgen schließen sich gegenseitig aus.|
 
@@ -93,7 +93,7 @@ Metadata=.\
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Unterstützung für die &#124;DataDirectory-&#124; Ersetzungs Zeichenfolge und den Webanwendungs Stamm Operator (~)
 
-`DataDirectory`und der ~-Operator werden in <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> als Teil der `Metadata` -und- `Provider Connection String` Schlüsselwörter verwendet. Die <xref:System.Data.EntityClient.EntityConnection> leitet den `DataDirectory`- und den ~-Operator an <xref:System.Data.Metadata.Edm.MetadataWorkspace> bzw. den Speicheranbieter weiter.
+`DataDirectory` und der ~-Operator werden in <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> als Teil der `Metadata` -und- `Provider Connection String` Schlüsselwörter verwendet. Die <xref:System.Data.EntityClient.EntityConnection> leitet den `DataDirectory`- und den ~-Operator an <xref:System.Data.Metadata.Edm.MetadataWorkspace> bzw. den Speicheranbieter weiter.
 
 |Begriff|BESCHREIBUNG|
 |----------|-----------------|
@@ -112,5 +112,5 @@ Die Auflösung der `DataDirectory`-Ersatzzeichenfolge und des ~-Operators ist ni
 
 - [Arbeiten mit Datenanbietern](working-with-data-providers.md)
 - [Bereitstellungs Überlegungen](deployment-considerations.md)
-- [Verwalten von Verbindungen und Transaktionen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
+- [Verwalten von Verbindungen und Transaktionen](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [Verbindungs Zeichenfolgen](../connection-strings.md)

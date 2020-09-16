@@ -6,12 +6,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 2980881bbcd34ca82f6cca7723cf976e0890f463
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 1c01cfe8fdfb285ee5cbc586cc0c549365ef72ee
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557085"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543146"
 ---
 # <a name="accessibility-best-practices"></a>Bewährte Methoden für die Barrierefreiheit
 
@@ -132,8 +132,8 @@ ms.locfileid: "87557085"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Verwenden von Standardeingabe-APIs mit geräteunabhängigen Aufrufen  
  Geräteunabhängige Aufrufe stellen die Gleichheit von Tastatur-und Mausfunktionen sicher, während Sie Hilfstechnologien mit erforderlichen Informationen über die Benutzeroberfläche bereitstellen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Automation.Peers>
-- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))(Benutzerdefiniertes NumericUpDown-Steuerelement mit Unterstützung von Design und Automatisierung)
-- [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))(Benutzerdefiniertes NumericUpDown-Steuerelement mit Unterstützung von Design und Automatisierung)
+- [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

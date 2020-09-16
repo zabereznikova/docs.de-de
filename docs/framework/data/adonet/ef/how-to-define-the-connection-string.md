@@ -1,20 +1,20 @@
 ---
-title: 'Gewusst wie: Definieren der Verbindungszeichenfolge'
+title: 'Vorgehensweise: Definieren der Verbindungszeichenfolge'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: e5b675a50f883825cce97275048447b79b64cc97
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b029644e0d4e4c7467fbe1e1144579e6edb3478
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150570"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536209"
 ---
-# <a name="how-to-define-the-connection-string"></a>Gewusst wie: Definieren der Verbindungszeichenfolge
+# <a name="how-to-define-the-connection-string"></a>Vorgehensweise: Definieren der Verbindungszeichenfolge
 
-In diesem Thema ist dargestellt, wie die Verbindungszeichenfolge für die Verbindung mit einem konzeptionellen Modell definiert wird. Dieses Thema basiert auf dem konzeptuellen [AdventureWorks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) Sales-Modell. Das "AdventureWorks Sales"-Modell wird in den aufgabenbezogenen Themen der Entity Framework-Dokumentation verwendet. In diesem Thema wird davon ausgegangen, dass Sie das Entity Framework bereits konfiguriert und das AdventureWorks-Verkaufsmodell definiert haben. Weitere Informationen finden Sie unter [Gewusst wie: Manuelle Definition des Modells und der Zuordnungsdateien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)). Die Verfahren in diesem Thema sind auch in Gewusst wie [folgt: Manuell konfigurieren eines Entity Framework-Projekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))enthalten.
+In diesem Thema ist dargestellt, wie die Verbindungszeichenfolge für die Verbindung mit einem konzeptionellen Modell definiert wird. Dieses Thema basiert auf dem konzeptionellen [AdventureWorks Sales](/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) -Modell. Das "AdventureWorks Sales"-Modell wird in den aufgabenbezogenen Themen der Entity Framework-Dokumentation verwendet. In diesem Thema wird davon ausgegangen, dass Sie die Entity Framework bereits konfiguriert und das AdventureWorks Sales-Modell definiert haben. Weitere Informationen finden Sie unter Gewusst [wie: Manuelles Definieren der Modell-und Mapping-Dateien](/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)). Die Verfahren in diesem Thema sind auch in Gewusst [wie: Manuelles Konfigurieren eines Entity Framework Projekts](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))enthalten.
 
 > [!NOTE]
-> Wenn Sie den Entitätsdatenmodell-Assistenten in einem Visual Studio-Projekt verwenden, wird automatisch eine .edmx-Datei generiert und das Projekt für die Verwendung des Entity Framework konfiguriert. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden des Entitätsdatenmodell-Assistenten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).
+> Wenn Sie den Entity Data Model-Assistenten in einem Visual Studio-Projekt verwenden, wird automatisch eine EDMX-Datei generiert, und das Projekt wird so konfiguriert, dass die Entity Framework verwendet wird. Weitere Informationen finden Sie unter Gewusst [wie: Verwenden des Entity Data Model-Assistenten](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>So definieren Sie die Verbindungszeichenfolge für Entity Framework
 
@@ -30,10 +30,10 @@ In diesem Thema ist dargestellt, wie die Verbindungszeichenfolge für die Verbin
 </connectionStrings>
 ```
 
-Wenn Ihr Projekt keine Anwendungskonfigurationsdatei enthält, können Sie eine hinzufügen, indem Sie im Menü **Projekt** die Option **"Neues Element hinzufügen"** auswählen, die Kategorie **Allgemein** auswählen, **die Anwendungskonfigurationsdatei**auswählen und dann auf **Hinzufügen**klicken.
+Wenn für das Projekt keine Anwendungs Konfigurationsdatei vorhanden ist, können Sie eines hinzufügen, indem Sie im Menü **Projekt** die Option **Neues Element hinzufügen** auswählen, die Kategorie **Allgemein** auswählen, **Anwendungs Konfigurationsdatei**auswählen und dann auf **Hinzufügen**klicken.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Quickstart](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
-- [Gewusst wie: Erstellen einer neuen EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
-- [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Schnellstart](/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
+- [Gewusst wie: Erstellen einer neuen EDMX-Datei](/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
+- [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

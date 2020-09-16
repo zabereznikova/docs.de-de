@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7601a6d5e7f49b6d8fc434ef772e2e69740f02cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128377"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543932"
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilieren von Anwendungen mit .NET Native
 
@@ -38,7 +38,7 @@ Für Benutzer Ihrer Apps bietet .net Native folgende Vorteile:
 - Optimierte App-Speicherauslastung.
 
 > [!IMPORTANT]
-> Bei den meisten apps und Szenarien bietet .net Native deutlich schnellere Startzeiten und eine bessere Leistung im Vergleich zu einer in Il kompilierten APP oder zu einem NGen-Image. Ihre Ergebnisse können jedoch variieren. Um sicherzustellen, dass Ihre APP von den Leistungsverbesserungen .net Native profitiert, sollten Sie die Leistung mit der Non-.net nativen Version Ihrer APP vergleichen. Weitere Informationen finden Sie unter [Übersicht über die Leistungs Sitzung](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> Bei den meisten apps und Szenarien bietet .net Native deutlich schnellere Startzeiten und eine bessere Leistung im Vergleich zu einer in Il kompilierten APP oder zu einem NGen-Image. Ihre Ergebnisse können jedoch variieren. Um sicherzustellen, dass Ihre APP von den Leistungsverbesserungen .net Native profitiert, sollten Sie die Leistung mit der Non-.net nativen Version Ihrer APP vergleichen. Weitere Informationen finden Sie unter [Übersicht über die Leistungs Sitzung](/visualstudio/profiling/performance-session-overview).
 
 .Net Native umfasst jedoch mehr als eine Kompilierung in nativem Code. Es ändert die Art und Weise, in der .NET Framework-Anwendungen erstellt und ausgeführt werden. Dies gilt insbesondere für:
 
@@ -55,7 +55,7 @@ Für Benutzer Ihrer Apps bietet .net Native folgende Vorteile:
 |Bibliotheken|.NET Framework + Windows-Runtime|Win32 + Windows-Runtime|
 |Compiler|UTC-Optimierungscompiler|UTC-Optimierungscompiler|
 |Bereitgestellt|Sofort ausführbare Binärdateien|Sofort ausführbare Binärdateien (ASM)|
-|Typ|MRT.dll (minimale CLR-Laufzeit)|CRT.dll (C-Laufzeit)|
+|Laufzeit|MRT.dll (minimale CLR-Laufzeit)|CRT.dll (C-Laufzeit)|
 
 Für Windows-Apps für Windows 10 laden Sie Binärdateien für die Kompilierung von systemeigenem .NET-Code in App-Paketen (APPX-Dateien) in den Windows Store hoch.
 

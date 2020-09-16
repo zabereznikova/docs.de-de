@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5bcd37a654db35ba6e8af1b15d6c132a090b0579
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837687"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547752"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste
 
 In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspeicher“ konfigurieren, um die Persistenz für Workflows und Workflowdienste sowohl programmgesteuert als auch mithilfe einer Konfigurationsdatei zu aktivieren.
 
-Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. Weitere Informationen finden Sie unter [App Fabric-Persistenzkonfiguration](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
+Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. Weitere Informationen finden Sie unter [App Fabric-Persistenzkonfiguration](/previous-versions/appfabric/ee790848(v=azure.10)).
 
 Erstellen Sie vor dem Verwenden der Funktion „SQL-Workflowinstanzspeicher“ eine Datenbank erstellen, die die Funktion zum Beibehalten von Workflowinstanzen verwendet. Das [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Setupprogramm kopiert die SQL-Skriptdateien, die der Funktion "SQL-Workflowinstanzspeicher" zugeordnet sind, in den Ordner "%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN". Führen Sie diese Skriptdateien für eine SQL Server 2005- oder SQL Server 2008-Datenbank aus, die der SQL-Workflowinstanzspeicher zum Beibehalten von Workflowinstanzen verwenden soll. Führen Sie zuerst die Datei "SqlWorkflowInstanceStoreSchema.sql" und dann die Datei "SqlWorkflowInstanceStoreLogic.sql" aus.
 
@@ -36,7 +36,7 @@ Sie können die Persistenz für selbst gehostete Workflows aktivieren, die <xref
 
 #### <a name="to-enable-persistence-for-self-hosted-workflows"></a>So aktivieren Sie Persistenz für selbst gehostete Workflows
 
-1. Fügen Sie einen Verweis auf "System. Activities. DurableInstancing. dll" hinzu.
+1. Fügen Sie einen Verweis auf System.Activities.DurableInstancing.dll hinzu.
 
 2. Fügen Sie oben in der Quelldatei nach den vorhandenen using-Anweisungen die folgende Anweisung hinzu.
 
@@ -126,7 +126,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 Sie können die Persistenz für selbst gehostete oder per WAS (Windows Process Activation Service) gehostete Workflowdienste mithilfe einer Konfigurationsdatei aktivieren. Ein per WAS gehosteter Workflowdienst verwendet WorkflowServiceHost, wie selbst gehostete Workflowdienste dies auch tun.
 
-Die `SqlWorkflowInstanceStoreBehavior`, ein Dienst Verhalten, das es Ihnen ermöglicht, die Eigenschaften des [SQL-workflowinstanzspeichers](sql-workflow-instance-store.md) über die XML-Konfiguration zu ändern Verwenden Sie für per WAS gehostete Workflowdienste die Datei "Web.config". Im folgenden Konfigurationsbeispiel wird gezeigt, wie Sie den SQL-Workflowinstanzspeicher konfigurieren, indem Sie das `sqlWorkflowInstanceStore`-Verhaltenselement in einer Konfigurationsdatei verwenden.
+Der `SqlWorkflowInstanceStoreBehavior` , ein Dienst Verhalten, mit dem Sie die Eigenschaften des [SQL-workflowinstanzspeichers](sql-workflow-instance-store.md) über die XML-Konfiguration bequem ändern können. Verwenden Sie für per WAS gehostete Workflowdienste die Datei "Web.config". Im folgenden Konfigurationsbeispiel wird gezeigt, wie Sie den SQL-Workflowinstanzspeicher konfigurieren, indem Sie das `sqlWorkflowInstanceStore`-Verhaltenselement in einer Konfigurationsdatei verwenden.
 
 ```xml
 <serviceBehaviors>
@@ -152,13 +152,13 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> Es wird empfohlen, keine vertraulichen Informationen wie Benutzernamen und Kennwörter in der Datei "Web.config" zu speichern. Wenn Sie vertrauliche Informationen in der Datei "Web.config" speichern, sollten Sie den Zugriff auf die Datei "Web.config" mit Dateisystem-ACLs (Zugriffssteuerungslisten) sichern. Außerdem können Sie die Konfigurationswerte in einer Konfigurationsdatei wie unter [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))beschrieben sichern.
+> Es wird empfohlen, keine vertraulichen Informationen wie Benutzernamen und Kennwörter in der Datei "Web.config" zu speichern. Wenn Sie vertrauliche Informationen in der Datei "Web.config" speichern, sollten Sie den Zugriff auf die Datei "Web.config" mit Dateisystem-ACLs (Zugriffssteuerungslisten) sichern. Außerdem können Sie die Konfigurationswerte in einer Konfigurationsdatei wie unter [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](/previous-versions/aspnet/53tyfkaw(v=vs.100))beschrieben sichern.
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Auf die Funktion "SQL-Workflowinstanzspeicher" bezogene Machine.config-Elemente
 
 Die [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Installation fügt die folgenden Elemente, die sich auf die Funktion "SQL-Workflowinstanzspeicher" beziehen, der Datei "Machine.config" hinzu:
 
-- Fügt der Datei "Machine. config" das folgende Verhaltens Erweiterungs Element hinzu, damit Sie das \<SqlWorkflowInstanceStore > Dienst Verhaltens Element in der Konfigurationsdatei verwenden können, um die Persistenz für die Dienste zu konfigurieren.
+- Fügt der Machine.config Datei das folgende Verhaltens Erweiterungs Element hinzu, damit Sie das \<sqlWorkflowInstanceStore> Dienst Verhaltens Element in der Konfigurationsdatei verwenden können, um die Persistenz für die Dienste zu konfigurieren.
 
     ```xml
     <configuration>

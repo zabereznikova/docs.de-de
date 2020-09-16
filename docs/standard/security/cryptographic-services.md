@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 4cd4e493e0e7d159b2749dac78b9a560e20fd75c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557020"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549979"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
@@ -150,7 +150,7 @@ Zwei Teilnehmer (Alice und Bob) könnten eine Hashfunktion verwenden, um die Nac
 
 - Alice sendet die Klartext-Nachricht und die Hashnachricht (digitale Signatur) an Bob. Bob empfängt die Nachricht, wendet den Hashalgorithmus darauf an und vergleicht seinen Hashwert mit dem von Alice empfangenen Hashwert. Wenn die Hashwerte identisch sind, wurde die Nachricht nicht geändert. Wenn die Werte nicht identisch sind, wurde die Nachricht geändert, nachdem sie von Alice geschrieben wurde.
 
-  Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für die sichere Kommunikation mit Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für die sichere Kommunikation mit Cryptography Next Generation (CNG)](/previous-versions/cc488018(v=vs.100)).
 
 - Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob. Sie sendet die Hashnachricht über einen sicheren privaten Kanal an Bob. Bob empfängt die Klartext-Meldung, wendet den Hashalgorithmus darauf an, und vergleicht den Hash mit dem privat ausgetauschten Hash. Wenn die Hashs zusammenpassen, weiß Bob zwei Dinge:
 
@@ -216,7 +216,7 @@ Der .NET Framework 3,5 umfasst auch eine Reihe von unterstützenden CNG-Klassen,
 
 - <xref:System.Security.Cryptography.CngProperty> verwaltet häufig verwendete Schlüsseleigenschaften.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Kryptografiemodell](cryptography-model.md) : Beschreibt, wie Kryptografie in der Basisklassen Bibliothek implementiert wird.
 - [Plattformübergreifende Kryptografie](cross-platform-cryptography.md)

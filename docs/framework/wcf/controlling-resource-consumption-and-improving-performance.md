@@ -2,12 +2,12 @@
 title: Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 16d6f29235455ff30e115b7aff3425412bc7ba6a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 7210f71287a2ec763b67dfa033cd9f4dadf6bd34
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802261"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543068"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
 In diesem Thema werden verschiedene Eigenschaften in verschiedenen Bereichen der Windows Communication Foundation (WCF)-Architektur beschrieben, die zum Steuern des Ressourcenverbrauchs und beeinflussen der Leistungsmetriken verwendet werden.
@@ -41,11 +41,11 @@ In diesem Thema werden verschiedene Eigenschaften in verschiedenen Bereichen der
 > [!NOTE]
 > Vorab generierter Serialisierungscode kann nur in Clientanwendungen und nicht in Diensten verwendet werden.
 
- Das [Service Model Metadata Utility-Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kann die Startleistung für diese Anwendungen verbessern, indem der erforderliche Serialisierungscode aus den kompilierten Assemblys für die Anwendung erzeugt wird. Weitere Informationen finden Sie unter Vorgehens [Weise: verbessern der Startzeit von WCF-Client Anwendungen mit dem XmlSerializer](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
+ Das [Service Model Metadata Utility-Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kann die Startleistung für diese Anwendungen verbessern, indem der erforderliche Serialisierungscode aus den kompilierten Assemblys für die Anwendung erzeugt wird. Weitere Informationen finden Sie unter Vorgehens [Weise: verbessern der Startzeit von WCF-Client Anwendungen mit dem XmlSerializer](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Leistungsprobleme beim Hosten von WCF-Diensten unter ASP.NET
 
-Wird ein WCF-Dienst unter IIS und ASP.NET gehostet, können sich die Konfigurationseinstellungen von IIS und ASP.NET auf den Durchsatz und die Speicherbeanspruchung des WCF-Diensts auswirken.  Weitere Informationen zur ASP.net-Leistung finden Sie unter [verbessern der Leistung von ASP.net](https://docs.microsoft.com/previous-versions/msp-n-p/ff647787(v=pandp.10)). Eine Einstellung, durch die sich unbeabsichtigte Folgen ergeben können, ist <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>. Hierbei handelt es sich um eine Eigenschaft der <xref:System.Web.Configuration.ProcessModelSection>. Verfügt die Anwendung über eine feste oder über eine geringe Anzahl von Clients, lässt sich durch Festlegen von <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> auf "2" bei einem Computer mit mehreren Prozessoren, dessen CPU-Auslastung sich nahe bei 100 Prozent bewegt, möglicherweise ein Leistungsschub beim Durchsatz erzielen. Dieser Leistungszuwachs bringt jedoch auch einen Nachteil mit sich, da sich dadurch auch eine erhöhte Speicherauslastung ergibt, was zu einer geringeren Skalierbarkeit führt.
+Wird ein WCF-Dienst unter IIS und ASP.NET gehostet, können sich die Konfigurationseinstellungen von IIS und ASP.NET auf den Durchsatz und die Speicherbeanspruchung des WCF-Diensts auswirken.  Weitere Informationen zur ASP.net-Leistung finden Sie unter [verbessern der Leistung von ASP.net](/previous-versions/msp-n-p/ff647787(v=pandp.10)). Eine Einstellung, durch die sich unbeabsichtigte Folgen ergeben können, ist <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>. Hierbei handelt es sich um eine Eigenschaft der <xref:System.Web.Configuration.ProcessModelSection>. Verfügt die Anwendung über eine feste oder über eine geringe Anzahl von Clients, lässt sich durch Festlegen von <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> auf "2" bei einem Computer mit mehreren Prozessoren, dessen CPU-Auslastung sich nahe bei 100 Prozent bewegt, möglicherweise ein Leistungsschub beim Durchsatz erzielen. Dieser Leistungszuwachs bringt jedoch auch einen Nachteil mit sich, da sich dadurch auch eine erhöhte Speicherauslastung ergibt, was zu einer geringeren Skalierbarkeit führt.
 
 ## <a name="see-also"></a>Siehe auch
 

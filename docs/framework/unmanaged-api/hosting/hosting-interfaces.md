@@ -6,12 +6,12 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-ms.openlocfilehash: d1668f52ff305ec36fb520c7828c822537da0d02
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b1459bf78276abe0daefd7a7ee814841f3c65dfb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616098"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550663"
 ---
 # <a name="hosting-interfaces"></a>Hostingschnittstellen
 In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwaltete Hosts die Common Language Runtime (CLR) in Ihre Anwendungen integrieren können.  
@@ -33,14 +33,14 @@ In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwa
  Beschreibt die Hostingschnittstellen, die in der .NET Framework 4 eingeführt wurden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Hosting-Co-Klassen](hosting-coclasses.md)  
+ [Hosten von Co-Klassen](hosting-coclasses.md)  
   
  [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)  
   
  [Hosten von Enumerationen](hosting-enumerations.md)  
   
- [Hostingstrukturen](hosting-structures.md)  
+ [Hosten von Strukturen](hosting-structures.md)  
   
  [Hosting](index.md)  
   
- [Laufzeithosts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
+ [Laufzeithosts](/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))

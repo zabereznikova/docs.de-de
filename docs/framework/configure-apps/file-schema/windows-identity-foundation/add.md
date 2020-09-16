@@ -3,12 +3,12 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 83ba51cbbd5100bf7412f9914a270cac88f7faa1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7c2b6bdc62da63905d7ff33a9984808e7b7d114f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73973803"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544539"
 ---
 # \<add>
 Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.  
@@ -41,11 +41,11 @@ Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.
   
 |attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|type|Der CLR-Typname des tokenhandlers, der hinzugefügt werden soll. Weitere Informationen zum Angeben des- `type` Attributs finden Sie unter [benutzerdefinierte Typverweise](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
+|type|Der CLR-Typname des tokenhandlers, der hinzugefügt werden soll. Weitere Informationen zum Angeben des- `type` Attributs finden Sie unter [benutzerdefinierte Typverweise](/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> Klasse, die- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse oder eine abgeleitete Klasse einer dieser Klassen bereit.|  
 |[\<sessionTokenRequirement>](sessiontokenrequirement.md)|Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Klasse oder abgeleitete Klassen bereit.|  
@@ -54,11 +54,11 @@ Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|Gibt eine Auflistung von Sicherheitstokenhandlern an, die beim Endpunkt registriert sind.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das- `<add>` Element kann ein einzelnes untergeordnetes Element annehmen, das die Konfiguration für den Tokenhandler angibt. Dies hängt davon ab, ob die Handlerklasse, auf die über das-Attribut des-Elements verwiesen wird, `type` `<add>` Unterstützung für diese Funktion bietet Tokenhandlerklassen, die diese Funktion bereitstellen, müssen einen Konstruktor verfügbar machen, der ein <xref:System.Xml.XmlElement> Objekt annimmt.  
 
 ```csharp  

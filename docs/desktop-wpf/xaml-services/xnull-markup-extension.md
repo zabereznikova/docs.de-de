@@ -12,12 +12,12 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: b83e893f951c15eca69fbb6b002369dd723ca469
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: f4971d61d11ec14eaeac2d2f202353e4921b9325
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432695"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549443"
 ---
 # <a name="xnull-markup-extension"></a>x:Null-Markuperweiterung
 
@@ -29,26 +29,26 @@ Gibt `null` als Wert für ein XAML-Element an.
 <object property="{x:Null}" .../>
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Schlüsselwort für einen Nullverweis in C- und C++ ist null. Das Microsoft Visual Basic-Schlüsselwort `Nothing`für einen `{x:Null}` Nullverweis ist , sie verwenden jedoch immer als XAML-Verwendung, unabhängig davon, welche CodeBehind-Sprache Sie dem XAML zuordnen.
+Das Schlüsselwort für einen NULL-Verweis in c# und C++ ist NULL. Das Microsoft Visual Basic-Schlüsselwort für einen NULL-Verweis ist `Nothing` , Sie verwenden jedoch immer `{x:Null}` als XAML-Verwendung, unabhängig davon, welche Code Behind-Sprache Sie der XAML zuordnen.
 
-Die `x:Null` Markuperweiterung hat keine festsetzbaren Eigenschaften.
+Die `x:Null` Markup Erweiterung hat keine festleg baren Eigenschaften.
 
-Eine Nullverwendung ist häufig mit der XAML-Member-Exposition eines CLR-Werts <xref:System.Nullable%601> verknüpft.
+Eine null-Verwendung ist häufig dem XAML-Element zugeordnet, das einen CLR-Wert verfügbar macht <xref:System.Nullable%601> .
 
-Die `x:Null` Markuperweiterung verwendet, wie alle XAML-Markuperweiterungen, die geschweiften Klammern (`{,}`), um der Verarbeitung von Attributwerten zu entgehen, die nicht als Literale oder Ereignishandlerverweise gelten. Attributsyntax ist die Syntax, die am häufigsten mit dieser Markuperweiterung verwendet wird. Eine Objektelementsyntax `<x:Null />` ist technisch möglich, wird `x:Null` aber nur selten verwendet, da die Markuperweiterung keine Positionsparameter oder Konstruktionsargumente aufweist.
+Die `x:Null` Markup Erweiterung verwendet, wie alle XAML-Markup Erweiterungen, die geschweiften Klammern (), um `{,}` die Behandlung von Attributwerten als Literale oder ereignishandlerverweise zu vermeiden. Die Attribut Syntax ist die Syntax, die in dieser Markup Erweiterung am häufigsten verwendet wird. Eine Objekt Element Syntax `<x:Null />` ist technisch möglich, wird jedoch nur selten verwendet, da die `x:Null` Markup Erweiterung keine Positions Parameter oder Konstruktions Argumente aufweist.
 
-Informationen zu Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).
+Weitere Informationen zu Markup Erweiterungen finden Sie unter [Markup Erweiterungen und WPF-XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml).
 
-In .NET XAML Services wird die Verarbeitung für <xref:System.Windows.Markup.NullExtension> diese Markuperweiterung durch die Klasse definiert.
+In .net XAML-Diensten wird die Behandlung dieser Markup Erweiterung durch die- <xref:System.Windows.Markup.NullExtension> Klasse definiert.
 
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung
 
-Beachten `null` Sie, dass dies nicht unbedingt der anfängliche Nichtsetwert für eine Abhängigkeitseigenschaft des Referenztyps ist. Der anfängliche Standardwert kann für jede Abhängigkeitseigenschaft variieren und auf eigenschaftsspezifischen Metadaten basieren. Viele Abhängigkeitseigenschaften `null` akzeptieren aufgrund ihrer Validierungsrückrufimplementierungen weder durch Markup noch über Code einen Wert. Weitere Informationen zu Abhängigkeitseigenschaften finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../framework/wpf/advanced/dependency-properties-overview.md).
+Beachten Sie, dass `null` nicht notwendigerweise der anfängliche nicht festgelegte Wert für eine Verweistyp-Abhängigkeits Eigenschaft ist. Der anfängliche Standardwert kann für jede Abhängigkeits Eigenschaft variieren und kann auf Eigenschafts spezifischen Metadaten basieren. Viele Abhängigkeits Eigenschaften akzeptieren `null` aufgrund ihrer Validierungs Rückruf Implementierungen nicht als Wert, entweder durch Markup oder Code. Weitere Informationen zu Abhängigkeitseigenschaften finden Sie unter [Übersicht über Abhängigkeitseigenschaften](/dotnet/desktop/wpf/advanced/dependency-properties-overview).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.DependencyProperty.UnsetValue>
 - [Übersicht über XAML (WPF)](../fundamentals/xaml.md)
-- [Markuperweiterungen und WPF-XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Markuperweiterungen und WPF-XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml)

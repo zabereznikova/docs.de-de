@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication>-Element
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: bab0e50d7feba3ea55d505be07cfa41427a5cbbc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3693b2b4c6b6cbc3705a25967aedc88e36291407
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397787"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547010"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication>-Element
 Gibt die Authentifizierungsoptionen für Peer-to-Peer-Nachrichtenabsender an.  
@@ -54,30 +54,30 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Nachrichtenabsender an.
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Enumeration|(Optional) Einer der folgenden Werte: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. Der Standardwert lautet `ChainTrust`. Der Standardwert lautet `ChainTrust`.<br /><br /> Weitere Informationen finden Sie unter [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md).|  
+|Enumeration|Dies ist optional. Einer der folgenden Werte: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. Der Standardwert ist `ChainTrust`. Der Standardwert ist `ChainTrust`.<br /><br /> Weitere Informationen finden Sie unter [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode-Attribut  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Enumeration|Einer der folgenden Werte: `NoCheck`, `Online`, `Offline`. Der Standardwert lautet `Online`.<br /><br /> Weitere Informationen finden Sie unter [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md).|  
+|Enumeration|Einer der folgenden Werte: `NoCheck`, `Online`, `Offline`. Der Standardwert ist `Online`.<br /><br /> Weitere Informationen finden Sie unter [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation-Attribut  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Enumeration|Einer der folgenden Werte: `LocalMachine` oder `CurrentUser`. Der Standardwert lautet `CurrentUser`. Wenn die Clientanwendung über ein Systemkonto ausgeführt wird, befindet sich das Zertifikat in der Regel in `LocalMachine`. Wenn die Clientanwendung über ein Benutzerkonto ausgeführt wird, befindet sich das Zertifikat in der Regel in `CurrentUser`. Der Standardwert lautet `CurrentUser`.|  
+|Enumeration|Einer der folgenden Werte: `LocalMachine` oder `CurrentUser`. Der Standardwert ist `CurrentUser`. Wenn die Clientanwendung über ein Systemkonto ausgeführt wird, befindet sich das Zertifikat in der Regel in `LocalMachine`. Wenn die Clientanwendung über ein Benutzerkonto ausgeführt wird, befindet sich das Zertifikat in der Regel in `CurrentUser`. Der Standardwert ist `CurrentUser`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<peer>](peer-of-clientcredentials-element.md)|Gibt Anmeldeinformationen an, die zur Authentifizierung des Clients bei einem Peerdienst verwendet werden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Dieses Element muss konfiguriert werden, wenn die Nachrichtenauthentifizierung ausgewählt wird. Für Ausgabekanäle wird jede Nachricht mit dem von bereitgestellten Zertifikat signiert [\<certificate>](certificate-element.md) . Alle Nachrichten werden vor dem Zustellen zur Anwendung mithilfe des durch das `customCertificateValidatorType`-Attribut dieses Elements angegebenen Validierungssteuerelements mit den Nachrichtenanmeldeinformationen verglichen. Das Validierungssteuerelement kann die Anmeldeinformationen akzeptieren oder ablehnen.  
   
 ## <a name="example"></a>Beispiel  
@@ -101,7 +101,7 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Nachrichtenabsender an.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
@@ -109,6 +109,6 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Nachrichtenabsender an.
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Verwenden von Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
 - [Peer-to-Peer-Netzwerke](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Peerkanal-Nachrichtenauthentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Benutzerdefinierte Peerkanal-Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Peerkanal-Nachrichtenauthentifizierung](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Benutzerdefinierte Peerkanal-Authentifizierung](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Sichern von Peerkanalanwendungen](../../../wcf/feature-details/securing-peer-channel-applications.md)

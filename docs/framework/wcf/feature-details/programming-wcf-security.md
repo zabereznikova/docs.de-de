@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244984"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535897"
 ---
 # <a name="programming-wcf-security"></a>Programmieren der WCF-Sicherheit
 In diesem Thema werden die grundlegenden Programmieraufgaben beschrieben, die zum Erstellen einer Secure Windows Communication Foundation (WCF)-Anwendung verwendet werden. In diesem Thema werden nur Authentifizierung, Vertraulichkeit und Integrität behandelt, die zusammen als *Übertragungssicherheit*bezeichnet werden. In diesem Thema wird die Autorisierung (Kontrolle des Zugriffs auf Ressourcen oder Dienste) nicht behandelt. Informationen zur Autorisierung finden Sie unter [Autorisierung](authorization-in-wcf.md).  
   
 > [!NOTE]
-> Eine wertvolle Einführung in Sicherheitskonzepte, insbesondere im Hinblick auf WCF, finden Sie in den Tutorials zu Mustern und Vorgehensweisen auf MSDN unter [Szenarien, Muster und Implementierungs Leit Faden für Web Services-Erweiterungen (WSE) 3,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
+> Eine wertvolle Einführung in Sicherheitskonzepte, insbesondere im Hinblick auf WCF, finden Sie in den Tutorials zu Mustern und Vorgehensweisen auf MSDN unter [Szenarien, Muster und Implementierungs Leit Faden für Web Services-Erweiterungen (WSE) 3,0](/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
   
  Das Programmieren der WCF-Sicherheit basiert auf drei Schritten, die Folgendes festlegen: der Sicherheitsmodus, ein Client Anmelde Informationstyp und die Anmelde Informationswerte. Sie können diese Schritte durch Code oder die Konfiguration durchführen.  
   

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 327fb509a5186a0b3f428efc2ddd7f983bcfa978
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595142"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546314"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
 In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-Sicherheitsfeatures und deren Verwendung zum Sichern von Nachrichten beschrieben.  
   
- Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
+ Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Sicherheitsübersicht](security-overview.md)  
@@ -49,7 +49,7 @@ In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-
  [Teilweise Vertrauenswürdigkeit](partial-trust.md)  
  Beschreibt das Ausführen teilweise vertrauenswürdiger Szenarien und WCF-Einschränkungen bei der Ausführung teilweise vertrauenswürdiger Anwendungen.  
   
- [Auditing](auditing-security-events.md)  
+ [Überwachung](auditing-security-events.md)  
  Beschreibt, wie Sicherheitsereignisse überwacht werden.  
   
  [Sicherheitsleitfaden und empfohlene Vorgehensweisen](security-guidance-and-best-practices.md)  
@@ -69,6 +69,6 @@ In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-
   
  [Konzeptionelle Übersicht](../conceptual-overview.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Konfigurieren der Anwendung](../diagnostics/configuring-your-application.md)

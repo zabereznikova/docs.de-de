@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: 4e07aa7aac82fae5cfd1bfc759ef724cf87a873a
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 21d3dcb05e48154eb3f9f10d8308dc14bd046ae1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246935"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546340"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
 
@@ -134,9 +134,9 @@ Im folgenden finden Sie eine komplette Liste des in diesem Thema verwendeten Cod
 
 Wie bei der Option für das "Selbsthosting" muss auch bei der Hostumgebung des Windows-Diensts ein Teil des Hostcodes eine Komponente der Anwendung sein. Der Dienst wird als eine Konsolenanwendung implementiert und enthält seinen eigenen Hostingcode. In anderen Hostumgebungen, z. B. WAS (Windows Process Activation Service, Windows-Prozessaktivierungsdienst) in IIS (Internet Information Services, Internetinformationsdienste), müssen Entwickler keinen Hostcode schreiben.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vereinfachte Konfiguration](../simplified-configuration.md)
 - [Hosten in einer verwalteten Anwendung](hosting-in-a-managed-application.md)
 - [Hosting-Dienste](../hosting-services.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

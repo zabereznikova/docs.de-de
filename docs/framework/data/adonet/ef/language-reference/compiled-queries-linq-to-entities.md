@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: b4594932b6ed21de98faab57d80404a7b763067d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f3270147f0cf38a646efac603f058173daa78547
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207914"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541134"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Kompilierte Abfragen (LINQ to Entities)
 
@@ -18,7 +18,7 @@ Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen a
   
  Ab .NET Framework 4,5 werden LINQ-Abfragen automatisch zwischengespeichert. Sie können jedoch weiterhin kompilierte LINQ-Abfragen verwenden, um diesen Aufwand in späteren Ausführungen zu reduzieren. Kompilierte Abfragen können effizienter als LINQ-Abfragen sein, die automatisch zwischengespeichert werden. LINQ to Entities Abfragen, die den- `Enumerable.Contains` Operator auf Auflistungen im Arbeitsspeicher anwenden, werden nicht automatisch zwischengespeichert. Außerdem ist die Parametrisierung von in-Memory-Auflistungen in kompilierten LINQ-Abfragen nicht zulässig.  
   
- Die <xref:System.Data.Objects.CompiledQuery>-Klasse ermöglicht das Kompilieren und Zwischenspeichern von Abfragen zur Wiederverwendung. Diese Klasse enthält eine <xref:System.Data.Objects.CompiledQuery>-Methode einer `Compile` mit mehreren Überladungen. Rufen Sie die `Compile`-Methode auf, um einen neuen Delegaten für die Darstellung der kompilierten Abfrage zu erstellen. Die mit einem `Compile` und Parameterwerten ausgestatteten <xref:System.Data.Objects.ObjectContext>-Methoden geben einen Delegat zurück, der ein Ergebnis ausgibt (z. B. eine <xref:System.Linq.IQueryable%601>-Instanz). Die Abfrage wird nur einmal während der ersten Ausführung kompiliert. Die für die Abfrage zur Kompilierungszeit festgelegten Mergeoptionen können später nicht geändert werden. Nachdem die Abfrage kompiliert wurde, können Sie nur Parameter des primitiven Typs angeben, aber Sie können keine Teile der Abfrage ersetzen, die das generierte SQL ändern würden. Weitere Informationen finden Sie unter [EF-mergeoptionen und kompilierte Abfragen](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
+ Die <xref:System.Data.Objects.CompiledQuery>-Klasse ermöglicht das Kompilieren und Zwischenspeichern von Abfragen zur Wiederverwendung. Diese Klasse enthält eine <xref:System.Data.Objects.CompiledQuery>-Methode einer `Compile` mit mehreren Überladungen. Rufen Sie die `Compile`-Methode auf, um einen neuen Delegaten für die Darstellung der kompilierten Abfrage zu erstellen. Die mit einem `Compile` und Parameterwerten ausgestatteten <xref:System.Data.Objects.ObjectContext>-Methoden geben einen Delegat zurück, der ein Ergebnis ausgibt (z. B. eine <xref:System.Linq.IQueryable%601>-Instanz). Die Abfrage wird nur einmal während der ersten Ausführung kompiliert. Die für die Abfrage zur Kompilierungszeit festgelegten Mergeoptionen können später nicht geändert werden. Nachdem die Abfrage kompiliert wurde, können Sie nur Parameter des primitiven Typs angeben, aber Sie können keine Teile der Abfrage ersetzen, die das generierte SQL ändern würden. Weitere Informationen finden Sie unter [EF-mergeoptionen und kompilierte Abfragen](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
   
  Der LINQ to Entities Abfrage Ausdruck, der <xref:System.Data.Objects.CompiledQuery> von der-Methode der- `Compile` Methode kompiliert wird, wird durch einen der generischen Delegaten `Func` wie dargestellt <xref:System.Func%605> . Der Abfrageausdruck kann höchstens einen `ObjectContext`-Parameter, einen Rückgabeparameter und 16 Abfrageparameter kapseln. Sind mehr als 16 Abfrageparameter erforderlich, können Sie eine Struktur erstellen, deren Eigenschaften Abfrageparameter darstellen. Sie können anschließend die Eigenschaften für die Struktur im Abfrageausdruck verwenden, nachdem die Eigenschaften festgelegt wurden.  
   
@@ -73,4 +73,4 @@ Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen a
 
 - [ADO.NET Entity Framework](../index.md)
 - [LINQ to Entities](linq-to-entities.md)
-- [EF-mergeoptionen und kompilierte Abfragen](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [EF-mergeoptionen und kompilierte Abfragen](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

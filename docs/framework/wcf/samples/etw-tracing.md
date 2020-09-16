@@ -3,12 +3,12 @@ title: ETW-Ablaufverfolgung
 description: In diesem Beispiel wird veranschaulicht, wie End-to-End (E2E)-Ablauf Verfolgung mithilfe der Ereignis Ablauf Verfolgung für Windows (ETW) und ETWTraceListener implementiert wird.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6e7526ef05d672b550599e3b12a4b083e9130b96
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244425"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547140"
 ---
 # <a name="etw-tracing"></a>ETW-Ablaufverfolgung
 In diesem Beispiel wird das Implementieren der End-to-End (E2E)-Ablaufverfolgung mit Event Tracing for Windows (ETW) und dem in diesem Beispiel bereitgestellten `ETWTraceListener` veranschaulicht. Das Beispiel basiert auf den ersten [Schritten und umfasst](getting-started-sample.md) die ETW-Ablauf Verfolgung.  
@@ -51,7 +51,7 @@ In diesem Beispiel wird das Implementieren der End-to-End (E2E)-Ablaufverfolgung
  Damit dieser Listener verwendet werden kann, muss eine ETW-Ablaufverfolgungssitzung gestartet werden. Diese Sitzung kann mithilfe von Logman.exe oder Tracelog.exe gestartet werden. Dieses Beispiel umfasst die Datei "SetupETW.bat", sodass Sie die ETW-Ablaufverfolgungssitzung einrichten können. Außerdem wird die Datei "CleanupETW.bat" zum Schließen der Sitzung und Abschließen der Protokolldatei bereitgestellt.  
   
 > [!NOTE]
-> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas. Weitere Informationen zu diesen Tools finden Sie unter.<https://go.microsoft.com/fwlink/?LinkId=56580>  
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas. Weitere Informationen zu diesen Tools finden Sie unter. <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  Bei der Verwendung von ETWTraceListener werden Ablaufverfolgungen in binären ETL-Dateien protokolliert. Wenn die ServiceModel-Ablaufverfolgung aktiviert ist, werden alle generierten Ablaufverfolgungen in der gleichen Datei angezeigt. Verwenden Sie das [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) zum Anzeigen von ETL-und SVCLOG-Protokolldateien. Der Viewer erstellt eine End-to-End-Ansicht des Systems, mit der eine Nachricht von der Quelle zum Ziel und zur Verwendung verfolgt werden kann.  
   
@@ -107,6 +107,6 @@ logman stop Wcf
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Überwachungsbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric-Überwachungsbeispiele](/previous-versions/appfabric/ff383407(v=azure.10))

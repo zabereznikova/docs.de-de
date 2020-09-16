@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: ca6b196e8c910f97ead6d1df5b6c0dd6c49c68a4
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247752"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549678"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
@@ -76,7 +76,7 @@ Ich möchte LINQ verwenden...
 
 Ich benötige noch weitere Informationen...
 
-- [WCF Data Services-Teamblog](https://docs.microsoft.com/archive/blogs/astoriateam/)
+- [WCF Data Services-Teamblog](/archive/blogs/astoriateam/)
 
 - [Ressourcen](wcf-data-services-resources.md)
 
@@ -86,7 +86,7 @@ Ich benötige noch weitere Informationen...
 
 Bietet eine Übersicht über die Features und Funktionen, die in WCF Data Services verfügbar sind.
 
-[Neues in WCF Data Services 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+[Neues in WCF Data Services 5,0](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
 Beschreibt neue Funktionen in WCF Data Services und Unterstützung neuer odata-Funktionen.
 
@@ -102,6 +102,6 @@ Beschreibt, wie Sie einen Datendienst erstellen und konfigurieren, der odata-Fee
 
 Beschreibt die Verwendung von Client Bibliotheken für die Nutzung von odata-Feeds aus einer .NET Framework Client Anwendung.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

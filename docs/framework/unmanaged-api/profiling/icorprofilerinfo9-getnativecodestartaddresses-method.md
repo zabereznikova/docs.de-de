@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 99706fdc3d60a5e1a7f85400c1184d5acc808e42
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca1643dfa980fa647164accf6432082428124acb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449728"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541238"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: getnativecodestartadressen-Methode
 
@@ -52,21 +52,21 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 - `codeStartAddresses`
 
-  \[out] ein Array von `UINT_PTR`, von denen jedes die Startadresse für einen systemeigenen Text für die angegebene Funktion ist.
+  \[out] ein Array von `UINT_PTR` , von denen jede die Startadresse für einen systemeigenen Text für die angegebene Funktion ist.
 
 ## <a name="remarks"></a>Hinweise
 
 Wenn die mehrstufige Kompilierung aktiviert ist, kann eine Funktion mehr als einen nativen Code Körper aufweisen.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?pivots=os-windows).
+**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/windows.md?pivots=os-windows).
 
 **Header:** CorProf.idl, CorProf.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET-Versionen:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

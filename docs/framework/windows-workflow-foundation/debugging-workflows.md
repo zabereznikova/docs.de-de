@@ -2,12 +2,12 @@
 title: Debuggen von Workflows
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 31c688f5f45b41f337176108486ec2074e1915a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802634"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543835"
 ---
 # <a name="debugging-workflows"></a>Debuggen von Workflows
 
@@ -29,9 +29,9 @@ Um einen Haltepunkt festzulegen, klicken Sie auf den linken Rand des Code Bereic
 
 Das Debugging von Workflows unterstützt auch die Verwendung der Visual Studio-Infrastruktur zum Anfügen an einen Prozess. Dies ermöglicht es dem Workflowautor, einen Workflow zu debuggen, der in einer anderen Hostumgebung ausgeführt wird, z. B. in Internetinformationsdienste (IIS) 7.0.
 
-## <a name="remote-debugging"></a>Remotedebuggen
+## <a name="remote-debugging"></a>Remote Debugging
 
-Das Remote Debuggen von Windows Workflow Foundation (WF) funktioniert genauso wie das Remote Debuggen für andere Visual Studio-Komponenten. Weitere Informationen zur Verwendung des Remote Debuggens finden Sie unter Gewusst [wie: Aktivieren des Remote Debuggens](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
+Das Remote Debuggen von Windows Workflow Foundation (WF) funktioniert genauso wie das Remote Debuggen für andere Visual Studio-Komponenten. Weitere Informationen zur Verwendung des Remote Debuggens finden Sie unter Gewusst [wie: Aktivieren des Remote Debuggens](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
 > Wenn die Workflow Anwendung die x86-Architektur als Ziel verwendet und auf einem Computer gehostet wird, auf dem ein 64-Bit-Betriebssystem ausgeführt wird, funktioniert das Remote Debuggen nur dann, wenn Visual Studio auf dem Remote Computer installiert ist oder das Ziel für die Workflow Anwendung in eine **beliebige CPU**geändert wird.
