@@ -2,12 +2,12 @@
 title: Nachrichtenkorrelation
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 84b10b507f9fdaa7c53cf937bb132c8cc0aac33f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c6c68ec36ecee294aa217f77f462dcea31f1e211
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591633"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557969"
 ---
 # <a name="message-correlation"></a>Nachrichtenkorrelation
 
@@ -313,7 +313,7 @@ static void DisplayOrderStatus()
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Warteschlangen in WCF](../feature-details/queuing-in-wcf.md)
-- [Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [Message Queuing](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

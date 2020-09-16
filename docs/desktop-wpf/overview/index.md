@@ -3,12 +3,12 @@ title: Was ist Windows Presentation Foundation?
 description: Dieser Artikel bietet eine Übersicht darüber, was Windows Presentation Foundation (WPF) bezogen auf .NET Core ist und welche Funktionen bereitgestellt werden.
 ms.date: 07/18/2019
 ms.topic: overview
-ms.openlocfilehash: 63b2e431b5ab5fd3875887b8b574a77aa12018a6
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 37443b692ba840da847b2a21c3220f2c36025c12
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "85840278"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551863"
 ---
 # <a name="what-is-windows-presentation-foundation"></a>Was ist Windows Presentation Foundation?
 
@@ -22,7 +22,7 @@ Es gibt zwei Implementierungen von WPF:
 
 01. Die .NET Framework-Implementierung, die von Visual Studio 2019 und Visual Studio 2017 unterstützt wird.
 
-Dieser Desktopleitfaden bezieht sich auf .NET Core 3.0 und WPF. Weitere Informationen zur vorhandenen Dokumentation für WPF mit .NET Framework finden Sie unter [Framework „Windows Presentation Foundation“](../../framework/wpf/index.md).
+Dieser Desktopleitfaden bezieht sich auf .NET Core 3.0 und WPF. Weitere Informationen zur vorhandenen Dokumentation für WPF mit .NET Framework finden Sie unter [Framework „Windows Presentation Foundation“](/dotnet/desktop/wpf/).
 
 ## <a name="xaml"></a>XAML
 
@@ -52,7 +52,7 @@ Der XAML-Code oben hat z. B. eine Schaltfläche definiert, bei der der sichtbar
 
 WPF bietet verschiedene Markuperweiterungen für XAML, z. B. `{Binding}` für Datenbindung.
 
-Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).
+Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml).
 
 ## <a name="property-system"></a>Eigenschaftensystem
 
@@ -144,6 +144,6 @@ Jedes Element auf Frameworkebene (<xref:System.Windows.FrameworkElement> oder <x
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Erstellen einer WPF-Anwendung.](https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json)
+- [Erstellen einer WPF-Anwendung.](/visualstudio/get-started/csharp/tutorial-wpf?bc=%252fdotnet%252fbreadcrumb%252ftoc.json&toc=%252fdotnet%252fdesktop-wpf%252ftoc.json)
 - [Untersuchen der Unterschiede zu .NET Framework.](../migration/differences-from-net-framework.md)
 - [Weitere Informationen zu XAML.](../fundamentals/xaml.md)

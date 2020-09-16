@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: 441417aa370563a9ce8b513be6ca4507b21e1e4a
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 671a18d43a297026e4264cc35412fb9d233b2f33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163542"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551503"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementieren des SelectionItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -57,4 +57,4 @@ ms.locfileid: "87163542"
 - [Implementieren des Selection-Steuerelementmusters der Benutzeroberflächenautomatisierung](implementing-the-ui-automation-selection-control-pattern.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)
-- [Beispiel für Fragment-Anbieter](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))
+- [Beispiel für Fragment-Anbieter](/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

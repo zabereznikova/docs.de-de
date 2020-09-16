@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656956"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557189"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -107,7 +107,7 @@ Viele Themen enthalten Quellcode und Beispiele, die zum Anzeigen oder Herunterla
 
 1. Laden Sie mit einem der folgenden Verfahren das Repository herunter, das den Beispielcode enthält:
    * Laden Sie ein ZIP-Archiv des Repositorys auf Ihr lokales System herunter. Entzippen Sie das komprimierte Archiv.
-   * [Verzweigen](https://help.github.com/articles/fork-a-repo/) Sie das Repository, und [klonen](https://help.github.com/articles/cloning-a-repository/) Sie die Verzweigung in Ihrem lokalen System. Durch Verzweigen und Klonen können Sie zur Dokumentation beitragen, indem Sie Änderungen an Ihrer Verzweigung vornehmen und dann eine Pullanforderung für das offizielle Dokumentrepository erstellen. Weitere Informationen finden Sie im [Leitfaden für Beiträge zur .NET-Dokumentation](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) und im [Leitfaden für Beiträge zur ASP.NET Core-Dokumentation](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
+   * [Verzweigen](https://help.github.com/articles/fork-a-repo/) Sie das Repository, und [klonen](https://help.github.com/articles/cloning-a-repository/) Sie die Verzweigung in Ihrem lokalen System. Durch Verzweigen und Klonen können Sie zur Dokumentation beitragen, indem Sie Änderungen an Ihrer Verzweigung vornehmen und dann eine Pullanforderung für das offizielle Dokumentrepository erstellen. Weitere Informationen finden Sie im [Leitfaden für Beiträge zur .NET-Dokumentation](/contribute/dotnet/dotnet-contribute) und im [Leitfaden für Beiträge zur ASP.NET Core-Dokumentation](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
    * Klonen Sie das Repository lokal. Wenn Sie ein Dokumentrepository direkt auf Ihrem lokalen System klonen, können Sie Änderungen nicht direkt im offiziellen Repository vornehmen und daher später auch keine Beiträge zur Dokumentation erstellen. Verwenden Sie das oben beschriebene Verfahren zum Verzweigen und Klonen, wenn Sie sich die Möglichkeit vorbehalten möchten, später zur Dokumentation beizutragen.
 1. Navigieren Sie in den Ordnern des Repositorys zum Speicherort des Beispiels. Der relative Pfad zum Speicherort des Beispiels wird in der Adressleiste Ihres Browsers angezeigt, wenn Sie dem Link zum Beispiel folgen.
 1. Zum Ausführen eines Beispiels stehen Ihnen verschiedene Optionen zur Verfügung:

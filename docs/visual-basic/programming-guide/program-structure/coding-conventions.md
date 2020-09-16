@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 36cd3a927d2fdf197e6b496d9308fc43a555d59b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346158"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551040"
 ---
 # <a name="visual-basic-coding-conventions"></a>Codierungskonventionen in Visual Basic
 Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem Thema folgen. Wenn Sie dieselben Codierungskonventionen beachten, erhalten Sie möglicherweise folgende Vorteile:  
@@ -75,7 +75,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 ### <a name="string-data-type"></a>String-Datentyp  
   
-- Verwenden Sie die [Zeichenfolgeninterpolation](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings), um wie im folgenden Code gezeigt kurze Zeichenfolgen zu verketten.
+- Verwenden Sie die [Zeichenfolgeninterpolation](../language-features/strings/interpolated-strings.md), um wie im folgenden Code gezeigt kurze Zeichenfolgen zu verketten.
   
      ```vb
      MsgBox($"hello{vbCrLf}goodbye")
@@ -159,7 +159,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen. `RaiseEvent` überprüft `Nothing`, bevor das-Ereignis ausgelöst wird.  
+- Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen. Die `RaiseEvent`-Methode führt vor dem Auslösen des Ereignisses eine Überprüfung auf den Wert `Nothing` durch.  
   
 ### <a name="using-shared-members"></a>Verwenden von Shared-Membern  
  Rufen Sie `Shared`-Member über den Klassennamen auf, nicht von einer Instanzvariablen aus.  

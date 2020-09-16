@@ -2,12 +2,12 @@
 title: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 85e34e365d125fe4f00756549ba5bda4311b78f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d009482037efac8e0f90d255e198f10a1234187
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579162"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551971"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von Funktionen, wenn Sie in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden. Die in einer teilweise vertrauenswürdigen Umgebung unterstützten Funktionen sind, wie im Thema [Supported Deployment Scenarios](supported-deployment-scenarios.md) beschrieben, für einen speziellen Satz von Szenarios konzipiert.  
@@ -90,12 +90,12 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
   
 - Markieren Sie das gemeinsame Verhalten mit dem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut, damit es ausgeführt werden kann, wenn es als teilweise vertrauenswürdige Anwendung bereitgestellt wird. Beachten Sie, dass auf dem Computer ein Registrierungseintrag festgelegt werden kann, um die Ausführung von mit APTCA markierten Assemblys zu verhindern. .  
   
-- Wenn die Anwendung als voll vertrauenswürdige Anwendung bereitgestellt wird, stellen Sie sicher, dass die Benutzer die Sicherheitseinstellungen für den Codezugriff nicht dahingehend ändern können, dass die Anwendung in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden kann. Wenn sie dies können, dann wird das Verhalten nicht ausgeführt, und es wird keine Ausnahme ausgelöst. Um dies sicherzustellen, sehen Sie sich die Option **LevelFinal** mit [Caspol. exe (Code Zugriffs-Sicherheitsrichtlinien Tool)](../../tools/caspol-exe-code-access-security-policy-tool.md)an.  
+- Wenn die Anwendung als voll vertrauenswürdige Anwendung bereitgestellt wird, stellen Sie sicher, dass die Benutzer die Sicherheitseinstellungen für den Codezugriff nicht dahingehend ändern können, dass die Anwendung in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden kann. Wenn sie dies können, dann wird das Verhalten nicht ausgeführt, und es wird keine Ausnahme ausgelöst. Um dies sicherzustellen, sehen Sie sich die Option **LevelFinal** mit [Caspol.exe (Tool für die Code Zugriffssicherheit)](../../tools/caspol-exe-code-access-security-policy-tool.md)an.  
   
  Ein Beispiel für ein häufiges Verhalten finden Sie unter Gewusst [wie: Sperren von Endpunkten im Unternehmen](../extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Konfiguration  
- Mit einer Ausnahme kann teilweise vertrauenswürdiger Code nur WCF-Konfigurations Abschnitte in der lokalen `app.config` Datei laden. Zum Laden von WCF-Konfigurations Abschnitten, die auf WCF-Abschnitte in Machine. config oder in einer Web. config-Stammdatei verweisen, ist configurationberechtigung (uneingeschränkt) erforderlich. Ohne diese Berechtigung führen Verweise auf WCF-Konfigurations Abschnitte (Verhalten, Bindungen) außerhalb der lokalen Konfigurationsdatei zu einer Ausnahme, wenn die Konfiguration geladen wird.  
+ Mit einer Ausnahme kann teilweise vertrauenswürdiger Code nur WCF-Konfigurations Abschnitte in der lokalen `app.config` Datei laden. Zum Laden von WCF-Konfigurations Abschnitten, die auf WCF-Abschnitte in machine.config oder in einer Stamm web.config Datei verweisen, ist configurationberechtigung (uneingeschränkt) erforderlich. Ohne diese Berechtigung führen Verweise auf WCF-Konfigurations Abschnitte (Verhalten, Bindungen) außerhalb der lokalen Konfigurationsdatei zu einer Ausnahme, wenn die Konfiguration geladen wird.  
   
  Die Ausnahme ist die Konfiguration für die Serialisierung mit bekannten Typen, wie im Serialisierungsabschnitt dieses Themas beschrieben.  
   
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
   
 - <xref:System.Runtime.Serialization>  
   
-- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>und <xref:System.IdentityModel.Tokens>.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors> und <xref:System.IdentityModel.Tokens>.  
   
  Folgende Ablaufverfolgungsquellen werden nicht unterstützt:  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
   
 - <xref:System.IO.Log>  
 
-- [System. Service Model. Internal. transaktionbridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System. Service Model. Internal. transaktionbridge](/previous-versions/aa346556(v=vs.110))]
   
  Die folgenden Member der <xref:System.Diagnostics.TraceOptions> -Enumeration sollten nicht angegeben werden.  
   
@@ -145,7 +145,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
   
 ## <a name="other-limitations"></a>Weitere Einschränkungen  
 
-  WCF ist im Allgemeinen auf die Sicherheitsüberlegungen beschränkt, die von der Host Anwendung auferlegt werden. Wenn WCF z. b. in einer XAML-Browser Anwendung (XBAP) gehostet wird, unterliegt sie XBAP-Einschränkungen, wie in [Windows Presentation Foundation teilweise Vertrauens](../../wpf/wpf-partial-trust-security.md)Würdigkeit der Sicherheit beschrieben.  
+  WCF ist im Allgemeinen auf die Sicherheitsüberlegungen beschränkt, die von der Host Anwendung auferlegt werden. Wenn WCF z. b. in einer XAML-Browser Anwendung (XBAP) gehostet wird, unterliegt sie XBAP-Einschränkungen, wie in [Windows Presentation Foundation teilweise Vertrauens](/dotnet/desktop/wpf/wpf-partial-trust-security)Würdigkeit der Sicherheit beschrieben.  
   
  Die folgenden Zusatzfunktionen stehen nicht zur Verfügung, wenn indigo2 in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird:  
   
@@ -160,7 +160,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
 ## <a name="unlisted-features"></a>Nicht aufgeführte Funktionen  
  Die beste Möglichkeit festzustellen, ob in einer teilweise vertrauenswürdigen Umgebung auf eine bestimmte Ressource zugegriffen oder eine Aktion ausgeführt werden kann, besteht darin, innerhalb eines `try` -Blocks auf die Ressource zuzugreifen oder die Aktion auszuführen, und dann einen möglichen Fehlschlag mit `catch` abzufangen. Um die Überflutung der Ablauf Verfolgungs Dateien mit doppelten Fehlern zu vermeiden, deaktiviert WCF die Ablauf Verfolgung der Ressource oder Aktion nach dem ersten Sicherheitsfehler. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>

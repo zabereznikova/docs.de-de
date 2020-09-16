@@ -3,12 +3,12 @@ title: Übersicht über Entity Framework
 description: Der Entity Framework in ADO.NET unterstützt die Entwicklung Daten orientierter Anwendungen, die auf einer höheren Abstraktions Ebene als herkömmliche Anwendungen funktionieren.
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 1f1ab5d44c2d6c7e1f54a761dbc706d537664ef6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e6b7a605f88aecc76cb182473d9dd9f925a4d5a9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286804"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557982"
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 
@@ -48,7 +48,7 @@ Entity Framework ist mehr als nur eine weitere objektrelationale Mappinglösung.
 
 - LINQ to Entities. Bietet Language Integrated Query (LINQ)-Unterstützung zum Abfragen von Entitätstypen, die in einem konzeptionellen Modell definiert sind. Weitere Informationen finden Sie unter [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Ein Speicher unabhängiger Dialekt von SQL, der direkt mit Entitäten im konzeptionellen Modell arbeitet und Entity Data Model Konzepte unterstützt. [!INCLUDE[esql](../../../../../includes/esql-md.md)]wird sowohl für Objekt Abfragen als auch für Abfragen verwendet, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Entity SQL Übersicht](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Ein Speicher unabhängiger Dialekt von SQL, der direkt mit Entitäten im konzeptionellen Modell arbeitet und Entity Data Model Konzepte unterstützt. [!INCLUDE[esql](../../../../../includes/esql-md.md)] wird sowohl für Objekt Abfragen als auch für Abfragen verwendet, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Entity SQL Übersicht](./language-reference/entity-sql-overview.md).
 
 Die Entity Framework enthält den EntityClient-Datenanbieter. Dieser Anbieter verwaltet Verbindungen, übersetzt Entitäts Abfragen in Datenquellen spezifische Abfragen und gibt einen Daten Leser zurück, den der Entity Framework verwendet, um Entitäts Daten in Objekte zu materialisieren. Wenn die Umsetzung in Objekte nicht erforderlich ist, kann der EntityClient-Anbieter auch wie ein ADO.NET-Standarddatenanbieter verwendet werden, indem er Anwendungen das Ausführen von [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen und die Verarbeitung des zurückgegebenen schreibgeschützten Datenlesers ermöglicht. Weitere Informationen finden Sie unter [EntityClient-Anbieter für das Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
@@ -68,11 +68,11 @@ Die Entity Framework enthält einen aktualisierten SqlClient-Datenanbieter, der 
 
 In Verbindung mit der Entity Framework-Laufzeit enthält Visual Studio die Tools für die Zuordnung und Modellierung. Weitere Informationen finden Sie unter [Modellierung und Zuordnung](modeling-and-mapping.md).
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="learn-more"></a>Erfahren Sie mehr
 
 Weitere Informationen zum Entity Framework finden Sie unter:
 
-Erste Schritte: enthält Informationen zum [schnellen Einstieg in](getting-started.md) die schnell [Start](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))Anleitung, die zeigt, wie Sie eine einfache Entity Framework Anwendung erstellen.
+Erste Schritte: enthält Informationen zum [schnellen Einstieg in](getting-started.md) die schnell [Start](/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))Anleitung, die zeigt, wie Sie eine einfache Entity Framework Anwendung erstellen.
 
 [Entity Framework Terminologie](terminology.md) : definiert viele der Begriffe, die durch die Entity Data Model und die Entity Framework eingeführt werden und die in Entity Framework Dokumentation verwendet werden.
 

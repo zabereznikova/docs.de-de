@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 3eba676a4134415f0e2981d5094c0b0f6a1651be
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559023"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551711"
 ---
 # <a name="whats-new-in-net-framework"></a>Neuerungen in .NET Framework
 
@@ -389,9 +389,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 [Abhängigkeitsinjektion (Dependency Injection, DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) entkoppelt Objekte und ihre Abhängigkeiten, sodass der Code eines Objekts nicht mehr geändert werden muss, nur weil sich eine Abhängigkeit geändert hat. Beim Entwickeln von ASP.NET-Anwendungen für .NET Framework 4.7.2 haben Sie folgende Möglichkeiten:
 
-- Verwenden von setterbasierter, schnittstellenbasierter und konstruktorbasierter Injektion in [Handler und Module](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [Seiteninstanzen](xref:System.Web.UI.Page) und [Benutzersteuerelemente](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) von ASP.NET-Webanwendungsprojekten.
+- Verwenden von setterbasierter, schnittstellenbasierter und konstruktorbasierter Injektion in [Handler und Module](/previous-versions/aspnet/bb398986(v=vs.100)), [Seiteninstanzen](xref:System.Web.UI.Page) und [Benutzersteuerelemente](/previous-versions/aspnet/y6wb1a0e(v=vs.100)) von ASP.NET-Webanwendungsprojekten.
 
-- Verwenden von setterbasierter und schnittstellenbasierter Injektion in [Handler und Module](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [Seiteninstanzen](xref:System.Web.UI.Page) und [Benutzersteuerelemente](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) von ASP.NET-Websiteprojekten.
+- Verwenden von setterbasierter und schnittstellenbasierter Injektion in [Handler und Module](/previous-versions/aspnet/bb398986(v=vs.100)), [Seiteninstanzen](xref:System.Web.UI.Page) und [Benutzersteuerelemente](/previous-versions/aspnet/y6wb1a0e(v=vs.100)) von ASP.NET-Websiteprojekten.
 
 - Einbinden verschiedener Abhängigkeitsinjektionsframeworks.
 
@@ -517,9 +517,9 @@ Die Methode gibt ein leeres aufzählbares Element zurück, es sei denn,  <xref:
 
 **Suchen nach ResourceDictionary-Besitzern**
 
-Ab .NET Framework 4.7.2 kann ein Diagnose-Assistent die Besitzer eines bestimmten <xref:Windows.UI.Xaml.ResourceDictionary> ermitteln. (Das Feature steht für die Verwendung durch Diagnose Assistenten und nicht durch Produktionsanwendungen zur Verfügung.) Wenn eine Änderung an einem <xref:Windows.UI.Xaml.ResourceDictionary> vorgenommen wird, ermittelt WPF automatisch alle [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md)-Verweise, die von der Änderung betroffen sein könnten.
+Ab .NET Framework 4.7.2 kann ein Diagnose-Assistent die Besitzer eines bestimmten <xref:Windows.UI.Xaml.ResourceDictionary> ermitteln. (Das Feature steht für die Verwendung durch Diagnose Assistenten und nicht durch Produktionsanwendungen zur Verfügung.) Wenn eine Änderung an einem <xref:Windows.UI.Xaml.ResourceDictionary> vorgenommen wird, ermittelt WPF automatisch alle [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)-Verweise, die von der Änderung betroffen sein könnten.
 
-Ein Diagnose-Assistent wie etwa die Funktion „Bearbeiten und fortfahren“ von Visual Studio kann diese Funktion ggf. erweitern, um [StaticResource](../wpf/advanced/staticresource-markup-extension.md)-Verweise zu verarbeiten. Der erste Schritt in diesem Prozess ist das Ermitteln der Besitzer des Wörterbuchs, also aller Objekte, deren `Resources`-Eigenschaft auf das Wörterbuch verweist (entweder direkt oder indirekt über die <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>-Eigenschaft). Drei neue statische Methoden, die für die <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>-Klasse implementiert wurden (jeweils eine Methode für jeden der Basistypen, der über eine `Resources`-Eigenschaft verfügt), unterstützen diesen Schritt:
+Ein Diagnose-Assistent wie etwa die Funktion „Bearbeiten und fortfahren“ von Visual Studio kann diese Funktion ggf. erweitern, um [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweise zu verarbeiten. Der erste Schritt in diesem Prozess ist das Ermitteln der Besitzer des Wörterbuchs, also aller Objekte, deren `Resources`-Eigenschaft auf das Wörterbuch verweist (entweder direkt oder indirekt über die <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>-Eigenschaft). Drei neue statische Methoden, die für die <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>-Klasse implementiert wurden (jeweils eine Methode für jeden der Basistypen, der über eine `Resources`-Eigenschaft verfügt), unterstützen diesen Schritt:
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -531,7 +531,7 @@ Diese Methoden geben ein leeres aufzählbares Element zurück, es sei denn,  <x
 
 **Suchen nach StaticResource-Verweisen**
 
-Ein Diagnose-Assistent kann jetzt immer dann eine Benachrichtigung erhalten, wenn ein [StaticResource](../wpf/advanced/staticresource-markup-extension.md)-Verweis aufgelöst wird. (Das Feature steht für die Verwendung durch Diagnose Assistenten zur Verfügung, nicht für Produktionsanwendungen.) Ein Diagnose-Assistent wie etwa die Funktion „Bearbeiten und fortfahren“ von Visual Studio möchte ggf. alle Verwendungen einer Ressource aktualisieren, wenn sich ihr Wert in einem <xref:Windows.UI.Xaml.ResourceDictionary> ändert. WPF führt dies automatisch für [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md)-Verweise aus, aber absichtlich nicht für [StaticResource](../wpf/advanced/staticresource-markup-extension.md)-Verweise. Ab .NET Framework 4.7.2 kann der Diagnose-Assistent diese Benachrichtigungen verwenden, um diese Verwendungen der statischen Ressource zu ermitteln.
+Ein Diagnose-Assistent kann jetzt immer dann eine Benachrichtigung erhalten, wenn ein [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis aufgelöst wird. (Das Feature steht für die Verwendung durch Diagnose Assistenten zur Verfügung, nicht für Produktionsanwendungen.) Ein Diagnose-Assistent wie etwa die Funktion „Bearbeiten und fortfahren“ von Visual Studio möchte ggf. alle Verwendungen einer Ressource aktualisieren, wenn sich ihr Wert in einem <xref:Windows.UI.Xaml.ResourceDictionary> ändert. WPF führt dies automatisch für [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)-Verweise aus, aber absichtlich nicht für [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweise. Ab .NET Framework 4.7.2 kann der Diagnose-Assistent diese Benachrichtigungen verwenden, um diese Verwendungen der statischen Ressource zu ermitteln.
 
 Die Benachrichtigung wird durch das neue <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>-Ereignis implementiert:
 
@@ -543,7 +543,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Dieses Ereignis wird immer ausgelöst, wenn die Runtime einen [StaticResource](../wpf/advanced/staticresource-markup-extension.md)-Verweis auflöst. Die <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs>-Argumente beschreiben die Auflösung und geben das Objekt und die Eigenschaft an, die den [StaticResource](../wpf/advanced/staticresource-markup-extension.md)-Verweis hosten, sowie das  <xref:Windows.UI.Xaml.ResourceDictionary> und den Schlüssel, die für die Auflösung verwendet wurden:
+Dieses Ereignis wird immer ausgelöst, wenn die Runtime einen [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis auflöst. Die <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs>-Argumente beschreiben die Auflösung und geben das Objekt und die Eigenschaft an, die den [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis hosten, sowie das  <xref:Windows.UI.Xaml.ResourceDictionary> und den Schlüssel, die für die Auflösung verwendet wurden:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -758,7 +758,7 @@ In .NET Framework 4.7 bietet Windows Forms eine bessere Unterstützung für Moni
 
 Beginnend mit auf .NET Framework 4.7 ausgerichteten Anwendungen unterstützt .NET Framework für Windows Forms-Anwendungen hohe und dynamische DPI-Werte. Durch die Unterstützung hoher DPI-Werte werden das Layout und die Darstellung von Formularen und Steuerelementen auf Monitoren mit hohen DPI-Einstellungen verbessert. Dynamische DPI-Werte ermöglichen das Ändern von Layout und Darstellung von Formularen und Steuerelementen, wenn der Benutzer die DPI-Einstellung oder den Skalierungsfaktor der Anzeige einer ausgeführten Anwendung ändert.
 
-Die Unterstützung hoher DPI-Werte ist ein optionales Feature, das Sie durch Festlegen des Abschnitts [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) in der Anwendungskonfigurationsdatei konfigurieren können. Weitere Informationen zum Hinzufügen der Unterstützung hoher und dynamischer DPI-Werte zu Ihrer Windows Forms-Anwendung finden Sie unter [Unterstützung hoher DPI-Werte in Windows Forms](../winforms/high-dpi-support-in-windows-forms.md).
+Die Unterstützung hoher DPI-Werte ist ein optionales Feature, das Sie durch Festlegen des Abschnitts [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) in der Anwendungskonfigurationsdatei konfigurieren können. Weitere Informationen zum Hinzufügen der Unterstützung hoher und dynamischer DPI-Werte zu Ihrer Windows Forms-Anwendung finden Sie unter [Unterstützung hoher DPI-Werte in Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 <a name="WPF47"></a>
 
@@ -768,7 +768,7 @@ In .NET Framework 4.7 gibt es für WPF die folgenden Verbesserungen:
 
 **Unterstützung für Touch-/Tablettstiftstapel basierend auf Windows-WM_POINTER-Nachrichten**
 
-Sie haben nun die Möglichkeit, einen auf [-Windows-Nachrichten](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) basierenden Touch-/Tablettstiftstapel anstelle der Windows Ink Services Plattform (WISP) zu verwenden. Dies ist ein optionales Feature im .NET Framework. Weitere Informationen finden Sie im Abschnitt [Anwendungskompatibilität](../migration-guide/application-compatibility.md).
+Sie haben nun die Möglichkeit, einen auf [-Windows-Nachrichten](/previous-versions/windows/desktop/InputMsg/messages) basierenden Touch-/Tablettstiftstapel anstelle der Windows Ink Services Plattform (WISP) zu verwenden. Dies ist ein optionales Feature im .NET Framework. Weitere Informationen finden Sie im Abschnitt [Anwendungskompatibilität](../migration-guide/application-compatibility.md).
 
 **Neue Implementierung für Druck-APIs von WPF**
 
@@ -1196,7 +1196,7 @@ In .NET Framework 4.6.2 wurde Windows Workflow Foundation im folgenden Bereich e
 
 **Unterstützung für C#-Ausdrücke und IntelliSense im neu gehosteten WF-Designer**
 
-Ab .NET Framework 4.5 unterstützt WF C#-Ausdrücke sowohl im Visual Studio-Designer als auch in Codeworkflows. Der neu gehostete Workflow-Designer ist eine wichtige Funktion von WF, die es ermöglicht, dass sich der Workflow-Designer in einer Anwendung außerhalb von Visual Studio befindet (z. B. in WPF).  Windows Workflow Foundation bietet die Möglichkeit der Unterstützung von C#-Ausdrücken und IntelliSense im neu gehosteten Workflow-Designer. Weitere Informationen finden Sie im [Windows Workflow Foundation-Blog](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
+Ab .NET Framework 4.5 unterstützt WF C#-Ausdrücke sowohl im Visual Studio-Designer als auch in Codeworkflows. Der neu gehostete Workflow-Designer ist eine wichtige Funktion von WF, die es ermöglicht, dass sich der Workflow-Designer in einer Anwendung außerhalb von Visual Studio befindet (z. B. in WPF).  Windows Workflow Foundation bietet die Möglichkeit der Unterstützung von C#-Ausdrücken und IntelliSense im neu gehosteten Workflow-Designer. Weitere Informationen finden Sie im [Windows Workflow Foundation-Blog](/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` In Versionen des .NET Frameworks vor Version 4.6.2 wird IntelliSense im Workflow-Designer unterbrochen, wenn ein Kunde ein Workflowprojekt über Visual Studio neu erstellt. Obwohl die Erstellung des Projekts erfolgreich war, können die Workflowtypen nicht im Designer gefunden werden und IntelliSense gibt Warnungen für die fehlenden Workflowtypen im Fenster **Fehlerliste** aus. .NET Framework 4.6.2 behebt dieses Problem und macht IntelliSense verfügbar.
 
@@ -1886,7 +1886,7 @@ Verbesserungen für Windows Forms-Anwendungen:
 
 Zu Verbesserungen beim Debuggen Ihrer .NET Framework-Apps in Visual Studio 2013 zählen u. a.:
 
-- Rückgabewerte im Visual Studio-Debugger. Wenn Sie eine verwaltete App in Visual Studio 2013 debuggen, werden Rückgabetypen und -werte für Methoden im Fenster „Auto“ angezeigt. Diese Informationen sind für Desktop-, Windows Store- und Windows Phone-Apps verfügbar. Weitere Informationen finden Sie unter [Überprüfen von Rückgabewerten der Methodenaufrufe](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
+- Rückgabewerte im Visual Studio-Debugger. Wenn Sie eine verwaltete App in Visual Studio 2013 debuggen, werden Rückgabetypen und -werte für Methoden im Fenster „Auto“ angezeigt. Diese Informationen sind für Desktop-, Windows Store- und Windows Phone-Apps verfügbar. Weitere Informationen finden Sie unter [Überprüfen von Rückgabewerten der Methodenaufrufe](/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
 
 - "Bearbeiten und Fortfahren" für 64-Bit-Apps. Visual Studio 2013 unterstützt die Funktion „Bearbeiten und fortfahren“ für verwaltete 64-Bit-Apps für Desktops, Windows Store und Windows Phone. Die vorhandenen Einschränkungen bleiben für 32-Bit- und 64-Bit-Apps wirksam (siehe den letzten Abschnitt des Artikels [Unterstützte Codeänderungen (C#)](/visualstudio/debugger/supported-code-changes-csharp)).
 
@@ -1972,7 +1972,7 @@ Mit Managed Profile Guided Optimization (Mpgo.exe) können Sie die Anwendungssta
 
 In ASP.NET 4.5 und 4.5.1 wurden die Modellbindung für Webformulare, WebSocket-Unterstützung, asynchrone Handler, Leistungserweiterungen und viele weitere Funktionen hinzugefügt. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-- [ASP.NET 4.5 and Visual Studio 2012 (ASP.NET 4.5 und Visual Studio 2012)](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
+- [ASP.NET 4.5 and Visual Studio 2012 (ASP.NET 4.5 und Visual Studio 2012)](/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [ASP.NET and Web Tools für Visual Studio 2013 – Anmerkungen zu dieser Version](/aspnet/visual-studio/overview/2013/release-notes)
 
@@ -2066,7 +2066,7 @@ Weitere Informationen finden Sie unter [Neues in Windows Communication Foundatio
 
 .NET Framework 4.5 bietet viele neue Features für Windows Workflow Foundation (WF), so z. B.:
 
-- Zustandsautomatworkflows, die zunächst als Teil von .NET Framework 4.0.1 ([.NET Framework 4 Platform-Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)) eingeführt wurden. Dieses Update umfasste mehrere neue Klassen und Aktivitäten, sodass Entwickler Zustandsautomatworkflows erstellen konnten. Diese Klassen und Aktivitäten wurden für .NET Framework 4.5 aktualisiert und umfassen nun Folgendes:
+- Zustandsautomatworkflows, die zunächst als Teil von .NET Framework 4.0.1 ([.NET Framework 4 Platform-Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)) eingeführt wurden. Dieses Update umfasste mehrere neue Klassen und Aktivitäten, sodass Entwickler Zustandsautomatworkflows erstellen konnten. Diese Klassen und Aktivitäten wurden für .NET Framework 4.5 aktualisiert und umfassen nun Folgendes:
 
   - Festlegen von Haltepunkten für Zustände.
 
@@ -2118,7 +2118,7 @@ Weitere Informationen finden Sie unter [Neues in Windows Workflow Foundation](..
 
 ### <a name="net-for-windows-8x-store-apps"></a>.NET für Windows 8.x Store-Apps
 
-Windows 8.x Store-Apps werden für bestimmte Formfaktoren entworfen und nutzen die Leistungsfähigkeit des Windows-Betriebssystems. Eine Teilmenge von .NET Framework 4.5 oder 4.5.1 kann mithilfe von C# oder Visual Basic zum Erstellen von Windows 8.x Store-Apps für Windows verwendet werden. Diese Teilmenge wird .NET for Windows 8.x Store genannt und in einer [Übersicht](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) erläutert.
+Windows 8.x Store-Apps werden für bestimmte Formfaktoren entworfen und nutzen die Leistungsfähigkeit des Windows-Betriebssystems. Eine Teilmenge von .NET Framework 4.5 oder 4.5.1 kann mithilfe von C# oder Visual Basic zum Erstellen von Windows 8.x Store-Apps für Windows verwendet werden. Diese Teilmenge wird .NET for Windows 8.x Store genannt und in einer [Übersicht](/previous-versions/windows/apps/br230302(v=vs.140)) erläutert.
 
 ### <a name="portable-class-libraries"></a>Portable Klassenbibliotheken <a name="portable"></a>
 

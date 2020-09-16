@@ -6,12 +6,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247038"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557410"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung
 
@@ -22,7 +22,7 @@ Wenn Sie mit Windows Communication Foundation (WCF) einen sicheren Dienst oder C
 >
 > Standardmäßig erstellt das Cmdlet " [New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) " Zertifikate, die selbst signiert sind, und diese Zertifikate sind unsicher. Wenn Sie die selbst signierten Zertifikate in den Speicher für vertrauenswürdige Stamm Zertifizierungsstellen platzieren, können Sie eine Entwicklungsumgebung erstellen, die Ihre Bereitstellungs Umgebung genauer simuliert.
 
- Weitere Informationen zum Erstellen und Verwenden von Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](working-with-certificates.md). Weitere Informationen zur Verwendung eines Zertifikats als Anmelde Informationen finden Sie unter [Sichern von Diensten und Clients](securing-services-and-clients.md). Ein Lernprogramm zur Verwendung der Microsoft Authenticode-Technologie finden Sie unter [Authenticode Overviews and Tutorials](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
+ Weitere Informationen zum Erstellen und Verwenden von Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](working-with-certificates.md). Weitere Informationen zur Verwendung eines Zertifikats als Anmelde Informationen finden Sie unter [Sichern von Diensten und Clients](securing-services-and-clients.md). Ein Lernprogramm zur Verwendung der Microsoft Authenticode-Technologie finden Sie unter [Authenticode Overviews and Tutorials](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>So erstellen Sie ein selbstsigniertes Stammzertifizierungsstellen-Zertifikat und exportieren den privaten Schlüssel
 

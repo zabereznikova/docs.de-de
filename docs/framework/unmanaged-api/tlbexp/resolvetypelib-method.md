@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: f0f6fe321f4d38129b6d70ce94a7ea8de8fff6c8
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 65bbae614c8872ab5d78b3855b56ceaf2aad50da
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935672"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558185"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib-Methode
 Löst den einfachen Namen einer Typbibliothek auf, indem der voll qualifizierte Pfad zurückgegeben wird.  
@@ -36,9 +36,9 @@ HRESULT ResolveTypeLib(
     [out] BSTR     *pbstrResolvedTlbName);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `bstrSimpleName`  
- in Ein [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , das den einfachen Namen der Typbibliothek enthält.  
+ in Ein [BSTR](/previous-versions/windows/desktop/automat/bstr) , das den einfachen Namen der Typbibliothek enthält.  
   
  `tlbid`  
  in Die GUID, die der Typbibliothek in der Registrierung zugewiesen ist.  
@@ -56,23 +56,23 @@ HRESULT ResolveTypeLib(
  in Ein [SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind) -Flag, das die Betriebsumgebung identifiziert. Allgemeine Werte sind SYS_WIN32 und SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- vorgenommen Ein Zeiger auf einen [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) -Wert, der den vollständigen Pfad der Typbibliothek mit dem Namen im `bstrSimpleName`-Parameter enthält.  
+ vorgenommen Ein Zeiger auf einen [BSTR](/previous-versions/windows/desktop/automat/bstr) -Wert, der den vollständigen Pfad der Typbibliothek mit dem Namen im- `bstrSimpleName` Parameter enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ResolveTypeLib`-Methode wird von der [LoadTypeLibWithResolver-Funktion](loadtypelibwithresolver-function.md) während der Verarbeitung von [Tlbexp. exe (Type Library Exporter)](../../tools/tlbexp-exe-type-library-exporter.md) aufgerufen.  
+ Die- `ResolveTypeLib` Methode wird von der [LoadTypeLibWithResolver-Funktion](loadtypelibwithresolver-function.md) während [Tlbexp.exe Verarbeitung (Type Library Exporter)](../../tools/tlbexp-exe-type-library-exporter.md) aufgerufen.  
   
- Benutzerdefinierte Implementierungen dieser Schnittstelle müssen einen [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) -Wert zurückgeben, der den vollständigen Pfad der Typbibliothek mit dem Namen im `bstrSimpleName`-Parameter enthält.  
+ Benutzerdefinierte Implementierungen dieser Schnittstelle müssen einen [BSTR](/previous-versions/windows/desktop/automat/bstr) -Wert zurückgeben, der den vollständigen Pfad der Typbibliothek mit dem Namen im- `bstrSimpleName` Parameter enthält.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** TlbRef. idl, TlbRef. h  
   
  **Bibliothek:** TlbRef. lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Tlbexp-Hilfsfunktionen](index.md)
-- [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
