@@ -1,16 +1,16 @@
 ---
-title: Ändern von Daten mit großem Wert (max.)
+title: Ändern von Daten mit umfangreichen Werten (max)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 00a4ae83270bb74e9703faebfc93e26b5c069478
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a077c56f4de5a88e9c2a6f932c9a8b5ffc6b974
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174276"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556966"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 Bei Large Object-Datentypen (LOB) übersteigt die Zeilengröße die maximal zulässige Zeilengröße von 8 KB. SQL Server  bietet einen `max`-Spezifizierer für die Datentypen `varchar`, `nvarchar` und `varbinary`, der das Speichern von 2^32 Bytes großen Werten ermöglicht. Tabellenspalten und Transact-SQL-Variablen können die Datentypen `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` angeben. In ADO.NET können die `max`-Datentypen durch einen `DataReader` abgerufen werden. Außerdem können sie ohne spezielle Behandlung sowohl als Eingabe- als auch als Ausgabeparameterwerte angegeben werden. Für große `varchar`-Datentypen können Daten inkrementell abgerufen und aktualisiert werden.  
@@ -21,7 +21,7 @@ Bei Large Object-Datentypen (LOB) übersteigt die Zeilengröße die maximal zul�
   
  **SQL Server-Dokumentation**  
   
-1. [Verwenden von Datentypen mit umfangreichen Werten](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
+1. [Verwenden von Datentypen mit umfangreichen Werten](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
 ## <a name="large-value-type-restrictions"></a>Einschränkungen für große Werttypen  
  Die folgenden Einschränkungen gelten für die `max`-Datentypen, die es für kleinere Datentypen nicht gibt:  
@@ -57,11 +57,11 @@ FROM OPENROWSET
   
  UPDATE  
   
- Objekt * \<>* .  
+ { *\<object>* }  
   
  SET  
   
- - *column_name* = . WRITE *expression* ( @Offset Ausdruck @Length , , )  
+ { *column_name* = {. Write ( *Ausdruck* , @Offset , @Length )}  
   
  Die WRITE-Methode gibt an, dass ein Abschnitt des Werts von *colum_name* geändert wird. Der Ausdruck ist der Wert, der in *column_name* kopiert wird, `@Offset` ist der Anfangspunkt, ab dem der Ausdruck geschrieben wird, und das `@Length`-Argument gibt die Länge des Abschnitts in der Spalte an.  
   
@@ -249,9 +249,9 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [SQL Server-Binär- und Großwertdaten](sql-server-binary-and-large-value-data.md)
+- [SQL Server von Binärdaten und Daten mit umfangreichen Werten](sql-server-binary-and-large-value-data.md)
 - [SQL Server-Datentypzuordnungen](../sql-server-data-type-mappings.md)
-- [SQL Server-Datenvorgänge in ADO.NET](sql-server-data-operations.md)
+- [SQL Server von Daten Vorgängen in ADO.net](sql-server-data-operations.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

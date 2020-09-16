@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 2ce79b726b623c2a25bf14065682e685455ca575
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597240"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556875"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung
 In diesem Thema wird beschrieben, wie Sie einen Workflowdienst in einer Workflowkonsolenanwendung aufrufen. Dies hängt vom Abschluss des Themas Gewusst [wie: Erstellen eines Workflow Dienstanbieter mit Messaging Aktivitäten](how-to-create-a-workflow-service-with-messaging-activities.md) ab. Obwohl in diesem Thema beschrieben wird, wie ein Workflow Dienst aus einer Workflow Anwendung aufgerufen wird, können dieselben Methoden verwendet werden, um beliebige Windows Communication Foundation (WCF)-Dienste aus einer Workflow Anwendung aufzurufen.
@@ -62,8 +62,8 @@ In diesem Thema wird beschrieben, wie Sie einen Workflowdienst in einer Workflow
 
 12. Drücken Sie STRG+F5, um sowohl den Dienst als auch den Client zu starten. Der ASP.NET Development Server hostet den Dienst, Internet Explorer zeigt die WCF-Hilfeseite an, und die Client Workflow Anwendung wird in einem Konsolenfenster gestartet und zeigt die vom Dienst zurückgegebene Zeichenfolge ("Hello, World") an.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Workflowdienste](workflow-services.md)
 - [Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten](how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Verwenden eines WCF-Diensts von einem Workflow in einem Webprojekt](https://docs.microsoft.com/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)
+- [Verwenden eines WCF-Diensts von einem Workflow in einem Webprojekt](/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)

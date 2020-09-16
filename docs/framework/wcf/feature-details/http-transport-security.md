@@ -2,12 +2,12 @@
 title: HTTP-Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 046b57787357623a19ff6d012eb71c179fcffe51
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592722"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556296"
 ---
 # <a name="http-transport-security"></a>HTTP-Transportsicherheit
 Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure Sockets Layer (SSL)-Implementierung bereitgestellt. SSL wird im Internet häufig verwendet, um einen Dienst gegenüber einem Client zu authentifizieren und anschließend Vertraulichkeit (Verschlüsselung) für den Kanal bereitzustellen. In diesem Thema wird erläutert, wie SSL funktioniert und wie es in Windows Communication Foundation (WCF) implementiert wird.  
@@ -33,27 +33,27 @@ Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure 
   
 - Wenn Sie Internetinformationsdienste (IIS) als WCF-Host verwenden, verwenden Sie die IIS-Infrastruktur zum Einrichten eines SSL-Diensts.  
   
-- Wenn Sie eine selbstgeh ostete WCF-Anwendung erstellen, können Sie mit dem Tool Httpcfg. exe ein SSL-Zertifikat an die Adresse binden.  
+- Wenn Sie eine selbstgeh ostete WCF-Anwendung erstellen, können Sie mithilfe des HttpCfg.exe Tools ein SSL-Zertifikat an die Adresse binden.  
   
 ### <a name="using-iis-for-transport-security"></a>Verwenden von IIS für Transportsicherheit  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Informationen zum Einrichten von IIS 7,0 als sicheren Host (mit SSL) finden Sie unter [Konfigurieren von Secure Sockets Layer in IIS 7,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
+ Informationen zum Einrichten von IIS 7,0 als sicheren Host (mit SSL) finden Sie unter [Konfigurieren von Secure Sockets Layer in IIS 7,0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
-Informationen zum Konfigurieren von Zertifikaten für die Verwendung mit IIS 7,0 finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
+Informationen zum Konfigurieren von Zertifikaten für die Verwendung mit IIS 7,0 finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7,0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6.0  
- Informationen zum Einrichten von IIS 6,0 als sicheren Host (mit SSL) finden Sie unter [Konfigurieren von Secure Sockets Layer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736992(v=ws.10)).  
+ Informationen zum Einrichten von IIS 6,0 als sicheren Host (mit SSL) finden Sie unter [Konfigurieren von Secure Sockets Layer](/previous-versions/windows/it-pro/windows-server-2003/cc736992(v=ws.10)).  
   
- Informationen zum Konfigurieren von Zertifikaten für die Verwendung mit IIS 6,0 finden Sie unter [Certificates_IIS_SP1_Ops](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757474(v=ws.10)).  
+ Informationen zum Konfigurieren von Zertifikaten für die Verwendung mit IIS 6,0 finden Sie unter [Certificates_IIS_SP1_Ops](/previous-versions/windows/it-pro/windows-server-2003/cc757474(v=ws.10)).  
   
 ### <a name="using-httpcfg-for-ssl"></a>Verwenden von HttpCfg für SSL  
 
- Wenn Sie eine selbstgeh ostete WCF-Anwendung erstellen, verwenden Sie das Tool " [Httpcfg. exe](/windows/win32/http/httpcfg-exe) ".
+ Wenn Sie eine selbstgeh ostete WCF-Anwendung erstellen, verwenden Sie das [HttpCfg.exe](/windows/win32/http/httpcfg-exe) -Tool.
   
- Weitere Informationen zur Verwendung des Tools Httpcfg. exe zum Einrichten eines Ports mit einem X. 509-Zertifikat finden Sie unter Vorgehens [Weise: Konfigurieren eines Ports mit einem SSL-Zertifikat](how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Weitere Informationen zur Verwendung des HttpCfg.exe Tools zum Einrichten eines Ports mit einem X. 509-Zertifikat finden Sie unter Vorgehens [Weise: Konfigurieren eines Ports mit einem SSL-Zertifikat](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Transport Sicherheit](transport-security.md)
 - [Nachrichtensicherheit](message-security-in-wcf.md)

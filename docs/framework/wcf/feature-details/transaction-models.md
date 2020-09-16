@@ -2,12 +2,12 @@
 title: Transaktionsmodelle
 ms.date: 03/30/2017
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-ms.openlocfilehash: d6c78a5342bf19d19308352cddc241f436bfcb3a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2d3d0631c47506e7bd99d90ed49a1fdc76cc7a59
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745322"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556823"
 ---
 # <a name="transaction-models"></a>Transaktionsmodelle
 In diesem Thema wird die Beziehung zwischen den Transaktionsprogrammiermodellen und den von Microsoft gebotenen Infrastrukturkomponenten beschrieben.  
@@ -26,11 +26,11 @@ In diesem Thema wird die Beziehung zwischen den Transaktionsprogrammiermodellen 
   
  Weitere Informationen zum Erstellen einer Transaktions Anwendung mit diesen beiden Modellen finden Sie unter [Schreiben einer transaktionalen Anwendung](https://go.microsoft.com/fwlink/?LinkId=94947).  
   
- In einem WCF-Dienst oder einer WCF-Anwendung stellt <xref:System.Transactions> das Programmiermodell zum Erstellen von Transaktionen in einer Client Anwendung und zur expliziten Interaktion mit einer Transaktion in einem Dienst bereit.  
+ Stellt in einem WCF-Dienst oder einer WCF <xref:System.Transactions> -Anwendung das Programmiermodell zum Erstellen von Transaktionen in einer Client Anwendung und zur expliziten Interaktion mit einer Transaktion in einem Dienst bereit.  
   
 ## <a name="msdtc-transactions"></a>MSDTC-Transaktionen  
  Der Microsoft Distributed Transaction Coordinator (MSDTC) ist ein Transaktions-Manager, der verteilte Transaktionen unterstützt.  
   
- Weitere Informationen finden Sie in der [DTC-Programmier Referenz](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108(v=vs.85)).  
+ Weitere Informationen finden Sie in der [DTC-Programmier Referenz](/previous-versions/windows/desktop/ms686108(v=vs.85)).  
   
  In einem WCF-Dienst oder einer WCF-Anwendung bietet MSDTC die Infrastruktur für die Koordination von Transaktionen, die in einem Client oder Dienst erstellt werden.

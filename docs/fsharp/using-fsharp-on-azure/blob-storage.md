@@ -3,18 +3,18 @@ title: Erste Schritte mit Azure Blob Storage mit F#
 description: Speichern Sie unstrukturierte Daten in der Cloud mit Azure BLOB Storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 79f6a559ac603b0544916764126a988d3f3f43d7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0dda2e04f0052823e9ea35051855d677cd19ea92
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092628"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548474"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Einstieg in Azure BLOB Storage mit F\#
 
 Azure Blob Storage ist ein Dienst, bei dem unstrukturierte Daten in der Cloud als Objekte/Blobs gespeichert werden. In Blob Storage können alle Arten von Text- oder Binärdaten gespeichert werden, z. B. ein Dokument, eine Mediendatei oder ein Installer einer Anwendung. Der Blobspeicher wird auch als Objektspeicher bezeichnet.
 
-In diesem Artikel erfahren Sie, wie Sie häufige Aufgaben mit BLOB Storage ausführen. Die Beispiele wurden mit F# mit der Azure-Speicherclientbibliothek für .NET. Die behandelten Aufgaben umfassen das Hochladen, auflisten, herunterladen und Löschen von BLOB.
+In diesem Artikel erfahren Sie, wie Sie häufige Aufgaben mit BLOB Storage ausführen. Die Beispiele werden mithilfe von F # geschrieben, wobei die Azure Storage Client Bibliothek für .NET verwendet wird. Die behandelten Aufgaben umfassen das Hochladen, auflisten, herunterladen und Löschen von BLOB.
 
 Eine konzeptionelle Übersicht über BLOB Storage finden Sie [im .net-Handbuch für BLOB Storage](/azure/storage/blobs/storage-quickstart-blobs-dotnet).
 
@@ -22,19 +22,19 @@ Eine konzeptionelle Übersicht über BLOB Storage finden Sie [im .net-Handbuch f
 
 Um dieses Handbuch verwenden zu können, müssen Sie zunächst [ein Azure Storage-Konto erstellen](/azure/storage/common/storage-account-create). Sie benötigen auch ihren Speicherzugriffs Schlüssel für dieses Konto.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen eines F #-Skripts und starten F# Interactive
 
-Die Beispiele in diesem Artikel können entweder in einer F# Anwendung oder in einem F# Skript verwendet werden. Um ein F# Skript zu erstellen, erstellen Sie eine Datei mit der `.fsx`-Erweiterung, z. b F# . `blobs.fsx`, in Ihrer Entwicklungsumgebung.
+Die Beispiele in diesem Artikel können in einer f #-Anwendung oder einem f #-Skript verwendet werden. Um ein F #-Skript zu erstellen, erstellen Sie eine Datei mit der `.fsx` Erweiterung, z `blobs.fsx` . b. in ihrer F #-Entwicklungsumgebung.
 
-Verwenden Sie als nächstes einen [Paket-Manager](package-management.md) , wie z. b. [Paket](https://fsprojects.github.io/Paket/) oder [nuget](https://www.nuget.org/) , um die `WindowsAzure.Storage` zu installieren, und `Microsoft.WindowsAzure.ConfigurationManager` Pakete und Verweise `WindowsAzure.Storage.dll` und `Microsoft.WindowsAzure.Configuration.dll` in Ihrem Skript mithilfe einer `#r` Direktive.
+Verwenden Sie als nächstes einen [Paket-Manager](package-management.md) , wie z. b. [Paket](https://fsprojects.github.io/Paket/) oder [nuget](https://www.nuget.org/) , um das-Paket und das-Paket zu installieren, und `WindowsAzure.Storage` verweisen Sie `Microsoft.WindowsAzure.ConfigurationManager` `WindowsAzure.Storage.dll` `Microsoft.WindowsAzure.Configuration.dll` in Ihrem Skript `#r`
 
 ### <a name="add-namespace-declarations"></a>Hinzufügen von Namespace-Deklarationen
 
-Fügen Sie am Anfang der Datei `open` die folgenden `blobs.fsx`-Anweisungen ein:
+Fügen Sie am Anfang der Datei `blobs.fsx` die folgenden `open`-Anweisungen ein:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Abrufen Ihrer Verbindungszeichenfolge
+### <a name="get-your-connection-string"></a>Abrufen der Verbindungszeichenfolge
 
 Für dieses Tutorial benötigen Sie eine Azure Storage Verbindungs Zeichenfolge. Weitere Informationen zu Verbindungs Zeichenfolgen finden Sie unter [Konfigurieren von Speicher Verbindungs](/azure/storage/storage-configure-connection-string)Zeichenfolgen.
 
@@ -48,7 +48,7 @@ Bei echten Anwendungen ist die beste Möglichkeit, Ihre Speicher Verbindungs Zei
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L13-L15)]
 
-Die Verwendung von Azure Configuration Manager ist optional. Sie können auch eine API verwenden, z. b. den `ConfigurationManager` Typ der .NET Framework.
+Die Verwendung von Azure Configuration Manager ist optional. Sie können auch eine API verwenden, z. b. den Typ der .NET Framework `ConfigurationManager` .
 
 ### <a name="parse-the-connection-string"></a>Analysieren der Verbindungszeichenfolge
 
@@ -56,7 +56,7 @@ Um die Verbindungs Zeichenfolge zu analysieren, verwenden Sie Folgendes:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L21-L22)]
 
-Dadurch wird eine `CloudStorageAccount`zurückgegeben.
+Gibt einen zurück `CloudStorageAccount` .
 
 ### <a name="create-some-local-dummy-data"></a>Erstellen von lokalen Dummydaten
 
@@ -66,7 +66,7 @@ Bevor Sie beginnen, erstellen Sie im Verzeichnis des Skripts einige lokale Dummy
 
 ### <a name="create-the-blob-service-client"></a>Erstellen des Blob-Dienstclients
 
-Der `CloudBlobClient`-Typ ermöglicht das Abrufen von Containern und BLOBs, die in BLOB Storage gespeichert sind. Hier sehen Sie eine Möglichkeit zum Erstellen des Dienstclients:
+Der- `CloudBlobClient` Typ ermöglicht das Abrufen von Containern und BLOBs, die in BLOB Storage gespeichert sind. Hier sehen Sie eine Möglichkeit zum Erstellen des Dienstclients:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L36-L36)]
 
@@ -88,30 +88,30 @@ Jede Person im Internet kann Blobs in einem öffentlichen Container anzeigen, Si
 
 Azure Blob Storage unterstützt Block- und Seitenblobs. In den meisten Fällen ist ein blockblob der empfohlene Typ, der verwendet werden soll.
 
-Rufen Sie einen Containerverweis ab und verwenden Sie diesen zum Abrufen eines Blockblobverweises, um eine Datei in einen Blockblob hochzuladen. Sobald Sie über einen BLOB-Verweis verfügen, können Sie jeden Datenstrom in diesen hochladen, indem Sie die `UploadFromFile`-Methode aufrufen. Dieser Vorgang erstellt das BLOB, wenn es nicht bereits vorhanden ist, oder überschreibt es, falls es vorhanden ist.
+Rufen Sie einen Containerverweis ab und verwenden Sie diesen zum Abrufen eines Blockblobverweises, um eine Datei in einen Blockblob hochzuladen. Sobald Sie über einen BLOB-Verweis verfügen, können Sie jeden Datenstrom in diesen hochladen, indem Sie die- `UploadFromFile` Methode aufrufen. Dieser Vorgang erstellt das BLOB, wenn es nicht bereits vorhanden ist, oder überschreibt es, falls es vorhanden ist.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L55-L59)]
 
-## <a name="list-the-blobs-in-a-container"></a>Auflisten der Blobs in einem Container
+## <a name="list-the-blobs-in-a-container"></a>Auflisten der Blobs im Container
 
-Um die Blobs in einem Container aufzuführen, müssen Sie zuerst einen Containerverweis abrufen. Anschließend können Sie mit der `ListBlobs`-Methode des Containers die darin enthaltenen blobverzeichnisse und/oder Verzeichnisse abrufen. Um auf den umfangreichen Satz von Eigenschaften und Methoden für ein zurück gegebenes `IListBlobItem`zuzugreifen, müssen Sie es in ein `CloudBlockBlob`, `CloudPageBlob`oder `CloudBlobDirectory` Objekt umwandeln. Wenn der Typ unbekannt ist, können Sie eine Typenüberprüfung durchführen, um zu bestimmen, in welchen Typ die Umwandlung erfolgen soll. Der folgende Code zeigt, wie Sie die URI der einzelnen Elemente im `mydata` -Container abrufen und ausgeben:
+Um die Blobs in einem Container aufzuführen, müssen Sie zuerst einen Containerverweis abrufen. Sie können dann die-Methode des Containers verwenden `ListBlobs` , um die darin enthaltenen blobverzeichnisse und/oder Verzeichnisse abzurufen. Um auf den umfangreichen Satz von Eigenschaften und Methoden für ein zurück `IListBlobItem` gegebenes Objekt zuzugreifen, müssen Sie es in ein- `CloudBlockBlob` ,-oder-Objekt umwandeln `CloudPageBlob` `CloudBlobDirectory` . Wenn der Typ unbekannt ist, können Sie eine Typenüberprüfung durchführen, um zu bestimmen, in welchen Typ die Umwandlung erfolgen soll. Der folgende Code zeigt, wie Sie die URI der einzelnen Elemente im `mydata` -Container abrufen und ausgeben:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-Sie können auch blobnamen mit Pfadinformationen benennen. Dadurch entsteht eine virtuelle Verzeichnisstruktur, die Sie wie ein herkömmliches Dateisystem organisieren und durchlaufen können. Beachten Sie, dass nur die Verzeichnisstruktur virtuell ist – die einzigen Ressourcen, die im Blob-Speicher verfügbar sind, sind Container und Blobs. Die Speicher Client Bibliothek bietet jedoch ein `CloudBlobDirectory` Objekt, das auf ein virtuelles Verzeichnis verweist und den Prozess der Arbeit mit BLOB, die auf diese Weise organisiert sind, vereinfacht.
+Sie können auch blobnamen mit Pfadinformationen benennen. Dadurch entsteht eine virtuelle Verzeichnisstruktur, die Sie wie ein herkömmliches Dateisystem organisieren und durchlaufen können. Beachten Sie, dass nur die Verzeichnisstruktur virtuell ist – die einzigen Ressourcen, die im Blob-Speicher verfügbar sind, sind Container und Blobs. Die Speicher Client Bibliothek bietet jedoch ein `CloudBlobDirectory` -Objekt, das auf ein virtuelles Verzeichnis verweist und den Prozess der Arbeit mit BLOB, die auf diese Weise organisiert sind, vereinfacht.
 
 Betrachten Sie z. B. den folgenden Satz von Blockblobs in einem Container mit dem Namen `photos`:
 
-*photo1. jpg* -\
-*2015/Architecture/Description. txt-* \
-*2015/Architecture/photo3. jpg*\
-*2015/Architecture/photo4. jpg*\
-*2016/Architecture/photo5. jpg* -\
-*2016/Architecture/photo6. jpg* -\
-*2016/Architecture/Description. txt* -\
-*2016/photo7. jpg*\
+*photo1.jpg*\
+*2015/Architektur/description.txt*\
+*2015/Architektur/photo3.jpg*\
+*2015/Architektur/photo4.jpg*\
+*2016/Architektur/photo5.jpg*\
+*2016/Architektur/photo6.jpg*\
+*2016/Architektur/description.txt*\
+*2016/photo7.jpg*\
 
-Wenn Sie `ListBlobs` für einen Container (wie im obigen Beispiel) aufzurufen, wird eine hierarchische Auflistung zurückgegeben. Wenn Sie sowohl `CloudBlobDirectory`-als auch `CloudBlockBlob`-Objekte enthält, die jeweils die Verzeichnisse und blobdateien im Container darstellen, sieht die resultierende Ausgabe in etwa wie folgt aus:
+Wenn Sie `ListBlobs` für einen Container (wie im obigen Beispiel) aufzurufen, wird eine hierarchische Auflistung zurückgegeben. Wenn Sie sowohl `CloudBlobDirectory` -als auch- `CloudBlockBlob` Objekte enthält, die die Verzeichnisse bzw. blobdateien im Container darstellen, sieht die resultierende Ausgabe in etwa wie folgt aus:
 
 ```console
 Directory: https://<accountname>.blob.core.windows.net/photos/2015/
@@ -119,7 +119,7 @@ Directory: https://<accountname>.blob.core.windows.net/photos/2016/
 Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/photo1.jpg
 ```
 
-Optional können Sie den `UseFlatBlobListing`-Parameter der `ListBlobs`-Methode auf `true`festlegen. In diesem Fall wird jedes BLOB im Container als `CloudBlockBlob` Objekt zurückgegeben. Der `ListBlobs` zum Zurückgeben einer flachen Auflistung sieht wie folgt aus:
+Optional können Sie den- `UseFlatBlobListing` Parameter der- `ListBlobs` Methode auf festlegen `true` . In diesem Fall wird jedes BLOB im Container als-Objekt zurückgegeben `CloudBlockBlob` . Der-Befehl zum `ListBlobs` zurückgeben einer flachen Auflistung sieht wie folgt aus:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L82-L89)]
 
@@ -138,17 +138,17 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 ## <a name="download-blobs"></a>Herunterladen von Blobs
 
-Um BLOBs herunterzuladen, rufen Sie zuerst einen blobverweis ab, und rufen Sie dann die `DownloadToStream`-Methode auf. Im folgenden Beispiel wird die `DownloadToStream`-Methode verwendet, um den BLOB-Inhalt in ein Datenstrom Objekt zu übertragen, das Sie dann in einer lokalen Datei speichern können.
+Um BLOBs herunterzuladen, rufen Sie zuerst einen blobverweis ab, und rufen Sie dann die- `DownloadToStream` Methode auf. Im folgenden Beispiel wird die- `DownloadToStream` Methode verwendet, um den BLOB-Inhalt in ein Stream-Objekt zu übertragen, das Sie dann in einer lokalen Datei speichern können.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L95-L101)]
 
-Sie können auch die `DownloadToStream`-Methode verwenden, um den Inhalt eines Blobs als Text Zeichenfolge herunterzuladen.
+Sie können auch die- `DownloadToStream` Methode verwenden, um den Inhalt eines Blobs als Text Zeichenfolge herunterzuladen.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L103-L106)]
 
 ## <a name="delete-blobs"></a>Löschen von Blobs
 
-Um ein BLOB zu löschen, müssen Sie zuerst einen blobverweis abrufen und dann die `Delete`-Methode darauf anwenden.
+Um ein BLOB zu löschen, müssen Sie zuerst einen blobverweis abrufen und dann die- `Delete` Methode darauf anwenden.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L112-L116)]
 
@@ -156,9 +156,9 @@ Um ein BLOB zu löschen, müssen Sie zuerst einen blobverweis abrufen und dann d
 
 Wenn Sie eine große Anzahl von Blobs auflisten oder die Anzahl der Ergebnisse steuern möchten, die in einem Auflistungsvorgang zurückgegeben werden, können Sie Blobs auf Ergebnisseiten auflisten. In diesem Beispiel wird gezeigt, wie Sie Ergebnisse auf Seiten asynchron zurückgeben, sodass die Ausführung nicht durch einen großen Ergebnissatz blockiert wird.
 
-Dieses Beispiel zeigt eine einfache BLOB-Auflistung. Sie können jedoch auch eine hierarchische Auflistung ausführen, indem Sie den `useFlatBlobListing`-Parameter der `ListBlobsSegmentedAsync`-Methode auf `false`festlegen.
+Dieses Beispiel zeigt eine einfache BLOB-Auflistung. Sie können jedoch auch eine hierarchische Auflistung ausführen, indem Sie den- `useFlatBlobListing` Parameter der- `ListBlobsSegmentedAsync` Methode auf festlegen `false` .
 
-Im Beispiel wird eine asynchrone Methode mit einem `async`-Block definiert. Das ``let!``-Schlüsselwort hält die Ausführung der Beispiel Methode an, bis die Auflistungs Aufgabe abgeschlossen ist.
+Im Beispiel wird eine asynchrone Methode mit einem- `async` Block definiert. Das ``let!`` Schlüsselwort hält die Ausführung der Beispiel Methode an, bis die Auflistungs Aufgabe abgeschlossen ist.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L122-L160)]
 
@@ -166,7 +166,7 @@ Diese asynchrone Routine kann nun wie folgt verwendet werden. Zunächst laden Si
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L162-L166)]
 
-Aufrufen Sie nun die-Routine. Sie verwenden `Async.RunSynchronously`, um die Ausführung des asynchronen Vorgangs zu erzwingen.
+Aufrufen Sie nun die-Routine. Verwenden Sie `Async.RunSynchronously` , um die Ausführung des asynchronen Vorgangs zu erzwingen.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L168-L168)]
 
@@ -180,7 +180,7 @@ Im folgenden Beispiel wird ein neues anfügeblob erstellt und Daten an das BLOB 
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L174-L203)]
 
-Weitere Informationen zu den Unterschieden zwischen den drei Arten von Blobs finden Sie unter [Grundlegendes zu Blockblobs, Seitenblobs und Anfügeblobs](https://msdn.microsoft.com/library/azure/ee691964.aspx) .
+Weitere Informationen zu den Unterschieden zwischen den drei Arten von Blobs finden Sie unter [Grundlegendes zu Blockblobs, Seitenblobs und Anfügeblobs](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs) .
 
 ## <a name="concurrent-access"></a>Paralleler Zugriff
 
@@ -226,11 +226,11 @@ Nachdem Sie sich nun mit den Grundlagen von Blobspeichern vertraut gemacht haben
 
 ### <a name="tools"></a>Tools
 
-- [ F# Azurestoragetypeprovider](https://fsprojects.github.io/AzureStorageTypeProvider/) -\
-Ein F# Typanbieter, der zum Durchsuchen von BLOB-, Tabellen-und Warteschlangen Azure Storage Assets und einfachen Anwenden von CRUD-Vorgängen verwendet werden kann.
+- [F # azurestoragetypeprovider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+Ein F #-Typanbieter, der verwendet werden kann, um BLOB-, Tabellen-und Warteschlangen Azure Storage Assets zu durchsuchen und problemlos CRUD-Vorgänge auf diese anzuwenden.
 
-- [FSharp. Azure. Storage](https://github.com/fsprojects/FSharp.Azure.Storage) -\
-Eine F# API für die Verwendung Microsoft Azure Table Storage Dienstanbieter
+- [FSharp. Azure. Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+Eine F #-API für die Verwendung Microsoft Azure Table Storage Dienstanbieter
 
 - [Microsoft Azure Storage-Explorer (Mase)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
 Eine kostenlose eigenständige APP von Microsoft, die es Ihnen ermöglicht, mit Azure Storage-Daten unter Windows, OS X und Linux visuell zu arbeiten.
@@ -238,12 +238,12 @@ Eine kostenlose eigenständige APP von Microsoft, die es Ihnen ermöglicht, mit 
 ### <a name="blob-storage-reference"></a>Blob Storage-Referenz
 
 - [Azure Storage-APIs für .NET](/dotnet/api/overview/azure/storage)
-- [Referenz zur REST-API von Azure Storage Services](/rest/api/storageservices/)
+- [Referenz zur REST-API von Azure Storage-Diensten](/rest/api/storageservices/)
 
 ### <a name="related-guides"></a>Verwandte Leitfäden
 
-- [Azure Blob Storage Samples for .NET](https://docs.microsoft.com/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/) (Azure Blob Storage-Beispiele für .NET)
+- [Azure Blob Storage Samples for .NET](/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/) (Azure Blob Storage-Beispiele für .NET)
 - [Erste Schritte mit AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 - [Konfigurieren von Azure Storage-Verbindungszeichenfolgen](/azure/storage/common/storage-configure-connection-string)
-- [Azure Storage-Teamblog](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
-- [Schnellstart: Verwenden von .net zum Erstellen eines BLOBs im Objektspeicher](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
+- [Azure Storage-Teamblog](/archive/blogs/windowsazurestorage/)
+- [Schnellstart: Erstellen eines Blobs im Objektspeicher mithilfe von .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

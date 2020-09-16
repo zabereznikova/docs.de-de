@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 619a893e0973f6691e32446d75f101201a0b6799
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247181"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556381"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat
 
@@ -23,7 +23,7 @@ Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Di
   
  Welches Tool zum Konfigurieren eines Anschlusses verwendet wird, hängt vom Betriebssystem des Computers ab.  
   
- Wenn Sie Windows Server 2003 ausführen, verwenden Sie das HttpCfg.exe Tool. Unter Windows Server 2003 ist dieses Tool installiert. Weitere Informationen finden Sie unter [Httpcfg Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). In der [Dokumentation zur Windows-Support Tools](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) wird die Syntax für das Httpcfg.exe Tool erläutert.  
+ Wenn Sie Windows Server 2003 ausführen, verwenden Sie das HttpCfg.exe Tool. Unter Windows Server 2003 ist dieses Tool installiert. Weitere Informationen finden Sie unter [Httpcfg Overview](/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). In der [Dokumentation zur Windows-Support Tools](/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) wird die Syntax für das Httpcfg.exe Tool erläutert.  
   
  Wenn Sie Windows Vista ausführen, verwenden Sie das Netsh.exe Tool, das bereits installiert ist.
   
@@ -121,6 +121,6 @@ Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Di
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [HTTP-Transportsicherheit](http-transport-security.md)

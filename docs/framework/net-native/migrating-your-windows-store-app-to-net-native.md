@@ -2,16 +2,16 @@
 title: Migrieren der Windows Store-App auf .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309195"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556927"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migrieren Ihrer Windows Store-App zu .net Native
 
-.Net Native bietet eine statische Kompilierung von apps im Windows Store oder auf dem Computer des Entwicklers. Dies unterscheidet sich von der dynamischen Kompilierung für Windows Store-Apps durch den JIT-Compiler (Just-in-Time) oder den [Native Image Generator (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) auf dem Gerät. Trotz der Unterschiede wird von .net Native versucht, die Kompatibilität mit den [.net für Windows Store-Apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)aufrechtzuerhalten. In den meisten Fällen funktionieren Dinge, die in .net für Windows Store-Apps funktionieren, auch mit .net Native.  In einigen Fällen können jedoch Verhaltensänderungen auftreten. In diesem Dokument werden diese Unterschiede zwischen den standardmäßigen .net für Windows Store-Apps und .net Native in den folgenden Bereichen erläutert:
+.Net Native bietet eine statische Kompilierung von apps im Windows Store oder auf dem Computer des Entwicklers. Dies unterscheidet sich von der dynamischen Kompilierung für Windows Store-Apps durch den JIT-Compiler (Just-in-Time) oder den [Native Image Generator (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) auf dem Gerät. Trotz der Unterschiede wird von .net Native versucht, die Kompatibilität mit den [.net für Windows Store-Apps](/previous-versions/windows/apps/br230302(v=vs.140))aufrechtzuerhalten. In den meisten Fällen funktionieren Dinge, die in .net für Windows Store-Apps funktionieren, auch mit .net Native.  In einigen Fällen können jedoch Verhaltensänderungen auftreten. In diesem Dokument werden diese Unterschiede zwischen den standardmäßigen .net für Windows Store-Apps und .net Native in den folgenden Bereichen erläutert:
 
 - [Allgemeine Laufzeitunterschiede](#Runtime)
 
@@ -85,7 +85,7 @@ In .net Native:
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> und <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> enthalten ausgeblendete Member in Basisklassen und können daher ohne explizite Überschreibungen überschrieben werden. Dies gilt auch für andere [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) -Methoden.
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>und <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> schlagen nicht fehl, wenn Sie versuchen, bestimmte Kombinationen (z. b. ein Array von `byref` Objekten) zu erstellen.
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> und <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> schlagen nicht fehl, wenn Sie versuchen, bestimmte Kombinationen (z. b. ein Array von `byref` Objekten) zu erstellen.
 
 - Sie können mithilfe der Reflektion keine Member mit Zeigerparametern aufrufen.
 
@@ -225,9 +225,9 @@ In .net Native:
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>wird unterstützt, löst aber in einigen Szenarien eine Ausnahme aus, z. b. bei der Verwendung mit [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) oder `byref` Varianten.
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> wird unterstützt, löst aber in einigen Szenarien eine Ausnahme aus, z. b. bei der Verwendung mit [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) oder `byref` Varianten.
 
- Als veraltet markierte APIs für die [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) -Unterstützung gehören:
+ Als veraltet markierte APIs für die [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) -Unterstützung gehören:
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual?displayProperty=fullName>
@@ -324,7 +324,7 @@ Die folgenden .net Native werden jedoch nicht unterstützt:
 
 - Implementieren der <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> -Schnittstelle für einen verwalteten Typ
 
-- Implementieren der [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) -Schnittstelle für einen verwalteten Typ über das <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> -Attribut Es ist jedoch nicht möglich, com-Objekte mithilfe von aufzurufen `IDispatch` , und das verwaltete Objekt kann nicht implementieren `IDispatch` .
+- Implementieren der [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) -Schnittstelle für einen verwalteten Typ über das <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> -Attribut Es ist jedoch nicht möglich, com-Objekte mithilfe von aufzurufen `IDispatch` , und das verwaltete Objekt kann nicht implementieren `IDispatch` .
 
 Das Verwenden von Reflektion zum Aufrufen einer Plattformaufrufmethode wird nicht unterstützt. Sie können diese Einschränkung umgehen, indem Sie den Methodenaufruf in eine andere Methode einschließen und den Wrapper stattdessen mithilfe von Reflektion aufrufen.
 
@@ -661,9 +661,9 @@ Verwenden Sie die x86-Buildtools, die standardmäßig von Visual Studio verwende
 
 Das Aktivieren von .net Native in einer Komponenten Test Bibliothek für ein Windows Store-App-Projekt wird nicht unterstützt und bewirkt, dass das Projekt nicht erstellt wird.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte](getting-started-with-net-native.md)
 - [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Übersicht über .net für Windows Store-Apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Übersicht über .net für Windows Store-Apps](/previous-versions/windows/apps/br230302(v=vs.140))
 - [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

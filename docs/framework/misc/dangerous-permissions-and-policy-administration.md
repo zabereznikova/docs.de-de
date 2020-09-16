@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-ms.openlocfilehash: 1d3fb53775a4d88f9372b582189a38e18376761a
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: a2f4469590fea38924430b07eaf20d49f4dc46e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855815"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556940"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Problematische Berechtigungen und Richtlinienverwaltung
 
@@ -23,7 +23,7 @@ ms.locfileid: "87855815"
 Verschiedene der geschützten Operationen, für die von .NET Framework Berechtigungen bereitgestellt werden, ermöglichen unter Umständen die Umgehung des Sicherheitssystems. Diese problematischen Berechtigungen sollten nur bei Bedarf für vertrauenswürdigen Code erteilt werden. Es gibt in der Regel keinen Schutz vor bösartigem Code, wenn dem Code diese Berechtigungen gewährt werden.  
   
 > [!NOTE]
-> In .NET Framework 4 gab es wichtige Änderungen am .NET Framework Sicherheitsmodell und der Terminologie. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
+> In .NET Framework 4 gab es wichtige Änderungen am .NET Framework Sicherheitsmodell und der Terminologie. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](/previous-versions/dotnet/framework/security/security-changes).  
   
  Die problematischen Berechtigungen werden in der folgenden Tabelle erläutert.  
   
@@ -40,6 +40,6 @@ Verschiedene der geschützten Operationen, für die von .NET Framework Berechtig
 |<xref:System.Security.Permissions.ReflectionPermission>||  
 |<xref:System.MemberAccessException>|Kann private Member zur Überwindung von Zugriffsmechanismen verwenden.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

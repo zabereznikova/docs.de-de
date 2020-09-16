@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 7dd50fcc07c6c090042cf87acb4aa5d2b5321a68
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1ebc4e145528c3025b0299ea7e421c248c28cdc0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579578"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556368"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Vorgehensweise: Konfigurieren eines WCF-Clients für die Zusammenarbeit mit WSE3.0-Diensten
 Windows Communication Foundation (WCF)-Clients sind auf Wire-Ebene mit den Webdienst Erweiterungen 3,0 für Microsoft .net (WSE)-Dienste kompatibel, wenn WCF-Clients für die Verwendung der WS-Adressierungs Spezifikation vom August 2004 konfiguriert sind.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>So konfigurieren Sie einen WCF-Client für die Zusammenarbeit mit einem WSE3.0-Webdienst  
   
-1. Führen Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aus, um einen WCF-Client für den WSE 3,0-Webdienst zu erstellen.  
+1. Führen Sie das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aus, um einen WCF-Client für den WSE 3,0-Webdienst zu erstellen.  
   
      Für einen WSE-Webdienst wird eine WCF-Client Klasse erstellt.  
   
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF)-Clients sind auf Wire-Ebene mit den Webdi
   
 2. Erstellen Sie eine Klasse, die eine Bindung darstellt, die mit WSE 3.0-Webdiensten kommunizieren kann.  
   
-     Die folgende Klasse ist Teil der [Interoperation mit WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) -Beispiel.  
+     Die folgende Klasse ist Teil der [Interoperation mit WSE](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90)) -Beispiel.  
   
     1. Erstellen Sie eine von der <xref:System.ServiceModel.Channels.Binding>-Klasse abgeleitete Klasse.  
   
@@ -61,7 +61,7 @@ Windows Communication Foundation (WCF)-Clients sind auf Wire-Ebene mit den Webdi
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [Interoperieren mit WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+- [Interoperieren mit WSE](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

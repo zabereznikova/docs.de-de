@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855763"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555717"
 ---
 # <a name="securing-method-access"></a>Sichern des Methodenzugriffs
 
@@ -30,7 +30,7 @@ ms.locfileid: "87855763"
   
 - Einschränken des Zugriffsbereichs auf die Klasse, Assembly oder abgeleiteten Klassen, wenn diese vertrauenswürdig sind. Dies ist die einfachste Möglichkeit, um den Methodenzugriff einzuschränken. Im Allgemeinen können abgeleitete Klassen weniger vertrauenswürdig sein als die Klasse, von der Sie abgeleitet sind, obwohl Sie in einigen Fällen die Identität der übergeordneten Klasse gemeinsam nutzen. Sie sollten insbesondere keine Vertrauensstellung vom Schlüsselwort ableiten `protected` , das nicht notwendigerweise im Sicherheitskontext verwendet wird.  
   
-- Schränken Sie den Methoden Zugriff auf Aufrufer einer angegebenen Identität ein. im Wesentlichen werden bestimmte [Beweise](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (starker Name, Herausgeber, Zone usw.) ausgewählt.  
+- Schränken Sie den Methoden Zugriff auf Aufrufer einer angegebenen Identität ein. im Wesentlichen werden bestimmte [Beweise](/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)) (starker Name, Herausgeber, Zone usw.) ausgewählt.  
   
 - Schränken Sie den Methodenzugriff auf Aufrufer mit von Ihnen ausgewählten Berechtigungen ein.  
   
@@ -240,6 +240,6 @@ class Implemented : ICanCastToMe
   
  Selbst wenn ein sprach Compiler diese außer Kraft setzungen aufgrund eines Kompilierungs Fehlers verhindert, kann der Code, der mit anderen Compilern geschrieben wurde, überschreiben.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

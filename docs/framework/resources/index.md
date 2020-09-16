@@ -12,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3941c912348a652ddcbaea517cf7626c2a8f88e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865163"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535569"
 ---
 # <a name="resources-in-net-apps"></a>Ressourcen in .NET-Apps
 
@@ -25,7 +25,7 @@ Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sic
 
 .NET Framework und .NET Core stellen umfassende Unterstützung zum Erstellen und Lokalisieren von Ressourcen zur Verfügung. Außerdem unterstützt .NET ein einfaches Modell zum Verpacken und Bereitstellen lokalisierter Ressourcen.
 
-Weitere Informationen zu Ressourcen in ASP.NET finden Sie unter [Übersicht über Ressourcen der ASP.NET-Webseite](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).
+Weitere Informationen zu Ressourcen in ASP.NET finden Sie unter [Übersicht über Ressourcen der ASP.NET-Webseite](/previous-versions/aspnet/ms227427(v=vs.100)).
 
 ## <a name="create-and-localize-resources"></a>Erstellen und Lokalisieren von Ressourcen
 
@@ -68,6 +68,6 @@ Sie können Ressourcen dann für die aktuelle Benutzeroberflächenkultur oder f�
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [Erstellen von Ressourcendateien](creating-resource-files-for-desktop-apps.md)
-- [Packen und Bereitstellen von Ressourcen](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Verpacken und Bereitstellen von Ressourcen](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Erstellen von Satellitenassemblys](creating-satellite-assemblies-for-desktop-apps.md)
 - [Abrufen von Ressourcen](retrieving-resources-in-desktop-apps.md)

@@ -3,12 +3,12 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: a0db10ceb75a470dbf799d717b2059355dd104bb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4169fe307e9ef7c391500a2292fcc247f435caa9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646066"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555886"
 ---
 # \<sessionSecurityTokenCache>
 Registriert einen Cache für Sitzungs Token mit einem Dienst oder einer Sammlung von Sicherheitstokenhandlern.  
@@ -46,12 +46,12 @@ Registriert einen Cache für Sitzungs Token mit einem Dienst oder einer Sammlung
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<caches>](caches.md)|Registriert die von einem Dienst oder einer sicherheitstokenhandlerauflistung verwendeten Caches.|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende XML-Code zeigt die Konfiguration eines benutzerdefinierten Caches zum Speichern von Sitzungs Sicherheits Token ( <xref:System.IdentityModel.Tokens.SessionSecurityToken> ). Die Konfiguration wird aus dem `ClaimsAwareWebFarm` Beispiel entnommen. Weitere Informationen zu diesem Beispiel finden Sie unter [Beispiel Index für WIF-Code](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index).  
+ Der folgende XML-Code zeigt die Konfiguration eines benutzerdefinierten Caches zum Speichern von Sitzungs Sicherheits Token ( <xref:System.IdentityModel.Tokens.SessionSecurityToken> ). Die Konfiguration wird aus dem `ClaimsAwareWebFarm` Beispiel entnommen. Weitere Informationen zu diesem Beispiel finden Sie unter [Beispiel Index für WIF-Code](/previous-versions/dotnet/framework/security/wif-code-sample-index).  
   
 ```xml  
 <caches>  
@@ -62,6 +62,6 @@ Registriert einen Cache für Sitzungs Token mit einem Dienst oder einer Sammlung
 </caches>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 52f7857a2dc7108eb308fde942bf153d85d8e8ed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593606"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556641"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Vorgehensweise: Konfigurieren eines WCF-Diensts für die Zusammenarbeit mit ASP.NET-Webdienstclients
 
@@ -18,7 +18,7 @@ Um einen Windows Communication Foundation (WCF)-Dienst Endpunkt zu konfigurieren
   
  Sie können für die Bindung auch Unterstützung für HTTPS und Clientauthentifizierung auf Transportebene aktivieren. ASP.NET-Webdienst Clients unterstützen die MTOM-Nachrichten Codierung nicht <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> . Daher sollte die-Eigenschaft als Standardwert belassen werden, d <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> . h.. ASP.NET-Webdienst Clients unterstützen WS-Sicherheit nicht, daher <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> sollte auf festgelegt werden <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> .  
   
- Um die Metadaten für einen WCF-Dienst für ASP.NET-Webdienst-Proxy Generierungs Tools (d. h. [Web Services Description Language Tool (WSDL. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)), [Web Services Discovery-Tool (Disco. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))und das Feature " **Webverweis hinzufügen** " in Visual Studio verfügbar zu machen, sollten Sie einen HTTP/GET-Metadatenendpunkt verfügbar machen.  
+ Um die Metadaten für einen WCF-Dienst für ASP.NET-Webdienst-Proxy Generierungs Tools (d. h. [Web Services Description Language Tool (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100)), [Web Services Discovery Tool (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))und das Feature " **Webverweis hinzufügen** " in Visual Studio verfügbar zu machen, sollten Sie einen HTTP/GET-Metadatenendpunkt verfügbar machen.  
   
 ## <a name="add-an-endpoint-in-code"></a>Hinzufügen eines Endpunkts im Code  
   
@@ -47,7 +47,7 @@ Um einen Windows Communication Foundation (WCF)-Dienst Endpunkt zu konfigurieren
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](how-to-create-a-service-endpoint-in-code.md)
 - [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst über den Code](how-to-publish-metadata-for-a-service-using-code.md)

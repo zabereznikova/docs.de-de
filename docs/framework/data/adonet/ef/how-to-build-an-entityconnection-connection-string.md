@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: f0918950921e620f724fedd8be027ffe0e2d3fa6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 86ba3956797ff603dd944bfc8df1990df8f23001
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854668"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556433"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Vorgehensweise: Erstellen einer EntityConnection-Verbindungszeichenfolge
 In diesem Thema wird anhand eines Beispiels gezeigt, wie eine <xref:System.Data.EntityClient.EntityConnection> erstellt wird.  
   
 ### <a name="to-run-the-code-in-this-example"></a>So führen Sie den Code in diesem Beispiel aus  
   
-1. Fügen Sie das [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) zu Ihrem Projekt hinzu, und konfigurieren Sie das Projekt für die Verwendung der Entity Framework. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie den Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))-Assistenten.  
+1. Fügen Sie das [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) zu Ihrem Projekt hinzu, und konfigurieren Sie das Projekt für die Verwendung der Entity Framework. Weitere Informationen finden Sie unter Gewusst [wie: Verwenden des Entity Data Model-Assistenten](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2. Fügen Sie der Codepage Ihrer Anwendung die folgenden `using`-Anweisungen (`Imports` in Visual Basic) hinzu:  
   
@@ -32,5 +32,5 @@ In diesem Thema wird anhand eines Beispiels gezeigt, wie eine <xref:System.Data.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Verwenden von EntityConnection mit einem Objekt Kontext](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
+- [Gewusst wie: Verwenden einer "EntityConnection" mit einem Objektkontext](/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
 - [EntityClient-Anbieter für Entity Framework](entityclient-provider-for-the-entity-framework.md)

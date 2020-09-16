@@ -2,12 +2,12 @@
 title: Runtimekonfigurationsoptionen
 description: Hier erfahren Sie, wie Sie .NET Core-Anwendungen mithilfe von Runtimekonfigurationseinstellungen konfigurieren.
 ms.date: 01/21/2020
-ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 21673a221d0f21202febf4730b955da66132d5f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761953"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538197"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Konfigurationseinstellungen für die .NET Core-Runtime
 
@@ -18,7 +18,7 @@ ms.locfileid: "83761953"
 - mehrere Instanzen Ihrer Anwendung zur gleichen Zeit auf einem einzelnen System ausgeführt werden und Sie jede Instanz für die optimale Leistung konfigurieren möchten.
 
 > [!NOTE]
-> Diese Dokumentation ist in Bearbeitung. Wenn Sie bemerken, dass die Informationen in diesem Artikel entweder unvollständig oder falsch sind, [öffnen Sie ein Issue](https://github.com/dotnet/docs/issues), um uns darüber zu informieren, oder [reichen Sie einen Pull Request ein](https://github.com/dotnet/docs/pulls), um das Problem zu beheben. Weitere Informationen zum Einreichen von Pull Requests für das dotnet/docs-Repository finden Sie im [Leitfaden für Mitwirkende](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute).
+> Diese Dokumentation ist in Bearbeitung. Wenn Sie bemerken, dass die Informationen in diesem Artikel entweder unvollständig oder falsch sind, [öffnen Sie ein Issue](https://github.com/dotnet/docs/issues), um uns darüber zu informieren, oder [reichen Sie einen Pull Request ein](https://github.com/dotnet/docs/pulls), um das Problem zu beheben. Weitere Informationen zum Einreichen von Pull Requests für das dotnet/docs-Repository finden Sie im [Leitfaden für Mitwirkende](/contribute/dotnet/dotnet-contribute).
 
 .NET Core bietet die folgenden Mechanismen zum Konfigurieren des Anwendungsverhaltens zur Laufzeit:
 

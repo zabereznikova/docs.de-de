@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 860806fb6406b8ada075b449616f84a360e9ef3a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247259"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555821"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosten in WAS (Windows Process Activation Service)
 Der Windows-Prozessaktivierungsdienst (Windows Process Activation Service, WAS) verwaltet die Aktivierung und Lebensdauer der Workerprozesse, die Anwendungen enthalten, die WCF-Dienste (Windows Communication Foundation) hosten. Das WAS-Prozessmodell generalisiert das IIS 6.0-Prozessmodell für den HTTP-Server, indem die Abhängigkeit von HTTP entfernt wird. Dadurch können WCF-Dienste sowohl HTTP-als auch nicht-HTTP-Protokolle, wie z. b. net. TCP, in einer Hostingumgebung verwenden, die Nachrichten basierte Aktivierung unterstützt und die Möglichkeit bietet, eine große Anzahl von Anwendungen auf einem bestimmten Computer zu hosten.  
@@ -26,7 +26,7 @@ Der Windows-Prozessaktivierungsdienst (Windows Process Activation Service, WAS) 
 - Zentralisierte Anwendungskonfiguration und -verwaltung.  
   
 - Ermöglicht Anwendungen, die Vorteile des IIS-Prozessmodells zu nutzen, ohne dass der Bereitstellungsaufwand einer vollständigen IIS-Installation erforderlich wäre.  
-[Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) funktioniert mit IIS 7,0 und Windows Process Activation Service (was), um eine umfangreiche anwendungshostingumgebung für NET4 WCF-und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) und [AppFabric-hostingkonzepte](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).  
+[Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) funktioniert mit IIS 7,0 und Windows Process Activation Service (was), um eine umfangreiche anwendungshostingumgebung für NET4 WCF-und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10)) und [AppFabric-hostingkonzepte](/previous-versions/appfabric/ee677371(v=azure.10)).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>Elemente des WAS-Adressierungsmodells  
  Anwendungen besitzen Uniform Resource Identifier (URI)-Adressen. Diese stellen die Codeeinheiten dar, deren Lebensdauer und Ausführungsumgebung vom Server verwaltet werden. Eine einzelne WAS-Serverinstanz kann viele verschiedene Anwendungen beherbergen. Server organisieren Anwendungen in Gruppen, die als *Sites*bezeichnet werden. Innerhalb einer Site sind die Anwendungen entsprechend der Struktur der URIs, die als ihre externen Adressen dienen, hierarchisch angeordnet.  
@@ -55,4 +55,4 @@ Der Windows-Prozessaktivierungsdienst (Windows Process Activation Service, WAS) 
 - [Konfigurieren von WAS für die Verwendung mit WCF](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](how-to-install-and-configure-wcf-activation-components.md)
 - [Vorgehensweise: Hosten eines WCF-Diensts in WAS](how-to-host-a-wcf-service-in-was.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

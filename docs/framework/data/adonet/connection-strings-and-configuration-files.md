@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 572c5be1bd639e8d4b38935f5be49782f0b0316e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2148aa984f8289b82b8efcee2404f08cab25c797
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287037"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556550"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Verbindungszeichenfolgen und Konfigurationsdateien
 
@@ -66,13 +66,13 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  Mit .NET Framework 2.0 wurden neue Klassen im <xref:System.Configuration>-Namespace eingeführt, um das Abrufen von Verbindungszeichenfolgen aus Konfigurationsdateien zur Laufzeit zu vereinfachen. Sie können programmgesteuert eine Verbindungszeichenfolge nach Namen oder Anbieternamen abrufen.  
   
 > [!NOTE]
-> Die Datei **machine.config** enthält auch einen **connectionStrings**-Abschnitt, der von Visual Studio verwendete Verbindungszeichenfolgen enthält. Beim Abrufen von Verbindungs Zeichenfolgen nach Anbieter Name aus der Datei " **app. config** " in einer Windows-Anwendung werden die Verbindungs Zeichenfolgen in " **Machine. config** " zuerst geladen und dann die Einträge aus " **app. config**". Das Hinzufügen von **Clear** direkt nach dem **connectionStrings** -Element entfernt alle geerbten Verweise aus der Datenstruktur im Arbeitsspeicher, sodass nur die Verbindungs Zeichenfolgen berücksichtigt werden, die in der lokalen Datei " **app. config** " definiert sind.  
+> Die Datei **machine.config** enthält auch einen **connectionStrings**-Abschnitt, der von Visual Studio verwendete Verbindungszeichenfolgen enthält. Beim Abrufen von Verbindungs Zeichenfolgen nach Anbieter Name aus der **app.config** Datei in einer Windows-Anwendung werden die Verbindungs Zeichenfolgen in **machine.config** zuerst geladen, und dann die Einträge aus **app.config**. Das Hinzufügen von **Clear** direkt nach dem **connectionStrings** -Element entfernt alle geerbten Verweise aus der Datenstruktur im Arbeitsspeicher, sodass nur die Verbindungs Zeichenfolgen berücksichtigt werden, die in der lokalen **app.config** Datei definiert sind.  
   
 ### <a name="working-with-the-configuration-classes"></a>Arbeiten mit den Konfigurationsklassen  
  Ab .NET Framework 2.0 wird bei der Arbeit mit Konfigurationsdateien auf dem lokalen Computer der <xref:System.Configuration.ConfigurationManager> verwendet, der die <xref:System.Configuration.ConfigurationSettings> ersetzt. Für die Arbeit mit ASP.NET-Konfigurationsdateien kommt der <xref:System.Web.Configuration.WebConfigurationManager> zum Einsatz. Er wurde für die Verwendung mit den auf einem Webserver befindlichen Konfigurationsdateien entwickelt und erlaubt den programmgesteuerten Zugriff auf Konfigurationsdateiabschnitte, wie z.B. **system.web**.  
   
 > [!NOTE]
-> Wenn ein Aufrufer zur Laufzeit auf Konfigurationsdateien zugreifen können soll, benötigt er Berechtigungen. Welche Berechtigungen notwendig sind, hängt von der Art der Anwendung, der Konfigurationsdatei und dem Speicherort ab. Weitere Informationen finden Sie unter [Verwenden der Konfigurationsklassen](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) und <xref:System.Web.Configuration.WebConfigurationManager> (für ASP.NET-Anwendungen) und unter <xref:System.Configuration.ConfigurationManager> (für Windows-Anwendungen).  
+> Wenn ein Aufrufer zur Laufzeit auf Konfigurationsdateien zugreifen können soll, benötigt er Berechtigungen. Welche Berechtigungen notwendig sind, hängt von der Art der Anwendung, der Konfigurationsdatei und dem Speicherort ab. Weitere Informationen finden Sie unter [Verwenden der Konfigurationsklassen](/previous-versions/aspnet/ms228063(v=vs.100)) und <xref:System.Web.Configuration.WebConfigurationManager> (für ASP.NET-Anwendungen) und unter <xref:System.Configuration.ConfigurationManager> (für Windows-Anwendungen).  
   
  Zum Abrufen von Verbindungszeichenfolgen aus Anwendungskonfigurationsdateien können Sie die <xref:System.Configuration.ConnectionStringSettingsCollection> verwenden. Sie enthält eine Auflistung von <xref:System.Configuration.ConnectionStringSettings>-Objekten, wobei jedes Objekt für einen einzelnen Eintrag im **connectionStrings**-Abschnitt steht. Ihre Eigenschaften werden entsprechenden Verbindungszeichenfolgenattributen zugeordnet, sodass es möglich ist, Verbindungszeichenfolgen nach dem Namen oder dem Anbieternamen abzurufen.  
   
@@ -104,7 +104,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Verschlüsseln von Konfigurationsdateiabschnitten mit geschützter Konfiguration  
- In ASP.NET 2.0 wurde mit der *geschützten Konfiguration* ein neues Feature eingeführt, mit dem Sie sicherheitsrelevante Informationen in einer Konfigurationsdatei verschlüsseln können. Die geschützte Konfiguration wurde zwar primär für ASP.NET entwickelt, sie kann aber auch zum Verschlüsseln von Konfigurationsdateiabschnitten in Windows-Anwendungen verwendet werden. Eine ausführliche Beschreibung der Funktionen der geschützten Konfiguration finden Sie unter [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
+ In ASP.NET 2.0 wurde mit der *geschützten Konfiguration* ein neues Feature eingeführt, mit dem Sie sicherheitsrelevante Informationen in einer Konfigurationsdatei verschlüsseln können. Die geschützte Konfiguration wurde zwar primär für ASP.NET entwickelt, sie kann aber auch zum Verschlüsseln von Konfigurationsdateiabschnitten in Windows-Anwendungen verwendet werden. Eine ausführliche Beschreibung der Funktionen der geschützten Konfiguration finden Sie unter [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
  Das folgende Konfigurationsdateifragment zeigt den **connectionStrings**-Abschnitt nach der Verschlüsselung. **configProtectionProvider** gibt den Anbieter für die geschützte Konfiguration an, der zum Verschlüsseln und Entschlüsseln der Verbindungszeichenfolgen verwendet wird. Der **EncryptedData**-Abschnitt enthält den Verschlüsselungstext.  
   
@@ -138,16 +138,16 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
   
 |Anbieter|Beschreibung|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Verwendet zum Verschlüsseln und Entschlüsseln der Daten den RSA-Verschlüsselungsalgorithmus. Der RSA-Algorithmus kann sowohl für die Verschlüsselung mit öffentlichem Schlüssel als auch für digitale Signaturen verwendet werden. Er wird auch als "öffentlicher Schlüssel" oder asymmetrische Verschlüsselung bezeichnet, da bei dieser Art der Verschlüsselung zwei verschiedene Schlüssel eingesetzt werden. Mit dem [ASP.NET IIS-Registrierungstool (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) können Sie die Abschnitte in einer Web.config-Datei verschlüsseln und die Verschlüsselungsschlüssel verwalten. ASP.NET entschlüsselt die Konfigurationsdatei, wenn die Datei verarbeitet wird. Die Identität der ASP.NET-Anwendung muss berechtigt sein, den Verschlüsselungsschlüssel zu lesen, mit dem die verschlüsselten Abschnitte verschlüsselt und entschlüsselt werden.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Verwendet zum Verschlüsseln und Entschlüsseln der Daten den RSA-Verschlüsselungsalgorithmus. Der RSA-Algorithmus kann sowohl für die Verschlüsselung mit öffentlichem Schlüssel als auch für digitale Signaturen verwendet werden. Er wird auch als "öffentlicher Schlüssel" oder asymmetrische Verschlüsselung bezeichnet, da bei dieser Art der Verschlüsselung zwei verschiedene Schlüssel eingesetzt werden. Mit dem [ASP.NET IIS-Registrierungstool (Aspnet_regiis.exe)](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) können Sie die Abschnitte in einer Web.config-Datei verschlüsseln und die Verschlüsselungsschlüssel verwalten. ASP.NET entschlüsselt die Konfigurationsdatei, wenn die Datei verarbeitet wird. Die Identität der ASP.NET-Anwendung muss berechtigt sein, den Verschlüsselungsschlüssel zu lesen, mit dem die verschlüsselten Abschnitte verschlüsselt und entschlüsselt werden.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Verwendet zum Verschlüsseln der Konfigurationsabschnitte die Windows-Datenschutz-API (DPAPI). Die DPAPI verwendet die in Windows integrierten Kryptografiedienste, und sie kann für den computerspezifischen oder den benutzerkontospezifischen Schutz konfiguriert werden. Der computerspezifische Schutz bietet sich an, wenn auf demselben Server mehrere Anwendungen vorhanden sind, die Informationen gemeinsam nutzen müssen. Die Verwendung des benutzerkontospezifischen Schutzes empfiehlt sich bei Diensten, die mit einer bestimmten Benutzeridentität, z. B. einer freigegebenen gehosteten Umgebung, ausgeführt werden. Jede Anwendung wird unter einer separaten Identität ausgeführt, was den Zugriff auf Ressourcen, wie z. B. Dateien und Datenbanken, einschränkt.|  
   
- Beide Anbieter bieten eine starke Verschlüsselung der Daten. Wenn Sie aber beabsichtigen, ein und dieselbe verschlüsselte Konfigurationsdatei auf mehreren Servern, z. B. in einer Webfarm, zu verwenden, müssen Sie den <xref:System.Configuration.RsaProtectedConfigurationProvider> verwenden, da nur er die Möglichkeit bietet, die zum Verschlüsseln der Daten verwendeten Verschlüsselungsschlüssel zu exportieren und sie auf einem anderen Server zu importieren. Weitere Informationen finden Sie unter [Importieren und Exportieren von RSA-Schlüsselcontainern mit geschützter Konfiguration](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Beide Anbieter bieten eine starke Verschlüsselung der Daten. Wenn Sie aber beabsichtigen, ein und dieselbe verschlüsselte Konfigurationsdatei auf mehreren Servern, z. B. in einer Webfarm, zu verwenden, müssen Sie den <xref:System.Configuration.RsaProtectedConfigurationProvider> verwenden, da nur er die Möglichkeit bietet, die zum Verschlüsseln der Daten verwendeten Verschlüsselungsschlüssel zu exportieren und sie auf einem anderen Server zu importieren. Weitere Informationen finden Sie unter [Importieren und Exportieren von RSA-Schlüsselcontainern mit geschützter Konfiguration](/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Verwenden der Konfigurationsklassen  
  Der <xref:System.Configuration>-Namespace stellt Klassen zum programmgesteuerten Arbeiten mit Konfigurationseinstellungen bereit. Die <xref:System.Configuration.ConfigurationManager>-Klasse ermöglicht den Zugriff auf Computer-, Anwendungs- und Benutzerkonfigurationsdateien. Wenn Sie eine ASP.NET-Anwendung erstellen, können Sie die- <xref:System.Web.Configuration.WebConfigurationManager> Klasse verwenden, die die gleiche Funktionalität bereitstellt, während Sie auch auf Einstellungen zugreifen können, die für ASP.NET-Anwendungen eindeutig sind, wie z. b. die in **\<system.web>** .  
   
 > [!NOTE]
-> Der <xref:System.Security.Cryptography>-Namespace enthält Klassen, die zusätzliche Optionen zum Verschlüsseln und Entschlüsseln von Daten bereitstellen. Verwenden Sie diese Klassen, wenn Sie Kryptografiedienste benötigen, die bei Verwendung der geschützten Konfiguration nicht verfügbar sind. Einige dieser Klassen sind Wrapper für die nicht verwaltete Microsoft CryptoAPI, während es sich bei anderen Klassen um verwaltete Implementierungen handelt. Weitere Informationen finden Sie unter [Kryptografiedienste](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
+> Der <xref:System.Security.Cryptography>-Namespace enthält Klassen, die zusätzliche Optionen zum Verschlüsseln und Entschlüsseln von Daten bereitstellen. Verwenden Sie diese Klassen, wenn Sie Kryptografiedienste benötigen, die bei Verwendung der geschützten Konfiguration nicht verfügbar sind. Einige dieser Klassen sind Wrapper für die nicht verwaltete Microsoft CryptoAPI, während es sich bei anderen Klassen um verwaltete Implementierungen handelt. Weitere Informationen finden Sie unter [Kryptografiedienste](/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
 ### <a name="appconfig-example"></a>"App.config"-Beispiel  
  In diesem Beispiel wird gezeigt, wie Sie die Verschlüsselung des Abschnitts **connectionStrings** in der Datei **app.config** einer Windows-Anwendung aktivieren und deaktivieren können. In diesem Beispiel übernimmt die Prozedur den Namen der Anwendung, z. B. MyApplication.exe, als Argument. Die Datei **app.config** wird dann verschlüsselt und in den Ordner kopiert, der die ausführbare Datei mit dem Namen „MyApplication.exe.config“ enthält.  
@@ -169,13 +169,13 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Weitere Informationen zum Sichern von ASP.NET-Anwendungen finden Sie unter [Sichern von ASP.net](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))-Websites.  
+ Weitere Informationen zum Sichern von ASP.NET-Anwendungen finden Sie unter [Sichern von ASP.net](/previous-versions/aspnet/91f66yxt(v=vs.100))-Websites.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Verbindungszeichenfolgen-Generatoren](connection-string-builders.md)
 - [Schützen von Verbindungsinformationen](protecting-connection-information.md)
-- [Verwenden der Konfigurationsklassen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
+- [Verwenden der Konfigurationsklassen](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [Konfigurieren von Apps](../../configure-apps/index.md)
-- [ASP.NET-Websiteverwaltung](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [ASP.NET-Websiteverwaltung](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [Übersicht über ADO.NET](ado-net-overview.md)
