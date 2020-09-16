@@ -2,12 +2,12 @@
 title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: 118159617a7f4c27ecc5e8fe077c28cfefac8537
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6f0ae05d3397e8fd981037dc58be1f80a661b5c5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397621"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536001"
 ---
 # \<peerAuthentication>
 Gibt die Authentifizierungseinstellungen für ein von einem Peerknoten verwendetes Peerzertifikat an.  
@@ -47,14 +47,14 @@ Gibt die Authentifizierungseinstellungen für ein von einem Peerknoten verwendet
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<peer>](peer-of-servicecredentials.md)|Gibt die aktuellen Anmeldeinformationen für einen Peerknoten an.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das `<authentication>`-Element entspricht der <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>-Klasse. Mit diesem Element wird ein Validierungssteuerelement angegeben, das bei Nachbar-zu-Nachbar-Authentifizierung im Mesh aufgerufen wird. Versucht ein neuer Peer, eine Nachbarverbindung herzustellen, übergibt er seine eigenen Anmeldeinformationen an den antwortenden Peer. Das Validierungssteuerelement des antwortenden Peers wird aufgerufen, um die Anmeldeinformationen der Remotepartei zu überprüfen. Bei jeder Herstellung einer Peerverbindung im Mesh werden beide Peers gegenseitig authentifziert, das heißt, die Validierungssteuerelemente werden an beiden Enden aufgerufen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
@@ -63,6 +63,6 @@ Gibt die Authentifizierungseinstellungen für ein von einem Peerknoten verwendet
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Verwenden von Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
 - [Peer-to-Peer-Netzwerke](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Peerkanal-Nachrichtenauthentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Benutzerdefinierte Peerkanal-Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Peerkanal-Nachrichtenauthentifizierung](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Benutzerdefinierte Peerkanal-Authentifizierung](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Sichern von Peerkanalanwendungen](../../../wcf/feature-details/securing-peer-channel-applications.md)

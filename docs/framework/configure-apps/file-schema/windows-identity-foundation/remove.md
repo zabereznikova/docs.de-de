@@ -3,12 +3,12 @@ title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: cfdfbb3aabde253ad17b221801b20c1ac9a45c2d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7581f581c4b97a07eb4bdeb49eb5ae5ce72c2aa7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251929"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535715"
 ---
 # \<remove>
 Entfernt den angegebenen Sicherheitstokenhandler aus der tokenhandlerauflistung.  
@@ -39,14 +39,14 @@ Entfernt den angegebenen Sicherheitstokenhandler aus der tokenhandlerauflistung.
   
 |attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|type|Der CLR-Typname des tokenhandlers, der entfernt werden soll. Weitere Informationen zum Angeben des- `type` Attributs finden Sie unter [benutzerdefinierte Typverweise](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Erforderlich.|  
+|type|Der CLR-Typname des tokenhandlers, der entfernt werden soll. Weitere Informationen zum Angeben des- `type` Attributs finden Sie unter [benutzerdefinierte Typverweise](/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|Gibt eine Auflistung von Sicherheitstokenhandlern an, die beim Endpunkt registriert sind.|  
   
