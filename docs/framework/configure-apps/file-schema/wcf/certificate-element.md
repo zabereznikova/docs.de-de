@@ -2,12 +2,12 @@
 title: <certificate>-Element
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: e28e7d16073a56f3b6126439644bfff86c9af18b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c5fd156904ed30035991a8391c8f975da2a97ea7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400556"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554370"
 ---
 # <a name="certificate-element"></a>\<certificate>-Element
 Gibt ein X.509-Zertifikat an, das zum Signieren und Verschlüsseln von Nachrichten für Peer-to-Peer-Clients verwendet wird.  
@@ -47,11 +47,11 @@ Gibt ein X.509-Zertifikat an, das zum Signieren und Verschlüsseln von Nachricht
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<peer>](peer-of-clientcredentials-element.md)|Gibt Anmeldeinformationen an, die bei der Authentifizierung von Peer-to-Peer-Clients verwendet werden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Dieses Konfigurationselement enthält eine beim Authentifizieren von Nachbarn im Peermesh verwendete X509Certificate2-Instanz.  
   
  Weitere Informationen zur Peer-zu-Peer-Programmierung finden Sie unter [Peer-to-Peer-Netzwerke](../../../wcf/feature-details/peer-to-peer-networking.md).  
@@ -75,7 +75,7 @@ Gibt ein X.509-Zertifikat an, das zum Signieren und Verschlüsseln von Nachricht
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>
@@ -83,6 +83,6 @@ Gibt ein X.509-Zertifikat an, das zum Signieren und Verschlüsseln von Nachricht
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - [Verwenden von Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
 - [Peer-to-Peer-Netzwerke](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Peerkanal-Nachrichtenauthentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Benutzerdefinierte Peerkanal-Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Peerkanal-Nachrichtenauthentifizierung](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Benutzerdefinierte Peerkanal-Authentifizierung](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Sichern von Peerkanalanwendungen](../../../wcf/feature-details/securing-peer-channel-applications.md)

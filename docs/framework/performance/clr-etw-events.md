@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309832"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553817"
 ---
 # <a name="clr-etw-events"></a>CLR-ETW-Ereignisse
 Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Windows-Ereignisse (ETW). Jedes Ereignis verfügt über ein zugeordnetes Schlüsselwort und die Ebene, die im Thema [CLR-ETW-Schlüsselwörter und-Ebenen](clr-etw-keywords-and-levels.md) beschrieben werden. Die CLR verfügt über zwei Anbieter für die Ereignisse:  
@@ -60,9 +60,9 @@ Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Win
  [Stapelereignis](stack-etw-event.md)  
  Erfasst Informationen, die mit anderen Ereignissen zur Generierung von Stackablaufverfolgungen verwendet werden, nachdem ein Ereignis eingetreten ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Verbessertes Debugging und Leistungsoptimierung mit ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Verbessertes Debugging und Leistungsoptimierung mit ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [Steuern der Protokollierung in .NET Framework](controlling-logging.md)
 - [CLR-ETW-Anbieter](clr-etw-providers.md)
 - [CLR-ETW-Schlüsselwörter und -Ebenen](clr-etw-keywords-and-levels.md)

@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 4aa87acaf9080959ba8b53e3ec3216314dc745b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1cdce48f51b25732c256d3c867f1bba801ec4d8c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732583"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545453"
 ---
 # \<webMessageEncoding>
 Aktiviert Klartext-XML, JavaScript Object Notation (JSON)-Nachrichtencodierungen und unformatierten binären Inhalt, die bei der Verwendung in einer Windows Communication Foundation-Bindung (WCF) gelesen und geschrieben werden sollen.  
@@ -40,17 +40,17 @@ Aktiviert Klartext-XML, JavaScript Object Notation (JSON)-Nachrichtencodierungen
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Beim Codieren wird eine Nachricht in eine Bytefolge transformiert. Beim Decodieren wird dieser Prozess umgekehrt. Diese Vorgänge erfordern die Angabe einer Zeichencodierung.  
   
  Dazu delegiert das `webMessageEncoding`-Element Vorgänge an eine Reihe innerer Encoder, um die Klartext-XML und JSON-Codierungen sowie die unformatierten binären Daten zu verarbeiten. Diese Delegierung wird von einem zusammengesetzten Nachrichtenencoder durchgeführt.  
@@ -61,7 +61,7 @@ Aktiviert Klartext-XML, JavaScript Object Notation (JSON)-Nachrichtencodierungen
   
  `maxReadPoolSize` und `maxWritePoolSize` können auch zum Festlegen der maximalen Anzahl an jeweils zuzuweisenden Readern und Writern verwendet werden. Standardmäßig werden 64 Reader und 16 Writer zugeordnet.  
   
- Standard Komplexitäts Einschränkungen werden auch mit dem-Element festgelegt [\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) , um vor einer Klasse von DOS-Angriffen (Denial of Service) zu schützen, die versuchen, die Nachrichten Komplexität zum Binden von Endpunkt-Verarbeitungs Ressourcen zu verwenden.  
+ Standard Komplexitäts Einschränkungen werden auch mit dem-Element festgelegt [\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) , um vor einer Klasse von DOS-Angriffen (Denial of Service) zu schützen, die versuchen, die Nachrichten Komplexität zum Binden von Endpunkt-Verarbeitungs Ressourcen zu verwenden.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -72,7 +72,7 @@ Aktiviert Klartext-XML, JavaScript Object Notation (JSON)-Nachrichtencodierungen
                     textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

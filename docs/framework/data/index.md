@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 654f6f37e40d5df76910a7de7c5de4ffa2787b58
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 0bf02eb56c042361c973d410b1f21e2ef92dd9f9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141836"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553843"
 ---
 # <a name="data-and-modeling-in-net"></a>Daten und Modellierung in .net
 
@@ -40,5 +40,5 @@ Dieser Abschnitt enthält Informationen zum Zugreifen auf Daten in der .NET Fram
  [XML-Dokumente und -Daten](../../standard/data/xml/index.md)  
  Bietet eine Übersicht über eine umfassende und integrierte Gruppe von Klassen, die mit XML-Dokumenten und -Daten in .NET Framework eingesetzt werden können.  
   
- [XML-Standard Referenz](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  
- Enthält Referenzinformationen zu XML-Standards, die von Microsoft unterstützt werden.  
+ [XML-Standard Referenz](/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  
+ Enthält Referenzinformationen zu XML-Standards, die von Microsoft unterstützt werden.

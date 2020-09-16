@@ -2,12 +2,12 @@
 title: Codekonventionen für F#
 description: 'Informieren Sie sich über allgemeine Richtlinien und Idiome beim Schreiben von F #-Code.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053010"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554025"
 ---
 # <a name="f-coding-conventions"></a>Codekonventionen für F#
 
@@ -174,7 +174,7 @@ Die Fehler Verwaltung in großen Systemen ist ein komplexes und differenziertes 
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Darstellen von Fehler Fällen und ungültigen Zuständen in Typen, die in Ihrer Domäne intrinsisch sind
 
-Bei Unterscheidungs- [Unions](../language-reference/discriminated-unions.md)bietet F # Ihnen die Möglichkeit, einen fehlerhaften Programmzustand in Ihrem Typsystem darzustellen. Beispiel:
+Bei Unterscheidungs- [Unions](../language-reference/discriminated-unions.md)bietet F # Ihnen die Möglichkeit, einen fehlerhaften Programmzustand in Ihrem Typsystem darzustellen. Zum Beispiel:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -605,7 +605,7 @@ type Closure1Table() =
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>Bevorzugen des `let mutable` Verweises auf Zellen
 
-Verweis Zellen können anstelle des Werts selbst den Verweis auf einen Wert darstellen. Obwohl Sie für Leistungs kritischen Code verwendet werden können, wird dies nicht empfohlen. Betrachten Sie das folgenden Beispiel:
+Verweis Zellen können anstelle des Werts selbst den Verweis auf einen Wert darstellen. Obwohl Sie für Leistungs kritischen Code verwendet werden können, wird dies nicht empfohlen. Betrachten Sie das folgende Beispiel:
 
 ```fsharp
 let kernels =
@@ -703,7 +703,7 @@ Da eine Klasse bei der Interaktion mit der Visual Studio Code-API nicht benötig
 
 ## <a name="consider-type-abbreviations-to-shorten-signatures"></a>Typabkürzungen zum Verkürzen von Signaturen in Erwägung gezogen
 
-[Typabkürzungen](../language-reference/type-abbreviations.md) sind eine bequeme Möglichkeit, einem anderen Typ eine Bezeichnung zuzuweisen, z. b. eine Funktions Signatur oder einen komplexeren Typ. Der folgende Alias weist z. b. eine Bezeichnung zu, die zum Definieren einer Berechnung mit [cntk](https://docs.microsoft.com/cognitive-toolkit/), einer Deep Learning-Bibliothek, benötigt wird:
+[Typabkürzungen](../language-reference/type-abbreviations.md) sind eine bequeme Möglichkeit, einem anderen Typ eine Bezeichnung zuzuweisen, z. b. eine Funktions Signatur oder einen komplexeren Typ. Der folgende Alias weist z. b. eine Bezeichnung zu, die zum Definieren einer Berechnung mit [cntk](/cognitive-toolkit/), einer Deep Learning-Bibliothek, benötigt wird:
 
 ```fsharp
 open CNTK

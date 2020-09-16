@@ -3,15 +3,15 @@ title: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Me
 description: Erfahren Sie, wie Sie mit Svcutil.exe Metadaten aus laufenden Diensten herunterladen und die Metadaten in lokalen Dateien speichern.
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 42df55fe7bbae6d8c977263e05053d8a8fa87aff
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6877d860a4465947268d6535b9edeb9856d4d689
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246765"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554305"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten
-Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herunterzuladen und die Metadaten in lokalen Dateien zu speichern. Bei http-und HTTPS-URL-Schemas versucht Svcutil.exe, Metadaten mithilfe von WS-MetadataExchange und der [XML-Webdienst](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))Ermittlung abzurufen. Bei allen anderen URL-Schemas verwendet Svcutil.exe nur WS-MetadataExchange.  
+Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herunterzuladen und die Metadaten in lokalen Dateien zu speichern. Bei http-und HTTPS-URL-Schemas versucht Svcutil.exe, Metadaten mithilfe von WS-MetadataExchange und der [XML-Webdienst](/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))Ermittlung abzurufen. Bei allen anderen URL-Schemas verwendet Svcutil.exe nur WS-MetadataExchange.  
   
  Standardmäßig verwendet Svcutil.exe die in der <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse definierten Bindungen. Wenn Sie die für WS-MetadataExchange verwendete Bindung konfigurieren möchten, müssen Sie einen Clientendpunkt in der Konfigurationsdatei für „Svcutil.exe“ (svcutil.exe.config) definieren, der den `IMetadataExchange`-Vertrag verwendet und über dasselbe URI-Schema der Metadaten-Endpunktadresse verfügt.  
   
@@ -47,6 +47,6 @@ Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herun
 svcutil /t:metadata http://service/metadataEndpoint  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

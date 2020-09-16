@@ -11,19 +11,19 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 259723b903377f7e79731e1ff79b3d512581102f
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5dedf6df8e6cf2cf886e68cc132a44abfb201c49
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555266"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554396"
 ---
 # <a name="key-security-concepts"></a>Schlüsselbegriffe der Sicherheit
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Windows.
 >
-> Weitere Informationen zu ASP.net Core finden Sie unter Übersicht über die [ASP.net Core Sicherheit](https://docs.microsoft.com/aspnet/core/security/).
+> Weitere Informationen zu ASP.net Core finden Sie unter Übersicht über die [ASP.net Core Sicherheit](/aspnet/core/security/).
 
 .Net bietet rollenbasierte Sicherheit, um Sicherheitsprobleme bei mobilem Code zu beheben und Unterstützung zu bieten, mit der Komponenten ermitteln können, welche Benutzer autorisiert sind.  
   
@@ -71,10 +71,10 @@ Im folgenden Beispiel muss der aktive Prinzipal ein Administrator sein. Der `nam
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Autorisierung  
+## <a name="authorization"></a>Authorization  
 
 Bei der Autorisierung wird bestimmt, ob das Ausführen einer angeforderten Aktion durch einen Prinzipal zulässig ist. Die Autorisierung findet nach der Authentifizierung statt. Sie bestimmt anhand der Informationen zur Identität und Rollen des Prinzipals, auf welche Ressourcen dieser zugreifen darf. Sie können die rollenbasierte .NET-Sicherheit verwenden, um die Autorisierung zu implementieren.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ASP.net Core Sicherheit](/aspnet/core/security/)

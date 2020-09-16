@@ -7,16 +7,16 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 3702e9d2e0a369f5391c16088202caf5d7ced7ea
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803702"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554448"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in der .NET Framework
 
-Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-System [Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)finden können.  
+Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-System [Monitor](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))finden können.  
 
 ## <a name="exception-performance-counters"></a>Ausnahmeleistungsindikatoren  
  Die Kategorie ".NET CLR-Ausnahmen" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den von einer Anwendung ausgelösten Ausnahmen liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
@@ -37,8 +37,8 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Anzahl der CCWs**|Zeigt die aktuelle Anzahl der COM Callable Wrapper (CCWs) an. Ein CCW ist ein Proxy für ein verwaltetes Objekt, auf das aus einem nicht verwalteten COM-Client verwiesen wird. Dieser Indikator gibt die Anzahl der verwalteten Objekte an, auf die von nicht verwaltetem COM-Code verwiesen wird.|  
 |**Anzahl der Marshallingvorgänge**|Zeigt die Gesamtanzahl an, wie oft Argumente und Rückgabewerte seit dem Anwendungsstart von verwaltetem zu nicht verwaltetem Code (und umgekehrt) gemarshallt wurden. Dieser Indikator wird nicht erhöht, wenn die Stubs inline sind. (Stubs sind verantwortlich für das Marshalling von Argumenten und Rückgabewerten). Stubs sind normalerweise inline, wenn der Marshallingmehraufwand gering ist.|  
 |**Anzahl Stubs**|Zeigt die aktuelle Anzahl von Stubs an, die von der Common Language Runtime erstellt werden. Stubs sind während eines COM-Interop- oder Plattformaufrufs verantwortlich für das Marshalling von Argumenten und Rückgabewerten von verwaltetem zu nicht verwaltetem Code und umgekehrt.|  
-|**Anzahl TLB-Exporte/s**|Für die zukünftige Verwendung reserviert.|  
-|**Anzahl TLB-Importe/s**|Für die zukünftige Verwendung reserviert.|  
+|**Anzahl TLB-Exporte/s**|Für zukünftige Verwendung reserviert.|  
+|**Anzahl TLB-Importe/s**|Für zukünftige Verwendung reserviert.|  
 
 ## <a name="jit-performance-counters"></a>JIT-Leistungsindikatoren  
  Die Kategorie ".NET CLR-JIT" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu JIT-kompiliertem Code liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
@@ -57,8 +57,8 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
   
 |Leistungsindikator|BESCHREIBUNG|  
 |-------------------------|-----------------|  
-|**Ladezeit in Prozent**|Für die zukünftige Verwendung reserviert.|  
-|**Assemblysuchdauer**|Für die zukünftige Verwendung reserviert.|  
+|**Ladezeit in Prozent**|Für zukünftige Verwendung reserviert.|  
+|**Assemblysuchdauer**|Für zukünftige Verwendung reserviert.|  
 |**Bytes im Loaderheap**|Zeigt die aktuelle Größe des vom Klassenladeprogramm in allen Anwendungsdomänen zugesicherten Speichers in Bytes an. Zugesicherter Speicher ist der in der Auslagerungsdatei des Datenträgers reservierte physische Speicherplatz.|  
 |**Aktuelle Anwendungsdomänen**|Zeigt die aktuelle Anzahl der in der Anwendung geladenen Anwendungsdomänen an.|  
 |**Aktuelle Assemblys**|Zeigt die aktuelle Anzahl der in der aktuell ausgeführten Anwendung in allen Anwendungsdomänen geladenen Assemblys an. Wenn die Assembly aus mehreren Anwendungsdomänen domänenneutral geladen wird, wird dieser Zähler nur einmal erhöht.|  
@@ -195,7 +195,7 @@ Die Netzwerkleistungsindikatoren für Ereignisse umfassen folgende:
   
  Der Zugriff auf und die Verwaltung von Netzwerkleistungsindikatoren kann mithilfe von <xref:System.Diagnostics.PerformanceCounter> und den verwandten Klassen in <xref:System.Diagnostics> erfolgen. Netzwerkleistungsindikatoren können auch mit der Konsole des Windows-Systemmonitors angezeigt werden.  
   
- Netzwerkleistungsindikatoren müssen in der zu verwendenden Konfigurationsdatei aktiviert sein. Alle Netzwerkleistungsindikatoren werden mit einer einzelnen Einstellung in der Konfigurationsdatei aktiviert bzw. deaktiviert. Einzelne Netzwerkleistungsindikatoren können nicht aktiviert oder deaktiviert werden. Weitere Informationen finden Sie unter- [ \<performanceCounter> Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
+ Netzwerkleistungsindikatoren müssen in der zu verwendenden Konfigurationsdatei aktiviert sein. Alle Netzwerkleistungsindikatoren werden mit einer einzelnen Einstellung in der Konfigurationsdatei aktiviert bzw. deaktiviert. Einzelne Netzwerkleistungsindikatoren können nicht aktiviert oder deaktiviert werden. Weitere Informationen finden Sie unter [\<performanceCounter>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
   
  Wenn Netzwerkindikatoren aktiviert sind, werden hierdurch sowohl Indikatoren pro AppDomain als auch globale Leistungsindikatoren erstellt und aktualisiert. Bei Deaktivierung liefert die Anwendung keine Netzwerkleistungsindikator-Daten.  
   
@@ -224,11 +224,11 @@ for (int i = 0; i < Array.Length; i++)
 |-------------------------|-----------------|  
 |**Anzahl Linkzeittests**|Zeigt die Gesamtzahl der Sicherheitsüberprüfungen für den Linkzeitcode-Zugriff seit dem Anwendungsstart an. Sicherheitsüberprüfungen für den Linkzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung zur JIT-Kompilierzeit (Just-in-Time) anfordert. Eine Linkzeitüberprüfung wird einmal pro Aufrufer durchgeführt. Dieser Indikator ist kein Hinweis auf schwerwiegende Leistungsprobleme. Er zeigt lediglich die Sicherheitssystemaktivität an.|  
 |**Zeit in RT-Überprüfungen in Prozent**|Zeigt den Prozentsatz der verstrichenen Zeit an, der seit der letzten Messung mit dem Ausführen von Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff verbracht wurde. Dieser Indikator wird am Ende einer .NET Framework-Sicherheitsüberprüfung aktualisiert. Er ist kein Durchschnittswert. Er zeigt den letzten erfassten Wert an.|  
-|**Sig-Authentifizierungszeit in Prozent**|Für die zukünftige Verwendung reserviert.|  
+|**Sig-Authentifizierungszeit in Prozent**|Für zukünftige Verwendung reserviert.|  
 |**Stackwalktiefe**|Zeigt die Tiefe des Stapels während der letzten Sicherheitsüberprüfung für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden durch das Durchlaufen des Stapels (Stackwalk) durchgeführt. Dieser Indikator ist kein Durchschnittswert. Er zeigt nur den letzten erfassten Wert an.|  
 |**Laufzeitüberprüfungen gesamt**|Zeigt die Gesamtzahl der seit dem Anwendungsstart durchgeführten Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung anfordert. Die Sicherheitsüberprüfung wird bei jedem Aufruf durch den Aufrufer ausgeführt, und sie untersucht den aktuellen Threadstapel des Aufrufers. Bei Verwendung zusammen mit dem Indikator **Stackwalktiefe**, zeigt dieser Indikator die Leistungseinbuße an, die bei Sicherheitsüberprüfungen auftritt.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Leistungsindikatoren](performance-counters.md)
 - [Laufzeit-Profilerstellung](runtime-profiling.md)

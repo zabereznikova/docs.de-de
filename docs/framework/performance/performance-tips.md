@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2b3be8b42b5046e52074236de01ca312a0a9a361
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: c5e3f692c2bf754ccd35324019246ee905e8c591
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474266"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554644"
 ---
 # <a name="net-performance-tips"></a>.NET-Leistungstipps
 Der Begriff *Leistung* bezieht sich im Allgemeinen auf die Ausführungsgeschwindigkeit eines Programms. In manchen Fällen können Sie die Ausführungsgeschwindigkeit erhöhen, indem Sie im Quellcode bestimmte Grundregeln befolgen. In einigen Programmen müssen Sie den Code genau untersuchen und mithilfe von Profilern sicherstellen, dass dieser so schnell wie möglich ausgeführt wird. In anderen Programmen müssen Sie keine solche Optimierung ausführen, da Code in der aktuellen Form mit akzeptabler Geschwindigkeit ausgeführt wird. Dieser Artikel beschreibt einige häufige Bereiche, in denen die Leistung abnehmen kann, und enthält Tipps zur Verbesserung sowie Links zu weiteren Leistungsthemen. Weitere Informationen zum Planen und Messen der Leistung finden Sie unter [Performance](index.md).  
@@ -31,19 +31,19 @@ Der Begriff *Leistung* bezieht sich im Allgemeinen auf die Ausführungsgeschwind
   
 ## <a name="other-resources"></a>Weitere Ressourcen  
   
-- [Writing Faster Managed Code: Know What Things Cost (Schnelleren verwalteten Code schreiben: Überblick über Kosten behalten)](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
+- [Writing Faster Managed Code: Know What Things Cost (Schnelleren verwalteten Code schreiben: Überblick über Kosten behalten)](/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
   
-- [Schreiben von leistungsstarken verwalteten Anwendungen – Ein Leitfaden](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
+- [Schreiben von leistungsstarken verwalteten Anwendungen – Ein Leitfaden](/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
   
-- [Garbage Collector-Grundlagen und Tipps zur Leistung](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
+- [Garbage Collector-Grundlagen und Tipps zur Leistung](/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
   
-- [Performance Tips and Tricks in .NET Applications (Tipps und Tricks zur Leistung in .NET-Anwendungen)](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
+- [Performance Tips and Tricks in .NET Applications (Tipps und Tricks zur Leistung in .NET-Anwendungen)](/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Rico Mariani's Performance Tidbits (Rico Marianis spezielle Leistungstipps)](https://docs.microsoft.com/archive/blogs/ricom/)  
+- [Rico Mariani's Performance Tidbits (Rico Marianis spezielle Leistungstipps)](/archive/blogs/ricom/)  
 
-- [Blog von Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/)
+- [Blog von Vance Morrison](/archive/blogs/vancem/)
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Leistung](index.md)
 - [Visual Basic-Programmierhandbuch](../../visual-basic/programming-guide/index.md)

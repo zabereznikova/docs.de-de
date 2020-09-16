@@ -21,12 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ab6f12be01899f5b7e54a7ec2d9675d502d88bc3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73039158"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555132"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Konfigurationsdateischema für .NET Framework
 
@@ -92,14 +92,14 @@ Alle Elemente des Windows Identity Foundation (WIF)-Konfigurations Schemas.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Schema für Remote Einstellungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
+[Schema für Remote Einstellungen](/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
 Beschreibt die Elemente, mit denen Client- und Serveranwendungen konfiguriert werden, die Remotefunktionen implementieren.
 
-[ASP.net-Einstellungs Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
+[ASP.net-Einstellungs Schema](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
 Beschreibt die Elemente, die das Verhalten von ASP.NET-Webanwendungen steuern.
 
-[Schema für Webdienst Einstellungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
+[Schema für Webdienst Einstellungen](/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
 Beschreibt die Elemente, die das Verhalten von ASP.NET-Webdiensten und ihren Clients steuern.
 
-[Konfigurieren von .NET Framework-apps](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
+[Konfigurieren von .NET Framework-apps](/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
 Beschreibt, wie Sicherheit, Assemblybindung und Remotefunktionen in .NET Framework konfiguriert werden.

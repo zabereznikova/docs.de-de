@@ -2,12 +2,12 @@
 title: X.509-Zertifikats-Validierungssteuerelement
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d117dda8e6748407b6d58677ec55e4e8e4e4740
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594828"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554240"
 ---
 # <a name="x509-certificate-validator"></a>X.509-Zertifikats-Validierungssteuerelement
 
@@ -23,7 +23,7 @@ Insgesamt zeigt dieses Beispiel Folgendes:
 
 - Der Server wird mit dem X.509-Zertifikat des Servers authentifiziert.
 
-Der Dienst macht einen einzelnen Endpunkt für die Kommunikation mit dem Dienst verfügbar, der mithilfe der Konfigurationsdatei "App. config" definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard konfiguriert, der standardmäßig `wsHttpBinding` die `WSSecurity` Client Zertifikat Authentifizierung verwendet. Das Dienstverhalten gibt den benutzerdefinierten Modus zur Prüfung von X.509-Clientzertifikaten zusammen mit dem Typ der Validierungssteuerelementklasse an. Das Verhalten gibt auch das Serverzertifikat mit dem serviceCertificate-Element an. Das Serverzertifikat muss den gleichen Wert für den `SubjectName` `findValue` in der enthalten [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
+Der Dienst macht einen einzelnen Endpunkt für die Kommunikation mit dem Dienst verfügbar, der mithilfe der Konfigurationsdatei App.config definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard konfiguriert, der standardmäßig `wsHttpBinding` die `WSSecurity` Client Zertifikat Authentifizierung verwendet. Das Dienstverhalten gibt den benutzerdefinierten Modus zur Prüfung von X.509-Clientzertifikaten zusammen mit dem Typ der Validierungssteuerelementklasse an. Das Verhalten gibt auch das Serverzertifikat mit dem serviceCertificate-Element an. Das Serverzertifikat muss den gleichen Wert für den `SubjectName` `findValue` in der enthalten [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
   <system.serviceModel>
@@ -311,16 +311,16 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus
 
-1. Führen Sie Setup. bat aus dem Beispiel Installationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung mit Administratorrechten aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
+1. Führen Sie Setup.bat aus dem Beispiel Installationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung mit Administratorrechten aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 
     > [!IMPORTANT]
-    > Die Batchdatei "Setup. bat" ist so konzipiert, dass Sie über eine Visual Studio 2012-Eingabeaufforderung ausgeführt wird. Die in der Visual Studio 2012-Eingabeaufforderung festgelegte PATH-Umgebungsvariable verweist auf das Verzeichnis, das ausführbare Dateien enthält, die für das Skript "Setup. bat" erforderlich sind.
+    > Die Batchdatei Setup.bat ist für die Ausführung über eine Visual Studio 2012-Eingabeaufforderung konzipiert. Die in der Visual Studio 2012-Eingabeaufforderung festgelegte PATH-Umgebungsvariable verweist auf das Verzeichnis, das ausführbare Dateien enthält, die für das Setup.bat Skript erforderlich sind.
 
 2. Starten Sie Service.exe aus dem Ordner \service\bin.
 
 3. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.
 
-4. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.
+4. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.
 
 #### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus
 
@@ -334,7 +334,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
 5. Führen Sie auf dem-Server `setup.bat service` in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Wenn `setup.bat` Sie mit dem- `service` Argument ausführen, wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.
 
-6. Bearbeiten Sie die Datei "Service. exe. config" so, dass Sie den neuen Zertifikat Namen (im-Attribut im) widerspiegelt, der mit dem `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) voll qualifizierten Domänen Namen des Computers identisch ist. Ändern Sie auch den Computernamen im- \<service> / \<baseAddresses> Element von "localhost" in den voll qualifizierten Namen Ihres Dienst Computers.
+6. Bearbeiten Sie Service.exe.config, um den neuen Zertifikat Namen (im-Attribut im) widerzuspiegeln, der mit dem `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) voll qualifizierten Domänen Namen des Computers identisch ist. Ändern Sie auch den Computernamen im- \<service> / \<baseAddresses> Element von "localhost" in den voll qualifizierten Namen Ihres Dienst Computers.
 
 7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.
 
@@ -344,13 +344,13 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
 10. Kopieren Sie die Datei Client.cer aus dem Clientverzeichnis in das Dienstverzeichnis auf dem Server.
 
-11. Führen Sie auf dem Client ImportServiceCert. bat in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.
+11. Führen Sie auf dem Client ImportServiceCert.bat in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.
 
-12. Führen Sie ImportClientCert. bat auf dem-Server in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Dadurch wird das Clientzertifikat aus der Datei Client.cer in den Speicher LocalMachine – TrustedPeople importiert.
+12. Führen Sie auf dem-Server ImportClientCert.bat in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Dadurch wird das Clientzertifikat aus der Datei Client.cer in den Speicher LocalMachine – TrustedPeople importiert.
 
 13. Starten Sie auf dem Servercomputer Service.exe in einem Eingabeaufforderungsfenster.
 
-14. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.
+14. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.
 
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her
 

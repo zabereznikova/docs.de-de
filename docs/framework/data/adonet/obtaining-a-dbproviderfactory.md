@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: b790c87cc3ec293c18bf730567f92b490c7c6594
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0c7c89a9104ac72bf03f2900e7ca474b709be40c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286714"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554461"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Abrufen einer "DbProviderFactory"
 Der Prozess des Abrufens einer <xref:System.Data.Common.DbProviderFactory> beinhaltet die Übergabe von Informationen zu einem Datenanbieter an die <xref:System.Data.Common.DbProviderFactories>-Klasse. Auf der Grundlage dieser Informationen erstellt die <xref:System.Data.Common.DbProviderFactories.GetFactory%2A>-Methode eine stark typisierte Anbieterfactory. So können Sie z. B. zum Erstellen einer <xref:System.Data.SqlClient.SqlClientFactory>`GetFactory` eine Zeichenfolge übergeben, in der als Anbietername "System.Data.SqlClient" angegeben ist. Die andere Überladung von `GetFactory` verwendet eine <xref:System.Data.DataRow>. Nach dem Erstellen der Anbieterfactory können Sie deren Methoden zum Erstellen zusätzlicher Objekte verwenden. Zu den Methoden einer `SqlClientFactory` gehören u. a. <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> und <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -20,7 +20,7 @@ Der Prozess des Abrufens einer <xref:System.Data.Common.DbProviderFactory> beinh
 > Die .NET Framework-Klassen <xref:System.Data.OracleClient.OracleClientFactory>, <xref:System.Data.Odbc.OdbcFactory> und <xref:System.Data.OleDb.OleDbFactory> bieten die gleiche Funktionalität.  
   
 ## <a name="registering-dbproviderfactories"></a>Registrieren von "DbProviderFactories"  
- Jeder .NET Framework Datenanbieter, der eine factorybasierte Klasse unterstützt, registriert Konfigurationsinformationen im Abschnitt **dbproviderfactorfactorys** der Datei **Machine. config** auf dem lokalen Computer. Das folgende Konfigurationsdateifragment zeigt die Syntax und das Format für <xref:System.Data.SqlClient>.  
+ Jeder .NET Framework Datenanbieter, der eine factorybasierte Klasse unterstützt, registriert Konfigurationsinformationen im Abschnitt **dbproviderfactorfactorys** der **machine.config** -Datei auf dem lokalen Computer. Das folgende Konfigurationsdateifragment zeigt die Syntax und das Format für <xref:System.Data.SqlClient>.  
   
 ```xml  
 <system.data>  
@@ -56,7 +56,7 @@ Der Prozess des Abrufens einer <xref:System.Data.Common.DbProviderFactory> beinh
  [!code-vb[DataWorks DbProviderFactories#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/VB/source.vb#1)]  
   
 ## <a name="using-application-configuration-files-to-store-factory-information"></a>Verwenden von Anwendungskonfigurationsdateien zum Speichern von Factoryinformationen  
- Das Entwurfsmuster zum Arbeiten mit Factorys umfasst das Speichern von Anbieter-und Verbindungs Zeichenfolgen-Informationen in einer Anwendungs Konfigurationsdatei, z **. b. app. config** für eine Windows-Anwendung, und **Web. config** für eine ASP.NET-Anwendung.  
+ Das Entwurfsmuster zum Arbeiten mit Factorys umfasst das Speichern von Anbieter-und Verbindungs Zeichenfolgen-Informationen in einer Anwendungs Konfigurationsdatei, z. b. **app.config** für eine Windows-Anwendung, und **web.config** für eine ASP.NET-Anwendung  
   
  Das folgende Konfigurationsdateifragment zeigt, wie zwei benannte Verbindungszeichenfolgen, &lt;legacyBold&gt;NorthwindSQL&lt;/legacyBold&gt; für eine Verbindung mit der &lt;legacyBold&gt;Northwind&lt;/legacyBold&gt;-Datenbank in SQL Server und &lt;legacyBold&gt;NorthwindAccess&lt;/legacyBold&gt; für eine Verbindung mit der &lt;legacyBold&gt;Northwind&lt;/legacyBold&gt;-Datenbank in Access/Jet, gespeichert werden können. Der **invariante** Name wird für das **providerName** -Attribut verwendet.  
   
@@ -100,5 +100,5 @@ Der Prozess des Abrufens einer <xref:System.Data.Common.DbProviderFactory> beinh
 
 - [DbProviderFactories](dbproviderfactories.md)
 - [Verbindungs Zeichenfolgen](connection-strings.md)
-- [Verwenden der Konfigurationsklassen](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
+- [Verwenden der Konfigurationsklassen](/previous-versions/aspnet/ms228063(v=vs.100))
 - [Übersicht über ADO.NET](ado-net-overview.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 021805508a8a053ccc8fab6f1013109bece4b6f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404770"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545518"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
@@ -55,20 +55,20 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |Begriff|Definition|
 |---|---|
 |`attributelist`|Dies ist optional. Siehe [Attribut Liste](attribute-list.md).|
-|`accessmodifier`|Optional. Kann eines der folgenden Elemente sein:<br /><br /> -   [Publikums](../modifiers/public.md)<br />-   [Gebieten](../modifiers/protected.md)<br />-   [Kollegen](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Geschützter Freund](../modifiers/protected-friend.md)<br />- [Privat geschützt](../modifiers/private-protected.md)<br /><br /> Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|
-|`Shadows`|Optional. Siehe [Shadows](../modifiers/shadows.md).|
-|`charsetmodifier`|Optional. Gibt die Zeichensatz-und Datei Suchinformationen an. Kann eines der folgenden Elemente sein:<br /><br /> -   [ANSI](../modifiers/ansi.md) (Standard)<br />-   [Unicode-](../modifiers/unicode.md)<br />-   [Auto](../modifiers/auto.md)|
+|`accessmodifier`|Dies ist optional. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -   [Publikums](../modifiers/public.md)<br />-   [Gebieten](../modifiers/protected.md)<br />-   [Kollegen](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Geschützter Freund](../modifiers/protected-friend.md)<br />- [Privat geschützt](../modifiers/private-protected.md)<br /><br /> Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|
+|`Shadows`|Dies ist optional. Siehe [Shadows](../modifiers/shadows.md).|
+|`charsetmodifier`|Dies ist optional. Gibt die Zeichensatz-und Datei Suchinformationen an. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -   [ANSI](../modifiers/ansi.md) (Standard)<br />-   [Unicode-](../modifiers/unicode.md)<br />-   [Auto](../modifiers/auto.md)|
 |`Sub`|Optional, aber entweder `Sub` oder `Function` muss angezeigt werden. Gibt an, dass die externe Prozedur keinen Wert zurückgibt.|
 |`Function`|Optional, aber entweder `Sub` oder `Function` muss angezeigt werden. Gibt an, dass die externe Prozedur einen Wert zurückgibt.|
 |`name`|Erforderlich. Der Name dieses externen Verweises. Weitere Informationen finden Sie unter [deklarierte Element Namen](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
 |`Lib`|Erforderlich. Führt eine- `Lib` Klausel ein, die die externe Datei (dll-oder Code Ressource) identifiziert, die eine externe Prozedur enthält.|
 |`libname`|Erforderlich. Der Name der Datei, die die deklarierte Prozedur enthält.|
-|`Alias`|Optional. Gibt an, dass die deklarierte Prozedur nicht innerhalb der Datei durch den in angegebenen Namen identifiziert werden kann `name` . Sie geben die Identifizierung in an `aliasname` .|
-|`aliasname`|Erforderlich, wenn Sie das- `Alias` Schlüsselwort verwenden. Eine Zeichenfolge, die die Prozedur auf zwei Arten identifiziert:<br /><br /> Der Einstiegspunkt Name der Prozedur innerhalb der Datei in Anführungszeichen ( `""` ).<br /><br /> Oder<br /><br /> Ein Nummern Zeichen ( `#` ) gefolgt von einer ganzen Zahl, die die Ordinalzahl des Einstiegs Punkts der Prozedur innerhalb der Datei angibt.|
+|`Alias`|Dies ist optional. Gibt an, dass die deklarierte Prozedur nicht innerhalb der Datei durch den in angegebenen Namen identifiziert werden kann `name` . Sie geben die Identifizierung in an `aliasname` .|
+|`aliasname`|Erforderlich, wenn Sie das- `Alias` Schlüsselwort verwenden. Eine Zeichenfolge, die die Prozedur auf zwei Arten identifiziert:<br /><br /> Der Einstiegspunkt Name der Prozedur innerhalb der Datei in Anführungszeichen ( `""` ).<br /><br /> - oder -<br /><br /> Ein Nummern Zeichen ( `#` ) gefolgt von einer ganzen Zahl, die die Ordinalzahl des Einstiegs Punkts der Prozedur innerhalb der Datei angibt.|
 |`parameterlist`|Erforderlich, wenn die Prozedur Parameter annimmt. Siehe [Parameter Liste](parameter-list.md).|
 |`returntype`|Erforderlich, wenn `Function` angegeben wird und den Wert hat `Option Strict` `On` . Datentyp des Werts, der von der Prozedur zurückgegeben wird.|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Manchmal müssen Sie eine Prozedur, die in einer Datei (z. b. eine DLL-oder Code Ressource) definiert ist, außerhalb des Projekts aufruft. Wenn Sie dies tun, hat der Visual Basic Compiler keinen Zugriff auf die Informationen, die er benötigt, um die Prozedur ordnungsgemäß aufzurufen, z. b. wo sich die Prozedur befindet, wie Sie identifiziert wird, welche Aufruf Sequenz und welcher Rückgabetyp verwendet werden und welcher Zeichensatz verwendet wird. Die `Declare` -Anweisung erstellt einen Verweis auf eine externe Prozedur und stellt diese erforderlichen Informationen bereit.
 
@@ -120,7 +120,7 @@ Externe Verweise werden standardmäßig auf den [öffentlichen](../modifiers/pub
 
 - **Zeichensätze.** Sie können angeben, `charsetmodifier` wie Visual Basic Zeichen folgen Mars Hallen soll, wenn die externe Prozedur aufgerufen wird. Der `Ansi` -Modifizierer weist Visual Basic an, alle Zeichen folgen in ANSI-Werte zu Mars Hallen, und der- `Unicode` Modifizierer leitet ihn an, um alle Zeichen folgen in Unicode Der- `Auto` Modifizierer leitet Visual Basic entsprechend den .NET Framework Regeln, die auf dem externen Verweis basieren `name` , oder, falls angegeben, an `aliasname` . Der Standardwert ist `Ansi`.
 
-  `charsetmodifier`gibt auch an, wie Visual Basic die externe Prozedur in der externen Datei nachschlagen soll. `Ansi`und `Unicode` sowohl direkt Visual Basic, um Sie zu suchen, ohne den Namen während der Suche zu ändern. `Auto`weist Visual Basic an, den Basis Zeichensatz der Laufzeitplattform zu bestimmen und den Namen der externen Prozedur möglicherweise wie folgt zu ändern:
+  `charsetmodifier` gibt auch an, wie Visual Basic die externe Prozedur in der externen Datei nachschlagen soll. `Ansi` und `Unicode` sowohl direkt Visual Basic, um Sie zu suchen, ohne den Namen während der Suche zu ändern. `Auto` weist Visual Basic an, den Basis Zeichensatz der Laufzeitplattform zu bestimmen und den Namen der externen Prozedur möglicherweise wie folgt zu ändern:
 
   - Suchen Sie auf einer ANSI-Plattform, wie z. b. Windows 95, Windows 98 oder Windows Millennium Edition, zuerst die externe Prozedur ohne Namensänderung. Wenn dies nicht möglich ist, fügen Sie am Ende des Namens der externen Prozedur "A" an, und suchen Sie es erneut.
 
@@ -129,7 +129,7 @@ Externe Verweise werden standardmäßig auf den [öffentlichen](../modifiers/pub
 - **Verfahren.** Visual Basic verwendet den .NET Framework *Platform-Aufruf* (PInvoke)-Mechanismus, um externe Prozeduren aufzulösen und darauf zuzugreifen. `Declare`Diese Methode wird von der-Anweisung und der- <xref:System.Runtime.InteropServices.DllImportAttribute> Klasse automatisch verwendet, und Sie benötigen keine Kenntnisse über PInvoke. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: Aufrufen von Windows-APIs](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
 > [!IMPORTANT]
-> Wenn die externe Prozedur außerhalb der Common Language Runtime (CLR) ausgeführt wird, handelt es sich hierbei um *nicht verwalteten Code*. Wenn Sie eine solche Prozedur, z. b. eine Windows-API-Funktion oder eine com-Methode, aufgerufen haben, können Sie Ihre Anwendung für Sicherheitsrisiken verfügbar machen. Weitere Informationen finden Sie unter [sichere Codierungs Richtlinien für nicht verwalteten Code](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code).
+> Wenn die externe Prozedur außerhalb der Common Language Runtime (CLR) ausgeführt wird, handelt es sich hierbei um *nicht verwalteten Code*. Wenn Sie eine solche Prozedur, z. b. eine Windows-API-Funktion oder eine com-Methode, aufgerufen haben, können Sie Ihre Anwendung für Sicherheitsrisiken verfügbar machen. Weitere Informationen finden Sie unter [sichere Codierungs Richtlinien für nicht verwalteten Code](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code).
 
 ## <a name="example"></a>Beispiel
 
@@ -145,7 +145,7 @@ Im folgenden Beispiel wird ein externer Verweis auf eine `Function` Prozedur dek
 
 [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
 - [Imports-Anweisung (.NET-Namespace und Typ)](imports-statement-net-namespace-and-type.md)

@@ -6,23 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 8c81e6e29678fe2e30af7c15d8d6e90f23dd0762
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 77715913c24423c1dc95478977f4e3821e4c247b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286882"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545310"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Laden eines "DataSets" aus XML
 Der Inhalt eines ADO.NET-<xref:System.Data.DataSet> kann aus einem XML-Stream oder einem XML-Dokument erstellt werden. Außerdem können Sie mit .NET Framework größtenteils festlegen, welche Informationen aus der XML-Quelle geladen werden sollen und wie das Schema oder die relationale Struktur des <xref:System.Data.DataSet> erstellt werden soll.  
   
- <xref:System.Data.DataSet>Verwenden Sie die Methode "read **XML** " des-Objekts, um eine mit Daten aus XML auszufüllen <xref:System.Data.DataSet> . Die Read **XML** -Methode liest aus einer Datei, einem Stream oder einem **XmlReader**-Objekt und übernimmt die Quelle des XML-Codes sowie ein optionales **xmllesemode** -Argument als Argumente. Weitere Informationen zum **XmlReader**finden Sie unter [Lesen von XML-Daten mit XmlTextReader](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). Die Read **XML** -Methode liest den Inhalt des XML-Streams oder-Dokuments und lädt den <xref:System.Data.DataSet> mit Daten. Außerdem wird das relationale Schema von erstellt, <xref:System.Data.DataSet> abhängig vom angegebenen **xmllesemode** und davon, ob ein relationales Schema bereits vorhanden ist.  
+ <xref:System.Data.DataSet>Verwenden Sie die Methode "read **XML** " des-Objekts, um eine mit Daten aus XML auszufüllen <xref:System.Data.DataSet> . Die Read **XML** -Methode liest aus einer Datei, einem Stream oder einem **XmlReader**-Objekt und übernimmt die Quelle des XML-Codes sowie ein optionales **xmllesemode** -Argument als Argumente. Weitere Informationen zum **XmlReader**finden Sie unter [Lesen von XML-Daten mit XmlTextReader](/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). Die Read **XML** -Methode liest den Inhalt des XML-Streams oder-Dokuments und lädt den <xref:System.Data.DataSet> mit Daten. Außerdem wird das relationale Schema von erstellt, <xref:System.Data.DataSet> abhängig vom angegebenen **xmllesemode** und davon, ob ein relationales Schema bereits vorhanden ist.  
   
  In der folgenden Tabelle werden die Optionen für das **xmllesemode** -Argument beschrieben.  
   
 |Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|**Auto**|Dies ist die Standardeinstellung. Prüft die XML-Daten und wählt die am besten geeignete Option in der folgenden Reihenfolge aus:<br /><br /> -Wenn das XML ein DiffGram ist, wird **DiffGram** verwendet.<br />Wenn das <xref:System.Data.DataSet> ein Schema enthält oder das XML ein Inline Schema enthält, wird "read **Schema** " verwendet.<br />Wenn das <xref:System.Data.DataSet> kein Schema enthält und das XML kein Inline Schema enthält, wird das **InferSchema** verwendet.<br /><br /> Wenn Sie das Format des gelesenen XML-Codes kennen, empfiehlt es sich, einen expliziten **xmllesemode**festzulegen, anstatt den **automatischen** Standardwert zu akzeptieren.|  
+|**Automatisch**|Dies ist die Standardoption. Prüft die XML-Daten und wählt die am besten geeignete Option in der folgenden Reihenfolge aus:<br /><br /> -Wenn das XML ein DiffGram ist, wird **DiffGram** verwendet.<br />Wenn das <xref:System.Data.DataSet> ein Schema enthält oder das XML ein Inline Schema enthält, wird "read **Schema** " verwendet.<br />Wenn das <xref:System.Data.DataSet> kein Schema enthält und das XML kein Inline Schema enthält, wird das **InferSchema** verwendet.<br /><br /> Wenn Sie das Format des gelesenen XML-Codes kennen, empfiehlt es sich, einen expliziten **xmllesemode**festzulegen, anstatt den **automatischen** Standardwert zu akzeptieren.|  
 |**ReadSchema**|Liest beliebige Inlineschemata und lädt Daten und Schemata.<br /><br /> Wenn das <xref:System.Data.DataSet> bereits ein Schema enthält, werden neue Tabellen aus dem Inlineschema zum vorhandenen Schema im <xref:System.Data.DataSet> hinzugefügt. Wenn bereits Tabellen im Inlineschema des <xref:System.Data.DataSet> vorhanden sind, wird eine Ausnahme ausgelöst. Das Schema einer vorhandenen Tabelle kann nicht mithilfe von **xmllesemode. Read Schema**geändert werden.<br /><br /> Wenn das <xref:System.Data.DataSet> kein Schema enthält und kein Inlineschema vorhanden ist, werden keine Daten gelesen.<br /><br /> Ein Inlineschema kann mit dem XSD-Schema (XML Schema Definition Language) definiert werden. Ausführliche Informationen zum Schreiben eines Inline Schemas als XML-Schema finden Sie unter [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Ignoriert alle Inlineschemata und lädt die Daten in das vorhandene <xref:System.Data.DataSet>-Schema. Daten, die nicht mit dem vorhandenen Schema übereinstimmen, werden gelöscht. Wenn kein Schema im <xref:System.Data.DataSet> vorhanden ist, werden keine Daten geladen.<br /><br /> Wenn es sich bei den Daten um ein DiffGram-DataSet handelt, hat **ignoreschema** die gleiche Funktionalität wie **DiffGram** *.*|  
 |**InferSchema**|Ignoriert alle Inlineschemata, leitet das Schema aus der Struktur der XML-Daten ab und lädt anschließend die Daten.<br /><br /> Wenn das <xref:System.Data.DataSet> bereits ein Schema enthält, wird das aktuelle Schema durch Hinzufügen von Spalten zu den vorhandenen Tabellen erweitert. Wenn keine Tabellen vorhanden sind, werden keine zusätzlichen Tabellen hinzugefügt. Eine Ausnahme wird ausgelöst, wenn bereits eine hergeleitete Tabelle mit einem anderen Namespace vorhanden ist oder wenn hergeleitete Spalten mit vorhandenen Spalten kollidieren.<br /><br /> Ausführliche Informationen dazu, wie " **infoxmlschema** " ein Schema aus einem XML-Dokument ableitet, finden Sie unter [ableiten der relationalen DataSet-Struktur aus XML](inferring-dataset-relational-structure-from-xml.md).|  
@@ -101,7 +101,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
-> Wenn das XSD-Schema für den <xref:System.Data.DataSet> einen **targetNamespace**enthält, werden die Daten möglicherweise nicht gelesen, und beim Aufrufen von "read **XML** " zum Laden von <xref:System.Data.DataSet> mit XML, das Elemente ohne qualifizierenden Namespace enthält, können Ausnahmen auftreten. Um nicht qualifizierte Elemente in diesem Fall zu lesen, legen Sie **Element Form default** im XSD-Schema auf "qualified" fest. Beispiel:  
+> Wenn das XSD-Schema für den <xref:System.Data.DataSet> einen **targetNamespace**enthält, werden die Daten möglicherweise nicht gelesen, und beim Aufrufen von "read **XML** " zum Laden von <xref:System.Data.DataSet> mit XML, das Elemente ohne qualifizierenden Namespace enthält, können Ausnahmen auftreten. Um nicht qualifizierte Elemente in diesem Fall zu lesen, legen Sie **Element Form default** im XSD-Schema auf "qualified" fest. Zum Beispiel:  
   
 ```xml  
 <xsd:schema id="customDataSet"

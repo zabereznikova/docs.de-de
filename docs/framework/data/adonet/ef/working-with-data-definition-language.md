@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 040ecc1473a4674ab0bb26ad0081563f55a726ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854225"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553869"
 ---
 # <a name="working-with-data-definition-language"></a>Arbeiten mit der Datendefinitionssprache
 Ab Version 4 von .NET Framework unterstützt die Entity Framework DDL (Data Definition Language). Dadurch wird das Erstellen oder Löschen einer Datenbankinstanz auf Grundlage der Verbindungszeichenfolge und der Metadaten des Speichermodells (SSDL) ermöglicht.  
@@ -32,7 +32,7 @@ Ab Version 4 von .NET Framework unterstützt die Entity Framework DDL (Data Defi
   
  Im folgenden Beispiel wird dargestellt, wie die Datenbank auf Grundlage des vorhandenen Modells generiert wird. Außerdem wird ein neues Entitätsobjekt dem Objektkontext hinzugefügt und in der Datenbank gespeichert.  
   
-## <a name="procedures"></a>Verfahren  
+## <a name="procedures"></a>Prozeduren  
   
 ### <a name="to-define-a-database-based-on-the-existing-model"></a>So definieren Sie eine Datenbank auf Grundlage des vorhandenen Modells  
   
@@ -40,13 +40,13 @@ Ab Version 4 von .NET Framework unterstützt die Entity Framework DDL (Data Defi
   
 2. Fügen Sie der Anwendung ein vorhandenes Modell hinzu.  
   
-    1. Fügen Sie ein leeres Modell `SchoolModel`mit dem Namen hinzu. Informationen zum Erstellen eines leeren Modells finden Sie [unter Gewusst wie: Erstellen Sie eine neue edmx-](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) Datei.  
+    1. Fügen Sie ein leeres Modell mit dem Namen hinzu `SchoolModel` . Informationen zum Erstellen eines leeren Modells finden Sie im Thema Gewusst [wie: Erstellen einer neuen EDMX-Datei](/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) .  
   
      Die Datei SchoolModel.edmx wird dem Projekt hinzugefügt.  
   
-    1. Kopieren Sie den konzeptionellen Inhalt, den Speicher und den Mapping-Inhalt für das Modell "School" aus dem Thema " [School Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) ".  
+    1. Kopieren Sie den konzeptionellen Inhalt, den Speicher und den Mapping-Inhalt für das Modell "School" aus dem Thema " [School Model](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) ".  
   
-    2. Öffnen Sie die Datei SchoolModel.edmx`edmx:Runtime`, und fügen Sie den Inhalt zwischen den -Tags ein.  
+    2. Öffnen Sie die Datei SchoolModel.edmx, und fügen Sie den Inhalt zwischen den -Tags ein.  
   
 3. Fügen Sie der Hauptfunktion den folgenden Code hinzu. Im Code werden die Verbindungszeichenfolge mit dem Datenbankserver initialisiert, das DDL-Skript angezeigt, die Datenbank erstellt, dem Kontext eine neue Entität hinzugefügt und die Änderungen in der Datenbank gespeichert.  
   

@@ -3,12 +3,12 @@ title: Neues
 description: Erfahren Sie mehr über die neuen Features in ADO.net im .NET Framework 4,5, einschließlich der neuen Features für SqlClient-Datenanbieter und ADO.NET Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b34a27574b6aab75539f9ab30e2978e45b4ad9e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286170"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553856"
 ---
 # <a name="whats-new-in-adonet"></a>Neues in ADO.NET
 
@@ -46,17 +46,17 @@ Die folgenden Features sind neu in den .NET Framework Datenanbieter für SQL Ser
 
 - `Type System Version=SQL Server 2012;` ist der neue Wert, der an die `Type System Version`-Verbindungseigenschaft übergeben wird. Der `Type System Version=Latest;`-Wert ist jetzt veraltet und wurde `Type System Version=SQL Server 2008;` angeglichen. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- SqlClient bietet zusätzliche Unterstützung für Sparsespalten, eine Funktion, die in SQL Server 2008 hinzugefügt wurde. Wenn die Anwendung bereits auf Daten in einer Tabelle zugreift, die Sparsespalten verwendet, sollten Sie eine Leistungsverbesserung feststellen. Die IsColumnSet-Spalte von <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> gibt an, ob eine Spalte eine Sparsespalte ist und einem Spaltensatz angehört. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>Gibt an, ob eine Spalte eine sparsespalte ist (Weitere Informationen finden Sie unter [SQL Server Schema](sql-server-schema-collections.md) Auflistungen). Weitere Informationen zu sparsespalten finden Sie unter [Verwenden von sparsespalten](/sql/relational-databases/tables/use-sparse-columns).
+- SqlClient bietet zusätzliche Unterstützung für Sparsespalten, eine Funktion, die in SQL Server 2008 hinzugefügt wurde. Wenn die Anwendung bereits auf Daten in einer Tabelle zugreift, die Sparsespalten verwendet, sollten Sie eine Leistungsverbesserung feststellen. Die IsColumnSet-Spalte von <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> gibt an, ob eine Spalte eine Sparsespalte ist und einem Spaltensatz angehört. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Gibt an, ob eine Spalte eine sparsespalte ist (Weitere Informationen finden Sie unter [SQL Server Schema](sql-server-schema-collections.md) Auflistungen). Weitere Informationen zu sparsespalten finden Sie unter [Verwenden von sparsespalten](/sql/relational-databases/tables/use-sparse-columns).
 
-- Für die Microsoft.SqlServer.Types.dll-Assembly, die die räumlichen Datentypen enthält, wurde ein Upgrade von Version 10.0 auf Version 11.0 vorgenommen. Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl. Weitere Informationen finden Sie unter [Breaking Changes to Datenbank-Engine Features](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
+- Für die Microsoft.SqlServer.Types.dll-Assembly, die die räumlichen Datentypen enthält, wurde ein Upgrade von Version 10.0 auf Version 11.0 vorgenommen. Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl. Weitere Informationen finden Sie unter [Breaking Changes to Datenbank-Engine Features](/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-Der .NET Framework 4,5 fügt APIs hinzu, die bei der Arbeit mit Entity Framework 5,0 neue Szenarien ermöglichen. Weitere Informationen zu Verbesserungen und Features, die dem Entity Framework 5,0 hinzugefügt wurden, finden Sie in den folgenden Themen: [Neuerungen](https://docs.microsoft.com/previous-versions/gg696190(v=vs.103)) und [Entity Framework Releases und Versions](/ef/ef6/what-is-new/past-releases)Verwaltung.
+Der .NET Framework 4,5 fügt APIs hinzu, die bei der Arbeit mit Entity Framework 5,0 neue Szenarien ermöglichen. Weitere Informationen zu Verbesserungen und Features, die dem Entity Framework 5,0 hinzugefügt wurden, finden Sie in den folgenden Themen: [Neuerungen](/previous-versions/gg696190(v=vs.103)) und [Entity Framework Releases und Versions](/ef/ef6/what-is-new/past-releases)Verwaltung.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [ADO.NET](index.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)
 - [SQL Server und ADO.NET](./sql/index.md)
-- [Neues in WCF Data Services 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+- [Neues in WCF Data Services 5,0](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

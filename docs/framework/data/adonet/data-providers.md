@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2d4c513b7a4b0e111f2b7e7384c6ee4970d5665f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286998"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554735"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter
 Ein .NET Framework Datenanbieter wird zum Herstellen einer Verbindung mit einer Datenbank, zum Ausführen von Befehlen und zum Abrufen von Ergebnissen verwendet. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. .NET Framework Datenanbieter sind einfach, und Sie erstellen eine minimale Ebene zwischen der Datenquelle und dem Code und erhöhen so die Leistung, ohne die Funktionalität zu beeinträchtigen.  
@@ -25,7 +25,7 @@ Ein .NET Framework Datenanbieter wird zum Herstellen einer Verbindung mit einer 
 |.NET Framework-Datenanbieter für ODBC|Für Datenquellen, die mit ODBC verfügbar gemacht werden. Verwendet den <xref:System.Data.Odbc> -Namespace.|  
 |.NET Framework-Datenanbieter für Oracle|Für Oracle-Datenquellen. Die .NET Framework Datenanbieter für Oracle unterstützt Oracle-Client Softwareversion 8.1.7 und höher und verwendet den- <xref:System.Data.OracleClient> Namespace.|  
 |EntityClient-Anbieter|Stellt Datenzugriff für Entity Data Model (EDM)-Anwendungen bereit. Verwendet den <xref:System.Data.EntityClient> -Namespace.|  
-|.NET Framework Datenanbieter für SQL Server Compact 4,0.|Bietet Datenzugriff für Microsoft SQL Server Compact 4,0. Verwendet den Namespace [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
+|.NET Framework Datenanbieter für SQL Server Compact 4,0.|Bietet Datenzugriff für Microsoft SQL Server Compact 4,0. Verwendet den Namespace [System.Data.SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Hauptobjekte von .NET Framework-Datenanbietern  
  In der folgenden Tabelle werden die vier Hauptobjekte, aus denen ein .NET Framework Datenanbieter besteht, beschrieben.  
@@ -148,7 +148,7 @@ using System.Data.OracleClient;
 ## <a name="choosing-a-net-framework-data-provider"></a>Auswählen eines .NET Framework-Datenanbieters  
  Abhängig vom Entwurf und der Datenquelle für Ihre Anwendung kann die Auswahl des .NET Framework Datenanbieters die Leistung, die Fähigkeit und die Integrität Ihrer Anwendung verbessern. In der folgenden Tabelle werden die Vorteile und Einschränkungen der einzelnen .NET Framework-Datenanbieter erläutert.  
   
-|Anbieter|Notizen|  
+|Anbieter|Hinweise|  
 |--------------|-----------|  
 |.NET Framework-Datenanbieter für SQL Server|Empfohlen für Anwendungen der mittleren Ebene, die Microsoft SQL Server verwenden.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Datenbank-Engine (MSDE) oder SQL Server verwenden.<br /><br /> Es wird empfohlen, den OLE DB Anbieter für SQL Server (SQLOLEDB) mit dem .NET Framework Datenanbieter für OLE DB zu verwenden.|  
 |.NET Framework-Datenanbieter für OLE DB|Für SQL Server wird anstelle dieses Anbieters die .NET Framework Datenanbieter für SQL Server empfohlen.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Access-Datenbanken verwenden. Von der Verwendung einer Access-Datenbank für eine Anwendung der mittleren Ebene wird abgeraten.|  

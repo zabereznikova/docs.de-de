@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bce5ea41149dc3b19106031fae202872dd8a8fb5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309585"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553804"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 
@@ -18,7 +18,7 @@ Sie können mithilfe der Ereignisablaufverfolgung für Windows (ETW) Common Lang
 
 - Die Befehlszeilentools [Logman](/windows-server/administration/windows-commands/logman) und [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) sind im Windows-Betriebssystem enthalten.
 
-- Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://docs.microsoft.com/archive/blogs/pigscanfly/).
+- Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](/archive/blogs/pigscanfly/).
 
 Wenn Sie CLR-Ereignisinformationen erfassen möchten, muss der CLR-Anbieter auf dem Computer installiert werden. Geben Sie an der Eingabeaufforderung `logman query providers` ein, um festzustellen, ob der Anbieter installiert ist. Eine Anbieterliste wird angezeigt. Diese Liste sollte wie folgt einen Eintrag für den CLR-Anbieter enthalten.
 
@@ -50,7 +50,7 @@ Zum Aktivieren der Protokollierung müssen Benutzer drei Informationen angeben:
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     Dabei gilt:
+     Dabei gilt Folgendes:
 
     - Durch den `-p`-Parameter wird die Anbieter-GUID identifiziert.
 
@@ -110,7 +110,7 @@ Verwenden Sie die unten aufgeführten Befehle, um die CLR-ETW-Ereignisse anzuzei
 
      Dieser Befehl bewirkt, dass XPerf die Ereignisse als CSV-Datei (CSV) sichert, die Sie anzeigen können. Da für unterschiedliche Ereignisse auch unterschiedliche Felder verfügbar sind, enthält diese CSV-Datei vor den Daten mehrere Headerzeilen. Das erste Feld jeder Zeile ist für den Ereignistyp vorgesehen, der den Header angibt, der zum Ermitteln der weiteren Felder verwendet werden soll.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [ETW-Ereignisse in der Common Language Runtime](etw-events-in-the-common-language-runtime.md)

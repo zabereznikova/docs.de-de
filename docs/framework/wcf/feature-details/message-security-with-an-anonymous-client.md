@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 058163c96bba036c3183695bf986b4d0424271ac
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aed56be359f094db483ab1d012bd77a1096433b6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595218"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553765"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Nachrichtensicherheit mit einem anonymen Client
 
@@ -22,7 +22,7 @@ Eine Beispielanwendung finden Sie unter [Nachrichten Sicherheit anonym](../sampl
 
 |Merkmal|BESCHREIBUNG|
 |--------------------|-----------------|
-|Sicherheitsmodus|`Message`|
+|Sicherheitsmodus|Nachricht|
 |Interoperabilität|Nur WCF|
 |Authentifizierung (Server)|Die erste Aushandlung erfordert die Serverauthentifizierung, jedoch keine Clientauthentifizierung|
 |Authentifizierung (Client)|Keine|
@@ -32,7 +32,7 @@ Eine Beispielanwendung finden Sie unter [Nachrichten Sicherheit anonym](../sampl
 
 ## <a name="service"></a>Dienst
 
-Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:
+Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:
 
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.
 
@@ -90,11 +90,11 @@ Anstelle des Codes kann die folgende Konfiguration verwendet werden: Mit dem Ele
 
 ## <a name="client"></a>Client
 
-Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:
+Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:
 
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.
 
-- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:
+- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -138,10 +138,10 @@ Der folgende Code dient zum Konfigurieren des Clients.
 </configuration>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsübersicht](security-overview.md)
 - [Sicherheit bei verteilten Anwendungen](distributed-application-security.md)
 - [Nachrichtensicherheit – anonym](../samples/message-security-anonymous.md)
 - [Dienstidentität und Authentifizierung](service-identity-and-authentication.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

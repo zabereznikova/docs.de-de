@@ -2,12 +2,12 @@
 title: Aktivieren des datenbankübergreifenden Zugriffs in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: bf46d43f5ac9b0a385e9bc6da1546af1d67a282d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62b0bffd5e77cccdb49913428005c4f0036abd46
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040242"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554904"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Aktivieren des datenbankübergreifenden Zugriffs in SQL Server
 Von einer datenbankübergreifenden Besitzverkettung spricht man, wenn eine Prozedur in einer Datenbank von Objekten in einer anderen Datenbank abhängt. Eine datenbankübergreifende Besitzkette funktioniert wie die Besitzkette innerhalb einer einzelnen Datenbank – mit dem Unterschied, dass eine durchgängige Besitzkette voraussetzt, dass alle Objektbesitzer demselben Anmeldekonto zugeordnet sind. Wenn das Quellobjekt in der Quelldatenbank und das Zielobjekt in der Zieldatenbank zu ein und demselben Anmeldekonto gehören, nimmt SQL Server keine Prüfung der Berechtigungen für die Zielobjekte vor.  
@@ -40,21 +40,21 @@ ALTER DATABASE Database1 SET DB_CHAINING ON;
 ALTER DATABASE Database2 SET DB_CHAINING ON;  
 ```  
   
-### <a name="dynamic-sql"></a>Dynamisch erstellte SQL-Anweisungen  
- Die datenbankübergreifende Besitzverkettung funktioniert nicht, wenn dynamisch erstellte SQL-Anweisungen ausgeführt werden, sofern derselbe Benutzer nicht in beiden Datenbanken vorhanden ist. Dieses Problem können Sie in SQL Server umgehen, indem Sie eine gespeicherte Prozedur erstellen, die auf die Daten in einer anderen Datenbank zugreift, und die Prozedur mit einem Zertifikat signieren, das in beiden Datenbanken vorhanden ist. Die Benutzer können dann auf die von der Prozedur verwendeten Datenbankressourcen zugreifen, ohne dass ihnen Zugriffsrechte für die Datenbank oder andere Berechtigungen erteilt werden müssen.  
+### <a name="dynamic-sql"></a>Dynamische SQL-Anweisungen  
+ Die datenbankübergreifende Besitzverkettung funktioniert nicht, wenn dynamisch erstellte SQL-Anweisungen ausgeführt werden, sofern derselbe Benutzer nicht in beiden Datenbanken vorhanden ist. Dieses Problem können Sie in SQL Server umgehen, indem Sie eine gespeicherte Prozedur erstellen, die auf die Daten in einer anderen Datenbank zugreift, und die Prozedur mit einem Zertifikat signieren, das in beiden Datenbanken vorhanden ist. Dadurch erhalten Benutzer Zugriff auf die von der Prozedur verwendeten Datenbankressourcen, ohne dass ihnen Datenbankzugriff gewährt wird oder Berechtigungen erteilt werden.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Erweitern des Daten Bank Identitäts Wechsels mithilfe der Option EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) und [Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|In den Artikeln wird beschrieben, wie die datenbankübergreifende Besitz Verkettung für eine Instanz von SQL Server konfiguriert wird.|  
+|[Erweitern des Daten Bank Identitäts Wechsels mithilfe der Option EXECUTE AS](/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) und [Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|In den Artikeln wird beschrieben, wie die datenbankübergreifende Besitz Verkettung für eine Instanz von SQL Server konfiguriert wird.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
 - [Übersicht über die SQL Server-Sicherheit](overview-of-sql-server-security.md)
 - [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Schreiben von sicherem dynamischen SQL in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Schreiben von sicherem dynamischem SQL in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
 - [Signieren von gespeicherten Prozeduren in SQL Server](signing-stored-procedures-in-sql-server.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

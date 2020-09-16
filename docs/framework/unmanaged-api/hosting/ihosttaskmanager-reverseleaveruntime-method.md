@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: d328afcba9761f686dd38bdb2dd651994faaac2a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841853"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554800"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime-Methode
 Benachrichtigt den Host, dass das Steuerelement die Common Language Runtime (CLR) verlässt und eine nicht verwaltete Funktion eingibt, die wiederum von verwaltetem Code aufgerufen wurde.  
@@ -35,7 +35,7 @@ HRESULT ReverseLeaveRuntime ();
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`ReverseLeaveRuntime`wurde erfolgreich zurückgegeben.|  
+|S_OK|`ReverseLeaveRuntime` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -51,7 +51,7 @@ HRESULT ReverseLeaveRuntime ();
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -64,4 +64,4 @@ HRESULT ReverseLeaveRuntime ();
 - [IHostTask-Schnittstelle](ihosttask-interface.md)
 - [IHostTaskManager-Schnittstelle](ihosttaskmanager-interface.md)
 - [LeaveRuntime-Methode](ihosttaskmanager-leaveruntime-method.md)
-- [Genauere Betrachtung des Platt Form Aufrufs](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))
+- [Genauere Betrachtung von Plattformaufrufen](/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))

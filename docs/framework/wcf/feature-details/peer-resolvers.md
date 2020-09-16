@@ -2,12 +2,12 @@
 title: Peerresolver
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: a1f5bcfb721ccbc98856e81198a3f7e0b45abe93
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ef72f44a7dd7f3e8f3108e4f77dcdbdf8ef1b1b7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600775"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554631"
 ---
 # <a name="peer-resolvers"></a>Peerresolver
 Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-Adressen anderer Knoten. IP-Adressen werden bezogen, indem eine Verbindung zu einem Auflösungsdienst hergestellt wird, der die Netz-ID annimmt und eine Liste von Adressen zurückgibt, die mit dieser bestimmten Netz-ID registrierten Knoten entsprechen. Der Resolver behält eine Liste registrierter Adressen bei, die durch Registrierung jedes Knotens im Mesh mit dem Dienst erstellt wird.  
@@ -32,12 +32,12 @@ Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-
 > [!NOTE]
 > Bei der Verwendung lokaler und provisorischer Netzwerke mit einem benutzerdefinierten Resolver wird dringend empfohlen, dass Anwendungen, die verbindungslokale oder provisorische Netzwerke nutzen oder unterstützen, Logik einfügen, die für das Herstellen einer Verbindung eine einzelne verbindungslokale Adresse auswählt. Dadurch werden möglicherweise durch Computer mit mehreren verbindungslokalen Adressen verursachte Probleme verhindert. In Übereinstimmung damit unterstützt Peerkanal nur die Verwendung jeweils einer einzelnen verbindungslokalen Adresse. Sie können diese Adresse mit der `ListenIpAddress`-Eigenschaft der <xref:System.ServiceModel.NetPeerTcpBinding> angeben.  
   
- Eine Demonstration der Implementierung eines benutzerdefinierten Konflikt Lösers finden Sie unter [Peer Channel Custom Peerresolver](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
+ Eine Demonstration der Implementierung eines benutzerdefinierten Konflikt Lösers finden Sie unter [Peer Channel Custom Peerresolver](/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einblicke in den CustomPeerResolverService: Clientregistrierungen](inside-the-custompeerresolverservice-client-registrations.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Peerkanalbegriffe](peer-channel-concepts.md)
 - [Peerkanalsicherheit](peer-channel-security.md)

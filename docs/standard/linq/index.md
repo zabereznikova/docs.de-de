@@ -8,12 +8,12 @@ ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 2e8abef547d8cc06d80b8cbf865ec984eb91d330
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551613"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554995"
 ---
 # <a name="linq-overview"></a>Übersicht über LINQ
 
@@ -111,7 +111,7 @@ End Function
 
 Code zu schreiben, um das XML-Dokument zu diesem Zweck manuell zu durchlaufen, wäre eine wesentlich größere Herausforderung.
 
-LINQ-Anbieter ermöglichen nicht nur die Interaktion mit XML. [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) ist ein ziemlich reduzierter objektrelationaler Mapper (ORM) für eine MSSQL Server-Datenbank. Die [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm)-Bibliothek bietet einen effizienten Durchlauf von JSON-Dokumenten über LINQ. Wenn es allerdings keine Bibliothek gibt, die Ihre Anforderungen erfüllt, können Sie auch [Ihren eigenen LINQ-Anbieter schreiben](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).
+LINQ-Anbieter ermöglichen nicht nur die Interaktion mit XML. [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) ist ein ziemlich reduzierter objektrelationaler Mapper (ORM) für eine MSSQL Server-Datenbank. Die [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm)-Bibliothek bietet einen effizienten Durchlauf von JSON-Dokumenten über LINQ. Wenn es allerdings keine Bibliothek gibt, die Ihre Anforderungen erfüllt, können Sie auch [Ihren eigenen LINQ-Anbieter schreiben](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).
 
 ## <a name="reasons-to-use-the-query-syntax"></a>Gründe für die Verwendung der Abfragesyntax
 
@@ -159,7 +159,7 @@ Die Antwort auf diese Frage ist **Nein**, wenn...
 
 ## <a name="essential-linq"></a>Grundlegendes zu LINQ
 
-Eine umfassende Liste der LINQ-Beispiele finden Sie unter [101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/) (101 LINQ-Beispiele).
+Eine umfassende Liste der LINQ-Beispiele finden Sie unter [101 LINQ Samples](/samples/dotnet/try-samples/101-linq-samples/) (101 LINQ-Beispiele).
 
 Die folgenden Beispiele sind eine kurze Darstellung einiger der grundlegenden Bestandteile von LINQ. Sie ist bei weitem nicht vollständig, da LINQ mehr Funktionen bietet, als hier vorgestellt werden.
 
@@ -394,6 +394,6 @@ Parallelisierbare CPU-gebundene Aufträge, die problemlos über LINQ ausgedrück
 
 ## <a name="more-resources"></a>Weitere Ressourcen
 
-* [101 LINQ-Beispiele](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+* [101 LINQ-Beispiele](/samples/dotnet/try-samples/101-linq-samples/)
 * [Linqpad](https://www.linqpad.net/), eine Umgebung und eine Datenbankabfrage-Engine für C#/F#/Visual Basic
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), ein E-Book, in dem die Implementierung von LINQ to Objects erläutert wird
