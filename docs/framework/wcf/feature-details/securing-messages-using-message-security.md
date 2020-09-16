@@ -2,12 +2,12 @@
 title: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b5f7679d5e5ec82e63b588cebd90ce873c055088
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589980"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558302"
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erörtert <xref:System.ServiceModel.NetMsmqBinding> .  
@@ -41,7 +41,7 @@ In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erör
   
  Da im Fall von Warteschlangen nicht immer eine Verbindung hergestellt ist, sind der Client und der Dienst möglicherweise nicht zur selben Zeit online. Daher müssen der Client und der Dienst Zertifikate out-of-band austauschen. Insbesondere der Client, bei dem sich das Dienstzertifikat (das mit einer Zertifizierungsstelle verkettet sein kann) im vertrauenswürdigen Speicher befindet, muss verlässlich mit dem richtigen Dienst kommunizieren. Zur Authentifizierung des Clients gleicht der Dienst das X.509-Zertifikat, das an die Nachricht angehängt ist, mit dem Zertifikat in seinem Speicher ab, um die Echtzeit des Clients zu überprüfen. Auch hier muss das Zertifikat mit einer Zertifizierungsstelle verkettet sein.  
   
- Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. Weitere Informationen zu den unterschiedlichen speichern finden Sie unter [Zertifikat Speicher](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
+ Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. Weitere Informationen zu den unterschiedlichen speichern finden Sie unter [Zertifikat Speicher](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ### <a name="windows"></a>Windows  
  Der Windows-Anmeldeinformationstyp für Nachrichten verwendet das Kerberos-Protokoll.  
@@ -63,7 +63,7 @@ In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erör
 ## <a name="using-transport-and-message-security"></a>Verwenden der Transport- und der Nachrichtensicherheit  
  Wenn die Transportsicherheit und die Nachrichtensicherheit verwendet werden, muss das auf der Transportebene zum Sichern der Nachricht verwendete Zertifikat mit dem auf der SOAP-Nachrichtenebene verwendeten Zertifikat identisch sein.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sichern von Nachrichten mit Transportsicherheit](securing-messages-using-transport-security.md)
 - [Nachrichtensicherheit über Message Queuing](../samples/message-security-over-message-queuing.md)

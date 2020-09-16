@@ -2,12 +2,12 @@
 title: Persistenzdatenbankschema
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 025e04acb0d9cf75ea54814274c1875f8661eb88
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 04b57789e7c1ab6bfebd9c9b345ee0fb7dfb3e66
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802504"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558237"
 ---
 # <a name="persistence-database-schema"></a>Persistenzdatenbankschema
 In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffentlichen Ansichten beschrieben.  
@@ -15,12 +15,12 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 ## <a name="instances-view"></a>Ansicht "Instanzen"  
  Die **Instanzen** Ansicht enthält allgemeine Informationen zu allen Workflow Instanzen in der Datenbank.  
   
-|Spaltenname|Spaltentyp|Beschreibung|  
+|Spaltenname|Spaltentyp|BESCHREIBUNG|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|UniqueIdentifier|Die ID einer Workflowinstanz.|  
-|PendingTimer|DateTime|Gibt an, dass der Workflow durch eine DELAY-Aktivität blockiert ist und nach Ablauf des Zeitgebers fortgesetzt wird. Dieser Wert ist NULL, wenn der Workflow nicht blockiert ist und auf den Ablauf eines Zeitgebers wartet.|  
-|CreationTime|DateTime|Gibt an, wann der Workflow erstellt wurde.|  
-|LastUpdatedTime|DateTime|Gibt an, wann der Workflow zum letzten Mal permanent in der Datenbank gespeichert wurde.|  
+|PendingTimer|Datetime|Gibt an, dass der Workflow durch eine DELAY-Aktivität blockiert ist und nach Ablauf des Zeitgebers fortgesetzt wird. Dieser Wert ist NULL, wenn der Workflow nicht blockiert ist und auf den Ablauf eines Zeitgebers wartet.|  
+|CreationTime|Datetime|Gibt an, wann der Workflow erstellt wurde.|  
+|LastUpdatedTime|Datetime|Gibt an, wann der Workflow zum letzten Mal permanent in der Datenbank gespeichert wurde.|  
 |ServiceDeploymentId|BigInt|Fungiert als Fremdschlüssel für die Ansicht [ServiceDeployments]. Wenn es sich bei der aktuellen Workflowinstanz um die Instanz eines im Internet gehosteten Diensts handelt, weist diese Spalte einen Wert auf, andernfalls wird sie auf NULL festgelegt.|  
 |SuspensionExceptionName|Nvarchar(450)|Gibt den Typ der Ausnahme (z. B. InvalidOperationException) an, die das Anhalten des Workflows verursacht hat.|  
 |SuspensionReason|Nvarchar(max)|Gibt an, warum die Workflowinstanz angehalten wurde. Wenn die Instanz aufgrund einer Ausnahme angehalten wurde, enthält diese Spalte die entsprechende Meldung.<br /><br /> Wenn die Instanz manuell angehalten wurde, enthält diese Spalte den vom Benutzer angegebenen Grund für das Anhalten der Instanz.|  
@@ -28,9 +28,9 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 |CurrentMachine|Nvarchar(128)|Gibt den Namen des Computers an, auf dem die Workflowinstanz im Arbeitsspeicher geladen ist.|  
 |LastMachine|Nvarchar(450)|Gibt den letzten Computer an, auf dem die Workflowinstanz geladen war.|  
 |ExecutionStatus|Nvarchar(450)|Gibt den aktuellen Ausführungsstatus des Workflows an. Zu den möglichen Zuständen gehören das **Ausführen**, das **Leerlauf**, das **geschlossene**.|  
-|IsInitialized|Bit|Gibt an, ob die Workflowinstanz initialisiert wurde. Eine initialisierte Workflowinstanz ist eine Workflowinstanz, die mindestens einmal permanent gespeichert wurde.|  
-|IsSuspended|Bit|Gibt an, ob die Workflowinstanz angehalten wurde.|  
-|IsCompleted|Bit|Gibt an, ob die Ausführung der Workflowinstanz beendet wurde. **Hinweis:**  IWenn die **InstanceCompletionAction** -Eigenschaft auf **DeleteAll**festgelegt ist, werden die Instanzen nach dem Abschluss aus der Ansicht entfernt.|  
+|IsInitialized|bit|Gibt an, ob die Workflowinstanz initialisiert wurde. Eine initialisierte Workflowinstanz ist eine Workflowinstanz, die mindestens einmal permanent gespeichert wurde.|  
+|IsSuspended|bit|Gibt an, ob die Workflowinstanz angehalten wurde.|  
+|IsCompleted|bit|Gibt an, ob die Ausführung der Workflowinstanz beendet wurde. **Hinweis:**  IWenn die **InstanceCompletionAction** -Eigenschaft auf **DeleteAll**festgelegt ist, werden die Instanzen nach dem Abschluss aus der Ansicht entfernt.|  
 |EncodingOption|TinyInt|Beschreibt die Codierung, die zur Serialisierung der Dateneigenschaften verwendet wurde.<br /><br /> -0 – keine Codierung<br />-1 – GZipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|Enthält serialisierte Instanzdateneigenschaften, die beim Laden der Instanz für die Workflowlaufzeit bereitgestellt werden.<br /><br /> Bei den einzelnen primitiven Eigenschaften handelt es sich um systemeigene CLR-Typen, sodass keine speziellen Assemblys zur BLOB-Deserialisierung benötigt werden.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|Enthält serialisierte Instanzdateneigenschaften, die beim Laden der Instanz nicht für die Workflowlaufzeit bereitgestellt werden.<br /><br /> Bei den einzelnen primitiven Eigenschaften handelt es sich um systemeigene CLR-Typen, sodass keine speziellen Assemblys zur BLOB-Deserialisierung benötigt werden.|  
@@ -39,8 +39,8 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 |IdentityName|Nvarchar(max)|Der Name der Workflowdefinition.|  
 |IdentityPackage|Nvarchar(max)|Die Paketinformationen, die beim Erstellen des Workflows angegeben wurden (z. B. der Assemblyname).|  
 |Build|BigInt|Die Buildnummer der Workflowversion.|  
-|„Größere Änderung“|BigInt|Die Hauptversionsnummer der Workflowversion.|  
-|„Kleinere Änderung“|BigInt|Die Nebenversionsnummer der Workflowversion.|  
+|Hauptversion|BigInt|Die Hauptversionsnummer der Workflowversion.|  
+|Gering|BigInt|Die Nebenversionsnummer der Workflowversion.|  
 |Revision|BigInt|Die Revisionsnummer der Workflowversion.|  
   
 > [!CAUTION]
@@ -49,7 +49,7 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 ## <a name="servicedeployments-view"></a>Ansicht "ServiceDeployments"  
  Die Ansicht " **servicedeployments** " enthält Bereitstellungs Informationen für alle von Web (IIS/was) gehosteten Workflow Dienste. Jede Workflow Instanz, die im Internet gehostet wird, enthält eine **servicedeploymentid** , die auf eine Zeile in dieser Sicht verweist.  
   
-|Spaltenname|Spaltentyp|Beschreibung|  
+|Spaltenname|Spaltentyp|BESCHREIBUNG|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|Der Primärschlüssel für diese Ansicht.|  
 |SiteName|Nvarchar(max)|Stellt den Namen der Site dar, die den Workflow Dienst enthält (z. b. **Standard Website**).|  
@@ -58,7 +58,7 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 |Dienstname|Nvarchar(max)|Der Name des Workflowdiensts. (z. b. **purchaseorderservice**).|  
 |ServiceNamespace|Nvarchar(max)|Der Namespace des Workflowdiensts. (z. b. **MyCompany**).|  
   
- Die Ansicht "ServiceDeployments" enthält ebenfalls einen DELETE-Trigger. Benutzer mit den entsprechenden Berechtigungen können in dieser Ansicht Löschanweisungen ausführen, mit denen ServiceDeployment-Einträge aus der Datenbank entfernt werden. Hinweis:  
+ Die Ansicht "ServiceDeployments" enthält ebenfalls einen DELETE-Trigger. Benutzer mit den entsprechenden Berechtigungen können in dieser Ansicht Löschanweisungen ausführen, mit denen ServiceDeployment-Einträge aus der Datenbank entfernt werden. Beachten Sie dabei Folgendes:  
   
 1. Das Löschen von Einträgen in dieser Ansicht ist aufwändig, da die gesamte Datenbank vor der Ausführung dieses Vorgangs gesperrt werden muss. Dies ist notwendig, um zu vermeiden, dass eine Workflowinstanz auf einen nicht vorhandenen ServiceDeployment-Eintrag verweist. Führen Sie Löschvorgänge in dieser Ansicht nur durch, wenn die Datenbank nicht in Betrieb ist bzw. innerhalb von Wartungszeitfenstern.  
   
@@ -67,7 +67,7 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 ## <a name="instancepromotedproperties-view"></a>Ansicht "InstancePromotedProperties"  
  Die **instancepromotedproperties** -Sicht enthält Informationen für alle höher gestuften Eigenschaften, die vom Benutzer angegeben werden. Eine höher gestufte Eigenschaft fungiert als Eigenschaft erster Klasse, die vom Benutzer in Abfragen zum Abrufen von Instanzen verwendet werden kann.  Ein Benutzer könnte z. b. eine PurchaseOrder-herauf Stufung hinzufügen, die immer die Kosten eines Auftrags in der **value1** -Spalte speichert. Auf diese Weise können Sie eine Abfrage ausführen, die alle Bestellungen zurückgibt, deren Betrag einen bestimmten Wert überschreitet.  
   
-|Spaltentyp|Spaltentyp|Beschreibung|  
+|Spaltentyp|Spaltentyp|BESCHREIBUNG|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|Die ID der Workflowinstanz.|  
 |EncodingOption|TinyInt|Beschreibt die Codierung, die zur Serialisierung der höher gestuften binären Eigenschaften verwendet wurde.<br /><br /> -0 – keine Codierung<br />-1 – GZipStream|  
@@ -78,4 +78,4 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
  Die Ansicht "InstancePromotedProperties" ist schemagebunden. Das heißt, dass Benutzer Indizes für eine oder mehrere Spalten hinzufügen können, um Abfragen in dieser Ansicht zu optimieren.  
   
 > [!NOTE]
-> Eine indizierte Ansicht erfordert mehr Speicherplatz und zusätzlichen Verarbeitungsaufwand. Weitere Informationen finden Sie unter [verbessern der Leistung mit SQL Server 2008-indizierten Sichten](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd171921(v=sql.100)) .
+> Eine indizierte Ansicht erfordert mehr Speicherplatz und zusätzlichen Verarbeitungsaufwand. Weitere Informationen finden Sie unter [verbessern der Leistung mit SQL Server 2008-indizierten Sichten](/previous-versions/sql/sql-server-2008/dd171921(v=sql.100)) .

@@ -36,7 +36,7 @@ ms.locfileid: "90555873"
   
  Weitere Informationen finden Sie unter [Datenabruf-und CUD-Vorgänge in N-Tier-Anwendungen (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [N-Tier-und Remote Anwendungen mit LINQ to SQL](n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Übersicht über das LinqDataSource-Webserver Steuerelement](/previous-versions/aspnet/bb547113(v=vs.100))

@@ -3,12 +3,12 @@ title: Entity Data Model
 description: Das Entity Data Model beschreibt die Struktur der Daten, unabhängig von Ihrer gespeicherten Form, die Herausforderungen behandelt, die sich aus der Speicherung von Daten in vielen Formularen ergeben.
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d32207e3a9dd35d2d8f8990bcbbd35e38d21d8bb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286739"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557618"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur unabhängig von der gespeicherten Form beschreiben. Das EDM ist aus dem 1976 von Peter Chen beschriebenen Entitätsbeziehungsmodell ausgeliehen, baut aber auch auf dem Entitätsbeziehungsmodell auf und erweitert seine herkömmliche Verwendung.  
@@ -64,6 +64,6 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET-Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Übersicht über die EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [ADO.NET-Entity Data Model Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Übersicht über die EDMX-Datei](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL-Spezifikation](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

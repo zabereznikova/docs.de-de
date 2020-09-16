@@ -3,12 +3,12 @@ title: Nachrichtensicherheit in WCF
 description: Erfahren Sie mehr über TransportWithMessageCredential, eine Art WCF-Nachrichten Sicherheit, die eine Kombination aus Transport-und Nachrichten Sicherheitsmodi verwendet.
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 315a12c73929bfe71340e42f122ae542d4fddc07
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ea10a87a7c8f9e545c320af30c5cf9958317c2f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245023"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551131"
 ---
 # <a name="message-security-in-wcf"></a>Nachrichtensicherheit in WCF
 
@@ -64,9 +64,9 @@ Die Nachrichtensicherheit hat folgende Nachteile:
 
 - Erfordert die Implementierung von Sicherheitsmechanismen auf XML-Ebene und Unterstützung der WS-Sicherheitsspezifikation. Dies kann sich auf die Interoperabilität auswirken.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sichern von Diensten und Clients](securing-services-and-clients.md)
 - [Transport Sicherheit](transport-security.md)
 - [Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen](how-to-use-transport-security-and-message-credentials.md)
-- [Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security (in englischer Sprache)](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
+- [Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security (in englischer Sprache)](/previous-versions/msp-n-p/ff647370(v=pandp.10))

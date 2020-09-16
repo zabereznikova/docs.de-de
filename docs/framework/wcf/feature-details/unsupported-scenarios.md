@@ -2,12 +2,12 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921156"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557813"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 
@@ -20,26 +20,26 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP und sicheres Kontext Token-Cookie aktiviert
 
-WCF unterstützt keinen Identitätswechsel, und es wird eine <xref:System.InvalidOperationException> ausgelöst, wenn die folgenden Bedingungen erfüllt sind:
+WCF unterstützt keinen Identitätswechsel, und eine wird ausgelöst, <xref:System.InvalidOperationException> Wenn die folgenden Bedingungen erfüllt sind:
 
 - Das Betriebssystem ist Windows XP.
 
 - Der Authentifizierungsmodus ruft eine Windows-Identität hervor.
 
-- Die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>-Eigenschaft von <xref:System.ServiceModel.OperationBehaviorAttribute> wird auf <xref:System.ServiceModel.ImpersonationOption.Required> festgelegt.
+- Für die Eigenschaft <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> des <xref:System.ServiceModel.OperationBehaviorAttribute> wird der Wert <xref:System.ServiceModel.ImpersonationOption.Required> festgelegt.
 
 - Ein statusbasiertes Sicherheitszustandskontexttoken (SCT) wird erstellt. (Standardmäßig ist die Erstellung deaktiviert.)
 
- Das statusbasierte SCT kann nur mit einer benutzerdefinierten Bindung erstellt werden. Weitere Informationen finden Sie unter Vorgehens [Weise: Erstellen eines Sicherheitskontext Tokens für eine sichere Sitzung](how-to-create-a-security-context-token-for-a-secure-session.md).) Im Code wird das Token aktiviert, indem ein sicherheitsbindungs Element (entweder <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) mithilfe des <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> oder der <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode erstellt und der `requireCancellation` Parameter auf `false`festgelegt wird. Der Parameter bezieht sich auf die Zwischenspeicherung des SCT. Wenn Sie den Wert auf `false` festlegen, wird die statusbasierte SCT-Funktion aktiviert.
+ Das statusbasierte SCT kann nur mit einer benutzerdefinierten Bindung erstellt werden. Weitere Informationen finden Sie unter Vorgehens [Weise: Erstellen eines Sicherheitskontext Tokens für eine sichere Sitzung](how-to-create-a-security-context-token-for-a-secure-session.md).) Im Code wird das Token aktiviert, indem ein sicherheitsbindungs Element (entweder <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> ) mithilfe der- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> Methode oder der <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> -Methode erstellt und der-Parameter auf festgelegt wird `requireCancellation` `false` . Der Parameter bezieht sich auf die Zwischenspeicherung des SCT. Wenn Sie den Wert auf `false` festlegen, wird die statusbasierte SCT-Funktion aktiviert.
 
- Alternativ wird das Token in der Konfiguration aktiviert, indem ein <`customBinding`> erstellt, dann ein <`security`> Element hinzugefügt und das `authenticationMode`-Attribut auf SecureConversation und das `requireSecurityContextCancellation`-Attribut auf `true`festgelegt wird.
+ Alternativ wird das Token in der Konfiguration aktiviert, indem ein <`customBinding`> erstellt, dann ein <`security`> Element hinzugefügt und das- `authenticationMode` Attribut auf SecureConversation und das- `requireSecurityContextCancellation` Attribut auf festgelegt wird `true` .
 
 > [!NOTE]
-> Die zuvor genannten Anforderungen sind spezifisch. Beispielsweise erstellt das <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> ein Bindungselement, das zu einer Windows-Identität führt, wobei aber kein SCT eingerichtet wird. Daher können Sie Sie mit der Option `Required` unter Windows XP verwenden.
+> Die zuvor genannten Anforderungen sind spezifisch. Beispielsweise erstellt das <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> ein Bindungselement, das zu einer Windows-Identität führt, wobei aber kein SCT eingerichtet wird. Daher können Sie Sie mit der Option unter `Required` Windows XP verwenden.
 
 ### <a name="possible-aspnet-conflict"></a>Möglicher ASP.net-Konflikt
 
-WCF und ASP.net können den Identitätswechsel aktivieren oder deaktivieren. Wenn ASP.net eine WCF-Anwendung hostet, besteht möglicherweise ein Konflikt zwischen den WCF-und ASP.NET-Konfigurationseinstellungen. Bei einem Konflikt hat die WCF-Einstellung Vorrang, es sei denn, die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>-Eigenschaft ist auf <xref:System.ServiceModel.ImpersonationOption.NotAllowed>festgelegt. in diesem Fall hat die ASP.NET-Identitätswechsel Einstellung Vorrang.
+WCF und ASP.net können den Identitätswechsel aktivieren oder deaktivieren. Wenn ASP.net eine WCF-Anwendung hostet, besteht möglicherweise ein Konflikt zwischen den WCF-und ASP.NET-Konfigurationseinstellungen. Bei einem Konflikt hat die WCF-Einstellung Vorrang, es sei denn <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> , die-Eigenschaft ist auf festgelegt <xref:System.ServiceModel.ImpersonationOption.NotAllowed> . in diesem Fall hat die ASP.NET-Identitätswechsel Einstellung Vorrang.
 
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Beim Identitätswechsel können assemblylade Vorgänge fehlschlagen.
 
@@ -80,15 +80,15 @@ Die mit der PPS-kompatible AES-Verschlüsselung funktioniert nicht bei Duplex R�
 
 - Führen Sie `p/invoke` für die `CertGetCertificateContextProperty` aus, und überprüfen Sie `dwProvType` in der zurückgegebenen `CertGetCertificateContextProperty`.
 
-- Verwenden Sie den Befehl `certutil` in der Befehlszeile zum Abfragen von Zertifikaten. Weitere Informationen finden Sie unter [certutil-Aufgaben für die Problembehandlung von Zertifikaten](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10)).
+- Verwenden Sie den  `certutil` Befehl in der Befehlszeile zum Abfragen von Zertifikaten. Weitere Informationen finden Sie unter [certutil-Aufgaben für die Problembehandlung von Zertifikaten](/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10)).
 
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Nachrichten Sicherheit schlägt fehl, wenn die Verwendung von ASP.NET-Identitätswechsel und ASP.NET-Kompatibilität erforderlich ist
 
 WCF unterstützt die folgende Kombination von Einstellungen nicht, da Sie verhindern können, dass die Client Authentifizierung stattfindet:
 
-- ASP.NET Identitätswechsel ist aktiviert. Dies erfolgt in der Datei Web. config, indem das `impersonate`-Attribut des <`identity`> Element auf `true`festgelegt wird.
+- ASP.NET Identitätswechsel ist aktiviert. Dies erfolgt in der Web.config-Datei durch Festlegen des- `impersonate` Attributs des <`identity`>-Elements auf `true` .
 
-- Der ASP.NET-Kompatibilitätsmodus wird aktiviert, indem das `aspNetCompatibilityEnabled`-Attribut des [\<ServiceHost->](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) auf `true`festgelegt wird.
+- Der ASP.NET-Kompatibilitätsmodus wird aktiviert, indem das- `aspNetCompatibilityEnabled` Attribut des auf festgelegt wird [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) `true` .
 
 - Die Nachrichtenmodussicherheit wird verwendet.
 
@@ -106,7 +106,7 @@ WCF erfordert genau ein WSDL-Dokument für jeden Knoten in der Verbund Vertrauen
 
  Ein Beispiel für diese Situation ist ein Dienst mit den folgenden drei Endpunktadressen:
 
-- `http://localhost/CalculatorService/service` (Dienst)
+- `http://localhost/CalculatorService/service` (der Dienst)
 
 - `http://localhost/CalculatorService/issue_ticket` (STS)
 
@@ -118,15 +118,15 @@ WCF erfordert genau ein WSDL-Dokument für jeden Knoten in der Verbund Vertrauen
 
 ## <a name="wsdl-import-attributes-can-be-lost"></a>WSDL-Import Attribute können verloren gehen.
 
-WCF kann die Attribute eines `<wst:Claims>`RST-Elements in einer`RST`-Vorlage beim Ausführen eines WSDL-Imports nicht verfolgen. Dieses Problem tritt im Zuge eines WSDL-Importvorgangs auf, wenn `<Claims>`WSFederationHttpBinding.Security.Message.TokenRequestParameters direkt in`WSFederationHttpBinding.Security.Message.TokenRequestParameters``IssuedSecurityTokenRequestParameters.AdditionalRequestParameters`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters oder in und nicht unter direkter Verwendung der Anspruchstypauflistungen angegeben werden.  Da die Attribute beim Importieren verloren gehen, verläuft der Roundtrip der Bindung durch WSDL nicht ordnungsgemäß, und die Bindung ist auf der Clientseite ungültig.
+WCF kann die Attribute eines `<wst:Claims>`-Vorlage beim Ausführen eines WSDL-Imports nicht verfolgen. Dieses Problem tritt im Zuge eines WSDL-Importvorgangs auf, wenn `<Claims>``WSFederationHttpBinding.Security.Message.TokenRequestParameters` und nicht unter direkter Verwendung der Anspruchstypauflistungen angegeben werden.  Da die Attribute beim Importieren verloren gehen, verläuft der Roundtrip der Bindung durch WSDL nicht ordnungsgemäß, und die Bindung ist auf der Clientseite ungültig.
 
  Ändern Sie nach Abschluss des Importvorgangs die Bindung direkt auf dem Client, um dieses Problem zu korrigieren.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheitsüberlegungen](security-considerations-in-wcf.md)
-- [Offenlegung vertraulicher Informationen](information-disclosure.md)
-- [Erhöhen der Berechtigungen](elevation-of-privilege.md)
-- [Denial-of-Service-Angriffe](denial-of-service.md)
+- [Sicherheitshinweise](security-considerations-in-wcf.md)
+- [Veröffentlichung von Informationen](information-disclosure.md)
+- [Erhöhung von Rechten](elevation-of-privilege.md)
+- [Denial-of-Service](denial-of-service.md)
 - [Manipulation](tampering.md)
-- [Replayangriffe](replay-attacks.md)
+- [Wiederholungsangriffe](replay-attacks.md)

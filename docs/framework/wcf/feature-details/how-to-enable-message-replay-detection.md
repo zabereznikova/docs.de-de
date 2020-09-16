@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: bf45b39f59e2fe38fec88d1fac23ab824c009546
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597084"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557878"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung
 Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Strom als zulässige Meldungen, was zu einer Reihe negativer Konsequenzen führt, wie z. B. redundanten Bestellungen eines Artikels.  
   
- Weitere Informationen zur Erkennung von Nachrichten Replay finden Sie unter [Message Replay-Erkennung](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
+ Weitere Informationen zur Erkennung von Nachrichten Replay finden Sie unter [Message Replay-Erkennung](/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
   
  Das folgende Verfahren veranschaulicht verschiedene Eigenschaften, die Sie verwenden können, um die Wiedergabe Erkennung mithilfe von Windows Communication Foundation (WCF) zu steuern.  
   
@@ -30,13 +30,13 @@ Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen
   
 2. Verwenden Sie die <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>-Eigenschaft, um einen Verweis auf die <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>-Klasse zurückzugeben und die folgenden Eigenschaften nach Bedarf festzulegen:  
   
-    1. `DetectReplay`. Ein boolescher Wert. Dieser bestimmt, ob der Client Replays vom Server erkennen sollte. Der Standardwert lautet `true`.  
+    1. `DetectReplay`. Ein boolescher Wert. Dieser bestimmt, ob der Client Replays vom Server erkennen sollte. Der Standardwert ist `true`.  
   
     2. `MaxClockSkew`. Ein <xref:System.TimeSpan>-Wert. Bestimmt die Zeitverschiebung, die der Replay-Mechanismus zwischen dem Client und dem Server tolerieren kann. Das Sicherheitsverfahren untersucht den gesendeten Zeitstempel und bestimmt, ob er zu weit in der Vergangenheit zurückliegend gesendet wurde. Die Standardeinstellung ist 5 Minuten.  
   
     3. `ReplayWindow`. Ein `TimeSpan`-Wert. Dieser bestimmt, wie lange eine Nachricht im Netzwerk bleiben kann, nachdem sie vom Server (durch Vermittler) gesendet worden ist, bevor sie den Client erreicht. Der Client verfolgt die Signaturen der Nachrichten, die innerhalb des letzten `ReplayWindow` gesendet wurden, zur Replay-Erkennung.  
   
-    4. `ReplayCacheSize`. Ein ganzzahliger Wert. Der Client speichert die Signaturen der Nachricht in einem Cache. Diese Einstellung gibt an, wie viele Signaturen der Cache speichern kann. Wenn die Zahl der Nachrichten, die innerhalb des letzten Replay-Fensters gesendet wurden, das Cachelimit erreicht, werden neue Nachrichten zurückgewiesen, bis die ältesten zwischengespeicherten Signaturen das Zeitlimit überschreiten. Der Standardwert ist 500000.  
+    4. `ReplayCacheSize`. Ein Ganzzahlwert. Der Client speichert die Signaturen der Nachricht in einem Cache. Diese Einstellung gibt an, wie viele Signaturen der Cache speichern kann. Wenn die Zahl der Nachrichten, die innerhalb des letzten Replay-Fensters gesendet wurden, das Cachelimit erreicht, werden neue Nachrichten zurückgewiesen, bis die ältesten zwischengespeicherten Signaturen das Zeitlimit überschreiten. Der Standardwert ist 500000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>So steuern Sie die Replay-Erkennung für den Dienst mithilfe von Code  
   
@@ -102,7 +102,7 @@ Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

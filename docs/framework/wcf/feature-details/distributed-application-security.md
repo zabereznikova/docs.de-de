@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 70718b5dfbd54693d2734a58c3da17806137ad2f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599145"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557540"
 ---
 # <a name="distributed-application-security"></a>Sicherheit bei verteilten Anwendungen
 Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktionale Bereiche unterteilt: Übertragungssicherheit, Zugriffs Steuerung und Überwachung. Durch die Übertragungssicherheit werden Integrität, Vertraulichkeit und Authentifizierung bereitgestellt. Die Übertragungssicherheit wird durch eine der folgenden Funktionen bereitgestellt: Transportsicherheit, Nachrichtensicherheit oder `TransportWithMessageCredential`.  
@@ -42,7 +42,7 @@ Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktion
 |----------|-----------------|  
 |Keine|Auf Transport- bzw. Nachrichtenebene wird keine Sicherheit bereitgestellt. Keine der vordefinierten Bindungen verwendet diesen Modus standardmäßig mit Ausnahme des- [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) Elements oder bei Verwendung von Code die- <xref:System.ServiceModel.BasicHttpBinding> Klasse.|  
 |Transport|Es wird ein sicherer Transport wie HTTPS zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet.|  
-|`Message`|Es wird die SOAP-Nachrichtensicherheit zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet. SOAP-Nachrichten werden gemäß den Standards für die WS-Sicherheit geschützt.|  
+|Nachricht|Es wird die SOAP-Nachrichtensicherheit zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet. SOAP-Nachrichten werden gemäß den Standards für die WS-Sicherheit geschützt.|  
 |Gemischter Modus|Es wird die Transportsicherheit zur Gewährleistung von Integrität und Vertraulichkeit sowie für die Serverauthentifizierung verwendet. Für die Clientauthentifizierung wird die Nachrichtensicherheit (WS-Sicherheit und andere Standards) eingesetzt.<br /><br /> (Der Enumerationswert für diesen Modus ist `TransportWithMessageCredential`.)|  
 |Beide|Schutz und Authentifizierung finden auf beiden Ebenen statt. Dieser Modus ist nur im- [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) Element verfügbar.|  
   
@@ -65,7 +65,7 @@ Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktion
 |Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
-|Basic|Gibt die Standardauthentifizierung an. Weitere Informationen finden Sie unter RFC2617, "[http Authentication: Basic and Digest Authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).|  
+|Standard|Gibt die Standardauthentifizierung an. Weitere Informationen finden Sie unter RFC2617, "[http Authentication: Basic and Digest Authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).|  
 |Digest|Gibt die Digestauthentifizierung an. Weitere Informationen finden Sie unter RFC2617, "[http Authentication: Basic and Digest Authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).|  
 |Ntlm|Gibt die Windows-Authentifizierung mit SSPI-Aushandlung auf einer Windows-Domäne an.<br /><br /> Die SSPI-Aushandlung führt dazu, dass entweder das Kerberos-Protokoll oder NT LanMan (NTLM) verwendet wird.|  
 |Windows|Gibt die Windows-Authentifizierung mit SSPI auf einer Windows-Domäne an. SSPI wählt entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst aus.<br /><br /> Zuerst wird das Kerberos-Protokoll angewendet, wenn dies scheitert, wird NTLM verwendet.|  
@@ -78,7 +78,7 @@ Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktion
 |-------------|-----------------|  
 |Keine|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
 |Windows|Ermöglicht den SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen. Es wird mittels SSPI-Aushandlung entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst ausgewählt.|  
-|Username|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass WCF Kryptografievorgänge mit dem Benutzernamen nicht zulässt, wie z. b. das Erzeugen einer Signatur oder das Verschlüsseln von Daten. Daher erzwingt WCF, dass der Transport geschützt wird, wenn Benutzernamen-Anmelde Informationen verwendet werden.|  
+|Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass WCF Kryptografievorgänge mit dem Benutzernamen nicht zulässt, wie z. b. das Erzeugen einer Signatur oder das Verschlüsseln von Daten. Daher erzwingt WCF, dass der Transport geschützt wird, wenn Benutzernamen-Anmelde Informationen verwendet werden.|  
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
 |CardSpace|Ermöglicht es dem Dienst zu verlangen, dass der Client mithilfe eines CardSpace authentifiziert werden muss.|  
   
@@ -94,9 +94,9 @@ Die Windows Communication Foundation (WCF)-Sicherheit ist in drei Haupt funktion
   
  Im Modus für die Nachrichtensicherheit können Sie die Übertragungssicherheit auch so ausüben, dass im Zuge einer anfänglichen Aushandlung ein Austausch der Dienstanmeldeinformationen mit dem Client erfolgt. Legen Sie die <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A>-Eigenschaft auf `true` fest, um die Aushandlung zu aktivieren.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die Endpunkterstellung](../endpoint-creation-overview.md)
 - [Vom System bereitgestellte Bindungen](../system-provided-bindings.md)
 - [Sicherheitsübersicht](security-overview.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

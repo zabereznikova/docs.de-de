@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7269b32e509039fdd767446bd6e10202b089c094
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557150"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550018"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>Plattformübergreifende Kryptografie in .net Core und .net 5
 
@@ -109,7 +109,7 @@ Die Betriebssystem Bibliotheken werden zum Verschlüsseln und Entschlüsseln von
 | PKCS1-Signatur (SHA-2)               | ✔️           | ✔️              | ✔️   | ⚠️\*           |
 | PSS                                   | ✔️           | ✔️              | ✔️   | ❌             |
 
-\*Windows CryptoAPI (CAPI) kann die PKCS1-Signatur mit einem SHA-2-Algorithmus unterstützen. Das einzelne RSA-Objekt kann jedoch in einen Kryptografiedienstanbieter (CSP) geladen werden, der diesen nicht unterstützt.
+\* Windows CryptoAPI (CAPI) kann die PKCS1-Signatur mit einem SHA-2-Algorithmus unterstützen. Das einzelne RSA-Objekt kann jedoch in einen Kryptografiedienstanbieter (CSP) geladen werden, der diesen nicht unterstützt.
 
 #### <a name="rsa-on-windows"></a>RSA unter Windows
 
@@ -123,7 +123,7 @@ Die Betriebssystem Bibliotheken werden zum Verschlüsseln und Entschlüsseln von
 
 .Net macht Typen verfügbar, damit Programme mit den vom .net-Kryptografiecode verwendeten Betriebssystem Bibliotheken interagieren können. Die beteiligten Typen übersetzen nicht zwischen Plattformen und sollten nur bei Bedarf direkt verwendet werden.
 
-| type                                                         | Windows | Linux         | macOS         |
+| Typ                                                         | Windows | Linux         | macOS         |
 |--------------------------------------------------------------|---------|---------------|---------------|
 | <xref:System.Security.Cryptography.RSACryptoServiceProvider> | ✔️     | ⚠️<sup>1</sup>| ⚠️<sup>1</sup> |
 | <xref:System.Security.Cryptography.RSACng>                   | ✔️     | ❌            | ❌            |
@@ -139,7 +139,7 @@ ECDSA (Elliptic Curve Digital Signature Algorithmus) die Schlüsselgenerierung e
 
 ECDSA-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und unterliegen ihren Einschränkungen.
 
-| Elliptische-Kurven-                     | Windows 10    | Windows 7-8,1 | Linux         | macOS         |
+| Elliptische-Kurven-                     | Windows 10    | Windows 7-8,1 | Linux         | macOS         |
 |------------------------------------|---------------|-----------------|---------------|---------------|
 | NIST P-256 (secp256r1)             | ✔️           | ✔️              | ✔️           | ✔️            |
 | NIST P-384 (secp384r1)             | ✔️           | ✔️              | ✔️           | ✔️            |
@@ -151,7 +151,7 @@ ECDSA-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und
 
 <sup>1</sup> Linux-Distributionen haben nicht alle Unterstützung für die gleichen benannten Kurven.
 
-<sup>2</sup> die Unterstützung für benannte Kurven wurde Windows CNG in Windows 10 hinzugefügt. Weitere Informationen finden Sie unter [CNG mit dem Namen elliptische Kurven](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx). Benannte Kurven sind in früheren Versionen von Windows nicht verfügbar, mit Ausnahme der drei Kurven in Windows 7.
+<sup>2</sup> die Unterstützung für benannte Kurven wurde Windows CNG in Windows 10 hinzugefügt. Weitere Informationen finden Sie unter [CNG mit dem Namen elliptische Kurven](/windows/win32/seccng/cng-named-elliptic-curves). Benannte Kurven sind in früheren Versionen von Windows nicht verfügbar, mit Ausnahme der drei Kurven in Windows 7.
 
 <sup>3</sup> der Export mit expliziten Kurven Parametern erfordert die Unterstützung von Betriebssystem Bibliotheken, die unter macOS oder früheren Versionen von Windows nicht verfügbar ist.
 
@@ -159,12 +159,12 @@ ECDSA-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und
 
 .Net macht Typen verfügbar, damit Programme mit den vom .net-Kryptografiecode verwendeten Betriebssystem Bibliotheken interagieren können. Die beteiligten Typen übersetzen nicht zwischen Plattformen und sollten nur bei Bedarf direkt verwendet werden.
 
-| type                                             | Windows | Linux | macOS |
+| Typ                                             | Windows | Linux | macOS |
 |--------------------------------------------------|---------|-------|-------|
 | <xref:System.Security.Cryptography.ECDsaCng>     | ✔️     | ❌    | ❌    |
 | <xref:System.Security.Cryptography.ECDsaOpenSsl> | ❌     | ✔️    | ⚠️\*  |
 
-\*Unter macOS <xref:System.Security.Cryptography.ECDsaOpenSsl> funktioniert, wenn OpenSSL im System installiert ist und eine geeignete libcrypto-dylib über das Laden dynamischer Bibliotheken gefunden werden kann. Wenn eine entsprechende Bibliothek nicht gefunden werden kann, werden Ausnahmen ausgelöst.
+\* Unter macOS <xref:System.Security.Cryptography.ECDsaOpenSsl> funktioniert, wenn OpenSSL im System installiert ist und eine geeignete libcrypto-dylib über das Laden dynamischer Bibliotheken gefunden werden kann. Wenn eine entsprechende Bibliothek nicht gefunden werden kann, werden Ausnahmen ausgelöst.
 
 ### <a name="ecdh"></a>ECDH
 
@@ -182,7 +182,7 @@ Die <xref:System.Security.Cryptography.ECDiffieHellman> Klasse gibt den "RAW"-We
 
 ECDH-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und unterliegen ihren Einschränkungen.
 
-| Elliptische-Kurven-                     | Windows 10    | Windows 7-8,1 | Linux         | macOS         |
+| Elliptische-Kurven-                     | Windows 10    | Windows 7-8,1 | Linux         | macOS         |
 |------------------------------------|---------------|-----------------|---------------|---------------|
 | NIST P-256 (secp256r1)             | ✔️           | ✔️              | ✔️           | ✔️            |
 | NIST P-384 (secp384r1)             | ✔️           | ✔️              | ✔️           | ✔️            |
@@ -194,7 +194,7 @@ ECDH-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und 
 
 <sup>1</sup> Linux-Distributionen haben nicht alle Unterstützung für die gleichen benannten Kurven.
 
-<sup>2</sup> die Unterstützung für benannte Kurven wurde Windows CNG in Windows 10 hinzugefügt. Weitere Informationen finden Sie unter [CNG mit dem Namen elliptische Kurven](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx). Benannte Kurven sind in früheren Versionen von Windows nicht verfügbar, mit Ausnahme der drei Kurven in Windows 7.
+<sup>2</sup> die Unterstützung für benannte Kurven wurde Windows CNG in Windows 10 hinzugefügt. Weitere Informationen finden Sie unter [CNG mit dem Namen elliptische Kurven](/windows/win32/seccng/cng-named-elliptic-curves). Benannte Kurven sind in früheren Versionen von Windows nicht verfügbar, mit Ausnahme der drei Kurven in Windows 7.
 
 <sup>3</sup> der Export mit expliziten Kurven Parametern erfordert die Unterstützung von Betriebssystem Bibliotheken, die unter macOS oder früheren Versionen von Windows nicht verfügbar ist.
 
@@ -202,12 +202,12 @@ ECDH-Schlüssel Kurven werden von den Betriebssystem Bibliotheken definiert und 
 
 .Net macht Typen verfügbar, damit Programme mit den von .NET verwendeten Betriebssystem Bibliotheken interagieren können. Die beteiligten Typen übersetzen nicht zwischen Plattformen und sollten nur bei Bedarf direkt verwendet werden.
 
-| type                                                       | Windows | Linux | macOS |
+| Typ                                                       | Windows | Linux | macOS |
 |------------------------------------------------------------|---------|-------|-------|
 | <xref:System.Security.Cryptography.ECDiffieHellmanCng>     | ✔️     | ❌    | ❌   |
 | <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> | ❌     | ✔️    | ⚠️\* |
 
-\*Unter macOS <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> funktioniert, wenn OpenSSL installiert ist und eine geeignete libcrypto-dylib über das Laden dynamischer Bibliotheken gefunden werden kann. Wenn eine entsprechende Bibliothek nicht gefunden werden kann, werden Ausnahmen ausgelöst.
+\* Unter macOS <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> funktioniert, wenn OpenSSL installiert ist und eine geeignete libcrypto-dylib über das Laden dynamischer Bibliotheken gefunden werden kann. Wenn eine entsprechende Bibliothek nicht gefunden werden kann, werden Ausnahmen ausgelöst.
 
 ### <a name="dsa"></a>DSA
 
@@ -222,7 +222,7 @@ Die Schlüsselgenerierung von DSA (Digital Signature Algorithmus) wird von den S
 | Fi-186-2                    | ✔️         | ✔️    | ✔️            | ✔️           |
 | "Fps 186-3" (SHA-2-Signaturen) | ✔️         | ✔️    | ❌            | ❌            |
 
-\*macOS lädt DSA-Schlüssel, die größer als 1024 Bits sind, aber das Verhalten dieser Schlüssel ist nicht definiert. Sie Verhalten sich nicht gemäß "fps 186-3".
+\* macOS lädt DSA-Schlüssel, die größer als 1024 Bits sind, aber das Verhalten dieser Schlüssel ist nicht definiert. Sie Verhalten sich nicht gemäß "fps 186-3".
 
 #### <a name="dsa-on-windows"></a>DSA unter Windows
 
@@ -236,7 +236,7 @@ Die Schlüsselgenerierung von DSA (Digital Signature Algorithmus) wird von den S
 
 .Net macht Typen verfügbar, damit Programme mit den vom .net-Kryptografiecode verwendeten Betriebssystem Bibliotheken interagieren können. Die beteiligten Typen übersetzen nicht zwischen Plattformen und sollten nur bei Bedarf direkt verwendet werden.
 
-| type                                                         | Windows | Linux         | macOS         |
+| Typ                                                         | Windows | Linux         | macOS         |
 |--------------------------------------------------------------|---------|---------------|---------------|
 | <xref:System.Security.Cryptography.DSACryptoServiceProvider> | ✔️     | ⚠️<sup>1</sup> | ⚠️<sup>1</sup> |
 | <xref:System.Security.Cryptography.DSACng>                   | ✔️     | ❌             | ❌            |
@@ -254,20 +254,20 @@ Der Großteil der Unterstützung für X. 509-Zertifikate in .net stammt aus Betr
 
 | Szenario                                     | Windows | Linux | macOS |
 |----------------------------------------------|---------|-------|-------|
-| Empty                                        | ✔️     | ✔️    | ✔️   |
+| Leer                                        | ✔️     | ✔️    | ✔️   |
 | Ein Zertifikat, kein privater Schlüssel              | ✔️     | ✔️    | ✔️   |
 | Ein Zertifikat mit privatem Schlüssel            | ✔️     | ✔️    | ✔️   |
 | Mehrere Zertifikate, keine privaten Schlüssel       | ✔️     | ✔️    | ✔️   |
 | Mehrere Zertifikate, ein privater Schlüssel       | ✔️     | ✔️    | ✔️   |
 | Mehrere Zertifikate, mehrere private Schlüssel | ✔️     | ⚠️\*  | ✔️   |
 
-\*Verfügbar in .net 5 Preview Releases.
+\* Verfügbar in .net 5 Preview Releases.
 
 ### <a name="write-a-pkcs12pfx"></a>PKCS12/PFX schreiben
 
 | Szenario                                     | Windows | Linux | macOS |
 |----------------------------------------------|---------|-------|-------|
-| Empty                                        | ✔️     | ✔️    | ⚠️\* |
+| Leer                                        | ✔️     | ✔️    | ⚠️\* |
 | Ein Zertifikat, kein privater Schlüssel              | ✔️     | ✔️    | ⚠️\* |
 | Ein Zertifikat mit privatem Schlüssel            | ✔️     | ✔️    | ✔️   |
 | Mehrere Zertifikate, keine privaten Schlüssel       | ✔️     | ✔️    | ⚠️\* |
@@ -275,7 +275,7 @@ Der Großteil der Unterstützung für X. 509-Zertifikate in .net stammt aus Betr
 | Mehrere Zertifikate, mehrere private Schlüssel | ✔️     | ⚠️\*  | ✔️   |
 | Kurzlebiges laden                            | ✔️     | ✔️    | ⚠️\* |
 
-\*Verfügbar in .net 5 Preview Releases.
+\* Verfügbar in .net 5 Preview Releases.
 
 macOS kann keine privaten Zertifikat Schlüssel ohne ein Keychain-Objekt laden, das auf den Datenträger geschrieben werden muss. Keychain werden automatisch für das Laden von PFX erstellt und gelöscht, wenn Sie nicht mehr verwendet werden. Da die <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> Option bedeutet, dass der private Schlüssel nicht auf den Datenträger geschrieben werden soll, führt das bestätigen dieses Flags für macOS zu einer <xref:System.PlatformNotSupportedException> .
 

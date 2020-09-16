@@ -3,12 +3,12 @@ title: Übersicht über Windows-Workflow
 description: In diesem Artikel werden Workflow Foundation-Workflows beschrieben, bei denen es sich um Modelle handelt, die reale Prozesse beschreiben.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: ec1a00b37abe2cb842735fb98e1c113a97943758
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421474"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558099"
 ---
 # <a name="windows-workflow-overview"></a>Übersicht über Windows-Workflow
 Bei einem Workflow handelt es sich um einen Satz von elementaren Einheiten, die als ein Modell gespeichert *werden, das* einen realen Prozess beschreibt. Mit Workflows können die Reihenfolge der Ausführung sowie abhängige Beziehungen zwischen kurz- und langfristiger Arbeit beschrieben werden. Diese Arbeit durchläuft das Modell vom Anfang bis zum Ende, und Aktivitäten werden unter Umständen von Personen oder Systemfunktionen ausgeführt.  
@@ -44,4 +44,4 @@ Workflowkomponenten im Hostprozess
   
 ## <a name="see-also"></a>Siehe auch
 
-- [BizTalk Server 2006 oder WF? Auswählen des richtigen Workflow Tools für Ihr Projekt](https://docs.microsoft.com/previous-versions/dotnet/articles/cc303238(v=msdn.10))
+- [BizTalk Server 2006 oder WF? Auswählen des richtigen Workflow Tools für Ihr Projekt](/previous-versions/dotnet/articles/cc303238(v=msdn.10))

@@ -2,12 +2,12 @@
 title: Klonen oder anfügen?
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: aaf3344c0439d96a01006ee000d0a827884a5af9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1974e10579e87f17746d5a9ba8a86ea8d819d9ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410876"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555756"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Klonen und Anhängen (Visual Basic)
 Beim Hinzufügen von <xref:System.Xml.Linq.XNode> (inklusive <xref:System.Xml.Linq.XElement>)-Objekten oder <xref:System.Xml.Linq.XAttribute>-Objekten zu einer neuen Struktur werden die Objekte einfach an die XML-Struktur angefügt, falls der neue Inhalt kein übergeordnetes Element besitzt. Wenn der neue Inhalt bereits ein übergeordnetes Element besitzt und Bestandteil einer anderen XML-Struktur ist, wird er geklont. Der neu geklonte Inhalt wird dann an die XML-Struktur angefügt.  
@@ -52,4 +52,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erstellen von XML-Strukturen (Visual Basic)](creating-xml-trees.md)
+- [Erstellen von XML-Strukturen (Visual Basic)](../../../../standard/linq/xml-literals.md)

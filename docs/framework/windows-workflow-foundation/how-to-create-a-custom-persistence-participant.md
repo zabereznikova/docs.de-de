@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Erstellen eines benutzerdefinierten Persistenzteilnehmers'
+title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Persistenzteilnehmers'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 0e61395cb59a7d162668445d23241e3ff562d67b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: d1d59f139b666790920eaabe032878dca1617b62
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802543"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557044"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>Gewusst wie: Erstellen eines benutzerdefinierten Persistenzteilnehmers
-Die folgende Prozedur enthält die Schritte zur Erstellung eines Persistenzteilnehmers. Beispiele für Implementierungen von persistenzteilnehmern finden Sie im Thema zum [teilnehmen an](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100)) Dauerhaftigkeits Beispielen und zum [Speichern der Erweiterbarkeit](store-extensibility.md) .  
+# <a name="how-to-create-a-custom-persistence-participant"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Persistenzteilnehmers
+Die folgende Prozedur enthält die Schritte zur Erstellung eines Persistenzteilnehmers. Beispiele für Implementierungen von persistenzteilnehmern finden Sie im Thema zum [teilnehmen an](/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100)) Dauerhaftigkeits Beispielen und zum [Speichern der Erweiterbarkeit](store-extensibility.md) .  
   
 1. Erstellen Sie eine von der <xref:System.Activities.Persistence.PersistenceParticipant>-Klasse oder von der <xref:System.Activities.Persistence.PersistenceIOParticipant>-Klasse abgeleitete Klasse. Die persistenceioparticipant-Klasse bietet die gleichen Erweiterbarkeits Punkte wie die PersistenceParticipants-Klasse und kann an e/a-Vorgängen teilnehmen. Führen Sie mindestens einen der folgenden Schritte aus.  
   

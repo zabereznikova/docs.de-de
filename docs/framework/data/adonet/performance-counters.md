@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286675"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557904"
 ---
 # <a name="performance-counters-in-adonet"></a>Leistungsindikatoren in ADO.NET
 Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren. Dazu gehört auch die Unterstützung für <xref:System.Data.SqlClient> und <xref:System.Data.OracleClient>. Die in früheren ADO.NET-Versionen verfügbaren <xref:System.Data.SqlClient>-Leistungsindikatoren wurden durch neue Leistungsindikatoren ersetzt, die in diesem Thema beschrieben werden. Mit den ADO.NET-Leistungsindikatoren können Sie den Status Ihrer Anwendung und die Verbindungsressourcen überwachen, die die Anwendung verwendet. Für die Überwachung der Leistungsindikatoren kann der Windows-Leistungsmonitor verwendet werden, und die <xref:System.Diagnostics.PerformanceCounter>-Klasse im <xref:System.Diagnostics>-Namespace ermöglicht den programmgesteuerten Zugriff auf diese Indikatoren.  
@@ -399,7 +399,7 @@ class Program
 
 - [Herstellen der Verbindung mit einer Datenquelle](connecting-to-a-data-source.md)
 - [OLE DB-, ODBC- und Oracle-Verbindungspooling](ole-db-odbc-and-oracle-connection-pooling.md)
-- [Leistungsindikatoren für ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [Leistungsindikatoren für ASP.NET](/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Laufzeit-Profilerstellung](../../debug-trace-profile/runtime-profiling.md)
-- [Einführung in die Überwachung von Leistungs Schwellenwerten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Einführung in die Überwachung von Leistungs Schwellenwerten](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Übersicht über ADO.NET](ado-net-overview.md)

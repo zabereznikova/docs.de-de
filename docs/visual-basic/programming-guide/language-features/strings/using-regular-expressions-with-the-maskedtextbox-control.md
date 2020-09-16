@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: efda70be0ccdbc1f4b59d548e50f743f6c493b19
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363711"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555743"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Verwenden von regulären Ausdrücken mit dem MaskedTextBox-Steuerelement in Visual Basic
 In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke konvertiert werden, um mit dem-Steuerelement zu arbeiten <xref:System.Windows.Forms.MaskedTextBox> .  
@@ -48,7 +48,7 @@ In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke konve
   
  In der folgenden Tabelle werden vier reguläre Ausdrücke und die entsprechende Maske für jeden verglichen.  
   
-|Regulärer Ausdruck|Mask|Notizen|  
+|Regular Expression|Mask|Hinweise|  
 |------------------------|----------|-----------|  
 |`\d{2}/\d{2}/\d{4}`|`00/00/0000`|Das `/` Zeichen in der Maske ist ein logisches Datums Trennzeichen und wird dem Benutzer als Datums Trennzeichen angezeigt, das der aktuellen Kultur der Anwendung entspricht.|  
 |`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Ein Datum (Tag, Monats Abkürzung und Jahr) in USA Format, in dem die drei buchstabige Monats Abkürzung mit einem ersten Großbuchstaben, gefolgt von zwei Kleinbuchstaben, angezeigt wird.|  
@@ -60,4 +60,4 @@ In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke konve
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Überprüfen von Zeichenfolgen in Visual Basic](validating-strings.md)
-- [MaskedTextBox-Steuerelement](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+- [MaskedTextBox-Steuerelement](/dotnet/desktop/winforms/controls/maskedtextbox-control-windows-forms)

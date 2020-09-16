@@ -2,12 +2,12 @@
 title: Erste Schritte mit .NET Native
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b6cd4acaa377de7fc172fb12c9fb9ff1b832f88a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128400"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551209"
 ---
 # <a name="getting-started-with-net-native"></a>Erste Schritte mit .NET Native
 
@@ -58,7 +58,7 @@ Es gibt zwei Kategorien von Serialisierungsprogrammen, und beide erfordern mögl
 
 - Nicht reflektionsbasierte Serialisierungsprogramme. Die Serialisierungsprogramme in der .NET Framework-Klassenbibliothek, wie die Klassen <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>und <xref:System.Xml.Serialization.XmlSerializer> , beruhen nicht auf Reflektion. Sie erfordern jedoch, dass Code basierend auf dem Objekt generiert wird, das serialisiert oder deserialisiert werden soll.  Weitere Informationen finden Sie im Abschnitt zu Serialisierungsprogrammen von Microsoft unter [Serialization and Metadata](serialization-and-metadata.md).
 
-- Serialisierungsprogramme von Drittanbietern. Serialisierungsbibliotheken von Drittanbietern, bei denen es sich am häufigsten um das Newton Soft JSON-Serialisierungsprogramm handelt, sind im allgemeinen reflektionsebasiert und erfordern Einträge in der \* . rd. XML-Datei, um Objektserialisierung und-Deserialisierung zu unterstützen. Weitere Informationen finden Sie im Abschnitt „Serialisierungsprogramme von Drittanbietern“ unter [Serialization and Metadata](serialization-and-metadata.md).
+- Serialisierungsprogramme von Drittanbietern. Serialisierungsbibliotheken von Drittanbietern, bei denen es sich am häufigsten um das Newton Soft JSON-Serialisierungsprogramm handelt, sind im allgemeinen reflektionsebasiert und erfordern Einträge in der \*.rd.xml-Datei, um Objektserialisierung und-Deserialisierung zu unterstützen. Weitere Informationen finden Sie im Abschnitt „Serialisierungsprogramme von Drittanbietern“ unter [Serialization and Metadata](serialization-and-metadata.md).
 
 **Auf Reflektion beruhende Methoden**
 
@@ -79,7 +79,7 @@ Weitere Informationen finden Sie unter [APIs That Rely on Reflection](apis-that-
 
 ## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Schritt 3: Bereitstellen und Testen der Releasebuilds Ihrer App
 
-Nachdem Sie die Laufzeitdirektivendatei aktualisiert haben, können Sie erneut Releasebuilds der App erstellen und bereitstellen. .Net Native Binärdateien werden in das Unterverzeichnis ILC. out des Verzeichnisses eingefügt, das im Textfeld Buildausgabepfad des Dialog Felds **Eigenschaften** des Projekts angegeben ist, Registerkarte **Kompilieren** . Binärdateien, die sich nicht in diesem Ordner befinden, wurden nicht mit .net Native kompiliert. **Build output path** Testen Sie Ihre App gründlich, und testen Sie alle Szenarien, auch Ausfallszenarien, für sämtliche Zielplattformen.
+Nachdem Sie die Laufzeitdirektivendatei aktualisiert haben, können Sie erneut Releasebuilds der App erstellen und bereitstellen. .Net Native Binärdateien werden in das Unterverzeichnis ILC. out des Verzeichnisses eingefügt, das im Textfeld Buildausgabepfad des Dialog Felds **Eigenschaften** des Projekts auf der Registerkarte **Kompilieren** angegeben ist. **Build output path** Binärdateien, die sich nicht in diesem Ordner befinden, wurden nicht mit .net Native kompiliert. Testen Sie Ihre App gründlich, und testen Sie alle Szenarien, auch Ausfallszenarien, für sämtliche Zielplattformen.
 
 Wenn Ihre App nicht ordnungsgemäß funktioniert (insbesondere in Fällen, in denen zur Laufzeit die Ausnahmen [MissingMetadataException](missingmetadataexception-class-net-native.md) oder [MissingInteropDataException](missinginteropdataexception-class-net-native.md) ausgelöst werden), folgen Sie den Anweisungen im nächsten Abschnitt, [Step 4: Manually resolve missing metadata (Schritt 4: Manuelles Beheben fehlender Metadaten)](#Step4). Das Aktivieren von Ausnahmen der ersten Chance kann hilfreich sein, um diese Fehler zu finden.
 
@@ -121,10 +121,10 @@ Einige spezifische Beispiele für das Behandeln von Ausnahmen und anderen Proble
 
 - [Laufzeitausnahmen in .NET Native-Apps](runtime-exceptions-in-net-native-apps.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET Native Einrichtung und Konfiguration](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native Einrichtung und Konfiguration](/previous-versions/dn600164(v=vs.110))
 - [.NET Native und Kompilierung](net-native-and-compilation.md)
 - [Reflektion und .NET Native](reflection-and-net-native.md)
 - [APIs, die auf Refelktion beruhen](apis-that-rely-on-reflection.md)

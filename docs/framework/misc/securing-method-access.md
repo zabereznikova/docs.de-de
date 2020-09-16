@@ -240,6 +240,6 @@ class Implemented : ICanCastToMe
   
  Selbst wenn ein sprach Compiler diese außer Kraft setzungen aufgrund eines Kompilierungs Fehlers verhindert, kann der Code, der mit anderen Compilern geschrieben wurde, überschreiben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)
