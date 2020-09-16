@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6221f253746ac304115fe844966e2cf552263d04
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602634"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551144"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Nachrichtensicherheit durch einem Zertifikatclient
 Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und-Dienst, der mit dem Nachrichten Sicherheitsmodus gesichert wurde. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert. Weitere Informationen finden Sie unter [Sicherheit für verteilte Anwendungen](distributed-application-security.md).
@@ -21,7 +21,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 
 |Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|Sicherheitsmodus|`Message`|  
+|Sicherheitsmodus|Nachricht|  
 |Interoperabilität|Nur WCF|  
 |Authentifizierung (Server)|Mit Dienstzertifikat|  
 |Authentifizierung (Client)|Mit Clientzertifikat|  
@@ -31,7 +31,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 |Bindung|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
@@ -85,11 +85,11 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
-- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:  
+- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -143,9 +143,9 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsübersicht](security-overview.md)
 - [Dienstidentität und Authentifizierung](service-identity-and-authentication.md)
 - [Verwenden von Zertifikaten](working-with-certificates.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: e14bdc12598d0aa6cdd2789b09a04ab8ed134169
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 3b24ff99eee9027d507ef89ca855162f221f826a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141703"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555119"
 ---
 # <a name="specifying-an-assemblys-location"></a>Festlegen des Speicherortes einer Assembly
 Es gibt zwei Möglichkeiten, den Speicherort einer Assembly anzugeben:  
@@ -21,7 +21,7 @@ Es gibt zwei Möglichkeiten, den Speicherort einer Assembly anzugeben:
   
 - Verwenden des- [\<probing>](./file-schema/runtime/probing-element.md) Elements.  
   
- Sie können auch das [.NET Framework-Konfigurations Tool (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) verwenden, um Assemblyspeicher Orte anzugeben oder Speicherorte anzugeben, an denen die Common Language Runtime nach Assemblys suchen soll.  
+ Sie können auch das [.NET Framework-Konfigurations Tool (Mscorcfg. msc)](/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) verwenden, um Assemblyspeicher Orte anzugeben oder Speicherorte anzugeben, an denen die Common Language Runtime nach Assemblys suchen soll.  
   
 ## <a name="using-the-codebase-element"></a>Verwenden des- \<codeBase> Elements  
  Sie können das- **\<codeBase>** Element nur in der Computerkonfiguration oder in Herausgeber Richtlinien Dateien verwenden, die auch die Assemblyversion umleiten Wenn die Laufzeit bestimmt, welche Assemblyversion verwendet werden soll, wendet Sie die Codebasis Einstellung aus der Datei an, die die Version bestimmt. Wenn keine Codebasis angegeben wird, testet die Runtime die Assembly auf die normale Weise. Weitere Informationen finden Sie unter so sucht Common Language [Runtime](../deployment/how-the-runtime-locates-assemblies.md)nach Assemblys.  

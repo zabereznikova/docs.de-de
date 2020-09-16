@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: d74c7b8d80f02283cd681ed0118257ed926bdc83
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063756"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555249"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 
@@ -282,7 +282,7 @@ Language-Integrated Query (LINQ) ist in Verbindung mit Lambda-Ausdrücken ein Be
   
  **Beispiel 5: Lambdas, List \<T> und IEnumerable\<T>**  
   
- Dieses Beispiel verwendet [LINQ und Funktionsformatcode](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming), um ein Symbol im Modell des Compilers anhand einer Namenszeichenfolge zu finden:  
+ Dieses Beispiel verwendet [LINQ und Funktionsformatcode](/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming), um ein Symbol im Modell des Compilers anhand einer Namenszeichenfolge zu finden:  
   
 ```csharp  
 class Symbol {  
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- In der ersten Zeile schließt der [Lambda-Ausdruck](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [über](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) die lokale Variable `name`. Das bedeutet, dass zusätzlich zum Zuordnen eines Objekts für den[Delegaten](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type), den `predicate` speichert, der Code eine statische Klasse zuordnet, um die Umgebung zu speichern, die den Wert von `name` erfasst. Der Compiler generiert Code wie den folgenden:  
+ In der ersten Zeile schließt der [Lambda-Ausdruck](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [über](/archive/blogs/ericlippert/what-are-closures) die lokale Variable `name`. Das bedeutet, dass zusätzlich zum Zuordnen eines Objekts für den[Delegaten](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type), den `predicate` speichert, der Code eine statische Klasse zuordnet, um die Umgebung zu speichern, die den Wert von `name` erfasst. Der Compiler generiert Code wie den folgenden:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -441,7 +441,7 @@ class Compilation { /*...*/
 ### <a name="additional-considerations"></a>Weitere Überlegungen  
  Hier sind einige weitere Punkt zu potenziellen Problemen in großen Apps oder Apps, die viele Daten verarbeiten.
   
- **Festlegen**  
+ **Wörterbücher**  
   
  Wörterbücher sind in vielen Programmen allgegenwärtig, denn sie sind sehr praktisch und an sich effizient. Aber oft werden sie nicht ordnungsgemäß verwendet. In Visual Studio und den Compilern zeigen Analysen, dass viele der Wörterbücher ein einziges Element enthielten oder leer waren. Ein leeres <xref:System.Collections.Generic.Dictionary%602> hat zehn Felder und belegt 48 Byte auf dem Heap in einem x86-Computer. Wörterbücher sind großartig, wenn Sie eine Zuordnung oder assoziative Datenstruktur mit konstanter Zeitsuche benötigen. Wenn Sie jedoch nur einige wenige Elemente haben, verschwenden Sie viel Speicherplatz, wenn Sie ein Wörterbuch verwenden. Stattdessen könnten Sie beispielsweise ebenso schnell iterativ ein `List<KeyValuePair\<K,V>>` durchsuchen. Wenn Sie ein Wörterbuch nur verwenden, um es mit Daten zu laden und dann daraus zu lesen (ein sehr übliches Muster), ist die Verwendung eines sortierten Arrays mit einer N(log(N))-Suche möglicherweise je nach Anzahl der verwendeten Elemente nahezu ebenso schnell.
   
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 - Es dreht sich alles um Zuordnungen: Hier hat das Compilerplattformteam die meiste Zeit mit der Optimierung der Leistung der neuen Compiler verbracht.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Video mit einer Darstellung dieses Themas](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Einführung in die Leistungsprofil Erstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Leistung](index.md)
-- [.NET-Leistungstipps](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
+- [.NET-Leistungstipps](/previous-versions/dotnet/articles/ms973839(v=msdn.10))
 - [Channel 9 PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform-SDK](../../csharp/roslyn-sdk/index.md)
 - [DotNet/Roslyn-Repository auf GitHub](https://github.com/dotnet/roslyn)

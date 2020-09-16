@@ -2,12 +2,12 @@
 title: Konfigurationsbasierte Aktivierung unter IIS und WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 5e1672f4dd67950178c95d3e043e16072fcd0ef4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f947a64acdf602d12fcd2319a1b994912ecb331e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593580"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556628"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Konfigurationsbasierte Aktivierung unter IIS und WAS
 
@@ -40,10 +40,10 @@ Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC
 > - Registrierungen in einer Konfigurationsdatei haben Vorrang vor Einstellungen in einer SVC-, XAMLX-, XOML- oder anderen Datei.
 > - Alle umgekehrten Schrägstriche ('\') in einem URI, der an IIS/WAS gesendet wird, werden automatisch in einen normalen Schrägstrich ('/') konvertiert. Wenn eine relative Adresse hinzugefügt wird, die '\' enthält, und Sie einen URI an IIS senden, für den die relative Adresse verwendet wird, wird der umgekehrte Schrägstrich in einen Schrägstrich konvertiert, und IIS kann keine Übereinstimmung mit der relativen Adresse herstellen. IIS sendet Ablaufverfolgungsinformationen, die angeben, dass keine Übereinstimmungen gefunden wurden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>
 - [Hosting-Dienste](../hosting-services.md)
 - [Übersicht über das Hosten von Workflowdiensten](hosting-workflow-services-overview.md)
 - [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

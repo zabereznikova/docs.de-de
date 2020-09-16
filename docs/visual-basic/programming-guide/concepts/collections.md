@@ -2,12 +2,12 @@
 title: Sammlungen
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91c6048caf622f21a02032bac31cb2ba5565c54c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400654"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551066"
 ---
 # <a name="collections-visual-basic"></a>Auflistungen (Visual Basic)
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>Definieren einer benutzerdefinierten Auflistung
 
-Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter Auflisten [einer Auflistung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
+Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter Auflisten [einer Auflistung](/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 Sie können zwar eine benutzerdefinierte Auflistung definieren, in der Regel ist es aber besser, die in .NET Framework enthaltenen Auflistungen zu verwenden. Diese werden unter [Arten von Auflistungen](#kinds-of-collections) weiter oben in diesem Thema beschrieben.
 
@@ -570,7 +570,7 @@ End Function
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Sammlungsinitialisierer](../language-features/collection-initializers/index.md)
+- [Auflistungsinitialisierer](../language-features/collection-initializers/index.md)
 - [Programmier Konzepte (Visual Basic)](index.md)
 - [Option Strict-Anweisung](../../language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (Visual Basic)](linq/linq-to-objects.md)

@@ -2,12 +2,12 @@
 title: Sicherheitsübersicht
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 8a036a40d2b1728f39037018c3672551b8b67bd9
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545023"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550689"
 ---
 # <a name="security-overview"></a>Sicherheitsübersicht
 
@@ -25,9 +25,9 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
 
  Das Erstellen von Gefahrenmodellen ist eine iterative Herangehensweise an die Bewertung von Sicherheitsrisiken in Ihrer Anwendung, bei der die gefährlichsten Sicherheitsrisiken herausgefunden werden sollen, also diejenigen, bei denen die Gefahr besteht, dass die Daten mit der höchsten Sicherheitsrelevanz in die falschen Hände gelangen. Nachdem Sie die Sicherheitsrisiken identifiziert haben, können Sie sie nach dem jeweiligen Risikograd sortieren und nach Priorität geordnete Gegenmaßnahmen einleiten.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-|Ressource|Beschreibung|
+|Ressource|BESCHREIBUNG|
 |--------------|-----------------|
 |Website zur [Bedrohungsmodellierung](https://www.microsoft.com/securityengineering/sdl/threatmodeling) im Security Engineering Portal|Die Ressourcen auf dieser Seite helfen Ihnen, den Prozess der Erstellung von Gefahrenmodellen besser zu verstehen und Gefahrenmodelle zu entwickeln, die Sie zum Absichern Ihrer eigenen Anwendungen verwenden können.|
 
@@ -40,7 +40,7 @@ Weitere Informationen finden Sie unter:
 
 Weitere Informationen zum Sichern Ihrer Anwendungen finden Sie in den folgenden Ressourcen:
 
-|Ressource|Beschreibung|
+|Ressource|BESCHREIBUNG|
 |--------------|-----------------|
 |[Sichern von Anwendungen](/visualstudio/ide/securing-applications)|Enthält Links zu allgemeinen Sicherheitsthemen. Außerdem finden Sie hier Links zu Themen, in denen das Absichern von verteilten Anwendungen, Webanwendungen, mobilen Anwendungen und Desktopanwendungen beschrieben wird.|
 
@@ -64,14 +64,14 @@ Die Codezugriffssicherheit (Code Access Security, CAS) ist ein Mechanismus, mit 
 
 Um im Falle eines erfolgreichen Angriffs den Schaden so gering wie möglich zu halten, sollten Sie für Ihren Code einen Sicherheitskontext wählen, der nur den Zugriff auf die Ressourcen gewährt, die zum Arbeiten wirklich benötigt werden.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-|Ressource|Beschreibung|
+|Ressource|BESCHREIBUNG|
 |--------------|-----------------|
 |[Codezugriffssicherheit und ADO.NET](code-access-security.md)|Beschreibt die Interaktionen zwischen der Codezugriffssicherheit, der rollenbasierten Sicherheit und teilweise vertrauenswürdigen Umgebungen aus der Sicht einer ADO.NET-Anwendung.|
 |[Codezugriffssicherheit](../../misc/code-access-security.md)|Enthält Links zu weiteren Themen mit Erläuterungen zu CAS in .NET Framework.|
 
-## <a name="database-security"></a>Sicherheit der Datenbank
+## <a name="database-security"></a>Datenbanksicherheit
 
 Das Prinzip der minimalen Rechtegewährung gilt auch für Ihre Datenquelle. Bei der Datenbanksicherheit gilt es folgende allgemeine Richtlinien zu beachten:
 
@@ -87,27 +87,27 @@ Das Prinzip der minimalen Rechtegewährung gilt auch für Ihre Datenquelle. Bei 
 
 - Aktivieren Sie die Sicherheitsüberwachung und -protokollierung für die von Ihnen verwendete Datenbank, sodass Sie bei Sicherheitsverletzungen entsprechend benachrichtigt werden.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-|Ressource|Beschreibung|
+|Ressource|BESCHREIBUNG|
 |--------------|-----------------|
-|[SQL Server Security (SQL Server-Sicherheit)](./sql/sql-server-security.md)|Bietet eine Übersicht über die SQL Server-Sicherheit mit Anwendungsszenarien, die wertvolle Hinweise zur Erstellung sicherer ADO.NET-Anwendungen geben, die auf SQL Server zugreifen.|
-|[Empfehlungen für Datenzugriffs Strategien](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|
+|[SQL Server Sicherheit](./sql/sql-server-security.md)|Bietet eine Übersicht über die SQL Server-Sicherheit mit Anwendungsszenarien, die wertvolle Hinweise zur Erstellung sicherer ADO.NET-Anwendungen geben, die auf SQL Server zugreifen.|
+|[Empfehlungen für Datenzugriffs Strategien](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|
 
 ## <a name="security-policy-and-administration"></a>Sicherheitsrichtlinie und Verwaltung
 
 Eine unsachgemäße Verwaltung der CAS-Richtlinie kann potenziell die Sicherheit schwächen. Nach dem Bereitstellen einer Anwendung sollten Verfahren zum Überwachen der Sicherheit eingesetzt und regelmäßige Risikobewertungen vorgenommen werden.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-|Ressource|Beschreibung|
+|Ressource|BESCHREIBUNG|
 |--------------|-----------------|
-|[Verwaltung von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Enthält Informationen zum Erstellen und Verwalten einer Sicherheitsrichtlinie.|
-|[Bewährte Methoden für Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Enthält Links zu Themen, in denen die Verwaltung einer Sicherheitsrichtlinie beschrieben wird.|
+|[Verwaltung von Sicherheitsrichtlinien](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Enthält Informationen zum Erstellen und Verwalten einer Sicherheitsrichtlinie.|
+|[Bewährte Methoden für Sicherheitsrichtlinien](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Enthält Links zu Themen, in denen die Verwaltung einer Sicherheitsrichtlinie beschrieben wird.|
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
 - [Sicherheit in .NET](../../../standard/security/index.md)
-- [SQL Server Security (SQL Server-Sicherheit)](./sql/sql-server-security.md)
+- [SQL Server Sicherheit](./sql/sql-server-security.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

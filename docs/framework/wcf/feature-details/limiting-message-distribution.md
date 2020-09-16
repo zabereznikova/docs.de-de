@@ -2,12 +2,12 @@
 title: Beschränken der Nachrichtenverteilung
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e736aba60d7d2b39d1b8eb958a8c72e6e8d55e13
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586311"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555015"
 ---
 # <a name="limiting-message-distribution"></a>Beschränken der Nachrichtenverteilung
 
@@ -19,7 +19,7 @@ Das `PeerHopCount`-Konzept ähnelt dem im IP verwendeten TTL (Time-To-Live)-Konz
 
 Sie können die Hopanzahl zu einer Nachricht hinzufügen, indem Sie `PeerHopCount` bei der Implementierung der Nachrichtenklasse als Attribut zu der anwendbaren Eigenschaft oder dem anwendbaren Feld hinzufügen. Sie können hierfür vor dem Senden der Nachricht an das Netz einen bestimmten Wert festlegen. Auf diese Weise kann die Verteilung von Nachrichten innerhalb des Netzes mithilfe der Hopanzahl gegebenenfalls eingeschränkt werden, was zu einer Verringerung unnötiger doppelter Nachrichten führen kann. Dies ist hilfreich, wenn das Netz eine große Menge redundanter Daten enthält oder wenn Nachrichten nur an direkte Nachbarn (oder an Nachbarn, die nur wenige Hops entfernt sind) gesendet werden sollen.
 
-- Code Ausschnitte und zugehörige Informationen finden Sie im Peer Channel-Blog im [PeerHopCount-Attribut: Steuern der Nachrichten Verteilung](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) .
+- Code Ausschnitte und zugehörige Informationen finden Sie im Peer Channel-Blog im [PeerHopCount-Attribut: Steuern der Nachrichten Verteilung](/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) .
 
 ## <a name="message-propagation-filter"></a>Nachrichtenweitergabefilter
 
@@ -27,7 +27,7 @@ Sie können die Hopanzahl zu einer Nachricht hinzufügen, indem Sie `PeerHopCoun
 
 <xref:System.ServiceModel.PeerMessagePropagationFilter> ist eine abstrakte Basisklasse mit einer einzelnen Funktion: <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Das erste Argument des Methodenaufrufs übergibt eine vollständige Kopie der Nachricht. Änderungen an der Nachricht wirken sich nicht auf die eigentliche Nachricht aus. Das letzte Argument des Methodenaufrufs identifiziert den Ursprung der Nachricht (`PeerMessageOrigination.Local` oder `PeerMessageOrigination.Remote`). Konkrete Implementierungen dieser Methode müssen eine Konstante aus der <xref:System.ServiceModel.PeerMessagePropagation>-Enumeration zurückgeben, die angibt, dass die Nachricht an die lokale Anwendung (`Local`), an Remoteclients (`Remote`), an beide dieser Optionen (`LocalAndRemote`) oder an keine dieser Optionen (`None`) weitergeleitet werden soll. Sie können diesen Filter durch Zugreifen auf das entsprechende `PeerNode`-Objekt und Angeben einer Instanz der abgeleiteten Weitergabefilterklasse in der `PeerNode.MessagePropagationFilter`-Eigenschaft anwenden. Vergewissern Sie sich vor dem Öffnen des Peerkanals, dass der Weitergabefilter angefügt ist.
 
-- Code Ausschnitte und zugehörige Informationen finden Sie im Peer [Channel-und MessagePropagationFilter-](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) Beitrag im Peerkanal-Blog.
+- Code Ausschnitte und zugehörige Informationen finden Sie im Peer [Channel-und MessagePropagationFilter-](/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) Beitrag im Peerkanal-Blog.
 
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>Kontaktieren eines einzelnen Netzknotens
 
@@ -69,6 +69,6 @@ Die Antworten auf die Fragen können Ihnen die Entscheidung für eine der Method
 
   - *Niedrig*: eine beliebige, direkte Verbindung ist wahrscheinlich nicht erforderlich.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erstellen einer Peerkanalanwendung](building-a-peer-channel-application.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - elements, finding by property conditions
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-ms.openlocfilehash: 5e5fa4fde9049bd87b2722fa9b7d084d96ff6f42
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 112f38d6bef726f92dbf13da70b88732929175dd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168441"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557683"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung
 > [!NOTE]
@@ -31,8 +31,8 @@ ms.locfileid: "87168441"
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Beispiel für das Menü Element "InvokePattern" und "expandredusepattern"](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771636(v=vs.90))
+- [Beispiel für das Menü Element "InvokePattern" und "expandredusepattern"](/previous-versions/dotnet/netframework-3.5/ms771636(v=vs.90))
 - [Abrufen von Benutzeroberflächenautomatisierungs-Elementen](obtaining-ui-automation-elements.md)
 - [Verwenden der AutomationID-Eigenschaft](use-the-automationid-property.md)

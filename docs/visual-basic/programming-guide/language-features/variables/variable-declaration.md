@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 587cb84faa09b686361c255c413ad852780b8971
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e3e2b6173a36490328801afd7fe711f1a003e2ae
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410295"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557475"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Variablendeklaration in Visual Basic
 Sie deklarieren eine Variable, um deren Namen und Merkmale anzugeben. Die Deklarations Anweisung für Variablen ist die [Dim-Anweisung](../../../language-reference/statements/dim-statement.md). Speicherort und Inhalt bestimmen die Merkmale der Variablen.  
@@ -42,15 +42,15 @@ Sie deklarieren eine Variable, um deren Namen und Merkmale anzugeben. Die Deklar
 ## <a name="declaring-data-type"></a>Deklarierender Datentyp  
  Mit der [As](../../../language-reference/statements/as-clause.md) -Klausel in der Deklarations Anweisung können Sie den Datentyp oder Objekttyp der Variablen definieren, die Sie deklarieren. Sie können einen der folgenden Typen für eine Variable angeben:  
   
-- Ein grundlegender Datentyp, z. b. `Boolean` , `Long` oder.`Decimal`  
+- Ein grundlegender Datentyp, z. b. `Boolean` , `Long` oder. `Decimal`  
   
 - Ein zusammengesetzter Datentyp, z. b. ein Array oder eine Struktur.  
   
 - Ein Objekttyp oder eine Klasse, die entweder in der Anwendung oder in einer anderen Anwendung definiert ist.  
   
-- Eine .NET Framework Klasse, z. b. <xref:System.Windows.Forms.Label> oder.<xref:System.Windows.Forms.TextBox>  
+- Eine .NET Framework Klasse, z. b. <xref:System.Windows.Forms.Label> oder. <xref:System.Windows.Forms.TextBox>  
   
-- Ein Schnittstellentyp, z. b. <xref:System.IComparable> oder.<xref:System.IDisposable>  
+- Ein Schnittstellentyp, z. b. <xref:System.IComparable> oder. <xref:System.IDisposable>  
   
  Sie können mehrere Variablen in einer Anweisung deklarieren, ohne den Datentyp wiederholen zu müssen. In den folgenden-Anweisungen werden die Variablen, `i` `j` und `k` als-Typ und als und als und `Integer` `l` als deklariert `m` `Long` `x` `y` `Single` :  
   
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Weitere Informationen zu-Datentypen finden Sie unter [Datentypen](../data-types/index.md). Weitere Informationen zu-Objekten finden Sie unter [Objekte und Klassen](../objects-and-classes/index.md) und [Programmieren mit-Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Weitere Informationen zu-Datentypen finden Sie unter [Datentypen](../data-types/index.md). Weitere Informationen zu-Objekten finden Sie unter [Objekte und Klassen](../objects-and-classes/index.md) und [Programmieren mit-Komponenten](/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Lokaler Typrückschluss  
  Der *Typrückschluss* wird verwendet, um die Datentypen von lokalen Variablen zu bestimmen, die ohne-Klausel deklariert werden `As` . Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungs Ausdrucks ab. Dadurch können Sie Variablen deklarieren, ohne explizit einen Typ anzugeben. Im folgenden Beispiel werden sowohl als `num1` auch `num2` als ganze Zahlen stark typisiert.  
@@ -77,13 +77,13 @@ Dim l, m As Long, x, y As Single
   
  Die *Zugriffsebene* einer Variablen ist der Umfang des Codes, der über die entsprechende Zugriffsberechtigung verfügt. Dies wird durch den Zugriffsmodifizierer (z. b. [öffentlich](../../../language-reference/modifiers/public.md) oder [Privat](../../../language-reference/modifiers/private.md)) bestimmt, den Sie in der- `Dim` Anweisung verwenden. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../declared-elements/access-levels.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Erstellen einer neuen Variablen](how-to-create-a-new-variable.md)
 - [Vorgehensweise: Verschieben von Daten in eine und aus einer Variablen](how-to-move-data-into-and-out-of-a-variable.md)
 - [Datentypen](../../../language-reference/data-types/index.md)
 - [Gebieten](../../../language-reference/modifiers/protected.md)
-- [Kollegen](../../../language-reference/modifiers/friend.md)
+- [Friend](../../../language-reference/modifiers/friend.md)
 - [Statisch](../../../language-reference/modifiers/static.md)
 - [Merkmale deklarierter Elemente](../declared-elements/declared-element-characteristics.md)
 - [Lokaler Typrückschluss](local-type-inference.md)

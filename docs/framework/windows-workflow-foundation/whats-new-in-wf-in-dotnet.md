@@ -3,12 +3,12 @@ title: Neues in Windows Workflow Foundation in .NET 4.5
 description: Windows Workflow Foundation in .NET Framework 4,5 führt viele neue Features ein, z. b. neue Aktivitäten, Designer Funktionen und Workflow Entwicklungsmodelle.
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 85555e48929885b6eef7fde6ac0c9017fa403d4d
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419459"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556615"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Neues in Windows Workflow Foundation in .NET 4.5
 
@@ -22,7 +22,7 @@ Windows Workflow Foundation (WF) in .NET Framework 4,5 führt viele neue Feature
 >
 > **Das Dateiformat ist mit dem aktuellen Ziel Ziel Framework nicht kompatibel. Speichern Sie die Datei explizit, um das Dateiformat zu konvertieren. Diese Fehlermeldung wird entfernt, nachdem Sie die Datei gespeichert und den Designer erneut geöffnet haben.**
 
-## <a name="workflow-versioning"></a><a name="BKMK_Versioning"></a>Workflow Versionsverwaltung
+## <a name="workflow-versioning"></a><a name="BKMK_Versioning"></a> Workflow Versionsverwaltung
 
 In .NET Framework 4,5 wurden mehrere neue Versions Verwaltungsfunktionen eingeführt, die auf der neuen <xref:System.Activities.WorkflowIdentity> Klasse basieren. <xref:System.Activities.WorkflowIdentity> bietet Anwendern von Workflowanwendungen einen Mechanismus, um ihrer Definition eine persistente Workflowinstanz zuzuordnen.
 
@@ -34,15 +34,15 @@ In .NET Framework 4,5 wurden mehrere neue Versions Verwaltungsfunktionen eingef�
 
 - Ein sqlworkflowinstancestoreschemaupgrade. SQL-Datenbankskript wird zur Aktualisierung von Persistenzdatenbanken bereitgestellt, die mit den .NET Framework 4-Daten Bank Skripts erstellt Dieses Skript aktualisiert .NET Framework 4-Persistenzdatenbanken zur Unterstützung der neuen Versions Verwaltungsfunktionen in .NET Framework 4,5. Den persistenten Workflowinstanzen in der Datenbank werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein. Weitere Informationen finden [Sie unter Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflow Versions](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)Verwaltung.
 
-## <a name="activities"></a><a name="BKMK_NewActivities"></a>Aktivitäts
+## <a name="activities"></a><a name="BKMK_NewActivities"></a> Aktivitäts
 
 Die integrierte Aktivitätsbibliothek enthält neue Aktivitäten und neue Funktionen für vorhandene Aktivitäten.
 
-### <a name="nopersist-scope"></a><a name="BKMK_NoPersistScope"></a>Nopersist-Bereich
+### <a name="nopersist-scope"></a><a name="BKMK_NoPersistScope"></a> Nopersist-Bereich
 
 <xref:System.Activities.Statements.NoPersistScope> ist eine neue Containeraktivität, die verhindert, dass ein Workflow persistent gespeichert wird, wenn die untergeordneten Aktivitäten von NoPersistScopes ausgeführt werden. Dies ist in Szenarien hilfreich, in denen die persistente Speicherung des Workflows nicht angebracht ist, beispielsweise, wenn der Workflow computerspezifische Ressourcen wie Dateihandles verwendet, oder im Verlauf von Datenbanktransaktionen. Um zu vermeiden, dass die Persistenz während der Ausführung einer Aktivität auftritt, war früher eine benutzerdefinierte <xref:System.Activities.NativeActivity> erforderlich, die einen <xref:System.Activities.NoPersistHandle> verwendete.
 
-### <a name="new-flowchart-capabilities"></a><a name="BKMK_NewFlowchartCapabilities"></a>Neue Flussdiagramm Funktionen
+### <a name="new-flowchart-capabilities"></a><a name="BKMK_NewFlowchartCapabilities"></a> Neue Flussdiagramm Funktionen
 
 Flussdiagramme werden für .NET Framework 4,5 aktualisiert und haben die folgenden neuen Funktionen:
 
@@ -73,7 +73,7 @@ Workflows in .NET Framework 4 erfordern eine voll vertrauenswürdige Anwendungsd
 
      Wenn Ausnahmen nicht serialisiert werden müssen, stellen Sie sicher, dass Ausnahmen in <xref:System.Activities.Statements.NoPersistScope> verwendet werden.
 
-4. Aktivitätsautoren sollten <xref:System.Activities.Activity.CacheMetadata%2A> überschreiben, damit während der Workflowlaufzeit nicht automatisch eine Reflektion für den Typ ausgeführt wird. Argumente und untergeordnete Aktivitäten dürfen nicht NULL sein, und <xref:System.Activities.ActivityMetadata.Bind%2A> muss explizit aufgerufen werden. Weitere Informationen zum Überschreiben von finden Sie unter verfügbar machen von <xref:System.Activities.Activity.CacheMetadata%2A> [Daten mit CacheMetadata](exposing-data-with-cachemetadata.md). Außerdem müssen Instanzen von Argumenten eines Typs, die `internal` oder **Privat** sind, explizit in erstellt werden <xref:System.Activities.Activity.CacheMetadata%2A> , um zu vermeiden, dass Sie durch Reflektion erstellt werden.
+4. Aktivitätsautoren sollten <xref:System.Activities.Activity.CacheMetadata%2A> überschreiben, damit während der Workflowlaufzeit nicht automatisch eine Reflektion für den Typ ausgeführt wird. Argumente und untergeordnete Aktivitäten dürfen nicht NULL sein, und <xref:System.Activities.ActivityMetadata.Bind%2A> muss explizit aufgerufen werden. Weitere Informationen zum Überschreiben von finden Sie unter verfügbar machen von <xref:System.Activities.Activity.CacheMetadata%2A> [Daten mit CacheMetadata](exposing-data-with-cachemetadata.md). Außerdem müssen Instanzen von Argumenten eines Typs, die `internal` oder **Privat** sind, explizit in erstellt werden  <xref:System.Activities.Activity.CacheMetadata%2A> , um zu vermeiden, dass Sie durch Reflektion erstellt werden.
 
 5. Die Typen verwenden nicht <xref:System.Runtime.Serialization.ISerializable> oder <xref:System.SerializableAttribute> für die Serialisierung. Die zu serialisierenden Typen müssen <xref:System.Runtime.Serialization.DataContractSerializer> unterstützen.
 
@@ -81,11 +81,11 @@ Workflows in .NET Framework 4 erfordern eine voll vertrauenswürdige Anwendungsd
 
 7. Ausdrücke können nicht mit <xref:System.Activities.XamlIntegration.TextExpressionCompiler> oder dem von Visual Basic gehosteten Compiler für teilweise Vertrauenswürdigkeit kompiliert werden, zuvor kompilierte Ausdrücke können jedoch ausgeführt werden.
 
-8. Eine einzelne Assembly, die [Transparenz der Ebene 2](https://aka.ms/Level2Transparency) verwendet, kann nicht in .NET Framework 4, [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] bei voller Vertrauenswürdigkeit und [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in teilweiser Vertrauenswürdigkeit verwendet werden.
+8. Eine einzelne Assembly, die [Transparenz der Ebene 2](../misc/security-transparent-code-level-2.md) verwendet, kann nicht in .NET Framework 4, [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] bei voller Vertrauenswürdigkeit und [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in teilweiser Vertrauenswürdigkeit verwendet werden.
 
-## <a name="new-designer-capabilities"></a><a name="BKMK_NewDesignerCapabilites"></a>Neue Designer-Funktionen
+## <a name="new-designer-capabilities"></a><a name="BKMK_NewDesignerCapabilites"></a> Neue Designer-Funktionen
 
-### <a name="designer-search"></a><a name="BKMK_DesignerSearch"></a>Designer Suche
+### <a name="designer-search"></a><a name="BKMK_DesignerSearch"></a> Designer Suche
 
 Um größere Workflows überschaubarer zu halten, können sie jetzt nach Schlüsselwort durchsucht werden. Diese Funktion ist nur in Visual Studio verfügbar. Diese Funktion ist in einem neu gehosteten Designer nicht verfügbar. Es gibt zwei Arten von Suchen:
 
@@ -95,7 +95,7 @@ Um größere Workflows überschaubarer zu halten, können sie jetzt nach Schlüs
 
 Beachten Sie, dass der Ersetzungsvorgang nicht unterstützt wird.
 
-#### <a name="quick-find"></a><a name="BKMK_QuickFind"></a>Schnellsuche
+#### <a name="quick-find"></a><a name="BKMK_QuickFind"></a> Schnellsuche
 
 Schlüsselwörter, die in den Workflows gesucht werden, entsprechen den folgenden Designerelementen:
 
@@ -109,11 +109,11 @@ Schlüsselwörter, die in den Workflows gesucht werden, entsprechen den folgende
 
 Die Schnellsuche wird in der <xref:System.Activities.Presentation.Model.ModelItem>-Struktur des Designers ausgeführt. Die Schnellsuche findet keine Namespaces, die in die Workflowdefinition importiert wurden.
 
-#### <a name="find-in-files"></a><a name="BKMK_FindInFiles"></a>In Dateien suchen
+#### <a name="find-in-files"></a><a name="BKMK_FindInFiles"></a> In Dateien suchen
 
 Schlüsselwörter, die in den Workflows gesucht werden, stimmen mit dem tatsächlichen Inhalt der Workflowdateien überein. Die Suchergebnisse werden im Visual Studio-Ansichtsbereich Suchergebnisse angezeigt. Durch Doppelklicken auf das Ergebniselement navigieren Sie im Workflow-Designer zur Aktivität, in der die Übereinstimmung enthalten ist.
 
-### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a><a name="BKMK_VariableDeleteContextMenu"></a>Kontextmenü Element im Variablen-und Argument-Designer löschen
+### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a><a name="BKMK_VariableDeleteContextMenu"></a> Kontextmenü Element im Variablen-und Argument-Designer löschen
 
 In .NET Framework 4 konnten Variablen und Argumente nur im Designer mit der Tastatur gelöscht werden. Ab .NET Framework 4,5 können Variablen und Argumente über das Kontextmenü gelöscht werden.
 
@@ -121,7 +121,7 @@ Das folgende Bildschirmfoto zeigt das Kontextmenü des Variablen- und Argument-D
 
 ![Kontextmenü des Variablen- und Argument-Designers](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
-### <a name="auto-surround-with-sequence"></a><a name="BKMK_AutoSurround"></a>Automatisches umschließen mit Sequenz
+### <a name="auto-surround-with-sequence"></a><a name="BKMK_AutoSurround"></a> Automatisches umschließen mit Sequenz
 
 Da ein Workflow oder bestimmte Containeraktivitäten (z. B. <xref:System.Activities.Statements.NoPersistScope>) nur eine einzelne Textkörperaktivität enthalten können, musste der Entwickler zum Hinzufügen einer zweiten Aktivität die erste Aktivität löschen, eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzufügen und der Sequenzaktivität dann beide Aktivitäten hinzufügen. Beginnend mit .NET Framework 4,5 wird beim Hinzufügen einer zweiten Aktivität zur Designer Oberfläche automatisch eine- `Sequence` Aktivität erstellt, um beide Aktivitäten zu umschließen.
 
@@ -133,7 +133,7 @@ Die folgende Bildschirmaufnahme zeigt die automatisch erstellte `Sequence`-Aktiv
 
 ![Eine automatisch erstellte Sequenz im Text eines nopersistscope.](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
-### <a name="pan-mode"></a><a name="BKMK_PanMode"></a>Schwenk Modus
+### <a name="pan-mode"></a><a name="BKMK_PanMode"></a> Schwenk Modus
 
 Um in einem umfangreichen Workflow einfacher im Designer zu navigieren, kann der Schwenkmodus aktiviert werden, der es dem Entwickler ermöglicht, den sichtbaren Teil des Workflows durch Klicken und Ziehen zu verschieben, anstatt die Bildlaufleisten zu verwenden. Die Schaltfläche zum Aktivieren des Schwenkmodus befindet sich in der rechten unteren Ecke des Designers.
 
@@ -143,13 +143,13 @@ Das folgende Bildschirmfoto zeigt die Schaltfläche zum Schwenken, die sich in d
 
 Die mittlere Maustaste oder die LEERTASTE kann ebenfalls verwendet werden, um den Workflow-Designer zu schwenken.
 
-### <a name="multi-select"></a><a name="BKMK_MultiSelect"></a>Mehrfachauswahl
+### <a name="multi-select"></a><a name="BKMK_MultiSelect"></a> Mehrfachauswahl
 
 Mehrere Aktivitäten können gleichzeitig ausgewählt werden, indem Sie entweder ein Rechteck darum ziehen (wenn der Schwenkmodus nicht aktiviert ist), oder indem Sie die STRG-TASTE gedrückt halten und nacheinander auf die gewünschten Aktivitäten klicken.
 
 Mehrere ausgewählte Aktivitäten können auch im Designer gezogen und abgelegt und über das Kontextmenü bearbeitet werden.
 
-### <a name="outline-view-of-workflow-items"></a><a name="BKMK_DocumentOutline"></a>Gliederungsansicht von Workflow Elementen
+### <a name="outline-view-of-workflow-items"></a><a name="BKMK_DocumentOutline"></a> Gliederungsansicht von Workflow Elementen
 
 Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungs Ansicht wird in der Ansicht **Dokument** Gliederung angezeigt. Um diese Ansicht zu öffnen, wählen Sie im oberen Menü **Ansicht**, **Weitere Fenster**, **Dokument**Gliederung aus, oder drücken Sie STRG W, U. Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen.
 
@@ -157,7 +157,7 @@ Der folgende Screenshot des abgeschlossenen Workflows aus dem [Tutorial "Getting
 
 ![Screenshot der Gliederungs Ansicht mit einem sequenziellen Workflow in Visual Studio.](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
-### <a name="c-expressions"></a><a name="BKMK_CSharpExpressions"></a>C#-Ausdrücke
+### <a name="c-expressions"></a><a name="BKMK_CSharpExpressions"></a> C#-Ausdrücke
 
 Vor .NET Framework 4,5 konnten alle Ausdrücke in Workflows nur in Visual Basic geschrieben werden. In .NET Framework 4,5 werden Visual Basic Ausdrücke nur für Projekte verwendet, die mit Visual Basic erstellt werden. Visual C#-Projekte verwenden jetzt die Programmiersprache C# für Ausdrücke. Ein voll funktionaler C#-Ausdrucks-Editor wird mit Funktionen wie IntelliSense und der Hervorhebung grammatikalischer Fehler bereitgestellt. Die in früheren Versionen erstellten C#-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, sind weiterhin funktionsfähig.
 
@@ -165,11 +165,11 @@ C#-Ausdrücke werden zur Entwurfszeit validiert. Fehler in C#-Ausdrücken werden
 
 Weitere Informationen zu c#-Ausdrücken finden Sie unter [c#-Ausdrücke](csharp-expressions.md).
 
-### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a><a name="BKMK_Visibility"></a>Mehr Kontrolle über die Sichtbarkeit der shellleiste und der Header Elemente
+### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a><a name="BKMK_Visibility"></a> Mehr Kontrolle über die Sichtbarkeit der shellleiste und der Header Elemente
 
 In einem neu gehosteten Designer sind einige standardmäßigen Benutzeroberflächen-Steuerelemente für einen bestimmten Workflow möglicherweise bedeutungslos und deaktiviert. In .NET Framework 4 wird diese Anpassung nur von der shellleiste am unteren Rand des Designers unterstützt. In .NET Framework 4,5 kann die Sichtbarkeit von shellheadern am oberen Rand des Designers angepasst werden, indem <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> mit dem entsprechenden Wert festgelegt wird <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> .
 
-### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a><a name="BKMK_AutoConnect"></a>Automatisches Verbinden und automatisches Einfügen in Flussdiagramm-und Zustandsautomatworkflows
+### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a><a name="BKMK_AutoConnect"></a> Automatisches Verbinden und automatisches Einfügen in Flussdiagramm-und Zustandsautomatworkflows
 
 In .NET Framework 4 mussten Verbindungen zwischen Knoten in einem Flussdiagramm-Workflow manuell hinzugefügt werden. In .NET Framework 4,5 verfügen Flussdiagramm-und Zustands Automaten Knoten über automatische Verbindungspunkte, die sichtbar werden, wenn eine Aktivität aus der Toolbox auf die Designer Oberfläche gezogen wird. Durch Ablegen einer Aktivität auf einem dieser Punkte wird die Aktivität automatisch zusammen mit der erforderlichen Verbindung hinzugefügt.
 
@@ -181,7 +181,7 @@ Aktivitäten können auch auf Verbindungen zwischen Flussdiagrammknoten und -zus
 
 ![AutoEinfügen-Handle zum Ablegen von Aktivitäten](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
-### <a name="designer-annotations"></a><a name="BKMK_Annotations"></a>Designer-Anmerkungen
+### <a name="designer-annotations"></a><a name="BKMK_Annotations"></a> Designer-Anmerkungen
 
 Zur einfacheren Entwicklung größerer Workflows unterstützt der Designer jetzt das Hinzufügen von Anmerkungen, um den Entwurfsprozess nachzuverfolgen. Aktivitäten, Zustände, Flussdiagrammknoten, Variablen und Argumente können mit Anmerkungen versehen werden. Das folgende Bildschirmfoto zeigt das Kontextmenü, das verwendet wird, um dem Designer Anmerkungen hinzuzufügen.
 
@@ -191,37 +191,37 @@ Zur einfacheren Entwicklung größerer Workflows unterstützt der Designer jetzt
 
 In .NET Framework 4 konnten nicht aktivitätenelemente debugbreakpunkte nicht unterstützen, da Sie keine Ausführungs Einheiten sind. Dieses Release stellt einen Mechanismus bereit, um <xref:System.Activities.Statements.State>-Objekten Haltepunkte hinzuzufügen. Wenn ein Haltepunkt für <xref:System.Activities.Statements.State> festgelegt wird, wird die Ausführung unterbrochen, wenn vor der Planung der Eintragsaktivitäten oder Trigger ein Zustandsübergang stattfindet.
 
-### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a><a name="BKMK_ActivityDelegates"></a>Definieren und Verarbeiten von activitydelegatobjekten im Designer
+### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a><a name="BKMK_ActivityDelegates"></a> Definieren und Verarbeiten von activitydelegatobjekten im Designer
 
 Die Aktivitäten in .NET Framework 4 verwendeten <xref:System.Activities.ActivityDelegate> Objekte zum verfügbar machen von Ausführungs Punkten, an denen andere Teile des Workflows mit der Ausführung eines Workflows interagieren konnten, aber die Verwendung dieser Ausführungs Punkte erforderte in der Regel eine ziemlich große Menge an Code. In diesem Release können Entwickler die Aktivitätsdelegaten mit dem Workflow-Designer definieren und nutzen. Weitere Informationen finden Sie unter Gewusst [wie: definieren und](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)verarbeiten von Aktivitäts Delegaten im Workflow-Designer.
 
-### <a name="build-time-validation"></a><a name="BKMK_BuildTimeValidation"></a>Überprüfung der Build-Zeit
+### <a name="build-time-validation"></a><a name="BKMK_BuildTimeValidation"></a> Überprüfung der Build-Zeit
 
 In .NET Framework 4 wurden Workflow Validierungs Fehler während der Erstellung eines Workflow Projekts nicht als Buildfehler gezählt. Das bedeutete, dass das Erstellen eines Workflowprojekts erfolgreich gewesen sein konnte, obwohl Workflowvalidierungsfehler auftraten. In .NET Framework 4,5 bewirken Workflow Validierungs Fehler, dass der Build fehlschlägt.
 
-### <a name="design-time-background-validation"></a><a name="BKMK_DesignTimeValidation"></a>Hintergrund Validierung zur Entwurfszeit
+### <a name="design-time-background-validation"></a><a name="BKMK_DesignTimeValidation"></a> Hintergrund Validierung zur Entwurfszeit
 
 In .NET Framework 4 wurden Workflows als Vordergrund Prozess überprüft, der die Benutzeroberfläche bei komplexen oder zeitaufwändigen Validierungs Prozessen potenziell blockieren kann. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.
 
-### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a><a name="BKMK_ViewState"></a>Ansichts Zustand an einem anderen Speicherort in XAML-Dateien
+### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a><a name="BKMK_ViewState"></a> Ansichts Zustand an einem anderen Speicherort in XAML-Dateien
 
 In .NET Framework 4 werden die Ansichts Zustandsinformationen für einen Workflow in der XAML-Datei an vielen verschiedenen Speicherorten gespeichert. Dies ist für Entwickler, die XAML direkt lesen oder Code zum Entfernen von Ansichtszustandsinformationen schreiben möchten, ungünstig. In .NET Framework 4,5 werden die Ansichts Zustandsinformationen in der XAML-Datei als separates Element in der XAML-Datei serialisiert. Entwickler können die Ansichts Zustandsinformationen einer Aktivität leicht finden und bearbeiten oder den Ansichts Zustand vollständig entfernen.
 
-### <a name="expression-extensibility"></a><a name="BKMK_ExpressionExtensibility"></a>Ausdrucks Erweiterbarkeit
+### <a name="expression-extensibility"></a><a name="BKMK_ExpressionExtensibility"></a> Ausdrucks Erweiterbarkeit
 
 In .NET Framework 4,5 bieten wir Entwicklern die Möglichkeit, eigene Ausdrucks-und Ausdrucks Erstellungs Funktionen zu erstellen, die an den Workflow-Designer angeschlossen werden können.
 
-### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a><a name="BKMK_BackwardCompatRehostedDesigner"></a>Aktivieren von Workflow 4,5-Funktionen im neu gehosteten Designer
+### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a><a name="BKMK_BackwardCompatRehostedDesigner"></a> Aktivieren von Workflow 4,5-Funktionen im neu gehosteten Designer
 
 Um die Abwärtskompatibilität aufrechtzuerhalten, sind einige neue Features, die in .NET Framework 4,5 enthalten sind, im neu gehosteten Designer standardmäßig nicht aktiviert. Dadurch wird sichergestellt, dass vorhandene Anwendungen, die den neu gehosteten Designer verwenden, nicht beeinträchtigt werden, indem ein Update auf die neueste Version ausgeführt wird. Um neue Funktionen im neu gehosteten Designer zu aktivieren, legen Sie entweder <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> auf „.NET Framework 4.5“ oder einzelne Member von <xref:System.Activities.Presentation.DesignerConfigurationService> fest, um einzelne Funktionen zu aktivieren.
 
-## <a name="new-workflow-development-models"></a><a name="BKMK_NewWFModels"></a>Neue Workflow Entwicklungsmodelle
+## <a name="new-workflow-development-models"></a><a name="BKMK_NewWFModels"></a> Neue Workflow Entwicklungsmodelle
 
 Zusätzlich zu den Entwicklungsmodellen für sequenzielle oder Flussdiagramm-Workflows umfasst dieses Release Zustandsautomatworkflows und Vertrag zuerst-Workflowdienste.
 
-### <a name="state-machine-workflows"></a><a name="BKMK_StateMachine"></a>Zustandsautomatworkflows
+### <a name="state-machine-workflows"></a><a name="BKMK_StateMachine"></a> Zustandsautomatworkflows
 
-Zustandsautomatworkflows wurden als Teil der .NET Framework 4, Version 4.0.1, im [Microsoft .NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:
+Zustandsautomatworkflows wurden als Teil der .NET Framework 4, Version 4.0.1, im [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:
 
 1. Festlegen von Haltepunkten für Zustände
 
@@ -237,6 +237,6 @@ Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus de
 
 Weitere Informationen zum Erstellen von Zustands Automaten Workflows finden Sie [State Machine Workflows](state-machine-workflows.md)unter Zustandsautomatworkflows.
 
-### <a name="contract-first-workflow-development"></a><a name="BKMK_ContractFirst"></a>Vertrag zuerst-Workflow Entwicklung
+### <a name="contract-first-workflow-development"></a><a name="BKMK_ContractFirst"></a> Vertrag zuerst-Workflow Entwicklung
 
 Mit dem Contract-First-Workflow-Entwicklungs Tool können Entwickler zunächst einen Vertrag im Code entwerfen und dann mit wenigen Klicks in Visual Studio automatisch eine Aktivitäts Vorlage in der Toolbox generieren, die die einzelnen Vorgänge darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Diensten finden Sie unter Gewusst [wie: Erstellen eines Workflow Dienstanbieter, der einen vorhandenen Dienstvertrag](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)verwendet.

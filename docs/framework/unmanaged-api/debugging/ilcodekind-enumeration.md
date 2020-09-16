@@ -12,12 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 0586b9e184a0958b978837601db002e035881cbc
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9d27c3e3cd42039aeefcb517ecc81eadeb5c183
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421032"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557423"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind-Enumeration
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -56,4 +56,4 @@ typedef enum ILCodeKind {
 
 - [Debugenumerationen](debugging-enumerations.md)
 - [ICorDebugILFrame4-Schnittstelle](icordebugilframe4-interface.md)
-- [ReJIT: Anleitung](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: Anleitung](/archive/blogs/davbr/rejit-a-how-to-guide)

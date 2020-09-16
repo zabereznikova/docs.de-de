@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: 97db059c33e8c5603c2bf54bbcf128612a0d028f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398395"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554383"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Erste Schritte mit LINQ in Visual Basic
 Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen, die Ihnen helfen, Visual Basic und sprach integrierte Abfrage (Language-Integrated Query, LINQ) zu verstehen und zu verwenden.  
@@ -53,7 +53,7 @@ Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen, 
  [LINQ to Objects (Visual Basic)](linq-to-objects.md)  
  Enthält eine Auswahl von Themen zur Vorgehensweise bei der Verwendung von LINQ mit in-Memory-Auflistungen.  
   
- [LINQ to XML (Visual Basic)](linq-to-xml.md)  
+ [LINQ to XML (Visual Basic)](../../../../standard/linq/linq-xml-overview.md)  
  Umfasst Links zu Themen, in denen die Verwendung von LINQ to XML erläutert wird, wodurch die speicherresidenten Dokumentänderungsfunktionen des Dokumentobjektmodells (Document Object Model, DOM) bereitgestellt werden, und unterstützt LINQ-Abfrageausdrücke.  
   
  [Language Integrated Query (LINQ) (Visual Basic)](index.md)  

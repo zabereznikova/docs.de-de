@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: baf13af39fe575a75f1304b21f3b4ad70dd370ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bfdf2b057c791da7e15619d69c0314557944093
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597318"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555834"
 ---
 # <a name="host-in-internet-information-services"></a>In Internetinformationsdienste hosten
 
@@ -25,7 +25,7 @@ WCF kann auf den folgenden Versionen von IIS unter den folgenden Betriebssysteme
 
 - IIS 7.0 unter Windows Vista und Windows Server 2008. IIS 7,0 bietet dasselbe erweiterte Prozessmodell wie IIS 6,0, verwendet jedoch den Windows-Prozess Aktivierungs Dienst (was), um die Aktivierung und Netzwerkkommunikation über andere Protokolle als http zuzulassen. Diese Umgebung eignet sich für die Entwicklung von WCF-Diensten, die über alle von WCF unterstützten Netzwerkprotokolle kommunizieren (einschließlich http, net. TCP, net. Pipe und net. MSMQ). Weitere Informationen zu was finden Sie unter [Hosting in Windows Process Activation Service](hosting-in-windows-process-activation-service.md).
 
-- [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) funktioniert mit IIS 7,0 und Windows Process Activation Service (was), um eine umfangreiche anwendungshostingumgebung für NET4 WCF-und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) und [AppFabric-hostingkonzepte](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).
+- [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) funktioniert mit IIS 7,0 und Windows Process Activation Service (was), um eine umfangreiche anwendungshostingumgebung für NET4 WCF-und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10)) und [AppFabric-hostingkonzepte](/previous-versions/appfabric/ee677371(v=azure.10)).
 
 ## <a name="benefits-of-iis-hosting"></a>Vorteile des IIS-Hosting
 
@@ -61,11 +61,11 @@ Eine Erläuterung zu den einzelnen Aufgaben finden Sie unter Bereitstellen [eine
 
 WCF-Dienste können entweder parallel mit ASP.net oder im ASP.NET-Kompatibilitätsmodus gehostet werden, in dem Dienste in vollem Umfang von den Funktionen profitieren können, die von der ASP.NET-Webanwendungs Plattform bereitgestellt werden. Eine Erläuterung dieser Features finden Sie unter [WCF-Dienste und ASP.net](wcf-services-and-aspnet.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erweitern des Hosting mit ServiceHostFactory](../extending/extending-hosting-using-servicehostfactory.md)
 - [Bereitstellen eines IIS-gehosteten WCF-Diensts](deploying-an-internet-information-services-hosted-wcf-service.md)
 - [WCF-Dienste und ASP.NET](wcf-services-and-aspnet.md)
 - [Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten](internet-information-services-hosting-best-practices.md)
 - [Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation](configuring-iis-for-wcf.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

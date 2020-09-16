@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: 1178bd3800fce95be96e601a17bfeff2c05cfceb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c609ec5e67ce3bb0605f543806085f893acba37c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419303"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557527"
 ---
 # <a name="workflow-persistence"></a>Workflowpersistenz
 Workflowpersistenz bezeichnet die dauerhafte Erfassung des Zustands einer Workflowinstanz unabhängig von Prozess- oder Computerinformationen. Sie wird durchgeführt, um einen bekannten Wiederherstellungspunkt für die Workflowinstanz im Fall eines Systemfehlers bereitzustellen oder um Arbeitsspeicher beizubehalten, indem Workflowinstanzen entladen werden, die gerade nicht aktiv sind, bzw. um den Zustand der Workflowinstanz von einem Knoten zu einem anderen Knoten in einer Serverfarm zu verschieben.  
@@ -23,7 +23,7 @@ Workflowpersistenz bezeichnet die dauerhafte Erfassung des Zustands einer Workfl
   
  Zum Speichern und Laden Ihrer anwendungsspezifischen Daten zusammen mit den Informationen zur Workflowinstanz können Sie Persistenzteilnehmer erstellen, die die <xref:System.Activities.Persistence.PersistenceParticipant>-Klasse erweitern. Ein Persistenzteilnehmer nimmt am Persistenzvorgang teil, um benutzerdefinierte serialisierbare Daten in den persistenten Speicher zu speichern, die Daten aus dem Instanzspeicher in den Arbeitsspeicher zu laden und ggf. die zusätzliche Logik einer Persistenztransaktion auszuführen. Weitere Informationen finden Sie unter [persistenzteilnehmer](persistence-participants.md).  
   
- Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. Weitere Informationen finden Sie unter [Persistenzkonzepte mit Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10)) .  
+ Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. Weitere Informationen finden Sie unter [Persistenzkonzepte mit Windows Server-App-Fabric](/previous-versions/appfabric/ee677272(v=azure.10)) .  
   
 ## <a name="implicit-persistence-points"></a>Implizite Persistenzpunkte  
  Die folgende Liste enthält Beispiele der Bedingungen, zu denen ein Workflow beibehalten wird, wenn ein Instanzspeicher einem Workflow zugeordnet ist.  

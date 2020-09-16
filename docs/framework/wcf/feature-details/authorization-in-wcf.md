@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: d67d64dcf0003de28775ac947f8b5f72d7c2ba2a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597630"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556257"
 ---
 # <a name="authorization-in-wcf"></a>Autorisierung in WCF
 Autorisierung ist der Prozess, Zugriff und Rechte für Ressourcen zu steuern, z. B. Dienste oder Dateien. In den Themen in diesem Abschnitt wird erläutert, wie Sie diese grundlegende Aufgabe in Windows Communication Foundation (WCF) auf unterschiedlichste Weise ausführen.  
@@ -46,7 +46,7 @@ Autorisierung ist der Prozess, Zugriff und Rechte für Ressourcen zu steuern, z.
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Authentifizierung](authentication-in-wcf.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsübersicht](security-overview.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

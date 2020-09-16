@@ -2,15 +2,15 @@
 title: Standardabfrageoperatoren in LINQ to Entities-Abfragen
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 76d32db5c81d88db28194da19e722b1a80c1a870
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a61296d924ab1ff32b5bee523d6f0a06dda95db3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249150"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557774"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardabfrageoperatoren in LINQ to Entities-Abfragen
-In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. LINQ stellt eine Reihe von Standardabfragemethoden für die Verwendung in einer Abfrage bereit. Die meisten dieser Methoden arbeiten mit Sequenzen. in diesem Kontext ist eine Sequenz ein Objekt, dessen Typ die <xref:System.Collections.Generic.IEnumerable%601> -Schnittstelle oder die <xref:System.Linq.IQueryable%601> -Schnittstelle implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung, Gruppierung, Paging und mehr bereit. Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax, sodass sie mithilfe von Abfrageausdruckssyntax aufgerufen werden können. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen methodenbasierter Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt. Eine Liste der Standard Abfrage Operatoren, die über äquivalente Abfrage Ausdrucks Klauseln verfügen, finden Sie unter [Übersicht über Standard Abfrage Operatoren](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
+In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. LINQ stellt eine Reihe von Standardabfragemethoden für die Verwendung in einer Abfrage bereit. Die meisten dieser Methoden arbeiten mit Sequenzen. in diesem Kontext ist eine Sequenz ein Objekt, dessen Typ die- <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder die- <xref:System.Linq.IQueryable%601> Schnittstelle implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung, Gruppierung, Paging und mehr bereit. Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax, sodass sie mithilfe von Abfrageausdruckssyntax aufgerufen werden können. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen methodenbasierter Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt. Eine Liste der Standard Abfrage Operatoren, die über äquivalente Abfrage Ausdrucks Klauseln verfügen, finden Sie unter [Übersicht über Standard Abfrage Operatoren](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
  Nicht alle Standard Abfrage Operatoren werden in LINQ to Entities Abfragen unterstützt. Weitere Informationen finden Sie [unter Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md). Dieses Thema enthält Informationen zu den-Standard Abfrage Operatoren, die für LINQ to Entities spezifisch sind. Weitere Informationen zu bekannten Problemen in LINQ to Entities Abfragen finden Sie unter [bekannte Probleme und Überlegungen in LINQ to Entities](known-issues-and-considerations-in-linq-to-entities.md).  
   
@@ -29,7 +29,7 @@ In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgeruf
 ## <a name="set-methods"></a>Methoden für Mengen  
  Mengenoperationen in LINQ sind Abfrageoperationen, deren Resultsets auf der Gegenwart oder Abwesenheit äquivalenter Elemente in derselben oder in einer anderen Auflistung (oder Menge) basieren. Für Mengen werden die Methoden `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` und `Union` verwendet.  
   
- Die meisten über Ladungen der Set-Methoden werden in LINQ to Entities unterstützt, es gibt jedoch einige Unterschiede im Verhalten im Vergleich zu LINQ to Objects. Set-Methoden, die einen <xref:System.Collections.Generic.IEqualityComparer%601> verwenden, werden jedoch nicht unterstützt, da der Vergleich nicht in die Datenquelle übersetzt werden kann.  
+ Die meisten über Ladungen der Set-Methoden werden in LINQ to Entities unterstützt, es gibt jedoch einige Unterschiede im Verhalten im Vergleich zu LINQ to Objects. Set-Methoden, die einen verwenden, <xref:System.Collections.Generic.IEqualityComparer%601> werden jedoch nicht unterstützt, da der Vergleich nicht in die Datenquelle übersetzt werden kann.  
   
 ## <a name="ordering-methods"></a>Sortiermethoden  
  Mit Sortierung wird das auf einem oder mehreren Attributen basierende Sortieren von Elementen eines Resultsets bezeichnet. Durch die Angabe eines oder mehrerer Sortierkriterien können Verbindungen innerhalb einer Gruppe aufgelöst werden.  
@@ -72,11 +72,11 @@ In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgeruf
  `OfType` wird für Entitätstypen unterstützt. `Convert` wird für primitive Typen in einem konzeptionellen Modell unterstützt.  Die C#-Methoden `is` und `as` werden ebenfalls unterstützt.  
   
 ## <a name="paging-methods"></a>Pagingmethoden  
- Paging-Vorgänge geben ein einzelnes Element oder mehrere Elemente aus einer Sequenz zurück. Die unterstützten Paging- `First`Methoden `FirstOrDefault`sind `Single`, `SingleOrDefault`, `Skip`,, `Take`und.  
+ Paging-Vorgänge geben ein einzelnes Element oder mehrere Elemente aus einer Sequenz zurück. Die unterstützten Paging-Methoden sind `First` , `FirstOrDefault` , `Single` , `SingleOrDefault` , `Skip` und `Take` .  
   
  Eine Reihe von Pagingmethoden werden nicht unterstützt, da Funktionen nicht der Datenquelle zugeordnet werden können oder nicht die implizite Reihenfolge von Sätzen in der Datenquelle. Methoden, die einen Standardwert zurückgeben, sind auf primitive Typen in einem konzeptionellen Modell und Referenztypen mit dem Standardwert NULL beschränkt. Pagingmethoden, die für eine leere Sequenz ausgeführt werden, geben NULL zurück.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [Übersicht über Standardabfrageoperatoren](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))
+- [Übersicht über Standardabfrageoperatoren](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

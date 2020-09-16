@@ -2,12 +2,12 @@
 title: Gewähren zeilenspezifischer Berechtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b34eaee4b66a2be82049816f0a98b9f53012303
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782352"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554852"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Gewähren zeilenspezifischer Berechtigungen in SQL Server
 
@@ -23,7 +23,7 @@ Das folgende Beispiel beschreibt, wie die zeilenbasierte Filterung auf der Grund
 
 - Aktivieren der zeilenbasierten Filterung:
 
-  - Bei Verwendung von SQL Server 2016 oder höher oder [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/)erstellen Sie eine Sicherheitsrichtlinie, die der Tabelle ein Prädikat hinzufügt, das die Zeilen auf diejenigen einschränkt, die entweder mit dem aktuellen Datenbankbenutzer (mithilfe der integrierten CURRENT_USER()-Funktion) oder mit dem aktuellen Anmeldenamen (mithilfe der integrierten SUSER_SNAME()-Funktion) übereinstimmen:
+  - Bei Verwendung von SQL Server 2016 oder höher oder [Azure SQL-Datenbank](/azure/sql-database/)erstellen Sie eine Sicherheitsrichtlinie, die der Tabelle ein Prädikat hinzufügt, das die Zeilen auf diejenigen einschränkt, die entweder mit dem aktuellen Datenbankbenutzer (mithilfe der integrierten CURRENT_USER()-Funktion) oder mit dem aktuellen Anmeldenamen (mithilfe der integrierten SUSER_SNAME()-Funktion) übereinstimmen:
 
       ```sql
       CREATE SCHEMA Security
@@ -68,5 +68,5 @@ Das folgende Beispiel beschreibt, wie die zeilenbasierte Filterung auf der Grund
 - [Übersicht über die SQL Server-Sicherheit](overview-of-sql-server-security.md)
 - [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)
 - [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Schreiben von sicherem dynamischen SQL in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Schreiben von sicherem dynamischem SQL in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

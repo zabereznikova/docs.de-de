@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f6e95ce58e055f0c745b781c664309e4ef91ffc6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247790"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554012"
 ---
 # <a name="create-the-data-service"></a>Erstellen des Datendiensts
 
@@ -53,7 +53,7 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
 
 5. Verbinden Sie das Datenmodell mit der Datenbank, indem Sie einen der folgenden Schritte ausführen, und klicken Sie dann auf **weiter**:
 
-    - Wenn Sie noch keine Datenbankverbindung konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
+    - Wenn Sie noch keine Datenbankverbindung konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [How to: Create Connections to SQL Server Databases](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
 
          \- oder -
 
@@ -102,6 +102,6 @@ Sie haben erfolgreich einen neuen Datendienst erstellt, der einen auf der Northw
 > [!div class="nextstepaction"]
 > [Zugreifen auf den Dienst über einen Webbrowser](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET-Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [ADO.NET-Entity Data Model Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

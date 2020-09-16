@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: eb3274b98234324bd47aa456feb4845da5a7f3a9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a896b12f9e877c00688ade176c1e0c730d9591b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599281"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557605"
 ---
 # <a name="debug-windows-authentication-errors"></a>Windows-Authentifizierungsfehler Debuggen
 
 Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt die Security Support Provider-Schnittstelle (SSPI) Sicherheitsprozesse ab. Wenn auf der SSPI-Ebene Sicherheitsfehler auftreten, werden Sie von Windows Communication Foundation (WCF) angezeigt. Dieses Thema enthält ein Framework und eine Reihe von Fragen zur Diagnose der Fehler.  
   
- Eine Übersicht über das Kerberos-Protokoll finden Sie unter [Kerberos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10))-Protokoll. eine Übersicht über SSPI finden Sie unter [SSPI](/windows/win32/secauthn/sspi).  
+ Eine Übersicht über das Kerberos-Protokoll finden Sie unter [Kerberos](/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10))-Protokoll. eine Übersicht über SSPI finden Sie unter [SSPI](/windows/win32/secauthn/sspi).  
   
  Bei der Windows-Authentifizierung verwendet WCF in der Regel den *aushandeln* Security Support Provider (SSP), der die gegenseitige Kerberos-Authentifizierung zwischen Client und Dienst durchführt. Wenn das Kerberos-Protokoll nicht verfügbar ist, greift WCF standardmäßig auf den NT-LAN-Manager (NTLM) zurück. Allerdings können Sie WCF so konfigurieren, dass nur das Kerberos-Protokoll verwendet wird (und eine Ausnahme ausgelöst wird, wenn Kerberos nicht verfügbar ist). Sie können auch WCF so konfigurieren, dass eingeschränkte Formen des Kerberos-Protokolls verwendet werden.  
   
@@ -67,7 +67,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
   
  Eine gängige Praxis für Lastenausgleichszenarien (beispielsweise bei Webfarmen und Webgärten) ist das Definieren eines eindeutigen Kontos für die einzelnen Anwendungen. Anschließend wird dem Konto ein SPN zugewiesen und sichergestellt, dass alle Dienste der Anwendung in diesem Konto ausgeführt werden.  
   
- Zum Erhalten eines SPN für das Konto des Diensts müssen Sie Active Directory-Domänenadministrator sein. Weitere Informationen finden Sie in der [technischen Ergänzung zu Kerberos für Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)).  
+ Zum Erhalten eines SPN für das Konto des Diensts müssen Sie Active Directory-Domänenadministrator sein. Weitere Informationen finden Sie in der [technischen Ergänzung zu Kerberos für Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10)).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos-Protokoll Direct erfordert, dass der Dienst unter einem Domänencomputerkonto ausgeführt wird  
  Dieser Fehler tritt auf, wenn die `ClientCredentialType`-Eigenschaft auf `Windows` und die <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A>-Eigenschaft auf `false` festgelegt ist, wie im folgenden Code dargestellt.  
@@ -145,7 +145,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
 #### <a name="developing-and-deploying-with-different-identities"></a>Entwickeln und Bereitstellen mit unterschiedlichen Identitäten  
  Wenn Sie Ihre Anwendung auf einem bestimmten Computer entwickeln, die Anwendung anschließend auf einem anderen Computer bereitstellen und dabei unterschiedliche Kontotypen für die Authentifizierung verwenden, kann es vorkommen, dass sich das Verhalten von Computer zu Computer unterscheidet. Ein Beispiel: Angenommen, Sie entwickeln Ihre Anwendung auf einem Computer unter Windows&#160;XP&#160;Pro und verwenden dabei den `SSPI Negotiated`-Authentifizierungsmodus. Wenn die Authentifizierung unter Verwendung eines lokalen Benutzerkontos erfolgt, wird das NTLM-Protokoll verwendet. Nachdem die Entwicklung der Anwendung abgeschlossen ist, stellen Sie den Dienst für einen Computer unter Windows Server&#160;2003 bereit, wo er im Rahmen eines Domänenkontos ausgeführt wird. An diesem Punkt wird der Client nicht in der Lage sein, den Dienst zu authentifizieren, da er Kerberos und einen Domänen Controller verwendet.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>

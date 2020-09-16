@@ -2,12 +2,12 @@
 title: Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 6343049e2a21b06965a8c7851d891303a49c82b5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0cc48c7a817f71339fb6d7eea35baf1d97b245
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597565"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556654"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation
 
@@ -66,9 +66,9 @@ Internetinformationsdienste (IIS) 7.0 weist einen modularen Aufbau auf, der es I
  </system.webServer>
  ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [WAS-Aktivierungsarchitektur](was-activation-architecture.md)
 - [Konfigurieren von WAS für die Verwendung mit WCF](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](how-to-install-and-configure-wcf-activation-components.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

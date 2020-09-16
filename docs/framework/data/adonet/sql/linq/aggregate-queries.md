@@ -2,12 +2,12 @@
 title: Aggregatabfragen
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 8defefb39974bea150fed84b0e7404b43882c41c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2085808d631d1d9f97573c557e9e66e07113df52
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634741"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554220"
 ---
 # <a name="aggregate-queries"></a>Aggregatabfragen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Aggregatoperatoren `Average`, `Count`, `Max`, `Min` und `Sum`. Beachten Sie die folgenden Eigenschaften von Aggregatoperatoren in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -18,7 +18,7 @@ ms.locfileid: "75634741"
   
 - Aggregatabfragen geben i. d. R. eine Zahl statt einer Auflistung zurück.  
   
-     Weitere Informationen finden Sie unter [Aggregations Vorgänge](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
+     Weitere Informationen finden Sie unter [Aggregations Vorgänge](/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
 - Sie können keine Aggregate für anonyme Typen aufrufen.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "75634741"
  Zeigt die Verwendung des <xref:System.Linq.Enumerable.Sum%2A>-Operators.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Abfragebeispiele](query-examples.md)  
+ [Abfrage Beispiele](query-examples.md)  
  Stellt Links zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfragen in Visual Basic und C# bereit.  
   
  [Abfragekonzepte](query-concepts.md)  
- Enthält Links zu Themen, in denen Konzepte zum Entwerfen von LINQ-Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]erläutert werden.  
+ Enthält Links zu Themen, in denen Konzepte zum Entwerfen von LINQ-Abfragen in erläutert werden [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
  [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  Erläutert, wie Abfragen in LINQ funktionieren.

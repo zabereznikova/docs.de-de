@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29798a73ec69b7f695068343d9c7b5593eeba4fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599268"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557579"
 ---
 # <a name="denial-of-service"></a>Denial of Service
 Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass Nachrichten nicht verarbeitet werden können oder extrem langsam verarbeitet werden.  
@@ -44,7 +44,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="auditing-event-log-can-be-filled"></a>Überwachungsereignisprotokoll kann ausgefüllt werden  
  Wenn ein böswilliger Benutzer erkennt, dass die Überwachung aktiviert ist, kann dieser Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl.  
   
- Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige finden Sie unter [Ereignisanzeige](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Weitere Informationen finden Sie unter [Auditing](auditing-security-events.md).  
+ Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige finden Sie unter [Ereignisanzeige](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Weitere Informationen finden Sie unter [Auditing](auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Ungültige Implementierungen von IAuthorizationPolicy können bewirken, dass der Dienst nicht mehr reagiert.  
  Das Aufrufen der- <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> Methode für eine fehlerhafte Implementierung der- <xref:System.IdentityModel.Policy.IAuthorizationPolicy> Schnittstelle kann bewirken, dass der Dienst nicht mehr reagiert.  
@@ -61,7 +61,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
   
  Um dies zu vermeiden, verweisen Sie auf das exakte zu verwendende Zertifikat, indem Sie ein präzisere Suchkriterium für den verwenden [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) . Verwenden Sie z. B. die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>-Option, und geben Sie das Zertifikat anhand seines eindeutigen Fingerabdrucks an (Hash).  
   
- Weitere Informationen zur automatischen anmeldungsfunktion finden Sie unter [automatische Registrierung von Zertifikaten in Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
+ Weitere Informationen zur automatischen anmeldungsfunktion finden Sie unter [automatische Registrierung von Zertifikaten in Windows Server 2003](/previous-versions/windows/it-pro/windows-server-2003/cc778954(v=ws.10)).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Der letzte von mehreren für die Autorisierung verwendeten alternativen Antragstellernamen  
  In dem seltenen Fall, dass ein X.509-Zertifikat mehrere alternative Antragstellernamen enthält und Sie die Verwendung des alternativen Antragstellernamens autorisieren, kann die Autorisierung fehlschlagen.  
@@ -79,12 +79,12 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
   
  Legen Sie den Grenzwert für die maximale Anzahl aktiver Sitzungen und die maximale Lebensdauer für eine Sitzung über die <xref:System.ServiceModel.Channels.SecurityBindingElement>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse fest, wenn Sie dieses Sicherheitsproblem vermeiden möchten.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitshinweise](security-considerations-in-wcf.md)
-- [Offenlegung von Informationen](information-disclosure.md)
-- [Rechte Erweiterungen](elevation-of-privilege.md)
-- [Denial of Service](denial-of-service.md)
+- [Veröffentlichung von Informationen](information-disclosure.md)
+- [Erhöhung von Rechten](elevation-of-privilege.md)
+- [Denial-of-Service](denial-of-service.md)
 - [Wiederholungsangriffe](replay-attacks.md)
 - [Manipulation](tampering.md)
 - [Nicht unterstützte Szenarien](unsupported-scenarios.md)

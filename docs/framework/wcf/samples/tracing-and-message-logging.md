@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: bb49334252c2415223b0f8f5559a6dc838d175e3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 9c3d83f0055a1700c675017216a7419fdba674fd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246024"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547459"
 ---
 # <a name="tracing-and-message-logging"></a>Ablaufverfolgung und Nachrichtenprotokollierung
 In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenprotokollierung veranschaulicht. Die resultierenden Ablauf Verfolgungen und Nachrichten Protokolle werden mit dem [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)angezeigt. Dieses Beispiel basiert [auf den ersten](getting-started-sample.md)Schritten.  
@@ -133,7 +133,7 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgung](../diagnostics/tracing/index.md)
-- [AppFabric-Überwachungsbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric-Überwachungsbeispiele](/previous-versions/appfabric/ff383407(v=azure.10))

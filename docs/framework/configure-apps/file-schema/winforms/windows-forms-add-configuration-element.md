@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-ms.openlocfilehash: 26b806f84c3e1bc44e0437a8f8806316b14897b8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dc1786f1f2dcc7bd01488dd24c6ef454f7e1cfbd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73109660"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557631"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Konfigurations Element Windows Forms hinzufügen
 
@@ -35,7 +35,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 | `key`     | Erforderliches Attribut. Ein vordefinierter Schlüssel Name, der einer bestimmten Windows Forms anpassbaren Funktion entspricht. |
 | `value`   | Erforderliches Attribut. Der Wert, der dem `key` zugewiesen werden soll. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`Attributnamen und zugehörige Werte
+### <a name="key-attribute-names-and-associated-values"></a>`key` Attributnamen und zugehörige Werte
 
 | `key`-Name | Werte | BESCHREIBUNG |
 | ---------- | ------ | ----------- |
@@ -59,13 +59,13 @@ Keine
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](index.md) | Konfiguriert die Unterstützung für neue Windows Forms Anwendungs Features. |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Ab .NET Framework 4.7 ermöglicht das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element die Konfiguration von Windows Forms-Anwendungen für die Nutzung von Funktionen, die in neueren Versionen von .NET Framework hinzugefügt werden.
 
 Das- `<System.Windows.Forms.ApplicationConfigurationSection>` Element ermöglicht es Ihnen, ein oder mehrere `<add>` untergeordnete Elemente hinzuzufügen, von denen jede eine bestimmte Konfigurationseinstellung definiert.
 
-Eine Übersicht über Windows Forms hohe dpi-Unterstützung finden Sie unter [Unterstützung für hohe dpi-Unterstützung in Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md).
+Eine Übersicht über Windows Forms hohe dpi-Unterstützung finden Sie unter [Unterstützung für hohe dpi-Unterstützung in Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 ### <a name="dpiawareness"></a>Dpiawareness
 
@@ -97,7 +97,7 @@ Die einzige standardmäßige Opt-in-Einstellung, die durch Festlegen von auf ber
 
 In der Regel entscheiden Sie sich für eine bestimmte Funktion, da Sie Sie zur programmgesteuerten Verarbeitung ausgewählt haben.
 
-Weitere Informationen zur Nutzung der hohen dpi-Unterstützung in Windows Forms-Anwendungen finden Sie unter [hohe dpi-Unterstützung in Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md).
+Weitere Informationen zur Nutzung der hohen dpi-Unterstützung in Windows Forms-Anwendungen finden Sie unter [hohe dpi-Unterstützung in Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 ### <a name="disabledpichangedmessagehandling"></a>Disabledpichangedmessagehandling
 
@@ -107,7 +107,7 @@ Beginnend mit dem .NET Framework 4,7 werden Windows Forms Steuerelemente eine Re
 
 Die Skalierung mit einem oder mehreren Durchlauf wirkt sich auf die wahrgenommene Reaktionsfähigkeit der Benutzeroberfläche und die visuelle Darstellung von Elementen der Benutzeroberfläche aus, wenn Sie skaliert werden. Beginnend mit dem .NET Framework 4,7 verwendet Windows Forms die Skalierung mit einem einzelnen Durchlauf. In früheren Versionen der .NET Framework wurde die Skalierung über mehrere Durchgänge durchgeführt, was dazu führte, dass einige Steuerelemente mehr als notwendig skaliert wurden. Die Einzel Durchlauf Skalierung sollte nur deaktiviert werden, wenn Ihre APP vom alten Verhalten abhängig ist.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsabschnitt für Windows Forms](index.md)
-- [Hohe dpi-Unterstützung in Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Windows Forms Konfigurations Abschnitt](index.md)
+- [Hohe dpi-Unterstützung in Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)

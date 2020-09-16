@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bbff7b53bacd50746de56c8dba85cdc9e4b1ad9b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309208"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556407"
 ---
 # <a name="security-transparent-code-level-2"></a>Sicherheitstransparenter Code, Ebene 2
 
@@ -178,7 +178,7 @@ Sie können die Überprüfung für vollständig vertrauenswürdige transparente 
 
 Die Eigenschaft "<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A>" ist standardmäßig "`false`" und muss daher auf "`true`" festgelegt werden, um die Überprüfung zu überspringen. Dies sollte nur zu Optimierungszwecken erfolgen. Stellen Sie sicher, dass der transparente Code in der Assembly überprüfbar ist. verwenden Sie dazu die `transparent` Option im [Tool "Peer Verify](../tools/peverify-exe-peverify-tool.md)".
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Sicherheits transparenter Code, Ebene 1](security-transparent-code-level-1.md)
-- [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [Sicherheitstransparenter Code, Ebene 1](security-transparent-code-level-1.md)
+- [Sicherheitsänderungen](/previous-versions/dotnet/framework/security/security-changes)

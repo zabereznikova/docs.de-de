@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f9174896181e427c73936a1bb91fa13235e70be
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403316"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550988"
 ---
 # <a name="comments-in-code-visual-basic"></a>Kommentare in Code (Visual Basic)
 Wenn Sie die Codebeispiele lesen, werden Sie oft auf das Kommentarsymbol (`'`) stoßen. Dieses Symbol weist den Visual Basic Compiler an, den folgenden Text oder den *Kommentar*zu ignorieren. Kommentare sind kurze, erläuternde Hinweise, die dem Code zum Zwecke der besseren Verständlichkeit hinzugefügt werden.  
@@ -44,7 +44,7 @@ Wenn Sie die Codebeispiele lesen, werden Sie oft auf das Kommentarsymbol (`'`) s
 |Annahmen|Listet alle externen Variablen, Steuerelemente, offenen Dateien und andere Elemente auf, auf die die Prozedur zugreift.|  
 |Effekte|Hier werden die einzelnen betroffenen externen Variablen, Steuerelemente oder Dateien sowie deren Auswirkungen genannt (falls dies nicht offensichtlich ist).|  
 |Eingaben|Gibt den Zweck des Arguments an.|  
-|Rückgabe|Erläutert die von der Prozedur zurückgegebenen Werte.|  
+|Gibt zurück|Erläutert die von der Prozedur zurückgegebenen Werte.|  
   
  Beachten Sie Folgendes:  
   
@@ -59,9 +59,9 @@ Wenn Sie die Codebeispiele lesen, werden Sie oft auf das Kommentarsymbol (`'`) s
 > [!NOTE]
 > Sie können Code auch Kommentare hinzufügen, indem Sie vor dem betreffenden Text das `REM`-Schlüsselwort einfügen. Das `'` Symbol und die **Comment** / Schaltflächen zum**Entfernen** von Kommentaren sind jedoch einfacher zu verwenden und erfordern weniger Speicherplatz und Arbeitsspeicher.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Grundlegender Instinkt: Dokumentieren von Code mit XML-Kommentaren](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [Grundlegender Instinkt: Dokumentieren von Code mit XML-Kommentaren](/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [Vorgehensweise: Erstellen einer XML-Dokumentation](how-to-create-xml-documentation.md)
 - [XML-Kommentartags](../../language-reference/xmldoc/index.md)
 - [Programmstruktur und Codekonventionen](program-structure-and-code-conventions.md)

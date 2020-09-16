@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Erstellen unterstützender Anmeldeinformationen'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b181ac72c9f197e9e404f7aa0f04e254abac10da
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597149"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557397"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Vorgehensweise: Erstellen unterstützender Anmeldeinformationen
 Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind. Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist. Die zweiten Anmelde Informationen sind *unterstützende*Anmelde Informationen. In diesem Thema wird erläutert, wie solche Anmelde Informationen in einem Windows Communication Foundation (WCF)-Client implementiert werden.  
   
 > [!NOTE]
-> Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS-SecurityPolicy-Spezifikation. Weitere Informationen finden Sie unter [Webdienstesicherheit Spezifikationen](https://docs.microsoft.com/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
+> Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS-SecurityPolicy-Spezifikation. Weitere Informationen finden Sie unter [Webdienstesicherheit Spezifikationen](/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
   
 ## <a name="supporting-tokens"></a>Unterstützende Token  
  Kurz gesagt: Wenn Sie Nachrichten Sicherheit verwenden, wird immer eine *primäre* Anmelde Information verwendet, um die Nachricht zu sichern (z. b. ein X. 509-Zertifikat oder ein Kerberos-Ticket).  
@@ -80,6 +80,6 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
 ### <a name="code"></a>Code  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

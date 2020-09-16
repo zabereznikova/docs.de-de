@@ -9,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 91e7ea8df5c32329f0eb8d12943ce5f816ff0e5a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245075"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557592"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegierung und Identitätswechsel mit WCF
 Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um den Clientzugriff auf die Ressourcen einer Dienstdomäne zu beschränken. Dienstdomänenressourcen können entweder Computerressourcen, wie lokale Dateien (Identitätswechsel), oder eine Ressource auf einem anderen Computer, z. B. eine Dateifreigabe (Delegierung), sein. Eine Beispielanwendung finden Sie unter [Impersonating the Client](../samples/impersonating-the-client.md). Ein Beispiel zur Verwendung von Identitätswechsel finden Sie unter [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md).  
@@ -22,7 +22,7 @@ Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um d
 > [!IMPORTANT]
 > Beim Identitätswechsel eines Clients in einem Dienst wird der Dienst mit den Anmeldeinformationen des Clients ausgeführt, die höhere Rechte besitzen können als der Serverprozess.  
   
-## <a name="overview"></a>Übersicht  
+## <a name="overview"></a>Überblick  
  In der Regel ruft ein Client einen Dienst auf, damit dieser eine Aktion für ihn ausführt. Der Identitätswechsel ermöglicht es dem Dienst, während der Ausführung der Aktion als Client zu fungieren. Die Delegierung ermöglicht es einem Front-End-Dienst, die Clientanforderung so an einen Back-End-Dienst weiterzuleiten, dass auch der Back-End-Dienst die Identität des Clients annehmen kann. Der Identitätswechsel wird meist als Möglichkeit verwendet, mit der überprüft werden kann, ob ein Client zur Durchführung einer bestimmten Aktion berechtigt ist. Die Delegierung stellt dagegen eine Möglichkeit dar, die Fähigkeit zum Identitätswechsel und die Clientidentität an einen Back-End-Dienst zu übertragen. Die Delegierung ist eine Windows-Domänenfunktion, die verwendet werden kann, wenn eine auf Kerberos basierende Authentifizierung durchgeführt wird. Delegierung und Identitätsübergabe sind zwei verschiedene Dinge. Weil bei der Delegierung die Fähigkeit zur Annahme der Identität des Clients übertragen wird, ohne das Kennwort des Clients zu besitzen, handelt es sich um einen Vorgang mit höheren Sicherheitsberechtigungen als die Identitätsübergabe.  
   
  Sowohl Identitätswechsel als auch Delegierung erfordern, dass der Client eine Windows-Identität besitzt. Wenn der Client keine Windows-Identität besitzt, dann besteht nur die Möglichkeit, die Identität des Clients dem zweiten Dienst zu übertragen.  
@@ -112,11 +112,11 @@ Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um d
   
  In der folgenden Tabelle wird die Identitätswechselebene angegeben, die der Dienst bei einem Identitätswechsel mit einem im Cache gespeicherten Token erhält.  
   
-|`AllowedImpersonationLevel`-Wert|Der Dienst hat das `SeImpersonatePrivilege`|Dienst und Client sind delegierungsfähig.|`ImpersonationLevel`|  
+|Wert vom Typ `AllowedImpersonationLevel`|Der Dienst hat das `SeImpersonatePrivilege`|Dienst und Client sind delegierungsfähig.|`ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonym|Ja|–|Identitätswechsel|  
 |Anonym|Nein|–|Identifikation|  
-|Identifikation|–|n/v|Identifikation|  
+|Identifikation|–|–|Identifikation|  
 |Identitätswechsel|Ja|–|Identitätswechsel|  
 |Identitätswechsel|Nein|–|Identifikation|  
 |Delegierung|Ja|Ja|Delegierung|  
@@ -138,7 +138,7 @@ Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um d
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Ja|Ja|–|Identitätswechsel|  
 |Ja|Nein|–|Identifikation|  
-|Nein|–|n/v|Identifikation|  
+|Nein|–|–|Identifikation|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Zuordnen eines Clientzertifikats zu einem Windows-Konto  
  Ein Client kann sich gegenüber einem Dienst mithilfe eines Zertifikats ausweisen; der Dienst kann angewiesen werden, den Client mittels Active Directory einem vorhandenen Konto zuzuordnen. Im folgenden XML wird gezeigt, wie der Dienst so konfiguriert wird, dass er das Zertifikat zuordnet:  
@@ -171,7 +171,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ```  
   
 ## <a name="delegation"></a>Delegierung  
- Damit ein Dienst an einen Back-End-Dienst delegiert werden kann, muss er sich gegenüber dem Back-End-Dienst mittels bilateraler (SSPI ohne Rückgriff auf NTLM) oder direkter Kerberos-Authentifizierung unter Verwendung der Windows-Identität des Clients authentifizieren. Um einen Dienst an einen Back-End-Dienst zu delegieren, erstellen Sie eine <xref:System.ServiceModel.ChannelFactory%601> und einen Kanal und leiten die Kommunikation über diesen Kanal, solange die Identität des Clients angenommen wird. Bei dieser Form der Delegierung hängt die maximale Entfernung zwischen Back-End-Dienst und Front-End-Dienst von der Identitätswechselebene des Front-End-Diensts ab. Wenn die Identitätswechselebene <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>festgelegt wird, müssen Front-End- und Back-End-Dienst auf dem gleichen Computer ausgeführt werden. Wenn die Identitätswechselebene <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>verwendet wird, können Front-End- und Back-End-Dienst auf unterschiedlichen Computern oder dem gleichen Computer ausgeführt werden. Ein Identitätswechsel auf Delegierungsebene erfordert, dass die Windows-Domänenrichtlinie entsprechend konfiguriert wurde, um eine Delegierung zuzulassen. Weitere Informationen zum Konfigurieren von Active Directory für die Delegierung finden Sie unter [Enabling Delegated Authentication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10)).  
+ Damit ein Dienst an einen Back-End-Dienst delegiert werden kann, muss er sich gegenüber dem Back-End-Dienst mittels bilateraler (SSPI ohne Rückgriff auf NTLM) oder direkter Kerberos-Authentifizierung unter Verwendung der Windows-Identität des Clients authentifizieren. Um einen Dienst an einen Back-End-Dienst zu delegieren, erstellen Sie eine <xref:System.ServiceModel.ChannelFactory%601> und einen Kanal und leiten die Kommunikation über diesen Kanal, solange die Identität des Clients angenommen wird. Bei dieser Form der Delegierung hängt die maximale Entfernung zwischen Back-End-Dienst und Front-End-Dienst von der Identitätswechselebene des Front-End-Diensts ab. Wenn die Identitätswechselebene <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>festgelegt wird, müssen Front-End- und Back-End-Dienst auf dem gleichen Computer ausgeführt werden. Wenn die Identitätswechselebene <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>verwendet wird, können Front-End- und Back-End-Dienst auf unterschiedlichen Computern oder dem gleichen Computer ausgeführt werden. Ein Identitätswechsel auf Delegierungsebene erfordert, dass die Windows-Domänenrichtlinie entsprechend konfiguriert wurde, um eine Delegierung zuzulassen. Weitere Informationen zum Konfigurieren von Active Directory für die Delegierung finden Sie unter [Enabling Delegated Authentication](/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10)).  
   
 > [!NOTE]
 > Wenn sich der Client dem Front-End-Dienst gegenüber mit einem Benutzernamen und einem Kennwort authentifiziert, die einem Windows-Konto für den Back-End-Dienst entsprechen, dann kann sich der Front-End-Dienst durch erneute Angabe des Benutzernamens und des Kennworts des Clients dem Back-End-Dienst gegenüber authentifizieren. Dies ist eine besonders mächtige Form der Identitätsübergabe, weil die Weitergabe von Benutzernamen und Kennwort an den Back-End-Dienst diesen in die Lage versetzt, einen Identitätswechsel durchzuführen. Weil Kerberos nicht verwendet wird, stellt dieser Vorgang jedoch keine Delegierung dar. Die Delegierung betreffende Active Directory-Steuerelemente gelten nicht für die Authentifizierung durch Benutzername und Kennwort.  
@@ -180,7 +180,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 |Ebene des Identitätswechsels|Dienst kann eine prozessübergreifende Delegierung ausführen|Dienst kann eine computerübergreifende Delegierung ausführen|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Nein|Nein |  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Nein|Nein|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Ja|Nein|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Ja|Ja|  
   
@@ -190,7 +190,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  [!code-vb[c_delegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_delegation/vb/source.vb#1)]  
   
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Konfigurieren einer Anwendung für die Verwendung der eingeschränkten Delegierung  
- Die eingeschränkte Delegierung kann erst verwendet werden, nachdem Absender, Empfänger und Domänencontroller entsprechend konfiguriert wurden. Die folgende Prozedur listet die Schritte auf, die eine eingeschränkte Delegierung ermöglichen. Nähere Angaben zu den Unterschieden zwischen Delegierung und eingeschränkter Delegierung finden Sie in dem Abschnitt unter [Windows Server 2003 Kerberos Extensions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738207(v=ws.10)) , der sich mit eingeschränkter Delegierung befasst (Seite möglicherweise auf Englisch).  
+ Die eingeschränkte Delegierung kann erst verwendet werden, nachdem Absender, Empfänger und Domänencontroller entsprechend konfiguriert wurden. Die folgende Prozedur listet die Schritte auf, die eine eingeschränkte Delegierung ermöglichen. Nähere Angaben zu den Unterschieden zwischen Delegierung und eingeschränkter Delegierung finden Sie in dem Abschnitt unter [Windows Server 2003 Kerberos Extensions](/previous-versions/windows/it-pro/windows-server-2003/cc738207(v=ws.10)) , der sich mit eingeschränkter Delegierung befasst (Seite möglicherweise auf Englisch).  
   
 1. Deaktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto ist vertraulich und kann nicht delegiert werden** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
   
@@ -200,9 +200,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 4. Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht für die Verwendung der eingeschränkten Delegierung, indem Sie auf die Option **Computer nur für Delegierungszwecke angegebener Dienste vertrauen** klicken.  
   
- Ausführlichere Anweisungen zum Konfigurieren der eingeschränkten Delegierung finden Sie unter [Kerberos-Protokoll Übergang und eingeschränkte Delegierung](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
+ Ausführlichere Anweisungen zum Konfigurieren der eingeschränkten Delegierung finden Sie unter [Kerberos-Protokoll Übergang und eingeschränkte Delegierung](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>

@@ -2,12 +2,12 @@
 title: Sicherer Datenzugriff
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: ede8b1a2e840b56d6e7f45e6d26e09fa5e8bcc25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 28d3a7d8ccfe2aeafbea0930b8655e41bc45c1a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337526"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550780"
 ---
 # <a name="secure-data-access"></a>Sicherer Datenzugriff
 Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsmechanismen kennen, die im zugrunde liegenden Datenspeicher oder der zugrundeliegenden Datenbank verfügbar sind. Außerdem müssen Sie die Auswirkungen anderer in Ihrer Anwendung enthaltenen Funktionen oder Komponenten auf die Sicherheit berücksichtigen.  
@@ -21,11 +21,11 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Protecting Connection Information (Schützen von Verbindungsinformationen)](protecting-connection-information.md)|Beschreibt bewährte Methoden und Techniken zum Schützen von Verbindungsinformationen, z. B. das Verwenden der geschützten Konfiguration zur Verschlüsselung von Verbindungszeichenfolgen.|  
-|[Empfehlungen für Datenzugriffs Strategien](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
-|[Verbindungszeichenfolgengeneratoren](connection-string-builders.md)|Beschreibt, wie aus Benutzereingabe zur Laufzeit Verbindungszeichenfolgen erstellt werden können.|  
+|[Schützen von Verbindungsinformationen](protecting-connection-information.md)|Beschreibt bewährte Methoden und Techniken zum Schützen von Verbindungsinformationen, z. B. das Verwenden der geschützten Konfiguration zur Verschlüsselung von Verbindungszeichenfolgen.|  
+|[Empfehlungen für Datenzugriffs Strategien](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
+|[Verbindungszeichenfolgen-Generatoren](connection-string-builders.md)|Beschreibt, wie aus Benutzereingabe zur Laufzeit Verbindungszeichenfolgen erstellt werden können.|  
 |[Übersicht über die SQL Server-Sicherheit](./sql/overview-of-sql-server-security.md)|Beschreibt die SQL Server-Sicherheitsarchitektur.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Parametrisierte Befehle und SQL Injection  
@@ -33,7 +33,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
  Weitere Informationen zur Verwendung parametrisierter Befehle finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Ressource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[DataAdapter-Parameter](dataadapter-parameters.md)|Beschreibt die Verwendung von Parametern mit einem `DataAdapter`.|  
 |[Ändern von Daten mit gespeicherten Prozeduren](modifying-data-with-stored-procedures.md)|Beschreibt das Angeben von Parametern und das Abrufen von Rückgabewerten.|  
@@ -44,16 +44,16 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Übersicht über Skript Exploits](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Beschreibt, wie Sie sich vor Skript- und SQL-Anweisung-Exploits schützen können.|  
+|[Übersicht über Skript Exploits](/previous-versions/aspnet/w1sw53ds(v=vs.100))|Beschreibt, wie Sie sich vor Skript- und SQL-Anweisung-Exploits schützen können.|  
   
 ## <a name="probing-attacks"></a>Angriffe anhand von ausgewerteten Fehlerinformationen  
  Angreifer verwenden für ihre Angriffe häufig Informationen aus Fehlermeldungen. Diese können z. B. Aufschluss über den Namen des Servers, der Datenbank oder der Tabelle geben. Da Fehlermeldungen spezifische Informationen über eine Anwendung bzw. Datenquelle enthalten können, können Sie die Anwendung bzw. Datenquelle besser schützen, indem Sie lediglich Informationen verfügbar machen, die vom Client explizit angefordert werden.  
   
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Behandeln und Auslösen von Ausnahmen in .NET](../../../standard/exceptions/index.md)|Beschreibt die grundlegenden Formen der Behandlung von Ausnahmen mit der "try/catch/finally"-Struktur.|  
 |[Bewährte Methoden für Ausnahmen](../../../standard/exceptions/best-practices-for-exceptions.md)|Beschreibt bewährte Vorgehensweisen bei der Behandlung von Ausnahmen.|  
@@ -63,34 +63,34 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
  Weitere Informationen zum Schützen von Access- und Excel-Daten finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Ressource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Sicherheitsüberlegungen und Anleitungen für den Zugriff 2007](https://docs.microsoft.com/previous-versions/office/developer/office-2007/bb421308(v=office.12))|Beschreibt die Sicherheitsverfahren von Access 2007, wie die Verschlüsselung von Dateien, die Verwaltung von Kennwörtern und die Umwandlung von Datenbanken in die neuen Formate ACCDB und ACCDE sowie die Verwendung anderer Sicherheitsoptionen.|  
+|[Sicherheitsüberlegungen und Anleitungen für den Zugriff 2007](/previous-versions/office/developer/office-2007/bb421308(v=office.12))|Beschreibt die Sicherheitsverfahren von Access 2007, wie die Verschlüsselung von Dateien, die Verwaltung von Kennwörtern und die Umwandlung von Datenbanken in die neuen Formate ACCDB und ACCDE sowie die Verwendung anderer Sicherheitsoptionen.|  
 |[Einführung in den Zugriff auf 2010-Sicherheit](https://support.office.com/article/Introduction-to-Access-2010-security-CAE6D764-0318-4622-955F-68D9F186D6CA)|Bietet eine Übersicht über die Sicherheitsfeatures, die von Access 2010 angeboten werden.|  
 ## <a name="enterprise-services"></a>Enterprise Services  
  COM+ enthält ein eigenes Sicherheitsmodell, das auf die Windows NT-Konten und den Prozess-/Threadidentitätswechsel zurückgreift. Der <xref:System.EnterpriseServices>-Namespace stellt Wrapper bereit, die es .NET-Anwendungen ermöglichen, über die <xref:System.EnterpriseServices.ServicedComponent>-Klasse verwalteten Code mit COM+-Sicherheitsdiensten zu integrieren.  
   
  Weitere Informationen finden Sie in der folgenden Ressource:  
   
-|Ressource|Beschreibung|  
+|Ressource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Rollenbasierte Sicherheit](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Erläutert, wie verwalteter Code mit COM+-Sicherheitsdiensten integriert werden kann.|  
+|[Rollenbasierte Sicherheit](/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Erläutert, wie verwalteter Code mit COM+-Sicherheitsdiensten integriert werden kann.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Interoperation mit nicht verwaltetem Code  
  .NET Framework ermöglicht die Interaktion mit nicht verwaltetem Code, darunter COM-Komponenten, COM+-Diensten, externen Typbibliotheken und vielen Betriebssystemdiensten. Beim Arbeiten mit nicht verwaltetem Code wird die "Sicherheitszone" des verwalteten Codes verlassen. Sowohl Ihr Code als auch jeder Code, der Ihren Code aufruft, muss eine Berechtigung für nicht verwalteten Code besitzen (<xref:System.Security.Permissions.SecurityPermission> mit <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>-Flag). Nicht verwalteter Code kann für Ihre Anwendung unbeabsichtigte Sicherheitslücken bedeuten. Deshalb sollten Sie mit nicht verwaltetem Code nur interagieren, wenn dies absolut notwendig ist.  
   
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Interoperabilität mit nicht verwaltetem Code](../../interop/index.md)|Enthält Themen, die beschreiben, wie COM-Komponenten für .NET Framework und .NET Framework-Komponenten für COM verfügbar gemacht werden sollten.|
-|[Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Enthält zusätzliche Themen, in denen es u. a. um primäre Interopassemblys, Threading und benutzerdefiniertes Marshalling geht.|
+|[Erweiterte COM-Interoperabilität](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Enthält zusätzliche Themen, in denen es u. a. um primäre Interopassemblys, Threading und benutzerdefiniertes Marshalling geht.|
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
-- [SQL Server Security (SQL Server-Sicherheit)](./sql/sql-server-security.md)
-- [Empfehlungen für Datenzugriffs Strategien](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [Protecting Connection Information (Schützen von Verbindungsinformationen)](protecting-connection-information.md)
-- [Verbindungszeichenfolgengeneratoren](connection-string-builders.md)
+- [SQL Server Sicherheit](./sql/sql-server-security.md)
+- [Empfehlungen für Datenzugriffs Strategien](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
+- [Schützen von Verbindungsinformationen](protecting-connection-information.md)
+- [Verbindungszeichenfolgen-Generatoren](connection-string-builders.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

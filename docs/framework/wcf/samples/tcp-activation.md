@@ -2,12 +2,12 @@
 title: TCP-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 0fa737adbdc7acc51511557877799c89849149bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e6f40b31656746d3db37545709c4e4813a7422cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598657"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555184"
 ---
 # <a name="tcp-activation"></a>TCP-Aktivierung
 
@@ -206,6 +206,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Dieser Befehl muss als eine Textzeile eingegeben werden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting- und -Persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric-Hosting- und -Persistenzbeispiele](/previous-versions/appfabric/ff383418(v=azure.10))
