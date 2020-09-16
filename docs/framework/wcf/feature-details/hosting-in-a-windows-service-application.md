@@ -36,7 +36,7 @@ Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das beson
   
      Windows-Dienst Anwendungen, die WCF-Dienste hosten, werden auf die gleiche Weise wie Windows-Dienst Anwendungen bereitgestellt und verwaltet, die WCF nicht verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceProcess>
 - [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](https://go.microsoft.com/fwlink/?LinkId=94875)

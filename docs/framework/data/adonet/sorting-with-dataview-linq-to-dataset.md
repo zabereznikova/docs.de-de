@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 2998de7dee34f9b5410bfe53988e0b7cfa797784
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 010da284268fb30763efd5a720dc80d50981d323
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634754"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552218"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortieren mit DataView (LINQ to DataSet)
-Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu sortieren und nach bestimmten Sortierkriterien geordnete Datenzeilen zurückzugeben. Zusätzlich zu den Zeichen folgen basierten Sortierfunktionen ermöglicht <xref:System.Data.DataView> auch die Verwendung von LINQ-Ausdrücken (Language-Integrated Query) für die Sortierkriterien. LINQ-Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Sortiervorgänge als die Zeichen folgen basierte Sortierung. In diesem Thema werden beide Ansätze für die Sortierung mit <xref:System.Data.DataView> beschrieben.  
+Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu sortieren und nach bestimmten Sortierkriterien geordnete Datenzeilen zurückzugeben. Zusätzlich zu den Zeichen folgen basierten Sortierfunktionen <xref:System.Data.DataView> ermöglicht Ihnen auch die Verwendung von LINQ-Ausdrücken (Language-Integrated Query) für die Sortierkriterien. LINQ-Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Sortiervorgänge als die Zeichen folgen basierte Sortierung. In diesem Thema werden beide Ansätze für die Sortierung mit <xref:System.Data.DataView> beschrieben.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Erstellen einer "DataView" auf der Grundlage einer Abfrage mit Sortierinformationen  
- Ein <xref:System.Data.DataView>-Objekt kann aus einer LINQ to DataSet Abfrage erstellt werden. Wenn diese Abfrage eine <xref:System.Linq.Enumerable.OrderBy%2A>-, <xref:System.Linq.Enumerable.OrderByDescending%2A>-, <xref:System.Linq.Enumerable.ThenBy%2A>-oder <xref:System.Linq.Enumerable.ThenByDescending%2A>-Klausel enthält, werden die Ausdrücke in diesen Klauseln als Grundlage für das Sortieren der Daten im <xref:System.Data.DataView>verwendet. Wenn die Abfrage z. b. die Klauseln `Order By…`und `Then By…` enthält, würde die resultierende <xref:System.Data.DataView> die Daten nach beiden angegebenen Spalten sortieren.  
+ Ein- <xref:System.Data.DataView> Objekt kann aus einer LINQ to DataSet-Abfrage erstellt werden. Wenn diese Abfrage eine-,-,-oder-Klausel enthält, <xref:System.Linq.Enumerable.OrderBy%2A> <xref:System.Linq.Enumerable.OrderByDescending%2A> <xref:System.Linq.Enumerable.ThenBy%2A> <xref:System.Linq.Enumerable.ThenByDescending%2A> werden die Ausdrücke in diesen Klauseln als Grundlage für das Sortieren der Daten im verwendet <xref:System.Data.DataView> . Wenn die Abfrage z. b. die `Order By…` -Klausel und die- `Then By…` Klausel enthält, würde die resultierende die <xref:System.Data.DataView> Daten nach beiden angegebenen Spalten sortieren.  
   
  Die ausdrucksbasierte Sortierung bietet leistungsfähigere und komplexere Sortierfunktionen als die einfachere zeichenfolgenbasierten Sortierung. Beachten Sie, dass sich die zeichenfolgenbasierte und die ausdrucksbasierte Sortierung gegenseitig ausschließen. Wenn mit <xref:System.Data.DataView.Sort%2A> die zeichenfolgenbasierte Sortierung festgelegt wird, nachdem eine <xref:System.Data.DataView> auf der Grundlage einer Abfrage erstellt wurde, wird der ausdrucksbasierte Filter gelöscht, der aus der Abfrage abgeleitet wurde. Er kann dann nicht wiederhergestellt werden.  
   
@@ -26,13 +26,13 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
 > In den meisten Fällen dürften die für die Sortierung verwendeten Ausdrücke keine Nebenwirkungen haben. Sie müssen deterministisch sein. Die Ausdrücke dürfen darüber hinaus keine Logik enthalten, die auf einer festgelegten Anzahl von Ausführungen beruht, da die Sortieroperationen unbegrenzt oft ausgeführt werden können sollen.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die SalesOrderHeader<xref:System.Data.DataView>-Tabelle abgefragt, und die zurückgegebenen Zeilen werden nach dem Auftragsdatum sortiert. Danach wird auf der Grundlage dieser Abfrage eine <xref:System.Data.DataView> erstellt. Die <xref:System.Windows.Forms.BindingSource> wird anschließend an eine  gebunden.  
+ Im folgenden Beispiel wird die SalesOrderHeader-Tabelle abgefragt, und die zurückgegebenen Zeilen werden nach dem Auftragsdatum sortiert. Danach wird auf der Grundlage dieser Abfrage eine  erstellt. Die  wird anschließend an eine  gebunden.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderBy](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderby)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderby)]  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die SalesOrderHeader<xref:System.Data.DataView>-Tabelle abgefragt, und die zurückgegebene Zeile wird nach dem fälligen Gesamtbetrag sortiert. Danach wird auf der Grundlage dieser Abfrage eine <xref:System.Data.DataView> erstellt. Diese <xref:System.Windows.Forms.BindingSource> wird anschließend an eine  gebunden.  
+ Im folgenden Beispiel wird die SalesOrderHeader-Tabelle abgefragt, und die zurückgegebene Zeile wird nach dem fälligen Gesamtbetrag sortiert. Danach wird auf der Grundlage dieser Abfrage eine  erstellt. Diese  wird anschließend an eine  gebunden.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderBy2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderby2)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderBy2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderby2)]  
@@ -44,7 +44,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderbythenby)]  
   
 ## <a name="using-the-string-based-sort-property"></a>Verwenden der Eigenschaft für die zeichenfolgenbasierte Sortierung  
- Die Zeichen folgen basierte Sortierfunktion von <xref:System.Data.DataView> funktioniert weiterhin mit LINQ to DataSet. Nachdem ein <xref:System.Data.DataView> aus einer LINQ to DataSet Abfrage erstellt wurde, können Sie die <xref:System.Data.DataView.Sort%2A>-Eigenschaft verwenden, um die Sortierung für die <xref:System.Data.DataView>festzulegen.  
+ Die Zeichen folgen basierte Sortierfunktion von <xref:System.Data.DataView> funktioniert weiterhin mit LINQ to DataSet. Nachdem ein <xref:System.Data.DataView> aus einer LINQ to DataSet Abfrage erstellt wurde, können Sie die-Eigenschaft verwenden, <xref:System.Data.DataView.Sort%2A> um die Sortierung für den festzulegen <xref:System.Data.DataView> .  
   
  Die zeichenfolgenbasierte und die ausdrucksbasierte Sortierung schließen sich gegenseitig aus. Durch die Einrichtung der <xref:System.Data.DataView.Sort%2A>-Eigenschaft wird die ausdrucksbasierte Sortierung gelöscht, die von der Abfrage geerbt wurde, auf der die <xref:System.Data.DataView> basiert.  
   
@@ -76,7 +76,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
  [!code-vb[DP DataView Samples#LDVClearSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort)]  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der Contact<xref:System.Data.DataView.Sort%2A>-Tabelle erstellt und dann die -Eigenschaft so eingerichtet, dass die Ergebnisse in absteigender Reihenfolge nach dem Nachnamen sortiert werden. Anschließend werden die Sortierinformationen gelöscht, indem die <xref:System.Data.DataView.Sort%2A>-Eigenschaft auf `null` gesetzt wird:  
+ Im folgenden Beispiel wird eine  auf der Grundlage der Contact-Tabelle erstellt und dann die -Eigenschaft so eingerichtet, dass die Ergebnisse in absteigender Reihenfolge nach dem Nachnamen sortiert werden. Anschließend werden die Sortierinformationen gelöscht, indem die <xref:System.Data.DataView.Sort%2A>-Eigenschaft auf `null` gesetzt wird:  
   
  [!code-csharp[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearsort2)]
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
@@ -85,4 +85,4 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
 
 - [Datenbindung und LINQ to DataSet](data-binding-and-linq-to-dataset.md)
 - [Filtern mit DataView](filtering-with-dataview-linq-to-dataset.md)
-- [Sortieren von Daten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))
+- [Sortieren von Daten](/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

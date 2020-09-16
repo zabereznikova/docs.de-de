@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558750"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552283"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides>-Element
 
@@ -70,7 +70,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Steuert, ob Stapel Überwachungen bei der Verwendung portabler pdsb-Informationen Quelldatei-und Zeilen Informationen enthalten können. `false` So schließen Sie Quelldatei-und Zeilen Informationen ein andernfalls `true` .|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Steuert, ob die <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> Methode eine Ausnahme auslöst, wenn ein <xref:System.Drawing.Icon> Objekt über PNG-Frames verfügt. Weitere Informationen finden Sie unter [Entschärfung: PNG-Bilder in Symbolobjekten](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|Bestimmt <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> , ob Objekte ordnungsgemäß verworfen werden, wenn Sie von der-Methode der-Auflistung hinzugefügt werden <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> . `true` So behalten Sie das Legacy Verhalten bei `false` , um alle privaten Schriftart Objekte zu verwerfen. |.NET Framework 4.7.2|
-|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Steuert, ob die Leistung von <xref:System.Windows.Forms.PrintPreviewDialog> für Netzwerkdrucker optimiert ist. Weitere Informationen finden Sie unter [Übersicht über das PrintPreviewDialog-Steuer](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)Element.|.NET Framework 4.6|
+|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Steuert, ob die Leistung von <xref:System.Windows.Forms.PrintPreviewDialog> für Netzwerkdrucker optimiert ist. Weitere Informationen finden Sie unter [Übersicht über das PrintPreviewDialog-Steuer](/dotnet/desktop/winforms/controls/printpreviewdialog-control-overview-windows-forms)Element.|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|Steuert, ob Jahres Bereichs Prüfungen für japanische Kalender Zeiträume erzwungen werden. `true` zum Erzwingen von Überprüfungen im Jahres Bereich und `false` zum Deaktivieren der Werte (Standardverhalten). Weitere Informationen finden Sie unter [Arbeiten mit Kalendern](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|Steuert, ob nur "1" als das erste Jahr eines japanischen Kalender Zeitraums bei der Ausführung von Diagnose Vorgängen erkannt wird. `true` , wenn nur "1" erkannt werden soll. `false` um entweder "1" oder "Gannen" (Standardverhalten) zu erkennen. Weitere Informationen finden Sie unter [Arbeiten mit Kalendern](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|Steuert, ob das erste Jahr eines japanischen Kalender Zeitraums in Formatierungs Vorgängen als "1" oder "Gannen" dargestellt wird. `true` , wenn das erste Jahr des Jahrs als "1" formatiert werden soll. `false` zum Formatieren als Gannen (Standardverhalten). Weitere Informationen finden Sie unter [Arbeiten mit Kalendern](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
@@ -176,7 +176,7 @@ Im folgenden Beispiel wird das- `<add>` Element verwendet, um dem- `<appSettings
 </configuration>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Migrieren von neuen Verhaltensweisen in .NET Framework 4.6 und höher](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>

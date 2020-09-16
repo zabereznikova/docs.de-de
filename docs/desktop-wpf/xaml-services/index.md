@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: bfb3efb479668bcd70a3ce87b80253a73c18bb51
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 313cb46813d8c0cfa9f1f317a65d2e21298ecff9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "85840274"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552851"
 ---
 # <a name="xaml-services"></a>XAML-Dienste
 
@@ -35,7 +35,7 @@ Die konzeptionelle Dokumentation für die .NET XAML-Dienste setzt voraus, dass S
 
 - Verwenden der `Lookup`- oder `Invoker`-Techniken, um das XAML-Typsystem und die Auswertung von Typunterstützungen zu beeinflussen.
 
-Wenn Sie nach Einführungsmaterial zu XAML als Sprache suchen, finden Sie ggf. weitere Informationen unter [Übersicht über XAML (WPF)](../fundamentals/xaml.md). In diesem Thema wird XAML für eine Zielgruppe erläutert, für die sowohl Windows Presentation Foundation (WPF) als auch die Verwendung von XAML-Markup- und XAML-Sprachfeatures neu ist. Ein weiteres nützliches Dokument ist das Einführungsmaterial der [XAML-Sprachspezifikation](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Wenn Sie nach Einführungsmaterial zu XAML als Sprache suchen, finden Sie ggf. weitere Informationen unter [Übersicht über XAML (WPF)](../fundamentals/xaml.md). In diesem Thema wird XAML für eine Zielgruppe erläutert, für die sowohl Windows Presentation Foundation (WPF) als auch die Verwendung von XAML-Markup- und XAML-Sprachfeatures neu ist. Ein weiteres nützliches Dokument ist das Einführungsmaterial der [XAML-Sprachspezifikation](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ## <a name="net-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET XAML-Dienste und `System.Xaml` in der .NET-Architektur
 

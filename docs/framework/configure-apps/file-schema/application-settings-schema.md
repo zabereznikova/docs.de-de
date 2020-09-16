@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81242828"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552309"
 ---
 # <a name="application-settings-schema"></a>Schema für Anwendungseinstellungen
 
 Anwendungseinstellungen ermöglichen es einer Windows Forms-oder ASP.NET-Anwendung, anwendungsspezifische und benutzerspezifische Einstellungen zu speichern und abzurufen. In diesem Kontext ist eine *Einstellung* ein beliebiges Informationselement, das spezifisch für die Anwendung oder spezifisch für den aktuellen Benutzer ist – alles von einer Datenbank-Verbindungs Zeichenfolge bis zur bevorzugten Standardfenster Größe des Benutzers.
 
-Standardmäßig verwenden Anwendungseinstellungen in einer Windows Forms Anwendung die- <xref:System.Configuration.LocalFileSettingsProvider> Klasse, die das .NET-Konfigurationssystem zum Speichern von Einstellungen in einer XML-Konfigurationsdatei verwendet. Weitere Informationen zu den von Anwendungseinstellungen verwendeten Dateien finden Sie unter [Architektur der Anwendungseinstellungen](../../winforms/advanced/application-settings-architecture.md).
+Standardmäßig verwenden Anwendungseinstellungen in einer Windows Forms Anwendung die- <xref:System.Configuration.LocalFileSettingsProvider> Klasse, die das .NET-Konfigurationssystem zum Speichern von Einstellungen in einer XML-Konfigurationsdatei verwendet. Weitere Informationen zu den von Anwendungseinstellungen verwendeten Dateien finden Sie unter [Architektur der Anwendungseinstellungen](/dotnet/desktop/winforms/advanced/application-settings-architecture).
 
 Anwendungseinstellungen definiert die folgenden Elemente als Teil der Konfigurationsdateien, die Sie verwendet.
 
-| Element                    | Beschreibung                                                                           |
+| Element                    | BESCHREIBUNG                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings>** | Enthält alle **\<setting>** Tags, die für die Anwendung spezifisch sind.                         |
 | **\<userSettings>**        | Enthält alle **\<setting>** Tags, die für den aktuellen Benutzer spezifisch sind.                        |
@@ -88,7 +88,7 @@ Das folgende Beispiel zeigt eine Anwendungs Einstellungsdatei, die zwei Einstell
 </configuration>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über Anwendungseinstellungen](../../winforms/advanced/application-settings-overview.md)
-- [Architektur der Anwendungseinstellungen](../../winforms/advanced/application-settings-architecture.md)
+- [Übersicht über Anwendungseinstellungen](/dotnet/desktop/winforms/advanced/application-settings-overview)
+- [Architektur der Anwendungseinstellungen](/dotnet/desktop/winforms/advanced/application-settings-architecture)

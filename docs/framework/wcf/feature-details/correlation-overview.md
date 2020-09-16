@@ -2,12 +2,12 @@
 title: Übersicht über die Korrelation
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 65f87195fde0c3dbda610804260f0ebfbf599073
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8d33022524a4619a57b04e7774918fd73d0bdef3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586974"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552556"
 ---
 # <a name="correlation-overview"></a>Übersicht über die Korrelation
 Die Korrelation ist der Mechanismus zum Verknüpfen von Workflowdienstnachrichten miteinander oder mit dem Anwendungsinstanzzustand. Dies kann z. B. eine Antwort auf eine ursprüngliche Anforderung oder eine bestimmte Bestell-ID mit dem beibehaltenen Zustand eines Workflows zur Bestellverarbeitung sein. Dieses Thema enthält eine Übersicht über die Korrelation: Die anderen Themen in diesem Abschnitt enthalten weitere Informationen zu den einzelnen Korrelationstypen.  
@@ -19,14 +19,14 @@ Die Korrelation ist der Mechanismus zum Verknüpfen von Workflowdienstnachrichte
   
 ## <a name="protocol-based-correlation"></a>Protokollbasierte Korrelation
 
-Die protokollbasierte Korrelation verwendet den Transportmechanismus, um Nachrichten miteinander und mit der entsprechenden Instanz zu verknüpfen. Einige vom System bereitgestellte Protokollkorrelationen enthalten die Anforderung-Antwort-Korrelation und die kontextbasierte Korrelation. Eine Anforderung-Antwort-Korrelation zum Korrelieren eines einzelnen Paars von Messagingaktivitäten verwendet, um einen bidirektionalen Vorgang zu erstellen. Beispiele hierfür sind <xref:System.ServiceModel.Activities.Send> gepaart mit <xref:System.ServiceModel.Activities.ReceiveReply> oder <xref:System.ServiceModel.Activities.Receive> gepaart mit <xref:System.ServiceModel.Activities.SendReply>. Das Visual Studio-Workflow-Designer bietet auch eine Reihe von Aktivitäts Vorlagen, mit denen dieses Muster schnell implementiert werden können. Eine kontextbasierte Korrelation basiert auf dem Kontext Austauschmechanismus, der unter [.net Context Exchange Protocol Specification](https://docs.microsoft.com/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4)beschrieben wird. Zum Verwenden der kontextbasierten Korrelation muss auf dem Endpunkt eine kontextbasierte Bindung wie <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> oder <xref:System.ServiceModel.NetTcpContextBinding> verwendet werden.  
+Die protokollbasierte Korrelation verwendet den Transportmechanismus, um Nachrichten miteinander und mit der entsprechenden Instanz zu verknüpfen. Einige vom System bereitgestellte Protokollkorrelationen enthalten die Anforderung-Antwort-Korrelation und die kontextbasierte Korrelation. Eine Anforderung-Antwort-Korrelation zum Korrelieren eines einzelnen Paars von Messagingaktivitäten verwendet, um einen bidirektionalen Vorgang zu erstellen. Beispiele hierfür sind <xref:System.ServiceModel.Activities.Send> gepaart mit <xref:System.ServiceModel.Activities.ReceiveReply> oder <xref:System.ServiceModel.Activities.Receive> gepaart mit <xref:System.ServiceModel.Activities.SendReply>. Das Visual Studio-Workflow-Designer bietet auch eine Reihe von Aktivitäts Vorlagen, mit denen dieses Muster schnell implementiert werden können. Eine kontextbasierte Korrelation basiert auf dem Kontext Austauschmechanismus, der unter [.net Context Exchange Protocol Specification](/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4)beschrieben wird. Zum Verwenden der kontextbasierten Korrelation muss auf dem Endpunkt eine kontextbasierte Bindung wie <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> oder <xref:System.ServiceModel.NetTcpContextBinding> verwendet werden.  
   
-Weitere Informationen zur Protokoll Korrelation finden Sie unter [Durable Duplex](durable-duplex-correlation.md) und [Request-Reply](request-reply-correlation.md). Weitere Informationen zum Verwenden der Visual Studio-Workflow-Designer Aktivitäts Vorlagen finden Sie unter [Messaging Aktivitäten](messaging-activities.md). Beispielcode finden Sie im Beispiel [netcontextexchangekorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) .  
+Weitere Informationen zur Protokoll Korrelation finden Sie unter [Durable Duplex](durable-duplex-correlation.md) und [Request-Reply](request-reply-correlation.md). Weitere Informationen zum Verwenden der Visual Studio-Workflow-Designer Aktivitäts Vorlagen finden Sie unter [Messaging Aktivitäten](messaging-activities.md). Beispielcode finden Sie im Beispiel [netcontextexchangekorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100)) .  
   
 ## <a name="content-based-correlation"></a>Inhaltsbasierte Korrelation
 
 Bei der inhaltsbasierten Korrelation wird ein bestimmtes Informationselement in der Nachricht verwendet, um diese einer bestimmten Instanz zuzuordnen. Im Gegensatz zur protokollbasierten Korrelation erfordert die inhaltsbasierte Korrelation es, dass der Anwendungsautor explizit angibt, wo sich diese Daten in den einzelnen verknüpften Nachrichten befinden. Aktivitäten, die die inhaltsbasierte Korrelation verwenden, geben diese Nachrichtendaten mit einem <xref:System.ServiceModel.MessageQuerySet>-Objekt an. Die inhaltsbasierte Korrelation ist bei der Kommunikation mit Diensten nützlich, die keine Kontextbindung verwenden, z. B. <xref:System.ServiceModel.BasicHttpContextBinding>.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100))

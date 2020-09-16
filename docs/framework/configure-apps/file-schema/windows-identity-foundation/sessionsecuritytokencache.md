@@ -62,6 +62,6 @@ Registriert einen Cache für Sitzungs Token mit einem Dienst oder einer Sammlung
 </caches>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

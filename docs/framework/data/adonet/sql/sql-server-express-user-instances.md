@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 2bd67a9315eda4161d4b76e1638f5c08f9598a52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71f42cb2707c27be6c1a761d09d3a2dae1791680
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174484"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552673"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express-Benutzerinstanzen
 Microsoft SQL Server Express Edition (SQL Server Express) unterstützt die Benutzerinstanzfunktion, die die Verwendung des .NET Framework-Datenanbieters für SQL Server (`SqlClient`) voraussetzt. Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten Instanz generiert wird. Benutzerinstanzen ermöglichen Benutzern, die keine Administratoren auf ihren lokalen Computern sind, eine Verbindung mit SQL Server Express-Datenbanken herzustellen. Jede Instanz wird im Sicherheitskontext des jeweiligen Benutzers auf instanz- und benutzerbezogener Basis ausgeführt.  
   
 ## <a name="user-instance-capabilities"></a>Was können Benutzerinstanzen?  
- Benutzerinstanzen sind nützlich für Benutzer, die Windows unter einem Benutzerkonto mit den geringsten Berechtigungen (LUA) ausführen. Jeder Benutzer verfügt über`sysadmin`SQL Server-Systemadministratorrechte ( ) über die Instanz, die auf seinem Computer ausgeführt wird, ohne dass er auch als Windows-Administrator ausgeführt werden muss. Software, die auf einer Benutzerinstanz mit eingeschränkten Berechtigungen ausgeführt wird, kann keine systemweiten Änderungen vornehmen, da die Instanz von SQL Server Express unter dem nicht zum Administrator gehörigen Windows-Konto des Benutzers und nicht als Dienst ausgeführt wird. Jede Benutzerinstanz ist von ihrer übergeordneten Instanz sowie von allen anderen Benutzerinstanzen, die auf demselben Computer ausgeführt werden, isoliert. Datenbanken, die in einer Benutzerinstanz ausgeführt werden, werden nur im Einzelbenutzermodus geöffnet. Es ist nicht möglich, dass mehrere Benutzer eine Verbindung mit Datenbanken herstellen, die in einer Benutzerinstanz ausgeführt werden. Replikation und verteilte Abfragen sind für Benutzerinstanzen ebenfalls deaktiviert.
+ Benutzer Instanzen sind nützlich für Benutzer, die Windows unter einem Benutzerkonto mit geringsten Rechten (LUA) ausführen. Jeder Benutzer verfügt über SQL Server Systemadministrator `sysadmin` Berechtigungen () für die Instanz, die auf dem Computer ausgeführt wird, ohne dass Sie auch als Windows-Administrator ausgeführt werden müssen. Software, die auf einer Benutzerinstanz mit eingeschränkten Berechtigungen ausgeführt wird, kann keine systemweiten Änderungen vornehmen, da die Instanz von SQL Server Express unter dem nicht zum Administrator gehörigen Windows-Konto des Benutzers und nicht als Dienst ausgeführt wird. Jede Benutzerinstanz ist von ihrer übergeordneten Instanz sowie von allen anderen Benutzerinstanzen, die auf demselben Computer ausgeführt werden, isoliert. Datenbanken, die in einer Benutzerinstanz ausgeführt werden, werden nur im Einzelbenutzermodus geöffnet. Es ist nicht möglich, dass mehrere Benutzer eine Verbindung mit Datenbanken herstellen, die in einer Benutzerinstanz ausgeführt werden. Replikation und verteilte Abfragen sind für Benutzerinstanzen ebenfalls deaktiviert.
   
 > [!NOTE]
 > Für Benutzer, die bereits Administratoren auf ihren eigenen Computern sind, oder für Szenarien mit mehreren Datenbankbenutzern werden keine Benutzerinstanzen benötigt.  
@@ -41,7 +41,7 @@ sp_configure 'user instances enabled','0'
   
 - Das Schlüsselwort `Data Source` bezieht sich auf die übergeordnete Instanz von SQL Server Express, die die Benutzerinstanz generiert. Die Standardinstanz ist „.\sqlexpress“.  
   
-- `Integrated Security` ist auf `true` festgelegt. Um sich mit einer Benutzerinstanz zu verbinden, ist die Windows-Authentifizierung erforderlich. SQL Server-Anmeldungen werden nicht unterstützt.  
+- Für `Integrated Security` ist `true` festgelegt. Um sich mit einer Benutzerinstanz zu verbinden, ist die Windows-Authentifizierung erforderlich. SQL Server-Anmeldungen werden nicht unterstützt.  
   
 - `User Instance` ist auf `true` festgelegt, wodurch eine Benutzerinstanz aufgerufen wird. (Standardwert: `false`.)  
   
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 > [!NOTE]
 > Sie können auch die Eigenschaften <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> und <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> verwenden, um zur Laufzeit eine Verbindungszeichenfolge zu erstellen.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>Verwenden des &#124;DataDirectory&#124; SubstitutionString  
+### <a name="using-the-124datadirectory124-substitution-string"></a>Verwenden der &#124;DataDirectory-&#124; Ersetzungs Zeichenfolge  
  `AttachDbFileName` wurde in ADO.NET 2.0 mit der Einführung der `|DataDirectory|`-Ersatzzeichenfolge (zwischen Pipesymbolen) erweitert. `DataDirectory` wird in Verbindung mit `AttachDbFileName` verwendet, um einen relativen Pfad zu einer Datendatei anzugeben. Damit wird Entwicklern ermöglicht, Verbindungszeichenfolgen zu erstellen, die auf einem relativen Pfad zur Datenquelle basieren. Es muss kein vollständiger Pfad angegeben werden.  
   
  Der physische Speicherort, auf den `DataDirectory` zeigt, hängt von der Art der Anwendung ab. In diesem Beispiel befindet sich die anzufügende Datei „Northwind.mdf“ im Ordner „\app_data“ der Anwendung.  
@@ -144,13 +144,13 @@ private static void OpenSqlConnection()
   
 - Einzelbenutzeranwendungen, bei denen das Freigeben von Daten nicht erforderlich ist.  
   
-- ClickOnce-Bereitstellung. Wenn .NET Framework 2.0 (oder höher) und SQL Server Express bereits auf dem Zielcomputer installiert sind, kann das Installationspaket, das als Ergebnis einer ClickOnce-Aktion heruntergeladen wurde, installiert und von Nicht-Administratorbenutzern verwendet werden. Beachten Sie, dass ein Administrator SQL Server Express installieren muss, wenn dies Teil des Setups ist. Weitere Informationen finden Sie unter [ClickOnce-Bereitstellung für Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- ClickOnce-Bereitstellung. Wenn .NET Framework 2,0 (oder höher) und SQL Server Express bereits auf dem Zielcomputer installiert sind, kann das als Ergebnis einer ClickOnce-Aktion heruntergeladene Installationspaket installiert und von Benutzern ohne Administratorrechte verwendet werden. Beachten Sie, dass ein Administrator SQL Server Express installieren muss, wenn dies Teil des Setups ist. Weitere Informationen finden Sie unter [ClickOnce-Bereitstellung für Windows Forms](/dotnet/desktop/winforms/clickonce-deployment-for-windows-forms).
   
 - Dediziertes ASP.NET-Hosting mithilfe der Windows-Authentifizierung. Eine einzelne SQL Server Express-Instanz kann in einem Intranet gehostet werden. Die Anwendung stellt die Verbindung über das Windows-Konto ASPNET und nicht per Identitätswechsel her. Benutzerinstanzen dürfen nicht in Szenarien mit Drittanbietern oder freigegebenem Hosting verwendet werden, bei denen alle Anwendungen dieselbe Benutzerinstanz gemeinsam nutzen und nicht mehr voneinander isoliert bleiben.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [SQL Server und ADO.NET](index.md)
-- [Verbindungszeichenfolgen](../connection-strings.md)
+- [Verbindungs Zeichenfolgen](../connection-strings.md)
 - [Herstellen der Verbindung mit einer Datenquelle](../connecting-to-a-data-source.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

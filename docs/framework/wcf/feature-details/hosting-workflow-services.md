@@ -54,7 +54,7 @@ Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagi
 ## <a name="deployment"></a>Bereitstellung
  Das Webbereitstellungstool wurde erstellt, um die Bereitstellung zu vereinfachen. Mit dem Tool können Sie Anwendungen zwischen IIS 6.0 und IIS 7.0 migrieren, Serverfarmen synchronisieren und Webanwendungen verpacken, archivieren und bereitstellen. Weitere Informationen finden Sie unter [MS Deployment Tool](https://go.microsoft.com/fwlink/?LinkId=178690).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Interne Funktionsweise des Workflowdiensthosts](workflow-service-host-internals.md)
 - [Konfigurieren von WorkflowServiceHost](configuring-workflowservicehost.md)

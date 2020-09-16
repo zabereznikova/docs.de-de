@@ -96,7 +96,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Diese Bindung generiert standardmäßig eine Laufzeitkommunikation, die Transportsicherheit, TCP zur Nachrichtenübermittlung und eine binäre Nachrichtencodierung verwendet. Diese Bindung ist eine geeignete von einem System bereitgestellte Windows Communication Foundation (WCF) für die Kommunikation über ein Intranet.  
   
@@ -148,7 +148,7 @@ Die Bindung wird in den Konfigurationsdateien für den Client und Dienst angegeb
 </bindings>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement>

@@ -91,7 +91,7 @@ Das Hosten von Workflowdiensten in AppFabric ähnelt dem Hosten unter IIS/WAS. D
   
      Weitere Informationen zu Windows Server App Fabric-Features und deren Verwendung finden Sie unter [Windows Server App Fabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10)) .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen eines Workflowdiensts mit langer Ausführungszeit](creating-a-long-running-workflow-service.md)
 - [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

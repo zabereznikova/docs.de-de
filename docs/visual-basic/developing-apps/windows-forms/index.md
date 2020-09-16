@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 11216186a28509e1f10bafa1b24a440bcedaeeb6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85840307"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557018"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
 
@@ -20,9 +20,9 @@ Ein wichtiger Aspekt von Visual Basic ist die Möglichkeit, Windows Forms-Anwend
 
 Sie können mit Visual Studio Windows Forms- und Windows-Dienstanwendungen erstellen. Weitere Informationen finden Sie unter den folgenden Themen:
 
-- [Erste Schritte mit Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Enthält Informationen zum Erstellen und Programmieren von Windows Forms.
+- [Erste Schritte mit Windows Forms](/dotnet/desktop/winforms/getting-started-with-windows-forms). Enthält Informationen zum Erstellen und Programmieren von Windows Forms.
 
-- [Windows Forms-Steuerelemente](../../../framework/winforms/controls/index.md). Sammlung von Themen, in denen die Verwendung von Windows Forms-Steuerelementen beschrieben wird.
+- [Windows Forms-Steuerelemente](/dotnet/desktop/winforms/controls/). Sammlung von Themen, in denen die Verwendung von Windows Forms-Steuerelementen beschrieben wird.
 
 - [Windows-Dienstanwendungen](../../../framework/windows-services/index.md). Listet Themen auf, die erläutern, wie Windows-Dienste erstellt werden.
 
@@ -34,11 +34,11 @@ In Windows Forms stellt ein Formular eine visuelle Oberfläche dar, auf der Info
 
 ### <a name="events"></a>Ereignisse
 
-Wenn ein Benutzer Aktionen im Formular oder in enthaltenen Steuerelementen ausführt, wird ein Ereignis generiert. Die Anwendung reagiert auf diese Ereignisse und verarbeitet sie zum Zeitpunkt ihres Auftretens. Weitere Informationen finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md).
+Wenn ein Benutzer Aktionen im Formular oder in enthaltenen Steuerelementen ausführt, wird ein Ereignis generiert. Die Anwendung reagiert auf diese Ereignisse und verarbeitet sie zum Zeitpunkt ihres Auftretens. Weitere Informationen finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms).
 
 ### <a name="controls"></a>Steuerelemente
 
-Windows Forms enthält eine Vielzahl von Steuerelementen, die Sie in Formularen platzieren können: Steuerelemente zur Anzeige von Textfeldern, Schaltflächen, Dropdownfeldern, Optionsfeldern und sogar Webseiten. Eine Liste aller Steuerelemente, die in einem Formular verwendet werden können, finden Sie unter [Steuerelemente für Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Windows Forms unterstützt über die <xref:System.Windows.Forms.UserControl>-Klasse auch das Erstellen benutzerdefinierter Steuerelemente, wenn ein vorhandenes Steuerelement für Ihre Anforderungen nicht geeignet ist.
+Windows Forms enthält eine Vielzahl von Steuerelementen, die Sie in Formularen platzieren können: Steuerelemente zur Anzeige von Textfeldern, Schaltflächen, Dropdownfeldern, Optionsfeldern und sogar Webseiten. Eine Liste aller Steuerelemente, die in einem Formular verwendet werden können, finden Sie unter [Steuerelemente für Windows Forms](/dotnet/desktop/winforms/controls/controls-to-use-on-windows-forms). Windows Forms unterstützt über die <xref:System.Windows.Forms.UserControl>-Klasse auch das Erstellen benutzerdefinierter Steuerelemente, wenn ein vorhandenes Steuerelement für Ihre Anforderungen nicht geeignet ist.
 
 Windows Forms verfügt über komplexe Steuerelemente für die Benutzeroberfläche, mit denen Funktionen aus Anwendungen wie Microsoft Office emuliert werden können. Mit dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement und dem <xref:System.Windows.Forms.MenuStrip>-Steuerelement können Sie Symbolleisten und Menüs erstellen, die Texte und Bilder, Untermenüs oder weitere Steuerelemente enthalten, z. B. Textfelder und Kombinationsfelder.
 
@@ -53,9 +53,9 @@ Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den f
 |Beschreibung|Siehe|
 |--------|---------|
 |Erstellen einer neuen Windows Forms-Anwendung mit Visual Studio|[Tutorial 1: Erstellen eines Bildanzeigeprogramms](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
-|Verwenden von Steuerelementen in Formularen|[How to: Hinzufügen von Steuerelementen zu Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Erstellen von Grafiken mithilfe von <xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Erstellen von benutzerdefinierten Steuerelementen|[How to: Erben von der UserControl-Klasse](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Verwenden von Steuerelementen in Formularen|[How to: Hinzufügen von Steuerelementen zu Windows Forms](/dotnet/desktop/winforms/controls/how-to-add-controls-to-windows-forms)|
+|Erstellen von Grafiken mithilfe von <xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](/dotnet/desktop/winforms/advanced/getting-started-with-graphics-programming)|
+|Erstellen von benutzerdefinierten Steuerelementen|[How to: Erben von der UserControl-Klasse](/dotnet/desktop/winforms/controls/how-to-inherit-from-the-usercontrol-class)|
 
 ## <a name="displaying-and-manipulating-data"></a>Anzeigen und Bearbeiten von Daten
 
@@ -75,8 +75,8 @@ Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den f
 
 |Beschreibung|Siehe|
 |--------|---------|
-|Verwenden der <xref:System.Windows.Forms.BindingSource>-Komponente|[How to: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Arbeiten mit ADO.NET-Datenquellen|[How to: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Verwenden der <xref:System.Windows.Forms.BindingSource>-Komponente|[How to: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](/dotnet/desktop/winforms/controls/bind-wf-controls-with-the-bindingsource)|
+|Arbeiten mit ADO.NET-Datenquellen|[How to: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](/dotnet/desktop/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component)|
 |Verwenden des Fensters „Datenquellen“|[Exemplarische Vorgehensweise: Anzeigen von Daten in einem Windows Forms-Formular](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
 ## <a name="deploying-applications-to-client-computers"></a>Bereitstellen von Anwendungen auf Clientcomputern
@@ -103,11 +103,11 @@ Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den f
 
 |Beschreibung|Siehe|
 |--------|---------|
-|Ausgeben des Inhalts eines Formulars|[How to: Drucken von Grafiken in Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [How to: Drucken einer mehrseitigen Textdatei in Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Weitere Informationen zur Windows Forms-Sicherheit|[Übersicht über die Sicherheit in Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|
+|Ausgeben des Inhalts eines Formulars|[How to: Drucken von Grafiken in Windows Forms](/dotnet/desktop/winforms/advanced/how-to-print-graphics-in-windows-forms)<br /><br /> [How to: Drucken einer mehrseitigen Textdatei in Windows Forms](/dotnet/desktop/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms)|
+|Weitere Informationen zur Windows Forms-Sicherheit|[Übersicht über die Sicherheit in Windows Forms](/dotnet/desktop/winforms/security-in-windows-forms-overview)|
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
-- [Übersicht über Windows Forms](../../../framework/winforms/windows-forms-overview.md)
+- [Übersicht über Windows Forms](/dotnet/desktop/winforms/windows-forms-overview)
 - [My.Forms-Objekt](../../language-reference/objects/my-forms-object.md)

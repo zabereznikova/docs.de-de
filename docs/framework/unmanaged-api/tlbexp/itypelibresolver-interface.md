@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: edaaed1d-0d26-40f0-83f1-48efc0ded1c6
 topic_type:
 - apiref
-ms.openlocfilehash: 28a750846407a2b035e42533765eb83a87bfce3c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c8c21a589554bac81ebfce3505917869ef8de27
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104113"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553596"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver-Schnittstelle
 Stellt die [ResolveTypeLib-Methode](resolvetypelib-method.md)bereit, die den Dateipfad einer Typbibliothek auflöst.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[ResolveTypeLib-Methode](resolvetypelib-method.md)|Löst den einfachen Namen einer Typbibliothek auf, indem der voll qualifizierte Pfad zurückgegeben wird.|  
   
@@ -42,4 +42,4 @@ Stellt die [ResolveTypeLib-Methode](resolvetypelib-method.md)bereit, die den Dat
 ## <a name="see-also"></a>Siehe auch
 
 - [Tlbexp-Hilfsfunktionen](index.md)
-- [LoadTypeLibEx-Funktion](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx-Funktion](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
