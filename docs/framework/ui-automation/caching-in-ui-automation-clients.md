@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 4fbb4acabebea54015b11cefdf8a37c7e2dc93f5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: cbf7b18d59e468be085f245cc9bb0a595bd41832
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168256"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540926"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -102,8 +102,8 @@ ms.locfileid: "87168256"
   
  Durch das Aktualisieren des Caches werden die Eigenschaften der vorhandenen <xref:System.Windows.Automation.AutomationElement> -Verweise nicht geändert.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](ui-automation-events-for-clients.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)
-- [FetchTimer-Beispiel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [FetchTimer-Beispiel](/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

@@ -1,13 +1,13 @@
 ---
 title: Beobachtbarkeitsmuster
 description: Observability-Muster für Native Cloud-Anwendungen
-ms.date: 05/13/2020
-ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 08/10/2020
+ms.openlocfilehash: 2a6ef0e58f1e20667167042614768b099f640858
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613810"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539852"
 ---
 # <a name="observability-patterns"></a>Beobachtbarkeitsmuster
 
@@ -15,7 +15,7 @@ Ebenso wie Muster entwickelt wurden, um das Layout von Code in Anwendungen zu un
 
 ## <a name="when-to-use-logging"></a>Verwendungszwecke der Protokollierung
 
-Unabhängig davon, wie sorgfältig wir sind, Verhalten sich Anwendungen fast immer auf unerwartete Weise in der Produktionsumgebung. Wenn Benutzer Probleme mit einer Anwendung melden, ist es äußerst nützlich, wenn Sie sehen können, was mit der APP passiert ist, als das Problem aufgetreten ist. Eine der bewährten Methoden zum Erfassen von Informationen darüber, was eine Anwendung während der Ausführung tut, besteht darin, die Anwendung zu schreiben, was Sie tut. Dieser Prozess wird als Protokollierung bezeichnet. Wenn Ausfälle oder Probleme in der Produktion auftreten, sollte das Ziel darin bestehen, die Bedingungen, unter denen die Ausfälle aufgetreten sind, in einer nicht-Produktionsumgebung zu reproduzieren. Eine gute Protokollierung ist eine Roadmap für Entwickler, die Sie befolgen können, um Probleme in einer Umgebung zu duplizieren, die Sie testen und experimentieren können.
+Unabhängig davon, wie sorgfältig wir sind, Verhalten sich Anwendungen fast immer auf unerwartete Weise in der Produktionsumgebung. Wenn Benutzer Probleme mit einer Anwendung melden, ist es hilfreich, wenn Sie sehen können, was mit der APP passiert ist, als das Problem aufgetreten ist. Eine der bewährten Methoden zum Erfassen von Informationen darüber, was eine Anwendung während der Ausführung tut, besteht darin, die Anwendung zu schreiben, was Sie tut. Dieser Prozess wird als Protokollierung bezeichnet. Immer wenn Ausfälle oder Probleme in der Produktion auftreten, sollte das Ziel darin bestehen, die Bedingungen, unter denen die Ausfälle aufgetreten sind, in einer nicht-Produktionsumgebung zu reproduzieren. Eine gute Protokollierung ist eine Roadmap für Entwickler, die Sie befolgen können, um Probleme in einer Umgebung zu duplizieren, die Sie testen und experimentieren können.
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Herausforderungen bei der Protokollierung mit nativen cloudanwendungen
 
@@ -41,7 +41,7 @@ Zum Schluss ist die Anzahl der Benutzer in einigen cloudbasierten Anwendungen ho
 Jede Programmiersprache verfügt über Tools, die das Schreiben von Protokollen erlauben, und in der Regel ist der Aufwand für das Schreiben dieser Protokolle gering. Viele der Protokollierungs Bibliotheken ermöglichen das Protokollieren verschiedener Arten von criticalities, die zur Laufzeit optimiert werden können. Die [Bibliothek "serilog](https://serilog.net/) " ist beispielsweise eine beliebte strukturierte Protokollierungs Bibliothek für .net, die die folgenden Protokolliergrade bereitstellt:
 
 * Ausführlich
-* Debug
+* Debuggen
 * Information
 * Warnung
 * Fehler

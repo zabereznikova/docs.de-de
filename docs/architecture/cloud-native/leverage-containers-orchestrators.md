@@ -2,12 +2,12 @@
 title: Nutzen von Containern und Orchestratoren
 description: Nutzen von Docker-Containern und Kubernetes-orchestratoren in Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446866"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540542"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Nutzen von Containern und Orchestratoren
 
@@ -31,7 +31,7 @@ Monolithische Anwendungen erfordern eine vollständige Bereitstellung der gesamt
 
 Eine monolithische Anwendung wird vollständig auf einer einzelnen Computer Instanz gehostet, die häufig Hochleistungs Hardware erfordert. Wenn für einen Teil der monolithische Skalierung erforderlich ist, muss eine andere Kopie der gesamten Anwendung auf einem anderen Computer bereitgestellt werden. Bei einer monolithischen Anwendung können Anwendungskomponenten nicht einzeln skaliert werden, sondern alles oder nichts. Das Skalieren von Komponenten, die keine Skalierung erfordern, führt zu ineffizient und kostspieliger Ressourcennutzung
 
-### <a name="environment"></a>Environment
+### <a name="environment"></a>Umgebung
 
 Monolithische Anwendungen werden in der Regel in einer Hostingumgebung mit vorinstallierter Betriebssystem-, Lauf Zeit-und Bibliotheksabhängigkeiten bereitgestellt. Diese Umgebung stimmt möglicherweise nicht mit der Umgebung identisch, auf der die Anwendung entwickelt oder getestet wurde. Inkonsistenzen zwischen Anwendungsumgebungen sind eine häufige Ursache für Probleme bei monolithischen bereit Stellungen.
 
@@ -183,7 +183,7 @@ Visual Studio unterstützt die Docker-Entwicklung für webbasierte Anwendungen. 
 
 Wenn diese Option ausgewählt ist, wird das Projekt mit einem im Stammverzeichnis erstellt `Dockerfile` , das verwendet werden kann, um die app in einem docker-Container zu erstellen und zu hosten. Ein Beispiel für eine dockerfile-Datei finden Sie in Abbildung 3.
 
-```docker
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80

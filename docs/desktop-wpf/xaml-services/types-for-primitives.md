@@ -15,14 +15,14 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: 3bd486ee66c5f9a32621416638bb7575025f7dee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec0e2a29a191d5057ce66a5f3272d00e92b01bd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "81433055"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540028"
 ---
-# <a name="built-in-types-for-common-xaml-language-primitives"></a>Integrierte Typen für gängige XAML-Sprachprimitive
+# <a name="built-in-types-for-common-xaml-language-primitives"></a>Integrierte Typen für häufige XAML-sprach primitive
 
 In XAML 2009 wird die Unterstützung auf XAML-Sprachebene für mehrere Datentypen eingeführt, bei denen es sich um häufig verwendete Primitiven in der Common Language Runtime (CLR) und anderen Programmiersprachen handelt. In XAML 2009 wurde Unterstützung für die folgenden Primitiven hinzugefügt: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`und `x:Array`
 
@@ -54,27 +54,27 @@ Dieser Primitive wird in der Regel nicht in Anwendungsmarkup verwendet, könnte 
 
 Für CLR-Unterstützung entspricht die `x:Boolean` -Primitive <xref:System.Boolean>.
 
-Wenn XAML Werte für `x:Boolean` analysiert, wird die Groß-/Kleinschreibung nicht beachtet. Beachten Sie, dass `x:Bool` keine akzeptierte Alternative ist. Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.17 und 5.4.11](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Wenn XAML Werte für `x:Boolean` analysiert, wird die Groß-/Kleinschreibung nicht beachtet. Beachten Sie, dass `x:Bool` keine akzeptierte Alternative ist. Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.17 und 5.4.11](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xchar"></a>x:Char
 
 Für CLR-Unterstützung entspricht die `x:Char` -Primitive <xref:System.Char>.
 
-Zeichenfolgen- und Zeichentypen verfügen über Interaktion mit der Gesamtcodierung der Datei auf XML-Ebene. Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.7 und 5.4.1](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Zeichenfolgen- und Zeichentypen verfügen über Interaktion mit der Gesamtcodierung der Datei auf XML-Ebene. Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.7 und 5.4.1](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xstring"></a>x:String
 
 Für CLR-Unterstützung entspricht die `x:String` -Primitive <xref:System.String>.
 
-Zeichenfolgen- und Zeichentypen verfügen über Interaktion mit der Gesamtcodierung der Datei auf XML-Ebene. Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Zeichenfolgen- und Zeichentypen verfügen über Interaktion mit der Gesamtcodierung der Datei auf XML-Ebene. Die Definition der XAML-Sprachspezifikation finden Sie in den [ \[ Abschnitten zu MS-XAML \] 5.2.6](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xdecimal"></a>x:Decimal
 
 Für CLR-Unterstützung entspricht die `x:Decimal` -Primitive <xref:System.Decimal>.
 
-Die XAML-Analyse erfolgt `en-US` inhärent unter Kultur. Gemäß der `en-US` -Kultur ist das richtige Trennzeichen für die Bestandteile einer Dezimalzahl immer ein Punkt (`.`), und zwar unabhängig von Kultureinstellungen der Entwicklungsumgebung oder dem tatsächlichen Clientziel, in das die XAML zur Laufzeit geladen wird.
+Die XAML-Verarbeitung erfolgt grundsätzlich unter der `en-US` Kultur. Gemäß der `en-US` -Kultur ist das richtige Trennzeichen für die Bestandteile einer Dezimalzahl immer ein Punkt (`.`), und zwar unabhängig von Kultureinstellungen der Entwicklungsumgebung oder dem tatsächlichen Clientziel, in das die XAML zur Laufzeit geladen wird.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.14 und 5.4.8](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.14 und 5.4.8](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xsingle"></a>x:Single
 
@@ -84,7 +84,7 @@ Zusätzlich zu den numerischen Werten ermöglicht die Textsyntax für `x:Single`
 
 `x:Single` kann Werte in wissenschaftlicher Schreibweise unterstützen, wenn das erste Zeichen in der Textsyntax `e` oder `E`ist.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.8 und 5.4.2](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.8 und 5.4.2](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xdouble"></a>x:Double
 
@@ -94,33 +94,33 @@ Zusätzlich zu den numerischen Werten ermöglicht die Textsyntax für `x:Double`
 
 `x:Double` kann Werte in wissenschaftlicher Schreibweise unterstützen. Verwenden Sie das Zeichen `e` oder `E` , um den Exponententeil einzuführen.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.9 und 5.4.3](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.9 und 5.4.3](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xint16"></a>x:Int16
 
 Für CLR-Unterstützung entspricht die `x:Int16` -Primitive <xref:System.Int16> , und `x:Int16` wird als signiert behandelt. In XAML wird das Nichtvorhandensein eines Pluszeichens (`+`) in der Textsyntax als positiv signierter Wert impliziert.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.11 und 5.4.5](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.11 und 5.4.5](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xint32"></a>x:Int32
 
 Für CLR-Unterstützung entspricht die `x:Int32` -Primitive <xref:System.Int32>. `x:Int32` wird als signiert behandelt. In XAML wird das Nichtvorhandensein eines Pluszeichens (`+`) in der Textsyntax als positiv signierter Wert impliziert.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.12 und 5.4.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.12 und 5.4.6](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xint64"></a>x:Int64
 
 Für CLR-Unterstützung entspricht die `x:Int64` -Primitive <xref:System.Int64>. `x:Int64` wird als signiert behandelt. In XAML wird das Nichtvorhandensein eines Pluszeichens (`+`) in der Textsyntax als positiv signierter Wert impliziert.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.13 und 5.4.7](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.13 und 5.4.7](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xtimespan"></a>x:TimeSpan
 
 Für CLR-Unterstützung entspricht die `x:TimeSpan` -Primitive <xref:System.TimeSpan>.
 
-Die XAML-Analyse für das Zeitdatumsformat erfolgt inhärent unter `en-US` Kultur.
+Die XAML-Verarbeitung für das Zeit Datumsformat erfolgt grundsätzlich unter der `en-US` Kultur.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.16 und 5.4.10](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.16 und 5.4.10](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xuri"></a>x:Uri
 
@@ -128,13 +128,13 @@ Für CLR-Unterstützung entspricht die `x:Uri` -Primitive <xref:System.Uri>.
 
 Die Überprüfung auf Protokolle ist nicht Bestandteil der XAML-Definition für `x:Uri`.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.15 und 5.4.9](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.15 und 5.4.9](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xbyte"></a>x:Byte
 
-Für CLR-Unterstützung entspricht die `x:Byte` -Primitive <xref:System.Byte>. <xref:System.Byte>  /  A `x:Byte` wird als nicht signiert behandelt.
+Für CLR-Unterstützung entspricht die `x:Byte` -Primitive <xref:System.Byte>. Eine <xref:System.Byte>  /  `x:Byte` wird als nicht signiert behandelt.
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.10 und 5.4.4](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie unter [ \[ MS-XAML \] -Abschnitte 5.2.10 und 5.4.4](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ### <a name="xarray"></a>x:Array
 
@@ -142,7 +142,7 @@ Für CLR-Unterstützung entspricht die `x:Array` -Primitive <xref:System.Array>.
 
 In XAML 2006 können Sie ein Array mit einer Markuperweiterungssyntax definieren. Die XAML 2009-Syntax ist dagegen eine sprachdefinierte Primitive, die keinen Zugriff auf eine Markuperweiterung erfordert. Weitere Informationen zur Unterstützung von XAML 2006 finden Sie unter [x:Array Markup Extension](xarray-markup-extension.md).
 
-Die XAML-Sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-Abschnitte\] 5.2.18](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Die Definition der XAML-Sprachspezifikation finden Sie in den [ \[ Abschnitten zu MS-XAML \] 5.2.18](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
 ## <a name="wpf-support"></a>WPF-Unterstützung
 

@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: a3dca2cbb138dbc43f477488032e67335c8b15f9
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 41e95a9f3ad34853f9cd71fa2cb81d3fca0fb2cd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452161"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540563"
 ---
 # <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10:: resumeruntime-Methode
 
@@ -28,15 +28,15 @@ Setzt die Laufzeit fort, ohne eine GC auszuführen.
 HRESULT ResumeRuntime();
 ```
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?pivots=os-windows).
+**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/windows.md?pivots=os-windows).
 
 **Header:** CorProf.idl, CorProf.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET-Versionen:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

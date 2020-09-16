@@ -2,12 +2,12 @@
 title: Messung der Startverbesserung mit .NET Native
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d20fa77ee299065ced406bf8cd531b8c54b6c33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180996"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540887"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Messung der Startverbesserung mit .NET Native
 Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesserung ist besonders deutlich auf tragbaren Geräten mit geringem Energieverbrauch und bei komplexen Apps. Dieses Thema soll Ihnen den Einstieg in die grundlegende Instrumentierung erleichtern, die Sie benötigen, um diese Startverbesserung zu messen.  
@@ -55,7 +55,7 @@ Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesse
  PerfView verwendet ETW-Ereignisse, um Sie bei allen möglichen Leistungsuntersuchungen für Ihre App zu unterstützen. Darüber hinaus ist eine grafische Benutzeroberfläche für die Konfiguration enthalten, mit der Sie die Protokollierung für unterschiedliche Typen von Ereignissen aktivieren oder deaktivieren können. PerfView ist ein kostenloses Tool, das über das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=28567) heruntergeladen werden kann. Weitere Informationen erhalten Sie in den [Videotutorials für PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
-> PerfView kann nicht zum Erfassen von Ereignissen auf ARM-Systemen verwendet werden. Zum Erfassen von Ereignissen auf ARM-Systemen verwenden Sie Windows Performance Recorder (WPR). Weitere Informationen finden Sie im [Blogbeitrag von Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device).  
+> PerfView kann nicht zum Erfassen von Ereignissen auf ARM-Systemen verwendet werden. Zum Erfassen von Ereignissen auf ARM-Systemen verwenden Sie Windows Performance Recorder (WPR). Weitere Informationen finden Sie im [Blogbeitrag von Vance Morrison](/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device).  
   
  Sie können PerfView auch von der Befehlszeile aus aufrufen. Um nur die Ereignisse von Ihrem Anbieter zu protokollieren, öffnen Sie das Eingabeaufforderungsfenster und geben folgenden Befehl ein:  
   
@@ -63,7 +63,7 @@ Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesse
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile
 ```  
   
- Dabei gilt:  
+ Dabei gilt Folgendes:  
   
  `-KernelEvents:Process`  
  Gibt an, dass Sie wissen möchten, wann der Prozess startet und endet. Sie benötigen das Process/Start-Ereignis für Ihre App, damit die Zeit von anderen Ereigniszeiten abgezogen werden kann.  
@@ -93,8 +93,8 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Wählen Sie alle im linken Bereich aufgelisteten Ereignisse aus (STRG+A), und drücken Sie die **EINGABETASTE**. Nun sollten die Zeitstempel jedes Ereignisses angezeigt werden. Diese Zeitstempel sind relativ zum Start der Ablaufverfolgung, sodass Sie die Zeit der einzelnen Ereignisse von der Startzeit des Prozesses abziehen müssen, um die verstrichene Zeit seit dem Start zu ermitteln. Wenn mit STRG+Klick zwei Zeitstempel auswählen, wird der Unterschied zwischen diesen in der Statusleiste am unteren Rand der Seite angezeigt. Auf diese Weise können Sie ganz einfach die abgelaufene Zeit zwischen zwei beliebigen Ereignissen in der Anzeige (einschließlich des Prozessstarts) sehen. Sie können das Kontextmenü für die Ansicht öffnen und eine Reihe nützlicher Optionen auswählen, wie beispielsweise das Exportieren in CSV-Dateien oder das Öffnen von Microsoft Excel zum Speichern oder Verarbeiten der Daten.  
   
- Durch Wiederholen des Verfahrens für Ihre ursprüngliche APP und die Version, die Sie mit der .net Native-Toolkette erstellt haben, können Sie den Unterschied in der Leistung vergleichen.   .Net Native apps werden im Allgemeinen schneller als Non-.net Native apps gestartet. Wenn Sie an weiteren Details interessiert sind, kann PerfView auch die Teile des Codes identifizieren, die die meiste Zeit verbrauchen. Weitere Informationen erhalten Sie in den [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) oder durch Lesen des [Blogbeitrags von Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool).  
+ Durch Wiederholen des Verfahrens für Ihre ursprüngliche APP und die Version, die Sie mit der .net Native-Toolkette erstellt haben, können Sie den Unterschied in der Leistung vergleichen.   .Net Native apps werden im Allgemeinen schneller als Non-.net Native apps gestartet. Wenn Sie an weiteren Details interessiert sind, kann PerfView auch die Teile des Codes identifizieren, die die meiste Zeit verbrauchen. Weitere Informationen erhalten Sie in den [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) oder durch Lesen des [Blogbeitrags von Vance Morrison](/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Diagnostics.Tracing.EventSource>

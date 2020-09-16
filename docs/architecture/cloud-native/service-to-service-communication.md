@@ -3,12 +3,12 @@ title: Kommunikation zwischen Dienst und Dienst
 description: Erfahren Sie, wie Back-End-cloudnative-mikrodienste mit anderen Back-End-Webdiensten kommunizieren.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613706"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539805"
 ---
 # <a name="service-to-service-communication"></a>Kommunikation zwischen Dienst und Dienst
 
@@ -164,7 +164,7 @@ Mit Eventing wechseln wir von der Warteschlangen Technologie zu *Themen*. Ein [T
 
 **Abbildung 4-16**. Themen Architektur
 
-In der vorherigen Abbildung senden Verleger Nachrichten an das Thema. Am Ende empfangen Abonnenten Nachrichten von Abonnements. In der Mitte leitet das Thema Nachrichten basierend auf einem Satz von *Regeln*, die in dunklen blauen Feldern angezeigt werden, an Abonnements weiter. Regeln fungieren als Filter, der bestimmte Nachrichten an ein Abonnement weiterleiten soll. Hier wird ein "| ateorder"-Ereignis an Abonnement \# 1 und Abonnement 3 gesendet \# , aber nicht an Abonnement \# 2. Ein "orderabgeschlossene"-Ereignis wird an Abonnement \# 2 und Abonnement \# 3 gesendet.
+In der vorherigen Abbildung senden Verleger Nachrichten an das Thema. Am Ende empfangen Abonnenten Nachrichten von Abonnements. In der Mitte leitet das Thema Nachrichten basierend auf einem Satz von Regeln, die in dunklen blauen Feldern angezeigt werden, an Abonnements weiter. Regeln fungieren als Filter, der bestimmte Nachrichten an ein Abonnement weiterleiten soll. Hier wird ein "getPrice"-Ereignis an die Preis-und Protokollierungs Abonnements gesendet, weil das Protokollierungs Abonnement ausgewählt hat, dass alle Nachrichten empfangen werden sollen.  Ein "GetInformation"-Ereignis würde an die Informations-und Protokollierungs Abonnements gesendet werden.
 
 Die Azure-Cloud unterstützt zwei verschiedene Themen Dienste: Azure Service Bus Themen und Azure Event Grid.
 
@@ -218,7 +218,7 @@ Event Hub unterstützt niedrige Latenz und konfigurierbare Zeit Aufbewahrung. Im
 
 Event Hub unterstützt allgemeine Ereignis Veröffentlichungs Protokolle, einschließlich HTTPS und AMQP. Außerdem wird Kafka 1,0 unterstützt. [Vorhandene Kafka-Anwendungen können mit dem Event Hub](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) über das Kafka-Protokoll kommunizieren, das eine Alternative zur Verwaltung großer Kafka-Cluster bereitstellt. Viele Open-Source-cloudnative Systeme nehmen Kafka vor.
 
-Event Hubs implementiert das Nachrichten Streaming über ein [partitioniertes consumermodell](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , in dem jeder Consumer nur eine bestimmte Teilmenge oder Partition des nachrichtenstreams liest. Dieses Muster ermöglicht enorme horizontale Skalierung für die Ereignisverarbeitung und stellt weitere datenstromorientierte Features zur Verfügung, die in Warteschlangen und Themen nicht verfügbar sind. Eine Partition ist eine geordnete Sequenz von Ereignissen, die in einem Event Hub besteht. Wenn neuere Ereignisse eintreffen, werden Sie am Ende dieser Sequenz hinzugefügt.Abbildung 4-19 zeigt die Partitionierung in einem Event Hub.
+Event Hubs implementiert das Nachrichten Streaming über ein [partitioniertes consumermodell](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , in dem jeder Consumer nur eine bestimmte Teilmenge oder Partition des nachrichtenstreams liest. Dieses Muster ermöglicht enorme horizontale Skalierung für die Ereignisverarbeitung und stellt weitere datenstromorientierte Features zur Verfügung, die in Warteschlangen und Themen nicht verfügbar sind. Eine Partition ist eine geordnete Sequenz von Ereignissen, die in einem Event Hub besteht. Neu eingehende Ereignisse werden am Ende dieser Sequenz hinzugefügt.Abbildung 4-19 zeigt die Partitionierung in einem Event Hub.
 
 ![Event Hub-Partitionierung](./media/event-hub-partitioning.png)
 

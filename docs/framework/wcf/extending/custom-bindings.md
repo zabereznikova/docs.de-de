@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 062aba26227fedeea3e5f462ebf5d55cf0cba56c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797227"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539996"
 ---
 # <a name="custom-bindings"></a>Benutzerdefinierte Bindungen
 
-Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Alle Bindungen werden anhand einer geordneten Menge von Bindungselementen erstellt. Benutzerdefinierte Bindungen können alleine aus systemeigenen Bindungselementen erstellt werden oder auch benutzerspezifische Bindungselemente umfassen. So können Sie mithilfe von benutzerdefinierten Bindungselementen beispielsweise die Verwendung neuer Transporte oder Encoder an einem Dienstendpunkt aktivieren. Funktionierende Beispiele finden Sie unter Beispiele für [benutzerdefinierte Bindungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Weitere Informationen finden [ \<Sie unter CustomBinding->](../../configure-apps/file-schema/wcf/custombinding.md).
+Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Alle Bindungen werden anhand einer geordneten Menge von Bindungselementen erstellt. Benutzerdefinierte Bindungen können alleine aus systemeigenen Bindungselementen erstellt werden oder auch benutzerspezifische Bindungselemente umfassen. So können Sie mithilfe von benutzerdefinierten Bindungselementen beispielsweise die Verwendung neuer Transporte oder Encoder an einem Dienstendpunkt aktivieren. Funktionierende Beispiele finden Sie unter Beispiele für [benutzerdefinierte Bindungen](/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Weitere Informationen finden Sie unter [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md).
 
 ## <a name="construction-of-a-custom-binding"></a>Aufbau einer benutzerdefinierten Bindung
 
@@ -64,7 +64,7 @@ Am Ende befindet sich ein erforderliches Transportelement. Sie können Ihren eig
 
 In der folgenden Tabelle werden die Optionen für jede Ebene zusammengefasst.
 
-|Ebene|Optionen|Required|
+|Ebene|Tastatur|Erforderlich|
 |-----------|-------------|--------------|
 |Transaktionen|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Nein|
 |Zuverlässigkeit|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nein|

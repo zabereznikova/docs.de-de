@@ -3,16 +3,16 @@ title: Featureflags
 description: Implementieren von featureflags in Cloud-native Anwendungen mit Azure-app config
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614070"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540464"
 ---
 # <a name="feature-flags"></a>Featureflags
 
-In Kapitel 1 haben wir bestätigt, dass Cloud Native sehr viel über Geschwindigkeit und Agilität verfügt. Benutzer erwarten schnelle Reaktionsfähigkeit, innovative Features und keine Ausfallzeiten. `Feature flags`bei handelt es sich um ein modernes Bereitstellungs Verfahren, mit dem sich die Agilität von cloudbasierten Anwendungen erhöhen lässt Sie ermöglichen es Ihnen, neue Features in einer Produktionsumgebung bereitzustellen, aber die Verfügbarkeit einzuschränken. Mit der flicke eines Schalters können Sie ein neues Feature für bestimmte Benutzer aktivieren, ohne die APP neu zu starten oder neuen Code bereitzustellen. Sie trennen die Freigabe neuer Features von ihrer Code Bereitstellung.
+In Kapitel 1 haben wir bestätigt, dass Cloud Native sehr viel über Geschwindigkeit und Agilität verfügt. Benutzer erwarten schnelle Reaktionsfähigkeit, innovative Features und keine Ausfallzeiten. `Feature flags` bei handelt es sich um ein modernes Bereitstellungs Verfahren, mit dem sich die Agilität von cloudbasierten Anwendungen erhöhen lässt Sie ermöglichen es Ihnen, neue Features in einer Produktionsumgebung bereitzustellen, aber die Verfügbarkeit einzuschränken. Mit der flicke eines Schalters können Sie ein neues Feature für bestimmte Benutzer aktivieren, ohne die APP neu zu starten oder neuen Code bereitzustellen. Sie trennen die Freigabe neuer Features von ihrer Code Bereitstellung.
 
 Merkmals Flags basieren auf einer bedingten Logik, die die Sichtbarkeit von Benutzern zur Laufzeit steuert. In modernen, cloudbasierten Systemen ist es üblich, neue Features frühzeitig in der Produktion bereitzustellen, Sie aber mit einer begrenzten Zielgruppe zu testen. Wenn das Vertrauen zunimmt, kann die Funktion inkrementell für größere Zielgruppen eingeführt werden.
 
@@ -29,7 +29,7 @@ Merkmals Flags fördern auch die `trunk-based` Entwicklung. Dabei handelt es sic
 
 Im Kern ist ein Merkmals Flag ein Verweis auf einen einfachen `decision object` . Sie gibt einen booleschen Zustand von `on` oder zurück `off` . Das Flag umschließt in der Regel einen Codeblock, der eine featurefunktion kapselt. Der Status des Flags bestimmt, ob dieser Codeblock für einen bestimmten Benutzer ausgeführt wird. In Abbildung 10-11 wird die Implementierung veranschaulicht.
 
-```c#
+```csharp
 if (featureFlag) {
     // Run this code block if the featureFlag value is true
 } else {
@@ -49,7 +49,7 @@ Merkmals Flags können problemlos in einem [ASP.net Core-Dienst](https://docs.mi
 
 Nachdem Sie in der Startup-Klasse konfiguriert wurde, können Sie Feature-Flag-Funktionalität auf Controller-, Aktions-oder Middleware-Ebene hinzufügen. In Abbildung 10-12 wird die Implementierung von Controller und Aktion dargestellt:
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public class ProductController : Controller
 {
@@ -57,7 +57,7 @@ public class ProductController : Controller
 }
 ```
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public IActionResult UpdateProductStatus()
 {
@@ -71,7 +71,7 @@ Wenn ein Merkmals Flag deaktiviert ist, empfängt der Benutzer den Statuscode 40
 
 Merkmals Flags können auch direkt in c#-Klassen eingefügt werden. In Abbildung 10-13 wird das Einschleusen von featureflags gezeigt
 
-```c#
+```csharp
 public class ProductController : Controller
 {
     private readonly IFeatureManager _featureManager;

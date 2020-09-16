@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-ms.openlocfilehash: 91ef9eaa855ed841bc75bfaeead462f045eb1d8b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8e119093800ea0a0119ba25ba38cf2eaf9afe96b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007454"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540861"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo-Methode
 Diese Methode ist nicht implementiert. Wenn Sie aufgerufen wird, wird E_NOTIMPL zurückgegeben.  
@@ -38,7 +38,7 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>Parameter  
  `pITI`  
- in Ein Zeiger auf eine [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) -Schnittstelle, die die Typinformationen bereitstellt, für die der Bereich geöffnet werden soll.  
+ in Ein Zeiger auf eine [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) -Schnittstelle, die die Typinformationen bereitstellt, für die der Bereich geöffnet werden soll.  
   
  `dwOpenFlags`  
  in Die Open Mode-Flags.  
@@ -49,12 +49,12 @@ HRESULT OpenScopeOnITypeInfo (
  `ppIUnk`  
  vorgenommen Zeiger auf einen Zeiger auf die zurückgegebene Schnittstelle.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
