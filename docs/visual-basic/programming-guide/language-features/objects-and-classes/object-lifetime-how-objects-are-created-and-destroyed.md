@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e81e131933e0997756ed4185a3ceb12ad19b78de
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a32a5d075b5b1d02632c80216e7c2c12920bf4a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392882"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544140"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Objektlebensdauer: Erstellen und Zerstören von Objekten (Visual Basic)
 
@@ -53,7 +53,7 @@ Konstruktoren sind häufig überladen, wie im folgenden Code:
 
 Wenn Sie eine von einer anderen Klasse abgeleitete Klasse definieren, muss die erste Zeile eines Konstruktors ein Aufruf an den Konstruktor der Basisklasse sein, es sei denn die Basisklasse verfügt über einen zugreifbaren Konstruktor, der keine Parameter annimmt. Ein Aufruf der Basisklasse mit dem oben stehenden Konstruktor wäre zum Beispiel `MyBase.New(s)`. Andernfalls `MyBase.New` ist optional, und die Visual Basic Runtime ruft Sie implizit auf.
 
-Nachdem Sie den Code zum Aufrufen des Konstruktors des übergeordneten Objekts geschrieben haben, können Sie einen beliebigen zusätzlichen Initialisierungscode dem `Sub New`-Verfahren hinzufügen. `Sub New`kann Argumente annehmen, wenn Sie als parametrisierter Konstruktor aufgerufen wird. Diese Parameter werden von der den Konstruktor aufrufenden Prozedur übergeben, zum Beispiel `Dim AnObject As New ThisClass(X)`.
+Nachdem Sie den Code zum Aufrufen des Konstruktors des übergeordneten Objekts geschrieben haben, können Sie einen beliebigen zusätzlichen Initialisierungscode dem `Sub New`-Verfahren hinzufügen. `Sub New` kann Argumente annehmen, wenn Sie als parametrisierter Konstruktor aufgerufen wird. Diese Parameter werden von der den Konstruktor aufrufenden Prozedur übergeben, zum Beispiel `Dim AnObject As New ThisClass(X)`.
 
 ### <a name="sub-finalize"></a>Sub Finalize
 
@@ -71,7 +71,7 @@ Im Gegensatz zu `Class_Terminate`, das ausgeführt wird, sobald ein Objekt auf n
 
 ### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Wie Neue und Finalize-Methoden in einer Klassenhierarchie arbeiten
 
-Wenn eine Instanz einer Klasse erstellt wird, versucht die common Language Runtime (CLR), eine Prozedur mit dem Namen `New` auszuführen, wenn es in diesem Objekt vorhanden ist. `New`ist eine Art von Prozedur `constructor` , die als bezeichnet wird und zum Initialisieren neuer Objekte verwendet wird, bevor ein anderer Code in einem-Objekt ausgeführt wird. Ein `New`-Konstruktor kann verwendet werden, um Dateien zu öffnen, Verbindungen mit Datenbanken herzustellen, Variablen zu initialisieren und sich um andere Aufgaben zu kümmern, die ausgeführt werden, bevor ein Objekt verwendet werden kann.
+Wenn eine Instanz einer Klasse erstellt wird, versucht die common Language Runtime (CLR), eine Prozedur mit dem Namen `New` auszuführen, wenn es in diesem Objekt vorhanden ist. `New` ist eine Art von Prozedur `constructor` , die als bezeichnet wird und zum Initialisieren neuer Objekte verwendet wird, bevor ein anderer Code in einem-Objekt ausgeführt wird. Ein `New`-Konstruktor kann verwendet werden, um Dateien zu öffnen, Verbindungen mit Datenbanken herzustellen, Variablen zu initialisieren und sich um andere Aufgaben zu kümmern, die ausgeführt werden, bevor ein Objekt verwendet werden kann.
 
 Wenn eine Instanz einer abgeleiteten Klasse erstellt wird, wird der `Sub New`-Konstruktor der Basisklasse zuerst ausgeführt, gefolgt von Konstruktoren in abgeleiteten Klassen. Dies geschieht, da die erste Codezeile in einem `Sub New`-Konstruktor die Syntax `MyBase.New()` verwendet, um den Konstruktor der Klasse direkt über sich selbst in der Klassenhierarchie aufzurufen. Der `Sub New`-Konstruktor wird dann für jede Klasse in der Klassenhierarchie aufgerufen, bis der Konstruktor für die Basisklasse erreicht wird. An dieser Stelle wird der Code im Konstruktor für die Basisklasse ausgeführt, gefolgt vom Code in jedem Konstruktor in allen abgeleiteten Klassen und der Code in den meisten abgeleiteten Klassen wird als letztes ausgeführt.
 
@@ -85,7 +85,7 @@ Wenn ein Objekt nicht mehr benötigt wird, ruft die CLR die <xref:System.Object.
 
 Klasseninstanzen steuern oft nicht von der CLR verwaltete Ressourcen, z. B. Windows-Handles und Datenbankverbindungen. Diese Ressourcen müssen in der `Finalize`-Methode der Klasse beseitigt werden, sodass sie freigegeben werden, wenn das Objekt vom Garbage Collector zerstört wird. Der Garbage Collector zerstört Objekte jedoch nur, wenn die CLR mehr freien Arbeitsspeicher erfordert. Dies bedeutet, dass die Ressourcen erst freigegeben werdn, nachdem das Objekt längst den Gültigkeitsbereich verlassen hat.
 
-Zur Ergänzung der Garbagecollection können die Klassen einen Mechanismus für die aktive Verwaltung von Systemressourcen bereitstellen, wenn sie die <xref:System.IDisposable>-Schnittstelle implementieren. <xref:System.IDisposable>verfügt über eine Methode, <xref:System.IDisposable.Dispose%2A> , die von Clients aufgerufen werden soll, wenn die Verwendung eines-Objekts beendet wird. Sie können die <xref:System.IDisposable.Dispose%2A>-Methode verwenden, um Ressourcen sofort freizugeben und Aufgaben wie das Schließen von Dateien und Datenbankverbindungen durchzuführen. Im Gegensatz zum `Finalize`-Destruktor, wird die <xref:System.IDisposable.Dispose%2A>-Methode nicht automatisch aufgerufen. Clients einer Klasse müssen explizit <xref:System.IDisposable.Dispose%2A> aufrufen, wenn Ressourcen sofort freigegeben werden sollen.
+Zur Ergänzung der Garbagecollection können die Klassen einen Mechanismus für die aktive Verwaltung von Systemressourcen bereitstellen, wenn sie die <xref:System.IDisposable>-Schnittstelle implementieren. <xref:System.IDisposable> verfügt über eine Methode, <xref:System.IDisposable.Dispose%2A> , die von Clients aufgerufen werden soll, wenn die Verwendung eines-Objekts beendet wird. Sie können die <xref:System.IDisposable.Dispose%2A>-Methode verwenden, um Ressourcen sofort freizugeben und Aufgaben wie das Schließen von Dateien und Datenbankverbindungen durchzuführen. Im Gegensatz zum `Finalize`-Destruktor, wird die <xref:System.IDisposable.Dispose%2A>-Methode nicht automatisch aufgerufen. Clients einer Klasse müssen explizit <xref:System.IDisposable.Dispose%2A> aufrufen, wenn Ressourcen sofort freigegeben werden sollen.
 
 ### <a name="implementing-idisposable"></a>Implementieren von IDisposable
 
@@ -155,10 +155,10 @@ Die CLR zerstört Objekte in regelmäßigen Abständen, wenn das System feststel
 
 Ein weiterer Unterschied zu Garbage Collection-Systemen betrifft die Verwendung von `Nothing`. Zur Nutzung der Verweiszählung in Visual Basic 6.0 und früheren Versionen, wiesen Programmierer Objektvariablen zuweilen `Nothing` zu, um die Verweise, die diese Variablen gehalten haben, freizugeben. Wenn die Variable den letzten Verweis auf das Objekt gehalten hat, wurden die Ressourcen des Objekts sofort freigegeben. In späteren Versionen von Visual Basic und in einigen Fällen, in denen dieses Verfahren noch von Bedeutung ist, führt die Ausführung nie dazu, dass das referenzierte Objekt seine Ressourcen sofort freigibt. Um Ressourcen sofort freizugeben, verwenden Sie die <xref:System.IDisposable.Dispose%2A> -Methode des Objekts, falls verfügbar. Legen Sie für die Variable `Nothing` nur fest, wenn ihre Lebensdauer im Bezug zur Dauer, die der Garbage Collector zum Auffinden verwaister Objekte benötigt, lang ist.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IDisposable.Dispose%2A>
-- [Initialisierung und Beendigung von Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
+- [Initialisierung und Beendigung von Komponenten](/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
 - [New-Operator](../../../language-reference/operators/new-operator.md)
 - [Bereinigen von nicht verwalteten Ressourcen](../../../../standard/garbage-collection/unmanaged.md)
 - [Schweigen](../../../language-reference/nothing.md)

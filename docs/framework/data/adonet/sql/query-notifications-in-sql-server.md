@@ -3,12 +3,12 @@ title: Abfragebenachrichtigungen in SQL Server
 description: Erfahren Sie, wie Sie mithilfe von Abfrage Benachrichtigungen Anwendungen Benachrichtigen, wenn sich Daten in einer SQL Server Datenbank geändert haben, z. b. zum Aktualisieren von Anwendungs anzeigen.
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 1351c83b6cc5837115321d53e8779c0f364c3099
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286222"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543984"
 ---
 # <a name="query-notifications-in-sql-server"></a>Abfragebenachrichtigungen in SQL Server
 Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich für Anwendungen, die einen Informationscache aus einer Datenbank zur Verfügung stellen, z. B. eine Webanwendung, und die benachrichtigt werden müssen, wenn die Quelldaten geändert wurden.  
@@ -25,28 +25,28 @@ Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetze
   
  Sie können Benachrichtigungen für SELECT- und EXECUTE-Anweisungen einrichten. Wenn eine EXECUTE-Anweisung verwendet wird, registriert SQL Server eine Benachrichtigung für den ausgeführten Befehl anstelle der EXECUTE-Anweisung selbst. Der Befehl muss den Anforderungen und Einschränkungen für eine SELECT-Anweisung genügen. Wenn ein Befehl, der eine Benachrichtigung registriert, mehrere Anweisungen enthält, erstellt die Datenbank-Engine eine Benachrichtigung für jede Anweisung im Batch.  
   
- Wenn Sie eine Anwendung entwickeln, bei der Sie bei Datenänderungen zuverlässige untergeordnete Benachrichtigungen benötigen, lesen Sie die Abschnitte **Planen einer effizienten Abfrage Benachrichtigungs Strategie** und **Alternativen zum Abfragen von Benachrichtigungen** im Artikel [Planning for Notification (Planen von Benachrichtigungen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) ). Weitere Informationen zu Abfrage Benachrichtigungen und SQL Server Service Broker finden Sie unter den folgenden Links zu Artikeln in der SQL Server-Dokumentation.  
+ Wenn Sie eine Anwendung entwickeln, bei der Sie bei Datenänderungen zuverlässige untergeordnete Benachrichtigungen benötigen, lesen Sie die Abschnitte **Planen einer effizienten Abfrage Benachrichtigungs Strategie** und **Alternativen zum Abfragen von Benachrichtigungen** im Artikel [Planning for Notification (Planen von Benachrichtigungen](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) ). Weitere Informationen zu Abfrage Benachrichtigungen und SQL Server Service Broker finden Sie unter den folgenden Links zu Artikeln in der SQL Server-Dokumentation.  
   
- **Dokumentation zu SQL Server**  
+ **SQL Server-Dokumentation**  
   
-- [Verwenden von Abfragebenachrichtigungen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [Verwenden von Abfragebenachrichtigungen](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [Erstellen einer Abfrage für die Benachrichtigung](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Erstellen einer Abfrage für die Benachrichtigung](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Entwicklung (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [Entwicklung (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker Developer InfoCenter](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Entwicklerhandbuch (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Entwicklerhandbuch (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Aktivieren von Abfragebenachrichtigungen](enabling-query-notifications.md)  
+ [Aktivieren von Abfrage Benachrichtigungen](enabling-query-notifications.md)  
  Erläutert die Verwendung von Abfragebenachrichtigungen, einschließlich der Anforderungen zu deren Aktivierung und Nutzung.  
   
- ["SqlDependency" in einer ASP.NET-Anwendung](sqldependency-in-an-aspnet-app.md)  
+ [Sqlabhängigkeit in einer ASP.NET-Anwendung](sqldependency-in-an-aspnet-app.md)  
  Zeigt, wie Sie Abfragebenachrichtigungen in einer ASP.NET-Anwendung verwenden können.  
   
- [Ermitteln von Änderungen mit "SqlDependency"](detecting-changes-with-sqldependency.md)  
+ [Erkennen von Änderungen mit sqlabhängigkeit](detecting-changes-with-sqldependency.md)  
  Zeigt, wie Sie ermitteln, ob Abfrageergebnisse von den ursprünglich empfangenen Ergebnissen abweichen.  
   
  [SqlCommand-Ausführung mit "SqlNotificationRequest"](sqlcommand-execution-with-a-sqlnotificationrequest.md)  

@@ -2,19 +2,19 @@
 title: Aufrufe pro Sekunde
 ms.date: 03/30/2017
 ms.assetid: 0efb5a94-d83b-4793-b529-6fcbedb65c43
-ms.openlocfilehash: 94d499d70445bc9c162d9f6ee9aadb3a025c744f
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0dfe5350583db318b0f335867342e5ef2371bff
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163578"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541681"
 ---
 # <a name="calls-per-second"></a>Aufrufe pro Sekunde
 Zählername: Aufrufe pro Sekunde  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Anzahl von Aufrufen in diesem Vorgang pro Sekunde.  
   
- Dieser Leistungs Bewert ist vom Typ [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))des Leistungs Zählers, dessen Wert mit der folgenden Formel berechnet wird.  
+ Dieser Leistungs Bewert ist vom Typ [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))des Leistungs Zählers, dessen Wert mit der folgenden Formel berechnet wird.  
   
  (N 1 - N 0)/( (D 1 - D 0)/F)

@@ -2,27 +2,27 @@
 title: Hintergrundinformationen
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 3aa0cd4eaae38121cbb8c04c1c917f51dfbb0de1
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78848326"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542110"
 ---
 # <a name="background-information"></a>Hintergrundinformationen
 Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die über die Grundlagen der Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] hinausgehen.  
   
  Führen Sie diese Schritte aus, um weitere Beispiele für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Code und -Anwendungen zu erhalten:  
   
-- Suchen Sie microsoft Docs nach bestimmten Problemen.  
+- Suchen Sie Microsoft-Dokumentation nach bestimmten Problemen.  
   
-- Nehmen Sie am [LINQ Forum](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)teil, wo Sie komplexere Themen mit Experten ausführlich diskutieren können.  
+- Nehmen Sie am [LINQ-Forum](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)Teil, in dem Sie komplexere Themen ausführlich mit Experten erörtern können.  
   
-- Untersuchen Sie das [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Whitepaper mit Details zur Technologie, komplett mit Visual Basic- und C-Codebeispielen. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
+- Lesen Sie das Whitepaper mit Details zur [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Technologie, die mit Visual Basic-und c#-Codebeispielen vervollständigt werden. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query für relationale Daten](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ADO.NET und LINQ to SQL](ado-net-and-linq-to-sql.md)  
- Beschreibt die Beziehung [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]von ADO.NET und .  
+ Beschreibt die Beziehung zwischen ADO.net und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
  [Analysieren von LINQ to SQL-Quellcode](analyzing-linq-to-sql-source-code.md)  
  Beschreibt, wie eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Zuordnung analysiert wird, indem Quellcode aus der Beispieldatenbank Northwind erzeugt und angezeigt wird.  
@@ -31,7 +31,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  Beschreibt, wie Validierungscode und andere Anpassungen hinzugefügt werden.  
   
  [Datenbindung](data-binding.md)  
- Beschreibt, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.ComponentModel.IListSource> wie Datenbindungen unterstützt werden.  
+ Beschreibt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die Verwendung <xref:System.ComponentModel.IListSource> von zur Unterstützung der Datenbindung.  
   
  [Unterstützung von Vererbung](inheritance-support.md)  
  Beschreibt die Rolle der Vererbung im [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodell und die Verwendung von zugehörigen Operatoren in Ihren Abfragen.  
@@ -39,7 +39,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  [Lokale Methodenaufrufe](local-method-calls.md)  
  Beschreibt die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Unterstützung für Aufrufe von lokalen Methoden.  
   
- [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [N-Tier-und Remote Anwendungen mit LINQ to SQL](n-tier-and-remote-applications-with-linq-to-sql.md)  
  Stellt ausführliche Informationen für Anwendungen mit mehreren Ebenen bereit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwenden.  
   
  [Objektidentität](object-identity.md)  
@@ -51,11 +51,11 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  [Objektzustände und Änderungsverfolgung](object-states-and-change-tracking.md)  
  Stellt ausführliche Informationen darüber bereit, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Änderungen verfolgt.  
   
- [Vollständige Parallelität: Übersicht](optimistic-concurrency-overview.md)  
+ [Optimistische Nebenläufigkeit: Übersicht](optimistic-concurrency-overview.md)  
  Beschreibt vollständige Parallelität und definiert Begriffe.  
   
  [Abfragekonzepte](query-concepts.md)  
- Beschreibt Aspekte von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen, die sich von Abfragen in LINQ unterscheiden.  
+ Beschreibt Aspekte von Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , die sich von Abfragen in LINQ unterscheiden.  
   
  [Abrufen von Objekten aus dem Identitätscache](retrieving-objects-from-the-identity-cache.md)  
  Beschreibt die Typen von Abfragen, die Objekte aus dem Identitäts-Cache abrufen.  
@@ -69,7 +69,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  [Gespeicherte Prozeduren](stored-procedures.md)  
  Beschreibt, wie gespeicherte Prozeduren zur Entwurfszeit zugeordnet und wie sie von der Anwendung aufgerufen werden.  
   
- [Transaktionsunterstützung.](transaction-support.md)  
+ [Transaktionsunterstützung](transaction-support.md)  
  Gliedert die drei Transaktionsmodelle, die von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt werden.  
   
  [SQL-CLR-Typenkonflikte](sql-clr-type-mismatches.md)  

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 33f26896dd0d4ff08beb4a011fa6bd468cba7207
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 38c43fa509b5259aa94ca416aadb51b405fc5dc7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250755"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542397"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Vorgehensweise: Aufrufen modelldefinierter Funktionen in Abfragen
 In diesem Thema wird beschrieben, wie Funktionen, die im konzeptionellen Modell definiert sind, innerhalb LINQ to Entities-Abfragen aufgerufen werden.  
   
- Das folgende Verfahren bietet einen Überblick über das Aufrufen einer Modell definierten Funktion in einer LINQ to Entities Abfrage. Das folgende Beispiel enthält weitere Details zu den Schritten in der Prozedur. In dem Verfahren wird davon ausgegangen, dass eine Funktion im konzeptionellen Modell definiert wurde. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren Sie benutzerdefinierte Funktionen im konzeptionellen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))Modell.  
+ Das folgende Verfahren bietet einen Überblick über das Aufrufen einer Modell definierten Funktion in einer LINQ to Entities Abfrage. Das folgende Beispiel enthält weitere Details zu den Schritten in der Prozedur. In dem Verfahren wird davon ausgegangen, dass eine Funktion im konzeptionellen Modell definiert wurde. Weitere Informationen finden Sie unter Gewusst [wie: Definieren von benutzerdefinierten Funktionen im konzeptionellen Modell](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>So rufen Sie eine im konzeptionellen Modell definierte Funktion auf  
   
@@ -24,9 +24,9 @@ In diesem Thema wird beschrieben, wie Funktionen, die im konzeptionellen Modell 
 2. Rufen Sie die Funktion in einer LINQ to Entities-Abfrage auf.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie eine Funktion, die im konzeptionellen Modell definiert ist, aus einer LINQ to Entities Abfrage aufgerufen wird. Im Beispiel wird das Modell "School" verwendet. Weitere Informationen zum Modell "School" finden Sie unter [Erstellen der Beispieldatenbank "School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) " und erstellen [der Datei "School. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))".  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Funktion, die im konzeptionellen Modell definiert ist, aus einer LINQ to Entities Abfrage aufgerufen wird. Im Beispiel wird das Modell "School" verwendet. Weitere Informationen zum Modell "School" finden Sie unter [Erstellen der Beispieldatenbank "School](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) " und erstellen [der Datei "School. edmx](/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))".  
   
- Die folgende konzeptionelle Modellfunktion gibt die Anzahl der Jahre zurück, die seit der Einstellung einer Lehrkraft vergangen sind. Weitere Informationen zum Hinzufügen der Funktion zu einem konzeptionellen Modell finden [Sie unter Gewusst wie: Definieren von benutzerdefinierten Funktionen im konzeptionellen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))Modell.)  
+ Die folgende konzeptionelle Modellfunktion gibt die Anzahl der Jahre zurück, die seit der Einstellung einer Lehrkraft vergangen sind. Weitere Informationen zum Hinzufügen der Funktion zu einem konzeptionellen Modell finden Sie unter Gewusst [wie: Definieren von benutzerdefinierten Funktionen im konzeptionellen Modell](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).)  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
@@ -44,7 +44,7 @@ In diesem Thema wird beschrieben, wie Funktionen, die im konzeptionellen Modell 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Übersicht über die EDMX-Datei](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Abfragen in LINQ to Entities](queries-in-linq-to-entities.md)
 - [Aufrufen von Funktionen in LINQ to Entities-Abfragen](calling-functions-in-linq-to-entities-queries.md)
-- [Vorgehensweise: Aufgerufen Modell definierter Funktionen als Objektmethoden](how-to-call-model-defined-functions-as-object-methods.md)
+- [Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden](how-to-call-model-defined-functions-as-object-methods.md)
