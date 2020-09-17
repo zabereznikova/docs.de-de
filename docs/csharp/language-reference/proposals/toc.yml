@@ -100,7 +100,7 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/extending-partial-methods.md
         - name: Statische anonyme Funktionen
           href: ../../../../_csharplang/proposals/csharp-9.0/static-anonymous-functions.md
-        - name: Zieltypisierter bedingter Ausdrücke
+        - name: Bedingter Ausdruck mit Zieltyp
           href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
         - name: Kovariante Rückgabetypen
           href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
