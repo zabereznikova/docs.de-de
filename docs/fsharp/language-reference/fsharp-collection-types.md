@@ -2,24 +2,24 @@
 title: Auflistungstypen
 description: 'Erfahren Sie mehr über F #-Auflistungs Typen und deren Unterschiede zu den Sammlungs Typen .net.'
 ms.date: 08/14/2020
-ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 0b5be8f656d6728fe382b1944bda0a410a94d226
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656904"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720334"
 ---
-# <a name="f-collection-types"></a>F#-Auflistungstypen
+# <a name="f-collection-types"></a>F #-Auflistungs Typen
 
 Wenn Sie dieses Thema überprüfen, können Sie bestimmen, welcher F #-Sammlungstyp am besten zu einem bestimmten Bedarf passt. Diese Auflistungs Typen unterscheiden sich von den Auflistungs Typen in .net, wie z. b. denen im- `System.Collections.Generic` Namespace, da die F #-Auflistungs Typen aus funktionaler Programmier Perspektive und nicht aus objektorientierter Sicht entworfen werden. Genauer gesagt hat nur die Array Auflistung änderbare Elemente. Wenn Sie also eine Sammlung ändern, erstellen Sie eine Instanz der geänderten Sammlung, anstatt die ursprüngliche Auflistung zu ändern.
 
 Sammlungs Typen unterscheiden sich auch in dem Typ der Datenstruktur, in der-Objekte gespeichert werden. Datenstrukturen, wie z. b. Hash Tabellen, verknüpfte Listen und Arrays, haben unterschiedliche Leistungsmerkmale und einen anderen Satz verfügbarer Vorgänge.
 
-## <a name="f-collection-types"></a>F#-Auflistungstypen
+## <a name="table-of-collection-types"></a>Tabelle mit Sammlungs Typen
 
 In der folgenden Tabelle sind die F #-Sammlungs Typen aufgeführt.
 
-|type|BESCHREIBUNG|Ähnliche Themen|
+|Typ|BESCHREIBUNG|Verwandte Links|
 |----|-----------|-------------|
 |[Liste](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|Eine geordnete, unveränderliche Reihe von Elementen desselben Typs. Wird als verknüpfte Liste implementiert.|[Listen](lists.md)<br /><br />[List-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
 |[Array](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|Eine Null basierte, änderbare Auflistung mit fester Größe von aufeinander folgenden Datenelementen, die alle denselben Typ haben.|[Arrays](arrays.md)<br /><br />[Array-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
@@ -29,7 +29,7 @@ In der folgenden Tabelle sind die F #-Sammlungs Typen aufgeführt.
 
 ### <a name="table-of-functions"></a>Tabelle mit Funktionen
 
-In diesem Abschnitt werden die Funktionen verglichen, die für F #-Auflistungs Typen verfügbar sind. Die Rechen Komplexität der Funktion wird angegeben, wobei N die Größe der ersten Auflistung und M die Größe der zweiten Auflistung (sofern vorhanden) ist. Ein Bindestrich (-) gibt an, dass diese Funktion für die Auflistung nicht verfügbar ist. Da Sequenzen verzögert ausgewertet werden, kann eine Funktion wie z. b. "*..." O (1) sein, da Sie sofort zurückgegeben wird, obwohl Sie sich bei der Enumeration weiterhin auf die Leistung der Sequenz auswirkt
+In diesem Abschnitt werden die Funktionen verglichen, die für F #-Auflistungs Typen verfügbar sind. Die Rechen Komplexität der Funktion wird angegeben, wobei N die Größe der ersten Auflistung und M die Größe der zweiten Auflistung (sofern vorhanden) ist. Ein Bindestrich (-) gibt an, dass diese Funktion für die Auflistung nicht verfügbar ist. Da Sequenzen verzögert ausgewertet werden, kann eine Funktion wie z. b. " `Seq.distinct` O (1)" lauten, da Sie sofort zurückgegeben wird, obwohl Sie sich bei der Enumeration weiterhin auf die Leistung der Sequenz auswirkt.
 
 |Funktion|Array|List|Sequenz|Karte|Set|BESCHREIBUNG|
 |--------|-----|----|--------|---|---|-----------|
@@ -90,11 +90,11 @@ In diesem Abschnitt werden die Funktionen verglichen, die für F #-Auflistungs T
 |map3|-|O (N)|-|-|-|Erstellt eine Auflistung, deren Elemente die Ergebnisse der gleichzeitigen Anwendung der angegebenen Funktion auf die entsprechenden Elemente der drei Auflistungen sind.|
 |MAPI|O (N)|O (N)|O (N)|-|-|Erstellt ein Array, dessen Elemente die Ergebnisse der Anwendung der angegebenen Funktion auf die einzelnen Elemente des Arrays sind. Der ganzzahlige Index, der an die Funktion übermittelt wird, gibt den Index des zu transformierenden Elements an.|
 |mapi2|O (N)|O (N)|-|-|-|Erstellt eine Auflistung, deren Elemente das Ergebnis der Anwendung der angegebenen Funktion auf die entsprechenden Elemente der beiden Auflistungen sind, und übergibt auch den Index der Elemente. Die beiden Eingabe Arrays müssen die gleiche Länge aufweisen.|
-|max|O (N)|O (N)|O (N)|-|-|Gibt das größte Element in der Auflistung zurück, verglichen mit dem [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) -Operator.|
-|maxBy|O (N)|O (N)|O (N)|-|-|Gibt das größte Element in der Auflistung zurück, verglichen mit [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) im Funktionsergebnis.|
+|max|O (N)|O (N)|O (N)|-|-|Gibt das größte Element in der Auflistung zurück, verglichen mit dem [Max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) -Operator.|
+|maxBy|O (N)|O (N)|O (N)|-|-|Gibt das größte Element in der Auflistung zurück, verglichen mit [Max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) im Funktionsergebnis.|
 |maxElement|-|-|-|-|O (Log (N))|Gibt das größte Element in der Menge entsprechend der Reihenfolge zurück, die für die Menge verwendet wird.|
-|Min|O (N)|O (N)|O (N)|-|-|Gibt das kleinste Element in der Auflistung zurück, verglichen mit dem [Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) -Operator.|
-|minBy|O (N)|O (N)|O (N)|-|-|Gibt das kleinste Element in der Auflistung zurück, verglichen mit dem [Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) -Operator für das Ergebnis der Funktion.|
+|Min.|O (N)|O (N)|O (N)|-|-|Gibt das kleinste Element in der Auflistung zurück, verglichen mit dem [Min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) -Operator.|
+|minBy|O (N)|O (N)|O (N)|-|-|Gibt das kleinste Element in der Auflistung zurück, verglichen mit dem [Min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) -Operator für das Ergebnis der Funktion.|
 |minElement|-|-|-|-|O (Log (N))|Gibt das niedrigste Element im Satz entsprechend der für den Satz verwendeten Reihenfolge zurück.|
 |ofArray|-|O (N)|O(1)|O (N)|O (N)|Erstellt eine Auflistung, die die gleichen Elemente wie das angegebene Array enthält.|
 |ofList|O (N)|-|O(1)|O (N)|O (N)|Erstellt eine Auflistung, die die gleichen Elemente wie die angegebene Liste enthält.|
@@ -115,10 +115,10 @@ In diesem Abschnitt werden die Funktionen verglichen, die für F #-Auflistungs T
 |set|O(1)|-|-|-|-|Legt ein Element eines Arrays auf den angegebenen Wert fest.|
 |skip|-|-|O (N)|-|-|Gibt eine Sequenz zurück, die N Elemente der zugrunde liegenden Sequenz überspringt und dann die restlichen Elemente der Sequenz ergibt.|
 |SkipWhile|-|-|O (N)|-|-|Gibt eine Sequenz zurück, die beim Durchlaufen Elemente der zugrunde liegenden Sequenz überspringt, während das angegebene Prädikat zurückgegeben wird, `true` und dann die restlichen Elemente der Sequenz ergibt.|
-|sort|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|O (n \* Log (n))|O (n \* Log (n))|-|-|Sortiert die Auflistung nach Elementwert. Elemente werden mithilfe von [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)verglichen.|
-|sortBy|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|O (n \* Log (n))|O (n \* Log (n))|-|-|Sortiert die angegebene Liste mithilfe von Schlüsseln, die von der angegebenen Projektion bereitgestellt werden. Schlüssel werden mithilfe von [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)verglichen.|
-|sortInPlace|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|-|-|-|-|Sortiert die Elemente eines Arrays durch eine muteweise und Verwendung der angegebenen Vergleichsfunktion. Elemente werden mithilfe von [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)verglichen.|
-|SortInPlaceBy|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|-|-|-|-|Sortiert die Elemente eines Arrays durch eine muteweise und Verwendung der angegebenen Projektion für die Schlüssel. Elemente werden mithilfe von [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)verglichen.|
+|sort|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|O (n \* Log (n))|O (n \* Log (n))|-|-|Sortiert die Auflistung nach Elementwert. Elemente werden mithilfe von [Compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)verglichen.|
+|sortBy|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|O (n \* Log (n))|O (n \* Log (n))|-|-|Sortiert die angegebene Liste mithilfe von Schlüsseln, die von der angegebenen Projektion bereitgestellt werden. Schlüssel werden mithilfe von [Compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)verglichen.|
+|sortInPlace|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|-|-|-|-|Sortiert die Elemente eines Arrays durch eine muteweise und Verwendung der angegebenen Vergleichsfunktion. Elemente werden mithilfe von [Compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)verglichen.|
+|SortInPlaceBy|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|-|-|-|-|Sortiert die Elemente eines Arrays durch eine muteweise und Verwendung der angegebenen Projektion für die Schlüssel. Elemente werden mithilfe von [Compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)verglichen.|
 |sortInPlaceWith|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|-|-|-|-|Sortiert die Elemente eines Arrays, indem es an der Stelle geändert und die angegebene Vergleichsfunktion als Reihenfolge verwendet wird.|
 |sortWith|E (n \* ) Durchschnitt (n)<br /><br />O (N ^ 2) Ungünstigster Fall|O (n \* Log (n))|-|-|-|Sortiert die Elemente einer Auflistung, wobei die angegebene Vergleichsfunktion als Reihenfolge verwendet und eine neue Auflistung zurückgegeben wird.|
 |sub|O (N)|-|-|-|-|Erstellt ein Array, das den angegebenen Unterbereich enthält, der durch Start Index und length angegeben wird.|

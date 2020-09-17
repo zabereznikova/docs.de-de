@@ -2,12 +2,12 @@
 title: Asynchrone Workflows
 description: 'Erfahren Sie mehr über die Unterstützung in der Programmiersprache F # zum asynchronen Ausführen von Berechnungen, die ohne Blockierung der Ausführung anderer Aufgaben ausgeführt werden.'
 ms.date: 08/15/2020
-ms.openlocfilehash: ac727fc630f13db01da964131ab39dc242a12cd1
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 14146cc8a643f31831475075212cc06da5f8d6ff
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557710"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720269"
 ---
 # <a name="asynchronous-workflows"></a>Asynchrone Workflows
 
@@ -19,7 +19,7 @@ In diesem Artikel wird die Unterstützung von F # zum asynchronen Ausführen von
 async { expression }
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 In der vorherigen Syntax wird die durch dargestellte Berechnung `expression` so eingerichtet, dass Sie asynchron ausgeführt wird, d. h., ohne den aktuellen Berechnungs Thread zu blockieren, wenn asynchrone standbyvorgänge, e/a-Vorgänge und andere asynchrone Vorgänge ausgeführt werden. Asynchrone Berechnungen werden häufig in einem Hintergrund Thread gestartet, während die Ausführung im aktuellen Thread fortgesetzt wird. Der Typ des Ausdrucks ist `Async<'T>` , wobei `'T` der Typ ist, der von dem Ausdruck zurückgegeben wird, wenn das `return` Schlüsselwort verwendet wird. Der Code in einem solchen Ausdruck wird als *asynchroner Block*oder *Async-Block*bezeichnet.
 
@@ -44,7 +44,7 @@ Zusätzlich zu `let!` können Sie verwenden, `use!` um asynchrone Bindungen ausz
 
 Eine Methode, die eine einzelne asynchrone Aufgabe ausführt und das Ergebnis zurückgibt, wird als *asynchroner primitiv*bezeichnet und ist speziell für die Verwendung mit konzipiert `let!` . Mehrere asynchrone primitive sind in der F #-Kernbibliothek definiert. Zwei dieser Methoden für Webanwendungen werden im-Modul definiert [`FSharp.Control.WebExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html) : [`WebRequest.AsyncGetResponse`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncGetResponse) und [`WebClient.AsyncDownloadString`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncDownloadString) . Beide primitiven laden Daten von einer Webseite herunter, wenn eine URL angegeben ist. `AsyncGetResponse` erzeugt ein `System.Net.WebResponse` -Objekt und `AsyncDownloadString` erstellt eine Zeichenfolge, die den HTML-Code für eine Webseite darstellt.
 
-Im Modul sind mehrere primitive für asynchrone e/a-Vorgänge enthalten [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) . Diese Erweiterungs Methoden der `System.IO.Stream` -Klasse sind [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) und [`Stream.AsyncWrite`](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) .
+Im Modul sind mehrere primitive für asynchrone e/a-Vorgänge enthalten [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) . Diese Erweiterungs Methoden der `System.IO.Stream` -Klasse sind [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) und [`Stream.AsyncWrite`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) .
 
 Sie können auch eigene asynchrone primitive schreiben, indem Sie eine Funktion definieren, deren kompletter Text in einen Async-Block eingeschlossen ist.
 
@@ -66,4 +66,4 @@ Die `runAll` -Funktion gestartet parallel drei asynchrone Workflows und wartet, 
 
 - [F#-Sprachreferenz](index.md)
 - [Berechnungsausdrücke](computation-expressions.md)
-- [Control. Async-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [Control. Async-Klasse](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html)

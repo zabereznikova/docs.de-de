@@ -2,16 +2,16 @@
 title: Interoperabilitäts Handbuch für Webdienst Protokolle
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 4169a796311c402a97358de5d52c52562b6ed357
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f35ca629da65af749897d28d28808d06eced7aa8
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553173"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720113"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Interoperabilitäts Handbuch für Webdienst Protokolle
 
-Windows Communication Foundation (WCF) implementiert eine Reihe von Webdienst Protokollen. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieses Thema enthält eine Liste der Webdienst Protokolle, die von WCF implementiert werden. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.
+Windows Communication Foundation (WCF) implementiert eine Reihe von Webdienst Protokollen. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieser Artikel enthält eine Liste der Webdienst Protokolle, die von WCF implementiert werden. Andere Artikel in diesem Abschnitt enthalten Implementierungsdetails für jedes unterstützte Protokoll.
 
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Von WCF implementierte Webdienst Protokolle
 
@@ -64,9 +64,9 @@ Die Interoperabilität von Infrastrukturprotokollen wird mittels der WS-*-Spezif
 |WSS: X509 Token Profile 1.1|[Webdienstesicherheit: X.509-Zertifikatstokenprofil 1.1](https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf)|
 |WSS: Kerberos Token Profile 1.1|[Webdienstesicherheit: Kerberos-Tokenprofil 1.1](https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf)|
 |WSS: SAML 1.1 Token Profile 1.1|[Webdienstesicherheit: SAML-Tokenprofil 1.1](https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf)|
-|WS-Secure Conversation|[Webdienste: sichere Konversationssprache](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
+|WS-Secure Conversation|[Webdienste: sichere Konversationssprache](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
 |WS-Trust 1.4 (möglicherweise in englischer Sprache)|[Webdienste: Trust-Sprache](https://docs.oasis-open.org/ws-sx/ws-trust/200802)|
-|WS-SecurityPolicy 2005/07|[Webdienste: sichere Konversationssprache](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> Wurde gemäß den an das OASIS WS-SX Technical Committee übermittelten Fehlerberichten geändert.<br /><br /> [ws-sx-Nachricht](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
+|WS-SecurityPolicy 2005/07|[Webdienste: sichere Konversationssprache](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> Wurde gemäß den an das OASIS WS-SX Technical Committee übermittelten Fehlerberichten geändert.<br /><br /> [ws-sx-Nachricht](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
 |WS-ReliableMessaging 1.1|[Zuverlässiges Messaging-Protokoll, Version 1,1](reliable-messaging-protocol-version-1-1.md)|
 
 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> unterstützt die in der folgenden Tabelle aufgeführten Spezifikationen:
@@ -74,7 +74,7 @@ Die Interoperabilität von Infrastrukturprotokollen wird mittels der WS-*-Spezif
 |Spezifikation/Dokument|Link|
 |-----------------------------|----------|
 |WS-Coordination|[Webdienste: Koordinierung](/previous-versions/ms951231(v=msdn.10))|
-|WS-AtomicTransaction|[Webdienste: Atomic Transaction](https://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
+|WS-AtomicTransaction|[Webdienste: Atomic Transaction](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
 
 Die Klassen <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter> und <xref:System.ServiceModel.Description.MetadataResolver> bieten Unterstützung für die folgenden Metadatenspezifikationen:
 
@@ -90,7 +90,7 @@ Die Klassen <xref:System.ServiceModel.Description.MetadataExporter>, <xref:Syste
 
 - [WS-PolicyAttachment 1.2](https://www.w3.org/Submission/2006/SUBM-WS-PolicyAttachment-20060425/)
 
-- [WS-MetadataExchange 1.1](https://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
+- [WS-MetadataExchange 1.1](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
 
 - [WS-Transfer zum Abrufen von Metadaten](https://www.w3.org/Submission/2006/SUBM-WS-Transfer-20060315/)
 
@@ -102,7 +102,7 @@ Außerdem werden die folgenden Interoperabilitäts Profile über WCF implementie
 
 - [Basic Security Profile 1.0 (Arbeitsentwurf)](http://www.ws-i.org/Profiles/BasicSecurityProfile-1.0-2006-03-29.html)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
 - [Messagingprotokolle](messaging-protocols.md)
