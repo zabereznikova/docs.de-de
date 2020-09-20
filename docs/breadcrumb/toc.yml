@@ -307,32 +307,6 @@ items:
                   - name: Windows-Workflowbeispiele (WF)
                     tocHref: /dotnet/framework/windows-workflow-foundation/samples/
                     topicHref: /dotnet/framework/windows-workflow-foundation/samples/index
-              - name: Windows Forms
-                tocHref: /dotnet/framework/winforms/
-                topicHref: /dotnet/framework/winforms/index
-                items:
-                  - name: "Erweitern von Windows\_Forms-Anwendungen"
-                    tocHref: /dotnet/framework/winforms/advanced/
-                    topicHref: /dotnet/framework/winforms/advanced/index
-                  - name: "Steuerelemente für Windows\_Forms"
-                    tocHref: /dotnet/framework/winforms/controls/
-                    topicHref: /dotnet/framework/winforms/controls/index
-              - name: XAML-Dienste
-                tocHref: /dotnet/framework/xaml-services/
-                topicHref: /dotnet/framework/xaml-services/index
-          - name: Desktopleitfaden – WPF
-            tocHref: /dotnet/desktop-wpf/
-            topicHref: /dotnet/desktop-wpf/index
-            items:
-              - name: Erste Schritte
-                tocHref: /visualstudio/get-started/csharp/tutorial-wpf
-                topicHref: /dotnet/desktop-wpf/getting-started/index
-              - name: Migration
-                tocHref: /dotnet/desktop-wpf/migration
-                topicHref: /dotnet/desktop-wpf/migration/index
-              - name: Datenbindung
-                tocHref: /dotnet/desktop-wpf/data
-                topicHref: /dotnet/desktop-wpf/data/index
           - name: Leitfaden für C#
             tocHref: /dotnet/csharp/
             topicHref: /dotnet/csharp/index
@@ -349,7 +323,7 @@ items:
               - name: Überblick
                 tocHref: /dotnet/csharp/tour-of-csharp/
                 topicHref: /dotnet/csharp/tour-of-csharp/index
-              - name: Neuigkeiten
+              - name: Neues
                 tocHref: /dotnet/csharp/whats-new/
                 topicHref: /dotnet/csharp/whats-new/index
               - name: .NET Compiler Platform SDK
@@ -371,7 +345,7 @@ items:
                   - name: Delegaten
                     tocHref: /dotnet/csharp/programming-guide/delegates/
                     topicHref: /dotnet/csharp/programming-guide/delegates/index
-                  - name: Events
+                  - name: Ereignisse
                     tocHref: /dotnet/csharp/programming-guide/events/
                     topicHref: /dotnet/csharp/programming-guide/events/index
                   - name: Ausnahmen und Ausnahmebehandlung
@@ -544,7 +518,7 @@ items:
                   - name: Frühes und spätes Binden
                     tocHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/
                     topicHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/index
-                  - name: Events
+                  - name: Ereignisse
                     tocHref: /dotnet/visual-basic/programming-guide/language-features/events/
                     topicHref: /dotnet/visual-basic/programming-guide/language-features/events/index
                   - name: LINQ
