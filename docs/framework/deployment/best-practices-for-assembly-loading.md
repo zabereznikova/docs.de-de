@@ -13,12 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803498"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656144"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Bewährte Methoden für das Laden von Assemblys
 In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können. In diesem Artikel werden folgende Empfehlungen besprochen:  
@@ -63,7 +63,7 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
   
  Das Laden von Assemblys mit der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>-Methode oder einer der anderen Methoden, die anhand des Pfads laden, hat folgende Nachteile:  
   
-- Wenn eine Assembly mit der gleichen Identität bereits geladen wurde, gibt <xref:System.Reflection.Assembly.LoadFrom%2A> die geladene Assembly zurück, auch wenn ein anderer Pfad angegeben wurde.  
+- Wenn eine Assembly mit der gleichen Identität bereits im LoadFrom-Kontext geladen wurde, gibt <xref:System.Reflection.Assembly.LoadFrom%2A> die geladene Assembly zurück, auch wenn ein anderer Pfad angegeben wurde.  
   
 - Wenn eine Assembly mit <xref:System.Reflection.Assembly.LoadFrom%2A> geladen wird und eine Assembly im Standard-Load-Kontext zu einem späteren Zeitpunkt versucht, dieselbe Assembly anhand des Anzeigenamens zu laden, schlägt der Ladeversuch fehl. Dies kann auftreten, wenn eine Assembly deserialisiert ist.  
   

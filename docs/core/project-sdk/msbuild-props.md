@@ -4,12 +4,12 @@ description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET Cor
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810521"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656261"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>MSBuild-Referenz für .NET Core SDK-Projekte
 
@@ -26,7 +26,7 @@ Diese Seite ist eine Referenz für die MSBuild-Eigenschaften und -Elemente, mit 
 
 ### <a name="targetframework"></a>TargetFramework
 
-Die Eigenschaft `TargetFramework` gibt die Zielframeworkversion für die App an. Eine Liste gültiger Zielframeworkmoniker finden Sie unter [Zielframeworks in Projekten im SDK-Format](../../standard/frameworks.md#supported-target-framework-versions).
+Die Eigenschaft `TargetFramework` gibt die Zielframeworkversion für die App an. Eine Liste gültiger Zielframeworkmoniker finden Sie unter [Zielframeworks in Projekten im SDK-Format](../../standard/frameworks.md#supported-target-frameworks).
 
 ```xml
 <PropertyGroup>
@@ -38,7 +38,7 @@ Weitere Informationen finden Sie unter [Zielframeworks in Projekten im SDK-Forma
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-Verwenden Sie die Eigenschaft `TargetFrameworks`, wenn Sie Ihre App für mehrere Zielplattformen entwickeln möchten. Eine Liste gültiger Zielframeworkmoniker finden Sie unter [Zielframeworks in Projekten im SDK-Format](../../standard/frameworks.md#supported-target-framework-versions).
+Verwenden Sie die Eigenschaft `TargetFrameworks`, wenn Sie Ihre App für mehrere Zielplattformen entwickeln möchten. Eine Liste gültiger Zielframeworkmoniker finden Sie unter [Zielframeworks in Projekten im SDK-Format](../../standard/frameworks.md#supported-target-frameworks).
 
 > [!NOTE]
 > Diese Eigenschaft wird ignoriert, wenn `TargetFramework` (Singular) angegeben ist.
@@ -188,9 +188,27 @@ Die verfügbaren Optionen sind in der nachfolgenden Tabelle aufgeführt.
 | `5.0` | Die Regeln, die für das .NET 5.0-Release aktiviert wurden, werden verwendet, auch wenn neuere Regeln verfügbar sind. |
 | `5` | Die Regeln, die für das .NET 5.0-Release aktiviert wurden, werden verwendet, auch wenn neuere Regeln verfügbar sind. |
 
+### <a name="analysismode"></a>AnalysisMode
+
+Ab .NET 5.0 RC2 umfasst das .NET SDK alle [Codequalitätsregeln für Zertifizierungsstellen](/visualstudio/code-quality/code-analysis-for-managed-code-warnings). Standardmäßig werden nur [einige Regeln als Buildwarnungen aktiviert](../../fundamentals/productivity/code-analysis.md#enabled-rules). Mit der `AnalysisMode`-Eigenschaft können Sie die Regeln anpassen, die standardmäßig aktiviert sind. Sie können entweder zu einem aggressiveren Analysemodus (Deaktivierung) oder zu einem konservativeren Analysemodus (Aktivierung) wechseln. Wenn Sie beispielsweise alle Regeln standardmäßig als Buildwarnungen aktivieren möchten, legen Sie den Wert auf `AllEnabledByDefault` fest.
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+</PropertyGroup>
+```
+
+Die verfügbaren Optionen sind in der nachfolgenden Tabelle aufgeführt.
+
+| Wert | Bedeutung |
+|-|-|
+| `Default` | Dies ist der Standardmodus, in dem bestimmte Regeln als Buildwarnungen bzw. Visual Studio-IDE-Vorschläge aktiviert sind und der Rest deaktiviert ist. |
+| `AllEnabledByDefault` | Dies ist der aggressive Modus (Deaktivierung), in dem alle Regeln als Buildwarnungen aktiviert sind. Sie können einzelne Regeln [deaktivieren](../../fundamentals/productivity/configure-code-analysis-rules.md). |
+| `AllDisabledByDefault` | Dies ist der konservative Modus (Aktivierung), in dem alle Regeln standardmäßig deaktiviert sind. Sie können einzelne Regeln [aktivieren](../../fundamentals/productivity/configure-code-analysis-rules.md). |
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors-Eigenschaft
 
-Mit der `CodeAnalysisTreatWarningsAsErrors`-Eigenschaft können Sie konfigurieren, ob Codeanalysewarnungen als Warnungen behandelt werden und den Build unterbrechen sollen. Wenn Sie das `-warnaserror`-Flag verwenden, wenn Sie Projekte erstellen, werden [.NET-Codeanalysewarnungen](../../fundamentals/productivity/code-analysis.md) ebenfalls als Fehler behandelt. Wenn nur Compilerwarnungen als Fehler behandelt werden sollen, können Sie die MSBuild-Eigenschaft `CodeAnalysisTreatWarningsAsErrors` in der Projektdatei auf `false` festlegen.
+Mit der `CodeAnalysisTreatWarningsAsErrors`-Eigenschaft können Sie konfigurieren, ob Warnungen im Rahmen der Codequalitätsanalyse (CAxxxx) als Warnungen behandelt werden und den Build unterbrechen sollen. Wenn Sie beim Erstellen von Projekten das `-warnaserror`-Flag verwenden, werden [Warnungen im Rahmen der .NET-Codequalitätsanalyse](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) ebenfalls als Fehler behandelt. Wenn Warnungen bei der Codequalitätsanalyse nicht als Fehler behandelt werden sollen, können Sie die MSBuild-Eigenschaft `CodeAnalysisTreatWarningsAsErrors` in Ihrer Projektdatei auf `false` festlegen.
 
 ```xml
 <PropertyGroup>
@@ -200,7 +218,7 @@ Mit der `CodeAnalysisTreatWarningsAsErrors`-Eigenschaft können Sie konfiguriere
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers-Eigenschaft
 
-Die [.NET-Codeanalyse](../../fundamentals/productivity/code-analysis.md) ist für Projekte, die auf .NET 5.0 oder höher ausgerichtet sind, standardmäßig aktiviert. Sie können die .NET-Codeanalyse für Projekte aktivieren, die auf frühere Versionen von .NET abzielen, indem Sie die Eigenschaft `EnableNETAnalyzers` auf „true“ festlegen. Legen Sie diese Eigenschaft auf `false` fest, um die Codeanalyse in einem beliebigen Projekt zu deaktivieren.
+Die [.NET-Codequalitätsanalyse](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) ist für Projekte, die auf .NET 5.0 oder höher ausgerichtet sind, standardmäßig aktiviert. Sie können die .NET-Codeanalyse für Projekte aktivieren, die auf frühere Versionen von .NET abzielen, indem Sie die Eigenschaft `EnableNETAnalyzers` auf `true` festlegen. Legen Sie diese Eigenschaft auf `false` fest, um die Codeanalyse in einem beliebigen Projekt zu deaktivieren.
 
 ```xml
 <PropertyGroup>
@@ -210,6 +228,18 @@ Die [.NET-Codeanalyse](../../fundamentals/productivity/code-analysis.md) ist fü
 
 > [!TIP]
 > Eine andere Möglichkeit, die .NET-Codeanalyse für Projekte zu aktivieren, die auf .NET-Versionen vor .NET 5.0 abzielen, besteht darin, die [AnalysisLevel](#analysislevel)-Eigenschaft auf `latest` festzulegen.
+
+### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
+
+Die [.NET-Codeformatsanalyse](../../fundamentals/productivity/code-analysis.md#code-style-analysis) ist beim Build für alle .NET-Projekte standardmäßig deaktiviert. Sie können die Codeformatsanalyse für .NET-Projekte aktivieren, indem Sie die `EnforceCodeStyleInBuild`-Eigenschaft auf `true` festlegen.
+
+```xml
+<PropertyGroup>
+  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+</PropertyGroup>
+```
+
+Alle Codeformatregeln, die als Warnungen oder Fehler [konfiguriert](../../fundamentals/productivity/code-analysis.md#code-style-analysis) sind, werden beim Build ausgeführt und melden Verstöße.
 
 ## <a name="run-time-configuration-properties"></a>Runtimekonfigurationseigenschaften
 
@@ -327,7 +357,7 @@ Mit der `TieredCompilationQuickJitForLoops`-Eigenschaft wird konfiguriert, ob de
 
 Mit der Eigenschaft `AssetTargetFallback` können Sie zusätzliche kompatible Frameworkversionen für Projektverweise und NuGet-Pakete angeben. Wenn Sie z. B. mit `PackageReference` eine Paketabhängigkeit angeben, aber das entsprechende Paket keine Assets enthält, die mit dem `TargetFramework` Ihres Projekts kompatibel sind, kommt die Eigenschaft `AssetTargetFallback` ins Spiel. Die Kompatibilität des referenzierten Pakets wird erneut anhand jedes Zielframeworks überprüft, das in `AssetTargetFallback` angegeben ist.
 
-Sie können die Eigenschaft `AssetTargetFallback` auf eine oder mehrere [Zielframeworkversionen](../../standard/frameworks.md#supported-target-framework-versions) festlegen.
+Sie können die Eigenschaft `AssetTargetFallback` auf eine oder mehrere [Zielframeworkversionen](../../standard/frameworks.md#supported-target-frameworks) festlegen.
 
 ```xml
 <PropertyGroup>

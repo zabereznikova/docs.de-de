@@ -3,13 +3,16 @@ title: Arbeiten mit Daten in ASP.NET Core-Apps
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbeiten mit Daten in ASP.NET Core-Apps
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/12/2020
+no-loc:
+- Blazor
+- WebAssembly
+ms.openlocfilehash: f2f2a4706ea4deba39465d8697f78be58506a09c
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987841"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515869"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -93,7 +96,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Im obenstehenden Beispiel ist es wichtig, dass der Aufruf zu ToListAsync hinzugefügt wird, um die Abfrage ohne Umschweife auszuführen. Andernfalls weist die Anweisung ein IQueryable\<SelectListItem-Element brandItems-Elementen zu, die erst ausgeführt werden, nachdem dieses aufgelistet wurde. Das Zurückgeben von IQueryable-Ergebnissen aus Methoden hat sowohl Vorteile als auch Nachteile. Auf der einen Seite kann die Abfrage, die EF Core erstellt, dadurch weiter verändert werden. Auf der anderen Seite können dadurch auch Fehler entstehen, die nur zur Laufzeit entstehen, wenn zu der Abfrage Vorgänge hinzugefügt werden, die EF Core nicht übersetzen kann. In der Regel ist es sicherer, Filter an die Methode zu übergeben, die den Datenzugriff durchführt, und eine In-Memory-Auflistung (z.B. List\<T>) als Ergebnis zurückzugeben.
+Im obenstehenden Beispiel ist es wichtig, dass der Aufruf zu ToListAsync hinzugefügt wird, um die Abfrage ohne Umschweife auszuführen. Andernfalls weist die Anweisung ein IQueryable\<SelectListItem>-Element brandItems-Elementen zu, die erst ausgeführt werden, nachdem dieses aufgeführt wurde. Das Zurückgeben von IQueryable-Ergebnissen aus Methoden hat sowohl Vorteile als auch Nachteile. Auf der einen Seite kann die Abfrage, die EF Core erstellt, dadurch weiter verändert werden. Auf der anderen Seite können dadurch auch Fehler entstehen, die nur zur Laufzeit entstehen, wenn zu der Abfrage Vorgänge hinzugefügt werden, die EF Core nicht übersetzen kann. In der Regel ist es sicherer, Filter an die Methode zu übergeben, die den Datenzugriff durchführt und eine In-Memory-Auflistung (z.B. List\<T>) als Ergebnis zurückzugeben.
 
 EF Core verfolgt Änderungen an Entitäten nach, die aus dem Persistenzspeicher abgerufen werden. Wenn Sie Änderungen an einer nachverfolgten Entität speichern möchten, rufen Sie einfach die SaveChanges-Methode für das DbContext-Element ab, und stellen Sie dabei sicher, dass es sich um die DbContext-Instanz handelt, die auch verwendet wurde, um die Entität abzurufen. Das Hinzufügen und Entfernen von Entitäten geschieht direkt über die entsprechende DbSet-Eigenschaft, während gleichzeitig SaveChanges aufgerufen wird, um die Datenbankbefehle auszuführen. Im folgenden Beispiel wird dargestellt, wie Sie Entitäten zum Persistenzspeicher hinzufügen, diese darin aktualisieren und aus ihm entfernen.
 
@@ -507,6 +510,52 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 Die Zwischenspeicherung kann die Leistung von Webseiten drastisch verbessern, die immer wieder die gleichen Werte von der Datenbank anfordern. Stellen Sie sicher, dass Sie den Datenzugriff und die Seitenleistung messen, bevor Sie die Zwischenspeicherung hinzufügen. Wenden Sie die Zwischenspeicherung nur für notwendige Verbesserungen an. Das Zwischenspeichern verbraucht Arbeitsspeicherressourcen des Webservers und erhöht die Komplexität der Anwendung, weshalb es wichtig ist, dass Sie diese Art von Optimierung nicht voreilig durchführen.
+
+## <a name="getting-data-to-no-locblazor-no-locwebassembly-apps"></a>Abrufen von Daten in Blazor WebAssembly-Apps
+
+Wenn Sie Apps entwickeln, die Blazor Server verwenden, können Sie das Entity Framework und andere direkte Datenzugriffstechnologien verwenden, die in diesem Kapitel bisher erläutert wurden. Wenn Sie jedoch Blazor WebAssembly-Apps wie andere Frameworks für Single-Page-Webanwendungen entwickeln, benötigen Sie eine andere Strategie für den Datenzugriff. In der Regel greifen diese Anwendungen auf Daten zu und interagieren über Web-API-Endpunkte mit dem Server.
+
+Wenn die Daten oder die ausgeführten Vorgänge vertraulich sind, lesen Sie den Abschnitt zur Sicherheit im [vorherigen Kapitel](develop-asp-net-core-mvc-apps.md), und schützen Sie Ihre APIs vor nicht autorisiertem Zugriff.
+
+Sie finden ein Beispiel einer Blazor WebAssembly-App in der [eShopOnWeb-Referenzanwendung](https://github.com/dotnet-architecture/eShopOnWeb) im BlazorAdmin-Projekt. Dieses Projekt wird im eShopOnWeb-Webprojekt gehostet und ermöglicht es Benutzern in der Gruppe „Administratoren“, die Elemente im Speicher zu verwalten. In Abbildung 8-3 finden Sie einen Screenshot der Anwendung.
+
+![Screenshot: eShopOnWeb-Katalogadministrator](./media/image8-3.jpg)
+
+**Abbildung 8-3** Screenshot: eShopOnWeb-Katalogadministrator
+
+Beim Abrufen von Daten aus Web-APIs in einer Blazor WebAssembly-App verwenden Sie wie in jeder anderen beliebigen .NET-Anwendung einfach eine Instanz von `HttpClient`. Die grundlegenden Schritte sind das Erstellen der zu sendenden Anforderung (falls erforderlich, normalerweise für POST- oder PUT-Anforderungen), das Warten auf die Anforderung selbst, das Überprüfen des Statuscodes und das Deserialisieren der Antwort. Wenn Sie viele Anforderungen an eine bestimmte Gruppe von APIs stellen möchten, empfiehlt es sich, Ihre APIs zu kapseln und die `HttpClient`-Basisadresse zentral zu konfigurieren. Auf diese Weise können Sie die Änderungen an nur einem Ort vornehmen, wenn Sie diese Einstellungen in Abhängigkeit von der Umgebung anpassen müssen. Sie sollten die Unterstützung für diesen Dienst in Ihrer `Program.Main`-Methode hinzufügen:
+
+```csharp
+builder.Services.AddScoped(sp =>
+    new HttpClient
+    {
+        BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+    });
+```
+
+Wenn Sie sicher auf Dienste zugreifen müssen, sollten Sie auf ein sicheres Token zugreifen und die `HttpClient`-Klasse so konfigurieren, dass dieses Token als Authentifizierungsheader übergeben wird:
+
+```csharp
+_httpClient.DefaultRequestHeaders.Authorization =
+    new AuthenticationHeaderValue("Bearer", token);
+```
+
+Dies kann von jeder Komponente aus erfolgen, in die die `HttpClient`-Klasse eingefügt wurde, vorausgesetzt, dass die `HttpClient`-Klasse nicht zu den Anwendungsdiensten mit einer `Transient`-Lebensdauer hinzugefügt wurde. Jeder Verweis auf die `HttpClient`-Klasse in der Anwendung verweist auf dieselbe Instanz, sodass Änderungen an der Anwendung in einer Komponente für die gesamte Anwendung übernommen werden. Eine gute Stelle zum Durchführen dieser Authentifizierungsüberprüfung (gefolgt von der Angabe des Tokens) befindet sich in einer freigegebenen Komponente wie der Hauptnavigation für die Website. Informieren Sie sich über diesen Ansatz im `BlazorAdmin`-Projekt in der [eShopOnWeb-Referenzanwendung](https://github.com/dotnet-architecture/eShopOnWeb).
+
+Ein Vorteil von Blazor WebAssembly im Vergleich zu herkömmlichen JavaScript-Single-Page-Webanwendungen besteht darin, dass Sie keine Kopien der synchronisierten Datenübertragungsobjekte (Data Transfer Objects, DTO) aufbewahren müssen. Ihr Blazor WebAssembly-Projekt und Ihr Web-API-Projekt können beide dieselben DTOs in einem gemeinsamen freigegebenen Projekt nutzen. Dadurch entfällt ein Teil der aufwendigen Entwicklung von Single-Page-Webanwendungen.
+
+Sie können die integrierte Hilfsmethode `GetFromJsonAsync` verwenden, um Daten schnell von einem API-Endpunkt abzurufen. Es gibt ähnliche Methoden für POST, PUT usw. Das folgende Beispiel zeigt, wie Sie mithilfe einer konfigurierten `HttpClient`-Klasse in einer Blazor WebAssembly-App eine CatalogItem-Klasse von einem API-Endpunkt abrufen:
+
+```csharp
+var item = await _httpClient.GetFromJsonAsync<CatalogItem>($"catalog-items/{id}");
+```
+
+Wenn Sie über die benötigten Daten verfügen, werden die Änderungen in der Regel lokal nachverfolgt. Wenn Sie Updates für den Back-End-Datenspeicher durchführen möchten, rufen Sie zu diesem Zweck zusätzliche Web-APIs auf.
+
+**Verweise: Blazor-Daten**
+
+- Aufrufen einer Web-API über ASP.NET Core Blazor
+  <https://docs.microsoft.com/aspnet/core/blazor/call-web-api>
 
 >[!div class="step-by-step"]
 >[Zurück](develop-asp-net-core-mvc-apps.md)

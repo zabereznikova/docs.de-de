@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 07/27/2020
+ms.openlocfilehash: f04de5c350dfead4dad8c37eece7f16c9a9e00bc
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174366"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515818"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
 
@@ -33,7 +33,7 @@ Verwenden Sie eine Single-Page-Webanwendung in folgenden Szenarien:
 
 - Ihre Anwendung muss eine umfangreiche Benutzeroberfläche mit vielen Features zur Verfügung stellen.
 
-- Ihr Team ist mit der Entwicklung mit JavaScript und bzw. oder TypeScript vertraut.
+- Ihr Team ist mit der Entwicklung mit JavaScript, TypeScript oder Blazor WebAssembly vertraut
 
 - Ihre Anwendung muss bereits eine API für andere (interne oder öffentliche) Clients zur Verfügung stellen.
 
@@ -43,17 +43,17 @@ Die durch den SPA-Ansatz ermöglichte Verbesserung der Benutzererfahrung muss mi
 
 ## Blazor
 
-ASP.NET Core 3.0 führt mit Blazor ein neues Modell zur Erstellung umfassender interaktiver und zusammensetzbarer Benutzeroberflächen ein. Blazor auf Serverseite ermöglicht Entwicklern, eine Benutzeroberfläche mit C# und Razor auf dem Server zu erstellen. Die Benutzeroberfläche kann über eine ständige SignalR-Verbindung in Echtzeit interaktiv mit dem Browser verbunden werden.
+ASP.NET Core enthält ein neues Modell namens Blazor zur Erstellung umfassender, interaktiver und zusammensetzbarer Benutzeroberflächen. Blazor auf Serverseite ermöglicht Entwicklern, eine Benutzeroberfläche mit C# und Razor auf dem Server zu erstellen. Die Benutzeroberfläche kann über eine ständige SignalR-Verbindung in Echtzeit interaktiv mit dem Browser verbunden werden. Blazor WebAssembly führt eine weitere Option für Blazor-Apps ein, die es ermöglicht, sie mit WebAssembly im Browser auszuführen. Da es sich um echten .NET-Code handelt, der in WebAssembly ausgeführt wird, können Sie Code und Bibliotheken aus serverseitigen Teilen Ihrer Anwendung nutzen.
 
-Blazor WebAssembly führt eine weitere Option für Blazor-Apps ein, die es ermöglicht, sie mit WebAssembly im Browser auszuführen. Da es sich um echten .NET-Code handelt, der in WebAssembly ausgeführt wird, können Sie Code und Bibliotheken aus serverseitigen Teilen Ihrer Anwendung nutzen.
-
-Blazor bietet eine neue, dritte Option, die bei der Beurteilung der Frage, ob eine rein auf dem Server gerenderte Webanwendung oder eine SPA entwickelt werden soll, zu berücksichtigen ist. Mit Blazor können Sie komplexe, SPA-ähnliche Verhaltensweisen auf Clientseite entwickeln, ohne dass eine nennenswerte JavaScript-Entwicklung erforderlich ist. Blazor-Anwendungen können APIs aufrufen, um Daten anzufordern oder serverseitige Vorgänge auszuführen.
+Blazor bietet eine neue, dritte Option, die bei der Beurteilung der Frage, ob eine rein auf dem Server gerenderte Webanwendung oder eine SPA entwickelt werden soll, zu berücksichtigen ist. Mit Blazor können Sie komplexe, SPA-ähnliche clientseitige Verhaltensweisen entwickeln, ohne dass eine nennenswerte JavaScript-Entwicklung erforderlich ist. Blazor-Anwendungen können APIs aufrufen, um Daten anzufordern oder serverseitige Vorgänge auszuführen. Sie können bei Bedarf mit JavaScript interagieren, um die Vorteile von JavaScript-Bibliotheken und -Frameworks zu nutzen.
 
 Erwägen Sie die Entwicklung Ihrer Webanwendung mit Blazor in folgenden Fällen:
 
 - Ihre Anwendung muss eine komplexe Benutzeroberfläche zur Verfügung stellen.
 
 - Ihr Team ist mit der .NET-Entwicklung besser vertraut als mit der JavaScript- oder TypeScript-Entwicklung.
+
+Wenn Sie über eine vorhandene Web Forms-Anwendung verfügen, die Sie zu .NET Core migrieren möchten, sollten Sie das kostenlose E-Book [Blazor für ASP.NET Web Forms-Entwickler](../blazor-for-web-forms-developers/index.md) lesen, um herauszufinden, ob es sinnvoll ist, die Anwendung zu Blazor zu migrieren.
 
 Weitere Informationen zu Blazorfinden Sie unter [Erste Schritte mit Blazor](https://blazor.net/docs/get-started.html).
 
@@ -100,7 +100,7 @@ Das Schreiben von SPAs erfordert Erfahrung mit JavaScript und bzw. oder TypeScri
 
 Wenn Sie bereits eine Web-API für die Verwendung durch andere Clients unterstützen, erfordert es möglicherweise weniger Aufwand, eine SPA-Implementierung zu erstellen, die diese APIs nutzt, anstatt die Logik im serverseitigen Format zu reproduzieren. SPAs machen umfangreichen Gebrauch von Web-APIs, um Daten abzufragen und zu aktualisieren, während Benutzer mit der Anwendung interagieren.
 
-## <a name="when-to-choose-blazor"></a>Fälle für die Verwendung von Blazor
+## <a name="when-to-choose-no-locblazor"></a>Fälle für die Verwendung von Blazor
 
 Im Folgenden finden Sie eine ausführlichere Erläuterung der Vorteile von Blazor für Ihre Webanwendung.
 

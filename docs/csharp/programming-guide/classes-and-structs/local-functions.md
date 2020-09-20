@@ -4,12 +4,12 @@ description: Lokale Funktionen in C# sind private Methoden, die in einem anderen
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 854ec7ab4a4cc637c0a5ad03e0344d2f1f7679d2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063301"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656184"
 ---
 # <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
 
@@ -46,7 +46,7 @@ Beachten Sie, dass alle im enthaltenden Member definierten lokalen Variablen, ei
 Im Gegensatz zu einer Methodendefinition kann die Definition einer lokalen Funktion keinen Memberzugriffsmodifizierer enthalten. Da alle lokale Funktionen privat sind, generiert das Verwenden eines Zugriffsmodifizierers wie etwa das Schlüsselwort `private` den Compilerfehler CS0106 „Der Modifizierer ‚private‘ ist für dieses Element nicht gültig“.
 
 > [!NOTE]
-> Vor C# 8.0 dürfen lokale Funktionen nicht den `static`-Modifizierer enthalten. Die Verwendung des Schlüsselworts `static` generiert den Compilerfehler CS0106 „Der Modifizierer ‚static‘ ist für dieses Element nicht gültig“.
+> Vor C# 8.0 dürfen lokale Funktionen nicht den `static`-Modifizierer enthalten. Die Verwendung des Schlüsselworts `static` generiert den Compilerfehler CS0106 („Der Modifizierer ‘static‘ ist für dieses Element nicht gültig“) oder einen Compilerfehler, der besagt, dass Sie C# 8.0 oder höher verwenden sollten.
 
 Darüber hinaus können keine Attribute auf lokale Funktionen oder ihre Parameter und Typparameter angewendet werden.
 

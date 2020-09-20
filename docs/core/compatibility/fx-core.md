@@ -1,18 +1,18 @@
 ---
 title: 'Breaking Changes: .NET Framework zu .NET Core'
 titleSuffix: ''
-description: Listet die Breaking Changes von .NET Framework zu .NET Core auf.
+description: Hier werden die Breaking Changes von .NET Framework zu .NET Core 1.0 bis 3.1 aufgeführt.
 ms.date: 05/05/2020
-ms.openlocfilehash: e9fa37dba89bbd6c4829614c27cb66206069fa9b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 5904a359813b6d07bd2a27d882ade4395efe3256
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414453"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656365"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Breaking Changes für die Migration von .NET Framework zu .NET Core
 
-Wenn Sie eine App von .NET Framework zu .NET Core migrieren, können sich die in diesem Artikel aufgeführten Breaking Changes auf Ihre App auswirken. Breaking Changes werden nach Kategorie angeordnet. Innerhalb einer Kategorie sind sie wiederum nach der .NET Core-Version sortiert, in der sie eingeführt wurden.
+Wenn Sie eine App von .NET Framework zu den .NET Core-Versionen 1.0 bis 3.1 migrieren, können sich die in diesem Artikel aufgeführten Breaking Changes auf Ihre App auswirken. Breaking Changes werden nach Kategorie angeordnet. Innerhalb einer Kategorie sind sie wiederum nach der .NET Core-Version sortiert, in der sie eingeführt wurden.
 
 > [!NOTE]
 > Dieser Artikel enthält keine vollständige Liste mit Breaking Changes zwischen .NET Framework und .NET Core. Die wichtigsten Breaking Changes werden hier hinzugefügt, sobald wir sie kennen.
@@ -72,17 +72,10 @@ Wenn Sie eine App von .NET Framework zu .NET Core migrieren, können sich die in
 ## <a name="networking"></a>Netzwerk
 
 - [WebClient.CancelAsync wird nicht immer sofort abgebrochen](#webclientcancelasync-doesnt-always-cancel-immediately)
-- [Verarbeitung von Cookiepfaden jetzt mit RFC 6265 konform](#cookie-path-handling-now-conforms-to-rfc-6265)
 
 ### <a name="net-core-20"></a>.NET Core 2.0
 
 [!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
-
-***
-
-### <a name="net-50"></a>.NET 5.0
-
-[!INCLUDE [cookie-path-conforms-to-rfc6265](../../../includes/core-changes/networking/5.0/cookie-path-conforms-to-rfc6265.md)]
 
 ***
 

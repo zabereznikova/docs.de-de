@@ -2,12 +2,12 @@
 title: Breaking Changes hinsichtlich der Basisklassenbibliothek
 description: Listet die Breaking Changes in .NET-Kernbibliotheken auf.
 ms.date: 07/27/2020
-ms.openlocfilehash: d8d886785ff71f22a3b2da65e973d899cf0371f6
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: c73909514bc738387a21f5ea68defe49c6a2c839
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465885"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598180"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Breaking Changes und .NET-Kernbibliotheken
 
@@ -17,6 +17,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [Thread.Abort ist veraltet](#threadabort-is-obsolete) | 5.0 |
 | [Veraltete Eigenschaften in ConsoleLoggerOptions](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
 | [Hardwareintrinsische IsSupported-Überprüfungen können für geschachtelte Typen abweichen](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [Änderung von Parameternamen in Referenzassemblys](#parameter-names-changed-in-reference-assemblies) | 5.0 |
@@ -52,6 +53,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Process.StartInfo löst InvalidOperationException für Prozesse aus, die Sie nicht gestartet haben](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [thread-abort-obsolete](../../../includes/core-changes/corefx/5.0/thread-abort-obsolete.md)]
+
+***
 
 [!INCLUDE [obsolete-consoleloggeroptions-properties](../../../includes/core-changes/corefx/5.0/obsolete-consoleloggeroptions-properties.md)]
 

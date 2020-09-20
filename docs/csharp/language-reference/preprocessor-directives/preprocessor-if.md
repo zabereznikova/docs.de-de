@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: f01db9d7801d4b6f4c273a9cf82806acbb4828bb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: dc3e235db49279691203a0db4d124239fb972c69
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89138136"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065232"
 ---
 # <a name="if-c-reference"></a>#if (C#-Referenz)
 
@@ -40,12 +40,12 @@ Zwischen einem Symbol, das mit `-define` oder mit `#define` definiert wird, und 
 
 Der Gültigkeitsbereich eines mit `#define` erstellten Symbols ist die Datei, in der es definiert wurde.
 
-Das Buildsystem kennt zudem vordefinierte Präprozessorsymbole, die verschiedene [Zielframeworks](../../../standard/frameworks.md) in Projekten im SDK-Format darstellen. Diese sind hilfreich, wenn Sie Anwendungen erstellen, die für mehrere .NET-Implementierungen oder -Versionen bestimmt sind.
+Das Buildsystem kennt zudem vordefinierte Präprozessorsymbole, die verschiedene [Zielframeworks](../../../standard/frameworks.md) in Projekten im SDK-Format darstellen. Diese sind hilfreich, wenn Sie Anwendungen erstellen, die für mehr als eine .NET-Version bestimmt sind.
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 > [!NOTE]
-> Für herkömmliche .NET Framework-Projekte müssen Sie die Symbole für die bedingte Kompilierung für die verschiedenen Zielframeworks in Visual Studio über die Eigenschaftenseite des Projekts manuell konfigurieren.
+> Für herkömmliche Projekte, die kein SDK-Format aufweisen, müssen Sie die Symbole für die bedingte Kompilierung für die verschiedenen Zielframeworks in Visual Studio über die Eigenschaftenseite des Projekts manuell konfigurieren.
 
 Weitere vordefinierte Symbole sind die Konstanten DEBUG und TRACE. Sie können die für das Projekt festgelegten Werte mit `#define` überschreiben. Das DEBUG-Symbol beispielsweise wird abhängig von den Buildkonfigurationseigenschaften (Modus „Debug“ oder „Release“) automatisch festgelegt.
 

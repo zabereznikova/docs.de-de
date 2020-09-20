@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 99181855fdf8e937676e44e8b347510f9405aa3d
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 061abc8bc37d166a3683be1d2ad920a083a8ea3b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916901"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515942"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitweise und Schiebeoperatoren: C#-Referenz
 
@@ -96,7 +96,7 @@ Informationen dazu, wie der rechte Operand des Operators `>>` die Anzahl für di
 
 ## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
 
-Mit dem Operator `&` wird „bitweises logisches UND“ für die Operanden berechnet:
+Mit dem Operator `&` wird „bitweises logisches UND“ für die ganzzahligen Operanden berechnet:
 
 [!code-csharp-interactive[bitwise AND](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
@@ -104,7 +104,7 @@ Für `bool`-Operanden berechnet der `&`-Operator das [logische UND](boolean-logi
 
 ## <a name="logical-exclusive-or-operator-"></a>Logischer exklusiver OR-Operator: ^
 
-Mit dem Operator `^` wird „bitweises logisches exklusives ODER“, auch als „bitweises logisches XOR“ bezeichnet, seiner Operanden berechnet:
+Mit dem Operator `^` wird „bitweises logisches exklusives ODER“, auch als „bitweises logisches XOR“ bezeichnet, seiner ganzzahligen Operanden berechnet:
 
 [!code-csharp-interactive[bitwise XOR](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
@@ -112,7 +112,7 @@ Für `bool`-Operanden berechnet der `^`-Operator das [logische exklusive ODER](b
 
 ## <a name="logical-or-operator-"></a>Logischer OR-Operator: |
 
-Mit dem Operator `|` wird „bitweises logisches ODER“ der Operanden berechnet:
+Mit dem Operator `|` wird „bitweises logisches ODER“ der ganzzahligen Operanden berechnet:
 
 [!code-csharp-interactive[bitwise OR](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseOr)]
 

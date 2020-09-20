@@ -4,16 +4,16 @@ description: Hier erfahren Sie, wie Sie die Kürzung von eigenständigen Apps st
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465415"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515831"
 ---
 # <a name="trimming-options"></a>Kürzungsoptionen
 
-Die folgenden MSBuild-Eigenschaften und -Elemente beeinflussen das Verhalten von [gekürzten eigenständigen Bereitstellungen](trim-self-contained.md). Im Zusammenhang mit einigen Optionen wird `ILLink` erwähnt. Dies ist der Name des zugrunde liegenden Tools, das die Kürzung implementiert. Informationen zum Befehlszeilentool `ILLink` finden Sie in den [illink-Optionen](https://github.com/mono/linker/blob/master/docs/illink-options.md).
+Die folgenden MSBuild-Eigenschaften und -Elemente beeinflussen das Verhalten von [gekürzten eigenständigen Bereitstellungen](trim-self-contained.md). Im Zusammenhang mit einigen Optionen wird `ILLink` erwähnt. Dies ist der Name des zugrunde liegenden Tools, das die Kürzung implementiert. Weitere Informationen zum zugrunde liegenden Tool finden Sie in der [Linker-Dokumentation](https://github.com/mono/linker/tree/master/docs).
 
 ## <a name="enable-trimming"></a>Aktivieren der Kürzung
 
@@ -129,3 +129,37 @@ Symbole werden normalerweise entfernt, um den gekürzten Assemblys zu entspreche
     Entfernen Sie Symbole aus der gekürzten Anwendung einschließlich eingebetteter und separater PDB-Dateien. Dies gilt sowohl für den Anwendungscode als auch für alle Abhängigkeiten mit Symbolen.
 
 Das SDK ermöglicht außerdem die Deaktivierung der Debuggerunterstützung mithilfe der Eigenschaft `DebuggerSupport`. Wenn die Debuggerunterstützung deaktiviert ist, werden Symbole durch die Kürzung automatisch entfernt (`TrimmerRemoveSymbols` wird standardmäßig „true“).
+
+## <a name="trimming-framework-library-features"></a>Kürzen von Frameworkbibliotheksfeatures
+
+Mehrere Featurebereiche der Frameworkbibliotheken enthalten Linkeranweisungen, die es ermöglichen, den Code für deaktivierte Features zu entfernen.
+
+- `<DebuggerSupport>false</DebuggerSupport>`
+
+    Hiermit entfernen Sie Code, um das Debuggen verbessern zu können. Dadurch werden auch [Symbole entfernt](#removing-symbols).
+
+- `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
+
+    Hiermit entfernen Sie die BinaryFormatter-Serialisierungsunterstützung. Weitere Informationen finden Sie unter [BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps).
+
+- `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
+
+    Hiermit wird unsicherer UTF-7-Codierungscode entfernt. Weitere Informationen finden Sie unter [UTF-7-Codepfade sind veraltet](../compatibility/corefx.md#utf-7-code-paths-are-obsolete).
+
+- `<EventSourceSupport>false</EventSourceSupport>`
+
+    Hiermit entfernen Sie Code oder Logik, der bzw. die mit EventSource verknüpft ist.
+
+- `<HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>`
+
+    Hiermit entfernen Sie Code, der im Zusammenhang mit der Diagnoseunterstützung für System.Net.Http steht.
+
+- `<InvariantGlobalization>true</InvariantGlobalization>`
+
+    Hiermit entfernen Sie globalisierungsspezifischen Code und globalisierungsspezifische Daten. Weitere Informationen finden Sie unter [Invarianter Modus](../run-time-config/globalization.md#invariant-mode).
+
+- `<UseSystemResourceKeys>true</UseSystemResourceKeys>`
+
+    Entfernen Sie Ausnahmemeldungen für `System.*`-Assemblys. Wenn eine Ausnahme von einer `System.*`-Assembly ausgelöst wird, ist die Nachricht eine vereinfachte Ressourcen-ID anstelle der vollständigen Nachricht.
+
+ Diese Eigenschaften bewirken, dass der zugehörige Code abgeschnitten wird. Außerdem werden über die [runtimeconfig](../run-time-config/index.md)-Datei Features deaktiviert. Weitere Informationen zu diesen Eigenschaften einschließlich der entsprechenden runtimeconfig-Optionen finden Sie unter [Featureschalter](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md). Einige SDKs verfügen möglicherweise über Standardwerte für diese Eigenschaften.

@@ -1,22 +1,24 @@
 ---
 title: Breaking Changes bei Windows Forms
-description: Listet die Breaking Changes bei Windows Forms für .NET Core auf.
-ms.date: 01/08/2020
-ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+description: Hier werden die Breaking Changes in Windows Forms für .NET Core und .NET 5 aufgelistet.
+ms.date: 09/08/2020
+ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556182"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656336"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Breaking Changes bei Windows Forms
 
-Windows Forms-Unterstützung wurde zu .NET Core in Version 3.0 hinzugefügt. In diesem Artikel werden Breaking Changes für Windows Forms anhand der .NET Core-Version aufgeführt, in der sie eingeführt wurden. Wenn Sie ein Upgrade einer Windows Forms-App von .NET Framework oder einer früheren Version von .NET Core (3.0 oder höher) durchführen, bietet Ihnen dieser Artikel Unterstützung.
+Windows Forms-Unterstützung wurde zu .NET Core in Version 3.0 hinzugefügt. In diesem Artikel werden Breaking Changes für Windows Forms anhand der .NET-Version aufgeführt, in der sie eingeführt wurden. Wenn Sie ein Upgrade einer Windows Forms-App von .NET Framework oder einer früheren Version von .NET Core (3.0 oder höher) durchführen, bietet Ihnen dieser Artikel Unterstützung.
 
 Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [Mit DataGridView verbundene APIs lösen jetzt InvalidOperationException aus](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
+| [WinForms- und WPF-Apps verwenden Microsoft.NET.Sdk](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [Statusleisten-Steuerelement wurde entfernt](#removed-status-bar-controls) | 5.0 |
 | [WinForms-Methoden lösen jetzt ArgumentException aus](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [WinForms-Methoden lösen jetzt ArgumentNullException aus](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
@@ -36,6 +38,14 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Kompatibilitätsoption UseLegacyImages wird nicht unterstützt](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
+
+***
+
+[!INCLUDE [sdk-and-target-framework-change](../../../includes/core-changes/windowsforms/5.0/sdk-and-target-framework-change.md)]
+
+***
 
 [!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
 

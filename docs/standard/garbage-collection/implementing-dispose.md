@@ -1,7 +1,7 @@
 ---
 title: Implementieren einer Dispose-Methode
 description: In diesem Artikel erfahren Sie, wie Sie die Dispose-Methode implementieren, die nicht verwaltete Ressourcen freigibt, die von Ihrem Code in .NET verwendet werden.
-ms.date: 05/27/2020
+ms.date: 09/08/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 863f78daf13ae9d795c37c1c6f428d387b9a026b
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455739"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022921"
 ---
 # <a name="implement-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
@@ -77,7 +77,7 @@ Der Text der Methode besteht aus zwei Codeblöcken:
 
   - **Verwaltete Objekte, die <xref:System.IDisposable> implementieren.** Der bedingte Block kann verwendet werden, um deren <xref:System.IDisposable.Dispose%2A>-Implementierung aufzurufen (Weitergeben von Dispose-Aufrufen). Wenn Sie eine abgeleitete Klasse von <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> verwendet haben, um die nicht verwaltete Ressource zu umschließen, sollten Sie hier die <xref:System.Runtime.InteropServices.SafeHandle.Dispose?displayProperty=nameWithType>-Implementierung aufrufen.
 
-  - **Verwaltete Objekte, die viel Arbeitsspeicher belegen oder knappe Ressourcen nutzen.** Weisen Sie `null` Verweise auf große verwaltete Objekte zu, damit sie eher unerreichbar sind. So werden sie schneller freigegeben, als wenn sie nicht deterministisch freigegeben würden.
+  - **Verwaltete Objekte, die viel Arbeitsspeicher belegen oder knappe Ressourcen nutzen.** Weisen Sie `null` Verweise auf große verwaltete Objekte zu, damit sie eher unerreichbar sind. Dadurch werden sie schneller freigegeben als bei einer nicht deterministischen Freigabe. Dieser Vorgang erfolgt in der Regel außerhalb des bedingten Blocks.
 
 Wenn der Methodenaufruf von einem Finalizer stammt, wird nur der Code ausgeführt, der nicht verwaltete Ressourcen freigibt. Der Implementierer ist dafür verantwortlich, sicherzustellen, dass der falsche Pfad nicht mit verwalteten Objekten interagiert, die möglicherweise freigegeben wurden. Dies ist wichtig, da die Reihenfolge, in der der Garbage Collector verwaltete Objekte während der Finalisierung zerstört, nicht deterministisch ist.
 

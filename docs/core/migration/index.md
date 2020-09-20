@@ -2,12 +2,12 @@
 title: .NET Core-Migration über „project.json“
 description: Erfahren Sie, wie Sie ein älteres .NET Core-Projekt mithilfe von „project.json“ migrieren.
 ms.date: 07/19/2017
-ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d4190a02389089a888d8b52dd8e7c412636b575
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77450686"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538249"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrieren von .NET Core-Projekten über „project.json“
 
@@ -34,7 +34,7 @@ Wenn Sie eine *XPROJ*-Datei oder eine Projektmappendatei öffnen, die auf *XPROJ
 
 ![Unidirektionales Upgrade-Dialogfeld mit der Liste der zu migrierenden Projekte](media/one-way-upgrade.jpg)
 
-Die ausgewählten Projekte werden von Visual Studio automatisch migriert. Wenn Sie bei der Migration einer Projektmappe nicht alle Projekte auswählen, wird das gleiche Dialogfeld angezeigt, und Sie werden aufgefordert, für die übrigen Projekte aus dieser Projektmappe ein Upgrade auszuführen. Nachdem das Projekt migriert wurde, können Sie sich seine Inhalt anzeigen lassen und diese ändern, indem Sie mit der rechten Maustaste auf das Projekt im Fenster **Projektmappen-Explorer** und anschließend auf **Bearbeiten \<Projektname>.csproj** klicken.
+Die ausgewählten Projekte werden von Visual Studio automatisch migriert. Wenn Sie bei der Migration einer Projektmappe nicht alle Projekte auswählen, wird das gleiche Dialogfeld angezeigt, und Sie werden aufgefordert, für die übrigen Projekte aus dieser Projektmappe ein Upgrade auszuführen. Nach dem Migrieren des Projekts können Sie dessen Inhalte anzeigen und ändern, indem Sie im Fenster **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt klicken und anschließend mit der linken Maustaste auf **Edit \<project name>.csproj** (<Projektname>.csproj bearbeiten).
 
 Dateien, die migriert wurden (*project.json*, *global.json*, die *XPROJ*-Datei und die Projektmappendatei), werden in einen *Sicherungsordner* verschoben. Für die migrierte Projektmappendatei wird ein Upgrade auf Visual Studio 2017 oder Visual Studio 2019 durchgeführt, und Sie können diese Projektmappe nicht mehr in Visual Studio 2015 oder früheren Versionen öffnen. Eine Datei namens *UpgradeLog.htm*, die einen Migrationsbericht enthält, wird ebenfalls gespeichert und automatisch geöffnet.
 
@@ -78,7 +78,7 @@ Das .NET Core-csproj-Format ändert und entwickelt sich mit jeder neuen Vorabver
 - Entfernen Sie den XML-Namespace (`xmlns`) aus dem `<Project>`-Element.
 - Wenn es nicht vorhanden ist, fügen Sie das `Sdk`-Attribut dem `<Project>`-Element hinzu, und legen Sie es auf `Microsoft.NET.Sdk` oder `Microsoft.NET.Sdk.Web` fest. Dieses Attribut gibt an, dass das Projekt das SDK verwendet, das verwendet werden soll. `Microsoft.NET.Sdk.Web` wird für Webanwendungen verwendet.
 - Entfernen Sie die Anweisungen `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` und `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` vom oberen und unteren Rand des Projekts. Diese Importanweisungen werden durch das SDK impliziert, daher müssen Sie nicht im Projekt enthalten sein.
-- Wenn Ihr Projekt `Microsoft.NETCore.App`- oder `NETStandard.Library` `<PackageReference>`-Elemente enthält, sollten Sie diese entfernen. Diese Paketverweise werden [durch das SDK impliziert](https://aka.ms/sdkimplicitrefs).
+- Wenn Ihr Projekt `Microsoft.NETCore.App`- oder `NETStandard.Library` `<PackageReference>`-Elemente enthält, sollten Sie diese entfernen. Diese Paketverweise werden [durch das SDK impliziert](../tools/csproj.md).
 - Entfernen Sie das `Microsoft.NET.Sdk` `<PackageReference>`-Element, sofern vorhanden. Die SDK-Referenz kommt durch das `Sdk`-Attribut auf dem `<Project>`-Element.
 - Entfernen Sie die [Globs](https://en.wikipedia.org/wiki/Glob_(programming)), die [durch das SDK impliziert](../project-sdk/overview.md#default-compilation-includes) werden. Wenn diese Globs im Projekt bleiben, führt dies zu einem Fehler beim Erstellen, da Compile-Elemente dupliziert werden.
 

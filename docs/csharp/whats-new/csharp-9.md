@@ -2,12 +2,12 @@
 title: Neuerungen in C# 9.0 – C#-Leitfaden
 description: Überblick über die neuen Features von C# 9.0
 ms.date: 09/04/2020
-ms.openlocfilehash: a863e544c0fcc8682994f49a464acccafc5ce92f
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495774"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065031"
 ---
 # <a name="whats-new-in-c-90"></a>Neuerungen in C# 9.0
 
@@ -24,6 +24,7 @@ Mit Version 9.0 wird die Sprache C# um die folgenden Features und Verbesserunge
 - Statische anonyme Funktionen
 - Bedingter Ausdruck mit Zieltyp
 - Kovariante Rückgabetypen
+- Unterstützung für die Erweiterung `GetEnumerator` in `foreach`-Schleifen
 - Parameter zum Verwerfen von Lambdafunktion
 - Attribute in lokalen Funktionen
 - Modulinitialisierer
@@ -107,7 +108,7 @@ In der obigen Zeile wird ein neuer `Person`-Datensatz erstellt, bei dem die `Las
 
 ## <a name="init-only-setters"></a>init-only-Setter
 
-***Nur-init-Setter*** bieten eine konsistente Syntax zum Initialisieren von Objektmembern. Mit Eigenschafteninitialisierern bestimmen Sie, welcher Wert welche Eigenschaft festlegt. Der Nachteil ist, dass diese Eigenschaften festlegbar sein müssen. Ab C# 9.0 können Sie `init`-Zugriffsmethoden anstelle von `set`-Zugriffsmethoden für Eigenschaften und Indexer erstellen. Aufrufer können diese Werte mithilfe der Syntax von Eigenschafteninitialisierern in Erstellungsausdrücken festlegen. Diese Eigenschaften sind jedoch nach Abschluss der Erstellung schreibgeschützt. Nur-init-Setter bieten Ihnen die Möglichkeit, den Zustand innerhalb eines bestimmten Zeitfensters zu ändern. Dieses Zeitfenster schließt sich nach Abschluss der Konstruktionsphase. Die Konstruktionsphase endet effektiv, nachdem die gesamte Initialisierung, einschließlich aller Eigenschafteninitialisierer und with-Ausdrücke, abgeschlossen wurde.
+***Nur-init-Setter*** bieten eine konsistente Syntax zum Initialisieren von Objektmembern. Eigenschafteninitialisierer verdeutlichen, welcher Wert welche Eigenschaft festlegt. Der Nachteil ist, dass diese Eigenschaften festlegbar sein müssen. Ab C# 9.0 können Sie `init`-Zugriffsmethoden anstelle von `set`-Zugriffsmethoden für Eigenschaften und Indexer erstellen. Aufrufer können diese Werte mithilfe der Syntax von Eigenschafteninitialisierern in Erstellungsausdrücken festlegen. Diese Eigenschaften sind jedoch nach Abschluss der Erstellung schreibgeschützt. Nur-init-Setter bieten Ihnen die Möglichkeit, den Zustand innerhalb eines bestimmten Zeitfensters zu ändern. Dieses Zeitfenster schließt sich nach Abschluss der Konstruktionsphase. Die Konstruktionsphase endet effektiv, nachdem die gesamte Initialisierung, einschließlich aller Eigenschafteninitialisierer und with-Ausdrücke, abgeschlossen wurde.
 
 Im vorherigen Beispiel für positionelle Datensätze wurde veranschaulicht, wie eine Eigenschaft mithilfe eines Nur-init-Setters in einem with-Ausdruck festgelegt wird. Sie können Nur-init-Setter in einem jedem Typ deklarieren, den Sie schreiben. Die folgende Struktur definiert z. B. eine Struktur zur Wetterbeobachtung:
 
@@ -121,7 +122,7 @@ Die Änderung einer Beobachtung nach der Initialisierung führt jedoch zu einem 
 
 ```csharp
 // Error! CS8852.
-now.TempetureInCelsius = 18;
+now.TemperatureInCelsius = 18;
 ```
 
 Nur-init-Setter können nützlich sein, um Basisklasseneigenschaften von abgeleiteten Klassen festzulegen. Sie können auch mithilfe von Hilfsprogrammen abgeleitete Eigenschaften in einer Basisklasse festlegen. Positionelle Datensätze deklarieren Eigenschaften mithilfe von Nur-init-Settern. Diese Setter werden in with-Ausdrücken verwendet. Sie können Nur-init-Setter für alle Klassen (`class`) oder Strukturen (`struct`) deklarieren, die Sie definieren.
@@ -217,7 +218,7 @@ Sie können sie wie folgt aufrufen:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="TargetTypeNewArgument":::
 
-Ein weiterer nützlicher Anwendungsfall für dieses Feature ist die Kombination mit Nur-init-Eigenschaften, um ein neues Objekt zu initialisieren. Die Klammern um `new` sind optional:
+Ein weiterer nützlicher Anwendungsfall für dieses Feature ist die Kombination mit Nur-init-Eigenschaften, um ein neues Objekt zu initialisieren:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
@@ -228,6 +229,8 @@ Ein ähnliches Feature verbessert die Zieltypauflösung von bedingten Ausdrücke
 Ab C# 9.0 können Sie Lambdaausdrücken oder anonymen Methoden den Modifizierer `static` hinzufügen. Statische Lambdaausdrücke entsprechen den lokalen `static`-Funktionen: statische Lambdafunktionen oder anonyme Funktionen weder lokale Variablen noch den Instanzzustand erfassen. Der Modifizierer `static` verhindert, dass versehentlich andere Variablen erfasst werden.
 
 Kovariante Rückgabetypen flexibilisieren die Rückgabetypen von überschriebenen Funktionen. Eine überschriebene virtuelle Funktion kann einen Typ zurückgeben, der von dem in der Basisklassenmethode deklarierten Rückgabetyp abgeleitet wird. Dies kann nicht nur für Datensätze nützlich sein, sondern auch für andere Typen, die virtuelle Klon- oder Factorymethoden unterstützen.
+
+Außerdem erkennen und verwenden `foreach`-Schleifen eine `GetEnumerator`-Erweiterungsmethode, die ansonsten das `foreach`-Muster erfüllt. Diese Änderung bedeutet, dass `foreach` mit anderen musterbasierten Konstruktionen, z. B. mit dem async-Muster, sowie der musterbasierten Dekonstruktion konsistent ist. In der Praxis bedeutet diese Änderung, dass Sie jedem Typ `foreach`-Unterstützung hinzufügen können. Sie sollten die Verwendung von „foreach“ jedoch auf die Fälle beschränken, in denen die Enumeration eines Objekts in Ihrem Softwareentwurf sinnvoll ist.
 
 Sie können auch Ausschussvariablen als Parameter für Lambdaausdrücke verwenden. So müssen Sie das Argument nicht mehr benennen, und der Compiler muss es unter Umständen gar nicht verwenden. Sie nutzen einfach `_` für alle Argumente.
 

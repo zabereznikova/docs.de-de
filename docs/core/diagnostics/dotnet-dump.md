@@ -2,12 +2,12 @@
 title: dotnet-dump – .NET Core
 description: Installieren und Verwenden des Befehlszeilentools dotnet-dump.
 ms.date: 10/14/2019
-ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140931"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598109"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Hilfsprogramm zum Sammeln und Analysieren von Speicherabbildern (dotnet-dump)
 
@@ -71,14 +71,15 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Gibt die ID-Nummer des Prozesses an, von dem ein Speicherabbild gesammelt werden soll.
 
-- **`--type <Heap|Mini>`**
+- **`--type <Full|Heap|Mini>`**
 
-  Gibt den Speicherabbildtyp an, der festlegt, welche Arten von Informationen vom Prozess gesammelt werden. Es gibt zwei Typen:
+  Gibt den Speicherabbildtyp an, der festlegt, welche Arten von Informationen vom Prozess gesammelt werden. Es gibt drei Typen:
 
+  - `Full`: Das größte Speicherabbild, das den gesamten Arbeitsspeicher einschließlich der Modulimages enthält
   - `Heap`: eine große und relativ umfassende Sicherung, die Modullisten, Threadlisten, alle Stapel, Ausnahmeinformationen, Handleinformationen und den gesamten Arbeitsspeicher mit Ausnahme von zugeordneten Images enthält.
   - `Mini`: eine kleine Sicherung, die Modullisten, Threadlisten, Ausnahmeinformationen und alle Stapel enthält.
 
-  Wenn nichts anderes angegeben wird, wird als Standard `Heap` verwendet.
+  Wenn nichts anderes angegeben wird, wird als Standard `Full` verwendet.
 
 - **`-o|--output <output_dump_path>`**
 
