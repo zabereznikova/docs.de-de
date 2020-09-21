@@ -16,19 +16,19 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 48e1b40ddd4bc7fae7d65660adf216756d7c83f7
-ms.sourcegitcommit: 2987e241e2f76c9248d2146bf2761a33e2c7a882
+ms.openlocfilehash: b6197acf9ceee5862cf13eceab178df513eb91d7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228743"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541668"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 
 Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung eines <xref:System.DateTime>-Werts oder eines <xref:System.DateTimeOffset>-Werts, der sich aus einem Formatierungsvorgang ergibt. Sie kann auch die Darstellung eines Datums- und Uhrzeitwerts definieren, der in einem Analysevorgang erforderlich ist, um die Zeichenfolge erfolgreich in ein Datum und eine Uhrzeit zu konvertieren. Benutzerdefinierte Formatzeichenfolgen bestehen aus einem oder mehreren benutzerdefinierten Formatbezeichnern für Datum und Uhrzeit. Alle Zeichenfolgen, bei denen es sich nicht um [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md) handelt, werden als benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit interpretiert.
 
 > [!TIP]
-> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
+> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
 
 Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit können mit dem <xref:System.DateTime>-Wert und mit dem <xref:System.DateTimeOffset>-Wert verwendet werden.
 
@@ -728,5 +728,5 @@ Die von vielen der benutzerdefinierten Formatbezeichner für Datum und Uhrzeit e
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Formatierung von Typen](formatting-types.md)
 - [Standardformatierungszeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

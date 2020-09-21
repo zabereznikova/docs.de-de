@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 1252e214be03f8a180fadb7667ee59f36a862040
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: e4d7c96cdcfd7751e80703fe4c5a56e66f4c18c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558425"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555353"
 ---
 # <a name="constants-c-programming-guide"></a>Konstanten (C#-Programmierhandbuch)
 Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und sich während der Lebensdauer des Programms nicht ändern. Konstanten werden mit dem [const](../../language-reference/keywords/const.md)-Modifizierer deklariert. Nur die in C# [integrierten Typen](../../language-reference/builtin-types/built-in-types.md) (außer <xref:System.Object?displayProperty=nameWithType>) können als `const` deklariert werden. Benutzerdefinierte Typen einschließlich Klassen, Strukturen und Arrays können nicht `const` sein. Verwenden Sie den [readonly](../../language-reference/keywords/readonly.md)-Modifizierer zum Erstellen einer Klasse, einer Struktur oder eines Arrays, die/das zur Laufzeit einmal initialisiert wird (z.B. in einem Konstruktor) und danach nicht geändert werden kann.  
@@ -53,4 +53,4 @@ Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und s
 - [Eigenschaften](./properties.md)
 - [Typen](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Unveränderlichkeit in C#, Teil 1: Arten von Unveränderlichkeit](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)
+- [Unveränderlichkeit in C#, Teil 1: Arten von Unveränderlichkeit](/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

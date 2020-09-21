@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: df9188c4f7c2af77f5dc87309880a41724254c5c
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d204bea7f5ec1ed0c25b7b2dedd04d61c7f3e93d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558958"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679546"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework
 
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **UIA-Benachrichtigungsereignisse**
 
-Das UIA-Benachrichtigungsereignis, das mit dem Windows 10 Fall Creators Update eingeführt wurde, ermöglicht es Ihrer App, ein UIA-Ereignis auszulösen, was dazu führt, dass die Sprachausgabe einfach eine Ankündigung basierend auf dem Text macht, den Sie mit dem Ereignis bereitstellen. Dafür muss in der Benutzeroberfläche kein entsprechendes Steuerelement vorhanden sein. In einigen Szenarien ist dies eine einfache Möglichkeit, um die Barrierefreiheit Ihrer App erheblich zu verbessern. Auch kann damit über den Fortschritt eines Prozesses zu informiert werden, der viel Zeit in Anspruch nehmen kann. Weitere Informationen über UIA-Benachrichtigungsereignisse finden Sie in [Can your desktop app leverage the new UI Notification event?](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need) (Kann Ihre Desktop-App das neue UI-Benachrichtigungsereignis nutzen?).
+Das UIA-Benachrichtigungsereignis, das mit dem Windows 10 Fall Creators Update eingeführt wurde, ermöglicht es Ihrer App, ein UIA-Ereignis auszulösen, was dazu führt, dass die Sprachausgabe einfach eine Ankündigung basierend auf dem Text macht, den Sie mit dem Ereignis bereitstellen. Dafür muss in der Benutzeroberfläche kein entsprechendes Steuerelement vorhanden sein. In einigen Szenarien ist dies eine einfache Möglichkeit, um die Barrierefreiheit Ihrer App erheblich zu verbessern. Auch kann damit über den Fortschritt eines Prozesses zu informiert werden, der viel Zeit in Anspruch nehmen kann. Weitere Informationen über UIA-Benachrichtigungsereignisse finden Sie in [Can your desktop app leverage the new UI Notification event?](/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need) (Kann Ihre Desktop-App das neue UI-Benachrichtigungsereignis nutzen?).
 
 Im folgenden Beispiel wird ein [Benachrichtigungsereignis](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A) ausgelöst:
 
@@ -387,7 +387,7 @@ Ab .NET Framework 4.7.2 wurden mit dem <xref:System.Windows.Forms.DataGridView>-
 
 **Änderungen an den Steuerelementen CheckBox und RadioButton**
 
-In .NET Framework 4.7.1 und früheren Versionen weisen die WPF-Steuerelemente <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> und <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> inkonsistente und im klassischen Design sowie im Design mit hohem Kontrast falsche visuelle Fokuselemente auf.  Diese Probleme treten in Fällen auf, in denen für die Steuerelemente keine Inhalte festgelegt sind.  Dadurch kann der Übergang zwischen Designs verwirrend wirken und das visuelle Fokuselement schwer zu erkennen sein.
+In .NET Framework 4.7.1 und früheren Versionen weisen die WPF-Steuerelemente <xref:System.Windows.Controls.CheckBox?displayProperty=nameWithType> und <xref:System.Windows.Controls.RadioButton?displayProperty=nameWithType> inkonsistente und im klassischen Design sowie im Design mit hohem Kontrast falsche visuelle Fokuselemente auf.  Diese Probleme treten in Fällen auf, in denen für die Steuerelemente keine Inhalte festgelegt sind.  Dadurch kann der Übergang zwischen Designs verwirrend wirken und das visuelle Fokuselement schwer zu erkennen sein.
 
 In .NET Framework, 4.7.2 sind diese visuellen Elemente jetzt designübergreifend konsistenter und im klassischen Design sowie im Design mit hohem Kontrast leichter zu erkennen.
 

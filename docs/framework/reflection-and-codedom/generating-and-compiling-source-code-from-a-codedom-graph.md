@@ -27,12 +27,12 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: 85654fe961f01ad7b8fb886d59a3de9ab0efe7aa
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 3aad7b2ff047a2d9ad12c23d16773e482a395c10
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474045"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551196"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm
 Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generieren von Sourcecode aus CodeDOM-Objektdiagrammen und zum Verwalten der Kompilierung mit unterstützten Compilern bereit. Ein Codeanbieter kann Quellcode in einer bestimmten Programmiersprache anhand eines CodeDOM-Diagramms erstellen. Eine Klasse, die von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet wurde, kann in der Regel Methoden zum Generieren und Kompilieren von Code für die Sprache bereitstellen, die der Anbieter unterstützt.  
@@ -97,4 +97,4 @@ Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generiere
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [Generieren und Kompilieren von dynamischem Quellcode](dynamic-source-code-generation-and-compilation.md)
-- [Kurzreferenz zum CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))
+- [Kurzreferenz zum CodeDOM](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6531e696a6193bf1b1909c9f1be3f5beb4d7dd69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8dc85bfeaab12d17af4a3e045559e268b228f736
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134366"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536469"
 ---
 # <a name="await-operator-c-reference"></a>Der Operator „await“ (C#-Referenz)
 
@@ -60,5 +60,5 @@ Weitere Informationen finden Sie im Abschnitt [Await-Ausdrücke](~/_csharplang/s
 - [Aufgabenbasiertes asynchrones Programmiermodell](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [Asynchrone Programmierung](../../async.md)
 - [Async ausführlich](../../../standard/async-in-depth.md)
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“](../../programming-guide/concepts/async/index.md)
 - [Tutorial: Generieren und Nutzen asynchroner Datenströme mit C# 8.0 und .NET Core 3.0](../../tutorials/generate-consume-asynchronous-stream.md)

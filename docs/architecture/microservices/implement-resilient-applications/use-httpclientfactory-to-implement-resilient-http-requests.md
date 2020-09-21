@@ -2,12 +2,12 @@
 title: Verwenden von IHttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 description: Erfahren Sie, wie Sie IHttpClientFactory, verfügbar seit .NET Core 2.1, zum Erstellen von `HttpClient`-Instanzen verwenden, damit Sie es mühelos in Ihren Anwendungen verwenden können.
 ms.date: 08/31/2020
-ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271827"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678815"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Verwenden von IHttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 
@@ -65,9 +65,9 @@ Im folgenden Diagramm wird veranschaulicht, wie typisierte Clients mit `IHttpCli
 
 **Abbildung 8-4.** Verwenden von `IHttpClientFactory` mit typisierten Clientklassen.
 
-In der obigen Abbildung verwendet ein (von einem Controller oder Clientcode verwendeter) `ClientService` einen `HttpClient`, der von der registrierten `IHttpClientFactory` erstellt wird. Diese Factory weist einen `HttpMessageHandler` aus einem Pool dem `HttpClient` zu. Der `HttpClient` kann bei Registrierung der `IHttpClientFactory` im DI-Container mit der Erweiterungsmethode <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> mit Pollys Richtlinien konfiguriert werden.
+In der obigen Abbildung verwendet ein (von einem Controller oder Clientcode verwendeter) `ClientService` einen `HttpClient`, der von der registrierten `IHttpClientFactory` erstellt wird. Diese Factory weist einen `HttpMessageHandler` aus einem Pool dem `HttpClient` zu. Der `HttpClient` kann bei Registrierung der `IHttpClientFactory` im DI-Container mit der Erweiterungsmethode <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> mit Pollys Richtlinien konfiguriert werden.
 
-Um die obige Struktur zu konfigurieren, fügen Sie <xref:System.Net.Http.IHttpClientFactory> in Ihrer Anwendung hinzu, indem Sie das NuGet-Paket `Microsoft.Extensions.Http` installieren, das die <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*>-Erweiterungsmethode für <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> beinhaltet. Diese Erweiterungsmethode registriert die interne `DefaultHttpClientFactory`-Klasse für die Verwendung als Singleton für die Schnittstelle `IHttpClientFactory`. Dadurch wird eine temporäre Konfiguration für <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> definiert. Dieser Meldungshandler (<xref:System.Net.Http.HttpMessageHandler>-Objekt), der aus einem Pool abgerufen wurde, wird von dem `HttpClient`-Objekt verwendet, das von der Factory zurückgegebenen wird.
+Um die obige Struktur zu konfigurieren, fügen Sie <xref:System.Net.Http.IHttpClientFactory> in Ihrer Anwendung hinzu, indem Sie das NuGet-Paket `Microsoft.Extensions.Http` installieren, das die <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A>-Erweiterungsmethode für <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> beinhaltet. Diese Erweiterungsmethode registriert die interne `DefaultHttpClientFactory`-Klasse für die Verwendung als Singleton für die Schnittstelle `IHttpClientFactory`. Dadurch wird eine temporäre Konfiguration für <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> definiert. Dieser Meldungshandler (<xref:System.Net.Http.HttpMessageHandler>-Objekt), der aus einem Pool abgerufen wurde, wird von dem `HttpClient`-Objekt verwendet, das von der Factory zurückgegebenen wird.
 
 Im nächsten Codeausschnitt wird veranschaulicht, wie `AddHttpClient()` verwendet werden kann, um typisierte Clients (Dienst-Agents) zu registrieren, die `HttpClient` verwenden müssen.
 

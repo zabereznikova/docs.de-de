@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662731"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559160"
 ---
 # <a name="observer-design-pattern"></a>Beobachterentwurfsmuster
 
@@ -47,7 +47,7 @@ Für eine Implementierung des Musters wird Folgendes benötigt:
 - Ein Objekt, das die Daten enthält, die vom Anbieter an die Beobachter gesendet werden. Der Typ des Objekts entspricht dem generischen Typparameter der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601>. Obwohl dieses Objekt vom selben Typ sein kann wie die <xref:System.IObservable%601>-Implementierung, handelt es sich in den meisten Fällen um einen separaten Typ.
 
 > [!NOTE]
-> Zusätzlich zum Implementieren des Entwurfsmusters "Beobachter" sind Sie ggf. an einer ausführlichen Untersuchung von Bibliotheken interessiert, die mithilfe der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601> erstellt werden. Beispielsweise bestehen [Reagierende Erweiterungen für .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) aus einem Satz von Erweiterungsmethoden und LINQ-Standardsequenzoperatoren, um die asynchrone Programmierung zu unterstützen.
+> Zusätzlich zum Implementieren des Entwurfsmusters "Beobachter" sind Sie ggf. an einer ausführlichen Untersuchung von Bibliotheken interessiert, die mithilfe der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601> erstellt werden. Beispielsweise bestehen [Reagierende Erweiterungen für .NET (Rx)](/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) aus einem Satz von Erweiterungsmethoden und LINQ-Standardsequenzoperatoren, um die asynchrone Programmierung zu unterstützen.
 
 ## <a name="implementing-the-pattern"></a>Implementieren des Musters
 

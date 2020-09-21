@@ -3,12 +3,12 @@ title: Serialisierungskonzepte
 description: Mit der Serialisierung kann der Zustand eines Objekts erfasst werden, sodass eine Kopie erstellt oder ein Objekt nach Wert von einer Anwendungsdomäne an eine andere gesendet werden kann.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 35addd2dd2bed8ce878f2f159f1caefe89922d88
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a185855f4b6913c8e1d57bf36fc5c37411123e68
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84291317"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541199"
 ---
 # <a name="serialization-concepts"></a>Serialisierungskonzepte
 Warum ist es sinnvoll, die Serialisierung zu verwenden? Die beiden wichtigsten Gründe bestehen darin, dass der Objektstatus auf einem Speichermedium dauerhaft gespeichert werden soll, damit zu einem späteren Zeitpunkt eine genaue Kopie angefertigt werden kann, und dass das Objekt als Wert von einer Anwendungsdomäne zu einer anderen Anwendungsdomäne übertragen werden soll. Die Serialisierung wird beispielsweise eingesetzt, um den Sitzungsstatus in ASP.NET zu speichern und Objekte in die Zwischenablage von Windows&#160;Forms zu kopieren. Sie wird auch vom Remotingsystem verwendet, um Objekte als Wert von einer Anwendungsdomäne an eine andere zu übergeben.
@@ -31,7 +31,7 @@ Wenn ein Objekt von `MarshalByRefObject` abgeleitet ist, wird statt des Objekts 
  [Binäre Serialisierung](binary-serialization.md)  
  Beschreibt den binären Serialisierungsmechanismus, der in der Common Language Runtime enthalten ist.  
   
- [.NET-Remotezugriff](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+ [.NET-Remotezugriff](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  Beschreibt die verschiedenen Kommunikationsverfahren, die in .NET&#160;Framework für die Remotekommunikation zur Verfügung stehen.  
   
  [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)  

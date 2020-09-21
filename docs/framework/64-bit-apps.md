@@ -7,12 +7,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 4589d7a070a477dcb229fbaea686f6c6ff7d7e08
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 49feb664531db4955a99324851aef5b49032be71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989984"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555509"
 ---
 # <a name="64-bit-applications"></a>64-Bit-Anwendungen
 Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem Windows-Betriebssystem mit 64 Bit entweder als systemeigene Anwendung oder unter WOW64 (Windows-32-Bit-On-Windows-64-Bit) ausgeführt werden soll. WOW64 ist eine Kompatibilitätsumgebung, die die Ausführung einer 32-Bit-Anwendung auf einem 64-Bit-System ermöglicht. WOW64 ist allen in 64-Bit-Versionen des Windows-Betriebssystems enthalten.  
@@ -37,7 +37,7 @@ Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem W
   
 - Code, der `IntPtr` in `Int32` umwandelt.  
   
- Weitere Informationen zum Portieren einer 32-Bit-Anwendung auf die 64-Bit-CLR finden Sie in unter [Migrating 32-bit Managed Code to 64-bit (Migrieren von verwaltetem Code (32 Bit) zu Code mit 64 Bit)](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
+ Weitere Informationen zum Portieren einer 32-Bit-Anwendung auf die 64-Bit-CLR finden Sie in unter [Migrating 32-bit Managed Code to 64-bit (Migrieren von verwaltetem Code (32 Bit) zu Code mit 64 Bit)](/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
   
 ## <a name="general-64-bit-programming-information"></a>Allgemeine Informationen zur 64-Bit-Programmierung  
  Allgemeine Informationen zur 64-Bit-Programmierung finden Sie in den folgenden Dokumenten:  

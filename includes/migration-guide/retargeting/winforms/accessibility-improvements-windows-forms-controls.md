@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8e1c91f4fee8aa896b6617c815fe2a4b6d22f2a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fa24c664e9f7cf6da78d0703c7ebb52c8ebbec20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614571"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606225"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls"></a>Verbesserung der Barrierefreiheit von Windows Forms-Steuerelementen
 
@@ -40,7 +40,7 @@ Die Arbeitsweise von Windows Forms mit Technologien für die Barrierefreiheit wi
 </configuration>
 ```
 
-Bei Anwendungen, die .NET Framework 4.7.1 oder höher als Zielplattform verwenden und die Legacy-Barrierefreiheitsverhalten beibehalten sollen, können Sie die Verwendung des veralteten Features für die Barrierefreiheit aktivieren, indem Sie die AppContext-Option auf `true` festlegen.<p/>Einen Überblick über die Benutzeroberflächenautomatisierung finden Sie unter [Benutzeroberflächenautomatisierung: Übersicht](~/docs/framework/ui-automation/ui-automation-overview.md).<p/>**Hinzugefügte Unterstützung für Benutzeroberflächen-Automatisierungsmuster und -Eigenschaften**<br/>Barrierefreiheitsclients können neue WinForms-Barrierefreiheitsfunktionen nutzen, indem allgemeine, öffentlich beschriebene Aufrufmuster verwendet werden. Diese Muster sind nicht für WinForms spezifisch. Clients für die Barrierefreiheit können beispielsweise die QueryInterface-Methode der IAccessible-Schnittstelle (MAAS) aufrufen, um eine IServiceProvider-Schnittstelle abzurufen. Wenn diese Schnittstelle verfügbar ist, können Clients die QueryService-Methode verwenden, um eine IAccessibleEx-Schnittstelle anzufordern. Weitere Informationen finden Sie unter [Using IAccessibleEx from a Client (Verwenden von IAccessibleEx über einen Client)](https://docs.microsoft.com/windows/desktop/WinAuto/using-iaccessibleex-from-a-client). Ab .NET Framework 4.7.1 sind IServiceProvider und [IAccessibleEx](https://docs.microsoft.com/windows/desktop/WinAuto/iaccessibleex) gegebenenfalls für WinForms-Objekte für die Barrierefreiheit verfügbar.<p/>.NET Framework 4.7.1 fügt Unterstützung für folgende Muster und Eigenschaften für die Automatisierung der Benutzeroberfläche hinzu:
+Bei Anwendungen, die .NET Framework 4.7.1 oder höher als Zielplattform verwenden und die Legacy-Barrierefreiheitsverhalten beibehalten sollen, können Sie die Verwendung des veralteten Features für die Barrierefreiheit aktivieren, indem Sie die AppContext-Option auf `true` festlegen.<p/>Einen Überblick über die Benutzeroberflächenautomatisierung finden Sie unter [Benutzeroberflächenautomatisierung: Übersicht](~/docs/framework/ui-automation/ui-automation-overview.md).<p/>**Hinzugefügte Unterstützung für Benutzeroberflächen-Automatisierungsmuster und -Eigenschaften**<br/>Barrierefreiheitsclients können neue WinForms-Barrierefreiheitsfunktionen nutzen, indem allgemeine, öffentlich beschriebene Aufrufmuster verwendet werden. Diese Muster sind nicht für WinForms spezifisch. Clients für die Barrierefreiheit können beispielsweise die QueryInterface-Methode der IAccessible-Schnittstelle (MAAS) aufrufen, um eine IServiceProvider-Schnittstelle abzurufen. Wenn diese Schnittstelle verfügbar ist, können Clients die QueryService-Methode verwenden, um eine IAccessibleEx-Schnittstelle anzufordern. Weitere Informationen finden Sie unter [Using IAccessibleEx from a Client (Verwenden von IAccessibleEx über einen Client)](/windows/desktop/WinAuto/using-iaccessibleex-from-a-client). Ab .NET Framework 4.7.1 sind IServiceProvider und [IAccessibleEx](/windows/desktop/WinAuto/iaccessibleex) gegebenenfalls für WinForms-Objekte für die Barrierefreiheit verfügbar.<p/>.NET Framework 4.7.1 fügt Unterstützung für folgende Muster und Eigenschaften für die Automatisierung der Benutzeroberfläche hinzu:
 
 - Die Steuerelemente <xref:System.Windows.Forms.ToolStripSplitButton> und <xref:System.Windows.Forms.ComboBox> unterstützen das Muster [Erweitern/Reduzieren](~/docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 - Das <xref:System.Windows.Forms.ToolStripMenuItem>-Steuerelement weist einen [ControlType](~/docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)-Eigenschaftswert von <xref:System.Windows.Automation.ControlType.MenuItem?displayProperty=nameWithType> auf.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: 3cfaa83590fefe31c437d2ff607fb579aec1da61
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517034"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543386"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
@@ -89,7 +89,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Beachten Sie, dass "Tlbexp.exe" das Feld <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> ignoriert.  
   
- Da Typbibliotheken nicht alle in den Assemblys gefundenen Informationen aufnehmen können, verwirft "Tlbexp.exe" während des Exportvorgangs möglicherweise einige Daten. Eine Erläuterung des Transformationsprozesses sowie Informationen darüber, wie Sie die Quelle der Informationen identifizieren, die an eine Typbibliothek ausgegeben werden, finden Sie unter [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
+ Da Typbibliotheken nicht alle in den Assemblys gefundenen Informationen aufnehmen können, verwirft "Tlbexp.exe" während des Exportvorgangs möglicherweise einige Daten. Eine Erläuterung des Transformationsprozesses sowie Informationen darüber, wie Sie die Quelle der Informationen identifizieren, die an eine Typbibliothek ausgegeben werden, finden Sie unter [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
   
  Beachten Sie, dass das Type Library Exporter-Tool Methoden exportiert, die über <xref:System.TypedReference>-Parameter als `VARIANT` verfügen, obwohl das <xref:System.TypedReference>-Objekt in nicht verwaltetem Code keine Bedeutung hat. Wenn Sie Methoden exportieren, die über <xref:System.TypedReference>-Parameter verfügen, generiert das Type Library Exporter-Tool keine Warnung und keinen Fehler, und nicht verwalteter Code, der die resultierende Typbibliothek verwendet, wird nicht ordnungsgemäß ausgeführt.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Extras](index.md)
 - [Regasm.exe (Assembly Registration-Tool)](regasm-exe-assembly-registration-tool.md)
-- [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
+- [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (Type Library Importer-Tool)](tlbimp-exe-type-library-importer.md)
 - [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

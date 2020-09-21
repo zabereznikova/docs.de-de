@@ -38,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662926"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554761"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -107,7 +107,7 @@ ms.locfileid: "84662926"
   
  Neben den Basisdatentypen umfasst der <xref:System>-Namespace mehr als 100 Klassen, die von Klassen für die Behandlung von Ausnahmen bis zu Klassen reichen, die für wesentliche Konzepte der Laufzeit vorgesehen sind, beispielsweise Anwendungsdomänen oder der Garbage Collector. Der <xref:System>-Namespace beinhaltet darüber hinaus zahlreiche Namespaces zweiter Ebene.  
   
- Verwenden Sie für weitere Informationen zu Namespaces den [.NET-API-Browser](https://docs.microsoft.com/dotnet/api), um die .NET Framework-Klassenbibliothek zu durchsuchen. Die API-Referenzdokumentation bietet Dokumentationen zu jedem Namespace, den dazu gehörigen Typen und Membern.  
+ Verwenden Sie für weitere Informationen zu Namespaces den [.NET-API-Browser](../../api/index.md), um die .NET Framework-Klassenbibliothek zu durchsuchen. Die API-Referenzdokumentation bietet Dokumentationen zu jedem Namespace, den dazu gehörigen Typen und Membern.  
   
 ## <a name="see-also"></a>Siehe auch
 

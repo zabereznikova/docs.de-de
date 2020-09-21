@@ -3,18 +3,18 @@ title: Debuggen einer hohen CPU-Auslastung – .NET Core
 description: In diesem Tutorial lernen Sie, wie Sie eine hohe CPU-Auslastung in .NET Core debuggen.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557801"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538708"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>Debuggen einer hohen CPU-Auslastung in .NET Core
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 3.1 SDK und höher
 
-In diesem Tutorial erfahren Sie, wie Sie eine exzessive CPU-Auslastung debuggen. Mithilfe des bereitgestellten Beispielquellcoderepositorys einer [ASP.NET Core-Web-App](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) können Sie absichtlich einen Deadlock auslösen. Infolge reagiert der Endpunkt nicht mehr, und es kommt zu einer Threadakkumulation. Des Weiteren werden Sie erfahren, wie Sie in einem solchen Szenario mithilfe von verschiedenen Diagnosedaten und Tools eine Diagnose erstellen.
+In diesem Tutorial erfahren Sie, wie Sie eine exzessive CPU-Auslastung debuggen. Mithilfe des bereitgestellten Beispielquellcoderepositorys einer [ASP.NET Core-Web-App](/samples/dotnet/samples/diagnostic-scenarios) können Sie absichtlich einen Deadlock auslösen. Infolge reagiert der Endpunkt nicht mehr, und es kommt zu einer Threadakkumulation. Des Weiteren werden Sie erfahren, wie Sie in einem solchen Szenario mithilfe von verschiedenen Diagnosedaten und Tools eine Diagnose erstellen.
 
 In diesem Tutorial werden Sie Folgendes durchführen:
 
@@ -31,13 +31,13 @@ In diesem Tutorial werden Sie Folgendes durchführen:
 Im Tutorial wird Folgendes verwendet:
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) oder höher
-- [Beispieldebugziel](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) zum Auslösen des Szenarios
+- [Beispieldebugziel](/samples/dotnet/samples/diagnostic-scenarios) zum Auslösen des Szenarios
 - [dotnet-trace](dotnet-trace.md) zum Auflisten von Prozessen und zum Generieren eines Profils
 - [dotnet-counters](dotnet-counters.md) zur Überwachung der CPU-Auslastung
 
 ## <a name="cpu-counters"></a>CPU-Indikatoren
 
-Bevor Sie versuchen, Diagnosedaten zu erfassen, muss eine hohe CPU-Auslastung gegeben sein. Führen Sie die [Beispielanwendung](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) mit dem folgenden Befehl im Stammverzeichnis des Projekts aus.
+Bevor Sie versuchen, Diagnosedaten zu erfassen, muss eine hohe CPU-Auslastung gegeben sein. Führen Sie die [Beispielanwendung](/samples/dotnet/samples/diagnostic-scenarios) mit dem folgenden Befehl im Stammverzeichnis des Projekts aus.
 
 ```dotnetcli
 dotnet run
@@ -116,11 +116,11 @@ Wenn Sie eine langsame Anforderung analysieren, benötigen Sie ein Diagnosetool,
 
 ### <a name="linux"></a>[Linux](#tab/linux)
 
-Mit dem Tool `perf` können Profile für .NET Core-Apps generiert werden. Beenden Sie die vorherige Instanz des [Beispieldebugziels](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios).
+Mit dem Tool `perf` können Profile für .NET Core-Apps generiert werden. Beenden Sie die vorherige Instanz des [Beispieldebugziels](/samples/dotnet/samples/diagnostic-scenarios).
 
 Legen Sie die Umgebungsvariable `COMPlus_PerfMapEnabled` so fest, dass die .NET Core-App eine `map`-Datei im Verzeichnis `/tmp` erstellt. Mit dieser `map`-Datei ordnet `perf` anhand des Namens CPU-Adressen zu JIT-generierten Funktionen zu. Weitere Informationen finden Sie unter [Schreiben einer Leistungszuordnung](../run-time-config/debugging-profiling.md#write-perf-map).
 
-Führen Sie das [Beispieldebugziel](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) in der gleichen Terminalsitzung aus.
+Führen Sie das [Beispieldebugziel](/samples/dotnet/samples/diagnostic-scenarios) in der gleichen Terminalsitzung aus.
 
 ```dotnetcli
 export COMPlus_PerfMapEnabled=1
@@ -152,7 +152,7 @@ Dieser Befehl generiert eine `flamegraph.svg`-Datei, die Sie im Browser anzeigen
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-Unter Windows können Sie das Tool [dotnet-trace](dotnet-trace.md) als Profiler verwenden. Rufen Sie unter Verwendung des vorherigen [Beispieldebugziels](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) noch einmal den Endpunkt (`https://localhost:5001/api/diagscenario/highcpu/60000`) auf, der eine hohe CPU-Auslastung verursacht. Verwenden Sie den Befehl `collect` wie folgt, während der Endpunkt innerhalb der 1-minütigen Anforderung aufgerufen wird:
+Unter Windows können Sie das Tool [dotnet-trace](dotnet-trace.md) als Profiler verwenden. Rufen Sie unter Verwendung des vorherigen [Beispieldebugziels](/samples/dotnet/samples/diagnostic-scenarios) noch einmal den Endpunkt (`https://localhost:5001/api/diagscenario/highcpu/60000`) auf, der eine hohe CPU-Auslastung verursacht. Verwenden Sie den Befehl `collect` wie folgt, während der Endpunkt innerhalb der 1-minütigen Anforderung aufgerufen wird:
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler

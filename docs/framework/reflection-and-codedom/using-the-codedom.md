@@ -21,12 +21,12 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-ms.openlocfilehash: 476d8c18f386f889855c664147b1ee20995dc6f9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7a730a828488fd3ca04419588b3f32703dfda1c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865215"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541733"
 ---
 # <a name="using-the-codedom"></a>Verwenden von CodeDOM
 CodeDOM stellt Typen bereit, die zahlreiche häufig verwendete Quellcodeelemente darstellen. Ein Programm kann entworfen werden, das ein Quellcodemodell mithilfe von CodeDOM-Elementen erstellt, um ein Objektdiagramm zusammenzustellen. Dieses Objektdiagramm kann mit einem CodeDOM-Code-Generator für eine unterstützte Programmiersprache als Quellcode gerendert werden. CodeDOM kann auch verwendet werden, um Quellcode in eine binäre Assembly zu kompilieren.  
@@ -126,4 +126,4 @@ CodeDOM stellt Typen bereit, die zahlreiche häufig verwendete Quellcodeelemente
   
  Eine Dokumentation aller CodeDOM-Typen finden Sie in der Referenzdokumentation zum <xref:System.CodeDom>-Namespace.  
   
- Ein Übersichtsdiagramm, in dem das jeweils zum Darstellen eines bestimmten Codeelementtyps zu verwendende CodeDOM-Element gesucht werden kann, finden Sie in der [Kurzreferenz zu CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)).
+ Ein Übersichtsdiagramm, in dem das jeweils zum Darstellen eines bestimmten Codeelementtyps zu verwendende CodeDOM-Element gesucht werden kann, finden Sie in der [Kurzreferenz zu CodeDOM](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)).

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d9f6b3540bb04dd4af154fce2f91a3a7b6395ba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279879"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555535"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Empfehlungen für die Entwicklung weltweit einsatzfähiger Anwendungen
 
@@ -91,7 +91,7 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
 
 4. Geben Sie die Werte für das requestEncoding-Attribut, das responseEncoding-Attribut, das fileEncoding-Attribut, das culture-Attribut und das uiCulture-Attribut an den folgenden drei Stellen in der ASP.NET-Anwendung an:
 
-    - Im Globalisierungsabschnitt einer Web.config-Datei. Diese Datei befindet sich außerhalb der ASP.NET-Anwendung. Weitere Informationen finden Sie unter [\<globalization>Element](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
+    - Im Globalisierungsabschnitt einer Web.config-Datei. Diese Datei befindet sich außerhalb der ASP.NET-Anwendung. Weitere Informationen finden Sie unter [\<globalization>Element](/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
 
     - In einer Seitendirektive. Wenn sich eine Anwendung auf einer Seite befindet, wurde die Datei bereits gelesen. Daher können für fileEncoding und requestEncoding keine Werte mehr festgesetzt werden. Nur für uiCulture, Culture und responseEncoding können in einer Seitendirektive Werte angegeben werden.
 

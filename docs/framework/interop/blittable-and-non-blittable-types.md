@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8bbf9c72143033cec22b38cc26cbe8ceb44f790b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621534"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556270"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Für Blitting geeignete und nicht geeignete Typen
 Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltetem und unverwaltetem Speicher und erfordern keine besondere Behandlung durch den Interop-Marshaller. Diese Typen werden *blitfähige Typen* genannt, da keine Konvertierung erforderlich ist, wenn sie zwischen verwaltetem und nicht verwaltetem Code übergeben werden.  
@@ -61,13 +61,13 @@ Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltete
 |Nicht blitfähiger Typ|Beschreibung|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|Konvertiert in ein Array im C-Format oder ein `SAFEARRAY`.|  
-|[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Konvertiert in einen 1-, 2- oder 4-Byte-Wert mit `true` als 1 oder -1.|  
-|[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Konvertiert in ein Unicode- oder ANSI-Zeichen.|  
-|[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Konvertiert in eine Klassenschnittstelle.|  
+|[System.Boolean](/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Konvertiert in einen 1-, 2- oder 4-Byte-Wert mit `true` als 1 oder -1.|  
+|[System.Char](/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Konvertiert in ein Unicode- oder ANSI-Zeichen.|  
+|[System.Class](/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Konvertiert in eine Klassenschnittstelle.|  
 |[System.Object](default-marshaling-for-objects.md)|Konvertiert in eine Variante oder eine Schnittstelle.|  
 |[System.Mdarray](default-marshaling-for-arrays.md)|Konvertiert in ein Array im C-Format oder ein `SAFEARRAY`.|  
 |[System.String](default-marshaling-for-strings.md)|Konvertiert in eine Zeichenfolge, die in einem NULL-Verweis oder in einem BSTR endet.|  
-|[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Konvertiert in eine Struktur mit einem festen Speicherlayout.|  
+|[System.Valuetype](/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Konvertiert in eine Struktur mit einem festen Speicherlayout.|  
 |[System.Szarray](default-marshaling-for-arrays.md)|Konvertiert in ein Array im C-Format oder ein `SAFEARRAY`.|  
   
  Klassen und Objekttypen werden nur von COM-Interop unterstützt. Informationen zu den entsprechenden Typen in Visual Basic, C# und C++ finden Sie unter [Übersicht über die Klassenbibliothek](../../standard/class-library-overview.md).  

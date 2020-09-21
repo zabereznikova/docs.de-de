@@ -4,12 +4,12 @@ description: Informationen zu Werttypen, die Nullwerte zulassen, in C# und der V
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 8c3a8b997fbb8154f79dff04018cf3ea76f85d7a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738998"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537352"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable-Werttypen (C#-Referenz)
 
@@ -135,7 +135,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [What exactly does 'lifted' mean?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean) (Was bedeutet „Lifted“ genau?)
+- [What exactly does 'lifted' mean?](/archive/blogs/ericlippert/what-exactly-does-lifted-mean) (Was bedeutet „Lifted“ genau?)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

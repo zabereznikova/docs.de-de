@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 827e79bdefcde7ae94567e5341ade76097dc8eaa
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a1a43d7ce3fbc678cc9aa047c5110ac8615ea27e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619103"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554142"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen
 COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
@@ -143,5 +143,5 @@ CMyClass::MethodThatThrows
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Erweiterte COM-Interoperabilität](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Ausnahmen](../../standard/exceptions/index.md)

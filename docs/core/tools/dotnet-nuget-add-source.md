@@ -2,12 +2,12 @@
 title: Befehl „dotnet nuget add source“
 description: Mit dem Befehl „dotnet nuget add source“ wird eine neue Paketquelle zu Ihren NuGet-Konfigurationsdateien hinzugefügt.
 ms.date: 03/20/2020
-ms.openlocfilehash: 319501e026f1c3102006b0be5357f127b8e366a7
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b847d987de2d88cb3452d32d1bc84232a1e20b6e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463599"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537972"
 ---
 # <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
@@ -41,7 +41,7 @@ Mit dem Befehl `dotnet nuget add source` wird eine neue Paketquelle zu Ihren NuG
 
 - **`--configfile <FILE>`**
 
-  Die NuGet-Konfigurationsdatei. Sofern angegeben, werden nur die Einstellungen aus dieser Datei verwendet. Falls nicht angegeben, wird die Hierarchie der Konfigurationsdateien aus dem aktuellen Verzeichnis verwendet. Weitere Informationen finden Sie unter [Gängige NuGet-Konfigurationen](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+  Die NuGet-Konfigurationsdatei. Sofern angegeben, werden nur die Einstellungen aus dieser Datei verwendet. Falls nicht angegeben, wird die Hierarchie der Konfigurationsdateien aus dem aktuellen Verzeichnis verwendet. Weitere Informationen finden Sie unter [Gängige NuGet-Konfigurationen](/nuget/consume-packages/configuring-nuget-behavior).
 
 - **`-n|--name <SOURCE_NAME>`**
 

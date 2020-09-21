@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558763"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550383"
 ---
 # <a name="version-compatibility"></a>Versionskompatibilität
 
@@ -53,9 +53,9 @@ Wenn Ihre App oder Komponente nicht wie erwartet in .NET Framework 4.5 (einschli
 
 - Wenn Sie über eine App für .NET Framework 3.5 verfügen, finden Sie außerdem Informationen unter [Migrationsprobleme in .NET Framework 4](net-framework-4-migration-issues.md).
 
-- Wenn Sie über eine App für .NET Framework 2.0 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 3.5 SP1 (Änderungen in .NET Framework 3.5 SP1)](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
+- Wenn Sie über eine App für .NET Framework 2.0 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 3.5 SP1 (Änderungen in .NET Framework 3.5 SP1)](/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
 
-- Wenn Sie über eine App für .NET Framework 1.1 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 2.0 (Änderungen in .NET Framework 2.0)](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)).
+- Wenn Sie über eine App für .NET Framework 1.1 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 2.0 (Änderungen in .NET Framework 2.0)](/previous-versions/aa570326(v=msdn.10)).
 
 - Wenn Sie vorhandenen Quellcode neu kompilieren, sodass er in .NET Framework 4.5 oder den zugehörigen Releases ausgeführt werden kann, oder wenn Sie eine neue Version einer App oder einer Komponente entwickeln, die basierend auf vorhandenem Quellcode auf .NET Framework 4.5 oder die zugehörigen Releases ausgerichtet ist, überprüfen Sie [Veraltete Elemente in der Klassenbibliothek](../whats-new/whats-obsolete.md) auf veraltete Typen und Member, und wenden Sie die beschriebene Problemumgehung an. (Bereits kompilierter Code wird weiterhin mit Typen und Membern ausgeführt, die als veraltet markiert wurden.)
 

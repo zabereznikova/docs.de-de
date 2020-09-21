@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions, unmanaged code
 - interop, exceptions
 - exceptions, interop
-ms.openlocfilehash: 2aff71e97e1be0dbb584f4fe43c322cea86d2480
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 90774b5d1b64feb34e01f48708d94f8f841a7c9d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794621"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550871"
 ---
 # <a name="working-with-interop-exceptions-in-unmanaged-code"></a>Arbeiten mit Interop-Ausnahmen in nicht verwaltetem Code
 
@@ -22,7 +22,7 @@ Die Interoperabilität von Ausnahmen wegen nicht verwaltetem Code wird nur auf W
 
 Die Interoperabilität mit den C-Funktionen `setjmp` und `longjmp` wird nicht unterstützt. Sie können `longjmp` nicht zum Überspringen von verwalteten Frames verwenden.
 
-Weitere Informationen finden Sie in der [longjmp-Dokumentation](https://docs.microsoft.com/cpp/c-runtime-library/reference/longjmp).
+Weitere Informationen finden Sie in der [longjmp-Dokumentation](/cpp/c-runtime-library/reference/longjmp).
 
 ## <a name="see-also"></a>Siehe auch
 

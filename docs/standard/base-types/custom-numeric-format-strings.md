@@ -17,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: bd96766c7483a3de1a3c70d1efbe1aa91ea45fbc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7cf61746e483fe5aa2ee5e3421219240e8700172
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447237"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541578"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 
@@ -31,7 +31,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 Benutzerdefinierte numerische Formatzeichenfolgen werden von einigen Überladungen der `ToString` -Methode aller numerischen Typen unterstützt. Sie können z. B. eine numerische Formatzeichenfolge an die <xref:System.Int32.ToString%28System.String%29> -Methode und <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> -Methode des <xref:System.Int32> -Typs übergeben. Benutzerdefinierte numerische Formatzeichenfolgen werden auch vom .NET-Feature für die [kombinierte Formatierung](composite-formatting.md) unterstützt, die von einigen `Write`-Methoden und `WriteLine`-Methoden der <xref:System.Console>-Klasse und der <xref:System.IO.StreamWriter>-Klasse, der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode und der <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>-Methode verwendet wird. Das Feature [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) unterstützt auch benutzerdefinierte numerische Formatzeichenfolgen.
 
 > [!TIP]
-> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
+> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
 
 <a name="table"></a> Die folgenden Tabelle beschreibt die benutzerdefinierten Zahlenformatbezeichner und zeigt eine Beispielausgabe an, die von den einzelnen Formatbezeichnern erstellt wird. Weitere Informationen über das Verwenden von benutzerdefinierten numerischen Formatzeichenfolgen finden Sie im Abschnitt [Hinweise](#NotesCustomFormatting) . Der Abschnitt [Beispiel](#example) enthält eine umfassende Abbildung ihrer Verwendung.
 
@@ -292,5 +292,5 @@ Im folgenden Beispiel werden zwei benutzerdefinierte numerische Formatzeichenfol
 - [Formatierung von Typen](formatting-types.md)
 - [Standardmäßige Zahlenformatzeichenfolgen](standard-numeric-format-strings.md)
 - [How to: Auffüllen einer Zahl mit führenden Nullen](how-to-pad-a-number-with-leading-zeros.md)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

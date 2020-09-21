@@ -2,12 +2,12 @@
 title: Dotnet-Installationsskripts
 description: Erfahren Sie mehr über die dotnet-Installationsskripts zur Installation des .NET Core SDK und der Shared Runtime.
 ms.date: 04/30/2020
-ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024653"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538041"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -131,7 +131,7 @@ Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Si
 
 - **`-NoCdn|--no-cdn`**
 
-  Deaktiviert das Herunterladen aus dem [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) und verwendet den nicht zwischengespeicherten Feed direkt.
+  Deaktiviert das Herunterladen aus dem [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) und verwendet den nicht zwischengespeicherten Feed direkt.
 
 - **`-NoPath|--no-path`**
 

@@ -4,12 +4,12 @@ description: ML.NET ermöglicht es Ihnen, .NET-Anwendungen in Online- oder Offli
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607770"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679663"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Was ist ML.NET, und wie funktioniert es?
 
@@ -262,7 +262,7 @@ Alle Algorithmen erstellen auch neue Spalten, nachdem sie eine Vorhersage ausgef
 
 Weitere Informationen über Ausgabespalten anderer Machine Learning-Aufgaben finden Sie im Handbuch [Machine Learning-Aufgaben in ML.NET](resources/tasks.md).
 
-Eine wichtige Eigenschaft von DataView-Objekten ist, dass sie **verzögert** ausgewertet werden. Datenansichten werden nur beim Trainieren und Auswerten des Modells und bei der Datenvorhersage geladen und verarbeitet. Beim Schreiben und Testen Ihrer ML.NET-Anwendung können Sie mit dem Visual Studio-Debugger einen Blick auf jedes Datenansichtsobjekt werfen, indem Sie die [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*)-Methode aufrufen.
+Eine wichtige Eigenschaft von DataView-Objekten ist, dass sie **verzögert** ausgewertet werden. Datenansichten werden nur beim Trainieren und Auswerten des Modells und bei der Datenvorhersage geladen und verarbeitet. Beim Schreiben und Testen Ihrer ML.NET-Anwendung können Sie mit dem Visual Studio-Debugger einen Blick auf jedes Datenansichtsobjekt werfen, indem Sie die [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview%2A)-Methode aufrufen.
 
 ```csharp
     var debug = testPriceDataView.Preview();
@@ -284,4 +284,4 @@ In realen Anwendungen sind Ihr Modelltrainings- und Auswertungscode von Ihrer Vo
 
 * Informieren Sie sich in den [Schrittanleitungen](./how-to-guides/index.md) ausführlicher über bestimmte Themen.
 
-* Wenn Sie extrem interessiert sind, können Sie direkt in die [API-Referenzdokumentation](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) eintauchen.
+* Wenn Sie extrem interessiert sind, können Sie direkt in die [API-Referenzdokumentation](../../api/index.md?view=ml-dotnet) eintauchen.

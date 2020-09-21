@@ -2,12 +2,12 @@
 title: Übersicht über .NET Core
 description: Hier lernen Sie Merkmale und Zusammensetzung von .NET Core kennen und vergleichen .NET Core mit anderen .NET-Implementierungen.
 ms.date: 03/26/2020
-ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e99939cf85cc441fd473e4d033e22b1a5d053638
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100729"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539007"
 ---
 # <a name="net-core-overview"></a>Übersicht über .NET Core
 
@@ -39,7 +39,7 @@ Die Editor-Integration wird zum Teil durch die Mitwirkenden der [OmniSharp](http
 
 * Cloud-Apps mit [ASP.NET Core](/aspnet/core/)
 * Mobile Apps mit [Xamarin](/xamarin)
-* IoT-Apps mit [System.Device.GPIO](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)
+* IoT-Apps mit [System.Device.GPIO](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)
 * Windows-Client-Apps mit [WPF](../desktop-wpf/overview/index.md) und Windows Forms
 * Machine Learning mit [ML.NET](../machine-learning/index.yml)
 
@@ -64,7 +64,7 @@ Durch die Implementierung der [.NET Standard](../standard/net-standard.md)-Spezi
 
 ### <a name="open-source"></a>Quelle öffnen
 
-[.NET Core](about.md) ist eine universelle [Open Source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)-Entwicklungsplattform. Sie können .NET Core-Apps für Windows, macOS und Linux für x64-, x86-, ARM32- und ARM64-Prozessoren erstellen. Es werden Frameworks und APIs für die [Cloud](/aspnet/core/), für [IoT](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), für [Clientbenutzeroberflächen](../desktop-wpf/overview/index.md) und für [Machine Learning](../machine-learning/index.yml) bereitgestellt.
+[.NET Core](about.md) ist eine universelle [Open Source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)-Entwicklungsplattform. Sie können .NET Core-Apps für Windows, macOS und Linux für x64-, x86-, ARM32- und ARM64-Prozessoren erstellen. Es werden Frameworks und APIs für die [Cloud](/aspnet/core/), für [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), für [Clientbenutzeroberflächen](../desktop-wpf/overview/index.md) und für [Machine Learning](../machine-learning/index.yml) bereitgestellt.
 
 ## <a name="support"></a>Support
 

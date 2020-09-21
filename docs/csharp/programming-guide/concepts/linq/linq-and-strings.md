@@ -3,18 +3,18 @@ title: LINQ und Zeichenfolgen (C#)
 description: LINQ kann Zeichenfolgen und Sammlungen von Zeichenfolgen abfragen und transformieren. Sie können LINQ-Abfragen mit C#-Zeichenfolgenfunktionen und regulären Ausdrücken vereinen.
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0500d821335659fa29dd4809513f38dac0a8b193
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165612"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556719"
 ---
 # <a name="linq-and-strings-c"></a>LINQ und Zeichenfolgen (C#)
 
 LINQ kann zum Abfragen und Transformieren von Zeichenfolgen und Auflistungen von Zeichenfolgen verwendet werden. Dieses Verfahren ist bei halbstrukturierten Daten in Textdateien besonders nützlich. LINQ-Abfragen können mit herkömmlichen Zeichenfolgenfunktionen und regulären Ausdrücken verbunden werden. Beispielsweise können Sie die Methode <xref:System.String.Split%2A?displayProperty=nameWithType> oder <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> verwenden, um ein Array von Zeichenfolgen zu erstellen, das Sie anschließend mit LINQ abfragen oder ändern können. Sie können die Methode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> in der `where`-Klausel einer LINQ-Abfrage verwenden. Sie können LINQ außerdem zum Abfragen und Ändern der <xref:System.Text.RegularExpressions.MatchCollection>-Ergebnisse, die von einem regulären Ausdruck zurückgegeben werden, verwenden.
 
-Sie können auch die Techniken verwenden, die in diesem Abschnitt beschrieben werden, um halbstrukturierte Textdaten in XML zu transformieren. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md).
+Sie können auch die Techniken verwenden, die in diesem Abschnitt beschrieben werden, um halbstrukturierte Textdaten in XML zu transformieren. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren von XML aus CSV-Dateien](../../../../standard/linq/generate-xml-csv-files.md).
 
 Die Beispiele in diesem Abschnitt gehören zu einer der folgenden beiden Kategorien:
 
@@ -76,4 +76,4 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
 ## <a name="see-also"></a>Siehe auch
 
 - [Language Integrated Query (LINQ) (C#)](index.md)
-- [Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)
+- [Generieren von XML aus CSV-Dateien](../../../../standard/linq/generate-xml-csv-files.md)

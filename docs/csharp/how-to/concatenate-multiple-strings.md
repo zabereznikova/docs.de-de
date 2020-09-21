@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: ef3d79c5b40d08cb76e58eba1c8831c468fd1fc0
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: f2aae14deac967a833fb3510acdb32e0971485b5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663017"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537482"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Vorgehensweise: Verketten mehrerer Zeichenfolgen (C#-Handbuch)
 
@@ -41,7 +41,7 @@ In anderen Fällen kann es passieren, dass Sie Zeichenfolgen in einer Schleife k
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet4":::
 
-Erfahren Sie mehr über die [Gründe für das Verketten von Zeichenfolgen oder die `StringBuilder`-Klasse](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types).
+Erfahren Sie mehr über die [Gründe für das Verketten von Zeichenfolgen oder die `StringBuilder`-Klasse](/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types).
 
 Eine weitere Option zum Verketten von Zeichenfolgen aus einer Sammlung ist die Verwendung der Methode <xref:System.String.Concat%2A?displayProperty=nameWithType>. Verwenden Sie die <xref:System.String.Join%2A?displayProperty=nameWithType>-Methode, wenn Quellzeichenfolgen durch ein Trennzeichen getrennt werden sollen. Der folgenden Code kombiniert ein Array aus Wörtern mithilfe beider Methoden:
 

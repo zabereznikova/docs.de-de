@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-ms.openlocfilehash: 918c90f6741047f7d3cdf89a9b182700ecb2ed93
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: dc808f3e8d6bd89ba979d43e5b4ec9d787bd09b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617456"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545258"
 ---
 # <a name="exposing-net-components-to-com"></a>Verfügbarmachen von .NET-Komponenten im COM
 
@@ -42,11 +42,11 @@ Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltete
 
      COM-Entwickler können auf Typen in einer Assembly verweisen, indem sie dieselben Tools und Techniken nutzen, die sie heute bereits verwenden.
 
-3. [Aufrufen eines .NET-Objekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).
+3. [Aufrufen eines .NET-Objekts](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).
 
      COM-Entwickler können Methoden so für das .NET-Objekt aufrufen, wie sie Methoden für alle nicht verwalteten Typen aufrufen. Z.B. aktiviert die COM-API **CoCreateInstance** .NET-Objekte.
 
-4. [Bereitstellen einer Anwendung für COM-Zugriff](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).
+4. [Bereitstellen einer Anwendung für COM-Zugriff](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).
 
      Eine Assembly mit starkem Namen kann im globalen Assemblycache installiert werden und erfordert eine Signatur des Herausgebers. Assemblys, die keinen starken Namen haben, müssen im Anwendungsverzeichnis des Clients installiert werden.
 

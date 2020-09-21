@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit spark-submit und Set JAR einen .NET für
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: bebd170a689d8ae56aa6c55486d70354da2437ea
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 88dc321a08f805ef8c3bf8d4d01d32dd890548d2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617768"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557176"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Übermitteln eines .NET für Apache Spark-Auftrags an Databricks
 
@@ -36,7 +36,7 @@ Mit dem Befehl [spark-submit](https://spark.apache.org/docs/latest/submitting-ap
 
 ## <a name="deploy-using-set-jar"></a>Bereitstellen mithilfe von Set JAR
 
-Alternativ können Sie in Ihrem Databricks-Arbeitsbereich [Set JAR](https://docs.microsoft.com/azure/databricks/jobs#--create-a-job) verwenden, um .NET für Apache Spark-Aufträge an Databricks zu übermitteln. *Set JAR* ermöglicht das Übermitteln eines Auftrags an einen vorhandenen aktiven Cluster.
+Alternativ können Sie in Ihrem Databricks-Arbeitsbereich [Set JAR](/azure/databricks/jobs#--create-a-job) verwenden, um .NET für Apache Spark-Aufträge an Databricks zu übermitteln. *Set JAR* ermöglicht das Übermitteln eines Auftrags an einen vorhandenen aktiven Cluster.
 
 ### <a name="one-time-setup"></a>Einmalige Konfiguration
 
@@ -57,7 +57,7 @@ Alternativ können Sie in Ihrem Databricks-Arbeitsbereich [Set JAR](https://doc
 
 1. Vergewissern Sie sich, dass Sie Ihre App veröffentlicht haben und Ihr Anwendungscode nicht `SparkSession.Stop()` verwendet.
 
-2. Verwenden Sie die [Databricks CLI](https://docs.microsoft.com/azure/databricks/dev-tools/databricks-cli), um Ihre Anwendung in Ihren Databricks-Cluster hochzuladen. Mit dem folgenden Befehl können Sie beispielsweise Ihre veröffentlichte Anwendung in Ihren Cluster hochladen:
+2. Verwenden Sie die [Databricks CLI](/azure/databricks/dev-tools/databricks-cli), um Ihre Anwendung in Ihren Databricks-Cluster hochzuladen. Mit dem folgenden Befehl können Sie beispielsweise Ihre veröffentlichte Anwendung in Ihren Cluster hochladen:
 
     ```console
     cd <path-to-your-app-publish-directory>
@@ -86,4 +86,4 @@ Alternativ können Sie in Ihrem Databricks-Arbeitsbereich [Set JAR](https://doc
 
 * [Erste Schritte mit .NET für Apache Spark](../tutorials/get-started.md)
 * [Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks](../tutorials/databricks-deployment.md)
-* [Dokumentation zu Azure Databricks](https://docs.microsoft.com/azure/azure-databricks/)
+* [Dokumentation zu Azure Databricks](/azure/azure-databricks/)

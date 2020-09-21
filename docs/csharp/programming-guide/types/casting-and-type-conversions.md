@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 040b5679b1e6666a7f0308e5990781a2ef86c530
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: cfe5376675808559f4bf9c9cd8b21180dcd0cc49
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381956"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555327"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 
@@ -99,5 +99,5 @@ Weitere Informationen finden Sie im Abschnitt [Konvertierungen](~/_csharplang/sp
 - [Typen](./index.md)
 - [Cast-Ausdruck](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [Benutzerdefinierte Konvertierungsoperatoren](../../language-reference/operators/user-defined-conversion-operators.md)
-- [Verallgemeinerte Typkonvertierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
+- [Verallgemeinerte Typkonvertierung](/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Konvertieren einer Zeichenfolge in eine Zahl](./how-to-convert-a-string-to-a-number.md)

@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f168653297594a604e6f381947f31cba5376178
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977089"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679624"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>Untersuchen von Zwischendaten bei der Verarbeitung
 
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>Konvertieren von IDataView in IEnumerable
 
-Eine der schnellsten Möglichkeiten, eine [`IDataView`](xref:Microsoft.ML.IDataView) zu überprüfen, ist die Konvertierung in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Zum Konvertieren einer [`IDataView`](xref:Microsoft.ML.IDataView) in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) verwenden Sie die [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)-Methode.
+Eine der schnellsten Möglichkeiten, eine [`IDataView`](xref:Microsoft.ML.IDataView) zu überprüfen, ist die Konvertierung in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Zum Konvertieren einer [`IDataView`](xref:Microsoft.ML.IDataView) in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) verwenden Sie die [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A)-Methode.
 
 Um die Leistung zu optimieren, legen Sie den Wert von `reuseRowObject` auf `true` fest. Dadurch wird das gleiche Objekt bei der Auswertung verzögert mit den Daten der aktuellen Zeile ausgefüllt, anstatt für jede Zeile im Dataset ein neues Objekt zu erstellen.
 
@@ -81,10 +81,10 @@ foreach (HousingData row in housingDataEnumerable)
 
 ## <a name="accessing-specific-indices-with-ienumerable"></a>Zugreifen auf bestimmte Indizes mit IEnumerable
 
-Wenn Sie nur Zugriff auf einen Teil der Daten oder bestimmte Indizes benötigen, verwenden Sie [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) und setzen Sie den Parameterwert `reuseRowObject` auf `false`, damit für jede der angeforderten Zeilen im Dataset ein neues Objekt erstellt wird. Konvertieren Sie [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) anschließend in ein Array oder eine Liste.
+Wenn Sie nur Zugriff auf einen Teil der Daten oder bestimmte Indizes benötigen, verwenden Sie [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) und setzen Sie den Parameterwert `reuseRowObject` auf `false`, damit für jede der angeforderten Zeilen im Dataset ein neues Objekt erstellt wird. Konvertieren Sie [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) anschließend in ein Array oder eine Liste.
 
 > [!WARNING]
-> Durch die Konvertierung des Ergebnisses von [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) in ein Array oder eine Liste werden alle angeforderten [`IDataView`](xref:Microsoft.ML.IDataView)-Zeilen in den Speicher geladen, wodurch die Leistung beeinträchtigt werden kann.
+> Durch die Konvertierung des Ergebnisses von [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) in ein Array oder eine Liste werden alle angeforderten [`IDataView`](xref:Microsoft.ML.IDataView)-Zeilen in den Speicher geladen, wodurch die Leistung beeinträchtigt werden kann.
 
 Nachdem die Sammlung erstellt wurde, können Sie Vorgänge für die Daten ausführen. Der folgende Codeausschnitt umfasst die ersten drei Zeilen des Datasets und berechnet den durchschnittlichen aktuellen Preis.
 
@@ -104,7 +104,7 @@ float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + th
 
 ## <a name="inspect-values-in-a-single-column"></a>Überprüfen von Werten in einer einzelnen Spalte
 
-Mit der [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode kann zu jedem beliebigen Zeitpunkt im Modellerstellungsprozess auf Werte in einer einzelnen Spalte einer [`IDataView`](xref:Microsoft.ML.IDataView) zugegriffen werden. Die [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode gibt alle Werte in einer einzelne Spalte als [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) wieder.
+Mit der [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A)-Methode kann zu jedem beliebigen Zeitpunkt im Modellerstellungsprozess auf Werte in einer einzelnen Spalte einer [`IDataView`](xref:Microsoft.ML.IDataView) zugegriffen werden. Die [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A)-Methode gibt alle Werte in einer einzelne Spalte als [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) wieder.
 
 ```csharp
 IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
@@ -112,7 +112,7 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 
 ## <a name="inspect-idataview-values-one-row-at-a-time"></a>Zeilenweises Überprüfen von IDataView-Werten
 
-[`IDataView`](xref:Microsoft.ML.IDataView) wird verzögert ausgewertet. Um die Zeilen einer [`IDataView`](xref:Microsoft.ML.IDataView) zu durchlaufen, ohne die Konvertierung in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) durchzuführen, wie in den vorangegangenen Abschnitten dieses Dokuments demonstriert, erstellen Sie ein [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) unter Verwendung der [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*)-Methode, und übergeben Sie das [DataViewSchema](xref:Microsoft.ML.DataViewSchema) Ihrer [`IDataView`](xref:Microsoft.ML.IDataView) als Parameter. Um Zeilen zu durchlaufen, verwenden Sie die [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*)-Cursormethode zusammen mit [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601)-Delegaten, um die entsprechenden Werte aus einzelnen Spalten zu extrahieren.
+[`IDataView`](xref:Microsoft.ML.IDataView) wird verzögert ausgewertet. Um die Zeilen einer [`IDataView`](xref:Microsoft.ML.IDataView) zu durchlaufen, ohne die Konvertierung in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) durchzuführen, wie in den vorangegangenen Abschnitten dieses Dokuments demonstriert, erstellen Sie ein [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) unter Verwendung der [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor%2A)-Methode, und übergeben Sie das [DataViewSchema](xref:Microsoft.ML.DataViewSchema) Ihrer [`IDataView`](xref:Microsoft.ML.IDataView) als Parameter. Um Zeilen zu durchlaufen, verwenden Sie die [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext%2A)-Cursormethode zusammen mit [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601)-Delegaten, um die entsprechenden Werte aus einzelnen Spalten zu extrahieren.
 
 > [!IMPORTANT]
 > Aus Leistungsgründen verwenden Vektoren in ML.NET [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) anstelle von nativen Sammlungstypen (d.h. `Vector`,`float[]`).
@@ -150,7 +150,7 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
 > [!WARNING]
 > Verwenden Sie `Preview` nicht im Produktionscode, da dies für das Debugging vorgesehen ist und die Leistung beeinträchtigen kann.
 
-Der Modellerstellungsprozess ist experimentell und iterativ. Um eine Vorschau anzuzeigen, wie die Daten nach der Vorverarbeitung oder dem Training eines Machine Learning-Modells für eine Teilmenge der Daten aussehen würden, verwenden Sie die [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*)-Methode, die ein [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) zurückgibt. Das Ergebnis ist ein Objekt mit den Eigenschaften `ColumnView` und `RowView`, die beide ein [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) sind und die Werte aus einer bestimmten Spalte oder Zeile enthalten. Geben Sie die Anzahl der Zeilen an, auf die die Transformation mit dem `maxRows`-Parameter angewendet werden soll.
+Der Modellerstellungsprozess ist experimentell und iterativ. Um eine Vorschau anzuzeigen, wie die Daten nach der Vorverarbeitung oder dem Training eines Machine Learning-Modells für eine Teilmenge der Daten aussehen würden, verwenden Sie die [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview%2A)-Methode, die ein [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) zurückgibt. Das Ergebnis ist ein Objekt mit den Eigenschaften `ColumnView` und `RowView`, die beide ein [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) sind und die Werte aus einer bestimmten Spalte oder Zeile enthalten. Geben Sie die Anzahl der Zeilen an, auf die die Transformation mit dem `maxRows`-Parameter angewendet werden soll.
 
 ![Vorschauobjekt für den Datendebugger](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
 

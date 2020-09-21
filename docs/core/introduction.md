@@ -4,16 +4,16 @@ description: .NET Core ist eine modulare, hochleistungsfähige Implementierung v
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: b28ad965e54680e2e1134c389266741ade28084f
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 350fd50bee3403a05d1c19c9a692535613b17498
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226581"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538275"
 ---
 # <a name="introduction-to-net-core"></a>Einführung in .NET Core
 
-[.NET Core](about.md) ist eine universelle [Open Source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)-Entwicklungsplattform. Sie können .NET Core-Apps für Windows, macOS und Linux für x64-, x86-, ARM32- und ARM64-Prozessoren erstellen und dabei verschiedene Programmiersprachen verwenden. Es werden Frameworks und APIs für die [Cloud](/aspnet/core/), für [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), für [Clientbenutzeroberflächen](../desktop-wpf/overview/index.md) und für [Machine Learning](/dotnet/machine-learning/) bereitgestellt.
+[.NET Core](about.md) ist eine universelle [Open Source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)-Entwicklungsplattform. Sie können .NET Core-Apps für Windows, macOS und Linux für x64-, x86-, ARM32- und ARM64-Prozessoren erstellen und dabei verschiedene Programmiersprachen verwenden. Es werden Frameworks und APIs für die [Cloud](/aspnet/core/), für [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), für [Clientbenutzeroberflächen](../desktop-wpf/overview/index.md) und für [Machine Learning](../machine-learning/index.yml) bereitgestellt.
 
 [Laden Sie das .NET Core SDK herunter](https://dotnet.microsoft.com/download), um .NET Core auf Ihrem Computer zu testen. [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/) ist die neueste Version.
 
@@ -22,7 +22,7 @@ ms.locfileid: "86226581"
 Zum Abrufen von .NET Core stehen die folgenden Möglichkeiten zur Verfügung:
 
 * [Installationsprogramme für Windows und macOS](https://dotnet.microsoft.com/download)
-* [Linux-Pakete](https://docs.microsoft.com/dotnet/core/install/linux-package-managers)
+* [Linux-Pakete](./install/linux.md)
 * [Docker-Container](https://hub.docker.com/_/microsoft-dotnet-core/)
 * [ZIP-Dateien und Tarballs](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 * [Installationsskripts](https://dotnet.microsoft.com/download/dotnet-core/scripts)

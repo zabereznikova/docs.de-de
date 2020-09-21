@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: dd8b0b26e449fba7479d2678aff25ed49e721a90
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c2b23705ae309436344513e54d6258e206d69da4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502391"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551464"
 ---
 # <a name="internet-protocol-version-6"></a>Internetprotokoll Version 6
 Das Internetprotokoll Version 6 (IPv6) ist eine neue Standardprotokollsammlung für die Netzwerkebene des Internets. IPv6 wurde entwickelt, um viele Probleme der aktuellen Version der Internetprotokollsammlung (IPv4) hinsichtlich Adressenknappheit, Sicherheit, automatischer Konfiguration, Bedarf an Erweiterbarkeit usw., zu lösen. IPv6 erweitert die Funktionen des Internets, um neue Arten von Anwendungen zu ermöglichen, einschließlich Peer-zu-Peer-Anwendungen und mobile Anwendungen. Nachfolgend sind die Hauptprobleme des aktuellen IPv4-Protokolls aufgelistet:  
@@ -56,10 +56,10 @@ Das Internetprotokoll Version 6 (IPv6) ist eine neue Standardprotokollsammlung f
   
 - RFC 2374: An IPv6 Aggregatable Global Unicast Address Format (Ein globales aggregierbares Unicast-Adressenformat in IPv6)  
   
- Informationen zu IPv6 finden Sie auch in der [IP-Version 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
+ Informationen zu IPv6 finden Sie auch in der [IP-Version 6 (IPv6)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498(v=ws.10)).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Beispiel für Socket-IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
+- [Beispiel für Socket-IPv6](/previous-versions/dotnet/netframework-3.0/ms180981(v=vs.85))
 - [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)
 - [Sockets](sockets.md)

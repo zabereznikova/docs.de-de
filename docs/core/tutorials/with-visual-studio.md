@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4cd18aca4396f902268d59867760424d65ddcf6d
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: d543a05eb00a59c5c08ada28fc8392875385aa8a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867632"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537534"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio
 
@@ -21,7 +21,7 @@ In diesem Tutorial wird gezeigt, wie Sie eine .NET Core-Konsolenanwendung in Vis
 
 - [Visual Studio 2019 Version 16.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter Workload **Plattformübergreifende .NET Core-Entwicklung**. Das .NET Core 3.1 SDK wird automatisch installiert, wenn Sie diese Workload auswählen.
 
-  Weitere Informationen finden Sie unter [Installieren des .NET Core SDK in Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio).
+  Weitere Informationen finden Sie unter [Installieren des .NET Core SDK in Visual Studio](../install/windows.md#install-with-visual-studio).
 
 ## <a name="create-the-app"></a>Erstellen der App
 

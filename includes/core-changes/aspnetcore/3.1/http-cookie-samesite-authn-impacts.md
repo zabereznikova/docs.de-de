@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3cc07eef109b9096bc5a5fbcd1ea098a23b2155f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78968269"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539590"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: Browser-SameSite-Änderungen mit Auswirkung auf die Authentifizierung
 
@@ -26,7 +26,7 @@ Google hat einen neuen Normentwurf vorgeschlagen, der nicht abwärtskompatibel i
 
 ASP.NET Core 3.1 wurde aktualisiert, um das neue `SameSite`-Verhalten zu implementieren. Das Update definiert das Verhalten von `SameSiteMode.None` neu, um `SameSite=None` auszugeben, und ergänzt den neuen Wert `SameSiteMode.Unspecified`, um das `SameSite`-Attribut auszulassen. Der Standard für alle Cookie-APIs ist jetzt `Unspecified`, obwohl einige Komponenten, die Cookies verwenden, Werte festlegen, die sich eher auf die entsprechenden Szenarien beziehen, z. B. die OpenID Connect-Korrelation und Nonce-Cookies.
 
-Weitere aktuelle Änderungen in diesem Bereich finden Sie unter [HTTP: Einige Standardeinstellungen für Cookie-SameSite wurden in None geändert](/dotnet/core/compatibility/2.2-3.0#http-some-cookie-samesite-defaults-changed-to-none). In ASP.NET Core 3.0 wurden die meisten Standardwerte von <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> in <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> geändert (der vorherige Standard wird jedoch weiterhin verwendet).
+Weitere aktuelle Änderungen in diesem Bereich finden Sie unter [HTTP: Einige Standardeinstellungen für Cookie-SameSite wurden in None geändert](../../../../docs/core/compatibility/2.2-3.0.md#http-some-cookie-samesite-defaults-changed-to-none). In ASP.NET Core 3.0 wurden die meisten Standardwerte von <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> in <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> geändert (der vorherige Standard wird jedoch weiterhin verwendet).
 
 #### <a name="reason-for-change"></a>Grund für die Änderung
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-ms.openlocfilehash: 440a49730f351b820cd68a741e79f94434f585c8
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 81df2dcc132c8ce057fa3e0e7d0ad04832f7a48b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904116"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555054"
 ---
 # <a name="default-marshaling-for-strings"></a>Standardmäßiges Marshalling für Zeichenfolgen
 
@@ -291,5 +291,5 @@ End Class
 - [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
 - [Marshallen von Zeichenfolgen](marshaling-strings.md)
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
-- [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [Direktionale Attribute](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopieren und Fixieren](copying-and-pinning.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: d7e367f3b4e9a6d88d2a13ca8727d2e2884bb97c
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 5d181f5bc9f7e16051f16ca68490744e9c0d3abd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810598"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557917"
 ---
 # <a name="c-walkthroughs"></a>Exemplarische Vorgehensweisen für C#
 
@@ -34,19 +34,19 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
 - [Erstellen und Verwenden von dynamischen Objekten (C# und Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)\
   Veranschaulicht das Erstellen eines benutzerdefinierten Objekts, das den Inhalt einer Textdatei dynamisch verfügbar macht, sowie das Erstellen eines Projekts, das die `IronPython`-Bibliothek verwendet.
 
-- [Erstellen eines zusammengesetzten Steuerelements mit Visual C#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
+- [Erstellen eines zusammengesetzten Steuerelements mit Visual C#](/dotnet/desktop/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp)\
   Veranschaulicht das Erstellen eines einfachen zusammengesetzten Steuerelements und die Erweiterung seiner Funktionalität durch Vererbung.
 
-- [Erstellen eines Windows Forms-Steuerelements mit Visual Studio-Entwurfszeitfeatures](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)\
+- [Erstellen eines Windows Forms-Steuerelements mit Visual Studio-Entwurfszeitfeatures](/dotnet/desktop/winforms/controls/creating-a-wf-control-design-time-features)\
   Veranschaulicht das Erstellen eines benutzerdefinierten Designers für ein benutzerdefiniertes Steuerelement.
 
-- [Vererben eines Windows Forms-Steuerelements mit Visual C#](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
+- [Vererben eines Windows Forms-Steuerelements mit Visual C#](/dotnet/desktop/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp)\
   Veranschaulicht das Erstellen eines einfachen geerbten Button-Steuerelements. Diese Schaltfläche erbt seine Funktionalität von der standardmäßigen Windows Forms-Schaltfläche und macht einen benutzerdefinierten Member verfügbar.
 
-- [Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+- [Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](/dotnet/desktop/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)\
   Beschreibt das Debuggen des Verhaltens eines benutzerdefinierten Steuerelements zur Entwurfszeit.
 
-- [Exemplarische Vorgehensweise: Ausführen allgemeiner Aufgaben mit Designaktionen](../framework/winforms/controls/perform-common-tasks-design-actions.md)\
+- [Exemplarische Vorgehensweise: Ausführen allgemeiner Aufgaben mit Designaktionen](/dotnet/desktop/winforms/controls/perform-common-tasks-design-actions)\
   Veranschaulicht einige der häufig ausgeführten Aufgaben wie das Hinzufügen oder Entfernen einer Registerkarte auf einem `TabControl`, das Andocken eines Steuerelements an seinem übergeordneten Element und das Ändern der Ausrichtung eines `SplitContainer`-Steuerelements.
 
 - [Schreiben von Abfragen in C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)\

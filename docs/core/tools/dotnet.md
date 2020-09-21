@@ -2,12 +2,12 @@
 title: dotnet-Befehl
 description: Erfahren Sie mehr über den dotnet-Befehl (den generischen Treiber für die .NET Core-CLI) und dessen Verwendung.
 ms.date: 02/13/2020
-ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378842"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537664"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -300,7 +300,7 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  Legt die Sprache der CLI-Benutzeroberfläche mit einem Gebietsschemawert wie `en-us` fest. Die unterstützten Werte sind identisch mit denen für Visual Studio. Weitere Informationen finden Sie im Abschnitt zum Ändern der Sprache des Installationsprogramms in der [Visual Studio-Installationsdokumentation](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019). Es gelten die Regeln des .NET-Ressourcen-Managers, sodass Sie keine genaue Übereinstimmung auswählen müssen, sondern auch Nachfolger in der `CultureInfo`-Struktur auswählen können. Bei einer Festlegung auf `fr-CA` findet und verwendet die Befehlszeilenschnittstelle z. B. die `fr`-Übersetzungen. Wenn Sie eine nicht unterstützte Sprache festlegen, greift die Befehlszeilenschnittstelle auf Englisch zurück.
+  Legt die Sprache der CLI-Benutzeroberfläche mit einem Gebietsschemawert wie `en-us` fest. Die unterstützten Werte sind identisch mit denen für Visual Studio. Weitere Informationen finden Sie im Abschnitt zum Ändern der Sprache des Installationsprogramms in der [Visual Studio-Installationsdokumentation](/visualstudio/install/install-visual-studio?view=vs-2019). Es gelten die Regeln des .NET-Ressourcen-Managers, sodass Sie keine genaue Übereinstimmung auswählen müssen, sondern auch Nachfolger in der `CultureInfo`-Struktur auswählen können. Bei einer Festlegung auf `fr-CA` findet und verwendet die Befehlszeilenschnittstelle z. B. die `fr`-Übersetzungen. Wenn Sie eine nicht unterstützte Sprache festlegen, greift die Befehlszeilenschnittstelle auf Englisch zurück.
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 

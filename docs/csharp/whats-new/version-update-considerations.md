@@ -3,12 +3,12 @@ title: Versions- und Updateüberlegungen für C#-Entwickler
 description: Die Einführung neuer Sprachfeatures in Ihrer Bibliothek kann sich auf den Code auswirken, der sie verwendet.
 ms.topic: reference
 ms.date: 09/19/2018
-ms.openlocfilehash: f7db7c79792d04bcf592bc1858e1f0f05cb34402
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 6de0e3ba33af34edba73819dcb9268f40f8a5ea4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268126"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552426"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>Versions- und Updateüberlegungen für C#-Entwickler
 
@@ -63,4 +63,4 @@ Neuer Code:
 public double CalculateSquare(in double value) => value * value;
 ```
 
-In den [Neuigkeiten](index.md)-Artikeln ist vermerkt, ob die Einführung eines Features, das sich auf öffentliche Deklarationen auswirkt, quellkompatibel oder binärkompatibel ist.
+In den [Neuigkeiten](./csharp-9.md)-Artikeln ist vermerkt, ob die Einführung eines Features, das sich auf öffentliche Deklarationen auswirkt, quellkompatibel oder binärkompatibel ist.

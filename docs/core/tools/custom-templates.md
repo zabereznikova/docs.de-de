@@ -3,12 +3,12 @@ title: Benutzerdefinierte Vorlagen für dotnet new
 description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten von .NET-Projekten und -Dateien.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324504"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538094"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
@@ -96,7 +96,7 @@ Der Ordner *mytemplate* ist ein installierbares Vorlagenpaket. Sobald das Paket 
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Verpacken einer Vorlage in ein NuGet-Paket (NUPKG-Datei)
 
-Eine benutzerdefinierte Vorlage wird mit dem Befehl [dotnet pack](dotnet-pack.md) und *CSPROJ*-Datei gepackt. Alternativ kann [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) mit dem Befehl [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) zusammen mit einer *NUSPEC*-Datei verwendet werden. NuGet setzt jedoch .NET Framework unter Windows und [Mono](https://www.mono-project.com/) unter Linux und macOS voraus.
+Eine benutzerdefinierte Vorlage wird mit dem Befehl [dotnet pack](dotnet-pack.md) und *CSPROJ*-Datei gepackt. Alternativ kann [NuGet](/nuget/tools/nuget-exe-cli-reference) mit dem Befehl [nuget pack](/nuget/tools/cli-ref-pack) zusammen mit einer *NUSPEC*-Datei verwendet werden. NuGet setzt jedoch .NET Framework unter Windows und [Mono](https://www.mono-project.com/) unter Linux und macOS voraus.
 
 Die *CSPROJ*-Datei unterscheidet sich geringfügig von einer herkömmlichen Codeprojektdatei des Typs *.csproj*. Beachten Sie die folgenden Einstellungen:
 

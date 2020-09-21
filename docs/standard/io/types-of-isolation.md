@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 7802e4bc27195d1c8ecaccbd64121fb24328a4d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 244bd9c25040b39c9349d28f57981f29d7a32d0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288536"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542033"
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
 Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  
@@ -51,7 +51,7 @@ Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, d
  Isolierte Speicher (mit Ausnahme von Roamingspeichern) sind immer implizit nach Computer isoliert, da sie die Speicherfunktionen verwenden, die sich lokal auf einem bestimmten Computer befinden.  
   
 > [!IMPORTANT]
-> Die isolierte Speicherung ist nicht für Windows 8.x Store-Apps verfügbar. Verwenden Sie stattdessen zum Speichern von lokalen Daten und Dateien die in der Windows-Runtime-API enthaltenen Anwendungsdatenklassen in den `Windows.Storage`-Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .  
+> Die isolierte Speicherung ist nicht für Windows 8.x Store-Apps verfügbar. Verwenden Sie stattdessen zum Speichern von lokalen Daten und Dateien die in der Windows-Runtime-API enthaltenen Anwendungsdatenklassen in den `Windows.Storage`-Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)) .  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Isolation nach Benutzer und Assembly  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 1ff7c10a478f0f0f53d7b00f34b228b9070f798d
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 59f2d3dbf09beacb62042b8195bba23f345fba02
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516722"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557436"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 
@@ -67,7 +67,7 @@ ms.locfileid: "87516722"
 |**Neu**|Generiert eine neue PFX-Datei, die nicht durch eine Zertifizierungsstelle überprüft wird. Weitere Informationen zu den Zertifikattypen, die zum Signieren von ClickOnce-Bereitstellungen verwendet werden, finden Sie unter [Trusted Application Deployment Overview (Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen)](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Kennwort**|Stellt einen Bereich für die Eingabe des Kennworts zum Signieren mit diesem Zertifikat bereit. Kann leer bleiben, wenn kein Kennwort verwendet wird.|  
 |**Mit gespeichertem Zertifikat signieren**|Zeigt eine Liste für die Auswahl aus im Zertifikatsspeicher des Computers gespeicherten digitalen Zertifikaten an.|  
-|**Zeitstempel-URI**|Zeigt den Uniform Resource Locator (URI) eines digitalen Zeitstempeldiensts an. Der Zeitstempel verhindert, dass Sie ein Manifest neu signieren müssen, wenn das digitale Zertifikat abläuft, bevor Sie die nächste Version der Anwendung bereitstellen. Weitere Informationen finden Sie unter [Mitglieder des Windows-Programms für Stammzertifikate](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) und [ClickOnce und Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
+|**Zeitstempel-URI**|Zeigt den Uniform Resource Locator (URI) eines digitalen Zeitstempeldiensts an. Der Zeitstempel verhindert, dass Sie ein Manifest neu signieren müssen, wenn das digitale Zertifikat abläuft, bevor Sie die nächste Version der Anwendung bereitstellen. Weitere Informationen finden Sie unter [Mitglieder des Windows-Programms für Stammzertifikate](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) und [ClickOnce und Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**Nicht signieren**|Ermöglicht das Speichern des Manifests, ohne eine Signatur aus einem digitalen Zertifikat hinzuzufügen.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Beschreibungen von Registerkarten und Bereichen  
@@ -129,7 +129,7 @@ ms.locfileid: "87516722"
   
 |Benutzeroberflächenelement|Beschreibung|  
 |----------------|-----------------|  
-|**Berechtigungssatztyp**|Der minimale Berechtigungssatz, der von der Anwendung für die Ausführung auf dem Client erforderlich ist. Eine Beschreibung dieser Berechtigungssätze und der erforderlichen Berechtigungen finden Sie unter [Named Permission Sets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)) (Benannte Berechtigungssätze).|  
+|**Berechtigungssatztyp**|Der minimale Berechtigungssatz, der von der Anwendung für die Ausführung auf dem Client erforderlich ist. Eine Beschreibung dieser Berechtigungssätze und der erforderlichen Berechtigungen finden Sie unter [Named Permission Sets](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)) (Benannte Berechtigungssätze).|  
 |**Details**|Die für das Anwendungsmanifest erstellte XML-Datei zum Darstellen des Berechtigungssatzes. Sie sollten diesen XML-Code nicht manuell bearbeiten, sofern Sie nicht mit dem XML-Format des Anwendungsmanifests vertraut sind. Weitere Informationen finden Sie unter [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Registerkarte "Bereitstellungsmanifest"  

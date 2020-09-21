@@ -11,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9ef2ac4897b3f8c48a0b0f402ab06eb073a5c1fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865254"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556335"
 ---
 # <a name="security-considerations-for-reflection"></a>Sicherheitsüberlegungen für die Reflektion
 
@@ -60,7 +60,7 @@ Diese Regeln gelten immer, ganz gleich, ob auf einen sicherheitskritischen Membe
 
 Anwendungscode, der über die Befehlszeile ausgeführt wird, wird mit voller Vertrauenswürdigkeit ausgeführt. Solange Code nicht als transparent gekennzeichnet ist, kann er über Reflektion auf sicherheitskritische Member zugreifen. Wenn der gleiche Code mit teilweiser Vertrauenswürdigkeit ausgeführt wird (z. B. in einer Sandkastenanwendungsdomäne), bestimmt die Vertrauensebene der Assembly, ob der Zugriff auf sicherheitskritischen Code gewährt wird: Wenn die Assembly über einen starken Namen verfügt und im globalen Assemblycache installiert ist, ist sie eine vertrauenswürdige Assembly und sie kann sicherheitskritische Member aufrufen. Ist die Assembly nicht vertrauenswürdig ist, wird sie transparent, obwohl sie nicht als transparent gekennzeichnet wurde, und sie kann nicht auf sicherheitskritische Member zugreifen.
 
-Weitere Informationen zum Sicherheitsmodell in .NET Framework 4 finden Sie unter [Änderungen der Sicherheit in .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
+Weitere Informationen zum Sicherheitsmodell in .NET Framework 4 finden Sie unter [Änderungen der Sicherheit in .NET Framework](/previous-versions/dotnet/framework/security/security-changes).
 
 ## <a name="reflection-and-transparency"></a>Reflektion und Transparenz
 
@@ -116,7 +116,7 @@ Sie sollten keine öffentlichen Member schreiben, an die <xref:System.Reflection
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [Sicherheitsänderungen](/previous-versions/dotnet/framework/security/security-changes)
 - [Codezugriffssicherheit](../misc/code-access-security.md)
 - [Sicherheitsaspekte bei der Reflektionsausgabe](security-issues-in-reflection-emit.md)
 - [Anzeigen von Typinformationen](viewing-type-information.md)

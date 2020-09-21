@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 6868c79791d960dd1ae55ab09d4ac3b40ce52655
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420486"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535858"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper (RCW)
 Die Common Language Runtime macht COM-Objekte über einen Proxy verfügbar, der RCW (Runtime Callable Wrapper, Aufrufwrapper der Common Language Runtime) genannt wird. Obwohl .NET-Clients einen RCW als normales Objekt betrachten, besteht seine primäre Funktion im Marshallen von Aufrufen zwischen einem .NET-Client und einem COM-Objekt.  
@@ -61,5 +61,5 @@ Die folgende Abbildung veranschaulicht, wie über den RCW auf COM-Objekte zugegr
 
 - [COM-Wrapper](com-wrappers.md)
 - [COM Callable Wrapper](com-callable-wrapper.md)
-- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](../../framework/interop/importing-a-type-library-as-an-assembly.md)

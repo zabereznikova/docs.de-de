@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 605438a5f0e4b5bd9ade96c9db0416ee8611f311
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 857e8803d27ae634dec6e19c6d183943e1c4cc41
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447120"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557371"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
 
@@ -48,7 +48,7 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
 - [Interpolierten Zeichenfolgen](../../csharp/language-reference/tokens/interpolated.md) in C# und Visual Basic, die im Vergleich zu Zeichenfolgen im kombinierten Format eine vereinfachte Syntax bereitstellen.
 
 > [!TIP]
-> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
+> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
 
 <a name="table"></a> Die folgenden Tabelle beschreibt die standardmäßigen Zahlenformatbezeichner und zeigt eine Beispielausgabe an, die von den einzelnen Formatbezeichnern erstellt wird. Weitere Informationen über das Verwenden von standardmäßigen Zahlenformatzeichenfolgen finden Sie im Abschnitt [Hinweise](#NotesStandardFormatting). Der Abschnitt [Beispiel](#example) enthält eine umfassende Abbildung ihrer Verwendung.
 
@@ -389,5 +389,5 @@ Durch das folgende Beispiel werden mithilfe der Kultur en-US und allen Standardz
 - [Formatierung von Typen](formatting-types.md)
 - [How to: Auffüllen einer Zahl mit führenden Nullen](how-to-pad-a-number-with-leading-zeros.md)
 - [Kombinierte Formatierung](composite-formatting.md)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

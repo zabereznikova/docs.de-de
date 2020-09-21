@@ -2,12 +2,12 @@
 title: Befehl „dotnet publish“
 description: Der Befehl „dotnet publish“ dient zum Veröffentlichen eines .NET Core-Projekts oder einer .NET Core-Projektmappe in einem Verzeichnis.
 ms.date: 02/24/2020
-ms.openlocfilehash: f171baaa0dbc070b6389ec0fa9895b2c5dcfafff
-ms.sourcegitcommit: f279a4488c48236793c04bf825ae6f9128790849
+ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2020
-ms.locfileid: "89501908"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537768"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -240,4 +240,4 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
 - [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Visual Studio-Veröffentlichungsprofile (PUBXML) für die Bereitstellung von ASP.NET Core-Apps](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
-- [ILLInk.Tasks](https://aka.ms/dotnet-illink)
+- [ILLInk.Tasks](../deploying/trim-self-contained.md)

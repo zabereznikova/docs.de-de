@@ -18,19 +18,19 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: e23a9b28cff9428cbc8896515ce71db85c832243
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.openlocfilehash: c41a695226068615efca5132985e50503060148b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379147"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555665"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Gewusst wie: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen
 Viele Komponenten bieten Ihnen die Möglichkeit, ihre Arbeit asynchron auszuführen. Mit den Komponenten <xref:System.Media.SoundPlayer> und <xref:System.Windows.Forms.PictureBox> können Sie beispielsweise Sounds und Bilder „im Hintergrund“ laden, während Ihr Hauptthread ohne Unterbrechung weiterläuft.  
   
  Die Verwendung von asynchronen Methoden in einer Klasse, die die [Übersicht für ereignisbasierte asynchrone Muster](event-based-asynchronous-pattern-overview.md) unterstützt, kann so einfach sein, indem Sie einen Ereignishandler an das Ereignis _MethodName_**Completed** der Komponente wie bei jedem anderen Ereignis anhängen. Beim Aufrufen der _MethodName_**Async**-Methode wird Ihre Anwendung weiterhin ohne Unterbrechung ausgeführt, bis das _MethodName_**Completed**-Ereignis ausgelöst wird. In Ihrem Ereignishandler können Sie anhand des Parameters <xref:System.ComponentModel.AsyncCompletedEventArgs> festzustellen, ob der asynchrone Vorgang erfolgreich beendet oder abgebrochen wurde.  
   
- Weitere Informationen zur Verwendung von Ereignishandlern finden Sie unter [Übersicht über Ereignishandler](../../framework/winforms/event-handlers-overview-windows-forms.md).  
+ Weitere Informationen zur Verwendung von Ereignishandlern finden Sie unter [Übersicht über Ereignishandler](/dotnet/desktop/winforms/event-handlers-overview-windows-forms).  
   
  Die folgende Prozedur zeigt, wie die Funktion zum asynchronen Laden von Images eines <xref:System.Windows.Forms.PictureBox>-Steuerelements verwendet wird.  
   
@@ -62,5 +62,5 @@ Viele Komponenten bieten Ihnen die Möglichkeit, ihre Arbeit asynchron auszufüh
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)](event-based-asynchronous-pattern-overview.md)

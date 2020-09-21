@@ -3,12 +3,12 @@ title: Verarbeiten asynchroner Aufgaben nach Abschluss
 description: In diesem Beispiel wird gezeigt, wie Sie mit Task.WhenAny in C# mehrere Tasks starten und deren Ergebnisse jeweils nach Abschluss der Durchführung verarbeiten, anstatt sie in der Reihenfolge zu verarbeiten, in der sie gestartet wurden.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: c2fe66e865a2c88f4cae50b816f9326614fcbb89
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812028"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557306"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>Verarbeiten asynchroner Aufgaben nach Abschluss (C#)
 
@@ -117,7 +117,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
     select ProcessUrlAsync(url, s_client);
 ```
 
-Aufgrund der [verzögerten Ausführung](../linq/deferred-execution-example.md) mit LINQ wird <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> aufgerufen, um die einzelnen Aufgaben zu starten.
+Aufgrund der [verzögerten Ausführung](../../../../standard/linq/deferred-execution-example.md) mit LINQ wird <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> aufgerufen, um die einzelnen Aufgaben zu starten.
 
 ```csharp
 List<Task<int>> downloadTasks = downloadTasksQuery.ToList();

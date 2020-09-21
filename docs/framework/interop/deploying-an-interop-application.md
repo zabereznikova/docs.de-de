@@ -15,19 +15,19 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 744307d4175d151d07acbedd5815e538307c8973
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 190b10ede4bc0037836d44332408d7752108346c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617482"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555067"
 ---
 # <a name="deploying-an-interop-application"></a>Bereitstellen einer Interop-Anwendung
 Eine Interop-Anwendung enthält üblicherweise eine .NET-Clientassembly, eine oder mehr Interopassemblys, die unterschiedliche COM-Typbibliotheken darstellen, sowie eine oder mehrere COM-Komponenten. Visual Studio und das Windows SDK stellen Tools zum Importieren und Konvertieren einer Typbibliothek in eine Interopassembly bereit, wie in [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md) beschrieben. Es gibt zwei Möglichkeiten zum Bereitstellen einer Interop-Anwendung:  
   
 - Wenn Sie eingebettete Interoptypen verwenden, können Sie folgende Aktionen durchführen: Ab .NET Framework 4 können Sie den Compiler anweisen, die Typinformationen aus einer Interopassembly in die ausführbare Datei einzubetten. Der Compiler bettet nur die Typinformationen ein, die Ihre Anwendung verwendet. Sie müssen die Interop-Assembly nicht mit Ihrer Anwendung bereitstellen. Dies ist das empfohlene Verfahren.  
   
-- Wenn Sie Interopassemblys bereitstellen, können Sie folgende Aktionen durchführen: Sie können einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+- Wenn Sie Interopassemblys bereitstellen, können Sie folgende Aktionen durchführen: Sie können einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Wenn Sie eingebettete Interoptypen verwenden, ist die Bereitstellung einfach und unkompliziert. Sie müssen nichts weiter tun. Im weiteren Verlauf dieses Artikels, werden die Szenarios für die Bereitstellung von Interopassemblys mit der Anwendung beschrieben.  
   
@@ -42,11 +42,11 @@ Eine Interop-Anwendung enthält üblicherweise eine .NET-Clientassembly, eine od
  Alle COM-Komponenten, die der Anwendung zugeordnet sind, müssen in der Windows-Registrierung installiert sein. Wenn Client1.exe und Client2.exe in der Abbildung auf verschiedenen Computern installiert sind, müssen Sie die COM-Komponenten auf beiden Computern registrieren.  
   
 ### <a name="shared-assemblies"></a>Freigegebene Assemblys  
- Assemblys, die von mehreren Anwendungen gemeinsam genutzt werden, sollten in einem zentralen Repository, das als globaler Assemblycache bezeichnet wird, installiert werden. .NET-Clients können auf dieselbe Kopie der Interopassembly zugreifen, die signiert und im globalen Assemblycache installiert ist. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+ Assemblys, die von mehreren Anwendungen gemeinsam genutzt werden, sollten in einem zentralen Repository, das als globaler Assemblycache bezeichnet wird, installiert werden. .NET-Clients können auf dieselbe Kopie der Interopassembly zugreifen, die signiert und im globalen Assemblycache installiert ist. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)
 - [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)
-- [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [Verwenden von COM-Typen in verwaltetem Code](/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilieren eines Interop-Projekts](compiling-an-interop-project.md)

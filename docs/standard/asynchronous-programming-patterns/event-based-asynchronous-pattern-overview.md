@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f0d3e2e8f1d1f58c9df8026b38fc0264812b092a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768858"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555678"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Übersicht über ereignisbasierte asynchrone Muster
 Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin auf Benutzerinteraktionen reagieren, ist oft ein Entwurf erforderlich, der mehrere Threads verwendet. Der <xref:System.Threading>-Namespace bietet alle erforderlichen Tools für die Erstellung von leistungsstarken Multithreadanwendungen, aber für eine effektive Verwendung dieser Tools ist eine umfassende Erfahrung mit der Multithread-Softwareentwicklung erforderlich. Für relativ einfache Multithreadanwendungen bietet die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine unkomplizierte Lösung. Für komplexere asynchrone Anwendungen sollten Sie die Implementierung einer Klasse in Betracht ziehen, die den ereignisbasierten asynchronen Muster entspricht.  
@@ -138,8 +138,8 @@ public class AsyncExample
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [How to: How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [How to: Ausführen eines Vorgangs im Hintergrund](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [How to: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [How to: Ausführen eines Vorgangs im Hintergrund](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
+- [How to: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](/dotnet/desktop/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation)
 - [Ereignisbasiertes asynchrones Muster (EAP)](event-based-asynchronous-pattern-eap.md)
 - [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

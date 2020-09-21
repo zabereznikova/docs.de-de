@@ -11,12 +11,12 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: fe8fb731fd160ab87e5c65debf367a96bc0dea2a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: bf308b07bf4b2a863b9825e7c8d9f412bdb6d1b8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865124"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559212"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe
 In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.  
@@ -129,5 +129,5 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [Verwenden der Reflektionsausgabe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [Szenarios für die Reflektionsausgabe mit dynamischen Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))
+- [Verwenden der Reflektionsausgabe](/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Szenarios für die Reflektionsausgabe mit dynamischen Assemblys](/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

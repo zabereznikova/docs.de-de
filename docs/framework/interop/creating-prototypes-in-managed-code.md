@@ -18,12 +18,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e83979e5843c52fc3a446a5b669ae8822b32ddad
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622158"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555587"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Erstellen von Prototypen in verwaltetem Code
 In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).  
@@ -236,7 +236,7 @@ interface IDemandStubsItf
 - [Angeben eines Einstiegspunktes](specifying-an-entry-point.md)
 - [Festlegen eines Zeichensatzes](specifying-a-character-set.md)
 - [Beispiele für Plattformaufrufe](platform-invoke-examples.md)
-- [Überlegungen zur Plattformaufrufsicherheit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [Überlegungen zur Plattformaufrufsicherheit](/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identifizieren von Funktionen in DLLs](identifying-functions-in-dlls.md)
 - [Erstellen einer Klasse zum Halten von DLL-Funktionen](creating-a-class-to-hold-dll-functions.md)
 - [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)

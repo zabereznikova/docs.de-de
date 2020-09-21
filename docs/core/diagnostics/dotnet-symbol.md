@@ -2,12 +2,12 @@
 title: dotnet-symbol – .NET Core
 description: Hier erfahren Sie mehr über das Installieren und Verwenden des Befehlszeilentools „dotnet-symbol“.
 ms.date: 08/26/2020
-ms.openlocfilehash: feaa64ad756878f85b829ab0cecf6ea2736014ba
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 5a96306fc96525b00e57eda089a45b730a7e3e8c
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598295"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679187"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>Symboldownloadprogramm (dotnet-symbol)
 
@@ -97,4 +97,4 @@ dotnet-symbol --host-only --debugging <dump file path>
 
 - „404 Nicht gefunden“ beim Herunterladen von Symbolen
 
-   Das Herunterladen von Symbolen wird nur für offizielle Versionen der .NET Core-Runtime unterstützt, die über offizielle Kanäle wie [die offizielle Website](https://dotnet.microsoft.com/download/dotnet-core) und die [Standardquellen in den dotnet-Installationsskripts](https://docs.microsoft.com/dotnet/core/tools/dotnet-install-scripts) erworben wurden. Der Fehler 404 beim Herunterladen von Debugdateien kann ein Hinweis darauf sein, dass das Speicherabbild mit einer .NET Core-Runtime aus einer anderen Quelle erstellt wurde, z. B. mit einer lokal vollständig selbst erstellten Version oder einer für eine bestimmte Linux-Distribution oder von Communitysites wie archlinux. In diesen Fällen sollten die für das Debuggen erforderlichen Dateien (dotnet, libcoreclr.so und libmscordaccore.so) aus diesen Quellen kopiert werden oder aus der Umgebung, in der die Speicherabbilddatei erstellt wurde.
+   Das Herunterladen von Symbolen wird nur für offizielle Versionen der .NET Core-Runtime unterstützt, die über offizielle Kanäle wie [die offizielle Website](https://dotnet.microsoft.com/download/dotnet-core) und die [Standardquellen in den dotnet-Installationsskripts](../tools/dotnet-install-script.md) erworben wurden. Der Fehler 404 beim Herunterladen von Debugdateien kann ein Hinweis darauf sein, dass das Speicherabbild mit einer .NET Core-Runtime aus einer anderen Quelle erstellt wurde, z. B. mit einer lokal vollständig selbst erstellten Version oder einer für eine bestimmte Linux-Distribution oder von Communitysites wie archlinux. In diesen Fällen sollten die für das Debuggen erforderlichen Dateien (dotnet, libcoreclr.so und libmscordaccore.so) aus diesen Quellen kopiert werden oder aus der Umgebung, in der die Speicherabbilddatei erstellt wurde.

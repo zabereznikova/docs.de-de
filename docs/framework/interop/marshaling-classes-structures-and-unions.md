@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 25de633faabb1424bcf5e618cc5ca129e61c5fca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621521"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547869"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshallen von Klassen, Strukturen und Unions
 
@@ -36,7 +36,7 @@ In der folgende Tabelle werden Marshallingoptionen für Klassen, Strukturen und 
 |----------|-----------------|------------|
 |Klasse als Wert.|Übergibt eine Klasse mit ganzzahligen Membern als In/Out-Parameter, wie der verwaltete Fall.|[SysTime-Beispiel](#systime-sample)|
 |Struktur als Wert.|Übergibt Strukturen als In-Parameter.|[Beispiel für Strukturen](#structures-sample)|
-|Struktur als Verweis.|Übergibt Strukturen als In/Out-Parameter.|[OSInfo-Beispiel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
+|Struktur als Verweis.|Übergibt Strukturen als In/Out-Parameter.|[OSInfo-Beispiel](/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
 |Struktur mit geschachtelten Strukturen (vereinfacht).|Übergibt eine Klasse, die eine Struktur mit geschachtelten Strukturen in der nicht verwalteten Funktion darstellt. Die Struktur wird zu einer einzigen großen Struktur im verwalteten Prototyp vereinfacht.|[FindFile-Beispiel](#findfile-sample)|
 |Struktur mit einem Zeiger auf eine andere Struktur.|Übergibt eine Struktur, die einen Zeiger auf eine zweite Struktur enthält, als Member.|[Beispiel für Strukturen](#structures-sample)|
 |Array von Strukturen mit ganzen Zahlen als Wert.|Übergibt ein aus Strukturen bestehendes Array, das nur ganze Zahlen enthält, als In-/Out-Parameter. Member des Arrays können geändert werden.|[Beispiel für Arrays](marshaling-different-types-of-arrays.md)|
@@ -44,7 +44,7 @@ In der folgende Tabelle werden Marshallingoptionen für Klassen, Strukturen und 
 |Unions mit Werttypen.|Übergibt Unions mit Werttypen (Integer und Double).|[Unions-Beispiel](#unions-sample)|
 |Unions mit gemischten Typen.|Übergibt Unions mit gemischten Typen (Integer und String).|[Unions-Beispiel](#unions-sample)|
 |Struktur mit plattformspezifischem Layout.|Übergibt einen Typ mit Definitionen für natives Packen.|[Plattformbeispiel](#platform-sample)|
-|Nullwerte in Struktur.|Übergibt einen NULL-Verweis (**Nothing** in Visual Basic) anstelle eines Verweises auf einen Werttyp.|[HandleRef-Beispiel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
+|Nullwerte in Struktur.|Übergibt einen NULL-Verweis (**Nothing** in Visual Basic) anstelle eines Verweises auf einen Werttyp.|[HandleRef-Beispiel](/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Beispiel für Strukturen
 
@@ -134,7 +134,7 @@ Strukturen als Argumente von Methoden werden als Wert übergeben, es sei denn, d
 
 ## <a name="findfile-sample"></a>FindFile-Beispiel
 
-Dieses Beispiel demonstriert, wie eine Struktur, die eine zweite, eingebettete Struktur enthält, an eine nicht verwaltete Funktion übergeben wird. Außerdem wird veranschaulicht, wie Sie das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut verwenden, um ein Arrays mit fester Länge innerhalb der Struktur zu deklarieren. In diesem Beispiel werden die Elemente der eingebetteten Struktur der übergeordneten Struktur hinzugefügt. Ein Beispiel für eine nicht vereinfachte eingebettete Struktur finden Sie unter [Beispiel für Strukturen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100)).
+Dieses Beispiel demonstriert, wie eine Struktur, die eine zweite, eingebettete Struktur enthält, an eine nicht verwaltete Funktion übergeben wird. Außerdem wird veranschaulicht, wie Sie das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut verwenden, um ein Arrays mit fester Länge innerhalb der Struktur zu deklarieren. In diesem Beispiel werden die Elemente der eingebetteten Struktur der übergeordneten Struktur hinzugefügt. Ein Beispiel für eine nicht vereinfachte eingebettete Struktur finden Sie unter [Beispiel für Strukturen](/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100)).
 
 Das "FindFile"-Beispiel verwendet die folgende nicht verwaltete Funktion, die zusammen mit ihrer ursprünglichen Funktionsdeklaration aufgeführt wird:
 
@@ -291,7 +291,7 @@ In der Standardeinstellung können .NET-Assemblys sowohl in der 32-Bit- als auch
 
 Der folgende Codeausschnitt zeigt ein Beispiel für die Wahl zwischen der 32-Bit- und der 64-Bit-Definition zur Laufzeit.
 
-```CSharp
+```csharp
 if (IntPtr.Size == 8)
 {
     // Use the STRRET_64 definition
@@ -332,7 +332,7 @@ typedef struct _SYSTEMTIME {
 
 In diesem Beispiel enthält die `SystemTime`-Klasse die Elemente der Originalstruktur, die als Klassenelemente dargestellt werden. Das <xref:System.Runtime.InteropServices.StructLayoutAttribute> -Attribut ist so eingerichtet, dass sichergestellt wird, dass die Member im Speicher sequenziell in der Reihenfolge ihres Erscheinens angeordnet sind.
 
-Die `NativeMethods`-Klasse enthält einen verwalteten Prototyp der `GetSystemTime`-Methode, der die `SystemTime`-Klasse standardmäßig als In/Out-Parameter übergibt. Der Parameter muss mit den Attributen <xref:System.Runtime.InteropServices.InAttribute> und <xref:System.Runtime.InteropServices.OutAttribute> deklariert werden, weil Klassen, die Verweistypen sind, standardmäßig als In-Parameter übergeben werden. Damit der Aufrufer die Ergebnisse empfängt, müssen diese [direktionalen Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) explizit angewendet werden. Die `App`-Klasse erstellt eine neue Instanz der `SystemTime`-Klasse und greift auf deren Datenfelder zu.
+Die `NativeMethods`-Klasse enthält einen verwalteten Prototyp der `GetSystemTime`-Methode, der die `SystemTime`-Klasse standardmäßig als In/Out-Parameter übergibt. Der Parameter muss mit den Attributen <xref:System.Runtime.InteropServices.InAttribute> und <xref:System.Runtime.InteropServices.OutAttribute> deklariert werden, weil Klassen, die Verweistypen sind, standardmäßig als In-Parameter übergeben werden. Damit der Aufrufer die Ergebnisse empfängt, müssen diese [direktionalen Attribute](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) explizit angewendet werden. Die `App`-Klasse erstellt eine neue Instanz der `SystemTime`-Klasse und greift auf deren Datenfelder zu.
 
 ### <a name="code-samples"></a>Codebeispiele
 

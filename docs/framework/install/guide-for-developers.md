@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: d2bb964c3d034ea6913c91922fcff1e62130e0dc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558464"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543710"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
@@ -138,7 +138,7 @@ Die Web- und Offlineinstaller sind für x86-basierte und x64-basierte Computer (
 
 - Sie müssen über Administratoranmeldeinformationen verfügen, um .NET Framework 4.5 oder höhere Versionen zu installieren.
 
-- Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das weitervertreibbare .NET Framework 4.5-Paket vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten weitervertreibbaren Pakets von der [.NET Framework-Downloadseite](https://dotnet.microsoft.com/download/dotnet-framework/net45) zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) und im [Knowledge Base-Artikel 2770445](https://support.microsoft.com/kb/2770445).
+- Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das weitervertreibbare .NET Framework 4.5-Paket vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten weitervertreibbaren Pakets von der [.NET Framework-Downloadseite](https://dotnet.microsoft.com/download/dotnet-framework/net45) zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](/security-updates/SecurityAdvisories/2012/2749655) und im [Knowledge Base-Artikel 2770445](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>So installieren Sie Language Packs
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 056569f86afcbdf124f9e617e4ad07b09a194681
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166190"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553999"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Verpacken und Bereitstellen von Ressourcen in .NET-Apps
 
@@ -51,7 +51,7 @@ Dieses Modell hat mehrere Vorzüge:
 
 ## <a name="resource-naming-conventions"></a>Konventionen für Ressourcennamen
 
-Wenn Sie die Ressourcen Ihrer Anwendung verpacken, müssen Sie diese gemäß den Namenskonventionen für Ressourcen benennen, die von der Common Language Runtime (CLR) erwartet werden. Die Runtime identifiziert eine Ressource anhand deren Kulturnamen. Jede Kultur erhält einen eindeutigen Namen, für gewöhnlich eine Kombination aus zwei Kleinbuchstaben, die für eine Kultur und die damit verbundene Sprache steht, und, falls erforderlich, zwei Großbuchstaben, die für eine Subkultur und das damit verbundene Land bzw. die Region stehen. Der Name der Subkultur steht hinter dem Namen der Kultur, getrennt durch einen Bindestrich (-). Dies kann z.B. ja-JP für das in Japan gesprochene Japanisch sein, en-US für das amerikanische Englisch, de-DE für das in Deutschland gesprochene Deutsch oder de-AT für Österreichisch. Siehe die Spalte **Sprach-Tag**  in der [Liste der von Windows unterstützten Sprach- und Regionsnamen](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Kulturnamen befolgen den von [BCP 47](https://tools.ietf.org/html/bcp47) definierten Standard.
+Wenn Sie die Ressourcen Ihrer Anwendung verpacken, müssen Sie diese gemäß den Namenskonventionen für Ressourcen benennen, die von der Common Language Runtime (CLR) erwartet werden. Die Runtime identifiziert eine Ressource anhand deren Kulturnamen. Jede Kultur erhält einen eindeutigen Namen, für gewöhnlich eine Kombination aus zwei Kleinbuchstaben, die für eine Kultur und die damit verbundene Sprache steht, und, falls erforderlich, zwei Großbuchstaben, die für eine Subkultur und das damit verbundene Land bzw. die Region stehen. Der Name der Subkultur steht hinter dem Namen der Kultur, getrennt durch einen Bindestrich (-). Dies kann z.B. ja-JP für das in Japan gesprochene Japanisch sein, en-US für das amerikanische Englisch, de-DE für das in Deutschland gesprochene Deutsch oder de-AT für Österreichisch. Siehe die Spalte **Sprach-Tag**  in der [Liste der von Windows unterstützten Sprach- und Regionsnamen](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Kulturnamen befolgen den von [BCP 47](https://tools.ietf.org/html/bcp47) definierten Standard.
 
 > [!NOTE]
 > Es gibt einige Ausnahmen für die Kulturnamen mit zwei Buchstaben, z. B. `zh-Hans` für Chinesisch (vereinfacht).

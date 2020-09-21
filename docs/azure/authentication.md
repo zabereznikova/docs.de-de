@@ -3,12 +3,12 @@ title: Grundlegendes zur Authentifizierung in den Azure-Bibliotheken für .NET
 description: Enthält eine Beschreibung der unterschiedlichen Authentifizierungsmöglichkeiten mit dem Azure SDK für .NET.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: bc2fce919d88a528f21df9f561cbe33e1119762a
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dbae72eb9e80801d7338b210f9664f1c4e318ae0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811378"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539176"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Authentifizieren mit dem Azure SDK für .NET
 
@@ -25,7 +25,7 @@ Informationen zum Authentifizieren bei Bibliotheken, die Azure.Identity nicht un
 
 ## <a name="access-azure-resources"></a>Zugreifen auf Azure-Ressourcen
 
-Zum Interagieren mit Azure-Ressourcen, z. B. Abrufen eines Geheimnisses aus Key Vault oder Speichern eines Blobs in Storage, benötigen viele Azure-Dienstbibliotheken eine Verbindungszeichenfolge oder Schlüssel für die Authentifizierung. Für SQL-Datenbank wird beispielsweise eine [standardmäßige SQL-Verbindungszeichenfolge](https://docs.microsoft.com/azure/azure-sql/database/connect-query-dotnet-core) genutzt. Dienstverbindungszeichenfolgen werden in anderen Azure-Diensten wie [Azure Cosmos DB](/azure/cosmos-db/), [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache) und [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) verwendet. Diese Zeichenfolgen können Sie über das Azure-Portal, mit der CLI oder mit PowerShell abrufen. Sie können auch die Azure-Verwaltungsbibliotheken für .NET zum Abfragen von Ressourcen verwenden, um Verbindungszeichenfolgen in Ihrem Code zu erstellen.
+Zum Interagieren mit Azure-Ressourcen, z. B. Abrufen eines Geheimnisses aus Key Vault oder Speichern eines Blobs in Storage, benötigen viele Azure-Dienstbibliotheken eine Verbindungszeichenfolge oder Schlüssel für die Authentifizierung. Für SQL-Datenbank wird beispielsweise eine [standardmäßige SQL-Verbindungszeichenfolge](/azure/azure-sql/database/connect-query-dotnet-core) genutzt. Dienstverbindungszeichenfolgen werden in anderen Azure-Diensten wie [Azure Cosmos DB](/azure/cosmos-db/), [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache) und [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) verwendet. Diese Zeichenfolgen können Sie über das Azure-Portal, mit der CLI oder mit PowerShell abrufen. Sie können auch die Azure-Verwaltungsbibliotheken für .NET zum Abfragen von Ressourcen verwenden, um Verbindungszeichenfolgen in Ihrem Code zu erstellen.
 
 Die Methoden für die Verwendung einer Verbindungszeichenfolge variieren je nach Produkt. [Weitere Informationen finden Sie in der Dokumentation zu Ihrem Azure-Produkt](/azure/?product=featured).
 

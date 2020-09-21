@@ -12,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516904"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543224"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
 
@@ -52,7 +52,7 @@ Der Zustand von Elementen der Benutzeroberfläche aus einem Formular in einem Wi
 
 - Eine Kulturressourcendatei kann als eine andere Kulturressourcendatei gespeichert werden. So kann z. B. eine Ressourcendatei für Englisch (USA) als Ressourcendatei für Polnisch gespeichert werden. In der Regel wird die neue Datei anschließend bearbeitet, damit sie mit der neuen Kultur kompatibel ist.
 
-Weitere Informationen finden Sie unter [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) und [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
+Weitere Informationen finden Sie unter [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) und [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
 "Winres.exe" kann eine RESX-Datei nicht in die zugehörige RESOURCES-Datei konvertieren. Verwenden Sie dazu das Tool "Resgen.exe". Weitere Informationen zu „resgen.exe“ finden Sie unter [Resource File Generator (Resgen.exe)](resgen-exe-resource-file-generator.md).
 

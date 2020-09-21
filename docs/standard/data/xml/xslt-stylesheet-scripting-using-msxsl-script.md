@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b2fd5ac6f03c0c66c05117a882d53af37e3f8665
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291967"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555932"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Skripterstellung für ein XSLT-Stylesheet mit \<msxsl:script>
 Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element.  
@@ -43,7 +43,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Zum Abrufen des Beweises aus der Assembly verwenden Sie `this.GetType().Assembly.Evidence`. Zum Abrufen des Beweises aus einem URI (Uniform Resource Identifier) verwenden Sie `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Wenn Sie <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden verwenden, die einen <xref:System.Xml.XmlResolver> akzeptieren, nicht jedoch `Evidence`, wird in der Standardeinstellung als Sicherheitszone für die Assembly "Voll vertrauenswürdig" verwendet. Weitere Informationen finden Sie unter <xref:System.Security.SecurityZone> und [Benannte Berechtigungssätze](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+ Wenn Sie <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden verwenden, die einen <xref:System.Xml.XmlResolver> akzeptieren, nicht jedoch `Evidence`, wird in der Standardeinstellung als Sicherheitszone für die Assembly "Voll vertrauenswürdig" verwendet. Weitere Informationen finden Sie unter <xref:System.Security.SecurityZone> und [Benannte Berechtigungssätze](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. In der folgenden Tabelle werden die Namespaces angezeigt, die standardmäßig unterstützt werden. Sie können Klassen außerhalb der aufgeführten Namespaces verwenden. Diese Klassen müssen jedoch voll qualifiziert sein.  
   

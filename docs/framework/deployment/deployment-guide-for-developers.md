@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558828"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558744"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version von .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -43,9 +43,9 @@ Sie können die weitervertreibbaren Pakete und Language Packs für .NET Framewor
 
 - Ab .NET Framework 4.5. können die Benutzer während des Setups eine Liste der aktiven .NET Framework-Apps anzeigen und diese Apps einfach schließen. Dies hilft möglicherweise, durch .NET Framework-Installationen verursachte Systemneustarts zu vermeiden. Informationen hierzu finden Sie unter [Reduzieren von Systemneustarts](reducing-system-restarts.md).
 
-- Durch Deinstallieren von .NET Framework 4.5 oder höheren Versionen werden auch bereits vorhandene .NET Framework 4-Dateien entfernt. Wenn Sie zu .NET Framework 4 zurückkehren möchten, müssen Sie diese Version und alle Updates für sie neu installieren. Weitere Informationen finden Sie in [Installieren von .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
+- Durch Deinstallieren von .NET Framework 4.5 oder höheren Versionen werden auch bereits vorhandene .NET Framework 4-Dateien entfernt. Wenn Sie zu .NET Framework 4 zurückkehren möchten, müssen Sie diese Version und alle Updates für sie neu installieren. Weitere Informationen finden Sie in [Installieren von .NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
 
-- Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das weitervertreibbare .NET Framework 4.5-Paket vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten weitervertreibbaren Pakets von der [.NET Framework-Downloadseite](https://dotnet.microsoft.com/download/dotnet-framework/net45) zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
+- Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das weitervertreibbare .NET Framework 4.5-Paket vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten weitervertreibbaren Pakets von der [.NET Framework-Downloadseite](https://dotnet.microsoft.com/download/dotnet-framework/net45) zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](/security-updates/SecurityAdvisories/2012/2749655).
 
 Informationen zum Bereitstellen von .NET Framework und den Systemabhängigkeiten in einem Netzwerk durch einen Systemadministrator finden Sie im [Deployment Guide for Administrators (Handbuch für die Bereitstellung für Administratoren)](guide-for-administrators.md).
 
@@ -345,11 +345,11 @@ In der folgenden Tabelle sind die Optionen aufgeführt, die Sie einschließen k�
 |Option|Beschreibung|
 |------------|-----------------|
 |**/CEIPConsent**|Überschreibt das Standardverhalten und sendet anonymes Feedback an Microsoft, um die Bereitstellungsumgebung für die Zukunft zu verbessern. Diese Option kann nur verwendet werden, wenn vom Setupprogramm die Zustimmung angefordert wird und der Benutzer die Berechtigung erteilt, anonymes Feedback an Microsoft zu senden.|
-|**/chainingpackage** `packageName`|Gibt den Namen der ausführbaren Datei an, die das Verketten ausführt. Diese Informationen werden als anonymes Feedback an Microsoft gesendet, um zu helfen, die Bereitstellungsumgebung für die Zukunft zu verbessern.<br /><br /> Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Lucerne Publishing"** . Ein Beispiel für ein Verkettungspaket finden Sie unter [Abrufen von Statusinformationen aus einem Installationspaket](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
+|**/chainingpackage** `packageName`|Gibt den Namen der ausführbaren Datei an, die das Verketten ausführt. Diese Informationen werden als anonymes Feedback an Microsoft gesendet, um zu helfen, die Bereitstellungsumgebung für die Zukunft zu verbessern.<br /><br /> Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Lucerne Publishing"** . Ein Beispiel für ein Verkettungspaket finden Sie unter [Abrufen von Statusinformationen aus einem Installationspaket](/previous-versions/cc825975(v=vs.100)).|
 |**/LCID**  `LCID`<br /><br /> wobei `LCID` einen Gebietsschemabezeichner angibt (siehe [Unterstützte Sprachen](#supported-languages))|Installiert das von `LCID` angegebene Language Pack und erzwingt die Anzeige der Benutzeroberfläche in dieser Sprache (sofern nicht der stille Modus festgelegt wird).<br /><br /> Bei Verwendung des Webinstallers wird mit dieser Option das Language Pack per Verkettung aus dem Web installiert. **Hinweis**:  Verwenden Sie diese Option nur mit dem Webinstaller.|
 |**/log** `file` &#124; `folder`|Gibt den Speicherort der Protokolldatei an. Der Standardwert ist der temporäre Ordner für den Vorgang, und der Standarddateiname basiert auf dem Paket. Wenn die Dateierweiterung TXT lautet, wird ein Textprotokoll präsentiert. Wenn Sie eine andere Erweiterung oder keine Erweiterung angeben, wird ein HTML-Protokoll erstellt.|
 |**/msioptions**|Gibt Optionen an, die für MSI- und MSP-Elemente übergeben werden sollen. Beispiel: `/msioptions "PROPERTY1='Value'"`.|
-|**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Wenn Sie diese Option verwenden, muss die verkettende App den Rückgabecode erfassen und den Neustart initiieren (siehe [Abrufen von Statusinformationen aus einem Installationspaket](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
+|**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Wenn Sie diese Option verwenden, muss die verkettende App den Rückgabecode erfassen und den Neustart initiieren (siehe [Abrufen von Statusinformationen aus einem Installationspaket](/previous-versions/cc825975(v=vs.100))).|
 |**/passive**|Legt den passiven Modus fest. Zeigt die Statusleiste an, um anzugeben, dass die Installation ausgeführt wird, zeigt dem Benutzer jedoch keine Eingabeaufforderungen oder Fehlermeldungen an. In diesem Modus muss, sofern er durch ein Setupprogramm verkettet ist, das Verkettungspaket [Rückgabecodes](#return-codes)behandeln.|
 |**/pipe**|Erstellt einen Kommunikationskanal, damit ein Verkettungspaket bearbeitet werden kann.|
 |**/promptrestart**|Wenn im passiven Modus das Setupprogramm einen Neustart erfordert, wird der Benutzer zur Eingabe aufgefordert. Bei dieser Option muss der Benutzer eingreifen, wenn ein Neustart erforderlich ist.|

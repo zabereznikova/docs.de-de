@@ -2,12 +2,12 @@
 title: Continuous Integration (CI) mit dem .NET Core SDK und Tools
 description: Erfahren Sie, wie Sie das .NET Core SDK und die zugehörigen Tools auf dem Buildserver mit Continuous Integration verwenden.
 ms.date: 05/18/2017
-ms.openlocfilehash: ddccb477bc112157a155e2217e04c329e7ab51c5
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 724cc639a2588b085b31ff4590acce34d2380655
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415985"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537716"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
 
@@ -36,7 +36,7 @@ Das Installationsskript ist automatisiert, sodass es zu Beginn des Buildvorgangs
 
 ## <a name="ci-setup-examples"></a>Beispiele für die CI-Einrichtung
 
-In diesem Abschnitt wird die manuelle Einrichtung unter Verwendung eines PowerShell- oder Bash-Skripts erläutert, und es werden verschiedene SaaS-CI-Lösungen (Software-as-a-Service) beschrieben. Die behandelten SaaS-CI-Lösungen sind [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [ Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
+In diesem Abschnitt wird die manuelle Einrichtung unter Verwendung eines PowerShell- oder Bash-Skripts erläutert, und es werden verschiedene SaaS-CI-Lösungen (Software-as-a-Service) beschrieben. Die behandelten SaaS-CI-Lösungen sind [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [ Azure Pipelines](/azure/devops/pipelines/index).
 
 ### <a name="manual-setup"></a>Manuelle Einrichtung
 
@@ -147,7 +147,7 @@ Verwenden Sie einen dieser Ansätze, um Azure DevOps Services zum Erstellen von 
 1. Führen Sie das Skript aus dem Schritt für die [manuelle Einrichtung](#manual-setup) unter Verwendung Ihrer Befehle aus.
 1. Erstellen Sie einen Build aus verschiedenen integrierten Azure DevOps Services-Buildtasks, die zur Verwendung der .NET Core-Tools konfiguriert sind.
 
-Beide Ansätze sind gültige Vorgehensweisen. Mithilfe eines Skripts zur manuellen Einrichtung kontrollieren Sie, welche Version der Tools abgerufen wird, weil Sie die Tools im Rahmen des Builds herunterladen. Der Build wird aus einem Skript ausgeführt, das Sie erstellen müssen. In diesem Artikel wird nur die manuelle Option behandelt. Weitere Informationen zum Erstellen eines Builds mit Azure DevOps Services-Buildaufgaben finden Sie in der [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index)-Dokumentation.
+Beide Ansätze sind gültige Vorgehensweisen. Mithilfe eines Skripts zur manuellen Einrichtung kontrollieren Sie, welche Version der Tools abgerufen wird, weil Sie die Tools im Rahmen des Builds herunterladen. Der Build wird aus einem Skript ausgeführt, das Sie erstellen müssen. In diesem Artikel wird nur die manuelle Option behandelt. Weitere Informationen zum Erstellen eines Builds mit Azure DevOps Services-Buildaufgaben finden Sie in der [Azure Pipelines](/azure/devops/pipelines/index)-Dokumentation.
 
 Um ein Skript für ein manuelles Setup in Azure DevOps Services zu verwenden, erstellen Sie eine neue Builddefinition und geben das Skript an, das für den Buildschritt ausgeführt werden soll. Dies wird mithilfe der Azure DevOps Services-Benutzeroberfläche erreicht:
 
@@ -169,7 +169,7 @@ Um ein Skript für ein manuelles Setup in Azure DevOps Services zu verwenden, er
 
 ## <a name="orchestrating-the-build"></a>Orchestrieren des Builds
 
-In diesem Dokument wird hauptsächlich beschrieben, wie Sie die .NET Core-Tools herunterladen und verschiedene CI-Dienst konfigurieren, ohne darauf einzugehen, wie Sie Ihren Code mit .NET Core orchestrieren oder *tatsächlich einen Build erstellen*. Die Auswahl bei der Strukturierung des Buildprozesses hängt von vielen Faktoren ab, die hier nicht allgemein abgedeckt werden können. Um weitere Informationen zur Orchestrierung Ihrer Builds mit jeder Technologie zu erhalten, erkunden Sie die Ressourcen und Beispiele in der Dokumentation von [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
+In diesem Dokument wird hauptsächlich beschrieben, wie Sie die .NET Core-Tools herunterladen und verschiedene CI-Dienst konfigurieren, ohne darauf einzugehen, wie Sie Ihren Code mit .NET Core orchestrieren oder *tatsächlich einen Build erstellen*. Die Auswahl bei der Strukturierung des Buildprozesses hängt von vielen Faktoren ab, die hier nicht allgemein abgedeckt werden können. Um weitere Informationen zur Orchestrierung Ihrer Builds mit jeder Technologie zu erhalten, erkunden Sie die Ressourcen und Beispiele in der Dokumentation von [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [Azure Pipelines](/azure/devops/pipelines/index).
 
 Bei der Strukturierung des Buildprozesses für .NET Core-Code unter Verwendung der .NET Core-Tools können zwei allgemeine Ansätze verfolgt werden: die direkte Verwendung von MSBuild oder die Verwendung von .NET Core-Befehlszeilenbefehlen. Sie sollten den verwendeten Ansatz danach auswählen, wie vertraut Sie mit dem jeweiligen Ansatz sind und welche Kompromisse Sie in Bezug auf die Komplexität eingehen möchten. Mit MSBuild können Sie Ihren Buildprozess in Form von Tasks und Zielen beschrieben, Sie müssen jedoch die MSBuild-Projektdateisyntax beherrschen. Die Verwendung von .NET Core-Befehlszeilentools ist möglicherweise einfacher, erfordert aber, dass Sie Orchestrierungslogik in einer Skriptsprache wie `bash` oder PowerShell schreiben.
 

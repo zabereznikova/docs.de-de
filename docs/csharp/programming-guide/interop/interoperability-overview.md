@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 41ee25397d519f189b462291d823586113c78b67
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302957"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541538"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
 Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.  
@@ -60,7 +60,7 @@ Weitere Informationen finden Sie unter [Nutzen nicht verwalteter DLL-Funktionen]
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Improving Interop Performance (Optimieren der Interopleistung)](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [Improving Interop Performance (Optimieren der Interopleistung)](/previous-versions/msp-n-p/ff647812(v=pandp.10))
 - [Einführung in die Interoperabilität zwischen COM und .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
 - [Einführung in COM-Interop (Visual Basic)](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
 - [Marshaling between Managed and Unmanaged Code (Marshalling zwischen verwaltetem und nicht verwaltetem Code)](../../../framework/interop/interop-marshaling.md)

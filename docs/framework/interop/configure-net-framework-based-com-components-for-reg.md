@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ad25a79add84e43ba0a8e71a0f48c5ddf65108bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622197"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554839"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung
 Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur geringfügig schwieriger als bei COM-Komponenten. Für das Setup sind zwei Manifeste erforderlich:  
@@ -176,6 +176,6 @@ Sie können ein Anwendungsmanifest im gleichen Verzeichnis wie die COM-Anwendung
 ## <a name="see-also"></a>Siehe auch
 
 - [COM-Interop ohne Registrierung](registration-free-com-interop.md)
-- [Anforderungen an COM-Interop ohne Registrierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [Registration-Free Activation of .NET-Based Components: A Walkthrough (Exemplarische Vorgehensweise: Aktivierung der .NET-basierten Komponenten ohne Registrierung)](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [Anforderungen an COM-Interop ohne Registrierung](/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung](/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Registration-Free Activation of .NET-Based Components: A Walkthrough (Exemplarische Vorgehensweise: Aktivierung der .NET-basierten Komponenten ohne Registrierung)](/previous-versions/dotnet/articles/ms973915(v=msdn.10))

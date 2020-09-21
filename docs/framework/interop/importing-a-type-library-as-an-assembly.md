@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bc1b921fea5aff086e21c046369f1d461f553bc7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622717"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554683"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importieren einer Typbibliothek als Assembly
 
@@ -31,7 +31,7 @@ Es gibt zwei Möglichkeiten, um diese Typinformationen für Ihre Anwendung verf�
 
 - Mithilfe der Interopassemblys, die nur zur Entwurfszeit verwendet werden: Ab .NET Framework 4 können Sie den Compiler anweisen, die Typinformationen aus der Interopassembly in die ausführbare Datei einzubetten. Der Compiler bettet nur die Typinformationen ein, die Ihre Anwendung verwendet. Sie müssen die Interop-Assembly nicht mit Ihrer Anwendung bereitstellen. Dies ist das empfohlene Verfahren.
 
-- Bereitstellen von Interopassemblys: So können Sie einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
+- Bereitstellen von Interopassemblys: So können Sie einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
 
 Wenn Sie Interop-Assemblys nur zur Entwurfszeit verwenden, können Sie Typinformationen aus der primären Interop-Assembly einbetten, die vom Autor der COM-Komponente veröffentlicht wurden. Sie müssen jedoch die primäre Interop-Assembly nicht mit Ihrer Anwendung bereitstellen.
 
@@ -67,18 +67,18 @@ Nachdem Sie die Typbibliothek gesucht haben, die die Implementierung des Ziel-CO
 
   - Kenntnisse der Konvertierungsregeln einer Typbibliothek in eine Assembly.
 
-  Das Schreiben eines benutzerdefinierten Wrappers ist ein erweitertes Verfahren. Weitere Informationen zum Generieren von benutzerdefinierten Wrappern finden Sie unter [Anpassen von Standardwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).
+  Das Schreiben eines benutzerdefinierten Wrappers ist ein erweitertes Verfahren. Weitere Informationen zum Generieren von benutzerdefinierten Wrappern finden Sie unter [Anpassen von Standardwrappern](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).
 
- Weitere Informationen zum COM-Interop-Importvorgang finden Sie unter [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).
+ Weitere Informationen zum COM-Interop-Importvorgang finden Sie unter [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)
-- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (Type Library Importer-Tool)](../tools/tlbimp-exe-type-library-importer.md)
-- [Anpassen von Standardwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [Anpassen von Standardwrappern](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [Verwenden von COM-Typen in verwaltetem Code](/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilieren eines Interop-Projekts](compiling-an-interop-project.md)
 - [Bereitstellen einer Interop-Anwendung](deploying-an-interop-application.md)
 - [How to: Hinzufügen von Verweisen zu Typbibliotheken](how-to-add-references-to-type-libraries.md)

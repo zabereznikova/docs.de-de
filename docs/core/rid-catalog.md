@@ -2,12 +2,12 @@
 title: .NET Core-RID-Katalog (Runtime Identifier)
 description: Hier erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
 ms.date: 02/22/2019
-ms.openlocfilehash: 719c84248b955ec05d7cd9b361c7e5ebea6aa37b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414564"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538223"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -108,7 +108,7 @@ Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](ht
   - `win10-arm`
   - `win10-arm64`
 
-Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?pivots=os-windows).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](./install/windows.md#dependencies).
 
 ## <a name="linux-rids"></a>RIDs für Linux
 
@@ -127,7 +127,7 @@ Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](ht
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?pivots=os-linux).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](./install/linux.md).
 
 ## <a name="macos-rids"></a>Relative IDs für macOS
 
@@ -146,7 +146,7 @@ Relative IDs für macOS verwenden das ältere Branding „OSX“. Nur allgemeine
 - macOS 10.14 Mojave (.NET Core 1.1 oder höher)
   - `osx.10.14-x64`
 
-Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?pivots=os-macos).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](./install/macos.md#dependencies).
 
 ## <a name="see-also"></a>Siehe auch
 

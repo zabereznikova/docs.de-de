@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: b0b0a16a1fd165e437fc79ccacb20d406f5cff63
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 5456639052310cc64854e32caa1df9b391c042cb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302099"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558021"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Vorgehensweise: Auslösen von Basisklassenereignissen in abgeleiteten Klassen (C#-Programmierleitfaden)
 Das folgende einfache Beispiel zeigt das Standardverfahren zum Deklarieren von Ereignissen in einer Basisklasse, sodass sie auch von abgeleiteten Klassen ausgelöst werden können. Dieses Muster wird häufig in Windows Forms-Klassen in .NET-Klassenbibliotheken verwendet.  
@@ -29,4 +29,4 @@ Das folgende einfache Beispiel zeigt das Standardverfahren zum Deklarieren von E
 - [Ereignisse](./index.md)
 - [Delegaten](../delegates/index.md)
 - [Zugriffsmodifizierer](../classes-and-structs/access-modifiers.md)
-- [Erstellen von Ereignishandlern in Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Erstellen von Ereignishandlern in Windows Forms](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 1b73a79b8167e7f75b8c68f708179e88c575d66a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0adae4db393c4c01620ea896c4451c3279272fca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621898"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559277"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrieren von Assemblys mit COM
 Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) ausführen, um eine Assembly für die Verwendung mit COM zu registrieren bzw. eine bestehende Registrierung aufzuheben. Regasm.exe fügt der Systemregistrierung Informationen über die Klasse hinzu, damit COM-Clients die .NET Framework-Klasse transparent nutzen können. Die Klasse <xref:System.Runtime.InteropServices.RegistrationServices> stellt gleichwertige Funktionen bereit.  
@@ -46,5 +46,5 @@ Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe
 
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
 - [How to: Verweisen auf .NET-Typen in COM](how-to-reference-net-types-from-com.md)
-- [Aufrufen eines .NET-Objekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Aufrufen eines .NET-Objekts](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
