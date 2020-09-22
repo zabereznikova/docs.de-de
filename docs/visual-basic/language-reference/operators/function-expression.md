@@ -6,14 +6,15 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: a9b621ff03f833fcf0f07f876fd864ee963bef75
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 719969be23a6d94f22a1d86cb4ad3f37e4c3b254
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371180"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873421"
 ---
 # <a name="function-expression-visual-basic"></a>Funktionsausdruck (Visual Basic)
+
 Deklariert die Parameter und den Code, die einen Funktions-Lambda-Ausdruck definieren.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,9 +36,11 @@ End Function
 |`statements`|Erforderlich. Eine Liste von-Anweisungen, die mithilfe der-Anweisung einen Wert zurückgibt `Return` . (Siehe [Return-Anweisung](../statements/return-statement.md).) Der Typ des zurückgegebenen Werts ist der Rückgabetyp der Funktion.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Ein *Lambda-Ausdruck* ist eine Funktion ohne einen Namen, der einen Wert berechnet und zurückgibt. Sie können einen Lambda-Ausdruck überall dort verwenden, wo Sie einen Delegattyp verwenden können, außer als Argument für `RemoveHandler` . Weitere Informationen zu Delegaten und zur Verwendung von Lambda-Ausdrücken mit Delegaten finden Sie unter [delegatanweisung](../statements/delegate-statement.md) und [gelockerte Delegatenkonvertierung](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax  
+
  Die Syntax eines Lambda-Ausdrucks ähnelt der einer Standardfunktion. Es gibt die folgenden Unterschiede:  
   
 - Ein Lambda-Ausdruck weist keinen Namen auf.  
@@ -55,6 +58,7 @@ End Function
 - Generische Parameter sind nicht zulässig.  
   
 ## <a name="example"></a>Beispiel  
+
  In den folgenden Beispielen werden zwei Möglichkeiten zum Erstellen einfacher Lambda-Ausdrücke veranschaulicht. Der erste verwendet einen `Dim` , um einen Namen für die Funktion bereitzustellen. Zum Aufrufen der-Funktion senden Sie einen Wert für den-Parameter.  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
@@ -62,16 +66,19 @@ End Function
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>Beispiel  
+
  Alternativ dazu können Sie die Funktion gleichzeitig deklarieren und ausführen.  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden finden Sie ein Beispiel für einen Lambda-Ausdruck, der sein Argument erhöht und den Wert zurückgibt. Das Beispiel zeigt die einzeilige und die mehrzeilige Lambda-Ausdruckssyntax für eine Funktion. Weitere Beispiele finden Sie unter [Lambda-Ausdrücke](../../programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Beispiel  
+
  Lambda-Ausdrücke unterliegen vielen der Abfrage Operatoren in LINQ (Language-Integrated Query) und können in Methoden basierten Abfragen explizit verwendet werden. Das folgende Beispiel zeigt eine typische LINQ-Abfrage, gefolgt von der Übersetzung der Abfrage in das Methoden Format.  
   
 ```vb  

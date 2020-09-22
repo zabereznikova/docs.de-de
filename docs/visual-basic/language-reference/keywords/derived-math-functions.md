@@ -21,14 +21,15 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f84b1ef18ef2a924bb2e47da85ecbb51f982873a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373884"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869019"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Abgeleitete mathematische Funktionen (Visual Basic)
+
 In der folgenden Tabelle werden nicht systeminterne mathematische Funktionen gezeigt, die von den intrinsischen mathematischen Funktionen des-Objekts abgeleitet werden können <xref:System.Math?displayProperty=nameWithType> . Sie können auf die intrinsischen mathematischen Funktionen zugreifen `Imports System.Math` , indem Sie Ihrer Datei oder Ihrem Projekt hinzufügen.  
   
 |Funktion|Abgeleitete Entsprechungen|  

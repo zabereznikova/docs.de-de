@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 79faf0038b2b313bdc21e12c8ae76854bcd6957f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8d27039c28cd3f680e441db9182dd415bd8e91ba
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406572"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870272"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>Der zugrunde liegende \<typename>-Typ der Enumeration ist nicht CLS-kompatibel.
+
 Der für diese Enumeration angegebene Datentyp ist nicht Teil der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS). Dies ist kein Fehler in der Komponente, da der .NET Framework und Visual Basic diesen Datentyp unterstützen. Eine andere Komponente, die in streng CLS-kompatibler Code geschrieben wird, unterstützt diesen Datentyp jedoch möglicherweise nicht. Eine solche Komponente ist möglicherweise nicht in der Lage, mit Ihrer Komponente erfolgreich zu interagieren.  
   
  Die folgenden Visual Basic-Datentypen sind nicht CLS-kompatibel:  

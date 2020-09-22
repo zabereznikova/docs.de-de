@@ -18,14 +18,15 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: a136a517c7ce865b4e1d349270696e2704d61592
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0575a67f89f734c79259036fe48d6e2671c2d1ed
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404666"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873266"
 ---
 # <a name="event-statement"></a>Event-Anweisung
+
 Deklariert ein benutzerdefiniertes Ereignis.  
   
 ## <a name="syntax"></a>Syntax  
@@ -58,16 +59,16 @@ End Event
   
 |Teil|BESCHREIBUNG|  
 |---|---|  
-|`attrlist`|Optional. Liste der Attribute, die für dieses Ereignis gelten. Mehrere Attribute werden durch Kommas getrennt. Sie müssen die [Attribut Liste](attribute-list.md) in spitzen Klammern (" `<` " und " `>` ") einschließen.|  
-|`accessmodifier`|Optional. Gibt an, welcher Code auf dieses Ereignis zugreifen kann. Kann eines der folgenden Elemente sein:<br /><br /> -   [Public](../modifiers/public.md)– jeder Code, der auf das Element zugreifen kann, das es deklariert, kann darauf zugreifen.<br />-   [Geschützt](../modifiers/protected.md)– nur Code in der Klasse oder einer abgeleiteten Klasse kann darauf zugreifen.<br />-   [Friend](../modifiers/friend.md)– nur Code in derselben Assembly kann darauf zugreifen.<br />-   [Privat](../modifiers/private.md)– nur Code im Element, das ihn deklariert, kann darauf zugreifen.<br /> -   [Geschützter Friend](../modifiers/protected-friend.md)-Code in der-Klasse des Ereignisses, einer abgeleiteten Klasse oder derselben Assembly kann darauf zugreifen. <br />- Der [private geschützte](../modifiers/private-protected.md)Code in der-Klasse des Ereignisses oder eine abgeleitete Klasse in derselben Assembly kann darauf zugreifen.|  
-|`Shared`|Optional. Gibt an, dass dieses Ereignis nicht mit einer bestimmten Instanz einer Klasse oder Struktur verknüpft ist.|  
-|`Shadows`|Optional. Gibt an, dass dieses Ereignis ein identisch benanntes Programmierelement oder einen Satz überladener Elemente in einen Basisklasse erneut deklariert und ausblendet. Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen.<br /><br /> Ein schattiertes Element steht in der abgeleiteten Klasse, die es spiegelt, nicht zur Verfügung, und zwar mit Ausnahme von dem Punkt, wo nicht auf das Shadowing-Element zugriffen werden kann. Wenn beispielsweise ein `Private`-Element ein Basisklassenelement spiegelt, greift der Code, der nicht über die Berechtigung für den Zugriff auf das `Private`-Element verfügt, anstelle auf das Basisklassenelement zu.|  
+|`attrlist`|Dies ist optional. Liste der Attribute, die für dieses Ereignis gelten. Mehrere Attribute werden durch Kommas getrennt. Sie müssen die [Attribut Liste](attribute-list.md) in spitzen Klammern (" `<` " und " `>` ") einschließen.|  
+|`accessmodifier`|Dies ist optional. Gibt an, welcher Code auf dieses Ereignis zugreifen kann. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -   [Public](../modifiers/public.md)– jeder Code, der auf das Element zugreifen kann, das es deklariert, kann darauf zugreifen.<br />-   [Geschützt](../modifiers/protected.md)– nur Code in der Klasse oder einer abgeleiteten Klasse kann darauf zugreifen.<br />-   [Friend](../modifiers/friend.md)– nur Code in derselben Assembly kann darauf zugreifen.<br />-   [Privat](../modifiers/private.md)– nur Code im Element, das ihn deklariert, kann darauf zugreifen.<br /> -   [Geschützter Friend](../modifiers/protected-friend.md)-Code in der-Klasse des Ereignisses, einer abgeleiteten Klasse oder derselben Assembly kann darauf zugreifen. <br />- Der [private geschützte](../modifiers/private-protected.md)Code in der-Klasse des Ereignisses oder eine abgeleitete Klasse in derselben Assembly kann darauf zugreifen.|  
+|`Shared`|Dies ist optional. Gibt an, dass dieses Ereignis nicht mit einer bestimmten Instanz einer Klasse oder Struktur verknüpft ist.|  
+|`Shadows`|Dies ist optional. Gibt an, dass dieses Ereignis ein identisch benanntes Programmierelement oder einen Satz überladener Elemente in einen Basisklasse erneut deklariert und ausblendet. Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen.<br /><br /> Ein schattiertes Element steht in der abgeleiteten Klasse, die es spiegelt, nicht zur Verfügung, und zwar mit Ausnahme von dem Punkt, wo nicht auf das Shadowing-Element zugriffen werden kann. Wenn beispielsweise ein `Private`-Element ein Basisklassenelement spiegelt, greift der Code, der nicht über die Berechtigung für den Zugriff auf das `Private`-Element verfügt, anstelle auf das Basisklassenelement zu.|  
 |`eventname`|Erforderlich. Der Name des Ereignisses; folgt standardmäßigen Variablennamenskonventionen.|  
-|`parameterlist`|Optional. Liste der lokalen Variablen, die die Parameter dieses Ereignisses darstellen. Sie müssen die [Parameter Liste](parameter-list.md) in Klammern einschließen.|  
-|`Implements`|Optional. Gibt an, dass dieses Ereignis ein Ereignis einer Schnittstelle implementiert.|  
-|`implementslist`|Erforderlich, wenn `Implements` angegeben wird. Liste der zu implementierenden `Sub`-Prozeduren. Mehrere Prozeduren werden durch Kommas getrennt:<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Jede `implementedprocedure` weist folgende Syntax und Bestandteile auf:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`Benötigten. Name einer Schnittstelle, die von der in dieser Prozedur enthaltenen Klasse oder Struktur implementiert wird.<br />-   `Definedname`Benötigten. Name, wodurch die Prozedur in `interface` definiert ist. Hierbei muss es sich nicht um demselben Namen wie `name` (den Namen, den dieser Prozedur verwendet, um die definierte Prozedur zu implementieren) handeln.|  
+|`parameterlist`|Dies ist optional. Liste der lokalen Variablen, die die Parameter dieses Ereignisses darstellen. Sie müssen die [Parameter Liste](parameter-list.md) in Klammern einschließen.|  
+|`Implements`|Dies ist optional. Gibt an, dass dieses Ereignis ein Ereignis einer Schnittstelle implementiert.|  
+|`implementslist`|Erforderlich, wenn `Implements` angegeben wird. Liste der zu implementierenden `Sub`-Prozeduren. Mehrere Prozeduren werden durch Kommas getrennt:<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Jede `implementedprocedure` weist folgende Syntax und Bestandteile auf:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` Benötigten. Name einer Schnittstelle, die von der in dieser Prozedur enthaltenen Klasse oder Struktur implementiert wird.<br />-   `Definedname` Benötigten. Name, wodurch die Prozedur in `interface` definiert ist. Hierbei muss es sich nicht um demselben Namen wie `name` (den Namen, den dieser Prozedur verwendet, um die definierte Prozedur zu implementieren) handeln.|  
 |`Custom`|Erforderlich. Als `Custom` deklarierte Ereignisse müssen benutzerdefinierte `AddHandler`-, `RemoveHandler`- und `RaiseEvent`-Accessoren definieren.|  
-|`delegatename`|Optional. Der Name eines Delegaten, der die Signatur des Ereignishandlers angibt.|  
+|`delegatename`|Dies ist optional. Der Name eines Delegaten, der die Signatur des Ereignishandlers angibt.|  
 |`AddHandler`|Erforderlich. Deklariert eine `AddHandler`-Zugriffsmethode, die die auszuführenden Anweisungen angibt, wenn ein Ereignishandler hinzugefügt wird, und zwar entweder explizit mithilfe der `AddHandler`-Anweisung oder implizit mithilfe der `Handles`-Klausel.|  
 |`End AddHandler`|Erforderlich. Beendet den `AddHandler`-Block.|  
 |`value`|Erforderlich. Parametername.|  
@@ -76,10 +77,11 @@ End Event
 |`RaiseEvent`|Erforderlich. Deklariert einen `RaiseEvent`-Accessor, der die auszuführenden Anweisungen angibt, wenn ein Ereignis mithilfe der `RaiseEvent`-Anweisung ausgelöst wird. Für gewöhnlich wird dadurch eine Liste der Delegaten aufgerufen, die durch die `AddHandler`- und `RemoveHandler`-Accessoren verwaltet werden.|  
 |`End RaiseEvent`|Erforderlich. Beendet den `RaiseEvent`-Block.|  
 |`delegatesignature`|Erforderlich. Liste der Parameter, die mit dem Parametern übereinstimmen, die durch das `delegatename`-Delegat erforderlich sind. Sie müssen die [Parameter Liste](parameter-list.md) in Klammern einschließen.|  
-|`statements`|Optional. Anweisungen, die die Textteile der Methoden `AddHandler`, `RemoveHandler` und `RaiseEvent` enthalten.|  
+|`statements`|Dies ist optional. Anweisungen, die die Textteile der Methoden `AddHandler`, `RemoveHandler` und `RaiseEvent` enthalten.|  
 |`End Event`|Erforderlich. Beendet den `Event`-Block.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Verwenden Sie nach erfolgter Deklarierung des Ereignisses die Anweisung `RaiseEvent` zum Auslösen des Ereignisses. Ein typisches Ereignis könnte analog zur Darstellung in den folgenden Fragmenten deklariert und ausgelöst werden.  
   
  [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
@@ -94,6 +96,7 @@ End Event
  In den meisten Fällen können Sie zum Deklarieren von Ereignissen die erste Syntax im Syntaxabschnitt dieses Themas verwenden. In einigen Szenarien ist es jedoch erforderlich, dass Sie mehr Kontrolle über das detaillierte Verhalten des Ereignisses verfügen. Die letzte Syntax im Syntaxabschnitt dieses Themas, die das Schlüsselwort `Custom` verwendet, enthält diese Steuerung, indem Ihnen ermöglicht wird, benutzerdefinierte Ereignisse zu definieren. In einem benutzerdefinierten Ereignis geben Sie genau an, was geschieht, wenn ein Ereignishandler mithilfe von Code zum Ereignis hinzugefügt oder daraus entfernt wird oder wenn der Code das Ereignis auslöst. Beispiele hierzu finden Sie unter Gewusst [wie: Deklarieren von benutzerdefinierten Ereignissen, um Speicher](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) Platz zu sparen, und Gewusst [wie: Deklarieren von benutzerdefinierten Ereignissen, um](../../programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden Ereignisse zum Herunterzählen der Sekunden von 10 bis 0 verwendet. Der Code veranschaulicht mehrere der ereignisbezogene Methoden, Eigenschaften und Anweisungen. Dies schließt die `RaiseEvent`-Anweisung mit ein.  
   
  Die Klasse, die ein Ereignis auslöst, ist die Ereignisquelle, und die Methoden, die das Ereignis verarbeiten, sind die Ereignishandler. Eine Ereignisquelle kann über mehrere Handler für die Ereignisse verfügen, die sie generiert. Wenn die Klasse das Ereignis auslöst, wird dieses Ereignis in jeder Klasse ausgelöst, die das Verarbeiten von Ereignissen für diese Instanz des Objekts ausgewählt hat.  
@@ -126,7 +129,7 @@ End Event
 - [RemoveHandler-Anweisung](removehandler-statement.md)
 - [Ziehpunkte](handles-clause.md)
 - [Delegate-Anweisung](delegate-statement.md)
-- [Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen zum Einsparen von Arbeitsspeicher](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [How to: Deklarieren von benutzerdefinierten Ereignissen zum Einsparen von Arbeitsspeicher](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
 - [Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen, um eine Blockierung zu vermeiden](../../programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
 - [Freigegeben](../modifiers/shared.md)
 - [Shadows](../modifiers/shadows.md)

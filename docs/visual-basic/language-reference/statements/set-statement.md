@@ -10,14 +10,15 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: 49d4c36805b64d7232a94e818256723a0437b6ef
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b3524769567a56a87184bf916a3e5ccb1fd4fa1c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404186"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871758"
 ---
 # <a name="set-statement-visual-basic"></a>Set-Anweisung (Visual Basic)
+
 Deklariert eine- `Set` Eigenschaften Prozedur, mit der einer Eigenschaft ein Wert zugewiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,15 +30,16 @@ End Set
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `attributelist`  
- Optional. Siehe [Attribut Liste](attribute-list.md).  
+ Dies ist optional. Siehe [Attribut Liste](attribute-list.md).  
   
  `accessmodifier`  
- Optional für höchstens eine der `Get` -und- `Set` Anweisungen in dieser Eigenschaft. Kann eines der folgenden Elemente sein:  
+ Optional für höchstens eine der `Get` -und- `Set` Anweisungen in dieser Eigenschaft. Dabei kann es sich um eine der folgenden Methoden handeln:  
   
 - [Gebieten](../modifiers/protected.md)  
   
-- [Kollegen](../modifiers/friend.md)  
+- [Friend](../modifiers/friend.md)  
   
 - [Privat](../modifiers/private.md)  
   
@@ -52,12 +54,13 @@ End Set
  Erforderlich, wenn `Option Strict` ist `On` . Datentyp des `value` Parameters. Der angegebene Datentyp muss mit dem Datentyp der Eigenschaft übereinstimmen, in der diese `Set` Anweisung deklariert ist.  
   
  `statements`  
- Optional. Eine oder mehrere-Anweisungen, die ausgeführt werden, wenn die- `Set` Eigenschaften Prozedur aufgerufen wird.  
+ Dies ist optional. Eine oder mehrere-Anweisungen, die ausgeführt werden, wenn die- `Set` Eigenschaften Prozedur aufgerufen wird.  
   
  `End Set`  
  Erforderlich. Beendet die Definition der `Set` Eigenschaften Prozedur.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Jede Eigenschaft muss über eine `Set` Eigenschaften Prozedur verfügen, es sei denn, die Eigenschaft ist gekennzeichnet `ReadOnly` . Die `Set` Prozedur wird verwendet, um den Wert der-Eigenschaft festzulegen.  
   
  Visual Basic automatisch die-Prozedur einer Eigenschaft aufruft `Set` , wenn eine Zuweisungsanweisung einen Wert bereitstellt, der in der-Eigenschaft gespeichert werden soll.  
@@ -78,11 +81,12 @@ End Set
   
 - **Zurückgeben von einer Eigenschaften Prozedur.** Wenn die `Set` Prozedur an den aufrufenden Code zurückkehrt, wird die Ausführung nach der Anweisung fortgesetzt, die den zu speichernden Wert bereitgestellt hat.  
   
-     `Set`Eigenschaften Prozeduren können entweder mithilfe der [Return-Anweisung](return-statement.md) oder der Exit- [Anweisung](exit-statement.md)zurückgegeben werden.  
+     `Set` Eigenschaften Prozeduren können entweder mithilfe der [Return-Anweisung](return-statement.md) oder der Exit- [Anweisung](exit-statement.md)zurückgegeben werden.  
   
      Die `Exit Property` -und- `Return` Anweisungen führen zu einem sofortigen Beenden einer Eigenschaften Prozedur. Eine beliebige Anzahl von `Exit Property` -und- `Return` Anweisungen kann an beliebiger Stelle in der Prozedur angezeigt werden, und Sie können die `Exit Property` -und- `Return` Anweisungen  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die- `Set` Anweisung verwendet, um den Wert einer Eigenschaft festzulegen.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  

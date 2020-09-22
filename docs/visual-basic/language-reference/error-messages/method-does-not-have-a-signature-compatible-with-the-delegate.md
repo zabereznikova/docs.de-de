@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36563
 ms.assetid: 3ca8b873-e98d-419b-95f2-d75bd2a9eb6c
-ms.openlocfilehash: 8e5e94bbde016ec7342a9933905977dac85fb035
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 45df056b71e3536dabc9f7725f623e818c10075d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397245"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873765"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>Die Signatur der Methode ist nicht mit dem Delegaten kompatibel
+
 Zwischen den Signaturen der-Methode und dem Delegaten, den Sie verwenden möchten, ist eine Inkompatibilität aufgetreten. Die `Delegate` -Anweisung definiert die Parameter- und Rückgabetypen einer Delegatklasse. Eine beliebige Prozedur mit übereinstimmenden Parametern kompatibler Typen und Rückgabe Typen kann verwendet werden, um eine Instanz dieses Delegattyps zu erstellen.  
   
  **Fehler-ID**: BC36563  
@@ -23,5 +24,5 @@ Zwischen den Signaturen der-Methode und dem Delegaten, den Sie verwenden möchte
 
 - [AddressOf-Operator](../operators/addressof-operator.md)
 - [Delegate-Anweisung](../statements/delegate-statement.md)
-- [Überladungs Auflösung](../../programming-guide/language-features/procedures/overload-resolution.md)
+- [Overload Resolution](../../programming-guide/language-features/procedures/overload-resolution.md)
 - [Generische Typen in Visual Basic (Visual Basic)](../../programming-guide/language-features/data-types/generic-types.md)

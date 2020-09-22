@@ -7,14 +7,15 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: c2d9974f41efdd321af800e6270586d9b18ba6f7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8c3ae80df58e00076692d91881534704d8278ff1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402849"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873972"
 ---
 # <a name="error-messages-visual-basic"></a>Fehlermeldungen (Visual Basic)
+
 Wenn Sie eine Visual Basic-Anwendung schreiben, kompilieren oder ausführen, können die folgenden Arten von Fehlern auftreten:  
   
 1. Entwurfszeitfehler, die auftreten, wenn Sie eine Anwendung in Visual Studio schreiben.  
@@ -26,11 +27,13 @@ Wenn Sie eine Visual Basic-Anwendung schreiben, kompilieren oder ausführen, kö
  Informationen zur Behebung bestimmter Fehler finden Sie unter [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Laufzeitfehler  
+
  Wenn eine Visual Basic Anwendung versucht, eine Aktion auszuführen, die vom System nicht ausgeführt werden kann, tritt ein Laufzeitfehler auf, und Visual Basic löst ein- `Exception` Objekt aus. Visual Basic können benutzerdefinierte Fehler eines beliebigen Datentyps, einschließlich- `Exception` Objekten, mithilfe der- `Throw` Anweisung generieren. Eine Anwendung kann den Fehler durch Anzeige der Fehlernummer und -meldung einer abgefangenen Ausnahme identifizieren. Wenn ein Fehler nicht abgefangen wird, wird die Anwendung beendet.  
   
  Der Code kann Laufzeitfehler auffangen und untersuchen. Wenn Sie den Code, der den Fehler erzeugt, in einem `Try`-Block einschließen, können Sie jeden ausgelösten Fehler in einem entsprechenden `Catch`-Block abfangen. Informationen zum Abfangen von Fehlern zur Laufzeit und zum Reagieren auf Fehler im Code finden Sie unter [Try...Catch...Finally-Anweisung](../statements/try-catch-finally-statement.md).  
   
 ## <a name="compile-time-errors"></a>Kompilierzeitfehler  
+
  Wenn der Visual Basic-Compiler ein Problem im Code feststellt, tritt ein Kompilierzeitfehler auf. Im Code-Editor können Sie problemlos ermitteln, welche Codezeile den Fehler verursacht hat, da unter dieser Codezeile eine Wellenlinie angezeigt wird. Die Fehlermeldung wird angezeigt, wenn Sie auf die Wellenlinie zeigen oder die **Fehlerliste** öffnen, die auch weitere Meldungen anzeigt.  
   
  Wenn unter einem Bezeichner eine Wellenlinie und unter dem äußersten rechten Zeichen ein kurzer Unterstrich angezeigt werden, können Sie für die Klasse, den Konstruktor, die Methode, die Eigenschaft, das Feld oder die Enumeration einen Stub generieren. Weitere Informationen finden Sie unter [Generate From Usage](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).

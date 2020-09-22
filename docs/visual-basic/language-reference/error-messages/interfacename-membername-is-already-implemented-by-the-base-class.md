@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 6525ae08b90cc530a8f6a469d35d9ab8c27fb5e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4056c61bf6556f54276817c1c105ba7a17b6fd5a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402823"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873942"
 ---
 # <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>"\<interfacename>.\<membername>" wird bereits durch die \<baseclassname>-Basisklssse implementiert. Die erneute Implementierung von \<type> wird angenommen.
+
 Eine Eigenschaft, Prozedur oder ein Ereignis in einer abgeleiteten Klasse verwendet eine- `Implements` Klausel, die einen Schnittstellenmember angibt, der bereits in der Basisklasse implementiert ist.  
   
  Ein Schnittstellenmember, der von seiner Basisklasse implementiert wird, kann von einer abgeleiteten Klasse erneut implementiert werden. Dieser Vorgang ist nicht identisch mit dem Überschreiben der Basisklassenimplementierung. Weitere Informationen finden Sie unter [Implements](../statements/implements-clause.md).  

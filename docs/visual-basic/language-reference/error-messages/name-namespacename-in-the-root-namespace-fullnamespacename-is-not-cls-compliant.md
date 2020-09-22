@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: b03a50365122c17fa311a284bd6995d1af2631c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4e29a27841021b0cf68af01f4535e60eeb38b9a8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401536"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871525"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Der Name "\<namespacename>" im Stammnamespace "\<fullnamespacename>" ist nicht CLS-kompatibel.
+
 Eine Assembly ist als gekennzeichnet `<CLSCompliant(True)>` , aber ein Element des Stamm Namespace namens beginnt mit einem Unterstrich ( `_` ).  
   
  Ein Programmier Element kann ein oder mehrere Unterstriche enthalten, aber damit es mit der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS) kompatibel ist, darf es nicht mit einem Unterstrich beginnen. Siehe [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).  

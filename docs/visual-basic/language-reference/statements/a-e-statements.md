@@ -2,26 +2,27 @@
 title: Anweisungen A – E
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
-ms.openlocfilehash: 7d56c059ac4f2f136e57aedc161c4819022f028a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f056e681fac053b8c844f17177fbb6cb85f9cc1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350224"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90868750"
 ---
 # <a name="a-e-statements"></a>Anweisungen A – E
+
 Die folgende Tabelle enthält eine Auflistung der Visual Basic-Sprachanweisungen.  
   
 |||||  
 |---|---|---|---|  
-|[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[Klasse](class-statement.md)|[Const](const-statement.md)|  
-|[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
-|[Do... ESE](do-loop-statement.md)|[Else](else-statement.md)|[ENDE](end-statement.md)|[End \<Schlüsselwort>](end-keyword-statement.md)|  
-|[Enum](enum-statement.md)|[Erase](erase-statement.md)|[Fehler](error-statement.md)|[Event](event-statement.md)|  
+|[AddHandler](addhandler-statement.md)|[Aufruf](call-statement.md)|[Klasse](class-statement.md)|[Const](const-statement.md)|  
+|[Fortsetzen](continue-statement.md)|[Declare](declare-statement.md)|[Delegat](delegate-statement.md)|[Verdun](dim-statement.md)|  
+|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[ENDE](end-statement.md)|[Schließlich \<keyword>](end-keyword-statement.md)|  
+|[Enumeration](enum-statement.md)|[Löschen](erase-statement.md)|[Fehler](error-statement.md)|[Event](event-statement.md)|  
 |[Beenden](exit-statement.md)||||  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Anweisungen F – P](f-p-statements.md)
-- [Anweisungen Q – Z](q-z-statements.md)
+- [Anweisungen F – P](f-p-statements.md)
+- [Anweisungen Q – Z](q-z-statements.md)
 - [Sprachreferenz zu Visual Basic](../index.md)
