@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie Probleme mit der Notarisier
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 616f163856cca48ccc6d1a14e0c6e68d56379c0c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656526"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538301"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina-Notarisierung und die Auswirkungen auf .NET Core-Downloads und -Projekte
 
@@ -17,7 +17,7 @@ Ab macOS Catalina (Version 10.15) muss jegliche Software notarisiert werden, di
 
 ## <a name="installing-net-core"></a>Installieren von .NET Core
 
-Die Installationsprogramme für die Versionen 3.1, 3.0 und 2.1 von .NET Core (sowohl für die Runtime als auch das SDK) wurden seit dem 18. Februar 2020 notarisiert. Vorherige Versionen wurden nicht notarisiert. Sie können eine nicht notarisierte Version von .NET Core manuell installieren, indem Sie zunächst das Installationsprogramm herunterladen und dann den Befehl `sudo installer` ausführen. Weitere Informationen finden Sie unter [Herunterladen und manuelles Installieren für macOS](sdk.md?pivots=os-macos#download-and-manually-install).
+Die Installationsprogramme für die Versionen 3.1, 3.0 und 2.1 von .NET Core (sowohl für die Runtime als auch das SDK) wurden seit dem 18. Februar 2020 notarisiert. Vorherige Versionen wurden nicht notarisiert. Sie können eine nicht notarisierte Version von .NET Core manuell installieren, indem Sie zunächst das Installationsprogramm herunterladen und dann den Befehl `sudo installer` ausführen. Weitere Informationen finden Sie unter [Herunterladen und manuelles Installieren für macOS](./macos.md#download-and-manually-install).
 
 Ab den folgenden Versionen sind die .NET Core-Installationsprogramme notarisiert:
 

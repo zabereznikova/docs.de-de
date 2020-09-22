@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Data
 ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 66a5493f0084f5fa86c3eb928d2e4a4b4999e764
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 904aeea4fa8b134c8c36ebb83779dc044154e6f3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924590"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552166"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks
 
@@ -38,7 +38,7 @@ Führen Sie die folgenden Schritte aus, bevor Sie beginnen:
 
 > [!Note]
 > Dieses Tutorial kann nicht mit dem **kostenlosen Azure-Testabonnement** absolviert werden.
-> Wenn Sie ein kostenloses Konto haben, rufen Sie Ihr Profil auf, und ändern Sie Ihr Abonnement auf **Nutzungsbasierte Bezahlung**. Weitere Informationen finden Sie unter [Kostenloses Azure-Konto](https://azure.microsoft.com/free/dotnet/). [Entfernen Sie das dann Ausgabenlimit](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit), und [fordern Sie die Erhöhung des Kontingents](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) für vCPUs in Ihrer Region an. Wenn Sie Ihren Azure Databricks-Arbeitsbereich erstellen, können Sie den Tarif **Testversion (Premium – 14 Tage kostenlosen DBUs)** auswählen, damit Sie über den Arbeitsbereich 14 Tage lang auf kostenlose Premium Azure Databricks-DBUs zugreifen können.
+> Wenn Sie ein kostenloses Konto haben, rufen Sie Ihr Profil auf, und ändern Sie Ihr Abonnement auf **Nutzungsbasierte Bezahlung**. Weitere Informationen finden Sie unter [Kostenloses Azure-Konto](https://azure.microsoft.com/free/dotnet/). [Entfernen Sie das dann Ausgabenlimit](/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit), und [fordern Sie die Erhöhung des Kontingents](/azure/azure-supportability/resource-manager-core-quotas-request) für vCPUs in Ihrer Region an. Wenn Sie Ihren Azure Databricks-Arbeitsbereich erstellen, können Sie den Tarif **Testversion (Premium – 14 Tage kostenlosen DBUs)** auswählen, damit Sie über den Arbeitsbereich 14 Tage lang auf kostenlose Premium Azure Databricks-DBUs zugreifen können.
 
 In diesem Abschnitt erstellen Sie einen Azure Databricks-Arbeitsbereich über das Azure-Portal.
 
@@ -52,7 +52,7 @@ In diesem Abschnitt erstellen Sie einen Azure Databricks-Arbeitsbereich über da
     |---------|---------|
     |**Arbeitsbereichsname**     | Geben Sie einen Namen für Ihren Databricks-Arbeitsbereich an.        |
     |**Abonnement**     | Wählen Sie in der Dropdownliste Ihr Azure-Abonnement aus.        |
-    |**Ressourcengruppe**     | Geben Sie an, ob Sie eine neue Ressourcengruppe erstellen oder eine vorhandene Ressourcengruppe verwenden möchten. Eine Ressourcengruppe ist ein Container, der verwandte Ressourcen für eine Azure-Lösung enthält. Weitere Informationen finden Sie in der [Übersicht über den Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
+    |**Ressourcengruppe**     | Geben Sie an, ob Sie eine neue Ressourcengruppe erstellen oder eine vorhandene Ressourcengruppe verwenden möchten. Eine Ressourcengruppe ist ein Container, der verwandte Ressourcen für eine Azure-Lösung enthält. Weitere Informationen finden Sie in der [Übersicht über den Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview). |
     |**Position**     | Wählen Sie Ihre bevorzugte Region aus. Informationen zu allen verfügbaren Regionen finden Sie unter [Verfügbare Azure-Dienste nach Region](https://azure.microsoft.com/regions/services/).        |
     |**Tarif**     |  Wählen Sie zwischen **Standard**, **Premium** oder **Testversion**. Weitere Informationen zu diesen Tarifen, finden Sie unter [Azure Databricks – Preise](https://azure.microsoft.com/pricing/details/databricks/).       |
     |**Virtual Network**     |   Nein       |
@@ -219,4 +219,4 @@ Wenn Sie den Databricks-Arbeitsbereich nicht mehr benötigen, können Sie die Az
 In diesem Tutorial haben Sie eine .NET für Apache Spark-Anwendung in Databricks bereitgestellt. Weitere Informationen zu Databricks finden Sie in der Dokumentation zu Azure Databricks.
 
 > [!div class="nextstepaction"]
-> [Dokumentation zu Azure Databricks](https://docs.microsoft.com/azure/azure-databricks/)
+> [Dokumentation zu Azure Databricks](/azure/azure-databricks/)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 11ac4277081392b1e7ac79147f621ff67d699fe5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656144"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555301"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Bewährte Methoden für das Laden von Assemblys
 In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können. In diesem Artikel werden folgende Empfehlungen besprochen:  
@@ -153,7 +153,7 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
  Wenn Sie Ihre Assemblys nicht alle in den Suchpfad verschieben können, ziehen Sie Alternativen wie das Add-In-Modell von .NET Framework, das Platzieren von Assemblys in den globalen Assemblycache oder das Erstellen einer Anwendungsdomäne in Erwägung.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Ziehen Sie in Erwägung das Add-In-Modell von .NET Framework zu verwenden  
- Wenn Sie den LoadFrom-Kontext verwenden, um Add-Ins zu implementieren, die für gewöhnlich nicht in der Anwendungsbasis installiert sind, verwenden Sie das Add-In-Modell von .NET Framework. Dieses Modell ermöglicht die Isolation auf der Anwendungsdomänen- oder Prozessebene, ohne dass Sie die Anwendungsdomäne selbst verwalten müssen. Weiter Informationen zum Add-In-Modell finden Sie unter [Add-ins and Extensibility (Add-Ins und Erweiterbarkeit)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
+ Wenn Sie den LoadFrom-Kontext verwenden, um Add-Ins zu implementieren, die für gewöhnlich nicht in der Anwendungsbasis installiert sind, verwenden Sie das Add-In-Modell von .NET Framework. Dieses Modell ermöglicht die Isolation auf der Anwendungsdomänen- oder Prozessebene, ohne dass Sie die Anwendungsdomäne selbst verwalten müssen. Weiter Informationen zum Add-In-Modell finden Sie unter [Add-ins and Extensibility (Add-Ins und Erweiterbarkeit)](/previous-versions/dotnet/netframework-4.0/bb384200(v=vs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Ziehen Sie in Erwägung, den globalen Assemblycache zu verwenden  
  Platzieren Sie Assemblys in den globalen Assemblycache, um vom Pfad der freigegebenen Assembly zu profitieren, die sich außerhalb der Anwendungsbasis befindet. Dabei büßen Sie aber nichts an den Vorteilen des Standard-Load-Kontexts ein. Ebenso wenig müssen Sie sich mit den Nachteilen der anderen Kontexte auseinandersetzen.  

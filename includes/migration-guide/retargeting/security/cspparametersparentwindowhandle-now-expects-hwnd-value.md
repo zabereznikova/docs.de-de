@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b5c886ad35afbbf0a68e03b3174ab9ea1f5524f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12ba3bd3c9e9e00b88cab0e568a1ce0f4f8bbb05
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614514"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606871"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>CspParameters.ParentWindowHandle erwartet nun einen HWND-Wert
 
@@ -16,7 +16,7 @@ Der <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle>-Wert, d
 cspParameters.ParentWindowHandle = form.Handle;
 ```
 
-In früheren Versionen von .NET Framework wurde erwartet, dass der Wert ein <xref:System.IntPtr?displayProperty=fullName>-Objekt ist, das einen Speicherort im Arbeitsspeicher darstellt, an dem sich der [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND)-Wert befindet. Das Festlegen der Eigenschaft auf form.Handle hatte unter Windows 7 und früheren Versionen keine Auswirkungen, unter Windows 8 und höheren Versionen resultiert dies jedoch in der Fehlermeldung &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: The parameter is incorrect.&quot; (CryptographicException: Der Parameter ist falsch.).
+In früheren Versionen von .NET Framework wurde erwartet, dass der Wert ein <xref:System.IntPtr?displayProperty=fullName>-Objekt ist, das einen Speicherort im Arbeitsspeicher darstellt, an dem sich der [HWND](/windows/desktop/WinProg/windows-data-types#HWND)-Wert befindet. Das Festlegen der Eigenschaft auf form.Handle hatte unter Windows 7 und früheren Versionen keine Auswirkungen, unter Windows 8 und höheren Versionen resultiert dies jedoch in der Fehlermeldung &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: The parameter is incorrect.&quot; (CryptographicException: Der Parameter ist falsch.).
 
 #### <a name="suggestion"></a>Vorschlag
 

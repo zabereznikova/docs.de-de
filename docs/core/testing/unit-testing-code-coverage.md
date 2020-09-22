@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie die Code-Coverage-Funktionen für .NET-K
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853900"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538146"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Verwenden von Code Coverage für Komponententests
 
@@ -19,7 +19,7 @@ In diesem Artikel werden die Verwendung von Code Coverage für Komponententests 
 
 Außerdem wird in diesem Artikel erläutert, wie die Code-Coverage-Informationen, die von einem Coverlet-Testlauf gesammelt wurden, zum Generieren eines Berichts verwendet werden. Die Berichtsgenerierung ist mithilfe eines anderen [Open-Source-Projekts auf GitHub, ReportGenerator,](https://github.com/danielpalme/ReportGenerator) möglich. ReportGenerator wandelt von Cobertura und vielen anderen generierte Coverageberichte in für Menschen lesbare Berichte in unterschiedlichen Formaten um.
 
-Dieser Artikel basiert auf dem [Beispiequellcodeprojekt](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs), das im Beispielbrowser verfügbar ist.
+Dieser Artikel basiert auf dem [Beispiequellcodeprojekt](/samples/dotnet/samples/unit-testing-code-coverage-cs), das im Beispielbrowser verfügbar ist.
 
 ## <a name="system-under-test"></a>Getestetes System
 
@@ -302,7 +302,7 @@ Nachdem Sie diesen Befehl ausgeführt haben, stellt eine HTML-Datei den generier
 - [GitHub-Repository „ReportGenerator“](https://github.com/danielpalme/ReportGenerator)
 - [Projektwebsite zu ReportGenerator](https://danielpalme.github.io/ReportGenerator)
 - [Testbefehl in der Dokumentation zur .NET Core-CLI](../tools/dotnet-test.md)
-- [Beispielquellcode](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
+- [Beispielquellcode](/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

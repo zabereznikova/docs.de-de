@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 30d4a8f6ddc4ae1f83f5c0802e872661cbe6c6f1
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03eda8a419dc60c75576e15da9b3595274894c75
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802925"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554579"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 
@@ -64,7 +64,7 @@ Um dieses Problem zu beheben, können Sie wie folgt vorgehen:
 Den Kern des .NET-Objektmodells für reguläre Ausdrücke bildet die <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klasse, die die Engine für reguläre Ausdrücke darstellt. Häufig ist die einzige Hauptursache für Leistungsbeeinträchtigungen bei regulären Ausdrücken die Art, wie die <xref:System.Text.RegularExpressions.Regex>-Engine verwendet wird. Das Definieren eines regulären Ausdrucks beinhaltet das enge Verbinden der Engine für reguläre Ausdrücke mit einem Muster für reguläre Ausdrücke. Hierzu wird ein <xref:System.Text.RegularExpressions.Regex>-Objekt durch Übergeben des Konstruktors an ein reguläres Ausdrucksmuster instanziiert, oder eine statische Methode wird aufgerufen, indem das reguläre Ausdrucksmuster zusammen mit der zu analysierenden Zeichenfolge an sie übergeben wird. Somit ist dieser Verbindungsprozess zwangsläufig aufwendig.
 
 > [!NOTE]
-> Eine ausführlichere Erläuterung der Leistungseinbußen bei der Verwendung interpretierter und kompilierter regulärer Ausdrücke finden Sie unter [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) im BCL-Teamblog.
+> Eine ausführlichere Erläuterung der Leistungseinbußen bei der Verwendung interpretierter und kompilierter regulärer Ausdrücke finden Sie unter [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) im BCL-Teamblog.
 
 Sie können die Engine für reguläre Ausdrücke mit einem bestimmten Muster für reguläre Ausdrücke verknüpfen und die Engine dann verwenden, um Textübereinstimmungen auf verschiedene Weise zu suchen:
 
@@ -163,7 +163,7 @@ Wenn das Beispiel in eine ausführbare Datei kompiliert und ausgeführt wird, wi
 Normalerweise bewegt sich die Engine für reguläre Ausdrücke für den Vergleich mit einem regulären Ausdrucksmuster linear durch eine Eingabezeichenfolge. Wenn jedoch unbestimmte Quantifizierer, z. B. `*`, `+` oder `?` in einem Muster für reguläre Ausdrücke verwendet werden, gibt die Engine für reguläre Ausdrücke möglicherweise einen Teil der erfolgreichen Teilübereinstimmungen auf und kehrt zu einem zuvor gespeicherten Zustand zurück, um nach einer erfolgreichen Übereinstimmung mit dem gesamten Muster zu suchen. Dieser Prozess wird als Rückverfolgung bezeichnet.
 
 > [!NOTE]
-> Weitere Informationen zur Rückverfolgung finden Sie unter [Einzelheiten zum Verhalten regulärer Ausdrücke](details-of-regular-expression-behavior.md) und [Backtracking](backtracking-in-regular-expressions.md). Eine ausführliche Erörterung der Rückverfolgung finden Sie in [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) im BCL-Teamblog.
+> Weitere Informationen zur Rückverfolgung finden Sie unter [Einzelheiten zum Verhalten regulärer Ausdrücke](details-of-regular-expression-behavior.md) und [Backtracking](backtracking-in-regular-expressions.md). Eine ausführliche Erörterung der Rückverfolgung finden Sie in [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) im BCL-Teamblog.
 
 Durch die Unterstützung des Zurückverfolgens werden reguläre Ausdrücke leistungsstark und flexibel. Außerdem wird die Steuerung der Ausführung der Engine für reguläre Ausdrücke in die Hände der Entwickler von regulären Ausdrücken gelegt. Entwickler sind sich dieser Verantwortung oft nicht bewusst und verwenden die Rückverfolgung falsch oder übermäßig. Dies ist einer der Hauptfaktoren für die Beeinträchtigung der Leistung von regulären Ausdrücken. Im ungünstigsten Fall kann sich die Ausführungszeit für jedes zusätzliche Zeichen in der Eingabezeichenfolge verdoppeln. Durch Verwendung der Rückverfolgung ist es tatsächlich leicht, eine programmatische Entsprechung einer Endlosschleife zu erstellen, wenn die Eingabe fast mit dem Muster für reguläre Ausdrücke übereinstimmt. Für die Verarbeitung einer relativ kurzen Eingabezeichenfolge kann die Engine mehrere Stunden oder sogar Tage brauchen.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768481"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550924"
 ---
 # <a name="writing-custom-attributes"></a>Verfassen von benutzerdefinierten Attributen
 Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen. Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen. Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die sich direkt oder indirekt aus <xref:System.Attribute?displayProperty=nameWithType>ableiten. Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.  
@@ -117,7 +117,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- Sie können den Konstruktor überladen, um verschiedene Kombinationen von Werten zu ermöglichen. Wenn Sie darüber hinaus eine [Eigenschaft](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) für Ihre benutzerdefinierte Attributklasse definieren, können Sie eine Kombination aus benannten und Positionsparametern zum Initialisieren des Attributs verwenden. Normalerweise definieren Sie alle erforderlichen Parameter als Positionsparameter und alle optionalen Parameter als benannt. In diesem Fall kann das Attribut nicht ohne den erforderlichen Parameter initialisiert werden. Alle anderen Parameter sind optional. Beachten Sie, dass in Visual Basic die Konstruktoren für eine Attributklasse kein ParamArray-Argument verwenden sollten.  
+ Sie können den Konstruktor überladen, um verschiedene Kombinationen von Werten zu ermöglichen. Wenn Sie darüber hinaus eine [Eigenschaft](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) für Ihre benutzerdefinierte Attributklasse definieren, können Sie eine Kombination aus benannten und Positionsparametern zum Initialisieren des Attributs verwenden. Normalerweise definieren Sie alle erforderlichen Parameter als Positionsparameter und alle optionalen Parameter als benannt. In diesem Fall kann das Attribut nicht ohne den erforderlichen Parameter initialisiert werden. Alle anderen Parameter sind optional. Beachten Sie, dass in Visual Basic die Konstruktoren für eine Attributklasse kein ParamArray-Argument verwenden sollten.  
   
  Das folgende Codebeispiel zeigt, wie ein Attribut, das den oben angegebenen Konstruktor verwendet, mithilfe von optionalen und erforderlichen Parametern angewendet werden kann. Es wird angenommen, dass das Attribut einen erforderlichen Booleschen Wert und eine optionale Zeichenfolgeneigenschaft aufweist.  
   
@@ -126,7 +126,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>Deklarieren von Eigenschaften  
- Wenn Sie einen benannten Parameter definieren oder eine einfache Möglichkeit zum Zurückgeben der von Ihrem Attribut gespeicherten Werte bereitstellen möchten, deklarieren Sie eine [Eigenschaft](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Attributeigenschaften müssen als öffentliche Entitäten mit einer Beschreibung des zurückgegebenen Datentyps deklariert werden. Definieren Sie die Variable, die den Wert der Eigenschaft enthalten soll, und ordnen Sie sie den Methoden **get** und **set** zu. Das folgende Codebeispiel veranschaulicht, wie eine einfache Eigenschaft in Ihrem Attribut implementiert wird.  
+ Wenn Sie einen benannten Parameter definieren oder eine einfache Möglichkeit zum Zurückgeben der von Ihrem Attribut gespeicherten Werte bereitstellen möchten, deklarieren Sie eine [Eigenschaft](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Attributeigenschaften müssen als öffentliche Entitäten mit einer Beschreibung des zurückgegebenen Datentyps deklariert werden. Definieren Sie die Variable, die den Wert der Eigenschaft enthalten soll, und ordnen Sie sie den Methoden **get** und **set** zu. Das folgende Codebeispiel veranschaulicht, wie eine einfache Eigenschaft in Ihrem Attribut implementiert wird.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

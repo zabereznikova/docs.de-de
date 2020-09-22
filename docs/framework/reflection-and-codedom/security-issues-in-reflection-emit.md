@@ -12,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865241"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558796"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 .NET Framework bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), die jeweils mit eigenen Sicherheitsproblemen verbunden sind:  
@@ -35,7 +35,7 @@ ms.locfileid: "86865241"
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Dynamische Assemblys  
- Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in .NET Framework 4 nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Weitere Informationen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).) Die verbleibenden Überladungen können von jedem Code, unabhängig von der Vertrauensebene, ausgeführt werden. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
+ Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in .NET Framework 4 nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Weitere Informationen finden Sie unter [Sicherheitsänderungen](/previous-versions/dotnet/framework/security/security-changes).) Die verbleibenden Überladungen können von jedem Code, unabhängig von der Vertrauensebene, ausgeführt werden. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
   
 > [!NOTE]
 > Attribute, die Sie mithilfe von <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> auf die dynamische Assembly nach deren Erstellung anwenden, werden erst wirksam, nachdem die Assembly auf dem Datenträger gespeichert und wieder in den Arbeitsspeicher geladen wurde.  
@@ -138,7 +138,7 @@ ms.locfileid: "86865241"
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>Versionsinformationen  
- Ab .NET Framework 4 wurde die computerweite Sicherheitsrichtlinie beseitigt, und Sicherheitstransparenz wird zum standardmäßigen Erzwingungsmechanismus. Weitere Informationen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
+ Ab .NET Framework 4 wurde die computerweite Sicherheitsrichtlinie beseitigt, und Sicherheitstransparenz wird zum standardmäßigen Erzwingungsmechanismus. Weitere Informationen finden Sie unter [Sicherheitsänderungen](/previous-versions/dotnet/framework/security/security-changes).  
   
  Ab .NET Framework 2.0 Service Pack 1 ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag beim Ausgeben von dynamischen Assemblys und dynamischen Methoden nicht mehr erforderlich. In allen früheren Versionen von .NET Framework ist dieses Flag erforderlich.  
   

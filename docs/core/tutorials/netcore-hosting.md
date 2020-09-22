@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die.NET Core-Runtime vom nativen Code aus hos
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 3b24ade694e25040d77e411bead3f454e9d5cdef
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 9f45a75d7ec836c14a2285a1707649cc32c2a25c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656175"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537547"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Schreiben Sie einen benutzerdefinierten .NET Core-Host, um die .NET-Runtime über den systemeigenen Code zu steuern.
 
@@ -144,7 +144,7 @@ In diesem Beispiel kann der Host nun `managedDelegate` verwenden, um die Methode
 
 Alternativ kann die `coreclr_execute_assembly`-Funktion verwendet werden, um eine verwaltete ausführbare Datei zu starten. Diese API akzeptiert einen Assemblypfad und ein Array aus Argumenten als Eingabeparameter. Sie lädt die Assembly aus diesem Pfad und ruft deren main-Methode auf.
 
-```C++
+```c++
 int hr = executeAssembly(
         hostHandle,
         domainId,
@@ -197,7 +197,7 @@ Mit `ICLRRuntimeHost4` können wir jetzt die laufzeitweiten Startflags angeben u
 
 Die Laufzeit wird durch einen Aufruf der `Start`-Funktion gestartet.
 
-```C++
+```c++
 hr = runtimeHost->Start();
 ```
 
@@ -234,7 +234,7 @@ Mit einer laufenden AppDomain kann der Host jetzt verwalteten Code ausführen. D
 
 Wenn `ExecuteAssembly` nicht den Anforderungen Ihres Hosts entspricht, gibt es eine andere Option, bei der Sie `CreateDelegate` verwenden, um einen Funktionszeiger zu einer statisch verwalteten Methode zu erstellen. Dafür muss der Host die Signatur der Methode kennen, die er aufruft (um den Funktionszeigertyp zu erstellen), aber es gibt dem Host die Flexibilität, einen anderen Code als den Assemblyeingangspunkt aufzurufen. Der im zweiten Parameter angegebene Assemblyname ist der [vollständige verwaltete Assemblyname](../../standard/assembly/names.md) der zu ladenden Bibliothek.
 
-```C++
+```c++
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
     domainId,

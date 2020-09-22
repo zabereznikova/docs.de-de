@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-ms.openlocfilehash: 779b4863b6f1513f3566d4ab31660d88cda1039b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 56ce10e0b6f9be988a06d44550cd3b9dc2efd188
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619129"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554155"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“
 
@@ -46,7 +46,7 @@ Primäre Interop-Assemblys können nur auf andere primäre Interop-Assemblys ver
 
 Eine abhängige primäre Interop-Assembly mit einer Versionsnummer, die von der der ursprünglichen Typbibliothek abweicht, kann nicht erkennt werden, wenn sie im aktuellen Verzeichnis installiert ist. Sie müssen die abhängige primäre Interop-Assembly in der Windows-Registrierung registrieren oder die **/reference**-Option verwenden, um sicherzustellen, dass „Tlbimp.exe“ die abhängige DLL finden kann.
 
-Sie können auch mehrere Versionen einer Typbibliothek einschließen. Anweisungen hierzu finden Sie unter [Vorgehensweise: Einschließen mehrerer Versionen von Typbibliotheken](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).
+Sie können auch mehrere Versionen einer Typbibliothek einschließen. Anweisungen hierzu finden Sie unter [Vorgehensweise: Einschließen mehrerer Versionen von Typbibliotheken](/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).
 
 ## <a name="example"></a>Beispiel
 

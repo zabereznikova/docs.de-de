@@ -4,12 +4,12 @@ description: In diesem Artikel werden .NET-Architekturkomponenten wie .NET Stand
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2fc8bcea59cd2ba652b88644677f077d62994ca4
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: fc34cf35e82e3a401f32561aa239996c7697aa03
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414733"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547674"
 ---
 # <a name="net-architectural-components"></a>.NET-Architekturkomponenten
 
@@ -29,14 +29,14 @@ Jede Implementierung von .NET umfasst die folgenden Komponenten:
 
 - Mindestens eine Runtime. Beispiele: CLR für .NET Framework, CoreCLR und CoreRT für .NET Core.
 - Eine Klassenbibliothek, die .NET Standard und ggf. zusätzliche APIs implementiert. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek
-- Optional mindestens ein Anwendungsframework. Beispiele: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) und [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) sind im .NET Framework und .NET Core enthalten.
+- Optional mindestens ein Anwendungsframework. Beispiele: [ASP.NET](https://www.asp.net/), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) und [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) sind im .NET Framework und .NET Core enthalten.
 - Optional Entwicklungstools. Einige Entwicklungstools werden zwischen mehreren Implementierungen freigegeben.
 
 Es gibt vier primäre .NET-Implementierungen, die Microsoft aktiv entwickelt und wartet: .NET Core, .NET Framework, Mono und die universelle Windows-Plattform (UWP)
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core ist eine plattformübergreifende Implementierung von .NET und wurde entwickelt, um Server- und Cloud-Arbeitsauslastungen nach Maß zu bewältigen. Diese Implementierung kann unter Windows, macOS und Linux ausgeführt werden. Damit wird .NET Standard implementiert. Code, der auf .NET Standard abzielt, kann also in .NET Core ausgeführt werden. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) und [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) werden in .NET Core ausgeführt.
+.NET Core ist eine plattformübergreifende Implementierung von .NET und wurde entwickelt, um Server- und Cloud-Arbeitsauslastungen nach Maß zu bewältigen. Diese Implementierung kann unter Windows, macOS und Linux ausgeführt werden. Damit wird .NET Standard implementiert. Code, der auf .NET Standard abzielt, kann also in .NET Core ausgeführt werden. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) und [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) werden in .NET Core ausgeführt.
 
 Weitere Informationen zu .NET Core finden Sie unter [Einführung in .NET Core](../core/introduction.md) und [Wahl zwischen .NET Core und .NET Framework für Server-Apps](choosing-core-framework-server.md).
 

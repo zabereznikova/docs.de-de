@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: 87eae789478752423f3e682d4db6cead0391aa6e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 02cec3d22588d8f10d36216422bc19faafffe94b
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976931"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679520"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>Trainieren eines Machine Learning-Modells mit der Kreuzvalidierung
 
@@ -50,9 +50,9 @@ public class HousingData
 
 ## <a name="prepare-the-data"></a>Vorbereiten der Daten
 
-Führen Sie eine Vorverarbeitung der Daten durch, bevor Sie damit das Machine Learning-Modell erstellen. In diesem Beispiel werden die Spalten `Size` und `HistoricalPrices` zu einem einzelnen Featurevektor kombiniert, der in einer neuen Spalte namens `Features` mithilfe der [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)-Methode ausgegeben wird. Zusätzlich zum Abrufen der Daten in das von ML.NET-Algorithmen erwartete Format optimiert die Verkettung von Spalten nachfolgende Vorgänge in der Pipeline, indem der Vorgang einmal auf die verkettete Spalte statt auf jede separate Spalte angewendet wird.
+Führen Sie eine Vorverarbeitung der Daten durch, bevor Sie damit das Machine Learning-Modell erstellen. In diesem Beispiel werden die Spalten `Size` und `HistoricalPrices` zu einem einzelnen Featurevektor kombiniert, der in einer neuen Spalte namens `Features` mithilfe der [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A)-Methode ausgegeben wird. Zusätzlich zum Abrufen der Daten in das von ML.NET-Algorithmen erwartete Format optimiert die Verkettung von Spalten nachfolgende Vorgänge in der Pipeline, indem der Vorgang einmal auf die verkettete Spalte statt auf jede separate Spalte angewendet wird.
 
-Nachdem die Spalten in einem einzelnen Vektor kombiniert sind, wird [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) auf die abzurufende Spalte `Features` angewendet, um `Size` und `HistoricalPrices` im selben Bereich zwischen 0 und 1 abzurufen.
+Nachdem die Spalten in einem einzelnen Vektor kombiniert sind, wird [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) auf die abzurufende Spalte `Features` angewendet, um `Size` und `HistoricalPrices` im selben Bereich zwischen 0 und 1 abzurufen.
 
 ```csharp
 // Define data prep estimator
@@ -69,7 +69,7 @@ IDataView transformedData = dataPrepTransformer.Transform(data);
 
 ## <a name="train-model-with-cross-validation"></a>Trainieren eines Modells mit Kreuzvalidierung
 
-Nach der Vorverarbeitung der Daten kann das Modell trainiert werden. Wählen Sie zunächst den Algorithmus aus, der der auszuführenden Machine Learning-Aufgabe am ehesten entspricht. Da der vorhergesagte Wert ein numerischer kontinuierlicher Wert ist, handelt es sich um eine Regressionsaufgabe. Einer der von ML.NET implementierten Regressionsalgorithmen ist der [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)-Algorithmus. Um das Modell mit Kreuzvalidierung zu trainieren, verwenden Sie die [`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*)-Methode.
+Nach der Vorverarbeitung der Daten kann das Modell trainiert werden. Wählen Sie zunächst den Algorithmus aus, der der auszuführenden Machine Learning-Aufgabe am ehesten entspricht. Da der vorhergesagte Wert ein numerischer kontinuierlicher Wert ist, handelt es sich um eine Regressionsaufgabe. Einer der von ML.NET implementierten Regressionsalgorithmen ist der [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)-Algorithmus. Um das Modell mit Kreuzvalidierung zu trainieren, verwenden Sie die [`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate%2A)-Methode.
 
 > [!NOTE]
 > Obwohl in diesem Beispiel ein lineares Regressionsmodell verwendet wird, kann CrossValidate für alle anderen Machine Learning-Aufgaben in ML.NET mit Ausnahme der Erkennung von Anomalien verwendet werden.
@@ -82,11 +82,11 @@ IEstimator<ITransformer> sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimator, numberOfFolds: 5);
 ```
 
-[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) führt die folgenden Vorgänge aus:
+[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate%2A) führt die folgenden Vorgänge aus:
 
 1. Partitionieren der Daten in eine Anzahl von Partitionen, die dem im `numberOfFolds`-Parameter angegebenen Wert entspricht. Das Ergebnis der einzelnen Partitionen ist ein [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData)-Objekt.
 1. Für jede der Partitionen wird mit dem angegebenen Machine Learning-Algorithmuskalkulator ein Modell mit dem Trainingsdataset trainiert.
-1. Die Leistung jedes Modells wird mit der [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*)-Methode für das Testdataset ausgewertet.
+1. Die Leistung jedes Modells wird mit der [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A)-Methode für das Testdataset ausgewertet.
 1. Das Modell wird mit seinen Metriken für jedes der Modelle zurückgegeben.
 
 Das in `cvResults` gespeicherte Ergebnis ist eine Sammlung von [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601)-Objekten. Dieses Objekt enthält das trainierte Modell sowie Metriken, und auf beides kann über die [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model)- bzw. [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics)-Eigenschaft zugegriffen werden. In diesem Beispiel ist die `Model`-Eigenschaft vom Typ [`ITransformer`](xref:Microsoft.ML.ITransformer) und die `Metrics`-Eigenschaft vom Typ [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics).

@@ -4,12 +4,12 @@ description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generie
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 59e86d6412e16728fb03d05f7f4e221a26ec1bb1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656995"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536235"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Arbeiten mit LINQ (Language-Integrated Query)
 
@@ -259,7 +259,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 Führen Sie das Programm erneut aus, Sie werden feststellen, dass 52 Iterationen nötig sind, um den Kartenstapel wieder in die ursprüngliche Reihenfolge zu bringen. Sie werden auch einige erhebliche Leistungsabfälle beim Ausführen des Programms bemerken.
 
-Dafür gibt es eine Anzahl von Gründen. Sie können eine der wichtigsten Ursachen dieses Leistungsabfalls bekämpfen: die ineffiziente Nutzung der [*verzögerten Auswertung*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Dafür gibt es eine Anzahl von Gründen. Sie können eine der wichtigsten Ursachen dieses Leistungsabfalls bekämpfen: die ineffiziente Nutzung der [*verzögerten Auswertung*](../../standard/linq/deferred-execution-lazy-evaluation.md).
 
 Der wesentliche Aspekt der verzögerten Auswertung ist, dass eine Anweisung erst dann ausgewertet wird, wenn der Wert benötigt wird. LINQ-Abfragen sind verzögert ausgewertete Anweisungen. Die Sequenzen werden erst generiert, wenn die Elemente angefordert werden. Dies ist üblicherweise ein großer Vorteil von LINQ. In Programmen wie diesem verursacht diese Art der Auswertung jedoch ein exponentielles Wachstum der Ausführungszeit.
 

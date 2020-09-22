@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 04/29/2020
-ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656754"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537735"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -77,7 +77,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`--blame-crash`** (Verfügbar seit .NET 5.0 Preview SDK)
 
-  Führt die Tests im Modus „Verantwortung zuweisen“ aus und erfasst ein Absturzabbild, wenn der Testhost unerwartet beendet wird. Diese Option wird nur unter Windows unterstützt. Ein Verzeichnis, das *procdump.exe* und *procdump64.exe* enthält, muss in der PATH- oder PROCDUMP_PATH-Umgebungsvariablen enthalten sein. [Tools herunterladen](https://docs.microsoft.com/sysinternals/downloads/procdump). Impliziert `--blame`.
+  Führt die Tests im Modus „Verantwortung zuweisen“ aus und erfasst ein Absturzabbild, wenn der Testhost unerwartet beendet wird. Diese Option wird nur unter Windows unterstützt. Ein Verzeichnis, das *procdump.exe* und *procdump64.exe* enthält, muss in der PATH- oder PROCDUMP_PATH-Umgebungsvariablen enthalten sein. [Tools herunterladen](/sysinternals/downloads/procdump). Impliziert `--blame`.
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (Verfügbar seit .NET 5.0 Preview SDK)
 

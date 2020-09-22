@@ -2,12 +2,12 @@
 title: 'Einführung in C#: Wichtige Sprachbereiche'
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 08/06/2020
-ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414902"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558174"
 ---
 # <a name="major-language-areas"></a>Wichtige Sprachbereiche
 
@@ -86,7 +86,7 @@ Ein Delegat weiß nicht und interessiert sich nicht dafür, welche Klasse der Me
 
 ## <a name="async--await"></a>async/await
 
-C# unterstützt asynchrone Programme mit zwei Schlüsselwörtern: `async` und `await`. Sie fügen den `async`-Modifizierer zu einer Methodendeklaration hinzu, um zu deklarieren, dass die Methode asynchron ist. Der `await`-Operator weist den Compiler an, asynchron auf den Ergebnis zu warten. Die Kontrolle wird wieder dem Aufrufer überlassen, und die Methode gibt eine Struktur zurück, die den Zustand der asynchronen Arbeitet verwaltet. In der Regel handelt es sich um eine <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>-Struktur, es kann jedoch ein beliebiger Typ vorliegen, der das await-Muster unterstützt. Diese Features ermöglichen Ihnen das Schreiben von Code, der sich wie das synchrone Gegenstück liest, aber asynchron ausgeführt wird. Mit dem folgenden Code wird beispielsweise die Homepage für die [Microsoft-Dokumentation](https://docs.microsoft.com) heruntergeladen:
+C# unterstützt asynchrone Programme mit zwei Schlüsselwörtern: `async` und `await`. Sie fügen den `async`-Modifizierer zu einer Methodendeklaration hinzu, um zu deklarieren, dass die Methode asynchron ist. Der `await`-Operator weist den Compiler an, asynchron auf den Ergebnis zu warten. Die Kontrolle wird wieder dem Aufrufer überlassen, und die Methode gibt eine Struktur zurück, die den Zustand der asynchronen Arbeitet verwaltet. In der Regel handelt es sich um eine <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>-Struktur, es kann jedoch ein beliebiger Typ vorliegen, der das await-Muster unterstützt. Diese Features ermöglichen Ihnen das Schreiben von Code, der sich wie das synchrone Gegenstück liest, aber asynchron ausgeführt wird. Mit dem folgenden Code wird beispielsweise die Homepage für die [Microsoft-Dokumentation](/) heruntergeladen:
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="AsyncExample":::
 

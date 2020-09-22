@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e528a41748d9353c96d443f68e15e7a98ee7f4ae
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 882c4c0455b7df538079ffe1b7d1d7ca8af1904a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85616257"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606328"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-48"></a>Verbesserung der Barrierefreiheit von Windows Forms-Steuerelementen für .NET 4.8
 
@@ -21,7 +21,7 @@ Die Arbeitsweise des Windows Forms-Frameworks mit Technologien für die Barriere
 **Aktivieren oder Deaktivieren dieser Änderungen:** Damit die Anwendung von diesen Änderungen profitieren kann, muss sie unter .NET Framework 4.8 oder höher ausgeführt werden. Die Anwendung kann diese Änderungen aktivieren, wenn Sie Folgendes durchführen:
 
 - Kompilieren Sie diese nochmals, um .NET Framework 4.8 zu verwenden. Diese Änderungen der Barrierefreiheit werden standardmäßig für Windows Forms-Anwendungen aktiviert, die .NET Framework 4.8 oder höher verwenden.
-- Die Anwendung verwendet .NET Framework 4.7.2 oder eine frühere Version und deaktiviert veraltete Verhaltensweisen der Barrierefreiheit, indem wie im folgenden Beispiel dargestellt folgender [AppContext-Switch](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) zum Abschnitt `<runtime>` der Datei „app.config“ hinzugefügt und auf `false` festgelegt wird.
+- Die Anwendung verwendet .NET Framework 4.7.2 oder eine frühere Version und deaktiviert veraltete Verhaltensweisen der Barrierefreiheit, indem wie im folgenden Beispiel dargestellt folgender [AppContext-Switch](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) zum Abschnitt `<runtime>` der Datei „app.config“ hinzugefügt und auf `false` festgelegt wird.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -72,7 +72,7 @@ Zum Aktivieren dieser Funktion müssen Sie die bereits erwähnten Barrierefreihe
 **Verbesserte Unterstützung der ProgressBar-Barrierefreiheit**
 
 - Die Unterstützung für die Benutzeroberflächenautomatisierung wurde für das <xref:System.Windows.Forms.ProgressBar>-Steuerelement mit der Möglichkeit aktiviert, Benachrichtigungen der Benutzeroberflächenautomatisierung und andere Funktionen der Benutzeroberflächenautomatisierung zu verwenden. Entwickler können nun Benachrichtigungen zur Benutzeroberflächenautomatisierung verwenden, die von der Sprachausgabe zur Angabe des Status angekündigt werden können.
-Eine Übersicht über Ereignisse der Benutzeroberflächenautomatisierung, einschließlich Benachrichtigungsereignisse der Benutzeroberflächenautomatisierung, finden Sie unter [Übersicht über Ereignisse zur Benutzeroberflächenautomatisierung](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-eventsoverview).
+Eine Übersicht über Ereignisse der Benutzeroberflächenautomatisierung, einschließlich Benachrichtigungsereignisse der Benutzeroberflächenautomatisierung, finden Sie unter [Übersicht über Ereignisse zur Benutzeroberflächenautomatisierung](/windows/desktop/WinAuto/uiauto-eventsoverview).
 
 **Verbesserte Unterstützung der PropertyGrid-Barrierefreiheit**
 
@@ -89,7 +89,7 @@ Eine Übersicht über Ereignisse der Benutzeroberflächenautomatisierung, einsch
 **Verbesserte visuelle Hinweise**
 
 - Ein leeres <xref:System.Windows.Forms.CheckedListBox>-Steuerelement zeigt nun einen Fokusindikator an, wenn es den Fokus erhält.
-Hinweis: Die Unterstützung für die Benutzeroberflächenautomatisierung für Steuerelemente wird zur Laufzeit aktiviert, wird jedoch zur Entwurfszeit nicht verwendet. Einen Überblick über die Benutzeroberflächenautomatisierung finden Sie unter [Benutzeroberflächenautomatisierung: Übersicht](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview).
+Hinweis: Die Unterstützung für die Benutzeroberflächenautomatisierung für Steuerelemente wird zur Laufzeit aktiviert, wird jedoch zur Entwurfszeit nicht verwendet. Einen Überblick über die Benutzeroberflächenautomatisierung finden Sie unter [Benutzeroberflächenautomatisierung: Übersicht](../../../../docs/framework/ui-automation/ui-automation-overview.md).
 
 **Aufrufen von QuickInfos für Steuerelemente über die Tastatur**
 

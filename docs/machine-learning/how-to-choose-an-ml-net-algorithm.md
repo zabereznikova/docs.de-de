@@ -3,12 +3,12 @@ title: 'Gewusst wie: Auswählen eines ML.NET-Algorithmus'
 description: Erfahren Sie, wie Sie einen ML.NET-Algorithmus für Ihr Machine Learning-Modell auswählen.
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75739996"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679637"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Gewusst wie: Auswählen eines ML.NET-Algorithmus
 
@@ -34,7 +34,7 @@ Vor dem Training mit einem linearen Algorithmus sollten die Features normalisier
 
 Im Allgemeinen sind lineare Algorithmen skalierbar und schnell sowie kostengünstig zu trainieren und vorherzusagen. Sie werden nach der Anzahl der Merkmale und ungefähr nach der Größe des Trainingsdatasets skaliert.
 
-Lineare Algorithmen führen mehrere Durchläufe über die Trainingsdaten aus. Wenn Ihr Dataset in den Arbeitsspeicher passt, können Sie die Ausführung des Trainings beschleunigen, indem Sie Ihrer ML.NET-Pipeline vor dem Anfügen des Trainers einen [Cacheprüfpunkt](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint*) hinzufügen.
+Lineare Algorithmen führen mehrere Durchläufe über die Trainingsdaten aus. Wenn Ihr Dataset in den Arbeitsspeicher passt, können Sie die Ausführung des Trainings beschleunigen, indem Sie Ihrer ML.NET-Pipeline vor dem Anfügen des Trainers einen [Cacheprüfpunkt](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A) hinzufügen.
 
 **Lineare Trainer**
 

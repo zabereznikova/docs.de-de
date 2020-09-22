@@ -19,19 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416375"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555919"
 ---
 # <a name="isolated-storage"></a>Isolierter Speicher
 
 Isolierter Speicher ist ein Mechanismus zur Datenspeicherung für Desktop-Apps, der Isolation und Sicherheit gewährleistet, indem er standardisierte Möglichkeiten zur Verknüpfung von Code mit gespeicherten Daten definiert. Die Standardisierung hat weitere Vorteile. Administratoren können spezielle Tools zum Ändern isolierter Speichervorgänge verwenden, um Speicherplätze für Dateien zu konfigurieren, Sicherheitsrichtlinien festzulegen und nicht verwendete Daten zu löschen. Dank isolierter Speicherung benötigt der Code keine eindeutigen Pfade zur Festlegung sicherer Speicherplätze im Dateisystem. Außerdem werden die Daten vor anderen Anwendungen geschützt, die nur über Zugriff auf isolierte Speicherplätze verfügen. Fest codierte Daten, die den Speicherbereich einer Anwendung angeben, sind nicht erforderlich.
 
 > [!IMPORTANT]
-> Die isolierte Speicherung ist nicht für Windows 8.x Store-Apps verfügbar. Verwenden Sie stattdessen zum Speichern von lokalen Daten und Dateien die in der Windows-Runtime-API enthaltenen Anwendungsdatenklassen in den `Windows.Storage`-Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .
+> Die isolierte Speicherung ist nicht für Windows 8.x Store-Apps verfügbar. Verwenden Sie stattdessen zum Speichern von lokalen Daten und Dateien die in der Windows-Runtime-API enthaltenen Anwendungsdatenklassen in den `Windows.Storage`-Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)) .
 
 <a name="data_compartments_and_stores"></a>
 

@@ -3,18 +3,18 @@ title: '.NET Core: Debuggen von Deadlocks'
 description: In diesem Tutorial lernen Sie, wie Sie ein Sperrproblem in .NET Core debuggen.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557879"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538695"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>Debuggen eines Deadlocks in .NET Core
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 3.1 SDK und höher
 
-In diesem Tutorial erfahren Sie, wie Sie ein Deadlockszenario debuggen. Mithilfe des bereitgestellten Beispielquellcoderepositorys einer [ASP.NET Core-Web-App](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) können Sie absichtlich einen Deadlock auslösen. Infolge reagiert der Endpunkt nicht mehr, und es kommt zu einer Threadakkumulation. Sie erfahren, wie Sie verschiedene Tools zum Analysieren des Problems verwenden können, z. B. Kernspeicherabbilder, Analysen von Kernspeicherabbildern und die Prozessnachverfolgung.
+In diesem Tutorial erfahren Sie, wie Sie ein Deadlockszenario debuggen. Mithilfe des bereitgestellten Beispielquellcoderepositorys einer [ASP.NET Core-Web-App](/samples/dotnet/samples/diagnostic-scenarios) können Sie absichtlich einen Deadlock auslösen. Infolge reagiert der Endpunkt nicht mehr, und es kommt zu einer Threadakkumulation. Sie erfahren, wie Sie verschiedene Tools zum Analysieren des Problems verwenden können, z. B. Kernspeicherabbilder, Analysen von Kernspeicherabbildern und die Prozessnachverfolgung.
 
 In diesem Tutorial werden Sie Folgendes durchführen:
 
@@ -31,13 +31,13 @@ In diesem Tutorial werden Sie Folgendes durchführen:
 Im Tutorial wird Folgendes verwendet:
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) oder eine höhere Version
-- [Beispieldebugziel-Web-App](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) zum Auslösen des Szenarios
+- [Beispieldebugziel-Web-App](/samples/dotnet/samples/diagnostic-scenarios) zum Auslösen des Szenarios
 - [dotnet-trace](dotnet-trace.md) zum Auflisten von Prozessen
 - [dotnet-dump](dotnet-dump.md) zum Erfassen und Analysieren einer Speicherabbilddatei
 
 ## <a name="core-dump-generation"></a>Generieren des Kernspeicherabbilds
 
-Ein Kernspeicherabbild oder Arbeitsspeicherabbild ermöglicht Ihnen das Untersuchen des Zustands der Threads einer Anwendung und möglichen Sperren, die Konflikte aufweisen, um eine nicht reagierende Anwendung zu untersuchen. Führen Sie die [Beispieldebuganwendung](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) mit dem folgenden Befehl aus dem Beispielstammverzeichnis aus:
+Ein Kernspeicherabbild oder Arbeitsspeicherabbild ermöglicht Ihnen das Untersuchen des Zustands der Threads einer Anwendung und möglichen Sperren, die Konflikte aufweisen, um eine nicht reagierende Anwendung zu untersuchen. Führen Sie die [Beispieldebuganwendung](/samples/dotnet/samples/diagnostic-scenarios) mit dem folgenden Befehl aus dem Beispielstammverzeichnis aus:
 
 ```dotnetcli
 dotnet run

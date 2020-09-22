@@ -2,12 +2,12 @@
 title: Verwenden eines als Container ausgeführten Datenbankservers
 description: Informationen zur Bedeutung der Verwendung eines als Container ausgeführten Datenbankservers, der ausschließlich für die Entwicklung, jedoch auf keinen Fall in der Produktion zum Einsatz kommen darf
 ms.date: 01/30/2020
-ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 38f77e195b184d57dcad5904674a0025ef6c2bd8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628526"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539398"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Verwenden eines als Container ausgeführten Datenbankservers
 
@@ -101,7 +101,7 @@ public static int Main(string[] args)
 
 Es gibt einen wichtigen Vorbehalt beim Anwenden von Migrationen und Seeding einer Datenbank während des Containerstarts. Da der Datenbankserver möglicherweise aus beliebigen Gründen nicht verfügbar ist, müssen Wiederholungsversuche erfolgen, während Sie darauf warten, dass der Server verfügbar ist. Diese Wiederholungslogik wird von der Erweiterungsmethode `MigrateDbContext()` verarbeitet, wie der folgende Code zeigt:
 
-```cs
+```csharp
 public static IWebHost MigrateDbContext<TContext>(
     this IWebHost host,
     Action<TContext,

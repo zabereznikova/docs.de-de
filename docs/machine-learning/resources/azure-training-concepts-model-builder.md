@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 1321967cacdd373acc19923f992d30c5453ea869
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924577"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556218"
 ---
 # <a name="model-builder-azure-training-resources"></a>Azure-Trainingsressourcen für den Modellgenerator
 
@@ -48,7 +48,7 @@ Folgendes ist erforderlich, um einen Azure Machine Learning-Arbeitsbereich zu er
     | Standard_NC12   | 12 | 112 | 680  | 2 | 24 | 48 | 2 |
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
-    Weitere Details zu GPU-optimierten Computetypen finden Sie in der [Linux-VM-Dokumentation zur NC-Serie](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json).
+    Weitere Details zu GPU-optimierten Computetypen finden Sie in der [Linux-VM-Dokumentation zur NC-Serie](/azure/virtual-machines/nc-series?bc=%252fazure%252fvirtual-machines%252flinux%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fvirtual-machines%252flinux%252ftoc.json).
 - Computepriorität
 
   - Niedrige Priorität: Geeignet für Aufgaben mit kürzerer Ausführungszeit. Kann durch Unterbrechungen und fehlende Verfügbarkeit beeinträchtigt werden. Kostet in der Regel weniger, weil überschüssige Kapazitäten in Azure genutzt werden.

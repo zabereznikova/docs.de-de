@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 92cc95f80d18251314db8d953520732841b0274c
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 6c14c94c0a2f88f28ec327a3463a6b525ef80ff6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557333"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557748"
 ---
 # <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
 
@@ -99,7 +99,7 @@ Für die Installation von .NET Framework sind Administratorrechte erforderlich.
 
 - Windows Server 2012 enthält .NET Framework 4.5, Sie müssen also keine separate Installation durchführen. Analog dazu umfasst Windows Server 2012 R2 .NET Framework 4.5.1.
 
-- .NET Framework bietet unter Windows Server 2008 R2 SP1 oder höher eingeschränkte Unterstützung für die Server Core-Rolle. Eine Liste der nicht unterstützten APIs finden Sie im Artikel zur [Server Core .NET-Funktionalität](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)).
+- .NET Framework bietet unter Windows Server 2008 R2 SP1 oder höher eingeschränkte Unterstützung für die Server Core-Rolle. Eine Liste der nicht unterstützten APIs finden Sie im Artikel zur [Server Core .NET-Funktionalität](/previous-versions//dd745015(v=vs.85)).
 
 - .NET Framework wird unter Windows Server 2008 R2 für Itanium-basierte Systeme nicht unterstützt.
 

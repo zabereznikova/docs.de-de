@@ -5,12 +5,12 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edcb1c4d00a09ba8404b08ddc3ca3447a52a81b6
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74344755"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679585"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Laden von Daten aus Dateien und anderen Quellen
 
@@ -66,7 +66,7 @@ ML.NET arbeitet mit Spaltennamen. Wenn die Spalte einen anderen Namen als den Ei
 
 ## <a name="load-data-from-a-single-file"></a>Laden von Daten aus einer Einzeldatei
 
-Um Daten aus einer Datei zu laden, verwenden Sie die [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*)-Methode zusammen mit dem Datenmodell für die zu ladenden Daten. Da der `separatorChar`-Parameter standardmäßig mit Tabstopptrennzeichen getrennt ist, ändern Sie ihn bei Bedarf für Ihre Datendatei. Wenn Ihre Datei einen Header hat, setzen Sie den `hasHeader`-Parameter auf `true`, um die erste Zeile in der Datei zu ignorieren und mit dem Laden von Daten aus der zweiten Zeile zu beginnen.
+Um Daten aus einer Datei zu laden, verwenden Sie die [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A)-Methode zusammen mit dem Datenmodell für die zu ladenden Daten. Da der `separatorChar`-Parameter standardmäßig mit Tabstopptrennzeichen getrennt ist, ändern Sie ihn bei Bedarf für Ihre Datendatei. Wenn Ihre Datei einen Header hat, setzen Sie den `hasHeader`-Parameter auf `true`, um die erste Zeile in der Datei zu ignorieren und mit dem Laden von Daten aus der zweiten Zeile zu beginnen.
 
 ```csharp
 //Create MLContext
@@ -82,7 +82,7 @@ Wenn Ihre Daten in mehreren Dateien gespeichert sind, können Sie mit ML.NET Dat
 
 ### <a name="load-from-files-in-a-single-directory"></a>Laden von Dateien in einem einzigen Verzeichnis
 
-Wenn sich alle Ihre Datendateien im gleichen Verzeichnis befinden, verwenden Sie in der [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*)-Methode Platzhalter.
+Wenn sich alle Ihre Datendateien im gleichen Verzeichnis befinden, verwenden Sie in der [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A)-Methode Platzhalter.
 
 ```csharp
 //Create MLContext
@@ -94,7 +94,7 @@ IDataView data = mlContext.Data.LoadFromTextFile<HousingData>("Data/*", separato
 
 ### <a name="load-from-files-in-multiple-directories"></a>Laden von Dateien in mehreren Verzeichnissen
 
-Um Daten aus mehreren Verzeichnissen zu laden, verwenden Sie die [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*)-Methode, um einen [`TextLoader`](xref:Microsoft.ML.Data.TextLoader) zu erstellen. Verwenden Sie dann die [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*)-Methode, und geben Sie die einzelnen Dateipfade an (Platzhalter können nicht verwendet werden).
+Um Daten aus mehreren Verzeichnissen zu laden, verwenden Sie die [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%2A)-Methode, um einen [`TextLoader`](xref:Microsoft.ML.Data.TextLoader) zu erstellen. Verwenden Sie dann die [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load%2A)-Methode, und geben Sie die einzelnen Dateipfade an (Platzhalter können nicht verwendet werden).
 
 ```csharp
 //Create MLContext
@@ -116,7 +116,7 @@ ML.NET unterstützt das Laden von Daten aus einer Vielzahl von relationalen Date
 
 Bei einer Datenbank mit einer Tabelle mit dem Namen `House` und dem folgenden Schema:
 
-```SQL
+```sql
 CREATE TABLE [House] (
     [HouseId] INT NOT NULL IDENTITY,
     [Size] INT NOT NULL,
@@ -200,10 +200,10 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-Laden Sie die in-Memory-Sammlung mit der [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)-Methode in eine [`IDataView`](xref:Microsoft.ML.IDataView):
+Laden Sie die in-Memory-Sammlung mit der [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A)-Methode in eine [`IDataView`](xref:Microsoft.ML.IDataView):
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) geht davon aus, dass das [`IEnumerable`](xref:System.Collections.IEnumerable)-Element, aus dem es geladen wird, threadsicher ist.
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A) geht davon aus, dass das [`IEnumerable`](xref:System.Collections.IEnumerable)-Element, aus dem es geladen wird, threadsicher ist.
 
 ```csharp
 // Create MLContext

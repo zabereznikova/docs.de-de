@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung unter W
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9209d5bdec6dd85f6d21a502fb07204effef1934
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 249b4bccbf1378d8ef8c824f39151c33fb9f875a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617755"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557150"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Debuggen einer .NET für Apache Spark-Anwendung
 
@@ -61,7 +61,7 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 }
 ```
 
-Navigieren Sie zu der *.cs*-Datei mit der benutzerdefinierten Funktion, die Sie debuggen möchten, und [legen Sie einen Breakpoint fest](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019). Der Breakpoint zeigt die Meldung `The breakpoint will not currently be hit` an, weil der Worker die Assembly mit der benutzerdefinierten Funktion noch nicht geladen hat.
+Navigieren Sie zu der *.cs*-Datei mit der benutzerdefinierten Funktion, die Sie debuggen möchten, und [legen Sie einen Breakpoint fest](/visualstudio/debugger/using-breakpoints?view=vs-2019). Der Breakpoint zeigt die Meldung `The breakpoint will not currently be hit` an, weil der Worker die Assembly mit der benutzerdefinierten Funktion noch nicht geladen hat.
 
 Drücken Sie `F5`, um die Anwendung fortzusetzen. Der Breakpoint wird schließlich erreicht.
 

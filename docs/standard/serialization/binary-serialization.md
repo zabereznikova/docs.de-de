@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289693"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554494"
 ---
 # <a name="binary-serialization"></a>Binäre Serialisierung
 
@@ -350,8 +350,8 @@ Beschreibt den XML-Serialisierungsmechanismus, der in der Common Language Runtim
 - [Sicherheit und Serialisierung](../../framework/misc/security-and-serialization.md)\
 Beschreibt Richtlinien für das Schreiben sicheren Codes, die beim Schreiben von befolgt werden sollten, der Serialisierungen durchführt.
 
-- [.NET-Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+- [.NET-Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
 Beschreibt die verschiedenen Verfahren für die Remotekommunikation, die ab .NET Framework zur Verfügung stehen.
 
-- [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+- [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 In diesen Artikeln wird beschrieben und erklärt, wie mit ASP.NET erstellte XML-Webdienste programmiert werden.

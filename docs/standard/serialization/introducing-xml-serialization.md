@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 334cb3fe40c310189018d924aef552ecd87e9a65
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84277959"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535409"
 ---
 # <a name="xml-serialization"></a>XML-Serialisierung
 
@@ -39,7 +39,7 @@ Unter Serialisierung wird das Konvertieren des Zustands eines Objekts in eine Fo
 
  Die **XmlSerializer**-Klasse kann überdies ein Objekt serialisieren und einen codierten SOAP-XML-Stream generieren. Das generierte XML entspricht Abschnitt 5 des World Wide Web Consortium-Dokuments mit dem Titel "Simple Object Access-Protokoll (SOAP) 1.1." Weitere Informationen zu diesem Vorgang finden Sie unter [Vorgehensweise: Serialisieren eines Objekts als einen durch SOAP codierten XML-Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Eine Tabelle der Attribute, die sich auf den generierten XML-Code auswirken, finden Sie unter [Attributes That Control Encoded SOAP Serialization (Attribute zum Steuern der codierten SOAP-Serialisierung)](attributes-that-control-encoded-soap-serialization.md).
 
- Die **XmlSerializer**-Klasse generiert die SOAP-Nachrichten, die durch XML-Webdienste erstellt und an XML-Webdienste übergeben werden. Zur Steuerung der SOAP-Nachrichten können Sie Attribute auf die Klassen, Rückgabewerte, Parameter und Felder einer Webdienstdatei (ASMX) anwenden. Sie können sowohl die unter "Attribute zur Steuerung der XML-Serialisierung" als auch die unter "Attribute zur Steuerung der Serialisierung von codiertem SOAP" aufgeführten Attribute verwenden, weil XML-Webdienste sowohl das literale als auch das codierte SOAP-Format verarbeiten können. Weitere Informationen dazu, wie sich der von einem XML-Webdienst erzeugte XML-Code mit Attributen steuern lässt, finden Sie unter [XML Serialization with XML Web Services (XML-Serialisierung mit XML-Webdiensten)](xml-serialization-with-xml-web-services.md). Weitere Informationen zum SOAP und zu XML-Webdiensten finden Sie unter [Anpassen der Formatierung von SOAP-Nachrichten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
+ Die **XmlSerializer**-Klasse generiert die SOAP-Nachrichten, die durch XML-Webdienste erstellt und an XML-Webdienste übergeben werden. Zur Steuerung der SOAP-Nachrichten können Sie Attribute auf die Klassen, Rückgabewerte, Parameter und Felder einer Webdienstdatei (ASMX) anwenden. Sie können sowohl die unter "Attribute zur Steuerung der XML-Serialisierung" als auch die unter "Attribute zur Steuerung der Serialisierung von codiertem SOAP" aufgeführten Attribute verwenden, weil XML-Webdienste sowohl das literale als auch das codierte SOAP-Format verarbeiten können. Weitere Informationen dazu, wie sich der von einem XML-Webdienst erzeugte XML-Code mit Attributen steuern lässt, finden Sie unter [XML Serialization with XML Web Services (XML-Serialisierung mit XML-Webdiensten)](xml-serialization-with-xml-web-services.md). Weitere Informationen zum SOAP und zu XML-Webdiensten finden Sie unter [Anpassen der Formatierung von SOAP-Nachrichten](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>Sicherheitsüberlegungen zu XmlSerializer-Anwendungen
 

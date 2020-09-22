@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 5db9088a6b0d75ae5293b9be35346c4c2ddf81c6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 95f655ace1b2fb38100e3cc1089c4a3f61c5b264
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447224"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557358"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardformatzeichenfolgen für Datum und Uhrzeit
 
@@ -31,7 +31,7 @@ Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen 
 - Zum Definieren der Textdarstellung eines Datums- und Uhrzeitwerts, der bei einem Analysevorgang in einen <xref:System.DateTime>-Wert oder in einen <xref:System.DateTimeOffset>-Wert konvertiert werden kann.
 
 > [!TIP]
-> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
+> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
 
 Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:System.DateTime> und mit dem Wert <xref:System.DateTimeOffset> verwendet werden.
 
@@ -453,5 +453,5 @@ Die Formatierung wird durch die Eigenschaften des aktuellen <xref:System.Globali
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - [Formatierung von Typen](formatting-types.md)
 - [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

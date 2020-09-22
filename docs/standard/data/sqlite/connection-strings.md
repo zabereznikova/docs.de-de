@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen
 ms.date: 12/13/2019
 description: Hier werden die von Verbindungszeichenfolgen unterstützten Schlüsselwörter und Werte erläutert.
-ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c50b31689abf6d47aa8f83a6f6f755bcfec0ea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401196"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555392"
 ---
 # <a name="connection-strings"></a>Verbindungszeichenfolgen
 
@@ -92,7 +92,7 @@ Sie können <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> als stark
 
 Dies ist eine einfache Verbindungszeichenfolge mit freigegebenem Cache für verbesserte Parallelität.
 
-```ConnectionString
+```connectionstring
 Data Source=Application.db;Cache=Shared
 ```
 
@@ -100,7 +100,7 @@ Data Source=Application.db;Cache=Shared
 
 Dies ist eine verschlüsselte Datenbank.
 
-```ConnectionString
+```connectionstring
 Data Source=Encrypted.db;Password=MyEncryptionKey
 ```
 
@@ -108,7 +108,7 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 Dies ist eine schreibgeschützte Datenbank, die nicht von der App geändert werden kann.
 
-```ConnectionString
+```connectionstring
 Data Source=Reference.db;Mode=ReadOnly
 ```
 
@@ -116,7 +116,7 @@ Data Source=Reference.db;Mode=ReadOnly
 
 Dies ist eine private In-Memory-Datenbank.
 
-```ConnectionString
+```connectionstring
 Data Source=:memory:
 ```
 
@@ -124,7 +124,7 @@ Data Source=:memory:
 
 Dies ist eine In-Memory-Datenbank, die wie anhand des Namens *Sharable* bereits zu erkennen ist freigegeben werden kann.
 
-```ConnectionString
+```connectionstring
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 

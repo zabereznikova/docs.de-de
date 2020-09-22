@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: af08938b6b8f169ded2180529c2b4aadebefef55
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104014"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558809"
 ---
 # <a name="data-transformations-with-linq-c"></a>Datentransformationen mit LINQ (C#)
 Bei Language Integrated Query (LINQ) geht es nicht nur um das Abrufen von Daten. Es ist auch ein leistungsstarkes Tool zur Datentransformation. Mithilfe einer LINQ-Abfrage können Sie eine Quellsequenz als Eingabe verwenden und sie auf viele Arten zum Erstellen einer neuen Ausgabesequenz ändern. Sie können die Sequenz selbst durch Sortieren und Gruppieren ändern, ohne die Elemente zu ändern. Aber das vielleicht leistungsstärkste Feature von LINQ-Abfragen ist die Fähigkeit, neue Typen zu erstellen. Dies erfolgt in der [select](../../../language-reference/keywords/select-clause.md)-Klausel. Sie können z. B. folgende Aufgaben ausführen:  
@@ -88,7 +88,7 @@ Bei Language Integrated Query (LINQ) geht es nicht nur um das Abrufen von Daten.
 </Root>  
 ```  
   
- Weitere Informationen finden Sie unter [Erstellen von XML-Strukturen in C# (LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md).  
+ Weitere Informationen finden Sie unter [Erstellen von XML-Strukturen in C# (LINQ to XML)](../../../../standard/linq/create-xml-trees.md).  
   
 ## <a name="performing-operations-on-source-elements"></a>Ausführen von Operationen für Quellelemente  
  Eine Ausgabesequenz enthält möglicherweise keine Elemente oder Elementeigenschaften aus der Quellsequenz. Die Ausgabe kann möglicherweise stattdessen eine Sequenz von Werten enthalten, die durch Verwendung der Quellelemente als Eingabeargumente berechnet wird.
@@ -107,6 +107,6 @@ Bei Language Integrated Query (LINQ) geht es nicht nur um das Abrufen von Daten.
 - [Language Integrated Query (LINQ) (C#)](./index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
-- [LINQ to XML (C#)](./linq-to-xml-overview.md)
+- [LINQ to XML (C#)](../../../../standard/linq/linq-xml-overview.md)
 - [LINQ-Abfrageausdrücke](../../../linq/index.md)
 - [select-Klausel](../../../language-reference/keywords/select-clause.md)

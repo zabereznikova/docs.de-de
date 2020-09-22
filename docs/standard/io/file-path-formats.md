@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271788"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679598"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -43,7 +43,7 @@ Wenn alle drei Komponenten vorhanden sind, ist der Pfad absolut. Wenn kein Volum
 > [!IMPORTANT]
 > Beachten Sie den Unterschied zwischen den letzten beiden Pfaden. Beide geben den optionalen Volumebezeichner (in beiden Fällen `C:`) an. Der erste beginnt jedoch im Gegensatz zum zweiten mit dem Stamm des angegebenen Volumes. Daher ist der erste ein absoluter Pfad vom Stammverzeichnis des Laufwerks `C:`, während der zweite ein relativer Pfad vom aktuellen Verzeichnis des Laufwerks `C:` ist. Verwenden Sie das zweite Format, wenn das erste als Ursache für Fehler mit Windows-Dateipfaden bekannt ist.
 
-Sie können ermitteln, ob ein Dateipfad absolut ist (d.h. der Pfad ist unabhängig vom aktuellen Verzeichnis und ändert sich nicht, wenn das aktuelle Verzeichnis geändert wird), indem Sie die Methode <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> aufrufen. Beachten Sie, dass ein solcher Pfad relative Verzeichnissegmente (`.` und `..`) enthalten und weiterhin absolut sein kann, wenn der aufgelöste Pfad immer zum gleichen Speicherort führt.
+Sie können ermitteln, ob ein Dateipfad absolut ist (d.h. der Pfad ist unabhängig vom aktuellen Verzeichnis und ändert sich nicht, wenn das aktuelle Verzeichnis geändert wird), indem Sie die Methode <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWithType> aufrufen. Beachten Sie, dass ein solcher Pfad relative Verzeichnissegmente (`.` und `..`) enthalten und weiterhin absolut sein kann, wenn der aufgelöste Pfad immer zum gleichen Speicherort führt.
 
 Im folgenden Beispiel wird der Unterschied zwischen absoluten und relativen Pfaden veranschaulicht. Es wird vorausgesetzt, dass das Verzeichnis `D:\FY2018\` vorhanden ist, und dass Sie kein aktuelles Verzeichnis für `D:\` über die Eingabeaufforderung festgelegt haben, bevor Sie das Beispiel ausführen.
 

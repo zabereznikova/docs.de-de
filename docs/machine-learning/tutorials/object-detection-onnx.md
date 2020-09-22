@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 49817f9ad712e50669bab958296946c06d5c19eb
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803403"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679415"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 
@@ -492,22 +492,22 @@ Genau wie bei der Nachverarbeitung gibt sind einige Bewertungsschritte erforderl
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET-Pipelines müssen das Datenschema kennen, das verwendet werden soll, wenn die Methode [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) aufgerufen wird. In diesem Fall wird ein Prozess ähnlich dem Training verwendet. Da jedoch kein tatsächliches Training stattfindet, ist es akzeptabel, eine leere [`IDataView`](xref:Microsoft.ML.IDataView) zu verwenden. Erstellen Sie eine neue [`IDataView`](xref:Microsoft.ML.IDataView) für die Pipeline aus einer leeren Liste.
+    ML.NET-Pipelines müssen das Datenschema kennen, das verwendet werden soll, wenn die Methode [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A) aufgerufen wird. In diesem Fall wird ein Prozess ähnlich dem Training verwendet. Da jedoch kein tatsächliches Training stattfindet, ist es akzeptabel, eine leere [`IDataView`](xref:Microsoft.ML.IDataView) zu verwenden. Erstellen Sie eine neue [`IDataView`](xref:Microsoft.ML.IDataView) für die Pipeline aus einer leeren Liste.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     Definieren Sie darunter die Pipeline. Die Pipeline besteht aus vier Transformationen.
 
-    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*) lädt das Bild als Bitmap.
-    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*) wandelt das Bild um die angegebene Größe um (in diesem Fall `416 x 416`).
-    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*) ändert die Pixeldarstellung des Bilds aus einer Bitmap in einen numerischen Vektor.
-    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*) lädt das ONNX-Modell und verwendet es, um die bereitgestellten Daten zu bewerten.
+    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages%2A) lädt das Bild als Bitmap.
+    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages%2A) wandelt das Bild um die angegebene Größe um (in diesem Fall `416 x 416`).
+    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels%2A) ändert die Pixeldarstellung des Bilds aus einer Bitmap in einen numerischen Vektor.
+    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A) lädt das ONNX-Modell und verwendet es, um die bereitgestellten Daten zu bewerten.
 
     Definieren Sie die Pipeline in der `LoadModel`-Methode unter der `data`-Variablen.
 
     [!code-csharp [ScoringPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L55-L58)]
 
-    Jetzt ist es an der Zeit, das Modell für die Bewertung zu instanziieren. Rufen Sie die [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*)-Methode für die Pipeline auf, und geben Sie sie zur weiteren Verarbeitung zurück.
+    Jetzt ist es an der Zeit, das Modell für die Bewertung zu instanziieren. Rufen Sie die [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A)-Methode für die Pipeline auf, und geben Sie sie zur weiteren Verarbeitung zurück.
 
     [!code-csharp [FitReturnModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L61-L63)]
 
@@ -524,7 +524,7 @@ Fügen Sie in `PredictDataUsingModel` den folgenden Code für die Protokollierun
 
 [!code-csharp [PredictDataLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L68-L71)]
 
-Verwenden Sie dann die [`Transform`](xref:Microsoft.ML.ITransformer.Transform*)-Methode, um die Daten zu bewerten.
+Verwenden Sie dann die [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A)-Methode, um die Daten zu bewerten.
 
 [!code-csharp [ScoreImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L73)]
 
@@ -626,11 +626,11 @@ Legen Sie darunter die Schriftart- und Farboptionen für den Text und den Begren
 
 [!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
 
-Erstellen und füllen Sie ein Rechteck oberhalb des Begrenzungsrahmens mithilfe der [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*)-Methode, damit es den Text enthält. Dies hilft dabei, den Text vom Hintergrund abzuheben und die Lesbarkeit zu verbessern.
+Erstellen und füllen Sie ein Rechteck oberhalb des Begrenzungsrahmens mithilfe der [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle%2A)-Methode, damit es den Text enthält. Dies hilft dabei, den Text vom Hintergrund abzuheben und die Lesbarkeit zu verbessern.
 
 [!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
 
-Zeichnen Sie dann den Text und den Begrenzungsrahmen auf dem Bild mithilfe der Methoden [`DrawString`](xref:System.Drawing.Graphics.DrawString*) und [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*).
+Zeichnen Sie dann den Text und den Begrenzungsrahmen auf dem Bild mithilfe der Methoden [`DrawString`](xref:System.Drawing.Graphics.DrawString%2A) und [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle%2A).
 
 [!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
 

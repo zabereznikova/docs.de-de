@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 6e0051e3181e03070436b8d53d30326e8d71d096
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622574"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547883"
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
 
@@ -62,7 +62,7 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  Enthält Informationen über die Zwischenspeicherung, die verzögerte Initialisierung, Zuverlässigkeit und ETW-Ereignisse.  
 
 ## <a name="reference"></a>Referenz  
- [.NET Framework-Klassenbibliothek](/dotnet/api/?view=netframework-4.7)  
+ [.NET Framework-Klassenbibliothek](../../api/index.md?view=netframework-4.7)  
  Stellt Syntax, Codebeispiele und Informationen zur Verwendung zu den einzelnen Klassen zur Verfügung, die in den .NET Framework-Namespaces enthalten sind.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

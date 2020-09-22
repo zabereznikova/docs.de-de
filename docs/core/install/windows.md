@@ -4,12 +4,12 @@ description: Informationen zu den Windows-Versionen, unter denen Sie .NET Core i
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 12cffb78de803845a4b18adc70289993e67f64f1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308948"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538288"
 ---
 # <a name="install-net-core-on-windows"></a>Installieren von .NET Core unter Windows
 
@@ -96,7 +96,7 @@ Die folgenden Windows-Versionen werden von .NET Core 3.1 unterstützt:
 
 | Betriebssystem                            | Version                        | Architekturen   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows-Client                | 8.1                            | x64, x86        |
+| Windows-Client                | 7 SP1 oder höher, 8.1                    | x64, x86        |
 | Windows 10-Client             | Version 1609 und höher                  | x64, x86        |
 | Windows Server                | 2012 R2 oder höher                       | x64, x86        |
 | Nano Server                   | Version 1803 oder höher                  | x64, ARM32      |
@@ -190,7 +190,7 @@ Die oben aufgeführten Anforderungen sind auch erforderlich, wenn einer der folg
 
 Die [dotnet-install-Skripts](../tools/dotnet-install-script.md) werden für die CI-Automatisierung und Installationen der Runtime durch Benutzer ohne Administratorrechte verwendet. Sie können das Skript über die Seite [dotnet-install-Skriptverweis](../tools/dotnet-install-script.md) herunterladen.
 
-Das Skript installiert standardmäßig die neueste [Langzeitunterstützungsversion](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), nämlich .NET Core 3.1. Sie können eine bestimmte Version durch Angeben der `Channel`-Option auswählen. Schließen Sie die `Runtime`-Option mit ein, um eine Runtime zu installieren. Andernfalls installiert das Skript das [SDK](sdk.md) nicht.
+Das Skript installiert standardmäßig die neueste [Langzeitunterstützungsversion](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), nämlich .NET Core 3.1. Sie können eine bestimmte Version durch Angeben der `Channel`-Option auswählen. Schließen Sie die `Runtime`-Option mit ein, um eine Runtime zu installieren. Andernfalls installiert das Skript das SDK nicht.
 
 ```powershell
 dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore

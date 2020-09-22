@@ -2,12 +2,12 @@
 title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
 ms.date: 04/28/2020
-ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442227"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537827"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -186,6 +186,6 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
   Informationen zur Verwendung von `NuspecFile`, `NuspecBasePath` und `NuspecProperties` finden Sie in den folgenden Ressourcen:
   
-  - [Packen mithilfe einer NUSPEC-Datei](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
-  - [Verbesserte Erweiterungspunkte zum Erstellen benutzerdefinierter Pakete](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [Globale Eigenschaften](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [Packen mithilfe einer NUSPEC-Datei](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [Verbesserte Erweiterungspunkte zum Erstellen benutzerdefinierter Pakete](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [Globale Eigenschaften](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)

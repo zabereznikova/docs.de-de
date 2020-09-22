@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 513c5dde1526a8a21f68171f304b245d0a34f563
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 617757581f6d2491098e1172072bdf0387c6852b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594464"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558913"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Datenparallelität (Task Parallel Library)
 *Datenparallelismus* verweist auf Szenarios, in denen der gleiche Vorgang gleichzeitig (d.h. parallel) für Elemente in einer Quellauflistung oder einem Array ausgeführt wird. In parallelen Datenvorgängen wird die Quellauflistung partitioniert, sodass mehrere Threads gleichzeitig auf verschiedene Segmente angewendet werden können.  
@@ -44,7 +44,7 @@ ms.locfileid: "84594464"
 |-----------|-----------------|  
 |[How to: Schreiben einer einfachen Parallel.For-Schleife](how-to-write-a-simple-parallel-for-loop.md)|Beschreibt, wie eine <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife über jedes Array oder indizierbare <xref:System.Collections.Generic.IEnumerable%601>-Quellauflistung geschrieben wird.|  
 |[How to: Schreiben einer einfachen Parallel.ForEach-Schleife](how-to-write-a-simple-parallel-foreach-loop.md)|Beschreibt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife über jede <xref:System.Collections.Generic.IEnumerable%601>-Quellauflistung geschrieben wird.|  
-|[How to: Stopp oder Pause durch eine Parallel.For-Schleife](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|Beschreibt, wie eine parallele Schleife beendet oder unterbrochen wird, damit alle Threads von der Aktion informiert werden.|  
+|[How to: Stopp oder Pause durch eine Parallel.For-Schleife](/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|Beschreibt, wie eine parallele Schleife beendet oder unterbrochen wird, damit alle Threads von der Aktion informiert werden.|  
 |[How to: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Beschreibt, wie eine <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife geschrieben wird, in der jeder Thread eine private Variable beibehält, die für alle anderen Threads nicht sichtbar ist, und wie die Ergebnisse von allen Threads synchronisiert werden, wenn die Schleife abgeschlossen wird.|  
 |[How to: Schreiben einer Parallel.ForEach-Schleife mit partitionslokalen Variablen](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|Beschreibt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife geschrieben wird, in der jeder Thread eine private Variable beibehält, die für alle anderen Threads nicht sichtbar ist, und wie die Ergebnisse von allen Threads synchronisiert werden, wenn die Schleife abgeschlossen wird.|  
 |[How to: Abbrechen einer Parallel.For-Schleife oder einer ForEach-Schleife](how-to-cancel-a-parallel-for-or-foreach-loop.md)|Beschreibt, wie eine parallele Schleife mit einem <xref:System.Threading.CancellationToken?displayProperty=nameWithType>-Objekt abgebrochen wird|  

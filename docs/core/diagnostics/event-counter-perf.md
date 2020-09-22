@@ -3,12 +3,12 @@ title: Messen der Leistung mithilfe von EventCounters in .NET Core
 description: In diesem Tutorial erfahren Sie, wie Sie die Leistung mithilfe von EventCounters messen.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7b4940e17d01e7ec5a50d11e3c818ecdec2d48cf
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024964"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538565"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: Messen der Leistung mithilfe von EventCounters in .NET Core
 
@@ -29,11 +29,11 @@ Im Tutorial wird Folgendes verwendet:
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) oder höher
 - [dotnet-counters](dotnet-counters.md) zum Überwachen von Ereignisleistungsindikatoren.
-- Eine [Beispieldebugziel](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)-App für die Diagnose.
+- Eine [Beispieldebugziel](/samples/dotnet/samples/diagnostic-scenarios)-App für die Diagnose.
 
 ## <a name="get-the-source"></a>Herunterladen des Quellcodes
 
-Die Beispielanwendung wird als Grundlage für die Überwachung verwendet. Das [ASP.NET Core-Beispielrepository](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) ist im Beispielbrowser verfügbar. Sie laden die ZIP-Datei herunter, extrahieren Sie nach dem Download und öffnen sie in Ihrer bevorzugten IDE. Erstellen Sie die Anwendung, und führen Sie sie aus, um sicherzustellen, dass sie ordnungsgemäß funktioniert.
+Die Beispielanwendung wird als Grundlage für die Überwachung verwendet. Das [ASP.NET Core-Beispielrepository](/samples/dotnet/samples/diagnostic-scenarios) ist im Beispielbrowser verfügbar. Sie laden die ZIP-Datei herunter, extrahieren Sie nach dem Download und öffnen sie in Ihrer bevorzugten IDE. Erstellen Sie die Anwendung, und führen Sie sie aus, um sicherzustellen, dass sie ordnungsgemäß funktioniert.
 
 ## <a name="implement-an-eventsource"></a>Implementieren einer EventSource
 

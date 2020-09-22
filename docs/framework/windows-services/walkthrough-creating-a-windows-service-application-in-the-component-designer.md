@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 04f27729b5713c325a73cbdeb1c6c673fe749c00
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925630"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544205"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Erstellen einer Windows-Dienst-App
 
@@ -471,7 +471,7 @@ Jeder Windows-Dienst hat einen Verzeichniseintrag unter dem Unterschlüssel **HK
 
 Nachdem Sie den Windows-Dienst nun erstellt haben, können Sie ihn installieren. Soll ein Windows-Dienst installiert werden, müssen Sie über Administratorberechtigungen für den Computer verfügen, auf dem Sie ihn installieren.
 
-1. Öffnen Sie die [Developer-Eingabeaufforderung für Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) mit Administratoranmeldeinformationen. Wählen Sie im Windows-**Startmenü** im Visual Studio-Ordner **Developer-Eingabeaufforderung für Visual Studio 2017** aus, und klicken Sie dann im Kontextmenü auf **Mehr** > **Als Administrator ausführen**.
+1. Öffnen Sie die [Developer-Eingabeaufforderung für Visual Studio](../tools/developer-command-prompt-for-vs.md) mit Administratoranmeldeinformationen. Wählen Sie im Windows-**Startmenü** im Visual Studio-Ordner **Developer-Eingabeaufforderung für Visual Studio 2017** aus, und klicken Sie dann im Kontextmenü auf **Mehr** > **Als Administrator ausführen**.
 
 2. Navigieren Sie im Fenster **Developer-Eingabeaufforderung für Visual Studio** zu dem Ordner, der die Ausgabe Ihres Projekts enthält (standardmäßig das Unterverzeichnis *\bin\Debug* Ihres Projekts).
 

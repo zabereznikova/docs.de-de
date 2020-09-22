@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: 5639f4bdb83906273b60ed20494c288286f32560
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b14191d798baf458bd860c00913683f53d0a1fd8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288198"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555652"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Gewusst wie: Iterieren von Dateiverzeichnissen der Parallel-Klasse
 In vielen Fällen lässt sich die Dateiiteration problemlos parallelisieren. Das Thema [Gewusst wie: Iterieren von Dateiverzeichnissen mit PLINQ](how-to-iterate-file-directories-with-plinq.md) zeigt die einfachste Möglichkeit zum Ausführen dieser Aufgabe für viele Szenarien. Wenn der Code die vielen Arten von Ausnahmen behandeln muss, die auftreten können, wenn der Zugriff über das Dateisystem erfolgt, können jedoch Komplikationen auftreten. Im folgenden Beispiel wird ein Verfahren zum Lösen des Problems gezeigt. Alle Dateien und Ordner in einem angegebenen Verzeichnis werden mit stapelbasierte Iteration durchlaufen, und der Code kann verschiedene Ausnahmen abfangen und behandeln. Wie die Ausnahmen behandelt werden, müssen natürlich Sie bestimmen.  
@@ -28,7 +28,7 @@ In vielen Fällen lässt sich die Dateiiteration problemlos parallelisieren. Das
   
  Im Beispiel wird die lokale Variable `fileCount` verwendet, um eine Zählung der Gesamtanzahl der verarbeiteten Dateien zu verwalten. Da auf die Variable möglicherweise gleichzeitig von mehreren Aufgaben zugegriffen wird, wird der Zugriff darauf synchronisiert, indem die <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>-Methode aufgerufen wird.  
   
- Beachten Sie, dass die Ausführung der von der <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Methode gestarteten Threads möglicherweise fortgesetzt wird, wenn im Hauptthread eine Ausnahme ausgelöst wird. Um diese Threads zu beenden, können Sie in den Ausnahmehandlern eine boolesche Variable festlegen und in jeder Iteration der parallelen Schleife den Wert dieser Variablen überprüfen. Wenn der Wert angibt, dass eine Ausnahme ausgelöst wurde, verwenden Sie die <xref:System.Threading.Tasks.ParallelLoopState>-Variable, um die Schleife zu beenden oder zu verlassen. Weitere Informationen finden Sie unter [Gewusst wie: Beenden oder Verlassen einer Parallel.For-Schleife](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
+ Beachten Sie, dass die Ausführung der von der <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Methode gestarteten Threads möglicherweise fortgesetzt wird, wenn im Hauptthread eine Ausnahme ausgelöst wird. Um diese Threads zu beenden, können Sie in den Ausnahmehandlern eine boolesche Variable festlegen und in jeder Iteration der parallelen Schleife den Wert dieser Variablen überprüfen. Wenn der Wert angibt, dass eine Ausnahme ausgelöst wurde, verwenden Sie die <xref:System.Threading.Tasks.ParallelLoopState>-Variable, um die Schleife zu beenden oder zu verlassen. Weitere Informationen finden Sie unter [Gewusst wie: Beenden oder Verlassen einer Parallel.For-Schleife](/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
   
 ## <a name="see-also"></a>Weitere Informationen
 

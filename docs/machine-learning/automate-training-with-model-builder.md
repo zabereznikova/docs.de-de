@@ -3,12 +3,12 @@ title: Was ist der Modell-Generator und wie funktioniert er?
 description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators zum automatischen Trainieren eines Machine Learning-Modells.
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289498"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679676"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -111,7 +111,7 @@ Wenn Sie noch keine eigenen Daten haben, probieren Sie eines dieser Datasets aus
 |-|-|-|-|-|
 |Klassifizierung|Vorhersage von Umsatzanomalien|[product sales data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Produktverkäufe|Monat|
 ||Stimmungsvorhersage für Websitekommentare|[website comment data](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Bezeichnung (0 bei negativer Stimmung, 1, wenn positiv)|Kommentar, Jahr|
-||Vorhersage betrügerischer Kreditkartentransaktionen|[credit card data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasse (1, wenn betrügerisch, andernfalls 0)|Betrag, V1-V28 (anonymisierte Features)|
+||Vorhersage betrügerischer Kreditkartentransaktionen|[credit card data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasse (1, wenn betrügerisch, andernfalls 0)|Betrag, V1-V28 (anonymisierte Features)|
 ||Vorhersage des Issuetyps in einem GitHub-Repository|[GitHub issue data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Bereich|Titel, Beschreibung|
 |Wertvorhersage|Vorhersage des Preises für eine Taxifahrt|[taxi fare data](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Preis|Fahrtzeit, Strecke|
 |Bildklassifizierung|Vorhersage der Kategorie einer Blume |[flower images](http://download.tensorflow.org/example_images/flower_photos.tgz)|Der Typ Blume: Gänseblümchen, Löwenzahn, Rosen, Sonnenblumen, Tulpen|Die Bilddaten selbst|

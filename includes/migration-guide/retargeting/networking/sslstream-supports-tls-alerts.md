@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 0024b2a53444319788b8cdd312d537f994070b5e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5b566dd89801caff7a253abc2fb62c5fd79591f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614511"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606637"
 ---
 ### <a name="sslstream-supports-tls-alerts"></a>SslStream unterstützt TLS-Warnungen
 
 #### <a name="details"></a>Details
 
-Nach einem fehlgeschlagenen TLS-Handshake wird eine <xref:System.IO.IOException?displayProperty=fullName> mit einer inneren <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> von dem ersten E/A-Lese-/Schreibvorgang ausgelöst. Der <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName>-Code für die <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> kann der TLS-Warnung von der Remotepartei mit den [Schannel-Fehlercodes für TLS- und SSL-Warnungen](https://docs.microsoft.com/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts) zugeordnet werden. Weitere Informationen finden Sie unter [RFC 2246: Abschnitt 7.2.2, Fehlerwarnungen](https://tools.ietf.org/html/rfc2246#section-7.2.2). <br/>Das Verhalten in .NET Framework 4.6.2 und früheren Versionen besteht darin, dass für den Transportkanal (in der Regel eine TCP-Verbindung) ein Timeout während des Schreib- oder Lesevorgangs auftritt, wenn beim Handshake bei der anderen Partei ein Fehler aufgetreten ist und die Verbindung unmittelbar danach zurückgewiesen wurde.
+Nach einem fehlgeschlagenen TLS-Handshake wird eine <xref:System.IO.IOException?displayProperty=fullName> mit einer inneren <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> von dem ersten E/A-Lese-/Schreibvorgang ausgelöst. Der <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName>-Code für die <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> kann der TLS-Warnung von der Remotepartei mit den [Schannel-Fehlercodes für TLS- und SSL-Warnungen](/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts) zugeordnet werden. Weitere Informationen finden Sie unter [RFC 2246: Abschnitt 7.2.2, Fehlerwarnungen](https://tools.ietf.org/html/rfc2246#section-7.2.2). <br/>Das Verhalten in .NET Framework 4.6.2 und früheren Versionen besteht darin, dass für den Transportkanal (in der Regel eine TCP-Verbindung) ein Timeout während des Schreib- oder Lesevorgangs auftritt, wenn beim Handshake bei der anderen Partei ein Fehler aufgetreten ist und die Verbindung unmittelbar danach zurückgewiesen wurde.
 
 #### <a name="suggestion"></a>Vorschlag
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: 10626e00eb340d84653419da18a0b219ef1d197e
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: dc36533a4f0c48e8e8a5930540746a46ba596751
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517021"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543237"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
 Das Windows-Runtime-Metadatenexport-Tool (Winmdexp.exe) transformiert ein .NET Framework-Modul in eine Datei, die Windows-Runtime-Metadaten enthält. Obwohl .NET Framework-Assemblys und Windows-Runtime-Metadatendateien dasselbe physische Format haben, gibt es Unterschiede bezüglich des Inhalts der Metadatentabellen, was bedeutet, dass .NET Framework-Assemblys nicht automatisch als Komponenten für Windows-Runtime verwendet werden können. Der Prozess des Konvertierens eines .NET Framework-Moduls in eine Komponente für Windows-Runtime wird als *Exportieren* bezeichnet. In .NET Framework 4.5 und .NET Framework 4.5.1 enthält die resultierende Windows-Metadatendatei (.winmd) sowohl die Metadaten als auch die Implementierung.  
@@ -45,13 +45,13 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|Gibt eine Antwortdatei (.rsp) an, die Optionen enthält (und optional `winmdmodule`). Jede Zeile in `responsefile` sollte ein einzelnes Argument oder eine einzelne Option enthalten.|  
   
 ## <a name="remarks"></a>Hinweise  
- "Winmdexp.exe" kann nicht verwendet werden, um eine beliebige .NET Framework-Assembly in eine WINMD-Datei zu konvertieren. Ein Modul ist erforderlich, das mit der `/target:winmdobj`-Option kompiliert wird, und es gelten zusätzliche Einschränkungen. Die wichtigste dieser Einschränkungen besteht darin, dass alle Typen, die in der API-Schnittstelle der Assembly verfügbar gemacht werden, Windows-Runtime-Typen sein müssen. Weitere Informationen finden Sie im Abschnitt „Deklarieren von Typen in Windows-Runtime-Komponenten“ des Artikels [Erstellen von Windows-Runtime-Komponenten in C# und Visual Basic](https://docs.microsoft.com/previous-versions/br230301(v=vs.110)).
+ "Winmdexp.exe" kann nicht verwendet werden, um eine beliebige .NET Framework-Assembly in eine WINMD-Datei zu konvertieren. Ein Modul ist erforderlich, das mit der `/target:winmdobj`-Option kompiliert wird, und es gelten zusätzliche Einschränkungen. Die wichtigste dieser Einschränkungen besteht darin, dass alle Typen, die in der API-Schnittstelle der Assembly verfügbar gemacht werden, Windows-Runtime-Typen sein müssen. Weitere Informationen finden Sie im Abschnitt „Deklarieren von Typen in Windows-Runtime-Komponenten“ des Artikels [Erstellen von Windows-Runtime-Komponenten in C# und Visual Basic](/previous-versions/br230301(v=vs.110)).
   
  Wenn Sie eine Windows 8.x Store-App oder eine Komponente für Windows-Runtime mit C# oder Visual Basic schreiben, bietet .NET Framework Unterstützung für das einfachere Programmieren mit der Windows-Runtime. Dies wird im Artikel [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) behandelt. Während dieses Vorgangs werden einige häufig verwendete Windows-Runtime-Typen .NET Framework-Typen zugeordnet. „Winmdexp.ex“e kehrt diesen Prozess um und erzeugt eine API-Schnittstelle, die die entsprechenden Windows-Runtime-Typen verwendet. So werden beispielsweise Typen, die aus der <xref:System.Collections.Generic.IList%601>-Schnittstelle erstellt werden, Typen zugeordnet, die über die <xref:Windows.Foundation.Collections.IVector%601>-Schnittstelle von Windows-Runtime erstellt werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
-- [Erstellen von Windows-Runtime-Komponenten in C# und Visual Basic](https://docs.microsoft.com/previous-versions/br230301(v=vs.110))
+- [Erstellen von Windows-Runtime-Komponenten in C# und Visual Basic](/previous-versions/br230301(v=vs.110))
 - [Winmdexp.exe-Fehlermeldungen](winmdexp-exe-error-messages.md)
-- [Build-, Bereitstellungs- und Konfigurationstools (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))
+- [Build-, Bereitstellungs- und Konfigurationstools (.NET Framework)](/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-ms.openlocfilehash: a9c044254423d0f9d266539c728a6604f562e97d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a5f6a26ada321bd351249c5179d050ee571b550c
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290005"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679337"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>Vorgehensweise: Erstellen und Ausführen einer einfachen PLINQ-Abfrage
 
-Das Beispiel in diesem Artikel zeigt, wie Sie eine einfache Parallel LINQ-Abfrage (Language Integrated Query) erstellen, indem Sie die <xref:System.Linq.ParallelEnumerable.AsParallel%2A?displayProperty=nameWithType>-Erweiterungsmethode in der Quellsequenz verwenden und die Abfrage mit der <xref:System.Linq.ParallelEnumerable.ForAll%2A?displayProperty=nameWithTyp>-Methode ausführen.  
+Das Beispiel in diesem Artikel zeigt, wie Sie eine einfache Parallel LINQ-Abfrage (Language Integrated Query) erstellen, indem Sie die <xref:System.Linq.ParallelEnumerable.AsParallel%2A?displayProperty=nameWithType>-Erweiterungsmethode in der Quellsequenz verwenden und die Abfrage mit der <xref:System.Linq.ParallelEnumerable.ForAll%2A?displayProperty=nameWithType>-Methode ausführen.  
   
 > [!NOTE]
 > In dieser Dokumentation werden Delegaten in PLINQ mithilfe von Lambdaausdrücken definiert. Falls Sie mit der Verwendung von Lambda-Ausdrücken in C# oder Visual Basic nicht vertraut sind, finden Sie entsprechende Informationen unter [Lambda Expressions in PLINQ and TPL (Lambda-Ausdrücke in PLINQ und TPL)](lambda-expressions-in-plinq-and-tpl.md).  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-ms.openlocfilehash: 0be5a5817bd92c5be6b701200a74650ef9de1955
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 11925e3e126620788bb09e90e4d2528dbaf56581
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621482"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547765"
 ---
 # <a name="marshaling-strings"></a>Marshalling von Zeichenfolgen
 Der Plattformaufruf kopiert Zeichenfolgenparameter, wobei das .NET Framework-Format (Unicode) bei Bedarf in das nicht verwaltete Format (ANSI) konvertiert wird. Da verwaltete Zeichenfolgen unveränderlich sind, kopieren Plattformaufrufe sie bei Rückgabe der Funktion nicht aus dem nicht verwalteten Speicher in den verwalteten Arbeitsspeicher.  
@@ -27,13 +27,13 @@ Der Plattformaufruf kopiert Zeichenfolgenparameter, wobei das .NET Framework-For
 |Zeichenfolge|Beschreibung|Beispiel|  
 |------------|-----------------|------------|  
 |Nach Wert.|Übergibt Zeichenfolgen als In-Parameter.|[MsgBox](msgbox-sample.md)|  
-|Als Ergebnis.|Gibt Zeichenfolgen aus nicht verwaltetem Code zurück.|[Zeichenfolgen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|Nach Verweis.|Übergibt Zeichenfolgen als In/Out-Parameter mit <xref:System.Text.StringBuilder>.|[Puffer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
-|In einer Struktur nach Wert.|Zeichenfolgen werden in einer Struktur, die ein In-Parameter ist, übergeben.|[Strukturen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
-|In einer Struktur nach Verweis **(char\*)** .|Zeichenfolgen werden in einer Struktur, die ein In/Out-Parameter ist, übergeben. Die nicht verwaltete Funktion erwartet einen Zeiger auf einen Zeichenpuffer, und die Größe des Puffers ist ein Element der Struktur.|[Zeichenfolgen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|In einer Struktur nach Verweis **(char[])** .|Zeichenfolgen werden in einer Struktur, die ein In/Out-Parameter ist, übergeben. Die nicht verwaltete Funktion erwartet einen eingebetteten Zeichenpuffer.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
-|In einer Klasse nach Wert **(char\*)** .|Zeichenfolgen werden in einer Klasse übergeben (eine Klasse ist ein In/Out-Parameter). Die nicht verwaltete Funktion erwartet einen Zeiger auf einen Zeichenpuffer.|[OpenFileDlg](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
-|In einer Klasse nach Wert **(char[])** .|Zeichenfolgen werden in einer Klasse übergeben (eine Klasse ist ein In/Out-Parameter). Die nicht verwaltete Funktion erwartet einen eingebetteten Zeichenpuffer.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
+|Als Ergebnis.|Gibt Zeichenfolgen aus nicht verwaltetem Code zurück.|[Zeichenfolgen](/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
+|Nach Verweis.|Übergibt Zeichenfolgen als In/Out-Parameter mit <xref:System.Text.StringBuilder>.|[Puffer](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
+|In einer Struktur nach Wert.|Zeichenfolgen werden in einer Struktur, die ein In-Parameter ist, übergeben.|[Strukturen](/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
+|In einer Struktur nach Verweis **(char\*)** .|Zeichenfolgen werden in einer Struktur, die ein In/Out-Parameter ist, übergeben. Die nicht verwaltete Funktion erwartet einen Zeiger auf einen Zeichenpuffer, und die Größe des Puffers ist ein Element der Struktur.|[Zeichenfolgen](/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
+|In einer Struktur nach Verweis **(char[])** .|Zeichenfolgen werden in einer Struktur, die ein In/Out-Parameter ist, übergeben. Die nicht verwaltete Funktion erwartet einen eingebetteten Zeichenpuffer.|[OSInfo](/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
+|In einer Klasse nach Wert **(char\*)** .|Zeichenfolgen werden in einer Klasse übergeben (eine Klasse ist ein In/Out-Parameter). Die nicht verwaltete Funktion erwartet einen Zeiger auf einen Zeichenpuffer.|[OpenFileDlg](/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
+|In einer Klasse nach Wert **(char[])** .|Zeichenfolgen werden in einer Klasse übergeben (eine Klasse ist ein In/Out-Parameter). Die nicht verwaltete Funktion erwartet einen eingebetteten Zeichenpuffer.|[OSInfo](/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
 |Als Array aus Zeichenfolgen nach Wert.|Erstellt ein Array aus Zeichenfolgen, das als Wert übergeben wird.|[Arrays](marshaling-different-types-of-arrays.md)|  
 |Als ein Array von Strukturen, das Zeichenfolgen nach Wert enthält.|Erstellt ein Array von Strukturen, das Zeichenfolgen enthält, und das Array wird nach Wert übergeben.|[Arrays](marshaling-different-types-of-arrays.md)|  
   
@@ -43,4 +43,4 @@ Der Plattformaufruf kopiert Zeichenfolgenparameter, wobei das .NET Framework-For
 - [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)
 - [Marshallen von Klassen, Strukturen und Unions](marshaling-classes-structures-and-unions.md)
 - [Maushallen verschiedener Typen von Arrays](marshaling-different-types-of-arrays.md)
-- [Verschiedene Marshallingbeispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
+- [Verschiedene Marshallingbeispiele](/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))

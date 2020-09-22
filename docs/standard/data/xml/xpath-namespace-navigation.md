@@ -3,17 +3,17 @@ title: XPath-Namespacenavigation
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: dce7d81d4249cb40c3be6dee4b8bd25951ccb10a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bad5e1245c7f48c114bd2a1809822cc131dad75a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283207"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551958"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath-Namespacenavigation
 Zum Verwenden von XPath-Abfragen mit XML-Dokumenten müssen Sie XML-Namespaces und die darin enthaltenen Elemente korrekt adressieren. Mithilfe von Namespaces werden Zweideutigkeiten vermieden, die auftreten können, wenn Namen in mehr als einem Kontext verwendet werden. Der Name `ID` kann beispielsweise auf mehrere ID-Bezeichner verweisen, die unterschiedlichen Elementen eines XML-Dokuments zugewiesen sind. In der Namespace-Syntax werden URIs, Namen und Präfixe zur Unterscheidung der Elemente in einem XML-Dokument definiert.  
   
- Anhand des Beispiels in diesem Thema wird gezeigt, wie Präfixe beim Navigieren in einem XML-Dokument mit dem <xref:System.Xml.XPath.XPathNavigator> verwendet werden. Weitere Informationen zu Namespaces und ihrer Syntax finden Sie unter [XML-Dateien: Einführung in XML-Namespaces](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
+ Anhand des Beispiels in diesem Thema wird gezeigt, wie Präfixe beim Navigieren in einem XML-Dokument mit dem <xref:System.Xml.XPath.XPathNavigator> verwendet werden. Weitere Informationen zu Namespaces und ihrer Syntax finden Sie unter [XML-Dateien: Einführung in XML-Namespaces](/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
   
 ## <a name="namespace-declarations"></a>Namespacedeklarationen  
  Mithilfe von Namespacedeklarationen werden die Elemente in einem XML-Dokument beim Verwenden einer Instanz des <xref:System.Xml.XPath.XPathNavigator> unterscheidbar und adressierbar gemacht. Namespacepräfixe stellen eine kurze Syntax für Adressierungsnamespaces bereit.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925812"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558536"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Veraltete Typen in .NET Framework
 
@@ -658,7 +658,7 @@ Die IEHost.dll-Assembly und die IEExec.exe-Assembly wurden aus .NET Framework en
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly: Microsoft.VisualBasic.Compatibility.dll
 
-Weitere Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual Basic 6.0 Resource Center (Ressourcencenter für Visual Basic 6.0)](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
+Weitere Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual Basic 6.0 Resource Center (Ressourcencenter für Visual Basic 6.0)](/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
 
 |Typ|Meldung|
 |----------|-------------|

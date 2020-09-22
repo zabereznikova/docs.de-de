@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bd618714a9bd27bc309b7933b656de6bd139cfe7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618973"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554891"
 ---
 # <a name="interop-marshaling"></a>Interop-Marshalling
 
@@ -79,7 +79,7 @@ Für apartmentübergreifendes Marshalling können Sie Folgendes tun:
     > [!NOTE]
     > Sobald der Thread eines C#-Clients auf STA festgelegt ist, erfordern Aufrufe von MTA-COM-Komponenten apartmentübergreifendes Marshalling.
 
-Anleitungen zum expliziten Auswählen eines Apartmentmodells finden Sie unter [Managed and Unmanaged Threading (Verwaltetes und nicht verwaltetes Threading)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).
+Anleitungen zum expliziten Auswählen eines Apartmentmodells finden Sie unter [Managed and Unmanaged Threading (Verwaltetes und nicht verwaltetes Threading)](/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).
 
 ## <a name="marshaling-remote-calls"></a>Marshalling von Remoteaufrufen
 
@@ -125,10 +125,10 @@ Einige nicht verwaltete Aufrufe können durch SOAP geleitet werden, z.B. die Auf
 |[Marshaling Data with COM Interop (Marshallen von Daten mit COM-Interop)](marshaling-data-with-com-interop.md)|Beschreibt, wie Sie COM-Wrapper anpassen, um das Marshallingverhalten zu ändern.|
 |[How to: Migrieren von verwaltetem Code DCOM zu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Beschreibt, wie Sie von DCOM zu WCF migrieren.|
 |[How to: Zuordnen von HRESULT-Werten und Ausnahmen](how-to-map-hresults-and-exceptions.md)|Beschreibt, wie Sie benutzerdefinierte Ausnahmen zu HRESULTs zuordnen, und stellt die vollständige Zuordnung von jedem HRESULT zu seiner vergleichbaren Ausnahmeklasse in .NET Framework bereit.|
-|[Interoperation mit generischen Typen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.|
+|[Interoperation mit generischen Typen](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.|
 |[Interoperabilität mit nicht verwaltetem Code](index.md)|Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.|
-|[Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Stellt Links zu weiteren Informationen über das Einbinden von COM-Komponenten in Ihre .NET Framework-Anwendung bereit.|
-|[Entwurfsüberlegungen für die Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Bietet Tipps zum Schreiben integrierter COM-Komponenten.|
+|[Erweiterte COM-Interoperabilität](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Stellt Links zu weiteren Informationen über das Einbinden von COM-Komponenten in Ihre .NET Framework-Anwendung bereit.|
+|[Entwurfsüberlegungen für die Interoperation](/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Bietet Tipps zum Schreiben integrierter COM-Komponenten.|
 
 ## <a name="reference"></a>Referenz
 

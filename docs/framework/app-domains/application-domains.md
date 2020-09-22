@@ -13,12 +13,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-ms.openlocfilehash: d6accd11e33c0556fdd7596b2790f4787dce7ae1
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 246566265d55a3289ef37a2987ed9c40f051e3c8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903479"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553368"
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
 
@@ -47,7 +47,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
     > [!NOTE]
     > Einzelne Assemblys oder Typen können nicht entladen werden. Es können nur vollständige Domänen entladen werden.  
   
-- Der in einer Anwendung ausgeführte Code kann nicht direkt auf Code oder Ressourcen anderer Anwendungen zugreifen. Die Common Language Runtime stellt diese Isolierung sicher, indem direkte Aufrufe zwischen Objekten unterschiedlicher Anwendungsdomänen verhindert werden. Zwischen Domänen übergebene Objekte werden kopiert, oder der Zugriff erfolgt über einen Proxy. Wenn das Objekt kopiert wird, erfolgen die Aufrufe des Objekts lokal. Das heißt, dass der Aufrufer und das Objekt, auf das verwiesen wird, zur gleichen Anwendungsdomäne gehören. Wenn auf das Objekt über einen Proxy zugegriffen wird, erfolgt der Aufruf des Objekts remote. In diesem Fall befinden sich der Aufrufer und das Objekt, auf das verwiesen wird, in unterschiedlichen Anwendungsdomänen. Bei domänenübergreifenden Aufrufen wird die gleiche Infrastruktur für Remoteaufrufe verwendet wie bei Aufrufen zwischen Prozessen oder Computern. Daher müssen die Metadaten zu dem Objekt, auf das verwiesen wird, für beide Anwendungsdomänen verfügbar sein, damit die JIT-Kompilierung des Methodenaufrufs ordnungsgemäß durchgeführt werden kann. Wenn die aufrufende Domäne nicht über Zugriff auf die Metadaten des aufgerufenen Objekts verfügt, kann die Kompilierung mit einer Ausnahme vom Typ <xref:System.IO.FileNotFoundException> fehlschlagen. Weitere Informationen finden Sie unter [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Der Mechanismus, mit dem ermittelt wird, wie domänenübergreifend auf Objekte zugegriffen werden kann, wird durch das Objekt bestimmt. Weitere Informationen finden Sie unter <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Der in einer Anwendung ausgeführte Code kann nicht direkt auf Code oder Ressourcen anderer Anwendungen zugreifen. Die Common Language Runtime stellt diese Isolierung sicher, indem direkte Aufrufe zwischen Objekten unterschiedlicher Anwendungsdomänen verhindert werden. Zwischen Domänen übergebene Objekte werden kopiert, oder der Zugriff erfolgt über einen Proxy. Wenn das Objekt kopiert wird, erfolgen die Aufrufe des Objekts lokal. Das heißt, dass der Aufrufer und das Objekt, auf das verwiesen wird, zur gleichen Anwendungsdomäne gehören. Wenn auf das Objekt über einen Proxy zugegriffen wird, erfolgt der Aufruf des Objekts remote. In diesem Fall befinden sich der Aufrufer und das Objekt, auf das verwiesen wird, in unterschiedlichen Anwendungsdomänen. Bei domänenübergreifenden Aufrufen wird die gleiche Infrastruktur für Remoteaufrufe verwendet wie bei Aufrufen zwischen Prozessen oder Computern. Daher müssen die Metadaten zu dem Objekt, auf das verwiesen wird, für beide Anwendungsdomänen verfügbar sein, damit die JIT-Kompilierung des Methodenaufrufs ordnungsgemäß durchgeführt werden kann. Wenn die aufrufende Domäne nicht über Zugriff auf die Metadaten des aufgerufenen Objekts verfügt, kann die Kompilierung mit einer Ausnahme vom Typ <xref:System.IO.FileNotFoundException> fehlschlagen. Weitere Informationen finden Sie unter [Remote Objects](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Der Mechanismus, mit dem ermittelt wird, wie domänenübergreifend auf Objekte zugegriffen werden kann, wird durch das Objekt bestimmt. Weitere Informationen finden Sie unter <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 - Das Verhalten von Code wird durch die Anwendung beschränkt, in der er ausgeführt wird. Die Anwendungsdomäne stellt Konfigurationseinstellungen bereit, z. B. Richtlinien der Anwendungsversion, den Speicherort von Remoteassemblys, auf die zugegriffen wird, sowie Informationen zum Suchen von Assemblys, die in die Domäne geladen werden.  
   

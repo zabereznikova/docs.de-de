@@ -2,12 +2,12 @@
 title: Befehl „dotnet add package“
 description: Der Paketbefehl „dotnet add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
 ms.date: 02/14/2020
-ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840896"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538067"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -87,7 +87,7 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Das Verzeichnis, in dem die Pakete wiederhergestellt werden sollen. Der standardmäßige Wiederherstellungsort für Pakete ist `%userprofile%\.nuget\packages` unter Windows und `~/.nuget/packages` unter MacOS und Linux. Weitere Informationen finden Sie unter [Verwalten von globalen Pakete-, Cache- und temporären Ordnern in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
+  Das Verzeichnis, in dem die Pakete wiederhergestellt werden sollen. Der standardmäßige Wiederherstellungsort für Pakete ist `%userprofile%\.nuget\packages` unter Windows und `~/.nuget/packages` unter MacOS und Linux. Weitere Informationen finden Sie unter [Verwalten von globalen Pakete-, Cache- und temporären Ordnern in NuGet](/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
 - **`-s|--source <SOURCE>`**
 
@@ -95,7 +95,7 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
 
 - **`-v|--version <VERSION>`**
 
-  Die Version des Pakets. Weitere Informationen hierzu finden Sie unter [NuGet-Paketversionsverwaltung](https://docs.microsoft.com/nuget/reference/package-versioning).
+  Die Version des Pakets. Weitere Informationen hierzu finden Sie unter [NuGet-Paketversionsverwaltung](/nuget/reference/package-versioning).
 
 ## <a name="examples"></a>Beispiele
 
@@ -119,5 +119,5 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwalten von globalen Pakete-, Cache- und temporären Ordnern in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
-- [NuGet-Paketversionsverwaltung](https://docs.microsoft.com/nuget/reference/package-versioning)
+- [Verwalten von globalen Pakete-, Cache- und temporären Ordnern in NuGet](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [NuGet-Paketversionsverwaltung](/nuget/reference/package-versioning)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 02d84bceb0242988c70889ddd5d3dc7530f6e808
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b468b8ee4301693312e9545396f2b9f495f75d8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793550"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550910"
 ---
 # <a name="-bugreport"></a>-bugreport
 
@@ -69,4 +69,4 @@ vbc -bugreport:problem.txt t2.vb
 - [-debug (Visual Basic)](debug.md)
 - [-errorreport](errorreport.md)
 - [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
-- [trustLevel-Element für securityPolicy (ASP.NET-Einstellungsschema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))
+- [trustLevel-Element für securityPolicy (ASP.NET-Einstellungsschema)](/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))

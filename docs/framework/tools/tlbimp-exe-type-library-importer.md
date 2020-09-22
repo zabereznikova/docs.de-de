@@ -11,12 +11,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: f1e50336e6c159ae56b393098868e4b8f5310b49
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 4c2cddd78e14d1ae0b04bab07b57fe0ce0f627ca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516995"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543367"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer-Tool)
 Das Type Library Importer-Tool konvertiert die Typdefinitionen einer COM-Typbibliothek in äquivalente Definitionen einer Common Language Runtime-Assembly. Die Ausgabe von "Tlbimp.exe" besteht aus einer binären Datei (einer Assembly), die Laufzeitmetadaten für die in der ursprünglichen Typbibliothek definierten Typen enthält. Diese Datei können Sie mit Tools wie [Ildasm.exe](ildasm-exe-il-disassembler.md) überprüfen.  
@@ -51,7 +51,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Verhindert, dass "Tlbimp.exe" Member Klassen hinzufügt. Dadurch wird eine mögliche <xref:System.TypeLoadException> verhindert.|  
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |**/out:** *filename*|Gibt den Namen der Ausgabedatei, der Assembly und des Namespaces an, in dem die Metadatendefinitionen geschrieben werden sollen. Die **/out**-Option hat keine Auswirkung auf den Namespace der Assembly, wenn in der Typbibliothek die benutzerdefinierten Attribute der IDL (Interface Definition Language) angegeben sind. Diese steuern explizit den Namespace der Assembly. Wenn Sie diese Option nicht angeben, schreibt "Tlbimp.exe" die Metadaten in eine Datei, die den von der aktuellen Typbibliothek in der Eingabedatei definierten Namen trägt, und weist dieser die Erweiterung ".dll" zu. Stimmt der Name der Ausgabedatei mit dem der Eingabedatei überein, wird eine Fehlermeldung ausgegeben, um ein Überschreiben der Typbibliothek zu verhindern.|  
-|**/primary**|Erstellt für die angegebene Typbibliothek eine primäre Interopassembly. Der Assembly wird der Hinweis hinzugefügt, dass der Herausgeber der Typbibliothek die Assembly erstellt hat. Sie unterscheiden die Assembly eines Verlegers von beliebigen anderen Assemblys, die mit "Tlbimp.exe" aus der Typbibliothek erstellt werden, indem Sie eine primäre Interopassembly angeben. Verwenden Sie nur die **/primary**-Option, wenn Sie der Verleger der Typbibliothek sind, die mit „Tlbimp.exe“ importiert wird. Beachten Sie, dass Sie eine primäre Interopassembly mit einem [starken Namen](../../standard/assembly/strong-named.md) signieren müssen. Weitere Informationen finden Sie unter [Primäre Interopassemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
+|**/primary**|Erstellt für die angegebene Typbibliothek eine primäre Interopassembly. Der Assembly wird der Hinweis hinzugefügt, dass der Herausgeber der Typbibliothek die Assembly erstellt hat. Sie unterscheiden die Assembly eines Verlegers von beliebigen anderen Assemblys, die mit "Tlbimp.exe" aus der Typbibliothek erstellt werden, indem Sie eine primäre Interopassembly angeben. Verwenden Sie nur die **/primary**-Option, wenn Sie der Verleger der Typbibliothek sind, die mit „Tlbimp.exe“ importiert wird. Beachten Sie, dass Sie eine primäre Interopassembly mit einem [starken Namen](../../standard/assembly/strong-named.md) signieren müssen. Weitere Informationen finden Sie unter [Primäre Interopassemblys](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
 |**/product:** `productinformation`|Fügt der Ausgabeassembly Produktinformationen hinzu. Diese Informationen können im Dialogfeld **Dateieigenschaften** für die Assembly angezeigt werden.|  
 |**/productversion:** `productversioninformation`|Fügt der Ausgabeassembly die Produktversion hinzu. Es gibt keine Formateinschränkungen. Diese Informationen können im Dialogfeld **Dateieigenschaften** für die Assembly angezeigt werden.|  
 |**/publickey:** *filename*|Gibt die Datei an, die den öffentlichen Schlüssel zum Signieren der resultierenden Assembly enthält. Wenn Sie die Option **/keyfile:** oder **/keycontainer:** anstelle der Option **/publickey:** angeben, generiert „Tlbimp.exe“ den öffentlichen Schlüssel aus dem über **/keyfile:** bzw. **/keycontainer:** bereitgestellten Paar aus privatem und öffentlichem Schlüssel. Die Option **/publickey:** unterstützt Testschlüssel und Szenarien für verzögertes Signieren. Die Datei weist das von "Sn.exe" generierte Format auf. Weitere Informationen finden Sie unter der **-p**-Option von „Sn.exe“ unter [Strong Name-Tool (Sn.exe)](sn-exe-strong-name-tool.md).|  
@@ -131,9 +131,9 @@ void SomeMethod(out bool x);
 - [Extras](index.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](tlbexp-exe-type-library-exporter.md)
 - [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](../interop/importing-a-type-library-as-an-assembly.md)
-- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Ildasm.exe (IL-Disassembler)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (Strong Name-Tool)](sn-exe-strong-name-tool.md)
 - [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md)
-- [Attribute zum Importieren von Typbibliotheken in Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
+- [Attribute zum Importieren von Typbibliotheken in Interop-Assemblys](/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

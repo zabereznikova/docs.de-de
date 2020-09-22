@@ -3,12 +3,12 @@ title: 'Tutorial: Debuggen eines Arbeitsspeicherverlusts'
 description: Erfahren Sie, wie Sie einen Arbeitsspeicherverlust in .NET Core debuggen.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924889"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538591"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>Debuggen eines Arbeitsspeicherverlusts in .NET Core
 
@@ -34,7 +34,7 @@ Im Tutorial wird Folgendes verwendet:
 - [dotnet-trace](dotnet-trace.md) zu Auflisten von Prozessen.
 - [dotnet-counters](dotnet-counters.md) zum Untersuchen der verwalteten Speicherauslastung.
 - [dotnet-dump](dotnet-dump.md) zum Erfassen und Analysieren einer Dumpdatei.
-- Eine [Beispieldebugziel](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)-App für die Diagnose.
+- Eine [Beispieldebugziel](/samples/dotnet/samples/diagnostic-scenarios/)-App für die Diagnose.
 
 In diesem Tutorial wird davon ausgegangen, dass das Beispiel und die Tools installiert und einsatzbereit sind.
 
@@ -42,7 +42,7 @@ In diesem Tutorial wird davon ausgegangen, dass das Beispiel und die Tools insta
 
 Bevor Sie mit dem Erfassen von Diagnosedaten beginnen, um die Grundursache für dieses Szenario zu ermitteln, müssen Sie sicherstellen, dass tatsächlich ein Arbeitsspeicherverlust stattfindet (Vergrößerung des Arbeitsspeichers). Sie können das Tool [dotnet-counters](dotnet-counters.md) verwenden, um dies zu bestätigen.
 
-Öffnen Sie ein Konsolenfenster, und navigieren Sie zu dem Verzeichnis, das Sie zum Herunterladen und Entzippen des [Beispieldebugziels](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) verwendet haben. Führen Sie das Ziel aus:
+Öffnen Sie ein Konsolenfenster, und navigieren Sie zu dem Verzeichnis, das Sie zum Herunterladen und Entzippen des [Beispieldebugziels](/samples/dotnet/samples/diagnostic-scenarios/) verwendet haben. Führen Sie das Ziel aus:
 
 ```dotnetcli
 dotnet run
@@ -116,7 +116,7 @@ Wenn Sie die Speicherauslastung überwachen, können Sie sicher sagen, dass der 
 
 Wenn Sie mögliche Arbeitsspeicherverluste analysieren, benötigen Sie Zugriff auf den Arbeitsspeicherheap der App. Anschließend können Sie den Arbeitsspeicherinhalt analysieren. Wenn Sie Beziehungen zwischen Objekten betrachten, erstellen Sie Theorien dazu, warum der Arbeitsspeicher nicht freigegeben wird. Eine gängige Quelle für Diagnosedaten ist ein Speicherabbild unter Windows oder der entsprechende Core Dump unter Linux. Zum Generieren eines Speicherabbilds einer .NET Core-Anwendung können Sie das Tool [dotnet-dump)](dotnet-dump.md) verwenden.
 
-Führen Sie den folgenden Befehl aus, um einen Linux-Core Dump zu generieren, indem Sie das zuvor erstellte [Beispieldebugziel](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) verwenden.
+Führen Sie den folgenden Befehl aus, um einen Linux-Core Dump zu generieren, indem Sie das zuvor erstellte [Beispieldebugziel](/samples/dotnet/samples/diagnostic-scenarios/) verwenden.
 
 ```dotnetcli
 dotnet-dump collect -p 4807
@@ -133,7 +133,7 @@ Complete
 
 Nachdem das Speicherabbild erfasst wurde, sollten Sie über genügend Informationen verfügen, um den fehlgeschlagenen Prozess zu diagnostizieren. Wenn der fehlgeschlagene Prozess auf einem Produktionsserver ausgeführt wird, ist dies jetzt der ideale Zeitpunkt für die kurzfristige Wartung, indem der Prozess neu gestartet wird.
 
-In diesem Tutorial benötigen Sie das [Beispieldebugziel](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) nicht mehr, und Sie können es schließen. Navigieren Sie zu dem Terminal, über das der Server gestartet wurde, und drücken Sie <kbd>STRG+C</kbd>.
+In diesem Tutorial benötigen Sie das [Beispieldebugziel](/samples/dotnet/samples/diagnostic-scenarios/) nicht mehr, und Sie können es schließen. Navigieren Sie zu dem Terminal, über das der Server gestartet wurde, und drücken Sie <kbd>STRG+C</kbd>.
 
 ### <a name="analyze-the-core-dump"></a>Analysieren des Speicherabbilds
 
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 Dabei ist `core_20190430_185145` der Name des Speicherabbilds, das Sie analysieren möchten.
 
 > [!NOTE]
-> Wenn eine Fehlermeldung angezeigt wird, die besagt, dass *libdl.so* nicht gefunden wurde, müssen Sie ggf. das Paket *libc6-dev* installieren. Weitere Informationen finden Sie unter [Voraussetzungen für .NET Core unter Linux](../install/dependencies.md?pivots=os-linux).
+> Wenn eine Fehlermeldung angezeigt wird, die besagt, dass *libdl.so* nicht gefunden wurde, müssen Sie ggf. das Paket *libc6-dev* installieren. Weitere Informationen finden Sie unter [Voraussetzungen für .NET Core unter Linux](../install/linux.md).
 
 Es wird eine Eingabeaufforderung angezeigt, in der Sie SOS-Befehle eingeben können. Im Allgemeinen gilt die erste Untersuchung dem Gesamtstatus des verwalteten Heaps:
 

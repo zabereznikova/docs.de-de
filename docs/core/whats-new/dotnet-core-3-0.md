@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608207"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537495"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -136,7 +136,7 @@ Wichtig ist die Tatsache, dass Anwendungen oder Frameworks (einschließlich ASP.
 
 Nach dem Trimmen müssen Sie Ihre App unbedingt testen.
 
-Weitere Informationen zum Tool IL Linker finden Sie in der [Dokumentation](https://aka.ms/dotnet-illink), oder besuchen Sie das Repository [mono/linker]( https://github.com/mono/linker).
+Weitere Informationen zum Tool IL Linker finden Sie in der [Dokumentation](../deploying/trim-self-contained.md), oder besuchen Sie das Repository [mono/linker]( https://github.com/mono/linker).
 
 ### <a name="tiered-compilation"></a>Mehrstufig Kompilierung
 
@@ -329,9 +329,9 @@ Windows stellt eine umfassende native API mit grundlegenden C-APIs (ohne C++-Fea
 
 ### <a name="msix-deployment"></a>MSIX-Bereitstellung
 
-[MSIX](https://docs.microsoft.com/windows/msix/) ist ein neues Windows-Anwendungspaketformat. Es kann zum Bereitstellen von .NET Core 3.0-Desktopanwendungen auf Windows 10 verwendet werden.
+[MSIX](/windows/msix/) ist ein neues Windows-Anwendungspaketformat. Es kann zum Bereitstellen von .NET Core 3.0-Desktopanwendungen auf Windows 10 verwendet werden.
 
-In Visual Studio 2019 können mit dem enthaltenen [Paketerstellungsprojekt für Windows-Anwendungen](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) MSIX-Pakete mit [eigenständigen](../deploying/index.md#publish-self-contained) .NET Core-Anwendungen erstellt werden.
+In Visual Studio 2019 können mit dem enthaltenen [Paketerstellungsprojekt für Windows-Anwendungen](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) MSIX-Pakete mit [eigenständigen](../deploying/index.md#publish-self-contained) .NET Core-Anwendungen erstellt werden.
 
 Die unterstützten Laufzeiten müssen in der `<RuntimeIdentifiers>`-Eigenschaft der .NET Core-Projektdatei angegeben werden:
 

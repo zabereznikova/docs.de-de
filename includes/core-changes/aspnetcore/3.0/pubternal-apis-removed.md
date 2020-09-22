@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 224cd3c7897c64ef05baba7d3d31dbe5ac0dd610
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84466914"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606757"
 ---
 ### <a name="pubternal-apis-removed"></a>„Pubternal“-APIs entfernt
 
@@ -22,7 +22,7 @@ Die betroffenen APIs werden mit dem `public`-Zugriffsmodifizierer gekennzeichnet
 
 #### <a name="new-behavior"></a>Neues Verhalten
 
-Die betroffenen APIs sind mit dem [internal](/dotnet/csharp/language-reference/keywords/internal)-Zugriffsmodifizierer gekennzeichnet und können nicht mehr von Code außerhalb dieser Assembly verwendet werden.
+Die betroffenen APIs sind mit dem [internal](../../../../docs/csharp/language-reference/keywords/internal.md)-Zugriffsmodifizierer gekennzeichnet und können nicht mehr von Code außerhalb dieser Assembly verwendet werden.
 
 #### <a name="reason-for-change"></a>Grund für die Änderung
 

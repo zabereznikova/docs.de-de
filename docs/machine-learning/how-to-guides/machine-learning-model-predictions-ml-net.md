@@ -5,12 +5,12 @@ ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e8263db289bed50e7437b695134458b8c07e0e5
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977043"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679572"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Treffen von Vorhersagen mit einem trainierten Modell
 
@@ -72,7 +72,7 @@ Um eine einzelne Vorhersage zu machen, erstellen Sie eine [`PredictionEngine`](x
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-Verwenden Sie dann die [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*)-Methode, und übergeben Sie Ihre Eingabedaten als Parameter. Beachten Sie, dass die Verwendung der [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*)-Methode nicht voraussetzt, dass die Eingabe eine [`IDataView`](xref:Microsoft.ML.IDataView) ist. Der Grund ist, dass sie die Bearbeitung des Eingabedatentyps einfach internalisiert, sodass Sie ein Objekt des Eingabedatentyps übergeben können. Da darüber hinaus `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
+Verwenden Sie dann die [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict%2A)-Methode, und übergeben Sie Ihre Eingabedaten als Parameter. Beachten Sie, dass die Verwendung der [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict%2A)-Methode nicht voraussetzt, dass die Eingabe eine [`IDataView`](xref:Microsoft.ML.IDataView) ist. Der Grund ist, dass sie die Bearbeitung des Eingabedatentyps einfach internalisiert, sodass Sie ein Objekt des Eingabedatentyps übergeben können. Da darüber hinaus `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
 
 ```csharp
 // Input Data
@@ -114,14 +114,14 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-Verwenden Sie dann die [`Transform`](xref:Microsoft.ML.ITransformer.Transform*)-Methode zum Anwenden der Datentransformationen und Generieren von Vorhersagen.
+Verwenden Sie dann die [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A)-Methode zum Anwenden der Datentransformationen und Generieren von Vorhersagen.
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-Überprüfen Sie die vorhergesagten Werte mit der [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode.
+Überprüfen Sie die vorhergesagten Werte mit der [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A)-Methode.
 
 ```csharp
 // Get Predictions

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 308f4328540e1001018942738d931be3d8be53ed
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: a885ae042eef939021d3a9b75616505c289bd43c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301917"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558086"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Generische Klassen (C#-Programmierhandbuch)
 Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmten Datentyp sind. Generische Klassen werden am häufigsten bei Auflistungen verwendet, z.B. bei verknüpften Listen, Hashtabellen, Stapeln, Warteschlangen, Strukturen usw. Vorgänge wie das Hinzufügen oder Entfernen von Elementen aus der Auflistung werden nahezu auf die gleiche Art und Weise ausgeführt, unabhängig vom Typ der gespeicherten Daten.  
@@ -71,5 +71,5 @@ Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmt
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../index.md)
 - [Generics](./index.md)
-- [Saving the State of Enumerators (Speichern des Zustands von Enumeratoren)](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)
-- [An Inheritance Puzzle, Part One (Ein Vererbungs-Puzzle, Teil 1)](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)
+- [Saving the State of Enumerators (Speichern des Zustands von Enumeratoren)](/archive/blogs/wesdyer/saving-the-state-of-enumerators)
+- [An Inheritance Puzzle, Part One (Ein Vererbungs-Puzzle, Teil 1)](/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

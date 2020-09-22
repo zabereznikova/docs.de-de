@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cc3c2c2be179842f87be8892d057a6c4138086cb
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a21824862d6cad046b5d6186f9d6db9c20438304
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614565"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606446"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-472"></a>Verbesserung der Barrierefreiheit von Windows Forms-Steuerelementen für .NET 4.7.2
 
@@ -21,7 +21,7 @@ Die Arbeitsweise des Windows Forms-Frameworks mit Technologien für die Barriere
 **Aktivieren oder Deaktivieren dieser Änderungen**: Damit die Anwendung von diesen Änderungen profitieren kann, muss sie unter .NET Framework 4.7.2 oder höher ausgeführt werden. Die Anwendung kann von diesen Änderungen profitieren, wenn Sie Folgendes durchführen:
 
 - Kompilieren Sie diese erneut, um .NET Framework 4.7.2 als Ziel zu verwenden. Diese Änderungen der Barrierefreiheit werden standardmäßig für Windows Forms-Anwendungen aktiviert, die .NET Framework 4.7.2 oder höher als Ziel verwenden.
-- Die Anwendung verwendet .NET Framework 4.7.1 oder eine frühere Version als Ziel und deaktiviert veraltete Verhaltensweisen der Barrierefreiheit, indem wie im folgenden Beispiel dargestellt folgender [AppContext-Schalter](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) zum Abschnitt `<runtime>` der Datei „app.config“ hinzugefügt und auf `false` festgelegt wird.
+- Die Anwendung verwendet .NET Framework 4.7.1 oder eine frühere Version als Ziel und deaktiviert veraltete Verhaltensweisen der Barrierefreiheit, indem wie im folgenden Beispiel dargestellt folgender [AppContext-Schalter](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) zum Abschnitt `<runtime>` der Datei „app.config“ hinzugefügt und auf `false` festgelegt wird.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -73,7 +73,7 @@ HINWEIS: In Windows 10 wurden die Werte für einige Systemfarben mit hohem Kontr
 
 - Die untergeordneten Elemente des <xref:System.Windows.Forms.PropertyGrid>-Steuerelements geben jetzt nur dann `true` für die <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>-Eigenschaft zurück, wenn ein PropertyGrid-Element aktiviert ist.
 - Die untergeordneten Elemente des <xref:System.Windows.Forms.PropertyGrid>-Steuerelements geben jetzt nur dann `false` für die <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>-Eigenschaft zurück, wenn ein PropertyGrid-Element vom Benutzer geändert werden kann.
-Einen Überblick über die Benutzeroberflächenautomatisierung finden Sie unter [Benutzeroberflächenautomatisierung: Übersicht](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview).</p>**Verbesserte Tastaturnavigation**
+Einen Überblick über die Benutzeroberflächenautomatisierung finden Sie unter [Benutzeroberflächenautomatisierung: Übersicht](../../../../docs/framework/ui-automation/ui-automation-overview.md).</p>**Verbesserte Tastaturnavigation**
 
 - <xref:System.Windows.Forms.ToolStripButton> lässt nun den Fokus zu, wenn das Element in einem <xref:System.Windows.Forms.ToolStripPanel> enthalten ist, für das die <xref:System.Windows.Forms.ToolStripPanel.TabStop>-Eigenschaft auf `true` festgelegt ist.
 

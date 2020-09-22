@@ -2,12 +2,12 @@
 title: Befehl „dotnet nuget list source“
 description: Mit dem Befehl „dotnet nuget list source“ werden alle vorhandenen Quellen aus Ihren NuGet-Konfigurationsdateien aufgelistet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 8b14413949bd60ddeed977d19eec9bb99982da70
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 071061e32aa1bf888e197ec6bf97f4e4f6859f0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463544"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537892"
 ---
 # <a name="dotnet-nuget-list-source"></a>dotnet nuget list source
 
@@ -33,7 +33,7 @@ Mit dem Befehl `dotnet nuget list source` werden alle vorhandenen Quellen aus Ih
 
 - **`--configfile <FILE>`**
 
-  Die NuGet-Konfigurationsdatei. Sofern angegeben, werden nur die Einstellungen aus dieser Datei verwendet. Falls nicht angegeben, wird die Hierarchie der Konfigurationsdateien aus dem aktuellen Verzeichnis verwendet. Weitere Informationen finden Sie unter [Gängige NuGet-Konfigurationen](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+  Die NuGet-Konfigurationsdatei. Sofern angegeben, werden nur die Einstellungen aus dieser Datei verwendet. Falls nicht angegeben, wird die Hierarchie der Konfigurationsdateien aus dem aktuellen Verzeichnis verwendet. Weitere Informationen finden Sie unter [Gängige NuGet-Konfigurationen](/nuget/consume-packages/configuring-nuget-behavior).
 
 - **`--format [Detailed|Short]`**
 

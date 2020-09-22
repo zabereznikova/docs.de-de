@@ -3,12 +3,12 @@ title: Migrieren von .NET Web-Apps oder -Diensten zu Azure App Service
 description: Hier erfahren Sie, wie Sie eine .NET-Web-App oder einen .NET-Dienst aus einer lokalen Umgebung zu Azure App Service migrieren.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174308"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539085"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Migrieren von .NET Web-Apps oder -Diensten zu Azure App Service
 
@@ -37,9 +37,9 @@ Für WCF werden die folgenden Bindungen unterstützt:
 |--|--|
 | `BasicHttp` |  |
 | `WSHttp` |  |
-| `WSDualHttpBinding` | [WebSocket-Unterstützung](https://docs.microsoft.com/azure/app-service/web-sites-configure) muss aktiviert sein. | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss aktiviert sein. |
-| `NetHttpBinding` | [WebSocket-Unterstützung](https://docs.microsoft.com/azure/app-service/web-sites-configure) muss für Duplexverträge aktiviert sein. | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss für Duplexverträge aktiviert sein. |
-| `NetHttpsBinding` | [WebSocket-Unterstützung](https://docs.microsoft.com/azure/app-service/web-sites-configure) muss für Duplexverträge aktiviert sein. | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss für Duplexverträge aktiviert sein. |
+| `WSDualHttpBinding` | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss aktiviert sein. | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss aktiviert sein. |
+| `NetHttpBinding` | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss für Duplexverträge aktiviert sein. | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss für Duplexverträge aktiviert sein. |
+| `NetHttpsBinding` | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss für Duplexverträge aktiviert sein. | [WebSocket-Unterstützung](/azure/app-service/web-sites-configure) muss für Duplexverträge aktiviert sein. |
 | `BasicHttpContextBinding` |  |
 | `WebHttpBinding` |  |
 | `WSHttpContextBinding` |  |
@@ -62,7 +62,7 @@ IIS5-Kompatibilitätsmodus wird Apps nicht unterstützt. In Azure App Service we
 
 #### <a name="iis7-schema-compliance"></a>IIS7+-Schemakompatibilität
 
-Einige Elemente und Attribute sind im Azure App Service-IIS-Schema nicht definiert. Sollten Probleme auftreten, ziehen Sie die Verwendung von [XDT-Transformationen](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/) in Betracht.
+Einige Elemente und Attribute sind im Azure App Service-IIS-Schema nicht definiert. Sollten Probleme auftreten, ziehen Sie die Verwendung von [XDT-Transformationen](/azure/app-service/configure-common) in Betracht.
 
 #### <a name="single-application-pool-per-site"></a>Ein Anwendungspool pro Website
 
