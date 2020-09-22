@@ -7,8 +7,8 @@ items:
     href: fundamentals/
   - name: Leitfaden für .NET Framework
     href: framework/
-  - name: Leitfaden für .NET Desktop – WPF
-    href: desktop-wpf/
+  - name: Leitfaden für .NET Desktop
+    href: /dotnet/desktop/
   - name: Leitfaden für C#
     href: csharp/index.yml
   - name: Leitfaden für F#
