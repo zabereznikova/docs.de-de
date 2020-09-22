@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 9d791ae699f369ebe69e03fc5019d3ca58554224
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4793c7282043edb46b3d2f77a0f0a955c43ab34c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406481"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870188"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML-Namespace-URI `http://www.w3.org/XML/1998/namespace` ; kann nur an ' xmlns ' gebunden werden.
+
 Der URI `http://www.w3.org/XML/1998/namespace` wird in einer XML-Namespace Deklaration verwendet. Dieser URI ist ein reservierter Namespace und kann nicht in einer XML-Namespace Deklaration enthalten sein.  
   
  **Fehler-ID:** BC31183  

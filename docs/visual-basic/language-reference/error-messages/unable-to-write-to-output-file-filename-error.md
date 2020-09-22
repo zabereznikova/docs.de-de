@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 73fce70c0740992e2e9159946d428d214576e163
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198189"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870291"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>In die Ausgabedatei '\<filename > ' kann nicht geschrieben werden: \<Fehler >
+# <a name="unable-to-write-to-output-file-filename-error"></a>In die Ausgabedatei "\<filename>" konnte nicht geschrieben werden: \<error>.
+
 Beim Erstellen der Datei ist ein Fehler aufgetreten.  
   
  Eine Ausgabedatei kann nicht zum Schreiben geöffnet werden. Die Datei (oder der Ordner, der die Datei enthält) kann für die Exklusivnutzung durch einen anderen Prozess geöffnet sein, oder sie ist schreibgeschützt.  
@@ -57,6 +58,6 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
 3. Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)

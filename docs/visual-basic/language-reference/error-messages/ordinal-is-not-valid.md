@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 7b9bd8435b56dd5e33d14eb35d76aacc7d60c8b5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 64f56b2ecace0ceafb310a175ea605e6959b7256
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413052"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871391"
 ---
 # <a name="ordinal-is-not-valid"></a>Ungültiger Ordinalwert.
+
 Durch den Aufrufe einer Dynamic Link Library (dll) wird angegeben, dass eine Zahl anstelle eines Prozedur namens verwendet werden soll. verwenden Sie dazu die `#num` Syntax. Dieser Fehler kann folgende Ursachen haben:  
   
 - Fehler beim Konvertieren des `#num` Ausdrucks in eine Ordinalzahl.  

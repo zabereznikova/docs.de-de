@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 326c3306368ceca2122e912556efd84e4bfef1f1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be2e401c7931b2637c14a3ea3b742a2c09917939
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413000"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869986"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate-Klausel (Visual Basic)
+
 Wendet eine oder mehrere Aggregatfunktionen auf eine Auflistung an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,12 +35,13 @@ Aggregate element [As type] In collection _
 |Begriff|Definition|  
 |---|---|  
 |`element`|Erforderlich. Variable, mit der die Elemente der Auflistung durchlaufen werden.|  
-|`type`|Optional. Der `element`-Typ. Wenn kein Typ angegeben ist, wird der Typ von `element` aus abgeleitet `collection` .|  
+|`type`|Dies ist optional. Der `element`-Typ. Wenn kein Typ angegeben ist, wird der Typ von `element` aus abgeleitet `collection` .|  
 |`collection`|Erforderlich. Verweist auf die Auflistung, die verwendet werden soll.|  
-|`clause`|Optional. Eine oder mehrere Abfrage Klauseln, wie z. b. eine- `Where` Klausel, um das Abfrageergebnis zum Anwenden der Aggregat Klausel oder-Klauseln zu verfeinern.|  
+|`clause`|Dies ist optional. Eine oder mehrere Abfrage Klauseln, wie z. b. eine- `Where` Klausel, um das Abfrageergebnis zum Anwenden der Aggregat Klausel oder-Klauseln zu verfeinern.|  
 |`expressionList`|Erforderlich. Mindestens ein durch Trennzeichen getrennter Ausdruck, der eine Aggregatfunktion identifiziert, die auf die Auflistung angewendet werden soll. Sie können einen Alias auf eine Aggregatfunktion anwenden, um einen Elementnamen für das Abfrageergebnis anzugeben. Wenn kein Alias angegeben wird, wird der Name der Aggregatfunktion verwendet. Beispiele finden Sie im Abschnitt zu Aggregatfunktionen weiter unten in diesem Thema.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die- `Aggregate` Klausel kann verwendet werden, um Aggregatfunktionen in Ihre Abfragen einzubeziehen. Aggregatfunktionen führen Überprüfungen und Berechnungen für einen Satz von Werten aus und geben einen einzelnen Wert zurück. Sie können auf den berechneten Wert zugreifen, indem Sie einen Member des Abfrageergebnis Typs verwenden. Die standardmäßigen Aggregatfunktionen, die Sie verwenden können `All` , sind die `Any` Funktionen,, `Average` , `Count` , `LongCount` , `Max` , `Min` und `Sum` . Diese Funktionen sind Entwicklern vertraut, die mit Aggregaten in SQL vertraut sind. Diese werden im folgenden Abschnitt dieses Themas beschrieben.  
   
  Das Ergebnis einer Aggregatfunktion ist im Abfrageergebnis als Feld des Abfrageergebnis Typs enthalten. Sie können einen Alias für das Aggregat Funktionsergebnis angeben, um den Namen des Members des Abfrageergebnis Typs anzugeben, der den Aggregatwert enthalten soll. Wenn kein Alias angegeben wird, wird der Name der Aggregatfunktion verwendet.  
@@ -52,25 +54,25 @@ Die folgenden standardmäßigen Aggregatfunktionen können mit der-Klausel verwe
   
 ### <a name="all"></a>All
 
-Gibt zurück `true` , wenn alle Elemente in der Auflistung eine angegebene Bedingung erfüllen; andernfalls wird zurückgegeben `false` . Es folgt ein Beispiel:
+Gibt zurück `true` , wenn alle Elemente in der Auflistung eine angegebene Bedingung erfüllen; andernfalls wird zurückgegeben `false` . Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Any
 
-Gibt zurück `true` , wenn ein beliebiges Element in der Auflistung eine angegebene Bedingung erfüllt; andernfalls wird zurückgegeben `false` . Es folgt ein Beispiel:
+Gibt zurück `true` , wenn ein beliebiges Element in der Auflistung eine angegebene Bedingung erfüllt; andernfalls wird zurückgegeben `false` . Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
-### <a name="average"></a>Average
+### <a name="average"></a>Durchschnitt
 
-Berechnet den Durchschnitt aller Elemente in der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Es folgt ein Beispiel:
+Berechnet den Durchschnitt aller Elemente in der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Anzahl
 
-Zählt die Anzahl der Elemente in der Auflistung. Sie können einen optionalen `Boolean` Ausdruck angeben, um nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Es folgt ein Beispiel:
+Zählt die Anzahl der Elemente in der Auflistung. Sie können einen optionalen `Boolean` Ausdruck angeben, um nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
@@ -84,19 +86,19 @@ Zählt die Anzahl der Elemente in der Auflistung. Sie können einen optionalen `
 
 ### <a name="max"></a>Max
 
-Berechnet den maximalen Wert aus der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Es folgt ein Beispiel:
+Berechnet den maximalen Wert aus der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Min
 
-Berechnet den minimalen Wert aus der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Es folgt ein Beispiel:
+Berechnet den minimalen Wert aus der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>SUM
 
-Berechnet die Summe aller Elemente in der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Es folgt ein Beispiel:
+Berechnet die Summe aller Elemente in der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 

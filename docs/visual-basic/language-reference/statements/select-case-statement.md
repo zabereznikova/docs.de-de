@@ -21,14 +21,15 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: 3dedd43f920b493a0aca9ce48460b00815e1af5c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 750e765390ad223976b000fe64e656fa2d62a34b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404238"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871786"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case-Anweisung (Visual Basic)
+
 Führt eine von mehreren Gruppen von Anweisungen aus, abhängig vom Wert eines Ausdrucks.  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,12 +48,13 @@ End Select
 |Begriff|Definition|  
 |---|---|  
 |`testexpression`|Erforderlich. Ausdruck Muss einen der elementaren Datentypen ( `Boolean` , `Byte` , `Char` , `Date` , `Double` , `Decimal` , `Integer` , `Long` , `Object` , `SByte` , `Short` , `Single` , `String` , `UInteger` , `ULong` und `UShort` ) auswerten.|  
-|`expressionlist`|Erforderlich in einer- `Case` Anweisung. Liste der Ausdrucks Klauseln, die die Übereinstimmungs Werte für darstellen `testexpression` . Mehrere Ausdrucks Klauseln werden durch Kommas getrennt. Jede Klausel kann eine der folgenden Formen annehmen:<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ] *ComparisonOperator* - *Ausdruck*<br />-   *expression*<br /><br /> Verwenden Sie das- `To` Schlüsselwort, um die Begrenzungen eines Bereichs von Übereinstimmungs Werten für anzugeben `testexpression` . Der Wert von `expression1` muss kleiner oder gleich dem Wert von sein `expression2` .<br /><br /> Verwenden Sie das- `Is` Schlüsselwort mit einem Vergleichs Operator ( `=` , `<>` , `<` , `<=` , `>` oder `>=` ), um eine Einschränkung für die Übereinstimmungs Werte für anzugeben `testexpression` . Wenn das `Is` Schlüsselwort nicht angegeben wird, wird es automatisch vor *ComparisonOperator*eingefügt.<br /><br /> Das Formular, das nur angibt, `expression` wird als Sonderfall des `Is` Formulars behandelt, wobei *ComparisonOperator* das Gleichheitszeichen ( `=` ) ist. Dieses Formular wird als ausgewertet `testexpression`  =  `expression` .<br /><br /> Die Ausdrücke in `expressionlist` können einen beliebigen Datentyp aufweisen, vorausgesetzt, Sie können implizit in den Typ von konvertiert werden, `testexpression` und der entsprechende `comparisonoperator` ist für die beiden Typen gültig, mit denen Sie verwendet wird.|  
-|`statements`|Optional. Mindestens eine-Anweisung nach `Case` der-Anweisung wird ausgeführt, wenn `testexpression` mit einer Klausel in übereinstimmt `expressionlist` .|  
-|`elsestatements`|Optional. Eine oder mehrere der folgenden Anweisungen `Case Else` , die ausgeführt werden, wenn `testexpression` keiner der Klauseln in der einer der `expressionlist` Anweisungen entspricht `Case` .|  
+|`expressionlist`|Erforderlich in einer- `Case` Anweisung. Liste der Ausdrucks Klauseln, die die Übereinstimmungs Werte für darstellen `testexpression` . Mehrere Ausdrucks Klauseln werden durch Kommas getrennt. Jede Klausel kann eine der folgenden Formen annehmen:<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ] *ComparisonOperator* - *Ausdruck*<br />-   *Begriff*<br /><br /> Verwenden Sie das- `To` Schlüsselwort, um die Begrenzungen eines Bereichs von Übereinstimmungs Werten für anzugeben `testexpression` . Der Wert von `expression1` muss kleiner oder gleich dem Wert von sein `expression2` .<br /><br /> Verwenden Sie das- `Is` Schlüsselwort mit einem Vergleichs Operator ( `=` , `<>` , `<` , `<=` , `>` oder `>=` ), um eine Einschränkung für die Übereinstimmungs Werte für anzugeben `testexpression` . Wenn das `Is` Schlüsselwort nicht angegeben wird, wird es automatisch vor *ComparisonOperator*eingefügt.<br /><br /> Das Formular, das nur angibt, `expression` wird als Sonderfall des `Is` Formulars behandelt, wobei *ComparisonOperator* das Gleichheitszeichen ( `=` ) ist. Dieses Formular wird als ausgewertet `testexpression`  =  `expression` .<br /><br /> Die Ausdrücke in `expressionlist` können einen beliebigen Datentyp aufweisen, vorausgesetzt, Sie können implizit in den Typ von konvertiert werden, `testexpression` und der entsprechende `comparisonoperator` ist für die beiden Typen gültig, mit denen Sie verwendet wird.|  
+|`statements`|Dies ist optional. Mindestens eine-Anweisung nach `Case` der-Anweisung wird ausgeführt, wenn `testexpression` mit einer Klausel in übereinstimmt `expressionlist` .|  
+|`elsestatements`|Dies ist optional. Eine oder mehrere der folgenden Anweisungen `Case Else` , die ausgeführt werden, wenn `testexpression` keiner der Klauseln in der einer der `expressionlist` Anweisungen entspricht `Case` .|  
 |`End Select`|Beendet die Definition der `Select` ...- `Case` Konstruktion.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Wenn `testexpression` mit einer beliebigen Klausel übereinstimmt `Case` `expressionlist` , werden die Anweisungen, die auf diese Anweisung folgen, `Case` bis zur nächsten `Case` Anweisung, oder ausgeführt `Case Else` `End Select` . Dann übergibt die Steuerung an die folgende Anweisung `End Select` . Wenn `testexpression` einer- `expressionlist` Klausel in mehr als einer- `Case` Klausel entspricht, werden nur die Anweisungen nach der ersten Übereinstimmung ausgeführt.  
   
  Die `Case Else` -Anweisung wird verwendet, um die `elsestatements` zur Laufzeit einzuführen, wenn keine Entsprechung zwischen dem `testexpression` und einer- `expressionlist` Klausel in einer der anderen-Anweisungen gefunden wird `Case` . Obwohl es nicht erforderlich ist, empfiehlt es sich, eine- `Case Else` Anweisung in der `Select Case` Konstruktion zu haben, um unvorhergesehene Werte verarbeiten zu können `testexpression` . Wenn keine `Case` `expressionlist` -Klausel übereinstimmt `testexpression` und keine-Anweisung vorhanden ist `Case Else` , wird die Steuerung an die folgende Anweisung weitergeleitet `End Select` .  
@@ -75,9 +77,10 @@ End Select
   
  Wenn der Code in einem- `Case` oder- `Case Else` Anweisungsblock keine weiteren Anweisungen im-Block ausführen muss, kann er den Block mithilfe der- `Exit Select` Anweisung beenden. Dadurch wird die Steuerung sofort an die folgende Anweisung übertragen `End Select` .  
   
- `Select Case`Konstruktionen können eingebettet werden. Jede geschachtelte `Select Case` Konstruktion muss über eine übereinstimmende `End Select` Anweisung verfügen und muss vollständig in einem einzelnen- `Case` oder- `Case Else` Anweisungsblock der äußeren Konstruktion enthalten sein `Select Case` , in der Sie geschachtelt ist.  
+ `Select Case` Konstruktionen können eingebettet werden. Jede geschachtelte `Select Case` Konstruktion muss über eine übereinstimmende `End Select` Anweisung verfügen und muss vollständig in einem einzelnen- `Case` oder- `Case Else` Anweisungsblock der äußeren Konstruktion enthalten sein `Select Case` , in der Sie geschachtelt ist.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine- `Select Case` Konstruktion verwendet, um eine Zeile zu schreiben, die dem Wert der-Variablen entspricht `number` . Die zweite `Case` Anweisung enthält den Wert, der mit dem aktuellen Wert von übereinstimmt `number` , sodass die Anweisung, die "zwischen 6 und 8, inklusiv" schreibt, ausgeführt wird.  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
@@ -85,7 +88,7 @@ End Select
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
-- [End-Anweisung](end-statement.md)
+- [End Statement](end-statement.md)
 - [If...Then...Else-Anweisung](if-then-else-statement.md)
 - [Option Compare-Anweisung](option-compare-statement.md)
 - [Exit-Anweisung](exit-statement.md)

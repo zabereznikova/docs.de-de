@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: dfe96cd6eaa673438849fe8f799d46fa2617bfdd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 70de8f9cb33ab3d889f4916ae3d5de48cd218092
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387256"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871196"
 ---
 # <a name="pathfile-access-error"></a>Pfad-/Dateizugriffsfehler
+
 Bei einem Datei Zugriffs-oder Datenträger Zugriffs Vorgang konnte das Betriebssystem keine Verbindung zwischen dem Pfad und dem Dateinamen herstellen.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
