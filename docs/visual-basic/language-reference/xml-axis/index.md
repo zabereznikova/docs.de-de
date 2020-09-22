@@ -7,14 +7,15 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: bac71138723826137f4c9f22a4acc1a81dfb5afd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5766d1f2a0b306374a33844e9e66d161badeb683
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362203"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866485"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML-Achseneigenschaften (Visual Basic)
+
 Die Themen in diesem Abschnitt dokumentieren die Syntax von XML-Achsen Eigenschaften in Visual Basic. Die XML-Achsen Eigenschaften erleichtern den direkten Zugriff auf XML in Ihrem Code.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  

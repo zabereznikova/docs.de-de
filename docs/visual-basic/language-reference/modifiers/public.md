@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: 35332e50227cdef6386362df17c10b5b2cdaa689
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2b6a126435b111ef56ee2a9870ea6fbddf87901
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415348"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867679"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
+
 Gibt an, dass ein oder mehrere deklarierte Programmier Elemente über keine Zugriffs Einschränkungen verfügen.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Wenn Sie eine Komponente oder eine Gruppe von Komponenten veröffentlichen (z. b. eine Klassenbibliothek), möchten Sie in der Regel von jedem Code, der mit der Assembly interagiert, auf die Programmier Elemente zugreifen können. Um einen solchen uneingeschränkten Zugriff auf ein Element zu gewähren, können Sie es mit deklarieren `Public` .  
   
  Der öffentliche Zugriff ist die normale Ebene für ein Programmier Element, wenn Sie den Zugriff darauf nicht einschränken müssen. Beachten Sie, dass die Zugriffsebene eines Elements, das innerhalb einer Schnittstelle, eines Moduls, einer Klasse oder einer Struktur deklariert ist, standardmäßig auf festgelegt ist, `Public` Wenn Sie es nicht andernfalls  
@@ -68,7 +70,7 @@ Gibt an, dass ein oder mehrere deklarierte Programmier Elemente über keine Zugr
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Gebieten](protected.md)
-- [Kollegen](friend.md)
+- [Friend](friend.md)
 - [Privat](private.md)
 - [Privat geschützt](private-protected.md)
 - [Protected Friend](protected-friend.md)

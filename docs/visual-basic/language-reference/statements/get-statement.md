@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 31936fb2c8f658203a43702a2b5fa4ee2481beb5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3da6c099b3f43a144484eaddf58605609eb0bbfe
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404601"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866196"
 ---
 # <a name="get-statement"></a>Get-Anweisung
+
 Deklariert eine- `Get` Eigenschaften Prozedur, mit der der Wert einer Eigenschaft abgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,11 +35,12 @@ End Get
 |Begriff|Definition|  
 |---|---|  
 |`attributelist`|Dies ist optional. Siehe [Attribut Liste](attribute-list.md).|  
-|`accessmodifier`|Optional für höchstens eine der `Get` -und- `Set` Anweisungen in dieser Eigenschaft. Kann eines der folgenden Elemente sein:<br /><br /> -   [Gebieten](../modifiers/protected.md)<br />-   [Kollegen](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Optional. Eine oder mehrere-Anweisungen, die ausgeführt werden, wenn die- `Get` Eigenschaften Prozedur aufgerufen wird.|  
+|`accessmodifier`|Optional für höchstens eine der `Get` -und- `Set` Anweisungen in dieser Eigenschaft. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -   [Gebieten](../modifiers/protected.md)<br />-   [Kollegen](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
+|`statements`|Dies ist optional. Eine oder mehrere-Anweisungen, die ausgeführt werden, wenn die- `Get` Eigenschaften Prozedur aufgerufen wird.|  
 |`End Get`|Erforderlich. Beendet die Definition der `Get` Eigenschaften Prozedur.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Jede Eigenschaft muss über eine `Get` Eigenschaften Prozedur verfügen, es sei denn, die Eigenschaft ist gekennzeichnet `WriteOnly` . Die `Get` Prozedur wird verwendet, um den aktuellen Wert der Eigenschaft zurückzugeben.  
   
  Visual Basic automatisch die-Prozedur einer Eigenschaft aufruft, `Get` Wenn ein Ausdruck den Eigenschafts Wert anfordert.  
@@ -61,7 +63,7 @@ End Get
   
 - **Zurückgeben aus einer Prozedur.** Wenn die `Get` Prozedur in den aufrufenden Code zurückkehrt, wird die Ausführung innerhalb der Anweisung fortgesetzt, die den Eigenschafts Wert angefordert hat.  
   
-     `Get`Eigenschaften Prozeduren können entweder mithilfe der [Return-Anweisung](return-statement.md) oder durch Zuweisen des Rückgabewerts zum Eigenschaftsnamen einen Wert zurückgeben. Weitere Informationen finden Sie unter "Rückgabewert" in der [Function-Anweisung](function-statement.md).  
+     `Get` Eigenschaften Prozeduren können entweder mithilfe der [Return-Anweisung](return-statement.md) oder durch Zuweisen des Rückgabewerts zum Eigenschaftsnamen einen Wert zurückgeben. Weitere Informationen finden Sie unter "Rückgabewert" in der [Function-Anweisung](function-statement.md).  
   
      Die `Exit Property` -und- `Return` Anweisungen führen zu einem sofortigen Beenden einer Eigenschaften Prozedur. Eine beliebige Anzahl von `Exit Property` -und- `Return` Anweisungen kann an beliebiger Stelle in der Prozedur angezeigt werden, und Sie können die `Exit Property` -und- `Return` Anweisungen  
   
@@ -78,6 +80,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die- `Get` Anweisung verwendet, um den Wert einer Eigenschaft zurückzugeben.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  

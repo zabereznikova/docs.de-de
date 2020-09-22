@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 427d14453260a54bd3f2ab9a8ac75dedacd291f4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 40e89160baf663f7d6785e5d3e09ad6cc4eefbde
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359657"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866305"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip-Klausel (Visual Basic)
+
 Überspringt eine festgelegte Anzahl von Elementen in einer Auflistung und gibt anschließend die übrigen Elemente zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,10 +26,12 @@ Skip count
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `count`  
  Erforderlich. Ein-Wert oder ein Ausdruck, der die Anzahl der zu über springenden Elemente der Sequenz ergibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die `Skip` -Klausel bewirkt, dass eine Abfrage Elemente am Anfang einer Ergebnisliste umgeht und die restlichen Elemente zurückgibt. Die Anzahl der zu über springenden Elemente wird durch den- `count` Parameter identifiziert.  
   
  Sie können die- `Skip` Klausel mit der- `Take` Klausel verwenden, um einen Datenbereich aus einem beliebigen Segment einer Abfrage zurückzugeben. Übergeben Sie hierzu den Index des ersten Elements des Bereichs an die `Skip` -Klausel und die Größe des Bereichs an die- `Take` Klausel.  
@@ -38,6 +41,7 @@ Skip count
  Sie können die- `SkipWhile` Klausel verwenden, um anzugeben, dass nur bestimmte Elemente ignoriert werden, abhängig von der angegebenen Bedingung.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Codebeispiel wird die- `Skip` Klausel in Verbindung mit der- `Take` Klausel verwendet, um Daten aus einer Abfrage in Seiten zurückzugeben. Die- `GetCustomers` Funktion verwendet die- `Skip` Klausel, um die Kunden in der Liste bis zum bereitgestellten Start Index Wert zu umgehen, und verwendet die- `Take` Klausel, um eine Kundenseite zurückzugeben, beginnend mit diesem Indexwert.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: b9cc830d27625f192d8f5e059bd3783d05d8ba3b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4447ad6cf0fb251b0d2d1387c109b06d32f69cb8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400227"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866096"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML-CDATA-Literal (Visual Basic)
+
 Ein Literalwert, der ein <xref:System.Xml.Linq.XCData> Objekt darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,6 +26,7 @@ Ein Literalwert, der ein <xref:System.Xml.Linq.XCData> Objekt darstellt.
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `<![CDATA[`  
  Erforderlich. Bezeichnet den Anfang des XML-CDATA-Abschnitts.  
   
@@ -35,9 +37,11 @@ Ein Literalwert, der ein <xref:System.Xml.Linq.XCData> Objekt darstellt.
  Erforderlich. Bezeichnet das Ende des Abschnitts.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Ein <xref:System.Xml.Linq.XCData>-Objekt.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  XML-CDATA-Abschnitte enthalten Rohtext, der eingeschlossen, aber nicht analysiert werden soll, mit dem XML-Code, der ihn enthält. Ein XML-CDATA-Abschnitt kann beliebigen Text enthalten. Dies schließt reservierte XML-Zeichen ein. Der XML-CDATA-Abschnitt endet mit der Sequenz "]] >". Dies impliziert die folgenden Punkte:  
   
 - Sie können keinen eingebetteten Ausdruck in einem XML-CDATA-Literalformat verwenden, da die eingebetteten Ausdrucks Trennzeichen gültige XML-CDATA-Inhalte sind.  
@@ -52,6 +56,7 @@ Ein Literalwert, der ein <xref:System.Xml.Linq.XCData> Objekt darstellt.
  Der Visual Basic Compiler konvertiert das XML-CDATA-Literale in einen- <xref:System.Xml.Linq.XCData.%23ctor%2A> Konstruktor-Konstruktor.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird ein CDATA-Abschnitt erstellt, der den Text "kann \<XML> literaltags enthalten" enthält.  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  

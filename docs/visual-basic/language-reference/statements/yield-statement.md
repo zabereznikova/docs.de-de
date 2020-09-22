@@ -8,14 +8,15 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: cc89e6f9bc2ccb4fff9a9fe12cd190a6b2d212dc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 783785f2a078b6ad8f975846c44ee4e716a12773
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401367"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866502"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield-Anweisung (Visual Basic)
+
 Sendet das nächste Element einer Auflistung an eine- `For Each...Next` Anweisung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,11 +27,12 @@ Yield expression
   
 ## <a name="parameters"></a>Parameter  
   
-|Benennung|Definition|  
+|Begriff|Definition|  
 |---|---|  
 |`expression`|Erforderlich. Ein Ausdruck, der implizit in den Typ der Iteratorfunktion oder-Zugriffsmethode konvertiert werden kann `Get` , die die `Yield` Anweisung enthält.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die- `Yield` Anweisung gibt jeweils ein Element einer Auflistung zurück. Die- `Yield` Anweisung ist in einer Iteratorfunktion oder einem- `Get` Accessor enthalten, die benutzerdefinierte Iterationen über eine Auflistung ausführen.  
   
  Sie nutzen eine Iteratorfunktion mit einem [for each... Next-Anweisung](for-each-next-statement.md) oder eine LINQ-Abfrage. Jede Iterationen der- `For Each` Schleife ruft die Iteratorfunktion auf. Wenn eine- `Yield` Anweisung in der Iteratorfunktion erreicht wird, `expression` wird zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
@@ -44,6 +46,7 @@ Yield expression
  Weitere Informationen zu iteratorfunktionen und `Get` Accessoren finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="iterator-functions-and-get-accessors"></a>Iteratorfunktionen und Get-Accessoren  
+
  Die Deklaration einer Iteratorfunktion oder- `Get` Zugriffsmethode muss die folgenden Anforderungen erfüllen:  
   
 - Er muss einen [iteratormodifizierer](../modifiers/iterator.md) enthalten.  
@@ -57,6 +60,7 @@ Yield expression
  Eine Iteratorfunktion kann eine anonyme Funktion sein. Weitere Informationen finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="exception-handling"></a>Ausnahmebehandlung  
+
  Eine- `Yield` Anweisung kann sich innerhalb eines `Try` Blocks eines [try... Catch... Abschließend-Anweisung](try-catch-finally-statement.md). Ein `Try` -Block, der über eine `Yield` -Anweisung verfügt `Catch` , kann-Blöcke aufweisen und kann über einen- `Finally` Block verfügen.  
   
  Eine- `Yield` Anweisung darf sich nicht in einem- `Catch` Block oder einem- `Finally` Block befinden.  
@@ -64,6 +68,7 @@ Yield expression
  Wenn der `For Each` Text (außerhalb der Iteratorfunktion) eine Ausnahme auslöst, wird ein- `Catch` Block in der Iteratorfunktion nicht ausgeführt, aber ein- `Finally` Block in der Iteratorfunktion wird ausgeführt. Ein `Catch` Block in einer Iteratorfunktion fängt nur Ausnahmen ab, die innerhalb der Iteratorfunktion auftreten.  
   
 ## <a name="technical-implementation"></a>Technische Implementierung  
+
  Der folgende Code gibt einen `IEnumerable (Of String)` aus einer Iteratorfunktion zurück und durchläuft dann die Elemente der `IEnumerable (Of String)` .  
   
 ```vb  
@@ -80,6 +85,7 @@ Next
  Bei jeder nachfolgenden Iteration der `For Each`-Schleife wird die Ausführung des Iteratortexts da fortgesetzt, wo sie beendet wurde, und endet dann wieder an einer `Yield`-Anweisung. Die `For Each` Schleife wird beendet, wenn das Ende der Iteratorfunktion oder einer- `Return` oder- `Exit Function` Anweisung erreicht wird.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel enthält eine- `Yield` Anweisung, die sich innerhalb einer [for... Nächste](for-next-statement.md) Schleife. Jede Iterationen des [foreach](for-each-next-statement.md) - `Main` Anweisungs Texts in erstellt einen-Rückruf für die `Power` Iteratorfunktion. Jeder Aufruf der Iteratorfunktion führt bei der nächsten Iteration der `Yield`-Schleife zur nächsten Ausführung der `For…Next`-Anweisung.  
   
  Der Rückgabetyp der Iteratormethode ist <xref:System.Collections.Generic.IEnumerable%601> , ein Iteratorschnittstellentyp. Wird die Iteratormethode aufgerufen wird, gibt sie ein aufzählbares Objekt zurück, das die Potenzen einer Zahl enthält.  
@@ -87,6 +93,7 @@ Next
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt einen `Get`-Accessor, der ein Iterator ist. Die Eigenschaften Deklaration enthält einen `Iterator` Modifizierer.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  

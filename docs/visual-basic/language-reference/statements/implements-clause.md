@@ -17,22 +17,25 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 46ab1a1148e8d73d91293aedfc407e5efdc7cfb4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7c95cf76b1bac24e2a0f20857b8984d54ebbea85
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404562"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866170"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements-Klausel (Visual Basic)
+
 Gibt an, dass ein Klassen-oder Strukturmember die Implementierung für einen in einer Schnittstelle definierten Member bereitstellt.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
 Das `Implements` Schlüsselwort ist nicht mit der [implementierten Anweisung](implements-statement.md)identisch. Verwenden Sie die- `Implements` Anweisung, um anzugeben, dass eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert. Anschließend verwenden Sie das- `Implements` Schlüsselwort, um anzugeben, welche Schnittstelle und welcher Member implementiert werden.
 
 Wenn eine Klasse oder Struktur eine Schnittstelle implementiert, muss Sie die `Implements` Anweisung unmittelbar nach der [Klassen Anweisung](class-statement.md) oder [Struktur Anweisung](structure-statement.md)enthalten, und Sie muss alle Member implementieren, die durch die Schnittstelle definiert werden.
 
 ## <a name="reimplementation"></a>Neuimplementierung  
+
 In einer abgeleiteten Klasse können Sie einen Schnittstellenmember erneut implementieren, der von der Basisklasse bereits implementiert wurde. Dies unterscheidet sich von der Überschreibung des Basisklassenmembers in den folgenden Punkten:
 
 - Der Basisklassenmember muss nicht [über schreibbar](../modifiers/overridable.md) sein, um neu implementiert werden zu können.

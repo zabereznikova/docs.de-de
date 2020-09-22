@@ -13,14 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: bdb73772dfe0e6d49d89a4ef006b1bceac14c8ee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397154"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866028"
 ---
 # <a name="class-statement-visual-basic"></a>Class-Anweisung (Visual Basic)
+
 Deklariert den Namen einer Klasse und führt die Definition der Variablen, Eigenschaften, Ereignisse und Prozeduren ein, aus denen die Klasse besteht.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,22 +40,23 @@ End Class
 |Begriff|Definition|  
 |---|---|  
 |`attributelist`|Dies ist optional. Siehe [Attribut Liste](attribute-list.md).|  
-|`accessmodifier`|Optional. Kann eines der folgenden Elemente sein:<br /><br /> -   [Publikums](../modifiers/public.md)<br />-   [Gebieten](../modifiers/protected.md)<br />-   [Kollegen](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />-   [Geschützter Freund](../modifiers/protected-friend.md)<br />- [Privat geschützt](../modifiers/private-protected.md)<br/><br/> Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Optional. Siehe [Shadows](../modifiers/shadows.md).|  
-|`MustInherit`|Optional. Siehe [MustInherit](../modifiers/mustinherit.md).|  
-|`NotInheritable`|Optional. Siehe [notvererbt able](../modifiers/notinheritable.md).|  
-|`Partial`|Optional. Gibt eine partielle Definition der-Klasse an. Siehe [partielle](../modifiers/partial.md).|  
+|`accessmodifier`|Dies ist optional. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -   [Publikums](../modifiers/public.md)<br />-   [Gebieten](../modifiers/protected.md)<br />-   [Kollegen](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />-   [Geschützter Freund](../modifiers/protected-friend.md)<br />- [Privat geschützt](../modifiers/private-protected.md)<br/><br/> Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Dies ist optional. Siehe [Shadows](../modifiers/shadows.md).|  
+|`MustInherit`|Dies ist optional. Siehe [MustInherit](../modifiers/mustinherit.md).|  
+|`NotInheritable`|Dies ist optional. Siehe [notvererbt able](../modifiers/notinheritable.md).|  
+|`Partial`|Dies ist optional. Gibt eine partielle Definition der-Klasse an. Siehe [partielle](../modifiers/partial.md).|  
 |`name`|Erforderlich. Der Name dieser Klasse. Siehe [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Optional. Gibt an, dass es sich um eine generische Klasse handelt.|  
+|`Of`|Dies ist optional. Gibt an, dass es sich um eine generische Klasse handelt.|  
 |`typelist`|Erforderlich, wenn Sie das [of](of-clause.md) -Schlüsselwort verwenden. Liste der Typparameter für diese Klasse. Siehe [Typliste](type-list.md).|  
-|`Inherits`|Optional. Gibt an, dass diese Klasse die Member einer anderen Klasse erbt. Siehe [erbt-Anweisung](inherits-statement.md).|  
+|`Inherits`|Dies ist optional. Gibt an, dass diese Klasse die Member einer anderen Klasse erbt. Siehe [erbt-Anweisung](inherits-statement.md).|  
 |`classname`|Erforderlich, wenn Sie die `Inherits`-Anweisung verwenden. Der Name der Klasse, von der diese Klasse abgeleitet wird.|  
-|`Implements`|Optional. Gibt an, dass diese Klasse die Member von einer oder mehreren Schnittstellen implementiert. Siehe [implementierende Anweisung](implements-statement.md).|  
+|`Implements`|Dies ist optional. Gibt an, dass diese Klasse die Member von einer oder mehreren Schnittstellen implementiert. Siehe [implementierende Anweisung](implements-statement.md).|  
 |`interfacenames`|Erforderlich, wenn Sie die `Implements`-Anweisung verwenden. Die Namen der Schnittstellen, die von dieser Klasse implementiert werden.|  
-|`statements`|Optional. Anweisungen, die die Member dieser Klasse definieren.|  
+|`statements`|Dies ist optional. Anweisungen, die die Member dieser Klasse definieren.|  
 |`End Class`|Erforderlich. Beendet die `Class`-Definition.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Eine- `Class` Anweisung definiert einen neuen Datentyp. Eine *Klasse* ist ein grundlegender Baustein der objektorientierten Programmierung (OOP). Weitere Informationen finden Sie unter [Objekte und Klassen](../../programming-guide/language-features/objects-and-classes/index.md).  
   
  `Class` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass der *Deklarations Kontext* für eine Klasse eine Quelldatei, ein Namespace, eine Klasse, eine Struktur, ein Modul oder eine Schnittstelle sein muss und keine Prozedur oder kein Block sein kann. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](declaration-contexts-and-default-access-levels.md).  
@@ -94,15 +96,17 @@ End Class
      Wenn Code in einer geschachtelten Klasse einen nicht qualifizierten Verweis auf ein Programmier Element erstellt, sucht Visual Basic zuerst nach dem Element in der geschachtelten Klasse, dann in der enthaltenden Klasse usw. bis zum äußersten enthaltenden Element.  
   
 ## <a name="classes-and-modules"></a>Klassen und Module  
+
  Diese Elemente weisen viele Ähnlichkeiten auf, aber es gibt auch einige wichtige Unterschiede.  
   
-- **Begriffs.** In früheren Versionen von Visual Basic werden zwei Arten von Modulen erkannt: *Klassen Module* (CLS-Dateien) und *Standardmodule* (Bas-Dateien). Mit der aktuellen Version werden diese *Klassen* bzw. *Module*aufgerufen.  
+- **Terminologie:** In früheren Versionen von Visual Basic werden zwei Arten von Modulen erkannt: *Klassen Module* (CLS-Dateien) und *Standardmodule* (Bas-Dateien). Mit der aktuellen Version werden diese *Klassen* bzw. *Module*aufgerufen.  
   
 - **Freigegebene Member.** Sie können steuern, ob ein Member einer Klasse ein frei Gegebenes oder ein Instanzmember ist.  
   
 - **Objekt Ausrichtung.** Klassen sind objektorientiert, aber Module sind nicht. Sie können eine oder mehrere Instanzen einer Klasse erstellen. Weitere Informationen finden Sie unter [Objekte und Klassen](../../programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine `Class` -Anweisung verwendet, um eine-Klasse und mehrere Member zu definieren.  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
