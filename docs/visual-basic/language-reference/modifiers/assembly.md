@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 7d313dee1015362bd0215ed98ab7e898312cfbcd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 34d6b94f31336e3e99b8ca981a9c4899e5a3d912
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373159"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875532"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
+
 Gibt an, dass ein Attribut am Anfang einer Quelldatei für die gesamte Assembly gilt.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Viele Attribute beziehen sich auf ein einzelnes Programmier Element, z. b. eine Klasse oder Eigenschaft. Sie wenden ein derartiges Attribut an, indem Sie den Attribut Block in spitzen Klammern ( `< >` ) direkt an die Deklarations Anweisung anfügen.  
   
  Wenn sich ein Attribut nicht nur auf das folgende Element bezieht, sondern auf die gesamte Assembly, platzieren Sie den-Attribut Block am Anfang der Quelldatei und identifizieren das-Attribut mit dem- `Assembly` Schlüsselwort. Wenn dies für das aktuelle Assemblymodul gilt, verwenden Sie das [Module](module-keyword.md) -Schlüsselwort.  
@@ -29,5 +31,5 @@ Gibt an, dass ein Attribut am Anfang einer Quelldatei für die gesamte Assembly 
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Mond\<keyword>](module-keyword.md)
+- [Mond \<keyword>](module-keyword.md)
 - [Übersicht über Attribute](../../programming-guide/concepts/attributes/index.md)

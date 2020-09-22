@@ -5,17 +5,18 @@ helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: f54ecf4f60a620818ea57093d8c2325cf2ed0d04
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60dadc2918d4926c2b8bf1004a09d9b3a1ec56ab
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373342"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875576"
 ---
 # <a name="my-reference-visual-basic"></a>My-Referenz (Visual Basic)
+
 Durch die Funktion wird die `My` Programmierung schneller und einfacher, da Sie intuitiven Zugriff auf häufig verwendete Methoden, Eigenschaften und Ereignisse erhalten. In dieser Tabelle werden die in enthaltenen `My` -Objekte sowie die Aktionen aufgelistet, die mit den einzelnen-Objekten ausgeführt werden können.  
   
-|**Aktion**|**Objekt**|  
+|**Aktion**|**Object**|  
 |----------------|----------------|  
 |Zugreifen auf Anwendungsinformationen und-Dienste.|Das `My.Application`-Objekt besteht aus den folgenden Klassen:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> stellt Member bereit, die in allen Projekten verfügbar sind.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> stellt Member bereit, die in Windows Forms-Anwendungen verfügbar sind.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> stellt Member bereit, die in Konsolenanwendungen verfügbar sind.|  
 |Zugreifen auf den Host Computer und dessen Ressourcen, Dienste und Daten.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  

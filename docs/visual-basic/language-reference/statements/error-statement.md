@@ -10,14 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 35ba1f19654d1d23ac1ec73564bc36b0af4f6777
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3f9f5ecb96686fe525e98cf64672d81a3145796
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404744"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873277"
 ---
 # <a name="error-statement"></a>Error-Anweisung
+
 Simuliert das Auftreten eines Fehlers.  
   
 ## <a name="syntax"></a>Syntax  
@@ -27,10 +28,12 @@ Error errornumber
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `errornumber`  
  Erforderlich. Kann eine beliebige gültige Fehlernummer sein.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die- `Error` Anweisung wird aus Gründen der Abwärtskompatibilität unterstützt. Verwenden Sie in neuem Code, insbesondere beim Erstellen von-Objekten, die- `Err` Methode des-Objekts, `Raise` um Laufzeitfehler zu generieren.  
   
  Wenn `errornumber` definiert ist, ruft die- `Error` Anweisung den Fehlerhandler auf, nachdem den Eigenschaften des- `Err` Objekts die folgenden Standardwerte zugewiesen wurden:  
@@ -50,6 +53,7 @@ Error errornumber
 > Einige Visual Basic Host Anwendungen können keine Objekte erstellen. Informationen zum Erstellen von Klassen und Objekten finden Sie in der Dokumentation der Host Anwendung.  
   
 ## <a name="example"></a>Beispiel  
+
  In diesem Beispiel wird die- `Error` Anweisung verwendet, um Fehlernummer 11 zu generieren.  
   
 ```vb  
@@ -58,9 +62,10 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
+
  **Namespace:** [Microsoft. VisualBasic](../runtime-library-members.md)  
   
- **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
+ **Assembly:** Visual Basic Lauf Zeit Bibliothek (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Weitere Informationen
 

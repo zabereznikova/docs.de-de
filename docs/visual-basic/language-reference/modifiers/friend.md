@@ -10,22 +10,24 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 4ac8e5942cf6097642ec111992ebfcdb91e8d7c1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d37a93343822d069295477958780c2b9c72043fa
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392170"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875457"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
+
 Gibt an, dass auf ein oder mehrere deklarierte Programmier Elemente nur innerhalb der Assembly, die ihre Deklaration enthält, zugegriffen werden kann.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  In vielen Fällen sollen Programmier Elemente, wie z. b. Klassen und Strukturen, von der gesamten Assembly verwendet werden, nicht nur von der Komponente, von der Sie deklariert werden. Allerdings möchten Sie möglicherweise nicht, dass Sie über Code außerhalb der Assembly zugänglich sind (z. b. wenn die Anwendung proprietär ist). Wenn Sie den Zugriff auf ein Element auf diese Weise einschränken möchten, können Sie es mit dem- `Friend` Modifizierer deklarieren.  
   
  Code in anderen Klassen, Strukturen und Modulen, die in derselben Assembly kompiliert werden, kann auf alle `Friend` Elemente in der Assembly zugreifen.  
   
- `Friend`der Zugriff ist oft die bevorzugte Ebene für die Programmier Elemente einer Anwendung, und `Friend` ist die Standard Zugriffsebene einer Schnittstelle, eines Moduls, einer Klasse oder einer Struktur.  
+ `Friend` der Zugriff ist oft die bevorzugte Ebene für die Programmier Elemente einer Anwendung, und `Friend` ist die Standard Zugriffsebene einer Schnittstelle, eines Moduls, einer Klasse oder einer Struktur.  
   
  Sie können `Friend` nur auf der Ebene "Module", "Interface" oder "Namespace" verwenden. Daher muss der Deklarations Kontext für ein- `Friend` Element eine Quelldatei, ein Namespace, eine Schnittstelle, ein Modul, eine Klasse oder eine Struktur sein. es kann sich dabei nicht um eine Prozedur handeln.  
 
@@ -38,11 +40,13 @@ Gibt an, dass auf ein oder mehrere deklarierte Programmier Elemente nur innerhal
 > Sie können angeben, dass eine andere Assembly eine Friend-Assembly ist, die es ermöglicht, auf alle Typen und Member zuzugreifen, die als markiert sind `Friend` . Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend.md).
 
 ## <a name="example"></a>Beispiel  
+
  Die folgende Klasse verwendet den- `Friend` Modifizierer, damit andere Programmier Elemente innerhalb derselben Assembly auf bestimmte Member zugreifen können.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Verwendung  
+
  Sie können den- `Friend` Modifizierer in diesen Kontexten verwenden:  
   
  [Class-Anweisung](../statements/class-statement.md)  

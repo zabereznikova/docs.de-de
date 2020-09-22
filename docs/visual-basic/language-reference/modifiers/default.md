@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: 0c2808795d6fcbad7892369fd7f460ebf0406093
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bc213c3b5564d1833136df8f5b8dab1c6b012296
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372971"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875486"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
+
 Identifiziert eine Eigenschaft als Standard Eigenschaft ihrer Klasse, Struktur oder Schnittstelle.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Eine Klasse, Struktur oder Schnittstelle kann höchstens eine ihrer Eigenschaften als *Standard Eigenschaft*angeben, vorausgesetzt, dass die Eigenschaft mindestens einen Parameter annimmt. Wenn Code einen Verweis auf eine Klasse oder Struktur erstellt, ohne einen Member anzugeben, löst Visual Basic diesen Verweis auf die Standard Eigenschaft auf.  
   
  Standardeigenschaften können zu einer geringfügigen Reduzierung der Quell Code Zeichen führen, aber Sie können den Code schwieriger lesbar machen. Wenn der aufrufende Code nicht mit der Klasse oder Struktur vertraut ist, kann er, wenn er einen Verweis auf den Klassen-oder Struktur Namen erstellt, nicht sicher sein, ob dieser Verweis auf die Klasse oder Struktur selbst oder eine Standard Eigenschaft zugreift. Dies kann zu Compilerfehlern oder geringfügigen Lauf Zeit Logik-Fehlern führen.  

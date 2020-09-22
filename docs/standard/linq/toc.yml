@@ -38,7 +38,7 @@
                   href: xml-literals.md
                 - name: XML-Analyse
                   items:
-                    - name: Parsen einer Zeichenfolge
+                    - name: Analysieren einer Zeichenfolge
                       href: parse-string.md
                     - name: Laden von XML aus einer Datei
                       href: load-xml-file.md
@@ -46,11 +46,11 @@
                       href: preserve-white-space-loading-parsing-xml.md
                     - name: Auffangen von Analysefehlern
                       href: catch-parsing-errors.md
-                    - name: Erstellen einer Struktur aus XmlReader
+                    - name: Erstellen einer Struktur aus einem XmlReader
                       href: create-tree-xmlreader.md
                     - name: Streamen von XML-Fragmenten aus einem XmlReader
                       href: stream-xml-fragments-xmlreader.md
-                - name: 'Vorgehensweise: Auffüllen mit Daten einer XML-Struktur mit einem XmlWriter'
+                - name: Auffüllen mit Daten einer XML-Struktur mit einem XmlWriter
                   href: populate-xml-tree-xmlwriter.md
                 - name: 'Vorgehensweise: Überprüfen mit XSD'
                   href: validate-xsd.md
@@ -60,9 +60,9 @@
               items:
                 - name: Übersicht über Namespaces
                   href: namespaces-overview.md
-                - name: 'Vorgehensweise: Erstellen eines Dokuments mit Namespaces in C#'
+                - name: Erstellen eines Dokuments mit Namespaces in C#
                   href: create-document-namespaces-csharp.md
-                - name: 'Vorgehensweise: Erstellen eines Dokuments mit Namespaces in Visual Basic'
+                - name: Erstellen eines Dokuments mit Namespaces in Visual Basic
                   href: create-document-namespaces-visual-basic.md
                 - name: 'Vorgehensweise: Steuern von Namespacepräfixen'
                   href: control-namespace-prefixes.md
@@ -70,7 +70,7 @@
                   href: scope-default-namespaces.md
                 - name: Arbeiten mit globalen Namespaces in Visual Basic
                   href: work-global-namespaces.md
-                - name: Schreiben von XML-Abfragen in Namespaces
+                - name: Schreiben von Abfragen für XML in Namespaces
                   href: write-queries-xml-namespaces.md
             - name: Serialisieren von XML-Strukturen
               items:
@@ -86,23 +86,23 @@
               items:
                 - name: Übersicht über LINQ to XML-Achsen
                   href: linq-xml-axes-overview.md
-                - name: 'Vorgehensweise: Abrufen einer Elementsammlung'
+                - name: Abrufen einer Elementsammlung
                   href: retrieve-collection-elements.md
-                - name: 'Vorgehensweise: Abrufen des Werts eines Elements'
+                - name: Abrufen des Werts eines Elements
                   href: retrieve-value-element.md
-                - name: 'Vorgehensweise: Filtern nach Elementnamen'
+                - name: Filtern nach Elementnamen
                   href: filter-element-names.md
-                - name: 'Vorgehensweise: Verketten von Aufrufen der Axis-Methode'
+                - name: Verketten von Aufrufen der Axis-Methode
                   href: chain-axis-method-calls.md
-                - name: 'Vorgehensweise: Abrufen eines einzelnes untergeordneten Elements'
+                - name: Abrufen eines einzelnes untergeordneten Elements
                   href: retrieve-single-child-element.md
-                - name: 'Vorgehensweise: Abrufen einer Attributsammlung'
+                - name: Abrufen einer Attributsammlung
                   href: retrieve-collection-attributes.md
-                - name: 'Vorgehensweise: Abrufen eines einzelnes Attributs'
+                - name: Abrufen eines einzelnes Attributs
                   href: retrieve-single-attribute.md
-                - name: 'Vorgehensweise: Abrufen des Werts eines Attributs'
+                - name: Abrufen des Werts eines Attributs
                   href: retrieve-value-attribute.md
-                - name: Abrufen des Shallow-Werts eines Elements
+                - name: Abrufen des flachen Werts eines Elements
                   href: retrieve-shallow-value-element.md
                 - name: Sprachintegrierte Achsen in Visual Basic
                   href: language-integrated-axes.md
@@ -112,13 +112,16 @@
                   href: query-xml-trees-overview.md
                 - name: Grundlegende Abfragen
                   items:
+                    - name: Index für Beispiele
+                      displayName: queries
+                      href: basic-queries-linq-to-xml.md
                     - name: Suchen nach einem Element mit bestimmten Attributen
                       href: find-element-specific-attribute.md
                     - name: Suchen nach einem Element mit einem bestimmten untergeordneten Element
                       href: find-element-specific-child-element.md
                     - name: Abfragen eines XDocument im Vergleich zum Abfragen eines XElement
                       href: query-xdocument-vs-query-xelement.md
-                    - name: 'Vorgehensweise: Suchen nach Nachfolgern mit einem bestimmten Elementnamen'
+                    - name: Suchen nach Nachfolgern mit einem bestimmten Elementnamen
                       href: find-descendants-specific-element-name.md
                     - name: Suchen eines einzelnen Nachfolgers mit der Descendants-Methode
                       href: find-single-descendant-descendants-method.md
@@ -130,23 +133,23 @@
                       href: find-all-nodes-namespace.md
                     - name: Sortieren von Elementen
                       href: sort-elements.md
-                    - name: 'Vorgehensweise: Sortieren von Elementen für mehrere Schlüssel'
+                    - name: Sortieren von Elementen nach mehreren Schlüsseln
                       href: sort-elements-multiple-keys.md
                     - name: Berechnen von Zwischenwerten
                       href: calculate-intermediate-values.md
-                    - name: 'Schreiben einer Abfrage, die Elemente basierend auf dem Kontext sucht'
+                    - name: Suchen nach Elementen basierend auf dem Kontext
                       href: write-query-finds-elements-based-context.md
-                    - name: Debuggen von leeren Abfrageergebnissätzen
+                    - name: Debuggen von leeren Abfrageergebnissen
                       href: debug-empty-query-results-sets.md
                 - name: Projektionen und Transformationen
                   items:
                     - name: Arbeiten mit Wörterbüchern unter Verwendung von LINQ to XML
                       href: work-dictionaries-linq-xml.md
-                    - name: Transformieren der Form einer XML-Struktur
+                    - name: Transformieren der Form eines XML-Baums
                       href: transform-shape-xml-tree.md
                     - name: Steuern des Typs einer Projektion
                       href: control-type-projection.md
-                    - name: 'Vorgehensweise: Projektieren eines neuen Typs'
+                    - name: Projektieren eines neuen Typs
                       href: project-new-type.md
                     - name: Projektieren eines Objektdiagramms
                       href: project-object-graph.md
@@ -158,15 +161,15 @@
                       href: generate-xml-csv-files.md
                 - name: Erweiterte Abfragetechniken
                   items:
-                    - name: 'Vorgehensweise: Verbinden von zwei Sammlungen'
+                    - name: Verknüpfen zweier Sammlungen
                       href: join-two-collections.md
                     - name: Erstellen einer Hierarchie mittels Gruppierung
                       href: create-hierarchy-grouping.md
                     - name: Abfragen von LINQ to XML mit XPath
                       href: query-linq-xml-xpath.md
-                    - name: Schreiben einer LINQ to XML-Axis-Methode
+                    - name: Schreiben einer LINQ to XML-Achsenmethode
                       href: write-linq-xml-axis-method.md
-                    - name: 'Vorgehensweise: Durchführen einer Streamingtransformation von Text in XML in C#'
+                    - name: Durchführen einer Streamingtransformation von Text in XML (C#)
                       href: perform-streaming-transformations-text-xml.md
                     - name: Auflisten aller Knoten in einer Struktur
                       href: list-all-nodes-tree.md
@@ -196,29 +199,29 @@
                       href: find-elements-namespace.md
                     - name: Suchen nach vorangehenden gleichgeordneten Elementen
                       href: find-preceding-siblings.md
-                    - name: 'Vorgehensweise: Suchen nach Nachfolgern von untergeordneten Elementen'
+                    - name: Suchen nach Nachfolgern von untergeordneten Elementen
                       href: find-descendants-child-element.md
-                    - name: 'Vorgehensweise: Suchen nach einer Union von zwei Speicherpfaden'
+                    - name: Suchen nach einer Union von zwei Speicherpfaden
                       href: find-union-two-location-paths.md
-                    - name: 'Vorgehensweise: Suchen nach gleichgeordneten Knoten'
+                    - name: Suchen nach gleichgeordneten Knoten
                       href: find-sibling-nodes.md
-                    - name: 'Vorgehensweise: Suchen eines Attributs des übergeordneten Elements'
+                    - name: Suchen eines Attributs des übergeordneten Elements
                       href: find-attribute-parent.md
-                    - name: 'Vorgehensweise: Suchen nach Attributen von gleichgeordneten Elementen mit einem bestimmten Namen'
+                    - name: Suchen nach Attributen von gleichgeordneten Elementen mit einem bestimmten Namen
                       href: find-attributes-siblings-specific-name.md
-                    - name: 'Vorgehensweise: Suchen nach Elementen mit einem bestimmten Attribut'
+                    - name: Suchen nach Elementen mit einem bestimmten Attribut
                       href: find-elements-specific-attribute.md
-                    - name: 'Vorgehensweise: Suchen nach untergeordneten Elementen basierend auf der Position'
+                    - name: Suchen nach untergeordneten Elementen basierend auf der Position
                       href: find-child-elements-based-position.md
-                    - name: 'Vorgehensweise: Suchen des direkten vorhergehenden gleichgeordneten Elements'
+                    - name: Suchen des direkten vorhergehenden gleichgeordneten Elements
                       href: find-immediate-preceding-sibling.md
                 - name: Reine funktionale XML-Transformationen
                   items:
-                    - name: Einführung in reine funktionale Transformationen
+                    - name: Einführung
                       href: introduction-pure-functional-transformations.md
-                    - name: Konzepte und Terminologie (funktionale Transformation)
+                    - name: Konzepte und Terminologie
                       href: concepts-terminology-functional-transformation.md
-                    - name: Funktionale Programmierung im Vergleich zu imperativer Programmierung
+                    - name: Funktionale vs. imperative Programmierung
                       href: functional-vs-imperative-programming.md
                     - name: Refactoring in reine Funktionen
                       href: refactor-pure-functions.md
@@ -232,11 +235,11 @@
                       href: deferred-execution-example.md
                     - name: 'Tutorial: Verketten von Abfragen (C#)'
                       items:
-                        - name: Beispiel für das Verketten von Abfragen (C#)
+                        - name: Beispiel für das Verketten von Abfragen
                           href: chain-queries-example.md
-                        - name: Zwischenmaterialisierung (C#)
+                        - name: Zwischenmaterialisierung
                           href: intermediate-materialization.md
-                        - name: Verketten von Standardabfrageoperatoren (C#)
+                        - name: Verketten von Standardabfrageoperatoren
                           href: chain-standard-query-operators-together.md
                     - name: 'Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument'
                       items:
@@ -264,21 +267,21 @@
                               href: wordprocessingml-document-styles.md
                             - name: Absatzformatteil eines WordprocessingML-Dokuments
                               href: style-part-wordprocessingml-document.md
-                            - name: Beispiel für die Ausgabe von Office Open XML-Dokumentteilen
+                            - name: Beispiel für das Ausgeben von Dokumentteilen
                               href: example-outputs-office-open-xml-document-parts.md
             - name: Ändern von XML-Strukturen
               items:
                 - name: XML-Strukturänderung im Arbeitsspeicher im Vergleich zu funktionaler Konstruktion
                   href: in-memory-xml-tree-modification-vs-functional-construction.md
-                - name: 'Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur'
+                - name: 'Hinzufügen von Elementen, Attributen und Knoten'
                   href: add-elements-attributes-nodes-xml-tree.md
-                - name: 'Ändern von Elementen, Attributen und Knoten in einer XML-Struktur'
+                - name: 'Ändern von Elementen, Attributen und Knoten'
                   href: modify-elements-attributes-nodes-xml-tree.md
-                - name: 'Entfernen von Elementen, Attributen und Knoten aus einer XML-Struktur'
+                - name: 'Entfernen von Elementen, Attributen und Knoten'
                   href: remove-elements-attributes-nodes-xml-tree.md
                 - name: Verwalten von Name-Wert-Paaren
                   href: maintain-name-value-pairs.md
-                - name: Ändern des Namespaces für eine gesamte XML-Struktur
+                - name: Ändern des Namespaces für eine vollständige XML-Struktur
                   href: change-namespace-entire-xml-tree.md
             - name: Leistung
               items:
@@ -300,21 +303,21 @@
                   href: program-nodes.md
                 - name: Fehler durch Vermischung von deklarativem und imperativem Code
                   href: mixed-declarative-imperative-code-bugs.md
-                - name: Streamen von XML-Fragmenten in Headerinformationen
+                - name: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen
                   href: stream-xml-fragments-access-header-information.md
                 - name: Durchführen einer Streamingtransformation großer XML-Dokumente
                   href: perform-streaming-transform-large-xml-documents.md
-                - name: Lesen und Schreiben eines verschlüsselten Dokuments
+                - name: Lesen und Schreiben eines codierten Dokuments
                   href: read-write-encoded-document.md
                 - name: Verwenden von XSLT zum Transformieren einer XML-Struktur
                   href: use-xslt-transform-xml-tree.md
-                - name: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Strukturen in eine XSLT-Formatvorlage
+                - name: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage
                   href: use-annotations-transform-linq-xml-trees-xslt-style.md
                 - name: 'Serialisieren von Objektdiagrammen, die XElement-Objekte enthalten'
                   items:
-                    - name: Serialisieren mit XmlSerializer
+                    - name: Serialisieren mit der XmlSerializer-Klasse
                       href: serialize-xmlserializer.md
-                    - name: Serialisieren mit DataContractSerializer
+                    - name: Serialisieren mit der DataContractSerializer-Klasse
                       href: serialize-datacontractserializer.md
             - name: LINQ to XML-Sicherheit
               href: linq-xml-security.md

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: ab7e3576d946928d51557e14567025da0838bf7c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a1e4df718eeac3f547fa29c148d5fc81880e3336
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402745"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875641"
 ---
 # <a name="conversion-summary-visual-basic"></a>Konvertierung: Zusammenfassung (Visual Basic)
+
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
   
 |Aktion|Sprachelement|  
@@ -24,7 +25,7 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Konvertieren eines Datums in eine Seriennummer|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>|  
 |Konvertieren einer Dezimalzahl in andere Basiszahlen|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>|  
 |Konvertieren einer Zahl in eine Zeichenfolge|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A>|  
-|Konvertieren eines Datentyps in einen anderen Datentyp|[CBool](../functions/type-conversion-functions.md), [CByte](../functions/type-conversion-functions.md), [CDate](../functions/type-conversion-functions.md), [CDbl](../functions/type-conversion-functions.md), [CDec](../functions/type-conversion-functions.md), [CInt](../functions/type-conversion-functions.md), [CLng](../functions/type-conversion-functions.md), [CSng](../functions/type-conversion-functions.md), [CShort](../functions/type-conversion-functions.md), [CStr](../functions/type-conversion-functions.md), [CType](../functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A> ,<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
+|Konvertieren eines Datentyps in einen anderen Datentyp|[CBool](../functions/type-conversion-functions.md), [CByte](../functions/type-conversion-functions.md), [CDate](../functions/type-conversion-functions.md), [CDbl](../functions/type-conversion-functions.md), [CDec](../functions/type-conversion-functions.md), [CInt](../functions/type-conversion-functions.md), [CLng](../functions/type-conversion-functions.md), [CSng](../functions/type-conversion-functions.md), [CShort](../functions/type-conversion-functions.md), [CStr](../functions/type-conversion-functions.md), [CType](../functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A> , <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |Konvertieren eines Datums in Tag, Monat, Wochentag oder Jahr|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|  
 |Konvertieren der Uhrzeit in Stunden, Minuten oder Sekunden|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A>|  
 |Konvertieren einer Zeichenfolge in einen ASCII-Wert|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|  

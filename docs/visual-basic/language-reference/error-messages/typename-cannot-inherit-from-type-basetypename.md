@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: aa04c558abbcc4259c2821cdcbdc1669b91ffee0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5adb5a74c220c7b2f95ac7370040a7fa2bd34299
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402771"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872069"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>\<typename> erweitert den Zugriff der Basis-\<type> außerhalb der Assembly und kann daher nicht von \<basetypename> "\<type>" erben.
+
 Eine Klasse oder Schnittstelle erbt von einer Basisklasse oder Schnittstelle, verfügt aber über eine weniger restriktive Zugriffsebene.  
   
  Eine- `Public` Schnittstelle erbt z. b. von einer- `Friend` Schnittstelle, oder eine `Protected` Klasse erbt von einer- `Private` Klasse. Dadurch wird die Basisklasse oder Schnittstelle für den Zugriff über die beabsichtigte Ebene verfügbar gemacht.  
@@ -25,7 +26,7 @@ Eine Klasse oder Schnittstelle erbt von einer Basisklasse oder Schnittstelle, ve
   
 - Ändern Sie die Zugriffsebene der abgeleiteten Klasse oder Schnittstelle so, dass Sie mindestens so restriktiv ist wie die der Basisklasse oder Schnittstelle.  
   
-     Oder  
+     - oder -  
   
 - Wenn Sie die weniger restriktive Zugriffsebene benötigen, entfernen Sie die- `Inherits` Anweisung. Es ist nicht möglich, von einer eingeschränkteren Basisklasse oder Schnittstelle zu erben.  
   

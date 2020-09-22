@@ -12,14 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 0cce36073b53442bce63f966f3bd94bd5d70d2a8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0a01b49cf1e0bf9ad7b2ce541cee39cba83025ca
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406326"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875303"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf-Operator (Visual Basic)
+
 Überprüft, ob der Lauf Zeittyp des Ergebnisses eines Ausdrucks typkompatibel mit dem angegebenen Typ ist.
   
 ## <a name="syntax"></a>Syntax  
@@ -33,6 +34,7 @@ result = TypeOf objectexpression IsNot typename
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `result`  
  Wird zurückgegeben. Ein `Boolean`-Wert.  
   
@@ -43,6 +45,7 @@ result = TypeOf objectexpression IsNot typename
  Erforderlich. Ein beliebiger Datentypname.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Der `TypeOf`-Operator bestimmt, ob der Laufzeittyp von `objectexpression` mit `typename` kompatibel ist. Die Kompatibilität hängt von der Typkategorie von `typename` ab. Die folgende Tabelle zeigt, wie die Kompatibilität bestimmt wird.  
   
 |Typkategorie von `typename`|Kompatibilitätskriterium|  
@@ -56,6 +59,7 @@ result = TypeOf objectexpression IsNot typename
  `TypeOf` wird immer mit dem Schlüsselwort `Is` verwendet, um einen `TypeOf`...`Is`-Ausdruck zu erstellen, oder mit dem Schlüsselwort `IsNot`, um einen `TypeOf`...`IsNot`-Ausdruck zu erstellen.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden `TypeOf`...`Is`-Ausdrücke zum Testen der Typkompatibilität von zwei Objektverweisvariablen mit verschiedenen Datentypen verwendet.  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  

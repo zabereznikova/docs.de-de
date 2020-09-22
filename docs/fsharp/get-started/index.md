@@ -1,33 +1,33 @@
 ---
-title: Beginnen Sie mitF#
-description: Informieren Sie sich über die ersten Schritte mit F# der Programmiersprache.
-ms.date: 12/08/2018
-ms.openlocfilehash: 2b4baa5c948800389c171a5d9f9cd157a903063e
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+title: Erste Schritte mit F#
+description: Informieren Sie sich über die ersten Schritte mit der Programmiersprache F#.
+ms.date: 09/12/2020
+ms.openlocfilehash: aeaa655e2af52a134dc70298375903c24d251079
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204905"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738787"
 ---
-# <a name="get-started-with-f"></a>Erste Schritte mit F#
+# <a name="get-started-with-f"></a>Erste Schritte mit F\#
 
-Sie können mit F# auf Ihrem Computer oder online beginnen.
+Sie können die ersten Schritte mit F# auf Ihrem Computer oder Online ausführen.
 
-## <a name="get-started-on-your-machine"></a>Starten Sie auf Ihrem Computer
+## <a name="get-started-on-your-machine"></a>Erste Schritte auf Ihrem Computer
 
-Es gibt mehrere Anleitungen zum erstmaligen Installieren und Verwenden von F# auf Ihrem Computer.  Sie können die folgende Tabelle verwenden, um zu entscheiden, welche Anleitung Sie verwenden wollen:
+Es gibt mehrere Anleitungen zur Installation und erstmaligen Verwendung von F# auf Ihrem Computer.  Sie können die folgende Tabelle zur Entscheidungsfindung verwenden:
 
-| Betriebssystem | Visual Studio bevorzugen | Bevorzugen Visual Studio Code | Befehlszeile bevorzugen |
+| OS | Visual Studio bevorzugen | Visual Studio Code bevorzugen | Befehlszeile bevorzugen |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Einstieg in Visual Studio](get-started-visual-studio.md) | [Erste Schritte mit Visual Studio Code](get-started-vscode.md) | [Beginnen Sie mit der .net Core-CLI](get-started-command-line.md) |
-| macOS | [Einstieg in vs für Mac](get-started-with-visual-studio-for-mac.md) | [Erste Schritte mit Visual Studio Code](get-started-vscode.md) | [Beginnen Sie mit der .net Core-CLI](get-started-command-line.md) |
-| Linux | Nicht zutreffend | [Erste Schritte mit Visual Studio Code](get-started-vscode.md) | [Beginnen Sie mit der .net Core-CLI](get-started-command-line.md) |
+| Windows | [Erste Schritte mit Visual Studio](get-started-visual-studio.md) | [Erste Schritte mit Visual Studio Code](get-started-vscode.md) | [Erste Schritte mit F# mit der .NET Core-CLI](get-started-command-line.md) |
+| macOS | [Get started with VS for Mac](get-started-with-visual-studio-for-mac.md) (Erste Schritte mit Visual Studio für Mac) | [Erste Schritte mit Visual Studio Code](get-started-vscode.md) | [Erste Schritte mit F# mit der .NET Core-CLI](get-started-command-line.md) |
+| Linux | – | [Erste Schritte mit Visual Studio Code](get-started-vscode.md) | [Erste Schritte mit F# mit der .NET Core-CLI](get-started-command-line.md) |
 
-Es gibt im Allgemeinen keine spezielle Anleitung, die besser als der Rest ist. Es wird empfohlen, alle Möglichkeiten zum Verwenden von F# auf Ihrem Computer auszuprobieren, um festzustellen, welche für Sie die beste ist!
+Im Allgemeinen ist jeder Einstieg so gut wie der andere. Probieren Sie einfach alle Möglichkeiten aus, F# auf Ihrem Computer zu verwenden, und entscheiden Sie selbst, was Ihnen am besten gefällt!
 
-## <a name="get-started-online"></a>Online Einstieg
+## <a name="get-started-online"></a>Erste Schritte online
 
-Wenn Sie F# und .NET nicht auf dem Computer installieren möchten, können Sie auch in F# in Ihrem Browser einsteigen:
+Wenn Sie F# und .NET nicht auf Ihrem Computer installieren möchten, können Sie auch im Browser in F# einsteigen:
 
-* ["Introduction F# to on Binder](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab) " ist ein [jupyter-Notebook](https://jupyter.org/) , das über den Free- [Binder](https://mybinder.org/) Dienst gehostet wird. Keine Registrierung erforderlich!
-* [Die Fable-REPL](https://fable.io/repl/) ist eine interaktives browserinterne REPL, die [Fable](https://fable.io/) verwendet, um F#-Code in JavaScript zu übersetzen. Sehen Sie sich die zahlreichen Beispiele in Ihrem Browser zu grundlegenden F#-Funktionen bis hin zu einem vollwertigen Videospiel an.
+* Die [Einführung in F# auf Binder](https://mybinder.org/v2/gh/dotnet/interactive/main?urlpath=lab) ist ein [Jupyter-Notebook](https://jupyter.org/), das über den kostenlosen [Binder](https://mybinder.org/)-Dienst gehostet wird. Es ist keine Registrierung erforderlich!
+* [Die Fable-REPL](https://fable.io/repl/) ist eine interaktive REPL im Browser, die [Fable](https://fable.io/) verwendet, um F#-Code in JavaScript zu übersetzen. Sehen Sie sich die zahlreichen Beispiele an von F#-Grundlagen bis zu einem vollständigen Videospiel, das in Ihrem Browser ausgeführt wird!

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 02d258084aaaa53dcc559cfaa0dec27556351037
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3025adfe8c881a08df3b5f03253510c263c624d1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404485"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873224"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface-Anweisung (Visual Basic)
+
 Deklariert den Namen einer Schnittstelle und führt die Definitionen der Member ein, aus denen die Schnittstelle besteht.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,25 +39,26 @@ End Interface
 |Begriff|Definition|  
 |---|---|  
 |`attributelist`|Dies ist optional. Siehe [Attribut Liste](attribute-list.md).|  
-|`accessmodifier`|Optional. Kann eines der folgenden Elemente sein:<br /><br /> -   [Publikums](../modifiers/public.md)<br />-   [Gebieten](../modifiers/protected.md)<br />-   [Kollegen](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />-  [Geschützter Freund](../modifiers/protected-friend.md)<br/>- [Privat geschützt](../modifiers/private-protected.md)<br /><br /> Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Optional. Siehe [Shadows](../modifiers/shadows.md).|  
+|`accessmodifier`|Dies ist optional. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -   [Publikums](../modifiers/public.md)<br />-   [Gebieten](../modifiers/protected.md)<br />-   [Kollegen](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />-  [Geschützter Freund](../modifiers/protected-friend.md)<br/>- [Privat geschützt](../modifiers/private-protected.md)<br /><br /> Siehe [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Dies ist optional. Siehe [Shadows](../modifiers/shadows.md).|  
 |`name`|Erforderlich. Der Name dieser Schnittstelle. Siehe [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Optional. Gibt an, dass dies eine generische Schnittstelle ist.|  
+|`Of`|Dies ist optional. Gibt an, dass dies eine generische Schnittstelle ist.|  
 |`typelist`|Erforderlich, wenn Sie das [of](of-clause.md) -Schlüsselwort verwenden. Liste der Typparameter für diese Schnittstelle. Optional kann jeder Typparameter mithilfe von `In` und `Out` generischen modifizierervariablen als Variant deklariert werden. Siehe [Typliste](type-list.md).|  
-|`Inherits`|Optional. Gibt an, dass diese Schnittstelle die Attribute und Member einer anderen Schnittstelle oder Schnittstellen erbt. Siehe [erbt-Anweisung](inherits-statement.md).|  
+|`Inherits`|Dies ist optional. Gibt an, dass diese Schnittstelle die Attribute und Member einer anderen Schnittstelle oder Schnittstellen erbt. Siehe [erbt-Anweisung](inherits-statement.md).|  
 |`interfacenames`|Erforderlich, wenn Sie die `Inherits`-Anweisung verwenden. Die Namen der Schnittstellen, von denen diese Schnittstelle abgeleitet ist.|  
-|`modifiers`|Optional. Geeignete modifiziererer für den Schnittstellenmember, der definiert wird.|  
-|`Property`|Optional. Definiert eine Eigenschaft, die ein Member der-Schnittstelle ist.|  
-|`Function`|Optional. Definiert eine `Function` Prozedur, die ein Member der-Schnittstelle ist.|  
-|`Sub`|Optional. Definiert eine `Sub` Prozedur, die ein Member der-Schnittstelle ist.|  
-|`Event`|Optional. Definiert ein Ereignis, das ein Member der-Schnittstelle ist.|  
-|`Interface`|Optional. Definiert eine Schnittstelle, die in dieser Schnittstelle geschachtelt ist. Die Definition der Definition für die-Schnittstelle muss mit einer- `End Interface` Anweisung enden.|  
-|`Class`|Optional. Definiert eine Klasse, die ein Member der-Schnittstelle ist. Die Member-Klassendefinition muss mit einer-Anweisung beendet werden `End Class` .|  
-|`Structure`|Optional. Definiert eine-Struktur, die ein Member der-Schnittstelle ist. Die Definition der Elementstruktur muss mit einer-Anweisung beendet werden `End Structure` .|  
-|`membername`|Erforderlich für jede Eigenschaft, Prozedur, jedes Ereignis, jede Schnittstelle, jede Klasse oder Struktur, die als Member der-Schnittstelle definiert ist. Der Name des Elements.|  
+|`modifiers`|Dies ist optional. Geeignete modifiziererer für den Schnittstellenmember, der definiert wird.|  
+|`Property`|Dies ist optional. Definiert eine Eigenschaft, die ein Member der-Schnittstelle ist.|  
+|`Function`|Dies ist optional. Definiert eine `Function` Prozedur, die ein Member der-Schnittstelle ist.|  
+|`Sub`|Dies ist optional. Definiert eine `Sub` Prozedur, die ein Member der-Schnittstelle ist.|  
+|`Event`|Dies ist optional. Definiert ein Ereignis, das ein Member der-Schnittstelle ist.|  
+|`Interface`|Dies ist optional. Definiert eine Schnittstelle, die in dieser Schnittstelle geschachtelt ist. Die Definition der Definition für die-Schnittstelle muss mit einer- `End Interface` Anweisung enden.|  
+|`Class`|Dies ist optional. Definiert eine Klasse, die ein Member der-Schnittstelle ist. Die Member-Klassendefinition muss mit einer-Anweisung beendet werden `End Class` .|  
+|`Structure`|Dies ist optional. Definiert eine-Struktur, die ein Member der-Schnittstelle ist. Die Definition der Elementstruktur muss mit einer-Anweisung beendet werden `End Structure` .|  
+|`membername`|Erforderlich für jede Eigenschaft, Prozedur, jedes Ereignis, jede Schnittstelle, jede Klasse oder Struktur, die als Member der-Schnittstelle definiert ist. Der Name des Members.|  
 |`End Interface`|Beendet die `Interface`-Definition.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Eine *Schnittstelle* definiert einen Satz von Membern, z. b. Eigenschaften und Prozeduren, die von Klassen und Strukturen implementiert werden können. Die-Schnittstelle definiert nur die Signaturen der Elemente und nicht Ihre internen Abläufe.  
   
  Eine Klasse oder Struktur implementiert die-Schnittstelle durch Bereitstellen von Code für jeden von der-Schnittstelle definierten Member. Wenn die Anwendung schließlich eine Instanz aus dieser Klasse oder Struktur erstellt, ist ein Objekt vorhanden, das im Arbeitsspeicher ausgeführt wird. Weitere Informationen finden Sie unter [Objekte und Klassen](../../programming-guide/language-features/objects-and-classes/index.md) und [Schnittstellen](../../programming-guide/language-features/interfaces/index.md).  
@@ -106,6 +108,7 @@ End Interface
 - **Amtszeit.** Eine Schnittstelle hat selbst keine Lebensdauer und auch keine Member. Wenn eine Klasse eine Schnittstelle implementiert und ein Objekt als Instanz dieser Klasse erstellt wird, verfügt das Objekt über eine Gültigkeitsdauer innerhalb der Anwendung, in der es ausgeführt wird. Weitere Informationen finden Sie unter "Lebensdauer" in [Class-Anweisung](class-statement.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die `Interface` -Anweisung verwendet, um eine Schnittstelle mit dem Namen zu definieren `thisInterface` , die mit einer `Property` -Anweisung und einer-Anweisung implementiert werden muss `Function` .  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
@@ -123,5 +126,5 @@ End Interface
 - [Sub-Anweisung](sub-statement.md)
 - [Generische Typen in Visual Basic (Visual Basic)](../../programming-guide/language-features/data-types/generic-types.md)
 - [Abweichungen bei generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Geben Sie in](../modifiers/in-generic-modifier.md)
-- [Vorgenommen](../modifiers/out-generic-modifier.md)
+- [In](../modifiers/in-generic-modifier.md)
+- [aus](../modifiers/out-generic-modifier.md)

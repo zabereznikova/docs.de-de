@@ -2,22 +2,24 @@
 title: Modifizierer
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 80adc4521dcb1bb0c65981dae6f842168194eae7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372894"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875450"
 ---
 # <a name="modifiers-visual-basic"></a>Modifizierer (Visual Basic)
+
 Die Themen in diesem Abschnitt dokumentieren die Visual Basic-Laufzeitmodifizierer.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Ansi](ansi.md)  
+
+ [Toleranz](ansi.md)  
   
  [Assembly](assembly.md)  
   
- [Async](async.md)  
+ [Asynchron](async.md)  
   
  [Auto](auto.md)  
   
@@ -27,15 +29,15 @@ Die Themen in diesem Abschnitt dokumentieren die Visual Basic-Laufzeitmodifizier
   
  [Standard](default.md)  
   
- [Kollegen](friend.md)  
+ [Friend](friend.md)  
   
- [Geben Sie in](in-generic-modifier.md)  
+ [In](in-generic-modifier.md)  
   
  [Iterator](iterator.md)  
   
  [Schlüssel](key.md)  
   
- [Mond\<keyword>](module-keyword.md)  
+ [Mond \<keyword>](module-keyword.md)  
   
  [MustInherit](mustinherit.md)  
   
@@ -49,9 +51,9 @@ Die Themen in diesem Abschnitt dokumentieren die Visual Basic-Laufzeitmodifizier
   
  [Optional](optional.md)  
   
- [Vorgenommen](out-generic-modifier.md)  
+ [aus](out-generic-modifier.md)  
   
- [Overloads](overloads.md)  
+ [Überladungen](overloads.md)  
   
  [Overrides](overridable.md)  
   
@@ -79,7 +81,7 @@ Die Themen in diesem Abschnitt dokumentieren die Visual Basic-Laufzeitmodifizier
   
  [Statisch](static.md)  
   
- [Unicode-](unicode.md)  
+ [Unicode](unicode.md)  
   
  [Widening](widening.md)  
   
@@ -88,4 +90,5 @@ Die Themen in diesem Abschnitt dokumentieren die Visual Basic-Laufzeitmodifizier
  [WriteOnly](writeonly.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Sprachreferenz zu Visual Basic](../index.md)  

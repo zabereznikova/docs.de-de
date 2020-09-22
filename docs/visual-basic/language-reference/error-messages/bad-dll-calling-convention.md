@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
-ms.openlocfilehash: a60e44ce92b1805b0a5a6f1d4ce397c295eef202
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0481bd5e4dfe7a24dff454d0754b519509fa967f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409880"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875733"
 ---
 # <a name="bad-dll-calling-convention"></a>Fehlerhafte DLL-Aufrufkonvention
+
 Argumente, die an eine Dynamic Link Library (dll) übergeben werden, müssen exakt mit den von der Routine erwarteten übereinstimmen. Aufruf Konventionen behandeln die Anzahl, den Typ und die Reihenfolge der Argumente. Das Programm ruft möglicherweise eine Routine in einer DLL auf, der der falsche Typ oder die falsche Anzahl von Argumenten übergeben wird.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

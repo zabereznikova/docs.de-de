@@ -4,18 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-ms.openlocfilehash: 4e3648ee9893ca0f4045e28e68b659c01035dee0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f0c3f228baf76c463cbe1ec5f1687b93830f2596
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404472"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873205"
 ---
 # <a name="into-clause-visual-basic"></a>Into-Klausel (Visual Basic)
+
 Identifiziert Aggregatfunktionen oder Gruppierungen, die auf eine Auflistung angewendet werden sollen.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das- `Each` Schlüsselwort wird in den folgenden Kontexten verwendet:  
+
+ Das `Each`-Schlüsselwort kann in folgendem Kontext verwendet werden:  
   
  [Aggregate Clause](../queries/aggregate-clause.md)  
   

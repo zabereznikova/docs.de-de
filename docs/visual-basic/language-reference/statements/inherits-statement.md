@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 5d88a01f90bc91a88229d19aa2368f8c71075b2f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dd8fbc71fdc859bb127764951464278267c0984c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404498"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875228"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
+
 Bewirkt, dass die aktuelle Klasse oder Schnittstelle die Attribute, Variablen, Eigenschaften, Prozeduren und Ereignisse von einer anderen Klasse oder Gruppe von Schnittstellen erbt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -28,9 +29,10 @@ Inherits basetypenames
   
 |Begriff|Definition|  
 |---|---|  
-|`basetypenames`|Erforderlich. Der Name der Klasse, von der diese Klasse abgeleitet wird.<br /><br /> Oder<br /><br /> Die Namen der Schnittstellen, von denen diese Schnittstelle abgeleitet ist. Trennen Sie mehrere Namen mithilfe von Kommas.|  
+|`basetypenames`|Erforderlich. Der Name der Klasse, von der diese Klasse abgeleitet wird.<br /><br /> - oder -<br /><br /> Die Namen der Schnittstellen, von denen diese Schnittstelle abgeleitet ist. Trennen Sie mehrere Namen mithilfe von Kommas.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Bei Verwendung der `Inherits` Anweisung muss es sich bei der Anweisung um die erste nicht leere Zeile, die keine Kommentarzeile in einer Klassen-oder Schnittstellen Definition handelt. Er sollte unmittelbar auf die- `Class` oder- `Interface` Anweisung folgen.  
   
  Sie können `Inherits` nur in einer Klasse oder Schnittstelle verwenden. Dies bedeutet, dass der Deklarations Kontext für eine Vererbung keine Quelldatei, ein Namespace, eine Struktur, ein Modul, eine Prozedur oder ein Block sein kann.  
@@ -52,11 +54,13 @@ Inherits basetypenames
  Ein Beispiel für die Schnittstellen Vererbung in der .NET Framework ist die- <xref:System.Collections.ICollection> Schnittstelle, die von der- <xref:System.Collections.IEnumerable> Schnittstelle erbt. Dies bewirkt <xref:System.Collections.ICollection> , dass die Definition des Enumerators erbt, der zum Durchlaufen einer Auflistung erforderlich ist.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die- `Inherits` Anweisung verwendet, um anzuzeigen, wie eine Klasse mit dem Namen `thisClass` alle Member einer Basisklasse mit dem Namen erben kann `anotherClass` .  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt die Vererbung mehrerer Schnittstellen.  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  

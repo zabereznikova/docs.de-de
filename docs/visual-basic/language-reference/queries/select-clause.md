@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: a909b1d79b10f82ece03bab788ae889c64b27124
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d96423efbee075a7ad257df72471c71e38e09b63
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359693"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875746"
 ---
 # <a name="select-clause-visual-basic"></a>Select-Klausel (Visual Basic)
+
 Definiert das Ergebnis einer Abfrage.  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,13 +26,15 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `var1`  
- Optional. Ein Alias, der zum Verweisen auf die Ergebnisse des Spalten Ausdrucks verwendet werden kann.  
+ Dies ist optional. Ein Alias, der zum Verweisen auf die Ergebnisse des Spalten Ausdrucks verwendet werden kann.  
   
  `fieldName1`  
  Erforderlich. Der Name des Felds, das im Abfrageergebnis zurückgegeben werden soll.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Sie können die- `Select` Klausel verwenden, um die Ergebnisse zu definieren, die von einer Abfrage zurückgegeben werden sollen. Dies ermöglicht es Ihnen, entweder die Member eines neuen anonymen Typs zu definieren, der von einer Abfrage erstellt wird, oder die Member eines benannten Typs als Ziel festzulegen, der von einer Abfrage zurückgegeben wird. Die- `Select` Klausel ist für eine Abfrage nicht erforderlich. Wenn keine- `Select` Klausel angegeben wird, gibt die Abfrage einen Typ zurück, der auf allen Elementen der Bereichs Variablen basiert, die für den aktuellen Gültigkeitsbereich identifiziert werden. Weitere Informationen finden Sie unter [Anonyme Typen](../../programming-guide/language-features/objects-and-classes/anonymous-types.md). Wenn eine Abfrage einen benannten Typ erstellt, wird ein Ergebnis vom Typ zurückgegeben, <xref:System.Collections.Generic.IEnumerable%601> wobei `T` der erstellte Typ ist.  
   
  Die- `Select` Klausel kann auf beliebige Variablen im aktuellen Gültigkeitsbereich verweisen. Dies schließt Bereichs Variablen ein, die in der- `From` Klausel (or- `From` Klauseln) identifiziert werden. Sie enthält auch alle neuen Variablen, die mit einem Alias durch die- `Aggregate` ,-,-oder-Klauseln erstellt `Let` `Group By` `Group Join` wurden, oder Variablen aus einer vorherigen `Select` Klausel im Abfrage Ausdruck. Die- `Select` Klausel kann auch statische Werte enthalten. Das folgende Codebeispiel zeigt beispielsweise einen Abfrage Ausdruck, in dem die- `Select` Klausel das Abfrageergebnis als neuen anonymen Typ mit vier Membern definiert: `ProductName` , `Price` , `Discount` und `DiscountedPrice` . Die `ProductName` -und- `Price` Member-Werte werden aus der in der-Klausel definierten Product Range-Variablen entnommen `From` . Der Element `DiscountedPrice` Wert wird in der- `Let` Klausel berechnet. Der- `Discount` Member ist ein statischer Wert.  
@@ -47,6 +50,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Abfrage Ausdruck verwendet eine- `From` Klausel, um eine Bereichs Variable für die Auflistung zu deklarieren `cust` `customers` . Die `Select` -Klausel wählt den Kundennamen und ID-Wert aus und füllt die `CompanyName` -Spalte und die- `CustomerID` Spalte der neuen Bereichs Variablen auf. Die `For Each` -Anweisung durchläuft jedes zurückgegebene Objekt und zeigt die `CompanyName` `CustomerID` Spalten und für jeden Datensatz an.  
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  

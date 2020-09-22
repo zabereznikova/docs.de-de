@@ -14,14 +14,15 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: 999050314d674fa98833083d84796e471c22971d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ce7592c73f387d6ddbfd328abce8555cb7dcd303
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406339"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875290"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor-Operator (Visual Basic)
+
 Führt einen logischen Ausschluss für zwei `Boolean` Ausdrücke oder einen bitweisen Ausschluss zweier numerischer Ausdrücke aus.  
   
 ## <a name="syntax"></a>Syntax  
@@ -31,6 +32,7 @@ result = expression1 Xor expression2
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `result`  
  Erforderlich. Eine beliebige `Boolean` oder numerische Variable. Bei einem booleschen Vergleich `result` ist der logische Ausschluss (exklusive logische Disjunktion) von zwei `Boolean` Werten. Bei bitweisen Vorgängen `result` ist ein numerischer Wert, der den bitweisen Ausschluss (exklusive bitweise Disjunktion) von zwei numerischen Bitmustern darstellt.  
   
@@ -41,6 +43,7 @@ result = expression1 Xor expression2
  Erforderlich. Ein beliebiger `Boolean`-Ausdruck oder numerischer Ausdruck.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Bei einem booleschen Vergleich `result` ist `True` nur dann der Wert, wenn genau einer von `expression1` und als `expression2` ausgewertet wird `True` . Das heißt, wenn und nur, wenn `expression1` und als `expression2` gegenüberliegende Werte ausgewertet werden `Boolean` . In der folgenden Tabelle wird veranschaulicht, wie `result` bestimmt wird.  
   
 |Wenn `expression1` gleich |Und `expression2` ist|Der Wert von `result` ist|  
@@ -68,14 +71,17 @@ result = expression1 Xor expression2
  Beispielsweise ist der Wert für 5 `Xor` 3 6. Um zu sehen, warum dies der Fall ist, konvertieren Sie 5 und 3 in die Binär Darstellungen 101 und 011. Verwenden Sie dann die vorherige Tabelle, um zu bestimmen, dass 101 Xor 011 110 ist, was die binäre Darstellung der Dezimalzahl 6 ist.  
   
 ## <a name="data-types"></a>Datentypen  
+
  Wenn die Operanden aus einem `Boolean` Ausdruck und einem numerischen Ausdruck bestehen, konvertiert Visual Basic den `Boolean` Ausdruck in einen numerischen Wert (– 1 für `True` und 0 für `False` ) und führt eine bitweise Operation aus.  
   
  Für einen `Boolean` Vergleich ist der Datentyp des Ergebnisses `Boolean` . Bei einem bitweisen Vergleich ist der Ergebnis Datentyp ein numerischer Typ, der für die Datentypen von `expression1` und geeignet ist `expression2` . Weitere Informationen finden Sie in der Tabelle "relationale und bitweise Vergleiche" in den [Datentypen der Operator Ergebnisse](data-types-of-operator-results.md).  
   
 ## <a name="overloading"></a>Überladen  
+
  Der `Xor` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der- `Xor` Operator verwendet, um einen logischen Ausschluss (exklusive logische Disjunktion) für zwei Ausdrücke auszuführen. Das Ergebnis ist ein `Boolean` Wert, der angibt, ob genau einer der Ausdrücke ist `True` .  
   
  [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
@@ -83,6 +89,7 @@ result = expression1 Xor expression2
  Im vorherigen Beispiel werden die Ergebnisse von `False` , `True` `False` bzw. erzeugt.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der- `Xor` Operator verwendet, um einen logischen Ausschluss (exklusive logische Disjunktion) für die einzelnen Bits zweier numerischer Ausdrücke auszuführen. Das Bit im Ergebnis Muster wird festgelegt, wenn genau eines der entsprechenden Bits in den Operanden auf 1 festgelegt ist.  
   
  [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  

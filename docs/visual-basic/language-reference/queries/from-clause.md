@@ -10,14 +10,15 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 33680f49247b3b2a6082b3a6b27ca64f8401e42d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 120ba6da11bffc3a0e81873d1fd606633724723d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396180"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875259"
 ---
 # <a name="from-clause-visual-basic"></a>From-Klausel (Visual Basic)
+
 Gibt eine oder mehrere Bereichs Variablen und eine abzufragende Auflistung an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,10 +33,11 @@ From element [ As type ] In collection [ _ ]
 |Begriff|Definition|  
 |---|---|  
 |`element`|Erforderlich. Eine *Bereichs Variable* , die verwendet wird, um die Elemente der Auflistung zu durchlaufen. Eine Bereichs Variable wird verwendet, um auf die einzelnen Member von zu verweisen, `collection` während die Abfrage durchläuft `collection` . Muss ein Aufzähl Bare-Typ sein.|  
-|`type`|Optional. Der `element`-Typ. Wenn kein `type` angegeben wird, wird der Typ von `element` aus abgeleitet `collection` .|  
+|`type`|Dies ist optional. Der `element`-Typ. Wenn kein `type` angegeben wird, wird der Typ von `element` aus abgeleitet `collection` .|  
 |`collection`|Erforderlich. Verweist auf die Auflistung, die abgefragt werden soll. Muss ein Aufzähl Bare-Typ sein.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die `From` -Klausel wird verwendet, um die Quelldaten für eine Abfrage und die Variablen zu identifizieren, die verwendet werden, um auf ein Element aus der Quell Auflistung zu verweisen. Diese Variablen werden als *Bereichs Variablen*bezeichnet. Die- `From` Klausel ist für eine Abfrage erforderlich, außer wenn die- `Aggregate` Klausel verwendet wird, um eine Abfrage zu identifizieren, die nur aggregierte Ergebnisse zurückgibt. Weitere Informationen finden Sie unter [Aggregate-Klausel](aggregate-clause.md).  
   
  Sie können mehrere `From` Klauseln in einer Abfrage angeben, um mehrere Sammlungen zu identifizieren, die verknüpft werden sollen. Wenn mehrere Sammlungen angegeben werden, werden Sie unabhängig voneinander durchlaufen, oder Sie können Sie verknüpfen, wenn Sie verknüpft sind. Sie können Auflistungen implizit mithilfe der- `Select` Klausel oder explizit mithilfe der- `Join` oder- `Group Join` Klauseln verknüpfen. Als Alternative können Sie mehrere Bereichs Variablen und Auflistungen in einer einzelnen `From` Klausel angeben, wobei jede verknüpfte Bereichs Variable und Auflistung durch ein Komma von den anderen getrennt getrennt werden. Das folgende Codebeispiel zeigt beide Syntax Optionen für die- `From` Klausel.  
@@ -65,6 +67,7 @@ From element [ As type ] In collection [ _ ]
 - Identifizieren Sie mithilfe der `Skip` `Take` Klauseln,, und Teile des Ergebnisses, das zurückgegeben werden soll `Skip While` `Take While` .  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Abfrage Ausdruck verwendet eine- `From` Klausel, um eine Bereichs Variable `cust` für jedes `Customer` Objekt in der Auflistung zu deklarieren `customers` . Die- `Where` Klausel verwendet die Range-Variable, um die Ausgabe auf Kunden aus dem angegebenen Bereich zu beschränken. In der- `For Each` Schleife wird der Firmenname für jeden Kunden im Abfrageergebnis angezeigt.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
