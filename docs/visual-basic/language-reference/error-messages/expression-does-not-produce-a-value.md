@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30491
 ms.assetid: 8399d7ae-bc0a-49e6-81dc-2e7229708bc9
-ms.openlocfilehash: 97cf3208e47eb0514296927e86eefc768280f61f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eaa6633996b6fef8ba949e1d8aa7f19d7d5fb6a4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409542"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874261"
 ---
 # <a name="expression-does-not-produce-a-value"></a>Der Ausdruck ergibt keinen Wert
+
 Sie haben versucht, einen Ausdruck zu verwenden, der keinen Wert in einem Wert produzierenden Kontext erzeugt, wie z. b. das Aufrufen einer `Sub` in einem Kontext, in dem `Function` erwartet wird.  
   
  **Fehler-ID:** BC30491  

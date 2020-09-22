@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: 34718243172d3b1a238a813268e672d62c4eeb6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a60afe0907e974dfb345d20d18762cb5f84127d9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406533"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875031"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Die \<variablename>-Variable wird verwendet, bevor ihr ein Wert zugewiesen wird.
+
 Die-Variable \<variablename> wird verwendet, bevor ihr ein Wert zugewiesen wurde. Zur Laufzeit kann eine NULL-Verweisausnahme auftreten.  
   
  Eine Anwendung verfügt über mindestens einen möglichen Pfad durch Ihren Code, der eine Variable liest, bevor ihr ein Wert zugewiesen wird.  

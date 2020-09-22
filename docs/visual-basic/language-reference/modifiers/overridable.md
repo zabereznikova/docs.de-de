@@ -16,17 +16,19 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: dcbabde8464dd8a0ce5fad24d7d72b1e780270d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8506aba7e64f2dbd975cc275cefb7b5bb1aefda5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392118"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875008"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
+
 Gibt an, dass eine Eigenschaft oder Prozedur durch eine identisch benannte Eigenschaft oder Prozedur in einer abgeleiteten Klasse überschrieben werden kann.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Der- `Overridable` Modifizierer ermöglicht, dass eine Eigenschaft oder Methode in einer Klasse in einer abgeleiteten Klasse überschrieben wird. Der [nodeverridable](notoverridable.md) -Modifizierer verhindert, dass eine Eigenschaft oder Methode in einer abgeleiteten Klasse überschrieben wird.  Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
  Wenn der `Overridable` - `NotOverridable` Modifizierer oder der-Modifizierer nicht angegeben wird, ist die Standardeinstellung davon abhängig, ob die Eigenschaft oder Methode eine Basisklassen Eigenschaft oder-Methode überschreibt. Wenn die Eigenschaft oder Methode eine Basisklassen Eigenschaft oder-Methode überschreibt, ist die Standardeinstellung `Overridable` . andernfalls ist Sie `NotOverridable` .  
@@ -38,6 +40,7 @@ Gibt an, dass eine Eigenschaft oder Prozedur durch eine identisch benannte Eigen
  Sie können `Overridable` nur in einer Deklarations Anweisung für eine Eigenschaft oder Prozedur verwenden.  
   
 ## <a name="combined-modifiers"></a>Kombinierte modifiziererer  
+
  Sie können `Overridable` oder `NotOverridable` für eine `Private` Methode nicht angeben.  
   
  Sie können nicht `Overridable` mit `MustOverride` , `NotOverridable` oder `Shared` in derselben Deklaration angeben.  
@@ -45,6 +48,7 @@ Gibt an, dass eine Eigenschaft oder Prozedur durch eine identisch benannte Eigen
  Da ein überschreibendes Element implizit überschreibbar ist, können Sie `Overridable` nicht mit `Overrides` kombinieren.  
   
 ## <a name="usage"></a>Verwendung  
+
  Der `Overridable`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
  [Function-Anweisung](../statements/function-statement.md)  

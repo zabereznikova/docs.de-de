@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: f1dc656a09eee05080356892b280a79505f3b9cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c7b352c7bd61216ecce9901585945e740428ee3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397349"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873864"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Spät gebundene Auflösung. Laufzeitfehler sind möglich.
+
 Ein-Objekt wird einer Variablen zugewiesen, die als [Objekt Datentyp](../data-types/object-data-type.md)deklariert wird.  
   
  Wenn Sie eine Variable als deklarieren `Object` , muss der Compiler die *späte Bindung*durchführen, die zur Laufzeit zusätzliche Vorgänge verursacht. Sie setzt die Anwendung zudem möglichen Laufzeitfehlern aus. Wenn Sie z. b. <xref:System.Windows.Forms.Form> der Variablen eine zuweisen `Object` und dann versuchen, auf die- <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> Eigenschaft zuzugreifen, löst die Laufzeit eine <xref:System.MemberAccessException> aus, da die- <xref:System.Windows.Forms.Form> Klasse keine-Eigenschaft verfügbar macht `NameTable` .  
@@ -31,5 +32,5 @@ Ein-Objekt wird einer Variablen zugewiesen, die als [Objekt Datentyp](../data-ty
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Frühe und späte Bindung](../../programming-guide/language-features/early-late-binding/index.md)
+- [Frühes und spätes Binden](../../programming-guide/language-features/early-late-binding/index.md)
 - [Deklaration von Objektvariablen](../../programming-guide/language-features/variables/object-variable-declaration.md)

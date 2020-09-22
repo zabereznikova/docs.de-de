@@ -10,14 +10,15 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 46b93c060a12d82b34dafdf3aa4ea677df6f54cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 13d86aad8b68391f7effe2f6637adc68d8a3b59a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404290"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872014"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent-Anweisung
+
 Löst ein Ereignis aus, das auf Modulebene innerhalb einer Klasse, eines Formulars oder eines Dokuments deklariert ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -27,13 +28,15 @@ RaiseEvent eventname[( argumentlist )]
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `eventname`  
  Erforderlich. Der Name des Ereignisses, das auslöst werden soll.  
   
  `argumentlist`  
- Optional. Eine durch Trennzeichen getrennte Liste von Variablen, Arrays oder Ausdrücken. Das `argumentlist` Argument muss in Klammern eingeschlossen werden. Wenn keine Argumente vorhanden sind, müssen die Klammern ausgelassen werden.  
+ Dies ist optional. Eine durch Trennzeichen getrennte Liste von Variablen, Arrays oder Ausdrücken. Das `argumentlist` Argument muss in Klammern eingeschlossen werden. Wenn keine Argumente vorhanden sind, müssen die Klammern ausgelassen werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Der erforderliche `eventname` ist der Name eines Ereignisses, das im Modul deklariert ist. Es folgt Visual Basic Variablen Namenskonventionen.  
   
  Wenn das Ereignis nicht innerhalb des Moduls deklariert wurde, in dem es ausgelöst wird, tritt ein Fehler auf. Das folgende Code Fragment veranschaulicht eine Ereignis Deklaration und eine Prozedur, in der das-Ereignis ausgelöst wird.  
@@ -51,6 +54,7 @@ RaiseEvent eventname[( argumentlist )]
 > Sie können das Standardverhalten von Ereignissen ändern, indem Sie ein benutzerdefiniertes Ereignis definieren. Für benutzerdefinierte Ereignisse `RaiseEvent` Ruft die-Anweisung den- `RaiseEvent` Accessor des Ereignisses auf. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](event-statement.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden Ereignisse zum Herunterzählen der Sekunden von 10 bis 0 verwendet. Der Code veranschaulicht einige der ereignisbezogenen Methoden, Eigenschaften und Anweisungen, einschließlich der- `RaiseEvent` Anweisung.  
   
  Die Klasse, die ein Ereignis auslöst, ist die Ereignisquelle, und die Methoden, die das Ereignis verarbeiten, sind die Ereignishandler. Eine Ereignisquelle kann über mehrere Handler für die Ereignisse verfügen, die sie generiert. Wenn die Klasse das Ereignis auslöst, wird dieses Ereignis in jeder Klasse ausgelöst, die das Verarbeiten von Ereignissen für diese Instanz des Objekts ausgewählt hat.  
@@ -66,6 +70,7 @@ RaiseEvent eventname[( argumentlist )]
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Beispiel  
+
  Fügen Sie den folgenden Code zum Code für `Form1` hinzu. Ersetzen Sie alle möglicherweise vorhandenen doppelten Prozeduren, z `Form_Load` `Button_Click` . b. oder.  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  

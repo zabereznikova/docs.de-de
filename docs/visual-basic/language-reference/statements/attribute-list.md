@@ -5,14 +5,15 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: f2400334182d373ea49c130fd17bc4f9943248d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e566239c56efa8ca8e83bff92486fec4c434e92b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408444"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874735"
 ---
 # <a name="attribute-list-visual-basic"></a>Attributliste (Visual Basic)
+
 Gibt die Attribute an, die auf ein deklariertes Programmier Element angewendet werden sollen. Mehrere Attribute werden durch Kommas getrennt. Im folgenden finden Sie die Syntax für ein Attribut.  
   
 ## <a name="syntax"></a>Syntax  
@@ -22,14 +23,16 @@ Gibt die Attribute an, die auf ein deklariertes Programmier Element angewendet w
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
 |||
 |---|---|
 |`attributemodifier`|Erforderlich für Attribute, die am Anfang einer Quelldatei angewendet werden. Kann eine [Assembly](../modifiers/assembly.md) oder ein [Modul](../modifiers/module-keyword.md)sein.|
 |`attributename`| Erforderlich. Der Name des Attributs.|
-|`attributearguments`|Optional. Liste der positionellen Argumente für dieses Attribut. Mehrere Argumente werden durch Kommas getrennt.|
-|`attributeinitializer`|Optional. Liste der Variablen-oder Eigenschafteninitialisierer für dieses Attribut. Mehrere Initialisierer werden durch Kommas getrennt.|
+|`attributearguments`|Dies ist optional. Liste der positionellen Argumente für dieses Attribut. Mehrere Argumente werden durch Kommas getrennt.|
+|`attributeinitializer`|Dies ist optional. Liste der Variablen-oder Eigenschafteninitialisierer für dieses Attribut. Mehrere Initialisierer werden durch Kommas getrennt.|
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Sie können ein oder mehrere Attribute auf fast alle Programmier Elemente anwenden (Typen, Prozeduren, Eigenschaften usw.). Attribute werden in den Metadaten der Assembly angezeigt, und Sie können Ihnen helfen, Ihren Code zu kommentieren oder anzugeben, wie ein bestimmtes Programmier Element verwendet werden soll. Sie können Attribute anwenden, die durch Visual Basic und die .NET Framework definiert sind, und Sie können eigene Attribute definieren.  
 
  Weitere Informationen dazu, wann Attribute verwendet werden sollten, finden Sie unter [Übersicht über Attribute](../../programming-guide/concepts/attributes/index.md). Weitere Informationen zu Attributnamen finden Sie unter [deklarierte Element Namen](../../programming-guide/language-features/declared-elements/declared-element-names.md).  
@@ -47,15 +50,16 @@ Gibt die Attribute an, die auf ein deklariertes Programmier Element angewendet w
 - **Argumentation.** Alle positionellen Argumente für ein Attribut müssen allen Variablen-oder eigenschafteninitialisierern vorangestellt sein.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird das- <xref:System.Runtime.InteropServices.DllImportAttribute> Attribut auf eine Skeleton-Definition einer- `Function` Prozedur angewendet.  
   
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>Gibt an, dass die attributierte Prozedur einen Einstiegspunkt in einer nicht verwalteten DLL (Dynamic-Link Library) darstellt. Das Attribut stellt den DLL-Namen als Positions Argument und die anderen Informationen als Variableninitialisierer bereit.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> Gibt an, dass die attributierte Prozedur einen Einstiegspunkt in einer nicht verwalteten DLL (Dynamic-Link Library) darstellt. Das Attribut stellt den DLL-Namen als Positions Argument und die anderen Informationen als Variableninitialisierer bereit.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Assembly](../modifiers/assembly.md)
-- [Mond\<keyword>](../modifiers/module-keyword.md)
+- [Mond \<keyword>](../modifiers/module-keyword.md)
 - [Übersicht über Attribute](../../programming-guide/concepts/attributes/index.md)
 - [Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

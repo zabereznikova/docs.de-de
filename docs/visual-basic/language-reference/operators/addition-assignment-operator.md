@@ -10,14 +10,15 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: c2ce384901a9f0207e8279a5a07a88600c875e7f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a3a37798a3ddb480ac5322c4b2d3e9396e739aa6
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372206"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873478"
 ---
 # <a name="-operator-visual-basic"></a>+=-Operator (Visual Basic)
+
 Fügt den Wert eines numerischen Ausdrucks zum Wert einer numerischen Variablen oder Eigenschaft hinzu und weist das Ergebnis der Variablen oder Eigenschaft zu. Kann auch verwendet werden, um einen `String` -Ausdruck zu einer `String` Variablen oder Eigenschaft zu verketten und das Ergebnis der Variablen oder der Eigenschaft zuzuweisen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -27,6 +28,7 @@ variableorproperty += expression
 ```  
   
 ## <a name="parts"></a>Bestandteile  
+
  `variableorproperty`  
  Erforderlich. Eine beliebige numerische oder `String` Variable oder Eigenschaft.  
   
@@ -34,6 +36,7 @@ variableorproperty += expression
  Erforderlich. Beliebiger numerischer or- `String` Ausdruck.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das Element auf der linken Seite des `+=` Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../modifiers/readonly.md)  
   
  Der `+=` Operator Fügt der Variablen oder der Eigenschaft auf der linken Seite den Wert auf der rechten Seite hinzu und weist das Ergebnis der Variablen oder der Eigenschaft auf der linken Seite zu. Der `+=` Operator kann auch verwendet werden, um den `String` Ausdruck rechts von der `String` Variablen oder der Eigenschaft auf der linken Seite zu verketten und das Ergebnis der Variablen oder der Eigenschaft auf der linken Seite zuzuweisen.  
@@ -46,9 +49,11 @@ variableorproperty += expression
  Wenn eine einschränkend sein Semantik zulässig ist, `+=` führt der Operator implizit eine Vielzahl von Zeichen folgen-und numerischen Konvertierungen aus, die mit denen des Operators identisch sind `+` . Ausführliche Informationen zu diesen Konvertierungen finden Sie unter [+-Operator](addition-operator.md).  
   
 ## <a name="overloading"></a>Überladen  
+
  Der `+` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des- `+` Operators wirkt sich auf das Verhalten des- `+=` Operators aus. Wenn Ihr Code `+=` für eine Klasse oder Struktur verwendet, die überlastet `+` ist, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der- `+=` Operator verwendet, um den Wert einer Variablen mit einem anderen zu kombinieren. Der erste Teil verwendet `+=` mit numerischen Variablen, um einen Wert zu einem anderen hinzuzufügen. Im zweiten Teil wird `+=` mit `String` Variablen verwendet, um einen Wert mit einem anderen zu verketten. In beiden Fällen wird das Ergebnis der ersten Variablen zugewiesen.  
   
  [!code-vb[VbVbalrOperators#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#7)]  
@@ -61,8 +66,8 @@ variableorproperty += expression
 
 - [+-Operator](addition-operator.md)
 - [Zuweisungsoperatoren](assignment-operators.md)
-- [Arithmetische Operatoren](arithmetic-operators.md)
-- [Verkettungs Operatoren](concatenation-operators.md)
+- [Arithmetic Operators (Arithmetische Operatoren)](arithmetic-operators.md)
+- [Verkettungsoperatoren](concatenation-operators.md)
 - [Operatorrangfolge in Visual Basic](operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](operators-listed-by-functionality.md)
 - [Anweisungen](../../programming-guide/language-features/statements.md)

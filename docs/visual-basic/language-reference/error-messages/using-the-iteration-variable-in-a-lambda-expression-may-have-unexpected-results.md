@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7975dc767ae652359c904271d6610be34e4cb80
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373913"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870248"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>Die Verwendung der Iterationsvariablen in einem Lambda-Ausdruck kann zu unerwarteten Ergebnissen führen
+
 Die Verwendung der Iterations Variablen in einem Lambda-Ausdruck kann zu unerwarteten Ergebnissen führen. Erstellen Sie stattdessen eine lokale Variable innerhalb der Schleife, und weisen Sie Ihr den Wert der Iterations Variablen zu.  
   
  Diese Warnung wird angezeigt, wenn Sie eine Schleifen Iterations Variable in einem Lambda Ausdruck verwenden, der innerhalb der-Schleife deklariert ist. Beispielsweise bewirkt das folgende Beispiel, dass die Warnung angezeigt wird.  
@@ -83,6 +84,6 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Lambda-Ausdrücke](../../programming-guide/language-features/procedures/lambda-expressions.md)

@@ -4,21 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 534ea2d8316dc29cace798c5ad9b7697a290026f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 99b84902ddf032f2ecb6e26400e200bea862dfdf
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409868"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875152"
 ---
 # <a name="bad-file-mode"></a>Fehlerhafter Dateimodus.
-Anweisungen, die zum Bearbeiten von Dateiinhalten verwendet werden, müssen für den Modus geeignet sein, in dem die Datei geöffnet wurde. Mögliche Ursachen sind:  
+
+Anweisungen, die zum Bearbeiten von Dateiinhalten verwendet werden, müssen für den Modus geeignet sein, in dem die Datei geöffnet wurde. Folgende Ursachen sind möglich:  
   
 - Eine- `FilePutObject` oder- `FileGetObject` Anweisung gibt eine sequenzielle Datei an.  
   
 - Eine- `Print` Anweisung gibt eine Datei an, die für einen anderen Zugriffsmodus als oder geöffnet wurde `Output` `Append` .  
   
-- Eine- `Input` Anweisung gibt eine Datei an, die für einen anderen Zugriffsmodus geöffnet ist als`Input`  
+- Eine- `Input` Anweisung gibt eine Datei an, die für einen anderen Zugriffsmodus geöffnet ist als `Input`  
   
 - Der Versuch, in eine schreibgeschützte Datei zu schreiben.  
   

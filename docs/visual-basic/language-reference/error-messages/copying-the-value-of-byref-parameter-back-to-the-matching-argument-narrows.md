@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: bac5f9a88df719bc64a8b0541f65e5912275866e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 971110c505800b0ceba73506f2b2702516a7a23a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409750"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874551"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Das Zurückkopieren des ByRef-Parameters "\<parametername>" in das entsprechende Argument führt zu einer Einschränkung von Typ "\<typename1>" auf Typ "\<typename2>".
+
 Eine Prozedur wird mit einem Argument aufgerufen, das zum entsprechenden Parametertyp erweitert wird, und die Konvertierung des-Parameters in das-Argument wird einschränkend.  
   
  Wenn Sie eine Klasse oder Struktur definieren, können Sie einen oder mehrere Konvertierungsoperatoren zum Konvertieren dieses Klassen- oder Strukturtyps in andere Typen definieren. Sie können auch Operatoren für die umgekehrte Konvertierung definieren, um dieser anderen Typen zurück in den Klassen- oder Strukturtyp zu konvertieren. Wenn Sie den Klassen-oder Strukturtyp in einem Prozedur aufrufstyp verwenden, können Visual Basic Diese Konvertierungs Operatoren verwenden, um den Typ eines Arguments in den Typ des entsprechenden Parameters zu konvertieren.  

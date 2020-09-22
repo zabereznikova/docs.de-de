@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: 11e866d9a8da7ad1ecc5f788fc31f6ac96d32f2c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d57a9e78e6ae179d3050e5a92399ca731fa16ba7
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409828"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874908"
 ---
 # <a name="bad-file-name-or-number"></a>Der Dateiname oder die Zahl ist ungültig.
+
 Fehler beim Zugriff auf die angegebene Datei. Zu den möglichen Ursachen für diesen Fehler gehören:  
   
 - Eine-Anweisung verweist auf eine Datei mit einem Dateinamen oder einer Zahl, der nicht in der-Anweisung angegeben wurde `FileOpen` oder der in einer-Anweisung angegeben wurde, `FileOpen` aber anschließend geschlossen wurde.  

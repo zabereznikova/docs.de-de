@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: bf95a7a0c6cb80bc02434eab7a86d07cb6855ee2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ac585a86a783f36642545e368b1c2e694b89f62
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387139"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871172"
 ---
 # <a name="permission-denied-visual-basic"></a>Berechtigung verweigert (Visual Basic)
+
 Es wurde versucht, auf einen schreibgeschützten Datenträger zu schreiben oder auf eine gesperrte Datei zuzugreifen.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

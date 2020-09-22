@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 6abb6dde624e129b52fefecf8c51e6cde2567ae1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dce98a4deef8fbb0e8bc024244b815e23d51c790
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409802"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874571"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>Der Konstruktor "\<name>" kann sich nicht selbst aufrufen:
+
 Eine `Sub New` Prozedur in einer Klasse oder Struktur ruft sich selbst auf.  
   
  Der Zweck eines Konstruktors besteht darin, eine Instanz einer Klasse oder Struktur zu initialisieren, wenn Sie erstmalig erstellt wird. Eine Klasse oder Struktur kann mehrere Konstruktoren aufweisen, vorausgesetzt, Sie verfügen über unterschiedliche Parameterlisten. Ein Konstruktor ist berechtigt, einen anderen Konstruktor aufzurufen, um seine Funktionalität zusätzlich zu seiner eigenen Funktionalität auszuführen. Es ist jedoch nicht bedeutungslos, dass sich ein Konstruktor selbst aufruft, und es würde tatsächlich zu einer unendlichen Rekursion kommen, wenn dies zulässig ist.  

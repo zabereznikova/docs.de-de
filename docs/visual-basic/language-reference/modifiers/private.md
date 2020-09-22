@@ -1,5 +1,5 @@
 ---
-title: Private
+title: Privat
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,17 +7,19 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 524f03e77e075bef08a1b41b563985de41baacb6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 59f1c1666ce38923a2861244fb377007cd0fa992
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404809"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874985"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
+
 Gibt an, dass auf ein oder mehrere deklarierte Programmier Elemente nur innerhalb Ihres Deklarations Kontexts zugegriffen werden kann, einschließlich aus allen enthaltenen Typen.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Wenn ein Programmier Element proprietäre Funktionen darstellt oder vertrauliche Daten enthält, sollten Sie den Zugriff auf das Element in der Regel so streng wie möglich einschränken. Die maximale Beschränkung erreichen Sie, indem nur das Modul, die Klasse oder die Struktur, die das Modul definiert, für den Zugriff zugelassen wird. Um den Zugriff auf ein Element auf diese Weise einzuschränken, können Sie es mit deklarieren `Private` .  
 
 > [!NOTE]
@@ -63,7 +65,7 @@ Gibt an, dass auf ein oder mehrere deklarierte Programmier Elemente nur innerhal
 
 - [Öffentlich](public.md)
 - [Gebieten](protected.md)
-- [Kollegen](friend.md)
+- [Friend](friend.md)
 - [Privat geschützt](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
 - [Zugriffsebenen in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)

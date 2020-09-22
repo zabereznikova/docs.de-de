@@ -7,25 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 6eb46c6479adc69eaf65b34c69aa69977b4d62ef
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 72c030d18d5339908c5088e104f6a8ad3e76943b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972391"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874094"
 ---
-# <a name="friend-assembly-reference-reference-is-invalid"></a>Friend-assemblyverweisverweis \<> ist ungültig.
-Der Verweis \<> der Friend-Assembly ist ungültig. Signierte Assemblys mit starkem Namen müssen in ihren InternalsVisibleTo-Deklarationen einen öffentlichen Schlüssel angeben.  
+# <a name="friend-assembly-reference-reference-is-invalid"></a>Der Friend-Assemblyverweis \<reference> ist ungültig
+
+Der friend-Assemblyverweis \<reference> ist ungültig. Signierte Assemblys mit starkem Namen müssen in ihren InternalsVisibleTo-Deklarationen einen öffentlichen Schlüssel angeben.  
   
- Der AssemblyName, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> der an den Attributkonstruktor übergeben wird, identifiziert eine Assembly mit starkem Namen `PublicKey` , aber kein-Attribut.  
+ Der AssemblyName, der an den <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Attributkonstruktor übergeben wird, identifiziert eine Assembly mit starkem Namen, aber kein- `PublicKey` Attribut.  
   
  **Fehler-ID:** BC31535  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Bestimmen Sie den öffentlichen Schlüssel für die Friend-Assembly mit starkem Namen. Fügen Sie den öffentlichen Schlüssel als Teil des Assemblynamens ein <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> , der mit dem `PublicKey` -Attribut an den Attributkonstruktor übergeben wird.  
+1. Bestimmen Sie den öffentlichen Schlüssel für die Friend-Assembly mit starkem Namen. Fügen Sie den öffentlichen Schlüssel als Teil des Assemblynamens ein, der mit dem-Attribut an den <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Attributkonstruktor übergeben wird `PublicKey` .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Reflection.AssemblyName>
 - [Friend-Assemblys](../../../standard/assembly/friend.md)

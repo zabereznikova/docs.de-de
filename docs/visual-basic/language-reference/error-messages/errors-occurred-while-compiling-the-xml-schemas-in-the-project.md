@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 919c6873ba63addb776d756a58c44a3fe3f0ec3d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 17c31301e28c757954e72ba103254f038905671f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409626"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874349"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Fehler beim Kompilieren der XML-Schemas im Projekt
+
 Fehler beim Kompilieren der XML-Schemas im Projekt. Aus diesem Grund ist XML IntelliSense nicht verfügbar.  
   
  Fehler in einem XSD-Schema (XML Schema Definition), das im Projekt enthalten ist. Dieser Fehler tritt auf, wenn Sie eine XSD-Schema Datei (XSD-Datei) hinzufügen, die in Konflikt mit dem vorhandenen XSD-Schemaset für das Projekt steht.  

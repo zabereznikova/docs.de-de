@@ -26,14 +26,15 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 82f19762865fdf3c3f32a0349e21e3b97bebd567
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404277"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872025"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim-Anweisung (Visual Basic)
+
 Reserviert Speicherplatz für eine Arrayvariable neu.  
   
 ## <a name="syntax"></a>Syntax  
@@ -51,6 +52,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |`boundlist`|Erforderlich. Liste der Grenzen jeder Dimension des neu definierten Arrays.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Sie können die `ReDim`-Anweisung verwenden, um die Größe einer oder mehrerer Dimensionen eines Arrays zu ändern, das bereits deklariert wurde. Wenn Sie ein großes Array verwenden und einige Elemente nicht mehr benötigen, kann `ReDim` durch das Reduzieren der Arraygröße Arbeitsspeicher freigeben. Falls Ihr Array mehr Elemente benötigt, kann `ReDim` diese auch hinzufügen.  
   
  Die `ReDim`-Anweisung ist nur für Arrays bestimmt. Sie gilt nicht für Skalare (Variablen, die nur einen einzelnen Wert enthalten), Auflistungen oder Strukturen. Beachten Sie Folgendes: Wenn Sie für eine Variable den Typ `Array` deklarieren, verfügt die `ReDim`-Anweisung nicht über genügend Typinformationen zum Erstellen des neuen Arrays.  
@@ -79,13 +81,14 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Array Ersetzung.** `ReDim`Gibt das vorhandene Array frei und erstellt ein neues Array mit demselben Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
+- **Array Ersetzung.** `ReDim` Gibt das vorhandene Array frei und erstellt ein neues Array mit demselben Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
   
 - **Initialisierung ohne Beibehaltung (Preserve):** Wenn Sie nicht angeben `Preserve` , werden `ReDim` die Elemente des neuen Arrays initialisiert, wobei der Standardwert für ihren Datentyp verwendet wird.  
   
 - **Initialisierung mit Beibehaltung (Preserve):** Wenn Sie angeben `Preserve` , kopiert Visual Basic die Elemente aus dem vorhandenen Array in das neue Array.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die Größe der letzten Dimension eines dynamischen Arrays erhöht, ohne dass vorhandene Daten im Array verloren gehen. Anschließend wird die Größe mit einem Teilverlust der Daten reduziert. Zuletzt wird die Größe zurück auf den Originalwert reduziert, und alle Arrayelemente werden neu initialisiert.  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  

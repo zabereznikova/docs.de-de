@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 9cc7e25ef1be21ff2f6a71dcb61bc29ec92da30f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ced0b6e06edadd9aed787aab2e715a2853e73a9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400356"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870842"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>Der Rückgabetyp der \<procedurename>-Funktion ist nicht CLS-kompatibel.
+
 Eine `Function` Prozedur ist als gekennzeichnet, `<CLSCompliant(True)>` gibt jedoch einen Typ zurück, der als markiert ist `<CLSCompliant(False)>` , nicht markiert ist oder nicht qualifiziert ist, weil es sich um einen nicht kompatiblen Typ handelt.  
   
  Damit eine Prozedur mit [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS) kompatibel ist, darf sie ausschließlich CLS-kompatible Typen verwenden. Dies gilt für die Parametertypen, den Rückgabetyp und die Typen all ihrer lokalen Variablen.  

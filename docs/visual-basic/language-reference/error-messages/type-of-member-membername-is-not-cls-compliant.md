@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 030cb31b8f1ba0e8eaa82eeb8e37153411a53404
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12155062f04b7619cae581540abfc4ce1a8ae34f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400304"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875133"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>Der Typ des Members "\<membername>" ist nicht CLS-kompatibel.
+
 Der für diesen Member angegebene Datentyp ist nicht Teil der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS). Dies ist kein Fehler in der Komponente, da der .NET Framework und Visual Basic diesen Datentyp unterstützen. Eine andere Komponente, die in streng CLS-kompatibler Code geschrieben wird, unterstützt diesen Datentyp jedoch möglicherweise nicht. Eine solche Komponente ist möglicherweise nicht in der Lage, mit Ihrer Komponente erfolgreich zu interagieren.  
   
  Die folgenden Visual Basic-Datentypen sind nicht CLS-kompatibel:  
