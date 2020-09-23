@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983e2fd22badf4296004404d885df0a07ab2dc74
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387893"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071559"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Gewusst wie: Abrufen eines Werts aus einer Eigenschaft (Visual Basic)
+
 Sie rufen den Wert einer Eigenschaft ab, indem Sie den Eigenschaftsnamen in einen Ausdruck einschließen.  
   
  Die-Prozedur der Eigenschaft `Get` Ruft den Wert ab, aber Sie rufen ihn nicht explizit anhand des Namens auf. Sie verwenden die-Eigenschaft wie eine Variable. Visual Basic führt die Aufrufe der Prozeduren der Eigenschaft aus.  
@@ -24,7 +25,7 @@ Sie rufen den Wert einer Eigenschaft ab, indem Sie den Eigenschaftsnamen in eine
   
 1. Verwenden Sie den Eigenschaftsnamen in einem Ausdruck auf die gleiche Weise wie einen Variablennamen. Sie können eine Eigenschaft überall dort verwenden, wo Sie eine Variable oder eine Konstante verwenden können.  
   
-     Oder  
+     - oder -  
   
      Verwenden Sie den Eigenschaftsnamen nach dem Gleichheits `=` Zeichen () in einer Zuweisungsanweisung.  
   
@@ -38,7 +39,7 @@ Sie rufen den Wert einer Eigenschaft ab, indem Sie den Eigenschaftsnamen in eine
   
  Der Wert der Eigenschaft nimmt an dem Ausdruck genau so ein, wie eine Variable oder Konstante, oder er wird in der Variablen oder der Eigenschaft auf der linken Seite der Zuweisungsanweisung gespeichert.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Eigenschaftenprozeduren](./property-procedures.md)

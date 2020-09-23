@@ -9,14 +9,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: c8ed792bf3ffefd903d60522f621958e44546d32
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 249c3eebaeec3d09a297fead07ab056caff1b618
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404951"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071806"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Gewusst wie: Zurückgeben eines LINQ-Abfrageergebnisses als ein bestimmter Typ (Visual Basic)
+
 Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformationen und das Ausführen von Abfragen. LINQ-Abfragen geben standardmäßig eine Liste von Objekten als anonymen Typ zurück. Sie können auch angeben, dass eine Abfrage mithilfe der-Klausel eine Liste eines bestimmten Typs zurückgeben soll `Select` .  
   
  Im folgenden Beispiel wird gezeigt, wie eine neue Anwendung erstellt wird, die Abfragen für eine SQL Server Datenbank ausführt und die Ergebnisse als einen bestimmten benannten Typ projiziert. Weitere Informationen finden Sie unter [Anonyme Typen](../objects-and-classes/anonymous-types.md) und [SELECT-Klausel](../../../language-reference/queries/select-clause.md).  
@@ -35,7 +36,7 @@ Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformatio
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>So fügen Sie ein Projekt hinzu, das eine LINQ to SQL Datei enthält  
   
-1. Zeigen Sie in Visual Studio im Menü **Datei** auf **neu** , und klicken Sie dann auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.  
+1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.  
   
 2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die Element Vorlage **LINQ to SQL Klassen** aus.  
   
@@ -75,7 +76,7 @@ Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformatio
   
 5. Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ](index.md)
 - [Abfragen](../../../language-reference/queries/index.md)

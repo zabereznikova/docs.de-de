@@ -10,14 +10,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 9ae6818b1e03ccd00ed554e98690e02ffa45de99
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78ca6b2b95dfd5a7f208e5251f08dfccc5514946
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387841"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071520"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Gewusst wie: Überladen einer Prozedur mit optionalen Parametern (Visual Basic)
+
 Wenn eine Prozedur über mindestens einen [optionalen](../../../language-reference/modifiers/optional.md) Parameter verfügt, können Sie keine überladene Version definieren, die mit einer der impliziten über Ladungen übereinstimmt. Weitere Informationen finden Sie unter "implizite über Ladungen für optionale Parameter" in über [Legungen zu überladenden Prozeduren](./considerations-in-overloading-procedures.md).  
   
 ## <a name="one-optional-parameter"></a>Ein optionaler Parameter  
@@ -45,6 +46,7 @@ Wenn eine Prozedur über mindestens einen [optionalen](../../../language-referen
      [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
 ## <a name="multiple-optional-parameters"></a>Mehrere optionale Parameter  
+
  Für eine Prozedur mit mehr als einem optionalen Parameter benötigen Sie normalerweise mehr als zwei überladene Versionen. Wenn z. b. zwei optionale Parameter vorhanden sind und der Aufruf Code die einzelnen Parameter unabhängig vom anderen angeben oder weglassen kann, benötigen Sie vier überladene Versionen, eine für jede mögliche Kombination von bereitgestellten Argumenten.  
   
  Wenn die Anzahl der optionalen Parameter zunimmt, erhöht sich die Komplexität der Überladung. Wenn keine Kombinationen von bereitgestellten Argumenten zulässig sind, benötigen Sie für N optionale Parameter 2 ^ N überladene Versionen. Abhängig von der Art der Prozedur können Sie feststellen, dass die Übersichtlichkeit der Logik den zusätzlichen Aufwand zum Definieren aller überladenen Versionen rechtfertigt.  
@@ -61,15 +63,15 @@ Wenn eine Prozedur über mindestens einen [optionalen](../../../language-referen
   
 5. Beenden Sie jede Prozedur mit der-oder-Anweisung nach Bedarf `End Sub` `End Function` .  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Optionale Parameter](./optional-parameters.md)
-- [Parameter Arrays](./parameter-arrays.md)
+- [Parameterarrays](./parameter-arrays.md)
 - [Prozedurüberladung](./procedure-overloading.md)
 - [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)
 - [Vorgehensweise: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Vorgehensweise: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md)
 - [Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Überladungs Auflösung](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)

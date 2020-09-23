@@ -5,14 +5,15 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 7affc84fa501ba98bdfa93835f0b0e381580b9bd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cc2de38f7375848d104edff6f419656d9caa9cb2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388386"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071923"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Gewusst wie: Erstellen eines Lambdaausdrucks (Visual Basic)
+
 Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen hat. Ein Lambda-Ausdruck kann überall dort verwendet werden, wo ein Delegattyp gültig ist.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>So erstellen Sie eine einzeilige Lambda-Ausdrucks Funktion  
@@ -96,6 +97,7 @@ Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen hat.
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Beispiel  
+
  Lambda-Ausdrücke werden häufig verwendet, um eine Funktion zu definieren, die als Argument für einen Parameter mit dem Typ übergeben werden kann `Delegate` . Im folgenden Beispiel gibt die- <xref:System.Diagnostics.Process.GetProcesses%2A> Methode ein Array der Prozesse zurück, die auf dem lokalen Computer ausgeführt werden. Die-Methode der- <xref:System.Linq.Enumerable.Where%2A> <xref:System.Linq.Enumerable> Klasse erfordert einen Delegaten `Boolean` als Argument. Der Lambda-Ausdruck im Beispiel wird zu diesem Zweck verwendet. Er gibt `True` für jeden Prozess zurück, der nur einen Thread hat, und diese werden in ausgewählt `filteredList` .  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
@@ -104,7 +106,7 @@ Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen hat.
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.Enumerable>
 - [Lambda-Ausdrücke](./lambda-expressions.md)

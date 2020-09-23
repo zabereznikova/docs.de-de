@@ -18,14 +18,15 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 178206ca2ee103bbdb5a4ac03bca0df903c8c5d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7f8eb1fa4e1fa3d87474d048d5a60994b0b7fc5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406715"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071273"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parameter und Argumente von Prozeduren (Visual Basic)
+
 In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Bedingungen, in denen Sie aufgerufen wurde. Eine Prozedur, die wiederholte oder freigegebene Tasks ausführt, verwendet für jeden-Rückruf verschiedene Informationen. Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücken, die Sie an die Prozedur übergeben, wenn Sie sie aufgerufen haben.  
   
  Ein *Parameter* stellt einen Wert dar, den die Prozedur beim Aufrufen erwartet. Die-Deklaration der Prozedur definiert ihre Parameter.  
@@ -41,6 +42,7 @@ In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Bedin
  Weitere Informationen finden Sie [unter Unterschiede zwischen Parametern und Argumenten](./differences-between-parameters-and-arguments.md).  
   
 ## <a name="parameter-data-type"></a>Parameter Datentyp  
+
  Sie definieren einen Datentyp für einen Parameter, indem Sie die- `As` Klausel in der-Deklaration verwenden. Die folgende Funktion akzeptiert z. b. eine Zeichenfolge und eine ganze Zahl.  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
@@ -56,9 +58,10 @@ In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Bedin
 - Verwenden Sie ein Konvertierungs Schlüsselwort, um den Datentyp explizit zu konvertieren  
   
 ### <a name="type-parameters"></a>Typparameter  
+
  Eine *generische Prozedur* definiert Zusätzlich zu ihren normalen Parametern auch einen oder mehrere *Typparameter* . Eine generische Prozedur ermöglicht es dem aufrufenden Code, beim Aufrufen der Prozedur verschiedene Datentypen zu übergeben, sodass die Datentypen an die Anforderungen der einzelnen Aufrufe angepasst werden können. Siehe [Generic Procedures in Visual Basic](../data-types/generic-procedures.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Sub-Prozeduren](./sub-procedures.md)

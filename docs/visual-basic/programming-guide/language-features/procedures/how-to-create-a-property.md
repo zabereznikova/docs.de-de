@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: fa220998d12206e620c242b9b39df3dc1b639d29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd138177d5f4b7ee1eb63833360d227baa54f66d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388257"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072742"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Gewusst wie: Erstellen einer Eigenschaft (Visual Basic)
+
 Sie schließen eine Eigenschafts Definition zwischen einer `Property` -Anweisung und einer- `End Property` Anweisung ein. Innerhalb dieser Definition definieren Sie eine `Get` Prozedur, eine `Set` Prozedur oder beides. Der gesamte Code der Eigenschaft liegt in diesen Prozeduren.  
   
  Die `Get` Prozedur ruft den Wert der Eigenschaft ab, und die `Set` Prozedur speichert einen Wert. Wenn Sie möchten, dass die Eigenschaft Lese-/Schreibzugriff hat, müssen Sie beide Prozeduren definieren. Für eine schreibgeschützte Eigenschaft definieren Sie nur `Get` , und für eine schreibgeschützte Eigenschaft definieren Sie nur `Set` .  
@@ -52,6 +53,7 @@ Sie schließen eine Eigenschafts Definition zwischen einer `Property` -Anweisung
  Sie müssen eine `Set` Prozedur für eine Eigenschaft mit Lese-/Schreibzugriff und für eine schreibgeschützte Eigenschaft schreiben. Sie dürfen keine `Set` Prozedur für eine schreibgeschützte Eigenschaft definieren.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Lese-/Schreibeigenschaft erstellt, in der ein vollständiger Name als zwei konstituierende Namen, der Vorname und der Nachname, gespeichert werden. Wenn der Aufruf Code liest `fullName` , `Get` kombiniert die Prozedur die beiden Namen der einzelnen Teile und gibt den vollständigen Namen zurück. Wenn der Aufruf Code einen neuen vollständigen Namen zuweist, `Set` versucht die Prozedur, Sie in zwei konstituierende Namen zu unterteilen. Wenn kein Leerzeichen gefunden wird, wird alles als Vorname gespeichert.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
@@ -60,7 +62,7 @@ Sie schließen eine Eigenschafts Definition zwischen einer `Property` -Anweisung
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Eigenschaftenprozeduren](./property-procedures.md)

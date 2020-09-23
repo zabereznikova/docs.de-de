@@ -10,14 +10,15 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: 20531e379ddf9b93a278795e9b3c0eb91b47e077
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b25d246bd31147b7a9ba2c72214926fdb5ca8895
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398343"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072144"
 ---
 # <a name="visual-basic-naming-conventions"></a>Benennungskonventionen in Visual Basic
+
 Wenn Sie ein Element in der Visual Basic Anwendung benennen, muss das erste Zeichen dieses Namens ein alphabetisches Zeichen oder ein Unterstrich sein. Beachten Sie jedoch, dass Namen, die mit einem Unterstrich beginnen, nicht mit der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS) kompatibel sind.  
   
  Die folgenden Vorschläge gelten für die Benennung.  
@@ -40,7 +41,7 @@ Wenn Sie ein Element in der Visual Basic Anwendung benennen, muss das erste Zeic
   
 - Vermeiden Sie die Verwendung von Namen in einem inneren Gültigkeitsbereich, die mit Namen in einem äußeren Gültigkeitsbereich identisch sind. Fehler können auftreten, wenn auf die falsche Variable zugegriffen wird. Wenn zwischen einer Variablen und dem Schlüsselwort mit demselben Namen ein Konflikt auftritt, müssen Sie das Schlüsselwort identifizieren, indem Sie es der entsprechenden Typbibliothek vorangestellt haben. Wenn Sie z. b. eine Variable namens haben `Date` , können Sie die intrinsische `Date` Funktion nur durch Aufrufen von verwenden <xref:System.DateTime.Date%2A?displayProperty=nameWithType> .  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Schlüsselwörter als Elementnamen in Code](keywords-as-element-names-in-code.md)
 - [Me, My, MyBase und MyClass](me-my-mybase-and-myclass.md)

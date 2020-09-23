@@ -10,14 +10,15 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: f0f7aba25888544dfcc093906850ae7ada621182
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78363f7b2fb5b251f7409e53b2802baf83b05810
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388244"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072703"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen (Visual Basic)
+
 Wenn Sie möchten, dass die `Get` -und- `Set` Prozeduren einer Eigenschaft über unterschiedliche Zugriffsebenen verfügen, können Sie in der- `Property` Anweisung und in der-oder-Anweisung die restriktivere Ebene verwenden `Get` `Set` . Sie verwenden gemischte Zugriffsebenen für eine Eigenschaft, wenn bestimmte Teile des Codes in der Lage sein sollen, den Wert der Eigenschaft zu erhalten, und bestimmte andere Teile des Codes in der Lage sein sollen, den Wert zu ändern.  
   
  Weitere Informationen zu Zugriffsebenen finden Sie unter [Zugriffsebenen in Visual Basic](../declared-elements/access-levels.md).  
@@ -34,7 +35,7 @@ Wenn Sie möchten, dass die `Get` -und- `Set` Prozeduren einer Eigenschaft über
   
      Im vorherigen Beispiel `Get` hat die Prozedur denselben `Protected` Zugriff wie die Eigenschaft selbst, während die `Set` Prozedur `Private` Zugriff hat. Eine von abgeleitete Klasse `employee` kann den `salary` Wert lesen, aber nur von der `employee` Klasse kann Sie festgelegt werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Eigenschaftenprozeduren](./property-procedures.md)

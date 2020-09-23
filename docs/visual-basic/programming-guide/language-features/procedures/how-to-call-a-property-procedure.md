@@ -8,14 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b35751136937d4cee5b3ca9669b43d3fbdf71a1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388698"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071950"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer Eigenschaftenprozedur (Visual Basic)
+
 Sie rufen eine Eigenschaften Prozedur auf, indem Sie einen Wert in der Eigenschaft speichern oder den Wert abrufen. Sie greifen auf eine Eigenschaft genauso zu, wie Sie auf eine Variable zugreifen.  
   
  Die-Prozedur der Eigenschaft `Set` speichert einen Wert, und `Get` die Prozedur ruft den Wert ab. Diese Prozeduren werden jedoch nicht explizit anhand ihres Namens aufgerufen. Sie verwenden die-Eigenschaft in einer Zuweisungsanweisung oder einem Ausdruck, genauso wie Sie den Wert einer Variablen speichern oder abrufen. Visual Basic führt die Aufrufe der Prozeduren der Eigenschaft aus.  
@@ -24,7 +25,7 @@ Sie rufen eine Eigenschaften Prozedur auf, indem Sie einen Wert in der Eigenscha
   
 1. Verwenden Sie den Eigenschaftsnamen in einem Ausdruck auf die gleiche Weise wie einen Variablennamen. Sie können eine Eigenschaft überall dort verwenden, wo Sie eine Variable oder eine Konstante verwenden können.  
   
-     Oder  
+     - oder -  
   
      Verwenden Sie den Eigenschaftsnamen nach dem Gleichheits `=` Zeichen () in einer Zuweisungsanweisung.  
   
@@ -52,7 +53,7 @@ Sie rufen eine Eigenschaften Prozedur auf, indem Sie einen Wert in der Eigenscha
   
  Der auf der rechten Seite der Zuweisungsanweisung generierte Wert wird in der-Eigenschaft gespeichert.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)

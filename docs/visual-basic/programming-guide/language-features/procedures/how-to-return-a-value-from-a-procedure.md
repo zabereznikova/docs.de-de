@@ -6,14 +6,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 917e52b711645fbf94a132216a3fa90b0dfc15b3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cbc785a07aa8a7b299508a093e08d5d0510b838a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414323"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071377"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Gewusst wie: Zurückgeben eines Werts aus einer Prozedur (Visual Basic)
+
 Eine `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück, indem entweder eine-Anweisung ausgeführt wird `Return` oder eine- `Exit Function` oder-Anweisung auftritt `End Function` .  
   
 ### <a name="to-return-a-value-using-the-return-statement"></a>So geben Sie einen Wert mit der Return-Anweisung zurück  
@@ -44,7 +45,7 @@ Eine `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück, indem 
   
      Weitere Informationen und ein Beispiel finden Sie unter "Rückgabewert" in der [Function-Anweisung](../../../language-reference/statements/function-statement.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Sub-Prozeduren](./sub-procedures.md)

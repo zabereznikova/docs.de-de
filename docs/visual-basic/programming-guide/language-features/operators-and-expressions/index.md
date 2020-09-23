@@ -10,19 +10,21 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: dcf52c6200193f81070f323c8037ad82d747942d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 01e3a53e998774caee8863675b9151a140606852
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403433"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071676"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operatoren und Ausdrücke in Visual Basic
+
 Ein *Operator* ist ein Codeelement, das einen Vorgang auf einem oder mehreren Codeelementen ausführt, die Werte halten. Wertelemente sind unter anderem Variablen, Konstanten, Literale, Eigenschaften, Rückgaben von `Function`- und `Operator`-Prozeduren sowie Ausdrücke.  
   
  Ein *Ausdruck* ist eine Serie von Wertelementen, die mit Operatoren kombiniert sind, was einen neuen Wert ergibt. Die Operatoren werden auf den Wertelementen ausgeführt, indem Berechnungen, Vergleiche oder andere Vorgänge ausgeführt werden.  
   
 ## <a name="types-of-operators"></a>Arten von Operatoren  
+
  Visual Basic stellt die folgenden Typen von Operatoren bereit:  
   
 - [Arithmetische Operatoren](arithmetic-operators.md) führen bekannte Berechnungen auf numerischen Werten aus, einschließlich Verschieben der Bitmuster.  
@@ -36,6 +38,7 @@ Ein *Operator* ist ein Codeelement, das einen Vorgang auf einem oder mehreren Co
  Die Wertelemente, die mit einem Operator kombiniert sind, werden *Operanden* dieses Operators genannt. Operatoren, die mit Wertelementen kombiniert sind, bilden Ausdrücke. Eine Ausnahme ist der Zuweisungsoperator, der eine *Anweisung* bildet. Weitere Informationen finden Sie unter [Transact-SQL-Anweisungen](../statements.md).  
   
 ## <a name="evaluation-of-expressions"></a>Auswertung von Ausdrücken  
+
  Das Endergebnis eines Ausdrucks stellt einen Wert dar, der normalerweise ein bekannter Datentyp ist, z.B. `Boolean`, `String` oder ein numerischer Typ.  
   
  Nachstehend sind Beispiele für Ausdrücke.  
@@ -62,7 +65,7 @@ Ein *Operator* ist ein Codeelement, das einen Vorgang auf einem oder mehreren Co
   
  Im vorangehenden Beispiel führt Visual Basic die Vorgänge im Ausdruck auf der rechten Seite des Zuweisungs Operators () aus `=` und weist dann den resultierenden Wert der Variablen `x` auf der linken Seite zu. Es gibt keine festgelegte Einschränkung für die Anzahl der Operatoren, die in einem Ausdruck kombiniert werden können. Jedoch ist es notwendig, die [Operatorrangfolge in Visual Studio](../../../language-reference/operators/operator-precedence.md) zu verstehen, um sicherzustellen, dass Sie die erwarteten Ergebnisse erhalten.  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Operatoren](../../../language-reference/operators/index.md)
 - [Effiziente Kombination von Operatoren](efficient-combination-of-operators.md)

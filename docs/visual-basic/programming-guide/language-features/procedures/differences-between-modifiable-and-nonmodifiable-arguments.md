@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 733f92cc2cdaa6e923c57649774ceb64de172c18
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 662ad3039bb3fd5c44847d5b2a97a033a18ad063
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403342"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071961"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten (Visual Basic)
+
 Wenn Sie eine Prozedur aufzurufen, übergeben Sie in der Regel ein oder mehrere Argumente an Sie. Jedes Argument entspricht einem zugrunde liegenden Programmier Element. Sowohl die zugrunde liegenden Elemente als auch die Argumente selbst können entweder änderbar oder nicht änderbar sein.  
   
 ## <a name="modifiable-and-nonmodifiable-elements"></a>Änderbare und nicht änderbare Elemente  
+
  Ein Programmier Element kann entweder ein *änderbares Element*sein, dessen Wert geändert werden kann, oder ein *nicht änderbares Element*, das nach seiner Erstellung einen festgelegten Wert aufweist.  
   
  In der folgenden Tabelle sind änderbare und nicht änderbare Programmier Elemente aufgelistet.  
@@ -31,13 +33,14 @@ Wenn Sie eine Prozedur aufzurufen, übergeben Sie in der Regel ein oder mehrere 
 |Array Elemente|Ausdrücke (auch wenn ihre Elemente geändert werden können)|  
   
 ## <a name="modifiable-and-nonmodifiable-arguments"></a>Änderbare und nicht änderbare Argumente  
+
  Ein *änderbares Argument* ist ein Element mit einem änderbaren zugrunde liegenden Element. Der Aufruf Code kann jederzeit einen neuen Wert speichern. Wenn Sie das [ByRef](../../../language-reference/modifiers/byref.md)-Argument übergeben, kann der Code in der Prozedur auch das zugrunde liegende Element im aufrufenden Code ändern.  
   
  Ein *nicht änderbares Argument* weist entweder ein nicht änderbares zugrunde liegendes Element auf oder wird [ByVal](../../../language-reference/modifiers/byval.md)übermittelt. Die Prozedur kann das zugrunde liegende Element im aufrufenden Code nicht ändern, selbst wenn es sich um ein änderbares Element handelt. Wenn es sich um ein nicht änderbares Element handelt, kann der aufrufende Code es nicht ändern.  
   
  Die aufgerufene Prozedur kann die lokale Kopie eines nicht änderbaren Arguments ändern, aber diese Änderung hat keine Auswirkung auf das zugrunde liegende Element im aufrufenden Code.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)

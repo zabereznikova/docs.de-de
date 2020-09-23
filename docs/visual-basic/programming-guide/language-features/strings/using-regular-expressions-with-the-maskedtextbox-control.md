@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555743"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072430"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Verwenden von regulären Ausdrücken mit dem MaskedTextBox-Steuerelement in Visual Basic
+
 In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke konvertiert werden, um mit dem-Steuerelement zu arbeiten <xref:System.Windows.Forms.MaskedTextBox> .  
   
 ## <a name="description-of-the-masking-language"></a>Beschreibung der Maskierungs Sprache  
+
  Die Standard <xref:System.Windows.Forms.MaskedTextBox> Maskierungs Sprache basiert auf derjenigen, die von dem `Masked Edit` Steuerelement in Visual Basic 6,0 verwendet wird, und sollte Benutzern vertraut sein, die von dieser Plattform migrieren.  
   
  Die- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft des- <xref:System.Windows.Forms.MaskedTextBox> Steuer Elements gibt an, welche Eingabemaske verwendet werden soll. Die Maske muss eine Zeichenfolge sein, die aus einem oder mehreren der Maskierungs Elemente aus der folgenden Tabelle besteht.  
@@ -44,6 +46,7 @@ In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke konve
  Die Symbole Decimal (.), Tausendstel (,), time (:), Date (/) und Currency ($) werden standardmäßig so angezeigt, wie Sie in der Kultur der Anwendung definiert sind. Mithilfe der-Eigenschaft können Sie erzwingen, dass Symbole für eine andere Kultur angezeigt werden <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> .  
   
 ## <a name="regular-expressions-and-masks"></a>Reguläre Ausdrücke und Masken  
+
  Obwohl Sie reguläre Ausdrücke und Masken zum Validieren von Benutzereingaben verwenden können, sind Sie nicht vollständig Äquivalent. Reguläre Ausdrücke können komplexere Muster als Masken Ausdrücken, aber Masken können dieselben Informationen ausführlicher und in einem kulturrelevanten Format ausdrücken.  
   
  In der folgenden Tabelle werden vier reguläre Ausdrücke und die entsprechende Maske für jeden verglichen.  
@@ -55,7 +58,7 @@ In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke konve
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|USA Telefonnummer, flächencode optional. Wenn der Benutzer die optionalen Zeichen nicht eingeben möchte, kann er entweder Leerzeichen eingeben oder den Mauszeiger direkt an der Position in der Maske platzieren, die durch den ersten 0 dargestellt wird.|  
 |`$\d{6}.00`|`$999,999.00`|Ein Währungswert im Bereich von 0 bis 999999. Die Währungs-, Tausendstel-und Dezimalzeichen werden zur Laufzeit durch ihre kulturspezifischen Entsprechungen ersetzt.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>

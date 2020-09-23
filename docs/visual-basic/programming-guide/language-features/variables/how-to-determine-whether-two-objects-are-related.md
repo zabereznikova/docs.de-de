@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 30e88a21e737aa57513745899577381ed34151a2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b33815d58b0ef40f7f75a6a41bb4b1eeef591859
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410463"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072222"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Gewusst wie: Bestimmen des Bezugs zwischen zwei Objekten (Visual Basic)
 
@@ -25,9 +25,10 @@ Sie können zwei-Objekte vergleichen, um die Beziehung (sofern vorhanden) zwisch
 
 3. Geben Sie in der Argumentliste für <xref:System.Type.IsInstanceOfType%2A> das Objekt an, das Sie möglicherweise vom abgeleiteten Typ haben.
 
-    <xref:System.Type.IsInstanceOfType%2A>Gibt zurück, `True` Wenn der Argumenttyp vom <xref:System.Type?displayProperty=nameWithType> Objekttyp erbt.
+    <xref:System.Type.IsInstanceOfType%2A> Gibt zurück, `True` Wenn der Argumenttyp vom <xref:System.Type?displayProperty=nameWithType> Objekttyp erbt.
 
 ## <a name="example"></a>Beispiel
+
  Im folgenden Beispiel wird bestimmt, ob ein-Objekt eine Klasse darstellt, die von der Klasse eines anderen Objekts abgeleitet wurde.
 
 ```vb
@@ -48,7 +49,7 @@ End Class
 
 Beachten Sie die unerwartete Platzierung der beiden Objektvariablen im-Befehl <xref:System.Type.IsInstanceOfType%2A> . Der vermeintliche Basistyp wird verwendet, um die <xref:System.Type?displayProperty=nameWithType> -Klasse zu generieren, und der vermeintliche abgeleitete Typ wird als Argument an die-Methode übermittelt <xref:System.Type.IsInstanceOfType%2A> .
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>

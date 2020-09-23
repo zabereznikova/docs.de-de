@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 8cb04286e98cf78f0fb66dde92002ee09e2ea0f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9597d7a9d6b68b8c91f32d97da3532f181585cf6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556244"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072352"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Exemplarische Vorgehensweise: Überprüfen der Komplexität von Kennwörtern (Visual Basic)
+
 Diese Methode prüft auf einige Merkmale mit starkem Kennwort und aktualisiert einen Zeichen folgen Parameter mit Informationen darüber, welche Überprüfungen das Kennwort nicht ausführt.  
   
  Kenn Wörter können in einem sicheren System verwendet werden, um einen Benutzer zu autorisieren. Allerdings müssen die Kenn Wörter für nicht autorisierte Benutzer schwierig sein. Angreifer können ein *Wörterbuch Angriffs* Programm verwenden, das alle Wörter in einem Wörterbuch (oder mehreren Wörterbüchern in verschiedenen Sprachen) durchläuft und testet, ob eines der Wörter als Kennwort eines Benutzers verwendet wird. Schwache Kenn Wörter wie "Yankees" oder "Mustang" können schnell erraten werden. Stärkere Kenn Wörter, z. b. "? Sie ' L1N3vaFiNdMeyeP@sSWerd ! ' sind viel weniger wahrscheinlich erraten. Ein Kenn Wort geschütztes System sollte sicherstellen, dass Benutzer sichere Kenn Wörter auswählen.  
@@ -21,9 +22,11 @@ Diese Methode prüft auf einige Merkmale mit starkem Kennwort und aktualisiert e
 ## <a name="example"></a>Beispiel  
   
 ### <a name="code"></a>Code  
+
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compile-the-code"></a>Kompilieren des Codes  
+
  Durch übergeben der Zeichenfolge, die das Kennwort enthält, wird diese Methode aufgerufen.  
   
  Für dieses Beispiel benötigen Sie Folgendes:  
@@ -31,6 +34,7 @@ Diese Methode prüft auf einige Merkmale mit starkem Kennwort und aktualisiert e
 - Zugriff auf die Member des <xref:System.Text.RegularExpressions>-Namespace Fügen Sie eine `Imports`-Anweisung hinzu, wenn Sie Membernamen in Ihrem Code nicht vollqualifizieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Sicherheit  
+
  Wenn Sie das Kennwort über ein Netzwerk verschieben, müssen Sie eine sichere Methode zum Übertragen von Daten verwenden. Weitere Informationen finden Sie unter [ASP.NET Webanwendungs Sicherheit](/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Sie können die Genauigkeit der Funktion verbessern, `ValidatePassword` indem Sie zusätzliche Komplexitäts Überprüfungen hinzufügen:  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: c0fb3e137010390097a68aea161efcff93839d94
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d85066d4678ee2a53b8339bee2db20374482579
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414336"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071403"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Gewusst wie: Ablegen eines Werts in eine Eigenschaft (Visual Basic)
+
 Sie speichern einen Wert in einer Eigenschaft, indem Sie den Eigenschaftsnamen auf der linken Seite einer Zuweisungsanweisung platzieren.  
   
  Die-Prozedur der Eigenschaft `Set` speichert einen Wert, Sie wird jedoch nicht explizit anhand des Namens aufgerufen. Sie verwenden die-Eigenschaft wie eine Variable. Visual Basic führt die Aufrufe der Prozeduren der Eigenschaft aus.  
@@ -34,7 +35,7 @@ Sie speichern einen Wert in einer Eigenschaft, indem Sie den Eigenschaftsnamen a
   
 4. Der auf der rechten Seite der Zuweisungsanweisung generierte Wert wird in der-Eigenschaft gespeichert.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Eigenschaftenprozeduren](./property-procedures.md)

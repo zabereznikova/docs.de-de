@@ -7,15 +7,16 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: 36e405c7362993471d3e6da8e319bccb854e1026
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0e3fc332bf9430b1fa56dbb7630f849d3a29c2e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343588"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072404"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Exemplarische Vorgehensweise: Verschlüsseln und Entschlüsseln von Zeichenfolgen in Visual Basic
-In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mithilfe der <xref:System.Security.Cryptography.DESCryptoServiceProvider>-Klasse Zeichen folgen mithilfe der CSP-Version (kryptografischen Service Provider) des Triple Data Encryption Standard-Algorithmus (<xref:System.Security.Cryptography.TripleDES>) verschlüsseln und entschlüsseln. Der erste Schritt besteht darin, eine einfache Wrapper Klasse zu erstellen, die den 3DES-Algorithmus kapselt und die verschlüsselten Daten als Base-64-codierte Zeichenfolge speichert. Anschließend wird dieser Wrapper zum sicheren Speichern privater Benutzerdaten in einer öffentlich zugänglichen Textdatei verwendet.  
+
+In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die <xref:System.Security.Cryptography.DESCryptoServiceProvider> -Klasse verwenden, um Zeichen folgen mithilfe der CSP-Version (kryptografischen Service Provider) des Triple Data Encryption Standard-Algorithmus () zu verschlüsseln und zu entschlüsseln <xref:System.Security.Cryptography.TripleDES> . Der erste Schritt besteht darin, eine einfache Wrapper Klasse zu erstellen, die den 3DES-Algorithmus kapselt und die verschlüsselten Daten als Base-64-codierte Zeichenfolge speichert. Anschließend wird dieser Wrapper zum sicheren Speichern privater Benutzerdaten in einer öffentlich zugänglichen Textdatei verwendet.  
   
  Sie können die Verschlüsselung zum Schutz von Benutzer Geheimnissen (z. b. Kenn Wörter) und zum unlesbar von Anmelde Informationen durch nicht autorisierte Benutzer verwenden. Dadurch kann die Identität eines autorisierten Benutzers vor dem Diebstahl geschützt werden, wodurch die Objekte des Benutzers geschützt werden und Nichtabstreitbarkeit gewährleistet ist. Mit der Verschlüsselung können auch die Daten eines Benutzers vor dem Zugriff durch nicht autorisierte Benutzer geschützt werden.  
   
@@ -26,15 +27,15 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mithilfe der <xref
   
 ### <a name="to-create-the-encryption-wrapper"></a>So erstellen Sie den Verschlüsselungs Wrapper  
   
-1. Erstellen Sie die `Simple3Des`-Klasse, um die Verschlüsselungs-und Entschlüsselungs Methoden zu kapseln.  
+1. Erstellen `Simple3Des` Sie die-Klasse, um die Verschlüsselungs-und Entschlüsselungs Methoden zu kapseln.  
   
      [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
-2. Fügen Sie am Anfang der Datei, die die `Simple3Des` Klasse enthält, einen Import des Kryptografienamespace hinzu.  
+2. Fügen Sie am Anfang der Datei, die die-Klasse enthält, einen Import des Kryptografie-Namespace hinzu `Simple3Des` .  
   
      [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
-3. Fügen Sie in der `Simple3Des`-Klasse ein privates Feld zum Speichern des 3DES-Kryptografiedienstanbieters hinzu.  
+3. `Simple3Des`Fügen Sie in der-Klasse ein privates Feld zum Speichern des 3DES-Kryptografiedienstanbieters hinzu.  
   
      [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
@@ -44,7 +45,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mithilfe der <xref
   
 5. Fügen Sie einen Konstruktor hinzu, um den 3DES-Kryptografiedienstanbieter zu initialisieren.  
   
-     Der `key`-Parameter steuert die Methoden `EncryptData` und `DecryptData`.  
+     Der `key` -Parameter steuert die `EncryptData` -Methode und die- `DecryptData` Methode.  
   
      [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
@@ -60,15 +61,15 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mithilfe der <xref
   
 ### <a name="to-test-the-encryption-wrapper"></a>So testen Sie den Verschlüsselungs Wrapper  
   
-1. Fügen Sie in einer separaten Klasse eine Methode hinzu, die die `EncryptData`-Methode des Wrappers verwendet, um eine Zeichenfolge zu verschlüsseln und in den Ordner "eigene Dateien" des Benutzers zu schreiben.  
+1. Fügen Sie in einer separaten Klasse eine Methode hinzu, die die-Methode des Wrappers verwendet, `EncryptData` um eine Zeichenfolge zu verschlüsseln und in den Ordner "eigene Dateien" des Benutzers zu schreiben.  
   
      [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
-2. Fügen Sie eine Methode hinzu, die die verschlüsselte Zeichenfolge aus dem Ordner "eigene Dateien" des Benutzers liest und die Zeichenfolge mit der `DecryptData`-Methode des Wrappers entschlüsselt.  
+2. Fügen Sie eine Methode hinzu, die die verschlüsselte Zeichenfolge aus dem Ordner "eigene Dateien" des Benutzers liest und die Zeichenfolge mit der-Methode des Wrappers entschlüsselt `DecryptData` .  
   
      [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
-3. Fügen Sie Benutzeroberflächen Code hinzu, um die Methoden `TestEncoding` und `TestDecoding` aufzurufen.  
+3. Fügen Sie Benutzeroberflächen Code hinzu, um die `TestEncoding` Methoden und aufzurufen `TestDecoding` .  
   
 4. Führen Sie die Anwendung aus.  
   

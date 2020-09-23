@@ -8,17 +8,19 @@ helpviewer_keywords:
 - examples [Visual Basic], string conversion
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-ms.openlocfilehash: 3ee1d5e1e31054f23f4510c7a112d8e3473bcdd7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d9a5a329a82555e66a391fd93005634106569232
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410605"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071182"
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>Gewusst wie: Konvertieren von Zeichenfolgen in ein Bytearray in Visual Basic
+
 In diesem Thema wird gezeigt, wie eine Zeichenfolge in ein Bytearray konvertiert wird.  
   
 ## <a name="example"></a>Beispiel  
+
  In diesem Beispiel wird die- <xref:System.Text.Encoding.GetBytes%2A> Methode der <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> Encoding-Klasse verwendet, um eine Zeichenfolge in ein Bytearray zu konvertieren.  
   
  [!code-vb[VbVbalrStrings#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#74)]  
@@ -39,7 +41,7 @@ In diesem Thema wird gezeigt, wie eine Zeichenfolge in ein Bytearray konvertiert
   
 - <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Ruft eine Codierung für das UTF-8-Format ab.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetBytes%2A>

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: bcb99ef3845c1ce3998dc9dc8d9f1d335515c0a9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9b83eba8efc8dfe14b6ec1cbab270984977198e5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364369"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071364"
 ---
 # <a name="overload-resolution-visual-basic"></a>Überladungsauflösung (Visual Basic)
+
 Wenn der Visual Basic-Compiler auf einen aufzurufenden Vorgang einer Prozedur stößt, die in mehreren überladenen Versionen definiert ist, muss der Compiler entscheiden, welche der über Ladungen aufgerufen werden soll. Hierzu führen Sie die folgenden Schritte aus:  
   
 1. **Barrierefreiheit.** Es entfernt sämtliche über Ladungen mit einer Zugriffsebene, die verhindert, dass der aufrufende Code ihn aufrufen kann.  
@@ -49,6 +50,7 @@ Wenn der Visual Basic-Compiler auf einen aufzurufenden Vorgang einer Prozedur st
  Im zweiten-Befehl kann der Compiler keine der über Ladungen auf der Basis der Einschränkung ausschließen. Die dritte Überladung wird aus demselben Grund wie beim ersten-Befehl entfernt, da Sie die zweite Überladung mit einer geringeren Erweiterung der Argument Typen aufrufen kann. Der Compiler kann jedoch nicht zwischen der ersten und der zweiten Überladung aufgelöst werden. Jede verfügt über einen definierten Parametertyp, der zum entsprechenden Typ in der anderen ( `Byte` `Short` , aber `Single` zu) erweitert wird `Double` . Der Compiler generiert daher einen Fehler bei der Überladungs Auflösung.  
   
 ## <a name="overloaded-optional-and-paramarray-arguments"></a>Überladene optionale und ParamArray-Argumente  
+
  Wenn zwei über Ladungen einer Prozedur identische Signaturen aufweisen, mit dem Unterschied, dass der letzte Parameter in einem und [ParamArray](../../../language-reference/modifiers/paramarray.md) in der anderen als [optional](../../../language-reference/modifiers/optional.md) deklariert wird, löst der Compiler einen Aufrufen dieser Prozedur wie folgt auf:  
   
 |Wenn der-Befehl das letzte Argument als|Der Compiler löst den Aufrufen der-Überladung auf, die das letzte Argument deklariert, als|  
@@ -58,10 +60,10 @@ Wenn der Visual Basic-Compiler auf einen aufzurufenden Vorgang einer Prozedur st
 |Mindestens zwei Werte in einer durch Trennzeichen getrennten Liste|`ParamArray`|  
 |Ein Array beliebiger Längen (einschließlich eines leeren Arrays)|`ParamArray`|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Optionale Parameter](./optional-parameters.md)
-- [Parameter Arrays](./parameter-arrays.md)
+- [Parameterarrays](./parameter-arrays.md)
 - [Prozedurüberladung](./procedure-overloading.md)
 - [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)
 - [Vorgehensweise: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
@@ -69,5 +71,5 @@ Wenn der Visual Basic-Compiler auf einen aufzurufenden Vorgang einer Prozedur st
 - [Vorgehensweise: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Überlegungen zur Prozedurüberladung](./considerations-in-overloading-procedures.md)
-- [Overloads](../../../language-reference/modifiers/overloads.md)
+- [Überladungen](../../../language-reference/modifiers/overloads.md)
 - [Erweiterungsmethoden](./extension-methods.md)

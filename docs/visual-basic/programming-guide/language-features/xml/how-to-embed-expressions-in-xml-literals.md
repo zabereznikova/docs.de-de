@@ -5,14 +5,15 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 59ba03be6e132203523427d3b7af5a163b6f05ac
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ce1386e6a1ff8ffce296f5cea694499633eb011
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392313"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071208"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Gewusst wie: Einbetten von Ausdrücken in XML-Literalen (Visual Basic)
+
 XML-Literale können mit eingebetteten Ausdrücken kombiniert werden, um XML-Dokumente, Fragmente oder Elemente zu erstellen, die zur Laufzeit erstellte Inhalte enthalten. In den folgenden Beispielen wird veranschaulicht, wie eingebettete Ausdrücke verwendet werden, um Elementinhalte, Attribute und Elementnamen zur Laufzeit aufzufüllen.  
   
  Die Syntax für einen eingebetteten Ausdruck ist, bei der es sich um `<%=` `exp` `%>` dieselbe Syntax handelt, die von ASP.NET verwendet wird. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](embedded-expressions-in-xml.md).  

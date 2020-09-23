@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: c8d851afc33e7e898ab16abc941d8680f74145e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee61c676f3ff554267f6659453ec55e45df69aee
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398304"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072118"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Programmstruktur und Codekonventionen (Visual Basic)
+
 In diesem Abschnitt wird die typische Visual Basic-Programmstruktur vorgestellt, ein einfaches Visual Basic Programm, "Hello, World", bereitstellt und Visual Basic Code Konventionen erläutert. Codekonventionen sind Vorschläge, die sich nicht auf die Logik eines Programms, sondern auf seine physische Struktur und sein Erscheinungsbild konzentrieren. Wenn Sie diese Konventionen einhalten, ist Programmcode besser lesbar, leichter verständlich und einfacher zu verwalten. Codekonventionen umfassen u. a.:  
   
 - Standardisierte Formate für Bezeichnungen und Kommentare im Code.  
@@ -32,6 +33,7 @@ In diesem Abschnitt wird die typische Visual Basic-Programmstruktur vorgestellt,
  Die folgenden Themen enthalten eine Reihe von Programmier Richtlinien für Visual Basic-Programme sowie Beispiele für eine gute Verwendung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Struktur von Visual Basic-Programmen](structure-of-a-visual-basic-program.md)  
  Bietet eine Übersicht über die Elemente, aus denen ein Visual Basic Programm besteht.  
   
@@ -47,7 +49,7 @@ In diesem Abschnitt wird die typische Visual Basic-Programmstruktur vorgestellt,
  [Benennungskonventionen in Visual Basic](naming-conventions.md)  
  Umfasst allgemeine Richtlinien für die Benennung von Prozeduren, Konstanten, Variablen, Argumenten und Objekten.  
   
- [Codierungskonventionen in Visual Basic](coding-conventions.md)  
+ [Visual Basic-Codierungskonventionen](coding-conventions.md)  
  Erläutert die Richtlinien, die beim Entwickeln der Beispiele in dieser Dokumentation verwendet werden.  
   
  [Bedingte Kompilierung](conditional-compilation.md)  
@@ -78,6 +80,7 @@ In diesem Abschnitt wird die typische Visual Basic-Programmstruktur vorgestellt,
  Erläutert das Entfernen bekannter Codierungs Grenzwerte in Visual Basic.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Typografische und Codekonventionen](../../language-reference/typographic-and-code-conventions.md)  
  Stellt Standard Codierungs Konventionen für Visual Basic bereit.  
   

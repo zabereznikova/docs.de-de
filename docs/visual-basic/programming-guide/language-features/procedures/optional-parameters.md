@@ -12,15 +12,16 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 4e07b75c94b4aea681e6e862e161bda80b2833fc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73a51ab65a8ea4c38b6fd6737279fb19fb1cfe73
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364330"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071858"
 ---
 # <a name="optional-parameters-visual-basic"></a>Optionale Parameter (Visual Basic)
-Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optionale Parameter* werden durch das- `Optional` Schlüsselwort in der Prozedur Definition angegeben. Dabei gelten folgende Regeln:  
+
+Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optionale Parameter* werden durch das- `Optional` Schlüsselwort in der Prozedur Definition angegeben. Es gelten die folgenden Regeln:  
   
 - Für jeden optionalen Parameter in der Prozedurdefinition muss ein Standardwert angegeben werden.  
   
@@ -35,6 +36,7 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 ```  
   
 ## <a name="calling-procedures-with-optional-parameters"></a>Aufrufprozeduren mit optionalen Parametern  
+
  Wenn eine Prozedur mit einem optionalen Parameter aufgerufen wird, können Sie entscheiden, ob das Argument bereitgestellt werden soll. Wird das Argument nicht bereitgestellt, verwendet die Prozedur den für diesen Parameter deklarierten Standardwert.  
   
  Wenn Sie in der Argumentliste eines oder mehrere optionale Argumente auslassen, werden deren Positionen durch aufeinanderfolgende Kommas markiert. Im folgenden Beispielaufruf werden das erste und das vierte Argument bereitgestellt, das zweite und dritte jedoch nicht:  
@@ -50,6 +52,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Bestimmen, ob ein optionales Argument vorhanden ist  
+
  Prozeduren können zur Laufzeit nicht feststellen, ob ein bestimmtes Argument ausgelassen oder der Standardwert durch den Aufrufcode explizit bereitgestellt wurde. Wenn diese Unterscheidung wichtig ist, sollten Sie einen unwahrscheinlichen Standardwert festlegen. Im folgenden Verfahren wird der optionale-Parameter definiert `office` und der Standardwert überprüft, `QJZ` um festzustellen, ob er im-Befehl ausgelassen wurde:  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
@@ -57,15 +60,16 @@ Sub name(argument 1, , , argument 4)
  Wenn es sich beim optionalen Parameter um einen Verweistyp wie `String` handelt, kann `Nothing` als Standardwert verwendet werden, sofern dieser kein zu erwartender Wert für das Argument ist.  
   
 ## <a name="optional-parameters-and-overloading"></a>Optionale Parameter und Überladen  
+
  Eine weitere Möglichkeit, eine Prozedur mit optionalen Parametern zu definieren, ist das Überladen. Wenn ein optionaler Parameter vorhanden ist, können Sie zwei überladene Versionen der Prozedur definieren, eine mit und eine ohne Parameter. Mit steigender Anzahl an optionalen Parametern wird dieses Konzept jedoch komplizierter. Allerdings hat es den Vorteil, dass Sie immer genau wissen, ob das aufrufende Programm jedes optionale Argument bereitgestellt hat.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)
 - [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)
-- [Parameter Arrays](./parameter-arrays.md)
+- [Parameterarrays](./parameter-arrays.md)
 - [Prozedurüberladung](./procedure-overloading.md)
 - [Optional](../../../language-reference/modifiers/optional.md)
 - [ParamArray](../../../language-reference/modifiers/paramarray.md)
