@@ -5,17 +5,19 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9cbd3a5b8685178259b76d97919ea097ae72f6ae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 878e028f7c7f0e93752765272e93baa3ffe1426d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401965"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059212"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
+
 Auf dieser Hilfeseite wird erläutert, wie Visual Basic Kultur Informationen verwendet, um Zeichen folgen Konvertierungen und Vergleiche auszuführen.  
   
 ## <a name="when-to-use-culture-specific-strings"></a>Verwendungszwecke kulturspezifischer Zeichen folgen  
+
  In der Regel sollten Sie Kultur abhängige Zeichen folgen für alle Daten verwenden, die Benutzern angezeigt und von diesen gelesen werden, und Kultur abhängige Zeichen folgen für die internen Daten Ihrer Anwendung verwenden.  
   
  Wenn Ihre Anwendung z. b. Benutzer auffordert, ein Datum als Zeichenfolge einzugeben, sollte erwartet werden, dass Benutzer die Zeichen folgen gemäß ihrer Kultur formatieren, und die Anwendung sollte die Zeichenfolge entsprechend konvertieren. Wenn Ihre Anwendung dieses Datum dann in der Benutzeroberfläche anzeigt, sollte Sie in der Kultur des Benutzers vorhanden sein.  
@@ -23,6 +25,7 @@ Auf dieser Hilfeseite wird erläutert, wie Visual Basic Kultur Informationen ver
  Wenn die Anwendung jedoch das Datum auf einen zentralen Server hochlädt, sollte Sie die Zeichenfolge entsprechend einer bestimmten Kultur formatieren, um Verwechslungen zwischen potenziell unterschiedlichen Datumsformaten zu vermeiden.  
   
 ## <a name="culture-sensitive-functions"></a>Kultur abhängige Funktionen  
+
  Alle Visual Basic Zeichen folgen Konvertierungs Funktionen (außer den `Str` `Val` Funktionen und) verwenden die Kultur Informationen der Anwendung, um sicherzustellen, dass die Konvertierungen und Vergleiche für die Kultur des Anwendungs Benutzers geeignet sind.  
   
  Der Schlüssel für die erfolgreiche Verwendung von Funktionen zur Zeichen folgen Konvertierung in Anwendungen, die auf Computern mit unterschiedlichen Kultur Einstellungen ausgeführt werden, besteht darin, zu verstehen, welche Funktionen eine bestimmte Kultur Einstellung verwenden und welche die aktuelle Kultur Einstellung verwendet. Beachten Sie, dass die Kultur Einstellungen der Anwendung standardmäßig von den Kultur Einstellungen des Betriebssystems geerbt werden. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Asc%2A> den <xref:Microsoft.VisualBasic.Strings.AscW%2A> <xref:Microsoft.VisualBasic.Strings.Chr%2A> <xref:Microsoft.VisualBasic.Strings.ChrW%2A> <xref:Microsoft.VisualBasic.Strings.Format%2A> <xref:Microsoft.VisualBasic.Conversion.Hex%2A> <xref:Microsoft.VisualBasic.Conversion.Oct%2A> [Typkonvertierungs Funktionen](../../../language-reference/functions/type-conversion-functions.md),,,,,, und.  
@@ -36,6 +39,7 @@ Auf dieser Hilfeseite wird erläutert, wie Visual Basic Kultur Informationen ver
  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Conversion.Str%2A> und <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>Verwenden einer bestimmten Kultur  
+
  Stellen Sie sich vor, dass Sie eine Anwendung entwickeln, die ein Datum (als Zeichenfolge formatiert) an einen Webdienst sendet. In diesem Fall muss die Anwendung eine bestimmte Kultur für die Zeichen folgen Konvertierung verwenden. Um dies zu veranschaulichen, sollten Sie das Ergebnis der Verwendung der Date-Methode in Erwägung gezogen haben <xref:System.DateTime.ToString> : Wenn Ihre Anwendung diese Methode verwendet, um das Datum der 4. Juli 2005 zu formatieren, wird "7/4/2005 12:00:00 am" zurückgegeben, wenn Sie mit der Kultur "USA English" (de-de) ausgeführt 00:00:00 wird.  
   
  Wenn Sie eine Zeichen folgen Konvertierung in einem bestimmten Kultur Format ausführen müssen, sollten Sie die-Klasse verwenden, die `CultureInfo` in die .NET Framework integriert ist. Sie können ein neues- `CultureInfo` Objekt für eine bestimmte Kultur erstellen, indem Sie den Namen der Kultur an den- <xref:System.Globalization.CultureInfo.%23ctor%2A> Konstruktor übergeben. Die unterstützten Kultur Namen werden auf der <xref:System.Globalization.CultureInfo> Hilfeseite der-Klasse aufgelistet.  
@@ -50,6 +54,7 @@ Auf dieser Hilfeseite wird erläutert, wie Visual Basic Kultur Informationen ver
 > Datums Literale werden immer gemäß der englischen Kultur interpretiert.  
   
 ## <a name="comparing-strings"></a>Vergleichen von Zeichenfolgen  
+
  Es gibt zwei wichtige Situationen, in denen Zeichen folgen Vergleiche erforderlich sind:  
   
 - **Sortieren von Daten für die Anzeige für den Benutzer.** Verwenden Sie Vorgänge auf der Grundlage der aktuellen Kultur, damit die Zeichen folgen entsprechend sortiert werden.  
@@ -68,17 +73,18 @@ Auf dieser Hilfeseite wird erläutert, wie Visual Basic Kultur Informationen ver
   
  Um die Art und Weise zu steuern, wie die Vergleiche ausgeführt werden, können Sie zusätzliche über Ladungen der- <xref:System.String.Compare%2A> Methode verwenden. Mit der- <xref:System.String.Compare%2A?displayProperty=nameWithType> Methode können Sie das- `comparisonType` Argument verwenden, um anzugeben, welcher Vergleichstyp verwendet werden soll.  
   
-|Wert für `comparisonType` Argument|Vergleichstyp|Empfohlene Verwendung|  
+|Wert für `comparisonType` Argument|Vergleichstyp|Verwendung|  
 |---|---|---|  
 |`Ordinal`|Vergleich basierend auf den Komponenten Bytes der Zeichenfolge.|Verwenden Sie diesen Wert beim vergleichen: Bezeichner für Groß-/Kleinschreibung, sicherheitsbezogene Einstellungen oder andere nicht linguistische Bezeichner, bei denen die Bytes genau übereinstimmen müssen.|  
-|`OrdinalIgnoreCase`|Vergleich basierend auf den Komponenten Bytes der Zeichenfolge.<br /><br /> `OrdinalIgnoreCase`bestimmt mithilfe der invarianten Kultur Informationen, ob sich zwei Zeichen nur in der Groß-und Kleinschreibung unterscheiden.|Verwenden Sie diesen Wert beim vergleichen: Bezeichner für die Groß-/Kleinschreibung, sicherheitsbezogene Einstellungen und in Windows gespeicherte Daten.|  
+|`OrdinalIgnoreCase`|Vergleich basierend auf den Komponenten Bytes der Zeichenfolge.<br /><br /> `OrdinalIgnoreCase` bestimmt mithilfe der invarianten Kultur Informationen, ob sich zwei Zeichen nur in der Groß-und Kleinschreibung unterscheiden.|Verwenden Sie diesen Wert beim vergleichen: Bezeichner für die Groß-/Kleinschreibung, sicherheitsbezogene Einstellungen und in Windows gespeicherte Daten.|  
 |`CurrentCulture` oder `CurrentCultureIgnoreCase`|Vergleich basierend auf der Interpretation der Zeichen folgen in der aktuellen Kultur.|Verwenden Sie diese Werte, wenn Sie vergleichen: dem Benutzer angezeigte Daten, die meisten Benutzereingaben und andere Daten, die eine linguistische Interpretation erfordern.|  
 |`InvariantCulture` oder `InvariantCultureIgnoreCase`|Vergleich basierend auf der Interpretation der Zeichen folgen in der invarianten Kultur.<br /><br /> Dies unterscheidet sich von `Ordinal` und `OrdinalIgnoreCase` , da die invariante Kultur Zeichen außerhalb des zulässigen Bereichs als äquivalente invariante Zeichen behandelt.|Verwenden Sie diese Werte nur, wenn Sie persistente Daten vergleichen oder linguistisch relevante Daten anzeigen, die eine festgelegte Sortierreihenfolge erfordern.|  
   
-### <a name="security-considerations"></a>Überlegungen zur Sicherheit  
+### <a name="security-considerations"></a>Sicherheitsüberlegungen  
+
  Wenn Ihre Anwendung Sicherheitsentscheidungen auf Grundlage des Ergebnisses eines Vergleichs oder einer Änderung der Fall Änderung trifft, sollte der Vorgang die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode verwenden und `Ordinal` oder `OrdinalIgnoreCase` für das- `comparisonType` Argument übergeben.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Globalization.CultureInfo>
 - [Einführung in Zeichenfolgen in Visual Basic](introduction-to-strings.md)

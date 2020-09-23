@@ -9,14 +9,15 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 29d878afbe3669fc88e62b1fec98b306918c303d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4489f75e50a783a9b1acfb9c30568fdec6614488
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405079"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057909"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
+
 Dies ist der zweite von zwei Themen, die veranschaulichen, wie mit Ereignissen gearbeitet wird. Das erste Thema, Exemplarische Vorgehensweise [: Deklarieren und Auswerfen von Ereignissen](walkthrough-declaring-and-raising-events.md), zeigt, wie Sie Ereignisse deklarieren und Auswerfen. In diesem Abschnitt wird das Formular und die Klasse aus dieser exemplarischen Vorgehensweise verwendet, um zu veranschaulichen, wie Ereignisse behandelt werden.  
   
  Im- `Widget` Klassen Beispiel werden herkömmliche-Ereignis behandlungsanweisungen verwendet. Visual Basic bietet weitere Techniken zum Arbeiten mit Ereignissen. Als Übung können Sie dieses Beispiel so ändern, dass die `AddHandler` -und-Anweisungen verwendet werden `Handles` .  
@@ -34,6 +35,7 @@ Dies ist der zweite von zwei Themen, die veranschaulichen, wie mit Ereignissen g
      Die-Variable `mblnCancel` wird verwendet, um die-Methode abzubrechen `LongTask` .  
   
 ## <a name="writing-code-to-handle-an-event"></a>Schreiben von Code zum Behandeln eines Ereignisses  
+
  Sobald Sie mithilfe von eine Variable deklarieren `WithEvents` , wird der Variablenname in der linken Dropdown Liste des **Code-Editors**der Klasse angezeigt. Wenn Sie auswählen `mWidget` , werden die `Widget` Ereignisse der-Klasse in der rechten Dropdown Liste angezeigt. Wenn Sie ein Ereignis auswählen, wird die entsprechende Ereignis Prozedur mit dem Präfix `mWidget` und einem Unterstrich angezeigt. Allen Ereignis Prozeduren, `WithEvents` die einer Variablen zugeordnet sind, wird der Variablenname als Präfix zugewiesen.  
   
 #### <a name="to-handle-an-event"></a>So behandeln Sie ein Ereignis  
@@ -58,7 +60,8 @@ Dies ist der zweite von zwei Themen, die veranschaulichen, wie mit Ereignissen g
  Wenn der Benutzer während der Ausführung von auf die Schaltfläche **Abbrechen** klickt `LongTask` , wird das- `Button2_Click` Ereignis ausgeführt, sobald die-Anweisung das Eintreten der `DoEvents` Ereignisverarbeitung zulässt. Die Variable auf Klassenebene `mblnCancel` ist auf festgelegt `True` , und das- `mWidget_PercentDone` Ereignis testet Sie, und legt das- `ByRef Cancel` Argument auf fest `True` .  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>Verbinden einer widervents-Variablen mit einem Objekt  
- `Form1`ist nun so eingerichtet, dass `Widget` die-Ereignisse eines-Objekts behandelt werden. Alles, was bleibt, ist das Auffinden eines `Widget` irgendwo.  
+
+ `Form1` ist nun so eingerichtet, dass `Widget` die-Ereignisse eines-Objekts behandelt werden. Alles, was bleibt, ist das Auffinden eines `Widget` irgendwo.  
   
  Wenn Sie zur Entwurfszeit eine Variable deklarieren `WithEvents` , ist ihr kein Objekt zugeordnet. Eine `WithEvents` Variable ist genauso wie jede andere Objekt Variable. Sie müssen ein-Objekt erstellen und ihm einen Verweis auf die- `WithEvents` Variable zuweisen.  
   
@@ -82,7 +85,7 @@ Dies ist der zweite von zwei Themen, die veranschaulichen, wie mit Ereignissen g
   
  Bevor die- `LongTask` Methode aufgerufen wird, muss die Bezeichnung, die den Prozentsatz anzeigt, initialisiert werden, und das Flag auf Klassenebene `Boolean` zum Abbrechen der Methode muss auf festgelegt werden `False` .  
   
- `LongTask`wird mit einer Task Dauer von 12,2 Sekunden aufgerufen. Das `PercentDone` -Ereignis wird alle ein Drittel einer Sekunde ausgelöst. Jedes Mal, wenn das-Ereignis ausgelöst wird, wird die- `mWidget_PercentDone` Ereignis Prozedur ausgeführt.  
+ `LongTask` wird mit einer Task Dauer von 12,2 Sekunden aufgerufen. Das `PercentDone` -Ereignis wird alle ein Drittel einer Sekunde ausgelöst. Jedes Mal, wenn das-Ereignis ausgelöst wird, wird die- `mWidget_PercentDone` Ereignis Prozedur ausgeführt.  
   
  Wenn `LongTask` abgeschlossen ist, `mblnCancel` wird getestet, ob `LongTask` normal beendet wurde, oder ob er beendet wurde, weil `mblnCancel` auf festgelegt wurde `True` . Der Prozentsatz der Fertigstellung wird nur im ersten Fall aktualisiert.  
   
@@ -116,7 +119,7 @@ Dies ist der zweite von zwei Themen, die veranschaulichen, wie mit Ereignissen g
 > [!NOTE]
 > Sie können beliebig viele Variablen deklarieren `WithEvents` , aber Arrays von `WithEvents` Variablen werden nicht unterstützt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](walkthrough-declaring-and-raising-events.md)
 - [Ereignisse](index.md)

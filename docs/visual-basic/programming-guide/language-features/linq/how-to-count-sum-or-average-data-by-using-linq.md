@@ -15,14 +15,15 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 8be585c3e11bc3637b2dd1cfaf3437620aa2ba09
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 617c6959e2d3add6d36266b0827ef7281b0c77a9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405016"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059248"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Gewusst wie: Bestimmen von Zahlen, Summen oder Durchschnittswerten von Daten mithilfe von LINQ (Visual Basic)
+
 Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformationen und das Ausführen von Abfragen.  
   
  Im folgenden Beispiel wird gezeigt, wie eine neue Anwendung erstellt wird, die Abfragen für eine SQL Server Datenbank ausführt. Das Beispiel zählt die Ergebnisse, addiert und in den Mittelwerten, indem die `Aggregate` -und-Klauseln verwendet werden `Group By` . Weitere Informationen finden Sie unter [Aggregat Klausel](../../../language-reference/queries/aggregate-clause.md) und [Group By-Klausel](../../../language-reference/queries/group-by-clause.md).  
@@ -41,7 +42,7 @@ Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformatio
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>So fügen Sie ein Projekt hinzu, das eine LINQ to SQL Datei enthält  
   
-1. Zeigen Sie in Visual Studio im Menü **Datei** auf **neu** , und klicken Sie dann auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.  
+1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.  
   
 2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die Element Vorlage **LINQ to SQL Klassen** aus.  
   
@@ -77,7 +78,7 @@ Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformatio
   
 4. Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ](index.md)
 - [Abfragen](../../../language-reference/queries/index.md)

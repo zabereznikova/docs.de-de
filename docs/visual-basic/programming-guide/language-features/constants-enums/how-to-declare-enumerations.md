@@ -6,17 +6,18 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 752b425ba32efe41a1ab1aa75de20039d36f5e50
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414452"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058897"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Gewusst wie: Deklarieren einer Enumeration (Visual Basic)
+
 Sie erstellen eine Enumeration mit der- `Enum` Anweisung im Deklarations Abschnitt einer Klasse oder eines Moduls. Sie können eine Enumeration nicht innerhalb einer Methode deklarieren. Verwenden Sie,, oder, um die entsprechende Zugriffsebene anzugeben `Private` `Protected` `Friend` `Public` .  
   
- Ein `Enum` Typ verfügt über einen Namen, einen zugrunde liegenden Typ und einen Satz von Feldern, die jeweils eine Konstante darstellen. Der Name muss ein gültiger Visual Basic .net-Qualifizierer sein. Der zugrunde liegende Typ muss einer der ganzzahligen Typen – `Byte` , `Short` oder sein `Long` `Integer` . `Integer` ist der Standardwert. Enumerationen sind immer stark typisiert und nicht mit ganzzahligen Zahlen Typen austauschbar.  
+ Ein `Enum` Typ verfügt über einen Namen, einen zugrunde liegenden Typ und einen Satz von Feldern, die jeweils eine Konstante darstellen. Der Name muss ein gültiger Visual Basic .net-Qualifizierer sein. Der zugrunde liegende Typ muss einer der ganzzahligen Typen – `Byte` , `Short` oder sein `Long` `Integer` . Standardmäßig ist `Integer` festgelegt. Enumerationen sind immer stark typisiert und nicht mit ganzzahligen Zahlen Typen austauschbar.  
   
  Enumerationen dürfen keine Gleit Komma Werte aufweisen. Wenn eine Enumeration mit einem Gleit Komma Wert zugewiesen wird `Option Strict On` , führt dies zu einem Compilerfehler. Wenn `Option Strict` `Off` den Wert hat, wird der Wert automatisch in den- `Enum` Typ konvertiert.  
   
@@ -42,7 +43,7 @@ Sie erstellen eine Enumeration mit der- `Enum` Anweisung im Deklarations Abschni
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Enumerationen und Namensqualifikation](enumerations-and-name-qualification.md)
 - [Vorgehensweise: Verweisen auf einen Enumerationsmember](how-to-refer-to-an-enumeration-member.md)

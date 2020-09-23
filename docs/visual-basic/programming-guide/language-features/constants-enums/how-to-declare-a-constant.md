@@ -23,14 +23,15 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 138dd58dac9d1983e35e61f8b98a77810fc6e38b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414478"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058845"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Gewusst wie: Deklarieren einer Konstante (Visual Basic)
+
 Verwenden Sie die `Const` -Anweisung, um eine Konstante zu deklarieren und ihren Wert festzulegen. Durch das Deklarieren einer Konstanten weisen Sie einem Wert einen aussagekräftigen Namen zu. Nachdem eine Konstante deklariert wurde, kann Sie nicht geändert werden, oder es kann kein neuer Wert zugewiesen werden.  
   
  Sie deklarieren eine Konstante innerhalb einer Prozedur oder im Deklarations Abschnitt eines Moduls, einer Klasse oder einer Struktur. Konstanten auf Klassen-oder Struktur Ebene sind `Private` standardmäßig, können aber auch als `Public` , `Friend` , `Protected` oder `Protected Friend` für die entsprechende Ebene des Code Zugriffs deklariert werden.  
@@ -65,7 +66,7 @@ Verwenden Sie die `Const` -Anweisung, um eine Konstante zu deklarieren und ihren
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Const-Anweisung](../../../language-reference/statements/const-statement.md)
 - [Konstanten und literale Datentypen](constant-and-literal-data-types.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a6b70d0973e92db90e35e61b7fed2279c5b0bac3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bffdc5974eff6b71e0abc4780a61aa300769eed6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393973"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058546"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Gewusst wie: Deklarieren einer Struktur (Visual Basic)
+
 Sie beginnen eine Struktur Deklaration mit der [Structure-Anweisung](../../../language-reference/statements/structure-statement.md)und beenden Sie mit der- `End Structure` Anweisung. Zwischen diesen beiden Anweisungen müssen Sie mindestens ein *Element*deklarieren. Die Elemente können einen beliebigen Datentyp aufweisen, aber mindestens einen muss entweder eine nicht freigegebene Variable oder ein nicht frei gegebenes, Nichtbenutzer definiertes Ereignis sein.  
   
  Sie können keines der Structure-Elemente in der Struktur Deklaration initialisieren. Wenn Sie eine Variable als Strukturtyp deklarieren, weisen Sie den Elementen Werte zu, indem Sie über die Variable darauf zugreifen.  
@@ -55,7 +56,7 @@ Sie beginnen eine Struktur Deklaration mit der [Structure-Anweisung](../../../la
   
      Zusätzlich zu Variablen, `Sub` Prozeduren und Ereignissen können Sie auch Konstanten, `Function` Prozeduren und Eigenschaften in einer Struktur definieren. Sie können höchstens eine Eigenschaft als *Standard Eigenschaft*festlegen, sofern Sie mindestens ein Argument annimmt. Sie können ein Ereignis mit einer frei [gegebenen](../../../language-reference/modifiers/shared.md) `Sub` Prozedur behandeln. Weitere Informationen finden Sie unter Vorgehens [Weise: Deklarieren und Abrufen einer Standard Eigenschaft in Visual Basic](../procedures/how-to-declare-and-call-a-default-property.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Datentypen](index.md)
 - [Elementare Datentypen](elementary-data-types.md)

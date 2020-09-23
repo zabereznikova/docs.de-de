@@ -9,17 +9,19 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 3da60014d7ac95189c5d56c3e339ff1b054a40dc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 07ef611b50cfa13f77fa168d58dd3b43e97eeec6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405092"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057987"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen (Visual Basic)
+
 Diese exemplarische Vorgehensweise veranschaulicht, wie Sie Ereignisse für eine Klasse mit dem Namen deklarieren und Auswerfen `Widget` . Nachdem Sie die Schritte ausgeführt haben, können Sie das Begleit Thema Exemplarische Vorgehensweise [: Behandeln von Ereignissen](walkthrough-handling-events.md)lesen, in dem gezeigt wird, wie Ereignisse aus Objekten verwendet werden, `Widget` um Statusinformationen in einer Anwendung bereitzustellen.  
   
 ## <a name="the-widget-class"></a>Die widgeklasse  
+
  Angenommen, Sie haben eine- `Widget` Klasse. Die `Widget` -Klasse verfügt über eine-Methode, die für die Ausführung viel Zeit in Anspruch nehmen kann, und Sie möchten, dass Ihre Anwendung in der Lage ist, einen beliebigen Abschluss Indikator zu verwenden.  
   
  Natürlich könnten Sie das `Widget` Objekt mit dem Dialogfeld "Prozentsatz vervollständigen" anzeigen lassen, aber dann würden Sie in jedem Projekt, in dem Sie die Klasse verwendet haben, an diesem Dialogfeld hängen bleiben `Widget` . Ein gutes Prinzip des Objekt Entwurfs besteht darin, dass die Anwendung, die ein Objekt verwendet, die Benutzeroberfläche verarbeitet – es sei denn, der gesamte Zweck des Objekts besteht darin, ein Formular oder Dialogfeld zu verwalten.  
@@ -53,7 +55,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie Ereignisse für eine
 > [!NOTE]
 > Sie können Ereignis Argumente genau wie Argumente von Prozeduren deklarieren, mit den folgenden Ausnahmen: Ereignisse können `Optional` keine `ParamArray` -oder-Argumente aufweisen, und Ereignisse haben keine Rückgabewerte.  
   
- Das- `PercentDone` Ereignis wird von der- `LongTask` Methode der-Klasse ausgelöst `Widget` . `LongTask`erfordert zwei Argumente: die Zeitdauer, die die Methode vor dem Ausführen der Arbeit vornimmt, und das minimale Zeitintervall vor dem Anhalten, `LongTask` um das Ereignis zu erhöhen `PercentDone` .  
+ Das- `PercentDone` Ereignis wird von der- `LongTask` Methode der-Klasse ausgelöst `Widget` . `LongTask` erfordert zwei Argumente: die Zeitdauer, die die Methode vor dem Ausführen der Arbeit vornimmt, und das minimale Zeitintervall vor dem Anhalten, `LongTask` um das Ereignis zu erhöhen `PercentDone` .  
   
 #### <a name="to-raise-the-percentdone-event"></a>So heben Sie das Ereignis "" vom  
   
@@ -61,7 +63,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie Ereignisse für eine
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2. Fügen Sie der `Widget`-Klasse den folgenden Code hinzu:  
+2. Fügen Sie der `Widget`-Klasse folgenden Code hinzu:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
@@ -73,7 +75,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie Ereignisse für eine
   
  Nachdem die `Widget` Klasse nun Ereignisse aufhebt, können Sie mit der nächsten exemplarischen Vorgehensweise fortfahren. Exemplarische Vorgehensweise [: Behandeln von Ereignissen](walkthrough-handling-events.md) veranschaulicht, wie verwendet wird, `WithEvents` um dem-Ereignis einen Ereignishandler zuzuordnen `PercentDone` .  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551040"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059157"
 ---
 # <a name="visual-basic-coding-conventions"></a>Codierungskonventionen in Visual Basic
+
 Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem Thema folgen. Wenn Sie dieselben Codierungskonventionen beachten, erhalten Sie möglicherweise folgende Vorteile:  
   
 - Der Code erhält eine konsistente Gestaltung, damit sich die Leser mehr auf den Inhalt und nicht auf das Layout konzentrieren.  
@@ -86,6 +87,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>Weniger strenge Delegaten in Ereignishandlern  
+
  Um Ereignishandler zu vermeiden, qualifizieren Sie die Argumente (Object und EventArgs) nicht explizit. Wenn Sie nicht die Ereignisargumente verwenden, die an ein Ereignis übergeben werden (z. B. Sender als Objekt, "e" als EventArgs), verwenden Sie weniger strenge Delegaten, und lassen Sie die Ereignisargumente im Code aus:  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
@@ -121,14 +123,17 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>Verwenden des with-Schlüsselworts  
+
  Wenn Sie eine Reihe von Aufrufen eines Objekts ausführen, sollten Sie erwägen, das `With`-Schlüsselwort zu verwenden:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Verwenden Sie try-catch-Anweisungen zur Ausnahmebehandlung.  
+
  Verwenden Sie nicht `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Verwenden des IsNot-Schlüsselworts  
+
  Verwenden Sie das Schlüsselwort `IsNot` statt `Not...Is Nothing`.  
   
 ### <a name="new-keyword"></a>New-Schlüsselwort  
@@ -162,9 +167,11 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
 - Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen. Die `RaiseEvent`-Methode führt vor dem Auslösen des Ereignisses eine Überprüfung auf den Wert `Nothing` durch.  
   
 ### <a name="using-shared-members"></a>Verwenden von Shared-Membern  
+
  Rufen Sie `Shared`-Member über den Klassennamen auf, nicht von einer Instanzvariablen aus.  
   
 ### <a name="use-xml-literals"></a>Verwenden von XML-Literalen  
+
  XML-Literale vereinfachen allgemeine Aufgaben bei der Arbeit mit XML (z. B. Laden, Abfragen und Transformieren). Beachten Sie bei der Entwicklung mit XML die folgenden Richtlinien:  
   
 - Verwenden Sie zum Erstellen von XML-Dokumenten und –Fragmenten XML-Literale, anstatt die XML-APIs direkt aufzurufen.  

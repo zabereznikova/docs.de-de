@@ -7,14 +7,15 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 582957c91eac63cf7f72dd2f6c0cf40e627be686
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f1f0036c38299f2392f8c8705e67b7bb6b7db068
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402030"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058637"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren von IEnumerable(Of T) in Visual Basic
+
 Die- <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird von Klassen implementiert, die jeweils eine Sequenz von Werten zurückgeben können. Der Vorteil der Rückgabe von Daten auf einmal besteht darin, dass Sie den gesamten Daten Satz nicht in den Arbeitsspeicher laden müssen, um damit zu arbeiten. Sie müssen nur ausreichend Arbeitsspeicher verwenden, um ein einzelnes Element aus den Daten zu laden. Klassen, die die- `IEnumerable(T)` Schnittstelle implementieren, können mit `For Each` Schleifen oder LINQ-Abfragen verwendet werden.  
   
  Stellen Sie sich beispielsweise eine Anwendung vor, die eine große Textdatei lesen und jede Zeile aus der Datei zurückgeben muss, die mit bestimmten Suchkriterien übereinstimmt. Die Anwendung verwendet eine LINQ-Abfrage, um Zeilen aus der Datei zurückzugeben, die den angegebenen Kriterien entsprechen. Um den Inhalt der Datei mithilfe einer LINQ-Abfrage abzufragen, könnte die Anwendung den Inhalt der Datei in ein Array oder eine Sammlung laden. Das Laden der gesamten Datei in ein Array oder eine Sammlung beansprucht jedoch viel mehr Arbeitsspeicher als erforderlich. Die LINQ-Abfrage könnte stattdessen den Dateiinhalt Abfragen, indem eine Aufzähl Bare-Klasse verwendet wird, wobei nur die Werte zurückgegeben werden, die den Suchkriterien entsprechen. Abfragen, die nur einige übereinstimmende Werte zurückgeben, verbrauchen viel weniger Arbeitsspeicher.  
@@ -93,9 +94,9 @@ Die- <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird von Kl
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Einführung in LINQ in Visual Basic](../linq/introduction-to-linq.md)
-- [Ablauf Steuerung](index.md)
+- [Ablaufsteuerung](index.md)
 - [Schleifenstrukturen](loop-structures.md)
 - [For Each...Next-Anweisung](../../../language-reference/statements/for-each-next-statement.md)
