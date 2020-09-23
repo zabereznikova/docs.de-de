@@ -12,14 +12,15 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 8b21f22edea84448e3f2969c3e4b07c08a17a338
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2ce7c1700eec54542719e6e0880466ca136e86f6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357347"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095432"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Gewusst wie: Steuern des Gültigkeitsbereichs einer Variablen (Visual Basic)
+
 Normalerweise befindet sich eine Variable im Gültigkeits *Bereich*oder in der Region, in der Sie Sie deklarieren, als Verweis sichtbar. In einigen Fällen kann sich die *Zugriffsebene* der Variablen auf den Gültigkeitsbereich auswirken.  
   
  Weitere Informationen finden Sie unter [Scope in Visual Basic](scope.md).  
@@ -39,6 +40,7 @@ Normalerweise befindet sich eine Variable im Gültigkeits *Bereich*oder in der R
      Sie können auf die Variable nur innerhalb der Prozedur verweisen, einschließlich der in der Prozedur enthaltenen Blöcke.  
   
 ## <a name="scope-at-module-or-namespace-level"></a>Bereich auf Modul-oder Namespace Ebene  
+
  Der Vorteil ist, dass die einzelne Begriffs *Modulebene* gleichermaßen auf Module, Klassen und Strukturen angewendet wird. Die Zugriffsebene einer Variablen auf Modulebene bestimmt ihren Bereich. Der Namespace, der das Modul, die Klasse oder die Struktur enthält, wirkt sich auch auf den Bereich aus.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>So machen Sie eine Variable in einem Modul, einer Klasse oder einer Struktur sichtbar  
@@ -58,6 +60,7 @@ Normalerweise befindet sich eine Variable im Gültigkeits *Bereich*oder in der R
 3. Sie können innerhalb des Namespace, der das Modul, die Klasse oder Struktur enthält, auf die Variable verweisen.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Variable auf Modulebene deklariert und deren Sichtbarkeit auf den Code im Modul beschränkt.  
   
 ```vb  
@@ -81,12 +84,14 @@ Public strMsg As String
 ```  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Je geringer der Gültigkeitsbereich einer Variablen ist, desto weniger Möglichkeiten haben Sie, um versehentlich auf diese anstelle einer anderen Variablen mit demselben Namen zu verweisen. Sie können auch Probleme bei der Verweis Übereinstimmung minimieren.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+
  Je geringer der Gültigkeitsbereich einer Variablen ist, desto geringer ist die Wahrscheinlichkeit, dass böswilliger Code diese nicht ordnungsgemäß verwenden kann.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Gültigkeitsbereich in Visual Basic](scope.md)
 - [Lebensdauer in Visual Basic](lifetime.md)
