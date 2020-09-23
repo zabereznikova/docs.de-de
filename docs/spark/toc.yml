@@ -31,6 +31,8 @@
       href: how-to-guides/udf-guide.md
     - name: Debuggen einer Anwendung
       href: how-to-guides/debug.md
+    - name: Übermitteln von Aufträgen an Azure Synapse Analytics
+      href: 'https://docs.microsoft.com/azure/synapse-analytics/spark/spark-dotnet'
     - name: Übermitteln von Aufträgen an HDInsight
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Übermitteln von Aufträgen an Databricks
