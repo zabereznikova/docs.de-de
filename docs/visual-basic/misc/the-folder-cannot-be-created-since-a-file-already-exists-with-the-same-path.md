@@ -2,14 +2,15 @@
 title: Der Ordner kann nicht erstellt werden, da eine Datei mit dem gleichen Pfad bereits vorhanden ist.
 ms.date: 07/20/2015
 ms.assetid: 1085c60d-4d38-4d67-a149-d3923eef0cfd
-ms.openlocfilehash: 3407d7e85cfeb406d17fd05850c293604188fece
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 216b39bbbd4da478ba1dc4796a0b183d4eb1d9d9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398616"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090455"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>Der Ordner kann nicht erstellt werden, da eine Datei mit dem gleichen Pfad bereits vorhanden ist.
+
 Es wurde versucht, ein Verzeichnis zu erstellen, doch mit diesem Pfad ist bereits eine Datei vorhanden. Ursache ist möglicherweise eine fehlerhafte Pfadanalyse, besonders bei Verwendung von relativen Pfaden.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
@@ -18,7 +19,7 @@ Es wurde versucht, ein Verzeichnis zu erstellen, doch mit diesem Pfad ist bereit
   
 - Entfernen Sie die redundante Datei, wenn sie nicht mehr benötigt wird.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Erstellen eines Verzeichnisses](../developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)
 - [My. Computer. File System](xref:Microsoft.VisualBasic.FileIO.FileSystem)

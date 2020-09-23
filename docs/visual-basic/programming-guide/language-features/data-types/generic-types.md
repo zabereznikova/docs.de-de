@@ -36,14 +36,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394051"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090260"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Generische Typen in Visual Basic (Visual Basic)
+
 Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst, dass es für verschiedene Datentypen dieselben Funktionalität ausführt. Wenn Sie eine generische Klasse oder Prozedur definieren, müssen Sie keine separate Version für jeden Datentyp definieren, für den Sie diese Funktionalität möglicherweise ausführen möchten.  
   
  Eine Analogie hierzu ist ein Schraubendrehersatz mit auswechselbaren Spitzen. Sie sehen sich die Schraube an, die Sie drehen müssen, und wählen die geeignete Spitze für diese Schraube aus (geschlitzt, gekreuzt oder mit Stern). Sobald Sie die richtige Spitze in den Schraubendreher gesteckt haben, führen Sie mit dem Schraubendreher genau diese Funktion aus, d. h., Sie drehen die Schraube.  
@@ -61,6 +62,7 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
  Weitere Informationen zur Verwendung eines generischen Typs finden Sie unter [How to: Use a Generic Class](how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Beispiel für eine generische Klasse  
+
  Im folgenden Beispiel wird eine Rumpfdefinition einer generischen Klasse veranschaulicht.  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
@@ -76,11 +78,13 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
  Ein ausführlichere Beispiel finden Sie unter Gewusst [wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann](how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Geeignete Programmierelemente  
+
  Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden. Beachten Sie, dass der .NET Framework mehrere generische Klassen, Strukturen und Schnittstellen definiert, die häufig verwendete generische Elemente darstellen. Der <xref:System.Collections.Generic?displayProperty=nameWithType> -Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel bereit. Bevor Sie ein eigenes generisches Element definieren, überprüfen Sie, ob es bereits in <xref:System.Collections.Generic?displayProperty=nameWithType>verfügbar ist.  
   
  Prozeduren sind keine Typen, Sie können aber generische Prozeduren definieren und verwenden. Siehe [Generic Procedures in Visual Basic](generic-procedures.md).  
   
 ## <a name="advantages-of-generic-types"></a>Vorteile von generischen Typen  
+
  Ein generischer Typ fungiert als Basis für das Deklarieren mehrerer unterschiedlicher Programmierelemente, von denen jedes für einen bestimmten Datentyp ausgeführt wird. Die Alternativen zu einem generischen Typ sind:  
   
 1. Ein einzelner Typ, der auf den `Object` -Datentyp angewendet wird.  
@@ -91,7 +95,7 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
   
 - **Typsicherheit.** . Generische Typen erzwingen die Typüberprüfung zur Kompilierzeit. Auf `Object` basierende Typen akzeptieren jeden Datentyp, und Sie müssen Code schreiben, der überprüft, ob ein Eingabedatentyp zulässig ist. Mit generischen Typen kann der Compiler Typenkonflikte vor der Laufzeit abfangen.  
   
-- **Leistung:** Generische Typen müssen kein *Boxing* und *unBoxing* für Daten ausführen, da jeder Typ speziell für einen Datentyp verwendet wird. Operationen, die auf `Object` basierend, müssen für Eingabedatentypen Boxing ausführen, um sie in `Object` zu konvertieren, und Unboxing für Daten ausführen, die für die Ausgabe vorgesehen sind. Durch Boxing und Unboxing wird die Leistung verringert.  
+- **Leistung** Generische Typen müssen kein *Boxing* und *unBoxing* für Daten ausführen, da jeder Typ speziell für einen Datentyp verwendet wird. Operationen, die auf `Object` basierend, müssen für Eingabedatentypen Boxing ausführen, um sie in `Object` zu konvertieren, und Unboxing für Daten ausführen, die für die Ausgabe vorgesehen sind. Durch Boxing und Unboxing wird die Leistung verringert.  
   
      Typen, die auf `Object` basieren, sind außerdem spät gebunden, d. h., dass der Zugriff auf ihre Member zusätzlichen Code zur Laufzeit erfordert. Hierdurch wird die Leistung ebenfalls verringert.  
   
@@ -104,9 +108,11 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
 - **Generische Algorithmen.** Abstrakte Algorithmen, die typunabhängig sind, sind gute Kandidaten für generische Typen. Beispielsweise kann eine generische Prozedur, die Elemente mithilfe der <xref:System.IComparable> -Schnittstelle sortiert, für jeden Datentyp verwendet werden, der <xref:System.IComparable>implementiert.  
   
 ## <a name="constraints"></a>Einschränkungen  
+
  Obwohl der Code in der Definition eines generischen Typs so typunabhängig wie möglich sein sollte, müssen Sie eventuell eine bestimmte Fähigkeit irgendeines Datentyps erfordern, der dem generischen Datentyp bereitgestellt wird. Wenn Sie z. B. zwei Elemente vergleichen möchten, um sie zu sortieren oder abzugleichen, muss ihr Datentyp die <xref:System.IComparable> -Schnittstelle implementieren. Sie können diese Anforderung erzwingen, indem Sie dem Typparameter eine *Einschränkung* hinzufügen.  
   
 ### <a name="example-of-a-constraint"></a>Beispiel für eine Einschränkung  
+
  Im folgenden Beispiel wird die Rumpfdefinition einer Klasse mit einer Einschränkung gezeigt, die für das Typargument erfordert, dass es <xref:System.IComparable>implementiert.  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
@@ -114,6 +120,7 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
  Wird in späterem Code versucht, eine Klasse aus `itemManager` zu erstellen, wozu ein Typ bereitgestellt wird, der <xref:System.IComparable>nicht implementiert, signalisiert der Compiler einen Fehler.  
   
 ### <a name="types-of-constraints"></a>Typen von Einschränkungen  
+
  In einer Einschränkung können die folgenden Anforderungen in beliebiger Kombination angegeben werden:  
   
 - Das Typargument muss mindestens eine Schnittstelle implementieren.  
@@ -129,11 +136,13 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
  Weitere Informationen über Einschränkungen finden Sie unter [Type List](../../../language-reference/statements/type-list.md).  
   
 ### <a name="example-of-multiple-constraints"></a>Beispiel für mehrere Einschränkungen  
+
  Im folgenden Beispiel wird die Rumpfdefinition einer generischen Klasse mit einer Einschränkungsliste für den Typparameter veranschaulicht. In dem Code, der eine Instanz dieser Klasse erstellt, muss das Typargument sowohl die <xref:System.IComparable> -Schnittstelle als auch die <xref:System.IDisposable> -Schnittstelle implementieren, ein Verweistyp sein und einen zugänglichen parameterlosen Konstruktor verfügbar machen.  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>Wichtige Begriffe  
+
  Für generische Typen werden die folgenden Begriffe verwendet:  
   
 - *Generischer Typ*. Eine Definition einer Klasse, einer Struktur, einer Schnittstelle, einer Prozedur oder eines Delegaten, für deren bzw. dessen Deklaration Sie mindestens einen Datentyp angeben.  
@@ -146,7 +155,7 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
   
 - *Konstruierter Typ*. Eine Klasse, eine Struktur, eine Schnittstelle, eine Prozedur oder ein Delegat, die bzw. der aus einem generischen Typ deklariert wird, indem Typargumente für dessen Typparameter angegeben werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Datentypen](index.md)
 - [Typzeichen](type-characters.md)

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: d991a385e537c43daeb708e96e712acd92110379
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f50b1f40ef9843391c6622561bfd8a8eaae6fc17
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403381"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090053"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Automatisch implementierte Eigenschaften (Visual Basic)
+
 *Automatisch implementierte Eigenschaften* ermöglichen es Ihnen, schnell eine Eigenschaft einer Klasse anzugeben, ohne Code in `Get` und die-Eigenschaft schreiben zu müssen `Set` . Wenn Sie Code für eine automatisch implementierte Eigenschaft schreiben, erstellt der Visual Basic-Compiler automatisch ein privates Feld zum Speichern der Eigenschaftsvariablen zusätzlich zum Erstellen der zugeordneten `Get` und `Set` Prozeduren.  
   
  Mit automatisch implementierten Eigenschaften kann eine Eigenschaft, einschließlich eines Standardwerts, in einer einzelnen Zeile deklariert werden. Im folgenden Beispiel werden drei Eigenschaftendeklarationen gezeigt.  
@@ -47,6 +48,7 @@ End Class
  Sie können die Eigenschaft mit Initialisierungsausdrücken zuweisen, wie im Beispiel gezeigt, oder Sie können die Eigenschaften im Konstruktor des enthaltenden Typs zuweisen.  Sie können jederzeit auf die dahinter liegenden Felder der Readonly-Eigenschaften zuweisen.  
   
 ## <a name="backing-field"></a>Dahinter liegendes Feld  
+
  Wenn Sie eine automatisch implementierte Eigenschaft deklarieren, erstellt Visual Basic automatisch ein verborgenes privates Feld, das als dahinter liegendes *Feld* bezeichnet wird und den Eigenschafts Wert enthält. Der dahinter liegende Feldname ist die automatisch implementierte Eigenschaft mit einem vorangestellten Unterstrich (_). Angenommen, Sie deklarieren eine automatisch implementierte Eigenschaft mit dem Namen `ID`, dann heißt das dahinter liegende Feld `_ID`. Wenn Sie ein Member der Klasse mit einschließen, das ebenfalls den Namen `_ID` trägt, erzeugen Sie einen Namenskonflikt und Visual Basic meldet einen Compilerfehler.  
   
  Das dahinter liegende Feld verfügt ebenfalls über die folgenden Eigenschaften:  
@@ -60,6 +62,7 @@ End Class
 - Auf das dahinter liegende Feld kann durch Code innerhalb der Klasse und von Debugtools, wie dem Überwachungsfenster, zugegriffen werden. Das dahinter liegende Feld wird jedoch nicht in einer IntelliSense-Vervollständigungsliste für Word angezeigt.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>So definieren Sie eine automatisch implementierte Eigenschaft  
+
  Jeder Ausdruck, der verwendet werden kann, um ein Feld zu initialisieren, ist gültig für die Initialisierung einer automatisch implementierte Eigenschaft. Wenn Sie eine automatisch implementierte Eigenschaft initialisieren, wird der Ausdruck ausgewertet und der `Set` Prozedur für die Eigenschaft übergeben. Die folgenden Codebeispiele zeigen einige automatisch implementierte Eigenschaften, die Anfangswerte enthalten.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
@@ -73,6 +76,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Eigenschaftendefinitionen, die Standardsyntax erfordern  
+
  Automatisch implementierte Eigenschaften sind praktisch und unterstützen viele Programmierszenarien. Es gibt jedoch Situationen, in denen eine automatisch implementierte Eigenschaft nicht verwendet werden kann und stattdessen die standardmäßige oder *Erweiterte*Eigenschafts Syntax verwendet werden muss.  
   
  In diesem Fall müssen Sie eine erweiterte Eigenschaftsdefinition-Syntax verwenden, wenn Sie eine der folgenden durchführen möchten:  
@@ -90,9 +94,10 @@ End Class
 - Geben Sie XML-Kommentaren für das dahinter liegende Feld an.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>So erweitern Sie eine automatisch implementierte Eigenschaft  
+
  Wenn Sie eine automatisch implementierte Eigenschaft zu einer erweiterten Eigenschaft konvertieren müssen, die eine `Get` oder `Set` Prozedur enthält, dann kann der Visual Basic-Code-Editor automatisch die `Get` und `Set` Prozeduren und `End Property` -Anweisung für die Eigenschaft generieren. Der Code wird generiert, wenn Sie den Cursor in einer leeren Zeile nach der `Property` Anweisung platzieren, eine `G` (für `Get` ) oder eine `S` (für `Set` ) eingeben und die EINGABETASTE drücken. Der Visual Basic-Code-Editor generiert automatisch `Get` oder `Set` für schreibgeschützte und lesegeschützte Eigenschaften beim Drücken der EINGABETASTE am Ende der Prozedur eine `Property` Anweisung.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Gewusst wie: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Vorgehensweise: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)

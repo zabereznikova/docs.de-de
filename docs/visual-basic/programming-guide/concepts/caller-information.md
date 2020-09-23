@@ -2,14 +2,15 @@
 title: Aufruferinformationen
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 33c7367626d66d1db2705fc2882ca0780d1b867f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400667"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090351"
 ---
 # <a name="caller-information-visual-basic"></a>Caller Information (Visual Basic) (Aufruferinformationen (Visual Basic))
+
 Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen. Diese Informationen sind zum Verfolgen, Debuggen und Erstellen von Diagnosetools sehr nützlich.  
   
  Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
@@ -21,6 +22,7 @@ Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufruf
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Der Methoden- oder Eigenschaftenname des Aufrufers. Weitere Informationen hierzu finden Sie unter [Membernamen](#MEMBERNAMES) weiter unten in diesem Thema.|`String`|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die Verwendung der Aufrufer-Informationsattribute veranschaulicht. Bei jedem Aufruf der `TraceMessage`-Methode werden die Aufruferinformationen als Argumente für optionale Parameter ersetzt.  
   
 ```vb  
@@ -47,6 +49,7 @@ End Sub
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Sie müssen einen expliziten Standardwert für jeden optionalen Parameter angeben. Sie können Aufrufer-Informationsattribute nicht auf Parameter anwenden, die nicht als optional festgelegt wurden.  
   
  Durch die Aufrufer-Informationsattribute wird ein Parameter nicht optional. Stattdessen beeinflussen sie den Standardwert, der beim Auslassen des Arguments übergeben wird.  
@@ -55,7 +58,8 @@ End Sub
   
  Sie können die optionalen Argumente explizit angeben, um die Aufruferinformationen zu steuern oder auszublenden.  
   
-### <a name="member-names"></a><a name="MEMBERNAMES"></a>Elementnamen  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a> Elementnamen  
+
  Sie können das `CallerMemberName`-Attribut verwenden, um den Membernamen nicht als `String`-Argument für die aufgerufene Methode angeben zu müssen. Auf diese Weise umgehen Sie das Problem, dass durch die **Umgestaltung mit Umbenennung** die `String`-Werte nicht geändert werden. Dieser Vorteil ist für die folgenden Aufgaben besonders hilfreich:  
   
 - Verwenden der Ablaufverfolgung und der Diagnoseprogramme  

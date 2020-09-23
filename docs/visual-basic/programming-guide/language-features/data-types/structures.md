@@ -9,14 +9,15 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-ms.openlocfilehash: a08a5da33fd9507494cac84fd0429b0ff9d9c88e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 04ccb5d39ea7c76a1e75dbeafd9230f2cb604d7c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393428"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090234"
 ---
 # <a name="structures-visual-basic"></a>Strukturen (Visual Basic)
+
 Eine *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (User-Defined Type, UDT), der von früheren Versionen von Visual Basic unterstützt wird. Zusätzlich zu den Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können individuelle Zugriffsebenen für jedes Feld deklarieren.  
   
  Sie können Datenelemente verschiedener Typen kombinieren, um eine-Struktur zu erstellen. Eine-Struktur ordnet ein oder mehrere- *Elemente* einander und der-Struktur zu. Wenn Sie eine Struktur deklarieren, wird Sie zu einem zusammen *gesetzten Datentyp*, und Sie können Variablen dieses Typs deklarieren.  
@@ -24,6 +25,7 @@ Eine *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (User-Defi
  Strukturen sind nützlich, wenn eine einzelne Variable mehrere verwandte Informationen enthalten soll. Beispielsweise können Sie den Namen, die telefonerweiterung und das Gehalt eines Mitarbeiters gleichzeitig aufbewahren. Sie können für diese Informationen mehrere Variablen verwenden, oder Sie können eine Struktur definieren und für eine einzelne Mitarbeiter Variable verwenden. Der Vorteil der-Struktur wird offensichtlich, wenn Sie über viele Mitarbeiter und somit viele Instanzen der Variablen verfügen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Deklarieren einer Struktur](how-to-declare-a-structure.md)  
  Zeigt, wie Sie eine Struktur und deren Elemente deklarieren.  
   
@@ -37,6 +39,7 @@ Eine *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (User-Defi
  Beschreibt die Ähnlichkeiten und Unterschiede zwischen Strukturen und Klassen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Datentypen](index.md)  
  Führt die Visual Basic Datentypen ein und beschreibt, wie diese verwendet werden.  
   
