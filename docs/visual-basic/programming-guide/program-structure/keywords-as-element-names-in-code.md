@@ -7,14 +7,15 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e895db180dbb44cd4cfe4053d4be429f13324fe8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403225"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065748"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Schlüsselwörter als Elementnamen in Code (Visual Basic)
+
 Jedes Programmelement – z. b. eine Variable, eine Klasse oder ein Member – kann denselben Namen wie ein eingeschränktes Schlüsselwort haben. Beispielsweise können Sie eine Variable mit dem Namen erstellen `Loop` . Um jedoch auf Ihre Version des IT-– mit dem gleichen Namen wie das Schlüsselwort "Restricted" zu verweisen `Loop` – müssen Sie entweder eine vollständige Qualifikations Zeichenfolge voranstellen oder Sie in eckige Klammern ( `[ ]` ) einschließen, wie im folgenden Beispiel gezeigt.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
@@ -30,7 +31,7 @@ Jedes Programmelement – z. b. eine Variable, eine Klasse oder ein Member – k
 > [!NOTE]
 > Ihr Programm kann auch Elementnamen enthalten, die von anderen referenzierten Assemblys bereitgestellt werden Wenn diese Namen mit eingeschränkten Schlüsselwörtern in Konflikt stehen, bewirkt das Platzieren von eckigen Klammern, Visual Basic Sie als die definierten Elemente interpretiert werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Benennungskonventionen in Visual Basic](naming-conventions.md)
 - [Programmstruktur und Codekonventionen](program-structure-and-code-conventions.md)
