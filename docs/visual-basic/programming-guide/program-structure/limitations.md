@@ -8,14 +8,15 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 46294b68bda8a5d2d21c0e4efea6a78e6a265ffe
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: abe4acd5850aa6065bf4f6fd41bc610ede7ad13f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403186"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097955"
 ---
 # <a name="visual-basic-limitations"></a>Beschränkungen in Visual Basic
+
 Frühere Versionen von Visual Basic erzwungene Grenzen im Code, wie z. b. die Länge der Variablennamen, die Anzahl der zulässigen Variablen in Modulen und die Modulgröße. In Visual Basic .net wurden diese Einschränkungen gelockert, sodass Sie mehr Freiheit beim Schreiben und anordnen Ihres Codes haben.  
   
  Die physischen Grenzwerte sind mehr für den Lauf Zeit Arbeitsspeicher als bei Überlegungen zur Kompilierzeit voneinander abhängig. Wenn Sie vorsichtige Programmierverfahren verwenden und große Anwendungen in mehrere Klassen und Module aufteilen, besteht die Wahrscheinlichkeit, dass eine interne Visual Basic Einschränkung auftritt.  
@@ -32,7 +33,7 @@ Frühere Versionen von Visual Basic erzwungene Grenzen im Code, wie z. b. die L�
   
 - **Länge der Umgebungs Zeichenfolge.** Für jede Umgebungs Zeichenfolge, die als Befehlszeilenargument verwendet wird, sind maximal 32768 Zeichen zulässig. Dies ist eine Einschränkung auf allen Plattformen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Programmstruktur und Codekonventionen](program-structure-and-code-conventions.md)
 - [Benennungskonventionen in Visual Basic](naming-conventions.md)
