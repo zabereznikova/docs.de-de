@@ -10,18 +10,20 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: dac0575d73ffd4159e89bff344915a33b9d0e5d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2c8c60015d834ffa3f8618dd98616350e13f0e5c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364278"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100658"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameterarrays (Visual Basic)
+
 In der Regel ist es nicht möglich, eine Prozedur mit mehr Argumenten aufzurufen, als die Prozedur Deklaration angibt. Wenn Sie eine unbegrenzte Anzahl von Argumenten benötigen, können Sie ein *Parameter Array*deklarieren, das es einer Prozedur ermöglicht, ein Array von Werten für einen Parameter zu akzeptieren. Wenn Sie die Prozedur definieren, müssen Sie nicht die Anzahl der Elemente im Parameter Array kennen. Die Array Größe wird einzeln durch jeden aufzurufenden Vorgang bestimmt.  
   
 ## <a name="declaring-a-paramarray"></a>Deklarieren eines ParamArray  
- Sie verwenden das [ParamArray](../../../language-reference/modifiers/paramarray.md) -Schlüsselwort, um ein Parameter Array in der Parameterliste anzugeben. Dabei gelten folgende Regeln:  
+
+ Sie verwenden das [ParamArray](../../../language-reference/modifiers/paramarray.md) -Schlüsselwort, um ein Parameter Array in der Parameterliste anzugeben. Es gelten die folgenden Regeln:  
   
 - Eine Prozedur kann nur ein Parameter Array definieren, und es muss der letzte Parameter in der Prozedur Definition sein.  
   
@@ -32,6 +34,7 @@ In der Regel ist es nicht möglich, eine Prozedur mit mehr Argumenten aufzurufen
 - Alle Parameter, die dem Parameter Array vorangestellt sind, müssen erforderlich sein. Das Parameter Array muss der einzige optionale Parameter sein.  
   
 ## <a name="calling-a-paramarray"></a>Aufrufen eines ParamArray-Parametern  
+
  Wenn Sie eine Prozedur aufrufen, die ein Parameter Array definiert, können Sie das Argument auf eine der folgenden Arten angeben:  
   
 - Nothing – das heißt, Sie können das [ParamArray](../../../language-reference/modifiers/paramarray.md) -Argument weglassen. In diesem Fall wird ein leeres Array an die Prozedur übermittelt. Wenn Sie das [Nothing](../../../language-reference/nothing.md) -Schlüsselwort explizit übergeben, wird ein NULL-Array an die Prozedur übergeben und kann zu einer NullReferenceException führen, wenn die aufgerufene Prozedur nicht auf diese Bedingung überprüft.
@@ -46,6 +49,7 @@ In der Regel ist es nicht möglich, eine Prozedur mit mehr Argumenten aufzurufen
 > Wenn Sie sich mit einem Array befassen, das unbegrenzt groß sein kann, besteht das Risiko, dass eine interne Kapazität der Anwendung überschritten wird. Wenn Sie ein Parameter Array akzeptieren, sollten Sie die Größe des Arrays testen, das dem aufrufenden Code übergeben wurde. Führen Sie die entsprechenden Schritte aus, wenn Sie für Ihre Anwendung zu groß sind. Weitere Informationen finden Sie unter [Arrays](../arrays/index.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die-Funktion definiert und aufgerufen `calcSum` . Der- `ParamArray` Modifizierer für den-Parameter `args` ermöglicht der-Funktion, eine Variable Anzahl von Argumenten zu akzeptieren.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
@@ -56,7 +60,7 @@ In der Regel ist es nicht möglich, eine Prozedur mit mehr Argumenten aufzurufen
   
  [!code-vb[VbVbcnProcedures#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#49)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
 - [Vorgehensweisen](./index.md)
