@@ -10,17 +10,19 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 5561812a53e2fe45c3ad4d12d0e18a8a1e948559
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 724407fed5bf90ed6e3e470cbabc9e42856cb99a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411765"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087478"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Objektinitialisierer: Benannte und anonyme Typen (Visual Basic)
+
 Objektinitialisierer ermöglichen es Ihnen, mithilfe eines einzelnen Ausdrucks Eigenschaften für ein komplexes Objekt anzugeben. Sie können verwendet werden, um Instanzen benannter Typen und anonymer Typen zu erstellen.  
   
 ## <a name="declarations"></a>Deklarationen  
+
  Deklarationen von Instanzen von benannten und anonymen Typen können nahezu identisch aussehen, aber ihre Auswirkungen sind nicht identisch. Jede Kategorie verfügt über eigene Möglichkeiten und Einschränkungen. Das folgende Beispiel zeigt eine bequeme Methode zum Deklarieren und Initialisieren einer Instanz einer benannten Klasse, `Customer` , mithilfe einer Objektinitialisiererliste. Beachten Sie, dass der Name der Klasse nach dem-Schlüsselwort angegeben wird `New` .  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
@@ -32,6 +34,7 @@ Objektinitialisierer ermöglichen es Ihnen, mithilfe eines einzelnen Ausdrucks E
  Die Anforderungen und Ergebnisse der beiden Deklarationen sind nicht identisch. Für `namedCust` muss eine `Customer` Klasse, die über eine- `Name` Eigenschaft verfügt, bereits vorhanden sein, und die-Deklaration erstellt eine Instanz dieser Klasse. Für `anonymousCust` definiert der Compiler eine neue Klasse, die über eine Eigenschaft, eine Zeichenfolge `Name` mit dem Namen und eine neue Instanz dieser Klasse verfügt.  
   
 ## <a name="named-types"></a>Benannte Typen  
+
  Objektinitialisierer bieten eine einfache Möglichkeit, den Konstruktor eines Typs aufzurufen und dann die Werte einiger oder aller Eigenschaften in einer einzelnen Anweisung festzulegen. Der Compiler ruft den entsprechenden Konstruktor für die-Anweisung auf: den Parameter losen Konstruktor, wenn keine Argumente dargestellt werden, oder einen parametrisierten Konstruktor, wenn mindestens ein Argument gesendet wird. Anschließend werden die angegebenen Eigenschaften in der Reihenfolge initialisiert, in der Sie in der Initialisiererliste angezeigt werden.  
   
  Jede Initialisierung in der Initialisiererliste besteht aus der Zuweisung eines Anfangs Werts zu einem Member der Klasse. Die Namen und Datentypen der Elemente werden bestimmt, wenn die Klasse definiert ist. In den folgenden Beispielen muss die `Customer` -Klasse vorhanden sein, und Sie müssen Member mit dem Namen und enthalten, `Name` `City` die Zeichen folgen Werte akzeptieren können.  
@@ -57,6 +60,7 @@ Objektinitialisierer ermöglichen es Ihnen, mithilfe eines einzelnen Ausdrucks E
  Die Initialisierungs Liste darf jedoch nicht leer sein. Nicht initialisierte Eigenschaften behalten ihre Standardwerte bei.  
   
 ### <a name="type-inference-with-named-types"></a>Typrückschluss mit benannten Typen  
+
  Sie können den Code für die Deklaration von kürzen, `cust1` indem Sie Objektinitialisierer und den lokalen Typrückschluss kombinieren. Auf diese Weise können Sie die- `As` Klausel in der Variablen Deklaration weglassen. Der Datentyp der Variablen wird vom Objekttyp abgeleitet, der von der Zuweisung erstellt wird. Im folgenden Beispiel ist der Typ von `cust6` `Customer` .  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
@@ -94,6 +98,7 @@ Objektinitialisierer ermöglichen es Ihnen, mithilfe eines einzelnen Ausdrucks E
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>Anonyme Typen  
+
  Anonyme Typen verwenden Objektinitialisierer, um Instanzen von neuen Typen zu erstellen, die Sie nicht explizit definieren und benennen. Stattdessen generiert der Compiler einen Typ entsprechend den Eigenschaften, die Sie in der Objektinitialisiererliste festlegen. Da der Name des Typs nicht angegeben wird, wird er als *anonymer Typ*bezeichnet. Vergleichen Sie beispielsweise die folgende Deklaration mit der vorherigen Deklaration für `cust6` .  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
@@ -127,7 +132,7 @@ Objektinitialisierer ermöglichen es Ihnen, mithilfe eines einzelnen Ausdrucks E
   
      Weitere Informationen zu den Optionen zum Definieren von Eigenschaften in anonymen Typen finden Sie unter Gewusst [wie: Ableiten von Eigenschaften Namen und Typen in Deklarationen anonymer](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)Typen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Lokaler Typrückschluss](../variables/local-type-inference.md)
 - [Anonyme Typen](anonymous-types.md)

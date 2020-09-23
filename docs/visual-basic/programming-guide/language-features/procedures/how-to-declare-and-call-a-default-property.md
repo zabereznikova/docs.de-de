@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 4de5d94a94e764d1fc543ffae41b00a9bb729c94
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 21aa6e6a9bba23d767b9d1fac610eaac3265550d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388153"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087452"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Gewusst wie: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic
+
 Eine *Standard Eigenschaft* ist eine Klassen-oder Struktur Eigenschaft, auf die der Code zugreifen kann, ohne ihn anzugeben. Beim Aufrufen von Code wird eine Klasse oder Struktur, aber keine Eigenschaft benannt, und der Kontext ermöglicht den Zugriff auf eine Eigenschaft, Visual Basic den Zugriff auf die Standard Eigenschaft der Klasse oder Struktur, sofern vorhanden, auflöst.  
   
  Eine Klasse oder Struktur kann höchstens eine Standard Eigenschaft aufweisen. Sie können jedoch eine Standard Eigenschaft überladen und mehr als eine Version davon haben.  
@@ -61,11 +62,13 @@ Eine *Standard Eigenschaft* ist eine Klassen-oder Struktur Eigenschaft, auf die 
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Default-Eigenschaft für eine-Klasse deklariert.  
   
  [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird veranschaulicht, wie die Default-Eigenschaft für die-Klasse aufgerufen wird `myProperty` `class1` . Die drei Zuweisungs Anweisungen speichern Werte in `myProperty` , und der-Befehl <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> liest die-Werte.  
   
  [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
@@ -73,6 +76,7 @@ Eine *Standard Eigenschaft* ist eine Klassen-oder Struktur Eigenschaft, auf die 
  Die häufigste Verwendung einer Standard Eigenschaft ist die- <xref:Microsoft.VisualBasic.Collection.Item%2A> Eigenschaft für verschiedene Auflistungs Klassen.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Standardeigenschaften können zu einer geringfügigen Reduzierung der Quell Code Zeichen führen, aber Sie können den Code schwieriger lesbar machen. Wenn der aufrufende Code nicht mit der Klasse oder Struktur vertraut ist, kann er, wenn er einen Verweis auf den Klassen-oder Struktur Namen erstellt, nicht sicher sein, ob dieser Verweis auf die Klasse oder Struktur selbst oder eine Standard Eigenschaft zugreift. Dies kann zu Compilerfehlern oder geringfügigen Lauf Zeit Logik-Fehlern führen.  
   
  Sie können die Wahrscheinlichkeit von Fehlern bei Standardeigenschaften verringern, indem Sie immer die [Option Strict-Anweisung](../../../language-reference/statements/option-strict-statement.md) verwenden, um die Compilertypüberprüfung auf festzulegen `On` .  
@@ -81,7 +85,7 @@ Eine *Standard Eigenschaft* ist eine Klassen-oder Struktur Eigenschaft, auf die 
   
  Aufgrund dieser Nachteile sollten Sie das Definieren von Standardeigenschaften in Erwägung gezogen. Zur besseren Lesbarkeit des Codes sollten Sie auch immer eine explizite Verweis auf alle Eigenschaften in Erwägung ziehen. Dies gilt auch für Standardeigenschaften.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)

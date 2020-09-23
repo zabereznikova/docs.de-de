@@ -6,17 +6,19 @@ helpviewer_keywords:
 - Visual Basic, programming in
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
-ms.openlocfilehash: 3280953ad04b9673d4eb23d139f8f1dc8606a66c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60c7ffbb1f9abb89d8efa946eee9db6cb70df5be
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413116"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086438"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic-Programmierhandbuch
+
 Wie jede moderne Programmiersprache unterstützt Visual Basic viele gängige Programmierungskonstrukte und Sprachelemente. In dieser Anleitung werden alle Hauptelemente der Programmierung mit Visual Basic beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Programmstruktur und Codekonventionen](program-structure/program-structure-and-code-conventions.md)  
  Enthält Dokumentation über die grundlegende Struktur und die Code Konventionen von Visual Basic, z. b. Benennungs Konventionen, Kommentare im Code und Einschränkungen in Visual Basic.  
   
@@ -27,6 +29,7 @@ Wie jede moderne Programmiersprache unterstützt Visual Basic viele gängige Pro
  Erläutert Interoperabilitätsprobleme, die beim Erstellen und Verwenden von COM-Objekten (Component Object Model) mit Visual Basic auftreten können.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Sprachreferenz zu Visual Basic](../language-reference/index.md)  
  Enthält Referenzinformationen zu verschiedenen Aspekten der Visual Basic Programmierung.  
   

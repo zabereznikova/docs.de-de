@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: e703346113348556b8a3ea41a7934a55a8008522
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73b53dcf7cd732af1a4f1d23cd0d3b9ef5b5529b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388075"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087439"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Gewusst wie: Definieren eines Parameters für eine Prozedur (Visual Basic)
+
 Ein *Parameter* ermöglicht es dem aufrufenden Code, einen Wert an die Prozedur zu übergeben, wenn er aufgerufen wird. Sie deklarieren jeden Parameter für eine Prozedur auf dieselbe Weise, wie Sie eine Variable deklarieren, indem Sie Ihren Namen und den Datentyp angeben. Außerdem geben Sie den Übergabe Mechanismus an und gibt an, ob der Parameter optional ist.  
   
  Weitere Informationen finden Sie unter [Prozedur Parameter und-Argumente](./procedure-parameters-and-arguments.md).  
@@ -52,7 +53,7 @@ Ein *Parameter* ermöglicht es dem aufrufenden Code, einen Wert an die Prozedur 
   
     - Dies führt zu einer schnelleren Ausführung des Codes. Ein Grund hierfür ist, dass der Visual Basic Compiler dem Typ den Typ zuweist, wenn Sie keinen Datentyp für ein Programmier Element angeben `Object` . Der kompilierte Code muss möglicherweise zwischen und anderen Datentypen hin-und herkonvertiert `Object` werden, wodurch die Leistung reduziert wird.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweisen](./index.md)
 - [Sub-Prozeduren](./sub-procedures.md)

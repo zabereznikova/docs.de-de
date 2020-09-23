@@ -13,14 +13,15 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 49b9c8d1a6db56a56b50c16b4a6bb5b928df6c7d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5acbd0439ddbb956b80d56e23d11cd5e152f37ff
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388036"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087400"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Gewusst wie: Definieren eines Operators (Visual Basic)
+
 Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten eines Standard Operators (z. b. `*` , `<>` oder) definieren, `And` Wenn mindestens einer der Operanden vom Typ der Klasse oder Struktur ist.  
   
  Definieren Sie den Standard Operator als Operator Prozedur innerhalb der Klasse oder Struktur. Alle Operator Prozeduren müssen sein `Public` `Shared` .  
@@ -28,6 +29,7 @@ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten ei
  Die Definition eines Operators für eine Klasse oder Struktur wird auch als *überladen* des Operators bezeichnet.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der- `+` Operator für eine Struktur mit dem Namen definiert `height` . Die Struktur verwendet Höhen, gemessen in Höhe und Zoll. Ein *Zoll* beträgt 2,54 Zentimeter und ein *Fuß* ist 12 Zoll. Um normalisierte Werte (Zoll < 12,0) sicherzustellen, führt der Konstruktor *Modulo* 12-Arithmetik aus. Der- `+` Operator verwendet den-Konstruktor, um normalisierte Werte zu generieren.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
@@ -36,7 +38,7 @@ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten ei
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Operatorprozeduren](./operator-procedures.md)
 - [Vorgehensweise: Definieren eines Konvertierungsoperators](./how-to-define-a-conversion-operator.md)
