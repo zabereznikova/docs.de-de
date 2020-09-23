@@ -6,19 +6,21 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 9d85f9c0390a659e59e372ad949cffdd17715189
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7d0595b991bdad6ef05b567f95ead8c7fccdbc2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413257"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077279"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Schreiben der ersten LINQ-Abfrage (Visual Basic)
+
 Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in einer dedizierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für verschiedene Arten von Datenquellen entwickelt, beispielsweise SQL für relationale Datenbanken und XQuery für XML. Dadurch muss der Anwendungsentwickler für jeden unterstützten Typ von Datenquelle oder Datenformat eine neue Abfragesprache erlernen.  
   
  Language-Integrated Query (LINQ) vereinfacht die Situation, indem ein konsistentes Modell zum Arbeiten mit Daten über verschiedene Arten von Datenquellen und-Formaten angeboten wird. In einer LINQ-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungs Muster zum Abfragen und Transformieren von Daten in XML-Dokumenten, SQL-Datenbanken, ADO.NET Datasets und Entitäten, .NET Framework Auflistungen und anderen Quellen oder Formaten, für die ein LINQ-Anbieter verfügbar ist. In diesem Dokument werden die drei Phasen der Erstellung und Verwendung von grundlegenden LINQ-Abfragen beschrieben.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Drei Phasen eines Abfrage Vorgangs  
+
  LINQ-Abfrage Vorgänge bestehen aus drei Aktionen:  
   
 1. Abrufen der Datenquelle oder der Quellen  
@@ -41,6 +43,7 @@ Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfrage
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>Die Datenquelle  
+
  Da es sich bei der Datenquelle im vorherigen Beispiel um ein Array handelt, unterstützt Sie implizit die generische- <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle. Diese Tatsache ermöglicht es Ihnen, ein Array als Datenquelle für eine LINQ-Abfrage zu verwenden. Typen, die <xref:System.Collections.Generic.IEnumerable%601> unterstützen oder eine abgeleitete Schnittstelle, wie z.B. der generische Typ <xref:System.Linq.IQueryable%601>, werden als *abfragbare Typen* bezeichnet.  
   
  Als implizit abfragbarer Typ erfordert das Array keine Änderung oder besondere Behandlung, um als LINQ-Datenquelle fungieren zu können. Das gleiche gilt für jeden Auflistungstyp, der unterstützt <xref:System.Collections.Generic.IEnumerable%601> , einschließlich der generischen <xref:System.Collections.Generic.List%601> , <xref:System.Collections.Generic.Dictionary%602> -und anderen Klassen in der .NET Framework-Klassenbibliothek.  
@@ -63,6 +66,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 > Typen wie <xref:System.Collections.ArrayList> , die die nicht generische-Schnittstelle unterstützen, <xref:System.Collections.IEnumerable> können auch als LINQ-Datenquellen verwendet werden. Ein Beispiel für die Verwendung von <xref:System.Collections.ArrayList> finden Sie unter Gewusst [wie: Abfragen einer ArrayList mit LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>Die Abfrage  
+
  In der Abfrage geben Sie an, welche Informationen aus der Datenquelle oder den Quellen abgerufen werden sollen. Sie haben auch die Möglichkeit anzugeben, wie diese Informationen sortiert, gruppiert oder strukturiert werden sollen, bevor Sie zurückgegeben werden. Um die Abfrage Erstellung zu aktivieren, hat Visual Basic neue Abfrage Syntax in die Sprache integriert.  
   
  Wenn die Abfrage ausgeführt wird, gibt die Abfrage im folgenden Beispiel alle geraden Zahlen aus einem ganzzahligen Array zurück `numbers` .  
@@ -74,9 +78,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  Beachten Sie, dass die Abfrage Variable selbst keine Aktion durchführt und keine Daten zurückgibt. Die Abfrage Definition wird nur gespeichert. Im vorherigen Beispiel ist dies die Schleife, die `For Each` die Abfrage ausführt.  
   
 ## <a name="query-execution"></a>Abfrageausführung  
+
  Die Abfrage Ausführung ist von der Abfrage Erstellung getrennt. Beim Erstellen der Abfrage wird die Abfrage definiert, aber die Ausführung wird durch einen anderen Mechanismus ausgelöst. Eine Abfrage kann ausgeführt werden, sobald Sie definiert ist (*sofortige Ausführung*), oder die Definition kann gespeichert werden, und die Abfrage kann später ausgeführt werden (*verzögerte Ausführung*).  
   
 ### <a name="deferred-execution"></a>Verzögerte Ausführung  
+
  Eine typische LINQ-Abfrage ähnelt der im vorherigen Beispiel, in der `evensQuery` definiert ist. Die Abfrage wird erstellt, aber nicht sofort ausgeführt. Stattdessen wird die Abfrage Definition in der Abfrage Variablen gespeichert `evensQuery` . Sie führen die Abfrage später aus, in der Regel mit einer- `For Each` Schleife, die eine Sequenz von-Werten zurückgibt, oder durch Anwenden eines Standard Abfrage Operators, z `Count` `Max` . b. oder. Dieser Prozess wird als *verzögerte Ausführung*bezeichnet.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
@@ -98,6 +104,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  `0  10  2  22  8`  
   
 ### <a name="immediate-execution"></a>Sofortige Ausführung  
+
  Bei der verzögerten Ausführung von Abfragen wird die Abfrage Definition zur späteren Ausführung in einer Abfrage Variablen gespeichert. Bei sofortiger Ausführung wird die Abfrage zum Zeitpunkt der Definition ausgeführt. Die Ausführung wird ausgelöst, wenn Sie eine Methode anwenden, die Zugriff auf einzelne Elemente des Abfrage Ergebnisses erfordert. Die sofortige Ausführung wird häufig erzwungen, indem einer der Standard Abfrage Operatoren verwendet wird, die einzelne Werte zurückgeben. Beispiele hierfür sind `Count` , `Max` , `Average` und `First` . Diese Standard Abfrage Operatoren führen die Abfrage aus, sobald Sie angewendet werden, um ein Singleton-Ergebnis zu berechnen und zurückzugeben. Weitere Informationen zu Standard Abfrage Operatoren, die einzelne Werte zurückgeben, finden Sie unter [Aggregations Vorgänge](aggregation-operations.md), [Element Vorgänge](element-operations.md)und [Quantifizierer-Vorgänge](quantifier-operations.md).  
   
  Die folgende Abfrage gibt die Anzahl der geraden Zahlen in einem Array von ganzen Zahlen zurück. Die Abfrage Definition wird nicht gespeichert und `numEvens` ist einfach `Integer` .  
@@ -118,7 +125,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Sie können auch bewirken, dass eine Abfrage mit einer- `IEnumerable` Methode wie der-Methode ausgeführt wird <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> .  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte mit LINQ in Visual Basic](getting-started-with-linq.md)
 - [Lokaler Typrückschluss](../../language-features/variables/local-type-inference.md)

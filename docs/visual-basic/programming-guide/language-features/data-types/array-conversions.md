@@ -12,14 +12,15 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 1d20b01200d3f967e3355dc6e9651291003d140e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 375c75c954f3be535272d674d9b786cad46b1a01
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402004"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077188"
 ---
 # <a name="array-conversions-visual-basic"></a>Arraykonvertierungen (Visual Basic)
+
 Sie können einen Arraytyp in einen anderen Arraytyp konvertieren, wenn die folgenden Bedingungen erfüllt sind:  
   
 - **Gleicher Rang.** Die Ränge der beiden Arrays müssen identisch sein, d. h., Sie müssen über die gleiche Anzahl von Dimensionen verfügen. Die Längen der jeweiligen Dimensionen müssen jedoch nicht identisch sein.  
@@ -31,6 +32,7 @@ Sie können einen Arraytyp in einen anderen Arraytyp konvertieren, wenn die folg
  Eine Konvertierung von einem Arraytyp in einen anderen wird erweitert oder einschränkend, abhängig davon, ob die Konvertierung der entsprechenden Elemente zunimmt oder einschränkend ist. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md).  
   
 ## <a name="conversion-to-an-object-array"></a>Konvertieren in ein Objekt Array  
+
  Wenn Sie ein `Object` Array ohne Initialisierung deklarieren, ist dessen Elementtyp `Object` so lange, wie es nicht initialisiert wird. Wenn Sie es auf ein Array einer bestimmten Klasse festlegen, wird der Typ dieser Klasse benötigt. Der zugrunde liegende Typ ist jedoch immer noch `Object` , und Sie können ihn anschließend auf ein anderes Array einer nicht verknüpften Klasse festlegen. Da alle Klassen von abgeleitet `Object` werden, können Sie den Elementtyp des Arrays von einer beliebigen Klasse in eine beliebige andere Klasse ändern.  
   
  Im folgenden Beispiel gibt es keine Konvertierung zwischen Typen `student` und `String` , aber beide werden von abgeleitet `Object` , sodass alle Zuweisungen gültig sind.  
@@ -47,6 +49,7 @@ testArray = names
 ```  
   
 ### <a name="underlying-type-of-an-array"></a>Zugrunde liegender Typ eines Arrays  
+
  Wenn Sie ein Array ursprünglich mit einer bestimmten Klasse deklariert haben, ist der zugrunde liegende Elementtyp diese Klasse. Wenn Sie anschließend ein Array einer anderen Klasse festlegen, muss eine Konvertierung zwischen den beiden Klassen erfolgen.  
   
  Im folgenden Beispiel `students` ist ein- `student` Array. Da keine Konvertierung zwischen `String` und vorhanden `student` ist, schlägt die letzte Anweisung fehl.  
@@ -59,7 +62,7 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Datentypen](index.md)
 - [Typkonvertierung in Visual Basic](type-conversions.md)

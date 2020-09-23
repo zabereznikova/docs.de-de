@@ -8,19 +8,21 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 33dd4c62776ae8c5ec0ce0a6d0858a7ed0d047fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5fde5eff40d83bdd7d90cd611bd6749106db6e16
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401991"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077175"
 ---
 # <a name="character-data-types-visual-basic"></a>Zeichendatentypen (Visual Basic)
+
 Visual Basic stellt *Zeichen Datentypen* für das Behandeln von druckbaren und darstellbaren Zeichen bereit. Obwohl beide Unicode-Zeichen `Char` enthalten, enthält ein einzelnes Zeichen, wohingegen `String` eine unbegrenzte Anzahl von Zeichen enthält.  
   
  Eine Tabelle, in der ein paralleler Vergleich der Visual Basic-Datentypen angezeigt wird, finden Sie unter [Datentypen](../../../language-reference/data-types/index.md).  
   
 ## <a name="char-type"></a>Char-Typ  
+
  Der- `Char` Datentyp ist ein einzelnes 2-Byte-Unicode-Zeichen (16 Bit). Wenn eine Variable immer genau ein Zeichen speichert, deklarieren Sie Sie als `Char` . Beispiel:  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
@@ -33,13 +35,14 @@ Visual Basic stellt *Zeichen Datentypen* für das Behandeln von druckbaren und d
  Weitere Informationen finden Sie unter [Char-Datentyp](../../../language-reference/data-types/char-data-type.md).  
   
 ## <a name="string-type"></a>Zeichenfolgentyp  
+
  Der- `String` Datentyp ist eine Sequenz von NULL oder mehr 2-Byte-Unicode-Zeichen (16 Bit). Wenn eine Variable eine unbestimmte Anzahl von Zeichen enthalten kann, deklarieren Sie Sie als `String` . Beispiel:  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
  Weitere Informationen finden Sie unter [String Data Type](../../../language-reference/data-types/string-data-type.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Elementare Datentypen](elementary-data-types.md)
 - [Zusammengesetzte Datentypen](composite-data-types.md)

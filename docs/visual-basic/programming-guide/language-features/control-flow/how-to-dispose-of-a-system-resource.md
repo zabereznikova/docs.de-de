@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: dd15c6746628f45b072d46eea40051ed9afb7921
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c430bc7744f5aefaa65f2a86f3e5e22743ffed57
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403497"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077201"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Gewusst wie: Freigeben einer Systemressource (Visual Basic)
+
 Sie können einen- `Using` Block verwenden, um sicherzustellen, dass das System eine Ressource freigibt, wenn der Code den Block verlässt. Dies ist nützlich, wenn Sie eine System Ressource verwenden, die eine große Menge an Arbeitsspeicher beansprucht oder die andere Komponenten verwenden möchten.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>So löschen Sie eine Datenbankverbindung, wenn Ihr Code abgeschlossen ist  
@@ -44,10 +45,10 @@ Sie können einen- `Using` Block verwenden, um sicherzustellen, dass das System 
   
      Sie können dieselbe Technik für eine System Ressource wie ein Datei Handle oder einen COM-Wrapper verwenden. Sie verwenden einen- `Using` Block, wenn Sie sicher sein möchten, dass die Ressource für andere Komponenten verfügbar ist, nachdem Sie den-Block verlassen haben `Using` .  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Data.SqlClient.SqlConnection>
-- [Ablauf Steuerung](index.md)
+- [Ablaufsteuerung](index.md)
 - [Entscheidungsstrukturen](decision-structures.md)
 - [Schleifenstrukturen](loop-structures.md)
 - [Weitere Steuerungsstrukturen](other-control-structures.md)

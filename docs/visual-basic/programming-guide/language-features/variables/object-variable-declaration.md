@@ -12,14 +12,15 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: b6de52cf738a56a42c82978b54cef31574ab0bcb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 74b1401df3dbb2d744de74734d10cbcd92e9689e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410360"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077045"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Deklaration von Objektvariablen (Visual Basic)
+
 Sie verwenden eine normale Deklarations Anweisung, um eine Objekt Variable zu deklarieren. Für den-Datentyp geben Sie entweder (d. h. `Object` den [Object-Datentyp](../../../language-reference/data-types/object-data-type.md)) oder eine spezifischere Klasse an, aus der das Objekt erstellt werden soll.  
   
  Das Deklarieren einer Variablen als `Object` entspricht der Deklaration als <xref:System.Object?displayProperty=nameWithType> .  
@@ -27,6 +28,7 @@ Sie verwenden eine normale Deklarations Anweisung, um eine Objekt Variable zu de
  Wenn Sie eine Variable mit einer bestimmten Objektklasse deklarieren, können Sie auf alle Methoden und Eigenschaften zugreifen, die von dieser Klasse verfügbar gemacht werden, und auf die Klassen, von denen Sie erbt. Wenn Sie die Variable mit deklarieren <xref:System.Object> , kann Sie nur auf die Member der <xref:System.Object> Klasse zugreifen, es sei denn, Sie aktivieren die `Option Strict Off` späte Bindung.  
   
 ## <a name="declaration-syntax"></a>Deklarationssyntax  
+
  Verwenden Sie die folgende Syntax, um eine Objekt Variable zu deklarieren:  
   
 ```vb  
@@ -42,11 +44,13 @@ Dim objC As System.OperatingSystem
 ```  
   
 ## <a name="late-binding-and-early-binding"></a>Späte Bindung und frühe Bindung  
+
  Manchmal ist die bestimmte Klasse unbekannt, bis der Code ausgeführt wird. In diesem Fall müssen Sie die Objekt Variable mit dem- `Object` Datentyp deklarieren. Dadurch wird ein allgemeiner Verweis auf einen beliebigen Objekttyp erstellt, und die jeweilige Klasse wird zur Laufzeit zugewiesen. Dies wird als *späte Bindung*bezeichnet. Die späte Bindung erfordert zusätzliche Ausführungszeit. Außerdem schränkt er Ihren Code auf die Methoden und Eigenschaften der Klasse ein, die Sie zuletzt zugewiesen haben. Dies kann zu Laufzeitfehlern führen, wenn der Code versucht, auf Member einer anderen Klasse zuzugreifen.  
   
  Wenn Sie die jeweilige Klasse zum Zeitpunkt der Kompilierung kennen, sollten Sie die Objekt Variable so deklarieren, dass Sie dieser Klasse entspricht. Dies wird als *frühe Bindung* bezeichnet. Frühe Bindungen verbessern die Leistung und gewährleisten, dass Ihr Code auf alle Methoden und Eigenschaften der jeweiligen Klasse zugreift. Wenn die Variable in den vorangehenden Beispiel Deklarationen `objA` nur Objekte der Klasse verwendet <xref:System.Windows.Forms.Label?displayProperty=nameWithType> , sollten Sie `As System.Windows.Forms.Label` in der Deklaration angeben.  
   
 ### <a name="advantages-of-early-binding"></a>Vorteile der frühen Bindung  
+
  Das Deklarieren einer Objektvariablen als eine bestimmte Klasse bietet mehrere Vorteile:  
   
 - Automatische Typüberprüfung  
@@ -64,6 +68,7 @@ Dim objC As System.OperatingSystem
 - Schnellere Codeausführung  
   
 ## <a name="access-to-object-variable-members"></a>Zugriff auf Objektvariablen Elemente  
+
  Wenn `Option Strict` aktiviert ist `On` , kann eine Objekt Variable nur auf die Methoden und Eigenschaften der Klasse zugreifen, mit der Sie Sie deklarieren. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
@@ -87,6 +92,7 @@ End Sub
  In diesem Beispiel kann `p` nur die Mitglieder der <xref:System.Object> -Klasse selbst verwenden, die nicht die `Left` -Eigenschaft enthalten. Auf der anderen Seite wurde `q` als Typ <xref:System.Windows.Forms.Label>deklariert, sodass es alle Methoden und Eigenschaften der <xref:System.Windows.Forms.Label> -Klasse im <xref:System.Windows.Forms> -Namespace verwenden kann.  
   
 ## <a name="flexibility-of-object-variables"></a>Flexibilität von Objektvariablen  
+
  Beim Arbeiten mit Objekten in einer Vererbungs Hierarchie haben Sie die Wahl, welche Klasse zum Deklarieren der Objektvariablen verwendet werden soll. Wenn Sie diese Auswahl treffen, müssen Sie die Flexibilität der Objekt Zuweisung gegen den Zugriff auf die Member einer Klasse ausgleichen. Sehen Sie sich beispielsweise die Vererbungs Hierarchie an, die zur- <xref:System.Windows.Forms.Form?displayProperty=nameWithType> Klasse führt:  
   
  <xref:System.Object>  
@@ -125,7 +131,7 @@ Dim anyForm As System.Windows.Forms.Form
   
  Alle Member einer Basisklasse sind für abgeleitete Klassen verfügbar, aber die zusätzlichen Member einer abgeleiteten Klasse sind für die Basisklasse nicht verfügbar.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Objektvariablen](object-variables.md)
 - [Zuweisung von Objektvariablen](object-variable-assignment.md)

@@ -13,14 +13,15 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 3088072646278dac13e4d483cb4f99297eaad9ca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ba6be8e1dd03c0589f712b0e9b39258953cd223
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403471"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077084"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Effiziente Kombination von Operatoren (Visual Basic)
+
 Komplexe Ausdrücke können viele verschiedene Operatoren enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
@@ -28,6 +29,7 @@ Komplexe Ausdrücke können viele verschiedene Operatoren enthalten. Dies wird a
  Das Erstellen komplexer Ausdrücke, wie z. b. der im vorherigen Beispiel, erfordert ein umfassendes Verständnis der Regeln der Operator Rangfolge. Weitere Informationen finden Sie unter [Operator Rangfolge in Visual Basic](../../../language-reference/operators/operator-precedence.md).  
   
 ## <a name="parenthetical-expressions"></a>Klammer Ausdrücke  
+
  Häufig möchten Sie, dass Vorgänge in einer anderen Reihenfolge ausgeführt werden, die von der Operator Rangfolge bestimmt wird. Betrachten Sie das folgende Beispiel.  
   
  `x = z * y + 4`  
@@ -39,13 +41,14 @@ Komplexe Ausdrücke können viele verschiedene Operatoren enthalten. Dies wird a
  Im vorangehenden Beispiel `y` werden und addiert `4` . Anschließend wird diese Summe von multipliziert `z` .  
   
 ### <a name="nested-parenthetical-expressions"></a>Eingeklamlierte Klammer Ausdrücke  
+
  Sie können Ausdrücke in mehreren Ebenen von Klammern schachteln, um die Rangfolge noch weiter zu überschreiben. Die Ausdrücke, die in Klammern am tiefsten geschachtelt sind, werden zuerst ausgewertet, gefolgt von der nächst tiefen geschachtelten, usw. bis zu der am wenigsten tief geschachtelten und schließlich den Ausdrücken außerhalb der Klammern. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
  Im vorherigen Beispiel `z + 2` wird zuerst ausgewertet, dann die anderen Klammer Ausdrücke. Die exponentiierung, bei der normalerweise eine höhere Rangfolge als Addition oder Multiplikation fest steht, wird in diesem Beispiel zuletzt ausgewertet, da die anderen Ausdrücke in Klammern eingeschlossen werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Arithmetische Operatoren in Visual Basic](arithmetic-operators.md)
 - [Comparison Operators in Visual Basic](comparison-operators.md)

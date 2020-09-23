@@ -8,14 +8,15 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 43bfd54592fb1d26cbf7f268b7e098e01e3745d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 64d21fe4aaf6fd34bf880373a7ab3067fb67820e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410424"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077058"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts (Visual Basic)
+
 Die *aktuelle Instanz* eines-Objekts ist die Instanz, in der der Code gerade ausgeführt wird.  
   
  Verwenden Sie das- `Me` Schlüsselwort, um auf die aktuelle-Instanz zu verweisen.  
@@ -29,9 +30,9 @@ Die *aktuelle Instanz* eines-Objekts ist die Instanz, in der der Code gerade aus
     Me.Close()  
     ```  
   
-     Obwohl `Me` sich wie eine Objekt Variable verhält, können Sie Sie nicht deklarieren oder ihr andere zuweisen. `Me`verweist immer auf die aktuelle-Instanz.  
+     Obwohl `Me` sich wie eine Objekt Variable verhält, können Sie Sie nicht deklarieren oder ihr andere zuweisen. `Me` verweist immer auf die aktuelle-Instanz.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Objektvariablen](object-variables.md)
 - [Zuweisung von Objektvariablen](object-variable-assignment.md)
