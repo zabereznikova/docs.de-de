@@ -7,14 +7,15 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: b451642a16f36c4f7fd19c853fdfd2282f5bede5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7e5fecf0c4c0d3a561ec7d0c4ac03c9d9ce7f759
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405029"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075134"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Gewusst wie: Aufrufen einer gespeicherten Prozedur mithilfe von LINQ (Visual Basic)
+
 Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformationen, einschließlich Datenbankobjekten wie z. b. gespeicherter Prozeduren.  
   
  Im folgenden Beispiel wird gezeigt, wie eine Anwendung erstellt wird, die eine gespeicherte Prozedur in einer SQL Server Datenbank aufruft. Das Beispiel zeigt, wie zwei verschiedene gespeicherte Prozeduren in der Datenbank aufgerufen werden. Jede Prozedur gibt die Ergebnisse einer Abfrage zurück. Eine Prozedur übernimmt Eingabeparameter, und die andere Prozedur übernimmt keine Parameter.  
@@ -33,7 +34,7 @@ Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformatio
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>So fügen Sie ein Projekt hinzu, das eine LINQ to SQL Datei enthält  
   
-1. Zeigen Sie in Visual Studio im Menü **Datei** auf **neu** , und klicken Sie dann auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.  
+1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.  
   
 2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die Element Vorlage **LINQ to SQL Klassen** aus.  
   
@@ -68,7 +69,7 @@ Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformatio
   
 4. Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ](index.md)
 - [Abfragen](../../../language-reference/queries/index.md)

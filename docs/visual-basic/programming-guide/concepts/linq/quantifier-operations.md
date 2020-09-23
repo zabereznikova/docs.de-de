@@ -2,14 +2,15 @@
 title: Quantifizierervorgänge
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 9a2e35e0511915cb17b99550a8bf382bd9d46526
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0c1c69cb36ac16126454dc0c24cd84fc85b0b218
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396310"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075303"
 ---
 # <a name="quantifier-operations-visual-basic"></a>Quantifizierer-Vorgänge (Visual Basic)
+
 Quantifizierer-Vorgänge geben einen <xref:System.Boolean>-Wert zurück, der angibt, ob einige oder alle Elemente in einer Sequenz eine Bedingung erfüllen.  
   
  Die folgende Abbildung zeigt zwei verschiedene Quantifizierer-Vorgänge bei zwei verschiedenen Quellsequenzen. Der erste Vorgang fragt, ob eines oder mehrere der Elemente das Zeichen „A“ sind. Das Ergebnis ist `true`. Der zweite Vorgang fragt, ob alle Elemente das Zeichen „A“ sind. Das Ergebnis ist `true`.  
@@ -23,10 +24,11 @@ Quantifizierer-Vorgänge geben einen <xref:System.Boolean>-Wert zurück, der ang
 |Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Alle|Bestimmt, ob alle Elemente in einer Sequenz eine Bedingung erfüllen.|`Aggregate … In … Into All(…)`|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
-|Any|Bestimmt, ob Elemente einer Sequenz eine Bedingung erfüllen.|`Aggregate … In … Into Any()`|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
+|Beliebig|Bestimmt, ob Elemente einer Sequenz eine Bedingung erfüllen.|`Aggregate … In … Into Any()`|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
 |Enthält|Bestimmt, ob eine Sequenz ein angegebenes Element enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
+
  In diesen Beispielen wird die- `Aggregate` Klausel in Visual Basic als Teil der Filterbedingung in einer LINQ-Abfrage verwendet.  
   
  Im folgenden Beispiel wird die `Aggregate` -Klausel und die- <xref:System.Linq.Enumerable.All%2A> Erweiterungsmethode verwendet, um die Personen zurückzugeben, deren Haustiere alle älter sind als ein bestimmtes Alter.  
@@ -37,7 +39,7 @@ Quantifizierer-Vorgänge geben einen <xref:System.Boolean>-Wert zurück, der ang
   
  [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)

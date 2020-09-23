@@ -8,13 +8,15 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 90a21b70b45902a9f4fd559a97e777f26043fffb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051479"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075615"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic
+
 Beim Erstellen neuer Anwendungen oder Komponenten empfiehlt es sich, .NET Framework Assemblys zu erstellen. Visual Basic ist es jedoch auch einfach, eine .NET Framework Komponente für com verfügbar zu machen. Dies ermöglicht es Ihnen, neue Komponenten für frühere Anwendungs Suites bereitzustellen, die COM-Komponenten erfordern. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie mit Visual Basic .NET Framework-Objekte als COM-Objekte verfügbar machen, sowohl mit als auch ohne die com-Klassen Vorlage.  
   
  Die einfachste Möglichkeit, com-Objekte verfügbar zu machen, ist die Verwendung der com-Klassen Vorlage. Mit dieser Vorlage wird eine neue Klasse erstellt. Anschließend wird das Projekt so konfiguriert, dass die Klasse mit einer Interoperabilitäts Schicht als COM-Objekt generiert und beim Betriebssystem registriert wird.  
@@ -39,6 +41,7 @@ Beim Erstellen neuer Anwendungen oder Komponenten empfiehlt es sich, .NET Framew
 6. Wählen Sie im Menü **Erstellen** die Option **Build ClassLibrary1** aus. Visual Basic erstellt die Assembly und registriert das COM-Objekt beim Betriebssystem.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>Erstellen von COM-Objekten ohne die com-Klassen Vorlage  
+
  Sie können eine COM-Klasse auch manuell erstellen, anstatt die com-Klassen Vorlage zu verwenden. Diese Vorgehensweise ist hilfreich, wenn Sie über die Befehlszeile arbeiten oder wenn Sie mehr Kontrolle darüber haben möchten, wie COM-Objekte definiert werden.  
   
 #### <a name="to-set-up-your-project-to-generate-a-com-object"></a>So richten Sie das Projekt ein, um ein COM-Objekt zu generieren  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
-ms.openlocfilehash: c9a049d3f15d5620152f064888a97bd0be5d46b0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78934e3e5ae7d5a3f5867c99a9f1db760c65ecbf
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405130"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075121"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um Speicherplatz zu sparen (Visual Basic)
+
 Es gibt verschiedene Situationen, in denen es wichtig ist, dass eine Anwendung die Speicherauslastung niedrig hält. Benutzerdefinierte Ereignisse ermöglichen es der Anwendung, Arbeitsspeicher nur für die Ereignisse zu verwenden, die Sie verarbeitet.  
   
  Wenn eine Klasse ein Ereignis deklariert, ordnet der Compiler standardmäßig Speicher für ein Feld zu, um die Ereignis Informationen zu speichern. Wenn eine Klasse über viele nicht verwendete Ereignisse verfügt, nehmen Sie unnötigerweise Speicherplatz in Anspruch.  
@@ -21,6 +22,7 @@ Es gibt verschiedene Situationen, in denen es wichtig ist, dass eine Anwendung d
  Anstatt die Standard Implementierung von Ereignissen zu verwenden, die Visual Basic bereitstellt, können Sie benutzerdefinierte Ereignisse verwenden, um die Speicherauslastung sorgfältiger zu verwalten.  
   
 ## <a name="example"></a>Beispiel  
+
  In diesem Beispiel verwendet die-Klasse eine Instanz der- <xref:System.ComponentModel.EventHandlerList> Klasse, die im- `Events` Feld gespeichert ist, um Informationen über die verwendeten Ereignisse zu speichern. Die- <xref:System.ComponentModel.EventHandlerList> Klasse ist eine optimierte Listen Klasse, die Delegaten enthalten soll.  
   
  Alle Ereignisse in der-Klasse verwenden das- `Events` Feld, um nachzuverfolgen, welche Methoden die einzelnen Ereignisse verarbeiten.  

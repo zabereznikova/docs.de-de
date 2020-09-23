@@ -1,17 +1,18 @@
 ---
-title: Die Gebiets Schema-ID "<name>" wird auf diesem System nicht unterstützt.
+title: Die Gebietsschema-ID "<name>" wird auf diesem System nicht unterstützt
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
-ms.openlocfilehash: 4fac5648633dd751cd47a942ae98e443a222c48d
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 29226ba4e666bab16e8e4747b5ac7fcdeaf7e502
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197061"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076187"
 ---
-# <a name="locale-id-name-is-not-supported-on-this-system"></a>Die Gebiets Schema-ID "\<Name >" wird auf diesem System nicht unterstützt.
+# <a name="locale-id-name-is-not-supported-on-this-system"></a>Die Gebietsschema-ID "\<name>" wird auf diesem System nicht unterstützt
+
 Sie versuchen, `VbStrConv`zu verwenden, Ihr System unterstützt das angegebene Gebietsschema aber nicht.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
@@ -21,4 +22,4 @@ Sie versuchen, `VbStrConv`zu verwenden, Ihr System unterstützt das angegebene G
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Globalization>
-- [Einführung in internationale Anwendungen basierend auf .NET Framework](/visualstudio/ide/globalizing-and-localizing-applications)
+- [Einführung in internationale Anwendungen basierend auf dem .NET Framework](/visualstudio/ide/globalizing-and-localizing-applications)

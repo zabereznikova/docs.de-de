@@ -2,14 +2,15 @@
 title: Deklarierte Elemente
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: f7fedc58ec061ddb133eb94ee3b3b7a7b49083cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9359c8df60d7fdc06e7c8dfa1df82f1b277d7339
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357244"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075160"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Deklarierte Elemente in Visual Basic
+
 Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarationsanweisung definiert ist. Deklarierte Elemente enthalten Variablen, Konstanten, Enumerationen, Klassen, Strukturen, Module, Schnittstellen, Prozeduren, Prozedurparameter, Funktionsrückgaben, externe Prozedurverweise, Operatoren, Eigenschaften, Ereignisse und Delegaten.  
   
  Deklarationsanweisungen beinhalten Folgendes:  
@@ -43,6 +44,7 @@ Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarations
 - [Delegate-Anweisung](../../../language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Declared Element Names](declared-element-names.md)  
  Beschreibt, wie Elemente benannt werden und wie man Groß- und Kleinschreibung verwendet.  
   
@@ -53,6 +55,7 @@ Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarations
  Beschreibt, wie der Compiler einen Verweis auf eine Deklaration übereinstimmt und wie man einen Namen qualifiziert.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Programmstruktur und Codekonventionen](../../program-structure/program-structure-and-code-conventions.md)  
  Präsentiert Richtlinien, durch die der Programmcode besser lesbar, leichter verständlich und einfacher zu verwalten ist.  
   
