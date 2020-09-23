@@ -9,14 +9,15 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: b94259326b42104db05d9fc5bb09f686075d0759
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 03d693653cd166bbf1096031f1a864b492e2e896
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414530"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086295"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Konstanten und literale Datentypen (Visual Basic)
+
 Ein Literalwert ist ein Wert, der als sich selbst und nicht als Variablen Wert oder als Ergebnis eines Ausdrucks ausgedrückt wird, z. b. die Zahl 3 oder die Zeichenfolge "Hello". Eine Konstante ist ein sinnvoller Name, der den Speicherort eines Literals annimmt und denselben Wert im gesamten Programm beibehält, im Gegensatz zu einer Variablen, deren Wert sich ändern kann.  
   
  Wenn die [Option Infer](../../../language-reference/statements/option-infer-statement.md) ist `Off` und [Option Strict](../../../language-reference/statements/option-strict-statement.md) ist `On` , müssen Sie alle Konstanten explizit mit einem-Datentyp deklarieren. Im folgenden Beispiel wird der Datentyp von `MyByte` explizit als-Datentyp deklariert `Byte` :  
@@ -26,6 +27,7 @@ Ein Literalwert ist ein Wert, der als sich selbst und nicht als Variablen Wert o
  Wenn auf oder festgelegt ist `Option Infer` `On` `Option Strict` `Off` , können Sie eine Konstante deklarieren, ohne einen-Datentyp mit einer- `As` Klausel anzugeben. Der Compiler bestimmt den Typ der Konstante vom Typ des Ausdrucks. Ein numerisches Ganzzahlliteral wird standardmäßig in den- `Integer` Datentyp umgewandelt. Der Standard Datentyp für Gleit Komma Zahlen ist `Double` , und die Schlüsselwörter `True` und `False` geben eine `Boolean` Konstante an.  
   
 ## <a name="literals-and-type-coercion"></a>Literale und Typumwandlung  
+
  In einigen Fällen möchten Sie möglicherweise einen Literalwert für einen bestimmten Datentyp erzwingen. beispielsweise beim Zuweisen eines besonders großen ganzzahligen Literalwerts zu einer Variablen vom Typ `Decimal` . Im folgenden Beispiel wird ein Fehler erzeugt:  
   
 ```vb  
@@ -61,7 +63,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(none)|F oder!|  
 |`String`|"|(none)|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Benutzerdefinierte Konstanten](user-defined-constants.md)
 - [Vorgehensweise: Deklarieren einer Konstante](how-to-declare-a-constant.md)

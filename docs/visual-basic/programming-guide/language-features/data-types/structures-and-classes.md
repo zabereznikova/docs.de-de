@@ -9,14 +9,15 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: d252d9216a9b825ad0663a5779d7ce7f81fa9011
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7ca5b9d55611eafad88517e71f9807fe2aa4416
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393571"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086217"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Strukturen und Klassen (Visual Basic)
+
 Visual Basic vereinheitlicht die Syntax für Strukturen und Klassen, wobei beide Entitäten den größten Teil der gleichen Funktionen unterstützen. Es gibt jedoch auch wichtige Unterschiede zwischen Strukturen und Klassen.  
   
  Klassen haben den Vorteil, dass Sie Verweis Typen sind – das Übergeben eines Verweises ist effizienter als das Übergeben einer Struktur Variablen mit sämtlichen Daten. Andererseits erfordern Strukturen keine Speicher Belegung auf dem globalen Heap.  
@@ -24,6 +25,7 @@ Visual Basic vereinheitlicht die Syntax für Strukturen und Klassen, wobei beide
  Da Sie nicht von einer Struktur erben können, sollten Strukturen nur für Objekte verwendet werden, die nicht erweitert werden müssen. Verwenden Sie Strukturen, wenn das Objekt, das Sie erstellen möchten, eine kleine instanzgröße hat, und berücksichtigen Sie die Leistungsmerkmale von Klassen im Vergleich zu Strukturen.  
   
 ## <a name="similarities"></a>Ähnlichkeiten  
+
  Strukturen und Klassen ähneln in den folgenden Punkten:  
   
 - Beide sind *Container* Typen. Dies bedeutet, dass Sie andere Typen als Member enthalten.  
@@ -41,6 +43,7 @@ Visual Basic vereinheitlicht die Syntax für Strukturen und Klassen, wobei beide
 - Beide können Ereignisse deklarieren und auslassen, und beide können Delegaten deklarieren.  
   
 ## <a name="differences"></a>Unterschiede  
+
  Strukturen und Klassen unterscheiden sich in den folgenden Details:  
   
 - Strukturen sind *Werttypen*. Klassen sind *Verweis Typen*. Eine Variable eines Struktur Typs enthält die Daten der Struktur, anstatt einen Verweis auf die Daten als Klassentyp zu enthalten.  
@@ -70,6 +73,7 @@ Visual Basic vereinheitlicht die Syntax für Strukturen und Klassen, wobei beide
  Jede Struktur verfügt über einen impliziten öffentlichen Konstruktor ohne Parameter. Dieser Konstruktor initialisiert alle Datenelemente der-Struktur mit ihren Standardwerten. Dieses Verhalten kann nicht neu definiert werden.  
   
 ## <a name="instances-and-variables"></a>Instanzen und Variablen  
+
  Da Strukturen Werttypen sind, ist jede Struktur Variable permanent an eine einzelne Struktur Instanz gebunden. Klassen sind jedoch Verweis Typen, und eine Objekt Variable kann zu unterschiedlichen Zeitpunkten auf verschiedene Klassen Instanzen verweisen. Dieser Unterschied wirkt sich auf die Verwendung von Strukturen und Klassen auf folgende Weise aus:  
   
 - **Initialisierung.** Eine Struktur Variable schließt implizit eine Initialisierung der Elemente mit dem Parameter losen Konstruktor der Struktur ein. Daher `Dim s As struct1` entspricht `Dim s As struct1 = New struct1()` .  
@@ -84,9 +88,9 @@ Visual Basic vereinheitlicht die Syntax für Strukturen und Klassen, wobei beide
   
      Strukturelemente sind jedoch innerhalb ihrer eigenen Instanz isoliert. Änderungen an ihren Werten werden in anderen Struktur Variablen nicht widergespiegelt, auch in anderen Instanzen der gleichen `Structure` Deklaration.  
   
-- **Gleichheit.** Gleichheits Tests von zwei-Strukturen müssen mit einem Element-zu-Element-Test ausgeführt werden. Zwei Objektvariablen können mithilfe der-Methode verglichen werden <xref:System.Object.Equals%2A> . <xref:System.Object.Equals%2A>Gibt an, ob die beiden Variablen auf dieselbe Instanz verweisen.  
+- **Gleichheit.** Gleichheits Tests von zwei-Strukturen müssen mit einem Element-zu-Element-Test ausgeführt werden. Zwei Objektvariablen können mithilfe der-Methode verglichen werden <xref:System.Object.Equals%2A> . <xref:System.Object.Equals%2A> Gibt an, ob die beiden Variablen auf dieselbe Instanz verweisen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Datentypen](index.md)
 - [Zusammengesetzte Datentypen](composite-data-types.md)

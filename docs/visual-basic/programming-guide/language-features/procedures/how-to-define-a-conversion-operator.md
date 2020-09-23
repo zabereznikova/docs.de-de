@@ -9,14 +9,15 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: 53b0211c6304625edd7ac24fa52ff0c051d8f0a0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2fabcf6c6ceb38fe77d4eed4f02dcb5a5e447bf1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388088"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085671"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Gewusst wie: Definieren eines Konvertierungsoperators (Visual Basic)
+
 Wenn Sie eine Klasse oder Struktur definiert haben, können Sie einen Typkonvertierungs Operator zwischen dem Typ der Klasse oder Struktur und einem anderen Datentyp (z `Integer` . b `Double` ., oder `String` ) definieren.  
   
  Definieren Sie die Typkonvertierung als [CType-Funktions](../../../language-reference/functions/ctype-function.md) Prozedur innerhalb der Klasse oder Struktur. Alle Konvertierungs Prozeduren müssen sein `Public Shared` , und jeder muss entweder eine [Erweiterung](../../../language-reference/modifiers/widening.md) oder eine [Einschränkung](../../../language-reference/modifiers/narrowing.md)angeben.  
@@ -24,6 +25,7 @@ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie einen Typkonvert
  Die Definition eines Operators für eine Klasse oder Struktur wird auch als *überladen* des Operators bezeichnet.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden Konvertierungs Operatoren zwischen einer Struktur mit `digit` dem Namen und einer definiert `Byte` .  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
@@ -32,7 +34,7 @@ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie einen Typkonvert
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Operatorprozeduren](./operator-procedures.md)
 - [Vorgehensweise: Definieren eines Operators](./how-to-define-an-operator.md)

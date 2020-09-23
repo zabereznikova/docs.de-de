@@ -9,17 +9,19 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: e633c5a00693f188270b1610abaf2decb656b00a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e0cb1008f4182331b7380db81d7a92a0fd45f2f4
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414594"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086360"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Problembehandlung bei Arrays (Visual Basic)
+
 Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die beim Arbeiten mit Arrays auftreten können.  
   
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Kompilierungsfehler beim Deklarieren und Initialisieren eines Arrays  
+
  Kompilierungsfehler können aus einem Missverständnis der Regeln zum deklarieren, erstellen und Initialisieren von Arrays entstehen. Die häufigsten Fehlerursache sind folgende:  
   
 - Bereitstellen einer [neuen Operator](../../../language-reference/operators/new-operator.md) Klausel nach Angabe von Dimensions Längen in der Deklaration der Array Variablen. Die folgenden Codezeilen zeigen ungültige Deklarationen dieses Typs an.  
@@ -49,15 +51,18 @@ Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die beim Arbeite
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
 ## <a name="accessing-an-array-out-of-bounds"></a>Zugreifen auf ein Array außerhalb der Grenzen  
+
  Der Prozess der Initialisierung eines Arrays weist jeder Dimension eine obere Grenze und eine untere Grenze zu. Bei jedem Zugriff auf ein Element des Arrays muss ein gültiger Index oder ein Index für jede Dimension angegeben werden. Wenn ein Index unterhalb seiner unteren Grenze oder oberhalb der oberen Grenze liegt, wird eine <xref:System.IndexOutOfRangeException> Ausnahme ausgelöst. Der Compiler kann einen solchen Fehler nicht erkennen, weshalb zur Laufzeit ein Fehler auftritt.  
   
 ### <a name="determining-bounds"></a>Bestimmen von Begrenzungen  
+
  Wenn eine andere Komponente ein Array an Ihren Code übergibt, z. b. als Prozedur Argument, kennen Sie die Größe des Arrays oder die Längen seiner Dimensionen nicht. Sie sollten immer die obere Grenze für jede Dimension eines Arrays ermitteln, bevor Sie versuchen, auf Elemente zuzugreifen. Wenn das Array mit einer anderen Methode als einer Visual Basic-Klausel erstellt wurde `New` , ist die untere Grenze möglicherweise etwas anderes als 0, und es ist am sichersten, dass auch die untere Grenze bestimmt wird.  
   
 ### <a name="specifying-the-dimension"></a>Angeben der Dimension  
+
  Wenn Sie die Begrenzungen eines mehrdimensionalen Arrays ermitteln, achten Sie darauf, wie Sie die Dimension angeben. Die `dimension` Parameter der <xref:System.Array.GetLowerBound%2A> <xref:System.Array.GetUpperBound%2A> -Methode und der-Methode sind 0-basiert, während die `Rank` Parameter der Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> <xref:Microsoft.VisualBasic.Information.UBound%2A> -und-Funktionen 1-basiert sind.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Arrays](index.md)
 - [How to: Initialize an Array Variable in Visual Basic](how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariable in Visual Basic)

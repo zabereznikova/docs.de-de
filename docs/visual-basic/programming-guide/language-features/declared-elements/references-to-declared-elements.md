@@ -6,14 +6,15 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af5be47335b6d48bd6c0bccc30b8db15c9912807
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405182"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085879"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Verweise auf deklarierte Elemente (Visual Basic)
+
 Wenn sich Ihr Code auf ein deklariertes Element bezieht, entspricht der Visual Basic Compiler dem Namen in Ihrem Verweis auf die entsprechende Deklaration dieses Namens. Wenn mehr als ein Element mit demselben Namen deklariert wird, können Sie steuern, auf welche Elemente verwiesen werden soll, indem Sie den Namen *qualifizieren* .  
   
  Der Compiler versucht, einen namens Verweis auf eine namens Deklaration mit dem *engsten*Gültigkeitsbereich abzugleichen. Dies bedeutet, dass der Code mit dem Code beginnt, der den Verweis durchführt und sich nach aufeinander folgenden Ebenen von enthaltenden Elementen verhält.  
@@ -42,6 +43,7 @@ End Module
 ```  
   
 ## <a name="qualifying-an-element-name"></a>Qualifizieren eines Element namens  
+
  Wenn Sie diesen Suchvorgang außer Kraft setzen und einen Namen angeben möchten, der in einem umfassenderen Bereich deklariert ist, müssen Sie den Namen mit dem enthaltenden Element des umfassenderen Bereichs *qualifizieren* . In einigen Fällen müssen Sie möglicherweise auch das enthaltende Element qualifizieren.  
   
  Das qualifizieren eines Namens bedeutet, dass es in der Quell Anweisung mit Informationen, die bestimmen, wo das Ziel Element definiert ist, vorangestellt wird. Diese Informationen werden als *Qualifizierungs Zeichenfolge*bezeichnet. Es kann einen oder mehrere Namespaces und ein Modul, eine Klasse oder eine Struktur enthalten.  
@@ -105,6 +107,7 @@ Dim winLabel As New win.Label()
 ```  
   
 ## <a name="members-of-other-containing-elements"></a>Member anderer enthaltender Elemente  
+
  Wenn Sie einen nicht freigegebenen Member einer anderen Klasse oder Struktur verwenden, müssen Sie zuerst den Elementnamen mit einer Variablen oder einem Ausdruck qualifizieren, die auf eine Instanz der Klasse oder Struktur zeigt. Im folgenden Beispiel `demoClass` ist eine Instanz einer Klasse mit dem Namen `class1` .  
   
 ```vb  
@@ -150,6 +153,7 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>Verweise auf Projekte  
+
  Um [öffentliche](../../../language-reference/modifiers/public.md) Elemente zu verwenden, die in einem anderen Projekt definiert sind, müssen Sie zuerst einen *Verweis* auf die Assembly oder Typbibliothek dieses Projekts festlegen. Um einen Verweis festzulegen, klicken Sie im Menü **Projekt** auf **Verweis hinzufügen** , oder verwenden Sie die Befehlszeilen [-Compileroption-Reference (Visual Basic)](../../../reference/command-line-compiler/reference.md) .  
   
  Beispielsweise können Sie das XML-Objektmodell des .NET Framework verwenden. Wenn Sie einen Verweis auf den- <xref:System.Xml> Namespace festgelegt haben, können Sie seine Klassen deklarieren und verwenden, wie z <xref:System.Xml.XmlDocument> . b.. Im folgenden Beispiel wird <xref:System.Xml.XmlDocument> verwendet.  
@@ -161,6 +165,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>Importieren enthaltender Elemente  
+
  Sie können die [Imports-Anweisung (.NET-Namespace und-Typ)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) verwenden, um die Namespaces zu *importieren* , die die Module oder Klassen enthalten, die Sie verwenden möchten. Dies ermöglicht es Ihnen, auf die Elemente zu verweisen, die in einem importierten Namespace definiert sind, ohne ihre Namen vollständig zu qualifizieren. Im folgenden Beispiel wird das vorherige Beispiel neu geschrieben, um den- <xref:System.Xml> Namespace zu importieren.  
   
 ```vb  
@@ -186,14 +191,16 @@ Dim xDoc As xD.XmlDocument
  Sie können auch die- `Imports` Anweisung verwenden, um Module, Klassen, Strukturen und Enumerationen zu importieren. Sie können dann die Member dieser importierten Elemente ohne Qualifikation verwenden. Sie müssen jedoch immer nicht freigegebene Member von Klassen und Strukturen mit einer Variablen oder einem Ausdruck qualifizieren, die zu einer Instanz der Klasse oder Struktur ausgewertet wird.  
   
 ## <a name="naming-guidelines"></a>Richtlinien für die Benennung  
+
  Wenn Sie zwei oder mehr Programmier Elemente mit demselben Namen definieren, kann eine *namens Mehrdeutigkeit* auftreten, wenn der Compiler versucht, einen Verweis auf diesen Namen aufzulösen. Wenn sich mehr als eine Definition im Gültigkeitsbereich befindet oder wenn sich keine Definition im Gültigkeitsbereich befindet, ist der Verweis nicht auflösbar. Ein Beispiel finden Sie auf dieser Hilfeseite unter "Qualified Reference example".  
   
  Sie können die Mehrdeutigkeit von Namen vermeiden, indem Sie allen Elementen eindeutige Namen geben. Anschließend können Sie einen Verweis auf jedes Element erstellen, ohne seinen Namen mit einem Namespace, Modul oder einer Klasse qualifizieren zu müssen. Außerdem verringern Sie die Wahrscheinlichkeit, dass versehentlich auf das falsche Element verwiesen wird.  
   
 ## <a name="shadowing"></a>Shadowing  
+
  Wenn zwei Programmier Elemente denselben Namen haben, kann einer von Ihnen einen ausblenden oder einen *Schatten*der anderen verwenden. Ein Shadowing Element ist für den Verweis nicht verfügbar. Wenn Ihr Code den schattiert-Elementnamen verwendet, wird er stattdessen vom Visual Basic Compiler in das Shadowing-Element aufgelöst. Eine ausführlichere Erläuterung mit Beispielen finden Sie unter [shadowingin Visual Basic](shadowing.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Declared Element Names](declared-element-names.md)
 - [Merkmale deklarierter Elemente](declared-element-characteristics.md)

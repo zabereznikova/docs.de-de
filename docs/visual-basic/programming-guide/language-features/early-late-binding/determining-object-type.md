@@ -9,17 +9,19 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 3b1c4ad0ab4fd8d2897aff6ad9097cdc81272455
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ae338bc9bad9646abc045a652d4ef33a8863354b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410643"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086061"
 ---
 # <a name="determining-object-type-visual-basic"></a>Bestimmen des Objekttyps (Visual Basic)
+
 Generische Objektvariablen (d. h. Variablen, die Sie als deklarieren `Object` ) können Objekte aus beliebigen Klassen enthalten. Wenn Sie Variablen vom Typ verwenden `Object` , müssen Sie möglicherweise basierend auf der-Klasse des-Objekts verschiedene Aktionen durchführen, z. b. können einige Objekte eine bestimmte Eigenschaft oder Methode nicht unterstützen. Visual Basic bietet zwei Möglichkeiten, um zu bestimmen, welcher Objekttyp in einer Objektvariablen gespeichert wird: die `TypeName` -Funktion und der- `TypeOf...Is` Operator.  
   
 ## <a name="typename-and-typeofis"></a>Typname und typeof... Richtet  
+
  Die `TypeName` -Funktion gibt eine Zeichenfolge zurück und ist die beste Wahl, wenn Sie den Klassennamen eines Objekts speichern oder anzeigen müssen, wie im folgenden Code Fragment gezeigt:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
@@ -44,7 +46,7 @@ Generische Objektvariablen (d. h. Variablen, die Sie als deklarieren `Object` ) 
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen](calling-a-property-or-method-using-a-string-name.md)

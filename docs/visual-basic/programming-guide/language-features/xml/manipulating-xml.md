@@ -6,17 +6,19 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: fca6c05b4baae4689e9d5e5698cee75f0c5470ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 52c8822c34a85af81dde505d36e6e159745a0d12
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374745"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085689"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Bearbeiten von XML in Visual Basic
+
 *XML-Literale* können zum Laden von XML aus einer externen Quelle verwendet werden, z. b. eine Zeichenfolge, eine Datei oder ein Stream. Anschließend können Sie verwenden [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , um den XML-Code zu bearbeiten, und Language-Integrated Query (LINQ) verwenden, um den XML-Code abzufragen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Laden von XML aus einer Datei, einer Zeichenfolge oder einem Stream](how-to-load-xml-from-a-file-string-or-stream.md)  
  Veranschaulicht, wie XML <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XElement> aus einer Textdatei, einer Zeichenfolge oder einem Stream in ein-oder-Objekt geladen wird.  
   
@@ -27,6 +29,7 @@ ms.locfileid: "84374745"
  Veranschaulicht, wie die Elemente, Attribute und Werte in einem XML-Literalelement geändert werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [XML-Achseneigenschaften](../../../language-reference/xml-axis/index.md)  
  Enthält Links zu Abschnitten, in denen die verschiedenen XML-Zugriffs Eigenschaften beschrieben werden.  
   
@@ -42,7 +45,7 @@ ms.locfileid: "84374745"
  [XML](index.md)  
  Enthält Links zu Abschnitten, in denen die Verwendung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic beschrieben wird.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [XML](index.md)
 - [LINQ](../linq/index.md)

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: a581ffae77c496908d2e4e38df53491a54ae2ab8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b914d0479f160199744a8f9923c0bebc87321329
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410669"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086074"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Gelockerte Delegatenkonvertierung (Visual Basic)
+
 Eine gelockerte Delegatkonvertierung ermöglicht Ihnen das Zuweisen von subs und Funktionen zu Delegaten oder Handlern, auch wenn Ihre Signaturen nicht identisch sind. Daher wird die Bindung an Delegaten konsistent mit der Bindung, die für Methodenaufrufe bereits zulässig ist.  
   
 ## <a name="parameters-and-return-type"></a>Parameter und Rückgabetyp  
+
  Anstelle der genauen Signatur Übereinstimmung erfordert die gelockerte Konvertierung, dass die folgenden Bedingungen erfüllt sind, wenn `Option Strict` auf festgelegt ist `On` :  
   
 - Eine erweiternde Konvertierung muss vom Datentyp der einzelnen Delegatparameter bis zu dem Datentyp des entsprechenden Parameters der zugewiesenen Funktion oder durch vorhanden sein `Sub` . Im folgenden Beispiel verfügt der Delegat `Del1` über einen Parameter, einen `Integer` . Der-Parameter `m` in den zugewiesenen Lambda-Ausdrücken muss einen Datentyp aufweisen, für den eine erweiternde Konvertierung von vorhanden ist `Integer` , z `Long` . b `Double` . oder.  
@@ -38,6 +40,7 @@ Eine gelockerte Delegatkonvertierung ermöglicht Ihnen das Zuweisen von subs und
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
 ## <a name="omitting-parameter-specifications"></a>Weglassen von Parameter Spezifikationen  
+
  Mit gelockerten Delegaten können Sie auch die Parameter Spezifikationen in der zugewiesenen Methode vollständig weglassen:  
   
  [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
@@ -61,6 +64,7 @@ End Sub
 ```  
   
 ## <a name="addressof-examples"></a>AddressOf-Beispiele  
+
  In den vorherigen Beispielen werden Lambda Ausdrücke verwendet, um die Typbeziehungen leicht zu erkennen. Allerdings sind die gleichen Lockerungen für delegatzuweisungen zulässig, die `AddressOf` , `Handles` oder verwenden `AddHandler` .  
   
  Im folgenden Beispiel `f1` können Funktionen, `f2` , `f3` und `f4` zugewiesen werden `Del1` .  
@@ -76,13 +80,14 @@ End Sub
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
 ## <a name="dropping-function-returns"></a>Verwerfen von Funktions Rückgaben  
+
  Eine gelockerte Delegatkonvertierung ermöglicht Ihnen das Zuweisen einer Funktion zu einem Delegaten `Sub` , wodurch der Rückgabewert der Funktion tatsächlich ignoriert wird. Es ist jedoch nicht möglich, einem Funktions Delegaten eine zuzuweisen `Sub` . Im folgenden Beispiel wird die Adresse der-Funktion dem-Delegaten `doubler` zugewiesen `Sub` `Del3` .  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
   
  [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Lambda-Ausdrücke](../procedures/lambda-expressions.md)
 - [Widening and Narrowing Conversions](../data-types/widening-and-narrowing-conversions.md)
